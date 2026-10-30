@@ -36,6 +36,20 @@ const ROWS = ['stats', 'ranged', 'melee', 'abilities'];
 // a datasheet's facts on the unit itself (with the rows above); everything else on a unit entry is the list's
 const DS_UNIT = ['name', 'role', 'rules', 'kw', 'kwOnly', 'partialRules', 'srcNote'];
 const STAT_FIELDS = ['M', 'T', 'Sv', 'W', 'Ld', 'OC', 'InSv', 'base'];
+// a faction catalogue's columns (verify/from-bsdata.js, docs/catalog.md): on DATASHEETS, not copied onto a list's units
+// (points per model count, composition and wargear choices as BSData gives them; aiStatus: 'not-read' on a row no list has, whose
+// AI layers, readings and When targeted lines, are not written yet)
+const CAT_COLS = ['points', 'composition', 'options', 'aiStatus'];
+// the catalogue rows (verify/sources/catalog/<faction>.json, written by verify/from-bsdata.js --write), by DATASHEETS id
+function catalogRows(){
+  const dir = path.join(ROOT, 'verify/sources/catalog'), out = new Map();
+  if(!fs.existsSync(dir)) return out;
+  for(const f of fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()){
+    const c = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    for(const [id, row] of Object.entries(c.datasheets || {})) out.set(id, row);
+  }
+  return out;
+}
 const WEAPON_FIELDS = ['range', 'A', 'BS', 'WS', 'S', 'AP', 'D'];
 // AI-written columns and the column holding the fingerprint of the text each was written from
 const FINGERPRINT = { gist:'gistOf', def:'defOf' };
@@ -77,7 +91,7 @@ const ORDERED = ['ranged', 'melee', 'abilities', 'kw', 'rules'];
 // (--write: the keywords' content too, which GW's datasheets give: verify/keywords.js checks it)
 const noKw = A => A.map(a => Object.assign({}, a, { units:a.units.map(u => Object.assign({}, u, { kw:null })) }));
 const unordered = A => { const un = x => Array.isArray(x) ? x.map(un) : x && typeof x === 'object' ? Object.fromEntries(Object.entries(x).map(([k, y]) => [k, ORDERED.includes(k) && Array.isArray(y) ? un(y).map(z => stable(z)).sort() : un(y)])) : x;
-  return un(JSON.parse(JSON.stringify(A))); };
+  return un(JSON.parse(JSON.stringify(A, (k, x) => FP_KEYS.includes(k) || k === 'own' ? undefined : x))); };   // (the fingerprints aside first: they are no part of a row)
 
 const MARK = {
   sheets:['// ---- DATASHEETS: written by verify/tables.js --write (edit a datasheet here; --write keeps the table in shape) ----', '// ---- end of DATASHEETS ----'],
@@ -107,7 +121,7 @@ function resolveArmies(armies, sheets, order, factions, opts){
   opts = opts || {}; factions = factions || {};
   var ROWS = ['stats', 'ranged', 'melee', 'abilities'], READ = ['mods', 'aura', 'guard'];
   var FPK = ${JSON.stringify(FP_KEYS)}, RHIDE = ['${READ_FP}', '${READ_BY}', '${READ_WHY}'].filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
-  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(FPK).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
+  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(FPK, ${JSON.stringify(CAT_COLS)}).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values
   function sorted(o, keys){ var out = {}, i, k; for(i = 0; i < keys.length; i++) if(keys[i] in o) out[keys[i]] = o[keys[i]]; for(k in o) if(!(k in out)) out[k] = o[k]; return out; }
@@ -332,11 +346,6 @@ function build(R){
       });
     }
   }));
-  // each datasheet's rows in GW's order (verify/gw-order.js), whichever list shows them first
-  for(const s of sheets.values()){
-    const g = GWO().sheet(s.id, Object.assign({ name:s.name, faction:s.faction }, Object.fromEntries(ROWS.map(k => [k, [...s.rows[k].values()].map(R => Object.assign({}, R.obs[0].r, { _k:R.key }))]))));
-    for(const kind of ['ranged', 'melee', 'abilities']) s.rows[kind] = new Map(g[kind].map(r => [r._k, s.rows[kind].get(r._k)]));
-  }
   // which fields of a row are the list's (for this place): the key, a part's who, counts, the values a rule of the list changed
   const listLevel = (o, k) => {
     const r = o.r, from = r.from || {};
@@ -497,6 +506,47 @@ function build(R){
       if(d.conflict) s.uconf.add(f); else if(!d.none) s.ds[f] = d.value;
     }
   }
+  // the faction catalogues (verify/sources/catalog, docs/catalog.md): every catalogue row is a datasheet. A row a list has keeps the
+  // facts its lists decide (signed off), and gets from the catalogue what it lacks: a fact no list shows as the datasheet's (an OC every
+  // list changes with Vexilla, a Rules line only attached units show), a weapon or ability no list took (after its own rows), and the
+  // catalogue's columns. A row no list has is the catalogue's, marked aiStatus 'not-read' (no readings yet). verify/catalog.js checks
+  // every difference between a list's row and its catalogue row.
+  for(const [id, c] of catalogRows()){
+    let s = sheets.get(id);
+    if(!s){
+      s = { id, name:c.name, faction:c.faction, bs:new Map(c.bsId ? [[c.bsId, []]] : []), rows:Object.fromEntries(ROWS.map(k => [k, new Map()])), unitObs:[], all:[], uconf:new Set(), catalog:'only' };
+      s.ds = { name:c.name, faction:c.faction }; if(c.bsId) s.ds.bsId = c.bsId;
+      sheets.set(id, s);
+    } else s.catalog = 'shared';
+    if(c.bsId && !s.ds.bsId && s.bs.size <= 1) s.ds.bsId = c.bsId;
+    // (a unit fact the catalogue fills on a row a list has: an attached unit's entry keeps its own, as before, catFilled)
+    s.catFilled = new Set();
+    for(const f of DS_UNIT.slice(1).concat(CAT_COLS)) if(c[f] !== undefined && !(f in s.ds) && !s.uconf.has(f)){ s.ds[f] = c[f]; if(s.catalog === 'shared') s.catFilled.add(f); }
+    if(s.catalog === 'only') s.ds.aiStatus = 'not-read';
+    for(const kind of ROWS) for(const r of c[kind] || []){
+      // (a weapon profile of another group under the same name, the Bloodthirster's "strike" of its Axe of Khorne next to a list's Great axe
+      // of Khorne one: a row of its own; the lists' rows find theirs first, by name, as before)
+      let rk = rowKey(kind, r.name), R = s.rows[kind].get(rk);
+      if(R && (kind === 'ranged' || kind === 'melee') && (R.ds.group || null) !== (r.group || null)){ rk = rk + '\0' + (r.group || ''); R = s.rows[kind].get(rk); }
+      if(!R){ s.rows[kind].set(rk, { key:rk, obs:[], ds:Object.assign({}, r), conflict:new Set(), catalog:true }); continue; }
+      for(const f of Object.keys(r)) if(!(f in R.ds) && !R.conflict.has(f)) R.ds[f] = r[f];
+    }
+  }
+  // each datasheet's rows in GW's order (verify/gw-order.js), whichever list shows them first, a faction catalogue's rows too (after the
+  // catalogue's rows are in: they sit where GW's page has them, not after the lists'); a catalogue row's keywords and Rules line likewise:
+  // GW's keywords (gwKeywords: BSData's categories for its name keyword) in GW's order, as a list's unit's
+  for(const s of sheets.values()){
+    const g = GWO().sheet(s.id, Object.assign({ name:s.name, faction:s.faction }, Object.fromEntries(ROWS.map(k => [k, [...s.rows[k].values()].map(R => Object.assign({}, R.obs.length ? R.obs[0].r : R.ds, { _k:R.key }))]))));
+    for(const kind of ['ranged', 'melee', 'abilities']){
+      // (a catalogue row with the name of a list's row, the Bloodthirster's Axe of Khorne "strike" beside the list's Great axe of Khorne one:
+      // the resolver finds a row by its name, so of the slots these rows take in GW's order the list's rows take the first)
+      const rs = g[kind].map(r => s.rows[kind].get(r._k)), name = R => String(R.key).split('\0')[0];
+      for(const nm0 of new Set(rs.map(name))){ const ix = rs.map((R, i) => name(R) === nm0 ? i : -1).filter(i => i >= 0); if(ix.length < 2) continue;
+        const grp = ix.map(i => rs[i]), mine = grp.filter(R => R.obs.length).concat(grp.filter(R => !R.obs.length)); ix.forEach((i, j) => { rs[i] = mine[j]; }); }
+      s.rows[kind] = new Map(rs.map(R => [R.key, R]));
+    }
+    if(s.catalog === 'only' || (s.catFilled && (s.catFilled.has('kw') || s.catFilled.has('rules')))) GWO().catalogSheet(s.ds, s.id, [...s.rows.abilities.values()].map(R => R.ds));
+  }
   // comments on rows: on the datasheet's row when every place that shows it has the same; else on the lists' rows
   const SC = {}, AC = {};
   const addC = (M, p, c) => { const k = JSON.stringify(p); const x = M[k] = M[k] || { above:[], inline:[] }; x.above.push(...c.above); x.inline.push(...c.inline); };
@@ -553,7 +603,7 @@ function build(R){
       if(ROWS.includes(k) || READ.includes(k)) continue;
       if(DS_UNIT.includes(k)){
         if(!U.multi){ if(s0.uconf.has(k)) over[k] = u[k]; else if(U.why[k] && !eq(u[k], s0.ds[k])) e[k] = u[k]; }
-        else if(!eq(u[k], s0.ds[k])) e[k] = u[k];
+        else if(!eq(u[k], s0.ds[k]) || (s0.catFilled && s0.catFilled.has(k))) e[k] = u[k];
       } else e[k] = u[k];
     }
     for(const k of Object.keys(u)) if(!(k in e) && !order.unit.includes(k) && !READ.includes(k)) e[k] = u[k];
@@ -624,7 +674,7 @@ function build(R){
     for(const [U, c] of merged) addC(AC, [U.ai, 'units', U.ui, 'ds'], c);
   }
   // the datasheets: by faction (FACTIONS' order), then as the lists first show them
-  const factionOrder = [...new Set(armies.map(a => a.faction))];
+  const factionOrder = [...new Set(armies.map(a => a.faction).concat([...sheets.values()].map(s => s.faction)))];
   const list = [...sheets.values()].sort((x, y) => factionOrder.indexOf(x.faction) - factionOrder.indexOf(y.faction));
   const table = {}, tableC = {};
   for(const s of list){
@@ -1001,7 +1051,7 @@ function evaluate(text){
 const stratText = s => ['WHEN: ' + s.when, 'TARGET: ' + s.target, 'EFFECT: ' + s.effect, s.restrictions ? 'RESTRICTIONS: ' + s.restrictions : ''].filter(Boolean).join('\n');
 const ruleText = r => r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : '');
 // every AI-written value: { table, path (in that constant), where, col, has (its fingerprint), source (the text it summarises) }
-function sites(D, armies){
+function sites(D, armies, unlisted){
   const out = [];
   const each = (table, path, where, o, source) => { for(const [col, f] of Object.entries(FINGERPRINT)) if(typeof o[col] === 'string') out.push({ table, path, where, col, fpKey:f, has:o[f], source }); };
   D.coreStratagems.forEach((x, i) => each('CORE_STRATAGEMS', [i], 'Core · ' + x.name, x, stratText(x)));
@@ -1041,6 +1091,18 @@ function sites(D, armies){
       out.push({ table:'ARMIES', path:null, where:a.id + ' · ' + u.name + ' · ' + kind + ' · ' + m.from + (m.when ? ' (' + m.when + ')' : ''), col:kind, fpKey:READ_FP, has:m[READ_FP], source:srcs && srcs[0].text, sources:srcs, want:srcs && readFp(srcs), reading:true, derived:m[READ_BY] === 'derive' });
     }
   }));
+  // the DATASHEETS rows no list has (a faction catalogue's, docs/catalog.md): every AI-written column and reading on them too, though no
+  // unit shows it yet (an ability's def and reading columns; a row's mods / aura / guard read from the ability, or core rule, they name)
+  for(const [sid, S] of Object.entries(unlisted || {})){
+    for(const ab of S.abilities || []){
+      each('DATASHEETS', null, sid + ' · ' + ab.name, ab, ab.text);
+      rowSite('DATASHEETS', null, sid + ' · ' + ab.name, ab, ab.text, READ_COLS.ability);
+    }
+    for(const kind of READ) for(const m of S[kind] || []){
+      const ab = (S.abilities || []).find(x => x.name === m.from), text = ab ? ab.text : coreText(D, m.from);
+      out.push({ table:'DATASHEETS', path:null, where:sid + ' · ' + kind + ' · ' + m.from, col:kind, fpKey:READ_FP, has:m[READ_FP], source:text, sources:text == null ? null : [{ name:m.from, text }], want:text == null ? undefined : fp(text), reading:true, derived:m[READ_BY] === 'derive' });
+    }
+  }
   return out;
 }
 // write the missing fingerprints (and with restamp the stale ones) into CORE_STRATAGEMS and FACTIONS (the units' through stampRows)
@@ -1194,7 +1256,9 @@ if(require.main === module){
   const arg = process.argv.slice(2), has = a => arg.includes(a);
   if(has('--expand')){ fs.writeFileSync(DATA, oldForm(src)); console.log('tables: data.js written in the old form (every unit in full); node verify/tables.js --write puts it back'); process.exit(0); }
   if(has('--fingerprints')){
-    const D = evaluate(src), R = read(src), bad = [], all = sites(D, R.armies);
+    const D = evaluate(src), R = read(src), bad = [];
+    const listed = new Set(R.A.value.flatMap(a => a.units.flatMap(u => [].concat(u.ds || []))));
+    const all = sites(D, R.armies, Object.fromEntries(Object.entries(R.S ? R.S.value : {}).filter(([k]) => !listed.has(k))));
     for(const x of all){
       const what = x.reading ? 'reading' : 'summary';
       if(x.reading && x.source == null && !x.want) bad.push('NO TEXT ' + x.where + ': nothing of its unit or list is the text it reads (' + x.col + '); name the rule it reads (from / rule)');

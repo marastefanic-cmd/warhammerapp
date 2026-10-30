@@ -631,6 +631,8 @@ function wahaDetachment(faction, name) {
     if (seg === 'rule' && res.rule.name && heads.has(norm(t)) && !res.rules.some(r => norm(r.name) === norm(t))) {   // (a table headed with the rule's own name is not another rule: Try Dat Button!)
     res.rule = { name: t, body: [], at: L[i] }; res.rules.push(res.rule); inNote = false; continue; }
     if (NOTEHEAD.test(t)) { inNote = true; continue; }
+    // (the codex's preamble, "If your Army Faction is …, you can use this … Detachment rule.": no rule's name or words)
+    if (seg === 'rule' && /^If your Army Faction is .+, you can use this .+ Detachment rules?\.$/.test(t.replace(/\*\*/g, ''))) continue;
     if (seg === 'rule') { if (inNote) continue; if (!res.rule.name) { res.rule.name = t; res.rule.at = L[i]; } else res.rule.body.push(L[i]); }
     else if (seg === 'enh') {
       const m = /^- (.+?)\s*(UPGRADE)?\s*(\d+) pts$/.exec(t);
@@ -654,6 +656,9 @@ function packContents(d) {
     const m = /^(.+?) ?(\d+)$/.exec(t);
     if (!m) continue;
     if (/^(Detachments|Datasheets|Imperial Armour Datasheets|Rules Updates|Legends Datasheets)$/.test(m[1])) { group = m[1]; toc.push({ name: m[1], page: +m[2], group: 'top' }); continue; }
+    // ("Index: Chaos Daemons 2": the pack prints every datasheet of the faction from there, its contents naming none: the Datasheets
+    // group, each datasheet found by the page its name opens)
+    if (/^Index: \S/.test(m[1])) { group = 'Datasheets'; toc.push({ name: m[1], page: +m[2], group: 'top', index: true }); continue; }
     toc.push({ name: m[1], page: +m[2], group });
   }
   return toc;
@@ -779,9 +784,24 @@ if (process.argv.includes('--debug-dets')) {
 
 /* ------------------------------------------------------------------ factions: helpers */
 const armiesOf = fk => D.armies.filter(a => a.faction === fk);
+// the DATASHEETS rows no list has (a faction catalogue's, verify/from-bsdata.js), one list per faction, army "catalog": the Faction Pack's
+// datasheet updates are checked on them as on a list's units
+const CATALOG = (() => { const T = require('./tables'), R = T.read(fs.readFileSync(DATA, 'utf8')), listed = new Set(R.A.value.flatMap(a => a.units.flatMap(u => [].concat(u.ds || [])))), by = {};
+  for (const [sid, S] of Object.entries(R.S ? R.S.value : {})) { if (listed.has(sid)) continue; (by[S.faction] = by[S.faction] || { id: 'catalog', faction: S.faction, detachments: [], units: [] }).units.push({ id: sid, name: S.name, abilities: S.abilities || [], rules: S.rules || [], kw: S.kw || [], partialRules: S.partialRules }); }
+  return Object.values(by); })();
+const armiesPlus = fk => armiesOf(fk).concat(CATALOG.filter(a => a.faction === fk));
 const armyIdsOf = fk => fk;   // faction rules are reported under the faction, so adding a list of it changes no report line
 const usedDetachments = fk => [...new Set(armiesOf(fk).flatMap(a => a.detachments))];
+// (the detachments whose words are checked: the lists', and every one a faction catalogue added, verify/from-bsdata.js)
+const checkedDetachments = fk => [...new Set(usedDetachments(fk).concat(Object.keys((D.factions[fk] || {}).detachments || {}).filter(k => D.factions[fk].detachments[k].aiStatus === 'not-read')))];
 const UPD = {}; for (const fk of FACTIONS) UPD[fk] = packUpdates(fk);
+// --updates <faction>: the Faction Pack's Rules Updates as read here, as JSON (verify/from-bsdata.js applies the datasheet ones to a
+// faction catalogue's rows; this file then checks them as for a list)
+if (process.argv.includes('--updates')) {
+  const fk = process.argv[process.argv.indexOf('--updates') + 1];
+  process.stdout.write(JSON.stringify((UPD[fk] || []).map(e => ({ section: e.section, title: e.title, instr: e.instr, newText: e.newText, where: e.where })), null, 1) + '\n');
+  process.exit(0);
+}
 const usedUpdates = new Set();
 // Rules Updates titles that misname the ability they change: the World Eaters pack's "Chaos Terminators, Blood Fury Ability"
 // changes the datasheet's Bloody Fury (Wahapedia, BSData and New Recruit name it so; the new text is that ability's)
@@ -838,7 +858,8 @@ function wahaWeapon(body) {
   while (i < rest.length && /^(RANGE|A|BS|WS|S|AP|D)$/.test(rest[i])) heads.push(rest[i++]);
   const names = []; while (i < rest.length && !/^(\d|-|Melee|N\/A)/.test(rest[i])) names.push(rest[i++]);
   const vals = rest.slice(i, i + heads.length);
-  return { prose: body.slice(0, k), heads, nameKw: names[0] || '', vals, line: body[k] };
+  // (and the words after the weapon: a weapon ability the enhancement defines, Auriferous Orb's "[BLINDING LIGHT]: …")
+  return { prose: body.slice(0, k), after: body.slice(k + 1 + i + heads.length), heads, nameKw: names[0] || '', vals, line: body[k] };
 }
 const WEAPON_LINE = /^(.+?): (\S+) A(\S+) (BS|WS)(\S+) S(\S+) AP(\S+) D(\S+) \[(.*)\]$/;
 
@@ -846,7 +867,7 @@ const WEAPON_LINE = /^(.+?): (\S+) A(\S+) (BS|WS)(\S+) S(\S+) AP(\S+) D(\S+) \[(
 for (const fk of FACTIONS) {
   const F = D.factions[fk];
   const army = armyIdsOf(fk);
-  for (const detId of usedDetachments(fk)) {
+  for (const detId of checkedDetachments(fk)) {
     const det = F.detachments[detId];
     const U = 'detachment:' + detId;
     if (!det) { fail('detachment', army, U, 'missing', '', 'an army uses detachment ' + detId + ' but D.factions.' + fk + ' has no such detachment', ''); continue; }
@@ -935,7 +956,8 @@ for (const fk of FACTIONS) {
     for (const e of det.enhancements || []) {
       const I = U + '/enhancement:' + e.name;
       const se = srcEnh.find(x => norm(x.name) === norm(e.name));
-      const we = W.enh.find(x => norm(x.name) === norm(e.name));
+      // (Wahapedia can leave GW's (Aura) tag out of an enhancement's name: "Cankerblight", GW's "CANKERBLIGHT (AURA)")
+      const we = W.enh.find(x => norm(x.name) === norm(e.name)) || W.enh.find(x => norm(x.name) === norm(e.name.replace(/\s*\(Aura\)$/i, '')));
       count('detachment');
       if (!se) { fail('detachment', army, I, 'name', e.name, 'not an enhancement of ' + det.name + ' in ' + (pack ? pack.where : W.where), ''); continue; }
       count('detachment');
@@ -965,7 +987,7 @@ for (const fk of FACTIONS) {
           const lines = String(e.text).split('\n');
           const wl = lines.findIndex(l => WEAPON_LINE.test(stripMarkup(l).trim()));
           const prose = lines.filter((l, i) => i !== wl).join('\n');
-          const a = normField(prose), b = joinNorm(wt.prose.map(l => l.text));
+          const a = normField(prose), b = joinNorm(wt.prose.concat(wt.after).map(l => l.text));
           if (a !== b) fail('detachment', army, I, 'text', prose, b + ' | ' + diffAt(a, b), W.where);
           count('detachment');
           const m = wl >= 0 ? WEAPON_LINE.exec(stripMarkup(lines[wl]).trim()) : null;
@@ -1268,7 +1290,7 @@ for (const a of D.armies) {
 // The datasheet name an ability belongs to: its "who" (a model of an attached unit) or the unit's name.
 // A who that names a choice on the unit's own datasheet ("Wrathful Presence: pick one") is not another datasheet.
 const dsName = (u, ab) => (ab.who && !/: pick one$/.test(ab.who)) ? ab.who : u.name;
-for (const a of D.armies) {
+for (const a of D.armies.concat(CATALOG)) {
   const fk = a.faction;
   const upd = UPD[fk].filter(e => e.section === 'DATASHEETS');
   for (const u of a.units) for (const ab of u.abilities || []) {
@@ -1294,7 +1316,7 @@ for (const a of D.armies) {
 }
 // "<datasheets> – Faction Abilities section" (or Core Abilities) "Add 'X'.": each of those datasheets in the lists has X
 // in its unit's rules list (Adeptus Mechanicus: Doctrina Imperatives on Belisarius Cawl, Cybernetica Datasmith, …)
-for (const a of D.armies) {
+for (const a of D.armies.concat(CATALOG)) {
   for (const e of UPD[a.faction].filter(x => x.section === 'DATASHEETS' && /abilities section$/.test(titleN(x)))) {
     // (or "Remove 'Leader', add 'Support'.": it has the one added and not the one removed)
     const rm = /^Remove ['‘]([^'’]+)['’], add ['‘]([^'’]+)['’]\.?$/i.exec(e.instr);
@@ -1313,6 +1335,19 @@ for (const a of D.armies) {
     }
   }
 }
+// "<datasheets> – Keywords Section" "Add 'X'.": each of those datasheets (a list's unit, a catalogue row) has the keyword X
+// (Tyranids: "Mawloc, Raveners, Trygon – Keywords Section / Add 'VANGUARD INVADER'.")
+for (const a of D.armies.concat(CATALOG)) {
+  for (const e of UPD[a.faction].filter(x => x.section === 'DATASHEETS' && /keywords(?: section)?$/.test(titleN(x)))) {
+    const m = /^Add ['‘]([^'’]+)['’]\.?$/i.exec(String(e.instr).trim()); if (!m) continue;
+    const t = titleN(e);
+    for (const u of a.units) {
+      if (!nameInTitle(nameN(u.name), t)) continue;
+      usedUpdates.add(e); count('packUpdate');
+      if (!(u.kw || []).some(k => norm(k) === norm(m[1]) || norm(k) === norm('Faction: ' + m[1]))) fail('packUpdate', a.id, u.id, 'kw', (u.kw || []).join(', '), 'Rules Updates: "' + e.title + ': ' + e.instr + '"', e.where);
+    }
+  }
+}
 // weapon abilities the Rules Updates rewrite ("Norn Assimilator, [HARPOONED] Weapon Ability") are core-rule entries in the app
 for (const fk of FACTIONS) for (const e of UPD[fk]) {
   const m = /\[([^\]]+)\] weapon ability$/.exec(titleN(e));
@@ -1323,20 +1358,61 @@ for (const fk of FACTIONS) for (const e of UPD[fk]) {
   checkUpdate('packUpdate', 'core', 'rule:' + key, 'text', D.rules[key], e, t && norm(t[1]) === m[1] ? t[2] : undefined);
 }
 // Datasheets the Faction Pack prints in full (pages whose first line is the datasheet name): each ability text of
-// that unit must be in those pages word for word ("Name: text", or the DAMAGED / INVULNERABLE SAVE boxes)
-for (const a of D.armies) {
+// that unit must be in those pages word for word ("Name: text", or the DAMAGED / INVULNERABLE SAVE boxes); a catalogue row too
+for (const a of D.armies.concat(CATALOG)) {
   const d = DOCS['pack:' + a.faction]; if (!d) continue;
-  const toc = packContents(d).filter(e => e.group === 'Datasheets' || e.group === 'Imperial Armour Datasheets');
+  const all = packContents(d), toc = all.filter(e => e.group === 'Datasheets' || e.group === 'Imperial Armour Datasheets'), index = all.find(e => e.index);
   for (const u of a.units) {
-    const e = toc.find(x => norm(x.name) === norm(u.name)); if (!e) continue;
+    const e = toc.find(x => norm(x.name) === norm(u.name)) || index; if (!e) continue;
     const p0 = d.pages.findIndex((p, pi) => pi > 0 && squash(p.lines.find(l => l.trim()) || '') === squash(u.name));
     if (p0 < 0) continue;
     const [s0, s1] = pageRange(d, p0, p0 + 1);
     const wh = d.label + ' PDF p' + (p0 + 1) + '-' + (p0 + 2) + ' (' + u.name + ' datasheet)';
+    // (the datasheet's KEYWORDS line, its CORE line and the Aura / Psychic tags GW prints in an ability's name: the row has them; a
+    // datasheet whose keywords GW prints per model, "KEYWORDS – ALL MODELS: …", is checked by its abilities only)
+    { const L = [].concat(...d.pages.slice(p0, p0 + 2).map(pg => pg.lines)), seg = x => x.trim().split(/\s{4,}/)[0].trim();
+      // (a catalogue row: a list's unit carries its list's choices, a Warlord, an allegiance, its attached unit's keywords)
+      const ki = a.id === 'catalog' ? L.findIndex(l => /^\s*KEYWORDS:/.test(l)) : -1;
+      if (ki >= 0) {
+        let kt = seg(L[ki].replace(/^\s*KEYWORDS:\s*/, '').replace(/FACTION KEYWORDS:.*$/, ''));
+        for (let j = ki + 1; /,$/.test(kt) && j < L.length; j++) kt += ' ' + seg(L[j]);
+        const gwKw = kt.replace(/,$/, '').split(/\s*,\s*/).map(x => norm(x)).filter(Boolean).sort(), appKw = (u.kw || []).filter(k => !/^Faction: /.test(k)).map(x => norm(x)).sort();
+        count('packDatasheet');
+        if (gwKw.join('|') !== appKw.join('|')) fail('packDatasheet', a.id, u.id, 'kw', (u.kw || []).join(', '), 'KEYWORDS: ' + kt, wh);
+      }
+      const ci = a.id === 'catalog' ? L.findIndex(l => /\bCORE: /.test(l)) : -1;
+      if (ci >= 0) {
+        const gwCore = L[ci].replace(/^.*\bCORE: /, '').trim().split(/\s*,\s*/).map(x => norm(x)).filter(Boolean), appR = new Set((u.rules || []).map(x => norm(x)));
+        count('packDatasheet');
+        const miss = gwCore.filter(x => !appR.has(x));
+        if (miss.length) fail('packDatasheet', a.id, u.id, 'rules', (u.rules || []).join(', '), 'CORE: ' + L[ci].replace(/^.*\bCORE: /, '').trim() + ' (the row lacks ' + miss.join(', ') + ')', wh);
+      }
+      const page = norm(L.join(' ').replace(/\s+/g, ' '));
+      for (const ab of a.id === 'catalog' ? u.abilities || [] : []) {
+        if (ab.who && norm(ab.who) !== norm(u.name)) continue;
+        const esc = norm(ab.name).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), m = new RegExp('(?:^|[^a-z’\'])' + esc + '\\s*(\\(([^)]*)\\))?:').exec(page);
+        if (!m) continue;
+        for (const tg of ['aura', 'psychic']) { const gw = new RegExp('\\b' + tg + '\\b').test(m[2] || ''), app = new RegExp('\\b' + tg + '\\b').test(norm(ab.tag || ''));
+          count('packDatasheet');
+          if (gw !== app) fail('packDatasheet', a.id, u.id, 'ability:' + ab.name + ' (tag)', ab.tag || '', 'GW prints "' + (m[0].replace(/^[^a-z]/, '')) + '"', wh); } } }
     for (const ab of u.abilities || []) {
       if (ab.who && norm(ab.who) !== norm(u.name)) continue;
       if (enhNames(a).has(norm(ab.name))) continue;
       if (/^invulnerable save/.test(norm(ab.name))) continue;   // a box ("INVULNERABLE SAVE* 5+ * Against ranged attacks only"), not text
+      // (LEADER: GW prints "This model can be attached to the following unit(s):" and a "■ Name" line per unit; the app writes them in one
+      // line, "…: BLOODLETTERS, FLAMERS": the same units, compared as a list)
+      const lm = norm(ab.name) === 'leader' && /attached to the following units?:\s*([\s\S]+)$/i.exec(String(ab.text).replace(/\*\*/g, ''));
+      if (lm) {
+        count('packDatasheet');
+        const want = lm[1].split(/\s*,\s*|\n/).map(x => norm(x.replace(/^[-■]\s*/, ''))).filter(Boolean).sort();
+        const got = []; for (const pg of d.pages.slice(p0, p0 + 2)) { const L = pg.lines; for (let i = 0; i < L.length; i++) if (/can be attached to the following units?:/i.test(L[i])) {
+          if (/■/.test(L[i + 1] || '')) for (let j = i + 1; j < L.length && /■/.test(L[j]); j++) got.push(norm(L[j].split('■').pop().trim()));
+          // (or a sentence of names, "Hormagaunts, Termagants, Tyranid Warriors / with Melee Bio-weapons, …." over its lines)
+          else { const ls = []; for (let j = i + 1; j < L.length && L[j].trim(); j++) ls.push(L[j].trim()); got.push(...ls.join(' ').replace(/\.$/, '').split(/\s*,\s*/).map(x => norm(x))); } } }
+        prov.push({ item: a.id + ' / ' + u.id + ' / ability:' + ab.name, field: 'text', doc: d.label, file: d.file, sha256: d.sha256, where: wh });
+        if (got.sort().join('|') !== want.join('|')) fail('packDatasheet', a.id, u.id, 'ability:' + ab.name, ab.text, 'LEADER: ' + (got.join(', ') || '(no unit list found)'), wh);
+        continue;
+      }
       count('packDatasheet');
       const n = normField(ab.text);
       const hits = findAll(d, n, s0, s1);
@@ -1356,8 +1432,8 @@ function enhNames(a) { const f = D.factions[a.faction]; return new Set(a.detachm
 /* ------------------------------------------------------------------ Rules Updates that concern the lists but matched no app text */
 for (const fk of FACTIONS) {
   const army = armyIdsOf(fk);
-  const dets = usedDetachments(fk).map(id => D.factions[fk].detachments[id]).filter(Boolean).map(d => norm(d.name + ' detachment'));
-  const names = new Set(); for (const a of armiesOf(fk)) for (const u of a.units) { names.add(nameN(u.name)); for (const ab of u.abilities || []) if (ab.who) names.add(nameN(ab.who)); }
+  const dets = checkedDetachments(fk).map(id => D.factions[fk].detachments[id]).filter(Boolean).map(d => norm(d.name + ' detachment'));
+  const names = new Set(); for (const a of armiesPlus(fk)) for (const u of a.units) { names.add(nameN(u.name)); for (const ab of u.abilities || []) if (ab.who) names.add(nameN(ab.who)); }
   for (const e of UPD[fk]) {
     if (usedUpdates.has(e)) continue;
     const t = titleN(e);
@@ -1366,7 +1442,7 @@ for (const fk of FACTIONS) {
     // a wargear ability is on a unit only with that wargear: its update concerns the list only when a unit has the ability
     // (Jakhals without an Icon of Khorne)
     const wg = / - (.+) wargear ability$/.exec(t);
-    if (concerns && wg && !armiesOf(fk).some(a => a.units.some(u => (u.abilities || []).some(ab => nameN(ab.name) === wg[1])))) concerns = false;
+    if (concerns && wg && !armiesPlus(fk).some(a => a.units.some(u => (u.abilities || []).some(ab => nameN(ab.name) === wg[1])))) concerns = false;
     if (!concerns) continue;
     // a datasheet update for an ability the list's unit does not have (another datasheet of the same name) is fine only if no unit has that ability
     count('packUpdate');

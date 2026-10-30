@@ -27,8 +27,22 @@ R.armies.forEach((a, ai) => a.units.forEach((u, ui) => {
   for(const k of u.kw) if(!g.includes(k) && !dev(a.id, u.id, k)) fails.push(a.id + '/' + u.id + ': ' + k + ' is not GW\'s (its datasheet does not print it, and no rule of the list gives it)');
   for(const k of g) if(!u.kw.includes(k) && !dev(a.id, u.id, k)) fails.push(a.id + '/' + u.id + ': lacks ' + k + ((g.names || []).includes(k) ? ', its datasheet\'s name keyword' : ', which GW\'s datasheet prints'));
 }));
+// the DATASHEETS rows no list has (a faction catalogue's): GW's keywords the same way, the row as a unit of its own
+const listedIds = new Set(R.A.value.flatMap(a => a.units.flatMap(u => [].concat(u.ds || []))));
+let catalog = 0;
+for(const [id, s] of Object.entries(R.D.datasheets || {})){
+  if(listedIds.has(id) || !Array.isArray(s.kw)) continue;
+  const parts = [{ name:s.name, page:O.pageFor(s.faction, s.name) }]; parts.faction = s.faction;
+  const g = O.gwKeywords(s, parts, O.catalogOwn(s), [O.catalogCats(id, s.bsId)]);
+  if(!g){ if(!dev('catalog', id, 'page')) fails.push('catalog ' + id + ': no Wahapedia datasheet page; declare it (army "catalog", kw "page")'); continue; }
+  catalog++; units++; kws += s.kw.length;
+  g.picks.forEach(x => { if(x && x.how === 'declared'){ const j = DEVS.findIndex(d => d.nameKeyword && d.datasheet === s.faction + '/' + s.name); if(j >= 0) used.add(j); } });
+  for(const p of g.missing){ const x = g.picks[0]; if(!x && dev('catalog', id, 'name')) continue; fails.push('catalog ' + id + ': ' + (x && x.bad ? x.bad : x ? 'the name keyword is only a head match (' + x.kw + ', ' + x.from + '), not declared; the page prints ' + parts[0].page.unitKeywords.join('; ') : 'no name keyword (neither its page nor BSData gives one)')); }
+  for(const k of s.kw) if(!g.includes(k) && !dev('catalog', id, k)) fails.push('catalog ' + id + ': ' + k + ' is not GW\'s');
+  for(const k of g) if(!s.kw.includes(k) && !dev('catalog', id, k)) fails.push('catalog ' + id + ': lacks ' + k);
+}
 DEVS.forEach((d, i) => { if(!used.has(i)) fails.push('verify/deviations-keywords.json #' + i + ' (' + d.army + '/' + d.unit + ' ' + d.kw + '): nothing matches it'); else if(!d.reason || !d.evidence) fails.push('verify/deviations-keywords.json #' + i + ': no reason or evidence'); });
 writeJSON(path.join(ROOT, 'verify/out/keywords.json'), { units, keywords:kws, declared:used.size, fails });
-console.log('keywords: ' + (fails.length ? fails.length + ' failure(s); ' : '') + kws + ' keywords of ' + units + ' units are GW\'s datasheets\' (and the list\'s own by its rules); ' + used.size + ' declared');
+console.log('keywords: ' + (fails.length ? fails.length + ' failure(s); ' : '') + kws + ' keywords of ' + units + ' units (' + catalog + ' of them catalogue rows) are GW\'s datasheets\' (and the list\'s own by its rules); ' + used.size + ' declared');
 fails.forEach(f => console.log('  FAIL ' + f));
 process.exit(fails.length ? 1 : 0);

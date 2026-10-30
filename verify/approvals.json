@@ -5,6 +5,12 @@
   "at": "2026-10-24",
   "why": "The Gore Hound and every Flesh Hound are “equipped with … collar of Khorne” (GW). Karanak has the Brass Collar instead."
  },
+ "002fa06586195a02": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Tip of the Talon)."
+ },
  "005e560f0cdda686": {
   "verdict": "ok",
   "by": "review:m4-code",
@@ -143,6 +149,12 @@
   "at": "2026-10-24",
   "why": "Your Shooting phase: your."
  },
+ "01d6c69cd7032a50": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[shooting]} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Psy-Chaff Volley)."
+ },
  "01d719d2154dffa1": {
   "verdict": "ok",
   "by": "review:exiled-units",
@@ -154,6 +166,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "“When a friendly ADEPTUS CUSTODES unit is selected to attack”: needs Faction: Adeptus Custodes; the ANATHEMA PSYKANA units (Faction: Anathema Psykana only; the Anathema Psykana army rule: “they do not have the ADEPTUS CUSTODES faction keyword”) are rightly left out."
+ },
+ "01e170e09914c43b": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Slayers of Nightmares)."
  },
  "01e6c4a19e689f9e": {
   "verdict": "ok",
@@ -203,6 +221,12 @@
   "at": "2026-10-25",
   "why": "Wahapedia/BSData Selfless Protector is quoted exactly. It is not tagged (Aura), so it is correctly a guard, not an aura. needs Faction: Imperial Knights matches “an IMPERIAL KNIGHTS model from your army”, and the kind is ranged (“a ranged attack is allocated”). calc {cover, insv:4} is “the Benefit of Cover and a 4+ invulnerable save”. The snapshot shows it on the Atrapos, Crusader, Destrier and Errant, and not on the Defender itself or the Navigator (no IMPERIAL KNIGHTS keyword)."
  },
+ "0290976b96b3be97": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): the rule gives keywords to BE’LAKOR, HERETIC ASTARTES and LEGIONES DAEMONICA units: any of the three. The needs follow it."
+ },
  "0295d01282f0fdf6": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -226,6 +250,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“Until the end of the phase, models in your unit have a 4+ invulnerable save.” The line has their Shooting phase, 4+ invulnerable, and the duration."
+ },
+ "03450e6e9bf04852": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Purgation Sweep)."
  },
  "035ba314f3f0539b": {
   "verdict": "ok",
@@ -467,6 +497,12 @@
   "at": "2026-10-22",
   "why": "TARGET “One friendly unengaged unit within 12\" of one or more enemy units” = “Your unengaged unit within 12\" of an enemy unit” (the VEHICLE-only-if-CHARACTER/WALKER limit is the users column); EFFECT “Resolve a charge with your unit … you must select one of the following modes: Leap to Defend … Into the Fray (+1CP)” = “resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…”, the “…” leaving what each mode does to the text, as in the signed-off gist. “End of their Charge” is the row’s tag."
  },
+ "060aa85314bc34e3": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · Inexorable)."
+ },
  "061c00da8250764b": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -514,6 +550,12 @@
   "by": "review:defilers3",
   "at": "2026-10-26",
   "why": "GW’s TRANSPORT box (Wahapedia: “TRANSPORT This model has a transport capacity of 12 EMPEROR’S CHILDREN INFANTRY models (excluding TERMINATOR and FLAWLESS BLADE models).”) shown as the ability Transport tagged Capacity, the same as the signed-off World Eaters Chaos Rhino (princes, standard)."
+ },
+ "06838b4545ce2ed2": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET up to two / one other LEGIONES DAEMONICA unit(s): the same keyword both ways. The needs follow it."
  },
  "0691de7b46f3b733": {
   "verdict": "ok",
@@ -587,6 +629,12 @@
   "at": "2026-10-24",
   "why": "“a friendly LEGIONES DAEMONICA BATTLELINE unit”."
  },
+ "0762f027bcdb70cb": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes],none:[Vehicle]}} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield rule · Gilded Guardians)."
+ },
  "0777707a104d6463": {
   "verdict": "ok",
   "by": "review:mucho-mutantes (its fix)",
@@ -629,6 +677,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"One TYRANIDS MONSTER unit from your army\"."
  },
+ "07f18fd576b93a7b": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET That LEGIONES DAEMONICA CHARACTER KHORNE unit (excluding MONSTER units, from the WHEN). The needs follow it."
+ },
  "07fc2ca32894493a": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -664,6 +718,12 @@
   "by": "review:tzeentch-data",
   "at": "2026-10-27",
   "why": "\"At the end of your Movement phase, roll one D6 for each enemy unit within 6\"\": your Movement phase, a fixed moment (checklist Movement · Your turn)."
+ },
+ "087eca4164327fe3": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Invasion Fleet · Endless Swarm), read against the faction page."
  },
  "08a220105e94f750": {
   "verdict": "ok",
@@ -778,6 +838,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "The Disc's own ability (“after this model has shot … made with Arcane Fire”); Arcane Fire is his."
+ },
+ "09e911c7350e87b1": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA NURGLE INFANTRY unit. The needs follow it."
  },
  "09ee89c8fc904e4a": {
   "verdict": "ok",
@@ -898,6 +964,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "True; the \"(Once per battle, per army)\" limit is shown from the text (rendered chip \"Once per battle, per army\")."
+ },
+ "0b400c5950335965": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA unit. The needs follow it."
  },
  "0b465384adf7d3c1": {
   "verdict": "ok",
@@ -1037,6 +1109,12 @@
   "at": "2026-10-17",
   "why": "The rule text is now the three Dense lines of 13.06 in full (checked against the PDF). MOBILE appears in the Core Rules only in 13.06 and 24.35, so it has no rule of its own. The Designer’s Note is quoted verbatim: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).” The note no longer says which lines MOBILE changes."
  },
+ "0d323c58e9f4991d": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions · Gilded Champion)."
+ },
  "0d3ab4ce31d52b6f": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -1048,6 +1126,18 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Either turn."
+ },
+ "0d4cee7588b38d24": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet rule · Hyper-adaptations), read against the faction page."
+ },
+ "0d562d88c511240c": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Rapid Reactions)."
  },
  "0d77214e7d7d92cc": {
   "verdict": "ok",
@@ -1114,6 +1204,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "True: melee A values include it (BSData base +1)."
+ },
+ "0e513baf550ef923": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Tyranid Warriors]} (Warrior Bioform Onslaught · Alien Physiology), read against the faction page."
  },
  "0e6335620c9117ba": {
   "verdict": "ok",
@@ -1409,6 +1505,12 @@
   "at": "2026-10-27",
   "why": "GW: \"This model is equipped with: Infernal Gateway; Staff of Tomorrow.\" WARGEAR OPTIONS None (FP 1.2 l.1120-1122); profiles match GW (witchfire 24\" D6+3 2+ S9 AP-2 DD3 [BLAST, INDIRECT FIRE, PSYCHIC]; focused D3+6 … D3 → 3 [+HAZARDOUS]; Staff A5 WS3+ S8 AP-2 D2D3 [PSYCHIC])."
  },
+ "12971af6f6956b5c": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "As I asked in round 1: Creeping Dread goes to all ANATHEMA PSYKANA units. Its timing is now on the rule option (command:opp in RULE_OPTIONS)."
+ },
  "12d5d6ed864ee274": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -1499,6 +1601,12 @@
   "at": "2026-10-23",
   "why": "“When a friendly THOUSAND SONS PSYKER unit … successfully manifests a Ritual”; Rituals are attempted “at the start of your Shooting phase” (Cabal of Sorcerers, Rules Update)."
  },
+ "13fd125e65443c34": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Vanguard Invader]} (Vanguard Onslaught · Surprise Assault), read against the faction page."
+ },
  "13fe6aa89ee63846": {
   "verdict": "ok",
   "by": "review:pubstomper",
@@ -1565,6 +1673,18 @@
   "at": "2026-10-22",
   "why": "\"Any phase, just after a mortal wound or attack is allocated\": in either player's turn."
  },
+ "14d8bcebdc947d65": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Faction: Tyranids,Mawloc,Trygon]} (Subterranean Assault rule · Surprise Assault), read against the faction page."
+ },
+ "14fd3e85e3d02a08": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Unending Waves), read against the faction page."
+ },
  "15005d7450360dcf": {
   "verdict": "ok",
   "by": "review:order",
@@ -1624,6 +1744,12 @@
   "by": "review:fellhammer-rules",
   "at": "2026-10-24",
   "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” Your turn."
+ },
+ "162557ecdd499676": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Vanguard Invader]} (Vanguard Onslaught · Unseen Lurkers), read against the faction page."
  },
  "168f3f8f3f5ca671": {
   "verdict": "ok",
@@ -1726,6 +1852,12 @@
   "by": "review:tzeentch-data",
   "at": "2026-10-27",
   "why": "The Fluxmaster ability is on the Fluxmaster's datasheet (FP 1.2 l.1306-1310), so its source is the Fluxmaster. Its words are \"This unit …\", which under Core Rules 19.04 (\"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit, until the source of that ability/rule is destroyed\") cover the Pink Horrors too while the Fluxmaster lives: see the def fix (ab039ae92add6462)."
+ },
+ "180049664af80920": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {ph:[movement,fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus rule · Heralds of the Throne)."
  },
  "185956b0a477f4da": {
   "verdict": "ok",
@@ -1841,6 +1973,12 @@
   "at": "2026-10-16",
   "why": "\"In your Command phase, you can use this ability.\""
  },
+ "19eeea6d75c93049": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Preservation Imperative), read against the faction page."
+ },
  "19f0dfad74c14799": {
   "verdict": "ok",
   "by": "review:howto-3",
@@ -1888,6 +2026,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "New Recruit: Disc 95 + Fatecasters 110 = 205."
+ },
+ "1a83a98325cf9d1f": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {ph:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch rule · Talon Sortie)."
  },
  "1aa4baf42f082502": {
   "verdict": "ok",
@@ -2039,6 +2183,12 @@
   "at": "2026-10-24",
   "why": "WHEN “Fight phase, just after an enemy unit has selected its targets”: Fight. Text matches GW p.124 word for word; 1CP."
  },
+ "1c9796c61ca577ff": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Slayers of Nightmares)."
+ },
  "1c9aa96f4937e26d": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -2093,6 +2243,12 @@
   "at": "2026-10-23",
   "why": "“One TZEENTCH MUTANT unit from your army that is arriving from Strategic Reserves”."
  },
+ "1d3b64dee2e40b0d": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Deathleaper,Lictor,Neurolictor]} (Ambush Predators rule · Mindhunger), read against the faction page."
+ },
  "1d5146bf15577827": {
   "verdict": "ok",
   "by": "review:defilers3",
@@ -2104,6 +2260,12 @@
   "by": "review:r14-cond",
   "at": "2026-10-21",
   "why": "\"In your Shooting phase, if any of the following apply … This unit is within range of an objective. The target of that attack is within range of an objective\": the situation is exactly \"this unit or the target within range of an objective\", and the objective fact is attacker OR target. The only other need is \"your Shooting phase\". The when names it, the ranged step is the attacker's own Shooting phase, and the code drops the tick for overwatch (/your shooting phase/)."
+ },
+ "1d80ec9fd5eaa70d": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Prosecutor Squad]}} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Psy-Chaff Volley)."
  },
  "1d93ea7c9ab1526a": {
   "verdict": "ok",
@@ -2315,6 +2477,12 @@
   "at": "2026-10-30",
   "why": "Judgement identical to the one approved on main (key 75514117213ff390, review:orks-data); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
+ "2086b02aa9a4a145": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA SLAANESH unit. The needs follow it."
+ },
  "209541d50efb7eec": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -2344,6 +2512,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Saves are failed in either turn."
+ },
+ "20fc9dad8ce9ed6f": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · No Escape)."
  },
  "210b2990f269b729": {
   "verdict": "ok",
@@ -2530,6 +2704,12 @@
   "by": "review:order",
   "at": "2026-10-30",
   "why": "Judgement identical to the one approved on main (key 0a6e479af6c5fc3a, review:healybois); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ "23132c7a093ab1ae": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Tyranid Warriors]} (Warrior Bioform Onslaught · Parasitic Payload), read against the faction page."
  },
  "231379af293895c5": {
   "verdict": "ok",
@@ -3119,6 +3299,12 @@
   "at": "2026-10-16",
   "why": "Fight phase, either turn."
  },
+ "2a736b41e520121a": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): within 9\" of LEGIONES DAEMONICA NURGLE units from your army. The needs follow it."
+ },
  "2ad2e2bd94f302b1": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -3179,6 +3365,12 @@
   "at": "2026-10-22",
   "why": "TARGET: \"That EMPEROR’S CHILDREN unit\"."
  },
+ "2c1b9e134174fdfb": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Psy-Chaff Volley)."
+ },
  "2c72703136054ad2": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -3202,6 +3394,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "\"This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.\" vs any Monster/Vehicle is the target condition and there is no table condition, so always is right."
+ },
+ "2cd86d1c93754fe4": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · Gravimetric Grenade)."
  },
  "2cde84e1de02397e": {
   "verdict": "ok",
@@ -3238,6 +3436,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "“In your Command phase, if this unit is unengaged, you can use this ability … This unit must make an ingress move in your next Movement phase (including in your first turn).” Command and Movement, your turn."
+ },
+ "2d336ff433f21e0a": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions · Duty Unto Death)."
  },
  "2d6685e66aa5c8da": {
   "verdict": "ok",
@@ -3293,6 +3497,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Your opponent's Shooting phase\"."
  },
+ "2e05116a35c1e375": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA unit arriving by Deep Strike. The needs follow it."
+ },
  "2e10b2a1e3349a3f": {
   "verdict": "ok",
   "by": "review:order",
@@ -3334,6 +3544,18 @@
   "by": "review:howto-3",
   "at": "2026-10-29",
   "why": "{\"at\":\"Start of your Command phase\"}: the rule's words open with that moment."
+ },
+ "2ed313ae2ac161aa": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Deathleaper,Lictor,Neurolictor,Von Ryan's Leapers]} (Ambush Predators · Hypersensory Adaptations), read against the faction page."
+ },
+ "2ef92d21db9028cd": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus rule · Heralds of the Throne)."
  },
  "2efe1107d6ebd5a7": {
   "verdict": "ok",
@@ -3485,6 +3707,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Extra Sneaky - Gretchin\"."
  },
+ "31708f41086199da": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {ph:[command]} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions rule · Assemblage of Might)."
+ },
  "31712370a88bd6c5": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -3587,6 +3815,12 @@
   "at": "2026-10-24",
   "why": "“its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1]” = the EFFECT. Nothing added."
  },
+ "32920d6527fd499e": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Bearers of His Light)."
+ },
  "329af2485182a556": {
   "verdict": "ok",
   "by": "review:r14-cond",
@@ -3652,6 +3886,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "New Recruit \"Daemon Lord of Khorne (Aura)\", Wahapedia \"(Aura)\"."
+ },
+ "33a05c97634c9d90": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Superhuman Focus)."
  },
  "33d48e086be9d624": {
   "verdict": "ok",
@@ -3755,6 +3995,12 @@
   "at": "2026-10-23",
   "why": "New Recruit spells “Martial Ka'tah” with a straight apostrophe, Wahapedia “Martial Ka’tah”: the alias opens the army rule. (It opens it only; the Damage tab’s dmArmyOf does not use it: see item calcMods.)"
  },
+ "34caeedc8042b3cf": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Manoeuvre and Fire)."
+ },
  "34e810a3aed68421": {
   "verdict": "ok",
   "by": "review:necrons",
@@ -3790,6 +4036,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "NR Options \"Hellforged weapons, Infernal cannon\"; rows \"Infernal cannon\", \"➤ Hellforged weapons - strike\", \"➤ Hellforged weapons - sweep\"."
+ },
+ "35568c58e6cfd212": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Overrun), read against the faction page."
  },
  "35ae05852210a8fd": {
   "verdict": "ok",
@@ -4103,6 +4355,12 @@
   "at": "2026-10-23",
   "why": "TARGET “That ADEPTUS CUSTODES DREADNOUGHT unit”: Faction: Adeptus Custodes and Dreadnought."
  },
+ "39ff1c18f824288d": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA NURGLE unit. The needs follow it."
+ },
  "39fff212d6fde57a": {
   "verdict": "ok",
   "by": "review:gists (its fix)",
@@ -4126,6 +4384,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "True. BSData Norn Assimilator base InSv is blank; NR prints the profile \"Norn Assimilator (Synaptoprescience)\" with InSv 4+; \"This unit has 4+ InSv.\""
+ },
+ "3a39c4fc004d71d9": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Shield of Honour)."
  },
  "3a422637d7e0bf34": {
   "verdict": "ok",
@@ -4403,6 +4667,18 @@
   "at": "2026-10-26",
   "why": "The A 11 is right: Wahapedia's Slaughterbound has Lacerator and daemonic claw A 6. Relentless Rage (Berzerker Warband) gives +1 (A 7 in every list), Berzerker Glaive another +1 (A 8 here, marked), and Possessed Lord adds +3, so 11. [DEVASTATING WOUNDS] until the end of the phase, once per battle, at the start of the Fight phase: all correct. Making it the list's own reading is right. But listWhy says 'the datasheet’s A 7 makes 10'. The datasheet's A is 6 (DATASHEETS leaves A out because it varies by list), and 7 already includes the detachment's +1. The fix below corrects only the listWhy wording. Two related notes. (1) The datasheet reading set:{A:'10'} has Relentless Rage baked in, so a future Slaughterbound list in another detachment would get a wrong A 10. set:{A:'+3'} (as Battle Protocols writes set:{A:'+2'}) would be right for every list and would make this listWhy unnecessary. That is the owner's call, since it changes the display. (2) readOf fingerprints only Possessed Lord's text. Changing Berzerker Glaive's or Relentless Rage's text does not make A 11 or A 10 stale (tested on a scratch copy)."
  },
+ "3d3ff11f5b839793": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET up to one SHADOW LEGION HERETIC ASTARTES and up to one SHADOW LEGION LEGIONES DAEMONICA unit. The needs follow it."
+ },
+ "3d46933deeb3f72a": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Adrenal Surge), read against the faction page."
+ },
  "3d58512771b1037d": {
   "verdict": "ok",
   "by": "review:round2",
@@ -4456,6 +4732,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "TARGET: “One ADEPTUS MECHANICUS VEHICLE unit from your army”: Faction: Adeptus Mechanicus + Vehicle picks the Datasmith + Kastelan Robots (VEHICLE per the pack's Datasmith update), both Ironstrider units, the Onager and the Skorpius, and not Cawl, Thulia (MONSTER), the Enginseer or the Rangers."
+ },
+ "3dfd5ce3935e87e3": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA SLAANESH unit. The needs follow it."
  },
  "3dfeecad4911b60b": {
   "verdict": "ok",
@@ -4517,6 +4799,12 @@
   "at": "2026-10-23",
   "why": "New Recruit prints \"Rage Embodied (Aura)\", Wahapedia \"Rage Embodied (Aura):\"; it affects units within a stated range (22.01)."
  },
+ "3e965a536e3219f6": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Shield of Honour)."
+ },
  "3eb2673c5f83a752": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -4570,6 +4858,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "Cult of the Arkifane enhancement (Wahapedia 20 pts; export Enhancements=1), so tag Enhancement."
+ },
+ "3f5ae99ce78af82a": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Tyranid Warriors With Ranged Bio-Weapons,Tyranid Warriors With Melee Bio-Weapons,Tyranid Warriors,Tyranid Prime With Lash Whip,Winged Tyranid Prime]} (Warrior Bioform Onslaught rule · Leader-beasts), read against the faction page."
  },
  "3fa10f6d7466f8be": {
   "verdict": "ok",
@@ -4667,6 +4961,12 @@
   "at": "2026-10-21",
   "why": "Datasheet (Wahapedia the same): \"In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding MONSTER/VEHICLE units), that weapon has +6 A.\" vs none Monster/Vehicle is the exclusion word for word; the only other condition is the phase and whose turn, which the matchup gives (and the app drops the pre-tick under Fire Overwatch), so always is right."
  },
+ "40ca2c4f5e8ed9cc": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · At Spear’s Length)."
+ },
  "40d27e41a0c6fd07": {
   "verdict": "ok",
   "by": "review:fellhammer-units",
@@ -4684,6 +4984,12 @@
   "by": "review:custodes-units",
   "at": "2026-10-24",
   "why": "GW header: 'Vengeful Surge (Once per battle, per unit)'. Correct."
+ },
+ "4116f0f78c8473c2": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes,Character]}} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions · Gilded Champion)."
  },
  "412b958c21267cc6": {
   "verdict": "ok",
@@ -4948,6 +5254,12 @@
   "by": "review:fellhammer-rules",
   "at": "2026-10-24",
   "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” The when-targeted line keeps the moment, +1 T and the duration."
+ },
+ "444078273c1adc64": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · Indomitable Guardians)."
  },
  "4444f7317c4d0b26": {
   "verdict": "ok",
@@ -5399,6 +5711,12 @@
   "at": "2026-10-22",
   "why": "“One CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase.”"
  },
+ "4b76817153181281": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes,Infantry]}} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Rapid Reactions)."
+ },
  "4b8620b97f0f1295": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -5464,6 +5782,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"the Command phase\", which can be either player's."
+ },
+ "4cdee7512da284af": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One friendly SHADOW LEGION unit. The needs follow it."
  },
  "4d4bd04ff488a071": {
   "verdict": "ok",
@@ -5537,6 +5861,12 @@
   "at": "2026-10-21",
   "why": "“At the start of your Command phase, this model regains up to D3 lost wounds.”"
  },
+ "4e322e886783aa57": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Synaptic Nexus · Override Instincts), read against the faction page."
+ },
  "4e3929a1c40705f0": {
   "verdict": "ok",
   "by": "review:order",
@@ -5596,6 +5926,12 @@
   "by": "review:effects-helpers",
   "at": "2026-10-30",
   "why": "Same judgement as approved 1dd70c039f74eaa3 (review:r13-calc-marks, 2026-10-21) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"needs\":{\"all\":[\"Faction: World Eaters\"]},\"when\":\"Within 6\\\" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets\",\"selfWhe…) is the one signed against GW’s words, unchanged: “\"If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well\" (Wahapedia repeats \"(excluding MONSTERS and VEHICLES)\" there): note \"+1 to wound rolls\", calc {wound:1}, vs”"
+ },
+ "4eb388d2438f8bbe": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {ph:[command]} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil rule · Silent Sisterhood)."
  },
  "4ebbce2bcd4a58bc": {
   "verdict": "ok",
@@ -5927,6 +6263,12 @@
   "at": "2026-10-18",
   "why": "Source: \"At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.\" The text names your Movement phase."
  },
+ "540a45a3dd26389d": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · No Escape)."
+ },
  "542067421d05393b": {
   "verdict": "ok",
   "by": "review:r11-misc",
@@ -5938,6 +6280,18 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "“While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.” No who: every model of the unit, the Shaman included; always while leading."
+ },
+ "5447f6d89083ec27": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Tyranid Warriors]} (Warrior Bioform Onslaught · Synaptic Micronodes), read against the faction page."
+ },
+ "5449a3733c5b80c1": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Tip of the Talon)."
  },
  "54631371c46e761a": {
   "verdict": "ok",
@@ -5974,6 +6328,12 @@
   "by": "review:order",
   "at": "2026-10-30",
   "why": "Same content as the judgement approved on main (key 69b9d2085c12011d, review:orks-data) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ "54cc6dd22280694e": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Unlimited Endurance)."
  },
  "54fcd9a5d24751a4": {
   "verdict": "ok",
@@ -6023,11 +6383,23 @@
   "at": "2026-10-23",
   "why": "“This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls”: kind melee, no weapon (every melee weapon of the attached unit, Trajann’s included, 19.04), the target condition kept as the when and left as a tick (no always), as the Damage tab’s target is set by hand."
  },
+ "55785953e5779853": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA unit from your army. The needs follow it."
+ },
  "557f02809436890e": {
   "verdict": "ok",
   "by": "review:cooking (its fix)",
   "at": "2026-10-16",
   "why": "The rule is \"When that unit is selected to make an advance move, that advance move does not prevent…\": the unit must be riled up when it advances. A unit riled up after advancing (Makari, Dread Power or Intimidating Motivation later in the phase) still cannot charge, but the reminder would let it."
+ },
+ "558b92d05088a482": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids-2",
+  "at": "2026-10-30",
+  "why": "“Up to two VANGUARD INVADER units …, or one TYRANIDS INFANTRY unit”."
  },
  "5591b92f968de557": {
   "verdict": "ok",
@@ -6101,11 +6473,23 @@
   "at": "2026-10-23",
   "why": "The opponent’s Shooting phase and the Fight phase of either turn: either."
  },
+ "56c9d1068a9125af": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Swarming Masses), read against the faction page."
+ },
  "56cbe32ed8294e4c": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "EFFECT shortened, nothing added: \"Until the end of the turn ... can ignore any or all modifiers to ... BS or WS ...; the Hit roll; the Wound roll\". WHEN is a bare \"Command phase\" (the row's tag) with no further condition."
+ },
+ "56db6e3083916215": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Manoeuvre and Fire)."
  },
  "56f3b611ec7b78a0": {
   "verdict": "ok",
@@ -6166,6 +6550,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Rubric Marines datasheet ability (NR \"Bringers of Change - Rubric Marines\"); the screen notes \"this unit\" = whole attached unit."
+ },
+ "57d00fd05e0a423d": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[charge]} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · Gravimetric Grenade)."
  },
  "57d0756c6f58a8a7": {
   "verdict": "ok",
@@ -6599,6 +6989,12 @@
   "at": "2026-10-30",
   "why": "Judgement identical to the one approved on main (key 4775df3fd73ab7b3, review:nerf-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
+ "5dde267c50b6cf60": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Deathleaper,Lictor,Neurolictor]} (Ambush Predators · Scanner Gheist), read against the faction page."
+ },
  "5df7ecf601b79724": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -6748,6 +7144,12 @@
   "by": "review:order-2",
   "at": "2026-10-30",
   "why": "Equal to the approved judgement on main (main 2399c6e key 818b335ec8c3c435) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
+ },
+ "6008621561949fcc": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Subterranean Assault · Retreat Below), read against the faction page."
  },
  "6018aeed36448653": {
   "verdict": "ok",
@@ -6929,11 +7331,23 @@
   "at": "2026-10-23",
   "why": "\"Your Command phase\": your turn."
  },
+ "62ac27f817ae78b4": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[shooting]} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Purgation Sweep)."
+ },
  "62c6a1f7832cf597": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "“unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit”; New Recruit prints OC 1 (Datasmith) and 2 (Kastelan Robot), the same as Wahapedia's base OC 1 and 2, so the +1 is not in them (its M 8\" does include the +2\")."
+ },
+ "62cae39d7aa5f54e": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Rapid Regeneration), read against the faction page."
  },
  "62d3d4be59b6eea3": {
   "verdict": "ok",
@@ -7120,6 +7534,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "\"This model has the Feel No Pain 4+ ability against Mortal Wounds.\" (Wahapedia names it Unnatural Resilience, same words.) Unconditional on a one-model unit, so defAlways is right."
+ },
+ "658e6167a374644c": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET That LEGIONES DAEMONICA SLAANESH unit, WHEN excluding MONSTER/VEHICLE units. The needs follow it."
  },
  "659aa96563de5113": {
   "verdict": "ok",
@@ -7673,6 +8093,12 @@
   "at": "2026-10-16",
   "why": "\"Your Shooting phase\": shooting is your turn only."
  },
+ "6ed7bedcb8edc9d4": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Synapse]} (Synaptic Nexus · The Smothering Shadow), read against the faction page."
+ },
  "6f044aaa078d6580": {
   "verdict": "ok",
   "by": "review:lite-knights (its fix)",
@@ -7805,6 +8231,12 @@
   "at": "2026-10-25",
   "why": "Export: Conversion beam obliterator, Phosphor blaster, Plasma executor, Titanic feet, Twin incendine combustor. This is GW’s unit composition (“conversion beam obliterator; plasma executor; twin incendine combustor; phosphor blaster; titanic feet”). The plasma executor has two profiles, standard and supercharge, as on Wahapedia and in BSData."
  },
+ "70b91e7cfe92cdcf": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil rule · Silent Sisterhood)."
+ },
  "70df0ecc9690d001": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -7840,6 +8272,12 @@
   "by": "review:exiled-2",
   "at": "2026-10-24",
   "why": "\"At the end of each phase …\" is every phase of both players' turns, so all five phases / either. The new derive.js any-phase reading gives the same."
+ },
+ "716181c586423305": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Only change: points, composition, options and aiStatus join HIDE, so they stay on DATASHEETS and never reach a list unit. Screens 390/320 and snapshots unchanged in my full gate run; tables: 0 facts kept per list."
  },
  "7173745124f5cf5b": {
   "verdict": "ok",
@@ -8225,11 +8663,23 @@
   "at": "2026-10-27",
   "why": "Export: Pyrocaster and 2 Flamers each with Flamer mouths, Flickering Flames; GW \"Every model is equipped with: Flickering Flames; Flamer mouths.\" (FP 1.2 l.1606). ×3 per unit, ×3 units. Profiles match (12\" D6 N/A S4 AP-1 D1 [IGNORES COVER, PSYCHIC, TORRENT]; A3 WS4+ S4 AP0 D1)."
  },
+ "7784492ce2233948": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions rule · Assemblage of Might)."
+ },
  "779abb4c642ccc74": {
   "verdict": "ok",
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "TARGET “wholly within 12\" of one or more battlefield edges and not within Engagement Range of one or more enemy units” and EFFECT “Remove your unit from the battlefield and place it into Strategic Reserves.” are both kept, “wholly” included."
+ },
+ "77a2c2e6438b1bf8": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids-2",
+  "at": "2026-10-30",
+  "why": "“Up to two VANGUARD INVADER units … or one other TYRANIDS INFANTRY unit”."
  },
  "77afe33b4fcd0028": {
   "verdict": "ok",
@@ -8278,6 +8728,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "EFFECT: \"When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed\". The gist is the same, shorter (as Crazed Rampage's)."
+ },
+ "78db5d4bf7883444": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Manoeuvre and Fire)."
  },
  "78e3889fb069f604": {
   "verdict": "ok",
@@ -8344,6 +8800,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "It is a Blood Legion enhancement (Wahapedia: “Gateway Unto Damnation 10 pts”). The bearer is a LEGIONES DAEMONICA KHORNE MONSTER, which is legal."
+ },
+ "79b60bf77becc5b4": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne rule · Martial Mastery)."
  },
  "79be6437c1fd2ce8": {
   "verdict": "ok",
@@ -8423,6 +8885,12 @@
   "at": "2026-10-24",
   "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.” (2CP, as Wahapedia) Shooting + Fight."
  },
+ "7a804f3ed17990c0": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): LEGIONES DAEMONICA SLAANESH units from your army have the ability. The needs follow it."
+ },
  "7a94c964a5582ba2": {
   "verdict": "ok",
   "by": "review:r14-cond",
@@ -8434,6 +8902,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Icon of Khorne is a Khorne Berzerkers wargear ability."
+ },
+ "7aa258acf57c583a": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Prime Target)."
  },
  "7aa7ec2c51e419d0": {
   "verdict": "ok",
@@ -8573,6 +9047,12 @@
   "at": "2026-10-24",
   "why": "GW Sentinel Guard keywords INFANTRY, BATTLELINE, IMPERIUM, TRUSTED SENTINEL (+ name keyword per NR convention); Shield-Captain has none of the three. Correct."
  },
+ "7d1210f969b51afc": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[shooting]} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Prime Target)."
+ },
  "7d1cd073bd4fd6bf": {
   "verdict": "ok",
   "by": "review:exiled-rules",
@@ -8657,6 +9137,12 @@
   "at": "2026-10-22",
   "why": "WHEN “Your Charge phase, just after a TYRANIDS MONSTER model from your army ends a Charge move” = “Your model has ended a Charge move”; EFFECT “Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound” = the rest."
  },
+ "7e67bf2991f4365e": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA NURGLE unit. The needs follow it."
+ },
  "7e7edefe8b57bac7": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -8668,6 +9154,12 @@
   "by": "review:import-lists",
   "at": "2026-10-23",
   "why": "Export: the Deep Strike rule sits only under the Disciple of Khorne selection on the Lord on Juggernaut (“The bearer has the Deep Strike ability”). The Khorne Berzerkers carry only Blessings of Khorne, Pistol and Hazardous. So Deep Strike is the Lord's alone."
+ },
+ "7ebd2a9007ef7a5a": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Bearers of His Light)."
  },
  "7eda1e9889eeee96": {
   "verdict": "ok",
@@ -8801,6 +9293,12 @@
   "at": "2026-10-16",
   "why": "Charge rolls are made in your Charge phase and, via Heroic Intervention, in the opponent's."
  },
+ "80a14da70962b006": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Subterranean Assault · Enfilading Emergence), read against the faction page."
+ },
  "80a243dc4bdf690b": {
   "verdict": "ok",
   "by": "review:howto-3",
@@ -8843,6 +9341,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Any phase.\""
  },
+ "81204bfa28cce0b6": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA NURGLE unit. The needs follow it."
+ },
  "8126f962efbc81ee": {
   "verdict": "ok",
   "by": "review:howto-3",
@@ -8873,6 +9377,12 @@
   "at": "2026-10-16",
   "why": "Crimson King ability of Magnus, one picked per battle round."
  },
+ "8194307e8327ac31": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One friendly LEGIONES DAEMONICA CHARACTER NURGLE unit (excluding MONSTER units). The needs follow it."
+ },
  "81bbf60286288ff2": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -8890,6 +9400,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "Lance 24.21: “Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll” → now scanned in both u.ranged and u.melee, with kind set from the list. Plunging Fire 22.05: “targets a visible unit containing one or more models on ground level … has the TOWERING keyword and the target unit is within 12\" … improve the BS characteristic of that attack by 1”, plus 23.03 (“no effect on attacks made by, or targeting, AIRCRAFT units”). The footnote shows only the TOWERING condition but does not claim to be the only one. The rest is data plumbing: own mods, detachment rules by needs, auras, eligible stratagems, and the settled one-model Starting Strength wording."
+ },
+ "81d666581bbf748f": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · Grim Responsibility)."
  },
  "81e8a39ce30f17de": {
   "verdict": "ok",
@@ -8956,6 +9472,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "“Your Movement/Charge phase”: movement and charge."
+ },
+ "83326bf32075d844": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Teeming Masses), read against the faction page."
  },
  "83424b9a3fec2d9a": {
   "verdict": "ok",
@@ -9095,6 +9617,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Your Movement phase.\""
  },
+ "852048f410e5a817": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch rule · Talon Sortie)."
+ },
  "8526839c952579da": {
   "verdict": "ok",
   "by": "review:r14-cond",
@@ -9112,6 +9640,12 @@
   "by": "review:order",
   "at": "2026-10-30",
   "why": "na reason identical to the approved main judgement (key c81efef17bbdafd5, review:infernal-lance); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ "8595836d1a888038": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[command,movement,shooting,charge,fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Superhuman Focus)."
  },
  "859912a4f6b1402e": {
   "verdict": "ok",
@@ -9275,6 +9809,12 @@
   "at": "2026-10-23",
   "why": "The Khorne Daemonkin Enhancement (Wahapedia 20 pts; New Recruit on the Master of Executions). \"BLOOD LEGIONS or WORLD EATERS model only\": it is a WORLD EATERS model."
  },
+ "8807ec417fe383d5": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Bounding Advance), read against the faction page."
+ },
  "8811cf92804280e3": {
   "verdict": "ok",
   "by": "review:literal",
@@ -9437,6 +9977,12 @@
   "at": "2026-10-22",
   "why": "“While the bearer is using the Diabolic Power ability, its melee weapons have the [LANCE] ability.” The footnote is melee only, and its condition is Diabolic Power (a Malefic Surge ability). The WS +1 part is already in the profiles (NR prints WS 2+; the datasheet has 3+), as data.js says."
  },
+ "8a35309aff984d07": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · Grim Responsibility)."
+ },
  "8a3b372cb39242dc": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -9509,6 +10055,12 @@
   "at": "2026-10-26",
   "why": "Today it classifies correctly. Of the 4 readings with weapon and set, only Possessed Lord is a one-off; Blitz Dem Gitz! (vs non-MONSTER/VEHICLE, always), Vengeance for the Omnissiah (after a VEHICLE dies, for the rest of the battle) and Battle Protocols (a protocol picked each Command phase) have no \"once per battle\" in their when, tag or text, so they rightly stay in the cells (\"8 (+6)\", \"/6\", \"(+2)\"). But the test is too wide. (1) /\\bonce per battle\\b/ also matches \"once per battle round\": \\b falls between \"battle\" and \" round\". data.js has 9 tags \"Once per battle round…\" and 13 such phrases in texts, and the test already returns true for Necromechanic (when \"once per battle round\", a guard, so no effect today). A future per-round reading with weapon and set would leave the cell wrongly. (2) Matching the whole ability text catches an ability that has an always-on bonus and a separate once-per-battle sentence. Possessed Lord says it in both when and tag, so the text adds nothing that tag and when do not already cover. Every once-per-battle ability in data.js carries a \"Once per battle\" tag, so dropping the text test misses none of today's readings. Not covered either way: \"twice per battle\" (tag \"Once per turn, twice per battle, per unit\") is not a one-off by this rule; the owner's rule says once per battle, so that is consistent."
  },
+ "8b3c42936f3dbb88": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes,Character]}} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions rule · Assemblage of Might)."
+ },
  "8b528b2587553581": {
   "verdict": "ok",
   "by": "review:custodes-rules",
@@ -9532,6 +10084,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "MASTER OF EXECUTIONS (MoE), NEMESIS CLAW and PSYKER (Nemesis Claw: \"INFANTRY; PSYKER; CHAOS; GRENADES; NEMESIS CLAW\") are not on the Dark Apostle sheet; the others (CHAOS, CHARACTER, GRENADES, INFANTRY) are. SOUL FORGE is the list’s (Cybinfernal Font), not \"from the combined unit\", so it is rightly left out of the note."
+ },
+ "8b6346b43cd434c6": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Slayers of Nightmares)."
  },
  "8b6b2f8033eabb14": {
   "verdict": "ok",
@@ -9598,6 +10156,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“In your Shooting phase, if any of the following apply …” The text names your Shooting phase."
+ },
+ "8c19b12bb89bfe93": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · Indomitable Guardians)."
  },
  "8c232b1fd04844c8": {
   "verdict": "ok",
@@ -9695,6 +10259,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Your opponent’s Shooting phase or the Fight phase\"."
  },
+ "8d25603b2e4034e3": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[command,movement,shooting,charge,fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions · Gilded Champion)."
+ },
  "8d2aa752e2860054": {
   "verdict": "ok",
   "by": "review:r15-v2",
@@ -9736,6 +10306,12 @@
   "by": "review:tzeentch-data-b",
   "at": "2026-10-27",
   "why": "GW: \"roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase\" (FP 1.2 l.1204). \"(on a D6 roll of 2-5)\" says the same, no colon to break defLine's split; faithful."
+ },
+ "8d7d18e897205611": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Anathema Blademastery)."
  },
  "8d8e1e595ae6f385": {
   "verdict": "ok",
@@ -9863,6 +10439,12 @@
   "at": "2026-10-28",
   "why": "GW: \"4 tesla spheres; armoured bulk\" + the three [C’TAN POWER] ranged profiles; Tesla 24\" A6 3+ S7 0 D1 [SUSTAINED HITS 2]; Cosmic Fire 18\" 3D6 – S6 -2 D1; Time’s Arrow 24\" A1 2+ S3 -2 D6; Antimatter Meteor 24\" D6+3 3+ S10 -3 D3; bulk A6 4+ S8 0 D1. ×4 follows the owner's rule (n:1 only for ×2 plural on one model; \"other counts follow GW\": 4). See the question answer."
  },
+ "90178f7bdceba35e": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions · Duty Unto Death)."
+ },
  "901ed08dde8345e1": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -9899,6 +10481,12 @@
   "at": "2026-10-24",
   "why": "TARGET 'That TRUSTED SENTINEL unit.' verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
+ "90d5e462a18e3604": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[shooting]} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Tip of the Talon)."
+ },
  "90e3a85921028ec9": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -9928,6 +10516,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "15.11 \"WHEN: End of your opponent's Charge phase.\""
+ },
+ "9128507d242a7aad": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Auric Champions · Duty Unto Death)."
  },
  "9128ff6b84440d5d": {
   "verdict": "ok",
@@ -10000,6 +10594,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Your turn."
+ },
+ "929092d16109b0cd": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus rule · Heralds of the Throne)."
  },
  "929513203531579f": {
   "verdict": "ok",
@@ -10228,6 +10828,12 @@
   "by": "review:order-2",
   "at": "2026-10-30",
   "why": "Equal to the approved judgement on main (main 2399c6e key eb4465fedd8412be) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
+ },
+ "967a4b418b6b64cf": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA unit. The needs follow it."
  },
  "96a85e2a464bc2b6": {
   "verdict": "ok",
@@ -10613,6 +11219,12 @@
   "at": "2026-10-24",
   "why": "Checked against Code Chivalric's table (data.js, the same on Wahapedia imperial-knights). Deed 1–2, 'completed at the end of a turn', gives End of your turn and End of your opponent’s turn. Deed 3–4, 'at the end of your opponent’s turn', gives End of your opponent’s turn. Deed 5–6, 'at the end of the battle round', gives End of the battle round. The alternation backtracks correctly from 'your' to 'your opponent’s'. 'until the end of …' is stripped, and phase ends do not match. Code Chivalric's options are the only ones in data.js with ends (scanned). The rule shows once in each of the three sections, To do now, in 6-bigs and 4-megas-and-a-destrier, and its Qualities are not listed (the owner: one line)."
  },
+ "9ae3eedb90d6bc4c": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA NURGLE unit. The needs follow it."
+ },
  "9afba01052e3c1e4": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -10684,6 +11296,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "New Recruit: “Tzaangor Enlightened*, *from combined unit”; Wahapedia Shaman keywords include MOUNTED, FLY, MUTANT."
+ },
+ "9bdf32447c4045aa": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Synaptic Goading), read against the faction page."
  },
  "9beeb638dd6ac8f9": {
   "verdict": "ok",
@@ -10895,6 +11513,12 @@
   "at": "2026-10-23",
   "why": "Part 1: “subtract 1 from the Wound roll” for attacks targeting the unit, with the D3 mortal wounds and “until the end of the phase”. Part 2: “each time a model in that unit makes an attack, add 1 to the Wound roll”: no who, so every model including the non-MUTANT leaders. Keywords part: needs TZAANGORS (only the two Tzaangors units; the Enlightened are not TZAANGORS), +1 OC only for “TZAANGOR models” while not Battle-shocked, and New Recruit's OC 1 does not include it. The Rules Update's “Change to” quotes only the two sacrifice paragraphs; Wahapedia (errata applied) and BSData keep the BATTLELINE/OC paragraph, and New Recruit gives the Tzaangors BATTLELINE, so keeping it is right."
  },
+ "9df12e4a5b6c5c03": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons-2",
+  "at": "2026-10-30",
+  "why": "TARGET “One LEGIONES DAEMONICA SLAANESH MONSTER unit or up to two LEGIONES DAEMONICA SLAANESH units (excluding MONSTERS)”. Needs keeps only what both alternatives share, as round 1 asked (f94dec1b7ca504e9). It is derived by the or-target rule."
+ },
  "9df4349f85161f85": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -10924,6 +11548,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "NR: \"1x Knight Crusader  Hunter's Eye, Avenger gatling cannon, Heavy flamer, Titanic feet, Stormspear rocket pod, Meltagun, Rapid-fire battlecannon and Questoris heavy stubber\". All 7 weapons are on the one model line."
+ },
+ "9e7d7193641e3745": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Prime Target)."
  },
  "9e9f9fdd1693af6f": {
   "verdict": "ok",
@@ -11194,6 +11824,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "Wahapedia “Close-range Killers (Aura):”, NR “Close-range Killers (Aura)”, BSData “Close-range Killers (Aura)”."
+ },
+ "a221ddcd38375d15": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turns:{movement:your}} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus rule · Heralds of the Throne)."
  },
  "a226f68b062541d8": {
   "verdict": "ok",
@@ -11549,6 +12185,12 @@
   "at": "2026-10-24",
   "why": "Spirit Thief lasts only \"Until the end of the phase\" that starts at \"the start of your Shooting phase\"; only ranged attacks are made in the Shooting phase, but kind \"all\" shows the line under ALL ATTACKS (snapshot), i.e. also for his melee weapons and the Fight-phase Damage tab. It should be kind ranged (as the approved \"Your Shooting phase, vs non-MONSTER/VEHICLE targets\" mod). Note: the rule reaches every friendly HERETIC ASTARTES model, not only him; approved lists carry such picked-target effects as aura entries (Omnissiah’s Blessing, Clever Know-wotz, Dreadherder) — see report."
  },
+ "a69296c19cf3f632": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch rule · Talon Sortie)."
+ },
  "a699203cf3fce509": {
   "verdict": "ok",
   "by": "review:r13-calc-marks",
@@ -11783,6 +12425,12 @@
   "at": "2026-10-16",
   "why": "NR/BSData: \"Paladin’s Duty (Bondsman)\"."
  },
+ "aad20ff5bc413e8a": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Rapid Reactions)."
+ },
  "aae633f79726f457": {
   "verdict": "ok",
   "by": "review:necrons",
@@ -11800,6 +12448,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"Your unit has Feel No Pain 4+ against mortal wounds.\""
+ },
+ "ab252514dfa444b7": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Witchseeker Squad]}} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Purgation Sweep)."
  },
  "ab4c28696f89c3b2": {
   "verdict": "ok",
@@ -11963,6 +12617,12 @@
   "at": "2026-10-24",
   "why": "The bearer is the Skullmaster, which the export takes it on."
  },
+ "ad97d131bd45fd67": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · At Spear’s Length)."
+ },
  "adaf66dfa80bec45": {
   "verdict": "ok",
   "by": "review:effects-helpers",
@@ -12077,6 +12737,12 @@
   "at": "2026-10-28",
   "why": "\"Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\": kind all, lasts battle, nothing added. GW (verify/.cache/waha/ds/tyranids_Norn-Assimilator.html, verify/.cache/waha/ds/tyranids_Norn-Emissary.html): \"…each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\" with comma and full stop; the app text now matches (markup only)."
  },
+ "aed4eec55bd87427": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "GW: ARMY RULES “Shadow In The Warp (Ravener Prime only), Synapse”."
+ },
  "aee2ee09c2b84801": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -12124,6 +12790,12 @@
   "by": "review:necrons",
   "at": "2026-10-28",
   "why": "\"NECRONS unit … (excluding TITANIC units)\": the Tesseract Vaults rightly lack it."
+ },
+ "af4677a8e1483126": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "GW: “KEYWORDS – ALL MODELS: …; RAVENER PRIME: CHARACTER; SYNAPSE”."
  },
  "af5bc0e30fb8a963": {
   "verdict": "ok",
@@ -12215,6 +12887,12 @@
   "at": "2026-10-17",
   "why": "WHEN lists Advance, Charge, Damage, Hazard, Hit, Save and Wound rolls, plus \"A roll to determine the number of attacks generated with a weapon\". EFFECT: \"You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls...)\". The gist leaves out the number-of-attacks roll and the one-die rule, but it ends with \"…\". Everything it does state is correct, with nothing added."
  },
+ "b0cc438194a341f1": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): LEGIONES DAEMONICA SLAANESH units from your army. The needs follow it."
+ },
  "b0db0a1110268b97": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -12280,6 +12958,12 @@
   "by": "review:navigator",
   "at": "2026-10-25",
   "why": "Export: Force-orb cane, Laspistol. Wahapedia: “This model is equipped with: laspistol; force-orb cane.” Laspistol 12\" A1 BS4+ S3 AP0 D1 [PISTOL]; force-orb cane Melee A3 WS4+ S6 AP-1 DD3 [PSYCHIC]. Wahapedia and BSData agree."
+ },
+ "b1c71477fcab8929": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · Gravimetric Grenade)."
  },
  "b1d9e68ec5885587": {
   "verdict": "ok",
@@ -12545,11 +13229,23 @@
   "at": "2026-10-27",
   "why": "Harbinger of Death: pick one of [LETHAL HITS], [PRECISION], [SUSTAINED HITS 1] for its hellforged weapons until the end of the phase: melee, a pick of GW's three, nothing added."
  },
+ "b5e9e7b4c0dcbf9e": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids,Monster]} (Subterranean Assault · Swarming Assault), read against the faction page."
+ },
  "b60342db49b96b36": {
   "verdict": "ok",
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "TOWERING appears in the Core Rules only in Plunging Fire (22.05); only bolded there. Keywords lists are not passed to ruleFor."
+ },
+ "b62e2e5b13e6d244": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · Indomitable Guardians)."
  },
  "b6389513886efba3": {
   "verdict": "ok",
@@ -12641,6 +13337,12 @@
   "at": "2026-10-24",
   "why": "WHEN 'Your Charge phase' (waha l.479); icons Charge, Your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
+ "b80706644ee85347": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET That SHADOW LEGION unit. The needs follow it."
+ },
  "b8165ca6f4d415a0": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -12688,6 +13390,12 @@
   "by": "review:r6-text",
   "at": "2026-10-17",
   "why": "EFFECT: \"Your unit can make a normal move of up to 6\", and must end that move within range of an objective.\" / \"Your unit is not eligible to declare a charge until the end of the turn.\" The gist keeps the move optional (\"can make\"), the 6\" limit and the end-within-range-of-an-objective requirement (\"ending within range\"). The charge ban stays a separate clause, not tied to the move. Trigger \"After shooting\" = \"when ... has shot\". Nothing added or dropped."
+ },
+ "b901fdd610e26bd7": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Synaptic Nexus rule · Synaptic Imperatives), read against the faction page."
  },
  "b938a8aab373de99": {
   "verdict": "ok",
@@ -12916,6 +13624,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "“Your” Movement and Charge phases: your."
+ },
+ "bba0b6e9ab022c56": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Subterranean Assault · Tunnel Network), read against the faction page."
  },
  "bbc956efd0611697": {
   "verdict": "ok",
@@ -13451,11 +14165,23 @@
   "at": "2026-10-24",
   "why": "The code under review is the code in app.html, word for word. The only change from 10498c2 is the CK_EACH_ONCE guard on pb and ckAt inside secs (now de-duplicated with a Set). I rendered 10498c2 in its own worktree, and the checklist screen for all 17 older lists is byte-identical to HEAD's. For nerf-when the screen matches the owner's scope and the rule texts in data.js and Wahapedia (verify/.cache/waha/ultramarines.txt and ds/ultramarines_*.html): Transhuman Strategist is To do now under Start of the battle round. Combat Doctrines is To do now under Command · Your turn, with no Once-per-battle box. DEVASTATOR DOCTRINE is Active now under Shooting · Your turn. ASSAULT and TACTICAL DOCTRINE are left out (a:1, triggered by the unit being selected to advance or fall back). Author of the Codex, Master Tactician and Raise the Banner (\"At the end of your Movement phase\") are To do now under Movement · Your turn. Soul Sight is To do now under Shooting · Your turn. Fearsome Assault (\"At the start of the Fight phase\") is To do now under both Fight · Your turn and Fight · Their turn. Mission Tactics (phase-scoped bonuses with no choice), Death Blow, Assault Mastery, Librarius and Special Move Types are not listed, and no stratagem is listed. The gate's screens and small-phone steps pass."
  },
+ "c523f8598b436d8e": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET That LEGIONES DAEMONICA CHARACTER TZEENTCH unit (excluding MONSTER units, from the WHEN). The needs follow it."
+ },
  "c5356644338833da": {
   "verdict": "ok",
   "by": "review:fellhammer-2",
   "at": "2026-10-24",
   "why": "GW's erratum and Wahapedia both say '(Once per battle, per unit)'. The tag is 'Once per battle, per unit', the same form as the approved Ammo Runts and Boss’ Ammo Runt tags. derive.js cannot derive it because the parenthesis is in the tag, not the text; the same is true of the approved items."
+ },
+ "c5461d0942903459": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Predatory Imperative), read against the faction page."
  },
  "c5472f5c64144bd1": {
   "verdict": "ok",
@@ -13589,6 +14315,18 @@
   "at": "2026-10-17",
   "why": "All three abilities name “THOUSAND SONS models from your army” / “a THOUSAND SONS model from your army”. No PSYKER condition is added."
  },
+ "c7587da39b74b8a5": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield rule · Gilded Guardians)."
+ },
+ "c762a2df5e80bb59": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Vigilator Squad]}} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Anathema Blademastery)."
+ },
  "c77e335eb8001f8e": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -13649,6 +14387,12 @@
   "at": "2026-10-30",
   "why": "Same content as the judgement approved on main (key e560acd173c99147, review:woof-woof) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
+ "c7d9d551e8182ab2": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Synaptic Nexus · Imperative Dominance), read against the faction page."
+ },
  "c7eddeee6b91a3e6": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -13660,6 +14404,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "WHEN: “Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” Bare “Fight phase”: either."
+ },
+ "c7fc01e0c820472f": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Unlimited Endurance)."
  },
  "c80654182fade3ae": {
   "verdict": "ok",
@@ -13985,6 +14735,12 @@
   "at": "2026-10-23",
   "why": "New Recruit prints “Captain-General (Aura) - Trajann Valoris”; it is on Trajann’s datasheet (Wahapedia), not the Allarus Custodians’. Model lines are NR’s (1x Trajann Valoris, 1x Allarus Custodian, 1x Allarus Custodian with Vexilla)."
  },
+ "ccf41cb41b973358": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · Inexorable)."
+ },
  "cd032d035bac961e": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -14026,6 +14782,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "Wahapedia “Dark Fervour (Aura):”, NR “Dark Fervour (Aura)”, BSData “Dark Fervour (Aura)”."
+ },
+ "cd283fb449ac7411": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Null Maiden Vigil · Anathema Blademastery)."
  },
  "cd32b3d2ea1ecc87": {
   "verdict": "ok",
@@ -14135,6 +14897,12 @@
   "at": "2026-10-22",
   "why": "“After your unit has shot, select one enemy unit hit by one or more of those attacks … Battle-shock test; if the test is failed, until the end of your opponent’s next turn, it is aflame … subtract 2\" from its Move characteristic and subtract 2 from Charge rolls.” Everything is kept. Leaving out “has not been selected to shoot this phase” follows the approved gists (Swarm-guided Salvoes, Unshackled Wrath, Devastating Sorcery …), and it is implied by “after your unit has shot”."
  },
+ "ceb6d55889eeafae": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes],any:[Infantry,Mounted]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Shield of Honour)."
+ },
  "cebfde87e4474b79": {
   "verdict": "ok",
   "by": "review:order",
@@ -14164,6 +14932,12 @@
   "by": "review:r20-damage",
   "at": "2026-10-21",
   "why": "Destiny’s Ruin: “Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result … was 10+, you can re-roll the Hit roll instead” = picks 5-9 / 10+. Twist of Fate: “improve the Armour Penetration characteristic of that attack by 1 … 12+ … by 2 instead” = picks 9-11 / 12+. needs is either keyword, and it is your Shooting phase (“at the start of your Shooting phase”), so ranged, with no lasts (“until the end of the phase”). Doombolt’s mortal wounds and Temporal Surge’s move are rightly left out."
+ },
+ "cf9189e0cf878a39": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons-2",
+  "at": "2026-10-30",
+  "why": "An exact, anchored, case-insensitive match on the weapon keyword “REVERBERATING SUMMONS” (doomsday bell). It opens the new RULES entry, and it is the same form as the Harpooned and Conversion aliases next to it. It matches nothing else."
  },
  "cfba43eca667f53a": {
   "verdict": "ok",
@@ -14387,6 +15161,12 @@
   "at": "2026-10-16",
   "why": "Enemy units fight in both players' Fight phases."
  },
+ "d1bb1f8c83f69cd6": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes,Infantry]}} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · No Escape)."
+ },
  "d1ca76ee0e8c222f": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -14404,6 +15184,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“WHEN: Your Command phase, just after a CHAOS KNIGHTS CHARACTER unit from your army makes a Malefic Surge.”"
+ },
+ "d1f82e411447a4eb": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne rule · Martial Mastery)."
  },
  "d22236a049b94f81": {
   "verdict": "ok",
@@ -14483,6 +15269,12 @@
   "at": "2026-10-28",
   "why": "Quotes GW: target Below Half-strength → a successful Hit roll scores a Critical Hit (melee)."
  },
+ "d2e721652a626c1b": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids-2",
+  "at": "2026-10-30",
+  "why": "TARGET “One SYNAPSE unit …”: {all:[Synapse]}."
+ },
  "d352feec3f52b87d": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -14530,6 +15322,18 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "Your Shooting phase and either Fight phase: either."
+ },
+ "d3f71eda68afeeb4": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): Friendly LEGIONES DAEMONICA CHARACTER models (excluding MONSTER models). The needs follow it."
+ },
+ "d3fc3158b20f74cc": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Mawloc,Trygon]} (Subterranean Assault · Adaptive Optimisation), read against the faction page."
  },
  "d429635f8f365c06": {
   "verdict": "ok",
@@ -14620,6 +15424,12 @@
   "by": "review:navigator",
   "at": "2026-10-25",
   "why": "Wahapedia Knight Defender, under the weapons: “Conversion: Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.” The weapon is the conversion beam obliterator [CONVERSION, SUSTAINED HITS D3] (also BSData). The condition, the note and calc critHit:4 all follow the text, which the footnote quotes without interpretation. It shows once under the ranged table."
+ },
+ "d57f000d36fa29af": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA NURGLE unit. The needs follow it."
  },
  "d587d9bedfb7d0d1": {
   "verdict": "ok",
@@ -14722,6 +15532,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Exact \"Stealth\"; 24.33."
+ },
+ "d6cf828a8963899f": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:either} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Superhuman Focus)."
  },
  "d6d44a8174815ba7": {
   "verdict": "ok",
@@ -14903,6 +15719,18 @@
   "at": "2026-10-22",
   "why": "\"Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack\": said shorter, nothing added."
  },
+ "d93f7613cac9254d": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET up to one SHADOW LEGION HERETIC ASTARTES and up to one SHADOW LEGION LEGIONES DAEMONICA unit. The needs follow it."
+ },
+ "d9b4580c9bbc3d13": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One SHADOW LEGION unit. The needs follow it."
+ },
  "d9b5aeeca85130d8": {
   "verdict": "ok",
   "by": "review:order-2",
@@ -15065,6 +15893,12 @@
   "at": "2026-10-28",
   "why": "\"TARGET: One HARVESTER unit from your army …\": Harvester."
  },
+ "dc69f79751438465": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Synapse]} (Synaptic Nexus · Synaptic Channelling), read against the faction page."
+ },
  "dc6af6247ab2f48e": {
   "verdict": "ok",
   "by": "review:core-code (its fix)",
@@ -15131,6 +15965,12 @@
   "at": "2026-10-23",
   "why": "“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP”: at “Start of the battle round”, listed under command, as Da Boss, Doctrina Imperatives and Harbingers of Dread are."
  },
+ "dce14f090f2a504e": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes,Infantry]}} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · Grim Responsibility)."
+ },
  "dcecd59be71a8d21": {
   "verdict": "ok",
   "by": "review:literal",
@@ -15191,6 +16031,12 @@
   "at": "2026-10-16",
   "why": "\"While this model has 1-6 wounds remaining, subtract 4 from ... OC and ... subtract 1 from the Hit roll.\""
  },
+ "de27b6a230b35cf6": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One friendly LEGIONES DAEMONICA CHARACTER SLAANESH unit (excluding MONSTER units). The needs follow it."
+ },
  "de3c1d43e0d675f2": {
   "verdict": "ok",
   "by": "review:r18b-game",
@@ -15244,6 +16090,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "\"Your opponent’s Shooting phase\"."
+ },
+ "defa274ed5f89239": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Vanguard Invader,Infantry]} (Vanguard Onslaught · Assassin Beasts), read against the faction page."
  },
  "df1edca14fb50e2e": {
   "verdict": "ok",
@@ -15551,6 +16403,12 @@
   "at": "2026-10-28",
   "why": "Fight, either turn. The text is “that unit’s melee attacks have +1 to hit/+1 to wound”, and melee attacks are made only in the Fight phase. The label is the same as before the rename, and derive agrees (the agreed label is under GW’s name; derive reports 487 agreed labels hold)."
  },
+ "e35823424a736940": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · Inexorable)."
+ },
  "e35d0ff5c26a2ab2": {
   "verdict": "ok",
   "by": "review:nerf-units",
@@ -15598,6 +16456,12 @@
   "by": "review:order",
   "at": "2026-10-30",
   "why": "Same content as the judgement approved on main (key d9d76882d80fa885, review:cooking) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ "e3cff3528bc2eadf": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Vanguard Onslaught · Seeded Broods), read against the faction page."
  },
  "e3d7716aca76d96b": {
   "verdict": "ok",
@@ -15707,6 +16571,12 @@
   "at": "2026-10-22",
   "why": "NR: “Armoured feet, 2x War Dog autocannon, Diabolus heavy stubber” and “War Dog autocannon (x2)”; Wahapedia: “diabolus heavy stubber; 2 War Dog autocannons; armoured feet”. ×2 autocannon is right."
  },
+ "e58797ee9fe14b7c": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {any:[Deathleaper,Lictor,Neurolictor,Von Ryan's Leapers]} (Ambush Predators · Counterpredation), read against the faction page."
+ },
  "e5aa8dff5d47c375": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -15802,6 +16672,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "NR: Aviarch + 2 Enlightened, each Close combat weapon + Fatecaster greatbow (x3 each)."
+ },
+ "e7035834fe607b7c": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Unlimited Endurance)."
  },
  "e7119a978ec69eed": {
   "verdict": "ok",
@@ -15904,6 +16780,12 @@
   "by": "review:nerf-units",
   "at": "2026-10-24",
   "why": "It keeps its condition (\"against psychic attacks\"), as the owner's Feel No Pain rule asks. The words are GW's."
+ },
+ "e88a255cb9583b96": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:your} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch · At Spear’s Length)."
  },
  "e88f06fffd4beae6": {
   "verdict": "ok",
@@ -16042,6 +16924,12 @@
   "by": "review:readings-4",
   "at": "2026-10-26",
   "why": "Matches the file. Tested: [MELTA D3], [RAPID FIRE D3], [RAPID FIRE D6], [MELTA 2], \"the Melta D3 ability\" and \"[RAPID FIRE 1] and [MELTA D3]\" are all read (wa:melta / wa:rapid fire). [HAZARDOUS] and \"[ASSAULT] and [HAZARDOUS]\" are still read. [SUPA-HAZARDOUS] and \"Supa-Hazardous ability\" (any case) are no longer read, and \"[SUPA-HAZARDOUS] and [SUSTAINED HITS 1]\" still gives sustained hits. Over all 490 current sentences, the only change is Supa-glowy Fing, which is no longer read as a hazardous grant. That is right: it is a drawback and has no condition, so there are no gaps either way."
+ },
+ "ea34bf98d422a928": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): Each time a LEGIONES DAEMONICA unit from your army is set up … : every Daemons unit. The needs follow it."
  },
  "ea4ea78104a4a851": {
   "verdict": "ok",
@@ -16265,6 +17153,12 @@
   "at": "2026-10-28",
   "why": "\"Your Fight phase\": your."
  },
+ "edc650e28faa5a25": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids-2",
+  "at": "2026-10-30",
+  "why": "“TYRANIDS units with this ability … VANGUARD INVADER units with this ability …”: the named keyword is the rule’s reach. VANGUARD INVADER units are Tyranids, so {all:[Faction: Tyranids]}."
+ },
  "edc9c7db81dd2899": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -16331,6 +17225,12 @@
   "at": "2026-10-28",
   "why": "\"TARGET: One HARVESTER unit from your army that is within 6\\\" of that destroyed unit.\": Harvester."
  },
+ "eee271bce397efcb": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA SLAANESH MONSTER unit. The needs follow it."
+ },
  "eefc9dcfb3d027e2": {
   "verdict": "ok",
   "by": "review:r11-misc",
@@ -16360,6 +17260,12 @@
   "by": "review:calc",
   "at": "2026-10-26",
   "why": "Wahapedia (adeptus-custodes.txt, Emperor’s Chosen) and data.js agree: 'When a friendly ADEPTUS CUSTODES unit is selected to attack, that unit’s attacks can: Re-roll one hit roll. Re-roll one wound roll.' It has no condition beyond the ADEPTUS CUSTODES unit (the needs entry) and being selected to attack (shoot, fight, overwatch). The 'Favoured ka’tah: RENDAX' condition applies only to the Additional Effect's mortal wounds, which are not counted here. So always:true is right. One hit and one wound re-roll per unit matches 'that unit’s attacks can'. Over all 1098 unit×phase×target cases compared against 558a750, only ADEPTUS CUSTODES units in lite-knights and emperors-chosen change (plus the Despoiler for Seething Hatred)."
+ },
+ "ef784575e7366eae": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA unit from your army within the Shadow of Chaos. The needs follow it."
  },
  "ef897a9349cdd0d4": {
   "verdict": "ok",
@@ -16499,6 +17405,12 @@
   "at": "2026-10-17",
   "why": "Word for word the EFFECT: “Your unit is riled up until the start of your next turn.”"
  },
+ "f1cff1d52574f069": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET That LEGIONES DAEMONICA SLAANESH unit. The needs follow it."
+ },
  "f1d8684e52502bb6": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -16517,6 +17429,12 @@
   "at": "2026-10-24",
   "why": "Touch of the Arkifane (GW p8 = Wahapedia = data.js): WHEN “Any phase.”; TARGET “One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” Everything is kept: the target, the “not selected to shoot or fight this phase” condition, the duration, and both abilities on a Dark Pact. Writing “makes a Dark Pact” for “is selected to make a Dark Pact” is a shortening and changes nothing."
  },
+ "f222c548afd8d3a3": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {ph:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne rule · Martial Mastery)."
+ },
  "f232cab76c600583": {
   "verdict": "ok",
   "by": "review:nerf-units (its fix)",
@@ -16528,6 +17446,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "15.04 \"WHEN: Battle-shock step of your Command phase\"."
+ },
+ "f24e9f9137515014": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Subterranean Assault · Replenishing Swarms), read against the faction page."
  },
  "f25cea45a74e0325": {
   "verdict": "ok",
@@ -16601,11 +17525,23 @@
   "at": "2026-10-22",
   "why": "An Infernal Lance enhancement (Wahapedia “Blasphemous Engine 35 pts”). NR: “Options: Blasphemous Engine, Cerastus shock lance”."
  },
+ "f36f39bae94d6beb": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm rule · Insurmountable Odds), read against the faction page."
+ },
  "f3b278734996b305": {
   "verdict": "ok",
   "by": "review:defilers3",
   "at": "2026-10-26",
   "why": "“an unmodified Wound roll of 3+ scores a Critical Wound” after calling upon daemonic patrons when selected to fight, until the end of the phase: melee (selected to fight), critWound 3. The cost (one model destroyed if nothing was killed) is in the text, not a number. Same as the signed-off PDF-built reading."
+ },
+ "f3b55d2f12ad3865": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One SHADOW LEGION unit. The needs follow it."
  },
  "f3d8fa561325a985": {
   "verdict": "ok",
@@ -16787,11 +17723,23 @@
   "at": "2026-10-21",
   "why": "“That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase”: that outlasts the start of your next Command phase, so 'round' never says longer than the words and still covers every later step of this turn and the opponent's. “select one friendly ORKS VEHICLE model … That VEHICLE model’s attacks” is one model, so oneModel:true is right; the note repeats the duration word for word."
  },
+ "f738756895aa1b62": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Synapse]} (Synaptic Nexus · Reinforced Hive Node), read against the faction page."
+ },
  "f78aa33334249bd2": {
   "verdict": "ok",
   "by": "review:r18b-game",
   "at": "2026-10-21",
   "why": "Only the Game tracker’s data-gnew calls it now, and its toast names what it clears: “New game: round, CP, VP, choices and both lists’ uses per battle cleared”. The Overview’s data-newgame handler matches 5bfdfca line for line: this list’s uses per battle only, toast “New game: uses per battle cleared”."
+ },
+ "f7a3347937d183ba": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[fight]} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Bearers of His Light)."
  },
  "f7b68c48be03c803": {
   "verdict": "ok",
@@ -16823,6 +17771,12 @@
   "at": "2026-10-16",
   "why": "\"pile-in target\" etc.; Pile-in Move 12.03."
  },
+ "f8ab970fe12f3379": {
+  "verdict": "ok",
+  "by": "review:catalog-tyranids",
+  "at": "2026-10-30",
+  "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Death Frenzy), read against the faction page."
+ },
  "f8ad0f251ac9f316": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -16840,6 +17794,12 @@
   "by": "review:r5-text",
   "at": "2026-10-17",
   "why": "Source: \"In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding MONSTER/VEHICLE units), that weapon has +6 A.\" Footnote copies the change (+6 A), the condition (non-MONSTER/VEHICLE targets) and the timing (your Shooting phase). Nothing added or dropped."
+ },
+ "f8b6f876ed32a8e5": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes],unless:{all:[Vehicle],none:[Character,Walker]}}} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Selfless Service)."
  },
  "f8baf49339b1352e": {
   "verdict": "ok",
@@ -16871,6 +17831,12 @@
   "at": "2026-10-23",
   "why": "Keeps the WHEN (\"just after an enemy unit has selected its targets\"), the TARGET's condition (a WORLD EATERS unit within 6\" of your unit that was selected as a target) and the EFFECT (\"models in your WORLD EATERS unit have a 5+ invulnerable save\", 4+ with Boon of Blood) until the end of the phase."
  },
+ "f916f3263cf3d2b4": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Selfless Service)."
+ },
  "f9711fef849e1774": {
   "verdict": "ok",
   "by": "review:import-2",
@@ -16901,6 +17867,12 @@
   "at": "2026-10-24",
   "why": "'Your Command phase': your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
+ "fa04c7595e8b407f": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[charge]} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Selfless Service)."
+ },
  "fa34fc0a23a23671": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -16918,6 +17890,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "EFFECT literal; the “selected to shoot” trigger is left to the row’s phase, as in the approved Kustom Dakka / Never Enough Dakka gists."
+ },
+ "fa9ba317d6e75b96": {
+  "verdict": "ok",
+  "by": "review:catalog-custodes",
+  "at": "2026-10-29",
+  "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes],none:[Vehicle]}} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers rule · Wardens of the Dark Cells)."
  },
  "fa9f667dcf2d6501": {
   "verdict": "ok",

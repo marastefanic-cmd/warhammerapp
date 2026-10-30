@@ -22,6 +22,9 @@
 //   bsdata      verify/bsdata.js: every unit fact equals BSData, the data New Recruit is built from
 //   bases       verify/bases.js: every model's base is GW's, as GW's base size guide (Event Companion) prints it; a row the
 //               guide has under another name, or not at all, declared in verify/deviations-bases.json
+//   catalog     verify/catalog.js: every faction catalogue (verify/from-bsdata.js: every current datasheet and detachment of a faction)
+//               is complete (Legends, Crusade and Crucible left out by an explicit filter), what the sources give now, in DATASHEETS,
+//               equal to BSData or a declared GW value, its words on GW's datasheets, and agrees with every list's units
 //   nr          verify/nr.js: everything the owner's New Recruit PDFs print is in the app, identically
 //   texts       verify/texts.js: every rules text equals GW's official documents (or Wahapedia)
 //   numbers     verify/numbers.js: every profile number shown (stats per model type, weapon Range A BS WS S AP D, the number in a weapon
@@ -75,6 +78,7 @@ step('choice', ['verify/choice.js']);
 step('bsdata', ['verify/bsdata.js']);
 step('dispositions', ['verify/dispositions.js']);   // each detachment's Force Dispositions against BSData
 step('bases', ['verify/bases.js']);   // every base size against GW's base size guide
+step('catalog', ['verify/catalog.js']);   // every faction catalogue (verify/sources/catalog) against BSData, GW's datasheets and the lists
 step('nr', ['verify/nr.js']);
 step('texts', ['verify/texts.js']);
 step('numbers', ['verify/numbers.js']);   // every profile number against GW's datasheet (Wahapedia), GW's documents on top

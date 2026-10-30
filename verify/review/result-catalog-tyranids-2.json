@@ -1,0 +1,62 @@
+[
+ {
+  "key": "2585f33389dd59a1",
+  "where": "verify/derive.js needs rules: or-target, kw-or-faction-alone, kw-or-same, kw-with-this-ability",
+  "verdict": "ok",
+  "why": "I ran derive.js at 6b49aef and at 8fc318b and diffed every derived value (2047 items each): exactly 5 change, the 4 Tyranids labels I asked for and Daemons’ Archagonists. Archagonists is right: TARGET “One LEGIONES DAEMONICA SLAANESH MONSTER unit or up to two LEGIONES DAEMONICA SLAANESH units (excluding MONSTERS)” is either kind, so {all:[Faction: Legiones Daemonica, Slaanesh]}. The old {all:[…, Monster], none:[Monster]} matched no unit at all. No other label anywhere moved."
+ },
+ {
+  "key": "c3d28331882e6fc9",
+  "where": "verify/bs-catalog.js composition: a max BSData raises on the unit's own model count (maxIf)",
+  "verdict": "ok",
+  "why": "Neurogaunts: Neurogaunt Nodebeast 1–2 with maxIf {max:1, atLeast:[Neurogaunt 20]}, as GW: “*This unit can only contain 2 Neurogaunt Nodebeasts if it contains 20 Neurogaunts”. With the points (11/21/22), the unit sizes now match GW."
+ },
+ {
+  "key": "26181904ee747876",
+  "where": "verify/catalog-write.js: deviations-bsdata.json in a fixed order",
+  "verdict": "ok",
+  "why": "Order-independent: writing tyranids → chaos-daemons → adeptus-custodes, then tables.js --write, gives byte-identical deviations-bsdata.json and data.js at 8fc318b. The one-time reorder in this commit is that sort."
+ },
+ {
+  "key": "0119b0feeae2deb0",
+  "where": "tyranids/tyrannofex kw: FRAME (the owner's decision)",
+  "verdict": "ok",
+  "why": "The owner’s decision is applied. The shared row gets FRAME and loses its srcNote. Declared in deviations-nr.json (nidzillas) and deviations-bsdata.json (nidzillas, healybois); the deviations-catalog.json entry is removed. Snapshot diffs (scratchpad/catwork): healybois and nidzillas only +FRAME and the removed note; shooty only the tables-screen counts and column lists, as before."
+ },
+ {
+  "key": "a5e2204dd8f4bfca",
+  "where": "tyranids · Vanguard Onslaught",
+  "verdict": "ok",
+  "why": "After the fixes: Questing Tendrils {all:[Faction: Tyranids]}; Hypersensory Scillia and Invisible Hunter {all:[Faction: Tyranids], any:[Vanguard Invader, Infantry]}; the rest unchanged and right."
+ },
+ {
+  "key": "795969a9c5d5f64c",
+  "where": "tyranids · Synaptic Nexus",
+  "verdict": "ok",
+  "why": "Irresistible Will now {all:[Synapse]}; the rest unchanged and right."
+ },
+ {
+  "key": "d2e721652a626c1b",
+  "where": "Tyranids · Synaptic Nexus · Irresistible Will",
+  "verdict": "ok",
+  "why": "TARGET “One SYNAPSE unit …”: {all:[Synapse]}."
+ },
+ {
+  "key": "edc650e28faa5a25",
+  "where": "Tyranids · Vanguard Onslaught rule · Questing Tendrils",
+  "verdict": "ok",
+  "why": "“TYRANIDS units with this ability … VANGUARD INVADER units with this ability …”: the named keyword is the rule’s reach. VANGUARD INVADER units are Tyranids, so {all:[Faction: Tyranids]}."
+ },
+ {
+  "key": "77a2c2e6438b1bf8",
+  "where": "Tyranids · Vanguard Onslaught · Hypersensory Scillia",
+  "verdict": "ok",
+  "why": "“Up to two VANGUARD INVADER units … or one other TYRANIDS INFANTRY unit”."
+ },
+ {
+  "key": "558b92d05088a482",
+  "where": "Tyranids · Vanguard Onslaught · Invisible Hunter",
+  "verdict": "ok",
+  "why": "“Up to two VANGUARD INVADER units …, or one TYRANIDS INFANTRY unit”."
+ }
+]

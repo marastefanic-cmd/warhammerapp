@@ -1,0 +1,52 @@
+[
+ {
+  "datasheet": "tyranids/norn-emissary",
+  "what": "rules",
+  "reason": "The lists' Rules line has Feel No Pain, from Unnatural Resilience (\"This model has the Feel No Pain 4+ ability against mortal wounds\"), as New Recruit prints it; GW's datasheet prints no Feel No Pain under CORE ABILITIES, so the catalogue's Rules line has none. The lists' row is kept.",
+  "evidence": "verify/sources/nr/nidzillas.txt (Norn Emissary, Rules line); verify/.cache/waha/ds/tyranids_Norn-Emissary.html: CORE ABILITIES \"Deadly Demise D6\", ABILITIES \"Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.\""
+ },
+ {
+  "datasheet": "tyranids/norn-emissary",
+  "what": "abilities Protean Purpose: not in the catalogue",
+  "reason": "Protean Purpose is the ability the Talons of the Norn Queen detachment rule gives (\"Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability: Protean Purpose: …\"), not the datasheet's own: both lists take that detachment, so their row holds it; the catalogue row (the datasheet alone) does not.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 84-88 (Talons of the Norn Queen, Detachment Rules, Higher Imperatives); ARMIES nidzillas, healybois: detachment talons-of-the-norn-queen.",
+  "lists": [
+   "nidzillas",
+   "healybois"
+  ]
+ },
+ {
+  "datasheet": "tyranids/norn-assimilator",
+  "what": "abilities Protean Purpose: not in the catalogue",
+  "reason": "Protean Purpose is the ability the Talons of the Norn Queen detachment rule gives (\"Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability: Protean Purpose: …\"), not the datasheet's own: both lists take that detachment, so their row holds it; the catalogue row (the datasheet alone) does not.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 84-88 (Talons of the Norn Queen, Detachment Rules, Higher Imperatives); ARMIES nidzillas, healybois: detachment talons-of-the-norn-queen.",
+  "lists": [
+   "nidzillas",
+   "healybois"
+  ]
+ },
+ {
+  "datasheet": "chaos-daemons/tzeentch-soul-grinder",
+  "what": "kw",
+  "reason": "BSData has one Soul Grinder entry per Daemonic Allegiance, each with its god's keyword (Tzeentch Soul Grinder: TZEENTCH); GW prints one Soul Grinder datasheet whose KEYWORDS have no god and whose Daemonic Allegiance gives the chosen keyword. The Tzeeeeentch list's signed-off row has GW's KEYWORDS line (the allegiance its list chose shows through Daemonic Allegiance); DATASHEETS keeps the list's row. The catalogue row, Tzeentch by its name, is BSData's entry.",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3113, 3144 (KEYWORDS: Vehicle, Walker, Chaos, Daemon, Soul Grinder), 3128 (Daemonic Allegiance); BSData Chaos - Chaos Daemons Library, Tzeentch Soul Grinder categories; data.js DATASHEETS chaos-daemons/tzeentch-soul-grinder."
+ },
+ {
+  "datasheet": "chaos-daemons/skarbrand",
+  "what": "abilities Rage Embodied text",
+  "reason": "The list is a World Eaters army: its row is the World Eaters codex's Skarbrand datasheet (faction world-eaters), whose aura names BLOOD LEGIONS units; the catalogue row is the Chaos Daemons datasheet, whose aura names KHORNE LEGIONES DAEMONICA units. Both are GW's words, each for its own army; the list's row is kept.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Skarbrand.html: \"While a friendly BLOOD LEGIONS unit is within 6\\\" of this model\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 462-465: \"While a friendly Khorne Legiones Daemonica unit is within 6\\\" of this model\"; verify/sources/nr/big-demons-baby.txt (Skarbrand, Abilities).",
+  "lists": [
+   "big-demons-baby"
+  ]
+ },
+ {
+  "datasheet": "chaos-daemons/bloodthirster",
+  "what": "abilities Daemon Lord of Khorne text",
+  "reason": "The list is a World Eaters army: its row is the World Eaters codex's Bloodthirster datasheet (faction world-eaters), whose aura names BLOOD LEGIONS units; the catalogue row is the Chaos Daemons datasheet, whose aura names KHORNE LEGIONES DAEMONICA units. Both are GW's words, each for its own army; the list's row is kept.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Bloodthirster.html: \"While a friendly BLOOD LEGIONS unit is within 6\\\" of this model\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 515-518: \"While a friendly Khorne Legiones Daemonica unit is within 6\\\" of this model\"; verify/sources/nr/big-demons-baby.txt (Bloodthirster, Abilities).",
+  "lists": [
+   "big-demons-baby"
+  ]
+ }
+]

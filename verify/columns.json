@@ -318,6 +318,14 @@
     "stratagems": {
      "source": "gw",
      "note": "see FACTIONS.detachments.stratagems"
+    },
+    "nr": {
+     "source": "bsdata",
+     "note": "the detachment's name as BSData and New Recruit spell it, where it differs from GW's by more than case (BSData's Shadow Keepers for GW's Shadowkeepers); verify/from-json.js / verify/from-bsdata.js write it from the BSData entry the Wahapedia heading matches"
+    },
+    "aiStatus": {
+     "source": "derived",
+     "note": "'not-read': a detachment the faction catalogue import added (verify/from-bsdata.js) whose AI layers are not written yet: no stratagem gists, no readings (mod, parts, mods, aura, guard, …) and no When targeted lines; verify/catalog.js fails a mark on a detachment that has them, and the owner sees where the Damage tab does not count a rule yet (docs/catalog.md)"
     }
    }
   },
@@ -1524,6 +1532,22 @@
     "guard": {
      "source": "ai-reading",
      "note": "the readings of its abilities as guard lines (DATASHEETS.guard)"
+    },
+    "points": {
+     "source": "gw",
+     "note": "the datasheet's costs as GW prints them (Wahapedia: YOUR UNIT COSTS / YOUR 1ST TO 2ND UNITS COST / … per copy of the datasheet, each unit size priced, WARGEAR OPTIONS): { costs:[{ from, to, models:[{ models, pts }] }], wargear }; BSData's in the same shape where GW prints none (verify/catalog.js gwCosts / bsCosts); every difference from BSData declared in verify/deviations-bsdata.json (army catalog, points); not copied onto a list's units (their pts are the list's)"
+    },
+    "composition": {
+     "source": "bsdata",
+     "note": "the models of the datasheet, each model entry with its min/max (and its group's), as BSData gives them (verify/bs-catalog.js composition); not copied onto units"
+    },
+    "options": {
+     "source": "bsdata",
+     "note": "the wargear choices of the datasheet: per model (or the unit), each group of BSData with its min/max and its choices (verify/bs-catalog.js options); not copied onto units"
+    },
+    "aiStatus": {
+     "source": "derived",
+     "note": "'not-read' on a catalogue row no list has (verify/tables.js --write from verify/sources/catalog): its readings (mods, aura, guard), When targeted lines (def) and timing labels are not written yet; verify/catalog.js fails the mark on a row that has them, and a row a list has never carries it (docs/catalog.md)"
     }
    }
   },

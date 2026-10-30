@@ -1,0 +1,110 @@
+[
+ {
+  "key": "c8c98764a01463ba",
+  "where": "Adeptus Custodes · Null Maiden Vigil rule · Silent Sisterhood",
+  "verdict": "deferred to wt-labels",
+  "why": "Deferred to wt-labels as a general derive.js rule (labels-handoff.json: first-unit skips a “When mustering your army” sentence; correct needs {all:[Faction: Anathema Psykana]})."
+ },
+ {
+  "key": "5f80042b0761fcee",
+  "where": "Adeptus Custodes · Aquilan Shield rule · Gilded Guardians",
+  "verdict": "deferred to wt-labels",
+  "why": "Deferred to wt-labels (labels-handoff.json: “ranged attacks that target” read as targeted-ranged; correct ph [movement, shooting]; its turns being decided there)."
+ },
+ {
+  "key": "bcbbce108bb5ccb9",
+  "where": "Adeptus Custodes · Shadowkeepers rule · Wardens of the Dark Cells",
+  "verdict": "deferred to wt-labels",
+  "why": "Deferred to wt-labels: now derive.js’s value since the writer’s exception is gone; labels-handoff.json gives ph [fight] (“melee attacks that target” = targeted-melee; Kaptaris effect engaged → Fight phase), which I agree with."
+ },
+ {
+  "key": "808780d51282264f",
+  "where": "Adeptus Custodes · Shadowkeepers rule · Wardens of the Dark Cells",
+  "verdict": "deferred to wt-labels",
+  "why": "Deferred to wt-labels with the Wardens ph (turn either stays right for a Fight-phase-only rule)."
+ },
+ {
+  "key": "33f23ac991c99427",
+  "where": "Adeptus Custodes · Shadowkeepers rule · Wardens of the Dark Cells",
+  "verdict": "deferred to wt-labels",
+  "why": "Deferred to wt-labels: turns {movement:your, shooting:opp} go away once ph is [fight]."
+ },
+ {
+  "key": "c9ba6b8007868042",
+  "where": "verify/bs-catalog.js children / selection (every option taken)",
+  "verdict": "ok",
+  "why": "children() now uses staticHidden. No Custodes option is hidden at the pin, so no row changed (catalogue rerun byte-identical)."
+ },
+ {
+  "key": "99cb466e626f2821",
+  "where": "verify/bs-catalog.js points / composition / options",
+  "verdict": "ok",
+  "why": "The fewest models now counts a group’s min (Vertus Praetors 2–3). A later copy’s increment keeps its threshold (“each copy after the first 2”). Options carry their pts (Shield-Captain’s two Praesidium Shield choices 25 = GW’s “per Praesidium Shield 25”). BSData’s reading is now only the fallback and the thing compared against: the column is GW’s."
+ },
+ {
+  "key": "3cdc5b7e3eae84fa",
+  "where": "verify/from-bsdata.js rowOf (a unit to its DATASHEETS row; Leader / Support)",
+  "verdict": "ok",
+  "why": "modelNames: a typo gets GW’s name in stats, composition and options (Pallas Grav-attack, declared add+drop in deviations-bsdata.json). Kept: BSData’s name, listed (Gyrfalcon Jetbike)."
+ },
+ {
+  "key": "b707e04b45e0f2ad",
+  "where": "verify/catalog-write.js",
+  "verdict": "ok",
+  "why": "The writer’s own label exception is removed: labels are derive.js’s only. Wardens of the Dark Cells now carries derive.js’s ph/turn/turns, and their correctness is wt-labels’ (items above). Rerun of from-bsdata.js --write then tables.js --write at 3b33b29: byte-identical."
+ },
+ {
+  "key": "6992e828d2b848e1",
+  "where": "verify/catalog.js (the gate step)",
+  "verdict": "ok",
+  "why": "filter now 22 cases (+8 hidden cases). The points are checked against GW’s datasheet (texts) and against BSData (bsdata, declared). The Rules-line reason bug is fixed: no catalogue deviation names the wrong rule; the Vigilator Devastating Wounds drop is gone. Note only: rowDiffs does not compare points / composition / options between DATASHEETS and the catalogue file. I changed Vigilator’s 9-model price and its composition min in data.js: catalog.js passed both, and the gate’s tables step failed both (“data.js is not in table form as tables.js --write writes it”). So the gate covers it, but not this step."
+ },
+ {
+  "key": "5b704df48ebfe493",
+  "where": "verify/bs-catalog.js staticHidden (modifiers that show or hide an option)",
+  "verdict": "ok",
+  "why": "Rule is right: a conditionless set wins; a show (hidden=false) under the unit’s own conditions makes it a datasheet option; a show under a force/roster/primary-catalogue condition stays hidden (a list’s choice); Crusade modifier groups ignored. The 8 fixed cases cover each branch. Note only: a show conditioned on scope self but on a child that is itself a list choice (an enhancement taken on the unit) would count as the datasheet’s; no Custodes case."
+ },
+ {
+  "key": "cb7d027c07fd1e04",
+  "where": "verify/catalog.js gwCosts / bsCosts / costsDiff (the points column)",
+  "verdict": "ok",
+  "why": "Checked every Custodes datasheet’s points against its cached Wahapedia page (YOUR … COSTS per copy, WARGEAR OPTIONS): all 29 match exactly, from-to copy ranges included. Examples: Rhino 1–3 70 / 4+ 80; Custodian Guard and Sentinel Guard 1–3 240 / 4+ 270; Venatari 1–2 / 3+; Wardens and Vertus 2 and 3 models per copy band; Shield-Captain + Praesidium Shield 25. The 3 declared squads (Prosecutors 4 45 · 5 50 · 9 80 · 10 90, Vigilators 50/55/90/100, Witchseekers 55/60/100/110) match GW, and their reason (BSData prices 6–8 models GW does not) is right."
+ },
+ {
+  "key": "387ccd7d027b8c62",
+  "where": "verify/from-json.js: a weapon ability of the unit’s weapons stays on the Rules line",
+  "verdict": "ok",
+  "why": "The Vigilators keep Devastating Wounds ([DEVASTATING WOUNDS: PSYKER]). The --compare claims, checked by running each export at be1039b and at 3b33b29:\n- 4-megas-and-a-destrier: canis-rex.rules gains Sustained Hits and Blast, toward data.js’s row. The item says Ignores Cover; for this list it is Sustained Hits/Blast.\n- 6-bigs: knight-warden.rules gains Ignores Cover, toward data.js.\n- mucho-mutantes: --compare output identical before and after, so “changes” is overstated, harmless.\ndata.js is unchanged, and nr/import/snapshots pass."
+ },
+ {
+  "key": "931d748ace21b290",
+  "where": "left out by the filter",
+  "verdict": "ok",
+  "why": "Same 93 as before. docs/catalog.md now names the allies right: every Imperial Knight, the Agents and the Titans."
+ },
+ {
+  "key": "65c3fe6a46fc4127",
+  "where": "adeptus-custodes/gyrfalcon-jetbike-sodality · Gyrfalcon Jetbike",
+  "verdict": "ok",
+  "why": "As I proposed: guide line 2622 “Agamatus Custodians 75x42mm Oval Base”, the previous name (Faction Pack 1.2 line 671). The base is unchanged."
+ },
+ {
+  "key": "4f15c4979373c7ce",
+  "where": "BSData model Palas Grav-attack",
+  "verdict": "ok",
+  "why": "Wahapedia Pallas Grav-attack: UNIT COMPOSITION “1 Pallas Grav-attack model”; datasheet and category are Pallas; BSData’s profile “Palas” is a misprint. Declared (stats[Pallas Grav-attack] add, stats[Palas Grav-attack] drop)."
+ },
+ {
+  "key": "a8ca2e87d2667221",
+  "where": "BSData model Gyrfalcon Jetbike",
+  "verdict": "ok",
+  "why": "GW: “2 Gyrfalcon Jetbiker models”. BSData’s “Gyrfalcon Jetbike” is another name, not a misprint. Kept, as the lists keep BSData’s names (Vertus Praetors)."
+ },
+ {
+  "key": "c507762855491fa6",
+  "where": "verify/deviations-bsdata.json army \"catalog\" (88, written mechanically with GW evidence)",
+  "verdict": "ok",
+  "why": "88 = the earlier 84 − Vigilator Devastating Wounds (now kept) + 3 points + 2 Pallas name. All 3 points and both name declarations are checked against Wahapedia (above); the rest is as reviewed before."
+ }
+]

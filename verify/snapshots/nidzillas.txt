@@ -638,7 +638,7 @@ Neurogaunts
 ×2 units
 Neurocytes
 
-While this unit is within Synapse Range of your friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.
+While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.
 
 Norn Assimilator
 Synaptoprescience
@@ -2510,7 +2510,7 @@ Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of th
 ABILITIES
 Neurocytes
 
-While this unit is within Synapse Range of your friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.
+While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.
 
 Rules
 Synapse
@@ -3208,10 +3208,10 @@ None from Talons of the Norn Queen.
 
 Keywords
 FACTION: TYRANIDS
+FRAME
 GREAT DEVOURER
 MONSTER
 TYRANNOFEX
-Wahapedia also lists FRAME (from its errata); GW’s Faction Pack (14-10) and BSData don’t
 Ask about this unit
 ‹ Norn Emissary
 

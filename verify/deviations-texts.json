@@ -169,5 +169,85 @@
   "source": "not on Wahapedia (the only source with points)",
   "reason": "GW's Faction Pack Necrons 1.3 names the enhancement Prelocational Optimiser (as BSData does) and prints no points; Wahapedia, the only source with points, names it \"Relocational Optimiser\" at 25 pts, the points the app has (BSData: Prelocational Optimiser, 25 pts). Not in this list.",
   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_necrons-1urphgbmpy-wbhocjbaba.txt, The Phaeron’s Armoury, ENHANCEMENTS: \"PRELOCATIONAL OPTIMISER\"; verify/.cache/waha/necrons.txt (The Phaeron's Armoury 1DP): \"- Relocational Optimiser 25 pts\"; verify/.cache/bsdata/Necrons.json: \"Prelocational Optimiser\", cost 25."
+ },
+ {
+  "army": "tyranids",
+  "unit": "detachment:warrior-bioform-onslaught/rule",
+  "field": "text",
+  "app": "- Friendly **TYRANID WARRIORS WITH RANGED BIO-WEAPONS**/**TYRANID WARRIORS WITH MELEE BIO-WEAPONS** units have:\n- **TYRANID WARRIORS**.\n- **BATTLELINE**.\n- **TYRANID WARRIORS**/**TYRANID PRIME WITH LASH WHIP**/**WINGED TYRANID PRIME** models from your army have 5+ **InSv**.",
+  "source": "matches the less authoritative Wahapedia text, not the Faction Pack: source: \"the hive mind has spawned entire swarms of tyranid warriors upon this battlefield, adapting them to be tougher as well as more numerous, and thus to serve as better conduits for its will. friendly tyranid warriors with ranged bio-weapons/tyranid warriors with melee bio-weapons units have: tyranid warriors. battleline.\" | the app text differs before \"….\": app \"d tyranid prime models from your army have 5+ insv\" vs source \"o-weapons units have: tyranid warriors. battleline\"",
+  "where": "GW Faction Pack Tyranids PDF p4",
+  "reason": "The Faction Pack prints the Leader-beasts rule with two levels of bullets (▪ for its two points, ▫ for the two keywords the first gives), across two columns of page 4; verify/texts.js reads the pack's text only up to the second level and so misses the second ▪ point. Every word of the app's text is the pack's (lines 128-138, including \"▪ TYRANID WARRIORS/TYRANID PRIME WITH LASH WHIP/WINGED TYRANID PRIME models from your army have 5+ InSv.\") and Wahapedia's, which verify/texts.js matches word for word. A catalogue detachment (verify/from-bsdata.js tyranids).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 118-138 (WARRIOR BIOFORM ONSLAUGHT, DETACHMENT RULES, LEADER-BEASTS); verify/.cache/waha/tyranids.txt, Warrior Bioform Onslaught 1DP."
+ },
+ {
+  "army": "tyranids",
+  "unit": "detachment:subterranean-assault",
+  "field": "source",
+  "app": "Subterranean Assault",
+  "source": "detachment Subterranean Assault is in the contents but no page starts with its name",
+  "where": "GW Faction Pack Tyranids",
+  "reason": "The Faction Pack's Subterranean Assault page prints the detachment's name broken over two lines (\"SUBTERRANEAN\" / \"ASSAULT\"), so verify/texts.js finds no page that starts with it; the app's detachment is checked against Wahapedia's (the codex), as for every detachment the pack does not print. A catalogue detachment (verify/from-bsdata.js tyranids).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt lines 165-166: \"SUBTERRANEAN\" / \"ASSAULT\"; line 15 (contents): \"Subterranean Assault … 5\"."
+ },
+ {
+  "army": "catalog",
+  "unit": "chaos-daemons/belakor",
+  "field": "ability:Shadow Form",
+  "app": "At the start of the battle round, select one Shadow Form ability (see below). Until the end of the battle round, this model has that ability.",
+  "source": "…matches up to \"nd, select one shadow form ability (see \" then source has: \"reverse). until the end of the battle round, this model has that ability. damaged: 1-7 wounds remaining while this model\"",
+  "where": "GW Faction Pack Chaos Daemons PDF p112-113 (Be’lakor datasheet)",
+  "reason": "GW prints Shadow Form's words with \"(see reverse)\", the datasheet card's other side; the app shows the three Shadow Form abilities right after it, so it writes \"(see below)\", as Wahapedia does (the Chaos Daemons review). Otherwise GW's words.",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3032-3036: \"Shadow Form: At the start of the battle round, select one Shadow Form ability (see reverse). Until the end of the battle round, this model has that ability.\""
+ },
+ {
+  "army": "catalog",
+  "unit": "chaos-daemons/rotigus",
+  "field": "ability:Deluge of Nurgle (name)",
+  "app": "Deluge of Nurgle",
+  "source": "the text is on the datasheet, but not under this name",
+  "where": "GW Faction Pack Chaos Daemons PDF p64-65 (Rotigus datasheet)",
+  "reason": "GW's Faction Pack prints \"Deluge of Nurgle (Aura):While\", a space missing after the colon, so the name is not found before the words; the row's name and tag are GW's (the Chaos Daemons review).",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt line 1795: \"Deluge of Nurgle (Aura):While an enemy unit is within 6\\\"\""
+ },
+ {
+  "army": "catalog",
+  "unit": "chaos-daemons/contorted-epitome",
+  "field": "ability:Horrible Fascination (name)",
+  "app": "Horrible Fascination",
+  "source": "the text is on the datasheet, but not under this name",
+  "where": "GW Faction Pack Chaos Daemons PDF p98-99 (Contorted Epitome datasheet)",
+  "reason": "GW's Faction Pack prints \"Horrible Fascination(Psychic):\", a space missing before the tag, so the name is not found as \"Horrible Fascination (Psychic):\"; the row's name Horrible Fascination with the tag Psychic is GW's (the Chaos Daemons review).",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt line 2670: \"Horrible Fascination(Psychic):\""
+ },
+ {
+  "army": "catalog",
+  "unit": "chaos-daemons/daemonettes",
+  "field": "ability:Horrifying Beauty",
+  "app": "At the start of the Fight phase, each enemy unit within **Engagement Range** of one or more units from your army with this ability must take a **Battle-shock test**, subtracting 1 from the result if that enemy unit is **Below Half-strength**.",
+  "source": "…matches up to \"my unit within engagement range of one o\" then source has: \"f more units from your army with this ability must take a battle-shock test, subtracting 1 from the result if that enemy\"",
+  "where": "GW Faction Pack Chaos Daemons PDF p106-107 (Daemonettes datasheet)",
+  "reason": "GW's Faction Pack misprints \"one of more units\"; the app keeps \"one or more\" (BSData and Wahapedia; the Chaos Daemons review).",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 2874-2875: \"Horrifying Beauty: At the start of the Fight phase, each enemy unit within Engagement Range of one of more units\""
+ },
+ {
+  "army": "catalog",
+  "unit": "chaos-daemons/feculent-gnarlmaw",
+  "field": "ability:Fortification",
+  "app": "While an enemy unit is only within **Engagement Range** of one or more **FORTIFICATIONS** from your army:\n- That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the **Hit roll**.\n- Models in that unit do not need to take Desperate Escape tests due to Falling Back while **Battle-shocked**, except for those that will move over enemy models when doing so.",
+  "source": "…matches up to \" from the hit roll. models in that unit \" then source has: \"so not need to take desperate escape tests due to falling back while battle-shocked, except for those that will move ove\"",
+  "where": "GW Faction Pack Chaos Daemons PDF p86-87 (Feculent Gnarlmaw datasheet)",
+  "reason": "GW's Faction Pack misprints \"Models in that unit so not need to take Desperate Escape tests\"; the app keeps \"do not need\" (BSData and Wahapedia).",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt line 2353 (Fortification, Feculent Gnarlmaw): \"Models in that unit so not need to take Desperate Escape tests\""
+ },
+ {
+  "army": "catalog",
+  "unit": "chaos-daemons/skull-altar",
+  "field": "ability:Fortification",
+  "app": "While an enemy unit is only within **Engagement Range** of one or more **FORTIFICATIONS** from your army:\n- That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the **Hit roll**.\n- Models in that unit do not need to take Desperate Escape tests due to Falling Back while **Battle-shocked**, except for those that will move over enemy models when doing so.",
+  "source": "…matches up to \" from the hit roll. models in that unit \" then source has: \"so not need to take desperate escape tests due to falling back while battle-shocked, except for those that will move ove\"",
+  "where": "GW Faction Pack Chaos Daemons PDF p36-37 (Skull Altar datasheet)",
+  "reason": "GW's Faction Pack misprints \"Models in that unit so not need to take Desperate Escape tests\"; the app keeps \"do not need\" (BSData and Wahapedia).",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 1037-1043 (Fortification, Skull Altar): \"Models in that unit so not need to take Desperate Escape tests\""
  }
 ]

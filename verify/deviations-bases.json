@@ -118,5 +118,55 @@
   },
   "reason": "The Brimstone Horrors reference sheet is built from GW’s Blue Horrors datasheet (GW prints no Brimstone Horrors datasheet; its one profile, “Blue Horrors (⌀25mm)”, is the Brimstone Horror’s too); GW’s base size guide has the Blue Horrors row, so that row’s base is compared.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927 (CHAOS DAEMONS): \"Blue Horrors  25mm\"; verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: \"Blue Horrors (⌀25mm)\"."
+ },
+ {
+  "datasheet": "adeptus-custodes/aquilon-terminators-with-solarite-power-gauntlets",
+  "row": "Aquilon Terminator",
+  "guide": {
+   "section": "ADEPTUS CUSTODES",
+   "entry": "Aquilon Custodians"
+  },
+  "reason": "GW's base size guide names the Aquilon Terminators \"Aquilon Custodians\" (their previous name; the only Aquilon row of the Adeptus Custodes section); the names share no rule verify/base-guide.js can match by, so the row is named here and its base compared. A catalogue datasheet no list has yet (verify/from-bsdata.js).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2623 (ADEPTUS CUSTODES, Imperial Armour rows): \"Aquilon Custodians  50mm\"; verify/.cache/waha/ds/adeptus-custodes_Aquilon-Terminators-with-Solarite-Power-Gauntlets.html: \"(⌀50mm)\"."
+ },
+ {
+  "datasheet": "adeptus-custodes/aquilon-terminators-with-solarite-power-talons",
+  "row": "Aquilon Terminator",
+  "guide": {
+   "section": "ADEPTUS CUSTODES",
+   "entry": "Aquilon Custodians"
+  },
+  "reason": "GW's base size guide names the Aquilon Terminators \"Aquilon Custodians\" (their previous name; the only Aquilon row of the Adeptus Custodes section); the names share no rule verify/base-guide.js can match by, so the row is named here and its base compared. A catalogue datasheet no list has yet (verify/from-bsdata.js).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2623 (ADEPTUS CUSTODES, Imperial Armour rows): \"Aquilon Custodians  50mm\"; verify/.cache/waha/ds/adeptus-custodes_Aquilon-Terminators-with-Solarite-Power-Talons.html: \"(⌀50mm)\"."
+ },
+ {
+  "datasheet": "adeptus-custodes/venatari-with-kinetic-destroyers",
+  "row": "Venatari",
+  "guide": {
+   "section": "ADEPTUS CUSTODES",
+   "entry": "Venatari Custodians"
+  },
+  "reason": "GW's base size guide has one Venatari row, \"Venatari Custodians\", for both Venatari datasheets (with Kinetic Destroyers, with Verutum Lances); named here and its base compared. A catalogue datasheet no list has yet (verify/from-bsdata.js).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2634 (ADEPTUS CUSTODES, Imperial Armour rows): \"Venatari Custodians  40mm\"; verify/.cache/waha/ds/adeptus-custodes_Venatari-with-Kinetic-Destroyers.html: \"(⌀40mm)\"."
+ },
+ {
+  "datasheet": "adeptus-custodes/venatari-with-verutum-lances",
+  "row": "Venatari",
+  "guide": {
+   "section": "ADEPTUS CUSTODES",
+   "entry": "Venatari Custodians"
+  },
+  "reason": "GW's base size guide has one Venatari row, \"Venatari Custodians\", for both Venatari datasheets (with Kinetic Destroyers, with Verutum Lances); named here and its base compared. A catalogue datasheet no list has yet (verify/from-bsdata.js).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2634 (ADEPTUS CUSTODES, Imperial Armour rows): \"Venatari Custodians  40mm\"; verify/.cache/waha/ds/adeptus-custodes_Venatari-with-Verutum-Lances.html: \"(⌀40mm)\"."
+ },
+ {
+  "datasheet": "adeptus-custodes/gyrfalcon-jetbike-sodality",
+  "row": "Gyrfalcon Jetbike",
+  "guide": {
+   "section": "ADEPTUS CUSTODES",
+   "entry": "Agamatus Custodians"
+  },
+  "reason": "GW's base size guide names the Gyrfalcon Jetbike Sodality \"Agamatus Custodians\" (its previous name, as the guide names the Aquilon Terminators \"Aquilon Custodians\": the previous Faction Pack 1.2 says \"Agamatus Custodians take Gyrfalcon-pattern jetbikes\", and BSData's previous-codex Leader list of the Dawneagle Shield-Captain, \"AGAMATUS CUSTODIANS, VERTUS PRAETORS\", is GW's \"GYRFALCON JETBIKE SODALITY, VERTUS PRAETORS\" now); the names share no rule verify/base-guide.js can match by, so the row is named here and its base compared. A catalogue datasheet no list has yet (verify/from-bsdata.js).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2622 (ADEPTUS CUSTODES, Imperial Armour rows): \"Agamatus Custodians  75x42mm Oval Base\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.txt line 671; verify/.cache/waha/ds/adeptus-custodes_Gyrfalcon-Jetbike-Sodality.html: \"(⌀75 x 42mm)\"."
  }
 ]

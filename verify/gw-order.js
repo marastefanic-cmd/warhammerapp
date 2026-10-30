@@ -73,6 +73,20 @@ module.exports = function make(ROOT) {
   const lower = new Map(files.map(f => [f.toLowerCase(), f]));
   const words = new Map(), cache = new Map(), noPage = new Set();
   const ww = fac => words.get(fac) || (words.set(fac, WW(ROOT, fac)), words.get(fac));
+  // GW's own document over Wahapedia: the KEYWORDS line of a datasheet a faction's GW Faction Pack prints in full (sources/factions.json
+  // pack; its text in verify/.cache/gw: the page whose first line is the datasheet's name), as verify/texts.js reads it. null: not printed
+  const PACK = new Map();
+  function packKeywords(fac, name) {
+    const pf = ((FJ[fac] || {}).pack || {}).file; if (!pf) return null;
+    if (!PACK.has(pf)) { let pages = []; try { pages = fs.readFileSync(path.join(ROOT, 'verify/.cache/gw', pf.replace(/\.pdf$/, '.txt')), 'utf8').split('\f').map(p => p.split('\n')); } catch (e) {} PACK.set(pf, pages); }
+    const pages = PACK.get(pf), sq = x => String(x).toLowerCase().replace(/[^a-z0-9]/g, '');
+    const p0 = pages.findIndex((p, i) => i > 0 && sq((p.find(l => l.trim()) || '')) === sq(name)); if (p0 < 0) return null;
+    const L = [].concat(...pages.slice(p0, p0 + 2)), seg = x => x.trim().split(/\s{4,}/)[0].trim();
+    const ki = L.findIndex(l => /^\s*KEYWORDS:/.test(l)); if (ki < 0 || /KEYWORDS\s+[–-]\s+ALL MODELS/i.test(L[ki])) return null;
+    let kt = seg(L[ki].replace(/^\s*KEYWORDS:\s*/, '').replace(/FACTION KEYWORDS:.*$/, ''));
+    for (let j = ki + 1; /,$/.test(kt) && j < L.length; j++) kt += ' ' + seg(L[j]);
+    return kt.replace(/,$/, '').split(/\s*,\s*/).filter(Boolean);
+  }
   // a datasheet's page: under the list's faction, else under one of its allied factions (sources/factions.json), by the faction page's
   // link (waha-words wahaAddress); a reference entry's name less its bracket ("Spore Mines (Biovore)")
   function pageFor(faction, name) {
@@ -83,7 +97,10 @@ module.exports = function make(ROOT) {
     for (const nmx of [name, String(name).replace(/\s*\([^()]*\)$/, '')]) {
       for (const fac of facs) {
         const f = lower.get((fac + '_' + ww(fac).wahaAddress(nmx) + '.html').toLowerCase());
-        if (f) { const p = parse(fs.readFileSync(path.join(DIR, f), 'utf8'), ww(fac).chapter); if (p) { r = Object.assign(p, { file:f }); break; } }
+        if (f) { const p = parse(fs.readFileSync(path.join(DIR, f), 'utf8'), ww(fac).chapter); if (p) { r = Object.assign(p, { file:f });
+          // (the KEYWORDS GW's Faction Pack prints for it win over Wahapedia's: Tormentbringer, not TORMENTBRINGER ON EXALTED SEEKER CHARIOT)
+          const pk = packKeywords(fac, name); if (pk) { r.wahaKeywords = r.unitKeywords; r.unitKeywords = pk.map(k => k.toUpperCase()); r.keywords = r.unitKeywords.concat(...Object.values(r.modelKeywords || {})); r.pack = true; }
+          break; } }
       }
       if (r) break;
     }
@@ -298,7 +315,7 @@ module.exports = function make(ROOT) {
     const names = parts.map((p, i) => nameKeyword(p, (cats || [])[i], fac));
     for (const x of names) if (x && !x.undeclared) add(x.kw);
     for (const p of parts) for (const k of p.page.factionKeywords) add('Faction: ' + TC(k));
-    const listed = new Set([].concat(parts.map(p => p.name), own || [], Object.keys(u.kwOnly || {}),
+    const listed = new Set([].concat(own || [], Object.keys(u.kwOnly || {}),
       parts.flatMap(p => Object.values(p.page.modelKeywords).flat().map(k => k.replace(/\s*:\s*$/, ''))), parts.flatMap(p => Object.keys(p.page.detachmentKeywords)),
       String(u.kwNote || '').split(/;\s*/).flatMap(seg => { const m = /^(.*?) comes? from (.*)$/.exec(seg); return m && !/^the (led|supported|combined)/.test(m[2]) ? m[1].split(/,\s*/) : []; })).map(n));
     for (const k of u.kw) if (listed.has(n(k)) || /^Allies: /.test(k)) keep.add(n(k));
@@ -315,11 +332,30 @@ module.exports = function make(ROOT) {
       orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts);
     }
   }
+  // a faction catalogue's DATASHEETS row (verify/sources/catalog; no list has it, or only as a part of an attached unit): its keywords as
+  // GW prints them (gwKeywords, its BSData categories for the name keyword) and its keywords and Rules line in GW's order, in place
+  // a catalogue row's BSData categories: its entry's in bsdata-extract.json, else the keywords verify/from-bsdata.js read from BSData for
+  // it (verify/sources/catalog/<faction>.json)
+  let CATK = null;
+  const catalogCats = (id, bsId) => { const b = bsId ? bsCats(bsId) : []; if (b.length) return b;
+    if (!CATK) { CATK = new Map(); try { const dir = path.join(ROOT, 'verify/sources/catalog'); for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json'))) for (const [k, r] of Object.entries(JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).datasheets || {})) CATK.set(k, r.kw || []); } catch (e) {} }
+    return CATK.get(id) || []; };
+  // a catalogue row's own keyword: the god of the Daemonic Allegiance choice the BSData entry is ("Khorne Soul Grinder"), which an ability
+  // of it names in bold (as tables.js unitWhy gives a list's unit)
+  const catalogOwn = ds => { const g = /^(Khorne|Tzeentch|Nurgle|Slaanesh) /.exec(ds.name || '');
+    return g && (ds.abilities || []).some(a => String(a.text || '').includes('**' + g[1].toUpperCase() + '**')) ? [g[1]] : []; };
+  function catalogSheet(ds, id, abilities) {
+    const parts = [{ name:ds.name, page:pageFor(ds.faction, ds.name) }]; parts.faction = ds.faction;
+    if (!parts[0].page) return ds;
+    if (Array.isArray(ds.kw)) { const own = catalogOwn(Object.assign({ abilities }, ds)), kw = gwKeywords(ds, parts, own, [catalogCats(id, ds.bsId)]); if (kw) ds.kw = kw.slice(); orderKw(ds, parts, own, kw && kw.names); }
+    orderRules(ds, parts);
+    return ds;
+  }
   // a datasheet row's lists (DATASHEETS: a faction catalogue's rows too), as one unit of it
   function sheet(id, s) {
     const u = Object.assign({}, s), parts = [{ name:s.name, page:pageFor(s.faction || id.split('/')[0], s.name) }];
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { units, sheet, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
+  return { units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
 };

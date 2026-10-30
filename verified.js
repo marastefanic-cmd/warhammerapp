@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "4245a57fc7",
- "data": "2026-10-30.1",
+ "build": "e70048b789",
+ "data": "2026-10-30.2",
  "date": "30 Oct 2026",
  "checks": [
   {
@@ -11,7 +11,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "BSData,",
-   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (16364 facts)."
+   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (16366 facts)."
   },
   {
    "label": "Granted values:",
@@ -19,7 +19,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Games Workshop’s rules text:",
-   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (4483 texts)."
+   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (5712 texts)."
   },
   {
    "label": "Rules logic:",
@@ -27,7 +27,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "1511 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "1618 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
@@ -83,7 +83,7 @@ window.WH_VERIFIED = {
   },
   "FACTIONS.detachments": {
    "what": "a faction's detachments",
-   "cols": "name:gw dispositions:bsdata dp:gw rule:gw moreRules:gw enhancements:gw stratagems:gw"
+   "cols": "name:gw dispositions:bsdata dp:gw rule:gw moreRules:gw enhancements:gw stratagems:gw nr:bsdata aiStatus:derived"
   },
   "FACTIONS.detachments.rule": {
    "what": "a detachment's rule",
@@ -139,7 +139,7 @@ window.WH_VERIFIED = {
   },
   "DATASHEETS": {
    "what": "one row per datasheet (faction + datasheet name): its facts, shared by every list that has it",
-   "cols": "name:newrecruit faction:derived bsId:bsdata role:newrecruit rules:newrecruit kw:newrecruit kwOnly:hand partialRules:hand srcNote:hand leaders:bsdata stats:newrecruit ranged:newrecruit melee:newrecruit abilities:wahapedia mods:ai-reading aura:ai-reading guard:ai-reading"
+   "cols": "name:newrecruit faction:derived bsId:bsdata role:newrecruit rules:newrecruit kw:newrecruit kwOnly:hand partialRules:hand srcNote:hand leaders:bsdata stats:newrecruit ranged:newrecruit melee:newrecruit abilities:wahapedia mods:ai-reading aura:ai-reading guard:ai-reading points:gw composition:bsdata options:bsdata aiStatus:derived"
   },
   "DATASHEETS.stats": {
    "what": "a datasheet's model profiles",

@@ -26,12 +26,20 @@ const plainCase = t => String(t == null ? '' : t).replace(/\*\*|~~|__/g, '').rep
 const DEFENCE = [/\beach time an? (?:enemy )?(?:ranged |melee |psychic )?attack (?:is made against|targets) (?:this|that|your|the bearer)\b/,
   /\b(?:ranged |melee |psychic )?attacks (?:that )?targets? (?:this|your|that) (?:unit|model)\b/, /\ban? (?:enemy )?model makes an attack that targets (?:this|your|that) unit\b/,
   /\bin that enemy unit makes an? (?:\w+ )?attack\b/, /\bis allocated to (?:this|a model in this|the bearer)\b/, /\bselected as the target of an attack\b/, /\bwhen an enemy unit targets this unit\b/,
-  /\bwhile an enemy unit\b/, /\benemy unit\b[^.]*?\btargets this (?:model|unit)\b/, /\battacks made against your unit\b/, /\benemy unit's (?:ranged |melee )?weapons have\b/];
+  /\bwhile an enemy unit\b/, /\benemy unit\b[^.]*?\btargets this (?:model|unit)\b/, /\battacks made against your unit\b/, /\benemy unit's (?:ranged |melee )?weapons have\b/,
+  /\benemy (?:model|unit)'s (?:ranged |melee )?attacks have\b/];
+// a bullet of a list whose line ends on attacks against the unit, or an enemy's ("… that enemy model's attacks have:" then "- -1 to hit
+// rolls."): the defence side too. Only the line's last clause, the one the list completes ("… or when an enemy unit targets this unit,
+// you can select one of the following:" is a pick for this unit)
+const defenceLead = u => { if(!u.bullet || !/:\s*$/.test(String(u.lead || ''))) return false; const last = norm(u.lead).split(/,\s*|(?<=[.!?])\s+/).pop();
+  return DEFENCE.some(re => re.test(last)); };
 // a sentence that picks one of several ("select one of the following", "select either the X or Y ability")
 const PICK_LEAD = /\b(?:select|choose) one of the (?:following|abilities listed below|doctrina imperatives below)\b|\bcan have:$|\bselect one of the following\b/;
 // how long it lasts (the Damage tab carries a tick from the shooting into the fight)
 const lastsOf = n => /\buntil the end of the battle\b(?! round)/.test(n) ? 'battle' : /\buntil the (?:start of your next (?:command|movement) phase|end of the battle round)\b/.test(n) ? 'round' : /\buntil the end of the turn\b|\bthis turn\b/.test(n) && !/\buntil the end of the phase\b/.test(n) ? 'turn' : '';
-const kindOf = n => { const r = /\branged (?:attacks?|weapons?)\b|\bshooting phase\b|\bselected to shoot\b|\bshoot\b/.test(n), m = /\bmelee (?:attacks?|weapons?)\b|\bfight phase\b|\bselected to fight\b|\bfight\b/.test(n);
+// (a phase named only in how long it lasts, "until the end of your next Fight phase", says nothing of which attacks)
+const DURATION_RE = /\buntil the (?:end|start) of (?:the |your |your opponent's |your next |the next |your opponent's next )?(?:command|movement|shooting|charge|fight) phase\b/g;
+const kindOf = n0 => { const n = String(n0).replace(DURATION_RE, ' '), r = /\branged (?:attacks?|weapons?)\b|\bshooting phase\b|\bselected to shoot\b|\bshoot\b/.test(n), m = /\bmelee (?:attacks?|weapons?)\b|\bfight phase\b|\bselected to fight\b|\bfight\b/.test(n);
   return r && !m ? 'ranged' : m && !r ? 'melee' : r && m ? 'all' : ''; };
 
 // the effects a normalised sentence states: [[id, value]], in its order (each span read once)
@@ -116,7 +124,9 @@ function condsOf(V, sOrig, leadOrig, opts){
   // greater than this unit's T", "that targets the closest enemy unit"), what it can target ("they can only target units within range
   // of the selected objective marker"), the weapons ("with weapons selected for the Firing Deck ability")
   const QP = [/\bthat targets? (?:a|an|an enemy) unit (?:with|within) [^,.;:]+?(?= (?:have|has|can|gains?)\b|[,.;:]|$)/g, /\bthat targets? the closest enemy unit\b/g,
-    /(?<=\bbut )(?:they|it) can only target [^,.;:]+/g, /\bcontains (?:a|one or more) [A-Z][A-Za-z' ]+? models?\b/g, /\bmodels in (?:those|that|your|this) [A-Za-z ]+? units? can only target [^,.;:]+/g, /\bwith weapons selected for the [^,.;:]+? ability\b/g];
+    /(?<=\bbut )(?:they|it) can only target [^,.;:]+/g, /\bcontains (?:a|one or more) [A-Z][A-Za-z' ]+? models?\b/g, /\bmodels in (?:those|that|your|this) [A-Za-z ]+? units? can only target [^,.;:]+/g, /\bwith weapons selected for the [^,.;:]+? ability\b/g,
+    // the target's status, which no condition above reads: "that target a hidden unit", "targets a unit that is Battle-shocked"
+    /\bthat targets? an? (?!enemy\b|unit\b)(?:[a-z][a-z-]* )+?unit\b/g, /\btargets? (?:a|an|an enemy) unit that is (?!below\b|not below\b)[^,.;:]+/g];
   for(const re of QP) for(const m of pc.matchAll(re)){ const cl = m[0].trim(), cn = norm(cl);
     // (a restriction on what it can target is its own words, even where a condition reads the target: "can only target that enemy unit")
     if(!/\bcan only target\b/.test(cn) && Object.entries(COND).some(([id, c]) => !['q', 'targetKw', 'opt'].includes(id) && c.pats.some(r => r.test(cn)))) continue;
@@ -125,6 +135,18 @@ function condsOf(V, sOrig, leadOrig, opts){
   if(on.some(x => x[0] === 'targetBelowHalf')) { const i = on.findIndex(x => x[0] === 'belowHalf'); if(i >= 0 && /\bthat unit is (?:also )?below half-strength\b/.test(both) && !/\b(?:this|your) unit is (?:also )?below half-strength\b/.test(both)) on.splice(i, 1); }
   return on;
 }
+// a restriction of the attacks to some targets ("attacks that target a hidden unit", "targets a unit that is Battle-shocked",
+// "targets an enemy unit within range of an objective marker"); a box with one must have a condition on its target, or it is not
+// counted (never the effect without its condition)
+// ("targets an enemy unit with a melee attack": the attack's kind, not the target's)
+const TARGET_RESTR = /\btargets? (?:a|an|an enemy) (?!unit\b|enemy\b)(?:[\w'/-]+ )+?units?\b|\btargets? (?:a|an|an enemy) units? (?:that|which|in range|within|with(?! (?:a|an|its|their) (?:melee |ranged |psychic )?(?:attack|weapon)))\b/;
+// (read by a condition: the target's keywords, a target condition, a condition whose words are in the restriction ("that has no models
+// with a T of 7+": maxT), or GW's words of it)
+const hasTargetCond = (on, n) => { const m = TARGET_RESTR.exec(n || ''), t = m ? n.slice(m.index, m.index + m[0].length + 60) : '';
+  return (on || []).some(([id, p]) => id === 'targetKw' || /^target|^closest/.test(id) || (id === 'q' && /\btargets?\b/.test(norm(p))) || (COND[id] && COND[id].pats.some(re => re.test(t)))); };
+// a stratagem used after its unit attacked ("when a friendly X unit has shot"): a box that is not about that unit's own attacks is for
+// other units' attacks
+const afterAttack = (src, n) => src.type === 'strat' && /\bhas (?:shot|fought)\b/.test(norm(src.when || '')) && !/\b(?:your|this|that|its) unit\b|\bmodels in (?:your|this|that) unit\b|\bthe bearer\b/.test(n);
 // the weapons and models a sentence names: a weapon of the datasheet by its name ("its hellforged weapons", "this model's Omnissian
 // axe"), [PSYCHIC] ("Psychic weapons"), one model ("this model's", "the bearer"), CHARACTER models, a part of an attached unit
 function scopeOf(V, n, weapons, nOrig){
@@ -260,7 +282,7 @@ function extract(src, ctx){
       continue;
     }
     const enemyThat = /\bselect one (?:visible )?enemy unit\b/.test(norm(u.prevS || '')) && /\b(?:models in that unit|that unit's)\b/.test(n) && !/\btargets? that (?:enemy )?unit\b/.test(n);
-    if(DEFENCE.some(re => re.test(n)) || enemyThat || (prev && prev.defence && (/^if\b/.test(n) || /\bas well\.?$/.test(n)))){ prev = { defence:true }; continue; }
+    if(DEFENCE.some(re => re.test(n)) || defenceLead(u) || enemyThat || (prev && prev.defence && (/^if\b/.test(n) || /\bas well\.?$/.test(n)))){ prev = { defence:true }; continue; }
     // continues the sentence before it ("If that attack targets …, add 1 to the Wound roll as well.", "… instead"): its context
     const cont = !!prev && !prev.defence && (/^(?:if|in addition)\b/.test(n) || /\b(?:as well|instead)\.?$/.test(n) || /\bas well if\b/.test(n) || u.paren || u.split || /^(?:that|those) /.test(n)) && (!u.bullet || !!u.prevS);
     const base = cont ? prev : null;
@@ -340,6 +362,8 @@ function extract(src, ctx){
     // (the enemy unit it selects, by its keyword: "select one visible enemy VEHICLE unit … attacks that target that unit")
     if(on.some(x => x[0] === 'targetSelected') && !on.some(x => x[0] === 'targetKw')){ const t = /\bselect one (?:\*\*visible\*\* |visible )?enemy \*\*([A-Z][A-Z ]+?)\*\* unit\b/.exec([u.prevS || '', u.lead || '', u.s].join(' '));
       if(t){ const ks = Dv.tokens(V, t[1]); if(ks.length) on.push(['targetKw', ks.length === 1 ? { any:ks } : { all:ks }]); } }
+    if(TARGET_RESTR.test(n) && !hasTargetCond(on, n)){ nc.push({ quote:u.s, why:'a condition on its target the script does not read: not counted without it' }); prev = { u, n, fx, sc, kind, reach, on }; continue; }
+    if(!box.reach && afterAttack(src, n)){ nc.push({ quote:u.s, why:'its unit has already attacked (WHEN): the attacks it helps are other units\'' }); prev = { u, n, fx, sc, kind, reach, on }; continue; }
     box.grp = u.grp; box.bullet = u.bullet;
     // (one sentence for two kinds of attack: "weapons equipped by that model have [LETHAL HITS], and melee weapons equipped by that model
     // have [LANCE]": a box for each)
@@ -445,4 +469,4 @@ function shape(list, src){
   return final;
 }
 
-module.exports = { extract, findFx, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, DEFENCE, lastsOf, kindOf };
+module.exports = { extract, findFx, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };

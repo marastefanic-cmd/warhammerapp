@@ -3277,10 +3277,10 @@ None from Talons of the Norn Queen.
 
 Keywords
 FACTION: TYRANIDS
+FRAME
 GREAT DEVOURER
 MONSTER
 TYRANNOFEX
-Wahapedia also lists FRAME (from its errata); GW’s Faction Pack (14-10) and BSData don’t
 Ask about this unit
 ‹ Norn Emissary
 Spore Mines (Biovore) ›

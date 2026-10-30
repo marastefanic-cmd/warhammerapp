@@ -2445,5 +2445,15 @@
   "where": "verify/sources/nr/big-demons-baby.txt p4",
   "reason": "GW’s datasheet prints SUMMONED; New Recruit (BSData) does not. The app has GW’s keywords (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
   "evidence": "verify/.cache/waha/ds/world-eaters_Skarbrand.html, KEYWORDS."
+ },
+ {
+  "army": "nidzillas",
+  "unit": "neurogaunts",
+  "field": "abilities[Neurocytes].text",
+  "app": "While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.",
+  "source": "While this unit is within Synapse Range of your friendly Tyranids unit (excluding Neurogaunt units), it has the Synapse keyword.",
+  "where": "verify/sources/nr/nidzillas.txt p4",
+  "reason": "New Recruit (from BSData) prints Neurocytes with \"your friendly Tyranids unit\"; GW’s datasheet (the codex, Wahapedia) prints \"a friendly TYRANIDS unit\". The app has GW’s words (a GW-backed correction found by the Tyranids catalogue import, verify/from-bsdata.js).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html, ABILITIES: \"Neurocytes: While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.\"; verify/sources/nr/nidzillas.txt p4: \"… of your friendly Tyranids unit …\"."
  }
 ]

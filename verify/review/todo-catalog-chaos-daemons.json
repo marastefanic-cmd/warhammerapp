@@ -1,0 +1,1832 @@
+[
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "code",
+  "where": "verify/bs-catalog.js staticHidden: hidden unless the list took a detachment; profiles and rules read with it",
+  "judgement": {
+   "code": "function staticHidden(x, listChoice){\n  if(!x) return false;\n  let h = !!x.hidden;\n  const mods = [].concat(x.modifiers || [], ...((x.modifierGroups || []).filter(g => !/crusade/i.test(g.comment || '')).map(g => [].concat(g.modifiers || []).map(m => Object.assign({}, m, { conditions:[].concat(g.conditions || [], m.conditions || []), conditionGroups:[].concat(g.conditionGroups || [], m.conditionGroups || []) }))))).filter(m => m.field === 'hidden' && m.type === 'set');\n  for(const m of mods){\n    const v = m.value === true || m.value === 'true', cs = condList(m);\n    if(!cs.length) h = v;\n    // (a condition on a list's choice, an enhancement or the Warlord taken on the unit, a detachment, is the list's, whatever its scope)\n    else if(!v && h && cs.every(c => !['force', 'roster', 'primary-catalogue', 'primary-category'].includes(c.scope) && !(listChoice && listChoice(c.childId)))) h = false;\n    // hidden unless the list took something (a detachment's ability on the unit, Shadow Legion's, Legion of Excess's): no datasheet's own\n    else if(v && !h && !(m.conditionGroups || []).length && cs.every(c => (['force', 'roster'].includes(c.scope) || (listChoice && listChoice(c.childId))) && ((c.type === 'lessThan' && +c.value === 1) || (c.type === 'equalTo' && +c.value === 0)))) h = true;\n  }\n  return h;\nverify/bs-catalog.js: const shown = x => x && !hiddenStatic(x);"
+  },
+  "source": {
+   "implements": "Shadow Legion's god abilities and Legion of Excess's Seductive Gambit (BSData: hidden unless the roster has that detachment) are no datasheet abilities; Custodes and Tyranids rows unchanged (their declarations for Creeping Dread, Protean Purpose, the Lictors' Deep Strike went: BSData's reading now agrees)"
+  },
+  "key": "51d4d360b4ae9480"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "code",
+  "where": "verify/bs-catalog.js other-mode filter (the owner's standing rule: matched play at 2000 pts only)",
+  "judgement": {
+   "code": "// the game system's forces other than matched play's (BSData: \"Army Roster\"; the others \"Boarding Actions\", \"Crusade Force\"), by id\nconst MODE_FORCES = new Map();\nfunction modeForces(gs){\n  if(gs && !MODE_FORCES.size) for(const f of gs.forceEntries || []) if(nameOf(f) !== 'Army Roster') MODE_FORCES.set(f.id, nameOf(f));\n  return MODE_FORCES;\n}\n// an entry (or link) BSData shows only in such a force: a \"hidden\" modifier whose every condition is that the force is not one of\n// them (\"notInstanceOf\" the force) or that the roster has none (\"forces\" lessThan 1 / equalTo 0); conditions in an \"and\" group\n// count, a nested or \"or\" group does not (A'rgath: hidden unless Crusade or its detachment). The force's name, or null\nfunction modeOnly(x){\n  for(const m of (x && x.modifiers) || []){\n    if(m.field !== 'hidden' || !(m.value === true || m.value === 'true')) continue;\n    const gs = m.conditionGroups || [];\n    if(gs.some(g => g.type !== 'and' || (g.conditionGroups || []).length)) continue;\n    const cs = [].concat(m.conditions || [], ...gs.map(g => g.conditions || []));\n    const hit = cs.filter(c => MODE_FORCES.has(c.childId) && ((c.type === 'notInstanceOf' && c.scope === 'force') || (c.field === 'forces' && ((c.type === 'lessThan' && +c.value === 1) || (c.type === 'equalTo' && +c.value === 0)))));\n    if(hit.length && hit.length === cs.length) return MODE_FORCES.get(hit[0].childId);\n  }\n  return null;\n}\nverify/bs-catalog.js: { kind:'other-mode', test:(e, l) => !!(modeOnly(e) || modeOnly(l)), why:'shown only in a Boarding Actions or Crusade force (BSData hides it in matched play\\'s Army Roster): not legal in matched play' },"
+  },
+  "source": {
+   "implements": "what BSData shows only in a Boarding Actions or Crusade force is left out, as a datasheet, an option or a detachment; tested (filter cases); the Tyranids Boarding Actions detachments now carry this mark"
+  },
+  "key": "63cf47561f8caa53"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "code",
+  "where": "verify/catalog.js: scan of every catalogue row and detachment for Legends / Crusade / Crucible",
+  "judgement": {
+   "code": "// the owner's standing rule (Legends, Crusade, Crucible: left out, ever): nothing of them anywhere in what the catalogue gives the\n    // app, a datasheet, an option, a weapon, an ability or a detachment (only its excluded list names them)\n    { const bad = []; const walk = (o, at) => { if (typeof o === 'string') { if (/\\[(?:Legends|Crucible)\\]|\\bCrucible\\b|\\bCrusade\\b|\\bOrder of Battle\\b/i.test(o)) bad.push(at + ': ' + o.slice(0, 80)); return; }\n        if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) walk(v, at + (Array.isArray(o) ? '[' + k + ']' : '.' + k)); };\n      for (const [id, row] of Object.entries(cat.datasheets)) walk(row, id);\n      walk(cat.detachments || [], 'detachments'); walk(cat.detachmentRows || {}, 'detachmentRows');\n      checked.filter += Object.keys(cat.datasheets).length;\n      for (const b of bad) fail('filter', faction + ': Legends, Crusade or Crucible in the catalogue’s rows (left out, ever): ' + b); }"
+  },
+  "source": {
+   "implements": "the owner's rule \"Leave the crucible units out, ever\" (and Legends, Crusade): nothing of them anywhere in the catalogue's output"
+  },
+  "key": "bfa14d00cad29d4b"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "code",
+  "where": "verify/from-json.js and verify/texts.js: the codex preamble \"If your Army Faction is …, you can use this … Detachment rule.\" is no rule",
+  "judgement": {
+   "code": "verify/from-json.js: if (seg === 'rule' && /^If your Army Faction is .+, you can use this .+ Detachment rules?\\.$/.test(b.replace(/\\*\\*/g, ''))) continue;\nverify/texts.js: if (seg === 'rule' && /^If your Army Faction is .+, you can use this .+ Detachment rules?\\.$/.test(t.replace(/\\*\\*/g, ''))) continue;"
+  },
+  "source": {
+   "implements": "Daemonic Incursion's first \"rule\" was that sentence; Shadow Legion's mustering rule ended with it. No list detachment had it (the gate's list checks unchanged)"
+  },
+  "key": "c7500b2491c2f0f1"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "code",
+  "where": "verify/derive.js MOMENT_RULES end-opp-turn: a stratagem WHEN \"End of your opponent's turn.\"",
+  "judgement": {
+   "code": "verify/derive.js: { id:'end-opp-turn', re:/^(?:at the )?end of your opponent's turn\\b/i, at:'End of your opponent’s turn', ph:{ fight:'opp' },"
+  },
+  "source": {
+   "implements": "The Realm of Chaos had no phases (check.js: every stratagem needs them); the rule read only \"At the end of your opponent's turn\". General, no per-name change; for wt-labels to confirm (labels-handoff.json resolved)"
+  },
+  "key": "7daea19a7c35a4e6"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "code",
+  "where": "verify/catalog.js: BSData's \"(ref. only)\" profiles, a \"×2\" stat row's declaration; verify/texts.js: an enhancement Wahapedia names without GW's (Aura)",
+  "judgement": {
+   "code": "verify/catalog.js: const ch = Object.fromEntries(p.characteristics.map(c => [c.name, c.$text || ''])), sn = NR.nrStatName(p.name, []), n = typo(sn.name + (sn.parens.includes('ref. only') ? ' (ref. only)' : ''));\nverify/catalog.js: const g = gd.find(x => { const xr = String(x.row).replace(/ ×\\d+$/, ''); return x.kind === kind && (xr === m[2] || xr === m[3] || (m[3] && xr === m[2] + ' (' + m[3] + ')') || xr === (m[3] ? m[3] + ' - ' + m[2] : m[2])) && x.field === m[4]; });\nverify/texts.js: const we = W.enh.find(x => norm(x.name) === norm(e.name)) || W.enh.find(x => norm(x.name) === norm(e.name.replace(/\\s*\\(Aura\\)$/i, '')));"
+  },
+  "source": {
+   "implements": "Pink/Blue Horrors' reference profiles read as from-json reads them; Bloodcrushers ×2 bases declared; Cankerblight (Aura) priced from Wahapedia's \"Cankerblight 15 pts\""
+  },
+  "key": "6fc1677dd698f92a"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "code",
+  "where": "verify/from-bsdata.js hand texts (GW's Faction Pack words over BSData/Wahapedia on a catalogue row)",
+  "judgement": {
+   "code": "const handApplied = [];\n  for (const [id, by] of Object.entries(HAND().texts || {})) for (const [an, fx] of Object.entries(by)) {\n    const ab = ((rows[id] || {}).abilities || []).find(a => a.name === an);\n    if (!ab || String(ab.text).split(fx.from).length !== 2) throw new Error('verify/sources/hand/catalog-' + faction + '.json texts ' + id + ' · ' + an + ': its words \"' + fx.from + '\" are not there exactly once');\n    const was = ab.text; ab.text = ab.text.replace(fx.from, fx.to); handApplied.push({ id, field: 'ability[' + an + '].text', app: ab.text, was, why: fx.why });\n  }"
+  },
+  "source": {
+   "implements": "Kairos, Fluxmaster, the Soul Grinders: GW's Faction Pack prints the datasheet; the Tzeeeeentch list's signed-off rows have GW's words"
+  },
+  "key": "998301b78ee5c22a"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "data",
+  "where": "left out by the filter (73)",
+  "judgement": {
+   "excluded": [
+    "config: Detachment",
+    "config: Show/Hide Options",
+    "ally: Chaos Lord",
+    "ally: Fellgor Beastmen",
+    "ally: Chaos Lord with Jump Pack",
+    "ally: Chaos Terminator Squad",
+    "ally: Chosen",
+    "ally: Legionaries",
+    "ally: Dark Apostle",
+    "ally: Dark Commune",
+    "ally: Havocs",
+    "ally: Master of Possession",
+    "ally: Possessed",
+    "ally: Raptors",
+    "ally: Sorcerer",
+    "ally: Sorcerer in Terminator Armour",
+    "ally: Warp Talons",
+    "ally: Traitor Guardsmen Squad",
+    "ally: Cultist Mob",
+    "ally: Chaos Lord in Terminator Armour",
+    "ally: Cultist Firebrand",
+    "legends: Cultist Mob with Firearms [Legends]",
+    "legends: Rogue Psyker [Legends]",
+    "ally: Traitor Enforcer",
+    "legends: Gellerpox Infected [Legends]",
+    "legends: Negavolt Cultists [Legends]",
+    "legends: Renegade Heavy Weapons Squad [Legends]",
+    "legends: Renegade Ogryn Beast Handler [Legends]",
+    "legends: Renegade Ogryn Brutes [Legends]",
+    "legends: Renegade Plague Ogryns [Legends]",
+    "legends: Renegade Enforcer [Legends]",
+    "legends: Mutoid Vermin [Legends]",
+    "ally: Accursed Cultists",
+    "crusade: Order of Battle",
+    "ally: Chaos Acastus Knight Asterius",
+    "ally: Chaos Acastus Knight Porphyrion",
+    "ally: Chaos Cerastus Knight Acheron",
+    "ally: Chaos Cerastus Knight Atrapos",
+    "ally: Chaos Cerastus Knight Castigator",
+    "ally: Chaos Cerastus Knight Lancer",
+    "ally: Chaos Questoris Knight Magaera",
+    "ally: Chaos Questoris Knight Styrix",
+    "ally: Knight Abominant",
+    "ally: Knight Desecrator",
+    "ally: Knight Despoiler",
+    "ally: Knight Rampager",
+    "ally: Knight Tyrant",
+    "ally: War Dog Brigand",
+    "ally: War Dog Executioner",
+    "ally: War Dog Huntsman",
+    "ally: War Dog Karnivore",
+    "ally: War Dog Moirax",
+    "ally: War Dog Stalker",
+    "ally: Knight Ruinator",
+    "legends: An'ggrath the Unbound [Legends]",
+    "legends: Aetaos'rau'keres [Legends]",
+    "legends: Exalted Seeker Chariot [Legends]",
+    "legends: Furies [Legends]",
+    "legends: Giant Chaos Spawn [Legends]",
+    "legends: Herald of Slaanesh on Steed of Slaanesh [Legends]",
+    "legends: Plague Toads [Legends]",
+    "legends: Pox Riders [Legends]",
+    "legends: Scabeiathrax the Bloated [Legends]",
+    "legends: Seeker Chariot [Legends]",
+    "legends: Spined Chaos Beast [Legends]",
+    "legends: Zarakynel [Legends]",
+    "crucible: Daemonic Herald [Crucible]",
+    "crucible: Daemonic Charioteer [Crucible]",
+    "crucible: Immortal Champion [Crucible]",
+    "ally: Reaver Titan",
+    "ally: Warbringer Nemesis Titan",
+    "ally: Warhound Titan",
+    "ally: Warlord Titan"
+   ]
+  },
+  "source": {
+   "reason": "verify/bs-catalog.js FILTER: the owner's standing rule (matched play at 2000 pts; no Legends, Crusade, Crucible, other game modes); allies are other factions' datasheets"
+  },
+  "key": "6704ba333bdaf3d0"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "data",
+  "where": "counts",
+  "judgement": {
+   "datasheets": 56,
+   "detachments": 9,
+   "newDetachments": 5
+  },
+  "source": {
+   "reason": "every current datasheet of the filtered BSData set; Wahapedia's faction page lists the same range (see the report)"
+  },
+  "key": "ce59e8fabb445d78"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "base-exception",
+  "where": "chaos-daemons/pink-horrors · Blue/Brimstone Horror (ref. only)",
+  "judgement": {
+   "guide": {
+    "section": "CHAOS DAEMONS",
+    "entry": "Blue Horrors"
+   }
+  },
+  "source": {
+   "reason": "The Pink Horrors datasheet's second profile is for the Blue and Brimstone Horrors its Split ability adds to the unit (GW: \"BLUE HORROR/BRIMSTONE HORROR\"). GW's base size guide has no row for them under Pink Horrors (its \"Pink Horrors  32mm\" is the unit's Pink Horror models); its Blue Horrors row is the base of a Blue Horror model, and Wahapedia's datasheet gives this profile 25mm too. Brimstone Horrors have no row of their own in the guide.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927 (CHAOS DAEMONS): \"Blue Horrors  25mm\", line 2951: \"Pink Horrors  32mm\"; verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: \"BLUE HORROR/BRIMSTONE HORROR (⌀25mm)\"."
+  },
+  "key": "19f2d22316925d44"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "base-exception",
+  "where": "chaos-daemons/brimstone-horrors · Brimstone Horror",
+  "judgement": {
+   "guide": {
+    "section": "CHAOS DAEMONS",
+    "entry": "Blue Horrors"
+   }
+  },
+  "source": {
+   "reason": "The Brimstone Horrors reference sheet is built from GW’s Blue Horrors datasheet (GW prints no Brimstone Horrors datasheet; its one profile, “Blue Horrors (⌀25mm)”, is the Brimstone Horror’s too); GW’s base size guide has the Blue Horrors row, so that row’s base is compared.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2927 (CHAOS DAEMONS): \"Blue Horrors  25mm\"; verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: \"Blue Horrors (⌀25mm)\"."
+  },
+  "key": "3eb984e6bb4a842d"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "weapon-name",
+  "where": "BSData Fires of Tzeentch - blue fire",
+  "judgement": {
+   "gw": "Fire of Tzeentch - blue fire"
+  },
+  "source": {
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Exalted-Flamer.html"
+  },
+  "key": "a1825e947b4e0294"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "weapon-name",
+  "where": "BSData Fires of Tzeentch - pink fire",
+  "judgement": {
+   "gw": "Fire of Tzeentch - pink fire"
+  },
+  "source": {
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Exalted-Flamer.html"
+  },
+  "key": "650de86a51dcc0d9"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "weapon-name",
+  "where": "BSData Lashing tongues",
+  "judgement": {
+   "gw": "Lashing tongue"
+  },
+  "source": {
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Seekers.html"
+  },
+  "key": "b42ed06767863dc9"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "hand-fix",
+  "where": "plague-legion/enhancement/Cankerblight · name",
+  "judgement": {
+   "from": "Cankerblight",
+   "to": "Cankerblight (Aura)"
+  },
+  "source": {
+   "why": "GW's Faction Pack Chaos Daemons (Plague Legion, Enhancements) names it \"CANKERBLIGHT (AURA)\"; Wahapedia \"Cankerblight\". GW's name, its (Aura) part of it, as the app writes an enhancement GW tags Aura (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt)"
+  },
+  "key": "e99a734e184c6916"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "hand-fix",
+  "where": "lords-of-the-warp/stratagem/Bilious Blessing · effect",
+  "judgement": {
+   "from": "suffers 1 **mortal wound**",
+   "to": "suffers 1 **mortal wound**."
+  },
+  "source": {
+   "why": "GW's Faction Pack Chaos Daemons (Lords of the Warp, Bilious Blessing, EFFECT) ends the bullet \"For each 4+, that enemy unit suffers 1 mortal wound.\"; Wahapedia drops the full stop"
+  },
+  "key": "54928bf762a33b4f"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "hand-text",
+  "where": "chaos-daemons/kairos-fateweaver · One Head Looks Back",
+  "judgement": {
+   "from": "the CP cost of the use of that stratagem",
+   "to": "the CP cost of that use of that stratagem"
+  },
+  "source": {
+   "why": "GW's Faction Pack Chaos Daemons (30-09) prints Kairos Fateweaver's datasheet: \"increase the CP cost of that use of that stratagem by 1CP\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt line 1100); BSData and Wahapedia (which shows an older errata's words) \"the use of\". The Tzeeeeentch list's signed-off row has GW's"
+  },
+  "key": "bc1bfb2b8ed12049"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "hand-text",
+  "where": "chaos-daemons/fluxmaster · Altered Reality",
+  "judgement": {
+   "from": "a **Wound roll**, or a saving throw",
+   "to": "a **Wound roll** or a saving throw"
+  },
+  "source": {
+   "why": "GW's Faction Pack Chaos Daemons prints the Fluxmaster's datasheet: \"after a Hit roll, a Wound roll or a saving throw is made\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 1312-1313); BSData and Wahapedia have a comma after Wound roll. The Tzeeeeentch list's signed-off row has GW's"
+  },
+  "key": "8917ae063372b00d"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "hand-text",
+  "where": "chaos-daemons/khorne-soul-grinder · Daemonic Allegiance",
+  "judgement": {
+   "from": "stated for that keyword below:",
+   "to": "stated for that keyword below."
+  },
+  "source": {
+   "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+  },
+  "key": "7fa7d98e8ee6a4ec"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "hand-text",
+  "where": "chaos-daemons/tzeentch-soul-grinder · Daemonic Allegiance",
+  "judgement": {
+   "from": "stated for that keyword below:",
+   "to": "stated for that keyword below."
+  },
+  "source": {
+   "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+  },
+  "key": "dea06770aca58e95"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "hand-text",
+  "where": "chaos-daemons/nurgle-soul-grinder · Daemonic Allegiance",
+  "judgement": {
+   "from": "stated for that keyword below:",
+   "to": "stated for that keyword below."
+  },
+  "source": {
+   "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+  },
+  "key": "e987d43af2ca0ad7"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "hand-text",
+  "where": "chaos-daemons/slaanesh-soul-grinder · Daemonic Allegiance",
+  "judgement": {
+   "from": "stated for that keyword below:",
+   "to": "stated for that keyword below."
+  },
+  "source": {
+   "why": "GW's Faction Pack Chaos Daemons prints the Soul Grinder datasheet (one datasheet; BSData has one entry per allegiance): \"...the additional wargear stated for that keyword below.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3128-3130); BSData and Wahapedia end with a colon"
+  },
+  "key": "56b01b4bacdc78aa"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "deviations",
+  "where": "verify/deviations-bsdata.json army \"catalog\", chaos-daemons (238, written mechanically with GW evidence)",
+  "judgement": {
+   "byField": {
+    "ability[].text": 25,
+    "ability[]": 10,
+    "kw": 59,
+    "rules": 103,
+    "stats[].base": 27,
+    "ability[].tag": 3,
+    "ability[].name": 1,
+    "points": 10
+   },
+   "nonText": [
+    "belakor ability[Damaged: 1-7 wounds remaining]: \"Damaged: 1-7 wounds remaining\" over null",
+    "belakor ability[Supreme Commander]: \"Supreme Commander\" over null",
+    "belakor ability[Shadow Form]: null over \"Shadow Form\"",
+    "belakor ability[Damaged: 1-6 wounds remaining]: null over \"Damaged: 1-6 wounds remaining\"",
+    "belakor kw: null over \"Shadow Legion\"",
+    "belakor rules: \"Deadly Demise D6\" over null",
+    "belakor rules: null over \"Warp Rifts\"",
+    "belakor rules: null over \"Deadly Demise\"",
+    "epidemius rules: null over \"Warp Rifts\"",
+    "horticulous-slimux stats[Horticulous Slimux].base: \"105×70mm Oval\" over \"105×70mm\"",
+    "horticulous-slimux rules: null over \"Warp Rifts\"",
+    "kairos-fateweaver ability[One Head Looks Back].tag: null over \"Aura\"",
+    "kairos-fateweaver rules: \"Deadly Demise D6\" over null",
+    "kairos-fateweaver rules: null over \"Deadly Demise\"",
+    "kairos-fateweaver rules: null over \"Warp Rifts\"",
+    "karanak stats[Karanak].base: \"75×42mm Oval\" over \"75×42mm\"",
+    "karanak rules: null over \"Warp Rifts\"",
+    "karanak rules: null over \"Feel No Pain\"",
+    "rotigus rules: \"Deadly Demise D6\" over null",
+    "rotigus rules: \"Feel No Pain 6+\" over null",
+    "rotigus rules: null over \"Deadly Demise\"",
+    "rotigus rules: null over \"Warp Rifts\"",
+    "rotigus rules: null over \"Feel No Pain\"",
+    "shalaxi-helbane rules: \"Deadly Demise D6\" over null",
+    "shalaxi-helbane rules: null over \"Deadly Demise\"",
+    "shalaxi-helbane rules: null over \"Warp Rifts\"",
+    "skarbrand rules: \"Deadly Demise D6\" over null",
+    "skarbrand rules: null over \"Deadly Demise\"",
+    "skarbrand rules: null over \"Warp Rifts\"",
+    "skulltaker rules: null over \"Warp Rifts\"",
+    "syllesske rules: null over \"Warp Rifts\"",
+    "the-blue-scribes stats[The Blue Scribes].base: \"Large Flying\" over \"60mm Flying\"",
+    "the-blue-scribes rules: null over \"Warp Rifts\"",
+    "the-changeling rules: null over \"Warp Rifts\"",
+    "the-masque-of-slaanesh rules: null over \"Warp Rifts\"",
+    "bloodmaster kw: null over \"Shadow Legion\"",
+    "bloodmaster rules: null over \"Warp Rifts\"",
+    "bloodthirster stats[Bloodthirster].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "bloodthirster kw: null over \"Shadow Legion\"",
+    "bloodthirster rules: \"Deadly Demise D6\" over null",
+    "bloodthirster rules: null over \"Deadly Demise\"",
+    "bloodthirster rules: null over \"Warp Rifts\"",
+    "changecaster kw: null over \"Shadow Legion\"",
+    "changecaster rules: null over \"Warp Rifts\"",
+    "contorted-epitome stats[Contorted Epitome].base: \"75×42mm Oval\" over \"75×42mm\"",
+    "contorted-epitome ability[Horrible Fascination(Psychic)].name: \"Horrible Fascination(Psychic)\" over \"Horrible Fascination\"",
+    "contorted-epitome kw: null over \"Shadow Legion\"",
+    "contorted-epitome rules: null over \"Warp Rifts\"",
+    "daemon-prince-of-chaos ability[Daemonic Allegiance]: \"Daemonic Allegiance\" over null",
+    "daemon-prince-of-chaos rules: \"Deadly Demise D3\" over null",
+    "daemon-prince-of-chaos rules: null over \"Warp Rifts\"",
+    "daemon-prince-of-chaos rules: null over \"Deadly Demise\"",
+    "daemon-prince-of-chaos-with-wings ability[Daemonic Allegiance]: \"Daemonic Allegiance\" over null",
+    "daemon-prince-of-chaos-with-wings rules: \"Deadly Demise D3\" over null",
+    "daemon-prince-of-chaos-with-wings rules: null over \"Warp Rifts\"",
+    "daemon-prince-of-chaos-with-wings rules: null over \"Deadly Demise\"",
+    "exalted-flamer stats[Exalted Flamer].base: \"75×42mm Oval\" over \"75×42mm\"",
+    "exalted-flamer kw: null over \"Shadow Legion\"",
+    "exalted-flamer rules: null over \"Warp Rifts\"",
+    "fateskimmer stats[Fateskimmer].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "fateskimmer kw: null over \"Shadow Legion\"",
+    "fateskimmer rules: null over \"Warp Rifts\"",
+    "fluxmaster stats[Fluxmaster].base: \"Large Flying\" over \"60mm Flying\"",
+    "fluxmaster kw: null over \"Shadow Legion\"",
+    "fluxmaster rules: null over \"Warp Rifts\"",
+    "fluxmaster rules: null over \"Stealth\"",
+    "great-unclean-one kw: null over \"Shadow Legion\"",
+    "great-unclean-one rules: \"Deadly Demise D6\" over null",
+    "great-unclean-one rules: \"Feel No Pain 6+\" over null",
+    "great-unclean-one rules: null over \"Deadly Demise\"",
+    "great-unclean-one rules: null over \"Warp Rifts\"",
+    "great-unclean-one rules: null over \"Feel No Pain\"",
+    "infernal-enrapturess stats[Infernal Enrapturess].base: \"60×35.5mm Oval\" over \"60×35.5mm\"",
+    "infernal-enrapturess kw: null over \"Shadow Legion\"",
+    "infernal-enrapturess rules: null over \"Warp Rifts\"",
+    "keeper-of-secrets kw: null over \"Shadow Legion\"",
+    "keeper-of-secrets rules: \"Deadly Demise D6\" over null",
+    "keeper-of-secrets rules: null over \"Deadly Demise\"",
+    "keeper-of-secrets rules: null over \"Warp Rifts\"",
+    "lord-of-change kw: null over \"Shadow Legion\"",
+    "lord-of-change rules: \"Deadly Demise D6\" over null",
+    "lord-of-change rules: null over \"Deadly Demise\"",
+    "lord-of-change rules: null over \"Warp Rifts\"",
+    "poxbringer kw: null over \"Shadow Legion\"",
+    "poxbringer rules: \"Feel No Pain 5+\" over null",
+    "poxbringer rules: null over \"Warp Rifts\"",
+    "poxbringer rules: null over \"Feel No Pain\"",
+    "rendmaster-on-blood-throne stats[Rendmaster on Blood Throne].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "rendmaster-on-blood-throne kw: null over \"Shadow Legion\"",
+    "rendmaster-on-blood-throne rules: null over \"Warp Rifts\"",
+    "skullmaster stats[Skullmaster].base: \"90×52.5mm Oval\" over \"90×52.5mm\"",
+    "skullmaster kw: null over \"Shadow Legion\"",
+    "skullmaster rules: null over \"Warp Rifts\"",
+    "sloppity-bilepiper kw: null over \"Shadow Legion\"",
+    "sloppity-bilepiper rules: null over \"Warp Rifts\"",
+    "spoilpox-scrivener kw: null over \"Shadow Legion\"",
+    "spoilpox-scrivener rules: null over \"Warp Rifts\"",
+    "tormentbringer stats[Tormentbringer].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "tormentbringer ability[Hysterical Frenzy].tag: \"Psychic\" over null",
+    "tormentbringer kw: \"Tormentbringer On Exalted Seeker Chariot\" over null",
+    "tormentbringer kw: null over \"Shadow Legion\"",
+    "tormentbringer rules: null over \"Warp Rifts\"",
+    "tormentbringer rules: null over \"Leader\"",
+    "tranceweaver kw: null over \"Shadow Legion\"",
+    "tranceweaver rules: null over \"Warp Rifts\"",
+    "bloodletters kw: null over \"Shadow Legion\"",
+    "bloodletters rules: null over \"Warp Rifts\"",
+    "blue-horrors kw: \"Battleline\" over null",
+    "blue-horrors kw: \"Brimstone\" over null",
+    "blue-horrors kw: \"Chaos\" over null",
+    "blue-horrors kw: \"Daemon\" over null",
+    "blue-horrors kw: \"Faction: Legiones Daemonica\" over null",
+    "blue-horrors kw: \"Horrors\" over null",
+    "blue-horrors kw: \"Infantry\" over null",
+    "blue-horrors kw: \"Tzeentch\" over null",
+    "blue-horrors rules: null over \"Warp Rifts\"",
+    "daemonettes kw: null over \"Shadow Legion\"",
+    "daemonettes rules: null over \"Warp Rifts\"",
+    "nurglings points: \"any copy: 3 45 · 6 90\" over \"any copy: 3 45 · 4 90 · 5 90 · 6 90\"",
+    "nurglings ability[Mischief Makers].tag: null over \"Aura\"",
+    "nurglings kw: null over \"Shadow Legion\"",
+    "nurglings rules: null over \"Warp Rifts\"",
+    "pink-horrors stats[Blue/Brimstone Horror (ref. only)].base: \"25mm\" over \"32mm\"",
+    "pink-horrors kw: \"Battleline\" over null",
+    "pink-horrors kw: \"Brimstone\" over null",
+    "pink-horrors kw: \"Chaos\" over null",
+    "pink-horrors kw: \"Daemon\" over null",
+    "pink-horrors kw: \"Faction: Legiones Daemonica\" over null",
+    "pink-horrors kw: \"Horrors\" over null",
+    "pink-horrors kw: \"Infantry\" over null",
+    "pink-horrors kw: \"Tzeentch\" over null",
+    "pink-horrors rules: null over \"Warp Rifts\"",
+    "plaguebearers kw: null over \"Shadow Legion\"",
+    "plaguebearers rules: null over \"Warp Rifts\"",
+    "flamers points: \"any copy: 3 65 · 6 130\" over \"any copy: 3 65 · 4 130 · 5 130 · 6 130\"",
+    "flamers kw: null over \"Shadow Legion\"",
+    "flamers rules: null over \"Warp Rifts\"",
+    "bloodcrushers points: \"1-2: 3 95 · 6 210; 3+: 3 135 · 6 250\" over \"1-2: 3 95 · 4 210 · 5 210 · 6 210; 3+: 3 135 · 4 250 · 5 250 · 6 250\"",
+    "bloodcrushers stats[Bloodcrushers].base: \"90×52.5mm Oval\" over \"90×52.5mm\"",
+    "bloodcrushers kw: null over \"Shadow Legion\"",
+    "bloodcrushers rules: null over \"Warp Rifts\"",
+    "burning-chariot stats[Burning Chariot].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "burning-chariot kw: null over \"Shadow Legion\"",
+    "burning-chariot rules: null over \"Warp Rifts\"",
+    "hellflayers points: \"any copy: 1 80 · 2 160\" over \"any copy: 1 0 · 2 0\"",
+    "hellflayers stats[Hellflayer].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "hellflayers kw: \"Hellflayers\" over null",
+    "hellflayers kw: null over \"Hellflayer\"",
+    "hellflayers kw: null over \"Shadow Legion\"",
+    "hellflayers rules: null over \"Warp Rifts\"",
+    "plague-drones points: \"any copy: 3 110 · 6 220\" over \"any copy: 3 110 · 4 220 · 5 220 · 6 220\"",
+    "plague-drones stats[Plague Drones].base: \"Large Flying\" over \"60mm Flying\"",
+    "plague-drones kw: null over \"Shadow Legion\"",
+    "plague-drones rules: null over \"Warp Rifts\"",
+    "seekers points: \"any copy: 5 85 · 10 155\" over \"any copy: 5 85 · 6 155 · 7 155 · 8 155 · 9 155 · 10 155\"",
+    "seekers stats[Seeker].base: \"60×35.5mm Oval\" over \"60×35.5mm\"",
+    "seekers stats[Heartseeker].base: \"60×35.5mm Oval\" over \"60×35.5mm\"",
+    "seekers kw: null over \"Shadow Legion\"",
+    "seekers rules: \"Scouts 9\\\"\" over null",
+    "seekers rules: null over \"Warp Rifts\"",
+    "seekers rules: null over \"Scouts\"",
+    "skull-cannon stats[Skull Cannon].base: \"120×92mm Oval\" over \"120×92mm\"",
+    "skull-cannon kw: null over \"Shadow Legion\"",
+    "skull-cannon rules: null over \"Warp Rifts\"",
+    "beasts-of-nurgle points: \"any copy: 1 80 · 2 150\" over \"any copy: 1 80 · 2 80\"",
+    "beasts-of-nurgle kw: null over \"Shadow Legion\"",
+    "beasts-of-nurgle rules: \"Deadly Demise 1\" over null",
+    "beasts-of-nurgle rules: \"Scouts 6\\\"\" over null",
+    "beasts-of-nurgle rules: null over \"Warp Rifts\"",
+    "beasts-of-nurgle rules: null over \"Deadly Demise\"",
+    "beasts-of-nurgle rules: null over \"Scouts\"",
+    "fiends points: \"1-2: 3 90 · 6 190; 3+: 3 115 · 6 215\" over \"1-2: 3 90 · 4 190 · 5 190 · 6 190; 3+: 3 115 · 4 215 · 5 215 · 6 215\"",
+    "fiends stats[Fiends].base: \"75×42mm Oval\" over \"75×42mm\"",
+    "fiends kw: null over \"Shadow Legion\"",
+    "fiends rules: null over \"Warp Rifts\"",
+    "flesh-hounds points: \"any copy: 5 80 · 10 150\" over \"any copy: 5 80 · 6 150 · 7 150 · 8 150 · 9 150 · 10 150\"",
+    "flesh-hounds stats[Flesh Hounds].base: \"60×35.5mm Oval\" over \"60×35.5mm\"",
+    "flesh-hounds kw: null over \"Shadow Legion\"",
+    "flesh-hounds rules: null over \"Warp Rifts\"",
+    "flesh-hounds rules: null over \"Feel No Pain\"",
+    "screamers points: \"any copy: 3 80 · 6 160\" over \"any copy: 3 80 · 4 160 · 5 160 · 6 160\"",
+    "screamers stats[Screamer].base: \"Small Flying\" over \"32mm Flying\"",
+    "screamers kw: null over \"Shadow Legion\"",
+    "screamers rules: null over \"Warp Rifts\"",
+    "khorne-soul-grinder stats[Soul Grinder].base: \"160mm\" over \"~160mm\"",
+    "khorne-soul-grinder ability[Daemonic Allegiance]: \"Daemonic Allegiance\" over null",
+    "khorne-soul-grinder kw: null over \"Shadow Legion\"",
+    "khorne-soul-grinder rules: \"Deadly Demise D3\" over null",
+    "khorne-soul-grinder rules: null over \"Deadly Demise\"",
+    "khorne-soul-grinder rules: null over \"Warp Rifts\"",
+    "nurgle-soul-grinder stats[Soul Grinder].base: \"160mm\" over \"~160mm\"",
+    "nurgle-soul-grinder ability[Daemonic Allegiance]: \"Daemonic Allegiance\" over null",
+    "nurgle-soul-grinder kw: null over \"Shadow Legion\"",
+    "nurgle-soul-grinder rules: \"Deadly Demise D3\" over null",
+    "nurgle-soul-grinder rules: null over \"Deadly Demise\"",
+    "nurgle-soul-grinder rules: null over \"Warp Rifts\"",
+    "slaanesh-soul-grinder stats[Soul Grinder].base: \"160mm\" over \"~160mm\"",
+    "slaanesh-soul-grinder ability[Daemonic Allegiance]: \"Daemonic Allegiance\" over null",
+    "slaanesh-soul-grinder kw: null over \"Shadow Legion\"",
+    "slaanesh-soul-grinder rules: \"Deadly Demise D3\" over null",
+    "slaanesh-soul-grinder rules: null over \"Deadly Demise\"",
+    "slaanesh-soul-grinder rules: null over \"Warp Rifts\"",
+    "tzeentch-soul-grinder stats[Soul Grinder].base: \"160mm\" over \"~160mm\"",
+    "tzeentch-soul-grinder ability[Daemonic Allegiance]: \"Daemonic Allegiance\" over null",
+    "tzeentch-soul-grinder kw: null over \"Shadow Legion\"",
+    "tzeentch-soul-grinder rules: \"Deadly Demise D3\" over null",
+    "tzeentch-soul-grinder rules: null over \"Deadly Demise\"",
+    "tzeentch-soul-grinder rules: null over \"Warp Rifts\"",
+    "feculent-gnarlmaw kw: null over \"Shadow Legion\"",
+    "feculent-gnarlmaw rules: null over \"Warp Rifts\"",
+    "skull-altar kw: null over \"Shadow Legion\"",
+    "skull-altar rules: \"Infiltrators\" over null",
+    "skull-altar rules: null over \"Warp Rifts\""
+   ]
+  },
+  "source": {
+   "reason": "each is GW's value where BSData at the pin differs; check a sample against the cached pages"
+  },
+  "key": "916d3a47eb96690a"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "catalog-vs-list",
+  "where": "chaos-daemons/tzeentch-soul-grinder · kw",
+  "judgement": {
+   "lists": null
+  },
+  "source": {
+   "reason": "BSData has one Soul Grinder entry per Daemonic Allegiance, each with its god's keyword (Tzeentch Soul Grinder: TZEENTCH); GW prints one Soul Grinder datasheet whose KEYWORDS have no god and whose Daemonic Allegiance gives the chosen keyword. The Tzeeeeentch list's signed-off row has GW's KEYWORDS line (the allegiance its list chose shows through Daemonic Allegiance); DATASHEETS keeps the list's row. The catalogue row, Tzeentch by its name, is BSData's entry.",
+   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3113, 3144 (KEYWORDS: Vehicle, Walker, Chaos, Daemon, Soul Grinder), 3128 (Daemonic Allegiance); BSData Chaos - Chaos Daemons Library, Tzeentch Soul Grinder categories; data.js DATASHEETS chaos-daemons/tzeentch-soul-grinder."
+  },
+  "key": "582fba3940345662"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "catalog-vs-list",
+  "where": "chaos-daemons/skarbrand · abilities Rage Embodied text",
+  "judgement": {
+   "lists": [
+    "big-demons-baby"
+   ]
+  },
+  "source": {
+   "reason": "The list is a World Eaters army: its row is the World Eaters codex's Skarbrand datasheet (faction world-eaters), whose aura names BLOOD LEGIONS units; the catalogue row is the Chaos Daemons datasheet, whose aura names KHORNE LEGIONES DAEMONICA units. Both are GW's words, each for its own army; the list's row is kept.",
+   "evidence": "verify/.cache/waha/ds/world-eaters_Skarbrand.html: \"While a friendly BLOOD LEGIONS unit is within 6\\\" of this model\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 462-465: \"While a friendly Khorne Legiones Daemonica unit is within 6\\\" of this model\"; verify/sources/nr/big-demons-baby.txt (Skarbrand, Abilities)."
+  },
+  "key": "0e81231f2ac95cab"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "catalog-vs-list",
+  "where": "chaos-daemons/bloodthirster · abilities Daemon Lord of Khorne text",
+  "judgement": {
+   "lists": [
+    "big-demons-baby"
+   ]
+  },
+  "source": {
+   "reason": "The list is a World Eaters army: its row is the World Eaters codex's Bloodthirster datasheet (faction world-eaters), whose aura names BLOOD LEGIONS units; the catalogue row is the Chaos Daemons datasheet, whose aura names KHORNE LEGIONES DAEMONICA units. Both are GW's words, each for its own army; the list's row is kept.",
+   "evidence": "verify/.cache/waha/ds/world-eaters_Bloodthirster.html: \"While a friendly BLOOD LEGIONS unit is within 6\\\" of this model\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 515-518: \"While a friendly Khorne Legiones Daemonica unit is within 6\\\" of this model\"; verify/sources/nr/big-demons-baby.txt (Bloodthirster, Abilities)."
+  },
+  "key": "7b3590fa8651c6a4"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "detachment-labels",
+  "where": "chaos-daemons · Daemonic Incursion",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Warp Rifts",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica"
+      ]
+     }
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "corrupt-realspace",
+     "phases": [
+      "command"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica"
+      ]
+     }
+    },
+    {
+     "id": "warp-surge",
+     "phases": [
+      "charge"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica"
+      ]
+     }
+    },
+    {
+     "id": "draught-of-terror",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "your"
+     },
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica"
+      ]
+     }
+    },
+    {
+     "id": "denizens-of-the-warp",
+     "phases": [
+      "movement"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica"
+      ]
+     }
+    },
+    {
+     "id": "the-realm-of-chaos",
+     "phases": [
+      "fight"
+     ],
+     "turn": "opp",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica"
+      ]
+     }
+    },
+    {
+     "id": "daemonic-invulnerability",
+     "phases": [
+      "shooting"
+     ],
+     "turn": "opp",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives from the words (no hand label); misreads in verify/review/labels-handoff.json"
+  },
+  "key": "8a0abc1861855f81"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "detachment-labels",
+  "where": "chaos-daemons · Legion of Excess",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Beguiling Aura",
+     "ph": [
+      "movement",
+      "charge"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ]
+     }
+    },
+    {
+     "rule": "Seductive Gambit",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ]
+     }
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "rapturous-agony",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "opp"
+     },
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ],
+      "none": [
+       "Monster",
+       "Vehicle"
+      ]
+     }
+    },
+    {
+     "id": "archagonists",
+     "phases": [
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh",
+       "Monster"
+      ],
+      "none": [
+       "Monster"
+      ]
+     }
+    },
+    {
+     "id": "sensory-excruciation",
+     "phases": [
+      "command"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh",
+       "Monster"
+      ]
+     }
+    },
+    {
+     "id": "phantasmal-longing",
+     "phases": [
+      "movement",
+      "charge"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ]
+     }
+    },
+    {
+     "id": "cavalcade-of-blades",
+     "phases": [
+      "charge"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ]
+     }
+    },
+    {
+     "id": "overwhelming-excess",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "opp"
+     },
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Slaanesh"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives from the words (no hand label); misreads in verify/review/labels-handoff.json"
+  },
+  "key": "c9f7e14613f7ccf7"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "detachment-labels",
+  "where": "chaos-daemons · Plague Legion",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Melancholic Miasma",
+     "ph": [
+      "command"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Nurgle"
+      ]
+     }
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "seeping-virulence",
+     "phases": [
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Nurgle"
+      ]
+     }
+    },
+    {
+     "id": "fever-visions",
+     "phases": [
+      "shooting",
+      "fight"
+     ],
+     "turn": "either",
+     "turns": {
+      "shooting": "your"
+     },
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Nurgle"
+      ]
+     }
+    },
+    {
+     "id": "foetid-resurgence",
+     "phases": [
+      "command"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Nurgle"
+      ]
+     }
+    },
+    {
+     "id": "rot-and-renewal",
+     "phases": [
+      "movement",
+      "charge"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Nurgle"
+      ]
+     }
+    },
+    {
+     "id": "murkshadows",
+     "phases": [
+      "movement"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Nurgle",
+       "Infantry"
+      ]
+     }
+    },
+    {
+     "id": "plague-of-woes",
+     "phases": [
+      "command"
+     ],
+     "turn": "opp",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Nurgle"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives from the words (no hand label); misreads in verify/review/labels-handoff.json"
+  },
+  "key": "7135f2f7fef3bdeb"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "detachment-labels",
+  "where": "chaos-daemons · Shadow Legion",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Thralls of the First Prince",
+     "needs": {
+      "any": [
+       "Be'lakor",
+       "Faction: Heretic Astartes",
+       "Faction: Legiones Daemonica"
+      ]
+     }
+    },
+    {
+     "rule": "First Prince of Chaos",
+     "ph": [
+      "movement",
+      "shooting",
+      "charge"
+     ],
+     "turn": "your"
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "spiteful-demise",
+     "phases": [
+      "command",
+      "movement",
+      "shooting",
+      "charge",
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Shadow Legion"
+      ]
+     }
+    },
+    {
+     "id": "channelled-wrath",
+     "phases": [
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Shadow Legion"
+      ]
+     }
+    },
+    {
+     "id": "death-denied",
+     "phases": [
+      "command"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Shadow Legion"
+      ]
+     }
+    },
+    {
+     "id": "encroaching-darkness",
+     "phases": [
+      "shooting"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Shadow Legion"
+      ],
+      "any": [
+       "Faction: Heretic Astartes",
+       "Faction: Legiones Daemonica"
+      ]
+     }
+    },
+    {
+     "id": "shade-path",
+     "phases": [
+      "charge"
+     ],
+     "turn": "opp",
+     "needs": {
+      "all": [
+       "Shadow Legion"
+      ]
+     }
+    },
+    {
+     "id": "binding-shadow",
+     "phases": [
+      "fight"
+     ],
+     "turn": "opp",
+     "needs": {
+      "all": [
+       "Shadow Legion"
+      ],
+      "any": [
+       "Faction: Heretic Astartes",
+       "Faction: Legiones Daemonica"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives from the words (no hand label); misreads in verify/review/labels-handoff.json"
+  },
+  "key": "7a866e4230c86fec"
+ },
+ {
+  "army": "catalog-chaos-daemons",
+  "kind": "detachment-labels",
+  "where": "chaos-daemons · Lords of the Warp",
+  "judgement": {
+   "rules": [
+    {
+     "rule": "Loci of Power",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Character"
+      ],
+      "none": [
+       "Monster"
+      ]
+     }
+    }
+   ],
+   "stratagems": [
+    {
+     "id": "carnival-of-excess",
+     "phases": [
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Character",
+       "Slaanesh"
+      ],
+      "none": [
+       "Monster"
+      ]
+     }
+    },
+    {
+     "id": "call-to-murder",
+     "phases": [
+      "fight"
+     ],
+     "turn": "either",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Character",
+       "Khorne"
+      ],
+      "none": [
+       "Monster"
+      ]
+     }
+    },
+    {
+     "id": "bilious-blessing",
+     "phases": [
+      "shooting"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Character",
+       "Nurgle"
+      ],
+      "none": [
+       "Monster"
+      ]
+     }
+    },
+    {
+     "id": "skirling-magicks",
+     "phases": [
+      "shooting"
+     ],
+     "turn": "your",
+     "needs": {
+      "all": [
+       "Faction: Legiones Daemonica",
+       "Character",
+       "Tzeentch"
+      ],
+      "none": [
+       "Monster"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "reason": "labels verify/derive.js derives from the words (no hand label); misreads in verify/review/labels-handoff.json"
+  },
+  "key": "8099dcfb2c12e97b"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Chaos Daemons · Daemonic Incursion rule · Warp Rifts",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Warp Rifts",
+   "text": "Each time a **LEGIONES DAEMONICA** unit from your army is set up on the battlefield using the **Deep Strike** ability, if it is set up wholly within your army’s Shadow of Chaos, and/or if it is set up wholly within 6\" of one or more friendly **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units with which it shares the **KHORNE**, **TZEENTCH**, **NURGLE** or **SLAANESH** keyword, it can be set up anywhere that is more than 6\" horizontally away from all enemy models, instead of more than 8\"."
+  },
+  "key": "ea34bf98d422a928"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Daemonic Incursion · Corrupt Realspace",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Corrupt Realspace",
+   "text": "WHEN: Start of any Command phase.\nTARGET: One **LEGIONES DAEMONICA** unit from your army that is within range of an objective marker you control.\nEFFECT: That objective marker is said to be Corrupted and remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn. In addition, while an objective marker is Corrupted and under your control, the area of the battlefield within 6\" of that objective marker is considered to be within your army’s Shadow of Chaos."
+  },
+  "key": "55785953e5779853"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Daemonic Incursion · Warp Surge",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Warp Surge",
+   "text": "WHEN: Your Charge phase.\nTARGET: One **LEGIONES DAEMONICA** unit from your army that is within your army’s Shadow of Chaos.\nEFFECT: Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced."
+  },
+  "key": "ef784575e7366eae"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Daemonic Incursion · Draught of Terror",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Draught of Terror",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **LEGIONES DAEMONICA** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, improve the Armour Penetration characteristic of weapons equipped by models in that unit by 1. In addition, until the end of the phase, each time such a weapon targets a unit that is **Battle-shocked**, you can re-roll the **Wound roll**."
+  },
+  "key": "967a4b418b6b64cf"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Daemonic Incursion · Denizens of the Warp",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Denizens of the Warp",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **LEGIONES DAEMONICA** unit from your army that is arriving using the **Deep Strike** ability this phase.\nEFFECT: Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy models."
+  },
+  "key": "2e05116a35c1e375"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Daemonic Incursion · The Realm of Chaos",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "The Realm of Chaos",
+   "text": "WHEN: End of your opponent’s turn.\nTARGET: Up to two **LEGIONES DAEMONICA** units from your army that are within your army’s Shadow of Chaos, or one other **LEGIONES DAEMONICA** unit from your army.\nEFFECT: - Place your unit in **strategic reserves**.\n- Your unit must make an **ingress move** in your next Movement phase (including in your first turn).\n**RESTRICTION:** You cannot target units that are within **Engagement Range** of one or more enemy units with this **Stratagem**."
+  },
+  "key": "06838b4545ce2ed2"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Daemonic Incursion · Daemonic Invulnerability",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Daemonic Invulnerability",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **LEGIONES DAEMONICA** unit from your army that was selected as the target of one or more of that enemy unit’s attacks.\nEFFECT: Until the end of the phase, each time an invulnerable saving throw is made for a model in your unit, re-roll a saving throw of 1."
+  },
+  "key": "0b400c5950335965"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Chaos Daemons · Legion of Excess rule · Beguiling Aura",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Slaanesh"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Beguiling Aura",
+   "text": "**LEGIONES DAEMONICA SLAANESH** units from your army are eligible to declare a charge in a turn in which they Fell Back."
+  },
+  "key": "b0cc438194a341f1"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Chaos Daemons · Legion of Excess rule · Seductive Gambit",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Slaanesh"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Seductive Gambit",
+   "text": "**LEGIONES DAEMONICA SLAANESH** units from your army have the following ability:\n**Seductive Gambit:** Each time this unit ends a **Charge move**, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the **Fights First** ability, but instead, each time a model in this unit makes an attack, you can re-roll the **Hit roll** and you can re-roll a **Wound roll** of 1."
+  },
+  "key": "7a804f3ed17990c0"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Legion of Excess · Rapturous Agony",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Slaanesh"
+    ],
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Rapturous Agony",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTER**/**VEHICLE** units).\nTARGET: That **LEGIONES DAEMONICA SLAANESH** unit.\nEFFECT: Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**."
+  },
+  "key": "658e6167a374644c"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Legion of Excess · Archagonists",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Slaanesh",
+     "Monster"
+    ],
+    "none": [
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Archagonists",
+   "text": "WHEN: Fight phase.\nTARGET: One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS**) from your army that have not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in one of those units makes an attack, add 1 to the **Wound roll**."
+  },
+  "key": "f94dec1b7ca504e9"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Legion of Excess · Sensory Excruciation",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Slaanesh",
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Sensory Excruciation",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIONES DAEMONICA SLAANESH MONSTER** unit from your army that is on the battlefield.\nEFFECT: Each unit on the battlefield that is within your army’s Shadow of Chaos must take a **Battle-shock test**, subtracting 1 from that test if they are **Below Half-strength**.\n**Designer’s Note:** This Stratagem forces all friendly and enemy units alike within your army’s Shadow of Chaos to take a Battle-shock test. This can allow a Chaos Daemons player to heal units from their army through the Daemonic Manifestation army rule, at the risk of causing some of their own units to become Battle-shocked."
+  },
+  "key": "eee271bce397efcb"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Legion of Excess · Phantasmal Longing",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Slaanesh"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Phantasmal Longing",
+   "text": "WHEN: Your Movement phase or your Charge phase.\nTARGET: One **LEGIONES DAEMONICA SLAANESH** unit from your army.\nEFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through **terrain features**."
+  },
+  "key": "3dfd5ce3935e87e3"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Legion of Excess · Cavalcade of Blades",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Slaanesh"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Cavalcade of Blades",
+   "text": "WHEN: Your Charge phase, just after a **LEGIONES DAEMONICA SLAANESH** unit from your army ends a **Charge move**.\nTARGET: That **LEGIONES DAEMONICA SLAANESH** unit.\nEFFECT: Select one enemy unit within **Engagement Range** of your unit, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit, or roll six D6 instead if your unit is a **MONSTER** unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "f1cff1d52574f069"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Legion of Excess · Overwhelming Excess",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Slaanesh"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Overwhelming Excess",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LEGIONES DAEMONICA SLAANESH** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack targets your unit, subtract 1 from the **Hit roll**."
+  },
+  "key": "2086b02aa9a4a145"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Chaos Daemons · Plague Legion rule · Melancholic Miasma",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Nurgle"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Melancholic Miasma",
+   "text": "While an enemy unit is within 9\" of one or more **LEGIONES DAEMONICA NURGLE** units from your army, that enemy unit is within your army’s Shadow of Chaos. In each player’s Command phase, select one enemy unit within your army’s Shadow of Chaos. That unit must take a **Battle-shock test**."
+  },
+  "key": "2a736b41e520121a"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Plague Legion · Seeping Virulence",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Nurgle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Seeping Virulence",
+   "text": "WHEN: Fight phase.\nTARGET: One **LEGIONES DAEMONICA NURGLE** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in that unit makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "d57f000d36fa29af"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Plague Legion · Fever Visions",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Nurgle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Fever Visions",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **LEGIONES DAEMONICA NURGLE** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, add 1 to the **Hit roll**. After your unit has finished making its attacks, select one enemy unit hit by one or more of those attacks; that enemy unit must take a **Battle-shock test**."
+  },
+  "key": "7e67bf2991f4365e"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Plague Legion · Foetid Resurgence",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Nurgle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Foetid Resurgence",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIONES DAEMONICA NURGLE** unit from your army that is on the battlefield.\nEFFECT: Return up to 1 **destroyed** model to your unit (excluding **CHARACTER** models) or up to D3 destroyed models instead (excluding **CHARACTER** models) if your unit is a **BATTLELINE** unit, with their full wounds remaining. If your unit is a **MONSTER** unit, one model in your unit regains up to D3+1 lost wounds instead."
+  },
+  "key": "9ae3eedb90d6bc4c"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Plague Legion · Rot and Renewal",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Nurgle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Rot and Renewal",
+   "text": "WHEN: Your Movement phase or your Charge phase.\nTARGET: One **LEGIONES DAEMONICA NURGLE** unit from your army.\nEFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through **terrain features**."
+  },
+  "key": "81204bfa28cce0b6"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Plague Legion · Murkshadows",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Nurgle",
+     "Infantry"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Murkshadows",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **LEGIONES DAEMONICA NURGLE INFANTRY** unit from your army.\nEFFECT: Until the end of the phase, each time your unit makes a **Normal move**, add 5\" to the Move characteristic of models in your unit."
+  },
+  "key": "09e911c7350e87b1"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Plague Legion · Plague of Woes",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Nurgle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Plague of Woes",
+   "text": "WHEN: Your opponent’s Command phase, before selecting any targets for the Melancholic Miasma Detachment rule.\nTARGET: One **LEGIONES DAEMONICA NURGLE** unit from your army.\nEFFECT: Until the end of the phase, after an enemy unit takes a **Battle-shock test** as a result of the Melancholic Miasma Detachment rule, select one other enemy unit within 9\" of your unit; that enemy unit must take a Battle-shock test."
+  },
+  "key": "39ff1c18f824288d"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Chaos Daemons · Shadow Legion rule · Thralls of the First Prince",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Be'lakor",
+     "Faction: Heretic Astartes",
+     "Faction: Legiones Daemonica"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Thralls of the First Prince",
+   "text": "When mustering your army, you cannot include any **DAEMON PRINCE**, **DAEMON PRINCE WITH WINGS** or **EPIC HERO** units (excluding **BE’LAKOR**), but you can include the following **HERETIC ASTARTES** units:\n- **CHAOS LORD**\n- **CHAOS LORD IN TERMINATOR ARMOUR**\n- **CHAOS LORD WITH JUMP PACK**\n- **CHAOS TERMINATOR SQUAD**\n- **CHOSEN**\n- **DAMNED** units\n- **DARK APOSTLE**\n- **HAVOCS**\n- **LEGIONARIES**\n- **MASTER OF POSSESSION**\n- **POSSESSED**\n- **RAPTORS**\n- **SORCERER**\n- **SORCERER IN TERMINATOR ARMOUR**\n- **WARP TALONS**\nThe combined points value of such units depends on your battle size, as shown below.\n- **Incursion:** Up to 500 pts\n- **Strike Force:** Up to 1000 pts\n- **Onslaught:** Up to 1500 pts\nKEYWORDS\n**BE’LAKOR** and **HERETIC ASTARTES** units from your army gain the **SHADOW LEGION** and **UNDIVIDED** keywords.\n**LEGIONES DAEMONICA** units from your army gain the **SHADOW LEGION** keyword."
+  },
+  "key": "0290976b96b3be97"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Shadow Legion · Spiteful Demise",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Shadow Legion"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Spiteful Demise",
+   "text": "WHEN: Any phase, just after a **SHADOW LEGION** unit from your army is destroyed, before removing the last model in that unit from the battlefield and before rolling any dice for the **Deadly Demise** ability.\nTARGET: That **SHADOW LEGION** unit. You can use this Stratagem on that unit even though it was just destroyed.\nEFFECT: Roll one D6 for each enemy unit that is within **Engagement Range** of the last model in your unit, adding 2 to the result if your unit has the **SLAANESH** keyword: on a 4-5, that enemy unit suffers D3 **mortal wounds**; on a 6+, that enemy unit suffers 3 mortal wounds."
+  },
+  "key": "b80706644ee85347"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Shadow Legion · Channelled Wrath",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Shadow Legion"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Channelled Wrath",
+   "text": "WHEN: Fight phase.\nTARGET: One **SHADOW LEGION** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[LANCE]** ability. If your unit has the **KHORNE** keyword, until the end of the phase, improve the Armour Penetration characteristic of those weapons by 1 as well."
+  },
+  "key": "d9b4580c9bbc3d13"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Shadow Legion · Death Denied",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Shadow Legion"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Death Denied",
+   "text": "WHEN: Your Command phase.\nTARGET: One **SHADOW LEGION** unit from your army.\nEFFECT: One model in your unit regains up to 3 lost wounds. In addition, If your unit has the **TZEENTCH** keyword, return up to one destroyed model (excluding **CHARACTER** models) to your unit with its full wounds remaining."
+  },
+  "key": "f3b55d2f12ad3865"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Shadow Legion · Encroaching Darkness",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Shadow Legion"
+    ],
+    "any": [
+     "Faction: Heretic Astartes",
+     "Faction: Legiones Daemonica"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Encroaching Darkness",
+   "text": "WHEN: Your Shooting phase.\nTARGET: Up to one **SHADOW LEGION HERETIC ASTARTES** unit from your army and up to one **SHADOW LEGION LEGIONES DAEMONICA** unit from your army. You can only select units that arrived from Reserves this turn.\nEFFECT: Until the end of the phase, weapons equipped by models in your selected units have the **[IGNORES COVER]** ability."
+  },
+  "key": "d93f7613cac9254d"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Shadow Legion · Shade Path",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Shadow Legion"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Shade Path",
+   "text": "WHEN: Start of your opponent's Charge phase.\nTARGET: One friendly **SHADOW LEGION** unit.\nEFFECT: Select one **visible** enemy unit within 12\" of your unit. When that enemy unit **declares a charge**, that enemy unit has -1 to **charge rolls**. If your unit has **NURGLE**, that enemy unit must make a **battle-shock roll**."
+  },
+  "key": "4cdee7512da284af"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Shadow Legion · Binding Shadow",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Shadow Legion"
+    ],
+    "any": [
+     "Faction: Heretic Astartes",
+     "Faction: Legiones Daemonica"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Binding Shadow",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: Up to one **SHADOW LEGION HERETIC ASTARTES** unit from your army and up to one **SHADOW LEGION LEGIONES DAEMONICA** unit from your army. You can only select units that are not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove those selected units from the battlefield and place them into **Strategic Reserves**."
+  },
+  "key": "3d3ff11f5b839793"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Chaos Daemons · Lords of the Warp rule · Loci of Power",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Character"
+    ],
+    "none": [
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Loci of Power",
+   "text": "Friendly **LEGIONES DAEMONICA CHARACTER** models (excluding **MONSTER** models) have +1 **Ld** and **OC**."
+  },
+  "key": "d3f71eda68afeeb4"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Lords of the Warp · Carnival of Excess",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Character",
+     "Slaanesh"
+    ],
+    "none": [
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Carnival of Excess",
+   "text": "WHEN: Fight phase, when an enemy unit has fought.\nTARGET: One friendly **LEGIONES DAEMONICA CHARACTER SLAANESH** unit (excluding **MONSTER** units) that has not been **selected to fight** this phase.\nEFFECT: Your unit has **Fights First** and must be the next unit you **select to fight**."
+  },
+  "key": "de27b6a230b35cf6"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Lords of the Warp · Call to Murder",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Character",
+     "Khorne"
+    ],
+    "none": [
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Call to Murder",
+   "text": "WHEN: Fight phase, when a friendly **LEGIONES DAEMONICA KHORNE CHARACTER** unit (excluding **MONSTER** units) that made a **charge move** this turn is **selected to fight**.\nTARGET: That **LEGIONES DAEMONICA CHARACTER KHORNE** unit.\nEFFECT: Your unit’s melee attacks have +1 **A**."
+  },
+  "key": "07f18fd576b93a7b"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Lords of the Warp · Bilious Blessing",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Character",
+     "Nurgle"
+    ],
+    "none": [
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Bilious Blessing",
+   "text": "WHEN: Start of your Shooting phase.\nTARGET: One friendly **LEGIONES DAEMONICA CHARACTER NURGLE** unit (excluding **MONSTER** units).\nEFFECT: Select one **visible** enemy unit within 8\" of your unit and roll seven D6:\n- For each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "8194307e8327ac31"
+ },
+ {
+  "army": "catalog",
+  "kind": "strat-needs",
+  "where": "Chaos Daemons · Lords of the Warp · Skirling Magicks",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Legiones Daemonica",
+     "Character",
+     "Tzeentch"
+    ],
+    "none": [
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Skirling Magicks",
+   "text": "WHEN: Your Shooting phase, when a friendly **LEGIONES DAEMONICA CHARACTER TZEENTCH** unit (excluding **MONSTER** units) is **selected to shoot**.\nTARGET: That **LEGIONES DAEMONICA CHARACTER TZEENTCH** unit.\nEFFECT: Your unit’s ranged attacks have **[LETHAL HITS]**."
+  },
+  "key": "c523f8598b436d8e"
+ }
+]

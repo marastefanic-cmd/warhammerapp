@@ -195,6 +195,21 @@ function covers(id, said, table){
   const b = table.find(x => x.id === id); return !!b && b.said.test(said);
 }
 
+// not read yet: the rows a faction catalogue added whose AI layers are not written (aiStatus 'not-read': a datasheet no list has, a
+// detachment from the catalogue, docs/catalog.md). Their sentences stating a bonus are listed as "not read yet", an explicit status the
+// gate reports and does not fail: the Damage tab does not count them until they are read (readings written, fingerprinted, signed off)
+function notReadYet(){
+  const out = [];
+  for(const [id, S] of Object.entries(D.datasheets || {})) if(S.aiStatus === 'not-read')
+    for(const ab of S.abilities || []) for(const g of abilityGaps(S, ab)) out.push(Object.assign(g, { where:id, ability:ab.name }));
+  for(const [fk, F] of Object.entries(D.factions || {})) for(const [dk, d] of Object.entries(F.detachments || {})) if(d.aiStatus === 'not-read'){
+    for(const r of [d.rule].concat(d.moreRules || []).filter(Boolean)) for(const { s } of sentenceCtx(r.text)){ const b = bonusOf(s); if(b.att.length || b.def.length) out.push({ check:'rule', where:fk + '/' + dk, ability:r.name, sentence:s, bonus:b.att.concat(b.def) }); }
+    for(const e of d.enhancements || []) for(const { s } of sentenceCtx(e.text)){ const b = bonusOf(s); if(b.att.length || b.def.length) out.push({ check:'enhancement', where:fk + '/' + dk, ability:e.name, sentence:s, bonus:b.att.concat(b.def) }); }
+    for(const st of d.stratagems || []) for(const { s } of sentenceCtx(st.effect)){ const b = bonusOf(s); if(b.att.length || b.def.length) out.push({ check:'stratagem', where:fk + '/' + dk, ability:st.name, sentence:s, bonus:b.att.concat(b.def) }); }
+  }
+  return out;
+}
+
 // the gate step (and --record)
 if(require.main === module){
   const gaps = gapsOf(), known = readJSON(GAPS, {});
@@ -215,9 +230,13 @@ if(require.main === module){
     for(const g of by(c)) md.push('- **' + g.ability + '** (' + g.bonus.join(', ') + '): “' + g.sentence + '” · ' + [...new Set(g.units)].join(', '));
     md.push('');
   }
+  const nry = notReadYet();
+  md.push('## Not read yet: catalogue rows and detachments whose readings are not written (' + nry.length + ')', '', 'aiStatus "not-read" (docs/catalog.md): the Damage tab does not count these until they are read; not a failure.', '');
+  for(const g of nry) md.push('- ' + g.where + ' · **' + g.ability + '** (' + g.check + '; ' + g.bonus.join(', ') + '): “' + g.sentence + '”');
+  md.push('');
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/readings.md'), md.join('\n'));
-  console.log('readings: ' + (na.length ? na.length + ' declared not applicable (readings-gaps.json); ' : '') + (fresh.length ? fresh.length + ' new gap(s); ' : '') + gaps.size + ' sentences stating a bonus with no reading (' + by('riled').length + ' riled up, ' + by('conditional').length + ' other, ' + by('defence').length + ' defences; listed in verify/out/readings.md, known in verify/readings-gaps.json)' + (gone.length ? '; ' + gone.length + ' known gap(s) now read (remove them from verify/readings-gaps.json)' : ''));
+  console.log('readings: ' + (na.length ? na.length + ' declared not applicable (readings-gaps.json); ' : '') + (fresh.length ? fresh.length + ' new gap(s); ' : '') + gaps.size + ' sentences stating a bonus with no reading (' + by('riled').length + ' riled up, ' + by('conditional').length + ' other, ' + by('defence').length + ' defences; listed in verify/out/readings.md, known in verify/readings-gaps.json); ' + nry.length + ' not read yet (catalogue rows and detachments, aiStatus not-read)' + (gone.length ? '; ' + gone.length + ' known gap(s) now read (remove them from verify/readings-gaps.json)' : ''));
   for(const k of fresh){ const g = gaps.get(k); console.log('  NEW GAP ' + g.check + ' · ' + g.ability + ' (' + g.units.join(', ') + '): “' + g.sentence + '”: give it a reading, or record it (node verify/readings.js --record) for the owner'); }
   process.exit(fresh.length ? 1 : 0);
 }
-module.exports = { gapsOf, abilityGaps, bonusOf, sentences };
+module.exports = { gapsOf, abilityGaps, bonusOf, sentences, notReadYet };

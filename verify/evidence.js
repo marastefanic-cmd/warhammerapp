@@ -18,6 +18,11 @@
          calcNc, both, limit on rules) and app.html's Damage tab reads no rule's words at run time (no dmEffects, no extractor, no
          note / when / calc of a reading)
      G7  data.js BOXES is exactly what the words give (node verify/effects-migrate.js --write)
+     G9  the classes the extractor once got wrong (the review of the catalogue merge, result-catalog-merge.json): no box for the
+         enemy's attacks (a sentence, or a list's line, about attacks against the unit); no kind from a phase named only in a duration
+         ("until the end of your next Fight phase"); no box with a restriction to some targets ("attacks that target a hidden unit",
+         "targets a unit that is Battle-shocked") and no condition on its target; no box for its own unit's attacks in a stratagem used
+         after that unit attacked ("has shot"); each check bites on the boxes it was written for
      G8  every catalogue effect has a calc-test case (verify/calc-test.js: a case named 'fx:<id>'), and every custom modifier
      groups     every box of every list × unit × step is in exactly one of the five groups (DM_GROUPS)
      targets    every stratagem of the lists has a TARGET the closed patterns read (verify/derive.js stratNeeds, with this file's
@@ -73,6 +78,31 @@ for(const [key, o] of Object.entries(T)){
   for(const x of o.nc || []) if(!text.includes(flat(x.quote).replace(/\s*\.\s*$/, ''))) fail('G2', where, 'not counted, not GW’s words: “' + x.quote.slice(0, 80) + '”');
 }
 stats.boxes = nBox; stats.picks = nPill; stats.sources = Object.keys(T).length;
+// ---- G9: the classes the extractor once got wrong ----
+function g9(b, src){
+  const bad = [], lines = String(b.quote || '').split('\n').map(q => E.norm(q.replace(/^-\s+/, '')));
+  if(lines.some(n => X.DEFENCE.some(re => re.test(n))) || (b.lead && X.defenceLead({ bullet:true, lead:b.lead }))) bad.push('about the enemy\'s attacks (or attacks against the unit), not this unit\'s');
+  const all = E.norm([b.quote, b.lead || '', src.when || '', src.target || '', String(src.text || '').split('\n')[0]].join(' '));
+  if((b.kind === 'melee' || b.kind === 'ranged') && new RegExp(X.DURATION_RE.source).test(E.norm(b.quote)) && !X.kindOf(all)) bad.push('kind ' + b.kind + ' from a phase named only in how long it lasts');
+  for(const n of lines) if(X.TARGET_RESTR.test(n) && !X.hasTargetCond(b.on, n)) bad.push('a restriction to some targets (“' + X.TARGET_RESTR.exec(n)[0] + '”) and no condition on its target');
+  if(!b.reach && lines.some(n => X.afterAttack(src, n))) bad.push('its unit has already attacked (WHEN “' + X.plainCase(src.when) + '”): not for its own attacks');
+  return bad;
+}
+for(const [key, o] of Object.entries(T)){ const src = S.get(key); for(const b of boxesOf(o)) for(const why of g9(b, src)) fail('G9', key + ' ' + o.n, why);
+  // (the app lists a source's not-counted words only when it has no counted box: both would hide them)
+  if((o.b || []).length && (o.nc || []).length) fail('G9', key + ' ' + o.n, 'counted boxes and not-counted words in one source: the app would not show “' + X.plainCase(o.nc[0].quote).slice(0, 80) + '”'); }
+// (bites: each check fails the box it was written for, as the extractor once made it)
+{ const strat = (when, target, effect) => ({ type:'strat', when, target, effect });
+  const BITES = [
+    ['Shield of Honour', { quote:'-1 to **hit rolls**.\n-1 to **wound rolls**.', fx:[['hit', -1], ['wound', -1]], on:[], kind:'melee', lead:'When an enemy model **engaged** with your unit selects targets, if that enemy model does not select your unit as the target of all of its attacks, that enemy model’s attacks have:' }, strat('Start of the Fight phase.', 'One friendly unit.', '')],
+    ['Enfilading Emergence', { quote:'Until the end of your next Fight phase, weapons equipped by models in your unit have the **[SUSTAINED HITS 1]** and **[IGNORES COVER]** abilities.', fx:[['sus', '1'], ['ignoresCover', true]], on:[], kind:'melee' }, strat('End of your Movement phase.', 'One **TYRANIDS** unit from your army that was set up as Reinforcements this turn.', '')],
+    ['Counterpredation', { quote:'Your unit’s attacks that target a **hidden** unit have +1 **S** and **AP**.', fx:[['s', 1], ['ap', 1]], on:[], kind:'melee' }, strat('Fight phase.', 'One unit.', '')],
+    ['Draught of Terror', { quote:'In addition, until the end of the phase, each time such a weapon targets a unit that is **Battle-shocked**, you can re-roll the **Wound roll**.', fx:[['rrWound', true]], on:[], kind:'all' }, strat('Your Shooting phase or the Fight phase.', 'One unit.', '')],
+    ['Psy-Chaff Volley', { quote:'Attacks that target a **prosecuted** unit have +1 **AP**.', fx:[['ap', 1]], on:[['q', 'that target a prosecuted unit']], kind:'ranged' }, strat('Your Shooting phase, when a friendly **PROSECUTOR SQUAD** unit has shot.', 'That **PROSECUTOR SQUAD** unit.', '')]
+  ];
+  let bit = 0;
+  for(const [name, b, src] of BITES){ if(g9(b, src).length) bit++; else fail('G9', 'bite', 'the box once made for ' + name + ' passes G9'); }
+  stats.g9Bites = bit + ' of ' + BITES.length; }
 // G1 (the schema): a box, a pick, a scope, a limit, a part, a source carry the fields the script writes and no other (a hand note on a box
 // fails), in what the words give (T) and in data.js BOXES alike
 { const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both', 'embarked']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool', 'excl']),
@@ -96,7 +126,7 @@ for(const [key, src] of S){
   for(const u of X.unitsOf(src)){
     const n = E.norm(u.s);
     // (about attacks against the unit, or an enemy's, and a sentence continuing one: "If that Battle-shock test was failed, … as well")
-    if(X.DEFENCE.some(re => re.test(n)) || (defPrev && (/^if\b/.test(n) || /\bas well\.?$/.test(n)))){ defPrev = true; continue; }
+    if(X.DEFENCE.some(re => re.test(n)) || X.defenceLead(u) || (defPrev && (/^if\b/.test(n) || /\bas well\.?$/.test(n)))){ defPrev = true; continue; }
     defPrev = false;
     if(/\b\d+" a[\dd]+ (?:bs|ws)\d\+|\bmelee a[\dd]+ ws\d\+/.test(n)) continue;    // a weapon's profile line
     if(src.type === 'strat' && /\bthat was just destroyed\b/.test(E.norm(src.target))) continue;
@@ -162,11 +192,17 @@ function targetNeeds(s){
     if(r.needs.any.some(x => !x)) r = { how:'none', reasons:[{ rule:'unparsed', match:first }] };
   }
   // "(excluding **PINK HORRORS** units)": each bold run one keyword; a run whose words the lists keep as keywords of their own (a
-  // unit with Pink and Horrors) is a unit with all of them (unless)
-  if(r.how !== 'none' && (m = /\(excluding ([^)]*)\)/.exec(first))){
+  // unit with Pink and Horrors) is a unit with all of them (unless). Not where derive.js cancelled the exclusion across two alternatives
+  // by its one exact shape (or-target-cancel: S + K, or S excluding exactly K, is S); any other exclusion among alternatives derive.js
+  // leaves unparsed
+  if(r.how !== 'none' && !(r.reasons || []).some(x => x.rule === 'or-target-cancel') && (m = /\(excluding ([^)]*)\)/.exec(first))){
     const runs = [...m[1].matchAll(/\*\*([^*]+)\*\*/g)].flatMap(x => x[1].split(/\s*\/\s*/)), none = [], unless = [];
     for(const w of runs){ const ks = spanKw(w); if(ks.length > 1 && !/^Faction: /.test(ks[0])) unless.push(ks); else none.push(...ks); }
     if(runs.length){ r.needs.none = none; if(unless.length === 1) r.needs.unless = { all:unless[0] }; else if(unless.length) r = { how:'none', reasons:[{ rule:'unparsed', match:m[0] }] }; } }
+  // (alternatives derive.js read without cancelling an exclusion, or-target-cancel, while the first sentence has one: an exclusion
+  // derive.js did not see, further than it reads from the unit; laid over the union it would drop an alternative: not read)
+  if(r.how !== 'none' && (r.reasons || []).some(x => x.rule === 'or-target') && !(r.reasons || []).some(x => x.rule === 'or-target-cancel') && /\(excluding\b/i.test(first))
+    r = { how:'none', reasons:[{ rule:'unparsed', match:'alternatives with an exclusion derive.js does not read: ' + first.replace(/\*\*/g, '').slice(0, 90) }] };
   return r;
 }
 const allStrats = [];
@@ -244,11 +280,29 @@ stats.sourcesChecked = D.armies.reduce((t, a) => t + a.units.length, 0);
   if(!bit) fail('targets', 'bite', 'a stratagem tag broken on purpose (' + s.name + ') went unnoticed');
   stats.bite = bit ? 'a broken tag on ' + s.name + ' is caught' : 'NOT caught'; }
 function matches0(n, u){ return dm.app.matches(n, u); }
+// fixed cases: an exclusion among a TARGET's alternatives is cancelled only in its one exact shape (derive.js or-target-cancel); any
+// other stays unparsed, so the targets check above fails on it (the review of the catalogue merge, result-catalog-merge.json)
+{ const tail = ' from your army that have not been selected to fight this phase.';
+  const CASES = [
+    ['Archagonists', 'One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS**)', { all:['Faction: Legiones Daemonica', 'Slaanesh'] }],
+    ['a keyword only one alternative has', 'One **LEGIONES DAEMONICA MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS**)', null],
+    ['different keywords besides the excluded one', 'One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA KHORNE** units (excluding **MONSTERS**)', null],
+    ['an exclusion further from its unit', 'One **LEGIONES DAEMONICA MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units from your army that are wholly within 6" of each other and of your **WARLORD** (excluding **MONSTERS**)', null],
+    ['two keywords excluded', 'One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS** and **VEHICLES**)', null]
+  ];
+  let ok = 0;
+  for(const [name, target, want] of CASES){
+    const r = targetNeeds({ name, when:'Fight phase.', target:target + tail, effect:'' });
+    const got = r.how === 'none' ? null : JSON.stringify(Dv.canonNeeds(Dv.tidyNeeds(r.needs), null));
+    const exp = want && JSON.stringify(Dv.canonNeeds(Dv.tidyNeeds(Object.assign({ any:[], none:[] }, want)), null));
+    if(got !== exp) fail('targets', 'fixed case: ' + name, 'its TARGET gives ' + (got || 'unparsed') + ', not ' + (exp || 'unparsed') + ': “' + target + '”'); else ok++;
+  }
+  stats.targetCases = ok + ' of ' + CASES.length; }
 stats.strats = allStrats.length; stats.unparsed = unparsed; stats.needsDiffer = differ; stats.units = unitsChecked;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/evidence.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('evidence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.sources + ' sources, ' + stats.boxes + ' boxes and ' + stats.picks + ' picks made by script from GW’s words (G1-G8); the army, unit and other-units groups of ' + stats.sourcesChecked + ' units as the database gives them; ' +
-  stats.strats + ' stratagems read from their TARGET, shown for ' + stats.units + ' units exactly as their keywords meet it (' + stats.bite + ')');
+console.log('evidence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.sources + ' sources, ' + stats.boxes + ' boxes and ' + stats.picks + ' picks made by script from GW’s words (G1-G9; ' + stats.g9Bites + ' G9 bites); the army, unit and other-units groups of ' + stats.sourcesChecked + ' units as the database gives them; ' +
+  stats.strats + ' stratagems read from their TARGET, shown for ' + stats.units + ' units exactly as their keywords meet it (' + stats.bite + '); ' + stats.targetCases + ' fixed TARGET cases of alternatives with an exclusion');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);

@@ -67,7 +67,11 @@ const weaponRowOf = (P, kind, r, id, rowName) => {
   return null;
 };
 
-for(const a of D.armies) for(const u of [...a.units, ...(a.refs || [])]){
+// the DATASHEETS rows no list has (a faction catalogue's, verify/sources/catalog: aiStatus 'not-read'): each as a unit of its own, checked
+// the same way
+const CATALOG = Object.values(Object.entries(D.datasheets).filter(([id, s]) => s.aiStatus === 'not-read')
+  .reduce((m, [id, s]) => { (m[s.faction] = m[s.faction] || { id:'catalog:' + s.faction, faction:s.faction, units:[] }).units.push(Object.assign({ id }, s)); return m; }, {}));
+for(const a of D.armies.concat(CATALOG)) for(const u of [...a.units, ...(a.refs || [])]){
   const parts = O.partsOf(u, a.faction), ids = [].concat(D.armies.length && u.ds || []);
   const partOf = r => parts.length === 1 ? 0 : parts.findIndex(p => p.name === r.who);
   // the datasheet's own value of a field a rule of the list changed (from): the DATASHEETS row's
@@ -153,7 +157,7 @@ for(const x of unchecked){ const i = DEVS.findIndex(d => d.ds === x.ds && d.kind
 DEVS.forEach((d, i) => { if(!used.has(i)) fails.push({ stale:true, ds:d.ds, kind:d.kind, row:d.row, field:d.field, app:d.app, waha:d.waha, why:'verify/deviations-numbers.json #' + i + ': nothing matches it' });
   else if(!d.reason || !d.evidence) fails.push({ ds:d.ds, kind:d.kind, row:d.row, field:d.field, why:'verify/deviations-numbers.json #' + i + ': no reason or evidence' }); });
 writeJSON(path.join(ROOT, 'verify/out/numbers.json'), { counts, declared:used.size, pending:notes, unchecked, fails });
-console.log('numbers: ' + (fails.length ? fails.length + ' failure(s); ' : '') + counts.stats + ' stats, ' + counts.weapons + ' weapon numbers and ' + counts.keywords + ' keyword numbers checked against the Wahapedia datasheets (' + counts.granted + ' granted values compared as the datasheet has them); ' + used.size + ' declared deviations used' + (notes.length ? '; ' + notes.length + ' PENDING (declared, not decided): ' + notes.map(x => x.ds + ' ' + x.row + ' ' + x.field).join(', ') : ''));
+console.log('numbers: ' + (fails.length ? fails.length + ' failure(s); ' : '') + '(' + CATALOG.reduce((n, a) => n + a.units.length, 0) + ' catalogue rows with the lists\' units) ' + counts.stats + ' stats, ' + counts.weapons + ' weapon numbers and ' + counts.keywords + ' keyword numbers checked against the Wahapedia datasheets (' + counts.granted + ' granted values compared as the datasheet has them); ' + used.size + ' declared deviations used' + (notes.length ? '; ' + notes.length + ' PENDING (declared, not decided): ' + notes.map(x => x.ds + ' ' + x.row + ' ' + x.field).join(', ') : ''));
 for(const f of fails) console.log('  FAIL ' + (f.stale ? 'stale ' : '') + f.ds + ' · ' + f.kind + ' · ' + f.row + ' · ' + f.field + ': app ' + JSON.stringify(f.app) + ', Wahapedia ' + JSON.stringify(f.waha) + (f.why ? ' (' + f.why + ')' : f.file ? ' (' + f.file + ')' : ''));
 for(const x of notes) console.log('  PENDING ' + x.ds + ' · ' + x.row + ' · ' + x.field + ': ' + x.pending);
 process.exit(fails.length ? 1 : 0);

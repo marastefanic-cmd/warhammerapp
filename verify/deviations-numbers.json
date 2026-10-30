@@ -199,5 +199,69 @@
   "wahaName": "Berzerker Frenzy",
   "reason": "New Recruit's spelling (Berserker Frenzy); GW's page prints Berzerker Frenzy (ABILITIES, third). Ability names follow GW for their wording; this declares the spelling so verify/gw-order.js matches it on the page.",
   "evidence": "verify/.cache/waha/ds/world-eaters_Kh-rn-The-Betrayer.html (ABILITIES: \"Berzerker Frenzy\")."
+ },
+ {
+  "ds": "tyranids/genestealers",
+  "kind": "melee",
+  "row": "Genestealers claws and talons",
+  "wahaName": "Genestealer claws and talons",
+  "reason": "A catalogue row (verify/sources/catalog): BSData's name \"Genestealers claws and talons\", Wahapedia's \"Genestealer claws and talons\". Weapon names follow New Recruit (BSData); the numbers are checked against this row.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Genestealers.html (row \"Genestealer claws and talons\")."
+ },
+ {
+  "ds": "tyranids/mawloc",
+  "kind": "melee",
+  "row": "Distendible jaw",
+  "wahaName": "Distensible jaw",
+  "reason": "A catalogue row (verify/sources/catalog): BSData's name \"Distendible jaw\", Wahapedia's \"Distensible jaw\". Weapon names follow New Recruit (BSData); the numbers are checked against this row.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Mawloc.html (row \"Distensible jaw\")."
+ },
+ {
+  "ds": "adeptus-custodes/venatari-with-kinetic-destroyers",
+  "kind": "melee",
+  "row": "Tarsis buckler",
+  "wahaName": "Tarsus Buckler",
+  "reason": "A catalogue row (verify/sources/catalog): BSData's name \"Tarsis buckler\", Wahapedia's \"Tarsus Buckler\". Weapon names follow New Recruit (BSData); the numbers are checked against this row.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Venatari-with-Kinetic-Destroyers.html (row \"Tarsus Buckler\")."
+ },
+ {
+  "ds": "adeptus-custodes/caladius-grav-tank",
+  "kind": "ranged",
+  "row": "Twin Iliastus Accelerator Cannon",
+  "wahaName": "Iliastus Accelerator Cannon",
+  "reason": "A catalogue row (verify/sources/catalog): BSData's name \"Twin Iliastus Accelerator Cannon\", Wahapedia's \"Iliastus Accelerator Cannon\". Weapon names follow New Recruit (BSData); the numbers are checked against this row.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Caladius-Grav-Tank.html (row \"Iliastus Accelerator Cannon\")."
+ },
+ {
+  "ds": "chaos-daemons/exalted-flamer",
+  "kind": "ranged",
+  "row": "Fires of Tzeentch – blue fire",
+  "wahaName": "Fire of Tzeentch – blue fire",
+  "reason": "A catalogue row (verify/sources/catalog): BSData's name \"Fires of Tzeentch – blue fire\", Wahapedia's \"Fire of Tzeentch – blue fire\". Weapon names follow New Recruit (BSData); the numbers are checked against this row.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Exalted-Flamer.html (row \"Fire of Tzeentch – blue fire\")."
+ },
+ {
+  "ds": "chaos-daemons/exalted-flamer",
+  "kind": "ranged",
+  "row": "Fires of Tzeentch – pink fire",
+  "wahaName": "Fire of Tzeentch – pink fire",
+  "reason": "A catalogue row (verify/sources/catalog): BSData's name \"Fires of Tzeentch – pink fire\", Wahapedia's \"Fire of Tzeentch – pink fire\". Weapon names follow New Recruit (BSData); the numbers are checked against this row.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Exalted-Flamer.html (row \"Fire of Tzeentch – pink fire\")."
+ },
+ {
+  "ds": "chaos-daemons/burning-chariot",
+  "kind": "ranged",
+  "row": "Fires of Tzeentch – blue fire",
+  "wahaName": "Fire of Tzeentch – blue fire",
+  "reason": "A catalogue row (verify/sources/catalog): BSData's name \"Fires of Tzeentch – blue fire\", Wahapedia's \"Fire of Tzeentch – blue fire\". Weapon names follow New Recruit (BSData); the numbers are checked against this row.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Burning-Chariot.html (row \"Fire of Tzeentch – blue fire\")."
+ },
+ {
+  "ds": "chaos-daemons/burning-chariot",
+  "kind": "ranged",
+  "row": "Fires of Tzeentch – pink fire",
+  "wahaName": "Fire of Tzeentch – pink fire",
+  "reason": "A catalogue row (verify/sources/catalog): BSData's name \"Fires of Tzeentch – pink fire\", Wahapedia's \"Fire of Tzeentch – pink fire\". Weapon names follow New Recruit (BSData); the numbers are checked against this row.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Burning-Chariot.html (row \"Fire of Tzeentch – pink fire\")."
  }
 ]

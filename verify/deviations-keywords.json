@@ -61,5 +61,26 @@
   "from": "page",
   "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared HORRORS (the coordinator's decision).",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS \"INFANTRY; BATTLELINE; CHAOS; DAEMON; TZEENTCH; HORRORS\", \"BLUE HORRORS: BLUE\"."
+ },
+ {
+  "datasheet": "adeptus-custodes/Shield-Captain in Allarus Terminator Armour",
+  "nameKeyword": "Shield-Captain",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared SHIELD-CAPTAIN (as for the 6 decided by the coordinator). A faction catalogue row.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain-in-Allarus-Terminator-Armour.html: KEYWORDS \"INFANTRY; CHARACTER; IMPERIUM; SHIELD-CAPTAIN; TERMINATOR\"."
+ },
+ {
+  "datasheet": "adeptus-custodes/Shield-Captain on Dawneagle Jetbike",
+  "nameKeyword": "Shield-Captain",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared SHIELD-CAPTAIN (as for the 6 decided by the coordinator). A faction catalogue row.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain-on-Dawneagle-Jetbike.html: KEYWORDS \"MOUNTED; CHARACTER; FLY; IMPERIUM; SHIELD-CAPTAIN\"."
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/venatari-with-verutum-lances",
+  "kw": "name",
+  "reason": "No name keyword can be taken: GW's page prints none (Wahapedia's new-codex pages leave name keywords out), and BSData gives this datasheet the category \"Venatari with Kinetic Destroyers\", the other Venatari datasheet's name (a BSData error), not its own. A faction catalogue row; for the owner or reviewer.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Venatari-with-Verutum-Lances.html: KEYWORDS \"INFANTRY; EXPLOSIVES; FLY; IMPERIUM; JUMP PACK\"; verify/sources/catalog/adeptus-custodes.json (adeptus-custodes/venatari-with-verutum-lances, kw: \"Venatari with Kinetic Destroyers\")."
  }
 ]
