@@ -374,5 +374,18 @@
    "text": "WHEN: Fight phase.\nTARGET: One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS**) from your army that have not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in one of those units makes an attack, add 1 to the **Wound roll**."
   },
   "key": "9df12e4a5b6c5c03"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^reverberating summons$/i",
+  "judgement": {
+   "opens": "Reverberating Summons"
+  },
+  "source": {
+   "rule": "Reverberating Summons",
+   "text": "Each time a model is destroyed by this weapon, you can select one friendly **PLAGUEBEARERS** unit within 12\" of the bearer and return 1 destroyed Plaguebearer model to that unit."
+  },
+  "key": "cf9189e0cf878a39"
  }
 ]
