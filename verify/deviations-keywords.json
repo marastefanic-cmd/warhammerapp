@@ -1,0 +1,9 @@
+[
+ {
+  "army": "tzeeeeentch",
+  "unit": "brimstone-horrors",
+  "kw": "page",
+  "reason": "A reference sheet (the Brimstone Horrors the Pink Horrors split into): no Wahapedia datasheet page of its own; its keywords are the Pink Horrors page's, with its BRIMSTONE model keyword. Kept as BSData / New Recruit have them.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS \"INFANTRY; BATTLELINE; CHAOS; DAEMON; TZEENTCH; HORRORS\", \"BRIMSTONE HORRORS: BRIMSTONE\"; FACTION KEYWORDS \"LEGIONES DAEMONICA\"."
+ }
+]

@@ -74,6 +74,8 @@ function gwOrder(R){
 }
 // the lists, the order of their rows, keywords and Rules line aside (what --write may change: GW's order, gwOrder)
 const ORDERED = ['ranged', 'melee', 'abilities', 'kw', 'rules'];
+// (--write: the keywords' content too, which GW's datasheets give: verify/keywords.js checks it)
+const noKw = A => A.map(a => Object.assign({}, a, { units:a.units.map(u => Object.assign({}, u, { kw:null })) }));
 const unordered = A => { const un = x => Array.isArray(x) ? x.map(un) : x && typeof x === 'object' ? Object.fromEntries(Object.entries(x).map(([k, y]) => [k, ORDERED.includes(k) && Array.isArray(y) ? un(y).map(z => stable(z)).sort() : un(y)])) : x;
   return un(JSON.parse(JSON.stringify(A))); };
 
@@ -418,7 +420,11 @@ function build(R){
   };
   for(const U of units) U.why = unitWhy(U);
   // keywords in GW's order: the KEYWORDS line, then FACTION KEYWORDS, the list's own (Warlord, a rule's: why.kw) last
-  for(const U of units) GWO().orderKw(U.u, GWO().partsOf(U.u, U.a.faction), Object.keys((U.why || {}).kw || {}));
+  // (and their content: GW's KEYWORDS and FACTION KEYWORDS, and of the unit's own only what GW prints or the list takes, verify/gw-order.js
+  // gwKeywords; verify/keywords.js checks it)
+  for(const U of units){ const parts = GWO().partsOf(U.u, U.a.faction), own = Object.keys((U.why || {}).kw || {});
+    const kw = GWO().gwKeywords(U.u, parts, own); if(kw) U.u.kw = kw;
+    GWO().orderKw(U.u, parts, own); }
   // the readings, each to the row it reads (readingTables); the list's own keep their reason
   const RT = readingTables(R, units, conflicts);
   for(const U of units){
@@ -1220,7 +1226,7 @@ if(require.main === module){
     const re = [...t.B.RT.groups.values()].filter(g => g.rederived), skip = new Map();
     for(const g of re) for(const U of g.obs.keys()) skip.set(U.a.id + '/' + U.u.id, (skip.get(U.a.id + '/' + U.u.id) || new Set()).add(g.kind + '\0' + g.from));
     const drop = A => A.map(a => Object.assign({}, a, { units:a.units.map(u => { const sk = skip.get(a.id + '/' + u.id); if(!sk) return u; const v = Object.assign({}, u); for(const k of READ) if(v[k]) v[k] = v[k].filter(m => !sk.has(k + '\0' + m.from)); return v; }) }));
-    if(!sameLists(unordered(drop(before.armies)), unordered(drop(after.armies)))){ console.log('tables: NOT written: the lists would resolve otherwise than they are (a bug in verify/tables.js)'); process.exit(1); }
+    if(!sameLists(unordered(noKw(drop(before.armies))), unordered(noKw(drop(after.armies))))){ console.log('tables: NOT written: the lists would resolve otherwise than they are (a bug in verify/tables.js)'); process.exit(1); }
     if(re.length) console.log('tables: written again from their changed words (derived readings, verify/derive.js): ' + re.map(g => (g.sid || g.path.join(' · ')) + ' · ' + g.from + (g.list.length ? '' : ' (no longer derivable: none now)')).join('; '));
     fs.writeFileSync(DATA, t.text);
     fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));

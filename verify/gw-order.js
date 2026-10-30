@@ -63,7 +63,7 @@ function parse(html, chapter) {
   }
   const ds = WW.wahaDatasheet(html, null) || {};
   const kws = (ds.keywords || []).concat(...Object.values(ds.modelKeywords || {}));
-  return { weapons, labels, abilities, boxes, html:h, keywords:kws, factionKeywords:ds.factionKeywords || [], profiles:ds.profiles || [] };
+  return { weapons, labels, abilities, boxes, html:h, keywords:kws, unitKeywords:ds.keywords || [], modelKeywords:ds.modelKeywords || {}, detachmentKeywords:ds.detachmentKeywords || {}, factionKeywords:ds.factionKeywords || [], profiles:ds.profiles || [] };
 }
 
 module.exports = function make(ROOT) {
@@ -209,6 +209,25 @@ module.exports = function make(ROOT) {
     });
   }
 
+  // a unit's keywords as GW prints them (verify/keywords.js checks them; verify/tables.js --write writes them): every part's KEYWORDS and
+  // FACTION KEYWORDS; and, of the unit's own, those GW prints or the list takes: its datasheet's name (GW prints it; Wahapedia's new-codex
+  // pages leave it out), a keyword a named rule of the list gives (own: why.kw; a kwNote's "comes from <rule>"), a model's keyword
+  // (kwOnly; a page's "MODEL: KW") or a detachment's (Wahapedia's detachment-only keyword) the list has, an Allies marker. Spelled as the
+  // unit has it, else as GW prints it in title case. null: a part with no page (as it is)
+  const TC = k => k.toLowerCase().replace(/(^|[\s-])([a-z\u00e0-\u00ff])/g, (m, a, b) => a + b.toUpperCase());
+  function gwKeywords(u, parts, own) {
+    if (!Array.isArray(u.kw) || parts.some(p => !p.page)) return null;
+    const want = [], keep = new Set(), add = (k, tc) => { if (!want.some(x => n(x) === n(k))) want.push(tc ? TC(k) : k); };
+    for (const p of parts) for (const k of p.page.unitKeywords) add(k, true);
+    for (const p of parts) for (const k of p.page.factionKeywords) add('Faction: ' + TC(k));
+    const listed = new Set([].concat(parts.map(p => p.name), own || [], Object.keys(u.kwOnly || {}),
+      parts.flatMap(p => Object.values(p.page.modelKeywords).flat().map(k => k.replace(/\s*:\s*$/, ''))), parts.flatMap(p => Object.keys(p.page.detachmentKeywords)),
+      String(u.kwNote || '').split(/;\s*/).flatMap(seg => { const m = /^(.*?) comes? from (.*)$/.exec(seg); return m && !/^the (led|supported|combined)/.test(m[2]) ? m[1].split(/,\s*/) : []; })).map(n));
+    for (const k of u.kw) if (listed.has(n(k)) || /^Allies: /.test(k)) keep.add(n(k));
+    const out = u.kw.filter(k => keep.has(n(k)) || want.some(x => n(x) === n(k)));
+    for (const k of want) if (!out.some(x => n(x) === n(k))) out.push(k);
+    return out;
+  }
   // every resolved unit of the lists (the old form): its rows, a weapon's keywords, the Rules line (keywords: orderKw, with the list's own)
   function units(armies) {
     for (const a of armies) for (const u of a.units) {
@@ -223,5 +242,5 @@ module.exports = function make(ROOT) {
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { units, sheet, orderKw, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
+  return { units, sheet, orderKw, gwKeywords, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
 };

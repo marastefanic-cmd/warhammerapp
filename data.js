@@ -2325,7 +2325,7 @@ const ARMIES = [
         { name:'Icon of Flame', who:'Rubric Marines' }
       ],
       rules:['Leader','Cabal of Sorcerers','Blast','Devastating Wounds','Psychic','Pistol','Anti','Torrent','Ignores Cover'],
-      kw:['Infantry','Character','Grenades','Psyker','Chaos','Tzeentch','Exalted Sorcerer','Battleline','Rubricae','Rubric Marines','Rubric','Faction: Thousand Sons'],
+      kw:['Infantry','Character','Grenades','Psyker','Chaos','Tzeentch','Exalted Sorcerer','Battleline','Rubricae','Rubric Marines','Faction: Thousand Sons'],
       kwNote:'Battleline, Rubric, Rubric Marines, Rubricae come from the led Rubric Marines.',
       partialRules:{ 'Cabal of Sorcerers':'Exalted Sorcerer and Aspiring Sorcerer' },
       // Wahapedia's Rubric Marines: "ASPIRING SORCERER ONLY: PSYKER" and "Cabal of Sorcerers (Aspiring Sorcerer only)"; BSData has
@@ -5889,7 +5889,7 @@ const DATASHEETS = {
     { kind:'melee', needs:{ any:['Faction: Blood Legions'] }, when:'Within 6" of Skarbrand', selfWhen:'Own aura', note:'+1 A', from:'Rage Embodied', selfAlways:true, readOf:'95905179' }
   ],
   rules:['Deadly Demise D6','Deep Strike','Ignores Cover','Torrent'],
-  kw:['Monster','Character','Epic Hero','Chaos','Khorne','Daemon','Skarbrand','Faction: Blood Legions']
+  kw:['Monster','Character','Epic Hero','Chaos','Khorne','Daemon','Summoned','Skarbrand','Faction: Blood Legions']
 },
 'world-eaters/bloodthirster':{
   name:'Bloodthirster', faction:'world-eaters', bsId:'4ad2-bd20-6dfe-776b', role:'Character',
@@ -6395,11 +6395,10 @@ const DATASHEETS = {
     { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining', readOf:'59b4c593', readBy:'derive' }
   ],
   rules:['Deadly Demise D6','Synapse','Torrent'],
-  kw:['Monster','Great Devourer','Tyrannofex','Faction: Tyranids'],
-  // the keywords as BSData and New Recruit have them; Wahapedia's Tyrannofex page lists FRAME too, from its errata line
-  // "Hierophant, Toxicrene, Tyrannocyte and Tyrannofex. Add the FRAME keyword.", which GW's Tyranids Faction Pack (14-10, the
-  // newest on GW's downloads on 22 Oct 2026) does not print
-  srcNote:{ at:'kw', note:'Wahapedia also lists FRAME (from its errata); GW’s Faction Pack (14-10) and BSData don’t' }
+  // FRAME: GW's datasheet as Wahapedia prints it (its errata line "Hierophant, Toxicrene, Tyrannocyte and Tyrannofex. Add the FRAME
+  // keyword."), as the Toxicrene and Tyrannocyte rows have it; the owner's decision (30 Oct 2026). New Recruit and BSData leave it out
+  // (declared in verify/deviations-nr.json and verify/deviations-bsdata.json)
+  kw:['Monster','Great Devourer','Frame','Tyrannofex','Faction: Tyranids']
 },
 'tyranids/tyrant-guard':{
   name:'Tyrant Guard', faction:'tyranids', bsId:'1645-5407-92c8-1441',
@@ -6987,7 +6986,7 @@ const DATASHEETS = {
     { from:'Emanatus Forcefield', needs:{ all:['Faction: Adeptus Mechanicus','Battleline'] }, kind:'ranged', when:'Wholly within 6" of the Onager Dunecrawler', note:'4+ InSv against ranged attacks', calc:{ insv:4 }, readOf:'e4ba4568' }
   ],
   rules:['Deadly Demise D3','Doctrina Imperatives','Rapid Fire','Sustained Hits','Ignores Cover','Twin-linked'],
-  kw:['Vehicle','Walker','Imperium','Skitarii','Onager Dunecrawler','Faction: Adeptus Mechanicus']
+  kw:['Vehicle','Walker','Imperium','Skitarii','Smoke','Onager Dunecrawler','Faction: Adeptus Mechanicus']
 },
 'adeptus-mechanicus/skorpius-disintegrator':{
   name:'Skorpius Disintegrator', faction:'adeptus-mechanicus', bsId:'3fcc-b6a1-399b-1a29', role:'Vehicle',
@@ -7841,7 +7840,7 @@ const DATASHEETS = {
     { kind:'ranged', when:'Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll)', note:'[IGNORES COVER]', from:'Soul Sight', readOf:'a4058129' }
   ],
   rules:['Deep Strike','Infiltrators','Leader','Scouts 6"','Stealth','Combat Doctrines','Librarius','Close-quarters','Psychic','Hazardous','Devastating Wounds'],
-  kw:['Infantry','Character','Explosives','Imperium','Phobos','Psyker','Librarian','Faction: Adeptus Astartes']
+  kw:['Infantry','Character','Explosives','Imperium','Phobos','Psyker','Faction: Adeptus Astartes']
 },
 'ultramarines/heavy-intercessor-squad':{
   name:'Heavy Intercessor Squad', faction:'ultramarines', bsId:'7324-e591-939b-b675', role:'Battleline',

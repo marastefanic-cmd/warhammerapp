@@ -50,6 +50,13 @@ own: an enhancement's), the Rules line (CORE ABILITIES, then ARMY RULES), keywor
 list's own: Warlord, a keyword a rule gives, `why.kw`). An attached unit keeps its parts in their order, each by its own page; an item
 the page does not name stays after the item before it; a datasheet with no page keeps its order. No hand ordering.
 
+**GW's keywords.** A unit's keywords are its datasheets' (`gwKeywords`, written by `--write`, checked by the gate step `keywords`,
+`verify/keywords.js`): every part's KEYWORDS and FACTION KEYWORDS, in GW's spelling where the unit has none; of the unit's own only its
+datasheet's name keyword (GW prints it; Wahapedia's new-codex pages leave it out), a keyword a named rule of the list gives (`why.kw`, a
+`kwNote`'s "comes from <rule>"), a model's or a detachment's keyword the list takes (`kwOnly`), an Allies marker. A difference from
+BSData or New Recruit is declared in `verify/deviations-bsdata.json` / `verify/deviations-nr.json`; one from GW in
+`verify/deviations-keywords.json`.
+
 ## Readings
 
 A reading is the app's interpretation of a rule's text into numbers and lines: a footnote under a unit's weapons (`mods`:

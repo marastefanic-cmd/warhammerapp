@@ -2335,5 +2335,115 @@
   "where": "verify/sources/nr/dread-host.txt p8",
   "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "nidzillas",
+  "unit": "tyrannofex",
+  "field": "kw",
+  "app": [
+   "Faction: Tyranids",
+   "Frame",
+   "Great Devourer",
+   "Monster",
+   "Tyrannofex"
+  ],
+  "source": [
+   "Faction: Tyranids",
+   "Great Devourer",
+   "Monster",
+   "Tyrannofex"
+  ],
+  "where": "verify/sources/nr/nidzillas.txt p9",
+  "reason": "The owner's decision (30 Oct 2026): the Tyrannofex has FRAME, as GW's datasheet is printed on Wahapedia (its errata line \"Hierophant, Toxicrene, Tyrannocyte and Tyrannofex. Add the FRAME keyword.\"), as the app's Toxicrene and Tyrannocyte rows have it. New Recruit (BSData) has no FRAME category for the unit; GW's Tyranids Faction Pack (14-10) does not print the errata. The app adds FRAME.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS \"MONSTER; GREAT DEVOURER; FRAME; TYRANNOFEX\"; verify/review/result-catalog-tyranids.json (the owner's decision); verify/sources/nr/nidzillas.txt p9 (Tyrannofex, Categories)."
+ },
+ {
+  "army": "pubstomper",
+  "unit": "exalted-sorcerer-rubric-marines",
+  "field": "kw",
+  "app": [
+   "Battleline",
+   "Chaos",
+   "Character",
+   "Exalted Sorcerer",
+   "Faction: Thousand Sons",
+   "Grenades",
+   "Infantry",
+   "Psyker",
+   "Rubric Marines",
+   "Rubricae",
+   "Tzeentch"
+  ],
+  "source": [
+   "Battleline",
+   "Chaos",
+   "Character",
+   "Exalted Sorcerer",
+   "Faction: Thousand Sons",
+   "Grenades",
+   "Infantry",
+   "Psyker",
+   "Rubric",
+   "Rubric Marines",
+   "Rubricae",
+   "Tzeentch"
+  ],
+  "where": "verify/sources/nr/pubstomper.txt p2",
+  "reason": "GW’s datasheets do not print RUBRIC; New Recruit (BSData) prints it for the Rubric Marine w/ soulreaper cannon. The app has GW’s keywords (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Rubric-Marines.html, KEYWORDS."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "onager-dunecrawler",
+  "field": "kw",
+  "app": [
+   "Faction: Adeptus Mechanicus",
+   "Imperium",
+   "Onager Dunecrawler",
+   "Skitarii",
+   "Smoke",
+   "Vehicle",
+   "Walker"
+  ],
+  "source": [
+   "Faction: Adeptus Mechanicus",
+   "Imperium",
+   "Onager Dunecrawler",
+   "Skitarii",
+   "Vehicle",
+   "Walker"
+  ],
+  "where": "verify/sources/nr/purge-goes-the-foe.txt p9",
+  "reason": "GW’s datasheet prints SMOKE; New Recruit (BSData) does not. The app has GW’s keywords (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-mechanicus_Onager-Dunecrawler.html, KEYWORDS."
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "skarbrand",
+  "field": "kw",
+  "app": [
+   "Chaos",
+   "Character",
+   "Daemon",
+   "Epic Hero",
+   "Faction: Blood Legions",
+   "Khorne",
+   "Monster",
+   "Skarbrand",
+   "Summoned"
+  ],
+  "source": [
+   "Chaos",
+   "Character",
+   "Daemon",
+   "Epic Hero",
+   "Faction: Blood Legions",
+   "Khorne",
+   "Monster",
+   "Skarbrand"
+  ],
+  "where": "verify/sources/nr/big-demons-baby.txt p4",
+  "reason": "GW’s datasheet prints SUMMONED; New Recruit (BSData) does not. The app has GW’s keywords (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Skarbrand.html, KEYWORDS."
  }
 ]

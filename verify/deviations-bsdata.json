@@ -2902,5 +2902,63 @@
   "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: KEYWORDS, FACTION KEYWORDS.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "nidzillas",
+  "unit": "tyrannofex",
+  "field": "kw",
+  "app": "Frame",
+  "source": "",
+  "where": "not a category of Tyrannofex",
+  "reason": "The owner's decision (30 Oct 2026): the Tyrannofex has FRAME, as GW's datasheet is printed on Wahapedia (its errata line \"Hierophant, Toxicrene, Tyrannocyte and Tyrannofex. Add the FRAME keyword.\"), as the app's Toxicrene and Tyrannocyte rows have it. New Recruit (BSData) has no FRAME category for the unit; GW's Tyranids Faction Pack (14-10) does not print the errata. The app adds FRAME.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS \"MONSTER; GREAT DEVOURER; FRAME; TYRANNOFEX\"; verify/review/result-catalog-tyranids.json (the owner's decision); verify/sources/nr/nidzillas.txt (Tyrannofex, Categories)."
+ },
+ {
+  "army": "healybois",
+  "unit": "tyrannofex",
+  "field": "kw",
+  "app": "Frame",
+  "source": "",
+  "where": "not a category of Tyrannofex",
+  "reason": "The owner's decision (30 Oct 2026): the Tyrannofex has FRAME, as GW's datasheet is printed on Wahapedia (its errata line \"Hierophant, Toxicrene, Tyrannocyte and Tyrannofex. Add the FRAME keyword.\"), as the app's Toxicrene and Tyrannocyte rows have it. New Recruit (BSData) has no FRAME category for the unit; GW's Tyranids Faction Pack (14-10) does not print the errata. The app adds FRAME.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS \"MONSTER; GREAT DEVOURER; FRAME; TYRANNOFEX\"; verify/review/result-catalog-tyranids.json (the owner's decision); verify/sources/nr-json/healybois.json (Tyrannofex, categories)."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "onager-dunecrawler",
+  "field": "kw",
+  "app": "Smoke",
+  "source": "",
+  "where": "not a category of Onager Dunecrawler",
+  "reason": "GW’s datasheet has the keyword SMOKE (\"KEYWORDS: VEHICLE; WALKER; IMPERIUM; SKITARII; SMOKE; ONAGER DUNECRAWLER\"); BSData at the pin has no Smoke category for the unit. GW wins: the unit’s keywords are its datasheet’s (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js). It can now be the target of the Smokescreen stratagem, as GW’s datasheet allows.",
+  "evidence": "verify/.cache/waha/ds/adeptus-mechanicus_Onager-Dunecrawler.html: KEYWORDS."
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "skarbrand",
+  "field": "kw",
+  "app": "Summoned",
+  "source": "",
+  "where": "not a category of Skarbrand",
+  "reason": "GW’s datasheet has the keyword SUMMONED; BSData at the pin has no Summoned category for the unit. GW wins (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Skarbrand.html: KEYWORDS."
+ },
+ {
+  "army": "pubstomper",
+  "unit": "exalted-sorcerer-rubric-marines",
+  "field": "kw",
+  "app": "",
+  "source": "Rubric",
+  "reason": "BSData at the pin gives the Rubric Marine w/ soulreaper cannon the category Rubric; GW’s datasheets (Exalted Sorcerer, Rubric Marines) do not print RUBRIC (\"KEYWORDS: INFANTRY; BATTLELINE; CHAOS; TZEENTCH; RUBRICAE; RUBRIC MARINES\"). GW wins (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Rubric-Marines.html and thousand-sons_Exalted-Sorcerer.html: KEYWORDS."
+ },
+ {
+  "army": "nerf-when",
+  "unit": "librarian-in-phobos-armour",
+  "field": "kw",
+  "app": "",
+  "source": "Librarian",
+  "reason": "BSData at the pin gives the unit the category Librarian; GW’s datasheet does not print LIBRARIAN (\"KEYWORDS: INFANTRY; CHARACTER; EXPLOSIVES; IMPERIUM; PHOBOS; PSYKER\", the Ultramarines view). GW wins (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: KEYWORDS."
  }
 ]
