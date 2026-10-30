@@ -215,6 +215,12 @@
   "at": "2026-10-25",
   "why": "Wahapedia/BSData Selfless Protector is quoted exactly. It is not tagged (Aura), so it is correctly a guard, not an aura. needs Faction: Imperial Knights matches “an IMPERIAL KNIGHTS model from your army”, and the kind is ranged (“a ranged attack is allocated”). calc {cover, insv:4} is “the Benefit of Cover and a 4+ invulnerable save”. The snapshot shows it on the Atrapos, Crusader, Destrier and Errant, and not on the Defender itself or the Navigator (no IMPERIAL KNIGHTS keyword)."
  },
+ "0290976b96b3be97": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): the rule gives keywords to BE’LAKOR, HERETIC ASTARTES and LEGIONES DAEMONICA units: any of the three. The needs follow it."
+ },
  "0295d01282f0fdf6": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -521,6 +527,12 @@
   "at": "2026-10-26",
   "why": "GW’s TRANSPORT box (Wahapedia: “TRANSPORT This model has a transport capacity of 12 EMPEROR’S CHILDREN INFANTRY models (excluding TERMINATOR and FLAWLESS BLADE models).”) shown as the ability Transport tagged Capacity, the same as the signed-off World Eaters Chaos Rhino (princes, standard)."
  },
+ "06838b4545ce2ed2": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET up to two / one other LEGIONES DAEMONICA unit(s): the same keyword both ways. The needs follow it."
+ },
  "0691de7b46f3b733": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -640,6 +652,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "TARGET: \"One TYRANIDS MONSTER unit from your army\"."
+ },
+ "07f18fd576b93a7b": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET That LEGIONES DAEMONICA CHARACTER KHORNE unit (excluding MONSTER units, from the WHEN). The needs follow it."
  },
  "07fc2ca32894493a": {
   "verdict": "ok",
@@ -791,6 +809,12 @@
   "at": "2026-10-23",
   "why": "The Disc's own ability (“after this model has shot … made with Arcane Fire”); Arcane Fire is his."
  },
+ "09e911c7350e87b1": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA NURGLE INFANTRY unit. The needs follow it."
+ },
  "09ee89c8fc904e4a": {
   "verdict": "ok",
   "by": "review:fellhammer-units",
@@ -904,6 +928,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "True; the \"(Once per battle, per army)\" limit is shown from the text (rendered chip \"Once per battle, per army\")."
+ },
+ "0b400c5950335965": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA unit. The needs follow it."
  },
  "0b465384adf7d3c1": {
   "verdict": "ok",
@@ -2315,6 +2345,12 @@
   "at": "2026-10-28",
   "why": "An enhancement (Assimilation Swarm, \"Instinctive Defence 15 pts\", verify/.cache/waha/tyranids.txt l.257); GW prints no other tag."
  },
+ "2086b02aa9a4a145": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA SLAANESH unit. The needs follow it."
+ },
  "209541d50efb7eec": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -3059,6 +3095,12 @@
   "at": "2026-10-16",
   "why": "Fight phase, either turn."
  },
+ "2a736b41e520121a": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): within 9\" of LEGIONES DAEMONICA NURGLE units from your army. The needs follow it."
+ },
  "2ad2e2bd94f302b1": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -3244,6 +3286,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "WHEN: \"Your opponent's Shooting phase\"."
+ },
+ "2e05116a35c1e375": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA unit arriving by Deep Strike. The needs follow it."
  },
  "2e502aa8c47b8505": {
   "verdict": "ok",
@@ -4025,6 +4073,12 @@
   "at": "2026-10-23",
   "why": "TARGET “That ADEPTUS CUSTODES DREADNOUGHT unit”: Faction: Adeptus Custodes and Dreadnought."
  },
+ "39ff1c18f824288d": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA NURGLE unit. The needs follow it."
+ },
  "39fff212d6fde57a": {
   "verdict": "ok",
   "by": "review:gists (its fix)",
@@ -4295,6 +4349,12 @@
   "at": "2026-10-26",
   "why": "The A 11 is right: Wahapedia's Slaughterbound has Lacerator and daemonic claw A 6. Relentless Rage (Berzerker Warband) gives +1 (A 7 in every list), Berzerker Glaive another +1 (A 8 here, marked), and Possessed Lord adds +3, so 11. [DEVASTATING WOUNDS] until the end of the phase, once per battle, at the start of the Fight phase: all correct. Making it the list's own reading is right. But listWhy says 'the datasheet’s A 7 makes 10'. The datasheet's A is 6 (DATASHEETS leaves A out because it varies by list), and 7 already includes the detachment's +1. The fix below corrects only the listWhy wording. Two related notes. (1) The datasheet reading set:{A:'10'} has Relentless Rage baked in, so a future Slaughterbound list in another detachment would get a wrong A 10. set:{A:'+3'} (as Battle Protocols writes set:{A:'+2'}) would be right for every list and would make this listWhy unnecessary. That is the owner's call, since it changes the display. (2) readOf fingerprints only Possessed Lord's text. Changing Berzerker Glaive's or Relentless Rage's text does not make A 11 or A 10 stale (tested on a scratch copy)."
  },
+ "3d3ff11f5b839793": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET up to one SHADOW LEGION HERETIC ASTARTES and up to one SHADOW LEGION LEGIONES DAEMONICA unit. The needs follow it."
+ },
  "3d46933deeb3f72a": {
   "verdict": "ok",
   "by": "review:catalog-tyranids",
@@ -4354,6 +4414,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "TARGET: “One ADEPTUS MECHANICUS VEHICLE unit from your army”: Faction: Adeptus Mechanicus + Vehicle picks the Datasmith + Kastelan Robots (VEHICLE per the pack's Datasmith update), both Ironstrider units, the Onager and the Skorpius, and not Cawl, Thulia (MONSTER), the Enginseer or the Rangers."
+ },
+ "3dfd5ce3935e87e3": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA SLAANESH unit. The needs follow it."
  },
  "3dfeecad4911b60b": {
   "verdict": "ok",
@@ -5339,6 +5405,12 @@
   "at": "2026-10-16",
   "why": "\"the Command phase\", which can be either player's."
  },
+ "4cdee7512da284af": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One friendly SHADOW LEGION unit. The needs follow it."
+ },
  "4d4bd04ff488a071": {
   "verdict": "ok",
   "by": "review:big-demons-baby-2",
@@ -5872,6 +5944,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "“This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls”: kind melee, no weapon (every melee weapon of the attached unit, Trajann’s included, 19.04), the target condition kept as the when and left as a tick (no always), as the Damage tab’s target is set by hand."
+ },
+ "55785953e5779853": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA unit from your army. The needs follow it."
  },
  "557f02809436890e": {
   "verdict": "ok",
@@ -6940,6 +7018,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "\"This model has the Feel No Pain 4+ ability against Mortal Wounds.\" (Wahapedia names it Unnatural Resilience, same words.) Unconditional on a one-model unit, so defAlways is right."
+ },
+ "658e6167a374644c": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET That LEGIONES DAEMONICA SLAANESH unit, WHEN excluding MONSTER/VEHICLE units. The needs follow it."
  },
  "659aa96563de5113": {
   "verdict": "ok",
@@ -8219,6 +8303,12 @@
   "at": "2026-10-24",
   "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES TERMINATOR unit.” (2CP, as Wahapedia) Shooting + Fight."
  },
+ "7a804f3ed17990c0": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): LEGIONES DAEMONICA SLAANESH units from your army have the ability. The needs follow it."
+ },
  "7a94c964a5582ba2": {
   "verdict": "ok",
   "by": "review:r14-cond",
@@ -8453,6 +8543,12 @@
   "at": "2026-10-22",
   "why": "WHEN “Your Charge phase, just after a TYRANIDS MONSTER model from your army ends a Charge move” = “Your model has ended a Charge move”; EFFECT “Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound” = the rest."
  },
+ "7e67bf2991f4365e": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA NURGLE unit. The needs follow it."
+ },
  "7e7edefe8b57bac7": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -8639,6 +8735,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Any phase.\""
  },
+ "81204bfa28cce0b6": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA NURGLE unit. The needs follow it."
+ },
  "8126f962efbc81ee": {
   "verdict": "ok",
   "by": "review:howto-3",
@@ -8668,6 +8770,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Crimson King ability of Magnus, one picked per battle round."
+ },
+ "8194307e8327ac31": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One friendly LEGIONES DAEMONICA CHARACTER NURGLE unit (excluding MONSTER units). The needs follow it."
  },
  "81bbf60286288ff2": {
   "verdict": "ok",
@@ -10061,6 +10169,12 @@
   "at": "2026-10-23",
   "why": "EFFECT “Select one objective your unit is controlling. That objective is secured.” Literal; the timing is the phase tag, the exclusion in needs."
  },
+ "967a4b418b6b64cf": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA unit. The needs follow it."
+ },
  "96a85e2a464bc2b6": {
   "verdict": "ok",
   "by": "review:healybois",
@@ -10427,6 +10541,12 @@
   "at": "2026-10-24",
   "why": "Checked against Code Chivalric's table (data.js, the same on Wahapedia imperial-knights). Deed 1–2, 'completed at the end of a turn', gives End of your turn and End of your opponent’s turn. Deed 3–4, 'at the end of your opponent’s turn', gives End of your opponent’s turn. Deed 5–6, 'at the end of the battle round', gives End of the battle round. The alternation backtracks correctly from 'your' to 'your opponent’s'. 'until the end of …' is stripped, and phase ends do not match. Code Chivalric's options are the only ones in data.js with ends (scanned). The rule shows once in each of the three sections, To do now, in 6-bigs and 4-megas-and-a-destrier, and its Qualities are not listed (the owner: one line)."
  },
+ "9ae3eedb90d6bc4c": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA NURGLE unit. The needs follow it."
+ },
  "9afba01052e3c1e4": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -10678,6 +10798,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "Part 1: “subtract 1 from the Wound roll” for attacks targeting the unit, with the D3 mortal wounds and “until the end of the phase”. Part 2: “each time a model in that unit makes an attack, add 1 to the Wound roll”: no who, so every model including the non-MUTANT leaders. Keywords part: needs TZAANGORS (only the two Tzaangors units; the Enlightened are not TZAANGORS), +1 OC only for “TZAANGOR models” while not Battle-shocked, and New Recruit's OC 1 does not include it. The Rules Update's “Change to” quotes only the two sacrifice paragraphs; Wahapedia (errata applied) and BSData keep the BATTLELINE/OC paragraph, and New Recruit gives the Tzaangors BATTLELINE, so keeping it is right."
+ },
+ "9df12e4a5b6c5c03": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons-2",
+  "at": "2026-10-30",
+  "why": "TARGET “One LEGIONES DAEMONICA SLAANESH MONSTER unit or up to two LEGIONES DAEMONICA SLAANESH units (excluding MONSTERS)”. Needs keeps only what both alternatives share, as round 1 asked (f94dec1b7ca504e9). It is derived by the or-target rule."
  },
  "9df4349f85161f85": {
   "verdict": "ok",
@@ -11945,6 +12071,12 @@
   "at": "2026-10-17",
   "why": "WHEN lists Advance, Charge, Damage, Hazard, Hit, Save and Wound rolls, plus \"A roll to determine the number of attacks generated with a weapon\". EFFECT: \"You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls...)\". The gist leaves out the number-of-attacks roll and the one-die rule, but it ends with \"…\". Everything it does state is correct, with nothing added."
  },
+ "b0cc438194a341f1": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): LEGIONES DAEMONICA SLAANESH units from your army. The needs follow it."
+ },
  "b0db0a1110268b97": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -12364,6 +12496,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "WHEN 'Your Charge phase' (waha l.479); icons Charge, Your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "b80706644ee85347": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET That SHADOW LEGION unit. The needs follow it."
  },
  "b8165ca6f4d415a0": {
   "verdict": "ok",
@@ -13151,6 +13289,12 @@
   "at": "2026-10-24",
   "why": "The code under review is the code in app.html, word for word. The only change from 10498c2 is the CK_EACH_ONCE guard on pb and ckAt inside secs (now de-duplicated with a Set). I rendered 10498c2 in its own worktree, and the checklist screen for all 17 older lists is byte-identical to HEAD's. For nerf-when the screen matches the owner's scope and the rule texts in data.js and Wahapedia (verify/.cache/waha/ultramarines.txt and ds/ultramarines_*.html): Transhuman Strategist is To do now under Start of the battle round. Combat Doctrines is To do now under Command · Your turn, with no Once-per-battle box. DEVASTATOR DOCTRINE is Active now under Shooting · Your turn. ASSAULT and TACTICAL DOCTRINE are left out (a:1, triggered by the unit being selected to advance or fall back). Author of the Codex, Master Tactician and Raise the Banner (\"At the end of your Movement phase\") are To do now under Movement · Your turn. Soul Sight is To do now under Shooting · Your turn. Fearsome Assault (\"At the start of the Fight phase\") is To do now under both Fight · Your turn and Fight · Their turn. Mission Tactics (phase-scoped bonuses with no choice), Death Blow, Assault Mastery, Librarius and Special Move Types are not listed, and no stratagem is listed. The gate's screens and small-phone steps pass."
  },
+ "c523f8598b436d8e": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET That LEGIONES DAEMONICA CHARACTER TZEENTCH unit (excluding MONSTER units, from the WHEN). The needs follow it."
+ },
  "c5356644338833da": {
   "verdict": "ok",
   "by": "review:fellhammer-2",
@@ -13835,6 +13979,12 @@
   "at": "2026-10-21",
   "why": "Destiny’s Ruin: “Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result … was 10+, you can re-roll the Hit roll instead” = picks 5-9 / 10+. Twist of Fate: “improve the Armour Penetration characteristic of that attack by 1 … 12+ … by 2 instead” = picks 9-11 / 12+. needs is either keyword, and it is your Shooting phase (“at the start of your Shooting phase”), so ranged, with no lasts (“until the end of the phase”). Doombolt’s mortal wounds and Temporal Surge’s move are rightly left out."
  },
+ "cf9189e0cf878a39": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons-2",
+  "at": "2026-10-30",
+  "why": "An exact, anchored, case-insensitive match on the weapon keyword “REVERBERATING SUMMONS” (doomsday bell). It opens the new RULES entry, and it is the same form as the Harpooned and Conversion aliases next to it. It matches nothing else."
+ },
  "cfba43eca667f53a": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -14183,6 +14333,12 @@
   "at": "2026-10-23",
   "why": "Your Shooting phase and either Fight phase: either."
  },
+ "d3f71eda68afeeb4": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): Friendly LEGIONES DAEMONICA CHARACTER models (excluding MONSTER models). The needs follow it."
+ },
  "d3fc3158b20f74cc": {
   "verdict": "ok",
   "by": "review:catalog-tyranids",
@@ -14260,6 +14416,12 @@
   "by": "review:navigator",
   "at": "2026-10-25",
   "why": "Wahapedia Knight Defender, under the weapons: “Conversion: Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.” The weapon is the conversion beam obliterator [CONVERSION, SUSTAINED HITS D3] (also BSData). The condition, the note and calc critHit:4 all follow the text, which the footnote quotes without interpretation. It shows once under the ranged table."
+ },
+ "d57f000d36fa29af": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA NURGLE unit. The needs follow it."
  },
  "d587d9bedfb7d0d1": {
   "verdict": "ok",
@@ -14536,6 +14698,18 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack\": said shorter, nothing added."
+ },
+ "d93f7613cac9254d": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET up to one SHADOW LEGION HERETIC ASTARTES and up to one SHADOW LEGION LEGIONES DAEMONICA unit. The needs follow it."
+ },
+ "d9b4580c9bbc3d13": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One SHADOW LEGION unit. The needs follow it."
  },
  "d9bd58207bdd22bd": {
   "verdict": "ok",
@@ -14818,6 +14992,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"While this model has 1-6 wounds remaining, subtract 4 from ... OC and ... subtract 1 from the Hit roll.\""
+ },
+ "de27b6a230b35cf6": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One friendly LEGIONES DAEMONICA CHARACTER SLAANESH unit (excluding MONSTER units). The needs follow it."
  },
  "de3c1d43e0d675f2": {
   "verdict": "ok",
@@ -15677,6 +15857,12 @@
   "at": "2026-10-26",
   "why": "Matches the file. Tested: [MELTA D3], [RAPID FIRE D3], [RAPID FIRE D6], [MELTA 2], \"the Melta D3 ability\" and \"[RAPID FIRE 1] and [MELTA D3]\" are all read (wa:melta / wa:rapid fire). [HAZARDOUS] and \"[ASSAULT] and [HAZARDOUS]\" are still read. [SUPA-HAZARDOUS] and \"Supa-Hazardous ability\" (any case) are no longer read, and \"[SUPA-HAZARDOUS] and [SUSTAINED HITS 1]\" still gives sustained hits. Over all 490 current sentences, the only change is Supa-glowy Fing, which is no longer read as a hazardous grant. That is right: it is a drawback and has no condition, so there are no gaps either way."
  },
+ "ea34bf98d422a928": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): Each time a LEGIONES DAEMONICA unit from your army is set up … : every Daemons unit. The needs follow it."
+ },
  "ea4ea78104a4a851": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -15953,6 +16139,12 @@
   "at": "2026-10-28",
   "why": "\"TARGET: One HARVESTER unit from your army that is within 6\\\" of that destroyed unit.\": Harvester."
  },
+ "eee271bce397efcb": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA SLAANESH MONSTER unit. The needs follow it."
+ },
  "eefc9dcfb3d027e2": {
   "verdict": "ok",
   "by": "review:r11-misc",
@@ -15976,6 +16168,12 @@
   "by": "review:calc",
   "at": "2026-10-26",
   "why": "Wahapedia (adeptus-custodes.txt, Emperor’s Chosen) and data.js agree: 'When a friendly ADEPTUS CUSTODES unit is selected to attack, that unit’s attacks can: Re-roll one hit roll. Re-roll one wound roll.' It has no condition beyond the ADEPTUS CUSTODES unit (the needs entry) and being selected to attack (shoot, fight, overwatch). The 'Favoured ka’tah: RENDAX' condition applies only to the Additional Effect's mortal wounds, which are not counted here. So always:true is right. One hit and one wound re-roll per unit matches 'that unit’s attacks can'. Over all 1098 unit×phase×target cases compared against 558a750, only ADEPTUS CUSTODES units in lite-knights and emperors-chosen change (plus the Despoiler for Seething Hatred)."
+ },
+ "ef784575e7366eae": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA unit from your army within the Shadow of Chaos. The needs follow it."
  },
  "ef897a9349cdd0d4": {
   "verdict": "ok",
@@ -16097,6 +16295,12 @@
   "at": "2026-10-17",
   "why": "Word for word the EFFECT: “Your unit is riled up until the start of your next turn.”"
  },
+ "f1cff1d52574f069": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET That LEGIONES DAEMONICA SLAANESH unit. The needs follow it."
+ },
  "f1d8684e52502bb6": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -16210,6 +16414,12 @@
   "by": "review:defilers3",
   "at": "2026-10-26",
   "why": "“an unmodified Wound roll of 3+ scores a Critical Wound” after calling upon daemonic patrons when selected to fight, until the end of the phase: melee (selected to fight), critWound 3. The cost (one model destroyed if nothing was killed) is in the text, not a number. Same as the signed-off PDF-built reading."
+ },
+ "f3b55d2f12ad3865": {
+  "verdict": "ok",
+  "by": "review:catalog-chaos-daemons",
+  "at": "2026-10-30",
+  "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One SHADOW LEGION unit. The needs follow it."
  },
  "f3d8fa561325a985": {
   "verdict": "ok",
