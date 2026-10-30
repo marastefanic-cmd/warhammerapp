@@ -88,7 +88,9 @@ function g9(b, src){
   if(!b.reach && lines.some(n => X.afterAttack(src, n))) bad.push('its unit has already attacked (WHEN “' + X.plainCase(src.when) + '”): not for its own attacks');
   return bad;
 }
-for(const [key, o] of Object.entries(T)){ const src = S.get(key); for(const b of boxesOf(o)) for(const why of g9(b, src)) fail('G9', key + ' ' + o.n, why); }
+for(const [key, o] of Object.entries(T)){ const src = S.get(key); for(const b of boxesOf(o)) for(const why of g9(b, src)) fail('G9', key + ' ' + o.n, why);
+  // (the app lists a source's not-counted words only when it has no counted box: both would hide them)
+  if((o.b || []).length && (o.nc || []).length) fail('G9', key + ' ' + o.n, 'counted boxes and not-counted words in one source: the app would not show “' + X.plainCase(o.nc[0].quote).slice(0, 80) + '”'); }
 // (bites: each check fails the box it was written for, as the extractor once made it)
 { const strat = (when, target, effect) => ({ type:'strat', when, target, effect });
   const BITES = [
@@ -197,6 +199,10 @@ function targetNeeds(s){
     const runs = [...m[1].matchAll(/\*\*([^*]+)\*\*/g)].flatMap(x => x[1].split(/\s*\/\s*/)), none = [], unless = [];
     for(const w of runs){ const ks = spanKw(w); if(ks.length > 1 && !/^Faction: /.test(ks[0])) unless.push(ks); else none.push(...ks); }
     if(runs.length){ r.needs.none = none; if(unless.length === 1) r.needs.unless = { all:unless[0] }; else if(unless.length) r = { how:'none', reasons:[{ rule:'unparsed', match:m[0] }] }; } }
+  // (alternatives derive.js read without cancelling an exclusion, or-target-cancel, while the first sentence has one: an exclusion
+  // derive.js did not see, further than it reads from the unit; laid over the union it would drop an alternative: not read)
+  if(r.how !== 'none' && (r.reasons || []).some(x => x.rule === 'or-target') && !(r.reasons || []).some(x => x.rule === 'or-target-cancel') && /\(excluding\b/i.test(first))
+    r = { how:'none', reasons:[{ rule:'unparsed', match:'alternatives with an exclusion derive.js does not read: ' + first.replace(/\*\*/g, '').slice(0, 90) }] };
   return r;
 }
 const allStrats = [];
@@ -281,6 +287,7 @@ function matches0(n, u){ return dm.app.matches(n, u); }
     ['Archagonists', 'One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS**)', { all:['Faction: Legiones Daemonica', 'Slaanesh'] }],
     ['a keyword only one alternative has', 'One **LEGIONES DAEMONICA MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS**)', null],
     ['different keywords besides the excluded one', 'One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA KHORNE** units (excluding **MONSTERS**)', null],
+    ['an exclusion further from its unit', 'One **LEGIONES DAEMONICA MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units from your army that are wholly within 6" of each other and of your **WARLORD** (excluding **MONSTERS**)', null],
     ['two keywords excluded', 'One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS** and **VEHICLES**)', null]
   ];
   let ok = 0;
