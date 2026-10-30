@@ -807,7 +807,7 @@ for (const u of units) {
       let have = u.kw.find(x => gwKw(x) === gwKw(k));
       // a keyword GW prints for some models that the export lacks (the Pink Horrors' BRIMSTONE, for the Brimstone Horrors Split adds):
       // GW's, added and declared, as for a keyword of all models
-      if (!have) { have = k.toLowerCase().replace(/(^|[\s-])([a-z])/g, (m0, a, b) => a + b.toUpperCase()); u.kw.push(have); u.kw.sort();
+      if (!have) { have = k.toLowerCase().replace(/(^|[\s-])([a-z])/g, (m0, a, b) => a + b.toUpperCase()); u.kw.push(have);
         gwDevs.push({ unit: u.id, kind: 'kw', field: 'kw', app: have, bsdata: null, file: W.file }); }
       // (GW's plural, "PINK HORRORS: PINK", is the row of one such model, "Pink Horror"; no row: GW's name of the models, in title case)
       const pn = x => lc(x).replace(/rn/g, 'm'), row = u.stats.find(r => pn(r.name.replace(/ ×\d+$/, '')) === pn(mn)) || u.stats.find(r => pn(r.name.replace(/ ×\d+$/, '')) + 's' === pn(mn));
@@ -840,7 +840,7 @@ for (const u of units) {
     const sing = u.kw.find(x => gwKw(x) + 'S' === gwKw(k) && !printed.some(y => gwKw(y) === gwKw(x)));
     if (sing) u.kw.splice(u.kw.indexOf(sing), 1);
     gwDevs.push({ unit: u.id, kind: 'kw', field: 'kw', app: kk, bsdata: sing || null, file: u._parts.map(p => (wahaDs(nm(p.name)) || {}).file).filter(Boolean).join(', ') });
-    u.kw.push(kk); u.kw.sort();
+    u.kw.push(kk);   // (in GW's order: verify/tables.js --write, verify/gw-order.js)
     // (a keyword only the datasheet of a part after the first prints, the led Pink Horrors' INFANTRY: from that unit, as the kwNote says
     // of the export's own)
     const firstDs = wahaDs(nm(u._parts[0].name)), fromFirst = firstDs && firstDs.ds && firstDs.ds.keywords.concat(firstDs.ds.factionKeywords.map(x => 'Faction: ' + x)).some(x => gwKw(x) === gwKw(k));
@@ -1338,7 +1338,7 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
   // keywords a rule of the list gives that BSData's entry and the export lack (the Forgefiend's SOUL FORGE: Soul Forge Boons)
   // (and a category of BSData's GW's datasheet does not print, kw.drop: the Chaos Spawn's SPAWN; verify/bsdata.js's difference is declared below)
   for (const k of (h.kw || {}).drop || []) { const i = u.kw.indexOf(k); if (i < 0) { want(uid + ' · ' + k, 'hand file kw.drop', 'no keyword of this name'); continue; } u.kw.splice(i, 1); handDone.push({ what: 'keyword ' + k + ' of ' + u.name + ' left out', by: 'hand (Claude)', text: h.kw.why }); }
-  for (const k of (h.kw || {}).add || []) { if (!u.kw.includes(k)) { u.kw.push(k); u.kw.sort(); } handKw.push({ unit: uid, kw: k, why: h.kw.why, evidence: h.kw.evidence }); handDone.push({ what: 'keyword ' + k + ' of ' + u.name, by: 'hand (Claude)', text: h.kw.why }); }
+  for (const k of (h.kw || {}).add || []) { if (!u.kw.includes(k)) { u.kw.push(k); } handKw.push({ unit: uid, kw: k, why: h.kw.why, evidence: h.kw.evidence }); handDone.push({ what: 'keyword ' + k + ' of ' + u.name, by: 'hand (Claude)', text: h.kw.why }); }
 }
 // ---------------------------------------------------------------- the readings (docs/tables.md, Readings)
 // A reading (a footnote, mods; an aura; a guard line) is on the row of the rule it reads: a datasheet's ability's on its DATASHEETS

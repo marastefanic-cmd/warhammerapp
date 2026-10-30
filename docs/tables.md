@@ -43,6 +43,13 @@ weapon ability of the weapons it took. A difference with no reason is a conflict
 list keeps its value in `over`, and `verify/out/tables.md` lists it, until it is fixed at the source (GW's wording,
 Wahapedia's bold). There are none today.
 
+**GW's order.** A datasheet's rows are in GW's order, by position on its Wahapedia datasheet page (`verify/gw-order.js`;
+`--write` sorts them): weapon rows (a multi-profile weapon's profiles together, in the page's order), a weapon's keywords (one a rule
+of the list adds, its `from`, last), abilities (datasheet abilities, wargear abilities, rows the page has none of, then the list's
+own: an enhancement's), the Rules line (CORE ABILITIES, then ARMY RULES), keywords (the KEYWORDS line, FACTION KEYWORDS, then the
+list's own: Warlord, a keyword a rule gives, `why.kw`). An attached unit keeps its parts in their order, each by its own page; an item
+the page does not name stays after the item before it; a datasheet with no page keeps its order. No hand ordering.
+
 ## Readings
 
 A reading is the app's interpretation of a rule's text into numbers and lines: a footnote under a unit's weapons (`mods`:

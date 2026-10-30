@@ -55,6 +55,27 @@ const READ_COLS = {
 };
 const FP_KEYS = Object.values(FINGERPRINT).concat(READ_FP, READ_BY, READ_WHY);   // hidden from the app, and from the helpers' keys
 const fp = s => crypto.createHash('sha256').update(String(s)).digest('hex').slice(0, 8);
+// GW's order of what a datasheet prints (verify/gw-order.js: by position on its Wahapedia page), loaded on first use
+let GWO_ = null; const GWO = () => GWO_ || (GWO_ = require('./gw-order')(ROOT));
+// the lists' rows in GW's order (weapon rows, a weapon's keywords, abilities, the Rules line), with each row's comments moved with it
+function gwOrder(R){
+  const before = R.armies.map(a => a.units.map(u => Object.fromEntries(ROWS.map(k => [k, Array.isArray(u[k]) ? u[k].slice() : null]))));
+  GWO().units(R.armies);
+  const C = {};
+  for(const [pk, c] of Object.entries(R.comments)){
+    const p = JSON.parse(pk);
+    if(p[1] === 'units' && p.length >= 5 && ROWS.includes(p[3]) && typeof p[4] === 'number'){
+      const was = before[p[0]] && before[p[0]][p[2]] && before[p[0]][p[2]][p[3]], now = R.armies[p[0]].units[p[2]][p[3]];
+      if(was && now && was[p[4]]) p[4] = now.indexOf(was[p[4]]);
+    }
+    C[JSON.stringify(p)] = c;
+  }
+  R.comments = C;
+}
+// the lists, the order of their rows, keywords and Rules line aside (what --write may change: GW's order, gwOrder)
+const ORDERED = ['ranged', 'melee', 'abilities', 'kw', 'rules'];
+const unordered = A => { const un = x => Array.isArray(x) ? x.map(un) : x && typeof x === 'object' ? Object.fromEntries(Object.entries(x).map(([k, y]) => [k, ORDERED.includes(k) && Array.isArray(y) ? un(y).map(z => stable(z)).sort() : un(y)])) : x;
+  return un(JSON.parse(JSON.stringify(A))); };
 
 const MARK = {
   sheets:['// ---- DATASHEETS: written by verify/tables.js --write (edit a datasheet here; --write keeps the table in shape) ----', '// ---- end of DATASHEETS ----'],
@@ -309,6 +330,11 @@ function build(R){
       });
     }
   }));
+  // each datasheet's rows in GW's order (verify/gw-order.js), whichever list shows them first
+  for(const s of sheets.values()){
+    const g = GWO().sheet(s.id, Object.assign({ name:s.name, faction:s.faction }, Object.fromEntries(ROWS.map(k => [k, [...s.rows[k].values()].map(R => Object.assign({}, R.obs[0].r, { _k:R.key }))]))));
+    for(const kind of ['ranged', 'melee', 'abilities']) s.rows[kind] = new Map(g[kind].map(r => [r._k, s.rows[kind].get(r._k)]));
+  }
   // which fields of a row are the list's (for this place): the key, a part's who, counts, the values a rule of the list changed
   const listLevel = (o, k) => {
     const r = o.r, from = r.from || {};
@@ -391,6 +417,8 @@ function build(R){
     return why;
   };
   for(const U of units) U.why = unitWhy(U);
+  // keywords in GW's order: the KEYWORDS line, then FACTION KEYWORDS, the list's own (Warlord, a rule's: why.kw) last
+  for(const U of units) GWO().orderKw(U.u, GWO().partsOf(U.u, U.a.faction), Object.keys((U.why || {}).kw || {}));
   // the readings, each to the row it reads (readingTables); the list's own keep their reason
   const RT = readingTables(R, units, conflicts);
   for(const U of units){
@@ -922,6 +950,7 @@ const RETURN_RE = /\nreturn \{ version:VERSION[^\n]*\};\n/;
 function tableForm(src, opts){
   opts = opts || {};
   const R = read(src);
+  gwOrder(R);
   if(opts.stampRows) opts.stampRows(R.armies, R.D);
   const B = build(R);
   // the parts of data.js outside the tables, as they are (FACTIONS with its rows' readings)
@@ -1191,7 +1220,7 @@ if(require.main === module){
     const re = [...t.B.RT.groups.values()].filter(g => g.rederived), skip = new Map();
     for(const g of re) for(const U of g.obs.keys()) skip.set(U.a.id + '/' + U.u.id, (skip.get(U.a.id + '/' + U.u.id) || new Set()).add(g.kind + '\0' + g.from));
     const drop = A => A.map(a => Object.assign({}, a, { units:a.units.map(u => { const sk = skip.get(a.id + '/' + u.id); if(!sk) return u; const v = Object.assign({}, u); for(const k of READ) if(v[k]) v[k] = v[k].filter(m => !sk.has(k + '\0' + m.from)); return v; }) }));
-    if(!sameLists(drop(before.armies), drop(after.armies))){ console.log('tables: NOT written: the lists would resolve otherwise than they are (a bug in verify/tables.js)'); process.exit(1); }
+    if(!sameLists(unordered(drop(before.armies)), unordered(drop(after.armies)))){ console.log('tables: NOT written: the lists would resolve otherwise than they are (a bug in verify/tables.js)'); process.exit(1); }
     if(re.length) console.log('tables: written again from their changed words (derived readings, verify/derive.js): ' + re.map(g => (g.sid || g.path.join(' · ')) + ' · ' + g.from + (g.list.length ? '' : ' (no longer derivable: none now)')).join('; '));
     fs.writeFileSync(DATA, t.text);
     fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));

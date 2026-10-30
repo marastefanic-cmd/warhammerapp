@@ -608,16 +608,16 @@
   "unit": "mek-tankbustas",
   "field": "melee (rows)",
   "app": [
-   "Mek's Toolz | Mek",
    "Choppa | Tankbustas",
-   "Gitstikka | Tankbustas"
+   "Gitstikka | Tankbustas",
+   "Mek's Toolz | Mek"
   ],
   "source": [
-   "Mek's Toolz | Mek",
    "Choppa | Tankbustas",
+   "Gitstikka | Tankbustas",
+   "Mek's Toolz | Mek",
    "Smash Hammer - Hunter | Tankbustas",
-   "Smash Hammer - Standard | Tankbustas",
-   "Gitstikka | Tankbustas"
+   "Smash Hammer - Standard | Tankbustas"
   ],
   "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/shooty.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): the Tankbustas Nob has two Rokkit Pistols and no Smash Hammer; the PDF (17 Oct 2026) is the older version.",
   "evidence": "verify/sources/nr-json/shooty.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
