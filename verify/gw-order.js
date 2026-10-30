@@ -43,16 +43,27 @@ function parse(html, chapter) {
   }
   const labels = {};
   for (const m of h.matchAll(/class="dsCoreArmyLabel[^"]*">([\s\S]*?)<\/td><td class="dsCoreArmyValue">([\s\S]*?)<\/td>/g)) labels[txt(m[1])] = txt(m[2]).split(/\s*,\s*/).filter(Boolean);
-  const abilities = [];
-  const a0 = h.indexOf('>ABILITIES<'), a1 = h.indexOf('>UNIT COMPOSITION<');
-  if (a0 >= 0) for (const m of h.slice(a0, a1 > a0 ? a1 : undefined).matchAll(/<div class="dsAbility( dsWargearAbility)?">([\s\S]*?)(?=<div class="dsAbility|<div class="dsHeader|<\/td>)/g)) {
-    const b = /<b>([\s\S]*?)<\/b>/.exec(m[2]); if (!b) continue;
-    const name = txt(b[1]).replace(/:$/, '').replace(/\s*\([^)]*\)\s*:?$/, '').trim();
-    if (name) abilities.push({ name, wargear:!!m[1] });
+  // the boxes of the page in their order (SUPREME COMMANDER, WRATHFUL PRESENCE, ABILITIES, a wargear option's box, TRANSPORT, DAMAGED: …),
+  // each with the abilities it names; the weapon tables and their column heads are none
+  const boxes = [], abilities = [], STD = /^(RANGE|A|BS|WS|S|AP|D|)$/;
+  let box = null;
+  for (const m of h.matchAll(/<div class="(?:ct )?dsHeader[^"]*">([\s\S]*?)<\/div>|<div class="dsAbility( dsWargearAbility)?">([\s\S]*?)(?=<div class="dsAbility|<div class="dsHeader|<\/td>)/g)) {
+    if (m[1] !== undefined) {
+      const t = txt(m[1]);
+      if (STD.test(t)) continue;
+      if (t === 'STRATAGEMS') break;
+      if (t === 'RANGED WEAPONS' || t === 'MELEE WEAPONS') { box = null; continue; }
+      boxes.push(box = { h:t, ab:[], pos:m.index });
+      continue;
+    }
+    if (!box) continue;
+    const b = /<b>([\s\S]*?)<\/b>/.exec(m[3]); if (!b) continue;
+    const name = txt(b[1]).replace(/:$/, '').replace(/\s*\([^)]*\)\s*:?$/, '').trim().replace(/:$/, '');
+    if (name) { const a = { name, wargear:!!m[2], box:boxes.length - 1, at:box.ab.length, pos:m.index }; box.ab.push(a); abilities.push(a); }
   }
   const ds = WW.wahaDatasheet(html, null) || {};
   const kws = (ds.keywords || []).concat(...Object.values(ds.modelKeywords || {}));
-  return { weapons, labels, abilities, keywords:kws, factionKeywords:ds.factionKeywords || [], profiles:ds.profiles || [] };
+  return { weapons, labels, abilities, boxes, html:h, keywords:kws, factionKeywords:ds.factionKeywords || [], profiles:ds.profiles || [] };
 }
 
 module.exports = function make(ROOT) {
@@ -88,17 +99,50 @@ module.exports = function make(ROOT) {
     const idx = xs.map((x, i) => i).sort((a, b) => { const A = ks[a], B = ks[b]; for (let j = 0; j < Math.max(A.length, B.length); j++) { const d = (A[j] ?? -1) - (B[j] ?? -1); if (d) return d; } return a - b; });
     return idx.map(i => xs[i]);
   }
-  const findIn = (list, want, f) => { let i = list.findIndex(x => f(x) === want); return i; };
-  // a weapon row's place on the page: "Group - profile", the name, the name in GW's plural or singular
+  // the names an item may have on the page: as it is; less a leading article ("The Emperor’s Sword": GW's "Emperor’s Sword"); less the
+  // app's own suffix in brackets ("Coruscating Blue flames (ref. only)"); a bracket as words ("Gauntlets of Ultramar (Overhead Smash)")
+  const names = s0 => { const s1 = String(s0), out = [];
+    for (const x of [s1, s1.replace(/\s*\([^()]*\)\s*$/, ''), s1.replace(/[()[\]]/g, ' '), s1.replace(/\s*\[[^\]]*\]\s*$/, '')]) for (const y of [x, x.replace(/^(the|a|an)\s+/i, '')]) { const k = n(y); if (k && !out.includes(k)) out.push(k); }
+    return out; };
+  const art = k => k.replace(/^(the|a|an)(?=[a-z])/, '');
+  // a weapon row's place on the page: "Group - profile", the name, the name in GW's plural or singular; a Hunter profile as "X - Hunter"
+  // a name Wahapedia spells otherwise, as verify/deviations-numbers.json declares it (wahaName: "Toxinjecter Harpoon" / "Toxinjector Harpoon")
+  const SPELL = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-numbers.json'), 'utf8')).filter(d => d.wahaName); } catch (e) { return []; } })();
   function weaponIndex(P, kind, r) {
     const L = P.weapons[kind]; if (!L.length) return -1;
-    const full = n(r.group ? r.group + ' ' + r.name : r.name), plain = n(r.name);
-    let i = findIn(L, full, w => n(w.name));
-    if (i < 0) i = findIn(L, plain, w => n(w.name));
-    if (i < 0 && r.group) i = L.findIndex(w => n(w.group) === n(r.group) && n(w.profile) === plain);
-    if (i < 0) i = L.findIndex(w => { const a = n(w.name), b = r.group ? full : plain; return a.replace(/s$/, '') === b.replace(/s$/, ''); });
-    if (i < 0 && r.group) i = L.findIndex(w => n(w.group) === n(r.group));   // (a profile named otherwise: with its weapon)
-    return i;
+    { const d = SPELL.find(x => x.kind === kind && x.row === (r.group ? r.group + ' – ' : '') + r.name && L.some(w => w.name === x.wahaName)); if (d) return L.findIndex(w => w.name === d.wahaName); }
+    const pn = L.map(w => n(w.name)), pa = pn.map(art), G = r.group ? names(r.group) : [], N = names(r.name);
+    const full = G.length ? G.flatMap(g => N.map(x => x.startsWith(g) ? x : g + x)) : N;
+    for (const c of full.concat(N)) { let i = pn.indexOf(c); if (i < 0) i = pa.indexOf(art(c)); if (i >= 0) return i; }
+    if (r.hunter || /\bhunter\b/i.test(r.name)) { const b = G.length ? G : names(String(r.name).replace(/\s*hunter.*$/i, '')); const i = L.findIndex(w => b.includes(n(w.group)) && /^hunter/i.test(w.profile || '')); if (i >= 0) return i; }
+    if (G.length) { const i = L.findIndex(w => G.includes(n(w.group)) && N.includes(n(w.profile))); if (i >= 0) return i; }
+    for (const c of full.concat(N)) { const i = pa.findIndex(x => x.replace(/s$/, '') === art(c).replace(/s$/, '')); if (i >= 0) return i; }
+    if (G.length) { const i = L.findIndex(w => G.includes(n(w.group))); if (i >= 0) return i; }   // (a profile named otherwise: with its weapon)
+    return -1;
+  }
+  // an ability's place on the page: [box, its place in the box]; one named as a box (Supreme Commander, Transport, Leader, a Damaged band)
+  // at its box's head
+  function abilityAt(P, ab) {
+    const N = names(ab.name), B = P.boxes;
+    for (let b = 0; b < B.length; b++) { if (B[b].h === 'UNIT COMPOSITION') continue; const j = B[b].ab.findIndex(x => N.includes(n(x.name)) || N.includes(art(n(x.name)))); if (j >= 0) return [b, j]; }
+    for (let b = 0; b < B.length; b++) { if (B[b].h === 'UNIT COMPOSITION') continue; const j = B[b].ab.findIndex(x => N.some(a => a.length > 3 && (n(x.name).startsWith(a) || a.startsWith(n(x.name))))); if (j >= 0) return [b, j]; }
+    const hb = B.findIndex(x => N.includes(n(x.h)) || (/^damaged/i.test(ab.name) && n(x.h) === n(ab.name)));
+    if (hb >= 0) return [hb, -1];
+    // an invulnerable save New Recruit lists as an ability: GW prints it in the profile, before every box
+    if (/^\*?invulnerable save\b/i.test(ab.name)) return [-1, 0];
+    // else where its name stands in the page's words ("NORN ASSIMILATOR units have the following ability: Protean Purpose:"): in that box,
+    // after the abilities before it
+    const w = String(ab.name).replace(/\s*\([^()]*\)\s*$/, '').trim().split(/\s+/).map(x => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/['’]/g, "['’]"));
+    const hit = w.length && new RegExp('>[^<]*\\b' + w.join('(?:\\s|&nbsp;|<[^>]+>)+'), 'i').exec(P.html);
+    if (hit) { const at = hit.index; let b = -1; B.forEach((x, i) => { if (x.pos <= at && x.h !== 'UNIT COMPOSITION') b = i; }); if (b >= 0) { const j = B[b].ab.filter(a => a.pos < at).length; return [b, j - 0.5]; } }
+    return null;
+  }
+  // rows of each part of an attached unit together, the parts in the order their rows first come in; each part's rows sorted by key
+  // (a single datasheet's who is an option's name, "Throttlerokkit Shokka Engine": its rows sit where the page has them)
+  function byPart(rows, key, parts) {
+    if (parts && parts.length === 1) return sortBy(rows, key);
+    const rank = []; rows.forEach(r => { const w = r.who || ''; if (!rank.includes(w)) rank.push(w); });
+    return rank.flatMap(w => sortBy(rows.filter(r => (r.who || '') === w), key));
   }
 
   // a resolved unit's datasheet parts and their pages
@@ -110,16 +154,15 @@ module.exports = function make(ROOT) {
 
   function orderWeapons(u, kind, parts) {
     const rows = u[kind]; if (!Array.isArray(rows) || rows.length < 1) return;
-    // each part in the order its rows first come in today; an item a page does not name after the item before it
-    const rank = []; rows.forEach(r => { const w = r.who || ''; if (!rank.includes(w)) rank.push(w); });
-    const at = rows.map(r => { if (r.enh) return Infinity; const p = parts[partIx(parts, r)]; return p && p.page ? weaponIndex(p.page, kind, r) : -2; });
-    if (at.every(x => x === -2)) return;   // no page: as it is
+    // each part's rows together, in the order its rows first come in today; an item a page does not name after the item before it
+    const at = new Map(rows.map(r => { if (r.enh) return [r, Infinity]; const p = parts[partIx(parts, r)]; return [r, p && p.page ? weaponIndex(p.page, kind, r) : -2]; }));
+    if ([...at.values()].every(x => x === -2)) return;   // no page: as it is
     // a multi-profile weapon's profiles together: at the place of its first profile on the page
-    const gAt = new Map(); rows.forEach((r, i) => { if (r.group && at[i] >= 0) { const g = (r.who || '') + '\0' + r.group; gAt.set(g, Math.min(gAt.has(g) ? gAt.get(g) : Infinity, at[i])); } });
-    u[kind] = sortBy(rows, (r, i) => {
-      const g = r.group ? gAt.get((r.who || '') + '\0' + r.group) : undefined;
-      if (at[i] < 0 && g === undefined) return null;
-      return [rank.indexOf(r.who || ''), g !== undefined ? g : at[i], at[i] >= 0 ? at[i] : Infinity];
+    const gAt = new Map(); rows.forEach(r => { if (r.group && at.get(r) >= 0) { const g = (r.who || '') + '\0' + r.group; gAt.set(g, Math.min(gAt.has(g) ? gAt.get(g) : Infinity, at.get(r))); } });
+    u[kind] = byPart(rows, r => {
+      const g = r.group ? gAt.get((r.who || '') + '\0' + r.group) : undefined, a = at.get(r);
+      if (a < 0 && g === undefined) return null;
+      return [g !== undefined ? g : a, a >= 0 ? a : Infinity];
     });
     // a weapon's keywords: the page row's order; one a rule of the list adds (from) last
     for (const r of u[kind]) {
@@ -135,16 +178,13 @@ module.exports = function make(ROOT) {
   function orderAbilities(u, parts) {
     const rows = u.abilities; if (!Array.isArray(rows) || rows.length < 2) return;
     if (parts.every(p => !p.page)) return;
-    const rank = []; rows.forEach(r => { const w = r.who || ''; if (!rank.includes(w)) rank.push(w); });
-    u.abilities = sortBy(rows, (ab, i) => {
-      const R = rank.indexOf(ab.who || '');
-      if (isOwn(ab)) return [R, 3, i];
+    // each part's together; in a part, the page's boxes in their order and each box's abilities in theirs; the list's own last
+    u.abilities = byPart(rows, ab => {
+      if (isOwn(ab)) return [1e9];
       const p = parts[partIx(parts, ab)] || (parts.length > 1 ? null : parts[0]);
       if (!p || !p.page) return null;
-      const L = p.page.abilities, a = n(ab.name);
-      let j = L.findIndex(x => n(x.name) === a); if (j < 0) j = L.findIndex(x => a && (n(x.name).startsWith(a) || a.startsWith(n(x.name))));
-      return j < 0 ? [R, 2, i] : [R, L[j].wargear ? 1 : 0, j];
-    });
+      return abilityAt(p.page, ab);
+    }, parts);
   }
 
   function orderRules(u, parts) {
@@ -162,10 +202,10 @@ module.exports = function make(ROOT) {
     for (const p of parts) if (p.page) { for (const k of p.page.keywords) if (!K.includes(n(k))) K.push(n(k)); for (const k of p.page.factionKeywords) if (!F.includes(n(k))) F.push(n(k)); }
     const ownSet = new Set((own || []).map(n));
     u.kw = sortBy(u.kw, (k, i) => {
-      if (ownSet.has(n(k))) return [4, i];
+      // (a keyword GW's page prints is in GW's place, though a rule of the list also gives it: the Bloodmaster's BATTLELINE)
       const f = /^Faction: (.*)$/.exec(k);
-      if (f) { const j = F.indexOf(n(f[1])); return j >= 0 ? [2, j] : [3, i]; }
-      const j = K.indexOf(n(k)); return j >= 0 ? [0, j] : [1, i];
+      if (f) { const j = F.indexOf(n(f[1])); return j >= 0 ? [2, j] : ownSet.has(n(k)) ? [4, i] : [3, i]; }
+      const j = K.indexOf(n(k)); return j >= 0 ? [0, j] : ownSet.has(n(k)) ? [4, i] : [1, i];
     });
   }
 
@@ -183,5 +223,5 @@ module.exports = function make(ROOT) {
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { units, sheet, orderKw, partsOf, pageFor, noPage, kwBase, n, weaponIndex };
+  return { units, sheet, orderKw, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
 };

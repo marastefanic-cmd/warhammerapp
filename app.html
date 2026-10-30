@@ -4676,10 +4676,10 @@ const onceTag = ab => {
   return '';
 };
 // abilities of one model (the leader, the champion) or one choice ("Crimson King: pick one") sit
-// under its chip, like the weapons; the unit's own come first
+// under its chip, like the weapons; the groups in the order of their rows (GW's datasheet order: data.js, verify/gw-order.js)
 // (on the datasheet: { suffix:true }, each row names its model after the name, as New Recruit prints it)
 function abilityRows(abs, u, opts){
-  const whos = [...new Set(abs.map(ab => ab.who || ''))].sort((x, y) => (x ? 1 : 0) - (y ? 1 : 0));
+  const whos = [...new Set(abs.map(ab => ab.who || ''))];
   if(opts && opts.suffix) return abilityList(whos.flatMap(w => abs.filter(ab => (ab.who || '') === w)), u, true);
   if(whos.length > 1 || whos[0]) return whos.map(w => (w ? '<div class="who">' + esc(w) + '</div>' : '') + abilityList(abs.filter(ab => (ab.who || '') === w), u)).join('');
   return abilityList(abs, u);
