@@ -1,0 +1,704 @@
+[
+ {
+  "key": "bd56dbd67552d85f",
+  "where": "shooty · Mek",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 0415accd06a388c5, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "3869f9b3ed357097",
+  "where": "shooty · Mek",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 01668dc0cdd7d1bb, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "6d5ce45c1de1845c",
+  "where": "standard · Khârn the Betrayer",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 8d56a990a6e48110, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "49ffc50b1ecd8f72",
+  "where": "standard · Khârn the Betrayer",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 1cd828f33e8cc806, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "9c1f190117482517",
+  "where": "princes · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key a852b235d09609e6, review:r9-we-nids); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "15005d7450360dcf",
+  "where": "princes · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 7ac6a215047d8dab, review:hurrdurr); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "2e10b2a1e3349a3f",
+  "where": "princes · Slaughterbound",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 7e38ba43759ec810, review:r19-fixes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "a65a1028418f4556",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 9d9bcb9766e506d9, review:r19-fixes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "46f7d83e9911d552",
+  "where": "pubstomper · Exalted Sorcerer",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key ad94ada820936d61, review:pubstomper); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "3cd7b7c57a4c9000",
+  "where": "pubstomper · Exalted Sorcerer",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 20c4d6421602ed64, review:pubstomper); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "9b2d27d576dba08e",
+  "where": "pubstomper · Exalted Sorcerer",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key ea7c704b289d87a9, review:pubstomper); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "279212a75adb1259",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key d81d42f2cc054d3b, review:r9-pubstomper); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "341f4d235ff3584c",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 652535488e26ccb9, review:r9-pubstomper); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "0ba0021bad0c31cd",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 227c0ccd160c3f9d, review:r23-army); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "f3075172fdd9908b",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key f7015b406bb00eed, review:r23-army); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "605ad0f8e4a5f5ee",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key c7b7e8dc5ed0f198, review:healybois-2); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "008503f9bf25a65d",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key c7b7e8dc5ed0f198, review:healybois-2); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "52dc1ed21f12d4c0",
+  "where": "healybois · Tyrannofex",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key ed4a37246699c0cb, review:r23-army); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "d3590b52347455af",
+  "where": "4-megas-and-a-destrier · Canis Rex",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key e1ddb3de9c725e13, review:r19-fixes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "7d7d69dfae8bdf10",
+  "where": "4-megas-and-a-destrier · Canis Rex",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 3fa10f6d7466f8be, review:r23-army); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "f148e3252de52f1e",
+  "where": "4-megas-and-a-destrier · Canis Rex",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 0a51de81856a29e0, review:r23-army); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "a43b9c15a0d8e610",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Icon of War",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key cfba43eca667f53a, review:r19-fixes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "d63e1a6b6dfcf031",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Supreme Commander",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key f7b68c48be03c803, review:r19-fixes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "334edc71456f504e",
+  "where": "defilers-and-friends · Lucius the Eternal",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 47536d26c2754edf, review:defilers3); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "a27f748813e21225",
+  "where": "defilers-and-friends · Lord Exultant",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key ae0771b1b0787b21, review:defilers3); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "8eebb4bee02681e8",
+  "where": "defilers-and-friends · Lord Exultant",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 1016fe171fd26ea1, review:defilers3); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "99af97ada24a0f10",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key c4891fac4cfef6fd, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "b3982866b2a05a80",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key e6d64d1d268860ef, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "210b2990f269b729",
+  "where": "mucho-mutantes · Ahriman",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 41e6a7e1dc29827c, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "0ca5c801b11a382b",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 8eb32ed72e35c7a3, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "c907a488b8b72fec",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 7dfe6d181f5cef02, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "cb32cfa731c18dee",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 8b56a4a4c5a45193, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "ecc80a3e4a7b9b11",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 7dfe6d181f5cef02, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "d0c2489dfffe79b6",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 647a19681f6e214a, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "f59fc75e0f5b26f0",
+  "where": "lite-knights · Trajann Valoris",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key dd21cf0a01f29cbd, review:custodes-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "68cd54d90bd80cea",
+  "where": "nerf-when · Roboute Guilliman · Supreme Commander",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key d9bdf07bceebd359, review:nerf-3); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "210c0ca13e8c0272",
+  "where": "nerf-when · Marneus Calgar",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key f232cab76c600583, review:nerf-units (its fix)); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "5db451b3b80eab42",
+  "where": "nerf-when · Marneus Calgar",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 4775df3fd73ab7b3, review:nerf-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "16ebf70834a6bece",
+  "where": "nerf-when · Marneus Calgar",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key a9e89bbe276b851b, review:nerf-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "c5cf741eea8fcb2e",
+  "where": "nerf-when · Marneus Calgar",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key bf473018d2a96268, review:nerf-3); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "9db99be9ef45af3f",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 8b5d0bebf256e163, review:fellhammer-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "1503a9f6cea4b91b",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key c5f7f625026e1437, review:fellhammer-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "b33b3feea144413a",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 9141ce3953fc81b2, review:fellhammer-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "6b4e3ab6feb039d7",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 18716ea36a2f64fc, review:fellhammer-units (its fix)); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "ae8142a6077b6b02",
+  "where": "emperors-chosen · Trajann Valoris · Supreme Commander",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 441a2c840044dbd2, review:custodes-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "ce03f87fc6df3592",
+  "where": "dread-host · Trajann Valoris",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key de800c55a093d64f, review:custodes-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "ef442eadc28c329c",
+  "where": "dread-host · Trajann Valoris · Supreme Commander",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 3939cc8629508920, review:custodes-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "25b9503b0dbb1ad3",
+  "where": "tzeeeeentch · Fluxmaster",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key e4e9aaf0d39afd74, review:tzeentch-data-b); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "aa166d417137aff7",
+  "where": "tzeeeeentch · Blue Horrors",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key e9f3236c2856365a, review:reference); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "82c0c24bb933c893",
+  "where": "healybois · The Swarmlord",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 8205ad6312076aa6, review:healybois-2); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "22df3691229fd00b",
+  "where": "healybois · Hive Tyrant",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 0a6e479af6c5fc3a, review:healybois); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "105fddd727d792a1",
+  "where": "u-w0t-m8 · The Silent King",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 44159cade111f908, review:necrons); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "c7802176c652192a",
+  "where": "simple-but-effective · Ghazghkull Thraka · Supreme Commander",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 2b4cc294d60bd968, review:orks-2); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "cabff06f164883fe",
+  "where": "simple-but-effective · Nazdreg",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key e071a7c006c846ed, review:orks-data); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "4318104dfcbf43bd",
+  "where": "simple-but-effective · Nazdreg",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 40571c5ee8273154, review:orks-data); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "206af126c0e56c6f",
+  "where": "simple-but-effective · Warboss in Mega Armour",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 75514117213ff390, review:orks-data); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "cebfde87e4474b79",
+  "where": "simple-but-effective · Warboss in Mega Armour",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main (key 0a463ce793318a37, review:orks-data); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ {
+  "key": "d65d5c55a86dd854",
+  "where": "shooty · Wazdakka Gutsmek",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 3b3c07f5bd4e30e4, review:shooty) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "5788e20a9bcb260f",
+  "where": "shooty · Mek",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 12449d993b191c9f, review:import-lists) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "e3ca94132b1547e6",
+  "where": "simple-but-effective · Deffkoptas",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key d9d76882d80fa885, review:cooking) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "23662b4904b7e5da",
+  "where": "shooty · Killa Kans",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 8d3f1d2a65937b68, review:cooking) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "5b066e95922c0b00",
+  "where": "standard · Khârn the Betrayer",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 756236bc27288769, review:import-lists) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "e84f14a6df24d077",
+  "where": "princes · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 3caf0e1dae20493d, review:hurrdurr) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "eaea058dfac47394",
+  "where": "super-terminators · Forgefiend",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key d2c1573c6630c1c1, review:r10-superterm) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "895b3f04dcc0be15",
+  "where": "standard · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 1bd5f94b32f3218c, review:r9-we-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "43c6554f3aa983a9",
+  "where": "pubstomper · Exalted Sorcerer",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key fe4e20b85edf76f4, review:pubstomper) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "4e3929a1c40705f0",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key f2d79da589c98126, review:r9-pubstomper) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "05f7768dce336922",
+  "where": "healybois · Norn Emissary",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 26b82ae697280554, review:knights-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "74e7682fbfb70b0a",
+  "where": "healybois · Tyrannofex",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key d68adf2412074978, review:knights-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "5e026a54ac365979",
+  "where": "navigator-sounds-op-ngl · Knight Destrier",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 286f30ecd176b339, review:knights-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "dc7a9ce2be5d789f",
+  "where": "navigator-sounds-op-ngl · Knight Errant",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key e83b22d75c62a36d, review:knights-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "234083e309ca2733",
+  "where": "6-bigs · Knight Paladin",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key fb06d7b8a7dbb4ea, review:knights-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "2b8933447fb61512",
+  "where": "6-bigs · Knight Warden",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key f60bc79bbd228e3a, review:knights-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "4ea1764a67470baf",
+  "where": "navigator-sounds-op-ngl · Cerastus Knight Atrapos",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 78b093d9bd9f8239, review:r9-knights) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "5baa70a504b14fab",
+  "where": "navigator-sounds-op-ngl · Knight Crusader",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 9e5577b93d8cb30e, review:r9-knights) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "66ae688a878aefbf",
+  "where": "super-terminators · Chaos Terminators",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 5e01097337937bb8, review:r10-superterm) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "0d77214e7d7d92cc",
+  "where": "purge-goes-the-foe · Thulia Ghuld",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 81e8a39ce30f17de, review:r11-purge-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "89b4ee9daac4c099",
+  "where": "purge-goes-the-foe · Skitarii Rangers",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 13946ae60cb6e488, review:r11-purge-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "6e020d7c03e47331",
+  "where": "defilers-and-friends · Lord Exultant",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 79be6437c1fd2ce8, review:defilers-and-friends) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "faed026324a53f15",
+  "where": "defilers-and-friends · Tormentors",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 755306fabd8612bb, review:defilers2) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "635c119b4ba73b29",
+  "where": "infernal-lance · Knight Despoiler",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 6e09cf276a4d9bc3, review:infernal-lance) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "c7cd82cffd24dd01",
+  "where": "woof-woof · War Dog Executioner",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key e560acd173c99147, review:woof-woof) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "50f11699866b85db",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key e3851faea72b012e, review:import-lists) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "280da8fae38876b1",
+  "where": "lite-knights · Telemon Heavy Dreadnought",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 5eb9a1e967923752, review:lite-knights) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "9c478bee6d974ab0",
+  "where": "nerf-when · Marneus Calgar",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key e6085e546aadd2e6, review:nerf-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "0654d36c4cb36f0f",
+  "where": "nerf-when · Librarian in Phobos Armour",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key c2373661d53dd21e, review:nerf-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "f048fa625043a84f",
+  "where": "nerf-when · Eradicator Squad with Melta Rifles",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key d1896f0fb562f1be, review:nerf-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "9a1daa9d0938abce",
+  "where": "nerf-when · Deathwatch Terminator Squad",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 6450e771ea24010b, review:nerf-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "a08ca18e4c07f9d6",
+  "where": "fellhammer-siege-task-force · Dark Apostle",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key d0dc66d71af201b1, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "3835ae3178cf7096",
+  "where": "fellhammer-siege-task-force · Cultist Mob",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 797ded3561923cd9, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "a3ffb15928e17a6b",
+  "where": "fellhammer-siege-task-force · Havocs",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key ebd42db6df992477, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "c3fbc20b64d16697",
+  "where": "fellhammer-siege-task-force · Chaos Predator Annihilator",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 9e9f9fdd1693af6f, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "41c25852a4288faf",
+  "where": "fellhammer-siege-task-force · Chaos Predator Destructor",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key f001afb95531221a, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "6113d73a2061030a",
+  "where": "fellhammer-siege-task-force · Chaos Vindicator",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 728d1f6352e9325f, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "238b40532c4f9da7",
+  "where": "fellhammer-siege-task-force · Maulerfiend",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 878744a6a70c34e2, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "26f1eb16abeb0594",
+  "where": "navigator-sounds-op-ngl · Knight Defender",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 70a106ada2bff7f1, review:navigator) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "aba0ffd101aaf248",
+  "where": "tzeeeeentch · Lord of Change",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 9d8f935deac06384, review:tzeentch-data) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "41d0fda7d87ed5b1",
+  "where": "u-w0t-m8 · The Silent King",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 14c69e5e53a98c17, review:necrons) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "4fdc1355f63320f8",
+  "where": "u-w0t-m8 · Tesseract Vault",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 90135ce6b36d3068, review:necrons) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "d1effb4ba65eea22",
+  "where": "simple-but-effective · Ghazghkull Thraka",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key ffa43a43f77473b0, review:cooking) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "0df57f997c9dafd3",
+  "where": "simple-but-effective · Mozrog Skragbad",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key b67b8ee603e5076d, review:cooking) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "54c9e11ba06fe44d",
+  "where": "simple-but-effective · Nazdreg",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 69b9d2085c12011d, review:orks-data) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "6525faed7505572e",
+  "where": "simple-but-effective · Beastboss on Squigosaur",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 8453530fa9aad83e, review:m1-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "f4eca6a6a5f41b43",
+  "where": "simple-but-effective · Warboss in Mega Armour",
+  "verdict": "ok",
+  "why": "Same content as the judgement approved on main (key 67b08b1ddd0ff3f8, review:orks-data) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ {
+  "key": "d47d7f6911113a13",
+  "where": "standard · Lord on Juggernaut · Aggressive Advance",
+  "verdict": "ok",
+  "why": "na reason identical to the approved main judgement (key bf7d4ba433a820cb, review:r23-army); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ {
+  "key": "9678626157e7be31",
+  "where": "standard · Slaughterbound · Rage Eternal",
+  "verdict": "ok",
+  "why": "na reason identical to the approved main judgement (key 391330d40614737a, review:r23-army); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ {
+  "key": "476d760bf2af518b",
+  "where": "6-bigs · Knight Destrier · Thundercharge",
+  "verdict": "ok",
+  "why": "na reason identical to the approved main judgement (key 39bf8d0ae789149d, review:r9-knights); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ {
+  "key": "4d6edd2fe73e04d7",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Thundercharge",
+  "verdict": "ok",
+  "why": "na reason identical to the approved main judgement (key 1a4f47d32132aa44, review:r9-knights); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ {
+  "key": "0d7f0806474c1edb",
+  "where": "infernal-lance · Chaos Cerastus Knight Atrapos · Consumed with Hunger",
+  "verdict": "ok",
+  "why": "na reason identical to the approved main judgement (key 818b335ec8c3c435, review:infernal-lance); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ {
+  "key": "8585b1c883ba7de0",
+  "where": "infernal-lance · Chaos Cerastus Knight Lancer · Dark Fervour",
+  "verdict": "ok",
+  "why": "na reason identical to the approved main judgement (key c81efef17bbdafd5, review:infernal-lance); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ {
+  "key": "4803a0ab3137e76d",
+  "where": "infernal-lance · Knight Despoiler · Dread Dominion",
+  "verdict": "ok",
+  "why": "na reason identical to the approved main judgement (key 78ebdf095c5378b5, review:infernal-lance); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ {
+  "key": "f7c8a81a43b0d39b",
+  "where": "infernal-lance · Knight Ruinator · Close-range Killers",
+  "verdict": "ok",
+  "why": "na reason identical to the approved main judgement (key b97d5160a0bcbb39, review:infernal-lance); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ {
+  "key": "f29770aceed94d10",
+  "where": "big-demons-baby · Master of Executions · Forwards, For Blood!",
+  "verdict": "ok",
+  "why": "na reason identical to the approved main judgement (key 2bb0ef9ddb708873, review:big-demons-baby); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ {
+  "key": "d2ce6c32c2326df5",
+  "where": "navigator-sounds-op-ngl · Knight Destrier · Thundercharge",
+  "verdict": "ok",
+  "why": "na reason identical to the approved main judgement (key eb4465fedd8412be, review:navigator); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ {
+  "key": "cdee7450ad578242",
+  "where": "unitMods",
+  "verdict": "ok",
+  "why": "unitMods: identical to the approved main version (key e12a1305f3a3b8dd) except that helpedBy(u) is no longer concatenated: the help column (an AI reading attaching Daemonic Fury / Honoured Interred to non-TARGET units) is removed. GW TARGETs checked in verify/.cache/waha: Daemonic Fury \"One BLOOD LEGIONS unit from your army\", Honoured Interred \"One friendly ADEPTUS CUSTODES DREADNOUGHT unit\"; none of the 7 units losing the line has those keywords. Stratagem mods still come only from canTarget (needs from TARGET)."
+ },
+ {
+  "key": "fc76c552f98a135c",
+  "where": "u-w0t-m8 · Tesseract Vault",
+  "verdict": "ok",
+  "why": "Tesseract Vault Damaged: Wahapedia (verify/.cache/waha/ds/necrons_Tesseract-Vault.html) \"While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.\" The footnote reads -4 OC and the rest in GW's words, no hit penalty (correct: the band has none). derive.js damaged-oc is a general regex; derive report before/after: only this reading added (DATASHEETS.mods 130 -> 131)."
+ },
+ {
+  "key": "8cd31cc05ba70255",
+  "where": "weaponChoice",
+  "verdict": "ok",
+  "why": "weaponChoice: rows are rendered once each in data (GW) order (weaponRows loops over mine), so no row is dropped or duplicated; it only decides whether useLine writes the choice sentence. Melee: any models line with 2+ melee weapons (Select Weapons + EXTRA ATTACKS, said by useLine); ranged: a non-MONSTER/VEHICLE line with [CLOSE-QUARTERS] and other guns (Close-quarters), the same conditions the old weaponJoins drew as or/+ dividers. The carrier name is now set only when there is no choice; with a choice the sentence names the models line (snapshots: the only carrier label lost is SKITARII RANGER ALPHA, which the new sentence names). Snapshot line multisets old vs new: 58 \"+\" and 48 \"OR\" divider lines and 22 scope lines gone, 108 sentences added, all other weapon lines the same."
+ }
+]
