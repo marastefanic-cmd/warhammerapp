@@ -18,6 +18,11 @@
          calcNc, both, limit on rules) and app.html's Damage tab reads no rule's words at run time (no dmEffects, no extractor, no
          note / when / calc of a reading)
      G7  data.js BOXES is exactly what the words give (node verify/effects-migrate.js --write)
+     G9  the classes the extractor once got wrong (the review of the catalogue merge, result-catalog-merge.json): no box for the
+         enemy's attacks (a sentence, or a list's line, about attacks against the unit); no kind from a phase named only in a duration
+         ("until the end of your next Fight phase"); no box with a restriction to some targets ("attacks that target a hidden unit",
+         "targets a unit that is Battle-shocked") and no condition on its target; no box for its own unit's attacks in a stratagem used
+         after that unit attacked ("has shot"); each check bites on the boxes it was written for
      G8  every catalogue effect has a calc-test case (verify/calc-test.js: a case named 'fx:<id>'), and every custom modifier
      groups     every box of every list × unit × step is in exactly one of the five groups (DM_GROUPS)
      targets    every stratagem of the lists has a TARGET the closed patterns read (verify/derive.js stratNeeds, with this file's
@@ -73,6 +78,29 @@ for(const [key, o] of Object.entries(T)){
   for(const x of o.nc || []) if(!text.includes(flat(x.quote).replace(/\s*\.\s*$/, ''))) fail('G2', where, 'not counted, not GW’s words: “' + x.quote.slice(0, 80) + '”');
 }
 stats.boxes = nBox; stats.picks = nPill; stats.sources = Object.keys(T).length;
+// ---- G9: the classes the extractor once got wrong ----
+function g9(b, src){
+  const bad = [], lines = String(b.quote || '').split('\n').map(q => E.norm(q.replace(/^-\s+/, '')));
+  if(lines.some(n => X.DEFENCE.some(re => re.test(n))) || (b.lead && X.defenceLead({ bullet:true, lead:b.lead }))) bad.push('about the enemy\'s attacks (or attacks against the unit), not this unit\'s');
+  const all = E.norm([b.quote, b.lead || '', src.when || '', src.target || '', String(src.text || '').split('\n')[0]].join(' '));
+  if((b.kind === 'melee' || b.kind === 'ranged') && new RegExp(X.DURATION_RE.source).test(E.norm(b.quote)) && !X.kindOf(all)) bad.push('kind ' + b.kind + ' from a phase named only in how long it lasts');
+  for(const n of lines) if(X.TARGET_RESTR.test(n) && !X.hasTargetCond(b.on, n)) bad.push('a restriction to some targets (“' + X.TARGET_RESTR.exec(n)[0] + '”) and no condition on its target');
+  if(!b.reach && lines.some(n => X.afterAttack(src, n))) bad.push('its unit has already attacked (WHEN “' + X.plainCase(src.when) + '”): not for its own attacks');
+  return bad;
+}
+for(const [key, o] of Object.entries(T)){ const src = S.get(key); for(const b of boxesOf(o)) for(const why of g9(b, src)) fail('G9', key + ' ' + o.n, why); }
+// (bites: each check fails the box it was written for, as the extractor once made it)
+{ const strat = (when, target, effect) => ({ type:'strat', when, target, effect });
+  const BITES = [
+    ['Shield of Honour', { quote:'-1 to **hit rolls**.\n-1 to **wound rolls**.', fx:[['hit', -1], ['wound', -1]], on:[], kind:'melee', lead:'When an enemy model **engaged** with your unit selects targets, if that enemy model does not select your unit as the target of all of its attacks, that enemy model’s attacks have:' }, strat('Start of the Fight phase.', 'One friendly unit.', '')],
+    ['Enfilading Emergence', { quote:'Until the end of your next Fight phase, weapons equipped by models in your unit have the **[SUSTAINED HITS 1]** and **[IGNORES COVER]** abilities.', fx:[['sus', '1'], ['ignoresCover', true]], on:[], kind:'melee' }, strat('End of your Movement phase.', 'One **TYRANIDS** unit from your army that was set up as Reinforcements this turn.', '')],
+    ['Counterpredation', { quote:'Your unit’s attacks that target a **hidden** unit have +1 **S** and **AP**.', fx:[['s', 1], ['ap', 1]], on:[], kind:'melee' }, strat('Fight phase.', 'One unit.', '')],
+    ['Draught of Terror', { quote:'In addition, until the end of the phase, each time such a weapon targets a unit that is **Battle-shocked**, you can re-roll the **Wound roll**.', fx:[['rrWound', true]], on:[], kind:'all' }, strat('Your Shooting phase or the Fight phase.', 'One unit.', '')],
+    ['Psy-Chaff Volley', { quote:'Attacks that target a **prosecuted** unit have +1 **AP**.', fx:[['ap', 1]], on:[['q', 'that target a prosecuted unit']], kind:'ranged' }, strat('Your Shooting phase, when a friendly **PROSECUTOR SQUAD** unit has shot.', 'That **PROSECUTOR SQUAD** unit.', '')]
+  ];
+  let bit = 0;
+  for(const [name, b, src] of BITES){ if(g9(b, src).length) bit++; else fail('G9', 'bite', 'the box once made for ' + name + ' passes G9'); }
+  stats.g9Bites = bit + ' of ' + BITES.length; }
 // G1 (the schema): a box, a pick, a scope, a limit, a part, a source carry the fields the script writes and no other (a hand note on a box
 // fails), in what the words give (T) and in data.js BOXES alike
 { const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both', 'embarked']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool', 'excl']),
@@ -96,7 +124,7 @@ for(const [key, src] of S){
   for(const u of X.unitsOf(src)){
     const n = E.norm(u.s);
     // (about attacks against the unit, or an enemy's, and a sentence continuing one: "If that Battle-shock test was failed, … as well")
-    if(X.DEFENCE.some(re => re.test(n)) || (defPrev && (/^if\b/.test(n) || /\bas well\.?$/.test(n)))){ defPrev = true; continue; }
+    if(X.DEFENCE.some(re => re.test(n)) || X.defenceLead(u) || (defPrev && (/^if\b/.test(n) || /\bas well\.?$/.test(n)))){ defPrev = true; continue; }
     defPrev = false;
     if(/\b\d+" a[\dd]+ (?:bs|ws)\d\+|\bmelee a[\dd]+ ws\d\+/.test(n)) continue;    // a weapon's profile line
     if(src.type === 'strat' && /\bthat was just destroyed\b/.test(E.norm(src.target))) continue;
@@ -267,7 +295,7 @@ stats.strats = allStrats.length; stats.unparsed = unparsed; stats.needsDiffer = 
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/evidence.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('evidence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.sources + ' sources, ' + stats.boxes + ' boxes and ' + stats.picks + ' picks made by script from GW’s words (G1-G8); the army, unit and other-units groups of ' + stats.sourcesChecked + ' units as the database gives them; ' +
+console.log('evidence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.sources + ' sources, ' + stats.boxes + ' boxes and ' + stats.picks + ' picks made by script from GW’s words (G1-G9; ' + stats.g9Bites + ' G9 bites); the army, unit and other-units groups of ' + stats.sourcesChecked + ' units as the database gives them; ' +
   stats.strats + ' stratagems read from their TARGET, shown for ' + stats.units + ' units exactly as their keywords meet it (' + stats.bite + '); ' + stats.targetCases + ' fixed TARGET cases of alternatives with an exclusion');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);
