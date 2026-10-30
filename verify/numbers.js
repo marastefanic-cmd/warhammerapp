@@ -1,8 +1,10 @@
 // The gate step numbers: every profile number a unit screen shows is GW's datasheet's, as Wahapedia transcribes it (verify/.cache/waha/ds),
 // with GW's own documents on top (a Faction Pack's errata, a newer codex): a stat of each model type (M T Sv W Ld OC InSv), a weapon's
 // Range A BS|WS S AP D, and the number in a weapon keyword ("RAPID FIRE 2", "ANTI-INFANTRY 4+", "MELTA 2").
-//   A value a rule of the list changed (its row's from names the rule: a granted value, checked against BSData by verify/bsdata.js) is
-//   compared as the datasheet has it. Every other difference fails, unless verify/deviations-numbers.json declares it with GW's
+//   A value a rule of the list changed (its row's from names the rule: a granted value) is compared by its base: the datasheet's own
+//   value, else BSData's value before the rules (verify/out/bsdata.json grants, from verify/bsdata.js), against GW's; and the value shown
+//   must be BSData's after the rules. A granted value with no base found fails. A keyword a rule gives must have its number in that rule's
+//   words. A numbered keyword the page has not, that no rule gives, is a difference like any other. Every other difference fails, unless verify/deviations-numbers.json declares it with GW's
 //   evidence ({ ds, kind, row, field, app, waha, reason, evidence }; status 'pending': noted on every run, not passed in silence). A row
 //   the page has none of (a model or weapon Wahapedia's datasheet does not print: Sir Hekhtur's) is listed as unchecked; one that is not
 //   declared fails too. A declaration nothing matches fails (stale).
@@ -17,6 +19,13 @@ const DEVS = readJSON(path.join(ROOT, 'verify/deviations-numbers.json'), []);
 const nv = v => String(v == null ? '' : v).replace(/[−–—‐‑]/g, '-').replace(/["”″\s*]/g, '').toLowerCase().replace(/^n\/a$/, '-').replace(/^-$/, '-');
 const STATS = [['M', 'M'], ['T', 'T'], ['Sv', 'SV'], ['W', 'W'], ['Ld', 'LD'], ['OC', 'OC'], ['InSv', 'INSV']];
 const n = O.n;
+// a granted value's base: BSData's value before the rules of the list change it (verify/bsdata.js, verify/out/bsdata.json grants), which is then
+// compared with GW's datasheet as every other value; the value shown must be BSData's after the rules
+const GR = new Map(((readJSON(path.join(ROOT, 'verify/out/bsdata.json'), {}) || {}).grants || []).map(g => [[g.army, g.unit, g.kind, g.idx, g.key].join('|'), g]));
+// the words of a rule the list has, by its name: the unit's abilities, the faction's army and detachment rules, enhancements, stratagems
+const ruleText = (a, u, name) => { const F = D.factions[a.faction] || {}, ds = Object.values(F.detachments || {});
+  const all = [].concat(u.abilities || [], F.armyRules || [], ds.flatMap(d => [d.rule].concat(d.moreRules || [], d.enhancements || [], d.stratagems || [])).filter(Boolean));
+  return all.filter(x => x.name === name).map(x => [x.text, x.effect].filter(Boolean).join(' ')).join(' ') || null; };
 const fails = [], notes = [], unchecked = [], used = new Set(), seen = new Set(), shown = new Map();
 const pageDev = (ds, kind, row) => { const i = DEVS.findIndex(d => d.ds === ds && d.kind === kind && d.row === row && d.field === 'page'); if(i >= 0) used.add(i); return i >= 0; };
 const counts = { stats:0, weapons:0, keywords:0, granted:0 };
@@ -64,6 +73,14 @@ for(const a of D.armies) for(const u of [...a.units, ...(a.refs || [])]){
   // the datasheet's own value of a field a rule of the list changed (from): the DATASHEETS row's
   const sheetIdOf = i => a.faction + '/' + String(parts[i].name).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'`]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const own = (i, kind, r, f) => { const s = D.datasheets[sheetIdOf(i)]; const row = s && (s[kind] || []).find(x => x.name === String(r.name).replace(/ ×\d+$/, '') && (x.group || null) === (r.group || null)); return row ? row[f] : undefined; };
+  // a granted value's base (the datasheet's own, else BSData's before the rules); none: a failure, never a silent pass
+  const base = (a0, u0, kind, r, f, dsv, id, row) => {
+    const g = GR.get([a.id, u.id, kind, (u[kind] || []).indexOf(r), f].join('|'));
+    if(g && g.after !== undefined && nv(g.after) !== nv(r[f])) differ({ ds:id, kind, row, field:f, app:r[f], waha:'(BSData with the rules: ' + g.after + ')', file:'' });
+    const b = dsv !== undefined ? dsv : g && g.before;
+    if(b === undefined) differ({ ds:id, kind, row, field:f, app:r[f], waha:'(granted by ' + [].concat(r.from[f]).join(', ') + ': no base value found)', file:'' });
+    return b;
+  };
   // stats: each model type
   for(const r of u.stats || []){
     // (in an attached unit: the part whose page names this model, else the part of its name, else the bodyguard)
@@ -79,7 +96,7 @@ for(const a of D.armies) for(const u of [...a.units, ...(a.refs || [])]){
       if(pr[g] === undefined) continue;
       counts.stats++;
       let v = r[f];
-      if(r.from && r.from[f] !== undefined){ counts.granted++; v = own(i, 'stats', r, f); if(v === undefined) continue; }
+      if(r.from && r.from[f] !== undefined){ counts.granted++; v = base(a, u, 'stats', r, f, own(i, 'stats', r, f), id, String(r.name).replace(/ ×\d+$/, '')); if(v === undefined) continue; }
       shown.set([id, 'stats', String(r.name).replace(/ ×\d+$/, ''), f].join('|'), v);
       if(nv(v) !== nv(pr[g])) differ({ ds:id, kind:'stats', row:String(r.name).replace(/ ×\d+$/, ''), field:f, app:v, waha:pr[g], file:P.file });
     }
@@ -94,16 +111,23 @@ for(const a of D.armies) for(const u of [...a.units, ...(a.refs || [])]){
     for(const [f, g] of [['range', 'range'], ['A', 'A'], [kind === 'ranged' ? 'BS' : 'WS', 'skill'], ['S', 'S'], ['AP', 'AP'], ['D', 'D']]){
       counts.weapons++;
       let v = r[f];
-      if(r.from && r.from[f] !== undefined){ counts.granted++; v = own(i, kind, r, f); if(v === undefined) continue; }
+      if(r.from && r.from[f] !== undefined){ counts.granted++; v = base(a, u, kind, r, f, own(i, kind, r, f), id, rowName); if(v === undefined) continue; }
       shown.set([id, kind, rowName, f].join('|'), v);
       if(nv(v) !== nv(w[g])) differ({ ds:id, kind, row:rowName, field:f, app:v, waha:w[g], file:P.file });
     }
     for(const k of r.kw || []){
       if(!/\d/.test(k)) continue;
-      if(r.from && r.from[k] !== undefined){ counts.granted++; continue; }
+      if(r.from && r.from[k] !== undefined){
+        // a keyword a rule of the list gives: its number as the rule's words give it ("[SUSTAINED HITS 1]")
+        counts.granted++; counts.keywords++;
+        const t = [].concat(r.from[k]).map(x => ruleText(a, u, x)).filter(Boolean).join(' ').replace(/\*\*/g, '').toUpperCase(), want = k.replace(/:.*$/, '').trim().toUpperCase();
+        if(!t || !t.includes(want)) differ({ ds:id, kind, row:rowName, field:'kw ' + k.replace(/\s*\d.*$/, ''), app:k, waha:'(granted by ' + [].concat(r.from[k]).join(', ') + ': ' + (t ? 'its words do not give ' + want : 'no words of it found') + ')', file:'' });
+        continue;
+      }
       const gk = w.kw.find(x => O.kwBase(x) === O.kwBase(k) && (!/^ANTI-/i.test(k) || n(x.replace(/\s*\d.*$/, '')) === n(k.replace(/\s*\d.*$/, ''))));
-      if(!gk) continue;   // (a keyword the page has not: keywords, not numbers; verify/bsdata.js and verify/nr.js)
       counts.keywords++;
+      // (a numbered keyword the page has not, and no rule of the list gives: a difference, declared or failed)
+      if(!gk){ differ({ ds:id, kind, row:rowName, field:'kw ' + k.replace(/\s*\d.*$/, ''), app:k, waha:'–', file:P.file }); continue; }
       const num = x => (String(x).replace(/:.*$/, '').match(/D?\d+\+?(?:[+-]\d+)?/gi) || []).join(' ').toLowerCase();
       if(num(k) !== num(gk)) differ({ ds:id, kind, row:rowName, field:'kw ' + k.replace(/\s*\d.*$/, ''), app:k, waha:gk, file:P.file });
     }
