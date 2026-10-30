@@ -12,6 +12,9 @@
 //               every reading (mods, aura, guard, a rule's or ability's reading columns) the text it was read from (readOf)
 //   readings    verify/readings.js: every ability whose text states a conditional bonus ("if this unit is riled up, … [X]") has a
 //               reading on its unit; today's gaps are listed for the owner (verify/readings-gaps.json), a new one fails
+//   evidence    verify/evidence.js: every box of the Damage tab is made by script from GW's words (data.js BOXES, effects.js), stands on
+//               them (G1-G8), sits in one of its five groups; every stratagem's TARGET is read by fixed rules and a unit is shown
+//               exactly the stratagems its keywords meet
 //   invariants  verify/invariants.js: mechanical rules (phases, eligibility, cited numbers, counts)
 //   derive      verify/derive.js: phases, turn, needs and tags derived from the rules text by fixed rules; every label
 //               that agrees with data.js today must keep agreeing (verify/derive-agreed.json); differences are listed, not failed
@@ -56,11 +59,12 @@ const step = (name, args, env) => {
 };
 
 // the verified files: the app, its data, the calculator's engine and the list import
-const hash = sha(['app.html', 'data.js', 'calc.js', 'ask.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join(''));
+const hash = sha(['app.html', 'data.js', 'calc.js', 'effects.js', 'ask.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join(''));
 step('data', ['check.js']);
 step('tables', ['verify/tables.js']);
 step('fingerprints', ['verify/tables.js', '--fingerprints']);
 step('readings', ['verify/readings.js']);   // abilities with a conditional bonus have a reading
+step('evidence', ['verify/evidence.js']);   // the Damage tab's boxes: by script from GW's words, in their groups; stratagems by TARGET
 step('invariants', ['verify/invariants.js']);
 step('derive', ['verify/derive.js']);
 step('choice', ['verify/choice.js']);

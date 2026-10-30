@@ -589,7 +589,10 @@ function needsOf(V, unit, reasons){
   // the clause after the unit, up to the end of its sentence
   const clause = unit.after.split(/[.;]/)[0];
   const ex = /^\s*(?:from your army\s*)?\(excluding ([^)]*)\)/i.exec(unit.after) || /^[^(]{0,60}?\(excluding ([^)]*)\)/i.exec(clause);
-  if(ex){ n.none.push(...excluded(V, ex[1])); reasons.push({ rule:'excluding', match:ex[0].trim().replace(/\*\*/g, '') }); }
+  // (a run of several keywords, "PINK HORRORS": a unit with all of them is excluded, unless; GW's Pink Horrors have PINK and HORRORS)
+  if(ex){ for(const part of [...prepBold(ex[1]).matchAll(/\*\*([^*]+)\*\*/g)].flatMap(m => m[1].split(/\s*\/\s*|\s*,\s*|\s+or\s+|\s+and\s+/))){ const ks = tokens(V, part);
+      if(ks.length > 1 && !n.unless) n.unless = { all:ks }; else n.none.push(...ks); }
+    reasons.push({ rule:'excluding', match:ex[0].trim().replace(/\*\*/g, '') }); }
   const cannot = /\bthat cannot \*\*([^*]+)\*\*/i.exec(clause);
   if(cannot){ n.none.push(...tokens(V, cannot[1])); reasons.push({ rule:'cannot', match:cannot[0].replace(/\*\*/g, '') }); }
   const withAb = /^\s*(?:from your army\s*)?with the \*\*([^*]+)\*\* ability/i.exec(unit.after);
@@ -605,7 +608,9 @@ function mergeNeeds(a, b){
 
 function stratNeeds(V, s){
   const reasons = [];
-  const target = norm(s.target), when = norm(s.when).split(/\n/)[0];
+  // (struck words, ~~WAR DOG CHARACTER~~, are Wahapedia's styling of a keyword the faction lacks: kept)
+  // (norm drops the ~~ markers and keeps the words; a struck word not in bold, ~~MONSTER~~, is Wahapedia's mark on a keyword: bold)
+  const target = norm(String(s.target).replace(/~~([^~*]+)~~/g, '**$1**')), when = norm(s.when).split(/\n/)[0];
   const first = target.split(/(?<=\.)\s+/)[0];
   let unit = friendlyUnit(V, first, { any:true });
   if(!unit) return { how:'none', reasons:[{ rule:'no-unit', match:clip(plain(first)) }] };
@@ -1616,3 +1621,5 @@ if(require.main === module){
   process.exit(drift.length || hand.length || missing.length || staleUnread.length || items.tablesStale || ckStale ? 1 : 0);
 }
 module.exports = { derive, ruleTables, readingsOf, vocab, tidyNeeds, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+// (the keyword-phrase readers, for verify/effects-extract.js: who a rule's sentence reaches, which targets it names)
+Object.assign(module.exports, { norm, plain, prepBold, parseRun, friendlyUnit, needsOf, tokens, excluded, RUN });

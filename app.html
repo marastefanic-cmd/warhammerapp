@@ -1101,6 +1101,7 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 <script src="verified.js"></script>
 <script src="data.js"></script>
 <script src="calc.js"></script>
+<script src="effects.js"></script>
 <script src="import.js"></script>
 <script>
 'use strict';
@@ -1857,7 +1858,7 @@ const HOW_TITLE = 'How the app works and why you should be able to trust the dat
 // the tables of data.js, in the order the screen draws them: name, key in D, what one row is (verify/columns.json says it for most)
 const HW_TABLES = [['ARMIES', 'armies'], ['DATASHEETS', 'datasheets'], ['FACTIONS', 'factions'], ['CORE_STRATAGEMS', 'coreStratagems'], ['RULES', 'rules'],
   ['RULE_ALIASES', 'ruleAliases'], ['RULE_SRC', 'ruleSrc'], ['CONCEPTS', 'concepts'], ['GRANTS', 'grants'], ['RULE_OPTIONS', 'ruleOptions'],
-  ['CHECKLIST', 'checklist'], ['BS_IDS', 'bsIds'], ['VERSION', 'version']];
+  ['CHECKLIST', 'checklist'], ['BOXES', 'boxes'], ['BS_IDS', 'bsIds'], ['VERSION', 'version']];
 const HW_WHAT = { CHECKLIST:'per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js',
   VERSION:'the data’s version: one value, raised with every release' };
 // CHECKLIST's columns (verify/derive.js writes them; verify/render.js fails on one this does not name)
@@ -1868,7 +1869,7 @@ const HW_SRC = { gw:'GW', bsdata:'BSData', newrecruit:'New Recruit', wahapedia:'
 const HW_LAYERS = [
   ['mech', 'Mechanical', 'copied by a program from GW, BSData, New Recruit or Wahapedia, or worked out from them by a program; the tag names the source.'],
   ['sum', 'AI summary', 'a one-line gist of a stratagem, written by AI. It carries a fingerprint of the text it sums up: a change in GW’s words flags it to be read again.'],
-  ['read', 'AI reading', 'the numbers and conditions behind the footnotes, the “When targeted” lines and the Damage tab, read from GW’s words by AI (a few by a program): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.'],
+  ['read', 'AI reading', 'the numbers and conditions behind the datasheets’ footnotes and the “When targeted” lines (not the Damage tab’s: its boxes are made by a program from GW’s words), read from GW’s words by AI (a few by a program): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.'],
   ['hand', 'Hand', 'a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.']];
 // a column's layer: its source in verify/columns.json (verify/tables.js fails unless ai-summary and ai-reading are exactly what it fingerprints)
 const hwLayer = (t, col, src) => ({ 'ai-summary':'sum', 'ai-reading':'read', hand:'hand' })[src] || 'mech';
@@ -2083,13 +2084,15 @@ function screenArmy(){
    list: half range, the weapons and their profiles, the situation and your rules, your stratagems, each with its live effect and
    why it is ticked or not. Both plays the shooting, then the charge, then the fight, in the same games (calc.js play). A choice's
    effect is the turn played again with that one choice changed, in the same games: first from 2,000 games, then from 10,000.
-   A box starts ticked only when the data records that its rule applies here (always, or the target's T: always/vs maxT), or when a
-   fact of the table the player said holds is its condition (cond: charged, riled up, an objective, stationary, the closest target);
-   a rule about the target's keywords (vs) is a box the player ticks, and so is a weapon's ability limited to some targets; a
-   stratagem is never ticked for the player. Nothing is ever disabled: a rule the rules rule out here (its phase or turn) starts
-   unticked with the reason, and if the player ticks it anyway it counts as if its condition held, named everywhere as the
-   player's own call. A rule counts only when every word of its footnote is understood (dmEffects, or the numbers the data records
-   for it), and only for the weapons and models it names (dmReach). "How this is worked out" (dmHow) says what the calculator does
+   The rule boxes are the database's: the list's army and detachment rules, the unit's own abilities, what other units of the list give
+   it (an aura GW tags (Aura), a unit another unit selects), the stratagems it can be the TARGET of, and the Custom modifiers; each in
+   one of those five groups (DM_GROUPS). What a box does comes from GW's words by script (data.js BOXES, verify/effects-migrate.js), in
+   numbers by effects.js: no AI reads a rule, and a source with nothing the script can count is listed with GW's words, "not counted in
+   the Damage tab". Every box starts unticked (the owner's decision, 29 Oct 2026); a fact of the table the player says holds (charged,
+   riled up, an objective, stationary, the closest target) ticks the boxes whose condition it is; a stratagem is never ticked for the
+   player. Nothing is ever disabled: a rule the rules rule out here (its phase or turn, the target's T) starts unticked with the reason,
+   and if the player ticks it anyway it counts as if its condition held, named everywhere as the player's own call. A box counts only for
+   the weapons and models it names (dmReach). "How this is worked out" (dmHow) says what the calculator does
    where the rules leave a choice. */
 // "yours" in the Damage tab: the list open
 const dmMe = () => army();
@@ -2111,86 +2114,156 @@ function dmState(){
 const DM_ONE_OF = { 'c:cq':['c:cqo', 'c:indirect', 'c:snap', 'c:heavy'], 'c:cqo':['c:cq', 'c:indirect', 'c:snap', 'c:heavy'], 'c:indirect':['c:cq', 'c:cqo', 'c:snap'], 'c:snap':['c:cq', 'c:cqo', 'c:indirect', 'c:heavy'], 'c:heavy':['c:cq', 'c:cqo', 'c:snap'] };
 // run fn as if list a were the open one (unitMods, auraMods, allStratagems and defenceItems read army())
 function inArmy(a, fn){ const was = cur.army; cur.army = a.id; try { return fn(); } finally { cur.army = was; } }
-// a footnote's words → numbers, only when every word is understood; otherwise null (listed, not counted).
-// empty: words that only say when (a value set on the weapon carries the change itself)
-function dmEffects(note, empty){
-  let t = ' ' + String(note || '').toLowerCase().replace(/[’']/g, '').replace(/[–−]/g, '-') + ' ';
-  const e = {};
-  const take = (re, f) => { t = t.replace(re, (...m) => { f(m); return ' '; }); };
-  // one die re-rolled (calc.js oneHit, oneWound, oneDmg; oneEither: a hit or a wound roll; oneAny: a hit, wound or damage roll)
-  take(/re-?roll one hit roll,? (?:re-?roll )?one wound roll(?:,)? and (?:re-?roll )?one damage roll/g, () => { e.oneHit = 1; e.oneWound = 1; e.oneDmg = 1; });
-  take(/re-?roll one hit roll,? (?:re-?roll )?one wound roll(?:,)? or (?:re-?roll )?one damage roll/g, () => { e.oneAny = 1; });
-  take(/re-?roll one hit roll and (?:re-?roll )?one wound roll/g, () => { e.oneHit = 1; e.oneWound = 1; });
-  take(/re-?roll one hit roll or (?:re-?roll )?one wound roll/g, () => { e.oneEither = 1; });
-  take(/re-?roll (?:the )?hit (?:rolls )?and (?:the )?wound rolls of 1/g, () => { e.rrHit = '1s'; e.rrWound = '1s'; });
-  take(/re-?roll hit rolls of 1 and wound rolls of 1/g, () => { e.rrHit = '1s'; e.rrWound = '1s'; });
-  take(/re-?roll (?:the )?hit (?:rolls? )?and (?:the )?wound rolls?/g, () => { e.rrHit = 'all'; e.rrWound = 'all'; });
-  take(/re-?roll (?:the )?hit rolls? of 1/g, () => { e.rrHit = '1s'; });
-  take(/re-?roll (?:the )?wound rolls? of 1/g, () => { e.rrWound = '1s'; });
-  take(/re-?roll (?:the )?hit rolls?/g, () => { e.rrHit = 'all'; });
-  take(/re-?roll (?:the )?wound rolls?/g, () => { e.rrWound = 'all'; });
-  take(/([+-]\d) to hit(?: rolls?)?/g, m => { e.hit = (e.hit || 0) + +m[1]; });
-  take(/([+-]\d) to wound(?: rolls?)?/g, m => { e.wound = (e.wound || 0) + +m[1]; });
-  take(/\+(\d+)" range/g, m => { e.range = (e.range || 0) + +m[1]; });   // every weapon is in range; this moves half range (24.25, 24.30)
-  take(/\+(\d) a\b/g, m => { e.a = (e.a || 0) + +m[1]; });
-  take(/\+(\d) s\b/g, m => { e.s = (e.s || 0) + +m[1]; });
-  take(/\+(\d) ap\b|improve ap by (\d)/g, m => { e.ap = (e.ap || 0) + +(m[1] || m[2]); });
-  take(/\+(\d) d\b/g, m => { e.d = (e.d || 0) + +m[1]; });
-  take(/\[lethal hits\]/g, () => { e.lethal = true; });
-  take(/\[sustained hits (\w+)\]/g, m => { e.sus = m[1].toUpperCase(); });
-  take(/\[devastating wounds\]/g, () => { e.dev = true; });
-  take(/\[ignores cover\]/g, () => { e.ignoresCover = true; });
-  take(/\[twin-linked\]/g, () => { e.twin = true; });
-  take(/\[lance\]/g, () => { e.lance = true; });
-  take(/\[precision\]/g, () => { e.precision = true; });
-  take(/\[cleave (\d+)\]/g, m => { e.cleave = +m[1]; });
-  take(/can ignore any or all modifiers to bs and any or all modifiers to the hit roll/g, () => { e.ignoreHitMods = true; });
-  take(/\[hazardous\]/g, () => { e.hazardous = true; });   // its hazard rolls, after the unit's attacks
-  take(/\[(?:assault|pistol)\]/g, () => {});   // these change nothing in the numbers
-  take(/\(and [+-]\d+ oc\)/g, () => {});                 // a Damaged band's OC: not a number here
-  take(/until the end of the (?:turn|phase)|in your shooting phase|in the fight phase|this turn/g, () => {});   // when: the tick box says it
-  // what is left must be joining words only
-  t = t.replace(/\b(?:and|also|can|have|has|this unit s|ranged|melee|weapons|attacks|rolls)\b|[,;.·]/g, ' ').trim();
-  return t || (!empty && !Object.keys(e).length) ? null : e;
-}
-// the words of a rule that name the weapons it is for: "Psychic weapons +3 S", "Hellforged weapons have …",
-// "CHARACTER models +1 A" (a WHEN can name them too: "Psychic weapons, your Shooting phase")
-function dmScope(m){
-  let note = String(m.note || ''), f = null, x;
-  if((x = /^character models:?\s*/i.exec(note))){ note = note.slice(x[0].length); f = { char:true }; }
-  else if((x = /^([a-z][\w’'-]*) weapons(?: only)?:?\s*(?:have\s+)?/i.exec(note)) && !/^(ranged|melee)$/i.test(x[1])){ note = note.slice(x[0].length); f = /^psychic$/i.test(x[1]) ? { kw:'PSYCHIC' } : { name:x[1].toLowerCase() }; }
-  if(!f && /^psychic weapons\b/i.test(m.when || '')) f = { kw:'PSYCHIC' };
-  return { note, f };
-}
-// a rule of one model ("this model's melee attacks", "weapons equipped by the bearer")
-const DM_MODEL_RULE = /\bthis model[’']s\b|\bequipped by (?:this model|the bearer)\b|\bthe bearer[’']s\b|\bthis model makes\b/i;
-// how many of a weapon's models a rule applies to, as the datasheet's footnotes say: a rule for one weapon (weapon),
-// one model of an attached unit (who), the weapons its words name, the part of an attached unit a "this model" rule
-// is on (19.04), the models a models line names ("2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)")
-function dmReach(u, it, m, sc){
-  const name = itemName(it), n = +it.n || 1, part = it.who || '';
-  if(m.weapon && m.weapon !== name) return 0;
-  if(m.who && part !== m.who) return 0;
-  if(sc.f){
-    if(sc.f.kw && !it.profiles.some(p => p.kw.some(k => k.toUpperCase() === sc.f.kw))) return 0;
-    if(sc.f.name && !name.toLowerCase().startsWith(sc.f.name)) return 0;
-    if(sc.f.char && !(u.leads ? charsOf(u).some(c => c.name === part) : hasKw(u, 'Character'))) return 0;
+// ---- the boxes: the rules, abilities and stratagems of the list as the database has them (which ones: by tags and keywords alone),
+// each with the boxes read from GW's words by script (data.js BOXES, verify/effects-migrate.js; what each effect does in the numbers:
+// effects.js). Nothing here reads a rule's words: an effect, its value, its conditions, the weapons and the units it reaches are data ----
+const dmStratText = s => ['WHEN: ' + s.when, 'TARGET: ' + s.target, 'EFFECT: ' + s.effect, s.restrictions ? 'RESTRICTIONS: ' + s.restrictions : ''].filter(Boolean).join('\n');
+const dmRuleText = r => r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : '');
+// where BOXES keeps a source: a| an ability, r| an army or detachment rule, s| a stratagem, c| a core weapon ability, + the hash of its
+// name and text (ckHash, as verify/derive.js and verify/effects-migrate.js make it)
+const DM_KEY = { a:ab => 'a|' + ckHash(ab.name + '\n' + ab.text), r:r => 'r|' + ckHash(r.name + '\n' + dmRuleText(r)), s:s => 's|' + ckHash(s.name + '\n' + dmStratText(s)), c:(n, t) => 'c|' + ckHash(n + '\n' + t) };
+const dmBoxesOf = key => (D.boxes || {})[key] || null;
+// the five groups of the list, in this order: each box is in exactly one, by the row it reads (dmGroupOf: the source)
+const DM_GROUPS = [['army', 'Army rules'], ['unit', 'Unit rules'], ['other', 'From other units in your list'], ['strat', 'Stratagems'], ['custom', 'Custom modifiers']];
+// effects that change these numbers (an [ASSAULT] box changes nothing here)
+const dmHasFx = fx => (fx || []).some(([id, p]) => WH_EFFECTS.FX[id] && WH_EFFECTS.FX[id].mod(p) != null);
+// the friendly units a box reaches (an aura, a unit another unit selects, a rule's units), met by this unit
+const dmReaches = (x, u) => !x || matches(x, u);
+// an army rule a detachment rule of the list gives to units by keyword (GRANTS, verify/derive.js: Might of Khorne gives BLOOD LEGIONS units
+// the Blessings of Khorne): the grant, for this unit
+const dmGrantOf = (A, u, name) => { const rs = inArmy(A, () => detachments().flatMap(d => detRules(d))).map(r => r.name);
+  return (D.grants || []).find(g => g.type === 'ability' && g.grants === name && isObj(g.to) && matches(g.to, u) && rs.some(n => String(g.rule).endsWith('· ' + n))) || null; };
+// a core rule with its value in its name (Damaged 5): its glossary entry, with the name
+const dmCoreText = name => { if(D.rules[name]) return D.rules[name]; const k = ((D.ruleAliases || []).find(([re]) => re.test(name)) || [])[1]; return k && D.rules[k] && /\d/.test(name) ? name + ': ' + D.rules[k].replace(/\bequal to or less than X\b/g, 'equal to or less than ' + /\d+/.exec(name)[0]) : null; };   // (as verify/effects-migrate.js coreText)
+// every source of boxes for your unit, by group: the army rules on its Rules line (or a detachment rule gives it) and the detachment
+// rules whose needs it meets; its own abilities (its enhancement's, its attached parts'), the core weapon abilities of its weapons;
+// the abilities of the other units of the list whose boxes reach it (an aura GW tags (Aura), a unit another unit selects); the
+// stratagems it can be the TARGET of (canTarget: their needs, from TARGET)
+// what of a rule the list already printed into the unit's weapons (a weapon's from: the keyword or characteristic and the rule that gives
+// it, marked + on the weapon): its box does not count it again
+const dmBakedOf = (au, name) => [...new Set([].concat(au.ranged || [], au.melee || []).flatMap(w => Object.entries(w.from || {}).filter(([, v]) => String(v).split(/\s*,\s*/).includes(name)).map(([k]) => String(k).toUpperCase())))];
+const DM_STAT_OF = { a:['A'], s:['S'], d:['D'], ap:['AP'], skill:['WS', 'BS'] };
+const dmBaked = (keys, id, p) => { if(!keys || !keys.length) return false; if(DM_STAT_OF[id]) return DM_STAT_OF[id].some(k => keys.includes(k));
+  // (a keyword against the weapon's keywords only: +S printed in is no [SUSTAINED HITS], +D no [DEVASTATING WOUNDS])
+  const l = String(WH_EFFECTS.fxLabel([[id, p]])).replace(/^\[|\]$/g, '').toUpperCase(), kws = keys.filter(k => !/^(?:A|S|D|AP|WS|BS)$/.test(k));
+  return !!l && kws.some(k => k.startsWith(l) || l.startsWith(k)); };
+function dmSources(A, au){
+  const F = factionOf(A), out = [], seen = new Set();
+  const put = x => { const k = x.grp + '|' + x.key; if(seen.has(k)) return; seen.add(k); const bk = dmBakedOf(au, x.name); if(bk.length) x.baked = bk; out.push(x); };
+  // (and an army rule of the list whose boxes reach the unit: a Ritual of the Cabal of Sorcerers, manifested by a model with it, for every
+  // THOUSAND SONS model of the army)
+  for(const r of F.armyRules){ const own = hasRule(au, r.name), g = own ? null : dmGrantOf(A, au, r.name);
+    const reach = !own && !g && A.units.some(x => hasRule(x, r.name)) && ((dmBoxesOf(DM_KEY.r(r)) || {}).b || []).some(b => b.reach && dmReaches(b.reach, au));
+    if(own || g || reach) put({ grp:'army', name:r.name, rule:r.name, key:DM_KEY.r(r), text:dmRuleText(r), ar:r, via:g, reachOnly:reach }); }
+  for(const r of inArmy(A, () => unitDetRules(au))) put({ grp:'army', name:r.name, rule:r.name, key:DM_KEY.r(r), text:dmRuleText(r) });
+  for(const ab of au.abilities || []) if(!/^Damaged: /i.test(ab.name)) put({ grp:'unit', name:ab.name, key:DM_KEY.a(ab), text:ab.text, ab, src:au });
+  for(const w of [].concat(au.ranged || [], au.melee || [])) for(const k of w.kw || []){ const n = Object.keys(D.rules).find(r => r.toLowerCase() === String(k).toLowerCase());
+    if(n && dmBoxesOf(DM_KEY.c(n, D.rules[n]))) put({ grp:'unit', name:n, key:DM_KEY.c(n, D.rules[n]), text:D.rules[n], core:true }); }
+  for(const r of au.rules || []){ if(!/\d/.test(r) || D.rules[r]) continue; const t = dmCoreText(r); if(t && dmBoxesOf(DM_KEY.c(r, t))) put({ grp:'unit', name:r, key:DM_KEY.c(r, t), text:t, core:true }); }
+  // (the same aura from two units is one box: an aura applies once, 22.01; one the unit has itself is its own)
+  const own = new Set(out.map(x => x.key));
+  for(const x of A.units) if(x !== au) for(const ab of x.abilities || []){
+    const key = DM_KEY.a(ab), o = dmBoxesOf(key); if(!o || own.has(key)) continue;
+    const aura = /\baura\b/i.test(ab.tag || '');
+    if((o.b || []).some(b => b.reach && dmReaches(b.reach, au)) || (aura && o.reach && dmReaches(o.reach, au))) put({ grp:'other', name:ab.name, key, text:ab.text, ab, src:x, aura });
   }
-  // a rule for one model of the unit (oneModel: Clever Know-wotz picks one ORKS VEHICLE model): the weapons of one model of the
+  for(const s of inArmy(A, () => allStratagems().filter(s => canTarget(s, au)))) put({ grp:'strat', name:s.name, strat:s.id, cp:s.cp, key:DM_KEY.s(s), text:dmStratText(s), s });
+  // (a stratagem used on another unit of the list whose words reach this one: Daemonic Fury on a BLOOD LEGIONS unit gives a WORLD EATERS
+  // unit it selects [LANCE]; Honoured Interred gives its DREADNOUGHT an aura): from other units in your list, never in Stratagems
+  for(const s of inArmy(A, () => allStratagems().filter(s => !canTarget(s, au) && A.units.some(x => x !== au && canTarget(s, x))))){
+    const o = dmBoxesOf(DM_KEY.s(s)), bs = ((o || {}).b || []).filter(b => b.reach && dmReaches(b.reach, au));
+    if(bs.length) put({ grp:'other', name:s.name, strat:s.id, cp:s.cp, key:DM_KEY.s(s), text:dmStratText(s), s, aura:bs.every(b => b.mark === 'aura') });
+  }
+  return out;
+}
+// a box's conditions as the screen uses them: the fact of the table it is (one fact, nothing else the player must judge), the target's
+// keywords and T (vs, as dmVs reads it)
+const DM_SAID = ['aura', 'selected', 'leading', 'targetKw', 'maxT', 'opt'];
+const dmFactOf = on => { const f = on.filter(x => WH_EFFECTS.FACT_OF[x[0]]), rest = on.filter(x => !WH_EFFECTS.FACT_OF[x[0]] && !DM_SAID.includes(x[0]));
+  return f.length === 1 && !rest.length ? WH_EFFECTS.FACT_OF[f[0][0]] : ''; };
+const dmVsOf = on => { const t = on.find(x => x[0] === 'targetKw'), m = on.find(x => x[0] === 'maxT'); if(!t && !m) return null; return Object.assign({}, t ? t[1] : {}, m ? { maxT:m[1] } : {}); };
+// the GW words a source is shown with when it has no box (verbatim; a long one cut at a sentence, "…")
+const dmQuoteOf = t => { const x = String(t || '').replace(/\*\*/g, '').replace(/\s*\n\s*/g, ' ').trim(); if(x.length <= 320) return x; const c = x.slice(0, 320), k = c.lastIndexOf('. '); return (k > 80 ? c.slice(0, k + 1) : c) + ' …'; };
+// one box as the calculator reads it: its effects (the pick the player picked, the first until then), the weapons and models it names
+function dmBoxRule(S, b, i, st){
+  const E = WH_EFFECTS, pk = b.pick ? 'pick:' + S.name + '|' + (b.tableRows ? 'rows' : i) : '';
+  const ch = b.pick ? b.pick.find(p => p.name === st.val[pk]) || b.pick[0] : null;
+  const fx0 = ch ? ch.fx : b.fx, fx = S.baked ? fx0.filter(([id, p]) => !dmBaked(S.baked, id, p)) : fx0, on = (b.on || []).concat(ch && ch.on ? ch.on.filter(x => !(b.on || []).some(y => y[0] === x[0])) : []).concat(S.via && S.via.while ? [['q', S.via.while]] : []);
+  const e = E.toMod(fx); if(e.anti) e.anti = Object.assign({}, e.anti, { assume:true });   // [ANTI-…]: the target's keyword is the box's
+  const parts = b.pick ? b.pick.filter(p => p.part) : [];
+  const part = parts.length ? { cond:dmFactOf(parts[0].part.on), picks:parts.map(p => p.name), calc:E.toMod(parts[0].part.fx), note:E.fxLabel(parts[0].part.fx) } : null;
+  const m = { from:S.name, rule:S.rule || '', strat:S.strat || '', cp:S.cp, src:S.src || null, ab:S.ab || null, ar:S.ar || null, kind:b.kind, box:b, on, grp:S.grp, lasts:b.lasts || '',
+    baked:fx.length < fx0.length ? S.baked : null, cond:dmFactOf(on), vs:dmVsOf(on), limit:b.limit ? S.name + '|limit' : '', limitOf:b.limit || null, part, mark:S.grp === 'other' ? (S.aura ? 'aura' : b.mark === 'selected' ? 'selected' : 'friendly') : '' };
+  return { k:'m:' + S.name + '|' + (b.tableRows ? 'rows' : i) + (S.grp === 'strat' ? '|s' : ''), m, e, fx, fx0, sc:{ scope:b.scope || {} }, grp:S.grp, label:E.condLabel(m.mark === 'selected' ? on.filter(x => x[0] !== 'selected') : on),   // (the mark says "Selected by it" already)
+   
+    pills:b.pick ? b.pick.map(p => [p.name, p === ch]) : null, pillKey:pk, note0:'', pick:ch ? ch.name : '', pickLabel:ch ? ch.name : '', dice:null, diceKey:'' };
+}
+// every box of your unit for these attacks (kind), and what of its sources has none (nc: shown with GW's words, "not counted in the Damage
+// tab"); a stratagem's boxes for the other kind of attack too (other: ruled out here, the player's to count anyway)
+// a pick of two options at once where another ability of the list says so for this unit ("the Conqueror Imperative and Protector
+// Imperative are both active for that unit": Icon of War's The Fires of Mars, BOXES both, for the SKITARII or THULIA GHULD unit it
+// selects): a pill of both, their effects together, with its words
+function dmBothOf(A, au, b){
+  if(!b.pick) return b;
+  const add = [];
+  for(const x of A.units) for(const ab of x.abilities || []){ const o = dmBoxesOf(DM_KEY.a(ab)); if(!o || !o.both) continue;
+    for(const g of o.both){ const ps = g.names.map(n => b.pick.find(p => p.name === n)); if(ps.some(p => !p) || !dmReaches(g.reach, au)) continue;
+      const part = ps.find(p => p.part);
+      add.push(Object.assign({ name:g.names.join(' and ') + ' (' + ab.name + (g.opt ? ': ' + g.opt : '') + ')', fx:ps.flatMap(p => p.fx), quote:g.quote, on:[['selected', true]] }, part ? { part:part.part } : {})); } }
+  return add.length ? Object.assign({}, b, { pick:b.pick.concat(add) }) : b;
+}
+function dmBoxRules(A, au, kind, st){
+  const rules = [], other = [], nc = [], ncText = 'not counted in the Damage tab';
+  for(const S of dmSources(A, au)){
+    const o = dmBoxesOf(S.key) || {}, all = (o.b || []).map((b, i) => [b, i]);
+    // a box that reaches other units counts here when it reaches this one; another unit's box about its own unit does not
+    const mine = all.filter(([b]) => S.reachOnly ? !!b.reach && dmReaches(b.reach, au) : b.reach ? dmReaches(b.reach, au) && !(S.grp === 'unit' && b.notSelf) : S.grp !== 'other');
+    const counted = mine.filter(([b]) => b.pick ? b.pick.some(p => dmHasFx(p.fx)) : dmHasFx(b.fx));
+    // (a box for weapons by name or keyword is in a step with such a weapon: Moment Shackle's Watcher's Axe is not in the shooting)
+    const wOf = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw) return true; const ws = weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []);
+      return ws.some(it => dmReach(au, it, { from:S.name, ab:S.ab, src:S.src }, { scope:{ weapon:sc.weapon, wkw:sc.wkw } }) > 0); };
+    for(const [b0, i] of counted){ const b = dmBothOf(A, au, b0), r = dmBoxRule(S, b, i, st); if((b.kind === 'all' || b.kind === kind) && wOf(b)) rules.push(r); else if(S.grp === 'strat' && b.kind !== 'all' && b.kind !== kind) other.push(r); }
+    if(counted.length || S.reachOnly) continue;
+    // (another unit's ability is in the list only when it reaches this unit: an aura GW tags (Aura) with nothing counted)
+    const q = o.nc && o.nc.length ? o.nc[0] : null, noFx = mine.find(([b]) => !b.pick && b.fx.length);
+    nc.push({ side:'a', grp:S.grp, name:(S.cp ? S.cp + 'CP ' : '') + S.name, strat:!!S.strat, s:S.s || null,
+      text:'“' + dmQuoteOf(q ? q.quote : noFx ? noFx[0].quote : S.text) + '”', why:q ? q.why + ': ' + ncText : noFx ? 'no effect in these numbers: ' + ncText : ncText });
+  }
+  return { rules, other, nc };
+}
+// the group a box is in: the row it reads (its source); a custom modifier is its own
+const dmGroupOf = r => r.grp || (r.m && r.m.grp) || '';
+// how many of a weapon's models a box applies to: the weapons its words name (a weapon of the datasheet by name, a weapon keyword), one
+// model ("this model", "the bearer": the models line with the ability; in an attached unit the part with it, 19.04), one model of the
+// unit (a model another unit selects), CHARACTER models or the others, the models of an attached unit's part it names
+function dmReach(u, it, m, sc){
+  const name = itemName(it), n = +it.n || 1, part = it.who || '', s = (sc && sc.scope) || {};
+  const lc = x => String(x || '').toLowerCase().replace(/[’']/g, "'");
+  if(s.weapon && !it.profiles.some(p => [p.name, it.group, name].some(x => lc(x) === s.weapon || lc(x).startsWith(s.weapon)))) return 0;
+  if(s.wkw && !it.profiles.some(p => p.kw.some(k => String(k).toUpperCase() === s.wkw || String(k).toUpperCase().startsWith(s.wkw + ' ')))) return 0;
+  const isChar = () => u.leads ? charsOf(u).some(c => c.name === part) : hasKw(u, 'Character');
+  if(s.models === 'char' && !isChar()) return 0;
+  if(s.models === 'nonchar' && u.leads && charsOf(u).some(c => c.name === part)) return 0;
+  if(s.part && !lc(part).startsWith(lc(s.part).replace(/s$/, ''))) return 0;
+  // one model of the unit (a model another unit selects: Clever Know-wotz picks one ORKS VEHICLE model): the weapons of one model of the
   // first models line with weapons
-  if(m.oneModel && modelCount(u) > 1){ const li = (u.gear || []).findIndex(g => g.length); return li < 0 ? Math.min(n, 1) : Math.min(n, u.gear[li].filter(x => x === name).length); }
-  const ab = !m.who && m.from && u.abilities.find(a => a.name === m.from);
-  const one = !!ab && DM_MODEL_RULE.test(ab.text) && !/while this model is leading/i.test(ab.text);
-  if(one && u.leads && ab.who && part !== ab.who) return 0;
-  if(u.gear && m.from && (m.weapon || one)){
+  if(s.models === 'one' && modelCount(u) > 1){ const li = (u.gear || []).findIndex(g => g.length); return li < 0 ? Math.min(n, 1) : Math.min(n, u.gear[li].filter(x => x === name).length); }
+  const ab = m.ab && m.src === u ? m.ab : null, one = s.models === 'model';
+  if(one && ab && u.leads && ab.who && part !== ab.who) return 0;
+  if(one && u.gear && m.from){
     const lines = u.models.map((l, i) => i).filter(i => u.models[i].includes(m.from) && (u.gear[i] || []).includes(name));
     if(lines.length) return Math.min(n, lines.reduce((t, i) => t + (parseInt(u.models[i], 10) || 1) * u.gear[i].filter(x => x === name).length, 0));
   }
   return n;
 }
 // the models of a unit that are not on the battlefield yet (an ability's embarked mark: Sir Hekhtur while Canis Rex lives) and why, quoted
-const dmEmbarked = u => { const ab = (u.abilities || []).find(a => a.embarked); return ab ? { names:new Set([ab.embarked.model]), until:ab.embarked.until, ab,
-  quote:'“' + ab.text.split('. ')[0].replace(/\.$/, '') + '” (' + ab.name + ')' } : null; };
+// the model of a unit not on the battlefield yet (Sir Hekhtur while Canis Rex lives): BOXES embarked, read at build time from GW's words by
+// one fixed pattern (verify/effects-extract.js); "this model" is the unit's other model
+const dmEmbarked = u => { for(const ab of u.abilities || []){ const o = dmBoxesOf(DM_KEY.a(ab)); if(!o || !o.embarked) continue; const until = o.embarked.until;
+    const names = (u.models || []).map(l => String(l).replace(/^\d+×\s*/, '')).filter(n => n !== until);
+    if(names.length !== 1 || !(u.models || []).some(l => String(l).replace(/^\d+×\s*/, '') === until)) continue;
+    return { names:new Set(names), until, ab, quote:'“' + ab.text.split('. ')[0].replace(/\.$/, '') + '” (' + ab.name + ')' }; }
+  return null; };
 // (a reference sheet's unit after the army's: selectable, never the one picked first)
 const dmUnits = (a, kind) => a.units.concat(a.refs || []).filter(u => ((kind === 'ranged' ? u.ranged : u.melee) || []).length);
 // the two sides: your unit (this list) and the target set by hand
@@ -2239,60 +2312,13 @@ const DM_FACTS = { charged:'Charged this turn', riled:'Riled up', stationary:'Re
 const DM_IMPLIES = { targetObjectiveNotYours:['targetObjective'], targetObjective:['objective'], closest18:['closest'], stationary:['heavy'] };
 // the facts that are about the target, not the unit attacking
 const DM_TGT_FACT = new Set(['targetObjective', 'targetObjectiveNotYours', 'closest', 'closest18']);
-// a pick as the Damage tab names it: its label (Try Dat Button!'s "+1 A & +2 S"), else its name (the key it is kept under)
-const dmPickLabel = (m, name) => { const p = (m.pick || []).find(x => x.name === name); return p && p.label || name || ''; };
-// one rule as the calculator reads it: its recorded numbers (calc) or its words, the effect picked when it has several (pick:
-// its own calc or words), the weapons it names (its words, or calc.weapon: "Dark Blessing has [SUSTAINED HITS D3]")
-function dmRuleOf(m, st){
-  // (follow: the pick of the rule it follows, Murderous Imperative's the Doctrina Imperatives one, with no pills of its own)
-  const pk = m.pick ? 'pick:' + (m.follow || m.from) : '', ch = m.pick ? m.pick.find(p => p.name === st.val[pk]) || m.pick[0] : null;
-  let mm = ch ? Object.assign({}, m, { note:(ch.label ? ch.label : ch.name + ': ' + ch.note.replace(/^([a-z][\w’'-]* weapons(?: only)?:\s*)/i, '')), scopeNote:ch.note }) : m;
-  const sc = dmScope(ch ? { note:ch.note, when:m.when } : m);
-  let e0 = ch && ch.calc ? Object.assign({}, ch.calc) : !ch && m.calc ? Object.assign({}, m.calc) : dmEffects(sc.note, !!m.set);
-  if(e0 && e0.weapon){ mm = Object.assign({}, mm, { weapon:e0.weapon }); delete e0.weapon; }
-  const e = e0 && m.set ? Object.assign({ set:m.set }, e0) : m.weapon && m.set ? null : e0;
-  // the dice rolled, when the rule makes it a choice of its own (dice: Try Dat Button!'s one D6 or two D6): a pick of two results is two
-  // D6 by itself; else what the player picked, one D6 to start with
-  const dk = m.dice ? 'dice:' + m.from : '', forced = !!(m.dice && ch && (m.dice.two || []).includes(ch.name));
-  const dice = m.dice ? { key:dk, opts:m.dice.opts, now:forced ? m.dice.opts[1] : m.dice.opts.includes(st.val[dk]) ? st.val[dk] : m.dice.opts[0], forced, note:m.dice.note } : null;
-  return { m:mm, sc, e, pills:ch && !m.follow ? m.pick.map(p => [p.name, p === ch]) : null, pillKey:m.follow ? '' : pk, note0:ch ? m.note : '', pick:ch ? ch.name : '', pickLabel:ch ? dmPickLabel(m, ch.name) : '', dice, diceKey:dk };
-}
 // who gives a rule of another unit of the list: the part of an attached unit it is on, else that unit ("Clever Know-wotz (Mek)")
 function dmGiver(m, A){ const u = m.src, ab = u.abilities.find(x => x.name === m.from);
   return ab && ab.who && u.leads && charsOf(u).some(c => c.name === ab.who) ? ab.who : dmName(u, A); }
-// a stratagem used in an earlier phase whose effect lasts: into the other player's turn ('round': "until the start of your next
-// Command phase") or to the end of this turn ('turn')
-const dmLasts = s => { const t = [(s.mod || {}).when, (s.mod || {}).note, s.def, s.gist].join(' ').toLowerCase();
-  return t.includes('until the start of your next command phase') ? 'round' : t.includes('until the end of the turn') ? 'turn' : ''; };
-// the army rules' own reading for the calculator (calcMods / calcNc on an army rule: this tab alone reads them, the datasheets
-// never show them): for a unit with that rule in its rules list, or for the units its needs name (a Ritual of the Cabal of Sorcerers
-// reaches every THOUSAND SONS model of the army)
-// (or that a part of a detachment rule of the list gives it, grants: Blood Tithe's Might of Khorne gives BLOOD LEGIONS units the
-// Blessings of Khorne ability; its condition joins the when)
 // a unit's Rules line names this rule: names compared with either apostrophe (New Recruit's "Martial Ka'tah", Wahapedia's
 // "Martial Ka’tah") and in any case
 const ruleNameN = s => String(s || '').toLowerCase().replace(/[’‘]/g, "'");
 const hasRule = (u, name) => (u.rules || []).some(r => ruleNameN(r) === ruleNameN(name));
-const dmArmyOf = (L, u, kind, key) => { if(!L || !u) return [];
-  const via = inArmy(L, () => unitDetParts(u)).filter(x => x.part.grants);
-  return factionOf(L).armyRules.filter(r => r[key]).flatMap(r => { const g = !hasRule(u, r.name) && via.find(x => x.part.grants === r.name);
-    return r[key].filter(m => (m.kind === kind || m.kind === 'all') && (m.needs ? matches(m.needs, u) : hasRule(u, r.name) || !!g))
-      .map(m => Object.assign({ from:r.name, rule:r.name, ar:r }, m, g && !m.needs ? { when:m.when + ' (' + g.part.when + ')' } : {})); }); };
-// a stratagem's name from any list (its id)
-const dmStratName = id => { for(const f of Object.values(D.factions)) for(const d of Object.values(f.detachments)) for(const s of d.stratagems || []) if(s.id === id) return s.name;
-  const c = D.coreStratagems.find(s => s.id === id); return c ? c.name : id; };
-// what can make both Doctrina Imperatives active for a unit (the rule's both mark), as the list has it: the enhancement on it, the
-// stratagem it can be the target of, another unit's ability that reaches it (The Fires of Mars, Thulia Ghuld's Icon of War)
-function dmBothVia(L, u, both){
-  const out = [];
-  for(const b of both || []){
-    if(b.enhancement && (u.enhancement === b.enhancement || u.upgrade === b.enhancement)) out.push(b.enhancement);
-    if(b.strat){ const s = allStratagems(L).find(x => x.id === b.strat && canTarget(x, u, L)); if(s) out.push(s.name + ' (' + s.cp + 'CP)'); }
-    if(b.ability && matches(b.needs, u) && L.units.some(x => x.abilities.some(ab => ab.name === b.ability))) out.push(b.part + ' (' + b.of + '’s ' + b.ability + ')');
-  }
-  return out;
-}
-const dmBothAll = both => andList((both || []).map(b => b.enhancement || (b.strat ? dmStratName(b.strat) : b.part + ' (' + b.of + ')'))).replace(/ and ([^,]+)$/, ' or $1');
 // a limit on how many of a group are active at once (limit: two Blessings of Khorne), for this unit: one more with a detachment rule
 // that gives it to this unit by itself (Adamantine Avalanche, an engaged TERMINATOR SQUAD unit at the start of the Fight phase); the
 // ones a player spends or uses (Skulls for the Skull Throne!, Archslaughterer) are named, the rest past it counted by you
@@ -2399,99 +2425,78 @@ function dmCalc(st, A, au, tg, kind){
   const has = x => ticked.some(c => kwOf(c).kw.some(k => new RegExp('^' + x + '\\b', 'i').test(k)));
   const snap = ranged && !!st.on['c:snap'];
 
-  // ---- the attacker's rules: footnotes, detachment rules, auras, stratagems ----
+  // ---- the attacker's boxes: its army rules, its own rules, what other units of the list give it, its stratagems (dmBoxRules), and
+  // the custom modifiers ----
   // a Damaged band and Plunging Fire are in the situation; [LANCE] comes from the weapon's keyword
-  const damaged = new Set(au.abilities.filter(ab => ab.damaged).map(ab => ab.name));
-  const riled = au.abilities.find(ab => ab.riled);
+  const damaged = au.abilities.filter(ab => /^Damaged: /i.test(ab.name));
   const rules = [], seen = new Set();
-  // a fact of the table holds when the player says so (st.fx, with what follows from it), or by the unit's own rule (always riled up)
+  // a fact of the table holds when the player says so (st.fx, with what follows from it); BATTLELINE by the unit's keyword
   const fx = isObj(st.fx) ? st.fx : {}, fxWhy = isObj(st.fxWhy) ? st.fxWhy : {};
-  const sitOn = k => fx[k] != null ? !!fx[k] : k === 'riled' ? !!riled : k === 'battleline6' ? hasKw(au, 'Battleline') : false;
-  const sitWhy = k => fxWhy[k] || (k === 'riled' && riled && fx.riled == null ? 'always riled up (' + riled.name + ')' : 'ticked with “' + (DM_FACTS[k] || k) + '”');
+  const sitOn = k => fx[k] != null ? !!fx[k] : k === 'battleline6' ? hasKw(au, 'Battleline') : false;
+  const sitWhy = k => fxWhy[k] || 'ticked with “' + (DM_FACTS[k] || k) + '”';
   // a stratagem's own phase and turn: one for another phase, or the other player's turn, is unticked with the reason
   const stratOf = id => inArmy(A, () => allStratagems().find(s => s.id === id));
   const PH = { shooting:'Shooting', fight:'Fight' };
-  const stratOut = s => { if(!s || !st.ph) return '';
+  const stratOut = (s, lasts) => { if(!s || !st.ph) return '';
     const at = s.phases.filter(p => PH[p]);
-    const L = !s.phases.includes(st.ph) ? dmLasts(s) : '';
+    const L = !s.phases.includes(st.ph) ? lasts || '' : '';
     if(L === 'round' || L === 'turn') return '';
     if(!s.phases.includes(st.ph)) return (at.length ? at.map(p => PH[p]).join(' or ') : PHASE_NAME[s.phases[0]] || 'another') + ' phase only';
     const t = phTurn(s, st.ph);
     return st.ph === 'fight' || t !== 'opp' ? '' : 'in the other player’s turn only'; };
   // a rule that only changes range counts only through half range ([RAPID FIRE] 24.30, [MELTA] 24.25): every weapon is in range
   const halfKw = w => w.kw.some(k => /^(rapid fire|melta) /i.test(k));
+  // every box starts unticked (the owner's decision, 29 Oct 2026); a fact of the table the player says holds ticks the boxes whose
+  // condition it is; a stratagem never
   const decide = r => {
     const m = r.m, sit = !m.strat && m.cond ? m.cond : '';
     if(m.cond) r.cond = m.cond;
     if(sit) r.sit = sit;
     if(!r.e) return Object.assign(r, { state:'nc', why:'' });
+    if(m.baked && !Object.keys(r.e).length && !r.pills) return Object.assign(r, { state:'nc', why:'already in its weapons’ profiles above (' + m.baked.join(', ') + ', marked +): counted there' });
     if(!r.pills && Object.keys(r.e).length && Object.keys(r.e).every(k => k === 'range') && !chosen.some(c => c.ps.some(halfKw) && dmReach(au, c.it, m, r.sc) > 0))   // (a pick stays a box: its other effects can count)
       return Object.assign(r, { state:'nc', why:'it changes only range: every weapon is taken to be in range, and none it reaches has [RAPID FIRE] or [MELTA]' });
-    const v = dmVs(m.vs, tg), so = m.strat && m.strat !== 'epic-challenge' ? stratOut(stratOf(m.strat)) : '';
-    if(v.ok === false || so) return Object.assign(r, { state:'out', why:so || v.why });
-    let pre = '';
-    if(!m.strat && v.ok && !r.help){
-      if(m.always || (m.selfAlways && m.src === au)) pre = m.vs ? v.why : 'always';
-      else if(sit && sitOn(sit)) pre = sitWhy(sit);
-      if(pre && snap && /your shooting phase/i.test((m.when || '') + ' ' + (m.note || ''))) pre = '';   // overwatch is not your Shooting phase
-    }
+    const v = dmVs(m.vs, tg), so = m.strat ? stratOut(stratOf(m.strat), m.lasts) : '';
+    // a keyword of the unit the box needs ("If this model has the KHORNE keyword"): the unit's keywords say it
+    const kw = (m.on || []).find(x => x[0] === 'selfKw' && !hasKw(au, x[1]));
+    // the wargear the box needs ("If this model is equipped with a thundershock spear and a bellatus reaper chainsword"): the unit's weapons say it
+    const wn = [].concat(au.ranged || [], au.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase()), gear = (m.on || []).find(x => x[0] === 'selfGear' && !x[1].every(g => wn.some(n => n.startsWith(String(g).toLowerCase()))));
+    if(v.ok === false || so || kw || gear) return Object.assign(r, { state:'out', why:so || v.why || (kw ? 'it has no ' + String(kw[1]).toUpperCase() + ' keyword' : 'it is not equipped with ' + gear[1].join(' and ')) });
+    const pre = !m.strat && !r.help && v.ok !== false && sit && sitOn(sit) ? sitWhy(sit) : '';
     return Object.assign(r, { state:pre ? 'on' : 'choice', why:pre });
   };
-  for(const m of inArmy(A, () => unitMods(au, kind))){
-    if(m.rule === 'Lance' || m.rule === 'Plunging Fire' || damaged.has(m.from)) continue;
-    const k = 'm:' + [m.from, m.when, m.note].join('|');
-    if(seen.has(k)) continue; seen.add(k);
-    // one of several effects (pick): the one the player picked, the first until then
-    const R0 = dmRuleOf(m, st);
-    // help from another unit of the list (an aura, Clever Know-wotz): named with its giver
-    const help = m.src && m.src !== au ? dmGiver(m, A) : '';
-    rules.push(decide(Object.assign(R0, { k, help })));
-  }
-  // the army rules' reading (calcMods): Doctrina Imperatives, the Blessings of Khorne, the Rituals (help: a model with the Cabal of
-  // Sorcerers manifests it)
-  for(const m of dmArmyOf(A, au, kind, 'calcMods')){
-    if(m.onDeath) continue;   // (Total Carnage: its models destroyed before it fought, in a fight back, not played)
-    // (keyed by its name and rule, not its words: its ranged and its melee row are one tick, so a round-long tick carries from the
-    // shooting into the fight)
-    const k = 'm:' + m.from + '|' + m.rule + '|ar';
-    if(seen.has(k)) continue; seen.add(k);
-    rules.push(decide(Object.assign(dmRuleOf(m, st), { k, help:m.help ? m.rule : '' })));
-  }
-  // a stratagem's own reading for this tab (calcMods on a stratagem: Command Re-roll's one die, once in the phase; never ticked for you)
-  for(const s of inArmy(A, () => allStratagems().filter(s => s.calcMods && canTarget(s, au)))) for(const cm of s.calcMods.filter(m => m.kind === kind || m.kind === 'all')){
-    const m = Object.assign({ from:s.name, strat:s.id, cp:s.cp }, cm), k = 'm:' + [m.from, m.when, m.note].join('|');
-    if(seen.has(k)) continue; seen.add(k);
-    rules.push(decide(Object.assign(dmRuleOf(m, st), { k })));
+  const B = dmBoxRules(A, au, kind, st);
+  for(const r of B.rules){
+    if(seen.has(r.k)) continue; seen.add(r.k);
+    // help from another unit of the list (an aura, a unit another unit selects): named with its giver
+    r.help = r.m.src && r.m.src !== au ? dmGiver(r.m, A) : '';
+    rules.push(decide(r));
   }
   // the attacker's stratagems for the other kind of attack (a Shooting phase one in a fight): unticked, the reason said, the
   // player's to count anyway (their numbers on these weapons, as if it were that phase)
-  for(const s of inArmy(A, () => allStratagems().filter(s => s.mod && canTarget(s, au) && !(s.mod.kind === kind || s.mod.kind === 'all')))){
-    const m = Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod), k = 'm:' + [m.from, m.when, m.note].join('|');
-    if(seen.has(k)) continue; seen.add(k);
-    const r = decide(Object.assign(dmRuleOf(m, st), { k }));
-    if(r.state !== 'nc'){ r.state = 'out'; r.why = stratOut(s) || (PH[s.phases.find(p => PH[p])] || 'Another') + ' phase only'; }
+  for(const r of B.other){
+    if(seen.has(r.k)) continue; seen.add(r.k);
+    const s = stratOf(r.m.strat);
+    decide(r);
+    if(r.state !== 'nc'){ r.state = 'out'; r.why = stratOut(s, r.m.lasts) || (PH[(s.phases || []).find(p => PH[p])] || 'Another') + ' phase only'; }
     rules.push(r);
   }
+  // the custom modifiers: the catalogue's effects as plain boxes, no rule's (effects.js CUSTOM), all unticked
+  for(const [id, p] of WH_EFFECTS.CUSTOM){ const fx1 = [[id, p]], label = WH_EFFECTS.fxLabel(fx1);
+    rules.push(decide({ k:'u:' + id + ':' + p, m:{ from:'Custom: ' + label, custom:true, grp:'custom', on:[], label }, e:WH_EFFECTS.toMod(fx1), fx:fx1, sc:{ scope:{} }, grp:'custom', label:'', pills:null, pillKey:'', pick:'', pickLabel:'' })); }
   // a rule the rules rule out here that the player ticked anyway counts, as their own call (over)
   const fromStep = k => st.carried && st.carried[k] && (st.own || {})[k] == null ? st.carried[k] : null;
   for(const r of rules){ r.on = dmOn(st, r); r.carried = r.on ? fromStep(r.k) : null; }
-  // Both where nothing of the list makes both Imperatives active for this unit (the rule's both mark): counted by you
-  for(const r of rules) if(r.m.ar && r.m.ar.both && r.pick){ const p = (r.m.pick || []).find(x => x.name === r.pick);
-    if(p && p.both){ r.via = dmBothVia(A, au, r.m.ar.both); if(!r.via.length) r.extra = 'both are active only with ' + dmBothAll(r.m.ar.both); } }
-  // a rule that follows another's pick (follow: Murderous Imperative, the Imperative picked under Doctrina Imperatives): ticked with it
-  for(const r of rules.filter(q => q.m.follow)){ const by = rules.find(q => q.m.from === r.m.follow && !q.m.follow);
-    if(!by) continue;
-    r.lead = by;
-    if(by.on && r.state !== 'out'){ r.state = 'on'; r.why = 'with ' + by.m.from + ': ' + by.pickLabel; }
-    else if(r.state === 'on'){ r.state = 'choice'; r.why = ''; }
-    r.on = dmOn(st, r); r.carried = r.on ? fromStep(r.k) : null;
-    if(r.on && !by.on) r.extra = 'no Imperative ticked (' + by.m.from + ')'; else if(r.on && by.extra) r.extra = by.extra; }
   // a limit on how many of a group are active at once (limit: two Blessings of Khorne): the ones ticked past it, in the order ticked,
   // are counted by you
   const lims = {}, order = Object.keys(st.on);
   for(const r of rules) if(r.m.limit && r.on) (lims[r.m.limit] = lims[r.m.limit] || []).push(r);
-  for(const [g, list] of Object.entries(lims)){ const lim = dmLimitOf(A, au, list[0].m.ar.limit[g]);
+  for(const [g, list] of Object.entries(lims)){ const lim = dmLimitOf(A, au, list[0].m.limitOf);
     list.sort((x, y) => order.indexOf(x.k) - order.indexOf(y.k)); list.slice(lim.n).forEach(r => { r.extra = lim.why; }); }
+  // one of a unit's abilities to pick from (BOXES excl, GW: "select one Triarch ability"): with more than one ticked (a state saved
+  // before, a plan), the ones ticked after the first are counted by you
+  { const xs = {}; for(const r of rules) if(r.on && r.m.box && r.m.box.excl){ const g = r.m.box.excl + '|' + (r.m.src ? r.m.src.id : ''); (xs[g] = xs[g] || []).push(r); }
+    for(const list of Object.values(xs)){ list.sort((x, y) => order.indexOf(x.k) - order.indexOf(y.k)); list.slice(1).forEach(r => { if(!r.extra) r.extra = 'only one ' + r.m.box.excl + ' ability at a time (GW: “select one”): counted by you'; }); } }
   // one stratagem on the unit in this phase (15.01): the ones ticked after the first, in the order ticked, are counted by you (a
   // stratagem carried from the shooting was used in that phase)
   rules.filter(r => r.on && r.m.strat && !r.carried).sort((x, y) => order.indexOf(x.k) - order.indexOf(y.k)).slice(1).forEach(r => { if(!r.extra) r.extra = DM_ONE_STRAT; });
@@ -2503,7 +2508,7 @@ function dmCalc(st, A, au, tg, kind){
 
   // ---- the situation (only the boxes that can matter for this unit and its weapons) ----
   const air = hasKw(au, 'Aircraft');
-  const lance = has('LANCE') || rules.some(r => r.on && r.e.lance);
+  const lance = has('LANCE') || rules.some(r => r.on && r.e && r.e.lance);
   const heavyKw = has('HEAVY') || rules.some(r => r.on && r.e && r.e.heavy);   // [HEAVY] of its own, or from a rule (the Protector Imperative)
   const ctx = { ranged };
   const sit = [];   // { k ('c:…'), label, sub, on, why (why it is ticked for you), fixed (counted, no box) }
@@ -2530,7 +2535,7 @@ function dmCalc(st, A, au, tg, kind){
     if(!air && ticked.some(c => !c.w.kw.some(k => /^torrent/i.test(k)))){ ctx.plunging = box('plunging', 'Plunging Fire', 'BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level'); }
     if(heavyKw && !tick('cq') && !tick('cqo') && !snap){ const by = sitOn('heavy'); ctx.heavy = box('heavy', 'Not moved over 3", not set up this turn', '[HEAVY] weapons +1 to hit (the unit is unengaged)') || by;
       if(by){ const b = sit[sit.length - 1]; b.on = true; b.fixed = 'ticked with “Remained Stationary”'; } }
-    if(has('INDIRECT FIRE')){
+    if(has('INDIRECT FIRE') || rules.some(r => r.on && r.e && r.e.indirect)){   // ([INDIRECT FIRE] of its own, or from a box: Warp Rift Firepower)
       box('indirect', 'Indirect shooting', '[INDIRECT FIRE] weapons: the target has cover, no hit re-rolls, an unmodified 1-5 fails');
       if(tick('indirect')){ ctx.indirect = tick('still') ? '1-3' : '1-5'; box('still', 'Remained stationary, target visible to a friendly unit', 'with indirect shooting: an unmodified 1-3 fails instead'); }
     }
@@ -2548,22 +2553,22 @@ function dmCalc(st, A, au, tg, kind){
   }
   ctx.charged = sitOn('charged') && (!ranged || lance);
   // a Damaged band (24.39): the datasheet's printed effect
-  const dmgOn = [], nc = [];
-  for(const m of (au.mods || []).filter(m => damaged.has(m.from) && (m.kind === kind || m.kind === 'all'))){
-    const e = dmEffects(m.note);
-    if(!e){ nc.push({ side:'a', name:m.when, text:m.note }); continue; }
-    if(box('damaged', m.when, m.note)) dmgOn.push({ m, e }); }
+  // (its boxes, read from the Damaged ability's words: data.js BOXES)
+  const dmgOn = [], nc = B.nc.slice();
+  for(const ab of damaged){
+    // (a band for weapons by name, Skarbrand's Slaughter and Carnage: in a step with such a weapon; one for the other kind of attack: not here)
+    const wIn = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw) return true; return weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []).some(it => dmReach(au, it, { from:ab.name, ab, src:au }, { scope:{ weapon:sc.weapon, wkw:sc.wkw } }) > 0); };
+    const o = dmBoxesOf(DM_KEY.a(ab)) || {}, fxB = (o.b || []).filter(b => dmHasFx(b.fx)), bs = fxB.filter(b => (b.kind === kind || b.kind === 'all') && wIn(b));
+    if(fxB.length && !bs.length) continue;
+    if(!bs.length){ nc.push({ side:'a', grp:'unit', name:ab.name, text:'“' + dmQuoteOf(o.nc && o.nc[0] ? o.nc[0].quote : ab.text) + '”', why:(o.nc && o.nc[0] ? o.nc[0].why + ': ' : '') + 'not counted in the Damage tab' }); continue; }
+    if(box('damaged', ab.name, WH_EFFECTS.fxLabel(bs.flatMap(b => b.fx)))) for(const b of bs) dmgOn.push({ m:{ from:ab.name, ab, src:au, box:b }, e:WH_EFFECTS.toMod(b.fx), sc:{ scope:b.scope || {} } }); }
 
   // ---- the weapons: each ticked one, split by the rules that reach only some of its models ----
-  const man = st.man, manual = {};
-  for(const k of ['hit', 'wound', 'ap', 'd']) if(+man[k]) manual[k] = +man[k];
-  for(const k of ['rrHit', 'rrWound']) if(man[k]) manual[k] = man[k];
   const groups = [], gOf = [];
   for(const c of ticked){
     const appl = [], kx = kwOf(c);
     for(const r of rules) if(r.on){ const n = dmReach(au, c.it, r.m, r.sc); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pick ? ': ' + r.pickLabel : '') + (r.over ? ' (counted by you)' : '') }, r.m.strat ? { strat:r.m.strat } : {}, r.e), r }); }
-    for(const x of dmgOn){ const n = dmReach(au, c.it, x.m, { f:null }); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:x.m.from }, x.e), r:{ m:x.m } }); }
-    if(Object.keys(manual).length) appl.push({ n:c.n, mod:Object.assign({ from:'' }, manual), r:{ m:{ from:'' } } });
+    for(const x of dmgOn){ const n = dmReach(au, c.it, x.m, x.sc); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:x.m.from }, x.e), r:{ m:x.m } }); }
     const cuts = [...new Set(appl.map(x => x.n).concat(c.n))].sort((a, b) => a - b);
     let lo = 0;
     for(const hi of cuts){
@@ -2588,22 +2593,9 @@ function dmCalc(st, A, au, tg, kind){
   const R = WH_CALC.resolve(input);
 
   // ---- what else the unit has around this attack ----
-  // the other stratagems of the unit that are for attacks (a Shooting or Fight phase), with nothing the calculator counts: listed with
-  // what they do (and, in another phase or turn, with that)
+  // (the stratagems it can be the target of with nothing the calculator counts: in their group's not-counted list, dmBoxRules)
   const strats = [];
-  const counted = new Set(rules.filter(r => r.m.strat).map(r => r.m.strat));
-  for(const s of inArmy(A, () => allStratagems().filter(s => canTarget(s, au)))){
-    const at = s.phases.filter(p => PH[p]);
-    if(counted.has(s.id) || !at.length) continue;
-    // the unit's own protection is not in this attack (def, or the numbers of one: defCalc, defPick)
-    if((s.def || s.defCalc || s.defPick) && !s.mod) continue;
-    const t = s.phases.includes(st.ph) ? phTurn(s, st.ph) : '';
-    const why = !s.phases.includes(st.ph) ? at.map(p => PH[p]).join(' or ') + ' phase only' : st.ph !== 'fight' && t === 'opp' ? 'in the other player’s turn only' : '';
-    strats.push({ side:'a', s, state:why ? 'out' : 'nc', why, text:s.gist || '' });
-  }
-  for(const r of rules) if(r.state === 'nc') nc.push({ side:'a', name:(r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from, text:(r.m.when ? r.m.when + ': ' : '') + r.m.note, why:r.why, strat:!!r.m.strat });
-  // the army rules' parts the calculator does not play (calcNc: Code Chivalric's one re-roll)
-  for(const m of dmArmyOf(A, au, kind, 'calcNc')) nc.push({ side:'a', name:m.from + ': ' + m.when, text:m.note, why:m.why });
+  for(const r of rules) if(r.state === 'nc') nc.push({ side:'a', grp:dmGroupOf(r), name:(r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from, text:(r.label ? r.label + ': ' : '') + WH_EFFECTS.fxLabel(r.m.baked ? r.fx0 : r.fx), why:r.why, strat:!!r.m.strat });
   // notes for the working: the same ability twice (24.02), a value the printed weapon already includes, modifiers past ±1
   const kwText = x => '[' + (typeof x === 'string' ? x : x.t) + ']' + (x.src ? ' (' + x.src + ')' : '');
   const notes = [];
@@ -2620,37 +2612,6 @@ function dmCalc(st, A, au, tg, kind){
   if(!ranged || lance) conds.a.push('charged');
   if(heavyKw) conds.a.push('stationary');
   return { input, R, rules, sit, bands, weapons:chosen, strats, nc, notes, models, tmod, ctx, ticked, groups, gOf, au, tg, kind, conds, cName };
-}
-// a characteristic a rule changes or sets, in words: "+6 A" (a change), "A 10" (a new value)
-const dmSetWords = set => Object.entries(set || {}).map(([k, v]) => /^[+-]/.test(v) ? v + ' ' + k : k + ' ' + v).join(', ');
-// a rule's row in words: its when and its note, with the characteristic it changes (its set: Blitz Dem Gitz!'s +6 A) when its
-// words do not say it: "+6 A vs non-MONSTER/VEHICLE targets, in your Shooting phase", "Possessed Lord (…): A 10 and [DEVASTATING WOUNDS] …"
-function dmRuleWords(when, note, set){
-  const sw = dmSetWords(set), said = ((when || '') + ' ' + (note || '')).toLowerCase();
-  if(!sw || sw.split(', ').every(x => said.includes(x.toLowerCase()))) return (when ? when + ': ' : '') + (note || '');
-  if(/^vs\b/i.test(when || '')) return sw + ' ' + when + (note ? ', ' + note : '');
-  return (when ? when + ': ' : '') + sw + (note ? (/^and\b/i.test(note) ? ' ' : ', ') + note : '');
-}
-// a rule's recorded numbers in words (the part of it the calculator counts)
-function dmCalcWords(e){
-  const w = [];
-  if(e.hit) w.push((e.hit > 0 ? '+' : '') + e.hit + ' to hit rolls');
-  if(e.wound) w.push((e.wound > 0 ? '+' : '') + e.wound + ' to wound rolls');
-  if(e.rrHit) w.push(e.rrHit === '1s' ? 're-roll hit rolls of 1' : 're-roll hit rolls');
-  if(e.rrWound) w.push(e.rrWound === '1s' ? 're-roll wound rolls of 1' : 're-roll wound rolls');
-  // (the words the footnotes use: "re-roll one hit roll, one wound roll or one damage roll")
-  const one = [['oneHit', 'hit roll'], ['oneWound', 'wound roll'], ['oneDmg', 'damage roll'], ['oneEither', 'hit roll or one wound roll'], ['oneAny', 'hit roll, one wound roll or one damage roll']].filter(([k]) => e[k]);
-  if(one.length) w.push('re-roll one ' + one.map(x => x[1]).join(' and one '));
-  if(e.insv) w.push(e.insv + '+ InSv');
-  if(e.fnp) w.push('Feel No Pain ' + e.fnp + '+');
-  if(e.fnpMortal) w.push('Feel No Pain ' + e.fnpMortal + '+ against mortal wounds');
-  if(e.hitMinus) w.push('-' + e.hitMinus + ' to their hit rolls');
-  if(e.woundMinus) w.push('-' + e.woundMinus + ' to their wound rolls');
-  if(e.woundMinusSgt) w.push('-' + e.woundMinusSgt + ' to their wound rolls when S is greater than T');
-  if(e.dMinus) w.push('-' + e.dMinus + ' Damage' + (e.dChar ? ' (the D characteristic: mortal wounds of [DEVASTATING WOUNDS] too)' : ''));
-  if(e.t) w.push((e.t > 0 ? '+' : '') + e.t + ' T');
-  if(e.stealth || e.cover) w.push('the benefit of cover');
-  return w.join(', ') + (e.model ? ' (' + e.model + ' only)' : '');
 }
 // the result: what is played out with the dice (sticky at the top), and the working: each weapon's exact averages, step by step
 // what the result shows, played out with the dice. Wounds lost can never be more than the damage before allocation; against
@@ -2699,7 +2660,7 @@ function dmHowLines(c, st, r0, plan){
     L.push(['A re-roll of one die (01.05.02, 04.03)', 'a rule that lets you re-roll one hit, wound or Damage roll leaves which one to you. The calculator re-rolls the first failed hit or wound roll it can go to (never a die already re-rolled: 01.05.02), and the first Damage roll below the dice’s average that leaves the model it hits with wounds left; the mortal wounds of [DEVASTATING WOUNDS] are not re-rolled. When one can go to several weapons, it resolves them most valuable first (the damage one attack does on average: 04.03 lets the attacker pick the order), so it goes where a success is worth the most; the working says how often each weapon gets it. The same rule on several weapons is one re-roll for the unit.' +
       (ph ? ' Command Re-roll can be used once in the phase (15.01): it is shared by the attacks of that phase (Shoot and Fight are different phases); here it goes to this unit’s attacks.' : '') +
       (af ? ' Advanced Firepower does not say how often: the calculator gives the unit one of each each time it shoots.' : '') +
-      (cc ? ' Code Chivalric’s Quality gives one to each model with it, each time it is selected to shoot or fight: the calculator gives the unit one.' : '')]); }
+      (cc ? ' Code Chivalric’s Quality (“Each time this model is selected to shoot or fight”), like Magna Imperator (“When a friendly ADEPTUS CUSTODES unit is selected to attack”) and Seething Hatred: one of each for the unit each time it is selected, shared by its weapons, most valuable first.' : '')]); }
   L.push(['Not counted', 'a rule whose effect the calculator does not play (Fights First, mortal wounds of its own) is listed with its words; when one of the Modifiers says the same thing, “Count it by hand” sets that modifier for this step, as your own call.']);
   L.push(['A fact of the table', 'saying one holds (charged, riled up, on an objective, remained stationary, the closest target) ticks every rule of this step whose condition it is, for the unit it is about; each can still be unticked by itself, and a stratagem with that condition is never ticked for you.']);
   L.push(['Shoot, Fight, Both', 'Shoot is the shooting alone, Fight the fight alone (“Charged this turn” as you say). Both plays the shooting, then the charge, then the fight, in the same games: the fight meets what the shooting left. The charge is taken to be made, not rolled: “Charged this turn” is ticked for the fight (untick it for a fight with no charge move; a unit that shot with close-quarters shooting is engaged and cannot declare one, 10.06). Fights First and which models are in engagement range are not played: every model left takes part. What the target does back and what the unit loses are not played: the calculator shows the damage dealt.']);
@@ -2766,8 +2727,7 @@ function dmFactsOf(st, who){ const f = st.facts[st.dir] = isObj(st.facts[st.dir]
 // say (always riled up); what follows from it (DM_IMPLIES). why: what makes it hold by itself
 function dmFx(st, atk, charged){
   const fa = dmFactsOf(st, 'mine'), ft = dmFactsOf(st, 'theirs'), fx = {}, why = {};
-  const ra = atk.u.abilities.find(ab => ab.riled);
-  fx.riled = fa.riled != null ? !!fa.riled : !!ra; if(ra && fa.riled == null) why.riled = 'always riled up (' + ra.name + ')';
+  fx.riled = !!fa.riled;
   fx.stationary = !!fa.stationary;
   fx.objective = !!(fa.objective || ft.objective || dmFactsOf(st, 'pair').objective);   // (said of the pair: either of the two units)
   fx.targetObjective = !!ft.objective; fx.targetObjectiveNotYours = !!ft.objectiveNotYours;
@@ -3017,12 +2977,12 @@ function dmLeversOf(st, plan, bi, pf, facts, prior){
     const turnCharge = k === 'charged';
     const F = dmFx(st, b.atk, id0 === 'fight' && dmCharged(st, plan.turn)), onNow = turnCharge ? dmCharged(st, plan.turn) : !!F.fx[k];
     const here = ruled(b, unitWho, store), reach = here.filter(r => !r.m.strat).map(r => r.m.from).concat(k === 'stationary' && M.sit.some(x => x.k === 'c:heavy') ? ['[HEAVY] +1 to hit'] : [],
-      parts(b, unitWho, store).map(r => r.m.from + ' (' + r.m.part.note + (r.partIn ? '' : ', with ' + andList(r.m.part.picks).replace(/ and /, ' or ')) + ')')), cond = here.filter(r => r.m.strat).map(r => r.m.cp + 'CP ' + r.m.from);
+      parts(b, unitWho, store).map(r => r.m.from + ' (' + r.m.part.note + ' with ' + andList(r.m.part.picks).replace(/ and /, ' or ') + ')')), cond = here.filter(r => r.m.strat).map(r => r.m.cp + 'CP ' + r.m.from);
     const elsewhere = plan.beats.filter(bb => bb !== b && !(turnCharge && bb.id !== 'fight')).map(bb => [bb, ruled(bb, unitWho, store).filter(r => !r.m.strat)]).filter(([, l]) => l.length);
     const also = elsewhere.map(([bb, l]) => 'in the ' + bb.label.toLowerCase() + ': ' + andList([...new Set(l.map(r => r.m.from))])).join(' · ');
     const label = k === 'charged' ? DM_FACTS.charged : DM_FACTS[k] || k;
     // a unit always riled up by its own rule (Super Runts): quiet like any rule always counted; ticked again, back to "always"
-    const alw = store === 'riled' && unitWho === 'mine' && b.atk.u.abilities.find(ab => ab.riled);
+    const alw = null;   // (no fact holds by itself: every box starts unticked)
     const said = dmFactsOf(st, unitWho)[store];
     const bothCharge = turnCharge && plan.turn.mode === 'both';
     add(lid, { sec:'rule', fact:k, store, unitWho, on:onNow, why:bothCharge && onNow ? 'Both takes the charge as made (no charge roll)' : onNow && F.why[k] ? F.why[k] : '',
@@ -3037,7 +2997,9 @@ function dmLeversOf(st, plan, bi, pf, facts, prior){
   for(const x of M.sit) if(!x.fixed) add('s:' + x.k, { sec:'rule', on:x.on, x, apply:flip(x.k, x.on) });
   for(const r of M.rules){
     if(r.state === 'nc') continue;
-    const lv = add('r:' + r.k, { sec:r.m.strat ? 'strat' : 'rule', on:r.on, r, out:r.state === 'out', range:!!(r.e && r.e.range), apply:flip(r.k, r.on) });
+    // (one of a unit's abilities to pick from, BOXES excl: ticking it unticks the others of its pick, "select one Wrathful Presence ability")
+    const ex = r.m.box && r.m.box.excl, others = ex ? M.rules.filter(y => y !== r && y.m.box && y.m.box.excl === ex && (y.m.src || null) === (r.m.src || null)).map(y => y.k) : [];
+    const lv = add('r:' + r.k, { sec:r.m.strat ? 'strat' : 'rule', grp:dmGroupOf(r), on:r.on, r, out:r.state === 'out', range:!!(r.e && r.e.range), apply:s => { flip(r.k, r.on)(s); if(!r.on) for(const k of others) chOf(s).on[k] = false; } });
     if(r.pills) r.pills.forEach(([name, sel]) => add('k:' + r.k + '|' + name, { sec:'pill', radio:true, on:r.on && sel, parent:lv.id, name, apply:s => { const x = chOf(s); x.val[r.pillKey] = name; x.on[r.k] = true;
       if(r.dice && (r.m.dice.two || []).includes(name)) x.val[r.diceKey] = r.m.dice.opts[1]; } }));   // a pick of two results: two D6 by itself
     // the dice rolled, its own choice (one D6 with a pick of two results: the first of them)
@@ -3123,6 +3085,8 @@ function dmFxOf(C, lv){
   if(lv.sec === 'prof' || lv.sec === 'pill-val'){ const v = lv.on ? C.A && WH_CALC.fmt(C.A.one ? C.A.lost : C.A.killed) : f && f.val != null ? WH_CALC.fmt(f.val) : null;
     return { h:'<span class="fxv' + (lv.on ? ' now' + (C.prov ? ' est' : '') : dim) + '">' + (v == null ? '…' : esc(v)) + '</span>', alt:'' }; }
   if(lv.radio && lv.on) return { h:'<span class="fxv now">now</span>', alt:'' };
+  // (a custom modifier's effect is worked out once its group is open: until then, none shown)
+  if(!f && lv.grp === 'custom' && !((C.st || {}).fold || {}).custom) return { h:'', alt:'' };
   if(!f) return { h:'<span class="fxv wait" aria-label="working it out">…</span>', alt:'' };
   if(f.zero && lv.out && !lv.on) return { h:'<span class="fxv z' + dim + '">no change</span>', alt:'' };
   // the colour is the reader's: good news for the list viewed in green, bad news in red (never the accent); the words say what tapping does
@@ -3203,8 +3167,10 @@ async function dmFill(C){
   try {
     const pause = () => new Promise(r => setTimeout(r, 0));
     let t0 = performance.now();
-    for(const lv of C.levers){ if(!live()) return; dmIf(C, lv); if(performance.now() - t0 > 12){ await pause(); t0 = performance.now(); } }
-    const todo = C.levers.filter(lv => lv.plan && !lv.err), known = () => !!dmGet(C.inX);
+    // (the custom modifiers' effects only while their group is open: it starts folded)
+    const levers = C.levers.filter(lv => lv.grp !== 'custom' || dmState().fold.custom);
+    for(const lv of levers){ if(!live()) return; dmIf(C, lv); if(performance.now() - t0 > 12){ await pause(); t0 = performance.now(); } }
+    const todo = levers.filter(lv => lv.plan && !lv.err), known = () => !!dmGet(C.inX);
     for(const lv of todo) if(lv.same || (known() && dmGet(lv.inX))) dmPatch(C, lv);
     // the quick effects, all at once (several workers), while the answer's own 10,000 games are played
     const rQ = dmGet(C.inQ) || await dmExec(C.inQ);
@@ -3513,7 +3479,7 @@ function dmCard(C){
     (charged ? 'the charge is taken to succeed' : plan.turn.bc === false ? 'no charge move (unticked by you)' : 'no charge: it shot engaged')) + '</p>' : '';
   const flash = dmCard.last && dmCard.last.pair === C.pk && dmCard.last.v !== big ? ' chg' : '';
   dmCard.last = { pair:C.pk, v:big };
-  const nc = plan.beats.filter((bb, i) => both || i === plan.k).reduce((t, bb) => t + bb.M.nc.length + bb.M.strats.filter(x => x.state === 'nc').length, 0);   // as many as the list's folds
+  const nc = plan.beats.filter((bb, i) => both || i === plan.k).reduce((t, bb) => t + bb.M.nc.length, 0);   // as many as the list's folds
   dmCardGen++;
   return '<div class="dmans' + (C.prov ? ' prov' : '') + '" id="dmAns">' + ctxLine +
     '<button class="dmbig" data-dmwork data-dmc="big" aria-label="' + esc(big + ' ' + of + '. Open the working') + '"><b class="num' + flash + '">' + big + '</b><span>' + of + '<small>' + sub + '</small></span></button>' + parts + note +
@@ -3555,8 +3521,6 @@ function dmChipsOf(C, out, seen, said){
   for(const y of C.levers) if(y.left){ const nm = y.fact ? y.label : y.r ? y.r.m.from : '';
     out.push('<button class="dmchip ovr" data-dmlv="' + esc(y.id) + '" aria-label="' + esc(nm) + ': count again">' + esc(nm + ': left out (by you)') + '<i aria-hidden="true">↺</i></button>'); }
   for(const r of M.rules) if(r.on && !byFact(pf + 'r:' + r.k, r.k)) chip(pf + 'r:' + r.k, from(r) + (r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pills ? ': ' + r.pickLabel : '') + (r.over ? ' (by you)' : ''), r.over ? 'over' : r.carried ? 'carry' : r.state === 'on' && ch.on[r.k] == null ? 'auto' : '');
-  const nMan = DM_MAN.filter(([k]) => ch.man[k] && ch.man[k] !== '0').length;
-  if(nMan) out.push('<button class="dmchip" data-dmmanclear data-dmstep="' + b.id + '">' + dmManSum(ch.man) + (part ? ' (' + part + ')' : '') + '<i aria-hidden="true">×</i></button>');
 }
 // the chips in two lines, the rest behind "+N more" (the pinned card never grows tall)
 function dmChipCap(){
@@ -3659,38 +3623,53 @@ function dmListPart(C, score){
       const sub = !o.v ? 'the target is farther than ' + o.lo + '" (every weapon is taken to be in range)' : (o.now.length ? 'bonus for ' + esc(andList([...new Set(o.now)])) : 'no bonus for the weapons as ticked') + (extra.length ? ' · with ' + esc(M.bands.rules.join(', ')) + ': ' + esc(andList([...new Set(extra)])) : '');
       return dmRowHtml(C, x, esc(dmBandName(o)), sub, ''); }).join('') + '</section>';
   }
-  // a rule the rules leave out here stays in the fold below, ticked or not: a tap never moves a row
-  const rl = C.levers.filter(x => x.sec === 'rule' && !x.out && !x.underFact);
-  h += '<section class="dmsec"><h3 class="dmh3">Situation and rules</h3>' + (rl.length ? ranked(rl).map(x => dmLeverRow(C, x)).join('') : '<p class="note dmnone">None for this unit.</p>') + '</section>';
-  const sl = C.levers.filter(x => x.sec === 'strat' && !x.out);
-  h += '<section class="dmsec"><h3 class="dmh3">Stratagems <small>with their CP</small></h3>' + (sl.length ? ranked(sl).map(x => dmLeverRow(C, x)).join('') : '<p class="note dmnone">None that change these numbers.</p>') + '</section>';
-  h += dmOuts(C, C.levers.filter(x => x.out && !x.underFact && (x.sec === 'rule' || x.sec === 'strat')), M.strats.filter(s => s.state === 'out'));
-  const nc = M.nc.concat(M.strats.filter(s => s.state === 'nc').map(s => ({ side:s.side, name:s.s.cp + 'CP ' + s.s.name, text:s.text, strat:true, id:s.s.id })));
-  if(nc.length) h += '<details class="dmfold dmncf"' + (plan.k === 0 || !plan.both ? ' id="dmNc"' : '') + ' data-dmfold="nc"' + (st.fold.nc ? ' open' : '') + '><summary><span>Not counted by the calculator (' + nc.length + ')</span>' + chev + '</summary>' +
-    '<p class="note">They can matter at the table, but the calculator does not play them: what each one says.</p>' +
-    nc.map(x => { const bh = dmByHand(x.text);
-      return '<div class="dmncr"><b' + (x.id ? ' class="rl" role="button" tabindex="0" data-strat="' + esc(x.id) + '"' : '') + '>' + esc(x.name) + (x.id && x.text ? ' ' + aiLabel : '') + '</b><small>' + esc(x.text) + (x.why ? ' · ' + esc(x.why) : '') + '</small>' +
-        (bh ? '<button class="textbtn dmbh" data-dmbyhand="' + esc(bh.k + '|' + bh.v) + '">Count it by hand: ' + esc(bh.label) + '</button>' : '') + '</div>'; }).join('') + '</details>';
-  h += dmManual(dmCh(st, b.id), st);
+  // the situation (the facts of the table, and the core rules' boxes: Plunging Fire, close-quarters shooting, a Damaged band, …)
+  const sitL = C.levers.filter(x => (x.fact || x.x) && !x.underFact);
+  h += '<section class="dmsec"><h3 class="dmh3">Situation</h3>' + (sitL.length ? ranked(sitL).map(x => dmLeverRow(C, x)).join('') : '<p class="note dmnone">None for this unit.</p>') + '</section>';
+  // the rule boxes in their five groups (DM_GROUPS), each box in one; a box the rules rule out here stays in its group, unticked with
+  // the reason (a tap never moves a row); what has nothing the script can count, with GW's words, folded at the end of its group
+  let ncId = plan.k === 0 || !plan.both;
+  for(const [g, title] of DM_GROUPS){
+    const rows = C.levers.filter(x => x.r && x.grp === g && x.sec !== 'pill'), ins = rows.filter(x => !x.out), outs = rows.filter(x => x.out);
+    if(g === 'custom'){ const n = rows.filter(x => x.on).length;
+      h += '<details class="dmfold dmcust" data-dmfold="custom" data-dmlazy' + (st.fold.custom ? ' open' : '') + '><summary><span>' + title + ' · ' + (n ? n + ' ticked' : 'none') + '</span>' + chev + '</summary>' +
+        // (drawn only when open: the folded group is one line, its 25 rows drawn when it is opened)
+        (st.fold.custom ? '<p class="note">Plain effects, no rule’s: for anything the boxes above do not cover. Each counts for every weapon ticked.</p>' + rows.map(x => dmLeverRow(C, x)).join('') : '') + '</details>';
+      continue; }
+    const ncs = M.nc.filter(x => (x.grp || 'unit') === g);
+    h += '<section class="dmsec" data-dmgrp="' + g + '"><h3 class="dmh3">' + title + (g === 'strat' ? ' <small>with their CP</small>' : '') + '</h3>' +
+      (ins.length ? ranked(ins).map(x => dmLeverRow(C, x)).join('') : '<p class="note dmnone">None that change these numbers.</p>') +
+      // (what the rules rule out in this step, folded as on main: its rows drawn once the fold is opened, the player's to count anyway)
+      (outs.length ? (ko => '<details class="dmfold dmouts" data-dmfold="outs-' + g + '" data-dmlazy' + (ko ? ' open' : '') + '><summary><span>Not for this step, by the rules (' + outs.length + ')' +
+        (outs.some(x => x.on) ? ' · ' + outs.filter(x => x.on).length + ' counted by you' : ' · yours to count anyway') + '</span>' + chev + '</summary>' + (ko ? outs.map(x => dmLeverRow(C, x)).join('') : '') + '</details>')(st.fold['outs-' + g] || (st.fold.outs && st.fold['outs-' + g] !== false)) : '') +
+      (ncs.length ? '<details class="dmfold dmncf"' + (ncId ? ' id="dmNc"' : '') + ' data-dmfold="nc-' + g + '"' + (st.fold['nc-' + g] || (st.fold.nc && st.fold['nc-' + g] !== false) ? ' open' : '') + '><summary><span>Not counted in the Damage tab (' + ncs.length + ')</span>' + chev + '</summary>' +
+        ncs.map(x => '<div class="dmncr"><b' + (x.s && x.s.id ? ' class="rl" role="button" tabindex="0" data-strat="' + esc(x.s.id) + '"' : '') + '>' + esc(x.name) + '</b><small>' + esc(x.text) + (x.why ? ' · ' + esc(x.why) : '') + '</small></div>').join('') + '</details>' : '') + '</section>';
+    if(ncs.length) ncId = false;
+  }
   return h;
 }
 function dmLeverRow(C, x){
   if(x.r){ const r = x.r, title = (r.m.cp ? '<b class="cpb">' + r.m.cp + 'CP</b> ' : '') + dmRuleLink(C, x, r.m.from || '') + (r.help ? ' (' + esc(r.help) + ')' : '');
     const reach = r.e ? C.M.ticked.map(c => [c, dmReach(C.plan.beats[C.plan.k].atk.u, c.it, r.m, r.sc)]) : [];
     const part = reach.length && reach.some(([c, n]) => n < c.n) ? reach.filter(([c, n]) => n > 0).map(([c, n]) => C.M.cName(c) + (n < c.n ? ' ×' + n : '')) : null;
-    const words = dmRuleWords(r.m.when, r.note0 || r.m.note, r.e && r.e.set), cw = r.m.calc ? dmCalcWords(r.e) : '';
-    const counted = cw && !words.toLowerCase().includes(cw.toLowerCase().replace(/ rolls?$/, '')) ? ' · in these numbers: ' + cw : '';
-    const one = r.m.oneModel && modelCount(C.plan.beats[C.plan.k].atk.u) > 1 ? ' · one model only: counted for the weapons of one model' : '';
-    // a rule that follows another's pick (Murderous Imperative), and the part of a rule a fact of the table switches on (the +1 AP)
-    const lead = r.lead ? ' · its Imperative is the one picked under ' + r.lead.m.from + ': ' + (r.lead.on ? r.lead.pickLabel : 'none ticked') : '';
-    const bu = C.plan.beats[C.plan.k].atk.u, pt = r.m.part ? ' · ' + r.m.part.note + (r.partOn ? ' counted (' + (hasKw(bu, 'Battleline') ? 'it is BATTLELINE' : 'said above') + ')' : r.partIn ? ' only while the BATTLELINE fact holds (above)' : '') : '';
+    // its words: how it reaches this unit, its condition, its effects (effects.js labels; GW's own words in the rule's popup)
+    const mark = r.m.mark === 'aura' ? 'Aura' : r.m.mark === 'selected' ? 'Selected by it' : r.m.mark ? 'From it' : '';
+    const words = (mark ? mark + ' · ' : '') + (r.label ? r.label + (r.pills ? '' : ': ') : '') + (r.pills ? '' : WH_EFFECTS.fxLabel(r.fx));
+    const sc0 = (r.sc && r.sc.scope) || {}, bu0 = C.plan.beats[C.plan.k].atk.u;
+    const one = sc0.models === 'one' && modelCount(bu0) > 1 ? ' · one model only: counted for the weapons of one model' : '';
+    // (the models its words name: CHARACTER models, or the others; a re-roll of one die: how often, in GW's words, BOXES pool)
+    const who = (sc0.models === 'char' ? ' · CHARACTER models only' : sc0.models === 'nonchar' ? ' · not CHARACTER models' : '') + (sc0.wkw ? ' · ' + dmCap(sc0.wkw.toLowerCase()) + ' weapons only' : '') + (sc0.weapon && !part ? ' · its ' + sc0.weapon.replace(/ weapons?$/, '') + ' weapons' : '');
+    const PL = { selected:'one for the unit each time it is selected to shoot or fight, its weapons most valuable first', phase:'once in the phase', turn:'once per turn', round:'once per battle round' };
+    const pool = r.m.box && r.m.box.pool && r.m.box.pool !== 'phase' ? ' · ' + PL[r.m.box.pool] : '';
+    const bu = bu0, pt = r.m.part ? (words ? ' · ' : '') + r.m.part.note + ' with ' + andList(r.m.part.picks).replace(/ and /, ' or ') + ' (' + (DM_FACTS[r.m.part.cond] || r.m.part.cond) + ')' + (r.partOn ? ' counted (' + (r.m.part.cond === 'battleline6' && hasKw(bu, 'Battleline') ? 'it is BATTLELINE' : 'said above') + ')' : r.partIn ? ' only while it holds (above)' : '') : '';
+    const counted = '', lead = '';
     // a re-roll of one die, ticked: which weapons it goes to (the working's exact averages; the unit's re-rolls of one die together)
     const went = r.on && r.e && ['oneHit', 'oneWound', 'oneDmg', 'oneEither', 'oneAny'].some(k => r.e[k]) ? dmOneWent(C.M, r.m.from) : '';
-    const sub = esc(words + counted + one + lead + pt + (part ? ' · ' + (part.length ? 'for ' + part.join(', ') : 'none of the ticked weapons') : '') + went);
+    const sub = esc(words + counted + one + who + pool + lead + pt + (part ? ' · ' + (part.length ? 'for ' + part.join(', ') : 'none of the ticked weapons') : '') + went);
     return dmRowHtml(C, x, title, sub, '', dmPills(C, x)); }
   // (Both: the rules it switches on in either part, the fight's said as such)
-  if(x.fact){ const kids = (C.all || C.levers).filter(y => y.underFact === x.id);
-    const sub = [kids.length ? '' : x.reach.length ? 'ticks ' + andList(x.reach) : '', x.also, x.cond.length ? 'also the condition of ' + andList(x.cond) + ' (tick it under Stratagems)' : ''].filter(Boolean).join(' · ');
+  if(x.fact){ const kids = (C.all || C.levers).filter(y => y.underFact === x.id && y.x);
+    const sub = [x.reach.length ? 'ticks ' + andList(x.reach) : '', x.also, x.cond.length ? 'also the condition of ' + andList(x.cond) + ' (tick it under Stratagems)' : ''].filter(Boolean).join(' · ');
     return dmRowHtml(C, x, esc(x.label), esc(sub), '', kids.length ? '<div class="dmprof sub dmkids"><span class="dmpl">Rules it switches on</span>' + kids.map(y => { const nm = (y.r ? y.r.m.from : y.x && y.x.label ? y.x.label : '') + (y.bi !== x.bi ? ' (' + (y.step === 'shoot' ? 'shooting' : 'fight') + ')' : '');
       return '<button class="dmpp dmkid' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b><span class="kc" aria-hidden="true">' + (y.on ? '✓' : '') + '</span>' + esc(dmCap(nm)) + '</b><em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>' : ''); }
   if(x.x) return dmRowHtml(C, x, esc(x.x.label), esc(x.x.sub), '');
@@ -3720,57 +3699,13 @@ function dmRuleLink(C, lv, name){
 function dmPills(C, x){
   const kids = C.levers.filter(y => y.sec === 'pill' && y.parent === x.id && !y.dice);
   if(!kids.length) return '';
-  const pk = x.r && x.r.m.pick ? x.r.m.pick : [], bt = dmBt(C, x);
-  return '<div class="dmprof sub">' + kids.map(y => { const p = pk.find(q => q.name === y.name);
-    // Both (Doctrina Imperatives): what makes both active for this unit, or that it is counted by you without it
-    const ar = x.r ? x.r.m.ar : null, bp = p && p.both && ar && ar.both;
-    const via = bp ? dmBothVia(bt.atk.army, bt.atk.u, ar.both) : [];
-    const bw = bp ? '<small' + (via.length ? '' : ' class="ovr"') + '>' + esc(via.length ? 'with ' + via.join(' or ') : 'counted by you: only with ' + dmBothAll(ar.both)) + '</small>' : '';
-    return '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(p && p.label || y.name) + '</b>' + bw + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>';
+  const pk = x.r && x.r.m.box && x.r.m.box.pick ? x.r.m.box.pick : [];
+  // each pick: its name (GW's: a table's row, an option), and its effects when the name is not them (effects.js labels)
+  // (and its own condition, GW's words: "If the assault doctrine is active for your unit", "spend one Flux token")
+  return '<div class="dmprof sub">' + kids.map(y => { const p = pk.find(q => q.name === y.name), fl0 = p ? WH_EFFECTS.fxLabel(p.fx) : '', cl = p && (p.on || []).length ? WH_EFFECTS.condLabel(p.on.filter(o => o[0] !== 'opt')) : '';
+    const fl = (cl ? cl + (fl0 && fl0 !== y.name ? ': ' : '') : '') + (fl0 && fl0 !== y.name ? fl0 : '');
+    return '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(y.name) + '</b>' + (fl ? '<small>' + esc(fl) + (p.part ? '; ' + esc(WH_EFFECTS.fxLabel(p.part.fx)) + ' ' + esc(WH_EFFECTS.condLabel(p.part.on)) : '') + '</small>' : '') + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>';
 }
-// what the rules rule out here, in one line: each a button, the player's to count anyway (its effect with it); the other stratagems
-// of another phase, with nothing to count, named with the reason
-function dmOuts(C, list, more){
-  if(!list.length && !(more || []).length) return '';
-  const pill = x => { const r = x.r, name = (r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from;
-    return '<button class="dmop' + (x.on ? ' on' : '') + '" data-dmlv="' + esc(x.id) + '" aria-pressed="' + !!x.on + '"><b>' + esc(name) + '</b> <span>' + (x.on ? '<i class="ovr">counted by you</i> · ' : '') + esc(r.why) + '</span> <em data-fx="' + esc(x.id) + '">' + dmFxHtml(C, x) + '</em></button>'; };
-  const by = new Map();
-  for(const s of more || []){ if(!by.has(s.why)) by.set(s.why, []); by.get(s.why).push(s.s.cp + 'CP ' + s.s.name); }
-  const rest = [...by].map(([w, names]) => '<b>' + esc(names.join(', ')) + '</b> (' + esc(w) + ')');
-  const n = list.length + (more || []).length;
-  const on = list.filter(x => x.on).length;
-  return '<details class="dmfold dmouts" data-dmfold="outs"' + (C.st.fold.outs ? ' open' : '') + '><summary><span>Not for this step, by the rules (' + n + ')' + (on ? ' · ' + on + ' counted by you' : list.length ? ' · yours to count anyway' : '') + '</span>' + chev + '</summary>' +
-    (list.length ? '<p class="dmoutl">' + list.map(pill).join('') + '</p>' : '') + (rest.length ? '<p class="dmout">Nothing to count: ' + rest.join(' · ') + '</p>' : '') + '</details>';
-}
-// what a modifier can count of a rule the calculator does not play ("count it by hand"): a to hit or to wound, AP, D, re-rolls. The
-// first one its words name; null when none does
-function dmByHand(text){
-  const t = ' ' + String(text || '').toLowerCase().replace(/[’']/g, '').replace(/[–−]/g, '-') + ' ';
-  let m;
-  if((m = /([+-]\d) to (?:the )?hit/.exec(t))) return { k:'hit', v:+m[1], label:'Hit roll ' + m[1] };
-  if((m = /([+-]\d) to (?:the )?wound/.exec(t))) return { k:'wound', v:+m[1], label:'Wound roll ' + m[1] };
-  if(/re-?roll (?:the )?hit rolls? of 1/.test(t)) return { k:'rrHit', v:'1s', label:'Re-roll hits: 1s' };
-  if(/re-?roll (?:the )?hit rolls?/.test(t)) return { k:'rrHit', v:'all', label:'Re-roll hits: all' };
-  if(/re-?roll (?:the )?wound rolls? of 1/.test(t)) return { k:'rrWound', v:'1s', label:'Re-roll wounds: 1s' };
-  if(/re-?roll (?:the )?wound rolls?/.test(t)) return { k:'rrWound', v:'all', label:'Re-roll wounds: all' };
-  if((m = /\+(\d) ap\b|improve (?:the )?ap(?: characteristic)? (?:of [a-z ]+)?by (\d)/.exec(t))) return { k:'ap', v:+(m[1] || m[2]), label:'AP +' + (m[1] || m[2]) };
-  if((m = /\+(\d) d\b/.exec(t))) return { k:'d', v:+m[1], label:'Damage +' + m[1] };
-  return null;
-}
-// the modifiers, set by hand for the step shown (folded at the bottom: "Modifiers · none", or what is set): hit, wound, AP and Damage
-// -3 to +3, re-roll hits and wounds. Counted as set, with no rule's name
-const DM_MAN = [['hit', 'Hit roll'], ['wound', 'Wound roll'], ['ap', 'AP'], ['d', 'Damage'], ['rrHit', 'Re-roll hits'], ['rrWound', 'Re-roll wounds']];
-const dmManSum = man => { const x = DM_MAN.filter(([k]) => man[k] && man[k] !== '0').map(([k, l]) => /^rr/.test(k) ? l + ' ' + man[k] : (k === 'ap' ? 'AP' : k === 'd' ? 'D' : l.replace(/ roll$/, '')) + ' ' + (+man[k] > 0 ? '+' : '−') + Math.abs(+man[k]));
-  return x.length ? x.join(', ') : 'none'; };
-function dmManual(ch, st){
-  const man = ch.man;
-  const step = (k, label) => { const v = +man[k] || 0;
-    return '<div class="dmstep"><span>' + label + '</span><button data-dmman="' + k + '|-1" aria-label="' + label + ' minus 1"' + (v <= -3 ? ' aria-disabled="true"' : '') + '>−</button><b class="num">' + (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v) + '</b><button data-dmman="' + k + '|1" aria-label="' + label + ' plus 1"' + (v >= 3 ? ' aria-disabled="true"' : '') + '>+</button></div>'; };
-  const rr = (k, label) => '<div class="dmstep"><span>' + label + '</span>' + [['', 'none'], ['1s', '1s'], ['all', 'all']].map(([v, l]) => '<button class="rr' + ((man[k] || '') === v ? ' on' : '') + '" data-dmrr="' + k + '|' + v + '" aria-pressed="' + ((man[k] || '') === v) + '">' + l + '</button>').join('') + '</div>';
-  return '<details class="dmfold dmmanf" data-dmfold="more"' + (st.fold.more ? ' open' : '') + '><summary><span>Modifiers · ' + esc(dmManSum(man)) + '</span>' + chev + '</summary><div class="dmman">' +
-    step('hit', 'Hit roll') + step('wound', 'Wound roll') + step('ap', 'AP') + step('d', 'Damage') + rr('rrHit', 'Re-roll hits') + rr('rrWound', 'Re-roll wounds') + '</div></details>';
-}
-
 // the step a control is for: the part of the list it is in (Both: the shooting or the fight), else the step shown
 const dmStepId = el => { const x = el && el.closest && el.closest('[data-dmstep]'); return x ? x.dataset.dmstep : DM_CTX ? DM_CTX.plan.beats[DM_CTX.plan.k].id : 'shoot'; };
 // a change the player can undo: what it changed, as it was before (the turn and the step shown; for a unit change the unit too)
@@ -5852,6 +5787,7 @@ document.addEventListener('toggle', e => {
   if(!d.dataset) return;
   if(d.hasAttribute('data-dmfold')){ dmState().fold[d.dataset.dmfold] = d.open; saveSession();   // the Damage tab's folds stay as left
     if(DM_CTX) DM_CTX.st.fold[d.dataset.dmfold] = d.open;   // (and in the screen's copy, which a list drawn again in the background draws from)
+    if(d.open && d.hasAttribute('data-dmlazy') && !d.querySelector('[data-dmlv]')){ dmRedrawKeep(); if(DM_CTX) dmFill(DM_CTX); }   // (a fold whose rows are drawn once open: the custom modifiers, what the rules rule out; once: a fold drawn open has them)   // (the custom modifiers' rows, drawn and worked out once their group is open)
     if(d.open) for(const w of d.querySelectorAll('.dwv[data-wh]')) w.scrollTop = +w.dataset.i * WH_ROW;   // (a wheel drawn folded takes its row once shown)
     return; }
   if(d.dataset.ckfold){ if(d.open) openStrats.add(d.dataset.ckfold); else openStrats.delete(d.dataset.ckfold); saveSession(); return; }   // a Phase checklist fold

@@ -7,7 +7,7 @@
 const VERSION = '8ff08dfddc';
 const CACHE = 'waaagh-codex-' + VERSION;
 const FONTS = ['fonts/atkinson-400-ext.woff2', 'fonts/atkinson-400.woff2', 'fonts/atkinson-400i-ext.woff2', 'fonts/atkinson-400i.woff2', 'fonts/atkinson-500-ext.woff2', 'fonts/atkinson-500.woff2', 'fonts/atkinson-600-ext.woff2', 'fonts/atkinson-600.woff2', 'fonts/atkinson-700-ext.woff2', 'fonts/atkinson-700.woff2', 'fonts/barlow-condensed-500-ext.woff2', 'fonts/barlow-condensed-500.woff2', 'fonts/barlow-condensed-600-ext.woff2', 'fonts/barlow-condensed-600.woff2', 'fonts/barlow-condensed-700-ext.woff2', 'fonts/barlow-condensed-700.woff2'];   // shipped with the app (fonts/OFL.txt, fonts/OFL-atkinson.txt)
-const CORE = ['./', 'index.html', 'data.js', 'calc.js', 'ask.js', 'import.js', 'ask-style.md', 'rules/core-rules.md', 'vendor/anthropic-sdk-0.131.0.mjs', 'verified.js', 'manifest.webmanifest', 'icon-192.png', 'icon-180.png', 'icon-512.png', 'icon-maskable.png'].concat(FONTS);
+const CORE = ['./', 'index.html', 'data.js', 'calc.js', 'effects.js', 'ask.js', 'import.js', 'ask-style.md', 'rules/core-rules.md', 'vendor/anthropic-sdk-0.131.0.mjs', 'verified.js', 'manifest.webmanifest', 'icon-192.png', 'icon-180.png', 'icon-512.png', 'icon-maskable.png'].concat(FONTS);
 
 self.addEventListener('install', e => {
   self.skipWaiting();

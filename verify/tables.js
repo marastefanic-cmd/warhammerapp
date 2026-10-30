@@ -48,9 +48,10 @@ const FINGERPRINT = { gist:'gistOf', def:'defOf' };
 const READ = ['mods', 'aura', 'guard'];
 const READ_FP = 'readOf', READ_BY = 'readBy', READ_WHY = 'listWhy';   // (listWhy: a reading the list's own, and why: it stays on the entry)
 const READ_COLS = {
-  rule:['mod', 'calcMods', 'calcDefs', 'calcNc', 'parts', 'both', 'limit', 'statNote'],
-  strat:['mod', 'help', 'shield', 'defCalc', 'defPick', 'calcMods', 'calcNote', 'limit', 'lasts', 'react', 'weaponKw'],
-  ability:['riled', 'damaged', 'defAlways', 'defCalc', 'calcDef', 'embarked', 'fightOnDeath', 'comeback', 'calcNote', 'lasts'],
+  // (the Damage tab's own reading columns, calcMods, calcNc, both, limit, are retired: its boxes are BOXES, made by script, "derived")
+  rule:['mod', 'calcDefs', 'parts', 'statNote'],
+  strat:['mod', 'help', 'shield', 'defCalc', 'defPick', 'calcNote', 'limit', 'lasts', 'react', 'weaponKw'],
+  ability:['riled', 'damaged', 'defAlways', 'defCalc', 'calcDef', 'fightOnDeath', 'comeback', 'calcNote', 'lasts'],
 };
 const FP_KEYS = Object.values(FINGERPRINT).concat(READ_FP, READ_BY, READ_WHY);   // hidden from the app, and from the helpers' keys
 const fp = s => crypto.createHash('sha256').update(String(s)).digest('hex').slice(0, 8);
@@ -1070,6 +1071,8 @@ function columnsInData(src){
   }
   for(const s of Object.values(S)){ add('DATASHEETS', s); for(const k of ROWS.concat(READ)) (s[k] || []).forEach(r => add('DATASHEETS.' + k, r)); }
   (D.ruleOptions || []).forEach(r => add('RULE_OPTIONS', r)); (D.grants || []).forEach(r => add('GRANTS', r));
+  // the Damage tab's boxes (verify/effects-migrate.js --write) and each box's columns
+  for(const o of Object.values(D.boxes || {})){ add('BOXES', o); (o.b || []).forEach(b => add('BOXES.b', b)); }
   add('BS_IDS', D.bsIds);
   return Object.fromEntries(Object.entries(T).map(([k, v]) => [k, [...v]]));
 }

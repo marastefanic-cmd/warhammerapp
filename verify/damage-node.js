@@ -23,8 +23,8 @@ module.exports = function load(){
     decl.set(m[1] || m[2], { at:i, src:lines.slice(i, j).join('\n') });
   }
   // what the Damage helpers use, followed name by name (the page's state is given here instead)
-  const given = new Set(['D', 'cur', 'sess', 'store', 'session', 'BUILD', '$', '$$', 'WH_CALC']);
-  const need = new Set(), todo = ['dmCalc', 'dmShown', 'dmUnits', 'dmState', 'dmSides', 'dmTypedVals', 'unitLabel', 'modelCount', 'DM_ONE_OF', 'dmPair', 'dmPlan', 'dmIn', 'dmBeatAns', 'dmFx', 'dmLevers', 'dmNums', 'dmZero', 'dmDelta', 'dmSetUnit', 'dmCleanTicks', 'dmResetPair', 'dmCharged', 'dmSetCharge', 'dmMe', 'dmModeTurn', 'dmModeOf', 'dmModeOld', 'dmStart', 'dmTotalAns', 'dmAnsOf', 'dmWorth'];
+  const given = new Set(['D', 'cur', 'sess', 'store', 'session', 'BUILD', '$', '$$', 'WH_CALC', 'WH_EFFECTS']);
+  const need = new Set(), todo = ['dmCalc', 'dmShown', 'dmUnits', 'dmState', 'dmSides', 'dmTypedVals', 'unitLabel', 'modelCount', 'DM_ONE_OF', 'dmPair', 'dmPlan', 'dmIn', 'dmBeatAns', 'dmFx', 'dmLevers', 'dmNums', 'dmZero', 'dmDelta', 'dmSetUnit', 'dmCleanTicks', 'dmResetPair', 'dmCharged', 'dmSetCharge', 'dmMe', 'dmModeTurn', 'dmModeOf', 'dmModeOld', 'dmStart', 'dmTotalAns', 'dmAnsOf', 'dmWorth', 'dmSources', 'dmBoxRules', 'DM_GROUPS', 'dmGroupOf', 'matches', 'inArmy', 'allStratagems', 'canTarget'];
   while(todo.length){
     const n = todo.pop();
     if(need.has(n) || given.has(n) || !decl.has(n)) continue;
@@ -35,11 +35,11 @@ module.exports = function load(){
     for(const id of new Set(code.match(/[A-Za-z_$][\w$]*/g))) if(decl.has(id) && !need.has(id) && !given.has(id)) todo.push(id);
   }
   const src = [...need].sort((a, b) => decl.get(a).at - decl.get(b).at).map(n => decl.get(n).src).join('\n');
-  const D = loadData(), WH_CALC = require(path.join(ROOT, 'calc.js'));
+  const D = loadData(), WH_CALC = require(path.join(ROOT, 'calc.js')), WH_EFFECTS = require(path.join(ROOT, 'effects.js'));
   const mem = new Map(), store = { get:k => mem.get(k), set:(k, v) => mem.set(k, v) };
-  const env = new Function('D', 'WH_CALC', 'store', 'window', 'let cur = { s:"damage", army:null }, sess = {};\n' + src + '\n' +
-    'return { set:(a, st) => { cur.army = a; sess.dmg = { [a]:st }; }, dmState, dmSides, dmTypedVals, dmCalc, dmShown, dmUnits, army, unitLabel, modelCount, dmPair, dmPlan, dmIn, dmBeatAns, dmFx, dmLevers, dmNums, dmZero, dmDelta, dmSetUnit, dmCleanTicks, dmResetPair, dmCharged, dmSetCharge, dmMe, dmModeTurn, dmModeOf, dmModeOld, dmStart, dmTotalAns, dmAnsOf, dmWorth };');
-  const app = env(D, WH_CALC, store, { WH_DATA:D });
+  const env = new Function('D', 'WH_CALC', 'WH_EFFECTS', 'store', 'window', 'let cur = { s:"damage", army:null }, sess = {};\n' + src + '\n' +
+    'return { set:(a, st) => { cur.army = a; sess.dmg = { [a]:st }; }, dmState, dmSides, dmTypedVals, dmCalc, dmShown, dmUnits, army, unitLabel, modelCount, dmPair, dmPlan, dmIn, dmBeatAns, dmFx, dmLevers, dmNums, dmZero, dmDelta, dmSetUnit, dmCleanTicks, dmResetPair, dmCharged, dmSetCharge, dmMe, dmModeTurn, dmModeOf, dmModeOld, dmStart, dmTotalAns, dmAnsOf, dmWorth, dmSources, dmBoxRules, DM_GROUPS, dmGroupOf, matches, inArmy, allStratagems, canTarget };');
+  const app = env(D, WH_CALC, WH_EFFECTS, store, { WH_DATA:D, WH_EFFECTS });
   // one attack as the screen builds it: s = { army, ph, atk, typed, left, on, off, pick, man, val, fx }: the unit as the screen picks it
   // (dmSides), at the target set by hand; left: the models left of each models line
   const calc = s => {
@@ -52,5 +52,5 @@ module.exports = function load(){
     app.set(s.army, Object.assign({ dir:'me', fold:{}, typed:{}, left:{}, turn:{}, step:{}, ch:{}, facts:{} }, s));
     return app.dmPlan(app.dmState());
   };
-  return { D, WH_CALC, app, calc, plan, names:[...need] };
+  return { D, WH_CALC, WH_EFFECTS, app, calc, plan, names:[...need] };
 };

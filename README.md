@@ -17,8 +17,8 @@ bases, weapons, abilities, rules, stratagems, keywords) · **Stratagems** (every
 detachments and the core ones, each with a one-line gist, its timing and which of your units can use it) ·
 **Rules** (army and detachment rules, and which unit has which core rule, such as Lone Operative, quoting
 the ability when it is conditional; general rules are left out) · **Damage** (a damage calculator: one of
-your units against one of the opponent's list, picked per list; weapons, the situation and both units'
-rules as tick boxes, a rule counting only when every word of its footnote is understood; `calc.js` plays
+your units against one of the opponent's list, picked per list; weapons, the situation and the rules as tick boxes in five groups (Army rules, Unit rules, From other units in your list, Stratagems,
+Custom modifiers), every box made by script from GW's words with no AI (`effects.js`, data.js `BOXES`), all unticked to start with; `calc.js` plays
 the 11th edition attack sequence out 10,000 times with seeded dice).
 
 **Rules questions** (the ? in the top bar, once an Anthropic API key is saved in Settings): a chat with
@@ -38,8 +38,9 @@ are in the git history, and `import-nr.js --reuse` can take their signed-off not
 | `ask.js`, `ask-style.md`, `vendor/` | the rules-question chat, how its answers should look, and the Anthropic SDK it uses |
 | `rules/core-rules.md` | a text copy of the Core Rules with errata and FAQs as Wahapedia publishes them, for the chat (`python3 -I verify/rules-text.py verify/.cache/waha/core.html rules/core-rules.md` refreshes it) |
 | `calc.js` | the damage calculator's engine (the attack sequence, section 05 of the Core Rules), checked by the gate like the app |
+| `effects.js` | the Damage tab's catalogue of effects and conditions: what each box does in the numbers and the GW words that state it (shared by the app and `verify/`; `verify/effects-extract.js` reads the rules with it into data.js `BOXES`) |
 | `import.js` | the list import: a New Recruit JSON export becomes a list only when every unit, option, enhancement and detachment in it is one data.js already has (by BSData id, from the `BS_IDS` table `verify/import-ids.js` writes into `data.js`); checked by the gate (`verify/import-test.js`) against every export in `verify/sources/nr-json/` |
-| `app.html` | the app (published as the Claude artifact as-is, with `data.js`, `calc.js`, `import.js`, `verified.js`, `fonts/`) |
+| `app.html` | the app (published as the Claude artifact as-is, with `data.js`, `calc.js`, `effects.js`, `import.js`, `verified.js`, `fonts/`) |
 | `build.js` | builds `index.html`, `version.json` and the `sw.js` stamp; refuses unless the gate passed |
 | `verify/` | the gate: every fact checked against its source before a build (see below) |
 | `verify/tables.js` | the tables: `--write` converts lists written in full (the import's form, or from another branch) into references to `DATASHEETS` and writes `RULE_OPTIONS` / `GRANTS`; the gate checks data.js is in that form, every column has a source, and every AI-written gist / def matches the text it was written from (`docs/tables.md`) |

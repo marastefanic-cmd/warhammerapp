@@ -1,0 +1,2305 @@
+[
+ {
+  "key": "3d553c76305d4c09",
+  "where": "ability · Knight Diabolus",
+  "verdict": "ok",
+  "why": "GW: “Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1.” → BS/WS improved by 1 (melee, scope {\"models\":\"model\"}); “While the bearer is using the Diabolic Power ability, its melee weapons have the [LANCE] ability.” → [LANCE] when “While the bearer is using the Diabolic Power ability” (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "ba7717f78726f380",
+  "where": "ability · Soul Sight",
+  "verdict": "ok",
+  "why": "GW: “Ranged attacks that target that enemy unit have [IGNORES COVER].” → [IGNORES COVER] when The target is the enemy unit selected · “if this unit is not battle-shocked” (ranged, reach {} selected). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8cd5e27f3cccf664",
+  "where": "ability · Supa-glowy Fing",
+  "verdict": "ok",
+  "why": "GW: “[ANTI-INFANTRY 4+]. [DEVASTATING WOUNDS].” → [ANTI-INFANTRY 4+], [DEVASTATING WOUNDS] (ranged, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "2e7d044fd65ec57c",
+  "where": "ability · Daemon Lord of Tzeentch",
+  "verdict": "ok",
+  "why": "GW: “While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6\" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack.” → +1 S when Within 6\" of it (ranged, reach {\"all\":[\"Tzeentch\",\"Faction: Legiones Daemonica\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "978ca0710eeb0a83",
+  "where": "ability · Annihilator",
+  "verdict": "ok",
+  "why": "GW: “Each time a ranged attack made by this model is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.” → Re-roll Damage rolls when The target: Monster or Vehicle (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "9ea94e76c5ac96c9",
+  "where": "ability · Implacable Eradication",
+  "verdict": "ok",
+  "why": "GW: “Each time a model in this unit makes an attack, re-roll a Wound roll of 1.” → Re-roll Wound rolls of 1 (all); “If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Wound roll instead.” → Re-roll Wound rolls when The target within range of an objective marker (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a7fac1db6a4387d4",
+  "where": "ability · Phaeron of the Stars",
+  "verdict": "ok",
+  "why": "GW: “While a friendly NECRONS unit (excluding MONSTER units) is within 6\" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1” → Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 when Within 6\" of it (all, reach {\"all\":[\"Faction: Necrons\"],\"none\":[\"Monster\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "6eff7c08e72a2e1e",
+  "where": "ability · Spirit Thief",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, each time a friendly HERETIC ASTARTES model makes an attack that targets that unit, re-roll a Wound roll of 1.” → Re-roll Wound rolls of 1 when The target is the enemy unit selected (ranged, reach {\"all\":[\"Faction: Heretic Astartes\"]} selected). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "2ebdfb3836970ea7",
+  "where": "ability · Furious Assault",
+  "verdict": "ok",
+  "why": "GW: “This unit’s melee attacks have [Sustained Hits 1: non-Monster/Vehicle].” → [SUSTAINED HITS 1] when The target: not Monster/Vehicle (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "59470af54d71a7bd",
+  "where": "ability · Damaged: 1-5 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1-5 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "91375ca38f21ace3",
+  "where": "ability · Gloom Prism",
+  "verdict": "ok",
+  "why": "GW (ability): “While a friendly NECRONS unit is within 6\" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.” No attack effect in the Damage tab’s catalogue (move, Leadership, OC, FNP, Stealth, saves, synapse…): rightly shown quoted as “Not counted in the Damage tab”; reach {\"all\":[\"Faction: Necrons\"]} matches GW’s keywords."
+ },
+ {
+  "key": "eec2fa76da2a949a",
+  "where": "ability · Executioner",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll.” → +1 to Hit rolls when The target Below Half-strength (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "406a01e80ca4b312",
+  "where": "ability · Bloody Fury",
+  "verdict": "ok",
+  "why": "GW: “This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls.” → Re-roll Hit rolls when The target is the closest eligible target (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "d4640f201a72cce0",
+  "where": "ability · Prince of Darkness",
+  "verdict": "ok",
+  "why": "GW (ability): “While a friendly LEGIONES DAEMONICA unit is within 6\" of this model, models in that unit have the Stealth ability.” No attack effect in the Damage tab’s catalogue (move, Leadership, OC, FNP, Stealth, saves, synapse…): rightly shown quoted as “Not counted in the Damage tab”; reach {\"all\":[\"Faction: Legiones Daemonica\"]} matches GW’s keywords."
+ },
+ {
+  "key": "24938d7d6695bf0b",
+  "where": "ability · Blade of Endless Bloodshed",
+  "verdict": "ok",
+  "why": "GW: “Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons.” → +1 A, +1 S, +1 D (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "d2ee154543d86732",
+  "where": "ability · Malefic Destruction",
+  "verdict": "ok",
+  "why": "GW: “If it does, until the end of the phase, add 3 to the Attacks characteristic of this model’s hellforged weapons.” → +3 A when Once per battle · If it uses this ability (melee, scope {\"weapon\":\"hellforged weapons\",\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "704035a3e8c6536c",
+  "where": "ability · Bloodmaster",
+  "verdict": "ok",
+  "why": "GW: “While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Wound roll.” → +1 to Wound rolls when While leading a unit (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "fa6f0b81790a33fb",
+  "where": "ability · Rage Embodied",
+  "verdict": "ok",
+  "why": "GW: “While a friendly BLOOD LEGIONS unit is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.” → +1 A when Within 6\" of it (melee, reach {\"all\":[\"Faction: Blood Legions\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "5755c6393dfe13a3",
+  "where": "ability · Empyric Guidance",
+  "verdict": "ok",
+  "why": "GW: “While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.” → [LETHAL HITS] when While leading a unit (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "1337fab69e6c2b19",
+  "where": "ability · Damaged: 1-5 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1-5 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "0c6f7cdb5e13af9c",
+  "where": "ability · Saturation Fire",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.” → [IGNORES COVER] when The target within range of an objective marker (ranged, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "d4284c022ccc2e16",
+  "where": "ability · Nazdreg’s Know-wotz",
+  "verdict": "ok",
+  "why": "GW: “This unit’s ranged attacks have [IGNORES COVER].” → [IGNORES COVER] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "3d48bf0f4d59c361",
+  "where": "ability · Mark of the Soul Forges",
+  "verdict": "ok",
+  "why": "GW: “Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.” → Critical Hit on 5+ (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "ca390f05f3333452",
+  "where": "ability · Skullmaster’s Fury",
+  "verdict": "ok",
+  "why": "GW: “While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the [DEVASTATING WOUNDS] ability.” → [DEVASTATING WOUNDS] when While leading a unit · Charged this turn (all, scope {\"weapon\":\"juggernaut's bladed horn\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "b75e4233fbb43ad8",
+  "where": "ability · Prophet of da Great Waaagh!",
+  "verdict": "ok",
+  "why": "GW: “+1 to hit rolls. +1 to wound rolls.” → +1 to Hit rolls, +1 to Wound rolls when Within 6\" of it (melee, reach {\"all\":[\"Faction: Orks\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8079117630b891b8",
+  "where": "ability · Hunter of Souls",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” → Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 when The target: Character (all, scope {\"models\":\"model\"}); “if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead” → Re-roll Hit rolls, Re-roll Wound rolls when The target: Psyker Character (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "e56e473db73c2989",
+  "where": "ability · Driven by Ultimate Rage",
+  "verdict": "ok",
+  "why": "GW: “Re-roll hit rolls of 1. Re-roll wound rolls of 1.” → Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 when Within 6\" of it (melee, reach {\"all\":[\"Faction: World Eaters\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "dc7bca8296ab877a",
+  "where": "ability · Onslaught",
+  "verdict": "ok",
+  "why": "GW: “While a friendly TYRANIDS unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.” → [ASSAULT], [LETHAL HITS] when Within 6\" of it (ranged, reach {\"all\":[\"Faction: Tyranids\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "39aa619d78a2f657",
+  "where": "ability · Damaged: 1-6 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1-6 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "3e5904f86acd550d",
+  "where": "ability · Damaged: 1-10 Wounds Remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1-10 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "c4a5173ba99555b3",
+  "where": "ability · Damaged: 1-6 Wounds Remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1-6 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "5b1ab06301822930",
+  "where": "ability · Domination of the Hive Mind",
+  "verdict": "ok",
+  "why": "GW: ; not counted: “While a friendly TYRANIDS unit is within 9\" of this model, that unit is within your army’s Synapse Range.” (it changes what another rule needs, not these numbers). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "6025282e8946320f",
+  "where": "ability · Warp Rift Firepower",
+  "verdict": "ok",
+  "why": "GW: “If you do, this unit's ranged attacks have [INDIRECT FIRE].” → [INDIRECT FIRE] when If it uses this ability (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "39acf09714bfc6cd",
+  "where": "ability · Devastating Assault",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.” → [DEVASTATING WOUNDS] when Charged this turn (all, scope {\"weapon\":\"hellforged weapons\",\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "6f35aee981a98d5d",
+  "where": "ability · Bestial Prophet",
+  "verdict": "ok",
+  "why": "GW: “While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.” → +1 to Hit rolls when While leading a unit (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "40cfa3d59b81a3ec",
+  "where": "ability · Berzerker Glaive",
+  "verdict": "ok",
+  "why": "GW: “Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.” → +1 A, +1 D (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "c34f0955984e2dbc",
+  "where": "ability · Dark Zealotry",
+  "verdict": "ok",
+  "why": "GW: “While this unit is leading a unit and contains a DARK APOSTLE model, each time a model in that unit makes a melee attack, add 1 to the Wound roll.” → +1 to Wound rolls when While leading a unit (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "adf2bd6cd13b321e",
+  "where": "ability · Punishing Salvoes",
+  "verdict": "ok",
+  "why": "GW: “In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.” → [SUSTAINED HITS 1] when Remained Stationary (ranged, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "c9d5a155a3c0a3b0",
+  "where": "ability · Visions of Suffering",
+  "verdict": "ok",
+  "why": "GW: “Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll.” → +1 to Hit rolls when The target below its Starting Strength (all); “If that enemy unit is Below Half-strength, add 1 to the Wound roll as well.” → +1 to Wound rolls when The target below its Starting Strength · The target Below Half-strength (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "c844c9ad581dfa41",
+  "where": "ability · Marked by Fate",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the Hit roll.” → +1 to Hit rolls when The target is the enemy unit selected (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "cab5171bfb625214",
+  "where": "ability · Krumpin’ Time",
+  "verdict": "ok",
+  "why": "GW: “In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.” → +1 to Hit rolls when Riled up (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "fe98139c66db70b3",
+  "where": "ability · Slayer of Tyrants",
+  "verdict": "fix",
+  "why": "GW: “This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.” The box has no condition (on: []), so its label reads just “+1 to Wound rolls”: main said “Target has a T greater than this unit’s T”. A label regression; the condition must be stated.",
+  "fix": {
+   "box": "a|1hrixn1",
+   "b": [
+    {
+     "quote": "This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+     "fx": [
+      [
+       "wound",
+       1
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "that target a unit with a T greater than this unit’s T"
+      ]
+     ],
+     "kind": "melee"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "d5a328f92e7f505b",
+  "where": "ability · Beacons of Rage",
+  "verdict": "ok",
+  "why": "GW: “While a friendly WORLD EATERS unit is within 6\" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll.” → +1 to Hit rolls when Within 6\" of it · The target: not Monster/Vehicle (melee, reach {\"all\":[\"Faction: World Eaters\"]} aura); “If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.” → +1 to Wound rolls when Within 6\" of it · The target: not Monster/Vehicle · The target Below Half-strength (melee, reach {\"all\":[\"Faction: World Eaters\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "fcfaf67e9ed5b5b7",
+  "where": "ability · Bladeguard",
+  "verdict": "ok",
+  "why": "GW: “This unit’s melee attacks have +1 to hit rolls.” → +1 to Hit rolls (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "fc3fa39775fea7a7",
+  "where": "ability · Battle Protocols",
+  "verdict": "ok",
+  "why": "GW: “Add 2 to the Attacks characteristic of ranged weapons equipped by KASTELAN ROBOT models in that unit.” → +2 A when Protector Protocol (ranged, scope {\"part\":\"KASTELAN ROBOT\"}); “Add 2 to the Attacks characteristic of melee weapons equipped by KASTELAN ROBOT models in that unit.” → +2 A when Conqueror Protocol (melee, scope {\"part\":\"KASTELAN ROBOT\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "85fca0af53dcd8ef",
+  "where": "ability · Harbinger of Death",
+  "verdict": "ok",
+  "why": "GW: “[LETHAL HITS]” → pick [LETHAL HITS] = [LETHAL HITS] / [PRECISION] = [PRECISION] / [SUSTAINED HITS 1] = [SUSTAINED HITS 1] (melee, scope {\"weapon\":\"hellforged weapons\",\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a70ca1979b4c8d22",
+  "where": "ability · Brigand",
+  "verdict": "ok",
+  "why": "GW: “Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.” → [IGNORES COVER] when “while targeting enemy units in range of one or more objective markers” (ranged, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "61e5c534cb1867c4",
+  "where": "ability · Moment Shackle",
+  "verdict": "ok",
+  "why": "GW: “This model’s Watcher’s Axe weapon has +3 A.” → +3 A when Once per battle (all, scope {\"weapon\":\"watcher's axe\",\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "abc8db33d6cfb7a9",
+  "where": "ability · Revel in Desecration",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll.” → +1 to Hit rolls when The target not Below Half-strength (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "bad77d96f5dc5af7",
+  "where": "ability · Boss’ Ammo Runt",
+  "verdict": "ok",
+  "why": "GW: “If you do, this model’s ranged attacks have +1 to hit rolls.” → +1 to Hit rolls when If it uses this ability (ranged, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "f2b9a3341d94d5ad",
+  "where": "ability · Daemonic Patrons",
+  "verdict": "ok",
+  "why": "GW: “If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified Wound roll of 3+ scores a Critical Wound.” → Critical Wound on 3+ when If it uses this ability (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "faad1a4cf971d11b",
+  "where": "ability · Advanced Firepower",
+  "verdict": "ok",
+  "why": "GW: “Re-roll one hit roll. Re-roll one wound roll. Re-roll one damage roll.” → Re-roll one Hit roll, Re-roll one Wound roll, Re-roll one Damage roll when The target: Monster or Vehicle (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "92e7f9766ad07507",
+  "where": "ability · Damaged: 1-9 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1-9 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "f57b6dd12622fe53",
+  "where": "ability · Aggressive Assault",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.” → +1 to Hit rolls when The target is the closest eligible target (ranged, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "d155fa64b8b70bf8",
+  "where": "ability · Furious Onslaught",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the Hit roll.” → Re-roll Hit rolls when The target is the closest eligible target within 18\" (ranged, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "90e4a9bf0586ea08",
+  "where": "ability · Blistering Salvoes",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes an attack with a belleros energy cannon that targets an INFANTRY unit, add 1 to the Hit roll.” → +1 to Hit rolls when The target: Infantry (all, scope {\"weapon\":\"belleros energy cannon\",\"models\":\"model\"}); “Each time this model makes an attack with a ferrumite cannon that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.” → +1 to Hit rolls when The target: Monster or Vehicle (all, scope {\"weapon\":\"ferrumite cannon\",\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "51d6940b9ec3e72e",
+  "where": "ability · Bringers of Change",
+  "verdict": "ok",
+  "why": "GW: “Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1.” → Re-roll Wound rolls of 1 (ranged); “If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.” → Re-roll Wound rolls when The target on an objective marker you do not control (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "fc7480456986a20f",
+  "where": "ability · Canticles of the Omnissiah",
+  "verdict": "fix",
+  "why": "GW: “Each time a model in a friendly ADEPTUS MECHANICUS unit makes an attack that targets your Machine Vengeance target, you can re-roll the Hit roll.” The targetSelected pattern misses “targets your Machine Vengeance target” (it has “its|that … machine vengeance target”, not “your”), so the box reads “Invocation of Machine Vengeance: Re-roll Hit rolls” with no target condition (main: “vs your Machine Vengeance target”). Label regression on Cawl and Thulia Ghuld (purge-goes-the-foe). Also widen COND.targetSelected to /targets? (?:that|its|your) …/.",
+  "fix": {
+   "box": "a|1lx0g6o",
+   "b": [
+    {
+     "quote": "Each time a model in a friendly **ADEPTUS MECHANICUS** unit makes an attack that targets your Machine Vengeance target, you can re-roll the **Hit roll**.",
+     "fx": [
+      [
+       "rrHit",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "opt",
+       "Invocation of Machine Vengeance"
+      ],
+      [
+       "targetSelected",
+       true
+      ]
+     ],
+     "kind": "all",
+     "lead": "Until the start of your next Command phase, that enemy unit is your Machine Vengeance target.",
+     "reach": {
+      "all": [
+       "Faction: Adeptus Mechanicus"
+      ]
+     },
+     "mark": "friendly",
+     "lasts": "round",
+     "opt": "Invocation of Machine Vengeance"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "d2d0c87620275f7d",
+  "where": "ability · Legendary Killer",
+  "verdict": "ok",
+  "why": "GW: “While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” → Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 when While leading a unit (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "6fca333478491a54",
+  "where": "ability · Finderz Keeperz",
+  "verdict": "ok",
+  "why": "GW: “In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 AP.” → +1 AP when This unit or the target within range of an objective (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "180fe873ed705fe8",
+  "where": "ability · Damaged: 1-10 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1-10 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "246413e62c6c35b3",
+  "where": "ability · Phaeron of the Blades",
+  "verdict": "ok",
+  "why": "GW: “While a friendly NECRONS unit (excluding MONSTER units) is within 6\" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee atta” → +1 S when Within 6\" of it (melee, reach {\"all\":[\"Faction: Necrons\"],\"none\":[\"Monster\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "9eec2e523eb4afb4",
+  "where": "ability · Improbable Shield (Aura)",
+  "verdict": "ok",
+  "why": "GW (ability): “LEGIONES DAEMONICA TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.…” No attack effect in the Damage tab’s catalogue (move, Leadership, OC, FNP, Stealth, saves, synapse…): rightly shown quoted as “Not counted in the Damage tab”; reach {\"all\":[\"Faction: Legiones Daemonica\",\"Tzeentch\"]} matches GW’s keywords."
+ },
+ {
+  "key": "82e86cdddeeebb92",
+  "where": "ability · A Worthy Skull",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.” → Re-roll Hit rolls, Re-roll Wound rolls when The target: Character (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "db42461ba60eb84d",
+  "where": "ability · Sacrificial Blessing",
+  "verdict": "ok",
+  "why": "GW: “If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped b” → +D3 A, +D3 S when While leading a unit · If it uses this ability (all, scope {\"wkw\":\"PSYCHIC\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "ba50fe27d9be3489",
+  "where": "ability · Errant’s Duty",
+  "verdict": "ok",
+  "why": "GW: “While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability.” → [ASSAULT] when “While a model is affected by this ability” · Selected by it (ranged, reach {\"all\":[\"Armiger\"]} selected). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "9616d1cdd1a02c40",
+  "where": "ability · Dread Dominion",
+  "verdict": "ok",
+  "why": "GW (ability): “While a friendly WAR DOG model is within 9\" of this model, improve that WAR DOG model’s Leadership and Objective Control characteristics by 1.” No attack effect in the Damage tab’s catalogue (move, Leadership, OC, FNP, Stealth, saves, synapse…): rightly shown quoted as “Not counted in the Damage tab”; reach {\"all\":[\"War Dog\"]} matches GW’s keywords."
+ },
+ {
+  "key": "3c4090f0f900c166",
+  "where": "ability · Deff from Above",
+  "verdict": "ok",
+  "why": "GW: “In your Shooting phase, if this unit made an ingress move this turn, this unit’s ranged attacks have +1 to hit rolls.” → +1 to Hit rolls when “if this unit made an ingress move this turn” (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "d70448a89f5e252b",
+  "where": "ability · Paladin’s Duty",
+  "verdict": "fix",
+  "why": "GW: “… weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.” One box of kind melee drops [LETHAL HITS] from the Armiger’s ranged attacks. Two boxes: [LETHAL HITS] for all attacks, [LANCE] melee. (No list has an Armiger with a Questoris Knight now, so nothing renders differently today.)",
+  "fix": {
+   "box": "a|1q897s2",
+   "b": [
+    {
+     "quote": "While a model is affected by this ability, weapons equipped by that model have the **[LETHAL HITS]** ability, and melee weapons equipped by that model have the **[LANCE]** ability.",
+     "fx": [
+      [
+       "lethal",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "While a model is affected by this ability"
+      ],
+      [
+       "selected",
+       true
+      ]
+     ],
+     "kind": "all",
+     "reach": {
+      "all": [
+       "Armiger"
+      ]
+     },
+     "mark": "selected"
+    },
+    {
+     "quote": "While a model is affected by this ability, weapons equipped by that model have the **[LETHAL HITS]** ability, and melee weapons equipped by that model have the **[LANCE]** ability.",
+     "fx": [
+      [
+       "lance",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "While a model is affected by this ability"
+      ],
+      [
+       "selected",
+       true
+      ]
+     ],
+     "kind": "melee",
+     "reach": {
+      "all": [
+       "Armiger"
+      ]
+     },
+     "mark": "selected"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "0b279dfad02bdff6",
+  "where": "ability · Daemon Lord of Khorne",
+  "verdict": "ok",
+  "why": "GW: “While a friendly KHORNE LEGIONES DAEMONICA unit is within 6\" of this model, each time a model in that unit makes a melee attack, add 1 to the Hit roll.” → +1 to Hit rolls when Within 6\" of it (melee, reach {\"all\":[\"Khorne\",\"Faction: Legiones Daemonica\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "6b0b64413a23abb6",
+  "where": "ability · Nanoscarab Reanimation Beam",
+  "verdict": "ok",
+  "why": "GW (ability): “While a friendly NECRONS unit is within 3\" of this model, each time that unit’s Reanimation Protocols activate, that unit heals an additional D3 wounds.” No attack effect in the Damage tab’s catalogue (move, Leadership, OC, FNP, Stealth, saves, synapse…): rightly shown quoted as “Not counted in the Damage tab”; reach {\"all\":[\"Faction: Necrons\"]} matches GW’s keywords."
+ },
+ {
+  "key": "091a68547c95bbe0",
+  "where": "ability · Even More Dakka",
+  "verdict": "ok",
+  "why": "GW: “If this unit is riled up, this unit’s ranged attacks have [SUSTAINED HITS 1].” → [SUSTAINED HITS 1] when Riled up (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "237c835839142343",
+  "where": "ability · Aetherstride",
+  "verdict": "fix",
+  "why": "GW: “In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does: … Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.” The box has on: [] (the condition sits only in lead), so it renders as a bare “[SUSTAINED HITS D3]” (main: “After an aetherstride this turn”). Label regression (pubstomper Daemon Prince of Tzeentch).",
+  "fix": {
+   "box": "a|1sul8lz",
+   "b": [
+    {
+     "quote": "Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.",
+     "fx": [
+      [
+       "sus",
+       "D3"
+      ]
+     ],
+     "on": [
+      [
+       "used",
+       true
+      ],
+      [
+       "q",
+       "when this model is set up on the battlefield using the Deep Strike ability"
+      ]
+     ],
+     "kind": "all",
+     "lead": "In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:",
+     "scope": {
+      "weapon": "dark blessing"
+     },
+     "lasts": "turn"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "b87c16af744097c7",
+  "where": "ability · Seasoned Noble",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.” → +1 AP when The target is the closest eligible target (ranged, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "5770dc12680f0446",
+  "where": "ability · Clever Know-wotz",
+  "verdict": "ok",
+  "why": "GW: “That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase.” → +1 to Hit rolls when Selected by it (all, scope {\"models\":\"one\"}, reach {\"all\":[\"Faction: Orks\",\"Vehicle\"],\"none\":[\"Aircraft\",\"Titanic\"]} selected). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "96324b3362392d36",
+  "where": "ability · Blood Throne",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, each time a friendly KHORNE LEGIONES DAEMONICA unit makes an attack that targets that unit, improve the Strength, Armour Penetration and Damage characteristics of that atta” → +1 S, +1 AP, +1 D when The target is the enemy unit selected (melee, reach {\"all\":[\"Khorne\",\"Faction: Legiones Daemonica\"]} selected). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "24cab21ad2a18c45",
+  "where": "ability · Rend and Tear",
+  "verdict": "ok",
+  "why": "GW: “Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.” → +1 D when The target: Monster or Vehicle (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8d39c9e07cfe9459",
+  "where": "ability · Stand Vigil",
+  "verdict": "ok",
+  "why": "GW: “This unit’s attacks have [LETHAL HITS: non-MONSTER/VEHICLE] if any of the following apply:” → [LETHAL HITS] when This unit or the target within range of an objective · The target: not Monster/Vehicle (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "f00e83c43877899c",
+  "where": "ability · Da Bigger Dey Iz…",
+  "verdict": "ok",
+  "why": "GW: “This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.” → Re-roll Wound rolls when The target: Monster or Vehicle (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "88fa762287995569",
+  "where": "ability · Atrapos’ Duty",
+  "verdict": "ok",
+  "why": "GW: “While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.” → Re-roll Hit rolls, Re-roll Wound rolls when The target: Titanic or Towering · “While a model is affected by this ability” · Selected by it (all, reach {\"all\":[\"Armiger\"]} selected). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "2a019f31b253f96c",
+  "where": "ability · Time Flux",
+  "verdict": "ok",
+  "why": "GW (ability): “While a friendly THOUSAND SONS unit is within 6\" of this PSYKER, add 2\" to the Move characteristic of models in that unit.” No attack effect in the Damage tab’s catalogue (move, Leadership, OC, FNP, Stealth, saves, synapse…): rightly shown quoted as “Not counted in the Damage tab”; reach {\"all\":[\"Faction: Thousand Sons\"]} matches GW’s keywords."
+ },
+ {
+  "key": "8143f4537e7ff669",
+  "where": "ability · Euphoric Strikes",
+  "verdict": "ok",
+  "why": "GW: “If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.” → +3 A, +1 AP when Once per battle · If it uses this ability (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "4914f7e1d93dbf1a",
+  "where": "ability · Crusader’s Duty",
+  "verdict": "ok",
+  "why": "GW: “While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll.” → +1 to Hit rolls when “While a model is affected by this ability” · Selected by it (ranged, reach {\"all\":[\"Armiger\"]} selected). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a6554cb02817269f",
+  "where": "ability · Methodical Destruction",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes an attack that targets its victim, you can re-roll the Wound roll.” → Re-roll Wound rolls when The target is the enemy unit selected (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "4e444e6bd034e7c2",
+  "where": "ability · Blitz Dem Gitz!",
+  "verdict": "ok",
+  "why": "GW: “In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding MONSTER/VEHICLE units), that weapon has +6 A.” → +6 A when The target: not Monster/Vehicle (ranged, scope {\"weapon\":\"blitzkannon\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "4ab65ce457964747",
+  "where": "ability · Daemon Lord of Khorne",
+  "verdict": "ok",
+  "why": "GW: “While a friendly BLOOD LEGIONS unit is within 6\" of this model, each time a model in that unit makes a melee attack, add 1 to the Hit roll.” → +1 to Hit rolls when Within 6\" of it (melee, reach {\"all\":[\"Faction: Blood Legions\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a92652ab4910e03c",
+  "where": "ability · Siege Shield",
+  "verdict": "ok",
+  "why": "GW: ; not counted: “In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engage” (it removes a penalty the Damage tab does not apply). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "d160137ea1263bf0",
+  "where": "ability · More Dakka",
+  "verdict": "ok",
+  "why": "GW: “[IGNORES COVER].” → [IGNORES COVER] (ranged); “If this unit is riled up, [SUSTAINED HITS 1].” → [SUSTAINED HITS 1] when Riled up (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8b6e796464c46d77",
+  "where": "ability · Snarling Rivalry",
+  "verdict": "ok",
+  "why": "GW: “This unit’s ranged attacks have [IGNORES COVER].” → [IGNORES COVER] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "4c6171827a7237a1",
+  "where": "ability · Bringer of Justice",
+  "verdict": "ok",
+  "why": "GW: “Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.” → +2 A, +1 to Hit rolls (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "b0cfc5836c3605cf",
+  "where": "ability · Dreadherder",
+  "verdict": "ok",
+  "why": "GW: “That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.” → Re-roll Hit rolls of 1 when Within 3\" of it · Selected by it (all, reach {\"all\":[\"Faction: Orks\",\"Walker\"]} selected). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "92aeabc3bda1800f",
+  "where": "ability · Macro-extinction Protocols",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.” → +1 to Hit rolls when The target: Monster or Vehicle (all, scope {\"models\":\"model\"}); “If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.” → +1 to Wound rolls when The target: Monster or Vehicle · “If that target is TITANIC or TOWERING” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "7fc7ca0172e34f0d",
+  "where": "ability · Damaged: 1-6 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1-6 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "dd304dc11029cc24",
+  "where": "ability · Quicksilver Execution",
+  "verdict": "ok",
+  "why": "GW: “If this unit made a charge move this turn, this unit’s melee attacks have [SUSTAINED HITS 1].” → [SUSTAINED HITS 1] when Charged this turn (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "858e58cf9b4143b9",
+  "where": "ability · Damaged: 1-5 Wounds Remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1-5 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "67152ea749fa9d95",
+  "where": "ability · Rage Embodied",
+  "verdict": "ok",
+  "why": "GW: “While a friendly KHORNE LEGIONES DAEMONICA unit is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.” → +1 A when Within 6\" of it (melee, reach {\"all\":[\"Khorne\",\"Faction: Legiones Daemonica\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "37173ebfc56e3963",
+  "where": "ability · Neverblade",
+  "verdict": "ok",
+  "why": "GW: “Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time” → +2 S, +1 A, +1 AP, +1 to Hit rolls (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "1e1c9df6850e2fcb",
+  "where": "ability · Damaged: 1-4 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1-4 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "f3bbf64d3f08887b",
+  "where": "ability · Damaged: 1-7 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.” → +2 A when “While this model has 1-7 wounds remaining” (all, scope {\"weapon\":\"slaughter and carnage\",\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "4abeafca6f5d20da",
+  "where": "ability · Damaged: 1-6 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: ; not counted: “While this unit’s Szarekh model has 1-6 wounds remaining, halve the Attacks characteristic of that model’s weapons, and ” (it halves the Attacks characteristic). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "28a196a291c4d933",
+  "where": "ability · Master of Magicks",
+  "verdict": "ok",
+  "why": "GW: “In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3].” → pick [IGNORES COVER] = [IGNORES COVER] / [LETHAL HITS] = [LETHAL HITS] / [SUSTAINED HITS D3] = [SUSTAINED HITS D3] (ranged, scope {\"weapon\":\"bolt of change\",\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "264b63e020785b78",
+  "where": "ability · Excessive Assault",
+  "verdict": "ok",
+  "why": "GW: “Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1.” → Re-roll Wound rolls of 1 (melee); “If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.” → Re-roll Wound rolls when The target within range of an objective marker (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "52f22953910ffc75",
+  "where": "ability · Skulls for Khorne",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll and you can re-roll the Wound roll.” → Re-roll Hit rolls, Re-roll Wound rolls when The target: Character (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "866a2d157c303662",
+  "where": "ability · Warden’s Duty",
+  "verdict": "fix",
+  "why": "GW: “… weapons equipped by that model have the [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the [IGNORES COVER] ability.” One box of kind ranged drops [SUSTAINED HITS 1] from melee. Two boxes: [SUSTAINED HITS 1] all, [IGNORES COVER] ranged. (Not rendered in any list today.)",
+  "fix": {
+   "box": "a|6t51gd",
+   "b": [
+    {
+     "quote": "While a model is affected by this ability, weapons equipped by that model have the **[SUSTAINED HITS 1]** ability, and ranged weapons equipped by that model have the **[IGNORES COVER]** ability.",
+     "fx": [
+      [
+       "sus",
+       "1"
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "While a model is affected by this ability"
+      ],
+      [
+       "selected",
+       true
+      ]
+     ],
+     "kind": "all",
+     "reach": {
+      "all": [
+       "Armiger"
+      ]
+     },
+     "mark": "selected"
+    },
+    {
+     "quote": "While a model is affected by this ability, weapons equipped by that model have the **[SUSTAINED HITS 1]** ability, and ranged weapons equipped by that model have the **[IGNORES COVER]** ability.",
+     "fx": [
+      [
+       "ignoresCover",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "While a model is affected by this ability"
+      ],
+      [
+       "selected",
+       true
+      ]
+     ],
+     "kind": "ranged",
+     "reach": {
+      "all": [
+       "Armiger"
+      ]
+     },
+     "mark": "selected"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "2b81937f34f215f7",
+  "where": "ability · Prey of the Blood God",
+  "verdict": "ok",
+  "why": "GW: “Each time a model in this model’s unit makes a melee attack that targets its prey, you can re-roll the Wound roll.” → Re-roll Wound rolls when The target is the enemy unit selected (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "4e50b235181770b9",
+  "where": "ability · Close-range Killers",
+  "verdict": "fix",
+  "why": "GW: “… each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1.” The “closest enemy unit” condition is not read (COND.closest wants “closest eligible target”). Not rendered for any list today (no War Dog beside these Knights).",
+  "fix": {
+   "box": "a|7n1mj3",
+   "b": [
+    {
+     "quote": "While a friendly War Dog model is within 9\" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1.",
+     "fx": [
+      [
+       "ap",
+       1
+      ]
+     ],
+     "on": [
+      [
+       "aura",
+       9
+      ],
+      [
+       "q",
+       "that targets the closest enemy unit"
+      ]
+     ],
+     "kind": "all",
+     "reach": {
+      "all": [
+       "War Dog"
+      ]
+     },
+     "mark": "aura"
+    }
+   ],
+   "nc": [],
+   "reach": {
+    "all": [
+     "War Dog"
+    ]
+   }
+  }
+ },
+ {
+  "key": "bc8bc9917e37b843",
+  "where": "ability · Bane-Forged Weapons",
+  "verdict": "ok",
+  "why": "GW: “This unit’s attacks have +1 S.” → +1 S (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a88fc5cfd3e8c42d",
+  "where": "ability · Destabilising Predation",
+  "verdict": "ok",
+  "why": "GW: “This unit’s ranged attacks have [ANTI-CHARACTER 2+].” → [ANTI-CHARACTER 2+] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "39af422df65bdd37",
+  "where": "ability · Eldritch Vortex of E’taph",
+  "verdict": "ok",
+  "why": "GW: “Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.” → +1 S, +1 D (all, scope {\"wkw\":\"PSYCHIC\",\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "3ef00d073d06e5ac",
+  "where": "ability · Master of Mechanisms",
+  "verdict": "ok",
+  "why": "GW: “That VEHICLE model regains up to D3 lost wounds and, until the start of your next Command phase, each time that VEHICLE makes an attack, add 1 to the Hit roll.” → +1 to Hit rolls when Within 3\" of it · Selected by it (all, scope {\"models\":\"one\"}, reach {\"all\":[\"Faction: Heretic Astartes\",\"Vehicle\"]} selected). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "0fabd0155b41ffc9",
+  "where": "ability · Greater Daemon of Khorne",
+  "verdict": "ok",
+  "why": "GW (ability): “While a friendly KHORNE LEGIONES DAEMONICA unit is within 6\" of this model, that unit is within your army’s Shadow of Chaos.” No attack effect in the Damage tab’s catalogue (move, Leadership, OC, FNP, Stealth, saves, synapse…): rightly shown quoted as “Not counted in the Damage tab”; reach {\"all\":[\"Khorne\",\"Faction: Legiones Daemonica\"]} matches GW’s keywords."
+ },
+ {
+  "key": "39bb1a4edabf576e",
+  "where": "ability · Primarch of the XIII",
+  "verdict": "ok",
+  "why": "GW: “Re-roll hit rolls of 1. Re-roll wound rolls of 1.” → Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 when Within 6\" of it (all, reach {\"all\":[\"Faction: Adeptus Astartes\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "fc6bc2ea4ab9b1d5",
+  "where": "ability · Total Obliteration",
+  "verdict": "ok",
+  "why": "GW: “This unit’s ranged attacks can re-roll damage rolls.” → Re-roll Damage rolls (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "9e310c83d271a8ee",
+  "where": "ability · Dark Fervour",
+  "verdict": "ok",
+  "why": "GW: “While a friendly WAR DOG model is within 6\" of this model, ranged weapons equipped by that War Dog model have the [ASSAULT] ability.” → [ASSAULT] when Within 6\" of it (ranged, reach {\"all\":[\"War Dog\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "c6e3fd5647570789",
+  "where": "ability · Warp-sighted Butcher",
+  "verdict": "fix",
+  "why": "GW: “… makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the Hit roll. If that unit is Below Half-strength, you can re-roll the Wound roll as well.” “that unit” is the target. The box carries both targetBelowHalf and belowHalf (this unit Below Half-strength); the label shows “Below Half-strength · The target Below Half-strength” (fellhammer Dark Apostle + Master of Executions). Drop belowHalf; COND.belowHalf’s “that unit is below half-strength” pattern should not fire when targetBelowHalf does.",
+  "fix": {
+   "box": "a|fyw42d",
+   "b": [
+    {
+     "quote": "While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the **Hit roll**.",
+     "fx": [
+      [
+       "rrHit",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "leading",
+       true
+      ],
+      [
+       "targetBelowStarting",
+       true
+      ]
+     ],
+     "kind": "melee"
+    },
+    {
+     "quote": "If that unit is **Below Half-strength**, you can re-roll the **Wound roll** as well.",
+     "fx": [
+      [
+       "rrWound",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "leading",
+       true
+      ],
+      [
+       "targetBelowStarting",
+       true
+      ],
+      [
+       "targetBelowHalf",
+       true
+      ]
+     ],
+     "kind": "melee",
+     "lead": "While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the **Hit roll**."
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "97611cc5ff9766b2",
+  "where": "ability · Lord of Decapitations",
+  "verdict": "ok",
+  "why": "GW: “While this model is leading a unit, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.” → [DEVASTATING WOUNDS] when While leading a unit (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "7ce32a5dff5fef54",
+  "where": "ability · Thundercharge",
+  "verdict": "ok",
+  "why": "GW: “If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.” → +2 A when It is equipped with thundershock spear and bellatus reaper chainsword (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "bf37aa96c041135f",
+  "where": "ability · Icon of Flame",
+  "verdict": "fix",
+  "why": "GW: “Ranged weapons equipped by models in the bearer’s unit (excluding CHARACTERS) have the [IGNORES COVER] ability.” scope models:\"model\" limits it to the bearer; it is the whole unit except CHARACTER models. Shown today only as “already in its weapons’ profiles”, so no rendered change, but the reading is wrong.",
+  "fix": {
+   "box": "a|gy9eny",
+   "b": [
+    {
+     "quote": "Ranged weapons equipped by models in the bearer’s unit (excluding **CHARACTERS**) have the **[IGNORES COVER]** ability.",
+     "fx": [
+      [
+       "ignoresCover",
+       true
+      ]
+     ],
+     "on": [],
+     "kind": "ranged",
+     "scope": {
+      "models": "nonchar"
+     }
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "5f65e36244b81100",
+  "where": "ability · Greater Daemon of Tzeentch",
+  "verdict": "ok",
+  "why": "GW (ability): “While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6\" of this model, that unit is within your army’s Shadow of Chaos.” No attack effect in the Damage tab’s catalogue (move, Leadership, OC, FNP, Stealth, saves, synapse…): rightly shown quoted as “Not counted in the Damage tab”; reach {\"all\":[\"Tzeentch\",\"Faction: Legiones Daemonica\"]} matches GW’s keywords."
+ },
+ {
+  "key": "0f32e49bae21636d",
+  "where": "ability · Damaged: 1-4 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1-4 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "2b0337535c8630c1",
+  "where": "ability · Brutal But Kunnin’",
+  "verdict": "ok",
+  "why": "GW: “This model’s melee attacks have +1 D.” → +1 D (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "68207722e8e907c1",
+  "where": "ability · Unholy Mechanisms",
+  "verdict": "ok",
+  "why": "GW: “While a friendly DAEMON VEHICLE unit is within 6\" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit.” → +2 S when Within 6\" of it (all, reach {\"all\":[\"Daemon\",\"Vehicle\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "0f91c6b1ae4c8877",
+  "where": "ability · Champion Slayer",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes a melee attack that targets a CHARACTER or MONSTER unit, you can re-roll the Wound roll.” → Re-roll Wound rolls when The target: Character or Monster (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "f84602fdf45bfd0f",
+  "where": "ability · Flesh Hunger",
+  "verdict": "ok",
+  "why": "GW: ; not counted: “Each time a model in this unit makes a melee attack, if the target of that attack is Below Half-strength, a successful H” (every successful Hit roll scoring a Critical Hit is not played). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "9a6374870d9afbe1",
+  "where": "ability · Hunter’s Eye",
+  "verdict": "ok",
+  "why": "GW: “Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.” → [IGNORES COVER] (ranged, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "bf296d9808686747",
+  "where": "ability · Memento Moritoi",
+  "verdict": "ok",
+  "why": "GW: “This model’s melee attacks have +1 A, S and D.” → +1 A, +1 S, +1 D (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "e55beebec7eac765",
+  "where": "ability · Spiteful Power Trip",
+  "verdict": "ok",
+  "why": "GW: “This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.” → +1 to Hit rolls when The target has no model with T 7+ (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "d6ff35fa5efcb4e1",
+  "where": "ability · Stabilisation Talons",
+  "verdict": "ok",
+  "why": "GW: “Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the Hit roll and any or all modifiers to the Ballistic Skill characteristic of that weapon.” → Ignore modifiers to BS/WS and the Hit roll (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "194ea191190ad044",
+  "where": "ability · Monstrous Nemesis",
+  "verdict": "ok",
+  "why": "GW: “Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.” → +1 to Wound rolls when The target: Monster or Vehicle (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "4a68428dca135318",
+  "where": "ability · Bestial Aspect",
+  "verdict": "ok",
+  "why": "GW: “The bearer’s ranged weapons have the [ASSAULT] ability.” → [ASSAULT] (ranged, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "9debc84bd7fb4938",
+  "where": "ability · A Challenge Worthy of Skill",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.” → Re-roll Hit rolls, Re-roll Wound rolls when The target: Character or Monster or Walker (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "c6102ee0bfa7b7c9",
+  "where": "ability · Fabricator Claw Array",
+  "verdict": "ok",
+  "why": "GW (ability): “While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, that unit has the Feel No Pain 6+ ability.” No attack effect in the Damage tab’s catalogue (move, Leadership, OC, FNP, Stealth, saves, synapse…): rightly shown quoted as “Not counted in the Damage tab”; reach {\"all\":[\"Faction: Necrons\",\"Vehicle\"]} matches GW’s keywords."
+ },
+ {
+  "key": "38e2d4373b7fb15f",
+  "where": "ability · Seething Hatred",
+  "verdict": "ok",
+  "why": "GW: “Each time this model is selected to shoot or fight, you can re-roll one Hit roll or you can re-roll one Wound roll when resolving those attacks.” → Re-roll one Hit or Wound roll (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "629276160e6f1f9a",
+  "where": "ability · Kustom Dakka",
+  "verdict": "ok",
+  "why": "GW: “This unit’s ranged attacks have [IGNORES COVER].” → [IGNORES COVER] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "0044b007da007a65",
+  "where": "ability · Consumed with Hunger",
+  "verdict": "ok",
+  "why": "GW: “While a friendly WAR DOG model is within 6\" of this model, each time that WAR DOG model makes an attack that targets a TITANIC or TOWERING unit, you can re-roll the Hit roll.” → Re-roll Hit rolls when Within 6\" of it · The target: Titanic or Towering (all, reach {\"all\":[\"War Dog\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a7fc145e64789707",
+  "where": "ability · Singular Purpose",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.” → Re-roll Hit rolls, Re-roll Wound rolls when The target is the enemy unit selected (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "efa9357e73c67420",
+  "where": "ability · Vengeance for the Omnissiah",
+  "verdict": "ok",
+  "why": "GW: “If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.” → A 6 when “If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model” (all, scope {\"weapon\":\"omnissian axe\",\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8a876fa32d64fdd3",
+  "where": "ability · Daemonic Ordnance",
+  "verdict": "ok",
+  "why": "GW: “If it does, until the end of the phase, its ranged weapons have the [DEVASTATING WOUNDS] and [HAZARDOUS] abilities.” → [DEVASTATING WOUNDS], [HAZARDOUS] when If it uses this ability (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "586bf0c72b12fbca",
+  "where": "ability · Destructor",
+  "verdict": "ok",
+  "why": "GW: “Each time a ranged attack made by this model targets an enemy INFANTRY unit, improve the Armour Penetration characteristic of that attack by 1.” → +1 AP when The target: Infantry (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "60337d37af14d3fd",
+  "where": "ability · Possessed Lord",
+  "verdict": "ok",
+  "why": "GW: “If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.” → +3 A, [DEVASTATING WOUNDS] when Once per battle · If it uses this ability (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "6351876556b63da7",
+  "where": "ability · Thundering Stampede",
+  "verdict": "ok",
+  "why": "GW (ability): “Friendly BEAST SNAGGA units within 6\" of this unit have +1 to charge rolls.” No attack effect in the Damage tab’s catalogue (move, Leadership, OC, FNP, Stealth, saves, synapse…): rightly shown quoted as “Not counted in the Damage tab”; reach {\"all\":[\"Beast Snagga\"]} matches GW’s keywords."
+ },
+ {
+  "key": "f23d12eda562caf0",
+  "where": "ability · Daemonic Allegiance",
+  "verdict": "ok",
+  "why": "GW: “If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.” → +2 S when Daemon Prince of Khorne · It has the Khorne keyword (all, scope {\"weapon\":\"hellforged weapons\",\"models\":\"model\"}); “If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.” → +3 A when Daemon Prince of Tzeentch · It has the Tzeentch keyword (all, scope {\"weapon\":\"infernal cannon\",\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "b334d43b0ad53d55",
+  "where": "ability · Super Runts",
+  "verdict": "ok",
+  "why": "GW: “This unit’s Scavenged Shivs weapons have +1 A, WS and S.” → +1 A, BS/WS improved by 1, +1 S (all, scope {\"weapon\":\"scavenged shivs\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "3960420aa25678c4",
+  "where": "ability · Glutton for Punishment",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes an attack, if it is below its Starting Strength, add 1 to the Hit roll.” → +1 to Hit rolls when Below its Starting Strength (all, scope {\"models\":\"model\"}); “If this model is also Below Half-strength, add 1 to the Wound roll as well.” → +1 to Wound rolls when Below its Starting Strength · Below Half-strength (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8fc5be73c7290332",
+  "where": "ability · Impenetrable Defence",
+  "verdict": "ok",
+  "why": "GW: “This unit’s attacks have [SUSTAINED HITS 1: non-MONSTER/VEHICLE] if any of the following apply:” → [SUSTAINED HITS 1] when This unit or the target within range of an objective · The target: not Monster/Vehicle (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "0922d3791f4c0562",
+  "where": "ability · Emanatus Forcefield",
+  "verdict": "ok",
+  "why": "GW (ability): “While a friendly ADEPTUS MECHANICUS BATTLELINE model is wholly within 6\" of this model, that BATTLELINE model has a 4+ invulnerable save against ranged attacks.” No attack effect in the Damage tab’s catalogue (move, Leadership, OC, FNP, Stealth, saves, synapse…): rightly shown quoted as “Not counted in the Damage tab”; reach {\"all\":[\"Faction: Adeptus Mechanicus\",\"Battleline\"]} matches GW’s keywords."
+ },
+ {
+  "key": "f22b77a54168cf7b",
+  "where": "ability · Final Howl (Aura)",
+  "verdict": "ok",
+  "why": "GW: “While a friendly War Dog model is within 6\" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1.” → Re-roll Wound rolls of 1 when Within 6\" of it (all, reach {\"all\":[\"War Dog\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8c62a72915d7b30e",
+  "where": "ability · Captain-General",
+  "verdict": "ok",
+  "why": "GW: “Re-roll hit rolls of 1. Re-roll wound rolls of 1.” → Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 when Within 6\" of it (all, reach {\"all\":[\"Faction: Adeptus Custodes\"],\"none\":[\"Monster\",\"Vehicle\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "525c7d80568b54d6",
+  "where": "ability · Relentless March",
+  "verdict": "ok",
+  "why": "GW (ability): “While a friendly NECRONS unit is within 6\" of this unit’s Szarekh model, add 2\" to the Move characteristic of models in that unit.” No attack effect in the Damage tab’s catalogue (move, Leadership, OC, FNP, Stealth, saves, synapse…): rightly shown quoted as “Not counted in the Damage tab”; reach {\"all\":[\"Faction: Necrons\"]} matches GW’s keywords."
+ },
+ {
+  "key": "28329767ab8737cf",
+  "where": "ability · Macro-extinction Protocols",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.” → +1 to Hit rolls when The target: Monster or Vehicle (all, scope {\"models\":\"model\"}); “If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.” → +1 to Wound rolls when The target: Monster or Vehicle · “If that target is TITANIC or TOWERING” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "6fbd8061d8c355ab",
+  "where": "ability · Might is Right",
+  "verdict": "ok",
+  "why": "GW: “+3 A. +2 S.” → +3 A, +2 S when Charged this turn (melee, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "6428cbc1169b8ac8",
+  "where": "ability · Perfectionists",
+  "verdict": "ok",
+  "why": "GW: “While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.” → [LETHAL HITS] when While leading a unit (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "73035c2a8e525867",
+  "where": "ability · Thin Their Ranks",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.” → [DEVASTATING WOUNDS] when The target: not Monster/Vehicle (ranged, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "27929b6e51048dea",
+  "where": "ability · Slaughterthirst (Aura)",
+  "verdict": "ok",
+  "why": "GW: “While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6\" of the bearer, weapons equipped by models in that unit have the [LANCE] ability.” → [LANCE] when Within 6\" of it (all, reach {\"all\":[\"Faction: Legiones Daemonica\",\"Khorne\"],\"none\":[\"Monster\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8635cc0bc3c38a1e",
+  "where": "ability · Damaged: 1-7 wounds remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1-7 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "07b78bf2ad55fe28",
+  "where": "ability · Damaged: 1-9 Wounds Remaining",
+  "verdict": "ok",
+  "why": "GW: “While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.” → −1 to Hit rolls when “While this model has 1‑9 wounds remaining” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "42af74a1c2583108",
+  "where": "ability · Murderous Charge",
+  "verdict": "ok",
+  "why": "GW: “If this unit made a charge move this turn, this unit’s melee attacks have +1 S.” → +1 S when Charged this turn (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "d1ee61956b0d707b",
+  "where": "core · Damaged 4",
+  "verdict": "fix",
+  "why": "The rule is “Damaged 4” (“This ability always takes the form Damaged X”). The label shows “While a model's remaining wounds are equal to or less than X” · “while damaged”, with X unresolved (main: “Damaged (4 or fewer wounds remaining)”). Put the rule’s own value in; drop the redundant “while damaged”.",
+  "fix": {
+   "box": "c|189uwq8",
+   "b": [
+    {
+     "quote": "While a model’s remaining wounds are equal to or less than X, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.*",
+     "fx": [
+      [
+       "hit",
+       -1
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "While a model’s remaining wounds are equal to or less than 4"
+      ]
+     ],
+     "kind": "all",
+     "lead": "Damaged 4: *Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X."
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "4c1f10bc0d031076",
+  "where": "core · Conversion",
+  "verdict": "ok",
+  "why": "GW: “Conversion beam obliterator (Knight Defender): Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful Hit roll of 4+ scores a Criti” → Critical Hit on 4+ when “if the target is more than 18\" away from the bearer” (all, scope {\"weapon\":\"conversion beam obliterator\",\"wkw\":\"CONVERSION\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "19ba58ae54ba1413",
+  "where": "core · Damaged 5",
+  "verdict": "fix",
+  "why": "The rule is “Damaged 5” (“This ability always takes the form Damaged X”). The label shows “While a model's remaining wounds are equal to or less than X” · “while damaged”, with X unresolved (main: “Damaged (5 or fewer wounds remaining)”). Put the rule’s own value in; drop the redundant “while damaged”.",
+  "fix": {
+   "box": "c|1t54jx4",
+   "b": [
+    {
+     "quote": "While a model’s remaining wounds are equal to or less than X, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.*",
+     "fx": [
+      [
+       "hit",
+       -1
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "While a model’s remaining wounds are equal to or less than 5"
+      ]
+     ],
+     "kind": "all",
+     "lead": "Damaged 5: *Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X."
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "a13b91331eb27094",
+  "where": "rule · Magna Imperator",
+  "verdict": "ok",
+  "why": "GW: “Re-roll one hit roll. Re-roll one wound roll.” → Re-roll one Hit roll, Re-roll one Wound roll (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "e7d1cd699340b7ac",
+  "where": "rule · Cabal of Sorcerers",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1.” → Re-roll Hit rolls of 1 when Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected (ranged, reach {\"any\":[\"Faction: Thousand Sons\",\"Scintillating Legions\"]} selected); “If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.” → Re-roll Hit rolls when Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+” (ranged, reach {\"any\":[\"Faction: Thousand Sons\",\"Scintillating Legions\"]} friendly); “Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack” → +1 AP when Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected (ranged, reach {\"any\":[\"Faction: Thousand Sons\",\"Scintillating Legions\"]} selected); “If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.” → +2 AP when Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+” (ranged, reach {\"any\":[\"Faction: Thousand Sons\",\"Scintillating Legions\"]} friendly). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "12d2d2fa4b21a6bb",
+  "where": "rule · Waaagh!",
+  "verdict": "ok",
+  "why": "GW: “That unit’s ranged attacks have [ASSAULT].” → [ASSAULT] when Riled up (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "063d0b1a649fe33a",
+  "where": "rule · Displays of Savagery",
+  "verdict": "ok",
+  "why": "GW: “Friendly MEGANOBZ/NOBZ units’ melee attacks have [SUSTAINED HITS 1].” → [SUSTAINED HITS 1] (melee, reach {\"any\":[\"Meganobz\",\"Nobz\"]} friendly). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a3bc1743a01352c3",
+  "where": "rule · Harbingers of Dread",
+  "verdict": "ok",
+  "why": "GW: “Each time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.” → +1 to Wound rolls when Doom · 2 · “if the target of that attack is Battle-shocked” (all, scope {\"models\":\"model\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "1df632fccb430374",
+  "where": "rule · Warpmeld Sacrifice",
+  "verdict": "fix",
+  "why": "GW: “… that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that TZEENTCH MUTANT unit suffers D3 mortal wounds.” on: [] → the label is a bare “+1 to Wound rolls” (main: “Warpmeld Sacrifice made … (D3 mortal wounds…)”). Label regression (mucho-mutantes).",
+  "fix": {
+   "box": "r|19a2dls",
+   "b": [
+    {
+     "quote": "If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll.",
+     "fx": [
+      [
+       "wound",
+       1
+      ]
+     ],
+     "on": [
+      [
+       "used",
+       true
+      ],
+      [
+       "q",
+       "that unit can make a Warpmeld Sacrifice (at the end of the phase it suffers D3 mortal wounds)"
+      ]
+     ],
+     "kind": "all",
+     "lead": "Each time a **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice.",
+     "reach": {
+      "all": [
+       "Tzeentch",
+       "Mutant"
+      ],
+      "any": [
+       "Infantry",
+       "Mounted"
+      ]
+     },
+     "mark": "friendly"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "fbccc83fd22d6dd7",
+  "where": "rule · Try Dat Button!",
+  "verdict": "ok",
+  "why": "GW: “+1 A” → pick 1–2 = +1 A / 3–4 = +2 S / 5–6 = +1 AP / 1–2 and 3–4 = +1 A, +2 S / 1–2 and 5–6 = +1 A, +1 AP / 3–4 and 5–6 = +2 S, +1 AP (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "d8067c1bd43e8253",
+  "where": "rule · Dakka! Dakka! Dakka!",
+  "verdict": "ok",
+  "why": "GW: “[ASSAULT].” → [ASSAULT] (ranged, reach {\"all\":[\"Faction: Orks\",\"Infantry\"]} friendly); “While this unit is riled up, +3\" R.” → +3\" range when Riled up (ranged, reach {\"all\":[\"Faction: Orks\",\"Infantry\"]} friendly). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "2fbb84c61057dd74",
+  "where": "rule · Wrath of Khorne",
+  "verdict": "ok",
+  "why": "GW: “[CLEAVE 1].” → pick [CLEAVE 1] = [CLEAVE 1] / +1 AP = +1 AP (melee, scope {\"models\":\"char\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "73aa2ffadfc0214d",
+  "where": "rule · Blessings of Khorne",
+  "verdict": "ok",
+  "why": "GW: “Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.” → [SUSTAINED HITS 1] when Martial Excellence · double 4+ or triple 1+ (melee); “Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.” → [LETHAL HITS] when Warp Blades · double 5+ or triple 2+ (melee); “Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.” → [DEVASTATING WOUNDS] when Decapitating Strikes · double 6 or triple 3+ · The target: Infantry (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "876dda73846c9028",
+  "where": "rule · Marked Prey",
+  "verdict": "ok",
+  "why": "GW: “Until the start of your next Command phase, each time a WAR DOG model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the [” → [SUSTAINED HITS 1] when The target is the enemy unit selected · “if that unit is visible to the attacking model” (all, reach {\"all\":[\"War Dog\"]} selected). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "36718f4d30a65f9a",
+  "where": "rule · Mission Tactics",
+  "verdict": "fix",
+  "why": "GW Purgatus Tactics: “If the assault doctrine is active for your unit, your unit’s attacks that target an enemy unit within 9\" of this unit have [PRECISION].” The 9\" target condition is missing from the box and its label (nerf-when Deathwatch Terminators).",
+  "fix": {
+   "box": "r|1mxcv8t",
+   "b": [
+    {
+     "quote": "If the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.",
+     "fx": [
+      [
+       "sus",
+       "1"
+      ]
+     ],
+     "on": [
+      [
+       "opt",
+       "Furor Tactics"
+      ],
+      [
+       "q",
+       "If the devastator doctrine is active for your unit"
+      ]
+     ],
+     "kind": "all",
+     "opt": "Furor Tactics"
+    },
+    {
+     "quote": "If the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.",
+     "fx": [
+      [
+       "lethal",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "opt",
+       "Malleus Tactics"
+      ],
+      [
+       "q",
+       "If the tactical doctrine is active for your unit"
+      ]
+     ],
+     "kind": "all",
+     "opt": "Malleus Tactics"
+    },
+    {
+     "quote": "If the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9\" of this unit have **[PRECISION]**.",
+     "fx": [
+      [
+       "precision",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "opt",
+       "Purgatus Tactics"
+      ],
+      [
+       "q",
+       "If the assault doctrine is active for your unit"
+      ],
+      [
+       "q",
+       "that target an enemy unit within 9\" of this unit"
+      ]
+     ],
+     "kind": "all",
+     "opt": "Purgatus Tactics"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "56e7a791b54fc1a1",
+  "where": "rule · Martial Ka’tah",
+  "verdict": "fix",
+  "why": "Salvus’s box quote is the fragment “BS.” (the bullet after the lead). GW: “EFFECT: Your unit can ignore modifiers to your unit’s: BS. Hit rolls and wound rolls.” The quote must be the whole effect sentence; effect (ignoreHitMods) is right.",
+  "fix": {
+   "box": "r|1oidrgh",
+   "b": [
+    {
+     "quote": "Your unit can ignore modifiers to your unit’s:\n- **BS.**\n- Hit rolls and wound rolls.",
+     "fx": [],
+     "on": [],
+     "kind": "ranged",
+     "pick": [
+      {
+       "name": "Salvus",
+       "fx": [
+        [
+         "ignoreHitMods",
+         true
+        ]
+       ],
+       "quote": "Your unit can ignore modifiers to your unit’s:\n- **BS.**\n- Hit rolls and wound rolls.",
+       "on": [],
+       "lead": "Your unit can ignore modifiers to your unit’s:"
+      }
+     ],
+     "tableRows": true
+    },
+    {
+     "quote": "Your unit’s melee attacks that target an enemy unit (excluding **MONSTER**/**VEHICLE** units) can **re-roll hit rolls** of 1.",
+     "fx": [],
+     "on": [],
+     "kind": "melee",
+     "pick": [
+      {
+       "name": "Dacatarai",
+       "fx": [
+        [
+         "rrHit1",
+         true
+        ]
+       ],
+       "quote": "Your unit’s melee attacks that target an enemy unit (excluding **MONSTER**/**VEHICLE** units) can **re-roll hit rolls** of 1.",
+       "on": [
+        [
+         "targetKw",
+         {
+          "none": [
+           "Monster",
+           "Vehicle"
+          ]
+         }
+        ]
+       ]
+      },
+      {
+       "name": "Rendax",
+       "fx": [
+        [
+         "lethal",
+         true
+        ]
+       ],
+       "quote": "Your unit’s melee attacks have **[Lethal Hits: Monster/Vehicle]**.",
+       "on": [
+        [
+         "targetKw",
+         {
+          "any": [
+           "Monster",
+           "Vehicle"
+          ]
+         }
+        ]
+       ]
+      }
+     ],
+     "tableRows": true
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "2a7b3a404eabf0de",
+  "where": "rule · Worthy Foes",
+  "verdict": "ok",
+  "why": "GW: “Until the start of your next Command phase, each time a NOBLE, LYCHGUARD or TRIARCH unit from your army makes an attack that targets that unit, add 1 to the Wound roll.” → +1 to Wound rolls when The target is the enemy unit selected (all, reach {\"any\":[\"Noble\",\"Lychguard\",\"Triarch\"]} selected). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8a1212cbf5398f1b",
+  "where": "rule · Wreckin’ and Lootin’",
+  "verdict": "ok",
+  "why": "GW: “In your Shooting phase, when a friendly BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit is selected to shoot, if any of the following apply, that unit’s attacks can re-roll hit rolls of 1:” → Re-roll Hit rolls of 1 when This unit or the target within range of an objective (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a810e045ec1baf6b",
+  "where": "rule · Dark Pacts",
+  "verdict": "fix",
+  "why": "GW: “… it must first take a Leadership test …; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities …”. The ability is gained whether the test passes or fails; “if that test is failed” governs the mortal wounds only. The box shows “If your Army Faction is HERETIC ASTARTES” · “if that test is failed” on every Fellhammer unit: a wrong condition (label regression). Drop that q (here and in both picks).",
+  "fix": {
+   "box": "r|1uze0xr",
+   "b": [
+    {
+     "quote": "**[LETHAL HITS]**",
+     "fx": [],
+     "on": [
+      [
+       "q",
+       "If your Army Faction is HERETIC ASTARTES"
+      ]
+     ],
+     "kind": "all",
+     "lead": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:",
+     "pick": [
+      {
+       "name": "[LETHAL HITS]",
+       "fx": [
+        [
+         "lethal",
+         true
+        ]
+       ],
+       "quote": "**[LETHAL HITS]**",
+       "on": [
+        [
+         "q",
+         "If your Army Faction is HERETIC ASTARTES"
+        ]
+       ]
+      },
+      {
+       "name": "[SUSTAINED HITS 1]",
+       "fx": [
+        [
+         "sus",
+         "1"
+        ]
+       ],
+       "quote": "**[SUSTAINED HITS 1]**",
+       "on": [
+        [
+         "q",
+         "If your Army Faction is HERETIC ASTARTES"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "5055d720900d1448",
+  "where": "rule · Companion’s Watch",
+  "verdict": "ok",
+  "why": "GW: “While a friendly TRUSTED SENTINEL unit is within range of an objective, that unit’s attacks can re-roll wound rolls of 1.” → Re-roll Wound rolls of 1 when Within range of an objective (all, reach {\"all\":[\"Trusted Sentinel\"]} friendly). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "b51c830c66985119",
+  "where": "rule · Malefic Surge",
+  "verdict": "ok",
+  "why": "GW: “When this unit is selected to shoot or fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability.” → pick [LETHAL HITS] = [LETHAL HITS] / [SUSTAINED HITS 1] = [SUSTAINED HITS 1] when Diabolic Power (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "65f3270de727dbcb",
+  "where": "rule · Code Chivalric",
+  "verdict": "ok",
+  "why": "GW: “Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.” → Re-roll one Hit roll, Re-roll one Wound roll when Quality 1–2 · …with our martial valour risen over all (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a2991b83e2dabde0",
+  "where": "rule · Synapse",
+  "verdict": "ok",
+  "why": "GW: “Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” → +1 S when “If your Army Faction is TYRANIDS” · “while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models” · “While a TYRANIDS unit from your army is within Synapse Range of your army” (melee, reach {\"all\":[\"Faction: Tyranids\"]} friendly). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "ced8c3251e35b217",
+  "where": "rule · Murderous Imperative",
+  "verdict": "ok",
+  "why": "GW: “If the Protector Imperative is active for that unit, re-roll a Hit roll of 1.” → Re-roll Hit rolls of 1 when “If the Protector Imperative is active for that unit” (all, reach {\"all\":[\"Skitarii\"]} friendly); “If the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1.” → Re-roll Wound rolls of 1 when “If the Conqueror Imperative is active for that unit” (all, reach {\"all\":[\"Skitarii\"]} friendly). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "f4202bf717f72269",
+  "where": "rule · Relentless Rage",
+  "verdict": "ok",
+  "why": "GW: “Friendly WORLD EATERS units’ melee attacks have +1 A.” → +1 A (melee, reach {\"all\":[\"Faction: World Eaters\"]} friendly). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "333ce0f5215fc498",
+  "where": "rule · Pledges to the Dark Prince",
+  "verdict": "fix",
+  "why": "GW: “EMPEROR’S CHILDREN units … gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).” Four boxes (1+, 3+, 5+, 7+) are right and give main’s numbers ticked together, but their labels read only “1+: …”, “7+: …” (main: “Pact points gained during the battle (cumulative)”). Name the column: “1+ Pact points (cumulative)”.",
+  "fix": {
+   "box": "r|ethwvp",
+   "b": [
+    {
+     "quote": "Each time a model in this unit makes an attack, re-roll a **Hit roll** of 1.",
+     "fx": [
+      [
+       "rrHit1",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "opt",
+       "1+ Pact points (cumulative)"
+      ]
+     ],
+     "kind": "all",
+     "opt": "1+ Pact points"
+    },
+    {
+     "quote": "Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1.",
+     "fx": [
+      [
+       "rrWound1",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "opt",
+       "3+ Pact points (cumulative)"
+      ]
+     ],
+     "kind": "all",
+     "opt": "3+ Pact points"
+    },
+    {
+     "quote": "Melee weapons equipped by models in this unit have the **[LETHAL HITS]** and **[SUSTAINED HITS 1]** abilities.",
+     "fx": [
+      [
+       "lethal",
+       true
+      ],
+      [
+       "sus",
+       "1"
+      ]
+     ],
+     "on": [
+      [
+       "opt",
+       "5+ Pact points (cumulative)"
+      ]
+     ],
+     "kind": "melee",
+     "opt": "5+ Pact points"
+    },
+    {
+     "quote": "Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified **Hit roll** of 5+.",
+     "fx": [
+      [
+       "critHit",
+       5
+      ]
+     ],
+     "on": [
+      [
+       "opt",
+       "7+ Pact points (cumulative)"
+      ]
+     ],
+     "kind": "all",
+     "opt": "7+ Pact points"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "cba899229981042f",
+  "where": "rule · Blood Tithe",
+  "verdict": "ok",
+  "why": "GW: “Melee weapons equipped by BLOOD LEGIONS units from your army have the [lance] ability.” → [LANCE] when Daemonic Rage [3BTP] (melee, reach {\"all\":[\"Faction: Blood Legions\"]} friendly). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "9681a537ef8349b8",
+  "where": "rule · Shudderblink",
+  "verdict": "ok",
+  "why": "GW: “That unit’s ranged attacks have [ASSAULT] until the end of the turn.” → [ASSAULT] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8315f929af0a3a8f",
+  "where": "rule · Rain of Ruin",
+  "verdict": "ok",
+  "why": "GW: “Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].” → [HEAVY] (ranged, reach {\"any\":[\"Havocs\",\"Obliterators\"]} friendly). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8a5767e15ac953db",
+  "where": "rule · Doctrina Imperatives",
+  "verdict": "ok",
+  "why": "GW: “Ranged weapons equipped by models in this unit have the [HEAVY] ability. Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.” → pick Protector Imperative = [HEAVY], BS/WS improved by 1 / Conqueror Imperative = [ASSAULT] (ranged); “Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.” → pick Conqueror Imperative = BS/WS improved by 1 (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "5842f484ff4514f5",
+  "where": "rule · Kindred Sorcery",
+  "verdict": "ok",
+  "why": "GW: “Add 6\" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.” → pick Imbued Manifestation = +6\" range / Psychic Maelstrom = +1 to Wound rolls / Wrath of the Immaterium = [DEVASTATING WOUNDS] (all, scope {\"wkw\":\"PSYCHIC\"}, reach {\"all\":[\"Faction: Thousand Sons\"]} ). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "6e8877e6960ef562",
+  "where": "rule · Enraged Behemoths",
+  "verdict": "ok",
+  "why": "GW: “Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength” → +1 to Hit rolls when Below its Starting Strength (all, reach {\"all\":[\"Faction: Tyranids\",\"Monster\"]} friendly); “add 1 to the Wound roll as well if that model’s unit is Below Half-strength.” → +1 to Wound rolls when Below Half-strength (all, reach {\"all\":[\"Faction: Tyranids\",\"Monster\"]} friendly). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "6d22dfc79438ee9e",
+  "where": "rule · Moritoi Ancients",
+  "verdict": "ok",
+  "why": "GW: “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below starting strength, that unit’s attacks can re-roll hit rolls of 1.” → Re-roll Hit rolls of 1 when “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below starting strength” (all, reach {\"all\":[\"Faction: Adeptus Custodes\",\"Dreadnought\"]} friendly); “Re-roll hit rolls of 1. Re-roll wound rolls of 1.” → Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 when Below Half-strength · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength” (all, reach {\"all\":[\"Faction: Adeptus Custodes\",\"Dreadnought\"]} friendly). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "1fa8f9fa3657b6e3",
+  "where": "strat · Auto-divinatory Targeting",
+  "verdict": "fix",
+  "why": "GW: “… have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability, but they can only target units within range of the selected objective marker.” Label lost the restriction (main: “; can only target units within range of the selected objective marker”); state it.",
+  "fix": {
+   "box": "s|11kygrk",
+   "b": [
+    {
+     "quote": "Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the **[IGNORES COVER]** ability, but they can only target units within range of the selected objective marker.",
+     "fx": [
+      [
+       "bsSet",
+       3
+      ],
+      [
+       "ignoresCover",
+       true
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "they can only target units within range of the selected objective marker"
+      ]
+     ],
+     "kind": "ranged",
+     "lasts": "round"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "021a55933ea89a17",
+  "where": "strat · Pyrogenesis",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and impro” → pick +2 S = +2 S / +3 S, +1 AP = +3 S, +1 AP (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "ec7e3c4e80a4db78",
+  "where": "strat · Merciless Veterans",
+  "verdict": "ok",
+  "why": "GW: “[Lethal Hits]. [Sustained Hits 1].” → [LETHAL HITS], [SUSTAINED HITS 1] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a643929fabfcca21",
+  "where": "strat · Soul-Tally Offering",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” → Re-roll Wound rolls when The target: Character or Monster or Vehicle (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "10f7efcc95fb61af",
+  "where": "strat · Swarm-guided Salvoes",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability, and until the end of the phase each time a model in your unit makes an attack, you can igno” → [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "579e2811697c35f6",
+  "where": "strat · Strength from Exile",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” → Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 when “if there are no other friendly units within 9\" of your unit” (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "76c5659419c96a22",
+  "where": "strat · Gene-Wrought Might",
+  "verdict": "ok",
+  "why": "GW: “[Lance].” → pick [LANCE] = [LANCE] / [LANCE], +1 AP = [LANCE], +1 AP (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "05237e82fe2c7084",
+  "where": "strat · Servo-driven Charge",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] ability.” → [LANCE] (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "0d3643d00bf76068",
+  "where": "strat · Blood Offering",
+  "verdict": "ok",
+  "why": "GW: ; not counted: “Select one of those objective markers. That objective marker remains under your control until your opponent's Level of C” (its target was just destroyed: its effect is for other units, which cannot be its target). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8fdab3f1b311f1b8",
+  "where": "strat · Martial Perfection",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.” → Re-roll Hit rolls (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "61372c5316c6f526",
+  "where": "strat · Cosmic Storm",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s Tesla Sphere weapons have +1 AP.” → +1 AP (ranged, scope {\"weapon\":\"tesla sphere\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "622e7fd661de5734",
+  "where": "strat · Focused Ferocity",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s melee attacks have +1 A.” → +1 A (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "2317902c767666f8",
+  "where": "strat · Kraken Rounds",
+  "verdict": "ok",
+  "why": "GW: “Have +6\" R. Have +1 S.” → +6\" range, +1 S (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "41cbdd2d24432bea",
+  "where": "strat · Inevitable Annihilation",
+  "verdict": "fix",
+  "why": "Box quote is the fragment “BS.”; GW: “EFFECT: Your unit can ignore modifiers to your unit’s: BS. Hit rolls.” Quote the whole effect; ignoreHitMods is right.",
+  "fix": {
+   "box": "s|1ngyklu",
+   "b": [
+    {
+     "quote": "Your unit can ignore modifiers to your unit’s:\n- **BS**.\n- **Hit rolls**.",
+     "fx": [
+      [
+       "ignoreHitMods",
+       true
+      ]
+     ],
+     "on": [],
+     "kind": "ranged",
+     "lead": "Your unit can ignore modifiers to your unit’s:"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "11420b78fb92cbc0",
+  "where": "strat · Kustom Dakka",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s ranged attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 to wound rolls.” → +1 to Wound rolls when The target: not Monster/Vehicle (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "85e827cd7fd93cf0",
+  "where": "strat · Noble Sacrifice",
+  "verdict": "ok",
+  "why": "GW: ; not counted: “Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER ” (its target was just destroyed: its effect is for other units, which cannot be its target). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "11de4d5ded48ede2",
+  "where": "strat · Devastating Sorcery",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, add 9\" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-” → +9\" range, Re-roll Hit rolls, Re-roll Wound rolls (ranged, scope {\"wkw\":\"PSYCHIC\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "f9f82c5049e7035c",
+  "where": "strat · Ruination’s Bounty",
+  "verdict": "fix",
+  "why": "GW: “EFFECT: When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” on: [] (condition only in lead) → label a bare “[LETHAL HITS], [SUSTAINED HITS 1]” (main: “… when your unit uses the Dark Pacts ability”). Label regression (fellhammer Havocs/Obliterators).",
+  "fix": {
+   "box": "s|1wh7i73",
+   "b": [
+    {
+     "quote": "**[LETHAL HITS]**.\n**[SUSTAINED HITS 1]**.",
+     "fx": [
+      [
+       "lethal",
+       true
+      ],
+      [
+       "sus",
+       "1"
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "When your unit uses the Dark Pacts ability"
+      ]
+     ],
+     "kind": "ranged",
+     "lead": "When your unit uses the **Dark Pacts** ability, your unit’s ranged attacks have:"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "d72f16a5b0c782ee",
+  "where": "strat · Machine Superiority",
+  "verdict": "ok",
+  "why": "GW: ; not counted: “Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all ” (ignoring modifiers to every roll and characteristic is wider than the Damage tab plays). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "cd503ec150bd9f2d",
+  "where": "strat · Glowin’ Dakka",
+  "verdict": "fix",
+  "why": "GW: “Your unit’s ranged attacks that target a unit within 9\" have +1 AP.” The box has no condition; the rendered row is “1CP Glowin’ Dakka · +1 AP” (main: “vs targets within 9\"”), seen in after-shooty-mek-flashgitz-shoot.txt. Label regression (shooty, 5 Ork INFANTRY units).",
+  "fix": {
+   "box": "s|226rce",
+   "b": [
+    {
+     "quote": "Your unit’s ranged attacks that target a unit within 9\" have +1 **AP**.",
+     "fx": [
+      [
+       "ap",
+       1
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "that target a unit within 9\""
+      ]
+     ],
+     "kind": "ranged"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "c8bdfee7f1b02ce6",
+  "where": "strat · Rampaging Monstrosities",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.” → Re-roll Hit rolls (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "33e69b8aac5fd0ab",
+  "where": "strat · Warp Vision",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability.” → [IGNORES COVER] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "7851bc9f4d4d38ce",
+  "where": "strat · Balefire Boon",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” → +1 AP (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "6fc299abc10ba4e6",
+  "where": "strat · Broodguard Impulse",
+  "verdict": "ok",
+  "why": "GW: ; not counted: “Until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that just d” (its target was just destroyed: its effect is for other units, which cannot be its target). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "9fbba5feadc2191b",
+  "where": "strat · Daemonic Fury",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the turn, melee weapons equipped by models in your WORLD EATERS unit have the [LANCE] ability.” → [LANCE] when Selected by it (melee, reach {\"all\":[\"Faction: World Eaters\"]} selected); “If the Daemonic Rage ability is active for your army, then until the end of the phase those melee weapons also have the [TWIN-LINKED] ability.” → [TWIN-LINKED] when Selected by it · “If the Daemonic Rage ability is active for your army” (melee, reach {\"all\":[\"Faction: World Eaters\"]} selected). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "910e2b527d4bf582",
+  "where": "strat · Suffer No Rival",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.” → [PRECISION] (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "029f8b38df48b612",
+  "where": "strat · Enslaved Artifice",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, each time a model in your unit makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.” → Critical Hit on 5+ (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "489ddd7be7d425e5",
+  "where": "strat · Unshakeable Opponents",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the Hit r” → Ignore modifiers to BS/WS and the Hit roll (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "5b1316026e9d84a2",
+  "where": "strat · Unceasing Onslaught",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s ranged attacks have [Assault] until the end of the turn.” → [ASSAULT] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "eee96bd40b042384",
+  "where": "strat · Infested War Zone",
+  "verdict": "ok",
+  "why": "GW: ; not counted: “Add a new GRETCHIN unit to your army identical to your destroyed unit, in strategic reserves, at its starting strength, ” (its target was just destroyed: its effect is for other units, which cannot be its target). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "87c4350436c2861e",
+  "where": "strat · Advanced Stabilisers",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s ranged attacks have [Assault].” → [ASSAULT] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "e49b37500037b3c1",
+  "where": "strat · Epic Challenge",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.” → [PRECISION] (melee, scope {\"models\":\"char\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a652218f056c2c4e",
+  "where": "strat · Honoured Interred",
+  "verdict": "ok",
+  "why": "GW: “Friendly ADEPTUS CUSTODES units within 6\" of this unit can re-roll hit rolls of 1.” → Re-roll Hit rolls of 1 when Honoured Interred (Aura) · Within 6\" of it (all, reach {\"all\":[\"Faction: Adeptus Custodes\"]} aura). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "9999b4bf4d09a0c2",
+  "where": "strat · Aspire to Infamy",
+  "verdict": "ok",
+  "why": "GW: “+1 A. +2 S.” → +1 A, +2 S (melee, scope {\"models\":\"char\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "858b79c2c8e358d7",
+  "where": "strat · Hellfire Rounds",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s ranged attacks (excluding [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+].” → [ANTI-NON-VEHICLE 4+] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "013286dd48875d1a",
+  "where": "strat · Dragonfire Rounds",
+  "verdict": "ok",
+  "why": "GW: “Can re-roll wound rolls of 1. Have [IGNORES COVER].” → Re-roll Wound rolls of 1, [IGNORES COVER] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "8b1578522a620ae4",
+  "where": "strat · Unshackled Wrath",
+  "verdict": "ok",
+  "why": "GW: “Select the [SUSTAINED HITS 1] or [LETHAL HITS] ability.” → pick [SUSTAINED HITS 1] = [SUSTAINED HITS 1] / [LETHAL HITS] = [LETHAL HITS] / [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS] = [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "19c44856abe68e48",
+  "where": "strat · Threat-cogitation Targeters",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.” → Re-roll Damage rolls when The target: Monster or Vehicle (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "4099c2e02969eb16",
+  "where": "strat · Hungry for Combat",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, models in those WAR DOG units can only target that enemy unit, but each time a model in one of those WAR DOG units makes an attack, an unmodified Hit roll of 5+ scores a Cr” → Critical Hit on 5+ when The target is the enemy unit selected (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "b76ba33d6273d0fb",
+  "where": "strat · Hack and Slash",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.” → +1 AP when Charged this turn (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a7c9467e6a84dc6e",
+  "where": "strat · Gift of Change",
+  "verdict": "ok",
+  "why": "GW: ; not counted: “At the end of the phase, add one TZEENTCH CHAOS SPAWN unit containing one model to your army, and set it up as close as ” (its target was just destroyed: its effect is for other units, which cannot be its target). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "d924760fd81f94a3",
+  "where": "strat · Avenge the Fallen",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s melee attacks (excluding those made by CHARACTER models) have +2 A.” → +2 A when Below its Starting Strength (melee, scope {\"models\":\"nonchar\"}). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "b3a8f947315484ca",
+  "where": "strat · Never Enough Dakka",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s ranged attacks have [SUSTAINED HITS 1].” → [SUSTAINED HITS 1] (ranged). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "9dba592b9f0d8bd2",
+  "where": "strat · Point-Blank Barrage",
+  "verdict": "ok",
+  "why": "GW: ; not counted: “In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagem” (it removes a penalty the Damage tab does not apply). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "a9f341f042546328",
+  "where": "strat · Lesser Prey",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s melee attacks have +2 S.” → +2 S (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "832a8dd181430553",
+  "where": "strat · A Trophy for the Throne",
+  "verdict": "ok",
+  "why": "GW: “Your unit’s attacks that target a MONSTER/VEHICLE unit have +1 to wound rolls.” → +1 to Wound rolls when The target: Monster or Vehicle (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "71e79967aea31595",
+  "where": "strat · Armed to da Teef",
+  "verdict": "ok",
+  "why": "GW: “Re-roll hit rolls of 1.” → Re-roll Hit rolls of 1 (all); “If your unit is riled up, re-roll hit rolls.” → Re-roll Hit rolls when Riled up (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "88f604a751f6bb71",
+  "where": "strat · Machine Spirit Resurgent",
+  "verdict": "ok",
+  "why": "GW: “Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.” → Re-roll Hit rolls when Below its Starting Strength (all); “If your unit is Below Half-strength, you can re-roll the Wound roll as well.” → Re-roll Wound rolls when Below its Starting Strength · Below Half-strength (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "5530892b64973bd8",
+  "where": "strat · Command Re-roll",
+  "verdict": "ok",
+  "why": "GW: “You re-roll that roll.” → Re-roll one Hit, Wound or Damage roll (once in the phase) (all). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "2632ecaf3712c664",
+  "where": "strat · Drive-by Bustin’",
+  "verdict": "fix",
+  "why": "GW: “Your unit’s ranged attacks with weapons selected for the Firing Deck ability have +1 to hit rolls.” No condition read: ticking it adds +1 to hit to every ranged weapon of the TRANSPORT with no word said. State it (no ORKS TRANSPORT in a list today).",
+  "fix": {
+   "box": "s|z7dsrd",
+   "b": [
+    {
+     "quote": "Your unit’s ranged attacks with weapons selected for the **Firing Deck** ability have +1 to **hit rolls**.",
+     "fx": [
+      [
+       "hit",
+       1
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "with weapons selected for the Firing Deck ability"
+      ]
+     ],
+     "kind": "ranged"
+    }
+   ],
+   "nc": [],
+   "reach": null
+  }
+ },
+ {
+  "key": "ee893e98bd7dd51b",
+  "where": "strat · Secure Biomass",
+  "verdict": "ok",
+  "why": "GW: “Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability.” → [LETHAL HITS] (melee); “If your unit is a HARVESTER unit, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit as well.” → Critical Hit on 5+ when It has the Harvester keyword (melee). Effect, value, kind, scope, conditions and reach equal GW’s sentence; the label states the condition."
+ },
+ {
+  "key": "extra-vox-howl-target",
+  "where": "woof-woof · Vox-howl (stratagem TARGET) · verify/derive.js stratNeeds",
+  "verdict": "fix",
+  "why": "GW/Wahapedia: “TARGET: One WAR DOG CHARACTER unit from your army.” Wahapedia’s strike is <s class=\"kwbs\"> with the tooltip “Keyword does not appear in that faction.” (verify/.cache/waha/chaos-knights.html): a styling of a keyword the faction’s datasheets lack (CHARACTER is given to three War Dogs by the Houndpack Lance rule), not GW errata; the Chaos Knights Faction Pack has no Vox-howl change, and derive.js’s own header (l.33-34) says struck words are kept. Dropping ~~…~~ (derive.js l.608-609, evidence.js l.129, invariants.js l.56-59) makes Vox-howl’s TARGET “One unit from your army”: it is now offered to all 6 woof-woof War Dogs (main: the 3 CHARACTER ones), and it leaks out of the Damage tab: the stratagem list says “Start of Shoot/Fight Any unit”, its page “USED BY any unit”, and 3 unit screens list it (snapshot-diffs/woof-woof.txt.diff). Also Impenetrable Bastion’s “(excluding ~~MONSTER~~/VEHICLE units)” loses MONSTER (no rendered change: no Custodes MONSTER). A regression.",
+  "fix": {
+   "verify/derive.js:609": "const target = norm(s.target), when = norm(s.when).split(/\\n/)[0];   // (norm drops the ~~ markers, keeps the words)",
+   "verify/derive.js:608": "// (struck words, ~~WAR DOG CHARACTER~~, are Wahapedia’s styling of a keyword the faction lacks: kept)",
+   "verify/evidence.js:129": "let t = String(s.target).replace(/~~/g, '').replace(/\\bUnit\\b/g, 'unit').replace(/^Your (\\*\\*[^*]+\\*\\*)\\.?$/, 'One $1 unit from your army.');",
+   "verify/invariants.js:59": "tgt = String(s.target).replace(/~~/g, '').replace(/\\bthat \\*\\*([^*]+)\\*\\*/g, …unchanged)",
+   "data.js vox-howl needs": {
+    "all": [
+     "War Dog",
+     "Character"
+    ]
+   },
+   "data.js impenetrable-bastion needs": {
+    "all": [
+     "Faction: Adeptus Custodes"
+    ],
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  }
+ },
+ {
+  "key": "extra-outs-unfolded",
+  "where": "Damage tab · rows “by the rules: … only · yours to count anyway” (app.html dmGroups, l.3604-3606)",
+  "verdict": "fix",
+  "why": "Main folded a group’s other-step rows into a closed “Not for this step, by the rules (n)” fold (main app.html l.3495). Here they are drawn as visible rows under each group: 259 such rows over the 396 list×unit×phase screens (main 118, folded), e.g. “1CP Epic Challenge [PRECISION] · for Kustom Mega-slugga · by the rules: Fight phase only · yours to count anyway · no change” on every CHARACTER’s Shoot screen (95), Hack and Slash, Secure Biomass, Servo-driven Charge… (after-shooty-mek-flashgitz-shoot.png bottom). Not listed in changes.md; visible clutter: a regression of the rendered tab.",
+  "fix": {
+   "app.html:3606": "… + (outs.length ? '<details class=\"dmfold dmouts\" data-dmfold=\"outs-' + g + '\"' + (st.fold['outs-' + g] ? ' open' : '') + '><summary><span>Not for this step, by the rules (' + outs.length + ')</span>' + chev + '</summary>' + outs.map(x => dmLeverRow(C, x)).join('') + '</details>' : '') + …   (in place of outs.map(x => dmLeverRow(C, x)).join(''))"
+  }
+ },
+ {
+  "key": "extra-selected-twice",
+  "where": "Damage tab · From other units in your list · Clever Know-wotz, Master of Mechanisms, Dreadherder, Daemonic Fury",
+  "verdict": "fix",
+  "why": "Rendered words repeat the mark: “Selected by it · Selected by it: +1 to Hit rolls” (shooty Wazdakka/Dakkarigs/Killa Kans; fellhammer vehicles), “Selected by it · Within 3\" of it · Selected by it” (Dreadherder), Daemonic Fury the same. The mark word and the selected condition say one thing. Cosmetic.",
+  "fix": {
+   "app.html:3625": "const words = (mark ? mark + ' · ' : '') + (r.label ? … : '') — build r.label without the 'selected' condition when r.m.mark === 'selected' (e.g. E.condLabel(on.filter(([id]) => !(id === 'selected' && b.mark === 'selected'))) at l.2195)"
+  }
+ }
+]
