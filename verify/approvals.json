@@ -1601,6 +1601,12 @@
   "at": "2026-10-28",
   "why": "Either turn (any phase)."
  },
+ "157d4ae0c903b7de": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key 4775df3fd73ab7b3); re-keyed by the reordered unit. Checked by script."
+ },
  "1595909d7b5705d9": {
   "verdict": "ok",
   "by": "review:r5-text (its fix)",
@@ -1684,6 +1690,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "“Until the end of the phase, models in your unit have a Save characteristic of 3+”, in their Shooting phase once targeted: faithful."
+ },
+ "17a34ef086bf4637": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal to the approved judgement on main (main 2399c6e key 78ebdf095c5378b5) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
  },
  "17aa32ec88258f25": {
   "verdict": "ok",
@@ -2627,6 +2639,12 @@
   "at": "2026-10-24",
   "why": "“End of your opponent’s Fight phase: place your unengaged ADEPTUS ASTARTES TERMINATOR unit in strategic reserves.” = WHEN + TARGET + EFFECT, word for word."
  },
+ "24bcd17867e6ebb1": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key ea7c704b289d87a9); re-keyed by the reordered unit. Checked by script."
+ },
  "24da4bd6a53c5f0c": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -3503,6 +3521,12 @@
   "at": "2026-10-24",
   "why": "TARGET LEGIONES DAEMONICA KHORNE."
  },
+ "31acc02e6cb7e86a": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key dd21cf0a01f29cbd); re-keyed by the reordered unit. Checked by script."
+ },
  "31c8f68f1e0927a4": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -3634,6 +3658,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "Trigger (selected to make a pile-in move) and effect (can move up to D3+3\") as the text has them."
+ },
+ "33da4d02434370a5": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key 7e38ba43759ec810); re-keyed by the reordered unit. Checked by script."
  },
  "33fd22b16d34f394": {
   "verdict": "ok",
@@ -3820,6 +3850,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "+1 AP vs INFANTRY (parsed), ranged, always while vs holds."
+ },
+ "36bb64ea9ab02b62": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal as sets to the approved judgement on main (main 2399c6e key 408d4d3cfb2342f3); only the weapon/gear order differs (GW datasheet order). Checked by script."
  },
  "36c88aaba95b1356": {
   "verdict": "ok",
@@ -4343,6 +4379,12 @@
   "at": "2026-10-24",
   "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” The target, the condition, the duration and the +1 AP are all there. Nothing is added."
  },
+ "3cfefb1f1dea7a42": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal as sets to the approved judgement on main (main 2399c6e key 043cbd5d982aa06d); only the weapon/gear order differs (GW datasheet order). Checked by script."
+ },
  "3d098f7e7305160c": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -4498,6 +4540,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "Fight phase with no owner: either; icon str11Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "3efde1b3dbe053ca": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal to the approved judgement on main (main 2399c6e key b97d5160a0bcbb39/b97d5160a0bcbb39) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
  },
  "3efff1d8594ccecc": {
   "verdict": "ok",
@@ -5861,6 +5909,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.\""
  },
+ "53d758de241f18e9": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key de800c55a093d64f); re-keyed by the reordered unit. Checked by script."
+ },
  "53f9e87729f2a75d": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -6689,6 +6743,12 @@
   "at": "2026-10-21",
   "why": "Cerastus Knight Lancer datasheet (GW faction pack): W 28 and \"DAMAGED: 1-10 WOUNDS REMAINING ... While this model has 1-10 wounds remaining\". Matches."
  },
+ "5fdf892e069a394b": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal to the approved judgement on main (main 2399c6e key 818b335ec8c3c435) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
+ },
  "6018aeed36448653": {
   "verdict": "ok",
   "by": "review:necrons",
@@ -6724,6 +6784,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"WHEN: Any phase\"."
+ },
+ "60b49e1c94fe2fab": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal as sets to the approved judgement on main (main 2399c6e key 577be42d085ae727); only the weapon/gear order differs (GW datasheet order). Checked by script."
  },
  "60b781d097bb21bc": {
   "verdict": "ok",
@@ -7450,6 +7516,12 @@
   "by": "review:orks-data",
   "at": "2026-10-28",
   "why": "Krushin’ Impetus is on the Warboss in Mega Armour datasheet (not Meganobz’); who = Warboss in Mega Armour. \"each model in this unit\" counts the Meganobz too (19.04), as the why says."
+ },
+ "6c84e6aec4fa374f": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Same na as the approved one on main (main 2399c6e key 2bb0ef9ddb708873): \"Not leading a unit in this list\" holds. armyUnits differs only in keyword order and Skarbrand's added SUMMONED (88dc255, GW's page prints it), which does not bear on the judgement. Checked by script (rev2/it-*.json)."
  },
  "6c93107162208ccd": {
   "verdict": "ok",
@@ -10151,6 +10223,12 @@
   "at": "2026-10-30",
   "why": "na reason identical to the approved main judgement (key 391330d40614737a, review:r23-army); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
  },
+ "96792e5a9bd251bf": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal to the approved judgement on main (main 2399c6e key eb4465fedd8412be) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
+ },
  "96a85e2a464bc2b6": {
   "verdict": "ok",
   "by": "review:healybois",
@@ -10402,6 +10480,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army that was just destroyed\": all units, and all have Deadly Demise D6."
+ },
+ "99453c078e6ab295": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key 7e367f46fff8c607); re-keyed by the reordered unit. Checked by script."
  },
  "9998a07ef9678077": {
   "verdict": "ok",
@@ -10720,6 +10804,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "WHEN 'Fight phase, ...' (waha l.395); Wahapedia's card icons: Fight, Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "9d8c5a9f1c08f5c1": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal as sets to the approved judgement on main (main 2399c6e key e6085e546aadd2e6); only the weapon/gear order differs (GW datasheet order). Checked by script."
  },
  "9d8f935deac06384": {
   "verdict": "ok",
@@ -13325,6 +13415,12 @@
   "at": "2026-10-16",
   "why": "\"In your Command phase\"."
  },
+ "c4879bc9d2bf6da3": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key e1ddb3de9c725e13); re-keyed by the reordered unit. Checked by script."
+ },
  "c4891fac4cfef6fd": {
   "verdict": "ok",
   "by": "review:import-lists",
@@ -13781,6 +13877,12 @@
   "at": "2026-10-30",
   "why": "Judgement identical to the one approved on main (key 8b56a4a4c5a45193, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
+ "cb528f4ff9254a1d": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key f232cab76c600583); re-keyed by the reordered unit. Checked by script."
+ },
  "cb5b0667f17e2160": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -13870,6 +13972,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "Matches the New Recruit PDF model lines (Mek: Kustom Mega-slugga, Mek's Toolz; Kaptin and 9x Flash Gitz: Choppa, Snazzgun) and weapon rows with NR’s counts (Snazzgun Cutta/Dakka/Kill Shot x10, Choppa x10)."
+ },
+ "ccc99fca493a961b": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal to the approved judgement on main (main 2399c6e key c81efef17bbdafd5) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
  },
  "ccd7646698c9a313": {
   "verdict": "ok",
@@ -14795,6 +14903,12 @@
   "at": "2026-10-22",
   "why": "\"Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack\": said shorter, nothing added."
  },
+ "d9b5aeeca85130d8": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key 9d9bcb9766e506d9); re-keyed by the reordered unit. Checked by script."
+ },
  "d9bd58207bdd22bd": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -15058,6 +15172,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "\"Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic\"; \"if picked this round\" is Unearthly Power's \"At the start of the battle round, select one ... Until the start of the next battle round\"."
+ },
+ "dda04e7394c66d6f": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key bf473018d2a96268); re-keyed by the reordered unit. Checked by script."
  },
  "ddadfff6cf84fb13": {
   "verdict": "ok",
@@ -15388,6 +15508,12 @@
   "by": "review:readings-3",
   "at": "2026-10-26",
   "why": "Matches the file (line 76). Tested: qualified brackets ([LETHAL HITS: non-MONSTER/VEHICLE], [ANTI-VEHICLE 4+: excluding TITANIC], [Sustained Hits 1: non-Monster/Vehicle]), [SUSTAINED HITS D3], 'the [ASSAULT] and [HEAVY] abilities', 'the Lethal Hits and Sustained Hits 1 abilities', bare 'have Sustained Hits 1' and [TWIN-LINKED] are all read. Notes, not blocking: (1) WA, which this builds on and which is not under review, has 'melta \\d+' and 'rapid fire \\d+', so [RAPID FIRE D3] and [MELTA D3] are not read. (2) The bare 'has/have the X' form also reads an enemy's ability ('if it has the Lethal Hits ability, that ability does not apply'), which is a possible future false positive. (3) 'hazardous' also matches inside [SUPA-HAZARDOUS], a drawback rather than a bonus. That one is unconditional today, so it has no effect."
+ },
+ "e2af48baf6f595c7": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key a018cf37a026418f); re-keyed by the reordered unit. Checked by script."
  },
  "e2e4e12454597fc1": {
   "verdict": "ok",
@@ -16312,6 +16438,12 @@
   "by": "review:necrons",
   "at": "2026-10-28",
   "why": "TARGET \"Your NECRONS WARLORD\"."
+ },
+ "f10aa562eab3be16": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key f7b68c48be03c803); re-keyed by the reordered unit. Checked by script."
  },
  "f10d931971814222": {
   "verdict": "ok",

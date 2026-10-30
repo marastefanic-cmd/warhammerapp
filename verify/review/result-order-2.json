@@ -1,0 +1,152 @@
+[
+ {
+  "key": "33da4d02434370a5",
+  "where": "princes · Slaughterbound",
+  "verdict": "ok",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key 7e38ba43759ec810); re-keyed by the reordered unit. Checked by script."
+ },
+ {
+  "key": "d9b5aeeca85130d8",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key 9d9bcb9766e506d9); re-keyed by the reordered unit. Checked by script."
+ },
+ {
+  "key": "24bcd17867e6ebb1",
+  "where": "pubstomper · Exalted Sorcerer",
+  "verdict": "ok",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key ea7c704b289d87a9); re-keyed by the reordered unit. Checked by script."
+ },
+ {
+  "key": "c4879bc9d2bf6da3",
+  "where": "4-megas-and-a-destrier · Canis Rex",
+  "verdict": "ok",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key e1ddb3de9c725e13); re-keyed by the reordered unit. Checked by script."
+ },
+ {
+  "key": "f10aa562eab3be16",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Supreme Commander",
+  "verdict": "ok",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key f7b68c48be03c803); re-keyed by the reordered unit. Checked by script."
+ },
+ {
+  "key": "5fdf892e069a394b",
+  "where": "infernal-lance · Chaos Cerastus Knight Atrapos · Consumed with Hunger",
+  "verdict": "ok",
+  "why": "Equal to the approved judgement on main (main 2399c6e key 818b335ec8c3c435) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
+ },
+ {
+  "key": "ccc99fca493a961b",
+  "where": "infernal-lance · Chaos Cerastus Knight Lancer · Dark Fervour",
+  "verdict": "ok",
+  "why": "Equal to the approved judgement on main (main 2399c6e key c81efef17bbdafd5) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
+ },
+ {
+  "key": "17a34ef086bf4637",
+  "where": "infernal-lance · Knight Despoiler · Dread Dominion",
+  "verdict": "ok",
+  "why": "Equal to the approved judgement on main (main 2399c6e key 78ebdf095c5378b5) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
+ },
+ {
+  "key": "3efde1b3dbe053ca",
+  "where": "infernal-lance · Knight Ruinator · Close-range Killers",
+  "verdict": "ok",
+  "why": "Equal to the approved judgement on main (main 2399c6e key b97d5160a0bcbb39/b97d5160a0bcbb39) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
+ },
+ {
+  "key": "6c84e6aec4fa374f",
+  "where": "big-demons-baby · Master of Executions · Forwards, For Blood!",
+  "verdict": "ok",
+  "why": "Same na as the approved one on main (main 2399c6e key 2bb0ef9ddb708873): \"Not leading a unit in this list\" holds. armyUnits differs only in keyword order and Skarbrand's added SUMMONED (88dc255, GW's page prints it), which does not bear on the judgement. Checked by script (rev2/it-*.json)."
+ },
+ {
+  "key": "31acc02e6cb7e86a",
+  "where": "lite-knights · Trajann Valoris",
+  "verdict": "ok",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key dd21cf0a01f29cbd); re-keyed by the reordered unit. Checked by script."
+ },
+ {
+  "key": "60b49e1c94fe2fab",
+  "where": "nerf-when · Roboute Guilliman",
+  "verdict": "ok",
+  "why": "Equal as sets to the approved judgement on main (main 2399c6e key 577be42d085ae727); only the weapon/gear order differs (GW datasheet order). Checked by script."
+ },
+ {
+  "key": "cb528f4ff9254a1d",
+  "where": "nerf-when · Marneus Calgar",
+  "verdict": "ok",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key f232cab76c600583); re-keyed by the reordered unit. Checked by script."
+ },
+ {
+  "key": "157d4ae0c903b7de",
+  "where": "nerf-when · Marneus Calgar",
+  "verdict": "ok",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key 4775df3fd73ab7b3); re-keyed by the reordered unit. Checked by script."
+ },
+ {
+  "key": "dda04e7394c66d6f",
+  "where": "nerf-when · Marneus Calgar",
+  "verdict": "ok",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key bf473018d2a96268); re-keyed by the reordered unit. Checked by script."
+ },
+ {
+  "key": "9d8c5a9f1c08f5c1",
+  "where": "nerf-when · Marneus Calgar",
+  "verdict": "ok",
+  "why": "Equal as sets to the approved judgement on main (main 2399c6e key e6085e546aadd2e6); only the weapon/gear order differs (GW datasheet order). Checked by script."
+ },
+ {
+  "key": "53d758de241f18e9",
+  "where": "dread-host · Trajann Valoris",
+  "verdict": "ok",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key de800c55a093d64f); re-keyed by the reordered unit. Checked by script."
+ },
+ {
+  "key": "96792e5a9bd251bf",
+  "where": "navigator-sounds-op-ngl · Knight Destrier · Thundercharge",
+  "verdict": "ok",
+  "why": "Equal to the approved judgement on main (main 2399c6e key eb4465fedd8412be) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
+ },
+ {
+  "key": "e2af48baf6f595c7",
+  "where": "tzeeeeentch · Fluxmaster",
+  "verdict": "ok",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key a018cf37a026418f); re-keyed by the reordered unit. Checked by script."
+ },
+ {
+  "key": "99453c078e6ab295",
+  "where": "tzeeeeentch · Fluxmaster",
+  "verdict": "ok",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key 7e367f46fff8c607); re-keyed by the reordered unit. Checked by script."
+ },
+ {
+  "key": "3cfefb1f1dea7a42",
+  "where": "tzeeeeentch · Fluxmaster",
+  "verdict": "ok",
+  "why": "Equal as sets to the approved judgement on main (main 2399c6e key 043cbd5d982aa06d); only the weapon/gear order differs (GW datasheet order). Checked by script."
+ },
+ {
+  "key": "36bb64ea9ab02b62",
+  "where": "tzeeeeentch · Blue Horrors",
+  "verdict": "ok",
+  "why": "Equal as sets to the approved judgement on main (main 2399c6e key 408d4d3cfb2342f3); only the weapon/gear order differs (GW datasheet order). Checked by script."
+ },
+ {
+  "key": "order-2 · disclosure · Damage tab shown numbers",
+  "where": "wt-order-work/dm-shown-changes.md",
+  "verdict": "ok",
+  "why": "Resolved in 54624bd's notes: dm-shown-changes.md lists all 76 changed unit-modes of my rev2 data (shown-main.json vs shown-br.json), and the owner's decision to keep GW order is quoted. Re-run on 54624bd: the shown numbers are unchanged since d041c79."
+ },
+ {
+  "key": "order-2 · order · Berserker Frenzy",
+  "where": "princes/standard · Khârn the Betrayer",
+  "verdict": "ok",
+  "why": "Declared in deviations-numbers.json (kind abilities, wahaName Berzerker Frenzy); gw-order.js now matches it on the page. numbers.js checks the declaration: a wrong wahaName fails (mutation)."
+ },
+ {
+  "key": "order-2 · keywords · name keyword head-match",
+  "where": "verify/gw-order.js nameKeyword (11ba04b, 903a477); verify/deviations-keywords.json (4d82712, 903a477)",
+  "verdict": "ok",
+  "why": "Fixed. Of 168 datasheet parts, 160 are exact matches (whole name, or the core left after stripping leading page keywords and 'of <god>': SCARAB OCCULT, DAEMON PRINCE WITH WINGS, TERMINATOR SQUAD) and 8 are declared: DAEMON PRINCE x2, SORCERER, EXALTED SORCERER and HORRORS x2 (GW prints no keyword unique to these datasheets: the coordinator's decision), LIBRARIAN (BSData) and LORD DISCORDANT. Mutations that fail: removing a declaration (undeclared head match); declaring CHAOS or TERMINATOR instead of the rule's head match; a tampered KEYWORDS quote; a Librarian evidence without BSData's category; a mis-cased page path; a wrong 'from'; a keyword on neither the page nor in BSData; a stale declaration. All 9 quoted KEYWORDS lines are on their cached pages, and BSData's categories for Librarian in Phobos Armour include Librarian. The round-2 claim that Wahapedia's keyword index lists LIBRARIAN was this reviewer's error; 903a477 removed it. data.js is byte-identical since 54624bd."
+ }
+]
