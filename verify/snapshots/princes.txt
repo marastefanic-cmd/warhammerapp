@@ -1287,7 +1287,7 @@ Add a group
 of 5 destroyed
 4.2 wounds lost · wiped in 1% of games
 Plasma pistol: supercharge
-2 NOT COUNTED
+16 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1408,7 +1408,7 @@ D
 PISTOL
 −0.3
 MODELS IF UNTICKED
-SITUATION AND RULES
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1431,56 +1431,62 @@ the target within 24" (15.09): hits only on an unmodified 6, never critical; no 
 if it applies
 −1.3
 MODELS
+ARMY RULES
+
+None that change these numbers.
+
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (4)
+The Betrayer
+“At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll: - If that leadership roll is failed, one bodyguard model in this unit is destroyed.” · not counted in the Damage tab
+Berserker Frenzy
+“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.” · not counted in the Damage tab
+Blood Surge
+“In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".” · not counted in the Damage tab
+Icon of Khorne
+“If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +2% wiped
 +0.4
 MODELS
-NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
-
-1CP Hack and Slash
-Fight phase only
-+0.5
-MODELS IF YOU COUNT IT
-
-Nothing to count: 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Berzerker’s Wrath (in the other player’s turn only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Blood Offering AI
-Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1CP Explosives AI
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (12)
+1CP Blood Offering
+“Select one of those objective markers. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+2CP Frenzied Resilience
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Skulls for the Skull Throne!
+“WHEN: Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model. TARGET: That WORLD EATERS unit. EFFECT: Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. …” · not counted in the Damage tab
+1CP Apoplectic Frenzy
+“WHEN: Your Movement phase, just after a KHORNE BERZERKERS unit from your army is selected to Advance. TARGET: That KHORNE BERZERKERS unit. EFFECT: Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+1CP Berzerker’s Wrath
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has shot. TARGET: One KHORNE BERZERKERS unit from your army that can make a surge move as a result of those attacks. EFFECT: Do not roll a D6 to determine how far models in your unit can move when they make a surge move. …” · not counted in the Damage tab
+1CP Punish the Craven
+“WHEN: Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit. TARGET: That WORLD EATERS CHARACTER unit. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Explosives
+“WHEN: Your Shooting phase. TARGET: One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn. EFFECT: Resolve the following sequence: - 1. Select one EXPLOSIVES/GRENADES model in your unit. - 2. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1615,13 +1621,12 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-5
+5.0
 of 5 destroyed
 10 wounds lost · wiped in >99% of games
 Charged this turn
 ×
-Legendary Killer
-4 NOT COUNTED
+17 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1645,7 +1650,9 @@ AP
 -2
 D
 3
-0
+−8% wiped
+−0.1
+MODELS IF UNTICKED
 Chainblade ×8 KHORNE BERZERKERS
 A
 5
@@ -1657,7 +1664,8 @@ AP
 -1
 D
 1
-≈0
+−10% wiped
+−0.1
 MODELS IF UNTICKED
 Khornate eviscerator ×2 KHORNE BERZERKERS
 A
@@ -1670,90 +1678,97 @@ AP
 -2
 D
 2
-0
-SITUATION AND RULES
+−2% wiped
+≈0
+MODELS IF UNTICKED
+SITUATION
 Charged this turn
-also the condition of 1CP Hack and Slash (tick it under Stratagems)
+ticks Murderous Charge · also the condition of 1CP Hack and Slash (tick it under Stratagems)
 said to hold
 0
-RULES IT SWITCHES ON
-✓Murderous Charge
+ARMY RULES
+Blessings of Khorne
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1]
+if it applies
 0
+Blessings of Khorne
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS]
+if it applies
+0
+Blessings of Khorne
+Decapitating Strikes · double 6 or triple 3+ · The target: Infantry: [DEVASTATING WOUNDS]
+if it applies
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Relentless Rage
++1 A · already in its weapons’ profiles above (A, marked +): counted there
+UNIT RULES
 Legendary Killer
-While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1
-always counted · you can leave it out
-if left out: no change
+While leading a unit: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
+0
+Murderous Charge
+Charged this turn: +1 S
+ticked for you: ticked with “Charged this turn”
+0
+NOT COUNTED IN THE DAMAGE TAB (4)
+The Betrayer
+“At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll: - If that leadership roll is failed, one bodyguard model in this unit is destroyed.” · not counted in the Damage tab
+Berserker Frenzy
+“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.” · not counted in the Damage tab
+Blood Surge
+“In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".” · not counted in the Damage tab
+Icon of Khorne
+“If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
 Beacons of Rage (Eightbound)
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit
+Aura · Within 6" of it · The target: not Monster/Vehicle: +1 to Hit rolls
 if it applies
 0
 Beacons of Rage (Eightbound)
-Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls
-if it applies
-0
-Martial Excellence
-Blessing of Khorne active this battle round: [SUSTAINED HITS 1]
-if it applies
-0
-Warp Blades
-Blessing of Khorne active this battle round: [LETHAL HITS]
-if it applies
-0
-Decapitating Strikes
-Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit: [DEVASTATING WOUNDS]
+Aura · Within 6" of it · The target: not Monster/Vehicle · The target Below Half-strength: +1 to Wound rolls
 if it applies
 0
 STRATAGEMS
 with their CP
 1CP Hack and Slash
-Made a charge move this turn: +1 AP in the Fight phase
+Charged this turn: +1 AP
 if used
 0
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Berzerker’s Wrath, 1CP Explosives (Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (4)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Blood Offering AI
-Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1CP Skulls for the Skull Throne! AI
-Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only · for Gorechild
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (12)
+1CP Blood Offering
+“Select one of those objective markers. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+2CP Frenzied Resilience
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Skulls for the Skull Throne!
+“WHEN: Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model. TARGET: That WORLD EATERS unit. EFFECT: Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. …” · not counted in the Damage tab
+1CP Apoplectic Frenzy
+“WHEN: Your Movement phase, just after a KHORNE BERZERKERS unit from your army is selected to Advance. TARGET: That KHORNE BERZERKERS unit. EFFECT: Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+1CP Berzerker’s Wrath
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has shot. TARGET: One KHORNE BERZERKERS unit from your army that can make a surge move as a result of those attacks. EFFECT: Do not roll a D6 to determine how far models in your unit can move when they make a surge move. …” · not counted in the Damage tab
+1CP Punish the Craven
+“WHEN: Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit. TARGET: That WORLD EATERS CHARACTER unit. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Explosives
+“WHEN: Your Shooting phase. TARGET: One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn. EFFECT: Resolve the following sequence: - 1. Select one EXPLOSIVES/GRENADES model in your unit. - 2. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1888,17 +1903,16 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-5
+5.0
 of 5 destroyed
 10 wounds lost · wiped in >99% of games
 
-Shoot 1.8 · Fight 3.2 · the charge is taken to succeed
+Shoot 1.84 · Fight 3.16 · the charge is taken to succeed
 
 Plasma pistol: supercharge
 Charged this turn
 ×
-Legendary Killer
-6 NOT COUNTED
+33 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1930,7 +1944,7 @@ HAZARDOUS, PISTOL
 0
 PICK ONE PROFILE
 standard
-5
+5.0
 RNG
 12"
 A
@@ -1945,7 +1959,7 @@ D
 1
 PISTOL
 supercharge
-5
+5.0
 RNG
 12"
 A
@@ -1976,7 +1990,7 @@ HAZARDOUS, PISTOL
 0
 PICK ONE PROFILE
 standard
-5
+5.0
 RNG
 12"
 A
@@ -1991,7 +2005,7 @@ D
 1
 PISTOL
 supercharge
-5
+5.0
 RNG
 12"
 A
@@ -2020,7 +2034,7 @@ D
 1
 PISTOL
 0
-SITUATION AND RULES
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -2033,53 +2047,60 @@ Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
 0
+ARMY RULES
+
+None that change these numbers.
+
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (4)
+The Betrayer
+“At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll: - If that leadership roll is failed, one bodyguard model in this unit is destroyed.” · not counted in the Damage tab
+Berserker Frenzy
+“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.” · not counted in the Damage tab
+Blood Surge
+“In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".” · not counted in the Damage tab
+Icon of Khorne
+“If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
-
-1CP Hack and Slash
-Fight phase only
-NO CHANGE
-
-Nothing to count: 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Berzerker’s Wrath (in the other player’s turn only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Blood Offering AI
-Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1CP Explosives AI
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (12)
+1CP Blood Offering
+“Select one of those objective markers. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+2CP Frenzied Resilience
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Skulls for the Skull Throne!
+“WHEN: Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model. TARGET: That WORLD EATERS unit. EFFECT: Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. …” · not counted in the Damage tab
+1CP Apoplectic Frenzy
+“WHEN: Your Movement phase, just after a KHORNE BERZERKERS unit from your army is selected to Advance. TARGET: That KHORNE BERZERKERS unit. EFFECT: Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+1CP Berzerker’s Wrath
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has shot. TARGET: One KHORNE BERZERKERS unit from your army that can make a surge move as a result of those attacks. EFFECT: Do not roll a D6 to determine how far models in your unit can move when they make a surge move. …” · not counted in the Damage tab
+1CP Punish the Craven
+“WHEN: Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit. TARGET: That WORLD EATERS CHARACTER unit. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Explosives
+“WHEN: Your Shooting phase. TARGET: One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn. EFFECT: Resolve the following sequence: - 1. Select one EXPLOSIVES/GRENADES model in your unit. - 2. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -2098,7 +2119,9 @@ AP
 -2
 D
 3
-0
+−1% wiped
+≈0
+MODELS IF UNTICKED
 Chainblade ×8 KHORNE BERZERKERS
 A
 5
@@ -2110,7 +2133,10 @@ AP
 -1
 D
 1
-0
+−2% wiped
+≈0
+MODELS IF UNTICKED
++1 MORE ▾
 Khornate eviscerator ×2 KHORNE BERZERKERS
 A
 4
@@ -2123,89 +2149,94 @@ AP
 D
 2
 0
-SITUATION AND RULES
+SITUATION
 Charged this turn
-also the condition of 1CP Hack and Slash (tick it under Stratagems)
+ticks Murderous Charge · also the condition of 1CP Hack and Slash (tick it under Stratagems)
 holds: Both takes the charge as made (no charge roll)
 0
-RULES IT SWITCHES ON
-✓Murderous Charge
+ARMY RULES
+Blessings of Khorne
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1]
+if it applies
 0
+Blessings of Khorne
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS]
+if it applies
+0
+Blessings of Khorne
+Decapitating Strikes · double 6 or triple 3+ · The target: Infantry: [DEVASTATING WOUNDS]
+if it applies
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Relentless Rage
++1 A · already in its weapons’ profiles above (A, marked +): counted there
+UNIT RULES
 Legendary Killer
-While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1
-always counted · you can leave it out
-if left out: no change
+While leading a unit: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
+0
+Murderous Charge
+Charged this turn: +1 S
+ticked for you: ticked with “Charged this turn”
+0
+NOT COUNTED IN THE DAMAGE TAB (4)
+The Betrayer
+“At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll: - If that leadership roll is failed, one bodyguard model in this unit is destroyed.” · not counted in the Damage tab
+Berserker Frenzy
+“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.” · not counted in the Damage tab
+Blood Surge
+“In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".” · not counted in the Damage tab
+Icon of Khorne
+“If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
 Beacons of Rage (Eightbound)
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit
+Aura · Within 6" of it · The target: not Monster/Vehicle: +1 to Hit rolls
 if it applies
 0
 Beacons of Rage (Eightbound)
-Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls
-if it applies
-0
-Martial Excellence
-Blessing of Khorne active this battle round: [SUSTAINED HITS 1]
-if it applies
-0
-Warp Blades
-Blessing of Khorne active this battle round: [LETHAL HITS]
-if it applies
-0
-Decapitating Strikes
-Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit: [DEVASTATING WOUNDS]
+Aura · Within 6" of it · The target: not Monster/Vehicle · The target Below Half-strength: +1 to Wound rolls
 if it applies
 0
 STRATAGEMS
 with their CP
 1CP Hack and Slash
-Made a charge move this turn: +1 AP in the Fight phase
+Charged this turn: +1 AP
 if used
 0
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Berzerker’s Wrath, 1CP Explosives (Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (4)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Blood Offering AI
-Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1CP Skulls for the Skull Throne! AI
-Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only · for Gorechild
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (12)
+1CP Blood Offering
+“Select one of those objective markers. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+2CP Frenzied Resilience
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Skulls for the Skull Throne!
+“WHEN: Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model. TARGET: That WORLD EATERS unit. EFFECT: Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. …” · not counted in the Damage tab
+1CP Apoplectic Frenzy
+“WHEN: Your Movement phase, just after a KHORNE BERZERKERS unit from your army is selected to Advance. TARGET: That KHORNE BERZERKERS unit. EFFECT: Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+1CP Berzerker’s Wrath
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has shot. TARGET: One KHORNE BERZERKERS unit from your army that can make a surge move as a result of those attacks. EFFECT: Do not roll a D6 to determine how far models in your unit can move when they make a surge move. …” · not counted in the Damage tab
+1CP Punish the Craven
+“WHEN: Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit. TARGET: That WORLD EATERS CHARACTER unit. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Explosives
+“WHEN: Your Shooting phase. TARGET: One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn. EFFECT: Resolve the following sequence: - 1. Select one EXPLOSIVES/GRENADES model in your unit. - 2. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

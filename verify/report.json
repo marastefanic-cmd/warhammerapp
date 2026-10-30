@@ -1,6 +1,6 @@
 {
- "hash": "8ff08dfddcb00d492c4bdf25f5bc7336cda99f6e9dbab53c37977fd56998340d",
- "at": "2026-10-29T19:00:19.563Z",
+ "hash": "4245a57fc7cc95c9ad6251d903a7d677af0fe0e2d7c80c79e1446eeb51ce83ce",
+ "at": "2026-10-30T16:22:42.559Z",
  "ok": true,
  "steps": {
   "data": {
@@ -13,11 +13,15 @@
   },
   "fingerprints": {
    "ok": true,
-   "summary": "fingerprints: 274 of 274 AI-written values (gist, def) and 247 of 247 readings (19 derived) match the text they were written or read from"
+   "summary": "fingerprints: 274 of 274 AI-written values (gist, def) and 237 of 237 readings (19 derived) match the text they were written or read from"
   },
   "readings": {
    "ok": true,
    "summary": "readings: 0 sentences stating a bonus with no reading (0 riled up, 0 other, 0 defences; listed in verify/out/readings.md, known in verify/readings-gaps.json)"
+  },
+  "evidence": {
+   "ok": true,
+   "summary": "evidence: 243 sources, 241 boxes and 34 picks made by script from GW’s words (G1-G8); the army, unit and other-units groups of 213 units as the database gives them; 176 stratagems read from their TARGET, shown for 213 units exactly as their keywords meet it (a broken tag on Crazed Rampage is caught)"
   },
   "invariants": {
    "ok": true,
@@ -25,7 +29,7 @@
   },
   "derive": {
    "ok": true,
-   "summary": "derive: 1071 agreed labels hold; 5 differ, 183 not derivable (verify/out/derive.md)"
+   "summary": "derive: 1071 agreed labels hold; 3 differ, 183 not derivable (verify/out/derive.md)"
   },
   "choice": {
    "ok": true,
@@ -53,7 +57,7 @@
   },
   "calc": {
    "ok": true,
-   "summary": "calc: 308 of 308 hand-worked cases within margin"
+   "summary": "calc: 373 of 373 hand-worked cases within margin"
   },
   "import": {
    "ok": true,
@@ -73,7 +77,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 1524 judgements, 1524 approved, 0 to check, 1163 stale approvals"
+   "summary": "helpers: 1511 judgements, 1511 approved, 0 to check, 1233 stale approvals"
   }
  }
 }

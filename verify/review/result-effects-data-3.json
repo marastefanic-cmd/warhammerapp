@@ -1,0 +1,150 @@
+[
+ {
+  "key": "27a4f5ddf8ff5c6e",
+  "where": "ability · Phaeron of the Stars",
+  "verdict": "ok",
+  "why": "GW (Silent King): “At the start of the battle round, select one Triarch ability … Until the start of the next battle round, this unit has that ability.” Box: opt “Triarch Abilities: the one selected (at the start of the battle round)”, aura 6, reach NECRONS not MONSTER, excl “Triarch Abilities”. Rendered (my build, u-w0t-m8/imotekh fight): “Aura · Triarch Abilities: the one selected (at the start of the battle round) · Within 6\" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1”. Exclusion clicked in the browser: ticking Stars then Blades leaves only Blades ticked (aria-pressed false/true), answer counts Blades only."
+ },
+ {
+  "key": "cfee27f96e7e1b90",
+  "where": "ability · Spirit Thief",
+  "verdict": "ok",
+  "why": "GW: “select one visible enemy VEHICLE unit. Until the end of the phase, each time a friendly HERETIC ASTARTES model makes an attack that targets that unit, re-roll a Wound roll of 1.” Box adds targetKw VEHICLE to targetSelected: right (main said “the visible enemy VEHICLE unit”)."
+ },
+ {
+  "key": "29793c3213c4496b",
+  "where": "ability · Driven by Ultimate Rage",
+  "verdict": "ok",
+  "why": "GW: Wrathful Presence “select one Wrathful Presence ability” at the start of the battle round. Box: opt “Wrathful Presence: the one selected (at the start of the battle round)”, aura 6, melee, excl. Rendered on Khârn (standard) and Angron (big-demons-baby): the pick condition now stated."
+ },
+ {
+  "key": "d4990361976f3843",
+  "where": "ability · Using Sir Hekhtur",
+  "verdict": "ok",
+  "why": "GW: “If your Canis Rex model is destroyed, this model is treated as a model disembarking …”: no attack effect; BOXES embarked {until:\"Canis Rex\"} (Sir Hekhtur not on the battlefield while Canis Rex lives) read by a fixed pattern of these words: right."
+ },
+ {
+  "key": "f0de2485458a9fe4",
+  "where": "ability · Dark Zealotry",
+  "verdict": "ok",
+  "why": "GW: “While this unit is leading a unit and contains a DARK APOSTLE model …, add 1 to the Wound roll.” Now states q “contains a DARK APOSTLE model” as main did."
+ },
+ {
+  "key": "6f95ace21cb2e9a9",
+  "where": "ability · Bladeguard",
+  "verdict": "ok",
+  "why": "“Once per turn” is the database tag “Once per turn, per unit” (main’s label had “once per turn” too); the selection clause is GW’s. Right."
+ },
+ {
+  "key": "0c91e332de5bf39b",
+  "where": "ability · Phaeron of the Blades",
+  "verdict": "ok",
+  "why": "As Phaeron of the Stars: opt + excl “Triarch Abilities”; rendered “… · Within 6\" of it: +1 S”; mutual exclusion verified by clicking."
+ },
+ {
+  "key": "2172c6df30930d2b",
+  "where": "rule · Malefic Surge",
+  "verdict": "ok",
+  "why": "GW: “While a unit is Empowered it can use one of the Malefic Surge abilities below.” Rendered (infernal-lance lancer): “Diabolic Power · “While a unit is Empowered …”” — fixed."
+ },
+ {
+  "key": "e2af335b0a1f8c2b",
+  "where": "rule · Kindred Sorcery",
+  "verdict": "ok",
+  "why": "GW: “You can only select each of these abilities once per battle.” Each pick carries oncePerBattle; rendered “Once per battle · Psychic weapons only”. Fixed."
+ },
+ {
+  "key": "16657eb3f48588b9",
+  "where": "strat · Hungry for Combat",
+  "verdict": "ok",
+  "why": "Restriction “models in those WAR DOG units can only target that enemy unit” now stated (rendered woof-woof brigand fight). See the before/after entry about GW’s TARGET “Two or more WAR DOG units … within Engagement Range of the same enemy unit”."
+ },
+ {
+  "key": "effects-parity-3",
+  "where": "Damage tab rendered before/after (labels, folds, numbers) + condcheck CLAUSE rows",
+  "verdict": "fix",
+  "why": "Audited all 448 CLAUSE rows (198 distinct clauses) and, separately, every main clause the builder’s check keeps with 50–99% of its words (68, re-run on rd-old/rd-new with a 100% threshold). Corrections all as GW: Enraged Behemoths (Tyranids: “add 1 to the Wound roll as well if that model’s unit is Below Half-strength” — main’s “at N or fewer wounds left” was an app reading), Pledges, Doctrina, Methodical Destruction, Singular Purpose, Soul Sight, Spirit Thief. My 5 regressions render fixed (own build: Driven, Phaeron ×2 with working mutual exclusion, Hungry, Malefic, Doctrina row now “+1 AP with Conqueror Imperative or … (BATTLELINE, or within 6\" …)”). Rules: WORKING (numbers only), REACH, USED, COST, PICKS, SOURCE, TITLE: sound in their hits. Unsound in principle: (a) TIMING’s regex also matches “this turn$”, “this (battle )?round”, “until the (end|start)”, so a real condition clause that ends in a time word is waved through — it hid Driven/Phaeron last round and still hides Daemonic Fury’s “a friendly BLOOD LEGIONS unit within 6\"” (helped World Eaters rows read only “Selected by it · [LANCE]”; GW: “Select one friendly WORLD EATERS unit within 6\" of your unit”); (b) GW-QUOTE (“a row not counted shows GW’s words”) is applied to any row whose label starts with “, i.e. counted rows with a quoted condition (Glowin’ Dakka, Ruination’s Bounty, Strength from Exile, Deff from Above, Auto-divinatory, Damaged 4/5, Murderous Imperative) — no loss hidden in those hits; (c) SOURCE uses /i so its [A-Z] guard is void — hits are all real source names; (d) the 50% keep rule: of the 68 partial keeps only Daemonic Fury and Hungry for Combat lose meaning, the rest miss only a unit name now in the row title or a tokenisation (non-monster vs “not Monster”). Hungry for Combat “two”: GW TARGET “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”; the builder’s reason (“a TARGET count, not a condition of these attacks”) is inconsistent with the TARGET conditions other stratagem rows state (Avenge the Fallen below starting strength, Hack and Slash charged, Machine Spirit Resurgent below starting strength): minor, state it. Not tested: exclusion across the two steps of a Both turn (rows not drawn in Both’s first view).",
+  "fix": {
+   "Daemonic Fury (BOXES s|53dmpp)": {
+    "b": [
+     {
+      "quote": "Until the end of the turn, melee weapons equipped by models in your **WORLD EATERS** unit have the **[LANCE]** ability.",
+      "fx": [
+       [
+        "lance",
+        true
+       ]
+      ],
+      "on": [
+       [
+        "selected",
+        true
+       ],
+       [
+        "aura",
+        6
+       ]
+      ],
+      "kind": "melee",
+      "lead": "Select one friendly **WORLD EATERS** unit within 6\" of your unit.",
+      "reach": {
+       "all": [
+        "Faction: World Eaters"
+       ]
+      },
+      "mark": "selected",
+      "lasts": "turn"
+     },
+     {
+      "quote": "If the Daemonic Rage ability is active for your army, then until the end of the phase those melee weapons also have the **[TWIN-LINKED]** ability.",
+      "fx": [
+       [
+        "twin",
+        true
+       ]
+      ],
+      "on": [
+       [
+        "selected",
+        true
+       ],
+       [
+        "aura",
+        6
+       ],
+       [
+        "q",
+        "If the Daemonic Rage ability is active for your army"
+       ]
+      ],
+      "kind": "melee",
+      "lead": "Until the end of the turn, melee weapons equipped by models in your **WORLD EATERS** unit have the **[LANCE]** ability.",
+      "reach": {
+       "all": [
+        "Faction: World Eaters"
+       ]
+      },
+      "mark": "selected"
+     }
+    ]
+   },
+   "Hungry for Combat (BOXES s|firve9) on": [
+    [
+     "targetSelected",
+     true
+    ],
+    [
+     "q",
+     "Two or more WAR DOG units from your army within Engagement Range of the same enemy unit"
+    ],
+    [
+     "q",
+     "models in those WAR DOG units can only target that enemy unit"
+    ]
+   ],
+   "mkchanges2.js CLAUSE TIMING": "match only a clause made wholly of timing words: /^(?:(?:your |the |start of (?:the |your )?|end of (?:the )?)?(?:shooting|fight|command|movement|charge) phase|(?:when )?selected to (?:shoot|fight|attack)|not yet selected to (?:shoot|fight)|until the (?:end|start) of (?:the|your next) (?:phase|turn|command phase)|just after a hit)$/i (others → REVIEW)",
+   "mkchanges2.js GW-QUOTE": "only when the new row is in a “NOT COUNTED IN THE DAMAGE TAB” place (x.place), not /^“/ on the label",
+   "mkchanges2.js SOURCE": "drop the /i flag (keep [A-Z] for a proper name)"
+  }
+ }
+]

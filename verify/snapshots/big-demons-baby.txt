@@ -1231,6 +1231,7 @@ Add a group
 of 5 destroyed
 2.9 wounds lost · wiped in <1% of games
 Nothing ticked: the datasheets as printed
+11 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1255,7 +1256,7 @@ D
 IGNORES COVER, TORRENT
 −1.2
 MODELS IF UNTICKED
-SITUATION AND RULES
+SITUATION
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
@@ -1280,42 +1281,51 @@ if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
+ARMY RULES
+
+None that change these numbers.
+
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (1)
+Murderlust
+“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +0.2
 MODELS
-NOT FOR THIS STEP, BY THE RULES (6)
-
-Nothing to count: 1CP Daemonic Fury, 1CP A Worthy Skull, 1CP Murder-call, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Blessing of Burning Blood (in the other player’s turn only)
-
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Daemonic Fury
+“WHEN: Start of your Fight phase. TARGET: One BLOOD LEGIONS unit from your army. EFFECT: Select one friendly WORLD EATERS unit within 6" of your unit. Until the end of the turn, melee weapons equipped by models in your WORLD EATERS unit have the [LANCE] ability. …” · not counted in the Damage tab
+1CP A Worthy Skull
+“WHEN: Fight phase, just after a BLOOD LEGIONS or WORLD EATERS unit from your army has fought, and one or more enemy CHARACTER or MONSTER models were destroyed as a result of those attacks. TARGET: That BLOOD LEGIONS or WORLD EATERS unit. …” · not counted in the Damage tab
+1CP Blessing of Burning Blood
+“WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One BLOOD LEGIONS unit from your army that is within 6" of a friendly WORLD EATERS unit that was selected as the target as one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Murder-call
+“WHEN: End of your opponent’s Fight phase. TARGET: One BLOOD LEGIONS unit from your army that is on the battlefield and not within Engagement Range of one or more enemy units. EFFECT: Remove your unit from the battlefield and place it into Strategic Reserves.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1438,7 +1448,7 @@ of 5 destroyed
 Samni’arius and Spinegrinder: sweep
 Charged this turn
 ×
-3 NOT COUNTED
+14 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1492,92 +1502,98 @@ AP
 D
 2
 DEVASTATING WOUNDS
-SITUATION AND RULES
-Driven by Ultimate Rage
-Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-if it applies
-+13% wiped
-+0.2
-MODELS
-Martial Excellence
-Blessing of Khorne active this battle round: [SUSTAINED HITS 1]
-if it applies
-+8% wiped
-+0.1
-MODELS
-Warp Blades
-Blessing of Khorne active this battle round: [LETHAL HITS]
-if it applies
-+5% wiped
-+0.1
-MODELS
+SITUATION
 Charged this turn
 said to hold
 no change: no rule here needs it
 0
-Decapitating Strikes
-Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit: [DEVASTATING WOUNDS]
-if it applies
-0
-Damaged (1-6 wounds left)
--1 to hit rolls
+Damaged: 1-6 wounds remaining
+−1 to Hit rolls
 if it applies
 −20% wiped
 −0.4
 MODELS
-STRATAGEMS
-with their CP
-1CP Daemonic Fury
-Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6": [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase)
-if used
-BEST · MOST MODELS+11% wiped
+ARMY RULES
+Blessings of Khorne
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1]
+if it applies
++8% wiped
++0.1
+MODELS
+Blessings of Khorne
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS]
+if it applies
++5% wiped
++0.1
+MODELS
+Blessings of Khorne
+Decapitating Strikes · double 6 or triple 3+ · The target: Infantry: [DEVASTATING WOUNDS]
+if it applies
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Blood Tithe
+“Each time a BLOOD LEGIONS or WORLD EATERS unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). …” · not counted in the Damage tab
+UNIT RULES
+Driven by Ultimate Rage
+Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
++13% wiped
 +0.2
 MODELS
-[LANCE]
+NOT COUNTED IN THE DAMAGE TAB (4)
+Reborn in Blood
+“At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. …” · not counted in the Damage tab
+Wrathful Presence
+“At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+The Blood God’s Favour
+“Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.” · not counted in the Damage tab
+Overwhelming Wrath
+“Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+1CP Daemonic Fury
+Selected by it · Within 6" of it · “If the Daemonic Rage ability is active for your army”: [TWIN-LINKED]
+if used
++13% wiped
 +0.2
-Daemonic Rage active
+MODELS
+1CP Daemonic Fury
+Selected by it · Within 6" of it: [LANCE]
+if used
++11% wiped
 +0.2
+MODELS
+STRATAGEMS
+with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +4% wiped
 +0.1
 MODELS
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP A Worthy Skull AI
-Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (9)
+1CP A Worthy Skull
+“WHEN: Fight phase, just after a BLOOD LEGIONS or WORLD EATERS unit from your army has fought, and one or more enemy CHARACTER or MONSTER models were destroyed as a result of those attacks. TARGET: That BLOOD LEGIONS or WORLD EATERS unit. …” · not counted in the Damage tab
+1CP Daemontide
+“WHEN: Your Command phase. TARGET: One WORLD EATERS unit from your army. EFFECT: Select one friendly BLOOD LEGIONS unit within 6" of your unit. One destroyed MOUNTED model, up to D3 destroyed BEAST models, or up to D6 destroyed INFANTRY models are returned to that BLOOD LEGIONS unit with their full wounds remaining. …” · not counted in the Damage tab
+1CP Punish the Craven
+“WHEN: Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit. TARGET: That WORLD EATERS CHARACTER unit. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1694,15 +1710,14 @@ Benefit of cover
 Add a group
 5.0
 of 5 destroyed
-10 wounds lost · wiped in 98% of games
+9.9 wounds lost · wiped in 98% of games
 
-Shoot 1.19 · Fight 3.79 · the charge is taken to succeed
+Shoot 1.19 · Fight 3.78 · the charge is taken to succeed
 
 Slaughter and Carnage: sweep
 Charged this turn
 ×
-Rage Embodied
-6 NOT COUNTED
+22 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1729,11 +1744,10 @@ AP
 D
 1
 IGNORES COVER, TORRENT
-−3% wiped
-≈0
+−4% wiped
+−0.1
 MODELS IF UNTICKED
-+1 MORE ▾
-SITUATION AND RULES
+SITUATION
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
@@ -1752,41 +1766,50 @@ if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
+ARMY RULES
+
+None that change these numbers.
+
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (1)
+Murderlust
+“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (6)
-
-Nothing to count: 1CP Daemonic Fury, 1CP A Worthy Skull, 1CP Murder-call, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Blessing of Burning Blood (in the other player’s turn only)
-
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Daemonic Fury
+“WHEN: Start of your Fight phase. TARGET: One BLOOD LEGIONS unit from your army. EFFECT: Select one friendly WORLD EATERS unit within 6" of your unit. Until the end of the turn, melee weapons equipped by models in your WORLD EATERS unit have the [LANCE] ability. …” · not counted in the Damage tab
+1CP A Worthy Skull
+“WHEN: Fight phase, just after a BLOOD LEGIONS or WORLD EATERS unit from your army has fought, and one or more enemy CHARACTER or MONSTER models were destroyed as a result of those attacks. TARGET: That BLOOD LEGIONS or WORLD EATERS unit. …” · not counted in the Damage tab
+1CP Blessing of Burning Blood
+“WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One BLOOD LEGIONS unit from your army that is within 6" of a friendly WORLD EATERS unit that was selected as the target as one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Murder-call
+“WHEN: End of your opponent’s Fight phase. TARGET: One BLOOD LEGIONS unit from your army that is on the battlefield and not within Engagement Range of one or more enemy units. EFFECT: Remove your unit from the battlefield and place it into Strategic Reserves.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1805,12 +1828,12 @@ AP
 -2
 D
 2
-−98% wiped
+−97% wiped
 −3.8
 MODELS IF UNTICKED
 PICK ONE PROFILE
 strike
-5.0
+4.9
 A
 8
 WS
@@ -1823,6 +1846,7 @@ D
 6
 sweep
 5.0
+BEST
 A
 16
 WS
@@ -1833,95 +1857,88 @@ AP
 -2
 D
 2
-SITUATION AND RULES
-Martial Excellence
-Blessing of Khorne active this battle round (Might of Khorne active (5BTP)): [SUSTAINED HITS 1]
-if it applies
-+1% wiped
-≈0
-MODELS
-Damaged (1-7 wounds left)
+SITUATION
+Damaged: 1-7 wounds remaining
 +2 A
 if it applies
 +1% wiped
-≈0
-MODELS
-Decapitating Strikes
-Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit (Might of Khorne active (5BTP)): [DEVASTATING WOUNDS]
-if it applies
-≈0
-MODELS
-Rage Embodied
-Own aura: +1 A
-always counted · you can leave it out
-if left out: ≈0 models
-Warp Blades
-Blessing of Khorne active this battle round (Might of Khorne active (5BTP)): [LETHAL HITS]
-if it applies
 ≈0
 MODELS
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
+ARMY RULES
+Blessings of Khorne
+Martial Excellence · double 4+ or triple 1+ · “Might of Khorne active”: [SUSTAINED HITS 1]
+if it applies
++2% wiped
+≈0
+MODELS
+Blessings of Khorne
+Decapitating Strikes · double 6 or triple 3+ · The target: Infantry · “Might of Khorne active”: [DEVASTATING WOUNDS]
+if it applies
++1% wiped
+≈0
+MODELS
+Blessings of Khorne
+Warp Blades · double 5+ or triple 2+ · “Might of Khorne active”: [LETHAL HITS]
+if it applies
+≈0
+MODELS
 Blood Tithe
-Daemonic Rage active (3BTP): [LANCE]
+Daemonic Rage [3BTP]: [LANCE]
 if it applies
 no change: already wounds on 2+
 0
+UNIT RULES
+Rage Embodied
+Within 6" of it: +1 A
+if it applies
+≈0
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Murderlust
+“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
 Daemon Lord of Khorne (Bloodthirster)
-Within 6" of the Bloodthirster: +1 to hit
+Aura · Within 6" of it: +1 to Hit rolls
 if it applies
 no change: already hits on 2+
 0
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 ≈0
 MODELS
-NOT COUNTED BY THE CALCULATOR (6)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Daemonic Fury AI
-Select one friendly WORLD EATERS unit within 6" of your unit: until the end of the turn its melee weapons have [LANCE] (and [TWIN-LINKED] until the end of the phase if Daemonic Rage is active).
-1CP A Worthy Skull AI
-Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities.
-1CP Blessing of Burning Blood AI
-A WORLD EATERS unit within 6" of your unit is selected as a target: until the end of the phase, models in that WORLD EATERS unit have a 5+ invulnerable save (4+ if Boon of Blood is active).
-1CP Murder-call AI
-Your unit on the battlefield and not within Engagement Range of one or more enemy units: remove it from the battlefield and place it into Strategic Reserves.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Daemonic Fury
+“WHEN: Start of your Fight phase. TARGET: One BLOOD LEGIONS unit from your army. EFFECT: Select one friendly WORLD EATERS unit within 6" of your unit. Until the end of the turn, melee weapons equipped by models in your WORLD EATERS unit have the [LANCE] ability. …” · not counted in the Damage tab
+1CP A Worthy Skull
+“WHEN: Fight phase, just after a BLOOD LEGIONS or WORLD EATERS unit from your army has fought, and one or more enemy CHARACTER or MONSTER models were destroyed as a result of those attacks. TARGET: That BLOOD LEGIONS or WORLD EATERS unit. …” · not counted in the Damage tab
+1CP Blessing of Burning Blood
+“WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One BLOOD LEGIONS unit from your army that is within 6" of a friendly WORLD EATERS unit that was selected as the target as one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Murder-call
+“WHEN: End of your opponent’s Fight phase. TARGET: One BLOOD LEGIONS unit from your army that is on the battlefield and not within Engagement Range of one or more enemy units. EFFECT: Remove your unit from the battlefield and place it into Strategic Reserves.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

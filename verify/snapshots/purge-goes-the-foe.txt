@@ -1233,6 +1233,7 @@ Add a group
 of 5 destroyed
 3.7 wounds lost · wiped in <1% of games
 Nothing ticked: the datasheets as printed
+10 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1265,14 +1266,9 @@ NOW
 Within 9"
 bonus for Solar atomiser
 +0.3
-SITUATION AND RULES
-Canticles of the Omnissiah
-If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
-if it applies
-+0.3
-MODELS
+SITUATION
 BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
-ticks Doctrina Imperatives (+1 AP, with Conqueror or Both)
+ticks Doctrina Imperatives (+1 AP with Conqueror Imperative)
 if it holds
 no change: nothing it reaches counts in this step
 0
@@ -1281,17 +1277,6 @@ Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
 no change: already hits on 2+
-0
-Doctrina Imperatives
-The Imperative active for your army this battle round: Protector: [HEAVY], BS improved by 1 · Conqueror: [ASSAULT] · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · +1 AP
-if it applies
-0
-Protector
-0
-Conqueror
-0
-Both
-counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
 0
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
@@ -1313,46 +1298,58 @@ the target within 24" (15.09): hits only on an unmodified 6, never critical; no 
 if it applies
 −1.4
 MODELS
+ARMY RULES
+Doctrina Imperatives
++1 AP with Conqueror Imperative (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit)
+if it applies
+0
+Protector Imperative
+[HEAVY], BS/WS improved by 1
+0
+Conqueror Imperative
+[ASSAULT]; +1 AP BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
+0
+UNIT RULES
+Canticles of the Omnissiah
+Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls
+if it applies
++0.3
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (3)
+Mechanicus Bodyguard
+“While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS units, this model has the Lone Operative ability.” · not counted in the Damage tab
+Self-repair Mechanisms
+“At the start of your Command phase, this model regains up to D3 lost wounds.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your Warlord.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +0.5
 MODELS
-NOT FOR THIS STEP, BY THE RULES (3) · YOURS TO COUNT ANYWAY
-
-1CP Servo-driven Charge
-Fight phase only
-NO CHANGE
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (7)
+1CP Unrelenting Aggression
+“WHEN: Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1472,7 +1469,7 @@ of 5 destroyed
 5.4 wounds lost · wiped in 4% of games
 Charged this turn
 ×
-2 NOT COUNTED
+10 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1531,15 +1528,9 @@ EXTRA ATTACKS
 −2% wiped
 −0.2
 MODELS IF UNTICKED
-SITUATION AND RULES
-Canticles of the Omnissiah
-If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
-if it applies
-+7% wiped
-+0.5
-MODELS
+SITUATION
 BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
-ticks Doctrina Imperatives (+1 AP, with Conqueror or Both)
+ticks Doctrina Imperatives (+1 AP with Conqueror Imperative)
 if it holds
 no change: nothing it reaches counts in this step
 0
@@ -1548,66 +1539,67 @@ Charged this turn
 said to hold
 no change: no rule here needs it
 0
+ARMY RULES
 Doctrina Imperatives
-The Imperative active for your army this battle round: Conqueror: WS improved by 1 · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · Protector: nothing for its melee attacks · +1 AP
++1 AP with Conqueror Imperative (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit) only while it holds (above)
 if it applies
-no change: Protector: nothing for these attacks
-0
-ALL ▾
-Protector
-0
-Conqueror
 +0.1
-Both
-counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
+MODELS
+Conqueror Imperative
+BS/WS improved by 1; +1 AP BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
 +0.1
+UNIT RULES
+Canticles of the Omnissiah
+Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls
+if it applies
++7% wiped
++0.5
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (3)
+Mechanicus Bodyguard
+“While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS units, this model has the Lone Operative ability.” · not counted in the Damage tab
+Self-repair Mechanisms
+“At the start of your Command phase, this model regains up to D3 lost wounds.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your Warlord.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 BEST · MOST MODELS+9% wiped
 +0.6
 MODELS
 1CP Servo-driven Charge
-Fight phase: [LANCE]
+[LANCE]
 if used
 +3% wiped
 +0.2
 MODELS
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (7)
+1CP Unrelenting Aggression
+“WHEN: Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1730,7 +1722,7 @@ Shoot 1.8 · Fight 2.3 · the charge is taken to succeed
 
 Charged this turn
 ×
-2 NOT COUNTED
+20 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1769,15 +1761,9 @@ Within 9"
 bonus for Solar atomiser
 +7% wiped
 +0.2
-SITUATION AND RULES
-Canticles of the Omnissiah
-If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
-if it applies
-+23% wiped
-+0.5
-MODELS
+SITUATION
 BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
-ticks Doctrina Imperatives (+1 AP, with Conqueror or Both)
+ticks Doctrina Imperatives (+1 AP with Conqueror Imperative)
 if it holds
 no change: nothing it reaches counts in this step
 0
@@ -1787,17 +1773,6 @@ BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 
 if it applies
 no change: already hits on 2+
 0
-Doctrina Imperatives
-The Imperative active for your army this battle round: Protector: [HEAVY], BS improved by 1 · Conqueror: [ASSAULT] · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · +1 AP
-if it applies
-0
-Protector
-0
-Conqueror
-+2% wiped
-Both
-counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
-+2% wiped
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
@@ -1816,47 +1791,63 @@ if it applies
 −10% wiped
 −0.3
 MODELS
+ARMY RULES
+Doctrina Imperatives
++1 AP with Conqueror Imperative (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit)
+if it applies
++2% wiped
+≈0
+MODELS
++1 MORE ▾
+Protector Imperative
+[HEAVY], BS/WS improved by 1
++2% wiped
+Conqueror Imperative
+[ASSAULT]; +1 AP BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
++2% wiped
+UNIT RULES
+Canticles of the Omnissiah
+Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls
+if it applies
++23% wiped
++0.5
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (3)
+Mechanicus Bodyguard
+“While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS units, this model has the Lone Operative ability.” · not counted in the Damage tab
+Self-repair Mechanisms
+“At the start of your Command phase, this model regains up to D3 lost wounds.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your Warlord.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +16% wiped
 +0.3
 MODELS
-NOT FOR THIS STEP, BY THE RULES (3) · YOURS TO COUNT ANYWAY
-
-1CP Servo-driven Charge
-Fight phase only
-NO CHANGE
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (7)
+1CP Unrelenting Aggression
+“WHEN: Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1912,77 +1903,74 @@ EXTRA ATTACKS
 −5% wiped
 −0.1
 MODELS IF UNTICKED
-SITUATION AND RULES
-Canticles of the Omnissiah
-If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
-if it applies
-+15% wiped
-+0.3
-MODELS
+SITUATION
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
+ARMY RULES
 Doctrina Imperatives
-The Imperative active for your army this battle round: Conqueror: WS improved by 1 · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · Protector: nothing for its melee attacks · +1 AP
++1 AP with Conqueror Imperative (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit) only while it holds (above)
 if it applies
-no change: Protector: nothing for these attacks
-0
-ALL ▾
-Protector
-0
-Conqueror
 +2% wiped
-Both
-counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
+≈0
+MODELS
++1 MORE ▾
+Conqueror Imperative
+BS/WS improved by 1; +1 AP BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
 +2% wiped
+UNIT RULES
+Canticles of the Omnissiah
+Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls
+if it applies
++15% wiped
++0.3
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (3)
+Mechanicus Bodyguard
+“While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS units, this model has the Lone Operative ability.” · not counted in the Damage tab
+Self-repair Mechanisms
+“At the start of your Command phase, this model regains up to D3 lost wounds.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your Warlord.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 BEST · MOST MODELS+16% wiped
 +0.3
 MODELS
 1CP Servo-driven Charge
-Fight phase: [LANCE]
+[LANCE]
 if used
 +6% wiped
 +0.1
 MODELS
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (7)
+1CP Unrelenting Aggression
+“WHEN: Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

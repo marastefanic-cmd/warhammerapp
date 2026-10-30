@@ -80,8 +80,8 @@ function items(D, appSource){
         if(ab.na) add(a.id, 'ability-na', w + ' · ' + ab.name, { na:ab.na, armyUnits:a.units.map(x => x.name + ' [' + x.kw.join(', ') + ']') }, src);
         if(ab.damaged) add(a.id, 'ability-damaged', w + ' · ' + ab.name, { damaged:ab.damaged, W:u.stats[0].W }, src);
         // the Damage tab's reading of it: always protects the unit (defAlways), its numbers (defCalc), always riled up (riled)
-        // (calcDef: a "when targeted" line the Damage tab alone shows, lasts: how long it carries; embarked: a model not on the battlefield yet)
-        if(ab.defAlways || ab.defCalc || ab.riled || ab.calcDef || ab.embarked) add(a.id, 'ability-calc', w + ' · ' + ab.name, { def:ab.def, calcDef:ab.calcDef, defAlways:ab.defAlways, defCalc:ab.defCalc, lasts:ab.lasts, riled:ab.riled, embarked:ab.embarked, models:u.models }, src);
+        // (calcDef: a "when targeted" line the Damage tab alone shows, lasts: how long it carries)
+        if(ab.defAlways || ab.defCalc || ab.riled || ab.calcDef) add(a.id, 'ability-calc', w + ' · ' + ab.name, { def:ab.def, calcDef:ab.calcDef, defAlways:ab.defAlways, defCalc:ab.defCalc, lasts:ab.lasts, riled:ab.riled, models:u.models }, src);
         // and what it plays in the turn (fightOnDeath: One Last Kill; comeback: Berserker Frenzy), what is approximate about it (calcNote)
         if(ab.fightOnDeath || ab.comeback || ab.calcNote) add(a.id, 'ability-turn', w + ' · ' + ab.name, { fightOnDeath:ab.fightOnDeath, comeback:ab.comeback, calcNote:ab.calcNote, who:ab.who, models:u.models }, src);
       }

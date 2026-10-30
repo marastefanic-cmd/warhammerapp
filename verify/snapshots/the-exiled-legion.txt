@@ -1251,6 +1251,7 @@ Add a group
 of 5 destroyed
 2.9 wounds lost · wiped in <1% of games
 Nothing ticked: the datasheets as printed
+17 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1275,7 +1276,7 @@ D
 IGNORES COVER, TORRENT
 −1.2
 MODELS IF UNTICKED
-SITUATION AND RULES
+SITUATION
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
@@ -1300,42 +1301,65 @@ if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
+The Shadow of Chaos
+“If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: - Your deployment zone is always within your army’s Shadow of Chaos. …” · not counted in the Damage tab
+Murdercall
+“In your opponent's movement phase, each time an enemy unit (excluding AIRCRAFT) ends a move within 8" of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a surge move of up to D6".” · not counted in the Damage tab
+Blood Tainted
+“At the end of a phase in which a LEGIONES DAEMONICA KHORNE unit from your army destroyed an enemy unit that was within range of an objective marker at the start of the phase, if your unit has a higher Level of Control over that objective marker, that objective marker remains under your control until your opponent’s Lev …” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+Murderlust
+“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+Greater Daemon of Khorne
+“While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (1)
+Prince of Darkness
+“While a friendly LEGIONES DAEMONICA unit is within 6" of this model, models in that unit have the Stealth ability.” · not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +0.2
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (11)
+1CP Wrath Undeniable
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Gore‑hungry Onslaught
+“WHEN: Your Movement phase or your Charge phase. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army. EFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.” · not counted in the Damage tab
+1CP Blood Begets Skulls
+“WHEN: Your Charge phase. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that has not been selected to charge this phase. EFFECT: Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+2CP Fools’ Flight
+“WHEN: Your opponent’s Movement phase, when an enemy unit ends a fall-back move. TARGET: One friendly unengaged LEGIONES DAEMONICA KHORNE unit that is within 6" of that enemy unit. EFFECT: Declare a charge with your unit. …” · not counted in the Damage tab
+1CP Sheathed in Brass
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have a Save characteristic of 3+.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1452,12 +1476,11 @@ Benefit of cover
 Add a group
 4.9
 of 5 destroyed
-9.9 wounds lost · wiped in 95% of games
+9.8 wounds lost · wiped in 93% of games
 Slaughter and Carnage: sweep
 Charged this turn
 ×
-Rage Embodied
-2 NOT COUNTED
+17 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1479,12 +1502,12 @@ AP
 -2
 D
 2
-−95% wiped
+−93% wiped
 −4.9
 MODELS IF UNTICKED
 PICK ONE PROFILE
 strike
-4.9
+4.7
 A
 8
 WS
@@ -1508,68 +1531,93 @@ AP
 -2
 D
 2
-SITUATION AND RULES
-Damaged (1-7 wounds left)
+SITUATION
+Damaged: 1-7 wounds remaining
 +2 A
 if it applies
-+2% wiped
-≈0
++4% wiped
++0.1
 MODELS
-+1 MORE ▾
-Rage Embodied
-Own aura: +1 A
-always counted · you can leave it out
-if left out: ≈0 models · −3% wiped
 Charged this turn
 said to hold
 no change: no rule here needs it
 0
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
+The Shadow of Chaos
+“If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: - Your deployment zone is always within your army’s Shadow of Chaos. …” · not counted in the Damage tab
+Murdercall
+“In your opponent's movement phase, each time an enemy unit (excluding AIRCRAFT) ends a move within 8" of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a surge move of up to D6".” · not counted in the Damage tab
+Blood Tainted
+“At the end of a phase in which a LEGIONES DAEMONICA KHORNE unit from your army destroyed an enemy unit that was within range of an objective marker at the start of the phase, if your unit has a higher Level of Control over that objective marker, that objective marker remains under your control until your opponent’s Lev …” · not counted in the Damage tab
+UNIT RULES
+Rage Embodied
+Within 6" of it: +1 A
+if it applies
++3% wiped
+≈0
+MODELS
++1 MORE ▾
+NOT COUNTED IN THE DAMAGE TAB (2)
+Murderlust
+“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+Greater Daemon of Khorne
+“While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Blood Throne (Rendmaster on Blood Throne (×2))
+Selected by it · The target is the enemy unit selected: +1 S, +1 AP, +1 D
+if it applies
++7% wiped
++0.1
+MODELS
 Daemon Lord of Khorne (Bloodthirster)
-Within 6" of the Bloodthirster: +1 to hit
+Aura · Within 6" of it: +1 to Hit rolls
 if it applies
 no change: already hits on 2+
 0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Prince of Darkness
+“While a friendly LEGIONES DAEMONICA unit is within 6" of this model, models in that unit have the Stealth ability.” · not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-+1% wiped
++2% wiped
 ≈0
 MODELS
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
++1 MORE ▾
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (11)
+1CP Wrath Undeniable
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Gore‑hungry Onslaught
+“WHEN: Your Movement phase or your Charge phase. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army. EFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.” · not counted in the Damage tab
+1CP Blood Begets Skulls
+“WHEN: Your Charge phase. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that has not been selected to charge this phase. EFFECT: Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+2CP Fools’ Flight
+“WHEN: Your opponent’s Movement phase, when an enemy unit ends a fall-back move. TARGET: One friendly unengaged LEGIONES DAEMONICA KHORNE unit that is within 6" of that enemy unit. EFFECT: Declare a charge with your unit. …” · not counted in the Damage tab
+1CP Sheathed in Brass
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have a Save characteristic of 3+.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1686,15 +1734,14 @@ Benefit of cover
 Add a group
 5.0
 of 5 destroyed
-10 wounds lost · wiped in 98% of games
+9.9 wounds lost · wiped in 98% of games
 
-Shoot 1.19 · Fight 3.79 · the charge is taken to succeed
+Shoot 1.19 · Fight 3.78 · the charge is taken to succeed
 
 Slaughter and Carnage: sweep
 Charged this turn
 ×
-Rage Embodied
-2 NOT COUNTED
+34 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1721,11 +1768,10 @@ AP
 D
 1
 IGNORES COVER, TORRENT
-−3% wiped
-≈0
+−4% wiped
+−0.1
 MODELS IF UNTICKED
-+1 MORE ▾
-SITUATION AND RULES
+SITUATION
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
@@ -1744,41 +1790,64 @@ if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
+The Shadow of Chaos
+“If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: - Your deployment zone is always within your army’s Shadow of Chaos. …” · not counted in the Damage tab
+Murdercall
+“In your opponent's movement phase, each time an enemy unit (excluding AIRCRAFT) ends a move within 8" of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a surge move of up to D6".” · not counted in the Damage tab
+Blood Tainted
+“At the end of a phase in which a LEGIONES DAEMONICA KHORNE unit from your army destroyed an enemy unit that was within range of an objective marker at the start of the phase, if your unit has a higher Level of Control over that objective marker, that objective marker remains under your control until your opponent’s Lev …” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+Murderlust
+“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+Greater Daemon of Khorne
+“While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (1)
+Prince of Darkness
+“While a friendly LEGIONES DAEMONICA unit is within 6" of this model, models in that unit have the Stealth ability.” · not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (11)
+1CP Wrath Undeniable
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Gore‑hungry Onslaught
+“WHEN: Your Movement phase or your Charge phase. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army. EFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.” · not counted in the Damage tab
+1CP Blood Begets Skulls
+“WHEN: Your Charge phase. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that has not been selected to charge this phase. EFFECT: Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+2CP Fools’ Flight
+“WHEN: Your opponent’s Movement phase, when an enemy unit ends a fall-back move. TARGET: One friendly unengaged LEGIONES DAEMONICA KHORNE unit that is within 6" of that enemy unit. EFFECT: Declare a charge with your unit. …” · not counted in the Damage tab
+1CP Sheathed in Brass
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have a Save characteristic of 3+.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1797,12 +1866,12 @@ AP
 -2
 D
 2
-−98% wiped
+−97% wiped
 −3.8
 MODELS IF UNTICKED
 PICK ONE PROFILE
 strike
-5.0
+4.9
 A
 8
 WS
@@ -1815,6 +1884,7 @@ D
 6
 sweep
 5.0
+BEST
 A
 16
 WS
@@ -1825,66 +1895,90 @@ AP
 -2
 D
 2
-SITUATION AND RULES
-Damaged (1-7 wounds left)
+SITUATION
+Damaged: 1-7 wounds remaining
 +2 A
 if it applies
 +1% wiped
 ≈0
 MODELS
-Rage Embodied
-Own aura: +1 A
-always counted · you can leave it out
-if left out: ≈0 models
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
+ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
+The Shadow of Chaos
+“If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: - Your deployment zone is always within your army’s Shadow of Chaos. …” · not counted in the Damage tab
+Murdercall
+“In your opponent's movement phase, each time an enemy unit (excluding AIRCRAFT) ends a move within 8" of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a surge move of up to D6".” · not counted in the Damage tab
+Blood Tainted
+“At the end of a phase in which a LEGIONES DAEMONICA KHORNE unit from your army destroyed an enemy unit that was within range of an objective marker at the start of the phase, if your unit has a higher Level of Control over that objective marker, that objective marker remains under your control until your opponent’s Lev …” · not counted in the Damage tab
+UNIT RULES
+Rage Embodied
+Within 6" of it: +1 A
+if it applies
+≈0
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (2)
+Murderlust
+“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+Greater Daemon of Khorne
+“While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Blood Throne (Rendmaster on Blood Throne (×2))
+Selected by it · The target is the enemy unit selected: +1 S, +1 AP, +1 D
+if it applies
++2% wiped
+≈0
+MODELS
++1 MORE ▾
 Daemon Lord of Khorne (Bloodthirster)
-Within 6" of the Bloodthirster: +1 to hit
+Aura · Within 6" of it: +1 to Hit rolls
 if it applies
 no change: already hits on 2+
 0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Prince of Darkness
+“While a friendly LEGIONES DAEMONICA unit is within 6" of this model, models in that unit have the Stealth ability.” · not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 ≈0
 MODELS
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (11)
+1CP Wrath Undeniable
+“WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Gore‑hungry Onslaught
+“WHEN: Your Movement phase or your Charge phase. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army. EFFECT: Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.” · not counted in the Damage tab
+1CP Blood Begets Skulls
+“WHEN: Your Charge phase. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that has not been selected to charge this phase. EFFECT: Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+2CP Fools’ Flight
+“WHEN: Your opponent’s Movement phase, when an enemy unit ends a fall-back move. TARGET: One friendly unengaged LEGIONES DAEMONICA KHORNE unit that is within 6" of that enemy unit. EFFECT: Declare a charge with your unit. …” · not counted in the Damage tab
+1CP Sheathed in Brass
+“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have a Save characteristic of 3+.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

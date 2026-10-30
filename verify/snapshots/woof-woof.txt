@@ -942,11 +942,11 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-2.6
+2.2
 of 5 destroyed
-5.6 wounds lost · wiped in 3% of games
-Final Howl (Aura)
-2 NOT COUNTED
+4.8 wounds lost · wiped in 1% of games
+Nothing ticked: the datasheets as printed
+16 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -968,8 +968,8 @@ AP
 -1
 D
 1
-−3% wiped
-−1.4
+−1% wiped
+−1.2
 MODELS IF UNTICKED
 Daemonbreath spear
 RNG
@@ -985,8 +985,8 @@ AP
 D
 D6
 MELTA 4
-−3% wiped
-−1
+−1% wiped
+−0.9
 MODELS IF UNTICKED
 Diabolus heavy stubber
 RNG
@@ -1002,7 +1002,6 @@ AP
 D
 1
 RAPID FIRE 3
-−1% wiped
 −0.1
 MODELS IF UNTICKED
 HALF RANGE
@@ -1012,122 +1011,130 @@ the target is farther than 18" (every weapon is taken to be in range)
 NOW
 Within 18", not 9"
 bonus for Diabolus heavy stubber
-+3% wiped
++1% wiped
 +0.2
 Within 9"
 bonus for Daemonbreath spear and Diabolus heavy stubber
-+4% wiped
++2% wiped
 +0.3
-SITUATION AND RULES
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
-+9% wiped
-+0.7
++4% wiped
++0.6
 MODELS
-Marked Prey
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1]
-if it applies
-+15% wiped
-+0.7
-MODELS
-Doom
-Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
-if it applies
-+5% wiped
-+0.4
-MODELS
-Final Howl (Aura)
-Own aura: re-roll wound rolls of 1
-always counted · you can leave it out
-if left out: −0.4 models · −2% wiped
 The target within range of an objective marker
+ticks Brigand
 if it holds
 no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
 ALL ▾
-RULES IT SWITCHES ON
-Brigand
-0
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
-−3% wiped
-−0.7
+−1% wiped
+−0.6
 MODELS
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
-−3% wiped
-−0.7
+−1% wiped
+−0.6
 MODELS
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-−3% wiped
-−0.7
+−1% wiped
+−0.6
 MODELS
-Damaged (1-5 wounds left)
--1 to hit rolls (and -3 OC)
+Damaged: 1-5 wounds remaining
+−1 to Hit rolls
 if it applies
-−3% wiped
-−0.7
+−1% wiped
+−0.6
 MODELS
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
 if it applies
-−3% wiped
-−2.1
+−1% wiped
+−1.8
 MODELS
+ARMY RULES
+Marked Prey
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1]
+if it applies
++8% wiped
++0.6
+MODELS
+Harbingers of Dread
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls
+if it applies
++2% wiped
++0.4
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Scenting Fear
+“(Once per battle round, per army) In your Shooting phase, you can select one visible enemy unit within 12" of a friendly WAR DOG unit. That enemy unit has +6" detection range. This detachment has the WAR DOGS tag and cannot be taken with another WAR DOGS detachment.” · not counted in the Damage tab
+UNIT RULES
+Final Howl (Aura)
+Within 6" of it: Re-roll Wound rolls of 1
+if it applies
++2% wiped
++0.4
+MODELS
+Brigand
+The target within range of an objective marker: [IGNORES COVER]
+if it applies
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
+0
+ALL ▾
+NOT COUNTED IN THE DAMAGE TAB (1)
+*Invulnerable Save
+“This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-+6% wiped
++3% wiped
 +0.5
 MODELS
-NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
-
-1CP Hungry for Combat
-Fight phase only
-NO CHANGE
-
-Nothing to count: 1CP Animalistic Rage (in the other player’s turn only) · 1CP Encircling Pack, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-2CP Vox-howl AI
-Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
-1CP Leash of the Masters AI
-Your unit has shot: those attacks do not prevent it from being eligible to start an action.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (14)
+2CP Vox-howl
+“WHEN: Start of the Shooting phase or the start of the Fight phase. TARGET: One ~~WAR DOG CHARACTER~~ unit from your army. EFFECT: Each enemy unit within 6" of your unit must take a Battle-shock test. …” · not counted in the Damage tab
+1CP Cunning Hunter
+“WHEN: Your Movement phase, just after a WAR DOG unit from your army Falls Back. TARGET: That WAR DOG unit. EFFECT: Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.” · not counted in the Damage tab
+1CP Animalistic Rage
+“WHEN: Your opponent’s Shooting phase or the Fight phase, just after a WAR DOG unit from your army that has not been selected to attack this phase is destroyed. TARGET: That WAR DOG unit. You can use this Stratagem on that unit even though it was just destroyed. …” · not counted in the Damage tab
+1CP Harrying Hounds
+“WHEN: Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. TARGET: One WAR DOG unit from your army that is within 8" of that enemy unit. EFFECT: Your unit can make a Normal move of up to 6".” · not counted in the Damage tab
+1CP Encircling Pack
+“WHEN: End of your opponent’s Fight phase. TARGET: One WAR DOG unit from your army that is wholly within 12" of one or more battlefield edges and not within Engagement Range of one or more enemy units. EFFECT: Remove your unit from the battlefield and place it into Strategic Reserves.” · not counted in the Damage tab
+1CP Insensate Bloodthirst
+“WHEN: Fight phase, when an enemy unit targets a friendly WAR DOG unit. TARGET: That WAR DOG unit. EFFECT: Your unit has Feel No Pain 5+.” · not counted in the Damage tab
+1CP Leash of the Masters
+“WHEN: Your Shooting phase, when a friendly WAR DOG unit has shot. TARGET: That WAR DOG unit. EFFECT: Those attacks do not prevent your unit from being eligible to start an action.” · not counted in the Damage tab
+1CP Stalking Focus
+“WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly WAR DOG unit within range of an objective. TARGET: That WAR DOG unit. EFFECT: Ranged attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1244,11 +1251,10 @@ Benefit of cover
 Add a group
 0.1
 of 5 destroyed
-0.7 wounds lost · wiped in <1% of games
+0.6 wounds lost · wiped in <1% of games
 Charged this turn
 ×
-Final Howl (Aura)
-5 NOT COUNTED
+16 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1272,85 +1278,91 @@ D
 1
 −0.1
 MODELS IF UNTICKED
-SITUATION AND RULES
-Marked Prey
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1]
-if it applies
-+0.1
-MODELS
-Doom
-Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
-if it applies
-+0.1
-MODELS
-Final Howl (Aura)
-Own aura: re-roll wound rolls of 1
-always counted · you can leave it out
-if left out: ≈0 models · −0.1 wounds
+SITUATION
 Charged this turn
 said to hold
 no change: no rule here needs it
 0
-Damaged (1-5 wounds left)
--1 to hit rolls (and -3 OC)
+Damaged: 1-5 wounds remaining
+−1 to Hit rolls
 if it applies
 −0.1
 MODELS
+ARMY RULES
+Marked Prey
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1]
+if it applies
++0.1
+MODELS
+Harbingers of Dread
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls
+if it applies
++0.1 wounds
+≈0
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Scenting Fear
+“(Once per battle round, per army) In your Shooting phase, you can select one visible enemy unit within 12" of a friendly WAR DOG unit. That enemy unit has +6" detection range. This detachment has the WAR DOGS tag and cannot be taken with another WAR DOGS detachment.” · not counted in the Damage tab
+UNIT RULES
+Final Howl (Aura)
+Within 6" of it: Re-roll Wound rolls of 1
+if it applies
++0.1 wounds
+≈0
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+*Invulnerable Save
+“This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-BEST · MOST MODELS
-+0.1
++0.1 wounds
+≈0
 MODELS
 1CP Hungry for Combat
-Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it): a Critical Hit on an unmodified hit roll of 5+
+The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”: Critical Hit on 5+
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1)
-
-Nothing to count: 1CP Leash of the Masters (Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (5)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-2CP Vox-howl AI
-Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
-1CP Animalistic Rage AI
-Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.
-1CP Encircling Pack AI
-Your unit wholly within 12" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (14)
+2CP Vox-howl
+“WHEN: Start of the Shooting phase or the start of the Fight phase. TARGET: One ~~WAR DOG CHARACTER~~ unit from your army. EFFECT: Each enemy unit within 6" of your unit must take a Battle-shock test. …” · not counted in the Damage tab
+1CP Cunning Hunter
+“WHEN: Your Movement phase, just after a WAR DOG unit from your army Falls Back. TARGET: That WAR DOG unit. EFFECT: Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.” · not counted in the Damage tab
+1CP Animalistic Rage
+“WHEN: Your opponent’s Shooting phase or the Fight phase, just after a WAR DOG unit from your army that has not been selected to attack this phase is destroyed. TARGET: That WAR DOG unit. You can use this Stratagem on that unit even though it was just destroyed. …” · not counted in the Damage tab
+1CP Harrying Hounds
+“WHEN: Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. TARGET: One WAR DOG unit from your army that is within 8" of that enemy unit. EFFECT: Your unit can make a Normal move of up to 6".” · not counted in the Damage tab
+1CP Encircling Pack
+“WHEN: End of your opponent’s Fight phase. TARGET: One WAR DOG unit from your army that is wholly within 12" of one or more battlefield edges and not within Engagement Range of one or more enemy units. EFFECT: Remove your unit from the battlefield and place it into Strategic Reserves.” · not counted in the Damage tab
+1CP Insensate Bloodthirst
+“WHEN: Fight phase, when an enemy unit targets a friendly WAR DOG unit. TARGET: That WAR DOG unit. EFFECT: Your unit has Feel No Pain 5+.” · not counted in the Damage tab
+1CP Leash of the Masters
+“WHEN: Your Shooting phase, when a friendly WAR DOG unit has shot. TARGET: That WAR DOG unit. EFFECT: Those attacks do not prevent your unit from being eligible to start an action.” · not counted in the Damage tab
+1CP Stalking Focus
+“WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly WAR DOG unit within range of an objective. TARGET: That WAR DOG unit. EFFECT: Ranged attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1465,17 +1477,15 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-2.9
+2.5
 of 5 destroyed
-6.3 wounds lost · wiped in 8% of games
+5.4 wounds lost · wiped in 3% of games
 
-Shoot 2.6 · Fight 0.3 · the charge is taken to succeed
+Shoot 2.2 · Fight 0.3 · the charge is taken to succeed
 
-Final Howl (Aura)
 Charged this turn
 ×
-Final Howl (Aura) (fight)
-7 NOT COUNTED
+32 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1501,8 +1511,8 @@ AP
 -1
 D
 1
-−8% wiped
-−1.4
+−3% wiped
+−1.2
 MODELS IF UNTICKED
 Daemonbreath spear
 RNG
@@ -1518,8 +1528,8 @@ AP
 D
 D6
 MELTA 4
-−7% wiped
-−1
+−3% wiped
+−0.9
 MODELS IF UNTICKED
 Diabolus heavy stubber
 RNG
@@ -1535,7 +1545,7 @@ AP
 D
 1
 RAPID FIRE 3
-−4% wiped
+−2% wiped
 −0.2
 MODELS IF UNTICKED
 HALF RANGE
@@ -1545,116 +1555,124 @@ the target is farther than 18" (every weapon is taken to be in range)
 NOW
 Within 18", not 9"
 bonus for Diabolus heavy stubber
-+4% wiped
++2% wiped
 +0.2
 Within 9"
 bonus for Daemonbreath spear and Diabolus heavy stubber
-+6% wiped
++3% wiped
 +0.3
-SITUATION AND RULES
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
-+13% wiped
-+0.7
++7% wiped
++0.6
 MODELS
-Marked Prey
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1]
-if it applies
-+20% wiped
-+0.7
-MODELS
-Doom
-Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
-if it applies
-+10% wiped
-+0.5
-MODELS
-Final Howl (Aura)
-Own aura: re-roll wound rolls of 1
-always counted · you can leave it out
-if left out: −0.4 models · −4% wiped
 The target within range of an objective marker
+ticks Brigand
 if it holds
 no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
 ALL ▾
-RULES IT SWITCHES ON
-Brigand
-0
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
-−6% wiped
-−0.7
+−2% wiped
+−0.6
 MODELS
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
-−6% wiped
-−0.7
+−2% wiped
+−0.6
 MODELS
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-−6% wiped
-−0.7
+−2% wiped
+−0.6
 MODELS
-Damaged (1-5 wounds left)
--1 to hit rolls (and -3 OC)
+Damaged: 1-5 wounds remaining
+−1 to Hit rolls
 if it applies
-−6% wiped
-−0.7
+−2% wiped
+−0.6
 MODELS
+ARMY RULES
+Marked Prey
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1]
+if it applies
++12% wiped
++0.6
+MODELS
+Harbingers of Dread
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls
+if it applies
++4% wiped
++0.4
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Scenting Fear
+“(Once per battle round, per army) In your Shooting phase, you can select one visible enemy unit within 12" of a friendly WAR DOG unit. That enemy unit has +6" detection range. This detachment has the WAR DOGS tag and cannot be taken with another WAR DOGS detachment.” · not counted in the Damage tab
+UNIT RULES
+Final Howl (Aura)
+Within 6" of it: Re-roll Wound rolls of 1
+if it applies
++4% wiped
++0.4
+MODELS
+Brigand
+The target within range of an objective marker: [IGNORES COVER]
+if it applies
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
+0
+ALL ▾
+NOT COUNTED IN THE DAMAGE TAB (1)
+*Invulnerable Save
+“This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-+11% wiped
++6% wiped
 +0.6
 MODELS
-NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
-
-1CP Hungry for Combat
-Fight phase only
-NO CHANGE
-
-Nothing to count: 1CP Animalistic Rage (in the other player’s turn only) · 1CP Encircling Pack, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-2CP Vox-howl AI
-Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
-1CP Leash of the Masters AI
-Your unit has shot: those attacks do not prevent it from being eligible to start an action.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (14)
+2CP Vox-howl
+“WHEN: Start of the Shooting phase or the start of the Fight phase. TARGET: One ~~WAR DOG CHARACTER~~ unit from your army. EFFECT: Each enemy unit within 6" of your unit must take a Battle-shock test. …” · not counted in the Damage tab
+1CP Cunning Hunter
+“WHEN: Your Movement phase, just after a WAR DOG unit from your army Falls Back. TARGET: That WAR DOG unit. EFFECT: Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.” · not counted in the Damage tab
+1CP Animalistic Rage
+“WHEN: Your opponent’s Shooting phase or the Fight phase, just after a WAR DOG unit from your army that has not been selected to attack this phase is destroyed. TARGET: That WAR DOG unit. You can use this Stratagem on that unit even though it was just destroyed. …” · not counted in the Damage tab
+1CP Harrying Hounds
+“WHEN: Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. TARGET: One WAR DOG unit from your army that is within 8" of that enemy unit. EFFECT: Your unit can make a Normal move of up to 6".” · not counted in the Damage tab
+1CP Encircling Pack
+“WHEN: End of your opponent’s Fight phase. TARGET: One WAR DOG unit from your army that is wholly within 12" of one or more battlefield edges and not within Engagement Range of one or more enemy units. EFFECT: Remove your unit from the battlefield and place it into Strategic Reserves.” · not counted in the Damage tab
+1CP Insensate Bloodthirst
+“WHEN: Fight phase, when an enemy unit targets a friendly WAR DOG unit. TARGET: That WAR DOG unit. EFFECT: Your unit has Feel No Pain 5+.” · not counted in the Damage tab
+1CP Leash of the Masters
+“WHEN: Your Shooting phase, when a friendly WAR DOG unit has shot. TARGET: That WAR DOG unit. EFFECT: Those attacks do not prevent your unit from being eligible to start an action.” · not counted in the Damage tab
+1CP Stalking Focus
+“WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly WAR DOG unit within range of an objective. TARGET: That WAR DOG unit. EFFECT: Ranged attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1673,91 +1691,92 @@ AP
 0
 D
 1
-−4% wiped
+−2% wiped
 −0.3
 MODELS IF UNTICKED
-SITUATION AND RULES
-Doom
-Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
-if it applies
-+1% wiped
-+0.1
-MODELS
-Marked Prey
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1]
-if it applies
-+2% wiped
-+0.1
-MODELS
-Final Howl (Aura)
-Own aura: re-roll wound rolls of 1
-always counted · you can leave it out
-if left out: −0.1 models
+SITUATION
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
-Damaged (1-5 wounds left)
--1 to hit rolls (and -3 OC)
+Damaged: 1-5 wounds remaining
+−1 to Hit rolls
 if it applies
-−1% wiped
 −0.1
 MODELS
+ARMY RULES
+Marked Prey
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1]
+if it applies
++0.1
+MODELS
+Harbingers of Dread
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls
+if it applies
++0.1
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Scenting Fear
+“(Once per battle round, per army) In your Shooting phase, you can select one visible enemy unit within 12" of a friendly WAR DOG unit. That enemy unit has +6" detection range. This detachment has the WAR DOGS tag and cannot be taken with another WAR DOGS detachment.” · not counted in the Damage tab
+UNIT RULES
+Final Howl (Aura)
+Within 6" of it: Re-roll Wound rolls of 1
+if it applies
++0.1
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+*Invulnerable Save
+“This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-BEST · MOST MODELS+1% wiped
+BEST · MOST MODELS
 +0.1
 MODELS
 1CP Hungry for Combat
-Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it): a Critical Hit on an unmodified hit roll of 5+
+The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”: Critical Hit on 5+
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1)
-
-Nothing to count: 1CP Leash of the Masters (Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (5)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-2CP Vox-howl AI
-Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
-1CP Animalistic Rage AI
-Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.
-1CP Encircling Pack AI
-Your unit wholly within 12" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (14)
+2CP Vox-howl
+“WHEN: Start of the Shooting phase or the start of the Fight phase. TARGET: One ~~WAR DOG CHARACTER~~ unit from your army. EFFECT: Each enemy unit within 6" of your unit must take a Battle-shock test. …” · not counted in the Damage tab
+1CP Cunning Hunter
+“WHEN: Your Movement phase, just after a WAR DOG unit from your army Falls Back. TARGET: That WAR DOG unit. EFFECT: Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.” · not counted in the Damage tab
+1CP Animalistic Rage
+“WHEN: Your opponent’s Shooting phase or the Fight phase, just after a WAR DOG unit from your army that has not been selected to attack this phase is destroyed. TARGET: That WAR DOG unit. You can use this Stratagem on that unit even though it was just destroyed. …” · not counted in the Damage tab
+1CP Harrying Hounds
+“WHEN: Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. TARGET: One WAR DOG unit from your army that is within 8" of that enemy unit. EFFECT: Your unit can make a Normal move of up to 6".” · not counted in the Damage tab
+1CP Encircling Pack
+“WHEN: End of your opponent’s Fight phase. TARGET: One WAR DOG unit from your army that is wholly within 12" of one or more battlefield edges and not within Engagement Range of one or more enemy units. EFFECT: Remove your unit from the battlefield and place it into Strategic Reserves.” · not counted in the Damage tab
+1CP Insensate Bloodthirst
+“WHEN: Fight phase, when an enemy unit targets a friendly WAR DOG unit. TARGET: That WAR DOG unit. EFFECT: Your unit has Feel No Pain 5+.” · not counted in the Damage tab
+1CP Leash of the Masters
+“WHEN: Your Shooting phase, when a friendly WAR DOG unit has shot. TARGET: That WAR DOG unit. EFFECT: Those attacks do not prevent your unit from being eligible to start an action.” · not counted in the Damage tab
+1CP Stalking Focus
+“WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly WAR DOG unit within range of an objective. TARGET: That WAR DOG unit. EFFECT: Ranged attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

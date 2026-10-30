@@ -1,0 +1,826 @@
+[
+  {
+    "kind": "effects-boxes",
+    "where": "ability · Phaeron of the Stars",
+    "key": "27a4f5ddf8ff5c6e",
+    "change": "changed",
+    "judgement": {
+      "boxes": [
+        {
+          "quote": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1.",
+          "fx": [
+            [
+              "rrHit1",
+              true
+            ],
+            [
+              "rrWound1",
+              true
+            ]
+          ],
+          "on": [
+            [
+              "opt",
+              "Triarch Abilities: the one selected (at the start of the battle round)"
+            ],
+            [
+              "aura",
+              6
+            ]
+          ],
+          "kind": "all",
+          "reach": {
+            "all": [
+              "Faction: Necrons"
+            ],
+            "none": [
+              "Monster"
+            ]
+          },
+          "mark": "aura",
+          "excl": "Triarch Abilities"
+        }
+      ],
+      "nc": [],
+      "reach": {
+        "all": [
+          "Faction: Necrons"
+        ],
+        "none": [
+          "Monster"
+        ]
+      }
+    },
+    "was": {
+      "boxes": [
+        {
+          "quote": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1.",
+          "fx": [
+            [
+              "rrHit1",
+              true
+            ],
+            [
+              "rrWound1",
+              true
+            ]
+          ],
+          "on": [
+            [
+              "aura",
+              6
+            ]
+          ],
+          "kind": "all",
+          "reach": {
+            "all": [
+              "Faction: Necrons"
+            ],
+            "none": [
+              "Monster"
+            ]
+          },
+          "mark": "aura"
+        }
+      ]
+    },
+    "source": {
+      "name": "Phaeron of the Stars",
+      "type": "ability",
+      "text": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, each time a model in that unit makes an attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1.",
+      "tag": "Aura"
+    },
+    "check": "Does each box read its quote right (effect, conditions and their label, scope, reach, pool), as GW’s words say?"
+  },
+  {
+    "kind": "effects-boxes",
+    "where": "ability · Spirit Thief",
+    "key": "cfee27f96e7e1b90",
+    "change": "changed",
+    "judgement": {
+      "boxes": [
+        {
+          "quote": "Until the end of the phase, each time a friendly **HERETIC ASTARTES** model makes an attack that targets that unit, re-roll a **Wound roll** of 1.",
+          "fx": [
+            [
+              "rrWound1",
+              true
+            ]
+          ],
+          "on": [
+            [
+              "targetSelected",
+              true
+            ],
+            [
+              "targetKw",
+              {
+                "any": [
+                  "Vehicle"
+                ]
+              }
+            ]
+          ],
+          "kind": "ranged",
+          "lead": "At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit.",
+          "reach": {
+            "all": [
+              "Faction: Heretic Astartes"
+            ]
+          },
+          "mark": "selected"
+        }
+      ],
+      "nc": [],
+      "reach": null
+    },
+    "was": {
+      "boxes": [
+        {
+          "quote": "Until the end of the phase, each time a friendly **HERETIC ASTARTES** model makes an attack that targets that unit, re-roll a **Wound roll** of 1.",
+          "fx": [
+            [
+              "rrWound1",
+              true
+            ]
+          ],
+          "on": [
+            [
+              "targetSelected",
+              true
+            ]
+          ],
+          "kind": "ranged",
+          "lead": "At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit.",
+          "reach": {
+            "all": [
+              "Faction: Heretic Astartes"
+            ]
+          },
+          "mark": "selected"
+        }
+      ]
+    },
+    "source": {
+      "name": "Spirit Thief",
+      "type": "ability",
+      "text": "At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit. Until the end of the phase, each time a friendly **HERETIC ASTARTES** model makes an attack that targets that unit, re-roll a **Wound roll** of 1."
+    },
+    "check": "Does each box read its quote right (effect, conditions and their label, scope, reach, pool), as GW’s words say?"
+  },
+  {
+    "kind": "effects-boxes",
+    "where": "ability · Driven by Ultimate Rage",
+    "key": "29793c3213c4496b",
+    "change": "changed",
+    "judgement": {
+      "boxes": [
+        {
+          "quote": "Re-roll hit rolls of 1.\nRe-roll wound rolls of 1.",
+          "fx": [
+            [
+              "rrHit1",
+              true
+            ],
+            [
+              "rrWound1",
+              true
+            ]
+          ],
+          "on": [
+            [
+              "opt",
+              "Wrathful Presence: the one selected (at the start of the battle round)"
+            ],
+            [
+              "aura",
+              6
+            ]
+          ],
+          "kind": "melee",
+          "lead": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, that unit’s melee attacks can:",
+          "reach": {
+            "all": [
+              "Faction: World Eaters"
+            ]
+          },
+          "mark": "aura",
+          "excl": "Wrathful Presence"
+        }
+      ],
+      "nc": [],
+      "reach": {
+        "all": [
+          "Faction: World Eaters"
+        ]
+      }
+    },
+    "was": {
+      "boxes": [
+        {
+          "quote": "Re-roll hit rolls of 1.\nRe-roll wound rolls of 1.",
+          "fx": [
+            [
+              "rrHit1",
+              true
+            ],
+            [
+              "rrWound1",
+              true
+            ]
+          ],
+          "on": [
+            [
+              "aura",
+              6
+            ]
+          ],
+          "kind": "melee",
+          "lead": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, that unit’s melee attacks can:",
+          "reach": {
+            "all": [
+              "Faction: World Eaters"
+            ]
+          },
+          "mark": "aura"
+        }
+      ]
+    },
+    "source": {
+      "name": "Driven by Ultimate Rage",
+      "type": "ability",
+      "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+      "tag": "Aura"
+    },
+    "check": "Does each box read its quote right (effect, conditions and their label, scope, reach, pool), as GW’s words say?"
+  },
+  {
+    "kind": "effects-boxes",
+    "where": "ability · Using Sir Hekhtur",
+    "key": "d4990361976f3843",
+    "change": "new",
+    "judgement": {
+      "boxes": [],
+      "nc": [],
+      "reach": null
+    },
+    "was": null,
+    "source": {
+      "name": "Using Sir Hekhtur",
+      "type": "ability",
+      "text": "If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed."
+    },
+    "check": "Does each box read its quote right (effect, conditions and their label, scope, reach, pool), as GW’s words say?"
+  },
+  {
+    "kind": "effects-boxes",
+    "where": "ability · Dark Zealotry",
+    "key": "f0de2485458a9fe4",
+    "change": "changed",
+    "judgement": {
+      "boxes": [
+        {
+          "quote": "While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**.",
+          "fx": [
+            [
+              "wound",
+              1
+            ]
+          ],
+          "on": [
+            [
+              "leading",
+              true
+            ],
+            [
+              "q",
+              "contains a DARK APOSTLE model"
+            ]
+          ],
+          "kind": "melee"
+        }
+      ],
+      "nc": [],
+      "reach": null
+    },
+    "was": {
+      "boxes": [
+        {
+          "quote": "While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**.",
+          "fx": [
+            [
+              "wound",
+              1
+            ]
+          ],
+          "on": [
+            [
+              "leading",
+              true
+            ]
+          ],
+          "kind": "melee"
+        }
+      ]
+    },
+    "source": {
+      "name": "Dark Zealotry",
+      "type": "ability",
+      "text": "While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**."
+    },
+    "check": "Does each box read its quote right (effect, conditions and their label, scope, reach, pool), as GW’s words say?"
+  },
+  {
+    "kind": "effects-boxes",
+    "where": "ability · Bladeguard",
+    "key": "6f95ace21cb2e9a9",
+    "change": "changed",
+    "judgement": {
+      "boxes": [
+        {
+          "quote": "This unit’s melee attacks have +1 to **hit rolls**.",
+          "fx": [
+            [
+              "hit",
+              1
+            ]
+          ],
+          "on": [
+            [
+              "oncePerTurn",
+              true
+            ],
+            [
+              "q",
+              "In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following"
+            ]
+          ],
+          "kind": "melee",
+          "lead": "In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:"
+        }
+      ],
+      "nc": [],
+      "reach": null
+    },
+    "was": {
+      "boxes": [
+        {
+          "quote": "This unit’s melee attacks have +1 to **hit rolls**.",
+          "fx": [
+            [
+              "hit",
+              1
+            ]
+          ],
+          "on": [
+            [
+              "q",
+              "In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following"
+            ]
+          ],
+          "kind": "melee",
+          "lead": "In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:"
+        }
+      ]
+    },
+    "source": {
+      "name": "Bladeguard",
+      "type": "ability",
+      "text": "In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:\n- This unit’s melee attacks have +1 to **hit rolls**.\n- Or: Attacks that target this unit have -1 to **hit rolls**.",
+      "tag": "Once per turn, per unit"
+    },
+    "check": "Does each box read its quote right (effect, conditions and their label, scope, reach, pool), as GW’s words say?"
+  },
+  {
+    "kind": "effects-boxes",
+    "where": "ability · Phaeron of the Blades",
+    "key": "0c91e332de5bf39b",
+    "change": "changed",
+    "judgement": {
+      "boxes": [
+        {
+          "quote": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+          "fx": [
+            [
+              "s",
+              1
+            ]
+          ],
+          "on": [
+            [
+              "opt",
+              "Triarch Abilities: the one selected (at the start of the battle round)"
+            ],
+            [
+              "aura",
+              6
+            ]
+          ],
+          "kind": "melee",
+          "reach": {
+            "all": [
+              "Faction: Necrons"
+            ],
+            "none": [
+              "Monster"
+            ]
+          },
+          "mark": "aura",
+          "excl": "Triarch Abilities"
+        }
+      ],
+      "nc": [],
+      "reach": {
+        "all": [
+          "Faction: Necrons"
+        ],
+        "none": [
+          "Monster"
+        ]
+      }
+    },
+    "was": {
+      "boxes": [
+        {
+          "quote": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+          "fx": [
+            [
+              "s",
+              1
+            ]
+          ],
+          "on": [
+            [
+              "aura",
+              6
+            ]
+          ],
+          "kind": "melee",
+          "reach": {
+            "all": [
+              "Faction: Necrons"
+            ],
+            "none": [
+              "Monster"
+            ]
+          },
+          "mark": "aura"
+        }
+      ]
+    },
+    "source": {
+      "name": "Phaeron of the Blades",
+      "type": "ability",
+      "text": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+      "tag": "Aura"
+    },
+    "check": "Does each box read its quote right (effect, conditions and their label, scope, reach, pool), as GW’s words say?"
+  },
+  {
+    "kind": "effects-boxes",
+    "where": "rule · Malefic Surge",
+    "key": "2172c6df30930d2b",
+    "change": "changed",
+    "judgement": {
+      "boxes": [
+        {
+          "quote": "When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability.",
+          "fx": [],
+          "on": [
+            [
+              "opt",
+              "Diabolic Power"
+            ],
+            [
+              "q",
+              "While a unit is Empowered it can use one of the Malefic Surge abilities below"
+            ]
+          ],
+          "kind": "all",
+          "opt": "Diabolic Power",
+          "pick": [
+            {
+              "name": "[LETHAL HITS]",
+              "fx": [
+                [
+                  "lethal",
+                  true
+                ]
+              ],
+              "quote": "When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability."
+            },
+            {
+              "name": "[SUSTAINED HITS 1]",
+              "fx": [
+                [
+                  "sus",
+                  "1"
+                ]
+              ],
+              "quote": "When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability."
+            }
+          ]
+        }
+      ],
+      "nc": [],
+      "reach": null
+    },
+    "was": {
+      "boxes": [
+        {
+          "quote": "When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability.",
+          "fx": [],
+          "on": [
+            [
+              "opt",
+              "Diabolic Power"
+            ]
+          ],
+          "kind": "all",
+          "opt": "Diabolic Power",
+          "pick": [
+            {
+              "name": "[LETHAL HITS]",
+              "fx": [
+                [
+                  "lethal",
+                  true
+                ]
+              ],
+              "quote": "When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability."
+            },
+            {
+              "name": "[SUSTAINED HITS 1]",
+              "fx": [
+                [
+                  "sus",
+                  "1"
+                ]
+              ],
+              "quote": "When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability."
+            }
+          ]
+        }
+      ]
+    },
+    "source": {
+      "name": "Malefic Surge",
+      "type": "rule",
+      "text": "In your Command phase, one or more **CHAOS KNIGHTS** units from your army can make a Malefic Surge. Each one that does must first take a **Leadership test**; if that test is failed, that unit suffers D3 **mortal wounds**. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.\n- **Unholy Hunger:** When a model in this unit makes a **Normal**, **Advance** or **Fall Back move**, until the end of the phase, add 3\" to its Move characteristic.\n- **Diabolic Power:** When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.\n- **Unnatural Fortitude:** When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:\n- Models in this unit have a 5+ invulnerable save.\n- Models in this unit have the **Feel No Pain 6+** ability.\n*Designer’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.*"
+    },
+    "check": "Does each box read its quote right (effect, conditions and their label, scope, reach, pool), as GW’s words say?"
+  },
+  {
+    "kind": "effects-boxes",
+    "where": "rule · Kindred Sorcery",
+    "key": "e2af335b0a1f8c2b",
+    "change": "changed",
+    "judgement": {
+      "boxes": [
+        {
+          "quote": "Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.",
+          "fx": [],
+          "on": [],
+          "kind": "all",
+          "pick": [
+            {
+              "name": "Imbued Manifestation",
+              "fx": [
+                [
+                  "range",
+                  6
+                ]
+              ],
+              "quote": "Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.",
+              "on": [
+                [
+                  "oncePerBattle",
+                  true
+                ]
+              ]
+            },
+            {
+              "name": "Psychic Maelstrom",
+              "fx": [
+                [
+                  "wound",
+                  1
+                ]
+              ],
+              "quote": "Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.",
+              "on": [
+                [
+                  "oncePerBattle",
+                  true
+                ]
+              ]
+            },
+            {
+              "name": "Wrath of the Immaterium",
+              "fx": [
+                [
+                  "dev",
+                  true
+                ]
+              ],
+              "quote": "Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability.",
+              "on": [
+                [
+                  "oncePerBattle",
+                  true
+                ]
+              ]
+            }
+          ],
+          "scope": {
+            "wkw": "PSYCHIC"
+          },
+          "lasts": "round",
+          "reach": {
+            "all": [
+              "Faction: Thousand Sons"
+            ]
+          },
+          "tableRows": true
+        }
+      ],
+      "nc": [],
+      "reach": null
+    },
+    "was": {
+      "boxes": [
+        {
+          "quote": "Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.",
+          "fx": [],
+          "on": [],
+          "kind": "all",
+          "pick": [
+            {
+              "name": "Imbued Manifestation",
+              "fx": [
+                [
+                  "range",
+                  6
+                ]
+              ],
+              "quote": "Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.",
+              "on": []
+            },
+            {
+              "name": "Psychic Maelstrom",
+              "fx": [
+                [
+                  "wound",
+                  1
+                ]
+              ],
+              "quote": "Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.",
+              "on": []
+            },
+            {
+              "name": "Wrath of the Immaterium",
+              "fx": [
+                [
+                  "dev",
+                  true
+                ]
+              ],
+              "quote": "Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability.",
+              "on": []
+            }
+          ],
+          "scope": {
+            "wkw": "PSYCHIC"
+          },
+          "lasts": "round",
+          "reach": {
+            "all": [
+              "Faction: Thousand Sons"
+            ]
+          },
+          "tableRows": true
+        }
+      ]
+    },
+    "source": {
+      "name": "Kindred Sorcery",
+      "type": "rule",
+      "text": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.\nPsychic Maelstrom: Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.\nWrath of the Immaterium: Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability."
+    },
+    "check": "Does each box read its quote right (effect, conditions and their label, scope, reach, pool), as GW’s words say?"
+  },
+  {
+    "kind": "effects-boxes",
+    "where": "strat · Hungry for Combat",
+    "key": "16657eb3f48588b9",
+    "change": "changed",
+    "judgement": {
+      "boxes": [
+        {
+          "quote": "Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.",
+          "fx": [
+            [
+              "critHit",
+              5
+            ]
+          ],
+          "on": [
+            [
+              "targetSelected",
+              true
+            ],
+            [
+              "q",
+              "models in those WAR DOG units can only target that enemy unit"
+            ]
+          ],
+          "kind": "melee",
+          "lead": "Select one enemy unit within Engagement Range of those **WAR DOG** units."
+        }
+      ],
+      "nc": [],
+      "reach": null
+    },
+    "was": {
+      "boxes": [
+        {
+          "quote": "Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.",
+          "fx": [
+            [
+              "critHit",
+              5
+            ]
+          ],
+          "on": [
+            [
+              "targetSelected",
+              true
+            ]
+          ],
+          "kind": "melee",
+          "lead": "Select one enemy unit within Engagement Range of those **WAR DOG** units."
+        }
+      ]
+    },
+    "source": {
+      "name": "Hungry for Combat",
+      "type": "strat",
+      "text": "WHEN: Start of the Fight phase.\nTARGET: Two or more **WAR DOG** units from your army within **Engagement Range** of the same enemy unit.\nEFFECT: Select one enemy unit within Engagement Range of those **WAR DOG** units. Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+    },
+    "check": "Does each box read its quote right (effect, conditions and their label, scope, reach, pool), as GW’s words say?"
+  },
+  {
+    "kind": "effects-code",
+    "where": "verify/effects-extract.js",
+    "key": "677dfdec5d525c79",
+    "judgement": {
+      "what": "pick-one sections (the one selected, excl), an option’s rule-level words (\"While a unit is Empowered …\", \"once per battle\"), \"can only target\" restrictions, \"contains a X model\", a database \"Once per turn\" tag, the selected enemy unit’s keyword, embarked (Sir Hekhtur) at build time"
+    },
+    "check": "Review the change (git diff 0362348 -- verify/effects-extract.js)."
+  },
+  {
+    "kind": "effects-code",
+    "where": "verify/effects-migrate.js",
+    "key": "ab9e38fb159e10bb",
+    "judgement": {
+      "what": "pickOf (an ability under \"X: pick one\" whose X says \"select one\"), embarked"
+    },
+    "check": "Review the change (git diff 0362348 -- verify/effects-migrate.js)."
+  },
+  {
+    "kind": "effects-code",
+    "where": "verify/evidence.js",
+    "key": "fa0c7f7456a9c18d",
+    "judgement": {
+      "what": "G1 excl and embarked; G6 bans regexes over a rule’s words at run time (display quotes exempt); sources include other-unit stratagems; G5 context includes the picked-from ability"
+    },
+    "check": "Review the change (git diff 0362348 -- verify/evidence.js)."
+  },
+  {
+    "kind": "effects-code",
+    "where": "app.html",
+    "key": "2453f1945151b617",
+    "judgement": {
+      "what": "exclusive ticks of a pick (excl); the Doctrina part label; pills show their own condition; weapon and weapon-keyword notes; fact rows name the pick of a part; dmEmbarked from BOXES"
+    },
+    "check": "Review the change (git diff 0362348 -- app.html)."
+  },
+  {
+    "kind": "effects-code",
+    "where": "verify/calc-test.js",
+    "key": "723b8f5a4217dcbd",
+    "judgement": {
+      "what": "pick one: ticking one unticks the other"
+    },
+    "check": "Review the change (git diff 0362348 -- verify/calc-test.js)."
+  },
+  {
+    "kind": "effects-parity",
+    "where": "Damage tab rendered before/after (labels, folds, numbers)",
+    "key": "effects-parity-3",
+    "judgement": {
+      "report": "scratchpad/effects-work/changes-2.md (round 3: the mechanical condition-clause check; rd-old.json, rd-new.json, parity.json)"
+    },
+    "check": "Is every difference classified right, with none a regression?"
+  }
+]

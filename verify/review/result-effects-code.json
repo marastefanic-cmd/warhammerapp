@@ -1,0 +1,65 @@
+[
+ {
+  "key": "a3e324148792b43e",
+  "where": "calc.js · rrDmg, D3 A/S, granted ANTI-X, granted INDIRECT FIRE",
+  "verdict": "fix",
+  "why": "Hand-worked, all right: rrDmg D6 S8 TORRENT vs T4 big model, 50 wounds × (½·3.5 + ½·5) = 212.5; rrDmg D3 50 × 7/3; +D3 S on S3 vs T4: 60 × (½ + ⅔ + ⅔)/3 = 36.67; +D3 A: 10 × 3 = 30; granted ANTI-VEHICLE 4+ with assume and [DEVASTATING WOUNDS], S4 vs T8 (normally 6+): 30 mortals of 60; granted [INDIRECT FIRE] with indirect 1-5: 10 of 60 hit (without the grant indirect does nothing, 30). The fx: calc-test expectations are right, and the old engine cases are unchanged (the 13 cases removed are all Damage-tab cases tied to old readings or ticked-for-you; none is an engine case). Averages are right. Three code fixes: (1) 'once per batch' is not what the Core Rules say. 02.02.03 Random Attacks: 'If several weapons with random A characteristics are making identical attacks, generate the attacks for each of those weapons individually'. Other Random Characteristics (S): 'roll … on an individual, per-model or per-weapon basis each time that characteristic is required'. attackOnce rolls one aRoll/sRoll for the whole batch, shared by every model in it. Today only Sacrificial Blessing (one Tzaangor Shaman, one weapon) has a D3 A/S effect, so the averages and this case are unaffected, but played-out kill chances are wrong for n>1. The header also says 'rolled once … in each game'. (2) explain dmgCap: for the mortal-wound part capOf uses pd (re-rolled Damage) while dM uses pd0, so it disagrees with itself when rrDmg and [DEVASTATING WOUNDS] are both on. (3) effects.js toMod: when two critHit/critWound values merge, the last one wins instead of the lowest. Minor: nothing combines them today.",
+  "fix": "calc.js:473-482: drop the batch aRoll; inside the per-model loop use `const a = Math.max(RULE.minA, roll(x.A, R) + x.aPlus + (x.aDice || []).reduce((t, d) => t + roll(d, R), 0)) + (x.rapid ? roll(x.rapid, R) : 0) + extra;`. For S, roll the dice at each wound roll (each time S is required): in the wound loop use `const Sx = g.sDice && g.sDice.length ? Math.max(RULE.minS, g.S + g.sDice.reduce((t, d) => t + roll(d, R), 0)) : g.S` for the S-vs-T threshold of that hit, and remove sRoll/the g copy at :473-475. Comments calc.js:16-17 and :183: 'rolled each time the weapon's attacks are generated (A) / each time S is required (S) (02.02.03)'; explain texts :957 and :997 'rolled once for these attacks' → 'rolled for each weapon' / 'for each attack'. calc.js:1044-1045: `const capOf = (minus, kp, p) => ex(p, v => Math.min(row.W, Math.max(RULE.minDamage, v + G.dPlus - minus) * kp)); const dmgCap = unsaved * capOf(tm.dMinus || 0, keep(fnp), pd) + devC * capOf(tm.dMinusChar || 0, keep(fnpM), pd0);`. effects.js toMod (:136-142): `else if((k === 'critHit' || k === 'critWound') && typeof out[k] === 'number') out[k] = Math.min(out[k], x);`."
+ },
+ {
+  "key": "effects-parity",
+  "where": "Damage tab before/after (numbers)",
+  "verdict": "ok",
+  "why": "Re-run independently, main 0ac28e3 against 653bf81 in my own worktrees. I took 66 random list × unit × phase cases and matched boxes by source name and canonical effect only, never by numbers. Every other box was explicitly off, and I used 4 targets (5×T4 Sv3 W2; 10×T3 Sv5 W1; 1×T11 Sv3 W24 InSv5; 3×T6 Sv2 W3 FNP5). Results: nothing ticked, 264/264 identical. One box ticked, 980/980 identical (the Martial Ka'tah and Blessings of Khorne picks were checked through their pills). All matched boxes ticked together, 228/228 identical. Malefic Destruction checked on its own: main's reading was {set:{A:'+3'}, a:3}, so the Hellforged weapons went A7 → 13 attacks, 22.57 damage vs 5×T4. Here it is {a:3}: 10 attacks, 17.36. A correction (GW: 'add 3 to the Attacks characteristic'). Box presence is NOT all correction: see the derive.js item (Vox-howl).",
+  "fix": ""
+ },
+ {
+  "key": "289f335abc0b31f2",
+  "where": "verify/derive.js · stratNeeds struck TARGET words (and invariants.js, evidence.js, effects.js norm, effects-extract.js)",
+  "verdict": "fix",
+  "why": "Struck words are not GW's errata. In the cached Wahapedia HTML every one is `<span class=\"tooltip\" title=\"Keyword does not appear in that faction.\"><s class=\"kwbs\">…</s>`: Vox-howl's WAR DOG CHARACTER, Impenetrable Bastion's MONSTER, Crazed Rampage's DEFF DREAD, and even 'Bomb SQUIG abilities' and WURRBOY. waha-extract.py:23 turns kwbs into ~~…~~. GW's words are unchanged. derive.js:33-34 itself says so ('Struck words are kept: Wahapedia strikes a keyword that does not appear in the faction'), and so does the data.js:1208 comment on Vox-howl. Consequences: (a) Vox-howl lost its needs, so every unit of the list meets it. In woof-woof, War Dog Brigand, Executioner and Karnivore were not eligible on main and are now listed under Stratagems. This is a REGRESSION, missing from changes.md. (b) Impenetrable Bastion needs none:['Vehicle'], having lost 'Monster'. No unit changes today (Custodes have no MONSTER), but it is not GW's TARGET. (c) Daemonic Infestation, none:['Pink Horrors'] → unless:{all:['Pink','Horrors']}: unrelated to striking, and a correction (the lists keep the keyword as two words, so main's none never matched). No list has Pink Horrors, so nothing changes today. (d) effects.js norm and effects-extract plainCase/targetKw drop struck words from every rule sentence too, which can widen a reach or target condition.",
+  "fix": "Keep struck words and drop only the markers: verify/derive.js:608-609 `const target = norm(s.target), when = …` (norm already strips ~~); verify/invariants.js:56,59 drop `.replace(/~~[^~]*~~\\s*\\/?\\s*/g, '')`; verify/evidence.js:129 `let t = String(s.target).replace(/~~/g, '')…`; effects.js:133 and verify/effects-extract.js:24 replace `~~[^~]*~~` with `~~` in the regex; verify/effects-extract.js:66 `Dv.prepBold(s.replace(/~~/g, ''))`. data.js:1210 Vox-howl back to `needs:{ all:['War Dog','Character'] }` (main's); data.js:1321 Impenetrable Bastion `needs:{ all:['Faction: Adeptus Custodes'], none:['Monster','Vehicle'] }`; then node verify/effects-migrate.js --write (the norm change can move BOXES)."
+ },
+ {
+  "key": "aeccb6c4e0373d63",
+  "where": "verify/evidence.js · G1-G8 bite",
+  "verdict": "fix",
+  "why": "I broke things on purpose in a scratch worktree, then restored it. Caught: an effect value changed in data.js BOXES (G7); the extractor emitting skill+1 (G3 ×4 + G7); an unparsed stratagem TARGET (targets); a stratagem's needs tag broken (targets ×8); a stratagem's presence made to depend on a reading (targets). Not caught: (1) the extractor writing a hand `note:'…'` onto a box, then --write. The gate passes, because G1-G7 have no box schema, so free-text hand fields can sit in BOXES. (2) a Unit-rules box made to appear only when `(au.mods||[]).some(m => m.from === ab.name)`. (3) an other-units box made to depend on `x.mods`. G6 only greps m.note/m.when/m.calc/calcMods, and there is no sources check for the army/unit/other groups as there is for stratagems. (4) G6 scans only app.html between '/* ---------- screen: damage' and 'function screenDamage(', so the drawing code (screenDamage, :3253-3852) is not scanned. It is clean today. (5) G1-G5 run on M.build(D), not data.js; that is fine because G7 ties them together. Remaining reading columns the tab uses: ab.damaged (tables.js READ_COLS.ability, a copy of the 'Damaged: 1-N' name, app.html:2157 and dmCalc) and ab.embarked (a hand reading, dmEmbarked, Sir Hekhtur), carried over from main.",
+  "fix": "verify/evidence.js after :49 (G1): allowlist the box keys: `const BOX_KEYS = new Set(['quote','fx','on','kind','lead','scope','reach','mark','lasts','opt','pick','tableRows','limit','part','notSelf']), PICK_KEYS = new Set(['name','fx','quote','on','lead','part']), SRC_KEYS = new Set(['b','n','reach','nc']);` and fail G1 on any other key (box, pick, scope ⊆ models/weapon/part/wkw, limit ⊆ n/what). verify/evidence.js:107: scan to the next section, `.split('/* ---------- rules questions (Claude)')[0]`, and add `/\\b(?:au|u|x|src)\\.(?:mods|aura|help|shield|readOf|calcDef|defCalc)\\b/` to the forbidden list at :108-109. Add a 'sources' check next to the stratagem one: for every list × unit, the unit group = au.abilities (names not /^Damaged:/) ∪ core weapon rules with BOXES; the army group = Rules-line armyRules ∪ grants ∪ unitDetRules; the other group = other units' abilities whose BOXES reach the unit or that GW tags (Aura) with o.reach met, computed in evidence.js from D alone and compared with dmSources. app.html:2157 and dmCalc `damaged`: use `/^Damaged: /i.test(ab.name)` instead of ab.damaged; ab.embarked: list it to the owner as the one remaining hand reading in the tab (or read it from the ability text by a fixed pattern)."
+ },
+ {
+  "key": "3ca811e2a4877f47",
+  "where": "app.html · Damage tab (dmSources, dmBoxRules, dmBaked)",
+  "verdict": "fix",
+  "why": "No rule prose is parsed at run time. The only regex tests are ab.tag (GW's (Aura) tag), weapon keywords and app-made strings; there is no dmEffects or extractor, and effects and conditions come from BOXES as data. Every box starts unticked, except when the player sets a fact of the table. The five groups and the strat-on-other-unit routing are right. One latent bug in dmBaked: for a keyword effect it tests `keys.some(k => k.startsWith(l) || l.startsWith(k))` over all of the weapon's from-keys, including the stats A/S/D/AP/WS. So a rule that printed +S into a weapon would also 'bake' its [SUSTAINED HITS …] ('SUSTAINED HITS 1'.startsWith('S')), and likewise D vs [DEVASTATING WOUNDS] and A vs [ANTI-…]. No list hits it today (I checked every weapon's from against its rule's boxes).",
+  "fix": "app.html:2146-2147: `const kws = keys.filter(k => !/^(?:A|S|D|AP|WS|BS)$/.test(k)); return !!l && kws.some(k => k.startsWith(l) || l.startsWith(k));`"
+ },
+ {
+  "key": "255f4e2516b64720",
+  "where": "effects.js",
+  "verdict": "fix",
+  "why": "Every FX entry has a pattern, a domain and a calc-test case (G8). NC and COND are fixed tables, and nothing reads prose at run time. Two fixes: norm drops struck words (see the derive.js item), and toMod's critHit/critWound merge should keep the lowest (see the calc.js item).",
+  "fix": "effects.js:133 `.replace(/\\*\\*|~~|__/g, '')`; effects.js toMod: `Math.min` for critHit/critWound (as in the calc.js item)."
+ },
+ {
+  "key": "d6f68f939976c646",
+  "where": "verify/effects-extract.js",
+  "verdict": "fix",
+  "why": "The extraction is fixed code over the catalogue patterns, and G3 bites on a value it gives that is not in the quote. Struck words are dropped at :24 (plainCase) and :66 (targetKw).",
+  "fix": "verify/effects-extract.js:24 replace `~~[^~]*~~` with `~~`; :66 `Dv.prepBold(s.replace(/~~/g, ''))`; then node verify/effects-migrate.js --write."
+ },
+ {
+  "key": "090c7748a86d1d15",
+  "where": "verify/effects-migrate.js",
+  "verdict": "ok",
+  "why": "Sources come from database rows only, with keys the same as app.html DM_KEY. --write is deterministic (G7 is clean on a fresh run). The retired fields are checked by G6. columns.json and tables.js agree after the merge: the tables step PASSes, with BOXES and BOXES.b declared and calcMods/calcNc/both/limit removed.",
+  "fix": ""
+ },
+ {
+  "key": "gate-effects-code",
+  "where": "gate, sw.js, build.js, run lock",
+  "verdict": "ok",
+  "why": "Full `node verify/run.js` on 653bf81 in a detached worktree: 17 steps PASS (data, tables, fingerprints, readings, evidence, invariants, derive, choice, bsdata, dispositions, bases, nr, texts, calc 360/360, import, screens, small phone). Only snapshots (25 lists) and helpers (58 to check, 1234 stale) FAIL, as expected. Generated files are restored. sw.js CORE includes effects.js; build.js publishes it with ?v= and hashes it. run.js hashes effects.js, and the lock code treats a dead pid's lock as stale (run.js:43-47), so deleting a stale lock by hand was harmless and unnecessary. No run is alive in wt-effects now.",
+  "fix": ""
+ }
+]

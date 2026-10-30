@@ -1249,6 +1249,7 @@ Add a group
 of 5 destroyed
 8.6 wounds lost · wiped in 61% of games
 Nothing ticked: the datasheets as printed
+13 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1291,28 +1292,7 @@ BLAST, IGNORES COVER, PSYCHIC
 −46% wiped
 −1.3
 MODELS IF UNTICKED
-SITUATION AND RULES
-Twist of Fate (Cabal of Sorcerers)
-Your Shooting phase, manifested against this target (Warp Charge 9): +1 AP (12+: +2 AP)
-if it applies
-+20% wiped
-+0.4
-MODELS
-Result 9-11
-+0.4
-Result 12+
-+0.6
-BEST
-Destiny’s Ruin (Cabal of Sorcerers)
-Your Shooting phase, manifested against this target (Warp Charge 5): re-roll hit rolls of 1 (10+: re-roll hit rolls)
-if it applies
-+16% wiped
-+0.3
-MODELS
-Result 5-9
-+0.3
-Result 10+
-+0.3
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1323,8 +1303,8 @@ Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
 0
-Damaged (1-6 wounds left)
--1 to hit rolls
+Damaged: 1-6 wounds remaining
+−1 to Hit rolls
 if it applies
 no change: the weapons can ignore modifiers to the hit roll
 0
@@ -1347,43 +1327,77 @@ if it applies
 −60% wiped
 −3.3
 MODELS
+ARMY RULES
+Cabal of Sorcerers
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP
+if it applies
++32% wiped
++0.6
+MODELS
+Cabal of Sorcerers
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP
+if it applies
++20% wiped
++0.4
+MODELS
+Cabal of Sorcerers
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1
+if it applies
++16% wiped
++0.3
+MODELS
+Cabal of Sorcerers
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls
+if it applies
++16% wiped
++0.3
+MODELS
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (5)
+Unearthly Power
+“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+Lord of the Planet of the Sorcerers
+“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
+Impossible Form
+“Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.” · not counted in the Damage tab
+Treason of Tzeentch
+“At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.” · not counted in the Damage tab
+Time Flux
+“While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +10% wiped
 +0.2
 MODELS
-NOT FOR THIS STEP, BY THE RULES (3)
-
-Nothing to count: 1CP Mutagenic Magicks, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (8)
+1CP Mutagenic Magicks
+“WHEN: Start of the Fight phase. TARGET: One friendly engaged THOUSAND SONS PSYKER unit. EFFECT: Select one enemy unit engaged with your unit. Roll six D6: - For each 4+, that enemy unit suffers 1 mortal wound.” · not counted in the Damage tab
+1CP Blessed Transmutations
+“WHEN: Your Command phase. TARGET: One THOUSAND SONS PSYKER model from your army, and one friendly TZAANGORS unit that is below its Starting Strength and within 12" of that PSYKER model. EFFECT: Return up to D3+1 destroyed models (excluding CHARACTERS) to your TZAANGORS unit.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1504,7 +1518,7 @@ of 5 destroyed
 Blade of Magnus: sweep
 Charged this turn
 ×
-3 NOT COUNTED
+13 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1558,60 +1572,70 @@ AP
 D
 2
 PSYCHIC
-SITUATION AND RULES
+SITUATION
 Charged this turn
 said to hold
 no change: no rule here needs it
 0
-Damaged (1-6 wounds left)
--1 to hit rolls
+Damaged: 1-6 wounds remaining
+−1 to Hit rolls
 if it applies
 no change: the weapons can ignore modifiers to the hit roll
 0
 ALL ▾
+ARMY RULES
+
+None that change these numbers.
+
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (5)
+Unearthly Power
+“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+Lord of the Planet of the Sorcerers
+“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
+Impossible Form
+“Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.” · not counted in the Damage tab
+Treason of Tzeentch
+“At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.” · not counted in the Damage tab
+Time Flux
+“While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-+7% wiped
+BEST · MOST MODELS+7% wiped
 +0.1
 MODELS
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Mutagenic Magicks AI
-Your engaged unit: select one enemy unit engaged with it and roll six D6; for each 4+, that enemy unit suffers 1 mortal wound.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (8)
+1CP Mutagenic Magicks
+“WHEN: Start of the Fight phase. TARGET: One friendly engaged THOUSAND SONS PSYKER unit. EFFECT: Select one enemy unit engaged with your unit. Roll six D6: - For each 4+, that enemy unit suffers 1 mortal wound.” · not counted in the Damage tab
+1CP Blessed Transmutations
+“WHEN: Your Command phase. TARGET: One THOUSAND SONS PSYKER model from your army, and one friendly TZAANGORS unit that is below its Starting Strength and within 12" of that PSYKER model. EFFECT: Return up to D3+1 destroyed models (excluding CHARACTERS) to your TZAANGORS unit.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1735,7 +1759,7 @@ Shoot 4.30 · Fight 0.68 · the charge is taken to succeed
 Blade of Magnus: sweep
 Charged this turn
 ×
-3 NOT COUNTED
+26 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1782,26 +1806,7 @@ BLAST, IGNORES COVER, PSYCHIC
 −5% wiped
 −0.1
 MODELS IF UNTICKED
-SITUATION AND RULES
-Twist of Fate (Cabal of Sorcerers)
-Your Shooting phase, manifested against this target (Warp Charge 9): +1 AP (12+: +2 AP)
-if it applies
-+1% wiped
-≈0
-MODELS
-Result 9-11
-+1% wiped
-Result 12+
-+1% wiped
-Destiny’s Ruin (Cabal of Sorcerers)
-Your Shooting phase, manifested against this target (Warp Charge 5): re-roll hit rolls of 1 (10+: re-roll hit rolls)
-if it applies
-≈0
-MODELS
-Result 5-9
-≈0
-Result 10+
-≈0
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1812,8 +1817,8 @@ Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
 0
-Damaged (1-6 wounds left)
--1 to hit rolls
+Damaged: 1-6 wounds remaining
+−1 to Hit rolls
 if it applies
 no change: the weapons can ignore modifiers to the hit roll
 0
@@ -1830,42 +1835,74 @@ if it applies
 −5% wiped
 −0.1
 MODELS
+ARMY RULES
+Cabal of Sorcerers
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP
+if it applies
++1% wiped
+≈0
+MODELS
+Cabal of Sorcerers
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP
+if it applies
++1% wiped
+≈0
+MODELS
+Cabal of Sorcerers
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1
+if it applies
+≈0
+MODELS
+Cabal of Sorcerers
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls
+if it applies
+≈0
+MODELS
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (5)
+Unearthly Power
+“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+Lord of the Planet of the Sorcerers
+“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
+Impossible Form
+“Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.” · not counted in the Damage tab
+Treason of Tzeentch
+“At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.” · not counted in the Damage tab
+Time Flux
+“While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 ≈0
 MODELS
-NOT FOR THIS STEP, BY THE RULES (3)
-
-Nothing to count: 1CP Mutagenic Magicks, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (8)
+1CP Mutagenic Magicks
+“WHEN: Start of the Fight phase. TARGET: One friendly engaged THOUSAND SONS PSYKER unit. EFFECT: Select one enemy unit engaged with your unit. Roll six D6: - For each 4+, that enemy unit suffers 1 mortal wound.” · not counted in the Damage tab
+1CP Blessed Transmutations
+“WHEN: Your Command phase. TARGET: One THOUSAND SONS PSYKER model from your army, and one friendly TZAANGORS unit that is below its Starting Strength and within 12" of that PSYKER model. EFFECT: Return up to D3+1 destroyed models (excluding CHARACTERS) to your TZAANGORS unit.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1915,59 +1952,69 @@ AP
 D
 2
 PSYCHIC
-SITUATION AND RULES
+SITUATION
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
-Damaged (1-6 wounds left)
--1 to hit rolls
+Damaged: 1-6 wounds remaining
+−1 to Hit rolls
 if it applies
 no change: the weapons can ignore modifiers to the hit roll
 0
 ALL ▾
+ARMY RULES
+
+None that change these numbers.
+
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (5)
+Unearthly Power
+“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+Lord of the Planet of the Sorcerers
+“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
+Impossible Form
+“Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.” · not counted in the Damage tab
+Treason of Tzeentch
+“At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.” · not counted in the Damage tab
+Time Flux
+“While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 ≈0
 MODELS
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Mutagenic Magicks AI
-Your engaged unit: select one enemy unit engaged with it and roll six D6; for each 4+, that enemy unit suffers 1 mortal wound.
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (8)
+1CP Mutagenic Magicks
+“WHEN: Start of the Fight phase. TARGET: One friendly engaged THOUSAND SONS PSYKER unit. EFFECT: Select one enemy unit engaged with your unit. Roll six D6: - For each 4+, that enemy unit suffers 1 mortal wound.” · not counted in the Damage tab
+1CP Blessed Transmutations
+“WHEN: Your Command phase. TARGET: One THOUSAND SONS PSYKER model from your army, and one friendly TZAANGORS unit that is below its Starting Strength and within 12" of that PSYKER model. EFFECT: Return up to D3+1 destroyed models (excluding CHARACTERS) to your TZAANGORS unit.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Crushing Impact
+“WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move. TARGET: That MONSTER/VEHICLE unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit engaged with your unit. - 2. Select one model in your unit engaged with that enemy unit. - 3. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

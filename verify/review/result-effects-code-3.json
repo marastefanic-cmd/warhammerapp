@@ -1,0 +1,51 @@
+[
+ {
+  "key": "fa0c7f7456a9c18d",
+  "where": "verify/evidence.js · G1 excl/embarked, G6 run-time regex ban, sources incl. other-unit stratagems (break tests re-run by me)",
+  "verdict": "fix",
+  "why": "I re-ran all my break tests in a detached worktree at f4be487, restoring it each time. Caught:\n- a hand note on a box, or a hand key in its scope, via the extractor + --write (G1 ×2)\n- a value edited in BOXES (G7)\n- the extractor inventing a value (G3 ×4)\n- a Unit-rules box gated on au.mods (G6 + sources), or on the alias au['mo'+'ds'] (sources)\n- an other-units box gated on x.mods (G6 + sources)\n- ab.damaged used again (G6)\n- m.note read in screenDamage (G6)\n- an unparsed TARGET (targets)\n- a broken needs tag (targets)\n- Vox-howl's needs emptied (targets ×4)\n- a Unit-rules box gated on a regex over ab.text (G6 + sources)\n- NEW, round 2 gap 1: an effect made at run time by `/\\+1 to hit/i.test(S.ab.text)` (G6)\n- NEW, round 2 gap 2: every other-unit stratagem put in 'From other units' regardless of reach (sources, nidzillas ×6+)\n- Sir Hekhtur parsed at run time again (G6)\nNot caught: the same run-time effect written as `S.ab.text.includes('+1 to hit')` passes the gate, because the ban names only test/exec/match/matchAll/search/replace/split. `S.ab['te'+'xt']` also passes, but that is deliberate evasion; no lint covers it.",
+  "fix": "verify/evidence.js:126: add `includes|indexOf|startsWith|endsWith|lastIndexOf` to the method list of the run-time-regex ban. Better, also add an allowlist rule over dmNoQuote (:124): any `\\b(?:ab|r|s|x|S\\.ab|S\\.s|S)\\.(?:text|effect|target|when|restrictions)\\b` is an error, except on lines defining DM_KEY, dmStratText, dmRuleText or dmCoreText, or in display code (`esc(x.text)`, quote lines). Today there are 6 such uses in the tab, all of them hashing or display."
+ },
+ {
+  "key": "2453f1945151b617",
+  "where": "app.html · excl, dmEmbarked from BOXES, labels",
+  "verdict": "fix",
+  "why": "dmEmbarked now reads BOXES embarked (no regex at run time). The excl lever is right: ticking one box of a pick unticks the others with the same excl and the same giver (src), and unticking only flips that box. The labels are app-made from BOXES and the catalogue. But the exclusion lives only in the lever's apply. dmCalc does not enforce it: with both ticked in the state, Phaeron of the Stars and Phaeron of the Blades (The Silent King, Triarch Abilities) are both counted for Imotekh, with no 'counted by you' note (checked: on=true, over=false, extra='' for both). A state can hold both if it was saved before excl existed, or set by plan/ch or another code path.",
+  "fix": "app.html after :2489 (next to the 15.01 one-stratagem rule at :2498): `{ const xs = {}; for(const r of rules) if(r.on && r.m.box && r.m.box.excl) (xs[r.m.box.excl + '|' + (r.m.src ? r.m.src.id : '')] = xs[r.m.box.excl + '|' + (r.m.src ? r.m.src.id : '')] || []).push(r); for(const list of Object.values(xs)){ list.sort((x, y) => order.indexOf(x.k) - order.indexOf(y.k)); list.slice(1).forEach(r => { if(!r.extra) r.extra = 'only one ' + r.m.box.excl + ' ability at a time (GW: “select one”): counted by you'; }); } }` (order is defined at :2493; move this block after it), so over is set at :2503."
+ },
+ {
+  "key": "723b8f5a4217dcbd",
+  "where": "verify/calc-test.js · pick one",
+  "verdict": "ok",
+  "why": "The case ticks Phaeron of the Stars, then applies the Phaeron of the Blades lever, and checks Blades on and Stars off. That is right for the lever (372/372). It covers only the lever, not dmCalc with both ticked (see the app.html item); add a case for that with the fix: both on → the second has extra set and over true.",
+  "fix": ""
+ },
+ {
+  "key": "677dfdec5d525c79",
+  "where": "verify/effects-extract.js",
+  "verdict": "ok",
+  "why": "The new rules are closed and general: 'can only target' and 'contains a X model' restrictions; 'While … it can use one of the … below'; 'only select each … once per battle'; the selected enemy unit's keyword through Dv.tokens; the database's 'Once per turn' tag. excl comes from pickOf, which is the database's 'X: pick one' and X's own 'select one X' words. The embarked pattern now runs at build time and lands in BOXES (G1 SRC_KEYS allows it; G7 guards it). No unit or rule names are special-cased.",
+  "fix": ""
+ },
+ {
+  "key": "ab9e38fb159e10bb",
+  "where": "verify/effects-migrate.js",
+  "verdict": "ok",
+  "why": "pickOf needs both the New Recruit grouping (ab.who 'X: pick one') and X's text 'select one X…', so it is not a reading. embarked is copied from the extractor's result. G7 is clean.",
+  "fix": ""
+ },
+ {
+  "key": "effects-parity-3",
+  "where": "Damage tab before/after (numbers)",
+  "verdict": "ok",
+  "why": "Fresh sample (seed 9090): 55 list × unit × phase cases, main 0ac28e3 against f4be487, with every other box off, at 4 targets. Boxes were matched by source name and effect, or by pick name (6 pills). Nothing ticked: 220/220 identical. One box ticked: 928/928. All matched boxes ticked together: 192/192. None unmatched. That makes 177 views across the three rounds, all identical apart from the Malefic Destruction correction.",
+  "fix": ""
+ },
+ {
+  "key": "gate-effects-code-3",
+  "where": "full gate at f4be487",
+  "verdict": "ok",
+  "why": "node verify/run.js in a detached worktree: 17 steps PASS (evidence, derive, calc 372/372, screens, small phone). Only snapshots and helpers (57 to check) FAIL. Generated files restored; no commit, no fetch, caches untouched.",
+  "fix": ""
+ }
+]

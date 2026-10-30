@@ -1205,7 +1205,7 @@ Add a group
 of 5 destroyed
 0.7 wounds lost · wiped in <1% of games
 Nothing ticked: the datasheets as printed
-2 NOT COUNTED
+12 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1230,35 +1230,18 @@ D
 PISTOL
 −0.1
 MODELS IF UNTICKED
-SITUATION AND RULES
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
 +0.1
 MODELS
-Pledges to the Dark Prince
-Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+
-if it applies
-+0.1 wounds
-≈0
-MODELS
-1+ Pact points
-+0.1 wounds
-3+ Pact points
-+0.1
-7+ Pact points
-+0.1
 Close-quarters shooting at a unit it is engaged with
 only [CLOSE-QUARTERS] weapons
 if it applies
 no change: every weapon ticked is a [CLOSE-QUARTERS] weapon
 0
 ALL ▾
-A Challenge Worthy of Skill
-vs CHARACTER, MONSTER or WALKER units: re-roll the hit roll and the wound roll · none of the ticked weapons
-if it applies
-no change: not for the weapons ticked
-0
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
@@ -1270,60 +1253,74 @@ the target within 24" (15.09): hits only on an unmodified 6, never critical; no 
 if it applies
 −0.1
 MODELS
+ARMY RULES
+Pledges to the Dark Prince
+3+ Pact points (cumulative): Re-roll Wound rolls of 1
+if it applies
++0.1 wounds
+≈0
+MODELS
+Pledges to the Dark Prince
+1+ Pact points (cumulative): Re-roll Hit rolls of 1
+if it applies
++0.1 wounds
+≈0
+MODELS
+Pledges to the Dark Prince
+7+ Pact points (cumulative): Critical Hit on 5+
+if it applies
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Thrill Seekers
+“If your Army Faction is EMPEROR’S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so: - It cannot target a unit it was within Engagement Range of at the start of the turn. …” · not counted in the Damage tab
+UNIT RULES
+A Challenge Worthy of Skill
+The target: Character or Monster or Walker: Re-roll Hit rolls, Re-roll Wound rolls · none of the ticked weapons
+if it applies
+no change: not for the weapons ticked
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Duellist’s Hubris
+“At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 BEST · MOST MODELS
 +0.1
 MODELS
 1CP Unshakeable Opponents
-Command phase, until the end of the turn: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll
+Ignore modifiers to BS/WS and the Hit roll
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (4) · YOURS TO COUNT ANYWAY
-
-1CP Martial Perfection
-Fight phase only
-+0.1
-MODELS IF YOU COUNT IT
-
-Nothing to count: 1CP Embrace the Pain, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Unbound Arrogance AI
-Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
-1CP Explosives AI
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Protection of the Dark Prince
+“WHEN: Any phase, just after a mortal wound or attack is allocated to a model in an EMPEROR’S CHILDREN unit from your army. TARGET: That EMPEROR’S CHILDREN unit. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability, and the Feel No Pain 4+ ability against mortal wounds.” · not counted in the Damage tab
+1CP Embrace the Pain
+“WHEN: Start of the Fight phase. TARGET: One EMPEROR’S CHILDREN INFANTRY unit from your army. EFFECT: Until the end of the phase, each time an enemy model within Engagement Range of your unit selects targets, it must select your unit as the target of its attacks.” · not counted in the Damage tab
+1CP Unbound Arrogance
+“WHEN: Your Shooting phase or the Fight phase, just after an EMPEROR’S CHILDREN unit from your army destroys an enemy unit. TARGET: That EMPEROR’S CHILDREN unit. EFFECT: Increase your pledge to Slaanesh by 1. RESTRICTIONS: You can only use this Stratagem once per battle round.” · not counted in the Damage tab
+1CP Armour of Abhorrence
+“WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One EMPEROR’S CHILDREN unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Explosives
+“WHEN: Your Shooting phase. TARGET: One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn. EFFECT: Resolve the following sequence: - 1. Select one EXPLOSIVES/GRENADES model in your unit. - 2. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1452,7 +1449,7 @@ of 5 destroyed
 10 wounds lost · wiped in 99% of games
 Charged this turn
 ×
-4 NOT COUNTED
+12 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1509,97 +1506,98 @@ D
 −79% wiped
 −1.6
 MODELS IF UNTICKED
-SITUATION AND RULES
-Pledges to the Dark Prince
-Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+
-if it applies
-+1% wiped
-≈0
-MODELS
-1+ Pact points
-+1% wiped
-3+ Pact points
-+1% wiped
-7+ Pact points
-+1% wiped
-Pledges to the Dark Prince
-5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1]
-if it applies
-+1% wiped
-≈0
-MODELS
-A Challenge Worthy of Skill
-vs CHARACTER, MONSTER or WALKER units: re-roll the hit roll and the wound roll · for Blade of the Laer
-if it applies
-+1% wiped
-≈0
-MODELS
+SITUATION
 Charged this turn
 said to hold
 no change: no rule here needs it
 0
-Daemonic Patrons
-Called upon daemonic patrons when selected to fight (until the end of the phase): a Critical Wound on an unmodified wound roll of 3+
+ARMY RULES
+Pledges to the Dark Prince
+3+ Pact points (cumulative): Re-roll Wound rolls of 1
+if it applies
++1% wiped
+≈0
+MODELS
+Pledges to the Dark Prince
+1+ Pact points (cumulative): Re-roll Hit rolls of 1
+if it applies
++1% wiped
+≈0
+MODELS
+Pledges to the Dark Prince
+5+ Pact points (cumulative): [LETHAL HITS], [SUSTAINED HITS 1]
+if it applies
++1% wiped
+≈0
+MODELS
+Pledges to the Dark Prince
+7+ Pact points (cumulative): Critical Hit on 5+
 if it applies
 0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Thrill Seekers
+“If your Army Faction is EMPEROR’S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so: - It cannot target a unit it was within Engagement Range of at the start of the turn. …” · not counted in the Damage tab
+UNIT RULES
+A Challenge Worthy of Skill
+The target: Character or Monster or Walker: Re-roll Hit rolls, Re-roll Wound rolls · for Blade of the Laer
+if it applies
++1% wiped
+≈0
+MODELS
+Daemonic Patrons
+If it uses this ability: Critical Wound on 3+
+if it applies
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Duellist’s Hubris
+“At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Martial Perfection
-Fight phase, not yet selected to fight: re-roll hit rolls
+Re-roll Hit rolls
 if used
 +1% wiped
 ≈0
 MODELS
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 ≈0
 MODELS
 1CP Unshakeable Opponents
-Command phase, until the end of the turn: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll
+Ignore modifiers to BS/WS and the Hit roll
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1)
-
-Nothing to count: 1CP Explosives (Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (4)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Embrace the Pain AI
-Until the end of the phase, each enemy model within Engagement Range of your unit must select your unit as the target of its attacks.
-1CP Unbound Arrogance AI
-Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only · for Blade of the Laer
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Protection of the Dark Prince
+“WHEN: Any phase, just after a mortal wound or attack is allocated to a model in an EMPEROR’S CHILDREN unit from your army. TARGET: That EMPEROR’S CHILDREN unit. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability, and the Feel No Pain 4+ ability against mortal wounds.” · not counted in the Damage tab
+1CP Embrace the Pain
+“WHEN: Start of the Fight phase. TARGET: One EMPEROR’S CHILDREN INFANTRY unit from your army. EFFECT: Until the end of the phase, each time an enemy model within Engagement Range of your unit selects targets, it must select your unit as the target of its attacks.” · not counted in the Damage tab
+1CP Unbound Arrogance
+“WHEN: Your Shooting phase or the Fight phase, just after an EMPEROR’S CHILDREN unit from your army destroys an enemy unit. TARGET: That EMPEROR’S CHILDREN unit. EFFECT: Increase your pledge to Slaanesh by 1. RESTRICTIONS: You can only use this Stratagem once per battle round.” · not counted in the Damage tab
+1CP Armour of Abhorrence
+“WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One EMPEROR’S CHILDREN unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Explosives
+“WHEN: Your Shooting phase. TARGET: One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn. EFFECT: Resolve the following sequence: - 1. Select one EXPLOSIVES/GRENADES model in your unit. - 2. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1731,7 +1729,7 @@ Shoot 0.12 · Fight 4.86 · the charge is taken to succeed
 
 Charged this turn
 ×
-6 NOT COUNTED
+24 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1759,19 +1757,7 @@ D
 1
 PISTOL
 0
-SITUATION AND RULES
-Pledges to the Dark Prince
-Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+
-if it applies
-+1% wiped
-≈0
-MODELS
-1+ Pact points
-+1% wiped
-3+ Pact points
-+1% wiped
-7+ Pact points
-+1% wiped
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1786,62 +1772,68 @@ Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
 0
+ARMY RULES
+Pledges to the Dark Prince
+1+ Pact points (cumulative): Re-roll Hit rolls of 1
+if it applies
+0
+Pledges to the Dark Prince
+3+ Pact points (cumulative): Re-roll Wound rolls of 1
+if it applies
+0
+Pledges to the Dark Prince
+7+ Pact points (cumulative): Critical Hit on 5+
+if it applies
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Thrill Seekers
+“If your Army Faction is EMPEROR’S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so: - It cannot target a unit it was within Engagement Range of at the start of the turn. …” · not counted in the Damage tab
+UNIT RULES
 A Challenge Worthy of Skill
-vs CHARACTER, MONSTER or WALKER units: re-roll the hit roll and the wound roll · none of the ticked weapons
+The target: Character or Monster or Walker: Re-roll Hit rolls, Re-roll Wound rolls · none of the ticked weapons
 if it applies
 no change: not for the weapons ticked
 0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Duellist’s Hubris
+“At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Unshakeable Opponents
-Command phase, until the end of the turn: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll
+Ignore modifiers to BS/WS and the Hit roll
 if used
 0
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (4) · YOURS TO COUNT ANYWAY
-
-1CP Martial Perfection
-Fight phase only
-NO CHANGE
-
-Nothing to count: 1CP Embrace the Pain, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (2)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Unbound Arrogance AI
-Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
-1CP Explosives AI
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Protection of the Dark Prince
+“WHEN: Any phase, just after a mortal wound or attack is allocated to a model in an EMPEROR’S CHILDREN unit from your army. TARGET: That EMPEROR’S CHILDREN unit. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability, and the Feel No Pain 4+ ability against mortal wounds.” · not counted in the Damage tab
+1CP Embrace the Pain
+“WHEN: Start of the Fight phase. TARGET: One EMPEROR’S CHILDREN INFANTRY unit from your army. EFFECT: Until the end of the phase, each time an enemy model within Engagement Range of your unit selects targets, it must select your unit as the target of its attacks.” · not counted in the Damage tab
+1CP Unbound Arrogance
+“WHEN: Your Shooting phase or the Fight phase, just after an EMPEROR’S CHILDREN unit from your army destroys an enemy unit. TARGET: That EMPEROR’S CHILDREN unit. EFFECT: Increase your pledge to Slaanesh by 1. RESTRICTIONS: You can only use this Stratagem once per battle round.” · not counted in the Damage tab
+1CP Armour of Abhorrence
+“WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One EMPEROR’S CHILDREN unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Explosives
+“WHEN: Your Shooting phase. TARGET: One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn. EFFECT: Resolve the following sequence: - 1. Select one EXPLOSIVES/GRENADES model in your unit. - 2. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1895,97 +1887,98 @@ D
 −75% wiped
 −1.5
 MODELS IF UNTICKED
-SITUATION AND RULES
-A Challenge Worthy of Skill
-vs CHARACTER, MONSTER or WALKER units: re-roll the hit roll and the wound roll · for Blade of the Laer
-if it applies
-+1% wiped
-≈0
-MODELS
-Pledges to the Dark Prince
-5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1]
-if it applies
-+1% wiped
-≈0
-MODELS
-Pledges to the Dark Prince
-Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+
-if it applies
-+1% wiped
-≈0
-MODELS
-1+ Pact points
-+1% wiped
-3+ Pact points
-+1% wiped
-7+ Pact points
-+1% wiped
+SITUATION
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
-Daemonic Patrons
-Called upon daemonic patrons when selected to fight (until the end of the phase): a Critical Wound on an unmodified wound roll of 3+
+ARMY RULES
+Pledges to the Dark Prince
+3+ Pact points (cumulative): Re-roll Wound rolls of 1
+if it applies
++1% wiped
+≈0
+MODELS
+Pledges to the Dark Prince
+5+ Pact points (cumulative): [LETHAL HITS], [SUSTAINED HITS 1]
+if it applies
++1% wiped
+≈0
+MODELS
+Pledges to the Dark Prince
+1+ Pact points (cumulative): Re-roll Hit rolls of 1
+if it applies
++1% wiped
+≈0
+MODELS
+Pledges to the Dark Prince
+7+ Pact points (cumulative): Critical Hit on 5+
 if it applies
 0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Thrill Seekers
+“If your Army Faction is EMPEROR’S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so: - It cannot target a unit it was within Engagement Range of at the start of the turn. …” · not counted in the Damage tab
+UNIT RULES
+A Challenge Worthy of Skill
+The target: Character or Monster or Walker: Re-roll Hit rolls, Re-roll Wound rolls · for Blade of the Laer
+if it applies
++1% wiped
+≈0
+MODELS
+Daemonic Patrons
+If it uses this ability: Critical Wound on 3+
+if it applies
+0
+NOT COUNTED IN THE DAMAGE TAB (1)
+Duellist’s Hubris
+“At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+
+None that change these numbers.
+
 STRATAGEMS
 with their CP
 1CP Martial Perfection
-Fight phase, not yet selected to fight: re-roll hit rolls
+Re-roll Hit rolls
 if used
 +1% wiped
 ≈0
 MODELS
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 ≈0
 MODELS
 1CP Unshakeable Opponents
-Command phase, until the end of the turn: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll
+Ignore modifiers to BS/WS and the Hit roll
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1)
-
-Nothing to count: 1CP Explosives (Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (4)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Embrace the Pain AI
-Until the end of the phase, each enemy model within Engagement Range of your unit must select your unit as the target of its attacks.
-1CP Unbound Arrogance AI
-Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only · for Blade of the Laer
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (10)
+1CP Protection of the Dark Prince
+“WHEN: Any phase, just after a mortal wound or attack is allocated to a model in an EMPEROR’S CHILDREN unit from your army. TARGET: That EMPEROR’S CHILDREN unit. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability, and the Feel No Pain 4+ ability against mortal wounds.” · not counted in the Damage tab
+1CP Embrace the Pain
+“WHEN: Start of the Fight phase. TARGET: One EMPEROR’S CHILDREN INFANTRY unit from your army. EFFECT: Until the end of the phase, each time an enemy model within Engagement Range of your unit selects targets, it must select your unit as the target of its attacks.” · not counted in the Damage tab
+1CP Unbound Arrogance
+“WHEN: Your Shooting phase or the Fight phase, just after an EMPEROR’S CHILDREN unit from your army destroys an enemy unit. TARGET: That EMPEROR’S CHILDREN unit. EFFECT: Increase your pledge to Slaanesh by 1. RESTRICTIONS: You can only use this Stratagem once per battle round.” · not counted in the Damage tab
+1CP Armour of Abhorrence
+“WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One EMPEROR’S CHILDREN unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Explosives
+“WHEN: Your Shooting phase. TARGET: One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn. EFFECT: Resolve the following sequence: - 1. Select one EXPLOSIVES/GRENADES model in your unit. - 2. …” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

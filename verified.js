@@ -1,9 +1,9 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "8ff08dfddc",
- "data": "2026-10-29.1",
- "date": "29 Oct 2026",
+ "build": "4245a57fc7",
+ "data": "2026-10-30.1",
+ "date": "30 Oct 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
@@ -27,7 +27,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "1524 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "1511 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
@@ -71,7 +71,7 @@ window.WH_VERIFIED = {
   },
   "CORE_STRATAGEMS": {
    "what": "the core stratagems",
-   "cols": "id:hand gist:ai-summary gistOf:derived name:gw cp:gw phases:derived turn:derived turns:derived when:gw target:gw effect:gw restrictions:gw needs:hand note:hand limit:ai-reading defCalc:ai-reading calcMods:ai-reading cpNote:hand def:ai-reading defOf:derived mod:ai-reading shield:ai-reading help:ai-reading defPick:ai-reading react:ai-reading weaponKw:ai-reading lasts:ai-reading calcNote:ai-reading readOf:derived"
+   "cols": "id:hand gist:ai-summary gistOf:derived name:gw cp:gw phases:derived turn:derived turns:derived when:gw target:gw effect:gw restrictions:gw needs:hand note:hand limit:ai-reading defCalc:ai-reading cpNote:hand def:ai-reading defOf:derived mod:ai-reading shield:ai-reading help:ai-reading defPick:ai-reading react:ai-reading weaponKw:ai-reading lasts:ai-reading calcNote:ai-reading readOf:derived"
   },
   "FACTIONS": {
    "what": "one row per faction: its army rules, detachments and aliases",
@@ -79,7 +79,7 @@ window.WH_VERIFIED = {
   },
   "FACTIONS.armyRules": {
    "what": "a faction's army rules",
-   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:hand coreTwin:hand note:hand calcNc:ai-reading calcMods:ai-reading calcDefs:ai-reading limit:ai-reading both:ai-reading mod:ai-reading def:ai-reading defOf:derived parts:ai-reading statNote:ai-reading tableAt:hand missing:hand defPh:derived mods:ai-reading aura:ai-reading guard:ai-reading readOf:derived"
+   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:hand coreTwin:hand note:hand calcDefs:ai-reading mod:ai-reading def:ai-reading defOf:derived parts:ai-reading statNote:ai-reading tableAt:hand missing:hand defPh:derived mods:ai-reading aura:ai-reading guard:ai-reading readOf:derived"
   },
   "FACTIONS.detachments": {
    "what": "a faction's detachments",
@@ -87,11 +87,11 @@ window.WH_VERIFIED = {
   },
   "FACTIONS.detachments.rule": {
    "what": "a detachment's rule",
-   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:hand coreTwin:hand note:hand calcNc:ai-reading calcMods:ai-reading calcDefs:ai-reading limit:ai-reading both:ai-reading mod:ai-reading def:ai-reading defOf:derived parts:ai-reading statNote:ai-reading tableAt:hand missing:hand defPh:derived mods:ai-reading aura:ai-reading guard:ai-reading readOf:derived"
+   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:hand coreTwin:hand note:hand calcDefs:ai-reading mod:ai-reading def:ai-reading defOf:derived parts:ai-reading statNote:ai-reading tableAt:hand missing:hand defPh:derived mods:ai-reading aura:ai-reading guard:ai-reading readOf:derived"
   },
   "FACTIONS.detachments.moreRules": {
    "what": "a detachment's further rule (moreRules), with the columns of its first",
-   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:hand coreTwin:hand note:hand calcNc:ai-reading calcMods:ai-reading calcDefs:ai-reading limit:ai-reading both:ai-reading mod:ai-reading def:ai-reading defOf:derived parts:ai-reading statNote:ai-reading tableAt:hand missing:hand defPh:derived mods:ai-reading aura:ai-reading guard:ai-reading readOf:derived"
+   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:hand coreTwin:hand note:hand calcDefs:ai-reading mod:ai-reading def:ai-reading defOf:derived parts:ai-reading statNote:ai-reading tableAt:hand missing:hand defPh:derived mods:ai-reading aura:ai-reading guard:ai-reading readOf:derived"
   },
   "FACTIONS.detachments.stratagems": {
    "what": "a detachment's stratagems",
@@ -123,15 +123,15 @@ window.WH_VERIFIED = {
   },
   "ARMIES.units.abilities": {
    "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
-   "cols": "name:newrecruit who:newrecruit over:hand of:derived text:wahapedia tag:newrecruit ph:derived turn:derived turns:derived at:derived def:ai-reading defOf:derived note:hand na:hand damaged:ai-reading riled:ai-reading embarked:ai-reading defAlways:ai-reading defCalc:ai-reading calcDef:ai-reading lasts:ai-reading fightOnDeath:ai-reading comeback:ai-reading calcNote:ai-reading defPh:derived why:derived readOf:derived"
+   "cols": "name:newrecruit who:newrecruit over:hand of:derived text:wahapedia tag:newrecruit ph:derived turn:derived turns:derived at:derived def:ai-reading defOf:derived note:hand na:hand damaged:ai-reading riled:ai-reading defAlways:ai-reading defCalc:ai-reading calcDef:ai-reading lasts:ai-reading fightOnDeath:ai-reading comeback:ai-reading calcNote:ai-reading defPh:derived why:derived readOf:derived"
   },
   "ARMIES.units.mods": {
    "what": "footnotes under a unit's weapon tables: the list's own (why names the reason), or a reading two lists have otherwise (verify/out/tables.md); a name in the list stands for the readings of that name the rows give (the list's order)",
-   "cols": "kind:ai-reading weapon:ai-reading who:ai-reading set:ai-reading when:ai-reading cond:ai-reading note:ai-reading from:ai-reading always:ai-reading calc:ai-reading pick:ai-reading rule:ai-reading lasts:ai-reading vs:ai-reading needs:ai-reading selfWhen:ai-reading selfAlways:ai-reading oneModel:ai-reading notSelf:ai-reading one:ai-reading readOf:derived readBy:derived listWhy:hand"
+   "cols": "kind:ai-reading weapon:ai-reading who:ai-reading set:ai-reading when:ai-reading cond:ai-reading note:ai-reading from:ai-reading pick:ai-reading rule:ai-reading lasts:ai-reading vs:ai-reading needs:ai-reading selfWhen:ai-reading selfAlways:ai-reading notSelf:ai-reading one:ai-reading readOf:derived readBy:derived listWhy:hand"
   },
   "ARMIES.units.aura": {
    "what": "what a unit gives other units of its list: the list's own (why names the reason), or a reading two lists have otherwise (verify/out/tables.md); a name in the list stands for the readings of that name the rows give (the list's order)",
-   "cols": "kind:ai-reading weapon:ai-reading who:ai-reading set:ai-reading when:ai-reading cond:ai-reading note:ai-reading from:ai-reading always:ai-reading calc:ai-reading pick:ai-reading rule:ai-reading lasts:ai-reading vs:ai-reading needs:ai-reading selfWhen:ai-reading selfAlways:ai-reading oneModel:ai-reading notSelf:ai-reading one:ai-reading readOf:derived readBy:derived listWhy:hand"
+   "cols": "kind:ai-reading weapon:ai-reading who:ai-reading set:ai-reading when:ai-reading cond:ai-reading note:ai-reading from:ai-reading pick:ai-reading rule:ai-reading lasts:ai-reading vs:ai-reading needs:ai-reading selfWhen:ai-reading selfAlways:ai-reading notSelf:ai-reading one:ai-reading readOf:derived readBy:derived listWhy:hand"
   },
   "ARMIES.units.guard": {
    "what": "help a unit gives other units of its list when they are attacked: the list's own (why names the reason), or a reading two lists have otherwise (verify/out/tables.md); a name in the list stands for the readings of that name the rows give (the list's order)",
@@ -155,7 +155,7 @@ window.WH_VERIFIED = {
   },
   "DATASHEETS.abilities": {
    "what": "a datasheet's abilities",
-   "cols": "name:newrecruit who:newrecruit text:wahapedia tag:newrecruit ph:derived turn:derived turns:derived at:derived def:ai-reading defOf:derived note:hand na:hand damaged:ai-reading riled:ai-reading embarked:ai-reading defAlways:ai-reading defCalc:ai-reading calcDef:ai-reading lasts:ai-reading fightOnDeath:ai-reading comeback:ai-reading calcNote:ai-reading defPh:derived readOf:derived"
+   "cols": "name:newrecruit who:newrecruit text:wahapedia tag:newrecruit ph:derived turn:derived turns:derived at:derived def:ai-reading defOf:derived note:hand na:hand damaged:ai-reading riled:ai-reading defAlways:ai-reading defCalc:ai-reading calcDef:ai-reading lasts:ai-reading fightOnDeath:ai-reading comeback:ai-reading calcNote:ai-reading defPh:derived readOf:derived"
   },
   "RULE_OPTIONS": {
    "what": "the options inside a rule or ability, each with the phases its words give",
@@ -171,11 +171,11 @@ window.WH_VERIFIED = {
   },
   "DATASHEETS.mods": {
    "what": "the readings of the datasheet's abilities (and of a core rule on its Rules line, or a weapon ability it defines) as footnotes under its weapon tables: every list with the datasheet has them",
-   "cols": "kind:ai-reading weapon:ai-reading who:ai-reading set:ai-reading when:ai-reading cond:ai-reading note:ai-reading from:ai-reading always:ai-reading calc:ai-reading pick:ai-reading rule:ai-reading lasts:ai-reading vs:ai-reading needs:ai-reading selfWhen:ai-reading selfAlways:ai-reading oneModel:ai-reading notSelf:ai-reading one:ai-reading readOf:derived readBy:derived listWhy:hand"
+   "cols": "kind:ai-reading weapon:ai-reading who:ai-reading set:ai-reading when:ai-reading cond:ai-reading note:ai-reading from:ai-reading pick:ai-reading rule:ai-reading lasts:ai-reading vs:ai-reading needs:ai-reading selfWhen:ai-reading selfAlways:ai-reading notSelf:ai-reading one:ai-reading readOf:derived readBy:derived listWhy:hand"
   },
   "DATASHEETS.aura": {
    "what": "the readings of the datasheet's abilities as what it gives other units of its list",
-   "cols": "kind:ai-reading weapon:ai-reading who:ai-reading set:ai-reading when:ai-reading cond:ai-reading note:ai-reading from:ai-reading always:ai-reading calc:ai-reading pick:ai-reading rule:ai-reading lasts:ai-reading vs:ai-reading needs:ai-reading selfWhen:ai-reading selfAlways:ai-reading oneModel:ai-reading notSelf:ai-reading one:ai-reading readOf:derived readBy:derived listWhy:hand"
+   "cols": "kind:ai-reading weapon:ai-reading who:ai-reading set:ai-reading when:ai-reading cond:ai-reading note:ai-reading from:ai-reading pick:ai-reading rule:ai-reading lasts:ai-reading vs:ai-reading needs:ai-reading selfWhen:ai-reading selfAlways:ai-reading notSelf:ai-reading one:ai-reading readOf:derived readBy:derived listWhy:hand"
   },
   "DATASHEETS.guard": {
    "what": "the readings of the datasheet's abilities as help it gives other units of its list when they are attacked",
@@ -183,7 +183,15 @@ window.WH_VERIFIED = {
   },
   "FACTIONS.readings": {
    "what": "the readings (mods, aura, guard) of an army rule, detachment rule or enhancement, on its row: every unit the rule reaches (an army rule on its Rules line, a detachment rule whose needs it meets) or the enhancement's bearer has them",
-   "cols": "kind:ai-reading weapon:ai-reading who:ai-reading set:ai-reading when:ai-reading cond:ai-reading note:ai-reading from:ai-reading always:ai-reading calc:ai-reading pick:ai-reading rule:ai-reading lasts:ai-reading vs:ai-reading needs:ai-reading selfWhen:ai-reading selfAlways:ai-reading oneModel:ai-reading notSelf:ai-reading one:ai-reading readOf:derived readBy:derived listWhy:hand"
+   "cols": "kind:ai-reading weapon:ai-reading who:ai-reading set:ai-reading when:ai-reading cond:ai-reading note:ai-reading from:ai-reading pick:ai-reading rule:ai-reading lasts:ai-reading vs:ai-reading needs:ai-reading selfWhen:ai-reading selfAlways:ai-reading notSelf:ai-reading one:ai-reading readOf:derived readBy:derived listWhy:hand"
+  },
+  "BOXES": {
+   "what": "the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give",
+   "cols": "n:derived b:derived nc:derived reach:derived both:derived embarked:derived"
+  },
+  "BOXES.b": {
+   "what": "one box of the Damage tab: what GW's sentence does, as the catalogue (effects.js) reads it",
+   "cols": "quote:gw lead:gw fx:derived on:derived kind:derived scope:derived reach:derived mark:derived notSelf:derived lasts:derived opt:derived pick:derived part:derived limit:derived tableRows:derived pool:derived excl:derived"
   }
  }
 };

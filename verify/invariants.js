@@ -55,7 +55,7 @@ function run(D){
     const boldOf = t => [...t.matchAll(/\*\*([^*]+)\*\*/g)].map(m => m[1].toUpperCase().replace(/~~/g, '')).join(' | ');
     // (a TARGET's "that **ORKS INFANTRY** unit" is the unit its WHEN names, not the target: Grot Shields' "One friendly **GRETCHIN** unit
     // within 3" of that **ORKS INFANTRY** unit", the unit being shot; its keywords are not the target's)
-    const whenB = boldOf(s.when).split(' | '), tgt = String(s.target).replace(/\bthat \*\*([^*]+)\*\*/g, (m, k) => whenB.some(w => w.includes(k.toUpperCase())) ? 'that #' : m);
+    const whenB = boldOf(s.when).split(' | '), tgt = String(s.target).replace(/~~/g, '').replace(/\bthat \*\*([^*]+)\*\*/g, (m, k) => whenB.some(w => w.includes(k.toUpperCase())) ? 'that #' : m);
     const bold = boldOf(s.target + ' ' + s.when), boldTarget = boldOf(tgt);   // WHEN may name the enemy's keywords
     for(const k of needKws(n)){
       const word = k.replace(/^Faction: /, '').toUpperCase();

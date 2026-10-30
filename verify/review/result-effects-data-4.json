@@ -1,0 +1,20 @@
+[
+ {
+  "key": "a45ca709adace489",
+  "where": "strat · Daemonic Fury",
+  "verdict": "ok",
+  "why": "GW: “Select one friendly WORLD EATERS unit within 6\" of your unit. Until the end of the turn, melee weapons equipped by models in your WORLD EATERS unit have the [LANCE] ability. If the Daemonic Rage ability is active for your army, then until the end of the phase those melee weapons also have the [TWIN-LINKED] ability.” Both boxes now carry aura 6 + selected. Rendered (my own build of 560cdd5): helped World Eaters rows (big-demons-baby Angron, Goremongers) read “Selected by it · Within 6\" of it: [LANCE]” and “Selected by it · Within 6\" of it · “If the Daemonic Rage ability is active for your army”: [TWIN-LINKED]”; on its legal target Lord on Juggernaut + Berzerkers (Stratagems) “Within 6\" of it · Selected by it: [LANCE]”. Fixed."
+ },
+ {
+  "key": "829ecb6246d7a23e",
+  "where": "strat · Hungry for Combat",
+  "verdict": "ok",
+  "why": "GW TARGET: “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit.” EFFECT: “… models in those WAR DOG units can only target that enemy unit, but each time … an unmodified Hit roll of 5+ scores a Critical Hit.” Rendered (woof-woof brigand and executioner, Fight): “The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”: Critical Hit on 5+”. Fixed."
+ },
+ {
+  "key": "effects-parity-4",
+  "where": "Damage tab rendered before/after (labels, folds, numbers)",
+  "verdict": "ok",
+  "why": "Read all 64 partial keeps of the strict 100%-words pass (effects-work/partials.tsv) against the rendered labels: none loses a condition. The missing words are the source unit’s name, now the row title or “Aura · Within 6\" of it” (Eightbound, Angron, Skarbrand, Bloodthirster, Vashtorr, Ghazghkull, Lord of Change, Szarekh, Swarmlord, Hive Tyrant, Cawl, Karanak, Bloodmaster, Dreadherder); a tokenisation (“non-MONSTER/VEHICLE” vs “not Monster/Vehicle”, “fewer wounds remaining” vs “equal to or less than N”, “allocated” vs “The target: Monster or Vehicle”); a timing word of the step shown (selected to shoot/fight, after shooting, picked at its start / in your Command phase, this battle round for Doctrina’s pills); main’s working or “COUNT IT BY HAND” text; or a GW quote that holds the words in full (not-counted rows). Bladeguard’s “instead of -1 to hit …” is carried by GW’s “you can select one of the following”; Pyrogenesis’s Flux token by the pick’s “spend one Flux token”. Cosmetic only: 1CP Honoured Interred on Trajann reads “Within 6\" of it” without naming which Dreadnought (the stratagem’s own row title does not say), as for other stratagems helping another unit. Daemonic Fury and Hungry for Combat, the two meaning losses of round 3, are now fixed (rendered)."
+ }
+]

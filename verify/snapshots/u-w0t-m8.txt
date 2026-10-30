@@ -1131,6 +1131,7 @@ Add a group
 of 5 destroyed
 3.5 wounds lost · wiped in <1% of games
 Nothing ticked: the datasheets as printed
+11 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1170,17 +1171,7 @@ D
 2
 −1.4
 MODELS IF UNTICKED
-SITUATION AND RULES
-Phaeron of the Stars (The Silent King)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-if it applies
-+0.6
-MODELS
-Worthy Foes
-Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls
-if it applies
-+0.5
-MODELS
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1196,47 +1187,62 @@ the target within 24" (15.09): hits only on an unmodified 6, never critical; no 
 if it applies
 −1.1
 MODELS
+ARMY RULES
+Worthy Foes
+The target is the enemy unit selected: +1 to Wound rolls
+if it applies
++0.5
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Reanimation Protocols
+“If your Army Faction is NECRONS, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its Reanimation Protocols: - When a unit’s Reanimation Protocols activate, that unit heals D3 wounds.” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+Grand Strategist
+“At the start of your Command phase, if this model is on the battlefield, you gain 1CP.” · not counted in the Damage tab
+Lord of the Storm
+“Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12" of this model: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Phaeron of the Stars (The Silent King)
+Aura · Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
++0.6
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (3)
+Relentless March
+“While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+Nanoscarab Reanimation Beam
+“While a friendly NECRONS unit is within 3" of this model, each time that unit’s Reanimation Protocols activate, that unit heals an additional D3 wounds.” · not counted in the Damage tab
+Gloom Prism
+“While a friendly NECRONS unit is within 6" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.” · not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 BEST · MOST MODELS
 +0.4
 MODELS
 1CP Enslaved Artifice
-Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: a Critical Hit on an unmodified hit roll of 5+
+Critical Hit on 5+
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (5)
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1356,7 +1362,7 @@ of 5 destroyed
 3.8 wounds lost · wiped in <1% of games
 Charged this turn
 ×
-3 NOT COUNTED
+11 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1381,68 +1387,75 @@ D
 DEVASTATING WOUNDS
 −1.9
 MODELS IF UNTICKED
-SITUATION AND RULES
-Phaeron of the Stars (The Silent King)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-if it applies
-+0.7
-MODELS
-Worthy Foes
-Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls
-if it applies
-+0.5
-MODELS
+SITUATION
 Charged this turn
 said to hold
 no change: no rule here needs it
 0
+ARMY RULES
+Worthy Foes
+The target is the enemy unit selected: +1 to Wound rolls
+if it applies
++0.5
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Reanimation Protocols
+“If your Army Faction is NECRONS, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its Reanimation Protocols: - When a unit’s Reanimation Protocols activate, that unit heals D3 wounds.” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+Grand Strategist
+“At the start of your Command phase, if this model is on the battlefield, you gain 1CP.” · not counted in the Damage tab
+Lord of the Storm
+“Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12" of this model: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Phaeron of the Stars (The Silent King)
+Aura · Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
++0.7
+MODELS
+Phaeron of the Blades (The Silent King)
+Aura · Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of it: +1 S
+if it applies
+no change: S7 still wounds T4 on 3+
+0
+NOT COUNTED IN THE DAMAGE TAB (3)
+Relentless March
+“While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+Nanoscarab Reanimation Beam
+“While a friendly NECRONS unit is within 3" of this model, each time that unit’s Reanimation Protocols activate, that unit heals an additional D3 wounds.” · not counted in the Damage tab
+Gloom Prism
+“While a friendly NECRONS unit is within 6" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.” · not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 BEST · MOST MODELS
 +0.5
 MODELS
 1CP Enslaved Artifice
-Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: a Critical Hit on an unmodified hit roll of 5+
+Critical Hit on 5+
 if used
 0
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-Phaeron of the Blades
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (5)
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1565,7 +1578,7 @@ Shoot 1.73 · Fight 1.82 · the charge is taken to succeed
 
 Charged this turn
 ×
-3 NOT COUNTED
+22 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1611,19 +1624,7 @@ D
 −25% wiped
 −1.3
 MODELS IF UNTICKED
-SITUATION AND RULES
-Phaeron of the Stars (The Silent King)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-if it applies
-+16% wiped
-+0.5
-MODELS
-Worthy Foes
-Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls
-if it applies
-+12% wiped
-+0.4
-MODELS
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
@@ -1635,47 +1636,64 @@ if it applies
 −6% wiped
 −0.2
 MODELS
+ARMY RULES
+Worthy Foes
+The target is the enemy unit selected: +1 to Wound rolls
+if it applies
++26% wiped
++0.7
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Reanimation Protocols
+“If your Army Faction is NECRONS, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its Reanimation Protocols: - When a unit’s Reanimation Protocols activate, that unit heals D3 wounds.” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+Grand Strategist
+“At the start of your Command phase, if this model is on the battlefield, you gain 1CP.” · not counted in the Damage tab
+Lord of the Storm
+“Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12" of this model: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Phaeron of the Stars (The Silent King)
+Aura · Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
++16% wiped
++0.5
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (3)
+Relentless March
+“While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+Nanoscarab Reanimation Beam
+“While a friendly NECRONS unit is within 3" of this model, each time that unit’s Reanimation Protocols activate, that unit heals an additional D3 wounds.” · not counted in the Damage tab
+Gloom Prism
+“While a friendly NECRONS unit is within 6" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.” · not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 BEST · MOST MODELS+11% wiped
 +0.3
 MODELS
 1CP Enslaved Artifice
-Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: a Critical Hit on an unmodified hit roll of 5+
+Critical Hit on 5+
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (5)
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1698,70 +1716,77 @@ DEVASTATING WOUNDS
 −28% wiped
 −1.8
 MODELS IF UNTICKED
-SITUATION AND RULES
-Phaeron of the Stars (The Silent King)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-if it applies
-+19% wiped
-+0.6
-MODELS
-Worthy Foes
-Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls
-if it applies
-+12% wiped
-+0.4
-MODELS
+SITUATION
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
+ARMY RULES
+Worthy Foes
+The target is the enemy unit selected: +1 to Wound rolls
+if it applies
++12% wiped
++0.4
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Reanimation Protocols
+“If your Army Faction is NECRONS, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its Reanimation Protocols: - When a unit’s Reanimation Protocols activate, that unit heals D3 wounds.” · not counted in the Damage tab
+UNIT RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
+Grand Strategist
+“At the start of your Command phase, if this model is on the battlefield, you gain 1CP.” · not counted in the Damage tab
+Lord of the Storm
+“Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12" of this model: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Phaeron of the Stars (The Silent King)
+Aura · Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
++19% wiped
++0.6
+MODELS
+Phaeron of the Blades (The Silent King)
+Aura · Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of it: +1 S
+if it applies
+no change: S7 still wounds T4 on 3+
+0
+NOT COUNTED IN THE DAMAGE TAB (3)
+Relentless March
+“While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+Nanoscarab Reanimation Beam
+“While a friendly NECRONS unit is within 3" of this model, each time that unit’s Reanimation Protocols activate, that unit heals an additional D3 wounds.” · not counted in the Damage tab
+Gloom Prism
+“While a friendly NECRONS unit is within 6" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.” · not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 BEST · MOST MODELS+13% wiped
 +0.4
 MODELS
 1CP Enslaved Artifice
-Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase: a Critical Hit on an unmodified hit roll of 5+
+Critical Hit on 5+
 if used
 0
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-Phaeron of the Blades
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only
+if used
 0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (5)
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

@@ -1,0 +1,30 @@
+[
+ {
+  "key": "evidence-g6-r4",
+  "where": "verify/evidence.js · G6 run-time read ban (break tests re-run by me at 560cdd5)",
+  "verdict": "ok",
+  "why": "All break tests re-run in a detached worktree and restored after each:\n- caught: a hand note on a box or a hand key in its scope via extractor + --write (G1); a BOXES value edit (G7); an invented extractor value (G3); boxes gated on au.mods, au['mo'+'ds'] or x.mods (G6/sources); ab.damaged (G6); m.note in screenDamage (G6); an unparsed TARGET, a broken needs tag, Vox-howl's needs emptied (targets); every other-unit stratagem under 'From other units' (sources); a regex over ab.text gating a box (G6 + sources); an effect from `/\\+1 to hit/.test(S.ab.text)` (G6 ×2); `S.ab.text.includes('+1 to hit')` (G6); `const words = S.ab.text; words.indexOf(…)` (G6); Sir Hekhtur parsed at run time (G6 ×2).\n- Minor, not a fail: the exemption is per line. `/\\btext:(?:ab|s)\\.text\\b/` exempts the whole line, so `&& ab.text.length < 900` added to the dmSources put line passes G6. The sources check still catches it there, because it changes which boxes appear. A read on that line that changed only an effect would pass.\n- `S.ab['te'+'xt']` evasion is outside any lint.",
+  "fix": "Optional hardening, verify/evidence.js:126-128: strip the exempt substrings from the line, then test what is left (`const rest = l.replace(show, '')` with show made global; test the forbidden pattern on rest) instead of skipping lines that match show."
+ },
+ {
+  "key": "excl-r4",
+  "where": "app.html · dmCalc excl; verify/calc-test.js 'pick one: both ticked'",
+  "verdict": "ok",
+  "why": "app.html:2496-2499 groups ticked excl boxes by excl and giver (src.id), sorts them by tick order and sets extra on all but the first. :2507 then sets over, so the later box shows as 'counted by you'. Checked for Imotekh with The Silent King's two Triarch Abilities: Stars then Blades gives Blades over=true and its mod '(counted by you)'; Blades then Stars gives Stars over=true. Ticks still count in the numbers, as for the 15.01 one-stratagem rule. The new case is right and bites: making the block mark nothing makes it FAIL (372/373). 373/373 at 560cdd5.",
+  "fix": ""
+ },
+ {
+  "key": "effects-parity-4",
+  "where": "Damage tab before/after (numbers)",
+  "verdict": "ok",
+  "why": "Fresh sample (seed 31337): 56 list × unit × phase cases, main 0ac28e3 against 560cdd5, with every other box off, at 4 targets. Boxes matched by source and effect, or by pick name (5 pills). Nothing ticked: 224/224 identical. One box ticked: 784/784. All matched boxes ticked together: 184/184. None unmatched. That is 233 views over four rounds, all identical except the Malefic Destruction correction. (The aura pattern's new 'no (other) friendly' lookbehind and 'your unit' changed no number in the sample.)",
+  "fix": ""
+ },
+ {
+  "key": "gate-effects-code-4",
+  "where": "full gate at 560cdd5",
+  "verdict": "ok",
+  "why": "node verify/run.js in a detached worktree: 17 steps PASS (evidence, derive, calc 373/373, screens, small phone). Only snapshots and helpers (57 to check) FAIL. Generated files restored; no commit, no fetch, caches untouched.",
+  "fix": ""
+ }
+]

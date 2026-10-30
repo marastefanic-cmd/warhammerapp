@@ -1207,12 +1207,11 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-3.8
+2.7
 of 5 destroyed
-8.0 wounds lost · wiped in 38% of games
-Magna Imperator
-Captain-General
-1 NOT COUNTED
+5.5 wounds lost · wiped in 9% of games
+Nothing ticked: the datasheets as printed
+12 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1235,8 +1234,8 @@ AP
 D
 2
 ASSAULT, RAPID FIRE 2
-−27% wiped
-−0.9
+−7% wiped
+−0.7
 MODELS IF UNTICKED
 Balistus grenade launcher ×2 ALLARUS CUSTODIANS
 RNG
@@ -1252,8 +1251,8 @@ AP
 D
 1
 ASSAULT, BLAST 1
-−30% wiped
-−1.1
+−8% wiped
+−0.8
 MODELS IF UNTICKED
 Castellan axe ×2 ALLARUS CUSTODIANS
 RNG
@@ -1269,8 +1268,8 @@ AP
 D
 2
 ASSAULT, RAPID FIRE 2
-−36% wiped
-−1.4
+−9% wiped
+−1.1
 MODELS IF UNTICKED
 HALF RANGE
 [RAPID FIRE], [MELTA]
@@ -1279,85 +1278,90 @@ the target is farther than 12" (every weapon is taken to be in range)
 NOW
 Within 12"
 bonus for Eagle’s Scream and Castellan axe
-+50% wiped
-+1
-SITUATION AND RULES
-Captain-General
-Own aura: re-roll hit rolls of 1 and wound rolls of 1
-always counted · you can leave it out
-if left out: −0.6 models · −18% wiped
-Magna Imperator
-Selected to attack: re-roll one hit roll and re-roll one wound roll · its re-rolls go to, on average: Eagle’s Scream 0.3 wound; Balistus grenade launcher 0.26 wound; Castellan axe 0.36 wound
-always counted · you can leave it out
-if left out: −0.2 models · −9% wiped
++41% wiped
++1.4
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
 no change: already hits on 2+
 0
-Salvus
-Salvus (your Shooting phase, a readied unit selected to shoot): can ignore modifiers to BS, hit rolls and wound rolls
-if it applies
-0
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-−34% wiped
-−1.4
+−9% wiped
+−1.2
 MODELS
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
 if it applies
-−38% wiped
-−3.3
+−9% wiped
+−2.2
+MODELS
+ARMY RULES
+Magna Imperator
+Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
+if it applies
++11% wiped
++0.6
+MODELS
+Martial Ka’tah
+if it applies
+0
+Salvus
+Ignore modifiers to BS/WS and the Hit roll
+0
+NOT COUNTED IN THE DAMAGE TAB (2)
+Aegis of the Emperor
+“Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds.” · not counted in the Damage tab
+Aquila Commander
+“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” · not counted in the Damage tab
+UNIT RULES
+Captain-General
+Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
++21% wiped
++1
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (2)
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
+Vexilla
+“- This unit has +1 OC. - This unit can ignore modifiers to this unit’s Ld.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+1CP Honoured Interred
+Aura · Honoured Interred (Aura) · Within 6" of it: Re-roll Hit rolls of 1
+if used
+BEST · MOST MODELS+8% wiped
++0.5
 MODELS
 STRATAGEMS
 with their CP
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-BEST · MOST MODELS+4% wiped
-+0.1
++7% wiped
++0.4
 MODELS
-1CP Honoured Interred
-Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred: re-roll hit rolls of 1
-if used
-0
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Superhuman Focus AI
-End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (8)
+1CP In Auramite Clad
+“WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS CUSTODES unit (excluding CUSTODIAN WARDENS units). TARGET: That ADEPTUS CUSTODES unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Superhuman Focus
+“WHEN: End of any phase. TARGET: One friendly ADEPTUS CUSTODES unit that is not readied. EFFECT: Your unit is readied. RESTRICTIONS: You cannot select the same unit as the target of this stratagem more than once per battle round.” · not counted in the Damage tab
+1CP Impenetrable Bastion
+“WHEN: End of your Movement phase. TARGET: One friendly ADEPTUS CUSTODES unit (excluding ~~MONSTER~~/VEHICLE units). EFFECT: Select one objective your unit is controlling. That objective is secured.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1482,14 +1486,12 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-5.0
+4.9
 of 5 destroyed
-10 wounds lost · wiped in >99% of games
+9.7 wounds lost · wiped in 90% of games
 Charged this turn
 ×
-Magna Imperator
-Captain-General
-3 NOT COUNTED
+12 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1497,8 +1499,6 @@ FIGHT · BIGGEST FIRST
 Effects are on the damage these attacks deal.
 
 The charge is taken to succeed (no charge roll).
-
-Nothing here changes this: the target is destroyed in every game anyway.
 
 MELEE WEAPONS
 Trajann Valoris + Allarus Custodians
@@ -1514,8 +1514,8 @@ AP
 D
 4
 CLEAVE 1
-−72% wiped
-−1.3
+−83% wiped
+−2.1
 MODELS IF UNTICKED
 Castellan axe ×2 ALLARUS CUSTODIANS
 A
@@ -1528,82 +1528,99 @@ AP
 -2
 D
 4
-−18% wiped
-−0.2
+−54% wiped
+−1
 MODELS IF UNTICKED
-SITUATION AND RULES
-Captain-General
-Own aura: re-roll hit rolls of 1 and wound rolls of 1
-always counted · you can leave it out
-if left out: ≈0 models · −3% wiped
+SITUATION
 Charged this turn
 said to hold
+no change: no rule here needs it
 0
-Moment Shackle
-Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase: +3 A · for Watcher’s Axe
+ARMY RULES
+Martial Ka’tah
+The target: not Monster/Vehicle
 if it applies
-0
-Slayer of Tyrants
-Target has a T greater than this unit’s T: +1 to wound rolls
-if it applies
-0
-Magna Imperator
-Selected to attack: re-roll one hit roll and re-roll one wound roll
-always counted · you can leave it out
-if left out: no change
++7% wiped
++0.1
+MODELS
 Dacatarai
-Dacatarai (start of the Fight phase, a readied unit), vs non-MONSTER/VEHICLE targets: re-roll hit rolls of 1
-if it applies
-0
+The target: not Monster/Vehicle: Re-roll Hit rolls of 1
++0.1
+BEST
 Rendax
-Rendax (Fight phase, a readied unit selected to fight), vs MONSTER/VEHICLE targets: [LETHAL HITS]
+The target: Monster or Vehicle: [LETHAL HITS]
++3% wiped
+Magna Imperator
+Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
 if it applies
++7% wiped
++0.1
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (2)
+Aegis of the Emperor
+“Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds.” · not counted in the Damage tab
+Aquila Commander
+“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” · not counted in the Damage tab
+UNIT RULES
+Captain-General
+Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
++10% wiped
++0.1
+MODELS
+Moment Shackle
+Once per battle · “(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase”: +3 A · for Watcher’s Axe
+if it applies
++8% wiped
++0.1
+MODELS
+Slayer of Tyrants
+“that target a unit with a T greater than this unit's T”: +1 to Wound rolls
+if it applies
+no change: already wounds on 2+
 0
+NOT COUNTED IN THE DAMAGE TAB (2)
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
+Vexilla
+“- This unit has +1 OC. - This unit can ignore modifiers to this unit’s Ld.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+1CP Honoured Interred
+Aura · Honoured Interred (Aura) · Within 6" of it: Re-roll Hit rolls of 1
+if used
++7% wiped
++0.1
+MODELS
 STRATAGEMS
 with their CP
-1CP Honoured Interred
-Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred: re-roll hit rolls of 1
-if used
-0
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
+if used
++4% wiped
++0.1
+MODELS
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only · for Watcher’s Axe
 if used
 0
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Superhuman Focus AI
-End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (8)
+1CP In Auramite Clad
+“WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS CUSTODES unit (excluding CUSTODIAN WARDENS units). TARGET: That ADEPTUS CUSTODES unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Superhuman Focus
+“WHEN: End of any phase. TARGET: One friendly ADEPTUS CUSTODES unit that is not readied. EFFECT: Your unit is readied. RESTRICTIONS: You cannot select the same unit as the target of this stratagem more than once per battle round.” · not counted in the Damage tab
+1CP Impenetrable Bastion
+“WHEN: End of your Movement phase. TARGET: One friendly ADEPTUS CUSTODES unit (excluding ~~MONSTER~~/VEHICLE units). EFFECT: Select one objective your unit is controlling. That objective is secured.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1728,19 +1745,15 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-5
+5.0
 of 5 destroyed
-10 wounds lost · wiped in >99% of games
+10 wounds lost · wiped in 99% of games
 
-Shoot 3.8 · Fight 1.2 · the charge is taken to succeed
+Shoot 2.67 · Fight 2.31 · the charge is taken to succeed
 
-Magna Imperator
-Captain-General
 Charged this turn
 ×
-Magna Imperator (fight)
-Captain-General (fight)
-4 NOT COUNTED
+24 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1748,8 +1761,6 @@ SHOOT → CHARGE → FIGHT · BIGGEST FIRST
 Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
 
 The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
-
-Nothing here changes this: the target is destroyed in every game anyway.
 
 THE SHOOTING
 FIRST
@@ -1769,7 +1780,9 @@ AP
 D
 2
 ASSAULT, RAPID FIRE 2
-0
+−1% wiped
+≈0
+MODELS IF UNTICKED
 Balistus grenade launcher ×2 ALLARUS CUSTODIANS
 RNG
 18"
@@ -1784,7 +1797,9 @@ AP
 D
 1
 ASSAULT, BLAST 1
-0
+−1% wiped
+≈0
+MODELS IF UNTICKED
 Castellan axe ×2 ALLARUS CUSTODIANS
 RNG
 24"
@@ -1799,7 +1814,10 @@ AP
 D
 2
 ASSAULT, RAPID FIRE 2
-0
+−2% wiped
+≈0
+MODELS IF UNTICKED
++1 MORE ▾
 HALF RANGE
 [RAPID FIRE], [MELTA]
 No half-range bonus
@@ -1807,73 +1825,81 @@ the target is farther than 12" (every weapon is taken to be in range)
 NOW
 Within 12"
 bonus for Eagle’s Scream and Castellan axe
-0
-SITUATION AND RULES
++1% wiped
+≈0
+SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
+no change: already hits on 2+
 0
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-0
+−3% wiped
+≈0
+MODELS
++1 MORE ▾
+ARMY RULES
 Magna Imperator
-Selected to attack: re-roll one hit roll and re-roll one wound roll · its re-rolls go to, on average: Eagle’s Scream 0.3 wound; Balistus grenade launcher 0.26 wound; Castellan axe 0.36 wound
-always counted · you can leave it out
-if left out: no change
-Captain-General
-Own aura: re-roll hit rolls of 1 and wound rolls of 1
-always counted · you can leave it out
-if left out: no change
-Salvus
-Salvus (your Shooting phase, a readied unit selected to shoot): can ignore modifiers to BS, hit rolls and wound rolls
+Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
+if it applies
+≈0
+MODELS
+Martial Ka’tah
 if it applies
 0
+Salvus
+Ignore modifiers to BS/WS and the Hit roll
+0
+NOT COUNTED IN THE DAMAGE TAB (2)
+Aegis of the Emperor
+“Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds.” · not counted in the Damage tab
+Aquila Commander
+“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” · not counted in the Damage tab
+UNIT RULES
+Captain-General
+Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if it applies
+≈0
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (2)
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
+Vexilla
+“- This unit has +1 OC. - This unit can ignore modifiers to this unit’s Ld.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+1CP Honoured Interred
+Aura · Honoured Interred (Aura) · Within 6" of it: Re-roll Hit rolls of 1
+if used
+≈0
+MODELS
 STRATAGEMS
 with their CP
-1CP Honoured Interred
-Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred: re-roll hit rolls of 1
-if used
-0
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-0
-NOT FOR THIS STEP, BY THE RULES (2)
-
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
-
-NOT COUNTED BY THE CALCULATOR (1)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Superhuman Focus AI
-End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+≈0
+MODELS
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (8)
+1CP In Auramite Clad
+“WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS CUSTODES unit (excluding CUSTODIAN WARDENS units). TARGET: That ADEPTUS CUSTODES unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Superhuman Focus
+“WHEN: End of any phase. TARGET: One friendly ADEPTUS CUSTODES unit that is not readied. EFFECT: Your unit is readied. RESTRICTIONS: You cannot select the same unit as the target of this stratagem more than once per battle round.” · not counted in the Damage tab
+1CP Impenetrable Bastion
+“WHEN: End of your Movement phase. TARGET: One friendly ADEPTUS CUSTODES unit (excluding ~~MONSTER~~/VEHICLE units). EFFECT: Select one objective your unit is controlling. That objective is secured.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1893,8 +1919,8 @@ AP
 D
 4
 CLEAVE 1
-−4% wiped
-−0.1
+−29% wiped
+−0.5
 MODELS IF UNTICKED
 Castellan axe ×2 ALLARUS CUSTODIANS
 A
@@ -1907,81 +1933,96 @@ AP
 -2
 D
 4
-≈0
+−15% wiped
+−0.2
 MODELS IF UNTICKED
-SITUATION AND RULES
+SITUATION
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
 0
-Moment Shackle
-Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase: +3 A · for Watcher’s Axe
+ARMY RULES
+Martial Ka’tah
+The target: not Monster/Vehicle
 if it applies
-0
-Slayer of Tyrants
-Target has a T greater than this unit’s T: +1 to wound rolls
-if it applies
++1% wiped
+≈0
+MODELS
+Dacatarai
+The target: not Monster/Vehicle: Re-roll Hit rolls of 1
++1% wiped
+Rendax
+The target: Monster or Vehicle: [LETHAL HITS]
 0
 Magna Imperator
-Selected to attack: re-roll one hit roll and re-roll one wound roll
-always counted · you can leave it out
-if left out: no change
+Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
+if it applies
+≈0
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (2)
+Aegis of the Emperor
+“Friendly ADEPTUS CUSTODES units with this ability have Feel No Pain 5+ against mortal wounds.” · not counted in the Damage tab
+Aquila Commander
+“At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” · not counted in the Damage tab
+UNIT RULES
 Captain-General
-Own aura: re-roll hit rolls of 1 and wound rolls of 1
-always counted · you can leave it out
-if left out: no change
-Dacatarai
-Dacatarai (start of the Fight phase, a readied unit), vs non-MONSTER/VEHICLE targets: re-roll hit rolls of 1
+Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if it applies
-0
-Rendax
-Rendax (Fight phase, a readied unit selected to fight), vs MONSTER/VEHICLE targets: [LETHAL HITS]
++1% wiped
+≈0
+MODELS
+Moment Shackle
+Once per battle · “(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase”: +3 A · for Watcher’s Axe
 if it applies
++1% wiped
+≈0
+MODELS
+Slayer of Tyrants
+“that target a unit with a T greater than this unit's T”: +1 to Wound rolls
+if it applies
+no change: already wounds on 2+
 0
+NOT COUNTED IN THE DAMAGE TAB (2)
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
+Vexilla
+“- This unit has +1 OC. - This unit can ignore modifiers to this unit’s Ld.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+1CP Honoured Interred
+Aura · Honoured Interred (Aura) · Within 6" of it: Re-roll Hit rolls of 1
+if used
++1% wiped
+≈0
+MODELS
 STRATAGEMS
 with their CP
-1CP Honoured Interred
-Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred: re-roll hit rolls of 1
-if used
-0
 1CP Command Re-roll
-Just after a hit, wound or damage roll of these attacks; once in the phase (15.01): re-roll one hit roll, one wound roll or one damage roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
+if used
+≈0
+MODELS
+1CP Epic Challenge
+[PRECISION] · CHARACTER models only · for Watcher’s Axe
 if used
 0
-NOT COUNTED BY THE CALCULATOR (3)
-
-They can matter at the table, but the calculator does not play them: what each one says.
-
-1CP Superhuman Focus AI
-End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).
-1CP Epic Challenge AI
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive AI
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-MODIFIERS · NONE
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP
-−
-0
-+
-Damage
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
+NOT COUNTED IN THE DAMAGE TAB (8)
+1CP In Auramite Clad
+“WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS CUSTODES unit (excluding CUSTODIAN WARDENS units). TARGET: That ADEPTUS CUSTODES unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
+1CP Superhuman Focus
+“WHEN: End of any phase. TARGET: One friendly ADEPTUS CUSTODES unit that is not readied. EFFECT: Your unit is readied. RESTRICTIONS: You cannot select the same unit as the target of this stratagem more than once per battle round.” · not counted in the Damage tab
+1CP Impenetrable Bastion
+“WHEN: End of your Movement phase. TARGET: One friendly ADEPTUS CUSTODES unit (excluding ~~MONSTER~~/VEHICLE units). EFFECT: Select one objective your unit is controlling. That objective is secured.” · not counted in the Damage tab
+1CP Insane Bravery
+“WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
+1CP Rapid Ingress
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move (20.04). RESTRICTIONS: You cannot use this stratagem during the first battle round.” · not counted in the Damage tab
+1CP Fire Overwatch
+“WHEN: End of your opponent’s Movement phase. TARGET: One friendly unengaged unit (excluding TITANIC units). EFFECT: Your unit shoots using snap shooting.” · not counted in the Damage tab
+1CP Heroic Intervention
+“WHEN: End of your opponent’s Charge phase. TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit. EFFECT: Resolve a charge with your unit (11.02). …” · not counted in the Damage tab
+2CP Counteroffensive
+“WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is eligible to fight. EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).” · not counted in the Damage tab
+CUSTOM MODIFIERS · NONE
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

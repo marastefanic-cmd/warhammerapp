@@ -1,0 +1,86 @@
+[
+ {
+  "key": "9d59a112b96ec0ff",
+  "where": "calc.js · D3 A per weapon, D3 S per wound roll, dmgCap",
+  "verdict": "ok",
+  "why": "attackOnce now rolls aDice inside the per-model loop, so each weapon gets its own roll (02.02.03 Random Attacks), and rolls sDice for each hit at its wound roll (Other Random Characteristics, 'each time that characteristic is required'). wrS uses woundNeed(Sx, T) and the same −1 for 'S greater than T' as plan(); tm and T are in scope. Re-rolls (rrWound, fishW, the re-roll of one wound) reuse that hit's Sx. The averages are unchanged, as they must be. Hand-checked: 10 models with +D3 A, sd of the attacks √(10 × 2/3) = 2.58; 60 hits at S3+D3 vs T4, p = 11/18 for each, sd √(60 × 11/18 × 7/18) = 3.78. Both new calc-test cases are right. dmgCap now uses pd for normal damage and pd0 for [DEVASTATING WOUNDS] mortals (capN/capM likewise), consistent with dN/dM. The header comments and the working texts say 'for each weapon' / 'for each attack'.",
+  "fix": ""
+ },
+ {
+  "key": "f5038b5d11488b82",
+  "where": "verify/calc-test.js · new cases",
+  "verdict": "ok",
+  "why": "Hand-worked, with a re-roll of one Hit roll and one attack at 4+ per weapon. The most valuable weapon (cannon) is resolved first and takes the re-roll on its miss, 1/2. The pistol takes it only when the cannon hit and the pistol missed, 1/2 × 1/2 = 1/4. Per unit, 3 models: used when any of the 3 misses, 1 − (1/2)³ = 7/8, not 3 × 1/2. The lowest critical value wins: toMod([6,5,6]) gives 5. Command Re-roll: the re-rolls used in a step, summed over all weapons, are > 0 and ≤ 1. Both the D3 sd cases are right (see calc.js). 371/371 pass. The cases for the Doctrina both-pill, Code Chivalric pool = 'selected' and the other-units stratagem are checks on the Damage tab, and they match the words.",
+  "fix": ""
+ },
+ {
+  "key": "1005b3dd501106f8",
+  "where": "effects.js",
+  "verdict": "ok",
+  "why": "norm keeps struck words, dropping only the markers. toMod takes Math.min for critHit/critWound. The new COND patterns (target(ing) … in range of, 'your unit', 'if it does / you do') are general: no names, closed regexes.",
+  "fix": ""
+ },
+ {
+  "key": "fcb695fd12977835",
+  "where": "verify/derive.js · stratNeeds, needsOf (excluding)",
+  "verdict": "ok",
+  "why": "Struck words are kept, and a struck word not in bold is read as a keyword (~~MONSTER~~ → **MONSTER**). Vox-howl's needs are back to {all:[War Dog, Character]}: on both main and here, no woof-woof unit meets them. Impenetrable Bastion is back to none:[Monster, Vehicle]. Break test: putting back the old struck-word drop makes the derive step fail with 'DRIFT strat-needs … Vox-howl', so the gate guards it. The excluding run 'PINK HORRORS' → unless {all:[Pink, Horrors]} is general (any bold run of several keywords).",
+  "fix": ""
+ },
+ {
+  "key": "7903d757f5097db2",
+  "where": "verify/invariants.js",
+  "verdict": "ok",
+  "why": "Struck words are kept (only the ~~ markers are dropped), and the step passes.",
+  "fix": ""
+ },
+ {
+  "key": "6b1659296fa623d6",
+  "where": "verify/evidence.js · G1 schema, G6, sources (break tests re-run by me)",
+  "verdict": "fix",
+  "why": "I ran my own break tests in a detached worktree at 0362348, restoring it after each one. Caught: a hand note on a box via the extractor + --write (G1, twice); a hand key in a box's scope via the extractor + --write (G1); a value edited in data.js BOXES (G7); the extractor giving skill+1 (G3 ×4); a Unit-rules box gated on au.mods (G6 + sources); the same through an alias, au['mo'+'ds'] (sources); an other-units box gated on x.mods (G6 + sources); ab.damaged used again (G6); m.note read inside screenDamage (G6, now scanning the whole tab); an unparsed TARGET (targets); a broken needs tag (targets); Vox-howl's needs emptied or reduced to War Dog (targets ×4); a Unit-rules box gated on a regex over ab.text (sources). Not caught: (1) an EFFECT made at run time from GW's prose, `if(S.ab && /\\+1 to hit/i.test(S.ab.text)) e.hit = 1` in dmBoxRule: the gate passes. G6 forbids readings but not a regex over a rule's text. The tab now does exactly this on purpose: app.html:2262 DM_EMBARKED parses Using Sir Hekhtur's text at run time. (2) the stratagems in 'From other units in your list': the sources check skips them (evidence.js:219 `!(x.grp === 'other' && x.strat)`). Making dmSources put every other-unit stratagem there regardless of reach passes the gate.",
+  "fix": "(1) Move the Hekhtur reading to build time: in verify/effects-extract.js (or effects-migrate.js), match the same fixed pattern `/\\bIf your ([A-Z][\\w'’ -]*?) model is destroyed, this model is treated as a model disembarking from a destroyed Transport\\b/` and write it as a BOXES source field (e.g. `\"embarked\":{\"until\":\"Canis Rex\"}`; add 'embarked' to SRC_KEYS at evidence.js:78). app.html:2262-2267 dmEmbarked then reads `dmBoxesOf(DM_KEY.a(ab)).embarked` instead of exec on ab.text. In evidence.js:124, add `[/\\.(?:test|exec|match|matchAll)\\(\\s*(?:String\\()?[\\w.]*\\b(?:ab|r|s|S\\.ab|S\\.s|x)\\.(?:text|effect|target|when)\\b|\\b(?:ab|r|s|x)\\.(?:text|effect|target|when)\\b[^;\\n]*\\.(?:match|search)\\(/, 'a regex over a rule’s words at run time']`. Exempt only dmQuoteOf and the quote line in dmEmbarked by checking those functions' bodies separately. (2) evidence.js:219: drop `&& !(x.grp === 'other' && x.strat)`, and in wantSources (:202-215) add: `for(const s of strats(a)) if(!meetsN(parsedNeeds(s), u) && a.units.some(x => x !== u && meetsN(parsedNeeds(s), x)) && ((boxOf(M.KEY.strat(s)) || {}).b || []).some(b => b.reach && meetsN(b.reach, u))) other.add(s.name);` with parsedNeeds from targetNeeds (:143)."
+ },
+ {
+  "key": "1b691811a08ab40f",
+  "where": "app.html · Damage tab",
+  "verdict": "fix",
+  "why": "dmBaked now compares keyword effects with keyword keys only (A/S/D/AP/WS/BS filtered out). Damaged bands are found by name (/^Damaged: /), and only for weapons in the step. 'Selected by it' is shown once. The rows ruled out for this step are lazy folds per group. dmBothOf builds the 'both' pill from BOXES both, with reach from the words. The pool notes come from BOXES pool. One problem: dmEmbarked (:2262) reads GW's text with a regex at run time. The pattern is fixed, but it is prose parsing in the app, against the no-runtime-reading rule, and the gate cannot catch it (see the evidence item). dmCoreText's 'X' → the number substitution only rebuilds the key text, as effects-migrate does, so it is acceptable.",
+  "fix": "app.html:2262-2267 read the embarked model from BOXES (see the evidence.js fix) instead of `DM_EMBARKED.exec(ab.text)`."
+ },
+ {
+  "key": "a13225fda3a500bc",
+  "where": "verify/effects-extract.js",
+  "verdict": "ok",
+  "why": "Every new rule is a closed general pattern ('If it does', 'When …,' leads, cost-ifs, definitions, thresholds, BOTH_RE, pool kinds, two kinds in one sentence). No unit or rule names are special-cased (I grepped the diff for names). Struck words are kept (:24, :66). G3/G7 still bite on a value the extractor invents.",
+  "fix": ""
+ },
+ {
+  "key": "c7b0a93d9301f08a",
+  "where": "verify/effects-migrate.js",
+  "verdict": "ok",
+  "why": "'both' is written from BOXES; Damaged X is resolved into the rule's own text the same way as app.html dmCoreText, so the keys agree. G7 is clean on a fresh run.",
+  "fix": ""
+ },
+ {
+  "key": "a27686d915a1f09e",
+  "where": "data.js",
+  "verdict": "ok",
+  "why": "Vox-howl needs:{ all:['War Dog','Character'] } and Impenetrable Bastion none:['Monster','Vehicle'] are back to main's. Using Sir Hekhtur's embarked reading is gone. BOXES equals --write (G7).",
+  "fix": ""
+ },
+ {
+  "key": "effects-parity-2",
+  "where": "Damage tab before/after (numbers)",
+  "verdict": "ok",
+  "why": "Re-run independently on a fresh sample (seed 4242): 56 list × unit × phase cases, main 0ac28e3 against 0362348, with every other box explicitly off, at 4 targets. I matched boxes by source name and effect only, or by a pick of the same name (13 pills). Nothing ticked: 224/224 identical. One box ticked: 864/864. All matched boxes ticked together: 184/184. No box was left unmatched. With the first round's 66 cases, 122 views agree in all. Malefic Destruction remains the one correction (main counted +3 A twice). Command Re-roll and the Code Chivalric pool give identical totals in the sampled views, so the owner's pool reading changes no number in them. The 'what a box adds' shifts in changes-2.md come from boxes now starting unticked (decision 2), not from the engine.",
+  "fix": ""
+ },
+ {
+  "key": "gate-effects-code-2",
+  "where": "full gate at 0362348",
+  "verdict": "ok",
+  "why": "node verify/run.js in a detached worktree: 17 steps PASS (evidence including the new sources check, derive, calc 371/371, screens, small phone). Only snapshots (25 lists) and helpers (57 to check, 1233 stale) FAIL. Generated files restored; no commit, no fetch, caches untouched.",
+  "fix": ""
+ }
+]
