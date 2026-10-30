@@ -329,7 +329,7 @@
     },
     "aiStatus": {
      "source": "derived",
-     "note": "'not-read': a detachment the faction catalogue import added (verify/from-bsdata.js) whose AI layers are not written yet: no stratagem gists, no readings (mod, calcMods, …) and no When targeted lines; verify/catalog.js fails a mark on a detachment that has them, and the owner sees where the Damage tab does not count a rule yet (docs/catalog.md)"
+     "note": "'not-read': a detachment the faction catalogue import added (verify/from-bsdata.js) whose AI layers are not written yet: no stratagem gists, no readings (mod, parts, mods, aura, guard, …) and no When targeted lines; verify/catalog.js fails a mark on a detachment that has them, and the owner sees where the Damage tab does not count a rule yet (docs/catalog.md)"
     }
    }
   },
