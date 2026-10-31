@@ -13,7 +13,8 @@
      its effects and conditions (effects.js), as G1-G8 hold the Damage tab's boxes:
      L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …) is left in data.js (guard, statNote: not yet)
      L2  every footnote of every list × unit × kind is a box the database gives that unit
-     L3  its effects' words are its box's effects' labels (a pick's options, a part), or its one weapon's row value
+     L3  its effects' words are its box's effects' labels (a pick's options, a part), or its one weapon's row value (A, S, AP, D of one
+         weapon, never a Damaged band's, a stratagem's or an ability's the unit uses)
      L4  completeness: every box the database gives the unit for this kind of attack is one footnote, once
      L5  its conditions' words are its box's conditions' labels, with the fixed forms of app.html fnCond
      L6  the code: unitMods, fnLine, the weapon tables and the Damaged band read no reading's words or retired column, and write no rule's
@@ -81,6 +82,7 @@ const RETIRED = new Set(['mods', 'aura', 'mod', 'help', 'riled', 'calcNote', 'fi
 //   A set: "N"); when the conditions' labels, " · " between, with the fixed forms of app.html fnCond, or "Every [ranged / melee] attack"
 const lc = x => String(x || '').toLowerCase().replace(/[’']/g, "'");
 const ROW = { a:'A', s:'S', ap:'AP', d:'D' }, SET = { aSet:'A' };
+const used = b => (b.on || []).some(x => x[0] === 'used');   // (an ability the unit uses: the player's, never in the weapon's row)
 const hasK = (u, k) => (u.kw || []).some(x => x.toLowerCase() === String(k).toLowerCase());
 const mc = u => u.models.reduce((t, m) => t + (parseInt(m, 10) || 1), 0);
 const condWords = (id, p, u, giver, own) => { const C = E.COND[id];
@@ -132,14 +134,14 @@ let nLines = 0, nRows = 0;
       const cw = on => (on || []).map(([id, p]) => condWords(id, p, u, gv, own)).join(' · ');
       const part = x => x && x.fx && x.fx.length ? ' (' + cw(x.on) + ': ' + E.fxLabel(x.fx) + ')' : '';
       if(m.set){ nRows++;
-        if(!fx || !w.ws || w.ws.length !== 1 || w.S.damaged || w.S.strat || !fx.every(([id]) => ROW[id] || SET[id])) fail('L3', where, 'a row value of ' + w.S.name + ' that is no one weapon\'s characteristic');
+        if(!fx || !w.ws || w.ws.length !== 1 || w.S.damaged || w.S.strat || used(w.b) || !fx.every(([id]) => ROW[id] || SET[id])) fail('L3', where, 'a row value of ' + w.S.name + ' that is no one weapon\'s characteristic');
         else { const exp = Object.fromEntries(fx.map(([id, p]) => ROW[id] ? [ROW[id], '+' + String(p).toUpperCase()] : [SET[id], String(p)]));
           if(JSON.stringify(exp) !== JSON.stringify(m.set) || m.weapon !== w.ws[0].ps[0].name) fail('L3', where, w.S.name + ' row ' + m.weapon + ' ' + JSON.stringify(m.set) + ', its box gives ' + w.ws[0].ps[0].name + ' ' + JSON.stringify(exp)); } }
       else { const bOn = new Set((w.b.on || []).map(x => JSON.stringify(x)));
         const exp = fx ? E.fxLabel(fx) + part(w.b.part) : 'one of: ' + w.b.pick.map(p => Object.assign({}, p, { fx:w.keep(p.fx) })).filter(p => p.fx.length).map(p => { const pon = (p.on || []).filter(x => !bOn.has(JSON.stringify(x)));
           return (p.name !== E.fxLabel(p.fx) ? p.name + ': ' : '') + E.fxLabel(p.fx) + (pon.length ? ' (' + cw(pon) + ')' : '') + part(p.part); }).join(' · ');
         if(m.note !== exp) fail('L3', where, w.S.name + ' says “' + m.note + '”, its box “' + exp + '”');
-        if(fx && w.ws && w.ws.length === 1 && !w.ws[0].group && !w.S.damaged && !w.S.strat && fx.every(([id]) => ROW[id] || SET[id])) fail('L3', where, w.S.name + ': one weapon\'s characteristic, not in its row'); }
+        if(fx && w.ws && w.ws.length === 1 && !w.ws[0].group && !w.S.damaged && !w.S.strat && !used(w.b) && fx.every(([id]) => ROW[id] || SET[id])) fail('L3', where, w.S.name + ': one weapon\'s characteristic, not in its row'); }
       // L5 its conditions' words
       const sPh = w.S.s && (w.S.s.phases || []).length === 1 ? ((w.S.s.turns && w.S.s.turns[w.S.s.phases[0]]) || w.S.s.turn) : null;
       const cond = cw(w.b.on);

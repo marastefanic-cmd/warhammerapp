@@ -1526,8 +1526,8 @@ function fnLine(S, b, u, kind, ab){
   if(S.src && S.src !== u) m.src = S.src;
   if(S.damaged) m.damaged = true;
   // a box for one weapon's characteristics, nothing else: that weapon's row shows it ("8 (+6)", "6/7"), its condition under it
-  // (not a stratagem's: the player's to use, as a one-off is: oneOffMod)
-  if(fx && ws && ws.length === 1 && !ws[0].group && !S.damaged && !S.strat && fx.every(([id]) => FN_ROW[id] || FN_SET[id])){
+  // (not a stratagem's, nor an ability's the unit uses, "if it uses this ability": the player's to use, as a one-off is: oneOffMod)
+  if(fx && ws && ws.length === 1 && !ws[0].group && !S.damaged && !S.strat && !(b.on || []).some(x => x[0] === 'used') && fx.every(([id]) => FN_ROW[id] || FN_SET[id])){
     m.weapon = ws[0].profiles[0].name; m.set = Object.fromEntries(fx.map(([id, p]) => FN_ROW[id] ? [FN_ROW[id], '+' + String(p).toUpperCase()] : [FN_SET[id], String(p)])); m.note = ''; m.who = ''; }
   return m;
 }
