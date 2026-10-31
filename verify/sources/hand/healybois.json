@@ -1,11 +1,5 @@
 {
  "_about": "What verify/from-json.js cannot fill mechanically for healybois, written by hand and read by it on every run (from-json.js --write gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 27 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. mod: a stratagem's weapon footnote (hand). note: GW's FAQ on it from the Faction Pack. spellings: an enhancement New Recruit and BSData spell otherwise than GW. units: per unit entry, its abilities' When targeted lines (def, AI-written, with defOf), GW's FAQs on its abilities (notes), and why (the reasons for what the list shows). readings: the readings of the list's rows (only what GW tags (Aura) is an aura, Core Rules 22.01). Each is a judgement verify/helpers.js lists for sign-off.",
- "spellings": {
-  "Instinctive Defense": {
-   "gw": "Instinctive Defence",
-   "why": "New Recruit and BSData spell it “Instinctive Defense”; GW’s Faction Pack Tyranids 1.3 (Instinctive Defence Enhancement, Change to) and Wahapedia print “Instinctive Defence”. The app has GW’s name, the export’s spelling as nr."
-  }
- },
  "gists": {
   "assimilation-swarm/broodguard-impulse": {
    "by": "AI (Claude)",
@@ -49,7 +43,7 @@
  },
  "units": {
   "the-red-terror": {
-   "why": "The Red Terror: GW’s keyword BURROWER (not in BSData, declared). Swallow Whole: a footnote on the gaping maw vs INFANTRY/MOUNTED/BEASTS (“each successful unmodified Wound roll is a Critical Wound”); the Damage tab does not count it (effects.js reads a Critical Wound only “on an unmodified wound roll of X+”), and its wounds regained are no attack or defence numbers. Subterranean Hunter: no numbers, no reading."
+   "why": "The Red Terror: GW’s keyword BURROWER (not in BSData, declared). Swallow Whole: a footnote on the gaping maw vs INFANTRY/MOUNTED/BEASTS (“each successful unmodified Wound roll is a Critical Wound”); the Damage tab counts it (effects.js critWoundAll, calc.js: every wound roll that wounds is a Critical Wound, so with the gaping maw’s [DEVASTATING WOUNDS] each is mortal wounds); its wounds regained are no attack or defence numbers. Subterranean Hunter: no numbers, no reading."
   },
   "the-swarmlord-tyrant-guard": {
    "defs": {
