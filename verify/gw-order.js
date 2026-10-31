@@ -81,7 +81,8 @@ module.exports = function make(ROOT) {
     if (!PACK.has(pf)) { let pages = []; try { pages = fs.readFileSync(path.join(ROOT, 'verify/.cache/gw', pf.replace(/\.pdf$/, '.txt')), 'utf8').split('\f').map(p => p.split('\n')); } catch (e) {} PACK.set(pf, pages); }
     const pages = PACK.get(pf), sq = x => String(x).toLowerCase().replace(/[^a-z0-9]/g, '');
     const p0 = pages.findIndex((p, i) => i > 0 && sq((p.find(l => l.trim()) || '')) === sq(name)); if (p0 < 0) return null;
-    const L = [].concat(...pages.slice(p0, p0 + 2)), seg = x => x.trim().split(/\s{4,}/)[0].trim();
+    // (the PDF text's control characters, \u0007 before a line's words, out)
+    const L = [].concat(...pages.slice(p0, p0 + 2)).map(l => l.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, '')), seg = x => x.trim().split(/\s{4,}/)[0].trim();
     const ki = L.findIndex(l => /^\s*KEYWORDS:/.test(l)); if (ki < 0 || /KEYWORDS\s+[–-]\s+ALL MODELS/i.test(L[ki])) return null;
     let kt = seg(L[ki].replace(/^\s*KEYWORDS:\s*/, '').replace(/FACTION KEYWORDS:.*$/, ''));
     for (let j = ki + 1; /,$/.test(kt) && j < L.length; j++) kt += ' ' + seg(L[j]);
@@ -180,7 +181,7 @@ module.exports = function make(ROOT) {
       const g = r.group ? gAt.get((r.who || '') + '\0' + r.group) : undefined, a = at.get(r);
       if (a < 0 && g === undefined) return null;
       return [g !== undefined ? g : a, a >= 0 ? a : Infinity];
-    });
+    }, parts);
     // a weapon's keywords: the page row's order; one a rule of the list adds (from) last
     for (const r of u[kind]) {
       if (!Array.isArray(r.kw) || r.kw.length < 2) continue;

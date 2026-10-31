@@ -1014,6 +1014,10 @@
     "why": {
      "source": "derived",
      "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)"
+    },
+    "group": {
+     "source": "derived",
+     "note": "verify/tables.js --write: the datasheet row's group, written on the entry only where its datasheet has two rows of the name (two weapons' profiles of one name: the Bloodthirster's strike of its Great axe of Khorne and of its Axe of Khorne), as the resolver finds a row by name and group"
     }
    }
   },
@@ -1083,6 +1087,10 @@
     "why": {
      "source": "derived",
      "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)"
+    },
+    "group": {
+     "source": "derived",
+     "note": "verify/tables.js --write: the datasheet row's group, written on the entry only where its datasheet has two rows of the name (two weapons' profiles of one name: the Bloodthirster's strike of its Great axe of Khorne and of its Axe of Khorne), as the resolver finds a row by name and group"
     }
    }
   },

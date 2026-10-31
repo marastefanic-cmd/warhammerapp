@@ -4242,8 +4242,8 @@ const ARMIES = [
         { name:'Hellfire breath' }
       ],
       melee:[
-        { name:'strike' },
-        { name:'sweep' }
+        { name:'strike', group:'Great axe of Khorne' },
+        { name:'sweep', group:'Great axe of Khorne' }
       ],
       abilities:[
         { name:'Daemon Lord of Khorne' },
@@ -6836,9 +6836,9 @@ const DATASHEETS = {
     { name:'Tyrant Guard', M:'6"', T:'8', Sv:'3+', W:'4', Ld:'8+', OC:'1', InSv:'–', base:'50mm' }
   ],
   melee:[
-    { name:'Scything talons and rending claws', range:'Melee', A:'5', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] },
     { name:'Bone cleaver, lash whip and rending claws', range:'Melee', A:'3', WS:'3+', S:'5', AP:'-1', D:'2', kw:[] },
-    { name:'Crushing claws and rending claws', range:'Melee', A:'2', WS:'4+', S:'8', AP:'-2', D:'2', kw:['TWIN-LINKED'] }
+    { name:'Crushing claws and rending claws', range:'Melee', A:'2', WS:'4+', S:'8', AP:'-2', D:'2', kw:['TWIN-LINKED'] },
+    { name:'Scything talons and rending claws', range:'Melee', A:'5', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] }
   ],
   abilities:[
     { name:'Guardian Organism', def:'The CHARACTER leading this unit has Feel No Pain 5+', text:'While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability.', defOf:'08bd3950' }
@@ -9262,8 +9262,8 @@ const DATASHEETS = {
     { name:'Pyrithite Spear', range:'12"', A:'1', BS:'2+', S:'10', AP:'-3', D:'D3+2', kw:['ASSAULT','MELTA 2'] }
   ],
   melee:[
-    { name:'Eternity-pattern Paragon Blade', range:'Melee', A:'6', WS:'2+', S:'10', AP:'-3', D:'3', kw:['PRECISION'] },
     { name:'Castellan Axe', range:'Melee', A:'5', WS:'2+', S:'10', AP:'-2', D:'4', kw:[] },
+    { name:'Eternity-pattern Paragon Blade', range:'Melee', A:'6', WS:'2+', S:'10', AP:'-3', D:'3', kw:['PRECISION'] },
     { name:'Guardian Spear', range:'Melee', A:'8', WS:'2+', S:'8', AP:'-2', D:'2', kw:['CLEAVE 1'] },
     { name:'Pyrithite Spear', range:'Melee', A:'8', WS:'2+', S:'8', AP:'-2', D:'2', kw:['CLEAVE 1'] }
   ],
@@ -10232,10 +10232,10 @@ const DATASHEETS = {
     { name:'Lash of Khorne', range:'12"', A:'6', BS:'2+', S:'8', AP:'-1', D:'2', kw:[] }
   ],
   melee:[
-    { name:'strike', group:'Great axe of Khorne', range:'Melee', A:'7', WS:'2+', S:'16', AP:'-4', D:'D6+2', kw:[] },
-    { name:'sweep', group:'Great axe of Khorne', range:'Melee', A:'14', WS:'2+', S:'10', AP:'-2', D:'2', kw:[] },
     { name:'strike', group:'Axe of Khorne', range:'Melee', A:'8', WS:'2+', S:'14', AP:'-4', D:'D3+1', kw:[] },
-    { name:'sweep', group:'Axe of Khorne', range:'Melee', A:'16', WS:'2+', S:'8', AP:'-2', D:'1', kw:[] }
+    { name:'sweep', group:'Axe of Khorne', range:'Melee', A:'16', WS:'2+', S:'8', AP:'-2', D:'1', kw:[] },
+    { name:'strike', group:'Great axe of Khorne', range:'Melee', A:'7', WS:'2+', S:'16', AP:'-4', D:'D6+2', kw:[] },
+    { name:'sweep', group:'Great axe of Khorne', range:'Melee', A:'14', WS:'2+', S:'10', AP:'-2', D:'2', kw:[] }
   ],
   abilities:[
     { name:'Daemon Lord of Khorne', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **KHORNE LEGIONES DAEMONICA** unit is within 6" of this model, each time a model in that unit makes a melee attack, add 1 to the **Hit roll**.' },
@@ -14479,12 +14479,15 @@ function resolveArmies(armies, sheets, order, factions, opts){
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values
   function sorted(o, keys){ var out = {}, i, k; for(i = 0; i < keys.length; i++) if(keys[i] in o) out[keys[i]] = o[keys[i]]; for(k in o) if(!(k in out)) out[k] = o[k]; return out; }
-  function rowOf(part, kind, name){ var rows = (part && part[kind]) || [], j; for(j = 0; j < rows.length; j++) if(rows[j].name === name) return j; return -1; }
+  function rowOf(part, kind, name, group){ var rows = (part && part[kind]) || [], j; for(j = 0; j < rows.length; j++) if(rows[j].name === name && (group === undefined || (rows[j].group || null) === group)) return j; return -1; }
   function find(parts, kind, r){
     var name = kind === 'stats' ? String(r.name).replace(/ ×\d+$/, '') : r.name, i, j;
-    if(r.of !== undefined) return { p:r.of, j:rowOf(parts[r.of], kind, name) };
-    for(i = 0; i < parts.length; i++) if(parts[i].name === r.who && (j = rowOf(parts[i], kind, name)) >= 0) return { p:i, j:j };
-    for(i = 0; i < parts.length; i++) if((j = rowOf(parts[i], kind, name)) >= 0) return { p:i, j:j };
+    // (a row by its name and, where its datasheet has two rows of the name, the group the entry names: the Bloodthirster's "strike" of its
+    // Great axe of Khorne, not of its Axe of Khorne)
+    var g = kind === 'stats' ? undefined : r.group;
+    if(r.of !== undefined) return { p:r.of, j:rowOf(parts[r.of], kind, name, g) };
+    for(i = 0; i < parts.length; i++) if(parts[i].name === r.who && (j = rowOf(parts[i], kind, name, g)) >= 0) return { p:i, j:j };
+    for(i = 0; i < parts.length; i++) if((j = rowOf(parts[i], kind, name, g)) >= 0) return { p:i, j:j };
     return { p:-1, j:-1 };
   }
   // names alike in case and apostrophe (New Recruit's "Martial Ka'tah", Wahapedia's "Martial Ka’tah")

@@ -125,12 +125,15 @@ function resolveArmies(armies, sheets, order, factions, opts){
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values
   function sorted(o, keys){ var out = {}, i, k; for(i = 0; i < keys.length; i++) if(keys[i] in o) out[keys[i]] = o[keys[i]]; for(k in o) if(!(k in out)) out[k] = o[k]; return out; }
-  function rowOf(part, kind, name){ var rows = (part && part[kind]) || [], j; for(j = 0; j < rows.length; j++) if(rows[j].name === name) return j; return -1; }
+  function rowOf(part, kind, name, group){ var rows = (part && part[kind]) || [], j; for(j = 0; j < rows.length; j++) if(rows[j].name === name && (group === undefined || (rows[j].group || null) === group)) return j; return -1; }
   function find(parts, kind, r){
     var name = kind === 'stats' ? String(r.name).replace(/ ×\\d+$/, '') : r.name, i, j;
-    if(r.of !== undefined) return { p:r.of, j:rowOf(parts[r.of], kind, name) };
-    for(i = 0; i < parts.length; i++) if(parts[i].name === r.who && (j = rowOf(parts[i], kind, name)) >= 0) return { p:i, j:j };
-    for(i = 0; i < parts.length; i++) if((j = rowOf(parts[i], kind, name)) >= 0) return { p:i, j:j };
+    // (a row by its name and, where its datasheet has two rows of the name, the group the entry names: the Bloodthirster's "strike" of its
+    // Great axe of Khorne, not of its Axe of Khorne)
+    var g = kind === 'stats' ? undefined : r.group;
+    if(r.of !== undefined) return { p:r.of, j:rowOf(parts[r.of], kind, name, g) };
+    for(i = 0; i < parts.length; i++) if(parts[i].name === r.who && (j = rowOf(parts[i], kind, name, g)) >= 0) return { p:i, j:j };
+    for(i = 0; i < parts.length; i++) if((j = rowOf(parts[i], kind, name, g)) >= 0) return { p:i, j:j };
     return { p:-1, j:-1 };
   }
   // names alike in case and apostrophe (New Recruit's "Martial Ka'tah", Wahapedia's "Martial Ka’tah")
@@ -538,11 +541,7 @@ function build(R){
   for(const s of sheets.values()){
     const g = GWO().sheet(s.id, Object.assign({ name:s.name, faction:s.faction }, Object.fromEntries(ROWS.map(k => [k, [...s.rows[k].values()].map(R => Object.assign({}, R.obs.length ? R.obs[0].r : R.ds, { _k:R.key }))]))));
     for(const kind of ['ranged', 'melee', 'abilities']){
-      // (a catalogue row with the name of a list's row, the Bloodthirster's Axe of Khorne "strike" beside the list's Great axe of Khorne one:
-      // the resolver finds a row by its name, so of the slots these rows take in GW's order the list's rows take the first)
-      const rs = g[kind].map(r => s.rows[kind].get(r._k)), name = R => String(R.key).split('\0')[0];
-      for(const nm0 of new Set(rs.map(name))){ const ix = rs.map((R, i) => name(R) === nm0 ? i : -1).filter(i => i >= 0); if(ix.length < 2) continue;
-        const grp = ix.map(i => rs[i]), mine = grp.filter(R => R.obs.length).concat(grp.filter(R => !R.obs.length)); ix.forEach((i, j) => { rs[i] = mine[j]; }); }
+      const rs = g[kind].map(r => s.rows[kind].get(r._k));
       s.rows[kind] = new Map(rs.map(R => [R.key, R]));
     }
     if(s.catalog === 'only' || (s.catFilled && (s.catFilled.has('kw') || s.catFilled.has('rules')))) GWO().catalogSheet(s.ds, s.id, [...s.rows.abilities.values()].map(R => R.ds));
@@ -592,6 +591,8 @@ function build(R){
     for(const k of Object.keys(R.ds)) if(k !== 'name' && !(k in o.r) && !FP_KEYS.includes(k)) e[k] = null;
     for(const k of R.conflict) if(!(k in o.r) && !listLevel(o, k) && !FP_KEYS.includes(k)) over[k] = null;
     if(findPart(o.U, o.kind, e) !== o.part) e.of = o.part;
+    // (a datasheet with two rows of this name, of two weapons: the entry names its row's group, as the resolver finds it by both)
+    if(o.kind !== 'stats' && [...o.sheet.rows[o.kind].values()].some(x => x !== R && String(x.key).split('\0')[0] === R.ds.name)) e.group = R.ds.group || null;
     if(o.why) e.why = o.why;
     if(Object.keys(over).length) e.over = over;
     return { e, plain:Object.keys(e).length === 1 && e.name === R.key };
