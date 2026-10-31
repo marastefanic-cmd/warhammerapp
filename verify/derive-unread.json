@@ -324,11 +324,13 @@
    "of": "7522a4f2",
    "reading": {
     "ph": [
+     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
+     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -339,11 +341,13 @@
    "of": "3c11830a",
    "reading": {
     "ph": [
+     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
+     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -472,11 +476,13 @@
    "of": "ed251c7c",
    "reading": {
     "ph": [
+     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
+     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -487,11 +493,13 @@
    "of": "42b18b8c",
    "reading": {
     "ph": [
+     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
+     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -726,9 +734,13 @@
    "of": "6069966f",
    "reading": {
     "ph": [
+     "movement",
      "shooting"
     ],
-    "turn": "your"
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
    },
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: ranged, label-own-target)"
@@ -760,11 +772,13 @@
    "of": "3bb6879b",
    "reading": {
     "ph": [
+     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
+     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -871,9 +885,13 @@
    "of": "6069966f",
    "reading": {
     "ph": [
+     "movement",
      "shooting"
     ],
-    "turn": "your"
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
    },
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: ranged, label-own-target)"
@@ -938,9 +956,13 @@
    "of": "6069966f",
    "reading": {
     "ph": [
+     "movement",
      "shooting"
     ],
-    "turn": "your"
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
    },
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: ranged, label-own-target)"
@@ -949,11 +971,13 @@
    "of": "7522a4f2",
    "reading": {
     "ph": [
+     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
+     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -964,11 +988,13 @@
    "of": "3c11830a",
    "reading": {
     "ph": [
+     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
+     "movement": "opp",
      "shooting": "your"
     }
    },

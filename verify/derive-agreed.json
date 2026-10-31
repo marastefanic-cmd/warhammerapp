@@ -3426,11 +3426,13 @@
   },
   "ability-timing | pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls": {
    "ph": [
+    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
+    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -3664,9 +3666,13 @@
   },
   "ability-timing | 6-bigs · Knight Destrier · Saturation Fire": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | 6-bigs · Knight Destrier · Invulnerable Save (5+*)": {},
   "ability-timing | 6-bigs · Knight Errant · Aggressive Assault": {
@@ -3680,18 +3686,26 @@
   "ability-tag | 6-bigs · Knight Errant · Errant’s Duty": "Bondsman",
   "ability-timing | 6-bigs · Knight Paladin · Seasoned Noble": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | 6-bigs · Knight Paladin · Invulnerable Save (5+*)": {},
   "ability-timing | 6-bigs · Knight Paladin · Damaged: 1-9 Wounds Remaining": {},
   "ability-tag | 6-bigs · Knight Paladin · Paladin’s Duty": "Bondsman",
   "ability-timing | 6-bigs · Knight Warden · Thin Their Ranks": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | 6-bigs · Knight Warden · Invulnerable Save (5+*)": {},
   "ability-timing | 6-bigs · Knight Warden · Damaged: 1-9 Wounds Remaining": {},
@@ -3745,9 +3759,13 @@
   },
   "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Saturation Fire": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Invulnerable Save (5+*)": {},
   "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Sanctuary": {},
@@ -4325,11 +4343,13 @@
   },
   "ability-timing | mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls": {
    "ph": [
+    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
+    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -4791,11 +4811,13 @@
   },
   "ability-timing | fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering": {
    "ph": [
+    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
+    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -4988,9 +5010,13 @@
   },
   "ability-timing | navigator-sounds-op-ngl · Knight Destrier · Saturation Fire": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | navigator-sounds-op-ngl · Knight Destrier · Invulnerable Save (5+*)": {},
   "ability-timing | navigator-sounds-op-ngl · Knight Errant · Aggressive Assault": {
@@ -5642,41 +5668,57 @@
   },
   "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers": {
    "ph": [
+    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
+    "movement": "opp",
     "shooting": "your"
    }
   },
   "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers": {
    "ph": [
+    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
+    "movement": "opp",
     "shooting": "your"
    }
   },
   "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand] · Brigand": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | big-demons-baby · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
    "at": "Start of the battle round",

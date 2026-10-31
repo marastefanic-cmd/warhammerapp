@@ -149,6 +149,7 @@ const CHARGE_THEN = { id:'charge-then-turn', re:/\bends a charge move\b[^]*?\bun
 const LABEL_RULES = [
   { id:'label-damaged', why:'a Damaged band ("While this model has 1-N wounds remaining, …"): shown by its damaged chip and footnote; its label is only a phase its words name ("… only one of the C\'tan Powers weapons in your Shooting phase"), else none' },
   { id:'label-own-target', why:'"makes a ranged attack that targets X" / "ranged attacks that target X", and of any attack, "makes an attack that targets X" / "attacks that target X" (the closest eligible target, a unit on an objective): a bonus for the targets the unit picks in its own Shooting phase, as the signed-off lists label it; Fire Overwatch is not added. (A labelling choice, not a Core Rules limit: snap shooting, 15.09, can target any visible eligible enemy unit within 24", but hits only on an unmodified 6 and cannot re-roll hit rolls, so a hit bonus does nothing there)' },
+  { id:'label-own-target-snap', why:'an own-target attack bonus (label-own-target) that still works in snap shooting, Core Rules 15.09 (Fire Overwatch hits only on an unmodified 6 and cannot re-roll hit rolls): AP, a wound roll (bonus or re-roll), damage, or a weapon ability ([HEAVY] aside, a hit bonus): Fire Overwatch is added as for any attack; one that is only a hit bonus or hit re-roll keeps label-own-target (the owner\'s rule, "show Overwatch too" wherever the bonus applies)' },
   { id:'label-named-weapons', why:'a weapon ability given to weapons the unit\'s datasheet names ("its hellforged weapons have the [DEVASTATING WOUNDS] ability", "its Dark Blessing has the [SUSTAINED HITS D3] ability"): the phase of those weapons, your Shooting phase for ranged ones, the Fight phase for melee ones (not "weapons have": both)' },
   { id:'label-those-attacks', why:'"Each time this model is selected to shoot or fight, you can re-roll one Hit roll … when resolving those attacks": the attacks of that activation, your Shooting phase and the Fight phase; not added for Fire Overwatch' },
   { id:'label-options', why:'the options of a rule or ability: written in its own lines ("**Name:** effect", a bullet "**Name**" and its line) they are left out of its label (Canticles of the Omnissiah, Battle Protocols, Blood Tithe; not "**Additional Effect:**", which is no choice); set out as a table or under headings of their own, each row\'s phases are added (from its own WHEN, else the item\'s trigger: Martial Ka\'tah, Cabal of Sorcerers, Blessings of Khorne, Combat Doctrines), in both players\' turns when the item is triggered at the start of the battle round (Pledges to the Dark Prince), with Fire Overwatch for a row\'s ranged attacks when it lasts "until the start of your next Command phase" (Kindred Sorcery); not a table of abilities the units "gain" (Doctrina Imperatives, Harbingers of Dread: each unit\'s sheet has them). A detachment\'s KEYWORDS section is left out (army building)' },
@@ -171,6 +172,8 @@ function namedWeapons(s, W){
 }
 // (any attack the unit makes, "makes an attack that targets the closest eligible target", Close-range Killers: its ranged ones as a ranged
 // attack's, GW's wording choosing the target the same way)
+// what still works in snap shooting (Core Rules 15.09): AP, a wound roll, damage, a weapon ability but [HEAVY] (a hit bonus)
+const SNAP_WORKS = /\barmour penetration\b|\bAP\b|\bwound rolls?\b|\bdamage\b|\[(?!HEAVY\])[A-Z][^\]]*\]/i;
 const OWN_TARGET = /\bmakes? (?:a ranged |an )attack that targets\b(?! (?:this|that) (?:unit|model)\b| it\b| the bearer\b)|\b(?:ranged )?attacks that target\b(?! (?:this|that) (?:unit|model)\b| it\b| the bearer\b)/i;
 const EVERY = Object.fromEntries(PH.map(p => [p, 'either']));
 function EVERY_MOVE(){ return { movement:'either', charge:'either', fight:'either' }; }
@@ -342,8 +345,13 @@ function usedIn(text, ctx, trig){
   const those = ctx && ctx.label && shoots && /\beach time this (?:model|unit) is selected to shoot\b[^.]*\bwhen resolving those attacks\b/i.exec(t);
   if(those){ shoots = false; reasons.push({ rule:'label-those-attacks', match:those[0].slice(0, 80) }); }
   // (a label: not a ranged attack chosen by its target, "makes a ranged attack that targets the closest eligible target": label-own-target)
+  // (but Fire Overwatch too where the bonus still works in snap shooting, Core Rules 15.09: it hits only on an unmodified 6 and cannot
+  // re-roll hit rolls, so a hit bonus or hit re-roll does nothing there; AP, a wound roll, damage or a weapon ability, [HEAVY] aside,
+  // still do: label-own-target-snap)
   const ownTarget = ctx && ctx.label && shoots && OWN_TARGET.exec(t);
-  if(ownTarget){ shoots = false; reasons.push({ rule:'label-own-target', match:ownTarget[0] }); }
+  const snap = ownTarget && SNAP_WORKS.exec(plain(t));
+  if(ownTarget && snap) reasons.push({ rule:'label-own-target-snap', match:snap[0] });
+  else if(ownTarget){ shoots = false; reasons.push({ rule:'label-own-target', match:ownTarget[0] }); }
   if(!trig && (shoots || guarded) && !USED_MODIFIERS.find(r => r.id === 'same-turn').re.test(t) && !movedTurn && !/\bin a turn in which it (?:Fell Back|Advanced)\b/i.test(plain(t))){
     for(const cs of (ctx && ctx.core) || []){
       if(!/\byour unit shoots\b/i.test(plain(cs.effect))) continue;
