@@ -1,9 +1,9 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "e70048b789",
- "data": "2026-10-30.2",
- "date": "30 Oct 2026",
+ "build": "9e7440252d",
+ "data": "2026-10-31.1",
+ "date": "31 Oct 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
@@ -11,7 +11,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "BSData,",
-   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (16366 facts)."
+   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (16369 facts)."
   },
   {
    "label": "Granted values:",
@@ -27,11 +27,11 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "1618 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "1616 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "3171 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "3176 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
@@ -71,7 +71,7 @@ window.WH_VERIFIED = {
   },
   "CORE_STRATAGEMS": {
    "what": "the core stratagems",
-   "cols": "id:hand gist:ai-summary gistOf:derived name:gw cp:gw phases:derived turn:derived turns:derived when:gw target:gw effect:gw restrictions:gw needs:hand note:hand limit:ai-reading defCalc:ai-reading cpNote:hand def:ai-reading defOf:derived mod:ai-reading shield:ai-reading help:ai-reading defPick:ai-reading react:ai-reading weaponKw:ai-reading lasts:ai-reading calcNote:ai-reading readOf:derived"
+   "cols": "id:hand gist:ai-summary gistOf:derived name:gw cp:gw phases:derived turn:derived turns:derived when:gw target:gw effect:gw restrictions:gw needs:hand note:hand limit:ai-reading defCalc:ai-reading cpNote:hand def:ai-reading defOf:derived mod:ai-reading shield:ai-reading defPick:ai-reading react:ai-reading weaponKw:ai-reading lasts:ai-reading calcNote:ai-reading readOf:derived"
   },
   "FACTIONS": {
    "what": "one row per faction: its army rules, detachments and aliases",
@@ -95,7 +95,7 @@ window.WH_VERIFIED = {
   },
   "FACTIONS.detachments.stratagems": {
    "what": "a detachment's stratagems",
-   "cols": "id:derived gist:ai-summary gistOf:derived name:gw cp:gw phases:derived turn:derived turns:derived when:gw target:gw effect:gw restrictions:gw needs:hand note:hand limit:ai-reading defCalc:ai-reading cpNote:hand def:ai-reading defOf:derived mod:ai-reading shield:ai-reading help:ai-reading defPick:ai-reading react:ai-reading weaponKw:ai-reading lasts:ai-reading calcNote:ai-reading readOf:derived"
+   "cols": "id:derived gist:ai-summary gistOf:derived name:gw cp:gw phases:derived turn:derived turns:derived when:gw target:gw effect:gw restrictions:gw needs:hand note:hand limit:ai-reading defCalc:ai-reading cpNote:hand def:ai-reading defOf:derived mod:ai-reading shield:ai-reading defPick:ai-reading react:ai-reading weaponKw:ai-reading lasts:ai-reading calcNote:ai-reading readOf:derived"
   },
   "FACTIONS.detachments.enhancements": {
    "what": "a detachment's enhancements",
@@ -115,11 +115,11 @@ window.WH_VERIFIED = {
   },
   "ARMIES.units.ranged": {
    "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
-   "cols": "name:newrecruit who:newrecruit n:newrecruit from:bsdata enh:newrecruit range:bsdata A:bsdata BS:bsdata WS:bsdata S:bsdata AP:bsdata D:bsdata kw:bsdata over:hand of:derived why:derived"
+   "cols": "name:newrecruit who:newrecruit n:newrecruit from:bsdata enh:newrecruit range:bsdata A:bsdata BS:bsdata WS:bsdata S:bsdata AP:bsdata D:bsdata kw:bsdata over:hand of:derived why:derived group:derived"
   },
   "ARMIES.units.melee": {
    "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
-   "cols": "name:newrecruit who:newrecruit n:newrecruit from:bsdata enh:newrecruit range:bsdata A:bsdata BS:bsdata WS:bsdata S:bsdata AP:bsdata D:bsdata kw:bsdata over:hand of:derived why:derived"
+   "cols": "name:newrecruit who:newrecruit n:newrecruit from:bsdata enh:newrecruit range:bsdata A:bsdata BS:bsdata WS:bsdata S:bsdata AP:bsdata D:bsdata kw:bsdata over:hand of:derived why:derived group:derived"
   },
   "ARMIES.units.abilities": {
    "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",

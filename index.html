@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = 'e70048b789';</script>
+<script>window.WH_BUILD = '9e7440252d';</script>
 </head>
 <body>
 <style>
@@ -325,11 +325,6 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .use.gw{padding-left:0; margin-top:10px}
 .use.gw .who{display:inline-block; margin:0 7px 0 0; vertical-align:1px}
 .wh + .wb, .who + .wb, .use + .wb, .wb:first-child{border-top:0}
-.wj{display:flex; align-items:center; gap:7px; margin:1px 6px; font:600 11.5px/1.2 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--accent)}
-.wj::before, .wj::after{content:''; flex:1; border-top:1px dashed var(--line)}
-.wj::before{flex:0 0 14px}
-.wj i{font-style:normal; color:var(--muted); letter-spacing:.06em}
-.wj + .wb{border-top:0}
 /* the models box at the top of a datasheet, as New Recruit lists the models */
 .mdl{margin:4px 0 10px}
 .ml{padding:4px 0; line-height:1.3}
@@ -476,7 +471,6 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .ds .wb, .ds .wb:has(> .wr .x){padding:5px 10px 4px}
 .ds .who{display:block; justify-self:stretch; margin:0; padding:5px 10px 3px; border:0; border-top:1px solid var(--line); border-radius:0; background:var(--surface); font:600 12.5px/1.2 var(--f-head); letter-spacing:.08em; color:var(--fg2)}
 .ds .who + .wb{border-top:0}
-.ds .wj{margin:1px 10px}
 .ds .use{padding:4px 10px 3px}
 .ds .mods{margin:0; padding:7px 10px 8px; border-top:1px solid var(--line)}
 .ds .mods.all{margin:0}
@@ -1113,11 +1107,11 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=e70048b789"></script>
-<script src="data.js?v=e70048b789"></script>
-<script src="calc.js?v=e70048b789"></script>
-<script src="effects.js?v=e70048b789"></script>
-<script src="import.js?v=e70048b789"></script>
+<script src="verified.js?v=9e7440252d"></script>
+<script src="data.js?v=9e7440252d"></script>
+<script src="calc.js?v=9e7440252d"></script>
+<script src="effects.js?v=9e7440252d"></script>
+<script src="import.js?v=9e7440252d"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1421,9 +1415,6 @@ function matches(n, u){
 const eligible = (s, a) => (a || army()).units.filter(u => matches(s.needs, u));
 // (one unit: a reference sheet too, the Spore Mines a stratagem can target once they are on the battlefield)
 const canTarget = (s, u, a) => unitsAll(a || army()).includes(u) && matches(s.needs, u);
-// a stratagem whose TARGET is another unit of the list but whose effect changes this unit's attacks (help: Daemonic Fury, a BLOOD
-// LEGIONS target and the WORLD EATERS unit within 6" it selects), as shield is for the defence
-const helpedBy = (u, a) => allStratagems(a).filter(s => s.help && matches(s.help.to, u) && (a || army()).units.some(x => x !== u && matches(s.help.by, x)));
 function allStratagems(a){
   a = a || army();
   const out = [];
@@ -1513,8 +1504,7 @@ function unitMods(u, kind){
     if(lance.length) det.push({ kind:k, when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });
   }
   if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) det.push({ kind:'ranged', when:'Visible target within 12" with models on ground level (not AIRCRAFT)', note:'BS improved by 1', from:'Plunging Fire', rule:'Plunging Fire' });
-  const strat = allStratagems().filter(s => s.mod && canTarget(s, u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod))
-    .concat(helpedBy(u).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.help.mod)));
+  const strat = allStratagems().filter(s => s.mod && canTarget(s, u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod));
   return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');
 }
 // the footnotes the weapon tables show (datasheet, Ranged and Melee screens): unitMods, and the Waaagh! army rule's "That unit's
@@ -4575,56 +4565,21 @@ function useLine(items, kind, u, who){
   return multi.map(l => '<p class="use">' + useSentence(l.set, kind, u, l.who) + '</p>').join('') +
     (others ? '<p class="use"><b class="m">The others:</b> one each (×N = how many the unit has).</p>' : '') + none;
 }
-// which weapons a model uses together, drawn between the rows instead of written out:
-// ranged: every gun fires (Select Weapons), except that a model (not MONSTER/VEHICLE) with [CLOSE-QUARTERS]
-//   weapons and other ones uses those or the others (Close-quarters): "or" between the two groups;
-// melee: a model picks one weapon to fight with: "or" between the weapons of one model;
-//   an [EXTRA ATTACKS] weapon is used on top: "+".
-// Nothing between two rows: both are used (by the same model, or by different models).
-// Returns { order, joins }, or null when a model's choices cannot sit next to each other (then a sentence says it).
-function weaponJoins(items, kind, u, who){
-  if(!u.gear) return null;
+// weapon rows are in GW's datasheet order (data.js, verify/gw-order.js); which of them a model uses together is said in words
+// (useLine) when a model has a choice: ranged, a model (not MONSTER/VEHICLE) with [CLOSE-QUARTERS] weapons and other ones uses those
+// or the others (Close-quarters); melee, a model with two or more melee weapons picks one, an [EXTRA ATTACKS] weapon on top
+function weaponChoice(items, kind, u, who){
+  if(!u.gear) return false;
   const own = i => who == null || whoOfLine(u, i) === who;
-  const mine = u.gear.map((g, i) => i).filter(own);
+  const lines = u.gear.map((g, i) => i).filter(own).map(i => items.filter(it => u.gear[i].includes(itemName(it))));
   const short = i => u.models[i].replace(/^\d+× /, '').replace(/ w\/.*$/, '');
-  // a divider names a models line in full when another line shares its short name ("Tankbusta w/ Two Busta Rokkit Launchas")
-  const nameOf = i => mine.some(j => j !== i && short(j) === short(i)) ? u.models[i].replace(/^\d+× /, '') : short(i);
-  const lines = mine.map(i => ({ i, name:nameOf(i), has:items.filter(it => u.gear[i].includes(itemName(it))) })).filter(l => l.has.length);
   // a weapon only one models line of one model has, in a squad of mixed loadouts: that model's name on its row (the weapon tells which one)
-  if(lines.length > 1) for(const it of items){ const ls = lines.filter(l => l.has.includes(it)); if(!it.n && !it.carrier && ls.length === 1 && /^1× /.test(u.models[ls[0].i])) it.carrier = short(ls[0].i); }
-  const big = hasKw(u, 'Monster') || hasKw(u, 'Vehicle');
-  let order = [];
-  for(const l of lines) for(const it of l.has) if(!order.includes(it)) order.push(it);
-  for(const it of items) if(!order.includes(it)) order.push(it);
-  const joins = order.map(() => null);
-  const scopeOf = (ls, its) => { const carry = lines.filter(l => its.some(it => l.has.includes(it))); return ls.length < carry.length ? [...new Set(ls.map(l => l.name))].join(', ') : ''; };
-  if(kind === 'ranged'){
-    order = order.filter(it => !isCQ(it)).concat(order.filter(isCQ));
-    const both = big ? [] : lines.filter(l => l.has.some(isCQ) && l.has.some(it => !isCQ(it)));
-    const k = order.findIndex(isCQ);
-    if(!both.length || k <= 0) return { order, joins };
-    // one divider between all the other guns and all the [CLOSE-QUARTERS] ones: only when every model with these has both
-    if(scopeOf(both, order)) return null;
-    joins[k] = { t:'or', rule:'Close-quarters', scope:'when using another shooting type' };   // in close-quarters shooting: those weapons only
-    return { order, joins };
-  }
-  order = order.filter(it => !isEA(it)).concat(order.filter(isEA));
-  for(let k = 1; k < order.length; k++){
-    const a = order[k - 1], b = order[k];
-    // "+": named when not every model with this weapon or one of the weapons above it has the two together
-    if(isEA(b)){ const ls = lines.filter(l => l.has.includes(b) && l.has.some(it => !isEA(it))); if(ls.length) joins[k] = { t:'+', rule:'EXTRA ATTACKS', scope:scopeOf(ls, [b].concat(order.filter(it => !isEA(it)))) }; continue; }
-    const ls = lines.filter(l => l.has.includes(a) && l.has.includes(b));
-    if(ls.length) joins[k] = { t:'or', rule:'Select Weapons', scope:scopeOf(ls, [a, b]) };
-  }
-  // every model's weapons to pick from must be neighbours joined by "or"
-  for(const l of lines){
-    const main = l.has.filter(it => !isEA(it)); if(main.length < 2) continue;
-    const ix = main.map(it => order.indexOf(it)).sort((x, y) => x - y);
-    if(ix[ix.length - 1] - ix[0] !== main.length - 1) return null;
-  }
-  return { order, joins };
+  const mine = u.gear.map((g, i) => i).filter(own), has = mine.map(i => ({ i, has:items.filter(it => u.gear[i].includes(itemName(it))) })).filter(l => l.has.length);
+  const choice = kind === 'ranged' ? !(hasKw(u, 'Monster') || hasKw(u, 'Vehicle')) && lines.some(l => l.some(isCQ) && l.some(it => !isCQ(it))) : lines.some(l => l.length > 1);
+  // (with a choice, the sentence names the models: useLine)
+  if(!choice && has.length > 1) for(const it of items){ const ls = has.filter(l => l.has.includes(it)); if(!it.n && !it.carrier && ls.length === 1 && /^1× /.test(u.models[ls[0].i])) it.carrier = short(ls[0].i); }
+  return choice;
 }
-const joinRow = j => '<div class="wj"><span class="uv" role="button" tabindex="0" data-rule="' + esc(j.rule) + '">' + (j.t === 'or' ? 'or' : '+') + '</span>' + (j.scope ? '<i>' + esc(j.scope) + '</i>' : '') + '</div>';
 function weaponRows(list, keys, mods, u, kind){
   const items = weaponItems(list);
   for(const it of items) if((u.unplaced || []).includes(itemName(it))) it.carrier = 'which models: not said';
@@ -4632,12 +4587,10 @@ function weaponRows(list, keys, mods, u, kind){
   let h = '';
   for(const who of whos){
     const mine = items.filter(it => (it.who || '') === who);
-    if(kind === 'melee') mine.sort((x, y) => (isEA(x) ? 1 : 0) - (isEA(y) ? 1 : 0));   // the main weapon first, as the sentence says
     const part = u.leads && whos.length > 1 ? who : null;
-    const jn = mine.length > 1 ? weaponJoins(mine, kind, u, part) : { order:mine, joins:[] };
     h += whos.length > 1 ? '<div class="who">' + esc(who) + '</div>' : '';
-    if(!jn) h += useLine(mine, kind, u, part);   // choices that cannot be drawn: said in words
-    for(const [k, it] of (jn ? jn.order : mine).entries()) h += (jn && jn.joins[k] ? joinRow(jn.joins[k]) : '') + '<div class="wb">' + weaponBlock(it, keys, mods, u) + '</div>';
+    if(mine.length > 1 && weaponChoice(mine, kind, u, part)) h += useLine(mine, kind, u, part);   // a model's choice: said in words
+    for(const it of mine) h += '<div class="wb">' + weaponBlock(it, keys, mods, u) + '</div>';
   }
   return h;
 }
@@ -4738,10 +4691,10 @@ const onceTag = ab => {
   return '';
 };
 // abilities of one model (the leader, the champion) or one choice ("Crimson King: pick one") sit
-// under its chip, like the weapons; the unit's own come first
+// under its chip, like the weapons; the groups in the order of their rows (GW's datasheet order: data.js, verify/gw-order.js)
 // (on the datasheet: { suffix:true }, each row names its model after the name, as New Recruit prints it)
 function abilityRows(abs, u, opts){
-  const whos = [...new Set(abs.map(ab => ab.who || ''))].sort((x, y) => (x ? 1 : 0) - (y ? 1 : 0));
+  const whos = [...new Set(abs.map(ab => ab.who || ''))];
   if(opts && opts.suffix) return abilityList(whos.flatMap(w => abs.filter(ab => (ab.who || '') === w)), u, true);
   if(whos.length > 1 || whos[0]) return whos.map(w => (w ? '<div class="who">' + esc(w) + '</div>' : '') + abilityList(abs.filter(ab => (ab.who || '') === w), u)).join('');
   return abilityList(abs, u);
@@ -4849,8 +4802,7 @@ function kwStars(u){
 function screenUnit(){
   const u = unitById(cur.unit);
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
-  const strats = allStratagems().filter(s => canTarget(s, u))   // every one it can be the target of
-    .concat(helpedBy(u).filter(s => !canTarget(s, u)).map(s => Object.assign({}, s, { via:s.help.via })));   // and one another unit is the target of (help)
+  const strats = allStratagems().filter(s => canTarget(s, u));   // every one it can be the target of (its needs, from GW's TARGET)
   const def = defenceItems(u, null, { shields:true }).filter(x => !armyRuleOption(x));   // (an army rule's option: not spelled out here)
   const tgKey = 'tg|' + cur.army + '|' + u.id;
   const meta = (u.ref ? [] : [esc(u.role)]).concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
@@ -4917,7 +4869,7 @@ function stratLines(u, strats){
   const groups = detachments().map(d => [d.name, strats.filter(st => st.src === d.name)]).concat([['Core', strats.filter(st => st.src === 'Core')]]);
   const none = groups.filter(([n, l]) => !l.length && n !== 'Core').map(([n]) => n);
   return '<div class="dkv sl" id="sec-strats"><span class="dk">Stratagems</span><span class="dv">' + groups.filter(([, l]) => l.length).map(([n, l]) =>
-    '<p><b class="sln">' + esc(n) + '</b> ' + ord(l).map(st => linkTo('strat', st.id, st.name) + (st.via ? ' <span class="from">(' + esc(st.via) + ')</span>' : '')).join(', ') + '</p>').join('') +
+    '<p><b class="sln">' + esc(n) + '</b> ' + ord(l).map(st => linkTo('strat', st.id, st.name)).join(', ') + '</p>').join('') +
     (none.length ? '<p class="from">None from ' + esc(orList(none)) + '.</p>' : '') + '</span></div>';
 }
 

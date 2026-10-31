@@ -13109,17 +13109,17 @@
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
-   "item": "nidzillas / hive-tyrant / ability:Onslaught",
-   "field": "ability:Onslaught",
-   "doc": "pack:tyranids",
-   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Onslaught Ability",
-   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
-  },
-  {
    "item": "nidzillas / hive-tyrant / ability:Will of the Hive Mind",
    "field": "ability:Will of the Hive Mind",
    "doc": "pack:tyranids",
    "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / hive-tyrant / ability:Onslaught",
+   "field": "ability:Onslaught",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Onslaught Ability",
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
@@ -13298,17 +13298,17 @@
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
-   "item": "healybois / hive-tyrant-tyrant-guard / ability:Onslaught (Hive Tyrant)",
-   "field": "ability:Onslaught (Hive Tyrant)",
-   "doc": "pack:tyranids",
-   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Onslaught Ability",
-   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
-  },
-  {
    "item": "healybois / hive-tyrant-tyrant-guard / ability:Will of the Hive Mind (Hive Tyrant)",
    "field": "ability:Will of the Hive Mind (Hive Tyrant)",
    "doc": "pack:tyranids",
    "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "healybois / hive-tyrant-tyrant-guard / ability:Onslaught (Hive Tyrant)",
+   "field": "ability:Onslaught (Hive Tyrant)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Onslaught Ability",
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
@@ -13473,7 +13473,7 @@
    "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
   },
   {
-   "item": "6-bigs / knight-destrier / ability:Damaged: 1-6 Wounds Remaining",
+   "item": "6-bigs / knight-destrier / ability:Ram Jets",
    "field": "text",
    "doc": "pack:imperial-knights",
    "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
@@ -13487,13 +13487,6 @@
    "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
   },
   {
-   "item": "6-bigs / knight-destrier / ability:Ram Jets",
-   "field": "text",
-   "doc": "pack:imperial-knights",
-   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
-   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
-  },
-  {
    "item": "6-bigs / knight-destrier / ability:Saturation Fire",
    "field": "text",
    "doc": "pack:imperial-knights",
@@ -13501,14 +13494,7 @@
    "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
   },
   {
-   "item": "4-megas-and-a-destrier / knight-destrier / ability:Damaged: 1-6 Wounds Remaining",
-   "field": "text",
-   "doc": "pack:imperial-knights",
-   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
-   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
-  },
-  {
-   "item": "4-megas-and-a-destrier / knight-destrier / ability:Thundercharge",
+   "item": "6-bigs / knight-destrier / ability:Damaged: 1-6 Wounds Remaining",
    "field": "text",
    "doc": "pack:imperial-knights",
    "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
@@ -13522,6 +13508,13 @@
    "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
   },
   {
+   "item": "4-megas-and-a-destrier / knight-destrier / ability:Thundercharge",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
    "item": "4-megas-and-a-destrier / knight-destrier / ability:Saturation Fire",
    "field": "text",
    "doc": "pack:imperial-knights",
@@ -13529,7 +13522,21 @@
    "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
   },
   {
+   "item": "4-megas-and-a-destrier / knight-destrier / ability:Damaged: 1-6 Wounds Remaining",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
    "item": "purge-goes-the-foe / thulia-ghuld / ability:Icon of War",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p9-10 (Thulia Ghuld datasheet)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "purge-goes-the-foe / thulia-ghuld / ability:Rod of the War Forge",
    "field": "text",
    "doc": "pack:adeptus-mechanicus",
    "where": "GW Faction Pack Adeptus Mechanicus PDF p9-10 (Thulia Ghuld datasheet)",
@@ -13551,13 +13558,6 @@
   },
   {
    "item": "purge-goes-the-foe / thulia-ghuld / ability:Supreme Commander",
-   "field": "text",
-   "doc": "pack:adeptus-mechanicus",
-   "where": "GW Faction Pack Adeptus Mechanicus PDF p9-10 (Thulia Ghuld datasheet)",
-   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
-  },
-  {
-   "item": "purge-goes-the-foe / thulia-ghuld / ability:Rod of the War Forge",
    "field": "text",
    "doc": "pack:adeptus-mechanicus",
    "where": "GW Faction Pack Adeptus Mechanicus PDF p9-10 (Thulia Ghuld datasheet)",
@@ -13606,6 +13606,13 @@
    "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
   },
   {
+   "item": "the-exiled-legion / skarbrand / ability:Greater Daemon of Khorne",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p14-15 (Skarbrand datasheet)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
    "item": "the-exiled-legion / skarbrand / ability:Rage Embodied",
    "field": "text",
    "doc": "pack:chaos-daemons",
@@ -13621,13 +13628,6 @@
   },
   {
    "item": "the-exiled-legion / skarbrand / ability:Damaged: 1-7 wounds remaining",
-   "field": "text",
-   "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p14-15 (Skarbrand datasheet)",
-   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
-  },
-  {
-   "item": "the-exiled-legion / skarbrand / ability:Greater Daemon of Khorne",
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p14-15 (Skarbrand datasheet)",
@@ -13683,13 +13683,6 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "the-exiled-legion / bloodthirster / ability:Damaged: 1-6 wounds remaining",
-   "field": "text",
-   "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p16-17 (Bloodthirster datasheet)",
-   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
-  },
-  {
    "item": "the-exiled-legion / bloodthirster / ability:Greater Daemon of Khorne",
    "field": "text",
    "doc": "pack:chaos-daemons",
@@ -13697,14 +13690,14 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "the-exiled-legion / daemon-prince-of-chaos / ability:Prince of Darkness",
+   "item": "the-exiled-legion / bloodthirster / ability:Damaged: 1-6 wounds remaining",
    "field": "text",
    "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p116-117 (Daemon Prince of Chaos datasheet)",
+   "where": "GW Faction Pack Chaos Daemons PDF p16-17 (Bloodthirster datasheet)",
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "the-exiled-legion / daemon-prince-of-chaos / ability:Unholy Vigour",
+   "item": "the-exiled-legion / daemon-prince-of-chaos / ability:Daemonic Allegiance",
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p116-117 (Daemon Prince of Chaos datasheet)",
@@ -13718,7 +13711,14 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "the-exiled-legion / daemon-prince-of-chaos / ability:Daemonic Allegiance",
+   "item": "the-exiled-legion / daemon-prince-of-chaos / ability:Prince of Darkness",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p116-117 (Daemon Prince of Chaos datasheet)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "the-exiled-legion / daemon-prince-of-chaos / ability:Unholy Vigour",
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p116-117 (Daemon Prince of Chaos datasheet)",
@@ -13774,7 +13774,7 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "navigator-sounds-op-ngl / knight-destrier / ability:Damaged: 1-6 Wounds Remaining",
+   "item": "navigator-sounds-op-ngl / knight-destrier / ability:Ram Jets",
    "field": "text",
    "doc": "pack:imperial-knights",
    "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
@@ -13788,18 +13788,25 @@
    "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
   },
   {
-   "item": "navigator-sounds-op-ngl / knight-destrier / ability:Ram Jets",
+   "item": "navigator-sounds-op-ngl / knight-destrier / ability:Saturation Fire",
    "field": "text",
    "doc": "pack:imperial-knights",
    "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
    "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
   },
   {
-   "item": "navigator-sounds-op-ngl / knight-destrier / ability:Saturation Fire",
+   "item": "navigator-sounds-op-ngl / knight-destrier / ability:Damaged: 1-6 Wounds Remaining",
    "field": "text",
    "doc": "pack:imperial-knights",
    "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
    "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "tzeeeeentch / kairos-fateweaver / ability:Greater Daemon of Tzeentch",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p38-39 (Kairos Fateweaver datasheet)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
    "item": "tzeeeeentch / kairos-fateweaver / ability:One Head Looks Forward",
@@ -13817,13 +13824,6 @@
   },
   {
    "item": "tzeeeeentch / kairos-fateweaver / ability:Damaged: 1-7 wounds remaining",
-   "field": "text",
-   "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p38-39 (Kairos Fateweaver datasheet)",
-   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
-  },
-  {
-   "item": "tzeeeeentch / kairos-fateweaver / ability:Greater Daemon of Tzeentch",
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p38-39 (Kairos Fateweaver datasheet)",
@@ -13858,6 +13858,13 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
+   "item": "tzeeeeentch / daemon-prince-of-chaos-with-wings / ability:Daemonic Allegiance",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p118-119 (Daemon Prince of Chaos with wings datasheet)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
    "item": "tzeeeeentch / daemon-prince-of-chaos-with-wings / ability:Malefic Destruction",
    "field": "text",
    "doc": "pack:chaos-daemons",
@@ -13866,13 +13873,6 @@
   },
   {
    "item": "tzeeeeentch / daemon-prince-of-chaos-with-wings / ability:Harbinger of Death",
-   "field": "text",
-   "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p118-119 (Daemon Prince of Chaos with wings datasheet)",
-   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
-  },
-  {
-   "item": "tzeeeeentch / daemon-prince-of-chaos-with-wings / ability:Daemonic Allegiance",
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p118-119 (Daemon Prince of Chaos with wings datasheet)",
@@ -13893,14 +13893,14 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "tzeeeeentch / lord-of-change-infernal-puppeteer / ability:Damaged: 1-7 wounds remaining",
+   "item": "tzeeeeentch / lord-of-change-infernal-puppeteer / ability:Greater Daemon of Tzeentch",
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p40-41 (Lord of Change datasheet)",
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "tzeeeeentch / lord-of-change-infernal-puppeteer / ability:Greater Daemon of Tzeentch",
+   "item": "tzeeeeentch / lord-of-change-infernal-puppeteer / ability:Damaged: 1-7 wounds remaining",
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p40-41 (Lord of Change datasheet)",
@@ -13921,14 +13921,14 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "tzeeeeentch / lord-of-change-inescapable-eye / ability:Damaged: 1-7 wounds remaining",
+   "item": "tzeeeeentch / lord-of-change-inescapable-eye / ability:Greater Daemon of Tzeentch",
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p40-41 (Lord of Change datasheet)",
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "tzeeeeentch / lord-of-change-inescapable-eye / ability:Greater Daemon of Tzeentch",
+   "item": "tzeeeeentch / lord-of-change-inescapable-eye / ability:Damaged: 1-7 wounds remaining",
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p40-41 (Lord of Change datasheet)",
@@ -14047,13 +14047,6 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "catalog / chaos-daemons/epidemius / ability:Leader",
-   "field": "text",
-   "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p72-73 (Epidemius datasheet)",
-   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
-  },
-  {
    "item": "catalog / chaos-daemons/epidemius / ability:Blessed by the Plague God",
    "field": "text",
    "doc": "pack:chaos-daemons",
@@ -14068,10 +14061,10 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "catalog / chaos-daemons/horticulous-slimux / ability:Leader",
+   "item": "catalog / chaos-daemons/epidemius / ability:Leader",
    "field": "text",
    "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p76-77 (Horticulous Slimux datasheet)",
+   "where": "GW Faction Pack Chaos Daemons PDF p72-73 (Epidemius datasheet)",
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
@@ -14086,6 +14079,20 @@
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p76-77 (Horticulous Slimux datasheet)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "catalog / chaos-daemons/horticulous-slimux / ability:Leader",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p76-77 (Horticulous Slimux datasheet)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "catalog / chaos-daemons/rotigus / ability:Greater Daemon of Nurgle",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p64-65 (Rotigus datasheet)",
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
@@ -14110,10 +14117,10 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "catalog / chaos-daemons/rotigus / ability:Greater Daemon of Nurgle",
+   "item": "catalog / chaos-daemons/shalaxi-helbane / ability:Greater Daemon of Slaanesh",
    "field": "text",
    "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p64-65 (Rotigus datasheet)",
+   "where": "GW Faction Pack Chaos Daemons PDF p88-89 (Shalaxi Helbane datasheet)",
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
@@ -14132,13 +14139,6 @@
   },
   {
    "item": "catalog / chaos-daemons/shalaxi-helbane / ability:Damaged: 1-7 wounds remaining",
-   "field": "text",
-   "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p88-89 (Shalaxi Helbane datasheet)",
-   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
-  },
-  {
-   "item": "catalog / chaos-daemons/shalaxi-helbane / ability:Greater Daemon of Slaanesh",
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p88-89 (Shalaxi Helbane datasheet)",
@@ -14250,13 +14250,6 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "catalog / chaos-daemons/fateskimmer / ability:Leader",
-   "field": "text",
-   "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p44-45 (Fateskimmer datasheet)",
-   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
-  },
-  {
    "item": "catalog / chaos-daemons/fateskimmer / ability:Fateskimmer",
    "field": "text",
    "doc": "pack:chaos-daemons",
@@ -14268,6 +14261,20 @@
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p44-45 (Fateskimmer datasheet)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "catalog / chaos-daemons/fateskimmer / ability:Leader",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p44-45 (Fateskimmer datasheet)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "catalog / chaos-daemons/great-unclean-one / ability:Greater Daemon of Nurgle",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p66-67 (Great Unclean One datasheet)",
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
@@ -14292,20 +14299,6 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "catalog / chaos-daemons/great-unclean-one / ability:Greater Daemon of Nurgle",
-   "field": "text",
-   "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p66-67 (Great Unclean One datasheet)",
-   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
-  },
-  {
-   "item": "catalog / chaos-daemons/infernal-enrapturess / ability:Leader",
-   "field": "text",
-   "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p92-93 (Infernal Enrapturess datasheet)",
-   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
-  },
-  {
    "item": "catalog / chaos-daemons/infernal-enrapturess / ability:Harmonic Alignment",
    "field": "text",
    "doc": "pack:chaos-daemons",
@@ -14314,6 +14307,13 @@
   },
   {
    "item": "catalog / chaos-daemons/infernal-enrapturess / ability:Discordant Disruption",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p92-93 (Infernal Enrapturess datasheet)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "catalog / chaos-daemons/infernal-enrapturess / ability:Leader",
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p92-93 (Infernal Enrapturess datasheet)",
@@ -14334,13 +14334,6 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "catalog / chaos-daemons/keeper-of-secrets / ability:Damaged: 1-6 wounds remaining",
-   "field": "text",
-   "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p90-91 (Keeper of Secrets datasheet)",
-   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
-  },
-  {
    "item": "catalog / chaos-daemons/keeper-of-secrets / ability:Greater Daemon of Slaanesh",
    "field": "text",
    "doc": "pack:chaos-daemons",
@@ -14355,10 +14348,10 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "catalog / chaos-daemons/poxbringer / ability:Leader",
+   "item": "catalog / chaos-daemons/keeper-of-secrets / ability:Damaged: 1-6 wounds remaining",
    "field": "text",
    "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p68-69 (Poxbringer datasheet)",
+   "where": "GW Faction Pack Chaos Daemons PDF p90-91 (Keeper of Secrets datasheet)",
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
@@ -14376,10 +14369,10 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "catalog / chaos-daemons/sloppity-bilepiper / ability:Leader",
+   "item": "catalog / chaos-daemons/poxbringer / ability:Leader",
    "field": "text",
    "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p74-75 (Sloppity Bilepiper datasheet)",
+   "where": "GW Faction Pack Chaos Daemons PDF p68-69 (Poxbringer datasheet)",
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
@@ -14397,10 +14390,10 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "catalog / chaos-daemons/spoilpox-scrivener / ability:Leader",
+   "item": "catalog / chaos-daemons/sloppity-bilepiper / ability:Leader",
    "field": "text",
    "doc": "pack:chaos-daemons",
-   "where": "GW Faction Pack Chaos Daemons PDF p70-71 (Spoilpox Scrivener datasheet)",
+   "where": "GW Faction Pack Chaos Daemons PDF p74-75 (Sloppity Bilepiper datasheet)",
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
@@ -14412,6 +14405,13 @@
   },
   {
    "item": "catalog / chaos-daemons/spoilpox-scrivener / ability:Meet Your Quota!",
+   "field": "text",
+   "doc": "pack:chaos-daemons",
+   "where": "GW Faction Pack Chaos Daemons PDF p70-71 (Spoilpox Scrivener datasheet)",
+   "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
+  },
+  {
+   "item": "catalog / chaos-daemons/spoilpox-scrivener / ability:Leader",
    "field": "text",
    "doc": "pack:chaos-daemons",
    "where": "GW Faction Pack Chaos Daemons PDF p70-71 (Spoilpox Scrivener datasheet)",
