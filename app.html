@@ -4894,10 +4894,11 @@ function screenUnit(){
     // (a fold, closed until opened and kept open for the session, as the Overview's army rules: its count on its line, a line each)
     (def.length ? '<details class="def tgt" data-tgfold="' + esc(tgKey) + '"' + (openStrats.has(tgKey) ? ' open' : '') + '><summary><span class="il">When targeted</span><span class="x">' + def.length + '</span>' + chev + '</summary>' +
       '<div class="tgls">' + def.map(x => '<div class="tgl">' + defLine(x, u) + '</div>').join('') + '</div></details>' : '') +
-    // (a Damaged band: its range, what its boxes do (effects.js labels) and the words of it they do not count, quoted; none: its words)
+    // (a Damaged band: its range and what its boxes do (effects.js labels); words of it they do not count (Szarekh's halved Attacks), or
+    // none: "see the rule", which opens its words)
     u.abilities.filter(ab => ab.damaged).map(ab => { const o = (D.boxes || {})[DM_KEY.a(ab)] || {}, fx = (o.b || []).flatMap(b => b.fx || []);
       const psy = fx.some(([id]) => id === 'hit') && [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => /^psychic/i.test(k)));
-      const says = [WH_EFFECTS.fxLabel(fx)].concat((o.nc || []).map(x => '“' + dmQuoteOf(x.quote) + '”')).filter(Boolean).join(' · ');
+      const says = [WH_EFFECTS.fxLabel(fx), (o.nc || []).length ? 'see the rule' : ''].filter(Boolean).join('; ');
       return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), says || 'see the rule') +
         (psy ? ' <span class="from">(' + linkTo('rule', 'Psychic', '[PSYCHIC]') + ' weapons can ignore it)</span>' : '') + '</div>'; }).join('') + '</div></section>';
   const abilities = abil.length ? '<section class="dbx" id="sec-abilities"><div class="dh2"><span>Abilities</span></div>' + abilityRows(abil, u, { suffix:true }) + '</section>' : '';
