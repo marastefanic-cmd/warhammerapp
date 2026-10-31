@@ -41,6 +41,8 @@ for(const [id, s] of Object.entries(R.D.datasheets || {})){
   for(const k of s.kw) if(!g.includes(k) && !dev('catalog', id, k)) fails.push('catalog ' + id + ': ' + k + ' is not GW\'s');
   for(const k of g) if(!s.kw.includes(k) && !dev('catalog', id, k)) fails.push('catalog ' + id + ': lacks ' + k);
 }
+// a declared pack section exclusion (packExclude): its pack is cached and its CONTENTS name the section
+for(const x of O.packExclusionsOk()){ const i = DEVS.findIndex(d => JSON.stringify(d) === JSON.stringify(x.d)); if(x.ok) used.add(i); else fails.push('verify/deviations-keywords.json #' + i + ': the pack ' + x.d.pack + ' has no section ' + x.d.section + ' (it has: ' + x.sections.join(', ') + ')'); }
 DEVS.forEach((d, i) => { if(!used.has(i)) fails.push('verify/deviations-keywords.json #' + i + ' (' + d.army + '/' + d.unit + ' ' + d.kw + '): nothing matches it'); else if(!d.reason || !d.evidence) fails.push('verify/deviations-keywords.json #' + i + ': no reason or evidence'); });
 writeJSON(path.join(ROOT, 'verify/out/keywords.json'), { units, keywords:kws, declared:used.size, fails });
 console.log('keywords: ' + (fails.length ? fails.length + ' failure(s); ' : '') + kws + ' keywords of ' + units + ' units (' + catalog + ' of them catalogue rows) are GW\'s datasheets\' (and the list\'s own by its rules); ' + used.size + ' declared');

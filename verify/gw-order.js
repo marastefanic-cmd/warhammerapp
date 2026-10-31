@@ -76,11 +76,22 @@ module.exports = function make(ROOT) {
   // GW's own document over Wahapedia: the KEYWORDS line of a datasheet a faction's GW Faction Pack prints in full (sources/factions.json
   // pack; its text in verify/.cache/gw: the page whose first line is the datasheet's name), as verify/texts.js reads it. null: not printed
   const PACK = new Map();
+  // a pack's sections by its CONTENTS ("Imperial Armour Datasheets …… 9": the section, its first page); the page (0-based) p0's section
+  const packSections = pages => { const out = []; for (const l of (pages[0] || []).join('\n').split('\n')) { const m = /^\s*(?:.*?\s{3,})?([A-Z][A-Za-z’' -]+?)[\x08\ufffd\s]*\ufffd[\ufffd\s]*(\d+)\s*$/.exec(l); if (m) out.push({ name:m[1].trim(), page:+m[2] }); } return out.sort((a, b) => a.page - b.page); };
+  const sectionOf = (pages, p0) => { let at = null; for (const x of packSections(pages)) if (x.page <= p0 + 1) at = x.name; return at; };
+  // a pack section GW's newer documents supersede (verify/deviations-keywords.json packExclude: the Custodes Faction Pack v1.2's
+  // Imperial Armour Datasheets, which predate Codex: Adeptus Custodes): its KEYWORDS are not GW's over Wahapedia's
+  const PACKX = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-keywords.json'), 'utf8')).filter(d => d.packExclude); } catch (e) { return []; } })();
+  const packExcluded = (pf, pages, p0) => { const sec = sectionOf(pages, p0); return PACKX.some(d => d.pack === pf && d.section === sec); };
+  // (for verify/keywords.js: each declared exclusion's pack and section exist)
+  function packExclusionsOk() { return PACKX.map(d => { let pages = []; try { pages = fs.readFileSync(path.join(ROOT, 'verify/.cache/gw', d.pack.replace(/\.pdf$/, '.txt')), 'utf8').split('\f').map(p => p.split('\n')); } catch (e) {}
+    return { d, ok:packSections(pages).some(x => x.name === d.section), sections:packSections(pages).map(x => x.name) }; }); }
   function packKeywords(fac, name) {
     const pf = ((FJ[fac] || {}).pack || {}).file; if (!pf) return null;
     if (!PACK.has(pf)) { let pages = []; try { pages = fs.readFileSync(path.join(ROOT, 'verify/.cache/gw', pf.replace(/\.pdf$/, '.txt')), 'utf8').split('\f').map(p => p.split('\n')); } catch (e) {} PACK.set(pf, pages); }
     const pages = PACK.get(pf), sq = x => String(x).toLowerCase().replace(/[^a-z0-9]/g, '');
     const p0 = pages.findIndex((p, i) => i > 0 && sq((p.find(l => l.trim()) || '')) === sq(name)); if (p0 < 0) return null;
+    if (packExcluded(pf, pages, p0)) return null;
     // (the PDF text's control characters, \u0007 before a line's words, out)
     const L = [].concat(...pages.slice(p0, p0 + 2)).map(l => l.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, '')), seg = x => x.trim().split(/\s{4,}/)[0].trim();
     const ki = L.findIndex(l => /^\s*KEYWORDS:/.test(l)); if (ki < 0 || /KEYWORDS\s+[–-]\s+ALL MODELS/i.test(L[ki])) return null;
@@ -358,5 +369,5 @@ module.exports = function make(ROOT) {
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
+  return { packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
 };

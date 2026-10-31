@@ -80,7 +80,14 @@
   "army": "catalog",
   "unit": "adeptus-custodes/venatari-with-verutum-lances",
   "kw": "name",
-  "reason": "No name keyword can be taken: GW's page prints none (Wahapedia's new-codex pages leave name keywords out), and BSData gives this datasheet the category \"Venatari with Kinetic Destroyers\", the other Venatari datasheet's name (a BSData error), not its own. A faction catalogue row; for the owner or reviewer.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Venatari-with-Verutum-Lances.html: KEYWORDS \"INFANTRY; EXPLOSIVES; FLY; IMPERIUM; JUMP PACK\"; verify/sources/catalog/adeptus-custodes.json (adeptus-custodes/venatari-with-verutum-lances, kw: \"Venatari with Kinetic Destroyers\")."
+  "reason": "GW prints no keyword unique to this datasheet: its page's KEYWORDS line has no name keyword (Wahapedia's new-codex pages leave name keywords out), and BSData's only candidate, \"Venatari with Kinetic Destroyers\", is the other Venatari datasheet's name, not this one's. The Custodes pack's Venatari Custodians (VENATARI CUSTODIANS) is the superseded pre-codex datasheet (packExclude). The coordinator's decision.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Venatari-with-Verutum-Lances.html: KEYWORDS \"INFANTRY; EXPLOSIVES; FLY; IMPERIUM; JUMP PACK\"; verify/sources/catalog/adeptus-custodes.json (adeptus-custodes/venatari-with-verutum-lances, kw: \"Venatari with Kinetic Destroyers\"); scratchpad/iaq/newcust.html (Warhammer Community, \"New Custodes: What you need to know\", 25 Sep 2026): \"Units featured in the new Codex for the first time: … Venatari with Kinetic Destroyers Venatari with Verutum Lances …\"."
+ },
+ {
+  "packExclude": true,
+  "pack": "eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.pdf",
+  "section": "Imperial Armour Datasheets",
+  "reason": "The coordinator's decision: the Adeptus Custodes Faction Pack v1.2 (30 Sep 2026) prints its Imperial Armour datasheets as they were before Codex: Adeptus Custodes (11th edition, released 17 Oct 2026). Its Venatari Custodians sheet is the old single datasheet, which the codex split into Venatari with Kinetic Destroyers and Venatari with Verutum Lances; the same pack section is superseded as the Vertus Praetors lines are (verify/deviations-numbers.json). Its KEYWORDS lines are not GW's over Wahapedia's.",
+  "evidence": "scratchpad/iaq/newcust.html (Warhammer Community, \"New Custodes: What you need to know\", 25 Sep 2026): \"Units featured in the new Codex for the first time: … Venatari with Kinetic Destroyers Venatari with Verutum Lances …\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.txt (CONTENTS: \"Imperial Armour Datasheets\", p9; VENATARI CUSTODIANS, \"KEYWORDS: Infantry, Fly, Jump Pack, Imperium, Venatari Custodians\"); verify/deviations-numbers.json (Vertus Praetors: the pack superseded by the codex)."
  }
 ]
