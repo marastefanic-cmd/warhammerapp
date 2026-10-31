@@ -341,6 +341,17 @@ const fxCases = [
   ['fx:critHit 5: hits', () => ex1([g({ n:60, kw:['SUSTAINED HITS 1'], mods:[fxm('critHit', 5)] })], T4).hits, 50],
   // a Critical Wound on 5+ with [DEVASTATING WOUNDS]: 20 of 60 [TORRENT] hits are mortals
   ['fx:critWound 5: mortals', () => ex1([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWound', 5)] })], T4).mortals, 20],
+  // every successful wound roll a Critical Wound (Swallow Whole): S4 vs T4 wounds on 4+, so all 30 of the 60 [TORRENT] hits that wound are
+  // critical, and with [DEVASTATING WOUNDS] each is a mortal wound (D1); without it they are 30 wounds as before
+  ['fx:critWoundAll: mortals', () => ex1([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true)] })], T4).mortals, 30],
+  ['fx:critWoundAll: played out', () => run([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true)] })], T4).groups[0].mortals, 30],
+  ['fx:critWoundAll: no [DEVASTATING WOUNDS], wounds unchanged', () => ex1([g({ n:60, kw:['TORRENT'], mods:[fxm('critWoundAll', true)] })], T4).wounds, 30],
+  // with +1 to wound the roll wounds on 3+: 40 successes, every one critical (a successful wound roll, after its modifiers)
+  ['fx:critWoundAll + wound +1: mortals', () => ex1([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true), fxm('wound', 1)] })], T4).mortals, 40],
+  // S4 vs T8 wounds only on 6+: the 10 that wound were critical anyway
+  ['fx:critWoundAll vs T8: mortals', () => ex1([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true)] })], { T:8, models:[big(100, 10)] }).mortals, 10],
+  // the working says so
+  ['fx:critWoundAll: in the working', () => +C.explain({ groups:[g({ kw:['TORRENT'], mods:[Object.assign({ from:'Swallow Whole' }, fxm('critWoundAll', true))] })], target:T4, ctx:{} }).groups[0].steps.some(t => /every successful wound roll is a critical wound \(Swallow Whole\)/.test(t.t)), 1],
   // the weapon abilities a rule gives
   ['fx:lethal: wounds', () => ex1([g({ n:20, mods:[fxm('lethal', true)] })], { T:8, models:[big(20, 10)] }).wounds, 20 / 6 + 20 / 3 / 6],
   ['fx:dev: mortals', () => ex1([g({ n:36, D:2, kw:['TORRENT'], mods:[fxm('dev', true)] })], { T:4, models:[big(200, 10, 2)] }).mortals, 6],
