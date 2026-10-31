@@ -13,7 +13,7 @@
     "any": [
      "Infantry",
      "Mounted",
-     "Beasts"
+     "Beast"
     ]
    }
   },
@@ -21,7 +21,7 @@
    "ability": "Swallow Whole",
    "text": "Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound. Each time an **INFANTRY**, **MOUNTED** or **BEASTS** model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds."
   },
-  "key": "0bf6852dab238910"
+  "key": "b41cea373992b9a7"
  },
  {
   "army": "healybois",
@@ -304,12 +304,12 @@
   "kind": "unit-why",
   "where": "the-red-terror",
   "judgement": {
-   "why": "The Red Terror: GW’s keyword BURROWER (not in BSData, declared). Swallow Whole: a footnote on the gaping maw vs INFANTRY/MOUNTED/BEASTS (“each successful unmodified Wound roll is a Critical Wound”); the Damage tab counts it (effects.js critWoundAll, calc.js: every wound roll that wounds is a Critical Wound, so with the gaping maw’s [DEVASTATING WOUNDS] each is mortal wounds); its wounds regained are no attack or defence numbers. Subterranean Hunter: no numbers, no reading."
+   "why": "The Red Terror: GW’s keyword BURROWER (not in BSData, declared). Swallow Whole: a footnote on the gaping maw vs INFANTRY/MOUNTED/BEASTS (“each successful unmodified Wound roll is a Critical Wound”); the Damage tab counts it (effects.js critWoundAll, calc.js: a wound roll whose unmodified result is equal to or greater than the required result is a Critical Wound, modifiers aside (05.02: critical wounds are decided on the unmodified roll), so with the gaping maw’s [DEVASTATING WOUNDS] each is mortal wounds; one that wounds only through a modifier is a normal wound); its wounds regained are no attack or defence numbers. Subterranean Hunter: no numbers, no reading."
   },
   "source": {
    "file": "verify/sources/hand/healybois.json units.the-red-terror.why (not shown in the app)"
   },
-  "key": "07b0b8994c5cd250"
+  "key": "72ec76cd338a280f"
  },
  {
   "army": "healybois",
@@ -502,12 +502,12 @@
   "kind": "snapshot-change",
   "where": "verify/snapshots/shooty.txt",
   "judgement": {
-   "change": "Home screen “Newest first”: Healybois moves up (its export date is now 31 Oct 2026); the tables page counts (ARMIES 214 entries, GRANTS 75, CHECKLIST 496, DATASHEETS.mods 134, .aura 32, BOXES 278, BS_IDS units 213 / names 817 / maxPerList 82)."
+   "change": "Home screen “Newest first”: Healybois moves up (its export date is now 31 Oct 2026); the tables page counts (ARMIES 214 entries, GRANTS 75, CHECKLIST 496, DATASHEETS.mods 134, .aura 32, BOXES 279, BS_IDS units 213 / names 817 / maxPerList 82)."
   },
   "source": {
    "diff": "scratchpad/healy3-work/shooty.diff"
   },
-  "key": "6cbca92d7f93c69b"
+  "key": "8f481fc578eab546"
  },
  {
   "army": "healybois",
@@ -545,13 +545,13 @@
   "kind": "code",
   "where": "effects.js · critWoundAll (new effect)",
   "judgement": {
-   "change": "A new Damage-tab effect: “Every successful Wound roll is a Critical Wound”, mod { critWoundAll:true }, pattern /\b(?:each|every|any) successful unmodified wound roll is a critical wound\b/. Not offered among the Custom modifiers. The cache has this wording only in Swallow Whole (Wahapedia’s The Red Terror datasheet, the Tyranids Faction Pack)."
+   "change": "A new Damage-tab effect: “Each successful unmodified Wound roll is a Critical Wound”, mod { critWoundAll:true }: a Critical Wound when the unmodified roll is equal to or greater than the required result (05.02), in effect a Critical Wound at the wound need; pattern /\b(?:each|every|any) successful unmodified wound roll is a critical wound\b/. Not offered among the Custom modifiers. The cache has this wording only in Swallow Whole (Wahapedia’s The Red Terror datasheet, the Tyranids Faction Pack)."
   },
   "source": {
-   "diff": "git show 8df7763 -- effects.js",
+   "diff": "git show 8df7763 2344227 -- effects.js",
    "words": "Each time an attack with this model’s gaping maw targets an INFANTRY, MOUNTED or BEASTS unit, each successful unmodified Wound roll is a Critical Wound."
   },
-  "key": "b4c7b3618f33b204"
+  "key": "3df945dbfe9ee9e5"
  },
  {
   "army": "code",
@@ -571,25 +571,24 @@
   "kind": "code",
   "where": "calc.js · critWoundAll",
   "judgement": {
-   "change": "A wound roll that wounds is a critical wound when a mod has critWoundAll: in plan() (the chances), the played-out wound rolls (wr, and wrS for S rolled with dice), explain() (wcls) and the working (“every successful wound roll is a critical wound (<rule>)”); in the attack signature (sigOf) and resolve(). An unmodified 1 still fails; a critical wound on X+ (critWound, [ANTI]) still applies below the wound need.",
-   "reading": "“Successful” is read after the roll’s modifiers (with +1 to wound, a 3 that wounds on 4+ is a success and so critical); the other reading (only an unmodified roll that meets the need) would differ only where a wound modifier applies. Reviewer to confirm."
+   "change": "With critWoundAll a wound roll is critical when its unmodified result u > 1 is equal to or greater than the wound need (woundNeed(S, T), or of the S rolled with dice), before and regardless of the wound modifiers (woundMod, the target’s -1 when S > T): in plan(), the played-out rolls (wr, wrS), explain() (wcls); +1 to wound adds normal wounds only, -1 to wound takes no critical wound away. Working: “a successful unmodified wound roll is a critical wound (<rule>)”. In sigOf and resolve(). As the review of result-healybois-3.json items 32/34 read the Core Rules (05.02, 24.03)."
   },
   "source": {
-   "diff": "git show 8df7763 -- calc.js"
+   "diff": "git show 8df7763 2344227 -- calc.js"
   },
-  "key": "914c312b18d8ae00"
+  "key": "e219973c30e20a8d"
  },
  {
   "army": "code",
   "kind": "code",
   "where": "verify/calc-test.js · critWoundAll cases",
   "judgement": {
-   "change": "6 hand-worked cases, 60 [TORRENT] attacks S4 D1 with [DEVASTATING WOUNDS]: vs T4 (4+) 30 mortal wounds (and 30 played out); with +1 to wound (3+) 40; vs T8 (6+) 10; without [DEVASTATING WOUNDS] 30 wounds; the working names the rule. calc: 379 of 379 within margin."
+   "change": "8 hand-worked cases, 60 [TORRENT] attacks S4 D1 with [DEVASTATING WOUNDS]: vs T4 (4+) 30 mortal wounds (and 30 played out); with +1 to wound 30 mortal wounds and 10 normal wounds (the unmodified 3s wound only through the +1); with -1 to wound 30 mortal wounds (no critical lost); vs T8 (6+) 10; without [DEVASTATING WOUNDS] 30 wounds; the working says “a successful unmodified wound roll is a critical wound (Swallow Whole)”. calc: 381 of 381."
   },
   "source": {
-   "diff": "git show 8df7763 -- verify/calc-test.js"
+   "diff": "git show 8df7763 2344227 -- verify/calc-test.js"
   },
-  "key": "7f59aa7ee6fd70ad"
+  "key": "fb7a91f5bd72f4c4"
  },
  {
   "army": "healybois",
@@ -624,9 +623,65 @@
   },
   "source": {
    "quote": "Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound.",
-   "note": "the only box the new patterns change across all lists (effects-migrate.js --write: 278 → 279 sources, 295 → 296 boxes); before, Swallow Whole was “not counted”"
+   "note": "the only box the new patterns change across all lists (effects-migrate.js --write: 278 → 279 sources, 295 → 296 boxes; BOXES now 279 rows); before, Swallow Whole was “not counted”. Its label: “Each successful unmodified Wound roll is a Critical Wound”."
   },
-  "key": "d04de248cf131ff4"
+  "key": "316e786e91211fd2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "check.js · readings’ target keywords exist",
+  "judgement": {
+   "change": "Gate step data: every keyword a reading names for its target (vs: any / all / none / also), on every row of data.js (datasheets, factions, stratagems, list entries), must be a keyword some datasheet row or list unit has. No step checked it before; it found only The Red Terror’s Swallow Whole footnote (vs “Beasts”, now “Beast”, review item 0)."
+  },
+  "source": {
+   "diff": "git show 30ef65b -- check.js"
+  },
+  "key": "78bd4620a9ec8ad7"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/effects-extract.js · “The first time …” as a condition",
+  "judgement": {
+   "change": "The trigger of a one-time change, “The first time …” (up to a “while” clause, read on its own), is a condition in GW’s words like an “if / while / unless” clause. Across all lists it changes one box: Parasitic Biomorphology’s +1 A."
+  },
+  "source": {
+   "diff": "git show 30ef65b -- verify/effects-extract.js"
+  },
+  "key": "0e8646ffafcb1eac"
+ },
+ {
+  "army": "healybois",
+  "kind": "box-change",
+  "where": "BOXES · a|uulhog Parasitic Biomorphology, its +1 A",
+  "judgement": {
+   "box": {
+    "fx": [
+     [
+      "a",
+      1
+     ]
+    ],
+    "on": [
+     [
+      "q",
+      "The first time the bearer's unit destroys an enemy unit in the Fight phase"
+     ],
+     [
+      "q",
+      "while the bearer is within 6\" of one or more friendly HARVESTER units"
+     ]
+    ],
+    "kind": "melee",
+    "lasts": "battle"
+   }
+  },
+  "source": {
+   "quote": "The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.",
+   "note": "before: only the “while … HARVESTER” condition"
+  },
+  "key": "f2e033a35b95c09e"
  },
  {
   "army": "healybois",
