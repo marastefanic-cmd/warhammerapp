@@ -350,5 +350,38 @@
    "code": "app.html screenUnit",
    "mirrored": "verify/lines.js L2-L5"
   }
+ },
+ {
+  "kind": "code",
+  "where": "app.html fnLine · quoted conditions",
+  "judgement": {
+   "rule": "A condition that is only GW's words, quoted (COND q, anyOf), is not said in a footnote: the line is its effect and its rule, whose name opens the words (the owner, 31 Oct). Numbers that leave the screen with it: 9\" (Glowin' Dakka, Strength from Exile), 12\" (Plunging Fire, Vengeance for the Omnissiah …), 18\", 6\", 5+ (scratchpad/lines-work/changes.md). Two boxes of one rule told apart only by quoted words now read alike but for their effects (Murderous Imperative)."
+  },
+  "source": {
+   "code": "app.html fnLine",
+   "mirrored": "verify/lines.js L5, L8"
+  }
+ },
+ {
+  "kind": "code",
+  "where": "effects.js condLabel · Damage tab",
+  "judgement": {
+   "rule": "Not applied to the Damage tab's box labels: there a quoted condition is what tells two boxes of one rule apart (calc-test 'Murderous Imperative: two boxes … each saying its Imperative' fails without it) and is what the player ticks. Owner to confirm."
+  },
+  "source": {
+   "code": "effects.js condLabel",
+   "mirrored": "verify/lines.js L5, L8"
+  }
+ },
+ {
+  "kind": "code",
+  "where": "effects.js KW · keywords in capitals",
+  "judgement": {
+   "rule": "targetKw and selfKw labels print keywords in capitals, a Faction keyword by its name (MONSTER/VEHICLE, ORKS), on the footnotes and the Damage tab."
+  },
+  "source": {
+   "code": "effects.js KW",
+   "mirrored": "verify/lines.js L5, L8"
+  }
  }
 ]

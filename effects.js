@@ -153,9 +153,9 @@ function toMod(fx){
   return out;
 }
 const fxLabel = fx => (fx || []).map(([id, p]) => FX[id] ? FX[id].label(p) : id).join(', ');
-// (a condition that is only GW's words, quoted (q, anyOf), is not said: the box names its rule, whose words are a tap away; the owner's
-// decision, 31 Oct 2026)
-const condLabel = on => (on || []).filter(([id]) => !(COND[id] && COND[id].quoted)).map(([id, p]) => COND[id] ? COND[id].label(p) : id).join(' · ');
+// (a condition that is only GW's words, quoted (q, anyOf: quoted), is said here, on the Damage tab's boxes, where it tells two boxes of
+// one rule apart and is what the player ticks; the datasheet's footnotes leave it out, their rule's name opening the words: app.html fnLine)
+const condLabel = on => (on || []).map(([id, p]) => COND[id] ? COND[id].label(p) : id).join(' · ');
 const api = { FX, COND, NC, CUSTOM, FACT_OF, CHAR_RE, CH, KW, toMod, fxLabel, condLabel, norm };
 if(typeof module !== 'undefined' && module.exports) module.exports = api;
 root.WH_EFFECTS = api;
