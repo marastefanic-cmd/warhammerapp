@@ -324,13 +324,11 @@
    "of": "7522a4f2",
    "reading": {
     "ph": [
-     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
-     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -341,13 +339,11 @@
    "of": "3c11830a",
    "reading": {
     "ph": [
-     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
-     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -476,13 +472,11 @@
    "of": "ed251c7c",
    "reading": {
     "ph": [
-     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
-     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -493,13 +487,11 @@
    "of": "42b18b8c",
    "reading": {
     "ph": [
-     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
-     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -510,13 +502,11 @@
    "of": "998d3b00",
    "reading": {
     "ph": [
-     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
-     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -585,13 +575,11 @@
    "of": "4c3a2bf1",
    "reading": {
     "ph": [
-     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
-     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -772,13 +760,11 @@
    "of": "3bb6879b",
    "reading": {
     "ph": [
-     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
-     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -963,13 +949,11 @@
    "of": "7522a4f2",
    "reading": {
     "ph": [
-     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
-     "movement": "opp",
      "shooting": "your"
     }
    },
@@ -980,13 +964,11 @@
    "of": "3c11830a",
    "reading": {
     "ph": [
-     "movement",
      "shooting",
      "fight"
     ],
     "turn": "either",
     "turns": {
-     "movement": "opp",
      "shooting": "your"
     }
    },

@@ -1282,17 +1282,15 @@
  },
  {
   "army": "infernal-lance",
-  "kind": "ability-timing (new label, verify/derive.js)",
+  "kind": "ability-timing (new label, verify/derive.js; label-own-target now of any attack)",
   "where": "infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers",
   "judgement": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -1308,17 +1306,15 @@
  },
  {
   "army": "infernal-lance",
-  "kind": "ability-timing (new label, verify/derive.js)",
+  "kind": "ability-timing (new label, verify/derive.js; label-own-target now of any attack)",
   "where": "infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers",
   "judgement": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -1414,5 +1410,221 @@
    ]
   },
   "key": "label|ability-timing | big-demons-baby · Angron · Wrathful Presence: pick one · The Blood God’s Favour"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-timing (label changed: label-own-target now of any attack, no Fire Overwatch)",
+  "where": "shooty · Killa Kans · Spiteful Power Trip",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Spiteful Power Trip",
+   "text": "This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**.",
+   "rules": [
+    "any-attack",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | shooty · Killa Kans · Spiteful Power Trip"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-timing (label changed: label-own-target now of any attack, no Fire Overwatch)",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER** unit, this model regains up to 3 lost wounds instead).",
+   "rules": [
+    "any-attack",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing (label changed: label-own-target now of any attack, no Fire Overwatch)",
+  "where": "defilers-and-friends · Defiler [defiler] · Revel in Desecration",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Revel in Desecration",
+   "text": "Each time this model makes an attack that targets an enemy unit that is not **below Half-strength**, add 1 to the **Hit roll**.",
+   "rules": [
+    "any-attack",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | defilers-and-friends · Defiler [defiler] · Revel in Desecration"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing (label changed: label-own-target now of any attack, no Fire Overwatch)",
+  "where": "defilers-and-friends · Defiler [defiler-2] · Revel in Desecration",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Revel in Desecration",
+   "text": "Each time this model makes an attack that targets an enemy unit that is not **below Half-strength**, add 1 to the **Hit roll**.",
+   "rules": [
+    "any-attack",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | defilers-and-friends · Defiler [defiler-2] · Revel in Desecration"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-timing (label changed: label-own-target now of any attack, no Fire Overwatch)",
+  "where": "mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER** unit, this model regains up to 3 lost wounds instead).",
+   "rules": [
+    "any-attack",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing (label changed: label-own-target now of any attack, no Fire Overwatch)",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Visions of Suffering",
+   "text": "Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll**. If that enemy unit is **Below Half-strength**, add 1 to the **Wound roll** as well.",
+   "rules": [
+    "any-attack",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering"
  }
 ]

@@ -3040,13 +3040,11 @@
   },
   "ability-timing | shooty · Killa Kans · Spiteful Power Trip": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -3428,13 +3426,11 @@
   },
   "ability-timing | pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -4019,13 +4015,11 @@
   },
   "ability-timing | defilers-and-friends · Defiler [defiler] · Revel in Desecration": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -4038,13 +4032,11 @@
   },
   "ability-timing | defilers-and-friends · Defiler [defiler-2] · Revel in Desecration": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -4333,13 +4325,11 @@
   },
   "ability-timing | mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -4801,13 +4791,11 @@
   },
   "ability-timing | fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -5654,25 +5642,21 @@
   },
   "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
   "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
