@@ -760,6 +760,9 @@ Warlord
 + Flawless Blades
 LUCIUS THE ETERNAL
 A Challenge Worthy of Skill
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
@@ -892,9 +895,9 @@ Movement · Your turn
 Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.
 
 Revel in Desecration
-Their Move · Your Shoot · Fight
+Your Shoot · Fight
 
-Their Movement / Your Shooting / Fight (either turn)
+Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll.
 
@@ -912,9 +915,9 @@ Movement · Your turn
 Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.
 
 Revel in Desecration
-Their Move · Your Shoot · Fight
+Your Shoot · Fight
 
-Their Movement / Your Shooting / Fight (either turn)
+Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll.
 
@@ -2491,6 +2494,9 @@ STRATAGEMS · COTERIE OF THE CONCEITED · FIGHT PHASE
 ABILITIES
 A Challenge Worthy of Skill
 - Lucius the Eternal
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
@@ -3307,9 +3313,9 @@ Movement · Your turn
 Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.
 
 Revel in Desecration
-Their Move · Your Shoot · Fight
+Your Shoot · Fight
 
-Their Movement / Your Shooting / Fight (either turn)
+Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll.
 
@@ -3432,9 +3438,9 @@ Movement · Your turn
 Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.
 
 Revel in Desecration
-Their Move · Your Shoot · Fight
+Your Shoot · Fight
 
-Their Movement / Your Shooting / Fight (either turn)
+Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll.
 
@@ -3553,7 +3559,7 @@ Ask about this unit
 Chaos Rhino ›
 
 ######## popup ability:defilers-and-friends|A Challenge Worthy of Skill|Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. · MAULERFIEND Defilers and friends
-ABILITY
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
 
 A Challenge Worthy of Skill
 
@@ -3674,7 +3680,7 @@ UNITTormentors
 Ask about this ability
 
 ######## popup ability:defilers-and-friends|Revel in Desecration|Each time this model makes an attack that targets an enemy unit that is not **below Half-strength**, add 1 to the **Hit roll**. · DEFILERS AND FRIENDS Defilers and friends
-ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
+ABILITY · YOUR SHOOTING / FIGHT (EITHER TURN)
 
 Revel in Desecration
 

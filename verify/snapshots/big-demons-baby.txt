@@ -684,8 +684,11 @@ Angron
 Warlord
 WRATHFUL PRESENCE: PICK ONE
 The Blood God’s Favour
+Start of the battle round
 
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+Start of the battle round
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.
 
 Overwhelming Wrath
 Their Movement
@@ -735,7 +738,7 @@ This unit is eligible to declare a charge in a turn in which it Advanced.
 
 Damaged: 1-7 wounds remaining
 
-While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.
+While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s melee weapons.
 
 Bloodthirster
 Daemon Lord of Khorne
@@ -767,7 +770,7 @@ Charge/Fight
 
 Charge / Fight · Either turn
 
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 
 Direct the Slaughter
 Once per battle round, per army
@@ -775,7 +778,7 @@ Any phase
 
 Once per battle round · Any phase · Either turn
 
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
+Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.
 
 Blade of Endless Bloodshed
 Enhancement
@@ -1534,7 +1537,7 @@ if it applies
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (4)
 The Blood God’s Favour
-“Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.” · not counted in the Damage tab
+“Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.” · not counted in the Damage tab
 Overwhelming Wrath
 “Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.” · not counted in the Damage tab
 Reborn in Blood
@@ -2467,8 +2470,11 @@ Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 a
 ABILITIES
 The Blood God’s Favour
 - Wrathful Presence: pick one
+Start of the battle round
 
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+Start of the battle round
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.
 
 Overwhelming Wrath
 - Wrathful Presence: pick one
@@ -2819,7 +2825,7 @@ Charge/Fight
 
 Charge / Fight · Either turn
 
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 
 Direct the Slaughter
 Once per battle round, per army
@@ -2827,7 +2833,7 @@ Any phase
 
 Once per battle round · Any phase · Either turn
 
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
+Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.
 
 Blade of Endless Bloodshed
 Enhancement
@@ -3534,23 +3540,23 @@ UNITAngron, Bloodthirster
 
 Ask about this ability
 
-######## popup ability:big-demons-baby|Damaged: 1-7 wounds remaining|While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage. · BIG DEMONS BABY Big demons baby
+######## popup ability:big-demons-baby|Damaged: 1-7 wounds remaining|While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s melee weapons. · BIG DEMONS BABY Big demons baby
 ABILITY
 
 Damaged: 1-7 wounds remaining
 
-While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.
+While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s melee weapons.
 
 UNITSkarbrand
 
 Ask about this ability
 
-######## popup ability:big-demons-baby|Devastating Assault|Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the **[DEVASTATING WOUNDS]** ability. · BIG DEMONS BABY Big demons baby
+######## popup ability:big-demons-baby|Devastating Assault|Each time this model makes a **Charge move**, until the end of the turn, its melee weapons have the **[DEVASTATING WOUNDS]** ability. · BIG DEMONS BABY Big demons baby
 ABILITY · CHARGE / FIGHT · EITHER TURN
 
 Devastating Assault
 
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 
 UNITDaemon Prince · Blade of Endless Bloodshed
 
@@ -3671,12 +3677,12 @@ UNITBloodthirster
 
 Ask about this ability
 
-######## popup ability:big-demons-baby|The Blood God’s Favour|Each time you make a **Blessings of Khorne** roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled. · BIG DEMONS BABY Big demons baby
-ABILITY
+######## popup ability:big-demons-baby|The Blood God’s Favour|Each time you make a **Blessings of Khorne roll**, if this model is on the battlefield, you can re-roll up to six of the D6 rolled. · BIG DEMONS BABY Big demons baby
+ABILITY · START OF THE BATTLE ROUND
 
 The Blood God’s Favour
 
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.
 
 UNITAngron
 
@@ -3693,7 +3699,7 @@ TO PICK FROM: WRATHFUL PRESENCE
 
 The Blood God’s Favour
 
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.
 
 Overwhelming Wrath Aura
 
@@ -3961,6 +3967,47 @@ Each time a model in this unit makes a melee attack that targets an INFANTRY uni
 
 Ask about this rule
 
+######## popup rule:Blessings of Khorne roll · BIG DEMONS BABY Big demons baby
+WORLD EATERS ARMY RULE
+
+Blessings of Khorne
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+Ask about this rule
+
 ######## popup rule:Blood Tithe · BIG DEMONS BABY Big demons baby
 KHORNE DAEMONKIN DETACHMENT RULE
 
@@ -3996,6 +4043,32 @@ No BLOOD LEGIONS model from your army can be your WARLORD.
 
 IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
 
+Ask about this rule
+
+######## popup rule:Charge move · BIG DEMONS BABY Big demons baby
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
 Ask about this rule
 
 ######## popup rule:Charge roll · BIG DEMONS BABY Big demons baby

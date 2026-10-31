@@ -571,11 +571,14 @@ No ARMIGER models in this list
 
 No ARMIGER models in this list
 
-Bondsman
+Bondsman · Their Movement / Your Shooting / Fight (either turn)
 
 While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
 Macro-extinction Protocols
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
 
@@ -602,8 +605,11 @@ Bondsman
 While a model is affected by this ability, it is eligible to declare a charge in a turn in which it Advanced.
 
 Shock Charge
+Your Charge
 
-You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
+Charge · Your turn
+
+You can target this model with the Crushing Impact Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
 
 Damaged: 1-10 Wounds Remaining
 
@@ -663,9 +669,9 @@ Needs a thundershock spear and bellatus reaper chainsword: not this loadout
 If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
 
 Saturation Fire
-Your Shooting
+Their Move · Your Shoot
 
-Shooting · Your turn
+Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
@@ -2555,11 +2561,14 @@ No ARMIGER models in this list
 
 No ARMIGER models in this list
 
-Bondsman
+Bondsman · Their Movement / Your Shooting / Fight (either turn)
 
 While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
 Macro-extinction Protocols
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
 
@@ -2675,8 +2684,11 @@ Bondsman
 While a model is affected by this ability, it is eligible to declare a charge in a turn in which it Advanced.
 
 Shock Charge
+Your Charge
 
-You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
+Charge · Your turn
+
+You can target this model with the Crushing Impact Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
 
 Rules
 Deadly Demise D6+2, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
@@ -2957,9 +2969,9 @@ Needs a thundershock spear and bellatus reaper chainsword: not this loadout
 If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
 
 Saturation Fire
-Your Shooting
+Their Move · Your Shoot
 
-Shooting · Your turn
+Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
@@ -3059,7 +3071,7 @@ UNITCanis Rex, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
 Ask about this ability
 
 ######## popup ability:4-megas-and-a-destrier|Macro-extinction Protocols|Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
-ABILITY
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
 
 Macro-extinction Protocols
 
@@ -3092,7 +3104,7 @@ UNITKnight Destrier · Sanctuary
 Ask about this ability
 
 ######## popup ability:4-megas-and-a-destrier|Saturation Fire|Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
-ABILITY · SHOOTING · YOUR TURN
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
 Saturation Fire
 

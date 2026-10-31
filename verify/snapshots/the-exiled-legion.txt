@@ -725,6 +725,9 @@ Fight · Either turn
 While this model is leading a unit, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.
 
 Skulls for Khorne
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model destroys an enemy Character unit, you gain 1CP.
 
@@ -2813,6 +2816,9 @@ While this model is leading a unit, melee weapons equipped by models in that uni
 
 Skulls for Khorne
 - Skulltaker
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model destroys an enemy Character unit, you gain 1CP.
 
@@ -3766,7 +3772,7 @@ UNITSkullmaster + Bloodcrushers · Brazenmaw
 Ask about this ability
 
 ######## popup ability:the-exiled-legion|Skulls for Khorne|Each time this model makes an attack that targets a Character unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. Each time this model destroys an enemy Character unit, you gain 1CP. · THE EXILED LEGION The Exiled Legion
-ABILITY
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
 
 Skulls for Khorne
 

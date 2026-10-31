@@ -751,14 +751,14 @@ Start of the battle round
 
 Start of the battle round
 
-At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability.
 
 Lord of the Planet of the Sorcerers
 Your Shooting
 
 Psychic · Shooting · Your turn
 
-This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.
+This model can attempt up to two Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.
 
 Damaged: 1-6 wounds remaining
 
@@ -771,7 +771,7 @@ Their Move · Your Shoot · Fight
 
 Their Movement / Your Shooting / Fight (either turn)
 
-Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER unit, this model regains up to 3 lost wounds instead).
 
 Aetherstride
 Your Move/Shoot/Charge
@@ -824,7 +824,7 @@ Their Move · Your Shoot
 
 Their Movement / Your Shooting
 
-Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
+Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If that attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
 
 Icon of Flame
 
@@ -1358,9 +1358,9 @@ Treason of Tzeentch
 Time Flux
 “While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
 Unearthly Power
-“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+“At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 Lord of the Planet of the Sorcerers
-“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
+“This model can attempt up to two Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1618,9 +1618,9 @@ Treason of Tzeentch
 Time Flux
 “While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
 Unearthly Power
-“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+“At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 Lord of the Planet of the Sorcerers
-“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
+“This model can attempt up to two Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1911,9 +1911,9 @@ Treason of Tzeentch
 Time Flux
 “While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
 Unearthly Power
-“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+“At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 Lord of the Planet of the Sorcerers
-“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
+“This model can attempt up to two Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -2044,9 +2044,9 @@ Treason of Tzeentch
 Time Flux
 “While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
 Unearthly Power
-“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+“At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 Lord of the Planet of the Sorcerers
-“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
+“This model can attempt up to two Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -2601,14 +2601,14 @@ Start of the battle round
 
 Start of the battle round
 
-At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability.
 
 Lord of the Planet of the Sorcerers
 Your Shooting
 
 Psychic · Shooting · Your turn
 
-This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.
+This model can attempt up to two Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.
 
 Rules
 Deadly Demise D6, Deep Strike, Cabal of Sorcerers, Kindred Sorcery
@@ -2721,7 +2721,7 @@ Their Move · Your Shoot · Fight
 
 Their Movement / Your Shooting / Fight (either turn)
 
-Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER unit, this model regains up to 3 lost wounds instead).
 
 Aetherstride
 Your Move/Shoot/Charge
@@ -2963,7 +2963,7 @@ Their Move · Your Shoot
 
 Their Movement / Your Shooting
 
-Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
+Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If that attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
 
 Icon of Flame
 - Rubric Marines
@@ -3621,12 +3621,12 @@ UNITTzaangors
 
 Ask about this ability
 
-######## popup ability:pubstomper|Bringers of Change|Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead. · PUBSTOMPER Pubstomper
+######## popup ability:pubstomper|Bringers of Change|Each time a model in this unit makes a ranged attack, re-roll a **Wound roll** of 1. If that attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead. · PUBSTOMPER Pubstomper
 ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
 Bringers of Change
 
-Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
+Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If that attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
 
 UNITExalted Sorcerer + Rubric Marines · Incandaeum
 
@@ -3643,12 +3643,12 @@ UNITMagnus the Red, Defiler
 
 Ask about this ability
 
-######## popup ability:pubstomper|Hunter of Souls|Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead). · PUBSTOMPER Pubstomper
+######## popup ability:pubstomper|Hunter of Souls|Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER** unit, this model regains up to 3 lost wounds instead). · PUBSTOMPER Pubstomper
 ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
 
 Hunter of Souls
 
-Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER unit, this model regains up to 3 lost wounds instead).
 
 UNITDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
 
@@ -3749,12 +3749,12 @@ UNITSorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crys
 
 Ask about this ability
 
-######## popup ability:pubstomper|Unearthly Power|At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability. · PUBSTOMPER Pubstomper
+######## popup ability:pubstomper|Unearthly Power|At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability. · PUBSTOMPER Pubstomper
 ABILITY · START OF THE BATTLE ROUND
 
 Unearthly Power
 
-At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability.
 
 TO PICK FROM: CRIMSON KING
 
@@ -4457,46 +4457,6 @@ Psychic
 Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
 
 IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer · Incandaeum, Sorcerer in Terminator Armour · Umbralefic Crystal
-
-Ask about this rule
-
-######## popup rule:Psychic test · PUBSTOMPER Pubstomper
-THOUSAND SONS ARMY RULE
-
-Cabal of Sorcerers
-
-If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
-
-Psychic Test Sequence
-
-Roll 2D6
-Channel the Warp (Optional)
-Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
-If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
-
-FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
-
-FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
-
-FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
-
-App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
-
-Destiny’s Ruin (Psychic) · Warp Charge 5
-
-Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
-
-Temporal Surge (Psychic) · Warp Charge 6
-
-Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
-
-Doombolt (Psychic) · Warp Charge 7
-
-Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
-
-Twist of Fate (Psychic) · Warp Charge 9
-
-Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
 
 Ask about this rule
 

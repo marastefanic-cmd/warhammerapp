@@ -632,9 +632,9 @@ rules
 RULE_ALIASES 71
 RULE_SRC 7
 CONCEPTS 20
-GRANTS 75
+GRANTS 74
 RULE_OPTIONS 89
-CHECKLIST 496
+CHECKLIST 497
 rule / key → a rule or an ability
 CORE_STRATAGEMS
 10 · used by every list
@@ -1183,9 +1183,9 @@ CONCEPTS 20 rows
 MECHANICAL term (GW)
 
 GRANTS
-75 rows · a rule or option giving units an ability or keyword
+74 rows · a rule or option giving units an ability or keyword
 
-RULE→ an army rule (4) or detachment rule (26) in FACTIONS, or a unit’s ability (45) in a list (ARMIES → DATASHEETS)
+RULE→ an army rule (4) or detachment rule (26) in FACTIONS, or a unit’s ability (44) in a list (ARMIES → DATASHEETS)
 
 ONE ROW
 
@@ -1209,7 +1209,7 @@ text
 COMPUTED
 Every column and where it comes from
 7 columns
-GRANTS 75 rows
+GRANTS 74 rows
 
 MECHANICAL rule (computed), option (computed), grants (computed), type (computed), to (computed), while (computed), text (computed)
 
@@ -1251,11 +1251,11 @@ RULE_OPTIONS 89 rows
 MECHANICAL rule (computed), option (computed), text (computed), found (computed), explicit (computed), trigger (computed), used (computed), phases (computed)
 
 CHECKLIST
-496 rows · per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
+497 rows · per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
 
 R|FACTION|NAME→ an army or detachment rule in FACTIONS (92)
 
-A|FINGERPRINT→ an ability, by a fingerprint of its name and words (404), in DATASHEETS
+A|FINGERPRINT→ an ability, by a fingerprint of its name and words (405), in DATASHEETS
 
 ONE ROW: TURBO ENGINE (WAZDAKKA GUTSMEK)
 
@@ -1272,10 +1272,10 @@ COMPUTED
 t the phases it is triggered in · u the phases its effect is used in · s listed at a fixed moment of the turn · a listed when the unit is selected · at the moment it opens with · ae also at the end of the battle round · o its options, each with its own phases · g what it grants · f a rule it puts in force · pk a pick of options · oc its options cover its phases · x not placed (its words give no phase) · none no phase (before the battle, what a unit carries)
 
 BOXES
-279 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
+281 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
 Every column and where it comes from
 23 columns, with 1 inner table
-BOXES 279 rows
+BOXES 281 rows
 
 MECHANICAL n (computed), b (computed), nc (computed), reach (computed), both (computed), embarked (computed)
 
@@ -1342,7 +1342,7 @@ one value · the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-10-31.2
+2026-10-31.3
 
 WHY YOU CAN TRUST THE DATA
 
@@ -1455,8 +1455,8 @@ Thievin’ Scavengers · Gretchin×3
 
 ONCE PER BATTLE
 
-Bomb Squig · Mek + Tankbustas · Unit 1
-Bomb Squig · Mek + Tankbustas · Unit 2
+Bomb Squigs · Mek + Tankbustas · Unit 1
+Bomb Squigs · Mek + Tankbustas · Unit 2
 Movement · Their turn
 nothing
 
@@ -1596,8 +1596,8 @@ War Cry · Orks army rule
 ABILITIES
 Fix Dat Armour Up · Big Mek in Mega Armour
 Boss’ Ammo Runt · Warboss
-Bomb Squig · Mek + Tankbustas · Unit 1
-Bomb Squig · Mek + Tankbustas · Unit 2
+Bomb Squigs · Mek + Tankbustas · Unit 1
+Bomb Squigs · Mek + Tankbustas · Unit 2
 STRATA­GEMS
 1CP Insane Bravery
 
@@ -2186,7 +2186,7 @@ Your Command/Move/Charge
 
 Command / Movement / Charge · Your turn
 
-In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.
+In your Command phase, select one Throttlerokkit Shokka Engine ability (see above). This unit has that ability until the start of your next Command phase.
 
 Big Mek Dakkarig
 Dreadherder
@@ -2322,7 +2322,7 @@ Shooting · Your turn
 
 In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That unit makes a battle-shock roll, with -1 to that battle-shock roll.
 
-Bomb Squig
+Bomb Squigs
 Once per turn, twice per battle, per unit
 Unit 1
 Unit 2
@@ -2359,7 +2359,7 @@ Your Shooting
 
 Shooting · Your turn
 
-In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 AP.
+In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 AP:
 
 This unit is within range of an objective.
 The target of that attack is within range of an objective.
@@ -2399,9 +2399,9 @@ At the end of your opponent’s Fight phase, if this unit is unengaged, you can 
 
 Killa Kans
 Spiteful Power Trip
-Their Move · Your Shoot · Fight
+Your Shoot · Fight
 
-Their Movement / Your Shooting / Fight (either turn)
+Your Shooting / Fight (either turn)
 
 This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.
 
@@ -2853,7 +2853,7 @@ Shokk Attack Engine
 Pulse Jet
 “In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.” · not counted in the Damage tab
 Full Throttle
-“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
+“In your Command phase, select one Throttlerokkit Shokka Engine ability (see above). This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Clever Know-wotz (Mek)
 Selected by it · +1 to Hit rolls
@@ -3084,7 +3084,7 @@ Shokk Attack Engine
 Pulse Jet
 “In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.” · not counted in the Damage tab
 Full Throttle
-“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
+“In your Command phase, select one Throttlerokkit Shokka Engine ability (see above). This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Clever Know-wotz (Mek)
 Selected by it · +1 to Hit rolls
@@ -3336,7 +3336,7 @@ Shokk Attack Engine
 Pulse Jet
 “In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.” · not counted in the Damage tab
 Full Throttle
-“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
+“In your Command phase, select one Throttlerokkit Shokka Engine ability (see above). This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Clever Know-wotz (Mek)
 Selected by it · +1 to Hit rolls
@@ -3446,7 +3446,7 @@ Shokk Attack Engine
 Pulse Jet
 “In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.” · not counted in the Damage tab
 Full Throttle
-“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
+“In your Command phase, select one Throttlerokkit Shokka Engine ability (see above). This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Clever Know-wotz (Mek)
 Selected by it · +1 to Hit rolls
@@ -4076,7 +4076,7 @@ Your Command/Move/Charge
 
 Command / Movement / Charge · Your turn
 
-In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.
+In your Command phase, select one Throttlerokkit Shokka Engine ability (see above). This unit has that ability until the start of your next Command phase.
 
 Rules
 Deadly Demise D3, Deep Strike, Lone Operative, Waaagh!
@@ -4718,7 +4718,7 @@ Shooting · Your turn
 
 In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That unit makes a battle-shock roll, with -1 to that battle-shock roll.
 
-Bomb Squig
+Bomb Squigs
 - Tankbustas
 Once per turn, twice per battle, per unit
 Unit 1
@@ -4891,7 +4891,7 @@ Your Shooting
 
 Shooting · Your turn
 
-In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 AP.
+In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 AP:
 
 This unit is within range of an objective.
 The target of that attack is within range of an objective.
@@ -5218,9 +5218,9 @@ Kan Klaw×6
 3
 ABILITIES
 Spiteful Power Trip
-Their Move · Your Shoot · Fight
+Your Shoot · Fight
 
-Their Movement / Your Shooting / Fight (either turn)
+Your Shooting / Fight (either turn)
 
 This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.
 
@@ -5265,12 +5265,12 @@ UNITBig Mek · Dreadherder, Big Mek · Cybork Boosta
 
 Ask about this ability
 
-######## popup ability:shooty|Bomb Squig|In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12" of this unit and roll one D6:
+######## popup ability:shooty|Bomb Squigs|In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12" of this unit and roll one D6:
 - On a 3+, that enemy unit suffers D3 **mortal wounds**.
 *Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.* · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · ONCE PER TURN, TWICE PER BATTLE, PER UNIT · MOVEMENT · YOUR TURN
 
-Bomb Squig
+Bomb Squigs
 
 In your Movement phase, when this unit ends a normal move, you can select one visible enemy unit within 12" of this unit and roll one D6:
 
@@ -5334,14 +5334,14 @@ UNITBig Mek · Dreadherder, Big Mek · Cybork Boosta
 
 Ask about this ability
 
-######## popup ability:shooty|Finderz Keeperz|In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 **AP**.
+######## popup ability:shooty|Finderz Keeperz|In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 **AP**:
 - This unit is within range of an **objective**.
 - The target of that attack is within range of an **objective**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · SHOOTING · YOUR TURN
 
 Finderz Keeperz
 
-In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 AP.
+In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 AP:
 
 This unit is within range of an objective.
 The target of that attack is within range of an objective.
@@ -5364,12 +5364,12 @@ UNITBig Mek · Supa-glowy Fing
 
 Ask about this ability
 
-######## popup ability:shooty|Full Throttle|In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
+######## popup ability:shooty|Full Throttle|In your Command phase, select one Throttlerokkit Shokka Engine ability (see above). This unit has that ability until the start of your next Command phase. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · COMMAND / MOVEMENT / CHARGE · YOUR TURN
 
 Full Throttle
 
-In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.
+In your Command phase, select one Throttlerokkit Shokka Engine ability (see above). This unit has that ability until the start of your next Command phase.
 
 TO PICK FROM: THROTTLEROKKIT SHOKKA ENGINE
 
@@ -5444,7 +5444,7 @@ UNITWazdakka Gutsmek
 Ask about this ability
 
 ######## popup ability:shooty|Spiteful Power Trip|This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
+ABILITY · YOUR SHOOTING / FIGHT (EITHER TURN)
 
 Spiteful Power Trip
 

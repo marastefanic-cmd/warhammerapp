@@ -646,7 +646,7 @@ Any phase
 
 Once per battle, per army · Any phase · Either turn
 
-(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:
+At the start of any phase, you can select one of the following to take effect until the end of the phase:
 
 This model’s Watcher’s Axe weapon has +3 A.
 This model has 3+ InSv.
@@ -671,7 +671,7 @@ Once per battle round, per unit
 
 Once per battle round, per unit
 
-(Once per battle round, per unit) If this unit is not readied, you can use this ability. If you do, this unit is readied.
+If this unit is not readied, you can use this ability. If you do, this unit is readied.
 
 Vengeful Surge
 Once per battle, per unit
@@ -679,7 +679,7 @@ Their Shooting
 
 Once per battle, per unit · Shooting · Their turn
 
-(Once per battle, per unit) In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2".
+In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2".
 
 Praesidium Shield
 
@@ -753,6 +753,9 @@ In your Shooting phase, when this unit has shot, you can select one enemy unit h
 
 Caladius Annihilator Grav-tank
 Advanced Firepower
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
 
 This unit’s ranged attacks that target a MONSTER/VEHICLE unit can:
 
@@ -1505,7 +1508,7 @@ if it applies
 MODELS
 +1 MORE ▾
 Moment Shackle
-Once per battle · “(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase”: +3 A · for Watcher’s Axe
+Once per battle · “At the start of any phase, you can select one of the following to take effect until the end of the phase”: +3 A · for Watcher’s Axe
 if it applies
 +2% wiped
 ≈0
@@ -1904,7 +1907,7 @@ Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if it applies
 0
 Moment Shackle
-Once per battle · “(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase”: +3 A · for Watcher’s Axe
+Once per battle · “At the start of any phase, you can select one of the following to take effect until the end of the phase”: +3 A · for Watcher’s Axe
 if it applies
 0
 Slayer of Tyrants
@@ -2568,7 +2571,7 @@ Any phase
 
 Once per battle, per army · Any phase · Either turn
 
-(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:
+At the start of any phase, you can select one of the following to take effect until the end of the phase:
 
 This model’s Watcher’s Axe weapon has +3 A.
 This model has 3+ InSv.
@@ -2709,7 +2712,7 @@ Once per battle round, per unit
 
 Once per battle round, per unit
 
-(Once per battle round, per unit) If this unit is not readied, you can use this ability. If you do, this unit is readied.
+If this unit is not readied, you can use this ability. If you do, this unit is readied.
 
 Vengeful Surge
 - Shield-Captain
@@ -2718,7 +2721,7 @@ Their Shooting
 
 Once per battle, per unit · Shooting · Their turn
 
-(Once per battle, per unit) In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2".
+In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2".
 
 Praesidium Shield
 - Shield-Captain
@@ -3301,6 +3304,9 @@ Armoured hull
 1
 ABILITIES
 Advanced Firepower
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
 
 This unit’s ranged attacks that target a MONSTER/VEHICLE unit can:
 
@@ -3333,7 +3339,7 @@ Ask about this unit
 - Re-roll one **hit roll**.
 - Re-roll one **wound roll**.
 - Re-roll one **damage roll**. · CALADIUS ANNIHILATOR GRAV-TANK Dread Host
-ABILITY
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
 Advanced Firepower
 
@@ -3390,14 +3396,14 @@ UNITCustodian Wardens
 
 Ask about this ability
 
-######## popup ability:dread-host|Moment Shackle|(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:
+######## popup ability:dread-host|Moment Shackle|At the start of any phase, you can select one of the following to take effect until the end of the phase:
 - This model’s Watcher’s Axe weapon has +3 **A**.
 - This model has 3+ **InSv**. · DREAD HOST Dread Host
 ABILITY · ONCE PER BATTLE, PER ARMY · ANY PHASE · EITHER TURN
 
 Moment Shackle
 
-(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:
+At the start of any phase, you can select one of the following to take effect until the end of the phase:
 
 This model’s Watcher’s Axe weapon has +3 A.
 This model has 3+ InSv.
@@ -3469,12 +3475,12 @@ UNITShield-Captain + Sentinel Guard Sodality
 
 Ask about this ability
 
-######## popup ability:dread-host|Vengeful Surge|(Once per battle, per unit) In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2". · DREAD HOST Dread Host
+######## popup ability:dread-host|Vengeful Surge|In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2". · DREAD HOST Dread Host
 ABILITY · ONCE PER BATTLE, PER UNIT · SHOOTING · THEIR TURN
 
 Vengeful Surge
 
-(Once per battle, per unit) In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2".
+In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2".
 
 UNITShield-Captain + Sentinel Guard Sodality
 

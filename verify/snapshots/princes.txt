@@ -724,9 +724,9 @@ Charge · Your turn
 At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll:
 
 If that leadership roll is failed, one bodyguard model in this unit is destroyed.
-Berserker Frenzy
+Berzerker Frenzy
 
-The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.
+The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining.
 
 KHORNE BERZERKERS
 Blood Surge
@@ -762,7 +762,7 @@ Charge/Fight
 
 Charge / Fight · Either turn
 
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 
 Direct the Slaughter
 Once per battle round, per army
@@ -770,7 +770,7 @@ Any phase
 
 Once per battle round · Any phase · Either turn
 
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
+Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.
 
 Helm of Brazen Ire
 Enhancement
@@ -790,7 +790,7 @@ Charge/Fight
 
 Charge / Fight · Either turn
 
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 
 Direct the Slaughter
 Once per battle round, per army
@@ -798,7 +798,7 @@ Any phase
 
 Once per battle round · Any phase · Either turn
 
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
+Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.
 
 Berzerker Glaive
 Enhancement
@@ -864,7 +864,7 @@ Battle-lust
 SLAUGHTERBOUND
 Lord of the Eightbound
 
-If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, until the end of the battle, this model has the Deep Strike and Scouts 6" abilities.
 
 Rage Eternal
 Your Command
@@ -879,7 +879,7 @@ Fight
 
 Once per battle · Fight · Either turn
 
-Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
+Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability.
 
 Battle-lust
 Enhancement
@@ -917,7 +917,7 @@ Fight
 
 Aura · Fight · Either turn
 
-While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit (excluding MONSTERS and VEHICLES) that is Below Half-strength, add 1 to the Wound roll as well.
 
 Jakhals
 Objective Ravaged
@@ -1058,14 +1058,14 @@ Chaos Rhino D3
 Forgefiend D3
 Deep Strike
 Slaughterbound + Exalted Eightbound
-Lord of the Eightbound: If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+Lord of the Eightbound: If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, until the end of the battle, this model has the Deep Strike and Scouts 6" abilities.
 Devastating Wounds
 Daemon Prince · Helm of Brazen Ire
-Devastating Assault: Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+Devastating Assault: Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 Daemon Prince · Berzerker Glaive
-Devastating Assault: Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+Devastating Assault: Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 Slaughterbound + Exalted Eightbound
-Possessed Lord: Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
+Possessed Lord: Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability.
 Firing Deck
 Chaos Rhino 2
 Leader
@@ -1447,8 +1447,8 @@ None that change these numbers.
 NOT COUNTED IN THE DAMAGE TAB (4)
 The Betrayer
 “At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll: - If that leadership roll is failed, one bodyguard model in this unit is destroyed.” · not counted in the Damage tab
-Berserker Frenzy
-“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.” · not counted in the Damage tab
+Berzerker Frenzy
+“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining.” · not counted in the Damage tab
 Blood Surge
 “In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".” · not counted in the Damage tab
 Icon of Khorne
@@ -1719,8 +1719,8 @@ ticked for you: ticked with “Charged this turn”
 NOT COUNTED IN THE DAMAGE TAB (4)
 The Betrayer
 “At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll: - If that leadership roll is failed, one bodyguard model in this unit is destroyed.” · not counted in the Damage tab
-Berserker Frenzy
-“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.” · not counted in the Damage tab
+Berzerker Frenzy
+“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining.” · not counted in the Damage tab
 Blood Surge
 “In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".” · not counted in the Damage tab
 Icon of Khorne
@@ -1731,7 +1731,7 @@ Aura · Within 6" of it · The target: not Monster/Vehicle: +1 to Hit rolls
 if it applies
 0
 Beacons of Rage (Eightbound)
-Aura · Within 6" of it · The target: not Monster/Vehicle · The target Below Half-strength: +1 to Wound rolls
+Aura · Within 6" of it · The target Below Half-strength · The target: not Monster/Vehicle: +1 to Wound rolls
 if it applies
 0
 STRATAGEMS
@@ -2063,8 +2063,8 @@ None that change these numbers.
 NOT COUNTED IN THE DAMAGE TAB (4)
 The Betrayer
 “At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll: - If that leadership roll is failed, one bodyguard model in this unit is destroyed.” · not counted in the Damage tab
-Berserker Frenzy
-“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.” · not counted in the Damage tab
+Berzerker Frenzy
+“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining.” · not counted in the Damage tab
 Blood Surge
 “In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".” · not counted in the Damage tab
 Icon of Khorne
@@ -2187,8 +2187,8 @@ ticked for you: ticked with “Charged this turn”
 NOT COUNTED IN THE DAMAGE TAB (4)
 The Betrayer
 “At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll: - If that leadership roll is failed, one bodyguard model in this unit is destroyed.” · not counted in the Damage tab
-Berserker Frenzy
-“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.” · not counted in the Damage tab
+Berzerker Frenzy
+“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining.” · not counted in the Damage tab
 Blood Surge
 “In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".” · not counted in the Damage tab
 Icon of Khorne
@@ -2199,7 +2199,7 @@ Aura · Within 6" of it · The target: not Monster/Vehicle: +1 to Hit rolls
 if it applies
 0
 Beacons of Rage (Eightbound)
-Aura · Within 6" of it · The target: not Monster/Vehicle · The target Below Half-strength: +1 to Wound rolls
+Aura · Within 6" of it · The target Below Half-strength · The target: not Monster/Vehicle: +1 to Wound rolls
 if it applies
 0
 STRATAGEMS
@@ -2867,10 +2867,10 @@ Charge · Your turn
 At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll:
 
 If that leadership roll is failed, one bodyguard model in this unit is destroyed.
-Berserker Frenzy
+Berzerker Frenzy
 - Khârn the Betrayer
 
-The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.
+The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining.
 
 Blood Surge
 - Khorne Berzerkers
@@ -3006,7 +3006,7 @@ Charge/Fight
 
 Charge / Fight · Either turn
 
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 
 Direct the Slaughter
 Once per battle round, per army
@@ -3014,7 +3014,7 @@ Any phase
 
 Once per battle round · Any phase · Either turn
 
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
+Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.
 
 Helm of Brazen Ire
 Enhancement
@@ -3129,7 +3129,7 @@ Charge/Fight
 
 Charge / Fight · Either turn
 
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 
 Direct the Slaughter
 Once per battle round, per army
@@ -3137,7 +3137,7 @@ Any phase
 
 Once per battle round · Any phase · Either turn
 
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
+Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.
 
 Berzerker Glaive
 Enhancement
@@ -3471,7 +3471,7 @@ ABILITIES
 Lord of the Eightbound
 - Slaughterbound
 
-If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, until the end of the battle, this model has the Deep Strike and Scouts 6" abilities.
 
 Rage Eternal
 - Slaughterbound
@@ -3488,7 +3488,7 @@ Fight
 
 Once per battle · Fight · Either turn
 
-Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
+Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability.
 
 Battle-lust
 - Slaughterbound
@@ -3680,7 +3680,7 @@ Fight
 
 Aura · Fight · Either turn
 
-While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit (excluding MONSTERS and VEHICLES) that is Below Half-strength, add 1 to the Wound roll as well.
 
 Rules
 Scouts 6", Blessings of Khorne, Relentless Rage
@@ -3922,23 +3922,23 @@ UNITLord on Juggernaut + Khorne Berzerkers · Archslaughterer
 
 Ask about this ability
 
-######## popup ability:princes|Beacons of Rage|While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well. · PRINCES Princes
+######## popup ability:princes|Beacons of Rage|While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the **Hit roll**. If that attack targets a unit (excluding **MONSTERS** and **VEHICLES**) that is **Below Half-strength**, add 1 to the **Wound roll** as well. · PRINCES Princes
 ABILITY · AURA · FIGHT · EITHER TURN
 
 Beacons of Rage
 
-While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit (excluding MONSTERS and VEHICLES) that is Below Half-strength, add 1 to the Wound roll as well.
 
 UNITEightbound
 
 Ask about this ability
 
-######## popup ability:princes|Berserker Frenzy|The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining. · PRINCES Princes
+######## popup ability:princes|Berzerker Frenzy|The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within **Engagement Range** of one or more enemy units, with 3 wounds remaining. · PRINCES Princes
 ABILITY
 
-Berserker Frenzy
+Berzerker Frenzy
 
-The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.
+The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining.
 
 UNITKhârn the Betrayer + Khorne Berzerkers
 
@@ -3955,12 +3955,12 @@ UNITForgefiend
 
 Ask about this ability
 
-######## popup ability:princes|Devastating Assault|Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the **[DEVASTATING WOUNDS]** ability. · PRINCES Princes
+######## popup ability:princes|Devastating Assault|Each time this model makes a **Charge move**, until the end of the turn, its melee weapons have the **[DEVASTATING WOUNDS]** ability. · PRINCES Princes
 ABILITY · CHARGE / FIGHT · EITHER TURN
 
 Devastating Assault
 
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
+Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 
 UNITDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
@@ -4021,12 +4021,12 @@ UNITDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 Ask about this ability
 
-######## popup ability:princes|Lord of the Eightbound|If this model is attached to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, this model has the **Deep Strike** and **Scouts 6"** abilities. · PRINCES Princes
+######## popup ability:princes|Lord of the Eightbound|If this model is **attached** to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, until the end of the battle, this model has the **Deep Strike** and **Scouts 6"** abilities. · PRINCES Princes
 ABILITY
 
 Lord of the Eightbound
 
-If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, until the end of the battle, this model has the Deep Strike and Scouts 6" abilities.
 
 UNITSlaughterbound + Exalted Eightbound · Battle-lust
 
@@ -4054,12 +4054,12 @@ UNITJakhals
 
 Ask about this ability
 
-######## popup ability:princes|Possessed Lord|Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[Devastating Wounds]** ability. · PRINCES Princes
+######## popup ability:princes|Possessed Lord|Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[DEVASTATING WOUNDS]** ability. · PRINCES Princes
 ABILITY · ONCE PER BATTLE · FIGHT · EITHER TURN
 
 Possessed Lord
 
-Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
+Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability.
 
 UNITSlaughterbound + Exalted Eightbound · Battle-lust
 
@@ -4460,6 +4460,33 @@ IN THIS ARMYForgefiend
 
 Ask about this rule
 
+######## popup rule:Below Half-strength · PRINCES Princes
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+Ask about this rule
+
 ######## popup rule:Blessing of Khorne · PRINCES Princes
 WORLD EATERS ARMY RULE
 
@@ -4581,6 +4608,32 @@ Decapitating Strikes · double 6 or triple 3+
 
 Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
 
+Ask about this rule
+
+######## popup rule:Charge move · PRINCES Princes
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
 Ask about this rule
 
 ######## popup rule:Charge roll · PRINCES Princes
@@ -4713,6 +4766,20 @@ All of that model’s [EXTRA ATTACKS] weapons.
 One of that model’s other melee weapons, if possible.
 
 IN THIS ARMYDaemon Prince · Berzerker Glaive (in Berzerker Glaive), Lord on Juggernaut · Archslaughterer
+
+Ask about this rule
+
+######## popup rule:Engagement Range · PRINCES Princes
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
 
 Ask about this rule
 
@@ -5039,19 +5106,6 @@ IN THIS ARMYDaemon Prince · Helm of Brazen Ire (in Devastating Assault), Daemon
 
 Ask about this rule
 
-######## popup rule:[Devastating Wounds] · PRINCES Princes
-CORE RULE
-
-Devastating Wounds
-
-Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
-
-Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
-
-IN THIS ARMYDaemon Prince · Helm of Brazen Ire (in Devastating Assault), Daemon Prince · Berzerker Glaive (in Devastating Assault), Slaughterbound · Battle-lust (in Possessed Lord)
-
-Ask about this rule
-
 ######## popup rule:[LETHAL HITS] · PRINCES Princes
 CORE RULE
 
@@ -5100,6 +5154,31 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:attached · PRINCES Princes
+CORE RULE
+
+attached
+
+Some units have the Leader or Support ability listed on their datasheet (see below). Such units are known as leader units and support units respectively. Both of these abilities allow such units to lead other friendly units (known as bodyguard units) to form attached units. An attached unit is a single unit for all rules purposes. Leader and support units can only lead specific bodyguard units, as listed in the Warhammer 40,000 app.
+
+19.04 Abilities in Attached Units: Abilities/rules that affect a single specified model (e.g. from an enhancement or an item of wargear) only ever apply to that model, even while part of an attached unit.
+
+Otherwise, abilities/rules that affect a unit (or models in it) apply to every model in an attached unit, until the source of that ability/rule is destroyed, as shown below.
+
+SOURCE OF ABILITY/RULE: APPLIES TO THE ATTACHED UNIT UNTIL
+
+Leader/support unit: The last model in that leader/support unit is destroyed.*
+Bodyguard unit (e.g. from a datasheet ability): The last model in that bodyguard unit is destroyed.
+A specific model (e.g. the bearer of an enhancement or an item of wargear): That model is destroyed.
+
+* This means leader/support units continue to benefit from their own ‘while this model is leading a unit’ abilities even after their bodyguard unit is destroyed, provided they started the battle in an attached unit.
+
+In all of the above cases, if that last model was destroyed as the result of an attack, the ability it was conferring upon the attached unit applies until the attacking unit has resolved all of its attacks.
+
+Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
+
 Ask about this rule
 
 ######## popup rule:battle-shock roll · PRINCES Princes

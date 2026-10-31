@@ -533,8 +533,11 @@ Angron
 Warlord
 WRATHFUL PRESENCE: PICK ONE
 The Blood God’s Favour
+Start of the battle round
 
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+Start of the battle round
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.
 
 Overwhelming Wrath
 Their Movement
@@ -619,7 +622,7 @@ Fight
 
 Aura · Fight · Either turn
 
-While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit (excluding MONSTERS and VEHICLES) that is Below Half-strength, add 1 to the Wound roll as well.
 
 Goremongers
 Loping Speed
@@ -1301,7 +1304,7 @@ if it applies
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (4)
 The Blood God’s Favour
-“Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.” · not counted in the Damage tab
+“Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.” · not counted in the Damage tab
 Overwhelming Wrath
 “Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.” · not counted in the Damage tab
 Reborn in Blood
@@ -1310,7 +1313,7 @@ Wrathful Presence
 “At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Beacons of Rage (Eightbound)
-Aura · Within 6" of it · The target: not Monster/Vehicle · The target Below Half-strength: +1 to Wound rolls
+Aura · Within 6" of it · The target Below Half-strength · The target: not Monster/Vehicle: +1 to Wound rolls
 if it applies
 +8% wiped
 +0.1
@@ -1707,7 +1710,7 @@ Aura · Within 6" of it · The target: not Monster/Vehicle: +1 to Hit rolls
 if it applies
 0
 Beacons of Rage (Eightbound)
-Aura · Within 6" of it · The target: not Monster/Vehicle · The target Below Half-strength: +1 to Wound rolls
+Aura · Within 6" of it · The target Below Half-strength · The target: not Monster/Vehicle: +1 to Wound rolls
 if it applies
 0
 STRATAGEMS
@@ -2282,8 +2285,11 @@ STRATAGEMS · BERZERKER WARBAND
 ABILITIES
 The Blood God’s Favour
 - Wrathful Presence: pick one
+Start of the battle round
 
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+Start of the battle round
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.
 
 Overwhelming Wrath
 - Wrathful Presence: pick one
@@ -2669,7 +2675,7 @@ Fight
 
 Aura · Fight · Either turn
 
-While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit (excluding MONSTERS and VEHICLES) that is Below Half-strength, add 1 to the Wound roll as well.
 
 Rules
 Scouts 6", Blessings of Khorne, Relentless Rage
@@ -3003,12 +3009,12 @@ FACTION: WORLD EATERS
 Ask about this unit
 ‹ Jakhals
 
-######## popup ability:super-terminators|Beacons of Rage|While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well. · FORGEFIEND Super Terminators
+######## popup ability:super-terminators|Beacons of Rage|While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the **Hit roll**. If that attack targets a unit (excluding **MONSTERS** and **VEHICLES**) that is **Below Half-strength**, add 1 to the **Wound roll** as well. · FORGEFIEND Super Terminators
 ABILITY · AURA · FIGHT · EITHER TURN
 
 Beacons of Rage
 
-While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit (excluding MONSTERS and VEHICLES) that is Below Half-strength, add 1 to the Wound roll as well.
 
 UNITEightbound
 
@@ -3104,12 +3110,12 @@ UNITAngron
 
 Ask about this ability
 
-######## popup ability:super-terminators|The Blood God’s Favour|Each time you make a **Blessings of Khorne** roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled. · SUPER TERMINATORS Super Terminators
-ABILITY
+######## popup ability:super-terminators|The Blood God’s Favour|Each time you make a **Blessings of Khorne roll**, if this model is on the battlefield, you can re-roll up to six of the D6 rolled. · SUPER TERMINATORS Super Terminators
+ABILITY · START OF THE BATTLE ROUND
 
 The Blood God’s Favour
 
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.
 
 UNITAngron
 
@@ -3126,7 +3132,7 @@ TO PICK FROM: WRATHFUL PRESENCE
 
 The Blood God’s Favour
 
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.
 
 Overwhelming Wrath Aura
 
@@ -3404,6 +3410,33 @@ If this ability takes the form [BLAST X], each time you gather attack dice for s
 Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
 
 IN THIS ARMYForgefiend
+
+Ask about this rule
+
+######## popup rule:Below Half-strength · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
 
 Ask about this rule
 

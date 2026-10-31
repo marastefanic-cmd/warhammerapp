@@ -20,7 +20,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-31.2';
+const VERSION = '2026-10-31.3';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text: the official Core Rules PDF (11th edition), BSData and the

@@ -448,9 +448,9 @@ Needs a thundershock spear and bellatus reaper chainsword: not this loadout
 If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
 
 Saturation Fire
-Your Shooting
+Their Move · Your Shoot
 
-Shooting · Your turn
+Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
@@ -499,9 +499,9 @@ Bondsman
 While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.
 
 Seasoned Noble
-Your Shooting
+Their Move · Your Shoot
 
-Shooting · Your turn
+Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
 
@@ -525,9 +525,9 @@ Bondsman
 While a model is affected by this ability, weapons equipped by that model have the [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the [IGNORES COVER] ability.
 
 Thin Their Ranks
-Your Shooting
+Their Move · Your Shoot
 
-Shooting · Your turn
+Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
 
@@ -2080,9 +2080,9 @@ Needs a thundershock spear and bellatus reaper chainsword: not this loadout
 If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
 
 Saturation Fire
-Your Shooting
+Their Move · Your Shoot
 
-Shooting · Your turn
+Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
@@ -2345,9 +2345,9 @@ Bondsman
 While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.
 
 Seasoned Noble
-Your Shooting
+Their Move · Your Shoot
 
-Shooting · Your turn
+Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
 
@@ -2482,9 +2482,9 @@ Bondsman
 While a model is affected by this ability, weapons equipped by that model have the [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the [IGNORES COVER] ability.
 
 Thin Their Ranks
-Your Shooting
+Their Move · Your Shoot
 
-Shooting · Your turn
+Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
 
@@ -2566,7 +2566,7 @@ UNITKnight Paladin
 Ask about this ability
 
 ######## popup ability:6-bigs|Saturation Fire|Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability. · 6 BIGS 6 bigs
-ABILITY · SHOOTING · YOUR TURN
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
 Saturation Fire
 
@@ -2577,7 +2577,7 @@ UNITKnight Destrier
 Ask about this ability
 
 ######## popup ability:6-bigs|Seasoned Noble|Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1. · 6 BIGS 6 bigs
-ABILITY · SHOOTING · YOUR TURN
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
 Seasoned Noble
 
@@ -2588,7 +2588,7 @@ UNITKnight Paladin
 Ask about this ability
 
 ######## popup ability:6-bigs|Thin Their Ranks|Each time this model makes a ranged attack that targets an enemy unit (excluding **MONSTERS** and **VEHICLES**), that attack has the **[DEVASTATING WOUNDS]** ability. · 6 BIGS 6 bigs
-ABILITY · SHOOTING · YOUR TURN
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
 Thin Their Ranks
 

@@ -794,7 +794,7 @@ Your Command
 
 Command · Your turn
 
-In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.
+In your Command phase, select one of the abilities in the Icon of War section (see next page). Until the start of your next Command phase, this model has that ability.
 
 Mechanicus Bodyguard
 
@@ -885,8 +885,11 @@ Command · Your turn
 At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
 
 Omnispex
+Their Move · Your Shoot
 
-Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.
+Their Movement / Your Shooting
+
+Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.
 
 Ironstrider Ballistarii
 1 of 2
@@ -898,8 +901,11 @@ Movement / Shooting · Your turn
 This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.
 
 Broad Spectrum Data-tether
+Any phase
 
-Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.
+Any phase · Either turn
+
+Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.
 
 Ironstrider Ballistarii
 2 of 2
@@ -911,11 +917,14 @@ Movement / Shooting · Your turn
 This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.
 
 Broad Spectrum Data-tether
+Any phase
 
-Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.
+Any phase · Either turn
+
+Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.
 
 Onager Dunecrawler
-Emanatus Forcefield
+Emanatus Force Field
 
 Aura
 
@@ -939,8 +948,11 @@ While this model has 1-4 wounds remaining, each time this model makes an attack,
 Skorpius Disintegrator
 ×2 units
 Broad spectrum data-tether
+Any phase
 
-Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.
+Any phase · Either turn
+
+Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.
 
 Blistering Salvoes
 
@@ -2746,7 +2758,7 @@ Your Command
 
 Command · Your turn
 
-In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.
+In your Command phase, select one of the abilities in the Icon of War section (see next page). Until the start of your next Command phase, this model has that ability.
 
 Mechanicus Bodyguard
 
@@ -3124,7 +3136,7 @@ Skitarii Rangers×10
 WHEN TARGETED
 2
 Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
-Wholly within 6" of the Onager Dunecrawler: 4+ InSv against ranged attacks (Emanatus Forcefield)
+Wholly within 6" of the Onager Dunecrawler: 4+ InSv against ranged attacks (Emanatus Force Field)
 ALL ATTACKS
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
@@ -3212,8 +3224,11 @@ Command · Your turn
 At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
 
 Omnispex
+Their Move · Your Shoot
 
-Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.
+Their Movement / Your Shooting
+
+Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.
 
 Rules
 Scouts 6", Doctrina Imperatives, Murderous Imperative
@@ -3317,8 +3332,11 @@ Movement / Shooting · Your turn
 This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.
 
 Broad Spectrum Data-tether
+Any phase
 
-Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.
+Any phase · Either turn
+
+Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.
 
 Rules
 Deadly Demise 1, Doctrina Imperatives, Murderous Imperative
@@ -3423,8 +3441,11 @@ Movement / Shooting · Your turn
 This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.
 
 Broad Spectrum Data-tether
+Any phase
 
-Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.
+Any phase · Either turn
+
+Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.
 
 Rules
 Deadly Demise 1, Doctrina Imperatives, Murderous Imperative
@@ -3530,7 +3551,7 @@ Dunecrawler legs
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
 1CP Servo-driven Charge: [LANCE]
 ABILITIES
-Emanatus Forcefield
+Emanatus Force Field
 
 Aura
 
@@ -3660,8 +3681,11 @@ STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
 1CP Servo-driven Charge: [LANCE]
 ABILITIES
 Broad spectrum data-tether
+Any phase
 
-Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.
+Any phase · Either turn
+
+Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.
 
 Blistering Salvoes
 
@@ -3839,12 +3863,12 @@ UNITCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator
 
 Ask about this ability
 
-######## popup ability:purge-goes-the-foe|Rod of the War Forge|In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability. · PURGE GOES THE FOE Purge goes the Foe
+######## popup ability:purge-goes-the-foe|Rod of the War Forge|In your Command phase, select one of the abilities in the Icon of War section (see next page). Until the start of your next Command phase, this model has that ability. · PURGE GOES THE FOE Purge goes the Foe
 ABILITY · COMMAND · YOUR TURN
 
 Rod of the War Forge
 
-In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.
+In your Command phase, select one of the abilities in the Icon of War section (see next page). Until the start of your next Command phase, this model has that ability.
 
 TO PICK FROM: ICON OF WAR
 
@@ -3935,7 +3959,7 @@ Omnispex
 
 datasheet ability
 
-Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.
+Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.
 
 Already in the keywords shown (as New Recruit and BSData list them).
 

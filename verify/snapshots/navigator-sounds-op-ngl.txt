@@ -568,11 +568,14 @@ No ARMIGER models in this list
 
 No ARMIGER models in this list
 
-Bondsman
+Bondsman · Their Movement / Your Shooting / Fight (either turn)
 
 While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
 Macro-extinction Protocols
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
 
@@ -665,9 +668,9 @@ Needs a thundershock spear and bellatus reaper chainsword: not this loadout
 If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
 
 Saturation Fire
-Your Shooting
+Their Move · Your Shoot
 
-Shooting · Your turn
+Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
@@ -2456,11 +2459,14 @@ No ARMIGER models in this list
 
 No ARMIGER models in this list
 
-Bondsman
+Bondsman · Their Movement / Your Shooting / Fight (either turn)
 
 While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
 Macro-extinction Protocols
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
 
@@ -2890,9 +2896,9 @@ Needs a thundershock spear and bellatus reaper chainsword: not this loadout
 If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
 
 Saturation Fire
-Your Shooting
+Their Move · Your Shoot
 
-Shooting · Your turn
+Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
@@ -3226,7 +3232,7 @@ UNITKnight Crusader · Hunter’s Eye, Knight Destrier, Knight Errant · Mysteri
 Ask about this ability
 
 ######## popup ability:navigator-sounds-op-ngl|Macro-extinction Protocols|Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
-ABILITY
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
 
 Macro-extinction Protocols
 
@@ -3266,7 +3272,7 @@ UNITKnight Crusader · Hunter’s Eye
 Ask about this ability
 
 ######## popup ability:navigator-sounds-op-ngl|Saturation Fire|Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
-ABILITY · SHOOTING · YOUR TURN
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
 Saturation Fire
 

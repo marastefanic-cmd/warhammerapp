@@ -573,8 +573,11 @@ Final Howl (Aura)
 This model has a 5+ invulnerable save against ranged attacks.
 
 Brigand
+Their Move · Your Shoot
 
-Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+Their Movement / Your Shooting
+
+Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 Damaged: 1-5 wounds remaining
 
@@ -594,8 +597,11 @@ War Dog Brigand
 This model has a 5+ invulnerable save against ranged attacks.
 
 Brigand
+Their Move · Your Shoot
 
-Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+Their Movement / Your Shooting
+
+Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 Damaged: 1-5 wounds remaining
 
@@ -609,8 +615,11 @@ War Dog Brigand
 This model has a 5+ invulnerable save against ranged attacks.
 
 Brigand
+Their Move · Your Shoot
 
-Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+Their Movement / Your Shooting
+
+Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 Damaged: 1-5 wounds remaining
 
@@ -2343,8 +2352,11 @@ ABILITIES
 This model has a 5+ invulnerable save against ranged attacks.
 
 Brigand
+Their Move · Your Shoot
 
-Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+Their Movement / Your Shooting
+
+Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 Final Howl (Aura)
 Enhancement
@@ -2464,8 +2476,11 @@ ABILITIES
 This model has a 5+ invulnerable save against ranged attacks.
 
 Brigand
+Their Move · Your Shoot
 
-Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+Their Movement / Your Shooting
+
+Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 Rules
 Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
@@ -2578,8 +2593,11 @@ ABILITIES
 This model has a 5+ invulnerable save against ranged attacks.
 
 Brigand
+Their Move · Your Shoot
 
-Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+Their Movement / Your Shooting
+
+Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 Rules
 Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
@@ -2947,12 +2965,12 @@ UNITWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brig
 
 Ask about this ability
 
-######## popup ability:woof-woof|Brigand|Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers. · WOOF WOOF Woof Woof
-ABILITY
+######## popup ability:woof-woof|Brigand|Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability. · WOOF WOOF Woof Woof
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
 Brigand
 
-Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 UNITWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4)
 

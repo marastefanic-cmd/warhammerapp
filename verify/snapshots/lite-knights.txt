@@ -716,7 +716,7 @@ Any phase
 
 Once per battle, per army · Any phase · Either turn
 
-(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:
+At the start of any phase, you can select one of the following to take effect until the end of the phase:
 
 This model’s Watcher’s Axe weapon has +3 A.
 This model has 3+ InSv.
@@ -759,6 +759,9 @@ In your Shooting phase, when this unit has shot, you can select one enemy unit h
 
 Caladius Annihilator Grav-tank
 Advanced Firepower
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
 
 This unit’s ranged attacks that target a MONSTER/VEHICLE unit can:
 
@@ -1553,7 +1556,7 @@ if it applies
 +0.1
 MODELS
 Moment Shackle
-Once per battle · “(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase”: +3 A · for Watcher’s Axe
+Once per battle · “At the start of any phase, you can select one of the following to take effect until the end of the phase”: +3 A · for Watcher’s Axe
 if it applies
 +8% wiped
 +0.1
@@ -1956,7 +1959,7 @@ if it applies
 ≈0
 MODELS
 Moment Shackle
-Once per battle · “(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase”: +3 A · for Watcher’s Axe
+Once per battle · “At the start of any phase, you can select one of the following to take effect until the end of the phase”: +3 A · for Watcher’s Axe
 if it applies
 +1% wiped
 ≈0
@@ -2626,7 +2629,7 @@ Any phase
 
 Once per battle, per army · Any phase · Either turn
 
-(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:
+At the start of any phase, you can select one of the following to take effect until the end of the phase:
 
 This model’s Watcher’s Axe weapon has +3 A.
 This model has 3+ InSv.
@@ -2982,6 +2985,9 @@ Armoured hull
 1
 ABILITIES
 Advanced Firepower
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
 
 This unit’s ranged attacks that target a MONSTER/VEHICLE unit can:
 
@@ -3442,7 +3448,7 @@ Ask about this unit
 - Re-roll one **hit roll**.
 - Re-roll one **wound roll**.
 - Re-roll one **damage roll**. · TELEMON HEAVY DREADNOUGHT Lite Knights
-ABILITY
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
 Advanced Firepower
 
@@ -3494,14 +3500,14 @@ UNITTelemon Heavy Dreadnought, Telemon Heavy Dreadnought
 
 Ask about this ability
 
-######## popup ability:lite-knights|Moment Shackle|(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:
+######## popup ability:lite-knights|Moment Shackle|At the start of any phase, you can select one of the following to take effect until the end of the phase:
 - This model’s Watcher’s Axe weapon has +3 **A**.
 - This model has 3+ **InSv**. · LITE KNIGHTS Lite Knights
 ABILITY · ONCE PER BATTLE, PER ARMY · ANY PHASE · EITHER TURN
 
 Moment Shackle
 
-(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:
+At the start of any phase, you can select one of the following to take effect until the end of the phase:
 
 This model’s Watcher’s Axe weapon has +3 A.
 This model has 3+ InSv.
