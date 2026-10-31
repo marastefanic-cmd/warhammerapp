@@ -5212,17 +5212,6 @@
    "turn": "either"
   },
   "ability-tag | healybois · Hive Tyrant · Hive Tyrant · Will of the Hive Mind": "Once per battle round",
-  "ability-timing | healybois · Hive Tyrant · Hive Tyrant · Instinctive Defence": {
-   "ph": [
-    "charge",
-    "fight"
-   ],
-   "turn": "either",
-   "turns": {
-    "charge": "opp"
-   }
-  },
-  "ability-tag | healybois · Hive Tyrant · Hive Tyrant · Instinctive Defence": "Enhancement",
   "ability-timing | healybois · Hive Tyrant · Tyrant Guard · Guardian Organism": {},
   "ability-timing | healybois · Biovores · Seed Spore Mines": {
    "ph": [
@@ -5237,58 +5226,6 @@
    ],
    "turn": "your"
   },
-  "ability-timing | healybois · Norn Assimilator [norn-assimilator-synaptoprescience] · Harpoon Barbs": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "opp"
-  },
-  "ability-tag | healybois · Norn Assimilator [norn-assimilator-synaptoprescience] · Harpoon Barbs": "Once per turn",
-  "ability-timing | healybois · Norn Assimilator [norn-assimilator-synaptoprescience] · Damaged: 1-5 Wounds Remaining": {},
-  "ability-timing | healybois · Norn Assimilator [norn-assimilator-synaptoprescience] · Singular Purpose": {
-   "at": "Start of the first battle round",
-   "ph": [
-    "command",
-    "shooting",
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | healybois · Norn Assimilator [norn-assimilator-synaptoprescience] · Protean Purpose": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
-  "ability-tag | healybois · Norn Assimilator [norn-assimilator-synaptoprescience] · Protean Purpose": "Once per battle, per unit",
-  "ability-timing | healybois · Norn Assimilator [norn-assimilator-synaptoprescience] · Synaptoprescience": {},
-  "ability-tag | healybois · Norn Assimilator [norn-assimilator-synaptoprescience] · Synaptoprescience": "Enhancement",
-  "ability-timing | healybois · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Harpoon Barbs": {
-   "ph": [
-    "movement"
-   ],
-   "turn": "opp"
-  },
-  "ability-tag | healybois · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Harpoon Barbs": "Once per turn",
-  "ability-timing | healybois · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Damaged: 1-5 Wounds Remaining": {},
-  "ability-timing | healybois · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Singular Purpose": {
-   "at": "Start of the first battle round",
-   "ph": [
-    "command",
-    "shooting",
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | healybois · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Protean Purpose": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
-  "ability-tag | healybois · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Protean Purpose": "Once per battle, per unit",
-  "ability-timing | healybois · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Synaptoprescience": {},
-  "ability-tag | healybois · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Synaptoprescience": "Enhancement",
   "ability-timing | healybois · Norn Emissary · Singular Purpose": {
    "at": "Start of the first battle round",
    "ph": [

@@ -8,21 +8,21 @@ Dispositions: Priority Assets · Take and Hold (chosen)
 Overview
 Phase checklist
 Bases & proxies
-24
+27
 Units
-10
+11
 Stratagems
 19
 Ranged weapons
 8
 Melee weapons
-15
+16
 Abilities
-27
+26
 Rules
 Damage calculator
 
-New Recruit, exported 27 Oct 2026 (JSON)
+New Recruit, exported 31 Oct 2026 (JSON)
 
 ######## checklist · HEALYBOIS Phase checklist
 PHASE BY PHASE
@@ -32,9 +32,9 @@ Start of the first battle round
 
 TO DO NOW
 
-Singular Purpose · Norn Assimilator×2, Norn Emissary
+Singular Purpose · Norn Assimilator, Norn Emissary
 Command · Your turn
-2 to do · 4 once per battle
+2 to do · 3 once per battle
 
 TO DO NOW
 
@@ -44,7 +44,6 @@ Hive Commander · The Swarmlord
 ONCE PER BATTLE
 
 Shadow in the Warp · Tyranids army rule
-Protean Purpose · Norn Assimilator
 Protean Purpose · Norn Assimilator
 Protean Purpose · Norn Emissary
 Command · Their turn
@@ -68,13 +67,13 @@ Shooting · Your turn
 
 ACTIVE NOW
 
-Singular Purpose · Norn Assimilator×2, Norn Emissary
+Singular Purpose · Norn Assimilator, Norn Emissary
 Shooting · Their turn
 1 active · 1 once per battle
 
 ACTIVE NOW
 
-Singular Purpose · Norn Assimilator×2, Norn Emissary
+Singular Purpose · Norn Assimilator, Norn Emissary
 
 ONCE PER BATTLE
 
@@ -90,21 +89,29 @@ nothing
 Nothing in this list.
 
 Fight · Your turn
-1 active · 1 once per battle
+1 to do · 1 active · 1 once per battle
+
+TO DO NOW
+
+Subterranean Hunter · The Red Terror
 
 ACTIVE NOW
 
-Singular Purpose · Norn Assimilator×2, Norn Emissary
+Singular Purpose · Norn Assimilator, Norn Emissary
 
 ONCE PER BATTLE
 
 Resilient Organism · Tyrannofex
 Fight · Their turn
-1 active · 1 once per battle
+1 to do · 1 active · 1 once per battle
+
+TO DO NOW
+
+Subterranean Hunter · The Red Terror
 
 ACTIVE NOW
 
-Singular Purpose · Norn Assimilator×2, Norn Emissary
+Singular Purpose · Norn Assimilator, Norn Emissary
 
 ONCE PER BATTLE
 
@@ -117,9 +124,8 @@ YOUR LIST
 WARLORD
 The Swarmlord
 ENHANCE­MENTS
-Instinctive Defence 15 pts on Hive Tyrant
-Synaptoprescience 30 pts on Norn Assimilator (1 of 2)
-Synaptoprescience 30 pts on Norn Assimilator (2 of 2)
+Parasitic Biomorphology 25 pts on Hive Tyrant
+Synaptoprescience 30 pts on Norn Assimilator
 ATTACHED
 The Swarmlord leads Tyrant Guard
 Hive Tyrant leads Tyrant Guard
@@ -151,7 +157,7 @@ In your Command phase, each HARVESTER unit from your army can Regenerate one fri
 One model in that unit regains up to D3+1 lost wounds.
 One destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds remaining. If that unit is an ENDLESS MULTITUDE unit, up to 3 destroyed models are returned instead.
 
-APPLIES TOPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+APPLIES TOPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience, Psychophage
 
 Higher Imperatives
 Talons of the Norn Queen
@@ -160,20 +166,21 @@ Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability:
 
 Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
 
-APPLIES TONorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary
+APPLIES TONorn Assimilator · Synaptoprescience, Norn Emissary
 
 DECLARE BATTLE FORMATIONS
 DEEP STRIKE
+The Red Terror 120 pts
 Ripper Swarms 30 pts
+All of them: 150 pts
 START OF THE BATTLE AND THE BATTLE ROUNDS
 FIRST ROUND
-Singular Purpose · Norn Assimilator ×2, Norn Emissary
+Singular Purpose · Norn Assimilator, Norn Emissary
 USES PER BATTLE
 NEW GAME
 RULES
 Shadow in the Warp · Tyranids army rule
 ABILITIES
-Protean Purpose · Norn Assimilator
 Protean Purpose · Norn Assimilator
 Protean Purpose · Norn Emissary
 Resilient Organism · Tyrannofex
@@ -184,7 +191,16 @@ Gathered from this list’s datasheets and rules; each line opens the full text.
 
 ######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
 EPIC HEROES
-1
+2
+The Red Terror
+10"
+8
+3+
+9
+8+
+3
+–
+120
 The Swarmlord
 + Tyrant Guard
 Warlord
@@ -209,8 +225,8 @@ CHARACTERS
 1
 Hive Tyrant
 + Tyrant Guard
-Instinctive Defence
-380
+Parasitic Biomorphology
+390
 Hive Tyrant
 8"
 10
@@ -239,7 +255,7 @@ Biovores
 –
 60
 Pyrovores
-×2
+×3
 5"
 6
 3+
@@ -247,7 +263,7 @@ Pyrovores
 8+
 1
 –
-2×70
+2×100
 SWARMS
 1
 Ripper Swarms
@@ -263,7 +279,6 @@ MONSTERS
 4
 Norn Assimilator
 Synaptoprescience
-1 of 2
 10"
 11
 2+
@@ -272,17 +287,6 @@ Synaptoprescience
 5
 4+
 280
-Norn Assimilator
-Synaptoprescience
-2 of 2
-10"
-11
-2+
-16
-7+
-5
-4+
-300
 Norn Emissary
 10"
 11
@@ -292,6 +296,15 @@ Norn Emissary
 5
 4+
 250
+Psychophage
+12"
+9
+3+
+10
+8+
+3
+–
+110
 Tyrannofex
 9"
 12
@@ -341,7 +354,7 @@ Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of th
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 Pyrovores
 ×2 units
-Flamespurt×2
+Flamespurt×3
 12"
 D6+1
 –
@@ -353,22 +366,6 @@ Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of th
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 Norn Assimilator
 Synaptoprescience
-1 of 2
-Toxinjecter Harpoon
-12"
-2
-2+
-12
--3
-D6+1
-HARPOONED
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Norn Assimilator
-Synaptoprescience
-2 of 2
 Toxinjecter Harpoon
 12"
 2
@@ -411,6 +408,17 @@ Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Psychophage
+Psychoclastic torrent
+12"
+D6
+–
+6
+-1
+1
+IGNORES COVER, TORRENT
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 Tyrannofex
 Acid spray
 18"
@@ -432,6 +440,29 @@ Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of th
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
+The Red Terror
+
+Fights with both: Scything talons, plus Gaping maw on top (extra attacks).
+
+Gaping maw
+1
+2+
+5
+–
+D3+2
+EXTRA ATTACKS, DEVASTATING WOUNDS, PRECISION
+Scything talons
+12
+2+
+7
+-2
+2
+Within Synapse Range: +1 S
+vs INFANTRY/MOUNTED/BEASTS: a successful unmodified wound roll is a Critical Wound (Swallow Whole)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
+1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 The Swarmlord
 Warlord
 + Tyrant Guard
@@ -452,10 +483,11 @@ Scything talons and rending claws×6
 1
 Within Synapse Range: +1 S
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 Hive Tyrant
-Instinctive Defence
+Parasitic Biomorphology
 + Tyrant Guard
 HIVE TYRANT
 
@@ -464,14 +496,14 @@ Fights with both: Monstrous bonesword and lash whip, plus Monstrous scything tal
 Monstrous bonesword and lash whip
 6
 2+
-9
+10
 -2
 3
 TWIN-LINKED
 Monstrous scything talons
 4
 2+
-7
+8
 -2
 2
 EXTRA ATTACKS
@@ -479,11 +511,13 @@ TYRANT GUARD
 Scything talons and rending claws×6
 5
 3+
-5
+6
 -1
 1
 Within Synapse Range: +1 S
+After the bearer’s unit first destroys an enemy unit in the Fight phase while the bearer is within 6" of a friendly HARVESTER unit: +1 A (until the end of the battle) (Parasitic Biomorphology)
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 Biovores
@@ -495,11 +529,12 @@ Chitin-barbed limbs
 1
 Within Synapse Range: +1 S
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 Pyrovores
 ×2 units
-Chitin-barbed limbs×2
+Chitin-barbed limbs×3
 2
 4+
 5
@@ -507,6 +542,7 @@ Chitin-barbed limbs×2
 1
 Within Synapse Range: +1 S
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 Ripper Swarms
@@ -519,11 +555,11 @@ Chitinous claws and teeth
 SUSTAINED HITS 1
 Within Synapse Range: +1 S
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 Norn Assimilator
 Synaptoprescience
-1 of 2
 
 Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
 
@@ -544,33 +580,7 @@ Within Synapse Range: +1 S
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
-Norn Assimilator
-Synaptoprescience
-2 of 2
-
-Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
-
-Monstrous scything talons
-6
-2+
-9
--2
-3
-Toxinjecter Harpoon
-4
-2+
-12
--3
-D6+1
-EXTRA ATTACKS
-Within Synapse Range: +1 S
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 STRATAGEMS · TALONS OF THE NORN QUEEN
@@ -596,10 +606,25 @@ Within Synapse Range: +1 S
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 STRATAGEMS · TALONS OF THE NORN QUEEN
 1CP Lesser Prey: +2 S, When selected to fight
+Psychophage
+Talons and betentacled maw
+6
+3+
+6
+-2
+2
+ANTI-PSYKER 4+, DEVASTATING WOUNDS
+Within Synapse Range: +1 S
+This turn, vs the enemy unit it selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+Target below its Starting Strength: +1 to hit rolls; also +1 to wound rolls if Below Half-strength (Feeding Frenzy)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
+1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 Tyrannofex
 Powerful limbs
 4
@@ -610,10 +635,23 @@ Powerful limbs
 Within Synapse Range: +1 S
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 
 ######## abilities · MELEE Abilities
+The Red Terror
+Swallow Whole
+
+Each time an attack with this model’s gaping maw targets an INFANTRY, MOUNTED or BEASTS unit, each successful unmodified Wound roll is a Critical Wound. Each time an INFANTRY, MOUNTED or BEASTS model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds.
+
+Subterranean Hunter
+Fight
+
+Fight · Either turn
+
+At the end of the Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.
+
 The Swarmlord
 Warlord
 + Tyrant Guard
@@ -647,7 +685,7 @@ Guardian Organism
 While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.
 
 Hive Tyrant
-Instinctive Defence
+Parasitic Biomorphology
 + Tyrant Guard
 HIVE TYRANT
 Will of the Hive Mind
@@ -665,13 +703,14 @@ Aura, Psychic · Movement (either turn) / Your Shooting
 
 While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
 
-Instinctive Defence
+Parasitic Biomorphology
 Enhancement
-Their Charge · Fight
+Already in S
+Fight
 
-Enhancement · Their Charge / Fight (either turn)
+Enhancement · Fight · Either turn
 
-TYRANIDS model only. While the bearer is within 6" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.
+TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.
 
 TYRANT GUARD
 Guardian Organism
@@ -707,47 +746,6 @@ While an enemy unit is within Engagement Range of this unit, halve the Objective
 
 Norn Assimilator
 Synaptoprescience
-1 of 2
-Singular Purpose
-Start of the first battle round
-
-Start of the first battle round
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-Harpoon Barbs
-Once per turn
-Their Movement
-
-Once per turn · Movement · Their turn
-
-Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
-
-Damaged: 1-5 Wounds Remaining
-
-While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
-Protean Purpose
-Once per battle, per unit
-Your Command
-
-Once per battle, per unit · Command · Your turn
-
-(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
-
-Synaptoprescience
-Enhancement
-Already in InSv
-
-Enhancement
-
-NORN ASSIMILATOR unit only. This unit has 4+ InSv.
-
-Norn Assimilator
-Synaptoprescience
-2 of 2
 Singular Purpose
 Start of the first battle round
 
@@ -811,6 +809,21 @@ Once per battle, per unit · Command · Your turn
 
 (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
 
+Psychophage
+Bio-stimulus
+Your Shoot/Fight
+
+Shooting / Fight · Your turn
+
+In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly TYRANIDS unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.
+
+Feeding Frenzy
+Fight
+
+Fight · Either turn
+
+Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well.
+
 Tyrannofex
 Resilient Organism
 Once per battle
@@ -849,12 +862,12 @@ In your Command phase, each HARVESTER unit from your army can Regenerate one fri
 One model in that unit regains up to D3+1 lost wounds.
 One destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds remaining. If that unit is an ENDLESS MULTITUDE unit, up to 3 destroyed models are returned instead.
 
-APPLIES TOPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+APPLIES TOPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience, Psychophage
 
-Instinctive Defence
-Enhancement · 15 pts · on Hive Tyrant + Tyrant Guard
+Parasitic Biomorphology
+Enhancement · 25 pts · on Hive Tyrant + Tyrant Guard
 
-TYRANIDS model only. While the bearer is within 6" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.
+TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.
 
 ONHive Tyrant + Tyrant Guard
 
@@ -864,13 +877,13 @@ Regenerating Monstrosity 20 pts
 
 TYRANIDS model only (excluding MONSTERS models). The bearer’s unit can be regenerated up to twice per phase, instead of once.
 
+Instinctive Defence 15 pts
+
+TYRANIDS model only. While the bearer is within 6" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.
+
 Biophagic Flow (Aura) 10 pts
 
 TYRANIDS model only. While a friendly HARVESTER model is within 12" of the bearer, when using the Feed the Swarm ability, that HARVESTER model can Regenerate one friendly TYRANIDS unit that is within 9" of it, instead of one within 6".
-
-Parasitic Biomorphology 25 pts
-
-TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.
 
 STRATAGEMSTyrannoformed, Ablative Carapace, Secure Biomass, Rapacious Hunger, Broodguard Impulse, Reclaim Biomass
 
@@ -882,14 +895,14 @@ Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability:
 
 Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
 
-APPLIES TONorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary
+APPLIES TONorn Assimilator · Synaptoprescience, Norn Emissary
 
 Synaptoprescience
-Enhancement · 30 pts · on Norn Assimilator (1 of 2), Norn Assimilator (2 of 2)
+Enhancement · 30 pts · on Norn Assimilator
 
 NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 
-ONNorn Assimilator (1 of 2), Norn Assimilator (2 of 2)
+ONNorn Assimilator
 
 Other enhancements
 1 not in this list
@@ -908,22 +921,19 @@ The Swarmlord + Tyrant Guard D3: The Swarmlord only
 Hive Tyrant + Tyrant Guard D3: Hive Tyrant only
 Biovores 1
 Pyrovores 1
-Norn Assimilator · Synaptoprescience (1 of 2) D6
-Norn Assimilator · Synaptoprescience (2 of 2) D6
+Norn Assimilator · Synaptoprescience D6
 Norn Emissary D6
+Psychophage 1
 Tyrannofex D6
 Deep Strike
+The Red Terror
 Ripper Swarms
 Feel No Pain
 The Swarmlord + Tyrant Guard
 Guardian Organism: While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.
 Hive Tyrant + Tyrant Guard
 Guardian Organism: While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.
-Norn Assimilator · Synaptoprescience (1 of 2)
-Singular Purpose: At the start of the first battle round, select one of the following:
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-Norn Assimilator · Synaptoprescience (2 of 2)
+Norn Assimilator · Synaptoprescience
 Singular Purpose: At the start of the first battle round, select one of the following:
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
@@ -932,9 +942,7 @@ Singular Purpose: At the start of the first battle round, select one of the foll
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 Unnatural Resilience: This model has the Feel No Pain 4+ ability against mortal wounds.
-Fights First
-Hive Tyrant + Tyrant Guard
-Instinctive Defence: TYRANIDS model only. While the bearer is within 6" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.
+Psychophage 5+
 Leader
 The Swarmlord leads Tyrant Guard
 Hive Tyrant leads Tyrant Guard
@@ -948,22 +956,25 @@ BASES TO PRINT
 1× 40mm
 12× 50mm
 2× 60mm
-5× 80mm
+7× 80mm
 3× 100mm
-1× 120×92mm Oval
+2× 120×92mm Oval
 
 WHAT TO WRITE ON EACH BASE
 
+The Red Terror
+1× 100mm
+The Red Terror
 The Swarmlord
 + Tyrant Guard
 1× 60mm
 The Swarmlord · Warlord
 6× 50mm
 standard Scything talons and rending claws
-Hive Tyrant · Instinctive Defence
+Hive Tyrant · Parasitic Biomorphology
 + Tyrant Guard
 1× 60mm
-Hive Tyrant · Instinctive Defence
+Hive Tyrant · Parasitic Biomorphology
 6× 50mm
 standard Scything talons and rending claws
 Biovores
@@ -971,22 +982,20 @@ Biovores
 Biovore
 Pyrovores
 2 units: mark them apart (1, 2)
-2× 80mm
+3× 80mm
 standard Chitin-barbed limbs, Flamespurt
 Ripper Swarms
 1× 40mm
 Ripper Swarm
 Norn Assimilator · Synaptoprescience
-1 of 2
-1× 100mm
-Norn Assimilator · Synaptoprescience
-Norn Assimilator · Synaptoprescience
-2 of 2
 1× 100mm
 Norn Assimilator · Synaptoprescience
 Norn Emissary
 1× 100mm
 Norn Emissary
+Psychophage
+1× 120×92mm Oval
+Psychophage
 Tyrannofex
 1× 120×92mm Oval
 Tyrannofex
@@ -1226,22 +1235,12 @@ CUSTOM MODIFIERS · NONE
 
 ######## damage fight · DAMAGE Damage
 YOUR
-The Swarmlord + Tyrant Guard
+The Red Terror
 SHOOT
+no ranged weapons
 FIGHT
 BOTH
-MODELS LEFT · ALL 7
-The Swarmlord
-0
-1
-Tyrant Guard
-0
-1
-2
-3
-4
-5
-6
+fight only
 TARGET
 MODELS
 1
@@ -1349,12 +1348,12 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-4.9
+4.2
 of 5 destroyed
-9.9 wounds lost · wiped in 95% of games
+8.3 wounds lost · wiped in 54% of games
 Charged this turn
 ×
-12 NOT COUNTED
+9 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1364,35 +1363,35 @@ Effects are on the damage these attacks deal.
 The charge is taken to succeed (no charge roll).
 
 MELEE WEAPONS
-The Swarmlord + Tyrant Guard
-Bone Sabres
+The Red Terror
+Gaping maw
 A
-8
+1
 WS
 2+
 S
-9
+5
+AP
+–
+D
+D3+2
+EXTRA ATTACKS, DEVASTATING WOUNDS, PRECISION
+−6% wiped
+−0.1
+MODELS IF UNTICKED
+Scything talons
+A
+12
+WS
+2+
+S
+7
 AP
 -2
 D
-3
-TWIN-LINKED
-−85% wiped
-−1.9
-MODELS IF UNTICKED
-Scything talons and rending claws ×6 TYRANT GUARD
-A
-5
-WS
-3+
-S
-5
-AP
--1
-D
-1
-−50% wiped
-−0.9
+2
+−54% wiped
+−3.9
 MODELS IF UNTICKED
 SITUATION
 Charged this turn
@@ -1403,45 +1402,45 @@ ARMY RULES
 Synapse
 “If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
 if it applies
-no change: S10 still wounds T4 on 2+; S6 still wounds T4 on 3+
-0
-ALL ▾
-NOT COUNTED IN THE DAMAGE TAB (1)
-Shadow in the Warp
-“If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
++23% wiped
++0.5
+MODELS
 UNIT RULES
-
-None that change these numbers.
-
-NOT COUNTED IN THE DAMAGE TAB (4)
-Hive Commander
-“At the start of your Command phase, if this model is on the battlefield, you gain 1CP.” · not counted in the Damage tab
-Malign Presence
-“Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
+Swallow Whole
+The target: Infantry or Mounted or Beast: Each successful unmodified Wound roll is a Critical Wound · for Gaping maw
+if it applies
++6% wiped
++0.2
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Subterranean Hunter
+“At the end of the Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.” · not counted in the Damage tab
+FROM OTHER UNITS IN YOUR LIST
+Bio-stimulus (Psychophage)
+Selected by it · The target is the enemy unit selected: +1 AP
+if it applies
++24% wiped
++0.5
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
 Domination of the Hive Mind
 “While a friendly TYRANIDS unit is within 9" of this model, that unit is within your army’s Synapse Range.” · it changes what another rule needs, not these numbers: not counted in the Damage tab
-Guardian Organism
-“While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.” · not counted in the Damage tab
-FROM OTHER UNITS IN YOUR LIST
-
-None that change these numbers.
-
 STRATAGEMS
 with their CP
-1CP Command Re-roll
-Re-roll one Hit, Wound or Damage roll (once in the phase)
-if used
-+2% wiped
-≈0
-MODELS
 1CP Secure Biomass
 [LETHAL HITS]
 if used
-+2% wiped
-≈0
+BEST · MOST MODELS+10% wiped
++0.2
+MODELS
+1CP Command Re-roll
+Re-roll one Hit, Wound or Damage roll (once in the phase)
+if used
++8% wiped
++0.2
 MODELS
 1CP Epic Challenge
-[PRECISION] · CHARACTER models only · for Bone Sabres
+[PRECISION] · CHARACTER models only
 if used
 0
 NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
@@ -1757,9 +1756,11 @@ Domination of the Hive Mind
 Guardian Organism
 “While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
-
-None that change these numbers.
-
+Bio-stimulus (Psychophage)
+Selected by it · The target is the enemy unit selected: +1 AP
+if it applies
+≈0
+MODELS
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -1802,13 +1803,13 @@ CP
 AI
 Tyrannoformed
 Command phase, your HARVESTER unit within range of an objective marker you control: that objective marker stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-Command Pyrovores ×2, Ripper Swarms, Norn Assimilator ×2
+Command Pyrovores ×2, Ripper Swarms, Norn Assimilator, Psychophage
 2
 CP
 AI
 Ablative Carapace
 Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your HARVESTER unit as a target: until the end of the phase, its models have Feel No Pain 5+ (4+ if it is within range of an objective marker you control).
-Their Shoot · Fight Pyrovores ×2, Ripper Swarms, Norn Assimilator ×2
+Their Shoot · Fight Pyrovores ×2, Ripper Swarms, Norn Assimilator, Psychophage
 1
 CP
 AI
@@ -1826,13 +1827,13 @@ CP
 AI
 Broodguard Impulse
 Any phase, your HARVESTER unit just destroyed: until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that destroyed it, +1 to the Wound roll.
-Any phase Pyrovores ×2, Ripper Swarms, Norn Assimilator ×2
+Any phase Pyrovores ×2, Ripper Swarms, Norn Assimilator, Psychophage
 1
 CP
 AI
 Reclaim Biomass
 Any phase, a TYRANIDS unit from your army is destroyed (before its last model is removed), your HARVESTER unit within 6" of it: Regenerate one friendly TYRANIDS unit within 6" of your HARVESTER unit (see Feed the Swarm).
-Any phase Pyrovores ×2, Ripper Swarms, Norn Assimilator ×2
+Any phase Pyrovores ×2, Ripper Swarms, Norn Assimilator, Psychophage
 TALONS OF THE NORN QUEEN
 3
 1
@@ -1840,19 +1841,19 @@ CP
 AI
 Tanglestrike Rounds
 After your unit has shot: one enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
-Your Shooting Norn Assimilator ×2
+Your Shooting Norn Assimilator
 1
 CP
 AI
 Lesser Prey
 Your unit’s melee attacks have +2 S.
-Fight Norn Assimilator ×2, Norn Emissary
+Fight Norn Assimilator, Norn Emissary
 1
 CP
 AI
 Catalytic Biofortification
 Your unit has Feel No Pain 4+ against mortal wounds.
-Any phase Norn Assimilator ×2
+Any phase Norn Assimilator
 CORE STRATAGEMS
 10
 1
@@ -1872,13 +1873,19 @@ CP
 AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
-End of their Movement All but Hive Tyrant + Tyrant Guard, Ripper Swarms
+End of their Movement The Swarmlord + Tyrant Guard, Biovores, Pyrovores ×2, Norn Assimilator, Norn Emissary, Psychophage, Tyrannofex
+1
+CP
+AI
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting Psychophage
 1
 CP
 AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
-Your Charge The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Norn Assimilator ×2, Norn Emissary, Tyrannofex
+Your Charge The Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Norn Assimilator, Norn Emissary, Psychophage, Tyrannofex
 1
 CP
 AI
@@ -1890,7 +1897,7 @@ CP
 AI
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-Fight The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard
+Fight The Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard
 2
 CP
 AI
@@ -1909,12 +1916,6 @@ AI
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
-1
-CP
-AI
-Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-Start of their Shooting No unit in this list can use it (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
@@ -1925,7 +1926,7 @@ ASSIMILATION SWARM
 1
 CP
 Tyrannoformed
-Command Pyrovores ×2, Ripper Swarms, Norn Assimilator ×2
+Command Pyrovores ×2, Ripper Swarms, Norn Assimilator, Psychophage
 WHEN
 
 Command phase.
@@ -1936,12 +1937,12 @@ EFFECT
 
 That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
 
-USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience, Psychophage
 
 2
 CP
 Ablative Carapace
-Their Shoot · Fight Pyrovores ×2, Ripper Swarms, Norn Assimilator ×2
+Their Shoot · Fight Pyrovores ×2, Ripper Swarms, Norn Assimilator, Psychophage
 WHEN
 
 Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
@@ -1952,7 +1953,7 @@ EFFECT
 
 Until the end of the phase, models in your unit have the Feel No Pain 5+ ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead.
 
-USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience, Psychophage
 
 1
 CP
@@ -1989,7 +1990,7 @@ USED BYany unit
 1
 CP
 Broodguard Impulse
-Any phase Pyrovores ×2, Ripper Swarms, Norn Assimilator ×2
+Any phase Pyrovores ×2, Ripper Swarms, Norn Assimilator, Psychophage
 WHEN
 
 Any phase.
@@ -2000,12 +2001,12 @@ EFFECT
 
 Until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that just destroyed your HARVESTER unit, add 1 to the Wound roll.
 
-USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience, Psychophage
 
 1
 CP
 Reclaim Biomass
-Any phase Pyrovores ×2, Ripper Swarms, Norn Assimilator ×2
+Any phase Pyrovores ×2, Ripper Swarms, Norn Assimilator, Psychophage
 WHEN
 
 Any phase, when a TYRANIDS unit from your army is destroyed, before the last model in it is removed from play.
@@ -2018,14 +2019,14 @@ Regenerate one friendly TYRANIDS unit within 6" of your HARVESTER unit (See Feed
 
 FAQ (Faction Pack 1.3): “When using the Reclaim Biomass Stratagem, can the Stratagem effect be used on the unit that was just destroyed?” “No.”
 
-USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience, Psychophage
 
 TALONS OF THE NORN QUEEN
 3
 1
 CP
 Tanglestrike Rounds
-Your Shooting Norn Assimilator ×2
+Your Shooting Norn Assimilator
 WHEN
 
 Your Shooting phase, when a friendly NORN ASSIMILATOR unit has shot.
@@ -2038,12 +2039,12 @@ Select one enemy unit hit by those attacks. That enemy unit is tethered until th
 
 While a unit is tethered, that unit has -2" M.
 
-USED BYNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+USED BYNorn Assimilator · Synaptoprescience
 
 1
 CP
 Lesser Prey
-Fight Norn Assimilator ×2, Norn Emissary
+Fight Norn Assimilator, Norn Emissary
 WHEN
 
 Fight phase, when a friendly NORN ASSIMILATOR/NORN EMISSARY unit is selected to fight.
@@ -2054,12 +2055,12 @@ EFFECT
 
 Your unit’s melee attacks have +2 S.
 
-USED BYNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary
+USED BYNorn Assimilator · Synaptoprescience, Norn Emissary
 
 1
 CP
 Catalytic Biofortification
-Any phase Norn Assimilator ×2
+Any phase Norn Assimilator
 WHEN
 
 Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
@@ -2070,7 +2071,7 @@ EFFECT
 
 Your unit has Feel No Pain 4+ against mortal wounds.
 
-USED BYNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+USED BYNorn Assimilator · Synaptoprescience
 
 CORE STRATAGEMS
 10
@@ -2115,7 +2116,7 @@ USED BYany unit
 1
 CP
 Fire Overwatch
-End of their Movement All but Hive Tyrant + Tyrant Guard, Ripper Swarms
+End of their Movement The Swarmlord + Tyrant Guard, Biovores, Pyrovores ×2, Norn Assimilator, Norn Emissary, Psychophage, Tyrannofex
 WHEN
 
 End of your opponent’s Movement phase.
@@ -2126,12 +2127,28 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYThe Swarmlord + Tyrant Guard, Biovores, Pyrovores, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary, Tyrannofex
+USED BYThe Swarmlord + Tyrant Guard, Biovores, Pyrovores, Norn Assimilator · Synaptoprescience, Norn Emissary, Psychophage, Tyrannofex
+
+1
+CP
+Smokescreen
+Start of their Shooting Psychophage
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYPsychophage
 
 1
 CP
 Crushing Impact
-Your Charge The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Norn Assimilator ×2, Norn Emissary, Tyrannofex
+Your Charge The Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Norn Assimilator, Norn Emissary, Psychophage, Tyrannofex
 WHEN
 
 Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
@@ -2148,7 +2165,7 @@ Resolve the following sequence:
 
 Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
 
-USED BYThe Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard · Instinctive Defence, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary, Tyrannofex
+USED BYThe Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard · Parasitic Biomorphology, Norn Assimilator · Synaptoprescience, Norn Emissary, Psychophage, Tyrannofex
 
 1
 CP
@@ -2174,7 +2191,7 @@ USED BYany unit
 1
 CP
 Epic Challenge
-Fight The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard
+Fight The Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard
 WHEN
 
 Fight phase, just after a friendly CHARACTER unit is selected to fight.
@@ -2185,7 +2202,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYThe Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard · Instinctive Defence
+USED BYThe Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard · Parasitic Biomorphology
 
 2
 CP
@@ -2250,25 +2267,97 @@ Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
 USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
 
-1
-CP
-Smokescreen
-Start of their Shooting No unit in this list can use it (needs SMOKE)
-WHEN
-
-Start of your opponent’s Shooting phase.
-
-TARGETOne friendly SMOKE unit.
-
-EFFECT
-
-Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
-
-USED BYno unit in this list (needs SMOKE)
-
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## unit the-swarmlord-tyrant-guard · STRATAGEMS Healybois
+######## unit the-red-terror · STRATAGEMS Healybois
+THE RED TERROR
+120 PTS
+Epic Hero
+Models
+Options
+1× The Red Terror
+Gaping maw, Scything talons
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+The Red Terror
+100mm
+10"
+8
+3+
+9
+8+
+3
+–
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+
+Fights with both: Scything talons, plus Gaping maw on top (extra attacks).
+
+Gaping maw
+1
+2+
+5
+–
+D3+2
+EXTRA ATTACKS, DEVASTATING WOUNDS, PRECISION
+Scything talons
+12
+2+
+7
+-2
+2
+Within Synapse Range: +1 S
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
+1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+vs INFANTRY/MOUNTED/BEASTS: a successful unmodified wound roll is a Critical Wound (Swallow Whole)
+ABILITIES
+Swallow Whole
+
+Each time an attack with this model’s gaping maw targets an INFANTRY, MOUNTED or BEASTS unit, each successful unmodified Wound roll is a Critical Wound. Each time an INFANTRY, MOUNTED or BEASTS model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds.
+
+Subterranean Hunter
+Fight
+
+Fight · Either turn
+
+At the end of the Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.
+
+Rules
+Deep Strike, Synapse
+Stratagems
+
+ASSIMILATION SWARM Secure Biomass, Rapacious Hunger
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Talons of the Norn Queen.
+
+Keywords
+CHARACTER
+MOBILE
+EPIC HERO
+GREAT DEVOURER
+MONSTER
+BURROWER
+VANGUARD INVADER
+THE RED TERROR
+FACTION: TYRANIDS
+Ask about this unit
+The Swarmlord ›
+
+######## unit the-swarmlord-tyrant-guard · THE RED TERROR Healybois
 THE SWARMLORD + TYRANT GUARD
 380 PTS
 Epic Hero · 210 + Tyrant Guard 170
@@ -2351,6 +2440,7 @@ Scything talons and rending claws×6
 1
 WHOLE UNIT
 Within Synapse Range: +1 S
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 ABILITIES
@@ -2410,13 +2500,14 @@ FACTION: TYRANIDS
 WARLORD
 *from the led Tyrant Guard
 Ask about this unit
-Hive Tyrant · Instinctive Defence ›
+‹ The Red Terror
+Hive Tyrant · Parasitic Biomorphology ›
 
 ######## unit hive-tyrant-tyrant-guard · THE SWARMLORD Healybois
 HIVE TYRANT + TYRANT GUARD
-380 PTS
-Character · 210 + Tyrant Guard 170
-Instinctive Defence
+390 PTS
+Character · 220 + Tyrant Guard 170
+Parasitic Biomorphology
 Models
 Options
 1× Hive Tyrant
@@ -2466,14 +2557,14 @@ Fights with both: Monstrous bonesword and lash whip, plus Monstrous scything tal
 Monstrous bonesword and lash whip
 6
 2+
-9
+10
 -2
 3
 TWIN-LINKED
 Monstrous scything talons
 4
 2+
-7
+8
 -2
 2
 EXTRA ATTACKS
@@ -2481,12 +2572,14 @@ TYRANT GUARD
 Scything talons and rending claws×6
 5
 3+
-5
+6
 -1
 1
 WHOLE UNIT
 Within Synapse Range: +1 S
+After the bearer’s unit first destroys an enemy unit in the Fight phase while the bearer is within 6" of a friendly HARVESTER unit: +1 A (until the end of the battle) (Parasitic Biomorphology)
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 ABILITIES
@@ -2507,14 +2600,15 @@ Aura, Psychic · Movement (either turn) / Your Shooting
 
 While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
 
-Instinctive Defence
+Parasitic Biomorphology
 - Hive Tyrant
 Enhancement
-Their Charge · Fight
+Already in S
+Fight
 
-Enhancement · Their Charge / Fight (either turn)
+Enhancement · Fight · Either turn
 
-TYRANIDS model only. While the bearer is within 6" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.
+TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.
 
 Guardian Organism
 - Tyrant Guard
@@ -2602,6 +2696,7 @@ Chitin-barbed limbs
 0
 1
 Within Synapse Range: +1 S
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 ABILITIES
@@ -2631,16 +2726,16 @@ GREAT DEVOURER
 BIOVORES
 FACTION: TYRANIDS
 Ask about this unit
-‹ Hive Tyrant · Instinctive Defence
+‹ Hive Tyrant · Parasitic Biomorphology
 Pyrovores ›
 
 ######## unit pyrovores · BIOVORES Healybois
 PYROVORES
-70 PTS EACH
+100 PTS EACH
 Infantry · ×2 in list
 Models
 Options
-2× Pyrovore
+3× Pyrovore
 Chitin-barbed limbs, Flamespurt
 Unit
 M
@@ -2650,7 +2745,7 @@ W
 LD
 OC
 InSv
-Pyrovores×2
+Pyrovores×3
 80mm
 5"
 6
@@ -2671,7 +2766,7 @@ BS
 S
 AP
 D
-Flamespurt×2
+Flamespurt×3
 12"
 D6+1
 –
@@ -2686,13 +2781,14 @@ WS
 S
 AP
 D
-Chitin-barbed limbs×2
+Chitin-barbed limbs×3
 2
 4+
 5
 0
 1
 Within Synapse Range: +1 S
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 ABILITIES
@@ -2766,6 +2862,7 @@ Chitinous claws and teeth
 SUSTAINED HITS 1
 Within Synapse Range: +1 S
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 ABILITIES
@@ -2793,14 +2890,13 @@ RIPPER SWARMS
 FACTION: TYRANIDS
 Ask about this unit
 ‹ Pyrovores
-Norn Assimilator · Synaptoprescience (1 of 2) ›
+Norn Assimilator · Synaptoprescience ›
 
-######## unit norn-assimilator-synaptoprescience · RIPPER SWARMS Healybois
+######## unit norn-assimilator · RIPPER SWARMS Healybois
 NORN ASSIMILATOR
 280 PTS
 Monster
 Synaptoprescience
-1 of 2
 Models
 Options
 1× Norn Assimilator
@@ -2871,6 +2967,7 @@ Toxinjecter Harpoon
 D6+1
 EXTRA ATTACKS
 Within Synapse Range: +1 S
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 STRATAGEMS · TALONS OF THE NORN QUEEN
@@ -2928,141 +3025,6 @@ NORN ASSIMILATOR
 FACTION: TYRANIDS
 Ask about this unit
 ‹ Ripper Swarms
-Norn Assimilator · Synaptoprescience (2 of 2) ›
-
-######## unit norn-assimilator-synaptoprescience-2 · NORN ASSIMILATOR Healybois
-NORN ASSIMILATOR
-300 PTS
-Monster
-Synaptoprescience
-2 of 2
-Models
-Options
-1× Norn Assimilator
-Monstrous scything talons, Toxinjecter Harpoon
-Unit
-M
-T
-Sv
-W
-LD
-OC
-InSv
-Norn Assimilator
-100mm
-10"
-11
-2+
-16
-7+
-5
-4+
-WHEN TARGETED
-3
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
-2CP Ablative Carapace: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: Feel No Pain 5+ until the end of the phase (4+ while within range of an objective marker you control)
-1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
-DAMAGED 1-5 W
--1 TO HIT ROLLS
-ALL ATTACKS
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-RANGED WEAPONS
-Range
-A
-BS
-S
-AP
-D
-Toxinjecter Harpoon
-12"
-2
-2+
-12
--3
-D6+1
-HARPOONED
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-MELEE WEAPONS
-A
-WS
-S
-AP
-D
-
-Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
-
-Monstrous scything talons
-6
-2+
-9
--2
-3
-Toxinjecter Harpoon
-4
-2+
-12
--3
-D6+1
-EXTRA ATTACKS
-Within Synapse Range: +1 S
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
-ABILITIES
-Singular Purpose
-Start of the first battle round
-
-Start of the first battle round
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-Harpoon Barbs
-Once per turn
-Their Movement
-
-Once per turn · Movement · Their turn
-
-Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
-
-Protean Purpose
-Once per battle, per unit
-Your Command
-
-Once per battle, per unit · Command · Your turn
-
-(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
-
-Synaptoprescience
-Enhancement
-Already in InSv
-
-Enhancement
-
-NORN ASSIMILATOR unit only. This unit has 4+ InSv.
-
-Rules
-Deadly Demise D6, Shadow in the Warp, Synapse, Feed the Swarm, Higher Imperatives
-Stratagems
-
-ASSIMILATION SWARM Tyrannoformed, Ablative Carapace, Secure Biomass, Rapacious Hunger, Broodguard Impulse, Reclaim Biomass
-
-TALONS OF THE NORN QUEEN Tanglestrike Rounds, Lesser Prey, Catalytic Biofortification
-
-CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
-
-Keywords
-MONSTER
-GREAT DEVOURER
-SYNAPSE
-HARVESTER
-NORN ASSIMILATOR
-FACTION: TYRANIDS
-Ask about this unit
-‹ Norn Assimilator · Synaptoprescience (1 of 2)
 Norn Emissary ›
 
 ######## unit norn-emissary · NORN ASSIMILATOR Healybois
@@ -3156,6 +3118,7 @@ Monstrous rending claws
 2
 EXTRA ATTACKS
 Within Synapse Range: +1 S
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 STRATAGEMS · TALONS OF THE NORN QUEEN
@@ -3200,10 +3163,111 @@ SYNAPSE
 NORN EMISSARY
 FACTION: TYRANIDS
 Ask about this unit
-‹ Norn Assimilator · Synaptoprescience (2 of 2)
+‹ Norn Assimilator · Synaptoprescience
+Psychophage ›
+
+######## unit psychophage · NORN EMISSARY Healybois
+PSYCHOPHAGE
+110 PTS
+Monster
+Models
+Options
+1× Psychophage
+Psychoclastic torrent, Talons and betentacled maw
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Psychophage
+120×92mm Oval
+12"
+9
+3+
+10
+8+
+3
+–
+WHEN TARGETED
+2
+Feel No Pain 5+
+2CP Ablative Carapace: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: Feel No Pain 5+ until the end of the phase (4+ while within range of an objective marker you control)
+ALL ATTACKS
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Psychoclastic torrent
+12"
+D6
+–
+6
+-1
+1
+IGNORES COVER, TORRENT
+Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Talons and betentacled maw
+6
+3+
+6
+-2
+2
+ANTI-PSYKER 4+, DEVASTATING WOUNDS
+Within Synapse Range: +1 S
+This turn, vs the enemy unit it selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+Target below its Starting Strength: +1 to hit rolls; also +1 to wound rolls if Below Half-strength (Feeding Frenzy)
+STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
+1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+ABILITIES
+Bio-stimulus
+Your Shoot/Fight
+
+Shooting / Fight · Your turn
+
+In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly TYRANIDS unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.
+
+Feeding Frenzy
+Fight
+
+Fight · Either turn
+
+Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well.
+
+Rules
+Deadly Demise 1, Feel No Pain 5+, Synapse, Feed the Swarm
+Stratagems
+
+ASSIMILATION SWARM Tyrannoformed, Ablative Carapace, Secure Biomass, Rapacious Hunger, Broodguard Impulse, Reclaim Biomass
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Talons of the Norn Queen.
+
+Keywords
+MONSTER
+GREAT DEVOURER
+HARVESTER
+SMOKE
+PSYCHOPHAGE
+FACTION: TYRANIDS
+Ask about this unit
+‹ Norn Emissary
 Tyrannofex ›
 
-######## unit tyrannofex · NORN EMISSARY Healybois
+######## unit tyrannofex · PSYCHOPHAGE Healybois
 TYRANNOFEX
 180 PTS
 Monster
@@ -3271,6 +3335,7 @@ Powerful limbs
 0
 2
 Within Synapse Range: +1 S
+This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
 ABILITIES
@@ -3298,7 +3363,7 @@ FRAME
 TYRANNOFEX
 FACTION: TYRANIDS
 Ask about this unit
-‹ Norn Emissary
+‹ Psychophage
 Spore Mines (Biovore) ›
 
 ######## unit spore-mines-biovore · TYRANNOFEX Healybois
@@ -3360,14 +3425,25 @@ FACTION: TYRANIDS
 Ask about this unit
 ‹ Tyrannofex
 
-######## popup ability:healybois|Damaged: 1-5 Wounds Remaining|While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. · SPORE MINES (BIOVORE) Healybois
+######## popup ability:healybois|Bio-stimulus|In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly **TYRANIDS** unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn. · SPORE MINES (BIOVORE) Healybois
+ABILITY · SHOOTING / FIGHT · YOUR TURN
+
+Bio-stimulus
+
+In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly TYRANIDS unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.
+
+UNITPsychophage
+
+Ask about this ability
+
+######## popup ability:healybois|Damaged: 1-5 Wounds Remaining|While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. · HEALYBOIS Healybois
 ABILITY
 
 Damaged: 1-5 Wounds Remaining
 
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
-UNITNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary, Tyrannofex
+UNITNorn Assimilator · Synaptoprescience, Norn Emissary, Tyrannofex
 
 Ask about this ability
 
@@ -3382,6 +3458,17 @@ UNITThe Swarmlord + Tyrant Guard
 
 Ask about this ability
 
+######## popup ability:healybois|Feeding Frenzy|Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the **Hit roll**. If that target is also **Below Half-strength**, add 1 to the **Wound roll** as well. · HEALYBOIS Healybois
+ABILITY · FIGHT · EITHER TURN
+
+Feeding Frenzy
+
+Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well.
+
+UNITPsychophage
+
+Ask about this ability
+
 ######## popup ability:healybois|Guardian Organism|While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability. · HEALYBOIS Healybois
 ABILITY
 
@@ -3389,7 +3476,7 @@ Guardian Organism
 
 While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.
 
-UNITThe Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard · Instinctive Defence
+UNITThe Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard · Parasitic Biomorphology
 
 Ask about this ability
 
@@ -3404,17 +3491,6 @@ UNITThe Swarmlord + Tyrant Guard
 
 Ask about this ability
 
-######## popup ability:healybois|Instinctive Defence|**TYRANIDS** model only. While the bearer is within 6" of one or more friendly **HARVESTER** units, when you target this unit with the **Heroic Intervention** stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly **HARVESTER** units, models in the bearer’s unit have the **Fights First** ability. · HEALYBOIS Healybois
-ABILITY · ENHANCEMENT · THEIR CHARGE / FIGHT (EITHER TURN)
-
-Instinctive Defence
-
-TYRANIDS model only. While the bearer is within 6" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.
-
-UNITHive Tyrant + Tyrant Guard · Instinctive Defence
-
-Ask about this ability
-
 ######## popup ability:healybois|Onslaught|While a friendly **TYRANIDS** unit is within 6" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities. · HEALYBOIS Healybois
 ABILITY · AURA, PSYCHIC · MOVEMENT (EITHER TURN) / YOUR SHOOTING
 
@@ -3422,7 +3498,18 @@ Onslaught
 
 While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
 
-UNITHive Tyrant + Tyrant Guard · Instinctive Defence
+UNITHive Tyrant + Tyrant Guard · Parasitic Biomorphology
+
+Ask about this ability
+
+######## popup ability:healybois|Parasitic Biomorphology|**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit. · HEALYBOIS Healybois
+ABILITY · ENHANCEMENT · FIGHT · EITHER TURN
+
+Parasitic Biomorphology
+
+TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.
+
+UNITHive Tyrant + Tyrant Guard · Parasitic Biomorphology
 
 Ask about this ability
 
@@ -3433,7 +3520,7 @@ Protean Purpose
 
 (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
 
-UNITNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary
+UNITNorn Assimilator · Synaptoprescience, Norn Emissary
 
 Ask about this ability
 
@@ -3473,7 +3560,29 @@ At the start of the first battle round, select one of the following:
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
-UNITNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary
+UNITNorn Assimilator · Synaptoprescience, Norn Emissary
+
+Ask about this ability
+
+######## popup ability:healybois|Subterranean Hunter|At the end of the Fight phase, if this unit is not within **Engagement Range** of one or more enemy units, you can remove it from the battlefield and place it into **Strategic Reserves**. · HEALYBOIS Healybois
+ABILITY · FIGHT · EITHER TURN
+
+Subterranean Hunter
+
+At the end of the Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.
+
+UNITThe Red Terror
+
+Ask about this ability
+
+######## popup ability:healybois|Swallow Whole|Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound. Each time an **INFANTRY**, **MOUNTED** or **BEASTS** model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds. · HEALYBOIS Healybois
+ABILITY
+
+Swallow Whole
+
+Each time an attack with this model’s gaping maw targets an INFANTRY, MOUNTED or BEASTS unit, each successful unmodified Wound roll is a Critical Wound. Each time an INFANTRY, MOUNTED or BEASTS model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds.
+
+UNITThe Red Terror
 
 Ask about this ability
 
@@ -3488,12 +3597,12 @@ UNITNorn Emissary
 
 Ask about this ability
 
-######## popup enh:assimilation-swarm|Instinctive Defence · HEALYBOIS Healybois
-ENHANCEMENT · ASSIMILATION SWARM · 15 PTS
+######## popup enh:assimilation-swarm|Parasitic Biomorphology · HEALYBOIS Healybois
+ENHANCEMENT · ASSIMILATION SWARM · 25 PTS
 
-Instinctive Defence
+Parasitic Biomorphology
 
-TYRANIDS model only. While the bearer is within 6" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.
+TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.
 
 ONHive Tyrant + Tyrant Guard
 
@@ -3506,11 +3615,44 @@ Synaptoprescience
 
 NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 
-ONNorn Assimilator (1 of 2), Norn Assimilator (2 of 2)
+ONNorn Assimilator
 
 Ask about this enhancement
 
-######## popup grant:["Synaptoprescience","norn-assimilator-synaptoprescience","INV 4+",null] · HEALYBOIS Healybois
+######## popup grant:["Parasitic Biomorphology","hive-tyrant-tyrant-guard","S 10",null] · HEALYBOIS Healybois
+S 10 · GRANTED BY
+
+Parasitic Biomorphology
+
+Hive Tyrant · Enhancement
+
+TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Parasitic Biomorphology","hive-tyrant-tyrant-guard","S 6",null] · HEALYBOIS Healybois
+S 6 · GRANTED BY
+
+Parasitic Biomorphology
+
+Hive Tyrant · Enhancement
+
+TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Parasitic Biomorphology","hive-tyrant-tyrant-guard","S 8",null] · HEALYBOIS Healybois
+S 8 · GRANTED BY
+
+Parasitic Biomorphology
+
+Hive Tyrant · Enhancement
+
+TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Synaptoprescience","norn-assimilator","INV 4+",null] · HEALYBOIS Healybois
 INV 4+ · GRANTED BY
 
 Synaptoprescience
@@ -3521,16 +3663,18 @@ NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 
 Already in the value shown (as New Recruit and BSData list it).
 
-######## popup grant:["Synaptoprescience","norn-assimilator-synaptoprescience-2","INV 4+",null] · HEALYBOIS Healybois
-INV 4+ · GRANTED BY
+######## popup rule:ANTI-PSYKER 4+ · HEALYBOIS Healybois
+CORE RULE
 
-Synaptoprescience
+ANTI-PSYKER 4+
 
-Enhancement
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
 
-NORN ASSIMILATOR unit only. This unit has 4+ InSv.
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
 
-Already in the value shown (as New Recruit and BSData list it).
+IN THIS ARMYPsychophage
+
+Ask about this rule
 
 ######## popup rule:Advance move · HEALYBOIS Healybois
 CORE RULE
@@ -3577,7 +3721,7 @@ Assault
 
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
-IN THIS ARMYHive Tyrant · Instinctive Defence (in Onslaught)
+IN THIS ARMYHive Tyrant · Parasitic Biomorphology (in Onslaught)
 
 Ask about this rule
 
@@ -3625,6 +3769,33 @@ If a unit was battle-shocked at the start of this step and its battle-shock roll
 
 Ask about this rule
 
+######## popup rule:Below Half-strength · HEALYBOIS Healybois
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+Ask about this rule
+
 ######## popup rule:Benefit of Cover · HEALYBOIS Healybois
 CORE RULE
 
@@ -3666,7 +3837,7 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
-IN THIS ARMYBiovores
+IN THIS ARMYThe Red Terror, Biovores, Psychophage
 
 Ask about this rule
 
@@ -3677,7 +3848,7 @@ Deadly Demise
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant · Instinctive Defence (Hive Tyrant only), Biovores, Pyrovores, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary, Tyrannofex
+IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant · Parasitic Biomorphology (Hive Tyrant only), Biovores, Pyrovores, Norn Assimilator · Synaptoprescience, Norn Emissary, Psychophage, Tyrannofex
 
 Ask about this rule
 
@@ -3688,7 +3859,7 @@ Deadly Demise 1
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant · Instinctive Defence (Hive Tyrant only), Biovores, Pyrovores, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary, Tyrannofex
+IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant · Parasitic Biomorphology (Hive Tyrant only), Biovores, Pyrovores, Norn Assimilator · Synaptoprescience, Norn Emissary, Psychophage, Tyrannofex
 
 Ask about this rule
 
@@ -3699,7 +3870,7 @@ Deadly Demise D3
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant · Instinctive Defence (Hive Tyrant only), Biovores, Pyrovores, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary, Tyrannofex
+IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant · Parasitic Biomorphology (Hive Tyrant only), Biovores, Pyrovores, Norn Assimilator · Synaptoprescience, Norn Emissary, Psychophage, Tyrannofex
 
 Ask about this rule
 
@@ -3710,7 +3881,7 @@ Deadly Demise D6
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant · Instinctive Defence (Hive Tyrant only), Biovores, Pyrovores, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary, Tyrannofex
+IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant · Parasitic Biomorphology (Hive Tyrant only), Biovores, Pyrovores, Norn Assimilator · Synaptoprescience, Norn Emissary, Psychophage, Tyrannofex
 
 Ask about this rule
 
@@ -3723,7 +3894,7 @@ Each time this unit makes an ingress move (20.04), if every model in this unit h
 
 App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
 
-IN THIS ARMYRipper Swarms
+IN THIS ARMYThe Red Terror, Ripper Swarms
 
 Ask about this rule
 
@@ -3737,7 +3908,7 @@ Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fi
 All of that model’s [EXTRA ATTACKS] weapons.
 One of that model’s other melee weapons, if possible.
 
-IN THIS ARMYHive Tyrant · Instinctive Defence, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary
+IN THIS ARMYThe Red Terror, Hive Tyrant · Parasitic Biomorphology, Norn Assimilator · Synaptoprescience, Norn Emissary
 
 Ask about this rule
 
@@ -3765,7 +3936,7 @@ In your Command phase, each HARVESTER unit from your army can Regenerate one fri
 One model in that unit regains up to D3+1 lost wounds.
 One destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds remaining. If that unit is an ENDLESS MULTITUDE unit, up to 3 destroyed models are returned instead.
 
-IN THIS ARMYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+IN THIS ARMYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience, Psychophage
 
 Ask about this rule
 
@@ -3776,7 +3947,7 @@ Feel No Pain
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
-IN THIS ARMYThe Swarmlord (in Guardian Organism), Hive Tyrant · Instinctive Defence (in Guardian Organism), Norn Assimilator · Synaptoprescience (1 of 2) (in Singular Purpose), Norn Assimilator · Synaptoprescience (2 of 2) (in Singular Purpose), Norn Emissary
+IN THIS ARMYThe Swarmlord (in Guardian Organism), Hive Tyrant · Parasitic Biomorphology (in Guardian Organism), Norn Assimilator · Synaptoprescience (in Singular Purpose), Norn Emissary, Psychophage
 
 Ask about this rule
 
@@ -3787,7 +3958,7 @@ Feel No Pain 4+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
-IN THIS ARMYThe Swarmlord (in Guardian Organism), Hive Tyrant · Instinctive Defence (in Guardian Organism), Norn Assimilator · Synaptoprescience (1 of 2) (in Singular Purpose), Norn Assimilator · Synaptoprescience (2 of 2) (in Singular Purpose), Norn Emissary
+IN THIS ARMYThe Swarmlord (in Guardian Organism), Hive Tyrant · Parasitic Biomorphology (in Guardian Organism), Norn Assimilator · Synaptoprescience (in Singular Purpose), Norn Emissary, Psychophage
 
 Ask about this rule
 
@@ -3798,7 +3969,7 @@ Feel No Pain 5+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
-IN THIS ARMYThe Swarmlord (in Guardian Organism), Hive Tyrant · Instinctive Defence (in Guardian Organism), Norn Assimilator · Synaptoprescience (1 of 2) (in Singular Purpose), Norn Assimilator · Synaptoprescience (2 of 2) (in Singular Purpose), Norn Emissary
+IN THIS ARMYThe Swarmlord (in Guardian Organism), Hive Tyrant · Parasitic Biomorphology (in Guardian Organism), Norn Assimilator · Synaptoprescience (in Singular Purpose), Norn Emissary, Psychophage
 
 Ask about this rule
 
@@ -3810,8 +3981,6 @@ Fights First
 While every model in a unit has this ability, that unit is a Fights First unit.
 
 See the Resolve Fights First Combats step in the Fight phase (12.04).
-
-IN THIS ARMYHive Tyrant · Instinctive Defence (in Instinctive Defence)
 
 Ask about this rule
 
@@ -3825,7 +3994,7 @@ When this unit declares a charge, if an enemy MONSTER/VEHICLE unit is within 12"
 This unit has +2 to charge rolls until the end of the phase.
 This unit must end that charge move engaged with that MONSTER/VEHICLE unit.
 
-IN THIS ARMYNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+IN THIS ARMYNorn Assimilator · Synaptoprescience
 
 Ask about this rule
 
@@ -3868,7 +4037,7 @@ Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability:
 
 Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
 
-IN THIS ARMYNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary
+IN THIS ARMYNorn Assimilator · Synaptoprescience, Norn Emissary
 
 Ask about this rule
 
@@ -3879,7 +4048,7 @@ IGNORES COVER
 
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
-IN THIS ARMYPyrovores
+IN THIS ARMYPyrovores, Psychophage
 
 Ask about this rule
 
@@ -3903,7 +4072,7 @@ Before the battle, in the Muster Armies step, for each leader and support unit i
 
 Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
 
-IN THIS ARMYThe Swarmlord, Hive Tyrant · Instinctive Defence
+IN THIS ARMYThe Swarmlord, Hive Tyrant · Parasitic Biomorphology
 
 Ask about this rule
 
@@ -3916,7 +4085,7 @@ Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, 
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
 
-IN THIS ARMYHive Tyrant · Instinctive Defence (in Onslaught)
+IN THIS ARMYHive Tyrant · Parasitic Biomorphology (in Onslaught)
 
 Ask about this rule
 
@@ -3942,7 +4111,7 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
 
-IN THIS ARMYNorn Emissary
+IN THIS ARMYThe Red Terror, Norn Emissary
 
 Ask about this rule
 
@@ -4038,6 +4207,31 @@ FAQ (Faction Pack 1.3): “Can units targeted by the Shadow in the Warp army rul
 
 Ask about this rule
 
+######## popup rule:Strategic Reserves · HEALYBOIS Healybois
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
 ######## popup rule:Synapse · HEALYBOIS Healybois
 TYRANIDS ARMY RULE
 
@@ -4067,7 +4261,7 @@ TORRENT
 
 Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
 
-IN THIS ARMYThe Swarmlord, Pyrovores, Tyrannofex
+IN THIS ARMYThe Swarmlord, Pyrovores, Psychophage, Tyrannofex
 
 Ask about this rule
 
@@ -4078,7 +4272,7 @@ TWIN-LINKED
 
 Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
 
-IN THIS ARMYThe Swarmlord, Hive Tyrant · Instinctive Defence, Pyrovores
+IN THIS ARMYThe Swarmlord, Hive Tyrant · Parasitic Biomorphology, Pyrovores
 
 Ask about this rule
 
@@ -4091,6 +4285,8 @@ This ability always takes the form [ANTI-X Y+]. Each time an attack is made with
 
 Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
 
+IN THIS ARMYPsychophage
+
 Ask about this rule
 
 ######## popup rule:[ASSAULT] · HEALYBOIS Healybois
@@ -4100,7 +4296,7 @@ ASSAULT
 
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
-IN THIS ARMYHive Tyrant · Instinctive Defence (in Onslaught)
+IN THIS ARMYHive Tyrant · Parasitic Biomorphology (in Onslaught)
 
 Ask about this rule
 
@@ -4113,7 +4309,7 @@ Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, 
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
 
-IN THIS ARMYHive Tyrant · Instinctive Defence (in Onslaught)
+IN THIS ARMYHive Tyrant · Parasitic Biomorphology (in Onslaught)
 
 Ask about this rule
 
@@ -4126,7 +4322,7 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
 
-IN THIS ARMYNorn Emissary
+IN THIS ARMYThe Red Terror, Norn Emissary
 
 Ask about this rule
 
@@ -4426,7 +4622,7 @@ EFFECT
 
 Until the end of the phase, models in your unit have the Feel No Pain 5+ ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead.
 
-USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience, Psychophage
 
 Ask about this stratagem
 
@@ -4444,7 +4640,7 @@ EFFECT
 
 Until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that just destroyed your HARVESTER unit, add 1 to the Wound roll.
 
-USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience, Psychophage
 
 Ask about this stratagem
 
@@ -4462,7 +4658,7 @@ EFFECT
 
 Your unit has Feel No Pain 4+ against mortal wounds.
 
-USED BYNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+USED BYNorn Assimilator · Synaptoprescience
 
 Ask about this stratagem
 
@@ -4531,7 +4727,7 @@ Resolve the following sequence:
 
 Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
 
-USED BYThe Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard · Instinctive Defence, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary, Tyrannofex
+USED BYThe Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard · Parasitic Biomorphology, Norn Assimilator · Synaptoprescience, Norn Emissary, Psychophage, Tyrannofex
 
 Ask about this stratagem
 
@@ -4549,7 +4745,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYThe Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard · Instinctive Defence
+USED BYThe Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard · Parasitic Biomorphology
 
 Ask about this stratagem
 
@@ -4567,7 +4763,7 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYThe Swarmlord + Tyrant Guard, Biovores, Pyrovores, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary, Tyrannofex
+USED BYThe Swarmlord + Tyrant Guard, Biovores, Pyrovores, Norn Assimilator · Synaptoprescience, Norn Emissary, Psychophage, Tyrannofex
 
 Ask about this stratagem
 
@@ -4630,7 +4826,7 @@ EFFECT
 
 Your unit’s melee attacks have +2 S.
 
-USED BYNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary
+USED BYNorn Assimilator · Synaptoprescience, Norn Emissary
 
 Ask about this stratagem
 
@@ -4688,7 +4884,7 @@ Regenerate one friendly TYRANIDS unit within 6" of your HARVESTER unit (See Feed
 
 FAQ (Faction Pack 1.3): “When using the Reclaim Biomass Stratagem, can the Stratagem effect be used on the unit that was just destroyed?” “No.”
 
-USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience, Psychophage
 
 Ask about this stratagem
 
@@ -4710,6 +4906,24 @@ USED BYany unit
 
 Ask about this stratagem
 
+######## popup strat:smokescreen · HEALYBOIS Healybois
+1CP · SHOOTING · THEIR TURN
+
+Smokescreen
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYPsychophage
+
+Ask about this stratagem
+
 ######## popup strat:tanglestrike-rounds · HEALYBOIS Healybois
 1CP · SHOOTING · YOUR TURN
 
@@ -4726,7 +4940,7 @@ Select one enemy unit hit by those attacks. That enemy unit is tethered until th
 
 While a unit is tethered, that unit has -2" M.
 
-USED BYNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+USED BYNorn Assimilator · Synaptoprescience
 
 Ask about this stratagem
 
@@ -4744,6 +4958,6 @@ EFFECT
 
 That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
 
-USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2)
+USED BYPyrovores, Ripper Swarms, Norn Assimilator · Synaptoprescience, Psychophage
 
 Ask about this stratagem

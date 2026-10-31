@@ -1935,6 +1935,16 @@
  },
  {
   "army": "healybois",
+  "unit": "psychophage",
+  "field": "stats[Psychophage].base",
+  "app": "120×92mm Oval",
+  "source": "120x92mm",
+  "reason": "New Recruit’s export (catalogue revision 3) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3835: \"Psychophage  120x92mm Oval Base\"; verify/sources/nr-json/healybois.json: Base 120x92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
   "unit": "tyrannofex",
   "field": "stats[Tyrannofex].base",
   "app": "120×92mm Oval",

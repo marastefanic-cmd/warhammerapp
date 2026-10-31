@@ -341,6 +341,37 @@ const fxCases = [
   ['fx:critHit 5: hits', () => ex1([g({ n:60, kw:['SUSTAINED HITS 1'], mods:[fxm('critHit', 5)] })], T4).hits, 50],
   // a Critical Wound on 5+ with [DEVASTATING WOUNDS]: 20 of 60 [TORRENT] hits are mortals
   ['fx:critWound 5: mortals', () => ex1([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWound', 5)] })], T4).mortals, 20],
+  // each successful unmodified wound roll a Critical Wound (Swallow Whole): S4 vs T4 wounds on 4+, so the 30 of the 60 [TORRENT] hits whose
+  // unmodified roll is 4+ are critical, and with [DEVASTATING WOUNDS] each is a mortal wound (D1); without it they are 30 wounds as before
+  ['fx:critWoundAll: mortals', () => ex1([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true)] })], T4).mortals, 30],
+  ['fx:critWoundAll: played out', () => run([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true)] })], T4).groups[0].mortals, 30],
+  ['fx:critWoundAll: no [DEVASTATING WOUNDS], wounds unchanged', () => ex1([g({ n:60, kw:['TORRENT'], mods:[fxm('critWoundAll', true)] })], T4).wounds, 30],
+  // with +1 to wound the unmodified 3s wound too, but only as normal wounds (critical is decided on the unmodified roll, 05.02):
+  // the unmodified 4-6 are 30 mortal wounds, the 3s 10 normal wounds
+  ['fx:critWoundAll + wound +1: mortals', () => ex1([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true), fxm('wound', 1)] })], T4).mortals, 30],
+  ['fx:critWoundAll + wound +1: normal wounds', () => { const x = ex1([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true), fxm('wound', 1)] })], T4); return x.wounds - x.mortals; }, 10],
+  // with -1 to wound no critical wound is lost: the unmodified 4s are still critical (critical wounds always wound): 30 mortal wounds
+  ['fx:critWoundAll + wound -1: mortals', () => ex1([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true), fxm('wound', -1)] })], T4).mortals, 30],
+  // S4 vs T8 wounds only on 6+: the 10 that wound were critical anyway
+  ['fx:critWoundAll vs T8: mortals', () => ex1([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true)] })], { T:8, models:[big(100, 10)] }).mortals, 10],
+  // the same played out (run(): the rolls wr), and in a beat (play()): +1 to wound 30 mortal + 10 normal; -1 to wound 30 mortal
+  ['fx:critWoundAll + wound +1: played out, mortals', () => run([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true), fxm('wound', 1)] })], T4).groups[0].mortals, 30],
+  ['fx:critWoundAll + wound +1: played out, normal wounds', () => { const x = run([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true), fxm('wound', 1)] })], T4).groups[0]; return x.wounds - x.mortals; }, 10],
+  ['fx:critWoundAll + wound -1: played out, mortals', () => run([g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true), fxm('wound', -1)] })], T4).groups[0].mortals, 30],
+  ['fx:critWoundAll + wound +1: a beat (play), mortals', () => C.play({ beats:[{ side:1, input:{ groups:[g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true), fxm('wound', 1)] })], target:T4, ctx:{} } }], sims:20000, seed:11 }).beats[0].groups[0].mortals, 30],
+  ['fx:critWoundAll + wound -1: a beat (play), mortals', () => C.play({ beats:[{ side:1, input:{ groups:[g({ n:60, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true), fxm('wound', -1)] })], target:T4, ctx:{} } }], sims:20000, seed:11 }).beats[0].groups[0].mortals, 30],
+  // S rolled with dice (wrS): S2+D3 vs T4 is S3/S4/S5 (5+/4+/3+), each a third: (2 + 3 + 4)/18 = 1/2 of 60 critical, 30 mortal wounds;
+  // with +1 to wound the unmodified 4s, 3s and 2s that now wound are normal: 40 wounds, 30 of them mortal
+  ['fx:critWoundAll, S2+D3: played out, mortals', () => run([g({ n:60, S:2, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('s', 'D3'), fxm('critWoundAll', true)] })], T4).groups[0].mortals, 30],
+  ['fx:critWoundAll, S2+D3 + wound +1: played out, wounds', () => run([g({ n:60, S:2, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('s', 'D3'), fxm('critWoundAll', true), fxm('wound', 1)] })], T4).groups[0].wounds, 40],
+  ['fx:critWoundAll, S2+D3 + wound +1: played out, mortals', () => run([g({ n:60, S:2, kw:['TORRENT', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true), fxm('s', 'D3'), fxm('wound', 1)] })], T4).groups[0].mortals, 30],
+  // the choice plan() makes: [LETHAL HITS] or rolling to wound. 60 attacks at 4+ with [LETHAL HITS] and [DEVASTATING WOUNDS], -1 to wound,
+  // S4 vs T4, Sv 3+ (a normal wound unsaved 1/3), Feel No Pain 6+ (5+ against mortal wounds): rolling a critical hit to wound is worth
+  // 1/2 (the unmodified 4-6 critical) × 2/3 = 1/3 against an automatic wound's 1/3 × 5/6 = 5/18, so the 10 critical hits are rolled:
+  // the 30 hits give 15 mortal wounds (taking [LETHAL HITS], as reading critical after the -1 would, gives 10)
+  ['fx:critWoundAll + wound -1: the choice to roll critical hits, mortals', () => run([g({ n:60, kw:['LETHAL HITS', 'DEVASTATING WOUNDS'], mods:[fxm('critWoundAll', true), fxm('wound', -1)] })], { T:4, models:[big(100, 10, 3, { fnp:6, fnpMortal:5 })] }).groups[0].mortals, 15],
+  // the working says so
+  ['fx:critWoundAll: in the working', () => +C.explain({ groups:[g({ kw:['TORRENT'], mods:[Object.assign({ from:'Swallow Whole' }, fxm('critWoundAll', true))] })], target:T4, ctx:{} }).groups[0].steps.some(t => /critical wounds on an unmodified 4\+ \(Swallow Whole\)/.test(t.t)), 1],
   // the weapon abilities a rule gives
   ['fx:lethal: wounds', () => ex1([g({ n:20, mods:[fxm('lethal', true)] })], { T:8, models:[big(20, 10)] }).wounds, 20 / 6 + 20 / 3 / 6],
   ['fx:dev: mortals', () => ex1([g({ n:36, D:2, kw:['TORRENT'], mods:[fxm('dev', true)] })], { T:4, models:[big(200, 10, 2)] }).mortals, 6],

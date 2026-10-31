@@ -20,7 +20,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-31.1';
+const VERSION = '2026-10-31.2';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text: the official Core Rules PDF (11th edition), BSData and the
@@ -840,7 +840,7 @@ const FACTIONS = {
           { name:'Regenerating Monstrosity', pts:20, text:'**TYRANIDS** model only (excluding **MONSTERS** models). The bearer’s unit can be regenerated up to twice per phase, instead of once.' },
           { name:'Instinctive Defence', nr:'Instinctive Defense', pts:15, text:'**TYRANIDS** model only. While the bearer is within 6" of one or more friendly **HARVESTER** units, when you target this unit with the **Heroic Intervention** stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly **HARVESTER** units, models in the bearer’s unit have the **Fights First** ability.' },
           { name:'Biophagic Flow (Aura)', pts:10, text:'**TYRANIDS** model only. While a friendly **HARVESTER** model is within 12" of the bearer, when using the Feed the Swarm ability, that **HARVESTER** model can Regenerate one friendly **TYRANIDS** unit that is within 9" of it, instead of one within 6".' },
-          { name:'Parasitic Biomorphology', pts:25, text:'**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.' }
+          { name:'Parasitic Biomorphology', pts:25, text:'**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.', mods:[{ kind:'melee', when:'After the bearer’s unit first destroys an enemy unit in the Fight phase while the bearer is within 6" of a friendly HARVESTER unit', note:'+1 A (until the end of the battle)', from:'Parasitic Biomorphology', lasts:'battle', readOf:'cffd9038' }] }
         ],
         stratagems:[
           { id:'broodguard-impulse', gist:'Any phase, your HARVESTER unit just destroyed: until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that destroyed it, +1 to the Wound roll.', gistOf:'c4da1dfa', name:'Broodguard Impulse', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Harvester'] }, when:'Any phase.', target:'One **HARVESTER** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.', effect:'Until the end of the battle, each time a friendly **TYRANIDS** model makes an attack that targets the enemy unit that just destroyed your **HARVESTER** unit, add 1 to the **Wound roll**.' },
@@ -5096,8 +5096,13 @@ const ARMIES = [
   id:'healybois', name:'Healybois', faction:'tyranids', points:2000, pointsUsed:2000,
   battleSize:'Strike Force', disposition:'Take and Hold',
   detachments:['assimilation-swarm','talons-of-the-norn-queen'],
-  source:'New Recruit, exported 27 Oct 2026 (JSON)',
+  source:'New Recruit, exported 31 Oct 2026 (JSON)',
   units:[
+    {
+      id:'the-red-terror', ds:'tyranids/the-red-terror', pts:120,
+      models:['1× The Red Terror'],
+      gear:[['Gaping maw','Scything talons']]
+    },
     {
       // abilities that change this unit's attacks, shown inside its weapon tables
       id:'the-swarmlord-tyrant-guard', ds:['tyranids/the-swarmlord','tyranids/tyrant-guard'], pts:380, ptsNote:'210 + Tyrant Guard 170', warlord:true,
@@ -5128,7 +5133,7 @@ const ARMIES = [
     },
     {
       // abilities that change this unit's attacks, shown inside its weapon tables
-      id:'hive-tyrant-tyrant-guard', ds:['tyranids/hive-tyrant','tyranids/tyrant-guard'], pts:380, ptsNote:'210 + Tyrant Guard 170', enhancement:'Instinctive Defence',
+      id:'hive-tyrant-tyrant-guard', ds:['tyranids/hive-tyrant','tyranids/tyrant-guard'], pts:390, ptsNote:'220 + Tyrant Guard 170', enhancement:'Parasitic Biomorphology',
       leads:'Tyrant Guard',
       models:['1× Hive Tyrant','6× Tyrant Guard'],
       gear:[['Monstrous bonesword and lash whip','Monstrous scything talons'],['Scything talons and rending claws']],
@@ -5137,14 +5142,14 @@ const ARMIES = [
         { name:'Tyrant Guard ×6' }
       ],
       melee:[
-        { name:'Monstrous bonesword and lash whip', who:'Hive Tyrant' },
-        { name:'Monstrous scything talons', who:'Hive Tyrant' },
-        { name:'Scything talons and rending claws', who:'Tyrant Guard', n:6 }
+        { name:'Monstrous bonesword and lash whip', who:'Hive Tyrant', S:'10', from:{ S:'Parasitic Biomorphology' } },
+        { name:'Monstrous scything talons', who:'Hive Tyrant', S:'8', from:{ S:'Parasitic Biomorphology' } },
+        { name:'Scything talons and rending claws', who:'Tyrant Guard', n:6, S:'6', from:{ S:'Parasitic Biomorphology' } }
       ],
       abilities:[
         { name:'Will of the Hive Mind', who:'Hive Tyrant' },
         { name:'Onslaught', who:'Hive Tyrant' },
-        { name:'Instinctive Defence', who:'Hive Tyrant', tag:'Enhancement', ph:['charge','fight'], turn:'either', turns:{ charge:'opp' }, text:'**TYRANIDS** model only. While the bearer is within 6" of one or more friendly **HARVESTER** units, when you target this unit with the **Heroic Intervention** stratagem, that use is -1 CP. In addition, while the bearer is within 6" of one or more friendly **HARVESTER** units, models in the bearer’s unit have the **Fights First** ability.' },
+        { name:'Parasitic Biomorphology', who:'Hive Tyrant', tag:'Enhancement', ph:['fight'], turn:'either', text:'**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.' },
         { name:'Guardian Organism', who:'Tyrant Guard' }
       ],
       kw:['Monster','Character','Psyker','Great Devourer','Synapse','Hive Tyrant','Infantry','Tyrant Guard','Faction: Tyranids'],
@@ -5160,17 +5165,17 @@ const ARMIES = [
     },
     {
       // abilities that change this unit's attacks, shown inside its weapon tables
-      id:'pyrovores', ds:'tyranids/pyrovores', pts:70, copies:2,
-      models:['2× Pyrovore'],
+      id:'pyrovores', ds:'tyranids/pyrovores', pts:100, copies:2,
+      models:['3× Pyrovore'],
       gear:[['Chitin-barbed limbs','Flamespurt']],
       stats:[
-        { name:'Pyrovores ×2' }
+        { name:'Pyrovores ×3' }
       ],
       ranged:[
-        { name:'Flamespurt', n:2 }
+        { name:'Flamespurt', n:3 }
       ],
       melee:[
-        { name:'Chitin-barbed limbs', n:2 }
+        { name:'Chitin-barbed limbs', n:3 }
       ]
     },
     {
@@ -5181,22 +5186,7 @@ const ARMIES = [
       ranged:null
     },
     {
-      id:'norn-assimilator-synaptoprescience', ds:'tyranids/norn-assimilator', pts:280, enhancement:'Synaptoprescience',
-      models:['1× Norn Assimilator'],
-      gear:[['Monstrous scything talons','Toxinjecter Harpoon']],
-      stats:[
-        { name:'Norn Assimilator', InSv:'4+', from:{ InSv:'Synaptoprescience' } }
-      ],
-      abilities:[
-        { name:'Singular Purpose' },
-        { name:'Harpoon Barbs' },
-        { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose' },
-        { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
-      ]
-    },
-    {
-      id:'norn-assimilator-synaptoprescience-2', ds:'tyranids/norn-assimilator', pts:300, enhancement:'Synaptoprescience',
+      id:'norn-assimilator', ds:'tyranids/norn-assimilator', pts:280, enhancement:'Synaptoprescience',
       models:['1× Norn Assimilator'],
       gear:[['Monstrous scything talons','Toxinjecter Harpoon']],
       stats:[
@@ -5214,6 +5204,11 @@ const ARMIES = [
       id:'norn-emissary', ds:'tyranids/norn-emissary', pts:250,
       models:['1× Norn Emissary'],
       gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']]
+    },
+    {
+      id:'psychophage', ds:'tyranids/psychophage', pts:110,
+      models:['1× Psychophage'],
+      gear:[['Psychoclastic torrent','Talons and betentacled maw']]
     },
     {
       id:'tyrannofex', ds:'tyranids/tyrannofex', pts:180,
@@ -6830,6 +6825,33 @@ const DATASHEETS = {
     { on:'Tyrannofex', choices:[{ name:'Rupture cannon', pts:20 },{ name:'Fleshborer hive' },{ name:'Acid spray' }], group:'Fleshborer Hive', min:1, max:1 }
   ]
 },
+'tyranids/the-red-terror':{
+  name:'The Red Terror', faction:'tyranids', bsId:'7173-1bd9-b60b-6555', role:'Epic Hero',
+  stats:[
+    { name:'The Red Terror', M:'10"', T:'8', Sv:'3+', W:'9', Ld:'8+', OC:'3', InSv:'–', base:'100mm' }
+  ],
+  melee:[
+    { name:'Gaping maw', range:'Melee', A:'1', WS:'2+', S:'5', AP:'–', D:'D3+2', kw:['EXTRA ATTACKS','DEVASTATING WOUNDS','PRECISION'] },
+    { name:'Scything talons', range:'Melee', A:'12', WS:'2+', S:'7', AP:'-2', D:'2', kw:[] }
+  ],
+  abilities:[
+    { name:'Swallow Whole', text:'Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound. Each time an **INFANTRY**, **MOUNTED** or **BEASTS** model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds.' },
+    { name:'Subterranean Hunter', ph:['fight'], turn:'either', text:'At the end of the Fight phase, if this unit is not within **Engagement Range** of one or more enemy units, you can remove it from the battlefield and place it into **Strategic Reserves**.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', weapon:'Gaping maw', when:'vs INFANTRY/MOUNTED/BEASTS', note:'a successful unmodified wound roll is a Critical Wound', from:'Swallow Whole', vs:{ any:['Infantry','Mounted','Beast'] }, readOf:'975667a2' }
+  ],
+  rules:['Deep Strike','Synapse','Extra Attacks','Precision','Devastating Wounds'],
+  kw:['Character','Mobile','Epic Hero','Great Devourer','Monster','Burrower','Vanguard Invader','The Red Terror','Faction: Tyranids'],
+  points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:120 }] }] },
+  composition:[
+    { model:'The Red Terror', min:1, max:1 }
+  ],
+  options:[
+    { on:'The Red Terror', choices:[{ name:'Gaping maw', min:1, max:1 },{ name:'Scything talons', min:1, max:1 }], group:'Wargear' }
+  ]
+},
 'tyranids/tyrant-guard':{
   name:'Tyrant Guard', faction:'tyranids', bsId:'1645-5407-92c8-1441', role:'Infantry',
   stats:[
@@ -6926,6 +6948,39 @@ const DATASHEETS = {
     { on:'Ripper Swarm', choices:[{ name:'Spinemaw', max:1 }], group:'Spinemaw', max:1 }
   ]
 },
+'tyranids/psychophage':{
+  name:'Psychophage', faction:'tyranids', bsId:'b6ac-f091-a018-dab2', role:'Monster',
+  stats:[
+    { name:'Psychophage', M:'12"', T:'9', Sv:'3+', W:'10', Ld:'8+', OC:'3', InSv:'–', base:'120×92mm Oval' }
+  ],
+  ranged:[
+    { name:'Psychoclastic torrent', range:'12"', A:'D6', BS:'–', S:'6', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT'] }
+  ],
+  melee:[
+    { name:'Talons and betentacled maw', range:'Melee', A:'6', WS:'3+', S:'6', AP:'-2', D:'2', kw:['ANTI-PSYKER 4+','DEVASTATING WOUNDS'] }
+  ],
+  abilities:[
+    { name:'Bio-stimulus', ph:['shooting','fight'], turn:'your', text:'In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly **TYRANIDS** unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.' },
+    { name:'Feeding Frenzy', ph:['fight'], turn:'either', text:'Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the **Hit roll**. If that target is also **Below Half-strength**, add 1 to the **Wound roll** as well.' }
+  ],
+  // abilities that change this unit's attacks, shown inside its weapon tables
+  mods:[
+    { kind:'melee', when:'This turn, vs the enemy unit it selected with Bio-stimulus after shooting in your Shooting phase', note:'improve AP by 1', from:'Bio-stimulus', lasts:'turn', readOf:'d0011de3' },
+    { kind:'melee', when:'Target below its Starting Strength', note:'+1 to hit rolls; also +1 to wound rolls if Below Half-strength', from:'Feeding Frenzy', pick:[{ name:'Below Starting Strength', note:'+1 to hit rolls' },{ name:'Below Half-strength', note:'+1 to hit rolls, +1 to wound rolls' }], readOf:'cd9be6bc' }
+  ],
+  aura:[
+    { kind:'melee', needs:{ all:['Faction: Tyranids'] }, when:'This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase', note:'improve AP by 1', from:'Bio-stimulus', notSelf:true, lasts:'turn', readOf:'d0011de3' }
+  ],
+  rules:['Deadly Demise 1','Feel No Pain 5+','Synapse','Anti','Devastating Wounds'],
+  kw:['Monster','Great Devourer','Harvester','Smoke','Psychophage','Faction: Tyranids'],
+  points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:110 }] }] },
+  composition:[
+    { model:'Psychophage', min:1, max:1 }
+  ],
+  options:[
+    { on:'Psychophage', choices:[{ name:'Talons and betentacled maw', min:1, max:1 },{ name:'Psychoclastic torrent', min:1, max:1 }], group:'Wargear' }
+  ]
+},
 'tyranids/spore-mines-biovore':{
   name:'Spore Mines (Biovore)', faction:'tyranids', bsId:'80c2-aecc-5b59-7345',
   stats:[
@@ -6984,30 +7039,6 @@ const DATASHEETS = {
   ],
   options:[
     { on:'Deathleaper', choices:[{ name:'Lictor claws and talons', min:1, max:1 }] }
-  ],
-  aiStatus:'not-read'
-},
-'tyranids/the-red-terror':{
-  name:'The Red Terror', faction:'tyranids', bsId:'7173-1bd9-b60b-6555', role:'Epic Hero',
-  stats:[
-    { name:'The Red Terror', M:'10"', T:'8', Sv:'3+', W:'9', Ld:'8+', OC:'3', InSv:'–', base:'100mm' }
-  ],
-  melee:[
-    { name:'Gaping maw', range:'Melee', A:'1', WS:'2+', S:'5', AP:'–', D:'D3+2', kw:['EXTRA ATTACKS','DEVASTATING WOUNDS','PRECISION'] },
-    { name:'Scything talons', range:'Melee', A:'12', WS:'2+', S:'7', AP:'-2', D:'2', kw:[] }
-  ],
-  abilities:[
-    { name:'Swallow Whole', text:'Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound. Each time an **INFANTRY**, **MOUNTED** or **BEASTS** model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds.' },
-    { name:'Subterranean Hunter', text:'At the end of the Fight phase, if this unit is not within **Engagement Range** of one or more enemy units, you can remove it from the battlefield and place it into **Strategic Reserves**.' }
-  ],
-  rules:['Deep Strike','Synapse','Extra Attacks','Precision','Devastating Wounds'],
-  kw:['Character','Mobile','Epic Hero','Great Devourer','Monster','Burrower','Vanguard Invader','The Red Terror','Faction: Tyranids'],
-  points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:120 }] }] },
-  composition:[
-    { model:'The Red Terror', min:1, max:1 }
-  ],
-  options:[
-    { on:'The Red Terror', choices:[{ name:'Gaping maw', min:1, max:1 },{ name:'Scything talons', min:1, max:1 }], group:'Wargear' }
   ],
   aiStatus:'not-read'
 },
@@ -7952,32 +7983,6 @@ const DATASHEETS = {
   ],
   options:[
     { on:'Sporocyst', choices:[{ name:'Flensing whips', min:1, max:1 },{ name:'Sporocyst bio-weapon', min:1, max:1 }], group:'Wargear' }
-  ],
-  aiStatus:'not-read'
-},
-'tyranids/psychophage':{
-  name:'Psychophage', faction:'tyranids', bsId:'b6ac-f091-a018-dab2', role:'Monster',
-  stats:[
-    { name:'Psychophage', M:'12"', T:'9', Sv:'3+', W:'10', Ld:'8+', OC:'3', InSv:'–', base:'120×92mm Oval' }
-  ],
-  ranged:[
-    { name:'Psychoclastic torrent', range:'12"', A:'D6', BS:'–', S:'6', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT'] }
-  ],
-  melee:[
-    { name:'Talons and betentacled maw', range:'Melee', A:'6', WS:'3+', S:'6', AP:'-2', D:'2', kw:['ANTI-PSYKER 4+','DEVASTATING WOUNDS'] }
-  ],
-  abilities:[
-    { name:'Bio-stimulus', text:'In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly **TYRANIDS** unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.' },
-    { name:'Feeding Frenzy', text:'Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the **Hit roll**. If that target is also **Below Half-strength**, add 1 to the **Wound roll** as well.' }
-  ],
-  rules:['Deadly Demise 1','Feel No Pain 5+','Synapse','Anti','Devastating Wounds'],
-  kw:['Monster','Great Devourer','Harvester','Smoke','Psychophage','Faction: Tyranids'],
-  points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:110 }] }] },
-  composition:[
-    { model:'Psychophage', min:1, max:1 }
-  ],
-  options:[
-    { on:'Psychophage', choices:[{ name:'Talons and betentacled maw', min:1, max:1 },{ name:'Psychoclastic torrent', min:1, max:1 }], group:'Wargear' }
   ],
   aiStatus:'not-read'
 },
@@ -12430,13 +12435,14 @@ const BS_IDS = {
     "fellhammer-siege-task-force/vashtorr-the-arkifane":["dcc0-b70c-9779-e6c9|1×1a34-f1cc-ec01-ca32,1×3667-92c8-a7e5-1ccd,1×e02b-6f8f-cbee-fa79"],
     "fellhammer-siege-task-force/warpsmith":["440-a22a-eac1-b107|1×244-694c-22c-74fb,1×5762-3c1f-658e-368,1×9e5d-6700-e6d9-5719,1×d0ac-5a84-221a-3dd7,1×e806-3c87-d3d5-e71d"],
     "healybois/biovores":["3f2c-85ec-d83c-4a2f|1×dd57-9c1f-d425-6711,1×dd57-9c1f-d425-6711/1fff-0a90-a8dd-28b5,1×dd57-9c1f-d425-6711/2d4b-61bd-f1f3-c32b"],
-    "healybois/hive-tyrant-tyrant-guard":["3e96-8098-3401-77af|1×1173-a18c-18fb-fac9,1×d0cf-a582-5166-fbba,1×effb-d65d-a1b1-51d6","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/72c5-1443-529a-59ad"],
-    "healybois/norn-assimilator-synaptoprescience":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
-    "healybois/norn-assimilator-synaptoprescience-2":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
+    "healybois/hive-tyrant-tyrant-guard":["3e96-8098-3401-77af|1×9785-ca88-1ecd-2d55,1×d0cf-a582-5166-fbba,1×effb-d65d-a1b1-51d6","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/72c5-1443-529a-59ad"],
+    "healybois/norn-assimilator":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
     "healybois/norn-emissary":["5720-2873-8c2c-edc3|1×c102-d98b-dc50-5b53,1×d7b3-df20-933-63b7,1×dc69-1094-613-6daf"],
-    "healybois/pyrovores":["d2c6-bd0b-3205-3319|2×c543-2551-1f2a-bcec,2×c543-2551-1f2a-bcec/1fff-0a90-a8dd-28b5,2×c543-2551-1f2a-bcec/68e6-6c48-4d98-7faa"],
+    "healybois/psychophage":["b6ac-f091-a018-dab2|1×56f9-bb79-7be0-dbf2,1×9edf-e542-77fa-e4c2"],
+    "healybois/pyrovores":["d2c6-bd0b-3205-3319|3×c543-2551-1f2a-bcec,3×c543-2551-1f2a-bcec/1fff-0a90-a8dd-28b5,3×c543-2551-1f2a-bcec/68e6-6c48-4d98-7faa"],
     "healybois/ripper-swarms":["1de2-b57b-aa0a-1f0d|1×7242-c911-e611-551e,1×7242-c911-e611-551e/f5e3-ad89-8888-4bd4"],
     "healybois/spore-mines-biovore":["80c2-aecc-5b59-7345|1×1a43-6f35-30bd-ec50"],
+    "healybois/the-red-terror":["7173-1bd9-b60b-6555|1×7190-e583-dade-fdb6,1×8f4b-dfff-77d2-b215"],
     "healybois/the-swarmlord-tyrant-guard":["13f7-1a3-eff-7393|1×7a17-4fb0-c0f5-e22,1×a30-4bad-cef5-5e55,1×ceab-62d9-31bf-7c61","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/72c5-1443-529a-59ad"],
     "healybois/tyrannofex":["1705-379b-330d-36d4|1×5e02-c4ce-b7e6-d59,1×a87e-4f8-a6f7-15de,1×f64-8faa-ac54-73ff"],
     "infernal-lance/chaos-cerastus-knight-atrapos":["8b1d-9029-f9e1-42d9|1×4676-0c32-b62c-debd,1×7546-5742-581c-9e8b,1×f57d-be6e-77e4-bfe3"],
@@ -12613,7 +12619,6 @@ const BS_IDS = {
     "1141-4991-58b-8d13":"Automaton claws",
     "1150-7501-d526-d373":"Incandeum",
     "116c-7dd8-92e5-f085":"Mark of the Soul Forges",
-    "1173-a18c-18fb-fac9":"Instinctive Defense",
     "1187-f3db-ea97-bada":"Reaper chainsword",
     "1189-dcd8-e3ed-7837":"Spiculus bolt launcher",
     "1267-78f1-7774-859":"Cultist Mob",
@@ -12845,6 +12850,7 @@ const BS_IDS = {
     "55cf-8d86-affd-bc9b":"Navigator",
     "55fb-9c91-1a4f-3037":"Canis Rex",
     "5622-c756-d3e8-85ae":"Watcher's Axe",
+    "56f9-bb79-7be0-dbf2":"Psychoclastic torrent",
     "570a-6d55-51ee-9fc7":"Transmogrifying Blast",
     "570d-1bd7-4179-ad0e":"Sharp quills",
     "5720-2873-8c2c-edc3":"Norn Emissary",
@@ -12931,6 +12937,8 @@ const BS_IDS = {
     "70b4-8523-6b7c-1b0a":"Freedom's Hand",
     "7135-8430-eb02-ded4":"Thulia Ghuld",
     "7142-4c07-8072-8474":"Big Shoota",
+    "7173-1bd9-b60b-6555":"The Red Terror",
+    "7190-e583-dade-fdb6":"Scything talons",
     "7193-1dfe-7721-ecbd":"War Dog autocannon",
     "71c9-b10b-b55f-483e":"Slaughterbound",
     "71d9-9dc2-2b9a-6db3":"Skarbrand",
@@ -13047,6 +13055,7 @@ const BS_IDS = {
     "8df0-fc3c-8ced-ffce":"War Dog Executioner",
     "8e0c-d8f7-eeb8-ed2a":"Ultramarian Combat Weapons",
     "8e1d-9846-a460-6002":"Icon of Khorne",
+    "8f4b-dfff-77d2-b215":"Gaping maw",
     "8fc1-9168-5137-2b5d":"Ironstrider Ballistarius (Twin cognis lascannon)",
     "8fca-90dd-a784-b5c0":"Choppa",
     "8ff6-03ed-5125-9b6d":"Boltgun",
@@ -13072,6 +13081,7 @@ const BS_IDS = {
     "9610-b148-8433-93b8":"Custodian Wardens",
     "9707-82cf-9501-fb43":"Gitstikka",
     "9754-481c-c292-a1f9":"Warlord",
+    "9785-ca88-1ecd-2d55":"Parasitic Biomorphology",
     "98ba-1a51-57f5-38fc":"Voice eater",
     "9916-8701-bbbd-780e":"Blade of Magnus",
     "9932-3d2b-1e47-d53b":"Exalted Eightbound",
@@ -13086,6 +13096,7 @@ const BS_IDS = {
     "9e5d-6700-e6d9-5719":"Forge weapon",
     "9e94-b7d4-ec7f-9163":"Terrorpulse missiles",
     "9ec7-baa9-ba0c-6a7":"Soulreaper cannon",
+    "9edf-e542-77fa-e4c2":"Talons and betentacled maw",
     "9ee-e289-bc6c-d943":"Cerastus Knight Lancer",
     "9ef8-1cb6-2f19-cc1b":"2 magma cutters",
     "9efd-ec72-353f-4b23":"Knight Errant",
@@ -13172,6 +13183,7 @@ const BS_IDS = {
     "b61c-b815-65c0-b1cc":"Shield-Captain",
     "b657-1743-6e3a-0838":"Flesh Hounds",
     "b681-8092-2465-7ba0":"Furious Assault (Upgrade)",
+    "b6ac-f091-a018-dab2":"Psychophage",
     "b717-8754-263b-3a20":"Meltagun",
     "b74a-d992-b5eb-23ff":"Close combat weapon",
     "b77f-43c5-91b6-7da7":"Shearing claws",
@@ -13404,7 +13416,6 @@ const BS_IDS = {
     "10f9-eb42-632e-3a6f":1,
     "1150-7501-d526-d373":1,
     "116c-7dd8-92e5-f085":1,
-    "1173-a18c-18fb-fac9":1,
     "131b-ff57-84bb-e87a":1,
     "13f7-1a3-eff-7393":1,
     "1776-bf60-6198-7d1d":1,
@@ -13439,6 +13450,7 @@ const BS_IDS = {
     "6d28-ca9d-79a5-063a":1,
     "6df5-f246-6bd-55b8":1,
     "7135-8430-eb02-ded4":1,
+    "7173-1bd9-b60b-6555":1,
     "71d9-9dc2-2b9a-6db3":1,
     "7213-a7b3-4c8e-96bc":1,
     "75ce-5ce7-0a6e-a876":1,
@@ -13455,6 +13467,7 @@ const BS_IDS = {
     "8ba4-a299-ac96-fbc5":3,
     "8d0b-296c-5515-4267":1,
     "91dc-9aad-0505-52a8":1,
+    "9785-ca88-1ecd-2d55":1,
     "a136-76f7-34d1-8035":1,
     "a336-1346-0281-b4b2":3,
     "a886-5b5b-d3b2-cf38":1,
@@ -13536,6 +13549,7 @@ const CHECKLIST = {
   "a|16w10ps":{"u":"shooting:opp,fight:either"},
   "a|176aeuw":{"u":"fight:either"},
   "a|179ecxi":{"x":1,"o":[{"n":"Fanatical Devotion","u":"movement:your,shooting:your,charge:your"},{"n":"Adaptive Tactics","u":"movement:your,shooting:your,charge:your"},{"n":"The Fires of Mars","x":1}]},
+  "a|17eyv4g":{"x":1},
   "a|17k1s":{"t":"fight:opp","s":1},
   "a|17q4blc":{"none":1},
   "a|17smx15":{"u":"shooting:your,fight:either"},
@@ -13729,7 +13743,6 @@ const CHECKLIST = {
   "a|82gw9o":{"at":"End of your opponent’s turn","u":"movement:your","s":1},
   "a|85a58d":{"u":"shooting:your,fight:either"},
   "a|89p4db":{"u":"shooting:opp,fight:either"},
-  "a|8f9619":{"u":"fight:either"},
   "a|8kfs3x":{"u":"shooting:opp"},
   "a|8p52es":{"u":"shooting:your"},
   "a|8yl01e":{"u":"fight:either","a":1},
@@ -13767,6 +13780,8 @@ const CHECKLIST = {
   "a|dlqzcc":{"x":1},
   "a|e1tops":{"t":"command:your","s":1},
   "a|e301xa":{"x":1},
+  "a|e815oh":{"t":"fight:either","s":1},
+  "a|eiy2sc":{"u":"shooting:your,fight:your"},
   "a|ekf7wl":{"u":"movement:your"},
   "a|erffw0":{"x":1},
   "a|exlwqq":{"u":"shooting:your,fight:either"},
@@ -13844,6 +13859,7 @@ const CHECKLIST = {
   "a|r7rcfo":{"x":1},
   "a|ritoe8":{"u":"shooting:your"},
   "a|rqqtzc":{"x":1},
+  "a|rwkf69":{"u":"fight:either"},
   "a|s02atz":{"t":"command:your","s":1},
   "a|s206db":{"u":"movement:your,charge:your"},
   "a|sctta1":{"x":1},
@@ -13861,6 +13877,7 @@ const CHECKLIST = {
   "a|u86jue":{"t":"shooting:your","s":1},
   "a|uc39pe":{"u":"fight:either","f":[{"n":"riled up","r":"Waaagh!","x":1}]},
   "a|udum88":{"u":"shooting:your,fight:either"},
+  "a|uulhog":{"t":"fight:either","u":"fight:either"},
   "a|uwea7i":{"x":1},
   "a|v2j916":{"t":"shooting:your","s":1},
   "a|v9g10a":{"u":"movement:your,charge:either"},
@@ -14017,6 +14034,7 @@ const BOXES = {
   "a|16oy7t8":{"b":[{"quote":"While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Wound roll**.","fx":[["wound",1]],"on":[["leading",true]],"kind":"all"}],"n":"Bloodmaster"},
   "a|176aeuw":{"b":[{"quote":"While a friendly **BLOOD LEGIONS** unit is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.","fx":[["a",1]],"on":[["aura",6]],"kind":"melee","reach":{"all":["Faction: Blood Legions"]},"mark":"aura"}],"reach":{"all":["Faction: Blood Legions"]},"n":"Rage Embodied"},
   "a|179ecxi":{"both":[{"names":["Conqueror Imperative","Protector Imperative"],"quote":"You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.","reach":{"any":["Skitarii","Thulia Ghuld"]},"mark":"selected","opt":"The Fires of Mars","lasts":"round"}],"n":"Icon of War"},
+  "a|17eyv4g":{"b":[{"quote":"Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound.","fx":[["critWoundAll",true]],"on":[["targetKw",{"any":["Infantry","Mounted","Beast"]}]],"kind":"all","scope":{"weapon":"gaping maw","models":"model"}}],"n":"Swallow Whole"},
   "a|17smx15":{"b":[{"quote":"While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability.","fx":[["lethal",true]],"on":[["leading",true]],"kind":"all"}],"n":"Empyric Guidance"},
   "a|181c91p":{"b":[{"quote":"While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.","fx":[["hit",-1]],"on":[["q","While this model has 1-5 wounds remaining"]],"kind":"all","scope":{"models":"model"}}],"n":"Damaged: 1-5 wounds remaining"},
   "a|1826tj4":{"b":[{"quote":"Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.","fx":[["ignoresCover",true]],"on":[["targetObjective",true]],"kind":"ranged","scope":{"models":"model"}}],"n":"Saturation Fire"},
@@ -14108,6 +14126,7 @@ const BOXES = {
   "a|8p52es":{"b":[{"quote":"This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.","fx":[["anti","CHARACTER 2+"]],"on":[],"kind":"ranged","lead":"**NORN EMISSARY** unit only."}],"n":"Destabilising Predation"},
   "a|9ripaa":{"b":[{"quote":"Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.","fx":[["s",1],["d",1]],"on":[],"kind":"all","lead":"**THOUSAND SONS** model only.","scope":{"wkw":"PSYCHIC","models":"model"}}],"n":"Eldritch Vortex of E’taph"},
   "a|c1v9iq":{"b":[{"quote":"That **VEHICLE** model regains up to D3 lost wounds and, until the start of your next Command phase, each time that **VEHICLE** makes an attack, add 1 to the **Hit roll**.","fx":[["hit",1]],"on":[["aura",3],["selected",true]],"kind":"all","lead":"In your Command phase, select one friendly **HERETIC ASTARTES VEHICLE** model within 3\" of this model.","scope":{"models":"one"},"reach":{"all":["Faction: Heretic Astartes","Vehicle"]},"mark":"selected","lasts":"round"}],"n":"Master of Mechanisms"},
+  "a|eiy2sc":{"b":[{"quote":"Until the end of the turn, each time a friendly **TYRANIDS** unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.","fx":[["ap",1]],"on":[["targetSelected",true]],"kind":"melee","lead":"In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks.","reach":{"all":["Faction: Tyranids"]},"mark":"selected","lasts":"turn"}],"n":"Bio-stimulus"},
   "a|erffw0":{"reach":{"all":["Khorne","Faction: Legiones Daemonica"]},"n":"Greater Daemon of Khorne"},
   "a|exlwqq":{"b":[{"quote":"Re-roll **hit rolls** of 1.\nRe-roll **wound rolls** of 1.","fx":[["rrHit1",true],["rrWound1",true]],"on":[["aura",6]],"kind":"all","lead":"While a friendly **ADEPTUS ASTARTES** unit is within 6\" of this unit, that unit’s attacks can:","reach":{"all":["Faction: Adeptus Astartes"]},"mark":"aura"}],"reach":{"all":["Faction: Adeptus Astartes"]},"n":"Primarch of the XIII"},
   "a|eyx1ad":{"b":[{"quote":"This unit’s ranged attacks can re-roll **damage rolls**.","fx":[["rrDmg",true]],"on":[],"kind":"ranged"}],"n":"Total Obliteration"},
@@ -14136,6 +14155,7 @@ const BOXES = {
   "a|qdc23c":{"b":[{"quote":"While a friendly **WAR DOG** model is within 6\" of this model, each time that **WAR DOG** model makes an attack that targets a **TITANIC** or **TOWERING** unit, you can re-roll the **Hit roll**.","fx":[["rrHit",true]],"on":[["aura",6],["targetKw",{"any":["Titanic","Towering"]}]],"kind":"all","reach":{"all":["War Dog"]},"mark":"aura"}],"reach":{"all":["War Dog"]},"n":"Consumed with Hunger"},
   "a|qv69q0":{"b":[{"quote":"Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.","fx":[["rrHit",true],["rrWound",true]],"on":[["targetSelected",true],["q","At the start of the first battle round, select one of the following"]],"kind":"all","lead":"At the start of the first battle round, select one of the following:","scope":{"models":"model"},"lasts":"battle"}],"n":"Singular Purpose"},
   "a|ritoe8":{"b":[{"quote":"Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.","fx":[["ignoresCover",true]],"on":[["targetObjective",true]],"kind":"ranged","scope":{"models":"model"}}],"n":"Brigand"},
+  "a|rwkf69":{"b":[{"quote":"Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the **Hit roll**.","fx":[["hit",1]],"on":[["targetBelowStarting",true]],"kind":"melee","scope":{"models":"model"}},{"quote":"If that target is also **Below Half-strength**, add 1 to the **Wound roll** as well.","fx":[["wound",1]],"on":[["targetBelowStarting",true],["q","If that target is also Below Half-strength"]],"kind":"melee","lead":"Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the **Hit roll**.","scope":{"models":"model"}}],"n":"Feeding Frenzy"},
   "a|sctta1":{"b":[{"quote":"If a friendly **ADEPTUS MECHANICUS VEHICLE** model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.","fx":[["aSet",6]],"on":[["q","If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model"]],"kind":"all","scope":{"weapon":"omnissian axe","models":"model"},"lasts":"battle"}],"n":"Vengeance for the Omnissiah"},
   "a|sj1p6e":{"b":[{"quote":"If it does, until the end of the phase, its ranged weapons have the **[DEVASTATING WOUNDS]** and **[HAZARDOUS]** abilities.","fx":[["dev",true],["hazardous",true]],"on":[["used",true]],"kind":"ranged","lead":"Each time this model is selected to shoot, it can use this ability."}],"n":"Daemonic Ordnance"},
   "a|snh6gk":{"b":[{"quote":"Each time a ranged attack made by this model targets an enemy **INFANTRY** unit, improve the Armour Penetration characteristic of that attack by 1.","fx":[["ap",1]],"on":[["targetKw",{"any":["Infantry"]}]],"kind":"ranged"}],"n":"Destructor"},
@@ -14143,6 +14163,7 @@ const BOXES = {
   "a|u5ddi":{"b":[{"quote":"If this model has the **KHORNE** keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.","fx":[["s",2]],"on":[["opt","Daemon Prince of Khorne"],["selfKw","Khorne"]],"kind":"all","scope":{"weapon":"hellforged weapons","models":"model"},"opt":"Daemon Prince of Khorne"},{"quote":"If this model has the **TZEENTCH** keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.","fx":[["a",3]],"on":[["opt","Daemon Prince of Tzeentch"],["selfKw","Tzeentch"]],"kind":"all","scope":{"weapon":"infernal cannon","models":"model"},"opt":"Daemon Prince of Tzeentch"}],"n":"Daemonic Allegiance"},
   "a|uc39pe":{"b":[{"quote":"This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**.","fx":[["a",1],["skill",1],["s",1]],"on":[],"kind":"all","scope":{"weapon":"scavenged shivs"}}],"n":"Super Runts"},
   "a|udum88":{"b":[{"quote":"Each time this model makes an attack, if it is below its Starting Strength, add 1 to the **Hit roll**.","fx":[["hit",1]],"on":[["belowStarting",true]],"kind":"all","scope":{"models":"model"}},{"quote":"If this model is also **Below Half-strength**, add 1 to the **Wound roll** as well.","fx":[["wound",1]],"on":[["belowStarting",true],["belowHalf",true]],"kind":"all","lead":"Each time this model makes an attack, if it is below its Starting Strength, add 1 to the **Hit roll**.","scope":{"models":"model"}}],"n":"Glutton for Punishment"},
+  "a|uulhog":{"b":[{"quote":"Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit.","fx":[["s",1]],"on":[],"kind":"melee","lead":"**TYRANIDS** model only."},{"quote":"The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.","fx":[["a",1]],"on":[["q","The first time the bearer's unit destroys an enemy unit in the Fight phase"],["q","while the bearer is within 6\" of one or more friendly HARVESTER units"]],"kind":"melee","lead":"Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit.","lasts":"battle"}],"n":"Parasitic Biomorphology"},
   "a|vaick5":{"b":[{"quote":"This unit’s attacks have **[SUSTAINED HITS 1: non-MONSTER/VEHICLE]** if any of the following apply:","fx":[["sus","1"]],"on":[["objective",true],["targetKw",{"none":["Monster","Vehicle"]}]],"kind":"all"}],"n":"Impenetrable Defence"},
   "a|vplgbc":{"b":[{"quote":"While a friendly War Dog model is within 6\" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1.","fx":[["rrWound1",true]],"on":[["aura",6]],"kind":"all","lead":"**WAR DOG** model only.","reach":{"all":["War Dog"]},"mark":"aura"}],"reach":{"all":["War Dog"]},"n":"Final Howl (Aura)"},
   "a|vr3337":{"b":[{"quote":"Re-roll hit rolls of 1.\nRe-roll wound rolls of 1.","fx":[["rrHit1",true],["rrWound1",true]],"on":[["aura",6]],"kind":"all","lead":"Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:","reach":{"all":["Faction: Adeptus Custodes"],"none":["Monster","Vehicle"]},"mark":"aura"}],"reach":{"all":["Faction: Adeptus Custodes"],"none":["Monster","Vehicle"]},"n":"Captain-General"},
@@ -14439,7 +14460,6 @@ const GRANTS = [
   { rule:'tzeeeeentch · Fluxmaster · Fluxmaster', grants:'Stealth', type:'ability', to:'this unit / model', while:null, text:'- This unit has **Stealth**.' },
   { rule:'tzeeeeentch · Fluxmaster · Improbable Shield (Aura)', grants:'Feel No Pain 4+ against Psychic Attacks and mortal wounds', type:'ability', to:{ all:['Faction: Legiones Daemonica','Tzeentch'] }, while:'While a friendly LEGIONES DAEMONICA TZEENTCH unit is within 6" of the bearer', text:'While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 4+** ability against **Psychic Attacks** and **mortal wounds**.' },
   { rule:'healybois · The Swarmlord · Guardian Organism', grants:'Feel No Pain 5+', type:'ability', to:{ all:['Character'] }, while:'While a CHARACTER model is leading this unit', text:'While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability.' },
-  { rule:'healybois · Hive Tyrant · Instinctive Defence', grants:'Fights First', type:'ability', to:'this unit / model', while:'while the bearer is within 6" of one or more friendly HARVESTER units', text:'In addition, while the bearer is within 6" of one or more friendly **HARVESTER** units, models in the bearer\'s unit have the **Fights First** ability.' },
   { rule:'u-w0t-m8 · Technomancer · Rites of Reanimation', grants:'Feel No Pain', type:'ability', to:'this unit / model', while:'While this model is leading a unit', text:'While this model is leading a unit, models in that unit have the **Feel No Pain** 5+ ability.' },
   { rule:'u-w0t-m8 · Canoptek Spyders · Fabricator Claw Array', grants:'Feel No Pain', type:'ability', to:{ all:['Faction: Necrons','Vehicle'] }, while:'While a friendly NECRONS VEHICLE unit is within 6" of the bearer', text:'While a friendly **NECRONS VEHICLE** unit is within 6" of the bearer, that unit has the **Feel No Pain** 6+ ability.' },
   { rule:'u-w0t-m8 · Canoptek Spyders · Gloom Prism', grants:'Feel No Pain 5+ against mortal wounds and Psychic Attacks', type:'ability', to:{ all:['Faction: Necrons'] }, while:'While a friendly NECRONS unit is within 6" of the bearer', text:'While a friendly **NECRONS** unit is within 6" of the bearer, models in that unit have the **Feel No Pain 5+** ability against **mortal wounds** and **Psychic Attacks**.' },

@@ -12878,35 +12878,21 @@
    "sha256": null
   },
   {
-   "item": "healybois / hive-tyrant-tyrant-guard / ability:Instinctive Defence",
+   "item": "healybois / hive-tyrant-tyrant-guard / ability:Parasitic Biomorphology",
    "field": "text",
    "doc": "data.js",
-   "where": "same text as the enhancement Instinctive Defence (Assimilation Swarm) (whose source is recorded under that item)",
+   "where": "same text as the enhancement Parasitic Biomorphology (Assimilation Swarm) (whose source is recorded under that item)",
    "sha256": null
   },
   {
-   "item": "healybois / norn-assimilator-synaptoprescience / ability:Protean Purpose",
-   "field": "text",
-   "doc": "data.js",
-   "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
-   "sha256": null
-  },
-  {
-   "item": "healybois / norn-assimilator-synaptoprescience / ability:Synaptoprescience",
-   "field": "text",
-   "doc": "data.js",
-   "where": "same text as the enhancement Synaptoprescience (Talons of the Norn Queen) (whose source is recorded under that item)",
-   "sha256": null
-  },
-  {
-   "item": "healybois / norn-assimilator-synaptoprescience-2 / ability:Protean Purpose",
+   "item": "healybois / norn-assimilator / ability:Protean Purpose",
    "field": "text",
    "doc": "data.js",
    "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
    "sha256": null
   },
   {
-   "item": "healybois / norn-assimilator-synaptoprescience-2 / ability:Synaptoprescience",
+   "item": "healybois / norn-assimilator / ability:Synaptoprescience",
    "field": "text",
    "doc": "data.js",
    "where": "same text as the enhancement Synaptoprescience (Talons of the Norn Queen) (whose source is recorded under that item)",
@@ -13977,14 +13963,14 @@
    "sha256": "de3f7c0319fa96530dfa687a516668cf7e52dc9d5a87954c44c7e38842569075"
   },
   {
-   "item": "catalog / tyranids/the-red-terror / ability:Swallow Whole",
+   "item": "healybois / the-red-terror / ability:Swallow Whole",
    "field": "text",
    "doc": "pack:tyranids",
    "where": "GW Faction Pack Tyranids PDF p7-8 (The Red Terror datasheet)",
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
-   "item": "catalog / tyranids/the-red-terror / ability:Subterranean Hunter",
+   "item": "healybois / the-red-terror / ability:Subterranean Hunter",
    "field": "text",
    "doc": "pack:tyranids",
    "where": "GW Faction Pack Tyranids PDF p7-8 (The Red Terror datasheet)",
