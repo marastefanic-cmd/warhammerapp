@@ -436,5 +436,143 @@
   "where": "fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering",
   "verdict": "ok",
   "why": "Equal to derive.js output after 94608e8 (label-own-target of any attack: your Shooting phase and the Fight phase, no Fire Overwatch; reverting the rule makes the gate fail with 8 DRIFTs). Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls. Words: +1 Hit vs a target below Starting Strength, and +1 Wound if it is Below Half-strength. Labelled per the own-target convention. Note: the +1 Wound would still apply in snap shooting, so leaving Overwatch out is a labelling choice, not a rules limit."
+ },
+ {
+  "key": "label-snap|ability-timing | pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: re-roll hit and wound rolls of 1 vs a CHARACTER (full re-rolls vs PSYKER CHARACTER): the wound re-roll still works in snap shooting, so their Movement (Overwatch) + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | 6-bigs · Knight Destrier · Saturation Fire",
+  "where": "6-bigs · Knight Destrier · Saturation Fire",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack that targets a unit within range of an objective marker has [IGNORES COVER], which still works in snap shooting: their Movement (Overwatch) + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | 6-bigs · Knight Paladin · Seasoned Noble",
+  "where": "6-bigs · Knight Paladin · Seasoned Noble",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack at the closest eligible target improves AP by 1, which works in snap shooting (Overwatch can target the closest eligible target): their Movement + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | 6-bigs · Knight Warden · Thin Their Ranks",
+  "where": "6-bigs · Knight Warden · Thin Their Ranks",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack vs a non-MONSTER/VEHICLE unit has [DEVASTATING WOUNDS] (critical wounds still occur in snap shooting): their Movement + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | 4-megas-and-a-destrier · Knight Destrier · Saturation Fire",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Saturation Fire",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack that targets a unit within range of an objective marker has [IGNORES COVER], which still works in snap shooting: their Movement (Overwatch) + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers",
+  "where": "infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a WAR DOG attack (ranged or melee) at the closest eligible target gets +1 AP, which works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers",
+  "where": "infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a WAR DOG attack (ranged or melee) at the closest eligible target gets +1 AP, which works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack at a unit within range of an objective marker has [IGNORES COVER], which works in snap shooting: their Movement + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand] · Brigand",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand] · Brigand",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack at a unit within range of an objective marker has [IGNORES COVER], which works in snap shooting: their Movement + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack at a unit within range of an objective marker has [IGNORES COVER], which works in snap shooting: their Movement + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "where": "mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: re-roll hit and wound rolls of 1 vs a CHARACTER (full re-rolls vs PSYKER CHARACTER): the wound re-roll still works in snap shooting, so their Movement (Overwatch) + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: +1 Hit vs a target below Starting Strength (no use in snap shooting) and +1 Wound if Below Half-strength (works): their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | navigator-sounds-op-ngl · Knight Destrier · Saturation Fire",
+  "where": "navigator-sounds-op-ngl · Knight Destrier · Saturation Fire",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack that targets a unit within range of an objective marker has [IGNORES COVER], which still works in snap shooting: their Movement (Overwatch) + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words (Bondsman): an affected model’s attacks vs a TITANIC or TOWERING model can re-roll the Hit and the Wound roll; the wound re-roll works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: +1 Hit vs MONSTER/VEHICLE and +1 Wound vs TITANIC/TOWERING; the wound bonus works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | defilers-and-friends · Lucius the Eternal · Lucius the Eternal · A Challenge Worthy of Skill",
+  "where": "defilers-and-friends · Lucius the Eternal · Lucius the Eternal · A Challenge Worthy of Skill",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: attacks vs a CHARACTER, MONSTER or WALKER can re-roll the Hit and the Wound roll; the wound re-roll works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | infernal-lance · Chaos Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "where": "infernal-lance · Chaos Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: +1 Hit vs MONSTER/VEHICLE and +1 Wound vs TITANIC/TOWERING; the wound bonus works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | lite-knights · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "where": "lite-knights · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: ranged attacks vs MONSTER/VEHICLE can re-roll one hit, one wound and one damage roll; wound and damage re-rolls work in snap shooting: their Movement + your Shooting (ranged only)."
+ },
+ {
+  "key": "label-snap|ability-timing | the-exiled-legion · Skulltaker · Skulltaker · Skulls for Khorne",
+  "where": "the-exiled-legion · Skulltaker · Skulltaker · Skulls for Khorne",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: attacks vs a CHARACTER can re-roll the Hit and the Wound roll; the wound re-roll works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | emperors-chosen · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "where": "emperors-chosen · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: ranged attacks vs MONSTER/VEHICLE can re-roll one hit, one wound and one damage roll; wound and damage re-rolls work in snap shooting: their Movement + your Shooting (ranged only)."
+ },
+ {
+  "key": "label-snap|ability-timing | dread-host · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "where": "dread-host · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: ranged attacks vs MONSTER/VEHICLE can re-roll one hit, one wound and one damage roll; wound and damage re-rolls work in snap shooting: their Movement + your Shooting (ranged only)."
+ },
+ {
+  "key": "label-snap|ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "where": "navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words (Bondsman): an affected model’s attacks vs a TITANIC or TOWERING model can re-roll the Hit and the Wound roll; the wound re-roll works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "where": "navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: +1 Hit vs MONSTER/VEHICLE and +1 Wound vs TITANIC/TOWERING; the wound bonus works in snap shooting: their Movement + your Shooting + Fight."
  }
 ]
