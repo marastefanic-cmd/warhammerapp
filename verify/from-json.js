@@ -906,72 +906,12 @@ for (const d of gwDevs) filled.push({ what: 'GW over BSData: ' + d.unit + ' ' + 
 
 // ---------------------------------------------------------------- wording: Wahapedia's datasheet (GW's codex), found by BSData's words
 const wahaPagesOf = u => uniq(u._parts.map(p => nm(p.name))).map(n => pageFac(n) && WW.wahaPage(n, pageFac(n))).filter(Boolean);
-// a Wahapedia datasheet page in its sections: CORE ABILITIES / ARMY RULES (names), ABILITIES ("**Name (tag):** text" and
-// the lines after it), LEADER (the units it can lead)
-function wahaSectionsOf(page) {
-  const lines = WW.markup(page.tokens, page.P, 0, page.P.s.length - 1).split('\n');
-  const head = l => /^[A-Z][A-Z’' ]{3,}$/.test(l.replace(/\*/g, '').trim());
-  const out = { core: [], army: [], abilities: [], leader: [], support: [] };
-  const names = l => l.split(/,\s*(?=\*\*)|\*\*,\*\*\s*/).map(x => x.replace(/\*\*/g, '').replace(/,$/, '').trim()).filter(Boolean);
-  let seenWeapons = false, seenAbilities = false, seenComp = false, seenKw = false;   // (a header box is between the weapons and the first abilities section)
-  for (let i = 0; i < lines.length; i++) {
-    const t = lines[i].trim();
-    if (/^(RANGED|MELEE) WEAPONS$/.test(t)) seenWeapons = true;
-    if (/^(CORE ABILITIES|ARMY RULES|ABILITIES|UNIT COMPOSITION|WARGEAR OPTIONS)$/.test(t) && seenWeapons) seenAbilities = seenAbilities || t !== 'WARGEAR OPTIONS';
-    if (t === 'CORE ABILITIES' && lines[i + 1]) out.core = names(lines[i + 1]);
-    if (t === 'ARMY RULES' && lines[i + 1] && !out.army.length) out.army = names(lines[i + 1]);
-    if (t === 'LEADER') for (let j = i + 2; j < lines.length && /^- /.test(lines[j]); j++) out.leader.push(lines[j].replace(/^- |\*\*/g, '').trim());
-    // (SUPPORT: the units a Support character can be attached to, as LEADER names a leader's)
-    if (t === 'SUPPORT') for (let j = i + 2; j < lines.length && /^- /.test(lines[j]); j++) out.support.push(lines[j].replace(/^- |\*\*/g, '').trim());
-    // ABILITIES, and PSYCHIC ABILITIES ("**Shrouding (psychic level 1):** …"): "**Name (tag):** text"
-    if (t === 'ABILITIES' || t === 'PSYCHIC ABILITIES') {
-      let cur = null;
-      for (let j = i + 1; j < lines.length && !head(lines[j]); j++) {
-        const m = /^\*\*([^*:]+?)(?: \(([^)]*)\))?:\*\*\s*(.*)$/.exec(lines[j]);
-        // (a tag Wahapedia prints at the start of the text, "**Warp Rift Firepower:** (Once per battle, per unit) In your …": the
-        // ability's tag, as GW names it "Warp Rift Firepower (Once per battle, per unit): In your …")
-        const t0 = m && !m[2] ? /^\(([^)]+)\):?\s+(.*)$/.exec(m[3] || '') : null;
-        if (m) { cur = { name: m[1].trim(), tag: m[2] || (t0 ? t0[1] : null), lines: m[3] ? [t0 ? t0[2] : m[3]] : [] }; out.abilities.push(cur); continue; }
-        if (cur) cur.lines.push(lines[j]);
-      }
-    }
-    // a rule GW prints in a header box of its own, before CORE ABILITIES ("SUPREME COMMANDER" / "If this model is in your army, it must
-    // be your **WARLORD**."): an ability of that name (the box's heading, in title case), as Ghazghkull Thraka's Supreme Commander
-    const KNOWN = /^(RANGED WEAPONS|MELEE WEAPONS|WARGEAR OPTIONS|CORE ABILITIES|ARMY RULES|ABILITIES|PSYCHIC ABILITIES|TRANSPORT|UNIT COMPOSITION|LEADER|SUPPORT|STRATAGEMS|DETACHMENT ABILITY|WARGEAR ABILITIES|DAMAGED.*|KEYWORDS.*|FACTION KEYWORDS.*|RANGE)$/;
-    // (and a box after the unit composition, "SUPREME COMMANDER", "TRIARCHAL MENHIRS": The Silent King's; not YOUR UNIT COSTS)
-    // (up to the datasheet's keywords: the page's glossary after them is no box)
-    if (/^UNIT COMPOSITION$/.test(t)) seenComp = true;
-    if (/^(\*\*)?(FACTION )?KEYWORDS/.test(t)) seenKw = true;
-    if (head(lines[i]) && !KNOWN.test(t) && !/^YOUR /.test(t) && t.split(/\s+/).length >= 2 && seenWeapons && (!seenAbilities || (seenComp && !seenKw)) && lines[i + 1] && !head(lines[i + 1]) && /[a-z]/.test(lines[i + 1])) {
-      const tl = []; for (let j = i + 1; j < lines.length && !head(lines[j]) && !/^(\*\*)?(FACTION )?KEYWORDS/.test(lines[j].trim()); j++) tl.push(lines[j]);
-      // (title case, its small words lower case: "Daemon Primarch of Slaanesh")
-      const nmTc = t.toLowerCase().replace(/(^|\s)([a-z]+)/g, (m, a, w) => a + (a && /^(of|the|and|in|on|to|for|a|an)$/.test(w) ? w : w[0].toUpperCase() + w.slice(1)));
-      // (a box of named abilities, each "**Name (tag):** text": its parts, for an ability of the datasheet that selects one of them, below)
-      const NAMED = /^\*\*([^*:]+?)(?: \(([^)]*)\))?:\*\*\s*(.*)$/;
-      const subs = tl.length && tl.every(l => NAMED.test(l)) ? tl.map(l => { const m = NAMED.exec(l); return { name: m[1].trim(), tag: m[2] || null, lines: [m[3]], box: true, group: nmTc }; }) : null;
-      out.abilities.push({ name: nmTc, tag: null, lines: tl, box: true, subs });
-    }
-    // DAMAGED: the box "DAMAGED: 1-7 WOUNDS REMAINING" and its text: the ability BSData names "Damaged: 1-7 wounds remaining"
-    const dmg = /^DAMAGED: (\S+) WOUNDS REMAINING$/.exec(t);
-    if (dmg) { const tl = []; for (let j = i + 1; j < lines.length && !head(lines[j]) && !/^KEYWORDS/.test(lines[j]); j++) tl.push(lines[j]); out.abilities.push({ name: 'Damaged: ' + dmg[1] + ' wounds remaining', tag: null, lines: tl, damaged: dmg[1] }); }
-    // TRANSPORT: its text is the Transport ability BSData gives the unit
-    // ATTACHED UNIT (Nemesis Claw: "If a CHARACTER unit … can be attached to a LEGIONARIES unit, …"): the ability BSData names "Attached Unit"
-    if (t === 'ATTACHED UNIT') { const tl = []; for (let j = i + 1; j < lines.length && !head(lines[j]) && !/^(\*\*)?KEYWORDS/.test(lines[j]); j++) tl.push(lines[j]); out.abilities.push({ name: 'Attached Unit', tag: null, lines: tl }); }
-    if (t === 'TRANSPORT') { const tl = []; for (let j = i + 1; j < lines.length && !head(lines[j]); j++) tl.push(lines[j]); out.abilities.push({ name: 'Transport', tag: null, lines: tl }); }
-    for (const a of out.abilities) a.text = a.lines.join('\n').trim();
-  }
-  // a box of named abilities that another ability of the datasheet selects from ("select one of the abilities in the Daemon Primarch of
-  // Slaanesh section": Fulgrim's DAEMON PRIMARCH OF SLAANESH): each is an ability of its own, the box's name its group (a box no ability
-  // selects from stays one ability: the Daemon Prince of Chaos's Daemonic Allegiance)
-  // (or "select one Triarch ability": The Silent King's TRIARCH ABILITIES)
-  out.abilities = out.abilities.flatMap(a => a.subs && out.abilities.some(x => !x.box && selectsFrom(x.text, a.name)) ? a.subs.map(x => Object.assign(x, { text: x.lines.join('\n').trim() })) : [a]);
-  for (const a of out.abilities) delete a.subs;
-  return out;
-}
-// an ability's words that select one of the abilities of a box: "select one of the abilities in the <box> section", or "select one
-// <box less "Abilities"> ability" (The Silent King: "select one Triarch ability (see left)" of the TRIARCH ABILITIES box)
-const selectsFrom = (text, box) => { const t = String(text).replace(/\*\*/g, ''), b = box.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return new RegExp('select one of the abilities in the ' + b + ' section', 'i').test(t) || (/ abilities$/i.test(box) && new RegExp('select one ' + b.replace(/ abilities$/i, '') + ' ability\\b', 'i').test(t)); };
+// a Wahapedia datasheet page in its sections (CORE ABILITIES / ARMY RULES, ABILITIES, a header box, DAMAGED, LEADER, SUPPORT): the shared
+// page reader (verify/gw-order.js wahaSectionsOf, on the datasheet cut out of its page), as verify/tables.js --write and verify/words.js
+// read it
+const GWO = require('./gw-order')(ROOT);
+const wahaSectionsOf = page => GWO.sectionsOf(page, WW);
+const { selectsFrom } = require('./gw-order');
 // the box GW prints after a unit's composition whose heading is an ability's name ("HORRORS ARE PINK. HORRORS ARE BLUE. …", Wahapedia
 // after YOUR UNIT COSTS): its lines up to the keywords, a Designer’s Note as an italic line (as data.js writes GW's Designer’s Notes)
 function boxAfterComposition(name, pages) {

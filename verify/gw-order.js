@@ -9,7 +9,11 @@
                           the list's own (Warlord, a keyword a rule of the list gives: why.kw) last
    An attached unit keeps its parts in the order its rows have them; each part sorted by its own page. An item the page does not
    name keeps its place after the item before it. A datasheet with no page (sheetsWithoutPage) keeps its order.
-     const O = require('./gw-order')(ROOT)  ->  { units(armies), rows(kind, rows, pages), kw(list, pages, listOwn), pageFor, noPage } */
+   GW's words: the page reader (wahaSectionsOf: CORE ABILITIES / ARMY RULES, ABILITIES, header boxes, DAMAGED, LEADER, SUPPORT), on the
+   datasheet cut out of its page (cutDatasheet: from its frame to its STRATAGEMS) before it is tokenised; verify/from-json.js,
+   verify/tables.js --write and the gate step verify/words.js read every page through it (sectionsOf, pageWords, pageAbility).
+     const O = require('./gw-order')(ROOT)  ->  { units(armies), rows(kind, rows, pages), kw(list, pages, listOwn), pageFor, noPage,
+                                                 pageWords(page), pageAbility(page, ability), sectionsOf(page, W), norm(text) } */
 'use strict';
 const fs = require('fs'), path = require('path');
 const WW = require('./waha-words');
@@ -18,8 +22,28 @@ const n = s => String(s == null ? '' : s).toLowerCase().normalize('NFD').replace
 const ENT = { amp:'&', lt:'<', gt:'>', quot:'"', apos:'’', nbsp:' ', rsquo:'’', lsquo:'‘', ldquo:'“', rdquo:'”', ndash:'–', mdash:'—', hellip:'…', times:'×', shy:'' };
 const dec = s => s.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e) => e[0] === '#' ? String.fromCodePoint(e[1].toLowerCase() === 'x' ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10)) : (ENT[e.toLowerCase()] ?? m));
 const txt = h => dec(String(h).replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+// markup normalisation, for comparing an app text with the page's (verify/words.js): bold and other markers (** ~~ ^^, a star not after a
+// number or +), "- " bullets, an *italic* line, line breaks, curly vs straight quotes, odd spaces, whitespace, a space before punctuation
+const qn = s => String(s).replace(/[‘’‚‛′`´]/g, "'").replace(/[“”„″]/g, '"').replace(/[  -  ]/g, ' ');
+const norm = t => qn(String(t || '').split('\n').map(l => { l = l.replace(/\*\*|~~|\^\^/g, '').replace(/(^|[^0-9+])\*+/g, '$1').replace(/^\s*-\s+/, ''); const m = /^\s*\*([^*].*[^*])\*\s*$/.exec(l); return m ? m[1] : l; }).join(' ')).replace(/\s+/g, ' ').replace(/ ([.,;:])/g, '$1').trim();
+const lcq = s => qn(s).toLowerCase().replace(/\s+/g, ' ').trim();
 // a keyword's name without its value ("SUSTAINED HITS 1", "ANTI-INFANTRY 4+", "LETHAL HITS: non-MONSTER/VEHICLE": sustainedhits, antiinfantry, lethalhits)
 const kwBase = k => n(String(k).replace(/:.*$/, '').replace(/\s+(D?\d+\+?|D\d+[+-]\d+|\d*D\d+)$/i, ''));
+
+// the datasheet's part of a page: from its frame to its STRATAGEMS (the rest of the page, the faction's other rules and its glossary,
+// is no part of the datasheet, and tokenising the whole page is slow and large)
+function cutDatasheet(html) {
+  const at = html.indexOf('dsOuterFrame datasheet'); if (at < 0) return html;
+  const end = html.indexOf('>STRATAGEMS<', at);
+  return html.slice(Math.max(0, html.lastIndexOf('<div', at)), end > 0 ? end : undefined);
+}
+// a page's datasheet as the page reader reads it: its tokens (verify/waha-words.js wahaTokens, a typographic hyphen U+2010 / U+2011 as
+// "-", as GW's documents print it), their plain text
+function readTokens(html, W) {
+  const tokens = W.wahaTokens(cutDatasheet(html.replace(/<!--[\s\S]*?-->/g, '').replace(/<(script|style|noscript)\b[\s\S]*?<\/\1>/gi, '')))
+    .map(t => t.t !== undefined && /[\u2010\u2011]/.test(t.t) ? Object.assign({}, t, { t:t.t.replace(/[\u2010\u2011]/g, '-') }) : t);
+  return { tokens, P:W.plainOf(tokens) };
+}
 
 // the page's facts in their order
 function parse(html, chapter) {
@@ -63,9 +87,77 @@ function parse(html, chapter) {
   }
   const ds = WW.wahaDatasheet(html, null) || {};
   const kws = (ds.keywords || []).concat(...Object.values(ds.modelKeywords || {}));
-  return { weapons, labels, abilities, boxes, html:h, keywords:kws, unitKeywords:ds.keywords || [], modelKeywords:ds.modelKeywords || {}, detachmentKeywords:ds.detachmentKeywords || {}, factionKeywords:ds.factionKeywords || [], profiles:ds.profiles || [] };
+  return { weapons, labels, abilities, boxes, html:h, dsHtml:cutDatasheet(html), keywords:kws, unitKeywords:ds.keywords || [], modelKeywords:ds.modelKeywords || {}, detachmentKeywords:ds.detachmentKeywords || {}, factionKeywords:ds.factionKeywords || [], profiles:ds.profiles || [] };
 }
 
+// (the shared page reader, moved here from verify/from-json.js: from-json, verify/tables.js --write and verify/words.js read a page
+// alike; opts.subs keeps a box's named parts on it, for verify/words.js to find an ability among them)
+// a Wahapedia datasheet page in its sections: CORE ABILITIES / ARMY RULES (names), ABILITIES ("**Name (tag):** text" and
+// the lines after it), LEADER (the units it can lead)
+function wahaSectionsOf(page, WW, opts) {
+  const lines = WW.markup(page.tokens, page.P, 0, page.P.s.length - 1).split('\n');
+  const head = l => /^[A-Z][A-Z’' ]{3,}$/.test(l.replace(/\*/g, '').trim());
+  const out = { core: [], army: [], abilities: [], leader: [], support: [] };
+  const names = l => l.split(/,\s*(?=\*\*)|\*\*,\*\*\s*/).map(x => x.replace(/\*\*/g, '').replace(/,$/, '').trim()).filter(Boolean);
+  let seenWeapons = false, seenAbilities = false, seenComp = false, seenKw = false;   // (a header box is between the weapons and the first abilities section)
+  for (let i = 0; i < lines.length; i++) {
+    const t = lines[i].trim();
+    if (/^(RANGED|MELEE) WEAPONS$/.test(t)) seenWeapons = true;
+    if (/^(CORE ABILITIES|ARMY RULES|ABILITIES|UNIT COMPOSITION|WARGEAR OPTIONS)$/.test(t) && seenWeapons) seenAbilities = seenAbilities || t !== 'WARGEAR OPTIONS';
+    if (t === 'CORE ABILITIES' && lines[i + 1]) out.core = names(lines[i + 1]);
+    if (t === 'ARMY RULES' && lines[i + 1] && !out.army.length) out.army = names(lines[i + 1]);
+    if (t === 'LEADER') for (let j = i + 2; j < lines.length && /^- /.test(lines[j]); j++) out.leader.push(lines[j].replace(/^- |\*\*/g, '').trim());
+    // (SUPPORT: the units a Support character can be attached to, as LEADER names a leader's)
+    if (t === 'SUPPORT') for (let j = i + 2; j < lines.length && /^- /.test(lines[j]); j++) out.support.push(lines[j].replace(/^- |\*\*/g, '').trim());
+    // ABILITIES, and PSYCHIC ABILITIES ("**Shrouding (psychic level 1):** …"): "**Name (tag):** text"
+    if (t === 'ABILITIES' || t === 'PSYCHIC ABILITIES') {
+      let cur = null;
+      for (let j = i + 1; j < lines.length && !head(lines[j]); j++) {
+        const m = /^\*\*([^*:]+?)(?: \(([^)]*)\))?:\*\*\s*(.*)$/.exec(lines[j]);
+        // (a tag Wahapedia prints at the start of the text, "**Warp Rift Firepower:** (Once per battle, per unit) In your …": the
+        // ability's tag, as GW names it "Warp Rift Firepower (Once per battle, per unit): In your …")
+        const t0 = m && !m[2] ? /^\(([^)]+)\):?\s+(.*)$/.exec(m[3] || '') : null;
+        if (m) { cur = { name: m[1].trim(), tag: m[2] || (t0 ? t0[1] : null), lines: m[3] ? [t0 ? t0[2] : m[3]] : [] }; out.abilities.push(cur); continue; }
+        if (cur) cur.lines.push(lines[j]);
+      }
+    }
+    // a rule GW prints in a header box of its own, before CORE ABILITIES ("SUPREME COMMANDER" / "If this model is in your army, it must
+    // be your **WARLORD**."): an ability of that name (the box's heading, in title case), as Ghazghkull Thraka's Supreme Commander
+    const KNOWN = /^(RANGED WEAPONS|MELEE WEAPONS|WARGEAR OPTIONS|CORE ABILITIES|ARMY RULES|ABILITIES|PSYCHIC ABILITIES|TRANSPORT|UNIT COMPOSITION|LEADER|SUPPORT|STRATAGEMS|DETACHMENT ABILITY|WARGEAR ABILITIES|DAMAGED.*|KEYWORDS.*|FACTION KEYWORDS.*|RANGE)$/;
+    // (and a box after the unit composition, "SUPREME COMMANDER", "TRIARCHAL MENHIRS": The Silent King's; not YOUR UNIT COSTS)
+    // (up to the datasheet's keywords: the page's glossary after them is no box)
+    if (/^UNIT COMPOSITION$/.test(t)) seenComp = true;
+    if (/^(\*\*)?(FACTION )?KEYWORDS/.test(t)) seenKw = true;
+    if (head(lines[i]) && !KNOWN.test(t) && !/^YOUR /.test(t) && t.split(/\s+/).length >= 2 && seenWeapons && (!seenAbilities || (seenComp && !seenKw)) && lines[i + 1] && !head(lines[i + 1]) && /[a-z]/.test(lines[i + 1])) {
+      const tl = []; for (let j = i + 1; j < lines.length && !head(lines[j]) && !/^(\*\*)?(FACTION )?KEYWORDS/.test(lines[j].trim()); j++) tl.push(lines[j]);
+      // (title case, its small words lower case: "Daemon Primarch of Slaanesh")
+      const nmTc = t.toLowerCase().replace(/(^|\s)([a-z]+)/g, (m, a, w) => a + (a && /^(of|the|and|in|on|to|for|a|an)$/.test(w) ? w : w[0].toUpperCase() + w.slice(1)));
+      // (a box of named abilities, each "**Name (tag):** text": its parts, for an ability of the datasheet that selects one of them, below)
+      const NAMED = /^\*\*([^*:]+?)(?: \(([^)]*)\))?:\*\*\s*(.*)$/;
+      const subs = tl.length && tl.every(l => NAMED.test(l)) ? tl.map(l => { const m = NAMED.exec(l); return { name: m[1].trim(), tag: m[2] || null, lines: [m[3]], box: true, group: nmTc }; }) : null;
+      out.abilities.push({ name: nmTc, tag: null, lines: tl, box: true, subs });
+    }
+    // DAMAGED: the box "DAMAGED: 1-7 WOUNDS REMAINING" and its text: the ability BSData names "Damaged: 1-7 wounds remaining"
+    const dmg = /^DAMAGED: (\S+) WOUNDS REMAINING$/.exec(t);
+    if (dmg) { const tl = []; for (let j = i + 1; j < lines.length && !head(lines[j]) && !/^KEYWORDS/.test(lines[j]); j++) tl.push(lines[j]); out.abilities.push({ name: 'Damaged: ' + dmg[1] + ' wounds remaining', tag: null, lines: tl, damaged: dmg[1] }); }
+    // TRANSPORT: its text is the Transport ability BSData gives the unit
+    // ATTACHED UNIT (Nemesis Claw: "If a CHARACTER unit … can be attached to a LEGIONARIES unit, …"): the ability BSData names "Attached Unit"
+    if (t === 'ATTACHED UNIT') { const tl = []; for (let j = i + 1; j < lines.length && !head(lines[j]) && !/^(\*\*)?KEYWORDS/.test(lines[j]); j++) tl.push(lines[j]); out.abilities.push({ name: 'Attached Unit', tag: null, lines: tl }); }
+    if (t === 'TRANSPORT') { const tl = []; for (let j = i + 1; j < lines.length && !head(lines[j]); j++) tl.push(lines[j]); out.abilities.push({ name: 'Transport', tag: null, lines: tl }); }
+    for (const a of out.abilities) a.text = a.lines.join('\n').trim();
+  }
+  // a box of named abilities that another ability of the datasheet selects from ("select one of the abilities in the Daemon Primarch of
+  // Slaanesh section": Fulgrim's DAEMON PRIMARCH OF SLAANESH): each is an ability of its own, the box's name its group (a box no ability
+  // selects from stays one ability: the Daemon Prince of Chaos's Daemonic Allegiance)
+  // (or "select one Triarch ability": The Silent King's TRIARCH ABILITIES)
+  out.abilities = out.abilities.flatMap(a => a.subs && out.abilities.some(x => !x.box && selectsFrom(x.text, a.name)) ? a.subs.map(x => Object.assign(x, { text: x.lines.join('\n').trim() })) : [a]);
+  if (!(opts && opts.subs)) for (const a of out.abilities) delete a.subs;
+  return out;
+}
+// an ability's words that select one of the abilities of a box: "select one of the abilities in the <box> section", or "select one
+// <box less "Abilities"> ability" (The Silent King: "select one Triarch ability (see left)" of the TRIARCH ABILITIES box)
+const selectsFrom = (text, box) => { const t = String(text).replace(/\*\*/g, ''), b = box.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp('select one of the abilities in the ' + b + ' section', 'i').test(t) || (/ abilities$/i.test(box) && new RegExp('select one ' + b.replace(/ abilities$/i, '') + ' ability\\b', 'i').test(t)); };
 module.exports = function make(ROOT) {
   const DIR = path.join(ROOT, 'verify/.cache/waha/ds');
   const FJ = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8')); } catch (e) { return {}; } })();
@@ -109,7 +201,7 @@ module.exports = function make(ROOT) {
     for (const nmx of [name, String(name).replace(/\s*\([^()]*\)$/, '')]) {
       for (const fac of facs) {
         const f = lower.get((fac + '_' + ww(fac).wahaAddress(nmx) + '.html').toLowerCase());
-        if (f) { const p = parse(fs.readFileSync(path.join(DIR, f), 'utf8'), ww(fac).chapter); if (p) { r = Object.assign(p, { file:f });
+        if (f) { const p = parse(fs.readFileSync(path.join(DIR, f), 'utf8'), ww(fac).chapter); if (p) { r = Object.assign(p, { file:f, fac });
           // (the KEYWORDS GW's Faction Pack prints for it win over Wahapedia's: Tormentbringer, not TORMENTBRINGER ON EXALTED SEEKER CHARIOT)
           const pk = packKeywords(fac, name); if (pk) { r.wahaKeywords = r.unitKeywords; r.unitKeywords = pk.map(k => k.toUpperCase()); r.keywords = r.unitKeywords.concat(...Object.values(r.modelKeywords || {})); r.pack = true; }
           break; } }
@@ -120,6 +212,60 @@ module.exports = function make(ROOT) {
     cache.set(k, r);
     return r;
   }
+
+  // ---- GW's words: the page reader (wahaSectionsOf, on the datasheet cut out of its page), shared by verify/from-json.js, verify/tables.js
+  // --write (each DATASHEETS ability's text and name) and the gate step verify/words.js
+  // a page's words: its sections, a box's named parts kept (subs)
+  function pageWords(P) {
+    if (!P._words) { const W = ww(P.fac), pg = Object.assign({ file:P.file }, readTokens(P.dsHtml, W)), secs = wahaSectionsOf(pg, W, { subs:true });
+      for (const a of secs.abilities) delete a.lines;
+      Object.defineProperty(P, '_words', { value:{ file:P.file, pg, secs, W }, enumerable:false }); }
+    return P._words;
+  }
+  // a page file's sections as verify/from-json.js reads them (its faction's Chapter view; its page object: { file, tokens, P })
+  const SECS = new Map();
+  function sectionsOf(page, W) {
+    const k = page.file + '\0' + (W.chapter || '');
+    if (!SECS.has(k)) { const html = WW.chapterView(fs.readFileSync(path.join(DIR, page.file), 'utf8'), W.chapter);
+      SECS.set(k, JSON.stringify(wahaSectionsOf(Object.assign({ file:page.file }, readTokens(html, W)), W))); }
+    return JSON.parse(SECS.get(k));
+  }
+  // an app ability's ability on the page: { kind:'leader', list } (a Leader / Support line: the units it names), { kind:'text', g:{ name,
+  // tag, text, box?, how } } (how: 'name' the same name, 'loose' a spelling of it, 'merged' / 'parts' / 'box' a text the page prints in
+  // pieces), or null. By its name, as it is, then loosely (articles, plurals, z/s, brackets out); a Damaged band by its band; a
+  // selector ability the app writes with the box it selects from as one text; an ability the app writes as a box's named parts; a box
+  // after the unit composition whose heading is its name (the Pink Horrors')
+  function pageAbility(P, ab) {
+    const S = pageWords(P).secs, W = pageWords(P).W, pg = pageWords(P).pg, nm = lcq(ab.name);
+    if (nm === 'leader') return S.leader.length ? { kind:'leader', list:S.leader } : null;
+    if (nm === 'support' && S.support.length) return { kind:'leader', list:S.support };
+    const dm = /^damaged: (\S+) wounds remaining$/i.exec(ab.name);
+    if (dm) { const g = S.abilities.find(x => x.damaged && x.damaged.replace(/[–-]/g, '-') === dm[1].replace(/[–-]/g, '-')) || S.abilities.find(x => x.damaged); return g ? { kind:'text', g:Object.assign({ how:'damaged' }, g) } : null; }
+    const all = S.abilities.concat(...S.abilities.map(x => (x.subs || []).map(y => Object.assign({}, y, { text:y.text || (y.lines || []).join('\n').trim() }))));
+    for (const x of S.abilities) if (x.box) { let cur = null; for (const l of String(x.text).split('\n')) { const m = /^\*\*([^*:]+?)(?: \(([^)]*)\))?:\*\*\s*(.*)$/.exec(l); if (m) all.push(cur = { name:m[1].trim(), tag:m[2] || null, text:m[3], group:x.name }); else if (cur) cur.text += '\n' + l; } }
+    const loose = x => lcq(x).replace(/^\[[^\]]*\]\s*-\s*/, '').replace(/[^a-z ]/g, '').split(' ').filter(w => !['the', 'a', 'an'].includes(w)).map(w => w.replace(/s$/, '')).join(' ');
+    const sq = x => lcq(x).replace(/\([^)]*\)/g, '').replace(/ abilities$/, '').replace(/z/g, 's').replace(/[^a-z]/g, '');
+    const same = all.filter(x => lcq(x.name) === nm), best = same.find(x => norm(x.text) === norm(ab.text)) || same.find(x => !x.box) || same[0];
+    const g = best ? Object.assign({ how:'name' }, best) : (x => x && Object.assign({ how:'loose' }, x))(all.find(x => loose(x.name) === loose(ab.name)) || all.find(x => sq(x.name) === sq(ab.name)));
+    // (the app writes a selector ability and the box it selects from as one text: Belisarius Cawl's Canticles of the Omnissiah)
+    if (g && same.length > 1 && norm(ab.text) !== norm(g.text)) { const bx = same.find(x => x.box && x.name === g.name && x.text !== g.text); if (bx && norm(ab.text) === norm(g.text + '\n' + bx.text)) return { kind:'text', g:{ name:g.name, text:g.text + '\n' + bx.text, how:'merged' } }; }
+    if (g) return { kind:'text', g };
+    // (an ability the app writes as the box's named parts, "**Fanatical Devotion:** …" lines: Thulia Ghuld's Icon of War)
+    const parts = String(ab.text).split('\n').map(l => /^\*\*([^*:]+?)(?: \(([^)]*)\))?:\*\*/.exec(l)).filter(Boolean);
+    if (parts.length > 1) { const gs = parts.map(m => all.find(x => lcq(x.name) === lcq(m[1]))); if (gs.every(Boolean)) return { kind:'text', g:{ name:ab.name, text:gs.map(x => '**' + x.name + (x.tag ? ' (' + x.tag + ')' : '') + ':** ' + x.text).join('\n'), how:'parts' } }; }
+    // (a box after the unit composition whose heading is the ability's name: its lines up to the keywords)
+    const L = W.markup(pg.tokens, pg.P, 0, pg.P.s.length - 1).split('\n'), bq = t => lcq(t).replace(/[^a-z]/g, ''), i = L.findIndex(l => bq(l) === bq(ab.name));
+    if (i >= 0) { const o = []; for (let j = i + 1; j < L.length && !/^(\*\*)?(FACTION )?KEYWORDS/.test(L[j].trim()); j++) o.push(/^\*\*Designer’s Note:\*\*/.test(L[j]) ? '*' + L[j].replace(/\*/g, '').trim() + '*' : L[j].trim()); if (o.length) return { kind:'text', g:{ name:ab.name, text:o.join('\n'), how:'box' } }; }
+    return null;
+  }
+  // the page of an ability of a unit (resolved, the old form): its part's (who, but a box's "<box>: pick one"), else the unit's
+  const abilityPage = (faction, u, ab) => { const who = ab.who && !/: pick one$/.test(ab.who) ? ab.who : u.name; return pageFor(faction, who) || (who !== u.name ? pageFor(faction, u.name) : null); };
+  // the units a Leader / Support line names ("This model can be attached to the following units: …"), in lower case, sorted; null: not
+  // that line
+  const leaderList = t => { const m = /attached to the following units?:\s*([\s\S]+)$/i.exec(String(t).replace(/\*\*/g, '')); return m ? m[1].split(/\s*,\s*|\n/).map(x => lcq(x.replace(/^[-■]\s*/, '').replace(/\.$/, ''))).filter(Boolean).sort() : null; };
+  // GW's name for an app ability the page spells otherwise (Berzerker Frenzy for New Recruit's Berserker Frenzy): the page's, when the page
+  // ability is found by a spelling of the name (how 'loose'), is no box, and its name is a plain name (no tag run into it); else null
+  const gwName = (ab, pa) => pa && pa.kind === 'text' && pa.g.how === 'loose' && !pa.g.box && !pa.g.group && !/[()[\]]/.test(pa.g.name) && !/^damaged/i.test(ab.name) && lcq(pa.g.name) !== lcq(ab.name) ? pa.g.name : null;
 
   // sort xs by key(x, i) (an array of numbers, or null: keeps its place after the item before it), stably
   function sortBy(xs, key) {
@@ -369,5 +515,8 @@ module.exports = function make(ROOT) {
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
+  return { pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
 };
+module.exports.wahaSectionsOf = wahaSectionsOf;
+module.exports.selectsFrom = selectsFrom;
+module.exports.norm = norm;
