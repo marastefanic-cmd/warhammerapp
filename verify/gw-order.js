@@ -309,6 +309,12 @@ module.exports = function make(ROOT) {
     return out;
   }
 
+  // for verify/nr.js and verify/bsdata.js (GW's words over New Recruit's and BSData's, a mechanical rule, no per-item deviation): an
+  // app ability whose words pass verify/words.js (its page's after markup normalisation, or GW's own document's as declared), and whose
+  // name is GW's; and whether the page spells another source's name of it (New Recruit's, BSData's "Berserker Frenzy") as the app's
+  const wordsPass = (faction, u, ab) => { const w = gwWordsOf(faction, u, ab); return !!w && w.text === ab.text && w.name === ab.name && !w.was; };
+  const pageSpells = (faction, u, ab, other) => { const x = Object.assign({}, ab, { name:other }), P = abilityPage(faction, u, x); return !!P && gwName(x, pageAbility(P, x)) === ab.name; };
+
   // sort xs by key(x, i) (an array of numbers, or null: keeps its place after the item before it), stably
   function sortBy(xs, key) {
     const ks = []; let prev = [-1];
@@ -557,7 +563,7 @@ module.exports = function make(ROOT) {
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { gwWords, gwWordsOf, declaredWords, DEVW, pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
+  return { wordsPass, pageSpells, gwWords, gwWordsOf, declaredWords, DEVW, pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
 };
 module.exports.wahaSectionsOf = wahaSectionsOf;
 module.exports.selectsFrom = selectsFrom;

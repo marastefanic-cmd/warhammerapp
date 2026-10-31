@@ -113,8 +113,8 @@
   "ability": "Exploding Horrors",
   "app": "Each time this unit is selected to fight, you can select one enemy unit within **Engagement Range** of it, then select one or more **BRIMSTONE HORROR** models in this unit. For each **BRIMSTONE HORROR** model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 **mortal wound**.",
   "waha": "(none)",
-  "reason": "Brimstone Horrors are a reference sheet with no Wahapedia datasheet page of their own (verify/deviations-keywords.json declares the same); GW prints the Brimstone Horrors' rules on the Blue Horrors datasheet, where the reference entry's words come from (verify/texts.js checks them).",
-  "evidence": "no verify/.cache/waha/ds/chaos-daemons_Brimstone-Horrors.html; the Brimstone Horrors are the Blue Horrors' (verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html, \"HORRORS ARE PINK. HORRORS ARE BLUE.\" box)"
+  "reason": "Brimstone Horrors are a reference sheet with no Wahapedia datasheet page of their own (verify/deviations-keywords.json declares the same; GW prints no Brimstone Horrors datasheet). GW prints Exploding Horrors on the Blue Horrors datasheet, whose page has these words exactly (after markup normalisation).",
+  "evidence": "no verify/.cache/waha/ds/chaos-daemons_Brimstone-Horrors.html; verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html ABILITIES: \"Exploding Horrors: Each time this unit is selected to fight, you can select one enemy unit within Engagement Range of it, then select one or more BRIMSTONE HORROR models in this unit. For each BRIMSTONE HORROR model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 mortal wound.\""
  },
  {
   "page": "chaos-daemons_Horticulous-Slimux.html",

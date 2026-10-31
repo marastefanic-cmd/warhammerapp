@@ -2995,7 +2995,7 @@
    ],
    "turn": "your"
   },
-  "ability-timing | shooty · Mek [mek-tankbustas] · Tankbustas · Bomb Squig": {
+  "ability-timing | shooty · Mek [mek-tankbustas] · Tankbustas · Bomb Squigs": {
    "ph": [
     "movement"
    ],
@@ -3914,7 +3914,7 @@
    ],
    "turn": "your"
   },
-  "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Emanatus Forcefield": {},
+  "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Emanatus Force Field": {},
   "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Damaged: 1-4 wounds remaining": {},
   "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Scuttling Walker": {
    "ph": [
@@ -4447,7 +4447,6 @@
    ],
    "turn": "either"
   },
-  "ability-tag | lite-knights · Trajann Valoris · Trajann Valoris · Moment Shackle": "Once per battle, per army",
   "ability-timing | lite-knights · Prosecutor Squad · Purity of Execution": {
    "ph": [
     "shooting"
@@ -4900,15 +4899,12 @@
    ],
    "turn": "either"
   },
-  "ability-tag | emperors-chosen · Trajann Valoris · Trajann Valoris · Moment Shackle": "Once per battle, per army",
   "ability-timing | emperors-chosen · Shield-Captain · Shield-Captain · Vengeful Surge": {
    "ph": [
     "shooting"
    ],
    "turn": "opp"
   },
-  "ability-tag | emperors-chosen · Shield-Captain · Shield-Captain · Vengeful Surge": "Once per battle, per unit",
-  "ability-tag | emperors-chosen · Shield-Captain · Shield-Captain · Master of Ka’tahs": "Once per battle round, per unit",
   "ability-timing | emperors-chosen · Shield-Captain · Sentinel Guard Sodality · Praesidium Shield": {},
   "ability-timing | emperors-chosen · Custodian Wardens · Living Fortress": {},
   "ability-timing | emperors-chosen · Prosecutor Squad · Purity of Execution": {
@@ -4940,15 +4936,12 @@
    ],
    "turn": "either"
   },
-  "ability-tag | dread-host · Trajann Valoris · Trajann Valoris · Moment Shackle": "Once per battle, per army",
   "ability-timing | dread-host · Shield-Captain · Shield-Captain · Vengeful Surge": {
    "ph": [
     "shooting"
    ],
    "turn": "opp"
   },
-  "ability-tag | dread-host · Shield-Captain · Shield-Captain · Vengeful Surge": "Once per battle, per unit",
-  "ability-tag | dread-host · Shield-Captain · Shield-Captain · Master of Ka’tahs": "Once per battle round, per unit",
   "ability-timing | dread-host · Shield-Captain · Sentinel Guard Sodality · Praesidium Shield": {},
   "ability-timing | dread-host · Custodian Wardens · Living Fortress": {},
   "ability-timing | dread-host · Prosecutor Squad · Purity of Execution": {

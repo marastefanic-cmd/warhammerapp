@@ -203,7 +203,7 @@
    "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
   },
   "ability-timing | standard · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
-   "of": "0a9a30e0",
+   "of": "2365cda9",
    "reading": {
     "at": "Start of the battle round",
     "ph": [
@@ -332,6 +332,23 @@
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: weapons-have, ranged-only-keyword, ranged, overwatch)"
   },
+  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty": {
+   "of": "7522a4f2",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting",
+     "fight"
+    ],
+    "turn": "either",
+    "turns": {
+     "movement": "opp",
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
+  },
   "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Macro-extinction Protocols": {
    "of": "3c11830a",
    "reading": {
@@ -360,23 +377,6 @@
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
   },
-  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty": {
-   "of": "7522a4f2",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting",
-     "fight"
-    ],
-    "turn": "either",
-    "turns": {
-     "movement": "opp",
-     "shooting": "your"
-    }
-   },
-   "signedOff": null,
-   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
-  },
   "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Lancer · Lancer’s Duty": {
    "of": "aa5791f4",
    "reading": {
@@ -389,20 +389,16 @@
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: declare-charge, move-own)"
   },
-  "ability-timing | 4-megas-and-a-destrier · Knight Crusader · Hunter’s Eye": {
-   "of": "a3879d55",
+  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Lancer · Shock Charge": {
+   "of": "a27deaff",
    "reading": {
     "ph": [
-     "movement",
-     "shooting"
+     "charge"
     ],
-    "turn": "opp",
-    "turns": {
-     "shooting": "your"
-    }
+    "turn": "your"
    },
    "signedOff": null,
-   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
+   "why": "the signed-off lists show no label here; the program reads one (rules: named-core-stratagem)"
   },
   "ability-timing | 4-megas-and-a-destrier · Knight Crusader · Crusader’s Duty": {
    "of": "cb466686",
@@ -419,6 +415,21 @@
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: ranged, overwatch)"
   },
+  "ability-timing | 4-megas-and-a-destrier · Knight Crusader · Hunter’s Eye": {
+   "of": "a3879d55",
+   "reading": {
+    "ph": [
+     "movement",
+     "shooting"
+    ],
+    "turn": "opp",
+    "turns": {
+     "shooting": "your"
+    }
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
+  },
   "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Thundercharge": {
    "of": "3191643c",
    "reading": {
@@ -431,7 +442,7 @@
    "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
   },
   "ability-timing | super-terminators · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
-   "of": "0a9a30e0",
+   "of": "2365cda9",
    "reading": {
     "at": "Start of the battle round",
     "ph": [
@@ -465,7 +476,7 @@
    "why": "the signed-off lists show no label here; the program reads one (rules: melee-only-keyword, melee)"
   },
   "ability-timing | purge-goes-the-foe · Skitarii Rangers · Omnispex": {
-   "of": "a58b31c8",
+   "of": "94f84dee",
    "reading": {
     "ph": [
      "movement",
@@ -480,7 +491,7 @@
    "why": "the signed-off lists show no label here; the program reads one (rules: ranged, overwatch)"
   },
   "ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii] · Broad Spectrum Data-tether": {
-   "of": "d892470d",
+   "of": "3ac7021d",
    "reading": {
     "ph": [
      "command",
@@ -495,7 +506,7 @@
    "why": "the signed-off lists show no label here; the program reads one (rules: any-stratagem)"
   },
   "ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii-2] · Broad Spectrum Data-tether": {
-   "of": "d892470d",
+   "of": "3ac7021d",
    "reading": {
     "ph": [
      "command",
@@ -525,7 +536,7 @@
    "why": "the signed-off lists show no label here; the program reads one (rules: any-stratagem)"
   },
   "ability-timing | purge-goes-the-foe · Skorpius Disintegrator · Broad spectrum data-tether": {
-   "of": "6bebcdc7",
+   "of": "3ac7021d",
    "reading": {
     "ph": [
      "command",
@@ -618,6 +629,17 @@
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: melee-only-keyword, melee)"
   },
+  "ability-timing | infernal-lance · Chaos Cerastus Knight Lancer · Shock Charge": {
+   "of": "a27deaff",
+   "reading": {
+    "ph": [
+     "charge"
+    ],
+    "turn": "your"
+   },
+   "signedOff": null,
+   "why": "the signed-off lists show no label here; the program reads one (rules: named-core-stratagem)"
+  },
   "ability-timing | infernal-lance · Chaos Cerastus Knight Lancer · Dark Fervour": {
    "of": "aa9a9d49",
    "reading": {
@@ -649,7 +671,7 @@
    "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, move-own, overwatch, label-assault)"
   },
   "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers": {
-   "of": "bfc39fb4",
+   "of": "8e39f63c",
    "reading": {
     "ph": [
      "movement",
@@ -666,7 +688,7 @@
    "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
   },
   "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers": {
-   "of": "bfc39fb4",
+   "of": "8e39f63c",
    "reading": {
     "ph": [
      "movement",
@@ -683,16 +705,12 @@
    "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
   },
   "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand": {
-   "of": "5dc3c2dc",
+   "of": "16c1c520",
    "reading": {
     "ph": [
-     "movement",
      "shooting"
     ],
-    "turn": "opp",
-    "turns": {
-     "shooting": "your"
-    }
+    "turn": "your"
    },
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
@@ -715,31 +733,23 @@
    "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
   },
   "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand] · Brigand": {
-   "of": "5dc3c2dc",
+   "of": "16c1c520",
    "reading": {
     "ph": [
-     "movement",
      "shooting"
     ],
-    "turn": "opp",
-    "turns": {
-     "shooting": "your"
-    }
+    "turn": "your"
    },
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
   },
   "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand": {
-   "of": "5dc3c2dc",
+   "of": "16c1c520",
    "reading": {
     "ph": [
-     "movement",
      "shooting"
     ],
-    "turn": "opp",
-    "turns": {
-     "shooting": "your"
-    }
+    "turn": "your"
    },
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: ranged-only-keyword, ranged, overwatch)"
@@ -807,7 +817,7 @@
    "why": "the signed-off lists show no label here; the program reads one (rules: charge-move, move-own)"
   },
   "ability-timing | big-demons-baby · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
-   "of": "0a9a30e0",
+   "of": "2365cda9",
    "reading": {
     "at": "Start of the battle round",
     "ph": [
@@ -1134,8 +1144,8 @@
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: ranged, label-own-target)"
   },
-  "ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols": {
-   "of": "3c11830a",
+  "ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty": {
+   "of": "7522a4f2",
    "reading": {
     "ph": [
      "movement",
@@ -1151,8 +1161,8 @@
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
   },
-  "ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty": {
-   "of": "7522a4f2",
+  "ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols": {
+   "of": "3c11830a",
    "reading": {
     "ph": [
      "movement",

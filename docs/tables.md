@@ -69,7 +69,8 @@ text equal to the page's after normalisation stays as it is. GW's own document o
 Presence, Infected Outbreak) is declared in `verify/deviations-words.json` (`{ page, ability, app, waha, reason, evidence, gw:{ file,
 quote } }`, the quote found in `verify/.cache/gw`), as is an ability no page prints (`waha:'(none)'`); `--write` keeps a declared text, and
 a hand file's `texts` (`from` / `to`). A declaration nothing matches fails as stale. Where `words` passes, GW's page wins over New Recruit's
-printing (`verify/nr.js`).
+and BSData's printing of the words and the name (`verify/nr.js`, `verify/bsdata.js`: a mechanical rule, listed in their reports as
+`gwWords`, no per-item deviation).
 
 A faction catalogue's rows (`verify/sources/catalog`) go through the same rules: `--write` sorts their rows, keywords and Rules line in
 GW's order after the catalogue is merged in (a catalogue row with a list row's name after it, so the resolver keeps finding the list's
