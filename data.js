@@ -6177,7 +6177,7 @@ const DATASHEETS = {
   ],
   abilities:[
     // the three Wrathful Presence abilities: Angron has the one selected at the start of the battle round
-    { name:'The Blood God’s Favour', who:'Wrathful Presence: pick one', text:'Each time you make a **Blessings of Khorne roll**, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.' },
+    { name:'The Blood God’s Favour', who:'Wrathful Presence: pick one', at:'Start of the battle round', ph:['command'], turn:'either', text:'Each time you make a **Blessings of Khorne roll**, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.' },
     { name:'Overwhelming Wrath', who:'Wrathful Presence: pick one', tag:'Aura', ph:['movement'], turn:'opp', text:'Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.' },
     // GW Faction Pack Rules Update wording (BSData has it too)
     { name:'Driven by Ultimate Rage', who:'Wrathful Presence: pick one', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **WORLD EATERS** unit is within 6" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.' },
@@ -8251,7 +8251,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Lancer’s Duty', tag:'Bondsman', text:'While a model is affected by this ability, it is eligible to declare a charge in a turn in which it Advanced.' },
-    { name:'Shock Charge', text:'You can target this model with the **Crushing Impact** Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.' },
+    { name:'Shock Charge', ph:['charge'], turn:'your', text:'You can target this model with the **Crushing Impact** Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.' },
     { name:'Damaged: 1-10 Wounds Remaining', damaged:'1-10', text:'While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'3a172fd2' }
   ],
   // abilities that change this unit's attacks, shown inside its weapon tables
@@ -8500,7 +8500,7 @@ const DATASHEETS = {
     // start or end of any turn." (deviations-nr.json, deviations-bsdata.json)
     { name:'Objective Scouted', ph:['command'], turn:'your', text:'At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
     // already in the weapons' keywords (their IGNORES COVER is marked as from the Omnispex)
-    { name:'Omnispex', text:'Ranged weapons equipped by models in the bearer’s unit have the **[IGNORES COVER]** ability.' }
+    { name:'Omnispex', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Ranged weapons equipped by models in the bearer’s unit have the **[IGNORES COVER]** ability.' }
   ],
   rules:['Scouts 6"','Doctrina Imperatives','Rapid Fire','Anti','Devastating Wounds','Hazardous','Heavy','Precision'],
   kw:['Infantry','Battleline','Imperium','Skitarii','Rangers','Faction: Adeptus Mechanicus']
@@ -8519,7 +8519,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Elevated Strider', ph:['movement','shooting'], turn:'your', text:'This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.' },
-    { name:'Broad Spectrum Data-tether', text:'Each time you target this unit with a **Stratagem**, roll one D6: on a 5+, you gain 1CP.' }
+    { name:'Broad Spectrum Data-tether', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Each time you target this unit with a **Stratagem**, roll one D6: on a 5+, you gain 1CP.' }
   ],
   rules:['Deadly Demise 1','Doctrina Imperatives','Sustained Hits'],
   kw:['Vehicle','Walker','Smoke','Imperium','Skitarii','Ironstrider Ballistarii','Faction: Adeptus Mechanicus']
@@ -8568,7 +8568,7 @@ const DATASHEETS = {
     { name:'Armoured hull', range:'Melee', A:'3', WS:'4+', S:'6', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Broad spectrum data-tether', text:'Each time you target this unit with a **Stratagem**, roll one D6: on a 5+, you gain 1CP.' },
+    { name:'Broad spectrum data-tether', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Each time you target this unit with a **Stratagem**, roll one D6: on a 5+, you gain 1CP.' },
     { name:'Blistering Salvoes', text:'Each time this model makes an attack with a belleros energy cannon that targets an **INFANTRY** unit, add 1 to the **Hit roll**. Each time this model makes an attack with a ferrumite cannon that targets a **MONSTER** or **VEHICLE** unit, add 1 to the Hit roll.' },
     { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'9c4d4e20' }
   ],
@@ -8835,7 +8835,7 @@ const DATASHEETS = {
     { name:'sweep', group:'Cerastus shock lance', range:'Melee', A:'10', WS:'2+', S:'10', AP:'-2', D:'3', kw:[] }
   ],
   abilities:[
-    { name:'Shock Charge', text:'You can target this model with the **Crushing Impact** Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.' },
+    { name:'Shock Charge', ph:['charge'], turn:'your', text:'You can target this model with the **Crushing Impact** Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.' },
     { name:'Dark Fervour', tag:'Aura', text:'While a friendly **WAR DOG** model is within 6" of this model, ranged weapons equipped by that War Dog model have the **[ASSAULT]** ability.' },
     { name:'Damaged: 1-10 wounds remaining', damaged:'1-10', text:'While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'40b115a5' }
   ],
@@ -8894,7 +8894,7 @@ const DATASHEETS = {
   abilities:[
     { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' },
     { name:'Methodical Destruction', at:'Start of the first battle round', ph:['command','shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the **Wound roll**. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim.' },
-    { name:'Close-range Killers', tag:'Aura', text:'While a friendly **WAR DOG** model is within 9" of this model, each time that **WAR DOG** model makes an attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.' },
+    { name:'Close-range Killers', tag:'Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While a friendly **WAR DOG** model is within 9" of this model, each time that **WAR DOG** model makes an attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.' },
     { name:'Damaged: 1-9 wounds remaining', damaged:'1-9', text:'While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'214508e4' }
   ],
   // abilities that change this unit's attacks, shown inside its weapon tables
@@ -8942,7 +8942,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.', defOf:'08e20e06' },
-    { name:'Brigand', text:'Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.' },
+    { name:'Brigand', ph:['shooting'], turn:'your', text:'Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.' },
     { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'44dd308a' }
   ],
   // abilities that change this unit's attacks, shown inside its weapon tables
@@ -14456,7 +14456,7 @@ const TABLE_ORDER = {
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
   ranged:['group','fireAll','name','who','n','carrier','enh','hunter','range','A','BS','S','AP','D','kw','own','from'],
   melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],
-  abilities:['name','who','tag','at','damaged','na','ph','turn','note','def','turns','text','riled','defOf','readOf']
+  abilities:['name','who','tag','at','na','damaged','ph','turn','note','def','turns','text','riled','defOf','readOf']
 };
 // Each unit entry of ARMIES names its datasheet (ds: an id of DATASHEETS; a list of them for an attached unit: the leader,
 // the other characters, the bodyguard) and holds only what the list chose. The app gets each unit as one object: the

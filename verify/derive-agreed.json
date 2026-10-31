@@ -5585,6 +5585,121 @@
     "shooting"
    ],
    "turn": "your"
+  },
+  "ability-timing | standard · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Lancer · Shock Charge": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | super-terminators · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | purge-goes-the-foe · Skitarii Rangers · Omnispex": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii] · Broad Spectrum Data-tether": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii-2] · Broad Spectrum Data-tether": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | purge-goes-the-foe · Skorpius Disintegrator · Broad spectrum data-tether": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | infernal-lance · Chaos Cerastus Knight Lancer · Shock Charge": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand] · Brigand": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | big-demons-baby · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
   }
  }
 }
