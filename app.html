@@ -1482,6 +1482,9 @@ function fnCond(id, p, u, giver, own){
 }
 const FN_ROW = { a:'A', s:'S', ap:'AP', d:'D' };   // a characteristic a box adds to, as the weapon row shows it ("8 (+6)")
 const FN_SET = { aSet:'A' };                       // one it sets ("7/10")
+const FN_RANGED = new Set(['range', 'bsSet', 'assault', 'heavy', 'indirect', 'pistol']);   // effects only ranged attacks have
+const FN_IF = 'If (see the rule)';   // a condition that is only GW's words, left to its rule's words
+const FN_NC = 'not counted here: see the rule';   // words of a rule about its attacks that no catalogue effect reads (BOXES nc atk)
 // the weapons of the unit a box's scope names (by name, or a weapon keyword), of this kind
 const fnWeapons = (u, kind, sc) => { const lc = x => String(x || '').toLowerCase().replace(/[’']/g, "'");
   return weaponItems(kind === 'ranged' ? u.ranged || [] : u.melee || []).filter(it => (!sc.weapon || it.profiles.some(p => [p.name, it.group, itemName(it)].some(x => lc(x) === sc.weapon || lc(x).startsWith(sc.weapon))))
@@ -1497,7 +1500,8 @@ function fnLine(S, b, u, kind, ab){
   // [ASSAULT] for a unit whose ranged weapons all have it)
   const its = ws || weaponItems(kind === 'ranged' ? u.ranged || [] : u.melee || []);
   const hasAll = l => /^\[.+\]$/.test(l) && its.length && its.every(it => it.profiles.every(w => (w.kw || []).some(k => '[' + String(k).toUpperCase() + ']' === l)));
-  const baked = S.baked || [], keep = fx => (fx || []).filter(([id, p]) => !dmBaked(baked, id, p) && !hasAll(E.fxLabel([[id, p]])));
+  // (nor, for melee attacks, an effect only ranged attacks have: range, a set BS, [ASSAULT], [HEAVY], [INDIRECT FIRE], [PISTOL])
+  const baked = S.baked || [], keep = fx => (fx || []).filter(([id, p]) => !dmBaked(baked, id, p) && !hasAll(E.fxLabel([[id, p]])) && !(kind === 'melee' && FN_RANGED.has(id)));
   // (a keyword or wargear of the unit the box needs, "If this model has the TOZEENTCH keyword": the unit's keywords and weapons say it)
   const wn = [].concat(u.ranged || [], u.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase());
   if((b.on || []).some(([id, p]) => (id === 'selfKw' && !hasKw(u, p)) || (id === 'selfGear' && !p.every(g => wn.some(n => n.startsWith(String(g).toLowerCase())))))) return null;
@@ -1508,11 +1512,14 @@ function fnLine(S, b, u, kind, ab){
   // (none: every attack of its kind; a stratagem's line names it with its cost instead)
   // (a stratagem's one phase, from its derived phases and turn: "Your Shooting phase", "Fight phase", the detachment's line says it once)
   const sPh = S.s && (S.s.phases || []).length === 1 ? (T => (T === 'your' ? 'Your ' : T === 'opp' ? 'Your opponent’s ' : '') + PHASE_NAME[S.s.phases[0]] + ' phase')(phTurn(S.s, S.s.phases[0])) : '';
-  // (a condition that is only GW's words, quoted, is not said: the rule's name opens them, effects.js condLabel; with no other condition
-  // the line is its effect and its rule)
-  const said = (b.on || []).filter(([id]) => !(E.COND[id] && E.COND[id].quoted));
-  const when = [sPh, said.map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ')].filter(Boolean).join(', ') || (S.strat || said.length < (b.on || []).length ? '' : b.kind === 'ranged' ? 'Every ranged attack' : b.kind === 'melee' ? 'Every melee attack' : 'Every attack');
-  const conds = on => (on || []).filter(([id]) => !(E.COND[id] && E.COND[id].quoted)).map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ');
+  // (its conditions, each said; one that is only GW's words, quoted, is said too beside another, so the line is never wider than GW's
+  // rule. A box whose only conditions are quoted says "If (see the rule)" (FN_IF), the rule's name opening its words: the owner's
+  // decision, 31 Oct, never shown as always on. "Every attack": no condition at all, in the box or its options)
+  const quoted = ([id]) => !!(E.COND[id] && E.COND[id].quoted), on = b.on || [];
+  const conds = on => (on || []).map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ');
+  const onlyQ = on.length && on.every(quoted);
+  const anyPickOn = (b.pick || []).some(p => (p.on || []).length || p.part);
+  const when = [sPh, onlyQ ? FN_IF : conds(on)].filter(Boolean).join(', ') || (S.strat || anyPickOn ? '' : b.kind === 'ranged' ? 'Every ranged attack' : b.kind === 'melee' ? 'Every melee attack' : 'Every attack');
   const part = x => x && x.fx && x.fx.length ? ' (' + (conds(x.on) ? conds(x.on) + ': ' : '') + E.fxLabel(x.fx) + ')' : '';
   let note, fx = null;
   if(b.pick){ const ps = b.pick.map(p => Object.assign({}, p, { fx:keep(p.fx) })).filter(p => p.fx.length);
@@ -1522,7 +1529,7 @@ function fnLine(S, b, u, kind, ab){
       return (p.name !== E.fxLabel(p.fx) ? p.name + ': ' : '') + E.fxLabel(p.fx) + (conds(pon) ? ' (' + conds(pon) + ')' : '') + part(p.part); }).join(' · ');
     note = 'one of: ' + note; }
   else { fx = keep(b.fx); if(!fx.length) return null; note = E.fxLabel(fx) + part(b.part); }
-  const who = ws ? ws.map(itemName).join(', ') : sc.models === 'char' ? 'CHARACTER models' : sc.models === 'nonchar' ? 'Models (not CHARACTER)' : sc.models === 'one' ? 'One model' :
+  const who = ws ? [...new Set(ws.map(itemName))].join(', ') : sc.models === 'char' ? 'CHARACTER models' : sc.models === 'nonchar' ? 'Models (not CHARACTER)' : sc.models === 'one' ? 'One model' :
     sc.part ? sc.part + ' models' : sc.models === 'model' && ab && ab.who && u.leads ? ab.who : '';
   const m = { kind:b.kind, when, note, who, from:S.name, box:b, key:S.key };
   if(S.rule) m.rule = S.rule;
@@ -1556,9 +1563,17 @@ function unitMods(u, kind){
       const m = fnLine(S, b, u, kind, S.ab);
       if(m) out.push(m);
     }
+    // (words about its attacks no catalogue effect reads, BOXES nc atk: "not counted here: see the rule", the name opening them; not
+    // another unit's (its words may not reach this one), not a Damaged band's (its band says so))
+    if(!S.damaged && S.grp !== 'other' && (o.nc || []).some(x => x.atk) && !out.some(x => x.key === S.key && x.ncLine)) out.push(Object.assign({ kind:'all', when:'', note:FN_NC, who:'', from:S.name, key:S.key, box:null, ncLine:true },
+      S.rule ? { rule:S.rule } : {}, S.strat ? { strat:S.strat, cp:S.cp } : {}));
   }
   return out;
 }
+// a Damaged band's words: what its boxes do (effects.js labels); with words of it they do not count (Szarekh's halved Attacks, the Tesseract
+// Vault's C'tan Powers), or none, "see the rule", which opens its words
+const dmgBand = ab => { const o = (D.boxes || {})[DM_KEY.a(ab)] || {};
+  return [WH_EFFECTS.fxLabel((o.b || []).flatMap(b => b.fx || [])), (o.nc || []).length || !(o.b || []).length ? 'see the rule' : ''].filter(Boolean).join('; '); };
 // the footnotes the weapon tables show (datasheet, Ranged and Melee screens)
 const shownMods = (u, kind) => unitMods(u, kind);
 // phases and turn: turns can override the turn for one phase ("your Shooting phase or the Fight phase")
@@ -4549,7 +4564,8 @@ function stratModLines(det, list, u, hasHunter){
 function modGroupLines(mods, u, hasHunter){
   const groups = new Map();
   // (a footnote with no condition said, its rule's words being its condition, is a line of its own)
-  for(const m of mods){ const k = m.when ? norm(m.when) : '\0' + groups.size; if(!groups.has(k)) groups.set(k, { when:m.when, items:[] }); groups.get(k).items.push(m); }
+  // (by condition and by source: two rules with the same condition are two lines)
+  for(const m of mods){ const k = m.when ? norm(m.when) + '\0' + m.from : '\0' + groups.size; if(!groups.has(k)) groups.set(k, { when:m.when, items:[] }); groups.get(k).items.push(m); }
   return [...groups.values()].map(g => {
     const named = g.items.length === 1 && g.when.indexOf(g.items[0].from) >= 0 ? g.items[0] : null;
     const when = riledWhen(named ? esc(g.when).replace(esc(named.from), modFrom(named, u)) : esc(g.when), u);
@@ -4701,7 +4717,7 @@ function unitWeapons(u){
       (own.length ? '<div class="mods">' + modLines(own, u, hasHunter) + '</div>' : ''); };
   const byWhen = new Map();
   // (a footnote with no condition said is a group of its own: its box is its kind's)
-  for(const x of notes){ const k = x.when ? norm(x.when) : '\0' + byWhen.size; byWhen.set(k, (byWhen.get(k) || []).concat(x)); }
+  for(const x of notes){ const k = x.when ? norm(x.when) + '\0' + x.from : '\0' + byWhen.size; byWhen.set(k, (byWhen.get(k) || []).concat(x)); }
   const only = sc => [...byWhen.values()].filter(g => g.every(x => x.scope === sc)).flat().map(x => Object.assign({}, x, { scope:'' }));
   const rest = [...byWhen.values()].filter(g => !g.every(x => x.scope && x.scope === g[0].scope)).flat();
   // footnotes for ranged and melee attacks alike go first, so neither phase's reader skips them
@@ -4900,11 +4916,10 @@ function screenUnit(){
     // (a fold, closed until opened and kept open for the session, as the Overview's army rules: its count on its line, a line each)
     (def.length ? '<details class="def tgt" data-tgfold="' + esc(tgKey) + '"' + (openStrats.has(tgKey) ? ' open' : '') + '><summary><span class="il">When targeted</span><span class="x">' + def.length + '</span>' + chev + '</summary>' +
       '<div class="tgls">' + def.map(x => '<div class="tgl">' + defLine(x, u) + '</div>').join('') + '</div></details>' : '') +
-    // (a Damaged band: its range and what its boxes do (effects.js labels); words of it they do not count (Szarekh's halved Attacks), or
-    // none: "see the rule", which opens its words)
+    // (a Damaged band: dmgBand)
     u.abilities.filter(ab => ab.damaged).map(ab => { const o = (D.boxes || {})[DM_KEY.a(ab)] || {}, fx = (o.b || []).flatMap(b => b.fx || []);
       const psy = fx.some(([id]) => id === 'hit') && [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => /^psychic/i.test(k)));
-      const says = [WH_EFFECTS.fxLabel(fx), (o.nc || []).length ? 'see the rule' : ''].filter(Boolean).join('; ');
+      const says = dmgBand(ab);
       return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), says || 'see the rule') +
         (psy ? ' <span class="from">(' + linkTo('rule', 'Psychic', '[PSYCHIC]') + ' weapons can ignore it)</span>' : '') + '</div>'; }).join('') + '</div></section>';
   const abilities = abil.length ? '<section class="dbx" id="sec-abilities"><div class="dh2"><span>Abilities</span></div>' + abilityRows(abil, u, { suffix:true }) + '</section>' : '';

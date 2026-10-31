@@ -32,7 +32,7 @@ const X = require('./effects-extract');
 const T = require('./tables');
 const M = require('./effects-migrate');
 
-const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine']);
+const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod']);
 const D = dm.D, A = dm.app, fails = [], stats = {};
 const fail = (g, where, what) => fails.push(g + ' ' + where + ': ' + what);
 
@@ -83,7 +83,8 @@ const RETIRED = new Set(['mods', 'aura', 'mod', 'help', 'riled', 'calcNote', 'fi
 //   A set: "N"); when the conditions' labels, " · " between, with the fixed forms of app.html fnCond, or "Every [ranged / melee] attack"
 const lc = x => String(x || '').toLowerCase().replace(/[’']/g, "'");
 const ROW = { a:'A', s:'S', ap:'AP', d:'D' }, SET = { aSet:'A' };
-const used = b => (b.on || []).some(x => x[0] === 'used');   // (an ability the unit uses: the player's, never in the weapon's row)
+const used = b => (b.on || []).some(x => x[0] === 'used');
+const RANGED_FX = new Set(['range', 'bsSet', 'assault', 'heavy', 'indirect', 'pistol']);   // (effects only ranged attacks have)   // (an ability the unit uses: the player's, never in the weapon's row)
 const hasK = (u, k) => (u.kw || []).some(x => x.toLowerCase() === String(k).toLowerCase());
 const mc = u => u.models.reduce((t, m) => t + (parseInt(m, 10) || 1), 0);
 const condWords = (id, p, u, giver, own) => { const C = E.COND[id];
@@ -92,7 +93,7 @@ const condWords = (id, p, u, giver, own) => { const C = E.COND[id];
   if(id === 'belowStarting' && mc(u) === 1) return 'Lost any wounds (' + C.label(p) + ')';
   if(id === 'belowHalf' && mc(u) === 1) return (Math.ceil((parseInt(u.stats[0].W, 10) || 0) / 2) - 1) + ' or fewer wounds left (' + C.label(p) + ')';
   return C.label(p); };
-let nLines = 0, nRows = 0;
+let nLines = 0, nRows = 0, nNc = 0;
 { const STAT = { a:['A'], s:['S'], d:['D'], ap:['AP'], skill:['WS', 'BS'] };
   const baked = (keys, id, p) => { if(!keys || !keys.length) return false; if(STAT[id]) return STAT[id].some(k => keys.includes(k));
     const l = String(E.fxLabel([[id, p]])).replace(/^\[|\]$/g, '').toUpperCase(), kws = keys.filter(k => !/^(?:A|S|D|AP|WS|BS)$/.test(k)); return !!l && kws.some(k => k.startsWith(l) || l.startsWith(k)); };
@@ -118,11 +119,15 @@ let nLines = 0, nRows = 0;
         if(ws && !ws.length) continue;
         // (a weapon ability every weapon it reaches has already says nothing)
         const its = ws || items(u, kind), hasAll = l => /^\[.+\]$/.test(l) && its.length && its.every(it => it.ps.every(w => (w.kw || []).some(k => '[' + String(k).toUpperCase() + ']' === l)));
-        const keep = fx => (fx || []).filter(([id, p]) => !baked(bk, id, p) && !hasAll(E.fxLabel([[id, p]])));
+        const keep = fx => (fx || []).filter(([id, p]) => !baked(bk, id, p) && !hasAll(E.fxLabel([[id, p]])) && !(kind === 'melee' && RANGED_FX.has(id)));
         if((b.on || []).some(([id, p]) => (id === 'selfKw' && !hasK(u, p)) || (id === 'selfGear' && !p.every(g => wn.some(n => n.startsWith(String(g).toLowerCase())))))) continue;
         if(b.pick ? !b.pick.some(p => keep(p.fx).length) : !keep(b.fx).length) continue;
         want.push({ S, b, ws, keep });
-      } }
+      }
+      // (its words about its attacks no catalogue effect reads: one "not counted here: see the rule" line; not another unit's, not a band's)
+      if(!S.damaged && S.grp !== 'other' && (o.nc || []).some(x => x.atk)){ const ms = got.filter(m => m.ncLine && m.key === S.key);
+        if(ms.length !== 1) fail('L4', where, S.name + ': its words not counted, ' + ms.length + ' "see the rule" lines');
+        else if(ms[0].note !== 'not counted here: see the rule' || ms[0].when) fail('L3', where, S.name + ' not-counted line “' + ms[0].note + '”'); else nNc++; } }
     // exactly these, once each
     for(const w of want){ const ms = got.filter(m => m.box === w.b && m.key === w.S.key);
       if(ms.length !== 1){ fail('L4', where, (ms.length ? ms.length + ' footnotes' : 'no footnote') + ' for the box of ' + w.S.name + ' “' + X.plainCase(w.b.quote).slice(0, 70) + '”'); continue; }
@@ -132,7 +137,7 @@ let nLines = 0, nRows = 0;
       const giver = w.S.src && w.S.src !== u ? (g => g && g.who && w.S.src.leads ? g.who : w.S.src.short || w.S.src.name)((w.S.src.abilities || []).find(x => x.name === w.S.name)) : '';
       const gv = giver && w.S.src.leads && ![w.S.src.name].concat((w.S.src.also || []).map(c => c.name)).includes(giver) ? w.S.src.short || w.S.src.name : giver;
       const own = w.S.grp === 'unit' && w.b.mark === 'aura';
-      const cw = on => (on || []).filter(([id]) => !E.COND[id].quoted).map(([id, p]) => condWords(id, p, u, gv, own)).join(' · ');
+      const cw = on => (on || []).map(([id, p]) => condWords(id, p, u, gv, own)).join(' · ');
       const part = x => x && x.fx && x.fx.length ? ' (' + (cw(x.on) ? cw(x.on) + ': ' : '') + E.fxLabel(x.fx) + ')' : '';
       if(m.set){ nRows++;
         if(!fx || !w.ws || w.ws.length !== 1 || w.S.damaged || w.S.strat || used(w.b) || !fx.every(([id]) => ROW[id] || SET[id])) fail('L3', where, 'a row value of ' + w.S.name + ' that is no one weapon\'s characteristic');
@@ -145,14 +150,17 @@ let nLines = 0, nRows = 0;
         if(fx && w.ws && w.ws.length === 1 && !w.ws[0].group && !w.S.damaged && !w.S.strat && !used(w.b) && fx.every(([id]) => ROW[id] || SET[id])) fail('L3', where, w.S.name + ': one weapon\'s characteristic, not in its row'); }
       // L5 its conditions' words
       const sPh = w.S.s && (w.S.s.phases || []).length === 1 ? ((w.S.s.turns && w.S.s.turns[w.S.s.phases[0]]) || w.S.s.turn) : null;
-      const cond = cw(w.b.on);
-      const expW = sPh ? [(sPh === 'your' ? 'Your ' : sPh === 'opp' ? 'Your opponent’s ' : '') + w.S.s.phases[0].replace(/^./, c => c.toUpperCase()) + ' phase', cond].filter(Boolean).join(', ') : cond || (w.S.strat || (w.b.on || []).some(([id]) => E.COND[id].quoted) ? '' : w.b.kind === 'ranged' ? 'Every ranged attack' : w.b.kind === 'melee' ? 'Every melee attack' : 'Every attack');
+      const on = w.b.on || [], cond = on.length && on.every(([id]) => E.COND[id].quoted) ? 'If (see the rule)' : cw(on);
+      const pickOn = (w.b.pick || []).some(p => (p.on || []).length || p.part);
+      const expW = sPh ? [(sPh === 'your' ? 'Your ' : sPh === 'opp' ? 'Your opponent’s ' : '') + w.S.s.phases[0].replace(/^./, c => c.toUpperCase()) + ' phase', cond].filter(Boolean).join(', ') : cond || (w.S.strat || pickOn ? '' : w.b.kind === 'ranged' ? 'Every ranged attack' : w.b.kind === 'melee' ? 'Every melee attack' : 'Every attack');
+      // (never wider than GW's rule: every condition of the box is said, or the line says "If (see the rule)")
+      if(on.some(([id]) => !E.COND[id].quoted) && on.some(([id, p]) => E.COND[id].quoted && !m.when.includes(E.COND[id].label(p)))) fail('L5', where, w.S.name + ': a quoted condition left out beside a said one');
       if(m.when !== expW) fail('L5', where, w.S.name + ' when “' + m.when + '”, its box “' + expW + '”');
     }
     // L2 nothing else: every footnote is one of these boxes
-    for(const m of got) if(!want.some(w => w.b === m.box && w.S.key === m.key)) fail('L2', where, 'the footnote of ' + m.from + ' “' + m.note + '” is no box the database gives this unit');
+    for(const m of got) if(!m.ncLine && !want.some(w => w.b === m.box && w.S.key === m.key)) fail('L2', where, 'the footnote of ' + m.from + ' “' + m.note + '” is no box the database gives this unit');
   } }
-stats.footnotes = nLines; stats.rowValues = nRows;
+stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
 // L6 the code: the footnotes, the weapon rows and the Damaged band read no reading's words (note, when, selfWhen), no retired column and
 // no rule's number written in the code
 { const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');
@@ -165,22 +173,51 @@ stats.footnotes = nLines; stats.rowValues = nRows;
     const NUM = /'[^'\n]*(?:\+\d|\bwithin \d+"|BS improved|to wound|to hit|\[[A-Z][A-Z ]+\])[^'\n]*'/;
     if(NUM.test(c)) fail('L6', 'app.html ' + name, 'a rule\'s number or weapon ability written in the code: ' + NUM.exec(c)[0]);
   }
-  const band = (html.split('// (a Damaged band: its range')[1] || '').split('\n').slice(0, 6).join('\n');
-  if(!band || /\.mods\b|m\.note\b/.test(band)) fail('L6', 'app.html screenUnit', 'the Damaged band reads no box: ' + (band ? 'a reading’s note' : 'not found'));
+  if(!/const says = dmgBand\(ab\);/.test(html)) fail('L6', 'app.html screenUnit', 'the Damaged band is not dmgBand');
   if(/Riled up: 5\+ INV|'\[ASSAULT\]'|Made a charge move this turn|BS improved by 1/.test(fnSrc('unitMods') + fnSrc('shownMods'))) fail('L6', 'app.html', 'a rule written in the footnotes\' code'); }
-// L8 every catalogue effect and condition has its words: a box of it alone renders its label (app.html fnLine, fnCond)
+// L8 every catalogue effect and condition says its own value: each label of each value of its domain carries that value, its sign and
+// its keywords (a wrong number in effects.js fails here, not only in the snapshots), and a box of it alone renders that label
 { let n = 0; const u0 = { id:'x', name:'X', kw:[], models:['2× X'], stats:[{ W:'4' }], abilities:[], rules:[], ranged:[{ name:'Gun', kw:[] }], melee:[] };
-  for(const [id, f] of Object.entries(E.FX)){ const p = f.dom === 'anti' ? 'INFANTRY 4+' : f.dom[0], m = A.fnLine({ grp:'army', name:'R', key:'r|x' }, { quote:'', fx:[[id, p]], on:[], kind:'all' }, u0, 'ranged', null);
-    if(!m || m.note !== f.label(p)) fail('L8', 'effects.js ' + id, 'a box of it alone says “' + (m && m.note) + '”, not “' + f.label(p) + '”'); else n++; }
-  for(const [id, c] of Object.entries(E.COND)){ const p = { aura:6, maxT:3, targetKw:{ any:['Infantry'] }, selfKw:'X', selfGear:['gun'], opt:'Option', q:'If words', anyOf:['A', 'B'] }[id] || true;
-    const m = A.fnLine({ grp:'army', name:'R', key:'r|x' }, { quote:'', fx:[['hit', 1]], on:[[id, p]], kind:'all' }, u0, 'ranged', null);
-    if(id === 'selfKw' || id === 'selfGear'){ n++; continue; }   // (a keyword or wargear the unit lacks: no footnote at all)
-    if(!m || m.when !== (c.quoted ? '' : c.label(p))) fail('L8', 'effects.js ' + id, 'a box of it alone says “' + (m && m.when) + '”, not “' + c.label(p) + '”'); else n++; }
+  const dash = t => String(t).replace(/[−–]/g, '-');
+  for(const [id, f] of Object.entries(E.FX)){
+    for(const p of f.dom === 'anti' ? ['INFANTRY 4+', 'NON-VEHICLE 2+'] : f.dom){ const l = dash(f.label(p));
+      if(typeof p === 'number' && !new RegExp('(?:^|[^\\d])' + (p < 0 ? '-' : '\\+?') + Math.abs(p) + '(?![\\d])').test(l)) fail('L8', 'effects.js ' + id, 'its label for ' + p + ' is “' + l + '”');
+      else if(typeof p === 'number' && p > 0 && /(?:^|\s)-\d/.test(l)) fail('L8', 'effects.js ' + id, 'its label for ' + p + ' is negative: “' + l + '”');
+      else if(typeof p === 'string' && !l.toUpperCase().includes(p.toUpperCase())) fail('L8', 'effects.js ' + id, 'its label for ' + p + ' is “' + l + '”');
+      else n++; }
+    // (read back: a label whose words a pattern reads gives the same value; the bracketed weapon abilities and the characteristics)
+    const p = f.dom === 'anti' ? 'INFANTRY 4+' : f.dom[0], back = X.findFx(E.norm(f.label(p))).fx.find(x => x[0] === id);
+    if(back && String(back[1]).toUpperCase() !== String(p).toUpperCase()) fail('L8', 'effects.js ' + id, 'its label “' + f.label(p) + '” reads back as ' + back[1]);
+    const m = A.fnLine({ grp:'army', name:'R', key:'r|x' }, { quote:'', fx:[[id, p]], on:[], kind:'all' }, u0, 'ranged', null);
+    if(!m || m.note !== f.label(p)) fail('L8', 'effects.js ' + id, 'a box of it alone says “' + (m && m.note) + '”, not “' + f.label(p) + '”'); }
+  const CV = { aura:[[3, '3"'], [6, '6"'], [9, '9"']], maxT:[[6, 'T 7+'], [3, 'T 4+']], targetKw:[[{ any:['Monster', 'Vehicle'] }, 'MONSTER or VEHICLE'], [{ none:['Monster', 'Vehicle'] }, 'not MONSTER/VEHICLE'], [{ all:['Psyker', 'Character'] }, 'PSYKER CHARACTER']],
+    selfKw:[['Khorne', 'KHORNE']], selfGear:[[['gun', 'axe'], 'gun and axe']], opt:[['Option', 'Option']], q:[['If words', '“If words”']], anyOf:[[['A', 'B'], '“A” or “B”']] };
+  for(const [id, c] of Object.entries(E.COND)){
+    for(const [p, want] of CV[id] || [[true, null]]){ const l = c.label(p); if(want && !l.includes(want)) fail('L8', 'effects.js ' + id, 'its label for ' + JSON.stringify(p) + ' is “' + l + '”, not with “' + want + '”'); else n++; }
+    if(id === 'selfKw' || id === 'selfGear') continue;   // (a keyword or wargear the unit lacks: no footnote at all)
+    const p = (CV[id] || [[true]])[0][0], m = A.fnLine({ grp:'army', name:'R', key:'r|x' }, { quote:'', fx:[['hit', 1]], on:[[id, p]], kind:'all' }, u0, 'ranged', null);
+    const exp = c.quoted ? 'If (see the rule)' : c.label(p);
+    if(!m || m.when !== exp) fail('L8', 'effects.js ' + id, 'a box of it alone says “' + (m && m.when) + '”, not “' + exp + '”'); }
   stats.labels = n; }
+// LB the Damaged band: its words are its boxes' effect labels, and "see the rule" where its words have a part not counted or no box
+{ let n = 0;
+  for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) if(ab.damaged){ const o = (D.boxes || {})[M.KEY.ability(ab)] || {};
+    const exp = [E.fxLabel((o.b || []).flatMap(b => b.fx || [])), (o.nc || []).length || !(o.b || []).length ? 'see the rule' : ''].filter(Boolean).join('; ');
+    const got = A.inArmy(a, () => A.dmgBand(ab)); if(got !== exp) fail('LB', a.id + '/' + u.id + ' · ' + ab.name, 'the band says “' + got + '”, its boxes “' + exp + '”'); else n++; }
+  stats.bands = n; }
+// LG the lines as drawn (modLines): one line for each condition and source, its source's name in it, no two sources on one line
+{ let n = 0;
+  for(const a of D.armies) for(const u of a.units) for(const kind of ['ranged', 'melee']){ if(!((kind === 'ranged' ? u.ranged : u.melee) || []).length) continue;
+    const ms = A.inArmy(a, () => A.unitMods(u, kind)).filter(m => !A.rowMod(m, u) && !m.strat), html = A.inArmy(a, () => A.modLines(ms, u, false));
+    const lines = html.split('<div class="mod">').slice(1).map(l => l.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"'));
+    const groups = new Set(ms.map(m => m.when ? m.when + '\0' + m.from : Math.random()));
+    if(lines.length !== groups.size) fail('LG', a.id + '/' + u.id + ' ' + kind, lines.length + ' lines for ' + groups.size + ' conditions and sources');
+    for(const l of lines){ const froms = [...new Set(ms.map(m => m.from))].filter(f => l.includes(f) && !ms.some(x => x.from !== f && x.from.includes(f) && l.includes(x.from)));
+      if(froms.length !== 1 && !(froms.length > 1 && froms.every(f => l.includes(f)) && ms.filter(m => froms.includes(m.from)).some(m => froms.some(f => f !== m.from && m.when.includes(f))))) fail('LG', a.id + '/' + u.id + ' ' + kind, 'a line names ' + froms.length + ' sources: “' + l.slice(0, 90) + '”'); else n++; } }
+  stats.grouped = n; }
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/lines.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges and ' + stats.limits + ' once-per-battle chips as their words give them' +
-  '; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels; ' + stats.labels + ' catalogue labels rendered');
+console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges and ' + stats.limits + ' once-per-battle chips as their words give them; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);
