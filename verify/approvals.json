@@ -4049,6 +4049,12 @@
   "at": "2026-10-30",
   "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Overrun), read against the faction page."
  },
+ "3563b256672cd13c": {
+  "verdict": "ok",
+  "by": "review:healybois-3",
+  "at": "2026-10-31",
+  "why": "GW: \"The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\\\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.\" Melee, +1 A, from that first time to the end of the battle (lasts battle), the condition as GW says it; not baked into the profiles (it is a battle condition). The +1 S is in the profiles (S 9→10, 7→8, 5→6 checked against DATASHEETS hive-tyrant and tyrant-guard), marked + from BSData's modifier. Re-review: unchanged (same key)."
+ },
  "35ae05852210a8fd": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -4330,6 +4336,12 @@
   "by": "review:code3",
   "at": "2026-10-17",
   "why": "Re-review of the changed Uses per battle → Rules part. app.html line 1516 now has: ruleOnce = perBattle(r) && !/per battle\\b(?! round)[^.)]*\\bper unit\\b/i.test(r.text). I ran this filter over every army rule and detachment rule in data.js:\n- Higher Imperatives (its text gives NORN units Protean Purpose \"(Once per battle, per unit)\") → excluded. Its uses are counted only on the four Norn units’ Protean Purpose rows, 1 box each via copyKey, which matches \"per unit\".\n- War Cry (tag \"Once per battle, per army\"), Shadow in the Warp (\"once per battle … you can unleash\") and Kindred Sorcery (\"select each of these abilities once per battle\", 1 box per option) → kept, as before.\nSo nidzillas now gets: Rules: Shadow in the Warp (1 box); Abilities: Protean Purpose ×4 units and Resilient Organism unit 1 of 2 / 2 of 2; Stratagems: Insane Bravery. That matches the words. The rest of the function is unchanged from the version I passed: the reserves line against 20.01/20.03, Deep Strike and Scouts \"every model\", transports, the first-round and every-round lines, Read Mission Objectives, and the list facts.\nNotes, no wrong output today:\n(a) The per-unit test reads r.text only. A rule whose \"per unit\" scope is printed only in its tag would still get an army box. No current army or detachment rule has such a tag.\n(b) The latent \"infiltrat\" / \"\\bdeploy\" items are left as they were, as stated.\n(c) verify/out/snapshots/nidzillas.txt (19:08) is older than this app.html edit (19:22) and still shows the Higher Imperatives line. Re-render to refresh it."
+ },
+ "395d9cba59ad97a9": {
+  "verdict": "ok",
+  "by": "review:healybois-3",
+  "at": "2026-10-31",
+  "why": "The export puts the enhancement on the Hive Tyrant (\"TYRANIDS model only\"); who: Hive Tyrant, models 1 Hive Tyrant + 6 Tyrant Guard as the export. Re-review: unchanged (same key)."
  },
  "3969cfd0e77f8719": {
   "verdict": "ok",
@@ -7739,6 +7751,12 @@
   "at": "2026-10-16",
   "why": "\"normal\", \"Normal\", \"normal move\", \"Normal Move\"; every bare \"normal\" sits in \"normal, advance or fall-back move\" (Super-Heavy Walker, Crusher Stampede)."
  },
+ "68bbd4b58ddf6a1f": {
+  "verdict": "ok",
+  "by": "review:healybois-3",
+  "at": "2026-10-31",
+  "why": "GW (Wahapedia tyranids_Psychophage.html): \"Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well.\" Melee, picks below Starting Strength +1 hit / Below Half-strength +1 hit +1 wound: the two cases exactly; Below Half-strength is always also below Starting Strength, so the second pick rightly carries both. Re-review: unchanged (same key)."
+ },
  "68cd54d90bd80cea": {
   "verdict": "ok",
   "by": "review:order",
@@ -8981,6 +8999,12 @@
   "at": "2026-10-28",
   "why": "FP 1.3 Feed the Swarm \"Change to: 'In your Command phase, each HARVESTER unit …'\": command."
  },
+ "7b5e7259c660638f": {
+  "verdict": "ok",
+  "by": "review:healybois-3",
+  "at": "2026-10-31",
+  "why": "The export and GW (Faction Pack: gaping maw A1 WS2+ S5 AP– D D3+2 [EXTRA ATTACKS, DEVASTATING WOUNDS, PRECISION]; scything talons A12 WS2+ S7 -2 2; Wahapedia \"equipped with: scything talons, gaping maw\"): one model, both weapons, New Recruit names. Re-review: unchanged (same key)."
+ },
  "7bb68f628e3ff944": {
   "verdict": "ok",
   "by": "review:readings",
@@ -9172,6 +9196,12 @@
   "by": "review:catalog-custodes",
   "at": "2026-10-29",
   "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Bearers of His Light)."
+ },
+ "7ebd61baee435944": {
+  "verdict": "ok",
+  "by": "review:healybois-3",
+  "at": "2026-10-31",
+  "why": "Wahapedia: \"equipped with: psychoclastic torrent; talons and betentacled maw\"; the export the same, New Recruit names. Profiles match GW's Rules Update (M 12\", talons A 6 AP -2, SMOKE added). Re-review: unchanged (same key)."
  },
  "7eda1e9889eeee96": {
   "verdict": "ok",
@@ -10582,6 +10612,12 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "It shows the granting rule's text and the note that the value includes it. With printed (only the Knight Destrier: from {InSv:'Sanctuary'}, printed {InSv:'5+*'}), and with what=\"INV 5+\" mapped to InSv, it says \"New Recruit and BSData print 5+* here\", which is true (BSData Unit profile \"InSv 5+*\", NR \"8 5+* 150x95mm\"). Sanctuary reads \"The bearer has a 5+ invulnerable save.\""
+ },
+ "91eb115a67f5a50e": {
+  "verdict": "ok",
+  "by": "review:healybois-3",
+  "at": "2026-10-31",
+  "why": "Parasitic Biomorphology is an Assimilation Swarm enhancement (Wahapedia tyranids.txt l.271 \"Parasitic Biomorphology 25 pts\"); the export has it under the Hive Tyrant (25 pts). Re-review: unchanged (same key)."
  },
  "91ee853ff38b414a": {
   "verdict": "ok",
@@ -13145,6 +13181,12 @@
   "at": "2026-10-26",
   "why": "Movement · Your turn is wrong: the effect is on the enemy unit hit (“subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it”), from your Shooting phase “until the start of your next turn”, so your own Movement phase is never inside it; derive.js’s move-own rule (verify/derive.js:116, “its Move characteristic: your Movement phase”) reads the enemy’s Move characteristic as this unit’s own. The signed-off Thousand Sons Binding Tendrils (mucho-mutantes, word-for-word the same ability with Arcane Fire / ensnared) stores {ph:[shooting], turn:your}, the trigger, with this exact derived label listed as a difference in verify/out/derive.md. Fix to match: verify/sources/hand/defilers-and-friends.json units.sorcerer.labels[\"Wracking Agonies\"] = {\"ph\":[\"shooting\"],\"turn\":\"your\"}."
  },
+ "b41cea373992b9a7": {
+  "verdict": "ok",
+  "by": "review:healybois-3",
+  "at": "2026-10-31",
+  "why": "Re-review: vs any is now Infantry, Mounted, Beast: the 18 units' keyword and the script's box a|17eyv4g agree; when keeps GW's INFANTRY/MOUNTED/BEASTS. check.js's new target-keyword step passes, and with 'Beasts' put back it fails (checked in a scratch copy)."
+ },
  "b43ebd69f2ae39b4": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -13445,6 +13487,12 @@
   "at": "2026-10-22",
   "why": "Changes against 1ce3d8f: the peeking branch is gone (always “Your list”); an enhancement holder by its full name when another unit has the same short name (shooty: “Big Mek Dakkarig (1 of 2)”, “(2 of 2)”, “Big Mek in Mega Armour”; princes’ two Daemon Princes share the full name, so they keep “Daemon Prince (1 of 2)/(2 of 2)” from unitNo); the detachment rules in the army rules block as on the Rules tab (ruleRow, timing tag, note, textWithTable, “Applies to” its needs; the detachment’s name where the Rules tab says “Detachment rule”, there being no detachment heading here), headed “Army and detachment rules” (fixlist 16); “Start of the battle and the battle rounds” for the section holding Code Chivalric’s start-of-battle Deed (fixlist 19). Warlord, attached units, Deep Strike/Scouts/Infiltrators through everyModel with partialRules (24.09, 24.31), transports and uses per battle are unchanged."
  },
+ "b95e53c5bdc8d1b8": {
+  "verdict": "ok",
+  "by": "review:healybois-3",
+  "at": "2026-10-31",
+  "why": "Export: Pyrovores 3 models (each unit), every model \"equipped with: flamespurt; chitin-barbed limbs\" (Wahapedia); ×3 on both weapons. Re-review: unchanged (same key)."
+ },
  "b97d5160a0bcbb39": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -13732,6 +13780,12 @@
   "by": "review:nerf-units",
   "at": "2026-10-24",
   "why": "GW prints \"Bladeguard (Once per turn, per unit):\" (Wahapedia Bladeguard Veteran Squad)."
+ },
+ "bd334225a9baec90": {
+  "verdict": "ok",
+  "by": "review:healybois-3",
+  "at": "2026-10-31",
+  "why": "GW (Faction Pack Rules Update, Psychophage, Bio-stimulus \"Change to\", l.644-650; Wahapedia the same): \"In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly TYRANIDS unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.\" The Psychophage is itself a friendly TYRANIDS unit: its own melee footnote, improve AP by 1, this turn, vs the unit it selected. Right. Re-review: unchanged (same key)."
  },
  "bd56dbd67552d85f": {
   "verdict": "ok",
@@ -15599,6 +15653,12 @@
   "at": "2026-10-26",
   "why": "Lord Exultant’s own ability (“melee weapons equipped by this model”)."
  },
+ "d73cffeb5e2af482": {
+  "verdict": "ok",
+  "by": "review:healybois-3",
+  "at": "2026-10-31",
+  "why": "Export: Hive Tyrant 220 (195 + Parasitic Biomorphology 25), Tyrant Guard 170. Wahapedia Hive Tyrant \"1 model 195\", enhancement 25 pts. Re-review: unchanged (same key)."
+ },
  "d73f04aca7c05002": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -15868,6 +15928,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“a friendly BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit”: any of the three, copied (the text has no ORKS keyword)."
+ },
+ "db96b6a22dc8efbf": {
+  "verdict": "ok",
+  "by": "review:healybois-3",
+  "at": "2026-10-31",
+  "why": "Deadly Demise D3 is on the Hive Tyrant's datasheet only (Tyrant Guard has none): partial, named to the Hive Tyrant. Unchanged from the signed-off list. Re-review: unchanged (same key)."
  },
  "db9e0d48d5ea0d7f": {
   "verdict": "ok",
@@ -16390,6 +16456,12 @@
   "by": "review:m1-code",
   "at": "2026-10-18",
   "why": "The new `who` filter keeps only the models lines whoOfLine gives to that part (a character's name for lines 0..n-1, else u.leads). So a part's 'per model' / 'every model' / 'none of these' claims cover just that part, and its sentences follow Select Weapons ('You can select one or more ranged weapons that model has'; 'You must select one melee weapon that model has'). Run in a harness against the live app.html. One character (Mek + Tankbustas): the Mek line is left out, giving 'Tankbusta w/ Two Busta Rokkit Launchas can shoot with one or both' and 'Nob picks one to fight with: Choppa or Smash Hammer. The others: one each'. Two characters (Bigboss + Warboss + Breaka Boyz): Bigboss and Warboss are each judged alone, and the bodyguard line is 'Nob picks one…' without the Warboss's Power Klaw. Made-up case, both characters with two melee weapons: each gets its own 'Pick one to fight with'. An enhancement on the 2nd character doesn't reach this function. When only one part has weapons of a kind, weaponRows passes who=null, and the other parts' lines are listed as 'none of these', which is true. Nothing goes beyond the rules. Latent, with no such unit in either list: (a) whoOfLine gives each character exactly one models line, but 19.04 speaks of 'The last model in that leader/support unit', so the 2nd line of a multi-model leader unit would be judged as bodyguard; (b) the part's sentence still gets the whole unit `u`, whose kw is the union, so useSentence's test for Close-quarters 'for each model in that unit (excluding MONSTER/VEHICLE models)' would give a MONSTER character's keyword to non-MONSTER bodyguard models; (c) a weapon `who` that isn't exactly u.name, also[].name or u.leads leaves `mine` empty, and the line silently disappears (check.js doesn't test this)."
+ },
+ "e2ea22e1a241babb": {
+  "verdict": "ok",
+  "by": "review:healybois-3",
+  "at": "2026-10-31",
+  "why": "Decision: an aura (notSelf) plus the own footnote is right. GW does not tag it (Aura), but the rule the app already applies to untagged buffs is the same: the Mek's Clever Know-wotz (\"select one friendly ORKS VEHICLE model\") and the Lord Discordant's Spirit Thief (\"each time a friendly HERETIC ASTARTES model makes an attack that targets that unit\") are DATASHEETS aura rows, and the Damage tab's \"From other units in your list\" comes from the script's box reach, not from the tag (app.html dmSources: an ability of another unit counts where a box has reach and dmReaches the unit). The script's Bio-stimulus box (a|eiy2sc) has reach Faction: Tyranids, mark selected, lasts turn: the same form as Spirit Thief's (a|13ur237). needs Faction: Tyranids, melee, improve AP by 1, this turn: GW's words. Re-review: unchanged (same key)."
  },
  "e2fc05a2997fd620": {
   "verdict": "ok",

@@ -1,0 +1,254 @@
+[
+ {
+  "key": "b41cea373992b9a7",
+  "where": "healybois · The Red Terror",
+  "verdict": "ok",
+  "why": "Re-review: vs any is now Infantry, Mounted, Beast: the 18 units' keyword and the script's box a|17eyv4g agree; when keeps GW's INFANTRY/MOUNTED/BEASTS. check.js's new target-keyword step passes, and with 'Beasts' put back it fails (checked in a scratch copy)."
+ },
+ {
+  "key": "7b5e7259c660638f",
+  "where": "healybois · The Red Terror",
+  "verdict": "ok",
+  "why": "The export and GW (Faction Pack: gaping maw A1 WS2+ S5 AP– D D3+2 [EXTRA ATTACKS, DEVASTATING WOUNDS, PRECISION]; scything talons A12 WS2+ S7 -2 2; Wahapedia \"equipped with: scything talons, gaping maw\"): one model, both weapons, New Recruit names. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "91eb115a67f5a50e",
+  "where": "healybois · Hive Tyrant · Parasitic Biomorphology",
+  "verdict": "ok",
+  "why": "Parasitic Biomorphology is an Assimilation Swarm enhancement (Wahapedia tyranids.txt l.271 \"Parasitic Biomorphology 25 pts\"); the export has it under the Hive Tyrant (25 pts). Re-review: unchanged (same key)."
+ },
+ {
+  "key": "395d9cba59ad97a9",
+  "where": "healybois · Hive Tyrant · Parasitic Biomorphology",
+  "verdict": "ok",
+  "why": "The export puts the enhancement on the Hive Tyrant (\"TYRANIDS model only\"); who: Hive Tyrant, models 1 Hive Tyrant + 6 Tyrant Guard as the export. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "3563b256672cd13c",
+  "where": "healybois · Hive Tyrant",
+  "verdict": "ok",
+  "why": "GW: \"The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\\\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.\" Melee, +1 A, from that first time to the end of the battle (lasts battle), the condition as GW says it; not baked into the profiles (it is a battle condition). The +1 S is in the profiles (S 9→10, 7→8, 5→6 checked against DATASHEETS hive-tyrant and tyrant-guard), marked + from BSData's modifier. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "d73cffeb5e2af482",
+  "where": "healybois · Hive Tyrant",
+  "verdict": "ok",
+  "why": "Export: Hive Tyrant 220 (195 + Parasitic Biomorphology 25), Tyrant Guard 170. Wahapedia Hive Tyrant \"1 model 195\", enhancement 25 pts. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "db96b6a22dc8efbf",
+  "where": "healybois · Hive Tyrant",
+  "verdict": "ok",
+  "why": "Deadly Demise D3 is on the Hive Tyrant's datasheet only (Tyrant Guard has none): partial, named to the Hive Tyrant. Unchanged from the signed-off list. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "b95e53c5bdc8d1b8",
+  "where": "healybois · Pyrovores",
+  "verdict": "ok",
+  "why": "Export: Pyrovores 3 models (each unit), every model \"equipped with: flamespurt; chitin-barbed limbs\" (Wahapedia); ×3 on both weapons. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "bd334225a9baec90",
+  "where": "healybois · Psychophage",
+  "verdict": "ok",
+  "why": "GW (Faction Pack Rules Update, Psychophage, Bio-stimulus \"Change to\", l.644-650; Wahapedia the same): \"In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly TYRANIDS unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.\" The Psychophage is itself a friendly TYRANIDS unit: its own melee footnote, improve AP by 1, this turn, vs the unit it selected. Right. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "68bbd4b58ddf6a1f",
+  "where": "healybois · Psychophage",
+  "verdict": "ok",
+  "why": "GW (Wahapedia tyranids_Psychophage.html): \"Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well.\" Melee, picks below Starting Strength +1 hit / Below Half-strength +1 hit +1 wound: the two cases exactly; Below Half-strength is always also below Starting Strength, so the second pick rightly carries both. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "e2ea22e1a241babb",
+  "where": "healybois · Psychophage",
+  "verdict": "ok",
+  "why": "Decision: an aura (notSelf) plus the own footnote is right. GW does not tag it (Aura), but the rule the app already applies to untagged buffs is the same: the Mek's Clever Know-wotz (\"select one friendly ORKS VEHICLE model\") and the Lord Discordant's Spirit Thief (\"each time a friendly HERETIC ASTARTES model makes an attack that targets that unit\") are DATASHEETS aura rows, and the Damage tab's \"From other units in your list\" comes from the script's box reach, not from the tag (app.html dmSources: an ability of another unit counts where a box has reach and dmReaches the unit). The script's Bio-stimulus box (a|eiy2sc) has reach Faction: Tyranids, mark selected, lasts turn: the same form as Spirit Thief's (a|13ur237). needs Faction: Tyranids, melee, improve AP by 1, this turn: GW's words. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "7ebd61baee435944",
+  "where": "healybois · Psychophage",
+  "verdict": "ok",
+  "why": "Wahapedia: \"equipped with: psychoclastic torrent; talons and betentacled maw\"; the export the same, New Recruit names. Profiles match GW's Rules Update (M 12\", talons A 6 AP -2, SMOKE added). Re-review: unchanged (same key)."
+ },
+ {
+  "key": "0867d4b06054cc80",
+  "where": "hive-tyrant-tyrant-guard",
+  "verdict": "ok",
+  "why": "Leads Tyrant Guard (Wahapedia Hive Tyrant LEADER: TYRANT GUARD). Parasitic Biomorphology words, 25 pts, the +1 S in the profiles (9→10, 7→8, 5→6, checked), the +1 A footnote: as data.js has them. Will of the Hive Mind part unchanged. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "75ff22db7689e94f",
+  "where": "pyrovores",
+  "verdict": "ok",
+  "why": "Two units, 3 models each, 100 pts each: export and Wahapedia (\"YOUR 1ST TO 2ND UNITS COST … 3 models 100\"). Re-review: unchanged (same key)."
+ },
+ {
+  "key": "1fa84a638116afcd",
+  "where": "psychophage",
+  "verdict": "ok",
+  "why": "Matches data.js: Bio-stimulus mods + aura notSelf (the Spirit Thief form; see the aura decision), Feeding Frenzy one footnote with two picks, FNP 5+ on the Rules line (Wahapedia \"Deadly Demise 1, Feel No Pain 5+\"), base 120×92mm Oval (Event Companion l.3835 \"Psychophage 120x92mm Oval Base\"; New Recruit 120x92mm, declared). Re-review: unchanged (same key)."
+ },
+ {
+  "key": "72ec76cd338a280f",
+  "where": "the-red-terror",
+  "verdict": "ok",
+  "why": "Re-review: the reason now says a Critical Wound when the unmodified result is equal to or greater than the required result, modifiers aside, and that a wound only through a modifier is normal: the review's reading of GW Core Rules 05.02 (verify/.cache/gw core rules l.774-781): Unmodified 1 fails; unmodified 6 critical; then equal to or greater than the required result wounds; [ANTI] 24.03 decides criticals on the unmodified roll. BURROWER as before (GW prints it)."
+ },
+ {
+  "key": "c1e5299baaea5f82",
+  "where": "deviations-bsdata.json · the-red-terror · kw",
+  "verdict": "ok",
+  "why": "GW Faction Pack l.305 and Wahapedia print BURROWER; BSData/New Recruit lack it. GW wins. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "e358bf4b4d7dbe34",
+  "where": "deviations-bsdata.json · the-red-terror · kw",
+  "verdict": "ok",
+  "why": "BSData's category \"Burrowers\"; GW prints no BURROWERS keyword. GW wins. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "cfe1bbb70142356a",
+  "where": "deviations-bsdata.json · hive-tyrant-tyrant-guard · ability.text",
+  "verdict": "ok",
+  "why": "The app's text equals Wahapedia tyranids.txt l.272 word for word (\"one or more friendly HARVESTER units, until the end of the battle\"); BSData lacks \"friendly\" and \"the\". GW wins. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "34069907f5f68094",
+  "where": "deviations-bsdata.json · norn-assimilator · ability.text",
+  "verdict": "ok",
+  "why": "App text equals Wahapedia tyranids_Norn-Assimilator.html (comma after \"targets that unit\", the bullets). Re-keyed from the retired norn-assimilator-synaptoprescience entries to norn-assimilator. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "3743c47f537bedbd",
+  "where": "deviations-bsdata.json · norn-assimilator · ability.text",
+  "verdict": "ok",
+  "why": "App text equals Wahapedia (\"this model is selected to Fall Back, roll one D6: on a 2+\"); BSData \"this unit is chosen … ;\". GW wins. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "159e440076b782b2",
+  "where": "deviations-bsdata.json · psychophage · stats.base",
+  "verdict": "ok",
+  "why": "Event Companion l.3835 \"Psychophage 120x92mm Oval Base\"; app 120×92mm Oval. GW wins. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "2b3b8572894d65b7",
+  "where": "deviations-bsdata.json · psychophage · ability.text",
+  "verdict": "ok",
+  "why": "App text equals Wahapedia (\"Below Half-strength\" hyphenated, bold Hit/Wound roll markup); BSData \"Below Half strength\". GW wins. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "7037a166d9105ea3",
+  "where": "deviations-nr.json · psychophage · stats[Psychophage].base",
+  "verdict": "ok",
+  "why": "The same base, against New Recruit's export (120x92mm). GW wins. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "0a231707b31c3b83",
+  "where": "verify/from-json.js · row reuse: a row ability this reading lacks",
+  "verdict": "ok",
+  "why": "General: a row ability the reading lacks is carried only when another list's unit of that datasheet shows it (or a keptRows row), by the same \"another list\" test as the row reuse itself; no name is special-cased (Leader drops because no list shows it; Protean Purpose stays because Nidzillas shows it). Checked: from-json.js --write on the healybois export at HEAD leaves data.js, both deviations files and the hand file byte for byte. On the other JSON-path lists (defilers-and-friends, nerf-when, the-exiled-legion, fellhammer-siege-task-force, navigator-sounds-op-ngl, tzeeeeentch, u-w0t-m8, simple-but-effective) I re-imported each in a scratch copy with and without the fix: data.js comes out identical with and without the fix on all eight (simple-but-effective byte for byte with it; without it only its deviations move to the end). The other seven are not byte-identical either way: their re-import drift is older than this branch (e.g. always:true and calc re-added to signed-off mods, readOf dropped on u-w0t-m8's Szarekh, Bringer of Justice's mods form on navigator-sounds-op-ngl, a Deathwatch Thunder Hammer D on nerf-when), so it is not this fix's to answer for, but it means a --write of those lists today would not be a no-op: worth its own look before any of them is re-imported. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "130166e5f490e871",
+  "where": "verify/from-json.js · deviations written in place",
+  "verdict": "ok",
+  "why": "inPlace puts this run's entries at the index the earlier run's block stood (counted among the others' entries), so a re-run no longer moves them to the end; same entries. Within the block the order is this run's (bsdata.js's), as the commit says, so a list whose block was hand-ordered still reorders inside it (seen on defilers-and-friends: Duellist’s Hubris / A Challenge Worthy of Skill swap), not byte for byte there. Harmless. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "84f7dd881505c3c0",
+  "where": "verify/render.js · once-tag check",
+  "verdict": "ok",
+  "why": "\"The same enemy unit can only be affected by this ability once per turn\" limits the target, not the use (one Psychophage shoots once a phase anyway); the app's onceTag reads only the tag, a \"(Once per …)\" or a leading \"Once per …\", so shows none; the lookbehind now skips \"selected for / affected by this ability\", nothing broader. Right. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "2dd41e44ed410806",
+  "where": "points (healybois-3 export)",
+  "verdict": "ok",
+  "why": "Export total 2000: Red Terror 120, Swarmlord 210 + TG 170, Hive Tyrant 220 + TG 170, Biovores 60, Pyrovores 100 ×2, Ripper Swarms 30, Norn Assimilator 280 (250 + 30), Norn Emissary 250, Psychophage 110, Tyrannofex 180, Spore Mines 0. GW (Wahapedia): Pyrovores 3 models 100 (1st-2nd units), Norn Assimilator 1st unit 250, Hive Tyrant 195 + 25, Red Terror 120, Psychophage 110. Bases: Event Companion Psychophage 120x92mm Oval, The Red Terror 100mm (app 100mm), Pyrovores 80mm (app 80mm). Re-review: unchanged (same key)."
+ },
+ {
+  "key": "666dc662cfdb6c69",
+  "where": "verify/snapshots/healybois.txt",
+  "verdict": "ok",
+  "why": "Re-review: rendered HEAD fresh from git archive (3187 screens, 0 failures); only healybois.txt and shooty.txt differ from the committed snapshots, byte for byte the builder's verify/out copies. The healybois diff is the list change (as read before) with Swallow Whole as \"Each successful unmodified Wound roll is a Critical Wound\" and its footnote \"a successful unmodified wound roll is a Critical Wound\"; no old \"Every successful\" text remains. The working text (closed fold) is not in any snapshot, so e10aea9's wording leaves the snapshots unchanged (checked)."
+ },
+ {
+  "key": "8f481fc578eab546",
+  "where": "verify/snapshots/shooty.txt",
+  "verdict": "ok",
+  "why": "Only the home list order (Healybois up, export 31 Oct 2026) and the tables counts: ARMIES 214 entries (Norn Assimilator 2→1, + Red Terror, + Psychophage), mods 134 (+3), aura 32 (+1), GRANTS 75 (Fights First gone), CHECKLIST 496, BOXES 279 (script diff 0c1fee5→HEAD: Swallow Whole, Bio-stimulus, Feeding Frenzy, Parasitic Biomorphology added; nothing else), BS_IDS counts. Same in a fresh render of HEAD."
+ },
+ {
+  "key": "c3edad0992225bb4",
+  "where": "Hive Tyrant · Leader / attachment",
+  "verdict": "ok",
+  "why": "Wahapedia Hive Tyrant LEADER: TYRANT GUARD; the list shows it by leads, without the catalogue's Leader text as an ability row, as signed off before. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "5cf000920c029130",
+  "where": "Stratagems of the new units against GW’s TARGET",
+  "verdict": "ok",
+  "why": "By TARGET keywords: Assimilation Swarm Broodguard Impulse/Reclaim Biomass/Tyrannoformed/Ablative Carapace need HARVESTER (Psychophage has it; Red Terror and Hive Tyrant/Tyrant Guard do not), Secure Biomass/Rapacious Hunger TYRANIDS (all). Core: Epic Challenge CHARACTER (Red Terror, Hive Tyrant; not the Psychophage), Smokescreen SMOKE (Psychophage only), Crushing Impact MONSTER/VEHICLE. Talons of the Norn Queen's three need NORN ASSIMILATOR/NORN EMISSARY: none. Each equals the Wahapedia page's STRATAGEMS list (Psychophage 8 core + 6; Red Terror 8 core incl. Epic Challenge, no Smokescreen). Re-review: unchanged (same key)."
+ },
+ {
+  "key": "3df945dbfe9ee9e5",
+  "where": "effects.js · critWoundAll (new effect)",
+  "verdict": "ok",
+  "why": "Label in GW's words (\"Each successful unmodified Wound roll is a Critical Wound\"), mod critWoundAll meaning a Critical Wound when the unmodified roll is equal to or greater than the required result (GW Core Rules 05.02 (verify/.cache/gw core rules l.774-781): Unmodified 1 fails; unmodified 6 critical; then equal to or greater than the required result wounds; [ANTI] 24.03 decides criticals on the unmodified roll.). The pattern matches only Swallow Whole's words."
+ },
+ {
+  "key": "ce2c4250a7e2c084",
+  "where": "effects.js · critWound pattern, either word order",
+  "verdict": "ok",
+  "why": "No box changes: right. But the old pattern already matched Prince of Slaanesh: \"a successful unmodified wound roll of 5+ scores a critical wound\" contains \"unmodified wound roll of 5+ scores a critical wound\", which /\\bunmodified (?:successful )?wound roll of (\\d)\\+ …/ finds (checked over every text in data.js: the same 4 matches, the same values, old and new; only Syll’esske's match now also takes in \"successful\"). So the item's \"now also reads\" overstates it: a list with Syll’esske would have had the Critical Wound 5+ box before too. Harmless. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "ea2fcc3c844fd699",
+  "where": "calc.js · critWoundAll",
+  "verdict": "ok",
+  "why": "Checked every path by hand (60 [TORRENT] [DEVASTATING WOUNDS] S4 D1 vs T4): explain/run/play give 30 mortal; +1 to wound 30 mortal + 10 normal; -1 to wound 30 mortal; S2+D3 (wrS) 30 mortal, with +1 40 wounds, 30 mortal. plan(), wr, wrS, wcls each: critical when u > 1 and u >= woundNeed (of the rolled S for wrS), before woundMod and the target's -1 when S > T. GW Core Rules 05.02 (verify/.cache/gw core rules l.774-781): Unmodified 1 fails; unmodified 6 critical; then equal to or greater than the required result wounds; [ANTI] 24.03 decides criticals on the unmodified roll. Working text now \"critical wounds on an unmodified 4+ (Swallow Whole)\" (also with ±1 to wound, after the \"wounds on an unmodified N+\" part), the critWound form: right."
+ },
+ {
+  "key": "3bedead8c59566aa",
+  "where": "verify/calc-test.js · critWoundAll cases",
+  "verdict": "ok",
+  "why": "17 cases hand-checked: explain 30 / +1 30+10 / -1 30 / T8 10 / no [DEVASTATING WOUNDS] 30 wounds; run() and play() +1 30 mortal + 10 normal, -1 30; S2+D3 (S3/S4/S5 a third each, criticals (2+3+4)/18 = 1/2) 30 mortal, with +1 40 wounds, 30 mortal; plan() choice: [LETHAL HITS] + [DEVASTATING WOUNDS], -1 to wound, Sv 3+, FNP 6+ (5+ vs mortals): rolling a critical hit is worth 1/2 × 2/3 = 1/3 vs [LETHAL HITS] 1/3 × 5/6 = 5/18, so rolled: 30 hits × 1/2 = 15 mortal (lethal: 20 × 1/2 = 10; the old reading 1/3 × 2/3 = 2/9 < 5/18 would take lethal), right. Mutation re-run by the reviewer at HEAD: wr reverted to the modified-roll reading fails 6 cases (384 of 390); the real code 390 of 390. Earlier, before e10aea9, the same wr mutation survived 381/381 (the fix asked)."
+ },
+ {
+  "key": "316e786e91211fd2",
+  "where": "BOXES · a|17eyv4g Swallow Whole (The Red Terror)",
+  "verdict": "ok",
+  "why": "The box is the script's from GW's words: critWoundAll, target INFANTRY/MOUNTED/BEAST (any), gaping maw, the model; effects-migrate.js says BOXES is what the words give (279 sources, 296 boxes). Its numbers follow calc.js, now as the Core Rules read."
+ },
+ {
+  "key": "78bd4620a9ec8ad7",
+  "where": "check.js · readings’ target keywords exist",
+  "verdict": "ok",
+  "why": "Mutation-tested in scratch copies of data.js: Swallow Whole back to 'Beasts' → 2 problems (the datasheet row and the list entry), exit 1; a vs.none 'Vehicles', an also.any 'Monstr', a vs.all 'ZzPsyker' → each caught; HEAD passes. Vocabulary = every datasheet row's and list unit's keywords, case-insensitive: right."
+ },
+ {
+  "key": "0e8646ffafcb1eac",
+  "where": "verify/effects-extract.js · “The first time …” as a condition",
+  "verdict": "ok",
+  "why": "BOXES diffed by script: 2344227 → HEAD only a|uulhog's +1 A box changes; 0c1fee5 → HEAD only the 4 new sources; effects-migrate.js check passes. No existing box misfires. (Not a box today: the Oath text would read as \"The first time your selected Deed is completed your Oath is fulfilled and\"; for a later list.)"
+ },
+ {
+  "key": "f2e033a35b95c09e",
+  "where": "BOXES · a|uulhog Parasitic Biomorphology, its +1 A",
+  "verdict": "ok",
+  "why": "GW (Wahapedia tyranids.txt / Hive Tyrant): \"The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\\\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons …\". The box: melee +1 A, lasts the battle, both conditions in GW's words (the trigger and its while clause), better than the while clause alone before. Right."
+ },
+ {
+  "key": "fb03564acae6a107",
+  "where": "Psychophage · Bio-stimulus read as an aura",
+  "verdict": "ok",
+  "why": "Aura (notSelf) + own footnote, the same rule as the Mek's Clever Know-wotz and Spirit Thief (see the Psychophage aura item); the Damage tab's \"From other units\" is the script's box reach either way. Re-review: unchanged (same key)."
+ },
+ {
+  "key": "d59b251bbf3fa215",
+  "where": "hand file spellings; derive-agreed.json",
+  "verdict": "ok",
+  "why": "The 18 removed derive-agreed entries are all Instinctive Defence and the two retired norn-assimilator-synaptoprescience(-2) ids; the spelling is unused (the FACTIONS row keeps nr:'Instinctive Defense'), and a re-import at HEAD still gives data.js byte for byte. Re-review: unchanged (same key)."
+ }
+]
