@@ -1397,6 +1397,12 @@
   "at": "2026-10-17",
   "why": "“TARGET: That ORKS INFANTRY unit.” → Faction: Orks + Infantry, copied."
  },
+ "113474defb4daf15": {
+  "verdict": "ok",
+  "by": "review:order-3",
+  "at": "2026-10-31",
+  "why": "Judgement identical to the one approved on main eaccb7d (key af4677a8e1483126): kwOnly Character, Synapse from Ravener Prime. Re-keyed only by the keyword order of its source (GW order). Checked by script."
+ },
  "11363887e1b8de3c": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -4288,6 +4294,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "The ability starts “While this model is leading a unit”. The mark is on the lone Slaughterbound (id slaughterbound, models “1× Slaughterbound”, no leads); the other Slaughterbound, New Recruit’s “Leading: Exalted Eightbound[1]”, keeps Rage Eternal unmarked (checked in data.js). The text and the list facts agree."
+ },
+ "3913f4f95b99ed3e": {
+  "verdict": "ok",
+  "by": "review:order-3",
+  "at": "2026-10-31",
+  "why": "Judgement identical to the one approved on main eaccb7d (key aed4eec55bd87427): partialRules Shadow in the Warp from Ravener Prime. Re-keyed only by the keyword order of its source. Checked by script."
  },
  "391d1ffcd14a443d": {
   "verdict": "ok",
@@ -12340,6 +12352,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "WHEN: \"Your Shooting phase or the Fight phase\"."
+ },
+ "a919cbee439a94a7": {
+  "verdict": "ok",
+  "by": "review:order-3",
+  "at": "2026-10-31",
+  "why": "The only change from the approved judgement (716181c586423305, on main and 7b81492) is rowOf/find: a row matches by name and, where the entry names a group, by that group (stats never). Entries without group resolve as before. All 213 list units resolve byte-identically to 7b81492, including the Bloodthirster's Great axe of Khorne profiles now that the catalogue's Axe of Khorne rows come first in GW's order."
  },
  "a96e8ae613d047c8": {
   "verdict": "ok",
