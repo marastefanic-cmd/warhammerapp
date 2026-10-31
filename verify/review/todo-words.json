@@ -2065,5 +2065,279 @@
    ]
   },
   "key": "label-snap|ability-timing | navigator-sounds-op-ngl · Knight Destrier · Saturation Fire"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Atrapos’ Duty",
+   "text": "While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Macro-extinction Protocols",
+   "text": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Macro-extinction Protocols"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "defilers-and-friends · Lucius the Eternal · Lucius the Eternal · A Challenge Worthy of Skill",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "A Challenge Worthy of Skill",
+   "text": "Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | defilers-and-friends · Lucius the Eternal · Lucius the Eternal · A Challenge Worthy of Skill"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "infernal-lance · Chaos Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Macro-extinction Protocols",
+   "text": "Each time this model makes an attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Hit roll**. If that target is **TITANIC** or **TOWERING**, add 1 to the **Wound roll** as well.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | infernal-lance · Chaos Cerastus Knight Atrapos · Macro-extinction Protocols"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "lite-knights · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Advanced Firepower",
+   "text": "This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**.",
+   "rules": [
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | lite-knights · Caladius Annihilator Grav-tank · Advanced Firepower"
+ },
+ {
+  "army": "the-exiled-legion",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "the-exiled-legion · Skulltaker · Skulltaker · Skulls for Khorne",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Skulls for Khorne",
+   "text": "Each time this model makes an attack that targets a Character unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. Each time this model destroys an enemy Character unit, you gain 1CP.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | the-exiled-legion · Skulltaker · Skulltaker · Skulls for Khorne"
+ },
+ {
+  "army": "emperors-chosen",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "emperors-chosen · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Advanced Firepower",
+   "text": "This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**.",
+   "rules": [
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | emperors-chosen · Caladius Annihilator Grav-tank · Advanced Firepower"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "dread-host · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Advanced Firepower",
+   "text": "This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**.",
+   "rules": [
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | dread-host · Caladius Annihilator Grav-tank · Advanced Firepower"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Atrapos’ Duty",
+   "text": "While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Macro-extinction Protocols",
+   "text": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols"
  }
 ]

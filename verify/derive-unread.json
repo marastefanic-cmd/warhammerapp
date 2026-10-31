@@ -320,40 +320,6 @@
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: weapons-have, ranged-only-keyword, ranged, overwatch)"
   },
-  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty": {
-   "of": "7522a4f2",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting",
-     "fight"
-    ],
-    "turn": "either",
-    "turns": {
-     "movement": "opp",
-     "shooting": "your"
-    }
-   },
-   "signedOff": null,
-   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
-  },
-  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Macro-extinction Protocols": {
-   "of": "3c11830a",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting",
-     "fight"
-    ],
-    "turn": "either",
-    "turns": {
-     "movement": "opp",
-     "shooting": "your"
-    }
-   },
-   "signedOff": null,
-   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
-  },
   "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Bringer of Justice": {
    "of": "d1f22b85",
    "reading": {
@@ -457,40 +423,6 @@
   },
   "ability-timing | purge-goes-the-foe · Skorpius Disintegrator · Blistering Salvoes": {
    "of": "8ddcceb7",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting",
-     "fight"
-    ],
-    "turn": "either",
-    "turns": {
-     "movement": "opp",
-     "shooting": "your"
-    }
-   },
-   "signedOff": null,
-   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
-  },
-  "ability-timing | defilers-and-friends · Lucius the Eternal · Lucius the Eternal · A Challenge Worthy of Skill": {
-   "of": "ed251c7c",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting",
-     "fight"
-    ],
-    "turn": "either",
-    "turns": {
-     "movement": "opp",
-     "shooting": "your"
-    }
-   },
-   "signedOff": null,
-   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
-  },
-  "ability-timing | infernal-lance · Chaos Cerastus Knight Atrapos · Macro-extinction Protocols": {
-   "of": "42b18b8c",
    "reading": {
     "ph": [
      "movement",
@@ -730,21 +662,6 @@
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
   },
-  "ability-timing | lite-knights · Caladius Annihilator Grav-tank · Advanced Firepower": {
-   "of": "6069966f",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting"
-    ],
-    "turn": "opp",
-    "turns": {
-     "shooting": "your"
-    }
-   },
-   "signedOff": null,
-   "why": "the signed-off lists show no label here; the program reads one (rules: ranged, label-own-target)"
-  },
   "ability-timing | lite-knights · Contemptor-Galatus Dreadnought · Memento Moritoi": {
    "of": "d518896a",
    "reading": {
@@ -767,23 +684,6 @@
    },
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: declare-charge, move-own)"
-  },
-  "ability-timing | the-exiled-legion · Skulltaker · Skulltaker · Skulls for Khorne": {
-   "of": "3bb6879b",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting",
-     "fight"
-    ],
-    "turn": "either",
-    "turns": {
-     "movement": "opp",
-     "shooting": "your"
-    }
-   },
-   "signedOff": null,
-   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
   },
   "ability-timing | the-exiled-legion · Skulltaker · Bloodletters · Bane-Forged Weapons": {
    "of": "70353116",
@@ -881,21 +781,6 @@
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
   },
-  "ability-timing | emperors-chosen · Caladius Annihilator Grav-tank · Advanced Firepower": {
-   "of": "6069966f",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting"
-    ],
-    "turn": "opp",
-    "turns": {
-     "shooting": "your"
-    }
-   },
-   "signedOff": null,
-   "why": "the signed-off lists show no label here; the program reads one (rules: ranged, label-own-target)"
-  },
   "ability-timing | dread-host · Trajann Valoris · Allarus Custodians · Slayer of Tyrants": {
    "of": "c849a61b",
    "reading": {
@@ -951,55 +836,6 @@
    },
    "signedOff": null,
    "why": "the signed-off lists show no label here; the program reads one (rules: melee)"
-  },
-  "ability-timing | dread-host · Caladius Annihilator Grav-tank · Advanced Firepower": {
-   "of": "6069966f",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting"
-    ],
-    "turn": "opp",
-    "turns": {
-     "shooting": "your"
-    }
-   },
-   "signedOff": null,
-   "why": "the signed-off lists show no label here; the program reads one (rules: ranged, label-own-target)"
-  },
-  "ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty": {
-   "of": "7522a4f2",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting",
-     "fight"
-    ],
-    "turn": "either",
-    "turns": {
-     "movement": "opp",
-     "shooting": "your"
-    }
-   },
-   "signedOff": null,
-   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
-  },
-  "ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols": {
-   "of": "3c11830a",
-   "reading": {
-    "ph": [
-     "movement",
-     "shooting",
-     "fight"
-    ],
-    "turn": "either",
-    "turns": {
-     "movement": "opp",
-     "shooting": "your"
-    }
-   },
-   "signedOff": null,
-   "why": "the signed-off lists show no label here; the program reads one (rules: any-attack, overwatch)"
   },
   "ability-timing | navigator-sounds-op-ngl · Knight Crusader · Crusader’s Duty": {
    "of": "cb466686",
