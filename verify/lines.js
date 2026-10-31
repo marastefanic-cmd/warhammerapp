@@ -16,7 +16,8 @@
      L3  its effects' words are its box's effects' labels (a pick's options, a part), or its one weapon's row value (A, S, AP, D of one
          weapon, never a Damaged band's, a stratagem's or an ability's the unit uses)
      L4  completeness: every box the database gives the unit for this kind of attack is one footnote, once
-     L5  its conditions' words are its box's conditions' labels, with the fixed forms of app.html fnCond
+     L5  its conditions' words are its box's conditions' labels, with the fixed forms of app.html fnCond; a condition that is only GW's
+         words, quoted (q, anyOf), is not said (its rule's name opens them)
      L6  the code: unitMods, fnLine, the weapon tables and the Damaged band read no reading's words or retired column, and write no rule's
          number or weapon ability (Lance, Plunging Fire, Waaagh! are boxes of their rules)
      L7  (L2-L5 together: what the screen shows is what BOXES gives, worked out here again from data.js)
@@ -131,21 +132,21 @@ let nLines = 0, nRows = 0;
       const giver = w.S.src && w.S.src !== u ? (g => g && g.who && w.S.src.leads ? g.who : w.S.src.short || w.S.src.name)((w.S.src.abilities || []).find(x => x.name === w.S.name)) : '';
       const gv = giver && w.S.src.leads && ![w.S.src.name].concat((w.S.src.also || []).map(c => c.name)).includes(giver) ? w.S.src.short || w.S.src.name : giver;
       const own = w.S.grp === 'unit' && w.b.mark === 'aura';
-      const cw = on => (on || []).map(([id, p]) => condWords(id, p, u, gv, own)).join(' · ');
-      const part = x => x && x.fx && x.fx.length ? ' (' + cw(x.on) + ': ' + E.fxLabel(x.fx) + ')' : '';
+      const cw = on => (on || []).filter(([id]) => !E.COND[id].quoted).map(([id, p]) => condWords(id, p, u, gv, own)).join(' · ');
+      const part = x => x && x.fx && x.fx.length ? ' (' + (cw(x.on) ? cw(x.on) + ': ' : '') + E.fxLabel(x.fx) + ')' : '';
       if(m.set){ nRows++;
         if(!fx || !w.ws || w.ws.length !== 1 || w.S.damaged || w.S.strat || used(w.b) || !fx.every(([id]) => ROW[id] || SET[id])) fail('L3', where, 'a row value of ' + w.S.name + ' that is no one weapon\'s characteristic');
         else { const exp = Object.fromEntries(fx.map(([id, p]) => ROW[id] ? [ROW[id], '+' + String(p).toUpperCase()] : [SET[id], String(p)]));
           if(JSON.stringify(exp) !== JSON.stringify(m.set) || m.weapon !== w.ws[0].ps[0].name) fail('L3', where, w.S.name + ' row ' + m.weapon + ' ' + JSON.stringify(m.set) + ', its box gives ' + w.ws[0].ps[0].name + ' ' + JSON.stringify(exp)); } }
       else { const bOn = new Set((w.b.on || []).map(x => JSON.stringify(x)));
         const exp = fx ? E.fxLabel(fx) + part(w.b.part) : 'one of: ' + w.b.pick.map(p => Object.assign({}, p, { fx:w.keep(p.fx) })).filter(p => p.fx.length).map(p => { const pon = (p.on || []).filter(x => !bOn.has(JSON.stringify(x)));
-          return (p.name !== E.fxLabel(p.fx) ? p.name + ': ' : '') + E.fxLabel(p.fx) + (pon.length ? ' (' + cw(pon) + ')' : '') + part(p.part); }).join(' · ');
+          return (p.name !== E.fxLabel(p.fx) ? p.name + ': ' : '') + E.fxLabel(p.fx) + (cw(pon) ? ' (' + cw(pon) + ')' : '') + part(p.part); }).join(' · ');
         if(m.note !== exp) fail('L3', where, w.S.name + ' says “' + m.note + '”, its box “' + exp + '”');
         if(fx && w.ws && w.ws.length === 1 && !w.ws[0].group && !w.S.damaged && !w.S.strat && !used(w.b) && fx.every(([id]) => ROW[id] || SET[id])) fail('L3', where, w.S.name + ': one weapon\'s characteristic, not in its row'); }
       // L5 its conditions' words
       const sPh = w.S.s && (w.S.s.phases || []).length === 1 ? ((w.S.s.turns && w.S.s.turns[w.S.s.phases[0]]) || w.S.s.turn) : null;
       const cond = cw(w.b.on);
-      const expW = sPh ? [(sPh === 'your' ? 'Your ' : sPh === 'opp' ? 'Your opponent’s ' : '') + w.S.s.phases[0].replace(/^./, c => c.toUpperCase()) + ' phase', cond].filter(Boolean).join(', ') : cond || (w.S.strat ? '' : w.b.kind === 'ranged' ? 'Every ranged attack' : w.b.kind === 'melee' ? 'Every melee attack' : 'Every attack');
+      const expW = sPh ? [(sPh === 'your' ? 'Your ' : sPh === 'opp' ? 'Your opponent’s ' : '') + w.S.s.phases[0].replace(/^./, c => c.toUpperCase()) + ' phase', cond].filter(Boolean).join(', ') : cond || (w.S.strat || (w.b.on || []).some(([id]) => E.COND[id].quoted) ? '' : w.b.kind === 'ranged' ? 'Every ranged attack' : w.b.kind === 'melee' ? 'Every melee attack' : 'Every attack');
       if(m.when !== expW) fail('L5', where, w.S.name + ' when “' + m.when + '”, its box “' + expW + '”');
     }
     // L2 nothing else: every footnote is one of these boxes
@@ -174,7 +175,7 @@ stats.footnotes = nLines; stats.rowValues = nRows;
   for(const [id, c] of Object.entries(E.COND)){ const p = { aura:6, maxT:3, targetKw:{ any:['Infantry'] }, selfKw:'X', selfGear:['gun'], opt:'Option', q:'If words', anyOf:['A', 'B'] }[id] || true;
     const m = A.fnLine({ grp:'army', name:'R', key:'r|x' }, { quote:'', fx:[['hit', 1]], on:[[id, p]], kind:'all' }, u0, 'ranged', null);
     if(id === 'selfKw' || id === 'selfGear'){ n++; continue; }   // (a keyword or wargear the unit lacks: no footnote at all)
-    if(!m || m.when !== c.label(p)) fail('L8', 'effects.js ' + id, 'a box of it alone says “' + (m && m.when) + '”, not “' + c.label(p) + '”'); else n++; }
+    if(!m || m.when !== (c.quoted ? '' : c.label(p))) fail('L8', 'effects.js ' + id, 'a box of it alone says “' + (m && m.when) + '”, not “' + c.label(p) + '”'); else n++; }
   stats.labels = n; }
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });

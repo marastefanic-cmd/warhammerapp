@@ -19,7 +19,9 @@
 'use strict';
 const sg = p => (+p > 0 ? '+' : '−') + Math.abs(+p);
 const up = p => String(p).toUpperCase();
-const N = '(\\d+|d3|d6)';   // a value: a number or a dice roll
+const N = '(\\d+|d3|d6)';
+// a keyword as GW prints it: in capitals, a Faction keyword by its name ("Faction: Orks" is ORKS)
+const KW = k => String(k).replace(/^Faction: /, '').toUpperCase();   // a value: a number or a dice roll
 const v = s => /^d\d$/i.test(s) ? up(s) : +s;
 const kwFx = (word, key) => ({ label:() => '[' + word.toUpperCase() + ']', mod:() => ({ [key]:true }), dom:[true], pats:[new RegExp('\\[' + word + '(?::[^\\]]*)?\\]')] });
 // the characteristics a sentence adds to or improves ("add 1 to the Attacks and Strength characteristics", "improve the Strength,
@@ -123,17 +125,17 @@ const COND = {
   oncePerBattle:{ label:() => 'Once per battle', pats:[/\bonce per battle\b/] },
   oncePerTurn:{ label:() => 'Once per turn', pats:[/\bonce per turn\b/] },
   used:{ label:() => 'If it uses this ability', pats:[/\b(?:you|it|this model) can use this ability\b/, /\bcan call upon\b/, /\bif (?:it|you) do(?:es)?\b/] },
-  targetKw:{ label:p => 'The target: ' + (p.none ? 'not ' + p.none.join('/') : p.all ? p.all.join(' ') : p.any.join(' or ')), pats:[] },
+  targetKw:{ label:p => 'The target: ' + (p.none ? 'not ' + p.none.map(KW).join('/') : p.all ? p.all.map(KW).join(' ') : p.any.map(KW).join(' or ')), pats:[] },
   maxT:{ label:p => 'The target has no model with T ' + (p + 1) + '+', pats:[/\bno models with a t of (\d)\+/] },
   // a keyword of the unit the rule names ("If this model has the KHORNE keyword"): the unit's own keywords say it (the database)
-  selfKw:{ label:p => 'It has the ' + p + ' keyword', pats:[/\bif this (?:model|unit) has the ([a-z' -]+?) keyword\b/, /\bif your unit is an? ([a-z' -]+?) unit\b/] },
+  selfKw:{ label:p => 'It has the ' + KW(p) + ' keyword', pats:[/\bif this (?:model|unit) has the ([a-z' -]+?) keyword\b/, /\bif your unit is an? ([a-z' -]+?) unit\b/] },
   // the wargear the rule names ("If this model is equipped with a thundershock spear and a bellatus reaper chainsword"): the unit's weapons say it
   selfGear:{ label:p => 'It is equipped with ' + p.join(' and '), pats:[/\bif this model is equipped with (.+?)(?:,|$)/] },
   // the option of its rule the box is (a table's row, a named option: "Rendax", "Daemonic Rage [3BTP]"): its name
   // "if one or more of the following conditions apply" and the lines under it (Plunging Fire): any one of them, each in GW's words
-  anyOf:{ label:p => p.map(x => '“' + x + '”').join(' or '), pats:[/\bif one or more of the following conditions apply\b/] },
+  anyOf:{ quoted:true, label:p => p.map(x => '“' + x + '”').join(' or '), pats:[/\bif one or more of the following conditions apply\b/] },
   opt:{ label:p => p, pats:[] },
-  q:{ label:p => '“' + p + '”', pats:[] }
+  q:{ quoted:true, label:p => '“' + p + '”', pats:[] }
 };
 const FACT_OF = Object.fromEntries(Object.entries(COND).filter(([, c]) => c.fact).map(([k, c]) => [k, c.fact]));
 // the Custom modifiers group: every catalogue effect a player can set by hand, in this order (no rule, no AI: plain toggles)
@@ -151,8 +153,10 @@ function toMod(fx){
   return out;
 }
 const fxLabel = fx => (fx || []).map(([id, p]) => FX[id] ? FX[id].label(p) : id).join(', ');
-const condLabel = on => (on || []).map(([id, p]) => COND[id] ? COND[id].label(p) : id).join(' · ');
-const api = { FX, COND, NC, CUSTOM, FACT_OF, CHAR_RE, CH, toMod, fxLabel, condLabel, norm };
+// (a condition that is only GW's words, quoted (q, anyOf), is not said: the box names its rule, whose words are a tap away; the owner's
+// decision, 31 Oct 2026)
+const condLabel = on => (on || []).filter(([id]) => !(COND[id] && COND[id].quoted)).map(([id, p]) => COND[id] ? COND[id].label(p) : id).join(' · ');
+const api = { FX, COND, NC, CUSTOM, FACT_OF, CHAR_RE, CH, KW, toMod, fxLabel, condLabel, norm };
 if(typeof module !== 'undefined' && module.exports) module.exports = api;
 root.WH_EFFECTS = api;
 })(typeof self !== 'undefined' ? self : this);

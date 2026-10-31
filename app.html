@@ -1508,14 +1508,18 @@ function fnLine(S, b, u, kind, ab){
   // (none: every attack of its kind; a stratagem's line names it with its cost instead)
   // (a stratagem's one phase, from its derived phases and turn: "Your Shooting phase", "Fight phase", the detachment's line says it once)
   const sPh = S.s && (S.s.phases || []).length === 1 ? (T => (T === 'your' ? 'Your ' : T === 'opp' ? 'Your opponent’s ' : '') + PHASE_NAME[S.s.phases[0]] + ' phase')(phTurn(S.s, S.s.phases[0])) : '';
-  const when = [sPh, (b.on || []).map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ')].filter(Boolean).join(', ') || (S.strat ? '' : b.kind === 'ranged' ? 'Every ranged attack' : b.kind === 'melee' ? 'Every melee attack' : 'Every attack');
-  const part = x => x && x.fx && x.fx.length ? ' (' + (x.on || []).map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ') + ': ' + E.fxLabel(x.fx) + ')' : '';
+  // (a condition that is only GW's words, quoted, is not said: the rule's name opens them, effects.js condLabel; with no other condition
+  // the line is its effect and its rule)
+  const said = (b.on || []).filter(([id]) => !(E.COND[id] && E.COND[id].quoted));
+  const when = [sPh, said.map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ')].filter(Boolean).join(', ') || (S.strat || said.length < (b.on || []).length ? '' : b.kind === 'ranged' ? 'Every ranged attack' : b.kind === 'melee' ? 'Every melee attack' : 'Every attack');
+  const conds = on => (on || []).filter(([id]) => !(E.COND[id] && E.COND[id].quoted)).map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ');
+  const part = x => x && x.fx && x.fx.length ? ' (' + (conds(x.on) ? conds(x.on) + ': ' : '') + E.fxLabel(x.fx) + ')' : '';
   let note, fx = null;
   if(b.pick){ const ps = b.pick.map(p => Object.assign({}, p, { fx:keep(p.fx) })).filter(p => p.fx.length);
     if(!ps.length) return null;
     const bOn = new Set((b.on || []).map(x => JSON.stringify(x)));
     note = ps.map(p => { const pon = (p.on || []).filter(x => !bOn.has(JSON.stringify(x)));
-      return (p.name !== E.fxLabel(p.fx) ? p.name + ': ' : '') + E.fxLabel(p.fx) + (pon.length ? ' (' + pon.map(([id, v]) => fnCond(id, v, u, giver, own)).join(' · ') + ')' : '') + part(p.part); }).join(' · ');
+      return (p.name !== E.fxLabel(p.fx) ? p.name + ': ' : '') + E.fxLabel(p.fx) + (conds(pon) ? ' (' + conds(pon) + ')' : '') + part(p.part); }).join(' · ');
     note = 'one of: ' + note; }
   else { fx = keep(b.fx); if(!fx.length) return null; note = E.fxLabel(fx) + part(b.part); }
   const who = ws ? ws.map(itemName).join(', ') : sc.models === 'char' ? 'CHARACTER models' : sc.models === 'nonchar' ? 'Models (not CHARACTER)' : sc.models === 'one' ? 'One model' :
@@ -4544,12 +4548,13 @@ function stratModLines(det, list, u, hasHunter){
 }
 function modGroupLines(mods, u, hasHunter){
   const groups = new Map();
-  for(const m of mods){ const k = norm(m.when); if(!groups.has(k)) groups.set(k, { when:m.when, items:[] }); groups.get(k).items.push(m); }
+  // (a footnote with no condition said, its rule's words being its condition, is a line of its own)
+  for(const m of mods){ const k = m.when ? norm(m.when) : '\0' + groups.size; if(!groups.has(k)) groups.set(k, { when:m.when, items:[] }); groups.get(k).items.push(m); }
   return [...groups.values()].map(g => {
     const named = g.items.length === 1 && g.when.indexOf(g.items[0].from) >= 0 ? g.items[0] : null;
     const when = riledWhen(named ? esc(g.when).replace(esc(named.from), modFrom(named, u)) : esc(g.when), u);
     return '<div class="mod">' + (g.items.every(m => m.scope === g.items[0].scope) && g.items[0].scope ? '<i class="sc">' + g.items[0].scope + '</i>' : '') +
-      '<b>' + when + ':</b> ' + g.items.map(m => (m.scope && !g.items.every(x => x.scope === m.scope) ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) +
+      (when ? '<b>' + when + ':</b> ' : '') + g.items.map(m => (m.scope && !g.items.every(x => x.scope === m.scope) ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) +
       (m.hunter && hasHunter ? ' (the (+' + Object.values(m.hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '') + (m === named ? '' : ' <span class="from">(' + modFrom(m, u) + ')</span>')).join(' · ') + '</div>';
   }).join('');
 }
