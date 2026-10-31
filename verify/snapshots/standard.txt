@@ -33,9 +33,9 @@ Start of the battle round
 TO DO NOW
 
 Blessings of Khorne · World Eaters army rule
+The Blood God’s Favour (Wrathful Presence) · Angron
 Reborn in Blood · Angron
 Wrathful Presence · Angron
-The Blood God’s Favour (Wrathful Presence) · Angron
 Icon of Khorne · Khorne Berzerkers
 Command · Your turn
 3 to do
@@ -389,6 +389,14 @@ PISTOL
 2
 HAZARDOUS, PISTOL
 KHORNE BERZERKERS
+Bolt pistol×7
+12"
+1
+4+
+5
+-1
+1
+PISTOL
 Plasma pistol×3
 ➤standard
 12"
@@ -406,14 +414,6 @@ PISTOL
 -3
 2
 HAZARDOUS, PISTOL
-Bolt pistol×7
-12"
-1
-4+
-5
--1
-1
-PISTOL
 Lord on Juggernaut
 Plasma pistol
 ➤standard
@@ -462,14 +462,6 @@ Autopistol×9
 PISTOL
 Forgefiend
 ×2 units
-Hades autocannon×2
-36"
-6
-4+
-8
--1
-2
-RAPID FIRE 4
 Ectoplasma cannon
 36"
 D3
@@ -478,6 +470,14 @@ D3
 -3
 3
 BLAST, RAPID FIRE 1
+Hades autocannon×2
+36"
+6
+4+
+8
+-1
+2
+RAPID FIRE 4
 Target is the closest eligible target within 18": re-roll the hit roll (Furious Onslaught)
 Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
 
@@ -535,13 +535,15 @@ Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targ
 STRATAGEMS · BERZERKER WARBAND
 1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Lord on Juggernaut
+
+Fights with both: Exalted chainblade, plus Bladed horn on top (extra attacks).
+
 Exalted chainblade
 8
 2+
 6
 -1
 2
-+
 Bladed horn
 5
 3+
@@ -642,6 +644,9 @@ Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targ
 STRATAGEMS · BERZERKER WARBAND
 1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Goremongers
+
+Pick one to fight with: Chainblade or Close combat weapon.
+
 Chainblade×8
 4
 4+
@@ -649,7 +654,6 @@ Chainblade×8
 0
 1
 LANCE
-OR
 Close combat weapon×8
 3
 4+
@@ -699,6 +703,27 @@ STRATAGEMS · BERZERKER WARBAND
 ######## abilities · MELEE Abilities
 Angron
 Warlord
+WRATHFUL PRESENCE: PICK ONE
+The Blood God’s Favour
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Overwhelming Wrath
+Their Movement
+
+Aura · Movement · Their turn
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+Driven by Ultimate Rage
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
 Reborn in Blood
 Start of the battle round
 
@@ -716,27 +741,6 @@ At the start of the battle round, select one Wrathful Presence ability. Until th
 Damaged: 1-6 wounds remaining
 
 While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
-WRATHFUL PRESENCE: PICK ONE
-The Blood God’s Favour
-
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
-
-Driven by Ultimate Rage
-Fight
-
-Aura · Fight · Either turn
-
-While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
-
-Re-roll hit rolls of 1.
-Re-roll wound rolls of 1.
-Overwhelming Wrath
-Their Movement
-
-Aura · Movement · Their turn
-
-Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
 
 Khârn the Betrayer
 + Khorne Berzerkers
@@ -800,6 +804,10 @@ Fight · Either turn
 Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.
 
 Slaughterbound
+Lord of the Eightbound
+
+If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+
 Rage Eternal
 Not leading a unit in this list
 
@@ -817,14 +825,14 @@ Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
 
-Lord of the Eightbound
-
-If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
-
 Slaughterbound
 Berzerker Glaive
 + Exalted Eightbound
 SLAUGHTERBOUND
+Lord of the Eightbound
+
+If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+
 Rage Eternal
 Your Command
 
@@ -839,10 +847,6 @@ Fight
 Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
-
-Lord of the Eightbound
-
-If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
 
 Berzerker Glaive
 Enhancement
@@ -1258,9 +1262,9 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-1.8
+1.9
 of 5 destroyed
-4.2 wounds lost · wiped in 1% of games
+3.8 wounds lost · wiped in 1% of games
 Plasma pistol: supercharge
 16 NOT COUNTED
 WORKING ›
@@ -1285,11 +1289,11 @@ AP
 D
 2
 HAZARDOUS, PISTOL
-−0.4
+−0.5
 MODELS IF UNTICKED
 PICK ONE PROFILE
 standard
-1.4
+1.5
 RNG
 12"
 A
@@ -1304,7 +1308,7 @@ D
 1
 PISTOL
 supercharge
-1.8
+1.9
 BEST · 12"
 RNG
 12"
@@ -1312,54 +1316,6 @@ A
 1
 BS
 3+
-S
-8
-AP
--3
-D
-2
-HAZARDOUS, PISTOL
-Plasma pistol ×3 KHORNE BERZERKERS
-RNG
-12"
-A
-1
-BS
-4+
-S
-8
-AP
--3
-D
-2
-HAZARDOUS, PISTOL
-−1
-MODELS IF UNTICKED
-PICK ONE PROFILE
-standard
-1.1
-RNG
-12"
-A
-1
-BS
-4+
-S
-7
-AP
--2
-D
-1
-PISTOL
-supercharge
-1.8
-BEST · 12"
-RNG
-12"
-A
-1
-BS
-4+
 S
 8
 AP
@@ -1381,14 +1337,64 @@ AP
 D
 1
 PISTOL
-−0.3
+−1% wiped
+−0.4
 MODELS IF UNTICKED
+Plasma pistol ×3 KHORNE BERZERKERS
+RNG
+12"
+A
+1
+BS
+4+
+S
+8
+AP
+-3
+D
+2
+HAZARDOUS, PISTOL
+−1% wiped
+−1.1
+MODELS IF UNTICKED
+PICK ONE PROFILE
+standard
+1.1
+RNG
+12"
+A
+1
+BS
+4+
+S
+7
+AP
+-2
+D
+1
+PISTOL
+supercharge
+1.9
+BEST · 12"
+RNG
+12"
+A
+1
+BS
+4+
+S
+8
+AP
+-3
+D
+2
+HAZARDOUS, PISTOL
 SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
 +3% wiped
-+0.7
++0.6
 MODELS
 Close-quarters shooting at a unit it is engaged with
 only [CLOSE-QUARTERS] weapons
@@ -1404,6 +1410,7 @@ MODELS
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
 if it applies
+−1% wiped
 −1.3
 MODELS
 ARMY RULES
@@ -1432,7 +1439,7 @@ with their CP
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-+2% wiped
++1% wiped
 +0.4
 MODELS
 NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
@@ -1678,14 +1685,14 @@ if it applies
 +0.1
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (4)
-Reborn in Blood
-“At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. …” · not counted in the Damage tab
-Wrathful Presence
-“At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 The Blood God’s Favour
 “Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.” · not counted in the Damage tab
 Overwhelming Wrath
 “Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.” · not counted in the Damage tab
+Reborn in Blood
+“At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. …” · not counted in the Damage tab
+Wrathful Presence
+“At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Beacons of Rage (Eightbound (×2))
 Aura · Within 6" of it · The target: not Monster/Vehicle · The target Below Half-strength: +1 to Wound rolls
@@ -1877,7 +1884,7 @@ Add a group
 of 5 destroyed
 10 wounds lost · wiped in >99% of games
 
-Shoot 1.84 · Fight 3.16 · the charge is taken to succeed
+Shoot 1.86 · Fight 3.14 · the charge is taken to succeed
 
 Plasma pistol: supercharge
 Charged this turn
@@ -1943,6 +1950,21 @@ AP
 D
 2
 HAZARDOUS, PISTOL
+Bolt pistol ×7 KHORNE BERZERKERS
+RNG
+12"
+A
+1
+BS
+4+
+S
+5
+AP
+-1
+D
+1
+PISTOL
+0
 Plasma pistol ×3 KHORNE BERZERKERS
 RNG
 12"
@@ -1989,21 +2011,6 @@ AP
 D
 2
 HAZARDOUS, PISTOL
-Bolt pistol ×7 KHORNE BERZERKERS
-RNG
-12"
-A
-1
-BS
-4+
-S
-5
-AP
--1
-D
-1
-PISTOL
-0
 SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
@@ -2746,6 +2753,29 @@ Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targ
 STRATAGEMS · BERZERKER WARBAND
 1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
+The Blood God’s Favour
+- Wrathful Presence: pick one
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Overwhelming Wrath
+- Wrathful Presence: pick one
+Their Movement
+
+Aura · Movement · Their turn
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+Driven by Ultimate Rage
+- Wrathful Presence: pick one
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
 Reborn in Blood
 Start of the battle round
 
@@ -2760,29 +2790,6 @@ Start of the battle round
 
 At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.
 
-The Blood God’s Favour
-- Wrathful Presence: pick one
-
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
-
-Driven by Ultimate Rage
-- Wrathful Presence: pick one
-Fight
-
-Aura · Fight · Either turn
-
-While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
-
-Re-roll hit rolls of 1.
-Re-roll wound rolls of 1.
-Overwhelming Wrath
-- Wrathful Presence: pick one
-Their Movement
-
-Aura · Movement · Their turn
-
-Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
-
 Rules
 Deadly Demise D6, Deep Strike, Blessings of Khorne, Relentless Rage
 Stratagems
@@ -2794,16 +2801,16 @@ VESSELS OF WRATH Punish the Craven
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-ANGRON
-CHAOS
-CHARACTER
-DAEMON
-EPIC HERO
-FACTION: WORLD EATERS
-FLY
-KHORNE
 MONSTER
+CHARACTER
+FLY
+EPIC HERO
+CHAOS
+KHORNE
+DAEMON
 PRIMARCH
+ANGRON
+FACTION: WORLD EATERS
 WARLORD
 Ask about this unit
 Khârn the Betrayer ›
@@ -2880,6 +2887,14 @@ PISTOL
 2
 HAZARDOUS, PISTOL
 KHORNE BERZERKERS
+Bolt pistol×7
+12"
+1
+4+
+5
+-1
+1
+PISTOL
 Plasma pistol×3
 ➤standard
 12"
@@ -2897,14 +2912,6 @@ PISTOL
 -3
 2
 HAZARDOUS, PISTOL
-Bolt pistol×7
-12"
-1
-4+
-5
--1
-1
-PISTOL
 MELEE WEAPONS
 A
 WS
@@ -2997,16 +3004,16 @@ VESSELS OF WRATH Punish the Craven
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
+INFANTRY
 CHARACTER
 EPIC HERO
-FACTION: WORLD EATERS
 GRENADES
-INFANTRY
+CHAOS
 KHORNE
 KHÂRN THE BETRAYER
 BATTLELINE*
 BERZERKERS*
+FACTION: WORLD EATERS
 *from the led Khorne Berzerkers
 Ask about this unit
 ‹ Angron
@@ -3071,13 +3078,15 @@ WS
 S
 AP
 D
+
+Fights with both: Exalted chainblade, plus Bladed horn on top (extra attacks).
+
 Exalted chainblade
 8
 2+
 6
 -1
 2
-+
 Bladed horn
 5
 3+
@@ -3122,12 +3131,12 @@ VESSELS OF WRATH Punish the Craven, Aspire to Infamy, Scorn the Witch
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
+MOUNTED
 CHARACTER
-FACTION: WORLD EATERS
+CHAOS
 KHORNE
 LORD ON JUGGERNAUT
-MOUNTED
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Khârn the Betrayer
 Slaughterbound ›
@@ -3183,6 +3192,10 @@ STRATAGEMS · VESSELS OF WRATH
 1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 Possessed Lord (once per battle, start of the Fight phase): Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase
 ABILITIES
+Lord of the Eightbound
+
+If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+
 Rage Eternal
 Not leading a unit in this list
 
@@ -3200,12 +3213,8 @@ Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
 
-Lord of the Eightbound
-
-If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
-
 Rules
-Leader, Deadly Demise D3, Blessings of Khorne, Relentless Rage, Wrath of Khorne
+Deadly Demise D3, Leader, Blessings of Khorne, Relentless Rage, Wrath of Khorne
 Stratagems
 
 BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
@@ -3215,14 +3224,14 @@ VESSELS OF WRATH Punish the Craven, Aspire to Infamy, Scorn the Witch
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-FACTION: WORLD EATERS
 INFANTRY
+CHARACTER
+CHAOS
 KHORNE
+DAEMON
 POSSESSED
 SLAUGHTERBOUND
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Lord on Juggernaut
 Slaughterbound · Berzerker Glaive ›
@@ -3304,6 +3313,11 @@ STRATAGEMS · VESSELS OF WRATH
 1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 Possessed Lord (once per battle, start of the Fight phase): Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase
 ABILITIES
+Lord of the Eightbound
+- Slaughterbound
+
+If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+
 Rage Eternal
 - Slaughterbound
 Your Command
@@ -3320,11 +3334,6 @@ Fight
 Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
-
-Lord of the Eightbound
-- Slaughterbound
-
-If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
 
 Berzerker Glaive
 - Slaughterbound
@@ -3344,7 +3353,7 @@ Fight · Either turn
 Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
 
 Rules
-Leader, Deadly Demise D3, Blessings of Khorne, Deep Strike, Scouts 6" (Slaughterbound), Relentless Rage, Wrath of Khorne
+Deadly Demise D3, Leader, Deep Strike, Blessings of Khorne, Scouts 6" (Slaughterbound), Relentless Rage, Wrath of Khorne
 Stratagems
 
 BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
@@ -3354,15 +3363,15 @@ VESSELS OF WRATH Punish the Craven, Aspire to Infamy, Scorn the Witch
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-FACTION: WORLD EATERS
 INFANTRY
+CHARACTER
+CHAOS
 KHORNE
+DAEMON
 POSSESSED
 SLAUGHTERBOUND
 EXALTED EIGHTBOUND*
+FACTION: WORLD EATERS
 *from the led Exalted Eightbound
 Ask about this unit
 ‹ Slaughterbound
@@ -3443,7 +3452,7 @@ Capacity
 This model has a transport capacity of 12 WORLD EATERS INFANTRY models. It cannot transport POSSESSED or TERMINATOR models.
 
 Rules
-Deadly Demise D3, Blessings of Khorne, Firing Deck 2, Relentless Rage
+Deadly Demise D3, Firing Deck 2, Blessings of Khorne, Relentless Rage
 Stratagems
 
 BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
@@ -3453,15 +3462,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact
 None from Vessels of Wrath.
 
 Keywords
-CHAOS
-DEDICATED TRANSPORT
-FACTION: WORLD EATERS
+VEHICLE
+TRANSPORT
 FRAME
+DEDICATED TRANSPORT
+SMOKE
+CHAOS
 KHORNE
 RHINO
-SMOKE
-TRANSPORT
-VEHICLE
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Forgefiend
 
@@ -3531,13 +3540,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Vessels of Wrath.
 
 Keywords
+INFANTRY
 CHAOS
+KHORNE
 DAEMON
+POSSESSED
 EIGHTBOUND
 FACTION: WORLD EATERS
-INFANTRY
-KHORNE
-POSSESSED
 Ask about this unit
 ‹ Slaughterbound · Berzerker Glaive
 Exalted Eightbound ›
@@ -3610,13 +3619,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Vessels of Wrath.
 
 Keywords
+INFANTRY
 CHAOS
+KHORNE
 DAEMON
+POSSESSED
 EXALTED EIGHTBOUND
 FACTION: WORLD EATERS
-INFANTRY
-KHORNE
-POSSESSED
 Ask about this unit
 ‹ Eightbound
 Goremongers ›
@@ -3672,6 +3681,9 @@ WS
 S
 AP
 D
+
+Pick one to fight with: Chainblade or Close combat weapon.
+
 Chainblade×8
 4
 4+
@@ -3679,7 +3691,6 @@ Chainblade×8
 0
 1
 LANCE
-OR
 Close combat weapon×8
 3
 4+
@@ -3711,12 +3722,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Vessels of Wrath.
 
 Keywords
-CHAOS
-FACTION: WORLD EATERS
-GOREMONGERS
-GRENADES
 INFANTRY
+GRENADES
+CHAOS
 KHORNE
+GOREMONGERS
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Exalted Eightbound
 Jakhals ›
@@ -3819,12 +3830,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Vessels of Wrath.
 
 Keywords
-CHAOS
-FACTION: WORLD EATERS
-GRENADES
 INFANTRY
-JAKHALS
+GRENADES
+CHAOS
 KHORNE
+JAKHALS
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Goremongers
 Forgefiend ›
@@ -3866,14 +3877,6 @@ BS
 S
 AP
 D
-Hades autocannon×2
-36"
-6
-4+
-8
--1
-2
-RAPID FIRE 4
 Ectoplasma cannon
 36"
 D3
@@ -3882,6 +3885,14 @@ D3
 -3
 3
 BLAST, RAPID FIRE 1
+Hades autocannon×2
+36"
+6
+4+
+8
+-1
+2
+RAPID FIRE 4
 Target is the closest eligible target within 18": re-roll the hit roll (Furious Onslaught)
 MELEE WEAPONS
 A
@@ -3919,13 +3930,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Vessels of Wrath.
 
 Keywords
-CHAOS
-DAEMON
-FACTION: WORLD EATERS
-FORGEFIEND
-KHORNE
 VEHICLE
 WALKER
+CHAOS
+KHORNE
+DAEMON
+FORGEFIEND
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Jakhals
 Chaos Rhino ›
@@ -4149,15 +4160,16 @@ The Blood God’s Favour
 
 Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
 
+Overwhelming Wrath Aura
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
 Driven by Ultimate Rage Aura
 
 While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
 
 Re-roll hit rolls of 1.
 Re-roll wound rolls of 1.
-Overwhelming Wrath Aura
-
-Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
 
 UNITAngron
 

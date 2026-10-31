@@ -376,15 +376,9 @@ STRATAGEMS · CULT OF THE ARKIFANE
 2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
 Lord Discordant on Helstalker
 Mark of the Soul Forges
-Helstalker autocannon
-48"
-3
-2+
-9
--1
-3
-OR
-WHEN USING ANOTHER SHOOTING TYPE
+
+Can shoot with Bolt pistol or Helstalker autocannon, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
 Bolt pistol
 12"
 1
@@ -393,6 +387,13 @@ Bolt pistol
 -1
 1
 PISTOL
+Helstalker autocannon
+48"
+3
+2+
+9
+-1
+3
 Every attack: a Critical Hit on an unmodified hit roll of 5+ (Mark of the Soul Forges)
 Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start: re-roll wound rolls of 1 (Spirit Thief)
 STRATAGEMS · CULT OF THE ARKIFANE
@@ -407,7 +408,7 @@ D6
 3
 0
 1
-IGNORES COVER, PISTOL, TORRENT
+PISTOL, TORRENT, IGNORES COVER
 Melta tendril
 6"
 1
@@ -432,7 +433,7 @@ PISTOL
 8
 -3
 2
-HAZARDOUS, PISTOL
+PISTOL, HAZARDOUS
 Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
 Dark Apostle
 Cybinfernal Font
@@ -487,14 +488,6 @@ STRATAGEMS · CULT OF THE ARKIFANE
 1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
 2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
 Cultist Mob
-Bolt pistolCULTIST CHAMPION
-12"
-1
-4+
-4
-0
-1
-PISTOL
 Autopistol×9
 12"
 1
@@ -503,9 +496,25 @@ Autopistol×9
 0
 1
 PISTOL
+Bolt pistolCULTIST CHAMPION
+12"
+1
+4+
+4
+0
+1
+PISTOL
 Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
 Havocs
 ×2 units
+Havoc lascannon×4
+48"
+1
+3+
+12
+-3
+D6+1
+HEAVY
 Plasma gunHAVOC CHAMPION
 ➤standard
 24"
@@ -523,14 +532,6 @@ RAPID FIRE 1, HEAVY
 -3
 2
 HAZARDOUS, RAPID FIRE 1, HEAVY
-Havoc lascannon×4
-48"
-1
-3+
-12
--3
-D6+1
-HEAVY
 Every ranged attack: can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Stabilisation Talons)
 Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
 STRATAGEMS · DEVOTEES OF DESTRUCTION · YOUR SHOOTING PHASE
@@ -566,22 +567,6 @@ Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discor
 STRATAGEMS · DEVOTEES OF DESTRUCTION · YOUR SHOOTING PHASE
 1CP Ruination’s Bounty: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot, when your unit uses the Dark Pacts ability
 Chaos Predator Annihilator
-Havoc launcher
-48"
-D6
-3+
-5
-0
-1
-BLAST
-Predator twin lascannon
-48"
-1
-3+
-14
--3
-D6+1
-TWIN-LINKED
 Combi-bolter
 24"
 2
@@ -590,6 +575,14 @@ Combi-bolter
 -1
 1
 RAPID FIRE 2
+Havoc launcher
+48"
+D6
+3+
+5
+0
+1
+BLAST
 Lascannon×2
 48"
 1
@@ -597,6 +590,14 @@ Lascannon×2
 12
 -3
 D6+1
+Predator twin lascannon
+48"
+1
+3+
+14
+-3
+D6+1
+TWIN-LINKED
 Allocated to a MONSTER or VEHICLE model: can re-roll the damage roll (Annihilator)
 Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
 Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
@@ -606,22 +607,6 @@ STRATAGEMS · CULT OF THE ARKIFANE
 1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
 2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
 Chaos Predator Destructor
-Havoc launcher
-48"
-D6
-3+
-5
-0
-1
-BLAST
-Predator autocannon
-48"
-4
-3+
-9
--1
-3
-RAPID FIRE 2
 Combi-bolter
 24"
 2
@@ -630,6 +615,14 @@ Combi-bolter
 -1
 1
 RAPID FIRE 2
+Havoc launcher
+48"
+D6
+3+
+5
+0
+1
+BLAST
 Heavy bolter×2
 36"
 3
@@ -638,6 +631,14 @@ Heavy bolter×2
 -1
 2
 SUSTAINED HITS 1
+Predator autocannon
+48"
+4
+3+
+9
+-1
+3
+RAPID FIRE 2
 vs INFANTRY units: +1 AP (Destructor)
 Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
 Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
@@ -647,6 +648,14 @@ STRATAGEMS · CULT OF THE ARKIFANE
 1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
 2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
 Chaos Vindicator
+Combi-bolter
+24"
+2
+3+
+5
+-1
+1
+RAPID FIRE 2
 Demolisher cannon
 24"
 D6+3
@@ -663,14 +672,6 @@ D6
 0
 1
 BLAST
-Combi-bolter
-24"
-2
-3+
-5
--1
-1
-RAPID FIRE 2
 Within Engagement Range of one or more enemy units: no penalty to hit rolls for being within Engagement Range; the demolisher cannon can target enemy units within Engagement Range of it (no other friendly unit within Engagement Range of that unit) (Siege Shield)
 Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
 Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
@@ -721,14 +722,9 @@ STRATAGEMS · CULT OF THE ARKIFANE
 2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
 Lord Discordant on Helstalker
 Mark of the Soul Forges
-Impaler chainglaive
-5
-2+
-8
--3
-3
-LANCE
-+
+
+Fights with all of these: Impaler chainglaive, plus Bladed limbs and Techno-virus injector on top (extra attacks).
+
 Bladed limbs
 4
 3+
@@ -736,7 +732,13 @@ Bladed limbs
 -1
 2
 EXTRA ATTACKS
-+
+Impaler chainglaive
+5
+2+
+8
+-3
+3
+LANCE
 Techno-virus injector
 1
 3+
@@ -790,24 +792,23 @@ Legionary w/ Nostraman chainglaive picks one to fight with: Close combat weapon 
 
 Legionary w/ paired accursed weapons picks one to fight with: Close combat weapon or Paired accursed weapons.
 
-Legionary w/ voice eater (Voice eater) picks one to fight with: Close combat weapon or Astartes chainsword.
+Legionary w/ voice eater (Voice eater) picks one to fight with: Astartes chainsword or Close combat weapon.
 
 The others: one each (×N = how many the unit has).
 
 Master of Executions: none of these.
 
-Nostraman chainbladeVISIONARY
-5
-3+
-5
--1
-1
-SUSTAINED HITS 1
 Accursed weaponLEGIONARY
 4
 3+
 5
 -2
+1
+Astartes chainswordLEGIONARY
+4
+3+
+5
+-1
 1
 Close combat weapon×4
 3
@@ -815,6 +816,13 @@ Close combat weapon×4
 4
 0
 1
+Nostraman chainbladeVISIONARY
+5
+3+
+5
+-1
+1
+SUSTAINED HITS 1
 Nostraman chainglaiveLEGIONARY
 4
 3+
@@ -829,12 +837,6 @@ Paired accursed weaponsLEGIONARY
 -2
 1
 TWIN-LINKED
-Astartes chainswordLEGIONARY
-4
-3+
-5
--1
-1
 While the Dark Apostle leads this unit and it contains its DARK APOSTLE model: +1 to wound rolls (Dark Zealotry)
 While the Master of Executions leads this unit, target below its Starting Strength: re-roll the hit roll; also the wound roll if Below Half-strength (Warp-sighted Butcher)
 Target below its Starting Strength: +1 to hit rolls; also +1 to wound rolls if Below Half-strength (Visions of Suffering)
@@ -850,18 +852,18 @@ Brutal assault weapon×10
 1
 Havocs
 ×2 units
-Power fistHAVOC CHAMPION
-3
-3+
-8
--2
-2
 Close combat weapon×4
 3
 3+
 5
 0
 1
+Power fistHAVOC CHAMPION
+3
+3+
+8
+-2
+2
 Obliterators
 Crushing fists×2
 4
@@ -922,13 +924,9 @@ STRATAGEMS · CULT OF THE ARKIFANE
 1CP Balefire Boon: +1 AP, Your Shooting phase or the Fight phase, until the end of the phase
 2CP Soul-Tally Offering: re-roll the wound roll, Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units
 Maulerfiend
-Maulerfiend fists
-6
-3+
-14
--2
-D6+1
-+
+
+Fights with both: Maulerfiend fists, plus Lasher tendrils on top (extra attacks).
+
 Lasher tendrils
 6
 3+
@@ -936,6 +934,12 @@ Lasher tendrils
 -1
 1
 EXTRA ATTACKS
+Maulerfiend fists
+6
+3+
+14
+-2
+D6+1
 Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
 Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
 Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
@@ -1069,13 +1073,13 @@ Psychic · Their Movement / Your Shooting / Fight (either turn)
 
 Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll. If that enemy unit is Below Half-strength, add 1 to the Wound roll as well.
 
-Attached Unit
-
-If a CHARACTER unit from your army with the Leader ability (excluding EPIC HEROes) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.
-
 Voice eater
 
 Enemy units (excluding MONSTERS and VEHICLES) cannot be targeted with Stratagems while they are within Engagement Range of the bearer’s unit.
+
+Attached Unit
+
+If a CHARACTER unit from your army with the Leader ability (excluding EPIC HEROes) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.
 
 Cultist Mob
 For the Dark Gods
@@ -2824,7 +2828,7 @@ Indentured Daemon Engines
 While this model is within 3" of one or more friendly DAEMON VEHICLE units, this model has the Lone Operative ability.
 
 Rules
-Dark Pacts, Deadly Demise D3, Deep Strike, Soul Forge Boons
+Deadly Demise D3, Deep Strike, Dark Pacts, Soul Forge Boons
 Stratagems
 
 CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Balefire Boon, Soul-Tally Offering, Unholy Fortitude, Touch of the Arkifane
@@ -2834,15 +2838,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Devotees of Destruction.
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-EPIC HERO
-FACTION: HERETIC ASTARTES
-FLY
 MONSTER
-SOUL FORGE
+CHARACTER
+EPIC HERO
+FLY
+CHAOS
+DAEMON
 VASHTORR THE ARKIFANE
+FACTION: HERETIC ASTARTES
+SOUL FORGE
 WARLORD
 Ask about this unit
 Lord Discordant on Helstalker · Mark of the Soul Forges ›
@@ -2888,15 +2892,9 @@ BS
 S
 AP
 D
-Helstalker autocannon
-48"
-3
-2+
-9
--1
-3
-OR
-WHEN USING ANOTHER SHOOTING TYPE
+
+Can shoot with Bolt pistol or Helstalker autocannon, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
 Bolt pistol
 12"
 1
@@ -2905,6 +2903,13 @@ Bolt pistol
 -1
 1
 PISTOL
+Helstalker autocannon
+48"
+3
+2+
+9
+-1
+3
 Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start: re-roll wound rolls of 1 (Spirit Thief)
 MELEE WEAPONS
 A
@@ -2912,14 +2917,9 @@ WS
 S
 AP
 D
-Impaler chainglaive
-5
-2+
-8
--3
-3
-LANCE
-+
+
+Fights with all of these: Impaler chainglaive, plus Bladed limbs and Techno-virus injector on top (extra attacks).
+
 Bladed limbs
 4
 3+
@@ -2927,7 +2927,13 @@ Bladed limbs
 -1
 2
 EXTRA ATTACKS
-+
+Impaler chainglaive
+5
+2+
+8
+-3
+3
+LANCE
 Techno-virus injector
 1
 3+
@@ -2970,12 +2976,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Ch
 None from Devotees of Destruction.
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-FACTION: HERETIC ASTARTES
-LORD DISCORDANT
 MOUNTED
+CHARACTER
+CHAOS
+DAEMON
+LORD DISCORDANT
+FACTION: HERETIC ASTARTES
 SOUL FORGE
 Ask about this unit
 ‹ Vashtorr the Arkifane
@@ -3025,7 +3031,7 @@ D6
 3
 0
 1
-IGNORES COVER, PISTOL, TORRENT
+PISTOL, TORRENT, IGNORES COVER
 Melta tendril
 6"
 1
@@ -3050,7 +3056,7 @@ PISTOL
 8
 -3
 2
-HAZARDOUS, PISTOL
+PISTOL, HAZARDOUS
 Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
 MELEE WEAPONS
 A
@@ -3093,7 +3099,7 @@ Enhancement · Command · Your turn
 HERETIC ASTARTES model only (excluding DAMNED models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.
 
 Rules
-Dark Pacts, Leader
+Leader, Dark Pacts
 Stratagems
 
 CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Touch of the Arkifane
@@ -3103,12 +3109,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Devotees of Destruction.
 
 Keywords
-CHAOS
-CHARACTER
-FACTION: HERETIC ASTARTES
-GRENADES
 INFANTRY
+CHARACTER
+GRENADES
+CHAOS
 WARPSMITH
+FACTION: HERETIC ASTARTES
 Ask about this unit
 ‹ Lord Discordant on Helstalker · Mark of the Soul Forges
 Dark Apostle · Cybinfernal Font ›
@@ -3279,24 +3285,23 @@ Legionary w/ Nostraman chainglaive picks one to fight with: Close combat weapon 
 
 Legionary w/ paired accursed weapons picks one to fight with: Close combat weapon or Paired accursed weapons.
 
-Legionary w/ voice eater (Voice eater) picks one to fight with: Close combat weapon or Astartes chainsword.
+Legionary w/ voice eater (Voice eater) picks one to fight with: Astartes chainsword or Close combat weapon.
 
 The others: one each (×N = how many the unit has).
 
 Master of Executions: none of these.
 
-Nostraman chainbladeVISIONARY
-5
-3+
-5
--1
-1
-SUSTAINED HITS 1
 Accursed weaponLEGIONARY
 4
 3+
 5
 -2
+1
+Astartes chainswordLEGIONARY
+4
+3+
+5
+-1
 1
 Close combat weapon×4
 3
@@ -3304,6 +3309,13 @@ Close combat weapon×4
 4
 0
 1
+Nostraman chainbladeVISIONARY
+5
+3+
+5
+-1
+1
+SUSTAINED HITS 1
 Nostraman chainglaiveLEGIONARY
 4
 3+
@@ -3318,12 +3330,6 @@ Paired accursed weaponsLEGIONARY
 -2
 1
 TWIN-LINKED
-Astartes chainswordLEGIONARY
-4
-3+
-5
--1
-1
 WHOLE UNIT
 While the Dark Apostle leads this unit and it contains its DARK APOSTLE model: +1 to wound rolls (Dark Zealotry)
 While the Master of Executions leads this unit, target below its Starting Strength: re-roll the hit roll; also the wound roll if Below Half-strength (Warp-sighted Butcher)
@@ -3382,18 +3388,18 @@ Psychic · Their Movement / Your Shooting / Fight (either turn)
 
 Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll. If that enemy unit is Below Half-strength, add 1 to the Wound roll as well.
 
-Attached Unit
-- Nemesis Claw
-
-If a CHARACTER unit from your army with the Leader ability (excluding EPIC HEROes) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.
-
 Voice eater
 - Nemesis Claw
 
 Enemy units (excluding MONSTERS and VEHICLES) cannot be targeted with Stratagems while they are within Engagement Range of the bearer’s unit.
 
+Attached Unit
+- Nemesis Claw
+
+If a CHARACTER unit from your army with the Leader ability (excluding EPIC HEROes) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.
+
 Rules
-Dark Pacts, Leader, Support, Stealth (Nemesis Claw), Soul Forge Boons
+Leader, Support, Stealth (Nemesis Claw), Dark Pacts, Soul Forge Boons
 Stratagems
 
 CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Balefire Boon, Soul-Tally Offering, Unholy Fortitude, Touch of the Arkifane
@@ -3403,14 +3409,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Devotees of Destruction.
 
 Keywords
-CHAOS
-FACTION: HERETIC ASTARTES
-GRENADES
 INFANTRY
-SOUL FORGE
+GRENADES
+CHAOS
 MASTER OF EXECUTIONS*
-NEMESIS CLAW*
 PSYKER*
+NEMESIS CLAW*
+FACTION: HERETIC ASTARTES
+SOUL FORGE
 Dark Apostle and Master of Executions only:
 CHARACTER
 Dark Apostle only:
@@ -3457,26 +3463,26 @@ Cultist Champion
 1
 –
 RANGED WEAPONS
-Bolt pistol, Autopistol ×9 · all pistols
+Autopistol ×9, Bolt pistol · all pistols
 Range
 A
 BS
 S
 AP
 D
-Bolt pistolCULTIST CHAMPION
-12"
-1
-4+
-4
-0
-1
-PISTOL
 Autopistol×9
 12"
 1
 4+
 3
+0
+1
+PISTOL
+Bolt pistolCULTIST CHAMPION
+12"
+1
+4+
+4
 0
 1
 PISTOL
@@ -3512,13 +3518,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Devotees of Destruction.
 
 Keywords
-BATTLELINE
-CHAOS
-CULTIST MOB
-DAMNED
-FACTION: HERETIC ASTARTES
-GRENADES
 INFANTRY
+BATTLELINE
+GRENADES
+CHAOS
+DAMNED
+CULTIST MOB
+FACTION: HERETIC ASTARTES
 Ask about this unit
 ‹ Dark Apostle · Cybinfernal Font
 Havocs ›
@@ -3569,6 +3575,14 @@ BS
 S
 AP
 D
+Havoc lascannon×4
+48"
+1
+3+
+12
+-3
+D6+1
+HEAVY
 Plasma gunHAVOC CHAMPION
 ➤standard
 24"
@@ -3586,14 +3600,6 @@ RAPID FIRE 1, HEAVY
 -3
 2
 HAZARDOUS, RAPID FIRE 1, HEAVY
-Havoc lascannon×4
-48"
-1
-3+
-12
--3
-D6+1
-HEAVY
 Every ranged attack: can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Stabilisation Talons)
 Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
 STRATAGEMS · DEVOTEES OF DESTRUCTION · YOUR SHOOTING PHASE
@@ -3604,18 +3610,18 @@ WS
 S
 AP
 D
-Power fistHAVOC CHAMPION
-3
-3+
-8
--2
-2
 Close combat weapon×4
 3
 3+
 5
 0
 1
+Power fistHAVOC CHAMPION
+3
+3+
+8
+-2
+2
 ABILITIES
 Stabilisation Talons
 Their Move · Your Shoot
@@ -3635,10 +3641,10 @@ DEVOTEES OF DESTRUCTION Snare of Fire, Ruination’s Bounty, Undying Hatred
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-FACTION: HERETIC ASTARTES
-HAVOCS
 INFANTRY
+CHAOS
+HAVOCS
+FACTION: HERETIC ASTARTES
 Ask about this unit
 ‹ Cultist Mob
 Obliterators ›
@@ -3729,7 +3735,7 @@ Once per battle, per unit · Shooting · Your turn
 In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have [INDIRECT FIRE].
 
 Rules
-Dark Pacts, Deep Strike, Rain of Ruin
+Deep Strike, Dark Pacts, Rain of Ruin
 Stratagems
 
 CULT OF THE ARKIFANE Biomechanoid Regeneration, Forge-Fire Surge, Touch of the Arkifane
@@ -3739,11 +3745,11 @@ DEVOTEES OF DESTRUCTION Ruination’s Bounty, Undying Hatred
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
+INFANTRY
 CHAOS
 DAEMON
-FACTION: HERETIC ASTARTES
-INFANTRY
 OBLITERATORS
+FACTION: HERETIC ASTARTES
 Ask about this unit
 ‹ Havocs
 Chaos Predator Annihilator ›
@@ -3791,22 +3797,6 @@ BS
 S
 AP
 D
-Havoc launcher
-48"
-D6
-3+
-5
-0
-1
-BLAST
-Predator twin lascannon
-48"
-1
-3+
-14
--3
-D6+1
-TWIN-LINKED
 Combi-bolter
 24"
 2
@@ -3815,6 +3805,14 @@ Combi-bolter
 -1
 1
 RAPID FIRE 2
+Havoc launcher
+48"
+D6
+3+
+5
+0
+1
+BLAST
 Lascannon×2
 48"
 1
@@ -3822,6 +3820,14 @@ Lascannon×2
 12
 -3
 D6+1
+Predator twin lascannon
+48"
+1
+3+
+14
+-3
+D6+1
+TWIN-LINKED
 Allocated to a MONSTER or VEHICLE model: can re-roll the damage roll (Annihilator)
 Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
 MELEE WEAPONS
@@ -3855,14 +3861,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact
 None from Devotees of Destruction.
 
 Keywords
-CHAOS
-DAEMON
-FACTION: HERETIC ASTARTES
-FRAME
-PREDATOR ANNIHILATOR
-SMOKE
-SOUL FORGE
 VEHICLE
+FRAME
+SMOKE
+CHAOS
+PREDATOR ANNIHILATOR
+FACTION: HERETIC ASTARTES
+DAEMON
+SOUL FORGE
 Ask about this unit
 ‹ Obliterators
 Chaos Predator Destructor ›
@@ -3910,22 +3916,6 @@ BS
 S
 AP
 D
-Havoc launcher
-48"
-D6
-3+
-5
-0
-1
-BLAST
-Predator autocannon
-48"
-4
-3+
-9
--1
-3
-RAPID FIRE 2
 Combi-bolter
 24"
 2
@@ -3934,6 +3924,14 @@ Combi-bolter
 -1
 1
 RAPID FIRE 2
+Havoc launcher
+48"
+D6
+3+
+5
+0
+1
+BLAST
 Heavy bolter×2
 36"
 3
@@ -3942,6 +3940,14 @@ Heavy bolter×2
 -1
 2
 SUSTAINED HITS 1
+Predator autocannon
+48"
+4
+3+
+9
+-1
+3
+RAPID FIRE 2
 vs INFANTRY units: +1 AP (Destructor)
 Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
 MELEE WEAPONS
@@ -3975,14 +3981,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact
 None from Devotees of Destruction.
 
 Keywords
-CHAOS
-DAEMON
-FACTION: HERETIC ASTARTES
-FRAME
-PREDATOR DESTRUCTOR
-SMOKE
-SOUL FORGE
 VEHICLE
+FRAME
+SMOKE
+CHAOS
+PREDATOR DESTRUCTOR
+FACTION: HERETIC ASTARTES
+DAEMON
+SOUL FORGE
 Ask about this unit
 ‹ Chaos Predator Annihilator
 Chaos Vindicator ›
@@ -4030,6 +4036,14 @@ BS
 S
 AP
 D
+Combi-bolter
+24"
+2
+3+
+5
+-1
+1
+RAPID FIRE 2
 Demolisher cannon
 24"
 D6+3
@@ -4046,14 +4060,6 @@ D6
 0
 1
 BLAST
-Combi-bolter
-24"
-2
-3+
-5
--1
-1
-RAPID FIRE 2
 Within Engagement Range of one or more enemy units: no penalty to hit rolls for being within Engagement Range; the demolisher cannon can target enemy units within Engagement Range of it (no other friendly unit within Engagement Range of that unit) (Siege Shield)
 Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start: re-roll wound rolls of 1
 MELEE WEAPONS
@@ -4087,14 +4093,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact
 None from Devotees of Destruction.
 
 Keywords
-CHAOS
-DAEMON
-FACTION: HERETIC ASTARTES
+VEHICLE
 FRAME
 SMOKE
-SOUL FORGE
-VEHICLE
+CHAOS
 VINDICATOR
+FACTION: HERETIC ASTARTES
+DAEMON
+SOUL FORGE
 Ask about this unit
 ‹ Chaos Predator Destructor
 Forgefiend ›
@@ -4183,13 +4189,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Devotees of Destruction.
 
 Keywords
-CHAOS
-DAEMON
-FACTION: HERETIC ASTARTES
-FORGEFIEND
-SOUL FORGE
 VEHICLE
 WALKER
+CHAOS
+DAEMON
+FORGEFIEND
+FACTION: HERETIC ASTARTES
+SOUL FORGE
 Ask about this unit
 ‹ Chaos Vindicator
 Maulerfiend ›
@@ -4230,13 +4236,9 @@ WS
 S
 AP
 D
-Maulerfiend fists
-6
-3+
-14
--2
-D6+1
-+
+
+Fights with both: Maulerfiend fists, plus Lasher tendrils on top (extra attacks).
+
 Lasher tendrils
 6
 3+
@@ -4244,6 +4246,12 @@ Lasher tendrils
 -1
 1
 EXTRA ATTACKS
+Maulerfiend fists
+6
+3+
+14
+-2
+D6+1
 Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
 Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3"): that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase
 STRATAGEMS · CULT OF THE ARKIFANE
@@ -4268,13 +4276,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Devotees of Destruction.
 
 Keywords
-CHAOS
-DAEMON
-FACTION: HERETIC ASTARTES
-MAULERFIEND
-SOUL FORGE
 VEHICLE
 WALKER
+CHAOS
+DAEMON
+MAULERFIEND
+FACTION: HERETIC ASTARTES
+SOUL FORGE
 Ask about this unit
 ‹ Forgefiend
 

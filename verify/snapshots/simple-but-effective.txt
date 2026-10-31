@@ -331,14 +331,6 @@ Deffkoptas
 Ghazghkull Thraka
 Warlord
 Mork’s Roar
-➤Point Blank
-9"
-2D6+2
-–
-6
--1
-1
-CLOSE-QUARTERS, TORRENT
 ➤Aimed
 36"
 12
@@ -347,6 +339,14 @@ CLOSE-QUARTERS, TORRENT
 -1
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 4
+➤Point Blank
+9"
+2D6+2
+–
+6
+-1
+1
+CLOSE-QUARTERS, TORRENT
 Riled up: [ASSAULT] (Waaagh!)
 Mozrog Skragbad
 Thump Gun
@@ -362,14 +362,6 @@ Nazdreg
 + Meganobz
 NAZDREG
 Kustom Blasta X
-+Skorcha
-12"
-3
-–
-5
--1
-1
-BLAST 1, TORRENT, IGNORES COVER
 +Gatler
 24"
 6
@@ -386,24 +378,16 @@ HAZARDOUS, IGNORES COVER
 -1
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER
-MEGANOBZ
-Kombi-weapon×5
-➤Point Blank
++Skorcha
 12"
 3
 –
 5
-0
+-1
 1
 BLAST 1, TORRENT, IGNORES COVER
-➤Kill Shot
-24"
-1
-5+
-10
--2
-3
-IGNORES COVER
+MEGANOBZ
+Kombi-weapon×5
 ➤Shoota
 18"
 2
@@ -412,6 +396,22 @@ IGNORES COVER
 0
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 1, IGNORES COVER
+➤Kill Shot
+24"
+1
+5+
+10
+-2
+3
+IGNORES COVER
+➤Point Blank
+12"
+3
+–
+5
+0
+1
+BLAST 1, TORRENT, IGNORES COVER
 Riled up: [ASSAULT] (Waaagh!)
 STRATAGEMS · BULLY BOYZ
 1CP Armed to da Teef: can re-roll hit rolls of 1 (riled up: can re-roll hit rolls), Your Shooting phase or the Fight phase
@@ -448,14 +448,6 @@ CLOSE-QUARTERS
 Riled up (Zodgrod Wortsnagga · Super Runts: always riled up): [ASSAULT] (Waaagh!)
 Beastboss on Squigosaur
 Brutal But Kunnin’
-Thump Gun
-18"
-3
-5+
-6
-0
-2
-ANTI-MONSTER/VEHICLE 4+
 Slugga
 12"
 1
@@ -464,6 +456,14 @@ Slugga
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
+Thump Gun
+18"
+3
+5+
+6
+0
+2
+ANTI-MONSTER/VEHICLE 4+
 Riled up: [ASSAULT] (Waaagh!)
 Big Mek Dakkarig
 ×2 units
@@ -489,14 +489,6 @@ Riled up: [SUSTAINED HITS 1] (Even More Dakka) · [ASSAULT] (Waaagh!)
 Warboss in Mega Armour
 Da Gobshot Thunderbuss
 + Meganobz
-Da Gobshot Thunderbuss
-24"
-6
-4+
-7
--2
-2
-LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 6
 Big Shoota
 36"
 3
@@ -505,6 +497,14 @@ Big Shoota
 0
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2
+Da Gobshot Thunderbuss
+24"
+6
+4+
+7
+-2
+2
+LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 6
 Riled up: [ASSAULT] (Waaagh!)
 STRATAGEMS · BULLY BOYZ
 1CP Armed to da Teef: can re-roll hit rolls of 1 (riled up: can re-roll hit rolls), Your Shooting phase or the Fight phase
@@ -530,15 +530,10 @@ Grot Blasta×10
 CLOSE-QUARTERS
 Riled up: [ASSAULT] (Waaagh!)
 Deffkoptas
+
+Can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
+
 Rokkit Launcha×3
-➤Busta
-24"
-2
-5+
-10
--2
-3
-LETHAL HITS
 ➤Blasta
 24"
 2
@@ -547,8 +542,14 @@ LETHAL HITS
 0
 1
 BLAST 2
-OR
-WHEN USING ANOTHER SHOOTING TYPE
+➤Busta
+24"
+2
+5+
+10
+-2
+3
+LETHAL HITS
 Slugga×3
 12"
 1
@@ -563,14 +564,9 @@ Riled up: [ASSAULT] (Waaagh!)
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Ghazghkull Thraka
 Warlord
-Gork’s Klaw
-7
-2+
-14
--3
-4
-CLEAVE 2, DEVASTATING WOUNDS
-+
+
+Fights with both: Gork’s Klaw, plus Adamantine ’Eadbutt on top (extra attacks).
+
 Adamantine ’Eadbutt
 1
 2+
@@ -578,24 +574,18 @@ Adamantine ’Eadbutt
 -2
 D3+3
 DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION
+Gork’s Klaw
+7
+2+
+14
+-3
+4
+CLEAVE 2, DEVASTATING WOUNDS
 Own aura: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
 Mozrog Skragbad
-Gutrippa
-➤HunterMON/VEH ONLY
-6
-2+
-12
--2
-D6+1
-LETHAL HITS
-➤Standard
-6
-2+
-9
--2
-2
-CLEAVE 1
-+
+
+Fights with both: Gutrippa, plus Big Chompa’s Jaws on top (extra attacks).
+
 Big Chompa’s Jaws
 3
 3+
@@ -603,19 +593,29 @@ Big Chompa’s Jaws
 -2
 4
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS
+Gutrippa
+➤Standard
+6
+2+
+9
+-2
+2
+CLEAVE 1
+➤HunterMON/VEH ONLY
+6
+2+
+12
+-2
+D6+1
+LETHAL HITS
 vs MONSTER/VEHICLE: can re-roll wound rolls (Da Bigger Dey Iz…)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
 Nazdreg
 + Meganobz
 NAZDREG
-Moonchewa
-5
-2+
-12
--2
-3
-CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1
-+
+
+Fights with both: Moonchewa, plus Kustom Blasta X on top (extra attacks).
+
 Kustom Blasta X
 6
 2+
@@ -623,6 +623,13 @@ Kustom Blasta X
 -1
 1
 CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1
+Moonchewa
+5
+2+
+12
+-2
+3
+CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1
 MEGANOBZ
 Power Klaw×5
 3
@@ -662,13 +669,10 @@ Scavenged Shivs×20
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
 Beastboss on Squigosaur
 Brutal But Kunnin’
+
+Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
+
 Beastchoppa
-➤HunterMON/VEH ONLY
-6
-2+
-12
--2
-D6+1
 ➤Standard
 6
 2+
@@ -676,7 +680,12 @@ D6+1
 -2
 3
 CLEAVE 1
-+
+➤HunterMON/VEH ONLY
+6
+2+
+12
+-2
+D6+1
 Squigosaur’s jaws
 3
 3+
@@ -735,13 +744,15 @@ Scavenged Shivs×10
 1
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
 Deffkoptas
+
+Pick one to fight with: Choppa or Spinnin’ Blades.
+
 Choppa×3
 3
 4+
 5
 -1
 1
-OR
 Spinnin’ Blades×3
 4
 3+
@@ -760,6 +771,10 @@ If this model is in your army, it must be your WARLORD.
 
 Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
 
+Da Grand Warlord’s Ladz
+
+While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit has Lone Operative.
+
 Makari, Hoist Dat Banner!
 Once per battle, per army
 Your Movement
@@ -769,10 +784,6 @@ Once per battle, per army · Movement · Your turn
 In your Movement phase, you can select a number of friendly ORKS units equal to or less than the current battle round number. Those units are riled up until the start of your next turn.
 
 Place one Makari token next to the unit, removing it after this ability is used.
-
-Da Grand Warlord’s Ladz
-
-While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit has Lone Operative.
 
 Prophet of da Great Waaagh!
 Fight
@@ -784,10 +795,6 @@ While a friendly ORKS unit is within 6" of this unit, that unit’s melee attack
 +1 to hit rolls.
 +1 to wound rolls.
 Mozrog Skragbad
-Beast Snagga Following
-
-While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
-
 One Last Kill
 Fight
 
@@ -803,9 +810,23 @@ Fight · Either turn
 
 This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.
 
+Beast Snagga Following
+
+While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
+
 Nazdreg
 + Meganobz
 NAZDREG
+Intimidating Motivation
+Once per battle round, per army
+Your Movement
+
+Once per battle round, per army · Movement · Your turn
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly ORKS unit within 6" of this unit. That unit:
+
+Is no longer battle-shocked.
+Is riled up until the start of your next turn.
 Nazdreg’s Know-wotz
 This unit has Deep Strike.
 This unit’s ranged attacks have [IGNORES COVER].
@@ -819,27 +840,17 @@ In your opponent’s Movement phase, when an enemy unit ends a move within 8" of
 
 Make a normal move of up to D6".
 Or: If this unit is riled up, make a normal move of up to 5".
-Intimidating Motivation
-Once per battle round, per army
-Your Movement
-
-Once per battle round, per army · Movement · Your turn
-
-In your Movement phase, at the start or end of this unit’s move, you can select one friendly ORKS unit within 6" of this unit. That unit:
-
-Is no longer battle-shocked.
-Is riled up until the start of your next turn.
 MEGANOBZ
+Arrogant Invulnerability
+
+Attacks that target this unit have -1 AP.
+
 Krumpin’ Time
 Fight
 
 Fight · Either turn
 
 In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
-
-Arrogant Invulnerability
-
-Attacks that target this unit have -1 AP.
 
 Zodgrod Wortsnagga
 + Runtherd + Gretchin
@@ -886,10 +897,6 @@ Aura · Charge · Either turn
 
 Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
 
-Boss of da Hunt
-
-While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
-
 Keep Huntin’!
 Once per battle round, per army
 Your Movement
@@ -900,6 +907,10 @@ In your Movement phase, at the start or end of this unit’s move, you can selec
 
 Is no longer battle-shocked.
 Is riled up until the start of your next turn.
+Boss of da Hunt
+
+While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
+
 Brutal But Kunnin’
 Enhancement
 Already in D
@@ -957,16 +968,16 @@ WARBOSS model only. This model has the following weapon:
 Da Gobshot Thunderbuss: 24" A6 BS4+ S7 AP-2 D2 [LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6]
 
 MEGANOBZ
+Arrogant Invulnerability
+
+Attacks that target this unit have -1 AP.
+
 Krumpin’ Time
 Fight
 
 Fight · Either turn
 
 In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
-
-Arrogant Invulnerability
-
-Attacks that target this unit have -1 AP.
 
 Gretchin
 Extra Sneaky
@@ -1000,19 +1011,19 @@ Movement · Your turn
 At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.
 
 Deffkoptas
-Aerial Manoover
-Their Fight
-
-Fight · Their turn
-
-At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.
-
 Deff from Above
 Your Shooting
 
 Shooting · Your turn
 
 In your Shooting phase, if this unit made an ingress move this turn, this unit’s ranged attacks have +1 to hit rolls.
+
+Aerial Manoover
+Their Fight
+
+Fight · Their turn
+
+At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.
 
 ######## rules · ABILITIES Rules
 Orks · Purge the Foe
@@ -1367,6 +1378,21 @@ CLOSE-QUARTERS, TORRENT
 −1.2
 MODELS IF UNTICKED
 PICK ONE PROFILE
+Aimed
+0.4
+RNG
+36"
+A
+12
+BS
+5+
+S
+6
+AP
+-1
+D
+1
+LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 4
 Point Blank
 1.2
 BEST · 9"
@@ -1383,21 +1409,6 @@ AP
 D
 1
 CLOSE-QUARTERS, TORRENT
-Aimed
-0.4
-RNG
-36"
-A
-12
-BS
-5+
-S
-6
-AP
--1
-D
-1
-LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 4
 AGAINST THIS TARGET
 [LETHAL HITS: NON-MONSTER/VEHICLE]
 0
@@ -1438,10 +1449,10 @@ None that change these numbers.
 NOT COUNTED IN THE DAMAGE TAB (3)
 Supreme Commander
 “If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
-Makari, Hoist Dat Banner!
-“In your Movement phase, you can select a number of friendly ORKS units equal to or less than the current battle round number. Those units are riled up until the start of your next turn. *Place one Makari token next to the unit, removing it after this ability is used.*” · not counted in the Damage tab
 Da Grand Warlord’s Ladz
 “While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
+Makari, Hoist Dat Banner!
+“In your Movement phase, you can select a number of friendly ORKS units equal to or less than the current battle round number. Those units are riled up until the start of your next turn. *Place one Makari token next to the unit, removing it after this ability is used.*” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1653,10 +1664,10 @@ no change: already wounds on 2+
 NOT COUNTED IN THE DAMAGE TAB (3)
 Supreme Commander
 “If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
-Makari, Hoist Dat Banner!
-“In your Movement phase, you can select a number of friendly ORKS units equal to or less than the current battle round number. Those units are riled up until the start of your next turn. *Place one Makari token next to the unit, removing it after this ability is used.*” · not counted in the Damage tab
 Da Grand Warlord’s Ladz
 “While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
+Makari, Hoist Dat Banner!
+“In your Movement phase, you can select a number of friendly ORKS units equal to or less than the current battle round number. Those units are riled up until the start of your next turn. *Place one Makari token next to the unit, removing it after this ability is used.*” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1841,6 +1852,21 @@ CLOSE-QUARTERS, TORRENT
 −0.1
 MODELS IF UNTICKED
 PICK ONE PROFILE
+Aimed
+4.7
+RNG
+36"
+A
+12
+BS
+5+
+S
+6
+AP
+-1
+D
+1
+LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 4
 Point Blank
 4.8
 BEST · 9"
@@ -1857,21 +1883,6 @@ AP
 D
 1
 CLOSE-QUARTERS, TORRENT
-Aimed
-4.7
-RNG
-36"
-A
-12
-BS
-5+
-S
-6
-AP
--1
-D
-1
-LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 4
 AGAINST THIS TARGET
 [LETHAL HITS: NON-MONSTER/VEHICLE]
 0
@@ -1906,10 +1917,10 @@ None that change these numbers.
 NOT COUNTED IN THE DAMAGE TAB (3)
 Supreme Commander
 “If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
-Makari, Hoist Dat Banner!
-“In your Movement phase, you can select a number of friendly ORKS units equal to or less than the current battle round number. Those units are riled up until the start of your next turn. *Place one Makari token next to the unit, removing it after this ability is used.*” · not counted in the Damage tab
 Da Grand Warlord’s Ladz
 “While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
+Makari, Hoist Dat Banner!
+“In your Movement phase, you can select a number of friendly ORKS units equal to or less than the current battle round number. Those units are riled up until the start of your next turn. *Place one Makari token next to the unit, removing it after this ability is used.*” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1998,10 +2009,10 @@ no change: already wounds on 2+
 NOT COUNTED IN THE DAMAGE TAB (3)
 Supreme Commander
 “If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
-Makari, Hoist Dat Banner!
-“In your Movement phase, you can select a number of friendly ORKS units equal to or less than the current battle round number. Those units are riled up until the start of your next turn. *Place one Makari token next to the unit, removing it after this ability is used.*” · not counted in the Damage tab
 Da Grand Warlord’s Ladz
 “While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
+Makari, Hoist Dat Banner!
+“In your Movement phase, you can select a number of friendly ORKS units equal to or less than the current battle round number. Those units are riled up until the start of your next turn. *Place one Makari token next to the unit, removing it after this ability is used.*” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -2493,14 +2504,6 @@ S
 AP
 D
 Mork’s Roar
-➤Point Blank
-9"
-2D6+2
-–
-6
--1
-1
-CLOSE-QUARTERS, TORRENT
 ➤Aimed
 36"
 12
@@ -2509,6 +2512,14 @@ CLOSE-QUARTERS, TORRENT
 -1
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 4
+➤Point Blank
+9"
+2D6+2
+–
+6
+-1
+1
+CLOSE-QUARTERS, TORRENT
 Riled up: [ASSAULT] (Waaagh!)
 MELEE WEAPONS
 A
@@ -2516,14 +2527,9 @@ WS
 S
 AP
 D
-Gork’s Klaw
-7
-2+
-14
--3
-4
-CLEAVE 2, DEVASTATING WOUNDS
-+
+
+Fights with both: Gork’s Klaw, plus Adamantine ’Eadbutt on top (extra attacks).
+
 Adamantine ’Eadbutt
 1
 2+
@@ -2531,6 +2537,13 @@ Adamantine ’Eadbutt
 -2
 D3+3
 DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION
+Gork’s Klaw
+7
+2+
+14
+-3
+4
+CLEAVE 2, DEVASTATING WOUNDS
 Own aura: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
 ABILITIES
 Supreme Commander
@@ -2538,6 +2551,10 @@ Supreme Commander
 If this model is in your army, it must be your WARLORD.
 
 Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
+
+Da Grand Warlord’s Ladz
+
+While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit has Lone Operative.
 
 Makari, Hoist Dat Banner!
 Once per battle, per army
@@ -2549,10 +2566,6 @@ In your Movement phase, you can select a number of friendly ORKS units equal to 
 
 Place one Makari token next to the unit, removing it after this ability is used.
 
-Da Grand Warlord’s Ladz
-
-While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit has Lone Operative.
-
 Prophet of da Great Waaagh!
 Fight
 
@@ -2563,7 +2576,7 @@ While a friendly ORKS unit is within 6" of this unit, that unit’s melee attack
 +1 to hit rolls.
 +1 to wound rolls.
 Rules
-Waaagh!, Da Boss, ’Ard as Nails
+Da Boss, Waaagh!, ’Ard as Nails
 Stratagems
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
@@ -2571,13 +2584,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Brute Bosses, Bully Boyz or Runt Swarm.
 
 Keywords
+INFANTRY
 CHARACTER
 EPIC HERO
 EXPLOSIVES
-FACTION: ORKS
-GHAZGHKULL THRAKA
-INFANTRY
 WARBOSS
+GHAZGHKULL THRAKA
+FACTION: ORKS
 WARLORD
 Ask about this unit
 Mozrog Skragbad ›
@@ -2610,8 +2623,8 @@ Mozrog Skragbad
 WHEN TARGETED
 4
 Feel No Pain 5+
-Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)
 Destroyed in the Fight phase before being selected to fight: on a 2+ it stays until it has fought or the phase ends
+Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)
 Riled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -2635,22 +2648,9 @@ WS
 S
 AP
 D
-Gutrippa
-➤HunterMON/VEH ONLY
-6
-2+
-12
--2
-D6+1
-LETHAL HITS
-➤Standard
-6
-2+
-9
--2
-2
-CLEAVE 1
-+
+
+Fights with both: Gutrippa, plus Big Chompa’s Jaws on top (extra attacks).
+
 Big Chompa’s Jaws
 3
 3+
@@ -2658,13 +2658,24 @@ Big Chompa’s Jaws
 -2
 4
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS
+Gutrippa
+➤Standard
+6
+2+
+9
+-2
+2
+CLEAVE 1
+➤HunterMON/VEH ONLY
+6
+2+
+12
+-2
+D6+1
+LETHAL HITS
 vs MONSTER/VEHICLE: can re-roll wound rolls (Da Bigger Dey Iz…)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
 ABILITIES
-Beast Snagga Following
-
-While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
-
 One Last Kill
 Fight
 
@@ -2680,6 +2691,10 @@ Fight · Either turn
 
 This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.
 
+Beast Snagga Following
+
+While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
+
 Rules
 Feel No Pain 5+, Waaagh!
 Stratagems
@@ -2689,12 +2704,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Brute Bosses, Bully Boyz or Runt Swarm.
 
 Keywords
+MONSTER
 BEAST SNAGGA
 CHARACTER
 EPIC HERO
-FACTION: ORKS
-MONSTER
 MOZROG SKRAGBAD
+FACTION: ORKS
 Ask about this unit
 ‹ Ghazghkull Thraka
 Nazdreg ›
@@ -2755,14 +2770,6 @@ AP
 D
 NAZDREG
 Kustom Blasta X
-+Skorcha
-12"
-3
-–
-5
--1
-1
-BLAST 1, TORRENT, IGNORES COVER
 +Gatler
 24"
 6
@@ -2779,24 +2786,16 @@ HAZARDOUS, IGNORES COVER
 -1
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER
-MEGANOBZ
-Kombi-weapon×5
-➤Point Blank
++Skorcha
 12"
 3
 –
 5
-0
+-1
 1
 BLAST 1, TORRENT, IGNORES COVER
-➤Kill Shot
-24"
-1
-5+
-10
--2
-3
-IGNORES COVER
+MEGANOBZ
+Kombi-weapon×5
 ➤Shoota
 18"
 2
@@ -2805,6 +2804,22 @@ IGNORES COVER
 0
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 1, IGNORES COVER
+➤Kill Shot
+24"
+1
+5+
+10
+-2
+3
+IGNORES COVER
+➤Point Blank
+12"
+3
+–
+5
+0
+1
+BLAST 1, TORRENT, IGNORES COVER
 WHOLE UNIT
 Riled up: [ASSAULT] (Waaagh!)
 MELEE WEAPONS
@@ -2814,14 +2829,9 @@ S
 AP
 D
 NAZDREG
-Moonchewa
-5
-2+
-12
--2
-3
-CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1
-+
+
+Fights with both: Moonchewa, plus Kustom Blasta X on top (extra attacks).
+
 Kustom Blasta X
 6
 2+
@@ -2829,6 +2839,13 @@ Kustom Blasta X
 -1
 1
 CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1
+Moonchewa
+5
+2+
+12
+-2
+3
+CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1
 MEGANOBZ
 Power Klaw×5
 3
@@ -2841,6 +2858,17 @@ WHOLE UNIT
 Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
 ABILITIES
+Intimidating Motivation
+- Nazdreg
+Once per battle round, per army
+Your Movement
+
+Once per battle round, per army · Movement · Your turn
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly ORKS unit within 6" of this unit. That unit:
+
+Is no longer battle-shocked.
+Is riled up until the start of your next turn.
 Nazdreg’s Know-wotz
 - Nazdreg
 This unit has Deep Strike.
@@ -2856,17 +2884,11 @@ In your opponent’s Movement phase, when an enemy unit ends a move within 8" of
 
 Make a normal move of up to D6".
 Or: If this unit is riled up, make a normal move of up to 5".
-Intimidating Motivation
-- Nazdreg
-Once per battle round, per army
-Your Movement
+Arrogant Invulnerability
+- Meganobz
 
-Once per battle round, per army · Movement · Your turn
+Attacks that target this unit have -1 AP.
 
-In your Movement phase, at the start or end of this unit’s move, you can select one friendly ORKS unit within 6" of this unit. That unit:
-
-Is no longer battle-shocked.
-Is riled up until the start of your next turn.
 Krumpin’ Time
 - Meganobz
 Fight
@@ -2875,13 +2897,8 @@ Fight · Either turn
 
 In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
 
-Arrogant Invulnerability
-- Meganobz
-
-Attacks that target this unit have -1 AP.
-
 Rules
-Waaagh!, Leader, Da Boss, Deep Strike, ’Ard as Nails, Displays of Savagery
+Deep Strike, Leader, Da Boss, Waaagh!, ’Ard as Nails, Displays of Savagery
 Stratagems
 
 BULLY BOYZ Armed to da Teef, Hulking Brutes, Too Arrogant to Die
@@ -2891,15 +2908,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Brute Bosses or Runt Swarm.
 
 Keywords
+INFANTRY
 CHARACTER
 EPIC HERO
-FACTION: ORKS
-INFANTRY
 MEGA ARMOUR
-NAZDREG
 WARBOSS
+NAZDREG
 EXPLOSIVES*
 MEGANOBZ*
+FACTION: ORKS
 *from the led Meganobz
 Ask about this unit
 ‹ Mozrog Skragbad
@@ -3062,7 +3079,7 @@ Upgrade
 GRETCHIN unit only. This unit has -3" detection range.
 
 Rules
-Waaagh!, Leader, Support, Sneaky Little Gitz
+Leader, Support, Waaagh!, Sneaky Little Gitz
 Stratagems
 
 RUNT SWARM Scarper!, Grot Shields, Infested War Zone
@@ -3072,15 +3089,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Ch
 None from Brute Bosses or Bully Boyz.
 
 Keywords
+INFANTRY
 CHARACTER
 EPIC HERO
-FACTION: ORKS
-INFANTRY
 RUNTHERD
 ZODGROD WORTSNAGGA
-BATTLELINE
-GRETCHIN*
 GROTS*
+GRETCHIN*
+FACTION: ORKS
+BATTLELINE
 *from the combined unit; Battleline from Sneaky Little Gitz (Runt Swarm)
 Ask about this unit
 ‹ Nazdreg
@@ -3124,14 +3141,6 @@ BS
 S
 AP
 D
-Thump Gun
-18"
-3
-5+
-6
-0
-2
-ANTI-MONSTER/VEHICLE 4+
 Slugga
 12"
 1
@@ -3140,6 +3149,14 @@ Slugga
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
+Thump Gun
+18"
+3
+5+
+6
+0
+2
+ANTI-MONSTER/VEHICLE 4+
 Riled up: [ASSAULT] (Waaagh!)
 MELEE WEAPONS
 A
@@ -3147,13 +3164,10 @@ WS
 S
 AP
 D
+
+Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
+
 Beastchoppa
-➤HunterMON/VEH ONLY
-6
-2+
-12
--2
-D6+1
 ➤Standard
 6
 2+
@@ -3161,7 +3175,12 @@ D6+1
 -2
 3
 CLEAVE 1
-+
+➤HunterMON/VEH ONLY
+6
+2+
+12
+-2
+D6+1
 Squigosaur’s jaws
 3
 3+
@@ -3178,10 +3197,6 @@ Aura · Charge · Either turn
 
 Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
 
-Boss of da Hunt
-
-While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
-
 Keep Huntin’!
 Once per battle round, per army
 Your Movement
@@ -3192,6 +3207,10 @@ In your Movement phase, at the start or end of this unit’s move, you can selec
 
 Is no longer battle-shocked.
 Is riled up until the start of your next turn.
+Boss of da Hunt
+
+While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
+
 Brutal But Kunnin’
 Enhancement
 Already in D
@@ -3202,7 +3221,7 @@ Enhancement · Fight · Either turn
 WARBOSS model only. This model’s melee attacks have +1 D.
 
 Rules
-Da Boss, Waaagh!, Feel No Pain 5+, ’Ard as Nails
+Feel No Pain 5+, Da Boss, Waaagh!, ’Ard as Nails
 Stratagems
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
@@ -3210,12 +3229,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Brute Bosses, Bully Boyz or Runt Swarm.
 
 Keywords
-BEAST SNAGGA
-BEASTBOSS ON SQUIGOSAUR
-CHARACTER
-FACTION: ORKS
 MONSTER
+BEAST SNAGGA
+CHARACTER
 WARBOSS
+BEASTBOSS ON SQUIGOSAUR
+FACTION: ORKS
 Ask about this unit
 ‹ Zodgrod Wortsnagga
 Big Mek Dakkarig ›
@@ -3311,12 +3330,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Brute Bosses, Bully Boyz or Runt Swarm.
 
 Keywords
-BIG MEK
-BIG MEK DAKKARIG
-CHARACTER
-FACTION: ORKS
 VEHICLE
+BIG MEK
+CHARACTER
 WALKER
+BIG MEK DAKKARIG
+FACTION: ORKS
 Ask about this unit
 ‹ Beastboss on Squigosaur · Brutal But Kunnin’
 Warboss in Mega Armour · Da Gobshot Thunderbuss ›
@@ -3376,14 +3395,6 @@ BS
 S
 AP
 D
-Da Gobshot Thunderbuss
-24"
-6
-4+
-7
--2
-2
-LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 6
 Big Shoota
 36"
 3
@@ -3392,6 +3403,14 @@ Big Shoota
 0
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2
+Da Gobshot Thunderbuss
+24"
+6
+4+
+7
+-2
+2
+LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 6
 WHOLE UNIT
 Riled up: [ASSAULT] (Waaagh!)
 MELEE WEAPONS
@@ -3450,6 +3469,11 @@ WARBOSS model only. This model has the following weapon:
 
 Da Gobshot Thunderbuss: 24" A6 BS4+ S7 AP-2 D2 [LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6]
 
+Arrogant Invulnerability
+- Meganobz
+
+Attacks that target this unit have -1 AP.
+
 Krumpin’ Time
 - Meganobz
 Fight
@@ -3458,13 +3482,8 @@ Fight · Either turn
 
 In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
 
-Arrogant Invulnerability
-- Meganobz
-
-Attacks that target this unit have -1 AP.
-
 Rules
-Da Boss, Leader, Waaagh!, ’Ard as Nails, Displays of Savagery
+Leader, Da Boss, Waaagh!, ’Ard as Nails, Displays of Savagery
 Stratagems
 
 BULLY BOYZ Armed to da Teef, Hulking Brutes, Too Arrogant to Die
@@ -3474,14 +3493,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Brute Bosses or Runt Swarm.
 
 Keywords
-CHARACTER
-FACTION: ORKS
 INFANTRY
+CHARACTER
 MEGA ARMOUR
 WARBOSS
 WARBOSS IN MEGA ARMOUR
 EXPLOSIVES*
 MEGANOBZ*
+FACTION: ORKS
 *from the led Meganobz
 Ask about this unit
 ‹ Big Mek Dakkarig
@@ -3575,11 +3594,11 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Brute Bosses or Bully Boyz.
 
 Keywords
-BATTLELINE
-FACTION: ORKS
-GRETCHIN
-GROTS
 INFANTRY
+GROTS
+GRETCHIN
+FACTION: ORKS
+BATTLELINE
 Ask about this unit
 ‹ Warboss in Mega Armour · Da Gobshot Thunderbuss
 Gretchin ›
@@ -3664,11 +3683,11 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Brute Bosses or Bully Boyz.
 
 Keywords
-BATTLELINE
-FACTION: ORKS
-GRETCHIN
-GROTS
 INFANTRY
+GROTS
+GRETCHIN
+FACTION: ORKS
+BATTLELINE
 Ask about this unit
 ‹ Gretchin
 Deffkoptas ›
@@ -3708,15 +3727,10 @@ BS
 S
 AP
 D
+
+Can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
+
 Rokkit Launcha×3
-➤Busta
-24"
-2
-5+
-10
--2
-3
-LETHAL HITS
 ➤Blasta
 24"
 2
@@ -3725,8 +3739,14 @@ LETHAL HITS
 0
 1
 BLAST 2
-OR
-WHEN USING ANOTHER SHOOTING TYPE
+➤Busta
+24"
+2
+5+
+10
+-2
+3
+LETHAL HITS
 Slugga×3
 12"
 1
@@ -3743,13 +3763,15 @@ WS
 S
 AP
 D
+
+Pick one to fight with: Choppa or Spinnin’ Blades.
+
 Choppa×3
 3
 4+
 5
 -1
 1
-OR
 Spinnin’ Blades×3
 4
 3+
@@ -3759,19 +3781,19 @@ Spinnin’ Blades×3
 CLEAVE 1, HAZARDOUS
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
 ABILITIES
-Aerial Manoover
-Their Fight
-
-Fight · Their turn
-
-At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.
-
 Deff from Above
 Your Shooting
 
 Shooting · Your turn
 
 In your Shooting phase, if this unit made an ingress move this turn, this unit’s ranged attacks have +1 to hit rolls.
+
+Aerial Manoover
+Their Fight
+
+Fight · Their turn
+
+At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.
 
 Rules
 Deep Strike, Waaagh!
@@ -3782,12 +3804,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Brute Bosses, Bully Boyz or Runt Swarm.
 
 Keywords
-DEFFKOPTAS
-EXPLOSIVES
-FACTION: ORKS
-FLY
 MOUNTED
+EXPLOSIVES
+FLY
 SPEED FREEKS
+DEFFKOPTAS
+FACTION: ORKS
 Ask about this unit
 ‹ Gretchin
 

@@ -226,14 +226,6 @@ Warlord
 ######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
 Knight Destrier
 ×2 units
-Questoris heavy stubber
-36"
-6
-3+
-4
--1
-1
-ASSAULT, RAPID FIRE 3
 Chastiser gatling cannon
 24"
 12
@@ -250,27 +242,20 @@ D6+3
 -1
 2
 ASSAULT, BLAST, RAPID FIRE D6+3
+Questoris heavy stubber
+36"
+6
+3+
+4
+-1
+1
+ASSAULT, RAPID FIRE 3
 Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
 Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
 1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 Knight Errant
-Thermal cannon
-24"
-2D3
-3+
-12
--4
-D6
-BLAST, MELTA 6
-Stormspear rocket pod
-48"
-3
-3+
-8
--2
-D6
 Meltagun
 12"
 1
@@ -279,6 +264,21 @@ Meltagun
 -4
 D6
 MELTA 2
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+Thermal cannon
+24"
+2D3
+3+
+12
+-4
+D6
+BLAST, MELTA 6
 Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
@@ -286,6 +286,14 @@ STRATAGEMS · FREEBLADE COMPANY
 1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 Knight Paladin
 ×2 units
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2
 Questoris heavy stubber
 36"
 3
@@ -309,14 +317,6 @@ Stormspear rocket pod
 8
 -2
 D6
-Meltagun
-12"
-1
-3+
-9
--4
-D6
-MELTA 2
 Target is the closest eligible target: improve AP by 1 (Seasoned Noble)
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
@@ -339,13 +339,6 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Stormspear rocket pod
-48"
-3
-3+
-8
--2
-D6
 Meltagun
 12"
 1
@@ -354,6 +347,13 @@ Meltagun
 -4
 D6
 MELTA 2
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
 vs non-MONSTER/VEHICLE targets: ranged attacks have [DEVASTATING WOUNDS] (Thin Their Ranks)
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
@@ -429,16 +429,9 @@ STRATAGEMS · FREEBLADE COMPANY
 ######## abilities · MELEE Abilities
 Knight Destrier
 ×2 units
-Damaged: 1-6 Wounds Remaining
+Invulnerable Save (5+*)
 
-While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
-
-Thundercharge
-Needs a thundershock spear and bellatus reaper chainsword: not this loadout
-
-Needs a thundershock spear and bellatus reaper chainsword: not this loadout
-
-If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+This model has a 5+ invulnerable save against ranged attacks.
 
 Ram Jets
 Your Movement
@@ -447,6 +440,13 @@ Movement · Your turn
 
 Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
 
+Thundercharge
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+
 Saturation Fire
 Your Shooting
 
@@ -454,25 +454,14 @@ Shooting · Your turn
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
-Invulnerable Save (5+*)
+Damaged: 1-6 Wounds Remaining
 
-This model has a 5+ invulnerable save against ranged attacks.
+While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 Knight Errant
-Aggressive Assault
-Your Shooting
-
-Shooting · Your turn
-
-Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
-
 Invulnerable Save (5+*)
 
 This model has a 5+ invulnerable save against ranged attacks.
-
-Damaged: 1-9 Wounds Remaining
-
-While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 Errant’s Duty
 No ARMIGER models in this list
@@ -483,22 +472,22 @@ Bondsman
 
 While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability.
 
-Knight Paladin
-×2 units
-Seasoned Noble
+Aggressive Assault
 Your Shooting
 
 Shooting · Your turn
 
-Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
-
-Invulnerable Save (5+*)
-
-This model has a 5+ invulnerable save against ranged attacks.
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
 
 Damaged: 1-9 Wounds Remaining
 
 While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Knight Paladin
+×2 units
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
 
 Paladin’s Duty
 No ARMIGER models in this list
@@ -509,22 +498,22 @@ Bondsman
 
 While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.
 
-Knight Warden
-Warlord
-Thin Their Ranks
+Seasoned Noble
 Your Shooting
 
 Shooting · Your turn
 
-Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
-
-Invulnerable Save (5+*)
-
-This model has a 5+ invulnerable save against ranged attacks.
+Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
 
 Damaged: 1-9 Wounds Remaining
 
 While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Knight Warden
+Warlord
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
 
 Warden’s Duty
 No ARMIGER models in this list
@@ -534,6 +523,17 @@ No ARMIGER models in this list
 Bondsman
 
 While a model is affected by this ability, weapons equipped by that model have the [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the [IGNORES COVER] ability.
+
+Thin Their Ranks
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 ######## rules · ABILITIES Rules
 Imperial Knights · Purge the Foe
@@ -785,7 +785,7 @@ Benefit of cover
 Add a group
 4.0
 of 5 destroyed
-8.0 wounds lost · wiped in 50% of games
+8.3 wounds lost · wiped in 50% of games
 Nothing ticked: the datasheets as printed
 13 NOT COUNTED
 WORKING ›
@@ -796,23 +796,6 @@ Effects are on the damage these attacks deal.
 
 RANGED WEAPONS
 Knight Destrier (×2)
-Questoris heavy stubber
-RNG
-36"
-A
-6
-BS
-3+
-S
-4
-AP
--1
-D
-1
-ASSAULT, RAPID FIRE 3
-−6% wiped
-−0.1
-MODELS IF UNTICKED
 Chastiser gatling cannon
 RNG
 24"
@@ -827,7 +810,7 @@ AP
 D
 2
 ASSAULT
-−46% wiped
+−47% wiped
 −2.1
 MODELS IF UNTICKED
 Frag bombard
@@ -847,6 +830,23 @@ ASSAULT, BLAST, RAPID FIRE D6+3
 −35% wiped
 −1.1
 MODELS IF UNTICKED
+Questoris heavy stubber
+RNG
+36"
+A
+6
+BS
+3+
+S
+4
+AP
+-1
+D
+1
+ASSAULT, RAPID FIRE 3
+−6% wiped
+−0.1
+MODELS IF UNTICKED
 HALF RANGE
 [RAPID FIRE], [MELTA]
 No half-range bonus
@@ -857,7 +857,7 @@ bonus for Questoris heavy stubber
 +5% wiped
 +0.1
 Within 12"
-bonus for Questoris heavy stubber and Frag bombard
+bonus for Frag bombard and Questoris heavy stubber
 +28% wiped
 +0.6
 SITUATION
@@ -888,19 +888,19 @@ MODELS
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
-−44% wiped
+−45% wiped
 −1.9
 MODELS
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-−44% wiped
+−45% wiped
 −1.9
 MODELS
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
 by the rules: Fire Overwatch: “TARGET: One friendly unengaged unit (excluding TITANIC units)” (15.08) · yours to count anyway
-−49% wiped
+−50% wiped
 −2.9
 MODELS
 ARMY RULES
@@ -923,10 +923,10 @@ no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
 ALL ▾
 NOT COUNTED IN THE DAMAGE TAB (2)
-Ram Jets
-“Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.” · not counted in the Damage tab
 Invulnerable Save (5+*)
 “This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+Ram Jets
+“Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -936,7 +936,7 @@ with their CP
 1CP Strength from Exile
 “if there are no other friendly units within 9" of your unit”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if used
-BEST · MOST MODELS+29% wiped
+BEST · MOST MODELS+30% wiped
 +0.7
 MODELS
 1CP Command Re-roll
@@ -1136,10 +1136,10 @@ None that change these numbers.
 
 NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (2)
-Ram Jets
-“Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.” · not counted in the Damage tab
 Invulnerable Save (5+*)
 “This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+Ram Jets
+“Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1297,7 +1297,7 @@ Benefit of cover
 Add a group
 4.3
 of 5 destroyed
-8.6 wounds lost · wiped in 63% of games
+8.7 wounds lost · wiped in 63% of games
 
 Shoot 4.0 · Fight 0.3 · the charge is taken to succeed
 
@@ -1316,23 +1316,6 @@ THE SHOOTING
 FIRST
 RANGED WEAPONS
 Knight Destrier (×2)
-Questoris heavy stubber
-RNG
-36"
-A
-6
-BS
-3+
-S
-4
-AP
--1
-D
-1
-ASSAULT, RAPID FIRE 3
-−5% wiped
-−0.1
-MODELS IF UNTICKED
 Chastiser gatling cannon
 RNG
 24"
@@ -1347,7 +1330,7 @@ AP
 D
 2
 ASSAULT
-−51% wiped
+−52% wiped
 −1.7
 MODELS IF UNTICKED
 Frag bombard
@@ -1367,6 +1350,23 @@ ASSAULT, BLAST, RAPID FIRE D6+3
 −34% wiped
 −0.9
 MODELS IF UNTICKED
+Questoris heavy stubber
+RNG
+36"
+A
+6
+BS
+3+
+S
+4
+AP
+-1
+D
+1
+ASSAULT, RAPID FIRE 3
+−4% wiped
+−0.1
+MODELS IF UNTICKED
 HALF RANGE
 [RAPID FIRE], [MELTA]
 No half-range bonus
@@ -1377,9 +1377,9 @@ bonus for Questoris heavy stubber
 +5% wiped
 +0.1
 Within 12"
-bonus for Questoris heavy stubber and Frag bombard
+bonus for Frag bombard and Questoris heavy stubber
 +23% wiped
-+0.5
++0.4
 SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
@@ -1396,13 +1396,13 @@ ALL ▾
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
-−23% wiped
+−24% wiped
 −0.6
 MODELS
 Damaged: 1-6 Wounds Remaining
 −1 to Hit rolls
 if it applies
-−23% wiped
+−24% wiped
 −0.6
 MODELS
 Close-quarters shooting at a unit it is engaged with
@@ -1437,10 +1437,10 @@ no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
 ALL ▾
 NOT COUNTED IN THE DAMAGE TAB (2)
-Ram Jets
-“Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.” · not counted in the Damage tab
 Invulnerable Save (5+*)
 “This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+Ram Jets
+“Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1498,7 +1498,7 @@ AP
 -1
 D
 2
-−13% wiped
+−12% wiped
 −0.3
 MODELS IF UNTICKED
 SITUATION
@@ -1530,10 +1530,10 @@ None that change these numbers.
 
 NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (2)
-Ram Jets
-“Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.” · not counted in the Damage tab
 Invulnerable Save (5+*)
 “This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+Ram Jets
+“Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1543,7 +1543,7 @@ with their CP
 1CP Strength from Exile
 “if there are no other friendly units within 9" of your unit”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if used
-+3% wiped
++4% wiped
 +0.1
 MODELS
 1CP Command Re-roll
@@ -2022,14 +2022,6 @@ BS
 S
 AP
 D
-Questoris heavy stubber
-36"
-6
-3+
-4
--1
-1
-ASSAULT, RAPID FIRE 3
 Chastiser gatling cannon
 24"
 12
@@ -2046,6 +2038,14 @@ D6+3
 -1
 2
 ASSAULT, BLAST, RAPID FIRE D6+3
+Questoris heavy stubber
+36"
+6
+3+
+4
+-1
+1
+ASSAULT, RAPID FIRE 3
 Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 MELEE WEAPONS
@@ -2061,12 +2061,9 @@ Titanic feet
 -1
 2
 ABILITIES
-Thundercharge
-Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+Invulnerable Save (5+*)
 
-Needs a thundershock spear and bellatus reaper chainsword: not this loadout
-
-If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+This model has a 5+ invulnerable save against ranged attacks.
 
 Ram Jets
 Your Movement
@@ -2075,6 +2072,13 @@ Movement · Your turn
 
 Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
 
+Thundercharge
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+
 Saturation Fire
 Your Shooting
 
@@ -2082,12 +2086,8 @@ Shooting · Your turn
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
-Invulnerable Save (5+*)
-
-This model has a 5+ invulnerable save against ranged attacks.
-
 Rules
-Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Knights of Legend
+Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -2095,15 +2095,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-BELLATUS
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT DESTRIER
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+BELLATUS
+CHARACTER
+IMPERIUM
+KNIGHT DESTRIER
+FACTION: IMPERIAL KNIGHTS
 Ask about this unit
 Knight Errant ›
 
@@ -2149,21 +2149,6 @@ BS
 S
 AP
 D
-Thermal cannon
-24"
-2D3
-3+
-12
--4
-D6
-BLAST, MELTA 6
-Stormspear rocket pod
-48"
-3
-3+
-8
--2
-D6
 Meltagun
 12"
 1
@@ -2172,6 +2157,21 @@ Meltagun
 -4
 D6
 MELTA 2
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+Thermal cannon
+24"
+2D3
+3+
+12
+-4
+D6
+BLAST, MELTA 6
 Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 MELEE WEAPONS
@@ -2194,13 +2194,6 @@ Reaper chainsword
 -3
 2
 ABILITIES
-Aggressive Assault
-Your Shooting
-
-Shooting · Your turn
-
-Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
-
 Invulnerable Save (5+*)
 
 This model has a 5+ invulnerable save against ranged attacks.
@@ -2214,8 +2207,15 @@ Bondsman
 
 While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability.
 
+Aggressive Assault
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
 Rules
-Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Bondsman (no unit in this list it applies to), Knights of Legend
+Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -2223,15 +2223,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT ERRANT
-QUESTORIS
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+QUESTORIS
+CHARACTER
+IMPERIUM
+KNIGHT ERRANT
+FACTION: IMPERIAL KNIGHTS
 Ask about this unit
 ‹ Knight Destrier
 Knight Paladin ›
@@ -2278,6 +2278,14 @@ BS
 S
 AP
 D
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2
 Questoris heavy stubber
 36"
 3
@@ -2301,14 +2309,6 @@ Stormspear rocket pod
 8
 -2
 D6
-Meltagun
-12"
-1
-3+
-9
--4
-D6
-MELTA 2
 Target is the closest eligible target: improve AP by 1 (Seasoned Noble)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 MELEE WEAPONS
@@ -2331,13 +2331,6 @@ Reaper chainsword
 -3
 2
 ABILITIES
-Seasoned Noble
-Your Shooting
-
-Shooting · Your turn
-
-Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
-
 Invulnerable Save (5+*)
 
 This model has a 5+ invulnerable save against ranged attacks.
@@ -2351,8 +2344,15 @@ Bondsman
 
 While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.
 
+Seasoned Noble
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
+
 Rules
-Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Bondsman (no unit in this list it applies to), Knights of Legend
+Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -2360,15 +2360,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT PALADIN
-QUESTORIS
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+QUESTORIS
+CHARACTER
+IMPERIUM
+KNIGHT PALADIN
+FACTION: IMPERIAL KNIGHTS
 Ask about this unit
 ‹ Knight Errant
 Knight Warden ›
@@ -2431,13 +2431,6 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Stormspear rocket pod
-48"
-3
-3+
-8
--2
-D6
 Meltagun
 12"
 1
@@ -2446,6 +2439,13 @@ Meltagun
 -4
 D6
 MELTA 2
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
 vs non-MONSTER/VEHICLE targets: ranged attacks have [DEVASTATING WOUNDS] (Thin Their Ranks)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 MELEE WEAPONS
@@ -2468,13 +2468,6 @@ Reaper chainsword
 -3
 2
 ABILITIES
-Thin Their Ranks
-Your Shooting
-
-Shooting · Your turn
-
-Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
-
 Invulnerable Save (5+*)
 
 This model has a 5+ invulnerable save against ranged attacks.
@@ -2488,8 +2481,15 @@ Bondsman
 
 While a model is affected by this ability, weapons equipped by that model have the [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the [IGNORES COVER] ability.
 
+Thin Their Ranks
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
+
 Rules
-Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Devastating Wounds, Bondsman (no unit in this list it applies to), Knights of Legend
+Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Devastating Wounds, Bondsman (no unit in this list it applies to), Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -2497,15 +2497,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT WARDEN
-QUESTORIS
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+QUESTORIS
+CHARACTER
+IMPERIUM
+KNIGHT WARDEN
+FACTION: IMPERIAL KNIGHTS
 WARLORD
 Ask about this unit
 ‹ Knight Paladin

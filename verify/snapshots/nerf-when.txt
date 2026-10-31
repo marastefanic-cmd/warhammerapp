@@ -239,7 +239,7 @@ TRANSPORTS
 Impulsor: This model has a transport capacity of 7 ADEPTUS ASTARTES INFANTRY models. It cannot transport TERMINATOR/JUMP PACK models. Each GRAVIS model takes up the space of 2 models.
 DEPLOYMENT AND PRE-BATTLE ABILITIES
 SCOUTS AND INFILTRATORS
-Librarian in Phobos Armour Scouts 6", Infiltrators
+Librarian in Phobos Armour Infiltrators, Scouts 6"
 Reiver Squad Scouts 6"
 ABILITIES
 Thunderhawk Insertion · Marneus Calgar
@@ -486,6 +486,22 @@ Gauntlets of Ultramar
 2
 CLOSE-QUARTERS, TWIN-LINKED
 WARDENS OF ULTRAMAR
+Archeotech Laspistol×3
+12"
+1
+3+
+4
+-1
+1
+CLOSE-QUARTERS
+Astropathic Blast
+12"
+3
+3+
+4
+-1
+1
+PSYCHIC, BLAST 1
 Bolt Rifle
 ➤Focused Fire
 24"
@@ -503,22 +519,6 @@ HEAVY, RAPID FIRE 1
 -1
 1
 ASSAULT, RAPID FIRE 1
-Astropathic Blast
-12"
-3
-3+
-4
--1
-1
-BLAST 1, PSYCHIC
-Archeotech Laspistol×3
-12"
-1
-3+
-4
--1
-1
-CLOSE-QUARTERS
 Heavy Bolt Pistol
 18"
 1
@@ -543,32 +543,16 @@ Neo-volkite PistolBLADEGUARD VETERAN SERGEANT
 5
 0
 2
-DEVASTATING WOUNDS, CLOSE-QUARTERS
+CLOSE-QUARTERS, DEVASTATING WOUNDS
 Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
 1CP Merciless Veterans: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot
 Librarian in Phobos Armour
-Smite
-➤Witchfire
-24"
-D6
-3+
-6
--1
-2
-PSYCHIC
-➤Focused Witchfire
-24"
-D3+3
-3+
-6
--2
-2
-DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC
-OR
-WHEN USING ANOTHER SHOOTING TYPE
+
+Can shoot with Bolt pistol or Smite, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
 Bolt pistol
 12"
 1
@@ -577,9 +561,41 @@ Bolt pistol
 -1
 1
 CLOSE-QUARTERS
+Smite
+➤Focused Witchfire
+24"
+D3+3
+3+
+6
+-2
+2
+DEVASTATING WOUNDS, PSYCHIC, HAZARDOUS
+➤Witchfire
+24"
+D6
+3+
+6
+-1
+2
+PSYCHIC
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 Heavy Intercessor Squad
+
+Heavy Intercessor Sergeant can shoot with Bolt pistol or Heavy Bolt Rifle, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
+Heavy Intercessor can shoot with Bolt pistol or Heavy Bolter, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
+Heavy Intercessors can shoot with Bolt pistol or Heavy Bolt Rifle, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
+Bolt pistol×5
+12"
+1
+3+
+5
+-1
+1
+CLOSE-QUARTERS
 Heavy Bolt Rifle×4
 30"
 2
@@ -595,17 +611,7 @@ Heavy BolterHEAVY INTERCESSOR
 5
 -1
 2
-HEAVY, RAPID FIRE 2, SUSTAINED HITS 1
-OR
-WHEN USING ANOTHER SHOOTING TYPE
-Bolt pistol×5
-12"
-1
-3+
-5
--1
-1
-CLOSE-QUARTERS
+HEAVY, SUSTAINED HITS 1, RAPID FIRE 2
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 Impulsor
@@ -630,20 +636,35 @@ Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Pri
 Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 Eradicator Squad with Melta Rifles
 ×2 units
-Melta rifle×2
-➤Melta Rifle HUNTER:Monster/VehicleMON/VEH ONLY
-18"
+
+Eradicator can shoot with Bolt pistol or Melta rifle, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
+Eradicator Sergeant can shoot with Bolt pistol or Melta rifle, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
+Eradicator with Multi-melta can shoot with Bolt pistol or Multi-melta, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
+Bolt pistol×3
+12"
 1
-2+
-12
--3
-D3+2
-MELTA 2
+3+
+5
+-1
+1
+CLOSE-QUARTERS
+Melta rifle×2
 ➤Melta Rifle
 18"
 1
 3+
 10
+-3
+D3+2
+MELTA 2
+➤Melta Rifle HUNTER:Monster/VehicleMON/VEH ONLY
+18"
+1
+2+
+12
 -3
 D3+2
 MELTA 2
@@ -664,21 +685,14 @@ MELTA 3
 -3
 D3+2
 MELTA 3
-OR
-WHEN USING ANOTHER SHOOTING TYPE
-Bolt pistol×3
-12"
-1
-3+
-5
--1
-1
-CLOSE-QUARTERS
 Every ranged attack: can re-roll damage rolls (Total Obliteration)
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 Reiver Squad
 ×2 units
+
+Can shoot with Special-issue Bolt Pistol or Bolt Carbine, not both (Close-quarters); in close-quarters shooting, Special-issue Bolt Pistol only.
+
 Bolt Carbine×5
 18"
 3
@@ -686,9 +700,7 @@ Bolt Carbine×5
 5
 -1
 1
-ASSAULT, PRECISION
-OR
-WHEN USING ANOTHER SHOOTING TYPE
+PRECISION, ASSAULT
 Special-issue Bolt Pistol×5
 12"
 1
@@ -717,7 +729,7 @@ BLAST 1
 10
 -3
 3
-BLAST 1, HAZARDOUS
+HAZARDOUS, BLAST 1
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 STRATAGEMS · DEATHWATCH SUPPORT · YOUR SHOOTING PHASE
@@ -730,6 +742,16 @@ STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Roboute Guilliman
 Warlord
+
+Pick one to fight with: The Emperor’s Sword or Hand of Dominion.
+
+The Emperor’s Sword
+10
+2+
+10
+-3
+2
+DEVASTATING WOUNDS, CLEAVE 2
 Hand of Dominion
 7
 2+
@@ -737,14 +759,6 @@ Hand of Dominion
 -4
 4
 LETHAL HITS
-OR
-The Emperor’s Sword
-10
-2+
-10
--3
-2
-CLEAVE 2, DEVASTATING WOUNDS
 Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
 1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
@@ -768,13 +782,6 @@ TWIN-LINKED, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
 D3+3
 EXTRA ATTACKS, TWIN-LINKED, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
 WARDENS OF ULTRAMAR
-Power Weapon×2
-4
-2+
-4
--2
-1
-SUSTAINED HITS 1: NON-MONSTER/VEHICLE
 Ceramite Fists
 4
 3+
@@ -789,13 +796,6 @@ Force Stave
 -2
 2
 PSYCHIC, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
-Ultramarian Combat Weapons
-4
-3+
-4
-0
-1
-SUSTAINED HITS 1: NON-MONSTER/VEHICLE
 Master-crafted power weapon
 5
 2+
@@ -803,6 +803,20 @@ Master-crafted power weapon
 -2
 2
 PRECISION, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Power Weapon×2
+4
+2+
+4
+-2
+1
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Ultramarian Combat Weapons
+4
+3+
+4
+0
+1
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE
 BLADEGUARD VETERAN SQUAD
 Master-crafted power weapon×6
 4
@@ -872,6 +886,19 @@ STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
 1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
 Deathwatch Terminator Squad
 ×2 units
+Chainfist×3
+➤Hunter: Monster/VehicleMON/VEH ONLY
+3
+3+
+12
+-2
+3
+➤Standard
+2
+4+
+8
+-2
+2
 Thunder Hammer×2
 3
 3+
@@ -879,19 +906,6 @@ Thunder Hammer×2
 -2
 3
 DEVASTATING WOUNDS
-Chainfist×3
-➤Standard
-2
-4+
-8
--2
-2
-➤Hunter: Monster/VehicleMON/VEH ONLY
-3
-3+
-12
--2
-3
 Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
 1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
@@ -899,6 +913,25 @@ STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
 ######## abilities · MELEE Abilities
 Roboute Guilliman
 Warlord
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
+
+Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
+
+Codex Adept
+
+The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
+
+Primarch of the XIII
+Their Move · Your Shoot · Fight
+
+Aura · Their Movement / Your Shooting / Fight (either turn)
+
+While a friendly ADEPTUS ASTARTES unit is within 6" of this unit, that unit’s attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
 Author of the Codex
 Your Movement
 
@@ -910,29 +943,14 @@ Leader of Astartes
 
 While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.
 
-Supreme Commander
-
-If this model is in your army, it must be your WARLORD.
-
-Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
-
-Primarch of the XIII
-Their Move · Your Shoot · Fight
-
-Aura · Their Movement / Your Shooting / Fight (either turn)
-
-While a friendly ADEPTUS ASTARTES unit is within 6" of this unit, that unit’s attacks can:
-
-Re-roll hit rolls of 1.
-Re-roll wound rolls of 1.
-Codex Adept
-
-The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
-
 Marneus Calgar
 + Wardens of Ultramar + Bladeguard Veteran Squad
 Furious Assault
 MARNEUS CALGAR
+Codex Adept
+
+The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
+
 Master Tactician
 Your Movement
 
@@ -943,10 +961,6 @@ In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES uni
 Thunderhawk Insertion
 
 In the Declare Battle Formations step, you can select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep Strike.
-
-Codex Adept
-
-The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
 
 WARDENS OF ULTRAMAR
 Raise the Banner
@@ -996,17 +1010,17 @@ In your Shooting phase, if this unit is not battle-shocked, you can make a psych
 
 On a 1, this unit is battle-shocked.
 Select one visible enemy unit. Ranged attacks that target that enemy unit have [IGNORES COVER].
-Psychic Hood
-
-Psychic
-
-This unit has Feel No Pain 4+ against psychic attacks.
-
 Librarian
 
 psyker level 1
 
 This model has the psychic abilities listed in the Psychic Abilities section.
+
+Psychic Hood
+
+Psychic
+
+This unit has Feel No Pain 4+ against psychic attacks.
 
 Heavy Intercessor Squad
 Unyielding in the Face of the Foe
@@ -1015,10 +1029,6 @@ While this unit is controlling an objective, this unit has +1 to save rolls.
 
 Impulsor
 ×2 units
-Transport
-
-This model has a transport capacity of 7 ADEPTUS ASTARTES INFANTRY models. It cannot transport TERMINATOR/JUMP PACK models. Each GRAVIS model takes up the space of 2 models.
-
 Rapid Disembarkation
 Your Movement
 
@@ -1031,6 +1041,10 @@ Already in InSv
 
 This unit has 5+ InSv.
 
+Transport
+
+This model has a transport capacity of 7 ADEPTUS ASTARTES INFANTRY models. It cannot transport TERMINATOR/JUMP PACK models. Each GRAVIS model takes up the space of 2 models.
+
 Eradicator Squad with Melta Rifles
 ×2 units
 Total Obliteration
@@ -1042,18 +1056,18 @@ This unit’s ranged attacks can re-roll damage rolls.
 
 Reiver Squad
 ×2 units
+Terror Troops
+
+Aura
+
+While an enemy model is within 3" of this unit, that enemy model has -1 OC.
+
 Fearsome Assault
 Fight
 
 Fight · Either turn
 
 At the start of the Fight phase, each enemy unit engaged with a unit with this ability makes a battle-shock roll, with -1 to that battle-shock roll.
-
-Terror Troops
-
-Aura
-
-While an enemy model is within 3" of this unit, that enemy model has -1 OC.
 
 Deathwatch Terminator Squad
 ×2 units
@@ -1545,14 +1559,14 @@ if it applies
 +0.6
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (4)
-Author of the Codex
-“In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.” · not counted in the Damage tab
-Leader of Astartes
-“While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
 Supreme Commander
 “If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
 Codex Adept
 “The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.” · not counted in the Damage tab
+Author of the Codex
+“In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.” · not counted in the Damage tab
+Leader of Astartes
+“While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Soul Sight (Librarian in Phobos Armour)
 Selected by it · The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER]
@@ -1701,9 +1715,9 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-4.6
+4.9
 of 5 destroyed
-9.1 wounds lost · wiped in 69% of games
+9.8 wounds lost · wiped in 94% of games
 Charged this turn
 ×
 14 NOT COUNTED
@@ -1717,6 +1731,22 @@ The charge is taken to succeed (no charge roll).
 
 MELEE WEAPONS
 Roboute Guilliman
+The Emperor’s Sword
+A
+10
+WS
+2+
+S
+10
+AP
+-3
+D
+2
+DEVASTATING WOUNDS, CLEAVE 2
+one of the weapons its models pick between
+−94% wiped
+−4.9
+MODELS IF UNTICKED
 Hand of Dominion
 A
 7
@@ -1730,24 +1760,8 @@ D
 4
 LETHAL HITS
 one of the weapons its models pick between
-−69% wiped
-−4.6
-MODELS IF UNTICKED
-The Emperor’s Sword
-A
-10
-WS
-2+
-S
-10
-AP
--3
-D
-2
-CLEAVE 2, DEVASTATING WOUNDS
-one of the weapons its models pick between
-+25% wiped
-+0.4
+−25% wiped
+−0.4
 MODELS
 SITUATION
 Charged this turn
@@ -1767,18 +1781,18 @@ UNIT RULES
 Primarch of the XIII
 Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if it applies
-+31% wiped
-+0.4
++6% wiped
++0.1
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (4)
-Author of the Codex
-“In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.” · not counted in the Damage tab
-Leader of Astartes
-“While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
 Supreme Commander
 “If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
 Codex Adept
 “The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.” · not counted in the Damage tab
+Author of the Codex
+“In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.” · not counted in the Damage tab
+Leader of Astartes
+“While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1788,9 +1802,10 @@ with their CP
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-BEST · MOST MODELS+15% wiped
-+0.2
++3% wiped
+≈0
 MODELS
++1 MORE ▾
 1CP Gene-Wrought Might
 if used
 no change: already wounds on 2+
@@ -1799,7 +1814,8 @@ no change: already wounds on 2+
 0
 [LANCE], +1 AP
 “If the assault doctrine is active for your unit”
-0
++0.1
+BEST
 1CP Epic Challenge
 [PRECISION] · CHARACTER models only
 if used
@@ -1936,11 +1952,11 @@ Benefit of cover
 −1 Damage
 +
 Add a group
-4.9
+5.0
 of 5 destroyed
-9.8 wounds lost · wiped in 92% of games
+9.9 wounds lost · wiped in 97% of games
 
-Shoot 1.8 · Fight 3.1 · the charge is taken to succeed
+Shoot 1.77 · Fight 3.20 · the charge is taken to succeed
 
 Charged this turn
 ×
@@ -1971,9 +1987,10 @@ AP
 D
 2
 RAPID FIRE 2, SUSTAINED HITS 1
-−23% wiped
-−0.3
+−3% wiped
+≈0
 MODELS IF UNTICKED
++1 MORE ▾
 HALF RANGE
 [RAPID FIRE], [MELTA]
 No half-range bonus
@@ -1981,8 +1998,8 @@ the target is farther than 18" (every weapon is taken to be in range)
 NOW
 Within 18"
 bonus for Hand of Dominion
-+4% wiped
-+0.1
++1% wiped
+≈0
 SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
@@ -1992,24 +2009,18 @@ no change: already hits on 2+
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
-−3% wiped
 ≈0
 MODELS
-+1 MORE ▾
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
-−3% wiped
 ≈0
 MODELS
-+1 MORE ▾
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-−3% wiped
 ≈0
 MODELS
-+1 MORE ▾
 ARMY RULES
 
 None that change these numbers.
@@ -2023,18 +2034,18 @@ UNIT RULES
 Primarch of the XIII
 Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if it applies
-+4% wiped
-+0.1
++1% wiped
+≈0
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (4)
-Author of the Codex
-“In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.” · not counted in the Damage tab
-Leader of Astartes
-“While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
 Supreme Commander
 “If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
 Codex Adept
 “The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.” · not counted in the Damage tab
+Author of the Codex
+“In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.” · not counted in the Damage tab
+Leader of Astartes
+“While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Soul Sight (Librarian in Phobos Armour)
 Selected by it · The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER]
@@ -2047,10 +2058,8 @@ with their CP
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-+2% wiped
 ≈0
 MODELS
-+1 MORE ▾
 NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (8)
 1CP Armour of Contempt
@@ -2077,6 +2086,22 @@ Roboute Guilliman
 
 Against what the shooting left of the target, in each game.
 
+The Emperor’s Sword
+A
+10
+WS
+2+
+S
+10
+AP
+-3
+D
+2
+DEVASTATING WOUNDS, CLEAVE 2
+one of the weapons its models pick between
+−96% wiped
+−3.2
+MODELS IF UNTICKED
 Hand of Dominion
 A
 7
@@ -2090,24 +2115,8 @@ D
 4
 LETHAL HITS
 one of the weapons its models pick between
-−91% wiped
-−3.1
-MODELS IF UNTICKED
-The Emperor’s Sword
-A
-10
-WS
-2+
-S
-10
-AP
--3
-D
-2
-CLEAVE 2, DEVASTATING WOUNDS
-one of the weapons its models pick between
-+5% wiped
-+0.1
+−5% wiped
+−0.1
 MODELS
 SITUATION
 Charged this turn
@@ -2127,18 +2136,19 @@ UNIT RULES
 Primarch of the XIII
 Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if it applies
-+8% wiped
-+0.1
++3% wiped
+≈0
 MODELS
++1 MORE ▾
 NOT COUNTED IN THE DAMAGE TAB (4)
-Author of the Codex
-“In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.” · not counted in the Damage tab
-Leader of Astartes
-“While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
 Supreme Commander
 “If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
 Codex Adept
 “The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.” · not counted in the Damage tab
+Author of the Codex
+“In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.” · not counted in the Damage tab
+Leader of Astartes
+“While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -2148,8 +2158,8 @@ with their CP
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-BEST · MOST MODELS+4% wiped
-+0.1
++1% wiped
+≈0
 MODELS
 1CP Gene-Wrought Might
 if used
@@ -2159,7 +2169,7 @@ no change: already wounds on 2+
 0
 [LANCE], +1 AP
 “If the assault doctrine is active for your unit”
-0
++2% wiped
 1CP Epic Challenge
 [PRECISION] · CHARACTER models only
 if used
@@ -2751,6 +2761,16 @@ WS
 S
 AP
 D
+
+Pick one to fight with: The Emperor’s Sword or Hand of Dominion.
+
+The Emperor’s Sword
+10
+2+
+10
+-3
+2
+DEVASTATING WOUNDS, CLEAVE 2
 Hand of Dominion
 7
 2+
@@ -2758,17 +2778,28 @@ Hand of Dominion
 -4
 4
 LETHAL HITS
-OR
-The Emperor’s Sword
-10
-2+
-10
--3
-2
-CLEAVE 2, DEVASTATING WOUNDS
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
 1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
 ABILITIES
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
+
+Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
+
+Codex Adept
+
+The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
+
+Primarch of the XIII
+Their Move · Your Shoot · Fight
+
+Aura · Their Movement / Your Shooting / Fight (either turn)
+
+While a friendly ADEPTUS ASTARTES unit is within 6" of this unit, that unit’s attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
 Author of the Codex
 Your Movement
 
@@ -2780,27 +2811,8 @@ Leader of Astartes
 
 While this unit is within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit, this unit has Lone Operative.
 
-Supreme Commander
-
-If this model is in your army, it must be your WARLORD.
-
-Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
-
-Primarch of the XIII
-Their Move · Your Shoot · Fight
-
-Aura · Their Movement / Your Shooting / Fight (either turn)
-
-While a friendly ADEPTUS ASTARTES unit is within 6" of this unit, that unit’s attacks can:
-
-Re-roll hit rolls of 1.
-Re-roll wound rolls of 1.
-Codex Adept
-
-The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
-
 Rules
-Combat Doctrines, Feel No Pain 5+, Transhuman Strategist
+Feel No Pain 5+, Combat Doctrines, Transhuman Strategist
 Stratagems
 
 ASSAULT BRETHREN Armour of Contempt, Gene-Wrought Might, Duty in Death
@@ -2810,15 +2822,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Deathwatch Support or Terminator Storm Force.
 
 Keywords
+MONSTER
 CHARACTER
 EPIC HERO
-FACTION: ADEPTUS ASTARTES
-FACTION: ULTRAMARINES
 IMPERIUM
 MOBILE
-MONSTER
 PRIMARCH
 ROBOUTE GUILLIMAN
+FACTION: ADEPTUS ASTARTES
+FACTION: ULTRAMARINES
 WARLORD
 Ask about this unit
 Marneus Calgar ›
@@ -2964,6 +2976,22 @@ Gauntlets of Ultramar
 2
 CLOSE-QUARTERS, TWIN-LINKED
 WARDENS OF ULTRAMAR
+Archeotech Laspistol×3
+12"
+1
+3+
+4
+-1
+1
+CLOSE-QUARTERS
+Astropathic Blast
+12"
+3
+3+
+4
+-1
+1
+PSYCHIC, BLAST 1
 Bolt Rifle
 ➤Focused Fire
 24"
@@ -2981,22 +3009,6 @@ HEAVY, RAPID FIRE 1
 -1
 1
 ASSAULT, RAPID FIRE 1
-Astropathic Blast
-12"
-3
-3+
-4
--1
-1
-BLAST 1, PSYCHIC
-Archeotech Laspistol×3
-12"
-1
-3+
-4
--1
-1
-CLOSE-QUARTERS
 Heavy Bolt Pistol
 18"
 1
@@ -3021,7 +3033,7 @@ Neo-volkite PistolBLADEGUARD VETERAN SERGEANT
 5
 0
 2
-DEVASTATING WOUNDS, CLOSE-QUARTERS
+CLOSE-QUARTERS, DEVASTATING WOUNDS
 WHOLE UNIT
 Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
 Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
@@ -3050,13 +3062,6 @@ TWIN-LINKED, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
 D3+3
 EXTRA ATTACKS, TWIN-LINKED, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
 WARDENS OF ULTRAMAR
-Power Weapon×2
-4
-2+
-4
--2
-1
-SUSTAINED HITS 1: NON-MONSTER/VEHICLE
 Ceramite Fists
 4
 3+
@@ -3071,13 +3076,6 @@ Force Stave
 -2
 2
 PSYCHIC, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
-Ultramarian Combat Weapons
-4
-3+
-4
-0
-1
-SUSTAINED HITS 1: NON-MONSTER/VEHICLE
 Master-crafted power weapon
 5
 2+
@@ -3085,6 +3083,20 @@ Master-crafted power weapon
 -2
 2
 PRECISION, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Power Weapon×2
+4
+2+
+4
+-2
+1
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+Ultramarian Combat Weapons
+4
+3+
+4
+0
+1
+SUSTAINED HITS 1: NON-MONSTER/VEHICLE
 BLADEGUARD VETERAN SQUAD
 Master-crafted power weapon×6
 4
@@ -3098,6 +3110,11 @@ Bladeguard (once per turn, in the Fight phase, when selected to fight; instead o
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
 1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
 ABILITIES
+Codex Adept
+- Marneus Calgar
+
+The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
+
 Master Tactician
 - Marneus Calgar
 Your Movement
@@ -3110,11 +3127,6 @@ Thunderhawk Insertion
 - Marneus Calgar
 
 In the Declare Battle Formations step, you can select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep Strike.
-
-Codex Adept
-- Marneus Calgar
-
-The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
 
 Raise the Banner
 - Wardens of Ultramar
@@ -3149,7 +3161,7 @@ Upgrade · Fight · Either turn
 ADEPTUS ASTARTES INFANTRY unit only. This unit’s melee attacks have [Sustained Hits 1: non-Monster/Vehicle].
 
 Rules
-Deep Strike (Marneus Calgar), Combat Doctrines, Leader, Transhuman Strategist, Support, Death Blow
+Deep Strike (Marneus Calgar), Leader, Support, Combat Doctrines, Transhuman Strategist, Death Blow
 Stratagems
 
 ASSAULT BRETHREN Armour of Contempt, Gene-Wrought Might, Duty in Death
@@ -3161,19 +3173,19 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Deathwatch Support.
 
 Keywords
+INFANTRY
 CHAPTER MASTER
 CHARACTER
 EPIC HERO
-FACTION: ADEPTUS ASTARTES
-FACTION: ULTRAMARINES
 IMPERIUM
-INFANTRY
-MARNEUS CALGAR
 TERMINATOR
+MARNEUS CALGAR
 EXPLOSIVES*
 TACTICUS*
 WARDENS OF ULTRAMAR*
 BLADEGUARD VETERAN SQUAD*
+FACTION: ADEPTUS ASTARTES
+FACTION: ULTRAMARINES
 Dainal Kornelius only:
 PSYKER
 *from the combined unit
@@ -3221,25 +3233,9 @@ BS
 S
 AP
 D
-Smite
-➤Witchfire
-24"
-D6
-3+
-6
--1
-2
-PSYCHIC
-➤Focused Witchfire
-24"
-D3+3
-3+
-6
--2
-2
-DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC
-OR
-WHEN USING ANOTHER SHOOTING TYPE
+
+Can shoot with Bolt pistol or Smite, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
 Bolt pistol
 12"
 1
@@ -3248,6 +3244,23 @@ Bolt pistol
 -1
 1
 CLOSE-QUARTERS
+Smite
+➤Focused Witchfire
+24"
+D3+3
+3+
+6
+-2
+2
+DEVASTATING WOUNDS, PSYCHIC, HAZARDOUS
+➤Witchfire
+24"
+D6
+3+
+6
+-1
+2
+PSYCHIC
 Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 MELEE WEAPONS
 A
@@ -3282,20 +3295,20 @@ In your Shooting phase, if this unit is not battle-shocked, you can make a psych
 
 On a 1, this unit is battle-shocked.
 Select one visible enemy unit. Ranged attacks that target that enemy unit have [IGNORES COVER].
-Psychic Hood
-
-Psychic
-
-This unit has Feel No Pain 4+ against psychic attacks.
-
 Librarian
 
 psyker level 1
 
 This model has the psychic abilities listed in the Psychic Abilities section.
 
+Psychic Hood
+
+Psychic
+
+This unit has Feel No Pain 4+ against psychic attacks.
+
 Rules
-Leader, Deep Strike, Combat Doctrines, Scouts 6", Librarius, Stealth, Infiltrators
+Deep Strike, Infiltrators, Leader, Scouts 6", Stealth, Combat Doctrines, Librarius
 Stratagems
 
 ASSAULT BRETHREN Armour of Contempt, Gene-Wrought Might, Duty in Death
@@ -3305,14 +3318,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Deathwatch Support or Terminator Storm Force.
 
 Keywords
+INFANTRY
 CHARACTER
 EXPLOSIVES
-FACTION: ADEPTUS ASTARTES
 IMPERIUM
-INFANTRY
-LIBRARIAN
 PHOBOS
 PSYKER
+LIBRARIAN
+FACTION: ADEPTUS ASTARTES
 Ask about this unit
 ‹ Marneus Calgar
 Heavy Intercessor Squad ›
@@ -3369,6 +3382,21 @@ BS
 S
 AP
 D
+
+Heavy Intercessor Sergeant can shoot with Bolt pistol or Heavy Bolt Rifle, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
+Heavy Intercessor can shoot with Bolt pistol or Heavy Bolter, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
+Heavy Intercessors can shoot with Bolt pistol or Heavy Bolt Rifle, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
+Bolt pistol×5
+12"
+1
+3+
+5
+-1
+1
+CLOSE-QUARTERS
 Heavy Bolt Rifle×4
 30"
 2
@@ -3384,17 +3412,7 @@ Heavy BolterHEAVY INTERCESSOR
 5
 -1
 2
-HEAVY, RAPID FIRE 2, SUSTAINED HITS 1
-OR
-WHEN USING ANOTHER SHOOTING TYPE
-Bolt pistol×5
-12"
-1
-3+
-5
--1
-1
-CLOSE-QUARTERS
+HEAVY, SUSTAINED HITS 1, RAPID FIRE 2
 Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 MELEE WEAPONS
 A
@@ -3426,13 +3444,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Deathwatch Support or Terminator Storm Force.
 
 Keywords
+INFANTRY
 BATTLELINE
 EXPLOSIVES
-FACTION: ADEPTUS ASTARTES
 GRAVIS
-HEAVY INTERCESSOR SQUAD
 IMPERIUM
-INFANTRY
+HEAVY INTERCESSOR SQUAD
+FACTION: ADEPTUS ASTARTES
 Ask about this unit
 ‹ Librarian in Phobos Armour
 Eradicator Squad with Melta Rifles ›
@@ -3507,10 +3525,6 @@ Armoured Hull
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
 1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
 ABILITIES
-Transport
-
-This model has a transport capacity of 7 ADEPTUS ASTARTES INFANTRY models. It cannot transport TERMINATOR/JUMP PACK models. Each GRAVIS model takes up the space of 2 models.
-
 Rapid Disembarkation
 Your Movement
 
@@ -3523,6 +3537,10 @@ Already in InSv
 
 This unit has 5+ InSv.
 
+Transport
+
+This model has a transport capacity of 7 ADEPTUS ASTARTES INFANTRY models. It cannot transport TERMINATOR/JUMP PACK models. Each GRAVIS model takes up the space of 2 models.
+
 Rules
 Deadly Demise D3, Firing Deck 7, Combat Doctrines
 Stratagems
@@ -3534,13 +3552,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Counteroffe
 None from Deathwatch Support or Terminator Storm Force.
 
 Keywords
+VEHICLE
 DEDICATED TRANSPORT
-FACTION: ADEPTUS ASTARTES
 FRAME
 IMPERIUM
-IMPULSOR
 TRANSPORT
-VEHICLE
+IMPULSOR
+FACTION: ADEPTUS ASTARTES
 Ask about this unit
 ‹ Reiver Squad
 Deathwatch Terminator Squad ›
@@ -3596,20 +3614,35 @@ BS
 S
 AP
 D
-Melta rifle×2
-➤Melta Rifle HUNTER:Monster/VehicleMON/VEH ONLY
-18"
+
+Eradicator can shoot with Bolt pistol or Melta rifle, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
+Eradicator Sergeant can shoot with Bolt pistol or Melta rifle, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
+Eradicator with Multi-melta can shoot with Bolt pistol or Multi-melta, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
+Bolt pistol×3
+12"
 1
-2+
-12
--3
-D3+2
-MELTA 2
+3+
+5
+-1
+1
+CLOSE-QUARTERS
+Melta rifle×2
 ➤Melta Rifle
 18"
 1
 3+
 10
+-3
+D3+2
+MELTA 2
+➤Melta Rifle HUNTER:Monster/VehicleMON/VEH ONLY
+18"
+1
+2+
+12
 -3
 D3+2
 MELTA 2
@@ -3630,16 +3663,6 @@ MELTA 3
 -3
 D3+2
 MELTA 3
-OR
-WHEN USING ANOTHER SHOOTING TYPE
-Bolt pistol×3
-12"
-1
-3+
-5
--1
-1
-CLOSE-QUARTERS
 Every ranged attack: can re-roll damage rolls (Total Obliteration)
 Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 MELEE WEAPONS
@@ -3675,12 +3698,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Deathwatch Support or Terminator Storm Force.
 
 Keywords
-ERADICATOR SQUAD WITH MELTA RIFLES
+INFANTRY
 EXPLOSIVES
-FACTION: ADEPTUS ASTARTES
 GRAVIS
 IMPERIUM
-INFANTRY
+ERADICATOR SQUAD WITH MELTA RIFLES
+FACTION: ADEPTUS ASTARTES
 Ask about this unit
 ‹ Heavy Intercessor Squad
 Reiver Squad ›
@@ -3734,6 +3757,9 @@ BS
 S
 AP
 D
+
+Can shoot with Special-issue Bolt Pistol or Bolt Carbine, not both (Close-quarters); in close-quarters shooting, Special-issue Bolt Pistol only.
+
 Bolt Carbine×5
 18"
 3
@@ -3741,9 +3767,7 @@ Bolt Carbine×5
 5
 -1
 1
-ASSAULT, PRECISION
-OR
-WHEN USING ANOTHER SHOOTING TYPE
+PRECISION, ASSAULT
 Special-issue Bolt Pistol×5
 12"
 1
@@ -3769,18 +3793,18 @@ PRECISION
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
 1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
 ABILITIES
+Terror Troops
+
+Aura
+
+While an enemy model is within 3" of this unit, that enemy model has -1 OC.
+
 Fearsome Assault
 Fight
 
 Fight · Either turn
 
 At the start of the Fight phase, each enemy unit engaged with a unit with this ability makes a battle-shock roll, with -1 to that battle-shock roll.
-
-Terror Troops
-
-Aura
-
-While an enemy model is within 3" of this unit, that enemy model has -1 OC.
 
 Rules
 Scouts 6", Combat Doctrines
@@ -3793,13 +3817,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Smokescreen, Her
 None from Deathwatch Support or Terminator Storm Force.
 
 Keywords
-EXPLOSIVES
-FACTION: ADEPTUS ASTARTES
-IMPERIUM
 INFANTRY
+EXPLOSIVES
+IMPERIUM
 PHOBOS
-REIVER SQUAD
 SMOKE
+REIVER SQUAD
+FACTION: ADEPTUS ASTARTES
 Ask about this unit
 ‹ Eradicator Squad with Melta Rifles
 Impulsor ›
@@ -3881,7 +3905,7 @@ BLAST 1
 10
 -3
 3
-BLAST 1, HAZARDOUS
+HAZARDOUS, BLAST 1
 Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
 STRATAGEMS · DEATHWATCH SUPPORT · YOUR SHOOTING PHASE
 1CP Kraken Rounds: +6" range and +1 S, selected to shoot
@@ -3895,6 +3919,19 @@ WS
 S
 AP
 D
+Chainfist×3
+➤Hunter: Monster/VehicleMON/VEH ONLY
+3
+3+
+12
+-2
+3
+➤Standard
+2
+4+
+8
+-2
+2
 Thunder Hammer×2
 3
 3+
@@ -3902,19 +3939,6 @@ Thunder Hammer×2
 -2
 3
 DEVASTATING WOUNDS
-Chainfist×3
-➤Standard
-2
-4+
-8
--2
-2
-➤Hunter: Monster/VehicleMON/VEH ONLY
-3
-3+
-12
--2
-3
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
 1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
 ABILITIES
@@ -3952,14 +3976,14 @@ TERMINATOR STORM FORCE Tactical Dreadnought Fortitude, Merciless Veterans, Gunsh
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-ALLIES: DEATHWATCH
-DEATHWATCH TERMINATOR SQUAD
-FACTION: ADEPTUS ASTARTES
-FACTION: DEATHWATCH
-IMPERIUM
 INFANTRY
 KILL TEAM
 TERMINATOR
+IMPERIUM
+DEATHWATCH TERMINATOR SQUAD
+FACTION: ADEPTUS ASTARTES
+FACTION: DEATHWATCH
+ALLIES: DEATHWATCH
 Ask about this unit
 ‹ Impulsor
 

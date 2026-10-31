@@ -369,7 +369,7 @@ D6+3
 6
 -1
 D3
-HAZARDOUS, IGNORES COVER, PSYCHIC, TORRENT
+IGNORES COVER, HAZARDOUS, PSYCHIC, TORRENT
 Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
 1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
@@ -387,6 +387,14 @@ STRATAGEMS · SCINTILLATING LEGION
 1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
 Lord of Change
 Infernal Puppeteer
+Rod of sorcery
+18"
+6
+2+
+8
+-1
+2
+PSYCHIC
 Bolt of Change
 ➤witchfire
 18"
@@ -404,14 +412,6 @@ PSYCHIC
 -2
 3
 HAZARDOUS, PSYCHIC
-Rod of sorcery
-18"
-6
-2+
-8
--1
-2
-PSYCHIC
 Your Shooting phase, its Bolt of Change, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)
 Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
 Own aura: +1 S (Daemon Lord of Tzeentch)
@@ -419,6 +419,14 @@ STRATAGEMS · SCINTILLATING LEGION
 1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
 Lord of Change
 Inescapable Eye
+Rod of sorcery
+18"
+6
+2+
+8
+-1
+2
+PSYCHIC
 Bolt of Change
 ➤witchfire
 18"
@@ -436,14 +444,6 @@ PSYCHIC
 -2
 3
 HAZARDOUS, PSYCHIC
-Rod of sorcery
-18"
-6
-2+
-8
--1
-2
-PSYCHIC
 Your Shooting phase, its Bolt of Change, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)
 Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
 Own aura: +1 S (Daemon Lord of Tzeentch)
@@ -479,19 +479,19 @@ Coruscating Pink flames×10
 -1
 1
 PISTOL, PSYCHIC
-Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
-18"
-2
-5+
-2
--1
-1
-PISTOL, PSYCHIC
 Coruscating Blue flames (ref. only)BLUE HORRORS ADDED BY SPLIT
 18"
 2
 4+
 3
+-1
+1
+PISTOL, PSYCHIC
+Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
+18"
+2
+5+
+2
 -1
 1
 PISTOL, PSYCHIC
@@ -627,16 +627,16 @@ Pink claws×10
 3
 0
 1
-Yellow claws (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
-2
-5+
-2
-0
-1
 Blue claws (ref. only)BLUE HORRORS ADDED BY SPLIT
 1
 5+
 3
+0
+1
+Yellow claws (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
+2
+5+
+2
 0
 1
 STRATAGEMS · SCINTILLATING LEGION
@@ -652,13 +652,15 @@ Flamer mouths×3
 STRATAGEMS · SCINTILLATING LEGION
 1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
 Tzeentch Soul Grinder
+
+Fights with both: Iron claw, plus Warpclaw on top (extra attacks).
+
 Iron claw
 5
 3+
 16
 -3
 D6+2
-+
 Warpclaw
 6
 3+
@@ -673,6 +675,12 @@ STRATAGEMS · SCINTILLATING LEGION
 ######## abilities · MELEE Abilities
 Kairos Fateweaver
 Warlord
+Greater Daemon of Tzeentch
+
+Aura
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
 One Head Looks Forward
 Your Command
 
@@ -691,12 +699,6 @@ Once per turn, when your opponent targets a unit from their army within 12" of t
 Damaged: 1-7 wounds remaining
 
 While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
-Greater Daemon of Tzeentch
-
-Aura
-
-While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
 
 The Blue Scribes
 P’tarix’s Sorcerous Syphon
@@ -726,6 +728,17 @@ At the start of your opponent’s Shooting phase, select one enemy unit within 1
 
 Daemon Prince of Chaos with wings
 Neverblade
+Daemonic Allegiance
+Already in A
+
+Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
+
+Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
+
+Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
+
+Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
+
 Malefic Destruction
 Once per battle
 Fight
@@ -753,17 +766,6 @@ Enhancement · Fight · Either turn
 
 LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Daemonic Allegiance
-Already in A
-
-Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
-
-Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
-
-Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
-
-Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
-
 Lord of Change
 Infernal Puppeteer
 Daemon Lord of Tzeentch
@@ -780,15 +782,15 @@ Psychic · Shooting · Your turn
 
 In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.
 
-Damaged: 1-7 wounds remaining
-
-While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
 Greater Daemon of Tzeentch
 
 Aura
 
 While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+Damaged: 1-7 wounds remaining
+
+While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 Infernal Puppeteer
 Enhancement
@@ -814,15 +816,15 @@ Psychic · Shooting · Your turn
 
 In your Shooting phase, select one of the following abilities: [IGNORES COVER]; [LETHAL HITS]; [SUSTAINED HITS D3]. Until the end of the phase, this model’s Bolt of Change has that ability.
 
-Damaged: 1-7 wounds remaining
-
-While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
 Greater Daemon of Tzeentch
 
 Aura
 
 While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+Damaged: 1-7 wounds remaining
+
+While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 Inescapable Eye
 Enhancement
@@ -878,17 +880,6 @@ Movement / Shooting · Your turn
 This unit is eligible to shoot in a turn in which it Fell Back.
 
 Tzeentch Soul Grinder
-Scuttling Walker
-Your Movement
-
-Movement · Your turn
-
-Each time this model makes a Normal or Advance move, it can move over friendly MONSTER and VEHICLE models and terrain features that are 4" or less in height as if they were not there.
-
-Damaged: 1-5 wounds remaining
-
-While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
 Daemonic Allegiance
 
 When you select this model to include in your army, you must select one of the keywords below. Until the end of the battle, this model has that keyword and the additional wargear stated for that keyword below.
@@ -900,6 +891,17 @@ TZEENTCH – This model is additionally equipped with: warp gaze
 NURGLE – This model is additionally equipped with: phlegm bombardment
 
 SLAANESH – This model is additionally equipped with: scream of despair
+
+Scuttling Walker
+Your Movement
+
+Movement · Your turn
+
+Each time this model makes a Normal or Advance move, it can move over friendly MONSTER and VEHICLE models and terrain features that are 4" or less in height as if they were not there.
+
+Damaged: 1-5 wounds remaining
+
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 ######## rules · ABILITIES Rules
 Chaos Daemons · Priority Assets
@@ -1326,12 +1328,12 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (3)
+Greater Daemon of Tzeentch
+“While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
 One Head Looks Forward
 “At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.” · not counted in the Damage tab
 One Head Looks Back
 “Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
-Greater Daemon of Tzeentch
-“While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Daemon Lord of Tzeentch (Lord of Change (Infernal Puppeteer, 340 pts))
 Aura · Within 6" of it: +1 S
@@ -1553,12 +1555,12 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (3)
+Greater Daemon of Tzeentch
+“While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
 One Head Looks Forward
 “At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.” · not counted in the Damage tab
 One Head Looks Back
 “Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
-Greater Daemon of Tzeentch
-“While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1846,12 +1848,12 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (3)
+Greater Daemon of Tzeentch
+“While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
 One Head Looks Forward
 “At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.” · not counted in the Damage tab
 One Head Looks Back
 “Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
-Greater Daemon of Tzeentch
-“While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Daemon Lord of Tzeentch (Lord of Change (Infernal Puppeteer, 340 pts))
 Aura · Within 6" of it: +1 S
@@ -1951,12 +1953,12 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (3)
+Greater Daemon of Tzeentch
+“While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
 One Head Looks Forward
 “At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.” · not counted in the Damage tab
 One Head Looks Back
 “Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
-Greater Daemon of Tzeentch
-“While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -2561,6 +2563,12 @@ Staff of Tomorrow
 2D3
 PSYCHIC
 ABILITIES
+Greater Daemon of Tzeentch
+
+Aura
+
+While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
 One Head Looks Forward
 Your Command
 
@@ -2576,12 +2584,6 @@ Once per turn · Any phase · Either turn
 
 Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.
 
-Greater Daemon of Tzeentch
-
-Aura
-
-While a friendly TZEENTCH LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
-
 Rules
 Deadly Demise D6, Deep Strike, The Shadow of Chaos, Fates in Flux
 Stratagems
@@ -2593,16 +2595,16 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Cavalcade of Chaos.
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-EPIC HERO
-FACTION: LEGIONES DAEMONICA
-FLY
-KAIROS FATEWEAVER
 MONSTER
+CHARACTER
+EPIC HERO
+FLY
 PSYKER
+CHAOS
+DAEMON
 TZEENTCH
+KAIROS FATEWEAVER
+FACTION: LEGIONES DAEMONICA
 WARLORD
 Ask about this unit
 The Blue Scribes ›
@@ -2668,7 +2670,7 @@ Psychic · Movement · Your turn
 At the end of your Movement phase, roll one D6 for each enemy unit within 6" of this model: on a 2-3, that unit suffers 1 mortal wound; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds.
 
 Rules
-Deep Strike, The Shadow of Chaos, Lone Operative, Unholy Avalanche, Fates in Flux
+Deep Strike, Lone Operative, The Shadow of Chaos, Unholy Avalanche, Fates in Flux
 Stratagems
 
 CAVALCADE OF CHAOS From Beyond the Veil, Warp-Riders, Inescapable Manifestations
@@ -2678,15 +2680,15 @@ SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering R
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-EPIC HERO
-FACTION: LEGIONES DAEMONICA
-FLY
 MOUNTED
-THE BLUE SCRIBES
+CHARACTER
+EPIC HERO
+FLY
+CHAOS
+DAEMON
 TZEENTCH
+THE BLUE SCRIBES
+FACTION: LEGIONES DAEMONICA
 Ask about this unit
 ‹ Kairos Fateweaver
 The Changeling ›
@@ -2749,7 +2751,7 @@ D6+3
 6
 -1
 D3
-HAZARDOUS, IGNORES COVER, PSYCHIC, TORRENT
+IGNORES COVER, HAZARDOUS, PSYCHIC, TORRENT
 Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
@@ -2777,7 +2779,7 @@ Shooting · Their turn
 At the start of your opponent’s Shooting phase, select one enemy unit within 12" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase.
 
 Rules
-The Shadow of Chaos, Deep Strike, Lone Operative, Stealth, Fates in Flux
+Deep Strike, Lone Operative, Stealth, The Shadow of Chaos, Fates in Flux
 Stratagems
 
 SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade
@@ -2787,15 +2789,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Ch
 None from Cavalcade of Chaos.
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-EPIC HERO
-FACTION: LEGIONES DAEMONICA
 INFANTRY
+CHARACTER
+EPIC HERO
 PSYKER
-THE CHANGELING
+CHAOS
+DAEMON
 TZEENTCH
+THE CHANGELING
+FACTION: LEGIONES DAEMONICA
 Ask about this unit
 ‹ The Blue Scribes
 Daemon Prince of Chaos with wings · Neverblade ›
@@ -2873,6 +2875,17 @@ Malefic Destruction (once per battle, start of the Fight phase), its hellforged 
 Selected to fight, its hellforged weapons, until the end of the phase (select one): [LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1] (Harbinger of Death)
 Every melee attack: +1 to hit rolls (Neverblade)
 ABILITIES
+Daemonic Allegiance
+Already in A
+
+Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
+
+Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
+
+Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
+
+Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
+
 Malefic Destruction
 Once per battle
 Fight
@@ -2900,19 +2913,8 @@ Enhancement · Fight · Either turn
 
 LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Daemonic Allegiance
-Already in A
-
-Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
-
-Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
-
-Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
-
-Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
-
 Rules
-Deep Strike, The Shadow of Chaos, Deadly Demise D3, Fates in Flux
+Deadly Demise D3, Deep Strike, The Shadow of Chaos, Fates in Flux
 Stratagems
 
 SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade, Impossible Eclipse
@@ -2922,13 +2924,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Cavalcade of Chaos.
 
 Keywords
-CHAOS
+MONSTER
 CHARACTER
+FLY
+CHAOS
 DAEMON
 DAEMON PRINCE OF CHAOS WITH WINGS
 FACTION: LEGIONES DAEMONICA
-FLY
-MONSTER
 TZEENTCH
 Ask about this unit
 ‹ The Changeling
@@ -2979,6 +2981,14 @@ BS
 S
 AP
 D
+Rod of sorcery
+18"
+6
+2+
+8
+-1
+2
+PSYCHIC
 Bolt of Change
 ➤witchfire
 18"
@@ -2996,14 +3006,6 @@ PSYCHIC
 -2
 3
 HAZARDOUS, PSYCHIC
-Rod of sorcery
-18"
-6
-2+
-8
--1
-2
-PSYCHIC
 Own aura: +1 S (Daemon Lord of Tzeentch)
 Your Shooting phase, its Bolt of Change, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)
 MELEE WEAPONS
@@ -3059,15 +3061,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Cavalcade of Chaos.
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-FACTION: LEGIONES DAEMONICA
-FLY
-LORD OF CHANGE
 MONSTER
+CHARACTER
+FLY
 PSYKER
+CHAOS
+DAEMON
 TZEENTCH
+LORD OF CHANGE
+FACTION: LEGIONES DAEMONICA
 Ask about this unit
 ‹ Daemon Prince of Chaos with wings · Neverblade
 Lord of Change · Inescapable Eye ›
@@ -3117,6 +3119,14 @@ BS
 S
 AP
 D
+Rod of sorcery
+18"
+6
+2+
+8
+-1
+2
+PSYCHIC
 Bolt of Change
 ➤witchfire
 18"
@@ -3134,14 +3144,6 @@ PSYCHIC
 -2
 3
 HAZARDOUS, PSYCHIC
-Rod of sorcery
-18"
-6
-2+
-8
--1
-2
-PSYCHIC
 Own aura: +1 S (Daemon Lord of Tzeentch)
 Your Shooting phase, its Bolt of Change, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)
 MELEE WEAPONS
@@ -3197,15 +3199,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Cavalcade of Chaos.
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-FACTION: LEGIONES DAEMONICA
-FLY
-LORD OF CHANGE
 MONSTER
+CHARACTER
+FLY
 PSYKER
+CHAOS
+DAEMON
 TZEENTCH
+LORD OF CHANGE
+FACTION: LEGIONES DAEMONICA
 Ask about this unit
 ‹ Lord of Change · Infernal Puppeteer
 Fluxmaster · Improbable Shield (Aura) ›
@@ -3301,19 +3303,19 @@ Coruscating Pink flames×10
 -1
 1
 PISTOL, PSYCHIC
-Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
-18"
-2
-5+
-2
--1
-1
-PISTOL, PSYCHIC
 Coruscating Blue flames (ref. only)BLUE HORRORS ADDED BY SPLIT
 18"
 2
 4+
 3
+-1
+1
+PISTOL, PSYCHIC
+Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
+18"
+2
+5+
+2
 -1
 1
 PISTOL, PSYCHIC
@@ -3340,16 +3342,16 @@ Pink claws×10
 3
 0
 1
-Yellow claws (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
-2
-5+
-2
-0
-1
 Blue claws (ref. only)BLUE HORRORS ADDED BY SPLIT
 1
 5+
 3
+0
+1
+Yellow claws (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
+2
+5+
+2
 0
 1
 ABILITIES
@@ -3400,18 +3402,18 @@ SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering R
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-BATTLELINE*
-CHAOS
-CHARACTER
-DAEMON
-FACTION: LEGIONES DAEMONICA
-FLUXMASTER
-FLY
-HORRORS*
-INFANTRY*
 MOUNTED
+CHARACTER
+FLY
 PSYKER
+CHAOS
+DAEMON
 TZEENTCH
+FLUXMASTER
+INFANTRY*
+BATTLELINE*
+HORRORS*
+FACTION: LEGIONES DAEMONICA
 Pink Horror only:
 PINK
 Blue Horrors only:
@@ -3506,13 +3508,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Cavalcade of Chaos.
 
 Keywords
+INFANTRY
+FLY
 CHAOS
 DAEMON
-FACTION: LEGIONES DAEMONICA
-FLAMERS
-FLY
-INFANTRY
 TZEENTCH
+FLAMERS
+FACTION: LEGIONES DAEMONICA
 Ask about this unit
 ‹ Fluxmaster · Improbable Shield (Aura)
 Tzeentch Soul Grinder ›
@@ -3582,13 +3584,15 @@ WS
 S
 AP
 D
+
+Fights with both: Iron claw, plus Warpclaw on top (extra attacks).
+
 Iron claw
 5
 3+
 16
 -3
 D6+2
-+
 Warpclaw
 6
 3+
@@ -3597,13 +3601,6 @@ Warpclaw
 2
 EXTRA ATTACKS
 ABILITIES
-Scuttling Walker
-Your Movement
-
-Movement · Your turn
-
-Each time this model makes a Normal or Advance move, it can move over friendly MONSTER and VEHICLE models and terrain features that are 4" or less in height as if they were not there.
-
 Daemonic Allegiance
 
 When you select this model to include in your army, you must select one of the keywords below. Until the end of the battle, this model has that keyword and the additional wargear stated for that keyword below.
@@ -3616,8 +3613,15 @@ NURGLE – This model is additionally equipped with: phlegm bombardment
 
 SLAANESH – This model is additionally equipped with: scream of despair
 
+Scuttling Walker
+Your Movement
+
+Movement · Your turn
+
+Each time this model makes a Normal or Advance move, it can move over friendly MONSTER and VEHICLE models and terrain features that are 4" or less in height as if they were not there.
+
 Rules
-Deadly Demise D3, The Shadow of Chaos, Deep Strike, Fates in Flux
+Deadly Demise D3, Deep Strike, The Shadow of Chaos, Fates in Flux
 Stratagems
 
 SCINTILLATING LEGION Fateborne Nightmares, Pyrogenesis, Ficklefire, Flickering Reality, Delirium Unmade
@@ -3627,13 +3631,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Cavalcade of Chaos.
 
 Keywords
-CHAOS
-DAEMON
-FACTION: LEGIONES DAEMONICA
-SOUL GRINDER
-TZEENTCH
 VEHICLE
 WALKER
+CHAOS
+DAEMON
+SOUL GRINDER
+FACTION: LEGIONES DAEMONICA
+TZEENTCH
 Ask about this unit
 ‹ Flamers
 Blue Horrors ›
@@ -3674,7 +3678,7 @@ ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
 1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
 RANGED WEAPONS
-Coruscating Yellow flames (ref. only), Coruscating Blue flames · all pistols
+Coruscating Blue flames, Coruscating Yellow flames (ref. only) · all pistols
 Range
 A
 BS
@@ -3745,13 +3749,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Cavalcade of Chaos.
 
 Keywords
+INFANTRY
 BATTLELINE
 CHAOS
 DAEMON
-FACTION: LEGIONES DAEMONICA
-HORRORS
-INFANTRY
 TZEENTCH
+HORRORS
+FACTION: LEGIONES DAEMONICA
 Blue Horror only:
 BLUE
 Brimstone Horrors only:
@@ -4652,6 +4656,25 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Select Weapons · TZEEEEENTCH Tzeeeeentch
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
 
 Ask about this rule
 

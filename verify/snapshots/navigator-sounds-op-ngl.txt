@@ -265,14 +265,6 @@ Cerastus Knight Atrapos
 Warlord
 Bringer of Justice
 Atrapos lascutter
-➤high intensity
-24"
-D6
-3+
-14
--3
-4
-SUSTAINED HITS 1
 ➤low intensity
 36"
 2D6
@@ -281,15 +273,15 @@ SUSTAINED HITS 1
 -1
 2
 SUSTAINED HITS 1
-Graviton singularity cannon
-➤singularity
+➤high intensity
 24"
-D3
+D6
 3+
-16
--4
-D6+1
-BLAST, DEVASTATING WOUNDS, HAZARDOUS
+14
+-3
+4
+SUSTAINED HITS 1
+Graviton singularity cannon
 ➤contained
 24"
 D3
@@ -298,6 +290,14 @@ D3
 -4
 D6+1
 BLAST
+➤singularity
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
 vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
 vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
 Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
@@ -322,14 +322,6 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Stormspear rocket pod
-48"
-3
-3+
-8
--2
-D6
-IGNORES COVER
 Meltagun
 12"
 1
@@ -354,6 +346,14 @@ D6+3
 -1
 3
 BLAST, RAPID FIRE D6+3, IGNORES COVER
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+IGNORES COVER
 Remained Stationary in your Movement phase: ranged weapons have [SUSTAINED HITS 1] until the end of the turn (Punishing Salvoes)
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
@@ -368,14 +368,6 @@ Conversion beam obliterator
 -2
 4
 CONVERSION, SUSTAINED HITS D3
-Phosphor blaster
-24"
-1
-3+
-5
-0
-1
-IGNORES COVER, RAPID FIRE 1
 Plasma executor
 ➤standard
 36"
@@ -393,6 +385,14 @@ D6+3
 -3
 3
 BLAST, HAZARDOUS
+Phosphor blaster
+24"
+1
+3+
+5
+0
+1
+IGNORES COVER, RAPID FIRE 1
 Twin incendine combustor
 12"
 D6
@@ -407,14 +407,6 @@ Visible target within 12" with models on ground level (not AIRCRAFT): BS improve
 STRATAGEMS · FREEBLADE COMPANY
 1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 Knight Destrier
-Questoris heavy stubber
-36"
-6
-3+
-4
--1
-1
-ASSAULT, RAPID FIRE 3
 Chastiser gatling cannon
 24"
 12
@@ -431,6 +423,14 @@ D6+3
 -1
 2
 ASSAULT, BLAST, RAPID FIRE D6+3
+Questoris heavy stubber
+36"
+6
+3+
+4
+-1
+1
+ASSAULT, RAPID FIRE 3
 Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
 Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
@@ -438,21 +438,6 @@ STRATAGEMS · FREEBLADE COMPANY
 1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 Knight Errant
 Mysterious Guardian
-Thermal cannon
-24"
-2D3
-3+
-12
--4
-D6
-BLAST, MELTA 6
-Stormspear rocket pod
-48"
-3
-3+
-8
--2
-D6
 Meltagun
 12"
 1
@@ -461,6 +446,21 @@ Meltagun
 -4
 D6
 MELTA 2
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+Thermal cannon
+24"
+2D3
+3+
+12
+-4
+D6
+BLAST, MELTA 6
 Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
@@ -481,19 +481,19 @@ Cerastus Knight Atrapos
 Warlord
 Bringer of Justice
 Atrapos lascutter
-➤high intensity
-8
-3+
-14
--3
-4
-SUSTAINED HITS 1
 ➤low intensity
 14
 3+
 7
 -1
 2
+SUSTAINED HITS 1
+➤high intensity
+8
+3+
+14
+-3
+4
 SUSTAINED HITS 1
 vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
 vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
@@ -563,14 +563,6 @@ PSYCHIC
 Cerastus Knight Atrapos
 Warlord
 Bringer of Justice
-Macro-extinction Protocols
-
-Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
-
-Damaged: 1-10 Wounds Remaining
-
-While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
-
 Atrapos’ Duty
 No ARMIGER models in this list
 
@@ -579,6 +571,14 @@ No ARMIGER models in this list
 Bondsman
 
 While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
+Macro-extinction Protocols
+
+Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
+
+Damaged: 1-10 Wounds Remaining
+
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 Bringer of Justice
 Enhancement
@@ -591,20 +591,9 @@ IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons
 
 Knight Crusader
 Hunter’s Eye
-Punishing Salvoes
-Your Move/Shoot
-
-Movement / Shooting · Your turn
-
-In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
-
 Invulnerable Save (5+*)
 
 This model has a 5+ invulnerable save against ranged attacks.
-
-Damaged: 1-9 Wounds Remaining
-
-While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 Crusader’s Duty
 No ARMIGER models in this list
@@ -615,6 +604,17 @@ Bondsman
 
 While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll.
 
+Punishing Salvoes
+Your Move/Shoot
+
+Movement / Shooting · Your turn
+
+In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
 Hunter’s Eye
 Enhancement
 Their Move · Your Shoot
@@ -624,17 +624,9 @@ Enhancement · Their Movement / Your Shooting
 IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
 
 Knight Defender
-Selfless Protector
-
-Each time a ranged attack is allocated to an IMPERIAL KNIGHTS model from your army, if that model is not fully visible to every model in the attacking unit because of this Knight Defender model, that model has the Benefit of Cover and a 4+ invulnerable save against that attack.
-
 Invulnerable Save (4+*)
 
 This model has a 4+ invulnerable save against ranged attacks.
-
-Damaged: 1-9 Wounds Remaining
-
-While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 Defender’s Duty
 No ARMIGER models in this list
@@ -645,17 +637,18 @@ Bondsman
 
 While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack.
 
+Selfless Protector
+
+Each time a ranged attack is allocated to an IMPERIAL KNIGHTS model from your army, if that model is not fully visible to every model in the attacking unit because of this Knight Defender model, that model has the Benefit of Cover and a 4+ invulnerable save against that attack.
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
 Knight Destrier
-Damaged: 1-6 Wounds Remaining
+Invulnerable Save (5+*)
 
-While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
-
-Thundercharge
-Needs a thundershock spear and bellatus reaper chainsword: not this loadout
-
-Needs a thundershock spear and bellatus reaper chainsword: not this loadout
-
-If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+This model has a 5+ invulnerable save against ranged attacks.
 
 Ram Jets
 Your Movement
@@ -664,6 +657,13 @@ Movement · Your turn
 
 Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
 
+Thundercharge
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+
 Saturation Fire
 Your Shooting
 
@@ -671,26 +671,15 @@ Shooting · Your turn
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
-Invulnerable Save (5+*)
+Damaged: 1-6 Wounds Remaining
 
-This model has a 5+ invulnerable save against ranged attacks.
+While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 Knight Errant
 Mysterious Guardian
-Aggressive Assault
-Your Shooting
-
-Shooting · Your turn
-
-Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
-
 Invulnerable Save (5+*)
 
 This model has a 5+ invulnerable save against ranged attacks.
-
-Damaged: 1-9 Wounds Remaining
-
-While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 Errant’s Duty
 No ARMIGER models in this list
@@ -700,6 +689,17 @@ No ARMIGER models in this list
 Bondsman
 
 While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability.
+
+Aggressive Assault
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 Mysterious Guardian
 Enhancement
@@ -714,18 +714,18 @@ Place this unit in strategic reserves.
 This unit has Deep Strike until the start of your next Shooting phase.
 This unit must make an ingress move in your next Movement phase (including in your first turn).
 Navigator
+Gaze into the Empyrean
+
+Psychic
+
+Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12" of this model.
+
 Third Eye
 Your Shooting
 
 Psychic · Shooting · Your turn
 
 At the start of your Shooting phase, select one enemy unit within 12" of and visible to this model. That unit must take a Battle-shock test, subtracting 2 from the result if it is an INFANTRY unit. If the test is failed, that enemy unit suffers 3 mortal wounds.
-
-Gaze into the Empyrean
-
-Psychic
-
-Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12" of this model.
 
 ######## rules · ABILITIES Rules
 Imperial Knights · Purge the Foe
@@ -990,9 +990,9 @@ Benefit of cover
 Add a group
 3.4
 of 5 destroyed
-6.8 wounds lost · wiped in 31% of games
+6.8 wounds lost · wiped in 30% of games
 Atrapos lascutter: high intensity
-Graviton singularity cannon: singularity
+Graviton singularity cannon: contained
 13 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
@@ -1016,26 +1016,10 @@ AP
 D
 4
 SUSTAINED HITS 1
-−31% wiped
-−1.8
+−30% wiped
+−1.7
 MODELS IF UNTICKED
 PICK ONE PROFILE
-high intensity
-3.4
-BEST · 24"
-RNG
-24"
-A
-D6
-BS
-3+
-S
-14
-AP
--3
-D
-4
-SUSTAINED HITS 1
 low intensity
 3.4
 RNG
@@ -1051,6 +1035,21 @@ AP
 D
 2
 SUSTAINED HITS 1
+high intensity
+3.4
+RNG
+24"
+A
+D6
+BS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
 Graviton singularity cannon
 RNG
 24"
@@ -1064,26 +1063,11 @@ AP
 -4
 D
 D6+1
-BLAST, DEVASTATING WOUNDS, HAZARDOUS
+BLAST
 −23% wiped
 −1.4
 MODELS IF UNTICKED
 PICK ONE PROFILE
-singularity
-3.4
-RNG
-24"
-A
-D3
-BS
-3+
-S
-16
-AP
--4
-D
-D6+1
-BLAST, DEVASTATING WOUNDS, HAZARDOUS
 contained
 3.4
 RNG
@@ -1099,41 +1083,56 @@ AP
 D
 D6+1
 BLAST
+singularity
+3.4
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
 SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
-+16% wiped
-+0.5
++17% wiped
++0.6
 MODELS
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
 −14% wiped
-−0.7
+−0.6
 MODELS
 Damaged: 1-10 Wounds Remaining
 −1 to Hit rolls
 if it applies
 −14% wiped
-−0.7
+−0.6
 MODELS
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
-−27% wiped
+−26% wiped
 −1.8
 MODELS
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-−27% wiped
+−26% wiped
 −1.8
 MODELS
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
 by the rules: Fire Overwatch: “TARGET: One friendly unengaged unit (excluding TITANIC units)” (15.08) · yours to count anyway
-−31% wiped
+−30% wiped
 −2.6
 MODELS
 ARMY RULES
@@ -1154,13 +1153,13 @@ UNIT RULES
 Macro-extinction Protocols
 The target: Monster or Vehicle: +1 to Hit rolls
 if it applies
-+16% wiped
-+0.5
++17% wiped
++0.6
 MODELS
 Macro-extinction Protocols
 The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
 if it applies
-+7% wiped
++8% wiped
 +0.3
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (1)
@@ -1181,7 +1180,7 @@ MODELS
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-+10% wiped
++11% wiped
 +0.4
 MODELS
 NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
@@ -1352,6 +1351,19 @@ SUSTAINED HITS 1
 −4.1
 MODELS IF UNTICKED
 PICK ONE PROFILE
+low intensity
+3.6
+A
+14
+WS
+3+
+S
+7
+AP
+-1
+D
+2
+SUSTAINED HITS 1
 high intensity
 4.1
 BEST
@@ -1365,19 +1377,6 @@ AP
 -3
 D
 4
-SUSTAINED HITS 1
-low intensity
-3.6
-A
-14
-WS
-3+
-S
-7
-AP
--1
-D
-2
 SUSTAINED HITS 1
 SITUATION
 Charged this turn
@@ -1589,7 +1588,7 @@ of 5 destroyed
 Shoot 3.4 · Fight 1.5 · the charge is taken to succeed
 
 Atrapos lascutter: high intensity
-Graviton singularity cannon: singularity
+Graviton singularity cannon: contained
 Charged this turn
 ×
 26 NOT COUNTED
@@ -1623,21 +1622,6 @@ SUSTAINED HITS 1
 −0.2
 MODELS IF UNTICKED
 PICK ONE PROFILE
-high intensity
-4.9
-RNG
-24"
-A
-D6
-BS
-3+
-S
-14
-AP
--3
-D
-4
-SUSTAINED HITS 1
 low intensity
 4.9
 RNG
@@ -1653,6 +1637,21 @@ AP
 D
 2
 SUSTAINED HITS 1
+high intensity
+4.9
+RNG
+24"
+A
+D6
+BS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
 Graviton singularity cannon
 RNG
 24"
@@ -1666,26 +1665,11 @@ AP
 -4
 D
 D6+1
-BLAST, DEVASTATING WOUNDS, HAZARDOUS
-−12% wiped
+BLAST
+−13% wiped
 −0.2
 MODELS IF UNTICKED
 PICK ONE PROFILE
-singularity
-4.9
-RNG
-24"
-A
-D3
-BS
-3+
-S
-16
-AP
--4
-D
-D6+1
-BLAST, DEVASTATING WOUNDS, HAZARDOUS
 contained
 4.9
 RNG
@@ -1701,13 +1685,29 @@ AP
 D
 D6+1
 BLAST
+singularity
+4.9
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
 SITUATION
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
 +3% wiped
-+0.1
+≈0
 MODELS
++1 MORE ▾
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
@@ -1723,22 +1723,23 @@ MODELS
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
-−16% wiped
+−17% wiped
 −0.3
 MODELS
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-−16% wiped
+−17% wiped
 −0.3
 MODELS
 ARMY RULES
 Code Chivalric
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
 if it applies
-+4% wiped
-+0.1
++3% wiped
+≈0
 MODELS
++1 MORE ▾
 NOT COUNTED IN THE DAMAGE TAB (3)
 Bondsman
 “Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. …” · not counted in the Damage tab
@@ -1751,15 +1752,15 @@ Macro-extinction Protocols
 The target: Monster or Vehicle: +1 to Hit rolls
 if it applies
 +3% wiped
-+0.1
-MODELS
-Macro-extinction Protocols
-The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
-if it applies
-+2% wiped
 ≈0
 MODELS
 +1 MORE ▾
+Macro-extinction Protocols
+The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
+if it applies
++1% wiped
+≈0
+MODELS
 NOT COUNTED IN THE DAMAGE TAB (1)
 Atrapos’ Duty
 “While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.” · not counted in the Damage tab
@@ -1822,10 +1823,23 @@ AP
 D
 4
 SUSTAINED HITS 1
-−63% wiped
+−64% wiped
 −1.5
 MODELS IF UNTICKED
 PICK ONE PROFILE
+low intensity
+4.8
+A
+14
+WS
+3+
+S
+7
+AP
+-1
+D
+2
+SUSTAINED HITS 1
 high intensity
 4.9
 BEST
@@ -1839,19 +1853,6 @@ AP
 -3
 D
 4
-SUSTAINED HITS 1
-low intensity
-4.8
-A
-14
-WS
-3+
-S
-7
-AP
--1
-D
-2
 SUSTAINED HITS 1
 SITUATION
 Charged this turn
@@ -1894,7 +1895,8 @@ MODELS
 Macro-extinction Protocols
 The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
 if it applies
-0
+≈0
+MODELS
 NOT COUNTED IN THE DAMAGE TAB (1)
 Atrapos’ Duty
 “While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.” · not counted in the Damage tab
@@ -1913,7 +1915,7 @@ MODELS
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-+3% wiped
++2% wiped
 ≈0
 MODELS
 +1 MORE ▾
@@ -2392,14 +2394,6 @@ S
 AP
 D
 Atrapos lascutter
-➤high intensity
-24"
-D6
-3+
-14
--3
-4
-SUSTAINED HITS 1
 ➤low intensity
 36"
 2D6
@@ -2408,15 +2402,15 @@ SUSTAINED HITS 1
 -1
 2
 SUSTAINED HITS 1
-Graviton singularity cannon
-➤singularity
+➤high intensity
 24"
-D3
+D6
 3+
-16
--4
-D6+1
-BLAST, DEVASTATING WOUNDS, HAZARDOUS
+14
+-3
+4
+SUSTAINED HITS 1
+Graviton singularity cannon
 ➤contained
 24"
 D3
@@ -2425,6 +2419,14 @@ D3
 -4
 D6+1
 BLAST
+➤singularity
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
@@ -2433,13 +2435,6 @@ S
 AP
 D
 Atrapos lascutter
-➤high intensity
-8
-3+
-14
--3
-4
-SUSTAINED HITS 1
 ➤low intensity
 14
 3+
@@ -2447,12 +2442,15 @@ SUSTAINED HITS 1
 -1
 2
 SUSTAINED HITS 1
+➤high intensity
+8
+3+
+14
+-3
+4
+SUSTAINED HITS 1
 Every melee attack: +1 to hit rolls (Bringer of Justice)
 ABILITIES
-Macro-extinction Protocols
-
-Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
-
 Atrapos’ Duty
 No ARMIGER models in this list
 
@@ -2461,6 +2459,10 @@ No ARMIGER models in this list
 Bondsman
 
 While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
+Macro-extinction Protocols
+
+Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
 
 Bringer of Justice
 Enhancement
@@ -2472,7 +2474,7 @@ Enhancement · Fight · Either turn
 IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
 Rules
-Code Chivalric, Deadly Demise D6+2, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
+Deadly Demise D6+2, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -2480,15 +2482,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CERASTUS
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT ATRAPOS
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+CHARACTER
+TITANIC
+TOWERING
+IMPERIUM
+CERASTUS
+KNIGHT ATRAPOS
+FACTION: IMPERIAL KNIGHTS
 WARLORD
 Ask about this unit
 Knight Crusader · Hunter’s Eye ›
@@ -2553,14 +2555,6 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Stormspear rocket pod
-48"
-3
-3+
-8
--2
-D6
-IGNORES COVER
 Meltagun
 12"
 1
@@ -2585,6 +2579,14 @@ D6+3
 -1
 3
 BLAST, RAPID FIRE D6+3, IGNORES COVER
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+IGNORES COVER
 Remained Stationary in your Movement phase: ranged weapons have [SUSTAINED HITS 1] until the end of the turn (Punishing Salvoes)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 MELEE WEAPONS
@@ -2600,13 +2602,6 @@ Titanic feet
 -1
 2
 ABILITIES
-Punishing Salvoes
-Your Move/Shoot
-
-Movement / Shooting · Your turn
-
-In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
-
 Invulnerable Save (5+*)
 
 This model has a 5+ invulnerable save against ranged attacks.
@@ -2620,6 +2615,13 @@ Bondsman
 
 While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll.
 
+Punishing Salvoes
+Your Move/Shoot
+
+Movement / Shooting · Your turn
+
+In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
+
 Hunter’s Eye
 Enhancement
 Their Move · Your Shoot
@@ -2629,7 +2631,7 @@ Enhancement · Their Movement / Your Shooting
 IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
 
 Rules
-Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Sustained Hits, Bondsman (no unit in this list it applies to), Knights of Legend
+Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Sustained Hits, Bondsman (no unit in this list it applies to), Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -2637,15 +2639,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT CRUSADER
-QUESTORIS
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+QUESTORIS
+CHARACTER
+IMPERIUM
+KNIGHT CRUSADER
+FACTION: IMPERIAL KNIGHTS
 Ask about this unit
 ‹ Cerastus Knight Atrapos · Bringer of Justice
 Knight Defender ›
@@ -2700,14 +2702,6 @@ Conversion beam obliterator
 -2
 4
 CONVERSION, SUSTAINED HITS D3
-Phosphor blaster
-24"
-1
-3+
-5
-0
-1
-IGNORES COVER, RAPID FIRE 1
 Plasma executor
 ➤standard
 36"
@@ -2725,6 +2719,14 @@ D6+3
 -3
 3
 BLAST, HAZARDOUS
+Phosphor blaster
+24"
+1
+3+
+5
+0
+1
+IGNORES COVER, RAPID FIRE 1
 Twin incendine combustor
 12"
 D6
@@ -2748,10 +2750,6 @@ Titanic feet
 -1
 2
 ABILITIES
-Selfless Protector
-
-Each time a ranged attack is allocated to an IMPERIAL KNIGHTS model from your army, if that model is not fully visible to every model in the attacking unit because of this Knight Defender model, that model has the Benefit of Cover and a 4+ invulnerable save against that attack.
-
 Invulnerable Save (4+*)
 
 This model has a 4+ invulnerable save against ranged attacks.
@@ -2765,8 +2763,12 @@ Bondsman
 
 While a model is affected by this ability, each time an attack is allocated to that model, subtract 1 from the Damage characteristic of that attack.
 
+Selfless Protector
+
+Each time a ranged attack is allocated to an IMPERIAL KNIGHTS model from your army, if that model is not fully visible to every model in the attacking unit because of this Knight Defender model, that model has the Benefit of Cover and a 4+ invulnerable save against that attack.
+
 Rules
-Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Bondsman (no unit in this list it applies to), Knights of Legend
+Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -2774,15 +2776,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT DEFENDER
-QUESTORIS
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+QUESTORIS
+CHARACTER
+IMPERIUM
+KNIGHT DEFENDER
+FACTION: IMPERIAL KNIGHTS
 Ask about this unit
 ‹ Knight Crusader · Hunter’s Eye
 Knight Destrier ›
@@ -2830,14 +2832,6 @@ BS
 S
 AP
 D
-Questoris heavy stubber
-36"
-6
-3+
-4
--1
-1
-ASSAULT, RAPID FIRE 3
 Chastiser gatling cannon
 24"
 12
@@ -2854,6 +2848,14 @@ D6+3
 -1
 2
 ASSAULT, BLAST, RAPID FIRE D6+3
+Questoris heavy stubber
+36"
+6
+3+
+4
+-1
+1
+ASSAULT, RAPID FIRE 3
 Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 MELEE WEAPONS
@@ -2869,12 +2871,9 @@ Titanic feet
 -1
 2
 ABILITIES
-Thundercharge
-Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+Invulnerable Save (5+*)
 
-Needs a thundershock spear and bellatus reaper chainsword: not this loadout
-
-If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+This model has a 5+ invulnerable save against ranged attacks.
 
 Ram Jets
 Your Movement
@@ -2883,6 +2882,13 @@ Movement · Your turn
 
 Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
 
+Thundercharge
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+
 Saturation Fire
 Your Shooting
 
@@ -2890,12 +2896,8 @@ Shooting · Your turn
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
-Invulnerable Save (5+*)
-
-This model has a 5+ invulnerable save against ranged attacks.
-
 Rules
-Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Knights of Legend
+Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -2903,15 +2905,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-BELLATUS
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT DESTRIER
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+BELLATUS
+CHARACTER
+IMPERIUM
+KNIGHT DESTRIER
+FACTION: IMPERIAL KNIGHTS
 Ask about this unit
 ‹ Knight Defender
 Knight Errant · Mysterious Guardian ›
@@ -2960,21 +2962,6 @@ BS
 S
 AP
 D
-Thermal cannon
-24"
-2D3
-3+
-12
--4
-D6
-BLAST, MELTA 6
-Stormspear rocket pod
-48"
-3
-3+
-8
--2
-D6
 Meltagun
 12"
 1
@@ -2983,6 +2970,21 @@ Meltagun
 -4
 D6
 MELTA 2
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+Thermal cannon
+24"
+2D3
+3+
+12
+-4
+D6
+BLAST, MELTA 6
 Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 MELEE WEAPONS
@@ -3005,13 +3007,6 @@ Reaper chainsword
 -3
 2
 ABILITIES
-Aggressive Assault
-Your Shooting
-
-Shooting · Your turn
-
-Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
-
 Invulnerable Save (5+*)
 
 This model has a 5+ invulnerable save against ranged attacks.
@@ -3024,6 +3019,13 @@ No ARMIGER models in this list
 Bondsman
 
 While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability.
+
+Aggressive Assault
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
 
 Mysterious Guardian
 Enhancement
@@ -3038,7 +3040,7 @@ Place this unit in strategic reserves.
 This unit has Deep Strike until the start of your next Shooting phase.
 This unit must make an ingress move in your next Movement phase (including in your first turn).
 Rules
-Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Bondsman (no unit in this list it applies to), Deep Strike, Knights of Legend
+Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Deep Strike, Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -3046,15 +3048,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT ERRANT
-QUESTORIS
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+QUESTORIS
+CHARACTER
+IMPERIUM
+KNIGHT ERRANT
+FACTION: IMPERIAL KNIGHTS
 Ask about this unit
 ‹ Knight Destrier
 Navigator ›
@@ -3113,18 +3115,18 @@ Force-orb cane
 D3
 PSYCHIC
 ABILITIES
+Gaze into the Empyrean
+
+Psychic
+
+Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12" of this model.
+
 Third Eye
 Your Shooting
 
 Psychic · Shooting · Your turn
 
 At the start of your Shooting phase, select one enemy unit within 12" of and visible to this model. That unit must take a Battle-shock test, subtracting 2 from the result if it is an INFANTRY unit. If the test is failed, that enemy unit suffers 3 mortal wounds.
-
-Gaze into the Empyrean
-
-Psychic
-
-Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12" of this model.
 
 Rules
 Leader
@@ -3135,14 +3137,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Ch
 None from Freeblade Company.
 
 Keywords
-ALLIES: IMPERIAL AGENTS
-CHARACTER
-FACTION: AGENTS OF THE IMPERIUM
-IMPERIUM
 INFANTRY
-NAVIGATOR
+CHARACTER
 PSYKER
+IMPERIUM
 VOIDFARERS
+NAVIGATOR
+FACTION: AGENTS OF THE IMPERIUM
+ALLIES: IMPERIAL AGENTS
 Ask about this unit
 ‹ Knight Errant · Mysterious Guardian
 

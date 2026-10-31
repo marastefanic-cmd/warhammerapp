@@ -33,9 +33,9 @@ Start of the battle round
 TO DO NOW
 
 Blessings of Khorne · World Eaters army rule; Might of Khorne (Blood Tithe) gives it to BLOOD LEGIONS units
+The Blood God’s Favour (Wrathful Presence) · Angron
 Reborn in Blood · Angron
 Wrathful Presence · Angron
-The Blood God’s Favour (Wrathful Presence) · Angron
 Icon of Khorne · Khorne Berzerkers
 Command · Your turn
 2 to do · 2 active
@@ -449,6 +449,14 @@ PISTOL
 2
 HAZARDOUS, PISTOL
 KHORNE BERZERKERS
+Bolt pistol×15
+12"
+1
+4+
+5
+-1
+1
+PISTOL
 Plasma pistol×5
 ➤standard
 12"
@@ -466,14 +474,6 @@ PISTOL
 -3
 2
 HAZARDOUS, PISTOL
-Bolt pistol×15
-12"
-1
-4+
-5
--1
-1
-PISTOL
 Goremongers
 Autopistol×8
 12"
@@ -523,8 +523,6 @@ DEVASTATING WOUNDS
 DEVASTATING WOUNDS
 Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
 Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · KHORNE DAEMONKIN
-1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 Skarbrand
 Slaughter and Carnage
 ➤strike
@@ -579,8 +577,6 @@ Hellforged weapons
 Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · KHORNE DAEMONKIN
-1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 STRATAGEMS · VESSELS OF WRATH
 1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 Master of Executions
@@ -595,21 +591,21 @@ DEVASTATING WOUNDS, PRECISION
 Melee attacks that target a CHARACTER unit: can re-roll the hit roll and the wound roll (A Worthy Skull)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · KHORNE DAEMONKIN
-1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 STRATAGEMS · VESSELS OF WRATH
 1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 Lord on Juggernaut
 Disciple of Khorne
 + Khorne Berzerkers
 LORD ON JUGGERNAUT
+
+Fights with both: Exalted chainblade, plus Bladed horn on top (extra attacks).
+
 Exalted chainblade
 7
 2+
 6
 -1
 2
-+
 Bladed horn
 4
 3+
@@ -636,11 +632,12 @@ Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
 Within 6" of Skarbrand: +1 A (Rage Embodied)
 Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-STRATAGEMS · KHORNE DAEMONKIN
-1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 STRATAGEMS · VESSELS OF WRATH
 1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 Goremongers
+
+Pick one to fight with: Chainblade or Close combat weapon.
+
 Chainblade×8
 3
 4+
@@ -648,7 +645,6 @@ Chainblade×8
 0
 1
 LANCE
-OR
 Close combat weapon×8
 2
 4+
@@ -657,8 +653,6 @@ Close combat weapon×8
 1
 Made a charge move this turn: Chainblade +1 to wound (Lance)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · KHORNE DAEMONKIN
-1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 Jakhals
 Chainblades×9
 3
@@ -673,8 +667,6 @@ Paired manglersDISHONOURED
 0
 1
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · KHORNE DAEMONKIN
-1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 Flesh Hounds
 ×2 units
 Gore-drenched fangs×5
@@ -690,6 +682,27 @@ Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
 ######## abilities · MELEE Abilities
 Angron
 Warlord
+WRATHFUL PRESENCE: PICK ONE
+The Blood God’s Favour
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Overwhelming Wrath
+Their Movement
+
+Aura · Movement · Their turn
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+Driven by Ultimate Rage
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
 Reborn in Blood
 Start of the battle round
 
@@ -707,27 +720,6 @@ At the start of the battle round, select one Wrathful Presence ability. Until th
 Damaged: 1-6 wounds remaining
 
 While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
-WRATHFUL PRESENCE: PICK ONE
-The Blood God’s Favour
-
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
-
-Driven by Ultimate Rage
-Fight
-
-Aura · Fight · Either turn
-
-While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
-
-Re-roll hit rolls of 1.
-Re-roll wound rolls of 1.
-Overwhelming Wrath
-Their Movement
-
-Aura · Movement · Their turn
-
-Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
 
 Skarbrand
 Rage Embodied
@@ -795,13 +787,6 @@ WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristi
 
 Master of Executions
 Blood-forged Armour
-A Worthy Skull
-Fight
-
-Fight · Either turn
-
-Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model’s unit destroys a CHARACTER model, you gain 1CP.
-
 Forwards, For Blood!
 Not leading a unit in this list
 
@@ -810,6 +795,13 @@ Not leading a unit in this list
 Your Movement / Their Shooting
 
 While this model is leading a unit, you can re-roll Advance rolls made for that unit and each time that unit makes a Blood Surge move, you can re-roll the D6 used to determine how far models in that unit move.
+
+A Worthy Skull
+Fight
+
+Fight · Either turn
+
+Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model’s unit destroys a CHARACTER model, you gain 1CP.
 
 Blood-forged Armour
 Enhancement
@@ -1541,14 +1533,14 @@ if it applies
 +0.2
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (4)
-Reborn in Blood
-“At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. …” · not counted in the Damage tab
-Wrathful Presence
-“At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 The Blood God’s Favour
 “Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.” · not counted in the Damage tab
 Overwhelming Wrath
 “Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.” · not counted in the Damage tab
+Reborn in Blood
+“At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. …” · not counted in the Damage tab
+Wrathful Presence
+“At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 1CP Daemonic Fury
 Selected by it · Within 6" of it · “If the Daemonic Rage ability is active for your army”: [TWIN-LINKED]
@@ -2472,9 +2464,30 @@ DEVASTATING WOUNDS
 2
 DEVASTATING WOUNDS
 Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · KHORNE DAEMONKIN
-1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 ABILITIES
+The Blood God’s Favour
+- Wrathful Presence: pick one
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Overwhelming Wrath
+- Wrathful Presence: pick one
+Their Movement
+
+Aura · Movement · Their turn
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+Driven by Ultimate Rage
+- Wrathful Presence: pick one
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
 Reborn in Blood
 Start of the battle round
 
@@ -2489,50 +2502,27 @@ Start of the battle round
 
 At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.
 
-The Blood God’s Favour
-- Wrathful Presence: pick one
-
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
-
-Driven by Ultimate Rage
-- Wrathful Presence: pick one
-Fight
-
-Aura · Fight · Either turn
-
-While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
-
-Re-roll hit rolls of 1.
-Re-roll wound rolls of 1.
-Overwhelming Wrath
-- Wrathful Presence: pick one
-Their Movement
-
-Aura · Movement · Their turn
-
-Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
-
 Rules
 Deadly Demise D6, Deep Strike, Blessings of Khorne, Blood Tithe
 Stratagems
 
-KHORNE DAEMONKIN Daemontide, A Worthy Skull, Daemonic Fury (its target: a BLOOD LEGIONS unit within 6")
+KHORNE DAEMONKIN Daemontide, A Worthy Skull
 
 VESSELS OF WRATH Punish the Craven
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-ANGRON
-CHAOS
-CHARACTER
-DAEMON
-EPIC HERO
-FACTION: WORLD EATERS
-FLY
-KHORNE
 MONSTER
+CHARACTER
+FLY
+EPIC HERO
+CHAOS
+KHORNE
+DAEMON
 PRIMARCH
+ANGRON
+FACTION: WORLD EATERS
 WARLORD
 Ask about this unit
 Skarbrand ›
@@ -2628,14 +2618,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Vessels of Wrath.
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-EPIC HERO
-FACTION: BLOOD LEGIONS
-KHORNE
 MONSTER
+CHARACTER
+EPIC HERO
+CHAOS
+KHORNE
+DAEMON
+SUMMONED
 SKARBRAND
+FACTION: BLOOD LEGIONS
 Ask about this unit
 ‹ Angron
 Bloodthirster ›
@@ -2734,15 +2725,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Vessels of Wrath.
 
 Keywords
-BLOODTHIRSTER
-CHAOS
-CHARACTER
-DAEMON
-FACTION: BLOOD LEGIONS
-FLY
-KHORNE
 MONSTER
+CHARACTER
+FLY
+CHAOS
+DAEMON
+KHORNE
 SUMMONED
+BLOODTHIRSTER
+FACTION: BLOOD LEGIONS
 Ask about this unit
 ‹ Skarbrand
 Daemon Prince · Blade of Endless Bloodshed ›
@@ -2816,8 +2807,6 @@ Hellforged weapons
 Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · KHORNE DAEMONKIN
-1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 STRATAGEMS · VESSELS OF WRATH
 1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 ABILITIES
@@ -2852,20 +2841,20 @@ Rules
 Deadly Demise D3, Blessings of Khorne, Blood Tithe, Wrath of Khorne
 Stratagems
 
-KHORNE DAEMONKIN Daemontide, A Worthy Skull, Daemonic Fury (its target: a BLOOD LEGIONS unit within 6")
+KHORNE DAEMONKIN Daemontide, A Worthy Skull
 
 VESSELS OF WRATH Punish the Craven, Aspire to Infamy, Scorn the Witch
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
+MONSTER
 CHARACTER
+CHAOS
+KHORNE
 DAEMON
 DAEMON PRINCE
 FACTION: WORLD EATERS
-KHORNE
-MONSTER
 Ask about this unit
 ‹ Bloodthirster
 Master of Executions · Blood-forged Armour ›
@@ -2932,18 +2921,9 @@ DEVASTATING WOUNDS, PRECISION
 Melee attacks that target a CHARACTER unit: can re-roll the hit roll and the wound roll (A Worthy Skull)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · KHORNE DAEMONKIN
-1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 STRATAGEMS · VESSELS OF WRATH
 1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 ABILITIES
-A Worthy Skull
-Fight
-
-Fight · Either turn
-
-Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model’s unit destroys a CHARACTER model, you gain 1CP.
-
 Forwards, For Blood!
 Not leading a unit in this list
 
@@ -2952,6 +2932,13 @@ Not leading a unit in this list
 Your Movement / Their Shooting
 
 While this model is leading a unit, you can re-roll Advance rolls made for that unit and each time that unit makes a Blood Surge move, you can re-roll the D6 used to determine how far models in that unit move.
+
+A Worthy Skull
+Fight
+
+Fight · Either turn
+
+Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model’s unit destroys a CHARACTER model, you gain 1CP.
 
 Blood-forged Armour
 Enhancement
@@ -2965,19 +2952,19 @@ Rules
 Leader, Blessings of Khorne, Blood Tithe, Wrath of Khorne
 Stratagems
 
-KHORNE DAEMONKIN Daemontide, A Worthy Skull, Daemonic Fury (its target: a BLOOD LEGIONS unit within 6")
+KHORNE DAEMONKIN Daemontide, A Worthy Skull
 
 VESSELS OF WRATH Punish the Craven, Aspire to Infamy, Scorn the Witch
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-CHARACTER
-FACTION: WORLD EATERS
 INFANTRY
+CHARACTER
+CHAOS
 KHORNE
 MASTER OF EXECUTIONS
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Daemon Prince · Blade of Endless Bloodshed
 Lord on Juggernaut · Disciple of Khorne ›
@@ -3057,6 +3044,14 @@ PISTOL
 2
 HAZARDOUS, PISTOL
 KHORNE BERZERKERS
+Bolt pistol×15
+12"
+1
+4+
+5
+-1
+1
+PISTOL
 Plasma pistol×5
 ➤standard
 12"
@@ -3074,14 +3069,6 @@ PISTOL
 -3
 2
 HAZARDOUS, PISTOL
-Bolt pistol×15
-12"
-1
-4+
-5
--1
-1
-PISTOL
 MELEE WEAPONS
 A
 WS
@@ -3089,13 +3076,15 @@ S
 AP
 D
 LORD ON JUGGERNAUT
+
+Fights with both: Exalted chainblade, plus Bladed horn on top (extra attacks).
+
 Exalted chainblade
 7
 2+
 6
 -1
 2
-+
 Bladed horn
 4
 3+
@@ -3123,8 +3112,6 @@ Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
 Within 6" of Skarbrand: +1 A (Rage Embodied)
 Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-STRATAGEMS · KHORNE DAEMONKIN
-1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 STRATAGEMS · VESSELS OF WRATH
 1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 ABILITIES
@@ -3188,17 +3175,17 @@ VESSELS OF WRATH Punish the Craven, Aspire to Infamy, Scorn the Witch
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
+MOUNTED
 CHARACTER
-FACTION: BLOOD LEGIONS
+CHAOS
 KHORNE
 LORD ON JUGGERNAUT
-MOUNTED
+INFANTRY*
 BATTLELINE*
+GRENADES*
 BERZERKERS*
 FACTION: WORLD EATERS*
-GRENADES*
-INFANTRY*
+FACTION: BLOOD LEGIONS
 *from the led Khorne Berzerkers; Faction: Blood Legions comes from Disciple of Khorne on the Lord on Juggernaut (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”)
 Ask about this unit
 ‹ Master of Executions · Blood-forged Armour
@@ -3256,6 +3243,9 @@ WS
 S
 AP
 D
+
+Pick one to fight with: Chainblade or Close combat weapon.
+
 Chainblade×8
 3
 4+
@@ -3263,7 +3253,6 @@ Chainblade×8
 0
 1
 LANCE
-OR
 Close combat weapon×8
 2
 4+
@@ -3272,8 +3261,6 @@ Close combat weapon×8
 1
 Made a charge move this turn: Chainblade +1 to wound (Lance)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · KHORNE DAEMONKIN
-1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 ABILITIES
 Loping Speed
 Their Movement
@@ -3286,19 +3273,19 @@ Rules
 Infiltrators, Blessings of Khorne, Blood Tithe
 Stratagems
 
-KHORNE DAEMONKIN Daemontide, A Worthy Skull, Daemonic Fury (its target: a BLOOD LEGIONS unit within 6")
+KHORNE DAEMONKIN Daemontide, A Worthy Skull
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
 
 None from Vessels of Wrath.
 
 Keywords
-CHAOS
-FACTION: WORLD EATERS
-GOREMONGERS
-GRENADES
 INFANTRY
+GRENADES
+CHAOS
 KHORNE
+GOREMONGERS
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Lord on Juggernaut · Disciple of Khorne
 Jakhals ›
@@ -3379,8 +3366,6 @@ Paired manglersDISHONOURED
 0
 1
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · KHORNE DAEMONKIN
-1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 ABILITIES
 Objective Ravaged
 Your Command
@@ -3393,19 +3378,19 @@ Rules
 Blessings of Khorne, Blood Tithe
 Stratagems
 
-KHORNE DAEMONKIN Daemontide, A Worthy Skull, Daemonic Fury (its target: a BLOOD LEGIONS unit within 6")
+KHORNE DAEMONKIN Daemontide, A Worthy Skull
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
 
 None from Vessels of Wrath.
 
 Keywords
-CHAOS
-FACTION: WORLD EATERS
-GRENADES
 INFANTRY
-JAKHALS
+GRENADES
+CHAOS
 KHORNE
+JAKHALS
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Goremongers
 Flesh Hounds ›
@@ -3498,10 +3483,10 @@ Keywords
 BEAST
 CHAOS
 DAEMON
-FACTION: BLOOD LEGIONS
-FLESH HOUNDS
 KHORNE
 SUMMONED
+FLESH HOUNDS
+FACTION: BLOOD LEGIONS
 Ask about this unit
 ‹ Jakhals
 
@@ -3710,15 +3695,16 @@ The Blood God’s Favour
 
 Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
 
+Overwhelming Wrath Aura
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
 Driven by Ultimate Rage Aura
 
 While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
 
 Re-roll hit rolls of 1.
 Re-roll wound rolls of 1.
-Overwhelming Wrath Aura
-
-Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
 
 UNITAngron
 

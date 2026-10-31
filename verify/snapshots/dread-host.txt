@@ -626,10 +626,6 @@ Trajann Valoris
 Warlord
 + Allarus Custodians
 TRAJANN VALORIS
-Leader
-
-This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY
-
 Supreme Commander
 
 If this model is in your army, it must be your WARLORD.
@@ -654,6 +650,10 @@ Once per battle, per army · Any phase · Either turn
 
 This model’s Watcher’s Axe weapon has +3 A.
 This model has 3+ InSv.
+Leader
+
+This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY
+
 ALLARUS CUSTODIANS
 Slayer of Tyrants
 
@@ -666,9 +666,12 @@ This unit can ignore modifiers to this unit’s Ld.
 Shield-Captain
 + Sentinel Guard Sodality
 SHIELD-CAPTAIN
-Leader
+Master of Ka’tahs
+Once per battle round, per unit
 
-This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY
+Once per battle round, per unit
+
+(Once per battle round, per unit) If this unit is not readied, you can use this ability. If you do, this unit is readied.
 
 Vengeful Surge
 Once per battle, per unit
@@ -678,16 +681,13 @@ Once per battle, per unit · Shooting · Their turn
 
 (Once per battle, per unit) In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2".
 
-Master of Ka’tahs
-Once per battle round, per unit
-
-Once per battle round, per unit
-
-(Once per battle round, per unit) If this unit is not readied, you can use this ability. If you do, this unit is readied.
-
 Praesidium Shield
 
 Attacks allocated to this model have -1 D.
+
+Leader
+
+This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY
 
 SENTINEL GUARD SODALITY
 Stand Vigil
@@ -696,14 +696,14 @@ This unit’s attacks have [LETHAL HITS: non-MONSTER/VEHICLE] if any of the foll
 
 This unit is within range of an objective.
 The target of those attacks is within range of an objective.
-Vexilla
-Already in OC
-This unit has +1 OC.
-This unit can ignore modifiers to this unit’s Ld.
 Praesidium Shield
 
 Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.
 
+Vexilla
+Already in OC
+This unit has +1 OC.
+This unit can ignore modifiers to this unit’s Ld.
 Custodian Guard Sodality
 Impenetrable Defence
 
@@ -1255,10 +1255,10 @@ if it applies
 +0.9
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (3)
-Leader
-“This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM …” · not counted in the Damage tab
 Supreme Commander
 “If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
+Leader
+“This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM …” · not counted in the Damage tab
 Vexilla
 “- This unit has +1 OC. - This unit can ignore modifiers to this unit’s Ld.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
@@ -1517,10 +1517,10 @@ if it applies
 no change: already wounds on 2+
 0
 NOT COUNTED IN THE DAMAGE TAB (3)
-Leader
-“This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM …” · not counted in the Damage tab
 Supreme Commander
 “If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
+Leader
+“This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM …” · not counted in the Damage tab
 Vexilla
 “- This unit has +1 OC. - This unit can ignore modifiers to this unit’s Ld.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
@@ -1797,10 +1797,10 @@ Within 6" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
 if it applies
 0
 NOT COUNTED IN THE DAMAGE TAB (3)
-Leader
-“This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM …” · not counted in the Damage tab
 Supreme Commander
 “If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
+Leader
+“This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM …” · not counted in the Damage tab
 Vexilla
 “- This unit has +1 OC. - This unit can ignore modifiers to this unit’s Ld.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
@@ -1912,10 +1912,10 @@ Slayer of Tyrants
 if it applies
 0
 NOT COUNTED IN THE DAMAGE TAB (3)
-Leader
-“This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM …” · not counted in the Damage tab
 Supreme Commander
 “If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
+Leader
+“This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM …” · not counted in the Damage tab
 Vexilla
 “- This unit has +1 OC. - This unit can ignore modifiers to this unit’s Ld.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
@@ -2545,11 +2545,6 @@ WHOLE UNIT
 Target has a T greater than this unit’s T: +1 to wound rolls (Slayer of Tyrants)
 Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase: +3 A
 ABILITIES
-Leader
-- Trajann Valoris
-
-This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY
-
 Supreme Commander
 - Trajann Valoris
 
@@ -2577,6 +2572,11 @@ Once per battle, per army · Any phase · Either turn
 
 This model’s Watcher’s Axe weapon has +3 A.
 This model has 3+ InSv.
+Leader
+- Trajann Valoris
+
+This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY
+
 Slayer of Tyrants
 - Allarus Custodians
 
@@ -2588,7 +2588,7 @@ Already in OC
 This unit has +1 OC.
 This unit can ignore modifiers to this unit’s Ld.
 Rules
-Aquila Commander, Aegis of the Emperor, Martial Ka'tah, Leader, Deep Strike, Feel No Pain 5+*, Feel No Pain 5+ (Trajann Valoris), Instruments of the Emperor’s Wrath, On Gilded Wings
+Deep Strike, Feel No Pain 5+*, Feel No Pain 5+ (Trajann Valoris), Leader, Aegis of the Emperor, Aquila Commander, Martial Ka'tah, Instruments of the Emperor’s Wrath, On Gilded Wings
 Stratagems
 
 DREAD HOST Golden Light of the Moiraides, Preternatural Rapidity, Lightning Wrath
@@ -2600,15 +2600,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Ch
 None from Honoured Companions.
 
 Keywords
+INFANTRY
 CHARACTER
 EPIC HERO
-FACTION: ADEPTUS CUSTODES
 IMPERIUM
-INFANTRY
 TRAJANN VALORIS
-WARLORD
-ALLARUS CUSTODIANS*
 TERMINATOR*
+ALLARUS CUSTODIANS*
+FACTION: ADEPTUS CUSTODES
+WARLORD
 *from the led Allarus Custodians
 Ask about this unit
 Shield-Captain ›
@@ -2703,10 +2703,13 @@ WHOLE UNIT
 STRATAGEMS · HONOURED COMPANIONS · FIGHT PHASE
 1CP Avenge the Fallen: +2 A (not the attacks of CHARACTER models), selected to fight, below starting strength
 ABILITIES
-Leader
+Master of Ka’tahs
 - Shield-Captain
+Once per battle round, per unit
 
-This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY
+Once per battle round, per unit
+
+(Once per battle round, per unit) If this unit is not readied, you can use this ability. If you do, this unit is readied.
 
 Vengeful Surge
 - Shield-Captain
@@ -2717,18 +2720,15 @@ Once per battle, per unit · Shooting · Their turn
 
 (Once per battle, per unit) In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2".
 
-Master of Ka’tahs
-- Shield-Captain
-Once per battle round, per unit
-
-Once per battle round, per unit
-
-(Once per battle round, per unit) If this unit is not readied, you can use this ability. If you do, this unit is readied.
-
 Praesidium Shield
 - Shield-Captain
 
 Attacks allocated to this model have -1 D.
+
+Leader
+- Shield-Captain
+
+This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY
 
 Stand Vigil
 - Sentinel Guard Sodality
@@ -2737,18 +2737,18 @@ This unit’s attacks have [LETHAL HITS: non-MONSTER/VEHICLE] if any of the foll
 
 This unit is within range of an objective.
 The target of those attacks is within range of an objective.
-Vexilla
-- Sentinel Guard Sodality
-Already in OC
-This unit has +1 OC.
-This unit can ignore modifiers to this unit’s Ld.
 Praesidium Shield
 - Sentinel Guard Sodality
 
 Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.
 
+Vexilla
+- Sentinel Guard Sodality
+Already in OC
+This unit has +1 OC.
+This unit can ignore modifiers to this unit’s Ld.
 Rules
-Deep Strike, Leader, Martial Ka'tah, Aegis of the Emperor, Aquila Commander, Feel No Pain 5+*, Instruments of the Emperor’s Wrath, Companion’s Watch
+Deep Strike, Leader, Aquila Commander, Aegis of the Emperor, Martial Ka'tah, Feel No Pain 5+*, Instruments of the Emperor’s Wrath, Companion’s Watch
 Stratagems
 
 DREAD HOST Golden Light of the Moiraides, Preternatural Rapidity, Lightning Wrath
@@ -2760,14 +2760,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Ch
 None from Lions of the Emperor.
 
 Keywords
-CHARACTER
-FACTION: ADEPTUS CUSTODES
-IMPERIUM
 INFANTRY
+CHARACTER
+IMPERIUM
 SHIELD-CAPTAIN
 BATTLELINE*
-SENTINEL GUARD SODALITY*
 TRUSTED SENTINEL*
+SENTINEL GUARD SODALITY*
+FACTION: ADEPTUS CUSTODES
 *from the led Sentinel Guard Sodality
 Ask about this unit
 ‹ Trajann Valoris
@@ -2850,7 +2850,7 @@ Already in OC
 This unit has +1 OC.
 This unit can ignore modifiers to this unit’s Ld.
 Rules
-Deep Strike, Martial Ka'tah, Aegis of the Emperor, Feel No Pain 5+*, Instruments of the Emperor’s Wrath, Companion’s Watch
+Deep Strike, Aegis of the Emperor, Martial Ka'tah, Feel No Pain 5+*, Instruments of the Emperor’s Wrath, Companion’s Watch
 Stratagems
 
 DREAD HOST Golden Light of the Moiraides, Preternatural Rapidity, Lightning Wrath
@@ -2862,12 +2862,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Lions of the Emperor.
 
 Keywords
+INFANTRY
 BATTLELINE
+IMPERIUM
+TRUSTED SENTINEL
 CUSTODIAN GUARD SODALITY
 FACTION: ADEPTUS CUSTODES
-IMPERIUM
-INFANTRY
-TRUSTED SENTINEL
 Ask about this unit
 ‹ Shield-Captain
 Allarus Custodians ›
@@ -2953,7 +2953,7 @@ Already in OC
 This unit has +1 OC.
 This unit can ignore modifiers to this unit’s Ld.
 Rules
-Deep Strike, Martial Ka'tah, Aegis of the Emperor, Feel No Pain 5+*, Instruments of the Emperor’s Wrath, On Gilded Wings
+Deep Strike, Aegis of the Emperor, Martial Ka'tah, Feel No Pain 5+*, Instruments of the Emperor’s Wrath, On Gilded Wings
 Stratagems
 
 DREAD HOST Golden Light of the Moiraides, Preternatural Rapidity, Lightning Wrath
@@ -2965,11 +2965,11 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Honoured Companions.
 
 Keywords
+INFANTRY
+IMPERIUM
+TERMINATOR
 ALLARUS CUSTODIANS
 FACTION: ADEPTUS CUSTODES
-IMPERIUM
-INFANTRY
-TERMINATOR
 Ask about this unit
 ‹ Custodian Guard Sodality
 Custodian Wardens ›
@@ -3049,7 +3049,7 @@ Already in OC
 This unit has +1 OC.
 This unit can ignore modifiers to this unit’s Ld.
 Rules
-Deep Strike, Martial Ka'tah, Feel No Pain 5+*, Aegis of the Emperor, Instruments of the Emperor’s Wrath, Companion’s Watch
+Deep Strike, Aegis of the Emperor, Martial Ka'tah, Feel No Pain 5+*, Instruments of the Emperor’s Wrath, Companion’s Watch
 Stratagems
 
 DREAD HOST Golden Light of the Moiraides, Preternatural Rapidity, Lightning Wrath
@@ -3061,11 +3061,11 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Lions of the Emperor.
 
 Keywords
+INFANTRY
+IMPERIUM
+TRUSTED SENTINEL
 CUSTODIAN WARDENS
 FACTION: ADEPTUS CUSTODES
-IMPERIUM
-INFANTRY
-TRUSTED SENTINEL
 Ask about this unit
 ‹ Allarus Custodians
 Prosecutor Squad ›
@@ -3135,7 +3135,7 @@ In your Shooting phase, you can select one visible enemy unit within 18" of this
 
 While a unit is detected, that unit has +3" detection range.
 Rules
-Feel No Pain 3+*, Daughters of the Abyss
+Daughters of the Abyss, Feel No Pain 3+*
 Stratagems
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
@@ -3143,11 +3143,10 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Dread Host, Honoured Companions or Lions of the Emperor.
 
 Keywords
-ANATHEMA PSYKANA
-FACTION: ANATHEMA PSYKANA
-IMPERIUM
 INFANTRY
+IMPERIUM
 PROSECUTOR SQUAD
+FACTION: ANATHEMA PSYKANA
 Ask about this unit
 ‹ Custodian Wardens
 Witchseeker Squad ›
@@ -3216,7 +3215,7 @@ Shooting · Your turn
 In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.
 
 Rules
-Scouts 7", Feel No Pain 3+*, Daughters of the Abyss
+Scouts 7", Daughters of the Abyss, Feel No Pain 3+*
 Stratagems
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
@@ -3224,11 +3223,10 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Dread Host, Honoured Companions or Lions of the Emperor.
 
 Keywords
-ANATHEMA PSYKANA
-FACTION: ANATHEMA PSYKANA
-IMPERIUM
 INFANTRY
+IMPERIUM
 WITCHSEEKER SQUAD
+FACTION: ANATHEMA PSYKANA
 Ask about this unit
 ‹ Prosecutor Squad
 Caladius Annihilator Grav-tank ›
@@ -3310,7 +3308,7 @@ Re-roll one hit roll.
 Re-roll one wound roll.
 Re-roll one damage roll.
 Rules
-Deadly Demise D3, Aegis of the Emperor, Feel No Pain 5+*, Damaged 5, Deep Strike, Instruments of the Emperor’s Wrath
+Damaged 5, Deadly Demise D3, Deep Strike, Aegis of the Emperor, Feel No Pain 5+*, Instruments of the Emperor’s Wrath
 Stratagems
 
 DREAD HOST Golden Light of the Moiraides, Preternatural Rapidity, Lightning Wrath
@@ -3320,14 +3318,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Counteroffe
 None from Honoured Companions or Lions of the Emperor.
 
 Keywords
+VEHICLE
 CALADIUS
-CALADIUS ANNIHILATOR GRAV-TANK
-FACTION: ADEPTUS CUSTODES
 FLY
 FRAME
 GRAV-ASSAULT
 IMPERIUM
-VEHICLE
+CALADIUS ANNIHILATOR GRAV-TANK
+FACTION: ADEPTUS CUSTODES
 Ask about this unit
 ‹ Witchseeker Squad
 

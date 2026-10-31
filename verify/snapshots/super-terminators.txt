@@ -33,9 +33,9 @@ Start of the battle round
 TO DO NOW
 
 Blessings of Khorne · World Eaters army rule
+The Blood God’s Favour (Wrathful Presence) · Angron
 Reborn in Blood · Angron
 Wrathful Presence · Angron
-The Blood God’s Favour (Wrathful Presence) · Angron
 Command · Your turn
 1 to do
 
@@ -354,14 +354,6 @@ Autopistol×9
 PISTOL
 Forgefiend
 ×2 units
-Hades autocannon×2
-36"
-6
-4+
-8
--1
-2
-RAPID FIRE 4
 Ectoplasma cannon
 36"
 D3
@@ -370,6 +362,14 @@ D3
 -3
 3
 BLAST, RAPID FIRE 1
+Hades autocannon×2
+36"
+6
+4+
+8
+-1
+2
+RAPID FIRE 4
 Target is the closest eligible target within 18": re-roll the hit roll (Furious Onslaught)
 Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
 
@@ -401,13 +401,6 @@ Chaos Terminators
 Gore-stained Veterans
 1–2 of 3
 ×2 units
-Paired accursed weapons×2
-6
-2+
-5
--2
-1
-TWIN-LINKED
 Chainfist×2
 4
 3+
@@ -415,6 +408,13 @@ Chainfist×2
 -3
 2
 ANTI-VEHICLE 3+
+Paired accursed weapons×2
+6
+2+
+5
+-2
+1
+TWIN-LINKED
 Power fist×6
 4
 2+
@@ -432,13 +432,6 @@ STRATAGEMS · BUTCHERS OF KHORNE
 Chaos Terminators
 Gore-stained Veterans
 3 of 3
-Paired accursed weapons×2
-6
-2+
-5
--2
-1
-TWIN-LINKED
 Chainfist×2
 4
 3+
@@ -446,6 +439,13 @@ Chainfist×2
 -3
 2
 ANTI-VEHICLE 3+
+Paired accursed weapons×2
+6
+2+
+5
+-2
+1
+TWIN-LINKED
 Power fist×6
 4
 2+
@@ -473,6 +473,9 @@ Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to woun
 STRATAGEMS · BERZERKER WARBAND
 1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Goremongers
+
+Pick one to fight with: Chainblade or Close combat weapon.
+
 Chainblade×8
 4
 4+
@@ -480,7 +483,6 @@ Chainblade×8
 0
 1
 LANCE
-OR
 Close combat weapon×8
 3
 4+
@@ -529,6 +531,27 @@ STRATAGEMS · BERZERKER WARBAND
 ######## abilities · MELEE Abilities
 Angron
 Warlord
+WRATHFUL PRESENCE: PICK ONE
+The Blood God’s Favour
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Overwhelming Wrath
+Their Movement
+
+Aura · Movement · Their turn
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+Driven by Ultimate Rage
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
 Reborn in Blood
 Start of the battle round
 
@@ -546,27 +569,6 @@ At the start of the battle round, select one Wrathful Presence ability. Until th
 Damaged: 1-6 wounds remaining
 
 While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
-WRATHFUL PRESENCE: PICK ONE
-The Blood God’s Favour
-
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
-
-Driven by Ultimate Rage
-Fight
-
-Aura · Fight · Either turn
-
-While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
-
-Re-roll hit rolls of 1.
-Re-roll wound rolls of 1.
-Overwhelming Wrath
-Their Movement
-
-Aura · Movement · Their turn
-
-Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
 
 Chaos Terminators
 Gore-stained Veterans
@@ -1298,14 +1300,14 @@ if it applies
 +0.1
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (4)
-Reborn in Blood
-“At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. …” · not counted in the Damage tab
-Wrathful Presence
-“At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 The Blood God’s Favour
 “Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.” · not counted in the Damage tab
 Overwhelming Wrath
 “Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.” · not counted in the Damage tab
+Reborn in Blood
+“At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. …” · not counted in the Damage tab
+Wrathful Presence
+“At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Beacons of Rage (Eightbound)
 Aura · Within 6" of it · The target: not Monster/Vehicle · The target Below Half-strength: +1 to Wound rolls
@@ -1622,19 +1624,6 @@ Chaos Terminators (370 pts, ×2)
 
 Against what the shooting left of the target, in each game.
 
-Paired accursed weapons ×2
-A
-6
-WS
-2+
-S
-5
-AP
--2
-D
-1
-TWIN-LINKED
-0
 Chainfist ×2
 A
 4
@@ -1651,6 +1640,19 @@ ANTI-VEHICLE 3+
 AGAINST THIS TARGET
 [ANTI-VEHICLE 3+]
 0
+Paired accursed weapons ×2
+A
+6
+WS
+2+
+S
+5
+AP
+-2
+D
+1
+TWIN-LINKED
+0
 Power fist ×6
 A
 4
@@ -1662,7 +1664,7 @@ AP
 -2
 D
 2
-−1% wiped
+−3% wiped
 ≈0
 MODELS IF UNTICKED
 SITUATION
@@ -2278,6 +2280,29 @@ Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targ
 STRATAGEMS · BERZERKER WARBAND
 1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
+The Blood God’s Favour
+- Wrathful Presence: pick one
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Overwhelming Wrath
+- Wrathful Presence: pick one
+Their Movement
+
+Aura · Movement · Their turn
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+Driven by Ultimate Rage
+- Wrathful Presence: pick one
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
 Reborn in Blood
 Start of the battle round
 
@@ -2292,29 +2317,6 @@ Start of the battle round
 
 At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.
 
-The Blood God’s Favour
-- Wrathful Presence: pick one
-
-Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
-
-Driven by Ultimate Rage
-- Wrathful Presence: pick one
-Fight
-
-Aura · Fight · Either turn
-
-While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
-
-Re-roll hit rolls of 1.
-Re-roll wound rolls of 1.
-Overwhelming Wrath
-- Wrathful Presence: pick one
-Their Movement
-
-Aura · Movement · Their turn
-
-Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
-
 Rules
 Deadly Demise D6, Deep Strike, Blessings of Khorne, Relentless Rage
 Stratagems
@@ -2326,16 +2328,16 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Butchers of Khorne.
 
 Keywords
-ANGRON
-CHAOS
-CHARACTER
-DAEMON
-EPIC HERO
-FACTION: WORLD EATERS
-FLY
-KHORNE
 MONSTER
+CHARACTER
+FLY
+EPIC HERO
+CHAOS
+KHORNE
+DAEMON
 PRIMARCH
+ANGRON
+FACTION: WORLD EATERS
 WARLORD
 Ask about this unit
 Chaos Terminators (1–2 of 3) ›
@@ -2409,13 +2411,6 @@ WS
 S
 AP
 D
-Paired accursed weapons×2
-6
-2+
-5
--2
-1
-TWIN-LINKED
 Chainfist×2
 4
 3+
@@ -2423,6 +2418,13 @@ Chainfist×2
 -3
 2
 ANTI-VEHICLE 3+
+Paired accursed weapons×2
+6
+2+
+5
+-2
+1
+TWIN-LINKED
 Power fist×6
 4
 2+
@@ -2467,12 +2469,12 @@ BUTCHERS OF KHORNE Wrath Beyond Reason, Focused Ferocity, A Trophy for the Thron
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-FACTION: WORLD EATERS
 INFANTRY
+CHAOS
 KHORNE
 TERMINATOR
 TERMINATOR SQUAD
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Angron
 Chaos Terminators (3 of 3) ›
@@ -2546,13 +2548,6 @@ WS
 S
 AP
 D
-Paired accursed weapons×2
-6
-2+
-5
--2
-1
-TWIN-LINKED
 Chainfist×2
 4
 3+
@@ -2560,6 +2555,13 @@ Chainfist×2
 -3
 2
 ANTI-VEHICLE 3+
+Paired accursed weapons×2
+6
+2+
+5
+-2
+1
+TWIN-LINKED
 Power fist×6
 4
 2+
@@ -2604,12 +2606,12 @@ BUTCHERS OF KHORNE Wrath Beyond Reason, Focused Ferocity, A Trophy for the Thron
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-FACTION: WORLD EATERS
 INFANTRY
+CHAOS
 KHORNE
 TERMINATOR
 TERMINATOR SQUAD
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Chaos Terminators (1–2 of 3)
 Eightbound ›
@@ -2680,13 +2682,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Butchers of Khorne.
 
 Keywords
+INFANTRY
 CHAOS
+KHORNE
 DAEMON
+POSSESSED
 EIGHTBOUND
 FACTION: WORLD EATERS
-INFANTRY
-KHORNE
-POSSESSED
 Ask about this unit
 ‹ Chaos Terminators (3 of 3)
 Goremongers ›
@@ -2742,6 +2744,9 @@ WS
 S
 AP
 D
+
+Pick one to fight with: Chainblade or Close combat weapon.
+
 Chainblade×8
 4
 4+
@@ -2749,7 +2754,6 @@ Chainblade×8
 0
 1
 LANCE
-OR
 Close combat weapon×8
 3
 4+
@@ -2781,12 +2785,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Butchers of Khorne.
 
 Keywords
-CHAOS
-FACTION: WORLD EATERS
-GOREMONGERS
-GRENADES
 INFANTRY
+GRENADES
+CHAOS
 KHORNE
+GOREMONGERS
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Eightbound
 Jakhals ›
@@ -2889,12 +2893,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Butchers of Khorne.
 
 Keywords
-CHAOS
-FACTION: WORLD EATERS
-GRENADES
 INFANTRY
-JAKHALS
+GRENADES
+CHAOS
 KHORNE
+JAKHALS
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Goremongers
 Forgefiend ›
@@ -2936,14 +2940,6 @@ BS
 S
 AP
 D
-Hades autocannon×2
-36"
-6
-4+
-8
--1
-2
-RAPID FIRE 4
 Ectoplasma cannon
 36"
 D3
@@ -2952,6 +2948,14 @@ D3
 -3
 3
 BLAST, RAPID FIRE 1
+Hades autocannon×2
+36"
+6
+4+
+8
+-1
+2
+RAPID FIRE 4
 Target is the closest eligible target within 18": re-roll the hit roll (Furious Onslaught)
 MELEE WEAPONS
 A
@@ -2989,13 +2993,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Butchers of Khorne.
 
 Keywords
-CHAOS
-DAEMON
-FACTION: WORLD EATERS
-FORGEFIEND
-KHORNE
 VEHICLE
 WALKER
+CHAOS
+KHORNE
+DAEMON
+FORGEFIEND
+FACTION: WORLD EATERS
 Ask about this unit
 ‹ Jakhals
 
@@ -3124,15 +3128,16 @@ The Blood God’s Favour
 
 Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
 
+Overwhelming Wrath Aura
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
 Driven by Ultimate Rage Aura
 
 While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
 
 Re-roll hit rolls of 1.
 Re-roll wound rolls of 1.
-Overwhelming Wrath Aura
-
-Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
 
 UNITAngron
 

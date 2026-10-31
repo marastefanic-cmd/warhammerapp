@@ -393,16 +393,9 @@ Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
 Ahriman
 + Tzaangor Enlightened with Fatecaster greatbows
 AHRIMAN
-Transmogrifying Blast
-18"
-D6+1
-2+
-6
--1
-D3
-BLAST, PSYCHIC
-OR
-WHEN USING ANOTHER SHOOTING TYPE
+
+Can shoot with Inferno bolt pistol or Transmogrifying Blast, not both (Close-quarters); in close-quarters shooting, Inferno bolt pistol only.
+
 Inferno bolt pistol
 12"
 1
@@ -411,6 +404,14 @@ Inferno bolt pistol
 -2
 1
 PISTOL
+Transmogrifying Blast
+18"
+D6+1
+2+
+6
+-1
+D3
+BLAST, PSYCHIC
 TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
 Fatecaster greatbow×6
 30"
@@ -444,6 +445,9 @@ Exalted Sorcerer on Disc of Tzeentch
 + Tzaangor Enlightened with Fatecaster greatbows
 ×2 units
 EXALTED SORCERER ON DISC OF TZEENTCH
+
+Can shoot with Inferno bolt pistol or Arcane Fire, not both (Close-quarters); in close-quarters shooting, Inferno bolt pistol only.
+
 Arcane Fire
 18"
 D6
@@ -452,8 +456,6 @@ D6
 -2
 D3
 IGNORES COVER, PSYCHIC, TORRENT
-OR
-WHEN USING ANOTHER SHOOTING TYPE
 Inferno bolt pistol
 12"
 1
@@ -598,6 +600,9 @@ Exalted Sorcerer on Disc of Tzeentch
 + Tzaangor Enlightened with Fatecaster greatbows
 ×2 units
 EXALTED SORCERER ON DISC OF TZEENTCH
+
+Pick one to fight with: Force weapon or Prosperine khopesh.
+
 Force weapon
 5
 2+
@@ -605,7 +610,6 @@ Force weapon
 -1
 D3
 PSYCHIC
-OR
 Prosperine khopesh
 4
 2+
@@ -709,24 +713,6 @@ Close combat weapon×2
 ######## abilities · MELEE Abilities
 Magnus the Red
 Warlord
-Damaged: 1-6 wounds remaining
-
-While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
-Unearthly Power
-Start of the battle round
-
-Start of the battle round
-
-At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
-
-Lord of the Planet of the Sorcerers
-Your Shooting
-
-Psychic · Shooting · Your turn
-
-This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.
-
 CRIMSON KING
 Impossible Form
 
@@ -747,6 +733,24 @@ Your Movement
 Aura, Psychic · Movement · Your turn
 
 While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
+
+Unearthly Power
+Start of the battle round
+
+Start of the battle round
+
+At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+
+Lord of the Planet of the Sorcerers
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 Ahriman
 + Tzaangor Enlightened with Fatecaster greatbows
@@ -773,6 +777,13 @@ Movement · Their turn
 In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6”.
 
 Daemon Prince of Tzeentch with wings
+Hunter of Souls
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
 Aetherstride
 Your Move/Shoot/Charge
 
@@ -783,13 +794,6 @@ In your Movement phase, when this model is set up on the battlefield using the D
 It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
 Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
 Until the end of the turn, it is not eligible to declare a charge.
-Hunter of Souls
-Their Move · Your Shoot · Fight
-
-Their Movement / Your Shooting / Fight (either turn)
-
-Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
-
 Exalted Sorcerer on Disc of Tzeentch
 + Tzaangor Enlightened with Fatecaster greatbows
 ×2 units
@@ -819,16 +823,16 @@ Tzaangor Shaman
 Curse of Life
 + Tzaangor Enlightened
 TZAANGOR SHAMAN
+Bestial Prophet
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
 Sacrificial Blessing
 Your Shoot · Fight
 
 Your Shooting / Fight (either turn)
 
 While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
-
-Bestial Prophet
-
-While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
 
 Curse of Life
 Enhancement
@@ -850,16 +854,16 @@ Tzaangor Shaman
 Diamond of Distortion
 + Tzaangor Enlightened
 TZAANGOR SHAMAN
+Bestial Prophet
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
 Sacrificial Blessing
 Your Shoot · Fight
 
 Your Shooting / Fight (either turn)
 
 While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
-
-Bestial Prophet
-
-While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
 
 Diamond of Distortion
 Enhancement
@@ -880,16 +884,16 @@ Tzaangor Shaman
 Flowing Flesh
 + Tzaangor Enlightened
 TZAANGOR SHAMAN
+Bestial Prophet
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
 Sacrificial Blessing
 Your Shoot · Fight
 
 Your Shooting / Fight (either turn)
 
 While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
-
-Bestial Prophet
-
-While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
 
 Flowing Flesh
 Enhancement
@@ -1357,16 +1361,16 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (5)
-Unearthly Power
-“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
-Lord of the Planet of the Sorcerers
-“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
 Impossible Form
 “Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.” · not counted in the Damage tab
 Treason of Tzeentch
 “At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.” · not counted in the Damage tab
 Time Flux
 “While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+Unearthly Power
+“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+Lord of the Planet of the Sorcerers
+“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1592,16 +1596,16 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (5)
-Unearthly Power
-“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
-Lord of the Planet of the Sorcerers
-“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
 Impossible Form
 “Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.” · not counted in the Damage tab
 Treason of Tzeentch
 “At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.” · not counted in the Damage tab
 Time Flux
 “While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+Unearthly Power
+“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+Lord of the Planet of the Sorcerers
+“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1863,16 +1867,16 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (5)
-Unearthly Power
-“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
-Lord of the Planet of the Sorcerers
-“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
 Impossible Form
 “Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.” · not counted in the Damage tab
 Treason of Tzeentch
 “At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.” · not counted in the Damage tab
 Time Flux
 “While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+Unearthly Power
+“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+Lord of the Planet of the Sorcerers
+“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1972,16 +1976,16 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (5)
-Unearthly Power
-“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
-Lord of the Planet of the Sorcerers
-“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
 Impossible Form
 “Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.” · not counted in the Damage tab
 Treason of Tzeentch
 “At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.” · not counted in the Damage tab
 Time Flux
 “While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+Unearthly Power
+“At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
+Lord of the Planet of the Sorcerers
+“This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -2573,20 +2577,6 @@ DEVASTATING WOUNDS, PSYCHIC
 2
 PSYCHIC
 ABILITIES
-Unearthly Power
-Start of the battle round
-
-Start of the battle round
-
-At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
-
-Lord of the Planet of the Sorcerers
-Your Shooting
-
-Psychic · Shooting · Your turn
-
-This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.
-
 Impossible Form
 - Crimson King
 
@@ -2610,8 +2600,22 @@ Aura, Psychic · Movement · Your turn
 
 While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
 
+Unearthly Power
+Start of the battle round
+
+Start of the battle round
+
+At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+
+Lord of the Planet of the Sorcerers
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.
+
 Rules
-Deep Strike, Deadly Demise D6, Cabal of Sorcerers
+Deadly Demise D6, Deep Strike, Cabal of Sorcerers
 Stratagems
 
 RITUAL OF REGENERATION Mutagenic Magicks
@@ -2621,17 +2625,17 @@ WARPMELD PACT Blessed Transmutations
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-EPIC HERO
-FACTION: THOUSAND SONS
-FLY
-MAGNUS THE RED
 MONSTER
+CHARACTER
+EPIC HERO
+FLY
+DAEMON
 PRIMARCH
 PSYKER
+CHAOS
 TZEENTCH
+MAGNUS THE RED
+FACTION: THOUSAND SONS
 WARLORD
 Ask about this unit
 Ahriman ›
@@ -2690,16 +2694,9 @@ S
 AP
 D
 AHRIMAN
-Transmogrifying Blast
-18"
-D6+1
-2+
-6
--1
-D3
-BLAST, PSYCHIC
-OR
-WHEN USING ANOTHER SHOOTING TYPE
+
+Can shoot with Inferno bolt pistol or Transmogrifying Blast, not both (Close-quarters); in close-quarters shooting, Inferno bolt pistol only.
+
 Inferno bolt pistol
 12"
 1
@@ -2708,6 +2705,14 @@ Inferno bolt pistol
 -2
 1
 PISTOL
+Transmogrifying Blast
+18"
+D6+1
+2+
+6
+-1
+D3
+BLAST, PSYCHIC
 TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
 Fatecaster greatbow×6
 30"
@@ -2773,17 +2778,17 @@ WARPMELD PACT Blessed Transmutations, Touched by Tzeentch, Twisted Mirage, Deran
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-AHRIMAN
-CHAOS
+MOUNTED
 CHARACTER
 EPIC HERO
-FACTION: THOUSAND SONS
 FLY
-MOUNTED
+CHAOS
 TZEENTCH
+AHRIMAN
 MUTANT*
 TZAANGOR ENLIGHTENED*
 TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS*
+FACTION: THOUSAND SONS
 Ahriman only:
 INFANTRY
 PSYKER
@@ -2868,6 +2873,13 @@ DEVASTATING WOUNDS, PSYCHIC
 1
 DEVASTATING WOUNDS, PSYCHIC
 ABILITIES
+Hunter of Souls
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
 Aetherstride
 Your Move/Shoot/Charge
 
@@ -2878,15 +2890,8 @@ In your Movement phase, when this model is set up on the battlefield using the D
 It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
 Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
 Until the end of the turn, it is not eligible to declare a charge.
-Hunter of Souls
-Their Move · Your Shoot · Fight
-
-Their Movement / Your Shooting / Fight (either turn)
-
-Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
-
 Rules
-Deadly Demise D3, Cabal of Sorcerers, Deep Strike
+Deadly Demise D3, Deep Strike, Cabal of Sorcerers
 Stratagems
 
 RITUAL OF REGENERATION Mutagenic Magicks
@@ -2896,15 +2901,15 @@ WARPMELD PACT Blessed Transmutations
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
+MONSTER
 CHARACTER
 DAEMON
+FLY
+PSYKER
+CHAOS
+TZEENTCH
 DAEMON PRINCE
 FACTION: THOUSAND SONS
-FLY
-MONSTER
-PSYKER
-TZEENTCH
 Ask about this unit
 ‹ Ahriman
 Exalted Sorcerer on Disc of Tzeentch ›
@@ -2964,6 +2969,9 @@ S
 AP
 D
 EXALTED SORCERER ON DISC OF TZEENTCH
+
+Can shoot with Inferno bolt pistol or Arcane Fire, not both (Close-quarters); in close-quarters shooting, Inferno bolt pistol only.
+
 Arcane Fire
 18"
 D6
@@ -2972,8 +2980,6 @@ D6
 -2
 D3
 IGNORES COVER, PSYCHIC, TORRENT
-OR
-WHEN USING ANOTHER SHOOTING TYPE
 Inferno bolt pistol
 12"
 1
@@ -2998,6 +3004,9 @@ S
 AP
 D
 EXALTED SORCERER ON DISC OF TZEENTCH
+
+Pick one to fight with: Force weapon or Prosperine khopesh.
+
 Force weapon
 5
 2+
@@ -3005,7 +3014,6 @@ Force weapon
 -1
 D3
 PSYCHIC
-OR
 Prosperine khopesh
 4
 2+
@@ -3054,19 +3062,19 @@ WARPMELD PACT Blessed Transmutations, Touched by Tzeentch, Twisted Mirage, Deran
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-CHARACTER
-EXALTED SORCERER
-FACTION: THOUSAND SONS
-FLY
 MOUNTED
+CHARACTER
+FLY
+CHAOS
 TZEENTCH
+EXALTED SORCERER
 MUTANT*
 TZAANGOR ENLIGHTENED*
 TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS*
+FACTION: THOUSAND SONS
 Exalted Sorcerer on Disc of Tzeentch only:
-GRENADES
 INFANTRY
+GRENADES
 PSYKER
 *from the led Tzaangor Enlightened with Fatecaster greatbows
 Ask about this unit
@@ -3162,6 +3170,11 @@ LANCE, PRECISION
 WHOLE UNIT
 Made a charge move this turn: Divining spear +1 to wound (Lance)
 ABILITIES
+Bestial Prophet
+- Tzaangor Shaman
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
 Sacrificial Blessing
 - Tzaangor Shaman
 Your Shoot · Fight
@@ -3169,11 +3182,6 @@ Your Shoot · Fight
 Your Shooting / Fight (either turn)
 
 While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
-
-Bestial Prophet
-- Tzaangor Shaman
-
-While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
 
 Curse of Life
 - Tzaangor Shaman
@@ -3203,15 +3211,15 @@ WARPMELD PACT Blessed Transmutations, Touched by Tzeentch, Twisted Mirage, Deran
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-CHARACTER
-FACTION: THOUSAND SONS
-FLY
 MOUNTED
+CHARACTER
+FLY
+CHAOS
+TZEENTCH
 MUTANT
 TZAANGOR SHAMAN
-TZEENTCH
 TZAANGOR ENLIGHTENED*
+FACTION: THOUSAND SONS
 Tzaangor Shaman only:
 INFANTRY
 PSYKER
@@ -3310,6 +3318,11 @@ LANCE, PRECISION
 WHOLE UNIT
 Made a charge move this turn: Divining spear +1 to wound (Lance)
 ABILITIES
+Bestial Prophet
+- Tzaangor Shaman
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
 Sacrificial Blessing
 - Tzaangor Shaman
 Your Shoot · Fight
@@ -3317,11 +3330,6 @@ Your Shoot · Fight
 Your Shooting / Fight (either turn)
 
 While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
-
-Bestial Prophet
-- Tzaangor Shaman
-
-While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
 
 Diamond of Distortion
 - Tzaangor Shaman
@@ -3350,15 +3358,15 @@ WARPMELD PACT Blessed Transmutations, Touched by Tzeentch, Twisted Mirage, Deran
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-CHARACTER
-FACTION: THOUSAND SONS
-FLY
 MOUNTED
+CHARACTER
+FLY
+CHAOS
+TZEENTCH
 MUTANT
 TZAANGOR SHAMAN
-TZEENTCH
 TZAANGOR ENLIGHTENED*
+FACTION: THOUSAND SONS
 Tzaangor Shaman only:
 INFANTRY
 PSYKER
@@ -3457,6 +3465,11 @@ LANCE, PRECISION
 WHOLE UNIT
 Made a charge move this turn: Divining spear +1 to wound (Lance)
 ABILITIES
+Bestial Prophet
+- Tzaangor Shaman
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
 Sacrificial Blessing
 - Tzaangor Shaman
 Your Shoot · Fight
@@ -3464,11 +3477,6 @@ Your Shoot · Fight
 Your Shooting / Fight (either turn)
 
 While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
-
-Bestial Prophet
-- Tzaangor Shaman
-
-While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
 
 Flowing Flesh
 - Tzaangor Shaman
@@ -3498,15 +3506,15 @@ WARPMELD PACT Blessed Transmutations, Touched by Tzeentch, Twisted Mirage, Deran
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-CHARACTER
-FACTION: THOUSAND SONS
-FLY
 MOUNTED
+CHARACTER
+FLY
+CHAOS
+TZEENTCH
 MUTANT
 TZAANGOR SHAMAN
-TZEENTCH
 TZAANGOR ENLIGHTENED*
+FACTION: THOUSAND SONS
 Tzaangor Shaman only:
 INFANTRY
 PSYKER
@@ -3582,13 +3590,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Ritual of Regeneration.
 
 Keywords
-BATTLELINE
-CHAOS
-FACTION: THOUSAND SONS
 INFANTRY
+CHAOS
+TZEENTCH
 MUTANT
 TZAANGORS
-TZEENTCH
+FACTION: THOUSAND SONS
+BATTLELINE
 Ask about this unit
 ‹ Tzaangor Shaman · Flowing Flesh
 Sekhetar Robots ›
@@ -3681,12 +3689,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Ritual of Regeneration or Warpmeld Pact.
 
 Keywords
-CHAOS
-FACTION: THOUSAND SONS
-SEKHETAR ROBOTS
-TZEENTCH
 VEHICLE
 WALKER
+CHAOS
+TZEENTCH
+SEKHETAR ROBOTS
+FACTION: THOUSAND SONS
 Ask about this unit
 ‹ Tzaangors
 Chaos Spawn ›
@@ -3754,10 +3762,10 @@ None from Ritual of Regeneration.
 Keywords
 BEAST
 CHAOS
+TZEENTCH
+MUTANT
 CHAOS SPAWN
 FACTION: THOUSAND SONS
-MUTANT
-TZEENTCH
 Ask about this unit
 ‹ Sekhetar Robots
 

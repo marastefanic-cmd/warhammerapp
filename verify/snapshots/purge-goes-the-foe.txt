@@ -351,14 +351,6 @@ MELTA 3
 If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 Thulia Ghuld
 Jericho-class conversion resonator
-➤shockwave
-24"
-D6+2
-2+
-6
--2
-1
-BLAST, SUSTAINED HITS 1
 ➤titanic impact
 24"
 2
@@ -367,6 +359,14 @@ BLAST, SUSTAINED HITS 1
 -3
 D6+2
 DEVASTATING WOUNDS
+➤shockwave
+24"
+D6+2
+2+
+6
+-2
+1
+BLAST, SUSTAINED HITS 1
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 Tech-Priest Enginseer
 Necromechanic
@@ -413,14 +413,6 @@ STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
 1CP Threat-cogitation Targeters: can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model
 Skitarii Rangers
 ×2 units
-Galvanic rifle×7
-30"
-2
-4+
-4
-0
-1
-IGNORES COVER
 Arc rifleSKITARII RANGER
 30"
 1
@@ -429,15 +421,15 @@ Arc rifleSKITARII RANGER
 -1
 D3
 ANTI-VEHICLE 4+, DEVASTATING WOUNDS, RAPID FIRE 1, IGNORES COVER
-Plasma caliverSKITARII RANGER
-➤supercharge
+Galvanic rifle×7
 30"
 2
 4+
-8
--3
-2
-HAZARDOUS, IGNORES COVER
+4
+0
+1
+IGNORES COVER
+Plasma caliverSKITARII RANGER
 ➤standard
 30"
 2
@@ -446,6 +438,14 @@ HAZARDOUS, IGNORES COVER
 -2
 1
 IGNORES COVER
+➤supercharge
+30"
+2
+4+
+8
+-3
+2
+HAZARDOUS, IGNORES COVER
 Transuranic arquebusSKITARII RANGER
 36"
 1
@@ -563,13 +563,9 @@ STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Belisarius Cawl
 Warlord
-Cawl’s Omnissian axe
-4
-2+
-8
--2
-2
-+
+
+Fights with all of these: Cawl’s Omnissian axe, plus Arc Scourge and Mechadendrite hive on top (extra attacks).
+
 Arc Scourge
 4
 2+
@@ -577,7 +573,12 @@ Arc Scourge
 -1
 1
 ANTI-VEHICLE 4+, DEVASTATING WOUNDS, EXTRA ATTACKS
-+
+Cawl’s Omnissian axe
+4
+2+
+8
+-2
+2
 Mechadendrite hive
 2D6
 3+
@@ -607,6 +608,9 @@ STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
 1CP Servo-driven Charge: [LANCE]
 Tech-Priest Enginseer
 Necromechanic
+
+Fights with both: Omnissian axe, plus Servo arm on top (extra attacks).
+
 Omnissian axe
 3/6
 4+
@@ -614,7 +618,6 @@ Omnissian axe
 -2
 2
 A 6 After a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12" of it, until the end of the battle (Vengeance for the Omnissiah)
-+
 Servo arm
 1
 4+
@@ -654,14 +657,17 @@ STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
 1CP Servo-driven Charge: [LANCE]
 Skitarii Rangers
 ×2 units
+
+Skitarii Ranger Alpha picks one to fight with: Alpha combat weapon or Close combat weapon.
+
+The others: one each (×N = how many the unit has).
+
 Alpha combat weaponSKITARII RANGER ALPHA
 2
 4+
 5
 -1
 1
-OR
-SKITARII RANGER ALPHA
 Close combat weapon×10
 1
 4+
@@ -783,6 +789,13 @@ The Fires of Mars: You can select one friendly SKITARII or THULIA GHULD unit wit
 
 FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”
 
+Rod of the War Forge
+Your Command
+
+Command · Your turn
+
+In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.
+
 Mechanicus Bodyguard
 
 While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS units, this model has the Lone Operative ability.
@@ -799,13 +812,6 @@ Supreme Commander
 If this model is in your army, it must be your Warlord.
 
 Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
-
-Rod of the War Forge
-Your Command
-
-Command · Your turn
-
-In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.
 
 Tech-Priest Enginseer
 Necromechanic
@@ -915,10 +921,6 @@ Aura
 
 While a friendly ADEPTUS MECHANICUS BATTLELINE model is wholly within 6" of this model, that BATTLELINE model has a 4+ invulnerable save against ranged attacks.
 
-Damaged: 1-4 wounds remaining
-
-While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
 Scuttling Walker
 Your Movement
 
@@ -929,6 +931,10 @@ Each time this model makes a Normal, Advance or Fall Back move, it can move thro
 Broad spectrum data-tether
 
 The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP.
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 Skorpius Disintegrator
 ×2 units
@@ -2075,7 +2081,7 @@ CP
 AI
 Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-Start of their Shooting Ironstrider Ballistarii ×2, Skorpius Disintegrator ×2
+Start of their Shooting Ironstrider Ballistarii ×2, Onager Dunecrawler, Skorpius Disintegrator ×2
 1
 CP
 AI
@@ -2374,7 +2380,7 @@ USED BYany unit
 1
 CP
 Smokescreen
-Start of their Shooting Ironstrider Ballistarii ×2, Skorpius Disintegrator ×2
+Start of their Shooting Ironstrider Ballistarii ×2, Onager Dunecrawler, Skorpius Disintegrator ×2
 WHEN
 
 Start of your opponent’s Shooting phase.
@@ -2385,7 +2391,7 @@ EFFECT
 
 Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
 
-USED BYIronstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Skorpius Disintegrator
+USED BYIronstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 1
 CP
@@ -2563,13 +2569,9 @@ WS
 S
 AP
 D
-Cawl’s Omnissian axe
-4
-2+
-8
--2
-2
-+
+
+Fights with all of these: Cawl’s Omnissian axe, plus Arc Scourge and Mechadendrite hive on top (extra attacks).
+
 Arc Scourge
 4
 2+
@@ -2577,7 +2579,12 @@ Arc Scourge
 -1
 1
 ANTI-VEHICLE 4+, DEVASTATING WOUNDS, EXTRA ATTACKS
-+
+Cawl’s Omnissian axe
+4
+2+
+8
+-2
+2
 Mechadendrite hive
 2D6
 3+
@@ -2631,15 +2638,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Cohort Cybernetica.
 
 Keywords
-BELISARIUS CAWL
-CHARACTER
-CULT MECHANICUS
-EPIC HERO
-FACTION: ADEPTUS MECHANICUS
-IMPERIUM
-MOBILE
 MONSTER
+CHARACTER
+MOBILE
+EPIC HERO
+IMPERIUM
 TECH-PRIEST
+CULT MECHANICUS
+BELISARIUS CAWL
+FACTION: ADEPTUS MECHANICUS
 WARLORD
 Ask about this unit
 Thulia Ghuld ›
@@ -2683,14 +2690,6 @@ S
 AP
 D
 Jericho-class conversion resonator
-➤shockwave
-24"
-D6+2
-2+
-6
--2
-1
-BLAST, SUSTAINED HITS 1
 ➤titanic impact
 24"
 2
@@ -2699,6 +2698,14 @@ BLAST, SUSTAINED HITS 1
 -3
 D6+2
 DEVASTATING WOUNDS
+➤shockwave
+24"
+D6+2
+2+
+6
+-2
+1
+BLAST, SUSTAINED HITS 1
 MELEE WEAPONS
 A
 WS
@@ -2734,6 +2741,13 @@ The Fires of Mars: You can select one friendly SKITARII or THULIA GHULD unit wit
 
 FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”
 
+Rod of the War Forge
+Your Command
+
+Command · Your turn
+
+In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.
+
 Mechanicus Bodyguard
 
 While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS units, this model has the Lone Operative ability.
@@ -2751,13 +2765,6 @@ If this model is in your army, it must be your Warlord.
 
 Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
 
-Rod of the War Forge
-Your Command
-
-Command · Your turn
-
-In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.
-
 Rules
 Doctrina Imperatives
 Stratagems
@@ -2769,15 +2776,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Cohort Cybernetica.
 
 Keywords
-CHARACTER
-CULT MECHANICUS
-EPIC HERO
-FACTION: ADEPTUS MECHANICUS
-IMPERIUM
-MOBILE
 MONSTER
+CHARACTER
+MOBILE
+EPIC HERO
+IMPERIUM
+CULT MECHANICUS
 TECH-PRIEST
 THULIA GHULD
+FACTION: ADEPTUS MECHANICUS
 Ask about this unit
 ‹ Belisarius Cawl
 Tech-Priest Enginseer · Necromechanic ›
@@ -2835,6 +2842,9 @@ WS
 S
 AP
 D
+
+Fights with both: Omnissian axe, plus Servo arm on top (extra attacks).
+
 Omnissian axe
 3/6
 4+
@@ -2842,7 +2852,6 @@ Omnissian axe
 -2
 2
 A 6 After a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12" of it, until the end of the battle (Vengeance for the Omnissiah)
-+
 Servo arm
 1
 4+
@@ -2887,13 +2896,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Ch
 None from Cohort Cybernetica.
 
 Keywords
-CHARACTER
-CULT MECHANICUS
-ENGINSEER
-FACTION: ADEPTUS MECHANICUS
 IMPERIUM
 INFANTRY
+CHARACTER
+CULT MECHANICUS
 TECH-PRIEST
+ENGINSEER
+FACTION: ADEPTUS MECHANICUS
 Ask about this unit
 ‹ Thulia Ghuld
 Cybernetica Datasmith · Martial Signatum Amplificator ›
@@ -3052,7 +3061,7 @@ When an enemy unit targets this unit with ranged attacks, until that enemy unit 
 
 On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot.
 Rules
-Support, Doctrina Imperatives, Feel No Pain 4+, Deadly Demise 1, Cyber-psalm Programming, Murderous Imperative
+Support, Deadly Demise 1, Doctrina Imperatives, Feel No Pain 4+, Cyber-psalm Programming, Murderous Imperative
 Stratagems
 
 COHORT CYBERNETICA Motive Imperative, Auto-divinatory Targeting, Machine Spirit Resurgent, Machine Superiority, Transcendent Cogitation, Benevolence of the Omnissiah
@@ -3062,16 +3071,16 @@ ERADICATION COHORT Unrelenting Aggression, Unshackled Wrath, Threat-cogitation T
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
+VEHICLE
 CHARACTER
-CYBERNETICA DATASMITH
-FACTION: ADEPTUS MECHANICUS
 IMPERIUM
 LEGIO CYBERNETICA
-SKITARII
 TECH-PRIEST
-VEHICLE
-KASTELAN ROBOTS*
+CYBERNETICA DATASMITH
 WALKER*
+KASTELAN ROBOTS*
+FACTION: ADEPTUS MECHANICUS
+SKITARII
 *from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator
 Ask about this unit
 ‹ Tech-Priest Enginseer · Necromechanic
@@ -3126,14 +3135,6 @@ BS
 S
 AP
 D
-Galvanic rifle×7
-30"
-2
-4+
-4
-0
-1
-IGNORES COVER
 Arc rifleSKITARII RANGER
 30"
 1
@@ -3142,15 +3143,15 @@ Arc rifleSKITARII RANGER
 -1
 D3
 ANTI-VEHICLE 4+, DEVASTATING WOUNDS, RAPID FIRE 1, IGNORES COVER
-Plasma caliverSKITARII RANGER
-➤supercharge
+Galvanic rifle×7
 30"
 2
 4+
-8
--3
-2
-HAZARDOUS, IGNORES COVER
+4
+0
+1
+IGNORES COVER
+Plasma caliverSKITARII RANGER
 ➤standard
 30"
 2
@@ -3159,6 +3160,14 @@ HAZARDOUS, IGNORES COVER
 -2
 1
 IGNORES COVER
+➤supercharge
+30"
+2
+4+
+8
+-3
+2
+HAZARDOUS, IGNORES COVER
 Transuranic arquebusSKITARII RANGER
 36"
 1
@@ -3175,14 +3184,17 @@ WS
 S
 AP
 D
+
+Skitarii Ranger Alpha picks one to fight with: Alpha combat weapon or Close combat weapon.
+
+The others: one each (×N = how many the unit has).
+
 Alpha combat weaponSKITARII RANGER ALPHA
 2
 4+
 5
 -1
 1
-OR
-SKITARII RANGER ALPHA
 Close combat weapon×10
 1
 4+
@@ -3214,12 +3226,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Cohort Cybernetica.
 
 Keywords
-BATTLELINE
-FACTION: ADEPTUS MECHANICUS
-IMPERIUM
 INFANTRY
-RANGERS
+BATTLELINE
+IMPERIUM
 SKITARII
+RANGERS
+FACTION: ADEPTUS MECHANICUS
 Ask about this unit
 ‹ Cybernetica Datasmith · Martial Signatum Amplificator
 Ironstrider Ballistarii (1 of 2) ›
@@ -3319,13 +3331,13 @@ ERADICATION COHORT Unrelenting Aggression, Unshackled Wrath, Threat-cogitation T
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-FACTION: ADEPTUS MECHANICUS
-IMPERIUM
-IRONSTRIDER BALLISTARII
-SKITARII
-SMOKE
 VEHICLE
 WALKER
+SMOKE
+IMPERIUM
+SKITARII
+IRONSTRIDER BALLISTARII
+FACTION: ADEPTUS MECHANICUS
 Ask about this unit
 ‹ Skitarii Rangers
 Ironstrider Ballistarii (2 of 2) ›
@@ -3425,13 +3437,13 @@ ERADICATION COHORT Unrelenting Aggression, Unshackled Wrath, Threat-cogitation T
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-FACTION: ADEPTUS MECHANICUS
-IMPERIUM
-IRONSTRIDER BALLISTARII
-SKITARII
-SMOKE
 VEHICLE
 WALKER
+SMOKE
+IMPERIUM
+SKITARII
+IRONSTRIDER BALLISTARII
+FACTION: ADEPTUS MECHANICUS
 Ask about this unit
 ‹ Ironstrider Ballistarii (1 of 2)
 Onager Dunecrawler ›
@@ -3543,15 +3555,16 @@ COHORT CYBERNETICA Motive Imperative, Auto-divinatory Targeting, Machine Spirit 
 
 ERADICATION COHORT Unrelenting Aggression, Unshackled Wrath, Threat-cogitation Targeters, Servo-driven Charge
 
-CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-FACTION: ADEPTUS MECHANICUS
-IMPERIUM
-ONAGER DUNECRAWLER
-SKITARII
 VEHICLE
 WALKER
+IMPERIUM
+SKITARII
+SMOKE
+ONAGER DUNECRAWLER
+FACTION: ADEPTUS MECHANICUS
 Ask about this unit
 ‹ Ironstrider Ballistarii (2 of 2)
 Skorpius Disintegrator ›
@@ -3665,13 +3678,13 @@ ERADICATION COHORT Unrelenting Aggression, Unshackled Wrath, Threat-cogitation T
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact, Counteroffensive, Command Re-roll
 
 Keywords
-FACTION: ADEPTUS MECHANICUS
-FRAME
-IMPERIUM
-SKITARII
-SKORPIUS DISINTEGRATOR
-SMOKE
 VEHICLE
+IMPERIUM
+FRAME
+SKITARII
+SMOKE
+SKORPIUS DISINTEGRATOR
+FACTION: ADEPTUS MECHANICUS
 Ask about this unit
 ‹ Onager Dunecrawler
 
@@ -5393,7 +5406,7 @@ EFFECT
 
 Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
 
-USED BYIronstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Skorpius Disintegrator
+USED BYIronstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this stratagem
 

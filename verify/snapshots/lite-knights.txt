@@ -434,8 +434,6 @@ Castellan axe×2
 ASSAULT, RAPID FIRE 2
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
 Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
-STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 Prosecutor Squad
 ×2 units
 Boltgun×4
@@ -489,8 +487,6 @@ Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imper
 STRATAGEMS · GRAV-ASSAULT FORCE · YOUR SHOOTING PHASE
 1CP Advanced Stabilisers: ranged attacks have [ASSAULT], selected to shoot
 1CP Inevitable Annihilation: can ignore modifiers to BS and hit rolls, selected to shoot
-STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 Contemptor-Achillus Dreadnought
 Dreadspear
 18"
@@ -513,7 +509,6 @@ Below starting strength, or below half-strength: below starting strength: re-rol
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
 1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 Contemptor-Galatus Dreadnought
 Memento Moritoi
 Warblade
@@ -530,7 +525,6 @@ Below starting strength, or below half-strength: below starting strength: re-rol
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
 1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 Telemon Heavy Dreadnought
 Augury Uplink
 Spiculus bolt launcher
@@ -555,8 +549,14 @@ Below starting strength, or below half-strength: below starting strength: re-rol
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
 1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 Telemon Heavy Dreadnought
+Adrathic Desolator
+24"
+4
+2+
+10
+-2
+4
 Spiculus bolt launcher
 36"
 6
@@ -565,13 +565,6 @@ Spiculus bolt launcher
 -1
 1
 BLAST 2
-Adrathic Desolator
-24"
-4
-2+
-10
--2
-4
 Twin Neutronium Cascade Projectors
 12"
 3
@@ -586,7 +579,6 @@ Below starting strength, or below half-strength: below starting strength: re-rol
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
 1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Trajann Valoris
@@ -611,8 +603,6 @@ Moment Shackle (once per battle, at the start of any phase, one of its two effec
 Target has a T greater than this unit’s T: +1 to wound rolls (Slayer of Tyrants)
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
 Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
-STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 Prosecutor Squad
 ×2 units
 Gun Stock×4
@@ -646,8 +636,6 @@ Armoured hull
 1
 Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 Contemptor-Achillus Dreadnought
 Dreadspear
 5
@@ -662,7 +650,6 @@ Below starting strength, or below half-strength: below starting strength: re-rol
 Made a charge move this turn: Dreadspear +1 to wound (Lance)
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 Contemptor-Galatus Dreadnought
 Memento Moritoi
 Warblade
@@ -677,7 +664,6 @@ Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imper
 Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 Telemon Heavy Dreadnought
 Augury Uplink
 Dual Caestus Fists
@@ -692,7 +678,6 @@ Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imper
 Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 Telemon Heavy Dreadnought
 Caestus Fist
 5
@@ -705,7 +690,6 @@ Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imper
 Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 
 ######## abilities · MELEE Abilities
 Trajann Valoris
@@ -2561,8 +2545,6 @@ Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psych
 ALL ATTACKS · WHOLE UNIT
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
 Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
-STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 RANGED WEAPONS
 Range
 A
@@ -2659,27 +2641,25 @@ Already in OC
 This unit has +1 OC.
 This unit can ignore modifiers to this unit’s Ld.
 Rules
-Aquila Commander, Aegis of the Emperor, Martial Ka'tah, Leader, Deep Strike, Feel No Pain 5+*, Feel No Pain 5+ (Trajann Valoris), Magna Imperator
+Deep Strike, Feel No Pain 5+*, Feel No Pain 5+ (Trajann Valoris), Leader, Aegis of the Emperor, Aquila Commander, Martial Ka'tah, Magna Imperator
 Stratagems
 
 EMPEROR’S CHOSEN Impenetrable Bastion, In Auramite Clad, Superhuman Focus
 
-MIGHT OF THE MORITOI Honoured Interred (its aura: within 6" of the ADEPTUS CUSTODES DREADNOUGHT unit with it)
-
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
-None from Grav-Assault Force.
+None from Grav-Assault Force or Might of the Moritoi.
 
 Keywords
+INFANTRY
 CHARACTER
 EPIC HERO
-FACTION: ADEPTUS CUSTODES
 IMPERIUM
-INFANTRY
 TRAJANN VALORIS
-WARLORD
-ALLARUS CUSTODIANS*
 TERMINATOR*
+ALLARUS CUSTODIANS*
+FACTION: ADEPTUS CUSTODES
+WARLORD
 *from the led Allarus Custodians
 Ask about this unit
 Prosecutor Squad ›
@@ -2749,7 +2729,7 @@ In your Shooting phase, you can select one visible enemy unit within 18" of this
 
 While a unit is detected, that unit has +3" detection range.
 Rules
-Feel No Pain 3+*, Daughters of the Abyss
+Daughters of the Abyss, Feel No Pain 3+*
 Stratagems
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
@@ -2757,11 +2737,10 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Emperor’s Chosen, Grav-Assault Force or Might of the Moritoi.
 
 Keywords
-ANATHEMA PSYKANA
-FACTION: ANATHEMA PSYKANA
-IMPERIUM
 INFANTRY
+IMPERIUM
 PROSECUTOR SQUAD
+FACTION: ANATHEMA PSYKANA
 Ask about this unit
 ‹ Trajann Valoris
 Witchseeker Squad (1 of 2) ›
@@ -2831,7 +2810,7 @@ Shooting · Your turn
 In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.
 
 Rules
-Scouts 7", Feel No Pain 3+*, Daughters of the Abyss
+Scouts 7", Daughters of the Abyss, Feel No Pain 3+*
 Stratagems
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
@@ -2839,11 +2818,10 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Emperor’s Chosen, Grav-Assault Force or Might of the Moritoi.
 
 Keywords
-ANATHEMA PSYKANA
-FACTION: ANATHEMA PSYKANA
-IMPERIUM
 INFANTRY
+IMPERIUM
 WITCHSEEKER SQUAD
+FACTION: ANATHEMA PSYKANA
 Ask about this unit
 ‹ Prosecutor Squad
 Witchseeker Squad (2 of 2) ›
@@ -2913,7 +2891,7 @@ Shooting · Your turn
 In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.
 
 Rules
-Scouts 7", Feel No Pain 3+*, Daughters of the Abyss
+Scouts 7", Daughters of the Abyss, Feel No Pain 3+*
 Stratagems
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
@@ -2921,11 +2899,10 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Emperor’s Chosen, Grav-Assault Force or Might of the Moritoi.
 
 Keywords
-ANATHEMA PSYKANA
-FACTION: ANATHEMA PSYKANA
-IMPERIUM
 INFANTRY
+IMPERIUM
 WITCHSEEKER SQUAD
+FACTION: ANATHEMA PSYKANA
 Ask about this unit
 ‹ Witchseeker Squad (1 of 2)
 Caladius Annihilator Grav-tank ›
@@ -2964,8 +2941,6 @@ Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psych
 ALL ATTACKS
 Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
 Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 RANGED WEAPONS
 Range
 A
@@ -3014,26 +2989,26 @@ Re-roll one hit roll.
 Re-roll one wound roll.
 Re-roll one damage roll.
 Rules
-Deadly Demise D3, Aegis of the Emperor, Feel No Pain 5+*, Damaged 5, Deep Strike, Magna Imperator, Flare Shields
+Damaged 5, Deadly Demise D3, Deep Strike, Aegis of the Emperor, Feel No Pain 5+*, Magna Imperator, Flare Shields
 Stratagems
 
 EMPEROR’S CHOSEN In Auramite Clad, Superhuman Focus
 
 GRAV-ASSAULT FORCE Advanced Stabilisers, Inevitable Annihilation, Victory Before Death
 
-MIGHT OF THE MORITOI Honoured Interred (its aura: within 6" of the ADEPTUS CUSTODES DREADNOUGHT unit with it)
-
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Counteroffensive, Command Re-roll
 
+None from Might of the Moritoi.
+
 Keywords
+VEHICLE
 CALADIUS
-CALADIUS ANNIHILATOR GRAV-TANK
-FACTION: ADEPTUS CUSTODES
 FLY
 FRAME
 GRAV-ASSAULT
 IMPERIUM
-VEHICLE
+CALADIUS ANNIHILATOR GRAV-TANK
+FACTION: ADEPTUS CUSTODES
 Ask about this unit
 ‹ Witchseeker Squad (2 of 2)
 Contemptor-Achillus Dreadnought ›
@@ -3075,7 +3050,6 @@ Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imper
 Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 RANGED WEAPONS
 Range
 A
@@ -3120,7 +3094,7 @@ Unyielding Ancient
 Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.
 
 Rules
-Martial Ka'tah, Deadly Demise D3, Aegis of the Emperor, Feel No Pain 5+*, Damaged 4, Magna Imperator, Moritoi Ancients
+Damaged 4, Deadly Demise D3, Aegis of the Emperor, Martial Ka'tah, Feel No Pain 5+*, Magna Imperator, Moritoi Ancients
 Stratagems
 
 EMPEROR’S CHOSEN In Auramite Clad, Superhuman Focus
@@ -3132,12 +3106,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Grav-Assault Force.
 
 Keywords
-CONTEMPTOR-ACHILLUS DREADNOUGHT
-DREADNOUGHT
-FACTION: ADEPTUS CUSTODES
-IMPERIUM
 VEHICLE
+DREADNOUGHT
+IMPERIUM
 WALKER
+CONTEMPTOR-ACHILLUS DREADNOUGHT
+FACTION: ADEPTUS CUSTODES
 Ask about this unit
 ‹ Caladius Annihilator Grav-tank
 Contemptor-Galatus Dreadnought ›
@@ -3180,7 +3154,6 @@ Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imper
 Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 RANGED WEAPONS
 Range
 A
@@ -3224,7 +3197,7 @@ Upgrade
 ADEPTUS CUSTODES DREADNOUGHT model only. This model’s melee attacks have +1 A, S and D.
 
 Rules
-Martial Ka'tah, Deadly Demise D3, Aegis of the Emperor, Feel No Pain 5+*, Damaged 4, Magna Imperator, Moritoi Ancients
+Damaged 4, Deadly Demise D3, Aegis of the Emperor, Martial Ka'tah, Feel No Pain 5+*, Magna Imperator, Moritoi Ancients
 Stratagems
 
 EMPEROR’S CHOSEN In Auramite Clad, Superhuman Focus
@@ -3236,12 +3209,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Grav-Assault Force.
 
 Keywords
-CONTEMPTOR-GALATUS DREADNOUGHT
-DREADNOUGHT
-FACTION: ADEPTUS CUSTODES
-IMPERIUM
 VEHICLE
+DREADNOUGHT
+IMPERIUM
 WALKER
+CONTEMPTOR-GALATUS DREADNOUGHT
+FACTION: ADEPTUS CUSTODES
 Ask about this unit
 ‹ Contemptor-Achillus Dreadnought
 Telemon Heavy Dreadnought ›
@@ -3285,7 +3258,6 @@ Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imper
 Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 RANGED WEAPONS
 Range
 A
@@ -3336,7 +3308,7 @@ Upgrade
 ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+.
 
 Rules
-Martial Ka'tah, Deadly Demise D3, Damaged 5, Aegis of the Emperor, Feel No Pain 5+*, Feel No Pain 5+, Magna Imperator, Moritoi Ancients
+Damaged 5, Deadly Demise D3, Aegis of the Emperor, Martial Ka'tah, Feel No Pain 5+*, Feel No Pain 5+, Magna Imperator, Moritoi Ancients
 Stratagems
 
 EMPEROR’S CHOSEN In Auramite Clad, Superhuman Focus
@@ -3348,12 +3320,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Grav-Assault Force.
 
 Keywords
-DREADNOUGHT
-FACTION: ADEPTUS CUSTODES
-IMPERIUM
-TELEMON HEAVY DREADNOUGHT
 VEHICLE
+DREADNOUGHT
+IMPERIUM
 WALKER
+TELEMON HEAVY DREADNOUGHT
+FACTION: ADEPTUS CUSTODES
 Ask about this unit
 ‹ Contemptor-Galatus Dreadnought
 Telemon Heavy Dreadnought ›
@@ -3395,7 +3367,6 @@ Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imper
 Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase, within 6" of an ADEPTUS CUSTODES DREADNOUGHT unit with Honoured Interred
 RANGED WEAPONS
 Range
 A
@@ -3403,6 +3374,13 @@ BS
 S
 AP
 D
+Adrathic Desolator
+24"
+4
+2+
+10
+-2
+4
 Spiculus bolt launcher
 36"
 6
@@ -3411,13 +3389,6 @@ Spiculus bolt launcher
 -1
 1
 BLAST 2
-Adrathic Desolator
-24"
-4
-2+
-10
--2
-4
 Twin Neutronium Cascade Projectors
 12"
 3
@@ -3446,7 +3417,7 @@ Guardian Eternal
 Ranged attacks that target this unit have -1 D.
 
 Rules
-Martial Ka'tah, Deadly Demise D3, Damaged 5, Aegis of the Emperor, Feel No Pain 5+*, Magna Imperator, Moritoi Ancients
+Damaged 5, Deadly Demise D3, Aegis of the Emperor, Martial Ka'tah, Feel No Pain 5+*, Magna Imperator, Moritoi Ancients
 Stratagems
 
 EMPEROR’S CHOSEN In Auramite Clad, Superhuman Focus
@@ -3458,12 +3429,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Grav-Assault Force.
 
 Keywords
-DREADNOUGHT
-FACTION: ADEPTUS CUSTODES
-IMPERIUM
-TELEMON HEAVY DREADNOUGHT
 VEHICLE
+DREADNOUGHT
+IMPERIUM
 WALKER
+TELEMON HEAVY DREADNOUGHT
+FACTION: ADEPTUS CUSTODES
 Ask about this unit
 ‹ Telemon Heavy Dreadnought
 

@@ -411,14 +411,6 @@ Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Fina
 War Dog Executioner
 Snarling Rivalry
 ×3 units
-War Dog autocannon×2
-48"
-4
-3+
-9
--1
-3
-IGNORES COVER
 Diabolus heavy stubber
 36"
 3
@@ -427,6 +419,14 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3, IGNORES COVER
+War Dog autocannon×2
+48"
+4
+3+
+9
+-1
+3
+IGNORES COVER
 Target Below Half-strength: +1 to hit rolls (Executioner)
 Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
 Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
@@ -517,6 +517,9 @@ STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
 1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
 War Dog Karnivore
 Panoply of the Cursed Knights
+
+Pick one to fight with: Reaper chaintalon or Slaughterclaw.
+
 Reaper chaintalon
 12
 3+
@@ -524,7 +527,6 @@ Reaper chaintalon
 -2
 1
 SUSTAINED HITS 1
-OR
 Slaughterclaw
 6
 3+
@@ -539,6 +541,9 @@ STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
 1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
 War Dog Karnivore
 ×5 units
+
+Pick one to fight with: Reaper chaintalon or Slaughterclaw.
+
 Reaper chaintalon
 12
 3+
@@ -546,7 +551,6 @@ Reaper chaintalon
 -2
 1
 SUSTAINED HITS 1
-OR
 Slaughterclaw
 6
 3+
@@ -564,6 +568,10 @@ STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
 War Dog Brigand
 Warlord
 Final Howl (Aura)
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
 Brigand
 
 Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
@@ -571,10 +579,6 @@ Ranged weapons equipped by this model have the [Ignores Cover] ability while tar
 Damaged: 1-5 wounds remaining
 
 While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
-
-*Invulnerable Save
-
-This model has a 5+ invulnerable save against ranged attacks.
 
 Final Howl (Aura)
 Enhancement
@@ -585,6 +589,10 @@ WAR DOG model only. While a friendly War Dog model is within 6" of the bearer, e
 
 War Dog Brigand
 1 of 4
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
 Brigand
 
 Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
@@ -592,14 +600,14 @@ Ranged weapons equipped by this model have the [Ignores Cover] ability while tar
 Damaged: 1-5 wounds remaining
 
 While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
-
-*Invulnerable Save
-
-This model has a 5+ invulnerable save against ranged attacks.
 
 War Dog Brigand
 2–4 of 4
 ×3 units
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
 Brigand
 
 Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
@@ -608,13 +616,13 @@ Damaged: 1-5 wounds remaining
 
 While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
+War Dog Executioner
+Snarling Rivalry
+×3 units
 *Invulnerable Save
 
 This model has a 5+ invulnerable save against ranged attacks.
 
-War Dog Executioner
-Snarling Rivalry
-×3 units
 Executioner
 
 Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3" of it must take a Battle-shock test.
@@ -622,10 +630,6 @@ Each time this model makes an attack that targets a unit Below Half-strength, ad
 Damaged: 1-5 wounds remaining
 
 While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
-
-*Invulnerable Save
-
-This model has a 5+ invulnerable save against ranged attacks.
 
 Snarling Rivalry
 
@@ -635,6 +639,10 @@ EXECUTIONER unit only. This unit’s ranged attacks have [IGNORES COVER].
 
 War Dog Karnivore
 Panoply of the Cursed Knights
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
 Karnivore
 
 You can re-roll Advance and Charge rolls made for this model.
@@ -642,10 +650,6 @@ You can re-roll Advance and Charge rolls made for this model.
 Damaged: 1-5 wounds remaining
 
 While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
-
-*Invulnerable Save
-
-This model has a 5+ invulnerable save against ranged attacks.
 
 Panoply of the Cursed Knights
 Enhancement
@@ -656,6 +660,10 @@ WAR DOG model only. Each time an attack targets the bearer, worsen the Armour Pe
 
 War Dog Karnivore
 ×5 units
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
 Karnivore
 
 You can re-roll Advance and Charge rolls made for this model.
@@ -663,10 +671,6 @@ You can re-roll Advance and Charge rolls made for this model.
 Damaged: 1-5 wounds remaining
 
 While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
-
-*Invulnerable Save
-
-This model has a 5+ invulnerable save against ranged attacks.
 
 ######## rules · ABILITIES Rules
 Chaos Knights · Reconnaissance
@@ -2334,13 +2338,13 @@ Armoured feet
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
 1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
 ABILITIES
-Brigand
-
-Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
-
 *Invulnerable Save
 
 This model has a 5+ invulnerable save against ranged attacks.
+
+Brigand
+
+Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
 
 Final Howl (Aura)
 Enhancement
@@ -2360,14 +2364,14 @@ HUNTING WARPACK Leash of the Masters, Stalking Focus, Insensate Bloodthirst
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-BATTLELINE
-BRIGAND
-CHAOS
-CHARACTER*
-FACTION: CHAOS KNIGHTS
 VEHICLE
 WALKER
+CHAOS
 WAR DOG
+BRIGAND
+FACTION: CHAOS KNIGHTS
+BATTLELINE
+CHARACTER*
 WARLORD
 *from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)
 Ask about this unit
@@ -2455,13 +2459,13 @@ Armoured feet
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
 1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
 ABILITIES
-Brigand
-
-Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
-
 *Invulnerable Save
 
 This model has a 5+ invulnerable save against ranged attacks.
+
+Brigand
+
+Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
 
 Rules
 Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
@@ -2474,14 +2478,14 @@ HUNTING WARPACK Leash of the Masters, Stalking Focus, Insensate Bloodthirst
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-BATTLELINE
-BRIGAND
-CHAOS
-CHARACTER*
-FACTION: CHAOS KNIGHTS
 VEHICLE
 WALKER
+CHAOS
 WAR DOG
+BRIGAND
+FACTION: CHAOS KNIGHTS
+BATTLELINE
+CHARACTER*
 *from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)
 Ask about this unit
 ‹ War Dog Brigand · Final Howl (Aura)
@@ -2569,13 +2573,13 @@ Armoured feet
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
 1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
 ABILITIES
-Brigand
-
-Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
-
 *Invulnerable Save
 
 This model has a 5+ invulnerable save against ranged attacks.
+
+Brigand
+
+Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
 
 Rules
 Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
@@ -2588,13 +2592,13 @@ HUNTING WARPACK Leash of the Masters, Stalking Focus, Insensate Bloodthirst
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-BATTLELINE
-BRIGAND
-CHAOS
-FACTION: CHAOS KNIGHTS
 VEHICLE
 WALKER
+CHAOS
 WAR DOG
+BRIGAND
+FACTION: CHAOS KNIGHTS
+BATTLELINE
 Ask about this unit
 ‹ War Dog Brigand (1 of 4)
 War Dog Executioner ›
@@ -2643,14 +2647,6 @@ BS
 S
 AP
 D
-War Dog autocannon×2
-48"
-4
-3+
-9
--1
-3
-IGNORES COVER
 Diabolus heavy stubber
 36"
 3
@@ -2659,6 +2655,14 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3, IGNORES COVER
+War Dog autocannon×2
+48"
+4
+3+
+9
+-1
+3
+IGNORES COVER
 MELEE WEAPONS
 A
 WS
@@ -2674,13 +2678,13 @@ Armoured feet
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
 1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
 ABILITIES
-Executioner
-
-Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3" of it must take a Battle-shock test.
-
 *Invulnerable Save
 
 This model has a 5+ invulnerable save against ranged attacks.
+
+Executioner
+
+Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3" of it must take a Battle-shock test.
 
 Snarling Rivalry
 
@@ -2699,13 +2703,13 @@ HUNTING WARPACK Leash of the Masters, Stalking Focus, Insensate Bloodthirst
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-BATTLELINE
-CHAOS
-EXECUTIONER
-FACTION: CHAOS KNIGHTS
 VEHICLE
 WALKER
+CHAOS
 WAR DOG
+EXECUTIONER
+FACTION: CHAOS KNIGHTS
+BATTLELINE
 Ask about this unit
 ‹ War Dog Brigand (2–4 of 4)
 War Dog Karnivore · Panoply of the Cursed Knights ›
@@ -2768,6 +2772,9 @@ WS
 S
 AP
 D
+
+Pick one to fight with: Reaper chaintalon or Slaughterclaw.
+
 Reaper chaintalon
 12
 3+
@@ -2775,7 +2782,6 @@ Reaper chaintalon
 -2
 1
 SUSTAINED HITS 1
-OR
 Slaughterclaw
 6
 3+
@@ -2786,13 +2792,13 @@ SUSTAINED HITS 1
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
 1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
 ABILITIES
-Karnivore
-
-You can re-roll Advance and Charge rolls made for this model.
-
 *Invulnerable Save
 
 This model has a 5+ invulnerable save against ranged attacks.
+
+Karnivore
+
+You can re-roll Advance and Charge rolls made for this model.
 
 Panoply of the Cursed Knights
 Enhancement
@@ -2812,14 +2818,14 @@ HUNTING WARPACK Leash of the Masters, Stalking Focus, Insensate Bloodthirst
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-BATTLELINE
-CHAOS
-CHARACTER*
-FACTION: CHAOS KNIGHTS
-KARNIVORE
 VEHICLE
 WALKER
+CHAOS
 WAR DOG
+KARNIVORE
+FACTION: CHAOS KNIGHTS
+BATTLELINE
+CHARACTER*
 *from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)
 Ask about this unit
 ‹ War Dog Executioner
@@ -2881,6 +2887,9 @@ WS
 S
 AP
 D
+
+Pick one to fight with: Reaper chaintalon or Slaughterclaw.
+
 Reaper chaintalon
 12
 3+
@@ -2888,7 +2897,6 @@ Reaper chaintalon
 -2
 1
 SUSTAINED HITS 1
-OR
 Slaughterclaw
 6
 3+
@@ -2899,13 +2907,13 @@ SUSTAINED HITS 1
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
 1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
 ABILITIES
-Karnivore
-
-You can re-roll Advance and Charge rolls made for this model.
-
 *Invulnerable Save
 
 This model has a 5+ invulnerable save against ranged attacks.
+
+Karnivore
+
+You can re-roll Advance and Charge rolls made for this model.
 
 Rules
 Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
@@ -2918,13 +2926,13 @@ HUNTING WARPACK Leash of the Masters, Stalking Focus, Insensate Bloodthirst
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-BATTLELINE
-CHAOS
-FACTION: CHAOS KNIGHTS
-KARNIVORE
 VEHICLE
 WALKER
+CHAOS
 WAR DOG
+KARNIVORE
+FACTION: CHAOS KNIGHTS
+BATTLELINE
 Ask about this unit
 ‹ War Dog Karnivore · Panoply of the Cursed Knights
 

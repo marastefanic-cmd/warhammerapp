@@ -365,6 +365,13 @@ STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
 The Silent King
 Warlord
+Annihilator beam×2
+24"
+1
+2+
+14
+-4
+6
 Sceptre of Eternal GlorySZAREKH
 24"
 2
@@ -381,13 +388,6 @@ Staff of StarsSZAREKH
 -1
 1
 INDIRECT FIRE
-Annihilator beam×2
-24"
-1
-2+
-14
--4
-6
 Damaged (Szarekh 1-6 wounds left): -1 to hit rolls; Szarekh’s weapons: halve A (Damaged: 1-6 wounds remaining)
 Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
 Own aura, if it has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
@@ -454,6 +454,22 @@ STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
 Tesseract Vault
 1 of 2
+Tesla sphere×4
+24"
+6
+3+
+7
+0
+1
+SUSTAINED HITS 2
+Antimatter meteor
+24"
+D6+3
+3+
+10
+-3
+3
+BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER
 Cosmic fire
 18"
 3D6
@@ -470,28 +486,29 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-Antimatter meteor
-24"
-D6+3
-3+
-10
--3
-3
-BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER
-Tesla sphere×4
-24"
-6
-3+
-7
-0
-1
-SUSTAINED HITS 2
+Damaged (1-8 wounds left): -4 OC; you can only select one of the C'tan Powers weapons in your Shooting phase, instead of two (Damaged: 1-8 wounds remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
 1CP Cosmic Storm: +1 AP, selected to shoot: its Tesla Sphere weapons
 Tesseract Vault
 2 of 2
+Tesla sphere×4
+24"
+6
+3+
+7
+0
+1
+SUSTAINED HITS 2
+Antimatter meteor
+24"
+D6+3
+3+
+10
+-3
+3
+BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER
 Cosmic fire
 18"
 3D6
@@ -508,22 +525,7 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-Antimatter meteor
-24"
-D6+3
-3+
-10
--3
-3
-BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER
-Tesla sphere×4
-24"
-6
-3+
-7
-0
-1
-SUSTAINED HITS 2
+Damaged (1-8 wounds left): -4 OC; you can only select one of the C'tan Powers weapons in your Shooting phase, instead of two (Damaged: 1-8 wounds remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
@@ -545,6 +547,12 @@ STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
 The Silent King
 Warlord
+Armoured bulk×2
+1
+4+
+4
+0
+1
 Weapons of the Final TriarchSZAREKH
 12
 2+
@@ -552,12 +560,6 @@ Weapons of the Final TriarchSZAREKH
 -3
 2
 LETHAL HITS
-Armoured bulk×2
-1
-4+
-4
-0
-1
 Damaged (Szarekh 1-6 wounds left): -1 to hit rolls; Szarekh’s weapons: halve A (Damaged: 1-6 wounds remaining)
 Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
 Own aura, if it has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
@@ -664,6 +666,7 @@ Armoured bulk
 8
 0
 1
+Damaged (1-8 wounds left): -4 OC; you can only select one of the C'tan Powers weapons in your Shooting phase, instead of two (Damaged: 1-8 wounds remaining)
 Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
 Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
 Tesseract Vault
@@ -674,6 +677,7 @@ Armoured bulk
 8
 0
 1
+Damaged (1-8 wounds left): -4 OC; you can only select one of the C'tan Powers weapons in your Shooting phase, instead of two (Damaged: 1-8 wounds remaining)
 Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
 Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
 
@@ -696,29 +700,6 @@ Once per battle, at the end of your Command phase, this model can use this abili
 
 The Silent King
 Warlord
-Damaged: 1-6 wounds remaining
-
-While this unit’s Szarekh model has 1-6 wounds remaining, halve the Attacks characteristic of that model’s weapons, and each time this unit makes an attack, subtract 1 from the Hit roll.
-
-Triarch Abilities
-Start of the battle round
-
-Start of the battle round
-
-At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.
-
-The Silent King
-
-While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, improve that unit’s Leadership characteristic by 1.
-
-Triarchal Menhirs
-
-If this unit’s Szarekh model is destroyed, all of this unit’s remaining Triarchal Menhir models are also destroyed.
-
-Supreme Commander
-
-If this unit is in your army, it must be your Warlord.
-
 TRIARCH ABILITIES: PICK ONE
 Phaeron of the Stars
 Their Move · Your Shoot · Fight
@@ -740,6 +721,29 @@ Your Movement
 Aura · Movement · Your turn
 
 While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.
+
+Triarch Abilities
+Start of the battle round
+
+Start of the battle round
+
+At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.
+
+The Silent King
+
+While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, improve that unit’s Leadership characteristic by 1.
+
+Damaged: 1-6 wounds remaining
+
+While this unit’s Szarekh model has 1-6 wounds remaining, halve the Attacks characteristic of that model’s weapons, and each time this unit makes an attack, subtract 1 from the Hit roll.
+
+Supreme Commander
+
+If this unit is in your army, it must be your Warlord.
+
+Triarchal Menhirs
+
+If this unit’s Szarekh model is destroyed, all of this unit’s remaining Triarchal Menhir models are also destroyed.
 
 Royal Warden
 Adaptive Strategy
@@ -838,35 +842,35 @@ While a friendly NECRONS unit is within 6" of the bearer, models in that unit ha
 
 Tesseract Vault
 1 of 2
-Damaged: 1-8 wounds remaining
-Your Shooting
-
-Shooting · Your turn
-
-While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.
-
 Powers of the C’tan
 Your Shooting
 
 Shooting · Your turn
 
 In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).
+
+Damaged: 1-8 wounds remaining
+Your Shooting
+
+Shooting · Your turn
+
+While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.
 
 Tesseract Vault
 2 of 2
-Damaged: 1-8 wounds remaining
-Your Shooting
-
-Shooting · Your turn
-
-While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.
-
 Powers of the C’tan
 Your Shooting
 
 Shooting · Your turn
 
 In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).
+
+Damaged: 1-8 wounds remaining
+Your Shooting
+
+Shooting · Your turn
+
+While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.
 
 ######## rules · ABILITIES Rules
 Necrons · Priority Assets
@@ -2345,7 +2349,7 @@ Once per battle · Command · Your turn
 Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12" of this model: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.
 
 Rules
-Reanimation Protocols, Leader, Worthy Foes
+Leader, Reanimation Protocols, Worthy Foes
 Stratagems
 
 OBEISANCE PHALANX Enslaved Artifice
@@ -2355,12 +2359,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Ch
 None from The Phaeron’s Armoury.
 
 Keywords
+INFANTRY
 CHARACTER
 EPIC HERO
-FACTION: NECRONS
-IMOTEKH THE STORMLORD
-INFANTRY
 NOBLE
+IMOTEKH THE STORMLORD
+FACTION: NECRONS
 Ask about this unit
 The Silent King ›
 
@@ -2420,6 +2424,13 @@ BS
 S
 AP
 D
+Annihilator beam×2
+24"
+1
+2+
+14
+-4
+6
 Sceptre of Eternal GlorySZAREKH
 24"
 2
@@ -2436,19 +2447,18 @@ Staff of StarsSZAREKH
 -1
 1
 INDIRECT FIRE
-Annihilator beam×2
-24"
-1
-2+
-14
--4
-6
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
+Armoured bulk×2
+1
+4+
+4
+0
+1
 Weapons of the Final TriarchSZAREKH
 12
 2+
@@ -2456,35 +2466,10 @@ Weapons of the Final TriarchSZAREKH
 -3
 2
 LETHAL HITS
-Armoured bulk×2
-1
-4+
-4
-0
-1
 Own aura, if it has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
 STRATAGEMS · OBEISANCE PHALANX · FIGHT PHASE
 1CP Suffer No Rival: [PRECISION], not yet selected to fight, until the end of the phase
 ABILITIES
-Triarch Abilities
-Start of the battle round
-
-Start of the battle round
-
-At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.
-
-The Silent King
-
-While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, improve that unit’s Leadership characteristic by 1.
-
-Triarchal Menhirs
-
-If this unit’s Szarekh model is destroyed, all of this unit’s remaining Triarchal Menhir models are also destroyed.
-
-Supreme Commander
-
-If this unit is in your army, it must be your Warlord.
-
 Phaeron of the Stars
 - Triarch Abilities: pick one
 Their Move · Your Shoot · Fight
@@ -2509,8 +2494,27 @@ Aura · Movement · Your turn
 
 While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.
 
+Triarch Abilities
+Start of the battle round
+
+Start of the battle round
+
+At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.
+
+The Silent King
+
+While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, improve that unit’s Leadership characteristic by 1.
+
+Supreme Commander
+
+If this unit is in your army, it must be your Warlord.
+
+Triarchal Menhirs
+
+If this unit’s Szarekh model is destroyed, all of this unit’s remaining Triarchal Menhir models are also destroyed.
+
 Rules
-Reanimation Protocols, Deadly Demise D6+3 (Szarekh model only), Worthy Foes
+Deadly Demise D6+3 (Szarekh model only), Reanimation Protocols, Worthy Foes
 Stratagems
 
 OBEISANCE PHALANX Territorial Obsession, Enslaved Artifice, Nanoassembly Protocols, Suffer No Rival, Your Time Is Nigh
@@ -2520,10 +2524,10 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from The Phaeron’s Armoury.
 
 Keywords
-EPIC HERO
-FACTION: NECRONS
-TRIARCH
 VEHICLE
+EPIC HERO
+TRIARCH
+FACTION: NECRONS
 WARLORD
 Szarekh only:
 CHARACTER
@@ -2619,10 +2623,10 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Ch
 None from The Phaeron’s Armoury.
 
 Keywords
-CHARACTER
-FACTION: NECRONS
 INFANTRY
+CHARACTER
 ROYAL WARDEN
+FACTION: NECRONS
 Ask about this unit
 ‹ The Silent King
 Technomancer ›
@@ -2753,14 +2757,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Ch
 None from The Phaeron’s Armoury.
 
 Keywords
+INFANTRY
 CHARACTER
 CRYPTEK
-FACTION: NECRONS
 FLY
-INFANTRY
 TECHNOMANCER
 BATTLELINE*
 IMMORTALS*
+FACTION: NECRONS
 *from the supported Immortals
 Ask about this unit
 ‹ Royal Warden
@@ -2821,7 +2825,7 @@ Fight · Either turn
 Each time a model in this unit makes a melee attack, if the target of that attack is Below Half-strength, a successful Hit roll scores a Critical Hit.
 
 Rules
-Reanimation Protocols, Stealth, Infiltrators
+Infiltrators, Stealth, Reanimation Protocols
 Stratagems
 
 OBEISANCE PHALANX Enslaved Artifice
@@ -2831,9 +2835,9 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from The Phaeron’s Armoury.
 
 Keywords
-FACTION: NECRONS
-FLAYED ONES
 INFANTRY
+FLAYED ONES
+FACTION: NECRONS
 Ask about this unit
 ‹ Technomancer
 Ophydian Destroyers ›
@@ -2893,7 +2897,7 @@ At the end of your opponent’s turn, if this unit is unengaged, you can use thi
 Place this unit in strategic reserves.
 This unit must make an ingress move in your next Movement phase (including in your first turn).
 Rules
-Reanimation Protocols, Deep Strike
+Deep Strike, Reanimation Protocols
 Stratagems
 
 OBEISANCE PHALANX Enslaved Artifice
@@ -2903,10 +2907,10 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from The Phaeron’s Armoury.
 
 Keywords
-DESTROYER CULT
-FACTION: NECRONS
 INFANTRY
+DESTROYER CULT
 OPHYDIAN DESTROYERS
+FACTION: NECRONS
 Ask about this unit
 ‹ Flayed Ones
 Canoptek Scarab Swarms ›
@@ -2979,11 +2983,11 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from The Phaeron’s Armoury.
 
 Keywords
-CANOPTEK
-FACTION: NECRONS
-FLY
-SCARAB SWARMS
 SWARM
+FLY
+CANOPTEK
+SCARAB SWARMS
+FACTION: NECRONS
 Ask about this unit
 ‹ Ophydian Destroyers
 Canoptek Reanimator ›
@@ -3058,7 +3062,7 @@ Aura
 While a friendly NECRONS unit is within 3" of this model, each time that unit’s Reanimation Protocols activate, that unit heals an additional D3 wounds.
 
 Rules
-Reanimation Protocols, Feel No Pain 4+
+Feel No Pain 4+, Reanimation Protocols
 Stratagems
 
 OBEISANCE PHALANX Enslaved Artifice, Nanoassembly Protocols
@@ -3068,11 +3072,11 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from The Phaeron’s Armoury.
 
 Keywords
-CANOPTEK
-FACTION: NECRONS
-REANIMATOR
 VEHICLE
 WALKER
+CANOPTEK
+REANIMATOR
+FACTION: NECRONS
 Ask about this unit
 ‹ Canoptek Scarab Swarms
 Canoptek Spyders ›
@@ -3160,7 +3164,7 @@ Aura
 While a friendly NECRONS unit is within 6" of the bearer, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.
 
 Rules
-Reanimation Protocols, Deadly Demise 1
+Deadly Demise 1, Reanimation Protocols
 Stratagems
 
 OBEISANCE PHALANX Enslaved Artifice, Nanoassembly Protocols
@@ -3170,11 +3174,11 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Counteroffe
 None from The Phaeron’s Armoury.
 
 Keywords
-CANOPTEK
-FACTION: NECRONS
-FLY
-SPYDERS
 VEHICLE
+FLY
+CANOPTEK
+SPYDERS
+FACTION: NECRONS
 Ask about this unit
 ‹ Canoptek Reanimator
 Tesseract Vault (1 of 2) ›
@@ -3212,7 +3216,7 @@ WHEN TARGETED
 Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
 Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
 DAMAGED 1-8 W
-SEE THE RULE
+-4 OC; YOU CAN ONLY SELECT ONE OF THE C'TAN POWERS WEAPONS IN YOUR SHOOTING PHASE, INSTEAD OF TWO
 ALL ATTACKS
 Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
 RANGED WEAPONS
@@ -3222,6 +3226,22 @@ BS
 S
 AP
 D
+Tesla sphere×4
+24"
+6
+3+
+7
+0
+1
+SUSTAINED HITS 2
+Antimatter meteor
+24"
+D6+3
+3+
+10
+-3
+3
+BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER
 Cosmic fire
 18"
 3D6
@@ -3238,22 +3258,6 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-Antimatter meteor
-24"
-D6+3
-3+
-10
--3
-3
-BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER
-Tesla sphere×4
-24"
-6
-3+
-7
-0
-1
-SUSTAINED HITS 2
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
 1CP Cosmic Storm: +1 AP, selected to shoot: its Tesla Sphere weapons
@@ -3279,7 +3283,7 @@ Shooting · Your turn
 In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).
 
 Rules
-Reanimation Protocols, Deadly Demise D6+3, Empowered Engines
+Deadly Demise D6+3, Reanimation Protocols, Empowered Engines
 Stratagems
 
 OBEISANCE PHALANX Nanoassembly Protocols
@@ -3289,13 +3293,13 @@ THE PHAERON’S ARMOURY Subsurface Quantumweave, Particle Pulse, Cosmic Storm
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Counteroffensive, Command Re-roll
 
 Keywords
-FACTION: NECRONS
+VEHICLE
+TITANIC
 FLY
 FRAME
-TESSERACT VAULT
-TITANIC
 TOWERING
-VEHICLE
+TESSERACT VAULT
+FACTION: NECRONS
 Ask about this unit
 ‹ Canoptek Spyders
 Tesseract Vault (2 of 2) ›
@@ -3333,7 +3337,7 @@ WHEN TARGETED
 Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
 Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
 DAMAGED 1-8 W
-SEE THE RULE
+-4 OC; YOU CAN ONLY SELECT ONE OF THE C'TAN POWERS WEAPONS IN YOUR SHOOTING PHASE, INSTEAD OF TWO
 ALL ATTACKS
 Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
 RANGED WEAPONS
@@ -3343,6 +3347,22 @@ BS
 S
 AP
 D
+Tesla sphere×4
+24"
+6
+3+
+7
+0
+1
+SUSTAINED HITS 2
+Antimatter meteor
+24"
+D6+3
+3+
+10
+-3
+3
+BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER
 Cosmic fire
 18"
 3D6
@@ -3359,22 +3379,6 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-Antimatter meteor
-24"
-D6+3
-3+
-10
--3
-3
-BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER
-Tesla sphere×4
-24"
-6
-3+
-7
-0
-1
-SUSTAINED HITS 2
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
 1CP Cosmic Storm: +1 AP, selected to shoot: its Tesla Sphere weapons
@@ -3400,7 +3404,7 @@ Shooting · Your turn
 In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).
 
 Rules
-Reanimation Protocols, Deadly Demise D6+3, Empowered Engines
+Deadly Demise D6+3, Reanimation Protocols, Empowered Engines
 Stratagems
 
 OBEISANCE PHALANX Nanoassembly Protocols
@@ -3410,13 +3414,13 @@ THE PHAERON’S ARMOURY Subsurface Quantumweave, Particle Pulse, Cosmic Storm
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Counteroffensive, Command Re-roll
 
 Keywords
-FACTION: NECRONS
+VEHICLE
+TITANIC
 FLY
 FRAME
-TESSERACT VAULT
-TITANIC
 TOWERING
-VEHICLE
+TESSERACT VAULT
+FACTION: NECRONS
 Ask about this unit
 ‹ Tesseract Vault (1 of 2)
 

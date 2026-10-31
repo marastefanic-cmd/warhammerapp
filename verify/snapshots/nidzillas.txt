@@ -339,14 +339,6 @@ Psychic tendril
 -2
 D3
 PRECISION, PSYCHIC, ANTI-CHARACTER 2+
-➤neurolance
-18"
-2
-2+
-12
--3
-D6
-MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
 ➤neuroblast
 18"
 2D6
@@ -355,6 +347,14 @@ MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
 -2
 1
 BLAST, PSYCHIC, ANTI-CHARACTER 2+
+➤neurolance
+18"
+2
+2+
+12
+-3
+D6
+MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
@@ -372,14 +372,6 @@ Psychic tendril
 -2
 D3
 PRECISION, PSYCHIC
-➤neurolance
-18"
-2
-2+
-12
--3
-D6
-MELTA 2, PSYCHIC
 ➤neuroblast
 18"
 2D6
@@ -388,6 +380,14 @@ MELTA 2, PSYCHIC
 -2
 1
 BLAST, PSYCHIC
+➤neurolance
+18"
+2
+2+
+12
+-3
+D6
+MELTA 2, PSYCHIC
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
@@ -397,13 +397,6 @@ STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
 1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 Tyrannofex
 ×2 units
-Stinger salvoes
-24"
-8
-3+
-5
-0
-1
 Acid spray
 18"
 D6+6
@@ -412,6 +405,13 @@ D6+6
 -2
 2
 TORRENT
+Stinger salvoes
+24"
+8
+3+
+5
+0
+1
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
@@ -436,6 +436,9 @@ STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 Hive Tyrant
 Warlord
 Monstrous Nemesis
+
+Fights with both: Monstrous bonesword and lash whip, plus Monstrous scything talons on top (extra attacks).
+
 Monstrous bonesword and lash whip
 6
 2+
@@ -443,7 +446,6 @@ Monstrous bonesword and lash whip
 -2
 3
 TWIN-LINKED
-+
 Monstrous scything talons
 4
 2+
@@ -470,13 +472,15 @@ Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of th
 Norn Assimilator
 Synaptoprescience
 1 of 2
+
+Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
+
 Monstrous scything talons
 6
 2+
 9
 -2
 3
-+
 Toxinjecter Harpoon
 4
 2+
@@ -496,13 +500,15 @@ STRATAGEMS · TALONS OF THE NORN QUEEN
 Norn Assimilator
 Synaptoprescience
 2 of 2
+
+Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
+
 Monstrous scything talons
 6
 2+
 9
 -2
 3
-+
 Toxinjecter Harpoon
 4
 2+
@@ -521,13 +527,15 @@ STRATAGEMS · TALONS OF THE NORN QUEEN
 1CP Lesser Prey: +2 S, When selected to fight
 Norn Emissary
 Destabilising Predation
+
+Fights with both: Monstrous scything talons, plus Monstrous rending claws on top (extra attacks).
+
 Monstrous scything talons
 6
 2+
 9
 -2
 3
-+
 Monstrous rending claws
 4
 2+
@@ -545,13 +553,15 @@ STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 STRATAGEMS · TALONS OF THE NORN QUEEN
 1CP Lesser Prey: +2 S, When selected to fight
 Norn Emissary
+
+Fights with both: Monstrous scything talons, plus Monstrous rending claws on top (extra attacks).
+
 Monstrous scything talons
 6
 2+
 9
 -2
 3
-+
 Monstrous rending claws
 4
 2+
@@ -611,13 +621,6 @@ While a friendly TYRANIDS unit is within 9" of this model, that unit is within y
 Hive Tyrant
 Warlord
 Monstrous Nemesis
-Onslaught
-Move · Your Shoot
-
-Aura, Psychic · Movement (either turn) / Your Shooting
-
-While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
-
 Will of the Hive Mind
 Once per battle round, per army
 Any phase
@@ -625,6 +628,13 @@ Any phase
 Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
+
+Onslaught
+Move · Your Shoot
+
+Aura, Psychic · Movement (either turn) / Your Shooting
+
+While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
 
 Monstrous Nemesis
 Enhancement
@@ -643,18 +653,6 @@ While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding N
 Norn Assimilator
 Synaptoprescience
 1 of 2
-Harpoon Barbs
-Once per turn
-Their Movement
-
-Once per turn · Movement · Their turn
-
-Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
-
-Damaged: 1-5 Wounds Remaining
-
-While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
 Singular Purpose
 Start of the first battle round
 
@@ -666,6 +664,18 @@ Select one enemy unit. Until the end of the battle, each time this model makes a
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
+
+Harpoon Barbs
+Once per turn
+Their Movement
+
+Once per turn · Movement · Their turn
+
+Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
+
+Damaged: 1-5 Wounds Remaining
+
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 Protean Purpose
 Once per battle, per unit
@@ -686,18 +696,6 @@ NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 Norn Assimilator
 Synaptoprescience
 2 of 2
-Harpoon Barbs
-Once per turn
-Their Movement
-
-Once per turn · Movement · Their turn
-
-Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
-
-Damaged: 1-5 Wounds Remaining
-
-While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
 Singular Purpose
 Start of the first battle round
 
@@ -709,6 +707,18 @@ Select one enemy unit. Until the end of the battle, each time this model makes a
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
+
+Harpoon Barbs
+Once per turn
+Their Movement
+
+Once per turn · Movement · Their turn
+
+Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
+
+Damaged: 1-5 Wounds Remaining
+
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 Protean Purpose
 Once per battle, per unit
@@ -740,6 +750,10 @@ Select one objective marker. Until the end of the battle, while this model is wi
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
 
+Unnatural Resilience
+
+This model has the Feel No Pain 4+ ability against mortal wounds.
+
 Damaged: 1-5 Wounds Remaining
 
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
@@ -759,10 +773,6 @@ Enhancement
 
 NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].
 
-Unnatural Resilience
-
-This model has the Feel No Pain 4+ ability against mortal wounds.
-
 Norn Emissary
 Singular Purpose
 Start of the first battle round
@@ -776,6 +786,10 @@ Select one objective marker. Until the end of the battle, while this model is wi
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
 
+Unnatural Resilience
+
+This model has the Feel No Pain 4+ ability against mortal wounds.
+
 Damaged: 1-5 Wounds Remaining
 
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
@@ -787,10 +801,6 @@ Your Command
 Once per battle, per unit · Command · Your turn
 
 (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
-
-Unnatural Resilience
-
-This model has the Feel No Pain 4+ ability against mortal wounds.
 
 Tyrannofex
 ×2 units
@@ -2331,7 +2341,7 @@ Aura
 While a friendly TYRANIDS unit is within 9" of this model, that unit is within your army’s Synapse Range.
 
 Rules
-Deadly Demise D3, Shadow in the Warp, Synapse, Leader, Enraged Behemoths
+Deadly Demise D3, Leader, Shadow in the Warp, Synapse, Enraged Behemoths
 Stratagems
 
 CRUSHER STAMPEDE Untrammelled Ferocity, Corrosive Viscera, Swarm-guided Salvoes, Massive Impact, Rampaging Monstrosities, Savage Roar
@@ -2341,15 +2351,15 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Talons of the Norn Queen.
 
 Keywords
+MONSTER
 CHARACTER
 EPIC HERO
-FACTION: TYRANIDS
-GREAT DEVOURER
-HIVE TYRANT
-MONSTER
 PSYKER
+GREAT DEVOURER
 SYNAPSE
+HIVE TYRANT
 THE SWARMLORD
+FACTION: TYRANIDS
 Ask about this unit
 Hive Tyrant · Monstrous Nemesis ›
 
@@ -2389,6 +2399,9 @@ WS
 S
 AP
 D
+
+Fights with both: Monstrous bonesword and lash whip, plus Monstrous scything talons on top (extra attacks).
+
 Monstrous bonesword and lash whip
 6
 2+
@@ -2396,7 +2409,6 @@ Monstrous bonesword and lash whip
 -2
 3
 TWIN-LINKED
-+
 Monstrous scything talons
 4
 2+
@@ -2411,13 +2423,6 @@ Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of th
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: re-roll hit rolls
 ABILITIES
-Onslaught
-Move · Your Shoot
-
-Aura, Psychic · Movement (either turn) / Your Shooting
-
-While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
-
 Will of the Hive Mind
 Once per battle round, per army
 Any phase
@@ -2425,6 +2430,13 @@ Any phase
 Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
+
+Onslaught
+Move · Your Shoot
+
+Aura, Psychic · Movement (either turn) / Your Shooting
+
+While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
 
 Monstrous Nemesis
 Enhancement
@@ -2435,7 +2447,7 @@ Enhancement · Fight · Either turn
 TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.
 
 Rules
-Deadly Demise D3, Shadow in the Warp, Synapse, Leader, Enraged Behemoths
+Deadly Demise D3, Leader, Shadow in the Warp, Synapse, Enraged Behemoths
 Stratagems
 
 CRUSHER STAMPEDE Untrammelled Ferocity, Corrosive Viscera, Swarm-guided Salvoes, Massive Impact, Rampaging Monstrosities, Savage Roar
@@ -2445,13 +2457,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Talons of the Norn Queen.
 
 Keywords
-CHARACTER
-FACTION: TYRANIDS
-GREAT DEVOURER
-HIVE TYRANT
 MONSTER
+CHARACTER
 PSYKER
+GREAT DEVOURER
 SYNAPSE
+HIVE TYRANT
+FACTION: TYRANIDS
 WARLORD
 Ask about this unit
 ‹ The Swarmlord
@@ -2521,11 +2533,11 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Crusher Stampede or Talons of the Norn Queen.
 
 Keywords
-ENDLESS MULTITUDE
-FACTION: TYRANIDS
-GREAT DEVOURER
 INFANTRY
+GREAT DEVOURER
+ENDLESS MULTITUDE
 NEUROGAUNTS
+FACTION: TYRANIDS
 Ask about this unit
 ‹ Hive Tyrant · Monstrous Nemesis
 Norn Assimilator · Synaptoprescience (1 of 2) ›
@@ -2594,13 +2606,15 @@ WS
 S
 AP
 D
+
+Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
+
 Monstrous scything talons
 6
 2+
 9
 -2
 3
-+
 Toxinjecter Harpoon
 4
 2+
@@ -2614,14 +2628,6 @@ STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 STRATAGEMS · TALONS OF THE NORN QUEEN
 1CP Lesser Prey: +2 S, When selected to fight
 ABILITIES
-Harpoon Barbs
-Once per turn
-Their Movement
-
-Once per turn · Movement · Their turn
-
-Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
-
 Singular Purpose
 Start of the first battle round
 
@@ -2633,6 +2639,14 @@ Select one enemy unit. Until the end of the battle, each time this model makes a
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
+
+Harpoon Barbs
+Once per turn
+Their Movement
+
+Once per turn · Movement · Their turn
+
+Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
 
 Protean Purpose
 Once per battle, per unit
@@ -2661,12 +2675,12 @@ TALONS OF THE NORN QUEEN Tanglestrike Rounds, Lesser Prey, Catalytic Biofortific
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-FACTION: TYRANIDS
-GREAT DEVOURER
-HARVESTER
 MONSTER
-NORN ASSIMILATOR
+GREAT DEVOURER
 SYNAPSE
+HARVESTER
+NORN ASSIMILATOR
+FACTION: TYRANIDS
 Ask about this unit
 ‹ Neurogaunts
 Norn Assimilator · Synaptoprescience (2 of 2) ›
@@ -2735,13 +2749,15 @@ WS
 S
 AP
 D
+
+Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
+
 Monstrous scything talons
 6
 2+
 9
 -2
 3
-+
 Toxinjecter Harpoon
 4
 2+
@@ -2755,14 +2771,6 @@ STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 STRATAGEMS · TALONS OF THE NORN QUEEN
 1CP Lesser Prey: +2 S, When selected to fight
 ABILITIES
-Harpoon Barbs
-Once per turn
-Their Movement
-
-Once per turn · Movement · Their turn
-
-Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
-
 Singular Purpose
 Start of the first battle round
 
@@ -2774,6 +2782,14 @@ Select one enemy unit. Until the end of the battle, each time this model makes a
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
+
+Harpoon Barbs
+Once per turn
+Their Movement
+
+Once per turn · Movement · Their turn
+
+Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.
 
 Protean Purpose
 Once per battle, per unit
@@ -2802,12 +2818,12 @@ TALONS OF THE NORN QUEEN Tanglestrike Rounds, Lesser Prey, Catalytic Biofortific
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-FACTION: TYRANIDS
-GREAT DEVOURER
-HARVESTER
 MONSTER
-NORN ASSIMILATOR
+GREAT DEVOURER
 SYNAPSE
+HARVESTER
+NORN ASSIMILATOR
+FACTION: TYRANIDS
 Ask about this unit
 ‹ Norn Assimilator · Synaptoprescience (1 of 2)
 Norn Emissary · Destabilising Predation ›
@@ -2868,14 +2884,6 @@ Psychic tendril
 -2
 D3
 PRECISION, PSYCHIC, ANTI-CHARACTER 2+
-➤neurolance
-18"
-2
-2+
-12
--3
-D6
-MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
 ➤neuroblast
 18"
 2D6
@@ -2884,6 +2892,14 @@ MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
 -2
 1
 BLAST, PSYCHIC, ANTI-CHARACTER 2+
+➤neurolance
+18"
+2
+2+
+12
+-3
+D6
+MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
 1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
@@ -2893,13 +2909,15 @@ WS
 S
 AP
 D
+
+Fights with both: Monstrous scything talons, plus Monstrous rending claws on top (extra attacks).
+
 Monstrous scything talons
 6
 2+
 9
 -2
 3
-+
 Monstrous rending claws
 4
 2+
@@ -2925,6 +2943,10 @@ Select one objective marker. Until the end of the battle, while this model is wi
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
 
+Unnatural Resilience
+
+This model has the Feel No Pain 4+ ability against mortal wounds.
+
 Protean Purpose
 Once per battle, per unit
 Your Command
@@ -2940,10 +2962,6 @@ Enhancement
 
 NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].
 
-Unnatural Resilience
-
-This model has the Feel No Pain 4+ ability against mortal wounds.
-
 Rules
 Deadly Demise D6, Shadow in the Warp, Synapse, Feel No Pain, Enraged Behemoths, Higher Imperatives
 Stratagems
@@ -2955,12 +2973,12 @@ TALONS OF THE NORN QUEEN Lesser Prey
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-FACTION: TYRANIDS
-GREAT DEVOURER
 MONSTER
-NORN EMISSARY
 PSYKER
+GREAT DEVOURER
 SYNAPSE
+NORN EMISSARY
+FACTION: TYRANIDS
 Ask about this unit
 ‹ Norn Assimilator · Synaptoprescience (2 of 2)
 Norn Emissary ›
@@ -3020,14 +3038,6 @@ Psychic tendril
 -2
 D3
 PRECISION, PSYCHIC
-➤neurolance
-18"
-2
-2+
-12
--3
-D6
-MELTA 2, PSYCHIC
 ➤neuroblast
 18"
 2D6
@@ -3036,6 +3046,14 @@ MELTA 2, PSYCHIC
 -2
 1
 BLAST, PSYCHIC
+➤neurolance
+18"
+2
+2+
+12
+-3
+D6
+MELTA 2, PSYCHIC
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
 1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
@@ -3045,13 +3063,15 @@ WS
 S
 AP
 D
+
+Fights with both: Monstrous scything talons, plus Monstrous rending claws on top (extra attacks).
+
 Monstrous scything talons
 6
 2+
 9
 -2
 3
-+
 Monstrous rending claws
 4
 2+
@@ -3077,6 +3097,10 @@ Select one objective marker. Until the end of the battle, while this model is wi
 
 With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
 
+Unnatural Resilience
+
+This model has the Feel No Pain 4+ ability against mortal wounds.
+
 Protean Purpose
 Once per battle, per unit
 Your Command
@@ -3084,10 +3108,6 @@ Your Command
 Once per battle, per unit · Command · Your turn
 
 (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
-
-Unnatural Resilience
-
-This model has the Feel No Pain 4+ ability against mortal wounds.
 
 Rules
 Deadly Demise D6, Shadow in the Warp, Synapse, Feel No Pain, Enraged Behemoths, Higher Imperatives
@@ -3100,12 +3120,12 @@ TALONS OF THE NORN QUEEN Lesser Prey
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-FACTION: TYRANIDS
-GREAT DEVOURER
 MONSTER
-NORN EMISSARY
 PSYKER
+GREAT DEVOURER
 SYNAPSE
+NORN EMISSARY
+FACTION: TYRANIDS
 Ask about this unit
 ‹ Norn Emissary · Destabilising Predation
 Tyrannofex ›
@@ -3153,13 +3173,6 @@ BS
 S
 AP
 D
-Stinger salvoes
-24"
-8
-3+
-5
-0
-1
 Acid spray
 18"
 D6+6
@@ -3168,6 +3181,13 @@ D6+6
 -2
 2
 TORRENT
+Stinger salvoes
+24"
+8
+3+
+5
+0
+1
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
 1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
@@ -3207,11 +3227,11 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Talons of the Norn Queen.
 
 Keywords
-FACTION: TYRANIDS
-FRAME
-GREAT DEVOURER
 MONSTER
+GREAT DEVOURER
+FRAME
 TYRANNOFEX
+FACTION: TYRANIDS
 Ask about this unit
 ‹ Norn Emissary
 
@@ -3899,6 +3919,25 @@ If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within
 
 Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.
 Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.
+Ask about this rule
+
+######## popup rule:Select Weapons · NIDZILLAS Nidzillas
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
 Ask about this rule
 
 ######## popup rule:Shadow in the Warp · NIDZILLAS Nidzillas

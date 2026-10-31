@@ -344,6 +344,9 @@ Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
 1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, until the end of the turn
 Sorcerer
+
+Can shoot with Bolt pistol or Agonising Energies, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
 Agonising Energies
 ➤witchfire
 18"
@@ -361,8 +364,6 @@ D6
 -2
 D3
 DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC
-OR
-WHEN USING ANOTHER SHOOTING TYPE
 Bolt pistol
 12"
 1
@@ -387,6 +388,14 @@ Bolt pistol
 1
 PISTOL, LETHAL HITS
 INFRACTORS
+Bolt pistol×4
+12"
+1
+3+
+5
+-1
+1
+PISTOL, LETHAL HITS
 Plasma pistolOBSESSIONIST
 ➤standard
 12"
@@ -404,14 +413,6 @@ PISTOL, LETHAL HITS
 -3
 2
 HAZARDOUS, PISTOL, LETHAL HITS
-Bolt pistol×4
-12"
-1
-3+
-5
--1
-1
-PISTOL, LETHAL HITS
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
 1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, until the end of the turn
@@ -545,6 +546,9 @@ Lucius the Eternal
 Warlord
 + Flawless Blades
 LUCIUS THE ETERNAL
+
+Pick one to fight with: Blade of the Laer or Lash of Torment.
+
 Blade of the Laer
 6
 2+
@@ -552,7 +556,6 @@ Blade of the Laer
 -3
 3
 PRECISION
-OR
 Lash of Torment
 10
 2+
@@ -611,6 +614,9 @@ Lord Exultant
 + Infractors
 ×2 units
 LORD EXULTANT
+
+Pick one to fight with: Close combat weapon or Phoenix power spear, plus Rapture lash on top (extra attacks).
+
 Close combat weapon
 6
 2+
@@ -618,7 +624,6 @@ Close combat weapon
 0
 1
 LETHAL HITS
-OR
 Phoenix power spear
 5
 2+
@@ -626,7 +631,6 @@ Phoenix power spear
 -2
 2
 LANCE, LETHAL HITS
-+
 Rapture lash
 4
 2+
@@ -635,18 +639,18 @@ Rapture lash
 1
 EXTRA ATTACKS, LETHAL HITS
 INFRACTORS
-Power swordOBSESSIONIST
-4
-3+
-5
--2
-1
-PRECISION, LETHAL HITS
 Duelling sabre×4
 4
 3+
 5
 -1
+1
+PRECISION, LETHAL HITS
+Power swordOBSESSIONIST
+4
+3+
+5
+-2
 1
 PRECISION, LETHAL HITS
 Euphoric Strikes used at the start of the Fight phase (once per battle): +3 A and +1 AP
@@ -659,17 +663,17 @@ STRATAGEMS · COTERIE OF THE CONCEITED
 1CP Unshakeable Opponents: can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll, Command phase, until the end of the turn
 1CP Martial Perfection: re-roll hit rolls, Fight phase, not yet selected to fight
 Tormentors
-Power swordOBSESSIONIST
-4
-3+
-5
--2
-1
 Close combat weapon×4
 3
 3+
 5
 0
+1
+Power swordOBSESSIONIST
+4
+3+
+5
+-2
 1
 5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 Pact points gained during the battle (cumulative): 1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+ (Pledges to the Dark Prince)
@@ -755,16 +759,16 @@ Lucius the Eternal
 Warlord
 + Flawless Blades
 LUCIUS THE ETERNAL
+A Challenge Worthy of Skill
+
+Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
 Duellist’s Hubris
 Fight
 
 Fight · Either turn
 
 At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.
-
-A Challenge Worthy of Skill
-
-Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
 FLAWLESS BLADES
 Daemonic Patrons
@@ -813,6 +817,10 @@ Lord Exultant
 + Infractors
 ×2 units
 LORD EXULTANT
+Lord of the Host
+
+If this model is attached to an EMPEROR’S CHILDREN BATTLELINE unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6" abilities.
+
 Perfectionists
 Their Move · Your Shoot · Fight
 
@@ -829,10 +837,6 @@ Fight
 Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.
-
-Lord of the Host
-
-If this model is attached to an EMPEROR’S CHILDREN BATTLELINE unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6" abilities.
 
 INFRACTORS
 Excessive Assault
@@ -2455,6 +2459,9 @@ S
 AP
 D
 LUCIUS THE ETERNAL
+
+Pick one to fight with: Blade of the Laer or Lash of Torment.
+
 Blade of the Laer
 6
 2+
@@ -2462,7 +2469,6 @@ Blade of the Laer
 -3
 3
 PRECISION
-OR
 Lash of Torment
 10
 2+
@@ -2483,6 +2489,11 @@ Called upon daemonic patrons when selected to fight (until the end of the phase)
 STRATAGEMS · COTERIE OF THE CONCEITED · FIGHT PHASE
 1CP Martial Perfection: re-roll hit rolls, not yet selected to fight
 ABILITIES
+A Challenge Worthy of Skill
+- Lucius the Eternal
+
+Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
 Duellist’s Hubris
 - Lucius the Eternal
 Fight
@@ -2490,11 +2501,6 @@ Fight
 Fight · Either turn
 
 At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.
-
-A Challenge Worthy of Skill
-- Lucius the Eternal
-
-Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
 Daemonic Patrons
 - Flawless Blades
@@ -2505,7 +2511,7 @@ Fight · Either turn
 Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed.
 
 Rules
-Leader, Thrill Seekers, Feel No Pain 5+ (Lucius the Eternal), Lone Operative (Lucius the Eternal), Pledges to the Dark Prince
+Feel No Pain 5+ (Lucius the Eternal), Leader, Lone Operative (Lucius the Eternal), Thrill Seekers, Pledges to the Dark Prince
 Stratagems
 
 COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abhorrence, Embrace the Pain, Martial Perfection, Protection of the Dark Prince
@@ -2513,16 +2519,16 @@ COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abh
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
+INFANTRY
 CHARACTER
 EPIC HERO
-FACTION: EMPEROR'S CHILDREN
-INFANTRY
-LUCIUS THE ETERNAL
+CHAOS
 SLAANESH
-WARLORD
-FLAWLESS BLADES*
+LUCIUS THE ETERNAL
 GRENADES*
+FLAWLESS BLADES*
+FACTION: EMPEROR'S CHILDREN
+WARLORD
 *from the led Flawless Blades
 Ask about this unit
 Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune ›
@@ -2619,7 +2625,7 @@ Enhancement · Once per turn
 EMPEROR’S CHILDREN model only. Once per turn, just after making a Hit roll, a Wound roll or a saving throw for a model in the bearer’s unit, if the bearer is not Battle-shocked, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.
 
 Rules
-Deadly Demise D3, Thrill Seekers, Deep Strike, Pledges to the Dark Prince
+Deadly Demise D3, Deep Strike, Thrill Seekers, Pledges to the Dark Prince
 Stratagems
 
 COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abhorrence, Martial Perfection, Protection of the Dark Prince
@@ -2627,14 +2633,14 @@ COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abh
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
+MONSTER
+FLY
 CHARACTER
+CHAOS
 DAEMON
+SLAANESH
 DAEMON PRINCE WITH WINGS
 FACTION: EMPEROR'S CHILDREN
-FLY
-MONSTER
-SLAANESH
 Ask about this unit
 ‹ Lucius the Eternal
 Sorcerer ›
@@ -2680,6 +2686,9 @@ BS
 S
 AP
 D
+
+Can shoot with Bolt pistol or Agonising Energies, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
+
 Agonising Energies
 ➤witchfire
 18"
@@ -2697,8 +2706,6 @@ D6
 -2
 D3
 DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC
-OR
-WHEN USING ANOTHER SHOOTING TYPE
 Bolt pistol
 12"
 1
@@ -2746,14 +2753,14 @@ COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abh
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-CHARACTER
-FACTION: EMPEROR'S CHILDREN
-GRENADES
 INFANTRY
+CHARACTER
 PSYKER
+GRENADES
+CHAOS
 SLAANESH
 SORCERER
+FACTION: EMPEROR'S CHILDREN
 Ask about this unit
 ‹ Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune
 Lord Exultant ›
@@ -2825,6 +2832,14 @@ Bolt pistol
 1
 PISTOL, LETHAL HITS
 INFRACTORS
+Bolt pistol×4
+12"
+1
+3+
+5
+-1
+1
+PISTOL, LETHAL HITS
 Plasma pistolOBSESSIONIST
 ➤standard
 12"
@@ -2842,14 +2857,6 @@ PISTOL, LETHAL HITS
 -3
 2
 HAZARDOUS, PISTOL, LETHAL HITS
-Bolt pistol×4
-12"
-1
-3+
-5
--1
-1
-PISTOL, LETHAL HITS
 MELEE WEAPONS
 A
 WS
@@ -2857,6 +2864,9 @@ S
 AP
 D
 LORD EXULTANT
+
+Pick one to fight with: Close combat weapon or Phoenix power spear, plus Rapture lash on top (extra attacks).
+
 Close combat weapon
 6
 2+
@@ -2864,7 +2874,6 @@ Close combat weapon
 0
 1
 LETHAL HITS
-OR
 Phoenix power spear
 5
 2+
@@ -2872,7 +2881,6 @@ Phoenix power spear
 -2
 2
 LANCE, LETHAL HITS
-+
 Rapture lash
 4
 2+
@@ -2881,18 +2889,18 @@ Rapture lash
 1
 EXTRA ATTACKS, LETHAL HITS
 INFRACTORS
-Power swordOBSESSIONIST
-4
-3+
-5
--2
-1
-PRECISION, LETHAL HITS
 Duelling sabre×4
 4
 3+
 5
 -1
+1
+PRECISION, LETHAL HITS
+Power swordOBSESSIONIST
+4
+3+
+5
+-2
 1
 PRECISION, LETHAL HITS
 WHOLE UNIT
@@ -2904,6 +2912,11 @@ Made a charge move this turn: Phoenix power spear +1 to wound (Lance)
 STRATAGEMS · COTERIE OF THE CONCEITED · FIGHT PHASE
 1CP Martial Perfection: re-roll hit rolls, not yet selected to fight
 ABILITIES
+Lord of the Host
+- Lord Exultant
+
+If this model is attached to an EMPEROR’S CHILDREN BATTLELINE unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6" abilities.
+
 Perfectionists
 - Lord Exultant
 Their Move · Your Shoot · Fight
@@ -2923,11 +2936,6 @@ Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.
 
-Lord of the Host
-- Lord Exultant
-
-If this model is attached to an EMPEROR’S CHILDREN BATTLELINE unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6" abilities.
-
 Excessive Assault
 - Infractors
 Fight
@@ -2945,7 +2953,7 @@ Your Shooting / Fight (either turn)
 At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units that phase, the bearer’s unit takes a Leadership test. If that test is passed, you gain 1CP.
 
 Rules
-Leader, Thrill Seekers, Scouts 6", Pledges to the Dark Prince
+Leader, Scouts 6", Thrill Seekers, Pledges to the Dark Prince
 Stratagems
 
 COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abhorrence, Embrace the Pain, Martial Perfection, Protection of the Dark Prince
@@ -2953,15 +2961,15 @@ COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abh
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-CHARACTER
-FACTION: EMPEROR'S CHILDREN
-GRENADES
 INFANTRY
-LORD EXULTANT
+CHARACTER
+GRENADES
+CHAOS
 SLAANESH
+LORD EXULTANT
 BATTLELINE*
 INFRACTORS*
+FACTION: EMPEROR'S CHILDREN
 *from the led Infractors
 Ask about this unit
 ‹ Sorcerer
@@ -3052,17 +3060,17 @@ WS
 S
 AP
 D
-Power swordOBSESSIONIST
-4
-3+
-5
--2
-1
 Close combat weapon×4
 3
 3+
 5
 0
+1
+Power swordOBSESSIONIST
+4
+3+
+5
+-2
 1
 5+ Pact points gained during the battle: [LETHAL HITS] and [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · FIGHT PHASE
@@ -3091,13 +3099,13 @@ COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abh
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-BATTLELINE
-CHAOS
-FACTION: EMPEROR'S CHILDREN
-GRENADES
 INFANTRY
+BATTLELINE
+GRENADES
+CHAOS
 SLAANESH
 TORMENTORS
+FACTION: EMPEROR'S CHILDREN
 Ask about this unit
 ‹ Lord Exultant
 Defiler (1 of 2) ›
@@ -3180,7 +3188,7 @@ Capacity
 This model has a transport capacity of 12 EMPEROR’S CHILDREN INFANTRY models (excluding TERMINATOR and FLAWLESS BLADE models).
 
 Rules
-Deadly Demise D3, Thrill Seekers, Firing Deck 2, Pledges to the Dark Prince
+Deadly Demise D3, Firing Deck 2, Thrill Seekers, Pledges to the Dark Prince
 Stratagems
 
 COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abhorrence, Martial Perfection, Protection of the Dark Prince
@@ -3188,15 +3196,15 @@ COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abh
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-DEDICATED TRANSPORT
-FACTION: EMPEROR'S CHILDREN
-FRAME
-RHINO
-SLAANESH
-SMOKE
-TRANSPORT
 VEHICLE
+TRANSPORT
+FRAME
+DEDICATED TRANSPORT
+SMOKE
+CHAOS
+SLAANESH
+RHINO
+FACTION: EMPEROR'S CHILDREN
 Ask about this unit
 ‹ Maulerfiend
 
@@ -3314,13 +3322,13 @@ COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abh
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
+VEHICLE
+WALKER
 CHAOS
+SLAANESH
 DAEMON
 DEFILER
 FACTION: EMPEROR'S CHILDREN
-SLAANESH
-VEHICLE
-WALKER
 Ask about this unit
 ‹ Tormentors
 Defiler (2 of 2) ›
@@ -3439,13 +3447,13 @@ COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abh
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
+VEHICLE
+WALKER
 CHAOS
+SLAANESH
 DAEMON
 DEFILER
 FACTION: EMPEROR'S CHILDREN
-SLAANESH
-VEHICLE
-WALKER
 Ask about this unit
 ‹ Defiler (1 of 2)
 Maulerfiend ›
@@ -3533,13 +3541,13 @@ COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abh
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-DAEMON
-FACTION: EMPEROR'S CHILDREN
-MAULERFIEND
-SLAANESH
 VEHICLE
 WALKER
+CHAOS
+DAEMON
+SLAANESH
+MAULERFIEND
+FACTION: EMPEROR'S CHILDREN
 Ask about this unit
 ‹ Defiler (2 of 2)
 Chaos Rhino ›

@@ -651,7 +651,7 @@ AI READING the numbers and conditions behind the datasheets’ footnotes and the
 
 HAND a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.
 
-Of the 555 columns of the tables: Mechanical 298 · AI summary 2 · AI reading 200 · Hand 55.
+Of the 555 columns of the tables: Mechanical 300 · AI summary 2 · AI reading 198 · Hand 55.
 
 ARMIES
 25 rows · 213 unit entries · one row per list
@@ -714,7 +714,7 @@ NEW RECRUIT
 An entry holds what the list chose; everything else about the unit comes from its datasheet’s row.
 
 Every column and where it comes from
-183 columns, with 8 inner tables
+185 columns, with 8 inner tables
 ARMIES 25 rows
 
 MECHANICAL name (New Recruit), faction (New Recruit), points (New Recruit), pointsUsed (New Recruit), battleSize (New Recruit), disposition (New Recruit), detachments (New Recruit), source (New Recruit), config (New Recruit), units (New Recruit)
@@ -743,7 +743,7 @@ ARMIES.units.ranged
 
 a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
 
-MECHANICAL name (New Recruit), who (New Recruit), n (New Recruit), from (BSData), enh (New Recruit), range (BSData), A (BSData), BS (BSData), WS (BSData), S (BSData), AP (BSData), D (BSData), kw (BSData), of (computed), why (computed)
+MECHANICAL name (New Recruit), who (New Recruit), n (New Recruit), from (BSData), enh (New Recruit), range (BSData), A (BSData), BS (BSData), WS (BSData), S (BSData), AP (BSData), D (BSData), kw (BSData), of (computed), why (computed), group (computed)
 
 HAND over
 
@@ -751,7 +751,7 @@ ARMIES.units.melee
 
 a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
 
-MECHANICAL name (New Recruit), who (New Recruit), n (New Recruit), from (BSData), enh (New Recruit), range (BSData), A (BSData), BS (BSData), WS (BSData), S (BSData), AP (BSData), D (BSData), kw (BSData), of (computed), why (computed)
+MECHANICAL name (New Recruit), who (New Recruit), n (New Recruit), from (BSData), enh (New Recruit), range (BSData), A (BSData), BS (BSData), WS (BSData), S (BSData), AP (BSData), D (BSData), kw (BSData), of (computed), why (computed), group (computed)
 
 HAND over
 
@@ -820,7 +820,7 @@ rules
 Deadly Demise D3 · Deep Strike · Lone Operative · Waaagh!
 NEW RECRUIT
 kw
-Character · Epic Hero · Faction: Orks · Mounted · Smoke · Speed Freeks · Vehicle · Wazdakka Gutsmek
+Mounted · Vehicle · Character · Epic Hero · Smoke · Speed Freeks · Wazdakka Gutsmek · Faction: Orks
 NEW RECRUIT
 stats
 1 row: Wazdakka Gutsmek
@@ -829,10 +829,10 @@ ranged
 2 rows: Grabba Dragga, Psyko-gatler
 NEW RECRUIT
 melee
-3 rows: Fixit’s Wrench, Grabba Dragga, Speeding Bulk and Flaming Exhaust
+3 rows: Speeding Bulk and Flaming Exhaust, Fixit’s Wrench, Grabba Dragga
 NEW RECRUIT
 abilities
-4 rows: Full Throttle, Turbo Engine, Pulse Jet, Shokk Attack Engine
+4 rows: Turbo Engine, Shokk Attack Engine, Pulse Jet, Full Throttle
 WAHAPEDIA
 Every column and where it comes from
 143 columns, with 7 inner tables
@@ -872,7 +872,7 @@ AI READING def, damaged, riled, defAlways, defCalc, calcDef, lasts, fightOnDeath
 
 HAND note, na
 
-DATASHEETS.mods 130 rows
+DATASHEETS.mods 131 rows
 
 the readings of the datasheet's abilities (and of a core rule on its Rules line, or a weapon ability it defines) as footnotes under its weapon tables: every list with the datasheet has them
 
@@ -990,7 +990,7 @@ defOf
 263b4efe
 COMPUTED
 Every column and where it comes from
-143 columns, with 7 inner tables
+142 columns, with 7 inner tables
 FACTIONS 13 rows
 
 MECHANICAL name (GW), armyRules (GW), detachments (GW)
@@ -1041,7 +1041,7 @@ MECHANICAL id (computed), gistOf (computed), name (GW), cp (GW), phases (compute
 
 AI SUMMARY gist
 
-AI READING limit, defCalc, def, mod, shield, help, defPick, react, weaponKw, lasts, calcNote
+AI READING limit, defCalc, def, mod, shield, defPick, react, weaponKw, lasts, calcNote
 
 HAND needs, note, cpNote
 
@@ -1101,14 +1101,14 @@ effect
 You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll …
 GW
 Every column and where it comes from
-28 columns
+27 columns
 CORE_STRATAGEMS 10 rows
 
 MECHANICAL gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), defOf (computed), readOf (computed)
 
 AI SUMMARY gist
 
-AI READING limit, defCalc, def, mod, shield, help, defPick, react, weaponKw, lasts, calcNote
+AI READING limit, defCalc, def, mod, shield, defPick, react, weaponKw, lasts, calcNote
 
 HAND id, needs, note, cpNote
 
@@ -1257,19 +1257,16 @@ R|FACTION|NAME→ an army or detachment rule in FACTIONS (92)
 
 A|FINGERPRINT→ an ability, by a fingerprint of its name and words (400), in DATASHEETS
 
-ONE ROW: FULL THROTTLE (WAZDAKKA GUTSMEK)
+ONE ROW: TURBO ENGINE (WAZDAKKA GUTSMEK)
 
 key
-a|17acewe
+a|14mp5z1
 COMPUTED
-t
-command:your (the phases it is triggered in)
+u
+movement:your,charge:your (the phases its effect is used in)
 COMPUTED
-s
-1 (listed at a fixed moment of the turn)
-COMPUTED
-pk
-u: command:either,movement:either,shooting:either,charge:either,fight:either (a pick of options)
+a
+1 (listed when the unit is selected)
 COMPUTED
 
 t the phases it is triggered in · u the phases its effect is used in · s listed at a fixed moment of the turn · a listed when the unit is selected · at the moment it opens with · ae also at the end of the battle round · o its options, each with its own phases · g what it grants · f a rule it puts in force · pk a pick of options · oc its options cover its phases · x not placed (its words give no phase) · none no phase (before the battle, what a unit carries)
@@ -1345,7 +1342,7 @@ one value · the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-10-30.2
+2026-10-31.1
 
 WHY YOU CAN TRUST THE DATA
 
@@ -1436,8 +1433,8 @@ Command · Your turn
 
 TO DO NOW
 
-Full Throttle · Wazdakka Gutsmek
 Shokk Attack Engine (Full Throttle) · Wazdakka Gutsmek
+Full Throttle · Wazdakka Gutsmek
 
 ONCE PER BATTLE
 
@@ -1864,19 +1861,19 @@ Kustom Mega-slugga
 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT
 TANKBUSTAS
 Busta Rokkit Launcha×6
-➤HunterMON/VEH ONLY
-24"
-3
-4+
-12
--2
-3
-ASSAULT, IGNORES COVER
 ➤Standard
 24"
 2
 4+
 10
+-2
+3
+ASSAULT, IGNORES COVER
+➤HunterMON/VEH ONLY
+24"
+3
+4+
+12
 -2
 3
 ASSAULT, IGNORES COVER
@@ -1954,15 +1951,10 @@ STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
 1CP Glowin’ Dakka: +1 AP vs targets within 9"
 1CP Never Enough Dakka: [SUSTAINED HITS 1]
 Deffkoptas
+
+Can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
+
 Rokkit Launcha×3
-➤Busta
-24"
-2
-5+
-10
--2
-3
-LETHAL HITS
 ➤Blasta
 24"
 2
@@ -1971,8 +1963,14 @@ LETHAL HITS
 0
 1
 BLAST 2
-OR
-WHEN USING ANOTHER SHOOTING TYPE
+➤Busta
+24"
+2
+5+
+10
+-2
+3
+LETHAL HITS
 Slugga×3
 12"
 1
@@ -1985,6 +1983,14 @@ Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from
 Riled up: [ASSAULT] (Waaagh!)
 Killa Kans
 Kan Blasta×6
+➤Dakka
+24"
+4
+4+
+6
+-1
+1
+BLAST 1, IGNORES COVER, SUSTAINED HITS 1
 ➤Kill Shot
 24"
 2
@@ -2000,14 +2006,6 @@ Kan Blasta×6
 -1
 1
 BLAST 2, TORRENT
-➤Dakka
-24"
-4
-4+
-6
--1
-1
-BLAST 1, IGNORES COVER, SUSTAINED HITS 1
 vs units with no T 7+ models: +1 to hit rolls (Spiteful Power Trip)
 Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Picked by the Dreadherder: re-roll hit rolls of 1 this turn
@@ -2016,22 +2014,9 @@ Riled up: [ASSAULT] (Waaagh!)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Wazdakka Gutsmek
-Grabba Dragga
-6
-2+
-10
--2
-3
-CLEAVE 2, LANCE
-+
-Fixit’s Wrench
-1
-4+
-3
-0
-1
-EXTRA ATTACKS
-+
+
+Fights with all of these: Grabba Dragga, plus Speeding Bulk and Flaming Exhaust and Fixit’s Wrench on top (extra attacks).
+
 Speeding Bulk and Flaming Exhaust
 3
 2+
@@ -2039,6 +2024,20 @@ Speeding Bulk and Flaming Exhaust
 -1
 1
 CLEAVE 1, EXTRA ATTACKS
+Fixit’s Wrench
+1
+4+
+3
+0
+1
+EXTRA ATTACKS
+Grabba Dragga
+6
+2+
+10
+-2
+3
+CLEAVE 2, LANCE
 Made a charge move this turn: Grabba Dragga +1 to wound (Lance)
 Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
 Big Mek Dakkarig
@@ -2130,13 +2129,15 @@ Scavenged Shivs×10
 0
 1
 Deffkoptas
+
+Pick one to fight with: Choppa or Spinnin’ Blades.
+
 Choppa×3
 3
 4+
 5
 -1
 1
-OR
 Spinnin’ Blades×3
 4
 3+
@@ -2158,13 +2159,6 @@ Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to 
 
 ######## abilities · MELEE Abilities
 Wazdakka Gutsmek
-Full Throttle
-Your Command/Move/Charge
-
-Command / Movement / Charge · Your turn
-
-In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.
-
 THROTTLEROKKIT SHOKKA ENGINE
 Turbo Engine
 Your Move/Charge
@@ -2173,6 +2167,13 @@ Movement / Charge · Your turn
 
 When this unit is selected to make an advance/fall-back move, that move does not prevent this unit from being eligible to declare a charge.
 
+Shokk Attack Engine
+Your Command
+
+Command · Your turn
+
+In your Command phase, if this unit is unengaged, you can place this unit in strategic reserves.
+
 Pulse Jet
 Your Movement
 
@@ -2180,12 +2181,12 @@ Movement · Your turn
 
 In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.
 
-Shokk Attack Engine
-Your Command
+Full Throttle
+Your Command/Move/Charge
 
-Command · Your turn
+Command / Movement / Charge · Your turn
 
-In your Command phase, if this unit is unengaged, you can place this unit in strategic reserves.
+In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.
 
 Big Mek Dakkarig
 Dreadherder
@@ -2267,15 +2268,6 @@ ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged atta
 [SUPA-HAZARDOUS].
 Warboss
 Warlord
-Might is Right
-Fight
-
-Fight · Either turn
-
-If this unit made a charge move this turn, this model’s melee attacks have:
-
-+3 A.
-+2 S.
 Boss’ Ammo Runt
 Once per battle, per unit
 Your Shooting
@@ -2286,6 +2278,15 @@ In your Shooting phase, when this unit is selected to shoot, you can use this ab
 
 Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.
 
+Might is Right
+Fight
+
+Fight · Either turn
+
+If this unit made a charge move this turn, this model’s melee attacks have:
+
++3 A.
++2 S.
 Intimidating Motivation
 Once per battle round, per army
 Your Movement
@@ -2300,6 +2301,10 @@ Mek
 + Tankbustas
 ×2 units
 MEK
+Kustom Dakka
+
+This unit’s ranged attacks have [IGNORES COVER].
+
 Clever Know-wotz
 Your Move/Shoot · Fight
 
@@ -2309,10 +2314,6 @@ In your Movement phase, at the start or end of this unit’s move, you can selec
 
 That VEHICLE model heals D3 wounds.
 That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase.
-Kustom Dakka
-
-This unit’s ranged attacks have [IGNORES COVER].
-
 TANKBUSTAS
 Rokkit Barrage
 Your Shooting
@@ -2339,6 +2340,10 @@ Mek
 + Flash Gitz
 Supa-snazz Dakka
 MEK
+Kustom Dakka
+
+This unit’s ranged attacks have [IGNORES COVER].
+
 Clever Know-wotz
 Your Move/Shoot · Fight
 
@@ -2348,10 +2353,6 @@ In your Movement phase, at the start or end of this unit’s move, you can selec
 
 That VEHICLE model heals D3 wounds.
 That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase.
-Kustom Dakka
-
-This unit’s ranged attacks have [IGNORES COVER].
-
 FLASH GITZ
 Finderz Keeperz
 Your Shooting
@@ -2382,19 +2383,19 @@ Movement · Your turn
 At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.
 
 Deffkoptas
-Aerial Manoover
-Their Fight
-
-Fight · Their turn
-
-At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.
-
 Deff from Above
 Your Shooting
 
 Shooting · Your turn
 
 In your Shooting phase, if this unit made an ingress move this turn, this unit’s ranged attacks have +1 to hit rolls.
+
+Aerial Manoover
+Their Fight
+
+Fight · Their turn
+
+At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.
 
 Killa Kans
 Spiteful Power Trip
@@ -2845,14 +2846,14 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (4)
-Full Throttle
-“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
 Turbo Engine
 “When this unit is selected to make an advance/fall-back move, that move does not prevent this unit from being eligible to declare a charge.” · not counted in the Damage tab
-Pulse Jet
-“In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.” · not counted in the Damage tab
 Shokk Attack Engine
 “In your Command phase, if this unit is unengaged, you can place this unit in strategic reserves.” · not counted in the Damage tab
+Pulse Jet
+“In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.” · not counted in the Damage tab
+Full Throttle
+“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Clever Know-wotz (Mek)
 Selected by it · +1 to Hit rolls
@@ -3001,7 +3002,7 @@ Benefit of cover
 Add a group
 3.8
 of 5 destroyed
-7.9 wounds lost · wiped in 37% of games
+7.6 wounds lost · wiped in 37% of games
 Charged this turn
 ×
 12 NOT COUNTED
@@ -3015,6 +3016,21 @@ The charge is taken to succeed (no charge roll).
 
 MELEE WEAPONS
 Wazdakka Gutsmek
+Speeding Bulk and Flaming Exhaust
+A
+3
+WS
+2+
+S
+5
+AP
+-1
+D
+1
+CLEAVE 1, EXTRA ATTACKS
+−9% wiped
+−0.2
+MODELS IF UNTICKED
 Fixit’s Wrench
 A
 1
@@ -3044,21 +3060,6 @@ CLEAVE 2, LANCE
 −37% wiped
 −3.5
 MODELS IF UNTICKED
-Speeding Bulk and Flaming Exhaust
-A
-3
-WS
-2+
-S
-5
-AP
--1
-D
-1
-CLEAVE 1, EXTRA ATTACKS
-−9% wiped
-−0.2
-MODELS IF UNTICKED
 SITUATION
 Charged this turn
 said to hold
@@ -3076,19 +3077,20 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (4)
-Full Throttle
-“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
 Turbo Engine
 “When this unit is selected to make an advance/fall-back move, that move does not prevent this unit from being eligible to declare a charge.” · not counted in the Damage tab
-Pulse Jet
-“In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.” · not counted in the Damage tab
 Shokk Attack Engine
 “In your Command phase, if this unit is unengaged, you can place this unit in strategic reserves.” · not counted in the Damage tab
+Pulse Jet
+“In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.” · not counted in the Damage tab
+Full Throttle
+“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Clever Know-wotz (Mek)
 Selected by it · +1 to Hit rolls
 if it applies
-0
+≈0
+MODELS
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -3233,7 +3235,7 @@ Benefit of cover
 Add a group
 4.8
 of 5 destroyed
-9.7 wounds lost · wiped in 87% of games
+9.6 wounds lost · wiped in 87% of games
 
 Shoot 3.6 · Fight 1.2 · the charge is taken to succeed
 
@@ -3266,7 +3268,7 @@ AP
 D
 3
 ASSAULT, PRECISION
-−5% wiped
+−4% wiped
 −0.1
 MODELS IF UNTICKED
 Psyko-gatler
@@ -3283,12 +3285,12 @@ AP
 D
 2
 ASSAULT, LETHAL HITS: NON-MONSTER/VEHICLE, SUSTAINED HITS 1
-−52% wiped
+−51% wiped
 −1
 MODELS IF UNTICKED
 AGAINST THIS TARGET
 [LETHAL HITS: NON-MONSTER/VEHICLE]
-+0.1
+≈0
 models
 SITUATION
 Plunging Fire
@@ -3300,19 +3302,19 @@ MODELS
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 if it applies
-−12% wiped
+−10% wiped
 −0.2
 MODELS
 Close-quarters shooting at another unit
 -1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
 if it applies
-−12% wiped
+−10% wiped
 −0.2
 MODELS
 Target is an engaged MONSTER/VEHICLE
 -1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-−12% wiped
+−10% wiped
 −0.2
 MODELS
 ARMY RULES
@@ -3327,14 +3329,14 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (4)
-Full Throttle
-“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
 Turbo Engine
 “When this unit is selected to make an advance/fall-back move, that move does not prevent this unit from being eligible to declare a charge.” · not counted in the Damage tab
-Pulse Jet
-“In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.” · not counted in the Damage tab
 Shokk Attack Engine
 “In your Command phase, if this unit is unengaged, you can place this unit in strategic reserves.” · not counted in the Damage tab
+Pulse Jet
+“In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.” · not counted in the Damage tab
+Full Throttle
+“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Clever Know-wotz (Mek)
 Selected by it · +1 to Hit rolls
@@ -3375,6 +3377,22 @@ Wazdakka Gutsmek
 
 Against what the shooting left of the target, in each game.
 
+Speeding Bulk and Flaming Exhaust
+A
+3
+WS
+2+
+S
+5
+AP
+-1
+D
+1
+CLEAVE 1, EXTRA ATTACKS
+−2% wiped
+≈0
+MODELS IF UNTICKED
++1 MORE ▾
 Fixit’s Wrench
 A
 1
@@ -3387,7 +3405,8 @@ AP
 D
 1
 EXTRA ATTACKS
-0
+≈0
+MODELS IF UNTICKED
 Grabba Dragga
 A
 6
@@ -3403,22 +3422,6 @@ CLEAVE 2, LANCE
 −45% wiped
 −1
 MODELS IF UNTICKED
-Speeding Bulk and Flaming Exhaust
-A
-3
-WS
-2+
-S
-5
-AP
--1
-D
-1
-CLEAVE 1, EXTRA ATTACKS
-−0.1 wounds
-≈0
-MODELS IF UNTICKED
-+1 MORE ▾
 SITUATION
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
@@ -3436,19 +3439,20 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (4)
-Full Throttle
-“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
 Turbo Engine
 “When this unit is selected to make an advance/fall-back move, that move does not prevent this unit from being eligible to declare a charge.” · not counted in the Damage tab
-Pulse Jet
-“In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.” · not counted in the Damage tab
 Shokk Attack Engine
 “In your Command phase, if this unit is unengaged, you can place this unit in strategic reserves.” · not counted in the Damage tab
+Pulse Jet
+“In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.” · not counted in the Damage tab
+Full Throttle
+“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Clever Know-wotz (Mek)
 Selected by it · +1 to Hit rolls
 if it applies
-0
+≈0
+MODELS
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -4017,22 +4021,9 @@ WS
 S
 AP
 D
-Grabba Dragga
-6
-2+
-10
--2
-3
-CLEAVE 2, LANCE
-+
-Fixit’s Wrench
-1
-4+
-3
-0
-1
-EXTRA ATTACKS
-+
+
+Fights with all of these: Grabba Dragga, plus Speeding Bulk and Flaming Exhaust and Fixit’s Wrench on top (extra attacks).
+
 Speeding Bulk and Flaming Exhaust
 3
 2+
@@ -4040,15 +4031,22 @@ Speeding Bulk and Flaming Exhaust
 -1
 1
 CLEAVE 1, EXTRA ATTACKS
+Fixit’s Wrench
+1
+4+
+3
+0
+1
+EXTRA ATTACKS
+Grabba Dragga
+6
+2+
+10
+-2
+3
+CLEAVE 2, LANCE
 Made a charge move this turn: Grabba Dragga +1 to wound (Lance)
 ABILITIES
-Full Throttle
-Your Command/Move/Charge
-
-Command / Movement / Charge · Your turn
-
-In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.
-
 Turbo Engine
 - Throttlerokkit Shokka Engine
 Your Move/Charge
@@ -4056,6 +4054,14 @@ Your Move/Charge
 Movement / Charge · Your turn
 
 When this unit is selected to make an advance/fall-back move, that move does not prevent this unit from being eligible to declare a charge.
+
+Shokk Attack Engine
+- Throttlerokkit Shokka Engine
+Your Command
+
+Command · Your turn
+
+In your Command phase, if this unit is unengaged, you can place this unit in strategic reserves.
 
 Pulse Jet
 - Throttlerokkit Shokka Engine
@@ -4065,13 +4071,12 @@ Movement · Your turn
 
 In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.
 
-Shokk Attack Engine
-- Throttlerokkit Shokka Engine
-Your Command
+Full Throttle
+Your Command/Move/Charge
 
-Command · Your turn
+Command / Movement / Charge · Your turn
 
-In your Command phase, if this unit is unengaged, you can place this unit in strategic reserves.
+In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.
 
 Rules
 Deadly Demise D3, Deep Strike, Lone Operative, Waaagh!
@@ -4082,14 +4087,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact
 None from Dread Mob, Shoota Boyz or Wreckas.
 
 Keywords
+MOUNTED
+VEHICLE
 CHARACTER
 EPIC HERO
-FACTION: ORKS
-MOUNTED
 SMOKE
 SPEED FREEKS
-VEHICLE
 WAZDAKKA GUTSMEK
+FACTION: ORKS
 Ask about this unit
 Big Mek · Dreadherder ›
 
@@ -4202,12 +4207,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Shoota Boyz or Wreckas.
 
 Keywords
-BIG MEK
-BIG MEK DAKKARIG
-CHARACTER
-FACTION: ORKS
 VEHICLE
+BIG MEK
+CHARACTER
 WALKER
+BIG MEK DAKKARIG
+FACTION: ORKS
 Ask about this unit
 ‹ Wazdakka Gutsmek
 Big Mek · Cybork Boosta ›
@@ -4318,12 +4323,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Shoota Boyz or Wreckas.
 
 Keywords
-BIG MEK
-BIG MEK DAKKARIG
-CHARACTER
-FACTION: ORKS
 VEHICLE
+BIG MEK
+CHARACTER
 WALKER
+BIG MEK DAKKARIG
+FACTION: ORKS
 Ask about this unit
 ‹ Big Mek · Dreadherder
 Big Mek · Supa-glowy Fing ›
@@ -4425,7 +4430,7 @@ ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged atta
 [DEVASTATING WOUNDS].
 [SUPA-HAZARDOUS].
 Rules
-Waaagh!, Leader, Dakka! Dakka! Dakka!
+Leader, Waaagh!, Dakka! Dakka! Dakka!
 Stratagems
 
 SHOOTA BOYZ Kustom Dakka, Glowin’ Dakka, Never Enough Dakka
@@ -4435,13 +4440,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Dread Mob or Wreckas.
 
 Keywords
+INFANTRY
 BIG MEK
-BIG MEK IN MEGA ARMOUR
 CHARACTER
 EXPLOSIVES
-FACTION: ORKS
-INFANTRY
 MEGA ARMOUR
+BIG MEK IN MEGA ARMOUR
+FACTION: ORKS
 Ask about this unit
 ‹ Big Mek · Cybork Boosta
 Warboss ›
@@ -4511,15 +4516,6 @@ Kustom Choppa
 CLEAVE 2
 Made a charge move this turn: +3 A, +2 S (Might is Right)
 ABILITIES
-Might is Right
-Fight
-
-Fight · Either turn
-
-If this unit made a charge move this turn, this model’s melee attacks have:
-
-+3 A.
-+2 S.
 Boss’ Ammo Runt
 Once per battle, per unit
 Your Shooting
@@ -4530,6 +4526,15 @@ In your Shooting phase, when this unit is selected to shoot, you can use this ab
 
 Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.
 
+Might is Right
+Fight
+
+Fight · Either turn
+
+If this unit made a charge move this turn, this model’s melee attacks have:
+
++3 A.
++2 S.
 Intimidating Motivation
 Once per battle round, per army
 Your Movement
@@ -4541,7 +4546,7 @@ In your Movement phase, at the start or end of this unit’s move, you can selec
 Is no longer battle-shocked.
 Is riled up until the start of your next turn.
 Rules
-Da Boss, Leader, Waaagh!, Dakka! Dakka! Dakka!
+Leader, Da Boss, Waaagh!, Dakka! Dakka! Dakka!
 Stratagems
 
 SHOOTA BOYZ Kustom Dakka, Glowin’ Dakka, Never Enough Dakka
@@ -4551,11 +4556,11 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Dread Mob or Wreckas.
 
 Keywords
-CHARACTER
-FACTION: ORKS
-GRENADES
 INFANTRY
+CHARACTER
+EXPLOSIVES
 WARBOSS
+FACTION: ORKS
 WARLORD
 Ask about this unit
 ‹ Big Mek · Supa-glowy Fing
@@ -4632,19 +4637,19 @@ Kustom Mega-slugga
 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT
 TANKBUSTAS
 Busta Rokkit Launcha×6
-➤HunterMON/VEH ONLY
-24"
-3
-4+
-12
--2
-3
-ASSAULT, IGNORES COVER
 ➤Standard
 24"
 2
 4+
 10
+-2
+3
+ASSAULT, IGNORES COVER
+➤HunterMON/VEH ONLY
+24"
+3
+4+
+12
 -2
 3
 ASSAULT, IGNORES COVER
@@ -4690,6 +4695,11 @@ Gitstikka×5
 0
 1
 ABILITIES
+Kustom Dakka
+- Mek
+
+This unit’s ranged attacks have [IGNORES COVER].
+
 Clever Know-wotz
 - Mek
 Your Move/Shoot · Fight
@@ -4700,11 +4710,6 @@ In your Movement phase, at the start or end of this unit’s move, you can selec
 
 That VEHICLE model heals D3 wounds.
 That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase.
-Kustom Dakka
-- Mek
-
-This unit’s ranged attacks have [IGNORES COVER].
-
 Rokkit Barrage
 - Tankbustas
 Your Shooting
@@ -4729,7 +4734,7 @@ On a 3+, that enemy unit suffers D3 mortal wounds.
 Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.
 
 Rules
-Waaagh!, Support, Dakka! Dakka! Dakka!, Wreckin’ and Lootin’
+Support, Waaagh!, Dakka! Dakka! Dakka!, Wreckin’ and Lootin’
 Stratagems
 
 SHOOTA BOYZ Kustom Dakka, Glowin’ Dakka, Never Enough Dakka
@@ -4741,12 +4746,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Dread Mob.
 
 Keywords
+INFANTRY
 CHARACTER
 EXPLOSIVES
-FACTION: ORKS
-INFANTRY
 MEK
 TANKBUSTAS*
+FACTION: ORKS
 *from the supported Tankbustas
 Ask about this unit
 ‹ Warboss
@@ -4865,6 +4870,11 @@ Choppa×10
 -1
 1
 ABILITIES
+Kustom Dakka
+- Mek
+
+This unit’s ranged attacks have [IGNORES COVER].
+
 Clever Know-wotz
 - Mek
 Your Move/Shoot · Fight
@@ -4875,11 +4885,6 @@ In your Movement phase, at the start or end of this unit’s move, you can selec
 
 That VEHICLE model heals D3 wounds.
 That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase.
-Kustom Dakka
-- Mek
-
-This unit’s ranged attacks have [IGNORES COVER].
-
 Finderz Keeperz
 - Flash Gitz
 Your Shooting
@@ -4898,7 +4903,7 @@ Upgrade
 FLASH GITZ unit only. This unit’s Snazzgun weapons have [RAPID FIRE 1].
 
 Rules
-Waaagh!, Support, Dakka! Dakka! Dakka!, Wreckin’ and Lootin’
+Support, Waaagh!, Dakka! Dakka! Dakka!, Wreckin’ and Lootin’
 Stratagems
 
 SHOOTA BOYZ Kustom Dakka, Glowin’ Dakka, Never Enough Dakka
@@ -4910,12 +4915,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Dread Mob.
 
 Keywords
+INFANTRY
 CHARACTER
 EXPLOSIVES
-FACTION: ORKS
-INFANTRY
 MEK
 FLASH GITZ*
+FACTION: ORKS
 *from the supported Flash Gitz
 Ask about this unit
 ‹ Mek + Tankbustas
@@ -5004,10 +5009,10 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Dread Mob or Wreckas.
 
 Keywords
-FACTION: ORKS
-GRETCHIN
-GROTS
 INFANTRY
+GROTS
+GRETCHIN
+FACTION: ORKS
 Ask about this unit
 ‹ Mek + Flash Gitz
 Deffkoptas ›
@@ -5047,15 +5052,10 @@ BS
 S
 AP
 D
+
+Can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
+
 Rokkit Launcha×3
-➤Busta
-24"
-2
-5+
-10
--2
-3
-LETHAL HITS
 ➤Blasta
 24"
 2
@@ -5064,8 +5064,14 @@ LETHAL HITS
 0
 1
 BLAST 2
-OR
-WHEN USING ANOTHER SHOOTING TYPE
+➤Busta
+24"
+2
+5+
+10
+-2
+3
+LETHAL HITS
 Slugga×3
 12"
 1
@@ -5082,13 +5088,15 @@ WS
 S
 AP
 D
+
+Pick one to fight with: Choppa or Spinnin’ Blades.
+
 Choppa×3
 3
 4+
 5
 -1
 1
-OR
 Spinnin’ Blades×3
 4
 3+
@@ -5097,19 +5105,19 @@ Spinnin’ Blades×3
 1
 CLEAVE 1, HAZARDOUS
 ABILITIES
-Aerial Manoover
-Their Fight
-
-Fight · Their turn
-
-At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.
-
 Deff from Above
 Your Shooting
 
 Shooting · Your turn
 
 In your Shooting phase, if this unit made an ingress move this turn, this unit’s ranged attacks have +1 to hit rolls.
+
+Aerial Manoover
+Their Fight
+
+Fight · Their turn
+
+At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.
 
 Rules
 Deep Strike, Waaagh!
@@ -5120,12 +5128,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 None from Dread Mob, Shoota Boyz or Wreckas.
 
 Keywords
-DEFFKOPTAS
-EXPLOSIVES
-FACTION: ORKS
-FLY
 MOUNTED
+EXPLOSIVES
+FLY
 SPEED FREEKS
+DEFFKOPTAS
+FACTION: ORKS
 Ask about this unit
 ‹ Gretchin
 Killa Kans ›
@@ -5172,6 +5180,14 @@ S
 AP
 D
 Kan Blasta×6
+➤Dakka
+24"
+4
+4+
+6
+-1
+1
+BLAST 1, IGNORES COVER, SUSTAINED HITS 1
 ➤Kill Shot
 24"
 2
@@ -5187,14 +5203,6 @@ Kan Blasta×6
 -1
 1
 BLAST 2, TORRENT
-➤Dakka
-24"
-4
-4+
-6
--1
-1
-BLAST 1, IGNORES COVER, SUSTAINED HITS 1
 Riled up: [ASSAULT] (Waaagh!)
 MELEE WEAPONS
 A
@@ -5227,11 +5235,11 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Shoota Boyz or Wreckas.
 
 Keywords
-FACTION: ORKS
-GROTS
-KILLA KANS
 VEHICLE
+GROTS
 WALKER
+KILLA KANS
+FACTION: ORKS
 Ask about this unit
 ‹ Deffkoptas
 
@@ -5369,13 +5377,13 @@ Turbo Engine
 
 When this unit is selected to make an advance/fall-back move, that move does not prevent this unit from being eligible to declare a charge.
 
-Pulse Jet
-
-In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.
-
 Shokk Attack Engine
 
 In your Command phase, if this unit is unengaged, you can place this unit in strategic reserves.
+
+Pulse Jet
+
+In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.
 
 UNITWazdakka Gutsmek
 

@@ -380,14 +380,6 @@ STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
 Knight Despoiler
 Warlord
 Bestial Aspect
-Ruinspear rocket pod
-48"
-3
-3+
-8
--2
-D6
-ASSAULT
 Despoiler gatling cannon×2
 36"
 18
@@ -396,14 +388,6 @@ Despoiler gatling cannon×2
 -2
 2
 ASSAULT
-Heavy darkflamer×2
-12"
-D6
-–
-5
--1
-1
-TORRENT, IGNORES COVER, ASSAULT
 Diabolus heavy stubber
 36"
 3
@@ -412,6 +396,22 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3, ASSAULT
+Heavy darkflamer×2
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT, ASSAULT
+Ruinspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+ASSAULT
 Selected to shoot or fight: re-roll one hit roll or one wound roll (Seething Hatred)
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
 Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
@@ -624,6 +624,10 @@ CHAOS KNIGHTS model only. Add 2 to the bearer’s Wounds characteristic. Each ti
 Knight Despoiler
 Warlord
 Bestial Aspect
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
 Dread Dominion
 No WAR DOG in this list
 
@@ -644,10 +648,6 @@ Damaged: 1-9 wounds remaining
 
 While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
-*Invulnerable Save
-
-This model has a 5+ invulnerable save against ranged attacks.
-
 Bestial Aspect
 Enhancement
 
@@ -657,6 +657,10 @@ CHAOS KNIGHTS model only. The bearer’s ranged weapons have the [ASSAULT] abili
 
 Knight Ruinator
 Fleshmetal Fusion
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
 Methodical Destruction
 Start of the first battle round
 
@@ -676,10 +680,6 @@ While a friendly War Dog model is within 9" of this model, each time that War Do
 Damaged: 1-9 wounds remaining
 
 While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
-
-*Invulnerable Save
-
-This model has a 5+ invulnerable save against ranged attacks.
 
 Fleshmetal Fusion
 Enhancement
@@ -690,6 +690,10 @@ Enhancement
 CHAOS KNIGHTS model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.
 
 Knight Ruinator
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
 Methodical Destruction
 Start of the first battle round
 
@@ -709,10 +713,6 @@ While a friendly War Dog model is within 9" of this model, each time that War Do
 Damaged: 1-9 wounds remaining
 
 While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
-
-*Invulnerable Save
-
-This model has a 5+ invulnerable save against ranged attacks.
 
 Nurglings
 Mischief Makers
@@ -2501,15 +2501,15 @@ INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CERASTUS
-CHAOS
-CHARACTER
-FACTION: CHAOS KNIGHTS
-KNIGHT ATRAPOS
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+CHARACTER
+TITANIC
+TOWERING
+CHAOS
+CERASTUS
+KNIGHT ATRAPOS
+FACTION: CHAOS KNIGHTS
 Ask about this unit
 Chaos Cerastus Knight Lancer · Blasphemous Engine ›
 
@@ -2619,15 +2619,15 @@ INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CERASTUS
-CHAOS
-CHARACTER
-FACTION: CHAOS KNIGHTS
-KNIGHT LANCER
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+CHARACTER
+TITANIC
+TOWERING
+CHAOS
+CERASTUS
+KNIGHT LANCER
+FACTION: CHAOS KNIGHTS
 Ask about this unit
 ‹ Chaos Cerastus Knight Atrapos · Knight Diabolus
 Knight Despoiler · Bestial Aspect ›
@@ -2678,14 +2678,6 @@ BS
 S
 AP
 D
-Ruinspear rocket pod
-48"
-3
-3+
-8
--2
-D6
-ASSAULT
 Despoiler gatling cannon×2
 36"
 18
@@ -2694,14 +2686,6 @@ Despoiler gatling cannon×2
 -2
 2
 ASSAULT
-Heavy darkflamer×2
-12"
-D6
-–
-5
--1
-1
-TORRENT, IGNORES COVER, ASSAULT
 Diabolus heavy stubber
 36"
 3
@@ -2710,6 +2694,22 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3, ASSAULT
+Heavy darkflamer×2
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT, ASSAULT
+Ruinspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+ASSAULT
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
 1CP Warp Vision: ranged weapons have [IGNORES COVER]
@@ -2726,6 +2726,10 @@ Titanic feet
 -1
 2
 ABILITIES
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
 Dread Dominion
 No WAR DOG in this list
 
@@ -2742,10 +2746,6 @@ Your Shooting / Fight (either turn)
 
 Each time this model is selected to shoot or fight, you can re-roll one Hit roll or you can re-roll one Wound roll when resolving those attacks.
 
-*Invulnerable Save
-
-This model has a 5+ invulnerable save against ranged attacks.
-
 Bestial Aspect
 Enhancement
 
@@ -2754,7 +2754,7 @@ Enhancement
 CHAOS KNIGHTS model only. The bearer’s ranged weapons have the [ASSAULT] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit.
 
 Rules
-Super-Heavy Walker, Deadly Demise D6, Harbingers of Dread, Malefic Surge
+Deadly Demise D6, Harbingers of Dread, Super-Heavy Walker, Malefic Surge
 Stratagems
 
 INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark, Hellforged Construction, Profane Symbiosis
@@ -2762,15 +2762,15 @@ INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-ABHORRENT
-CHAOS
-CHARACTER
-FACTION: CHAOS KNIGHTS
-KNIGHT DESPOILER
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+ABHORRENT
+CHARACTER
+CHAOS
+KNIGHT DESPOILER
+FACTION: CHAOS KNIGHTS
 WARLORD
 Ask about this unit
 ‹ Chaos Cerastus Knight Lancer · Blasphemous Engine
@@ -2862,6 +2862,10 @@ ANTI-MONSTER 2+, ANTI-VEHICLE 2+
 -2
 2
 ABILITIES
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
 Methodical Destruction
 Start of the first battle round
 
@@ -2878,10 +2882,6 @@ Aura
 
 While a friendly War Dog model is within 9" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1.
 
-*Invulnerable Save
-
-This model has a 5+ invulnerable save against ranged attacks.
-
 Fleshmetal Fusion
 Enhancement
 Already in T
@@ -2891,7 +2891,7 @@ Enhancement
 CHAOS KNIGHTS model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.
 
 Rules
-Super-Heavy Walker, Deadly Demise D6, Harbingers of Dread, Sustained Hits, Malefic Surge
+Deadly Demise D6, Harbingers of Dread, Super-Heavy Walker, Sustained Hits, Malefic Surge
 Stratagems
 
 INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark, Hellforged Construction, Profane Symbiosis
@@ -2899,15 +2899,15 @@ INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-ABHORRENT
-CHAOS
-CHARACTER
-FACTION: CHAOS KNIGHTS
-KNIGHT RUINATOR
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+ABHORRENT
+CHARACTER
+CHAOS
+KNIGHT RUINATOR
+FACTION: CHAOS KNIGHTS
 Ask about this unit
 ‹ Knight Despoiler · Bestial Aspect
 Knight Ruinator ›
@@ -2996,6 +2996,10 @@ ANTI-MONSTER 2+, ANTI-VEHICLE 2+
 -2
 2
 ABILITIES
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
 Methodical Destruction
 Start of the first battle round
 
@@ -3012,12 +3016,8 @@ Aura
 
 While a friendly War Dog model is within 9" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1.
 
-*Invulnerable Save
-
-This model has a 5+ invulnerable save against ranged attacks.
-
 Rules
-Super-Heavy Walker, Deadly Demise D6, Harbingers of Dread, Sustained Hits, Malefic Surge
+Deadly Demise D6, Harbingers of Dread, Super-Heavy Walker, Sustained Hits, Malefic Surge
 Stratagems
 
 INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark, Hellforged Construction, Profane Symbiosis
@@ -3025,15 +3025,15 @@ INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-ABHORRENT
-CHAOS
-CHARACTER
-FACTION: CHAOS KNIGHTS
-KNIGHT RUINATOR
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+ABHORRENT
+CHARACTER
+CHAOS
+KNIGHT RUINATOR
+FACTION: CHAOS KNIGHTS
 Ask about this unit
 ‹ Knight Ruinator · Fleshmetal Fusion
 Nurglings ›
@@ -3096,14 +3096,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counter
 None from Infernal Lance.
 
 Keywords
-ALLIES: LEGIONES DAEMONICA
+SWARM
 BATTLELINE
 CHAOS
 DAEMON
-FACTION: LEGIONES DAEMONICA
 NURGLE
 NURGLINGS
-SWARM
+FACTION: LEGIONES DAEMONICA
+ALLIES: LEGIONES DAEMONICA
 Ask about this unit
 ‹ Knight Ruinator
 

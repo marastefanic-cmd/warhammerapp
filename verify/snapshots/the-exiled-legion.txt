@@ -563,13 +563,9 @@ Within 6" of Skarbrand: +1 A (Rage Embodied)
 Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
 Rendmaster on Blood Throne
 ×2 units
-Blade of blood
-5
-2+
-6
--2
-3
-+
+
+Fights with both: Blade of blood, plus Attendant’s hellblades on top (extra attacks).
+
 Attendant’s hellblades
 4
 3+
@@ -577,6 +573,12 @@ Attendant’s hellblades
 -2
 2
 EXTRA ATTACKS
+Blade of blood
+5
+2+
+6
+-2
+3
 Fight phase, attacks that target the enemy unit selected with Blood Throne: improve S, AP and D by 1
 Melee attacks that target a CHARACTER or MONSTER unit: can re-roll the wound roll (Champion Slayer)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
@@ -607,13 +609,15 @@ Skullmaster
 Brazenmaw
 + Bloodcrushers
 SKULLMASTER
+
+Fights with both: Blade of blood, plus Juggernaut’s bladed horn on top (extra attacks).
+
 Blade of blood
 5
 2+
 6
 -2
 3
-+
 Juggernaut’s bladed horn
 4
 4+
@@ -622,13 +626,15 @@ Juggernaut’s bladed horn
 1
 EXTRA ATTACKS, LANCE
 BLOODCRUSHERS
+
+Fights with both: Hellblade, plus Juggernaut’s bladed horn on top (extra attacks).
+
 Hellblade×3
 2
 3+
 5
 -2
 2
-+
 Juggernaut’s bladed horn×3
 4
 4+
@@ -653,6 +659,12 @@ DEVASTATING WOUNDS
 ######## abilities · MELEE Abilities
 Skarbrand
 Warlord
+Greater Daemon of Khorne
+
+Aura
+
+While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
 Rage Embodied
 Fight
 
@@ -667,12 +679,6 @@ This unit is eligible to declare a charge in a turn in which it Advanced.
 Damaged: 1-7 wounds remaining
 
 While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.
-
-Greater Daemon of Khorne
-
-Aura
-
-While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
 
 Karanak
 + Flesh Hounds
@@ -730,13 +736,6 @@ Movement · Their turn
 
 Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.
 
-Bane-Forged Weapons
-Already in S
-
-Upgrade
-
-LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
-
 Daemonic Icon
 Already in Ld
 
@@ -748,6 +747,13 @@ Charge
 Charge · Either turn
 
 Add 1 to Charge rolls made for the bearer’s unit.
+
+Bane-Forged Weapons
+Already in S
+
+Upgrade
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
 
 Bloodthirster
 Gateway Unto Damnation
@@ -765,15 +771,15 @@ Fight · Either turn
 
 At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound.
 
-Damaged: 1-6 wounds remaining
-
-While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-
 Greater Daemon of Khorne
 
 Aura
 
 While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 Gateway Unto Damnation
 Enhancement
@@ -784,6 +790,21 @@ LEGIONES DAEMONICA KHORNE MONSTER model only. The bearer’s Deadly Demise abili
 
 Daemon Prince of Chaos
 Slaughterthirst (Aura)
+Daemonic Allegiance
+Already in S
+
+Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
+
+Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
+
+Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
+
+Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
+
+Daemonic Lord
+
+While this model is within 3" of one or more friendly LEGIONES DAEMONICA INFANTRY units, this model has the Lone Operative ability.
+
 Prince of Darkness
 
 Aura
@@ -798,10 +819,6 @@ Once per battle · Any phase · Either turn
 
 Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 3+ invulnerable save.
 
-Daemonic Lord
-
-While this model is within 3" of one or more friendly LEGIONES DAEMONICA INFANTRY units, this model has the Lone Operative ability.
-
 Slaughterthirst (Aura)
 Enhancement
 Fight
@@ -809,17 +826,6 @@ Fight
 Enhancement · Aura · Fight · Either turn
 
 LEGIONES DAEMONICA KHORNE model only. While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6" of the bearer, weapons equipped by models in that unit have the [LANCE] ability.
-
-Daemonic Allegiance
-Already in S
-
-Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
-
-Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
-
-Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
-
-Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
 
 Rendmaster on Blood Throne
 ×2 units
@@ -857,13 +863,6 @@ Movement · Their turn
 
 Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.
 
-Bane-Forged Weapons
-Already in S
-
-Upgrade
-
-LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
-
 Daemonic Icon
 Already in Ld
 
@@ -875,6 +874,13 @@ Charge
 Charge · Either turn
 
 Add 1 to Charge rolls made for the bearer’s unit.
+
+Bane-Forged Weapons
+Already in S
+
+Upgrade
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
 
 Skullmaster
 Brazenmaw
@@ -1317,10 +1323,10 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (2)
-Murderlust
-“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
 Greater Daemon of Khorne
 “While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
+Murderlust
+“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1562,10 +1568,10 @@ if it applies
 MODELS
 +1 MORE ▾
 NOT COUNTED IN THE DAMAGE TAB (2)
-Murderlust
-“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
 Greater Daemon of Khorne
 “While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
+Murderlust
+“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Blood Throne (Rendmaster on Blood Throne (×2))
 Selected by it · The target is the enemy unit selected: +1 S, +1 AP, +1 D
@@ -1806,10 +1812,10 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (2)
-Murderlust
-“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
 Greater Daemon of Khorne
 “While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
+Murderlust
+“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1924,10 +1930,10 @@ if it applies
 ≈0
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (2)
-Murderlust
-“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
 Greater Daemon of Khorne
 “While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
+Murderlust
+“This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Blood Throne (Rendmaster on Blood Throne (×2))
 Selected by it · The target is the enemy unit selected: +1 S, +1 AP, +1 D
@@ -2521,6 +2527,12 @@ Slaughter and Carnage
 Own aura: +1 A (Rage Embodied)
 Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
 ABILITIES
+Greater Daemon of Khorne
+
+Aura
+
+While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
+
 Rage Embodied
 Fight
 
@@ -2531,12 +2543,6 @@ While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, add 
 Murderlust
 
 This unit is eligible to declare a charge in a turn in which it Advanced.
-
-Greater Daemon of Khorne
-
-Aura
-
-While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.
 
 Rules
 Deadly Demise D6, Deep Strike, The Shadow of Chaos, Murdercall, Blood Tainted
@@ -2549,14 +2555,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Warptide.
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-EPIC HERO
-FACTION: LEGIONES DAEMONICA
-KHORNE
 MONSTER
+CHARACTER
+EPIC HERO
+CHAOS
+DAEMON
+KHORNE
 SKARBRAND
+FACTION: LEGIONES DAEMONICA
 WARLORD
 Ask about this unit
 Karanak ›
@@ -2706,14 +2712,14 @@ None from Warptide.
 
 Keywords
 BEAST
-CHAOS
 CHARACTER
-DAEMON
 EPIC HERO
-FACTION: LEGIONES DAEMONICA
-KARANAK
+CHAOS
+DAEMON
 KHORNE
+KARANAK
 FLESH HOUNDS*
+FACTION: LEGIONES DAEMONICA
 *from the led Flesh Hounds
 Ask about this unit
 ‹ Skarbrand
@@ -2818,14 +2824,6 @@ Movement · Their turn
 
 Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.
 
-Bane-Forged Weapons
-- Bloodletters
-Already in S
-
-Upgrade
-
-LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
-
 Daemonic Icon
 - Bloodletters
 Already in Ld
@@ -2840,8 +2838,16 @@ Charge · Either turn
 
 Add 1 to Charge rolls made for the bearer’s unit.
 
+Bane-Forged Weapons
+- Bloodletters
+Already in S
+
+Upgrade
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
+
 Rules
-Deep Strike, The Shadow of Chaos, Leader, Murdercall, Blood Tainted, Shudderblink
+Deep Strike, Leader, The Shadow of Chaos, Murdercall, Blood Tainted, Shudderblink
 Stratagems
 
 BLOOD LEGION Gore‑hungry Onslaught, Fools’ Flight, Skulls Beget Blood, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
@@ -2851,16 +2857,16 @@ WARPTIDE Daemonic Infestation, Soulseeing, Incorporeal Entities
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-EPIC HERO
-FACTION: LEGIONES DAEMONICA
 INFANTRY
+CHARACTER
+EPIC HERO
+CHAOS
+DAEMON
 KHORNE
 SKULLTAKER
 BATTLELINE*
 BLOODLETTERS*
+FACTION: LEGIONES DAEMONICA
 *from the led Bloodletters
 Ask about this unit
 ‹ Karanak
@@ -2974,14 +2980,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Warptide.
 
 Keywords
-BLOODTHIRSTER
-CHAOS
-CHARACTER
-DAEMON
-FACTION: LEGIONES DAEMONICA
-FLY
-KHORNE
 MONSTER
+CHARACTER
+FLY
+CHAOS
+DAEMON
+KHORNE
+BLOODTHIRSTER
+FACTION: LEGIONES DAEMONICA
 Ask about this unit
 ‹ Skulltaker
 Daemon Prince of Chaos · Slaughterthirst (Aura) ›
@@ -3014,8 +3020,8 @@ Daemon Prince of Chaos
 4+
 WHEN TARGETED
 5
-Unholy Vigour (once per battle, used at the start of a phase): 3+ invulnerable save until the end of the phase
 Lone Operative while within 3" of a friendly LEGIONES DAEMONICA INFANTRY unit
+Unholy Vigour (once per battle, used at the start of a phase): 3+ invulnerable save until the end of the phase
 1CP Wrath Undeniable: Fight phase, just after an enemy unit selects it as a target: until the end of the phase, each time a model is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed
 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase)
 Own aura: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
@@ -3055,6 +3061,21 @@ Hellforged weapons
 Within 6" of Skarbrand: +1 A (Rage Embodied)
 Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
 ABILITIES
+Daemonic Allegiance
+Already in S
+
+Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
+
+Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
+
+Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
+
+Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
+
+Daemonic Lord
+
+While this model is within 3" of one or more friendly LEGIONES DAEMONICA INFANTRY units, this model has the Lone Operative ability.
+
 Prince of Darkness
 
 Aura
@@ -3069,10 +3090,6 @@ Once per battle · Any phase · Either turn
 
 Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 3+ invulnerable save.
 
-Daemonic Lord
-
-While this model is within 3" of one or more friendly LEGIONES DAEMONICA INFANTRY units, this model has the Lone Operative ability.
-
 Slaughterthirst (Aura)
 Enhancement
 Fight
@@ -3081,19 +3098,8 @@ Enhancement · Aura · Fight · Either turn
 
 LEGIONES DAEMONICA KHORNE model only. While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6" of the bearer, weapons equipped by models in that unit have the [LANCE] ability.
 
-Daemonic Allegiance
-Already in S
-
-Daemon Prince of Khorne: If this model has the KHORNE keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.
-
-Daemon Prince of Tzeentch: If this model has the TZEENTCH keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.
-
-Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this model’s Toughness characteristic.
-
-Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
-
 Rules
-Deep Strike, The Shadow of Chaos, Deadly Demise D3, Murdercall, Blood Tainted
+Deadly Demise D3, Deep Strike, The Shadow of Chaos, Murdercall, Blood Tainted
 Stratagems
 
 BLOOD LEGION Gore‑hungry Onslaught, Fools’ Flight, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
@@ -3103,13 +3109,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 None from Warptide.
 
 Keywords
-CHAOS
+MONSTER
 CHARACTER
+CHAOS
 DAEMON
 DAEMON PRINCE OF CHAOS
 FACTION: LEGIONES DAEMONICA
 KHORNE
-MONSTER
 Ask about this unit
 ‹ Bloodthirster · Gateway Unto Damnation
 Rendmaster on Blood Throne ›
@@ -3150,13 +3156,9 @@ WS
 S
 AP
 D
-Blade of blood
-5
-2+
-6
--2
-3
-+
+
+Fights with both: Blade of blood, plus Attendant’s hellblades on top (extra attacks).
+
 Attendant’s hellblades
 4
 3+
@@ -3164,6 +3166,12 @@ Attendant’s hellblades
 -2
 2
 EXTRA ATTACKS
+Blade of blood
+5
+2+
+6
+-2
+3
 Fight phase, attacks that target the enemy unit selected with Blood Throne: improve S, AP and D by 1
 Melee attacks that target a CHARACTER or MONSTER unit: can re-roll the wound roll (Champion Slayer)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
@@ -3195,13 +3203,13 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Ch
 None from Warptide.
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-FACTION: LEGIONES DAEMONICA
-KHORNE
 MOUNTED
+CHARACTER
+CHAOS
+DAEMON
+KHORNE
 RENDMASTER ON BLOOD THRONE
+FACTION: LEGIONES DAEMONICA
 Ask about this unit
 ‹ Daemon Prince of Chaos · Slaughterthirst (Aura)
 Bloodmaster ›
@@ -3300,14 +3308,6 @@ Movement · Their turn
 
 Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.
 
-Bane-Forged Weapons
-- Bloodletters
-Already in S
-
-Upgrade
-
-LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
-
 Daemonic Icon
 - Bloodletters
 Already in Ld
@@ -3322,8 +3322,16 @@ Charge · Either turn
 
 Add 1 to Charge rolls made for the bearer’s unit.
 
+Bane-Forged Weapons
+- Bloodletters
+Already in S
+
+Upgrade
+
+LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
+
 Rules
-Deep Strike, The Shadow of Chaos, Leader, Murdercall, Blood Tainted, Shudderblink
+Deep Strike, Leader, The Shadow of Chaos, Murdercall, Blood Tainted, Shudderblink
 Stratagems
 
 BLOOD LEGION Gore‑hungry Onslaught, Fools’ Flight, Skulls Beget Blood, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
@@ -3333,15 +3341,15 @@ WARPTIDE Daemonic Infestation, Soulseeing, Incorporeal Entities
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-BLOODMASTER
-CHAOS
-CHARACTER
-DAEMON
-FACTION: LEGIONES DAEMONICA
 INFANTRY
+CHARACTER
+CHAOS
+DAEMON
 KHORNE
+BLOODMASTER
 BATTLELINE*
 BLOODLETTERS*
+FACTION: LEGIONES DAEMONICA
 *from the led Bloodletters
 Ask about this unit
 ‹ Rendmaster on Blood Throne
@@ -3403,13 +3411,15 @@ S
 AP
 D
 SKULLMASTER
+
+Fights with both: Blade of blood, plus Juggernaut’s bladed horn on top (extra attacks).
+
 Blade of blood
 5
 2+
 6
 -2
 3
-+
 Juggernaut’s bladed horn
 4
 4+
@@ -3418,13 +3428,15 @@ Juggernaut’s bladed horn
 1
 EXTRA ATTACKS, LANCE
 BLOODCRUSHERS
+
+Fights with both: Hellblade, plus Juggernaut’s bladed horn on top (extra attacks).
+
 Hellblade×3
 2
 3+
 5
 -2
 2
-+
 Juggernaut’s bladed horn×3
 4
 4+
@@ -3487,7 +3499,7 @@ Charge · Either turn
 Add 1 to Charge rolls made for the bearer’s unit.
 
 Rules
-Deep Strike, The Shadow of Chaos, Leader, Murdercall, Blood Tainted
+Deep Strike, Leader, The Shadow of Chaos, Murdercall, Blood Tainted
 Stratagems
 
 BLOOD LEGION Gore‑hungry Onslaught, Fools’ Flight, Skulls Beget Blood, Sheathed in Brass, Blood Begets Skulls, Wrath Undeniable
@@ -3497,14 +3509,14 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Ch
 None from Warptide.
 
 Keywords
-CHAOS
-CHARACTER
-DAEMON
-FACTION: LEGIONES DAEMONICA
-KHORNE
 MOUNTED
+CHARACTER
+CHAOS
+DAEMON
+KHORNE
 SKULLMASTER
 BLOODCRUSHERS*
+FACTION: LEGIONES DAEMONICA
 *from the led Bloodcrushers
 Ask about this unit
 ‹ Bloodmaster
@@ -3560,7 +3572,7 @@ Any phase · Either turn
 At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds.
 
 Rules
-Deep Strike, The Shadow of Chaos, Deadly Demise 1, Scouts 6"
+Deadly Demise 1, Deep Strike, Scouts 6", The Shadow of Chaos
 Stratagems
 
 CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
@@ -3569,11 +3581,11 @@ None from Blood Legion or Warptide.
 
 Keywords
 BEAST
-BEASTS OF NURGLE
 CHAOS
 DAEMON
-FACTION: LEGIONES DAEMONICA
 NURGLE
+BEASTS OF NURGLE
+FACTION: LEGIONES DAEMONICA
 Ask about this unit
 ‹ Skullmaster · Brazenmaw
 
@@ -4440,6 +4452,25 @@ EFFECT: Your unit moves as described in Moving (03).
 AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
 
 IN THIS ARMYBeasts of Nurgle
+
+Ask about this rule
+
+######## popup rule:Select Weapons · THE EXILED LEGION The Exiled Legion
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
 
 Ask about this rule
 

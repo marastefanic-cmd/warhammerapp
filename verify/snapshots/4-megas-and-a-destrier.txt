@@ -304,14 +304,6 @@ STRATAGEMS · FREEBLADE COMPANY
 Cerastus Knight Atrapos
 Bringer of Justice
 Atrapos lascutter
-➤high intensity
-24"
-D6
-3+
-14
--3
-4
-SUSTAINED HITS 1
 ➤low intensity
 36"
 2D6
@@ -320,15 +312,15 @@ SUSTAINED HITS 1
 -1
 2
 SUSTAINED HITS 1
-Graviton singularity cannon
-➤singularity
+➤high intensity
 24"
-D3
+D6
 3+
-16
--4
-D6+1
-BLAST, DEVASTATING WOUNDS, HAZARDOUS
+14
+-3
+4
+SUSTAINED HITS 1
+Graviton singularity cannon
 ➤contained
 24"
 D3
@@ -337,6 +329,14 @@ D3
 -4
 D6+1
 BLAST
+➤singularity
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
 vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
 vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
 Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
@@ -374,14 +374,6 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Stormspear rocket pod
-48"
-3
-3+
-8
--2
-D6
-IGNORES COVER
 Meltagun
 12"
 1
@@ -406,6 +398,14 @@ D6+3
 -1
 3
 BLAST, RAPID FIRE D6+3, IGNORES COVER
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+IGNORES COVER
 Remained Stationary in your Movement phase: ranged weapons have [SUSTAINED HITS 1] until the end of the turn (Punishing Salvoes)
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
@@ -413,14 +413,6 @@ STRATAGEMS · FREEBLADE COMPANY
 1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 Knight Destrier
 Sanctuary
-Questoris heavy stubber
-36"
-6
-3+
-4
--1
-1
-ASSAULT, RAPID FIRE 3
 Chastiser gatling cannon
 24"
 12
@@ -437,6 +429,14 @@ D6+3
 -1
 2
 ASSAULT, BLAST, RAPID FIRE D6+3
+Questoris heavy stubber
+36"
+6
+3+
+4
+-1
+1
+ASSAULT, RAPID FIRE 3
 Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
 Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
@@ -472,19 +472,19 @@ STRATAGEMS · FREEBLADE COMPANY
 Cerastus Knight Atrapos
 Bringer of Justice
 Atrapos lascutter
-➤high intensity
-8
-3+
-14
--3
-4
-SUSTAINED HITS 1
 ➤low intensity
 14
 3+
 7
 -1
 2
+SUSTAINED HITS 1
+➤high intensity
+8
+3+
+14
+-3
+4
 SUSTAINED HITS 1
 vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
 vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
@@ -536,13 +536,9 @@ STRATAGEMS · FREEBLADE COMPANY
 
 ######## abilities · MELEE Abilities
 Canis Rex
-Chainbreaker
-Once per battle
-Any phase
+Invulnerable Save (5+*)
 
-Once per battle · Any phase · Either turn
-
-Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
+This model has a 5+ invulnerable save against ranged attacks.
 
 Legendary Freeblade
 Once per turn
@@ -552,9 +548,13 @@ Once per turn · Any phase · Either turn
 
 Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.
 
-Invulnerable Save (5+*)
+Chainbreaker
+Once per battle
+Any phase
 
-This model has a 5+ invulnerable save against ranged attacks.
+Once per battle · Any phase · Either turn
+
+Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
 
 Damaged: 1-9 Wounds Remaining
 
@@ -566,6 +566,15 @@ If your Canis Rex model is destroyed, this model is treated as a model disembark
 
 Cerastus Knight Atrapos
 Bringer of Justice
+Atrapos’ Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
 Macro-extinction Protocols
 
 Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
@@ -582,24 +591,7 @@ Enhancement
 
 IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Atrapos’ Duty
-No ARMIGER models in this list
-
-No ARMIGER models in this list
-
-Bondsman
-
-While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
-
 Cerastus Knight Lancer
-Shock Charge
-
-You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
-
-Damaged: 1-10 Wounds Remaining
-
-While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
-
 Lancer’s Duty
 No ARMIGER models in this list
 
@@ -609,18 +601,35 @@ Bondsman
 
 While a model is affected by this ability, it is eligible to declare a charge in a turn in which it Advanced.
 
+Shock Charge
+
+You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
+
+Damaged: 1-10 Wounds Remaining
+
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
 Knight Crusader
 Hunter’s Eye
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Crusader’s Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll.
+
 Punishing Salvoes
 Your Move/Shoot
 
 Movement / Shooting · Your turn
 
 In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
-
-Invulnerable Save (5+*)
-
-This model has a 5+ invulnerable save against ranged attacks.
 
 Damaged: 1-9 Wounds Remaining
 
@@ -633,27 +642,11 @@ Enhancement
 
 IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
 
-Crusader’s Duty
-No ARMIGER models in this list
-
-No ARMIGER models in this list
-
-Bondsman
-
-While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll.
-
 Knight Destrier
 Sanctuary
-Damaged: 1-6 Wounds Remaining
+Invulnerable Save (5+*)
 
-While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
-
-Thundercharge
-Needs a thundershock spear and bellatus reaper chainsword: not this loadout
-
-Needs a thundershock spear and bellatus reaper chainsword: not this loadout
-
-If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+This model has a 5+ invulnerable save against ranged attacks.
 
 Ram Jets
 Your Movement
@@ -662,6 +655,13 @@ Movement · Your turn
 
 Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
 
+Thundercharge
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+
 Saturation Fire
 Your Shooting
 
@@ -669,9 +669,9 @@ Shooting · Your turn
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
-Invulnerable Save (5+*)
+Damaged: 1-6 Wounds Remaining
 
-This model has a 5+ invulnerable save against ranged attacks.
+While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 Sanctuary
 Enhancement
@@ -1092,12 +1092,12 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (4)
-Chainbreaker
-“Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.” · not counted in the Damage tab
-Legendary Freeblade
-“Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
 Invulnerable Save (5+*)
 “This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+Legendary Freeblade
+“Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
+Chainbreaker
+“Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.” · not counted in the Damage tab
 Using Sir Hekhtur
 “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. …” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
@@ -1362,12 +1362,12 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (4)
-Chainbreaker
-“Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.” · not counted in the Damage tab
-Legendary Freeblade
-“Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
 Invulnerable Save (5+*)
 “This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+Legendary Freeblade
+“Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
+Chainbreaker
+“Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.” · not counted in the Damage tab
 Using Sir Hekhtur
 “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. …” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
@@ -1687,12 +1687,12 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (4)
-Chainbreaker
-“Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.” · not counted in the Damage tab
-Legendary Freeblade
-“Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
 Invulnerable Save (5+*)
 “This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+Legendary Freeblade
+“Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
+Chainbreaker
+“Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.” · not counted in the Damage tab
 Using Sir Hekhtur
 “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. …” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
@@ -1827,12 +1827,12 @@ UNIT RULES
 None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (4)
-Chainbreaker
-“Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.” · not counted in the Damage tab
-Legendary Freeblade
-“Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
 Invulnerable Save (5+*)
 “This model has a 5+ invulnerable save against ranged attacks.” · not counted in the Damage tab
+Legendary Freeblade
+“Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.” · not counted in the Damage tab
+Chainbreaker
+“Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.” · not counted in the Damage tab
 Using Sir Hekhtur
 “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. …” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
@@ -2398,13 +2398,9 @@ Close combat weaponSIR HEKHTUR
 0
 1
 ABILITIES
-Chainbreaker
-Once per battle
-Any phase
+Invulnerable Save (5+*)
 
-Once per battle · Any phase · Either turn
-
-Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
+This model has a 5+ invulnerable save against ranged attacks.
 
 Legendary Freeblade
 Once per turn
@@ -2414,16 +2410,20 @@ Once per turn · Any phase · Either turn
 
 Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.
 
-Invulnerable Save (5+*)
+Chainbreaker
+Once per battle
+Any phase
 
-This model has a 5+ invulnerable save against ranged attacks.
+Once per battle · Any phase · Either turn
+
+Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
 
 Using Sir Hekhtur
 
 If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.
 
 Rules
-Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Lone Operative (Sir Hekhtur), Knights of Legend
+Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Lone Operative (Sir Hekhtur), Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -2433,15 +2433,15 @@ CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic C
 Keywords
 CHARACTER
 EPIC HERO
-FACTION: IMPERIAL KNIGHTS
 IMPERIUM
+FACTION: IMPERIAL KNIGHTS
 Canis Rex only:
-CANIS REX
-QUESTORIS
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+QUESTORIS
+CANIS REX
 Sir Hekhtur only:
 INFANTRY
 SIR HEKHTUR
@@ -2493,14 +2493,6 @@ S
 AP
 D
 Atrapos lascutter
-➤high intensity
-24"
-D6
-3+
-14
--3
-4
-SUSTAINED HITS 1
 ➤low intensity
 36"
 2D6
@@ -2509,15 +2501,15 @@ SUSTAINED HITS 1
 -1
 2
 SUSTAINED HITS 1
-Graviton singularity cannon
-➤singularity
+➤high intensity
 24"
-D3
+D6
 3+
-16
--4
-D6+1
-BLAST, DEVASTATING WOUNDS, HAZARDOUS
+14
+-3
+4
+SUSTAINED HITS 1
+Graviton singularity cannon
 ➤contained
 24"
 D3
@@ -2526,6 +2518,14 @@ D3
 -4
 D6+1
 BLAST
+➤singularity
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
@@ -2534,13 +2534,6 @@ S
 AP
 D
 Atrapos lascutter
-➤high intensity
-8
-3+
-14
--3
-4
-SUSTAINED HITS 1
 ➤low intensity
 14
 3+
@@ -2548,8 +2541,24 @@ SUSTAINED HITS 1
 -1
 2
 SUSTAINED HITS 1
+➤high intensity
+8
+3+
+14
+-3
+4
+SUSTAINED HITS 1
 Every melee attack: +1 to hit rolls (Bringer of Justice)
 ABILITIES
+Atrapos’ Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
 Macro-extinction Protocols
 
 Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
@@ -2562,17 +2571,8 @@ Enhancement
 
 IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Atrapos’ Duty
-No ARMIGER models in this list
-
-No ARMIGER models in this list
-
-Bondsman
-
-While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
-
 Rules
-Code Chivalric, Deadly Demise D6+2, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
+Deadly Demise D6+2, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -2580,15 +2580,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CERASTUS
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT ATRAPOS
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+CHARACTER
+TITANIC
+TOWERING
+IMPERIUM
+CERASTUS
+KNIGHT ATRAPOS
+FACTION: IMPERIAL KNIGHTS
 Ask about this unit
 ‹ Canis Rex
 Cerastus Knight Lancer ›
@@ -2665,10 +2665,6 @@ LANCE
 3
 Made a charge move this turn: Cerastus shock lance +1 to wound (Lance)
 ABILITIES
-Shock Charge
-
-You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
-
 Lancer’s Duty
 No ARMIGER models in this list
 
@@ -2677,6 +2673,10 @@ No ARMIGER models in this list
 Bondsman
 
 While a model is affected by this ability, it is eligible to declare a charge in a turn in which it Advanced.
+
+Shock Charge
+
+You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
 
 Rules
 Deadly Demise D6+2, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
@@ -2687,15 +2687,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CERASTUS
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT LANCER
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+CHARACTER
+TITANIC
+TOWERING
+IMPERIUM
+CERASTUS
+KNIGHT LANCER
+FACTION: IMPERIAL KNIGHTS
 Ask about this unit
 ‹ Cerastus Knight Atrapos · Bringer of Justice
 Knight Crusader · Hunter’s Eye ›
@@ -2759,14 +2759,6 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Stormspear rocket pod
-48"
-3
-3+
-8
--2
-D6
-IGNORES COVER
 Meltagun
 12"
 1
@@ -2791,6 +2783,14 @@ D6+3
 -1
 3
 BLAST, RAPID FIRE D6+3, IGNORES COVER
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+IGNORES COVER
 Remained Stationary in your Movement phase: ranged weapons have [SUSTAINED HITS 1] until the end of the turn (Punishing Salvoes)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 MELEE WEAPONS
@@ -2806,23 +2806,9 @@ Titanic feet
 -1
 2
 ABILITIES
-Punishing Salvoes
-Your Move/Shoot
-
-Movement / Shooting · Your turn
-
-In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
-
 Invulnerable Save (5+*)
 
 This model has a 5+ invulnerable save against ranged attacks.
-
-Hunter’s Eye
-Enhancement
-
-Enhancement
-
-IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
 
 Crusader’s Duty
 No ARMIGER models in this list
@@ -2833,8 +2819,22 @@ Bondsman
 
 While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll.
 
+Punishing Salvoes
+Your Move/Shoot
+
+Movement / Shooting · Your turn
+
+In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
+
+Hunter’s Eye
+Enhancement
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
+
 Rules
-Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Sustained Hits, Bondsman (no unit in this list it applies to), Knights of Legend
+Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Sustained Hits, Bondsman (no unit in this list it applies to), Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -2842,15 +2842,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT CRUSADER
-QUESTORIS
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+QUESTORIS
+CHARACTER
+IMPERIUM
+KNIGHT CRUSADER
+FACTION: IMPERIAL KNIGHTS
 Ask about this unit
 ‹ Cerastus Knight Lancer
 Knight Destrier · Sanctuary ›
@@ -2899,14 +2899,6 @@ BS
 S
 AP
 D
-Questoris heavy stubber
-36"
-6
-3+
-4
--1
-1
-ASSAULT, RAPID FIRE 3
 Chastiser gatling cannon
 24"
 12
@@ -2923,6 +2915,14 @@ D6+3
 -1
 2
 ASSAULT, BLAST, RAPID FIRE D6+3
+Questoris heavy stubber
+36"
+6
+3+
+4
+-1
+1
+ASSAULT, RAPID FIRE 3
 Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 MELEE WEAPONS
@@ -2938,12 +2938,9 @@ Titanic feet
 -1
 2
 ABILITIES
-Thundercharge
-Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+Invulnerable Save (5+*)
 
-Needs a thundershock spear and bellatus reaper chainsword: not this loadout
-
-If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+This model has a 5+ invulnerable save against ranged attacks.
 
 Ram Jets
 Your Movement
@@ -2952,16 +2949,19 @@ Movement · Your turn
 
 Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
 
+Thundercharge
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+
 Saturation Fire
 Your Shooting
 
 Shooting · Your turn
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
-
-Invulnerable Save (5+*)
-
-This model has a 5+ invulnerable save against ranged attacks.
 
 Sanctuary
 Enhancement
@@ -2972,7 +2972,7 @@ Enhancement
 IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.
 
 Rules
-Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Knights of Legend
+Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Knights of Legend
 Stratagems
 
 FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
@@ -2980,15 +2980,15 @@ FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor 
 CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
 
 Keywords
-BELLATUS
-CHARACTER
-FACTION: IMPERIAL KNIGHTS
-IMPERIUM
-KNIGHT DESTRIER
-TITANIC
-TOWERING
 VEHICLE
 WALKER
+TITANIC
+TOWERING
+BELLATUS
+CHARACTER
+IMPERIUM
+KNIGHT DESTRIER
+FACTION: IMPERIAL KNIGHTS
 Ask about this unit
 ‹ Knight Crusader · Hunter’s Eye
 
