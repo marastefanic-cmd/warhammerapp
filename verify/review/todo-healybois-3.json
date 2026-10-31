@@ -571,24 +571,25 @@
   "kind": "code",
   "where": "calc.js · critWoundAll",
   "judgement": {
-   "change": "With critWoundAll a wound roll is critical when its unmodified result u > 1 is equal to or greater than the wound need (woundNeed(S, T), or of the S rolled with dice), before and regardless of the wound modifiers (woundMod, the target’s -1 when S > T): in plan(), the played-out rolls (wr, wrS), explain() (wcls); +1 to wound adds normal wounds only, -1 to wound takes no critical wound away. Working: “a successful unmodified wound roll is a critical wound (<rule>)”. In sigOf and resolve(). As the review of result-healybois-3.json items 32/34 read the Core Rules (05.02, 24.03)."
+   "change": "With critWoundAll a wound roll is critical when its unmodified result u > 1 is equal to or greater than the wound need (woundNeed(S, T), or of the S rolled with dice), before and regardless of the wound modifiers (woundMod, the target’s -1 when S > T): in plan(), the played-out rolls (wr, wrS), explain() (wcls); +1 to wound adds normal wounds only, -1 to wound takes no critical wound away. Working: “critical wounds on an unmodified N+ (<rule>)”, N the wound need. In sigOf and resolve(). As the review of result-healybois-3.json items 32/34 read the Core Rules (05.02, 24.03)."
   },
   "source": {
-   "diff": "git show 8df7763 2344227 -- calc.js"
+   "diff": "git show 8df7763 2344227 e10aea9 -- calc.js"
   },
-  "key": "e219973c30e20a8d"
+  "key": "ea2fcc3c844fd699"
  },
  {
   "army": "code",
   "kind": "code",
   "where": "verify/calc-test.js · critWoundAll cases",
   "judgement": {
-   "change": "8 hand-worked cases, 60 [TORRENT] attacks S4 D1 with [DEVASTATING WOUNDS]: vs T4 (4+) 30 mortal wounds (and 30 played out); with +1 to wound 30 mortal wounds and 10 normal wounds (the unmodified 3s wound only through the +1); with -1 to wound 30 mortal wounds (no critical lost); vs T8 (6+) 10; without [DEVASTATING WOUNDS] 30 wounds; the working says “a successful unmodified wound roll is a critical wound (Swallow Whole)”. calc: 381 of 381."
+   "change": "17 hand-worked cases, 60 [TORRENT] attacks S4 D1 with [DEVASTATING WOUNDS] vs T4 unless said. The explanation (wcls): 30 mortal wounds; +1 to wound 30 mortal + 10 normal; -1 to wound 30 mortal; vs T8 (6+) 10; without [DEVASTATING WOUNDS] 30 wounds; the working “critical wounds on an unmodified 4+ (Swallow Whole)”. Played out (run(), wr): 30 mortal; +1 to wound 30 mortal + 10 normal; -1 to wound 30 mortal. A beat (play()): +1 to wound 30 mortal; -1 to wound 30 mortal. S rolled with dice (wrS): S2+D3 30 mortal; with +1 to wound 40 wounds, 30 mortal. plan()’s choice: [LETHAL HITS] + [DEVASTATING WOUNDS], -1 to wound, Sv 3+, Feel No Pain 6+ (5+ vs mortal wounds): critical hits rolled to wound (1/3 against 5/18), 15 mortal wounds (10 if [LETHAL HITS] were taken).",
+   "mutations": "Each of plan, wr, wrS, wcls reverted to the old reading (critical when the modified roll wounds) fails: plan 1 case, wr 6, wrS 1, wcls 3. calc: 390 of 390."
   },
   "source": {
-   "diff": "git show 8df7763 2344227 -- verify/calc-test.js"
+   "diff": "git show 8df7763 2344227 e10aea9 -- verify/calc-test.js"
   },
-  "key": "fb7a91f5bd72f4c4"
+  "key": "3bedead8c59566aa"
  },
  {
   "army": "healybois",
