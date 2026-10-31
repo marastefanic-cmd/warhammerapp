@@ -304,12 +304,12 @@
   "kind": "unit-why",
   "where": "the-red-terror",
   "judgement": {
-   "why": "The Red Terror: GW’s keyword BURROWER (not in BSData, declared). Swallow Whole: a footnote on the gaping maw vs INFANTRY/MOUNTED/BEASTS (“each successful unmodified Wound roll is a Critical Wound”); the Damage tab does not count it (effects.js reads a Critical Wound only “on an unmodified wound roll of X+”), and its wounds regained are no attack or defence numbers. Subterranean Hunter: no numbers, no reading."
+   "why": "The Red Terror: GW’s keyword BURROWER (not in BSData, declared). Swallow Whole: a footnote on the gaping maw vs INFANTRY/MOUNTED/BEASTS (“each successful unmodified Wound roll is a Critical Wound”); the Damage tab counts it (effects.js critWoundAll, calc.js: every wound roll that wounds is a Critical Wound, so with the gaping maw’s [DEVASTATING WOUNDS] each is mortal wounds); its wounds regained are no attack or defence numbers. Subterranean Hunter: no numbers, no reading."
   },
   "source": {
    "file": "verify/sources/hand/healybois.json units.the-red-terror.why (not shown in the app)"
   },
-  "key": "3247a55505fc1971"
+  "key": "07b0b8994c5cd250"
  },
  {
   "army": "healybois",
@@ -541,17 +541,92 @@
   "key": "5cf000920c029130"
  },
  {
-  "army": "healybois",
-  "kind": "question",
-  "where": "The Red Terror · Swallow Whole in the Damage tab",
+  "army": "code",
+  "kind": "code",
+  "where": "effects.js · critWoundAll (new effect)",
   "judgement": {
-   "app": "a footnote on the gaping maw; the Damage tab lists it “not counted”"
+   "change": "A new Damage-tab effect: “Every successful Wound roll is a Critical Wound”, mod { critWoundAll:true }, pattern /\b(?:each|every|any) successful unmodified wound roll is a critical wound\b/. Not offered among the Custom modifiers. The cache has this wording only in Swallow Whole (Wahapedia’s The Red Terror datasheet, the Tyranids Faction Pack)."
   },
   "source": {
-   "reason": "“Each successful unmodified Wound roll is a Critical Wound” vs INFANTRY/MOUNTED/BEASTS (the gaping maw has [DEVASTATING WOUNDS], so it matters). effects.js reads a Critical Wound only “on an unmodified wound roll of X+” (critWound); a critical on any success needs a calc mode and an effects pattern: an effects-code change for its own review, not made here.",
-   "evidence": "effects.js critWound; verify/.cache/waha/ds/tyranids_The-Red-Terror.html"
+   "diff": "git show 8df7763 -- effects.js",
+   "words": "Each time an attack with this model’s gaping maw targets an INFANTRY, MOUNTED or BEASTS unit, each successful unmodified Wound roll is a Critical Wound."
   },
-  "key": "8d09f0d433f2b52c"
+  "key": "b4c7b3618f33b204"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "effects.js · critWound pattern, either word order",
+  "judgement": {
+   "change": "critWound’s pattern now also reads “a successful unmodified Wound roll of 5+ scores a Critical Wound” (Prince of Slaanesh, Syll’esske) besides “an unmodified successful Wound roll of 5+” (the focus of hatred enhancement). No box changes today: Syll’esske is a catalogue row no list has; a list with it would get a Critical Wound 5+ box for Prince of Slaanesh."
+  },
+  "source": {
+   "diff": "git show 8df7763 -- effects.js",
+   "evidence": "verify/.cache/waha/ds/chaos-daemons_Syll-esske.html; verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-…txt: Prince of Slaanesh"
+  },
+  "key": "ce2c4250a7e2c084"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "calc.js · critWoundAll",
+  "judgement": {
+   "change": "A wound roll that wounds is a critical wound when a mod has critWoundAll: in plan() (the chances), the played-out wound rolls (wr, and wrS for S rolled with dice), explain() (wcls) and the working (“every successful wound roll is a critical wound (<rule>)”); in the attack signature (sigOf) and resolve(). An unmodified 1 still fails; a critical wound on X+ (critWound, [ANTI]) still applies below the wound need.",
+   "reading": "“Successful” is read after the roll’s modifiers (with +1 to wound, a 3 that wounds on 4+ is a success and so critical); the other reading (only an unmodified roll that meets the need) would differ only where a wound modifier applies. Reviewer to confirm."
+  },
+  "source": {
+   "diff": "git show 8df7763 -- calc.js"
+  },
+  "key": "914c312b18d8ae00"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/calc-test.js · critWoundAll cases",
+  "judgement": {
+   "change": "6 hand-worked cases, 60 [TORRENT] attacks S4 D1 with [DEVASTATING WOUNDS]: vs T4 (4+) 30 mortal wounds (and 30 played out); with +1 to wound (3+) 40; vs T8 (6+) 10; without [DEVASTATING WOUNDS] 30 wounds; the working names the rule. calc: 379 of 379 within margin."
+  },
+  "source": {
+   "diff": "git show 8df7763 -- verify/calc-test.js"
+  },
+  "key": "7f59aa7ee6fd70ad"
+ },
+ {
+  "army": "healybois",
+  "kind": "box-change",
+  "where": "BOXES · a|17eyv4g Swallow Whole (The Red Terror)",
+  "judgement": {
+   "box": {
+    "fx": [
+     [
+      "critWoundAll",
+      true
+     ]
+    ],
+    "on": [
+     [
+      "targetKw",
+      {
+       "any": [
+        "Infantry",
+        "Mounted",
+        "Beast"
+       ]
+      }
+     ]
+    ],
+    "kind": "all",
+    "scope": {
+     "weapon": "gaping maw",
+     "models": "model"
+    }
+   }
+  },
+  "source": {
+   "quote": "Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound.",
+   "note": "the only box the new patterns change across all lists (effects-migrate.js --write: 278 → 279 sources, 295 → 296 boxes); before, Swallow Whole was “not counted”"
+  },
+  "key": "d04de248cf131ff4"
  },
  {
   "army": "healybois",
@@ -568,14 +643,14 @@
  },
  {
   "army": "healybois",
-  "kind": "question",
-  "where": "Left as they were",
+  "kind": "housekeeping",
+  "where": "hand file spellings; derive-agreed.json",
   "judgement": {
-   "app": "hand file spellings “Instinctive Defense” kept (no list uses it now); derive-agreed.json keeps 18 items no longer present (the two norn-assimilator-synaptoprescience ids, Instinctive Defence; stale items do not fail the gate)"
+   "change": "verify/sources/hand/healybois.json: spellings “Instinctive Defense” removed (no list has the enhancement). verify/derive-agreed.json: the 18 items no longer present removed (Instinctive Defence; norn-assimilator-synaptoprescience and -2), as 6f2e912 retired its own; nothing re-recorded."
   },
   "source": {
-   "reason": "Neither changes data.js; removing them is housekeeping for the owner."
+   "diff": "git show c298d78 -- verify/derive-agreed.json verify/sources/hand/healybois.json"
   },
-  "key": "9704f6b6da8d8bee"
+  "key": "d59b251bbf3fa215"
  }
 ]
