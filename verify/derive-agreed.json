@@ -4093,11 +4093,13 @@
    "at": "Start of the first battle round",
    "ph": [
     "command",
+    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
+    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -4109,11 +4111,13 @@
    "at": "Start of the first battle round",
    "ph": [
     "command",
+    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
+    "movement": "opp",
     "shooting": "your"
    }
   },
