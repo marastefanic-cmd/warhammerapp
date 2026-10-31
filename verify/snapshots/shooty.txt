@@ -65,6 +65,12 @@ DETACHMENT
 DISPOSITION
 NEWEST FIRST
 RANDOM
+Healybois
+2000 pts
+Tyranids · Assimilation Swarm · Talons of the Norn Queen
+PRIORITY ASSETS
+TAKE AND HOLD
+, CHOSEN
 Simple but effective
 2000 pts
 Orks · Brute Bosses · Bully Boyz · Runt Swarm
@@ -76,12 +82,6 @@ U w0t m8?
 Necrons · Obeisance Phalanx · The Phaeron’s Armoury
 DISRUPTION
 PRIORITY ASSETS
-, CHOSEN
-Healybois
-2000 pts
-Tyranids · Assimilation Swarm · Talons of the Norn Queen
-PRIORITY ASSETS
-TAKE AND HOLD
 , CHOSEN
 Tzeeeeentch
 2000 pts
@@ -615,7 +615,7 @@ One page template reads the tables and draws every screen from them. Each releas
 THE TABLES
 14
 ARMIES
-25 lists · 213 entries
+25 lists · 214 entries
 FACTIONS
 13 rows
 army rules 29
@@ -632,9 +632,9 @@ rules
 RULE_ALIASES 71
 RULE_SRC 7
 CONCEPTS 20
-GRANTS 76
+GRANTS 75
 RULE_OPTIONS 89
-CHECKLIST 492
+CHECKLIST 496
 rule / key → a rule or an ability
 CORE_STRATAGEMS
 10 · used by every list
@@ -654,7 +654,7 @@ HAND a decision about the rules written for this app, not copied from a source: 
 Of the 555 columns of the tables: Mechanical 300 · AI summary 2 · AI reading 198 · Hand 55.
 
 ARMIES
-25 rows · 213 unit entries · one row per list
+25 rows · 214 unit entries · one row per list
 
 UNITS[ ].DS→ the unit’s DATASHEETS row
 
@@ -721,7 +721,7 @@ MECHANICAL name (New Recruit), faction (New Recruit), points (New Recruit), poin
 
 HAND id
 
-ARMIES.units 213 rows
+ARMIES.units 214 rows
 
 a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS
 
@@ -872,7 +872,7 @@ AI READING def, damaged, riled, defAlways, defCalc, calcDef, lasts, fightOnDeath
 
 HAND note, na
 
-DATASHEETS.mods 131 rows
+DATASHEETS.mods 134 rows
 
 the readings of the datasheet's abilities (and of a core rule on its Rules line, or a weapon ability it defines) as footnotes under its weapon tables: every list with the datasheet has them
 
@@ -882,7 +882,7 @@ AI READING kind, weapon, who, set, when, cond, note, from, pick, rule, lasts, vs
 
 HAND listWhy
 
-DATASHEETS.aura 31 rows
+DATASHEETS.aura 32 rows
 
 the readings of the datasheet's abilities as what it gives other units of its list
 
@@ -1183,9 +1183,9 @@ CONCEPTS 20 rows
 MECHANICAL term (GW)
 
 GRANTS
-76 rows · a rule or option giving units an ability or keyword
+75 rows · a rule or option giving units an ability or keyword
 
-RULE→ an army rule (4) or detachment rule (26) in FACTIONS, or a unit’s ability (46) in a list (ARMIES → DATASHEETS)
+RULE→ an army rule (4) or detachment rule (26) in FACTIONS, or a unit’s ability (45) in a list (ARMIES → DATASHEETS)
 
 ONE ROW
 
@@ -1209,7 +1209,7 @@ text
 COMPUTED
 Every column and where it comes from
 7 columns
-GRANTS 76 rows
+GRANTS 75 rows
 
 MECHANICAL rule (computed), option (computed), grants (computed), type (computed), to (computed), while (computed), text (computed)
 
@@ -1251,11 +1251,11 @@ RULE_OPTIONS 89 rows
 MECHANICAL rule (computed), option (computed), text (computed), found (computed), explicit (computed), trigger (computed), used (computed), phases (computed)
 
 CHECKLIST
-492 rows · per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
+496 rows · per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
 
 R|FACTION|NAME→ an army or detachment rule in FACTIONS (92)
 
-A|FINGERPRINT→ an ability, by a fingerprint of its name and words (400), in DATASHEETS
+A|FINGERPRINT→ an ability, by a fingerprint of its name and words (404), in DATASHEETS
 
 ONE ROW: TURBO ENGINE (WAZDAKKA GUTSMEK)
 
@@ -1272,10 +1272,10 @@ COMPUTED
 t the phases it is triggered in · u the phases its effect is used in · s listed at a fixed moment of the turn · a listed when the unit is selected · at the moment it opens with · ae also at the end of the battle round · o its options, each with its own phases · g what it grants · f a rule it puts in force · pk a pick of options · oc its options cover its phases · x not placed (its words give no phase) · none no phase (before the battle, what a unit carries)
 
 BOXES
-275 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
+279 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
 Every column and where it comes from
 23 columns, with 1 inner table
-BOXES 275 rows
+BOXES 279 rows
 
 MECHANICAL n (computed), b (computed), nc (computed), reach (computed), both (computed), embarked (computed)
 
@@ -1323,13 +1323,13 @@ infoKids
 18 ids
 BSDATA
 units
-212 ids
+213 ids
 BSDATA
 names
-811 ids
+817 ids
 BSDATA
 maxPerList
-81 ids
+82 ids
 BSDATA
 Every column and where it comes from
 13 columns
@@ -1342,7 +1342,7 @@ one value · the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-10-31.1
+2026-10-31.2
 
 WHY YOU CAN TRUST THE DATA
 
