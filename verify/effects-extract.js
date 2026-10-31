@@ -104,9 +104,11 @@ function condsOf(V, sOrig, leadOrig, opts){
   }
   const tk = targetKw(V, sOrig) || (opts && opts.inherit ? null : targetKw(V, leadOrig || ''));
   if(tk) on.push(['targetKw', tk]);
-  // any other condition, in GW's words: an "if / while / unless" clause no condition above reads
+  // any other condition, in GW's words: an "if / while / unless" clause no condition above reads, or the trigger of a one-time
+  // change ("The first time the bearer's unit destroys an enemy unit in the Fight phase", Parasitic Biomorphology: up to a "while"
+  // clause of its own, read as one)
   const pc = plainCase((leadOrig ? leadOrig + ' ' : '') + sOrig);
-  for(const m of pc.matchAll(/\b(?:[Ii]f|[Ww]hile|[Uu]nless) ([^,.:;()]+)/g)){
+  for(const m of pc.matchAll(/\b(?:(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;()]+|[Tt]he first time (?:(?! while\b)[^,.:;()])+)/g)){
     const cl = m[0], cn = norm(cl);
     if(/^if (?:you|it|they) do(?:es)?\b|^if any of the following apply\b/.test(cn)) continue;
     // (an "if" whose consequence is a cost, not this effect: "if that test is failed, that unit suffers D3 mortal wounds")

@@ -2215,6 +2215,26 @@
  },
  {
   "army": "healybois",
+  "unit": "the-red-terror",
+  "field": "kw",
+  "app": "Burrower",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword BURROWER; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Red-Terror.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "the-red-terror",
+  "field": "kw",
+  "app": "",
+  "source": "Burrowers",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Burrowers; GW’s datasheet does not print that keyword. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Red-Terror.html: KEYWORDS (no BURROWERS).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
   "unit": "the-swarmlord-tyrant-guard",
   "field": "ability.text",
   "app": "Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
@@ -2231,6 +2251,16 @@
   "source": "Feel No Pain 5+",
   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
   "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "hive-tyrant-tyrant-guard",
+  "field": "ability.text",
+  "app": "Parasitic Biomorphology: **TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.",
+  "source": "**^^Tyranids^^** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer's unit. The first time the bearer's unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more **^^Harvester^^** units, until the end of battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer's unit.",
+  "reason": "The app has GW’s words: the enhancement as the detachment prints it (Wahapedia, the codex): BSData leaves out its first sentence or words it otherwise (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Tyranids model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer's unit. The …\"). GW wins.",
+  "evidence": "verify/.cache/waha/tyranids.txt: \"TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer's unit. The first time the bearer's unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more frie…\".",
   "by": "verify/from-json.js"
  },
  {
@@ -2285,17 +2315,7 @@
  },
  {
   "army": "healybois",
-  "unit": "norn-assimilator-synaptoprescience",
-  "field": "ability.text",
-  "app": "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
-  "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, tha…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "healybois",
-  "unit": "norn-assimilator-synaptoprescience",
+  "unit": "norn-assimilator",
   "field": "ability.text",
   "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
   "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
@@ -2305,22 +2325,12 @@
  },
  {
   "army": "healybois",
-  "unit": "norn-assimilator-synaptoprescience-2",
+  "unit": "norn-assimilator",
   "field": "ability.text",
   "app": "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
   "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.",
   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, tha…\"). GW wins.",
   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "healybois",
-  "unit": "norn-assimilator-synaptoprescience-2",
-  "field": "ability.text",
-  "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
-  "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battl…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\".",
   "by": "verify/from-json.js"
  },
  {
@@ -2351,6 +2361,26 @@
   "source": "Unnatural Resistance",
   "reason": "GW names the ability Unnatural Resilience, BSData at the pin (Xenos - Tyranids catalogue revision 3) Unnatural Resistance. GW wins.",
   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"Unnatural Resilience\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "psychophage",
+  "field": "stats.base",
+  "app": "Psychophage: 120×92mm Oval",
+  "source": "Psychophage: 120x92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Psychophage: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3835: \"Psychophage  120x92mm Oval Base\"; verify/sources/nr-json/healybois.json: 120×92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "healybois",
+  "unit": "psychophage",
+  "field": "ability.text",
+  "app": "Feeding Frenzy: Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the **Hit roll**. If that target is also **Below Half-strength**, add 1 to the **Wound roll** as well.",
+  "source": "Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half strength, add 1 to the Wound roll as well.",
+  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll…\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Psychophage.html: \"Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well.\".",
   "by": "verify/from-json.js"
  },
  {

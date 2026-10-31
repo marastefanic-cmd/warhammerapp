@@ -1328,6 +1328,11 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
       const bareT = t => lc(plainBS(t)).replace(/[^a-z0-9]+/g, ' ').trim();
       if (i < 0 && sa.text) { i = mineAbs.findIndex(a => !a._e && a.text && !(S.abilities || []).some(x => x.name === a.name) && bareT(a.text) === bareT(sa.text)); if (i >= 0 && !mineAbs[i]._gw) note('ability ' + sa.name + ' name', sa.name, mineAbs[i].name); }
       const a = i >= 0 ? mineAbs.splice(i, 1)[0] : null;
+      // (a row ability this reading lacks is carried only where another list shows it: one the catalogue alone gave the row, a
+      // datasheet's Leader text no list's unit has, stays off the list, as for every list (docs/catalog.md: what a list shows does not change))
+      if (!a && !(HAND.keptRows || []).includes(key) && !D.armies.some(ar => ar.id !== armyId && ar.units.some(x => (x.name === S.name || x.leads === S.name || (x.also || []).some(c => c.name === S.name))
+        && (x.abilities || []).some(y => y.name === sa.name && (!y.who || y.who === S.name))))) {
+        note('ability ' + sa.name + ' (the catalogue’s: no list shows it, not carried)', 'on the row', 'not in this reading'); continue; }
       // (GW's name and words, where this reading has them from GW's datasheet and the row has others, BSData's: GW's, for the row too;
       // markup alone, ** **, keeps the row's)
       const gwName = a && a._gw && a.name !== sa.name, gwText = a && a._gw && a.text !== undefined && String(a.text).replace(/\*\*/g, '') !== String(sa.text || '').replace(/\*\*/g, '');
@@ -1702,9 +1707,14 @@ filled.push({ what: '"+" marks: ' + (g.stdout || g.stderr).trim(), from: 'verify
 // (this run's deviations replace the ones an earlier run wrote: those are taken out first, so verify/bsdata.js reports every difference)
 const DEVF = path.join(ROOT, 'verify/deviations-bsdata.json');
 const ours = x => x.army === armyId && x.by === 'verify/from-json.js' && (!REFS || refIds.has(x.unit));
-const devList = JSON.parse(fs.readFileSync(DEVF, 'utf8')).filter(x => !ours(x));
+// (and written where the earlier run's stood, so a re-run leaves the files as they were: the place among the others' entries)
+const oursAt = l => { const i = l.findIndex(ours); return i < 0 ? -1 : l.slice(0, i).filter(x => !ours(x)).length; };
+const inPlace = (l, at) => { if (at < 0) return l; const rest = l.filter(x => !ours(x)); rest.splice(at, 0, ...l.filter(ours)); return rest; };
+const devList0 = JSON.parse(fs.readFileSync(DEVF, 'utf8')), devAt = oursAt(devList0);
+const devList = devList0.filter(x => !ours(x));
 fs.writeFileSync(DEVF, JSON.stringify(devList, null, 1) + '\n');
-{ const NRDEVF0 = path.join(ROOT, 'verify/deviations-nr.json'); fs.writeFileSync(NRDEVF0, JSON.stringify(JSON.parse(fs.readFileSync(NRDEVF0, 'utf8')).filter(x => !ours(x)), null, 1) + '\n'); }
+let nrDevAt = -1;
+{ const NRDEVF0 = path.join(ROOT, 'verify/deviations-nr.json'), l = JSON.parse(fs.readFileSync(NRDEVF0, 'utf8')); nrDevAt = oursAt(l); fs.writeFileSync(NRDEVF0, JSON.stringify(l.filter(x => !ours(x)), null, 1) + '\n'); }
 const B = spawnSync(process.execPath, [path.join(ROOT, 'verify/bsdata.js')], { cwd: ROOT, encoding: 'utf8' });
 if (!/^bsdata: /.test(B.stdout || '')) { console.error('verify/bsdata.js did not run:\n' + (B.stderr || B.stdout)); process.exit(1); }
 const fails = (JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/out/bsdata.json'), 'utf8')).failures || []).filter(f => f.army === armyId && (!REFS || refIds.has(f.unit)));
@@ -1773,7 +1783,7 @@ for (const f of fails) {
 for (const x of REFS ? [] : dispDevs) devList.push({ army: armyId, faction: factionId, detachment: x.detachment, field: 'dispositions', app: x.app, source: null,
   reason: 'BSData at the pin has no Force Disposition for ' + x.detachment + ' (its entry is the unfinished "' + x.detachment + ' (ITS NOT READY)", with no disposition marker); the Wahapedia faction page (the codex) marks the detachment ' + x.app.join(', ') + (/Disruption/.test(x.app.join()) ? ', as New Recruit’s export does (its category "Disruption")' : '') + '. GW wins.',
   evidence: 'verify/.cache/waha/' + factionId + '.html, ' + x.detachment + ': "Force Disposition: ' + x.app.join('", "Force Disposition: ') + '"; ' + EXP + ': Detachment › ' + x.detachment + ' categories.', by: 'verify/from-json.js' });
-fs.writeFileSync(DEVF, JSON.stringify(devList, null, 1) + '\n');
+fs.writeFileSync(DEVF, JSON.stringify(inPlace(devList, devAt), null, 1) + '\n');
 // and what verify/nr.js checks against the export itself (New Recruit's base sizes)
 spawnSync(process.execPath, [path.join(ROOT, 'verify/nr.js'), '--quiet'], { cwd: ROOT, encoding: 'utf8' });
 const NRDEVF = path.join(ROOT, 'verify/deviations-nr.json');
@@ -1788,7 +1798,7 @@ for (const f of (JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/out/nr.json'
   if (fact && gwN(fact.gw) === gwN(f.app)) nrDevs.push({ army: f.army, unit: f.unit, field: f.field, app: f.app, source: f.source, reason: expS + ' gives the base as ' + f.source + '; ' + fact.src + ' has ' + fact.gw + '. GW wins (base sizes too).', evidence: fact.file + '; ' + EXP + ': Base ' + f.source + '.', by: 'verify/from-json.js' });
   else want(f.unit + ' ' + f.field, 'verify/nr.js: app ' + JSON.stringify(f.app) + ', export ' + JSON.stringify(f.source), 'no GW evidence from this run: look at it by hand');
 }
-fs.writeFileSync(NRDEVF, JSON.stringify(nrDevs, null, 1) + '\n');
+fs.writeFileSync(NRDEVF, JSON.stringify(inPlace(nrDevs, nrDevAt), null, 1) + '\n');
 const dn = devList.filter(x => x.army === armyId && x.by === 'verify/from-json.js').length;
 filled.push({ what: dn + ' deviations from BSData at the pin declared in verify/deviations-bsdata.json (GW’s value, with the datasheet as evidence)', from: 'verify/bsdata.js failures matched to this run’s comparisons with Wahapedia' });
 for (const f of stillFailing) want(f.unit + ' ' + f.field, 'verify/bsdata.js: app ' + JSON.stringify(f.app) + ', BSData ' + JSON.stringify(f.source), 'no GW evidence from this run: look at it by hand');

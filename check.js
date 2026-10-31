@@ -154,6 +154,21 @@ function check(file){
     }
     if(pts !== a.pointsUsed) P('army', a.id, 'points add up to', pts, 'but pointsUsed is', a.pointsUsed);
   }
+  // a reading's target keywords (vs: { any, all, none, also }) are keywords units have: a misspelt one ("Beasts" for the units' "Beast")
+  // would match no target. The vocabulary: every keyword of every datasheet row (lists' and catalogues') and list unit
+  {
+    const lcK = s => String(s).toLowerCase(), V = new Set();
+    for(const S of Object.values(D.datasheets || {})) for(const k of S.kw || []) V.add(lcK(k));
+    for(const a of D.armies) for(const u of a.units) for(const k of u.kw || []) V.add(lcK(k));
+    const walk = (x, where) => {
+      if(!x || typeof x !== 'object') return;
+      if(Array.isArray(x)){ x.forEach((y, i) => walk(y, where + '[' + i + ']')); return; }
+      if(x.vs && typeof x.vs === 'object') for(const part of [x.vs, x.vs.also || {}]) for(const k of [].concat(part.any || [], part.all || [], part.none || []))
+        if(!V.has(lcK(k))) P(where, 'reading of', x.from || '?', 'names a target keyword no unit has:', k);
+      for(const [k, y] of Object.entries(x)) if(k !== 'vs') walk(y, where + '.' + k);
+    };
+    walk({ armies:D.armies, factions:D.factions, datasheets:D.datasheets, coreStratagems:D.coreStratagems }, 'data');
+  }
   return out;
 }
 

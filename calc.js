@@ -18,7 +18,7 @@
                               Damage roll below the dice's average that leaves the model with wounds left is re-rolled),
                               anti ({ kw:[keywords], non, v, assume }: [ANTI-X v+] a rule gives; assume: the target has it, the player's
                               box), indirect ([INDIRECT FIRE] a rule gives),
-                              critHit, critWound, sus ('1'), lethal, dev, ignoresCover, lance, twin, precision,
+                              critHit, critWound, critWoundAll (each successful unmodified wound roll is a critical wound), sus ('1'), lethal, dev, ignoresCover, lance, twin, precision,
                               ignoreHitMods, set:{ A|S|AP|D|BS: '10' or '+6' }, strat (a stratagem's id),
                               oneHit, oneWound, oneDmg (re-roll one Hit / Wound / Damage roll), oneEither (one Hit or Wound roll),
                               oneAny (one Hit, Wound or Damage roll): how many; phase: it lasts the phase (see play) }] }]   one entry per weapon
@@ -255,6 +255,10 @@ function prep(g, X){
   for(const m of mods) if(m.anti && m.anti.assume && +m.anti.v < cW.v){ const t = 'ANTI-' + (m.anti.non ? 'NON-' : '') + [].concat(m.anti.kw).map(up).join('/') + ' ' + m.anti.v + '+';
     if(credited(t, m)){ skipped.push({ from:m.from, key:t }); continue; } cW = { v:+m.anti.v, src:'[' + t + '] (24.03), ' + srcName(m) }; applied.push({ from:m.from || '', key:t }); }
   const rrDmg = best('rrDmg');
+  // "each successful unmodified Wound roll is a Critical Wound" (Swallow Whole): critical when the unmodified roll is equal to or
+  // greater than the required result (05.02 decides critical wounds on the unmodified roll, as [ANTI] does, 24.03), before and
+  // regardless of the wound modifiers: +1 to wound adds normal wounds only, -1 to wound takes no critical wound away
+  const cWA = mods.find(m => m.critWoundAll);
   const G = {
     name:g.name, n:Math.max(0, +g.n || (g.n === 0 ? 0 : 1)), out, notes, applied, skipped, k, why, half, rangeIn, r0, from, indirect, noRr, ignoreSrc, one,
     A0:sA.base != null ? sA.base : g.A, skill0, S0:s0, AP0:ap0 || 0, D0:sD.base != null ? sD.base : g.D, blastN:X.total,
@@ -268,7 +272,8 @@ function prep(g, X){
     bs, hitMod:pos + (ignore ? 0 : neg), critHit:Math.min(RULE.critHit, cH.v), critHitSrc:cH.src, rrHit:rrHit.v, rrHitSrc:rrHit.src,
     S:s0 == null ? RULE.minS : Math.max(RULE.minS, s0 + sPlus),   // no S: S 1 for this (02.04.01), and '-' is never modified
     woundMod:why.wound.reduce((t, x) => t + x.v, 0),
-    critWound:Math.min(cW.v, k.antiV || 7), critWoundSrc:k.antiV && k.antiV <= cW.v ? '[' + k.text.anti + '] (24.03)' + (k.from('anti') ? ', from ' + k.from('anti') : '') : cW.src, rrWound:rrWound.v, rrWoundSrc:rrWound.src,
+    critWound:Math.min(cW.v, k.antiV || 7), critWoundSrc:k.antiV && k.antiV <= cW.v ? '[' + k.text.anti + '] (24.03)' + (k.from('anti') ? ', from ' + k.from('anti') : '') : cW.src,
+    critWoundAll:!!cWA, critWoundAllSrc:cWA ? srcName(cWA) : '', rrWound:rrWound.v, rrWoundSrc:rrWound.src,
     AP:Math.min(0, (ap0 || 0) - apImp + (tm.apWorse || 0)),   // improvements and worsenings added up, then not worse than 0
     D, dPlus, sus:k.sus || null, lethal:!!k.lethal, dev:!!k.dev, precision:!!k.precision && !k.torrent, psychic:ignore,   // [TORRENT] weapons cannot have [PRECISION] (24.37)
     // hazard rolls after the unit's attacks: one for [HAZARDOUS] (24.15), two for [SUPA-HAZARDOUS] when it shoots (its own words);
@@ -279,7 +284,7 @@ function prep(g, X){
   return G;
 }
 // attacks that resolve alike are gathered together (identical attacks, 04.03)
-const sigOf = (G, prec) => JSON.stringify([G.bs, G.hitMod, G.critHit, G.rrHit, G.torrent, G.snap, G.fail, G.S, G.woundMod, G.critWound, G.rrWound,
+const sigOf = (G, prec) => JSON.stringify([G.bs, G.hitMod, G.critHit, G.rrHit, G.torrent, G.snap, G.fail, G.S, G.woundMod, G.critWound, G.critWoundAll, G.rrWound,
   G.AP, G.D, G.dPlus, G.melta, G.sus, G.lethal, G.dev, prec && G.precision, G.rrDmg, G.aDice, G.sDice]);
 
 // the attacker's choices the rules leave open (re-rolls, [LETHAL HITS]): the one worth more on average against the
@@ -289,7 +294,7 @@ const sigOf = (G, prec) => JSON.stringify([G.bs, G.hitMod, G.critHit, G.rrHit, G
 function plan(G, T, M, tm){
   const row = M.row, need = woundNeed(G.S, T), sgt = tm.woundMinusSgt && G.S > T ? +tm.woundMinusSgt : 0, wMod = G.woundMod - sgt;
   let pc = 0, pn = 0;
-  for(let u = 2; u <= 6; u++){ if(u >= G.critWound) pc++; else if(u + wMod >= need) pn++; }
+  for(let u = 2; u <= 6; u++){ if(u >= G.critWound || (G.critWoundAll && u >= need)) pc++; else if(u + wMod >= need) pn++; }
   pc /= 6; pn /= 6;
   const insv = Math.max(RULE.bestSave, Math.min(row.InSv || 7, tm.insv || 7)), sv = Math.max(RULE.bestSave, row.Sv || 7);
   let sf = 0;
@@ -500,10 +505,10 @@ function attackOnce(S, W, order, R, sum, B, nOf, extraOf, left){
     for(let i = 0; i < auto.n; i++) sum[auto.a[i]].hits++;
     // wound rolls (05.02); save rolls (05.03): one for each wound, all rolled together, kept by result to be
     // resolved from the lowest (05.04)
-    const wr = u => u === 1 ? 0 : u >= g.critWound ? 2 : u + pl.wMod >= pl.need ? 1 : 0;
+    const wr = u => u === 1 ? 0 : u >= g.critWound || (g.critWoundAll && u >= pl.need) ? 2 : u + pl.wMod >= pl.need ? 1 : 0;
     // (S with a dice roll added: rolled for each wound roll, its need and modifier for that S)
     const sDice = g.sDice && g.sDice.length ? g.sDice : null;
-    const wrS = (u, Sx) => { const wm = g.woundMod - (tm.woundMinusSgt && Sx > T ? +tm.woundMinusSgt : 0); return u === 1 ? 0 : u >= g.critWound ? 2 : u + wm >= woundNeed(Sx, T) ? 1 : 0; };
+    const wrS = (u, Sx) => { const wm = g.woundMod - (tm.woundMinusSgt && Sx > T ? +tm.woundMinusSgt : 0); const nx = woundNeed(Sx, T); return u === 1 ? 0 : u >= g.critWound || (g.critWoundAll && u >= nx) ? 2 : u + wm >= nx ? 1 : 0; };
     dev.n = 0;
     for(const sb of saveBy) sb.n = 0;
     for(let i = 0; i < auto.n; i++){ sum[auto.a[i]].wounds++; put(saveBy[d6(R) - 1], auto.a[i]); }
@@ -775,7 +780,7 @@ function play(input){
 function resolve(input){
   const S = setup(input);
   return { groups:S.G.map(x => Object.assign({ out:x.out, notes:x.notes, applied:x.applied, skipped:x.skipped, bs:x.bs, hitMod:x.hitMod, woundMod:x.woundMod, S:x.S, AP:x.AP, rrHit:x.rrHit, rrWound:x.rrWound, psychic:x.psychic, psychicKw:!!x.k.psychic, dev:x.dev, rangeIn:x.rangeIn, lethal:x.lethal, precision:x.precision,
-      critHit:x.critHit, critWound:x.critWound, sus:x.sus, torrent:x.torrent, D:x.D, dPlus:x.dPlus, A:x.A, aPlus:x.aPlus, rapid:x.rapid, melta:x.melta, extra:x.extra, half:x.half, n:x.n,
+      critHit:x.critHit, critWound:x.critWound, critWoundAll:x.critWoundAll, sus:x.sus, torrent:x.torrent, D:x.D, dPlus:x.dPlus, A:x.A, aPlus:x.aPlus, rapid:x.rapid, melta:x.melta, extra:x.extra, half:x.half, n:x.n,
       rrDmg:x.rrDmg, hazRolls:x.hazRolls, indirect:x.indirect, aDice:x.aDice, sDice:x.sDice }, x.one.length ? { one:x.one } : {})),
     alloc:S.groups.map(x => ({ name:x.name, n:x.n, char:x.char })), orders:ordersOf(S.groups).length, capped:!!ordersOf(S.groups).capped, batches:S.batches.map(b => b.members),
     pool:S.pool.map(e => ({ kind:e.kind, n:e.n, src:e.src, phase:e.phase, users:[...e.users] })) };
@@ -994,7 +999,7 @@ function explain(input, orderIdx){
     }
     const crit = attacks * pC, auto = pl.lethal ? crit : 0, toWound = attacks * pN + (pl.lethal ? 0 : crit) + crit * (G.sus ? diceMean(G.sus) : 0);
     // wound roll (05.02)
-    const need = pl.need, wMod = pl.wMod, wcls = u => u === 1 ? 0 : u >= G.critWound ? 2 : u + wMod >= need ? 1 : 0;
+    const need = pl.need, wMod = pl.wMod, wcls = u => u === 1 ? 0 : u >= G.critWound || (G.critWoundAll && u >= need) ? 2 : u + wMod >= need ? 1 : 0;
     const wr = oneRoll(wcls, G.rrWound, pl.fishW);
     const devC = G.dev ? toWound * wr.p[2] : 0, normal = toWound * (wr.p[1] + (G.dev ? 0 : wr.p[2])) + auto;
     {
@@ -1007,6 +1012,8 @@ function explain(input, orderIdx){
       if(pl.sgt) parts.push(sgn(-pl.sgt) + ' to wound (' + (tsrc.woundMinusSgt || 'the target') + ': S' + G.S + ' greater than T' + T + ')');
       if(wMod){ const n2 = Math.max(2, need - wMod); parts.push(n2 > 6 ? 'only a critical wound wounds' : 'wounds on an unmodified ' + n2 + '+ (an unmodified 1 always fails)'); }
       if(G.critWound < 6) parts.push('critical wounds on ' + G.critWound + '+ (' + G.critWoundSrc + ')');
+      // (the need on the unmodified roll, so a -1 to wound does not read as if the unmodified need fails)
+      if(G.critWoundAll) parts.push('critical wounds on an unmodified ' + need + '+ (' + G.critWoundAllSrc + ')');
       if(G.rrWound === 'all') parts.push('re-roll failed wound rolls (' + G.rrWoundSrc + ')' + (pl.fishW ? ', and wounds that are not critical, looking for a critical wound (worth more here)' : ''));
       else if(G.rrWound === '1s') parts.push('re-roll wound rolls of 1 (' + G.rrWoundSrc + ')');
       let w = 'Wound roll: ' + parts.join('; ') + ' · ' + fx(toWound) + (auto ? ' rolled' : '') + ' × ' + frac(wr, 1) + ' = ' + fx(toWound * (wr.p[1] + wr.p[2]));
