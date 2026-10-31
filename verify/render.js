@@ -348,9 +348,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     const res = await page.evaluate(armyId => {
       const out = [], A = WH_DATA.armies.find(x => x.id === armyId);
       hideSheet(); go({ s:'army', army:armyId });
-      // (not a limit on what the ability selects, "Each model can only be selected for this ability once per turn": the Technomancer's
-      // use is not limited, the app's onceTag shows none)
-      const onceOf = ab => { const m = /(?<!\bselected for this ability )once per (battle round|battle|phase|turn)(, per (army|unit))?/i.exec((ab.tag || '') + ' ' + (ab.text || '')); return m && m[0].toLowerCase(); };
+      // (not a limit on what the ability selects or affects, "Each model can only be selected for this ability once per turn", "The same
+      // enemy unit can only be affected by this ability once per turn": the Technomancer's and the Psychophage's (Bio-stimulus) use is
+      // not limited, the app's onceTag shows none)
+      const onceOf = ab => { const m = /(?<!\b(?:selected for|affected by) this ability )once per (battle round|battle|phase|turn)(, per (army|unit))?/i.exec((ab.tag || '') + ' ' + (ab.text || '')); return m && m[0].toLowerCase(); };
       for(const u of A.units){
         go({ s:'unit', army:armyId, unit:u.id });
         document.querySelectorAll('#view details').forEach(d => d.open = true);
