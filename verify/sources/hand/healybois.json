@@ -43,7 +43,7 @@
  },
  "units": {
   "the-red-terror": {
-   "why": "The Red Terror: GW’s keyword BURROWER (not in BSData, declared). Swallow Whole: a footnote on the gaping maw vs INFANTRY/MOUNTED/BEASTS (“each successful unmodified Wound roll is a Critical Wound”); the Damage tab counts it (effects.js critWoundAll, calc.js: every wound roll that wounds is a Critical Wound, so with the gaping maw’s [DEVASTATING WOUNDS] each is mortal wounds); its wounds regained are no attack or defence numbers. Subterranean Hunter: no numbers, no reading."
+   "why": "The Red Terror: GW’s keyword BURROWER (not in BSData, declared). Swallow Whole: a footnote on the gaping maw vs INFANTRY/MOUNTED/BEASTS (“each successful unmodified Wound roll is a Critical Wound”); the Damage tab counts it (effects.js critWoundAll, calc.js: a wound roll whose unmodified result is equal to or greater than the required result is a Critical Wound, modifiers aside (05.02: critical wounds are decided on the unmodified roll), so with the gaping maw’s [DEVASTATING WOUNDS] each is mortal wounds; one that wounds only through a modifier is a normal wound); its wounds regained are no attack or defence numbers. Subterranean Hunter: no numbers, no reading."
   },
   "the-swarmlord-tyrant-guard": {
    "defs": {
