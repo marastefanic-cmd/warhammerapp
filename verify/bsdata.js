@@ -40,6 +40,7 @@ const path = require('path');
 
 const HERE = __dirname;
 const REPO = path.resolve(HERE, '..');
+let GWO_ = null; const GWO = () => GWO_ || (GWO_ = require('./gw-order')(REPO));   // GW's words (verify/words.js) over BSData's
 const argv = process.argv.slice(2);
 const flag = (f) => argv.includes(f);
 const opt = (f, d) => { const i = argv.indexOf(f); return i >= 0 && argv[i + 1] ? argv[i + 1] : d; };
@@ -1065,6 +1066,9 @@ function compareUnit(army, u, F, fail) {
     const nameOk = (b) => names(b).some((x) => x === nn(a.name) || splitAbilityName(x).base === nn(a.name) || (spelt && (x === nn(spelt) || splitAbilityName(x).base === nn(spelt))));
     let cands = pool.filter(nameOk);
     if (!cands.length && a.na) cands = F.roots.flatMap((r) => datasheetAbilities(r)).filter(nameOk);
+    // (GW's spelling of the name, verify/words.js: BSData's ability whose name the datasheet page spells as the app's, Berserker Frenzy
+    // for GW's Berzerker Frenzy)
+    if (!cands.length && !isEnh) cands = pool.filter((b) => b.typeName === 'Abilities' && GWO().pageSpells(army.faction, u, a, splitAbilityName(b.name).base));
     // (a name that is only BSData's profile type of several abilities, "Triarch Abilities", is none of them: the app's ability of that
     // name is the one BSData words alike under another name, Voice of the Triarch, its name reported as BSData's other ability)
     let renamed = null;
@@ -1089,7 +1093,8 @@ function compareUnit(army, u, F, fail) {
       if (missing.length) fail('ability.tag', `${a.name}: ${a.tag || ''}`, best.name, best.where);
     }
     checked('abilities');
-    if (nt(best.text) !== nt(a.text)) fail('ability.text', `${a.name}: ${a.text}`, best.text, best.where);
+    // (GW's words over BSData's: where verify/words.js passes, BSData's other wording is listed, not failed, unless a deviation declares it)
+    if (nt(best.text) !== nt(a.text)) fail('ability.text', `${a.name}: ${a.text}`, best.text, best.where, GWO().wordsPass(army.faction, u, a) ? { gw: a.name } : null);
   }
   for (const b of F.abilities) {
     if (usedA.has(b)) continue;
@@ -1249,7 +1254,7 @@ function rosters() {
 function main() {
   const MAP = setup();
   const failures = []; const pin = pinnedCommit();
-  const push = (army, f) => failures.push({ army, unit: f.unit, field: f.field, app: str(f.app), source: str(f.source), where: f.where });
+  const push = (army, f) => failures.push(Object.assign({ army, unit: f.unit, field: f.field, app: str(f.app), source: str(f.source), where: f.where }, f.gw ? { gw: f.gw } : {}));
   if (pin && !(SRC.commit || '').startsWith(pin)) push('(all)', { unit: '(source)', field: 'bsdata.commit', app: pin, source: SRC.commit || 'unknown', where: `${SRC.mode}: BSData commit differs from the pin in verify/fetch.sh` });
 
   const explain = opt('--explain', null);
@@ -1266,7 +1271,7 @@ function main() {
     for (const s of allSels) applyAcross(s);
     for (const { u, copies } of R.built) {
       const c0 = copies[0]; if (!c0.roots.length) continue;
-      const fail = (field, app, source, where) => push(army.id, { unit: u.id, field, app, source, where });
+      const fail = (field, app, source, where, extra) => push(army.id, Object.assign({ unit: u.id, field, app, source, where }, extra || {}));
       for (const r of c0.roots) for (const s of r.desc(true)) if (s.hidden) { checked('gear'); fail('hidden', s.node.name, 'hidden', `${s.where()}: BSData hides this selection for this list (detachment or unit not eligible)`); }
       checked('gear', (u.models || []).length + (u.gear || []).flat().length);
       requiredCheck(c0.roots, fail);
@@ -1287,7 +1292,9 @@ function main() {
   const keyOf = (x) => JSON.stringify([x.army, x.unit, x.field, str(x.app), str(x.source)]);
   const devKeys = new Map(devList.map((d) => [keyOf(d), d]));
   const usedDev = new Set(); const remaining = [];
-  for (const f of failures) { const k = keyOf(f); if (devKeys.has(k)) usedDev.add(k); else remaining.push(f); }
+  // (GW's words, verify/words.js: a text difference no deviation declares, where the app's words pass, is GW's over BSData's)
+  const gwWords = [];
+  for (const f of failures) { const k = keyOf(f); if (devKeys.has(k)) usedDev.add(k); else if (f.gw) gwWords.push({ army: f.army, unit: f.unit, ability: f.gw, app: f.app, bsdata: f.source }); else remaining.push(f); }
   for (const d of devList) if (!usedDev.has(keyOf(d))) remaining.push({ army: d.army, unit: d.unit, field: 'deviation.stale', app: str(d.app), source: str(d.source), where: `verify/deviations-bsdata.json: nothing matches this deviation (${d.field})` });
 
   restoreRelinks();
@@ -1301,11 +1308,11 @@ function main() {
     if (now !== was) remaining.push({ army: '(all)', unit: '(source)', field: 'bsdata.extract', app: 'verify/sources/bsdata-extract.json', source: 'differs from what this check reads in the clone', where: 'run: node verify/bsdata.js --write-extract' });
   }
 
-  const out = { check: 'bsdata', source: { mode: SRC.mode, commit: SRC.commit, pin }, checked: COUNT, failures: remaining, deviations: usedDev.size, grants: GRANTS };
+  const out = { check: 'bsdata', source: { mode: SRC.mode, commit: SRC.commit, pin }, checked: COUNT, failures: remaining, deviations: usedDev.size, gwWords, grants: GRANTS };
   fs.mkdirSync(path.dirname(P.out), { recursive: true });
   fs.writeFileSync(P.out, JSON.stringify(out, null, 1) + '\n');
   const total = Object.values(COUNT).reduce((a, b) => a + b, 0);
-  console.log(`bsdata: ${total} facts checked against BSData ${String(SRC.commit).slice(0, 7)} (${SRC.mode}) ${JSON.stringify(COUNT)}; ${usedDev.size} deviations used; ${remaining.length} failures`);
+  console.log(`bsdata: ${total} facts checked against BSData ${String(SRC.commit).slice(0, 7)} (${SRC.mode}) ${JSON.stringify(COUNT)}; ${usedDev.size} deviations used; ${gwWords.length} ability texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win); ${remaining.length} failures`);
   for (const f of remaining) console.log(`  FAIL ${f.army} / ${f.unit} / ${f.field}: app ${JSON.stringify(f.app)} vs BSData ${JSON.stringify(f.source)}  [${f.where}]`);
   process.exit(remaining.length ? 1 : 0);
 }

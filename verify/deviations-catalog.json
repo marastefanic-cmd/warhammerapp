@@ -41,6 +41,15 @@
   ]
  },
  {
+  "datasheet": "chaos-daemons/skarbrand",
+  "what": "abilities Damaged: 1-7 wounds remaining text",
+  "reason": "The list is a World Eaters army: its row is the World Eaters codex’s Skarbrand datasheet (faction world-eaters), whose Damaged line adds 2 to the Attacks of \"this model’s melee weapons\" (the list’s words are that page’s: verify/words.js); the catalogue row is the Chaos Daemons datasheet, which names its one melee weapon, \"Slaughter and Carnage\". Both are GW’s words, each for its own army (the same weapon); the list’s row is kept.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Skarbrand.html DAMAGED: 1-7 WOUNDS REMAINING: \"While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s melee weapons.\"; verify/.cache/waha/ds/chaos-daemons_Skarbrand.html and verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 462-466: \"… add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.\"",
+  "lists": [
+   "big-demons-baby"
+  ]
+ },
+ {
   "datasheet": "chaos-daemons/bloodthirster",
   "what": "abilities Daemon Lord of Khorne text",
   "reason": "The list is a World Eaters army: its row is the World Eaters codex's Bloodthirster datasheet (faction world-eaters), whose aura names BLOOD LEGIONS units; the catalogue row is the Chaos Daemons datasheet, whose aura names KHORNE LEGIONES DAEMONICA units. Both are GW's words, each for its own army; the list's row is kept.",

@@ -1,0 +1,2343 @@
+[
+ {
+  "army": "shooty",
+  "kind": "ability-tag",
+  "where": "shooty · Mek · Bomb Squigs",
+  "judgement": {
+   "tag": "Once per turn, twice per battle, per unit"
+  },
+  "source": {
+   "ability": "Bomb Squigs",
+   "text": "In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12\" of this unit and roll one D6:\n- On a 3+, that enemy unit suffers D3 **mortal wounds**.\n*Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.*"
+  },
+  "key": "4962efa8ac4649f5"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Mek · Bomb Squigs",
+  "judgement": {
+   "who": "Tankbustas",
+   "models": [
+    "1× Mek",
+    "1× Nob",
+    "1× Tankbusta w/ Two Busta Rokkit Launchas",
+    "4× Tankbusta w/ Busta Rokkit Launcha"
+   ]
+  },
+  "source": {
+   "ability": "Bomb Squigs",
+   "text": "In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12\" of this unit and roll one D6:\n- On a 3+, that enemy unit suffers D3 **mortal wounds**.\n*Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.*"
+  },
+  "key": "9a5e74ad2d158f7f"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Mek · Finderz Keeperz",
+  "judgement": {
+   "who": "Flash Gitz",
+   "models": [
+    "1× Mek",
+    "1× Kaptin",
+    "9× Flash Gitz"
+   ]
+  },
+  "source": {
+   "ability": "Finderz Keeperz",
+   "text": "In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 **AP**:\n- This unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
+  },
+  "key": "f9ec1233ab1ba419"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-footnote",
+  "where": "shooty · Mek",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Your Shooting phase, this unit or the target within range of an objective",
+   "cond": "objective",
+   "note": "+1 AP",
+   "from": "Finderz Keeperz"
+  },
+  "source": {
+   "ability": "Finderz Keeperz",
+   "text": "In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 **AP**:\n- This unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
+  },
+  "key": "ff65a03e35b0f2f7"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Khârn the Betrayer · Berzerker Frenzy",
+  "judgement": {
+   "who": "Khârn the Betrayer",
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Berzerker Frenzy",
+   "text": "The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within **Engagement Range** of one or more enemy units, with 3 wounds remaining."
+  },
+  "key": "cf398a1d5dd5f6be"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-def",
+  "where": "standard · Khârn the Betrayer · Berzerker Frenzy",
+  "judgement": {
+   "def": "Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units"
+  },
+  "source": {
+   "ability": "Berzerker Frenzy",
+   "text": "The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within **Engagement Range** of one or more enemy units, with 3 wounds remaining."
+  },
+  "key": "7a73c5e1dab79f21"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-tag",
+  "where": "big-demons-baby · Daemon Prince of Khorne · Direct the Slaughter",
+  "judgement": {
+   "tag": "Once per battle round"
+  },
+  "source": {
+   "ability": "Direct the Slaughter",
+   "text": "Once per battle round, one model from your army with this ability can use it when a friendly **WORLD EATERS** unit within 12\" of that model is targeted with a **Stratagem**. If it does, reduce the CP cost of that usage of that Stratagem by 1CP."
+  },
+  "key": "f5a7dd3c071554f1"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-footnote",
+  "where": "big-demons-baby · Daemon Prince of Khorne",
+  "judgement": {
+   "kind": "melee",
+   "when": "Made a charge move this turn",
+   "cond": "charged",
+   "note": "Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn",
+   "from": "Devastating Assault"
+  },
+  "source": {
+   "ability": "Devastating Assault",
+   "text": "Each time this model makes a **Charge move**, until the end of the turn, its melee weapons have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "8fcdede3b8fbc4e5"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Slaughterbound · Lord of the Eightbound",
+  "judgement": {
+   "who": "Slaughterbound",
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ]
+  },
+  "source": {
+   "ability": "Lord of the Eightbound",
+   "text": "If this model is **attached** to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, until the end of the battle, this model has the **Deep Strike** and **Scouts 6\"** abilities."
+  },
+  "key": "bb240fcf6234d0f3"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-tag",
+  "where": "standard · Slaughterbound · Possessed Lord",
+  "judgement": {
+   "tag": "Once per battle"
+  },
+  "source": {
+   "ability": "Possessed Lord",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "6b144435df52f1a9"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Slaughterbound · Possessed Lord",
+  "judgement": {
+   "who": "Slaughterbound",
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ]
+  },
+  "source": {
+   "ability": "Possessed Lord",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "f9d6b156530265be"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-footnote",
+  "where": "standard · Slaughterbound",
+  "judgement": {
+   "kind": "melee",
+   "weapon": "Lacerator and daemonic claw",
+   "set": {
+    "A": "+3"
+   },
+   "when": "Possessed Lord (once per battle, start of the Fight phase)",
+   "note": "and [DEVASTATING WOUNDS] until the end of the phase",
+   "from": "Possessed Lord"
+  },
+  "source": {
+   "ability": "Possessed Lord",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "accfad3810caed19"
+ },
+ {
+  "army": "princes",
+  "kind": "unit-partialRules",
+  "where": "princes · Slaughterbound",
+  "judgement": {
+   "partialRules": {
+    "Scouts 6\"": "Slaughterbound"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ],
+   "rules": [
+    "Deadly Demise D3",
+    "Leader",
+    "Deep Strike",
+    "Blessings of Khorne",
+    "Scouts 6\"",
+    "Anti"
+   ],
+   "abilities": [
+    "Slaughterbound · Lord of the Eightbound: If this model is **attached** to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, until the end of the battle, this model has the **Deep Strike** and **Scouts 6\"** abilities.",
+    "Slaughterbound · Rage Eternal: While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.",
+    "Slaughterbound · Possessed Lord: Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[DEVASTATING WOUNDS]** ability.",
+    "Slaughterbound · Battle-lust: **WORLD EATERS** model only. You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.",
+    "Exalted Eightbound · Rend and Tear: Each time a model in this unit makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, until the end of the phase, improve the Damage characteristic of that attack by 1."
+   ]
+  },
+  "key": "0295d431a4a34442"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "ability-tag",
+  "where": "super-terminators · Eightbound · Beacons of Rage",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Beacons of Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the **Hit roll**. If that attack targets a unit (excluding **MONSTERS** and **VEHICLES**) that is **Below Half-strength**, add 1 to the **Wound roll** as well."
+  },
+  "key": "e5805c774c25f94a"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "unit-aura",
+  "where": "super-terminators · Eightbound",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: World Eaters"
+    ]
+   },
+   "when": "Within 6\" of Eightbound, vs non-MONSTER/VEHICLE targets",
+   "selfWhen": "Own aura, vs non-MONSTER/VEHICLE targets",
+   "note": "+1 to hit",
+   "from": "Beacons of Rage",
+   "selfAlways": true,
+   "vs": {
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Beacons of Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the **Hit roll**. If that attack targets a unit (excluding **MONSTERS** and **VEHICLES**) that is **Below Half-strength**, add 1 to the **Wound roll** as well."
+  },
+  "key": "0a8f036c306ba68f"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "unit-aura",
+  "where": "super-terminators · Eightbound",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: World Eaters"
+    ]
+   },
+   "when": "Within 6\" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets",
+   "selfWhen": "Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets",
+   "note": "+1 to wound rolls",
+   "from": "Beacons of Rage",
+   "vs": {
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Beacons of Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the **Hit roll**. If that attack targets a unit (excluding **MONSTERS** and **VEHICLES**) that is **Below Half-strength**, add 1 to the **Wound roll** as well."
+  },
+  "key": "7b3846ac372008e9"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Angron · The Blood God’s Favour",
+  "judgement": {
+   "who": "Wrathful Presence: pick one",
+   "models": [
+    "1× Angron"
+   ]
+  },
+  "source": {
+   "ability": "The Blood God’s Favour",
+   "text": "Each time you make a **Blessings of Khorne roll**, if this model is on the battlefield, you can re-roll up to six of the D6 rolled."
+  },
+  "key": "07d9a74063fb1586"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-partialRules",
+  "where": "standard · Slaughterbound",
+  "judgement": {
+   "partialRules": {
+    "Scouts 6\"": "Slaughterbound"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ],
+   "rules": [
+    "Deadly Demise D3",
+    "Leader",
+    "Deep Strike",
+    "Blessings of Khorne",
+    "Scouts 6\"",
+    "Anti"
+   ],
+   "abilities": [
+    "Slaughterbound · Lord of the Eightbound: If this model is **attached** to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, until the end of the battle, this model has the **Deep Strike** and **Scouts 6\"** abilities.",
+    "Slaughterbound · Rage Eternal: While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.",
+    "Slaughterbound · Possessed Lord: Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[DEVASTATING WOUNDS]** ability.",
+    "Slaughterbound · Berzerker Glaive: **WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.",
+    "Exalted Eightbound · Rend and Tear: Each time a model in this unit makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, until the end of the phase, improve the Damage characteristic of that attack by 1."
+   ]
+  },
+  "key": "3473d7e42c2ff66d"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-tag",
+  "where": "mucho-mutantes · Magnus the Red · Lord of the Planet of the Sorcerers",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Lord of the Planet of the Sorcerers",
+   "text": "This model can attempt up to two **Rituals** per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result."
+  },
+  "key": "fd1ef373e931cc29"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-footnote",
+  "where": "mucho-mutantes · Daemon Prince of Tzeentch with wings",
+  "judgement": {
+   "kind": "all",
+   "when": "vs CHARACTER units",
+   "note": "re-roll hit rolls of 1 and wound rolls of 1",
+   "from": "Hunter of Souls",
+   "vs": {
+    "any": [
+     "Character"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER** unit, this model regains up to 3 lost wounds instead)."
+  },
+  "key": "8b967486051bac92"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-footnote",
+  "where": "mucho-mutantes · Daemon Prince of Tzeentch with wings",
+  "judgement": {
+   "kind": "all",
+   "when": "vs PSYKER CHARACTER units",
+   "note": "re-roll the hit roll and the wound roll",
+   "from": "Hunter of Souls",
+   "vs": {
+    "all": [
+     "Psyker",
+     "Character"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER** unit, this model regains up to 3 lost wounds instead)."
+  },
+  "key": "298a68980307eafd"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-who",
+  "where": "pubstomper · Exalted Sorcerer · Bringers of Change",
+  "judgement": {
+   "who": "Rubric Marines",
+   "models": [
+    "1× Exalted Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "3× Rubric Marine w/ warpflamer"
+   ]
+  },
+  "source": {
+   "ability": "Bringers of Change",
+   "text": "Each time a model in this unit makes a ranged attack, re-roll a **Wound roll** of 1. If that attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+  },
+  "key": "3ddf419dfaca9265"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-footnote",
+  "where": "pubstomper · Exalted Sorcerer",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Every ranged attack",
+   "note": "re-roll wound rolls of 1",
+   "from": "Bringers of Change"
+  },
+  "source": {
+   "ability": "Bringers of Change",
+   "text": "Each time a model in this unit makes a ranged attack, re-roll a **Wound roll** of 1. If that attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+  },
+  "key": "2782fedb830b760b"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-footnote",
+  "where": "pubstomper · Exalted Sorcerer",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target within range of an objective marker you do not control",
+   "cond": "targetObjectiveNotYours",
+   "note": "re-roll the wound roll",
+   "from": "Bringers of Change"
+  },
+  "source": {
+   "ability": "Bringers of Change",
+   "text": "Each time a model in this unit makes a ranged attack, re-roll a **Wound roll** of 1. If that attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+  },
+  "key": "255c9c12166e491f"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-partialRules",
+  "where": "pubstomper · Exalted Sorcerer",
+  "judgement": {
+   "partialRules": {
+    "Cabal of Sorcerers": "Exalted Sorcerer and Aspiring Sorcerer"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Exalted Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "3× Rubric Marine w/ warpflamer"
+   ],
+   "rules": [
+    "Leader",
+    "Cabal of Sorcerers",
+    "Blast",
+    "Devastating Wounds",
+    "Psychic",
+    "Pistol",
+    "Anti",
+    "Torrent",
+    "Ignores Cover"
+   ],
+   "abilities": [
+    "Exalted Sorcerer · Arcane Shield: While this model is leading a unit, models in that unit have a 4+ invulnerable save.",
+    "Exalted Sorcerer · Rebind Rubricae: In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 **mortal wounds**; on a 2-5, you can return 1 destroyed **Bodyguard** model to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit.",
+    "Exalted Sorcerer · Incandaeum: **EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.",
+    "Rubric Marines · Bringers of Change: Each time a model in this unit makes a ranged attack, re-roll a **Wound roll** of 1. If that attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.",
+    "Rubric Marines · Icon of Flame: Ranged weapons equipped by models in the bearer’s unit (excluding **CHARACTERS**) have the **[IGNORES COVER]** ability."
+   ]
+  },
+  "key": "4a190f8b2c4ffbf1"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-note",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Icon of War",
+  "judgement": {
+   "note": "FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”"
+  },
+  "source": {
+   "ability": "Icon of War",
+   "text": "**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.",
+   "others": [
+    "Rod of the War Forge: In your Command phase, select one of the abilities in the Icon of War section (see next page). Until the start of your next Command phase, this model has that ability.",
+    "Mechanicus Bodyguard: While this model is within 3\" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.",
+    "Secutor of Olympus: At the start of your Shooting phase, select one enemy **VEHICLE** unit within 12\" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 **mortal wounds**.",
+    "Supreme Commander: If this model is in your army, it must be your Warlord."
+   ],
+   "listRules": [
+    "Doctrina Imperatives",
+    "Cyber-psalm Programming",
+    "Murderous Imperative"
+   ]
+  },
+  "key": "c24e1b36b8d83892"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-note",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your Warlord.",
+   "others": [
+    "Icon of War: **Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.",
+    "Rod of the War Forge: In your Command phase, select one of the abilities in the Icon of War section (see next page). Until the start of your next Command phase, this model has that ability.",
+    "Mechanicus Bodyguard: While this model is within 3\" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.",
+    "Secutor of Olympus: At the start of your Shooting phase, select one enemy **VEHICLE** unit within 12\" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 **mortal wounds**."
+   ],
+   "listRules": [
+    "Doctrina Imperatives",
+    "Cyber-psalm Programming",
+    "Murderous Imperative"
+   ]
+  },
+  "key": "dedd232512aff82f"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-tag",
+  "where": "purge-goes-the-foe · Onager Dunecrawler · Emanatus Force Field",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Emanatus Force Field",
+   "text": "While a friendly **ADEPTUS MECHANICUS BATTLELINE** model is wholly within 6\" of this model, that **BATTLELINE** model has a 4+ invulnerable save against ranged attacks."
+  },
+  "key": "f4c82c4042ca1495"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-guard",
+  "where": "purge-goes-the-foe · Onager Dunecrawler",
+  "judgement": {
+   "from": "Emanatus Force Field",
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus",
+     "Battleline"
+    ]
+   },
+   "kind": "ranged",
+   "when": "Wholly within 6\" of the Onager Dunecrawler",
+   "note": "4+ InSv against ranged attacks",
+   "calc": {
+    "insv": 4
+   }
+  },
+  "source": {
+   "ability": "Emanatus Force Field",
+   "text": "While a friendly **ADEPTUS MECHANICUS BATTLELINE** model is wholly within 6\" of this model, that **BATTLELINE** model has a 4+ invulnerable save against ranged attacks."
+  },
+  "key": "c0aee260e043e5e4"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "ability-tag",
+  "where": "infernal-lance · Knight Ruinator · Close-range Killers",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Close-range Killers",
+   "text": "While a friendly **WAR DOG** model is within 9\" of this model, each time that **WAR DOG** model makes an attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "770903c8595e3c73"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "ability-na",
+  "where": "infernal-lance · Knight Ruinator · Close-range Killers",
+  "judgement": {
+   "na": "No WAR DOG in this list",
+   "armyUnits": [
+    "Chaos Cerastus Knight Atrapos [Vehicle, Walker, Character, Titanic, Towering, Chaos, Cerastus, Knight Atrapos, Faction: Chaos Knights]",
+    "Chaos Cerastus Knight Lancer [Vehicle, Walker, Character, Titanic, Towering, Chaos, Cerastus, Knight Lancer, Faction: Chaos Knights]",
+    "Knight Despoiler [Vehicle, Walker, Titanic, Towering, Abhorrent, Character, Chaos, Knight Despoiler, Faction: Chaos Knights, Warlord]",
+    "Knight Ruinator [Vehicle, Walker, Titanic, Towering, Abhorrent, Character, Chaos, Knight Ruinator, Faction: Chaos Knights]",
+    "Knight Ruinator [Vehicle, Walker, Titanic, Towering, Abhorrent, Character, Chaos, Knight Ruinator, Faction: Chaos Knights]",
+    "Nurglings [Swarm, Battleline, Chaos, Daemon, Nurgle, Nurglings, Faction: Legiones Daemonica, Allies: Legiones Daemonica]"
+   ]
+  },
+  "source": {
+   "ability": "Close-range Killers",
+   "text": "While a friendly **WAR DOG** model is within 9\" of this model, each time that **WAR DOG** model makes an attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "06f67f7649b89ce1"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "unit-aura",
+  "where": "infernal-lance · Knight Ruinator",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "War Dog"
+    ]
+   },
+   "when": "Within 9\" of Knight Ruinator, target is the closest eligible target",
+   "note": "improve AP by 1",
+   "from": "Close-range Killers"
+  },
+  "source": {
+   "ability": "Close-range Killers",
+   "text": "While a friendly **WAR DOG** model is within 9\" of this model, each time that **WAR DOG** model makes an attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "33a9991c349e6375"
+ },
+ {
+  "army": "woof-woof",
+  "kind": "unit-footnote",
+  "where": "woof-woof · War Dog Brigand",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target in range of an objective marker",
+   "cond": "targetObjective",
+   "note": "ranged attacks have [IGNORES COVER]",
+   "from": "Brigand"
+  },
+  "source": {
+   "ability": "Brigand",
+   "text": "Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability."
+  },
+  "key": "3d4e605c6c14f2c8"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-damaged",
+  "where": "big-demons-baby · Skarbrand · Damaged: 1-7 wounds remaining",
+  "judgement": {
+   "damaged": "1-7",
+   "W": "20"
+  },
+  "source": {
+   "ability": "Damaged: 1-7 wounds remaining",
+   "text": "While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s melee weapons."
+  },
+  "key": "4f69bf26703cd1e6"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-footnote",
+  "where": "big-demons-baby · Skarbrand",
+  "judgement": {
+   "kind": "melee",
+   "when": "Damaged (1-7 wounds left)",
+   "note": "+2 A",
+   "from": "Damaged: 1-7 wounds remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-7 wounds remaining",
+   "text": "While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s melee weapons."
+  },
+  "key": "9a777d73002559de"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Tzaangor Shaman · Prophesied Doom",
+  "judgement": {
+   "who": "Tzaangor Enlightened",
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Prophesied Doom",
+   "text": "Each time this unit ends a **Charge move**, select one enemy unit within **Engagement Range** of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "f1809bc9c752ec50"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-partialRules",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "partialRules": {
+    "Cabal of Sorcerers": "Tzaangor Shaman"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ],
+   "rules": [
+    "Leader",
+    "Cabal of Sorcerers",
+    "Devastating Wounds",
+    "Blast",
+    "Psychic",
+    "Lance",
+    "Precision"
+   ],
+   "abilities": [
+    "Tzaangor Shaman · Bestial Prophet: While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**.",
+    "Tzaangor Shaman · Sacrificial Blessing: While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.",
+    "Tzaangor Shaman · Curse of Life: **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** model only. When this model **heals** as a result of the **Sorcerous Invigoration detachment rule**, you can add 3 to the number of wounds **healed**.",
+    "Tzaangor Enlightened · Prophesied Doom: Each time this unit ends a **Charge move**, select one enemy unit within **Engagement Range** of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+   ]
+  },
+  "key": "94f9d9deec89860d"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-partialRules",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "partialRules": {
+    "Cabal of Sorcerers": "Tzaangor Shaman"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ],
+   "rules": [
+    "Leader",
+    "Cabal of Sorcerers",
+    "Devastating Wounds",
+    "Blast",
+    "Psychic",
+    "Lance",
+    "Precision"
+   ],
+   "abilities": [
+    "Tzaangor Shaman · Bestial Prophet: While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**.",
+    "Tzaangor Shaman · Sacrificial Blessing: While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.",
+    "Tzaangor Shaman · Diamond of Distortion: **TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**.",
+    "Tzaangor Enlightened · Prophesied Doom: Each time this unit ends a **Charge move**, select one enemy unit within **Engagement Range** of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+   ]
+  },
+  "key": "83ccdd2f7ebdcb32"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-partialRules",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "partialRules": {
+    "Cabal of Sorcerers": "Tzaangor Shaman",
+    "Feel No Pain 4+": "Tzaangor Shaman"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ],
+   "rules": [
+    "Leader",
+    "Cabal of Sorcerers",
+    "Feel No Pain 4+",
+    "Devastating Wounds",
+    "Blast",
+    "Psychic",
+    "Lance",
+    "Precision"
+   ],
+   "abilities": [
+    "Tzaangor Shaman · Bestial Prophet: While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**.",
+    "Tzaangor Shaman · Sacrificial Blessing: While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.",
+    "Tzaangor Shaman · Flowing Flesh: **TZAANGOR SHAMAN** model only. The bearer has the **Feel No Pain 4+** ability and a Wounds characteristic of 5.",
+    "Tzaangor Enlightened · Prophesied Doom: Each time this unit ends a **Charge move**, select one enemy unit within **Engagement Range** of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+   ]
+  },
+  "key": "9a84d547dc6b0e25"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-note",
+  "where": "lite-knights · Trajann Valoris · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**.",
+   "others": [
+    "Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+    "Moment Shackle: At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Slayer of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ],
+   "listRules": [
+    "Martial Ka’tah",
+    "Aegis of the Emperor",
+    "Aquila Commander",
+    "Daughters of the Abyss",
+    "Anathema Psykana",
+    "Magna Imperator",
+    "Flare Shields",
+    "Moritoi Ancients"
+   ]
+  },
+  "key": "423a1ef027af1e7c"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-tag",
+  "where": "dread-host · Trajann Valoris · Moment Shackle",
+  "judgement": {
+   "tag": "Once per battle, per army"
+  },
+  "source": {
+   "ability": "Moment Shackle",
+   "text": "At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**."
+  },
+  "key": "926a5315ad10cc69"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-who",
+  "where": "lite-knights · Trajann Valoris · Moment Shackle",
+  "judgement": {
+   "who": "Trajann Valoris",
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Moment Shackle",
+   "text": "At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**."
+  },
+  "key": "a47c43141aafbb9c"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-def",
+  "where": "dread-host · Trajann Valoris · Moment Shackle",
+  "judgement": {
+   "def": "Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase"
+  },
+  "source": {
+   "ability": "Moment Shackle",
+   "text": "At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**."
+  },
+  "key": "2402e31cc4067ab7"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-footnote",
+  "where": "dread-host · Trajann Valoris",
+  "judgement": {
+   "kind": "melee",
+   "weapon": "Watcher’s Axe",
+   "when": "Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase",
+   "note": "+3 A",
+   "from": "Moment Shackle"
+  },
+  "source": {
+   "ability": "Moment Shackle",
+   "text": "At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**."
+  },
+  "key": "44f91aaa0df54a68"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-partialRules",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "partialRules": {
+    "Feel No Pain 5+": "Trajann Valoris"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "rules": [
+    "Deep Strike",
+    "Feel No Pain 5+*",
+    "Feel No Pain 5+",
+    "Leader",
+    "Aegis of the Emperor",
+    "Aquila Commander",
+    "Martial Ka'tah",
+    "Assault",
+    "Rapid Fire",
+    "Cleave",
+    "Blast"
+   ],
+   "abilities": [
+    "Trajann Valoris · Supreme Commander: If this model is in your army, it must be your **WARLORD**.",
+    "Trajann Valoris · Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+    "Trajann Valoris · Moment Shackle: At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Allarus Custodians · Slayer of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Allarus Custodians · Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ]
+  },
+  "key": "33122d70a17e704f"
+ },
+ {
+  "army": "emperors-chosen",
+  "kind": "ability-note",
+  "where": "emperors-chosen · Trajann Valoris · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**.",
+   "others": [
+    "Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+    "Moment Shackle: At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Leader: This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY",
+    "Slayer of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ],
+   "listRules": [
+    "Martial Ka’tah",
+    "Aegis of the Emperor",
+    "Aquila Commander",
+    "Daughters of the Abyss",
+    "Anathema Psykana",
+    "Magna Imperator",
+    "Companion’s Watch",
+    "On Gilded Wings"
+   ]
+  },
+  "key": "3ed873ed45200c8a"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Trajann Valoris · Moment Shackle",
+  "judgement": {
+   "who": "Trajann Valoris",
+   "models": [
+    "1× Trajann Valoris",
+    "2× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Moment Shackle",
+   "text": "At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**."
+  },
+  "key": "902f797949ad4f44"
+ },
+ {
+  "army": "dread-host",
+  "kind": "unit-partialRules",
+  "where": "dread-host · Trajann Valoris",
+  "judgement": {
+   "partialRules": {
+    "Feel No Pain 5+": "Trajann Valoris"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "2× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "rules": [
+    "Deep Strike",
+    "Feel No Pain 5+*",
+    "Feel No Pain 5+",
+    "Leader",
+    "Aegis of the Emperor",
+    "Aquila Commander",
+    "Martial Ka'tah",
+    "Assault",
+    "Rapid Fire",
+    "Cleave",
+    "Blast"
+   ],
+   "abilities": [
+    "Trajann Valoris · Supreme Commander: If this model is in your army, it must be your **WARLORD**.",
+    "Trajann Valoris · Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+    "Trajann Valoris · Moment Shackle: At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Trajann Valoris · Leader: This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY",
+    "Allarus Custodians · Slayer of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Allarus Custodians · Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ]
+  },
+  "key": "d2448e63b310d72e"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-tag",
+  "where": "dread-host · Shield-Captain · Master of Ka’tahs",
+  "judgement": {
+   "tag": "Once per battle round, per unit"
+  },
+  "source": {
+   "ability": "Master of Ka’tahs",
+   "text": "If this unit is not **readied**, you can use this ability. If you do, this unit is **readied**."
+  },
+  "key": "9915c6edc750e9f3"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Shield-Captain · Master of Ka’tahs",
+  "judgement": {
+   "who": "Shield-Captain",
+   "models": [
+    "1× Shield-Captain (Paragon Blade & Praesidium Shield)",
+    "2× Sentinel Guard (Praesidium Shield)",
+    "1× Sentinel Guard (Praesidium Shield, Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Master of Ka’tahs",
+   "text": "If this unit is not **readied**, you can use this ability. If you do, this unit is **readied**."
+  },
+  "key": "46cf83c31be31555"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-tag",
+  "where": "dread-host · Shield-Captain · Vengeful Surge",
+  "judgement": {
+   "tag": "Once per battle, per unit"
+  },
+  "source": {
+   "ability": "Vengeful Surge",
+   "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2\"."
+  },
+  "key": "6588e2f34df94deb"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-who",
+  "where": "dread-host · Shield-Captain · Vengeful Surge",
+  "judgement": {
+   "who": "Shield-Captain",
+   "models": [
+    "1× Shield-Captain (Paragon Blade & Praesidium Shield)",
+    "2× Sentinel Guard (Praesidium Shield)",
+    "1× Sentinel Guard (Praesidium Shield, Vexilla)"
+   ]
+  },
+  "source": {
+   "ability": "Vengeful Surge",
+   "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2\"."
+  },
+  "key": "8083633d9c4ca061"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-note",
+  "where": "dread-host · Trajann Valoris · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**.",
+   "others": [
+    "Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+    "Moment Shackle: At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Leader: This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY",
+    "Slayer of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ],
+   "listRules": [
+    "Martial Ka’tah",
+    "Aegis of the Emperor",
+    "Aquila Commander",
+    "Daughters of the Abyss",
+    "Anathema Psykana",
+    "Instruments of the Emperor’s Wrath",
+    "Companion’s Watch",
+    "On Gilded Wings"
+   ]
+  },
+  "key": "2fd89c896cc26d8e"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-timing (new label, verify/derive.js)",
+  "where": "standard · Angron · Wrathful Presence: pick one · The Blood God’s Favour",
+  "judgement": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "The Blood God’s Favour",
+   "text": "Each time you make a **Blessings of Khorne roll**, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.",
+   "rules": [
+    "label-named-roll"
+   ]
+  },
+  "key": "label|ability-timing | standard · Angron · Wrathful Presence: pick one · The Blood God’s Favour"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-timing (new label, verify/derive.js)",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Lancer · Shock Charge",
+  "judgement": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Shock Charge",
+   "text": "You can target this model with the **Crushing Impact** Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
+   "rules": [
+    "named-core-stratagem"
+   ]
+  },
+  "key": "label|ability-timing | 4-megas-and-a-destrier · Cerastus Knight Lancer · Shock Charge"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "ability-timing (new label, verify/derive.js)",
+  "where": "super-terminators · Angron · Wrathful Presence: pick one · The Blood God’s Favour",
+  "judgement": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "The Blood God’s Favour",
+   "text": "Each time you make a **Blessings of Khorne roll**, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.",
+   "rules": [
+    "label-named-roll"
+   ]
+  },
+  "key": "label|ability-timing | super-terminators · Angron · Wrathful Presence: pick one · The Blood God’s Favour"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-timing (new label, verify/derive.js)",
+  "where": "purge-goes-the-foe · Skitarii Rangers · Omnispex",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Omnispex",
+   "text": "Ranged weapons equipped by models in the bearer’s unit have the **[IGNORES COVER]** ability.",
+   "rules": [
+    "ranged-only-keyword",
+    "ranged",
+    "overwatch"
+   ]
+  },
+  "key": "label|ability-timing | purge-goes-the-foe · Skitarii Rangers · Omnispex"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-timing (new label, verify/derive.js)",
+  "where": "purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii] · Broad Spectrum Data-tether",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Broad Spectrum Data-tether",
+   "text": "Each time you target this unit with a **Stratagem**, roll one D6: on a 5+, you gain 1CP.",
+   "rules": [
+    "any-stratagem"
+   ]
+  },
+  "key": "label|ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii] · Broad Spectrum Data-tether"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-timing (new label, verify/derive.js)",
+  "where": "purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii-2] · Broad Spectrum Data-tether",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Broad Spectrum Data-tether",
+   "text": "Each time you target this unit with a **Stratagem**, roll one D6: on a 5+, you gain 1CP.",
+   "rules": [
+    "any-stratagem"
+   ]
+  },
+  "key": "label|ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii-2] · Broad Spectrum Data-tether"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-timing (new label, verify/derive.js)",
+  "where": "purge-goes-the-foe · Skorpius Disintegrator · Broad spectrum data-tether",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Broad spectrum data-tether",
+   "text": "Each time you target this unit with a **Stratagem**, roll one D6: on a 5+, you gain 1CP.",
+   "rules": [
+    "any-stratagem"
+   ]
+  },
+  "key": "label|ability-timing | purge-goes-the-foe · Skorpius Disintegrator · Broad spectrum data-tether"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "ability-timing (new label, verify/derive.js)",
+  "where": "infernal-lance · Chaos Cerastus Knight Lancer · Shock Charge",
+  "judgement": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Shock Charge",
+   "text": "You can target this model with the **Crushing Impact** Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
+   "rules": [
+    "named-core-stratagem"
+   ]
+  },
+  "key": "label|ability-timing | infernal-lance · Chaos Cerastus Knight Lancer · Shock Charge"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "ability-timing (new label, verify/derive.js; label-own-target now of any attack)",
+  "where": "infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Close-range Killers",
+   "text": "While a friendly **WAR DOG** model is within 9\" of this model, each time that **WAR DOG** model makes an attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.",
+   "rules": [
+    "any-attack",
+    "overwatch"
+   ]
+  },
+  "key": "label|ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "ability-timing (new label, verify/derive.js; label-own-target now of any attack)",
+  "where": "infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Close-range Killers",
+   "text": "While a friendly **WAR DOG** model is within 9\" of this model, each time that **WAR DOG** model makes an attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.",
+   "rules": [
+    "any-attack",
+    "overwatch"
+   ]
+  },
+  "key": "label|ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers"
+ },
+ {
+  "army": "woof-woof",
+  "kind": "ability-timing (new label, verify/derive.js)",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Brigand",
+   "text": "Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.",
+   "rules": [
+    "ranged-only-keyword",
+    "ranged",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand"
+ },
+ {
+  "army": "woof-woof",
+  "kind": "ability-timing (new label, verify/derive.js)",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand] · Brigand",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Brigand",
+   "text": "Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.",
+   "rules": [
+    "ranged-only-keyword",
+    "ranged",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand] · Brigand"
+ },
+ {
+  "army": "woof-woof",
+  "kind": "ability-timing (new label, verify/derive.js)",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Brigand",
+   "text": "Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.",
+   "rules": [
+    "ranged-only-keyword",
+    "ranged",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-timing (new label, verify/derive.js)",
+  "where": "big-demons-baby · Angron · Wrathful Presence: pick one · The Blood God’s Favour",
+  "judgement": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "The Blood God’s Favour",
+   "text": "Each time you make a **Blessings of Khorne roll**, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.",
+   "rules": [
+    "label-named-roll"
+   ]
+  },
+  "key": "label|ability-timing | big-demons-baby · Angron · Wrathful Presence: pick one · The Blood God’s Favour"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-timing (label changed: label-own-target now of any attack, no Fire Overwatch)",
+  "where": "shooty · Killa Kans · Spiteful Power Trip",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Spiteful Power Trip",
+   "text": "This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**.",
+   "rules": [
+    "any-attack",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | shooty · Killa Kans · Spiteful Power Trip"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-timing (label changed: label-own-target now of any attack, no Fire Overwatch)",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER** unit, this model regains up to 3 lost wounds instead).",
+   "rules": [
+    "any-attack",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing (label changed: label-own-target now of any attack, no Fire Overwatch)",
+  "where": "defilers-and-friends · Defiler [defiler] · Revel in Desecration",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Revel in Desecration",
+   "text": "Each time this model makes an attack that targets an enemy unit that is not **below Half-strength**, add 1 to the **Hit roll**.",
+   "rules": [
+    "any-attack",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | defilers-and-friends · Defiler [defiler] · Revel in Desecration"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing (label changed: label-own-target now of any attack, no Fire Overwatch)",
+  "where": "defilers-and-friends · Defiler [defiler-2] · Revel in Desecration",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Revel in Desecration",
+   "text": "Each time this model makes an attack that targets an enemy unit that is not **below Half-strength**, add 1 to the **Hit roll**.",
+   "rules": [
+    "any-attack",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | defilers-and-friends · Defiler [defiler-2] · Revel in Desecration"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-timing (label changed: label-own-target now of any attack, no Fire Overwatch)",
+  "where": "mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER** unit, this model regains up to 3 lost wounds instead).",
+   "rules": [
+    "any-attack",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing (label changed: label-own-target now of any attack, no Fire Overwatch)",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Visions of Suffering",
+   "text": "Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll**. If that enemy unit is **Below Half-strength**, add 1 to the **Wound roll** as well.",
+   "rules": [
+    "any-attack",
+    "label-own-target"
+   ]
+  },
+  "key": "label|ability-timing | fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER** unit, this model regains up to 3 lost wounds instead).",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls"
+ },
+ {
+  "army": "6-bigs",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "6-bigs · Knight Destrier · Saturation Fire",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Saturation Fire",
+   "text": "Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.",
+   "rules": [
+    "ranged-only-keyword",
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | 6-bigs · Knight Destrier · Saturation Fire"
+ },
+ {
+  "army": "6-bigs",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "6-bigs · Knight Paladin · Seasoned Noble",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Seasoned Noble",
+   "text": "Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.",
+   "rules": [
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | 6-bigs · Knight Paladin · Seasoned Noble"
+ },
+ {
+  "army": "6-bigs",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "6-bigs · Knight Warden · Thin Their Ranks",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Thin Their Ranks",
+   "text": "Each time this model makes a ranged attack that targets an enemy unit (excluding **MONSTERS** and **VEHICLES**), that attack has the **[DEVASTATING WOUNDS]** ability.",
+   "rules": [
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | 6-bigs · Knight Warden · Thin Their Ranks"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Saturation Fire",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Saturation Fire",
+   "text": "Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.",
+   "rules": [
+    "ranged-only-keyword",
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | 4-megas-and-a-destrier · Knight Destrier · Saturation Fire"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Close-range Killers",
+   "text": "While a friendly **WAR DOG** model is within 9\" of this model, each time that **WAR DOG** model makes an attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Close-range Killers",
+   "text": "While a friendly **WAR DOG** model is within 9\" of this model, each time that **WAR DOG** model makes an attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers"
+ },
+ {
+  "army": "woof-woof",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Brigand",
+   "text": "Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.",
+   "rules": [
+    "ranged-only-keyword",
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand"
+ },
+ {
+  "army": "woof-woof",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand] · Brigand",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Brigand",
+   "text": "Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.",
+   "rules": [
+    "ranged-only-keyword",
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand] · Brigand"
+ },
+ {
+  "army": "woof-woof",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Brigand",
+   "text": "Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.",
+   "rules": [
+    "ranged-only-keyword",
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER** unit, this model regains up to 3 lost wounds instead).",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Visions of Suffering",
+   "text": "Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll**. If that enemy unit is **Below Half-strength**, add 1 to the **Wound roll** as well.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-timing (label changed: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "navigator-sounds-op-ngl · Knight Destrier · Saturation Fire",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Saturation Fire",
+   "text": "Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.",
+   "rules": [
+    "ranged-only-keyword",
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | navigator-sounds-op-ngl · Knight Destrier · Saturation Fire"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Atrapos’ Duty",
+   "text": "While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Macro-extinction Protocols",
+   "text": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Macro-extinction Protocols"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "defilers-and-friends · Lucius the Eternal · Lucius the Eternal · A Challenge Worthy of Skill",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "A Challenge Worthy of Skill",
+   "text": "Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | defilers-and-friends · Lucius the Eternal · Lucius the Eternal · A Challenge Worthy of Skill"
+ },
+ {
+  "army": "infernal-lance",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "infernal-lance · Chaos Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Macro-extinction Protocols",
+   "text": "Each time this model makes an attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Hit roll**. If that target is **TITANIC** or **TOWERING**, add 1 to the **Wound roll** as well.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | infernal-lance · Chaos Cerastus Knight Atrapos · Macro-extinction Protocols"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "lite-knights · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Advanced Firepower",
+   "text": "This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**.",
+   "rules": [
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | lite-knights · Caladius Annihilator Grav-tank · Advanced Firepower"
+ },
+ {
+  "army": "the-exiled-legion",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "the-exiled-legion · Skulltaker · Skulltaker · Skulls for Khorne",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Skulls for Khorne",
+   "text": "Each time this model makes an attack that targets a Character unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**. Each time this model destroys an enemy Character unit, you gain 1CP.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | the-exiled-legion · Skulltaker · Skulltaker · Skulls for Khorne"
+ },
+ {
+  "army": "emperors-chosen",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "emperors-chosen · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Advanced Firepower",
+   "text": "This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**.",
+   "rules": [
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | emperors-chosen · Caladius Annihilator Grav-tank · Advanced Firepower"
+ },
+ {
+  "army": "dread-host",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "dread-host · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Advanced Firepower",
+   "text": "This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**.",
+   "rules": [
+    "ranged",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | dread-host · Caladius Annihilator Grav-tank · Advanced Firepower"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Atrapos’ Duty",
+   "text": "While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-timing (new label: Fire Overwatch where the bonus works in snap shooting, label-own-target-snap)",
+  "where": "navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "was": "(none)",
+  "source": {
+   "ability": "Macro-extinction Protocols",
+   "text": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.",
+   "rules": [
+    "any-attack",
+    "label-own-target-snap",
+    "overwatch"
+   ]
+  },
+  "key": "label-snap|ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols"
+ }
+]

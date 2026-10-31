@@ -1723,7 +1723,7 @@
    "columns": {
     "name": {
      "source": "newrecruit",
-     "note": "the ability's name as New Recruit prints it"
+     "note": "the ability's name as New Recruit prints it, in GW's spelling where its datasheet page spells it otherwise (Berzerker Frenzy: verify/tables.js --write, verify/gw-order.js gwName; verify/words.js checks it)"
     },
     "who": {
      "source": "newrecruit",
@@ -1731,7 +1731,7 @@
     },
     "text": {
      "source": "wahapedia",
-     "note": "Wahapedia's datasheet wording (GW's Faction Pack update where there is one), matched word for word to New Recruit's (verify/nr.js, verify/texts.js)"
+     "note": "the words of its Wahapedia datasheet page (GW's codex), written by verify/tables.js --write and checked word for word after markup normalisation by verify/words.js; GW's own document's words (a Faction Pack rewrite) where verify/deviations-words.json declares them with its quote; New Recruit's printing may differ only where verify/words.js passes (verify/nr.js); a Faction Pack's datasheet or update also by verify/texts.js"
     },
     "tag": {
      "source": "newrecruit",

@@ -233,6 +233,12 @@
   "at": "2026-10-22",
   "why": "WHEN “Your opponent’s Shooting phase or the Fight phase, just after a TYRANIDS MONSTER model from your army with the Deadly Demise ability that cannot FLY is destroyed” = “Your MONSTER model (one that cannot FLY) just destroyed” (Deadly Demise is in “its Deadly Demise”; the phases are the row’s tag). EFFECT “Do not roll one D6 … Instead, mortal wounds are automatically inflicted” = the rest."
  },
+ "0295d431a4a34442": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
+ },
  "02aa503660cddef2": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -605,6 +611,12 @@
   "at": "2026-10-24",
   "why": "Ruination’s Bounty (1CP; GW p3 = Wahapedia = data.js): WHEN “Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot.”; TARGET “That HAVOCS/OBLITERATORS unit.”; EFFECT “When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: [LETHAL HITS]. [SUSTAINED HITS 1].” {any:[Havocs, Obliterators]}."
  },
+ "06f67f7649b89ce1": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "infernal-lance has no WAR DOG unit (list checked): the aura reaches no one. Unchanged."
+ },
  "07146dcc83a16530": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -670,6 +682,12 @@
   "by": "review:necrons",
   "at": "2026-10-28",
   "why": "\"Your Command phase.\""
+ },
+ "07d9a74063fb1586": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The ability is Wrathful Presence: pick one’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
  },
  "07e193fb9f0f9489": {
   "verdict": "ok",
@@ -904,6 +922,12 @@
   "by": "review:effects-helpers",
   "at": "2026-10-30",
   "why": "Same judgement as approved 939cee318ff5b336 (review:readings, 2026-10-26) with only the retired Damage-tab fields removed (oneModel); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"needs\":{\"all\":[\"Faction: Imperial Knights\",\"Armiger\"]},\"when\":\"Picked by a Knight Warden (Bondsman, your Command phase)\",\"note\":\"[SUSTAINED HITS …) is the one signed against GW’s words, unchanged: “Warden’s Duty, first half: 'weapons … have [SUSTAINED HITS 1]'. That is all weapons, so kind 'all' is right. The Bondsman army rule supplies the rest: the pick in your Command phase ('your Command pha”"
+ },
+ "0a8f036c306ba68f": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Beacons of Rage words now repeat \"(excluding MONSTERS and VEHICLES)\" in the Wound clause (page); the aura already had vs non-MONSTER/VEHICLE on both lines; +1 hit / +1 wound vs Below Half-strength unchanged and right."
  },
  "0a96a2f600152412": {
   "verdict": "ok",
@@ -2789,6 +2813,12 @@
   "at": "2026-10-22",
   "why": "“at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two”: the start of the battle round is filed under Command with at:'Start of the battle round' shown, the settled convention (Da Boss, Doctrina Imperatives, Wrathful Presence). Dismay is “In the Battle-shock step of your opponent’s Command phase”, also Command. Doom (“Each time this model makes an attack”) names no phase, which is how Doctrina Imperatives was left at Command only (Pledges to the Dark Prince went the other way and lists Shooting/Fight); Doom's numbers are the Damage tab's calcMods tick."
  },
+ "2402e31cc4067ab7": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The def still matches: the page heading carries the tag (Once per battle, per army), now kept only in the tag; at the start of any phase, one of two effects, 3+ InSv until the end of the phase."
+ },
  "24082ff6c43abfe8": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -2878,6 +2908,12 @@
   "by": "review:exiled-3",
   "at": "2026-10-24",
   "why": "Compared with main, exactly one line differs: `f.armyRules.concat(Object.values(f.detachments).map(d => d.rule).filter(Boolean))` became `.flatMap(detRules)`. detRules is a hoisted function declaration in derive.js and reads only its first argument, so flatMap's index and array arguments do no harm. A detachment without a rule gives [], the same as the old filter(Boolean). Nothing else changed. The other derive.js changes on this branch (the any-phase regex for 'At the end of a/each phase', move-enemy 'falls back', the Overwatch same-turn guard, the Feel No Pain 'against …' grant) come from the wt-exiled side and are not in these two functions."
+ },
+ "255c9c12166e491f": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "\"If the attack\" → \"If that attack\" only; footnotes unchanged and right."
  },
  "25625aa24f7450c2": {
   "verdict": "ok",
@@ -3046,6 +3082,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "Run on this list (defenceItems with shields): Trajann “Trajann Valoris · Feel No Pain 5+”, “Feel No Pain 5+ against mortal wounds”, Moment Shackle’s 3+ InSv, In Auramite Clad; Prosecutors/Witchseekers only “Feel No Pain 3+ against psychic attacks”; Caladius Aegis + Flare Shields’ 4+ InSv; Telemon with Augury Uplink a single plain FNP 5+. The starred NR FNP is dropped only when an army rule of the unit’s rules line gives that FNP with its condition; partialWho now does not let “Feel No Pain 5+*” borrow Trajann’s “Feel No Pain 5+” entry. Matches Aegis of the Emperor, Daughters of the Abyss and the 19.04 FAQ (a Feel No Pain of one model applies only to that model)."
+ },
+ "2782fedb830b760b": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "\"If the attack\" → \"If that attack\" only; footnotes unchanged and right."
  },
  "278e1adc90fb788c": {
   "verdict": "ok",
@@ -3238,6 +3280,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "The Faction Pack 1.3 FAQ, question and answer as printed (“A: No, you may decide later in the turn.”): a quoted GW FAQ, as other notes in the app."
+ },
+ "298a68980307eafd": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "New words add only \"unit\" after PSYKER in the regain clause and bold; the reroll footnotes are unchanged and right."
  },
  "2998a9cfd4b75570": {
   "verdict": "ok",
@@ -3593,6 +3641,12 @@
   "at": "2026-10-21",
   "why": "\"Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls. +1CP Or: Ranged attacks that target your unit have -1 to wound rolls.\" {woundMinusSgt:1} (calc.js compares the attack’s S, after modifiers, with the T it meets: the bodyguard’s highest, 19.02) and {woundMinus:1} match; it is used in the opponent’s Shooting phase only (phases shooting, turn opp)."
  },
+ "2fd89c896cc26d8e": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Note unchanged; it rests on its quoted FAQ / core-rule text, not on the changed words. Re-keyed only."
+ },
  "3011fcbea1efc630": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -3845,6 +3899,12 @@
   "at": "2026-10-16",
   "why": "Footnote drops the limit \"You can only select each of these abilities once per battle\"; read alone it allows Wrath of the Immaterium every turn."
  },
+ "33122d70a17e704f": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
+ },
  "3317021e35794b1e": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -3898,6 +3958,12 @@
   "by": "review:catalog-custodes",
   "at": "2026-10-29",
   "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Superhuman Focus)."
+ },
+ "33a9991c349e6375": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Rewritten to the new words: GW’s page says \"the closest eligible target\" (not \"closest enemy unit\"); needs WAR DOG, within 9\", AP improved by 1. Right per the words. (The one hand-rewritten reading in this work; it follows the words exactly.)"
  },
  "33d48e086be9d624": {
   "verdict": "ok",
@@ -3976,6 +4042,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "EFFECT: \"Add a new GRETCHIN unit to your army identical to your destroyed unit, in strategic reserves, at its starting strength, with its full wounds remaining.\" The gist is the same, shorter; \"full wounds\" is left out, and starting strength comes close."
+ },
+ "3473d7e42c2ff66d": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
  },
  "348e4cf06ae78de8": {
   "verdict": "ok",
@@ -4703,6 +4775,12 @@
   "at": "2026-10-30",
   "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Invasion Fleet · Adrenal Surge), read against the faction page."
  },
+ "3d4e605c6c14f2c8": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "New words: each ranged attack that targets a unit within range of one or more objective markers has [IGNORES COVER]; the footnote (target in range of an objective marker) says the same. effects.js targetObjective now reads this wording; box condition unchanged."
+ },
  "3d58512771b1037d": {
   "verdict": "ok",
   "by": "review:round2",
@@ -4744,6 +4822,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Start of the battle round is not tied to one player's turn."
+ },
+ "3ddf419dfaca9265": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The ability is Rubric Marines’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
  },
  "3de3b19939a4a46a": {
   "verdict": "ok",
@@ -4852,6 +4936,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "Fight phase with no owner: either; icon str11Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "3ed873ed45200c8a": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Note unchanged; it rests on its quoted FAQ / core-rule text, not on the changed words. Re-keyed only."
  },
  "3efde1b3dbe053ca": {
   "verdict": "ok",
@@ -5105,6 +5195,12 @@
   "at": "2026-10-24",
   "why": "“Friendly ADEPTUS ASTARTES TERMINATOR units have +1 to charge rolls.” Charge rolls: Charge phase (derive.js charge-move)."
  },
+ "423a1ef027af1e7c": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Note unchanged; it rests on its quoted FAQ / core-rule text, not on the changed words. Re-keyed only."
+ },
  "42429a200f694cdf": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -5315,6 +5411,12 @@
   "at": "2026-10-27",
   "why": "Your turn."
  },
+ "44f91aaa0df54a68": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The prefix (Once per battle, per army) left the text (it is the page heading’s tag, kept in tag); +3 A to the Watcher’s Axe until the end of the phase, once per battle: unchanged and right."
+ },
  "453652530610e0da": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -5398,6 +5500,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"Psychic test\" is not a Core Rules term; in Thousand Sons rules it only ever means the Cabal of Sorcerers test (Lord of the Planet of the Sorcerers, Arcane Focus, Tzaangor Shaman/Mutalith text). Anchored, faction-scoped pattern: nothing else matches."
+ },
+ "46cf83c31be31555": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The ability is Shield-Captain’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
  },
  "46e33c6df32f9912": {
   "verdict": "ok",
@@ -5603,6 +5711,12 @@
   "at": "2026-10-16",
   "why": "\"WHEN: Any phase\"."
  },
+ "4962efa8ac4649f5": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The datasheet page prints the heading \"Bomb Squigs (Once per turn, twice per battle, per unit):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
  "4966e148aec2307f": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -5668,6 +5782,12 @@
   "by": "review:order",
   "at": "2026-10-30",
   "why": "Judgement identical to the one approved on main (key 1cd828f33e8cc806, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ "4a190f8b2c4ffbf1": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
  },
  "4a1e7204bd251a77": {
   "verdict": "ok",
@@ -5998,6 +6118,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "Every condition is kept: unengaged (“not within Engagement Range of one or more enemy units”), not Fell Back this turn, and an enemy unit within 8\" and visible that is not within Engagement Range of your army. Six D6, 1 mortal wound for each 4+. Nothing is added."
+ },
+ "4f69bf26703cd1e6": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Skarbrand W 20, Damaged 1-7 as the World Eaters page prints. Unchanged."
  },
  "4f8046346a592244": {
   "verdict": "ok",
@@ -7559,6 +7685,12 @@
   "at": "2026-10-21",
   "why": "\"This model has the Feel No Pain 4+ ability against Mortal Wounds.\" (Wahapedia names it Unnatural Resilience, same words.) Unconditional on a one-model unit, so defAlways is right."
  },
+ "6588e2f34df94deb": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The datasheet page prints the heading \"Vengeful Surge (Once per battle, per unit):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
  "658e6167a374644c": {
   "verdict": "ok",
   "by": "review:catalog-chaos-daemons",
@@ -7894,6 +8026,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "The leader’s ability."
+ },
+ "6b144435df52f1a9": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The words open \"Once per battle,\" (the page prints no tag in the heading); the tag is that opener, as before. Only the words changed (now the page’s); the tag is unchanged and still right."
  },
  "6b14d6f4886af7ee": {
   "verdict": "ok",
@@ -8681,6 +8819,12 @@
   "at": "2026-10-23",
   "why": "Wahapedia and New Recruit: “Illusions of Tzeentch (Psychic)”."
  },
+ "770903c8595e3c73": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The datasheet page prints the heading \"Close-range Killers (Aura):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
  "77639f82388c69ea": {
   "verdict": "ok",
   "by": "review:custodes-rules",
@@ -8909,6 +9053,12 @@
   "at": "2026-10-16",
   "why": "Text: \"(Once per battle, per unit)\"."
  },
+ "7a73c5e1dab79f21": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "New words \"not within Engagement Range of one or more enemy units\" mean the same as the def’s \"not within Engagement Range of enemy units\"; 2+, end of the phase, 3 wounds all as the page."
+ },
  "7a7833219556d107": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -8986,6 +9136,12 @@
   "by": "review:import-2",
   "at": "2026-10-23",
   "why": "It matches the item. 'On this phone' gives the source and date (esc) and says “Kept on this phone only.” when importedKept() has the entry. When it does not, it says “This phone could not keep it: it is gone when the app next starts.” (the earlier review's nit is fixed). The Remove this list button (impRmBtn, id escaped) leads to askRemove's on-page Remove / Keep it, and Keep it restores the button. It is used only for a.imported (screenPregame line 4667)."
+ },
+ "7b3846ac372008e9": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Beacons of Rage words now repeat \"(excluding MONSTERS and VEHICLES)\" in the Wound clause (page); the aura already had vs non-MONSTER/VEHICLE on both lines; +1 hit / +1 wound vs Below Half-strength unchanged and right."
  },
  "7b3c31fafeeafdc2": {
   "verdict": "ok",
@@ -9335,6 +9491,12 @@
   "at": "2026-10-16",
   "why": "Charge rolls are made in your Charge phase and, via Heroic Intervention, in the opponent's."
  },
+ "8083633d9c4ca061": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The ability is Shield-Captain’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
  "80a14da70962b006": {
   "verdict": "ok",
   "by": "review:catalog-tyranids",
@@ -9574,6 +9736,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "WHEN: “End of your opponent’s Fight phase.” Filed under Fight (the end of the phase), as derive.js and the approved end-of-phase stratagems do."
+ },
+ "83ccdd2f7ebdcb32": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
  },
  "83d6f34a55c9a057": {
   "verdict": "ok",
@@ -10169,6 +10337,12 @@
   "at": "2026-10-28",
   "why": "\"WHEN: Any phase.\" (verify/.cache/waha/tyranids.txt, Assimilation Swarm): all five phases."
  },
+ "8b967486051bac92": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "New words add only \"unit\" after PSYKER in the regain clause and bold; the reroll footnotes are unchanged and right."
+ },
  "8ba44ccc23f32ba8": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -10469,6 +10643,12 @@
   "at": "2026-10-24",
   "why": "Unholy Fortitude (1CP; Wahapedia = data.js; GW p8 prints “Toughenss”): WHEN “Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”; TARGET “One SOUL FORGE unit from your army that was selected as the target of one or more of the attacking unit’s attacks.”; EFFECT “Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.” The opponent’s."
  },
+ "8fcdede3b8fbc4e5": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Words now say \"its melee weapons\" (page) instead of \"its hellforged weapons\". The Daemon Prince of Khorne’s only melee weapons are its Hellforged weapons (strike, sweep; checked in data.js), so the footnote naming Hellforged weapons is still exact for this unit; BOXES now read kind melee, no Damage-tab number changes (dmshown diff 0/639)."
+ },
  "90121398a09da076": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -10492,6 +10672,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"WHEN: Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.\""
+ },
+ "902f797949ad4f44": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The ability is Trajann Valoris’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
  },
  "9037feff2c5e765b": {
   "verdict": "ok",
@@ -10642,6 +10828,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Your turn."
+ },
+ "926a5315ad10cc69": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The datasheet page prints the heading \"Moment Shackle (Once per battle, per army):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
  },
  "929092d16109b0cd": {
   "verdict": "ok",
@@ -10804,6 +10996,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "'Friendly ADEPTUS CUSTODES units'. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "94f9d9deec89860d": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
  },
  "95ab8a26242ab12f": {
   "verdict": "ok",
@@ -11123,6 +11321,12 @@
   "at": "2026-10-28",
   "why": "GW: DAMAGED: 1-8 WOUNDS REMAINING, W24."
  },
+ "9915c6edc750e9f3": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The datasheet page prints the heading \"Master of Ka’tahs (Once per battle round, per unit):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
  "993a861e97930670": {
   "verdict": "ok",
   "by": "review:necrons",
@@ -11231,6 +11435,12 @@
   "at": "2026-10-20",
   "why": "Source: \"In your Command phase, this unit heals 3 wounds.\" The text names your Command phase, so {ph:['command'], turn:'your'}. This is the same judgement as the approved shooty item 3ebc0bbf37c6d408; only the italics on the token line differ."
  },
+ "9a5e74ad2d158f7f": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The ability is Tankbustas’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
  "9a5ff8d65eae40d3": {
   "verdict": "ok",
   "by": "review:exiled-rules",
@@ -11242,6 +11452,18 @@
   "by": "review:r9-we-nids",
   "at": "2026-10-21",
   "why": "NR (standard p2) Categories: \"Battleline*, Berzerkers*, *from combined unit\", and the combined unit is Khârn leading Khorne Berzerkers."
+ },
+ "9a777d73002559de": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Words now \"this model’s melee weapons\" (World Eaters page) instead of \"Slaughter and Carnage\", its only melee weapon; +2 A melee while 1-7 wounds remain: unchanged and right."
+ },
+ "9a84d547dc6b0e25": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
  },
  "9a84f2010b340023": {
   "verdict": "ok",
@@ -12041,6 +12263,12 @@
   "at": "2026-10-30",
   "why": "Same judgement as approved f3b278734996b305 (review:defilers3, 2026-10-26) with only the retired Damage-tab fields removed (calc); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"melee\",\"when\":\"Called upon daemonic patrons when selected to fight (until the end of the phase)\",\"note\":\"a Critical Wound on an unmodified wound roll o…) is the one signed against GW’s words, unchanged: ““an unmodified Wound roll of 3+ scores a Critical Wound” after calling upon daemonic patrons when selected to fight, until the end of the phase: melee (selected to fight), critWound 3. The cost (one m”"
  },
+ "a47c43141aafbb9c": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The ability is Trajann Valoris’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
  "a493c970772a43dd": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -12604,6 +12832,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "WHEN: \"Your opponent’s Shooting Phase\", so their turn."
+ },
+ "accfad3810caed19": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Only [Devastating Wounds] → [DEVASTATING WOUNDS] casing; +3 A and [DEVASTATING WOUNDS] until the end of the phase, once per battle at the start of the Fight phase: unchanged."
  },
  "ace788e7b0d1c63a": {
   "verdict": "ok",
@@ -13643,6 +13877,12 @@
   "at": "2026-10-21",
   "why": "\"each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.\" {woundMinusSgt:1} is exactly that (S after modifiers against the unit’s T, as calc.js plan does). It is your opponent’s Shooting phase only."
  },
+ "bb240fcf6234d0f3": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The ability is Slaughterbound’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
  "bb3a29a11c2832af": {
   "verdict": "ok",
   "by": "review:healybois",
@@ -14015,6 +14255,12 @@
   "at": "2026-10-24",
   "why": "The content is right: melee, vs CHARACTER or MONSTER, “can re-roll the wound roll”. But an always-on, target-keyword melee re-roll carries always:true in approved lists, so the Damage tab counts it when the target matches. Its twin Da Bigger Dey Iz… (“vs MONSTER/VEHICLE”, “can re-roll wound rolls”, melee) has always:true, and so does A Challenge Worthy of Skill."
  },
+ "c0aee260e043e5e4": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Renamed Emanatus Forcefield → Emanatus Force Field (GW’s page spelling); guard otherwise identical: wholly within 6\", ADEPTUS MECHANICUS BATTLELINE, 4+ invulnerable save against ranged attacks."
+ },
  "c0b3b3b1fc276e52": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -14080,6 +14326,12 @@
   "by": "review:nerf-units",
   "at": "2026-10-24",
   "why": "Export: Bolt pistol, Force weapon, Smite. Wahapedia: \"1 Bolt Pistol; 1 Force Weapon; 1 Smite\". \"Force weapon [Psychic]\" is New Recruit's profile name (the owner keeps NR names). Smite's two profiles match Wahapedia: Witchfire 24\" D6 BS3+ S6 AP-1 D2 [PSYCHIC]; Focused Witchfire 24\" D3+3 S6 AP-2 D2 [DEVASTATING WOUNDS, HAZARDOUS, PSYCHIC]. Force Weapon A4 WS3+ S6 AP-2 D2 [PSYCHIC]."
+ },
+ "c24e1b36b8d83892": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Note unchanged; it rests on its quoted FAQ / core-rule text, not on the changed words. Re-keyed only."
  },
  "c25adae73c0bd607": {
   "verdict": "ok",
@@ -14999,6 +15251,12 @@
   "at": "2026-10-22",
   "why": "“Start of the Fight phase”, no “your”: either turn."
  },
+ "cf398a1d5dd5f6be": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The ability is Khârn the Betrayer’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
  "cf3efc5a4a626bc8": {
   "verdict": "ok",
   "by": "review:r20-damage",
@@ -15274,6 +15532,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "“At the end of your opponent’s turn” is the opponent’s turn, last phase, with at. It is identical to the approved WE Flesh Hounds and Ambushing Hunters."
+ },
+ "d2448e63b310d72e": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
  },
  "d248fd0970a671aa": {
   "verdict": "ok",
@@ -16175,6 +16439,12 @@
   "at": "2026-10-21",
   "why": "\"Your opponent’s Shooting phase\"."
  },
+ "dedd232512aff82f": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Note unchanged; it rests on its quoted FAQ / core-rule text, not on the changed words. Re-keyed only."
+ },
  "defa274ed5f89239": {
   "verdict": "ok",
   "by": "review:catalog-tyranids",
@@ -16660,6 +16930,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "NR: “Armoured feet, 2x War Dog autocannon, Diabolus heavy stubber” and “War Dog autocannon (x2)”; Wahapedia: “diabolus heavy stubber; 2 War Dog autocannons; armoured feet”. ×2 autocannon is right."
+ },
+ "e5805c774c25f94a": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The datasheet page prints the heading \"Beacons of Rage (Aura):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
  },
  "e58797ee9fe14b7c": {
   "verdict": "ok",
@@ -17465,6 +17741,12 @@
   "at": "2026-10-16",
   "why": "Only army rule with needs is Bondsman (any:[Armiger]); purge-freeblade has no ARMIGER, and the rule (\"select one friendly ARMIGER model within 12\"\") then does nothing."
  },
+ "f1809bc9c752ec50": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The ability is Tzaangor Enlightened’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
  "f18c7c9908ae5730": {
   "verdict": "ok",
   "by": "review:exiled-2",
@@ -17699,6 +17981,12 @@
   "at": "2026-10-29",
   "why": "{\"ph\":[\"command\",\"shooting\",\"fight\"],\"turn\":\"either\",\"at\":\"Start of the first battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
  },
+ "f4c82c4042ca1495": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The datasheet page prints the heading \"Emanatus Force Field (Aura):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
  "f4eca6a6a5f41b43": {
   "verdict": "ok",
   "by": "review:order",
@@ -17746,6 +18034,12 @@
   "by": "review:order",
   "at": "2026-10-30",
   "why": "Judgement identical to the one approved on main (key dd21cf0a01f29cbd, review:custodes-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ "f5a7dd3c071554f1": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The words open \"Once per battle round,\" (the page prints no tag in the heading); the tag is that opener, as before. Only the words changed (now the page’s); the tag is unchanged and still right."
  },
  "f5b87dc0d359a948": {
   "verdict": "ok",
@@ -17945,6 +18239,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Fight phase.” names no turn, so either turn."
  },
+ "f9d6b156530265be": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The ability is Slaughterbound’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
  "f9eab25031ce4bb7": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -17956,6 +18256,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "'Your Command phase': your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "f9ec1233ab1ba419": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The ability is Flash Gitz’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
  },
  "fa04c7595e8b407f": {
   "verdict": "ok",
@@ -18161,6 +18467,12 @@
   "at": "2026-10-28",
   "why": "\"TARGET: One HARVESTER unit from your army that was just destroyed.\": Harvester."
  },
+ "fd1ef373e931cc29": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "The datasheet page prints the heading \"Lord of the Planet of the Sorcerers (Psychic):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
  "fd21ae46923c1f3a": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -18316,6 +18628,12 @@
   "by": "review:reference-2",
   "at": "2026-10-28",
   "why": "GW’s carrier line: “Every Brimstone Horror added to this unit using the Split ability is equipped with: Coruscating Yellow Flames; yellow claws.” Rows without “(ref. only)” and carrier, as a sheet of those models should be."
+ },
+ "ff65a03e35b0f2f7": {
+  "verdict": "ok",
+  "by": "review:words",
+  "at": "2026-10-31",
+  "why": "Words now end \"+1 AP:\" (page) instead of \"+1 AP.\"; the footnote (this unit or the target within range of an objective, your Shooting phase, +1 AP) is unchanged and right."
  },
  "ff6f78dd40c2fb4d": {
   "verdict": "ok",

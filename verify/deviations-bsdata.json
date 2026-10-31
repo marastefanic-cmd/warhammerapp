@@ -506,26 +506,6 @@
  },
  {
   "army": "lite-knights",
-  "unit": "trajann-valoris-allarus-custodians",
-  "field": "ability",
-  "app": "Slayer of Tyrants",
-  "source": "",
-  "where": "no BSData ability \"Slayer of Tyrants\" for Allarus Custodians",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/lite-knights.txt line 60."
- },
- {
-  "army": "lite-knights",
-  "unit": "trajann-valoris-allarus-custodians",
-  "field": "ability",
-  "app": "",
-  "source": "Slayers of Tyrants",
-  "where": "Allarus Custodians › Slayers of Tyrants: missing in the app",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/lite-knights.txt line 60."
- },
- {
-  "army": "lite-knights",
   "unit": "prosecutor-squad",
   "field": "ability.text",
   "app": "Purity of Execution: In your Shooting phase, you can select one **visible** enemy unit within 18\" of this unit. That unit is **detected**:\n- While a unit is **detected**, that unit has +3\" **detection range**.",
@@ -757,51 +737,11 @@
  {
   "army": "nerf-when",
   "unit": "librarian-in-phobos-armour",
-  "field": "ability",
-  "app": "Shrouding",
-  "source": "",
-  "reason": "GW names the ability Shrouding, BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) [Psychic Abilities] - Shrouding. GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: \"Shrouding\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "librarian-in-phobos-armour",
-  "field": "ability",
-  "app": "Soul Sight",
-  "source": "",
-  "reason": "GW names the ability Soul Sight, BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) [Psychic Abilities] - Soul Sight. GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: \"Soul Sight\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "librarian-in-phobos-armour",
   "field": "ability.text",
   "app": "Librarian: This model has the **psychic abilities** listed in the Psychic Abilities section.",
   "source": "This model has the psychic abilities listed in the Psychic Abilities section (see left).",
   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"This model has the psychic abilities listed in the Psychic Abilities section (see left).\"). GW wins.",
   "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: \"This model has the psychic abilities listed in the Psychic Abilities section.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "librarian-in-phobos-armour",
-  "field": "ability",
-  "app": "",
-  "source": "[Psychic Abilities] - Shrouding (Psychic Level 1)",
-  "reason": "GW names the ability Shrouding, BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) [Psychic Abilities] - Shrouding. GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: \"Shrouding\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "librarian-in-phobos-armour",
-  "field": "ability",
-  "app": "",
-  "source": "[Psychic Abilities] - Soul Sight (Psychic Level 1)",
-  "reason": "GW names the ability Soul Sight, BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) [Psychic Abilities] - Soul Sight. GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: \"Soul Sight\".",
   "by": "verify/from-json.js"
  },
  {
@@ -1235,28 +1175,6 @@
  },
  {
   "army": "emperors-chosen",
-  "unit": "trajann-valoris-allarus-custodians",
-  "field": "ability",
-  "app": "Slayer of Tyrants",
-  "source": "",
-  "where": "no BSData ability \"Slayer of Tyrants\" for Allarus Custodians",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; BSData (the pin b4dc3f4, as fd7dfae) and New Recruit print \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/emperors-chosen.txt line 64.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "emperors-chosen",
-  "unit": "trajann-valoris-allarus-custodians",
-  "field": "ability",
-  "app": "",
-  "source": "Slayers of Tyrants",
-  "where": "Allarus Custodians › Slayers of Tyrants: missing in the app",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; BSData (the pin b4dc3f4, as fd7dfae) and New Recruit print \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/emperors-chosen.txt line 64.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "emperors-chosen",
   "unit": "shield-captain-sentinel-guard-sodality",
   "field": "ability.text",
   "app": "Leader: This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY",
@@ -1264,39 +1182,6 @@
   "where": "Shield-Captain › Leader",
   "reason": "GW's datasheet (the new codex) lets the Shield-Captain lead CUSTODIAN GUARD SODALITY, … SENTINEL GUARD SODALITY; BSData's Leader text (the pin b4dc3f4, as fd7dfae) is the previous codex's list, without SENTINEL GUARD (New Recruit, built from BSData, has the Shield-Captain leading the Sentinel Guard Sodality all the same). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, LEADER: \"This model can be attached to the following units: CUSTODIAN GUARD SODALITY, … SENTINEL GUARD SODALITY\"; verify/sources/nr/emperors-chosen.txt lines 88, 101.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "emperors-chosen",
-  "unit": "shield-captain-sentinel-guard-sodality",
-  "field": "ability.text",
-  "app": "Vengeful Surge: (Once per battle, per unit) In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2\".",
-  "source": "(Once per battle, per unit)\nIn your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2\"",
-  "where": "Shield-Captain › Vengeful Surge",
-  "reason": "Punctuation only: the new codex ends Vengeful Surge with a full stop (\"… up to D6+2\\\".\"); BSData (the pin b4dc3f4, as fd7dfae) prints it without, and with a line break after its \"(Once per battle, per unit)\". The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Vengeful Surge (Once per battle, per unit): … this unit can make a surge move of up to D6+2\\\".\"; verify/sources/nr/emperors-chosen.txt line 104.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "emperors-chosen",
-  "unit": "shield-captain-sentinel-guard-sodality",
-  "field": "ability",
-  "app": "Master of Ka’tahs",
-  "source": "",
-  "where": "no BSData ability \"Master of Ka’tahs\" for Shield-Captain",
-  "reason": "The new codex names the Shield-Captain's ability \"Master of Ka’tahs\"; BSData (the pin b4dc3f4, as fd7dfae) and New Recruit print \"Master of the Ka'tahs\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Master of Ka’tahs (Once per battle round, per unit): If this unit is not readied, you can use this ability. If you do, this unit is readied.\"; verify/sources/nr/emperors-chosen.txt line 107.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "emperors-chosen",
-  "unit": "shield-captain-sentinel-guard-sodality",
-  "field": "ability",
-  "app": "",
-  "source": "Master of the Ka'tahs",
-  "where": "Shield-Captain › Master of the Ka'tahs: missing in the app",
-  "reason": "The new codex names the Shield-Captain's ability \"Master of Ka’tahs\"; BSData (the pin b4dc3f4, as fd7dfae) and New Recruit print \"Master of the Ka'tahs\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Master of Ka’tahs (Once per battle round, per unit): If this unit is not readied, you can use this ability. If you do, this unit is readied.\"; verify/sources/nr/emperors-chosen.txt line 107.",
   "by": "hand (Claude)"
  },
  {
@@ -1411,28 +1296,6 @@
  },
  {
   "army": "dread-host",
-  "unit": "trajann-valoris-allarus-custodians",
-  "field": "ability",
-  "app": "Slayer of Tyrants",
-  "source": "",
-  "where": "no BSData ability \"Slayer of Tyrants\" for Allarus Custodians",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; BSData (the pin b4dc3f4, as fd7dfae) and New Recruit print \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/dread-host.txt line 65.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "trajann-valoris-allarus-custodians",
-  "field": "ability",
-  "app": "",
-  "source": "Slayers of Tyrants",
-  "where": "Allarus Custodians › Slayers of Tyrants: missing in the app",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; BSData (the pin b4dc3f4, as fd7dfae) and New Recruit print \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/dread-host.txt line 65.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
   "unit": "shield-captain-sentinel-guard-sodality",
   "field": "ability.text",
   "app": "Leader: This model can be attached to the following units: CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY",
@@ -1440,61 +1303,6 @@
   "where": "Shield-Captain › Leader",
   "reason": "GW's datasheet (the new codex) lets the Shield-Captain lead CUSTODIAN GUARD SODALITY, … SENTINEL GUARD SODALITY; BSData's Leader text (the pin b4dc3f4, as fd7dfae) is the previous codex's list, without SENTINEL GUARD (New Recruit, built from BSData, has the Shield-Captain leading the Sentinel Guard Sodality all the same). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, LEADER: \"This model can be attached to the following units: CUSTODIAN GUARD SODALITY, … SENTINEL GUARD SODALITY\"; verify/sources/nr/dread-host.txt lines 89, 102.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "shield-captain-sentinel-guard-sodality",
-  "field": "ability.text",
-  "app": "Vengeful Surge: (Once per battle, per unit) In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2\".",
-  "source": "(Once per battle, per unit)\nIn your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2\"",
-  "where": "Shield-Captain › Vengeful Surge",
-  "reason": "Punctuation only: the new codex ends Vengeful Surge with a full stop (\"… up to D6+2\\\".\"); BSData (the pin b4dc3f4, as fd7dfae) prints it without, and with a line break after its \"(Once per battle, per unit)\". The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Vengeful Surge (Once per battle, per unit): … this unit can make a surge move of up to D6+2\\\".\"; verify/sources/nr/dread-host.txt line 105.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "shield-captain-sentinel-guard-sodality",
-  "field": "ability",
-  "app": "Master of Ka’tahs",
-  "source": "",
-  "where": "no BSData ability \"Master of Ka’tahs\" for Shield-Captain",
-  "reason": "The new codex names the Shield-Captain's ability \"Master of Ka’tahs\"; BSData (the pin b4dc3f4, as fd7dfae) and New Recruit print \"Master of the Ka'tahs\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Master of Ka’tahs (Once per battle round, per unit): If this unit is not readied, you can use this ability. If you do, this unit is readied.\"; verify/sources/nr/dread-host.txt line 108.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "shield-captain-sentinel-guard-sodality",
-  "field": "ability",
-  "app": "",
-  "source": "Master of the Ka'tahs",
-  "where": "Shield-Captain › Master of the Ka'tahs: missing in the app",
-  "reason": "The new codex names the Shield-Captain's ability \"Master of Ka’tahs\"; BSData (the pin b4dc3f4, as fd7dfae) and New Recruit print \"Master of the Ka'tahs\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Master of Ka’tahs (Once per battle round, per unit): If this unit is not readied, you can use this ability. If you do, this unit is readied.\"; verify/sources/nr/dread-host.txt line 108.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "allarus-custodians",
-  "field": "ability",
-  "app": "Slayer of Tyrants",
-  "source": "",
-  "where": "no BSData ability \"Slayer of Tyrants\"",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; BSData (the pin b4dc3f4, as fd7dfae) and New Recruit print \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/dread-host.txt line 65.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "allarus-custodians",
-  "field": "ability",
-  "app": "",
-  "source": "Slayers of Tyrants",
-  "where": "Allarus Custodians › Slayers of Tyrants: missing in the app",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; BSData (the pin b4dc3f4, as fd7dfae) and New Recruit print \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/dread-host.txt line 65.",
   "by": "hand (Claude)"
  },
  {

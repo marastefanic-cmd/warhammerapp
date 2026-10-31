@@ -2995,7 +2995,7 @@
    ],
    "turn": "your"
   },
-  "ability-timing | shooty · Mek [mek-tankbustas] · Tankbustas · Bomb Squig": {
+  "ability-timing | shooty · Mek [mek-tankbustas] · Tankbustas · Bomb Squigs": {
    "ph": [
     "movement"
    ],
@@ -3040,13 +3040,11 @@
   },
   "ability-timing | shooty · Killa Kans · Spiteful Power Trip": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -3668,9 +3666,13 @@
   },
   "ability-timing | 6-bigs · Knight Destrier · Saturation Fire": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | 6-bigs · Knight Destrier · Invulnerable Save (5+*)": {},
   "ability-timing | 6-bigs · Knight Errant · Aggressive Assault": {
@@ -3684,18 +3686,26 @@
   "ability-tag | 6-bigs · Knight Errant · Errant’s Duty": "Bondsman",
   "ability-timing | 6-bigs · Knight Paladin · Seasoned Noble": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | 6-bigs · Knight Paladin · Invulnerable Save (5+*)": {},
   "ability-timing | 6-bigs · Knight Paladin · Damaged: 1-9 Wounds Remaining": {},
   "ability-tag | 6-bigs · Knight Paladin · Paladin’s Duty": "Bondsman",
   "ability-timing | 6-bigs · Knight Warden · Thin Their Ranks": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | 6-bigs · Knight Warden · Invulnerable Save (5+*)": {},
   "ability-timing | 6-bigs · Knight Warden · Damaged: 1-9 Wounds Remaining": {},
@@ -3749,9 +3759,13 @@
   },
   "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Saturation Fire": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Invulnerable Save (5+*)": {},
   "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Sanctuary": {},
@@ -3914,7 +3928,7 @@
    ],
    "turn": "your"
   },
-  "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Emanatus Forcefield": {},
+  "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Emanatus Force Field": {},
   "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Damaged: 1-4 wounds remaining": {},
   "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Scuttling Walker": {
    "ph": [
@@ -4019,13 +4033,11 @@
   },
   "ability-timing | defilers-and-friends · Defiler [defiler] · Revel in Desecration": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -4038,13 +4050,11 @@
   },
   "ability-timing | defilers-and-friends · Defiler [defiler-2] · Revel in Desecration": {
    "ph": [
-    "movement",
     "shooting",
     "fight"
    ],
    "turn": "either",
    "turns": {
-    "movement": "opp",
     "shooting": "your"
    }
   },
@@ -4447,7 +4457,6 @@
    ],
    "turn": "either"
   },
-  "ability-tag | lite-knights · Trajann Valoris · Trajann Valoris · Moment Shackle": "Once per battle, per army",
   "ability-timing | lite-knights · Prosecutor Squad · Purity of Execution": {
    "ph": [
     "shooting"
@@ -4900,15 +4909,12 @@
    ],
    "turn": "either"
   },
-  "ability-tag | emperors-chosen · Trajann Valoris · Trajann Valoris · Moment Shackle": "Once per battle, per army",
   "ability-timing | emperors-chosen · Shield-Captain · Shield-Captain · Vengeful Surge": {
    "ph": [
     "shooting"
    ],
    "turn": "opp"
   },
-  "ability-tag | emperors-chosen · Shield-Captain · Shield-Captain · Vengeful Surge": "Once per battle, per unit",
-  "ability-tag | emperors-chosen · Shield-Captain · Shield-Captain · Master of Ka’tahs": "Once per battle round, per unit",
   "ability-timing | emperors-chosen · Shield-Captain · Sentinel Guard Sodality · Praesidium Shield": {},
   "ability-timing | emperors-chosen · Custodian Wardens · Living Fortress": {},
   "ability-timing | emperors-chosen · Prosecutor Squad · Purity of Execution": {
@@ -4940,15 +4946,12 @@
    ],
    "turn": "either"
   },
-  "ability-tag | dread-host · Trajann Valoris · Trajann Valoris · Moment Shackle": "Once per battle, per army",
   "ability-timing | dread-host · Shield-Captain · Shield-Captain · Vengeful Surge": {
    "ph": [
     "shooting"
    ],
    "turn": "opp"
   },
-  "ability-tag | dread-host · Shield-Captain · Shield-Captain · Vengeful Surge": "Once per battle, per unit",
-  "ability-tag | dread-host · Shield-Captain · Shield-Captain · Master of Ka’tahs": "Once per battle round, per unit",
   "ability-timing | dread-host · Shield-Captain · Sentinel Guard Sodality · Praesidium Shield": {},
   "ability-timing | dread-host · Custodian Wardens · Living Fortress": {},
   "ability-timing | dread-host · Prosecutor Squad · Purity of Execution": {
@@ -5007,9 +5010,13 @@
   },
   "ability-timing | navigator-sounds-op-ngl · Knight Destrier · Saturation Fire": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | navigator-sounds-op-ngl · Knight Destrier · Invulnerable Save (5+*)": {},
   "ability-timing | navigator-sounds-op-ngl · Knight Errant · Aggressive Assault": {
@@ -5529,6 +5536,247 @@
     "shooting"
    ],
    "turn": "your"
+  },
+  "ability-timing | standard · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Lancer · Shock Charge": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | super-terminators · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | purge-goes-the-foe · Skitarii Rangers · Omnispex": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii] · Broad Spectrum Data-tether": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii-2] · Broad Spectrum Data-tether": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | purge-goes-the-foe · Skorpius Disintegrator · Broad spectrum data-tether": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | infernal-lance · Chaos Cerastus Knight Lancer · Shock Charge": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand] · Brigand": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | big-demons-baby · Angron · Wrathful Presence: pick one · The Blood God’s Favour": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Macro-extinction Protocols": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-timing | defilers-and-friends · Lucius the Eternal · Lucius the Eternal · A Challenge Worthy of Skill": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-timing | infernal-lance · Chaos Cerastus Knight Atrapos · Macro-extinction Protocols": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-timing | lite-knights · Caladius Annihilator Grav-tank · Advanced Firepower": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | the-exiled-legion · Skulltaker · Skulltaker · Skulls for Khorne": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-timing | emperors-chosen · Caladius Annihilator Grav-tank · Advanced Firepower": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | dread-host · Caladius Annihilator Grav-tank · Advanced Firepower": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
   }
  }
 }

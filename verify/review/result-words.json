@@ -1,0 +1,578 @@
+[
+ {
+  "key": "4962efa8ac4649f5",
+  "where": "shooty · Mek · Bomb Squigs",
+  "verdict": "ok",
+  "why": "The datasheet page prints the heading \"Bomb Squigs (Once per turn, twice per battle, per unit):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
+ {
+  "key": "9a5e74ad2d158f7f",
+  "where": "shooty · Mek · Bomb Squigs",
+  "verdict": "ok",
+  "why": "The ability is Tankbustas’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
+ {
+  "key": "f9ec1233ab1ba419",
+  "where": "shooty · Mek · Finderz Keeperz",
+  "verdict": "ok",
+  "why": "The ability is Flash Gitz’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
+ {
+  "key": "ff65a03e35b0f2f7",
+  "where": "shooty · Mek",
+  "verdict": "ok",
+  "why": "Words now end \"+1 AP:\" (page) instead of \"+1 AP.\"; the footnote (this unit or the target within range of an objective, your Shooting phase, +1 AP) is unchanged and right."
+ },
+ {
+  "key": "cf398a1d5dd5f6be",
+  "where": "standard · Khârn the Betrayer · Berzerker Frenzy",
+  "verdict": "ok",
+  "why": "The ability is Khârn the Betrayer’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
+ {
+  "key": "7a73c5e1dab79f21",
+  "where": "standard · Khârn the Betrayer · Berzerker Frenzy",
+  "verdict": "ok",
+  "why": "New words \"not within Engagement Range of one or more enemy units\" mean the same as the def’s \"not within Engagement Range of enemy units\"; 2+, end of the phase, 3 wounds all as the page."
+ },
+ {
+  "key": "f5a7dd3c071554f1",
+  "where": "big-demons-baby · Daemon Prince of Khorne · Direct the Slaughter",
+  "verdict": "ok",
+  "why": "The words open \"Once per battle round,\" (the page prints no tag in the heading); the tag is that opener, as before. Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
+ {
+  "key": "8fcdede3b8fbc4e5",
+  "where": "big-demons-baby · Daemon Prince of Khorne",
+  "verdict": "ok",
+  "why": "Words now say \"its melee weapons\" (page) instead of \"its hellforged weapons\". The Daemon Prince of Khorne’s only melee weapons are its Hellforged weapons (strike, sweep; checked in data.js), so the footnote naming Hellforged weapons is still exact for this unit; BOXES now read kind melee, no Damage-tab number changes (dmshown diff 0/639)."
+ },
+ {
+  "key": "bb240fcf6234d0f3",
+  "where": "standard · Slaughterbound · Lord of the Eightbound",
+  "verdict": "ok",
+  "why": "The ability is Slaughterbound’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
+ {
+  "key": "6b144435df52f1a9",
+  "where": "standard · Slaughterbound · Possessed Lord",
+  "verdict": "ok",
+  "why": "The words open \"Once per battle,\" (the page prints no tag in the heading); the tag is that opener, as before. Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
+ {
+  "key": "f9d6b156530265be",
+  "where": "standard · Slaughterbound · Possessed Lord",
+  "verdict": "ok",
+  "why": "The ability is Slaughterbound’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
+ {
+  "key": "accfad3810caed19",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "Only [Devastating Wounds] → [DEVASTATING WOUNDS] casing; +3 A and [DEVASTATING WOUNDS] until the end of the phase, once per battle at the start of the Fight phase: unchanged."
+ },
+ {
+  "key": "0295d431a4a34442",
+  "where": "princes · Slaughterbound",
+  "verdict": "ok",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
+ },
+ {
+  "key": "e5805c774c25f94a",
+  "where": "super-terminators · Eightbound · Beacons of Rage",
+  "verdict": "ok",
+  "why": "The datasheet page prints the heading \"Beacons of Rage (Aura):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
+ {
+  "key": "0a8f036c306ba68f",
+  "where": "super-terminators · Eightbound",
+  "verdict": "ok",
+  "why": "Beacons of Rage words now repeat \"(excluding MONSTERS and VEHICLES)\" in the Wound clause (page); the aura already had vs non-MONSTER/VEHICLE on both lines; +1 hit / +1 wound vs Below Half-strength unchanged and right."
+ },
+ {
+  "key": "7b3846ac372008e9",
+  "where": "super-terminators · Eightbound",
+  "verdict": "ok",
+  "why": "Beacons of Rage words now repeat \"(excluding MONSTERS and VEHICLES)\" in the Wound clause (page); the aura already had vs non-MONSTER/VEHICLE on both lines; +1 hit / +1 wound vs Below Half-strength unchanged and right."
+ },
+ {
+  "key": "07d9a74063fb1586",
+  "where": "big-demons-baby · Angron · The Blood God’s Favour",
+  "verdict": "ok",
+  "why": "The ability is Wrathful Presence: pick one’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
+ {
+  "key": "3473d7e42c2ff66d",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
+ },
+ {
+  "key": "fd1ef373e931cc29",
+  "where": "mucho-mutantes · Magnus the Red · Lord of the Planet of the Sorcerers",
+  "verdict": "ok",
+  "why": "The datasheet page prints the heading \"Lord of the Planet of the Sorcerers (Psychic):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
+ {
+  "key": "8b967486051bac92",
+  "where": "mucho-mutantes · Daemon Prince of Tzeentch with wings",
+  "verdict": "ok",
+  "why": "New words add only \"unit\" after PSYKER in the regain clause and bold; the reroll footnotes are unchanged and right."
+ },
+ {
+  "key": "298a68980307eafd",
+  "where": "mucho-mutantes · Daemon Prince of Tzeentch with wings",
+  "verdict": "ok",
+  "why": "New words add only \"unit\" after PSYKER in the regain clause and bold; the reroll footnotes are unchanged and right."
+ },
+ {
+  "key": "3ddf419dfaca9265",
+  "where": "pubstomper · Exalted Sorcerer · Bringers of Change",
+  "verdict": "ok",
+  "why": "The ability is Rubric Marines’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
+ {
+  "key": "2782fedb830b760b",
+  "where": "pubstomper · Exalted Sorcerer",
+  "verdict": "ok",
+  "why": "\"If the attack\" → \"If that attack\" only; footnotes unchanged and right."
+ },
+ {
+  "key": "255c9c12166e491f",
+  "where": "pubstomper · Exalted Sorcerer",
+  "verdict": "ok",
+  "why": "\"If the attack\" → \"If that attack\" only; footnotes unchanged and right."
+ },
+ {
+  "key": "4a190f8b2c4ffbf1",
+  "where": "pubstomper · Exalted Sorcerer",
+  "verdict": "ok",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
+ },
+ {
+  "key": "c24e1b36b8d83892",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Icon of War",
+  "verdict": "ok",
+  "why": "Note unchanged; it rests on its quoted FAQ / core-rule text, not on the changed words. Re-keyed only."
+ },
+ {
+  "key": "dedd232512aff82f",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Supreme Commander",
+  "verdict": "ok",
+  "why": "Note unchanged; it rests on its quoted FAQ / core-rule text, not on the changed words. Re-keyed only."
+ },
+ {
+  "key": "f4c82c4042ca1495",
+  "where": "purge-goes-the-foe · Onager Dunecrawler · Emanatus Force Field",
+  "verdict": "ok",
+  "why": "The datasheet page prints the heading \"Emanatus Force Field (Aura):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
+ {
+  "key": "c0aee260e043e5e4",
+  "where": "purge-goes-the-foe · Onager Dunecrawler",
+  "verdict": "ok",
+  "why": "Renamed Emanatus Forcefield → Emanatus Force Field (GW’s page spelling); guard otherwise identical: wholly within 6\", ADEPTUS MECHANICUS BATTLELINE, 4+ invulnerable save against ranged attacks."
+ },
+ {
+  "key": "770903c8595e3c73",
+  "where": "infernal-lance · Knight Ruinator · Close-range Killers",
+  "verdict": "ok",
+  "why": "The datasheet page prints the heading \"Close-range Killers (Aura):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
+ {
+  "key": "06f67f7649b89ce1",
+  "where": "infernal-lance · Knight Ruinator · Close-range Killers",
+  "verdict": "ok",
+  "why": "infernal-lance has no WAR DOG unit (list checked): the aura reaches no one. Unchanged."
+ },
+ {
+  "key": "33a9991c349e6375",
+  "where": "infernal-lance · Knight Ruinator",
+  "verdict": "ok",
+  "why": "Rewritten to the new words: GW’s page says \"the closest eligible target\" (not \"closest enemy unit\"); needs WAR DOG, within 9\", AP improved by 1. Right per the words. (The one hand-rewritten reading in this work; it follows the words exactly.)"
+ },
+ {
+  "key": "3d4e605c6c14f2c8",
+  "where": "woof-woof · War Dog Brigand",
+  "verdict": "ok",
+  "why": "New words: each ranged attack that targets a unit within range of one or more objective markers has [IGNORES COVER]; the footnote (target in range of an objective marker) says the same. effects.js targetObjective now reads this wording; box condition unchanged."
+ },
+ {
+  "key": "4f69bf26703cd1e6",
+  "where": "big-demons-baby · Skarbrand · Damaged: 1-7 wounds remaining",
+  "verdict": "ok",
+  "why": "Skarbrand W 20, Damaged 1-7 as the World Eaters page prints. Unchanged."
+ },
+ {
+  "key": "9a777d73002559de",
+  "where": "big-demons-baby · Skarbrand",
+  "verdict": "ok",
+  "why": "Words now \"this model’s melee weapons\" (World Eaters page) instead of \"Slaughter and Carnage\", its only melee weapon; +2 A melee while 1-7 wounds remain: unchanged and right."
+ },
+ {
+  "key": "f1809bc9c752ec50",
+  "where": "mucho-mutantes · Tzaangor Shaman · Prophesied Doom",
+  "verdict": "ok",
+  "why": "The ability is Tzaangor Enlightened’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
+ {
+  "key": "94f9d9deec89860d",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
+ },
+ {
+  "key": "83ccdd2f7ebdcb32",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
+ },
+ {
+  "key": "9a84d547dc6b0e25",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
+ },
+ {
+  "key": "423a1ef027af1e7c",
+  "where": "lite-knights · Trajann Valoris · Supreme Commander",
+  "verdict": "ok",
+  "why": "Note unchanged; it rests on its quoted FAQ / core-rule text, not on the changed words. Re-keyed only."
+ },
+ {
+  "key": "926a5315ad10cc69",
+  "where": "dread-host · Trajann Valoris · Moment Shackle",
+  "verdict": "ok",
+  "why": "The datasheet page prints the heading \"Moment Shackle (Once per battle, per army):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
+ {
+  "key": "a47c43141aafbb9c",
+  "where": "lite-knights · Trajann Valoris · Moment Shackle",
+  "verdict": "ok",
+  "why": "The ability is Trajann Valoris’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
+ {
+  "key": "2402e31cc4067ab7",
+  "where": "dread-host · Trajann Valoris · Moment Shackle",
+  "verdict": "ok",
+  "why": "The def still matches: the page heading carries the tag (Once per battle, per army), now kept only in the tag; at the start of any phase, one of two effects, 3+ InSv until the end of the phase."
+ },
+ {
+  "key": "44f91aaa0df54a68",
+  "where": "dread-host · Trajann Valoris",
+  "verdict": "ok",
+  "why": "The prefix (Once per battle, per army) left the text (it is the page heading’s tag, kept in tag); +3 A to the Watcher’s Axe until the end of the phase, once per battle: unchanged and right."
+ },
+ {
+  "key": "33122d70a17e704f",
+  "where": "lite-knights · Trajann Valoris",
+  "verdict": "ok",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
+ },
+ {
+  "key": "3ed873ed45200c8a",
+  "where": "emperors-chosen · Trajann Valoris · Supreme Commander",
+  "verdict": "ok",
+  "why": "Note unchanged; it rests on its quoted FAQ / core-rule text, not on the changed words. Re-keyed only."
+ },
+ {
+  "key": "902f797949ad4f44",
+  "where": "dread-host · Trajann Valoris · Moment Shackle",
+  "verdict": "ok",
+  "why": "The ability is Trajann Valoris’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
+ {
+  "key": "d2448e63b310d72e",
+  "where": "dread-host · Trajann Valoris",
+  "verdict": "ok",
+  "why": "The partial rule is unchanged and still follows the words of the listed model’s ability (re-keyed because a text in the unit changed; the new text is the page’s)."
+ },
+ {
+  "key": "9915c6edc750e9f3",
+  "where": "dread-host · Shield-Captain · Master of Ka’tahs",
+  "verdict": "ok",
+  "why": "The datasheet page prints the heading \"Master of Ka’tahs (Once per battle round, per unit):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
+ {
+  "key": "46cf83c31be31555",
+  "where": "dread-host · Shield-Captain · Master of Ka’tahs",
+  "verdict": "ok",
+  "why": "The ability is Shield-Captain’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
+ {
+  "key": "6588e2f34df94deb",
+  "where": "dread-host · Shield-Captain · Vengeful Surge",
+  "verdict": "ok",
+  "why": "The datasheet page prints the heading \"Vengeful Surge (Once per battle, per unit):\" (checked by script against verify/.cache/waha/ds). Only the words changed (now the page’s); the tag is unchanged and still right."
+ },
+ {
+  "key": "8083633d9c4ca061",
+  "where": "dread-host · Shield-Captain · Vengeful Surge",
+  "verdict": "ok",
+  "why": "The ability is Shield-Captain’s on its datasheet page; the new words (the page’s) change nothing about who carries it. Re-keyed only."
+ },
+ {
+  "key": "2fd89c896cc26d8e",
+  "where": "dread-host · Trajann Valoris · Supreme Commander",
+  "verdict": "ok",
+  "why": "Note unchanged; it rests on its quoted FAQ / core-rule text, not on the changed words. Re-keyed only."
+ },
+ {
+  "key": "label|ability-timing | standard · Angron · Wrathful Presence: pick one · The Blood God’s Favour",
+  "where": "standard · Angron · Wrathful Presence: pick one · The Blood God’s Favour",
+  "verdict": "ok",
+  "why": "derive label-named-roll: a Blessings of Khorne roll is made at the start of the battle round (World Eaters army rule: \"at the start of the battle round, you can make a Blessings of Khorne roll\"); Start of the battle round, listed with the Command phase, either turn. Equal to derive.js output (gate derive: 0 written by hand; a changed or removed label fails, mutation-tested)."
+ },
+ {
+  "key": "label|ability-timing | 4-megas-and-a-destrier · Cerastus Knight Lancer · Shock Charge",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Lancer · Shock Charge",
+  "verdict": "ok",
+  "why": "Crushing Impact’s WHEN is \"Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move\" (CORE_STRATAGEMS); charge, your turn. Equal to derive.js output."
+ },
+ {
+  "key": "label|ability-timing | super-terminators · Angron · Wrathful Presence: pick one · The Blood God’s Favour",
+  "where": "super-terminators · Angron · Wrathful Presence: pick one · The Blood God’s Favour",
+  "verdict": "ok",
+  "why": "derive label-named-roll: a Blessings of Khorne roll is made at the start of the battle round (World Eaters army rule: \"at the start of the battle round, you can make a Blessings of Khorne roll\"); Start of the battle round, listed with the Command phase, either turn. Equal to derive.js output (gate derive: 0 written by hand; a changed or removed label fails, mutation-tested)."
+ },
+ {
+  "key": "label|ability-timing | purge-goes-the-foe · Skitarii Rangers · Omnispex",
+  "where": "purge-goes-the-foe · Skitarii Rangers · Omnispex",
+  "verdict": "ok",
+  "why": "Always-on ranged effect: your Shooting phase plus Fire Overwatch (WHEN: end of your opponent’s Movement phase), derive rule overwatch. Equal to derive.js output."
+ },
+ {
+  "key": "label|ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii] · Broad Spectrum Data-tether",
+  "where": "purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii] · Broad Spectrum Data-tether",
+  "verdict": "ok",
+  "why": "\"Each time you target this unit with a Stratagem\": stratagems are used in any phase of either turn. Equal to derive.js output."
+ },
+ {
+  "key": "label|ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii-2] · Broad Spectrum Data-tether",
+  "where": "purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii-2] · Broad Spectrum Data-tether",
+  "verdict": "ok",
+  "why": "\"Each time you target this unit with a Stratagem\": stratagems are used in any phase of either turn. Equal to derive.js output."
+ },
+ {
+  "key": "label|ability-timing | purge-goes-the-foe · Skorpius Disintegrator · Broad spectrum data-tether",
+  "where": "purge-goes-the-foe · Skorpius Disintegrator · Broad spectrum data-tether",
+  "verdict": "ok",
+  "why": "\"Each time you target this unit with a Stratagem\": stratagems are used in any phase of either turn. Equal to derive.js output."
+ },
+ {
+  "key": "label|ability-timing | infernal-lance · Chaos Cerastus Knight Lancer · Shock Charge",
+  "where": "infernal-lance · Chaos Cerastus Knight Lancer · Shock Charge",
+  "verdict": "ok",
+  "why": "Crushing Impact’s WHEN is \"Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move\" (CORE_STRATAGEMS); charge, your turn. Equal to derive.js output."
+ },
+ {
+  "key": "label|ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers",
+  "where": "infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers",
+  "verdict": "ok",
+  "why": "Equal to derive.js output after 94608e8 (label-own-target of any attack: your Shooting phase and the Fight phase, no Fire Overwatch; reverting the rule makes the gate fail with 8 DRIFTs). Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls. Words: a WAR DOG attack (ranged or melee) that targets the closest eligible target gets +1 AP. Labelled like Brigand, the signed-off own-target convention. Note: the AP bonus would still apply to an Overwatch shot at the closest eligible target, so leaving Overwatch out is a labelling choice, not a rules limit (the rule’s own why says so)."
+ },
+ {
+  "key": "label|ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers",
+  "where": "infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers",
+  "verdict": "ok",
+  "why": "Equal to derive.js output after 94608e8 (label-own-target of any attack: your Shooting phase and the Fight phase, no Fire Overwatch; reverting the rule makes the gate fail with 8 DRIFTs). Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls. Words: a WAR DOG attack (ranged or melee) that targets the closest eligible target gets +1 AP. Labelled like Brigand, the signed-off own-target convention. Note: the AP bonus would still apply to an Overwatch shot at the closest eligible target, so leaving Overwatch out is a labelling choice, not a rules limit (the rule’s own why says so)."
+ },
+ {
+  "key": "label|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand",
+  "verdict": "ok",
+  "why": "\"makes a ranged attack that targets a unit that is within range of one or more objective markers\": your Shooting phase, no Overwatch (derive label-own-target, the signed-off convention). Equal to derive.js output."
+ },
+ {
+  "key": "label|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand] · Brigand",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand] · Brigand",
+  "verdict": "ok",
+  "why": "\"makes a ranged attack that targets a unit that is within range of one or more objective markers\": your Shooting phase, no Overwatch (derive label-own-target, the signed-off convention). Equal to derive.js output."
+ },
+ {
+  "key": "label|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand",
+  "verdict": "ok",
+  "why": "\"makes a ranged attack that targets a unit that is within range of one or more objective markers\": your Shooting phase, no Overwatch (derive label-own-target, the signed-off convention). Equal to derive.js output."
+ },
+ {
+  "key": "label|ability-timing | big-demons-baby · Angron · Wrathful Presence: pick one · The Blood God’s Favour",
+  "where": "big-demons-baby · Angron · Wrathful Presence: pick one · The Blood God’s Favour",
+  "verdict": "ok",
+  "why": "derive label-named-roll: a Blessings of Khorne roll is made at the start of the battle round (World Eaters army rule: \"at the start of the battle round, you can make a Blessings of Khorne roll\"); Start of the battle round, listed with the Command phase, either turn. Equal to derive.js output (gate derive: 0 written by hand; a changed or removed label fails, mutation-tested)."
+ },
+ {
+  "key": "label|ability-timing | shooty · Killa Kans · Spiteful Power Trip",
+  "where": "shooty · Killa Kans · Spiteful Power Trip",
+  "verdict": "ok",
+  "why": "Equal to derive.js output after 94608e8 (label-own-target of any attack: your Shooting phase and the Fight phase, no Fire Overwatch; reverting the rule makes the gate fail with 8 DRIFTs). Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls. This ability is only a Hit roll bonus, which does nothing in snap shooting, so leaving Fire Overwatch out is also exact per the rules."
+ },
+ {
+  "key": "label|ability-timing | pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "verdict": "ok",
+  "why": "Equal to derive.js output after 94608e8 (label-own-target of any attack: your Shooting phase and the Fight phase, no Fire Overwatch; reverting the rule makes the gate fail with 8 DRIFTs). Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls. Words: attacks that target a CHARACTER re-roll hit and wound rolls of 1 (PSYKER CHARACTER: full re-rolls). Labelled per the own-target convention. Note: the wound re-roll would still apply in snap shooting (only hit re-rolls are barred), so leaving Overwatch out is a labelling choice, not a rules limit."
+ },
+ {
+  "key": "label|ability-timing | defilers-and-friends · Defiler [defiler] · Revel in Desecration",
+  "where": "defilers-and-friends · Defiler [defiler] · Revel in Desecration",
+  "verdict": "ok",
+  "why": "Equal to derive.js output after 94608e8 (label-own-target of any attack: your Shooting phase and the Fight phase, no Fire Overwatch; reverting the rule makes the gate fail with 8 DRIFTs). Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls. This ability is only a Hit roll bonus, which does nothing in snap shooting, so leaving Fire Overwatch out is also exact per the rules."
+ },
+ {
+  "key": "label|ability-timing | defilers-and-friends · Defiler [defiler-2] · Revel in Desecration",
+  "where": "defilers-and-friends · Defiler [defiler-2] · Revel in Desecration",
+  "verdict": "ok",
+  "why": "Equal to derive.js output after 94608e8 (label-own-target of any attack: your Shooting phase and the Fight phase, no Fire Overwatch; reverting the rule makes the gate fail with 8 DRIFTs). Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls. This ability is only a Hit roll bonus, which does nothing in snap shooting, so leaving Fire Overwatch out is also exact per the rules."
+ },
+ {
+  "key": "label|ability-timing | mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "where": "mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "verdict": "ok",
+  "why": "Equal to derive.js output after 94608e8 (label-own-target of any attack: your Shooting phase and the Fight phase, no Fire Overwatch; reverting the rule makes the gate fail with 8 DRIFTs). Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls. Words: attacks that target a CHARACTER re-roll hit and wound rolls of 1 (PSYKER CHARACTER: full re-rolls). Labelled per the own-target convention. Note: the wound re-roll would still apply in snap shooting (only hit re-rolls are barred), so leaving Overwatch out is a labelling choice, not a rules limit."
+ },
+ {
+  "key": "label|ability-timing | fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering",
+  "verdict": "ok",
+  "why": "Equal to derive.js output after 94608e8 (label-own-target of any attack: your Shooting phase and the Fight phase, no Fire Overwatch; reverting the rule makes the gate fail with 8 DRIFTs). Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls. Words: +1 Hit vs a target below Starting Strength, and +1 Wound if it is Below Half-strength. Labelled per the own-target convention. Note: the +1 Wound would still apply in snap shooting, so leaving Overwatch out is a labelling choice, not a rules limit."
+ },
+ {
+  "key": "label-snap|ability-timing | pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: re-roll hit and wound rolls of 1 vs a CHARACTER (full re-rolls vs PSYKER CHARACTER): the wound re-roll still works in snap shooting, so their Movement (Overwatch) + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | 6-bigs · Knight Destrier · Saturation Fire",
+  "where": "6-bigs · Knight Destrier · Saturation Fire",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack that targets a unit within range of an objective marker has [IGNORES COVER], which still works in snap shooting: their Movement (Overwatch) + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | 6-bigs · Knight Paladin · Seasoned Noble",
+  "where": "6-bigs · Knight Paladin · Seasoned Noble",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack at the closest eligible target improves AP by 1, which works in snap shooting (Overwatch can target the closest eligible target): their Movement + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | 6-bigs · Knight Warden · Thin Their Ranks",
+  "where": "6-bigs · Knight Warden · Thin Their Ranks",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack vs a non-MONSTER/VEHICLE unit has [DEVASTATING WOUNDS] (critical wounds still occur in snap shooting): their Movement + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | 4-megas-and-a-destrier · Knight Destrier · Saturation Fire",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Saturation Fire",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack that targets a unit within range of an objective marker has [IGNORES COVER], which still works in snap shooting: their Movement (Overwatch) + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers",
+  "where": "infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a WAR DOG attack (ranged or melee) at the closest eligible target gets +1 AP, which works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers",
+  "where": "infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a WAR DOG attack (ranged or melee) at the closest eligible target gets +1 AP, which works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Brigand",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack at a unit within range of an objective marker has [IGNORES COVER], which works in snap shooting: their Movement + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand] · Brigand",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand] · Brigand",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack at a unit within range of an objective marker has [IGNORES COVER], which works in snap shooting: their Movement + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand",
+  "where": "woof-woof · War Dog Brigand [war-dog-brigand-2] · Brigand",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack at a unit within range of an objective marker has [IGNORES COVER], which works in snap shooting: their Movement + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "where": "mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: re-roll hit and wound rolls of 1 vs a CHARACTER (full re-rolls vs PSYKER CHARACTER): the wound re-roll still works in snap shooting, so their Movement (Overwatch) + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering",
+  "where": "fellhammer-siege-task-force · Dark Apostle · Nemesis Claw · Visions of Suffering",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: +1 Hit vs a target below Starting Strength (no use in snap shooting) and +1 Wound if Below Half-strength (works): their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | navigator-sounds-op-ngl · Knight Destrier · Saturation Fire",
+  "where": "navigator-sounds-op-ngl · Knight Destrier · Saturation Fire",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: a ranged attack that targets a unit within range of an objective marker has [IGNORES COVER], which still works in snap shooting: their Movement (Overwatch) + your Shooting."
+ },
+ {
+  "key": "label-snap|ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words (Bondsman): an affected model’s attacks vs a TITANIC or TOWERING model can re-roll the Hit and the Wound roll; the wound re-roll works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: +1 Hit vs MONSTER/VEHICLE and +1 Wound vs TITANIC/TOWERING; the wound bonus works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | defilers-and-friends · Lucius the Eternal · Lucius the Eternal · A Challenge Worthy of Skill",
+  "where": "defilers-and-friends · Lucius the Eternal · Lucius the Eternal · A Challenge Worthy of Skill",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: attacks vs a CHARACTER, MONSTER or WALKER can re-roll the Hit and the Wound roll; the wound re-roll works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | infernal-lance · Chaos Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "where": "infernal-lance · Chaos Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: +1 Hit vs MONSTER/VEHICLE and +1 Wound vs TITANIC/TOWERING; the wound bonus works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | lite-knights · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "where": "lite-knights · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: ranged attacks vs MONSTER/VEHICLE can re-roll one hit, one wound and one damage roll; wound and damage re-rolls work in snap shooting: their Movement + your Shooting (ranged only)."
+ },
+ {
+  "key": "label-snap|ability-timing | the-exiled-legion · Skulltaker · Skulltaker · Skulls for Khorne",
+  "where": "the-exiled-legion · Skulltaker · Skulltaker · Skulls for Khorne",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: attacks vs a CHARACTER can re-roll the Hit and the Wound roll; the wound re-roll works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | emperors-chosen · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "where": "emperors-chosen · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: ranged attacks vs MONSTER/VEHICLE can re-roll one hit, one wound and one damage roll; wound and damage re-rolls work in snap shooting: their Movement + your Shooting (ranged only)."
+ },
+ {
+  "key": "label-snap|ability-timing | dread-host · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "where": "dread-host · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: ranged attacks vs MONSTER/VEHICLE can re-roll one hit, one wound and one damage roll; wound and damage re-rolls work in snap shooting: their Movement + your Shooting (ranged only)."
+ },
+ {
+  "key": "label-snap|ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "where": "navigator-sounds-op-ngl · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words (Bondsman): an affected model’s attacks vs a TITANIC or TOWERING model can re-roll the Hit and the Wound roll; the wound re-roll works in snap shooting: their Movement + your Shooting + Fight."
+ },
+ {
+  "key": "label-snap|ability-timing | navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "where": "navigator-sounds-op-ngl · Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "verdict": "ok",
+  "why": "Equal to derive.js output (label-own-target-snap, a6a07ed/127c679; the gate fails with 23 DRIFTs if SNAP_WORKS never matches, and with hit-only places drifting if it matches hit rolls). The owner rule: show Fire Overwatch wherever the bonus still works. Core Rules 15.09 (snap shooting): one visible eligible enemy unit within 24\", hits only on an unmodified 6, no hit re-rolls; AP, wound rolls, damage and weapon abilities still work. Words: +1 Hit vs MONSTER/VEHICLE and +1 Wound vs TITANIC/TOWERING; the wound bonus works in snap shooting: their Movement + your Shooting + Fight."
+ }
+]

@@ -823,26 +823,6 @@
  },
  {
   "army": "lite-knights",
-  "unit": "trajann-valoris-allarus-custodians",
-  "field": "abilities[Slayers of Tyrants | Allarus Custodians]",
-  "app": null,
-  "source": "present",
-  "where": "verify/sources/nr/lite-knights.txt p2",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/lite-knights.txt line 60."
- },
- {
-  "army": "lite-knights",
-  "unit": "trajann-valoris-allarus-custodians",
-  "field": "abilities[Slayer of Tyrants | Allarus Custodians]",
-  "app": "present",
-  "source": null,
-  "where": "verify/sources/nr/lite-knights.txt p2",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/lite-knights.txt line 60."
- },
- {
-  "army": "lite-knights",
   "unit": "prosecutor-squad",
   "field": "abilities[Purity of Execution].text",
   "app": "In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That unit is detected: While a unit is detected, that unit has +3\" detection range.",
@@ -1153,34 +1133,12 @@
  {
   "army": "emperors-chosen",
   "unit": "trajann-valoris-allarus-custodians",
-  "field": "abilities[Slayers of Tyrants | Allarus Custodians]",
-  "app": null,
-  "source": "present",
-  "where": "verify/sources/nr/emperors-chosen.txt p2",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/emperors-chosen.txt line 64.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "emperors-chosen",
-  "unit": "trajann-valoris-allarus-custodians",
   "field": "abilities[Supreme Commander | Trajann Valoris]",
   "app": "present",
   "source": null,
   "where": "verify/sources/nr/emperors-chosen.txt p2",
   "reason": "GW's datasheet for Trajann Valoris has the SUPREME COMMANDER box (\"If this model is in your army, it must be your WARLORD.\"); New Recruit (BSData) does not print it. The owner: read GW's datasheet completely, header boxes included.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html: \"SUPREME COMMANDER | If this model is in your army, it must be your WARLORD.\" (after the melee weapons, before CORE ABILITIES); verify/sources/nr/emperors-chosen.txt lines 55, 60 (Trajann's abilities: no Supreme Commander).",
-  "by": "hand (Claude)"
- },
- {
-  "army": "emperors-chosen",
-  "unit": "trajann-valoris-allarus-custodians",
-  "field": "abilities[Slayer of Tyrants | Allarus Custodians]",
-  "app": "present",
-  "source": null,
-  "where": "verify/sources/nr/emperors-chosen.txt p2",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/emperors-chosen.txt line 64.",
   "by": "hand (Claude)"
  },
  {
@@ -1210,45 +1168,12 @@
  {
   "army": "emperors-chosen",
   "unit": "shield-captain-sentinel-guard-sodality",
-  "field": "abilities[Vengeful Surge | Shield-Captain].text",
-  "app": "(Once per battle, per unit) In your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\".",
-  "source": "(Once per battle, per unit) In your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\"",
-  "where": "verify/sources/nr/emperors-chosen.txt p3",
-  "reason": "Punctuation only: the new codex ends Vengeful Surge with a full stop (\"… up to D6+2\\\".\"); New Recruit (BSData) prints it without. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Vengeful Surge (Once per battle, per unit): … this unit can make a surge move of up to D6+2\\\".\"; verify/sources/nr/emperors-chosen.txt lines 104, 106.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "emperors-chosen",
-  "unit": "shield-captain-sentinel-guard-sodality",
-  "field": "abilities[Master of the Ka'tahs | Shield-Captain]",
-  "app": null,
-  "source": "present",
-  "where": "verify/sources/nr/emperors-chosen.txt p3",
-  "reason": "The new codex names the Shield-Captain's ability \"Master of Ka’tahs\"; New Recruit (BSData) prints \"Master of the Ka'tahs\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Master of Ka’tahs (Once per battle round, per unit): If this unit is not readied, you can use this ability. If you do, this unit is readied.\"; verify/sources/nr/emperors-chosen.txt line 107.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "emperors-chosen",
-  "unit": "shield-captain-sentinel-guard-sodality",
   "field": "abilities[Stand Vigil | Sentinel Guard Sodality].text",
   "app": "This unit's attacks have [LETHAL HITS: non-MONSTER/VEHICLE] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.",
   "source": "This unit's attacks have [**LETHAL HITS: non-MONSTER/VEHICLE] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.",
   "where": "verify/sources/nr/emperors-chosen.txt p3",
   "reason": "New Recruit (BSData) prints Stand Vigil with a stray \"**\" inside the weapon ability (\"[**LETHAL HITS\"); the app has the datasheet's words. Otherwise the same words.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Sentinel-Guard-Sodality.html, ABILITIES: \"Stand Vigil: This unit’s attacks have [Lethal Hits: non-Monster/Vehicle] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.\"; verify/sources/nr/emperors-chosen.txt line 112.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "emperors-chosen",
-  "unit": "shield-captain-sentinel-guard-sodality",
-  "field": "abilities[Master of Ka'tahs | Shield-Captain]",
-  "app": "present",
-  "source": null,
-  "where": "verify/sources/nr/emperors-chosen.txt p3",
-  "reason": "The new codex names the Shield-Captain's ability \"Master of Ka’tahs\"; New Recruit (BSData) prints \"Master of the Ka'tahs\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Master of Ka’tahs (Once per battle round, per unit): If this unit is not readied, you can use this ability. If you do, this unit is readied.\"; verify/sources/nr/emperors-chosen.txt line 107.",
   "by": "hand (Claude)"
  },
  {
@@ -1381,34 +1306,12 @@
  {
   "army": "dread-host",
   "unit": "trajann-valoris-allarus-custodians",
-  "field": "abilities[Slayers of Tyrants | Allarus Custodians]",
-  "app": null,
-  "source": "present",
-  "where": "verify/sources/nr/dread-host.txt p2",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/dread-host.txt line 65.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "trajann-valoris-allarus-custodians",
   "field": "abilities[Supreme Commander | Trajann Valoris]",
   "app": "present",
   "source": null,
   "where": "verify/sources/nr/dread-host.txt p2",
   "reason": "GW's datasheet for Trajann Valoris has the SUPREME COMMANDER box (\"If this model is in your army, it must be your WARLORD.\"); New Recruit (BSData) does not print it. The owner: read GW's datasheet completely, header boxes included.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html: \"SUPREME COMMANDER | If this model is in your army, it must be your WARLORD.\" (after the melee weapons, before CORE ABILITIES); verify/sources/nr/dread-host.txt lines 56, 61 (Trajann's abilities: no Supreme Commander).",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "trajann-valoris-allarus-custodians",
-  "field": "abilities[Slayer of Tyrants | Allarus Custodians]",
-  "app": "present",
-  "source": null,
-  "where": "verify/sources/nr/dread-host.txt p2",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/dread-host.txt line 65.",
   "by": "hand (Claude)"
  },
  {
@@ -1438,45 +1341,12 @@
  {
   "army": "dread-host",
   "unit": "shield-captain-sentinel-guard-sodality",
-  "field": "abilities[Vengeful Surge | Shield-Captain].text",
-  "app": "(Once per battle, per unit) In your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\".",
-  "source": "(Once per battle, per unit) In your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\"",
-  "where": "verify/sources/nr/dread-host.txt p3",
-  "reason": "Punctuation only: the new codex ends Vengeful Surge with a full stop (\"… up to D6+2\\\".\"); New Recruit (BSData) prints it without. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Vengeful Surge (Once per battle, per unit): … this unit can make a surge move of up to D6+2\\\".\"; verify/sources/nr/dread-host.txt lines 105, 107.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "shield-captain-sentinel-guard-sodality",
-  "field": "abilities[Master of the Ka'tahs | Shield-Captain]",
-  "app": null,
-  "source": "present",
-  "where": "verify/sources/nr/dread-host.txt p3",
-  "reason": "The new codex names the Shield-Captain's ability \"Master of Ka’tahs\"; New Recruit (BSData) prints \"Master of the Ka'tahs\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Master of Ka’tahs (Once per battle round, per unit): If this unit is not readied, you can use this ability. If you do, this unit is readied.\"; verify/sources/nr/dread-host.txt line 108.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "shield-captain-sentinel-guard-sodality",
   "field": "abilities[Stand Vigil | Sentinel Guard Sodality].text",
   "app": "This unit's attacks have [LETHAL HITS: non-MONSTER/VEHICLE] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.",
   "source": "This unit's attacks have [**LETHAL HITS: non-MONSTER/VEHICLE] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.",
   "where": "verify/sources/nr/dread-host.txt p3",
   "reason": "New Recruit (BSData) prints Stand Vigil with a stray \"**\" inside the weapon ability (\"[**LETHAL HITS\"); the app has the datasheet's words. Otherwise the same words.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Sentinel-Guard-Sodality.html, ABILITIES: \"Stand Vigil: This unit’s attacks have [Lethal Hits: non-Monster/Vehicle] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.\"; verify/sources/nr/dread-host.txt line 113.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "shield-captain-sentinel-guard-sodality",
-  "field": "abilities[Master of Ka'tahs | Shield-Captain]",
-  "app": "present",
-  "source": null,
-  "where": "verify/sources/nr/dread-host.txt p3",
-  "reason": "The new codex names the Shield-Captain's ability \"Master of Ka’tahs\"; New Recruit (BSData) prints \"Master of the Ka'tahs\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain.html, ABILITIES: \"Master of Ka’tahs (Once per battle round, per unit): If this unit is not readied, you can use this ability. If you do, this unit is readied.\"; verify/sources/nr/dread-host.txt line 108.",
   "by": "hand (Claude)"
  },
  {
@@ -1488,28 +1358,6 @@
   "where": "verify/sources/nr/dread-host.txt p4",
   "reason": "New Recruit (BSData) prints Impenetrable Defence with a stray \"**\" inside the weapon ability (\"[**SUSTAINED HITS 1\"); the app has the datasheet's words. Otherwise the same words.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Custodian-Guard-Sodality.html, ABILITIES: \"Impenetrable Defence: This unit’s attacks have [sustained Hits 1: non-Monster/Vehicle] if any of the following apply: This unit is within range of an objective. The target of those attacks is within range of an objective.\"; verify/sources/nr/dread-host.txt line 113.",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "allarus-custodians",
-  "field": "abilities[Slayers of Tyrants]",
-  "app": null,
-  "source": "present",
-  "where": "verify/sources/nr/dread-host.txt p5",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/dread-host.txt line 65 (and the second Allarus Custodians unit, line 66).",
-  "by": "hand (Claude)"
- },
- {
-  "army": "dread-host",
-  "unit": "allarus-custodians",
-  "field": "abilities[Slayer of Tyrants]",
-  "app": "present",
-  "source": null,
-  "where": "verify/sources/nr/dread-host.txt p5",
-  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
-  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/dread-host.txt line 65 (and the second Allarus Custodians unit, line 66).",
   "by": "hand (Claude)"
  },
  {

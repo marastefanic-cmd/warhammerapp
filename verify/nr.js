@@ -33,6 +33,7 @@ const NORMALISATION = [
   'Stat rows: " - <unit>" suffix dropped (stat rows are matched by model name); "(xN)" is the app\'s "×N"; a parenthesis naming what is already applied must be one of the names in that row\'s `from` marks; Base compared as printed.',
   'Models: "Nx Name" is the app\'s "N× Name", compared as an ordered list. Options per model line: "Warlord" is warlord:true, "• Leading: X[n]" is leads X, an item that is one of the faction\'s enhancements is the enhancement; an NR option "Group (a, b)" counts as its weapons a and b and "2x Weapon" as Weapon; the remaining items that are weapons printed in the unit\'s weapon tables are that line\'s gear, compared as a set; an item that is not a printed weapon (wargear, e.g. Icon of Khorne) must be on the app\'s model line as "N× Name (Item)".',
   'Abilities: matched by name and who (" - <unit>" suffix). NR "Name (Tag)" is the app\'s name + tag. The app may add a tag part NR does not print only when it is "Enhancement" on the unit\'s enhancement, the second header of the NR table the ability sits in (e.g. "Capacity"), the first header of a sub-table (e.g. "Crimson King") or words printed in the ability\'s own NR text (e.g. "Once per battle"); the app\'s who may name a sub-table ("Crimson King: pick one").',
+  'GW\'s words over New Recruit\'s (verify/words.js, a mechanical rule): an ability whose words pass verify/words.js (its Wahapedia datasheet page\'s after markup normalisation, or GW\'s own document\'s as verify/deviations-words.json declares) may be printed otherwise by New Recruit, and New Recruit\'s name of it may be one its page spells as GW does (Berserker Frenzy for GW\'s Berzerker Frenzy): listed in the report (gwWords) when no deviation declares it, not failed.',
   'Categories (kw) compared as a set; NR\'s "*from combined unit" marks must each be named in the app\'s kwNote. Rules line compared as a set (duplicates dropped); an NR rule that is a weapon ability counts as present when one of the unit\'s weapons has that keyword in the app.',
   'Army: the page-1 bullets Battle Size, Detachment and Force Disposition are the app\'s battleSize and points, detachments and disposition; every other "Label: value" bullet is the app\'s config, label and value as printed (a bullet with no value, e.g. "Blessings of Khorne Reference", is not a selection).',
   'Points: header points are the app\'s pts; for an attached unit the roster lines (leader + bodyguard) must be the app\'s ptsNote "L + Bodyguard B". Copies: the "xN" in the unit header and the number of identical roster lines are the app\'s copies.'
@@ -666,6 +667,15 @@ const nrDetachments = s => splitItems(s || '').map(x => nm(x.replace(/\s*\[\d+\s
 // weapon keyword -> the rule it opens ("RAPID FIRE 2" -> rapid fire, "ANTI-VEHICLE 4+" -> anti)
 const kwRule = k => lc(k).replace(/:.*$/, '').replace(/^anti-.*$/, 'anti').replace(/\s+(\d+|d\d+(\+\d+)?|\d*d\d+(\+\d+)?)\+?$/, '').trim();
 
+// ---------------------------------------------------------------- GW's words over New Recruit's (verify/words.js)
+// a mechanical rule, no per-item deviation: an app ability whose words pass verify/words.js (its Wahapedia datasheet page's after markup
+// normalisation, or GW's own document's as verify/deviations-words.json declares) wins over New Recruit's printing of it; its name in
+// GW's spelling (verify/gw-order.js gwName) is New Recruit's name
+let GWO_ = null; const GWO = () => GWO_ || (GWO_ = require('./gw-order')(ROOT));
+const gwPasses = (fac, au, ab) => GWO().wordsPass(fac, au, ab);
+const gwSpelt = (fac, au, ab, nrName) => GWO().pageSpells(fac, au, ab, nrName);
+const pageWins = [];   // { army, unit, ability, what: 'text' | 'name', app, nr }: written to the report (gwWords)
+
 // ---------------------------------------------------------------- per army
 function compareArmy(D, A, nr, out, srcFile) {
   const F = D.factions[A.faction];
@@ -775,7 +785,7 @@ function compareArmy(D, A, nr, out, srcFile) {
   // New Recruit names a detachment rule's effect by the rule ("(Dakka! Dakka! Dakka!)") or by the detachment ("(War Horde)")
   // (each of its rules: rule, then moreRules)
   const detRules = new Map(A.detachments.map(id => F.detachments[id]).filter(d => d && d.rule).map(d => [lc(nm(d.name)), detRules_(d).map(r => lc(nm(r.name)))]));
-  for (const [nu, au] of pairs) compareUnit(nu, au, enhNames, { armyRuleNames, detRules, fail: (f, a, s) => fail(au.id, f, a, s, nu.page), chk, cmp: (c, f, a, s) => cmp(c, au.id, f, a, s, nu.page) });
+  for (const [nu, au] of pairs) compareUnit(nu, au, enhNames, { faction: A.faction, army: A.id, markGw: name => { out.failures[out.failures.length - 1].gw = name; }, armyRuleNames, detRules, fail: (f, a, s) => fail(au.id, f, a, s, nu.page), chk, cmp: (c, f, a, s) => cmp(c, au.id, f, a, s, nu.page) });
 
   // glossary: every rule New Recruit prints at the end opens something in the app
   for (const g of nr.glossary) { chk('glossary'); if (!ruleKnown(D, A, g)) fail(null, 'glossary rule', null, g, nr.pageCount); }
@@ -794,7 +804,7 @@ function ruleKnown(D, A, label) {
 }
 
 // ---------------------------------------------------------------- per unit
-function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set(), detRules = new Map() }) {
+function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set(), detRules = new Map(), faction, army, markGw }) {
   cmp('pts', 'pts', au.pts, nu.pts);
   cmp('copies', 'copies', au.copies || 1, nu.copies);
 
@@ -913,6 +923,10 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
     let cands = appA.filter(x => !used.has(x) && (x.name === na.full || x.name === na.base || (sub && x.name === nm(na.table))));
     const whoOk = x => x.who === na.who || (sub && x.who && x.who.startsWith(nm(na.table)));
     cands = cands.filter(whoOk);
+    // (GW's spelling of the name, verify/words.js: the app ability whose datasheet page names New Recruit's name otherwise, Berzerker Frenzy
+    // for Berserker Frenzy)
+    if (!cands.length) cands = appA.filter(x => !used.has(x) && whoOk(x) && gwSpelt(faction, au, x.x, na.base));
+    if (cands.length && cands[0].name !== na.full && cands[0].name !== na.base && !(sub && cands[0].name === nm(na.table))) pageWins.push({ army, unit: au.id, ability: cands[0].x.name, nr: na.base, what: 'name' });
     const key = na.full + (na.who ? ' | ' + na.who : '');
     nrKeys.push(key);
     chk('abilities');
@@ -928,7 +942,10 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
     const nrParen = parenInName ? null : na.paren;
     cmp('abilities', 'abilities[' + key + '].tag', appParen, nrParen);
     chk('abilities');
-    if (!textEq(ax.x.text, na.text)) fail('abilities[' + key + '].text', appText(ax.x.text).s, nm(na.text));
+    // (GW's words over New Recruit's: where verify/words.js passes, the app's text is its datasheet page's, or GW's own document's as
+    // verify/deviations-words.json declares it; New Recruit's printing of other words, when no deviation declares it, is then listed in
+    // the report, not failed: gw, below)
+    if (!textEq(ax.x.text, na.text)) { fail('abilities[' + key + '].text', appText(ax.x.text).s, nm(na.text)); if (markGw && gwPasses(faction, au, ax.x)) markGw(ax.x.name); }
   }
   for (const ax of appA.filter(x => !used.has(x))) { chk('abilities'); fail('abilities[' + ax.name + (ax.who ? ' | ' + ax.who : '') + ']', 'present', null); }
 
@@ -1034,11 +1051,14 @@ function main(args) {
     else if (!usedDev.has(i)) out.failures.push({ army: d.army, unit: d.unit, field: d.field, app: d.app, source: d.source, where: path.relative(ROOT, args.deviations) + ' #' + i + ': stale (nothing matches it)' });
   });
   out.deviations = usedDev.size;
+  // GW's words over New Recruit's (gwPasses): a text difference no deviation declares, where the app's words pass verify/words.js
+  out.failures = out.failures.filter(f => { if (!f.gw) return true; pageWins.push({ army: f.army, unit: f.unit, ability: f.gw, what: 'text', app: f.app, nr: f.source }); return false; });
+  out.gwWords = pageWins;
   fs.mkdirSync(path.dirname(args.out), { recursive: true });
   fs.writeFileSync(args.out, JSON.stringify(out, null, 1) + '\n');
   const total = Object.values(out.checked).reduce((x, y) => x + y, 0);
   // summary first: verify/run.js reports the first line
-  console.log('nr: ' + out.failures.length + ' failure(s); ' + total + ' facts checked (' + Object.entries(out.checked).map(([k, v]) => k + ' ' + v).join(', ') + '); ' + out.deviations + ' declared deviations used. Report: ' + path.relative(ROOT, args.out));
+  console.log('nr: ' + out.failures.length + ' failure(s); ' + total + ' facts checked (' + Object.entries(out.checked).map(([k, v]) => k + ' ' + v).join(', ') + '); ' + out.deviations + ' declared deviations used; ' + pageWins.length + ' names and texts GW\'s datasheet page words otherwise (verify/words.js passes: GW\'s words win) Report: ' + path.relative(ROOT, args.out));
   if (!args.quiet) {
     for (const f of out.failures) console.log('FAIL', f.army, '|', f.unit, '|', f.field, '\n   app:    ' + JSON.stringify(f.app) + '\n   source: ' + JSON.stringify(f.source) + '\n   where:  ' + f.where);
   }

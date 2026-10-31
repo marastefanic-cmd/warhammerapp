@@ -10,7 +10,9 @@
      wording            each ability's text with its markup (bold keywords, bullets, italics) from
                         the cached Wahapedia datasheet, found by its words, which must equal New
                         Recruit's; an enhancement's from data.js; else New Recruit's plain words,
-                        listed as such
+                        listed as such; then GW's words over New Recruit's (verify/gw-order.js
+                        gwWordsOf: the page's text and GW's spelling of the name, as verify/tables.js
+                        --write writes them; verify/words.js checks them)
      exceptions         verify/deviations-nr.json entries for this army (e.g. a base size GW's guide
                         changed) are applied
    and lists what it cannot know (verify/out/import-<army>.md): phase tags, weapon footnotes and
@@ -78,6 +80,7 @@ const detIds = nrDetachments(nr.bullets['Detachment']).map(n => {
 if (F) for (const id of detIds) for (const s of ((F.detachments[id] || {}).stratagems || [])) if (!s.gist) note(null, 'stratagem ' + s.name + ' has no gist');
 
 // ---------------------------------------------------------------- the Wahapedia datasheet, as marked-up text
+let GWO_ = null; const GWO = () => GWO_ || (GWO_ = require('./gw-order')(ROOT));
 const wahaPage = (n, fac) => ww().wahaPage(n, fac);
 const wording = (text, pages) => ww().wording(text, pages);
 // ---------------------------------------------------------------- units
@@ -220,6 +223,10 @@ for (const nu of nrUnits) {
     if (!w && e) w = wording(r.text, pages);
     if (!w) { w = { text: typo(nm(r.text)), from: 'New Recruit' }; o._plain = true; }
     o.text = w.text;
+    // GW's words (verify/gw-order.js gwWordsOf): the datasheet page's text and GW's spelling of the name, as verify/tables.js --write writes
+    // them (a declared GW document's words, verify/deviations-words.json, kept), so a re-import gives the same data.js and keeps the
+    // hand-written parts of an ability whose words are unchanged
+    if (pageFac && !e) { const g = GWO().gwWordsOf(pageFac, { name }, o); if (g) { if (g.text !== o.text) { o.text = g.text; delete o._plain; } o.name = g.name; } }
     abilities.push(o);
   }
   if (upgrade) enhancement = enhancement && nm(enhancement) === nm(upgrade) ? null : enhancement;
