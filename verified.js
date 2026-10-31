@@ -1,21 +1,21 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "9e7440252d",
- "data": "2026-10-31.1",
+ "build": "1754526dd8",
+ "data": "2026-10-31.2",
  "date": "31 Oct 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
-   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (11234 facts)."
+   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (11235 facts)."
   },
   {
    "label": "BSData,",
-   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (16369 facts)."
+   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (16407 facts)."
   },
   {
    "label": "Granted values:",
-   "detail": "every keyword or value marked + is one a rule of your list changes in BSData, named as that rule, and matches the rules New Recruit prints beside the weapon (248 values)."
+   "detail": "every keyword or value marked + is one a rule of your list changes in BSData, named as that rule, and matches the rules New Recruit prints beside the weapon (250 values)."
   },
   {
    "label": "Games Workshop’s rules text:",
@@ -27,11 +27,11 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "1616 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "1623 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "3176 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "3187 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
