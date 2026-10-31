@@ -1012,7 +1012,8 @@ function explain(input, orderIdx){
       if(pl.sgt) parts.push(sgn(-pl.sgt) + ' to wound (' + (tsrc.woundMinusSgt || 'the target') + ': S' + G.S + ' greater than T' + T + ')');
       if(wMod){ const n2 = Math.max(2, need - wMod); parts.push(n2 > 6 ? 'only a critical wound wounds' : 'wounds on an unmodified ' + n2 + '+ (an unmodified 1 always fails)'); }
       if(G.critWound < 6) parts.push('critical wounds on ' + G.critWound + '+ (' + G.critWoundSrc + ')');
-      if(G.critWoundAll) parts.push('a successful unmodified wound roll is a critical wound (' + G.critWoundAllSrc + ')');
+      // (the need on the unmodified roll, so a -1 to wound does not read as if the unmodified need fails)
+      if(G.critWoundAll) parts.push('critical wounds on an unmodified ' + need + '+ (' + G.critWoundAllSrc + ')');
       if(G.rrWound === 'all') parts.push('re-roll failed wound rolls (' + G.rrWoundSrc + ')' + (pl.fishW ? ', and wounds that are not critical, looking for a critical wound (worth more here)' : ''));
       else if(G.rrWound === '1s') parts.push('re-roll wound rolls of 1 (' + G.rrWoundSrc + ')');
       let w = 'Wound roll: ' + parts.join('; ') + ' · ' + fx(toWound) + (auto ? ' rolled' : '') + ' × ' + frac(wr, 1) + ' = ' + fx(toWound * (wr.p[1] + wr.p[2]));
