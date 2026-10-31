@@ -11,8 +11,8 @@
 //   { page, ability, app, waha, reason, evidence, gw?: { file, quote }, status? }
 //   page: the Wahapedia page file ('(no page)' for a datasheet with none); app / waha: the two texts (compared normalised: a changed text on
 //   either side unmatches it); waha '(none)' for an ability the page does not print; Leader: app the app's line, waha the page's units
-//   joined with ', '. gw: GW's own document the app follows over the page (a Faction Pack's rewrite, an FAQ): its quote must be in
-//   verify/.cache/gw/<file>. reason and evidence are required; a declaration nothing matches fails (stale); status 'pending' is listed on
+//   joined with ', '. gw: GW's own document the app follows over the page (a Faction Pack's rewrite, an FAQ), required on every
+//   declaration but an ability no page prints: its quote must be in verify/.cache/gw/<file> once (or in gw.lines [from, to] of it). reason and evidence are required; a declaration nothing matches fails (stale); status 'pending' is listed on
 //   every run, not passed in silence.
 // verify/tables.js --write writes every text and name so (gw-order.js gwWords); this step checks what data.js holds.
 //   node verify/words.js      writes verify/out/words.json
@@ -59,7 +59,17 @@ const gwText = new Map(), gwOf = f => { if(!gwText.has(f)) gwText.set(f, fs.exis
 DEVS.forEach((d, i) => {
   const tag = 'verify/deviations-words.json #' + i + ' (' + d.page + ' · ' + d.ability + ')';
   if(!d.reason || !d.evidence) fails.push({ page:d.page, ability:d.ability, why:tag + ': no reason or evidence' });
-  if(d.gw){ const t = gwOf(d.gw.file); if(t === null || !t.includes(sp(d.gw.quote))) fails.push({ page:d.page, ability:d.ability, why:tag + ': its GW quote is not in verify/.cache/gw/' + d.gw.file }); }
+  // (a declared difference from the page is GW's own document's words: every one but an ability no page prints carries its quote)
+  if(d.waha !== '(none)' && !d.gw) fails.push({ page:d.page, ability:d.ability, why:tag + ': a difference from the page needs gw: { file, quote } (GW\'s document the app follows)' });
+  if(d.gw){
+    const t = gwOf(d.gw.file), q = sp(d.gw.quote), n = t === null || !q.trim() ? 0 : t.split(q).length - 1;
+    if(!n) fails.push({ page:d.page, ability:d.ability, why:tag + ': its GW quote is not in verify/.cache/gw/' + d.gw.file });
+    // (a quote that is in its document more than once does not say where GW prints the ability: lines [from, to] pin it, and the quote
+    // must be in those lines)
+    else if(d.gw.lines){ const [a, b] = d.gw.lines, L = fs.readFileSync(path.join(GW, d.gw.file), 'utf8').split('\n').slice(a - 1, b).join('\n');
+      if(!(a >= 1 && b >= a) || !sp(L).includes(q)) fails.push({ page:d.page, ability:d.ability, why:tag + ': its GW quote is not in lines ' + a + '-' + b + ' of verify/.cache/gw/' + d.gw.file }); }
+    else if(n > 1) fails.push({ page:d.page, ability:d.ability, why:tag + ': its GW quote is in verify/.cache/gw/' + d.gw.file + ' ' + n + ' times: quote words only the ability\'s place has, or pin it with gw.lines [from, to]' });
+  }
   if(!used.has(i)) fails.push({ stale:true, page:d.page, ability:d.ability, why:tag + ': nothing matches it' });
 });
 writeJSON(path.join(ROOT, 'verify/out/words.json'), { counts, sheets, units, declared:used.size, pending, fails });

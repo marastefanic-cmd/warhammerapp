@@ -122,10 +122,14 @@
   "app": "This model can be attached to the following units: BEASTS OF NURGLE",
   "waha": "BEASTS OF NURGLE, PLAGUE TOADS, POX RIDERS",
   "reason": "GW Faction Pack Chaos Daemons 1.2 prints Horticulous Slimux's LEADER box: \"This model can be attached to the following unit: ■ Beasts of Nurgle\"; Wahapedia also lists Plague Toads and Pox Riders (verify/texts.js packDatasheet checks the pack). GW's document over the page.",
-  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 2125-2127 (Horticulous Slimux, LEADER): \"This model can be attached to the following unit: ■ Beasts of Nurgle\"; verify/.cache/waha/ds/chaos-daemons_Horticulous-Slimux.html: LEADER Beasts of Nurgle, Plague Toads, Pox Riders",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 2129-2130 (Horticulous Slimux, LEADER): \"This model can be attached to the following unit: ■ Beasts of Nurgle\"; verify/.cache/waha/ds/chaos-daemons_Horticulous-Slimux.html: LEADER Beasts of Nurgle, Plague Toads, Pox Riders",
   "gw": {
    "file": "eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt",
-   "quote": "This model can be attached to the following unit:"
+   "quote": "This model can be attached to the following unit: ■ Beasts of Nurgle",
+   "lines": [
+    2129,
+    2130
+   ]
   }
  },
  {
@@ -146,10 +150,14 @@
   "app": "In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**.",
   "waha": "In your shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**.",
   "reason": "GW Faction Pack Chaos Space Marines, Rules Updates, Obliterators: \"In your Shooting phase, when this unit …\" (\"Shooting\" capitalised, the phase's name); Wahapedia \"shooting\". The hand file fellhammer-siege-task-force.json texts puts the pack's words in (verify/texts.js packUpdate checks them).",
-  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_space_marines-xlmrglqa2b-zd2fzntrqu.txt line 115 (Rules Updates, Obliterators, Warp Rift Firepower): \"In your Shooting phase, when this unit\"; verify/.cache/waha/ds/chaos-space-marines_Obliterators.html: \"In your shooting phase\"",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_space_marines-xlmrglqa2b-zd2fzntrqu.txt lines 1631-1635 (Rules Updates, Obliterators, Warp Rift Firepower Ability, Change to): \"Warp Rift Firepower (Once per battle, per unit): In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have [INDIRECT FIRE].\"; verify/.cache/waha/ds/chaos-space-marines_Obliterators.html: \"In your shooting phase\"",
   "gw": {
    "file": "eng_30-09_wh40k_faction_pack_chaos_space_marines-xlmrglqa2b-zd2fzntrqu.txt",
-   "quote": "In your Shooting phase, when this unit"
+   "quote": "Warp Rift Firepower (Once per battle, per unit): In your Shooting phase, when this unit is selected to shoot",
+   "lines": [
+    1631,
+    1635
+   ]
   }
  },
  {
