@@ -4700,7 +4700,8 @@ function unitWeapons(u){
       '<div class="mods' + (label ? ' all' : '') + '">' + (label ? '<span class="il">' + label + '</span>' : '') + modLines(wide, u, hasHunter) + '</div>' : '') +
       (own.length ? '<div class="mods">' + modLines(own, u, hasHunter) + '</div>' : ''); };
   const byWhen = new Map();
-  for(const x of notes){ const k = norm(x.when); byWhen.set(k, (byWhen.get(k) || []).concat(x)); }
+  // (a footnote with no condition said is a group of its own: its box is its kind's)
+  for(const x of notes){ const k = x.when ? norm(x.when) : '\0' + byWhen.size; byWhen.set(k, (byWhen.get(k) || []).concat(x)); }
   const only = sc => [...byWhen.values()].filter(g => g.every(x => x.scope === sc)).flat().map(x => Object.assign({}, x, { scope:'' }));
   const rest = [...byWhen.values()].filter(g => !g.every(x => x.scope && x.scope === g[0].scope)).flat();
   // footnotes for ranged and melee attacks alike go first, so neither phase's reader skips them
