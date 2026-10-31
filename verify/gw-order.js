@@ -23,8 +23,9 @@ const ENT = { amp:'&', lt:'<', gt:'>', quot:'"', apos:'’', nbsp:' ', rsquo:'�
 const dec = s => s.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e) => e[0] === '#' ? String.fromCodePoint(e[1].toLowerCase() === 'x' ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10)) : (ENT[e.toLowerCase()] ?? m));
 const txt = h => dec(String(h).replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
 // markup normalisation, for comparing an app text with the page's (verify/words.js): bold and other markers (** ~~ ^^, a star not after a
-// number or +), "- " bullets, an *italic* line, line breaks, curly vs straight quotes, odd spaces, whitespace, a space before punctuation
-const qn = s => String(s).replace(/[‘’‚‛′`´]/g, "'").replace(/[“”„″]/g, '"').replace(/[  -  ]/g, ' ');
+// number or +), "- " bullets, an *italic* line, line breaks, curly vs straight quotes, a typographic hyphen
+// (U+2010, U+2011: "1‑9", "Re‐roll") as "-", odd spaces, whitespace, a space before punctuation
+const qn = s => String(s).replace(/[\u2018\u2019\u201a\u201b\u2032`\u00b4]/g, "'").replace(/[\u201c\u201d\u201e\u2033]/g, '"').replace(/[\u2010\u2011]/g, '-').replace(/[\u00a0\u2000-\u200a\u202f]/g, ' ');
 const norm = t => qn(String(t || '').split('\n').map(l => { l = l.replace(/\*\*|~~|\^\^/g, '').replace(/(^|[^0-9+])\*+/g, '$1').replace(/^\s*-\s+/, ''); const m = /^\s*\*([^*].*[^*])\*\s*$/.exec(l); return m ? m[1] : l; }).join(' ')).replace(/\s+/g, ' ').replace(/ ([.,;:])/g, '$1').trim();
 const lcq = s => qn(s).toLowerCase().replace(/\s+/g, ' ').trim();
 // a keyword's name without its value ("SUSTAINED HITS 1", "ANTI-INFANTRY 4+", "LETHAL HITS: non-MONSTER/VEHICLE": sustainedhits, antiinfantry, lethalhits)
@@ -37,11 +38,9 @@ function cutDatasheet(html) {
   const end = html.indexOf('>STRATAGEMS<', at);
   return html.slice(Math.max(0, html.lastIndexOf('<div', at)), end > 0 ? end : undefined);
 }
-// a page's datasheet as the page reader reads it: its tokens (verify/waha-words.js wahaTokens, a typographic hyphen U+2010 / U+2011 as
-// "-", as GW's documents print it), their plain text
+// a page's datasheet as the page reader reads it: its tokens (verify/waha-words.js wahaTokens), their plain text
 function readTokens(html, W) {
-  const tokens = W.wahaTokens(cutDatasheet(html.replace(/<!--[\s\S]*?-->/g, '').replace(/<(script|style|noscript)\b[\s\S]*?<\/\1>/gi, '')))
-    .map(t => t.t !== undefined && /[\u2010\u2011]/.test(t.t) ? Object.assign({}, t, { t:t.t.replace(/[\u2010\u2011]/g, '-') }) : t);
+  const tokens = W.wahaTokens(cutDatasheet(html.replace(/<!--[\s\S]*?-->/g, '').replace(/<(script|style|noscript)\b[\s\S]*?<\/\1>/gi, '')));
   return { tokens, P:W.plainOf(tokens) };
 }
 
@@ -264,8 +263,51 @@ module.exports = function make(ROOT) {
   // that line
   const leaderList = t => { const m = /attached to the following units?:\s*([\s\S]+)$/i.exec(String(t).replace(/\*\*/g, '')); return m ? m[1].split(/\s*,\s*|\n/).map(x => lcq(x.replace(/^[-■]\s*/, '').replace(/\.$/, ''))).filter(Boolean).sort() : null; };
   // GW's name for an app ability the page spells otherwise (Berzerker Frenzy for New Recruit's Berserker Frenzy): the page's, when the page
-  // ability is found by a spelling of the name (how 'loose'), is no box, and its name is a plain name (no tag run into it); else null
-  const gwName = (ab, pa) => pa && pa.kind === 'text' && pa.g.how === 'loose' && !pa.g.box && !pa.g.group && !/[()[\]]/.test(pa.g.name) && !/^damaged/i.test(ab.name) && lcq(pa.g.name) !== lcq(ab.name) ? pa.g.name : null;
+  // ability is found by a spelling of the name (how 'loose'), is no box, and its name is a plain name (no tag run into it, no "Abilities"
+// heading: Wahapedia's "Shadow Form Abilities" for GW's Shadow Form); else null
+  const gwName = (ab, pa) => pa && pa.kind === 'text' && pa.g.how === 'loose' && !pa.g.box && !pa.g.group && !/[()[\]]/.test(pa.g.name) && !/ abilities$/i.test(pa.g.name) && !/^damaged/i.test(ab.name) && lcq(pa.g.name) !== lcq(ab.name) ? pa.g.name : null;
+
+  // GW's own words over the page's, as declared: verify/deviations-words.json ({ page, ability, app, waha, reason, evidence, gw? }: the app
+  // text app where the page prints waha, both compared normalised), and a hand file's texts ({ from, to }: verify/sources/hand/*.json
+  // units.<id>.texts.<ability>, a catalogue's texts.<datasheet>.<ability>), GW's Faction Pack words put into the page's
+  const DEVW = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-words.json'), 'utf8')); } catch (e) { return []; } })();
+  const HANDT = (() => { const out = []; const dir = path.join(ROOT, 'verify/sources/hand');
+    try { for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()) { const h = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+      for (const [id, u] of Object.entries(h.units || {})) for (const [ab, fx] of Object.entries(u.texts || {})) out.push({ file:f, at:id, ability:ab, from:fx.from, to:fx.to });
+      for (const [id, by] of Object.entries(h.texts || {})) for (const [ab, fx] of Object.entries(by || {})) out.push({ file:f, at:id, ability:ab, from:fx.from, to:fx.to }); } } catch (e) {}
+    return out; })();
+  const declaredWords = (file, names, app, waha) => DEVW.findIndex(d => d.page === file && names.includes(d.ability) && norm(d.app) === norm(app) && norm(d.waha) === norm(waha));
+  const handWords = (names, app, waha) => HANDT.find(h => names.includes(h.ability) && h.from && String(waha).split(h.from).length === 2 && norm(String(waha).replace(h.from, h.to)) === norm(app));
+  // an ability's words as GW gives them (verify/tables.js --write writes them; verify/words.js checks them): { page, pa, text, name,
+  // declared, hand } or null (no page, no ability of it on the page, a Leader / Support line: its units are compared, not its words; the
+  // list's own: an enhancement's, an upgrade's; an invulnerable save, which is a box)
+  //   text  the page's, unless the app's equals it after markup normalisation (kept as it is), or a declaration or a hand file's texts
+  //         gives the app's (kept)
+  //   name  GW's spelling of the name where the page spells it otherwise (gwName), else the app's
+  function gwWordsOf(faction, u, ab) {
+    if (/\b(Enhancement|Upgrade)\b/.test(ab.tag || '') || /^\*?invulnerable save\b/i.test(ab.name)) return null;
+    const P = abilityPage(faction, u, ab); if (!P) return null;
+    const pa = pageAbility(P, ab); if (!pa || pa.kind !== 'text') return null;
+    const waha = pa.g.text, name = gwName(ab, pa) || ab.name, names = [ab.name, name];
+    if (norm(ab.text) === norm(waha)) return { page:P.file, pa, text:ab.text, name, same:true };
+    const d = declaredWords(P.file, names, ab.text, waha); if (d >= 0) return { page:P.file, pa, text:ab.text, name, declared:d };
+    const h = handWords(names, ab.text, waha); if (h) return { page:P.file, pa, text:ab.text, name, hand:h };
+    return { page:P.file, pa, text:waha, name, was:ab.text };
+  }
+  // a unit's abilities (the old form, resolved) in GW's words, in place: each text and name as gwWordsOf gives it; a reading of the unit
+  // (mods, aura, guard) that names a renamed ability by its old name (from, rule, or a name in the list) names it by GW's. The changes
+  function gwWords(faction, u) {
+    const out = [];
+    for (const ab of u.abilities || []) {
+      const w = gwWordsOf(faction, u, ab); if (!w) continue;
+      if (w.text !== ab.text) { out.push({ ability:ab.name, who:ab.who || null, page:w.page, from:ab.text, to:w.text }); ab.text = w.text; }
+      if (w.name !== ab.name) {
+        const old = ab.name; out.push({ ability:old, who:ab.who || null, page:w.page, name:w.name }); ab.name = w.name;
+        for (const k of ['mods', 'aura', 'guard']) if (Array.isArray(u[k])) u[k] = u[k].map(m => typeof m === 'string' ? (m === old ? w.name : m) : m && (m.from === old || m.rule === old) ? Object.assign({}, m, m.from === old ? { from:w.name } : {}, m.rule === old ? { rule:w.name } : {}) : m);
+      }
+    }
+    return out;
+  }
 
   // sort xs by key(x, i) (an array of numbers, or null: keeps its place after the item before it), stably
   function sortBy(xs, key) {
@@ -515,7 +557,7 @@ module.exports = function make(ROOT) {
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
+  return { gwWords, gwWordsOf, declaredWords, DEVW, pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
 };
 module.exports.wahaSectionsOf = wahaSectionsOf;
 module.exports.selectsFrom = selectsFrom;

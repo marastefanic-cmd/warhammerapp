@@ -12,7 +12,9 @@
                      rebuilds every unit from BSData itself, modifiers included, and compares)
      wording         each ability's text with its markup from the cached Wahapedia datasheet (verify/waha-words.js), found
                      by BSData's words; where BSData's words differ from Wahapedia's (which transcribes GW's codex), the
-                     datasheet's text by the ability's name, GW's words winning: listed as a deviation to declare
+                     datasheet's text by the ability's name, GW's words winning: listed as a deviation to declare (the page
+                     read by the shared page reader, verify/gw-order.js; verify/tables.js --write, which it ends with, gives
+                     every ability the page's words, gwWords, as verify/words.js checks)
      faction rows    a faction or detachment data.js lacks: army rules (the ones the units name), detachment rule,
                      enhancements and stratagems from the Wahapedia faction page (verify/.cache/waha/<faction>.txt, the
                      codex as Wahapedia transcribes it); Force Dispositions from BSData (verify/dispositions.js)

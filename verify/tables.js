@@ -86,6 +86,13 @@ function gwOrder(R){
   }
   R.comments = C;
 }
+// GW's words (verify/gw-order.js gwWords): each ability of every list's unit has its datasheet page's text, and its name where GW spells it
+// otherwise (Berzerker Frenzy), but where verify/deviations-words.json declares GW's own document's words over the page's, or a hand file's
+// texts put them in; a text equal to the page's after markup normalisation stays as it is. verify/words.js checks it
+function gwWords(R){
+  R.words = [];
+  R.armies.forEach(a => a.units.forEach(u => { for(const c of GWO().gwWords(a.faction, u)) R.words.push(Object.assign({ army:a.id, unit:u.id }, c)); }));
+}
 // the lists, the order of their rows, keywords and Rules line aside (what --write may change: GW's order, gwOrder)
 const ORDERED = ['ranged', 'melee', 'abilities', 'kw', 'rules'];
 // (--write: the keywords' content too, which GW's datasheets give: verify/keywords.js checks it)
@@ -531,7 +538,12 @@ function build(R){
       // of Khorne one: a row of its own; the lists' rows find theirs first, by name, as before)
       let rk = rowKey(kind, r.name), R = s.rows[kind].get(rk);
       if(R && (kind === 'ranged' || kind === 'melee') && (R.ds.group || null) !== (r.group || null)){ rk = rk + '\0' + (r.group || ''); R = s.rows[kind].get(rk); }
-      if(!R){ s.rows[kind].set(rk, { key:rk, obs:[], ds:Object.assign({}, r), conflict:new Set(), catalog:true }); continue; }
+      if(!R){
+        // (a catalogue row's ability no list has: GW's words, as a list's, gwWords)
+        const ds = Object.assign({}, r);
+        if(kind === 'abilities'){ const w = GWO().gwWordsOf(c.faction, { name:c.name, abilities:c.abilities }, ds); if(w){ ds.text = w.text; if(w.name !== ds.name){ ds.name = w.name; rk = rowKey(kind, ds.name); } } }
+        s.rows[kind].set(rk, { key:rk, obs:[], ds, conflict:new Set(), catalog:true }); continue;
+      }
       for(const f of Object.keys(r)) if(!(f in R.ds) && !R.conflict.has(f)) R.ds[f] = r[f];
     }
   }
@@ -1008,6 +1020,7 @@ function tableForm(src, opts){
   opts = opts || {};
   const R = read(src);
   gwOrder(R);
+  gwWords(R);
   if(opts.stampRows) opts.stampRows(R.armies, R.D);
   const B = build(R);
   // the parts of data.js outside the tables, as they are (FACTIONS with its rows' readings)
@@ -1287,11 +1300,15 @@ if(require.main === module){
     // (a rule's or enhancement's readings moved onto its row by this run: their fingerprints are written there too)
     if(stamp){ const s2 = stampConstants(t.text, evaluate(t.text), restamp); if(s2.n){ n += s2.n; t = tableForm(s2.src); } }
     const before = evaluate(src), after = evaluate(t.text);
+    // (GW's words, gwWords: the other difference allowed; the lists before, in GW's words, are what is compared)
+    before.armies.forEach(a => a.units.forEach(u => GWO().gwWords(a.faction, u)));
     // (a derived reading whose words changed is written again from them: the one difference allowed)
     const re = [...t.B.RT.groups.values()].filter(g => g.rederived), skip = new Map();
     for(const g of re) for(const U of g.obs.keys()) skip.set(U.a.id + '/' + U.u.id, (skip.get(U.a.id + '/' + U.u.id) || new Set()).add(g.kind + '\0' + g.from));
     const drop = A => A.map(a => Object.assign({}, a, { units:a.units.map(u => { const sk = skip.get(a.id + '/' + u.id); if(!sk) return u; const v = Object.assign({}, u); for(const k of READ) if(v[k]) v[k] = v[k].filter(m => !sk.has(k + '\0' + m.from)); return v; }) }));
     if(!sameLists(unordered(noKw(drop(before.armies))), unordered(noKw(drop(after.armies))))){ console.log('tables: NOT written: the lists would resolve otherwise than they are (a bug in verify/tables.js)'); process.exit(1); }
+    if(t.R.words.length){ const W = t.R.words; console.log('tables: GW\'s words (verify/gw-order.js gwWords): ' + W.filter(c => c.to !== undefined).length + ' ability texts and ' + W.filter(c => c.name).length + ' names of the lists\' units written from their datasheet pages: ' + [...new Set(W.map(c => c.name ? c.ability + ' → ' + c.name : c.ability))].join('; '));
+      fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/words-write.json'), JSON.stringify(W, null, 1)); }
     if(re.length) console.log('tables: written again from their changed words (derived readings, verify/derive.js): ' + re.map(g => (g.sid || g.path.join(' · ')) + ' · ' + g.from + (g.list.length ? '' : ' (no longer derivable: none now)')).join('; '));
     fs.writeFileSync(DATA, t.text);
     fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));
