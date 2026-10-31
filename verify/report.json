@@ -1,6 +1,6 @@
 {
- "hash": "1754526dd88bf0edc1d2e0983caf85d27d26d69859250b4aef859d8dc078665c",
- "at": "2026-10-31T18:20:37.379Z",
+ "hash": "1d3676390b1a9a680c88e588aa199ff76507cff59e86938ee0f3306e665fd023",
+ "at": "2026-10-31T19:46:09.865Z",
  "ok": true,
  "steps": {
   "data": {
@@ -9,11 +9,11 @@
   },
   "tables": {
    "ok": true,
-   "summary": "tables: 214 unit entries in 25 lists over 261 datasheets, 89 rule options, 75 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
+   "summary": "tables: 214 unit entries in 25 lists over 261 datasheets, 89 rule options, 74 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
   },
   "fingerprints": {
    "ok": true,
-   "summary": "fingerprints: 274 of 274 AI-written values (gist, def) and 242 of 242 readings (20 derived) match the text they were written or read from"
+   "summary": "fingerprints: 274 of 274 AI-written values (gist, def) and 244 of 244 readings (20 derived) match the text they were written or read from"
   },
   "readings": {
    "ok": true,
@@ -21,7 +21,7 @@
   },
   "evidence": {
    "ok": true,
-   "summary": "evidence: 279 sources, 279 boxes and 40 picks made by script from GW’s words (G1-G9; 5 of 5 G9 bites); the army, unit and other-units groups of 214 units as the database gives them; 263 stratagems read from their TARGET, shown for 214 units exactly as their keywords meet it (a broken tag on Crazed Rampage is caught); 5 of 5 fixed TARGET cases of alternatives with an exclusion"
+   "summary": "evidence: 281 sources, 281 boxes and 40 picks made by script from GW’s words (G1-G9; 5 of 5 G9 bites); the army, unit and other-units groups of 214 units as the database gives them; 263 stratagems read from their TARGET, shown for 214 units exactly as their keywords meet it (a broken tag on Crazed Rampage is caught); 5 of 5 fixed TARGET cases of alternatives with an exclusion"
   },
   "invariants": {
    "ok": true,
@@ -29,7 +29,7 @@
   },
   "derive": {
    "ok": true,
-   "summary": "derive: 1053 agreed labels hold; 3 differ, 190 not derivable (verify/out/derive.md)"
+   "summary": "derive: 1070 agreed labels hold; 3 differ, 195 not derivable (verify/out/derive.md)"
   },
   "choice": {
    "ok": true,
@@ -37,7 +37,7 @@
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 16407 facts checked against BSData b4dc3f4 (clone) {\"gear\":1156,\"stats\":2493,\"weapons\":7800,\"abilities\":1473,\"keywords\":1840,\"rules\":1105,\"grants\":250,\"points\":289,\"extract\":1}; 300 deviations used; 0 failures"
+   "summary": "bsdata: 16417 facts checked against BSData b4dc3f4 (clone) {\"gear\":1156,\"stats\":2493,\"weapons\":7800,\"abilities\":1483,\"keywords\":1840,\"rules\":1105,\"grants\":250,\"points\":289,\"extract\":1}; 282 deviations used; 51 ability texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win); 0 failures"
   },
   "dispositions": {
    "ok": true,
@@ -53,19 +53,23 @@
   },
   "nr": {
    "ok": true,
-   "summary": "nr: 0 failure(s); 11235 facts checked (army 185, units 126, roster 531, pts 252, copies 126, models 126, enhancement 252, warlord 252, leads 378, gear 219, stats 1494, ranged 2259, from 71, melee 2007, abilities 1154, kw 172, rules 1333, glossary 298); 214 declared deviations used. Report: verify/out/nr.json"
+   "summary": "nr: 0 failure(s); 11241 facts checked (army 185, units 126, roster 531, pts 252, copies 126, models 126, enhancement 252, warlord 252, leads 378, gear 219, stats 1494, ranged 2259, from 71, melee 2007, abilities 1160, kw 172, rules 1333, glossary 298); 200 declared deviations used; 59 names and texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win) Report: verify/out/nr.json"
   },
   "texts": {
    "ok": true,
-   "summary": "0 failure(s) in 5712 checked facts, 27 deviation(s) used; verify/out/texts.json, verify/provenance.json"
+   "summary": "0 failure(s) in 5712 checked facts, 26 deviation(s) used; verify/out/texts.json, verify/provenance.json"
   },
   "numbers": {
    "ok": true,
-   "summary": "numbers: (90 catalogue rows with the lists' units) 2590 stats, 6126 weapon numbers and 312 keyword numbers checked against the Wahapedia datasheets (161 granted values compared as the datasheet has them); 27 declared deviations used"
+   "summary": "numbers: (90 catalogue rows with the lists' units) 2590 stats, 6126 weapon numbers and 312 keyword numbers checked against the Wahapedia datasheets (161 granted values compared as the datasheet has them); 26 declared deviations used"
   },
   "keywords": {
    "ok": true,
    "summary": "keywords: 2209 keywords of 303 units (90 of them catalogue rows) are GW's datasheets' (and the list's own by its rules); 13 declared"
+  },
+  "words": {
+   "ok": true,
+   "summary": "words: 1200 ability texts of 261 datasheets and 214 list units checked against their Wahapedia datasheet pages: 1164 equal (36 Leader lines as unit lists); 15 declared differences (verify/deviations-words.json); 1 PENDING (declared, not decided): imperial-knights_Canis-Rex.html Using Sir Hekhtur"
   },
   "calc": {
    "ok": true,
@@ -77,11 +81,11 @@
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 3187 screens and popups, 1926 helper texts, 0 failures"
+   "summary": "render at 390px: 3193 screens and popups, 1927 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 3187 screens and popups, 1926 helper texts, 0 failures"
+   "summary": "render at 320px: 3193 screens and popups, 1927 helper texts, 0 failures"
   },
   "snapshots": {
    "ok": true,
@@ -89,7 +93,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 1623 judgements, 1623 approved, 0 to check, 1438 stale approvals"
+   "summary": "helpers: 1625 judgements, 1625 approved, 0 to check, 1489 stale approvals"
   }
  }
 }
