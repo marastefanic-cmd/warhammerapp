@@ -59,6 +59,18 @@ page's keyword or BSData's category that is the name, else the one the name's he
 BSData or New Recruit is declared in `verify/deviations-bsdata.json` / `verify/deviations-nr.json`; one from GW in
 `verify/deviations-keywords.json`.
 
+**GW's words.** A datasheet ability's text (its wargear abilities, Damaged bands and boxes too) is its Wahapedia datasheet page's, read
+by the one page reader every script shares (`verify/gw-order.js`: `wahaSectionsOf` on the datasheet cut out of its page, `pageAbility`),
+and its name is GW's spelling where the page spells New Recruit's otherwise (Berzerker Frenzy, Bomb Squigs, Emanatus Force Field; a
+reading's `from` follows). `--write` writes them (`gwWords`), the importers take them too (`verify/import-nr.js`, `verify/from-json.js`,
+which end with `--write`), and the gate step `words` (`verify/words.js`) checks every DATASHEETS row's and every list unit's ability:
+equal to the page's after markup normalisation (bold, `**`, quotes, a typographic hyphen, whitespace), a Leader line's units as a list. A
+text equal to the page's after normalisation stays as it is. GW's own document over the page (a Faction Pack's rewrite or FAQ: Malign
+Presence, Infected Outbreak) is declared in `verify/deviations-words.json` (`{ page, ability, app, waha, reason, evidence, gw:{ file,
+quote } }`, the quote found in `verify/.cache/gw`), as is an ability no page prints (`waha:'(none)'`); `--write` keeps a declared text, and
+a hand file's `texts` (`from` / `to`). A declaration nothing matches fails as stale. Where `words` passes, GW's page wins over New Recruit's
+printing (`verify/nr.js`).
+
 A faction catalogue's rows (`verify/sources/catalog`) go through the same rules: `--write` sorts their rows, keywords and Rules line in
 GW's order after the catalogue is merged in (a catalogue row with a list row's name after it, so the resolver keeps finding the list's
 by name), writes their keywords by `gwKeywords` (their BSData keywords for the name keyword; a Daemonic Allegiance entry's god), and the
