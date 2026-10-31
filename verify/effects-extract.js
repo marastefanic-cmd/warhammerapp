@@ -169,7 +169,7 @@ function scopeOf(V, n, weapons, nOrig){
   }
   // "makes an attack with a belleros energy cannon that targets": a weapon by its name, equipped or not (one not equipped: no box)
   if(!sc.weapon && (m = /\bmakes an attack with an? ([a-z][a-z' -]+?) (?:that|against|which)\b/.exec(n)) && !/^(?:ranged|melee|psychic) (?:weapon|attack)$|^(?:weapon|attack)$/.test(m[1])) sc.weapon = m[1];
-  if(/\bthis model(?:'s)? (?:makes|melee|ranged|attacks|weapons|hellforged|omnissian|watcher's)\b|\bequipped by (?:this model|the bearer)\b|\bthe bearer(?:'s)? (?:makes|melee|ranged)\b|\bthis model's\b|\bthe bearer's\b|\bbearer makes\b/.test(n) && !/\bmodels? in (?:this|that|your|the bearer's) unit\b/.test(n)) sc.models = 'model';
+  if(/\bthis model(?:'s)? (?:makes|melee|ranged|attacks|weapons|hellforged|omnissian|watcher's)\b|\bequipped by (?:this model|the bearer)\b|\bthe bearer(?:'s)? (?:makes|melee|ranged)\b|\bthis model's\b|\bthe bearer's\b|\bbearer makes\b/.test(n) && !/\bmodels? in (?:this|that|your|the bearer's|this model's|the bearer's) unit\b/.test(n)) sc.models = 'model';
   if(/\bselect one (?:other )?friendly [^.]*? model\b/.test(n) && /\bthat [a-z ]*model's attacks\b|\bthat [a-z]+ makes an attack\b|\beach time that [a-z ]+ makes an attack\b/.test(n)) sc.models = 'one';
   if(/\bcharacter models'? (?:melee |ranged )?attacks\b|\bequipped by character models\b/.test(n)) sc.models = 'char';
   if(/\bexcluding those made by character models\b|\bmodels in the bearer's unit \(excluding characters?\)/.test(n)) sc.models = 'nonchar';
@@ -257,6 +257,11 @@ function unitsOf(src){
       // with the first part's condition)
       else if((k2 => k2 >= 0 && ncOf(norm(x.slice(0, k2))) && !ncOf(norm(x.slice(k2 + 6))) && findFx(norm(x.slice(k2 + 6))).fx.length)(x.search(/, and (?=each time\b)/i))){
         const k2 = x.search(/, and (?=each time\b)/i), c = /^((?:While|If) [^,]+), /.exec(x); ss.push(x.slice(0, k2)); ss.push(x.slice(k2 + 6)); split.add(x.slice(k2 + 6)); if(c) ncLead.set(x.slice(k2 + 6), c[1] + ','); }
+      // (and the other way round, an effect then a rare mechanic: "While …, subtract 4 from its Objective Control characteristic and you can
+      // only select one of the C'tan Powers weapons in your Shooting phase, instead of two": the effect a box, the mechanic not counted)
+      else if((k3 => k3 >= 0 && findFx(norm(x.slice(0, k3))).fx.length && !ncOf(norm(x.slice(0, k3))) && ncOf(norm(x.slice(k3 + 5))))(x.search(/,? and (?=you can only\b)/i))){
+        const k3 = x.search(/,? and (?=you can only\b)/i), m3 = /^,? and /.exec(x.slice(k3)), b3 = x.slice(k3 + m3[0].length), c = /^((?:While|If) [^,]+), /.exec(x);
+        ss.push(x.slice(0, k3)); ss.push(b3); split.add(b3); if(c) ncLead.set(b3, c[1] + ','); }
       else ss.push(x);
       for(const y of ps){ ss.push(y); paren.add(y); }
     }
@@ -292,7 +297,7 @@ function extract(src, ctx){
     let listQ = '';
     if(!fx.length && u.bullet && u.lead){ const a = findFx(norm(u.lead)).fx.length, b = findFx(norm(u.lead + ' ' + u.s)).fx; if(b.length > a){ fx = b.slice(a);
       listQ = [u.lead].concat(us.filter(x => x.grp === u.grp && x.bullet && x.first).map(x => '- ' + x.lineBody)).join('\n'); } }
-    if(nx){ nc.push({ quote:u.s, why:nx.why }); prev = null; continue; }
+    if(nx){ nc.push(Object.assign({ quote:u.s, why:nx.why }, NC[nx.id].atk ? { atk:true } : {})); prev = null; continue; }
     const leadN = norm(u.lead + ' ' + u.ctx);
     if(!fx.length){
       // a sentence with no effect that sets the context of the next ones ("select one friendly ORKS WALKER unit within 3" of this model.")
@@ -333,6 +338,8 @@ function extract(src, ctx){
     { const w = /^(When [^,.:;()]+),[^:]*:\s*$/.exec(plainCase(u.lead || '').split(/(?<=[.!?])\s+/).pop() || '');
       if(w && !/\bselected to (?:shoot|fight|attack)\b|\bmakes an attack\b/i.test(w[1]) && !on.some(x => x[0] === 'q' && x[1] === w[1])) on.push(['q', w[1]]); }
     const sc = Object.assign({}, base ? base.sc : {}, u.lead ? scopeOf(V, norm(u.lead), ctx.weapons, u.lead) : {}, scopeOf(V, n, ctx.weapons, u.s));
+    // (the sentence's own "a model in this model's unit" is the unit, whatever the line it continues says of "this model": Prey of the Blood God)
+    if(sc.models === 'model' && /\bmodels? in (?:this|that|your|this model's|the bearer's) unit\b/.test(n)) delete sc.models;
     if(/\bselect one character model in your unit\b/.test(norm(u.prevS || '')) && /^(?:until [^,]*, )?that model's\b/.test(n)) sc.models = 'char';
     // (one model another unit selects: "select one friendly ORKS VEHICLE model …:" then "That VEHICLE model's attacks have …")
     if(/\bselect one (?:other )?friendly [^.]*? model\b/.test(norm(u.lead + ' ' + (u.prevS || ''))) && /^that [a-z ]*model's attacks\b|\beach time that [a-z ]+ makes an attack\b/.test(n)) sc.models = 'one';
@@ -374,14 +381,17 @@ function extract(src, ctx){
       const pool = fx.some(([id]) => id === 'oneAnyPhase') ? 'phase' : /\bonce per turn\b/.test(t) ? 'turn' : /\bonce per battle round\b/.test(t) ? 'round'
         : /\beach time (?:this|that) (?:model|unit) is selected to (?:shoot|fight|shoot or fight)\b|\bis selected to (?:attack|shoot|fight|shoot or fight)\b|\bwhen resolving those attacks\b/.test(t) ? 'selected' : '';
       if(pool) box.pool = pool; }
+    // (a rule the unit uses, its words "… you can use this ability. If you do, …" anywhere in it (Try Dat Button!'s roll): each of its
+    // boxes is had only when it is used)
+    if(src.type !== 'strat' && /\b(?:you|it|this model|this unit) can use this ability\b/.test(norm(src.text || '')) && !on.some(x => x[0] === 'used')) on.push(['used', true]);
     // (its tag, the database's: "Once per battle")
     if(/\bonce per battle\b/i.test(src.tag || '') && !on.some(x => x[0] === 'oncePerBattle')) on.unshift(['oncePerBattle', true]);
     if(/\bonce per turn\b/i.test(src.tag || '') && !on.some(x => x[0] === 'oncePerTurn')) on.unshift(['oncePerTurn', true]);
     // (the enemy unit it selects, by its keyword: "select one visible enemy VEHICLE unit … attacks that target that unit")
     if(on.some(x => x[0] === 'targetSelected') && !on.some(x => x[0] === 'targetKw')){ const t = /\bselect one (?:\*\*visible\*\* |visible )?enemy \*\*([A-Z][A-Z ]+?)\*\* unit\b/.exec([u.prevS || '', u.lead || '', u.s].join(' '));
       if(t){ const ks = Dv.tokens(V, t[1]); if(ks.length) on.push(['targetKw', ks.length === 1 ? { any:ks } : { all:ks }]); } }
-    if(TARGET_RESTR.test(n) && !hasTargetCond(on, n)){ nc.push({ quote:u.s, why:'a condition on its target the script does not read: not counted without it' }); prev = { u, n, fx, sc, kind, reach, on }; continue; }
-    if(!box.reach && afterAttack(src, n)){ nc.push({ quote:u.s, why:'its unit has already attacked (WHEN): the attacks it helps are other units\'' }); prev = { u, n, fx, sc, kind, reach, on }; continue; }
+    if(TARGET_RESTR.test(n) && !hasTargetCond(on, n)){ nc.push({ quote:u.s, why:'a condition on its target the script does not read: not counted without it', atk:true }); prev = { u, n, fx, sc, kind, reach, on }; continue; }
+    if(!box.reach && afterAttack(src, n)){ nc.push({ quote:u.s, why:'its unit has already attacked (WHEN): the attacks it helps are other units\'', atk:true }); prev = { u, n, fx, sc, kind, reach, on }; continue; }
     box.grp = u.grp; box.bullet = u.bullet;
     // (one sentence for two kinds of attack: "weapons equipped by that model have [LETHAL HITS], and melee weapons equipped by that model
     // have [LANCE]": a box for each)
@@ -466,8 +476,11 @@ function shape(list, src){
           if(facts.length) o.part = { on:facts, fx:b.fx, quote:bq }; else { if(o.fx.length) o.quote += '\n' + bq; o.fx = o.fx.concat(b.fx); o.on = o.on.concat(b.on); }
           opts.set(b.opt, o); }
         let pick = [...opts.values()];
+        // (a condition every row has, "you can use this ability", is the box's, not each pick's)
+        const J = x => JSON.stringify(x), common = (bs[0].on || []).filter(x => x[0] !== 'opt' && bs.every(b => (b.on || []).some(y => J(y) === J(x))));
+        for(const o of pick) o.on = (o.on || []).filter(x => !common.some(y => J(y) === J(x)));
         if(twoDice){ const one = pick.slice(); for(let i = 0; i < one.length; i++) for(let j = i + 1; j < one.length; j++) pick.push({ name:one[i].name + ' and ' + one[j].name, fx:one[i].fx.concat(one[j].fx), quote:one[i].quote + '\n' + one[j].quote, on:[] }); }
-        final.push({ quote:(bs[0].quotes || [bs[0].quote]).join('\n'), fx:[], on:[], kind, pick, scope:bs[0].scope, lasts:bs[0].lasts || lastsOf(norm(src.text || '')) || undefined, reach:bs[0].reach, tableRows:true });
+        final.push({ quote:(bs[0].quotes || [bs[0].quote]).join('\n'), fx:[], on:common, kind, pick, scope:bs[0].scope, lasts:bs[0].lasts || lastsOf(norm(src.text || '')) || undefined, reach:bs[0].reach, tableRows:true });
       }
     }
   }

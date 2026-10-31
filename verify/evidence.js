@@ -111,7 +111,7 @@ for(const [key, o] of Object.entries(T)){ const src = S.get(key); for(const b of
 // fails), in what the words give (T) and in data.js BOXES alike
 { const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both', 'embarked', 'played', 'riled']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool', 'excl']),
     PICK_KEYS = new Set(['name', 'fx', 'quote', 'on', 'lead', 'part']), SCOPE_KEYS = new Set(['models', 'weapon', 'part', 'wkw']), LIMIT_KEYS = new Set(['n', 'what']),
-    PART_KEYS = new Set(['on', 'fx', 'quote']), NC_KEYS = new Set(['quote', 'why']), BOTH_KEYS = new Set(['names', 'quote', 'reach', 'mark', 'opt', 'lasts']);
+    PART_KEYS = new Set(['on', 'fx', 'quote']), NC_KEYS = new Set(['quote', 'why', 'atk']), BOTH_KEYS = new Set(['names', 'quote', 'reach', 'mark', 'opt', 'lasts']);
   const extra = (o, keys) => Object.keys(o || {}).filter(k => !keys.has(k));
   for(const [name, TT] of [['the words', T], ['data.js BOXES', D.boxes || {}]]) for(const [key, o] of Object.entries(TT)){ const where = key + ' ' + (o.n || '') + ' (' + name + ')';
     const bad = [];
@@ -142,13 +142,10 @@ for(const [key, src] of S){
 
 // ---- G6: no Damage-tab reading field left; the Damage tab reads no words ----
 const RETIRED_R = ['calc', 'always', 'oneModel', 'dice', 'follow', 'onDeath'], RETIRED_RULE = ['calcMods', 'calcNc', 'both', 'limit'];
-const readingsOf = x => ['mods', 'aura'].flatMap(k => x[k] || []).concat(x.mod ? [x.mod] : [], (x.parts || []).filter(p => p.mod).map(p => p.mod));
-for(const a of D.armies) for(const u of a.units) for(const m of readingsOf(u)) for(const k of RETIRED_R) if(m[k] !== undefined) fail('G6', a.id + '/' + u.id, 'reading of ' + m.from + ' keeps ' + k);
+// (the readings these fields were on, mods, aura, mod, parts[].mod, are retired: verify/lines.js L1)
 for(const f of Object.values(D.factions)){
-  for(const r of (f.armyRules || []).concat(Object.values(f.detachments || {}).flatMap(d => (d.rule ? [d.rule] : []).concat(d.moreRules || [])))){
+  for(const r of (f.armyRules || []).concat(Object.values(f.detachments || {}).flatMap(d => (d.rule ? [d.rule] : []).concat(d.moreRules || []))))
     for(const k of RETIRED_RULE) if(r[k] !== undefined && !(k === 'limit' && typeof r[k] === 'string')) fail('G6', f.name + ' · ' + r.name, 'keeps ' + k);
-    for(const m of readingsOf(r)) for(const k of RETIRED_R) if(m[k] !== undefined) fail('G6', f.name + ' · ' + r.name, 'reading keeps ' + k); }
-  for(const d of Object.values(f.detachments || {})) for(const s of d.stratagems || []) for(const m of readingsOf(s)) for(const k of RETIRED_R) if(m[k] !== undefined) fail('G6', f.name + ' · ' + s.name, 'reading keeps ' + k);
 }
 for(const s of D.coreStratagems) if(s.calcMods) fail('G6', 'Core · ' + s.name, 'keeps calcMods');
 { const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');

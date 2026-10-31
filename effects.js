@@ -19,9 +19,9 @@
 'use strict';
 const sg = p => (+p > 0 ? '+' : '−') + Math.abs(+p);
 const up = p => String(p).toUpperCase();
-const N = '(\\d+|d3|d6)';
+const N = '(\\d+|d3|d6)';   // a value: a number or a dice roll
 // a keyword as GW prints it: in capitals, a Faction keyword by its name ("Faction: Orks" is ORKS)
-const KW = k => String(k).replace(/^Faction: /, '').toUpperCase();   // a value: a number or a dice roll
+const KW = k => String(k).replace(/^Faction: /, '').toUpperCase();
 const v = s => /^d\d$/i.test(s) ? up(s) : +s;
 const kwFx = (word, key) => ({ label:() => '[' + word.toUpperCase() + ']', mod:() => ({ [key]:true }), dom:[true], pats:[new RegExp('\\[' + word + '(?::[^\\]]*)?\\]')] });
 // the characteristics a sentence adds to or improves ("add 1 to the Attacks and Strength characteristics", "improve the Strength,
@@ -93,10 +93,12 @@ const CL = '((?:attacks|strength|armour penetration|damage)(?:(?:, | and )(?:att
 const CHAR_RE = new RegExp('\\b(?:add (\\d|d3) to the ' + CL + ' characteristics?|improve the ' + CL + ' characteristics?(?:(?!characteristic)[^.;])*? by (\\d|d3)\\b)', 'g');
 // the rare mechanics the Damage tab does not play: the box shows GW's words, "not counted in the Damage tab"
 const NC = {
-  halveA:{ why:'it halves the Attacks characteristic', pats:[/\bhalve the attacks characteristic\b/] },
-  everyCrit:{ why:'every successful Hit roll scoring a Critical Hit is not played', pats:[/\ba successful hit roll scores a critical hit\b/] },
-  noPenalty:{ why:'it removes a penalty the Damage tab does not apply', pats:[/\bdoes not suffer the penalty\b/] },
-  ignoreAll:{ why:'ignoring modifiers to every roll and characteristic is wider than the Damage tab plays', pats:[/\bignore any or all modifiers to its characteristics\b/] },
+  halveA:{ atk:true, why:'it halves the Attacks characteristic', pats:[/\bhalve the attacks characteristic\b/] },
+  everyCrit:{ atk:true, why:'every successful Hit roll scoring a Critical Hit is not played', pats:[/\ba successful hit roll scores a critical hit\b/] },
+  noPenalty:{ atk:true, why:'it removes a penalty the Damage tab does not apply', pats:[/\bdoes not suffer the penalty\b/] },
+  ignoreAll:{ atk:true, why:'ignoring modifiers to every roll and characteristic is wider than the Damage tab plays', pats:[/\bignore any or all modifiers to its characteristics\b/] },
+  // (atk: about the unit's own attacks, so its datasheet's footnotes say it is there, "see the rule")
+  selectOne:{ atk:true, why:'it limits which of its weapons the model can select', pats:[/\byou can only select one of the [^.]*? weapons\b/] },
   synapse:{ why:'it changes what another rule needs, not these numbers', pats:[/\bis within your army's synapse range\b/] }
 };
 // the conditions a box states (its label; all start unticked). fact: the Damage tab's fact of the table it is (ticking the fact
