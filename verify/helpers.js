@@ -25,11 +25,6 @@ const RULE_KEYS = (T => [...new Set(['FACTIONS.armyRules', 'FACTIONS.detachments
 const STRAT_KEYS = (T => [...new Set(['CORE_STRATAGEMS', 'FACTIONS.detachments.stratagems'].flatMap(t => Object.entries(T[t].columns)
   .filter(([c, x]) => c !== 'id' && ['hand', 'ai-summary', 'ai-reading'].includes(x.source)).map(([c]) => c)))])(readJSON(path.join(ROOT, 'verify/columns.json'), {}).tables);
 
-// the readings data.js keeps on a list's entry for a reason of the list (listWhy), by "<army>/<unit>"
-let OWN_ = null;
-const OWN = () => OWN_ || (OWN_ = (() => { const T = require('./tables'), R = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8')), m = new Map();
-  for(const a of R.armies) for(const u of a.units) for(const k of T.READ) for(const x of u[k] || []) if(x && x.listWhy){ const id = a.id + '/' + u.id; if(!m.has(id)) m.set(id, []); m.get(id).push(x); }
-  return m; })());
 function items(D, appSource){
   const out = [];
   // (a fingerprint next to an AI-written column, gistOf / defOf, is not a judgement: verify/tables.js --fingerprints checks it)
@@ -74,7 +69,9 @@ function items(D, appSource){
       for(const ab of u.abilities){
         const src = { ability:ab.name, text:ab.text };
         if(ab.ask) add(a.id, 'ability-ask', w + ' · ' + ab.name, { ask:ab.ask }, src);
-        // (tag and who: New Recruit's, compared exactly by verify/nr.js; no judgement)
+        // (who: New Recruit's, compared exactly by verify/nr.js; no judgement. tag: a judgement again, nr.js lets the app add a tag part
+        // its text names, so an extra "Aura" would pass it)
+        if(ab.tag) add(a.id, 'ability-tag', w + ' · ' + ab.name, { tag:ab.tag }, src);
         if(ab.def) add(a.id, 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);
         // a note under the ability (an FAQ, a core rule it meets, a question the rules leave open): its own words are the app's
         // (the quotes in it are checked by verify/texts.js); the source is the unit's abilities and the list's rules it may quote
@@ -82,21 +79,8 @@ function items(D, appSource){
           others:u.abilities.filter(x => x !== ab).map(x => x.name + ': ' + x.text), listRules:fr(a.faction).armyRules.map(r => r.name).concat(a.detachments.flatMap(id => detRules_(fr(a.faction).detachments[id]).map(r => r.name))) });
         if(ab.na) add(a.id, 'ability-na', w + ' · ' + ab.name, { na:ab.na, armyUnits:a.units.map(x => x.name + ' [' + x.kw.join(', ') + ']') }, src);
         // (damaged: the range its words give, verify/lines.js L0; no judgement)
-        // the Damage tab's reading of it: always protects the unit (defAlways), its numbers (defCalc), always riled up (riled)
-        // (calcDef: a "when targeted" line the Damage tab alone shows, lasts: how long it carries)
-        if(ab.defAlways || ab.defCalc || ab.riled || ab.calcDef) add(a.id, 'ability-calc', w + ' · ' + ab.name, { def:ab.def, calcDef:ab.calcDef, defAlways:ab.defAlways, defCalc:ab.defCalc, lasts:ab.lasts, riled:ab.riled, models:u.models }, src);
-        // and what it plays in the turn (fightOnDeath: One Last Kill; comeback: Berserker Frenzy), what is approximate about it (calcNote)
-        if(ab.fightOnDeath || ab.comeback || ab.calcNote) add(a.id, 'ability-turn', w + ' · ' + ab.name, { fightOnDeath:ab.fightOnDeath, comeback:ab.comeback, calcNote:ab.calcNote, who:ab.who, models:u.models }, src);
       }
-      for(const m of u.mods || []) add(a.id, 'unit-footnote', w, m, cited(a.id, u, m));
-      for(const m of u.aura || []) add(a.id, 'unit-aura', w, m, cited(a.id, u, m));
       for(const m of u.guard || []) add(a.id, 'unit-guard', w, m, cited(a.id, u, m));
-      // a reading kept on the list, not on the row it reads, for a reason of the list (data.js listWhy, hidden from the app: the
-      // bodyguard's weapons More Dakka reaches, an enhancement's +1 A in a Possessed Lord's Attacks): that reason, against the unit
-      const own = (OWN().get(a.id + '/' + u.id) || []);
-      for(const m of own) add(a.id, 'unit-reading-why', w, { listWhy:m.listWhy, reading:JSON.parse(JSON.stringify(m, (k, v) => FP_KEYS.includes(k) ? undefined : v)) },
-        Object.assign(cited(a.id, u, m), { weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.name, 'A' + x.A, (x.kw || []).join(', '), JSON.stringify(x.from || {})].filter(Boolean).join(' · ')), enhancement:u.enhancement || null }));
-      // (ptsNote: New Recruit's, compared exactly by verify/nr.js and verify/bsdata.js; no judgement)
       for(const k of ['kwNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
       // a rule only one model of the unit has (Canis Rex's Lone Operative is Sir Hekhtur's): the unit can't use a rule every model
       // must have, and the app names that model
@@ -144,11 +128,9 @@ function items(D, appSource){
         if(ab.ph || ab.turn || ab.at) add('catalog', 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns }, src);
         if(ab.def) add('catalog', 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);
         for(const k of ['note', 'na', 'damaged']) if(ab[k]) add('catalog', 'ability-' + k, w + ' · ' + ab.name, { [k]:ab[k] }, src);
-        if(ab.defAlways || ab.defCalc || ab.riled || ab.calcDef || ab.embarked) add('catalog', 'ability-calc', w + ' · ' + ab.name, { def:ab.def, calcDef:ab.calcDef, defAlways:ab.defAlways, defCalc:ab.defCalc, lasts:ab.lasts, riled:ab.riled, embarked:ab.embarked }, src);
-        if(ab.fightOnDeath || ab.comeback || ab.calcNote) add('catalog', 'ability-turn', w + ' · ' + ab.name, { fightOnDeath:ab.fightOnDeath, comeback:ab.comeback, calcNote:ab.calcNote, who:ab.who, models:S.models }, src);
       }
       const citedRow = m => { const ab = (S.abilities || []).find(x => x.name === m.from); return ab ? { ability:ab.name, text:ab.text } : { missing:'nothing of the datasheet is named ' + m.from }; };
-      for(const [k, kind] of [['mods', 'unit-footnote'], ['aura', 'unit-aura'], ['guard', 'unit-guard']]) for(const m of S[k] || []) add('catalog', kind, w, m, citedRow(m));
+      for(const [k, kind] of [['guard', 'unit-guard']]) for(const m of S[k] || []) add('catalog', kind, w, m, citedRow(m));
       for(const k of ['kwOnly', 'srcNote', 'partialRules']) if(S[k]) add('catalog', 'unit-' + k, w, { [k]:S[k] }, { kw:S.kw, rules:S.rules });
     }
     for(const [fk, f] of Object.entries(D.factions)) for(const [dk, d] of Object.entries(f.detachments || {})){

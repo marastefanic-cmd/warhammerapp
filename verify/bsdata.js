@@ -35,6 +35,7 @@
    Exit 0 only when there are no failures. Output: verify/out/bsdata.json.
 ===================================================================== */
 'use strict';
+const BOX_KEY = require('./effects-migrate').KEY; let BOX_D_ = null; const BOX_D = () => BOX_D_ || (BOX_D_ = require('./lib').loadData());
 const fs = require('fs');
 const path = require('path');
 
@@ -1120,16 +1121,16 @@ function compareUnit(army, u, F, fail) {
   /* rules */
   const selfApplying = (a) => {
     if (a.na) return false;
-    const fromMods = (u.mods || []).some((m) => nn(m.from) === nn(a.name));
-    const aur = (u.aura || []).filter((m) => nn(m.from) === nn(a.name));
-    if (fromMods) return true;
+    // (its boxes, data.js BOXES: one for the unit's own attacks, or reaching it, applies to it)
+    const bx = ((BOX_D().boxes || {})[BOX_KEY.ability(a)] || {}).b || [];
+    if (bx.some((b) => !b.reach)) return true;
     // an ability GW tags (Bondsman): it affects another model, the ARMIGER the Bondsman rule selects, never its own (Bondsman: "select
     // one friendly ARMIGER model … that ARMIGER model is affected by that Bondsman ability"); not an aura, GW tags it no (Aura)
     if ((a.tag || '').split(' · ').includes('Bondsman')) return false;
     // an aura whose keywords leave out the unit itself
     const hasK = (k) => (u.kw || []).some((x) => nn(x).toLowerCase() === nn(k).toLowerCase());
     const fits = (n) => !n || ((!n.all || n.all.every(hasK)) && (!n.any || n.any.some(hasK)) && (!n.none || !n.none.some(hasK)));
-    if (aur.length && aur.every((m) => m.notSelf || !fits(m.needs))) return false;
+    if (bx.length && bx.every((b) => b.notSelf || !fits(b.reach))) return false;
     return true;
   };
   const appAbilityByName = (name) => (u.abilities || []).find((a) => nn(a.name) === splitAbilityName(name).base || nn(a.name) === nn(name));
