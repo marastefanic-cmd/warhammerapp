@@ -3577,6 +3577,7 @@
    "at": "Start of the first battle round",
    "ph": [
     "command",
+    "movement",
     "shooting",
     "fight"
    ],
@@ -3603,6 +3604,7 @@
    "at": "Start of the first battle round",
    "ph": [
     "command",
+    "movement",
     "shooting",
     "fight"
    ],
@@ -3621,6 +3623,7 @@
    "at": "Start of the first battle round",
    "ph": [
     "command",
+    "movement",
     "shooting",
     "fight"
    ],
@@ -3640,6 +3643,7 @@
    "at": "Start of the first battle round",
    "ph": [
     "command",
+    "movement",
     "shooting",
     "fight"
    ],
@@ -5234,6 +5238,7 @@
    "at": "Start of the first battle round",
    "ph": [
     "command",
+    "movement",
     "shooting",
     "fight"
    ],
