@@ -2320,6 +2320,10 @@
     "embarked": {
      "source": "derived",
      "note": "a model of the unit not on the battlefield yet, read by one fixed pattern of GW's words (\"If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport\"): until (the model it waits for)"
+    },
+    "played": {
+     "source": "derived",
+     "note": "a core rule the Damage tab plays itself (calc: [LANCE] from the weapon's keyword; situation: Plunging Fire): its boxes are the datasheet footnotes' only (verify/effects-migrate.js)"
     }
    }
   },

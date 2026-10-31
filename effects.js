@@ -75,12 +75,14 @@ const FX = {
   aSet:{ label:p => 'A ' + p, mod:p => ({ set:{ A:String(p) } }), dom:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12], pats:[/\bhas an attacks characteristic of (\d+)\b/] },
   bsSet:{ label:p => 'BS ' + p + '+', mod:p => ({ set:{ BS:p + '+' } }), dom:[2, 3, 4, 5], pats:[/\bhave a ballistic skill characteristic of (\d)\+/] },
   skill:{ label:p => 'BS/WS improved by ' + p, mod:p => ({ skill:+p }), dom:[1, 2],
-    pats:[/\bimprove the (?:ballistic|weapon) skill characteristic of [^.;]*? by (\d)\b/, /\b(?:bs|ws) improved by (\d)\b/] },
+    pats:[/\bimprove the (?:ballistic|weapon) skill characteristic of [^.;]*? by (\d)\b/, /\bimprove the (?:bs|ws) characteristic of [^.;]*? by (\d)\b/, /\b(?:bs|ws) improved by (\d)\b/] },
   range:{ label:p => '+' + p + '" range', mod:p => ({ range:+p }), dom:[3, 6, 9, 12, 18], pats:[/\+(\d+)" r\b/, /\badd (\d+)" to the range characteristic\b/] },
   ignoreHitMods:{ label:() => 'Ignore modifiers to BS/WS and the Hit roll', mod:() => ({ ignoreHitMods:true }), dom:[true],
     pats:[/\bignore any or all modifiers to (?:the following: )?(?:that (?:model's|attack's) )?(?:ballistic skill|bs|weapon skill|the hit roll)\b[^.]*/, /\bignore modifiers to your unit's: bs\b[^.]*/] },
   // a weapon ability that changes nothing in these numbers (shown with the box, said as such)
   assault:{ label:() => '[ASSAULT]', mod:() => null, dom:[true], pats:[/\[assault\]/] },
+  // its own Objective Control (a Damaged band: "subtract 4 from this model's Objective Control characteristic"), no effect on attacks
+  oc:{ label:p => sg(p) + ' OC', mod:() => null, dom:[-1, -2, -3, -4, -5, -6], pats:[/\bsubtract (\d) from (?:this model's|its) objective control characteristic\b/], neg:[0] },
   pistol:{ label:() => '[PISTOL]', mod:() => null, dom:[true], pats:[/\[pistol\]/] }
 };
 // "add D3 to the Attacks and Strength characteristics of …", "improve the Armour Penetration characteristic of that attack by 1",
@@ -128,6 +130,8 @@ const COND = {
   // the wargear the rule names ("If this model is equipped with a thundershock spear and a bellatus reaper chainsword"): the unit's weapons say it
   selfGear:{ label:p => 'It is equipped with ' + p.join(' and '), pats:[/\bif this model is equipped with (.+?)(?:,|$)/] },
   // the option of its rule the box is (a table's row, a named option: "Rendax", "Daemonic Rage [3BTP]"): its name
+  // "if one or more of the following conditions apply" and the lines under it (Plunging Fire): any one of them, each in GW's words
+  anyOf:{ label:p => p.map(x => '“' + x + '”').join(' or '), pats:[/\bif one or more of the following conditions apply\b/] },
   opt:{ label:p => p, pats:[] },
   q:{ label:p => '“' + p + '”', pats:[] }
 };

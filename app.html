@@ -2112,7 +2112,9 @@ const dmRuleText = r => r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')
 // where BOXES keeps a source: a| an ability, r| an army or detachment rule, s| a stratagem, c| a core weapon ability, + the hash of its
 // name and text (ckHash, as verify/derive.js and verify/effects-migrate.js make it)
 const DM_KEY = { a:ab => 'a|' + ckHash(ab.name + '\n' + ab.text), r:r => 'r|' + ckHash(r.name + '\n' + dmRuleText(r)), s:s => 's|' + ckHash(s.name + '\n' + dmStratText(s)), c:(n, t) => 'c|' + ckHash(n + '\n' + t) };
-const dmBoxesOf = key => (D.boxes || {})[key] || null;
+// (a core rule the Damage tab plays itself, [LANCE] from the weapon's keyword and Plunging Fire in the situation: its box is the datasheet
+// footnotes' only, played)
+const dmBoxesOf = key => { const o = (D.boxes || {})[key]; return o && !o.played ? o : null; };
 // the five groups of the list, in this order: each box is in exactly one, by the row it reads (dmGroupOf: the source)
 const DM_GROUPS = [['army', 'Army rules'], ['unit', 'Unit rules'], ['other', 'From other units in your list'], ['strat', 'Stratagems'], ['custom', 'Custom modifiers']];
 // effects that change these numbers (an [ASSAULT] box changes nothing here)
@@ -2213,7 +2215,9 @@ function dmBoxRules(A, au, kind, st){
     const wOf = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw) return true; const ws = weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []);
       return ws.some(it => dmReach(au, it, { from:S.name, ab:S.ab, src:S.src }, { scope:{ weapon:sc.weapon, wkw:sc.wkw } }) > 0); };
     for(const [b0, i] of counted){ const b = dmBothOf(A, au, b0), r = dmBoxRule(S, b, i, st); if((b.kind === 'all' || b.kind === kind) && wOf(b)) rules.push(r); else if(S.grp === 'strat' && b.kind !== 'all' && b.kind !== kind) other.push(r); }
-    if(counted.length || S.reachOnly) continue;
+    // (words of a source with counted boxes that are not counted, a rare mechanic beside an effect: listed with GW's words too)
+    if(counted.length){ for(const q of o.nc || []) nc.push({ side:'a', grp:S.grp, name:(S.cp ? S.cp + 'CP ' : '') + S.name, strat:!!S.strat, s:S.s || null, text:'“' + dmQuoteOf(q.quote) + '”', why:q.why + ': ' + ncText }); continue; }
+    if(S.reachOnly) continue;
     // (another unit's ability is in the list only when it reaches this unit: an aura GW tags (Aura) with nothing counted)
     const q = o.nc && o.nc.length ? o.nc[0] : null, noFx = mine.find(([b]) => !b.pick && b.fx.length);
     nc.push({ side:'a', grp:S.grp, name:(S.cp ? S.cp + 'CP ' : '') + S.name, strat:!!S.strat, s:S.s || null,
@@ -2551,7 +2555,9 @@ function dmCalc(st, A, au, tg, kind){
     const o = dmBoxesOf(DM_KEY.a(ab)) || {}, fxB = (o.b || []).filter(b => dmHasFx(b.fx)), bs = fxB.filter(b => (b.kind === kind || b.kind === 'all') && wIn(b));
     if(fxB.length && !bs.length) continue;
     if(!bs.length){ nc.push({ side:'a', grp:'unit', name:ab.name, text:'“' + dmQuoteOf(o.nc && o.nc[0] ? o.nc[0].quote : ab.text) + '”', why:(o.nc && o.nc[0] ? o.nc[0].why + ': ' : '') + 'not counted in the Damage tab' }); continue; }
-    if(box('damaged', ab.name, WH_EFFECTS.fxLabel(bs.flatMap(b => b.fx)))) for(const b of bs) dmgOn.push({ m:{ from:ab.name, ab, src:au, box:b }, e:WH_EFFECTS.toMod(b.fx), sc:{ scope:b.scope || {} } }); }
+    if(box('damaged', ab.name, WH_EFFECTS.fxLabel(bs.flatMap(b => b.fx)))) for(const b of bs) dmgOn.push({ m:{ from:ab.name, ab, src:au, box:b }, e:WH_EFFECTS.toMod(b.fx), sc:{ scope:b.scope || {} } });
+    // (and the words of it the box does not count, a rare mechanic in the same sentence: Szarekh's halved Attacks)
+    for(const q of o.nc || []) nc.push({ side:'a', grp:'unit', name:ab.name, text:'“' + dmQuoteOf(q.quote) + '”', why:q.why + ': not counted in the Damage tab' }); }
 
   // ---- the weapons: each ticked one, split by the rules that reach only some of its models ----
   const groups = [], gOf = [];
