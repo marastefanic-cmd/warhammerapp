@@ -401,7 +401,10 @@ function extract(src, ctx){
   // a model of the unit not on the battlefield yet, by one fixed pattern of GW's words ("If your Canis Rex model is destroyed, this model is
   // treated as a model disembarking from a destroyed Transport", Using Sir Hekhtur): until that model is destroyed
   const em = src.type === 'ability' ? /\bIf your ([A-Z][\w'’ -]*?) model is destroyed, this model is treated as a model disembarking from a destroyed Transport\b/.exec(plainCase(src.text || '')) : null;
-  return Object.assign({ boxes:shape(boxes, src), nc, reach:reachOf(V, src.type === 'strat' ? '' : src.text || ''), both }, em ? { embarked:{ until:em[1] } } : {});
+  // a unit always riled up by its own words, one fixed pattern ("- This unit is **riled up**.", Super Runts): the Waaagh! army rule's
+  // riled-up lines say so
+  const riled = src.type === 'ability' && /^(?:-\s+)?this unit is riled up\.?$/m.test(String(src.text || '').split('\n').map(l => norm(l).trim()).join('\n'));
+  return Object.assign({ boxes:shape(boxes, src), nc, reach:reachOf(V, src.type === 'strat' ? '' : src.text || ''), both }, em ? { embarked:{ until:em[1] } } : {}, riled ? { riled:true } : {});
 }
 
 // the boxes of one rule: bullets of one list with no conditions of their own are one box; a list that picks one ("Or:", "select

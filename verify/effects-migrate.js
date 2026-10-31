@@ -84,6 +84,7 @@ function build(D){
     if(r.reach && /\baura\b/i.test(s.tag || '')) o.reach = r.reach;
     if(r.both && r.both.length) o.both = r.both;
     if(r.embarked) o.embarked = r.embarked;
+    if(r.riled) o.riled = true;
     if(s.played && Object.keys(o).length) o.played = s.played;
     if(Object.keys(o).length){ o.n = s.name; T[key] = o; }
   }

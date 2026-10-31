@@ -2324,6 +2324,10 @@
     "played": {
      "source": "derived",
      "note": "a core rule the Damage tab plays itself (calc: [LANCE] from the weapon's keyword; situation: Plunging Fire): its boxes are the datasheet footnotes' only (verify/effects-migrate.js)"
+    },
+    "riled": {
+     "source": "derived",
+     "note": "an ability whose words say \"This unit is riled up.\" (one fixed pattern, verify/effects-extract.js): the unit is always riled up"
     }
    }
   },

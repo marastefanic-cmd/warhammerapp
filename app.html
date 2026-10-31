@@ -1462,41 +1462,101 @@ function inertRule(name){
 }
 // an ability that can't be used in this list: the data says why, or it is a Bondsman ability with no ARMIGER
 const naReason = ab => ab.na || (/bondsman/i.test(ab.tag || '') && inertRule('Bondsman') ? 'No ARMIGER models in this list' : '');
-// rules other units give this one (Ghazghkull's aura, the Dreadherder's re-rolls)
-function auraMods(u){
-  const out = [];
-  // (the same aura from another unit is not said again where the unit's own always reaches it: an aura applies once, Core Rules 22.01;
-  // two Lords of Change's Daemon Lord of Tzeentch, as one unit's copies give it once)
-  const own = new Set((u.aura || []).filter(m => !m.notSelf && m.selfAlways && matches(m.needs, u)).map(m => m.from + '|' + m.note));
-  for(const src of army().units) for(const m of src.aura || []){
-    const self = src === u;
-    if((self && m.notSelf) || !matches(m.needs, u)) continue;
-    if(!self && own.has(m.from + '|' + m.note)) continue;
-    out.push(Object.assign({}, m, { when:self && m.selfWhen ? m.selfWhen : m.when, src }));
+// ---- the footnotes under a unit's weapons: the boxes the database gives it (data.js BOXES, made by script from GW's words:
+// verify/effects-migrate.js), each said with the labels of its effects and conditions (effects.js), as the Damage tab shows them. Which
+// boxes: the sources the Damage tab gives the unit (dmSources: its army and detachment rules, its own abilities, the core abilities of
+// its weapons, what other units of the list give it, the stratagems it can be the TARGET of), its Damaged bands, and the core rules the
+// Damage tab plays itself (BOXES played: Lance for its [LANCE] weapons, Plunging Fire for a TOWERING unit, not AIRCRAFT, 23.03). A
+// source with no effect a rule reads has no footnote: its row opens GW's words. Nothing here reads a rule's words. ----
+// a condition as a footnote says it: its label (effects.js COND); "within N" of it" names the unit it is of (an aura of another unit,
+// "Within 6" of Eightbound"), the unit's own aura is its "Own aura" (22.01); a one-model unit's Starting Strength and Half-strength in
+// its wounds (halfBelow)
+const halfBelow = u => Math.ceil((parseInt(u.stats[0].W, 10) || 0) / 2) - 1;
+function fnCond(id, p, u, giver, own){
+  const C = WH_EFFECTS.COND[id];
+  if(id === 'aura') return own ? 'Own aura' : giver ? 'Within ' + p + '" of ' + giver : C.label(p);
+  if(id === 'selected' && giver) return 'Selected by ' + giver;
+  if(id === 'belowStarting' && modelCount(u) === 1) return 'Lost any wounds (' + C.label(p) + ')';
+  if(id === 'belowHalf' && modelCount(u) === 1) return halfBelow(u) + ' or fewer wounds left (' + C.label(p) + ')';
+  return C ? C.label(p) : id;
+}
+const FN_ROW = { a:'A', s:'S', ap:'AP', d:'D' };   // a characteristic a box adds to, as the weapon row shows it ("8 (+6)")
+const FN_SET = { aSet:'A' };                       // one it sets ("7/10")
+// the weapons of the unit a box's scope names (by name, or a weapon keyword), of this kind
+const fnWeapons = (u, kind, sc) => { const lc = x => String(x || '').toLowerCase().replace(/[’']/g, "'");
+  return weaponItems(kind === 'ranged' ? u.ranged || [] : u.melee || []).filter(it => (!sc.weapon || it.profiles.some(p => [p.name, it.group, itemName(it)].some(x => lc(x) === sc.weapon || lc(x).startsWith(sc.weapon))))
+    && (!sc.wkw || it.profiles.some(p => (p.kw || []).some(k => String(k).toUpperCase() === sc.wkw || String(k).toUpperCase().startsWith(sc.wkw + ' '))))
+    && (!sc.part || lc(it.who).startsWith(lc(sc.part).replace(/s$/, '')))); };
+// one box as a footnote: { kind, when (its conditions' labels), note (its effects' labels; a pick's options), who (the weapons or models it
+// names), weapon + set (a box for one weapon's characteristic: in that row), from, rule / strat + cp / src (what it links), damaged }
+function fnLine(S, b, u, kind, ab){
+  const E = WH_EFFECTS, sc = b.scope || {};
+  const ws = sc.weapon || sc.wkw || sc.part ? fnWeapons(u, kind, sc) : null;
+  if(ws && !ws.length) return null;   // (for weapons this kind of attack has not)
+  // (not an effect the list printed into the weapons, marked + there; nor a weapon ability every weapon it reaches has already: Waaagh!'s
+  // [ASSAULT] for a unit whose ranged weapons all have it)
+  const its = ws || weaponItems(kind === 'ranged' ? u.ranged || [] : u.melee || []);
+  const hasAll = l => /^\[.+\]$/.test(l) && its.length && its.every(it => it.profiles.every(w => (w.kw || []).some(k => '[' + String(k).toUpperCase() + ']' === l)));
+  const baked = S.baked || [], keep = fx => (fx || []).filter(([id, p]) => !dmBaked(baked, id, p) && !hasAll(E.fxLabel([[id, p]])));
+  // (a keyword or wargear of the unit the box needs, "If this model has the TOZEENTCH keyword": the unit's keywords and weapons say it)
+  const wn = [].concat(u.ranged || [], u.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase());
+  if((b.on || []).some(([id, p]) => (id === 'selfKw' && !hasKw(u, p)) || (id === 'selfGear' && !p.every(g => wn.some(n => n.startsWith(String(g).toLowerCase())))))) return null;
+  // (the unit that gives it: its name, or the model of an attached unit whose ability it is)
+  const gab = S.src && S.src !== u ? (S.src.abilities || []).find(x => x.name === S.name) : null;
+  const giver = S.src && S.src !== u ? (gab && gab.who && S.src.leads && charsOf(S.src).some(c => c.name === gab.who) ? gab.who : S.src.short || S.src.name) : '';
+  const own = S.grp === 'unit' && b.mark === 'aura';
+  // (none: every attack of its kind; a stratagem's line names it with its cost instead)
+  // (a stratagem's one phase, from its derived phases and turn: "Your Shooting phase", "Fight phase", the detachment's line says it once)
+  const sPh = S.s && (S.s.phases || []).length === 1 ? (T => (T === 'your' ? 'Your ' : T === 'opp' ? 'Your opponent’s ' : '') + PHASE_NAME[S.s.phases[0]] + ' phase')(phTurn(S.s, S.s.phases[0])) : '';
+  const when = [sPh, (b.on || []).map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ')].filter(Boolean).join(', ') || (S.strat ? '' : b.kind === 'ranged' ? 'Every ranged attack' : b.kind === 'melee' ? 'Every melee attack' : 'Every attack');
+  const part = x => x && x.fx && x.fx.length ? ' (' + (x.on || []).map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ') + ': ' + E.fxLabel(x.fx) + ')' : '';
+  let note, fx = null;
+  if(b.pick){ const ps = b.pick.map(p => Object.assign({}, p, { fx:keep(p.fx) })).filter(p => p.fx.length);
+    if(!ps.length) return null;
+    const bOn = new Set((b.on || []).map(x => JSON.stringify(x)));
+    note = ps.map(p => { const pon = (p.on || []).filter(x => !bOn.has(JSON.stringify(x)));
+      return (p.name !== E.fxLabel(p.fx) ? p.name + ': ' : '') + E.fxLabel(p.fx) + (pon.length ? ' (' + pon.map(([id, v]) => fnCond(id, v, u, giver, own)).join(' · ') + ')' : '') + part(p.part); }).join(' · ');
+    note = 'one of: ' + note; }
+  else { fx = keep(b.fx); if(!fx.length) return null; note = E.fxLabel(fx) + part(b.part); }
+  const who = ws ? ws.map(itemName).join(', ') : sc.models === 'char' ? 'CHARACTER models' : sc.models === 'nonchar' ? 'Models (not CHARACTER)' : sc.models === 'one' ? 'One model' :
+    sc.part ? sc.part + ' models' : sc.models === 'model' && ab && ab.who && u.leads ? ab.who : '';
+  const m = { kind:b.kind, when, note, who, from:S.name, box:b, key:S.key };
+  if(S.rule) m.rule = S.rule;
+  if(S.strat){ m.strat = S.strat; m.cp = S.cp; }
+  if(S.src && S.src !== u) m.src = S.src;
+  if(S.damaged) m.damaged = true;
+  // a box for one weapon's characteristics, nothing else: that weapon's row shows it ("8 (+6)", "6/7"), its condition under it
+  // (not a stratagem's: the player's to use, as a one-off is: oneOffMod)
+  if(fx && ws && ws.length === 1 && !ws[0].group && !S.damaged && !S.strat && fx.every(([id]) => FN_ROW[id] || FN_SET[id])){
+    m.weapon = ws[0].profiles[0].name; m.set = Object.fromEntries(fx.map(([id, p]) => FN_ROW[id] ? [FN_ROW[id], '+' + String(p).toUpperCase()] : [FN_SET[id], String(p)])); m.note = ''; m.who = ''; }
+  return m;
+}
+// every footnote of a unit's attacks of this kind ('ranged' / 'melee'), in the order: its own, its army and detachment rules, the core rules
+// the Damage tab plays, other units', stratagems
+function unitMods(u, kind){
+  const A = army(), out = [], srcs = dmSources(A, u);
+  const of = g => srcs.filter(S => S.grp === g);
+  const core = [];
+  // (Lance for its [LANCE] weapons; Plunging Fire for a TOWERING unit, not AIRCRAFT: BOXES played, the Damage tab's own)
+  const played = (name, text) => { const key = DM_KEY.c(name, text), o = (D.boxes || {})[key]; return o && o.played ? { grp:'unit', name, rule:name, key, core:true } : null; };
+  if([].concat(u.ranged || [], u.melee || []).some(w => (w.kw || []).some(k => /^lance$/i.test(k))) && D.rules.Lance) core.push(played('Lance', D.rules.Lance));
+  if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) core.push(played('Plunging Fire', D.rules['Plunging Fire']));
+  const dmg = (u.abilities || []).filter(ab => /^Damaged: /i.test(ab.name)).map(ab => ({ grp:'unit', name:ab.name, key:DM_KEY.a(ab), ab, src:u, damaged:true }));
+  // (the core stratagems, every unit's, are on the Stratagems tab: the footnotes name the list's detachments' stratagems)
+  const listStrat = S => !S.strat || (S.s && S.s.src !== 'Core');
+  for(const S of of('unit').filter(S => !S.core).concat(dmg, of('unit').filter(S => S.core).map(S => Object.assign({ rule:S.name }, S)), of('army'), core.filter(Boolean), of('other'), of('strat')).filter(listStrat)){
+    const o = (D.boxes || {})[S.key] || {};
+    for(const b of o.b || []){
+      if(S.reachOnly ? !(b.reach && dmReaches(b.reach, u)) : b.reach ? !dmReaches(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;
+      if(b.kind !== 'all' && b.kind !== kind) continue;
+      const m = fnLine(S, b, u, kind, S.ab);
+      if(m) out.push(m);
+    }
   }
   return out;
 }
-// everything that changes this unit's attacks: its own abilities, detachment rules, auras
-// a rule worded for squads ("below Starting Strength") reads in wounds for a one-model unit (r.mod.single):
-// {half} = the most wounds it can have left and still be below half-strength
-const halfBelow = u => Math.ceil((parseInt(u.stats[0].W, 10) || 0) / 2) - 1;
-const singleMod = (m, u) => m.single && modelCount(u) === 1 ? Object.assign({}, m, { when:m.single.when, note:m.single.note.replace('{half}', halfBelow(u)) }) : m;
-function unitMods(u, kind){
-  const det = unitDetRules(u).filter(r => r.mod).map(r => Object.assign({ from:r.name, rule:r.name }, singleMod(r.mod, u)))
-    .concat(unitDetParts(u).filter(x => x.part.mod).map(x => Object.assign({ from:x.rule.name, rule:x.rule.name }, x.part.mod)));
-  for(const [k, list] of [['ranged', u.ranged], ['melee', u.melee]]){
-    const lance = [...new Set((list || []).filter(w => w.kw.some(x => /^lance/i.test(x))).map(w => w.group || w.name))];
-    if(lance.length) det.push({ kind:k, when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });
-  }
-  if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) det.push({ kind:'ranged', when:'Visible target within 12" with models on ground level (not AIRCRAFT)', note:'BS improved by 1', from:'Plunging Fire', rule:'Plunging Fire' });
-  const strat = allStratagems().filter(s => s.mod && canTarget(s, u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod));
-  return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');
-}
-// the footnotes the weapon tables show (datasheet, Ranged and Melee screens): unitMods, and the Waaagh! army rule's "That unit's
-// ranged attacks have [ASSAULT]" while riled up, for a unit with that rule some of whose ranged weapons lack [ASSAULT] (a weapon
-// keyword only: the Damage tab has nothing to count for it)
-const shownMods = (u, kind) => unitMods(u, kind).concat(kind === 'ranged' && u.rules.includes('Waaagh!') && (u.ranged || []).some(w => !w.kw.some(k => /^assault$/i.test(k)))
-  ? [{ kind:'ranged', when:'Riled up', cond:'riled', note:'[ASSAULT]', from:'Waaagh!', rule:'Waaagh!' }] : []);
+// the footnotes the weapon tables show (datasheet, Ranged and Melee screens)
+const shownMods = (u, kind) => unitMods(u, kind);
 // phases and turn: turns can override the turn for one phase ("your Shooting phase or the Fight phase")
 const phasesOf = x => x.phases || x.ph || [];
 const phTurn = (x, p) => (x.turns && x.turns[p]) || x.turn || 'either';
@@ -2102,7 +2162,7 @@ function dmState(){
 }
 // shooting types are one or the other (10.04-10.07, 15.09): ticking one unticks the others
 const DM_ONE_OF = { 'c:cq':['c:cqo', 'c:indirect', 'c:snap', 'c:heavy'], 'c:cqo':['c:cq', 'c:indirect', 'c:snap', 'c:heavy'], 'c:indirect':['c:cq', 'c:cqo', 'c:snap'], 'c:snap':['c:cq', 'c:cqo', 'c:indirect', 'c:heavy'], 'c:heavy':['c:cq', 'c:cqo', 'c:snap'] };
-// run fn as if list a were the open one (unitMods, auraMods, allStratagems and defenceItems read army())
+// run fn as if list a were the open one (unitMods, allStratagems and defenceItems read army())
 function inArmy(a, fn){ const was = cur.army; cur.army = a.id; try { return fn(); } finally { cur.army = was; } }
 // ---- the boxes: the rules, abilities and stratagems of the list as the database has them (which ones: by tags and keywords alone),
 // each with the boxes read from GW's words by script (data.js BOXES, verify/effects-migrate.js; what each effect does in the numbers:
@@ -4253,7 +4313,7 @@ function searchIndex(){
     const s1 = weaponStatText(w, kind);
     const key = title + '|' + s1 + '|' + u.name;
     const kws = (w.hunter ? [HUNTER_KW] : []).concat(w.kw);
-    const vm = (u.mods || []).find(m => m.weapon === w.name && rowMod(m, u));
+    const vm = shownMods(u, kind).find(m => m.weapon === w.name && rowMod(m, u));
     if(wmap.has(key)){ wmap.get(key).units.push(u); continue; }
     const e = { kind:'Weapons', title, s1, units:[u], kws, vm, who:w.who, hay:hay(title, kind, 'weapon', kws.join(' '), u.name, u.short, w.who), act:{ unit:u.id, sec:kind } };
     wmap.set(key, e); add(e);
@@ -4438,7 +4498,7 @@ function weaponBlock(it, keys, mods, u){
       : '<span>' + gv(w0, k) + '<i class="alt">/' + esc(vm.set[k]) + '</i></span>');
     const changed = keys.filter(k => vm.set[k] != null).map(k => KEY_LABEL[k] + ' ' + vm.set[k]).join(', ');
     return row(named(w0.name, w0.n), cells) + kwl(w0) +
-      '<div class="varc"><b>' + esc(changed) + '</b> ' + esc(vm.when) + ', ' + esc(vm.note) + ' <span class="from">(' + modFrom(vm, u) + ')</span></div>';
+      '<div class="varc"><b>' + esc(changed) + '</b> ' + esc(vm.when) + (vm.note ? ', ' + esc(vm.note) : '') + ' <span class="from">(' + modFrom(vm, u) + ')</span></div>';
   }
   if(it.group){
     // Hunter weapons: the profile depends on the target; rules that add to Hunter attacks are built in
@@ -4593,7 +4653,7 @@ function weaponRows(list, keys, mods, u, kind){
 const oneOffMod = (m, u) => { const ab = ((u && u.abilities) || []).find(x => x.name === m.from);
   return /\bonce per battle\b(?! round)/i.test([m.when, ab && ab.tag].join(' ')); };
 const rowMod = (m, u) => !!(m.weapon && m.set) && !oneOffMod(m, u);
-const footMod = (m, u) => m.weapon && m.set && oneOffMod(m, u) ? Object.assign({}, m, { note:m.weapon + ' ' + Object.entries(m.set).map(([k, v]) => /^[+-]/.test(v) ? v + ' ' + k : k + ' ' + v).join(', ') + ' ' + m.note }) : m;
+const footMod = (m, u) => m.weapon && m.set && oneOffMod(m, u) ? Object.assign({}, m, { note:(m.weapon + ' ' + Object.entries(m.set).map(([k, v]) => /^[+-]/.test(v) ? v + ' ' + k : k + ' ' + v).join(', ') + ' ' + m.note).trim() }) : m;
 function weaponTable(list, kind, mods, u){
   // the same footnote from several units (three Meks' Clever Know-wotz) once, as on the datasheet
   const seen = new Set(), notes = mods.filter(m => !rowMod(m, u)).map(m => footMod(m, u)).filter(m => { const k = [m.from, m.when, m.note].join('|'); return !seen.has(k) && seen.add(k); });
@@ -4621,10 +4681,9 @@ function unitWeapons(u){
   if(m.length) h += '<section class="dbx wt both">' + head('melee', 'Melee Weapons', ['A','WS','S','AP','D'], true) + weaponRows(m, ['none'].concat(MELEE_KEYS), mm, u, 'melee') + '<!--M--></section>';
   const key = x => [x.from, x.when, x.note].join('|');
   const inR = new Set(mr.map(key)), inM = new Set(mm.map(key)), seen = new Set(), notes = [];
-  const damaged = new Set(u.abilities.filter(ab => ab.damaged).map(ab => ab.name));
   for(const x of mr.concat(mm)){
     const k = key(x);
-    if(rowMod(x, u) || seen.has(k) || damaged.has(x.from)) continue;
+    if(rowMod(x, u) || seen.has(k) || x.damaged) continue;   // (a Damaged band's: its band under the stats)
     seen.add(k);
     notes.push(Object.assign({}, footMod(x, u), { scope: !r.length || !m.length || (inR.has(k) && inM.has(k)) ? '' : inR.has(k) ? 'Ranged' : 'Melee' }));
   }
@@ -4741,9 +4800,9 @@ function defenceItems(u, ph, opts){
   if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!', riled:true });
   return out;
 }
-// a unit always riled up by one of its own rules (riled: Super Runts): its riled-up lines say so, with the model that has the
+// a unit always riled up by one of its own rules (BOXES riled, from its words: Super Runts): its riled-up lines say so, with the model that has the
 // rule in an attached unit ("Riled up (Zodgrod Wortsnagga · Super Runts: always riled up): 5+ INV")
-const alwaysRiled = u => { const ab = u.abilities.find(x => x.riled && !naReason(x));
+const alwaysRiled = u => { const ab = u.abilities.find(x => ((D.boxes || {})[DM_KEY.a(x)] || {}).riled && !naReason(x));
   return ab ? (ab.who && u.leads ? esc(ab.who) + ' · ' : '') + linkTo('ability', abilityKey(ab), ab.name) + ': always riled up' : ''; };
 const riledWhen = (html, u) => { const ar = /^Riled up\b/.test(html) && alwaysRiled(u); return ar ? html.replace(/^Riled up/, 'Riled up (' + ar + ')') : html; };
 // one "When targeted" line on the datasheet, its own line in the fold: the string split and styled, not reworded. Its name in
@@ -4835,9 +4894,11 @@ function screenUnit(){
     // (a fold, closed until opened and kept open for the session, as the Overview's army rules: its count on its line, a line each)
     (def.length ? '<details class="def tgt" data-tgfold="' + esc(tgKey) + '"' + (openStrats.has(tgKey) ? ' open' : '') + '><summary><span class="il">When targeted</span><span class="x">' + def.length + '</span>' + chev + '</summary>' +
       '<div class="tgls">' + def.map(x => '<div class="tgl">' + defLine(x, u) + '</div>').join('') + '</div></details>' : '') +
-    u.abilities.filter(ab => ab.damaged).map(ab => { const m = (u.mods || []).find(x => x.from === ab.name);
-      const psy = m && /hit/i.test(m.note) && [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => /^psychic/i.test(k)));
-      return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), m ? m.note : 'see the rule') +
+    // (a Damaged band: its range, what its boxes do (effects.js labels) and the words of it they do not count, quoted; none: its words)
+    u.abilities.filter(ab => ab.damaged).map(ab => { const o = (D.boxes || {})[DM_KEY.a(ab)] || {}, fx = (o.b || []).flatMap(b => b.fx || []);
+      const psy = fx.some(([id]) => id === 'hit') && [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => /^psychic/i.test(k)));
+      const says = [WH_EFFECTS.fxLabel(fx)].concat((o.nc || []).map(x => '“' + dmQuoteOf(x.quote) + '”')).filter(Boolean).join(' · ');
+      return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), says || 'see the rule') +
         (psy ? ' <span class="from">(' + linkTo('rule', 'Psychic', '[PSYCHIC]') + ' weapons can ignore it)</span>' : '') + '</div>'; }).join('') + '</div></section>';
   const abilities = abil.length ? '<section class="dbx" id="sec-abilities"><div class="dh2"><span>Abilities</span></div>' + abilityRows(abil, u, { suffix:true }) + '</section>' : '';
   const rules = allUnitRules(u).filter(r => !weaponKeys.has(ruleKey(r)));
