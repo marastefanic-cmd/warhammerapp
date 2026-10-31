@@ -3,20 +3,14 @@
    "Readings").
 
    The readings are the app's interpretations of rule text into numbers and lines (a unit's footnotes, mods; what it gives other
-   units, aura; their "When targeted" help, guard; an ability row's own: def, riled, damaged, defCalc, calcDef). An ability whose
-   words give a bonus is only played by the Damage tab, and only shown, through a reading of it. This step reads every ability of
+   units, aura, are BOXES now; their "When targeted" help, guard; an ability row's own: def). An ability whose words give a defence is
+   only shown through a reading of it. This step reads every ability of
    every list by fixed rules, sentence by sentence (a list line with the line that leads it; a condition said earlier in the same
    paragraph counts for the sentences after it), and each bonus a sentence states must be said by a reading of that ability
    (Warden's Duty's [SUSTAINED HITS 1] and [IGNORES COVER] are two):
 
-     riled        the owner's check: a sentence "if / while this unit is riled up, … <bonus>" needs a riled-up reading of that
-                  ability saying that bonus (cond:'riled', or "Riled up" in its when)
-     conditional  an attack bonus under a condition: a weapon ability granted (in brackets or not, in any case: "the Lethal Hits
-                  ability"), +1 to hit / wound (with or without "rolls"), a re-roll, a Critical Hit on N+, +N A / S / D / AP, "gains
-                  +N Strength", "has a Strength characteristic of N" (ATTACK); the condition: if, while, each time, until, after,
-                  when, once it has, in / at the start of a phase, that targets, against X units, within N", on a turn, for every,
-                  during the battle round in which, select one. Said by a footnote, aura, guard or row reading of the ability (or
-                  of an option it names in bold), or a value it gives marked on a weapon (from)
+     (attack bonuses are no reading: a unit's footnotes and the Damage tab's boxes are data.js BOXES, made from the words by script and
+     held to them by verify/evidence.js G1-G9, its G4 every attack effect a box or listed as not counted)
      defence      what protects the unit, or the unit it is given to: Feel No Pain, an invulnerable save, -1 Damage to an attack
                   allocated to it, Damage 0, -1 to hit / wound or worse AP against attacks that target it (DEFENCE). Said by its
                   "When targeted" readings: def, calcDef, defCalc, a guard line, the Feel No Pain on its Rules line, a marked InSv.
@@ -170,19 +164,8 @@ function abilityGaps(u, ab){
     if(kwIf && !hasKw(kwIf[1].trim())) continue;
     const b = bonusOf(s), miss = [];
     let check = null;
-    if(b.att.length && RILED.test(s)){
-      const rl = r.attack.filter(m => m.cond === 'riled' || /riled/i.test((m.when || '') + ' ' + (m.selfWhen || '')));
-      const said = rl.map(m => [m.note, JSON.stringify(m.set || {}), JSON.stringify(m.calc || {})].join(' ')).join(' | ');
-      for(const id of b.att) if(!rl.length || !covers(id, said, ATTACK)) miss.push(id);
-      if(miss.length) check = 'riled';
-    } else if(b.att.length && (CONDITION.test(s) || ((BACK.test(s) || /\b(?:can|may) use this ability\b|\bselect(?:s|ed)? one\b/i.test(pre)) && CONDITION.test(pre)))){
-      for(const id of b.att) if(!covers(id, all, ATTACK)) miss.push(id);
-      if(miss.length) check = 'conditional';
-    } else if(b.att.some(id => ROLLS.includes(id))){
-      // (with no condition: a weapon ability or a characteristic is marked on the weapons; a roll's bonus cannot be, it needs a reading)
-      for(const id of b.att.filter(id => ROLLS.includes(id))) if(!covers(id, all, ATTACK)) miss.push(id);
-      if(miss.length) check = 'conditional';
-    }
+    // (an attack bonus: the unit's footnotes and the Damage tab's boxes are data.js BOXES, made from these words by script; verify/evidence.js
+    // G4 holds every attack effect of them to a box or to its words listed as not counted. Only the defence side is a reading)
     // (a defence is said by a "When targeted" reading, not by an attack footnote that happens to say "damage" or "AP")
     const dmiss = b.def.filter(id => !covers(id, r.defSaid + ' | ' + r.marks.join(' | '), DEFENCE));
     if(dmiss.length){ check = check || 'defence'; miss.push(...dmiss); }

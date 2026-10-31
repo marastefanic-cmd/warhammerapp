@@ -281,7 +281,7 @@ for (const nu of nrUnits) {
     if (prev.kwOnly) { const keep = Object.entries(prev.kwOnly).filter(([k]) => u.kw.includes(k)); if (keep.length) u.kwOnly = Object.fromEntries(keep); }
     if (prev.partialRules) { const keep = Object.entries(prev.partialRules).filter(([k]) => u.rules.includes(k)); if (keep.length) u.partialRules = Object.fromEntries(keep); }
     const names = new Set(u.abilities.map(a => a.name));
-    for (const k of ['mods', 'aura']) {
+    for (const k of []) {   // (footnotes and auras: the boxes of the unit's rules, data.js BOXES, not a reading of the list)
       const keep = (prev[k] || []).filter(m => !m.from || names.has(m.from) || D.factions[factionId].armyRules.some(r => r.name === m.from) || detIds.some(id => detRules_(F.detachments[id]).some(r => r.name === m.from)));
       (prev[k] || []).filter(m => !keep.includes(m)).forEach(m => note(tag0, k + ' from ' + m.from + ' dropped: the unit no longer has it'));
       if (keep.length) u[k] = keep;
@@ -297,7 +297,7 @@ for (const nu of nrUnits) {
       if (d.short) u.short = d.short;
       const names = new Set(u.abilities.map(a => a.name)), weapons = new Set([...u.ranged, ...u.melee].map(w => w.group || w.name));
       const sameWords = n => { const a1 = u.abilities.find(a => a.name === n), a2 = (d.abilities || []).find(a => a.name === n); return a1 && a2 && (appText(a1.text).s === appText(a2.text).s || (a1._plain && textEq(a2.text, a1.text))); };
-      for (const k of ['mods', 'aura']) {
+      for (const k of []) {   // (footnotes and auras: the boxes of the unit's rules, data.js BOXES, not a reading of the list)
         const keep = (d[k] || []).filter(m => (!m.weapon || weapons.has(m.weapon)) && (!m.from || (names.has(m.from) && sameWords(m.from)) || armyNames.has(m.from)));
         if (keep.length) { u[k] = JSON.parse(JSON.stringify(keep)); reused.push(tag0 + ': ' + k + ' from ' + d._army + '/' + d.id); }
       }

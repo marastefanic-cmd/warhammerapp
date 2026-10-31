@@ -411,7 +411,7 @@ function main() {
       if (!inList && (S.mods || S.aura || S.guard || (S.abilities || []).some(a => a.def))) fail('tables', id + ': marked not-read but has readings or When targeted lines');
     }
     // the detachments the catalogue adds: in FACTIONS as the catalogue has them, but for verify/derive.js's labels
-    { const F = D.factions[faction] || { detachments: {} }, LAB = ['phases', 'turn', 'turns', 'needs', 'at', 'ph'];
+    { const F = D.factions[faction] || { detachments: {} }, LAB = ['phases', 'turn', 'turns', 'needs', 'at', 'ph', 'limit'];   // (limit: verify/lines.js L0, from RESTRICTIONS)
       const unlab = x => JSON.parse(JSON.stringify(x, (k, v) => LAB.includes(k) ? undefined : v));
       for (const [id, d] of Object.entries(cat.detachmentRows || {})) {
         checked.tables++;
