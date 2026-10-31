@@ -64,11 +64,34 @@ const READ_FP = 'readOf', READ_BY = 'readBy', READ_WHY = 'listWhy';   // (listWh
 const READ_COLS = {
   // (the Damage tab's own reading columns, calcMods, calcNc, both, limit, are retired: its boxes are BOXES, made by script, "derived")
   rule:['mod', 'calcDefs', 'parts', 'statNote'],
-  strat:['mod', 'help', 'shield', 'defCalc', 'defPick', 'calcNote', 'limit', 'lasts', 'react', 'weaponKw'],
+  strat:['mod', 'shield', 'defCalc', 'defPick', 'calcNote', 'limit', 'lasts', 'react', 'weaponKw'],
   ability:['riled', 'damaged', 'defAlways', 'defCalc', 'calcDef', 'fightOnDeath', 'comeback', 'calcNote', 'lasts'],
 };
 const FP_KEYS = Object.values(FINGERPRINT).concat(READ_FP, READ_BY, READ_WHY);   // hidden from the app, and from the helpers' keys
 const fp = s => crypto.createHash('sha256').update(String(s)).digest('hex').slice(0, 8);
+// GW's order of what a datasheet prints (verify/gw-order.js: by position on its Wahapedia page), loaded on first use
+let GWO_ = null; const GWO = () => GWO_ || (GWO_ = require('./gw-order')(ROOT));
+// the lists' rows in GW's order (weapon rows, a weapon's keywords, abilities, the Rules line), with each row's comments moved with it
+function gwOrder(R){
+  const before = R.armies.map(a => a.units.map(u => Object.fromEntries(ROWS.map(k => [k, Array.isArray(u[k]) ? u[k].slice() : null]))));
+  GWO().units(R.armies);
+  const C = {};
+  for(const [pk, c] of Object.entries(R.comments)){
+    const p = JSON.parse(pk);
+    if(p[1] === 'units' && p.length >= 5 && ROWS.includes(p[3]) && typeof p[4] === 'number'){
+      const was = before[p[0]] && before[p[0]][p[2]] && before[p[0]][p[2]][p[3]], now = R.armies[p[0]].units[p[2]][p[3]];
+      if(was && now && was[p[4]]) p[4] = now.indexOf(was[p[4]]);
+    }
+    C[JSON.stringify(p)] = c;
+  }
+  R.comments = C;
+}
+// the lists, the order of their rows, keywords and Rules line aside (what --write may change: GW's order, gwOrder)
+const ORDERED = ['ranged', 'melee', 'abilities', 'kw', 'rules'];
+// (--write: the keywords' content too, which GW's datasheets give: verify/keywords.js checks it)
+const noKw = A => A.map(a => Object.assign({}, a, { units:a.units.map(u => Object.assign({}, u, { kw:null })) }));
+const unordered = A => { const un = x => Array.isArray(x) ? x.map(un) : x && typeof x === 'object' ? Object.fromEntries(Object.entries(x).map(([k, y]) => [k, ORDERED.includes(k) && Array.isArray(y) ? un(y).map(z => stable(z)).sort() : un(y)])) : x;
+  return un(JSON.parse(JSON.stringify(A, (k, x) => FP_KEYS.includes(k) || k === 'own' ? undefined : x))); };   // (the fingerprints aside first: they are no part of a row)
 
 const MARK = {
   sheets:['// ---- DATASHEETS: written by verify/tables.js --write (edit a datasheet here; --write keeps the table in shape) ----', '// ---- end of DATASHEETS ----'],
@@ -102,12 +125,15 @@ function resolveArmies(armies, sheets, order, factions, opts){
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values
   function sorted(o, keys){ var out = {}, i, k; for(i = 0; i < keys.length; i++) if(keys[i] in o) out[keys[i]] = o[keys[i]]; for(k in o) if(!(k in out)) out[k] = o[k]; return out; }
-  function rowOf(part, kind, name){ var rows = (part && part[kind]) || [], j; for(j = 0; j < rows.length; j++) if(rows[j].name === name) return j; return -1; }
+  function rowOf(part, kind, name, group){ var rows = (part && part[kind]) || [], j; for(j = 0; j < rows.length; j++) if(rows[j].name === name && (group === undefined || (rows[j].group || null) === group)) return j; return -1; }
   function find(parts, kind, r){
     var name = kind === 'stats' ? String(r.name).replace(/ ×\\d+$/, '') : r.name, i, j;
-    if(r.of !== undefined) return { p:r.of, j:rowOf(parts[r.of], kind, name) };
-    for(i = 0; i < parts.length; i++) if(parts[i].name === r.who && (j = rowOf(parts[i], kind, name)) >= 0) return { p:i, j:j };
-    for(i = 0; i < parts.length; i++) if((j = rowOf(parts[i], kind, name)) >= 0) return { p:i, j:j };
+    // (a row by its name and, where its datasheet has two rows of the name, the group the entry names: the Bloodthirster's "strike" of its
+    // Great axe of Khorne, not of its Axe of Khorne)
+    var g = kind === 'stats' ? undefined : r.group;
+    if(r.of !== undefined) return { p:r.of, j:rowOf(parts[r.of], kind, name, g) };
+    for(i = 0; i < parts.length; i++) if(parts[i].name === r.who && (j = rowOf(parts[i], kind, name, g)) >= 0) return { p:i, j:j };
+    for(i = 0; i < parts.length; i++) if((j = rowOf(parts[i], kind, name, g)) >= 0) return { p:i, j:j };
     return { p:-1, j:-1 };
   }
   // names alike in case and apostrophe (New Recruit's "Martial Ka'tah", Wahapedia's "Martial Ka’tah")
@@ -405,6 +431,12 @@ function build(R){
     return why;
   };
   for(const U of units) U.why = unitWhy(U);
+  // keywords in GW's order: the KEYWORDS line, then FACTION KEYWORDS, the list's own (Warlord, a rule's: why.kw) last
+  // (and their content: GW's KEYWORDS and FACTION KEYWORDS, and of the unit's own only what GW prints or the list takes, verify/gw-order.js
+  // gwKeywords; verify/keywords.js checks it)
+  for(const U of units){ const parts = GWO().partsOf(U.u, U.a.faction), own = Object.keys((U.why || {}).kw || {});
+    const kw = GWO().gwKeywords(U.u, parts, own, GWO().partCats(bsIds, U.a.id + '/' + U.u.id, parts)); if(kw) U.u.kw = kw.slice();
+    GWO().orderKw(U.u, parts, own, kw && kw.names); }
   // the readings, each to the row it reads (readingTables); the list's own keep their reason
   const RT = readingTables(R, units, conflicts);
   for(const U of units){
@@ -503,6 +535,17 @@ function build(R){
       for(const f of Object.keys(r)) if(!(f in R.ds) && !R.conflict.has(f)) R.ds[f] = r[f];
     }
   }
+  // each datasheet's rows in GW's order (verify/gw-order.js), whichever list shows them first, a faction catalogue's rows too (after the
+  // catalogue's rows are in: they sit where GW's page has them, not after the lists'); a catalogue row's keywords and Rules line likewise:
+  // GW's keywords (gwKeywords: BSData's categories for its name keyword) in GW's order, as a list's unit's
+  for(const s of sheets.values()){
+    const g = GWO().sheet(s.id, Object.assign({ name:s.name, faction:s.faction }, Object.fromEntries(ROWS.map(k => [k, [...s.rows[k].values()].map(R => Object.assign({}, R.obs.length ? R.obs[0].r : R.ds, { _k:R.key }))]))));
+    for(const kind of ['ranged', 'melee', 'abilities']){
+      const rs = g[kind].map(r => s.rows[kind].get(r._k));
+      s.rows[kind] = new Map(rs.map(R => [R.key, R]));
+    }
+    if(s.catalog === 'only' || (s.catFilled && (s.catFilled.has('kw') || s.catFilled.has('rules')))) GWO().catalogSheet(s.ds, s.id, [...s.rows.abilities.values()].map(R => R.ds));
+  }
   // comments on rows: on the datasheet's row when every place that shows it has the same; else on the lists' rows
   const SC = {}, AC = {};
   const addC = (M, p, c) => { const k = JSON.stringify(p); const x = M[k] = M[k] || { above:[], inline:[] }; x.above.push(...c.above); x.inline.push(...c.inline); };
@@ -548,6 +591,8 @@ function build(R){
     for(const k of Object.keys(R.ds)) if(k !== 'name' && !(k in o.r) && !FP_KEYS.includes(k)) e[k] = null;
     for(const k of R.conflict) if(!(k in o.r) && !listLevel(o, k) && !FP_KEYS.includes(k)) over[k] = null;
     if(findPart(o.U, o.kind, e) !== o.part) e.of = o.part;
+    // (a datasheet with two rows of this name, of two weapons: the entry names its row's group, as the resolver finds it by both)
+    if(o.kind !== 'stats' && [...o.sheet.rows[o.kind].values()].some(x => x !== R && String(x.key).split('\0')[0] === R.ds.name)) e.group = R.ds.group || null;
     if(o.why) e.why = o.why;
     if(Object.keys(over).length) e.over = over;
     return { e, plain:Object.keys(e).length === 1 && e.name === R.key };
@@ -962,6 +1007,7 @@ const RETURN_RE = /\nreturn \{ version:VERSION[^\n]*\};\n/;
 function tableForm(src, opts){
   opts = opts || {};
   const R = read(src);
+  gwOrder(R);
   if(opts.stampRows) opts.stampRows(R.armies, R.D);
   const B = build(R);
   // the parts of data.js outside the tables, as they are (FACTIONS with its rows' readings)
@@ -1245,7 +1291,7 @@ if(require.main === module){
     const re = [...t.B.RT.groups.values()].filter(g => g.rederived), skip = new Map();
     for(const g of re) for(const U of g.obs.keys()) skip.set(U.a.id + '/' + U.u.id, (skip.get(U.a.id + '/' + U.u.id) || new Set()).add(g.kind + '\0' + g.from));
     const drop = A => A.map(a => Object.assign({}, a, { units:a.units.map(u => { const sk = skip.get(a.id + '/' + u.id); if(!sk) return u; const v = Object.assign({}, u); for(const k of READ) if(v[k]) v[k] = v[k].filter(m => !sk.has(k + '\0' + m.from)); return v; }) }));
-    if(!sameLists(drop(before.armies), drop(after.armies))){ console.log('tables: NOT written: the lists would resolve otherwise than they are (a bug in verify/tables.js)'); process.exit(1); }
+    if(!sameLists(unordered(noKw(drop(before.armies))), unordered(noKw(drop(after.armies))))){ console.log('tables: NOT written: the lists would resolve otherwise than they are (a bug in verify/tables.js)'); process.exit(1); }
     if(re.length) console.log('tables: written again from their changed words (derived readings, verify/derive.js): ' + re.map(g => (g.sid || g.path.join(' · ')) + ' · ' + g.from + (g.list.length ? '' : ' (no longer derivable: none now)')).join('; '));
     fs.writeFileSync(DATA, t.text);
     fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));

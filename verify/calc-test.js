@@ -402,6 +402,9 @@ const exact = (s, k) => { const c = dm.calc(s); return C.explain(c.input).total[
 const box = (s, from, pred) => dm.calc(s).rules.find(x => x.m.from === from && (!pred || pred(x))) || {};
 const boxE = (s, from, e) => box(s, from, x => JSON.stringify(x.e) === JSON.stringify(e));
 const strat = (s, from) => box(s, from, x => !!x.m.strat);
+// a weapon's profile picked by its name (the rows are in GW's datasheet order: no case leans on which profile comes first)
+const pickBy = (army, atk, kind, group, name, who) => { const u = dm.D.armies.find(a => a.id === army).units.find(x => x.id === atk), ps = u[kind].filter(w => w.group === group && (w.who || '') === (who || ''));
+  return { [kind + ':' + group + '|' + (who || '')]:ps.findIndex(w => w.name === name) }; };
 const LKs = { army:'princes', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{} }, LK = box(LKs, 'Legendary Killer').k;
 const DAKKA = box({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{} }, 'Dakka! Dakka! Dakka!', x => !!x.e.range).k;
 const cp = x => JSON.parse(JSON.stringify(x));   // (the state is the one passed: each case its own copy)
@@ -454,7 +457,7 @@ const app = [
   // Bringer of Justice (+1 to the bearer's melee hit rolls, always) and Macro-extinction Protocols' two parts ticked, at a Knight
   // Paladin set by hand (melee: no InSv): Atrapos lascutter WS 3+ +2 → 2+: 8 × 5/6 + 8/6 [SUSTAINED HITS 1] = 8 hits × 5/6 (S14 vs T11:
   // 3+, +1 → 2+) × 5/6 (AP-3 vs Sv 3+: 6+) × D4 × 5/6 (Feel No Pain 6+) = 18.5
-  ['the target’s keywords: Macro-extinction Protocols ticked, with Bringer of Justice', () => { const s = { army:'4-megas-and-a-destrier', ph:'fight', atk:'cerastus-knight-atrapos', typed:cp(KNIGHT_M) };
+  ['the target’s keywords: Macro-extinction Protocols ticked, with Bringer of Justice', () => { const s = { army:'4-megas-and-a-destrier', ph:'fight', atk:'cerastus-knight-atrapos', typed:cp(KNIGHT_M), pick:pickBy('4-megas-and-a-destrier', 'cerastus-knight-atrapos', 'melee', 'Atrapos lascutter', 'high intensity') };
     s.on = Object.fromEntries(dm.calc(s).rules.filter(r => r.m.from === 'Macro-extinction Protocols').map(r => [r.k, true])); return exact(s); }, 8 * 5 / 6 * 5 / 6 * 4 * 5 / 6],
   // Beacons of Rage, the Eightbound's own aura: +1 to hit (vs non-MONSTER/VEHICLE targets) and +1 to wound (target Below Half-strength),
   // two boxes, unticked. 3 Chainblades, A6 WS 3+: 18 × 4/6, or 5/6 with the first; S8 vs T9: 5+ (2/6), or 4+ (3/6) with the second;
@@ -567,7 +570,7 @@ const app = [
   // × (3/6 + 1/6 × 3/6) × 3/6 fail = 2.04
   // (two boxes, as GW's two lines: "If the Protector Imperative is active …", "If the Conqueror Imperative is active …")
   ['Murderous Imperative, Conqueror', () => { const s = { army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{ n:10, T:4, W:1, Sv:4 } };
-    s.on = { [boxE(s, 'Murderous Imperative', { rrWound:'1s' }).k]:true }; return C.explain(dm.calc(s).input).groups[0].dmg; }, 14 * 3 / 6 * 21 / 36 * 3 / 6],
+    s.on = { [boxE(s, 'Murderous Imperative', { rrWound:'1s' }).k]:true }; const c = dm.calc(s); return C.explain(c.input).groups[c.input.groups.findIndex(g => /Galvanic rifle/.test(g.name))].dmg; }, 14 * 3 / 6 * 21 / 36 * 3 / 6],
   ['a pick: Unshackled Wrath is a choice now', () => +(box({ army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{} }, 'Unshackled Wrath').state === 'choice'), 1],
   // help from another unit of the list: Clever Know-wotz (the Mek's), offered to the Big Mek Dakkarig unticked, named with its giver;
   // ticked, +1 to hit: the Blitzkannon at a Knight Paladin set by hand 8 × 4/6 (BS 4+ → 3+) × 2/6 × 4/6 × 2 × 5/6 = 1.98
@@ -749,7 +752,7 @@ cases.push(['a tick that lasts: the fight’s +1 AP', () => (p => p.beats[1].M.R
 cases.push(['a tick that lasts: unticked in the fight alone', () => (p => +(!p.beats[1].M.rules.find(r => r.k === DOCK().k).on && p.beats[0].M.rules.find(r => r.k === DOCK().k).on))(kas({ 'me:fight':{ on:{ [DOCK().k]:false } } })), 1]);
 // Clever Know-wotz (oneModel) on a unit of 6 Killa Kans: +1 to hit for one model's weapons: of 12 Kill Shot attacks the 2 of one Kan
 // hit on a roll one better: + 2 × 1/6 hits
-cases.push(['Clever Know-wotz: one model’s weapons', () => { const s = { army:'shooty', ph:'shooting', atk:'killa-kans', typed:{ n:20, T:4, W:1, Sv:7 } };
+cases.push(['Clever Know-wotz: one model’s weapons', () => { const s = { army:'shooty', ph:'shooting', atk:'killa-kans', typed:{ n:20, T:4, W:1, Sv:7 }, pick:pickBy('shooty', 'killa-kans', 'ranged', 'Kan Blasta', 'Kill Shot') };
   const h0 = C.explain(dm.calc(s).input).total.hits; s.on = { [box(s, 'Clever Know-wotz').k]:true }; const c = dm.calc(s);
   return (c.input.groups.filter(x => x.mods.some(m => /Clever Know-wotz/.test(m.from))).reduce((t, x) => t + x.n, 0) === 1) * (C.explain(c.input).total.hits - h0); }, 2 / 6, 1e-9]);
 // "this unit or the target within range of an objective": one fact for the pair, said once, ticks the rules of either

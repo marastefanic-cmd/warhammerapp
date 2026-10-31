@@ -693,6 +693,13 @@ const wahaDs = name => {
 };
 const gwN = v => nm(String(v == null ? '' : v)).replace(/\s*x\s*/gi, '×').replace(/^(?:-|–|N\/A)?$/, '–').replace(/- (?=[A-Z])/g, '-').toLowerCase();
 const gwKw = k => nm(k).toUpperCase().replace(/- (?=[A-Z])/g, '-');
+// keyword pairs the Core Rules make one keyword: "A/B" in a core stratagem's TARGET where the Core Rules say "The <B> Stratagem is the same
+// as the <that> stratagem" (EXPLOSIVES/GRENADES)
+const KW_PAIRS = (() => { let core = ''; try { core = fs.readFileSync(path.join(ROOT, 'rules/core-rules.md'), 'utf8').replace(/\*\*/g, ''); } catch (e) {}
+  const out = []; for (const st of D.coreStratagems || []) for (const m of String(st.target).matchAll(/\*\*([A-Z][A-Z -]*)\/([A-Z][A-Z -]*)\*\*/g)) {
+    const same = [...core.matchAll(/The (\S+) Stratagem is the same as the (.+?) stratagem/gi)].some(x => lc(x[2]) === lc(st.name) && gwKw(m[2]).startsWith(gwKw(x[1])));
+    if (same) out.push([gwKw(m[1]), gwKw(m[2])]); }
+  return out; })();
 const gwDevs = [];    // { unit, kind, row, field, app, bsdata, gw, file }
 const gwFixed = [];
 const gwNames = [];   // a weapon BSData names otherwise than GW's datasheet (the app keeps BSData's name: New Recruit's)   // BSData's entry differs from GW, but New Recruit's export already has GW's value
@@ -832,7 +839,7 @@ for (const u of units) {
       let have = u.kw.find(x => gwKw(x) === gwKw(k));
       // a keyword GW prints for some models that the export lacks (the Pink Horrors' BRIMSTONE, for the Brimstone Horrors Split adds):
       // GW's, added and declared, as for a keyword of all models
-      if (!have) { have = k.toLowerCase().replace(/(^|[\s-])([a-z])/g, (m0, a, b) => a + b.toUpperCase()); u.kw.push(have); u.kw.sort();
+      if (!have) { have = k.toLowerCase().replace(/(^|[\s-])([a-z])/g, (m0, a, b) => a + b.toUpperCase()); u.kw.push(have);
         gwDevs.push({ unit: u.id, kind: 'kw', field: 'kw', app: have, bsdata: null, file: W.file }); }
       // (GW's plural, "PINK HORRORS: PINK", is the row of one such model, "Pink Horror"; no row: GW's name of the models, in title case)
       const pn = x => lc(x).replace(/rn/g, 'm'), row = u.stats.find(r => pn(r.name.replace(/ ×\d+$/, '')) === pn(mn)) || u.stats.find(r => pn(r.name.replace(/ ×\d+$/, '')) + 's' === pn(mn));
@@ -859,6 +866,24 @@ for (const u of units) {
       if (u.kwNote) { const ex = u.kwNote.replace(/ comes? from .*$/, '').split(', ').filter(x => x !== have), tail = / from .*$/.exec(u.kwNote)[0]; u.kwNote = ex.length ? ex.join(', ') + (ex.length > 1 ? ' come' : ' comes') + tail : undefined; if (!u.kwNote) delete u.kwNote; }
     }
   }
+  // one keyword under two names: a core stratagem's TARGET names "A/B" as one keyword, and the Core Rules say the stratagem named for B is
+  // the same as it ("**EXPLOSIVES/GRENADES**"; "The Grenade Stratagem is the same as the Explosives stratagem"): the export's name that
+  // GW's datasheet does not print, where it prints the other, is GW's (BSData's GRENADES on an Orks Warboss, whose datasheet has EXPLOSIVES)
+  // (and a keyword that names one of the unit's faction keywords, BSData's ANATHEMA PSYKANA category beside FACTION KEYWORDS: ANATHEMA
+  // PSYKANA: GW prints it under FACTION KEYWORDS only, so it is that one)
+  const pageOf = () => u._parts.map(p => (wahaDs(nm(p.name)) || {}).file).filter(Boolean).join(', ');
+  for (const [a, b] of KW_PAIRS) for (const [x, y] of [[a, b], [b, a]]) {
+    if (!printed.some(k => gwKw(k) === y) || printed.some(k => gwKw(k) === x)) continue;
+    const have = u.kw.find(k => gwKw(k) === x); if (!have) continue;
+    u.kw.splice(u.kw.indexOf(have), 1);
+    gwDevs.push({ unit: u.id, kind: 'kw', field: 'kw', app: null, bsdata: have, file: pageOf(), why: 'the Core Rules’ ' + a + '/' + b + ': one keyword; GW’s datasheet prints ' + y });
+  }
+  for (const k of printed.filter(k => /^Faction: /.test(k))) {
+    const f = k.replace(/^Faction: /, ''); if (printed.some(x => gwKw(x) === gwKw(f))) continue;
+    const have = u.kw.find(x => gwKw(x) === gwKw(f)); if (!have) continue;
+    u.kw.splice(u.kw.indexOf(have), 1);
+    gwDevs.push({ unit: u.id, kind: 'kw', field: 'kw', app: null, bsdata: have, file: pageOf(), why: 'GW’s datasheet prints ' + f.toUpperCase() + ' under FACTION KEYWORDS only (Faction: ' + f + ')' });
+  }
   for (const k of printed) {
     if (u.kw.some(x => gwKw(x) === gwKw(k))) continue;
     const tc = k.replace(/^Faction: /, '').toLowerCase().replace(/(^|[\s-])([a-z])/g, (m, a, b) => a + b.toUpperCase());
@@ -867,7 +892,7 @@ for (const u of units) {
     const sing = u.kw.find(x => gwKw(x) + 'S' === gwKw(k) && !printed.some(y => gwKw(y) === gwKw(x)));
     if (sing) u.kw.splice(u.kw.indexOf(sing), 1);
     gwDevs.push({ unit: u.id, kind: 'kw', field: 'kw', app: kk, bsdata: sing || null, file: u._parts.map(p => (wahaDs(nm(p.name)) || {}).file).filter(Boolean).join(', ') });
-    u.kw.push(kk); u.kw.sort();
+    u.kw.push(kk);   // (in GW's order: verify/tables.js --write, verify/gw-order.js)
     // (a keyword only the datasheet of a part after the first prints, the led Pink Horrors' INFANTRY: from that unit, as the kwNote says
     // of the export's own)
     const firstDs = wahaDs(nm(u._parts[0].name)), fromFirst = firstDs && firstDs.ds && firstDs.ds.keywords.concat(firstDs.ds.factionKeywords.map(x => 'Faction: ' + x)).some(x => gwKw(x) === gwKw(k));
@@ -877,7 +902,7 @@ for (const u of units) {
     }
   }
 }
-for (const d of gwDevs) filled.push({ what: 'GW over BSData: ' + d.unit + ' ' + (d.row ? d.row + ' ' : '') + d.field + ' = ' + (d.app === null ? 'without ' + d.bsdata + ' (the ' + d.det + ' detachment’s keyword; BSData/New Recruit give it always)' : d.app + (d.bsdata ? ' (BSData/New Recruit: ' + d.bsdata + ')' : ' (not in BSData)')), from: 'Wahapedia datasheet ' + d.file });
+for (const d of gwDevs) filled.push({ what: 'GW over BSData: ' + d.unit + ' ' + (d.row ? d.row + ' ' : '') + d.field + ' = ' + (d.app === null ? 'without ' + d.bsdata + (d.why ? ' (' + d.why + ')' : ' (the ' + d.det + ' detachment’s keyword; BSData/New Recruit give it always)') : d.app + (d.bsdata ? ' (BSData/New Recruit: ' + d.bsdata + ')' : ' (not in BSData)')), from: 'Wahapedia datasheet ' + d.file });
 
 // ---------------------------------------------------------------- wording: Wahapedia's datasheet (GW's codex), found by BSData's words
 const wahaPagesOf = u => uniq(u._parts.map(p => nm(p.name))).map(n => pageFac(n) && WW.wahaPage(n, pageFac(n))).filter(Boolean);
@@ -1391,7 +1416,7 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
   // keywords a rule of the list gives that BSData's entry and the export lack (the Forgefiend's SOUL FORGE: Soul Forge Boons)
   // (and a category of BSData's GW's datasheet does not print, kw.drop: the Chaos Spawn's SPAWN; verify/bsdata.js's difference is declared below)
   for (const k of (h.kw || {}).drop || []) { const i = u.kw.indexOf(k); if (i < 0) { want(uid + ' · ' + k, 'hand file kw.drop', 'no keyword of this name'); continue; } u.kw.splice(i, 1); handDone.push({ what: 'keyword ' + k + ' of ' + u.name + ' left out', by: 'hand (Claude)', text: h.kw.why }); }
-  for (const k of (h.kw || {}).add || []) { if (!u.kw.includes(k)) { u.kw.push(k); u.kw.sort(); } handKw.push({ unit: uid, kw: k, why: h.kw.why, evidence: h.kw.evidence }); handDone.push({ what: 'keyword ' + k + ' of ' + u.name, by: 'hand (Claude)', text: h.kw.why }); }
+  for (const k of (h.kw || {}).add || []) { if (!u.kw.includes(k)) { u.kw.push(k); } handKw.push({ unit: uid, kw: k, why: h.kw.why, evidence: h.kw.evidence }); handDone.push({ what: 'keyword ' + k + ' of ' + u.name, by: 'hand (Claude)', text: h.kw.why }); }
 }
 // ---------------------------------------------------------------- the readings (docs/tables.md, Readings)
 // A reading (a footnote, mods; an aura; a guard line) is on the row of the rule it reads: a datasheet's ability's on its DATASHEETS

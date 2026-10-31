@@ -1,0 +1,38 @@
+[
+ {
+  "key": "113474defb4daf15",
+  "where": "catalog · tyranids/hyperadapted-raveners",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main eaccb7d (key af4677a8e1483126): kwOnly Character, Synapse from Ravener Prime. Re-keyed only by the keyword order of its source (GW order). Checked by script."
+ },
+ {
+  "key": "3913f4f95b99ed3e",
+  "where": "catalog · tyranids/hyperadapted-raveners",
+  "verdict": "ok",
+  "why": "Judgement identical to the one approved on main eaccb7d (key aed4eec55bd87427): partialRules Shadow in the Warp from Ravener Prime. Re-keyed only by the keyword order of its source. Checked by script."
+ },
+ {
+  "key": "a919cbee439a94a7",
+  "where": "resolveArmies",
+  "verdict": "ok",
+  "why": "The only change from the approved judgement (716181c586423305, on main and 7b81492) is rowOf/find: a row matches by name and, where the entry names a group, by that group (stats never). Entries without group resolve as before. All 213 list units resolve byte-identically to 7b81492, including the Bloodthirster's Great axe of Khorne profiles now that the catalogue's Axe of Khorne rows come first in GW's order."
+ },
+ {
+  "key": "order-3 · catalogue rows not in GW order",
+  "where": "verify/tables.js build() (the same-name slot rule); verify/gw-order.js orderWeapons (fixed in 600f22a)",
+  "verdict": "ok",
+  "why": "Fixed in 600f22a. data.js's resolver (rowOf) finds a row by name and, where the entry names one, its group; tables.js writes the entry's group only where its datasheet has two rows of the name. The same-name slot rule is gone, and orderWeapons passes parts. All 25 lists resolve byte-identically to 7b81492, and BOXES are unchanged. Only 3 DATASHEETS rows changed, all now in GW's order: Bloodthirster Axe of Khorne strike/sweep then Great axe of Khorne strike/sweep; Tyrant Guard Bone cleaver…, Crushing claws…, Scything talons…; Shield-Captain Castellan Axe, Eternity-pattern Paragon Blade, Guardian Spear, Pyrithite Spear. 0 of 261 datasheets are out of GW order. The strict list checker (rev2/order.py) finds 0 issues. The packKeywords control-character strip is in."
+ },
+ {
+  "key": "order-3 · Venatari with Verutum Lances name keyword",
+  "where": "verify/deviations-keywords.json (catalog, kw name) (332e38d)",
+  "verdict": "ok",
+  "why": "The coordinator's decision, implemented in 332e38d: the Custodes Faction Pack v1.2's 'Imperial Armour Datasheets' section is declared superseded by the 11e codex (packExclude). Venatari with Kinetic Destroyers takes BSData's exact-name category; Venatari with Verutum Lances is declared 'no unique keyword'. Mutation-tested in a copy, with the 30-09 pack wired as the faction's pack: with the exclusion, the gate passes and no Custodes page takes pack keywords; without it, 8 sheets take them (Contemptor-Achillus, Contemptor-Galatus, Telemon, Pallas, Caladius, Coronus, Ares, Orion) and the gate fails 8 times (DREADNOUGHT, GRAV-ASSAULT); a misnamed section fails ('has no section'). Notes: (1) the exclusion is inert today, because factions.json wires the Custodes printed-product-updates file, not this pack, as the keyword pack; it guards a later rewiring. (2) The Warhammer Community evidence is a scratchpad file (scratchpad/iaq/newcust.html, whose quote 'Units featured in the new Codex for the first time: … Venatari with Kinetic Destroyers, Venatari with Verutum Lances' I confirmed). It is not under verify/.cache, so caching it there would make the evidence reproducible."
+ },
+ {
+  "key": "order-3 · checked ok",
+  "where": "merge 7b81492",
+  "verdict": "note",
+  "why": "OK: BOXES byte-identical to main's 275 (block text and resolved). Catalogue rows equal to main's apart from order and keywords (only the Tesseract Vault's mods differ: the branch's derived reading). Factions equal to main, apart from the branch's help removals. tables.js --write on a clean 7b81492 is byte-identical. The fingerprint strip before the order-free compare is right (sameLists drops fingerprints anyway; sorting with them in made the compare fail). The pack KEYWORDS rule is consistent with GW over Wahapedia, and no list unit changes. Only 3 pack pages differ beyond case: Tormentbringer (content: the pack prints TORMENTBRINGER, line 2736-2737), The Red Terror and Skull Altar (order). The packKeywords control characters are now stripped (600f22a). SHIELD-CAPTAIN ×2 declarations: quotes on their pages, as for the six. Tyranid Warriors with Melee Bio-weapons losing TYRANID WARRIORS: right; the page prints only its own name keyword, and TYRANID WARRIORS is Warrior Bioform Onslaught's detachment keyword. The 8 weapon spelling declarations: each wahaName is on its page, and A S AP D and keywords equal the data row. diffs-merge equals the reviewed diffs, except healybois/nidzillas (FRAME's line, the removed note) and shooty's column counts (555/553, 143/142)."
+ }
+]

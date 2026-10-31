@@ -873,7 +873,8 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
     const nrW = nu[kind].map(r => Object.assign(nrWeapon(r, nu.who), { r }));
     const appW = (au[kind] || []).map(w => ({ group: w.group ? nm(w.group) : null, name: nm(w.name), who: w.who ? nm(w.who) : null, w }));
     const wKey = x => (x.group ? x.group + ' - ' : '') + x.name + (x.who ? ' | ' + x.who : '');
-    cmp(kind, kind + ' (rows)', appW.map(wKey), nrW.map(wKey));
+    // (the rows as a set: the app has them in GW's datasheet order, verify/gw-order.js; New Recruit prints its own)
+    cmp(kind, kind + ' (rows)', appW.map(wKey).sort(), nrW.map(wKey).sort());
     const usedA = new Set();
     for (const nw of nrW) {
       const aw = appW.find(x => !usedA.has(x) && wKey(x) === wKey(nw));
@@ -892,7 +893,7 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
       cmp(kind, key + '.hunter', !!W.hunter, nw.hunter);
       // (each weapon ability once: New Recruit repeats one a rule of the list gives a weapon that has it already, "Ignores Cover, Torrent,
       // Ignores Cover" for the heavy flamer with Hunter’s Eye; GW's datasheet prints it once)
-      cmp(kind, key + '.kw', (W.kw || []).map(k => nm(k).toUpperCase()), [...new Set(splitItems(R.kw).map(k => nm(k).toUpperCase()))]);
+      cmp(kind, key + '.kw', (W.kw || []).map(k => nm(k).toUpperCase()).sort(), [...new Set(splitItems(R.kw).map(k => nm(k).toUpperCase()))].sort());   // (in GW's order in the app)
     }
   }
   // and each such name is one of the unit's abilities (enhancements included) or a detachment/army rule of the list

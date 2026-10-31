@@ -608,16 +608,16 @@
   "unit": "mek-tankbustas",
   "field": "melee (rows)",
   "app": [
-   "Mek's Toolz | Mek",
    "Choppa | Tankbustas",
-   "Gitstikka | Tankbustas"
+   "Gitstikka | Tankbustas",
+   "Mek's Toolz | Mek"
   ],
   "source": [
-   "Mek's Toolz | Mek",
    "Choppa | Tankbustas",
+   "Gitstikka | Tankbustas",
+   "Mek's Toolz | Mek",
    "Smash Hammer - Hunter | Tankbustas",
-   "Smash Hammer - Standard | Tankbustas",
-   "Gitstikka | Tankbustas"
+   "Smash Hammer - Standard | Tankbustas"
   ],
   "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/shooty.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): the Tankbustas Nob has two Rokkit Pistols and no Smash Hammer; the PDF (17 Oct 2026) is the older version.",
   "evidence": "verify/sources/nr-json/shooty.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
@@ -2166,14 +2166,175 @@
   "by": "verify/from-json.js"
  },
  {
-  "army": "nidzillas",
-  "unit": "neurogaunts",
-  "field": "abilities[Neurocytes].text",
-  "app": "While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.",
-  "source": "While this unit is within Synapse Range of your friendly Tyranids unit (excluding Neurogaunt units), it has the Synapse keyword.",
-  "where": "verify/sources/nr/nidzillas.txt p4",
-  "reason": "New Recruit (from BSData) prints Neurocytes with \"your friendly Tyranids unit\"; GW’s datasheet (the codex, Wahapedia) prints \"a friendly TYRANIDS unit\". The app has GW’s words (a GW-backed correction found by the Tyranids catalogue import, verify/from-bsdata.js).",
-  "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html, ABILITIES: \"Neurocytes: While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.\"; verify/sources/nr/nidzillas.txt p4: \"… of your friendly Tyranids unit …\"."
+  "army": "shooty",
+  "unit": "warboss",
+  "field": "kw",
+  "app": [
+   "Character",
+   "Explosives",
+   "Faction: Orks",
+   "Infantry",
+   "Warboss",
+   "Warlord"
+  ],
+  "source": [
+   "Character",
+   "Faction: Orks",
+   "Grenades",
+   "Infantry",
+   "Warboss",
+   "Warlord"
+  ],
+  "where": "verify/sources/nr/shooty.txt p9",
+  "reason": "GW’s datasheet prints EXPLOSIVES (\"KEYWORDS: INFANTRY; CHARACTER; EXPLOSIVES; WARBOSS\"); New Recruit (BSData) prints Grenades. The Core Rules make them one keyword (the Explosives stratagem’s TARGET \"EXPLOSIVES/GRENADES\"; \"The Grenade Stratagem is the same as the Explosives stratagem\"). The app has GW’s: EXPLOSIVES (verify/from-json.js, keyword pairs).",
+  "evidence": "verify/.cache/waha/ds/orks_Warboss.html, KEYWORDS; rules/core-rules.md (Explosives; Grenades Stratagem)."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "prosecutor-squad",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Prosecutor Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Prosecutor Squad"
+  ],
+  "where": "verify/sources/nr/lite-knights.txt p3",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "where": "verify/sources/nr/lite-knights.txt p4",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad-2",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "where": "verify/sources/nr/lite-knights.txt p5",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "prosecutor-squad",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Prosecutor Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Prosecutor Squad"
+  ],
+  "where": "verify/sources/nr/emperors-chosen.txt p6",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "witchseeker-squad",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "where": "verify/sources/nr/emperors-chosen.txt p7",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "dread-host",
+  "unit": "prosecutor-squad",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Prosecutor Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Prosecutor Squad"
+  ],
+  "where": "verify/sources/nr/dread-host.txt p7",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, KEYWORDS and FACTION KEYWORDS."
+ },
+ {
+  "army": "dread-host",
+  "unit": "witchseeker-squad",
+  "field": "kw",
+  "app": [
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "source": [
+   "Anathema Psykana",
+   "Faction: Anathema Psykana",
+   "Imperium",
+   "Infantry",
+   "Witchseeker Squad"
+  ],
+  "where": "verify/sources/nr/dread-host.txt p8",
+  "reason": "GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\"; \"FACTION KEYWORDS: ANATHEMA PSYKANA\"); New Recruit (BSData) prints it also as a plain keyword. The app has it once, as GW’s faction keyword (verify/from-json.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, KEYWORDS and FACTION KEYWORDS."
  },
  {
   "army": "nidzillas",
@@ -2195,5 +2356,104 @@
   "where": "verify/sources/nr/nidzillas.txt p9",
   "reason": "The owner's decision (30 Oct 2026): the Tyrannofex has FRAME, as GW's datasheet is printed on Wahapedia (its errata line \"Hierophant, Toxicrene, Tyrannocyte and Tyrannofex. Add the FRAME keyword.\"), as the app's Toxicrene and Tyrannocyte rows have it. New Recruit (BSData) has no FRAME category for the unit; GW's Tyranids Faction Pack (14-10) does not print the errata. The app adds FRAME.",
   "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS \"MONSTER; GREAT DEVOURER; FRAME; TYRANNOFEX\"; verify/review/result-catalog-tyranids.json (the owner's decision); verify/sources/nr/nidzillas.txt p9 (Tyrannofex, Categories)."
+ },
+ {
+  "army": "pubstomper",
+  "unit": "exalted-sorcerer-rubric-marines",
+  "field": "kw",
+  "app": [
+   "Battleline",
+   "Chaos",
+   "Character",
+   "Exalted Sorcerer",
+   "Faction: Thousand Sons",
+   "Grenades",
+   "Infantry",
+   "Psyker",
+   "Rubric Marines",
+   "Rubricae",
+   "Tzeentch"
+  ],
+  "source": [
+   "Battleline",
+   "Chaos",
+   "Character",
+   "Exalted Sorcerer",
+   "Faction: Thousand Sons",
+   "Grenades",
+   "Infantry",
+   "Psyker",
+   "Rubric",
+   "Rubric Marines",
+   "Rubricae",
+   "Tzeentch"
+  ],
+  "where": "verify/sources/nr/pubstomper.txt p2",
+  "reason": "GW’s datasheets do not print RUBRIC; New Recruit (BSData) prints it for the Rubric Marine w/ soulreaper cannon. The app has GW’s keywords (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Rubric-Marines.html, KEYWORDS."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "onager-dunecrawler",
+  "field": "kw",
+  "app": [
+   "Faction: Adeptus Mechanicus",
+   "Imperium",
+   "Onager Dunecrawler",
+   "Skitarii",
+   "Smoke",
+   "Vehicle",
+   "Walker"
+  ],
+  "source": [
+   "Faction: Adeptus Mechanicus",
+   "Imperium",
+   "Onager Dunecrawler",
+   "Skitarii",
+   "Vehicle",
+   "Walker"
+  ],
+  "where": "verify/sources/nr/purge-goes-the-foe.txt p9",
+  "reason": "GW’s datasheet prints SMOKE; New Recruit (BSData) does not. The app has GW’s keywords (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
+  "evidence": "verify/.cache/waha/ds/adeptus-mechanicus_Onager-Dunecrawler.html, KEYWORDS."
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "skarbrand",
+  "field": "kw",
+  "app": [
+   "Chaos",
+   "Character",
+   "Daemon",
+   "Epic Hero",
+   "Faction: Blood Legions",
+   "Khorne",
+   "Monster",
+   "Skarbrand",
+   "Summoned"
+  ],
+  "source": [
+   "Chaos",
+   "Character",
+   "Daemon",
+   "Epic Hero",
+   "Faction: Blood Legions",
+   "Khorne",
+   "Monster",
+   "Skarbrand"
+  ],
+  "where": "verify/sources/nr/big-demons-baby.txt p4",
+  "reason": "GW’s datasheet prints SUMMONED; New Recruit (BSData) does not. The app has GW’s keywords (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Skarbrand.html, KEYWORDS."
+ },
+ {
+  "army": "nidzillas",
+  "unit": "neurogaunts",
+  "field": "abilities[Neurocytes].text",
+  "app": "While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.",
+  "source": "While this unit is within Synapse Range of your friendly Tyranids unit (excluding Neurogaunt units), it has the Synapse keyword.",
+  "where": "verify/sources/nr/nidzillas.txt p4",
+  "reason": "New Recruit (from BSData) prints Neurocytes with \"your friendly Tyranids unit\"; GW’s datasheet (the codex, Wahapedia) prints \"a friendly TYRANIDS unit\". The app has GW’s words (a GW-backed correction found by the Tyranids catalogue import, verify/from-bsdata.js).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html, ABILITIES: \"Neurocytes: While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.\"; verify/sources/nr/nidzillas.txt p4: \"… of your friendly Tyranids unit …\"."
  }
 ]

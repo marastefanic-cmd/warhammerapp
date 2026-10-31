@@ -27,6 +27,10 @@
 //               equal to BSData or a declared GW value, its words on GW's datasheets, and agrees with every list's units
 //   nr          verify/nr.js: everything the owner's New Recruit PDFs print is in the app, identically
 //   texts       verify/texts.js: every rules text equals GW's official documents (or Wahapedia)
+//   numbers     verify/numbers.js: every profile number shown (stats per model type, weapon Range A BS WS S AP D, the number in a weapon
+//               keyword) is the Wahapedia datasheet's, GW's documents on top; each difference declared in verify/deviations-numbers.json
+//   keywords    verify/keywords.js: every unit's keywords are its GW datasheets' (KEYWORDS, FACTION KEYWORDS, the name keyword), and the
+//               list's own only by a named rule, model or detachment; each difference declared in verify/deviations-keywords.json
 //   calc        verify/calc-test.js: the damage calculator (calc.js) gives the averages worked out by hand from the Core Rules
 //   import      verify/import-test.js: the list import (import.js) turns each New Recruit JSON export into exactly its list in data.js
 //   screens     verify/render.js: every screen and popup renders; screen-level checks; no sideways scroll
@@ -77,6 +81,8 @@ step('bases', ['verify/bases.js']);   // every base size against GW's base size 
 step('catalog', ['verify/catalog.js']);   // every faction catalogue (verify/sources/catalog) against BSData, GW's datasheets and the lists
 step('nr', ['verify/nr.js']);
 step('texts', ['verify/texts.js']);
+step('numbers', ['verify/numbers.js']);   // every profile number against GW's datasheet (Wahapedia), GW's documents on top
+step('keywords', ['verify/keywords.js']);   // every unit's keywords are GW's datasheets', and the list's own by its rules
 step('calc', ['verify/calc-test.js']);   // the damage calculator against hand-worked cases
 step('import', ['verify/import-test.js']);   // the list import against every New Recruit JSON export
 // the screens need the built page: build it without the gate, check it, and the real build follows

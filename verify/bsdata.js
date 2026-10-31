@@ -932,6 +932,7 @@ function grantNames(army) {
   return m;
 }
 // the granted values of one BSData profile, as the app should mark them: Map key → sorted names
+const VALS = new WeakMap();
 function grantsOf(army, u, prof, appKw) {
   const out = new Map();
   const named = grantNames(army);
@@ -964,6 +965,8 @@ function grantsOf(army, u, prof, appKw) {
         else if (hits.length > 1) names.add(`(ambiguous: ${hits.map((a) => a.name).join(' / ')})`);
       }
       if (names.size) out.set(key, [...new Set([...(out.get(key) || []), ...names])].sort());
+      // (the value before the first rule that changes it, and after the last: verify/numbers.js checks the one before against GW's datasheet)
+      if (!isKw) { const v = VALS.get(out) || {}; if (!v[key]) v[key] = { before: c.before }; v[key].after = c.after; VALS.set(out, v); }
     }
   }
   return out;
@@ -974,7 +977,8 @@ function compareGrants(army, u, kind, label, app, prof, appKw, fail, where) {
   const want = grantsOf(army, u, prof, appKw);
   const have = fromMap(app.from);
   const idx = (u[kind] || []).indexOf(app);
-  for (const [k, v] of want) GRANTS.push({ army: army.id, unit: u.id, kind, idx, row: label, key: k, names: v });
+  const vals = VALS.get(want) || {};
+  for (const [k, v] of want) GRANTS.push(Object.assign({ army: army.id, unit: u.id, kind, idx, row: label, key: k, names: v }, vals[k] || {}));
   for (const k of new Set([...want.keys(), ...have.keys()])) {
     checked('grants');
     const a = (have.get(k) || []).join(' + '), b = (want.get(k) || []).join(' + ');

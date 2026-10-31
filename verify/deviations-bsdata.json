@@ -2814,14 +2814,94 @@
   "by": "verify/from-json.js"
  },
  {
-  "army": "nidzillas",
-  "unit": "neurogaunts",
-  "field": "ability.text",
-  "app": "Neurocytes: While this unit is within **Synapse Range** of a friendly **TYRANIDS** unit (excluding **NEUROGAUNT** units), it has the **SYNAPSE** keyword.",
-  "source": "While this unit is within Synapse Range of your friendly **^^Tyranids^^** unit (excluding **^^Neurogaunt^^** units), it has the **^^Synapse^^** keyword.",
-  "where": "Neurogaunts › Neurocytes",
-  "reason": "BSData (and so New Recruit) words Neurocytes \"of your friendly Tyranids unit\"; GW’s datasheet (the codex, Wahapedia) \"of a friendly TYRANIDS unit\". GW wins (a correction found by the Tyranids catalogue import, verify/from-bsdata.js).",
-  "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html, ABILITIES: \"Neurocytes: While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.\""
+  "army": "shooty",
+  "unit": "warboss",
+  "field": "kw",
+  "app": "Explosives",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword EXPLOSIVES (\"KEYWORDS: INFANTRY; CHARACTER; EXPLOSIVES; WARBOSS\"); BSData at the pin has the category Grenades instead. The Core Rules make them one keyword (the Explosives stratagem’s TARGET \"EXPLOSIVES/GRENADES unit\"; \"The Grenade Stratagem is the same as the Explosives stratagem\"). GW wins: EXPLOSIVES.",
+  "evidence": "verify/.cache/waha/ds/orks_Warboss.html: KEYWORDS; rules/core-rules.md (Explosives, Grenades Stratagem).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "shooty",
+  "unit": "warboss",
+  "field": "kw",
+  "app": "",
+  "source": "Grenades",
+  "reason": "BSData at the pin gives the Warboss the category Grenades; GW’s datasheet prints EXPLOSIVES, which the Core Rules make the same keyword (\"EXPLOSIVES/GRENADES\"). GW wins: EXPLOSIVES only.",
+  "evidence": "verify/.cache/waha/ds/orks_Warboss.html: KEYWORDS; rules/core-rules.md (Grenades Stratagem).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "lite-knights",
+  "unit": "prosecutor-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad-2",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "prosecutor-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "emperors-chosen",
+  "unit": "witchseeker-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "dread-host",
+  "unit": "prosecutor-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "dread-host",
+  "unit": "witchseeker-squad",
+  "field": "kw",
+  "app": "",
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: KEYWORDS, FACTION KEYWORDS.",
+  "by": "verify/from-json.js"
  },
  {
   "army": "nidzillas",
@@ -2842,6 +2922,45 @@
   "where": "not a category of Tyrannofex",
   "reason": "The owner's decision (30 Oct 2026): the Tyrannofex has FRAME, as GW's datasheet is printed on Wahapedia (its errata line \"Hierophant, Toxicrene, Tyrannocyte and Tyrannofex. Add the FRAME keyword.\"), as the app's Toxicrene and Tyrannocyte rows have it. New Recruit (BSData) has no FRAME category for the unit; GW's Tyranids Faction Pack (14-10) does not print the errata. The app adds FRAME.",
   "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS \"MONSTER; GREAT DEVOURER; FRAME; TYRANNOFEX\"; verify/review/result-catalog-tyranids.json (the owner's decision); verify/sources/nr-json/healybois.json (Tyrannofex, categories)."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "onager-dunecrawler",
+  "field": "kw",
+  "app": "Smoke",
+  "source": "",
+  "where": "not a category of Onager Dunecrawler",
+  "reason": "GW’s datasheet has the keyword SMOKE (\"KEYWORDS: VEHICLE; WALKER; IMPERIUM; SKITARII; SMOKE; ONAGER DUNECRAWLER\"); BSData at the pin has no Smoke category for the unit. GW wins: the unit’s keywords are its datasheet’s (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js). It can now be the target of the Smokescreen stratagem, as GW’s datasheet allows.",
+  "evidence": "verify/.cache/waha/ds/adeptus-mechanicus_Onager-Dunecrawler.html: KEYWORDS."
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "skarbrand",
+  "field": "kw",
+  "app": "Summoned",
+  "source": "",
+  "where": "not a category of Skarbrand",
+  "reason": "GW’s datasheet has the keyword SUMMONED; BSData at the pin has no Summoned category for the unit. GW wins (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Skarbrand.html: KEYWORDS."
+ },
+ {
+  "army": "pubstomper",
+  "unit": "exalted-sorcerer-rubric-marines",
+  "field": "kw",
+  "app": "",
+  "source": "Rubric",
+  "reason": "BSData at the pin gives the Rubric Marine w/ soulreaper cannon the category Rubric; GW’s datasheets (Exalted Sorcerer, Rubric Marines) do not print RUBRIC (\"KEYWORDS: INFANTRY; BATTLELINE; CHAOS; TZEENTCH; RUBRICAE; RUBRIC MARINES\"). GW wins (verify/gw-order.js gwKeywords, written by verify/tables.js --write, checked by verify/keywords.js).",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Rubric-Marines.html and thousand-sons_Exalted-Sorcerer.html: KEYWORDS."
+ },
+ {
+  "army": "nidzillas",
+  "unit": "neurogaunts",
+  "field": "ability.text",
+  "app": "Neurocytes: While this unit is within **Synapse Range** of a friendly **TYRANIDS** unit (excluding **NEUROGAUNT** units), it has the **SYNAPSE** keyword.",
+  "source": "While this unit is within Synapse Range of your friendly **^^Tyranids^^** unit (excluding **^^Neurogaunt^^** units), it has the **^^Synapse^^** keyword.",
+  "where": "Neurogaunts › Neurocytes",
+  "reason": "BSData (and so New Recruit) words Neurocytes \"of your friendly Tyranids unit\"; GW’s datasheet (the codex, Wahapedia) \"of a friendly TYRANIDS unit\". GW wins (a correction found by the Tyranids catalogue import, verify/from-bsdata.js).",
+  "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html, ABILITIES: \"Neurocytes: While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.\""
  },
  {
   "army": "catalog",
@@ -2911,6 +3030,16 @@
   "source": "When an enemy unit (excluding MONSTERS/VEHICLES) engaged with this unit makes a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.",
   "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Knight-Centura.html: \"When an enemy unit (excluding MONSTER/VEHICLE units) engaged with this unit makes a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/knight-centura",
+  "field": "kw",
+  "app": null,
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) gives the category Anathema Psykana; GW’s datasheet does not print it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Knight-Centura.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -3016,6 +3145,16 @@
  {
   "army": "catalog",
   "unit": "adeptus-custodes/anathema-psykana-rhino",
+  "field": "kw",
+  "app": null,
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) gives the category Anathema Psykana; GW’s datasheet does not print it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Anathema-Psykana-Rhino.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/anathema-psykana-rhino",
   "field": "rules",
   "app": "Deadly Demise D3",
   "source": null,
@@ -3096,6 +3235,16 @@
  {
   "army": "catalog",
   "unit": "adeptus-custodes/prosecutor-squad",
+  "field": "kw",
+  "app": null,
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) gives the category Anathema Psykana; GW’s datasheet does not print it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/prosecutor-squad",
   "field": "rules",
   "app": null,
   "source": "Fights First",
@@ -3111,6 +3260,16 @@
   "source": "any copy: 4 50 · 5 55 · 6 90 · 7 90 · 8 90 · 9 90 · 10 100",
   "reason": "GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): any copy: 4 50 · 5 55 · 9 90 · 10 100; BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25): any copy: 4 50 · 5 55 · 6 90 · 7 90 · 8 90 · 9 90 · 10 100 (copy 1-, 6 models: BSData 90, GW prices no unit of 6; copy 1-, 7 models: BSData 90, GW prices no unit of 7; copy 1-, 8 models: BSData 90, GW prices no unit of 8). GW wins.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Vigilator-Squad.html: any copy: 4 50 · 5 55 · 9 90 · 10 100.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/vigilator-squad",
+  "field": "kw",
+  "app": null,
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) gives the category Anathema Psykana; GW’s datasheet does not print it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Vigilator-Squad.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -3151,6 +3310,16 @@
   "source": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll with -1 to that battle-shock roll if that enemy unit is a Psyker unit..",
   "reason": "Wahapedia’s datasheet (the codex) words it otherwise than BSData. GW wins.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: \"In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.\".",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/witchseeker-squad",
+  "field": "kw",
+  "app": null,
+  "source": "Anathema Psykana",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) gives the category Anathema Psykana; GW’s datasheet does not print it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
  {
@@ -4717,9 +4886,9 @@
   "army": "catalog",
   "unit": "chaos-daemons/blue-horrors",
   "field": "kw",
-  "app": "Battleline",
+  "app": "Brimstone",
   "source": null,
-  "reason": "GW’s datasheet has the keyword BATTLELINE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
+  "reason": "GW’s datasheet has the keyword BRIMSTONE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
@@ -4727,9 +4896,19 @@
   "army": "catalog",
   "unit": "chaos-daemons/blue-horrors",
   "field": "kw",
-  "app": "Brimstone",
+  "app": "Infantry",
   "source": null,
-  "reason": "GW’s datasheet has the keyword BRIMSTONE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
+  "reason": "GW’s datasheet has the keyword INFANTRY; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "chaos-daemons/blue-horrors",
+  "field": "kw",
+  "app": "Battleline",
+  "source": null,
+  "reason": "GW’s datasheet has the keyword BATTLELINE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
@@ -4757,9 +4936,9 @@
   "army": "catalog",
   "unit": "chaos-daemons/blue-horrors",
   "field": "kw",
-  "app": "Faction: Legiones Daemonica",
+  "app": "Tzeentch",
   "source": null,
-  "reason": "GW’s datasheet has the keyword FACTION: LEGIONES DAEMONICA; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
+  "reason": "GW’s datasheet has the keyword TZEENTCH; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
@@ -4777,19 +4956,9 @@
   "army": "catalog",
   "unit": "chaos-daemons/blue-horrors",
   "field": "kw",
-  "app": "Infantry",
+  "app": "Faction: Legiones Daemonica",
   "source": null,
-  "reason": "GW’s datasheet has the keyword INFANTRY; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/blue-horrors",
-  "field": "kw",
-  "app": "Tzeentch",
-  "source": null,
-  "reason": "GW’s datasheet has the keyword TZEENTCH; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
+  "reason": "GW’s datasheet has the keyword FACTION: LEGIONES DAEMONICA; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
@@ -4877,9 +5046,9 @@
   "army": "catalog",
   "unit": "chaos-daemons/pink-horrors",
   "field": "kw",
-  "app": "Battleline",
+  "app": "Brimstone",
   "source": null,
-  "reason": "GW’s datasheet has the keyword BATTLELINE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
+  "reason": "GW’s datasheet has the keyword BRIMSTONE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
@@ -4887,9 +5056,19 @@
   "army": "catalog",
   "unit": "chaos-daemons/pink-horrors",
   "field": "kw",
-  "app": "Brimstone",
+  "app": "Infantry",
   "source": null,
-  "reason": "GW’s datasheet has the keyword BRIMSTONE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
+  "reason": "GW’s datasheet has the keyword INFANTRY; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS.",
+  "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "catalog",
+  "unit": "chaos-daemons/pink-horrors",
+  "field": "kw",
+  "app": "Battleline",
+  "source": null,
+  "reason": "GW’s datasheet has the keyword BATTLELINE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
@@ -4917,9 +5096,9 @@
   "army": "catalog",
   "unit": "chaos-daemons/pink-horrors",
   "field": "kw",
-  "app": "Faction: Legiones Daemonica",
+  "app": "Tzeentch",
   "source": null,
-  "reason": "GW’s datasheet has the keyword FACTION: LEGIONES DAEMONICA; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
+  "reason": "GW’s datasheet has the keyword TZEENTCH; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },
@@ -4937,19 +5116,9 @@
   "army": "catalog",
   "unit": "chaos-daemons/pink-horrors",
   "field": "kw",
-  "app": "Infantry",
+  "app": "Faction: Legiones Daemonica",
   "source": null,
-  "reason": "GW’s datasheet has the keyword INFANTRY; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS.",
-  "by": "verify/from-bsdata.js"
- },
- {
-  "army": "catalog",
-  "unit": "chaos-daemons/pink-horrors",
-  "field": "kw",
-  "app": "Tzeentch",
-  "source": null,
-  "reason": "GW’s datasheet has the keyword TZEENTCH; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
+  "reason": "GW’s datasheet has the keyword FACTION: LEGIONES DAEMONICA; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) does not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS.",
   "by": "verify/from-bsdata.js"
  },

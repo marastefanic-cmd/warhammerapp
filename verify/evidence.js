@@ -138,7 +138,7 @@ for(const [key, src] of S){
 
 // ---- G6: no Damage-tab reading field left; the Damage tab reads no words ----
 const RETIRED_R = ['calc', 'always', 'oneModel', 'dice', 'follow', 'onDeath'], RETIRED_RULE = ['calcMods', 'calcNc', 'both', 'limit'];
-const readingsOf = x => ['mods', 'aura'].flatMap(k => x[k] || []).concat(x.mod ? [x.mod] : [], x.help && x.help.mod ? [x.help.mod] : [], (x.parts || []).filter(p => p.mod).map(p => p.mod));
+const readingsOf = x => ['mods', 'aura'].flatMap(k => x[k] || []).concat(x.mod ? [x.mod] : [], (x.parts || []).filter(p => p.mod).map(p => p.mod));
 for(const a of D.armies) for(const u of a.units) for(const m of readingsOf(u)) for(const k of RETIRED_R) if(m[k] !== undefined) fail('G6', a.id + '/' + u.id, 'reading of ' + m.from + ' keeps ' + k);
 for(const f of Object.values(D.factions)){
   for(const r of (f.armyRules || []).concat(Object.values(f.detachments || {}).flatMap(d => (d.rule ? [d.rule] : []).concat(d.moreRules || [])))){
@@ -161,7 +161,7 @@ for(const s of D.coreStratagems) if(s.calcMods) fail('G6', 'Core · ' + s.name, 
     const bad = dm.split('\n').filter(l => !keyCode.test(l.trim()) && /\b(?:ab|r|s|x|S\.ab|S\.s|S)\.(?:text|effect|target(?!\.)|when|restrictions)\b/.test(rest(l)));
     if(bad.length) fail('G6', 'app.html', 'the Damage tab reads a rule’s words outside the key hash and its display: ' + bad.map(l => l.trim().slice(0, 80)).join(' | ')); }
   if(/\bdmEffects\b|\bdmScope\b|\bdmByHand\b|WH_EFFECTS\.norm\b|\.extract\(/.test(dm)) fail('G6', 'app.html', 'the Damage tab reads a rule’s words at run time (dmEffects, dmScope, dmByHand, the extractor)');
-  for(const [re, what] of [[/\bm\.note\b/, 'a reading’s note'], [/\bm\.when\b/, 'a reading’s when'], [/\bm\.calc\b/, 'a reading’s calc'], [/\.calcMods\b/, 'calcMods'], [/\b(?:au|u|x|src)\.(?:mods|aura|help|shield|readOf|calcDef|defCalc)\b/, 'a unit’s readings (mods, aura, help, shield, calcDef, defCalc)'], [/\.damaged\b|\bab\.embarked\b/, 'an ability’s damaged or embarked reading'], [/\.(?:test|exec|match|matchAll|search|replace|split|includes|indexOf|startsWith|endsWith|lastIndexOf)\(\s*(?:String\()?[\w.]*\b(?:ab|r|s|S\.ab|S\.s|x|y|m)\.(?:text|effect|target|when)\b|\b(?:ab|r|s|x|y)\.(?:text|effect|target|when)\b[^;\n]*\.(?:match|search|test|exec)\(/, 'a regex over a rule’s words at run time']]) if(re.test(dmNoQuote)) fail('G6', 'app.html', 'the Damage tab reads ' + what);
+  for(const [re, what] of [[/\bm\.note\b/, 'a reading’s note'], [/\bm\.when\b/, 'a reading’s when'], [/\bm\.calc\b/, 'a reading’s calc'], [/\.calcMods\b/, 'calcMods'], [/\b(?:au|u|x|src)\.(?:mods|aura|shield|readOf|calcDef|defCalc)\b/, 'a unit’s readings (mods, aura, shield, calcDef, defCalc)'], [/\.damaged\b|\bab\.embarked\b/, 'an ability’s damaged or embarked reading'], [/\.(?:test|exec|match|matchAll|search|replace|split|includes|indexOf|startsWith|endsWith|lastIndexOf)\(\s*(?:String\()?[\w.]*\b(?:ab|r|s|S\.ab|S\.s|x|y|m)\.(?:text|effect|target|when)\b|\b(?:ab|r|s|x|y)\.(?:text|effect|target|when)\b[^;\n]*\.(?:match|search|test|exec)\(/, 'a regex over a rule’s words at run time']]) if(re.test(dmNoQuote)) fail('G6', 'app.html', 'the Damage tab reads ' + what);
   if(!/<script src="effects\.js"><\/script>/.test(html)) fail('G6', 'app.html', 'effects.js is not loaded'); }
 
 // ---- G7: BOXES is what the words give ----

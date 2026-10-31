@@ -490,6 +490,7 @@ const NEEDS_RULES = {
   'that-unit':     'TARGET "That … unit": the unit WHEN names (its keywords and exclusions) and TARGET\'s keywords',
   'first-unit':    'stratagems: the first unit TARGET names; rules: the first friendly / "from your army" unit the text names with a keyword. Later units (a unit it is near, an enemy) are not who it is for',
   'no-keyword':    'the unit named has no keyword: any unit (no needs)',
+  'your-keywords': 'TARGET "Your X." with no unit or model ("Your NECRONS WARLORD."): the unit with the keywords X',
   'multi-target':  'TARGET with two targets ("One X model …, and one friendly Y unit …"): for a unit of either kind (the alternatives as "or")',
   'kw-every':      'compared without a keyword every unit of that faction\'s lists has (the Faction keyword "ORKS" in Orks lists): in the app\'s matches() it selects nothing, and data.js names it in some needs and not in others',
 };
@@ -587,7 +588,7 @@ const excluded = (V, inner) => [...prepBold(inner).matchAll(/\*\*([^*]+)\*\*/g)]
 // the first friendly unit a text names: its keyword run, and the clause right after it
 function friendlyUnit(V, text, opts){
   const s = prepBold(text);
-  const re = new RegExp('(?:' + RUN + '\\s+)?\\b(units?|models?)\\b', 'g');
+  const re = new RegExp('(?:' + RUN + '\\s+)?\\b([Uu]nits?|[Mm]odels?)\\b', 'g');   // (GW's "That ADEPTUS CUSTODES Unit.": capitalised too)
   for(let m; (m = re.exec(s));){
     const before = s.slice(Math.max(0, m.index - 40), m.index), after = s.slice(m.index + m[0].length);
     if(/\benemy\s*$|\benemy (?:\w+ )?$/i.test(before)) continue;
@@ -634,6 +635,9 @@ function stratNeeds(V, s){
   const target = norm(String(s.target).replace(/~~([^~*]+)~~/g, '**$1**')), when = norm(s.when).split(/\n/)[0];
   const first = target.split(/(?<=\.)\s+/)[0];
   let unit = friendlyUnit(V, first, { any:true });
+  // "Your **NECRONS WARLORD**.": a TARGET that is a keyword run and no unit or model: the unit with those keywords (your-keywords)
+  const bare = !unit && /^your (\*\*[^*]+\*\*)\.?$/i.exec(prepBold(first).trim());
+  if(bare){ unit = { run:bare[1], noun:'', at:0, after:'', matched:bare[0].replace(/\.$/, '') }; reasons.push({ rule:'your-keywords', match:plain(bare[0]) }); }
   if(!unit) return { how:'none', reasons:[{ rule:'no-unit', match:clip(plain(first)) }] };
   reasons.push({ rule:'first-unit', match:plain(first.slice(0, unit.at + unit.matched.length)) });
   let n = needsOf(V, unit, reasons);
@@ -1304,6 +1308,11 @@ const READING_RULES = [
   { id:'damaged-hit', re:/^While this model has 1-(\d+) wounds remaining, (?:subtract (\d+) from this model's Objective Control characteristic and )?each time this model makes an attack, subtract 1 from the Hit roll\.$/i,
     give:(m, name) => [{ kind:'all', when:'Damaged (1-' + m[1] + ' wounds left)', note:'-1 to hit rolls' + (m[2] ? ' (and -' + m[2] + ' OC)' : ''), from:name }],
     why:'a Damaged ability whose only effect is -1 to its attacks\' hit rolls (and a lower OC, said in brackets): one footnote for every attack' },
+  // "While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the
+  // C'tan Powers weapons in your Shooting phase, instead of two.": a lower OC (and the rest in GW's words) and no hit penalty
+  { id:'damaged-oc', re:/^While this model has 1-(\d+) wounds remaining, subtract (\d+) from (?:its|this model's) Objective Control characteristic(?: and (?!each time this model makes an attack, subtract 1 from the Hit roll)([^.]+))?\.$/i,
+    give:(m, name) => [{ kind:'all', when:'Damaged (1-' + m[1] + ' wounds left)', note:'-' + m[2] + ' OC' + (m[3] ? '; ' + m[3] : ''), from:name }],
+    why:'a Damaged ability that lowers OC and has no hit penalty: its OC said as the others\' are, the rest of its effect in GW\'s words' },
   // the core ability Damaged X (its glossary text, with its name): "while damaged, that model's attacks have -1 to hit rolls"
   { id:'damaged-core', re:/^Damaged (\d+): .*\bwhile damaged, that model's attacks have -1 to hit rolls\b/i,
     give:(m, name) => name === 'Damaged ' + m[1] ? [{ kind:'all', when:'Damaged (' + m[1] + ' or fewer wounds remaining)', note:'-1 to hit rolls', from:name }] : null,

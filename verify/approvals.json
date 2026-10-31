@@ -35,6 +35,12 @@
   "at": "2026-10-27",
   "why": "GW prints \"P’tarix’s Sorcerous Syphon (Aura)\" (FP 1.2 l.1363, Wahapedia ds/chaos-daemons_The-Blue-Scribes)."
  },
+ "008503f9bf25a65d": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key c7b7e8dc5ed0f198, review:healybois-2); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "0091eb134a44041d": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -479,6 +485,12 @@
   "at": "2026-10-22",
   "why": "WHEN: “Start of the Shooting phase or the start of the Fight phase.” = Shooting, Fight."
  },
+ "05f7768dce336922": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 26b82ae697280554, review:knights-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "060265bd0728919f": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -520,6 +532,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "TARGET “One WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn” = “Your unit made a charge move this turn and has not been selected to fight this phase” (the condition the digest found dropped). EFFECT “Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1” = “until the end of the phase, its melee weapons have +1 AP”."
+ },
+ "0654d36c4cb36f0f": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key c2373661d53dd21e, review:nerf-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "065a80ad15a723e7": {
   "verdict": "ok",
@@ -977,6 +995,12 @@
   "at": "2026-10-17",
   "why": "“WHEN: Your Shooting phase”: your turn."
  },
+ "0ba0021bad0c31cd": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 227c0ccd160c3f9d, review:r23-army); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "0bab4a0ab9a8722f": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -1036,6 +1060,12 @@
   "by": "review:howto-3",
   "at": "2026-10-29",
   "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment."
+ },
+ "0ca5c801b11a382b": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 8eb32ed72e35c7a3, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "0cbaae2772ed3657": {
   "verdict": "ok",
@@ -1109,6 +1139,18 @@
   "at": "2026-10-29",
   "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Rapid Reactions)."
  },
+ "0d77214e7d7d92cc": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 81e8a39ce30f17de, review:r11-purge-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ "0d7f0806474c1edb": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "na reason identical to the approved main judgement (key 818b335ec8c3c435, review:infernal-lance); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
  "0d9aec4f1154d295": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -1144,6 +1186,12 @@
   "by": "review:nerf-units",
   "at": "2026-10-24",
   "why": "It keeps both conditions (an enemy unit targets it; it is not battle-shocked), the psychic level, the D6 roll with its 1 = battle-shocked cost, and \"-1 to hit rolls until the end of the phase\". Both bullets follow \"If you do\", so the -1 applies whatever the roll, as the def says. There is no core definition of \"psychic roll\" that the def would drop."
+ },
+ "0df57f997c9dafd3": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key b67b8ee603e5076d, review:cooking) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "0e295c9eade5da10": {
   "verdict": "ok",
@@ -1271,6 +1319,12 @@
   "at": "2026-10-24",
   "why": "\"Friendly **KILL TEAM** units with this ability\" gives needs {all:['Kill Team']}. In this list only the Deathwatch Terminator Squad has Kill Team (Wahapedia KEYWORDS: INFANTRY; KILL TEAM; TERMINATOR; IMPERIUM), and it gets the rule. The heading change does not touch the subject sentence."
  },
+ "105fddd727d792a1": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 44159cade111f908, review:necrons); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "10667cef329f1806": {
   "verdict": "ok",
   "by": "review:necrons",
@@ -1342,6 +1396,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“TARGET: That ORKS INFANTRY unit.” → Faction: Orks + Infantry, copied."
+ },
+ "113474defb4daf15": {
+  "verdict": "ok",
+  "by": "review:order-3",
+  "at": "2026-10-31",
+  "why": "Judgement identical to the one approved on main eaccb7d (key af4677a8e1483126): kwOnly Character, Synapse from Ravener Prime. Re-keyed only by the keyword order of its source (GW order). Checked by script."
  },
  "11363887e1b8de3c": {
   "verdict": "ok",
@@ -1631,6 +1691,18 @@
   "at": "2026-10-30",
   "why": "The units GW’s TARGET / rule names: {all:[Endless Multitude]} (Unending Swarm · Unending Waves), read against the faction page."
  },
+ "15005d7450360dcf": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 7ac6a215047d8dab, review:hurrdurr); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ "1503a9f6cea4b91b": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key c5f7f625026e1437, review:fellhammer-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "1518e797a995a17b": {
   "verdict": "ok",
   "by": "review:r20-damage",
@@ -1654,6 +1726,12 @@
   "by": "review:healybois",
   "at": "2026-10-28",
   "why": "Either turn (any phase)."
+ },
+ "157d4ae0c903b7de": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key 4775df3fd73ab7b3); re-keyed by the reordered unit. Checked by script."
  },
  "1595909d7b5705d9": {
   "verdict": "ok",
@@ -1709,6 +1787,12 @@
   "at": "2026-10-27",
   "why": "Faithful to WHEN and EFFECT; \"-1 to those hazard rolls\" for GW's \"-1 from those hazard rolls\" says the same."
  },
+ "16ebf70834a6bece": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key a9e89bbe276b851b, review:nerf-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "171dc5c7552b4572": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -1738,6 +1822,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "“Until the end of the phase, models in your unit have a Save characteristic of 3+”, in their Shooting phase once targeted: faithful."
+ },
+ "17a34ef086bf4637": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal to the approved judgement on main (main 2399c6e key 78ebdf095c5378b5) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
  },
  "17aa32ec88258f25": {
   "verdict": "ok",
@@ -2387,6 +2477,12 @@
   "at": "2026-10-28",
   "why": "An enhancement (Assimilation Swarm, \"Instinctive Defence 15 pts\", verify/.cache/waha/tyranids.txt l.257); GW prints no other tag."
  },
+ "206af126c0e56c6f": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 75514117213ff390, review:orks-data); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "2086b02aa9a4a145": {
   "verdict": "ok",
   "by": "review:catalog-chaos-daemons",
@@ -2428,6 +2524,18 @@
   "by": "review:catalog-custodes",
   "at": "2026-10-29",
   "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Shadowkeepers · No Escape)."
+ },
+ "210b2990f269b729": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 41e6a7e1dc29827c, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ "210c0ca13e8c0272": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key f232cab76c600583, review:nerf-units (its fix)); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "211407f5f5d0d3ca": {
   "verdict": "ok",
@@ -2597,6 +2705,12 @@
   "at": "2026-10-24",
   "why": "The default turn is “either” because the Fight phase is in both turns (selected to fight). The turns override covers Movement and Shooting. The full text, FAQ lines included, names no other turn."
  },
+ "22df3691229fd00b": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 0a6e479af6c5fc3a, review:healybois); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "23132c7a093ab1ae": {
   "verdict": "ok",
   "by": "review:catalog-tyranids",
@@ -2621,11 +2735,23 @@
   "at": "2026-10-21",
   "why": "TARGET: \"That TERMINATOR SQUAD unit\"."
  },
+ "234083e309ca2733": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key fb06d7b8a7dbb4ea, review:knights-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "2346cfcf6595a79a": {
   "verdict": "ok",
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Matches \"Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic\"."
+ },
+ "23662b4904b7e5da": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 8d3f1d2a65937b68, review:cooking) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "23781a0065f255e6": {
   "verdict": "ok",
@@ -2638,6 +2764,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "Wahapedia: “Augury Uplink (one per army) UPGRADE 30 pts”: tag Upgrade."
+ },
+ "238b40532c4f9da7": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 878744a6a70c34e2, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "23b512819636bff8": {
   "verdict": "ok",
@@ -2692,6 +2824,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "“End of your opponent’s Fight phase: place your unengaged ADEPTUS ASTARTES TERMINATOR unit in strategic reserves.” = WHEN + TARGET + EFFECT, word for word."
+ },
+ "24bcd17867e6ebb1": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key ea7c704b289d87a9); re-keyed by the reordered unit. Checked by script."
  },
  "24da4bd6a53c5f0c": {
   "verdict": "ok",
@@ -2789,6 +2927,12 @@
   "at": "2026-10-16",
   "why": "\"Once per turn, when your opponent targets a unit ... with a stratagem\": any phase, either turn."
  },
+ "25b9503b0dbb1ad3": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key e4e9aaf0d39afd74, review:tzeentch-data-b); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "25edac79bb1e98f7": {
   "verdict": "ok",
   "by": "review:exiled-rules",
@@ -2873,6 +3017,12 @@
   "at": "2026-10-21",
   "why": "\"Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the Hit roll\" (Wahapedia has the same): the target being both the closest eligible target and within 18\" is the whole condition, so cond closest18 is right. Its implication closest18 → closest is sound, and \"closest\" on its own does not tick this rule."
  },
+ "26f1eb16abeb0594": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 70a106ada2bff7f1, review:navigator) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "2701ca620ee7bea8": {
   "verdict": "ok",
   "by": "review:lite-knights-2",
@@ -2908,6 +3058,12 @@
   "by": "review:readings-2",
   "at": "2026-10-26",
   "why": "Possessed Lord (data.js = Wahapedia World Eaters Slaughterbound, word for word): once per battle, at the start of the Fight phase; until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model, and those weapons have [DEVASTATING WOUNDS]. set:{A:'+3'} on the Lacerator and daemonic claw, kind melee, the when and the note say exactly that and nothing more. It is right in every detachment and every list: the calculator adds a relative set value to the list's A (calc.js setOf), so A 7 (datasheet 6 + Relentless Rage) gives 10 and the Glaive's A 8 gives 11, as the earlier fix said. The listWhy and the list's own reading are gone; readOf is Possessed Lord's text only (5648d8fa). Tested on a scratch copy: changing the texts of Relentless Rage and Berzerker Glaive (all three copies) leaves it fresh, as it should for a +3. Rendered: princes and standard show the profile's A (7, and 8 with the Glaive) in the cell and one footnote \"Possessed Lord (once per battle, start of the Fight phase): Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase\" per unit. Against main 558a750 those are the only changes in those two lists."
+ },
+ "279212a75adb1259": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key d81d42f2cc054d3b, review:r9-pubstomper); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "2792f58b963e34d9": {
   "verdict": "ok",
@@ -2974,6 +3130,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Talons enhancement (an Upgrade); \"Upgrades are a type of enhancement\"."
+ },
+ "280da8fae38876b1": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 5eb9a1e967923752, review:lite-knights) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "281b84719f041718": {
   "verdict": "ok",
@@ -3173,6 +3335,12 @@
   "at": "2026-10-27",
   "why": "GW prints \"Greater Daemon of Tzeentch (Aura)\" on the Lord of Change (FP 1.2 l.1143) and Kairos (l.1088): tagged Aura by GW (22.01)."
  },
+ "2b8933447fb61512": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key f60bc79bbd228e3a, review:knights-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "2b89aa894df8b6d2": {
   "verdict": "ok",
   "by": "review:r14-picks",
@@ -3340,6 +3508,12 @@
   "by": "review:catalog-chaos-daemons",
   "at": "2026-10-30",
   "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One LEGIONES DAEMONICA unit arriving by Deep Strike. The needs follow it."
+ },
+ "2e10b2a1e3349a3f": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 7e38ba43759ec810, review:r19-fixes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "2e502aa8c47b8505": {
   "verdict": "ok",
@@ -3581,6 +3755,12 @@
   "at": "2026-10-24",
   "why": "TARGET LEGIONES DAEMONICA KHORNE."
  },
+ "31acc02e6cb7e86a": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key dd21cf0a01f29cbd); re-keyed by the reordered unit. Checked by script."
+ },
  "31c8f68f1e0927a4": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -3689,6 +3869,12 @@
   "at": "2026-10-16",
   "why": "BSData base: Dark Blessing S4 D1, Hellforged strike S8 D3, sweep S6 D1; shown S5/D2, S9/D4, S7/D2 = +1 S and D; Infernal cannon has no [PSYCHIC] and is unchanged. True."
  },
+ "334edc71456f504e": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 47536d26c2754edf, review:defilers3); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "334f8567532cd095": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -3719,6 +3905,12 @@
   "at": "2026-10-24",
   "why": "Trigger (selected to make a pile-in move) and effect (can move up to D3+3\") as the text has them."
  },
+ "33da4d02434370a5": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key 7e38ba43759ec810); re-keyed by the reordered unit. Checked by script."
+ },
  "33fd22b16d34f394": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -3730,6 +3922,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Enhancement on the Sorcerer in Terminator Armour (NR options)."
+ },
+ "341f4d235ff3584c": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 652535488e26ccb9, review:r9-pubstomper); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "342591ad90ae8b0f": {
   "verdict": "ok",
@@ -3911,6 +4109,12 @@
   "at": "2026-10-24",
   "why": "+1 AP vs INFANTRY (parsed), ranged, always while vs holds."
  },
+ "36bb64ea9ab02b62": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal as sets to the approved judgement on main (main 2399c6e key 408d4d3cfb2342f3); only the weapon/gear order differs (GW datasheet order). Checked by script."
+ },
  "36c88aaba95b1356": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -4013,6 +4217,12 @@
   "at": "2026-10-21",
   "why": "\"While this model has 1-10 wounds remaining, subtract 5 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll\": all attacks, -1 to hit, -5 OC."
  },
+ "3835ae3178cf7096": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 797ded3561923cd9, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "384f2839a61b827d": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -4036,6 +4246,12 @@
   "by": "review:custodes-units",
   "at": "2026-10-24",
   "why": "Leader is Trajann's; text matches GW's (Wahapedia) Leader list exactly, incl. SENTINEL GUARD SODALITY."
+ },
+ "3869f9b3ed357097": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 01668dc0cdd7d1bb, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "3888f74cfb047c1b": {
   "verdict": "ok",
@@ -4078,6 +4294,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "The ability starts “While this model is leading a unit”. The mark is on the lone Slaughterbound (id slaughterbound, models “1× Slaughterbound”, no leads); the other Slaughterbound, New Recruit’s “Leading: Exalted Eightbound[1]”, keeps Rage Eternal unmarked (checked in data.js). The text and the list facts agree."
+ },
+ "3913f4f95b99ed3e": {
+  "verdict": "ok",
+  "by": "review:order-3",
+  "at": "2026-10-31",
+  "why": "Judgement identical to the one approved on main eaccb7d (key aed4eec55bd87427): partialRules Shadow in the Warp from Ravener Prime. Re-keyed only by the keyword order of its source. Checked by script."
  },
  "391d1ffcd14a443d": {
   "verdict": "ok",
@@ -4415,6 +4637,12 @@
   "at": "2026-10-28",
   "why": "Either turn."
  },
+ "3cd7b7c57a4c9000": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 20c4d6421602ed64, review:pubstomper); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "3ceb60ac9ae9c89e": {
   "verdict": "ok",
   "by": "review:m1-code",
@@ -4426,6 +4654,12 @@
   "by": "review:fellhammer-rules",
   "at": "2026-10-24",
   "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” The target, the condition, the duration and the +1 AP are all there. Nothing is added."
+ },
+ "3cfefb1f1dea7a42": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal as sets to the approved judgement on main (main 2399c6e key 043cbd5d982aa06d); only the weapon/gear order differs (GW datasheet order). Checked by script."
  },
  "3d098f7e7305160c": {
   "verdict": "ok",
@@ -4606,6 +4840,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "Fight phase with no owner: either; icon str11Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "3efde1b3dbe053ca": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal to the approved judgement on main (main 2399c6e key b97d5160a0bcbb39/b97d5160a0bcbb39) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
  },
  "3efff1d8594ccecc": {
   "verdict": "ok",
@@ -4799,11 +5039,23 @@
   "at": "2026-10-16",
   "why": "\"You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit\" (15.11): matches() drops a unit only when it is VEHICLE and neither CHARACTER nor WALKER. In these armies that excludes only the Chaos Rhino; Killa Kans, Forgefiends, Defiler, Dakkarigs and Knights (WALKER) and non-vehicles (e.g. Deffkoptas, MOUNTED) stay eligible. No TITANIC exclusion in this stratagem, correctly."
  },
+ "41c25852a4288faf": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key f001afb95531221a, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "41cb081ffce6dbdf": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "TARGET: \"One EMPEROR’S CHILDREN unit from your army that was selected as the target ...\"."
+ },
+ "41d0fda7d87ed5b1": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 14c69e5e53a98c17, review:necrons) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "41d50dd5d0833a52": {
   "verdict": "ok",
@@ -4901,6 +5153,12 @@
   "at": "2026-10-28",
   "why": "Malign Presence is on the Swarmlord's datasheet (Wahapedia verify/.cache/waha/ds/tyranids_The-Swarmlord.html); FP 1.3 Rules Updates \"The Swarmlord, Malign Presence Ability – Change to: 'Once per turn, when your opponent targets a unit from their army within 12\\\" of this model …'\" (l.659-662). Who = The Swarmlord."
  },
+ "4318104dfcbf43bd": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 40571c5ee8273154, review:orks-data); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "4323351af991d577": {
   "verdict": "ok",
   "by": "review:howto-3",
@@ -4942,6 +5200,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "\"At the start of your Command phase\": Command, your turn."
+ },
+ "43c6554f3aa983a9": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key fe4e20b85edf76f4, review:pubstomper) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "43c9d0aaf25d19fe": {
   "verdict": "ok",
@@ -5129,6 +5393,12 @@
   "at": "2026-10-27",
   "why": "GW: \"DAMAGED: 1-7 WOUNDS REMAINING … subtract 1 from the Hit roll\" and W 20 (FP 1.2 l.1074-1096)."
  },
+ "46f7d83e9911d552": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key ad94ada820936d61, review:pubstomper); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "46f8f620dbaf790e": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -5165,6 +5435,12 @@
   "at": "2026-10-26",
   "why": "Feel No Pain 5+ and Lone Operative are Lucius’s CORE ABILITIES only (Flawless Blades has none). Lone Operative is inert while he leads the unit (“Unless part of an attached unit”), which the rule’s own text says."
  },
+ "476d760bf2af518b": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "na reason identical to the approved main judgement (key 39bf8d0ae789149d, review:r9-knights); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
  "4774dce1cee6cd0b": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -5194,6 +5470,12 @@
   "by": "review:r14-cond",
   "at": "2026-10-21",
   "why": "\"Friendly ORKS INFANTRY units’ ranged attacks have: [ASSAULT]. While this unit is riled up, +3\" R\" (Wahapedia has the same wording): the mark is on the +3\" bullet, whose only condition is being riled up. \"This unit\" can only mean the ORKS INFANTRY unit making the attacks, so the attacker's \"Riled up\" fact is right. The keyword need is handled by needs, not by cond."
+ },
+ "4803a0ab3137e76d": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "na reason identical to the approved main judgement (key 78ebdf095c5378b5, review:infernal-lance); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
  },
  "480ea036b578a6b1": {
   "verdict": "ok",
@@ -5369,6 +5651,12 @@
   "at": "2026-10-24",
   "why": "TARGET: “One friendly unengaged KILL TEAM unit.” = {all:['Kill Team']}. ‘Unengaged’ is a state at the time, not a keyword, so it is not in needs (as for approved stratagems)."
  },
+ "49ffc50b1ecd8f72": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 1cd828f33e8cc806, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "4a1e7204bd251a77": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -5519,6 +5807,12 @@
   "at": "2026-10-23",
   "why": "allStratagems(a) lists only the army's detachments' stratagems (plus Core), so Princes, Standard and Super Terminators (Berzerker Warband/Vessels of Wrath/Butchers of Khorne, all units only Faction: World Eaters) can never get it. The snapshots confirm: 'Daemonic Fury' shows up only in big-demons-baby.txt. In Big demons baby every WORLD EATERS unit qualifies, because there is at least one other BLOOD LEGIONS unit (Skarbrand, Bloodthirster, Flesh Hounds). x !== u is the conservative reading: the Lord unit is not counted as helping itself, but it does get the footnote because other BLOOD LEGIONS units are in the list. The hasKw match on unit keywords is right for an attached unit, which has both faction keywords (Disciple of Khorne Rules Update: the Lord has BLOOD LEGIONS instead of WORLD EATERS; the Berzerkers keep WORLD EATERS)."
  },
+ "4d6edd2fe73e04d7": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "na reason identical to the approved main judgement (key 1a4f47d32132aa44, review:r9-knights); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
  "4d6fc15075b6a163": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
@@ -5585,6 +5879,12 @@
   "at": "2026-10-30",
   "why": "The units GW’s TARGET / rule names: {all:[Faction: Tyranids]} (Synaptic Nexus · Override Instincts), read against the faction page."
  },
+ "4e3929a1c40705f0": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key f2d79da589c98126, review:r9-pubstomper) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "4e4125dbff4c1bdb": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -5626,6 +5926,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Shooting phase.”: your turn."
+ },
+ "4ea1764a67470baf": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 78b093d9bd9f8239, review:r9-knights) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "4ea2e6db8b3c42e7": {
   "verdict": "ok",
@@ -5711,6 +6017,12 @@
   "at": "2026-10-28",
   "why": "\"At the start of your Command phase\": command, your. GW (verify/.cache/waha/ds/tyranids_The-Swarmlord.html): \"Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\" (with the full stop)."
  },
+ "4fdc1355f63320f8": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 90135ce6b36d3068, review:necrons) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "5032d7e52b3b0d94": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -5752,6 +6064,12 @@
   "by": "review:checklist-3",
   "at": "2026-10-24",
   "why": "Code unchanged from the version approved twice. War Cry, Makari and Archslaughterer are once per battle, so per the owner nothing they put in force is shown. Intimidating Motivation and Keep Huntin’ carry f but are not listed (activation). Even More Dakka, More Dakka and Krumpin’ Time ('if this unit is riled up') are skipped. No 'Riled up' line appears on any list, which is what the owner decided."
+ },
+ "50f11699866b85db": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key e3851faea72b012e, review:import-lists) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "5104d2eb43d76309": {
   "verdict": "ok",
@@ -5861,6 +6179,12 @@
   "at": "2026-10-22",
   "why": "The text has two triggers. “Each time you make a Blessings of Khorne roll” is at the start of the battle round (Blessings of Khorne: “at the start of the battle round, you can make a Blessings of Khorne roll”) or via Skulls for the Skull Throne! (Fight phase): the new at:“Start of the battle round” (gStep → round: shown in the round’s first Command phase only, not under Command abilities 08.04) plus fight cover it, and that is what the play test (g5 F13) asked for. But “each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point” has no phase limit, and the Lord’s unit (plasma pistols, bolt pistols, GRENADES for Explosives; not TITANIC, so Fire Overwatch at the end of your opponent’s Movement phase) can destroy units in your Shooting phase and their Movement phase too. Dropping those two phases drops where that sentence triggers, against the app’s convention for attack-triggered abilities (Hunter of Souls: movement opp, shooting your, fight either; the fixlist keeps Fire Overwatch “opp movement” tags as deliberate) and against the earlier sign-off of exactly these tags for this text (result-literal 52c3668253df7eb6). Keep the at (it alone fixes the Command placement; in the other phases place() gives “during”) and restore the phases."
  },
+ "52dc1ed21f12d4c0": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key ed4a37246699c0cb, review:r23-army); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "52f350c255f883c4": {
   "verdict": "ok",
   "by": "review:effects-helpers",
@@ -5933,6 +6257,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.\""
  },
+ "53d758de241f18e9": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key de800c55a093d64f); re-keyed by the reordered unit. Checked by script."
+ },
  "53f9e87729f2a75d": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -6004,6 +6334,12 @@
   "by": "review:howto-3 (its fix)",
   "at": "2026-10-29",
   "why": "The judgement is right: the quote is in biovores's \"Seed Spore Mines\" word for word (checked against data.js). But the item's source is {\"missing\":\"nothing in the data is named Seed Spore Mines\"}, because cited() looks in the reference sheet's own abilities, not those of the ref.by unit. So the key does not hold the rule text, and a change to that text would not void the sign-off. Apply the unit-ref fix in helpers.js (code item 484c49a360a79ac2); this same judgement then gets a new key, which approve.js approves as this fix."
+ },
+ "54c9e11ba06fe44d": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 69b9d2085c12011d, review:orks-data) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "54cc6dd22280694e": {
   "verdict": "ok",
@@ -6214,6 +6550,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and … subtract 1 from the Hit roll.” The footnote has -1 to hit (all attacks) and -5 OC. It is shared by both Ruinators and the Despoiler."
+ },
+ "5788e20a9bcb260f": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 12449d993b191c9f, review:import-lists) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "57b009df52f459f2": {
   "verdict": "ok",
@@ -6515,6 +6857,18 @@
   "at": "2026-10-16",
   "why": "Dread Mob enhancement taken by this model (NR options \"Cybork Boosta\")."
  },
+ "5b066e95922c0b00": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 756236bc27288769, review:import-lists) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ "5baa70a504b14fab": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 9e5577b93d8cb30e, review:r9-knights) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "5c057b8ab9650388": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -6641,6 +6995,12 @@
   "at": "2026-10-24",
   "why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” Shooting."
  },
+ "5db451b3b80eab42": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 4775df3fd73ab7b3, review:nerf-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "5dde267c50b6cf60": {
   "verdict": "ok",
   "by": "review:catalog-tyranids",
@@ -6658,6 +7018,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "Matches New Recruit line for line: Champion and \"1x Paired accursed weapons\" carry Paired accursed weapons (×2); 2× Chainfist, Combi-bolter; 4× Combi-bolter, Power fist; 2× \"Reaper autocannon, Power fist\". That gives Combi-bolter 2+4=6, Reaper autocannon 2, Chainfist 2, Power fist 4+2=6, as New Recruit’s (x6)/(x2)/(x2)/(x2)/(x6)."
+ },
+ "5e026a54ac365979": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 286f30ecd176b339, review:knights-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "5e433fb70da04630": {
   "verdict": "ok",
@@ -6785,6 +7151,12 @@
   "at": "2026-10-21",
   "why": "Cerastus Knight Lancer datasheet (GW faction pack): W 28 and \"DAMAGED: 1-10 WOUNDS REMAINING ... While this model has 1-10 wounds remaining\". Matches."
  },
+ "5fdf892e069a394b": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal to the approved judgement on main (main 2399c6e key 818b335ec8c3c435) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
+ },
  "6008621561949fcc": {
   "verdict": "ok",
   "by": "review:catalog-tyranids",
@@ -6803,6 +7175,12 @@
   "at": "2026-10-16",
   "why": "\"In your Shooting phase, if this unit made an ingress move this turn…\""
  },
+ "605ad0f8e4a5f5ee": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key c7b7e8dc5ed0f198, review:healybois-2); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "60770741850ad225": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -6820,6 +7198,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"WHEN: Any phase\"."
+ },
+ "60b49e1c94fe2fab": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal as sets to the approved judgement on main (main 2399c6e key 577be42d085ae727); only the weapon/gear order differs (GW datasheet order). Checked by script."
  },
  "60b781d097bb21bc": {
   "verdict": "ok",
@@ -6856,6 +7240,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "Any phase, either turn."
+ },
+ "6113d73a2061030a": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 728d1f6352e9325f, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "61172defd03cddda": {
   "verdict": "ok",
@@ -7001,6 +7391,12 @@
   "at": "2026-10-22",
   "why": "NR prints the selection “Houndpack Lance Character” on the models line and “Character” in Categories; Wahapedia's Brigand KEYWORDS have no CHARACTER. The quote is the detachment rule word for word (“When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”), without the Designer's Note, so the note only says where the keyword comes from (kwStars stars CHARACTER and shows “*from Houndpack Lance Character (…)”) and nothing more than the rule."
  },
+ "635c119b4ba73b29": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 6e09cf276a4d9bc3, review:infernal-lance) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "6364d2e89ebde917": {
   "verdict": "ok",
   "by": "review:nerf-units",
@@ -7127,6 +7523,12 @@
   "at": "2026-10-21",
   "why": "NR roster: Sorcerer in Terminator Armour 140, (10) Scarab Occult Terminators 425; card 565 PTS."
  },
+ "6525faed7505572e": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 8453530fa9aad83e, review:m1-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "652ed55ed33b5ac1": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -7210,6 +7612,12 @@
   "by": "review:defilers2-b (its fix)",
   "at": "2026-10-26",
   "why": "oppnext is right per the alternating turn structure. Started in the opponent's turn, it covers the rest of their turn and all of your next turn, ending as their next turn starts. Started in your turn, it covers the rest of your turn only. From the end of your opponent's turn, it covers your next turn. Fulgrim's Daemon Primarch of Slaanesh (at the start of the opponent's Command phase) correctly gets pk every phase, both turns (main had pk x and t command:either). Through the skip-until edit its t is now command:opp, the same as the stored label. In the rendered checklist, Daemonic Speed is Active now in both Fight phases. One edge case is wrong. A trigger at the start of the battle round is read as both players' Command phases, so oppnext (and the existing yournext) from it adds the whole of the opponent's (or your) turn. That is never right, because at the start of a round the opponent's next turn is the one in this round, and how much the effect covers depends on who goes first. The case is not used in data.js. The fix returns x (When unclear) for yournext and oppnext from the start of the battle round, as is already done for \"phase\". With it, data.js and derive.json are byte-identical."
+ },
+ "66ae688a878aefbf": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 5e01097337937bb8, review:r10-superterm) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "66b0e6394d2e86b2": {
   "verdict": "ok",
@@ -7330,6 +7738,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "\"normal\", \"Normal\", \"normal move\", \"Normal Move\"; every bare \"normal\" sits in \"normal, advance or fall-back move\" (Super-Heavy Walker, Crusher Stampede)."
+ },
+ "68cd54d90bd80cea": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key d9bdf07bceebd359, review:nerf-3); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "68dacdf0aeb2c33e": {
   "verdict": "ok",
@@ -7475,6 +7889,12 @@
   "at": "2026-10-17",
   "why": "“That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well.” Same; “also” carries the same attacks and duration."
  },
+ "6b4e3ab6feb039d7": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 18716ea36a2f64fc, review:fellhammer-units (its fix)); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "6b84d706a2c56c55": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
@@ -7528,6 +7948,12 @@
   "by": "review:orks-data",
   "at": "2026-10-28",
   "why": "Krushin’ Impetus is on the Warboss in Mega Armour datasheet (not Meganobz’); who = Warboss in Mega Armour. \"each model in this unit\" counts the Meganobz too (19.04), as the why says."
+ },
+ "6c84e6aec4fa374f": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Same na as the approved one on main (main 2399c6e key 2bb0ef9ddb708873): \"Not leading a unit in this list\" holds. armyUnits differs only in keyword order and Skarbrand's added SUMMONED (88dc255, GW's page prints it), which does not bear on the judgement. Checked by script (rev2/it-*.json)."
  },
  "6c93107162208ccd": {
   "verdict": "ok",
@@ -7583,6 +8009,12 @@
   "at": "2026-10-24",
   "why": "On Calgar's own datasheet (Wahapedia), so who = Marneus Calgar."
  },
+ "6d5ce45c1de1845c": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 8d56a990a6e48110, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "6d62361b5f4cf98d": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -7612,6 +8044,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "True: \"Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.\" Fight phase, either turn."
+ },
+ "6e020d7c03e47331": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 79be6437c1fd2ce8, review:defilers-and-friends) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "6e09cf276a4d9bc3": {
   "verdict": "ok",
@@ -8050,6 +8488,12 @@
   "by": "review:necrons",
   "at": "2026-10-28",
   "why": "\"Your opponent’s Shooting phase or the Fight phase\"."
+ },
+ "74e7682fbfb70b0a": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key d68adf2412074978, review:knights-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "74ec1cd7b0afc248": {
   "verdict": "ok",
@@ -8651,6 +9095,12 @@
   "at": "2026-10-17",
   "why": "“Your unit’s CHARACTER models’ melee attacks have: +1 A. +2 S.” Same."
  },
+ "7d7d69dfae8bdf10": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 3fa10f6d7466f8be, review:r23-army); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "7dbb727c563cc204": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -9017,6 +9467,12 @@
   "at": "2026-10-21",
   "why": "NR (standard p4) prints \"Overwhelming Wrath (Aura)\", and the rule acts on \"an enemy unit within 6\" of this model\"."
  },
+ "82c0c24bb933c893": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 8205ad6312076aa6, review:healybois-2); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "82ec5e546587a35e": {
   "verdict": "ok",
   "by": "review:necrons",
@@ -9190,6 +9646,12 @@
   "by": "review:healybois",
   "at": "2026-10-28",
   "why": "GW: \"Domination of the Hive Mind (Aura): While a friendly TYRANIDS unit is within 9\\\" of this model …\" (Wahapedia verify/.cache/waha/ds/tyranids_The-Swarmlord.html). The Swarmlord's ability."
+ },
+ "8585b1c883ba7de0": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "na reason identical to the approved main judgement (key c81efef17bbdafd5, review:infernal-lance); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
  },
  "8595836d1a888038": {
   "verdict": "ok",
@@ -9443,6 +9905,12 @@
   "at": "2026-10-24",
   "why": "Charge rolls are made in your Charge phase and in the opponent's, by Heroic Intervention (core 15.11, end of your opponent's Charge phase: 'Resolve a charge... charge roll'). The Dacatarai additional effect is on enemy pile-in/consolidation moves in the Fight phase. Dacatarai's own WHEN is 'Start of the Fight phase' (data.js Martial Ka’tah). verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
+ "895b3f04dcc0be15": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 1bd5f94b32f3218c, review:r9-we-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "895dd696c7d54cb1": {
   "verdict": "ok",
   "by": "review:custodes-units",
@@ -9460,6 +9928,12 @@
   "by": "review:tzeentch-data",
   "at": "2026-10-27",
   "why": "Their turn."
+ },
+ "89b4ee9daac4c099": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 13946ae60cb6e488, review:r11-purge-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "89b5116d60d62722": {
   "verdict": "ok",
@@ -9773,6 +10247,12 @@
   "at": "2026-10-24",
   "why": "GW's Trajann Valoris datasheet (Wahapedia ds page) prints a SUPREME COMMANDER box: 'If this model is in your army, it must be your WARLORD.' New Recruit omits it; GW wins. Source of the ability is Trajann; lite-knights' models line matches the row (1 Allarus + 1 Allarus Vexilla)."
  },
+ "8cd31cc05ba70255": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "weaponChoice: rows are rendered once each in data (GW) order (weaponRows loops over mine), so no row is dropped or duplicated; it only decides whether useLine writes the choice sentence. Melee: any models line with 2+ melee weapons (Select Weapons + EXTRA ATTACKS, said by useLine); ranged: a non-MONSTER/VEHICLE line with [CLOSE-QUARTERS] and other guns (Close-quarters), the same conditions the old weaponJoins drew as or/+ dividers. The carrier name is now set only when there is no choice; with a choice the sentence names the models line (snapshots: the only carrier label lost is SKITARII RANGER ALPHA, which the new sentence names). Snapshot line multisets old vs new: 58 \"+\" and 48 \"OR\" divider lines and 22 scope lines gone, 108 sentences added, all other weapon lines the same."
+ },
  "8cf5ee3144adb113": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -9916,6 +10396,12 @@
   "by": "review:r10-superterm (its fix)",
   "at": "2026-10-21",
   "why": "Your Shooting is right. Their Movement for Fire Overwatch follows the signed-off Furious Onslaught convention. For the owner: snap shooting (15.09) says \"You cannot re-roll hit rolls\". Your Charge only is too narrow. \"When this unit declares a charge\" has no turn limit, and Heroic Intervention (\"End of your opponent’s Charge phase … Resolve a charge with your unit (11.02)\") runs 11.02, whose first step is \"That unit declares a charge\". The Chaos Terminators are an unengaged INFANTRY unit the app offers it to. This matches the signed-off Harpooned tag (charge, either), and the FAQ about steps 2–3 covers charges \"outside of the charge phase\", not this one. Should be ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'opp', charge:'either' }. The text has every word of the pack’s Rules Update. Only its bullet nesting is flattened: part 1 and the \"When this unit declares a charge … If you do:\" lead-in are paragraphs, and the two sub-bullets follow as bullets."
+ },
+ "8eebb4bee02681e8": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 1016fe171fd26ea1, review:defilers3); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "8ef568267ffa9b82": {
   "verdict": "ok",
@@ -10343,6 +10829,18 @@
   "at": "2026-10-23",
   "why": "EFFECT “Select one objective your unit is controlling. That objective is secured.” Literal; the timing is the phase tag, the exclusion in needs."
  },
+ "9678626157e7be31": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "na reason identical to the approved main judgement (key 391330d40614737a, review:r23-army); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ "96792e5a9bd251bf": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal to the approved judgement on main (main 2399c6e key eb4465fedd8412be) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
+ },
  "967a4b418b6b64cf": {
   "verdict": "ok",
   "by": "review:catalog-chaos-daemons",
@@ -10601,6 +11099,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army that was just destroyed\": all units, and all have Deadly Demise D6."
  },
+ "99453c078e6ab295": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key 7e367f46fff8c607); re-keyed by the reordered unit. Checked by script."
+ },
  "9998a07ef9678077": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -10612,6 +11116,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "WHEN “Fight phase, when an enemy unit targets a friendly MEGANOBZ/NOBZ unit” = “An enemy unit targets your unit”; EFFECT as Orks Is Never Beaten’s: “if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed” = the rest."
+ },
+ "99af97ada24a0f10": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key c4891fac4cfef6fd, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "99bd30b87238c9ed": {
   "verdict": "ok",
@@ -10642,6 +11152,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Crimson King section lists \"Time Flux (Aura, Psychic)\"."
+ },
+ "9a1daa9d0938abce": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 6450e771ea24010b, review:nerf-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "9a29a9f64e4a33ad": {
   "verdict": "ok",
@@ -10739,6 +11255,12 @@
   "at": "2026-10-24",
   "why": "It is on Karanak’s own datasheet."
  },
+ "9b2d27d576dba08e": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key ea7c704b289d87a9, review:pubstomper); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "9b3cdc05e599bee4": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -10798,6 +11320,18 @@
   "by": "review:howto-3",
   "at": "2026-10-29",
   "why": "{\"at\":\"Start of the battle round\"}: the rule's words open with that moment."
+ },
+ "9c1f190117482517": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key a852b235d09609e6, review:r9-we-nids); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ "9c478bee6d974ab0": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key e6085e546aadd2e6, review:nerf-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "9c62ea766ff9276a": {
   "verdict": "ok",
@@ -10901,6 +11435,12 @@
   "at": "2026-10-24",
   "why": "WHEN 'Fight phase, ...' (waha l.395); Wahapedia's card icons: Fight, Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
  },
+ "9d8c5a9f1c08f5c1": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal as sets to the approved judgement on main (main 2399c6e key e6085e546aadd2e6); only the weapon/gear order differs (GW datasheet order). Checked by script."
+ },
  "9d8f935deac06384": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -10942,6 +11482,12 @@
   "by": "review:fellhammer-units",
   "at": "2026-10-24",
   "why": "Master of Executions datasheet ability; always-on, no timing label."
+ },
+ "9db99be9ef45af3f": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 8b5d0bebf256e163, review:fellhammer-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "9dbd9fcc381fd424": {
   "verdict": "ok",
@@ -11165,6 +11711,12 @@
   "at": "2026-10-16",
   "why": "New Recruit PDF: \"Keep Huntin'! (Once per battle round, per army)\". [restored: the same judgement on the same text, signed off for an earlier list]"
  },
+ "a08ca18e4c07f9d6": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key d0dc66d71af201b1, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "a0a78423e2b63527": {
   "verdict": "ok",
   "by": "review:fellhammer-units",
@@ -11309,6 +11861,12 @@
   "at": "2026-10-22",
   "why": "It keeps the trigger (just after an enemy unit selects your unit as a target) and the EFFECT word for word in short form. The row's “Their Shooting” gives the phase and turn."
  },
+ "a27f748813e21225": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key ae0771b1b0787b21, review:defilers3); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "a2828c7e97ad7cf0": {
   "verdict": "ok",
   "by": "review:pubstomper",
@@ -11411,11 +11969,23 @@
   "at": "2026-10-28",
   "why": "As item Phaeron of the Stars (who right; see the pickOptions code bug)."
  },
+ "a3ffb15928e17a6b": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key ebd42db6df992477, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "a4131ae669135c57": {
   "verdict": "ok",
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "'Fight phase' with no owner: either; Wahapedia icon str11Either. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "a43b9c15a0d8e610": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key cfba43eca667f53a, review:r19-fixes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "a4436e2fc77801f3": {
   "verdict": "ok",
@@ -11597,6 +12167,12 @@
   "at": "2026-10-17",
   "why": "WHEN: \"just before you make a battle-shock roll for a friendly unit\"; EFFECT: \"That battle-shock roll is automatically successful.\" The gist matches the EFFECT in full. It leaves out \"RESTRICTIONS: You cannot use this stratagem more than once per battle.\" That line is a RESTRICTION, not part of the EFFECT, so by the stated standard it need not appear (optional: add \"(once per battle)\" to match how Rapid Ingress shows its restriction)."
  },
+ "a65a1028418f4556": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 9d9bcb9766e506d9, review:r19-fixes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "a660017a004a29ed": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -11777,6 +12353,12 @@
   "at": "2026-10-21",
   "why": "WHEN: \"Your Shooting phase or the Fight phase\"."
  },
+ "a919cbee439a94a7": {
+  "verdict": "ok",
+  "by": "review:order-3",
+  "at": "2026-10-31",
+  "why": "The only change from the approved judgement (716181c586423305, on main and 7b81492) is rowOf/find: a row matches by name and, where the entry names a group, by that group (stats never). Entries without group resolve as before. All 213 list units resolve byte-identically to 7b81492, including the Bloodthirster's Great axe of Khorne profiles now that the catalogue's Axe of Khorne rows come first in GW's order."
+ },
  "a96e8ae613d047c8": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -11812,6 +12394,12 @@
   "by": "review:big-demons-baby-2",
   "at": "2026-10-23",
   "why": "The only change concatenates helpedBy(u)'s help.mod with from/strat/cp, same shape as eligible stratagem mods, so the footnote, CP prefix and Damage tab tick work as for any stratagem. No double entry: Daemonic Fury has no top-level mod, so the eligible() path adds nothing for the Lord on Juggernaut unit (BLOOD LEGIONS + WORLD EATERS); it gets the footnote once, via help. kind 'melee' filters it to melee tables only. Snapshot: footnote on Angron, Daemon Prince, Master of Executions, Lord on Juggernaut + Berzerkers, Goremongers, Jakhals; none on Skarbrand, Bloodthirster, Flesh Hounds (BLOOD LEGIONS only). Screenshot 14 shows it as a stratagem with the two picks."
+ },
+ "aa166d417137aff7": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key e9f3236c2856365a, review:reference); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "aa1d9e706e2b8571": {
   "verdict": "ok",
@@ -11902,6 +12490,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"if it is below its Starting Strength, add 1 to the Hit roll. If this model is also Below Half-strength, add 1 to the Wound roll as well\"; one model: below Starting Strength = \"remaining wounds are less than its W\" (01.02.01), so \"Lost any wounds\" is the same; the two states are a pick, nothing added."
+ },
+ "aba0ffd101aaf248": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 9d8f935deac06384, review:tzeentch-data) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "abba383d56822d89": {
   "verdict": "ok",
@@ -12136,6 +12730,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "Wahapedia’s Shoota Boyz page lists it under “Enhancements: Supa-glowy Fing 25 pts”."
+ },
+ "ae8142a6077b6b02": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 441a2c840044dbd2, review:custodes-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "ae9947999a1629a8": {
   "verdict": "ok",
@@ -12455,6 +13055,12 @@
   "at": "2026-10-24",
   "why": "GW tags it: “Daemon Lord of Khorne (Aura):” on the Faction Pack card."
  },
+ "b33b3feea144413a": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 9141ce3953fc81b2, review:fellhammer-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "b38e53acc097cb94": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -12472,6 +13078,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "“In your Shooting phase, you can select one visible enemy unit within 18\" …”: shooting, your turn."
+ },
+ "b3982866b2a05a80": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key e6d64d1d268860ef, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "b3a089cb83677130": {
   "verdict": "ok",
@@ -13121,6 +13733,12 @@
   "at": "2026-10-24",
   "why": "GW prints \"Bladeguard (Once per turn, per unit):\" (Wahapedia Bladeguard Veteran Squad)."
  },
+ "bd56dbd67552d85f": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 0415accd06a388c5, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "bd62b2f936439385": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -13511,6 +14129,12 @@
   "at": "2026-10-16",
   "why": "Anchored exact match; used by Try Dat Button! and Daemon-vehicle texts in the term’s 04.01.05 sense."
  },
+ "c3fbc20b64d16697": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 9e9f9fdd1693af6f, review:fellhammer-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "c43aae1b86b33119": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -13522,6 +14146,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"In your Command phase\"."
+ },
+ "c4879bc9d2bf6da3": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key e1ddb3de9c725e13); re-keyed by the reordered unit. Checked by script."
  },
  "c4891fac4cfef6fd": {
   "verdict": "ok",
@@ -13588,6 +14218,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "WHEN “Your Movement phase or your Charge phase”. Text matches GW word for word; 1CP (GW’s 1CP sits beside this stratagem’s TARGET line, and the 2CP belongs to Fools’ Flight)."
+ },
+ "c5cf741eea8fcb2e": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key bf473018d2a96268, review:nerf-3); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "c5df75e1d0100700": {
   "verdict": "ok",
@@ -13715,6 +14351,12 @@
   "at": "2026-10-16",
   "why": "Matches the text; \"a model with an aura ability ... is always within range of its own aura ability\" (Core 22.01), so selfWhen is right; every unit here is WORLD EATERS."
  },
+ "c7802176c652192a": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 2b4cc294d60bd968, review:orks-2); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "c7952f94ed192333": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -13756,6 +14398,12 @@
   "by": "review:nerf-rules",
   "at": "2026-10-24",
   "why": "WHEN: “Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit.” The Fight phase of either turn plus the opponent’s Shooting phase: 'either'."
+ },
+ "c7cd82cffd24dd01": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key e560acd173c99147, review:woof-woof) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "c7d9d551e8182ab2": {
   "verdict": "ok",
@@ -13865,6 +14513,12 @@
   "at": "2026-10-24",
   "why": "Export: Armoured Hull, Ironhail Heavy Stubber, Shield Dome, Storm Bolters. This is legal: one of the four options (Shield Dome), plus \"can be equipped with 1 Ironhail Heavy Stubber\". Points 70 each (1st to 3rd; only Orbital Comms costs +10). The profiles match Wahapedia: Stubber 36\" A3 S4 AP-1 D1 [RAPID FIRE 3]; Storm Bolters 24\" A4 S5 AP-1 D1 [RAPID FIRE 4]; Armoured Hull A3 WS4+ S6 AP0 D1."
  },
+ "c907a488b8b72fec": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 7dfe6d181f5cef02, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "c90ba8137bd2ca50": {
   "verdict": "ok",
   "by": "review:custodes-units",
@@ -13955,6 +14609,12 @@
   "at": "2026-10-27",
   "why": "\"One LEGIONES DAEMONICA TZEENTCH MONSTER unit\": Kairos, the Daemon Prince, both Lords of Change (the Soul Grinder is a VEHICLE)."
  },
+ "cabff06f164883fe": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key e071a7c006c846ed, review:orks-data); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "cac188082a5ae9f5": {
   "verdict": "ok",
   "by": "review:checklist-5",
@@ -13978,6 +14638,18 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "Word for word the EFFECT: “Your unit’s melee attacks have +2 S.”"
+ },
+ "cb32cfa731c18dee": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 8b56a4a4c5a45193, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ "cb528f4ff9254a1d": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key f232cab76c600583); re-keyed by the reordered unit. Checked by script."
  },
  "cb5b0667f17e2160": {
   "verdict": "ok",
@@ -14068,6 +14740,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "Matches the New Recruit PDF model lines (Mek: Kustom Mega-slugga, Mek's Toolz; Kaptin and 9x Flash Gitz: Choppa, Snazzgun) and weapon rows with NR’s counts (Snazzgun Cutta/Dakka/Kill Shot x10, Choppa x10)."
+ },
+ "ccc99fca493a961b": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Equal to the approved judgement on main (main 2399c6e key c81efef17bbdafd5) except the keyword order inside armyUnits (GW order, d041c79); same na, same units, same keyword sets. Checked by script."
  },
  "ccd7646698c9a313": {
   "verdict": "ok",
@@ -14189,6 +14867,18 @@
   "at": "2026-10-24",
   "why": "Soul-Tally Offering (2CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit … not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re-roll the Wound roll.” The text shortened, with nothing added or dropped."
  },
+ "cdee7450ad578242": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "unitMods: identical to the approved main version (key e12a1305f3a3b8dd) except that helpedBy(u) is no longer concatenated: the help column (an AI reading attaching Daemonic Fury / Honoured Interred to non-TARGET units) is removed. GW TARGETs checked in verify/.cache/waha: Daemonic Fury \"One BLOOD LEGIONS unit from your army\", Honoured Interred \"One friendly ADEPTUS CUSTODES DREADNOUGHT unit\"; none of the 7 units losing the line has those keywords. Stratagem mods still come only from canTarget (needs from TARGET)."
+ },
+ "ce03f87fc6df3592": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key de800c55a093d64f, review:custodes-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "ce6578deba6e0b05": {
   "verdict": "ok",
   "by": "review:exiled-rules",
@@ -14230,6 +14920,12 @@
   "by": "review:catalog-custodes",
   "at": "2026-10-29",
   "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes],any:[Infantry,Mounted]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Shield of Honour)."
+ },
+ "cebfde87e4474b79": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 0a463ce793318a37, review:orks-data); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "ced2e2594a5549ba": {
   "verdict": "ok",
@@ -14375,6 +15071,12 @@
   "at": "2026-10-22",
   "why": "WHEN “when an enemy unit targets a friendly ORKS INFANTRY unit (excluding GRETCHIN units)”. The gist names the unit it protects by its keywords (“targets an ORKS INFANTRY unit”) but drops the exclusion, and that unit is not the one using it, so the users column does not carry it. In ooga-booga, Zodgrod Wortsnagga + Gretchin and Gretchin are ORKS INFANTRY (keywords “Faction: Orks, Infantry, … Gretchin”), so the gist reads as if one Gretchin unit could shield the other. The stratagem’s own shield data already has protects none:[Gretchin]. The rest is literal: TARGET “One friendly GRETCHIN unit within 3\" of that ORKS INFANTRY unit”; EFFECT “When a hit roll for that enemy unit’s ranged attacks that target that ORKS unit results in a hit, if a model in your GRETCHIN unit is on the battlefield, end the attack sequence for that attack and your GRETCHIN unit suffers 1 mortal wound.”"
  },
+ "d0c2489dfffe79b6": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 647a19681f6e214a, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "d0dc66d71af201b1": {
   "verdict": "ok",
   "by": "review:fellhammer-units",
@@ -14489,6 +15191,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”"
  },
+ "d1effb4ba65eea22": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key ffa43a43f77473b0, review:cooking) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "d1f3c3d5480e4c06": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -14567,6 +15275,12 @@
   "at": "2026-10-21",
   "why": "New Recruit: \"1x Forgefiend: 2 Hades autocannons (2x Hades autocannon), Ectoplasma cannon and claws (Ectoplasma cannon, Forgefiend claws)\", tables \"Hades autocannon (x2)\", \"Ectoplasma cannon\", \"Forgefiend claws\". The one models line carries all four, so ×2 Hades autocannon, Ectoplasma cannon and Forgefiend claws match."
  },
+ "d2ce6c32c2326df5": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "na reason identical to the approved main judgement (key eb4465fedd8412be, review:navigator); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
  "d2cf4d136e615a7e": {
   "verdict": "ok",
   "by": "review:necrons",
@@ -14584,6 +15298,12 @@
   "by": "review:tzeentch-data",
   "at": "2026-10-27",
   "why": "\"a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army\": every unit of this list (APPLIES TO lists all nine)."
+ },
+ "d3590b52347455af": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key e1ddb3de9c725e13, review:r19-fixes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "d379d3c86d8d0c75": {
   "verdict": "ok",
@@ -14650,6 +15370,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "The leader’s ability (\"While this model is leading a unit\")."
+ },
+ "d47d7f6911113a13": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "na reason identical to the approved main judgement (key bf7d4ba433a820cb, review:r23-army); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
  },
  "d49670069f12677d": {
   "verdict": "ok",
@@ -14782,6 +15508,18 @@
   "by": "review:defilers3",
   "at": "2026-10-26",
   "why": "“Each time this unit is selected to fight … until the end of the phase … At the end of the Fight phase”: Fight phase, either turn (Wahapedia ds/emperors-children_Flawless-Blades); same as the signed-off PDF-built list."
+ },
+ "d63e1a6b6dfcf031": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key f7b68c48be03c803, review:r19-fixes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ "d65d5c55a86dd854": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 3b3c07f5bd4e30e4, review:shooty) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "d670be3723cdd038": {
   "verdict": "ok",
@@ -15011,6 +15749,12 @@
   "at": "2026-10-30",
   "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): TARGET One SHADOW LEGION unit. The needs follow it."
  },
+ "d9b5aeeca85130d8": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key 9d9bcb9766e506d9); re-keyed by the reordered unit. Checked by script."
+ },
  "d9bd58207bdd22bd": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -15191,6 +15935,12 @@
   "at": "2026-10-17",
   "why": "“to take effect until the start of your next Command phase”: the window covers the opponent’s turn, so “either” is right for Fight (Psychic melee weapons, “Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon”) and for their Movement phase (Fire Overwatch). Selection happens only “In your Command phase”, and the three effects only act when Psychic weapons attack. With no per-phase turns, the rule is also listed in their Command phase, your Movement phase and their Shooting phase, where none of your units attacks. This is the brief’s ‘includes one where it can’t’. The fix needs the same per-phase turns key the app’s other attack rules use (Try Dat Button! turns:{shooting:'your'}, Da Hunt is On turns:{movement:'opp', shooting:'your'}). The turn value itself stays “either”."
  },
+ "dc7a9ce2be5d789f": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key e83b22d75c62a36d, review:knights-nids) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "dc8fe389dd57c66a": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -15280,6 +16030,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "\"Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic\"; \"if picked this round\" is Unearthly Power's \"At the start of the battle round, select one ... Until the start of the next battle round\"."
+ },
+ "dda04e7394c66d6f": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key bf473018d2a96268); re-keyed by the reordered unit. Checked by script."
  },
  "ddadfff6cf84fb13": {
   "verdict": "ok",
@@ -15623,6 +16379,12 @@
   "at": "2026-10-26",
   "why": "Matches the file (line 76). Tested: qualified brackets ([LETHAL HITS: non-MONSTER/VEHICLE], [ANTI-VEHICLE 4+: excluding TITANIC], [Sustained Hits 1: non-Monster/Vehicle]), [SUSTAINED HITS D3], 'the [ASSAULT] and [HEAVY] abilities', 'the Lethal Hits and Sustained Hits 1 abilities', bare 'have Sustained Hits 1' and [TWIN-LINKED] are all read. Notes, not blocking: (1) WA, which this builds on and which is not under review, has 'melta \\d+' and 'rapid fire \\d+', so [RAPID FIRE D3] and [MELTA D3] are not read. (2) The bare 'has/have the X' form also reads an enemy's ability ('if it has the Lethal Hits ability, that ability does not apply'), which is a possible future false positive. (3) 'hazardous' also matches inside [SUPA-HAZARDOUS], a drawback rather than a bonus. That one is unconditional today, so it has no effect."
  },
+ "e2af48baf6f595c7": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key a018cf37a026418f); re-keyed by the reordered unit. Checked by script."
+ },
  "e2e4e12454597fc1": {
   "verdict": "ok",
   "by": "review:m1-code",
@@ -15706,6 +16468,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "The Shaman's ability (“this model can use this ability … Psychic weapons equipped by this model”)."
+ },
+ "e3ca94132b1547e6": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key d9d76882d80fa885, review:cooking) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
  },
  "e3cff3528bc2eadf": {
   "verdict": "ok",
@@ -16019,6 +16787,12 @@
   "at": "2026-10-16",
   "why": "Matches the NR line \"Thermal cannon, Stormspear rocket pod, Meltagun, Reaper chainsword\"."
  },
+ "e84f14a6df24d077": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 3caf0e1dae20493d, review:hurrdurr) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "e87a01b57978d418": {
   "verdict": "ok",
   "by": "review:nerf-units",
@@ -16235,6 +17009,12 @@
   "at": "2026-10-21",
   "why": "“While this model is within 3\" of one or more friendly ADEPTUS MECHANICUS VEHICLE units, unless it is leading a unit, this model has the Lone Operative ability.” The def says the same in fewer words."
  },
+ "eaea058dfac47394": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key d2c1573c6630c1c1, review:r10-superterm) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "eafaaaf04dc02b88": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -16354,6 +17134,12 @@
   "by": "review:tzeentch-data",
   "at": "2026-10-27",
   "why": "Faithful."
+ },
+ "ecc80a3e4a7b9b11": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 7dfe6d181f5cef02, review:mucho-mutantes); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "eccdbfa7a2b9d825": {
   "verdict": "ok",
@@ -16475,6 +17261,12 @@
   "at": "2026-10-24",
   "why": "WHEN: “Your Shooting phase when a KILL TEAM unit is selected to shoot.” “Your Shooting phase”: 'your'."
  },
+ "ef442eadc28c329c": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 3939cc8629508920, review:custodes-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
  "ef46eb6d0425dc01": {
   "verdict": "ok",
   "by": "review:necrons-2",
@@ -16529,6 +17321,12 @@
   "at": "2026-10-24",
   "why": "Export: Predator autocannon, armoured tracks (WS 4+ per Faction Pack), 2 heavy bolters, combi-bolter, Havoc launcher. 145 pts."
  },
+ "f048fa625043a84f": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key d1896f0fb562f1be, review:nerf-units) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "f0893b35778e4225": {
   "verdict": "ok",
   "by": "review:exiled-units",
@@ -16565,6 +17363,12 @@
   "at": "2026-10-28",
   "why": "TARGET \"Your NECRONS WARLORD\"."
  },
+ "f10aa562eab3be16": {
+  "verdict": "ok",
+  "by": "review:order-2",
+  "at": "2026-10-30",
+  "why": "Identical judgement to the approved one on main (main 2399c6e key f7b68c48be03c803); re-keyed by the reordered unit. Checked by script."
+ },
  "f10d931971814222": {
   "verdict": "ok",
   "by": "review:fellhammer-3",
@@ -16576,6 +17380,12 @@
   "by": "review:fellhammer-3",
   "at": "2026-10-24",
   "why": "Demagogue (data.js = Wahapedia): “Once per battle, at the start of any phase, you can select one friendly HERETIC ASTARTES unit that is Battle-shocked and within 12\" of this unit’s DARK APOSTLE model. That unit is no longer Battle-shocked.” The text opens with “Once per battle”, so the derived tag “Once per battle” is right. Nothing in the text says per unit or per army."
+ },
+ "f148e3252de52f1e": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key 0a51de81856a29e0, review:r23-army); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "f155569f299b28dc": {
   "verdict": "ok",
@@ -16679,6 +17489,12 @@
   "at": "2026-10-17",
   "why": "EFFECT: \"Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack.\" The gist keeps the duration, both kinds of unit and the benefit of cover. It leaves out \"to the attacking model\" and the per-attack wording, but ends with \"…\". Nothing added."
  },
+ "f29770aceed94d10": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "na reason identical to the approved main judgement (key 2bb0ef9ddb708873, review:big-demons-baby); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
  "f298d113ada36f82": {
   "verdict": "ok",
   "by": "review:tzeentch-data",
@@ -16702,6 +17518,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "Gear matches NR's four Options lines (Umbralefic Crystal is the enhancement, not gear); counts match (combi-bolter (x8) = Scarab Sorcerer + 7, soulreaper (x2), khopesh (x9)). \"Hellfyre missile rack (x2) - Scarab Occult Terminators\" is printed only in the weapons table, on no models line, so unplaced is right; the datasheet's \"1 Scarab Occult Terminator can be equipped\" per 5 models leaves the bearers open and the app says so instead of guessing."
+ },
+ "f3075172fdd9908b": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key f7015b406bb00eed, review:r23-army); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "f31034917f796a3e": {
   "verdict": "ok",
@@ -16805,6 +17627,12 @@
   "at": "2026-10-29",
   "why": "{\"ph\":[\"command\",\"shooting\",\"fight\"],\"turn\":\"either\",\"at\":\"Start of the first battle round\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
  },
+ "f4eca6a6a5f41b43": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 67b08b1ddd0ff3f8, review:orks-data) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "f50ab0f7c2d0bd07": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -16840,6 +17668,12 @@
   "by": "review:r20-damage",
   "at": "2026-10-21",
   "why": "Quality 1–2: “Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.” It is listed as not counted, and the reason given (“one re-roll: the calculator re-rolls no single die”) is true. The when names the Quality picked for the Oath."
+ },
+ "f59fc75e0f5b26f0": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Judgement identical to the one approved on main (key dd21cf0a01f29cbd, review:custodes-units); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
  },
  "f5b87dc0d359a948": {
   "verdict": "ok",
@@ -16936,6 +17770,12 @@
   "by": "review:r14-calc",
   "at": "2026-10-21",
   "why": "\"Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.\" calc {sus:'D3', weapon:'Dark Blessing'} matches, the calculator keeps the better of it and the printed [SUSTAINED HITS 1] (24.02), and \"How this is worked out\" says how the D3 is rolled. The aetherstride is a table choice, so unticked."
+ },
+ "f7c8a81a43b0d39b": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "na reason identical to the approved main judgement (key b97d5160a0bcbb39, review:infernal-lance); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
  },
  "f7edc8fe54408e7f": {
   "verdict": "ok",
@@ -17093,6 +17933,12 @@
   "at": "2026-10-16",
   "why": "NR: Dark Blessing, Infernal cannon, Hellforged weapons (strike/sweep); one MONSTER model."
  },
+ "faed026324a53f15": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Same content as the judgement approved on main (key 755306fabd8612bb, review:defilers2) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
  "fafd5a91fc06a885": {
   "verdict": "ok",
   "by": "review:exiled-2",
@@ -17194,6 +18040,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Crimson King ability of Magnus; Unearthly Power: \"select one of the abilities in the Crimson King section\" each battle round."
+ },
+ "fc76c552f98a135c": {
+  "verdict": "ok",
+  "by": "review:order",
+  "at": "2026-10-30",
+  "why": "Tesseract Vault Damaged: Wahapedia (verify/.cache/waha/ds/necrons_Tesseract-Vault.html) \"While this model has 1-8 wounds remaining, subtract 4 from its Objective Control characteristic and you can only select one of the C’tan Powers weapons in your Shooting phase, instead of two.\" The footnote reads -4 OC and the rest in GW's words, no hit penalty (correct: the band has none). derive.js damaged-oc is a general regex; derive report before/after: only this reading added (DATASHEETS.mods 130 -> 131)."
  },
  "fc7796a060198b9c": {
   "verdict": "ok",

@@ -4747,15 +4747,15 @@
     "Pistol"
    ],
    "kw": [
-    "Battleline",
     "Blue",
     "Brimstone",
+    "Infantry",
+    "Battleline",
     "Chaos",
     "Daemon",
-    "Faction: Legiones Daemonica",
+    "Tzeentch",
     "Horrors",
-    "Infantry",
-    "Tzeentch"
+    "Faction: Legiones Daemonica"
    ],
    "kwOnly": {
     "Blue": "Blue Horror",
@@ -5141,16 +5141,16 @@
     "Pistol"
    ],
    "kw": [
-    "Battleline",
     "Blue",
+    "Pink",
     "Brimstone",
+    "Infantry",
+    "Battleline",
     "Chaos",
     "Daemon",
-    "Faction: Legiones Daemonica",
+    "Tzeentch",
     "Horrors",
-    "Infantry",
-    "Pink",
-    "Tzeentch"
+    "Faction: Legiones Daemonica"
    ],
    "kwOnly": {
     "Pink": "Pink Horror",
@@ -5862,9 +5862,9 @@
     "Chaos",
     "Daemon",
     "Faction: Legiones Daemonica",
-    "Hellflayers",
     "Mounted",
-    "Slaanesh"
+    "Slaanesh",
+    "Hellflayers"
    ],
    "points": {
     "costs": [

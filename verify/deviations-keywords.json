@@ -1,0 +1,93 @@
+[
+ {
+  "army": "tzeeeeentch",
+  "unit": "brimstone-horrors",
+  "kw": "page",
+  "reason": "A reference sheet (the Brimstone Horrors the Pink Horrors split into): no Wahapedia datasheet page of its own; its keywords are the Pink Horrors page's, with its BRIMSTONE model keyword. Kept as BSData / New Recruit have them.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS \"INFANTRY; BATTLELINE; CHAOS; DAEMON; TZEENTCH; HORRORS\", \"BRIMSTONE HORRORS: BRIMSTONE\"; FACTION KEYWORDS \"LEGIONES DAEMONICA\"."
+ },
+ {
+  "datasheet": "ultramarines/Librarian in Phobos Armour",
+  "nameKeyword": "Librarian",
+  "from": "bsdata",
+  "reason": "A head match (the name's head LIBRARIAN, before \"in Phobos Armour\"), accepted: Wahapedia's new-codex page leaves name keywords out; BSData gives the unit the category Librarian.",
+  "evidence": "verify/sources/bsdata-extract.json (Librarian in Phobos Armour, categories: \"Librarian\"); verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: KEYWORDS \"INFANTRY; CHARACTER; EXPLOSIVES; IMPERIUM; PHOBOS; PSYKER\"."
+ },
+ {
+  "datasheet": "chaos-space-marines/Lord Discordant on Helstalker",
+  "nameKeyword": "Lord Discordant",
+  "from": "page",
+  "reason": "A head match (the name's head LORD DISCORDANT, before \"on Helstalker\"), accepted: the page prints LORD DISCORDANT, the datasheet's own keyword (no other datasheet has it).",
+  "evidence": "verify/.cache/waha/ds/chaos-space-marines_Lord-Discordant-On-Helstalker.html: KEYWORDS \"MOUNTED; CHARACTER; CHAOS; DAEMON; LORD DISCORDANT\"."
+ },
+ {
+  "datasheet": "world-eaters/Daemon Prince of Khorne",
+  "nameKeyword": "Daemon Prince",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared DAEMON PRINCE (the coordinator's decision).",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Daemon-Prince-of-Khorne.html: KEYWORDS \"MONSTER; CHARACTER; CHAOS; KHORNE; DAEMON; DAEMON PRINCE\"."
+ },
+ {
+  "datasheet": "thousand-sons/Daemon Prince of Tzeentch with wings",
+  "nameKeyword": "Daemon Prince",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared DAEMON PRINCE (the coordinator's decision).",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Daemon-Prince-of-Tzeentch-with-Wings.html: KEYWORDS \"MONSTER; CHARACTER; DAEMON; FLY; PSYKER; CHAOS; TZEENTCH; DAEMON PRINCE\"."
+ },
+ {
+  "datasheet": "thousand-sons/Sorcerer in Terminator Armour",
+  "nameKeyword": "Sorcerer",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared SORCERER (the coordinator's decision).",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Sorcerer-In-Terminator-Armour.html: KEYWORDS \"INFANTRY; CHARACTER; PSYKER; TERMINATOR; CHAOS; TZEENTCH; SORCERER\"."
+ },
+ {
+  "datasheet": "thousand-sons/Exalted Sorcerer on Disc of Tzeentch",
+  "nameKeyword": "Exalted Sorcerer",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared EXALTED SORCERER (the coordinator's decision).",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Exalted-Sorcerer-on-Disc-of-Tzeentch.html: KEYWORDS \"INFANTRY; MOUNTED; CHARACTER; FLY; GRENADES; PSYKER; CHAOS; TZEENTCH; EXALTED SORCERER\"."
+ },
+ {
+  "datasheet": "chaos-daemons/Pink Horrors",
+  "nameKeyword": "Horrors",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared HORRORS (the coordinator's decision).",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS \"INFANTRY; BATTLELINE; CHAOS; DAEMON; TZEENTCH; HORRORS\", \"PINK HORRORS: PINK\"."
+ },
+ {
+  "datasheet": "chaos-daemons/Blue Horrors",
+  "nameKeyword": "Horrors",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared HORRORS (the coordinator's decision).",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS \"INFANTRY; BATTLELINE; CHAOS; DAEMON; TZEENTCH; HORRORS\", \"BLUE HORRORS: BLUE\"."
+ },
+ {
+  "datasheet": "adeptus-custodes/Shield-Captain in Allarus Terminator Armour",
+  "nameKeyword": "Shield-Captain",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared SHIELD-CAPTAIN (as for the 6 decided by the coordinator). A faction catalogue row.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain-in-Allarus-Terminator-Armour.html: KEYWORDS \"INFANTRY; CHARACTER; IMPERIUM; SHIELD-CAPTAIN; TERMINATOR\"."
+ },
+ {
+  "datasheet": "adeptus-custodes/Shield-Captain on Dawneagle Jetbike",
+  "nameKeyword": "Shield-Captain",
+  "from": "page",
+  "reason": "GW prints no keyword unique to this datasheet; the keyword GW prints for it is the shared SHIELD-CAPTAIN (as for the 6 decided by the coordinator). A faction catalogue row.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Shield-Captain-on-Dawneagle-Jetbike.html: KEYWORDS \"MOUNTED; CHARACTER; FLY; IMPERIUM; SHIELD-CAPTAIN\"."
+ },
+ {
+  "army": "catalog",
+  "unit": "adeptus-custodes/venatari-with-verutum-lances",
+  "kw": "name",
+  "reason": "GW prints no keyword unique to this datasheet: its page's KEYWORDS line has no name keyword (Wahapedia's new-codex pages leave name keywords out), and BSData's only candidate, \"Venatari with Kinetic Destroyers\", is the other Venatari datasheet's name, not this one's. The Custodes pack's Venatari Custodians (VENATARI CUSTODIANS) is the superseded pre-codex datasheet (packExclude). The coordinator's decision.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Venatari-with-Verutum-Lances.html: KEYWORDS \"INFANTRY; EXPLOSIVES; FLY; IMPERIUM; JUMP PACK\"; verify/sources/catalog/adeptus-custodes.json (adeptus-custodes/venatari-with-verutum-lances, kw: \"Venatari with Kinetic Destroyers\"); scratchpad/iaq/newcust.html (Warhammer Community, \"New Custodes: What you need to know\", 25 Sep 2026): \"Units featured in the new Codex for the first time: … Venatari with Kinetic Destroyers Venatari with Verutum Lances …\"."
+ },
+ {
+  "packExclude": true,
+  "pack": "eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.pdf",
+  "section": "Imperial Armour Datasheets",
+  "reason": "The coordinator's decision: the Adeptus Custodes Faction Pack v1.2 (30 Sep 2026) prints its Imperial Armour datasheets as they were before Codex: Adeptus Custodes (11th edition, released 17 Oct 2026). Its Venatari Custodians sheet is the old single datasheet, which the codex split into Venatari with Kinetic Destroyers and Venatari with Verutum Lances; the same pack section is superseded as the Vertus Praetors lines are (verify/deviations-numbers.json). Its KEYWORDS lines are not GW's over Wahapedia's.",
+  "evidence": "scratchpad/iaq/newcust.html (Warhammer Community, \"New Custodes: What you need to know\", 25 Sep 2026): \"Units featured in the new Codex for the first time: … Venatari with Kinetic Destroyers Venatari with Verutum Lances …\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.txt (CONTENTS: \"Imperial Armour Datasheets\", p9; VENATARI CUSTODIANS, \"KEYWORDS: Infantry, Fly, Jump Pack, Imperium, Venatari Custodians\"); verify/deviations-numbers.json (Vertus Praetors: the pack superseded by the codex)."
+ }
+]

@@ -43,6 +43,28 @@ weapon ability of the weapons it took. A difference with no reason is a conflict
 list keeps its value in `over`, and `verify/out/tables.md` lists it, until it is fixed at the source (GW's wording,
 Wahapedia's bold). There are none today.
 
+**GW's order.** A datasheet's rows are in GW's order, by position on its Wahapedia datasheet page (`verify/gw-order.js`;
+`--write` sorts them): weapon rows (a multi-profile weapon's profiles together, in the page's order), a weapon's keywords (one a rule
+of the list adds, its `from`, last), abilities (datasheet abilities, wargear abilities, rows the page has none of, then the list's
+own: an enhancement's), the Rules line (CORE ABILITIES, then ARMY RULES), keywords (the KEYWORDS line, FACTION KEYWORDS, then the
+list's own: Warlord, a keyword a rule gives, `why.kw`). An attached unit keeps its parts in their order, each by its own page; an item
+the page does not name stays after the item before it; a datasheet with no page keeps its order. No hand ordering.
+
+**GW's keywords.** A unit's keywords are its datasheets' (`gwKeywords`, written by `--write`, checked by the gate step `keywords`,
+`verify/keywords.js`): every part's KEYWORDS and FACTION KEYWORDS, in GW's spelling where the unit has none; of the unit's own only its
+datasheet's name keyword (GW prints one on every datasheet; Wahapedia's new-codex pages leave it out, so its spelling is BSData's: the
+page's keyword or BSData's category that is the name, else the one the name's head ends or starts with; `--write` supplies it, and the
+`keywords` step fails on a datasheet without one), a keyword a named rule of the list gives (`why.kw`, a
+`kwNote`'s "comes from <rule>"), a model's or a detachment's keyword the list takes (`kwOnly`), an Allies marker. A difference from
+BSData or New Recruit is declared in `verify/deviations-bsdata.json` / `verify/deviations-nr.json`; one from GW in
+`verify/deviations-keywords.json`.
+
+A faction catalogue's rows (`verify/sources/catalog`) go through the same rules: `--write` sorts their rows, keywords and Rules line in
+GW's order after the catalogue is merged in (a catalogue row with a list row's name after it, so the resolver keeps finding the list's
+by name), writes their keywords by `gwKeywords` (their BSData keywords for the name keyword; a Daemonic Allegiance entry's god), and the
+gate steps `keywords` and `numbers` check every catalogue row as a unit of its own. Where a GW Faction Pack prints a datasheet's KEYWORDS
+line, it is GW's over Wahapedia's page (Tormentbringer).
+
 ## Readings
 
 A reading is the app's interpretation of a rule's text into numbers and lines: a footnote under a unit's weapons (`mods`:
@@ -56,7 +78,7 @@ help it gives them when they are attacked (`guard`), and a rule's or ability's o
 | an army rule | that rule's row in `FACTIONS` (`mods`, …) | every unit with the rule on its Rules line (Synapse) |
 | a detachment rule (`rule`, `moreRules`) | that rule's row | every unit of a list with the detachment whose needs it meets (Pledges to the Dark Prince) |
 | an enhancement | the enhancement's row | its bearer (Dreadherder, Bringer of Justice) |
-| a stratagem | the stratagem (`mod`, `help`, `shield`, as before) | the units it can be used on (the app) |
+| a stratagem | the stratagem (`mod`, `shield`, as before) | the units its TARGET names (`needs`, by verify/derive.js) |
 | nothing but the list | the list's entry, its reason in `why` (`why:{ mods:{ <from>:… } }`) | that unit |
 
 `data.js` resolves them in that order (`resolveArmies`): the army rules on the unit's Rules line, each datasheet of the unit,
@@ -129,13 +151,13 @@ Sources: **newrecruit** (the owner's New Recruit PDFs), **bsdata** (BSData wh40k
 | `RULE_SRC` | where a RULES entry comes from when it is not a core rule | **hand**: `name`, `source` |
 | `RULE_ALIASES` | which RULES entry a keyword or rule chip opens: [pattern, rule] | **hand**: `pattern`, `rule` |
 | `CONCEPTS` | core terms kept out of a unit's rule list | **gw**: `term` |
-| `CORE_STRATAGEMS` | the core stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `defOf`, `readOf` · **hand**: `id`, `note`, `limit`, `defCalc`, `cpNote`, `mod`, `shield`, `help`, `defPick`, `react`, `weaponKw`, `lasts`, `calcNote` · **ai**: `gist`, `def` |
+| `CORE_STRATAGEMS` | the core stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `defOf`, `readOf` · **hand**: `id`, `note`, `limit`, `defCalc`, `cpNote`, `mod`, `shield`, `defPick`, `react`, `weaponKw`, `lasts`, `calcNote` · **ai**: `gist`, `def` |
 | `FACTIONS` | one row per faction: its army rules, detachments and aliases | **gw**: `name`, `armyRules`, `detachments` · **hand**: `aliases`, `allies` |
 | `FACTIONS.armyRules` | a faction's army rules | **newrecruit**: `tag` · **gw**: `name`, `text`, `table` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `defOf`, `defPh`, `readOf` · **hand**: `coreTwin`, `note`, `calcDefs`, `mod`, `parts`, `statNote`, `tableAt`, `missing`, `mods`, `aura`, `guard` · **ai**: `def` |
 | `FACTIONS.detachments` | a faction's detachments | **bsdata**: `dispositions`, `nr` · **gw**: `name`, `dp`, `rule`, `moreRules`, `enhancements`, `stratagems` · **derived**: `aiStatus` |
 | `FACTIONS.detachments.rule` | a detachment's rule | **newrecruit**: `tag` · **gw**: `name`, `text`, `table` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `defOf`, `defPh`, `readOf` · **hand**: `coreTwin`, `note`, `calcDefs`, `mod`, `parts`, `statNote`, `tableAt`, `missing`, `mods`, `aura`, `guard` · **ai**: `def` |
 | `FACTIONS.detachments.moreRules` | a detachment's further rule (moreRules), with the columns of its first | **newrecruit**: `tag` · **gw**: `name`, `text`, `table` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `defOf`, `defPh`, `readOf` · **hand**: `coreTwin`, `note`, `calcDefs`, `mod`, `parts`, `statNote`, `tableAt`, `missing`, `mods`, `aura`, `guard` · **ai**: `def` |
-| `FACTIONS.detachments.stratagems` | a detachment's stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `defOf`, `readOf` · **hand**: `id`, `note`, `limit`, `defCalc`, `cpNote`, `mod`, `shield`, `help`, `defPick`, `react`, `weaponKw`, `lasts`, `calcNote` · **ai**: `gist`, `def` |
+| `FACTIONS.detachments.stratagems` | a detachment's stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `defOf`, `readOf` · **hand**: `id`, `note`, `limit`, `defCalc`, `cpNote`, `mod`, `shield`, `defPick`, `react`, `weaponKw`, `lasts`, `calcNote` · **ai**: `gist`, `def` |
 | `FACTIONS.detachments.enhancements` | a detachment's enhancements | **newrecruit**: `pts`, `nr` · **bsdata**: `upgrade` · **gw**: `name`, `text` · **wahapedia**: `limit` · **hand**: `mods`, `aura`, `guard` |
 | `ARMIES` | one row per list | **newrecruit**: `name`, `faction`, `points`, `pointsUsed`, `battleSize`, `disposition`, `detachments`, `source`, `config` · **hand**: `id`, `units` |
 | `ARMIES.units` | a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS | **newrecruit**: `pts`, `ptsNote`, `copies`, `models`, `gear`, `unplaced`, `enhancement`, `warlord`, `enhOn`, `warlordOn`, `upgrade`, `leads`, `support`, `also`, `role`, `name`, `rules`, `kw`, `stats`, `ranged`, `melee`, `abilities` · **derived**: `ds`, `why` · **hand**: `id`, `short`, `kwNote`, `kwOnly`, `partialRules`, `srcNote`, `mods`, `aura`, `guard`, `over`, `note` |

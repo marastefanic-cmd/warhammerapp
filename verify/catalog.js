@@ -269,11 +269,20 @@ function declarations(root, faction, r) {
 
 // ---------------------------------------------------------------- a row against the catalogue's (tables, nr)
 const KINDS = ['stats', 'ranged', 'melee', 'abilities'];
+// a catalogue row's keywords as GW prints them (verify/gw-order.js: its page's KEYWORDS and FACTION KEYWORDS, its name keyword, its
+// Daemonic Allegiance god); null: no page
+let GWO_ = null;
+const gwKw = R => { const O = GWO_ || (GWO_ = require('./gw-order')(ROOT)); const parts = [{ name:R.name, page:O.pageFor(R.faction, R.name) }]; parts.faction = R.faction;
+  const own = O.catalogOwn(R), kw = parts[0].page ? O.gwKeywords(R, parts, own, [R.kw]) : null; return kw ? kw.slice() : null; };
 function rowDiffs(S, R, opts) {
   opts = opts || {};
   const out = [], put = (kind, what, data, cat) => out.push({ kind, what, data, cat });
   for (const f of ['name', 'role', 'kw', 'kwOnly', 'bsId']) {
     if (!(f in S)) { if (R[f] !== undefined && !opts.listUnit) put('fill', f, null, R[f]); continue; }
+    // (keywords: as a set, against GW's keywords of the catalogue's row, verify/gw-order.js gwKeywords as verify/tables.js --write writes
+    // them, in GW's order; verify/keywords.js checks them against GW's page)
+    if (f === 'kw' && Array.isArray(S.kw) && Array.isArray(R.kw)) { const want = gwKw(R) || R.kw;
+      if (stable(S.kw.map(lc).sort()) !== stable(want.map(lc).sort())) put(opts.listUnit ? 'list' : 'other', f, S[f], want); continue; }
     if (stable(S[f]) !== stable(R[f])) put(opts.listUnit && f !== 'name' ? 'list' : 'other', f, S[f], R[f]);
   }
   if ('rules' in S) {

@@ -377,7 +377,6 @@
     "Rapid Fire"
    ],
    "kw": [
-    "Anathema Psykana",
     "Character",
     "Faction: Anathema Psykana",
     "Imperium",
@@ -1299,7 +1298,6 @@
     "One Shot"
    ],
    "kw": [
-    "Anathema Psykana",
     "Anathema Psykana Rhino",
     "Dedicated Transport",
     "Faction: Anathema Psykana",
@@ -1763,7 +1761,6 @@
     "Rapid Fire"
    ],
    "kw": [
-    "Anathema Psykana",
     "Faction: Anathema Psykana",
     "Imperium",
     "Infantry",
@@ -1867,7 +1864,6 @@
     "Anti"
    ],
    "kw": [
-    "Anathema Psykana",
     "Faction: Anathema Psykana",
     "Imperium",
     "Infantry",
@@ -1983,7 +1979,6 @@
     "Blast"
    ],
    "kw": [
-    "Anathema Psykana",
     "Faction: Anathema Psykana",
     "Imperium",
     "Infantry",
@@ -3371,14 +3366,14 @@
     "Blast"
    ],
    "kw": [
-    "Caladius",
     "Caladius Grav-tank",
     "Faction: Adeptus Custodes",
     "Fly",
     "Frame",
     "Grav-assault",
     "Imperium",
-    "Vehicle"
+    "Vehicle",
+    "Caladius"
    ],
    "points": {
     "costs": [
@@ -4185,14 +4180,14 @@
     "Twin-linked"
    ],
    "kw": [
-    "Caladius",
     "Caladius Annihilator Grav-tank",
     "Faction: Adeptus Custodes",
     "Fly",
     "Frame",
     "Grav-assault",
     "Imperium",
-    "Vehicle"
+    "Vehicle",
+    "Caladius"
    ],
    "points": {
     "costs": [

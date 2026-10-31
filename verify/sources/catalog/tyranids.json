@@ -401,7 +401,6 @@
     "Devastating Wounds"
    ],
    "kw": [
-    "Burrower",
     "Character",
     "Epic Hero",
     "Faction: Tyranids",
@@ -409,7 +408,8 @@
     "Mobile",
     "Monster",
     "The Red Terror",
-    "Vanguard Invader"
+    "Vanguard Invader",
+    "Burrower"
    ],
    "points": {
     "costs": [
@@ -2211,12 +2211,12 @@
     "Dedicated Transport",
     "Faction: Tyranids",
     "Fly",
-    "Frame",
     "Great Devourer",
     "Monster",
     "Transport",
     "Tyrannocyte",
-    "Vanguard Invader"
+    "Vanguard Invader",
+    "Frame"
    ],
    "points": {
     "costs": [
@@ -3475,10 +3475,10 @@
     "Indirect Fire"
    ],
    "kw": [
-    "Biovores",
     "Faction: Tyranids",
     "Great Devourer",
-    "Infantry"
+    "Infantry",
+    "Biovores"
    ],
    "points": {
     "costs": [
@@ -4292,8 +4292,8 @@
     "Faction: Tyranids",
     "Great Devourer",
     "Harvester",
-    "Ripper Swarms",
-    "Swarm"
+    "Swarm",
+    "Ripper Swarms"
    ],
    "points": {
     "costs": [
@@ -4412,10 +4412,10 @@
    ],
    "kw": [
     "Faction: Tyranids",
-    "Frame",
     "Great Devourer",
     "Monster",
-    "Toxicrene"
+    "Toxicrene",
+    "Frame"
    ],
    "points": {
     "costs": [
@@ -4781,12 +4781,12 @@
     "Anti"
    ],
    "kw": [
-    "Burrower",
     "Faction: Tyranids",
     "Great Devourer",
     "Mawloc",
     "Monster",
-    "Vanguard Invader"
+    "Vanguard Invader",
+    "Burrower"
    ],
    "points": {
     "costs": [
@@ -4888,12 +4888,12 @@
     "Sustained Hits"
    ],
    "kw": [
-    "Burrower",
     "Faction: Tyranids",
     "Great Devourer",
     "Monster",
     "Trygon",
-    "Vanguard Invader"
+    "Vanguard Invader",
+    "Burrower"
    ],
    "points": {
     "costs": [
@@ -5518,10 +5518,10 @@
    ],
    "kw": [
     "Faction: Tyranids",
-    "Frame",
     "Great Devourer",
     "Monster",
-    "Tyrannofex"
+    "Tyrannofex",
+    "Frame"
    ],
    "points": {
     "costs": [
