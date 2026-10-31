@@ -50,8 +50,9 @@ const FX = {
   critWound:{ label:p => 'Critical Wound on ' + p + '+', mod:p => ({ critWound:+p }), dom:[2, 3, 4, 5], custom:[5],
     // (either order: "an unmodified successful Wound roll of 5+", "a successful unmodified Wound roll of 5+" (Prince of Slaanesh))
     pats:[/\b(?:successful )?unmodified (?:successful )?wound roll of (\d)\+ scores a critical wound\b/] },
-  // "each successful unmodified Wound roll is a Critical Wound" (Swallow Whole): every wound roll that wounds is critical
-  critWoundAll:{ label:() => 'Every successful Wound roll is a Critical Wound', mod:() => ({ critWoundAll:true }), dom:[true],
+  // "each successful unmodified Wound roll is a Critical Wound" (Swallow Whole): critical when the unmodified roll is equal to or greater
+  // than the required result, modifiers aside (05.02; in effect a Critical Wound at the wound need)
+  critWoundAll:{ label:() => 'Each successful unmodified Wound roll is a Critical Wound', mod:() => ({ critWoundAll:true }), dom:[true],
     pats:[/\b(?:each|every|any) successful unmodified wound roll is a critical wound\b/] },
   lethal:Object.assign(kwFx('lethal hits', 'lethal'), { custom:[true] }),
   dev:Object.assign(kwFx('devastating wounds', 'dev'), { custom:[true] }),
