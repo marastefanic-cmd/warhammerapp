@@ -1,0 +1,581 @@
+[
+ {
+  "army": "healybois",
+  "kind": "unit-footnote",
+  "where": "healybois · The Red Terror",
+  "judgement": {
+   "kind": "melee",
+   "weapon": "Gaping maw",
+   "when": "vs INFANTRY/MOUNTED/BEASTS",
+   "note": "a successful unmodified wound roll is a Critical Wound",
+   "from": "Swallow Whole",
+   "vs": {
+    "any": [
+     "Infantry",
+     "Mounted",
+     "Beasts"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Swallow Whole",
+   "text": "Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound. Each time an **INFANTRY**, **MOUNTED** or **BEASTS** model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds."
+  },
+  "key": "0bf6852dab238910"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · The Red Terror",
+  "judgement": {
+   "gear": [
+    [
+     "Gaping maw",
+     "Scything talons"
+    ]
+   ],
+   "weapons": [
+    "Gaping maw",
+    "Scything talons"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× The Red Terror"
+   ],
+   "leads": null
+  },
+  "key": "7b5e7259c660638f"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-tag",
+  "where": "healybois · Hive Tyrant · Parasitic Biomorphology",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Parasitic Biomorphology",
+   "text": "**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit."
+  },
+  "key": "91eb115a67f5a50e"
+ },
+ {
+  "army": "healybois",
+  "kind": "ability-who",
+  "where": "healybois · Hive Tyrant · Parasitic Biomorphology",
+  "judgement": {
+   "who": "Hive Tyrant",
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ]
+  },
+  "source": {
+   "ability": "Parasitic Biomorphology",
+   "text": "**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit."
+  },
+  "key": "395d9cba59ad97a9"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-footnote",
+  "where": "healybois · Hive Tyrant",
+  "judgement": {
+   "kind": "melee",
+   "when": "After the bearer’s unit first destroys an enemy unit in the Fight phase while the bearer is within 6\" of a friendly HARVESTER unit",
+   "note": "+1 A (until the end of the battle)",
+   "from": "Parasitic Biomorphology",
+   "lasts": "battle"
+  },
+  "source": {
+   "ability": "Parasitic Biomorphology",
+   "text": "**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit."
+  },
+  "key": "3563b256672cd13c"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-ptsNote",
+  "where": "healybois · Hive Tyrant",
+  "judgement": {
+   "ptsNote": "220 + Tyrant Guard 170"
+  },
+  "source": {
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ],
+   "stats": [
+    "Hive Tyrant W10 OC3",
+    "Tyrant Guard ×6 W4 OC1"
+   ],
+   "weapons": [
+    "Monstrous bonesword and lash whip 6 -2 3 TWIN-LINKED",
+    "Monstrous scything talons 4 -2 2 EXTRA ATTACKS",
+    "Scything talons and rending claws 5 -1 1"
+   ]
+  },
+  "key": "d73cffeb5e2af482"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-partialRules",
+  "where": "healybois · Hive Tyrant",
+  "judgement": {
+   "partialRules": {
+    "Deadly Demise D3": "Hive Tyrant"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ],
+   "rules": [
+    "Deadly Demise D3",
+    "Leader",
+    "Shadow in the Warp",
+    "Synapse",
+    "Twin-linked",
+    "Extra Attacks"
+   ],
+   "abilities": [
+    "Hive Tyrant · Will of the Hive Mind: Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+    "Hive Tyrant · Onslaught: While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities.",
+    "Hive Tyrant · Parasitic Biomorphology: **TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.",
+    "Tyrant Guard · Guardian Organism: While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability."
+   ]
+  },
+  "key": "db96b6a22dc8efbf"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · Pyrovores",
+  "judgement": {
+   "gear": [
+    [
+     "Chitin-barbed limbs",
+     "Flamespurt"
+    ]
+   ],
+   "weapons": [
+    "×3 · Flamespurt",
+    "×3 · Chitin-barbed limbs"
+   ]
+  },
+  "source": {
+   "models": [
+    "3× Pyrovore"
+   ],
+   "leads": null
+  },
+  "key": "b95e53c5bdc8d1b8"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-footnote",
+  "where": "healybois · Psychophage",
+  "judgement": {
+   "kind": "melee",
+   "when": "This turn, vs the enemy unit it selected with Bio-stimulus after shooting in your Shooting phase",
+   "note": "improve AP by 1",
+   "from": "Bio-stimulus",
+   "lasts": "turn"
+  },
+  "source": {
+   "ability": "Bio-stimulus",
+   "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly **TYRANIDS** unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn."
+  },
+  "key": "bd334225a9baec90"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-footnote",
+  "where": "healybois · Psychophage",
+  "judgement": {
+   "kind": "melee",
+   "when": "Target below its Starting Strength",
+   "note": "+1 to hit rolls; also +1 to wound rolls if Below Half-strength",
+   "from": "Feeding Frenzy",
+   "pick": [
+    {
+     "name": "Below Starting Strength",
+     "note": "+1 to hit rolls"
+    },
+    {
+     "name": "Below Half-strength",
+     "note": "+1 to hit rolls, +1 to wound rolls"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Feeding Frenzy",
+   "text": "Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the **Hit roll**. If that target is also **Below Half-strength**, add 1 to the **Wound roll** as well."
+  },
+  "key": "68bbd4b58ddf6a1f"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-aura",
+  "where": "healybois · Psychophage",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   },
+   "when": "This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase",
+   "note": "improve AP by 1",
+   "from": "Bio-stimulus",
+   "notSelf": true,
+   "lasts": "turn"
+  },
+  "source": {
+   "ability": "Bio-stimulus",
+   "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly **TYRANIDS** unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn."
+  },
+  "key": "e2ea22e1a241babb"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-weapons",
+  "where": "healybois · Psychophage",
+  "judgement": {
+   "gear": [
+    [
+     "Psychoclastic torrent",
+     "Talons and betentacled maw"
+    ]
+   ],
+   "weapons": [
+    "Psychoclastic torrent",
+    "Talons and betentacled maw"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Psychophage"
+   ],
+   "leads": null
+  },
+  "key": "7ebd61baee435944"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "hive-tyrant-tyrant-guard",
+  "judgement": {
+   "why": "The Hive Tyrant leads the Tyrant Guard (LEADER on both GW datasheets). Parasitic Biomorphology (25 pts) is on the Hive Tyrant: +1 S to the melee weapons of every model in its unit (the Hive Tyrant and the Tyrant Guard), in their profiles (BSData’s modifier, marked +: 9→10, 7→8, 5→6); its +1 A, from the first time the unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of a friendly HARVESTER unit until the end of the battle, is a footnote on the enhancement’s row (a condition of the battle, not in the profiles). Will of the Hive Mind: GW’s Faction Pack Tyranids 1.3 words (“that use of”), as the Hive Tyrant’s datasheet row has them (Wahapedia: “that usage of”)."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.hive-tyrant-tyrant-guard.why (not shown in the app)"
+  },
+  "key": "0867d4b06054cc80"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "pyrovores",
+  "judgement": {
+   "why": "Two units of three Pyrovores (copies:2), 100 pts each (GW: 3 models 100, 1st to 2nd units)."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.pyrovores.why (not shown in the app)"
+  },
+  "key": "75ff22db7689e94f"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "psychophage",
+  "judgement": {
+   "why": "Psychophage: Bio-stimulus has no (Aura) tag; it is read as the Psychophage’s own footnote and as what it gives the other friendly TYRANIDS units of the list (notSelf), the form of the Lord Discordant’s Spirit Thief: improve AP by 1 for melee attacks against the enemy unit it selected after shooting in your Shooting phase, until the end of the turn. Feeding Frenzy: one footnote with its two cases to pick (below Starting Strength: +1 to hit; Below Half-strength: +1 to hit and +1 to wound), the form of Glutton for Punishment. Feel No Pain 5+: its Rules line. Base 120×92mm Oval (GW’s base size guide; New Recruit 120x92mm, declared)."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.psychophage.why (not shown in the app)"
+  },
+  "key": "1fa84a638116afcd"
+ },
+ {
+  "army": "healybois",
+  "kind": "unit-why",
+  "where": "the-red-terror",
+  "judgement": {
+   "why": "The Red Terror: GW’s keyword BURROWER (not in BSData, declared). Swallow Whole: a footnote on the gaping maw vs INFANTRY/MOUNTED/BEASTS (“each successful unmodified Wound roll is a Critical Wound”); the Damage tab does not count it (effects.js reads a Critical Wound only “on an unmodified wound roll of X+”), and its wounds regained are no attack or defence numbers. Subterranean Hunter: no numbers, no reading."
+  },
+  "source": {
+   "file": "verify/sources/hand/healybois.json units.the-red-terror.why (not shown in the app)"
+  },
+  "key": "3247a55505fc1971"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-red-terror · kw",
+  "judgement": {
+   "app": "Burrower",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet has the keyword BURROWER; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_The-Red-Terror.html: KEYWORDS."
+  },
+  "key": "c1e5299baaea5f82"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-red-terror · kw",
+  "judgement": {
+   "app": "",
+   "source": "Burrowers"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Burrowers; GW’s datasheet does not print that keyword. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_The-Red-Terror.html: KEYWORDS (no BURROWERS)."
+  },
+  "key": "e358bf4b4d7dbe34"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · hive-tyrant-tyrant-guard · ability.text",
+  "judgement": {
+   "app": "Parasitic Biomorphology: **TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.",
+   "source": "**^^Tyranids^^** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer's unit. The first time the bearer's unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more **^^Harvester^^** units, until the end of battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer's unit."
+  },
+  "source": {
+   "reason": "The app has GW’s words: the enhancement as the detachment prints it (Wahapedia, the codex): BSData leaves out its first sentence or words it otherwise (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Tyranids model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer's unit. The …\"). GW wins.",
+   "evidence": "verify/.cache/waha/tyranids.txt: \"TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer's unit. The first time the bearer's unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more frie…\"."
+  },
+  "key": "cfe1bbb70142356a"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-assimilator · ability.text",
+  "judgement": {
+   "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battl…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\"."
+  },
+  "key": "34069907f5f68094"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · norn-assimilator · ability.text",
+  "judgement": {
+   "app": "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
+   "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, tha…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\"."
+  },
+  "key": "3743c47f537bedbd"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · psychophage · stats.base",
+  "judgement": {
+   "app": "Psychophage: 120×92mm Oval",
+   "source": "Psychophage: 120x92mm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Psychophage: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3835: \"Psychophage  120x92mm Oval Base\"; verify/sources/nr-json/healybois.json: 120×92mm."
+  },
+  "key": "159e440076b782b2"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · psychophage · ability.text",
+  "judgement": {
+   "app": "Feeding Frenzy: Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the **Hit roll**. If that target is also **Below Half-strength**, add 1 to the **Wound roll** as well.",
+   "source": "Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half strength, add 1 to the Wound roll as well."
+  },
+  "source": {
+   "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll…\"). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Psychophage.html: \"Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well.\"."
+  },
+  "key": "2b3b8572894d65b7"
+ },
+ {
+  "army": "healybois",
+  "kind": "deviation",
+  "where": "deviations-nr.json · psychophage · stats[Psychophage].base",
+  "judgement": {
+   "app": "120×92mm Oval",
+   "source": "120x92mm"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 3) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3835: \"Psychophage  120x92mm Oval Base\"; verify/sources/nr-json/healybois.json: Base 120x92mm."
+  },
+  "key": "7037a166d9105ea3"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · row reuse: a row ability this reading lacks",
+  "judgement": {
+   "change": "A datasheet row another list has (the Hive Tyrant’s, the Swarmlord’s): an ability of the row that this reading of the export lacks is carried only where another list’s unit of that datasheet shows it (or the row is a hand keptRows row). The Tyranids catalogue merge put GW’s Leader text on the shared Hive Tyrant and Swarmlord rows as an ability no list shows; before this, a fresh --write of the stored healybois export (0c1fee5) added a “Leader” ability row to both attached units (a regression against the signed-off list). Protean Purpose (Nidzillas shows it) is still carried.",
+   "check": "from-json.js --write on the 0c1fee5 export gives data.js byte for byte"
+  },
+  "source": {
+   "diff": "git show dc9ef0f -- verify/from-json.js"
+  },
+  "key": "0a231707b31c3b83"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js · deviations written in place",
+  "judgement": {
+   "change": "This run’s deviations are written where the earlier run’s stood in deviations-bsdata.json / deviations-nr.json (the place among the other entries), not appended at the end; a re-run no longer moves them. Same entries either way."
+  },
+  "source": {
+   "diff": "git show dc9ef0f -- verify/from-json.js"
+  },
+  "key": "130166e5f490e871"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/render.js · once-tag check",
+  "judgement": {
+   "change": "The screens check that a row shows an ability’s “once per …” use limit leaves out “can only be affected by this ability once per turn” (Bio-stimulus), as it left out “can only be selected for this ability once per turn” (the Technomancer): a limit on the target, not the use; the app’s onceTag shows none for either."
+  },
+  "source": {
+   "diff": "git show 15a49a9 -- verify/render.js"
+  },
+  "key": "84f7dd881505c3c0"
+ },
+ {
+  "army": "healybois",
+  "kind": "points",
+  "where": "points (healybois-3 export)",
+  "judgement": {
+   "app": {
+    "The Red Terror": 120,
+    "The Swarmlord + Tyrant Guard": 380,
+    "Hive Tyrant + Tyrant Guard": 390,
+    "Biovores": 60,
+    "Pyrovores": "100 ×2",
+    "Ripper Swarms": 30,
+    "Norn Assimilator": 280,
+    "Norn Emissary": 250,
+    "Psychophage": 110,
+    "Tyrannofex": 180,
+    "Spore Mines (Biovore)": 0
+   }
+  },
+  "source": {
+   "reason": "The newer export, 2000 of 2000: Pyrovores 3 models 100 each (1st to 2nd units), one Norn Assimilator 250 + Synaptoprescience 30, Hive Tyrant 195 + Parasitic Biomorphology 25 (+ Tyrant Guard 170), The Red Terror 120, Psychophage 110; the rest as before.",
+   "evidence": "verify/sources/nr-json/healybois.json; verify/.cache/waha/ds/tyranids_Pyrovores.html (“3 models 100”), tyranids_Psychophage.html (“1 model 110”), tyranids_The-Red-Terror.html (“1 model 120”), tyranids_Hive-Tyrant.html; data.js FACTIONS.tyranids assimilation-swarm Parasitic Biomorphology pts 25"
+  },
+  "key": "2dd41e44ed410806"
+ },
+ {
+  "army": "healybois",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/healybois.txt",
+  "judgement": {
+   "change": "The list’s screens: The Red Terror (first, as the export orders it; so also the Damage tab’s default attacker) and Psychophage pages; Pyrovores ×3; one Norn Assimilator (no “1 of 2 / 2 of 2”); Parasitic Biomorphology in place of Instinctive Defence (25 pts, S marked +, its +1 A footnote; Fights First gone); Bio-stimulus’s aura line on the other TYRANIDS units; Domination of the Hive Mind reaching the new units; the phase lists and stratagem “USED BY” lists with the new units."
+  },
+  "source": {
+   "diff": "scratchpad/healy3-work/healybois.diff (git diff --no-index verify/snapshots/healybois.txt verify/out/snapshots/healybois.txt)"
+  },
+  "key": "666dc662cfdb6c69"
+ },
+ {
+  "army": "healybois",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/shooty.txt",
+  "judgement": {
+   "change": "Home screen “Newest first”: Healybois moves up (its export date is now 31 Oct 2026); the tables page counts (ARMIES 214 entries, GRANTS 75, CHECKLIST 496, DATASHEETS.mods 134, .aura 32, BOXES 278, BS_IDS units 213 / names 817 / maxPerList 82)."
+  },
+  "source": {
+   "diff": "scratchpad/healy3-work/shooty.diff"
+  },
+  "key": "6cbca92d7f93c69b"
+ },
+ {
+  "army": "healybois",
+  "kind": "question",
+  "where": "Hive Tyrant · Leader / attachment",
+  "judgement": {
+   "app": "leads Tyrant Guard (ptsNote 220 + Tyrant Guard 170), no Leader ability row (as before)"
+  },
+  "source": {
+   "reason": "GW’s LEADER on the Hive Tyrant datasheet: TYRANT GUARD. The re-import had added a Leader ability row from the catalogue merge; from-json.js now leaves it off (code item above).",
+   "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html; data.js DATASHEETS tyranids/hive-tyrant Leader ability"
+  },
+  "key": "c3edad0992225bb4"
+ },
+ {
+  "army": "healybois",
+  "kind": "question",
+  "where": "Stratagems of the new units against GW’s TARGET",
+  "judgement": {
+   "app": {
+    "Psychophage": "Core 8 (Command Re-roll, Insane Bravery, Fire Overwatch, Rapid Ingress, Smokescreen, Crushing Impact, Heroic Intervention, Counteroffensive) + Assimilation Swarm 6 (Broodguard Impulse, Reclaim Biomass, Tyrannoformed, Ablative Carapace: HARVESTER; Secure Biomass, Rapacious Hunger: TYRANIDS)",
+    "The Red Terror": "Core 8 (Epic Challenge in place of Smokescreen) + Secure Biomass, Rapacious Hunger",
+    "Hive Tyrant + Tyrant Guard": "as The Red Terror",
+    "Talons of the Norn Queen": "none (its three TARGET NORN ASSIMILATOR / NORN EMISSARY)"
+   }
+  },
+  "source": {
+   "reason": "Each equals the stratagem list of the unit’s Wahapedia datasheet page for Core and Assimilation Swarm (Wahapedia lists no Talons of the Norn Queen); evidence (G-checks) passes: every unit shown exactly the stratagems its keywords meet.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Psychophage.html, tyranids_The-Red-Terror.html, tyranids_Hive-Tyrant.html: STRATAGEMS"
+  },
+  "key": "5cf000920c029130"
+ },
+ {
+  "army": "healybois",
+  "kind": "question",
+  "where": "The Red Terror · Swallow Whole in the Damage tab",
+  "judgement": {
+   "app": "a footnote on the gaping maw; the Damage tab lists it “not counted”"
+  },
+  "source": {
+   "reason": "“Each successful unmodified Wound roll is a Critical Wound” vs INFANTRY/MOUNTED/BEASTS (the gaping maw has [DEVASTATING WOUNDS], so it matters). effects.js reads a Critical Wound only “on an unmodified wound roll of X+” (critWound); a critical on any success needs a calc mode and an effects pattern: an effects-code change for its own review, not made here.",
+   "evidence": "effects.js critWound; verify/.cache/waha/ds/tyranids_The-Red-Terror.html"
+  },
+  "key": "8d09f0d433f2b52c"
+ },
+ {
+  "army": "healybois",
+  "kind": "question",
+  "where": "Psychophage · Bio-stimulus read as an aura",
+  "judgement": {
+   "app": "aura (notSelf) on the other friendly TYRANIDS units + the Psychophage’s own footnote"
+  },
+  "source": {
+   "reason": "GW does not tag Bio-stimulus (Aura); the hand file’s note says only what GW tags (Aura) is an aura. The reading follows the Lord Discordant’s Spirit Thief (a selected enemy unit; friendly units’ attacks against it), mods + aura notSelf, as data.js has it. The alternative: the Psychophage’s footnote only. Reviewer to decide.",
+   "evidence": "data.js DATASHEETS chaos-space-marines/lord-discordant-on-helstalker (Spirit Thief: mods and aura); verify/sources/hand/healybois.json _about"
+  },
+  "key": "fb03564acae6a107"
+ },
+ {
+  "army": "healybois",
+  "kind": "question",
+  "where": "Left as they were",
+  "judgement": {
+   "app": "hand file spellings “Instinctive Defense” kept (no list uses it now); derive-agreed.json keeps 18 items no longer present (the two norn-assimilator-synaptoprescience ids, Instinctive Defence; stale items do not fail the gate)"
+  },
+  "source": {
+   "reason": "Neither changes data.js; removing them is housekeeping for the owner."
+  },
+  "key": "9704f6b6da8d8bee"
+ }
+]
