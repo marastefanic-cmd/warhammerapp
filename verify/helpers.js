@@ -36,6 +36,10 @@ function items(D, appSource){
   const add = (army, kind, where, judgement, source) => out.push({ army, kind, where, judgement, source,
     key:key(kind + '\n' + JSON.stringify(judgement, (k, v) => FP_KEYS.includes(k) ? undefined : v) + '\n' + JSON.stringify(source)) });
   const fr = f => D.factions[f];
+  const Dv = require('./derive'); let V_ = null; const DV = () => V_ || (V_ = Dv.vocab(D));
+  // (a keyword every unit of the faction's lists has says nothing about which of them: compared without it, as verify/derive.js does)
+  const everyKw = fk => { const us = D.armies.filter(x => x.faction === fk).flatMap(x => x.units); if(!us.length) return null;
+    return new Set(us[0].kw.map(k => k.toLowerCase()).filter(k => us.every(u => u.kw.some(x => x.toLowerCase() === k)))); };
   const ruleText = (army, name) => {
     const a = D.armies.find(x => x.id === army), f = fr(a.faction);
     const ar = f.armyRules.find(r => r.name === name);
@@ -70,15 +74,14 @@ function items(D, appSource){
       for(const ab of u.abilities){
         const src = { ability:ab.name, text:ab.text };
         if(ab.ask) add(a.id, 'ability-ask', w + ' · ' + ab.name, { ask:ab.ask }, src);
-        if(ab.tag) add(a.id, 'ability-tag', w + ' · ' + ab.name, { tag:ab.tag }, src);
-        if(ab.who) add(a.id, 'ability-who', w + ' · ' + ab.name, { who:ab.who, models:u.models }, src);
+        // (tag and who: New Recruit's, compared exactly by verify/nr.js; no judgement)
         if(ab.def) add(a.id, 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);
         // a note under the ability (an FAQ, a core rule it meets, a question the rules leave open): its own words are the app's
         // (the quotes in it are checked by verify/texts.js); the source is the unit's abilities and the list's rules it may quote
         if(ab.note) add(a.id, 'ability-note', w + ' · ' + ab.name, { note:ab.note }, { ability:ab.name, text:ab.text,
           others:u.abilities.filter(x => x !== ab).map(x => x.name + ': ' + x.text), listRules:fr(a.faction).armyRules.map(r => r.name).concat(a.detachments.flatMap(id => detRules_(fr(a.faction).detachments[id]).map(r => r.name))) });
         if(ab.na) add(a.id, 'ability-na', w + ' · ' + ab.name, { na:ab.na, armyUnits:a.units.map(x => x.name + ' [' + x.kw.join(', ') + ']') }, src);
-        if(ab.damaged) add(a.id, 'ability-damaged', w + ' · ' + ab.name, { damaged:ab.damaged, W:u.stats[0].W }, src);
+        // (damaged: the range its words give, verify/lines.js L0; no judgement)
         // the Damage tab's reading of it: always protects the unit (defAlways), its numbers (defCalc), always riled up (riled)
         // (calcDef: a "when targeted" line the Damage tab alone shows, lasts: how long it carries)
         if(ab.defAlways || ab.defCalc || ab.riled || ab.calcDef) add(a.id, 'ability-calc', w + ' · ' + ab.name, { def:ab.def, calcDef:ab.calcDef, defAlways:ab.defAlways, defCalc:ab.defCalc, lasts:ab.lasts, riled:ab.riled, models:u.models }, src);
@@ -93,7 +96,8 @@ function items(D, appSource){
       const own = (OWN().get(a.id + '/' + u.id) || []);
       for(const m of own) add(a.id, 'unit-reading-why', w, { listWhy:m.listWhy, reading:JSON.parse(JSON.stringify(m, (k, v) => FP_KEYS.includes(k) ? undefined : v)) },
         Object.assign(cited(a.id, u, m), { weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.name, 'A' + x.A, (x.kw || []).join(', '), JSON.stringify(x.from || {})].filter(Boolean).join(' · ')), enhancement:u.enhancement || null }));
-      for(const k of ['kwNote', 'ptsNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
+      // (ptsNote: New Recruit's, compared exactly by verify/nr.js and verify/bsdata.js; no judgement)
+      for(const k of ['kwNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
       // a rule only one model of the unit has (Canis Rex's Lone Operative is Sir Hekhtur's): the unit can't use a rule every model
       // must have, and the app names that model
       if(u.partialRules) add(a.id, 'unit-partialRules', w, { partialRules:u.partialRules }, { models:u.models, rules:u.rules, abilities:u.abilities.map(x => (x.who ? x.who + ' · ' : '') + x.name + ': ' + x.text) });
@@ -103,17 +107,19 @@ function items(D, appSource){
       if(u.srcNote) add(a.id, 'unit-srcNote', w, { srcNote:u.srcNote }, { models:u.models, kw:u.kw });
       // a reference sheet (not in the army until a rule or stratagem adds it): the rule it cites and its quote
       if(u.ref) add(a.id, 'unit-ref', w, { ref:u.ref }, cited(a.id, a.units.find(x => x.id === u.ref.by) || u, { from:u.ref.rule || u.ref.strat }));
-      // weapons: which model has which, how many, and the multi-profile groups
-      // unplaced: wargear on no models line (undefined, so left out of the key, for every other unit)
-      add(a.id, 'unit-weapons', w, { gear:u.gear, unplaced:u.unplaced, weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.n && '×' + x.n, x.group, x.name].filter(Boolean).join(' · ')) }, { models:u.models, leads:u.leads || null });
+      // (weapons: which model has which, how many, the multi-profile groups, unplaced wargear: New Recruit's and BSData's, compared
+      // exactly by verify/nr.js and verify/bsdata.js; the sentences that say them are code, useSentence and useLine; no judgement)
     }
     // the faction's and detachments' rules and stratagems the army uses
     const f = fr(a.faction);
     const rulesMeta = (where, r, srcText) => {
       const src = { rule:r.name, text:srcText };
+      // (needs: none where verify/derive.js derives the same from the words; the gate step derive keeps them agreeing,
+      // verify/derive-agreed.json)
+      const needsDerived = r.needs !== undefined && (() => { const dn = Dv.ruleNeeds(DV(), r); return !!dn.needs && JSON.stringify(Dv.canonNeeds(r.needs, everyKw(a.faction))) === JSON.stringify(Dv.canonNeeds(dn.needs, everyKw(a.faction))); })();
       // (calcMods, calcDefs, calcNc, both, limit: the Damage tab's own reading of an army rule; parts: the parts of a detachment rule
       // for some of its units only, each with its needs and its footnote, "When targeted" line or the army rule it gives)
-      for(const k of RULE_KEYS) if(r[k] !== undefined) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
+      for(const k of RULE_KEYS) if(r[k] !== undefined && !(k === 'needs' && needsDerived)) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
       // an army rule shown with the core ability of the same name (Super-heavy Walker): the pairing, against both texts
       if(r.coreTwin !== undefined) add(a.id, 'rule-coreTwin', where + ' · ' + r.name, { coreTwin:r.coreTwin }, { rule:r.name, text:srcText, core:D.rules[r.coreTwin] || null });
     };

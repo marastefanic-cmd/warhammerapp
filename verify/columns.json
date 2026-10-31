@@ -101,16 +101,16 @@
      "note": "RESTRICTIONS, word for word (verify/texts.js)"
     },
     "needs": {
-     "source": "hand",
-     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
+     "source": "derived",
+     "note": "which units it is for: the needs its TARGET gives by the closed patterns of verify/derive.js stratNeeds; verify/evidence.js \"targets\" fails on any difference or an unparsed TARGET"
     },
     "note": {
      "source": "hand",
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
     },
     "limit": {
-     "source": "ai-reading",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
+     "source": "derived",
+     "note": "\"Once per battle\": its RESTRICTIONS say it can be used once per battle (verify/lines.js L0)"
     },
     "defCalc": {
      "source": "ai-reading",
@@ -583,16 +583,16 @@
      "note": "RESTRICTIONS, word for word (verify/texts.js)"
     },
     "needs": {
-     "source": "hand",
-     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
+     "source": "derived",
+     "note": "which units it is for: the needs its TARGET gives by the closed patterns of verify/derive.js stratNeeds; verify/evidence.js \"targets\" fails on any difference or an unparsed TARGET"
     },
     "note": {
      "source": "hand",
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
     },
     "limit": {
-     "source": "ai-reading",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
+     "source": "derived",
+     "note": "\"Once per battle\": its RESTRICTIONS say it can be used once per battle (verify/lines.js L0)"
     },
     "defCalc": {
      "source": "ai-reading",
@@ -1154,8 +1154,8 @@
      "note": "why it does nothing in this list; signed off"
     },
     "damaged": {
-     "source": "ai-reading",
-     "note": "the wounds range of a Damaged ability, from its words (verify/invariants.js)"
+     "source": "derived",
+     "note": "the wounds range of a Damaged ability: its words' \"has 1-N wounds remaining\", or its name's (verify/lines.js L0)"
     },
     "riled": {
      "source": "ai-reading",
@@ -1770,8 +1770,8 @@
      "note": "why it does nothing in this list; signed off"
     },
     "damaged": {
-     "source": "ai-reading",
-     "note": "the wounds range of a Damaged ability, from its words (verify/invariants.js)"
+     "source": "derived",
+     "note": "the wounds range of a Damaged ability: its words' \"has 1-N wounds remaining\", or its name's (verify/lines.js L0)"
     },
     "riled": {
      "source": "ai-reading",

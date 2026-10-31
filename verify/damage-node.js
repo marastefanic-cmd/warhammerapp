@@ -7,7 +7,7 @@
 const fs = require('fs'), path = require('path');
 const { ROOT, loadData } = require('./lib');
 
-module.exports = function load(){
+module.exports = function load(extra){
   const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');
   const script = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]).sort((a, b) => b.length - a.length)[0];
   const lines = script.split('\n');
@@ -24,7 +24,7 @@ module.exports = function load(){
   }
   // what the Damage helpers use, followed name by name (the page's state is given here instead)
   const given = new Set(['D', 'cur', 'sess', 'store', 'session', 'BUILD', '$', '$$', 'WH_CALC', 'WH_EFFECTS']);
-  const need = new Set(), todo = ['dmCalc', 'dmShown', 'dmUnits', 'dmState', 'dmSides', 'dmTypedVals', 'unitLabel', 'modelCount', 'DM_ONE_OF', 'dmPair', 'dmPlan', 'dmIn', 'dmBeatAns', 'dmFx', 'dmLevers', 'dmNums', 'dmZero', 'dmDelta', 'dmSetUnit', 'dmCleanTicks', 'dmResetPair', 'dmCharged', 'dmSetCharge', 'dmMe', 'dmModeTurn', 'dmModeOf', 'dmModeOld', 'dmStart', 'dmTotalAns', 'dmAnsOf', 'dmWorth', 'dmSources', 'dmBoxRules', 'DM_GROUPS', 'dmGroupOf', 'matches', 'inArmy', 'allStratagems', 'canTarget'];
+  const need = new Set(), todo = ['dmCalc', 'dmShown', 'dmUnits', 'dmState', 'dmSides', 'dmTypedVals', 'unitLabel', 'modelCount', 'DM_ONE_OF', 'dmPair', 'dmPlan', 'dmIn', 'dmBeatAns', 'dmFx', 'dmLevers', 'dmNums', 'dmZero', 'dmDelta', 'dmSetUnit', 'dmCleanTicks', 'dmResetPair', 'dmCharged', 'dmSetCharge', 'dmMe', 'dmModeTurn', 'dmModeOf', 'dmModeOld', 'dmStart', 'dmTotalAns', 'dmAnsOf', 'dmWorth', 'dmSources', 'dmBoxRules', 'DM_GROUPS', 'dmGroupOf', 'matches', 'inArmy', 'allStratagems', 'canTarget'].concat(extra || []);
   while(todo.length){
     const n = todo.pop();
     if(need.has(n) || given.has(n) || !decl.has(n)) continue;
@@ -38,7 +38,7 @@ module.exports = function load(){
   const D = loadData(), WH_CALC = require(path.join(ROOT, 'calc.js')), WH_EFFECTS = require(path.join(ROOT, 'effects.js'));
   const mem = new Map(), store = { get:k => mem.get(k), set:(k, v) => mem.set(k, v) };
   const env = new Function('D', 'WH_CALC', 'WH_EFFECTS', 'store', 'window', 'let cur = { s:"damage", army:null }, sess = {};\n' + src + '\n' +
-    'return { set:(a, st) => { cur.army = a; sess.dmg = { [a]:st }; }, dmState, dmSides, dmTypedVals, dmCalc, dmShown, dmUnits, army, unitLabel, modelCount, dmPair, dmPlan, dmIn, dmBeatAns, dmFx, dmLevers, dmNums, dmZero, dmDelta, dmSetUnit, dmCleanTicks, dmResetPair, dmCharged, dmSetCharge, dmMe, dmModeTurn, dmModeOf, dmModeOld, dmStart, dmTotalAns, dmAnsOf, dmWorth, dmSources, dmBoxRules, DM_GROUPS, dmGroupOf, matches, inArmy, allStratagems, canTarget };');
+    'return { set:(a, st) => { cur.army = a; sess.dmg = { [a]:st }; }, dmState, dmSides, dmTypedVals, dmCalc, dmShown, dmUnits, army, unitLabel, modelCount, dmPair, dmPlan, dmIn, dmBeatAns, dmFx, dmLevers, dmNums, dmZero, dmDelta, dmSetUnit, dmCleanTicks, dmResetPair, dmCharged, dmSetCharge, dmMe, dmModeTurn, dmModeOf, dmModeOld, dmStart, dmTotalAns, dmAnsOf, dmWorth, dmSources, dmBoxRules, DM_GROUPS, dmGroupOf, matches, inArmy, allStratagems, canTarget' + (extra || []).map(n => ', ' + n).join('') + ' };');
   const app = env(D, WH_CALC, WH_EFFECTS, store, { WH_DATA:D, WH_EFFECTS });
   // one attack as the screen builds it: s = { army, ph, atk, typed, left, on, off, pick, man, val, fx }: the unit as the screen picks it
   // (dmSides), at the target set by hand; left: the models left of each models line

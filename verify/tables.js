@@ -64,8 +64,8 @@ const READ_FP = 'readOf', READ_BY = 'readBy', READ_WHY = 'listWhy';   // (listWh
 const READ_COLS = {
   // (the Damage tab's own reading columns, calcMods, calcNc, both, limit, are retired: its boxes are BOXES, made by script, "derived")
   rule:['mod', 'calcDefs', 'parts', 'statNote'],
-  strat:['mod', 'shield', 'defCalc', 'defPick', 'calcNote', 'limit', 'lasts', 'react', 'weaponKw'],
-  ability:['riled', 'damaged', 'defAlways', 'defCalc', 'calcDef', 'fightOnDeath', 'comeback', 'calcNote', 'lasts'],
+  strat:['mod', 'shield', 'defCalc', 'defPick', 'calcNote', 'lasts', 'react', 'weaponKw'],
+  ability:['riled', 'defAlways', 'defCalc', 'calcDef', 'fightOnDeath', 'comeback', 'calcNote', 'lasts'],
 };
 const FP_KEYS = Object.values(FINGERPRINT).concat(READ_FP, READ_BY, READ_WHY);   // hidden from the app, and from the helpers' keys
 const fp = s => crypto.createHash('sha256').update(String(s)).digest('hex').slice(0, 8);
