@@ -53,6 +53,10 @@ function sources(D){
       const name = Object.keys(D.rules).find(r => r.toLowerCase() === String(k).toLowerCase()); if(!name) continue;
       put(KEY.core(name, D.rules[name]), { type:'core', name, text:D.rules[name], weapons:[w.name], wkw:String(k).toUpperCase() });
     }
+    // the core rules a unit's footnotes cite that the Damage tab plays itself (played): [LANCE] from the weapon's keyword (calc.js), Plunging
+    // Fire for a TOWERING unit (not AIRCRAFT, 23.03) in the situation; their boxes are for the datasheet's footnotes only
+    for(const w of [].concat(u.ranged || [], u.melee || [])) for(const k of w.kw || []) if(/^lance$/i.test(k) && D.rules.Lance) put(KEY.core('Lance', D.rules.Lance), { type:'core', name:'Lance', text:D.rules.Lance, weapons:[w.name], wkw:'LANCE', played:'calc' });
+    if((u.kw || []).some(k => /^towering$/i.test(k)) && !(u.kw || []).some(k => /^aircraft$/i.test(k)) && D.rules['Plunging Fire']) put(KEY.core('Plunging Fire', D.rules['Plunging Fire']), { type:'core', name:'Plunging Fire', text:D.rules['Plunging Fire'], weapons:ws, played:'situation' });
     // a core rule on its Rules line with its value in its name (Damaged 5)
     for(const r of u.rules || []){ if(!/\d/.test(r) || D.rules[r]) continue; const t = coreText(D, r); if(t) put(KEY.core(r, t), { type:'core', name:r, text:t, weapons:ws }); }
   }
@@ -80,6 +84,8 @@ function build(D){
     if(r.reach && /\baura\b/i.test(s.tag || '')) o.reach = r.reach;
     if(r.both && r.both.length) o.both = r.both;
     if(r.embarked) o.embarked = r.embarked;
+    if(r.riled) o.riled = true;
+    if(s.played && Object.keys(o).length) o.played = s.played;
     if(Object.keys(o).length){ o.n = s.name; T[key] = o; }
   }
   return T;

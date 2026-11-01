@@ -112,10 +112,7 @@ function run(D){
     const strats = stratsOf(a).concat(D.coreStratagems);
     for(const u of a.units){
       const src = m => { const ab = u.abilities.find(x => x.name === m.from); if(ab) return ab.text; const s = strats.find(x => x.name === m.from); if(s) return s.when + s.target + s.effect; return ruleText(a, m.rule || m.from); };
-      for(const m of [...(u.mods || []), ...(u.aura || [])]){
-        const text = src(m), say = [m.when, m.note, m.selfWhen].join(' ');
-        for(const n of nums(say)) if(!has(text, n) && !has(JSON.stringify(m.set || ''), n)) F('number-cited', a.id + ' · ' + u.name + ' · ' + m.from, '"' + n + '" in "' + say + '" is not in the text it cites');
-      }
+      // (the footnotes' numbers: their boxes', verify/lines.js L3 and evidence.js G3)
       // (or in a faction's own term its text names in bold, D.ruleSrc: the Pulse Jet's "pulse jet move", whose AFTER MOVING has the -1)
       const named = t => [...String(t).matchAll(/\*\*([^*]+)\*\*/g)].map(m => { const k = (D.ruleAliases.find(([re]) => re.test(m[1])) || [])[1]; return k && (D.ruleSrc || {})[k] ? D.rules[k] || '' : ''; }).join(' ');
       for(const ab of u.abilities) if(ab.def) for(const n of nums(ab.def)) if(!has(ab.text, n) && !has(named(ab.text), n)) F('number-cited', a.id + ' · ' + u.name + ' · ' + ab.name, '"' + n + '" in "' + ab.def + '" is not in its text');

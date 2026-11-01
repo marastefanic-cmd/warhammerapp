@@ -25,17 +25,16 @@ const RULE_KEYS = (T => [...new Set(['FACTIONS.armyRules', 'FACTIONS.detachments
 const STRAT_KEYS = (T => [...new Set(['CORE_STRATAGEMS', 'FACTIONS.detachments.stratagems'].flatMap(t => Object.entries(T[t].columns)
   .filter(([c, x]) => c !== 'id' && ['hand', 'ai-summary', 'ai-reading'].includes(x.source)).map(([c]) => c)))])(readJSON(path.join(ROOT, 'verify/columns.json'), {}).tables);
 
-// the readings data.js keeps on a list's entry for a reason of the list (listWhy), by "<army>/<unit>"
-let OWN_ = null;
-const OWN = () => OWN_ || (OWN_ = (() => { const T = require('./tables'), R = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8')), m = new Map();
-  for(const a of R.armies) for(const u of a.units) for(const k of T.READ) for(const x of u[k] || []) if(x && x.listWhy){ const id = a.id + '/' + u.id; if(!m.has(id)) m.set(id, []); m.get(id).push(x); }
-  return m; })());
 function items(D, appSource){
   const out = [];
   // (a fingerprint next to an AI-written column, gistOf / defOf, is not a judgement: verify/tables.js --fingerprints checks it)
   const add = (army, kind, where, judgement, source) => out.push({ army, kind, where, judgement, source,
     key:key(kind + '\n' + JSON.stringify(judgement, (k, v) => FP_KEYS.includes(k) ? undefined : v) + '\n' + JSON.stringify(source)) });
   const fr = f => D.factions[f];
+  const Dv = require('./derive'); let V_ = null; const DV = () => V_ || (V_ = Dv.vocab(D));
+  // (a keyword every unit of the faction's lists has says nothing about which of them: compared without it, as verify/derive.js does)
+  const everyKw = fk => { const us = D.armies.filter(x => x.faction === fk).flatMap(x => x.units); if(!us.length) return null;
+    return new Set(us[0].kw.map(k => k.toLowerCase()).filter(k => us.every(u => u.kw.some(x => x.toLowerCase() === k)))); };
   const ruleText = (army, name) => {
     const a = D.armies.find(x => x.id === army), f = fr(a.faction);
     const ar = f.armyRules.find(r => r.name === name);
@@ -70,30 +69,19 @@ function items(D, appSource){
       for(const ab of u.abilities){
         const src = { ability:ab.name, text:ab.text };
         if(ab.ask) add(a.id, 'ability-ask', w + ' · ' + ab.name, { ask:ab.ask }, src);
+        // (who: New Recruit's, compared exactly by verify/nr.js; no judgement. tag: a judgement again, nr.js lets the app add a tag part
+        // its text names, so an extra "Aura" would pass it)
         if(ab.tag) add(a.id, 'ability-tag', w + ' · ' + ab.name, { tag:ab.tag }, src);
-        if(ab.who) add(a.id, 'ability-who', w + ' · ' + ab.name, { who:ab.who, models:u.models }, src);
         if(ab.def) add(a.id, 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);
         // a note under the ability (an FAQ, a core rule it meets, a question the rules leave open): its own words are the app's
         // (the quotes in it are checked by verify/texts.js); the source is the unit's abilities and the list's rules it may quote
         if(ab.note) add(a.id, 'ability-note', w + ' · ' + ab.name, { note:ab.note }, { ability:ab.name, text:ab.text,
           others:u.abilities.filter(x => x !== ab).map(x => x.name + ': ' + x.text), listRules:fr(a.faction).armyRules.map(r => r.name).concat(a.detachments.flatMap(id => detRules_(fr(a.faction).detachments[id]).map(r => r.name))) });
         if(ab.na) add(a.id, 'ability-na', w + ' · ' + ab.name, { na:ab.na, armyUnits:a.units.map(x => x.name + ' [' + x.kw.join(', ') + ']') }, src);
-        if(ab.damaged) add(a.id, 'ability-damaged', w + ' · ' + ab.name, { damaged:ab.damaged, W:u.stats[0].W }, src);
-        // the Damage tab's reading of it: always protects the unit (defAlways), its numbers (defCalc), always riled up (riled)
-        // (calcDef: a "when targeted" line the Damage tab alone shows, lasts: how long it carries)
-        if(ab.defAlways || ab.defCalc || ab.riled || ab.calcDef) add(a.id, 'ability-calc', w + ' · ' + ab.name, { def:ab.def, calcDef:ab.calcDef, defAlways:ab.defAlways, defCalc:ab.defCalc, lasts:ab.lasts, riled:ab.riled, models:u.models }, src);
-        // and what it plays in the turn (fightOnDeath: One Last Kill; comeback: Berserker Frenzy), what is approximate about it (calcNote)
-        if(ab.fightOnDeath || ab.comeback || ab.calcNote) add(a.id, 'ability-turn', w + ' · ' + ab.name, { fightOnDeath:ab.fightOnDeath, comeback:ab.comeback, calcNote:ab.calcNote, who:ab.who, models:u.models }, src);
+        // (damaged: the range its words give, verify/lines.js L0; no judgement)
       }
-      for(const m of u.mods || []) add(a.id, 'unit-footnote', w, m, cited(a.id, u, m));
-      for(const m of u.aura || []) add(a.id, 'unit-aura', w, m, cited(a.id, u, m));
       for(const m of u.guard || []) add(a.id, 'unit-guard', w, m, cited(a.id, u, m));
-      // a reading kept on the list, not on the row it reads, for a reason of the list (data.js listWhy, hidden from the app: the
-      // bodyguard's weapons More Dakka reaches, an enhancement's +1 A in a Possessed Lord's Attacks): that reason, against the unit
-      const own = (OWN().get(a.id + '/' + u.id) || []);
-      for(const m of own) add(a.id, 'unit-reading-why', w, { listWhy:m.listWhy, reading:JSON.parse(JSON.stringify(m, (k, v) => FP_KEYS.includes(k) ? undefined : v)) },
-        Object.assign(cited(a.id, u, m), { weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.name, 'A' + x.A, (x.kw || []).join(', '), JSON.stringify(x.from || {})].filter(Boolean).join(' · ')), enhancement:u.enhancement || null }));
-      for(const k of ['kwNote', 'ptsNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
+      for(const k of ['kwNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
       // a rule only one model of the unit has (Canis Rex's Lone Operative is Sir Hekhtur's): the unit can't use a rule every model
       // must have, and the app names that model
       if(u.partialRules) add(a.id, 'unit-partialRules', w, { partialRules:u.partialRules }, { models:u.models, rules:u.rules, abilities:u.abilities.map(x => (x.who ? x.who + ' · ' : '') + x.name + ': ' + x.text) });
@@ -103,17 +91,19 @@ function items(D, appSource){
       if(u.srcNote) add(a.id, 'unit-srcNote', w, { srcNote:u.srcNote }, { models:u.models, kw:u.kw });
       // a reference sheet (not in the army until a rule or stratagem adds it): the rule it cites and its quote
       if(u.ref) add(a.id, 'unit-ref', w, { ref:u.ref }, cited(a.id, a.units.find(x => x.id === u.ref.by) || u, { from:u.ref.rule || u.ref.strat }));
-      // weapons: which model has which, how many, and the multi-profile groups
-      // unplaced: wargear on no models line (undefined, so left out of the key, for every other unit)
-      add(a.id, 'unit-weapons', w, { gear:u.gear, unplaced:u.unplaced, weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.n && '×' + x.n, x.group, x.name].filter(Boolean).join(' · ')) }, { models:u.models, leads:u.leads || null });
+      // (weapons: which model has which, how many, the multi-profile groups, unplaced wargear: New Recruit's and BSData's, compared
+      // exactly by verify/nr.js and verify/bsdata.js; the sentences that say them are code, useSentence and useLine; no judgement)
     }
     // the faction's and detachments' rules and stratagems the army uses
     const f = fr(a.faction);
     const rulesMeta = (where, r, srcText) => {
       const src = { rule:r.name, text:srcText };
+      // (needs: none where verify/derive.js derives the same from the words; the gate step derive keeps them agreeing,
+      // verify/derive-agreed.json)
+      const needsDerived = r.needs !== undefined && (() => { const dn = Dv.ruleNeeds(DV(), r); return !!dn.needs && JSON.stringify(Dv.canonNeeds(r.needs, everyKw(a.faction))) === JSON.stringify(Dv.canonNeeds(dn.needs, everyKw(a.faction))); })();
       // (calcMods, calcDefs, calcNc, both, limit: the Damage tab's own reading of an army rule; parts: the parts of a detachment rule
       // for some of its units only, each with its needs and its footnote, "When targeted" line or the army rule it gives)
-      for(const k of RULE_KEYS) if(r[k] !== undefined) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
+      for(const k of RULE_KEYS) if(r[k] !== undefined && !(k === 'needs' && needsDerived)) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
       // an army rule shown with the core ability of the same name (Super-heavy Walker): the pairing, against both texts
       if(r.coreTwin !== undefined) add(a.id, 'rule-coreTwin', where + ' · ' + r.name, { coreTwin:r.coreTwin }, { rule:r.name, text:srcText, core:D.rules[r.coreTwin] || null });
     };
@@ -138,11 +128,9 @@ function items(D, appSource){
         if(ab.ph || ab.turn || ab.at) add('catalog', 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns }, src);
         if(ab.def) add('catalog', 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);
         for(const k of ['note', 'na', 'damaged']) if(ab[k]) add('catalog', 'ability-' + k, w + ' · ' + ab.name, { [k]:ab[k] }, src);
-        if(ab.defAlways || ab.defCalc || ab.riled || ab.calcDef || ab.embarked) add('catalog', 'ability-calc', w + ' · ' + ab.name, { def:ab.def, calcDef:ab.calcDef, defAlways:ab.defAlways, defCalc:ab.defCalc, lasts:ab.lasts, riled:ab.riled, embarked:ab.embarked }, src);
-        if(ab.fightOnDeath || ab.comeback || ab.calcNote) add('catalog', 'ability-turn', w + ' · ' + ab.name, { fightOnDeath:ab.fightOnDeath, comeback:ab.comeback, calcNote:ab.calcNote, who:ab.who, models:S.models }, src);
       }
       const citedRow = m => { const ab = (S.abilities || []).find(x => x.name === m.from); return ab ? { ability:ab.name, text:ab.text } : { missing:'nothing of the datasheet is named ' + m.from }; };
-      for(const [k, kind] of [['mods', 'unit-footnote'], ['aura', 'unit-aura'], ['guard', 'unit-guard']]) for(const m of S[k] || []) add('catalog', kind, w, m, citedRow(m));
+      for(const [k, kind] of [['guard', 'unit-guard']]) for(const m of S[k] || []) add('catalog', kind, w, m, citedRow(m));
       for(const k of ['kwOnly', 'srcNote', 'partialRules']) if(S[k]) add('catalog', 'unit-' + k, w, { [k]:S[k] }, { kw:S.kw, rules:S.rules });
     }
     for(const [fk, f] of Object.entries(D.factions)) for(const [dk, d] of Object.entries(f.detachments || {})){
@@ -175,16 +163,17 @@ const CODE_RULES = {
   useSentence:'04.01 Select Weapons; Close-quarters (non-MONSTER/VEHICLE: pistols or other ranged weapons); Extra Attacks (24.11); a multi-profile weapon uses one profile (04.01.03)',
   useLine:'which models carry which weapons (gear per models line); attached units (19.04)',
   weaponChoice:'whether a model of these weapon rows has a choice between them, said in words (useLine) under the rows, which keep GW\'s datasheet order: 04.01 Select Weapons (melee: a model with two or more melee weapons fights with one, [EXTRA ATTACKS] on top); Close-quarters (a non-MONSTER/VEHICLE model with [CLOSE-QUARTERS] weapons and other ones: those or the others); per models line (gear); attached units by part; without a choice, a weapon only one 1× models line has names that model on its row',
-  unitMods:'which footnotes a unit gets: its own, detachment rules matching its keywords (and the parts of a detachment rule whose needs it meets), auras, stratagems it is eligible for (their needs, from GW\'s TARGET); Lance (+1 to wound after a charge); Plunging Fire for TOWERING (22.05)',
+  unitMods:'which footnotes a unit gets, each a box of data.js BOXES (made by script from GW\'s words): the sources the Damage tab gives it (dmSources: its army and detachment rules, its own abilities, its weapons\' core abilities, the boxes of other units of the list that reach it, the detachments\' stratagems it can be the TARGET of; not the core stratagems, every unit\'s), its Damaged bands, Lance for its [LANCE] weapons (24.24), Plunging Fire for a TOWERING unit that is not AIRCRAFT (22.05, 23.03); a box that reaches other units only where it reaches this one (its own aura too, 22.01; not one "other" friendly units), of this kind of attack',
+  fnLine:'one box as a footnote: its conditions\' labels (fnCond), its effects\' labels (effects.js fxLabel; a pick\'s options, its part), the weapons or models its scope names (none of this kind: no footnote), less what the list printed into the weapons (dmBaked, marked +); none where the unit lacks the keyword or wargear it needs (selfKw, selfGear); a box for one weapon\'s A, S, AP or D only, not a Damaged band\'s or a stratagem\'s, is that weapon\'s row value ("8 (+6)", "A 6"); a stratagem\'s one phase from its derived phases and turn',
+  fnCond:'a condition as a footnote says it: effects.js COND label; an aura of another unit "Within N\" of <its name>" (the model of an attached unit whose ability it is), the unit\'s own aura "Own aura" (22.01), "Selected by <its name>"; a one-model unit\'s Starting Strength "Lost any wounds", Half-strength "<halfBelow> or fewer wounds left" (Core Rules p86)',
+  fnWeapons:'the weapons of the unit a box\'s scope names, of this kind: by name or its head word, by weapon keyword, by the part of an attached unit (19.04)',
   unitDetParts:'the parts of a detachment rule that apply to a unit: those of the rules that apply to it (by keyword) whose own needs it meets (Blood Tithe: Daemonic Rage and Boon of Blood for BLOOD LEGIONS units, Might of Khorne giving them the Blessings of Khorne ability)',
-  singleMod:'Starting Strength for a one-model unit (Core Rules p86)',
   halfBelow:'Below half-strength for a one-model unit: remaining wounds less than half its W',
   defenceItems:'what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules (and the parts of one whose needs it meets), stratagems usable in that phase, the Orks riled-up 5+ invulnerable save; on the datasheet (opts.shields) also a stratagem another unit of the list takes the hits with (Grot Shields: a GRETCHIN unit for an ORKS INFANTRY unit, excluding GRETCHIN), and what another unit of the list gives this one when it is attacked (its guard entries whose needs it meets: Emanatus Forcefield, Shroudpsalm, Omnissiah\'s Blessing, Necromechanic)',
   onceTag:'"Once per …" limits shown on the ability row',
   isEnhancement:'the Enhancement chip on an ability row: its tag is "Enhancement" or has it as one part ("Enhancement · Aura": Final Howl, Necromechanic)',
   matches:'stratagem/rule eligibility by keywords (all / any / none)',
   inertRule:'rules that do nothing in this list (e.g. Bondsman without ARMIGER models)',
-  auraMods:'auras from other units in the list',
   oneOffMod:'a footnote that is a one-off use the player makes (its when, its ability\'s tag or words say once per battle: Possessed Lord): not in the weapon\'s numbers (the owner\'s decision, 2026-10-26)',
   rowMod:'which footnote a weapon row shows in its numbers ("8 (+6)", "7/10"): one that changes that weapon\'s values (weapon, set), unless a one-off (oneOffMod)',
   footMod:'a one-off\'s footnote under the weapons: its numbers first, with the weapon ("Lacerator and daemonic claw +3 A and [DEVASTATING WOUNDS] until the end of the phase"), as the row no longer shows them',

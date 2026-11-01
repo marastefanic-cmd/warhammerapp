@@ -151,6 +151,7 @@ const LABEL_RULES = [
   { id:'label-own-target', why:'"makes a ranged attack that targets X" / "ranged attacks that target X", and of any attack, "makes an attack that targets X" / "attacks that target X" (the closest eligible target, a unit on an objective): a bonus for the targets the unit picks in its own Shooting phase, as the signed-off lists label it; Fire Overwatch is not added. (A labelling choice, not a Core Rules limit: snap shooting, 15.09, can target any visible eligible enemy unit within 24", but hits only on an unmodified 6 and cannot re-roll hit rolls, so a hit bonus does nothing there)' },
   { id:'label-own-target-snap', why:'an own-target attack bonus (label-own-target) that still works in snap shooting, Core Rules 15.09 (Fire Overwatch hits only on an unmodified 6 and cannot re-roll hit rolls): AP, a wound roll (bonus or re-roll), damage, or a weapon ability ([HEAVY] aside, a hit bonus): Fire Overwatch is added as for any attack; one that is only a hit bonus or hit re-roll keeps label-own-target (the owner\'s rule, "show Overwatch too" wherever the bonus applies)' },
   { id:'label-named-weapons', why:'a weapon ability given to weapons the unit\'s datasheet names ("its hellforged weapons have the [DEVASTATING WOUNDS] ability", "its Dark Blessing has the [SUSTAINED HITS D3] ability"): the phase of those weapons, your Shooting phase for ranged ones, the Fight phase for melee ones (not "weapons have": both)' },
+  { id:'label-setup-trigger', why:'a trigger that only sets up the battle ("At the start of the first battle round, select one unit … to be this model\'s victim": Methodical Destruction) with no duration in its words but "until the end of the battle": what it gives holds for the rest of the battle, so a ranged bonus of it is also used with Fire Overwatch, as an always-on one is (Core Rules 15.09: where the bonus still works in snap shooting, label-own-target-snap; the owner\'s rule, "show Overwatch too" wherever the bonus applies)' },
   { id:'label-those-attacks', why:'"Each time this model is selected to shoot or fight, you can re-roll one Hit roll … when resolving those attacks": the attacks of that activation, your Shooting phase and the Fight phase; not added for Fire Overwatch' },
   { id:'label-options', why:'the options of a rule or ability: written in its own lines ("**Name:** effect", a bullet "**Name**" and its line) they are left out of its label (Canticles of the Omnissiah, Battle Protocols, Blood Tithe; not "**Additional Effect:**", which is no choice); set out as a table or under headings of their own, each row\'s phases are added (from its own WHEN, else the item\'s trigger: Martial Ka\'tah, Cabal of Sorcerers, Blessings of Khorne, Combat Doctrines), in both players\' turns when the item is triggered at the start of the battle round (Pledges to the Dark Prince), with Fire Overwatch for a row\'s ranged attacks when it lasts "until the start of your next Command phase" (Kindred Sorcery); not a table of abilities the units "gain" (Doctrina Imperatives, Harbingers of Dread: each unit\'s sheet has them). A detachment\'s KEYWORDS section is left out (army building)' },
   { id:'label-assault', why:'[ASSAULT] given to ranged attacks or weapons: they shoot after an Advance move, your Movement phase too' },
@@ -352,7 +353,13 @@ function usedIn(text, ctx, trig){
   const snap = ownTarget && SNAP_WORKS.exec(plain(t));
   if(ownTarget && snap) reasons.push({ rule:'label-own-target-snap', match:snap[0] });
   else if(ownTarget){ shoots = false; reasons.push({ rule:'label-own-target', match:ownTarget[0] }); }
-  if(!trig && (shoots || guarded) && !USED_MODIFIERS.find(r => r.id === 'same-turn').re.test(t) && !movedTurn && !/\bin a turn in which it (?:Fell Back|Advanced)\b/i.test(plain(t))){
+  // (a trigger that only sets up the battle, "At the start of the first battle round, select one unit … to be this model's victim", with
+  // no duration in its words: what it gives holds for the rest of the battle, so its ranged bonus is used with Fire Overwatch as an
+  // always-on one is (label-setup-trigger), where it still works in snap shooting (Core Rules 15.09: label-own-target-snap))
+  // ("until the end of the battle" is that lasting effect too: Singular Purpose, Hyper-adaptations)
+  const setup = !!trig && /^start of the (?:first battle round|battle)$/i.test(trig.at || '') && !/\buntil\b|\bthis (?:turn|phase|battle round)\b|\bfor the rest of\b/i.test(plain(t).replace(/\buntil the end of the battle\b(?! round)/gi, ''));
+  if(setup && shoots) reasons.push({ rule:'label-setup-trigger', match:trig.at });
+  if((!trig || setup) && (shoots || guarded) && !USED_MODIFIERS.find(r => r.id === 'same-turn').re.test(t) && !movedTurn && !/\bin a turn in which it (?:Fell Back|Advanced)\b/i.test(plain(t))){
     for(const cs of (ctx && ctx.core) || []){
       if(!/\byour unit shoots\b/i.test(plain(cs.effect))) continue;
       const w = explicitTiming(cs.when.split(/[.:]/)[0]);
@@ -1222,23 +1229,7 @@ function derive(D){
         tagItem('ability-tag', where, ab, { enh }, comments, ab.name + '\n' + ab.text);
         if(items.length > before) Object.defineProperty(items[items.length - 1], 'ab', { value:ab, enumerable:false });
       }
-      // coverage only: aura reach, and the bonuses a footnote's source text names vs what the footnote says
-      for(const m of u.aura || []){
-        const ab = u.abilities.find(x => x.name === m.from);
-        if(!ab) continue;
-        const r = REACH_RE.exec(plain(ab.text)), s = /within (\d+)"/i.exec(m.when || '');
-        add({ kind:'unit-aura', coverage:true, where:a.id + ' · ' + uName + ' · ' + m.from, stored:s ? s[1] + '"' : (m.when || null), derived:r ? r[1] + '"' : null, how:r ? 'explicit' : 'none',
-          status:!r ? 'not-derivable' : s && s[1] === r[1] ? 'identical' : 'different', reasons:r ? [{ rule:'aura-reach', match:r[0] }] : [], text:ab.text, dedupe:m.from + '\n' + ab.text + '\n' + JSON.stringify(m) });
-      }
-      // a footnote per bonus or per condition: an ability's footnotes on this unit together say what it gives
-      const byFrom = new Map();
-      for(const m of u.mods || []){ const k = m.from + (m.weapon ? ' (' + m.weapon + ')' : ''); if(!byFrom.has(k)) byFrom.set(k, []); byFrom.get(k).push(m); }
-      for(const [k, ms] of byFrom){
-        const ab = u.abilities.find(x => x.name === ms[0].from);
-        if(!ab) continue;
-        const text = plain(ab.text), said = ms.map(m => (m.note || '') + ' ' + JSON.stringify(m.set || {}).replace(/"(A|S|D)":"\d/g, '"$1":"+')).join(' | ') + elsewhere(u, ab);
-        cover('unit-mod', a.id + ' · ' + uName + ' · ' + k, BONUS_RULES, text, said, ms.map(m => m.note).join(' | '), ab.text, k + '\n' + ab.text + '\n' + said);
-      }
+      // (coverage of the footnotes and auras: retired with them, the footnotes are data.js BOXES)
       for(const ab of u.abilities){
         const text = plain(ab.text);
         if(!DEF_RULES.some(r => r.re.test(text)) && !ab.def) continue;
@@ -1356,13 +1347,11 @@ function readingsOf(text, name){
 // what the rule's footnotes and the unit sheets store for its options (compared, not part of the tables)
 function storedOptionsOfRule(r){
   const out = [];
-  for(const m of r.calcMods || []) out.push({ name:m.from, what:'calcMods (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name) });
   for(const p of r.parts || []) out.push({ name:p.name, what:'parts' + (p.mod ? ' mod (' + p.mod.kind + ')' : p.def ? ' def' : p.grants ? ' grants ' + p.grants : ''), kind:p.mod ? p.mod.kind : p.def ? 'def' : null, grants:p.grants, needs:p.needs, when:p.when });
-  if(r.mod) out.push({ name:null, what:'mod (' + r.mod.kind + ')', kind:r.mod.kind, picks:(r.mod.pick || []).map(p => p.name), note:r.mod.note });
   return out;
 }
 function storedOptionsOfAbility(u, ab){
-  return (u.mods || []).concat(u.aura || [], u.guard || []).filter(m => m.from === ab.name).map(m => ({ name:null, what:'footnote (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name), note:m.note }));
+  return (u.guard || []).filter(m => m.from === ab.name).map(m => ({ name:null, what:'footnote (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name), note:m.note }));
 }
 // the rules and abilities read for options and grants: every army and detachment rule, then every ability of every list (once per words)
 // a detachment's rules: `rule`, then any further ones (`moreRules`: Blood Legion's Blood Tainted)

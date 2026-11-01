@@ -94,13 +94,14 @@ function condsOf(V, sOrig, leadOrig, opts){
   const has = id => on.some(x => x[0] === id);
   for(const [id, c] of Object.entries(COND)){
     if(['targetKw', 'q', 'opt'].includes(id)) continue;
+    if(id === 'anyOf' && !(opts && opts.anyOf)) continue;
     for(const re of c.pats){ const m = re.exec(both); if(!m) continue;
       if(id === 'closest' && has('closest18')) break;
       if(id === 'onObjective' && (has('objective') || /\bthe target of (?:that attack|those attacks) is within range\b/.test(both))) break;
       if((id === 'targetObjective' || id === 'targetObjectiveNotYours') && has('objective')) break;
       if(id === 'targetBelowHalf' && has('targetNotBelowHalf')) break;
       if(id === 'aura' && opts && opts.self) break;
-      on.push([id, id === 'aura' ? +m[1] : id === 'maxT' ? +m[1] - 1 : id === 'selfKw' ? m[1].replace(/(^|\s)([a-z])/g, (x, a, b) => a + b.toUpperCase()) : id === 'selfGear' ? m[1].split(/,? and |, /).map(x => x.replace(/^an? /, '').trim()) : true]); break; }
+      on.push([id, id === 'anyOf' ? opts.anyOf : id === 'aura' ? +m[1] : id === 'maxT' ? +m[1] - 1 : id === 'selfKw' ? m[1].replace(/(^|\s)([a-z])/g, (x, a, b) => a + b.toUpperCase()) : id === 'selfGear' ? m[1].split(/,? and |, /).map(x => x.replace(/^an? /, '').trim()) : true]); break; }
   }
   const tk = targetKw(V, sOrig) || (opts && opts.inherit ? null : targetKw(V, leadOrig || ''));
   if(tk) on.push(['targetKw', tk]);
@@ -128,7 +129,7 @@ function condsOf(V, sOrig, leadOrig, opts){
   const QP = [/\bthat targets? (?:a|an|an enemy) unit (?:with|within) [^,.;:]+?(?= (?:have|has|can|gains?)\b|[,.;:]|$)/g, /\bthat targets? the closest enemy unit\b/g,
     /(?<=\bbut )(?:they|it) can only target [^,.;:]+/g, /\bcontains (?:a|one or more) [A-Z][A-Za-z' ]+? models?\b/g, /\bmodels in (?:those|that|your|this) [A-Za-z ]+? units? can only target [^,.;:]+/g, /\bwith weapons selected for the [^,.;:]+? ability\b/g,
     // the target's status, which no condition above reads: "that target a hidden unit", "targets a unit that is Battle-shocked"
-    /\bthat targets? an? (?!enemy\b|unit\b)(?:[a-z][a-z-]* )+?unit\b/g, /\btargets? (?:a|an|an enemy) unit that is (?!below\b|not below\b)[^,.;:]+/g];
+    /\bthat targets? an? (?!enemy\b|unit\b)(?:[a-z][a-z-]* )+?unit(?: containing one or more models on [a-z ]+?(?=,|$))?/g, /\btargets? (?:a|an|an enemy) unit that is (?!below\b|not below\b)[^,.;:]+/g];
   for(const re of QP) for(const m of pc.matchAll(re)){ const cl = m[0].trim(), cn = norm(cl);
     // (a restriction on what it can target is its own words, even where a condition reads the target: "can only target that enemy unit")
     if(!/\bcan only target\b/.test(cn) && Object.entries(COND).some(([id, c]) => !['q', 'targetKw', 'opt'].includes(id) && c.pats.some(r => r.test(cn)))) continue;
@@ -168,7 +169,7 @@ function scopeOf(V, n, weapons, nOrig){
   }
   // "makes an attack with a belleros energy cannon that targets": a weapon by its name, equipped or not (one not equipped: no box)
   if(!sc.weapon && (m = /\bmakes an attack with an? ([a-z][a-z' -]+?) (?:that|against|which)\b/.exec(n)) && !/^(?:ranged|melee|psychic) (?:weapon|attack)$|^(?:weapon|attack)$/.test(m[1])) sc.weapon = m[1];
-  if(/\bthis model(?:'s)? (?:makes|melee|ranged|attacks|weapons|hellforged|omnissian|watcher's)\b|\bequipped by (?:this model|the bearer)\b|\bthe bearer(?:'s)? (?:makes|melee|ranged)\b|\bthis model's\b|\bthe bearer's\b|\bbearer makes\b/.test(n) && !/\bmodels? in (?:this|that|your|the bearer's) unit\b/.test(n)) sc.models = 'model';
+  if(/\bthis model(?:'s)? (?:makes|melee|ranged|attacks|weapons|hellforged|omnissian|watcher's)\b|\bequipped by (?:this model|the bearer)\b|\bthe bearer(?:'s)? (?:makes|melee|ranged)\b|\bthis model's\b|\bthe bearer's\b|\bbearer makes\b/.test(n) && !/\bmodels? in (?:this|that|your|the bearer's|this model's|the bearer's) unit\b/.test(n)) sc.models = 'model';
   if(/\bselect one (?:other )?friendly [^.]*? model\b/.test(n) && /\bthat [a-z ]*model's attacks\b|\bthat [a-z]+ makes an attack\b|\beach time that [a-z ]+ makes an attack\b/.test(n)) sc.models = 'one';
   if(/\bcharacter models'? (?:melee |ranged )?attacks\b|\bequipped by character models\b/.test(n)) sc.models = 'char';
   if(/\bexcluding those made by character models\b|\bmodels in the bearer's unit \(excluding characters?\)/.test(n)) sc.models = 'nonchar';
@@ -211,12 +212,15 @@ function unitsOf(src){
     for(const row of src.table || []) push(row.slice(1).join('\n'), row[0]);
   }
   let lead = '', sub = '', grp = 0, secT = null, head = '', stop = false, pickLead = false, rowCtx = '', ctxAny = '';
+  const optsBelow = src.type !== 'strat' && /\bselect one [a-z' ]+? listed below\b/.test(norm(String(src.text || '').split('\n')[0]));
   for(const { l, sec, ctx:ctx0 } of lines){
     if(sec !== secT){ secT = sec; head = ''; stop = false; lead = ''; sub = ''; grp++; rowCtx = ''; }
     const raw = l.trim();
     if(!raw || /^\*[^*].*\*$/.test(raw) || /^\*\*\*/.test(raw)) continue;                       // italics: an example, a FAQ, a designer's note
     // KEYWORDS, RESTRICTIONS: not the rule's effects (in a table's row, "KA'TAH ABILITY": its heading)
-    if(/^[A-Z][A-Z ’'-]{3,}$/.test(raw.replace(/\*\*/g, ''))){ if(!sec) stop = true; continue; }
+    // (an option of its own, a heading the rule's first paragraph lists below: "select one combat doctrine listed below" then "DEVASTATOR
+    // DOCTRINE": its lines are that option's, as a bold line's are)
+    if(/^[A-Z][A-Z ’'-]{3,}$/.test(raw.replace(/\*\*/g, ''))){ if(!sec && optsBelow && !/^(?:KEYWORDS|RESTRICTIONS)$/.test(raw.replace(/\*\*/g, '').trim())){ head = raw.replace(/\*\*/g, '').trim(); lead = ''; sub = ''; grp++; continue; } if(!sec) stop = true; continue; }
     if(stop) continue;
     // a row laid out as a stratagem ("**WHEN:** … **TARGET:** … **EFFECT:** …"): its WHEN and TARGET are the context of its EFFECT
     const wt = /^\*\*(WHEN|TARGET):\*\*\s*(.*)$/.exec(raw);
@@ -240,7 +244,7 @@ function unitsOf(src){
     // its sentences; a parenthesis that is a sentence of its own ("(if that attack targets a PSYKER CHARACTER unit, … instead)"), right
     // after the sentence it is in
     let ss = [];
-    const paren = new Set(), split = new Set();
+    const paren = new Set(), split = new Set(), ncLead = new Map();
     for(const x0 of body.split(/(?<=[.!?])\s+(?=[A-Z(*\[])/).map(x => x.trim()).filter(Boolean)){
       const ps = []; const x = x0.replace(/\s*\((if [^()]*?)\)/gi, (m, y) => { ps.push(y); return ''; });
       // a sentence of two effects whose second has a condition of its own ("add 1 to the Hit roll if …, and add 1 to the Wound roll as
@@ -248,13 +252,27 @@ function unitsOf(src){
       const k = x.search(/, and (?=(?:add|improve|subtract|re-roll)\b)/i);
       const a1 = k >= 0 ? x.slice(0, k) : x, b1 = k >= 0 ? x.slice(k + 6) : '';
       if(k >= 0 && findFx(norm(a1)).fx.length && findFx(norm(b1)).fx.length && /\b(?:if|while|unless)\b/i.test(b1)){ ss.push(a1, b1); split.add(b1); }
+      // (a rare mechanic and an effect the catalogue reads in one sentence, "While …, halve the Attacks characteristic of that model's
+      // weapons, and each time this unit makes an attack, subtract 1 from the Hit roll": two parts, the mechanic not counted, the effect
+      // with the first part's condition)
+      else if((k2 => k2 >= 0 && ncOf(norm(x.slice(0, k2))) && !ncOf(norm(x.slice(k2 + 6))) && findFx(norm(x.slice(k2 + 6))).fx.length)(x.search(/, and (?=each time\b)/i))){
+        const k2 = x.search(/, and (?=each time\b)/i), c = /^((?:While|If) [^,]+), /.exec(x); ss.push(x.slice(0, k2)); ss.push(x.slice(k2 + 6)); split.add(x.slice(k2 + 6)); if(c) ncLead.set(x.slice(k2 + 6), c[1] + ','); }
+      // (and the other way round, an effect then a rare mechanic: "While …, subtract 4 from its Objective Control characteristic and you can
+      // only select one of the C'tan Powers weapons in your Shooting phase, instead of two": the effect a box, the mechanic not counted)
+      else if((k3 => k3 >= 0 && findFx(norm(x.slice(0, k3))).fx.length && !ncOf(norm(x.slice(0, k3))) && ncOf(norm(x.slice(k3 + 5))))(x.search(/,? and (?=you can only\b)/i))){
+        const k3 = x.search(/,? and (?=you can only\b)/i), m3 = /^,? and /.exec(x.slice(k3)), b3 = x.slice(k3 + m3[0].length), c = /^((?:While|If) [^,]+), /.exec(x);
+        ss.push(x.slice(0, k3)); ss.push(b3); split.add(b3); if(c) ncLead.set(b3, c[1] + ','); }
       else ss.push(x);
       for(const y of ps){ ss.push(y); paren.add(y); }
     }
+    let anyOf = null;
+    if(!bullet && /\bif one or more of the following conditions apply\b/i.test(body) && /:\s*$/.test(body)){ const k = lines.indexOf(lines.find(x => x.l === l)); const more = [];
+      for(let j = k + 1; j < lines.length && /^\s*-\s+/.test(lines[j].l); j++) more.push(plainCase(lines[j].l.trim().replace(/^-\s+/, '')).replace(/\.$/, ''));
+      if(more.length) anyOf = more; }
     if(!bullet && /\bany of the following apply\b/i.test(body)){ const k = lines.indexOf(lines.find(x => x.l === l)); const more = [];
       for(let j = k + 1; j < lines.length && /^\s*-\s+/.test(lines[j].l); j++) more.push(lines[j].l.trim().replace(/^-\s+/, ''));
       ctxAny = more.join(' '); } else if(!bullet) ctxAny = '';
-    ss.forEach((s, i) => out.push({ s, lead:ld || (i > 0 ? ss[i - 1] : '') , ctx:[ctx, /\bany of the following apply\b/i.test(s) ? ctxAny : ''].filter(Boolean).join(' '), sec:osec, grp, bullet, or, pickLead:bullet && pickLead, first:i === 0, paren:paren.has(s), split:split.has(s), lineBody:body, prevS:i > 0 ? ss[i - 1] : '' }));
+    ss.forEach((s, i) => out.push({ s, lead:ld || ncLead.get(s) || (i > 0 ? ss[i - 1] : '') , ctx:[ctx, /\bany of the following apply\b/i.test(s) ? ctxAny : ''].filter(Boolean).join(' '), sec:osec, grp, bullet, or, pickLead:bullet && pickLead, first:i === 0, paren:paren.has(s), split:split.has(s), lineBody:body, prevS:i > 0 ? ss[i - 1] : '', anyOf }));
   }
   return out;
 }
@@ -271,12 +289,15 @@ function extract(src, ctx){
     if(/\b\d+" a[\dd]+ (?:bs|ws)\d\+|\bmelee a[\dd]+ ws\d\+/.test(n)) continue;
     const nx = ncOf(n);
     let { fx } = findFx(n);
+    // (a core weapon ability's own keyword in its words names the weapons it is for, its scope, not an effect: "Each time an attack is made
+    // with a [LANCE] weapon, …")
+    if(src.type === 'core' && src.wkw) fx = fx.filter(([id, p]) => !(FX[id] && FX[id].label(p) === '[' + src.wkw + ']'));
     // a bullet with no effect of its own may complete its line ("can ignore modifiers to your unit's: - BS.")
     // (then its quote is the whole list: "Your unit can ignore modifiers to your unit's:\n- BS.\n- Hit rolls and wound rolls.")
     let listQ = '';
     if(!fx.length && u.bullet && u.lead){ const a = findFx(norm(u.lead)).fx.length, b = findFx(norm(u.lead + ' ' + u.s)).fx; if(b.length > a){ fx = b.slice(a);
       listQ = [u.lead].concat(us.filter(x => x.grp === u.grp && x.bullet && x.first).map(x => '- ' + x.lineBody)).join('\n'); } }
-    if(nx){ nc.push({ quote:u.s, why:nx.why }); prev = null; continue; }
+    if(nx){ nc.push(Object.assign({ quote:u.s, why:nx.why }, NC[nx.id].atk ? { atk:true } : {})); prev = null; continue; }
     const leadN = norm(u.lead + ' ' + u.ctx);
     if(!fx.length){
       // a sentence with no effect that sets the context of the next ones ("select one friendly ORKS WALKER unit within 3" of this model.")
@@ -289,7 +310,7 @@ function extract(src, ctx){
     const cont = !!prev && !prev.defence && (/^(?:if|in addition)\b/.test(n) || /\b(?:as well|instead)\.?$/.test(n) || /\bas well if\b/.test(n) || u.paren || u.split || /^(?:that|those) /.test(n)) && (!u.bullet || !!u.prevS);
     const base = cont ? prev : null;
     const leadAll = [u.lead, u.ctx].filter(Boolean).join(' ');
-    let on = condsOf(V, u.s, cont ? '' : leadAll, { inherit:cont });
+    let on = condsOf(V, u.s, cont ? '' : leadAll, { inherit:cont, anyOf:u.anyOf });
     // (a part of a split sentence takes who and what it is about from the first part, not its condition)
     const WHO = ['aura', 'leading', 'targetKw', 'selected', 'targetSelected', 'oncePerBattle', 'oncePerTurn', 'used'];
     if(base){ const own = new Set(on.map(x => x[0])); on = base.on.filter(x => !own.has(x[0]) && !(x[0] === 'targetKw' && own.has('targetKw')) && x[0] !== 'q' && (!u.split || WHO.includes(x[0]))).concat(on); }
@@ -317,6 +338,8 @@ function extract(src, ctx){
     { const w = /^(When [^,.:;()]+),[^:]*:\s*$/.exec(plainCase(u.lead || '').split(/(?<=[.!?])\s+/).pop() || '');
       if(w && !/\bselected to (?:shoot|fight|attack)\b|\bmakes an attack\b/i.test(w[1]) && !on.some(x => x[0] === 'q' && x[1] === w[1])) on.push(['q', w[1]]); }
     const sc = Object.assign({}, base ? base.sc : {}, u.lead ? scopeOf(V, norm(u.lead), ctx.weapons, u.lead) : {}, scopeOf(V, n, ctx.weapons, u.s));
+    // (the sentence's own "a model in this model's unit" is the unit, whatever the line it continues says of "this model": Prey of the Blood God)
+    if(sc.models === 'model' && /\bmodels? in (?:this|that|your|this model's|the bearer's) unit\b/.test(n)) delete sc.models;
     if(/\bselect one character model in your unit\b/.test(norm(u.prevS || '')) && /^(?:until [^,]*, )?that model's\b/.test(n)) sc.models = 'char';
     // (one model another unit selects: "select one friendly ORKS VEHICLE model …:" then "That VEHICLE model's attacks have …")
     if(/\bselect one (?:other )?friendly [^.]*? model\b/.test(norm(u.lead + ' ' + (u.prevS || ''))) && /^that [a-z ]*model's attacks\b|\beach time that [a-z ]+ makes an attack\b/.test(n)) sc.models = 'one';
@@ -358,14 +381,17 @@ function extract(src, ctx){
       const pool = fx.some(([id]) => id === 'oneAnyPhase') ? 'phase' : /\bonce per turn\b/.test(t) ? 'turn' : /\bonce per battle round\b/.test(t) ? 'round'
         : /\beach time (?:this|that) (?:model|unit) is selected to (?:shoot|fight|shoot or fight)\b|\bis selected to (?:attack|shoot|fight|shoot or fight)\b|\bwhen resolving those attacks\b/.test(t) ? 'selected' : '';
       if(pool) box.pool = pool; }
+    // (a rule the unit uses, its words "… you can use this ability. If you do, …" anywhere in it (Try Dat Button!'s roll): each of its
+    // boxes is had only when it is used)
+    if(src.type !== 'strat' && /\b(?:you|it|this model|this unit) can use this ability\b/.test(norm(src.text || '')) && !on.some(x => x[0] === 'used')) on.push(['used', true]);
     // (its tag, the database's: "Once per battle")
     if(/\bonce per battle\b/i.test(src.tag || '') && !on.some(x => x[0] === 'oncePerBattle')) on.unshift(['oncePerBattle', true]);
     if(/\bonce per turn\b/i.test(src.tag || '') && !on.some(x => x[0] === 'oncePerTurn')) on.unshift(['oncePerTurn', true]);
     // (the enemy unit it selects, by its keyword: "select one visible enemy VEHICLE unit … attacks that target that unit")
     if(on.some(x => x[0] === 'targetSelected') && !on.some(x => x[0] === 'targetKw')){ const t = /\bselect one (?:\*\*visible\*\* |visible )?enemy \*\*([A-Z][A-Z ]+?)\*\* unit\b/.exec([u.prevS || '', u.lead || '', u.s].join(' '));
       if(t){ const ks = Dv.tokens(V, t[1]); if(ks.length) on.push(['targetKw', ks.length === 1 ? { any:ks } : { all:ks }]); } }
-    if(TARGET_RESTR.test(n) && !hasTargetCond(on, n)){ nc.push({ quote:u.s, why:'a condition on its target the script does not read: not counted without it' }); prev = { u, n, fx, sc, kind, reach, on }; continue; }
-    if(!box.reach && afterAttack(src, n)){ nc.push({ quote:u.s, why:'its unit has already attacked (WHEN): the attacks it helps are other units\'' }); prev = { u, n, fx, sc, kind, reach, on }; continue; }
+    if(TARGET_RESTR.test(n) && !hasTargetCond(on, n)){ nc.push({ quote:u.s, why:'a condition on its target the script does not read: not counted without it', atk:true }); prev = { u, n, fx, sc, kind, reach, on }; continue; }
+    if(!box.reach && afterAttack(src, n)){ nc.push({ quote:u.s, why:'its unit has already attacked (WHEN): the attacks it helps are other units\'', atk:true }); prev = { u, n, fx, sc, kind, reach, on }; continue; }
     box.grp = u.grp; box.bullet = u.bullet;
     // (one sentence for two kinds of attack: "weapons equipped by that model have [LETHAL HITS], and melee weapons equipped by that model
     // have [LANCE]": a box for each)
@@ -385,7 +411,10 @@ function extract(src, ctx){
   // a model of the unit not on the battlefield yet, by one fixed pattern of GW's words ("If your Canis Rex model is destroyed, this model is
   // treated as a model disembarking from a destroyed Transport", Using Sir Hekhtur): until that model is destroyed
   const em = src.type === 'ability' ? /\bIf your ([A-Z][\w'’ -]*?) model is destroyed, this model is treated as a model disembarking from a destroyed Transport\b/.exec(plainCase(src.text || '')) : null;
-  return Object.assign({ boxes:shape(boxes, src), nc, reach:reachOf(V, src.type === 'strat' ? '' : src.text || ''), both }, em ? { embarked:{ until:em[1] } } : {});
+  // a unit always riled up by its own words, one fixed pattern ("- This unit is **riled up**.", Super Runts): the Waaagh! army rule's
+  // riled-up lines say so
+  const riled = src.type === 'ability' && /^(?:-\s+)?this unit is riled up\.?$/m.test(String(src.text || '').split('\n').map(l => norm(l).trim()).join('\n'));
+  return Object.assign({ boxes:shape(boxes, src), nc, reach:reachOf(V, src.type === 'strat' ? '' : src.text || ''), both }, em ? { embarked:{ until:em[1] } } : {}, riled ? { riled:true } : {});
 }
 
 // the boxes of one rule: bullets of one list with no conditions of their own are one box; a list that picks one ("Or:", "select
@@ -447,8 +476,11 @@ function shape(list, src){
           if(facts.length) o.part = { on:facts, fx:b.fx, quote:bq }; else { if(o.fx.length) o.quote += '\n' + bq; o.fx = o.fx.concat(b.fx); o.on = o.on.concat(b.on); }
           opts.set(b.opt, o); }
         let pick = [...opts.values()];
+        // (a condition every row has, "you can use this ability", is the box's, not each pick's)
+        const J = x => JSON.stringify(x), common = (bs[0].on || []).filter(x => x[0] !== 'opt' && bs.every(b => (b.on || []).some(y => J(y) === J(x))));
+        for(const o of pick) o.on = (o.on || []).filter(x => !common.some(y => J(y) === J(x)));
         if(twoDice){ const one = pick.slice(); for(let i = 0; i < one.length; i++) for(let j = i + 1; j < one.length; j++) pick.push({ name:one[i].name + ' and ' + one[j].name, fx:one[i].fx.concat(one[j].fx), quote:one[i].quote + '\n' + one[j].quote, on:[] }); }
-        final.push({ quote:(bs[0].quotes || [bs[0].quote]).join('\n'), fx:[], on:[], kind, pick, scope:bs[0].scope, lasts:bs[0].lasts || lastsOf(norm(src.text || '')) || undefined, reach:bs[0].reach, tableRows:true });
+        final.push({ quote:(bs[0].quotes || [bs[0].quote]).join('\n'), fx:[], on:common, kind, pick, scope:bs[0].scope, lasts:bs[0].lasts || lastsOf(norm(src.text || '')) || undefined, reach:bs[0].reach, tableRows:true });
       }
     }
   }

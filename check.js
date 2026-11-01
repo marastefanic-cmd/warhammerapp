@@ -94,17 +94,7 @@ function check(file){
         const seen = new Set(); let last = null;
         for(const w of u[kind] || []){ const g = w.group ? w.group + '|' + (w.who || '') : null; if(g && g !== last && seen.has(g)) P(where, kind, 'weapon group split in two:', w.group); if(g) seen.add(g); last = g; }
       }
-      for(const m of [...(u.mods || []), ...(u.aura || [])]){
-        if(!['ranged','melee','all'].includes(m.kind)) P(where, 'mod has bad kind', m.kind);
-        for(const k of ['when','from']) if(!m[k]) P(where, 'mod missing', k);
-        if(!m.note && !m.set) P(where, 'mod missing note');
-        if(m.weapon){
-          // (a weapon of several profiles by its name, the group: Master of Magicks' Bolt of Change)
-          const w = (m.kind === 'all' ? weapons : u[m.kind] || []).find(x => x.name === m.weapon || x.group === m.weapon);
-          if(!w) P(where, 'mod names a weapon it does not have:', m.weapon);
-          else if(w.group && m.set) P(where, 'mod weapon', m.weapon, 'has several profiles; set is ignored');
-        }
-      }
+      // (footnotes and auras: data.js BOXES, checked by verify/evidence.js and verify/lines.js)
       // kwOnly: keywords of only some models; each one is a keyword of the unit
       for(const k of Object.keys(u.kwOnly || {})) if(!u.kw.includes(k)) P(where, 'kwOnly names a keyword the unit does not have:', k);
       // gear: one list per models line; names must be the unit's weapons, and every weapon carried

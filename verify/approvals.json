@@ -1253,6 +1253,12 @@
   "at": "2026-10-30",
   "why": "Same judgement as approved 5774666c9dddd1d1 (review:r14-picks, 2026-10-21) with only the retired Damage-tab fields removed (always); every other field and the source text are byte-identical (diffed main 0ac28e3 against 4daa5e8). The reading kept ({\"kind\":\"all\",\"when\":\"vs TITANIC/TOWERING\",\"note\":\"+1 to wound rolls\",\"from\":\"Macro-extinction Protocols\",\"vs\":{\"any\":[\"Titanic\",\"Towering\"],\"also\":{\"any\":[\"Mon…) is the one signed against GW’s words, unchanged: “\"Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.\" vs any Titanic/Towering wi”"
  },
+ "0ea36db81db25e42": {
+  "verdict": "ok",
+  "by": "review:lines",
+  "at": "2026-11-01",
+  "why": "fnLine, re-checked by script over all 1604 footnotes. No quoted condition is dropped beside a said one, and every box whose conditions are only quoted says \"If (see the rule)\" (257 footnotes). No ranged-only effect appears on melee. The lines checked: Macro-extinction wound +1 now carries \"If that target is TITANIC or TOWERING\"; Feeding Frenzy carries \"also Below Half-strength\"; Cabal +2 AP carries 12+ and its re-roll carries 10+; Gene-Wrought Might and Pyrogenesis options carry the assault doctrine and the Flux token; Harbingers of Dread carries \"Battle-shocked\"; Try Dat Button! says \"If it uses this ability\"; Kindred Sorcery has no range on melee. L5, L3 and L8 bite on each rule (mutations)."
+ },
  "0eaf090d296936fb": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -3635,6 +3641,12 @@
   "at": "2026-10-16",
   "why": "Archslaughterer is a Vessels of Wrath Enhancement; the app adds \"Once per battle, per army\" from the text to the row (seen in the render)."
  },
+ "2f8dea364055049b": {
+  "verdict": "ok",
+  "by": "review:lines",
+  "at": "2026-11-01",
+  "why": "abilityGaps unchanged since the first round. The attack side is held by evidence G4, and the bonusOf scan finds no attack bonus without a box or nc except ones printed into the weapons or ones on enemy weapons."
+ },
  "2fb562b37e49d20f": {
   "verdict": "ok",
   "by": "review:r14-picks",
@@ -4330,6 +4342,12 @@
   "by": "review:order",
   "at": "2026-10-30",
   "why": "Judgement identical to the one approved on main (key 01668dc0cdd7d1bb, review:import-lists); only re-keyed because the unit's rows/keywords are now in GW datasheet order (verify/gw-order.js). Checked by script against main 2399c6e."
+ },
+ "3875b4fd2625b8ce": {
+  "verdict": "ok",
+  "by": "review:lines",
+  "at": "2026-11-01",
+  "why": "footMod unchanged since the first round; the one-off row value (Moment Shackle +3 A) is a footnote, as main."
  },
  "3888f74cfb047c1b": {
   "verdict": "ok",
@@ -6670,6 +6688,12 @@
   "by": "review:exiled-units",
   "at": "2026-10-24",
   "why": "“While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Wound roll”: all attacks, always (he is leading in this list), and the Bloodmaster’s own attacks included. This is the same form as the approved Legendary Killer (“While Khârn leads this unit”, always:true)."
+ },
+ "576f5a4c707a6b52": {
+  "verdict": "ok",
+  "by": "review:lines",
+  "at": "2026-11-01",
+  "why": "resolveArmies unchanged since the first round: only the retired mods and aura reading columns leave."
  },
  "5774666c9dddd1d1": {
   "verdict": "ok",
@@ -11135,6 +11159,12 @@
   "at": "2026-10-24",
   "why": "5 Prosecutors: Boltgun (24\" A1 3+ S5 -1 1 Anti-Psyker 4+, Assault, RF1) + Gun Stock (A2 per Wahapedia new codex; NR's A3 is a declared deviation, lite-knights' decision). OC2, 50 pts."
  },
+ "9755381d27686520": {
+  "verdict": "ok",
+  "by": "review:lines",
+  "at": "2026-11-01",
+  "why": "Warpmeld Sacrifice parts: both halves are for TZEENTCH MUTANT INFANTRY/MOUNTED units. The Keywords part gives TZAANGORS +1 OC per model unless Battle-shocked. Both match GW's words."
+ },
  "97554ed70c9ee4a2": {
   "verdict": "ok",
   "by": "review:r15-v2",
@@ -12299,6 +12329,12 @@
   "at": "2026-10-21",
   "why": "WHEN \"Your opponent’s Shooting Phase, when an enemy unit targets\" the unit is what the When-targeted line is for. EFFECT \"Ranged attacks that target your unit have -1 D until that enemy unit has attacked\" becomes \"their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)\": same phase, same effect, same end, nothing added. It shows on both Chaos Terminators sheets next to Frenzied Resilience."
  },
+ "a514f468ccba6146": {
+  "verdict": "ok",
+  "by": "review:lines",
+  "at": "2026-11-01",
+  "why": "Blood Tithe parts read against GW: Enraged Abjuration for BLOOD LEGIONS and WORLD EATERS models (FNP 5+ against Psychic Attacks and mortal wounds); Daemonic Rage, Boon of Blood (4+ invulnerable) and Might of Khorne (Blessings of Khorne) for BLOOD LEGIONS units only. Unchanged since the first round."
+ },
  "a51cc933f48a6d82": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -12731,6 +12767,12 @@
   "at": "2026-10-16",
   "why": "\"Your unit has Feel No Pain 4+ against mortal wounds.\""
  },
+ "ab22b01908b67986": {
+  "verdict": "ok",
+  "by": "review:lines",
+  "at": "2026-11-01",
+  "why": "fnCond unchanged since the first round; its aura, own-aura, selected and halfBelow forms bite in L5."
+ },
  "ab252514dfa444b7": {
   "verdict": "ok",
   "by": "review:catalog-custodes",
@@ -12856,6 +12898,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "WHEN: \"Fight phase, when a friendly NORN ASSIMILATOR/NORN EMISSARY unit is selected to fight.\""
+ },
+ "ad13100c35a388a0": {
+  "verdict": "ok",
+  "by": "review:lines",
+  "at": "2026-11-01",
+  "why": "unitMods, re-checked on b793cdc. Footnote dump: 1604 footnotes, every one a box of D.boxes[m.key] or one of the 41 \"not counted here: see the rule\" lines; reach is still right (Wrath of Khorne, Secure Biomass, Beacons). The nc line comes only from a source of the unit itself: not another unit's, and not a Damaged band's. The 41 lines come from 4 sources: Point-Blank Barrage (Knights), Machine Superiority, Siege Shield and Flesh Hunger. Each source's nc is an atk one and its quote is about the unit's own attacks. L4 and L3 bite on the line being dropped or reworded."
  },
  "ad23b1721d7efa47": {
   "verdict": "ok",
@@ -13180,6 +13228,12 @@
   "by": "review:catalog-chaos-daemons",
   "at": "2026-10-30",
   "why": "Read against GW’s words (Wahapedia faction page = GW Faction Pack 1.2): LEGIONES DAEMONICA SLAANESH units from your army. The needs follow it."
+ },
+ "b0d25bed0640f0df": {
+  "verdict": "ok",
+  "by": "review:lines",
+  "at": "2026-11-01",
+  "why": "fnWeapons unchanged since the first round; every scoped footnote lists exactly the weapons its scope names."
  },
  "b0db0a1110268b97": {
   "verdict": "ok",

@@ -373,12 +373,12 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
             out.push(['all-attacks-block', u.id, m.from + ': ' + m.note]);
         }
         // the army facts the datasheet shows where they matter:
-        // - a unit always riled up by its own rule (riled: Super Runts) says so on every riled-up line, When targeted and footnotes
+        // - a unit always riled up by its own rule (BOXES riled: Super Runts) says so on every riled-up line, When targeted and footnotes
         // - Waaagh!'s [ASSAULT] while riled up, on a unit with Waaagh! some of whose ranged weapons lack [ASSAULT]
         // - what another unit of the list gives it when it is attacked (guard), under When targeted
         // - every keyword once, a keyword only some models have under those models (kwOnly)
         const lines = [...document.querySelectorAll('#view .tgl, #view .mod')].map(x => x.innerText.replace(/\s+/g, ' '));   // (When targeted: a line each)
-        if(u.abilities.some(ab => ab.riled && !ab.na)) for(const l of lines) if(/(^|· |TARGETED ?)Riled up(?! \()/i.test(l)) out.push(['always-riled', u.id, 'a riled-up line without “always riled up”: ' + l.slice(0, 80)]);
+        if(u.abilities.some(ab => ((D.boxes || {})[DM_KEY.a(ab)] || {}).riled && !ab.na)) for(const l of lines) if(/(^|· |TARGETED ?)Riled up(?! \()/i.test(l)) out.push(['always-riled', u.id, 'a riled-up line without “always riled up”: ' + l.slice(0, 80)]);
         if(u.rules.includes('Waaagh!') && (u.ranged || []).some(w => !w.kw.some(x => /^assault$/i.test(x))) && !lines.some(l => l.includes('[ASSAULT] (Waaagh!)')))
           out.push(['riled-assault', u.id, 'no “Riled up: [ASSAULT] (Waaagh!)” footnote']);
         const when = (document.querySelector('#view .def.tgt') || {}).innerText || '';

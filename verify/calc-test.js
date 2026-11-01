@@ -423,6 +423,7 @@ const fxCases = [
   // a weapon ability that changes no numbers: no mod at all (the box says "no effect in these numbers")
   ['fx:assault: no mod', () => Object.keys(fxm('assault', true)).length, 0, 0],
   ['fx:pistol: no mod', () => Object.keys(fxm('pistol', true)).length, 0, 0],
+  ['fx:oc: no mod (its own Objective Control)', () => Object.keys(fxm('oc', -4)).length, 0, 0],
 ];
 for(const x of fxCases) cases.push(x);
 

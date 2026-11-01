@@ -281,11 +281,7 @@ for (const nu of nrUnits) {
     if (prev.kwOnly) { const keep = Object.entries(prev.kwOnly).filter(([k]) => u.kw.includes(k)); if (keep.length) u.kwOnly = Object.fromEntries(keep); }
     if (prev.partialRules) { const keep = Object.entries(prev.partialRules).filter(([k]) => u.rules.includes(k)); if (keep.length) u.partialRules = Object.fromEntries(keep); }
     const names = new Set(u.abilities.map(a => a.name));
-    for (const k of ['mods', 'aura']) {
-      const keep = (prev[k] || []).filter(m => !m.from || names.has(m.from) || D.factions[factionId].armyRules.some(r => r.name === m.from) || detIds.some(id => detRules_(F.detachments[id]).some(r => r.name === m.from)));
-      (prev[k] || []).filter(m => !keep.includes(m)).forEach(m => note(tag0, k + ' from ' + m.from + ' dropped: the unit no longer has it'));
-      if (keep.length) u[k] = keep;
-    }
+    // (footnotes and auras: the boxes of the unit's rules, data.js BOXES, not a reading of the list)
   }
   // a unit new to this army: what another list's copy of the datasheet has, where it is the same
   const armyNames = new Set((F ? F.armyRules.map(r => r.name) : []).concat(detIds.flatMap(id => detRules_(F && F.detachments[id]).map(r => r.name))));
@@ -297,10 +293,6 @@ for (const nu of nrUnits) {
       if (d.short) u.short = d.short;
       const names = new Set(u.abilities.map(a => a.name)), weapons = new Set([...u.ranged, ...u.melee].map(w => w.group || w.name));
       const sameWords = n => { const a1 = u.abilities.find(a => a.name === n), a2 = (d.abilities || []).find(a => a.name === n); return a1 && a2 && (appText(a1.text).s === appText(a2.text).s || (a1._plain && textEq(a2.text, a1.text))); };
-      for (const k of ['mods', 'aura']) {
-        const keep = (d[k] || []).filter(m => (!m.weapon || weapons.has(m.weapon)) && (!m.from || (names.has(m.from) && sameWords(m.from)) || armyNames.has(m.from)));
-        if (keep.length) { u[k] = JSON.parse(JSON.stringify(keep)); reused.push(tag0 + ': ' + k + ' from ' + d._army + '/' + d.id); }
-      }
     }
   }
   // each ability's phase tags and "When targeted" line: from any copy of it with the same name and words
@@ -345,7 +337,7 @@ const ATTACKS = /attacks[^.]{0,80}\b(have|can re-roll)\b|\bhas \+\d|\+\d+ (to )?
 for (const u of units) {
   for (const ab of u.abilities) {
     if (ab.ph === undefined && PHASE.test(appText(ab.text).s)) note(label(u), 'ability ' + ab.name + ': phase tags (ph, turn, turns) where its words name a phase or a moment');
-    if (ATTACKS.test(appText(ab.text).s) && !u._applied.has(lc(ab.name)) && !(u.mods || []).concat(u.aura || []).some(m => m.from === ab.name)) note(label(u), 'ability ' + ab.name + ': changes attacks? a footnote under the weapons (mods) or for other units (aura), copied from its words');
+    if (ATTACKS.test(appText(ab.text).s) && !u._applied.has(lc(ab.name)) ) note(label(u), 'ability ' + ab.name + ': changes attacks? a footnote under the weapons (mods) or for other units (aura), copied from its words');
     if (/\b(targets? this unit|attacks? that target (this|your) unit)\b/i.test(appText(ab.text).s) && !ab.def) note(label(u), 'ability ' + ab.name + ': a "When targeted" line (def)?');
   }
 }

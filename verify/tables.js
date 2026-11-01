@@ -59,13 +59,16 @@ const FINGERPRINT = { gist:'gistOf', def:'defOf' };
 // each reading carries readOf, the fingerprint of the exact text it was read from, and readBy:'derive' when verify/derive.js's
 // fixed rules give it from that text (then --write writes it again from the text). READ_COLS: the reading columns a row of
 // FACTIONS, CORE_STRATAGEMS or an ability row holds itself (the app reads them there); the row's readOf fingerprints them all.
-const READ = ['mods', 'aura', 'guard'];
+// (mods and aura, the footnotes and auras, are retired: a unit's footnotes are its boxes, data.js BOXES; guard stays)
+const READ = ['guard'];
 const READ_FP = 'readOf', READ_BY = 'readBy', READ_WHY = 'listWhy';   // (listWhy: a reading the list's own, and why: it stays on the entry)
 const READ_COLS = {
   // (the Damage tab's own reading columns, calcMods, calcNc, both, limit, are retired: its boxes are BOXES, made by script, "derived")
-  rule:['mod', 'calcDefs', 'parts', 'statNote'],
-  strat:['mod', 'shield', 'defCalc', 'defPick', 'calcNote', 'limit', 'lasts', 'react', 'weaponKw'],
-  ability:['riled', 'damaged', 'defAlways', 'defCalc', 'calcDef', 'fightOnDeath', 'comeback', 'calcNote', 'lasts'],
+  // (and mod, help, riled, the footnote columns: retired, a unit's footnotes are its boxes; calcDefs, defCalc, calcDef, defAlways, react,
+  // weaponKw, lasts, calcNote, fightOnDeath, comeback: the Damage tab's, retired with them)
+  rule:['parts', 'statNote'],
+  strat:['shield', 'defPick'],
+  ability:[],
 };
 const FP_KEYS = Object.values(FINGERPRINT).concat(READ_FP, READ_BY, READ_WHY);   // hidden from the app, and from the helpers' keys
 const fp = s => crypto.createHash('sha256').update(String(s)).digest('hex').slice(0, 8);
@@ -126,7 +129,7 @@ const RESOLVER = `// Each unit entry of ARMIES names its datasheet (ds: an id of
 // fingerprint of the text a reading was read from), readBy and listWhy.
 function resolveArmies(armies, sheets, order, factions, opts){
   opts = opts || {}; factions = factions || {};
-  var ROWS = ['stats', 'ranged', 'melee', 'abilities'], READ = ['mods', 'aura', 'guard'];
+  var ROWS = ['stats', 'ranged', 'melee', 'abilities'], READ = ['guard'];
   var FPK = ${JSON.stringify(FP_KEYS)}, RHIDE = ['${READ_FP}', '${READ_BY}', '${READ_WHY}'].filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(FPK, ${JSON.stringify(CAT_COLS)}).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }

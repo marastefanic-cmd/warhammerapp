@@ -20,6 +20,8 @@
 const sg = p => (+p > 0 ? '+' : '−') + Math.abs(+p);
 const up = p => String(p).toUpperCase();
 const N = '(\\d+|d3|d6)';   // a value: a number or a dice roll
+// a keyword as GW prints it: in capitals, a Faction keyword by its name ("Faction: Orks" is ORKS)
+const KW = k => String(k).replace(/^Faction: /, '').toUpperCase();
 const v = s => /^d\d$/i.test(s) ? up(s) : +s;
 const kwFx = (word, key) => ({ label:() => '[' + word.toUpperCase() + ']', mod:() => ({ [key]:true }), dom:[true], pats:[new RegExp('\\[' + word + '(?::[^\\]]*)?\\]')] });
 // the characteristics a sentence adds to or improves ("add 1 to the Attacks and Strength characteristics", "improve the Strength,
@@ -75,12 +77,14 @@ const FX = {
   aSet:{ label:p => 'A ' + p, mod:p => ({ set:{ A:String(p) } }), dom:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12], pats:[/\bhas an attacks characteristic of (\d+)\b/] },
   bsSet:{ label:p => 'BS ' + p + '+', mod:p => ({ set:{ BS:p + '+' } }), dom:[2, 3, 4, 5], pats:[/\bhave a ballistic skill characteristic of (\d)\+/] },
   skill:{ label:p => 'BS/WS improved by ' + p, mod:p => ({ skill:+p }), dom:[1, 2],
-    pats:[/\bimprove the (?:ballistic|weapon) skill characteristic of [^.;]*? by (\d)\b/, /\b(?:bs|ws) improved by (\d)\b/] },
+    pats:[/\bimprove the (?:ballistic|weapon) skill characteristic of [^.;]*? by (\d)\b/, /\bimprove the (?:bs|ws) characteristic of [^.;]*? by (\d)\b/, /\b(?:bs|ws) improved by (\d)\b/] },
   range:{ label:p => '+' + p + '" range', mod:p => ({ range:+p }), dom:[3, 6, 9, 12, 18], pats:[/\+(\d+)" r\b/, /\badd (\d+)" to the range characteristic\b/] },
   ignoreHitMods:{ label:() => 'Ignore modifiers to BS/WS and the Hit roll', mod:() => ({ ignoreHitMods:true }), dom:[true],
     pats:[/\bignore any or all modifiers to (?:the following: )?(?:that (?:model's|attack's) )?(?:ballistic skill|bs|weapon skill|the hit roll)\b[^.]*/, /\bignore modifiers to your unit's: bs\b[^.]*/] },
   // a weapon ability that changes nothing in these numbers (shown with the box, said as such)
   assault:{ label:() => '[ASSAULT]', mod:() => null, dom:[true], pats:[/\[assault\]/] },
+  // its own Objective Control (a Damaged band: "subtract 4 from this model's Objective Control characteristic"), no effect on attacks
+  oc:{ label:p => sg(p) + ' OC', mod:() => null, dom:[-1, -2, -3, -4, -5, -6], pats:[/\bsubtract (\d) from (?:this model's|its) objective control characteristic\b/], neg:[0] },
   pistol:{ label:() => '[PISTOL]', mod:() => null, dom:[true], pats:[/\[pistol\]/] }
 };
 // "add D3 to the Attacks and Strength characteristics of …", "improve the Armour Penetration characteristic of that attack by 1",
@@ -89,10 +93,12 @@ const CL = '((?:attacks|strength|armour penetration|damage)(?:(?:, | and )(?:att
 const CHAR_RE = new RegExp('\\b(?:add (\\d|d3) to the ' + CL + ' characteristics?|improve the ' + CL + ' characteristics?(?:(?!characteristic)[^.;])*? by (\\d|d3)\\b)', 'g');
 // the rare mechanics the Damage tab does not play: the box shows GW's words, "not counted in the Damage tab"
 const NC = {
-  halveA:{ why:'it halves the Attacks characteristic', pats:[/\bhalve the attacks characteristic\b/] },
-  everyCrit:{ why:'every successful Hit roll scoring a Critical Hit is not played', pats:[/\ba successful hit roll scores a critical hit\b/] },
-  noPenalty:{ why:'it removes a penalty the Damage tab does not apply', pats:[/\bdoes not suffer the penalty\b/] },
-  ignoreAll:{ why:'ignoring modifiers to every roll and characteristic is wider than the Damage tab plays', pats:[/\bignore any or all modifiers to its characteristics\b/] },
+  halveA:{ atk:true, why:'it halves the Attacks characteristic', pats:[/\bhalve the attacks characteristic\b/] },
+  everyCrit:{ atk:true, why:'every successful Hit roll scoring a Critical Hit is not played', pats:[/\ba successful hit roll scores a critical hit\b/] },
+  noPenalty:{ atk:true, why:'it removes a penalty the Damage tab does not apply', pats:[/\bdoes not suffer the penalty\b/] },
+  ignoreAll:{ atk:true, why:'ignoring modifiers to every roll and characteristic is wider than the Damage tab plays', pats:[/\bignore any or all modifiers to its characteristics\b/] },
+  // (atk: about the unit's own attacks, so its datasheet's footnotes say it is there, "see the rule")
+  selectOne:{ atk:true, why:'it limits which of its weapons the model can select', pats:[/\byou can only select one of the [^.]*? weapons\b/] },
   synapse:{ why:'it changes what another rule needs, not these numbers', pats:[/\bis within your army's synapse range\b/] }
 };
 // the conditions a box states (its label; all start unticked). fact: the Damage tab's fact of the table it is (ticking the fact
@@ -121,15 +127,17 @@ const COND = {
   oncePerBattle:{ label:() => 'Once per battle', pats:[/\bonce per battle\b/] },
   oncePerTurn:{ label:() => 'Once per turn', pats:[/\bonce per turn\b/] },
   used:{ label:() => 'If it uses this ability', pats:[/\b(?:you|it|this model) can use this ability\b/, /\bcan call upon\b/, /\bif (?:it|you) do(?:es)?\b/] },
-  targetKw:{ label:p => 'The target: ' + (p.none ? 'not ' + p.none.join('/') : p.all ? p.all.join(' ') : p.any.join(' or ')), pats:[] },
+  targetKw:{ label:p => 'The target: ' + (p.none ? 'not ' + p.none.map(KW).join('/') : p.all ? p.all.map(KW).join(' ') : p.any.map(KW).join(' or ')), pats:[] },
   maxT:{ label:p => 'The target has no model with T ' + (p + 1) + '+', pats:[/\bno models with a t of (\d)\+/] },
   // a keyword of the unit the rule names ("If this model has the KHORNE keyword"): the unit's own keywords say it (the database)
-  selfKw:{ label:p => 'It has the ' + p + ' keyword', pats:[/\bif this (?:model|unit) has the ([a-z' -]+?) keyword\b/, /\bif your unit is an? ([a-z' -]+?) unit\b/] },
+  selfKw:{ label:p => 'It has the ' + KW(p) + ' keyword', pats:[/\bif this (?:model|unit) has the ([a-z' -]+?) keyword\b/, /\bif your unit is an? ([a-z' -]+?) unit\b/] },
   // the wargear the rule names ("If this model is equipped with a thundershock spear and a bellatus reaper chainsword"): the unit's weapons say it
   selfGear:{ label:p => 'It is equipped with ' + p.join(' and '), pats:[/\bif this model is equipped with (.+?)(?:,|$)/] },
   // the option of its rule the box is (a table's row, a named option: "Rendax", "Daemonic Rage [3BTP]"): its name
+  // "if one or more of the following conditions apply" and the lines under it (Plunging Fire): any one of them, each in GW's words
+  anyOf:{ quoted:true, label:p => p.map(x => '“' + x + '”').join(' or '), pats:[/\bif one or more of the following conditions apply\b/] },
   opt:{ label:p => p, pats:[] },
-  q:{ label:p => '“' + p + '”', pats:[] }
+  q:{ quoted:true, label:p => '“' + p + '”', pats:[] }
 };
 const FACT_OF = Object.fromEntries(Object.entries(COND).filter(([, c]) => c.fact).map(([k, c]) => [k, c.fact]));
 // the Custom modifiers group: every catalogue effect a player can set by hand, in this order (no rule, no AI: plain toggles)
@@ -147,8 +155,10 @@ function toMod(fx){
   return out;
 }
 const fxLabel = fx => (fx || []).map(([id, p]) => FX[id] ? FX[id].label(p) : id).join(', ');
+// (a condition that is only GW's words, quoted (q, anyOf: quoted), is said here, on the Damage tab's boxes, where it tells two boxes of
+// one rule apart and is what the player ticks; the datasheet's footnotes leave it out, their rule's name opening the words: app.html fnLine)
 const condLabel = on => (on || []).map(([id, p]) => COND[id] ? COND[id].label(p) : id).join(' · ');
-const api = { FX, COND, NC, CUSTOM, FACT_OF, CHAR_RE, CH, toMod, fxLabel, condLabel, norm };
+const api = { FX, COND, NC, CUSTOM, FACT_OF, CHAR_RE, CH, KW, toMod, fxLabel, condLabel, norm };
 if(typeof module !== 'undefined' && module.exports) module.exports = api;
 root.WH_EFFECTS = api;
 })(typeof self !== 'undefined' ? self : this);

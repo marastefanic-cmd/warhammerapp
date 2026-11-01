@@ -1376,7 +1376,7 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
 // a name in that list stands for the rows' readings of that name, the list being the unit's whole list in its order). The list is
 // written in the old form; verify/tables.js --write then keeps each reading on its row (two lists reading one rule otherwise: listed).
 {
-  const HR = HAND.readings || {}, READ = ['mods', 'aura', 'guard'], F0 = (D.factions || {})[factionId] || facSrc || {};
+  const HR = HAND.readings || {}, READ = ['guard'], F0 = (D.factions || {})[factionId] || facSrc || {};
   const { readingsOf, vocab, ruleNeeds, tidyNeeds } = require('./derive'), T = require('./tables');
   // (a detachment rule this run adds has no needs yet: the labels step below writes the ones verify/derive.js reads from its words, on
   // data.js as written; the same reading here, on data.js's other lists and this one, so a first --write gives the final readings)
