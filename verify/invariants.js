@@ -113,18 +113,12 @@ function run(D){
     for(const u of a.units){
       const src = m => { const ab = u.abilities.find(x => x.name === m.from); if(ab) return ab.text; const s = strats.find(x => x.name === m.from); if(s) return s.when + s.target + s.effect; return ruleText(a, m.rule || m.from); };
       // (the footnotes' numbers: their boxes', verify/lines.js L3 and evidence.js G3)
-      // (or in a faction's own term its text names in bold, D.ruleSrc: the Pulse Jet's "pulse jet move", whose AFTER MOVING has the -1)
-      const named = t => [...String(t).matchAll(/\*\*([^*]+)\*\*/g)].map(m => { const k = (D.ruleAliases.find(([re]) => re.test(m[1])) || [])[1]; return k && (D.ruleSrc || {})[k] ? D.rules[k] || '' : ''; }).join(' ');
-      for(const ab of u.abilities) if(ab.def) for(const n of nums(ab.def)) if(!has(ab.text, n) && !has(named(ab.text), n)) F('number-cited', a.id + ' · ' + u.name + ' · ' + ab.name, '"' + n + '" in "' + ab.def + '" is not in its text');
+      // (the When targeted lines' numbers: their defence boxes', verify/defence.js D3)
     }
-    for(const s of strats) for(const k of ['def']) if(s[k]) for(const n of nums(s[k])) if(!has(s.when + s.target + s.effect, n)) F('number-cited', a.id + ' · ' + s.name, '"' + n + '" in "' + s[k] + '" is not in its text');
-    // the line a stratagem gives the units it protects (Grot Shields' shield.def)
-    for(const s of strats) if(s.shield && s.shield.def) for(const n of nums(s.shield.def)) if(!has(s.when + s.target + s.effect, n)) F('number-cited', a.id + ' · ' + s.name + ' (shield)', '"' + n + '" in "' + s.shield.def + '" is not in its text');
     const f = D.factions[a.faction];
     const rules = f.armyRules.concat(a.detachments.flatMap(id => detRules_(f.detachments[id])));
     for(const r of rules){
       const text = r.text + JSON.stringify(r.table || '');
-      for(const k of ['def']) if(r[k]) for(const n of nums(r[k])) if(!has(text, n)) F('number-cited', a.id + ' · ' + r.name, '"' + n + '" in "' + r[k] + '" is not in its text');
       if(r.mod) for(const n of nums([r.mod.when, r.mod.note].join(' '))) if(!has(text, n)) F('number-cited', a.id + ' · ' + r.name, '"' + n + '" in its footnote is not in its text');
     }
   }

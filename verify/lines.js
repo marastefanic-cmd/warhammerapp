@@ -11,7 +11,8 @@
      the footnotes under a unit's weapons (its weapon rows' "(+N)" values, its Damaged band, riled-up and own-aura lines among them) are
      its boxes, data.js BOXES (made by script from GW's words, held to them by verify/evidence.js G1-G9), each said with the labels of
      its effects and conditions (effects.js), as G1-G8 hold the Damage tab's boxes:
-     L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …) is left in data.js (guard, statNote: not yet)
+     L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …) is left in data.js (statNote: not yet; the
+         When targeted columns, def and guard: verify/defence.js D1)
      L2  every footnote of every list × unit × kind is a box the database gives that unit
      L3  its effects' words are its box's effects' labels (a pick's options, a part), or its one weapon's row value (A, S, AP, D of one
          weapon, never a Damaged band's, a stratagem's or an ability's the unit uses)
@@ -63,13 +64,12 @@ const ONCE = /\b(?:cannot use this stratagem more than once per battle|can only 
   stats.limits = n; }
 
 // ---- L1-L8: the footnotes under a unit's weapons are its boxes (data.js BOXES), said with the catalogue's labels ----
-// L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …) is left in data.js, but guard's (When targeted,
-//     not yet from boxes)
+// L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …) is left in data.js
 const RETIRED = new Set(['mods', 'aura', 'mod', 'help', 'riled', 'calcNote', 'fightOnDeath', 'comeback', 'calcDefs', 'react', 'weaponKw', 'defAlways', 'calcDef', 'defCalc', 'listWhy', 'lasts', 'single']);
-// (guard, the When targeted help, and statNote, the stat notes: not from boxes yet)
+// (statNote, the stat notes: not from boxes yet)
 { const RAW = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'));
   const walk = (x, where) => { if(Array.isArray(x)) return x.forEach((y, i) => walk(y, where + '[' + i + ']')); if(!x || typeof x !== 'object') return;
-    for(const [k, v] of Object.entries(x)){ if(k === 'guard' || k === 'statNote') continue; if(RETIRED.has(k)) fail('L1', where, 'keeps the retired column ' + k); walk(v, where + '.' + k); } };
+    for(const [k, v] of Object.entries(x)){ if(k === 'statNote') continue; if(RETIRED.has(k)) fail('L1', where, 'keeps the retired column ' + k); walk(v, where + '.' + k); } };
   for(const [name, key] of [['ARMIES', 'A'], ['DATASHEETS', 'S']]) walk(RAW[key] ? RAW[key].value : null, name);
   walk(D.factions, 'FACTIONS'); walk(D.coreStratagems, 'CORE_STRATAGEMS'); }
 // L2-L5, L7: for every list × unit × kind of attack, the footnotes (app.html unitMods) are exactly the boxes the database gives it, each a

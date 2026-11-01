@@ -867,7 +867,12 @@ const BONUS_RULES = [
   { id:'d+',         re:/\+\d+ D\b|improve the damage characteristic of that attack by|add \d+ to the (?:[a-z]+,? )*(?:and )?damage characteristics?/i, note:/\+\d+ D\b|"D":"\+/i },
   { id:'hit-1',      re:/this model makes an attack, subtract 1 from the hit roll/i,                        note:/-1 to hit/i },
 ];
-// what protects the unit: the ability's text vs its "When targeted" line (ab.def)
+// what protects the unit: the ability's text vs its "When targeted" lines (its defence boxes, BOXES d: each defence said as below; words not
+// counted, dnc: "not counted")
+const DF_SAID = { fnp:'Feel No Pain', fnpMortal:'Feel No Pain', fnpPsychic:'Feel No Pain', fnpPsyMortal:'Feel No Pain', inv:'invulnerable save', invRanged:'invulnerable save',
+  dmgMinus:'-1 Damage', dmg0:'Damage to 0', apWorse:'-1 AP', hitMinus:'-1 to hit', woundMinus:'-1 to wound' };
+function defSaid(D, ab){ const o = (D.boxes || {})['a|' + ckHash(ab.name + '\n' + ab.text)] || {};
+  return (o.d || []).flatMap(b => b.pick ? b.pick.flatMap(p => p.df) : b.df).map(([id]) => DF_SAID[id] || id).concat((o.dnc || []).length ? ['not counted'] : []).join(', '); }
 const DEF_RULES = [
   { id:'fnp',        re:/feel no pain (\d)\+|feel no pain\*?\*? (\d)\+/i,                                   note:/feel no pain|FNP/i },
   { id:'invuln',     re:/(\d)\+ (?:invulnerable save|insv)/i,                                                note:/invulnerable save|InSv/i },
@@ -1230,10 +1235,12 @@ function derive(D){
         if(items.length > before) Object.defineProperty(items[items.length - 1], 'ab', { value:ab, enumerable:false });
       }
       // (coverage of the footnotes and auras: retired with them, the footnotes are data.js BOXES)
+      // (the "When targeted" lines: the ability's defence boxes, data.js BOXES d, made from its words by script (verify/defence.js); coverage of
+      // the protections its words name by them)
       for(const ab of u.abilities){
-        const text = plain(ab.text);
-        if(!DEF_RULES.some(r => r.re.test(text)) && !ab.def) continue;
-        cover('ability-def', a.id + ' · ' + uName + ' · ' + ab.name, DEF_RULES, text, (ab.def || '') + elsewhere(u, ab), ab.def || null, ab.text, ab.name + '\n' + ab.text + '\n' + (ab.def || ''));
+        const text = plain(ab.text), said = defSaid(D, ab);
+        if(!DEF_RULES.some(r => r.re.test(text)) && !said) continue;
+        cover('ability-def', a.id + ' · ' + uName + ' · ' + ab.name, DEF_RULES, text, said + elsewhere(u, ab), said || null, ab.text, ab.name + '\n' + ab.text + '\n' + said);
       }
     }
   }
@@ -1244,7 +1251,6 @@ function derive(D){
     for(const x of [...u.stats, ...(u.ranged || []), ...(u.melee || [])]) for(const [k, v] of Object.entries(x.from || {})) if([].concat(v).includes(ab.name))
       out.push(/^(A|S|D)$/.test(k) ? '"' + k + '":"+' : k === 'AP' ? '+1 AP' : k === 'InSv' ? 'invulnerable save' : k === 'W' ? 'Wounds' : '[' + k + ']');
     if(/feel no pain/i.test(ab.text)) for(const r of u.rules || []) if(/^feel no pain \d\+/i.test(r) && plain(ab.text).toLowerCase().includes(r.toLowerCase())) out.push('Feel No Pain (Rules line)');
-    for(const g of u.guard || []) if(g.from === ab.name) out.push((g.note || '') + ' ' + JSON.stringify(g.calc || {}).replace(/"fnp":/, 'feel no pain '));
     return out.length ? ' | elsewhere: ' + out.join(' | ') : '';
   }
   // ---- rule options and grants (coverage only): the rows of data.js's RULE_OPTIONS and GRANTS (verify/tables.js --write writes

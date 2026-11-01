@@ -72,15 +72,13 @@ function items(D, appSource){
         // (who: New Recruit's, compared exactly by verify/nr.js; no judgement. tag: a judgement again, nr.js lets the app add a tag part
         // its text names, so an extra "Aura" would pass it)
         if(ab.tag) add(a.id, 'ability-tag', w + ' · ' + ab.name, { tag:ab.tag }, src);
-        if(ab.def) add(a.id, 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);
         // a note under the ability (an FAQ, a core rule it meets, a question the rules leave open): its own words are the app's
         // (the quotes in it are checked by verify/texts.js); the source is the unit's abilities and the list's rules it may quote
         if(ab.note) add(a.id, 'ability-note', w + ' · ' + ab.name, { note:ab.note }, { ability:ab.name, text:ab.text,
           others:u.abilities.filter(x => x !== ab).map(x => x.name + ': ' + x.text), listRules:fr(a.faction).armyRules.map(r => r.name).concat(a.detachments.flatMap(id => detRules_(fr(a.faction).detachments[id]).map(r => r.name))) });
         if(ab.na) add(a.id, 'ability-na', w + ' · ' + ab.name, { na:ab.na, armyUnits:a.units.map(x => x.name + ' [' + x.kw.join(', ') + ']') }, src);
-        // (damaged: the range its words give, verify/lines.js L0; no judgement)
+        // (damaged: the range its words give, verify/lines.js L0; def, its When targeted line: its defence boxes, BOXES d, verify/defence.js; no judgement)
       }
-      for(const m of u.guard || []) add(a.id, 'unit-guard', w, m, cited(a.id, u, m));
       for(const k of ['kwNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
       // a rule only one model of the unit has (Canis Rex's Lone Operative is Sir Hekhtur's): the unit can't use a rule every model
       // must have, and the app names that model
@@ -126,11 +124,8 @@ function items(D, appSource){
       for(const ab of S.abilities || []){
         const src = { ability:ab.name, text:ab.text };
         if(ab.ph || ab.turn || ab.at) add('catalog', 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns }, src);
-        if(ab.def) add('catalog', 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);
         for(const k of ['note', 'na', 'damaged']) if(ab[k]) add('catalog', 'ability-' + k, w + ' · ' + ab.name, { [k]:ab[k] }, src);
       }
-      const citedRow = m => { const ab = (S.abilities || []).find(x => x.name === m.from); return ab ? { ability:ab.name, text:ab.text } : { missing:'nothing of the datasheet is named ' + m.from }; };
-      for(const [k, kind] of [['guard', 'unit-guard']]) for(const m of S[k] || []) add('catalog', kind, w, m, citedRow(m));
       for(const k of ['kwOnly', 'srcNote', 'partialRules']) if(S[k]) add('catalog', 'unit-' + k, w, { [k]:S[k] }, { kw:S.kw, rules:S.rules });
     }
     for(const [fk, f] of Object.entries(D.factions)) for(const [dk, d] of Object.entries(f.detachments || {})){
@@ -169,7 +164,11 @@ const CODE_RULES = {
   fnWeapons:'the weapons of the unit a box\'s scope names, of this kind: by name or its head word, by weapon keyword, by the part of an attached unit (19.04)',
   unitDetParts:'the parts of a detachment rule that apply to a unit: those of the rules that apply to it (by keyword) whose own needs it meets (Blood Tithe: Daemonic Rage and Boon of Blood for BLOOD LEGIONS units, Might of Khorne giving them the Blessings of Khorne ability)',
   halfBelow:'Below half-strength for a one-model unit: remaining wounds less than half its W',
-  defenceItems:'what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules (and the parts of one whose needs it meets), stratagems usable in that phase, the Orks riled-up 5+ invulnerable save; on the datasheet (opts.shields) also a stratagem another unit of the list takes the hits with (Grot Shields: a GRETCHIN unit for an ORKS INFANTRY unit, excluding GRETCHIN), and what another unit of the list gives this one when it is attacked (its guard entries whose needs it meets: Emanatus Forcefield, Shroudpsalm, Omnissiah\'s Blessing, Necromechanic)',
+  defSources:'which sources a unit\'s "When targeted" lines come from (data.js BOXES d / dnc, made by script from GW\'s words): a core rule with its value on its Rules line (Feel No Pain 5+), the army rules on its Rules line (or GRANTS gives it, or one of the list\'s whose defence box reaches it: Psychic Null), the detachment rules whose needs it meets, its own abilities (not n/a), the other units\' abilities, the list\'s detachments\' stratagems it can be the TARGET of (canTarget), and one whose dreach it meets that another unit of the list can be the TARGET of (Grot Shields: 26.x, the GRETCHIN unit is the target, the ORKS INFANTRY unit the one protected); core stratagems are on the Stratagems tab',
+  defenceItems:'every "When targeted" line of a unit: each defence box of its sources that is for it (a box given to friendly units where its reach meets the unit, the unit\'s own only where it is no "other" one, 22.01; an enemy unit\'s attacks made worse, foe: every unit; another unit\'s other boxes not), less an invulnerable save, Save characteristic or Toughness the list printed into its stats marked from that rule, and a Rules-line Feel No Pain its own ability says with its words (or, starred by New Recruit, any rule says); one "not counted here: see the rule" line for a source of the unit with words of the defence side no catalogue defence reads (never left out); the one model of an attached unit a Rules-line rule is on (partialRules)',
+  defLineOf:'one defence box as a "When targeted" line: its phases (a stratagem\'s, "Any phase" when every phase), the attacks it is against (Ranged / Melee / Psychic Attacks, unless its defence\'s label says it), its conditions\' labels (effects.js COND, DCOND; fnCond for an aura or a unit that selects), or "If (see the rule)" when its only conditions are GW\'s quoted words, never wider than the rule; its defences\' labels (effects.js dfLabel, "one of:" a pick); "KW models:" for a keyword its words give it to; a keyword or wargear of the unit it needs (selfKw, itIs, selfGear) the unit lacks: no line',
+  defLine:'a "When targeted" line drawn: the model of an attached unit it is on as a small label, its name in bold (a stratagem with its CP) opening its rule (another unit\'s: that unit), its phases and conditions muted, its defences, the unit that gives it; "Riled up (… always riled up)" for a unit always riled up (alwaysRiled); a Rules-line rule that is its own defence: its name',
+  defKindSaid:'a defence whose label says its kind already ("4+ invulnerable save against ranged attacks", "Feel No Pain 3+ against Psychic Attacks"): the line does not say "Ranged attacks" again',
   onceTag:'"Once per …" limits shown on the ability row',
   isEnhancement:'the Enhancement chip on an ability row: its tag is "Enhancement" or has it as one part ("Enhancement · Aura": Final Howl, Necromechanic)',
   matches:'stratagem/rule eligibility by keywords (all / any / none)',
@@ -218,7 +217,6 @@ const CODE_RULES = {
   ckAt:'a moment that is the start or end of a phase ("Start of your Command phase", Combat Doctrines, from main\'s rules-only moment) is filed in that phase\'s section (your, your opponent\'s, or both for "the"); other moments (Start of the battle round, End of your opponent\'s turn) are sections of their own; each section once',
   CK_EACH_ONCE:'"You can only select each combat doctrine once per battle": a limit on a rule\'s options, so the rule itself is not a once-per-battle use on the Phase checklist (Combat Doctrines: To do now at the start of your Command phase, its options Active now); the Overview\'s own boxes are unchanged',
   ckStored:'a rule or ability derive cannot place (x) that data.js gives a moment (at): listed at that moment only (Harbingers of Dread, Icon of Khorne: Start of the battle round), not at its display phase tags; with no moment it stays not derivable',
-  armyRuleOption:'the datasheet (unit screen) does not spell out an army rule\'s options: a "When targeted" line of an army rule that starts with the name of one of its options (RULE_OPTIONS: Martial Ka\'tah\'s Kaptaris) is left out there, the Rules line opens the whole rule; the Damage tab and the Overview keep it',
   // verify/readings.js: which sentences of an ability state a bonus that needs a reading, and what says it
   CONDITION:'verify/readings.js: the words that make a bonus conditional (if, while, each time, until, after, when, once it has, in / at the start or end of a phase, that targets, against X units, within N", on a turn, for every / each, during the battle round in which, select one)',
   WA:'verify/readings.js: the weapon abilities a grant can name (Melta / Rapid Fire with a number or D3 / D6; [HAZARDOUS], not [SUPA-HAZARDOUS], a drawback)',
