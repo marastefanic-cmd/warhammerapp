@@ -95,7 +95,20 @@ function gaps(b, src, side, others){
     // (not a phrase saying where they must be, "within 6" of one or more friendly SYNAPSE models", as the extractor's reach reader skips it)
     const m = /(?<!\bwithin \d+" of (?:a |an |one or more )?)\bfriendly ((?:\*\*[^*]+\*\*(?:\s*(?:,|\/|or|and)\s*)?)+)\s*(?:units?|models?)\b/.exec(raw) || /((?:\*\*[^*]+\*\*(?:\s*(?:,|\/|or|and)\s*)?)+)\s*(?:units?|models?) from your army\b/.exec(raw);
     if(m){ const miss = [...m[1].matchAll(/\*\*([^*]+)\*\*/g)].flatMap(x => n(x[1]).split(/\s+|\//)).filter(w => w && !rw.has(w) && !rw.has(w.replace(/s$/, '')));
-      if(miss.length) out.push('its words name the friendly units ' + m[1].replace(/\*\*/g, '') + ', its reach leaves out ' + miss.join(', ')); }
+      if(miss.length) out.push('its words name the friendly units ' + m[1].replace(/\*\*/g, '') + ', its reach leaves out ' + miss.join(', '));
+      // (and as GW joins them: keywords with no "or" / "/" between them all required (all); "X or Y" each alternative in any, a keyword
+      // every alternative has in all)
+      const words = k => n(String(k).replace(/^Faction: /, '')).split(/\s+/).map(w => w.replace(/s$/, ''));
+      const allW = new Set([].concat(b.reach.all || []).flatMap(words)), anyW = new Set([].concat(b.reach.any || []).flatMap(words));
+      // (its alternatives: GW's runs joined by "or", "/", "," or "and" ("BLOOD LEGIONS and WORLD EATERS models": either))
+      const alts = m[1].replace(/\*\*/g, '').split(/\s*(?:\/|,? or |,? and |, )\s*/).map(a => n(a).split(/\s+/).filter(Boolean).map(w => w.replace(/s$/, ''))).filter(a => a.length);
+      if(alts.length === 1){ const notAll = alts[0].filter(w => !allW.has(w)); if(notAll.length) out.push('its words require ' + notAll.join(', ') + ' of every unit it reaches, its reach does not (all: ' + JSON.stringify(b.reach.all || []) + ')'); }
+      else for(const a of alts) if(!a.every(w => anyW.has(w) || allW.has(w))) out.push('its alternative “' + a.join(' ') + '” is not in its reach');
+      // (the keywords it leaves out, "(excluding MONSTER/VEHICLE units)", in its none; GW's struck words are not its words)
+      const ex = /^\s*\(excluding ([^)]+)\)/.exec(raw.slice(m.index + m[0].length).replace(/~~[^~]*~~\/?/g, ''));
+      if(ex){ const noneW = new Set([].concat(b.reach.none || []).flatMap(words));
+        const xs = ex[1].replace(/\*\*/g, '').replace(/\s*\bunits?$|\s*\bmodels?$/i, '').split(/\s*(?:\/|,? or |,? and |, )\s*/).map(a => n(a).split(/\s+/).map(w => w.replace(/s$/, ''))).filter(a => a.length && a[0]);
+        for(const x of xs) if(!x.every(w => noneW.has(w))) out.push('its words exclude ' + x.join(' ') + ', its reach\'s none does not'); } }
     if(/\bother friendly\b|\banother friendly\b|\bbecause of this [a-z' -]+ model\b/.test(words) && !b.notSelf) out.push('“other” / “because of this model” and the box is not notSelf');
     if(S.ids.has('aura') && !['aura', 'selected'].includes(b.mark)) out.push('a reach by its aura\'s range and no aura mark'); }
   // a faction term's words (Pulse Jet's "pulse jet move"): had when the ability's sentence naming it is, quoted
