@@ -427,7 +427,8 @@ Castellan axe×3
 -1
 2
 ASSAULT, RAPID FIRE 2
-Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
 Shield-Captain
 + Sentinel Guard Sodality
 Sentinel Blade×3
@@ -438,9 +439,10 @@ Sentinel Blade×3
 -1
 2
 ASSAULT, CLOSE-QUARTERS
-This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets: [LETHAL HITS] (Stand Vigil)
-Within range of an objective: re-roll wound rolls of 1 (Companion’s Watch)
-Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+This unit or the target within range of an objective · The target: not MONSTER/VEHICLE: [LETHAL HITS] (Stand Vigil)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Within range of an objective: Re-roll Wound rolls of 1 (Companion’s Watch)
+Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 Custodian Guard Sodality
 Guardian Spear×3
 24"
@@ -450,9 +452,10 @@ Guardian Spear×3
 -1
 2
 ASSAULT, RAPID FIRE 2
-This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets: [SUSTAINED HITS 1] (Impenetrable Defence)
-Within range of an objective: re-roll wound rolls of 1 (Companion’s Watch)
-Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+This unit or the target within range of an objective · The target: not MONSTER/VEHICLE: [SUSTAINED HITS 1] (Impenetrable Defence)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Within range of an objective: Re-roll Wound rolls of 1 (Companion’s Watch)
+Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 Allarus Custodians
 Balistus grenade launcher×2
 18"
@@ -470,7 +473,8 @@ Guardian Spear×2
 -1
 2
 ASSAULT, RAPID FIRE 2
-Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 Custodian Wardens
 Castellan axe×2
 24"
@@ -480,8 +484,9 @@ Castellan axe×2
 -1
 2
 ASSAULT, RAPID FIRE 2
-Within range of an objective: re-roll wound rolls of 1 (Companion’s Watch)
-Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Within range of an objective: Re-roll Wound rolls of 1 (Companion’s Watch)
+Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 Prosecutor Squad
 ×2 units
 Boltgun×4
@@ -518,8 +523,8 @@ Twin Lastrum Bolt Cannon
 -2
 2
 SUSTAINED HITS 1, TWIN-LINKED
-vs MONSTER/VEHICLE: re-roll one hit roll, one wound roll and one damage roll (Advanced Firepower)
-Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
+The target: MONSTER or VEHICLE: Re-roll one Hit roll, Re-roll one Wound roll, Re-roll one Damage roll (Advanced Firepower)
+If (see the rule): −1 to Hit rolls (Damaged 5)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Trajann Valoris
@@ -540,9 +545,10 @@ Castellan axe×3
 10
 -2
 4
-Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase: +3 A
-Target has a T greater than this unit’s T: +1 to wound rolls (Slayer of Tyrants)
-Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
+Once per battle · “At the start of any phase, you can select one of the following to take effect until the end of the phase”: Watcher’s Axe +3 A (Moment Shackle)
+If (see the rule): +1 to Wound rolls (Slayer of Tyrants)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
 Shield-Captain
 + Sentinel Guard Sodality
 SHIELD-CAPTAIN
@@ -560,11 +566,12 @@ Sentinel Blade×3
 6
 -2
 2
-This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets: [LETHAL HITS] (Stand Vigil)
-Within range of an objective: re-roll wound rolls of 1 (Companion’s Watch)
-Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+This unit or the target within range of an objective · The target: not MONSTER/VEHICLE: [LETHAL HITS] (Stand Vigil)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
+Within range of an objective: Re-roll Wound rolls of 1 (Companion’s Watch)
+Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 STRATAGEMS · HONOURED COMPANIONS · FIGHT PHASE
-1CP Avenge the Fallen: +2 A (not the attacks of CHARACTER models), selected to fight, below starting strength
+1CP Avenge the Fallen: Models (not CHARACTER) +2 A, Below its Starting Strength
 Custodian Guard Sodality
 Guardian Spear×3
 6
@@ -572,11 +579,12 @@ Guardian Spear×3
 8
 -2
 2
-This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets: [SUSTAINED HITS 1] (Impenetrable Defence)
-Within range of an objective: re-roll wound rolls of 1 (Companion’s Watch)
-Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+This unit or the target within range of an objective · The target: not MONSTER/VEHICLE: [SUSTAINED HITS 1] (Impenetrable Defence)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
+Within range of an objective: Re-roll Wound rolls of 1 (Companion’s Watch)
+Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 STRATAGEMS · HONOURED COMPANIONS · FIGHT PHASE
-1CP Avenge the Fallen: +2 A (not the attacks of CHARACTER models), selected to fight, below starting strength
+1CP Avenge the Fallen: Models (not CHARACTER) +2 A, Below its Starting Strength
 Allarus Custodians
 Guardian Spear×2
 6
@@ -584,8 +592,9 @@ Guardian Spear×2
 8
 -2
 2
-Target has a T greater than this unit’s T: +1 to wound rolls (Slayer of Tyrants)
-Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+If (see the rule): +1 to Wound rolls (Slayer of Tyrants)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
+Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 Custodian Wardens
 Castellan axe×2
 3
@@ -593,10 +602,11 @@ Castellan axe×2
 10
 -2
 4
-Within range of an objective: re-roll wound rolls of 1 (Companion’s Watch)
-Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
+Within range of an objective: Re-roll Wound rolls of 1 (Companion’s Watch)
+Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 STRATAGEMS · HONOURED COMPANIONS · FIGHT PHASE
-1CP Avenge the Fallen: +2 A (not the attacks of CHARACTER models), selected to fight, below starting strength
+1CP Avenge the Fallen: Models (not CHARACTER) +2 A, Below its Starting Strength
 Prosecutor Squad
 ×2 units
 Gun Stock×4
@@ -619,7 +629,7 @@ Armoured hull
 6
 0
 1
-Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
+If (see the rule): −1 to Hit rolls (Damaged 5)
 
 ######## abilities · MELEE Abilities
 Trajann Valoris
@@ -1478,17 +1488,17 @@ no change: no rule here needs it
 0
 ARMY RULES
 Martial Ka’tah
-The target: not Monster/Vehicle
+The target: not MONSTER/VEHICLE
 if it applies
 +2% wiped
 ≈0
 MODELS
 +1 MORE ▾
 Dacatarai
-The target: not Monster/Vehicle: Re-roll Hit rolls of 1
+The target: not MONSTER/VEHICLE: Re-roll Hit rolls of 1
 +2% wiped
 Rendax
-The target: Monster or Vehicle: [LETHAL HITS]
+The target: MONSTER or VEHICLE: [LETHAL HITS]
 0
 NOT COUNTED IN THE DAMAGE TAB (4)
 Aegis of the Emperor
@@ -1883,14 +1893,14 @@ holds: Both takes the charge as made (no charge roll)
 0
 ARMY RULES
 Martial Ka’tah
-The target: not Monster/Vehicle
+The target: not MONSTER/VEHICLE
 if it applies
 0
 Dacatarai
-The target: not Monster/Vehicle: Re-roll Hit rolls of 1
+The target: not MONSTER/VEHICLE: Re-roll Hit rolls of 1
 0
 Rendax
-The target: Monster or Vehicle: [LETHAL HITS]
+The target: MONSTER or VEHICLE: [LETHAL HITS]
 0
 NOT COUNTED IN THE DAMAGE TAB (4)
 Aegis of the Emperor
@@ -2489,7 +2499,7 @@ TRAJANN VALORIS Moment Shackle (once per battle, at the start of any phase, one 
 2CP Vigil Unending: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)
 Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS · WHOLE UNIT
-Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 RANGED WEAPONS
 Range
 A
@@ -2523,6 +2533,8 @@ Castellan axe×3
 -1
 2
 ASSAULT, RAPID FIRE 2
+WHOLE UNIT
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
 MELEE WEAPONS
 A
 WS
@@ -2545,8 +2557,9 @@ Castellan axe×3
 -2
 4
 WHOLE UNIT
-Target has a T greater than this unit’s T: +1 to wound rolls (Slayer of Tyrants)
-Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase: +3 A
+If (see the rule): +1 to Wound rolls (Slayer of Tyrants)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
+Once per battle · “At the start of any phase, you can select one of the following to take effect until the end of the phase”: Watcher’s Axe +3 A (Moment Shackle)
 ABILITIES
 Supreme Commander
 - Trajann Valoris
@@ -2663,9 +2676,9 @@ SENTINEL GUARD SODALITY Praesidium Shield: -1 to wound rolls for attacks with S 
 2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks
 Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS · WHOLE UNIT
-This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets: [LETHAL HITS] (Stand Vigil)
-Within range of an objective: re-roll wound rolls of 1 (Companion’s Watch)
-Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+This unit or the target within range of an objective · The target: not MONSTER/VEHICLE: [LETHAL HITS] (Stand Vigil)
+Within range of an objective: Re-roll Wound rolls of 1 (Companion’s Watch)
+Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 RANGED WEAPONS
 Range
 A
@@ -2681,6 +2694,8 @@ Sentinel Blade×3
 -1
 2
 ASSAULT, CLOSE-QUARTERS
+WHOLE UNIT
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
 MELEE WEAPONS
 A
 WS
@@ -2703,8 +2718,9 @@ Sentinel Blade×3
 -2
 2
 WHOLE UNIT
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
 STRATAGEMS · HONOURED COMPANIONS · FIGHT PHASE
-1CP Avenge the Fallen: +2 A (not the attacks of CHARACTER models), selected to fight, below starting strength
+1CP Avenge the Fallen: Models (not CHARACTER) +2 A, Below its Starting Strength
 ABILITIES
 Master of Ka’tahs
 - Shield-Captain
@@ -2809,9 +2825,9 @@ Feel No Pain 5+ against mortal wounds
 2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks
 Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
-This unit or the target within range of an objective, vs non-MONSTER/VEHICLE targets: [SUSTAINED HITS 1] (Impenetrable Defence)
-Within range of an objective: re-roll wound rolls of 1 (Companion’s Watch)
-Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+This unit or the target within range of an objective · The target: not MONSTER/VEHICLE: [SUSTAINED HITS 1] (Impenetrable Defence)
+Within range of an objective: Re-roll Wound rolls of 1 (Companion’s Watch)
+Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 RANGED WEAPONS
 Range
 A
@@ -2827,6 +2843,7 @@ Guardian Spear×3
 -1
 2
 ASSAULT, RAPID FIRE 2
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
 MELEE WEAPONS
 A
 WS
@@ -2839,8 +2856,9 @@ Guardian Spear×3
 8
 -2
 2
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
 STRATAGEMS · HONOURED COMPANIONS · FIGHT PHASE
-1CP Avenge the Fallen: +2 A (not the attacks of CHARACTER models), selected to fight, below starting strength
+1CP Avenge the Fallen: Models (not CHARACTER) +2 A, Below its Starting Strength
 ABILITIES
 Impenetrable Defence
 
@@ -2909,7 +2927,7 @@ Feel No Pain 5+ against mortal wounds
 2CP Vigil Unending: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)
 Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
-Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 RANGED WEAPONS
 Range
 A
@@ -2933,6 +2951,7 @@ Guardian Spear×2
 -1
 2
 ASSAULT, RAPID FIRE 2
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
 MELEE WEAPONS
 A
 WS
@@ -2945,7 +2964,8 @@ Guardian Spear×2
 8
 -2
 2
-Target has a T greater than this unit’s T: +1 to wound rolls (Slayer of Tyrants)
+If (see the rule): +1 to Wound rolls (Slayer of Tyrants)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
 ABILITIES
 Slayer of Tyrants
 
@@ -3011,8 +3031,8 @@ Feel No Pain 5+ against mortal wounds
 2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks
 Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
-Within range of an objective: re-roll wound rolls of 1 (Companion’s Watch)
-Within 6" of Trajann Valoris: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+Within range of an objective: Re-roll Wound rolls of 1 (Companion’s Watch)
+Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 RANGED WEAPONS
 Range
 A
@@ -3028,6 +3048,7 @@ Castellan axe×2
 -1
 2
 ASSAULT, RAPID FIRE 2
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
 MELEE WEAPONS
 A
 WS
@@ -3040,8 +3061,9 @@ Castellan axe×2
 10
 -2
 4
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
 STRATAGEMS · HONOURED COMPANIONS · FIGHT PHASE
-1CP Avenge the Fallen: +2 A (not the attacks of CHARACTER models), selected to fight, below starting strength
+1CP Avenge the Fallen: Models (not CHARACTER) +2 A, Below its Starting Strength
 ABILITIES
 Living Fortress
 
@@ -3265,7 +3287,7 @@ Feel No Pain 5+ against mortal wounds
 2CP Golden Light of the Moiraides: until the start of your next turn (from its ingress move): -1 to hit rolls for attacks that target it; enemy units cannot target it with snap shooting attacks
 Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
-Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
+If (see the rule): −1 to Hit rolls (Damaged 5)
 RANGED WEAPONS
 Range
 A
@@ -3289,7 +3311,7 @@ Twin Lastrum Bolt Cannon
 -2
 2
 SUSTAINED HITS 1, TWIN-LINKED
-vs MONSTER/VEHICLE: re-roll one hit roll, one wound roll and one damage roll (Advanced Firepower)
+The target: MONSTER or VEHICLE: Re-roll one Hit roll, Re-roll one Wound roll, Re-roll one Damage roll (Advanced Firepower)
 MELEE WEAPONS
 A
 WS

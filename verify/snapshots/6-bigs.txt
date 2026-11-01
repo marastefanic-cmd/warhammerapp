@@ -250,11 +250,13 @@ Questoris heavy stubber
 -1
 1
 ASSAULT, RAPID FIRE 3
-Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
-Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target within range of an objective marker: [IGNORES COVER] (Saturation Fire)
+If (see the rule): −4 OC, −1 to Hit rolls (Damaged: 1-6 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Errant
 Meltagun
 12"
@@ -279,11 +281,13 @@ Thermal cannon
 -4
 D6
 BLAST, MELTA 6
-Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target is the closest eligible target: +1 to Hit rolls (Aggressive Assault)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Paladin
 ×2 units
 Meltagun
@@ -317,11 +321,13 @@ Stormspear rocket pod
 8
 -2
 D6
-Target is the closest eligible target: improve AP by 1 (Seasoned Noble)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target is the closest eligible target: +1 AP (Seasoned Noble)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Warden
 Warlord
 Avenger gatling cannon
@@ -354,11 +360,13 @@ Stormspear rocket pod
 8
 -2
 D6
-vs non-MONSTER/VEHICLE targets: ranged attacks have [DEVASTATING WOUNDS] (Thin Their Ranks)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target: not MONSTER/VEHICLE: [DEVASTATING WOUNDS] (Thin Their Ranks)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Knight Destrier
@@ -369,9 +377,11 @@ Titanic feet
 7
 -1
 2
-Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
+If (see the rule): −4 OC, −1 to Hit rolls (Damaged: 1-6 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Errant
 Reaper chainsword
 ➤strike
@@ -386,9 +396,11 @@ Reaper chainsword
 9
 -3
 2
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Paladin
 ×2 units
 Reaper chainsword
@@ -404,9 +416,11 @@ Reaper chainsword
 9
 -3
 2
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Warden
 Warlord
 Reaper chainsword
@@ -422,9 +436,11 @@ Reaper chainsword
 9
 -3
 2
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 
 ######## abilities · MELEE Abilities
 Knight Destrier
@@ -880,7 +896,7 @@ if it applies
 −0.8
 MODELS
 Damaged: 1-6 Wounds Remaining
-−1 to Hit rolls
+−4 OC, −1 to Hit rolls
 if it applies
 −25% wiped
 −0.8
@@ -1115,7 +1131,7 @@ said to hold
 no change: no rule here needs it
 0
 Damaged: 1-6 Wounds Remaining
-−1 to Hit rolls
+−4 OC, −1 to Hit rolls
 if it applies
 −0.2
 MODELS
@@ -1400,7 +1416,7 @@ if it applies
 −0.6
 MODELS
 Damaged: 1-6 Wounds Remaining
-−1 to Hit rolls
+−4 OC, −1 to Hit rolls
 if it applies
 −24% wiped
 −0.6
@@ -1507,7 +1523,7 @@ holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 Damaged: 1-6 Wounds Remaining
-−1 to Hit rolls
+−4 OC, −1 to Hit rolls
 if it applies
 −4% wiped
 −0.1
@@ -2011,10 +2027,12 @@ Feel No Pain 6+
 5+ invulnerable save against ranged attacks only
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-6 W
--1 TO HIT ROLLS (AND -4 OC)
+−4 OC, −1 TO HIT ROLLS
 ALL ATTACKS
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2046,8 +2064,8 @@ Questoris heavy stubber
 -1
 1
 ASSAULT, RAPID FIRE 3
-Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target within range of an objective marker: [IGNORES COVER] (Saturation Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS
@@ -2138,10 +2156,12 @@ Feel No Pain 6+
 5+ invulnerable save against ranged attacks only
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-9 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2172,8 +2192,8 @@ Thermal cannon
 -4
 D6
 BLAST, MELTA 6
-Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target is the closest eligible target: +1 to Hit rolls (Aggressive Assault)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS
@@ -2267,10 +2287,12 @@ Feel No Pain 6+
 5+ invulnerable save against ranged attacks only
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-9 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2309,8 +2331,8 @@ Stormspear rocket pod
 8
 -2
 D6
-Target is the closest eligible target: improve AP by 1 (Seasoned Noble)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target is the closest eligible target: +1 AP (Seasoned Noble)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS
@@ -2405,10 +2427,12 @@ Feel No Pain 6+
 5+ invulnerable save against ranged attacks only
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-9 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2446,8 +2470,8 @@ Stormspear rocket pod
 8
 -2
 D6
-vs non-MONSTER/VEHICLE targets: ranged attacks have [DEVASTATING WOUNDS] (Thin Their Ranks)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target: not MONSTER/VEHICLE: [DEVASTATING WOUNDS] (Thin Their Ranks)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS

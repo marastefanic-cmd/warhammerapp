@@ -287,11 +287,11 @@ D6+3
 -1
 2
 PSYCHIC, TORRENT
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+4 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
 Norn Assimilator
 Synaptoprescience
 1 of 2
@@ -303,13 +303,13 @@ Toxinjecter Harpoon
 -3
 D6+1
 HARPOONED
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
 Norn Assimilator
 Synaptoprescience
 2 of 2
@@ -321,13 +321,13 @@ Toxinjecter Harpoon
 -3
 D6+1
 HARPOONED
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
 Norn Emissary
 Destabilising Predation
 Psychic tendril
@@ -355,13 +355,13 @@ BLAST, PSYCHIC, ANTI-CHARACTER 2+
 -3
 D6
 MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
 Norn Emissary
 Psychic tendril
 ➤neuroparasite
@@ -388,13 +388,13 @@ BLAST, PSYCHIC
 -3
 D6
 MELTA 2, PSYCHIC
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
 Tyrannofex
 ×2 units
 Acid spray
@@ -412,12 +412,12 @@ Stinger salvoes
 5
 0
 1
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 The Swarmlord
@@ -428,11 +428,11 @@ Bone Sabres
 -2
 3
 TWIN-LINKED
-Within Synapse Range: +1 S
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+If (see the rule): +1 S (Synapse)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+4 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
+1CP Rampaging Monstrosities: Re-roll Hit rolls
 Hive Tyrant
 Warlord
 Monstrous Nemesis
@@ -453,12 +453,12 @@ Monstrous scything talons
 -2
 2
 EXTRA ATTACKS
-Within Synapse Range: +1 S
-vs MONSTER/VEHICLE: +1 to wound rolls (Monstrous Nemesis)
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target: MONSTER or VEHICLE: +1 to Wound rolls (Monstrous Nemesis)
+If (see the rule): +1 S (Synapse)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+4 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
+1CP Rampaging Monstrosities: Re-roll Hit rolls
 Neurogaunts
 ×2 units
 Chitinous claws and teeth×11
@@ -467,8 +467,7 @@ Chitinous claws and teeth×11
 3
 0
 1
-Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+If (see the rule): +1 S (Synapse)
 Norn Assimilator
 Synaptoprescience
 1 of 2
@@ -488,15 +487,15 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-Within Synapse Range: +1 S
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+If (see the rule): +1 S (Synapse)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
+1CP Rampaging Monstrosities: Re-roll Hit rolls
+STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
+1CP Lesser Prey: +2 S
 Norn Assimilator
 Synaptoprescience
 2 of 2
@@ -516,15 +515,15 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-Within Synapse Range: +1 S
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+If (see the rule): +1 S (Synapse)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
+1CP Rampaging Monstrosities: Re-roll Hit rolls
+STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
+1CP Lesser Prey: +2 S
 Norn Emissary
 Destabilising Predation
 
@@ -543,15 +542,15 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-Within Synapse Range: +1 S
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+If (see the rule): +1 S (Synapse)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
+1CP Rampaging Monstrosities: Re-roll Hit rolls
+STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
+1CP Lesser Prey: +2 S
 Norn Emissary
 
 Fights with both: Monstrous scything talons, plus Monstrous rending claws on top (extra attacks).
@@ -569,15 +568,15 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-Within Synapse Range: +1 S
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+If (see the rule): +1 S (Synapse)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
+1CP Rampaging Monstrosities: Re-roll Hit rolls
+STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
+1CP Lesser Prey: +2 S
 Tyrannofex
 ×2 units
 Powerful limbs
@@ -586,12 +585,12 @@ Powerful limbs
 8
 0
 2
-Within Synapse Range: +1 S
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+If (see the rule): +1 S (Synapse)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
+1CP Rampaging Monstrosities: Re-roll Hit rolls
 
 ######## abilities · MELEE Abilities
 The Swarmlord
@@ -2280,8 +2279,8 @@ The Swarmlord
 OC 5 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
 ALL ATTACKS
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+4 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -2297,9 +2296,9 @@ D6+3
 -1
 2
 PSYCHIC, TORRENT
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
 MELEE WEAPONS
 A
 WS
@@ -2313,9 +2312,9 @@ Bone Sabres
 -2
 3
 TWIN-LINKED
-Within Synapse Range: +1 S
+If (see the rule): +1 S (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
+1CP Rampaging Monstrosities: Re-roll Hit rolls
 ABILITIES
 Hive Commander
 Your Command
@@ -2416,12 +2415,12 @@ Monstrous scything talons
 -2
 2
 EXTRA ATTACKS
-Within Synapse Range: +1 S
-vs MONSTER/VEHICLE: +1 to wound rolls (Monstrous Nemesis)
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target: MONSTER or VEHICLE: +1 to Wound rolls (Monstrous Nemesis)
+If (see the rule): +1 S (Synapse)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+4 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
+1CP Rampaging Monstrosities: Re-roll Hit rolls
 ABILITIES
 Will of the Hive Mind
 Once per battle round, per army
@@ -2517,8 +2516,7 @@ Chitinous claws and teeth×11
 3
 0
 1
-Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+If (see the rule): +1 S (Synapse)
 ABILITIES
 Neurocytes
 
@@ -2577,11 +2575,11 @@ WHEN TARGETED
 If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ALL ATTACKS
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -2597,9 +2595,9 @@ Toxinjecter Harpoon
 -3
 D6+1
 HARPOONED
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
 MELEE WEAPONS
 A
 WS
@@ -2622,11 +2620,11 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-Within Synapse Range: +1 S
+If (see the rule): +1 S (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
+1CP Rampaging Monstrosities: Re-roll Hit rolls
+STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
+1CP Lesser Prey: +2 S
 ABILITIES
 Singular Purpose
 Start of the first battle round
@@ -2720,11 +2718,11 @@ WHEN TARGETED
 If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ALL ATTACKS
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -2740,9 +2738,9 @@ Toxinjecter Harpoon
 -3
 D6+1
 HARPOONED
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
 MELEE WEAPONS
 A
 WS
@@ -2765,11 +2763,11 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-Within Synapse Range: +1 S
+If (see the rule): +1 S (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
+1CP Rampaging Monstrosities: Re-roll Hit rolls
+STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
+1CP Lesser Prey: +2 S
 ABILITIES
 Singular Purpose
 Start of the first battle round
@@ -2862,12 +2860,12 @@ WHEN TARGETED
 If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
 Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -2900,9 +2898,9 @@ BLAST, PSYCHIC, ANTI-CHARACTER 2+
 -3
 D6
 MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
 MELEE WEAPONS
 A
 WS
@@ -2925,11 +2923,11 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-Within Synapse Range: +1 S
+If (see the rule): +1 S (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
+1CP Rampaging Monstrosities: Re-roll Hit rolls
+STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
+1CP Lesser Prey: +2 S
 ABILITIES
 Singular Purpose
 Start of the first battle round
@@ -3016,12 +3014,12 @@ WHEN TARGETED
 If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
 Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -3054,9 +3052,9 @@ BLAST, PSYCHIC
 -3
 D6
 MELTA 2, PSYCHIC
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
 MELEE WEAPONS
 A
 WS
@@ -3079,11 +3077,11 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-Within Synapse Range: +1 S
+If (see the rule): +1 S (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
+1CP Rampaging Monstrosities: Re-roll Hit rolls
+STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
+1CP Lesser Prey: +2 S
 ABILITIES
 Singular Purpose
 Start of the first battle round
@@ -3162,10 +3160,10 @@ WHEN TARGETED
 1
 Once per battle: change the Damage of an attack allocated to it to 0
 DAMAGED 1-5 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ALL ATTACKS
-Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
+7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -3188,9 +3186,9 @@ Stinger salvoes
 5
 0
 1
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
 MELEE WEAPONS
 A
 WS
@@ -3203,9 +3201,9 @@ Powerful limbs
 8
 0
 2
-Within Synapse Range: +1 S
+If (see the rule): +1 S (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: re-roll hit rolls
+1CP Rampaging Monstrosities: Re-roll Hit rolls
 ABILITIES
 Resilient Organism
 Once per battle
@@ -3243,17 +3241,6 @@ Damaged: 1-5 Wounds Remaining
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Ask about this ability
-
-######## popup ability:nidzillas|Domination of the Hive Mind|While a friendly **TYRANIDS** unit is within 9" of this model, that unit is within your army’s **Synapse Range**. · NIDZILLAS Nidzillas
-ABILITY · AURA
-
-Domination of the Hive Mind
-
-While a friendly TYRANIDS unit is within 9" of this model, that unit is within your army’s Synapse Range.
-
-UNITThe Swarmlord
 
 Ask about this ability
 

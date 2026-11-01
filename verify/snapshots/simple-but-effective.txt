@@ -414,7 +414,8 @@ IGNORES COVER
 BLAST 1, TORRENT, IGNORES COVER
 Riled up: [ASSAULT] (Waaagh!)
 STRATAGEMS · BULLY BOYZ
-1CP Armed to da Teef: can re-roll hit rolls of 1 (riled up: can re-roll hit rolls), Your Shooting phase or the Fight phase
+1CP Armed to da Teef: Re-roll Hit rolls of 1
+1CP Armed to da Teef: Re-roll Hit rolls, Riled up
 Zodgrod Wortsnagga
 + Runtherd + Gretchin
 Extra Sneaky
@@ -476,7 +477,7 @@ Blitzkannon
 -2
 2
 IGNORES COVER, LETHAL HITS: NON-MONSTER/VEHICLE
-A +6 vs non-MONSTER/VEHICLE targets, in your Shooting phase (Blitz Dem Gitz!)
+A +6 The target: not MONSTER/VEHICLE (Blitz Dem Gitz!)
 Multi-busta Launcha
 24"
 6
@@ -485,7 +486,8 @@ Multi-busta Launcha
 -2
 3
 IGNORES COVER, LETHAL HITS
-Riled up: [SUSTAINED HITS 1] (Even More Dakka) · [ASSAULT] (Waaagh!)
+Riled up: [SUSTAINED HITS 1] (Even More Dakka)
+Riled up: [ASSAULT] (Waaagh!)
 Warboss in Mega Armour
 Da Gobshot Thunderbuss
 + Meganobz
@@ -507,7 +509,8 @@ Da Gobshot Thunderbuss
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 6
 Riled up: [ASSAULT] (Waaagh!)
 STRATAGEMS · BULLY BOYZ
-1CP Armed to da Teef: can re-roll hit rolls of 1 (riled up: can re-roll hit rolls), Your Shooting phase or the Fight phase
+1CP Armed to da Teef: Re-roll Hit rolls of 1
+1CP Armed to da Teef: Re-roll Hit rolls, Riled up
 Gretchin
 Extra Sneaky
 Grot Blasta×10
@@ -558,7 +561,7 @@ Slugga×3
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
-Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
+If (see the rule): +1 to Hit rolls (Deff from Above)
 Riled up: [ASSAULT] (Waaagh!)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
@@ -581,7 +584,7 @@ Gork’s Klaw
 -3
 4
 CLEAVE 2, DEVASTATING WOUNDS
-Own aura: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Own aura: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 Mozrog Skragbad
 
 Fights with both: Gutrippa, plus Big Chompa’s Jaws on top (extra attacks).
@@ -608,8 +611,8 @@ CLEAVE 1
 -2
 D6+1
 LETHAL HITS
-vs MONSTER/VEHICLE: can re-roll wound rolls (Da Bigger Dey Iz…)
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+The target: MONSTER or VEHICLE: Re-roll Wound rolls (Da Bigger Dey Iz…)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 Nazdreg
 + Meganobz
 NAZDREG
@@ -638,10 +641,11 @@ Power Klaw×5
 -2
 2
 SUSTAINED HITS 1
-Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Riled up: +1 to Hit rolls (Krumpin’ Time)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 STRATAGEMS · BULLY BOYZ
-1CP Armed to da Teef: can re-roll hit rolls of 1 (riled up: can re-roll hit rolls), Your Shooting phase or the Fight phase
+1CP Armed to da Teef: Re-roll Hit rolls of 1
+1CP Armed to da Teef: Re-roll Hit rolls, Riled up
 Zodgrod Wortsnagga
 + Runtherd + Gretchin
 Extra Sneaky
@@ -666,7 +670,7 @@ Scavenged Shivs×20
 3
 0
 1
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 Beastboss on Squigosaur
 Brutal But Kunnin’
 
@@ -693,7 +697,7 @@ Squigosaur’s jaws
 -2
 4
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 Big Mek Dakkarig
 ×2 units
 Stompy Feet
@@ -702,7 +706,7 @@ Stompy Feet
 6
 -1
 1
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 Warboss in Mega Armour
 Da Gobshot Thunderbuss
 + Meganobz
@@ -722,10 +726,11 @@ Twin Killsaw×6
 -2
 3
 TWIN-LINKED, SUSTAINED HITS 1
-Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Riled up: +1 to Hit rolls (Krumpin’ Time)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 STRATAGEMS · BULLY BOYZ
-1CP Armed to da Teef: can re-roll hit rolls of 1 (riled up: can re-roll hit rolls), Your Shooting phase or the Fight phase
+1CP Armed to da Teef: Re-roll Hit rolls of 1
+1CP Armed to da Teef: Re-roll Hit rolls, Riled up
 Gretchin
 Extra Sneaky
 Scavenged Shivs×10
@@ -734,7 +739,7 @@ Scavenged Shivs×10
 2
 0
 1
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 Gretchin
 Scavenged Shivs×10
 1
@@ -742,7 +747,7 @@ Scavenged Shivs×10
 2
 0
 1
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 Deffkoptas
 
 Pick one to fight with: Choppa or Spinnin’ Blades.
@@ -760,7 +765,7 @@ Spinnin’ Blades×3
 -1
 1
 CLEAVE 1, HAZARDOUS
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 
 ######## abilities · MELEE Abilities
 Ghazghkull Thraka
@@ -2544,7 +2549,7 @@ Gork’s Klaw
 -3
 4
 CLEAVE 2, DEVASTATING WOUNDS
-Own aura: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Own aura: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 ABILITIES
 Supreme Commander
 
@@ -2673,8 +2678,8 @@ CLEAVE 1
 -2
 D6+1
 LETHAL HITS
-vs MONSTER/VEHICLE: can re-roll wound rolls (Da Bigger Dey Iz…)
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+The target: MONSTER or VEHICLE: Re-roll Wound rolls (Da Bigger Dey Iz…)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 ABILITIES
 One Last Kill
 Fight
@@ -2760,7 +2765,8 @@ MEGANOBZ Arrogant Invulnerability: Attacks that target this unit have -1 AP
 Riled up: 5+ INV
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · BULLY BOYZ
-1CP Armed to da Teef: can re-roll hit rolls of 1 (riled up: can re-roll hit rolls), Your Shooting phase or the Fight phase
+1CP Armed to da Teef: Re-roll Hit rolls of 1
+1CP Armed to da Teef: Re-roll Hit rolls, Riled up
 RANGED WEAPONS
 Range
 A
@@ -2855,8 +2861,8 @@ Power Klaw×5
 2
 SUSTAINED HITS 1
 WHOLE UNIT
-Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Riled up: +1 to Hit rolls (Krumpin’ Time)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 ABILITIES
 Intimidating Motivation
 - Nazdreg
@@ -3041,7 +3047,7 @@ Scavenged Shivs×20
 0
 1
 WHOLE UNIT
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 ABILITIES
 Super Runts
 - Zodgrod Wortsnagga
@@ -3188,7 +3194,7 @@ Squigosaur’s jaws
 -2
 4
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 ABILITIES
 Thundering Stampede
 Charge
@@ -3283,7 +3289,7 @@ Blitzkannon
 -2
 2
 IGNORES COVER, LETHAL HITS: NON-MONSTER/VEHICLE
-A +6 vs non-MONSTER/VEHICLE targets, in your Shooting phase (Blitz Dem Gitz!)
+A +6 The target: not MONSTER/VEHICLE (Blitz Dem Gitz!)
 Multi-busta Launcha
 24"
 6
@@ -3292,7 +3298,8 @@ Multi-busta Launcha
 -2
 3
 IGNORES COVER, LETHAL HITS
-Riled up: [SUSTAINED HITS 1] (Even More Dakka) · [ASSAULT] (Waaagh!)
+Riled up: [SUSTAINED HITS 1] (Even More Dakka)
+Riled up: [ASSAULT] (Waaagh!)
 MELEE WEAPONS
 A
 WS
@@ -3305,7 +3312,7 @@ Stompy Feet
 6
 -1
 1
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 ABILITIES
 Even More Dakka
 Their Move · Your Shoot
@@ -3387,7 +3394,8 @@ MEGANOBZ Arrogant Invulnerability: Attacks that target this unit have -1 AP
 Riled up: 5+ INV
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · BULLY BOYZ
-1CP Armed to da Teef: can re-roll hit rolls of 1 (riled up: can re-roll hit rolls), Your Shooting phase or the Fight phase
+1CP Armed to da Teef: Re-roll Hit rolls of 1
+1CP Armed to da Teef: Re-roll Hit rolls, Riled up
 RANGED WEAPONS
 Range
 A
@@ -3436,8 +3444,8 @@ Twin Killsaw×6
 3
 TWIN-LINKED, SUSTAINED HITS 1
 WHOLE UNIT
-Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Riled up: +1 to Hit rolls (Krumpin’ Time)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 ABILITIES
 Krushin’ Impetus
 - Warboss in Mega Armour
@@ -3564,7 +3572,7 @@ Scavenged Shivs×10
 2
 0
 1
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 ABILITIES
 Downtrodden
 
@@ -3659,7 +3667,7 @@ Scavenged Shivs×10
 2
 0
 1
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 ABILITIES
 Downtrodden
 
@@ -3755,7 +3763,7 @@ Slugga×3
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
-Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
+If (see the rule): +1 to Hit rolls (Deff from Above)
 Riled up: [ASSAULT] (Waaagh!)
 MELEE WEAPONS
 A
@@ -3779,7 +3787,7 @@ Spinnin’ Blades×3
 -1
 1
 CLEAVE 1, HAZARDOUS
-Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
 ABILITIES
 Deff from Above
 Your Shooting

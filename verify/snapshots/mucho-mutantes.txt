@@ -389,7 +389,11 @@ D6+3
 -1
 2
 BLAST, IGNORES COVER, PSYCHIC
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 Ahriman
 + Tzaangor Enlightened with Fatecaster greatbows
 AHRIMAN
@@ -421,7 +425,11 @@ Fatecaster greatbow×6
 -2
 2
 IGNORES COVER, LETHAL HITS, PRECISION
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 Daemon Prince of Tzeentch with wings
 Dark Blessing
 24"
@@ -438,9 +446,13 @@ Infernal cannon
 5
 -2
 2
-vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
-vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
-After an aetherstride this turn: Dark Blessing has [SUSTAINED HITS D3] (Aetherstride)
+The target: CHARACTER: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Hunter of Souls)
+The target: PSYKER CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (Hunter of Souls)
+If it uses this ability · “when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride”: Dark Blessing [SUSTAINED HITS D3] (Aetherstride)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 Exalted Sorcerer on Disc of Tzeentch
 + Tzaangor Enlightened with Fatecaster greatbows
 ×2 units
@@ -473,7 +485,11 @@ Fatecaster greatbow×6
 -2
 2
 IGNORES COVER, LETHAL HITS, PRECISION
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 Tzaangor Shaman
 Curse of Life
 + Tzaangor Enlightened
@@ -485,9 +501,13 @@ D6
 0
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
-Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
-Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+While leading a unit: +1 to Hit rolls (Bestial Prophet)
+While leading a unit · If it uses this ability: Baleful Devolution +D3 A, +D3 S (Sacrificial Blessing)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 Tzaangor Shaman
 Diamond of Distortion
 + Tzaangor Enlightened
@@ -499,9 +519,13 @@ D6
 0
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
-Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
-Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+While leading a unit: +1 to Hit rolls (Bestial Prophet)
+While leading a unit · If it uses this ability: Baleful Devolution +D3 A, +D3 S (Sacrificial Blessing)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 Tzaangor Shaman
 Flowing Flesh
 + Tzaangor Enlightened
@@ -513,9 +537,13 @@ D6
 0
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
-Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
-Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+While leading a unit: +1 to Hit rolls (Bestial Prophet)
+While leading a unit · If it uses this ability: Baleful Devolution +D3 A, +D3 S (Sacrificial Blessing)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 Sekhetar Robots
 Heavy warpflamer×2
 12"
@@ -540,6 +568,10 @@ Pyreflux meltagun×2
 -4
 D6
 MELTA 2
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Magnus the Red
@@ -559,7 +591,7 @@ DEVASTATING WOUNDS, PSYCHIC
 -1
 2
 PSYCHIC
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
 Ahriman
 + Tzaangor Enlightened with Fatecaster greatbows
 AHRIMAN
@@ -577,7 +609,7 @@ Close combat weapon×6
 4
 0
 1
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 Daemon Prince of Tzeentch with wings
 Hellforged weapons
 ➤strike
@@ -594,8 +626,8 @@ DEVASTATING WOUNDS, PSYCHIC
 -1
 1
 DEVASTATING WOUNDS, PSYCHIC
-vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
-vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
+The target: CHARACTER: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Hunter of Souls)
+The target: PSYKER CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (Hunter of Souls)
 Exalted Sorcerer on Disc of Tzeentch
 + Tzaangor Enlightened with Fatecaster greatbows
 ×2 units
@@ -623,7 +655,7 @@ Close combat weapon×6
 4
 0
 1
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 Tzaangor Shaman
 Curse of Life
 + Tzaangor Enlightened
@@ -643,10 +675,10 @@ Divining spear×6
 -1
 2
 LANCE, PRECISION
-Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
-Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
-Made a charge move this turn: Divining spear +1 to wound (Lance)
+While leading a unit: +1 to Hit rolls (Bestial Prophet)
+While leading a unit · If it uses this ability: Force stave +D3 A, +D3 S (Sacrificial Blessing)
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+Charged this turn: Divining spear +1 to Wound rolls (Lance)
 Tzaangor Shaman
 Diamond of Distortion
 + Tzaangor Enlightened
@@ -666,10 +698,10 @@ Divining spear×6
 -1
 2
 LANCE, PRECISION
-Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
-Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
-Made a charge move this turn: Divining spear +1 to wound (Lance)
+While leading a unit: +1 to Hit rolls (Bestial Prophet)
+While leading a unit · If it uses this ability: Force stave +D3 A, +D3 S (Sacrificial Blessing)
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+Charged this turn: Divining spear +1 to Wound rolls (Lance)
 Tzaangor Shaman
 Flowing Flesh
 + Tzaangor Enlightened
@@ -689,10 +721,10 @@ Divining spear×6
 -1
 2
 LANCE, PRECISION
-Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
-Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
-Made a charge move this turn: Divining spear +1 to wound (Lance)
+While leading a unit: +1 to Hit rolls (Bestial Prophet)
+While leading a unit · If it uses this ability: Force stave +D3 A, +D3 S (Sacrificial Blessing)
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+Charged this turn: Divining spear +1 to Wound rolls (Lance)
 Tzaangors
 ×2 units
 Tzaangor blades×10
@@ -701,7 +733,7 @@ Tzaangor blades×10
 5
 0
 1
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 Sekhetar Robots
 Close combat weapon×2
 3
@@ -2530,7 +2562,7 @@ WHEN TARGETED
 Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
 Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 DAMAGED 1-6 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 RANGED WEAPONS
 Range
@@ -2555,6 +2587,10 @@ D6+3
 -1
 2
 BLAST, IGNORES COVER, PSYCHIC
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -2685,7 +2721,7 @@ Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound
 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
 Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 RANGED WEAPONS
 Range
 A
@@ -2722,6 +2758,11 @@ Fatecaster greatbow×6
 -2
 2
 IGNORES COVER, LETHAL HITS, PRECISION
+WHOLE UNIT
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -2826,8 +2867,8 @@ WHEN TARGETED
 1
 Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS
-vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
-vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
+The target: CHARACTER: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Hunter of Souls)
+The target: PSYKER CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (Hunter of Souls)
 RANGED WEAPONS
 Range
 A
@@ -2850,7 +2891,11 @@ Infernal cannon
 5
 -2
 2
-After an aetherstride this turn: Dark Blessing has [SUSTAINED HITS D3] (Aetherstride)
+If it uses this ability · “when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride”: Dark Blessing [SUSTAINED HITS D3] (Aetherstride)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -2960,7 +3005,7 @@ EXALTED SORCERER ON DISC OF TZEENTCH Illusions of Tzeentch: only by a ranged att
 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
 Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 RANGED WEAPONS
 Range
 A
@@ -2997,6 +3042,11 @@ Fatecaster greatbow×6
 -2
 2
 IGNORES COVER, LETHAL HITS, PRECISION
+WHOLE UNIT
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -3127,9 +3177,9 @@ Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound
 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
 Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
-Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
-Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+While leading a unit: +1 to Hit rolls (Bestial Prophet)
+While leading a unit · If it uses this ability: Baleful Devolution +D3 A, +D3 S (Sacrificial Blessing)
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 RANGED WEAPONS
 Range
 A
@@ -3145,6 +3195,11 @@ D6
 0
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
+WHOLE UNIT
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -3168,7 +3223,7 @@ Divining spear×6
 2
 LANCE, PRECISION
 WHOLE UNIT
-Made a charge move this turn: Divining spear +1 to wound (Lance)
+Charged this turn: Divining spear +1 to Wound rolls (Lance)
 ABILITIES
 Bestial Prophet
 - Tzaangor Shaman
@@ -3275,9 +3330,9 @@ TZAANGOR SHAMAN Diamond of Distortion: -1 to hit rolls against it (while the bea
 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
 Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
-Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
-Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+While leading a unit: +1 to Hit rolls (Bestial Prophet)
+While leading a unit · If it uses this ability: Baleful Devolution +D3 A, +D3 S (Sacrificial Blessing)
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 RANGED WEAPONS
 Range
 A
@@ -3293,6 +3348,11 @@ D6
 0
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
+WHOLE UNIT
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -3316,7 +3376,7 @@ Divining spear×6
 2
 LANCE, PRECISION
 WHOLE UNIT
-Made a charge move this turn: Divining spear +1 to wound (Lance)
+Charged this turn: Divining spear +1 to Wound rolls (Lance)
 ABILITIES
 Bestial Prophet
 - Tzaangor Shaman
@@ -3422,9 +3482,9 @@ Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound
 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
 Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
-Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
-Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+While leading a unit: +1 to Hit rolls (Bestial Prophet)
+While leading a unit · If it uses this ability: Baleful Devolution +D3 A, +D3 S (Sacrificial Blessing)
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 RANGED WEAPONS
 Range
 A
@@ -3440,6 +3500,11 @@ D6
 0
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
+WHOLE UNIT
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -3463,7 +3528,7 @@ Divining spear×6
 2
 LANCE, PRECISION
 WHOLE UNIT
-Made a charge move this turn: Divining spear +1 to wound (Lance)
+Charged this turn: Divining spear +1 to Wound rolls (Lance)
 ABILITIES
 Bestial Prophet
 - Tzaangor Shaman
@@ -3570,7 +3635,7 @@ Tzaangor blades×10
 5
 0
 1
-Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 ABILITIES
 Ambushing Hunters
 End of your opponent’s turn
@@ -3659,6 +3724,10 @@ Pyreflux meltagun×2
 -4
 D6
 MELTA 2
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS

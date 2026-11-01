@@ -470,9 +470,9 @@ Hand of Dominion
 -2
 2
 RAPID FIRE 2, SUSTAINED HITS 1
-Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
-Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 Marneus Calgar
 + Wardens of Ultramar + Bladeguard Veteran Squad
 Furious Assault
@@ -544,11 +544,11 @@ Neo-volkite PistolBLADEGUARD VETERAN SERGEANT
 0
 2
 CLOSE-QUARTERS, DEVASTATING WOUNDS
-Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
-1CP Merciless Veterans: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot
+1CP Merciless Veterans: [LETHAL HITS], [SUSTAINED HITS 1]
 Librarian in Phobos Armour
 
 Can shoot with Bolt pistol or Smite, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
@@ -578,8 +578,9 @@ D6
 -1
 2
 PSYCHIC
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 Heavy Intercessor Squad
 
 Heavy Intercessor Sergeant can shoot with Bolt pistol or Heavy Bolt Rifle, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
@@ -612,8 +613,9 @@ Heavy BolterHEAVY INTERCESSOR
 -1
 2
 HEAVY, SUSTAINED HITS 1, RAPID FIRE 2
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 Impulsor
 ×2 units
 Ironhail Heavy Stubber
@@ -632,8 +634,9 @@ Storm Bolters
 -1
 1
 RAPID FIRE 4
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 Eradicator Squad with Melta Rifles
 ×2 units
 
@@ -685,9 +688,10 @@ MELTA 3
 -3
 D3+2
 MELTA 3
-Every ranged attack: can re-roll damage rolls (Total Obliteration)
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+Every ranged attack: Re-roll Damage rolls (Total Obliteration)
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 Reiver Squad
 ×2 units
 
@@ -709,8 +713,9 @@ Special-issue Bolt Pistol×5
 -2
 1
 CLOSE-QUARTERS, PRECISION
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 Deathwatch Terminator Squad
 ×2 units
 Plasma cannon×3
@@ -730,14 +735,18 @@ BLAST 1
 -3
 3
 HAZARDOUS, BLAST 1
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+Furor Tactics · “If the devastator doctrine is active for your unit”: [SUSTAINED HITS 1] (Mission Tactics)
+Malleus Tactics · “If the tactical doctrine is active for your unit”: [LETHAL HITS] (Mission Tactics)
+Purgatus Tactics · “If the assault doctrine is active for your unit” · “that target an enemy unit within 9" of this unit”: [PRECISION] (Mission Tactics)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 STRATAGEMS · DEATHWATCH SUPPORT · YOUR SHOOTING PHASE
-1CP Kraken Rounds: +6" range and +1 S, selected to shoot
-1CP Dragonfire Rounds: re-roll wound rolls of 1, [IGNORES COVER], selected to shoot
-1CP Hellfire Rounds: [ANTI-non-VEHICLE 4+] (not [DEVASTATING WOUNDS] attacks), selected to shoot
+1CP Kraken Rounds: +6" range, +1 S
+1CP Dragonfire Rounds: Re-roll Wound rolls of 1, [IGNORES COVER]
+1CP Hellfire Rounds: [ANTI-NON-VEHICLE 4+]
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
-1CP Merciless Veterans: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot
+1CP Merciless Veterans: [LETHAL HITS], [SUSTAINED HITS 1]
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Roboute Guilliman
@@ -759,9 +768,9 @@ Hand of Dominion
 -4
 4
 LETHAL HITS
-Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 Marneus Calgar
 + Wardens of Ultramar + Bladeguard Veteran Squad
 Furious Assault
@@ -825,10 +834,10 @@ Master-crafted power weapon×6
 -2
 2
 SUSTAINED HITS 1: NON-MONSTER/VEHICLE
-Bladeguard (once per turn, in the Fight phase, when selected to fight; instead of -1 to hit for attacks that target it): +1 to hit rolls
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Once per turn · “In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following”: +1 to Hit rolls (Bladeguard)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 Librarian in Phobos Armour
 Force weapon [Psychic]
 4
@@ -837,9 +846,9 @@ Force weapon [Psychic]
 -2
 2
 PSYCHIC
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 Heavy Intercessor Squad
 Ceramite Fists×5
 3
@@ -847,9 +856,9 @@ Ceramite Fists×5
 5
 0
 1
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 Impulsor
 ×2 units
 Armoured Hull
@@ -858,9 +867,9 @@ Armoured Hull
 6
 0
 1
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 Eradicator Squad with Melta Rifles
 ×2 units
 Ceramite Fists×3
@@ -869,9 +878,9 @@ Ceramite Fists×3
 5
 0
 1
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 Reiver Squad
 ×2 units
 Monomolecular Combat Knife×5
@@ -881,9 +890,9 @@ Monomolecular Combat Knife×5
 -1
 1
 PRECISION
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 Deathwatch Terminator Squad
 ×2 units
 Chainfist×3
@@ -906,9 +915,12 @@ Thunder Hammer×2
 -2
 3
 DEVASTATING WOUNDS
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Furor Tactics · “If the devastator doctrine is active for your unit”: [SUSTAINED HITS 1] (Mission Tactics)
+Malleus Tactics · “If the tactical doctrine is active for your unit”: [LETHAL HITS] (Mission Tactics)
+Purgatus Tactics · “If the assault doctrine is active for your unit” · “that target an enemy unit within 9" of this unit”: [PRECISION] (Mission Tactics)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 
 ######## abilities · MELEE Abilities
 Roboute Guilliman
@@ -1548,7 +1560,7 @@ None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (2)
 Combat Doctrines
-“At the start of your Command phase, you can select one combat doctrine listed below. If you do, that combat doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command phase. …” · not counted in the Damage tab
+“This unit’s ranged attacks have [ASSAULT].” · no effect in these numbers: not counted in the Damage tab
 Transhuman Strategist
 “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” · not counted in the Damage tab
 UNIT RULES
@@ -1774,7 +1786,7 @@ None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (2)
 Combat Doctrines
-“At the start of your Command phase, you can select one combat doctrine listed below. If you do, that combat doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command phase. …” · not counted in the Damage tab
+“This unit’s ranged attacks have [ASSAULT].” · no effect in these numbers: not counted in the Damage tab
 Transhuman Strategist
 “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” · not counted in the Damage tab
 UNIT RULES
@@ -2027,7 +2039,7 @@ None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (2)
 Combat Doctrines
-“At the start of your Command phase, you can select one combat doctrine listed below. If you do, that combat doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command phase. …” · not counted in the Damage tab
+“This unit’s ranged attacks have [ASSAULT].” · no effect in these numbers: not counted in the Damage tab
 Transhuman Strategist
 “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” · not counted in the Damage tab
 UNIT RULES
@@ -2129,7 +2141,7 @@ None that change these numbers.
 
 NOT COUNTED IN THE DAMAGE TAB (2)
 Combat Doctrines
-“At the start of your Command phase, you can select one combat doctrine listed below. If you do, that combat doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command phase. …” · not counted in the Damage tab
+“This unit’s ranged attacks have [ASSAULT].” · no effect in these numbers: not counted in the Damage tab
 Transhuman Strategist
 “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” · not counted in the Damage tab
 UNIT RULES
@@ -2737,7 +2749,7 @@ Lone Operative while within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit
 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 ALL ATTACKS
-Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -2753,8 +2765,8 @@ Hand of Dominion
 -2
 2
 RAPID FIRE 2, SUSTAINED HITS 1
-Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 MELEE WEAPONS
 A
 WS
@@ -2779,7 +2791,7 @@ Hand of Dominion
 4
 LETHAL HITS
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 ABILITIES
 Supreme Commander
 
@@ -2958,7 +2970,7 @@ BLADEGUARD VETERAN SQUAD Bladeguard (once per turn, in the Fight phase, when an 
 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 2CP Tactical Dreadnought Fortitude: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)
 ALL ATTACKS · WHOLE UNIT
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3035,10 +3047,10 @@ Neo-volkite PistolBLADEGUARD VETERAN SERGEANT
 2
 CLOSE-QUARTERS, DEVASTATING WOUNDS
 WHOLE UNIT
-Codex Adept (the devastator doctrine is active for this unit): [ASSAULT]
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
-1CP Merciless Veterans: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot
+1CP Merciless Veterans: [LETHAL HITS], [SUSTAINED HITS 1]
 MELEE WEAPONS
 A
 WS
@@ -3106,9 +3118,9 @@ Master-crafted power weapon×6
 2
 SUSTAINED HITS 1: NON-MONSTER/VEHICLE
 WHOLE UNIT
-Bladeguard (once per turn, in the Fight phase, when selected to fight; instead of -1 to hit for attacks that target it): +1 to hit rolls
+Once per turn · “In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following”: +1 to Hit rolls (Bladeguard)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 ABILITIES
 Codex Adept
 - Marneus Calgar
@@ -3225,7 +3237,7 @@ Feel No Pain 4+ against psychic attacks
 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 ALL ATTACKS
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3261,7 +3273,8 @@ D6
 -1
 2
 PSYCHIC
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
 MELEE WEAPONS
 A
 WS
@@ -3276,7 +3289,7 @@ Force weapon [Psychic]
 2
 PSYCHIC
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 ABILITIES
 Shrouding
 
@@ -3374,7 +3387,7 @@ WHEN TARGETED
 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 ALL ATTACKS
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3413,7 +3426,8 @@ Heavy BolterHEAVY INTERCESSOR
 -1
 2
 HEAVY, SUSTAINED HITS 1, RAPID FIRE 2
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 MELEE WEAPONS
 A
 WS
@@ -3427,7 +3441,7 @@ Ceramite Fists×5
 0
 1
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 ABILITIES
 Unyielding in the Face of the Foe
 
@@ -3485,7 +3499,7 @@ WHEN TARGETED
 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 ALL ATTACKS
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3509,7 +3523,8 @@ Storm Bolters
 -1
 1
 RAPID FIRE 4
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 MELEE WEAPONS
 A
 WS
@@ -3523,7 +3538,7 @@ Armoured Hull
 0
 1
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 ABILITIES
 Rapid Disembarkation
 Your Movement
@@ -3606,7 +3621,7 @@ WHEN TARGETED
 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 ALL ATTACKS
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3663,8 +3678,9 @@ MELTA 3
 -3
 D3+2
 MELTA 3
-Every ranged attack: can re-roll damage rolls (Total Obliteration)
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+Every ranged attack: Re-roll Damage rolls (Total Obliteration)
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 MELEE WEAPONS
 A
 WS
@@ -3678,7 +3694,7 @@ Ceramite Fists×3
 0
 1
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 ABILITIES
 Total Obliteration
 Their Move · Your Shoot
@@ -3749,7 +3765,7 @@ WHEN TARGETED
 1CP Armour of Contempt: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 ALL ATTACKS
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3776,7 +3792,8 @@ Special-issue Bolt Pistol×5
 -2
 1
 CLOSE-QUARTERS, PRECISION
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 MELEE WEAPONS
 A
 WS
@@ -3791,7 +3808,7 @@ Monomolecular Combat Knife×5
 1
 PRECISION
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 ABILITIES
 Terror Troops
 
@@ -3881,7 +3898,10 @@ WHEN TARGETED
 1CP Duty in Death: Fight phase, before it has been selected to fight: a destroyed model stays on a D6 of 4+ (+1 with the assault doctrine active) until it has fought or the end of the phase
 2CP Tactical Dreadnought Fortitude: their Shooting phase or the Fight phase: -1 D to attacks that target it (until that enemy unit has attacked)
 ALL ATTACKS
-Within 6" of Roboute Guilliman: re-roll hit rolls of 1 and wound rolls of 1 (Primarch of the XIII)
+Furor Tactics · “If the devastator doctrine is active for your unit”: [SUSTAINED HITS 1] (Mission Tactics)
+Malleus Tactics · “If the tactical doctrine is active for your unit”: [LETHAL HITS] (Mission Tactics)
+Purgatus Tactics · “If the assault doctrine is active for your unit” · “that target an enemy unit within 9" of this unit”: [PRECISION] (Mission Tactics)
+Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3906,13 +3926,14 @@ BLAST 1
 -3
 3
 HAZARDOUS, BLAST 1
-Your Shooting phase, vs the visible enemy unit the Librarian picked with Soul Sight (its psychic roll): [IGNORES COVER]
+DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
 STRATAGEMS · DEATHWATCH SUPPORT · YOUR SHOOTING PHASE
-1CP Kraken Rounds: +6" range and +1 S, selected to shoot
-1CP Dragonfire Rounds: re-roll wound rolls of 1, [IGNORES COVER], selected to shoot
-1CP Hellfire Rounds: [ANTI-non-VEHICLE 4+] (not [DEVASTATING WOUNDS] attacks), selected to shoot
+1CP Kraken Rounds: +6" range, +1 S
+1CP Dragonfire Rounds: Re-roll Wound rolls of 1, [IGNORES COVER]
+1CP Hellfire Rounds: [ANTI-NON-VEHICLE 4+]
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
-1CP Merciless Veterans: [LETHAL HITS] and [SUSTAINED HITS 1], selected to shoot
+1CP Merciless Veterans: [LETHAL HITS], [SUSTAINED HITS 1]
 MELEE WEAPONS
 A
 WS
@@ -3940,7 +3961,7 @@ Thunder Hammer×2
 3
 DEVASTATING WOUNDS
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: [LANCE] (or, if the assault doctrine is active for your unit, [LANCE] and +1 AP), selected to fight
+1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
 ABILITIES
 Terminatus Assault
 Charge
@@ -4011,17 +4032,6 @@ This unit’s melee attacks have +1 to hit rolls.
 Or: Attacks that target this unit have -1 to hit rolls.
 
 UNITMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad
-
-Ask about this ability
-
-######## popup ability:nerf-when|Codex Adept|The **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit. · NERF WHEN Nerf when
-ABILITY
-
-Codex Adept
-
-The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.
-
-UNITRoboute Guilliman, Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad
 
 Ask about this ability
 

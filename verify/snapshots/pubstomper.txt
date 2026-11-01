@@ -374,10 +374,14 @@ D6+3
 -1
 2
 BLAST, IGNORES COVER, PSYCHIC
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
-Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
-STRATAGEMS · GRAND COVEN
-2CP Devastating Sorcery: +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+Once per battle: Gaze of Magnus, Tzeentch’s Firestorm one of: Imbued Manifestation: +6" range · Psychic Maelstrom: +1 to Wound rolls · Wrath of the Immaterium: [DEVASTATING WOUNDS] (Kindred Sorcery)
+STRATAGEMS · GRAND COVEN · YOUR SHOOTING PHASE
+2CP Devastating Sorcery: Gaze of Magnus, Tzeentch’s Firestorm +9" range, Re-roll Hit rolls, Re-roll Wound rolls
 Daemon Prince of Tzeentch with wings
 Eldritch Vortex of E’taph
 Dark Blessing
@@ -395,12 +399,16 @@ Infernal cannon
 5
 -2
 2
-vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
-vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
-After an aetherstride this turn: Dark Blessing has [SUSTAINED HITS D3] (Aetherstride)
-Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
-STRATAGEMS · GRAND COVEN
-2CP Devastating Sorcery: +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase
+The target: CHARACTER: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Hunter of Souls)
+The target: PSYKER CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (Hunter of Souls)
+If it uses this ability · “when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride”: Dark Blessing [SUSTAINED HITS D3] (Aetherstride)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+Once per battle: Dark Blessing one of: Imbued Manifestation: +6" range · Psychic Maelstrom: +1 to Wound rolls · Wrath of the Immaterium: [DEVASTATING WOUNDS] (Kindred Sorcery)
+STRATAGEMS · GRAND COVEN · YOUR SHOOTING PHASE
+2CP Devastating Sorcery: Dark Blessing +9" range, Re-roll Hit rolls, Re-roll Wound rolls
 Exalted Sorcerer
 Incandaeum
 + Rubric Marines
@@ -462,11 +470,15 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Every ranged attack: re-roll wound rolls of 1 (Bringers of Change)
-Target within range of an objective marker you do not control: re-roll the wound roll (Bringers of Change)
-Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
-STRATAGEMS · GRAND COVEN
-2CP Devastating Sorcery: +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase
+Every ranged attack: Re-roll Wound rolls of 1 (Bringers of Change)
+The target on an objective marker you do not control: Re-roll Wound rolls (Bringers of Change)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+Once per battle: Astral Blast, Malefic Curse one of: Imbued Manifestation: +6" range · Psychic Maelstrom: +1 to Wound rolls (Kindred Sorcery)
+STRATAGEMS · GRAND COVEN · YOUR SHOOTING PHASE
+2CP Devastating Sorcery: Astral Blast, Malefic Curse +9" range, Re-roll Hit rolls, Re-roll Wound rolls
 Sorcerer in Terminator Armour
 Umbralefic Crystal
 + Scarab Occult Terminators
@@ -520,10 +532,14 @@ Soulreaper cannon×2
 -2
 1
 DEVASTATING WOUNDS, LETHAL HITS
-Your Shooting phase, vs the enemy unit picked at its start: +1 to hit rolls (Marked by Fate)
-Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
-STRATAGEMS · GRAND COVEN
-2CP Devastating Sorcery: +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase
+The target is the enemy unit selected: +1 to Hit rolls (Marked by Fate)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+Once per battle: Gaze of Hate, Malefic Curse one of: Imbued Manifestation: +6" range · Psychic Maelstrom: +1 to Wound rolls (Kindred Sorcery)
+STRATAGEMS · GRAND COVEN · YOUR SHOOTING PHASE
+2CP Devastating Sorcery: Gaze of Hate, Malefic Curse +9" range, Re-roll Hit rolls, Re-roll Wound rolls
 Tzaangor Enlightened with Fatecaster greatbows
 Fatecaster greatbow×3
 30"
@@ -533,6 +549,10 @@ Fatecaster greatbow×3
 -2
 2
 IGNORES COVER, LETHAL HITS, PRECISION
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 Defiler
 Ectoplasma destructor
 36"
@@ -557,7 +577,11 @@ Heavy reaper autocannon×2
 -2
 3
 DEVASTATING WOUNDS, SUSTAINED HITS 1
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 Sekhetar Robots
 Heavy warpflamer×2
 12"
@@ -582,6 +606,10 @@ Pyreflux meltagun×2
 -4
 D6
 MELTA 2
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Magnus the Red
@@ -601,8 +629,8 @@ DEVASTATING WOUNDS, PSYCHIC
 -1
 2
 PSYCHIC
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
-Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
+Once per battle: Blade of Magnus one of: Psychic Maelstrom: +1 to Wound rolls · Wrath of the Immaterium: [DEVASTATING WOUNDS] (Kindred Sorcery)
 Daemon Prince of Tzeentch with wings
 Eldritch Vortex of E’taph
 Hellforged weapons
@@ -620,9 +648,9 @@ DEVASTATING WOUNDS, PSYCHIC
 -1
 2
 DEVASTATING WOUNDS, PSYCHIC
-vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
-vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
-Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+The target: CHARACTER: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Hunter of Souls)
+The target: PSYKER CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (Hunter of Souls)
+Once per battle: Hellforged weapons one of: Psychic Maelstrom: +1 to Wound rolls (Kindred Sorcery)
 Exalted Sorcerer
 Incandaeum
 + Rubric Marines
@@ -657,7 +685,7 @@ Force weaponASPIRING SORCERER
 -1
 D3
 PSYCHIC
-Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Once per battle: Force weapon one of: Psychic Maelstrom: +1 to Wound rolls · Wrath of the Immaterium: [DEVASTATING WOUNDS] (Kindred Sorcery)
 Sorcerer in Terminator Armour
 Umbralefic Crystal
 + Scarab Occult Terminators
@@ -684,7 +712,7 @@ Prosperine khopesh×9
 -2
 2
 LETHAL HITS
-Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Once per battle: Force weapon one of: Psychic Maelstrom: +1 to Wound rolls · Wrath of the Immaterium: [DEVASTATING WOUNDS] (Kindred Sorcery)
 Tzaangors
 Tzaangor blades×10
 2
@@ -713,7 +741,7 @@ D6+1
 6
 -2
 1
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
 Sekhetar Robots
 Close combat weapon×2
 3
@@ -1338,13 +1366,13 @@ no change: it changes range only, which counts through half range: pick a band
 0
 ALL ▾
 Imbued Manifestation
-Once per battle: +6" range
++6" range
 0
 Psychic Maelstrom
-Once per battle: +1 to Wound rolls
++1 to Wound rolls
 +0.2
 Wrath of the Immaterium
-Once per battle: [DEVASTATING WOUNDS]
+[DEVASTATING WOUNDS]
 +0.2
 UNIT RULES
 
@@ -1597,13 +1625,13 @@ no change: it changes range only, which counts through half range: pick a band
 0
 ALL ▾
 Imbued Manifestation
-Once per battle: +6" range
++6" range
 0
 Psychic Maelstrom
-Once per battle: +1 to Wound rolls
++1 to Wound rolls
 0
 Wrath of the Immaterium
-Once per battle: [DEVASTATING WOUNDS]
+[DEVASTATING WOUNDS]
 +0.4
 BEST
 UNIT RULES
@@ -1891,13 +1919,13 @@ no change: it changes range only, which counts through half range: pick a band
 0
 ALL ▾
 Imbued Manifestation
-Once per battle: +6" range
++6" range
 0
 Psychic Maelstrom
-Once per battle: +1 to Wound rolls
++1 to Wound rolls
 ≈0
 Wrath of the Immaterium
-Once per battle: [DEVASTATING WOUNDS]
+[DEVASTATING WOUNDS]
 +1% wiped
 UNIT RULES
 
@@ -2024,13 +2052,13 @@ no change: it changes range only, which counts through half range: pick a band
 0
 ALL ▾
 Imbued Manifestation
-Once per battle: +6" range
++6" range
 0
 Psychic Maelstrom
-Once per battle: +1 to Wound rolls
++1 to Wound rolls
 0
 Wrath of the Immaterium
-Once per battle: [DEVASTATING WOUNDS]
+[DEVASTATING WOUNDS]
 ≈0
 UNIT RULES
 
@@ -2522,10 +2550,10 @@ Impossible Form (if picked this round): -1 Damage to attacks against Magnus, exc
 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
 Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 DAMAGED 1-6 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
-Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Once per battle: RANGEDGaze of Magnus, Tzeentch’s Firestorm one of: Imbued Manifestation: +6" range · Psychic Maelstrom: +1 to Wound rolls · Wrath of the Immaterium: [DEVASTATING WOUNDS] (Kindred Sorcery) · MELEEBlade of Magnus one of: Psychic Maelstrom: +1 to Wound rolls · Wrath of the Immaterium: [DEVASTATING WOUNDS] (Kindred Sorcery)
 RANGED WEAPONS
 Range
 A
@@ -2549,8 +2577,12 @@ D6+3
 -1
 2
 BLAST, IGNORES COVER, PSYCHIC
-STRATAGEMS · GRAND COVEN
-2CP Devastating Sorcery: +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+STRATAGEMS · GRAND COVEN · YOUR SHOOTING PHASE
+2CP Devastating Sorcery: Gaze of Magnus, Tzeentch’s Firestorm +9" range, Re-roll Hit rolls, Re-roll Wound rolls
 MELEE WEAPONS
 A
 WS
@@ -2666,9 +2698,9 @@ WHEN TARGETED
 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
 Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS
-vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
-vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
-Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+The target: CHARACTER: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Hunter of Souls)
+The target: PSYKER CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (Hunter of Souls)
+Once per battle: RANGEDDark Blessing one of: Imbued Manifestation: +6" range · Psychic Maelstrom: +1 to Wound rolls · Wrath of the Immaterium: [DEVASTATING WOUNDS] (Kindred Sorcery) · MELEEHellforged weapons one of: Psychic Maelstrom: +1 to Wound rolls (Kindred Sorcery)
 RANGED WEAPONS
 Range
 A
@@ -2691,9 +2723,13 @@ Infernal cannon
 5
 -2
 2
-After an aetherstride this turn: Dark Blessing has [SUSTAINED HITS D3] (Aetherstride)
-STRATAGEMS · GRAND COVEN
-2CP Devastating Sorcery: +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase
+If it uses this ability · “when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride”: Dark Blessing [SUSTAINED HITS D3] (Aetherstride)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+STRATAGEMS · GRAND COVEN · YOUR SHOOTING PHASE
+2CP Devastating Sorcery: Dark Blessing +9" range, Re-roll Hit rolls, Re-roll Wound rolls
 MELEE WEAPONS
 A
 WS
@@ -2822,7 +2858,7 @@ WHEN TARGETED
 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
 Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
-Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Once per battle: RANGEDAstral Blast, Malefic Curse one of: Imbued Manifestation: +6" range · Psychic Maelstrom: +1 to Wound rolls (Kindred Sorcery) · MELEEForce weapon one of: Psychic Maelstrom: +1 to Wound rolls · Wrath of the Immaterium: [DEVASTATING WOUNDS] (Kindred Sorcery)
 RANGED WEAPONS
 Range
 A
@@ -2889,10 +2925,14 @@ D6
 1
 IGNORES COVER, TORRENT
 WHOLE UNIT
-Every ranged attack: re-roll wound rolls of 1 (Bringers of Change)
-Target within range of an objective marker you do not control: re-roll the wound roll (Bringers of Change)
-STRATAGEMS · GRAND COVEN
-2CP Devastating Sorcery: +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase
+Every ranged attack: Re-roll Wound rolls of 1 (Bringers of Change)
+The target on an objective marker you do not control: Re-roll Wound rolls (Bringers of Change)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+STRATAGEMS · GRAND COVEN · YOUR SHOOTING PHASE
+2CP Devastating Sorcery: Astral Blast, Malefic Curse +9" range, Re-roll Hit rolls, Re-roll Wound rolls
 MELEE WEAPONS
 A
 WS
@@ -3056,7 +3096,7 @@ SCARAB OCCULT TERMINATORS Rites of Coalescence: -1 to wound rolls against this u
 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
 Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 ALL ATTACKS · WHOLE UNIT
-Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Once per battle: RANGEDGaze of Hate, Malefic Curse one of: Imbued Manifestation: +6" range · Psychic Maelstrom: +1 to Wound rolls (Kindred Sorcery) · MELEEForce weapon one of: Psychic Maelstrom: +1 to Wound rolls · Wrath of the Immaterium: [DEVASTATING WOUNDS] (Kindred Sorcery)
 RANGED WEAPONS
 Range
 A
@@ -3115,9 +3155,13 @@ Soulreaper cannon×2
 1
 DEVASTATING WOUNDS, LETHAL HITS
 WHOLE UNIT
-Your Shooting phase, vs the enemy unit picked at its start: +1 to hit rolls (Marked by Fate)
-STRATAGEMS · GRAND COVEN
-2CP Devastating Sorcery: +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase
+The target is the enemy unit selected: +1 to Hit rolls (Marked by Fate)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+STRATAGEMS · GRAND COVEN · YOUR SHOOTING PHASE
+2CP Devastating Sorcery: Gaze of Hate, Malefic Curse +9" range, Re-roll Hit rolls, Re-roll Wound rolls
 MELEE WEAPONS
 A
 WS
@@ -3337,6 +3381,10 @@ Fatecaster greatbow×3
 -2
 2
 IGNORES COVER, LETHAL HITS, PRECISION
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -3406,7 +3454,7 @@ WHEN TARGETED
 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
 Shot by the enemy unit Magnus picked within 24" at the start of your opponent’s Shooting phase: its ranged weapons have [HAZARDOUS] until the end of the phase (Treason of Tzeentch)
 DAMAGED 1-6 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 RANGED WEAPONS
 Range
 A
@@ -3437,6 +3485,10 @@ Heavy reaper autocannon×2
 -2
 3
 DEVASTATING WOUNDS, SUSTAINED HITS 1
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -3553,6 +3605,10 @@ Pyreflux meltagun×2
 -4
 D6
 MELTA 2
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
+Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
+Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS

@@ -348,10 +348,10 @@ D3+6
 -2
 3
 BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
-Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 The Changeling
 Infernal Flames
 ➤witchfire
@@ -370,9 +370,9 @@ D6+3
 -1
 D3
 IGNORES COVER, HAZARDOUS, PSYCHIC, TORRENT
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 Daemon Prince of Chaos with wings
 Neverblade
 Infernal cannon
@@ -382,9 +382,9 @@ Infernal cannon
 5
 -1
 2
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 Lord of Change
 Infernal Puppeteer
 Rod of sorcery
@@ -412,11 +412,11 @@ PSYCHIC
 -2
 3
 HAZARDOUS, PSYCHIC
-Your Shooting phase, its Bolt of Change, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)
-Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
 Own aura: +1 S (Daemon Lord of Tzeentch)
+Every ranged attack: Bolt of Change one of: [IGNORES COVER] · [LETHAL HITS] · [SUSTAINED HITS D3] (Master of Magicks)
+If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 Lord of Change
 Inescapable Eye
 Rod of sorcery
@@ -444,11 +444,11 @@ PSYCHIC
 -2
 3
 HAZARDOUS, PSYCHIC
-Your Shooting phase, its Bolt of Change, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)
-Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
 Own aura: +1 S (Daemon Lord of Tzeentch)
+Every ranged attack: Bolt of Change one of: [IGNORES COVER] · [LETHAL HITS] · [SUSTAINED HITS D3] (Master of Magicks)
+If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 Fluxmaster
 Improbable Shield (Aura)
 + Pink Horrors
@@ -495,9 +495,9 @@ Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
 -1
 1
 PISTOL, PSYCHIC
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 Flamers
 ×3 units
 Flickering Flames×3
@@ -508,9 +508,9 @@ D6
 -1
 1
 IGNORES COVER, PSYCHIC, TORRENT
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 Tzeentch Soul Grinder
 Harvester cannon
 36"
@@ -527,10 +527,10 @@ D3
 -2
 D6+2
 BLAST
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 wounds remaining)
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Kairos Fateweaver
@@ -542,9 +542,9 @@ Staff of Tomorrow
 -2
 2D3
 PSYCHIC
-Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
+If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 The Blue Scribes
 Sharp quills
 4
@@ -554,7 +554,7 @@ Sharp quills
 1
 ANTI-PSYKER 2+
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 The Changeling
 The Trickster’s Staff
 3
@@ -564,7 +564,7 @@ The Trickster’s Staff
 D3
 PSYCHIC
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 Daemon Prince of Chaos with wings
 Neverblade
 Hellforged weapons
@@ -580,11 +580,11 @@ Hellforged weapons
 8
 -1
 1
-Malefic Destruction (once per battle, start of the Fight phase), its hellforged weapons, until the end of the phase: +3 A
-Selected to fight, its hellforged weapons, until the end of the phase (select one): [LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1] (Harbinger of Death)
-Every melee attack: +1 to hit rolls (Neverblade)
+Once per battle · If it uses this ability: Hellforged weapons +3 A (Malefic Destruction)
+Every melee attack: Hellforged weapons one of: [LETHAL HITS] · [PRECISION] · [SUSTAINED HITS 1] (Harbinger of Death)
+Every melee attack: +1 to Hit rolls (Neverblade)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 Lord of Change
 Infernal Puppeteer
 Staff of Tzeentch
@@ -594,9 +594,9 @@ Staff of Tzeentch
 -1
 3
 PSYCHIC
-Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
+If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 Lord of Change
 Inescapable Eye
 Staff of Tzeentch
@@ -606,9 +606,9 @@ Staff of Tzeentch
 -1
 3
 PSYCHIC
-Damaged (1-7 wounds left): -1 to hit rolls (Damaged: 1-7 wounds remaining)
+If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 Fluxmaster
 Improbable Shield (Aura)
 + Pink Horrors
@@ -640,7 +640,7 @@ Yellow claws (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
 0
 1
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 Flamers
 ×3 units
 Flamer mouths×3
@@ -650,7 +650,7 @@ Flamer mouths×3
 0
 1
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 Tzeentch Soul Grinder
 
 Fights with both: Iron claw, plus Warpclaw on top (extra attacks).
@@ -668,9 +668,9 @@ Warpclaw
 -1
 2
 EXTRA ATTACKS
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 wounds remaining)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 
 ######## abilities · MELEE Abilities
 Kairos Fateweaver
@@ -2519,11 +2519,11 @@ Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the 
 Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
 Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
 DAMAGED 1-7 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 RANGED WEAPONS
 Range
 A
@@ -2548,7 +2548,7 @@ D3+6
 -2
 3
 BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -2654,7 +2654,7 @@ Sharp quills
 1
 ANTI-PSYKER 2+
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 ABILITIES
 P’tarix’s Sorcerous Syphon
 
@@ -2727,7 +2727,7 @@ Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selec
 Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 RANGED WEAPONS
 Range
 A
@@ -2752,7 +2752,7 @@ D6+3
 -1
 D3
 IGNORES COVER, HAZARDOUS, PSYCHIC, TORRENT
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -2836,7 +2836,7 @@ Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selec
 Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 RANGED WEAPONS
 Range
 A
@@ -2851,7 +2851,7 @@ Infernal cannon
 5
 -1
 2
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -2871,9 +2871,9 @@ Hellforged weapons
 8
 -1
 1
-Malefic Destruction (once per battle, start of the Fight phase), its hellforged weapons, until the end of the phase: +3 A
-Selected to fight, its hellforged weapons, until the end of the phase (select one): [LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1] (Harbinger of Death)
-Every melee attack: +1 to hit rolls (Neverblade)
+Once per battle · If it uses this ability: Hellforged weapons +3 A (Malefic Destruction)
+Every melee attack: Hellforged weapons one of: [LETHAL HITS] · [PRECISION] · [SUSTAINED HITS 1] (Harbinger of Death)
+Every melee attack: +1 to Hit rolls (Neverblade)
 ABILITIES
 Daemonic Allegiance
 Already in A
@@ -2969,11 +2969,11 @@ Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the 
 Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
 Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
 DAMAGED 1-7 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 RANGED WEAPONS
 Range
 A
@@ -3007,7 +3007,7 @@ PSYCHIC
 3
 HAZARDOUS, PSYCHIC
 Own aura: +1 S (Daemon Lord of Tzeentch)
-Your Shooting phase, its Bolt of Change, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)
+Every ranged attack: Bolt of Change one of: [IGNORES COVER] · [LETHAL HITS] · [SUSTAINED HITS D3] (Master of Magicks)
 MELEE WEAPONS
 A
 WS
@@ -3107,11 +3107,11 @@ Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the 
 Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
 Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
 DAMAGED 1-7 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 RANGED WEAPONS
 Range
 A
@@ -3145,7 +3145,7 @@ PSYCHIC
 3
 HAZARDOUS, PSYCHIC
 Own aura: +1 S (Daemon Lord of Tzeentch)
-Your Shooting phase, its Bolt of Change, until the end of the phase (select one): [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] (Master of Magicks)
+Every ranged attack: Bolt of Change one of: [IGNORES COVER] · [LETHAL HITS] · [SUSTAINED HITS D3] (Master of Magicks)
 MELEE WEAPONS
 A
 WS
@@ -3268,7 +3268,7 @@ Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selec
 Own aura: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 RANGED WEAPONS
 Range
 A
@@ -3320,7 +3320,7 @@ Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
 1
 PISTOL, PSYCHIC
 WHOLE UNIT
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -3460,7 +3460,7 @@ Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selec
 Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 RANGED WEAPONS
 Range
 A
@@ -3476,7 +3476,7 @@ D6
 -1
 1
 IGNORES COVER, PSYCHIC, TORRENT
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -3551,10 +3551,10 @@ Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the 
 Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
 Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
 DAMAGED 1-5 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 RANGED WEAPONS
 Range
 A
@@ -3577,7 +3577,7 @@ D3
 -2
 D6+2
 BLAST
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -3676,7 +3676,7 @@ Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selec
 Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 RANGED WEAPONS
 Coruscating Blue flames, Coruscating Yellow flames (ref. only) · all pistols
 Range
@@ -3701,7 +3701,7 @@ Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
 -1
 1
 PISTOL, PSYCHIC
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -3798,7 +3798,7 @@ Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selec
 Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: +2 S (one Flux token spent: +3 S and +1 AP instead), Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
 RANGED WEAPONS
 Range
 A
@@ -3814,7 +3814,7 @@ Coruscating Yellow flames
 -1
 1
 PISTOL, PSYCHIC
-Within 6" of the Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS

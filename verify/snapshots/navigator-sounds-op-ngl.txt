@@ -298,12 +298,14 @@ D3
 -4
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
-vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
-vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
-Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Crusader
 Hunter’s Eye
 Avenger gatling cannon
@@ -354,11 +356,13 @@ Stormspear rocket pod
 -2
 D6
 IGNORES COVER
-Remained Stationary in your Movement phase: ranged weapons have [SUSTAINED HITS 1] until the end of the turn (Punishing Salvoes)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+Remained Stationary: [SUSTAINED HITS 1] (Punishing Salvoes)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Defender
 Conversion beam obliterator
 36"
@@ -401,11 +405,13 @@ D6
 -1
 1
 IGNORES COVER, TORRENT, TWIN-LINKED
-Target more than 18" away: an unmodified successful hit roll of 4+ scores a Critical Hit (Conversion)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+If (see the rule): Conversion beam obliterator Critical Hit on 4+ (Conversion)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Destrier
 Chastiser gatling cannon
 24"
@@ -431,11 +437,13 @@ Questoris heavy stubber
 -1
 1
 ASSAULT, RAPID FIRE 3
-Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
-Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target within range of an objective marker: [IGNORES COVER] (Saturation Fire)
+If (see the rule): −4 OC, −1 to Hit rolls (Damaged: 1-6 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Errant
 Mysterious Guardian
 Meltagun
@@ -461,11 +469,13 @@ Thermal cannon
 -4
 D6
 BLAST, MELTA 6
-Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target is the closest eligible target: +1 to Hit rolls (Aggressive Assault)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Navigator
 Laspistol
 12"
@@ -495,12 +505,14 @@ SUSTAINED HITS 1
 -3
 4
 SUSTAINED HITS 1
-vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
-vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
-Every melee attack: +1 to hit rolls (Bringer of Justice)
-Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
+The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
+Every melee attack: +1 to Hit rolls (Bringer of Justice)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Crusader
 Hunter’s Eye
 Titanic feet
@@ -509,9 +521,11 @@ Titanic feet
 8
 -1
 2
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Defender
 Titanic feet
 4
@@ -519,9 +533,11 @@ Titanic feet
 8
 -1
 2
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Destrier
 Titanic feet
 4
@@ -529,9 +545,11 @@ Titanic feet
 7
 -1
 2
-Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
+If (see the rule): −4 OC, −1 to Hit rolls (Damaged: 1-6 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Errant
 Mysterious Guardian
 Reaper chainsword
@@ -547,9 +565,11 @@ Reaper chainsword
 9
 -3
 2
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Navigator
 Force-orb cane
 3
@@ -1115,7 +1135,7 @@ if it applies
 −0.6
 MODELS
 Damaged: 1-10 Wounds Remaining
-−1 to Hit rolls
+−5 OC, −1 to Hit rolls
 if it applies
 −14% wiped
 −0.6
@@ -1154,13 +1174,13 @@ Knights of Legend
 “IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.” · not counted in the Damage tab
 UNIT RULES
 Macro-extinction Protocols
-The target: Monster or Vehicle: +1 to Hit rolls
+The target: MONSTER or VEHICLE: +1 to Hit rolls
 if it applies
 +17% wiped
 +0.6
 MODELS
 Macro-extinction Protocols
-The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
 if it applies
 +8% wiped
 +0.3
@@ -1387,7 +1407,7 @@ said to hold
 no change: no rule here needs it
 0
 Damaged: 1-10 Wounds Remaining
-−1 to Hit rolls
+−5 OC, −1 to Hit rolls
 if it applies
 −20% wiped
 −0.7
@@ -1408,7 +1428,7 @@ Knights of Legend
 “IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.” · not counted in the Damage tab
 UNIT RULES
 Macro-extinction Protocols
-The target: Monster or Vehicle: +1 to Hit rolls
+The target: MONSTER or VEHICLE: +1 to Hit rolls
 if it applies
 +20% wiped
 +0.5
@@ -1420,7 +1440,7 @@ if it applies
 +0.5
 MODELS
 Macro-extinction Protocols
-The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
 if it applies
 +2% wiped
 ≈0
@@ -1718,7 +1738,7 @@ if it applies
 −0.1
 MODELS
 Damaged: 1-10 Wounds Remaining
-−1 to Hit rolls
+−5 OC, −1 to Hit rolls
 if it applies
 −5% wiped
 −0.1
@@ -1752,14 +1772,14 @@ Knights of Legend
 “IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.” · not counted in the Damage tab
 UNIT RULES
 Macro-extinction Protocols
-The target: Monster or Vehicle: +1 to Hit rolls
+The target: MONSTER or VEHICLE: +1 to Hit rolls
 if it applies
 +3% wiped
 ≈0
 MODELS
 +1 MORE ▾
 Macro-extinction Protocols
-The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
 if it applies
 +1% wiped
 ≈0
@@ -1863,7 +1883,7 @@ holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 Damaged: 1-10 Wounds Remaining
-−1 to Hit rolls
+−5 OC, −1 to Hit rolls
 if it applies
 −7% wiped
 −0.1
@@ -1884,7 +1904,7 @@ Knights of Legend
 “IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.” · not counted in the Damage tab
 UNIT RULES
 Macro-extinction Protocols
-The target: Monster or Vehicle: +1 to Hit rolls
+The target: MONSTER or VEHICLE: +1 to Hit rolls
 if it applies
 +4% wiped
 +0.1
@@ -1896,7 +1916,7 @@ if it applies
 +0.1
 MODELS
 Macro-extinction Protocols
-The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
 if it applies
 ≈0
 MODELS
@@ -2383,12 +2403,14 @@ Feel No Pain 6+
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 Not fully visible to every model in the attacking unit because of the Knight Defender: the Benefit of Cover and a 4+ invulnerable save against that attack (Selfless Protector)
 DAMAGED 1-10 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
-vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
+The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2430,7 +2452,7 @@ D3
 -4
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS
@@ -2452,7 +2474,7 @@ SUSTAINED HITS 1
 -3
 4
 SUSTAINED HITS 1
-Every melee attack: +1 to hit rolls (Bringer of Justice)
+Every melee attack: +1 to Hit rolls (Bringer of Justice)
 ABILITIES
 Atrapos’ Duty
 No ARMIGER models in this list
@@ -2534,10 +2556,12 @@ Feel No Pain 6+
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 Not fully visible to every model in the attacking unit because of the Knight Defender: the Benefit of Cover and a 4+ invulnerable save against that attack (Selfless Protector)
 DAMAGED 1-9 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2593,8 +2617,8 @@ Stormspear rocket pod
 -2
 D6
 IGNORES COVER
-Remained Stationary in your Movement phase: ranged weapons have [SUSTAINED HITS 1] until the end of the turn (Punishing Salvoes)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+Remained Stationary: [SUSTAINED HITS 1] (Punishing Salvoes)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS
@@ -2689,10 +2713,12 @@ Feel No Pain 6+
 4+ invulnerable save against ranged attacks only
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-9 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2741,8 +2767,8 @@ D6
 -1
 1
 IGNORES COVER, TORRENT, TWIN-LINKED
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
-Target more than 18" away: an unmodified successful hit roll of 4+ scores a Critical Hit (Conversion)
+If (see the rule): Conversion beam obliterator Critical Hit on 4+ (Conversion)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS
@@ -2827,10 +2853,12 @@ Feel No Pain 6+
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 Not fully visible to every model in the attacking unit because of the Knight Defender: the Benefit of Cover and a 4+ invulnerable save against that attack (Selfless Protector)
 DAMAGED 1-6 W
--1 TO HIT ROLLS (AND -4 OC)
+−4 OC, −1 TO HIT ROLLS
 ALL ATTACKS
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2862,8 +2890,8 @@ Questoris heavy stubber
 -1
 1
 ASSAULT, RAPID FIRE 3
-Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target within range of an objective marker: [IGNORES COVER] (Saturation Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS
@@ -2957,10 +2985,12 @@ Feel No Pain 6+
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 Not fully visible to every model in the attacking unit because of the Knight Defender: the Benefit of Cover and a 4+ invulnerable save against that attack (Selfless Protector)
 DAMAGED 1-9 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2991,8 +3021,8 @@ Thermal cannon
 -4
 D6
 BLAST, MELTA 6
-Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target is the closest eligible target: +1 to Hit rolls (Aggressive Assault)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS
@@ -3648,6 +3678,15 @@ Add 2" to this model’s Move characteristic and add 1 to Advance and Charge rol
 Quality 5–6 · …yet shall our legacy be unsullied
 
 Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.
+
+Ask about this rule
+
+######## popup rule:Conversion · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+WEAPON ABILITY EACH DATASHEET DEFINES FOR ITS OWN WEAPON (KNIGHT DEFENDER DATASHEET: CONVERSION BEAM OBLITERATOR)
+
+Conversion
+
+Conversion beam obliterator (Knight Defender): Each time an attack is made with this weapon, if the target is more than 18" away from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.
 
 Ask about this rule
 

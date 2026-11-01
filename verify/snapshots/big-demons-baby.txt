@@ -406,7 +406,7 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
 Daemon Prince of Khorne
 Blade of Endless Bloodshed
 Infernal cannon
@@ -521,8 +521,13 @@ DEVASTATING WOUNDS
 -2
 2
 DEVASTATING WOUNDS
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
-Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Wrathful Presence: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
+1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
+1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
 Skarbrand
 Slaughter and Carnage
 ➤strike
@@ -537,10 +542,13 @@ Slaughter and Carnage
 8
 -2
 2
-Damaged (1-7 wounds left): +2 A (Damaged: 1-7 wounds remaining)
-Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
 Own aura: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+If (see the rule): +2 A (Damaged: 1-7 wounds remaining)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
 Bloodthirster
 Great axe of Khorne
 ➤strike
@@ -555,10 +563,13 @@ D6+2
 10
 -2
 2
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
-Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
+Own aura: +1 to Hit rolls (Daemon Lord of Khorne)
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Own aura: +1 to hit (Daemon Lord of Khorne)
 Daemon Prince of Khorne
 Blade of Endless Bloodshed
 Hellforged weapons
@@ -574,11 +585,17 @@ Hellforged weapons
 7
 -1
 2
-Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
-Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+Charged this turn: [DEVASTATING WOUNDS] (Devastating Assault)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
+Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
+1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
+1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S
 Master of Executions
 Blood-forged Armour
 Axe of dismemberment
@@ -588,11 +605,16 @@ Axe of dismemberment
 -2
 2
 DEVASTATING WOUNDS, PRECISION
-Melee attacks that target a CHARACTER unit: can re-roll the hit roll and the wound roll (A Worthy Skull)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
-Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+The target: CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (A Worthy Skull)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
+Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
+1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
+1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S
 Lord on Juggernaut
 Disciple of Khorne
 + Khorne Berzerkers
@@ -626,14 +648,21 @@ Khornate eviscerator×4
 8
 -2
 2
-Made a charge move this turn: +1 S (Murderous Charge) · Bladed horn +1 to wound (Lance)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
-Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
-Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Charged this turn: +1 S (Murderous Charge)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
+Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
+Charged this turn: Bladed horn +1 to Wound rolls (Lance)
+Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
+1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
+1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S
 Goremongers
 
 Pick one to fight with: Chainblade or Close combat weapon.
@@ -651,8 +680,14 @@ Close combat weapon×8
 3
 0
 1
-Made a charge move this turn: Chainblade +1 to wound (Lance)
-Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Charged this turn: Chainblade +1 to Wound rolls (Lance)
+Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
+1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
+1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
 Jakhals
 Chainblades×9
 3
@@ -666,7 +701,13 @@ Paired manglersDISHONOURED
 4
 0
 1
-Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
+1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
+1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
 Flesh Hounds
 ×2 units
 Gore-drenched fangs×5
@@ -675,9 +716,12 @@ Gore-drenched fangs×5
 5
 -1
 1
-Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
 
 ######## abilities · MELEE Abilities
 Angron
@@ -1522,7 +1566,7 @@ if it applies
 +0.1
 MODELS
 Blessings of Khorne
-Decapitating Strikes · double 6 or triple 3+ · The target: Infantry: [DEVASTATING WOUNDS]
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS]
 if it applies
 0
 NOT COUNTED IN THE DAMAGE TAB (1)
@@ -1871,7 +1915,7 @@ if it applies
 ≈0
 MODELS
 Blessings of Khorne
-Decapitating Strikes · double 6 or triple 3+ · The target: Infantry · “Might of Khorne active”: [DEVASTATING WOUNDS]
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY · “Might of Khorne active”: [DEVASTATING WOUNDS]
 if it applies
 +1% wiped
 ≈0
@@ -2444,7 +2488,7 @@ WHEN TARGETED
 Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds
 1CP Blessing of Burning Blood: their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)
 DAMAGED 1-6 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 MELEE WEAPONS
 A
 WS
@@ -2466,7 +2510,12 @@ DEVASTATING WOUNDS
 -2
 2
 DEVASTATING WOUNDS
-Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Wrathful Presence: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
+1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
+1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
 ABILITIES
 The Blood God’s Favour
 - Wrathful Presence: pick one
@@ -2598,9 +2647,12 @@ Slaughter and Carnage
 8
 -2
 2
-Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
 Own aura: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
 ABILITIES
 Rage Embodied
 Fight
@@ -2667,7 +2719,7 @@ WHEN TARGETED
 Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds
 Boon of Blood active (4BTP): 4+ invulnerable save
 DAMAGED 1-6 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 RANGED WEAPONS
 Range
 A
@@ -2702,9 +2754,12 @@ D6+2
 10
 -2
 2
-Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
+Own aura: +1 to Hit rolls (Daemon Lord of Khorne)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Own aura: +1 to hit (Daemon Lord of Khorne)
 ABILITIES
 Daemon Lord of Khorne
 Fight
@@ -2810,11 +2865,17 @@ Hellforged weapons
 7
 -1
 2
-Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
-Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+Charged this turn: [DEVASTATING WOUNDS] (Devastating Assault)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
+Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
+1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
+1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S
 ABILITIES
 Lord of Murder
 
@@ -2924,11 +2985,16 @@ Axe of dismemberment
 -2
 2
 DEVASTATING WOUNDS, PRECISION
-Melee attacks that target a CHARACTER unit: can re-roll the hit roll and the wound roll (A Worthy Skull)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
-Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+The target: CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (A Worthy Skull)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
+Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
+1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
+1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S
 ABILITIES
 Forwards, For Blood!
 Not leading a unit in this list
@@ -3112,14 +3178,21 @@ Khornate eviscerator×4
 -2
 2
 WHOLE UNIT
-Made a charge move this turn: +1 S (Murderous Charge) · Bladed horn +1 to wound (Lance)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
-Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
-Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Charged this turn: +1 S (Murderous Charge)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
+Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
+Charged this turn: Bladed horn +1 to Wound rolls (Lance)
+Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
+1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
+1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S
 ABILITIES
 Aggressive Advance
 - Lord on Juggernaut
@@ -3265,8 +3338,14 @@ Close combat weapon×8
 3
 0
 1
-Made a charge move this turn: Chainblade +1 to wound (Lance)
-Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Charged this turn: Chainblade +1 to Wound rolls (Lance)
+Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
+1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
+1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
 ABILITIES
 Loping Speed
 Their Movement
@@ -3371,7 +3450,13 @@ Paired manglersDISHONOURED
 4
 0
 1
-Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
+1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
+1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
 ABILITIES
 Objective Ravaged
 Your Command
@@ -3460,9 +3545,12 @@ Gore-drenched fangs×5
 5
 -1
 1
-Daemonic Rage active (3BTP): [LANCE] (Blood Tithe)
+Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
+Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
 ABILITIES
 Hunters from the Warp
 End of your opponent’s turn

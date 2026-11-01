@@ -339,8 +339,7 @@ D6+3
 -1
 2
 PSYCHIC, TORRENT
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 Biovores
 Spore mine launcher
 48"
@@ -350,8 +349,7 @@ D3
 -1
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 Pyrovores
 ×2 units
 Flamespurt×3
@@ -362,8 +360,7 @@ D6+1
 -1
 1
 IGNORES COVER, TORRENT, TWIN-LINKED
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 Norn Assimilator
 Synaptoprescience
 Toxinjecter Harpoon
@@ -374,10 +371,9 @@ Toxinjecter Harpoon
 -3
 D6+1
 HARPOONED
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 Norn Emissary
 Psychic tendril
 ➤neuroparasite
@@ -404,10 +400,9 @@ BLAST, PSYCHIC
 -3
 D6
 MELTA 2, PSYCHIC
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 Psychophage
 Psychoclastic torrent
 12"
@@ -417,8 +412,7 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 Tyrannofex
 Acid spray
 18"
@@ -435,9 +429,8 @@ Stinger salvoes
 5
 0
 1
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 The Red Terror
@@ -457,12 +450,11 @@ Scything talons
 7
 -2
 2
-Within Synapse Range: +1 S
-vs INFANTRY/MOUNTED/BEASTS: a successful unmodified wound roll is a Critical Wound (Swallow Whole)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+The target: INFANTRY or MOUNTED or BEAST: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
 The Swarmlord
 Warlord
 + Tyrant Guard
@@ -481,11 +473,10 @@ Scything talons and rending claws×6
 5
 -1
 1
-Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
 Hive Tyrant
 Parasitic Biomorphology
 + Tyrant Guard
@@ -514,12 +505,11 @@ Scything talons and rending claws×6
 6
 -1
 1
-Within Synapse Range: +1 S
-After the bearer’s unit first destroys an enemy unit in the Fight phase while the bearer is within 6" of a friendly HARVESTER unit: +1 A (until the end of the battle) (Parasitic Biomorphology)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 A (Parasitic Biomorphology)
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
 Biovores
 Chitin-barbed limbs
 2
@@ -527,11 +517,10 @@ Chitin-barbed limbs
 5
 0
 1
-Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
 Pyrovores
 ×2 units
 Chitin-barbed limbs×3
@@ -540,11 +529,11 @@ Chitin-barbed limbs×3
 5
 0
 1
-Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
+1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
 Ripper Swarms
 Chitinous claws and teeth
 6
@@ -553,11 +542,11 @@ Chitinous claws and teeth
 0
 1
 SUSTAINED HITS 1
-Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
+1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
 Norn Assimilator
 Synaptoprescience
 
@@ -576,15 +565,15 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-Within Synapse Range: +1 S
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
+1CP Secure Biomass: [LETHAL HITS]
+1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
+STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
+1CP Lesser Prey: +2 S
 Norn Emissary
 
 Fights with both: Monstrous scything talons, plus Monstrous rending claws on top (extra attacks).
@@ -602,15 +591,14 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-Within Synapse Range: +1 S
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
+1CP Secure Biomass: [LETHAL HITS]
+STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
+1CP Lesser Prey: +2 S
 Psychophage
 Talons and betentacled maw
 6
@@ -619,12 +607,13 @@ Talons and betentacled maw
 -2
 2
 ANTI-PSYKER 4+, DEVASTATING WOUNDS
-Within Synapse Range: +1 S
-This turn, vs the enemy unit it selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
-Target below its Starting Strength: +1 to hit rolls; also +1 to wound rolls if Below Half-strength (Feeding Frenzy)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
+The target below its Starting Strength: +1 to Hit rolls (Feeding Frenzy)
+The target below its Starting Strength · “If that target is also Below Half-strength”: +1 to Wound rolls (Feeding Frenzy)
+If (see the rule): +1 S (Synapse)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
+1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
 Tyrannofex
 Powerful limbs
 4
@@ -632,12 +621,11 @@ Powerful limbs
 8
 0
 2
-Within Synapse Range: +1 S
-Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
 
 ######## abilities · MELEE Abilities
 The Red Terror
@@ -1407,7 +1395,7 @@ if it applies
 MODELS
 UNIT RULES
 Swallow Whole
-The target: Infantry or Mounted or Beast: Each successful unmodified Wound roll is a Critical Wound · for Gaping maw
+The target: INFANTRY or MOUNTED or BEAST: Each successful unmodified Wound roll is a Critical Wound · for Gaping maw
 if it applies
 +6% wiped
 +0.2
@@ -2316,12 +2304,11 @@ Scything talons
 7
 -2
 2
-Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+The target: INFANTRY or MOUNTED or BEAST: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
-vs INFANTRY/MOUNTED/BEASTS: a successful unmodified wound roll is a Critical Wound (Swallow Whole)
+1CP Secure Biomass: [LETHAL HITS]
 ABILITIES
 Swallow Whole
 
@@ -2398,8 +2385,6 @@ Tyrant Guard×6
 WHEN TARGETED
 1
 TYRANT GUARD Guardian Organism: The CHARACTER leading this unit has Feel No Pain 5+
-ALL ATTACKS · WHOLE UNIT
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 RANGED WEAPONS
 Range
 A
@@ -2416,7 +2401,7 @@ D6+3
 2
 PSYCHIC, TORRENT
 WHOLE UNIT
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -2439,10 +2424,10 @@ Scything talons and rending claws×6
 -1
 1
 WHOLE UNIT
-Within Synapse Range: +1 S
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
 ABILITIES
 Hive Commander
 - The Swarmlord
@@ -2576,12 +2561,11 @@ Scything talons and rending claws×6
 -1
 1
 WHOLE UNIT
-Within Synapse Range: +1 S
-After the bearer’s unit first destroys an enemy unit in the Fight phase while the bearer is within 6" of a friendly HARVESTER unit: +1 A (until the end of the battle) (Parasitic Biomorphology)
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 A (Parasitic Biomorphology)
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
 ABILITIES
 Will of the Hive Mind
 - Hive Tyrant
@@ -2665,8 +2649,6 @@ Biovore
 8+
 1
 –
-ALL ATTACKS
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 RANGED WEAPONS
 Range
 A
@@ -2682,7 +2664,7 @@ D3
 -1
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -2695,10 +2677,10 @@ Chitin-barbed limbs
 5
 0
 1
-Within Synapse Range: +1 S
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
 ABILITIES
 Seed Spore Mines
 Once per turn
@@ -2757,8 +2739,6 @@ Pyrovores×3
 WHEN TARGETED
 1
 2CP Ablative Carapace: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: Feel No Pain 5+ until the end of the phase (4+ while within range of an objective marker you control)
-ALL ATTACKS
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 RANGED WEAPONS
 Range
 A
@@ -2774,7 +2754,7 @@ D6+1
 -1
 1
 IGNORES COVER, TORRENT, TWIN-LINKED
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -2787,10 +2767,11 @@ Chitin-barbed limbs×3
 5
 0
 1
-Within Synapse Range: +1 S
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
+1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
 ABILITIES
 Burning Spray
 Your Shooting
@@ -2860,11 +2841,11 @@ Chitinous claws and teeth
 0
 1
 SUSTAINED HITS 1
-Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
+1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
 ABILITIES
 Chitinous Horrors
 
@@ -2924,10 +2905,9 @@ If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while 
 2CP Ablative Carapace: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: Feel No Pain 5+ until the end of the phase (4+ while within range of an objective marker you control)
 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ALL ATTACKS
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 RANGED WEAPONS
 Range
 A
@@ -2943,7 +2923,7 @@ Toxinjecter Harpoon
 -3
 D6+1
 HARPOONED
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -2966,12 +2946,13 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-Within Synapse Range: +1 S
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
+1CP Secure Biomass: [LETHAL HITS]
+1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
+STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
+1CP Lesser Prey: +2 S
 ABILITIES
 Singular Purpose
 Start of the first battle round
@@ -3057,11 +3038,10 @@ WHEN TARGETED
 If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
 Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
-If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 RANGED WEAPONS
 Range
 A
@@ -3094,7 +3074,7 @@ BLAST, PSYCHIC
 -3
 D6
 MELTA 2, PSYCHIC
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -3117,12 +3097,12 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-Within Synapse Range: +1 S
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
-STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP Lesser Prey: +2 S, When selected to fight
+1CP Secure Biomass: [LETHAL HITS]
+STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
+1CP Lesser Prey: +2 S
 ABILITIES
 Singular Purpose
 Start of the first battle round
@@ -3195,8 +3175,6 @@ WHEN TARGETED
 2
 Feel No Pain 5+
 2CP Ablative Carapace: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: Feel No Pain 5+ until the end of the phase (4+ while within range of an objective marker you control)
-ALL ATTACKS
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 RANGED WEAPONS
 Range
 A
@@ -3212,7 +3190,7 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -3226,11 +3204,13 @@ Talons and betentacled maw
 -2
 2
 ANTI-PSYKER 4+, DEVASTATING WOUNDS
-Within Synapse Range: +1 S
-This turn, vs the enemy unit it selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
-Target below its Starting Strength: +1 to hit rolls; also +1 to wound rolls if Below Half-strength (Feeding Frenzy)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
+The target below its Starting Strength: +1 to Hit rolls (Feeding Frenzy)
+The target below its Starting Strength · “If that target is also Below Half-strength”: +1 to Wound rolls (Feeding Frenzy)
+If (see the rule): +1 S (Synapse)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
+1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
 ABILITIES
 Bio-stimulus
 Your Shoot/Fight
@@ -3296,9 +3276,7 @@ WHEN TARGETED
 1
 Once per battle: change the Damage of an attack allocated to it to 0
 DAMAGED 1-5 W
--1 TO HIT ROLLS
-ALL ATTACKS
-Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
+−1 TO HIT ROLLS
 RANGED WEAPONS
 Range
 A
@@ -3321,7 +3299,7 @@ Stinger salvoes
 5
 0
 1
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
+Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -3334,10 +3312,10 @@ Powerful limbs
 8
 0
 2
-Within Synapse Range: +1 S
-This turn, vs the enemy unit the Psychophage selected with Bio-stimulus after shooting in your Shooting phase: improve AP by 1
+If (see the rule): +1 S (Synapse)
+The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS] (a HARVESTER unit: also a Critical Hit on an unmodified hit roll of 5+), not yet selected to fight, until the end of the phase
+1CP Secure Biomass: [LETHAL HITS]
 ABILITIES
 Resilient Organism
 Once per battle
@@ -3444,17 +3422,6 @@ Damaged: 1-5 Wounds Remaining
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITNorn Assimilator · Synaptoprescience, Norn Emissary, Tyrannofex
-
-Ask about this ability
-
-######## popup ability:healybois|Domination of the Hive Mind|While a friendly **TYRANIDS** unit is within 9" of this model, that unit is within your army’s **Synapse Range**. · HEALYBOIS Healybois
-ABILITY · AURA
-
-Domination of the Hive Mind
-
-While a friendly TYRANIDS unit is within 9" of this model, that unit is within your army’s Synapse Range.
-
-UNITThe Swarmlord + Tyrant Guard
 
 Ask about this ability
 

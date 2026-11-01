@@ -441,7 +441,7 @@ D6
 0
 1
 IGNORES COVER, TORRENT
-Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
 Bloodthirster
 Gateway Unto Damnation
 Hellfire breath
@@ -452,7 +452,7 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
 Daemon Prince of Chaos
 Slaughterthirst (Aura)
 Infernal cannon
@@ -479,9 +479,10 @@ Slaughter and Carnage
 8
 -2
 2
-Damaged (1-7 wounds left): +2 A (Damaged: 1-7 wounds remaining)
 Own aura: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+If (see the rule): Slaughter and Carnage +2 A (Damaged: 1-7 wounds remaining)
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 Karanak
 + Flesh Hounds
 KARANAK
@@ -499,10 +500,11 @@ Gore-drenched fangs×5
 5
 -1
 1
-Melee attacks that target Karanak’s prey: can re-roll the wound roll (Prey of the Blood God)
+The target is the enemy unit selected: Re-roll Wound rolls (Prey of the Blood God)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 Skulltaker
 + Bloodletters
 Bane-Forged Weapons
@@ -522,10 +524,11 @@ Hellblade×10
 -2
 2
 DEVASTATING WOUNDS
-Attacks that target a CHARACTER unit: Skulltaker can re-roll the hit roll and the wound roll (Skulls for Khorne)
+The target: CHARACTER: Skulltaker Re-roll Hit rolls, Re-roll Wound rolls (Skulls for Khorne)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 Bloodthirster
 Gateway Unto Damnation
 Great axe of Khorne
@@ -541,9 +544,10 @@ D6+2
 10
 -2
 2
-Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Own aura: +1 to Hit rolls (Daemon Lord of Khorne)
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Own aura: +1 to hit (Daemon Lord of Khorne)
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 Daemon Prince of Chaos
 Slaughterthirst (Aura)
 Hellforged weapons
@@ -560,7 +564,8 @@ Hellforged weapons
 0
 1
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 Rendmaster on Blood Throne
 ×2 units
 
@@ -579,11 +584,11 @@ Blade of blood
 6
 -2
 3
-Fight phase, attacks that target the enemy unit selected with Blood Throne: improve S, AP and D by 1
-Melee attacks that target a CHARACTER or MONSTER unit: can re-roll the wound roll (Champion Slayer)
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+The target: CHARACTER or MONSTER: Re-roll Wound rolls (Champion Slayer)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
 Bloodmaster
 + Bloodletters
 Bane-Forged Weapons
@@ -601,10 +606,11 @@ Hellblade×10
 6
 -2
 2
-While the Bloodmaster is leading the unit: +1 to wound rolls
+While leading a unit: +1 to Wound rolls (Bloodmaster)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 Skullmaster
 Brazenmaw
 + Bloodcrushers
@@ -642,11 +648,12 @@ Juggernaut’s bladed horn×3
 -1
 1
 EXTRA ATTACKS, LANCE
-Ended a Charge move this turn: [DEVASTATING WOUNDS] until the end of the turn (Skullmaster’s Fury)
-Made a charge move this turn: Juggernaut’s bladed horn +1 to wound (Lance)
+While leading a unit · Charged this turn: Juggernaut’s bladed horn [DEVASTATING WOUNDS] (Skullmaster’s Fury)
+Charged this turn: Juggernaut’s bladed horn +1 to Wound rolls (Lance)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 Beasts of Nurgle
 Putrid appendages
 6
@@ -2528,7 +2535,8 @@ Slaughter and Carnage
 -2
 2
 Own aura: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 ABILITIES
 Greater Daemon of Khorne
 
@@ -2617,7 +2625,7 @@ FLESH HOUNDS Collar of Khorne: Feel No Pain 3+ against Psychic Attacks
 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase)
 Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
 ALL ATTACKS · WHOLE UNIT
-Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
 RANGED WEAPONS
 Range
 A
@@ -2665,9 +2673,10 @@ Gore-drenched fangs×5
 -1
 1
 WHOLE UNIT
-Melee attacks that target Karanak’s prey: can re-roll the wound roll (Prey of the Blood God)
+The target is the enemy unit selected: Re-roll Wound rolls (Prey of the Blood God)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 ABILITIES
 Pack Leader
 - Karanak
@@ -2801,10 +2810,11 @@ Hellblade×10
 2
 DEVASTATING WOUNDS
 WHOLE UNIT
-Attacks that target a CHARACTER unit: Skulltaker can re-roll the hit roll and the wound roll (Skulls for Khorne)
+The target: CHARACTER: Skulltaker Re-roll Hit rolls, Re-roll Wound rolls (Skulls for Khorne)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 ABILITIES
 Lord of Decapitations
 - Skulltaker
@@ -2910,7 +2920,7 @@ WHEN TARGETED
 1CP Sheathed in Brass: their Shooting phase, just after an enemy unit selects it as a target: Save characteristic of 3+ (until the end of the phase)
 Within 6" of the Daemon Prince of Chaos: Stealth: the benefit of cover against ranged attacks (Prince of Darkness)
 DAMAGED 1-6 W
--1 TO HIT ROLLS
+−1 TO HIT ROLLS
 RANGED WEAPONS
 Range
 A
@@ -2945,8 +2955,9 @@ D6+2
 10
 -2
 2
+Own aura: +1 to Hit rolls (Daemon Lord of Khorne)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Own aura: +1 to hit (Daemon Lord of Khorne)
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 ABILITIES
 Daemon Lord of Khorne
 Fight
@@ -3065,7 +3076,8 @@ Hellforged weapons
 0
 1
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 ABILITIES
 Daemonic Allegiance
 Already in S
@@ -3178,11 +3190,11 @@ Blade of blood
 6
 -2
 3
-Fight phase, attacks that target the enemy unit selected with Blood Throne: improve S, AP and D by 1
-Melee attacks that target a CHARACTER or MONSTER unit: can re-roll the wound roll (Champion Slayer)
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+The target: CHARACTER or MONSTER: Re-roll Wound rolls (Champion Slayer)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
 ABILITIES
 Blood Throne
 Fight
@@ -3291,10 +3303,11 @@ Hellblade×10
 -2
 2
 WHOLE UNIT
-While the Bloodmaster is leading the unit: +1 to wound rolls
+While leading a unit: +1 to Wound rolls (Bloodmaster)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 ABILITIES
 Bloodmaster
 - Bloodmaster
@@ -3451,11 +3464,12 @@ Juggernaut’s bladed horn×3
 1
 EXTRA ATTACKS, LANCE
 WHOLE UNIT
-Made a charge move this turn: Juggernaut’s bladed horn +1 to wound (Lance)
+While leading a unit · Charged this turn: Juggernaut’s bladed horn [DEVASTATING WOUNDS] (Skullmaster’s Fury)
+Charged this turn: Juggernaut’s bladed horn +1 to Wound rolls (Lance)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
-Within 6" of the Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
-Ended a Charge move this turn: [DEVASTATING WOUNDS] until the end of the turn (Skullmaster’s Fury)
+Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 ABILITIES
 Skullmaster’s Fury
 - Skullmaster

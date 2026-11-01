@@ -297,10 +297,12 @@ Hekhtur’s pistolSIR HEKHTUR
 -1
 2
 PISTOL
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Cerastus Knight Atrapos
 Bringer of Justice
 Atrapos lascutter
@@ -337,12 +339,14 @@ D3
 -4
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
-vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
-vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
-Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Cerastus Knight Lancer
 Cerastus shock lance
 12"
@@ -352,10 +356,12 @@ Cerastus shock lance
 0
 2
 ASSAULT, SUSTAINED HITS 2
-Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Crusader
 Hunter’s Eye
 Avenger gatling cannon
@@ -406,11 +412,13 @@ Stormspear rocket pod
 -2
 D6
 IGNORES COVER
-Remained Stationary in your Movement phase: ranged weapons have [SUSTAINED HITS 1] until the end of the turn (Punishing Salvoes)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+Remained Stationary: [SUSTAINED HITS 1] (Punishing Salvoes)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Destrier
 Sanctuary
 Chastiser gatling cannon
@@ -437,11 +445,13 @@ Questoris heavy stubber
 -1
 1
 ASSAULT, RAPID FIRE 3
-Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
-Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target within range of an objective marker: [IGNORES COVER] (Saturation Fire)
+If (see the rule): −4 OC, −1 to Hit rolls (Damaged: 1-6 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Canis Rex
@@ -466,9 +476,11 @@ Close combat weaponSIR HEKHTUR
 3
 0
 1
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Cerastus Knight Atrapos
 Bringer of Justice
 Atrapos lascutter
@@ -486,12 +498,14 @@ SUSTAINED HITS 1
 -3
 4
 SUSTAINED HITS 1
-vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
-vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
-Every melee attack: +1 to hit rolls (Bringer of Justice)
-Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
+The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
+Every melee attack: +1 to Hit rolls (Bringer of Justice)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Cerastus Knight Lancer
 Cerastus shock lance
 ➤strike
@@ -507,10 +521,12 @@ LANCE
 10
 -2
 3
-Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
-Made a charge move this turn: Cerastus shock lance +1 to wound (Lance)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+Charged this turn: Cerastus shock lance +1 to Wound rolls (Lance)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Crusader
 Hunter’s Eye
 Titanic feet
@@ -519,9 +535,11 @@ Titanic feet
 8
 -1
 2
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 Knight Destrier
 Sanctuary
 Titanic feet
@@ -530,9 +548,11 @@ Titanic feet
 7
 -1
 2
-Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
+If (see the rule): −4 OC, −1 to Hit rolls (Damaged: 1-6 Wounds Remaining)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 
 ######## abilities · MELEE Abilities
 Canis Rex
@@ -1058,7 +1078,7 @@ if it applies
 −0.5
 MODELS
 Damaged: 1-9 Wounds Remaining
-−1 to Hit rolls
+−5 OC, −1 to Hit rolls
 if it applies
 −9% wiped
 −0.5
@@ -1346,7 +1366,7 @@ said to hold
 no change: no rule here needs it
 0
 Damaged: 1-9 Wounds Remaining
-−1 to Hit rolls
+−5 OC, −1 to Hit rolls
 if it applies
 −19% wiped
 −0.5
@@ -1657,7 +1677,7 @@ if it applies
 MODELS
 +1 MORE ▾
 Damaged: 1-9 Wounds Remaining
-−1 to Hit rolls
+−5 OC, −1 to Hit rolls
 if it applies
 −2% wiped
 ≈0
@@ -1810,7 +1830,7 @@ holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 Damaged: 1-9 Wounds Remaining
-−1 to Hit rolls
+−5 OC, −1 to Hit rolls
 if it applies
 −4% wiped
 −0.1
@@ -2331,10 +2351,12 @@ Feel No Pain 6+
 5+ invulnerable save against ranged attacks only
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-9 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2375,7 +2397,7 @@ Hekhtur’s pistolSIR HEKHTUR
 -1
 2
 PISTOL
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS
@@ -2485,12 +2507,14 @@ WHEN TARGETED
 Feel No Pain 6+
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-10 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
-vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
+The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2532,7 +2556,7 @@ D3
 -4
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS
@@ -2554,7 +2578,7 @@ SUSTAINED HITS 1
 -3
 4
 SUSTAINED HITS 1
-Every melee attack: +1 to hit rolls (Bringer of Justice)
+Every melee attack: +1 to Hit rolls (Bringer of Justice)
 ABILITIES
 Atrapos’ Duty
 No ARMIGER models in this list
@@ -2632,10 +2656,12 @@ WHEN TARGETED
 Feel No Pain 6+
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-10 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2651,7 +2677,7 @@ Cerastus shock lance
 0
 2
 ASSAULT, SUSTAINED HITS 2
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS
@@ -2672,7 +2698,7 @@ LANCE
 10
 -2
 3
-Made a charge move this turn: Cerastus shock lance +1 to wound (Lance)
+Charged this turn: Cerastus shock lance +1 to Wound rolls (Lance)
 ABILITIES
 Lancer’s Duty
 No ARMIGER models in this list
@@ -2744,10 +2770,12 @@ Feel No Pain 6+
 5+ invulnerable save against ranged attacks only
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-9 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2803,8 +2831,8 @@ Stormspear rocket pod
 -2
 D6
 IGNORES COVER
-Remained Stationary in your Movement phase: ranged weapons have [SUSTAINED HITS 1] until the end of the turn (Punishing Salvoes)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+Remained Stationary: [SUSTAINED HITS 1] (Punishing Salvoes)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS
@@ -2900,10 +2928,12 @@ Feel No Pain 6+
 Sanctuary: 5+ invulnerable save
 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-6 W
--1 TO HIT ROLLS (AND -4 OC)
+−4 OC, −1 TO HIT ROLLS
 ALL ATTACKS
+Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
+1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2935,8 +2965,8 @@ Questoris heavy stubber
 -1
 1
 ASSAULT, RAPID FIRE 3
-Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target within range of an objective marker: [IGNORES COVER] (Saturation Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
 WS

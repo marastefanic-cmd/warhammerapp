@@ -359,10 +359,10 @@ Staff of the Destroyer
 6
 -3
 2
-Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 The Silent King
 Warlord
 Annihilator beam×2
@@ -388,11 +388,11 @@ Staff of StarsSZAREKH
 -1
 1
 INDIRECT FIRE
-Damaged (Szarekh 1-6 wounds left): -1 to hit rolls; Szarekh’s weapons: halve A (Damaged: 1-6 wounds remaining)
-Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
-Own aura, if it has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Triarch Abilities: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
+The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 Royal Warden
 Relic gauss blaster
 24"
@@ -402,9 +402,9 @@ Relic gauss blaster
 -1
 2
 LETHAL HITS, RAPID FIRE 2
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 Technomancer
 + Immortals
 TECHNOMANCER
@@ -424,11 +424,11 @@ Gauss blaster×5
 -1
 1
 LETHAL HITS
-Every attack: re-roll wound rolls of 1 (Implacable Eradication)
-Target within range of an objective marker: re-roll the wound roll (Implacable Eradication)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Every attack: Re-roll Wound rolls of 1 (Implacable Eradication)
+The target within range of an objective marker: Re-roll Wound rolls (Implacable Eradication)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 Canoptek Reanimator
 Atomiser beam×2
 12"
@@ -437,9 +437,9 @@ Atomiser beam×2
 6
 -2
 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 Canoptek Spyders
 Particle beamer×2
 18"
@@ -449,9 +449,9 @@ D6
 0
 1
 BLAST, DEVASTATING WOUNDS
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 Tesseract Vault
 1 of 2
 Tesla sphere×4
@@ -486,11 +486,11 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-Damaged (1-8 wounds left): -4 OC; you can only select one of the C'tan Powers weapons in your Shooting phase, instead of two (Damaged: 1-8 wounds remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+If (see the rule): −4 OC (Damaged: 1-8 wounds remaining)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
-1CP Cosmic Storm: +1 AP, selected to shoot: its Tesla Sphere weapons
+1CP Cosmic Storm: Tesla sphere +1 AP
 Tesseract Vault
 2 of 2
 Tesla sphere×4
@@ -525,11 +525,11 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-Damaged (1-8 wounds left): -4 OC; you can only select one of the C'tan Powers weapons in your Shooting phase, instead of two (Damaged: 1-8 wounds remaining)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+If (see the rule): −4 OC (Damaged: 1-8 wounds remaining)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
-1CP Cosmic Storm: +1 AP, selected to shoot: its Tesla Sphere weapons
+1CP Cosmic Storm: Tesla sphere +1 AP
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Imotekh the Stormlord
@@ -540,11 +540,11 @@ Staff of the Destroyer
 -3
 2
 DEVASTATING WOUNDS
-Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 The Silent King
 Warlord
 Armoured bulk×2
@@ -560,13 +560,13 @@ Weapons of the Final TriarchSZAREKH
 -3
 2
 LETHAL HITS
-Damaged (Szarekh 1-6 wounds left): -1 to hit rolls; Szarekh’s weapons: halve A (Damaged: 1-6 wounds remaining)
-Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
-Own aura, if it has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Own aura, if it has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Own aura: +1 S (Phaeron of the Blades)
+If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
+The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
-1CP Suffer No Rival: [PRECISION], Fight phase, not yet selected to fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
+1CP Suffer No Rival: [PRECISION], Fight phase
 Royal Warden
 Close combat weapon
 4
@@ -574,10 +574,10 @@ Close combat weapon
 5
 0
 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 Technomancer
 + Immortals
 TECHNOMANCER
@@ -594,12 +594,12 @@ Close combat weapon×5
 4
 0
 1
-Every attack: re-roll wound rolls of 1 (Implacable Eradication)
-Target within range of an objective marker: re-roll the wound roll (Implacable Eradication)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Every attack: Re-roll Wound rolls of 1 (Implacable Eradication)
+The target within range of an objective marker: Re-roll Wound rolls (Implacable Eradication)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 Flayed Ones
 Flayer claws×5
 4
@@ -608,11 +608,11 @@ Flayer claws×5
 -1
 1
 SUSTAINED HITS 1, TWIN-LINKED
-Target Below Half-strength: a successful hit roll scores a Critical Hit (Flesh Hunger)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+not counted here: see the rule (Flesh Hunger)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 Ophydian Destroyers
 Ophydian hyperphase weapons×3
 5
@@ -620,10 +620,10 @@ Ophydian hyperphase weapons×3
 4
 -2
 2
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 Canoptek Scarab Swarms
 Feeder mandibles×3
 6
@@ -632,10 +632,10 @@ Feeder mandibles×3
 0
 1
 LETHAL HITS
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 Canoptek Reanimator
 Reanimator’s claws
 4
@@ -643,10 +643,10 @@ Reanimator’s claws
 5
 0
 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 Canoptek Spyders
 Automaton claws
 5
@@ -654,10 +654,10 @@ Automaton claws
 8
 -2
 2
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 Tesseract Vault
 1 of 2
 Armoured bulk
@@ -666,9 +666,9 @@ Armoured bulk
 8
 0
 1
-Damaged (1-8 wounds left): -4 OC; you can only select one of the C'tan Powers weapons in your Shooting phase, instead of two (Damaged: 1-8 wounds remaining)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+If (see the rule): −4 OC (Damaged: 1-8 wounds remaining)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 Tesseract Vault
 2 of 2
 Armoured bulk
@@ -677,9 +677,9 @@ Armoured bulk
 8
 0
 1
-Damaged (1-8 wounds left): -4 OC; you can only select one of the C'tan Powers weapons in your Shooting phase, instead of two (Damaged: 1-8 wounds remaining)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+If (see the rule): −4 OC (Damaged: 1-8 wounds remaining)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 
 ######## abilities · MELEE Abilities
 Imotekh the Stormlord
@@ -2292,10 +2292,10 @@ WHEN TARGETED
 1
 Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
 ALL ATTACKS
-Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 RANGED WEAPONS
 Range
 A
@@ -2331,7 +2331,7 @@ Staff of the Destroyer
 -3
 2
 DEVASTATING WOUNDS
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 ABILITIES
 Grand Strategist
 Your Command
@@ -2411,12 +2411,12 @@ WHEN TARGETED
 Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
 Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
 DAMAGED 1-6 W
--1 TO HIT ROLLS; SZAREKH’S WEAPONS: HALVE A
+−1 TO HIT ROLLS; SEE THE RULE
 ALL ATTACKS
-Vs the enemy unit you selected in your Command phase, until the start of your next Command phase: +1 to wound rolls (Worthy Foes)
-Own aura, if it has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Triarch Abilities: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 RANGED WEAPONS
 Range
 A
@@ -2466,9 +2466,9 @@ Weapons of the Final TriarchSZAREKH
 -3
 2
 LETHAL HITS
-Own aura, if it has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Own aura: +1 S (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX · FIGHT PHASE
-1CP Suffer No Rival: [PRECISION], not yet selected to fight, until the end of the phase
+1CP Suffer No Rival: [PRECISION]
 ABILITIES
 Phaeron of the Stars
 - Triarch Abilities: pick one
@@ -2565,9 +2565,9 @@ WHEN TARGETED
 1
 Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
 ALL ATTACKS
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 RANGED WEAPONS
 Range
 A
@@ -2595,7 +2595,7 @@ Close combat weapon
 5
 0
 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 ABILITIES
 Adaptive Strategy
 Your Move/Shoot/Charge
@@ -2673,11 +2673,11 @@ WHEN TARGETED
 TECHNOMANCER While the Technomancer leads this unit: Feel No Pain 5+ for its models
 Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
 ALL ATTACKS · WHOLE UNIT
-Every attack: re-roll wound rolls of 1 (Implacable Eradication)
-Target within range of an objective marker: re-roll the wound roll (Implacable Eradication)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Every attack: Re-roll Wound rolls of 1 (Implacable Eradication)
+The target within range of an objective marker: Re-roll Wound rolls (Implacable Eradication)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 RANGED WEAPONS
 Range
 A
@@ -2723,7 +2723,7 @@ Close combat weapon×5
 0
 1
 WHOLE UNIT
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 ABILITIES
 Rites of Reanimation
 - Technomancer
@@ -2811,11 +2811,11 @@ Flayer claws×5
 -1
 1
 SUSTAINED HITS 1, TWIN-LINKED
-Target Below Half-strength: a successful hit roll scores a Critical Hit (Flesh Hunger)
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+not counted here: see the rule (Flesh Hunger)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 ABILITIES
 Flesh Hunger
 Fight
@@ -2882,10 +2882,10 @@ Ophydian hyperphase weapons×3
 4
 -2
 2
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 ABILITIES
 Tunnelling Horrors
 End of your opponent’s turn
@@ -2956,10 +2956,10 @@ Feeder mandibles×3
 0
 1
 LETHAL HITS
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 ABILITIES
 Self-destruction
 Fight
@@ -3024,9 +3024,9 @@ Feel No Pain 4+
 Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
 Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
 ALL ATTACKS
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 RANGED WEAPONS
 Range
 A
@@ -3053,7 +3053,7 @@ Reanimator’s claws
 5
 0
 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 ABILITIES
 Nanoscarab Reanimation Beam
 
@@ -3112,9 +3112,9 @@ WHEN TARGETED
 Own aura: Feel No Pain 6+ (Fabricator Claw Array)
 Own aura: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
 ALL ATTACKS
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: a Critical Hit on an unmodified hit roll of 5+, Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase
+1CP Enslaved Artifice: Critical Hit on 5+
 RANGED WEAPONS
 Range
 A
@@ -3142,7 +3142,7 @@ Automaton claws
 8
 -2
 2
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 ABILITIES
 Canoptek Swarm
 Your Command
@@ -3216,9 +3216,9 @@ WHEN TARGETED
 Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
 Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
 DAMAGED 1-8 W
--4 OC; YOU CAN ONLY SELECT ONE OF THE C'TAN POWERS WEAPONS IN YOUR SHOOTING PHASE, INSTEAD OF TWO
+−4 OC; SEE THE RULE
 ALL ATTACKS
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 RANGED WEAPONS
 Range
 A
@@ -3258,9 +3258,9 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
-1CP Cosmic Storm: +1 AP, selected to shoot: its Tesla Sphere weapons
+1CP Cosmic Storm: Tesla sphere +1 AP
 MELEE WEAPONS
 A
 WS
@@ -3273,7 +3273,7 @@ Armoured bulk
 8
 0
 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 ABILITIES
 Powers of the C’tan
 Your Shooting
@@ -3337,9 +3337,9 @@ WHEN TARGETED
 Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
 Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
 DAMAGED 1-8 W
--4 OC; YOU CAN ONLY SELECT ONE OF THE C'TAN POWERS WEAPONS IN YOUR SHOOTING PHASE, INSTEAD OF TWO
+−4 OC; SEE THE RULE
 ALL ATTACKS
-Within 6" of Szarekh, if The Silent King has Phaeron of the Stars this battle round: re-roll hit rolls of 1 and wound rolls of 1
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 RANGED WEAPONS
 Range
 A
@@ -3379,9 +3379,9 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
-1CP Cosmic Storm: +1 AP, selected to shoot: its Tesla Sphere weapons
+1CP Cosmic Storm: Tesla sphere +1 AP
 MELEE WEAPONS
 A
 WS
@@ -3394,7 +3394,7 @@ Armoured bulk
 8
 0
 1
-Within 6" of Szarekh, if The Silent King has Phaeron of the Blades this battle round: +1 S (and re-roll Charge rolls)
+Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
 ABILITIES
 Powers of the C’tan
 Your Shooting

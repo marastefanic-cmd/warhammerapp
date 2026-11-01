@@ -355,13 +355,14 @@ D3
 -4
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
-vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
-vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
-Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 wounds remaining)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: ranged weapons have [IGNORES COVER]
+1CP Warp Vision: [IGNORES COVER]
 Chaos Cerastus Knight Lancer
 Blasphemous Engine
 Cerastus shock lance
@@ -372,11 +373,12 @@ Cerastus shock lance
 0
 2
 ASSAULT, SUSTAINED HITS 2
-Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 wounds remaining)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: ranged weapons have [IGNORES COVER]
+1CP Warp Vision: [IGNORES COVER]
 Knight Despoiler
 Warlord
 Bestial Aspect
@@ -412,12 +414,13 @@ Ruinspear rocket pod
 -2
 D6
 ASSAULT
-Selected to shoot or fight: re-roll one hit roll or one wound roll (Seething Hatred)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+Every attack: Re-roll one Hit or Wound roll (Seething Hatred)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: ranged weapons have [IGNORES COVER]
+1CP Warp Vision: [IGNORES COVER]
 Knight Ruinator
 Fleshmetal Fusion
 Darkflame lance
@@ -436,12 +439,13 @@ D6+6
 -2
 2
 BLAST
-Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed): re-roll the wound roll (Methodical Destruction)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target is the enemy unit selected: Re-roll Wound rolls (Methodical Destruction)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: ranged weapons have [IGNORES COVER]
+1CP Warp Vision: [IGNORES COVER]
 Knight Ruinator
 Darkflame lance
 18"
@@ -459,12 +463,13 @@ D6+6
 -2
 2
 BLAST
-Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed): re-roll the wound roll (Methodical Destruction)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+The target is the enemy unit selected: Re-roll Wound rolls (Methodical Destruction)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: ranged weapons have [IGNORES COVER]
+1CP Warp Vision: [IGNORES COVER]
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Chaos Cerastus Knight Atrapos
@@ -484,11 +489,12 @@ SUSTAINED HITS 1
 -3
 4
 SUSTAINED HITS 1
-vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
-vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
-Using the Diabolic Power ability (Malefic Surge): melee weapons have [LANCE] (Knight Diabolus)
-Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 wounds remaining)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
+If (see the rule): [LANCE] (Knight Diabolus)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS]
 Chaos Cerastus Knight Lancer
 Blasphemous Engine
 Cerastus shock lance
@@ -505,9 +511,10 @@ LANCE
 10
 -2
 3
-Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 wounds remaining)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
-Made a charge move this turn: Cerastus shock lance +1 to wound (Lance)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+Charged this turn: Cerastus shock lance +1 to Wound rolls (Lance)
 Knight Despoiler
 Warlord
 Bestial Aspect
@@ -517,9 +524,10 @@ Titanic feet
 8
 -1
 2
-Selected to shoot or fight: re-roll one hit roll or one wound roll (Seething Hatred)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Every attack: Re-roll one Hit or Wound roll (Seething Hatred)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
 Knight Ruinator
 Fleshmetal Fusion
 Fellbore
@@ -536,9 +544,10 @@ ANTI-MONSTER 2+, ANTI-VEHICLE 2+
 9
 -2
 2
-Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed): re-roll the wound roll (Methodical Destruction)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+The target is the enemy unit selected: Re-roll Wound rolls (Methodical Destruction)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
 Knight Ruinator
 Fellbore
 ➤strike
@@ -554,9 +563,10 @@ ANTI-MONSTER 2+, ANTI-VEHICLE 2+
 9
 -2
 2
-Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed): re-roll the wound roll (Methodical Destruction)
-Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+The target is the enemy unit selected: Re-roll Wound rolls (Methodical Destruction)
+If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
 Nurglings
 Diseased claws and teeth×3
 4
@@ -1109,7 +1119,7 @@ if it applies
 −0.6
 MODELS
 Damaged: 1-10 wounds remaining
-−1 to Hit rolls
+−5 OC, −1 to Hit rolls
 if it applies
 −14% wiped
 −0.6
@@ -1155,13 +1165,13 @@ Super-heavy Walker
 “Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. …” · not counted in the Damage tab
 UNIT RULES
 Macro-extinction Protocols
-The target: Monster or Vehicle: +1 to Hit rolls
+The target: MONSTER or VEHICLE: +1 to Hit rolls
 if it applies
 +17% wiped
 +0.6
 MODELS
 Macro-extinction Protocols
-The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
 if it applies
 +8% wiped
 +0.3
@@ -1390,7 +1400,7 @@ said to hold
 no change: no rule here needs it
 0
 Damaged: 1-10 wounds remaining
-−1 to Hit rolls
+−5 OC, −1 to Hit rolls
 if it applies
 −16% wiped
 −0.6
@@ -1417,7 +1427,7 @@ Super-heavy Walker
 “Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. …” · not counted in the Damage tab
 UNIT RULES
 Macro-extinction Protocols
-The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
 if it applies
 +18% wiped
 +0.4
@@ -1429,7 +1439,7 @@ if it applies
 +0.4
 MODELS
 Macro-extinction Protocols
-The target: Monster or Vehicle: +1 to Hit rolls
+The target: MONSTER or VEHICLE: +1 to Hit rolls
 if it applies
 no change: already hits on 2+
 0
@@ -1725,7 +1735,7 @@ if it applies
 −0.1
 MODELS
 Damaged: 1-10 wounds remaining
-−1 to Hit rolls
+−5 OC, −1 to Hit rolls
 if it applies
 −5% wiped
 −0.1
@@ -1763,14 +1773,14 @@ Super-heavy Walker
 “Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. …” · not counted in the Damage tab
 UNIT RULES
 Macro-extinction Protocols
-The target: Monster or Vehicle: +1 to Hit rolls
+The target: MONSTER or VEHICLE: +1 to Hit rolls
 if it applies
 +3% wiped
 ≈0
 MODELS
 +1 MORE ▾
 Macro-extinction Protocols
-The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
 if it applies
 +1% wiped
 ≈0
@@ -1876,7 +1886,7 @@ holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 Damaged: 1-10 wounds remaining
-−1 to Hit rolls
+−5 OC, −1 to Hit rolls
 if it applies
 −7% wiped
 −0.1
@@ -1905,7 +1915,7 @@ Super-heavy Walker
 “Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. …” · not counted in the Damage tab
 UNIT RULES
 Macro-extinction Protocols
-The target: Monster or Vehicle · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls
 if it applies
 +2% wiped
 ≈0
@@ -1919,7 +1929,7 @@ if it applies
 MODELS
 +1 MORE ▾
 Macro-extinction Protocols
-The target: Monster or Vehicle: +1 to Hit rolls
+The target: MONSTER or VEHICLE: +1 to Hit rolls
 if it applies
 no change: already hits on 2+
 0
@@ -2405,11 +2415,12 @@ Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ 
 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
 Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase) (Mischief Makers)
 DAMAGED 1-10 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
-vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
+The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: RANGEDone of: [LETHAL HITS] · [SUSTAINED HITS 1] (Malefic Surge) · MELEEone of: [LETHAL HITS] (Malefic Surge)
 RANGED WEAPONS
 Range
 A
@@ -2451,9 +2462,9 @@ D3
 -4
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: ranged weapons have [IGNORES COVER]
+1CP Warp Vision: [IGNORES COVER]
 MELEE WEAPONS
 A
 WS
@@ -2475,7 +2486,7 @@ SUSTAINED HITS 1
 -3
 4
 SUSTAINED HITS 1
-Using the Diabolic Power ability (Malefic Surge): melee weapons have [LANCE] (Knight Diabolus)
+If (see the rule): [LANCE] (Knight Diabolus)
 ABILITIES
 Macro-extinction Protocols
 Their Move · Your Shoot · Fight
@@ -2555,9 +2566,10 @@ Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ 
 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
 Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase) (Mischief Makers)
 DAMAGED 1-10 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
 RANGED WEAPONS
 Range
 A
@@ -2573,9 +2585,9 @@ Cerastus shock lance
 0
 2
 ASSAULT, SUSTAINED HITS 2
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: ranged weapons have [IGNORES COVER]
+1CP Warp Vision: [IGNORES COVER]
 MELEE WEAPONS
 A
 WS
@@ -2596,7 +2608,7 @@ LANCE
 10
 -2
 3
-Made a charge move this turn: Cerastus shock lance +1 to wound (Lance)
+Charged this turn: Cerastus shock lance +1 to Wound rolls (Lance)
 ABILITIES
 Shock Charge
 Your Charge
@@ -2679,10 +2691,11 @@ Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ 
 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
 Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase) (Mischief Makers)
 DAMAGED 1-9 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-Selected to shoot or fight: re-roll one hit roll or one wound roll (Seething Hatred)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Every attack: Re-roll one Hit or Wound roll (Seething Hatred)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
 RANGED WEAPONS
 Range
 A
@@ -2722,9 +2735,9 @@ Ruinspear rocket pod
 -2
 D6
 ASSAULT
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: ranged weapons have [IGNORES COVER]
+1CP Warp Vision: [IGNORES COVER]
 MELEE WEAPONS
 A
 WS
@@ -2823,10 +2836,11 @@ Using Unnatural Fortitude, vs attacks with Damage 1: +1 to armour saving throws
 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
 Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase) (Mischief Makers)
 DAMAGED 1-9 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed): re-roll the wound roll (Methodical Destruction)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+The target is the enemy unit selected: Re-roll Wound rolls (Methodical Destruction)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
 RANGED WEAPONS
 Range
 A
@@ -2850,9 +2864,9 @@ D6+6
 -2
 2
 BLAST
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: ranged weapons have [IGNORES COVER]
+1CP Warp Vision: [IGNORES COVER]
 MELEE WEAPONS
 A
 WS
@@ -2957,10 +2971,11 @@ Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ 
 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
 Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase) (Mischief Makers)
 DAMAGED 1-9 W
--1 TO HIT ROLLS (AND -5 OC)
+−5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed): re-roll the wound roll (Methodical Destruction)
-Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+The target is the enemy unit selected: Re-roll Wound rolls (Methodical Destruction)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
 RANGED WEAPONS
 Range
 A
@@ -2984,9 +2999,9 @@ D6+6
 -2
 2
 BLAST
-Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: ranged weapons have [IGNORES COVER]
+1CP Warp Vision: [IGNORES COVER]
 MELEE WEAPONS
 A
 WS

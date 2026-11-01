@@ -345,10 +345,11 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-Target in range of an objective marker: ranged attacks have [IGNORES COVER] (Brigand)
-Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Own aura: re-roll wound rolls of 1 (Final Howl (Aura))
+The target within range of an objective marker: [IGNORES COVER] (Brigand)
+Own aura: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
 War Dog Brigand
 1 of 4
 Avenger chaincannon
@@ -374,10 +375,11 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-Target in range of an objective marker: ranged attacks have [IGNORES COVER] (Brigand)
-Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+The target within range of an objective marker: [IGNORES COVER] (Brigand)
+If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 War Dog Brigand
 2–4 of 4
 ×3 units
@@ -404,10 +406,11 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-Target in range of an objective marker: ranged attacks have [IGNORES COVER] (Brigand)
-Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+The target within range of an objective marker: [IGNORES COVER] (Brigand)
+If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 War Dog Executioner
 Snarling Rivalry
 ×3 units
@@ -427,10 +430,11 @@ War Dog autocannon×2
 -1
 3
 IGNORES COVER
-Target Below Half-strength: +1 to hit rolls (Executioner)
-Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+The target Below Half-strength: +1 to Hit rolls (Executioner)
+If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 War Dog Karnivore
 Panoply of the Cursed Knights
 Diabolus heavy stubber
@@ -441,9 +445,10 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 War Dog Karnivore
 ×5 units
 Diabolus heavy stubber
@@ -454,9 +459,10 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 War Dog Brigand
@@ -468,11 +474,12 @@ Armoured feet
 6
 0
 1
-Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Own aura: re-roll wound rolls of 1 (Final Howl (Aura))
+Own aura: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
-1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+1CP Hungry for Combat: Critical Hit on 5+, The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”
 War Dog Brigand
 1 of 4
 Armoured feet
@@ -481,11 +488,12 @@ Armoured feet
 6
 0
 1
-Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
-1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+1CP Hungry for Combat: Critical Hit on 5+, The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”
 War Dog Brigand
 2–4 of 4
 ×3 units
@@ -495,11 +503,12 @@ Armoured feet
 6
 0
 1
-Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
-1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+1CP Hungry for Combat: Critical Hit on 5+, The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”
 War Dog Executioner
 Snarling Rivalry
 ×3 units
@@ -509,12 +518,13 @@ Armoured feet
 6
 0
 1
-Target Below Half-strength: +1 to hit rolls (Executioner)
-Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+The target Below Half-strength: +1 to Hit rolls (Executioner)
+If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
-1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+1CP Hungry for Combat: Critical Hit on 5+, The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”
 War Dog Karnivore
 Panoply of the Cursed Knights
 
@@ -534,11 +544,11 @@ Slaughterclaw
 -3
 D6+2
 SUSTAINED HITS 1
-Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
-1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+1CP Hungry for Combat: Critical Hit on 5+, The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”
 War Dog Karnivore
 ×5 units
 
@@ -558,11 +568,11 @@ Slaughterclaw
 -3
 D6+2
 SUSTAINED HITS 1
-Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
-1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+1CP Hungry for Combat: Critical Hit on 5+, The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”
 
 ######## abilities · MELEE Abilities
 War Dog Brigand
@@ -1062,7 +1072,7 @@ if it applies
 −0.6
 MODELS
 Damaged: 1-5 wounds remaining
-−1 to Hit rolls
+−3 OC, −1 to Hit rolls
 if it applies
 −1% wiped
 −0.6
@@ -1297,7 +1307,7 @@ said to hold
 no change: no rule here needs it
 0
 Damaged: 1-5 wounds remaining
-−1 to Hit rolls
+−3 OC, −1 to Hit rolls
 if it applies
 −0.1
 MODELS
@@ -1606,7 +1616,7 @@ if it applies
 −0.6
 MODELS
 Damaged: 1-5 wounds remaining
-−1 to Hit rolls
+−3 OC, −1 to Hit rolls
 if it applies
 −2% wiped
 −0.6
@@ -1713,7 +1723,7 @@ holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 Damaged: 1-5 wounds remaining
-−1 to Hit rolls
+−3 OC, −1 to Hit rolls
 if it applies
 −0.1
 MODELS
@@ -2297,10 +2307,11 @@ WHEN TARGETED
 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
 DAMAGED 1-5 W
--1 TO HIT ROLLS (AND -3 OC)
+−3 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Own aura: re-roll wound rolls of 1 (Final Howl (Aura))
+Own aura: Re-roll Wound rolls of 1 (Final Howl (Aura))
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
 RANGED WEAPONS
 Range
 A
@@ -2331,7 +2342,7 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-Target in range of an objective marker: ranged attacks have [IGNORES COVER] (Brigand)
+The target within range of an objective marker: [IGNORES COVER] (Brigand)
 MELEE WEAPONS
 A
 WS
@@ -2345,7 +2356,7 @@ Armoured feet
 0
 1
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
-1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+1CP Hungry for Combat: Critical Hit on 5+, The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”
 ABILITIES
 *Invulnerable Save
 
@@ -2421,10 +2432,11 @@ WHEN TARGETED
 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
 DAMAGED 1-5 W
--1 TO HIT ROLLS (AND -3 OC)
+−3 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 RANGED WEAPONS
 Range
 A
@@ -2455,7 +2467,7 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-Target in range of an objective marker: ranged attacks have [IGNORES COVER] (Brigand)
+The target within range of an objective marker: [IGNORES COVER] (Brigand)
 MELEE WEAPONS
 A
 WS
@@ -2469,7 +2481,7 @@ Armoured feet
 0
 1
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
-1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+1CP Hungry for Combat: Critical Hit on 5+, The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”
 ABILITIES
 *Invulnerable Save
 
@@ -2538,10 +2550,11 @@ WHEN TARGETED
 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
 DAMAGED 1-5 W
--1 TO HIT ROLLS (AND -3 OC)
+−3 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 RANGED WEAPONS
 Range
 A
@@ -2572,7 +2585,7 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-Target in range of an objective marker: ranged attacks have [IGNORES COVER] (Brigand)
+The target within range of an objective marker: [IGNORES COVER] (Brigand)
 MELEE WEAPONS
 A
 WS
@@ -2586,7 +2599,7 @@ Armoured feet
 0
 1
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
-1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+1CP Hungry for Combat: Critical Hit on 5+, The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”
 ABILITIES
 *Invulnerable Save
 
@@ -2653,11 +2666,12 @@ WHEN TARGETED
 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
 DAMAGED 1-5 W
--1 TO HIT ROLLS (AND -3 OC)
+−3 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-Target Below Half-strength: +1 to hit rolls (Executioner)
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+The target Below Half-strength: +1 to Hit rolls (Executioner)
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 RANGED WEAPONS
 Range
 A
@@ -2694,7 +2708,7 @@ Armoured feet
 0
 1
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
-1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+1CP Hungry for Combat: Critical Hit on 5+, The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”
 ABILITIES
 *Invulnerable Save
 
@@ -2765,10 +2779,10 @@ worsen the AP of each attack that targets it by 1
 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
 DAMAGED 1-5 W
--1 TO HIT ROLLS (AND -3 OC)
+−3 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 RANGED WEAPONS
 Range
 A
@@ -2784,6 +2798,7 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
 MELEE WEAPONS
 A
 WS
@@ -2808,7 +2823,7 @@ Slaughterclaw
 D6+2
 SUSTAINED HITS 1
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
-1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+1CP Hungry for Combat: Critical Hit on 5+, The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”
 ABILITIES
 *Invulnerable Save
 
@@ -2880,10 +2895,10 @@ WHEN TARGETED
 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
 DAMAGED 1-5 W
--1 TO HIT ROLLS (AND -3 OC)
+−3 OC, −1 TO HIT ROLLS
 ALL ATTACKS
-Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
-Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
+Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
 RANGED WEAPONS
 Range
 A
@@ -2899,6 +2914,7 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
+The target is the enemy unit selected · “if that unit is visible to the attacking model”: [SUSTAINED HITS 1] (Marked Prey)
 MELEE WEAPONS
 A
 WS
@@ -2923,7 +2939,7 @@ Slaughterclaw
 D6+2
 SUSTAINED HITS 1
 STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
-1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+1CP Hungry for Combat: Critical Hit on 5+, The target is the enemy unit selected · “models in those WAR DOG units can only target that enemy unit” · “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit”
 ABILITIES
 *Invulnerable Save
 

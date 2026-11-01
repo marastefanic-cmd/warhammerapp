@@ -432,8 +432,11 @@ Castellan axe×2
 -1
 2
 ASSAULT, RAPID FIRE 2
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 Prosecutor Squad
 ×2 units
 Boltgun×4
@@ -481,12 +484,14 @@ Twin Lastrum Bolt Cannon
 -2
 2
 SUSTAINED HITS 1, TWIN-LINKED
-vs MONSTER/VEHICLE: re-roll one hit roll, one wound roll and one damage roll (Advanced Firepower)
-Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+The target: MONSTER or VEHICLE: Re-roll one Hit roll, Re-roll one Wound roll, Re-roll one Damage roll (Advanced Firepower)
+If (see the rule): −1 to Hit rolls (Damaged 5)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
 STRATAGEMS · GRAV-ASSAULT FORCE · YOUR SHOOTING PHASE
-1CP Advanced Stabilisers: ranged attacks have [ASSAULT], selected to shoot
-1CP Inevitable Annihilation: can ignore modifiers to BS and hit rolls, selected to shoot
+1CP Advanced Stabilisers: [ASSAULT]
+1CP Inevitable Annihilation: Ignore modifiers to BS/WS and the Hit roll
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 Contemptor-Achillus Dreadnought
 Dreadspear
 18"
@@ -503,12 +508,14 @@ Lastrum storm bolter×2
 -1
 1
 RAPID FIRE 3
-Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+If (see the rule): −1 to Hit rolls (Damaged 4)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
+5 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
-1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
+1CP Unceasing Onslaught: [ASSAULT], Your Movement phase
 Contemptor-Galatus Dreadnought
 Memento Moritoi
 Warblade
@@ -519,12 +526,14 @@ Warblade
 -1
 2
 BLAST 2, TORRENT, TWIN-LINKED
-Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+If (see the rule): −1 to Hit rolls (Damaged 4)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
+5 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
-1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
+1CP Unceasing Onslaught: [ASSAULT], Your Movement phase
 Telemon Heavy Dreadnought
 Augury Uplink
 Spiculus bolt launcher
@@ -543,12 +552,14 @@ Twin Neutronium Cascade Projectors×2
 -2
 1
 BLAST 1, TORRENT, TWIN-LINKED
-Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+If (see the rule): −1 to Hit rolls (Damaged 5)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
+6 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
-1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
+1CP Unceasing Onslaught: [ASSAULT], Your Movement phase
 Telemon Heavy Dreadnought
 Adrathic Desolator
 24"
@@ -573,12 +584,14 @@ Twin Neutronium Cascade Projectors
 -2
 1
 BLAST 1, TORRENT, TWIN-LINKED
-Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+If (see the rule): −1 to Hit rolls (Damaged 5)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
+6 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
-1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
+1CP Unceasing Onslaught: [ASSAULT], Your Movement phase
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Trajann Valoris
@@ -599,10 +612,13 @@ Castellan axe×2
 10
 -2
 4
-Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase: +3 A
-Target has a T greater than this unit’s T: +1 to wound rolls (Slayer of Tyrants)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
+Once per battle · “At the start of any phase, you can select one of the following to take effect until the end of the phase”: Watcher’s Axe +3 A (Moment Shackle)
+If (see the rule): +1 to Wound rolls (Slayer of Tyrants)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 Prosecutor Squad
 ×2 units
 Gun Stock×4
@@ -634,8 +650,10 @@ Armoured hull
 6
 0
 1
-Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+If (see the rule): −1 to Hit rolls (Damaged 5)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 Contemptor-Achillus Dreadnought
 Dreadspear
 5
@@ -644,12 +662,14 @@ Dreadspear
 -3
 D3+3
 LANCE
-Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
-Made a charge move this turn: Dreadspear +1 to wound (Lance)
+If (see the rule): −1 to Hit rolls (Damaged 4)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
+5 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
+Charged this turn: Dreadspear +1 to Wound rolls (Lance)
 STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 Contemptor-Galatus Dreadnought
 Memento Moritoi
 Warblade
@@ -659,11 +679,13 @@ Warblade
 -2
 4
 CLEAVE 1, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
-Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+If (see the rule): −1 to Hit rolls (Damaged 4)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
+5 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 Telemon Heavy Dreadnought
 Augury Uplink
 Dual Caestus Fists
@@ -673,11 +695,13 @@ Dual Caestus Fists
 -3
 4
 TWIN-LINKED
-Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+If (see the rule): −1 to Hit rolls (Damaged 5)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
+6 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 Telemon Heavy Dreadnought
 Caestus Fist
 5
@@ -685,11 +709,13 @@ Caestus Fist
 14
 -3
 4
-Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+If (see the rule): −1 to Hit rolls (Damaged 5)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
+6 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 
 ######## abilities · MELEE Abilities
 Trajann Valoris
@@ -1525,17 +1551,17 @@ no change: no rule here needs it
 0
 ARMY RULES
 Martial Ka’tah
-The target: not Monster/Vehicle
+The target: not MONSTER/VEHICLE
 if it applies
 +7% wiped
 +0.1
 MODELS
 Dacatarai
-The target: not Monster/Vehicle: Re-roll Hit rolls of 1
+The target: not MONSTER/VEHICLE: Re-roll Hit rolls of 1
 +0.1
 BEST
 Rendax
-The target: Monster or Vehicle: [LETHAL HITS]
+The target: MONSTER or VEHICLE: [LETHAL HITS]
 +3% wiped
 Magna Imperator
 Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
@@ -1930,16 +1956,16 @@ no change: no rule here needs it
 0
 ARMY RULES
 Martial Ka’tah
-The target: not Monster/Vehicle
+The target: not MONSTER/VEHICLE
 if it applies
 +1% wiped
 ≈0
 MODELS
 Dacatarai
-The target: not Monster/Vehicle: Re-roll Hit rolls of 1
+The target: not MONSTER/VEHICLE: Re-roll Hit rolls of 1
 +1% wiped
 Rendax
-The target: Monster or Vehicle: [LETHAL HITS]
+The target: MONSTER or VEHICLE: [LETHAL HITS]
 0
 Magna Imperator
 Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
@@ -2546,8 +2572,10 @@ TRAJANN VALORIS Moment Shackle (once per battle, at the start of any phase, one 
 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
 Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS · WHOLE UNIT
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Own aura: re-roll hit rolls of 1 and wound rolls of 1 (Captain-General)
+Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 RANGED WEAPONS
 Range
 A
@@ -2581,6 +2609,8 @@ Castellan axe×2
 -1
 2
 ASSAULT, RAPID FIRE 2
+WHOLE UNIT
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
 MELEE WEAPONS
 A
 WS
@@ -2603,8 +2633,9 @@ Castellan axe×2
 -2
 4
 WHOLE UNIT
-Target has a T greater than this unit’s T: +1 to wound rolls (Slayer of Tyrants)
-Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase: +3 A
+If (see the rule): +1 to Wound rolls (Slayer of Tyrants)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
+Once per battle · “At the start of any phase, you can select one of the following to take effect until the end of the phase”: Watcher’s Axe +3 A (Moment Shackle)
 ABILITIES
 Supreme Commander
 - Trajann Valoris
@@ -2942,8 +2973,10 @@ Feel No Pain 5+ against mortal wounds
 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
 Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
-Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
+If (see the rule): −1 to Hit rolls (Damaged 5)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+STRATAGEMS · MIGHT OF THE MORITOI
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 RANGED WEAPONS
 Range
 A
@@ -2967,10 +3000,10 @@ Twin Lastrum Bolt Cannon
 -2
 2
 SUSTAINED HITS 1, TWIN-LINKED
-vs MONSTER/VEHICLE: re-roll one hit roll, one wound roll and one damage roll (Advanced Firepower)
+The target: MONSTER or VEHICLE: Re-roll one Hit roll, Re-roll one Wound roll, Re-roll one Damage roll (Advanced Firepower)
 STRATAGEMS · GRAV-ASSAULT FORCE · YOUR SHOOTING PHASE
-1CP Advanced Stabilisers: ranged attacks have [ASSAULT], selected to shoot
-1CP Inevitable Annihilation: can ignore modifiers to BS and hit rolls, selected to shoot
+1CP Advanced Stabilisers: [ASSAULT]
+1CP Inevitable Annihilation: Ignore modifiers to BS/WS and the Hit roll
 MELEE WEAPONS
 A
 WS
@@ -3051,11 +3084,12 @@ Feel No Pain 5+ against mortal wounds
 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
 Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
-Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+If (see the rule): −1 to Hit rolls (Damaged 4)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
+5 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 RANGED WEAPONS
 Range
 A
@@ -3078,8 +3112,9 @@ Lastrum storm bolter×2
 -1
 1
 RAPID FIRE 3
-STRATAGEMS · MIGHT OF THE MORITOI
-1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+STRATAGEMS · MIGHT OF THE MORITOI · YOUR MOVEMENT PHASE
+1CP Unceasing Onslaught: [ASSAULT]
 MELEE WEAPONS
 A
 WS
@@ -3093,7 +3128,8 @@ Dreadspear
 -3
 D3+3
 LANCE
-Made a charge move this turn: Dreadspear +1 to wound (Lance)
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
+Charged this turn: Dreadspear +1 to Wound rolls (Lance)
 ABILITIES
 Unyielding Ancient
 
@@ -3155,11 +3191,12 @@ Feel No Pain 5+ against mortal wounds
 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
 Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
-Damaged (4 or fewer wounds remaining): -1 to hit rolls (Damaged 4)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+If (see the rule): −1 to Hit rolls (Damaged 4)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
+5 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 RANGED WEAPONS
 Range
 A
@@ -3175,8 +3212,9 @@ Warblade
 -1
 2
 BLAST 2, TORRENT, TWIN-LINKED
-STRATAGEMS · MIGHT OF THE MORITOI
-1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+STRATAGEMS · MIGHT OF THE MORITOI · YOUR MOVEMENT PHASE
+1CP Unceasing Onslaught: [ASSAULT]
 MELEE WEAPONS
 A
 WS
@@ -3190,6 +3228,7 @@ Warblade
 -2
 4
 CLEAVE 1, SUSTAINED HITS 1: NON-MONSTER/VEHICLE
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
 ABILITIES
 Unyielding Ancient
 
@@ -3259,11 +3298,12 @@ Feel No Pain 5+
 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
 Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
-Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+If (see the rule): −1 to Hit rolls (Damaged 5)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
+6 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 RANGED WEAPONS
 Range
 A
@@ -3287,8 +3327,9 @@ Twin Neutronium Cascade Projectors×2
 -2
 1
 BLAST 1, TORRENT, TWIN-LINKED
-STRATAGEMS · MIGHT OF THE MORITOI
-1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+STRATAGEMS · MIGHT OF THE MORITOI · YOUR MOVEMENT PHASE
+1CP Unceasing Onslaught: [ASSAULT]
 MELEE WEAPONS
 A
 WS
@@ -3302,6 +3343,7 @@ Dual Caestus Fists
 -3
 4
 TWIN-LINKED
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
 ABILITIES
 Guardian Eternal
 
@@ -3368,11 +3410,12 @@ Ranged attacks that target it have -1 D
 1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
 Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
 ALL ATTACKS
-Damaged (5 or fewer wounds remaining): -1 to hit rolls (Damaged 5)
-Selected to attack: re-roll one hit roll and re-roll one wound roll (Magna Imperator)
-Below starting strength, or below half-strength: below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1 (Moritoi Ancients)
+If (see the rule): −1 to Hit rolls (Damaged 5)
+Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
+If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
+6 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
 STRATAGEMS · MIGHT OF THE MORITOI
-1CP Honoured Interred: re-roll hit rolls of 1, Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")
+1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
 RANGED WEAPONS
 Range
 A
@@ -3403,8 +3446,9 @@ Twin Neutronium Cascade Projectors
 -2
 1
 BLAST 1, TORRENT, TWIN-LINKED
-STRATAGEMS · MIGHT OF THE MORITOI
-1CP Unceasing Onslaught: ranged attacks have [ASSAULT], Ended an advance move this turn (until the end of the turn)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+STRATAGEMS · MIGHT OF THE MORITOI · YOUR MOVEMENT PHASE
+1CP Unceasing Onslaught: [ASSAULT]
 MELEE WEAPONS
 A
 WS
@@ -3417,6 +3461,7 @@ Caestus Fist
 14
 -3
 4
+one of: Dacatarai: Re-roll Hit rolls of 1 (The target: not MONSTER/VEHICLE) · Rendax: [LETHAL HITS] (The target: MONSTER or VEHICLE) (Martial Ka’tah)
 ABILITIES
 Guardian Eternal
 

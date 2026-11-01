@@ -651,7 +651,7 @@ AI READING the numbers and conditions behind the datasheets’ footnotes and the
 
 HAND a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.
 
-Of the 555 columns of the tables: Mechanical 300 · AI summary 2 · AI reading 198 · Hand 55.
+Of the 431 columns of the tables: Mechanical 300 · AI summary 2 · AI reading 80 · Hand 49.
 
 ARMIES
 25 rows · 214 unit entries · one row per list
@@ -714,7 +714,7 @@ NEW RECRUIT
 An entry holds what the list chose; everything else about the unit comes from its datasheet’s row.
 
 Every column and where it comes from
-185 columns, with 8 inner tables
+135 columns, with 6 inner tables
 ARMIES 25 rows
 
 MECHANICAL name (New Recruit), faction (New Recruit), points (New Recruit), pointsUsed (New Recruit), battleSize (New Recruit), disposition (New Recruit), detachments (New Recruit), source (New Recruit), config (New Recruit), units (New Recruit)
@@ -727,7 +727,7 @@ a list's unit entries: what the list chose; the datasheet's facts are in DATASHE
 
 MECHANICAL id (computed), ds (computed), pts (New Recruit), ptsNote (New Recruit), copies (New Recruit), models (New Recruit), gear (New Recruit), unplaced (New Recruit), enhancement (New Recruit), warlord (New Recruit), enhOn (New Recruit), warlordOn (New Recruit), upgrade (New Recruit), leads (New Recruit), support (New Recruit), also (New Recruit), role (New Recruit), name (New Recruit), rules (New Recruit), kw (New Recruit), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (New Recruit), why (computed)
 
-AI READING mods, aura, guard
+AI READING guard
 
 HAND ref, short, kwNote, kwOnly, partialRules, srcNote, over, note
 
@@ -759,31 +759,11 @@ ARMIES.units.abilities
 
 a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
 
-MECHANICAL name (New Recruit), who (New Recruit), of (computed), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), why (computed), readOf (computed)
+MECHANICAL name (New Recruit), who (New Recruit), of (computed), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), damaged (computed), defPh (computed), why (computed), readOf (computed)
 
-AI READING def, damaged, riled, defAlways, defCalc, calcDef, lasts, fightOnDeath, comeback, calcNote
+AI READING def
 
 HAND over, note, na
-
-ARMIES.units.mods
-
-footnotes under a unit's weapon tables: the list's own (why names the reason), or a reading two lists have otherwise (verify/out/tables.md); a name in the list stands for the readings of that name the rows give (the list's order)
-
-MECHANICAL readOf (computed), readBy (computed)
-
-AI READING kind, weapon, who, set, when, cond, note, from, pick, rule, lasts, vs, needs, selfWhen, selfAlways, notSelf, one
-
-HAND listWhy
-
-ARMIES.units.aura
-
-what a unit gives other units of its list: the list's own (why names the reason), or a reading two lists have otherwise (verify/out/tables.md); a name in the list stands for the readings of that name the rows give (the list's order)
-
-MECHANICAL readOf (computed), readBy (computed)
-
-AI READING kind, weapon, who, set, when, cond, note, from, pick, rule, lasts, vs, needs, selfWhen, selfAlways, notSelf, one
-
-HAND listWhy
 
 ARMIES.units.guard
 
@@ -835,12 +815,12 @@ abilities
 4 rows: Turbo Engine, Shokk Attack Engine, Pulse Jet, Full Throttle
 WAHAPEDIA
 Every column and where it comes from
-143 columns, with 7 inner tables
+93 columns, with 5 inner tables
 DATASHEETS 261 rows
 
 MECHANICAL name (New Recruit), faction (computed), bsId (BSData), role (New Recruit), rules (New Recruit), kw (New Recruit), leaders (BSData), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (Wahapedia), points (GW), composition (BSData), options (BSData), aiStatus (computed)
 
-AI READING mods, aura, guard
+AI READING guard
 
 HAND kwOnly, partialRules, srcNote
 
@@ -866,31 +846,11 @@ DATASHEETS.abilities 629 rows
 
 a datasheet's abilities
 
-MECHANICAL name (New Recruit), who (New Recruit), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), readOf (computed)
+MECHANICAL name (New Recruit), who (New Recruit), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), damaged (computed), defPh (computed), readOf (computed)
 
-AI READING def, damaged, riled, defAlways, defCalc, calcDef, lasts, fightOnDeath, comeback, calcNote
+AI READING def
 
 HAND note, na
-
-DATASHEETS.mods 134 rows
-
-the readings of the datasheet's abilities (and of a core rule on its Rules line, or a weapon ability it defines) as footnotes under its weapon tables: every list with the datasheet has them
-
-MECHANICAL readOf (computed), readBy (computed)
-
-AI READING kind, weapon, who, set, when, cond, note, from, pick, rule, lasts, vs, needs, selfWhen, selfAlways, notSelf, one
-
-HAND listWhy
-
-DATASHEETS.aura 32 rows
-
-the readings of the datasheet's abilities as what it gives other units of its list
-
-MECHANICAL readOf (computed), readBy (computed)
-
-AI READING kind, weapon, who, set, when, cond, note, from, pick, rule, lasts, vs, needs, selfWhen, selfAlways, notSelf, one
-
-HAND listWhy
 
 DATASHEETS.guard 12 rows
 
@@ -936,7 +896,7 @@ dp
 1
 GW
 rule
-Try Dat Button! (+ 9 columns)
+Try Dat Button! (+ 8 columns)
 GW
 enhancements
 2 rows: Cybork Boosta, Dreadherder
@@ -979,7 +939,7 @@ When a model in your unit is destroyed, if your unit has not been selected to fi
 GW
 needs
 all: Walker; none: Titanic
-HAND
+COMPUTED
 note
 Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on …
 HAND
@@ -990,7 +950,7 @@ defOf
 263b4efe
 COMPUTED
 Every column and where it comes from
-142 columns, with 7 inner tables
+122 columns, with 7 inner tables
 FACTIONS 13 rows
 
 MECHANICAL name (GW), armyRules (GW), detachments (GW)
@@ -1003,7 +963,7 @@ a faction's army rules
 
 MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), readOf (computed)
 
-AI READING calcDefs, mod, def, parts, statNote, mods, aura, guard
+AI READING def, parts, statNote, guard
 
 HAND needs, coreTwin, note, tableAt, missing
 
@@ -1019,7 +979,7 @@ a detachment's rule
 
 MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), readOf (computed)
 
-AI READING calcDefs, mod, def, parts, statNote, mods, aura, guard
+AI READING def, parts, statNote, guard
 
 HAND needs, coreTwin, note, tableAt, missing
 
@@ -1029,7 +989,7 @@ a detachment's further rule (moreRules), with the columns of its first
 
 MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), readOf (computed)
 
-AI READING calcDefs, mod, def, parts, statNote, mods, aura, guard
+AI READING def, parts, statNote, guard
 
 HAND needs, coreTwin, note, tableAt, missing
 
@@ -1037,13 +997,13 @@ FACTIONS.detachments.stratagems 253 rows
 
 a detachment's stratagems
 
-MECHANICAL id (computed), gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), defOf (computed), readOf (computed)
+MECHANICAL id (computed), gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), needs (computed), limit (computed), defOf (computed), readOf (computed)
 
 AI SUMMARY gist
 
-AI READING limit, defCalc, def, mod, shield, defPick, react, weaponKw, lasts, calcNote
+AI READING def, shield, defPick
 
-HAND needs, note, cpNote
+HAND note, cpNote
 
 FACTIONS.detachments.enhancements 173 rows
 
@@ -1051,11 +1011,11 @@ a detachment's enhancements
 
 MECHANICAL name (GW), pts (New Recruit), text (GW), upgrade (BSData), nr (New Recruit), limit (Wahapedia)
 
-AI READING mods, aura, guard
+AI READING guard
 
 FACTIONS.readings
 
-the readings (mods, aura, guard) of an army rule, detachment rule or enhancement, on its row: every unit the rule reaches (an army rule on its Rules line, a detachment rule whose needs it meets) or the enhancement's bearer has them
+the readings (guard) of an army rule, detachment rule or enhancement, on its row: every unit the rule reaches (an army rule on its Rules line, a detachment rule whose needs it meets) or the enhancement's bearer has them
 
 MECHANICAL readOf (computed), readBy (computed)
 
@@ -1101,16 +1061,16 @@ effect
 You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll …
 GW
 Every column and where it comes from
-27 columns
+21 columns
 CORE_STRATAGEMS 10 rows
 
-MECHANICAL gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), defOf (computed), readOf (computed)
+MECHANICAL gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), needs (computed), limit (computed), defOf (computed), readOf (computed)
 
 AI SUMMARY gist
 
-AI READING limit, defCalc, def, mod, shield, defPick, react, weaponKw, lasts, calcNote
+AI READING def, shield, defPick
 
-HAND id, needs, note, cpNote
+HAND id, note, cpNote
 
 RULES
 67 rows · core rules and weapon abilities: name → text (glossary)
@@ -1272,12 +1232,12 @@ COMPUTED
 t the phases it is triggered in · u the phases its effect is used in · s listed at a fixed moment of the turn · a listed when the unit is selected · at the moment it opens with · ae also at the end of the battle round · o its options, each with its own phases · g what it grants · f a rule it puts in force · pk a pick of options · oc its options cover its phases · x not placed (its words give no phase) · none no phase (before the battle, what a unit carries)
 
 BOXES
-281 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
+285 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
 Every column and where it comes from
-23 columns, with 1 inner table
-BOXES 281 rows
+25 columns, with 1 inner table
+BOXES 285 rows
 
-MECHANICAL n (computed), b (computed), nc (computed), reach (computed), both (computed), embarked (computed)
+MECHANICAL n (computed), b (computed), nc (computed), reach (computed), both (computed), embarked (computed), played (computed), riled (computed)
 
 BOXES.b
 
@@ -1342,7 +1302,7 @@ one value · the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-10-31.3
+2026-11-01.1
 
 WHY YOU CAN TRUST THE DATA
 
@@ -1759,7 +1719,7 @@ Psyko-gatler
 -2
 2
 ASSAULT, LETHAL HITS: NON-MONSTER/VEHICLE, SUSTAINED HITS 1
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 Big Mek Dakkarig
 Dreadherder
 Blitzkannon
@@ -1771,7 +1731,7 @@ Blitzkannon
 -2
 2
 IGNORES COVER, LETHAL HITS: NON-MONSTER/VEHICLE
-A +6 vs non-MONSTER/VEHICLE targets, in your Shooting phase (Blitz Dem Gitz!)
+A +6 The target: not MONSTER/VEHICLE (Blitz Dem Gitz!)
 Multi-busta Launcha
 24"
 6
@@ -1780,10 +1740,11 @@ Multi-busta Launcha
 -2
 3
 IGNORES COVER, LETHAL HITS
-Riled up: [SUSTAINED HITS 1] (Even More Dakka) · [ASSAULT] (Waaagh!)
-Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
-Picked by the Dreadherder for its own unit: re-roll hit rolls of 1 this turn
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+Riled up: [SUSTAINED HITS 1] (Even More Dakka)
+Within 3" of it · Selected by it: Re-roll Hit rolls of 1 (Dreadherder)
+Riled up: [ASSAULT] (Waaagh!)
+If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
+Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 Big Mek Dakkarig
 Cybork Boosta
 Blitzkannon
@@ -1795,7 +1756,7 @@ Blitzkannon
 -2
 2
 IGNORES COVER, LETHAL HITS: NON-MONSTER/VEHICLE
-A +6 vs non-MONSTER/VEHICLE targets, in your Shooting phase (Blitz Dem Gitz!)
+A +6 The target: not MONSTER/VEHICLE (Blitz Dem Gitz!)
 Multi-busta Launcha
 24"
 6
@@ -1804,10 +1765,11 @@ Multi-busta Launcha
 -2
 3
 IGNORES COVER, LETHAL HITS
-Riled up: [SUSTAINED HITS 1] (Even More Dakka) · [ASSAULT] (Waaagh!)
-Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
-Picked by the Dreadherder: re-roll hit rolls of 1 this turn
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+Riled up: [SUSTAINED HITS 1] (Even More Dakka)
+Riled up: [ASSAULT] (Waaagh!)
+If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
+Within 3" of Big Mek · Selected by Big Mek: Re-roll Hit rolls of 1 (Dreadherder)
+Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 Big Mek in Mega Armour
 Supa-glowy Fing
 Kustom Mega-blasta
@@ -1826,10 +1788,11 @@ Tellyport Blasta
 -2
 3
 BLAST 1, IGNORES COVER, ASSAULT, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS
-Riled up: [SUSTAINED HITS 1] (More Dakka) · +3" range (Dakka! Dakka! Dakka!)
+Riled up: [SUSTAINED HITS 1] (More Dakka)
+Riled up: +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to wound rolls vs non-MONSTER/VEHICLE targets
-1CP Glowin’ Dakka: +1 AP vs targets within 9"
+1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
+1CP Glowin’ Dakka: +1 AP, If (see the rule)
 1CP Never Enough Dakka: [SUSTAINED HITS 1]
 Warboss
 Warlord
@@ -1841,11 +1804,11 @@ Kustom Shoota
 0
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, ASSAULT
-Boss’ Ammo Runt used (your Shooting phase, when selected to shoot): +1 to hit rolls
+Once per battle · If it uses this ability: +1 to Hit rolls (Boss’ Ammo Runt)
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to wound rolls vs non-MONSTER/VEHICLE targets
-1CP Glowin’ Dakka: +1 AP vs targets within 9"
+1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
+1CP Glowin’ Dakka: +1 AP, If (see the rule)
 1CP Never Enough Dakka: [SUSTAINED HITS 1]
 Mek
 + Tankbustas
@@ -1886,10 +1849,10 @@ Rokkit pistol×2
 3
 CLOSE-QUARTERS, ASSAULT, IGNORES COVER
 Riled up: +3" range (Dakka! Dakka! Dakka!)
-Your Shooting phase, this unit or the target within range of an objective: can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
+This unit or the target within range of an objective: Re-roll Hit rolls of 1 (Wreckin’ and Lootin’)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to wound rolls vs non-MONSTER/VEHICLE targets
-1CP Glowin’ Dakka: +1 AP vs targets within 9"
+1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
+1CP Glowin’ Dakka: +1 AP, If (see the rule)
 1CP Never Enough Dakka: [SUSTAINED HITS 1]
 Mek
 + Flash Gitz
@@ -1929,11 +1892,12 @@ LETHAL HITS: NON-MONSTER/VEHICLE, SUSTAINED HITS 1, ASSAULT, RAPID FIRE 1, IGNOR
 -2
 2
 HAZARDOUS, ASSAULT, RAPID FIRE 1, IGNORES COVER
-Your Shooting phase, this unit or the target within range of an objective: +1 AP (Finderz Keeperz) · can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
+This unit or the target within range of an objective: +1 AP (Finderz Keeperz)
 Riled up: +3" range (Dakka! Dakka! Dakka!)
+This unit or the target within range of an objective: Re-roll Hit rolls of 1 (Wreckin’ and Lootin’)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to wound rolls vs non-MONSTER/VEHICLE targets
-1CP Glowin’ Dakka: +1 AP vs targets within 9"
+1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
+1CP Glowin’ Dakka: +1 AP, If (see the rule)
 1CP Never Enough Dakka: [SUSTAINED HITS 1]
 Gretchin
 ×3 units
@@ -1947,8 +1911,8 @@ Grot Blasta×10
 CLOSE-QUARTERS, ASSAULT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to wound rolls vs non-MONSTER/VEHICLE targets
-1CP Glowin’ Dakka: +1 AP vs targets within 9"
+1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
+1CP Glowin’ Dakka: +1 AP, If (see the rule)
 1CP Never Enough Dakka: [SUSTAINED HITS 1]
 Deffkoptas
 
@@ -1979,7 +1943,7 @@ Slugga×3
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
-Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
+If (see the rule): +1 to Hit rolls (Deff from Above)
 Riled up: [ASSAULT] (Waaagh!)
 Killa Kans
 Kan Blasta×6
@@ -2006,11 +1970,11 @@ BLAST 1, IGNORES COVER, SUSTAINED HITS 1
 -1
 1
 BLAST 2, TORRENT
-vs units with no T 7+ models: +1 to hit rolls (Spiteful Power Trip)
-Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
-Picked by the Dreadherder: re-roll hit rolls of 1 this turn
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+The target has no model with T 7+: +1 to Hit rolls (Spiteful Power Trip)
 Riled up: [ASSAULT] (Waaagh!)
+If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
+Within 3" of Big Mek · Selected by Big Mek: Re-roll Hit rolls of 1 (Dreadherder)
+Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Wazdakka Gutsmek
@@ -2038,8 +2002,8 @@ Grabba Dragga
 -2
 3
 CLEAVE 2, LANCE
-Made a charge move this turn: Grabba Dragga +1 to wound (Lance)
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+Charged this turn: Grabba Dragga +1 to Wound rolls (Lance)
+Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 Big Mek Dakkarig
 Dreadherder
 Stompy Feet
@@ -2048,9 +2012,9 @@ Stompy Feet
 6
 -1
 1
-Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
-Picked by the Dreadherder for its own unit: re-roll hit rolls of 1 this turn
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+Within 3" of it · Selected by it: Re-roll Hit rolls of 1 (Dreadherder)
+If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
+Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 Big Mek Dakkarig
 Cybork Boosta
 Stompy Feet
@@ -2059,9 +2023,9 @@ Stompy Feet
 6
 -1
 1
-Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
-Picked by the Dreadherder: re-roll hit rolls of 1 this turn
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
+Within 3" of Big Mek · Selected by Big Mek: Re-roll Hit rolls of 1 (Dreadherder)
+Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 Big Mek in Mega Armour
 Supa-glowy Fing
 Power Klaw
@@ -2079,7 +2043,7 @@ Kustom Choppa
 -2
 2
 CLEAVE 2
-Made a charge move this turn: +3 A, +2 S (Might is Right)
+Charged this turn: +3 A, +2 S (Might is Right)
 Mek
 + Tankbustas
 ×2 units
@@ -2152,10 +2116,10 @@ Kan Klaw×6
 8
 -2
 3
-vs units with no T 7+ models: +1 to hit rolls (Spiteful Power Trip)
-Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
-Picked by the Dreadherder: re-roll hit rolls of 1 this turn
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+The target has no model with T 7+: +1 to Hit rolls (Spiteful Power Trip)
+If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
+Within 3" of Big Mek · Selected by Big Mek: Re-roll Hit rolls of 1 (Dreadherder)
+Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 
 ######## abilities · MELEE Abilities
 Wazdakka Gutsmek
@@ -3991,7 +3955,7 @@ WHEN TARGETED
 After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn
 Riled up: 5+ INV
 ALL ATTACKS
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 RANGED WEAPONS
 Range
 A
@@ -4045,7 +4009,7 @@ Grabba Dragga
 -2
 3
 CLEAVE 2, LANCE
-Made a charge move this turn: Grabba Dragga +1 to wound (Lance)
+Charged this turn: Grabba Dragga +1 to Wound rolls (Lance)
 ABILITIES
 Turbo Engine
 - Throttlerokkit Shokka Engine
@@ -4130,9 +4094,9 @@ Lone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK)
 1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
 Riled up: 5+ INV
 ALL ATTACKS
-Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
-Picked by the Dreadherder for its own unit: re-roll hit rolls of 1 this turn
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+Within 3" of it · Selected by it: Re-roll Hit rolls of 1 (Dreadherder)
+If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
+Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 RANGED WEAPONS
 Range
 A
@@ -4149,7 +4113,7 @@ Blitzkannon
 -2
 2
 IGNORES COVER, LETHAL HITS: NON-MONSTER/VEHICLE
-A +6 vs non-MONSTER/VEHICLE targets, in your Shooting phase (Blitz Dem Gitz!)
+A +6 The target: not MONSTER/VEHICLE (Blitz Dem Gitz!)
 Multi-busta Launcha
 24"
 6
@@ -4158,7 +4122,8 @@ Multi-busta Launcha
 -2
 3
 IGNORES COVER, LETHAL HITS
-Riled up: [SUSTAINED HITS 1] (Even More Dakka) · [ASSAULT] (Waaagh!)
+Riled up: [SUSTAINED HITS 1] (Even More Dakka)
+Riled up: [ASSAULT] (Waaagh!)
 MELEE WEAPONS
 A
 WS
@@ -4248,9 +4213,9 @@ WHEN TARGETED
 1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
 Riled up: 5+ INV
 ALL ATTACKS
-Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
-Picked by the Dreadherder: re-roll hit rolls of 1 this turn
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
+Within 3" of Big Mek · Selected by Big Mek: Re-roll Hit rolls of 1 (Dreadherder)
+Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 RANGED WEAPONS
 Range
 A
@@ -4267,7 +4232,7 @@ Blitzkannon
 -2
 2
 IGNORES COVER, LETHAL HITS: NON-MONSTER/VEHICLE
-A +6 vs non-MONSTER/VEHICLE targets, in your Shooting phase (Blitz Dem Gitz!)
+A +6 The target: not MONSTER/VEHICLE (Blitz Dem Gitz!)
 Multi-busta Launcha
 24"
 6
@@ -4276,7 +4241,8 @@ Multi-busta Launcha
 -2
 3
 IGNORES COVER, LETHAL HITS
-Riled up: [SUSTAINED HITS 1] (Even More Dakka) · [ASSAULT] (Waaagh!)
+Riled up: [SUSTAINED HITS 1] (Even More Dakka)
+Riled up: [ASSAULT] (Waaagh!)
 MELEE WEAPONS
 A
 WS
@@ -4385,10 +4351,11 @@ Tellyport Blasta
 -2
 3
 BLAST 1, IGNORES COVER, ASSAULT, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS
-Riled up: [SUSTAINED HITS 1] (More Dakka) · +3" range (Dakka! Dakka! Dakka!)
+Riled up: [SUSTAINED HITS 1] (More Dakka)
+Riled up: +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to wound rolls vs non-MONSTER/VEHICLE targets
-1CP Glowin’ Dakka: +1 AP vs targets within 9"
+1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
+1CP Glowin’ Dakka: +1 AP, If (see the rule)
 1CP Never Enough Dakka: [SUSTAINED HITS 1]
 MELEE WEAPONS
 A
@@ -4495,11 +4462,11 @@ Kustom Shoota
 0
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, ASSAULT
-Boss’ Ammo Runt used (your Shooting phase, when selected to shoot): +1 to hit rolls
+Once per battle · If it uses this ability: +1 to Hit rolls (Boss’ Ammo Runt)
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to wound rolls vs non-MONSTER/VEHICLE targets
-1CP Glowin’ Dakka: +1 AP vs targets within 9"
+1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
+1CP Glowin’ Dakka: +1 AP, If (see the rule)
 1CP Never Enough Dakka: [SUSTAINED HITS 1]
 MELEE WEAPONS
 A
@@ -4514,7 +4481,7 @@ Kustom Choppa
 -2
 2
 CLEAVE 2
-Made a charge move this turn: +3 A, +2 S (Might is Right)
+Charged this turn: +3 A, +2 S (Might is Right)
 ABILITIES
 Boss’ Ammo Runt
 Once per battle, per unit
@@ -4663,10 +4630,10 @@ Rokkit pistol×2
 CLOSE-QUARTERS, ASSAULT, IGNORES COVER
 WHOLE UNIT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
-Your Shooting phase, this unit or the target within range of an objective: can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
+This unit or the target within range of an objective: Re-roll Hit rolls of 1 (Wreckin’ and Lootin’)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to wound rolls vs non-MONSTER/VEHICLE targets
-1CP Glowin’ Dakka: +1 AP vs targets within 9"
+1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
+1CP Glowin’ Dakka: +1 AP, If (see the rule)
 1CP Never Enough Dakka: [SUSTAINED HITS 1]
 MELEE WEAPONS
 A
@@ -4843,11 +4810,12 @@ LETHAL HITS: NON-MONSTER/VEHICLE, SUSTAINED HITS 1, ASSAULT, RAPID FIRE 1, IGNOR
 2
 HAZARDOUS, ASSAULT, RAPID FIRE 1, IGNORES COVER
 WHOLE UNIT
-Your Shooting phase, this unit or the target within range of an objective: +1 AP (Finderz Keeperz) · can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
+This unit or the target within range of an objective: +1 AP (Finderz Keeperz)
 Riled up: +3" range (Dakka! Dakka! Dakka!)
+This unit or the target within range of an objective: Re-roll Hit rolls of 1 (Wreckin’ and Lootin’)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to wound rolls vs non-MONSTER/VEHICLE targets
-1CP Glowin’ Dakka: +1 AP vs targets within 9"
+1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
+1CP Glowin’ Dakka: +1 AP, If (see the rule)
 1CP Never Enough Dakka: [SUSTAINED HITS 1]
 MELEE WEAPONS
 A
@@ -4971,8 +4939,8 @@ Grot Blasta×10
 CLOSE-QUARTERS, ASSAULT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to wound rolls vs non-MONSTER/VEHICLE targets
-1CP Glowin’ Dakka: +1 AP vs targets within 9"
+1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
+1CP Glowin’ Dakka: +1 AP, If (see the rule)
 1CP Never Enough Dakka: [SUSTAINED HITS 1]
 MELEE WEAPONS
 A
@@ -5080,7 +5048,7 @@ Slugga×3
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
-Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
+If (see the rule): +1 to Hit rolls (Deff from Above)
 Riled up: [ASSAULT] (Waaagh!)
 MELEE WEAPONS
 A
@@ -5168,10 +5136,10 @@ WHEN TARGETED
 1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
 Riled up: 5+ INV
 ALL ATTACKS
-vs units with no T 7+ models: +1 to hit rolls (Spiteful Power Trip)
-Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
-Picked by the Dreadherder: re-roll hit rolls of 1 this turn
-Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+The target has no model with T 7+: +1 to Hit rolls (Spiteful Power Trip)
+If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
+Within 3" of Big Mek · Selected by Big Mek: Re-roll Hit rolls of 1 (Dreadherder)
+Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 RANGED WEAPONS
 Range
 A
