@@ -110,24 +110,24 @@
   "kind": "code",
   "where": "unitMods",
   "judgement": {
-   "code": "function unitMods(u, kind){\n  const A = army(), out = [], srcs = dmSources(A, u);\n  const of = g => srcs.filter(S => S.grp === g);\n  const core = [];\n  // (Lance for its [LANCE] weapons; Plunging Fire for a TOWERING unit, not AIRCRAFT: BOXES played, the Damage tab's own)\n  const played = (name, text) => { const key = DM_KEY.c(name, text), o = (D.boxes || {})[key]; return o && o.played ? { grp:'unit', name, rule:name, key, core:true } : null; };\n  if([].concat(u.ranged || [], u.melee || []).some(w => (w.kw || []).some(k => /^lance$/i.test(k))) && D.rules.Lance) core.push(played('Lance', D.rules.Lance));\n  if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) core.push(played('Plunging Fire', D.rules['Plunging Fire']));\n  const dmg = (u.abilities || []).filter(ab => /^Damaged: /i.test(ab.name)).map(ab => ({ grp:'unit', name:ab.name, key:DM_KEY.a(ab), ab, src:u, damaged:true }));\n  // (the core stratagems, every unit's, are on the Stratagems tab: the footnotes name the list's detachments' stratagems)\n  const listStrat = S => !S.strat || (S.s && S.s.src !== 'Core');\n  for(const S of of('unit').filter(S => !S.core).concat(dmg, of('unit').filter(S => S.core).map(S => Object.assign({ rule:S.name }, S)), of('army'), core.filter(Boolean), of('other'), of('strat')).filter(listStrat)){\n    const o = (D.boxes || {})[S.key] || {};\n    for(const b of o.b || []){\n      if(S.reachOnly ? !(b.reach && dmReaches(b.reach, u)) : b.reach ? !dmReaches(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;\n      if(b.kind !== 'all' && b.kind !== kind) continue;\n      const m = fnLine(S, b, u, kind, S.ab);\n      if(m) out.push(m);\n    }\n  }\n  return out;\n}"
+   "code": "function unitMods(u, kind){\n  const A = army(), out = [], srcs = dmSources(A, u);\n  const of = g => srcs.filter(S => S.grp === g);\n  const core = [];\n  // (Lance for its [LANCE] weapons; Plunging Fire for a TOWERING unit, not AIRCRAFT: BOXES played, the Damage tab's own)\n  const played = (name, text) => { const key = DM_KEY.c(name, text), o = (D.boxes || {})[key]; return o && o.played ? { grp:'unit', name, rule:name, key, core:true } : null; };\n  if([].concat(u.ranged || [], u.melee || []).some(w => (w.kw || []).some(k => /^lance$/i.test(k))) && D.rules.Lance) core.push(played('Lance', D.rules.Lance));\n  if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) core.push(played('Plunging Fire', D.rules['Plunging Fire']));\n  const dmg = (u.abilities || []).filter(ab => /^Damaged: /i.test(ab.name)).map(ab => ({ grp:'unit', name:ab.name, key:DM_KEY.a(ab), ab, src:u, damaged:true }));\n  // (the core stratagems, every unit's, are on the Stratagems tab: the footnotes name the list's detachments' stratagems)\n  const listStrat = S => !S.strat || (S.s && S.s.src !== 'Core');\n  for(const S of of('unit').filter(S => !S.core).concat(dmg, of('unit').filter(S => S.core).map(S => Object.assign({ rule:S.name }, S)), of('army'), core.filter(Boolean), of('other'), of('strat')).filter(listStrat)){\n    const o = (D.boxes || {})[S.key] || {};\n    for(const b of o.b || []){\n      if(S.reachOnly ? !(b.reach && dmReaches(b.reach, u)) : b.reach ? !dmReaches(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;\n      if(b.kind !== 'all' && b.kind !== kind) continue;\n      const m = fnLine(S, b, u, kind, S.ab);\n      if(m) out.push(m);\n    }\n    // (words about its attacks no catalogue effect reads, BOXES nc atk: \"not counted here: see the rule\", the name opening them; not\n    // another unit's (its words may not reach this one), not a Damaged band's (its band says so))\n    if(!S.damaged && S.grp !== 'other' && (o.nc || []).some(x => x.atk) && !out.some(x => x.key === S.key && x.ncLine)) out.push(Object.assign({ kind:'all', when:'', note:FN_NC, who:'', from:S.name, key:S.key, box:null, ncLine:true },\n      S.rule ? { rule:S.rule } : {}, S.strat ? { strat:S.strat, cp:S.cp } : {}));\n  }\n  return out;\n}"
   },
   "source": {
    "implements": "which footnotes a unit gets, each a box of data.js BOXES (made by script from GW's words): the sources the Damage tab gives it (dmSources: its army and detachment rules, its own abilities, its weapons' core abilities, the boxes of other units of the list that reach it, the detachments' stratagems it can be the TARGET of; not the core stratagems, every unit's), its Damaged bands, Lance for its [LANCE] weapons (24.24), Plunging Fire for a TOWERING unit that is not AIRCRAFT (22.05, 23.03); a box that reaches other units only where it reaches this one (its own aura too, 22.01; not one \"other\" friendly units), of this kind of attack"
   },
-  "key": "3a3946e4943c8022"
+  "key": "ad13100c35a388a0"
  },
  {
   "army": "code",
   "kind": "code",
   "where": "fnLine",
   "judgement": {
-   "code": "function fnLine(S, b, u, kind, ab){\n  const E = WH_EFFECTS, sc = b.scope || {};\n  const ws = sc.weapon || sc.wkw || sc.part ? fnWeapons(u, kind, sc) : null;\n  if(ws && !ws.length) return null;   // (for weapons this kind of attack has not)\n  // (not an effect the list printed into the weapons, marked + there; nor a weapon ability every weapon it reaches has already: Waaagh!'s\n  // [ASSAULT] for a unit whose ranged weapons all have it)\n  const its = ws || weaponItems(kind === 'ranged' ? u.ranged || [] : u.melee || []);\n  const hasAll = l => /^\\[.+\\]$/.test(l) && its.length && its.every(it => it.profiles.every(w => (w.kw || []).some(k => '[' + String(k).toUpperCase() + ']' === l)));\n  const baked = S.baked || [], keep = fx => (fx || []).filter(([id, p]) => !dmBaked(baked, id, p) && !hasAll(E.fxLabel([[id, p]])));\n  // (a keyword or wargear of the unit the box needs, \"If this model has the TOZEENTCH keyword\": the unit's keywords and weapons say it)\n  const wn = [].concat(u.ranged || [], u.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase());\n  if((b.on || []).some(([id, p]) => (id === 'selfKw' && !hasKw(u, p)) || (id === 'selfGear' && !p.every(g => wn.some(n => n.startsWith(String(g).toLowerCase())))))) return null;\n  // (the unit that gives it: its name, or the model of an attached unit whose ability it is)\n  const gab = S.src && S.src !== u ? (S.src.abilities || []).find(x => x.name === S.name) : null;\n  const giver = S.src && S.src !== u ? (gab && gab.who && S.src.leads && charsOf(S.src).some(c => c.name === gab.who) ? gab.who : S.src.short || S.src.name) : '';\n  const own = S.grp === 'unit' && b.mark === 'aura';\n  // (none: every attack of its kind; a stratagem's line names it with its cost instead)\n  // (a stratagem's one phase, from its derived phases and turn: \"Your Shooting phase\", \"Fight phase\", the detachment's line says it once)\n  const sPh = S.s && (S.s.phases || []).length === 1 ? (T => (T === 'your' ? 'Your ' : T === 'opp' ? 'Your opponent’s ' : '') + PHASE_NAME[S.s.phases[0]] + ' phase')(phTurn(S.s, S.s.phases[0])) : '';\n  const when = [sPh, (b.on || []).map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ')].filter(Boolean).join(', ') || (S.strat ? '' : b.kind === 'ranged' ? 'Every ranged attack' : b.kind === 'melee' ? 'Every melee attack' : 'Every attack');\n  const part = x => x && x.fx && x.fx.length ? ' (' + (x.on || []).map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ') + ': ' + E.fxLabel(x.fx) + ')' : '';\n  let note, fx = null;\n  if(b.pick){ const ps = b.pick.map(p => Object.assign({}, p, { fx:keep(p.fx) })).filter(p => p.fx.length);\n    if(!ps.length) return null;\n    const bOn = new Set((b.on || []).map(x => JSON.stringify(x)));\n    note = ps.map(p => { const pon = (p.on || []).filter(x => !bOn.has(JSON.stringify(x)));\n      return (p.name !== E.fxLabel(p.fx) ? p.name + ': ' : '') + E.fxLabel(p.fx) + (pon.length ? ' (' + pon.map(([id, v]) => fnCond(id, v, u, giver, own)).join(' · ') + ')' : '') + part(p.part); }).join(' · ');\n    note = 'one of: ' + note; }\n  else { fx = keep(b.fx); if(!fx.length) return null; note = E.fxLabel(fx) + part(b.part); }\n  const who = ws ? ws.map(itemName).join(', ') : sc.models === 'char' ? 'CHARACTER models' : sc.models === 'nonchar' ? 'Models (not CHARACTER)' : sc.models === 'one' ? 'One model' :\n    sc.part ? sc.part + ' models' : sc.models === 'model' && ab && ab.who && u.leads ? ab.who : '';\n  const m = { kind:b.kind, when, note, who, from:S.name, box:b, key:S.key };\n  if(S.rule) m.rule = S.rule;\n  if(S.strat){ m.strat = S.strat; m.cp = S.cp; }\n  if(S.src && S.src !== u) m.src = S.src;\n  if(S.damaged) m.damaged = true;\n  // a box for one weapon's characteristics, nothing else: that weapon's row shows it (\"8 (+6)\", \"6/7\"), its condition under it\n  // (not a stratagem's, nor an ability's the unit uses, \"if it uses this ability\": the player's to use, as a one-off is: oneOffMod)\n  if(fx && ws && ws.length === 1 && !ws[0].group && !S.damaged && !S.strat && !(b.on || []).some(x => x[0] === 'used') && fx.every(([id]) => FN_ROW[id] || FN_SET[id])){\n    m.weapon = ws[0].profiles[0].name; m.set = Object.fromEntries(fx.map(([id, p]) => FN_ROW[id] ? [FN_ROW[id], '+' + String(p).toUpperCase()] : [FN_SET[id], String(p)])); m.note = ''; m.who = ''; }\n  return m;\n}"
+   "code": "function fnLine(S, b, u, kind, ab){\n  const E = WH_EFFECTS, sc = b.scope || {};\n  const ws = sc.weapon || sc.wkw || sc.part ? fnWeapons(u, kind, sc) : null;\n  if(ws && !ws.length) return null;   // (for weapons this kind of attack has not)\n  // (not an effect the list printed into the weapons, marked + there; nor a weapon ability every weapon it reaches has already: Waaagh!'s\n  // [ASSAULT] for a unit whose ranged weapons all have it)\n  const its = ws || weaponItems(kind === 'ranged' ? u.ranged || [] : u.melee || []);\n  const hasAll = l => /^\\[.+\\]$/.test(l) && its.length && its.every(it => it.profiles.every(w => (w.kw || []).some(k => '[' + String(k).toUpperCase() + ']' === l)));\n  // (nor, for melee attacks, an effect only ranged attacks have: range, a set BS, [ASSAULT], [HEAVY], [INDIRECT FIRE], [PISTOL])\n  const baked = S.baked || [], keep = fx => (fx || []).filter(([id, p]) => !dmBaked(baked, id, p) && !hasAll(E.fxLabel([[id, p]])) && !(kind === 'melee' && FN_RANGED.has(id)));\n  // (a keyword or wargear of the unit the box needs, \"If this model has the TOZEENTCH keyword\": the unit's keywords and weapons say it)\n  const wn = [].concat(u.ranged || [], u.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase());\n  if((b.on || []).some(([id, p]) => (id === 'selfKw' && !hasKw(u, p)) || (id === 'selfGear' && !p.every(g => wn.some(n => n.startsWith(String(g).toLowerCase())))))) return null;\n  // (the unit that gives it: its name, or the model of an attached unit whose ability it is)\n  const gab = S.src && S.src !== u ? (S.src.abilities || []).find(x => x.name === S.name) : null;\n  const giver = S.src && S.src !== u ? (gab && gab.who && S.src.leads && charsOf(S.src).some(c => c.name === gab.who) ? gab.who : S.src.short || S.src.name) : '';\n  const own = S.grp === 'unit' && b.mark === 'aura';\n  // (none: every attack of its kind; a stratagem's line names it with its cost instead)\n  // (a stratagem's one phase, from its derived phases and turn: \"Your Shooting phase\", \"Fight phase\", the detachment's line says it once)\n  const sPh = S.s && (S.s.phases || []).length === 1 ? (T => (T === 'your' ? 'Your ' : T === 'opp' ? 'Your opponent’s ' : '') + PHASE_NAME[S.s.phases[0]] + ' phase')(phTurn(S.s, S.s.phases[0])) : '';\n  // (its conditions, each said; one that is only GW's words, quoted, is said too beside another, so the line is never wider than GW's\n  // rule. A box whose only conditions are quoted says \"If (see the rule)\" (FN_IF), the rule's name opening its words: the owner's\n  // decision, 31 Oct, never shown as always on. \"Every attack\": no condition at all, in the box or its options)\n  const quoted = ([id]) => !!(E.COND[id] && E.COND[id].quoted), on = b.on || [];\n  const conds = on => (on || []).map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ');\n  const onlyQ = on.length && on.every(quoted);\n  const anyPickOn = (b.pick || []).some(p => (p.on || []).length || p.part);\n  const when = [sPh, onlyQ ? FN_IF : conds(on)].filter(Boolean).join(', ') || (S.strat || anyPickOn ? '' : b.kind === 'ranged' ? 'Every ranged attack' : b.kind === 'melee' ? 'Every melee attack' : 'Every attack');\n  const part = x => x && x.fx && x.fx.length ? ' (' + (conds(x.on) ? conds(x.on) + ': ' : '') + E.fxLabel(x.fx) + ')' : '';\n  let note, fx = null;\n  if(b.pick){ const ps = b.pick.map(p => Object.assign({}, p, { fx:keep(p.fx) })).filter(p => p.fx.length);\n    if(!ps.length) return null;\n    const bOn = new Set((b.on || []).map(x => JSON.stringify(x)));\n    note = ps.map(p => { const pon = (p.on || []).filter(x => !bOn.has(JSON.stringify(x)));\n      return (p.name !== E.fxLabel(p.fx) ? p.name + ': ' : '') + E.fxLabel(p.fx) + (conds(pon) ? ' (' + conds(pon) + ')' : '') + part(p.part); }).join(' · ');\n    note = 'one of: ' + note; }\n  else { fx = keep(b.fx); if(!fx.length) return null; note = E.fxLabel(fx) + part(b.part); }\n  const who = ws ? [...new Set(ws.map(itemName))].join(', ') : sc.models === 'char' ? 'CHARACTER models' : sc.models === 'nonchar' ? 'Models (not CHARACTER)' : sc.models === 'one' ? 'One model' :\n    sc.part ? sc.part + ' models' : sc.models === 'model' && ab && ab.who && u.leads ? ab.who : '';\n  const m = { kind:b.kind, when, note, who, from:S.name, box:b, key:S.key };\n  if(S.rule) m.rule = S.rule;\n  if(S.strat){ m.strat = S.strat; m.cp = S.cp; }\n  if(S.src && S.src !== u) m.src = S.src;\n  if(S.damaged) m.damaged = true;\n  // a box for one weapon's characteristics, nothing else: that weapon's row shows it (\"8 (+6)\", \"6/7\"), its condition under it\n  // (not a stratagem's, nor an ability's the unit uses, \"if it uses this ability\": the player's to use, as a one-off is: oneOffMod)\n  if(fx && ws && ws.length === 1 && !ws[0].group && !S.damaged && !S.strat && !(b.on || []).some(x => x[0] === 'used') && fx.every(([id]) => FN_ROW[id] || FN_SET[id])){\n    m.weapon = ws[0].profiles[0].name; m.set = Object.fromEntries(fx.map(([id, p]) => FN_ROW[id] ? [FN_ROW[id], '+' + String(p).toUpperCase()] : [FN_SET[id], String(p)])); m.note = ''; m.who = ''; }\n  return m;\n}"
   },
   "source": {
    "implements": "one box as a footnote: its conditions' labels (fnCond), its effects' labels (effects.js fxLabel; a pick's options, its part), the weapons or models its scope names (none of this kind: no footnote), less what the list printed into the weapons (dmBaked, marked +); none where the unit lacks the keyword or wargear it needs (selfKw, selfGear); a box for one weapon's A, S, AP or D only, not a Damaged band's or a stratagem's, is that weapon's row value (\"8 (+6)\", \"A 6\"); a stratagem's one phase from its derived phases and turn"
   },
-  "key": "4ff6ccb1e6b4dd0a"
+  "key": "0ea36db81db25e42"
  },
  {
   "army": "code",
@@ -355,7 +355,7 @@
   "kind": "code",
   "where": "app.html fnLine · quoted conditions",
   "judgement": {
-   "rule": "A condition that is only GW's words, quoted (COND q, anyOf), is not said in a footnote: the line is its effect and its rule, whose name opens the words (the owner, 31 Oct). Numbers that leave the screen with it: 9\" (Glowin' Dakka, Strength from Exile), 12\" (Plunging Fire, Vengeance for the Omnissiah …), 18\", 6\", 5+ (scratchpad/lines-work/changes.md). Two boxes of one rule told apart only by quoted words now read alike but for their effects (Murderous Imperative)."
+   "rule": "Every condition of a box is said, GW's quoted words too beside a catalogue label; a pick's or part's own always. A box whose conditions are only GW's quoted words says \"If (see the rule)\" (FN_IF), the rule's name opening them. Numbers behind that marker: Plunging Fire 12\", Glowin' Dakka 9\", Strength from Exile 9\", Vengeance for the Omnissiah 12\", 18\" / 6\" / 5+ in a few Healybois and Navigator lines (changes.md). L5 fails a quoted condition left out beside a said one."
   },
   "source": {
    "code": "app.html fnLine",
@@ -383,5 +383,75 @@
    "code": "effects.js KW",
    "mirrored": "verify/lines.js L5, L8"
   }
+ },
+ {
+  "kind": "code",
+  "where": "app.html fnLine · \"Every attack\"",
+  "judgement": {
+   "rule": "Only when neither the box nor its options has a condition; a rule the unit uses (\"you can use this ability\", extractor) says \"If it uses this ability\" (Try Dat Button!)."
+  },
+  "source": {
+   "mirrored": "verify/lines.js"
+  }
+ },
+ {
+  "kind": "code",
+  "where": "app.html fnLine · ranged-only effects",
+  "judgement": {
+   "rule": "For melee attacks no effect only ranged attacks have (range, a set BS, [ASSAULT], [HEAVY], [INDIRECT FIRE], [PISTOL]): Kindred Sorcery's Imbued Manifestation. A weapon named once."
+  },
+  "source": {
+   "mirrored": "verify/lines.js"
+  }
+ },
+ {
+  "kind": "code",
+  "where": "app.html modGroupLines / unitWeapons · grouping",
+  "judgement": {
+   "rule": "Lines grouped by condition and source; a line with no condition said is its own. LG checks the drawn lines."
+  },
+  "source": {
+   "mirrored": "verify/lines.js"
+  }
+ },
+ {
+  "kind": "code",
+  "where": "app.html unitMods · \"see the rule\" lines",
+  "judgement": {
+   "rule": "A source of the unit (not another unit's, not a Damaged band) with words about its attacks no catalogue effect reads (BOXES nc atk) has one line \"not counted here: see the rule\" (Flesh Hunger, Machine Superiority)."
+  },
+  "source": {
+   "mirrored": "verify/lines.js"
+  }
+ },
+ {
+  "kind": "code",
+  "where": "verify/effects-extract.js · review fixes",
+  "judgement": {
+   "rule": "An effect then a rare mechanic (\"… and you can only select one of the C'tan Powers weapons …\", NC selectOne) split; \"a model in this model's unit\" is the unit (Prey of the Blood God); \"you can use this ability\" gives every box the used condition; a table's condition every row has is the box's. BOXES changes: Tesseract Vault Damaged, Prey of the Blood God, Try Dat Button!, Kindred Sorcery, atk on nc entries."
+  },
+  "source": {
+   "mirrored": "verify/lines.js",
+   "commit": "effects: boxes never wider than GW's rule"
+  }
+ },
+ {
+  "kind": "review-damage-numbers",
+  "where": "Damage tab, one box at a time (lines-work/dmsingle.js)",
+  "judgement": {
+   "check": "13038 unit × phase × box cases: 13037 the same as main. Changed: Karanak's Prey of the Blood God, fight (its wound re-roll now on the Flesh Hounds' weapons too, GW's \"a model in this model's unit\"); new: Szarekh's Damaged box (shooting, fight). As the tab opens: 0 of 642 change."
+  },
+  "source": {
+   "main": "lines-work/dms-main.json",
+   "branch": "lines-work/dms-br.json"
+  }
+ },
+ {
+  "kind": "review-label",
+  "where": "verify/derive.js label-setup-trigger, \"until the end of the battle\"",
+  "judgement": {
+   "check": "Singular Purpose (6 Norn units, 2 datasheet rows) and Hyper-adaptations (Invasion Fleet) gain Movement (Fire Overwatch)."
+  },
+  "source": {}
  }
 ]
