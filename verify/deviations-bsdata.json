@@ -2801,6 +2801,116 @@
   "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html, ABILITIES: \"Neurocytes: While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.\""
  },
  {
+  "army": "basic-bitch",
+  "unit": "the-red-terror",
+  "field": "kw",
+  "app": "Burrower",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword BURROWER; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Red-Terror.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "the-red-terror",
+  "field": "kw",
+  "app": "",
+  "source": "Burrowers",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Burrowers; GW’s datasheet does not print that keyword. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Red-Terror.html: KEYWORDS (no BURROWERS).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "the-swarmlord-tyrant-guard",
+  "field": "rules",
+  "app": "",
+  "source": "Feel No Pain 5+",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "hive-tyrant-tyrant-guard",
+  "field": "rules",
+  "app": "",
+  "source": "Feel No Pain 5+",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "biovores",
+  "field": "kw",
+  "app": "Biovores",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword BIOVORES; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "biovores",
+  "field": "kw",
+  "app": "",
+  "source": "Biovore",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Biovore; GW’s datasheet does not print that keyword. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS (no BIOVORE).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "haruspex",
+  "field": "stats.base",
+  "app": "Haruspex: 120×92mm Oval",
+  "source": "Haruspex: 120x92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Haruspex: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3817: \"Haruspex  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: 120×92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "psychophage",
+  "field": "stats.base",
+  "app": "Psychophage: 120×92mm Oval",
+  "source": "Psychophage: 120x92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Psychophage: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3835: \"Psychophage  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: 120×92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "tyrannofex",
+  "field": "stats.base",
+  "app": "Tyrannofex: 120×92mm Oval",
+  "source": "Tyrannofex: 120x92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Tyrannofex: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3857: \"Tyrannofex  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: 120×92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "tyrannofex",
+  "field": "kw",
+  "app": "Frame",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword FRAME; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "spore-mines-biovore",
+  "field": "kw",
+  "app": "",
+  "source": "Reference",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Reference; GW’s datasheet does not print that keyword. GW wins.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Spore-Mines.html: KEYWORDS (no REFERENCE).",
+  "by": "verify/from-json.js"
+ },
+ {
   "army": "catalog",
   "unit": "adeptus-custodes/trajann-valoris",
   "field": "ability[Supreme Commander]",
