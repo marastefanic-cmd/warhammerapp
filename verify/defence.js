@@ -113,10 +113,10 @@ stats.boxes = nBox; stats.notCounted = nDnc;
 
 // ---- DC every condition GW's words put on a defence box is on it (verify/coverage.js: option, once per, if / while / unless, within N",
 // the kind of attack), said or quoted ("If (see the rule)"), or its sentence is listed not counted ----
-{ const Cv = require('./coverage'); let n = 0;
+{ const Cv = require('./coverage'), CTX = { V:require('./derive').vocab(D), kws:D.armies.flatMap(a => a.units.map(u => u.kw || [])).concat(Object.values(D.datasheets || {}).map(x => x.kw || [])) }; let n = 0;
   for(const [key, o] of Object.entries(T)){ const src = S.get(key); if(!src) continue;
     for(const g of Cv.srcGaps(o, src)) fail('DC', key + ' ' + o.n, g);
-    for(const b of o.d || []){ n++; for(const g of Cv.gaps(b, src, 'defence', src.others)) fail('DC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
+    for(const b of o.d || []){ n++; for(const g of Cv.gaps(b, src, 'defence', src.others, CTX)) fail('DC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
   stats.covered = n; }
 // ---- D6 the code ----
 { const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');

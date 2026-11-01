@@ -202,9 +202,9 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
   stats.labels = n; }
 // LC every condition GW's words put on an attack box is on it (verify/coverage.js, as verify/defence.js DC): its option, once per, each
 // "if / while / unless" clause, each "within N"", the kind of attack; said, quoted ("If (see the rule)"), or listed not counted
-{ const Cv = require('./coverage'), Tw = M.build(D), Sw = M.sources(D); let n = 0;
+{ const Cv = require('./coverage'), Tw = M.build(D), Sw = M.sources(D), CTX = { V:require('./derive').vocab(D), kws:D.armies.flatMap(a => a.units.map(u => u.kw || [])).concat(Object.values(D.datasheets || {}).map(x => x.kw || [])) }; let n = 0;
   for(const [key, o] of Object.entries(Tw)){ const src = Sw.get(key); if(!src || o.played) continue;
-    for(const b of o.b || []){ n++; for(const g of Cv.gaps(b, src, 'attack', src.others)) fail('LC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
+    for(const b of o.b || []){ n++; for(const g of Cv.gaps(b, src, 'attack', src.others, CTX)) fail('LC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
   stats.covered = n; }
 // LB the Damaged band: its words are its boxes' effect labels, and "see the rule" where its words have a part not counted or no box
 { let n = 0;
