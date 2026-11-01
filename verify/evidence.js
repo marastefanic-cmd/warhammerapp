@@ -137,6 +137,7 @@ for(const [key, src] of S){
     if(src.type === 'strat' && /\bthat was just destroyed\b/.test(E.norm(src.target))) continue;
     if(ncQ.some(q => q.includes(n.slice(0, 40)))) continue;
     if(/\bselect one (?:visible )?enemy unit\b/.test(E.norm(u.prevS || '')) && /\b(?:models in that unit|that unit's)\b/.test(n) && !/\btargets? that (?:enemy )?unit\b/.test(n)) continue;
+    if(X.enemyLeadThat(u, n)) continue;   // (a bullet about the attacks of the enemy unit its line names: the defence side)
     for(const [id, p] of X.findFx(n).fx) if(!(src.type === 'core' && src.wkw && E.FX[id] && E.FX[id].label(p) === '[' + src.wkw + ']') && !have.includes(id + ':' + p) && !have.some(h => h.startsWith(id + ':'))) fail('G4', key + ' ' + src.name, id + ' ' + p + ' in “' + u.s.slice(0, 90) + '” is in no box');
   }
 }

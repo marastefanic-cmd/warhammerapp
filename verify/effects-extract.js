@@ -37,6 +37,12 @@ const DEFENCE = [/\beach time an? (?:enemy )?(?:ranged |melee |psychic )?attack 
 // you can select one of the following:" is a pick for this unit)
 const defenceLead = u => { if(!u.bullet || !/:\s*$/.test(String(u.lead || ''))) return false; const last = norm(u.lead).split(/,\s*|(?<=[.!?])\s+/).pop();
   return DEFENCE.some(re => re.test(last)); };
+// a bullet about the attacks of the enemy unit its line names: the line opens "While an enemy unit …:" and the bullet's "that unit" is
+// that enemy unit ("While an enemy unit is within 12" of this model, if that unit is Battle-shocked:" then "- Each time a model in that unit
+// makes an attack, subtract 1 from the Hit roll.", Psychological Saboteur): the defence side, an enemy unit's attacks made worse (foe); a
+// bullet about friendly units' attacks that target it ("Each time a friendly TYRANIDS model makes an attack that targets that unit") is not
+const enemyLeadThat = (u, n) => !!u.bullet && /^while an enemy unit\b/.test(norm(u.lead || '')) && !/\bfriendly\b/.test(norm(u.lead || ''))
+  && /\b(?:a model|models) in that unit\b/.test(n) && !/\bfriendly\b|\btargets? that (?:enemy )?unit\b/.test(n);
 // a sentence that picks one of several ("select one of the following", "select either the X or Y ability")
 const PICK_LEAD = /\b(?:select|choose) one of the (?:following|abilities listed below|doctrina imperatives below)\b|\bcan have:$|\bselect one of the following\b/;
 // how long it lasts (the Damage tab carries a tick from the shooting into the fight)
@@ -326,7 +332,7 @@ function extract(src, ctx){
       if(/\bselect one\b|\bwhile\b/.test(n)) prev = { u, n, fx:[], sc:scopeOf(V, n, ctx.weapons, u.s), kind:kindOf(n), reach:reachOf(V, u.s), on:condsOf(V, u.s, u.lead + (u.ctx ? ' ' + u.ctx : '')) };
       continue;
     }
-    const enemyThat = /\bselect one (?:visible )?enemy unit\b/.test(norm(u.prevS || '')) && /\b(?:models in that unit|that unit's)\b/.test(n) && !/\btargets? that (?:enemy )?unit\b/.test(n);
+    const enemyThat = /\bselect one (?:visible )?enemy unit\b/.test(norm(u.prevS || '')) && /\b(?:models in that unit|that unit's)\b/.test(n) && !/\btargets? that (?:enemy )?unit\b/.test(n) || enemyLeadThat(u, n);
     if(DEFENCE.some(re => re.test(n)) || defenceLead(u) || enemyThat || (prev && prev.defence && (/^if\b/.test(n) || /\bas well\.?$/.test(n)))){ prev = { defence:true }; continue; }
     // continues the sentence before it ("If that attack targets …, add 1 to the Wound roll as well.", "… instead"): its context
     const cont = !!prev && !prev.defence && (/^(?:if|in addition)\b/.test(n) || /\b(?:as well|instead)\.?$/.test(n) || /\bas well if\b/.test(n) || u.paren || u.split || /^(?:that|those) /.test(n)) && (!u.bullet || !!u.prevS);
@@ -492,7 +498,7 @@ function defenceOf(src, us, V, ctx){
     const u = us[i], n = norm(u.s), ln = norm([u.lead || '', u.ctx || ''].join(' '));
     if(!u.bullet && u.first) prev = null;
     if(/^\s*example:/.test(n) || /\bfast dice rolling\b/.test(n)) continue;
-    const enemyThat = /\bselect one (?:visible )?enemy unit\b/.test(norm(u.prevS || '') + ' ' + n) && /\b(?:models in that unit|that unit's)\b/.test(n) && !/\btargets? that (?:enemy )?unit\b/.test(n);
+    const enemyThat = /\bselect one (?:visible )?enemy unit\b/.test(norm(u.prevS || '') + ' ' + n) && /\b(?:models in that unit|that unit's)\b/.test(n) && !/\btargets? that (?:enemy )?unit\b/.test(n) || enemyLeadThat(u, n);
     let inCtx = DEFENCE.some(re => re.test(n)) || defenceLead(u) || DEF_CTX.some(re => re.test(n)) || enemyThat || (u.bullet && !!u.lead && DEFENCE.concat(DEF_CTX).some(re => re.test(norm(u.lead))))
       || (src.type === 'strat' && DEF_CTX.slice(6, 8).some(re => re.test(norm(src.when || ''))))
       || (/^if (?:it|you|they) do(?:es)?\b/.test(n) && DEF_CTX.some(re => re.test(norm(u.prevS || u.lead || ''))));
@@ -551,7 +557,7 @@ function defenceOf(src, us, V, ctx){
     let reach = reachOf(V, u.s) || (u.lead ? reachOf(V, u.lead) : null) || (u.prevS && /^(?:that|those|models in that|until)\b/.test(n) ? reachOf(V, u.prevS) : null);
     let byTag = false;
     if(!reach && src.tagText && /\ba model is affected by this ability\b|\bthat model\b/.test(n)){ reach = reachOf(V, src.tagText); byTag = !!reach; if(byTag && !on.some(x => x[0] === 'selected')) on.push(['selected', true]); }
-    const foe = FOE.test(n) && !/\btargets? (?:this|your|the bearer|that [a-z ]+?) (?:unit|model)\b/.test(n) && src.type !== 'strat';
+    const foe = (FOE.test(n) || enemyLeadThat(u, n)) && !/\btargets? (?:this|your|the bearer|that [a-z ]+?) (?:unit|model)\b/.test(n) && src.type !== 'strat';
     const models = defModels(u.s, on);
     // (Lone Operative, or a defence while within N" of other friendly units: its own, those units are where it is, not who has it)
     if(on.some(x => x[0] === 'nearFriendly') || df.every(([id]) => id === 'loneOp')) reach = null;
@@ -682,4 +688,4 @@ function shape(list, src){
   return final;
 }
 
-module.exports = { extract, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };
+module.exports = { extract, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };
