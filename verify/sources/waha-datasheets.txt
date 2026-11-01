@@ -262,3 +262,4 @@ chaos-daemons Syll-esske
 chaos-daemons The-Masque-Of-Slaanesh
 chaos-daemons Tormentbringer
 chaos-daemons Tranceweaver
+imperial-knights Sir-Hekhtur

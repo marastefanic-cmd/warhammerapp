@@ -105,30 +105,6 @@
   "evidence": "as for A."
  },
  {
-  "ds": "imperial-knights/canis-rex",
-  "kind": "stats",
-  "row": "Sir Hekhtur",
-  "field": "page",
-  "reason": "Wahapedia's Canis Rex page prints one profile (Canis Rex); Sir Hekhtur's profile and weapons come from BSData / New Recruit only (Wahapedia gives him a datasheet page of his own, not in the cache). Not checked against GW: no GW source here.",
-  "evidence": "verify/.cache/waha/ds/imperial-knights_Canis-Rex.html (one profile; no Hekhtur's pistol or close combat weapon rows)."
- },
- {
-  "ds": "imperial-knights/canis-rex",
-  "kind": "ranged",
-  "row": "Hekhtur’s pistol",
-  "field": "page",
-  "reason": "as for Sir Hekhtur's profile: BSData / New Recruit only.",
-  "evidence": "verify/.cache/waha/ds/imperial-knights_Canis-Rex.html."
- },
- {
-  "ds": "imperial-knights/canis-rex",
-  "kind": "melee",
-  "row": "Close combat weapon",
-  "field": "page",
-  "reason": "Sir Hekhtur's close combat weapon: BSData / New Recruit only, as his profile.",
-  "evidence": "verify/.cache/waha/ds/imperial-knights_Canis-Rex.html."
- },
- {
   "ds": "chaos-daemons/brimstone-horrors",
   "kind": "stats",
   "row": "Brimstone Horror",

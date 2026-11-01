@@ -93,7 +93,9 @@ for(const a of D.armies.concat(CATALOG)) for(const u of [...a.units, ...(a.refs 
     if(i < 0) i = parts.length - 1;
     const id = sheetIdOf(i), rn = String(r.name).replace(/ ×\d+$/, '');
     if(pageDev(id, 'stats', rn)) continue;   // (declared: no GW profile of this model on the page)
-    const P = parts[i] && parts[i].page, pr = P && profileOf(P, r.name, id);
+    // (a model with a GW datasheet of its own, which the unit's page does not print: Sir Hekhtur, on his page)
+    const MP = O.modelPages(a.faction, u).find(M => n(M.file.replace(/\.html$/, '').replace(/^[^_]*_/, '')) === n(rn)) || null;
+    const P = MP || (parts[i] && parts[i].page), pr = P && profileOf(P, r.name, id);
     if(!pr){ unchecked.push({ ds:id, kind:'stats', row:r.name, why:P ? 'no profile of this model on ' + P.file : 'no Wahapedia datasheet page' }); continue; }
     for(const [f, g] of STATS){
       if(pr[g] === undefined && f === 'InSv'){ if(r.InSv && nv(r.InSv) !== '-' && !(r.from && r.from.InSv)) differ({ ds:id, kind:'stats', row:String(r.name).replace(/ ×\d+$/, ''), field:f, app:r[f], waha:'–', file:P.file }); counts.stats++; continue; }
@@ -108,9 +110,12 @@ for(const a of D.armies.concat(CATALOG)) for(const u of [...a.units, ...(a.refs 
   // weapons: Range A BS|WS S AP D, and the numbers in its keywords
   for(const kind of ['ranged', 'melee']) for(const r of u[kind] || []){
     if(r.enh) continue;   // (an enhancement's weapon: the list's own, its text checked by verify/texts.js)
-    const i = Math.max(0, partOf(r)), P = parts[i] && parts[i].page, id = sheetIdOf(i), rowName = (r.group ? r.group + ' – ' : '') + r.name;
+    const i = Math.max(0, partOf(r)), id = sheetIdOf(i), rowName = (r.group ? r.group + ' – ' : '') + r.name; let P = parts[i] && parts[i].page;
     if(pageDev(id, kind, rowName)) continue;
-    const w = P && weaponRowOf(P, kind, r, id, rowName), exact = !!w;
+    let w = P && weaponRowOf(P, kind, r, id, rowName);
+    // (a weapon of a model with a GW datasheet of its own, which the unit's page does not print: Sir Hekhtur's pistol, on his page)
+    if (!w) for (const M of O.modelPages(a.faction, u)) { const x = weaponRowOf(M, kind, r, id, rowName); if (x) { w = x; P = M; break; } }
+    const exact = !!w;
     if(!exact){ unchecked.push({ ds:id, kind, row:rowName, why:P ? 'no row of this weapon on ' + P.file : 'no Wahapedia datasheet page' }); continue; }
     for(const [f, g] of [['range', 'range'], ['A', 'A'], [kind === 'ranged' ? 'BS' : 'WS', 'skill'], ['S', 'S'], ['AP', 'AP'], ['D', 'D']]){
       counts.weapons++;

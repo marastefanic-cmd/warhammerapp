@@ -286,8 +286,11 @@ module.exports = function make(ROOT) {
   //   name  GW's spelling of the name where the page spells it otherwise (gwName), else the app's
   function gwWordsOf(faction, u, ab) {
     if (/\b(Enhancement|Upgrade)\b/.test(ab.tag || '') || /^\*?invulnerable save\b/i.test(ab.name)) return null;
-    const P = abilityPage(faction, u, ab); if (!P) return null;
-    const pa = pageAbility(P, ab); if (!pa || pa.kind !== 'text') return null;
+    let P = abilityPage(faction, u, ab); if (!P) return null;
+    let pa = pageAbility(P, ab);
+    // (an ability of a model with a GW datasheet of its own, which the unit's page does not print: Sir Hekhtur's Using Sir Hekhtur)
+    if (!pa) for (const M of modelPages(faction, u)) { const x = pageAbility(M, ab); if (x) { P = M; pa = x; break; } }
+    if (!pa || pa.kind !== 'text') return null;
     const waha = pa.g.text, name = gwName(ab, pa) || ab.name, names = [ab.name, name];
     if (norm(ab.text) === norm(waha)) return { page:P.file, pa, text:ab.text, name, same:true };
     const d = declaredWords(P.file, names, ab.text, waha); if (d >= 0) return { page:P.file, pa, text:ab.text, name, declared:d };
@@ -372,6 +375,13 @@ module.exports = function make(ROOT) {
   const partsOf = (u, faction) => {
     const names = u.leads ? [u.name].concat((u.also || []).map(x => x.name), [u.leads]) : [u.name];
     const out = names.map(nm0 => ({ name:nm0, page:pageFor(faction, nm0) })); out.faction = faction; return out;
+  };
+  // the pages of a unit's models that have a GW datasheet of their own, which no page of the unit's parts prints a profile of (Sir Hekhtur,
+  // a model of BSData's and New Recruit's Canis Rex unit; Wahapedia prints him on his own EPIC HERO datasheet)
+  const modelPages = (faction, u) => {
+    const parts = partsOf(u, faction), pn = x => n(String(x).replace(/ ×\d+$/, ''));
+    return [...new Set((u.stats || []).map(r => String(r.name).replace(/ ×\d+$/, '')))].filter(m => !parts.some(p => pn(p.name) === pn(m))).map(m => {
+      const M = pageFor(faction, m); if (!M || parts.some(p => p.page && (p.page.file === M.file || (p.page.profiles || []).some(x => x.name && pn(x.name) === pn(m))))) return null; return M; }).filter(Boolean);
   };
   const partIx = (parts, r) => parts.length === 1 ? 0 : parts.findIndex(p => p.name === r.who);
 
@@ -563,7 +573,7 @@ module.exports = function make(ROOT) {
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { wordsPass, pageSpells, gwWords, gwWordsOf, declaredWords, DEVW, pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
+  return { modelPages, wordsPass, pageSpells, gwWords, gwWordsOf, declaredWords, DEVW, pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
 };
 module.exports.wahaSectionsOf = wahaSectionsOf;
 module.exports.selectsFrom = selectsFrom;
