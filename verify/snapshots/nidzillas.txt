@@ -2278,6 +2278,10 @@ The Swarmlord
 
 OC 5 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
+WHEN TARGETED
+2
+1CP Savage Roar: Fight phase: −1 to Hit rolls
+1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
 ALL ATTACKS
 Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
 4 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
@@ -2392,6 +2396,10 @@ Hive Tyrant
 
 OC 5 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
+WHEN TARGETED
+2
+1CP Savage Roar: Fight phase: −1 to Hit rolls
+1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
 MELEE WEAPONS
 A
 WS
@@ -2571,9 +2579,11 @@ Norn Assimilator
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
 WHEN TARGETED
-2
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
-1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
+4
+Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
+1CP Savage Roar: Fight phase: −1 to Hit rolls
+1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
+1CP Catalytic Biofortification: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2714,9 +2724,11 @@ Norn Assimilator
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
 WHEN TARGETED
-2
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
-1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
+4
+Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
+1CP Savage Roar: Fight phase: −1 to Hit rolls
+1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
+1CP Catalytic Biofortification: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2856,9 +2868,11 @@ Norn Emissary
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
 WHEN TARGETED
-2
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
-Feel No Pain 4+ against mortal wounds
+4
+Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
+Unnatural Resilience: Feel No Pain 4+ against mortal wounds
+1CP Savage Roar: Fight phase: −1 to Hit rolls
+1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -3010,9 +3024,11 @@ Norn Emissary
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
 WHEN TARGETED
-2
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
-Feel No Pain 4+ against mortal wounds
+4
+Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
+Unnatural Resilience: Feel No Pain 4+ against mortal wounds
+1CP Savage Roar: Fight phase: −1 to Hit rolls
+1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -3157,8 +3173,10 @@ Tyrannofex
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
 WHEN TARGETED
-1
-Once per battle: change the Damage of an attack allocated to it to 0
+3
+Resilient Organism: Once per battle: Damage 0
+1CP Savage Roar: Fight phase: −1 to Hit rolls
+1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ALL ATTACKS

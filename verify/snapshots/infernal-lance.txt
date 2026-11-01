@@ -2409,11 +2409,12 @@ Chaos Cerastus Knight Atrapos
 10
 5+
 WHEN TARGETED
-4
-Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)
-1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
-1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
-Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase) (Mischief Makers)
+5
+Harbingers of Dread: Darkness · 3: Stealth
+Malefic Surge: If (see the rule): one of: 5+ invulnerable save · Feel No Pain 6+
+Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
+1CP Hellforged Construction: Fight phase: AP worsened by 1
+1CP Diabolic Bulwark: Your opponent’s Shooting phase: 4+ invulnerable save
 DAMAGED 1-10 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2560,11 +2561,12 @@ Chaos Cerastus Knight Lancer
 10
 4+
 WHEN TARGETED
-4
-Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)
-1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
-1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
-Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase) (Mischief Makers)
+5
+Harbingers of Dread: Darkness · 3: Stealth
+Malefic Surge: If (see the rule): one of: 5+ invulnerable save · Feel No Pain 6+
+Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
+1CP Hellforged Construction: Fight phase: AP worsened by 1
+1CP Diabolic Bulwark: Your opponent’s Shooting phase: 4+ invulnerable save
 DAMAGED 1-10 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2684,12 +2686,13 @@ Knight Despoiler
 10
 5+*
 WHEN TARGETED
-5
-Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)
-5+ invulnerable save against ranged attacks only
-1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
-1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
-Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase) (Mischief Makers)
+6
+Harbingers of Dread: Darkness · 3: Stealth
+Malefic Surge: If (see the rule): one of: 5+ invulnerable save · Feel No Pain 6+
+*Invulnerable Save: 5+ invulnerable save against ranged attacks
+Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
+1CP Hellforged Construction: Fight phase: AP worsened by 1
+1CP Diabolic Bulwark: Your opponent’s Shooting phase: 4+ invulnerable save
 DAMAGED 1-9 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2828,13 +2831,14 @@ Knight Ruinator
 10
 5+*
 WHEN TARGETED
-6
-Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)
-5+ invulnerable save against ranged attacks only
-Using Unnatural Fortitude, vs attacks with Damage 1: +1 to armour saving throws
-1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
-1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
-Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase) (Mischief Makers)
+7
+Harbingers of Dread: Darkness · 3: Stealth
+Malefic Surge: If (see the rule): one of: 5+ invulnerable save · Feel No Pain 6+
+*Invulnerable Save: 5+ invulnerable save against ranged attacks
+Fleshmetal Fusion: If (see the rule): +1 to armour saving throws
+Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
+1CP Hellforged Construction: Fight phase: AP worsened by 1
+1CP Diabolic Bulwark: Your opponent’s Shooting phase: 4+ invulnerable save
 DAMAGED 1-9 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2964,12 +2968,13 @@ Knight Ruinator
 10
 5+*
 WHEN TARGETED
-5
-Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)
-5+ invulnerable save against ranged attacks only
-1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)
-1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
-Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase) (Mischief Makers)
+6
+Harbingers of Dread: Darkness · 3: Stealth
+Malefic Surge: If (see the rule): one of: 5+ invulnerable save · Feel No Pain 6+
+*Invulnerable Save: 5+ invulnerable save against ranged attacks
+Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
+1CP Hellforged Construction: Fight phase: AP worsened by 1
+1CP Diabolic Bulwark: Your opponent’s Shooting phase: 4+ invulnerable save
 DAMAGED 1-9 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -3092,7 +3097,7 @@ Nurglings
 5+
 WHEN TARGETED
 1
-Fight phase, melee attacks of an enemy unit (excluding TITANIC units) selected to fight within Engagement Range of the Nurglings: -1 to hit rolls (until the end of the phase) (Mischief Makers)
+Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls
 MELEE WEAPONS
 A
 WS
@@ -3208,6 +3213,17 @@ Methodical Destruction
 At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the Wound roll. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim.
 
 UNITKnight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this ability
+
+######## popup ability:infernal-lance|Mischief Makers|Each time an enemy unit (excluding **TITANIC** units) within **Engagement Range** of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the **Hit roll**. · INFERNAL LANCE Infernal Lance
+ABILITY · FIGHT · EITHER TURN
+
+Mischief Makers
+
+Each time an enemy unit (excluding TITANIC units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.
+
+UNITNurglings
 
 Ask about this ability
 

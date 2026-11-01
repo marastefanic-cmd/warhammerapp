@@ -2023,9 +2023,9 @@ Knight Destrier
 5+*
 WHEN TARGETED
 3
-Feel No Pain 6+
-5+ invulnerable save against ranged attacks only
-1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+Knights of Legend: Feel No Pain 6+
+Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
+1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-6 W
 −4 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2152,9 +2152,9 @@ Knight Errant
 5+*
 WHEN TARGETED
 3
-Feel No Pain 6+
-5+ invulnerable save against ranged attacks only
-1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+Knights of Legend: Feel No Pain 6+
+Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
+1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-9 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2283,9 +2283,9 @@ Knight Paladin
 5+*
 WHEN TARGETED
 3
-Feel No Pain 6+
-5+ invulnerable save against ranged attacks only
-1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+Knights of Legend: Feel No Pain 6+
+Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
+1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-9 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2423,9 +2423,9 @@ Knight Warden
 5+*
 WHEN TARGETED
 3
-Feel No Pain 6+
-5+ invulnerable save against ranged attacks only
-1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+Knights of Legend: Feel No Pain 6+
+Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
+1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-9 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS

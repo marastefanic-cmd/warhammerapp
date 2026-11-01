@@ -2758,7 +2758,7 @@ Angron
 4+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 DAMAGED 1-6 W
 −1 TO HIT ROLLS
 MELEE WEAPONS
@@ -2898,8 +2898,8 @@ Khorne Berzerker×10
 –
 WHEN TARGETED
 2
-Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+KHÂRN THE BETRAYER Berzerker Frenzy: not counted here: see the rule
+2CP Frenzied Resilience: Fight phase: −1 Damage
 RANGED WEAPONS
 Plasma pistol ×4, Bolt pistol ×7 · all pistols
 Range
@@ -3089,8 +3089,8 @@ Lord on Juggernaut
 4+
 WHEN TARGETED
 2
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+2CP Frenzied Resilience: Fight phase: −1 Damage
+1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
 RANGED WEAPONS
 Range
 A
@@ -3214,8 +3214,8 @@ Slaughterbound
 5+
 WHEN TARGETED
 2
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+2CP Frenzied Resilience: Fight phase: −1 Damage
+1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
 MELEE WEAPONS
 A
 WS
@@ -3327,8 +3327,8 @@ Exalted Eightbound×3
 5+
 WHEN TARGETED
 2
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+2CP Frenzied Resilience: Fight phase: −1 Damage
+1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
 MELEE WEAPONS
 A
 WS
@@ -3456,7 +3456,7 @@ Hull
 –
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 RANGED WEAPONS
 Range
 A
@@ -3558,7 +3558,7 @@ Eightbound
 5+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 MELEE WEAPONS
 A
 WS
@@ -3638,7 +3638,7 @@ Exalted Eightbound
 5+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 MELEE WEAPONS
 A
 WS
@@ -3720,7 +3720,7 @@ Goremongers
 –
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 RANGED WEAPONS
 Range
 A
@@ -3836,7 +3836,7 @@ Dishonoured w/ paired manglers
 –
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 RANGED WEAPONS
 Range
 A
@@ -3934,7 +3934,7 @@ Forgefiend
 5+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 DAMAGED 1-4 W
 −1 TO HIT ROLLS
 RANGED WEAPONS

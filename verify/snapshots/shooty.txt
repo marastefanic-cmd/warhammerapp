@@ -651,7 +651,7 @@ AI READING the numbers and conditions behind the datasheets’ footnotes and the
 
 HAND a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.
 
-Of the 431 columns of the tables: Mechanical 300 · AI summary 2 · AI reading 80 · Hand 49.
+Of the 353 columns of the tables: Mechanical 299 · AI summary 2 · AI reading 6 · Hand 46.
 
 ARMIES
 25 rows · 214 unit entries · one row per list
@@ -714,7 +714,7 @@ NEW RECRUIT
 An entry holds what the list chose; everything else about the unit comes from its datasheet’s row.
 
 Every column and where it comes from
-135 columns, with 6 inner tables
+108 columns, with 5 inner tables
 ARMIES 25 rows
 
 MECHANICAL name (New Recruit), faction (New Recruit), points (New Recruit), pointsUsed (New Recruit), battleSize (New Recruit), disposition (New Recruit), detachments (New Recruit), source (New Recruit), config (New Recruit), units (New Recruit)
@@ -726,8 +726,6 @@ ARMIES.units 214 rows
 a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS
 
 MECHANICAL id (computed), ds (computed), pts (New Recruit), ptsNote (New Recruit), copies (New Recruit), models (New Recruit), gear (New Recruit), unplaced (New Recruit), enhancement (New Recruit), warlord (New Recruit), enhOn (New Recruit), warlordOn (New Recruit), upgrade (New Recruit), leads (New Recruit), support (New Recruit), also (New Recruit), role (New Recruit), name (New Recruit), rules (New Recruit), kw (New Recruit), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (New Recruit), why (computed)
-
-AI READING guard
 
 HAND ref, short, kwNote, kwOnly, partialRules, srcNote, over, note
 
@@ -759,21 +757,9 @@ ARMIES.units.abilities
 
 a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
 
-MECHANICAL name (New Recruit), who (New Recruit), of (computed), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), damaged (computed), defPh (computed), why (computed), readOf (computed)
-
-AI READING def
+MECHANICAL name (New Recruit), who (New Recruit), of (computed), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), damaged (computed), why (computed), readOf (computed)
 
 HAND over, note, na
-
-ARMIES.units.guard
-
-help a unit gives other units of its list when they are attacked: the list's own (why names the reason), or a reading two lists have otherwise (verify/out/tables.md); a name in the list stands for the readings of that name the rows give (the list's order)
-
-MECHANICAL readOf (computed), readBy (computed)
-
-AI READING kind, weapon, who, set, when, cond, note, from, always, calc, pick, rule, lasts, vs, needs, selfWhen, selfAlways, oneModel, notSelf, one
-
-HAND listWhy
 
 DATASHEETS
 261 rows · one row per datasheet (faction + datasheet name): its facts, shared by every list that has it
@@ -815,12 +801,10 @@ abilities
 4 rows: Turbo Engine, Shokk Attack Engine, Pulse Jet, Full Throttle
 WAHAPEDIA
 Every column and where it comes from
-93 columns, with 5 inner tables
+66 columns, with 4 inner tables
 DATASHEETS 261 rows
 
 MECHANICAL name (New Recruit), faction (computed), bsId (BSData), role (New Recruit), rules (New Recruit), kw (New Recruit), leaders (BSData), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (Wahapedia), points (GW), composition (BSData), options (BSData), aiStatus (computed)
-
-AI READING guard
 
 HAND kwOnly, partialRules, srcNote
 
@@ -846,21 +830,9 @@ DATASHEETS.abilities 629 rows
 
 a datasheet's abilities
 
-MECHANICAL name (New Recruit), who (New Recruit), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), damaged (computed), defPh (computed), readOf (computed)
-
-AI READING def
+MECHANICAL name (New Recruit), who (New Recruit), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), damaged (computed), readOf (computed)
 
 HAND note, na
-
-DATASHEETS.guard 12 rows
-
-the readings of the datasheet's abilities as help it gives other units of its list when they are attacked
-
-MECHANICAL readOf (computed), readBy (computed)
-
-AI READING kind, weapon, who, set, when, cond, note, from, always, calc, pick, rule, lasts, vs, needs, selfWhen, selfAlways, oneModel, notSelf, one
-
-HAND listWhy
 
 FACTIONS
 13 rows · one row per faction: its army rules, detachments and aliases
@@ -943,14 +915,8 @@ COMPUTED
 note
 Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on …
 HAND
-def
-Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on …
-AI READING
-defOf
-263b4efe
-COMPUTED
 Every column and where it comes from
-122 columns, with 7 inner tables
+85 columns, with 6 inner tables
 FACTIONS 13 rows
 
 MECHANICAL name (GW), armyRules (GW), detachments (GW)
@@ -961,9 +927,9 @@ FACTIONS.armyRules 29 rows
 
 a faction's army rules
 
-MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), readOf (computed)
+MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), readOf (computed)
 
-AI READING def, parts, statNote, guard
+AI READING parts, statNote
 
 HAND needs, coreTwin, note, tableAt, missing
 
@@ -977,9 +943,9 @@ FACTIONS.detachments.rule 59 rows
 
 a detachment's rule
 
-MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), readOf (computed)
+MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), readOf (computed)
 
-AI READING def, parts, statNote, guard
+AI READING parts, statNote
 
 HAND needs, coreTwin, note, tableAt, missing
 
@@ -987,9 +953,9 @@ FACTIONS.detachments.moreRules 4 rows
 
 a detachment's further rule (moreRules), with the columns of its first
 
-MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), defOf (computed), defPh (computed), readOf (computed)
+MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), readOf (computed)
 
-AI READING def, parts, statNote, guard
+AI READING parts, statNote
 
 HAND needs, coreTwin, note, tableAt, missing
 
@@ -997,11 +963,9 @@ FACTIONS.detachments.stratagems 253 rows
 
 a detachment's stratagems
 
-MECHANICAL id (computed), gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), needs (computed), limit (computed), defOf (computed), readOf (computed)
+MECHANICAL id (computed), gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), needs (computed), limit (computed), readOf (computed)
 
 AI SUMMARY gist
-
-AI READING def, shield, defPick
 
 HAND note, cpNote
 
@@ -1010,18 +974,6 @@ FACTIONS.detachments.enhancements 173 rows
 a detachment's enhancements
 
 MECHANICAL name (GW), pts (New Recruit), text (GW), upgrade (BSData), nr (New Recruit), limit (Wahapedia)
-
-AI READING guard
-
-FACTIONS.readings
-
-the readings (guard) of an army rule, detachment rule or enhancement, on its row: every unit the rule reaches (an army rule on its Rules line, a detachment rule whose needs it meets) or the enhancement's bearer has them
-
-MECHANICAL readOf (computed), readBy (computed)
-
-AI READING kind, weapon, who, set, when, cond, note, from, pick, rule, lasts, vs, needs, selfWhen, selfAlways, notSelf, one
-
-HAND listWhy
 
 CORE_STRATAGEMS
 10 rows · the core stratagems
@@ -1061,14 +1013,12 @@ effect
 You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll …
 GW
 Every column and where it comes from
-21 columns
+17 columns
 CORE_STRATAGEMS 10 rows
 
-MECHANICAL gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), needs (computed), limit (computed), defOf (computed), readOf (computed)
+MECHANICAL gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), needs (computed), limit (computed), readOf (computed)
 
 AI SUMMARY gist
-
-AI READING def, shield, defPick
 
 HAND id, note, cpNote
 
@@ -1232,18 +1182,24 @@ COMPUTED
 t the phases it is triggered in · u the phases its effect is used in · s listed at a fixed moment of the turn · a listed when the unit is selected · at the moment it opens with · ae also at the end of the battle round · o its options, each with its own phases · g what it grants · f a rule it puts in force · pk a pick of options · oc its options cover its phases · x not placed (its words give no phase) · none no phase (before the battle, what a unit carries)
 
 BOXES
-285 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
+406 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
 Every column and where it comes from
-25 columns, with 1 inner table
-BOXES 285 rows
+42 columns, with 2 inner tables
+BOXES 406 rows
 
-MECHANICAL n (computed), b (computed), nc (computed), reach (computed), both (computed), embarked (computed), played (computed), riled (computed)
+MECHANICAL n (computed), b (computed), nc (computed), reach (computed), both (computed), embarked (computed), played (computed), riled (computed), d (computed), dnc (computed), dreach (computed)
 
 BOXES.b
 
 one box of the Damage tab: what GW's sentence does, as the catalogue (effects.js) reads it
 
 MECHANICAL quote (GW), lead (GW), fx (computed), on (computed), kind (computed), scope (computed), reach (computed), mark (computed), notSelf (computed), lasts (computed), opt (computed), pick (computed), part (computed), limit (computed), tableRows (computed), pool (computed), excl (computed)
+
+BOXES.d
+
+one defence box: what GW's sentence does for a unit when it is attacked, as the catalogue (effects.js DF) reads it; the datasheet's "When targeted" line
+
+MECHANICAL quote (GW), lead (GW), df (computed), on (computed), kind (computed), scope (computed), reach (computed), mark (computed), notSelf (computed), foe (computed), opt (computed), pick (computed), term (computed), until (GW)
 
 BS_IDS
 13 lookups · the BSData ids the list import resolves an export by (verify/import-ids.js --write)
@@ -1302,7 +1258,7 @@ one value · the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-01.1
+2026-11-01.2
 
 WHY YOU CAN TRUST THE DATA
 
@@ -1741,7 +1697,7 @@ Multi-busta Launcha
 3
 IGNORES COVER, LETHAL HITS
 Riled up: [SUSTAINED HITS 1] (Even More Dakka)
-Within 3" of it · Selected by it: Re-roll Hit rolls of 1 (Dreadherder)
+Within 3" of it · Selected by it · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
 Riled up: [ASSAULT] (Waaagh!)
 If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
 Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
@@ -1768,7 +1724,7 @@ IGNORES COVER, LETHAL HITS
 Riled up: [SUSTAINED HITS 1] (Even More Dakka)
 Riled up: [ASSAULT] (Waaagh!)
 If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Within 3" of Big Mek · Selected by Big Mek: Re-roll Hit rolls of 1 (Dreadherder)
+Within 3" of Big Mek · Selected by Big Mek · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
 Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 Big Mek in Mega Armour
 Supa-glowy Fing
@@ -1973,7 +1929,7 @@ BLAST 2, TORRENT
 The target has no model with T 7+: +1 to Hit rolls (Spiteful Power Trip)
 Riled up: [ASSAULT] (Waaagh!)
 If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Within 3" of Big Mek · Selected by Big Mek: Re-roll Hit rolls of 1 (Dreadherder)
+Within 3" of Big Mek · Selected by Big Mek · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
 Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
@@ -2012,7 +1968,7 @@ Stompy Feet
 6
 -1
 1
-Within 3" of it · Selected by it: Re-roll Hit rolls of 1 (Dreadherder)
+Within 3" of it · Selected by it · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
 If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
 Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 Big Mek Dakkarig
@@ -2024,7 +1980,7 @@ Stompy Feet
 -1
 1
 If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Within 3" of Big Mek · Selected by Big Mek: Re-roll Hit rolls of 1 (Dreadherder)
+Within 3" of Big Mek · Selected by Big Mek · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
 Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 Big Mek in Mega Armour
 Supa-glowy Fing
@@ -2118,7 +2074,7 @@ Kan Klaw×6
 3
 The target has no model with T 7+: +1 to Hit rolls (Spiteful Power Trip)
 If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Within 3" of Big Mek · Selected by Big Mek: Re-roll Hit rolls of 1 (Dreadherder)
+Within 3" of Big Mek · Selected by Big Mek · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
 Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 
 ######## abilities · MELEE Abilities
@@ -3952,8 +3908,8 @@ Wazdakka Gutsmek
 4+
 WHEN TARGETED
 2
-After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
+Pulse Jet: Full Throttle: the one selected (in your Command phase) · “In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move”: −1 to Hit rolls (until the start of your next turn)
 ALL ATTACKS
 Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 RANGED WEAPONS
@@ -4090,11 +4046,11 @@ Big Mek Dakkarig
 5+
 WHEN TARGETED
 3
-Lone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK)
-1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
+Dreadherder: Within 3" of a friendly ORKS WALKER unit (not BIG MEK): Lone Operative
+1CP Crazed Rampage: not counted here: see the rule
 ALL ATTACKS
-Within 3" of it · Selected by it: Re-roll Hit rolls of 1 (Dreadherder)
+Within 3" of it · Selected by it · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
 If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
 Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 RANGED WEAPONS
@@ -4210,11 +4166,11 @@ Big Mek Dakkarig
 5+
 WHEN TARGETED
 2
-1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
+1CP Crazed Rampage: not counted here: see the rule
 ALL ATTACKS
 If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Within 3" of Big Mek · Selected by Big Mek: Re-roll Hit rolls of 1 (Dreadherder)
+Within 3" of Big Mek · Selected by Big Mek · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
 Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 RANGED WEAPONS
 Range
@@ -4327,7 +4283,7 @@ Big Mek in Mega Armour
 –
 WHEN TARGETED
 1
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
 RANGED WEAPONS
 Range
 A
@@ -4446,7 +4402,7 @@ Warboss
 5+
 WHEN TARGETED
 1
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
 RANGED WEAPONS
 Range
 A
@@ -4585,7 +4541,7 @@ Tankbusta×5
 –
 WHEN TARGETED
 1
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
 RANGED WEAPONS
 Range
 A
@@ -4766,7 +4722,7 @@ Flash Gitz
 –
 WHEN TARGETED
 1
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
 RANGED WEAPONS
 Range
 A
@@ -4921,7 +4877,7 @@ Gretchin×10
 –
 WHEN TARGETED
 1
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
 RANGED WEAPONS
 Range
 A
@@ -5012,7 +4968,7 @@ Deffkoptas×3
 6+
 WHEN TARGETED
 1
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
 RANGED WEAPONS
 Range
 A
@@ -5133,12 +5089,12 @@ Killa Kan×6
 6+
 WHEN TARGETED
 2
-1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
+1CP Crazed Rampage: not counted here: see the rule
 ALL ATTACKS
 The target has no model with T 7+: +1 to Hit rolls (Spiteful Power Trip)
 If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Within 3" of Big Mek · Selected by Big Mek: Re-roll Hit rolls of 1 (Dreadherder)
+Within 3" of Big Mek · Selected by Big Mek · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
 Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
 RANGED WEAPONS
 Range

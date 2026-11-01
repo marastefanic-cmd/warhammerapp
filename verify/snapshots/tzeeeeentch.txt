@@ -2514,10 +2514,10 @@ Kairos Fateweaver
 4+
 WHEN TARGETED
 4
-1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
-Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
-Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
-Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
+Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
+1CP Flickering Reality: not counted here: see the rule
 DAMAGED 1-7 W
 −1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -2636,10 +2636,10 @@ Large Flying
 4+
 WHEN TARGETED
 4
-1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
-Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
-Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
-Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls
+Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
+1CP Flickering Reality: not counted here: see the rule
 MELEE WEAPONS
 A
 WS
@@ -2719,12 +2719,13 @@ The Changeling
 1
 4+
 WHEN TARGETED
-5
-an enemy unit must first take a Battle-shock test to select it as a target; failed: Battle-shocked, and it cannot target it this phase
-1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
-Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
-Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
-Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+6
+Formless Horror: not counted here: see the rule
+Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls
+Mischief and Confusion: not counted here: see the rule
+P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
+Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
+1CP Flickering Reality: not counted here: see the rule
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
 1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
@@ -2830,10 +2831,10 @@ Daemon Prince of Chaos with wings
 4+
 WHEN TARGETED
 4
-1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
-Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
-Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
-Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
+Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
+1CP Flickering Reality: not counted here: see the rule
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
 1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
@@ -2964,10 +2965,10 @@ Lord of Change
 4+
 WHEN TARGETED
 4
-1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
-Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
-Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
-Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
+Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
+1CP Flickering Reality: not counted here: see the rule
 DAMAGED 1-7 W
 −1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -3102,10 +3103,10 @@ Lord of Change
 4+
 WHEN TARGETED
 4
-1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
-Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
-Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
-Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
+Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
+1CP Flickering Reality: not counted here: see the rule
 DAMAGED 1-7 W
 −1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -3260,12 +3261,13 @@ Pink Horror×10
 2
 4+
 WHEN TARGETED
-5
-FLUXMASTER Fluxmaster: This unit has Stealth (the benefit of cover against ranged attacks); melee attacks that target this unit have -1 to hit rolls
-1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
-Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
-Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
-Own aura: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+6
+FLUXMASTER Fluxmaster: Stealth
+FLUXMASTER Fluxmaster: Melee attacks: −1 to Hit rolls
+FLUXMASTER Improbable Shield (Aura): Own aura: Feel No Pain 4+ against Psychic Attacks and mortal wounds
+P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
+Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+1CP Flickering Reality: not counted here: see the rule
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · SCINTILLATING LEGION
 1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
@@ -3454,10 +3456,10 @@ Flamers×3
 4+
 WHEN TARGETED
 4
-1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
-Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
-Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
-Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
+Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
+1CP Flickering Reality: not counted here: see the rule
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
 1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
@@ -3546,10 +3548,10 @@ Soul Grinder
 4+
 WHEN TARGETED
 4
-1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
-Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
-Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
-Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
+Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
+1CP Flickering Reality: not counted here: see the rule
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ALL ATTACKS
@@ -3670,10 +3672,10 @@ Blue Horror
 4+
 WHEN TARGETED
 4
-1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
-Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
-Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
-Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
+Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
+1CP Flickering Reality: not counted here: see the rule
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
 1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
@@ -3792,10 +3794,10 @@ Brimstone Horror
 4+
 WHEN TARGETED
 4
-1CP Flickering Reality: Fight phase, just after an enemy unit selects it as a target: roll one D6 (one Flux token: re-roll it); until the end of the phase, an attack that targets it ends on an unmodified Hit roll of that result, even a Critical Hit
-Psychic Attacks made by an enemy unit within 12" of The Blue Scribes: -1 to the wound roll (P’tarix’s Sorcerous Syphon)
-Your opponent’s Shooting phase, attacks by the enemy unit the Changeling selected at its start (on a D6 roll of 2-5): -1 to hit rolls (on a 6, that enemy unit is not eligible to shoot this phase) (Mischief and Confusion)
-Within 6" of the Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Improbable Shield (Aura))
+P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
+Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
+1CP Flickering Reality: not counted here: see the rule
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
 1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
@@ -4023,6 +4025,17 @@ One Head Looks Forward
 At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP.
 
 UNITKairos Fateweaver
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|P’tarix’s Sorcerous Syphon|While an enemy unit is within 12" of this model, each time a model in that unit makes a **Psychic Attack**, subtract 1 from the **Wound roll**. · TZEEEEENTCH Tzeeeeentch
+ABILITY · AURA
+
+P’tarix’s Sorcerous Syphon
+
+While an enemy unit is within 12" of this model, each time a model in that unit makes a Psychic Attack, subtract 1 from the Wound roll.
+
+UNITThe Blue Scribes
 
 Ask about this ability
 

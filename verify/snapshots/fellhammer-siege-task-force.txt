@@ -2792,10 +2792,12 @@ Vashtorr the Arkifane
 3
 4+
 WHEN TARGETED
-3
-an enemy unit within 18" targets him: -1 to hit rolls, and its ranged weapons have [HAZARDOUS] until the end of the phase
-Lone Operative while within 3" of a friendly DAEMON VEHICLE unit
-1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+5
+Soul Forge Boons: 5+ invulnerable save
+Reorder Reality: If (see the rule): −1 to Hit rolls
+Reorder Reality: Ranged attacks, If (see the rule): the attacking weapons have [HAZARDOUS]
+Indentured Daemon Engines: Within 3" of a friendly DAEMON VEHICLE unit: Lone Operative
+1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
 DAMAGED 1-4 W
 −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2906,8 +2908,9 @@ Lord Discordant on Helstalker
 4
 4+
 WHEN TARGETED
-1
-1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+2
+Soul Forge Boons: 5+ invulnerable save
+1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
 ALL ATTACKS
 Every attack: Critical Hit on 5+ (Mark of the Soul Forges)
 If it uses this ability · “If your Army Faction is HERETIC ASTARTES”: one of: [LETHAL HITS] · [SUSTAINED HITS 1] (Dark Pacts)
@@ -3044,7 +3047,7 @@ Warpsmith
 –
 WHEN TARGETED
 1
-Lone Operative while within 3" of a friendly HERETIC ASTARTES VEHICLE unit
+Warpsmith: Within 3" of a friendly HERETIC ASTARTES VEHICLE unit: Lone Operative
 ALL ATTACKS
 If it uses this ability · “If your Army Faction is HERETIC ASTARTES”: one of: [LETHAL HITS] · [SUSTAINED HITS 1] (Dark Pacts)
 RANGED WEAPONS
@@ -3221,7 +3224,7 @@ Nemesis Claw×5
 5+
 WHEN TARGETED
 1
-1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
 ALL ATTACKS · WHOLE UNIT
 The target below its Starting Strength: +1 to Hit rolls (Visions of Suffering)
 The target below its Starting Strength · The target Below Half-strength: +1 to Wound rolls (Visions of Suffering)
@@ -3603,7 +3606,7 @@ Havocs×4
 –
 WHEN TARGETED
 1
-1CP Undying Hatred: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+1CP Undying Hatred: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 ALL ATTACKS
 If it uses this ability · “If your Army Faction is HERETIC ASTARTES”: one of: [LETHAL HITS] · [SUSTAINED HITS 1] (Dark Pacts)
 RANGED WEAPONS
@@ -3714,7 +3717,7 @@ Obliterators×2
 5+
 WHEN TARGETED
 1
-1CP Undying Hatred: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+1CP Undying Hatred: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 ALL ATTACKS
 If it uses this ability · “If your Army Faction is HERETIC ASTARTES”: one of: [LETHAL HITS] · [SUSTAINED HITS 1] (Dark Pacts)
 RANGED WEAPONS
@@ -3821,7 +3824,7 @@ Hull
 5+
 WHEN TARGETED
 1
-1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
 DAMAGED 1-4 W
 −1 TO HIT ROLLS
 ALL ATTACKS
@@ -3941,7 +3944,7 @@ Hull
 5+
 WHEN TARGETED
 1
-1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
 DAMAGED 1-4 W
 −1 TO HIT ROLLS
 ALL ATTACKS
@@ -4062,7 +4065,7 @@ Hull
 5+
 WHEN TARGETED
 1
-1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
 DAMAGED 1-4 W
 −1 TO HIT ROLLS
 ALL ATTACKS
@@ -4174,8 +4177,9 @@ Forgefiend
 3
 5+
 WHEN TARGETED
-1
-1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+2
+Soul Forge Boons: 5+ invulnerable save
+1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
 DAMAGED 1-4 W
 −1 TO HIT ROLLS
 ALL ATTACKS
@@ -4270,8 +4274,9 @@ Maulerfiend
 3
 5+
 WHEN TARGETED
-1
-1CP Unholy Fortitude: their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase
+2
+Soul Forge Boons: 5+ invulnerable save
+1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
 DAMAGED 1-4 W
 −1 TO HIT ROLLS
 MELEE WEAPONS

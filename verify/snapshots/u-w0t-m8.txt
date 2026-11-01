@@ -2290,7 +2290,7 @@ Imotekh the Stormlord
 4+
 WHEN TARGETED
 1
-Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
 ALL ATTACKS
 The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
@@ -2407,9 +2407,9 @@ Triarchal Menhir×2
 4+
 WHEN TARGETED
 3
-1CP Nanoassembly Protocols: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase
-Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
-Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+Fabricator Claw Array: Within 6" of Canoptek Spyders: Feel No Pain 6+ (Canoptek Spyders)
+Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
+1CP Nanoassembly Protocols: Your opponent’s Shooting phase or the Fight phase: −1 Damage
 DAMAGED 1-6 W
 −1 TO HIT ROLLS; SEE THE RULE
 ALL ATTACKS
@@ -2563,7 +2563,7 @@ Royal Warden
 –
 WHEN TARGETED
 1
-Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
 ALL ATTACKS
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
@@ -2670,8 +2670,8 @@ Immortals×5
 –
 WHEN TARGETED
 2
-TECHNOMANCER While the Technomancer leads this unit: Feel No Pain 5+ for its models
-Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+TECHNOMANCER Rites of Reanimation: While leading a unit: Feel No Pain 5+
+Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
 ALL ATTACKS · WHOLE UNIT
 Every attack: Re-roll Wound rolls of 1 (Implacable Eradication)
 The target within range of an objective marker: Re-roll Wound rolls (Implacable Eradication)
@@ -2797,7 +2797,7 @@ Flayed Ones×5
 –
 WHEN TARGETED
 1
-Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
 MELEE WEAPONS
 A
 WS
@@ -2869,7 +2869,7 @@ Ophydian Destroyers×3
 –
 WHEN TARGETED
 1
-Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
 MELEE WEAPONS
 A
 WS
@@ -2942,7 +2942,7 @@ Canoptek Scarab Swarms×3
 –
 WHEN TARGETED
 1
-Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
 MELEE WEAPONS
 A
 WS
@@ -3020,9 +3020,9 @@ Canoptek Reanimator
 WHEN TARGETED
 4
 Feel No Pain 4+
-1CP Nanoassembly Protocols: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase
-Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
-Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+Fabricator Claw Array: Within 6" of Canoptek Spyders: Feel No Pain 6+ (Canoptek Spyders)
+Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
+1CP Nanoassembly Protocols: Your opponent’s Shooting phase or the Fight phase: −1 Damage
 ALL ATTACKS
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
@@ -3108,9 +3108,9 @@ Canoptek Spyder
 –
 WHEN TARGETED
 3
-1CP Nanoassembly Protocols: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase
-Own aura: Feel No Pain 6+ (Fabricator Claw Array)
-Own aura: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+Fabricator Claw Array: Own aura: Feel No Pain 6+
+Gloom Prism: Own aura: Feel No Pain 5+ against Psychic Attacks and mortal wounds
+1CP Nanoassembly Protocols: Your opponent’s Shooting phase or the Fight phase: −1 Damage
 ALL ATTACKS
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
@@ -3211,10 +3211,10 @@ Tesseract Vault
 4+
 WHEN TARGETED
 4
-1CP Nanoassembly Protocols: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase
-1CP Subsurface Quantumweave: Their Shooting phase or the Fight phase, when an enemy unit targets it: attacks that target it have -1 AP until that enemy unit has attacked
-Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
-Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+Fabricator Claw Array: Within 6" of Canoptek Spyders: Feel No Pain 6+ (Canoptek Spyders)
+Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
+1CP Nanoassembly Protocols: Your opponent’s Shooting phase or the Fight phase: −1 Damage
+1CP Subsurface Quantumweave: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 DAMAGED 1-8 W
 −4 OC; SEE THE RULE
 ALL ATTACKS
@@ -3332,10 +3332,10 @@ Tesseract Vault
 4+
 WHEN TARGETED
 4
-1CP Nanoassembly Protocols: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase
-1CP Subsurface Quantumweave: Their Shooting phase or the Fight phase, when an enemy unit targets it: attacks that target it have -1 AP until that enemy unit has attacked
-Within 6" of a Canoptek Spyder with a fabricator claw array: Feel No Pain 6+ (Fabricator Claw Array)
-Within 6" of a Canoptek Spyder with a gloom prism: Feel No Pain 5+ against mortal wounds and Psychic Attacks (Gloom Prism)
+Fabricator Claw Array: Within 6" of Canoptek Spyders: Feel No Pain 6+ (Canoptek Spyders)
+Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
+1CP Nanoassembly Protocols: Your opponent’s Shooting phase or the Fight phase: −1 Damage
+1CP Subsurface Quantumweave: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 DAMAGED 1-8 W
 −4 OC; SEE THE RULE
 ALL ATTACKS

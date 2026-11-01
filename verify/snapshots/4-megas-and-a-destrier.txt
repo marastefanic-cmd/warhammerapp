@@ -2347,9 +2347,9 @@ Sir Hekhtur
 –
 WHEN TARGETED
 3
-Feel No Pain 6+
-5+ invulnerable save against ranged attacks only
-1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+Knights of Legend: Feel No Pain 6+
+Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
+1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-9 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2504,8 +2504,8 @@ Cerastus Knight Atrapos
 5+
 WHEN TARGETED
 2
-Feel No Pain 6+
-1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+Knights of Legend: Feel No Pain 6+
+1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-10 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2653,8 +2653,8 @@ Cerastus Knight Lancer
 4+
 WHEN TARGETED
 2
-Feel No Pain 6+
-1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+Knights of Legend: Feel No Pain 6+
+1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-10 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2766,9 +2766,9 @@ Knight Crusader
 5+*
 WHEN TARGETED
 3
-Feel No Pain 6+
-5+ invulnerable save against ranged attacks only
-1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+Knights of Legend: Feel No Pain 6+
+Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
+1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-9 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -2922,11 +2922,10 @@ Knight Destrier
 8
 5+
 WHEN TARGETED
-4
-Feel No Pain 6+
-5+ invulnerable save against ranged attacks only
-Sanctuary: 5+ invulnerable save
-1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+3
+Knights of Legend: Feel No Pain 6+
+Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
+1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-6 W
 −4 OC, −1 TO HIT ROLLS
 ALL ATTACKS
@@ -3119,17 +3118,6 @@ Punishing Salvoes
 In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
 
 UNITKnight Crusader · Hunter’s Eye
-
-Ask about this ability
-
-######## popup ability:4-megas-and-a-destrier|Sanctuary|**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
-ABILITY · ENHANCEMENT
-
-Sanctuary
-
-IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.
-
-UNITKnight Destrier · Sanctuary
 
 Ask about this ability
 
