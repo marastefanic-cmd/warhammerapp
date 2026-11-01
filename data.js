@@ -11274,7 +11274,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Warp-sighted Butcher', ph:['fight'], turn:'either', text:'While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the **Hit roll**. If that unit is **Below Half-strength**, you can re-roll the **Wound roll** as well.' },
-    { name:'Trophy Taker', text:'Each time this model destroys an enemy **CHARACTER** model, you gain 1CP.' }
+    { name:'Trophy Taker', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model destroys an enemy **CHARACTER** model, you gain 1CP.' }
   ]
 },
 'chaos-space-marines/nemesis-claw':{
