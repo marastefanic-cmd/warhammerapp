@@ -22,6 +22,10 @@ const { FX, COND, NC, CHAR_RE, CH, norm } = E;
 
 // GW's words as said on a box: no bold, plain quotes, case kept
 const plainCase = t => String(t == null ? '' : t).replace(/\*\*|~~|__/g, '').replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/[–—−]/g, '-').replace(/\s+/g, ' ').trim();
+// a stratagem's "Once per battle" chip (limit): exactly where its RESTRICTIONS say it can be used once per battle (verify/lines.js L0 checks
+// it; verify/catalog-write.js writes it on a catalogue detachment's stratagems)
+const ONCE_PER_BATTLE = /\b(?:cannot use this stratagem more than once per battle|can only use this stratagem once per battle)\b(?! round)/i;
+const limitOf = restrictions => ONCE_PER_BATTLE.test(plainCase(restrictions || '')) ? 'Once per battle' : undefined;
 // attacks against the unit, or an enemy's: not this unit's attacks (the defence side is not in the Damage tab)
 const DEFENCE = [/\beach time an? (?:enemy )?(?:ranged |melee |psychic )?attack (?:is made against|targets) (?:this|that|your|the bearer)\b/,
   /\b(?:ranged |melee |psychic )?attacks (?:that )?targets? (?:this|your|that) (?:unit|model)\b/, /\ban? (?:enemy )?model makes an attack that targets (?:this|your|that) unit\b/,
@@ -678,4 +682,4 @@ function shape(list, src){
   return final;
 }
 
-module.exports = { extract, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };
+module.exports = { extract, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };
