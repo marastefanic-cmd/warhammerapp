@@ -18,6 +18,8 @@
 //   lines       verify/lines.js: the lines the app writes itself on a unit or stratagem screen stand on GW's words by fixed rules:
 //               columns a rule derives (Damaged ranges, the once-per-battle chip), stored = derived; a footnote's effects are its
 //               unit's boxes
+//   defence     verify/defence.js: the "When targeted" lines are a unit's defence boxes (data.js BOXES d, dnc), made by script from GW's
+//               words (effects.js DF, DCOND, DNC), standing on them (D1-D8) and said in their labels (DL); none left out
 //   invariants  verify/invariants.js: mechanical rules (phases, eligibility, cited numbers, counts)
 //   derive      verify/derive.js: phases, turn, needs and tags derived from the rules text by fixed rules; every label
 //               that agrees with data.js today must keep agreeing (verify/derive-agreed.json); differences are listed, not failed
@@ -79,6 +81,7 @@ step('fingerprints', ['verify/tables.js', '--fingerprints']);
 step('readings', ['verify/readings.js']);   // abilities with a conditional bonus have a reading
 step('evidence', ['verify/evidence.js']);   // the Damage tab's boxes: by script from GW's words, in their groups; stratagems by TARGET
 step('lines', ['verify/lines.js']);   // the app's own lines on a unit or stratagem screen: from GW's words by fixed rules (L0-L8)
+step('defence', ['verify/defence.js']);   // the "When targeted" lines: defence boxes from GW's words by fixed rules (D1-D8, DL)
 step('invariants', ['verify/invariants.js']);
 step('derive', ['verify/derive.js']);
 step('choice', ['verify/choice.js']);

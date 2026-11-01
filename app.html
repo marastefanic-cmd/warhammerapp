@@ -2193,7 +2193,9 @@ const dmRuleText = r => r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')
 const DM_KEY = { a:ab => 'a|' + ckHash(ab.name + '\n' + ab.text), r:r => 'r|' + ckHash(r.name + '\n' + dmRuleText(r)), s:s => 's|' + ckHash(s.name + '\n' + dmStratText(s)), c:(n, t) => 'c|' + ckHash(n + '\n' + t) };
 // (a core rule the Damage tab plays itself, [LANCE] from the weapon's keyword and Plunging Fire in the situation: its box is the datasheet
 // footnotes' only, played)
-const dmBoxesOf = key => { const o = (D.boxes || {})[key]; return o && !o.played ? o : null; };
+// (a source with only defence boxes, d / dnc, the datasheet's "When targeted" lines: none here, as before them)
+const DM_ATK = ['b', 'nc', 'reach', 'both', 'embarked', 'riled'];
+const dmBoxesOf = key => { const o = (D.boxes || {})[key]; return o && !o.played && DM_ATK.some(k => k in o) ? o : null; };
 // the five groups of the list, in this order: each box is in exactly one, by the row it reads (dmGroupOf: the source)
 const DM_GROUPS = [['army', 'Army rules'], ['unit', 'Unit rules'], ['other', 'From other units in your list'], ['strat', 'Stratagems'], ['custom', 'Custom modifiers']];
 // effects that change these numbers (an [ASSAULT] box changes nothing here)
@@ -4322,7 +4324,7 @@ function searchIndex(){
     add({ kind:'Units', title:u.name, s1:u.stats.map(statLineText).join(' / '),
       sub:[u.role, u.ref ? '' : u.pts + ' pts', u.warlord ? 'Warlord' : '', u.enhancement, u.leads ? attachText(u) : ''].filter(Boolean).join(' · '),
       hay:hay(u.name, u.short, u.role, u.kw.join(' '), u.models.join(' '), u.enhancement, u.warlord ? 'warlord' : '', unitRules(u).join(' '),
-        u.abilities.map(ab => ab.def).join(' '), st, 'stats save toughness wounds move leadership', u.stats.some(s => s.InSv !== '–') ? 'invulnerable' : ''),
+        u.abilities.map(defWords).join(' '), st, 'stats save toughness wounds move leadership', u.stats.some(s => s.InSv !== '–') ? 'invulnerable' : ''),
       act:{ unit:u.id } });
   }
   // weapons: identical profiles on twin units are listed once
@@ -4344,7 +4346,7 @@ function searchIndex(){
   for(const u of unitsAll(a)) for(const ab of u.abilities){
     const key = abilityKey(ab);
     if(abilityIndex.has(key)){ abilityIndex.get(key).units.push(u); continue; }
-    const e = { kind:'Abilities', title:ab.name, ab, units:[u], hay:hay(ab.name, 'ability', ab.text, ab.tag, ab.who, ab.def, u.name), act:{ ability:key } };
+    const e = { kind:'Abilities', title:ab.name, ab, units:[u], hay:hay(ab.name, 'ability', ab.text, ab.tag, ab.who, defWords(ab), u.name), act:{ ability:key } };
     abilityIndex.set(key, e); add(e);
   }
   for(const e of abilityIndex.values()) e.sub = unitNames(e.units, e.ab) + (e.ab.tag ? ' · ' + e.ab.tag : '') + (e.ab.ph ? ' · ' + whenTag(e.ab) : '') + (e.ab.na ? ' · ' + e.ab.na : '');
@@ -4789,72 +4791,103 @@ function abilityList(abs, u, suffix){
       (na ? '<p class="abt"><i>' + esc(na) + '</i></p>' : '') + (meta.length ? '<p class="abt">' + meta.map(esc).join(' · ') + '</p>' : '') + rt(ab.text) + abilityNote(ab) + '</div></details>';
   }).join('') + '</div>';
 }
-// what matters when this unit is shot or fought: FNP, Lone Operative, -1 AP, the riled-up save.
-// Each entry knows where it comes from, so the datasheet can link it.
-// ph: only what works in that phase (a Fight-phase stratagem isn't offered against shooting)
-// opts.shields: also what another unit of the list takes the hits for (Grot Shields: a GRETCHIN unit within 3" of an ORKS INFANTRY
-// unit), as the datasheet says it; the Damage tab plays that one itself (shield)
-function defenceItems(u, ph, opts){
-  const out = [];
-  // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line
-  // an army rule of the unit's Rules line can say it with its condition (def: Aegis of the Emperor, "Feel No Pain 5+ against mortal
-  // wounds"); New Recruit's starred "Feel No Pain 5+*" is that one, so it is not said again without its condition
-  const fac = factionOf(army()) || {}, armyDefs = (fac.armyRules || []).filter(r => r.def && hasRule(u, r.name));
-  for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1])) && !(/\*$/.test(r) && armyDefs.some(x => x.def.includes('Feel No Pain ' + m[1])))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r, who:partialWho(u, r) || undefined }); }   // (who: the one model that has it, partialRules)
-  for(const r of armyDefs) if(!(ph && r.defPh && !r.defPh.includes(ph))) out.push({ t:r.def, a:'rule', v:r.name });   // (defPh: Kaptaris, the Fight phase only)
-  for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+
-  for(const { rule, part } of unitDetParts(u)) if(part.def) out.push({ t:part.def, a:'rule', v:rule.name });   // a part of it for some units (Boon of Blood)
-  // (who, name: the model of an attached unit the ability is on, for the datasheet's line)
-  for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab), who:ab.who, name:ab.name });
-  for(const s of allStratagems()) if(s.def && canTarget(s, u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });
-  if(opts && opts.shields) for(const s of allStratagems()) if(s.shield && s.shield.def && matches(s.shield.protects, u) && army().units.some(x => x !== u && matches(s.shield.by, x)) && !(ph && !s.phases.includes(ph)))
-    out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.shield.def, a:'strat', v:s.id });
-  // and on the datasheet what another unit of the list gives this one when it is attacked (guard: Emanatus Forcefield,
-  // Shroudpsalm, Necromechanic), as its attack auras show under its weapons; the source's name opens that unit
-  // (one line for the same help from several units: the three Anathema Psykana units' Psychic Null)
-  // (a guard GW tags (Aura) covers its own unit too, as an aura does (22.01): selfWhen / selfAlways, said with selfWhen: Prince of Darkness)
-  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []){
-    const self = src === u;
-    if((self && !(g.selfWhen || g.selfAlways)) || !matches(g.needs, u)) continue;
-    const t = (self && g.selfWhen ? g.selfWhen : g.when) + ': ' + g.note;
-    if(!out.some(x => x.guard && x.t === t)) out.push({ t, a:'unit', v:src.id, guard:g });
-  }
-  if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!', riled:true });
+// ---- "When targeted": what protects a unit when it is attacked, the defence boxes the database gives it (data.js BOXES d and dnc, made by
+// script from GW's words: verify/effects-extract.js; effects.js DF the defences, their labels), each said with the labels of its defences
+// and conditions, as the footnotes under the weapons are (fnLine). Which boxes: the army rules on its Rules line (or one of the list's that
+// reaches it: Psychic Null), the detachment rules whose needs it meets, a core rule with its value on its Rules line (Feel No Pain 5+), its
+// own abilities, the abilities of other units of the list whose boxes reach it (an aura, a unit another unit selects, an enemy unit's
+// attacks made worse: Mischief Makers), the list's detachments' stratagems it can be the TARGET of, and one that protects it from another
+// unit (BOXES dreach: Grot Shields). Words of its rules about attacks against it that no defence reads: "not counted here: see the rule".
+// Nothing here reads a rule's words. ----
+// (the words of an ability's defences, for the search: "feel no pain", "invulnerable")
+const defWords = ab => (((D.boxes || {})[DM_KEY.a(ab)] || {}).d || []).map(b => WH_EFFECTS.dfLabel(b.pick ? b.pick.flatMap(p => p.df) : b.df)).join(' ');
+const DEF_KIND = { ranged:'Ranged attacks', melee:'Melee attacks', psychic:'Psychic Attacks' };
+// (a defence whose label says its kind already: "4+ invulnerable save against ranged attacks")
+const defKindSaid = (df, kind) => (df || []).every(([id]) => (kind === 'ranged' && /Ranged$/.test(id)) || (kind === 'psychic' && /^fnpPsy/.test(id)));
+const defBoxesOf = key => (D.boxes || {})[key] || null;
+function defSources(u){
+  const A = army(), F = factionOf(A) || {}, out = [], seen = new Set();
+  const put = x => { if(seen.has(x.key + '|' + x.grp)) return; seen.add(x.key + '|' + x.grp); const o = defBoxesOf(x.key); if(o && (o.d || o.dnc)) out.push(Object.assign(x, { o })); };
+  for(const r of u.rules || []){ if(!/\d/.test(r) || D.rules[r]) continue; const t = dmCoreText(r); if(t) put({ grp:'core', name:r, a:'rule', v:r, key:DM_KEY.c(r, t), rl:r }); }
+  for(const r of F.armyRules || []){ const own = hasRule(u, r.name) || !!dmGrantOf(A, u, r.name), o = defBoxesOf(DM_KEY.r(r));
+    const reach = !own && A.units.some(x => x !== u && hasRule(x, r.name)) && ((o || {}).d || []).some(b => b.reach && dmReaches(b.reach, u));
+    if(own || reach) put({ grp:'army', name:r.name, a:'rule', v:r.name, key:DM_KEY.r(r), reachOnly:reach, holders:reach ? A.units.filter(x => hasRule(x, r.name)) : null }); }
+  for(const r of unitDetRules(u)) put({ grp:'army', name:r.name, a:'rule', v:r.name, key:DM_KEY.r(r) });
+  for(const ab of u.abilities || []) if(!naReason(ab)) put({ grp:'unit', name:ab.name, a:'ability', v:abilityKey(ab), key:DM_KEY.a(ab), ab, src:u });
+  for(const x of A.units) if(x !== u) for(const ab of x.abilities || []) if(!naReason(ab)) put({ grp:'other', name:ab.name, a:'unit', v:x.id, key:DM_KEY.a(ab), ab, src:x });
+  // (the core stratagems, every unit's, are on the Stratagems tab, as for the footnotes)
+  for(const s of allStratagems().filter(s => s.src !== 'Core')){ const o = defBoxesOf(DM_KEY.s(s)); if(!o) continue;
+    const mine = o.dreach ? matches(o.dreach, u) && A.units.some(x => x !== u && canTarget(s, x)) : canTarget(s, u);
+    if(mine) put({ grp:'strat', name:s.name, a:'strat', v:s.id, key:DM_KEY.s(s), s, cp:s.cp }); }
   return out;
 }
+// one defence box as a "When targeted" line: { a, v (what its name opens), name, cp, who (the model of an attached unit it is on), when (its
+// phases, the attacks it is against, its conditions' labels), text (its defences' labels), from (the unit that gives it), box, key }
+function defLineOf(S, b, u){
+  const E = WH_EFFECTS, on = b.on || [], wn = [].concat(u.ranged || [], u.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase());
+  // (a keyword or wargear of the unit the box needs: the unit's keywords and weapons say it)
+  if(on.some(([id, p]) => ((id === 'selfKw' || id === 'itIs') && !hasKw(u, p)) || (id === 'selfGear' && !p.every(g => wn.some(n => n.startsWith(String(g).toLowerCase())))))) return null;
+  const giver = S.grp === 'other' ? (S.ab && S.ab.who && S.src.leads && charsOf(S.src).some(c => c.name === S.ab.who) ? S.ab.who : S.src.short || S.src.name)
+    : S.holders ? 'a unit with ' + S.name : '';
+  const own = S.grp === 'unit' && b.mark === 'aura';
+  const said = ([id, p]) => E.DCOND[id] ? E.DCOND[id].label(p) : fnCond(id, p, u, giver, own);
+  const quoted = ([id]) => !!(E.COND[id] && E.COND[id].quoted);
+  const ph = S.s && (S.s.phases || []).length === PHASES.length ? 'Any phase' : S.s && (S.s.phases || []).length ? S.s.phases.map((p, i) => (T => (T === 'your' ? 'Your ' : T === 'opp' ? 'Your opponent’s ' : i ? 'the ' : '') + PHASE_NAME[p] + ' phase')(phTurn(S.s, p))).join(' or ') : '';
+  const df = b.pick ? b.pick.flatMap(p => p.df) : b.df;
+  const kind = DEF_KIND[b.kind] && !defKindSaid(df, b.kind) ? DEF_KIND[b.kind] : '';
+  // (every condition said; a box whose only conditions are GW's words, quoted, says "If (see the rule)", as a footnote does)
+  const cond = on.length && on.every(quoted) ? FN_IF : on.map(said).join(' · ');
+  const when = [ph, kind, cond].filter(Boolean).join(', ');
+  const sc = b.scope || {}, models = sc.models && sc.models !== 'model' ? sc.models + ' models: ' : '';
+  const text = models + (b.pick ? 'one of: ' + b.pick.map(p => E.dfLabel(p.df)).join(' · ') : E.dfLabel(b.df));
+  return { a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp === 'unit' ? S.ab.who : '', when, text, from:S.grp === 'other' ? giver : '', riled:on.some(x => x[0] === 'riled'), box:b, key:S.key, rl:S.rl || '' };
+}
+// every "When targeted" line of a unit, in the order: its Rules line's core rules, army and detachment rules, its own abilities, other units',
+// stratagems; t the line's words (as drawn)
+function defenceItems(u){
+  const out = [];
+  for(const S of defSources(u)){
+    for(const b of S.o.d || []){
+      // (a box given to friendly units: where it reaches this one; the unit's own for itself only where it is an aura, 22.01, not "other";
+      // an enemy unit's attacks made worse: every unit of the list. Another unit's other boxes are its own)
+      if(b.foe ? false : S.reachOnly ? !(b.reach && dmReaches(b.reach, u)) : b.reach ? !dmReaches(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;
+      // (an invulnerable save or Save characteristic the list printed into its stats, marked as from this rule, the other models' as good or
+      // better already: Arcane Shield's 4+ InSv on its Rubric Marines, as a footnote leaves out what is in the weapons)
+      const inStats = (k, p) => (u.stats || []).some(r => r.from && String(r.from[k] || '').split(/\s*,\s*/).includes(S.name)) && (u.stats || []).every(r => (r.from && String(r.from[k] || '').split(/\s*,\s*/).includes(S.name)) || parseInt(r[k], 10) <= p);
+      const tIn = () => (u.stats || []).some(r => r.from && String(r.from.T || '').split(/\s*,\s*/).includes(S.name));
+      if(!b.pick && b.df.length && b.df.every(([id, p]) => (id === 'inv' && inStats('InSv', p)) || (id === 'svSet' && inStats('Sv', p)) || (id === 't' && !(b.on || []).length && tIn()))) continue;
+      const x = defLineOf(S, b, u); if(x) out.push(x);
+    }
+    // (its words about attacks against it no defence reads: "not counted here: see the rule", once; not another unit's)
+    if(S.grp !== 'other' && (S.o.dnc || []).length) out.push({ a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads ? S.ab.who : '', when:'', text:FN_NC, key:S.key, ncLine:true, rl:S.rl || '' });
+  }
+  // (a Feel No Pain on its Rules line that another of its lines says with its condition or its model: Aegis of the Emperor's "against mortal
+  // wounds", New Recruit's starred "Feel No Pain 5+*"; Trajann's own: not said twice)
+  const fnpOf = x => x.box ? (x.box.pick ? x.box.pick.flatMap(p => p.df) : x.box.df).filter(([id]) => /^fnp/.test(id)).map(([, p]) => p) : [];
+  // (a Feel No Pain on its Rules line that another of its lines says with its words: one of its own abilities ("the bearer has the Feel No Pain
+  // 3+ ability against Psychic Attacks", Collar of Khorne), or, for New Recruit's starred "Feel No Pain 5+*", any rule ("against mortal wounds",
+  // Aegis of the Emperor): not said twice, never without its condition)
+  const res = out.filter(x => !(x.rl && /^feel no pain/i.test(x.rl) && fnpOf(x).some(v => out.some(y => y !== x && !y.rl && (y.a === 'ability' || /\*$/.test(x.rl)) && fnpOf(y).includes(v)))));
+  // (the one model of an attached unit a rule of its Rules line is on: partialRules)
+  for(const x of res) if(x.rl && !x.who){ const w = partialWho(u, x.rl); if(w) x.who = w; }
+  for(const x of res) x.t = x.rl && !x.when && x.text === x.name ? x.name : [x.cp ? x.cp + 'CP' : '', x.name + ':', x.when ? x.when + ':' : '', x.text, x.from ? '(' + x.from + ')' : ''].filter(Boolean).join(' ');
+  return res;
+}
 // a unit always riled up by one of its own rules (BOXES riled, from its words: Super Runts): its riled-up lines say so, with the model that has the
-// rule in an attached unit ("Riled up (Zodgrod Wortsnagga · Super Runts: always riled up): 5+ INV")
+// rule in an attached unit ("Riled up (Zodgrod Wortsnagga · Super Runts: always riled up)")
 const alwaysRiled = u => { const ab = u.abilities.find(x => ((D.boxes || {})[DM_KEY.a(x)] || {}).riled && !naReason(x));
   return ab ? (ab.who && u.leads ? esc(ab.who) + ' · ' : '') + linkTo('ability', abilityKey(ab), ab.name) + ': always riled up' : ''; };
 const riledWhen = (html, u) => { const ar = /^Riled up\b/.test(html) && alwaysRiled(u); return ar ? html.replace(/^Riled up/, 'Riled up (' + ar + ')') : html; };
-// one "When targeted" line on the datasheet, its own line in the fold: the string split and styled, not reworded. Its name in
-// bold (a stratagem with its CP), the one model of an attached unit it is on as a small label ("Trajann Valoris", unless its
-// words start with that model), the timing or condition before its ": " muted, then the effect; the name, or its first words
-// when it has none, opens the rule; a line with no name and no ": " is just its text
+// one "When targeted" line on the datasheet: the model of an attached unit it is on as a small label, its name in bold (a stratagem with its
+// CP), opening the rule (another unit's: that unit), its phases and conditions muted, then its defences; the unit that gives it after
 function defLine(x, u){
-  const i = x.t.indexOf(': ');
-  const when = h => '<span class="tw">' + h + ':</span> ';
-  // (head: what comes before the effect's ": "; a stratagem's WHEN or a guard's reach, never a quotation: Grot Shields' FAQ)
-  const split = t => { const j = t.indexOf(': '); return j > 0 && !/[“"]/.test(t.slice(0, j).replace(/\d"/g, '')) ? when(esc(t.slice(0, j))) + esc(t.slice(j + 2)) : esc(t); };
-  if(x.guard) return split(x.t) + ' <span class="from">(' + linkTo(x.a, x.v, x.guard.from) + ')</span>';
-  if(x.riled){ const ar = alwaysRiled(u); return '<b>' + linkTo(x.a, x.v, 'Riled up') + (ar ? '</b> <span class="tw">(' + ar + '):</span> ' : ':</b> ') + esc(x.t.slice('Riled up: '.length)); }
-  const s = x.a === 'strat' && allStratagems().find(y => y.id === x.v), sp = s && s.cp + 'CP ' + s.name + ': ';
-  if(sp && x.t.startsWith(sp)) return '<b class="cpb">' + esc(s.cp) + 'CP</b> <b>' + linkTo(x.a, x.v, s.name) + ':</b> ' + split(x.t.slice(sp.length));
-  const who = x.who && u.leads && !(i > 0 && x.who.startsWith(x.t.slice(0, i))) ? '<i class="sc">' + esc(x.who) + '</i> ' : '';
-  if(i < 0) return who + (who && x.name ? '<b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + esc(x.t) : linkTo(x.a, x.v, x.t));   // (a rule of one model: Trajann's Feel No Pain 5+)
-  const head = x.t.slice(0, i), rest = esc(x.t.slice(i + 2)), name = x.name || (x.a === 'rule' ? x.v : '');
-  if(name && head === name) return who + '<b>' + linkTo(x.a, x.v, head) + ':</b> ' + rest;
-  // ("Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv …": the name, then its condition)
-  if(name && head.startsWith(name + ' (') && head.endsWith(')')) return who + '<b>' + linkTo(x.a, x.v, name) + '</b> ' + when(esc(head.slice(name.length + 1))) + rest;
-  return who + '<span class="tw">' + linkTo(x.a, x.v, head) + ':</span> ' + rest;   // (its first words are a condition: "After a pulse jet move")
-}
-const defences = (u, ph) => defenceItems(u, ph).map(x => x.t);
-// a "When targeted" line that is one option of an army rule (Kaptaris, a ka’tah of Martial Ka’tah: its line starts with the
-// option's name, RULE_OPTIONS lists the options): the datasheet leaves it out, its Rules line opens the whole rule
-function armyRuleOption(x){
-  const fac = factionOf(army()) || {};
-  if(x.a !== 'rule' || !(fac.armyRules || []).some(r => r.name === x.v)) return false;
-  return (D.ruleOptions || []).some(o => o.rule === fac.name + ' army rule · ' + x.v && x.t.startsWith(o.option) && /^[\s:(]/.test(x.t.slice(o.option.length)));
+  const who = x.who ? '<i class="sc">' + esc(x.who) + '</i> ' : '';
+  const ar = x.riled && alwaysRiled(u), when = x.when ? esc(x.when) : '';
+  const w = ar ? when.replace(/^(.*?)Riled up/, (m, pre) => pre + 'Riled up (' + ar + ')') : when;
+  // (a rule of its Rules line that is its defence, "Feel No Pain 5+": its name)
+  if(x.rl && !w && x.text === x.name) return who + '<b>' + linkTo(x.a, x.v, x.name) + '</b>';
+  return who + (x.cp ? '<b class="cpb">' + esc(x.cp) + 'CP</b> ' : '') + '<b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + (w ? '<span class="tw">' + w + ':</span> ' : '') + esc(x.text) +
+    (x.from ? ' <span class="from">(' + linkTo('unit', x.v, x.from) + ')</span>' : '');
 }
 const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';
 // every ability of the datasheet is listed, as on the paper datasheet; footnotes and "When targeted"
@@ -4875,7 +4908,7 @@ function screenUnit(){
   const u = unitById(cur.unit);
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
   const strats = allStratagems().filter(s => canTarget(s, u));   // every one it can be the target of (its needs, from GW's TARGET)
-  const def = defenceItems(u, null, { shields:true }).filter(x => !armyRuleOption(x));   // (an army rule's option: not spelled out here)
+  const def = defenceItems(u);
   const tgKey = 'tg|' + cur.army + '|' + u.id;
   const meta = (u.ref ? [] : [esc(u.role)]).concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
   // an allied unit: the rule that brings it into this army (the faction's allies: Assigned Agents, Daemonic Pact), once, as its reason

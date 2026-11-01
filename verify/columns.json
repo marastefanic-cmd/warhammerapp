@@ -1804,6 +1804,18 @@
     "riled": {
      "source": "derived",
      "note": "an ability whose words say \"This unit is riled up.\" (one fixed pattern, verify/effects-extract.js): the unit is always riled up"
+    },
+    "d": {
+     "source": "derived",
+     "note": "its defence boxes, the datasheet's \"When targeted\" lines (BOXES.d): read from GW's words by verify/effects-extract.js (defenceOf) with effects.js DF; held to them by verify/defence.js D1-D8; not the Damage tab's"
+    },
+    "dnc": {
+     "source": "derived",
+     "note": "its sentences about attacks against the unit that no defence reads (effects.js DNC, its why): shown as \"not counted here: see the rule\", never left out (verify/defence.js D4)"
+    },
+    "dreach": {
+     "source": "derived",
+     "note": "a stratagem that protects a unit other than its TARGET (its WHEN's \"targets a friendly X unit\", its TARGET's \"within N\\\" of a friendly X unit that was selected as the target\"): those units, literal keywords (Grot Shields, Blessing of Burning Blood)"
     }
    }
   },
@@ -1877,6 +1889,63 @@
     "excl": {
      "source": "derived",
      "note": "one of a unit's abilities to pick from (New Recruit's \"X: pick one\", X the ability whose words say \"select one X ability\"): X; ticking one unticks the others"
+    }
+   }
+  },
+  "BOXES.d": {
+   "what": "one defence box: what GW's sentence does for a unit when it is attacked, as the catalogue (effects.js DF) reads it; the datasheet's \"When targeted\" line",
+   "columns": {
+    "quote": {
+     "source": "gw",
+     "note": "the sentence of GW's text the box reads, verbatim; verify/defence.js D2"
+    },
+    "lead": {
+     "source": "gw",
+     "note": "the line it continues (its condition), verbatim; D2"
+    },
+    "df": {
+     "source": "derived",
+     "note": "its defences: [effects.js DF id, value], found in the quote by the catalogue's patterns; D1, D3"
+    },
+    "on": {
+     "source": "derived",
+     "note": "its conditions: effects.js COND and DCOND ids (q: GW's words of one no id reads); D5"
+    },
+    "kind": {
+     "source": "derived",
+     "note": "the attacks it is against (ranged, melee, psychic, all), from its clause's words"
+    },
+    "scope": {
+     "source": "derived",
+     "note": "models: the models of the unit it is for (model: the one with the ability; a keyword: \"that CHARACTER\", \"KASTELAN ROBOT models in that unit\")"
+    },
+    "reach": {
+     "source": "derived",
+     "note": "the friendly units it is given to, literal keywords; D5"
+    },
+    "mark": {
+     "source": "derived",
+     "note": "how it reaches them: aura, selected, friendly"
+    },
+    "notSelf": {
+     "source": "derived",
+     "note": "\"other friendly\", \"because of this … model\": not the unit with it"
+    },
+    "foe": {
+     "source": "derived",
+     "note": "an enemy unit's attacks made worse, whatever they target (\"each time a model in that enemy unit makes an attack\"): every unit of the list"
+    },
+    "opt": {
+     "source": "derived",
+     "note": "the option of its rule it is"
+    },
+    "pick": {
+     "source": "derived",
+     "note": "one of several to pick (\"select one of the following\"): name, df, quote"
+    },
+    "term": {
+     "source": "derived",
+     "note": "a faction's own term the ability names in bold (a RULES entry RULE_SRC says is not a core rule: Pulse Jet Move) whose words the box reads; its condition the ability's sentence naming it"
     }
    }
   }

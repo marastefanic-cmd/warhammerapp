@@ -46,7 +46,11 @@ function sources(D){
       // (one of the abilities to pick from: New Recruit lists it under "X: pick one", X the unit's ability whose words say "select one
       // X ability")
       const po = /^(.+): pick one$/.exec(ab.who || ''), par = po && (u.abilities || []).find(x => x.name === po[1] && /\bselect one\b/i.test(x.text || '') && new RegExp('\\bselect one ' + po[1].split(/\s+/)[0], 'i').test(x.text || ''));
-      put(KEY.ability(ab), Object.assign({ type:'ability', name:ab.name, text:ab.text, tag:ab.tag || '', weapons:ws }, tr ? { tagText:tr.text } : {}, par ? { pickOf:{ name:par.name, text:par.text } } : {})); }
+      // (a faction's own term its words name in bold, a RULES entry RULE_SRC says is not a core rule: the Pulse Jet's "pulse jet move", whose
+      // words say what it does, its defence side included)
+      const terms = [...String(ab.text || '').matchAll(/\*\*([^*]+)\*\*/g)].map(m => ((D.ruleAliases || []).find(([re]) => re.test(m[1])) || [])[1]).filter(k => k && (D.ruleSrc || {})[k] && D.rules[k]);
+      put(KEY.ability(ab), Object.assign({ type:'ability', name:ab.name, text:ab.text, tag:ab.tag || '', weapons:ws }, tr ? { tagText:tr.text } : {}, par ? { pickOf:{ name:par.name, text:par.text } } : {},
+        terms.length ? { terms:[...new Set(terms)].map(k => ({ name:k, text:D.rules[k] })) } : {})); }
     // the core weapon abilities of its weapons that calc.js does not play (Conversion), each for the weapons with it
     for(const w of [].concat(u.ranged || [], u.melee || [])) for(const k of w.kw || []){
       if(CALC_KW.test(k)) continue;
@@ -85,6 +89,10 @@ function build(D){
     if(r.both && r.both.length) o.both = r.both;
     if(r.embarked) o.embarked = r.embarked;
     if(r.riled) o.riled = true;
+    // the defence side (the datasheet's "When targeted" lines; the Damage tab does not read them)
+    if(r.d) o.d = r.d;
+    if(r.dnc) o.dnc = r.dnc;
+    if(r.dreach) o.dreach = r.dreach;
     if(s.played && Object.keys(o).length) o.played = s.played;
     if(Object.keys(o).length){ o.n = s.name; T[key] = o; }
   }
@@ -95,7 +103,9 @@ const END = '// ---- end of BOXES ----';
 const block = T => START + '\n' +
   '// The Damage tab\'s boxes of each rule, ability and stratagem (a|, r|, s|, c| + the hash of its name and text), read from GW\'s words by\n' +
   '// fixed code (verify/effects-extract.js, effects.js): b the boxes (quote: the sentence, fx its effects, on its conditions, kind, scope,\n' +
-  '// reach, mark, lasts, opt, pick, part, limit), nc the sentences of rare mechanics shown as not counted, reach an aura\'s units; n its name\n' +
+  '// reach, mark, lasts, opt, pick, part, limit), nc the sentences of rare mechanics shown as not counted, reach an aura\'s units; n its name;\n' +
+  '// d its defence boxes (the "When targeted" lines: quote, df its defences, on, kind, scope, reach, mark, foe, pick), dnc the defence words\n' +
+  '// no effect reads, dreach the units a stratagem protects when they are not its TARGET\n' +
   'const BOXES = {\n' + Object.keys(T).sort().map(k => '  ' + JSON.stringify(k) + ':' + JSON.stringify(T[k])).join(',\n') + '\n};\n' + END;
 function write(src, T){
   const i = src.indexOf(START), j = src.indexOf(END);
