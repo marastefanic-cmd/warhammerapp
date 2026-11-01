@@ -13,9 +13,8 @@
   "thulia-ghuld": {
    "notes": {
     "Supreme Commander": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”",
-    "Rod of the War Forge": "FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”"
-   },
-   "why": "Rod of the War Forge selects one of the Icon of War abilities (GW's datasheet prints them as a box, each an ability of its own: who \"Icon of War: pick one\"); the Faction Pack's FAQ about selecting them goes on the ability that selects"
+    "Icon of War": "FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”"
+   }
   },
   "cybernetica-datasmith-kastelan-robots": {
    "kwNote": "Kastelan Robots, Walker come from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator."

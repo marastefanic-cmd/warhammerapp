@@ -428,7 +428,7 @@ function extract(src, ctx){
     both.push(Object.assign({ names:[m[1], m[2]], quote:u.s, reach:r, mark:/\bselect one\b/.test(norm(u.s)) ? 'selected' : 'friendly' }, u.sec ? { opt:u.sec } : {}, lastsOf(norm(u.s)) ? { lasts:lastsOf(norm(u.s)) } : {})); }
   // a model of the unit not on the battlefield yet, by one fixed pattern of GW's words ("If your Canis Rex model is destroyed, this model is
   // treated as a model disembarking from a destroyed Transport", Using Sir Hekhtur): until that model is destroyed
-  const em = src.type === 'ability' ? /\bIf your ([A-Z][\w'’ -]*?) model is destroyed, this model is treated as a model disembarking from a destroyed Transport\b/.exec(plainCase(src.text || '')) : null;
+  const em = src.type === 'ability' ? /\bIf your ([A-Z][\w'’ -]*?) model is destroyed, this model is treated as a model disembarking from a destroyed (?:Transport|TRANSPORT)\b/.exec(plainCase(src.text || '')) : null;
   // a unit always riled up by its own words, one fixed pattern ("- This unit is **riled up**.", Super Runts): the Waaagh! army rule's
   // riled-up lines say so
   const riled = src.type === 'ability' && /^(?:-\s+)?this unit is riled up\.?$/m.test(String(src.text || '').split('\n').map(l => norm(l).trim()).join('\n'));

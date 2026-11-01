@@ -35,9 +35,11 @@ function differ(x){
 function check(faction, u, ab, list, unit){
   if(/\b(Enhancement|Upgrade)\b/.test(ab.tag || '') || /^\*?invulnerable save\b/i.test(ab.name)) return;
   counts.texts++;
-  const P = O.abilityPage(faction, u, ab), at = where(list, unit);
+  let P = O.abilityPage(faction, u, ab); const at = where(list, unit);
   if(!P) return differ({ page:'(no page)', ability:ab.name, app:ab.text, waha:'(none)', where:at });
-  const pa = O.pageAbility(P, ab);
+  let pa = O.pageAbility(P, ab);
+  // (an ability of a model with a GW datasheet of its own, which the unit's page does not print: Sir Hekhtur's, on his page)
+  if(!pa) for(const M of O.modelPages(faction, u)){ const x = O.pageAbility(M, ab); if(x){ P = M; pa = x; break; } }
   if(!pa) return differ({ page:P.file, ability:ab.name, app:ab.text, waha:'(none)', where:at });
   if(pa.kind === 'leader'){
     counts.leaders++;
