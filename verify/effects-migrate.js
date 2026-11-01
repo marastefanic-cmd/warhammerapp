@@ -49,7 +49,7 @@ function sources(D){
       // (or the section its who names, another ability of the unit selecting one of that section's abilities: "select one of the abilities in
       // the Crimson King section", Unearthly Power; verify/gw-order.js selectsFrom)
       const po = /^(.+): pick one$/.exec(ab.who || ''), par = (po && (u.abilities || []).find(x => x.name === po[1] && /\bselect one\b/i.test(x.text || '') && new RegExp('\\bselect one ' + po[1].split(/\s+/)[0], 'i').test(x.text || '')))
-        || (!po && ab.who ? (u.abilities || []).find(x => x !== ab && selectsFrom(x.text || '', ab.who)) : null);
+        || (!po && ab.who ? (u.abilities || []).find(x => x !== ab && (selectsFrom(x.text || '', ab.who) || new RegExp('\\bselect one ' + ab.who.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ' ability\\b', 'i').test(String(x.text || '').replace(/\*\*/g, '')))) : null);
       // (a faction's own term its words name in bold, a RULES entry RULE_SRC says is not a core rule: the Pulse Jet's "pulse jet move", whose
       // words say what it does, its defence side included)
       const terms = [...String(ab.text || '').matchAll(/\*\*([^*]+)\*\*/g)].map(m => ((D.ruleAliases || []).find(([re]) => re.test(m[1])) || [])[1]).filter(k => k && (D.ruleSrc || {})[k] && D.rules[k]);
@@ -69,9 +69,9 @@ function sources(D){
     for(const r of u.rules || []){ if(!/\d/.test(r) || D.rules[r]) continue; const t = coreText(D, r); if(t) put(KEY.core(r, t), { type:'core', name:r, text:t, weapons:ws }); }
   }
   for(const f of Object.values(D.factions)){
-    for(const r of f.armyRules || []) put(KEY.rule(r), { type:'rule', name:r.name, text:r.text, table:r.table, army:true });
+    for(const r of f.armyRules || []) put(KEY.rule(r), Object.assign({ type:'rule', name:r.name, text:r.text, table:r.table, army:true }, r.needs ? { needs:r.needs } : {}));
     for(const d of Object.values(f.detachments || {})){
-      for(const r of detRules(d)) put(KEY.rule(r), { type:'rule', name:r.name, text:r.text, table:r.table });
+      for(const r of detRules(d)) put(KEY.rule(r), Object.assign({ type:'rule', name:r.name, text:r.text, table:r.table }, r.needs ? { needs:r.needs } : {}));
       for(const s of d.stratagems || []) put(KEY.strat(s), { type:'strat', name:s.name, when:s.when, target:s.target, effect:s.effect, text:stratText(s) });
     }
   }

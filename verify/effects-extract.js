@@ -114,7 +114,8 @@ function condsOf(V, sOrig, leadOrig, opts){
   // clause of its own, read as one)
   // (the defence side: GW's struck words are not its words, "(excluding ~~MONSTER~~/VEHICLE units)", and a clause keeps its brackets)
   const pc = opts && opts.def ? plainCase(((leadOrig ? leadOrig + ' ' : '') + sOrig).replace(/~~[^~]*~~\/?/g, '')) : plainCase((leadOrig ? leadOrig + ' ' : '') + sOrig);
-  for(const m of pc.matchAll(opts && opts.def ? /\b(?:(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;]+|[Tt]he first time (?:(?! while\b)[^,.:;()])+)/g : /\b(?:(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;()]+|[Tt]he first time (?:(?! while\b)[^,.:;()])+)/g)){
+  // (a clause keeps its brackets: "While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)")
+  for(const m of pc.matchAll(/\b(?:(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;]+|[Tt]he first time (?:(?! while\b)[^,.:;()])+)/g)){
     const cl = m[0], cn = norm(cl);
     if(/^if (?:you|it|they) do(?:es)?\b|^if any of the following apply\b/.test(cn)) continue;
     // (an "if" whose consequence is a cost, not this effect: "if that test is failed, that unit suffers D3 mortal wounds")
@@ -139,7 +140,9 @@ function condsOf(V, sOrig, leadOrig, opts){
   const QP = [/\bthat targets? (?:a|an|an enemy) unit (?:with|within) [^,.;:]+?(?= (?:have|has|can|gains?)\b|[,.;:]|$)/g, /\bthat targets? the closest enemy unit\b/g,
     /(?<=\bbut )(?:they|it) can only target [^,.;:]+/g, /\bcontains (?:a|one or more) [A-Z][A-Za-z' ]+? models?\b/g, /\bmodels in (?:those|that|your|this) [A-Za-z ]+? units? can only target [^,.;:]+/g, /\bwith weapons selected for the [^,.;:]+? ability\b/g,
     // the target's status, which no condition above reads: "that target a hidden unit", "targets a unit that is Battle-shocked"
-    /\bthat targets? an? (?!enemy\b|unit\b)(?:[a-z][a-z-]* )+?unit(?: containing one or more models on [a-z ]+?(?=,|$))?/g, /\btargets? (?:a|an|an enemy) unit that is (?!below\b|not below\b)[^,.;:]+/g];
+    /\bthat targets? an? (?!enemy\b|unit\b)(?:[a-z][a-z-]* )+?unit(?: containing one or more models on [a-z ]+?(?=,|$))?/g, /\btargets? (?:a|an|an enemy) unit that is (?!below\b|not below\b)[^,.;:]+/g,
+    // (attacks it is not for, by their weapon ability: "(excluding [DEVASTATING WOUNDS] attacks)")
+    /\(excluding \[[^\]]+\] attacks\)/g];
   // (the defence side: the attacks or attackers it is for, which no condition above reads: "(excluding TITANIC units)", "Each time an enemy
   // unit … is selected to fight", "each time an attack with a Damage characteristic of 1 is allocated to the bearer", "When this unit is
   // selected as the target of an attack", "At the start of your opponent's Shooting phase, select one enemy unit …")
@@ -571,7 +574,9 @@ function defenceOf(src, us, V, ctx){
   // naming it is (its words, quoted)
   for(const tm of src.terms || []){ const r = defenceOf({ type:'term', name:tm.name, text:tm.text }, unitsOf({ type:'term', text:tm.text }), V, ctx);
     const named = plainCase(String(src.text || '').split(/(?<=[.!?])\s+/).find(x => new RegExp('\\*\\*' + tm.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\*\\*', 'i').test(x)) || '').replace(/\.\s*$/, '');
-    for(const b of r.d){ b.on = [['q', named]].concat((b.on || []).filter(x => x[0] !== 'opt')); delete b.opt; b.term = tm.name; d.push(b); }
+    // (and, one of a section's abilities another selects, its pick: Pulse Jet, a Throttlerokkit Shokka Engine ability)
+    const pk = src.pickOf ? [['opt', src.pickOf.name + ': the one selected' + ((at => at ? ' (' + at[1].replace(/^./, c => c.toLowerCase()) + ')' : '')(/^(At the start of [^,]+|In your [^,]+ phase)/i.exec(plainCase(src.pickOf.text))))]] : [];
+    for(const b of r.d){ b.on = pk.concat([['q', named]], (b.on || []).filter(x => x[0] !== 'opt')); delete b.opt; b.term = tm.name; d.push(b); }
     for(const x of r.dnc) dnc.push(Object.assign(x, { term:tm.name })); }
   // the options of one pick ("select one of the following": two defences) are one box, each a pick
   const out = [];

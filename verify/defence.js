@@ -115,6 +115,7 @@ stats.boxes = nBox; stats.notCounted = nDnc;
 // the kind of attack), said or quoted ("If (see the rule)"), or its sentence is listed not counted ----
 { const Cv = require('./coverage'); let n = 0;
   for(const [key, o] of Object.entries(T)){ const src = S.get(key); if(!src) continue;
+    for(const g of Cv.srcGaps(o, src)) fail('DC', key + ' ' + o.n, g);
     for(const b of o.d || []){ n++; for(const g of Cv.gaps(b, src, 'defence', src.others)) fail('DC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
   stats.covered = n; }
 // ---- D6 the code ----

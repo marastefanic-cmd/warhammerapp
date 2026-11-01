@@ -27,50 +27,105 @@ function optionOf(src, quote){
   if(u.lead && /\b(?:select|choose) one of the following\b|\bselect one of the following\b|\bcan have:$/i.test(n(u.lead))) return u.lead;
   return null;
 }
-// what a box's conditions say, as words: their labels and their quoted words
-function saidOf(b, kindSaid){
-  const on = b.on || [];
-  return { ids:new Set(on.map(x => x[0])), q:on.filter(x => x[0] === 'q' || x[0] === 'anyOf').map(x => n([].concat(x[1]).join(' '))), on };
+// what a box's conditions say, as words: their ids, their quoted words, the keywords they name
+function saidOf(b){
+  const on = (b.on || []).concat((b.pick || []).flatMap(p => p.on || []));
+  const kws = on.flatMap(([id, p]) => id === 'nearFriendly' ? [p.not || ''] : id === 'targetKw' ? [].concat(p.none || [], p.any || [], p.all || []) : []).concat([].concat(((b.reach || {}).none) || []), (b.scope || {}).models === 'nonchar' ? ['character'] : [], ((b.srcNeeds || {}).none) || [])
+    .map(k => n(String(k).replace(/^Faction: /, '')));
+  return { ids:new Set(on.map(x => x[0])), q:on.filter(x => x[0] === 'q' || x[0] === 'anyOf').map(x => n([].concat(x[1]).join(' '))), on, kws };
 }
+// the sentence of the rule a box's quote is, as the extractor's structure reader has it (its line, the sentence before it)
+const unitOf = (src, quote) => { const q = n(String(quote).split('\n')[0]).replace(/^-\s+/, '').slice(0, 60); return X.unitsOf(src).find(x => n(x.s).includes(q) || q.includes(n(x.s).slice(0, 60))) || null; };
+// the phrases of GW's words that condition what they say (each must be said, quoted or not counted)
+const PHRASES = [
+  { what:'clause', re:/\b(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;]+/g },
+  { what:'first time', re:/\b[Tt]he first time (?:(?! while\b)[^,.:;()])+/g },
+  { what:'exclusion', re:/\(excluding [^)]+\)/g },
+  { what:'target', re:/\bthat targets? (?:a|an|an enemy) unit (?:with|within) [^,.;:]+/g },
+  { what:'target', re:/\bthat targets? an? (?!enemy\b|unit\b)(?:[a-z][a-z-]* )+?unit\b/g },
+  { what:'target', re:/\btargets? (?:a|an|an enemy) unit that is (?!below\b|not below\b)[^,.;:]+/g },
+  { what:'can only target', re:/\bcan only target [^,.;:]+/g },
+  { what:'contains', re:/\bcontains (?:a|one or more) [A-Z][A-Za-z' ]+? models?\b/g },
+  { what:'weapons selected', re:/\bwith weapons selected for the [^,.;:]+? ability\b/g },
+  // (the defence side's own: the attacker, the attack, the moment, a roll)
+  { what:'attacker', re:/\b[Ee]ach time an enemy (?:unit|model)\b[^,.;:]*/g, side:'defence' },
+  { what:'attack', re:/\b(?:[Ee]ach time|[Ww]hen) an attack with [^,.;:]+/g, side:'defence' },
+  { what:'moment', re:/\b[Aa]t the start of [^,.;:]+?, select one enemy unit [^,.;:]+/g, side:'defence' },
+  { what:'roll', re:/\b[Oo]n an? (?:unmodified )?(?:D6 )?(?:roll of )?\d(?:-\d|\+)?(?=,)/g, side:'defence' },
+  { what:'failed save', re:/\b(?:[Ww]hen|[Jj]ust after) a saving throw [^,.;:]+/g, side:'defence' },
+  { what:'cost', re:/^\+\d+CP\b/g }
+];
 // the gaps of one box (b: a box or a defence box; src: its source as verify/effects-migrate.js sources gives it; side: 'attack' | 'defence';
-// units: the unit's other abilities, for a section another selects from)
+// others: the unit's other abilities, for a section another selects from)
 function gaps(b, src, side, others){
-  const out = [], S = saidOf(b), lead = b.lead || '', words = n([b.quote, lead].join(' ')), pcw = pc([lead, b.quote].join(' '));
+  const out = [], S = saidOf(Object.assign({ srcNeeds:src.needs }, b)), u = unitOf(src, b.quote);
+  // (its words: the line it continues, the sentence before it where it refers back to it ("If they do, …", "That model …"), the quote; GW's
+  // struck words are not its words)
+  const back = u && u.prevS && /^(?:if (?:it|you|they) do|that |those |until )/i.test(n(b.quote)) && !b.lead ? u.prevS : '';
+  const lead = b.lead || '', raw = [lead, back, b.quote].filter(Boolean).join(' ').replace(/~~[^~]*~~\/?/g, '');
+  const words = n(raw), pcw = pc(raw);
+  // (the clauses of its quote after the last one with its effect are another's: "…; on a 6, that enemy unit is not eligible to shoot")
+  const mine0 = (b.pick ? b.pick.flatMap(p => p.df || p.fx || []) : (b.df || b.fx || [])).map(([id]) => id);
+  const pq = pc(String(b.quote).replace(/~~[^~]*~~\/?/g, '')), qAt = pcw.lastIndexOf(pq);
+  let endAt = pcw.length;
+  { const parts = pq.split(/(?=(?:,? and,? |; )(?:until|that|each|all|models|melee|ranged|on a|weapons)\b)/i); let pos = 0, last = -1;
+    parts.forEach((x, i) => { const ids = (side === 'defence' ? X.findDf(n(x)).df : X.findFx(n(x)).fx).map(([id]) => id); if(ids.some(id => mine0.includes(id))) last = i; });
+    if(last >= 0 && qAt >= 0){ for(let i = 0; i <= last; i++) pos += parts[i].length; endAt = qAt + pos; } }
   const quotedHas = re => S.q.some(q => re.test(q));
+  const covers = (ph, at) => { const pn = n(ph), win = n(pcw.slice(at, at + ph.length + 80));
+    return S.on.some(([id]) => C[id] && C[id].pats.some(re => { if(re.test(pn)) return true; const r = re.exec(win); return !!r && r.index < pn.length; }))
+      || S.q.some(q => q.includes(pn.slice(0, 25)) || pn.includes(q.slice(0, 25))); };
   // option
-  const sel = src.type === 'ability' && (src.pickOf || (others || []).some(x => x.name !== src.name && src.who && selectsFrom(x.text || '', src.who)));
+  const secOf = w => (others || []).some(x => x.name !== src.name && w && (selectsFrom(x.text || '', w) || new RegExp('\\bselect one ' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ' ability\\b', 'i').test(pc(x.text))));
+  const sel = src.type === 'ability' && (src.pickOf || secOf(src.who));
   const opt = sel || optionOf(src, b.quote);
   if(opt && !S.ids.has('opt') && !b.pick && !b.tableRows && !b.excl && !quotedHas(/\bselect one of the following\b/)) out.push('an option of its rule (' + (sel ? 'one of the abilities another selects' : String(opt).slice(0, 40)) + ') and no option condition');
+  // a unit another selects ("select one friendly … model"): said
+  if(side === 'defence' && b.mark === 'selected' && !S.ids.has('selected')) out.push('a unit another selects and no selected condition');
   // once
   const ow = [words, n(src.tag)].join(' ');
   if(/\bonce per battle\b(?! round)/.test(ow) && !S.ids.has('oncePerBattle') && !quotedHas(/\bonce per battle\b/)) out.push('"once per battle" and no once-per-battle condition');
   if(/\bonce per turn\b/.test(ow) && !S.ids.has('oncePerTurn') && !quotedHas(/\bonce per turn\b/)) out.push('"once per turn" and no once-per-turn condition');
   if(/\bonce per battle round\b/.test(ow) && !quotedHas(/\bonce per battle round\b/)) out.push('"once per battle round" not quoted');
-  // clauses
-  for(const m of pcw.matchAll(/\b(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;()]+/g)){ const cl = m[0], cn = n(cl), after = pcw.slice(m.index + cl.length);
-    // (not a condition of the effect, as GW's grammar says: "if any of the following apply" (its list is the box's condition: objective,
-    // anyOf), a cost ("if that test is failed, that unit suffers …"), a definition ("… that unit is said to be within Synapse Range"), a word
-    // the sentence defines ("that model is damaged: while damaged"))
-    if(/^if any of the following apply\b/.test(cn) && S.on.some(([id]) => id === 'objective' || id === 'anyOf')) continue;
-    if(/^,?\s*(?:that unit|this unit|your unit|it|that model|this model) suffers\b/i.test(after)) continue;
-    if(/^,?\s*that [^.]*? is said to be\b/i.test(after)) continue;
-    { const w = /^while (\w+)$/.exec(cn); if(w && new RegExp('\\bis ' + w[1] + '\\b').test(n(pcw))) continue; }
-    if(/^if (?:it|you|they) do(?:es)?\b/.test(cn)){ if(!S.ids.has('used') && !S.ids.has('bearerUses') && !quotedHas(/\bif (?:it|you|they) do/) && !S.q.length) out.push('“' + cl + '” and no used condition'); continue; }
-    const read = S.on.some(([id]) => C[id] && C[id].pats.some(re => re.test(cn) || re.test(n(pcw.slice(m.index, m.index + cl.length + 80)))));
-    const quoted = S.q.some(q => q.includes(cn.slice(0, 30)) || cn.includes(q.slice(0, 30)));
-    // (a clause about the attack's target, said by the target's keywords or a target condition)
-    const target = /\b(?:targets?|that target is)\b/.test(cn) && S.on.some(([id]) => id === 'targetKw' || /^target|^closest|^maxT$/.test(id));
-    if(!read && !quoted && !target) out.push('“' + cl + '” is no condition of the box');
-  }
+  // the phrases
+  for(const P of PHRASES){ if(P.side && P.side !== side) continue;
+    for(const m of pcw.matchAll(P.re)){ const ph = m[0].trim(), pn = n(ph), after = pcw.slice(m.index + m[0].length);
+      if(m.index >= endAt) continue;
+      if(P.what === 'clause'){
+        // (not a condition of the effect, as GW's grammar says: "if any of the following apply" (its list is the box's condition: objective,
+        // anyOf), a cost ("if that test is failed, that unit suffers …"), a definition ("… is said to be within Synapse Range"), a word the
+        // sentence defines ("that model is damaged: while damaged"))
+        if(/^if any of the following apply\b/.test(pn) && S.on.some(([id]) => id === 'objective' || id === 'anyOf')) continue;
+        if(/^,?\s*(?:that unit|this unit|your unit|it|that model|this model) suffers\b/i.test(after)) continue;
+        if(/^,?\s*that [^.]*? is said to be\b/i.test(after)) continue;
+        { const w = /^while (\w+)$/.exec(pn); if(w && new RegExp('\\bis ' + w[1] + '\\b').test(words)) continue; }
+        if(/^if (?:it|you|they) do(?:es)?\b/.test(pn)){ if(!S.ids.has('used') && !S.ids.has('bearerUses') && !quotedHas(/\bif (?:it|you|they) do/) && !S.q.length) out.push('“' + ph + '” and no used condition'); continue; }
+        // (a clause about the attack's target, said by the target's keywords or a target condition)
+        if(side === 'attack' && /\b(?:targets?|that target is)\b/.test(pn) && S.on.some(([id]) => id === 'targetKw' || /^target|^closest|^maxT$/.test(id))) continue;
+      }
+      if(P.what === 'exclusion'){
+        // (its keywords in a condition's: nearFriendly's "not", the target's "none", the reach's "none"; "(excluding Psychic Attacks)": notPsychic)
+        // (who can take an enhancement, "ORKS INFANTRY model only (excluding WEIRDBOY models)": the list's, not a condition of its effect)
+        if(/\bmodel only $/.test(pcw.slice(Math.max(0, m.index - 12), m.index))) continue;
+        if(/psychic attacks/.test(pn)){ if(!S.ids.has('notPsychic') && !quotedHas(/excluding psychic attacks/)) out.push('“' + ph + '” and no Not Psychic Attacks condition'); continue; }
+        const ks = pn.replace(/^\(excluding |\)$/g, '').replace(/\bunits?$|\bmodels?$/, '').split(/\/|,? and |, | or /).map(k => k.trim().replace(/s$/, '')).filter(Boolean);
+        if(ks.every(k => S.kws.some(x => x.replace(/s$/, '').includes(k) || k.includes(x.replace(/s$/, ''))) || S.q.some(q => q.includes(k)))) continue;
+        // (weapons it is not for, "(excluding Extra Attacks weapons)": the box's weapons, its effects' own words)
+        if(/\bweapons?\)$/.test(pn)) continue;
+        if(side === 'attack' && covers(ph, m.index)) continue;
+        out.push('“' + ph + '” is no condition of the box'); continue; }
+      // (a failed save is its own condition, failedSave, or quoted; what a unit can only target is GW's words, never another condition's)
+      if(P.what === 'failed save'){ if(!S.ids.has('failedSave') && !quotedHas(/\bsaving throw\b/)) out.push('“' + ph + '” and no failed-save condition'); continue; }
+      if(P.what === 'can only target'){ if(!S.q.some(q => q.includes(pn.slice(0, 25)) || pn.includes(q.slice(0, 25)))) out.push('“' + ph + '” not quoted'); continue; }
+      if(!covers(ph, m.index)) out.push('“' + ph + '” is no condition of the box'); } }
   // within N"
   for(const m of words.matchAll(/\bwithin (\d+)"/g)){ const N = +m[1], at = words.slice(Math.max(0, m.index - 40), m.index + 60);
     if(/\b(?:range|move|moves|set up|more than)\b/.test(words.slice(Math.max(0, m.index - 25), m.index))) continue;
     if(/^[^.]*?\bis said to be\b/.test(words.slice(m.index))) continue;   // (a definition: "… is said to be within Synapse Range")
     const said = S.on.some(([id, p]) => (id === 'aura' && +p === N) || (id === 'nearFriendly' && p && +p.d === N) || (C[id] && C[id].pats.some(re => { const r = re.exec(words); return r && r[0].includes('within ' + N + '"'); })))
-      || S.q.some(q => q.includes('within ' + N + '"')) || (b.reach && ['aura', 'selected'].includes(b.mark)) || b.foe;
+      || S.q.some(q => q.includes('within ' + N + '"')) || (b.reach && ['aura', 'selected'].includes(b.mark));
     if(!said) out.push('“…' + at.trim().slice(0, 70) + '…” and no condition within ' + N + '"'); }
   // kind (its clause's words; a duration's phase is no kind)
-  // (the clause with its effect: "weapons … have [SUSTAINED HITS 1], and ranged weapons … have [IGNORES COVER]" is two boxes, each its kind)
   const kinds = { melee:/\bmelee (?:attacks?|weapons?)\b|\bfight phase\b/, ranged:/\branged (?:attacks?|weapons?)\b|\bshooting phase\b/, psychic:/\bpsychic attacks?\b|\bpsychic weapons\b/ };
   const mine = (b.pick ? b.pick.flatMap(p => p.df || p.fx || []) : (b.df || b.fx || [])).map(([id]) => id);
   const segs = n(b.quote).split(/(?:,? and,? |; )(?=(?:until|that|each|all|models|melee|ranged|on a|weapons)\b)/);
@@ -80,9 +135,21 @@ function gaps(b, src, side, others){
   const has = Object.entries(kinds).filter(([, re]) => re.test(kw.replace(/\(excluding psychic attacks\)/g, ' ').replace(/\bfeel no pain \d\+ (?:ability )?against [a-z ]+/g, ' '))).map(([k]) => k);
   if(has.length === 1){ const k = has[0], df = b.pick ? b.pick.flatMap(p => p.df || p.fx || []) : (b.df || b.fx || []);
     const labelSays = df.length && df.every(([id]) => (k === 'ranged' && /Ranged$/.test(id)) || (k === 'psychic' && /^fnpPsy/.test(id)) || (k === 'ranged' && E.FX[id] && ['range', 'bsSet', 'assault', 'heavy', 'indirect', 'pistol'].includes(id)));
-    const excluded = k === 'psychic' && S.ids.has('notPsychic');
-    if(b.kind !== k && !labelSays && !excluded && !quotedHas(kinds[k]) && !(side === 'attack' && k === 'psychic' && (b.scope || {}).wkw === 'PSYCHIC') && !(src.type === 'strat'))
+    if(b.kind !== k && !labelSays && !quotedHas(kinds[k]) && !(side === 'attack' && k === 'psychic' && (b.scope || {}).wkw === 'PSYCHIC') && !(src.type === 'strat'))
       out.push('its words say ' + k + ' attacks, the box is for ' + b.kind); }
+  // how long it lasts, beyond the phase (the defence side says it: until)
+  if(side === 'defence' && /\buntil the (?:start of your next (?:command phase|turn)|end of (?:the|your opponent's next) (?:battle round|turn)|end of the battle)\b/.test(n([lead, b.quote].join(' '))) && !b.until) out.push('a duration beyond the phase and no until');
+  // a stratagem's WHEN beyond its standard trigger, its TARGET's where (the defence side: a quoted condition, or one that reads it)
+  if(side === 'defence' && src.type === 'strat'){ const w = pc(src.when).split(/(?<=\.)\s+/)[0].replace(/\.\s*$/, ''), rest = n(w).replace(/^(?:any phase|(?:(?:start|end) of )?(?:your opponent's |your |the )?(?:command|movement|shooting|charge|fight) phase(?: or the (?:shooting|fight) phase)?),?\s*/, '');
+    if(rest && !/^(?:just after|when) an enemy unit (?:has selected its targets|targets a friendly [^.]+? unit(?: \([^)]*\))?)$/.test(rest) && !covers(w, 0) && !S.q.some(q => q.includes(n(w).slice(0, 25)))) out.push('its WHEN “' + w + '” is no condition of the box');
+    const t = pc(src.target).replace(/\.\s*$/, ''); if(/\bwithin (?:engagement range|\d+") of\b/.test(n(t)) && !S.q.some(q => q === n(t))) out.push('its TARGET “' + t.slice(0, 60) + '” is no condition of the box'); }
   return out;
 }
-module.exports = { gaps, optionOf };
+// a stratagem's source-level gap: a unit it protects that is not its TARGET (its WHEN's "targets a friendly X unit", its TARGET's "of a
+// friendly X unit that was selected as the target") and no dreach
+function srcGaps(o, src){
+  if(src.type !== 'strat' || !(o.d || []).length) return [];
+  const tn = n(src.target), other = /\bof a friendly .+? unit that was selected as the target\b/.test(tn) || (/\bwhen an enemy unit targets a friendly\b/.test(n(src.when)) && !/^that\b/.test(tn));
+  return other && !o.dreach ? ['it protects a unit that is not its TARGET and has no dreach'] : [];
+}
+module.exports = { gaps, srcGaps, optionOf };
