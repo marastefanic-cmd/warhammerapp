@@ -82,6 +82,24 @@ function gaps(b, src, side, others){
   if(opt && !S.ids.has('opt') && !b.pick && !b.tableRows && !b.excl && !quotedHas(/\bselect one of the following\b/)) out.push('an option of its rule (' + (sel ? 'one of the abilities another selects' : String(opt).slice(0, 40)) + ') and no option condition');
   // a unit another selects ("select one friendly … model"): said
   if(side === 'defence' && b.mark === 'selected' && !S.ids.has('selected')) out.push('a unit another selects and no selected condition');
+  // the models it is for, by GW's words: "that CHARACTER has", "KASTELAN ROBOT models in that unit", "that model has" with "a X model is leading
+  // this unit": that keyword (the line says "X models:")
+  { let m, want = null; const rp = raw.replace(/\*\*/g, '');
+    if((m = /\bthat ([A-Z][A-Z' -]*[A-Z])(?: model)? has\b/.exec(rp)) || (m = /\b([A-Z][A-Z' -]*[A-Z]) models in that unit\b/.exec(rp))) want = m[1].trim();
+    else if(/\bthat model has\b/i.test(rp) && (m = /\bwhile an? ([A-Z][A-Z' -]*[A-Z]) model is leading this unit\b/.exec(rp))) want = m[1].trim();
+    if(want && String((b.scope || {}).models || '').toUpperCase() !== want.toUpperCase() && String((b.scope || {}).part || '').toUpperCase() !== want.toUpperCase()) out.push('its words give it to ' + want + ' models, its scope ' + JSON.stringify((b.scope || {}).models || 'the unit')); }
+  // the friendly units it reaches: every keyword GW names for them is in its reach ("a friendly NECRONS VEHICLE unit", "a friendly LEGIO
+  // CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model", "BLOOD LEGIONS units from your army"); "other friendly", "another", "because of this
+  // … model": not the unit itself (notSelf); a reach by an aura's range: its aura mark
+  if(b.reach){ const rw = new Set([].concat(b.reach.all || [], b.reach.any || []).flatMap(k => n(String(k).replace(/^Faction: /, '')).split(/\s+/)));
+    // (not a phrase saying where they must be, "within 6" of one or more friendly SYNAPSE models", as the extractor's reach reader skips it)
+    const m = /(?<!\bwithin \d+" of (?:a |an |one or more )?)\bfriendly ((?:\*\*[^*]+\*\*(?:\s*(?:,|\/|or|and)\s*)?)+)\s*(?:units?|models?)\b/.exec(raw) || /((?:\*\*[^*]+\*\*(?:\s*(?:,|\/|or|and)\s*)?)+)\s*(?:units?|models?) from your army\b/.exec(raw);
+    if(m){ const miss = [...m[1].matchAll(/\*\*([^*]+)\*\*/g)].flatMap(x => n(x[1]).split(/\s+|\//)).filter(w => w && !rw.has(w) && !rw.has(w.replace(/s$/, '')));
+      if(miss.length) out.push('its words name the friendly units ' + m[1].replace(/\*\*/g, '') + ', its reach leaves out ' + miss.join(', ')); }
+    if(/\bother friendly\b|\banother friendly\b|\bbecause of this [a-z' -]+ model\b/.test(words) && !b.notSelf) out.push('“other” / “because of this model” and the box is not notSelf');
+    if(S.ids.has('aura') && !['aura', 'selected'].includes(b.mark)) out.push('a reach by its aura\'s range and no aura mark'); }
+  // a faction term's words (Pulse Jet's "pulse jet move"): had when the ability's sentence naming it is, quoted
+  if(b.term && !S.q.some(q => q.includes(n(b.term)))) out.push('the words of ' + b.term + ' and no condition naming it');
   // once
   const ow = [words, n(src.tag)].join(' ');
   if(/\bonce per battle\b(?! round)/.test(ow) && !S.ids.has('oncePerBattle') && !quotedHas(/\bonce per battle\b/)) out.push('"once per battle" and no once-per-battle condition');
