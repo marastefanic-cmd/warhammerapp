@@ -13319,6 +13319,41 @@
    "sha256": "fe9be8f7acdbbff581a099dd44dc8540dfee7a982573c6d0aa3d12d6467ea1ef"
   },
   {
+   "item": "basic-bitch / the-swarmlord-tyrant-guard / ability:Malign Presence (The Swarmlord)",
+   "field": "ability:Malign Presence (The Swarmlord)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / The Swarmlord, Malign Presence Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "basic-bitch / hive-tyrant-tyrant-guard / ability:Will of the Hive Mind (Hive Tyrant)",
+   "field": "ability:Will of the Hive Mind (Hive Tyrant)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "basic-bitch / hive-tyrant-tyrant-guard / ability:Onslaught (Hive Tyrant)",
+   "field": "ability:Onslaught (Hive Tyrant)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Onslaught Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "basic-bitch / biovores / ability:Seed Spore Mines",
+   "field": "ability:Seed Spore Mines",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Biovores, Seed Spore Mine Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "basic-bitch / von-ryans-leapers / ability:Pouncing Leap",
+   "field": "ability:Pouncing Leap",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p21, Rules Updates: DATASHEETS / Von Ryan's Leapers, Pouncing Leap ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
    "item": "catalog / tyranids/winged-hive-tyrant / ability:Will of the Hive Mind",
    "field": "ability:Will of the Hive Mind",
    "doc": "pack:tyranids",
@@ -13351,13 +13386,6 @@
    "field": "ability:Foul Spores",
    "doc": "pack:tyranids",
    "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Venomthropes, Foul Spores ability",
-   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
-  },
-  {
-   "item": "catalog / tyranids/von-ryans-leapers / ability:Pouncing Leap",
-   "field": "ability:Pouncing Leap",
-   "doc": "pack:tyranids",
-   "where": "GW Faction Pack Tyranids PDF p21, Rules Updates: DATASHEETS / Von Ryan's Leapers, Pouncing Leap ability",
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
@@ -13977,21 +14005,28 @@
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
-   "item": "catalog / tyranids/tyranid-prime-with-lash-whip / ability:Alpha Warrior",
+   "item": "basic-bitch / the-red-terror / ability:Swallow Whole",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p7-8 (The Red Terror datasheet)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "basic-bitch / the-red-terror / ability:Subterranean Hunter",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p7-8 (The Red Terror datasheet)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "basic-bitch / tyranid-prime-with-lash-whip-hormagaunts / ability:Alpha Warrior",
    "field": "text",
    "doc": "pack:tyranids",
    "where": "GW Faction Pack Tyranids PDF p9-10 (Tyranid Prime with Lash Whip datasheet)",
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
-   "item": "catalog / tyranids/tyranid-prime-with-lash-whip / ability:Aggressive Leader-beast",
-   "field": "text",
-   "doc": "pack:tyranids",
-   "where": "GW Faction Pack Tyranids PDF p9-10 (Tyranid Prime with Lash Whip datasheet)",
-   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
-  },
-  {
-   "item": "catalog / tyranids/tyranid-prime-with-lash-whip / ability:Leader",
+   "item": "basic-bitch / tyranid-prime-with-lash-whip-hormagaunts / ability:Aggressive Leader-beast",
    "field": "text",
    "doc": "pack:tyranids",
    "where": "GW Faction Pack Tyranids PDF p9-10 (Tyranid Prime with Lash Whip datasheet)",
@@ -15020,6 +15055,46 @@
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "basic-bitch / the-swarmlord-tyrant-guard / ability:Malign Presence",
+   "field": "note",
+   "text": "This ability takes precedence over the Lord of Deceit ability presented in the B",
+   "doc": "wahads:tyranids_The-Swarmlord",
+   "where": "Wahapedia datasheet The-Swarmlord § Tyranids – The Swarmlord",
+   "sha256": "b7952c4f9b46d19acbc53bde16a541c90c33367d1f459d42e99c8396b147fee9"
+  },
+  {
+   "item": "basic-bitch / biovores / ability:Seed Spore Mines",
+   "field": "note",
+   "text": "When my Biovores unit uses the Seed Spore Mines ability, does my unit lose hidde",
+   "doc": "pack:tyranids",
+   "where": "PDF p21",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "basic-bitch / biovores / ability:Seed Spore Mines",
+   "field": "note",
+   "text": "No.",
+   "doc": "core",
+   "where": "PDF p88",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "basic-bitch / biovores / ability:Seed Spore Mines",
+   "field": "note",
+   "text": "Are Spore Mines units that are added to an army during a battle restricted by ab",
+   "doc": "pack:tyranids",
+   "where": "PDF p21",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "basic-bitch / biovores / ability:Seed Spore Mines",
+   "field": "note",
+   "text": "No.",
+   "doc": "core",
+   "where": "PDF p88",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
   }
  ]
 }
