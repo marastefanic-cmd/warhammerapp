@@ -1,0 +1,648 @@
+[
+ {
+  "army": "basic-bitch",
+  "kind": "ability-note",
+  "where": "basic-bitch · The Swarmlord · Malign Presence",
+  "judgement": {
+   "note": "Designer’s Note (Wahapedia’s datasheet, printed under the codex wording that Faction Pack 1.3 replaced): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”"
+  },
+  "source": {
+   "ability": "Malign Presence",
+   "text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP.",
+   "others": [
+    "Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
+    "Domination of the Hive Mind: While a friendly **TYRANIDS** unit is within 9\" of this model, that unit is within your army’s **Synapse Range**.",
+    "Guardian Organism: While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability."
+   ],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Hyper-adaptations"
+   ]
+  },
+  "key": "8f3269b31230bb68"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "unit-partialRules",
+  "where": "basic-bitch · Hive Tyrant",
+  "judgement": {
+   "partialRules": {
+    "Deadly Demise D3": "Hive Tyrant"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Hive Tyrant",
+    "6× Tyrant Guard"
+   ],
+   "rules": [
+    "Deadly Demise D3",
+    "Leader",
+    "Shadow in the Warp",
+    "Synapse",
+    "Twin-linked",
+    "Extra Attacks"
+   ],
+   "abilities": [
+    "Hive Tyrant · Will of the Hive Mind: Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+    "Hive Tyrant · Onslaught: While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities.",
+    "Tyrant Guard · Guardian Organism: While a **CHARACTER** model is leading this unit, that **CHARACTER** has the **Feel No Pain 5+** ability."
+   ]
+  },
+  "key": "42f507ed2baf8c9b"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "unit-kwNote",
+  "where": "basic-bitch · Tyranid Prime with Lash Whip",
+  "judgement": {
+   "kwNote": "Battleline, Endless Multitude, Hormagaunts come from the led Hormagaunts."
+  },
+  "source": {
+   "models": [
+    "1× Tyranid Prime with Lash Whip",
+    "20× Hormagaunts"
+   ],
+   "stats": [
+    "Tyranid Prime with Lash Whip W6 OC1",
+    "Hormagaunts ×20 W1 OC2"
+   ],
+   "weapons": [
+    "Rending claw 4 -2 3 SUSTAINED HITS 1",
+    "Lash whip 8 -2 1 EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Scything talons 6 -2 2 SUSTAINED HITS 1",
+    "Hormagaunt talons 3 -1 1 SUSTAINED HITS 1"
+   ]
+  },
+  "key": "85bb74e341395b53"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "ability-note",
+  "where": "basic-bitch · Biovores · Seed Spore Mines",
+  "judgement": {
+   "note": "FAQ (Faction Pack 1.3): “When my Biovores unit uses the Seed Spore Mines ability, does my unit lose hidden?” “No.” FAQ (Faction Pack 1.3): “Are Spore Mines units that are added to an army during a battle restricted by abilities that prevent Reserves from being set up within a certain range (e.g. Space Marines Infiltrators’ Omniscrambers)?” “No.”"
+  },
+  "source": {
+   "ability": "Seed Spore Mines",
+   "text": "Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new **SPORE MINES** unit to your army and set it up anywhere on the battlefield that is wholly within 48\" of this unit and more than 8\" horizontally away from all enemy units. That **SPORE MINES** unit contains 1 model for each model in this unit.",
+   "others": [],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Hyper-adaptations"
+   ]
+  },
+  "key": "19d479ae29311e02"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "ability-tag",
+  "where": "basic-bitch · Neurolictor · Psychological Saboteur",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Psychological Saboteur",
+   "text": "While an enemy unit is within 12\" of this model, if that unit is **Battle-shocked**:\n- Each time a model in that unit makes an attack, subtract 1 from the **Hit roll**.\n- Each time a friendly **TYRANIDS** model makes an attack that targets that unit, add 1 to the **Wound roll**."
+  },
+  "key": "07a7458e4927376f"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "strat-gist",
+  "where": "Invasion Fleet · Rapid Regeneration",
+  "judgement": {
+   "gist": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your TYRANIDS unit as a target: until the end of the phase, its models have Feel No Pain 6+ (5+ if it is within Synapse Range of your army)."
+  },
+  "source": {
+   "stratagem": "Rapid Regeneration",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability. If your unit is within Synapse Range of your army, models in your unit have the Feel No Pain 5+ ability instead."
+  },
+  "key": "d42071f9cd6729f1"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "strat-gist",
+  "where": "Invasion Fleet · Adrenal Surge",
+  "judgement": {
+   "gist": "Fight phase, up to two TYRANIDS units from your army within Synapse Range of your army and eligible to fight (or one other eligible TYRANIDS unit): until the end of the phase, their attacks score a Critical Hit on an unmodified Hit roll of 5+."
+  },
+  "source": {
+   "stratagem": "Adrenal Surge",
+   "text": "WHEN: Fight phase.\nTARGET: Up to two **TYRANIDS** units from your army that are within Synapse Range of your army and are eligible to fight, or one other **TYRANIDS** unit from your army that is eligible to fight.\nEFFECT: Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+  },
+  "key": "119dde4ac2338344"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "strat-gist",
+  "where": "Invasion Fleet · Death Frenzy",
+  "judgement": {
+   "gist": "Fight phase, just after an enemy unit selected your TYRANIDS unit as a target: until the end of the phase, each time a model in it that has not fought this phase is destroyed, on a 4+ it is not removed yet: it can fight after the attacking unit has finished its attacks, then it is removed from play."
+  },
+  "source": {
+   "stratagem": "Death Frenzy",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+  },
+  "key": "091602702d68f41c"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "strat-gist",
+  "where": "Invasion Fleet · Overrun",
+  "judgement": {
+   "gist": "Fight phase, just before your TYRANIDS unit Consolidates: until the end of the phase, its models can move an additional 3\" when it Consolidates, if it can end that move within Engagement Range of an enemy unit; within Synapse Range of your army and not within Engagement Range of any enemy unit, it can make a Normal move of up to 6\" instead."
+  },
+  "source": {
+   "stratagem": "Overrun",
+   "text": "WHEN: Fight phase, just before a **TYRANIDS** unit from your army Consolidates.\nTARGET: That **TYRANIDS** unit.\nEFFECT: Until the end of the phase, each time your unit Consolidates, models in it can move an additional 3\" as long as your unit can end that move within **Engagement Range** of one or more enemy units. If your unit is within Synapse Range of your army and not within Engagement Range of any enemy units, instead of making that **Consolidation move**, it can make a **Normal move** of up to 6\"."
+  },
+  "key": "be7c33c188f76f2a"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "strat-gist",
+  "where": "Invasion Fleet · Predatory Imperative",
+  "judgement": {
+   "gist": "Your Command phase, up to two TYRANIDS units from your army within Synapse Range of your army (or one other TYRANIDS unit): select one more Hyper-adaptation, active for them until the start of your next Command phase; not the one selected at the start of the first battle round."
+  },
+  "source": {
+   "stratagem": "Predatory Imperative",
+   "text": "WHEN: Your Command phase.\nTARGET: Up to two **TYRANIDS** units from your army that are within Synapse Range of your army, or one other **TYRANIDS** unit from your army.\nEFFECT: Select one Hyper-adaptation. Until the start of your next Command phase, that Hyper-adaptation is active for those selected units in addition to any other that may be active for your army.\nRESTRICTIONS: You cannot select the same Hyper-adaptation you selected at the start of the first battle round."
+  },
+  "key": "38c5613cd2bf37ef"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "strat-gist",
+  "where": "Invasion Fleet · Endless Swarm",
+  "judgement": {
+   "gist": "Your Command phase, up to two ENDLESS MULTITUDE units from your army within Synapse Range of your army (or one other ENDLESS MULTITUDE unit): return up to D3+3 destroyed models to each of them."
+  },
+  "source": {
+   "stratagem": "Endless Swarm",
+   "text": "WHEN: Your Command phase.\nTARGET: Up to two **ENDLESS MULTITUDE** units from your army that are within Synapse Range of your army, or one other **ENDLESS MULTITUDE** unit from your army.\nEFFECT: You can return up to D3+3 destroyed models to each of the selected units."
+  },
+  "key": "66a1e2920187f2ff"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-needs",
+  "where": "Tyranids · Warrior Bioform Onslaught rule · Leader-beasts",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Tyranid Warriors With Ranged Bio-Weapons",
+     "Tyranid Warriors With Melee Bio-Weapons",
+     "Tyranid Warriors",
+     "Tyranid Prime with Lash Whip",
+     "Winged Tyranid Prime"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Leader-beasts",
+   "text": "- Friendly **TYRANID WARRIORS WITH RANGED BIO-WEAPONS**/**TYRANID WARRIORS WITH MELEE BIO-WEAPONS** units have:\n- **TYRANID WARRIORS**.\n- **BATTLELINE**.\n- **TYRANID WARRIORS**/**TYRANID PRIME WITH LASH WHIP**/**WINGED TYRANID PRIME** models from your army have 5+ **InSv**."
+  },
+  "key": "935bd5a0878e486b"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-red-terror · kw",
+  "judgement": {
+   "app": "Burrower",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet has the keyword BURROWER; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_The-Red-Terror.html: KEYWORDS."
+  },
+  "key": "fa9dc1e9bee5e5b3"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-red-terror · kw",
+  "judgement": {
+   "app": "",
+   "source": "Burrowers"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Burrowers; GW’s datasheet does not print that keyword. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_The-Red-Terror.html: KEYWORDS (no BURROWERS)."
+  },
+  "key": "b09ec85e0ee534d1"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · the-swarmlord-tyrant-guard · rules",
+  "judgement": {
+   "app": "",
+   "source": "Feel No Pain 5+"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\"."
+  },
+  "key": "a51cac789f1f40ab"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · hive-tyrant-tyrant-guard · rules",
+  "judgement": {
+   "app": "",
+   "source": "Feel No Pain 5+"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit Feel No Pain 5+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 3) has it too). GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Hive-Tyrant.html, verify/.cache/waha/ds/tyranids_Tyrant-Guard.html: CORE ABILITIES / ARMY RULES \"Deadly Demise D3, Leader, Shadow in the Warp, Synapse\"."
+  },
+  "key": "27a1a661d7e90ec1"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · biovores · kw",
+  "judgement": {
+   "app": "Biovores",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet has the keyword BIOVORES; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS."
+  },
+  "key": "870f8f8338fecbd0"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · biovores · kw",
+  "judgement": {
+   "app": "",
+   "source": "Biovore"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Biovore; GW’s datasheet does not print that keyword. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Biovores.html: KEYWORDS (no BIOVORE)."
+  },
+  "key": "9a28fba0838b82cc"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · haruspex · stats.base",
+  "judgement": {
+   "app": "Haruspex: 120×92mm Oval",
+   "source": "Haruspex: 120x92mm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Haruspex: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3817: \"Haruspex  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: 120×92mm."
+  },
+  "key": "0755c02a88d6043c"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · psychophage · stats.base",
+  "judgement": {
+   "app": "Psychophage: 120×92mm Oval",
+   "source": "Psychophage: 120x92mm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Psychophage: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3835: \"Psychophage  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: 120×92mm."
+  },
+  "key": "1b20dda970e3fe25"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tyrannofex · stats.base",
+  "judgement": {
+   "app": "Tyrannofex: 120×92mm Oval",
+   "source": "Tyrannofex: 120x92mm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Tyrannofex: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3857: \"Tyrannofex  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: 120×92mm."
+  },
+  "key": "0c8fd60917600839"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · tyrannofex · kw",
+  "judgement": {
+   "app": "Frame",
+   "source": ""
+  },
+  "source": {
+   "reason": "GW’s datasheet has the keyword FRAME; BSData at the pin (Xenos - Tyranids catalogue revision 3) and New Recruit’s export (catalogue revision 3) do not. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Tyrannofex.html: KEYWORDS."
+  },
+  "key": "3a3de46f07f9e9ac"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · spore-mines-biovore · kw",
+  "judgement": {
+   "app": "",
+   "source": "Reference"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Reference; GW’s datasheet does not print that keyword. GW wins.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Spore-Mines.html: KEYWORDS (no REFERENCE)."
+  },
+  "key": "01374af6fca39144"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-nr.json · haruspex · stats[Haruspex].base",
+  "judgement": {
+   "app": "120×92mm Oval",
+   "source": "120x92mm"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 3) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3817: \"Haruspex  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: Base 120x92mm."
+  },
+  "key": "5b9416ed5350b6df"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-nr.json · psychophage · stats[Psychophage].base",
+  "judgement": {
+   "app": "120×92mm Oval",
+   "source": "120x92mm"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 3) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3835: \"Psychophage  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: Base 120x92mm."
+  },
+  "key": "a0e1d262d3837734"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-nr.json · tyrannofex · stats[Tyrannofex].base",
+  "judgement": {
+   "app": "120×92mm Oval",
+   "source": "120x92mm"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 3) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3857: \"Tyrannofex  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: Base 120x92mm."
+  },
+  "key": "fd6da14cd3304eef"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-texts.json · hive-tyrant-tyrant-guard · ability:Onslaught (Hive Tyrant)",
+  "judgement": {
+   "app": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities.",
+   "source": "Rules Updates \"Change to:\": while a friendly tyranidsunit is within 6\" of this model, ranged weapons equipped by models in that unit have the [assault] and [lethal hits] abilities. | differs at \"…while a friendly tyranids[ unit is within 6\" of this model, ranged…]\" vs source \"…while a friendly tyranids[unit is within 6\" of this model, ranged …]\""
+  },
+  "source": {
+   "reason": "Typo in the Faction Pack: \"TYRANIDSunit\" has no space; the app writes \"TYRANIDS unit\". Every other word is the pack's.",
+   "evidence": "GW Faction Pack Tyranids v1.3 PDF p20, Rules Updates, Hive Tyrant, Onslaught Ability (verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt line 665: \"‘While a friendly TYRANIDSunit is within 6\" of this model, ranged\"): pdftotext -bbox gives one word box \"TYRANIDSunit\" (x 101.2-147.9), where \"TYRANIDS\" alone is 33.2pt wide on the same page (x 119.4-152.6). BSData and New Recruit have \"friendly TYRANIDS unit\" (verify/sources/nr-json/basic-bitch.json, Hive Tyrant, Onslaught)."
+  },
+  "key": "2354970d18166a58"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/bsdata.js resolveAffects · associations (6ece085)",
+  "judgement": {
+   "change": "Each root of the set is associated with the other roots of its attached unit, whether or not the set already holds them (was: only roots not in the set). \"self.entries.group.recursive.associations.profiles.<type>\" (every root of the attached unit first) now reaches the bodyguard; \"self.entries.recursive.associations\" gives what it gave."
+  },
+  "source": {
+   "evidence": "BSData Library - Tyranids.json, Tyranid Prime with Lash Whip, \"Alpha Warrior attached unit modifiers\" (append Sustained Hits 1 to Melee/Ranged Weapons keywords); the same path in Aeldari, Astra Militarum, Genestealer Cults, Grey Knights, and on the Hive Tyrant (Onslaught), Broodlord, Winged Tyranid Prime, Hyperadapted Raveners. Before/after on HEAD: bsdata.js 248 grants and 0 failures both; from-json --compare identical for all 23 lists with an export; data.js unchanged. Basic Bitch: Hormagaunt talons gain from:{SUSTAINED HITS 1:Alpha Warrior}; the Prime's own three weapons keep one SUSTAINED HITS 1. Numbers: dmshown/dmsingle of the pre-fix import (Hormagaunts row carrying SUSTAINED HITS 1 as a datasheet fact) and the final list are equal, 33 of 33 and 527 of 527.",
+   "check": "Is \"associations\" read as New Recruit reads it (the attached unit's other roots)? Could a leader's own weapons now get a modifier twice (the Hive Tyrant's Onslaught on a Hive Tyrant with ranged weapons leading Tyrant Guard: the Tyrant Guard root's association is the Hive Tyrant)? No list has that case today."
+  },
+  "key": "043b772a978cf3e6"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/from-json.js 1542-1554 · a catalogue detachment a list uses (24886ef)",
+  "judgement": {
+   "change": "On --write, a detachment of the list that data.js has with aiStatus:'not-read' keeps its catalogue text; its stratagems get the hand file's gist (gistOf, note), the mark and the catalogue comment go. A stratagem with no hand gist is listed not filled. A second run finds no mark: no change."
+  },
+  "source": {
+   "evidence": "data.js Invasion Fleet before/after (git show 24886ef..dd5ebae -- data.js); from-bsdata.js tyranids --write afterwards drops Invasion Fleet from the catalogue file's detachmentRows (−85 lines). Re-import byte-identical; the whole sequence from 0c98cb3's data.js gives the same data.js, deviations, extract and catalogue file.",
+   "check": "Only these 13 lines of from-json.js change (wt-reimport edits the same file)."
+  },
+  "key": "be68944393a46542"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/derive.js label-destroys (2a5ca66)",
+  "judgement": {
+   "change": "The rule reads \"each time this model / the bearer's unit destroys an enemy (KEYWORD) unit or model\" (was: \"an enemy unit\" only): your Shooting phase, the Fight phase, and the Fire Overwatch moments (shoots)."
+  },
+  "source": {
+   "evidence": "New labels: Basic Bitch · Neurolictor · Feeder Tendrils and Fellhammer Siege Task Force · Master of Executions · Trophy Taker (\"Each time this model destroys an enemy CHARACTER model, you gain 1CP.\"): ph movement/shooting/fight, turn either, turns movement opp, shooting your. derive: 1070 agreed labels hold, 0 missing. Fellhammer's from-json --compare unchanged.",
+   "check": "The Movement-phase (opponent's) moment is Fire Overwatch, as for every label-destroys label; the Neurolictor and Master of Executions: is it right for a model whose only ranged weapon is a pistol, or none (Neurolictor)?"
+  },
+  "key": "cd27ce0557f7ed1e"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/catalog-write.js, effects-extract.js limitOf, lines.js L0 (96d84e4)",
+  "judgement": {
+   "change": "A catalogue detachment's stratagems get their \"Once per battle\" limit from RESTRICTIONS (the L0 rule, one function limitOf), after turn/turns and before needs."
+  },
+  "source": {
+   "evidence": "Without it, from-bsdata.js tyranids --write dropped Unending Waves' limit (added by hand in fa42d11) and L0 failed. data.js afterwards: Unending Waves as at 0c98cb3."
+  },
+  "key": "8630c86fc228e76d"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "verify/effects-extract.js enemyLeadThat; verify/evidence.js G4 (4456675)",
+  "judgement": {
+   "change": "A bullet under a line opening \"While an enemy unit …\" (no friendly unit), about \"a model / models in that unit\", with no friendly unit and no \"targets that unit\": the defence side, foe; not the attack side; G4 skips it."
+  },
+  "source": {
+   "evidence": "BOXES: only a|eongg6 Psychological Saboteur changes. Numbers: the wrong −1 to hit box on the Neurolictor's own attacks is gone; the +1 to wound aura gives the same numbers on all 15 tabs (renumbered |1 → |0); every other list unchanged (dmshown 675/675, dmsingle 13551/13551)."
+  },
+  "key": "8ebd43c405bdd8a0"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "box-change",
+  "where": "BOXES · a|eongg6 Psychological Saboteur (Neurolictor)",
+  "judgement": {
+   "d": [
+    {
+     "df": [
+      [
+       "hitMinus",
+       1
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "While an enemy unit is within 12\" of this model"
+      ],
+      [
+       "q",
+       "if that unit is Battle-shocked"
+      ]
+     ],
+     "kind": "all",
+     "foe": true
+    }
+   ],
+   "b": [
+    {
+     "fx": [
+      [
+       "wound",
+       1
+      ]
+     ],
+     "reach": {
+      "all": [
+       "Faction: Tyranids"
+      ]
+     },
+     "mark": "aura"
+    }
+   ]
+  },
+  "source": {
+   "quote": "While an enemy unit is within 12\" of this model, if that unit is **Battle-shocked**:\n- Each time a model in that unit makes an attack, subtract 1 from the **Hit roll**.\n- Each time a friendly **TYRANIDS** model makes an attack that targets that unit, add 1 to the **Wound roll**.",
+   "check": "GW tags it (Aura). Is foe (the enemy's attacks against any of your units) the right reach for the −1 to hit?"
+  },
+  "key": "ae83455a9b95db50"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "points",
+  "where": "points (basic-bitch export)",
+  "judgement": {
+   "app": {
+    "The Red Terror": 120,
+    "The Swarmlord + Tyrant Guard": "210 + 170",
+    "Hive Tyrant + Tyrant Guard": "195 + 170",
+    "Tyranid Prime with Lash Whip + Hormagaunts": "75 + 120 ×2",
+    "Biovores": 60,
+    "Neurolictor": "80 ×2",
+    "Von Ryan’s Leapers": "55 ×2",
+    "Haruspex": 125,
+    "Psychophage": 110,
+    "Tyrannofex": "170 + Acid spray 10",
+    "Spore Mines (Biovore)": 0
+   },
+   "total": 2000
+  },
+  "source": {
+   "reason": "Each value GW's cost tables (the catalogue's points column, Wahapedia YOUR … COSTS): Hormagaunts 20 models 120, Biovores 1 model 60, Neurolictor 1st-2nd 80, Tyrant Guard 6 models 170, Von Ryan's Leapers 3 models 55, Haruspex 1st-2nd 125, Tyrannofex 1st-2nd 170 + Acid spray 10.",
+   "evidence": "verify/sources/catalog/tyranids.json points; verify/sources/nr-json/basic-bitch.json"
+  },
+  "key": "d57bfa720d2613b3"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "question",
+  "where": "leader attachments",
+  "judgement": {
+   "app": "The Swarmlord leads Tyrant Guard (Warlord); Hive Tyrant leads the other Tyrant Guard; each Tyranid Prime with Lash Whip leads 20 Hormagaunts (copies:2)"
+  },
+  "source": {
+   "reason": "The export's associations (Leading Tyrant Guard ×2, Leading Hormagaunts ×2); GW's LEADER: The Swarmlord and Hive Tyrant \"TYRANT GUARD\"; the Prime \"HORMAGAUNTS, TERMAGANTS, TYRANID WARRIORS WITH MELEE BIO-WEAPONS, TYRANID WARRIORS WITH RANGED BIO-WEAPONS\".",
+   "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html, tyranids_Hive-Tyrant.html, tyranids_Tyranid-Prime-with-Lash-Whip.html"
+  },
+  "key": "e6a6bbd39e20d2eb"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "question",
+  "where": "Invasion Fleet · the catalogue file",
+  "judgement": {
+   "app": "Invasion Fleet in data.js keeps the catalogue's GW text; verify/sources/catalog/tyranids.json no longer holds it in detachmentRows (it still names it in detachments, and the complete check counts it)."
+  },
+  "source": {
+   "reason": "The coordinator: \"the catalogue keeps the GW text it already has\". Read here as: data.js's detachment keeps the text the catalogue wrote (not re-read by from-json), and the catalogue no longer adds it. The alternative (the catalogue file keeps its detachmentRows entry, checked against data.js less the gists) needs from-bsdata.js / catalog.js changes."
+  },
+  "key": "0741bfd776c018c5"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "question",
+  "where": "The Swarmlord · Designer’s Note",
+  "judgement": {
+   "app": "shown as a note on Malign Presence, as Healybois has it (hand file notes); from-json lists the Designer's Note as not filled mechanically"
+  },
+  "source": {
+   "reason": "Wahapedia prints it under the codex wording that Faction Pack 1.3 replaced (review result-healybois.json 89f3b0c37fbaa625)."
+  },
+  "key": "c35f513e1335c4b8"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/basic-bitch.txt (new)",
+  "judgement": {
+   "change": "The new list: every screen at 390 and 320 px (4931 lines)."
+  },
+  "source": {
+   "file": "scratchpad/basic-work/basic-bitch.txt (verify/out/snapshots/basic-bitch.txt of gate run 2)"
+  },
+  "key": "e37db0f2dc25c2a5"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/fellhammer-siege-task-force.txt",
+  "judgement": {
+   "change": "Master of Executions · Trophy Taker gains its timing line \"Their Move · Your Shoot · Fight\" / \"Their Movement / Your Shooting / Fight (either turn)\" at both widths (derive.js label-destroys, 2a5ca66); nothing else."
+  },
+  "source": {
+   "diff": "scratchpad/basic-work/fellhammer-siege-task-force.diff"
+  },
+  "key": "ae1196743e2d3ae6"
+ },
+ {
+  "army": "shooty",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/shooty.txt",
+  "judgement": {
+   "change": "Home screen and table counts: 26 lists (was 25), Basic Bitch on the picker (Tyranids · Invasion Fleet, Priority Assets, chosen / Take and Hold filters), Tyranids 3 lists; ARMIES 26 rows, 225 unit entries, CHECKLIST 506, 414 ability fingerprints, BOXES 409, 224 / 833 ids."
+  },
+  "source": {
+   "diff": "scratchpad/basic-work/shooty.diff"
+  },
+  "key": "f881ac6ede50e48b"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "housekeeping",
+  "where": "verify/approvals.json · 2 approvals now stale (not pruned)",
+  "judgement": {
+   "stale": [
+    "0d4cee7588b38d24 Invasion Fleet rule · Hyper-adaptations needs {all:[Faction: Tyranids]} (review:catalog-tyranids): no longer a helper judgement, the detachment being a list's (derive-agreed holds the needs)",
+    "3f5ae99ce78af82a Warrior Bioform Onslaught · Leader-beasts needs with \"Tyranid Prime With Lash Whip\": now spelt \"Tyranid Prime with Lash Whip\" as the list unit's keyword (derive.js vocabulary), the same units; the new spelling is a helper item above"
+   ]
+  },
+  "source": {
+   "reason": "helpers: 2505 stale approvals (2503 at 25e58d3). node verify/helpers.js --prune would drop them; left to the reviewer."
+  },
+  "key": "a383a4b3d7df52e5"
+ }
+]
