@@ -313,7 +313,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       for(const u of A.units){
         for(const k of [...openStrats]) if(k.startsWith('tg|')) openStrats.delete(k);
         go({ s:'unit', army:armyId, unit:u.id }); navAt = -1e9;   // (a tap just after a screen is drawn is let through)
-        const items = defenceItems(u, null, { shields:true }).filter(x => !armyRuleOption(x));
+        const items = defenceItems(u);
         const fold = () => document.querySelector('#view details.tgt');
         if(!items.length){ if(fold()) out.push(['targeted-fold', u.id, 'a When targeted fold with nothing in it']); continue; }
         let d = fold();
@@ -375,14 +375,15 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         // the army facts the datasheet shows where they matter:
         // - a unit always riled up by its own rule (BOXES riled: Super Runts) says so on every riled-up line, When targeted and footnotes
         // - Waaagh!'s [ASSAULT] while riled up, on a unit with Waaagh! some of whose ranged weapons lack [ASSAULT]
-        // - what another unit of the list gives it when it is attacked (guard), under When targeted
+        // - what another unit of the list gives it when it is attacked (its defence boxes, BOXES d), under When targeted
         // - every keyword once, a keyword only some models have under those models (kwOnly)
         const lines = [...document.querySelectorAll('#view .tgl, #view .mod')].map(x => x.innerText.replace(/\s+/g, ' '));   // (When targeted: a line each)
         if(u.abilities.some(ab => ((D.boxes || {})[DM_KEY.a(ab)] || {}).riled && !ab.na)) for(const l of lines) if(/(^|· |TARGETED ?)Riled up(?! \()/i.test(l)) out.push(['always-riled', u.id, 'a riled-up line without “always riled up”: ' + l.slice(0, 80)]);
         if(u.rules.includes('Waaagh!') && (u.ranged || []).some(w => !w.kw.some(x => /^assault$/i.test(x))) && !lines.some(l => l.includes('[ASSAULT] (Waaagh!)')))
           out.push(['riled-assault', u.id, 'no “Riled up: [ASSAULT] (Waaagh!)” footnote']);
         const when = (document.querySelector('#view .def.tgt') || {}).innerText || '';
-        for(const src of A.units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u) && !when.includes('(' + g.from + ')')) out.push(['guard-shown', u.id, g.from + ' (' + src.name + ') is not under When targeted']);
+        // (another unit's defence box that reaches it: under When targeted with that unit's name, verify/defence.js DL; drawn)
+        for(const x of defenceItems(u)) if(x.from && !when.includes('(' + x.from + ')')) out.push(['guard-shown', u.id, x.name + ' (' + x.from + ') is not under When targeted']);
         const pills = [...document.querySelectorAll('#sec-kw .pill')].map(x => x.textContent.replace(/\*$/, '').toLowerCase());
         if(pills.length !== u.kw.length || u.kw.some(x => !pills.includes(x.toLowerCase()))) out.push(['keywords-shown', u.id, pills.length + ' keyword pills for ' + u.kw.length + ' keywords']);
       }

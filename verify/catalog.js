@@ -369,7 +369,7 @@ function main() {
       const sq = s => lc(s).replace(/[^a-z0-9]/g, '');
       for (const d of dets) { checked.complete++; if (!Object.values(F.detachments).some(x => lc(x.name) === lc(typo(d.name)) || (x.nr && lc(x.nr) === lc(typo(d.name))))) fail('complete', faction + ': BSData’s detachment ' + d.name + ' is not a detachment of ' + faction + ' in data.js'); }
       for (const [k, x] of Object.entries(F.detachments)) if (!dets.some(d => lc(typo(d.name)) === lc(x.name) || (x.nr && lc(typo(d.name)) === lc(x.nr)))) fail('complete', faction + ': data.js’s detachment ' + x.name + ' (' + k + ') is no current detachment of the BSData catalogue');
-      for (const [k, x] of Object.entries(F.detachments)) if (x.aiStatus === 'not-read' && (x.stratagems || []).some(s => s.gist || s.def || s.mod)) fail('tables', faction + ': detachment ' + k + ' is marked aiStatus not-read but has AI-written columns: drop the mark once they are read');
+      for (const [k, x] of Object.entries(F.detachments)) if (x.aiStatus === 'not-read' && (x.stratagems || []).some(s => s.gist || s.mod)) fail('tables', faction + ': detachment ' + k + ' is marked aiStatus not-read but has AI-written columns: drop the mark once they are read');
       // bsdata
       const byId = new Map(want.map(r => [r.entry.id, r]));
       for (const [id, row] of Object.entries(cat.datasheets)) {
@@ -408,7 +408,7 @@ function main() {
         fail('tables', id + ' · ' + d.what + ': DATASHEETS ' + JSON.stringify(d.data) + ', the catalogue ' + JSON.stringify(d.cat) + ' (settle it at the source, or declare it in verify/deviations-catalog.json)');
       }
       if (!inList && S.aiStatus !== 'not-read') fail('tables', id + ': no list has it and it has no aiStatus "not-read"');
-      if (!inList && (S.guard || (S.abilities || []).some(a => a.def))) fail('tables', id + ': marked not-read but has readings or When targeted lines');
+      // (its When targeted lines are its defence boxes, BOXES d, made by script: no reading to be marked)
     }
     // the detachments the catalogue adds: in FACTIONS as the catalogue has them, but for verify/derive.js's labels
     { const F = D.factions[faction] || { detachments: {} }, LAB = ['phases', 'turn', 'turns', 'needs', 'at', 'ph', 'limit'];   // (limit: verify/lines.js L0, from RESTRICTIONS)

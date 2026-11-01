@@ -2565,12 +2565,13 @@ Allarus Custodian×2
 3
 4+
 WHEN TARGETED
-5
+6
 TRAJANN VALORIS Feel No Pain 5+
-Feel No Pain 5+ against mortal wounds
-TRAJANN VALORIS Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase
-1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
-Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+Martial Ka’tah: Melee attacks, Kaptaris: −1 to Hit rolls
+Aegis of the Emperor: Feel No Pain 5+ against mortal wounds
+Daughters of the Abyss: Psychic Null (Aura) · Within 6" of a unit with Daughters of the Abyss: Feel No Pain 5+ against Psychic Attacks
+TRAJANN VALORIS Moment Shackle: Once per battle · “At the start of any phase, you can select one of the following to take effect until the end of the phase”: 3+ invulnerable save
+1CP In Auramite Clad: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 ALL ATTACKS · WHOLE UNIT
 Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
@@ -2725,7 +2726,7 @@ Prosecutor×4
 –
 WHEN TARGETED
 1
-Feel No Pain 3+ against psychic attacks
+Daughters of the Abyss: Feel No Pain 3+ against Psychic Attacks
 RANGED WEAPONS
 Range
 A
@@ -2807,7 +2808,7 @@ Witchseeker×4
 –
 WHEN TARGETED
 1
-Feel No Pain 3+ against psychic attacks
+Daughters of the Abyss: Feel No Pain 3+ against Psychic Attacks
 RANGED WEAPONS
 Range
 A
@@ -2888,7 +2889,7 @@ Witchseeker×5
 –
 WHEN TARGETED
 1
-Feel No Pain 3+ against psychic attacks
+Daughters of the Abyss: Feel No Pain 3+ against Psychic Attacks
 RANGED WEAPONS
 Range
 A
@@ -2968,10 +2969,10 @@ Caladius Annihilator Grav-tank
 5+, 4+*
 WHEN TARGETED
 4
-Feel No Pain 5+ against mortal wounds
-4+ InSv against ranged attacks
-1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
-Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+Aegis of the Emperor: Feel No Pain 5+ against mortal wounds
+Daughters of the Abyss: Psychic Null (Aura) · Within 6" of a unit with Daughters of the Abyss: Feel No Pain 5+ against Psychic Attacks
+Flare Shields: 4+ invulnerable save against ranged attacks
+1CP In Auramite Clad: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 ALL ATTACKS
 If (see the rule): −1 to Hit rolls (Damaged 5)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
@@ -3078,11 +3079,12 @@ Contemptor-Achillus Dreadnought
 3
 5+
 WHEN TARGETED
-4
-Feel No Pain 5+ against mortal wounds
--1 to wound rolls for attacks with S greater than its T
-1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
-Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+5
+Martial Ka’tah: Melee attacks, Kaptaris: −1 to Hit rolls
+Aegis of the Emperor: Feel No Pain 5+ against mortal wounds
+Daughters of the Abyss: Psychic Null (Aura) · Within 6" of a unit with Daughters of the Abyss: Feel No Pain 5+ against Psychic Attacks
+Unyielding Ancient: The attack’s S greater than its T: −1 to Wound rolls
+1CP In Auramite Clad: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 ALL ATTACKS
 If (see the rule): −1 to Hit rolls (Damaged 4)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
@@ -3185,11 +3187,12 @@ Contemptor-Galatus Dreadnought
 3
 4+
 WHEN TARGETED
-4
-Feel No Pain 5+ against mortal wounds
--1 to wound rolls for attacks with S greater than its T
-1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
-Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+5
+Martial Ka’tah: Melee attacks, Kaptaris: −1 to Hit rolls
+Aegis of the Emperor: Feel No Pain 5+ against mortal wounds
+Daughters of the Abyss: Psychic Null (Aura) · Within 6" of a unit with Daughters of the Abyss: Feel No Pain 5+ against Psychic Attacks
+Unyielding Ancient: The attack’s S greater than its T: −1 to Wound rolls
+1CP In Auramite Clad: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 ALL ATTACKS
 If (see the rule): −1 to Hit rolls (Damaged 4)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
@@ -3291,12 +3294,13 @@ Telemon Heavy Dreadnought
 4
 4+
 WHEN TARGETED
-5
-Feel No Pain 5+ against mortal wounds
-Ranged attacks that target it have -1 D
-Feel No Pain 5+
-1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
-Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+6
+Martial Ka’tah: Melee attacks, Kaptaris: −1 to Hit rolls
+Aegis of the Emperor: Feel No Pain 5+ against mortal wounds
+Daughters of the Abyss: Psychic Null (Aura) · Within 6" of a unit with Daughters of the Abyss: Feel No Pain 5+ against Psychic Attacks
+Guardian Eternal: Ranged attacks: −1 Damage
+Augury Uplink: Feel No Pain 5+
+1CP In Auramite Clad: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 ALL ATTACKS
 If (see the rule): −1 to Hit rolls (Damaged 5)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
@@ -3404,11 +3408,12 @@ Telemon Heavy Dreadnought
 4
 4+
 WHEN TARGETED
-4
-Feel No Pain 5+ against mortal wounds
-Ranged attacks that target it have -1 D
-1CP In Auramite Clad: their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)
-Within 6" of a friendly ANATHEMA PSYKANA unit with Daughters of the Abyss (Psychic Null): Feel No Pain 5+ against psychic attacks (Daughters of the Abyss)
+5
+Martial Ka’tah: Melee attacks, Kaptaris: −1 to Hit rolls
+Aegis of the Emperor: Feel No Pain 5+ against mortal wounds
+Daughters of the Abyss: Psychic Null (Aura) · Within 6" of a unit with Daughters of the Abyss: Feel No Pain 5+ against Psychic Attacks
+Guardian Eternal: Ranged attacks: −1 Damage
+1CP In Auramite Clad: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 ALL ATTACKS
 If (see the rule): −1 to Hit rolls (Damaged 5)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)

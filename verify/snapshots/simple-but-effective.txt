@@ -2498,9 +2498,9 @@ Ghazghkull Thraka
 4+
 WHEN TARGETED
 3
-Lone Operative while within 3" of another friendly ORKS INFANTRY unit
-1CP Grot Shields: their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
+Da Grand Warlord’s Ladz: Within 3" of another friendly ORKS INFANTRY unit: Lone Operative
+1CP Grot Shields: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2628,9 +2628,9 @@ Mozrog Skragbad
 WHEN TARGETED
 4
 Feel No Pain 5+
-Destroyed in the Fight phase before being selected to fight: on a 2+ it stays until it has fought or the phase ends
-Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
+One Last Kill: not counted here: see the rule
+Beast Snagga Following: Within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER): Lone Operative
 RANGED WEAPONS
 Range
 A
@@ -2757,12 +2757,13 @@ Meganob×5
 1
 –
 WHEN TARGETED
-5
-MEGANOBZ Arrogant Invulnerability: Attacks that target this unit have -1 AP
-1CP Too Arrogant to Die: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (D6, +1 if riled up; removed once your unit has fought or at the end of the phase)
-1CP Hulking Brutes: their Shooting phase: -1 to wound when the attack’s S is greater than its T (+1CP: every ranged attack)
-1CP Grot Shields: their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”
-Riled up: 5+ INV
+6
+Waaagh!: Riled up: 5+ invulnerable save
+MEGANOBZ Arrogant Invulnerability: AP worsened by 1
+1CP Too Arrogant to Die: not counted here: see the rule
+1CP Hulking Brutes: Your opponent’s Shooting phase, Ranged attacks, The attack’s S greater than its T: −1 to Wound rolls
+1CP Hulking Brutes: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): −1 to Wound rolls
+1CP Grot Shields: not counted here: see the rule
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · BULLY BOYZ
 1CP Armed to da Teef: Re-roll Hit rolls of 1
@@ -2980,8 +2981,8 @@ Gretchin×20
 –
 WHEN TARGETED
 2
-GRETCHIN Extra Sneaky: -3" detection range
-Riled up (Zodgrod Wortsnagga · Super Runts: always riled up): 5+ INV
+Waaagh!: Riled up (Zodgrod Wortsnagga · Super Runts: always riled up): 5+ invulnerable save
+GRETCHIN Extra Sneaky: not counted here: see the rule
 RANGED WEAPONS
 Squigstoppa, Slugga, Grot Blasta ×20 · all pistols
 Range
@@ -3138,8 +3139,8 @@ Beastboss on Squigosaur
 WHEN TARGETED
 3
 Feel No Pain 5+
-Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
+Boss of da Hunt: Within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER): Lone Operative
 RANGED WEAPONS
 Range
 A
@@ -3272,7 +3273,7 @@ Big Mek Dakkarig
 5+
 WHEN TARGETED
 1
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
 RANGED WEAPONS
 Range
 A
@@ -3386,12 +3387,13 @@ Meganob×6
 1
 –
 WHEN TARGETED
-5
-MEGANOBZ Arrogant Invulnerability: Attacks that target this unit have -1 AP
-1CP Too Arrogant to Die: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (D6, +1 if riled up; removed once your unit has fought or at the end of the phase)
-1CP Hulking Brutes: their Shooting phase: -1 to wound when the attack’s S is greater than its T (+1CP: every ranged attack)
-1CP Grot Shields: their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”
-Riled up: 5+ INV
+6
+Waaagh!: Riled up: 5+ invulnerable save
+MEGANOBZ Arrogant Invulnerability: AP worsened by 1
+1CP Too Arrogant to Die: not counted here: see the rule
+1CP Hulking Brutes: Your opponent’s Shooting phase, Ranged attacks, The attack’s S greater than its T: −1 to Wound rolls
+1CP Hulking Brutes: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): −1 to Wound rolls
+1CP Grot Shields: not counted here: see the rule
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · BULLY BOYZ
 1CP Armed to da Teef: Re-roll Hit rolls of 1
@@ -3542,8 +3544,8 @@ Gretchin×10
 –
 WHEN TARGETED
 2
--3" detection range
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
+Extra Sneaky: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -3638,7 +3640,7 @@ Gretchin×10
 –
 WHEN TARGETED
 1
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
 RANGED WEAPONS
 Range
 A
@@ -3727,7 +3729,7 @@ Deffkoptas×3
 6+
 WHEN TARGETED
 1
-Riled up: 5+ INV
+Waaagh!: Riled up: 5+ invulnerable save
 RANGED WEAPONS
 Range
 A

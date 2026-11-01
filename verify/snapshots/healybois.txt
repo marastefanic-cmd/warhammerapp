@@ -2384,7 +2384,7 @@ Tyrant Guard×6
 –
 WHEN TARGETED
 1
-TYRANT GUARD Guardian Organism: The CHARACTER leading this unit has Feel No Pain 5+
+TYRANT GUARD Guardian Organism: While a CHARACTER model is leading it: CHARACTER models: Feel No Pain 5+
 RANGED WEAPONS
 Range
 A
@@ -2528,7 +2528,7 @@ Tyrant Guard×6
 –
 WHEN TARGETED
 1
-TYRANT GUARD Guardian Organism: The CHARACTER leading this unit has Feel No Pain 5+
+TYRANT GUARD Guardian Organism: While a CHARACTER model is leading it: CHARACTER models: Feel No Pain 5+
 MELEE WEAPONS
 A
 WS
@@ -2737,8 +2737,9 @@ Pyrovores×3
 1
 –
 WHEN TARGETED
-1
-2CP Ablative Carapace: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: Feel No Pain 5+ until the end of the phase (4+ while within range of an objective marker you control)
+2
+2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 5+
+2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 4+
 RANGED WEAPONS
 Range
 A
@@ -2826,8 +2827,9 @@ Ripper Swarm
 0
 –
 WHEN TARGETED
-1
-2CP Ablative Carapace: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: Feel No Pain 5+ until the end of the phase (4+ while within range of an objective marker you control)
+2
+2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 5+
+2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 4+
 MELEE WEAPONS
 A
 WS
@@ -2900,10 +2902,11 @@ Norn Assimilator
 5
 4+
 WHEN TARGETED
-3
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
-2CP Ablative Carapace: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: Feel No Pain 5+ until the end of the phase (4+ while within range of an objective marker you control)
-1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
+4
+Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
+2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 5+
+2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 4+
+1CP Catalytic Biofortification: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ALL ATTACKS
@@ -3035,8 +3038,8 @@ Norn Emissary
 4+
 WHEN TARGETED
 2
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it
-Feel No Pain 4+ against mortal wounds
+Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
+Unnatural Resilience: Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -3172,9 +3175,10 @@ Psychophage
 3
 –
 WHEN TARGETED
-2
+3
 Feel No Pain 5+
-2CP Ablative Carapace: Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: Feel No Pain 5+ until the end of the phase (4+ while within range of an objective marker you control)
+2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 5+
+2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 4+
 RANGED WEAPONS
 Range
 A
@@ -3274,7 +3278,7 @@ Tyrannofex
 –
 WHEN TARGETED
 1
-Once per battle: change the Damage of an attack allocated to it to 0
+Resilient Organism: Once per battle: Damage 0
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 RANGED WEAPONS

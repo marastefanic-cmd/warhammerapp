@@ -11,7 +11,8 @@
      the footnotes under a unit's weapons (its weapon rows' "(+N)" values, its Damaged band, riled-up and own-aura lines among them) are
      its boxes, data.js BOXES (made by script from GW's words, held to them by verify/evidence.js G1-G9), each said with the labels of
      its effects and conditions (effects.js), as G1-G8 hold the Damage tab's boxes:
-     L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …) is left in data.js (guard, statNote: not yet)
+     L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …) is left in data.js (statNote: not yet; the
+         When targeted columns, def and guard: verify/defence.js D1)
      L2  every footnote of every list × unit × kind is a box the database gives that unit
      L3  its effects' words are its box's effects' labels (a pick's options, a part), or its one weapon's row value (A, S, AP, D of one
          weapon, never a Damaged band's, a stratagem's or an ability's the unit uses)
@@ -22,6 +23,7 @@
          number or weapon ability (Lance, Plunging Fire, Waaagh! are boxes of their rules)
      L7  (L2-L5 together: what the screen shows is what BOXES gives, worked out here again from data.js)
      L8  every catalogue effect and condition renders its label
+     LC  every condition GW's words put on a box is on it (verify/coverage.js: option, once per, if / while / unless, within N", kind)
 
      node verify/lines.js      the gate step; writes verify/out/lines.json */
 'use strict';
@@ -63,13 +65,12 @@ const ONCE = /\b(?:cannot use this stratagem more than once per battle|can only 
   stats.limits = n; }
 
 // ---- L1-L8: the footnotes under a unit's weapons are its boxes (data.js BOXES), said with the catalogue's labels ----
-// L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …) is left in data.js, but guard's (When targeted,
-//     not yet from boxes)
+// L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …) is left in data.js
 const RETIRED = new Set(['mods', 'aura', 'mod', 'help', 'riled', 'calcNote', 'fightOnDeath', 'comeback', 'calcDefs', 'react', 'weaponKw', 'defAlways', 'calcDef', 'defCalc', 'listWhy', 'lasts', 'single']);
-// (guard, the When targeted help, and statNote, the stat notes: not from boxes yet)
+// (statNote, the stat notes: not from boxes yet)
 { const RAW = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'));
   const walk = (x, where) => { if(Array.isArray(x)) return x.forEach((y, i) => walk(y, where + '[' + i + ']')); if(!x || typeof x !== 'object') return;
-    for(const [k, v] of Object.entries(x)){ if(k === 'guard' || k === 'statNote') continue; if(RETIRED.has(k)) fail('L1', where, 'keeps the retired column ' + k); walk(v, where + '.' + k); } };
+    for(const [k, v] of Object.entries(x)){ if(k === 'statNote') continue; if(RETIRED.has(k)) fail('L1', where, 'keeps the retired column ' + k); walk(v, where + '.' + k); } };
   for(const [name, key] of [['ARMIES', 'A'], ['DATASHEETS', 'S']]) walk(RAW[key] ? RAW[key].value : null, name);
   walk(D.factions, 'FACTIONS'); walk(D.coreStratagems, 'CORE_STRATAGEMS'); }
 // L2-L5, L7: for every list × unit × kind of attack, the footnotes (app.html unitMods) are exactly the boxes the database gives it, each a
@@ -199,6 +200,12 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
     const exp = c.quoted ? 'If (see the rule)' : c.label(p);
     if(!m || m.when !== exp) fail('L8', 'effects.js ' + id, 'a box of it alone says “' + (m && m.when) + '”, not “' + exp + '”'); }
   stats.labels = n; }
+// LC every condition GW's words put on an attack box is on it (verify/coverage.js, as verify/defence.js DC): its option, once per, each
+// "if / while / unless" clause, each "within N"", the kind of attack; said, quoted ("If (see the rule)"), or listed not counted
+{ const Cv = require('./coverage'), Tw = M.build(D), Sw = M.sources(D), CTX = { V:require('./derive').vocab(D), kws:D.armies.flatMap(a => a.units.map(u => u.kw || [])).concat(Object.values(D.datasheets || {}).map(x => x.kw || [])) }; let n = 0;
+  for(const [key, o] of Object.entries(Tw)){ const src = Sw.get(key); if(!src || o.played) continue;
+    for(const b of o.b || []){ n++; for(const g of Cv.gaps(b, src, 'attack', src.others, CTX)) fail('LC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
+  stats.covered = n; stats.reachChecked = Cv.counts.checked; stats.reachUnchecked = Cv.counts.unchecked; }
 // LB the Damaged band: its words are its boxes' effect labels, and "see the rule" where its words have a part not counted or no box
 { let n = 0;
   for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) if(ab.damaged){ const o = (D.boxes || {})[M.KEY.ability(ab)] || {};
@@ -218,6 +225,6 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/lines.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges and ' + stats.limits + ' once-per-battle chips as their words give them; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
+console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges and ' + stats.limits + ' once-per-battle chips as their words give them; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);

@@ -2273,7 +2273,7 @@ Angron
 4+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 DAMAGED 1-6 W
 −1 TO HIT ROLLS
 MELEE WEAPONS
@@ -2407,8 +2407,8 @@ Chaos Terminators
 4+
 WHEN TARGETED
 2
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
-2CP Wrath Beyond Reason: their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)
+2CP Frenzied Resilience: Fight phase: −1 Damage
+2CP Wrath Beyond Reason: Your opponent’s Shooting phase, Ranged attacks: −1 Damage
 RANGED WEAPONS
 Range
 A
@@ -2547,8 +2547,8 @@ Chaos Terminators
 4+
 WHEN TARGETED
 2
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
-2CP Wrath Beyond Reason: their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)
+2CP Frenzied Resilience: Fight phase: −1 Damage
+2CP Wrath Beyond Reason: Your opponent’s Shooting phase, Ranged attacks: −1 Damage
 RANGED WEAPONS
 Range
 A
@@ -2679,7 +2679,7 @@ Eightbound
 5+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 MELEE WEAPONS
 A
 WS
@@ -2759,7 +2759,7 @@ Goremongers
 –
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 RANGED WEAPONS
 Range
 A
@@ -2875,7 +2875,7 @@ Dishonoured w/ paired manglers
 –
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 RANGED WEAPONS
 Range
 A
@@ -2973,7 +2973,7 @@ Forgefiend
 5+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 DAMAGED 1-4 W
 −1 TO HIT ROLLS
 RANGED WEAPONS

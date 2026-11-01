@@ -2790,8 +2790,8 @@ Khorne Berzerker×10
 –
 WHEN TARGETED
 2
-Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+KHÂRN THE BETRAYER Berzerker Frenzy: not counted here: see the rule
+2CP Frenzied Resilience: Fight phase: −1 Damage
 RANGED WEAPONS
 Plasma pistol ×4, Bolt pistol ×7 · all pistols
 Range
@@ -2981,10 +2981,10 @@ Daemon Prince of Khorne
 4+
 WHEN TARGETED
 4
-Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit
--1 D to each attack allocated to this model
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+Lord of Murder: Within 3" of a friendly WORLD EATERS INFANTRY unit: Lone Operative
+Helm of Brazen Ire: −1 Damage
+2CP Frenzied Resilience: Fight phase: −1 Damage
+1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
 RANGED WEAPONS
 Range
 A
@@ -3108,9 +3108,9 @@ Daemon Prince of Khorne
 4+
 WHEN TARGETED
 3
-Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+Lord of Murder: Within 3" of a friendly WORLD EATERS INFANTRY unit: Lone Operative
+2CP Frenzied Resilience: Fight phase: −1 Damage
+1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
 RANGED WEAPONS
 Range
 A
@@ -3252,8 +3252,8 @@ Khorne Berzerker×20
 –
 WHEN TARGETED
 2
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+2CP Frenzied Resilience: Fight phase: −1 Damage
+1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
 RANGED WEAPONS
 Plasma pistol ×6, Bolt pistol ×15 · all pistols
 Range
@@ -3475,8 +3475,8 @@ Exalted Eightbound×3
 5+
 WHEN TARGETED
 2
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+2CP Frenzied Resilience: Fight phase: −1 Damage
+1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
 MELEE WEAPONS
 A
 WS
@@ -3603,7 +3603,7 @@ Hull
 –
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 RANGED WEAPONS
 Range
 A
@@ -3704,7 +3704,7 @@ Eightbound
 5+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 MELEE WEAPONS
 A
 WS
@@ -3794,7 +3794,7 @@ Dishonoured w/ paired manglers
 –
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 RANGED WEAPONS
 Range
 A
@@ -3891,7 +3891,7 @@ Forgefiend
 5+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+2CP Frenzied Resilience: Fight phase: −1 Damage
 DAMAGED 1-4 W
 −1 TO HIT ROLLS
 RANGED WEAPONS
