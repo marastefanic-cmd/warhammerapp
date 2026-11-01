@@ -463,7 +463,10 @@ function resolveAffects(affects, base) {
     else if (t === 'entries') { for (const s of [...S]) for (const c of s.children) S.add(c); }
     else if (t === 'recursive') { for (const s of [...S]) for (const d of s.desc(false)) S.add(d); }
     else if (t === 'group') { for (const s of [...S]) if (s.node) for (const r of groupOf(s)) S.add(r); }
-    else if (t === 'associations') { const roots = new Set([...S].filter((s) => s.node).map((s) => s.root)); const T = new Set(); for (const r of roots) for (const o of groupOf(r)) if (!roots.has(o)) for (const d of o.desc(true)) T.add(d); S = T; }
+    // (the units associated with each root of the set: the other roots of its attached unit, its bodyguard or its leader; a root the
+    // set already holds is still associated with the others, so "group.recursive.associations", every root of the attached unit
+    // first, reaches the bodyguard: the Tyranid Prime's Alpha Warrior on the Hormagaunts it leads)
+    else if (t === 'associations') { const roots = new Set([...S].filter((s) => s.node).map((s) => s.root)); const T = new Set(); for (const r of roots) for (const o of groupOf(r)) if (o !== r) for (const d of o.desc(true)) T.add(d); S = T; }
     else if (t === 'forces') { S = new Set(CTX.force.desc(false)); }
     else if (t === 'profiles') { profType = toks.slice(i + 1).join('.'); break; }
     else if (/^[0-9a-f]{1,4}(-[0-9a-f]{1,4}){3}$/.test(t)) { S = new Set([...S].filter((s) => isInstance(s, t))); }
