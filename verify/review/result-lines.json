@@ -1,0 +1,206 @@
+[
+ {
+  "key": "a514f468ccba6146",
+  "where": "rule-parts · Khorne Daemonkin rule · Blood Tithe",
+  "verdict": "ok",
+  "why": "Blood Tithe parts read against GW: Enraged Abjuration for BLOOD LEGIONS and WORLD EATERS models (FNP 5+ against Psychic Attacks and mortal wounds); Daemonic Rage, Boon of Blood (4+ invulnerable) and Might of Khorne (Blessings of Khorne) for BLOOD LEGIONS units only. Unchanged since the first round."
+ },
+ {
+  "key": "9755381d27686520",
+  "where": "rule-parts · Warpmeld Pact rule · Warpmeld Sacrifice",
+  "verdict": "ok",
+  "why": "Warpmeld Sacrifice parts: both halves are for TZEENTCH MUTANT INFANTRY/MOUNTED units. The Keywords part gives TZAANGORS +1 OC per model unless Battle-shocked. Both match GW's words."
+ },
+ {
+  "key": "ad13100c35a388a0",
+  "where": "code · unitMods",
+  "verdict": "ok",
+  "why": "unitMods, re-checked on b793cdc. Footnote dump: 1604 footnotes, every one a box of D.boxes[m.key] or one of the 41 \"not counted here: see the rule\" lines; reach is still right (Wrath of Khorne, Secure Biomass, Beacons). The nc line comes only from a source of the unit itself: not another unit's, and not a Damaged band's. The 41 lines come from 4 sources: Point-Blank Barrage (Knights), Machine Superiority, Siege Shield and Flesh Hunger. Each source's nc is an atk one and its quote is about the unit's own attacks. L4 and L3 bite on the line being dropped or reworded."
+ },
+ {
+  "key": "0ea36db81db25e42",
+  "where": "code · fnLine",
+  "verdict": "ok",
+  "why": "fnLine, re-checked by script over all 1604 footnotes. No quoted condition is dropped beside a said one, and every box whose conditions are only quoted says \"If (see the rule)\" (257 footnotes). No ranged-only effect appears on melee. The lines checked: Macro-extinction wound +1 now carries \"If that target is TITANIC or TOWERING\"; Feeding Frenzy carries \"also Below Half-strength\"; Cabal +2 AP carries 12+ and its re-roll carries 10+; Gene-Wrought Might and Pyrogenesis options carry the assault doctrine and the Flux token; Harbingers of Dread carries \"Battle-shocked\"; Try Dat Button! says \"If it uses this ability\"; Kindred Sorcery has no range on melee. L5, L3 and L8 bite on each rule (mutations)."
+ },
+ {
+  "key": "ab22b01908b67986",
+  "where": "code · fnCond",
+  "verdict": "ok",
+  "why": "fnCond unchanged since the first round; its aura, own-aura, selected and halfBelow forms bite in L5."
+ },
+ {
+  "key": "b0d25bed0640f0df",
+  "where": "code · fnWeapons",
+  "verdict": "ok",
+  "why": "fnWeapons unchanged since the first round; every scoped footnote lists exactly the weapons its scope names."
+ },
+ {
+  "key": "3875b4fd2625b8ce",
+  "where": "code · footMod",
+  "verdict": "ok",
+  "why": "footMod unchanged since the first round; the one-off row value (Moment Shackle +3 A) is a footnote, as main."
+ },
+ {
+  "key": "2f8dea364055049b",
+  "where": "code · abilityGaps",
+  "verdict": "ok",
+  "why": "abilityGaps unchanged since the first round. The attack side is held by evidence G4, and the bonusOf scan finds no attack bonus without a box or nc except ones printed into the weapons or ones on enemy weapons."
+ },
+ {
+  "key": "576f5a4c707a6b52",
+  "where": "code · resolveArmies",
+  "verdict": "ok",
+  "why": "resolveArmies unchanged since the first round: only the retired mods and aura reading columns leave."
+ },
+ {
+  "key": null,
+  "where": "review-extractor · verify/effects-extract.js · effects.js (03a562c)",
+  "verdict": "ok",
+  "why": "Extractor, run again over all 893 catalogue sources (main, first round and b793cdc). 9 changed since the first round, all general rules and right per GW. Tesseract Vault: the OC box plus an nc selectOne for the C'tan clause, kind all, so its band reads \"−4 OC; see the rule\". Prey of the Blood God and the Tyranid Prime's Alpha Warrior (catalogue only): \"models in this model's unit\" now means the whole unit. Try Dat Button! gets used. Kindred Sorcery's once per battle moves to the box. atk is added on the nc of Szarekh, Flesh Hunger, Siege Shield and Airborne Predator. The Szarekh split and the headings rule still fire only on Szarekh and on Combat Doctrines."
+ },
+ {
+  "key": null,
+  "where": "review-damage-numbers · Damage tab, every list unit × shoot/fight/both",
+  "verdict": "ok",
+  "why": "Re-ran dmshown and dmticked on main and b793cdc. As the tab opens, 0 of 642 change. With every box ticked, 2 of 428 change, both Szarekh: hit −1 for the whole unit, per GW. Played Lance and Plunging Fire boxes are not counted twice."
+ },
+ {
+  "key": null,
+  "where": "review-label · verify/derive.js label-setup-trigger (f841121)",
+  "verdict": "ok",
+  "why": "Right per Core Rules 15.09: Methodical Destruction's Wound re-roll works in snap shooting, so its label gains Movement in the opponent's turn (Fire Overwatch). The rule now also covers \"until the end of the battle\" (item 33)."
+ },
+ {
+  "key": null,
+  "where": "review-limit · Tyranids · Unending Swarm · Unending Waves",
+  "verdict": "ok",
+  "why": "Once per battle chip: only Insane Bravery and Unending Waves get it. The \"per battle round\" stratagems and Gilded Champion (\"on the same … model\") do not. L0 bites both ways."
+ },
+ {
+  "key": null,
+  "where": "review-footnotes · app.html unitMods / fnLine (Phase 1)",
+  "verdict": "ok",
+  "why": "All first-round findings are fixed. Lines with partial conditions now say them. Range no longer shows on melee. Try Dat Button! says \"If it uses this ability\". Tesseract Vault's band says \"see the rule\". Prey of the Blood God reaches the whole unit, as GW and main say. Lines are grouped by source, so the Karanak and Forgefiend lines are separate again; LG checks this. Flesh Hunger, Machine Superiority, Siege Shield and Point-Blank Barrage keep a \"not counted here: see the rule\" line. Rendered lines checked by script, and screenshots at 390px (Exalted Sorcerer, Neurogaunts) look fine. Lines that only say \"If (see the rule)\" now hide a number behind the tap: Plunging Fire 12\", Glowin' Dakka 9\" and others. This follows the coordinator's refinement of the owner's decision."
+ },
+ {
+  "key": null,
+  "where": "review-gate · verify/lines.js L1-L8",
+  "verdict": "ok",
+  "why": "Mutation tests on a scratch copy of b793cdc, 36 in all over both rounds. The new checks:\n- L8 bites on wrong numbers in the wound, aura, hit-sign, sustained hits, targetKw \"not\", maxT, critHit and oc labels.\n- LB bites when the band ignores its boxes (also L6) and when it drops \"see the rule\" (Szarekh, Tesseract Vault).\n- LG bites when lines merge by condition only and when each footnote becomes its own line.\n- L5 bites when a quoted condition is dropped beside a said one, and when \"If (see the rule)\" is dropped.\n- L3 bites on a ranged effect on melee and on a reworded nc line; L4 bites on a dropped nc line.\n- render.js always-riled, which reads BOXES riled now, bites: 2 failures for Zodgrod when alwaysRiled is disabled (VERIFY_LISTS=simple-but-effective).\n- ability-tag is a helpers judgement again: an extra \"Aura\" tag on Powers of the C'tan gives 10 to check instead of 9.\nThe first round's L0 to L6 bites still hold."
+ },
+ {
+  "key": null,
+  "where": "review-columns · verify/columns.json · data.js",
+  "verdict": "ok",
+  "why": "No retired column is read anywhere any more. The dead verify reads are gone or retargeted: check.js, invariants, render.js (BOXES riled), bsdata selfApplying (BOXES reach and notSelf), derive, helpers and import-nr. docs/tables.md now marks limit and damaged as derived, agreeing with columns.json, and the effects.js comment is back in its place."
+ },
+ {
+  "key": null,
+  "where": "code · unitMods · core stratagems",
+  "verdict": "ok",
+  "why": "Core stratagems are not footnoted; detachment stratagems are, as main."
+ },
+ {
+  "key": null,
+  "where": "code · fnLine · weapon ability already there",
+  "verdict": "ok",
+  "why": "A [KEYWORD] that every weapon reached already has is not repeated (Waaagh! [ASSAULT], Kindred Sorcery's [DEVASTATING WOUNDS] on the ranged psychic weapons). This is a general rule."
+ },
+ {
+  "key": null,
+  "where": "code · fnLine · row values",
+  "verdict": "ok",
+  "why": "Row values: still the same 9 weapons and numbers as main (Blitzkannon A +6, Omnissian axe A 6, Kastelan A +2); L3 bites."
+ },
+ {
+  "key": null,
+  "where": "code · fnCond · giver name",
+  "verdict": "ok",
+  "why": "Giver names and Own aura forms are as in the first round; L5 bites."
+ },
+ {
+  "key": null,
+  "where": "code · fnLine · keyword and wargear",
+  "verdict": "ok",
+  "why": "selfKw and selfGear: no footnote when the unit lacks the keyword or wargear (Secure Biomass crit 5+ only on HARVESTER units)."
+ },
+ {
+  "key": null,
+  "where": "code · fnLine · baked",
+  "verdict": "ok",
+  "why": "Effects already printed into the weapons are not repeated (Gore-stained Veterans, Supa-snazz Dakka, Relentless Rage)."
+ },
+ {
+  "key": null,
+  "where": "code · fnLine · no condition",
+  "verdict": "ok",
+  "why": "\"Every attack\" now shows only when neither the box nor its options has a condition. The first-round failures are gone: Try Dat Button! says \"If it uses this ability\", Kindred Sorcery says \"Once per battle\". The remaining \"Every attack\" lines (Bringers of Change, Bringer of Justice, Implacable Eradication and others) have no condition in GW's words."
+ },
+ {
+  "key": null,
+  "where": "code · screenUnit · Damaged band",
+  "verdict": "ok",
+  "why": "Damaged band (dmgBand): its boxes' effect labels, plus \"; see the rule\" when words are not counted or there is no box. Tesseract Vault: \"−4 OC; see the rule\". Szarekh: \"−1 to Hit rolls; see the rule\". The other 62 bands keep main's numbers. LB checks all 64 bands."
+ },
+ {
+  "key": null,
+  "where": "code · app.html fnLine · quoted conditions",
+  "verdict": "ok",
+  "why": "Applied as the coordinator refined the owner's decision: every condition is said, quoted words too, beside a catalogue label. A box with only quoted conditions says \"If (see the rule)\", so it never reads as always on. The script check finds 0 footnotes that leave out a condition, and L5 bites."
+ },
+ {
+  "key": null,
+  "where": "code · effects.js condLabel · Damage tab",
+  "verdict": "ok",
+  "why": "The Damage tab keeps its quoted conditions (coordinator decision); calc-test passes."
+ },
+ {
+  "key": null,
+  "where": "code · effects.js KW · keywords in capitals",
+  "verdict": "ok",
+  "why": "Keywords print in capitals, a Faction keyword by its name. L8 checks the targetKw and selfKw forms (MONSTER or VEHICLE, not MONSTER/VEHICLE, PSYKER CHARACTER, KHORNE)."
+ },
+ {
+  "key": null,
+  "where": "code · app.html fnLine · \"Every attack\"",
+  "verdict": "ok",
+  "why": "Right: Try Dat Button!'s box now has used (GW: \"you can use this ability. If you do, roll…\"), and the line says \"If it uses this ability: one of: 1–2: +1 A · …\". \"Every attack\" never appears on a box with a condition in it or its options. Across the catalogue the extractor's used rule changes only Try Dat Button!."
+ },
+ {
+  "key": null,
+  "where": "code · app.html fnLine · ranged-only effects",
+  "verdict": "ok",
+  "why": "Right: range, a set BS, [ASSAULT], [HEAVY], [INDIRECT FIRE] and [PISTOL] apply to ranged attacks only. The Kindred Sorcery melee lines (Blade of Magnus, Force weapon, Hellforged weapons) no longer show +6\" range. A weapon name now prints once. L3 bites."
+ },
+ {
+  "key": null,
+  "where": "code · app.html modGroupLines / unitWeapons · grouping",
+  "verdict": "ok",
+  "why": "Right: two rules with the same condition are now two lines (Karanak: Prey of the Blood God and Blood Throne; Forgefiend: Daemonic Ordnance and Dark Pacts). A line with no condition said is its own. LG bites both ways."
+ },
+ {
+  "key": null,
+  "where": "code · app.html unitMods · \"see the rule\" lines",
+  "verdict": "ok",
+  "why": "Right: one \"not counted here: see the rule\" line per own source with an atk nc, 41 lines from 4 sources (Point-Blank Barrage, Machine Superiority, Siege Shield, Flesh Hunger). Damaged bands and other units' sources are excluded. Their GW words are about the unit's own attacks; the rule's name opens them."
+ },
+ {
+  "key": null,
+  "where": "code · verify/effects-extract.js · review fixes",
+  "verdict": "ok",
+  "why": "Extractor rules, re-run over 893 catalogue sources:\n- The effect-then-mechanic split fires only on the Tesseract Vault.\n- \"a model in this model's unit\" as the whole unit changes only Prey of the Blood God and Alpha Warrior, both right per GW.\n- The used rule changes only Try Dat Button!.\n- Hoisting the table condition changes only Kindred Sorcery.\nThe BOXES changes are as listed."
+ },
+ {
+  "key": null,
+  "where": "review-damage-numbers · Damage tab, one box at a time (lines-work/dmsingle.js)",
+  "verdict": "ok",
+  "why": "Re-ran dmsingle on main and b793cdc: 13040 keys, 3 differ. Karanak's Prey of the Blood God (fight): the Flesh Hounds' group gains a Wound re-roll, per GW \"a model in this model's unit\". Szarekh's Damaged box (shooting, fight) is new: hit −1 on every group. dmshown: 0 of 642 change."
+ },
+ {
+  "key": null,
+  "where": "review-label · verify/derive.js label-setup-trigger, \"until the end of the battle\"",
+  "verdict": "ok",
+  "why": "Right: Singular Purpose (6 Norn units) and Hyper-adaptations gain Movement in the opponent's turn (Fire Overwatch). Their effects last \"until the end of the battle\", and a Wound re-roll, [SUSTAINED HITS 1] or [LETHAL HITS] still works in snap shooting (15.09). Singular Purpose keeps turn either because of its FNP-when-targeted option. Only these two labels change (derive-agreed)."
+ }
+]
