@@ -1697,6 +1697,19 @@ if (start >= 0 && REFS) {
 }
 else if (start >= 0) { const end = d.indexOf('\n},\n', start); d = d.slice(0, start) + armySrc() + d.slice(end + 4); }
 else { const at = d.indexOf('const ARMIES = [\n'), end = d.indexOf('\n];', at); d = d.slice(0, end + 1) + armySrc() + d.slice(end + 1); }
+// a detachment a faction catalogue added (aiStatus 'not-read') that this list uses: its GW text stays the catalogue's, the hand file's
+// gists go on its stratagems and the mark goes (docs/catalog.md: read, then drop the mark); verify/from-bsdata.js --write then leaves it
+for (const id of REFS ? [] : detIds.filter(k => F && F.detachments[k] && F.detachments[k].aiStatus === 'not-read')) {
+  const C0 = d.indexOf("\n      '" + id + "': {\n", d.indexOf("  '" + factionId + "': {")), c0 = d.lastIndexOf('\n      // ', C0), e0 = d.indexOf('\n      }', C0);
+  let blk = d.slice(c0, e0).replace(/\n      \/\/ .*/, '\n      // ' + F.detachments[id].name + ': Wahapedia (the codex), first from the catalogue (verify/from-bsdata.js ' + factionId + '); gists AI-written for ' + armyId + ' (see the report)').replace(", aiStatus:'not-read'", '');
+  for (const s of F.detachments[id].stratagems || []) {
+    const h = (HAND.gists || {})[id + '/' + s.id];
+    if (!h) { want('stratagem ' + s.name + ' (' + F.detachments[id].name + ')', 'gist', 'a one-line summary is the app’s own words: write it in verify/sources/hand/' + armyId + '.json (gists), marked by whom'); continue; }
+    blk = blk.replace("{ id:" + lit(s.id) + ', ', "{ id:" + lit(s.id) + ', gist:' + lit(h.gist) + ', ' + (h.gistOf ? 'gistOf:' + lit(h.gistOf) + ', ' : '') + (h.note ? 'note:' + lit(h.note) + ', ' : ''));
+    handDone.push({ what: 'gist of ' + s.name + ' (' + F.detachments[id].name + ', the catalogue’s)', by: h.by, text: h.gist });
+  }
+  d = d.slice(0, c0) + blk + d.slice(e0);
+}
 fs.writeFileSync(DATA, d);
 // verify/sources/factions.json and the Wahapedia datasheets list
 if (newFactionEntry) want('faction', 'verify/sources/factions.json entry', 'add ' + factionId + ' (waha, bsdata ' + catName + ', pack) by hand: which GW document is the faction’s is a judgement');

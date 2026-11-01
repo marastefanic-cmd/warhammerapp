@@ -1,6 +1,6 @@
 {
- "hash": "b0b39c8ef2ec07e88a1e59c436a5d7c30339ab1a9569358b146b05a764361b47",
- "at": "2026-11-01T18:52:28.337Z",
+ "hash": "498aba46fe5071e77e34a4362c8c456c215d488e1348b114ee1c0e3ba402eded",
+ "at": "2026-11-01T22:36:41.981Z",
  "ok": true,
  "steps": {
   "data": {
@@ -9,27 +9,27 @@
   },
   "tables": {
    "ok": true,
-   "summary": "tables: 214 unit entries in 25 lists over 261 datasheets, 89 rule options, 74 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
+   "summary": "tables: 225 unit entries in 26 lists over 261 datasheets, 89 rule options, 74 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
   },
   "fingerprints": {
    "ok": true,
-   "summary": "fingerprints: 176 of 176 AI-written values (gist, def) and 4 of 4 readings (0 derived) match the text they were written or read from"
+   "summary": "fingerprints: 182 of 182 AI-written values (gist, def) and 4 of 4 readings (0 derived) match the text they were written or read from"
   },
   "readings": {
    "ok": true,
-   "summary": "readings: 0 sentences stating a bonus with no reading (0 riled up, 0 other, 0 defences; listed in verify/out/readings.md, known in verify/readings-gaps.json); 102 not read yet (catalogue rows and detachments, aiStatus not-read)"
+   "summary": "readings: 0 sentences stating a bonus with no reading (0 riled up, 0 other, 0 defences; listed in verify/out/readings.md, known in verify/readings-gaps.json); 92 not read yet (catalogue rows and detachments, aiStatus not-read)"
   },
   "evidence": {
    "ok": true,
-   "summary": "evidence: 406 sources, 286 boxes and 40 picks made by script from GW’s words (G1-G9; 5 of 5 G9 bites); the army, unit and other-units groups of 214 units as the database gives them; 263 stratagems read from their TARGET, shown for 214 units exactly as their keywords meet it (a broken tag on Crazed Rampage is caught); 5 of 5 fixed TARGET cases of alternatives with an exclusion"
+   "summary": "evidence: 409 sources, 289 boxes and 40 picks made by script from GW’s words (G1-G9; 5 of 5 G9 bites); the army, unit and other-units groups of 225 units as the database gives them; 263 stratagems read from their TARGET, shown for 225 units exactly as their keywords meet it (a broken tag on Crazed Rampage is caught); 5 of 5 fixed TARGET cases of alternatives with an exclusion"
   },
   "lines": {
    "ok": true,
-   "summary": "lines: 106 Damaged ranges and 2 once-per-battle chips as their words give them; 1563 footnotes (9 in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects' and conditions' labels, 41 \"see the rule\" lines; 126 catalogue labels with their values; 301 boxes with every condition of their words (65 reach boxes and models scopes checked against GW’s phrase, 0 unchecked, said “If (see the rule)”); 64 Damaged bands as their boxes; 1216 drawn lines, one source each"
+   "summary": "lines: 109 Damaged ranges and 2 once-per-battle chips as their words give them; 1662 footnotes (9 in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects' and conditions' labels, 41 \"see the rule\" lines; 126 catalogue labels with their values; 304 boxes with every condition of their words (66 reach boxes and models scopes checked against GW’s phrase, 0 unchecked, said “If (see the rule)”); 66 Damaged bands as their boxes; 1305 drawn lines, one source each"
   },
   "defence": {
    "ok": true,
-   "summary": "defence: 139 defence boxes and 18 sentences not counted, from GW's words (151 sentences of the defence side, each a box or listed; 139 boxes with every condition of their words; 26 reach boxes and models scopes checked against GW’s phrase, 0 unchecked (said “If (see the rule)”)); 58 catalogue labels with their values; 568 \"When targeted\" lines of every list unit, each a box said in its labels, 50 \"see the rule\" lines"
+   "summary": "defence: 140 defence boxes and 18 sentences not counted, from GW's words (151 sentences of the defence side, each a box or listed; 140 boxes with every condition of their words; 26 reach boxes and models scopes checked against GW’s phrase, 0 unchecked (said “If (see the rule)”)); 58 catalogue labels with their values; 605 \"When targeted\" lines of every list unit, each a box said in its labels, 50 \"see the rule\" lines"
   },
   "invariants": {
    "ok": true,
@@ -37,7 +37,7 @@
   },
   "derive": {
    "ok": true,
-   "summary": "derive: 1070 agreed labels hold; 3 differ, 195 not derivable (verify/out/derive.md)"
+   "summary": "derive: 1070 agreed labels hold; 3 differ, 199 not derivable (verify/out/derive.md)"
   },
   "choice": {
    "ok": true,
@@ -45,7 +45,7 @@
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 16417 facts checked against BSData b4dc3f4 (clone) {\"gear\":1156,\"stats\":2493,\"weapons\":7800,\"abilities\":1483,\"keywords\":1840,\"rules\":1105,\"grants\":250,\"points\":289,\"extract\":1}; 282 deviations used; 51 ability texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win); 0 failures"
+   "summary": "bsdata: 17042 facts checked against BSData b4dc3f4 (clone) {\"gear\":1194,\"stats\":2619,\"weapons\":8040,\"abilities\":1540,\"keywords\":1929,\"rules\":1159,\"grants\":254,\"points\":306,\"extract\":1}; 293 deviations used; 57 ability texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win); 0 failures"
   },
   "dispositions": {
    "ok": true,
@@ -53,31 +53,31 @@
   },
   "bases": {
    "ok": true,
-   "summary": "bases: 278 model rows in 25 lists and 94 of catalogue datasheets no list has have GW’s base as its guide prints it (eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt; 17 by a declaration in verify/deviations-bases.json, 3 of them Wahapedia’s where the guide has none, 1 where the guide’s row is taken to be GW’s error); GW’s rows for some models of a unit: 1 models lines on their base (wargear: baseWith), 2 declared absent"
+   "summary": "bases: 292 model rows in 26 lists and 89 of catalogue datasheets no list has have GW’s base as its guide prints it (eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt; 17 by a declaration in verify/deviations-bases.json, 3 of them Wahapedia’s where the guide has none, 1 where the guide’s row is taken to be GW’s error); GW’s rows for some models of a unit: 1 models lines on their base (wargear: baseWith), 2 declared absent"
   },
   "catalog": {
    "ok": true,
-   "summary": "catalog: adeptus-custodes 29 datasheets, 13 detachments, 93 left out; chaos-daemons 56 datasheets, 9 detachments, 73 left out; tyranids 52 datasheets, 10 detachments, 42 left out; checked {\"filter\":168,\"complete\":169,\"fresh\":3,\"tables\":156,\"nr\":464,\"bsdata\":404,\"texts\":461}; 404 BSData deviations used"
+   "summary": "catalog: adeptus-custodes 29 datasheets, 13 detachments, 93 left out; chaos-daemons 56 datasheets, 9 detachments, 73 left out; tyranids 52 datasheets, 10 detachments, 42 left out; checked {\"filter\":168,\"complete\":169,\"fresh\":3,\"tables\":155,\"nr\":524,\"bsdata\":404,\"texts\":461}; 404 BSData deviations used"
   },
   "nr": {
    "ok": true,
-   "summary": "nr: 0 failure(s); 11241 facts checked (army 185, units 126, roster 531, pts 252, copies 126, models 126, enhancement 252, warlord 252, leads 378, gear 219, stats 1494, ranged 2259, from 71, melee 2007, abilities 1160, kw 172, rules 1333, glossary 298); 200 declared deviations used; 59 names and texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win) Report: verify/out/nr.json"
+   "summary": "nr: 0 failure(s); 11256 facts checked (army 186, units 126, roster 531, pts 252, copies 126, models 126, enhancement 252, warlord 252, leads 378, gear 219, stats 1508, ranged 2259, from 71, melee 2007, abilities 1160, kw 172, rules 1333, glossary 298); 203 declared deviations used; 59 names and texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win) Report: verify/out/nr.json"
   },
   "texts": {
    "ok": true,
-   "summary": "0 failure(s) in 5710 checked facts, 26 deviation(s) used; verify/out/texts.json, verify/provenance.json"
+   "summary": "0 failure(s) in 5791 checked facts, 27 deviation(s) used; verify/out/texts.json, verify/provenance.json"
   },
   "numbers": {
    "ok": true,
-   "summary": "numbers: (90 catalogue rows with the lists' units) 2590 stats, 6126 weapon numbers and 312 keyword numbers checked against the Wahapedia datasheets (161 granted values compared as the datasheet has them); 26 declared deviations used"
+   "summary": "numbers: (85 catalogue rows with the lists' units) 2653 stats, 6216 weapon numbers and 317 keyword numbers checked against the Wahapedia datasheets (165 granted values compared as the datasheet has them); 26 declared deviations used"
   },
   "keywords": {
    "ok": true,
-   "summary": "keywords: 2209 keywords of 303 units (90 of them catalogue rows) are GW's datasheets' (and the list's own by its rules); 13 declared"
+   "summary": "keywords: 2256 keywords of 309 units (85 of them catalogue rows) are GW's datasheets' (and the list's own by its rules); 13 declared"
   },
   "words": {
    "ok": true,
-   "summary": "words: 1200 ability texts of 261 datasheets and 214 list units checked against their Wahapedia datasheet pages: 1164 equal (36 Leader lines as unit lists); 15 declared differences (verify/deviations-words.json); 1 PENDING (declared, not decided): imperial-knights_Canis-Rex.html Using Sir Hekhtur"
+   "summary": "words: 1225 ability texts of 261 datasheets and 225 list units checked against their Wahapedia datasheet pages: 1187 equal (36 Leader lines as unit lists); 15 declared differences (verify/deviations-words.json); 1 PENDING (declared, not decided): imperial-knights_Canis-Rex.html Using Sir Hekhtur"
   },
   "calc": {
    "ok": true,
@@ -85,15 +85,15 @@
   },
   "import": {
    "ok": true,
-   "summary": "import: 23 of 23 exported lists import identically (0 exports differ from the app’s list), 0 without a list refused, 46 changed exports refused; 165 checks, 0 failures"
+   "summary": "import: 24 of 24 exported lists import identically (0 exports differ from the app’s list), 0 without a list refused, 46 changed exports refused; 170 checks, 0 failures"
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 3193 screens and popups, 1985 helper texts, 0 failures"
+   "summary": "render at 390px: 3311 screens and popups, 2037 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 3193 screens and popups, 1985 helper texts, 0 failures"
+   "summary": "render at 320px: 3311 screens and popups, 2037 helper texts, 0 failures"
   },
   "snapshots": {
    "ok": true,
@@ -101,7 +101,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 630 judgements, 630 approved, 0 to check, 2503 stale approvals"
+   "summary": "helpers: 640 judgements, 640 approved, 0 to check, 2505 stale approvals"
   }
  }
 }

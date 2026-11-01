@@ -54,11 +54,10 @@ const damagedOf = ab => { const m = DAMAGED_NAME.exec(ab.name || '') || DAMAGED_
   stats.damaged = n; }
 
 // ---- L0 limit ----
-const ONCE = /\b(?:cannot use this stratagem more than once per battle|can only use this stratagem once per battle)\b(?! round)/i;
 { let n = 0;
   const all = D.coreStratagems.map(s => ['Core · ' + s.name, s]).concat(Object.values(D.factions).flatMap(f => Object.values(f.detachments || {}).flatMap(d => (d.stratagems || []).map(s => [f.name + ' · ' + d.name + ' · ' + s.name, s]))));
   for(const [where, s] of all){
-    const want = ONCE.test(X.plainCase(s.restrictions || '')) ? 'Once per battle' : undefined;
+    const want = X.limitOf(s.restrictions);
     if(s.limit !== want) fail('L0', where, 'limit ' + JSON.stringify(s.limit) + ', its RESTRICTIONS give ' + JSON.stringify(want || null) + ': “' + X.plainCase(s.restrictions || '') + '”');
     if(want) n++;
   }

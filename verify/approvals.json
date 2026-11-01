@@ -665,6 +665,12 @@
   "at": "2026-10-22",
   "why": "“WHEN: End of any phase.” That is all five phases (invariants.js: an “End of any phase” WHEN names every phase)."
  },
+ "07a7458e4927376f": {
+  "verdict": "ok",
+  "by": "review:basic-bitch",
+  "at": "2026-11-01",
+  "why": "Wahapedia prints 'Psychological Saboteur (Aura):'."
+ },
  "07b229d78c494cb1": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -802,6 +808,12 @@
   "by": "review:nerf-units",
   "at": "2026-10-24",
   "why": "\"In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit\": the Fight phase, either turn. The opening-phase fix now gives this; there is no Shooting label."
+ },
+ "091602702d68f41c": {
+  "verdict": "ok",
+  "by": "review:basic-bitch",
+  "at": "2026-11-01",
+  "why": "Matches GW: a model that has not fought this phase; on a 4+ it is not removed; it fights after the attacking unit's attacks, then is removed."
  },
  "09187654343d9487": {
   "verdict": "ok",
@@ -1445,6 +1457,12 @@
   "at": "2026-10-24",
   "why": "Applied to Icon of Khorne and The Blood God’s Favour, the only 'Each time you make a X roll' texts. Both are To do now at the Start of the battle round. In super-terminators The Blood God’s Favour is also in Fight · both turns. Entries listed by their own moment (s) are left alone. A rolled entry clears x, so the stored path doesn't run, and the pk branch skips it (listed itself). The Blood God’s Favour no longer appears as '(Wrathful Presence)' Active now, which matches render.js's `rolled(eP, P)` skip. Note: the app looks up `named` (the list's unit abilities and rules), while render.js reads the text directly. They agree today because The Blood God’s Favour is on Angron's datasheet."
  },
+ "119dde4ac2338344": {
+  "verdict": "ok",
+  "by": "review:basic-bitch",
+  "at": "2026-11-01",
+  "why": "Matches GW: up to two TYRANIDS units within Synapse Range and eligible to fight, or one other eligible; an unmodified Hit roll of 5+ scores a Critical Hit until the end of the phase."
+ },
  "11a13125ad9f100e": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2002,6 +2020,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "TARGET: \"One EMPEROR’S CHILDREN INFANTRY unit from your army\"."
+ },
+ "19d479ae29311e02": {
+  "verdict": "ok",
+  "by": "review:basic-bitch",
+  "at": "2026-11-01",
+  "why": "Both FAQs are in the Tyranids Faction Pack 1.3 FAQS, quoted exactly (pack text l.716, l.762-764). Seed Spore Mines text has the pack's 8\" change ('Change 9\" to 8\"')."
  },
  "19e04dc3c3104564": {
   "verdict": "ok",
@@ -4367,6 +4391,12 @@
   "at": "2026-10-16",
   "why": "\"melee attacks that target a MONSTER/VEHICLE unit\": Fight phase, either turn. [restored: the same judgement on the same text, signed off for an earlier list]"
  },
+ "38c5613cd2bf37ef": {
+  "verdict": "ok",
+  "by": "review:basic-bitch",
+  "at": "2026-11-01",
+  "why": "Matches GW, including the RESTRICTIONS (not the Hyper-adaptation selected at the start of the first battle round)."
+ },
  "38ccb23472a5e13c": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -5284,6 +5314,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.” Same."
+ },
+ "42f507ed2baf8c9b": {
+  "verdict": "ok",
+  "by": "review:basic-bitch",
+  "at": "2026-11-01",
+  "why": "Wahapedia: Hive Tyrant CORE ABILITIES 'Deadly Demise D3, Leader'; Tyrant Guard ARMY RULES 'Synapse' only, with no Deadly Demise. So Deadly Demise D3 is the Hive Tyrant's alone. Models 1 Hive Tyrant + 6 Tyrant Guard as in the export. Onslaught and Will of the Hive Mind are in the pack 1.3 words."
  },
  "43058fdaa20cd2e8": {
   "verdict": "ok",
@@ -7793,6 +7829,12 @@
   "at": "2026-10-27",
   "why": "\"a friendly LEGIONES DAEMONICA MOUNTED unit\": The Blue Scribes (Mounted) and the Fluxmaster's attached unit (has MOUNTED, 19.03)."
  },
+ "66a1e2920187f2ff": {
+  "verdict": "ok",
+  "by": "review:basic-bitch",
+  "at": "2026-11-01",
+  "why": "Matches GW: up to two ENDLESS MULTITUDE units within Synapse Range, or one other; D3+3 models to each."
+ },
  "66a2fc4bc05afdeb": {
   "verdict": "ok",
   "by": "review:fellhammer-units",
@@ -9929,6 +9971,12 @@
   "at": "2026-10-21",
   "why": "For the two unplaced items it gives exactly New Recruit's line: \"Hellfyre missile rack (x2) - Scarab Occult Terminators\" becomes '2× … New Recruit lists them for the Scarab Occult Terminators, not which models carry them', and \"Icon of Flame - Rubric Marines\" becomes '1× … lists it for the Rubric Marines, not which model carries it'. The 1× matches the datasheet's \"1 Rubric Marine can be equipped with 1 icon of flame\". It finds a weapon by name, a multi-profile weapon by its group (the first profile's who/n), and an ability by name (check.js guarantees the name exists, so the {} fallback is not reached). It never names a models line: the Models and Bases rows only add a note (no base counted), and on the weapon row the carrier is 'which models: not said'. That is set before weaponJoins/useLine, and their 'name the one line' guesses skip items that already have a carrier or are on no gear line."
  },
+ "85bb74e341395b53": {
+  "verdict": "ok",
+  "by": "review:basic-bitch",
+  "at": "2026-11-01",
+  "why": "Hormagaunts KEYWORDS (Wahapedia): INFANTRY; BATTLELINE; GREAT DEVOURER; ENDLESS MULTITUDE; HORMAGAUNTS. The Prime's own: INFANTRY, CHARACTER, GREAT DEVOURER, SYNAPSE, TYRANID PRIME WITH LASH WHIP. So Battleline, Endless Multitude and Hormagaunts come from the led unit. Weapons match the pack datasheet (rending claw 4 2+ 8 -2 3, lash whip 8 2+ 4 -2 1 [EXTRA ATTACKS], scything talons 6 2+ 6 -2 2) and Wahapedia's Hormagaunt talons (3 4+ 3 -1 1). SUSTAINED HITS 1 is Alpha Warrior's."
+ },
  "85dc2daea85b5825": {
   "verdict": "ok",
   "by": "review:literal",
@@ -10673,6 +10721,12 @@
   "at": "2026-10-24",
   "why": "Ranged attacks: their Movement (overwatch) + your Shooting, as approved Total Obliteration."
  },
+ "8f3269b31230bb68": {
+  "verdict": "ok",
+  "by": "review:basic-bitch",
+  "at": "2026-11-01",
+  "why": "Wahapedia's Swarmlord datasheet (verify/.cache/waha/ds/tyranids_The-Swarmlord.html) prints the Designer's Note word for word under Malign Presence. The datasheet row has Faction Pack 1.3's replacement words (pack p20, Rules Updates). The note is shown as a labelled note, the same handling as the approved Healybois row (result-healybois 89f3b0c37fbaa625)."
+ },
  "8f432292434d71c6": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -10930,6 +10984,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "NR: “1x Skorpius Disintegrator — Armoured hull, 3x Cognis heavy stubber, Disruptor missile launcher, Ferrumite cannon”, with the row “Cognis heavy stubber (x3)”."
+ },
+ "935bd5a0878e486b": {
+  "verdict": "ok",
+  "by": "review:basic-bitch",
+  "at": "2026-11-01",
+  "why": "The needs list GW's keywords as printed in Leader-beasts. The app matches keywords case-insensitively (app.html hasKw), so the respelt 'Tyranid Prime with Lash Whip' reaches the same units. The Warriors entries still read 'With … Bio-Weapons' where the datasheets have 'with … Bio-weapons'; that is harmless for the same reason. No list uses Warrior Bioform Onslaught."
  },
  "935e63f60c8a1b67": {
   "verdict": "ok",
@@ -14213,6 +14273,12 @@
   "at": "2026-10-22",
   "why": "“That CHAOS KNIGHTS CHARACTER unit.” Every Knight in this list is a CHARACTER (NR Categories), and the Nurglings are excluded."
  },
+ "be7c33c188f76f2a": {
+  "verdict": "ok",
+  "by": "review:basic-bitch",
+  "at": "2026-11-01",
+  "why": "Matches GW: +3\" when Consolidating if it can end within Engagement Range; within Synapse Range and not within Engagement Range, a Normal move of up to 6\" instead of the Consolidation move. Terse (reads as 'if within Synapse Range…') but nothing is added or lost."
+ },
  "be8c973c18c5fe88": {
   "verdict": "ok",
   "by": "review:code2",
@@ -15754,6 +15820,12 @@
   "by": "review:catalog-tyranids",
   "at": "2026-10-30",
   "why": "The units GW’s TARGET / rule names: {any:[Mawloc,Trygon]} (Subterranean Assault · Adaptive Optimisation), read against the faction page."
+ },
+ "d42071f9cd6729f1": {
+  "verdict": "ok",
+  "by": "review:basic-bitch",
+  "at": "2026-11-01",
+  "why": "Matches GW's WHEN/TARGET/EFFECT (FNP 6+, 5+ within Synapse Range, until the end of the phase). Nothing added."
  },
  "d429635f8f365c06": {
   "verdict": "ok",

@@ -2313,5 +2313,35 @@
   "where": "verify/sources/nr/nidzillas.txt p4",
   "reason": "New Recruit (from BSData) prints Neurocytes with \"your friendly Tyranids unit\"; GW’s datasheet (the codex, Wahapedia) prints \"a friendly TYRANIDS unit\". The app has GW’s words (a GW-backed correction found by the Tyranids catalogue import, verify/from-bsdata.js).",
   "evidence": "verify/.cache/waha/ds/tyranids_Neurogaunts.html, ABILITIES: \"Neurocytes: While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.\"; verify/sources/nr/nidzillas.txt p4: \"… of your friendly Tyranids unit …\"."
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "haruspex",
+  "field": "stats[Haruspex].base",
+  "app": "120×92mm Oval",
+  "source": "120x92mm",
+  "reason": "New Recruit’s export (catalogue revision 3) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3817: \"Haruspex  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: Base 120x92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "psychophage",
+  "field": "stats[Psychophage].base",
+  "app": "120×92mm Oval",
+  "source": "120x92mm",
+  "reason": "New Recruit’s export (catalogue revision 3) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3835: \"Psychophage  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: Base 120x92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "basic-bitch",
+  "unit": "tyrannofex",
+  "field": "stats[Tyrannofex].base",
+  "app": "120×92mm Oval",
+  "source": "120x92mm",
+  "reason": "New Recruit’s export (catalogue revision 3) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3857: \"Tyrannofex  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: Base 120x92mm.",
+  "by": "verify/from-json.js"
  }
 ]
