@@ -57,6 +57,19 @@ const PHRASES = [
 ];
 // the gaps of one box (b: a box or a defence box; src: its source as verify/effects-migrate.js sources gives it; side: 'attack' | 'defence';
 // others: the unit's other abilities, for a section another selects from)
+// GW's friendly-unit phrase in the first of these texts that has one: { run (its keywords' words, bold kept), excl (its "(excluding …)") }
+const RUN_B = '((?:\\*\\*[^*]+\\*\\*(?:\\s*(?:,|\\/|or|and)\\s*)?)+)', RUN_P = "((?:[A-Z][\\w'’-]*(?:\\s+|\\s*\\/\\s*|,\\s*| or | and ))+?)";
+const PHRASE_RES = [new RegExp('(?<!\\bwithin \\d+" of (?:a |an |one or more )?)\\b[Ff]riendly ' + RUN_B + '\\s*(?:units?|models?)\\b'),
+  new RegExp(RUN_B + '\\s*(?:units?|models?) from your army\\b'),
+  new RegExp('(?<!\\bwithin \\d+" of (?:a |an |one or more )?)\\b[Ff]riendly ' + RUN_P + '(?:units?|models?)\\b')];
+const counts = { checked:0, unchecked:0 };   // (reach boxes and keyword models scopes checked against GW's phrase, and those only said "If (see the rule)")
+function reachPhrase(texts){
+  for(const t0 of texts){ const t = String(t0 || ''); if(!t) continue;
+    for(const re of PHRASE_RES){ const m = re.exec(t); if(!m) continue;
+      const ex = /^\s*\(excluding ([^)]+)\)/.exec(t.slice(m.index + m[0].length).replace(/~~[^~]*~~\/?/g, ''));
+      return { run:m[1].trim(), excl:ex ? ex[1] : null }; } }
+  return null;
+}
 // GW's friendly-unit phrase as a keyword expression: { or:[[keyword…]…], not:[[keyword…]…] } (null: a word of it is no keyword)
 const kwWords = k => n(String(k).replace(/^Faction: /, '')).split(/\s+/).map(w => w.replace(/s$/, ''));
 function altsOf(V, run){
@@ -103,28 +116,47 @@ function gaps(b, src, side, others, ctx){
   // this unit": that keyword (the line says "X models:")
   { let m, want = null; const rp = raw.replace(/\*\*/g, '');
     if((m = /\bthat ([A-Z][A-Z' -]*[A-Z])(?: model)? has\b/.exec(rp)) || (m = /\b([A-Z][A-Z' -]*[A-Z]) models in that unit\b/.exec(rp))) want = m[1].trim();
-    else if(/\bthat model has\b/i.test(rp) && (m = /\bwhile an? ([A-Z][A-Z' -]*[A-Z]) model is leading this unit\b/.exec(rp))) want = m[1].trim();
+    else if(/\bthat model has\b/i.test(rp) && (m = /\b[Ww]hile an? ([A-Z][A-Z' -]*[A-Z]) model is leading this unit\b/.exec(rp))) want = m[1].trim();
     // (by meaning where the vocabulary is given: the keywords of its words and of its scope the same set)
     const sc = (b.scope || {}).models || (b.scope || {}).part || '', kset = t => { const a = altsOf(ctx.V, t); return a && a.length === 1 ? a[0].map(k => k.toLowerCase()).sort().join('|') : null; };
     const same = ctx && ctx.V ? (kset(want) !== null ? kset(want) === kset(sc) : String(sc).toUpperCase() === want.toUpperCase()) : String(sc).toUpperCase() === want.toUpperCase();
+    // (a keyword scope with no phrase of GW's that gives it, or one not read by keywords: checked against nothing, so only where the line says
+    // "If (see the rule)"; counted)
+    const kwScope = sc && !['model', 'one', 'char', 'nonchar'].includes(sc);
+    const ifOnly0 = (b.on || []).length && (b.on || []).every(([id]) => C[id] && C[id].quoted);
+    if(kwScope && (!want || (ctx && ctx.V && kset(want) === null))){ counts.unchecked++; if(!ifOnly0) out.push('its models scope ' + sc + ' is checked against no GW phrase and its line does not say “If (see the rule)”'); }
+    else if(kwScope) counts.checked++;
     if(want && !same && !(ctx && ctx.V && kset(want) === null && (b.on || []).length && (b.on || []).every(([id]) => C[id] && C[id].quoted))) out.push('its words give it to ' + want + ' models, its scope ' + JSON.stringify((b.scope || {}).models || 'the unit')); }
   // the friendly units it reaches: every keyword GW names for them is in its reach ("a friendly NECRONS VEHICLE unit", "a friendly LEGIO
   // CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model", "BLOOD LEGIONS units from your army"); "other friendly", "another", "because of this
   // … model": not the unit itself (notSelf); a reach by an aura's range: its aura mark
-  if(b.reach){ const rw = new Set([].concat(b.reach.all || [], b.reach.any || []).flatMap(k => n(String(k).replace(/^Faction: /, '')).split(/\s+/)));
-    // (not a phrase saying where they must be, "within 6" of one or more friendly SYNAPSE models", as the extractor's reach reader skips it)
-    const m = /(?<!\bwithin \d+" of (?:a |an |one or more )?)\bfriendly ((?:\*\*[^*]+\*\*(?:\s*(?:,|\/|or|and)\s*)?)+)\s*(?:units?|models?)\b/.exec(raw) || /((?:\*\*[^*]+\*\*(?:\s*(?:,|\/|or|and)\s*)?)+)\s*(?:units?|models?) from your army\b/.exec(raw);
-    if(m){ const miss = [...m[1].matchAll(/\*\*([^*]+)\*\*/g)].flatMap(x => n(x[1]).split(/\s+|\//)).filter(w => w && !rw.has(w) && !rw.has(w.replace(/s$/, '')));
-      if(miss.length) out.push('its words name the friendly units ' + m[1].replace(/\*\*/g, '') + ', its reach leaves out ' + miss.join(', '));
+  if(b.reach){
+    // GW's phrase for the friendly units it reaches, where GW states it: the quote, the line it continues, the sentence before it, the
+    // rule its tag names (Bondsman); in bold or not ("a friendly War Dog model"); "Friendly …" at a sentence's start too. Not a phrase
+    // saying where they must be ("within 6" of one or more friendly SYNAPSE models"), as the extractor's reach reader skips it
+    // (nearest first: the quote, the line it continues, the sentence it refers back to, the sentences before it in its rule, its tag's rule)
+    const us = X.unitsOf(src), at = u ? us.findIndex(x => x.s === u.s && x.lead === u.lead) : -1, before = at > 0 ? us.slice(0, at).reverse().map(x => x.s) : [];
+    const ph = reachPhrase([b.quote, lead, back, u && u.prevS || ''].concat(before, [src.tagText || '']).map(t => String(t).replace(/~~[^~]*~~\/?/g, '')));
+    // ("Ranged attacks that target that enemy unit": every friendly unit's, an empty reach)
+    const every = /^(?:ranged |melee )?attacks that target that enemy unit\b/.test(n(b.quote)) && !Object.keys(b.reach).length;
+    const ifOnly = S.on.length && S.on.every(([id]) => C[id] && C[id].quoted);
+    // (a reach checked against no phrase of GW's: only where the line says "If (see the rule)"; counted either way)
+    const unchecked = why => { counts.unchecked++; if(!ifOnly) out.push('its reach is checked against no GW phrase (' + why + ') and its line does not say “If (see the rule)”'); };
+    if(every) counts.checked++;
+    else if(!ph) unchecked('no friendly-unit phrase found');
+    else { const m = ph;
+      const rw = new Set([].concat(b.reach.all || [], b.reach.any || []).flatMap(k => n(String(k).replace(/^Faction: /, '')).split(/\s+/)));
+      const miss = m.run.replace(/\*\*/g, '').split(/\s*(?:\/|,? or |,? and |, )\s*|\s+/).map(w => n(w)).filter(w => w && !rw.has(w) && !rw.has(w.replace(/s$/, '')));
+      if(miss.length) out.push('its words name the friendly units ' + m.run.replace(/\*\*/g, '') + ', its reach leaves out ' + miss.join(', '));
       // (and as GW joins them, by meaning: GW's phrase read as a keyword expression (alternatives joined by "or", "/", ",", "and" (either);
       // within one, every keyword its words name; less the keywords "(excluding …)" names, GW's struck words left out), and the reach as
       // the app reads it (all / any / none), give the same answer for every unit of the lists and every datasheet row; a phrase not read
       // whole by keywords is unparsed: its box says "If (see the rule)")
-      if(ctx && ctx.V){ const ex = /^\s*\(excluding ([^)]+)\)/.exec(raw.slice(m.index + m[0].length).replace(/~~[^~]*~~\/?/g, ''));
-        const expr = phraseExpr(ctx.V, m[1], ex ? ex[1] : null);
-        if(!expr){ if(!(S.on.length && S.on.every(([id]) => C[id] && C[id].quoted))) out.push('its friendly units “' + m[1].replace(/\*\*/g, '') + '” are not read whole by keywords and the box does not say “If (see the rule)”'); }
-        else { const bad = ctx.kws.filter(kw => evalExpr(expr, kw) !== meets(b.reach, kw));
-          if(bad.length) out.push('its reach ' + JSON.stringify(b.reach) + ' and GW’s “' + m[1].replace(/\*\*/g, '') + (ex ? ' (excluding ' + ex[1].replace(/\*\*|~~/g, '') + ')' : '') + '” disagree on ' + bad.length + ' unit(s), e.g. ' + JSON.stringify(bad[0].filter(k => !/^Faction: /.test(k) || true).slice(0, 8))); } }
+      if(!(ctx && ctx.V)) counts.checked++;
+      if(ctx && ctx.V){ const expr = phraseExpr(ctx.V, m.run, m.excl);
+        if(!expr) unchecked('“' + m.run.replace(/\*\*/g, '') + '” not read whole by keywords');
+        else { counts.checked++; const bad = ctx.kws.filter(kw => evalExpr(expr, kw) !== meets(b.reach, kw));
+          if(bad.length) out.push('its reach ' + JSON.stringify(b.reach) + ' and GW’s “' + m.run.replace(/\*\*/g, '') + (m.excl ? ' (excluding ' + m.excl.replace(/\*\*|~~/g, '') + ')' : '') + '” disagree on ' + bad.length + ' unit(s), e.g. ' + JSON.stringify(bad[0].slice(0, 8))); } }
     }
     if(/\bother friendly\b|\banother friendly\b|\bbecause of this [a-z' -]+ model\b/.test(words) && !b.notSelf) out.push('“other” / “because of this model” and the box is not notSelf');
     if(S.ids.has('aura') && !['aura', 'selected'].includes(b.mark)) out.push('a reach by its aura\'s range and no aura mark'); }
@@ -200,4 +232,4 @@ function srcGaps(o, src){
   const tn = n(src.target), other = /\bof a friendly .+? unit that was selected as the target\b/.test(tn) || (/\bwhen an enemy unit targets a friendly\b/.test(n(src.when)) && !/^that\b/.test(tn));
   return other && !o.dreach ? ['it protects a unit that is not its TARGET and has no dreach'] : [];
 }
-module.exports = { gaps, srcGaps, optionOf };
+module.exports = { gaps, srcGaps, optionOf, counts };

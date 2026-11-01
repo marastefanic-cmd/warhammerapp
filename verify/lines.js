@@ -205,7 +205,7 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
 { const Cv = require('./coverage'), Tw = M.build(D), Sw = M.sources(D), CTX = { V:require('./derive').vocab(D), kws:D.armies.flatMap(a => a.units.map(u => u.kw || [])).concat(Object.values(D.datasheets || {}).map(x => x.kw || [])) }; let n = 0;
   for(const [key, o] of Object.entries(Tw)){ const src = Sw.get(key); if(!src || o.played) continue;
     for(const b of o.b || []){ n++; for(const g of Cv.gaps(b, src, 'attack', src.others, CTX)) fail('LC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
-  stats.covered = n; }
+  stats.covered = n; stats.reachChecked = Cv.counts.checked; stats.reachUnchecked = Cv.counts.unchecked; }
 // LB the Damaged band: its words are its boxes' effect labels, and "see the rule" where its words have a part not counted or no box
 { let n = 0;
   for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) if(ab.damaged){ const o = (D.boxes || {})[M.KEY.ability(ab)] || {};
@@ -225,6 +225,6 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/lines.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges and ' + stats.limits + ' once-per-battle chips as their words give them; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words; ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
+console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges and ' + stats.limits + ' once-per-battle chips as their words give them; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);

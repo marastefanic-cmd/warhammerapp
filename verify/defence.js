@@ -117,7 +117,7 @@ stats.boxes = nBox; stats.notCounted = nDnc;
   for(const [key, o] of Object.entries(T)){ const src = S.get(key); if(!src) continue;
     for(const g of Cv.srcGaps(o, src)) fail('DC', key + ' ' + o.n, g);
     for(const b of o.d || []){ n++; for(const g of Cv.gaps(b, src, 'defence', src.others, CTX)) fail('DC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
-  stats.covered = n; }
+  stats.covered = n; stats.reachChecked = Cv.counts.checked; stats.reachUnchecked = Cv.counts.unchecked; }
 // ---- D6 the code ----
 { const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');
   const fnSrc = name => { const m = new RegExp('\\n(?:function ' + name + '\\(|const ' + name + ' = )').exec(html); if(!m) return ''; const rest = html.slice(m.index + 1), e = rest.slice(1).search(/\n(?:function |const |let |\/\/ |\/\*)/); return rest.slice(0, e < 0 ? undefined : e + 1); };
@@ -193,6 +193,6 @@ stats.boxes = nBox; stats.notCounted = nDnc;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/defence.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('defence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.boxes + ' defence boxes and ' + stats.notCounted + ' sentences not counted, from GW\'s words (' + stats.sentences + ' sentences of the defence side, each a box or listed; ' + stats.covered + ' boxes with every condition of their words); ' + stats.labels + ' catalogue labels with their values; ' + stats.lines + ' "When targeted" lines of every list unit, each a box said in its labels, ' + stats.ncLines + ' "see the rule" lines');
+console.log('defence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.boxes + ' defence boxes and ' + stats.notCounted + ' sentences not counted, from GW\'s words (' + stats.sentences + ' sentences of the defence side, each a box or listed; ' + stats.covered + ' boxes with every condition of their words; ' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked (said “If (see the rule)”)); ' + stats.labels + ' catalogue labels with their values; ' + stats.lines + ' "When targeted" lines of every list unit, each a box said in its labels, ' + stats.ncLines + ' "see the rule" lines');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);
