@@ -1,0 +1,248 @@
+[
+ {
+  "key": "8f3269b31230bb68",
+  "where": "basic-bitch · The Swarmlord · Malign Presence",
+  "verdict": "ok",
+  "why": "Wahapedia's Swarmlord datasheet (verify/.cache/waha/ds/tyranids_The-Swarmlord.html) prints the Designer's Note word for word under Malign Presence. The datasheet row has Faction Pack 1.3's replacement words (pack p20, Rules Updates). The note is shown as a labelled note, the same handling as the approved Healybois row (result-healybois 89f3b0c37fbaa625)."
+ },
+ {
+  "key": "42f507ed2baf8c9b",
+  "where": "basic-bitch · Hive Tyrant",
+  "verdict": "ok",
+  "why": "Wahapedia: Hive Tyrant CORE ABILITIES 'Deadly Demise D3, Leader'; Tyrant Guard ARMY RULES 'Synapse' only, with no Deadly Demise. So Deadly Demise D3 is the Hive Tyrant's alone. Models 1 Hive Tyrant + 6 Tyrant Guard as in the export. Onslaught and Will of the Hive Mind are in the pack 1.3 words."
+ },
+ {
+  "key": "85bb74e341395b53",
+  "where": "basic-bitch · Tyranid Prime with Lash Whip",
+  "verdict": "ok",
+  "why": "Hormagaunts KEYWORDS (Wahapedia): INFANTRY; BATTLELINE; GREAT DEVOURER; ENDLESS MULTITUDE; HORMAGAUNTS. The Prime's own: INFANTRY, CHARACTER, GREAT DEVOURER, SYNAPSE, TYRANID PRIME WITH LASH WHIP. So Battleline, Endless Multitude and Hormagaunts come from the led unit. Weapons match the pack datasheet (rending claw 4 2+ 8 -2 3, lash whip 8 2+ 4 -2 1 [EXTRA ATTACKS], scything talons 6 2+ 6 -2 2) and Wahapedia's Hormagaunt talons (3 4+ 3 -1 1). SUSTAINED HITS 1 is Alpha Warrior's."
+ },
+ {
+  "key": "19d479ae29311e02",
+  "where": "basic-bitch · Biovores · Seed Spore Mines",
+  "verdict": "ok",
+  "why": "Both FAQs are in the Tyranids Faction Pack 1.3 FAQS, quoted exactly (pack text l.716, l.762-764). Seed Spore Mines text has the pack's 8\" change ('Change 9\" to 8\"')."
+ },
+ {
+  "key": "07a7458e4927376f",
+  "where": "basic-bitch · Neurolictor · Psychological Saboteur",
+  "verdict": "ok",
+  "why": "Wahapedia prints 'Psychological Saboteur (Aura):'."
+ },
+ {
+  "key": "d42071f9cd6729f1",
+  "where": "Invasion Fleet · Rapid Regeneration",
+  "verdict": "ok",
+  "why": "Matches GW's WHEN/TARGET/EFFECT (FNP 6+, 5+ within Synapse Range, until the end of the phase). Nothing added."
+ },
+ {
+  "key": "119dde4ac2338344",
+  "where": "Invasion Fleet · Adrenal Surge",
+  "verdict": "ok",
+  "why": "Matches GW: up to two TYRANIDS units within Synapse Range and eligible to fight, or one other eligible; an unmodified Hit roll of 5+ scores a Critical Hit until the end of the phase."
+ },
+ {
+  "key": "091602702d68f41c",
+  "where": "Invasion Fleet · Death Frenzy",
+  "verdict": "ok",
+  "why": "Matches GW: a model that has not fought this phase; on a 4+ it is not removed; it fights after the attacking unit's attacks, then is removed."
+ },
+ {
+  "key": "be7c33c188f76f2a",
+  "where": "Invasion Fleet · Overrun",
+  "verdict": "ok",
+  "why": "Matches GW: +3\" when Consolidating if it can end within Engagement Range; within Synapse Range and not within Engagement Range, a Normal move of up to 6\" instead of the Consolidation move. Terse (reads as 'if within Synapse Range…') but nothing is added or lost."
+ },
+ {
+  "key": "38c5613cd2bf37ef",
+  "where": "Invasion Fleet · Predatory Imperative",
+  "verdict": "ok",
+  "why": "Matches GW, including the RESTRICTIONS (not the Hyper-adaptation selected at the start of the first battle round)."
+ },
+ {
+  "key": "66a1e2920187f2ff",
+  "where": "Invasion Fleet · Endless Swarm",
+  "verdict": "ok",
+  "why": "Matches GW: up to two ENDLESS MULTITUDE units within Synapse Range, or one other; D3+3 models to each."
+ },
+ {
+  "key": "935bd5a0878e486b",
+  "where": "Tyranids · Warrior Bioform Onslaught rule · Leader-beasts",
+  "verdict": "ok",
+  "why": "The needs list GW's keywords as printed in Leader-beasts. The app matches keywords case-insensitively (app.html hasKw), so the respelt 'Tyranid Prime with Lash Whip' reaches the same units. The Warriors entries still read 'With … Bio-Weapons' where the datasheets have 'with … Bio-weapons'; that is harmless for the same reason. No list uses Warrior Bioform Onslaught."
+ },
+ {
+  "key": "fa9dc1e9bee5e5b3",
+  "where": "deviations-bsdata.json · the-red-terror · kw",
+  "verdict": "ok",
+  "why": "Wahapedia KEYWORDS and the pack datasheet (pack text l.320-321: 'Burrower, Vanguard Invader, The Red Terror') have BURROWER."
+ },
+ {
+  "key": "b09ec85e0ee534d1",
+  "where": "deviations-bsdata.json · the-red-terror · kw",
+  "verdict": "ok",
+  "why": "GW's keywords have no BURROWERS."
+ },
+ {
+  "key": "a51cac789f1f40ab",
+  "where": "deviations-bsdata.json · the-swarmlord-tyrant-guard · rules",
+  "verdict": "ok",
+  "why": "The Swarmlord and Tyrant Guard datasheets print no Feel No Pain 5+. It comes only from Guardian Organism ('while a CHARACTER model is leading this unit')."
+ },
+ {
+  "key": "27a1a661d7e90ec1",
+  "where": "deviations-bsdata.json · hive-tyrant-tyrant-guard · rules",
+  "verdict": "ok",
+  "why": "Same as the Swarmlord: Hive Tyrant / Tyrant Guard print no FNP 5+; Guardian Organism gives it conditionally."
+ },
+ {
+  "key": "870f8f8338fecbd0",
+  "where": "deviations-bsdata.json · biovores · kw",
+  "verdict": "ok",
+  "why": "Wahapedia Biovores KEYWORDS: INFANTRY; GREAT DEVOURER; BIOVORES."
+ },
+ {
+  "key": "9a28fba0838b82cc",
+  "where": "deviations-bsdata.json · biovores · kw",
+  "verdict": "ok",
+  "why": "GW prints BIOVORES, not BIOVORE."
+ },
+ {
+  "key": "0755c02a88d6043c",
+  "where": "deviations-bsdata.json · haruspex · stats.base",
+  "verdict": "ok",
+  "why": "Event Companion l.3817: 'Haruspex 120x92mm Oval Base'."
+ },
+ {
+  "key": "1b20dda970e3fe25",
+  "where": "deviations-bsdata.json · psychophage · stats.base",
+  "verdict": "ok",
+  "why": "Event Companion l.3835: 'Psychophage 120x92mm Oval Base'."
+ },
+ {
+  "key": "0c8fd60917600839",
+  "where": "deviations-bsdata.json · tyrannofex · stats.base",
+  "verdict": "ok",
+  "why": "Event Companion l.3857: 'Tyrannofex 120x92mm Oval Base'."
+ },
+ {
+  "key": "3a3de46f07f9e9ac",
+  "where": "deviations-bsdata.json · tyrannofex · kw",
+  "verdict": "ok",
+  "why": "Wahapedia Tyrannofex KEYWORDS: MONSTER; GREAT DEVOURER; FRAME; TYRANNOFEX."
+ },
+ {
+  "key": "01374af6fca39144",
+  "where": "deviations-bsdata.json · spore-mines-biovore · kw",
+  "verdict": "ok",
+  "why": "Wahapedia Spore Mines KEYWORDS: BEAST; FLY; GREAT DEVOURER; SPORE MINES. No REFERENCE."
+ },
+ {
+  "key": "5b9416ed5350b6df",
+  "where": "deviations-nr.json · haruspex · stats[Haruspex].base",
+  "verdict": "ok",
+  "why": "Same guide line as the bsdata deviation (l.3817)."
+ },
+ {
+  "key": "a0e1d262d3837734",
+  "where": "deviations-nr.json · psychophage · stats[Psychophage].base",
+  "verdict": "ok",
+  "why": "Same guide line (l.3835)."
+ },
+ {
+  "key": "fd6da14cd3304eef",
+  "where": "deviations-nr.json · tyrannofex · stats[Tyrannofex].base",
+  "verdict": "ok",
+  "why": "Same guide line (l.3857)."
+ },
+ {
+  "key": "2354970d18166a58",
+  "where": "deviations-texts.json · hive-tyrant-tyrant-guard · ability:Onslaught (Hive Tyrant)",
+  "verdict": "ok",
+  "why": "Pack text l.665 has 'TYRANIDSunit' (a missing space). The app's 'TYRANIDS unit' is the only difference, the same declaration as Healybois and Nidzillas."
+ },
+ {
+  "key": "043b772a978cf3e6",
+  "where": "verify/bsdata.js resolveAffects · associations (6ece085)",
+  "verdict": "ok",
+  "why": "Correct and general. Under the old reading, every 'group.recursive.associations' path (Alpha Warrior, Onslaught, Broodlord, Winged Prime, Hyperadapted Raveners, and the same paths in Aeldari, AM, GSC, GK) resolved to nothing: 'group' had already put every root in the set. The new reading, where each root is associated with the other roots of its attached unit, reaches the whole attached unit. Paths with no 'group' (Lord on Juggernaut, 'recursive.associations') have a single root, so they give exactly what they gave. Re-run: the new bsdata.js on main's data.js gives byte-identical output (16417 facts, 0 failures). HEAD gives 17042 facts, 0 failures; HEAD with the old function gives the 2 Hormagaunt talons failures only. from-json --compare is unaffected for other lists: the whole-sequence replay changed no other list's block. GW (Wahapedia; pack text l.336): 'Weapons equipped by models in this model's unit have the [SUSTAINED HITS 1] ability'. So both the Prime's and the Hormagaunts' weapons get it, as data.js shows (one SUSTAINED HITS 1 each). Double application is impossible: the set dedupes and the keyword is one."
+ },
+ {
+  "key": "be68944393a46542",
+  "where": "verify/from-json.js 1542-1554 · a catalogue detachment a list uses (24886ef)",
+  "verdict": "ok",
+  "why": "General: it applies to any list detachment still marked aiStatus 'not-read', finds the block by id inside the faction and keeps the catalogue's text byte for byte. Main vs HEAD Invasion Fleet with gist/gistOf and the mark stripped: identical. It relies on catalog-write's comment line before each detachment, which catalog-write.js l.26 always writes. A second run is a no-op. Hand gists for an already-written detachment are not refreshed on re-run; that is the same as from-json's existing path for non-catalogue detachments, and fingerprints still guard the source text. from-json.js differs from main by exactly these 13 lines."
+ },
+ {
+  "key": "cd27ce0557f7ed1e",
+  "where": "verify/derive.js label-destroys (2a5ca66)",
+  "verdict": "ok",
+  "why": "The regex is correct and narrow: one optional keyword word, then unit|model. Old matches are unchanged (1070 agreed hold). Trophy Taker and Feeder Tendrils both carry derive's reading, and the Fellhammer snapshot diff is only that label. On Fire Overwatch for a unit with no ranged weapon: by GW the Neurolictor cannot destroy anything in the Shooting phase or with Fire Overwatch, so 'Their Move · Your Shoot' can never apply to Feeder Tendrils. But derive labels datasheet words only, and the current approved practice (result-words: Lucius 'A Challenge Worthy of Skill', Skulltaker 'Skulls for Khorne', both with no ranged weapons) keeps derive's three-phase label. Feeder Tendrils follows that practice. If the owner wants weapon-aware labels, that is one general derive.js change covering all three; it is not this branch's. The Master of Executions has a bolt pistol, so his label is right. Note: Trophy Taker's label was written onto data.js by copying derive's reading, as earlier label commits did (a2633de, 127c679). Running from-json for Fellhammer writes the same line."
+ },
+ {
+  "key": "8630c86fc228e76d",
+  "where": "verify/catalog-write.js, effects-extract.js limitOf, lines.js L0 (96d84e4)",
+  "verdict": "ok",
+  "why": "limitOf is the L0 regex moved unchanged into effects-extract.js; lines.js L0 and catalog-write.js both use it. The writer puts limit after the timing labels and before needs, as data.js had it. Unending Waves' limit is the same on main and HEAD. L0 passes on main, so every other detachment's limit already equals limitOf and a catalogue rewrite of any faction changes nothing."
+ },
+ {
+  "key": "8ebd43c405bdd8a0",
+  "where": "verify/effects-extract.js enemyLeadThat; verify/evidence.js G4 (4456675)",
+  "verdict": "ok",
+  "why": "Narrow: a bullet whose lead opens 'While an enemy unit' with no friendly unit, about 'a model / models in that unit', with no 'friendly' and no 'targets that unit'. Scripted BOXES diff main→HEAD: no source removed; added only the new list's a|eongg6, a|hgu0i5 (Haruspex/Tyrannofex Damaged), a|mehjlc (Alpha Warrior); changed only r|11gv1f1 Leader-beasts, where reach 'Prime With'→'Prime with' is case only. dd5ebae→4456675 touches only a|eongg6. Damage, re-run: dmshown 642/642 and dmsingle 13040/13040 keys for other lists are identical on main and HEAD, with 0 errors. The Neurolictor's own Psychological Saboteur box now gives only +1 to wound."
+ },
+ {
+  "key": "ae83455a9b95db50",
+  "where": "BOXES · a|eongg6 Psychological Saboteur (Neurolictor)",
+  "verdict": "ok",
+  "why": "foe is the right reach. GW: 'Each time a model in that unit makes an attack, subtract 1 from the Hit roll' is every attack by the Battle-shocked enemy unit within 12\" of the Neurolictor, whatever it targets. So it is a defence line on every friendly unit, with both quoted conditions kept; the snapshot shows it under WHEN TARGETED, Spore Mines included. The +1 to wound for friendly TYRANIDS attacks targeting that unit stays an aura."
+ },
+ {
+  "key": "d57bfa720d2613b3",
+  "where": "points (basic-bitch export)",
+  "verdict": "ok",
+  "why": "GW cost tables (Wahapedia YOUR … COSTS): Red Terror 120; Swarmlord 210; Hive Tyrant 195; Tyrant Guard 6 models 170; Prime 75; Hormagaunts 20 models 120; Biovores 1 model 60; Neurolictor 1st-2nd 80; Leapers 3 models 55; Haruspex 1st-2nd 125; Psychophage 110; Tyrannofex 1st-2nd 170 + Acid spray 10. Sum 2000."
+ },
+ {
+  "key": "e6a6bbd39e20d2eb",
+  "where": "leader attachments",
+  "verdict": "ok",
+  "why": "GW LEADER: The Swarmlord and Hive Tyrant 'TYRANT GUARD'; the Prime 'HORMAGAUNTS, TERMAGANTS, TYRANID WARRIORS WITH MELEE/RANGED BIO-WEAPONS' (Wahapedia and the pack's datasheet). All four attachments are allowed. The Swarmlord is Warlord as in the export."
+ },
+ {
+  "key": "0741bfd776c018c5",
+  "where": "Invasion Fleet · the catalogue file",
+  "verdict": "ok",
+  "why": "Answer: yes, it is right. docs/catalog.md: a detachment the catalogue added carries the mark until the readings, fingerprints and sign-off are done, 'then drop the mark'. Once a list uses it, it is a list detachment like any other. data.js keeps the text the catalogue wrote, still checked word for word by texts.js; from-bsdata stops adding it, and catalog.js would fail a not-read mark that is not the catalogue's. Keeping it in detachmentRows would duplicate checks for no gain."
+ },
+ {
+  "key": "c35f513e1335c4b8",
+  "where": "The Swarmlord · Designer’s Note",
+  "verdict": "ok",
+  "why": "Yes, as a labelled note. That matches the approved Healybois handling, and Wahapedia is quoted as printed. Listing it as not filled mechanically is correct, since it comes from the hand file."
+ },
+ {
+  "key": "e37db0f2dc25c2a5",
+  "where": "verify/snapshots/basic-bitch.txt (new)",
+  "verdict": "ok",
+  "why": "Re-rendered by my own gate run; every unit screen's numbers were checked against Wahapedia/pack (see points, leaders, weapons). Spot-checks: Tyrannofex 9\" T12 2+ W16 OC5, acid spray 18\" D6+6 S6 -2 2, stinger salvoes 24\" 8 3+ 5 0 1; Psychophage 12\" (pack), talons A6 AP-2 (pack); Neurolictor InSv 4+, PRECISION claws 6 2+ 6 -2 1; Haruspex; Biovores spore mine launcher 48\" D3 4+ 6 -1 2; Spore Mines reference 1 model (1 Biovore); Leapers InSv 6+."
+ },
+ {
+  "key": "ae1196743e2d3ae6",
+  "where": "verify/snapshots/fellhammer-siege-task-force.txt",
+  "verdict": "ok",
+  "why": "Only Trophy Taker's label at both widths, as derive reads it."
+ },
+ {
+  "key": "f881ac6ede50e48b",
+  "where": "verify/snapshots/shooty.txt",
+  "verdict": "ok",
+  "why": "Only the new list on the picker (Tyranids ×3, 26 lists) and the table counts."
+ },
+ {
+  "key": "a383a4b3d7df52e5",
+  "where": "verify/approvals.json · 2 approvals now stale (not pruned)",
+  "verdict": "ok",
+  "why": "Fine to leave unpruned. Both stale approvals are explained: the Hyper-adaptations needs is now a list detachment's, held by derive-agreed, and the Leader-beasts spelling is now a helper item (approved above). helpers.js --prune can drop them later."
+ }
+]
