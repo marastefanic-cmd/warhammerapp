@@ -1089,6 +1089,9 @@ Fight · Either turn
 While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the Hit roll. If that unit is Below Half-strength, you can re-roll the Wound roll as well.
 
 Trophy Taker
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
 
 Each time this model destroys an enemy CHARACTER model, you gain 1CP.
 
@@ -3414,6 +3417,9 @@ While this model is leading a unit, each time a model in that unit makes a melee
 
 Trophy Taker
 - Master of Executions
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
 
 Each time this model destroys an enemy CHARACTER model, you gain 1CP.
 
