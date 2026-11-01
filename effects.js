@@ -14,7 +14,10 @@
      WH_EFFECTS.fxLabel(fx), condLabel(on)   the words the box shows
      WH_EFFECTS.CUSTOM    the Custom modifiers group: [[id, value]], in the order shown
      WH_EFFECTS.NC        the rare mechanics shown quoted, "not counted in the Damage tab": id → { why, pats }
-     WH_EFFECTS.norm(t)   GW's text as the patterns read it: lower case, no bold, plain quotes and dashes */
+     WH_EFFECTS.norm(t)   GW's text as the patterns read it: lower case, no bold, plain quotes and dashes
+     WH_EFFECTS.DF        the defence side (the datasheet's "When targeted" lines, not the Damage tab's numbers): defence effect id →
+                          { label(p), dom, pats, only }; DCOND its own conditions; DNC its words no effect reads (shown as "not counted
+                          here: see the rule"); dfLabel(df) the words a defence box shows */
 (function(root){
 'use strict';
 const sg = p => (+p > 0 ? '+' : '−') + Math.abs(+p);
@@ -139,6 +142,60 @@ const COND = {
   opt:{ label:p => p, pats:[] },
   q:{ quoted:true, label:p => '“' + p + '”', pats:[] }
 };
+// ---- the defence side: what protects a unit when it is attacked (the datasheet's "When targeted" lines; not played in the Damage tab) ----
+// DF: defence effect id → { label(p), dom, pats (over the normalised sentence; a capture is the value), only (true: a defence wherever its
+// words are, Feel No Pain or an invulnerable save; else only in a sentence about attacks against the unit or an enemy's, DEFENCE) }. The
+// patterns are tried in this order, each span read once: a qualified one ("Feel No Pain 4+ against mortal wounds") before the plain one, and
+// the plain one never reads a qualifier it does not say ("against …": not counted without it)
+const DF = {
+  fnpPsyMortal:{ only:true, label:p => 'Feel No Pain ' + p + '+ against Psychic Attacks and mortal wounds', dom:[2, 3, 4, 5, 6], pats:[/\bfeel no pain (\d)\+ (?:ability )?against (?:psychic attacks and mortal wounds|mortal wounds and psychic attacks)\b/] },
+  fnpMortal:{ only:true, label:p => 'Feel No Pain ' + p + '+ against mortal wounds', dom:[2, 3, 4, 5, 6], pats:[/\bfeel no pain (\d)\+ (?:ability )?against mortal wounds\b(?! and\b)/] },
+  fnpPsychic:{ only:true, label:p => 'Feel No Pain ' + p + '+ against Psychic Attacks', dom:[2, 3, 4, 5, 6], pats:[/\bfeel no pain (\d)\+ (?:ability )?against psychic attacks\b(?! and\b)/] },
+  fnp:{ only:true, label:p => 'Feel No Pain ' + p + '+', dom:[2, 3, 4, 5, 6], pats:[/\bfeel no pain (\d)\+(?! (?:ability )?against\b)/] },
+  invRanged:{ only:true, label:p => p + '+ invulnerable save against ranged attacks', dom:[2, 3, 4, 5, 6], pats:[/\b(\d)\+\*? ?(?:invulnerable save|insv) against ranged attacks\b/] },
+  // ("… and a 4+ invulnerable save against that attack": the attack the sentence is about, its kind the box's)
+  inv:{ only:true, label:p => p + '+ invulnerable save', dom:[2, 3, 4, 5, 6], pats:[/\b(\d)\+\*? ?(?:invulnerable save|insv)\b(?! against (?!that attack\b))/] },
+  svSet:{ only:true, label:p => 'Save characteristic of ' + p + '+', dom:[2, 3, 4, 5, 6], pats:[/\b(?:has|have) an? save characteristic of (\d)\+/] },
+  svPlus:{ only:true, label:p => '+' + p + ' to save rolls', dom:[1], pats:[/\b(?:has|have) \+(\d) to save rolls\b/] },
+  armourPlus:{ only:true, label:p => '+' + p + ' to armour saving throws', dom:[1], pats:[/\badd (\d) to any armou?r saving throws?\b/] },
+  t:{ only:true, label:p => '+' + p + ' T', dom:[1, 2], pats:[/\badd (\d) to (?:the |its |this model's |the bearer's )?toughness characteristic\b/] },
+  stealth:{ only:true, label:() => 'Stealth', dom:[true], pats:[/\b(?<!cannot |can't )(?:has|have|gains?) (?:the )?stealth\b/] },
+  cover:{ only:true, label:() => 'the Benefit of Cover', dom:[true], pats:[/\b(?<!cannot |can't )(?:has|have) the benefit of cover\b/] },
+  loneOp:{ only:true, label:() => 'Lone Operative', dom:[true], pats:[/\b(?:has|have) (?:the )?lone operative\b/] },
+  // (in a sentence about attacks against the unit, or an enemy unit's attacks: the attacker's rolls and characteristics)
+  hitMinus:{ label:p => '−' + p + ' to Hit rolls', dom:[1], pats:[/\bsubtract (\d) from (?:the|that attack's) hit roll\b/, /(?:^|\s)-(\d) to (?:the )?hit rolls?\b/] },
+  woundMinus:{ label:p => '−' + p + ' to Wound rolls', dom:[1], pats:[/\bsubtract (\d) from (?:the|that attack's) wound roll\b/, /(?:^|\s)-(\d) to (?:the )?wound rolls?\b/] },
+  apWorse:{ label:p => 'AP worsened by ' + p, dom:[1], pats:[/\bworsen the armou?r penetration characteristic of (?:that|each) attack by (\d)\b/, /(?:^|\s)-(\d) ap\b/] },
+  dmgMinus:{ label:p => '−' + p + ' Damage', dom:[1], pats:[/\bsubtract (\d) from the damage characteristic of (?:that|the) attack\b/, /(?:^|\s)-(\d) d\b/] },
+  dmgHalf:{ label:() => 'Damage halved', dom:[true], pats:[/\bhalve the damage characteristic of (?:that|the) attack\b/] },
+  dmg0:{ label:() => 'Damage 0', dom:[true], pats:[/\bchange the damage characteristic of that attack to 0\b/] },
+  hazardous:{ label:() => 'the attacking weapons have [HAZARDOUS]', dom:[true], pats:[/\bha(?:s|ve) (?:the )?\[hazardous\](?: ability)?/] }
+};
+// the conditions only the defence side reads (with COND's): their label, their patterns
+const DCOND = {
+  nearFriendly:{ label:p => 'Within ' + p.d + '" of ' + (p.other ? 'another' : 'a') + ' friendly ' + KW(p.kw) + ' unit' + (p.not ? ' (not ' + KW(p.not) + ')' : ''),
+    pats:[/\bwhile this (?:model|unit) is within (\d+)" of (?:one or more |a |an )?(other |another )?friendly ([a-z' -]+?) units?\b(?: \(excluding ([a-z' /-]+?) units?\))?/] },
+  sOverT:{ label:() => 'The attack’s S greater than its T', pats:[/\bif the strength characteristic of that attack is greater than the toughness characteristic of (?:your|this) unit\b/, /\bwith a s greater than (?:your|this|that) unit's t\b/] },
+  ledBy:{ label:p => 'While a ' + KW(p) + ' model is leading it', pats:[/\bwhile an? ([a-z][a-z ]*?) model is leading this unit\b/] },
+  bearerLeading:{ label:() => 'While leading a unit', pats:[/\bwhile the bearer is leading a unit\b/] },
+  controlling:{ label:() => 'While it controls an objective', pats:[/\bwhile this unit is controlling an objective\b/] },
+  notPsychic:{ label:() => 'Not Psychic Attacks', pats:[/\(excluding psychic attacks\)/] },
+  failedSave:{ label:() => 'After a failed saving throw', pats:[/\bwhen a saving throw (?:made )?for [^.]*? is failed\b/, /\bjust after a saving throw is failed\b/] },
+  bearerUses:{ label:() => 'If the bearer uses it', pats:[/\bthe bearer can use this enhancement\b/] },
+  // (a keyword of the model it is given to: "if it is a VEHICLE model"; the unit's keywords say it, as selfKw)
+  itIs:{ label:p => 'It is a ' + KW(p) + ' model', pats:[/\bif it is an? ([a-z][a-z ]*?) model\b/] }
+};
+// the defence-side words no catalogue effect reads: shown as "not counted here: see the rule", never dropped (the first that matches is its
+// reason; any other sentence about attacks against the unit with no effect read: 'unread')
+const DNC = {
+  onDeath:{ why:'what happens when one of its models is destroyed', pats:[/\bdo not remove (?:that|this|the destroyed) model\b/, /\bset this model back up on the battlefield\b/] },
+  targeting:{ why:'which units can select it as a target', pats:[/\bcan only be selected as the target of\b/, /\bwishes to select this model as the target\b/, /\bcannot target (?:your|this) (?:unit|model)\b/] },
+  detection:{ why:'its detection range', pats:[/\bthis unit has -\d+" detection range\b/] },
+  sequence:{ why:'an attack sequence that ends before it is resolved', pats:[/\bthe attack sequence ends\b/, /\bend the attack sequence\b/] },
+  eligibility:{ why:'whether the enemy unit is eligible to attack', pats:[/\benemy unit is not eligible to (?:shoot|fight)\b/] },
+  unread:{ why:'about attacks against it, in words no catalogue effect reads', pats:[] }
+};
+const dfLabel = df => (df || []).map(([id, p]) => DF[id] ? DF[id].label(p) : id).join(', ');
 const FACT_OF = Object.fromEntries(Object.entries(COND).filter(([, c]) => c.fact).map(([k, c]) => [k, c.fact]));
 // the Custom modifiers group: every catalogue effect a player can set by hand, in this order (no rule, no AI: plain toggles)
 const CUSTOM = [];
@@ -158,7 +215,7 @@ const fxLabel = fx => (fx || []).map(([id, p]) => FX[id] ? FX[id].label(p) : id)
 // (a condition that is only GW's words, quoted (q, anyOf: quoted), is said here, on the Damage tab's boxes, where it tells two boxes of
 // one rule apart and is what the player ticks; the datasheet's footnotes leave it out, their rule's name opening the words: app.html fnLine)
 const condLabel = on => (on || []).map(([id, p]) => COND[id] ? COND[id].label(p) : id).join(' · ');
-const api = { FX, COND, NC, CUSTOM, FACT_OF, CHAR_RE, CH, KW, toMod, fxLabel, condLabel, norm };
+const api = { FX, COND, NC, CUSTOM, FACT_OF, CHAR_RE, CH, KW, toMod, fxLabel, condLabel, norm, DF, DCOND, DNC, dfLabel };
 if(typeof module !== 'undefined' && module.exports) module.exports = api;
 root.WH_EFFECTS = api;
 })(typeof self !== 'undefined' ? self : this);

@@ -3,8 +3,8 @@
    "Readings").
 
    The readings are the app's interpretations of rule text into numbers and lines (a unit's footnotes, mods; what it gives other
-   units, aura, are BOXES now; their "When targeted" help, guard; an ability row's own: def). An ability whose words give a defence is
-   only shown through a reading of it. This step reads every ability of
+   units, aura, and their "When targeted" lines, def and guard, are BOXES now: b and d). An ability whose words give a defence is shown
+   through its defence boxes (data.js BOXES d, verify/defence.js D1-D8). This step reads every ability of
    every list by fixed rules, sentence by sentence (a list line with the line that leads it; a condition said earlier in the same
    paragraph counts for the sentences after it), and each bonus a sentence states must be said by a reading of that ability
    (Warden's Duty's [SUSTAINED HITS 1] and [IGNORES COVER] are two):
@@ -13,7 +13,7 @@
      held to them by verify/evidence.js G1-G9, its G4 every attack effect a box or listed as not counted)
      defence      what protects the unit, or the unit it is given to: Feel No Pain, an invulnerable save, -1 Damage to an attack
                   allocated to it, Damage 0, -1 to hit / wound or worse AP against attacks that target it (DEFENCE). Said by its
-                  "When targeted" readings: def, calcDef, defCalc, a guard line, the Feel No Pain on its Rules line, a marked InSv.
+                  defence boxes (BOXES d, or its words listed as not counted, dnc), the Feel No Pain on its Rules line, a marked InSv.
                   "An attack that targets this unit's …", "the bearer's …", "allocated to an enemy model" are not defences, nor
                   a cover the target "cannot have" (Burning Spray).
    Also read: a qualified bracket ("[LETHAL HITS: non-MONSTER/VEHICLE]") or a bare one after have / has ("have Sustained Hits 1"),
@@ -37,6 +37,7 @@
 const fs = require('fs'), path = require('path');
 const { ROOT, loadData, readJSON, writeJSON } = require('./lib');
 const { fp } = require('./tables');
+const { KEY } = require('./effects-migrate');
 
 const GAPS = path.join(ROOT, 'verify/readings-gaps.json');
 const D = loadData();
@@ -139,7 +140,16 @@ function readingsOfUnit(u, ab){
   const fnpLine = (u.rules || []).filter(r => /^feel no pain \d\+/i.test(r) && String(ab.text || '').toLowerCase().includes(r.toLowerCase().replace(/\*$/, '')));
   return { attack, guard, marks,
     attackSaid:words(attack) + ' | ' + marks.map(k => /^(A|S|D)$/.test(k) ? '"' + k + '":"+' : k === 'AP' ? '+1 AP' : k === 'WS' || k === 'BS' ? k + ' improved' : k).join(' | ') + ' | ' + JSON.stringify(ab.defCalc || {}),
-    defSaid:[ab.def, ab.calcDef, JSON.stringify(ab.defCalc || {}), words(guard), fnpLine.join(' '), marks.includes('InSv') ? 'InSv' : ''].filter(Boolean).join(' | ') };
+    defSaid:[fnpLine.join(' '), marks.includes('InSv') ? 'InSv' : ''].filter(Boolean).join(' | ') };
+}
+// the defences of an ability's defence boxes (data.js BOXES d, made from its words by script: its "When targeted" lines), as this step's
+// ids; and the sentences of it listed as not counted (dnc): a defence in them is said, "not counted here: see the rule"
+const DF_OF = { fnp:'fnp', fnpMortal:'fnp', fnpPsychic:'fnp', fnpPsyMortal:'fnp', inv:'invuln', invRanged:'invuln', svSet:'sv-set', svPlus:'save+1', armourPlus:'save+1', t:'t+',
+  stealth:'stealth', cover:'stealth', hitMinus:['hit-vs', 'enemy-hit-1'], woundMinus:'wound-vs', apWorse:'ap-worse', dmgMinus:'dmg-1', dmgHalf:'dmg-half', dmg0:'dmg-0' };
+function boxDefences(ab){
+  const o = (D.boxes || {})[KEY.ability(ab)] || {};
+  const ids = new Set((o.d || []).flatMap(b => b.pick ? b.pick.flatMap(p => p.df) : b.df).flatMap(([id]) => [].concat(DF_OF[id] || [])));
+  return { ids, nc:(o.dnc || []).map(x => norm(x.quote).replace(/\*\*/g, '')) };
 }
 // a gap: a sentence stating a bonus (an attack's under a condition, or a defence) that no reading of the ability says; per sentence and
 // per bonus (Warden's Duty's [SUSTAINED HITS 1] and [IGNORES COVER] are two)
@@ -167,7 +177,9 @@ function abilityGaps(u, ab){
     // (an attack bonus: the unit's footnotes and the Damage tab's boxes are data.js BOXES, made from these words by script; verify/evidence.js
     // G4 holds every attack effect of them to a box or to its words listed as not counted. Only the defence side is a reading)
     // (a defence is said by a "When targeted" reading, not by an attack footnote that happens to say "damage" or "AP")
-    const dmiss = b.def.filter(id => !covers(id, r.defSaid + ' | ' + r.marks.join(' | '), DEFENCE));
+    const bd = boxDefences(ab);
+    if(bd.nc.some(q => q.includes(s.slice(0, 40)))) continue;
+    const dmiss = b.def.filter(id => !bd.ids.has(id) && !covers(id, r.defSaid + ' | ' + r.marks.join(' | '), DEFENCE));
     if(dmiss.length){ check = check || 'defence'; miss.push(...dmiss); }
     if(check) found.push({ check, sentence:s, bonus:[...new Set(miss)] });
   }

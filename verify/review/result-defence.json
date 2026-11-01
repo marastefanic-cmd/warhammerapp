@@ -1,0 +1,98 @@
+[
+ {
+  "key": "af1d164227f8f762",
+  "where": "Khorne Daemonkin rule · Blood Tithe",
+  "verdict": "ok",
+  "why": "The parts are the same as main's apart from the dropped def/defOf. Their needs match GW: Enraged Abjuration needs BLOOD LEGIONS or WORLD EATERS models, and Daemonic Rage, Boon of Blood and Might of Khorne need BLOOD LEGIONS units (Might grants Blessings of Khorne). The defences are now the rule's own boxes, made by script: 'Enraged Abjuration [2BTP]: Feel No Pain 5+ against Psychic Attacks and mortal wounds' reaches BLOOD LEGIONS or WORLD EATERS, and 'Boon of Blood [4BTP]: 4+ invulnerable save' reaches BLOOD LEGIONS. Each shows with its option, as GW's words say."
+ },
+ {
+  "key": "26b72e82a5138520",
+  "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
+  "verdict": "ok",
+  "why": "The needs (TZEENTCH MUTANT, INFANTRY or MOUNTED) and the statNote ('OC +1 for each TZAANGOR model unless Battle-shocked') match GW's KEYWORDS paragraph. The defence is now the rule's box: −1 to Wound rolls, with 'If it uses this ability' and GW's quoted trigger, reaching TZEENTCH MUTANT INFANTRY/MOUNTED units. It is shown on the 6 units it should be. Only def was removed."
+ },
+ {
+  "key": "ffe2a9f459f0da22",
+  "where": "defSources",
+  "verdict": "ok",
+  "why": "Read line by line. It takes core rules with a value on the Rules line, the army rules the unit has (directly or by GRANTS), and an army rule held by another unit whose box reaches this one (reachOnly: Psychic Null on Custodes units). It then takes detachment rules by needs, the unit's own abilities (not n/a), other units' abilities, and non-core stratagems the unit can be the TARGET of. A stratagem with dreach shows only when another list unit can be its TARGET (Grot Shields; Blessing of Burning Blood on the 6 WORLD EATERS units). Sources are de-duplicated by key and group, so two copies of one aura give one line. Core stratagems are left out, as the coordinator decided. Nothing here reads a rule's words or a retired column (D6, and my grep)."
+ },
+ {
+  "key": "3ace96c4dca4e426",
+  "where": "defenceItems",
+  "verdict": "ok",
+  "why": "The reach filter is right: foe boxes go to every unit; reach boxes go only where dmReaches; the unit's own reach box is skipped when notSelf; another unit's box without reach is skipped. My mutation that lets every reach box through was caught by DL. I listed every box the stats rule hides, by script. Each one's InSv, Sv or T row is marked from that rule, and every other row is as good or better: Arcane Shield, Synaptoprescience ×3, Sanctuary (Destrier: printed 5+*, now 5+ from Sanctuary), Fleshmetal Fusion +1 T (Ruinator T11 → 12), Blood-forged Armour, Shield Dome, and Soul Forge Boons on 4 units. I also listed every Rules-line Feel No Pain the de-duplication drops (30). Each is said elsewhere with the same value and with its condition: a starred NR FNP by Aegis or Daughters, Flesh Hounds' unstarred FNP 3+ by Collar of Khorne's 'against Psychic Attacks', the Tzaangor Shaman's by Flowing Flesh, the Datasmith's by Robotic Bodyguard. Removing these makes nothing broader."
+ },
+ {
+  "key": "e4ae3348c76818dd",
+  "where": "defLineOf",
+  "verdict": "ok",
+  "why": "It shows the phases (stratagems; 'Any phase' when all), the kind unless the label already says it, and every condition label. A box whose conditions are all quoted shows 'If (see the rule)'. It shows 'KW models:' for a keyword scope, and gives no line when selfKw/itIs/selfGear is unmet (Omnissiah's Blessing is absent on non-VEHICLE units; Daemonic Allegiance's Nurgle option is absent on Khorne princes). I checked every number in all 142 distinct lines against the box's GW quote by script. The only numbers not in the quote are CP costs (stratagem data) and Malefic Surge's second pick option (FNP 6+, its own quote). The problem with Impossible Form is in the box's data, not in this template (see review-extractor). Re-checked at dfd201a, where the key is now e4ae3348c76818dd. The only change appends the box's `until` in brackets, only where GW says the effect lasts beyond the phase: Pulse Jet and Golden Light 'until the start of your next turn', Benevolence and Omnissiah's Blessing 'until the start of your next Command phase', Singular Purpose 'until the end of the battle'. D5 holds the wording to GW's text."
+ },
+ {
+  "key": "eed0d7b7f589852c",
+  "where": "defLine",
+  "verdict": "ok",
+  "why": "It is drawn as described: the who label, CP, the name linking to the rule, the muted when, the defences, and the giver in brackets linking to the unit. 'Riled up (… always riled up)' still shows for Super Runts. A Rules-line rule whose text is its own name shows the name only ('Trajann Valoris Feel No Pain 5+'). There is no rewording and no literal defence text (D6)."
+ },
+ {
+  "key": "f17190265ec68e01",
+  "where": "defKindSaid",
+  "verdict": "ok",
+  "why": "invRanged ('… against ranged attacks') and fnpPsy* ('… against Psychic Attacks') already say their kind, so the line does not repeat it. Every other id keeps its kind word. A melee box always shows 'Melee attacks' (Kaptaris, Doctrina Protector, Fluxmaster, Mischief Makers, Bladeguard). DL bites when the kind is not shown (my mutation)."
+ },
+ {
+  "key": "4fec0ecf4f964533",
+  "where": "readingsOfUnit",
+  "verdict": "ok",
+  "why": "defSaid now has only the Rules-line FNP and a marked InSv. The defence boxes count through boxDefences in abilityGaps. The read of u.guard is now dead (no guard left) and harmless. The readings gate still reports 0 defence gaps."
+ },
+ {
+  "key": "1afa754d8fe9695e",
+  "where": "abilityGaps",
+  "verdict": "ok",
+  "why": "A defence in a sentence counts as said when the ability's BOXES d has that DF id (DF_OF map checked id by id), or when the sentence is listed in dnc. A dnc sentence is skipped whole, including its attack bonuses. Those are held by evidence.js G4, so nothing goes unchecked."
+ },
+ {
+  "key": "ffc63fe19a7e866c",
+  "where": "resolveArmies",
+  "verdict": "ok",
+  "why": "The only change is READ = [], since guard is retired. I compared main's and the branch's ARMIES, DATASHEETS, FACTIONS, CORE_STRATAGEMS and GRANTS by script with def/defOf/defPh/guard/shield/defPick/defCalc removed: they are identical. No other value moved."
+ },
+ {
+  "key": null,
+  "where": "effects.js DF, DCOND, DNC",
+  "verdict": "ok",
+  "why": "The labels say exactly what the patterns read. A plain fnp never reads '… against' (negative lookahead). inv excludes 'against …' except 'against that attack'. The only:true ids are defences wherever they appear; hitMinus, woundMinus, apWorse, dmgMinus, dmgHalf, dmg0 and hazardous count only in a sentence about attacks against the unit. DCOND labels name their keywords in capitals (KW) and their distance. D8 holds that each label says its value, and my two label mutations were caught. I scanned all 893 catalogue sources for 'does not have the benefit of cover' and similar wording and found no false positives. Note: stealth and cover exclude only 'cannot/can't has'. 'does not have the Benefit of Cover' would read as a defence, but no such sentence exists today."
+ },
+ {
+  "key": null,
+  "where": "verify/effects-extract.js defenceOf",
+  "verdict": "ok",
+  "why": "Re-checked at 312ca56. Attack side against main: the build differs on exactly two sources. Dreadherder now quotes 'While this model is within 3\" of a friendly ORKS WALKER unit (excluding BIG MEK units)' in full. Hellfire Rounds quotes '(excluding [DEVASTATING WOUNDS] attacks)', its footnote reading '[ANTI-NON-VEHICLE 4+], If (see the rule)'. The other 283 sources are byte-identical; the 121 new keys hold only d/dnc/dreach/n. I scanned all 127 quoted conditions on both sides for truncation: each is verbatim in its source (struck words aside), has no leading or trailing space, has balanced brackets, and starts and ends on a word boundary. The 9 flagged by my boundary heuristic are restrictions that run straight into their verb ('… that target a hidden unit' have +1 S), so they are correct. Section picks: Magnus (Unearthly Power) and now Wazdakka (Full Throttle: 'Pulse Jet: Full Throttle: the one selected (in your Command phase) · “… pulse jet move”') carry their option. Angron, the Silent King and Canticles are unchanged. Gilded Guardians and Wardens are fixed (round 2)."
+ },
+ {
+  "key": null,
+  "where": "app.html defenceItems (every list unit)",
+  "verdict": "ok",
+  "why": "Re-checked at dfd201a: 618 lines; 37 unit screens change against 0e575ff. The changes are: Magnus's Impossible Form and Treason now with 'Unearthly Power: the one selected (at the start of the battle round)'; '(until …)' durations on Pulse Jet, Golden Light, Benevolence, Omnissiah's Blessing and Singular Purpose, each GW's words; and The Changeling's 'Mischief and Confusion: not counted here: see the rule' for 'on a 6, not eligible to shoot'. No line is broader than GW any more. My first-round reading of all 142 distinct lines stands for the rest (unchanged). Round 3 (312ca56): the only further screen changes are Wazdakka's Pulse Jet (now with Full Throttle's option and its quoted trigger), the Dreadherder footnotes (now quoting GW's full clause with '(excluding BIG MEK units)'), and Hellfire Rounds' footnote ('If (see the rule)'). My regenerated snapshots differ from round 2 only in those lines; screens and small phone pass."
+ },
+ {
+  "key": null,
+  "where": "Damage tab, main vs wt-defence",
+  "verdict": "ok",
+  "why": "I re-ran dmshown.js and dmsingle.js on fresh git-archive copies of main (d57af78) and HEAD (0e575ff). dmshown gave 642 unit × mode cases, byte-identical (32 none, 0 errors). dmsingle gave 13040 cases, byte-identical (0 errors). Main's app never read shield, defPick or defCalc in the Damage tab, and calc.js's target.shield is fed only by calc-test. dmBoxesOf and evidence.js boxOf ignore sources with only defence boxes. Re-run at dfd201a on a fresh copy: dmshown 642 and dmsingle 13040 cases, byte-identical to main (Dreadherder's new quoted condition changes no number). Round 3 (312ca56): dmshown 642 and dmsingle 13040, byte-identical to main again."
+ },
+ {
+  "key": null,
+  "where": "verify/defence.js D1-D8, DL",
+  "verdict": "ok",
+  "why": "Final check at 22a3ae9 (coverage.js, defence.js, lines.js only; data.js and app.html byte-identical to ed0d0be, and all 618 lines identical). The gate's counts are right. I counted independently from the box build: defence boxes 22 with a reach plus 4 keyword model scopes = 26; attack boxes (not played) 63 reaches plus 2 keyword scopes = 65. The gate's '26 + 65 checked, 0 unchecked' matches. All mutation sets re-run on fresh copies: mut4 37/38 and mut5 18/19 (the two misses do not make a line broader: the exclusion stays quoted, and lasts is a duration); mut6 9/9; mut7 1/1; mut8 4/4. mut9 and mut10 catch every mutation that applies. The Captain-General cases did not apply (its phrase is in the lead), and the Displays of Savagery case keeps the same meaning. mut11, applied to the lead, catches dropping and narrowing Captain-General's exclusion (LC). Capital-'Friendly' cases are caught: Daughters 3+ → ADEPTUS CUSTODES, Psychic Null → ANATHEMA PSYKANA, Aegis or Flare Shields emptied (DC), Honoured Interred narrowed, Relentless Rage emptied (LC). The tag-rule path (Bondsman's 'select one friendly ARMIGER model') is caught: Defender's Duty → IMPERIAL KNIGHTS (DC); the attack-side Duties → IMPERIAL KNIGHTS or emptied (LC). Across all rounds every class I tried is caught: missing or wrong conditions, kind, option, once-per, until, WHEN/TARGET, dreach, scope, reach (by meaning, every unit and datasheet), notSelf, aura mark, term trigger, literals in code, labels, lines."
+ },
+ {
+  "key": null,
+  "where": "verify/columns.json · data.js",
+  "verdict": "ok",
+  "why": "Nothing in app.html, calc.js, ask.js, import.js or check.js reads def, defOf, defPh, guard, shield, defPick or defCalc (grep). calc.js 'shield' is the engine's own target.shield input, fed only by calc-test. Some code still names them but none affects a screen or gate. verify/derive.js (p.def, u.guard) and readings.js (u.guard) read them, but they are empty now. import-nr.js, from-json.js and import-diff.js would copy def and guard from the hand files on the next import. On this branch alone that is not a silent hole: D1 walks ARMIES, DATASHEETS, FACTIONS and CORE_STRATAGEMS and fails on any of them (my mutation put def, then guard, back on Living Fortress: caught). It would turn the gate red until wt-reimport lands; import-nr.js:341 would also warn about the missing def. Leftovers, cosmetic: grot-shields keeps an orphan readOf, and the data.js comment at the resolver ('guard: their When targeted help') is stale. The tables screen's column counts changed as expected (431 → 352 columns; AI reading 80 → 6). At dfd201a BOXES.d gains the until column (columns.json, tables screen 352 → 353 columns); nothing else changes."
+ }
+]

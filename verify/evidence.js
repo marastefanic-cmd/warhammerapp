@@ -109,7 +109,8 @@ for(const [key, o] of Object.entries(T)){ const src = S.get(key); for(const b of
   stats.g9Bites = bit + ' of ' + BITES.length; }
 // G1 (the schema): a box, a pick, a scope, a limit, a part, a source carry the fields the script writes and no other (a hand note on a box
 // fails), in what the words give (T) and in data.js BOXES alike
-{ const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both', 'embarked', 'played', 'riled']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool', 'excl']),
+// (d, dnc, dreach: the defence side, held by verify/defence.js D1)
+{ const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both', 'embarked', 'played', 'riled', 'd', 'dnc', 'dreach']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool', 'excl']),
     PICK_KEYS = new Set(['name', 'fx', 'quote', 'on', 'lead', 'part']), SCOPE_KEYS = new Set(['models', 'weapon', 'part', 'wkw']), LIMIT_KEYS = new Set(['n', 'what']),
     PART_KEYS = new Set(['on', 'fx', 'quote']), NC_KEYS = new Set(['quote', 'why', 'atk']), BOTH_KEYS = new Set(['names', 'quote', 'reach', 'mark', 'opt', 'lasts']);
   const extra = (o, keys) => Object.keys(o || {}).filter(k => !keys.has(k));
@@ -244,8 +245,9 @@ for(const a of D.armies) for(const u of a.units){
 const hasK = (u, k) => u.kw.some(x => x.toLowerCase() === String(k).toLowerCase());
 const meetsN = (n, u) => !n || ((!n.all || n.all.every(k => hasK(u, k))) && (!n.any || !n.any.length || n.any.some(k => hasK(u, k))) && (!n.none || !n.none.some(k => hasK(u, k))) && (!n.unless || !meetsN(n.unless, u)));
 const rn = x => String(x).toLowerCase().replace(/[’']/g, "'");
-// (a core rule the Damage tab plays itself, its box the footnotes' only: played)
-const boxOf = k => { const o = (D.boxes || {})[k]; return o && !o.played ? o : undefined; };
+// (a core rule the Damage tab plays itself, its box the footnotes' only: played; a source with only defence boxes, d / dnc, the datasheet's
+// "When targeted" lines: none of the Damage tab's)
+const boxOf = k => { const o = (D.boxes || {})[k]; return o && !o.played && ['b', 'nc', 'reach', 'both', 'embarked', 'riled'].some(x => x in o) ? o : undefined; };
 function wantSources(a, u){
   const F = D.factions[a.faction], dets = a.detachments.map(id => F.detachments[id]).filter(Boolean), detR = dets.flatMap(d => (d.rule ? [d.rule] : []).concat(d.moreRules || []));
   const own = r => (u.rules || []).some(x => rn(x) === rn(r.name)), granted = r => (D.grants || []).some(g => g.type === 'ability' && g.grants === r.name && g.to && meetsN(g.to, u) && detR.some(d => String(g.rule).endsWith('· ' + d.name)));

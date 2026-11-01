@@ -2099,6 +2099,12 @@
   "at": "2026-10-24",
   "why": "Its melee attacks after a charge move: Fight phase, either turn (Heroic Intervention charges in their turn), same as approved Brutal Impact/Might is Right."
  },
+ "1afa754d8fe9695e": {
+  "verdict": "ok",
+  "by": "review:defence",
+  "at": "2026-11-01",
+  "why": "A defence in a sentence counts as said when the ability's BOXES d has that DF id (DF_OF map checked id by id), or when the sentence is listed in dnc. A dnc sentence is skipped whole, including its attack bonuses. Those are held by evidence.js G4, so nothing goes unchecked."
+ },
  "1b0a15bdafbac5b6": {
   "verdict": "ok",
   "by": "review:exiled-units",
@@ -3034,6 +3040,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged GRETCHIN unit” = “An enemy unit ends a move within 8\" of your unengaged unit” (“Their Movement”: the row’s tag); EFFECT “normal move of: Up to D6\". Or: Up to 6\" instead if your unit is an attached unit” = the rest."
+ },
+ "26b72e82a5138520": {
+  "verdict": "ok",
+  "by": "review:defence",
+  "at": "2026-11-01",
+  "why": "The needs (TZEENTCH MUTANT, INFANTRY or MOUNTED) and the statNote ('OC +1 for each TZAANGOR model unless Battle-shocked') match GW's KEYWORDS paragraph. The defence is now the rule's box: −1 to Wound rolls, with 'If it uses this ability' and GW's quoted trigger, reaching TZEENTCH MUTANT INFANTRY/MOUNTED units. It is shown on the 6 units it should be. Only def was removed."
  },
  "26b82ae697280554": {
   "verdict": "ok",
@@ -4540,6 +4552,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "“each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll”, until the end of the phase: ranged, the condition and the effect are kept."
+ },
+ "3ace96c4dca4e426": {
+  "verdict": "ok",
+  "by": "review:defence",
+  "at": "2026-11-01",
+  "why": "The reach filter is right: foe boxes go to every unit; reach boxes go only where dmReaches; the unit's own reach box is skipped when notSelf; another unit's box without reach is skipped. My mutation that lets every reach box through was caught by DL. I listed every box the stats rule hides, by script. Each one's InSv, Sv or T row is marked from that rule, and every other row is as good or better: Arcane Shield, Synaptoprescience ×3, Sanctuary (Destrier: printed 5+*, now 5+ from Sanctuary), Fleshmetal Fusion +1 T (Ruinator T11 → 12), Blood-forged Armour, Shield Dome, and Soul Forge Boons on 4 units. I also listed every Rules-line Feel No Pain the de-duplication drops (30). Each is said elsewhere with the same value and with its condition: a starred NR FNP by Aegis or Daughters, Flesh Hounds' unstarred FNP 3+ by Collar of Khorne's 'against Psychic Attacks', the Tzaangor Shaman's by Flowing Flesh, the Datasmith's by Robotic Bodyguard. Removing these makes nothing broader."
  },
  "3afb13ce8c44b5c3": {
   "verdict": "ok",
@@ -6178,6 +6196,12 @@
   "by": "review:order",
   "at": "2026-10-30",
   "why": "Same content as the judgement approved on main (key 90135ce6b36d3068, review:necrons) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ "4fec0ecf4f964533": {
+  "verdict": "ok",
+  "by": "review:defence",
+  "at": "2026-11-01",
+  "why": "defSaid now has only the Rules-line FNP and a marked InSv. The defence boxes count through boxDefences in abilityGaps. The read of u.guard is now dead (no guard left) and harmless. The readings gate still reports 0 defence gaps."
  },
  "5032d7e52b3b0d94": {
   "verdict": "ok",
@@ -13103,6 +13127,12 @@
   "at": "2026-10-21",
   "why": "WHEN: \"Fight phase\", with no \"your\" or \"your opponent’s\", so either turn."
  },
+ "af1d164227f8f762": {
+  "verdict": "ok",
+  "by": "review:defence",
+  "at": "2026-11-01",
+  "why": "The parts are the same as main's apart from the dropped def/defOf. Their needs match GW: Enraged Abjuration needs BLOOD LEGIONS or WORLD EATERS models, and Daemonic Rage, Boon of Blood and Might of Khorne need BLOOD LEGIONS units (Might grants Blessings of Khorne). The defences are now the rule's own boxes, made by script: 'Enraged Abjuration [2BTP]: Feel No Pain 5+ against Psychic Attacks and mortal wounds' reaches BLOOD LEGIONS or WORLD EATERS, and 'Boon of Blood [4BTP]: 4+ invulnerable save' reaches BLOOD LEGIONS. Each shows with its option, as GW's words say."
+ },
  "af2026e5a78055c8": {
   "verdict": "ok",
   "by": "review:effects-helpers",
@@ -16931,6 +16961,12 @@
   "at": "2026-10-29",
   "why": "{\"ph\":[\"fight\"],\"turn\":\"opp\",\"at\":\"End of your opponent’s turn\"}: the ph/turn/turns are as approved before (the same values under the old key); at is the moment its words open with."
  },
+ "e4ae3348c76818dd": {
+  "verdict": "ok",
+  "by": "review:defence",
+  "at": "2026-11-01",
+  "why": "It shows the phases (stratagems; 'Any phase' when all), the kind unless the label already says it, and every condition label. A box whose conditions are all quoted shows 'If (see the rule)'. It shows 'KW models:' for a keyword scope, and gives no line when selfKw/itIs/selfGear is unmet (Omnissiah's Blessing is absent on non-VEHICLE units; Daemonic Allegiance's Nurgle option is absent on Khorne princes). I checked every number in all 142 distinct lines against the box's GW quote by script. The only numbers not in the quote are CP costs (stratagem data) and Malefic Surge's second pick option (FNP 6+, its own quote). The problem with Impossible Form is in the box's data, not in this template (see review-extractor). Re-checked at dfd201a, where the key is now e4ae3348c76818dd. The only change appends the box's `until` in brackets, only where GW says the effect lasts beyond the phase: Pulse Jet and Golden Light 'until the start of your next turn', Benevolence and Omnissiah's Blessing 'until the start of your next Command phase', Singular Purpose 'until the end of the battle'. D5 holds the wording to GW's text."
+ },
  "e4c004b9b108f7b0": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -17645,6 +17681,12 @@
   "at": "2026-10-28",
   "why": "\"TARGET: One HARVESTER unit from your army that is within 6\\\" of that destroyed unit.\": Harvester."
  },
+ "eed0d7b7f589852c": {
+  "verdict": "ok",
+  "by": "review:defence",
+  "at": "2026-11-01",
+  "why": "It is drawn as described: the who label, CP, the name linking to the rule, the muted when, the defences, and the giver in brackets linking to the unit. 'Riled up (… always riled up)' still shows for Super Runts. A Rules-line rule whose text is its own name shows the name only ('Trajann Valoris Feel No Pain 5+'). There is no rewording and no literal defence text (D6)."
+ },
  "eee271bce397efcb": {
   "verdict": "ok",
   "by": "review:catalog-chaos-daemons",
@@ -17794,6 +17836,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Only army rule with needs is Bondsman (any:[Armiger]); purge-freeblade has no ARMIGER, and the rule (\"select one friendly ARMIGER model within 12\"\") then does nothing."
+ },
+ "f17190265ec68e01": {
+  "verdict": "ok",
+  "by": "review:defence",
+  "at": "2026-11-01",
+  "why": "invRanged ('… against ranged attacks') and fnpPsy* ('… against Psychic Attacks') already say their kind, so the line does not repeat it. Every other id keeps its kind word. A melee box always shows 'Melee attacks' (Kaptaris, Doctrina Protector, Fluxmaster, Mischief Makers, Bladeguard). DL bites when the kind is not shown (my mutation)."
  },
  "f1809bc9c752ec50": {
   "verdict": "ok",
@@ -18719,11 +18767,23 @@
   "at": "2026-10-16",
   "why": "Khorne Berzerker base M is 8\" (Khârn's unit); 10\" here comes from \"models in that unit have a Move characteristic of 10\\\"\"."
  },
+ "ffc63fe19a7e866c": {
+  "verdict": "ok",
+  "by": "review:defence",
+  "at": "2026-11-01",
+  "why": "The only change is READ = [], since guard is retired. I compared main's and the branch's ARMIES, DATASHEETS, FACTIONS, CORE_STRATAGEMS and GRANTS by script with def/defOf/defPh/guard/shield/defPick/defCalc removed: they are identical. No other value moved."
+ },
  "ffd60b68f9984992": {
   "verdict": "ok",
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit prints “Kustom Dakka - Mek”; model lines as NR."
+ },
+ "ffe2a9f459f0da22": {
+  "verdict": "ok",
+  "by": "review:defence",
+  "at": "2026-11-01",
+  "why": "Read line by line. It takes core rules with a value on the Rules line, the army rules the unit has (directly or by GRANTS), and an army rule held by another unit whose box reaches this one (reachOnly: Psychic Null on Custodes units). It then takes detachment rules by needs, the unit's own abilities (not n/a), other units' abilities, and non-core stratagems the unit can be the TARGET of. A stratagem with dreach shows only when another list unit can be its TARGET (Grot Shields; Blessing of Burning Blood on the 6 WORLD EATERS units). Sources are de-duplicated by key and group, so two copies of one aura give one line. Core stratagems are left out, as the coordinator decided. Nothing here reads a rule's words or a retired column (D6, and my grep)."
  },
  "fff370a48c622460": {
   "verdict": "ok",

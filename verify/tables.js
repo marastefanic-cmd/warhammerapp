@@ -52,22 +52,23 @@ function catalogRows(){
 }
 const WEAPON_FIELDS = ['range', 'A', 'BS', 'WS', 'S', 'AP', 'D'];
 // AI-written columns and the column holding the fingerprint of the text each was written from
-const FINGERPRINT = { gist:'gistOf', def:'defOf' };
+const FINGERPRINT = { gist:'gistOf' };   // (def, the When targeted line, is retired: a unit's When targeted lines are its defence boxes, BOXES d)
 // the readings: the app's interpretations of rule text into numbers and lines. A unit's footnotes (mods), what it gives other
 // units (aura) and their "When targeted" help (guard) are rows of readings, each on the row of the rule it reads (DATASHEETS for a
 // datasheet's ability, FACTIONS for an army or detachment rule or an enhancement, the list's entry for what is the list's own);
 // each reading carries readOf, the fingerprint of the exact text it was read from, and readBy:'derive' when verify/derive.js's
 // fixed rules give it from that text (then --write writes it again from the text). READ_COLS: the reading columns a row of
 // FACTIONS, CORE_STRATAGEMS or an ability row holds itself (the app reads them there); the row's readOf fingerprints them all.
-// (mods and aura, the footnotes and auras, are retired: a unit's footnotes are its boxes, data.js BOXES; guard stays)
-const READ = ['guard'];
+// (mods and aura, the footnotes and auras, and guard, the When targeted help, are retired: a unit's footnotes and When targeted lines are its
+// boxes, data.js BOXES b and d; no reading table is left, the machinery stays for none)
+const READ = [];
 const READ_FP = 'readOf', READ_BY = 'readBy', READ_WHY = 'listWhy';   // (listWhy: a reading the list's own, and why: it stays on the entry)
 const READ_COLS = {
   // (the Damage tab's own reading columns, calcMods, calcNc, both, limit, are retired: its boxes are BOXES, made by script, "derived")
   // (and mod, help, riled, the footnote columns: retired, a unit's footnotes are its boxes; calcDefs, defCalc, calcDef, defAlways, react,
   // weaponKw, lasts, calcNote, fightOnDeath, comeback: the Damage tab's, retired with them)
   rule:['parts', 'statNote'],
-  strat:['shield', 'defPick'],
+  strat:[],   // (shield, defPick: retired with the When targeted readings, BOXES d and dreach)
   ability:[],
 };
 const FP_KEYS = Object.values(FINGERPRINT).concat(READ_FP, READ_BY, READ_WHY);   // hidden from the app, and from the helpers' keys
@@ -129,7 +130,7 @@ const RESOLVER = `// Each unit entry of ARMIES names its datasheet (ds: an id of
 // fingerprint of the text a reading was read from), readBy and listWhy.
 function resolveArmies(armies, sheets, order, factions, opts){
   opts = opts || {}; factions = factions || {};
-  var ROWS = ['stats', 'ranged', 'melee', 'abilities'], READ = ['guard'];
+  var ROWS = ['stats', 'ranged', 'melee', 'abilities'], READ = [];
   var FPK = ${JSON.stringify(FP_KEYS)}, RHIDE = ['${READ_FP}', '${READ_BY}', '${READ_WHY}'].filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(FPK, ${JSON.stringify(CAT_COLS)}).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
@@ -1186,7 +1187,7 @@ function columnsInData(src){
   for(const s of Object.values(S)){ add('DATASHEETS', s); for(const k of ROWS.concat(READ)) (s[k] || []).forEach(r => add('DATASHEETS.' + k, r)); }
   (D.ruleOptions || []).forEach(r => add('RULE_OPTIONS', r)); (D.grants || []).forEach(r => add('GRANTS', r));
   // the Damage tab's boxes (verify/effects-migrate.js --write) and each box's columns
-  for(const o of Object.values(D.boxes || {})){ add('BOXES', o); (o.b || []).forEach(b => add('BOXES.b', b)); }
+  for(const o of Object.values(D.boxes || {})){ add('BOXES', o); (o.b || []).forEach(b => add('BOXES.b', b)); (o.d || []).forEach(b => add('BOXES.d', b)); }
   add('BS_IDS', D.bsIds);
   return Object.fromEntries(Object.entries(T).map(([k, v]) => [k, [...v]]));
 }
@@ -1212,7 +1213,7 @@ const READ_KIND = { 'CORE_STRATAGEMS':'strat', 'FACTIONS.detachments.stratagems'
 function layerOf(t, c){
   if(/\.(mods|aura|guard|readings)$/.test(t)) return [READ_FP, READ_BY, READ_WHY].includes(c) ? null : 'ai-reading';
   if(c === 'gist') return 'ai-summary';
-  if(c === 'def' || READ.includes(c) || (READ_KIND[t] && READ_COLS[READ_KIND[t]].includes(c))) return 'ai-reading';
+  if(READ.includes(c) || (READ_KIND[t] && READ_COLS[READ_KIND[t]].includes(c))) return 'ai-reading';
   return null;
 }
 const SOURCES = ['bsdata', 'wahapedia', 'gw', 'newrecruit', 'derived', 'hand', 'ai-summary', 'ai-reading'];
