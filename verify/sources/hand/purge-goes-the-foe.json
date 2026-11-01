@@ -1,0 +1,24 @@
+{
+ "_about": "What verify/from-json.js cannot fill mechanically for purge-goes-the-foe, written by hand and read by it on every run (from-json.js --write gives the same data.js again). The list was first imported from New Recruit’s PDF (verify/import-nr.js); these are the values data.js had then that its JSON export and GW’s pages do not give, each as data.js showed it and as its review signed it off: source (the day the PDF was exported; the export has none), units.<id>: na (why an ability does nothing in this list), notes (an FAQ or a rules note under an ability), kwNote (where a keyword comes from), short (the short name), srcNote (a note on the sources), kwOnly and partialRules (which model has a keyword or a core ability only some models of the unit have, where GW’s pages do not say it mechanically).",
+ "source": {
+  "text": "New Recruit, exported 20 Oct 2026",
+  "why": "the day New Recruit’s PDF of this list was exported (verify/sources/nr/purge-goes-the-foe.txt), from which the list was first imported; the JSON export carries no date"
+ },
+ "units": {
+  "belisarius-cawl": {
+   "notes": {
+    "Supreme Commander": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+   }
+  },
+  "thulia-ghuld": {
+   "notes": {
+    "Supreme Commander": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”",
+    "Rod of the War Forge": "FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”"
+   },
+   "why": "Rod of the War Forge selects one of the Icon of War abilities (GW's datasheet prints them as a box, each an ability of its own: who \"Icon of War: pick one\"); the Faction Pack's FAQ about selecting them goes on the ability that selects"
+  },
+  "cybernetica-datasmith-kastelan-robots": {
+   "kwNote": "Kastelan Robots, Walker come from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator."
+  }
+ }
+}
