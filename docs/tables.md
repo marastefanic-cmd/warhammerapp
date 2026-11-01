@@ -100,7 +100,9 @@ rule)"; words not counted: one "not counted here: see the rule" line, never left
 Rules line (Feel No Pain 5+), the army rules on its Rules line (or one of the list's that reaches it), the detachment rules whose needs it
 meets, its own abilities, other units' abilities whose boxes reach it (an aura, a unit another selects, an enemy unit's attacks made worse:
 `foe`), the detachments' stratagems it can be the TARGET of; the Waaagh! army rule's riled-up 5+ InSv is its box. The gate step `defence`
-(`verify/defence.js`, D1–D8 and DL) holds them to the words as G1–G8 hold the Damage tab. The columns `def` (and `defOf`, `defPh`),
+(`verify/defence.js`, D1–D8 and DL) holds them to the words as G1–G8 hold the Damage tab; its DC (and `verify/lines.js` LC for the
+attack side) holds the words to them: every condition GW's words put on a box (`verify/coverage.js`: its option, once per battle / turn,
+each "if / while / unless" clause, each "within N"", the kind of attack) is said, quoted, or its sentence is listed not counted. The columns `def` (and `defOf`, `defPh`),
 `guard`, a stratagem's `shield` and `defPick`, `parts[].def` are gone. What follows is about the rows' own reading columns that remain
 (`parts`, `statNote`).
 
@@ -212,7 +214,7 @@ Sources: **newrecruit** (the owner's New Recruit PDFs), **bsdata** (BSData wh40k
 | `BS_IDS` | the BSData ids the list import resolves an export by (verify/import-ids.js --write) | **bsdata**: `factions`, `roots`, `battleSizes`, `limits`, `dispositions`, `detachments`, `config`, `configKids`, `info`, `infoKids`, `units`, `names`, `maxPerList` |
 | `BOXES` | the Damage tab's boxes of a rule, ability or stratagem, and the datasheet's footnotes (verify/effects-migrate.js --write) | **derived**: `n`, `b`, `nc`, `reach`, `both`, `embarked`, `played`, `riled`, `d`, `dnc`, `dreach` |
 | `BOXES.b` | one box: what GW's sentence does, as effects.js reads it | **gw**: `quote`, `lead` · **derived**: `fx`, `on`, `kind`, `scope`, `reach`, `mark`, `notSelf`, `lasts`, `opt`, `pick`, `part`, `limit`, `tableRows`, `pool`, `excl` |
-| `BOXES.d` | one defence box: what GW's sentence does for a unit when it is attacked, as effects.js DF reads it (a "When targeted" line) | **gw**: `quote`, `lead` · **derived**: `df`, `on`, `kind`, `scope`, `reach`, `mark`, `notSelf`, `foe`, `opt`, `pick`, `term` |
+| `BOXES.d` | one defence box: what GW's sentence does for a unit when it is attacked, as effects.js DF reads it (a "When targeted" line) | **gw**: `quote`, `lead` · **derived**: `df`, `on`, `kind`, `scope`, `reach`, `mark`, `notSelf`, `foe`, `opt`, `pick`, `term` · **gw**: `until` |
 
 ## Faction catalogues
 

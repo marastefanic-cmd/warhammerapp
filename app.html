@@ -4839,7 +4839,8 @@ function defLineOf(S, b, u){
   const cond = on.length && on.every(quoted) ? FN_IF : on.map(said).join(' · ');
   const when = [ph, kind, cond].filter(Boolean).join(', ');
   const sc = b.scope || {}, models = sc.models && sc.models !== 'model' ? sc.models + ' models: ' : '';
-  const text = models + (b.pick ? 'one of: ' + b.pick.map(p => E.dfLabel(p.df)).join(' · ') : E.dfLabel(b.df));
+  // (how long it lasts where its words say it lasts beyond the phase: "until the start of your next Command phase")
+  const text = models + (b.pick ? 'one of: ' + b.pick.map(p => E.dfLabel(p.df)).join(' · ') : E.dfLabel(b.df)) + (b.until ? ' (' + b.until + ')' : '');
   return { a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp === 'unit' ? S.ab.who : '', when, text, from:S.grp === 'other' ? giver : '', riled:on.some(x => x[0] === 'riled'), box:b, key:S.key, rl:S.rl || '' };
 }
 // every "When targeted" line of a unit, in the order: its Rules line's core rules, army and detachment rules, its own abilities, other units',

@@ -1551,6 +1551,10 @@
     "term": {
      "source": "derived",
      "note": "a faction's own term the ability names in bold (a RULES entry RULE_SRC says is not a core rule: Pulse Jet Move) whose words the box reads; its condition the ability's sentence naming it"
+    },
+    "until": {
+     "source": "gw",
+     "note": "how long it lasts where its words say longer than the phase (\"until the start of your next Command phase\"), GW's words; verify/defence.js D5"
     }
    }
   }

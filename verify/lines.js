@@ -23,6 +23,7 @@
          number or weapon ability (Lance, Plunging Fire, Waaagh! are boxes of their rules)
      L7  (L2-L5 together: what the screen shows is what BOXES gives, worked out here again from data.js)
      L8  every catalogue effect and condition renders its label
+     LC  every condition GW's words put on a box is on it (verify/coverage.js: option, once per, if / while / unless, within N", kind)
 
      node verify/lines.js      the gate step; writes verify/out/lines.json */
 'use strict';
@@ -199,6 +200,12 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
     const exp = c.quoted ? 'If (see the rule)' : c.label(p);
     if(!m || m.when !== exp) fail('L8', 'effects.js ' + id, 'a box of it alone says “' + (m && m.when) + '”, not “' + exp + '”'); }
   stats.labels = n; }
+// LC every condition GW's words put on an attack box is on it (verify/coverage.js, as verify/defence.js DC): its option, once per, each
+// "if / while / unless" clause, each "within N"", the kind of attack; said, quoted ("If (see the rule)"), or listed not counted
+{ const Cv = require('./coverage'), Tw = M.build(D), Sw = M.sources(D); let n = 0;
+  for(const [key, o] of Object.entries(Tw)){ const src = Sw.get(key); if(!src || o.played) continue;
+    for(const b of o.b || []){ n++; for(const g of Cv.gaps(b, src, 'attack', src.others)) fail('LC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
+  stats.covered = n; }
 // LB the Damaged band: its words are its boxes' effect labels, and "see the rule" where its words have a part not counted or no box
 { let n = 0;
   for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) if(ab.damaged){ const o = (D.boxes || {})[M.KEY.ability(ab)] || {};
@@ -218,6 +225,6 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/lines.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges and ' + stats.limits + ' once-per-battle chips as their words give them; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
+console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges and ' + stats.limits + ' once-per-battle chips as their words give them; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words; ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);

@@ -175,7 +175,7 @@ const DF = {
 const DCOND = {
   nearFriendly:{ label:p => 'Within ' + p.d + '" of ' + (p.other ? 'another' : 'a') + ' friendly ' + KW(p.kw) + ' unit' + (p.not ? ' (not ' + KW(p.not) + ')' : ''),
     pats:[/\bwhile this (?:model|unit) is within (\d+)" of (?:one or more |a |an )?(other |another )?friendly ([a-z' -]+?) units?\b(?: \(excluding ([a-z' /-]+?) units?\))?/] },
-  sOverT:{ label:() => 'The attack’s S greater than its T', pats:[/\bif the strength characteristic of that attack is greater than the toughness characteristic of (?:your|this) unit\b/, /\bwith a s greater than (?:your|this) unit's t\b/] },
+  sOverT:{ label:() => 'The attack’s S greater than its T', pats:[/\bif the strength characteristic of that attack is greater than the toughness characteristic of (?:your|this) unit\b/, /\bwith a s greater than (?:your|this|that) unit's t\b/] },
   ledBy:{ label:p => 'While a ' + KW(p) + ' model is leading it', pats:[/\bwhile an? ([a-z][a-z ]*?) model is leading this unit\b/] },
   bearerLeading:{ label:() => 'While leading a unit', pats:[/\bwhile the bearer is leading a unit\b/] },
   controlling:{ label:() => 'While it controls an objective', pats:[/\bwhile this unit is controlling an objective\b/] },
@@ -192,6 +192,7 @@ const DNC = {
   targeting:{ why:'which units can select it as a target', pats:[/\bcan only be selected as the target of\b/, /\bwishes to select this model as the target\b/, /\bcannot target (?:your|this) (?:unit|model)\b/] },
   detection:{ why:'its detection range', pats:[/\bthis unit has -\d+" detection range\b/] },
   sequence:{ why:'an attack sequence that ends before it is resolved', pats:[/\bthe attack sequence ends\b/, /\bend the attack sequence\b/] },
+  eligibility:{ why:'whether the enemy unit is eligible to attack', pats:[/\benemy unit is not eligible to (?:shoot|fight)\b/] },
   unread:{ why:'about attacks against it, in words no catalogue effect reads', pats:[] }
 };
 const dfLabel = df => (df || []).map(([id, p]) => DF[id] ? DF[id].label(p) : id).join(', ');

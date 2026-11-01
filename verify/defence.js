@@ -18,8 +18,13 @@
          name, is a defence box's quote or in dnc (never left out)
      D5  every condition stands on its words: a COND or DCOND pattern in the quote, its line or its source's words; a quoted one verbatim;
          a reach's keywords literal keywords of the words; "while this model is leading a unit" in a quote is a leading condition
-     D6  the code: defenceItems, defSources, defLineOf and defLine read no reading column (def, guard, shield, defPick, defCalc, note, when)
-         and no rule's words, and write no defence (no "5+ INV", no "Feel No Pain" in the code)
+     D6  the code: every function and constant of the defence side (defenceItems, defSources, defLineOf, defLine, DEF_KIND, any def… or
+         DEF_… declaration) reads no reading column (def, guard, shield, defPick, defCalc, note, when) and no rule's words, and writes no
+         defence (no "5+ INV", no "Feel No Pain" in the code)
+     DC  every condition GW's words put on a box is on it (verify/coverage.js): its option (a table row, a named or bold option, "select
+         one of the following", "Or:", one of a section's abilities another ability selects), once per battle / turn / battle round, each
+         "if / while / unless" clause, each "within N"", the kind of attack (melee, ranged, psychic): said, quoted ("If (see the rule)"), or
+         the sentence listed not counted
      D7  data.js BOXES' defence side is exactly what the words give (node verify/effects-migrate.js --write)
      D8  every DF defence and DCOND condition says its own value in its label, and a box of it alone renders that label
      DL  the lines as the screen has them, for every list × unit: each "When targeted" line is a defence box the database gives that unit,
@@ -44,7 +49,7 @@ const KINDS = new Set(['ranged', 'melee', 'psychic', 'all']);
 const C = Object.assign({}, E.COND, E.DCOND);
 
 // ---- D1 schema; D2 verbatim; D3 its words; D5 its conditions ----
-const BOX_KEYS = new Set(['quote', 'lead', 'df', 'on', 'kind', 'scope', 'reach', 'mark', 'notSelf', 'foe', 'opt', 'pick', 'term']),
+const BOX_KEYS = new Set(['quote', 'lead', 'df', 'on', 'kind', 'scope', 'reach', 'mark', 'notSelf', 'foe', 'opt', 'pick', 'term', 'until']),
   PICK_KEYS = new Set(['name', 'df', 'quote']), SCOPE_KEYS = new Set(['models']), DNC_KEYS = new Set(['quote', 'why', 'term']);
 const domOk = (id, p) => !!E.DF[id] && E.DF[id].dom.some(x => String(x) === String(p));
 let nBox = 0, nDnc = 0;
@@ -71,7 +76,10 @@ for(const [name, TT] of [['the words', T], ['data.js BOXES', D.boxes || {}]]) fo
     const ctxT = E.norm([b.quote, b.lead || '', src.when || '', src.target || '', src.table ? M.ruleText(src) : src.text || '', src.tagText || '', src.tag || '', src.pickOf ? src.pickOf.text : '', (src.terms || []).map(t => t.text).join(' ')].join(' '));
     for(const [id, p] of b.on || []){ const c = C[id]; if(!c) continue;
       if(c.pats.length && !c.pats.some(re => re.test(ctxT))) fail('D5', where, 'condition ' + id + ' has no words in its source');
-      if(id === 'q' && !flat(src.when + ' ' + src.target + ' ' + text).includes(flat(p).toLowerCase()) && !/^Once per battle round$/.test(p)) fail('D5', where, 'quoted condition not verbatim: ' + p); }
+      // (GW's struck words left out: "(excluding ~~MONSTER~~/VEHICLE units)")
+      const unstruck = flat(String(src.when + ' ' + src.target + ' ' + ((src.table ? M.ruleText(src) : src.text || '') + (src.terms || []).map(t => '\n' + t.text).join(''))).replace(/~~[^~]*~~\/?/g, ''));
+      if(id === 'q' && !flat(src.when + ' ' + src.target + ' ' + text).includes(flat(p).toLowerCase()) && !unstruck.includes(flat(p).toLowerCase()) && !/^Once per battle round$/.test(p)) fail('D5', where, 'quoted condition not verbatim: ' + p); }
+    if(b.until && !flat(text + ' ' + (src.effect || '')).includes(flat(b.until))) fail('D5', where, 'its duration not GW’s words: ' + b.until);
     if(/\bwhile this (?:model|unit) is leading a unit\b/.test(E.norm(b.quote)) && !(b.on || []).some(x => x[0] === 'leading')) fail('D5', where, '"while this model is leading a unit" and no leading condition');
     for(const k of [].concat(((b.reach || {}).all) || [], ((b.reach || {}).any) || [], ((b.reach || {}).none) || [])) if(!text.includes(String(k).replace(/^Faction: /, '').toLowerCase().replace(/s$/, ''))) fail('D5', where, 'reach keyword ' + k + ' is not a literal keyword of its words');
   }
@@ -103,10 +111,18 @@ stats.boxes = nBox; stats.notCounted = nDnc;
       if(!qs.some(q => q.includes(s.replace(/\s*\.\s*$/, ''))) && !ncs.includes(s)) fail('D4', key + ' ' + src.name, 'a defence or its words in “' + u.s.slice(0, 90) + '” is in no defence box and not listed as not counted'); } }
   stats.sentences = n; }
 
+// ---- DC every condition GW's words put on a defence box is on it (verify/coverage.js: option, once per, if / while / unless, within N",
+// the kind of attack), said or quoted ("If (see the rule)"), or its sentence is listed not counted ----
+{ const Cv = require('./coverage'); let n = 0;
+  for(const [key, o] of Object.entries(T)){ const src = S.get(key); if(!src) continue;
+    for(const b of o.d || []){ n++; for(const g of Cv.gaps(b, src, 'defence', src.others)) fail('DC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
+  stats.covered = n; }
 // ---- D6 the code ----
 { const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');
   const fnSrc = name => { const m = new RegExp('\\n(?:function ' + name + '\\(|const ' + name + ' = )').exec(html); if(!m) return ''; const rest = html.slice(m.index + 1), e = rest.slice(1).search(/\n(?:function |const |let |\/\/ |\/\*)/); return rest.slice(0, e < 0 ? undefined : e + 1); };
-  for(const name of ['defenceItems', 'defSources', 'defLineOf', 'defLine', 'defKindSaid']){
+  // (every function and constant of the defence side, its helpers' tables too: DEF_KIND, defWords, defBoxesOf …)
+  const names = [...new Set(['defenceItems', 'defSources', 'defLineOf', 'defLine', 'defKindSaid', 'alwaysRiled', 'riledWhen'].concat([...html.matchAll(/\n(?:function |const )((?:def|DEF_)[A-Za-z_]\w*)\b/g)].map(m => m[1])))];
+  for(const name of names){
     const c = fnSrc(name).replace(/\/\/[^\n]*/g, '');
     if(!c){ fail('D6', 'app.html', name + ' not found'); continue; }
     const r = /\.(?:def|defOf|defPh|guard|shield|defPick|defCalc|note|when|selfWhen)\b(?!\s*\()/.exec(c.replace(/\bx\.when\b|\bS\.s\.when\b/g, ''));
@@ -161,7 +177,8 @@ stats.boxes = nBox; stats.notCounted = nDnc;
       const m = ms[0]; n++;
       const sc = w.b.scope || {}, models = sc.models && sc.models !== 'model' ? sc.models + ' models: ' : '';
       const exp = models + (w.b.pick ? 'one of: ' + w.b.pick.map(p => E.dfLabel(p.df)).join(' · ') : E.dfLabel(w.b.df));
-      if(m.text !== exp) fail('DL', where, w.Sx.name + ' says “' + m.text + '”, its box “' + exp + '”');
+      const expT = exp + (w.b.until ? ' (' + w.b.until + ')' : '');
+      if(m.text !== expT) fail('DL', where, w.Sx.name + ' says “' + m.text + '”, its box “' + expT + '”');
       const on = w.b.on || [], quoted = on.filter(([id]) => C[id] && C[id].quoted);
       if(on.length && quoted.length === on.length){ if(!/If \(see the rule\)$/.test(m.when)) fail('DL', where, w.Sx.name + ': only GW’s quoted words as its conditions, and it does not say “If (see the rule)”: “' + m.when + '”'); }
       else for(const [id, p] of on){ const l = E.DCOND[id] ? E.DCOND[id].label(p) : id === 'aura' || id === 'selected' || id === 'belowStarting' || id === 'belowHalf' ? null : E.COND[id].label(p);
@@ -175,6 +192,6 @@ stats.boxes = nBox; stats.notCounted = nDnc;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/defence.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('defence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.boxes + ' defence boxes and ' + stats.notCounted + ' sentences not counted, from GW\'s words (' + stats.sentences + ' sentences of the defence side, each a box or listed); ' + stats.labels + ' catalogue labels with their values; ' + stats.lines + ' "When targeted" lines of every list unit, each a box said in its labels, ' + stats.ncLines + ' "see the rule" lines');
+console.log('defence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.boxes + ' defence boxes and ' + stats.notCounted + ' sentences not counted, from GW\'s words (' + stats.sentences + ' sentences of the defence side, each a box or listed; ' + stats.covered + ' boxes with every condition of their words); ' + stats.labels + ' catalogue labels with their values; ' + stats.lines + ' "When targeted" lines of every list unit, each a box said in its labels, ' + stats.ncLines + ' "see the rule" lines');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);

@@ -112,8 +112,9 @@ function condsOf(V, sOrig, leadOrig, opts){
   // any other condition, in GW's words: an "if / while / unless" clause no condition above reads, or the trigger of a one-time
   // change ("The first time the bearer's unit destroys an enemy unit in the Fight phase", Parasitic Biomorphology: up to a "while"
   // clause of its own, read as one)
-  const pc = plainCase((leadOrig ? leadOrig + ' ' : '') + sOrig);
-  for(const m of pc.matchAll(/\b(?:(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;()]+|[Tt]he first time (?:(?! while\b)[^,.:;()])+)/g)){
+  // (the defence side: GW's struck words are not its words, "(excluding ~~MONSTER~~/VEHICLE units)", and a clause keeps its brackets)
+  const pc = opts && opts.def ? plainCase(((leadOrig ? leadOrig + ' ' : '') + sOrig).replace(/~~[^~]*~~\/?/g, '')) : plainCase((leadOrig ? leadOrig + ' ' : '') + sOrig);
+  for(const m of pc.matchAll(opts && opts.def ? /\b(?:(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;]+|[Tt]he first time (?:(?! while\b)[^,.:;()])+)/g : /\b(?:(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;()]+|[Tt]he first time (?:(?! while\b)[^,.:;()])+)/g)){
     const cl = m[0], cn = norm(cl);
     if(/^if (?:you|it|they) do(?:es)?\b|^if any of the following apply\b/.test(cn)) continue;
     // (an "if" whose consequence is a cost, not this effect: "if that test is failed, that unit suffers D3 mortal wounds")
@@ -123,7 +124,12 @@ function condsOf(V, sOrig, leadOrig, opts){
     if(/^,?\s*that [^.]*? is said to be\b/i.test(pc.slice(m.index + cl.length))) continue;
     // (a word the sentence defines first: "that model is damaged: while damaged, …")
     { const w = /^while (\w+)$/.exec(cn); if(w && new RegExp('\\bis ' + w[1] + '\\b').test(norm(pc))) continue; }
-    if(Object.entries(CT).some(([id, c]) => !['q', 'targetKw', 'opt'].includes(id) && c.pats.some(re => re.test(cn) || re.test(norm(cl + ' ' + pc.slice(m.index + cl.length, m.index + cl.length + 60)))))) continue;
+    // (read with the words right after it, to the end of its sentence or the line it leads: not across a ":" into the list it leads, whose own
+    // condition is another one: Dreadherder's "While this model is within 3" of a friendly ORKS WALKER unit …:" then "select one friendly
+    // ORKS WALKER unit within 3" of this model")
+    const rest = pc.slice(m.index + cl.length, m.index + cl.length + 60).split(/[:]/)[0];
+    // (and a condition read in those words must start in the clause, not in the words after it: "…, ranged attacks that target that unit")
+    if(Object.entries(CT).some(([id, c]) => !['q', 'targetKw', 'opt'].includes(id) && c.pats.some(re => { if(re.test(cn)) return true; const r = re.exec(norm(cl + ' ' + rest)); return !!r && r.index < cn.length; }))) continue;
     if(/\b(?:targets?|allocated to|that target is)\b/.test(cn) && tk) continue;
     if(!on.some(x => x[0] === 'q' && x[1] === cl)) on.push(['q', cl]);
   }
@@ -322,7 +328,7 @@ function extract(src, ctx){
     let on = condsOf(V, u.s, cont ? '' : leadAll, { inherit:cont, anyOf:u.anyOf });
     // (a part of a split sentence takes who and what it is about from the first part, not its condition)
     const WHO = ['aura', 'leading', 'targetKw', 'selected', 'targetSelected', 'oncePerBattle', 'oncePerTurn', 'used'];
-    if(base){ const own = new Set(on.map(x => x[0])); on = base.on.filter(x => !own.has(x[0]) && !(x[0] === 'targetKw' && own.has('targetKw')) && x[0] !== 'q' && (!u.split || WHO.includes(x[0]))).concat(on); }
+    if(base){ const own = new Set(on.map(x => x[0])); on = base.on.filter(x => !own.has(x[0]) && !(x[0] === 'targetKw' && own.has('targetKw')) && (x[0] !== 'q' || (!u.split && !!u.lead && norm(u.lead).includes(norm(x[1])))) && (!u.split || WHO.includes(x[0]))).concat(on); }
     // an option of a rule whose words say when one of its options can be used ("While a unit is Empowered it can use one of the Malefic
     // Surge abilities below"), or how often each ("You can only select each of these abilities once per battle")
     if(u.sec && src.type !== 'strat'){ const rt = plainCase(String(src.text || '').split('\n')[0]);
@@ -501,7 +507,7 @@ function defenceOf(src, us, V, ctx){
     }
     // its conditions (COND and DCOND), its moment's words (a stratagem's WHEN), the option it is
     // (a sentence of several clauses: its conditions up to the last clause with a defence, "on a 2-5, … subtract 1 from the Hit roll; on a 6, …")
-    const cutRe = /(?:,? and,? |; )(?=(?:until|that|each|all|models|melee|ranged|on a)\b)/i, ps = plainCase(u.s).split(cutRe);
+    const cutRe = /(?:,? and,? |; )(?=(?:until|that|each|all|models|melee|ranged|on a)\b)/i, ps = plainCase(u.s.replace(/~~[^~]*~~\/?/g, '')).split(cutRe);
     let last = 0; ps.forEach((x, j) => { if(findDf(norm(x)).df.length) last = j; });
     const sCut = ps.slice(0, last + 1).join(' ');
     let on = condsOf(V, sCut, src.type === 'strat' ? u.lead || '' : [u.lead, u.ctx].filter(Boolean).join(' '), { def:true });
@@ -542,8 +548,14 @@ function defenceOf(src, us, V, ctx){
     const models = defModels(u.s, on);
     // (Lone Operative, or a defence while within N" of other friendly units: its own, those units are where it is, not who has it)
     if(on.some(x => x[0] === 'nearFriendly') || df.every(([id]) => id === 'loneOp')) reach = null;
+    // (how long it lasts, in GW's words, where that is longer than the phase: "until the start of your next Command phase", "until the start
+    // of your next turn")
+    const until = /\buntil the (?:start of your next (?:command phase|turn)|end of (?:the|your opponent's next) (?:battle round|turn)|end of the battle)\b/i.exec(plainCase([u.lead || '', u.s].join(' ')));
+    // (a clause of the sentence with no defence the DNC patterns name: "on a 6, that enemy unit is not eligible to shoot this phase": not counted)
+    for(const x of plainCase(u.s).split(/(?:,? and,? |; )(?=(?:until|that|each|all|models|melee|ranged|on a)\b)/i)) if(!findDf(norm(x)).df.length && dncOf(norm(x))) dnc.push({ quote:x.replace(/\.\s*$/, ''), why:E.DNC[dncOf(norm(x))].why });
     for(const [k, fs] of groups){
       const box = { quote:u.s, df:fs, on, kind:k || base };
+      if(until) box.until = until[0].replace(/^U/, 'u');
       if(u.lead) box.lead = u.lead;
       if(models) box.scope = { models };
       if(foe) box.foe = true;
