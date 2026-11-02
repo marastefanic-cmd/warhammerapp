@@ -2592,7 +2592,7 @@ const ARMIES = [
       ],
       rules:['Leader','Cabal of Sorcerers','Blast','Devastating Wounds','Psychic','Pistol','Anti','Torrent','Ignores Cover'],
       kw:['Infantry','Character','Grenades','Psyker','Chaos','Tzeentch','Exalted Sorcerer','Battleline','Rubricae','Rubric Marines','Faction: Thousand Sons'],
-      kwNote:'Battleline, Rubric, Rubric Marines, Rubricae come from the led Rubric Marines.',
+      kwNote:'Battleline, Rubric Marines, Rubricae come from the led Rubric Marines.',
       kwOnly:{ Psyker:'Exalted Sorcerer and Aspiring Sorcerer' },
       partialRules:{ 'Cabal of Sorcerers':'Exalted Sorcerer and Aspiring Sorcerer' },
       why:{ kwNote:'leads Rubric Marines', ptsNote:'the points of its parts as the list has them (Exalted Sorcerer + Rubric Marines)' }
@@ -3050,7 +3050,7 @@ const ARMIES = [
       ],
       rules:['Support','Deadly Demise 1','Doctrina Imperatives','Devastating Wounds','Pistol','Twin-linked','Ignores Cover','Torrent'],
       kw:['Vehicle','Character','Imperium','Legio Cybernetica','Tech-Priest','Cybernetica Datasmith','Walker','Kastelan Robots','Faction: Adeptus Mechanicus','Skitarii'],
-      kwNote:'Kastelan Robots, Walker come from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator.',
+      kwNote:'Kastelan Robots, Walker come from the supported Kastelan Robots; Skitarii comes from Martial Signatum Amplificator (“Models in the bearer’s unit have the SKITARII keyword.”).',
       partialRules:{ 'Deadly Demise 1':'Kastelan Robots' },
       why:{ kw:{ Skitarii:'Martial Signatum Amplificator' }, kwNote:'supports Kastelan Robots', ptsNote:'the points of its parts as the list has them (Cybernetica Datasmith + Kastelan Robots)' }
     },
@@ -3365,16 +3365,16 @@ const ARMIES = [
         { name:'Final Howl (Aura)', tag:'Enhancement · Aura', text:'**WAR DOG** model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1.' }
       ],
       kw:['Vehicle','Walker','Chaos','War Dog','Brigand','Faction: Chaos Knights','Battleline','Character','Warlord'],
-      kwNote:'Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).',
-      why:{ kw:{ Warlord:'Warlord', Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' }, kwNote:'Houndpack Lance Character' }
+      kwNote:'Character comes from Marked Prey (“Until the end of the battle, those units have the CHARACTER keyword.”).',
+      why:{ kw:{ Warlord:'Warlord', Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' }, kwNote:'Marked Prey' }
     },
     {
       id:'war-dog-brigand', ds:'chaos-knights/war-dog-brigand', role:'Battleline', pts:135,
       models:['1× War Dog Brigand (Houndpack Lance Character)'],
       gear:[['Armoured feet','Avenger chaincannon','Daemonbreath spear','Diabolus heavy stubber']],
       kw:['Vehicle','Walker','Chaos','War Dog','Brigand','Faction: Chaos Knights','Battleline','Character'],
-      kwNote:'Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).',
-      why:{ kw:{ Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' }, kwNote:'Houndpack Lance Character' }
+      kwNote:'Character comes from Marked Prey (“Until the end of the battle, those units have the CHARACTER keyword.”).',
+      why:{ kw:{ Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' }, kwNote:'Marked Prey' }
     },
     {
       id:'war-dog-brigand-2', ds:'chaos-knights/war-dog-brigand', role:'Battleline', pts:135, copies:3,
@@ -3411,8 +3411,8 @@ const ARMIES = [
         { name:'Panoply of the Cursed Knights', tag:'Enhancement', text:'**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.' }
       ],
       kw:['Vehicle','Walker','Chaos','War Dog','Karnivore','Faction: Chaos Knights','Battleline','Character'],
-      kwNote:'Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).',
-      why:{ kw:{ Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' }, kwNote:'Houndpack Lance Character' }
+      kwNote:'Character comes from Marked Prey (“Until the end of the battle, those units have the CHARACTER keyword.”).',
+      why:{ kw:{ Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' }, kwNote:'Marked Prey' }
     },
     {
       id:'war-dog-karnivore', ds:'chaos-knights/war-dog-karnivore', role:'Battleline', pts:145, copies:5,
@@ -3506,7 +3506,7 @@ const ARMIES = [
       ],
       rules:['Leader','Blessings of Khorne','Deep Strike','Extra Attacks','Lance','Pistol','Hazardous'],
       kw:['Mounted','Character','Chaos','Khorne','Lord on Juggernaut','Infantry','Battleline','Grenades','Berzerkers','Faction: World Eaters','Faction: Blood Legions'],
-      kwNote:'Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry come from the led Khorne Berzerkers; Faction: Blood Legions comes from Disciple of Khorne on the Lord on Juggernaut (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”).',
+      kwNote:'Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry come from the led Khorne Berzerkers; Faction: Blood Legions comes from Disciple of Khorne (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”).',
       partialRules:{ 'Deep Strike':'Lord on Juggernaut' },
       why:{ kwNote:'leads Khorne Berzerkers', ptsNote:'the points of its parts as the list has them (Lord on Juggernaut + Khorne Berzerkers)' }
     },
@@ -4301,7 +4301,7 @@ const ARMIES = [
       ],
       rules:['Leader','Support','Stealth','Dark Pacts','Pistol','Devastating Wounds','Precision','Sustained Hits','Hazardous','Twin-linked'],
       kw:['Infantry','Grenades','Chaos','Character','Dark Apostle','Master of Executions','Psyker','Nemesis Claw','Faction: Heretic Astartes','Soul Forge'],
-      kwNote:'Master of Executions, Nemesis Claw, Psyker come from the combined unit.',
+      kwNote:'Master of Executions, Nemesis Claw, Psyker come from the combined unit; Soul Forge comes from Cybinfernal Font (“Models in the bearer’s unit have the SOUL FORGE keyword.”).',
       kwOnly:{ Character:'Dark Apostle and Master of Executions', 'Dark Apostle':'Dark Apostle' },
       partialRules:{ Stealth:'Nemesis Claw' },
       why:{ kw:{ 'Soul Forge':'Cybinfernal Font' }, kwNote:'leads Nemesis Claw (with Master of Executions)', ptsNote:'the points of its parts as the list has them (Dark Apostle + Master of Executions + Nemesis Claw)' }
@@ -4958,7 +4958,7 @@ const ARMIES = [
       ],
       rules:['Deep Strike','Leader','The Shadow of Chaos','Devastating Wounds','Hazardous','Psychic','Pistol'],
       kw:['Mounted','Character','Fly','Psyker','Chaos','Daemon','Tzeentch','Fluxmaster','Infantry','Battleline','Horrors','Pink','Blue','Brimstone','Faction: Legiones Daemonica'],
-      kwNote:'Infantry, Battleline, Horrors come from the led Pink Horrors.',
+      kwNote:'Battleline, Horrors, Infantry come from the led Pink Horrors.',
       kwOnly:{ Pink:'Pink Horror', Blue:'Blue Horrors', Brimstone:'Brimstone Horrors' },
       why:{ kwNote:'leads Pink Horrors', ptsNote:'the points of its parts as the list has them (Fluxmaster + Pink Horrors)' }
     },
@@ -5360,7 +5360,7 @@ const ARMIES = [
       ],
       rules:['Leader','Support','Waaagh!'],
       kw:['Infantry','Character','Epic Hero','Runtherd','Zodgrod Wortsnagga','Grots','Gretchin','Faction: Orks','Battleline'],
-      kwNote:'Gretchin, Grots come from the combined unit; Battleline from Sneaky Little Gitz (Runt Swarm).',
+      kwNote:'Gretchin, Grots come from the combined unit; Battleline comes from Sneaky Little Gitz (“Friendly GRETCHIN units have BATTLELINE.”).',
       why:{ kw:{ Battleline:'Sneaky Little Gitz' }, kwNote:'leads Gretchin (with Runtherd)', ptsNote:'the points of its parts as the list has them (Zodgrod Wortsnagga + Runtherd + Gretchin)' }
     },
     {

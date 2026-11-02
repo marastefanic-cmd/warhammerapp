@@ -3,19 +3,5 @@
  "source": {
   "text": "New Recruit, exported 22 Oct 2026",
   "why": "the day New Recruit’s PDF of this list was exported (verify/sources/nr/woof-woof.txt), from which the list was first imported; the JSON export carries no date"
- },
- "units": {
-  "war-dog-brigand-final-howl-aura": {
-   "kwNote": "Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).",
-   "why": "kwNote: CHARACTER comes from Houndpack Lance (\"select three WAR DOG units from your army … those units have the CHARACTER keyword\"); New Recruit's export marks the three units so."
-  },
-  "war-dog-brigand": {
-   "kwNote": "Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).",
-   "why": "kwNote: CHARACTER comes from Houndpack Lance, as for the other two War Dogs the list selects."
-  },
-  "war-dog-karnivore-panoply-of-the-cursed-knights": {
-   "kwNote": "Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).",
-   "why": "kwNote: CHARACTER comes from Houndpack Lance, as for the other two War Dogs the list selects."
-  }
  }
 }

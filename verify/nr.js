@@ -958,7 +958,9 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
   // selection is printed in the Options column, the keyword in the Categories): no New Recruit star
   const fromSel = /^(.+?) comes? from (.+?) \(/.exec(au.kwNote || '');
   const selOk = fromSel && fromSel[1].split(', ').every(k => (au.kw || []).map(nm).includes(nm(k))) && (au.models || []).some(l => nm(l).includes('(' + nm(fromSel[2]) + ')') || nm(l).includes(nm(fromSel[2]) + ',') || nm(l).includes(', ' + nm(fromSel[2])));
-  if (!starred.length && au.kwNote && !selOk) { chk('kw'); fail('kwNote', au.kwNote, null); }
+  // (or the rule the database says gives it, GRANTS: "Character comes from Marked Prey (“…”)", verify/gw-order.js kwNoteOf's template)
+  const grantOk = fromSel && fromSel[1].split(', ').every(k => (NR_GRANTS || []).some(g => /keyword/.test(g.type) && nm(g.grants).toLowerCase() === nm(k).toLowerCase() && (String(g.rule).split(' · ').pop() === fromSel[2] || g.option === fromSel[2])));
+  if (!starred.length && au.kwNote && !selOk && !grantOk) { chk('kw'); fail('kwNote', au.kwNote, null); }
 
   // rules
   const nrRules = uniq(nu.rules.map(nm));
@@ -997,10 +999,12 @@ function compareJsonArmy(D, A, J, out, where) {
 }
 
 // ---------------------------------------------------------------- main
+let NR_GRANTS = [];   // (data.js GRANTS: the rule a kwNote names for a keyword, compareUnit)
 function main(args) {
   const ctx = { window: {} }; vm.createContext(ctx);
   vm.runInContext(fs.readFileSync(args.data, 'utf8'), ctx);
   const D = ctx.window.WH_DATA;
+  NR_GRANTS = D.grants || [];
   const enhOf = A => enhNamesOf(D.factions[A.faction]);
   if (args.dump) {
     const A = D.armies.find(x => x.id === args.dump);

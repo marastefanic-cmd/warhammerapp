@@ -99,8 +99,9 @@ function gwWords(R){
 }
 // the lists, the order of their rows, keywords and Rules line aside (what --write may change: GW's order, gwOrder)
 const ORDERED = ['ranged', 'melee', 'abilities', 'kw', 'rules'];
-// (--write: the keywords' content too, which GW's datasheets give: verify/keywords.js checks it)
-const noKw = A => A.map(a => Object.assign({}, a, { units:a.units.map(u => Object.assign({}, u, { kw:null })) }));
+// (--write: the keywords' content too, which GW's datasheets give: verify/keywords.js checks it; and the keywords note, kwNote, by its fixed
+// templates over them: verify/gw-order.js kwNoteOf)
+const noKw = A => A.map(a => Object.assign({}, a, { units:a.units.map(u => Object.assign({}, u, { kw:null, kwNote:null })) }));
 const unordered = A => { const un = x => Array.isArray(x) ? x.map(un) : x && typeof x === 'object' ? Object.fromEntries(Object.entries(x).map(([k, y]) => [k, ORDERED.includes(k) && Array.isArray(y) ? un(y).map(z => stable(z)).sort() : un(y)])) : x;
   return un(JSON.parse(JSON.stringify(A, (k, x) => FP_KEYS.includes(k) || k === 'own' ? undefined : x))); };   // (the fingerprints aside first: they are no part of a row)
 
@@ -445,9 +446,15 @@ function build(R){
   // keywords in GW's order: the KEYWORDS line, then FACTION KEYWORDS, the list's own (Warlord, a rule's: why.kw) last
   // (and their content: GW's KEYWORDS and FACTION KEYWORDS, and of the unit's own only what GW prints or the list takes, verify/gw-order.js
   // gwKeywords; verify/keywords.js checks it)
+  // (and the keywords note, kwNote, by its fixed templates over the pages and the reasons (verify/gw-order.js kwNoteOf): before the keywords,
+  // whose own it names, and after them, of the keywords the unit has)
+  const kwNote = U => { const parts = GWO().partsOf(U.u, U.a.faction), k = GWO().kwNoteOf(U.u, U.a.faction, U.why, R.grants, GWO().partCats(bsIds, U.a.id + '/' + U.u.id, parts));
+    if(k) U.u.kwNote = k; else delete U.u.kwNote; };
+  for(const U of units) if(!U.u.ref) kwNote(U);
   for(const U of units){ const parts = GWO().partsOf(U.u, U.a.faction), own = Object.keys((U.why || {}).kw || {});
     const kw = GWO().gwKeywords(U.u, parts, own, GWO().partCats(bsIds, U.a.id + '/' + U.u.id, parts)); if(kw) U.u.kw = kw.slice();
     GWO().orderKw(U.u, parts, own, kw && kw.names); }
+  for(const U of units) if(!U.u.ref) kwNote(U);
   // the readings, each to the row it reads (readingTables); the list's own keep their reason
   const RT = readingTables(R, units, conflicts);
   for(const U of units){

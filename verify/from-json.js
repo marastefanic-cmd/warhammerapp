@@ -1572,8 +1572,8 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
     const t = ab.text; delete ab.text; ab.note = note; ab.text = t;
     handDone.push({ what: 'note on ' + u.name + ' · ' + an, by: 'hand (Claude)', text: note });
   }
-  // the keywords note where its reasons are more than the parts' (kwNote: a keyword a rule of the list gives, Sneaky Little Gitz' BATTLELINE)
-  if (h.kwNote) { u.kwNote = h.kwNote; handDone.push({ what: 'kwNote of ' + u.name + ': ' + h.kwNote, by: 'hand (Claude)', text: h.why || '' }); }
+  // (it is derived: verify/tables.js --write writes it by verify/gw-order.js kwNoteOf's templates, never the hand file's)
+  if (h.kwNote) want(uid, 'hand file kwNote', 'kwNote is derived (verify/gw-order.js kwNoteOf): take it out of the hand file');
   // the unit's short name on the screen (short: "Daemon Prince" for the Daemon Prince of Khorne), its note on its sources (srcNote:
   // { at, note }), and which model has a keyword or a core ability only some of its models have (kwOnly / partialRules: { <keyword or
   // rule>: <model> }, the whole column, null for none) where GW's datasheet pages do not give it mechanically (Sir Hekhtur's)

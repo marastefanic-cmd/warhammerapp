@@ -540,6 +540,46 @@ module.exports = function make(ROOT) {
     out.names = names.map(x => x && !x.undeclared ? x.kw : null); out.picks = names; out.missing = parts.filter((p, i) => !names[i] || names[i].undeclared || names[i].bad).map(p => p.name);
     return out;
   }
+  // ---- a unit's keywords note (kwNote, the line under its keywords: "Battleline, Berzerkers come from the led Khorne Berzerkers"), by fixed
+  // templates over GW's pages and the database's reasons (verify/tables.js --write writes it; its step "tables" holds data.js to it):
+  //   the parts: an attached unit's keywords that a part after the first prints (its page's KEYWORDS and FACTION KEYWORDS, its name keyword)
+  //     and the first does not, but a keyword only some models have (kwOnly): "{keywords, by part, A-Z} come(s) from the {led X | supported X |
+  //     combined unit (two characters)}"; the first's Faction keyword its own ability says it has "instead" is not the first's
+  //   a rule's: a keyword the unit has for a reason of the list's (why.kw), said where the unit is attached, the reason is its own enhancement
+  //     or upgrade, or the rule gives it to the units the player selects (GRANTS to: null): "{keyword(s)} come(s) from {rule} (“{GW's words}”)"
+  //   "instead": its own ability's "has the X Faction keyword instead of the Y Faction keyword": "Faction: X comes from {ability} (“{sentence}”)"
+  //   joined "; ", with a full stop; none: no note
+  const plainQ = t => String(t || '').replace(/^-\s+/, '').replace(/\*\*|~~/g, '').replace(/\*$/, '').replace(/\s+/g, ' ').trim();
+  const INSTEAD = /\bhas the \*\*([A-Z][A-Z' -]+?)\*\* Faction keyword instead of the \*\*([A-Z][A-Z' -]+?)\*\* Faction keyword\b/;
+  function kwNoteOf(u, faction, why, grants, cats) {
+    const parts = partsOf(u, faction), segs = [], kwN = new Set((u.kw || []).map(n)), said = new Set();
+    // ("instead": the ability's sentence, the keywords it gives and takes)
+    const inst = [];
+    for (const ab of u.abilities || []) for (const sen of String(ab.text || '').split(/(?<=[.!?])\s+/)) { const m = INSTEAD.exec(sen); if (m) inst.push({ ab, sen, give:'Faction: ' + TC(m[1]), take:'Faction: ' + TC(m[2]) }); }
+    if (u.leads && parts.length > 1 && parts.every(p => p.page)) {
+      const names = parts.map((p, i) => nameKeyword(p, (cats || [])[i], faction));
+      const kwOf = (p, i) => new Set(p.page.unitKeywords.map(n).concat(p.page.factionKeywords.map(k => n('Faction: ' + k)), names[i] && !names[i].undeclared ? [n(names[i].kw)] : []));
+      const first = kwOf(parts[0], 0), only = new Set(Object.keys(u.kwOnly || {}).map(n));
+      // (the first part's ability that gives it another Faction keyword "instead": the one it takes is not the first's)
+      for (const x of inst) if (!x.ab.who || n(x.ab.who) === n(parts[0].name)) first.delete(n(x.take));
+      const extra = [];
+      parts.slice(1).forEach((p, j) => { const ks = kwOf(p, j + 1); for (const k of (u.kw || []).filter(k => ks.has(n(k))).sort()) if (!first.has(n(k)) && !only.has(n(k)) && !extra.includes(k)) extra.push(k); });
+      if (extra.length) { segs.push(extra.join(', ') + (extra.length > 1 ? ' come' : ' comes') + ' from the ' + ((u.also || []).length ? 'combined unit' : (u.support ? 'supported ' : 'led ') + u.leads)); extra.forEach(k => said.add(n(k))); }
+    }
+    // a rule's
+    const own = new Set((u.abilities || []).filter(x => /\b(Enhancement|Upgrade)\b/.test(x.tag || '')).map(x => x.name));
+    const by = new Map();
+    for (const k of u.kw || []) { const r = ((why || {}).kw || {})[k]; if (!r || r === 'Warlord' || said.has(n(k))) continue;
+      const g = (grants || []).find(x => /keyword/.test(x.type) && n(x.grants) === n(k) && (x.option === r || String(x.rule).split(' · ').pop() === r));
+      const ab = own.has(r) ? (u.abilities || []).find(x => x.name === r) : null;
+      const sen = ab ? String(ab.text || '').split(/(?<=[.!?])\s+/).find(t => new RegExp('\\*\\*' + k.toUpperCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\*\\* keyword').test(t)) : null;
+      if (!(u.leads || ab || (g && g.to === null))) continue;
+      const q = sen || (g && g.text); if (!q) continue;
+      if (!by.has(r)) by.set(r, { ks:[], q }); by.get(r).ks.push(k); said.add(n(k)); }
+    for (const [r, x] of by) segs.push(x.ks.join(', ') + (x.ks.length > 1 ? ' come' : ' comes') + ' from ' + r + ' (“' + plainQ(x.q) + '”)');
+    for (const x of inst) if (kwN.has(n(x.give)) && !said.has(n(x.give))) { segs.push(x.give + ' comes from ' + x.ab.name + ' (“' + plainQ(x.sen) + '”)'); said.add(n(x.give)); }
+    return segs.length ? segs.join('; ') + '.' : undefined;
+  }
   // every resolved unit of the lists (the old form): its rows, a weapon's keywords, the Rules line (keywords: orderKw, with the list's own)
   function units(armies) {
     for (const a of armies) for (const u of a.units) {
@@ -573,7 +613,7 @@ module.exports = function make(ROOT) {
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { modelPages, wordsPass, pageSpells, gwWords, gwWordsOf, declaredWords, DEVW, pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
+  return { modelPages, wordsPass, pageSpells, gwWords, gwWordsOf, declaredWords, DEVW, pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, kwNoteOf, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
 };
 module.exports.wahaSectionsOf = wahaSectionsOf;
 module.exports.selectsFrom = selectsFrom;

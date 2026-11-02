@@ -614,8 +614,8 @@
      "note": "the keywords; on an entry only for an attached unit (the parts together)"
     },
     "kwNote": {
-     "source": "hand",
-     "note": "where an attached unit's keywords come from; signed off"
+     "source": "derived",
+     "note": "the line under its keywords, by fixed templates over GW’s pages and the database’s reasons (verify/gw-order.js kwNoteOf; verify/tables.js --write writes it, its step “tables” holds data.js to it): an attached unit’s keywords a later part’s page prints and the first’s does not (“come from the led Khorne Berzerkers”), a keyword a rule gives the unit for a reason of the list (why.kw, GRANTS) with GW’s words quoted, a Faction keyword an ability gives “instead”; verify/nr.js: each New Recruit starred keyword named"
     },
     "kwOnly": {
      "source": "hand",
