@@ -1,10 +1,11 @@
 # data.js as tables
 
 Every unit, stratagem and rule is a row of a table in `data.js`; the app is a template over them. The AI
-part is transcribing the sources, plus one AI-written column (`gist`), carrying a fingerprint
-of the text it was written from, and the readings that remain (a rule's `parts` and `statNote`: the app's reading of a rule's
-text into lines), each on the row of the rule it reads and fingerprinted the same way. The footnotes under a unit's weapons and its
-"When targeted" lines are no reading: they are `BOXES`, made by script from GW's words. `verify/columns.json` says, for every column, where its values come from;
+part is transcribing the sources, plus one AI-written column (`gist`, the stratagems' one-line summaries: labelled "AI", the
+rules as written a tap away, carrying a fingerprint of the text it was written from; the owner keeps it). No reading is left: the
+footnotes under a unit's weapons, its "When targeted" lines and the lines under its profile are `BOXES`, made by script from GW's
+words, and every other line a unit or stratagem screen writes is GW's words quoted or a fixed template over derived fields (The
+screens' lines, below). `verify/columns.json` says, for every column, where its values come from;
 the gate fails on a column that is not there.
 
 ## The tables
@@ -103,8 +104,36 @@ meets, its own abilities, other units' abilities whose boxes reach it (an aura, 
 (`verify/defence.js`, D1–D8 and DL) holds them to the words as G1–G8 hold the Damage tab; its DC (and `verify/lines.js` LC for the
 attack side) holds the words to them: every condition GW's words put on a box (`verify/coverage.js`: its option, once per battle / turn,
 each "if / while / unless" clause, each "within N"", the kind of attack) is said, quoted, or its sentence is listed not counted. The columns `def` (and `defOf`, `defPh`),
-`guard`, a stratagem's `shield` and `defPick`, `parts[].def` are gone. What follows is about the rows' own reading columns that remain
-(`parts`, `statNote`).
+`guard`, a stratagem's `shield` and `defPick`, `parts[].def` are gone.
+
+**The lines under a unit's profile are boxes.** A characteristic of its models a rule of the list changes ("Not Battle-shocked: OC 7
+(Enraged Behemoths)") is the rule's stat boxes in `BOXES` (`st`: each a sentence of GW's words, the stat effects `effects.js` ST finds in it,
+its conditions, COND and STCOND, the friendly units it names), made by `verify/effects-extract.js` (`statOf`), said in app.html (`statLines`):
+"{conditions}: {the characteristic with the effect, or the effect}" (a one-model unit's Starting Strength in its wounds; GW's quoted words
+alone: "If (see the rule)"; not one the list printed into the value, its `from` mark). The gate step `lines` (LS) holds them to the words and
+the words to them. A rule's `statNote` and `parts` are gone.
+
+## The screens' lines
+
+No line the app writes on a unit or stratagem screen stands on a judgement (the owner's rule). Each is GW's words quoted, or a fixed template
+filled from fields a script derives from GW's words or checks mechanically; the one AI layer is `gist`. The gate step `tables` fails when a
+column those screens read (every property the code of app.html's `screenUnit`, `stratItem` and `showStrat` reads, with every function they
+call) is `hand` or AI, but `gist` and a column `verify/columns.json` declares with its reason (an id; the short name a list gives a unit; a
+fact no list has today; a rule's `needs` its words do not give, Kindred Sorcery's, with its why and evidence).
+
+| Line | From | Held by |
+|---|---|---|
+| a note under an ability, rule or stratagem | GW's words, each quoted under a fixed source label ("Wahapedia FAQ: “…” “…”", "FAQ (Faction Pack 1.3): …") | `verify/texts.js` noteForm (the form, NOTE_LABELS), noteQuote (each quote in its label's documents) |
+| "Once per battle", "Or: +1CP" | a stratagem's RESTRICTIONS, its EFFECT, by closed patterns (`limitOf`, `cpNoteOf`) | `verify/lines.js` L0 |
+| "Not leading a unit in this list", "Needs … : not this loadout", "No WAR DOG in this list" (`na`) | three closed patterns over the ability's words, the unit and the list (`verify/derive.js` naOf), written by the importer | L0 |
+| the keywords note (`kwNote`) | fixed templates over GW's pages (the parts' keywords), GRANTS and the list's reasons, GW's words quoted (`verify/gw-order.js` kwNoteOf) | `tables` (`--write` writes it) |
+| where the sources disagree (`srcNote`) | one template: a model Wahapedia prints on a datasheet of its own (`srcNoteOf`) | `tables` |
+| keywords or rules only some models have (`kwOnly`, `partialRules`) | GW's pages (a part's KEYWORDS line or CORE ABILITIES, "MODEL: KW", "(Model only)", a model's own page, an ability that gives it) | `verify/keywords.js` KO, PR |
+| a reference sheet's quote (`ref`) | GW's words of the rule it names | `verify/texts.js` refQuote |
+| "Already in A" | the `from` marks (`alreadyIn`, `alreadyInRule`) | code |
+| an alias, an ally's rule, a core twin, a table's place | mechanical checks (`verify/texts.js` alias, allies, coreTwin, tableAt); a player's word for a rule stays a reviewed alias, no line | texts |
+
+A rules text holds no app note ("*App note, not rules text: …*"): `verify/texts.js` appNote fails on one.
 
 A reading is the app's interpretation of a rule's text into numbers and lines: a footnote under a unit's weapons (`mods`:
 Blitz Dem Gitz! → Blitzkannon +6 A vs non-MONSTER/VEHICLE in your Shooting phase), what a unit gives other units (`aura`), the
@@ -188,33 +217,33 @@ Sources: **newrecruit** (the owner's New Recruit PDFs), **bsdata** (BSData wh40k
 |---|---|---|
 | `RULES` | core rules and weapon abilities: name → text (glossary) | **gw**: `name`, `text` |
 | `RULE_SRC` | where a RULES entry comes from when it is not a core rule | **hand**: `name`, `source` |
-| `RULE_ALIASES` | which RULES entry a keyword or rule chip opens: [pattern, rule] | **hand**: `pattern`, `rule` |
+| `RULE_ALIASES` | which RULES entry a keyword or rule chip opens: [pattern, rule] | **derived**: `rule` · **hand**: `pattern` |
 | `CONCEPTS` | core terms kept out of a unit's rule list | **gw**: `term` |
-| `CORE_STRATAGEMS` | the core stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `limit`, `readOf` · **hand**: `id`, `note`, `cpNote` · **ai**: `gist` |
-| `FACTIONS` | one row per faction: its army rules, detachments and aliases | **gw**: `name`, `armyRules`, `detachments` · **hand**: `aliases`, `allies` |
-| `FACTIONS.armyRules` | a faction's army rules | **newrecruit**: `tag` · **gw**: `name`, `text`, `table` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `readOf` · **hand**: `coreTwin`, `note`, `parts`, `statNote`, `tableAt`, `missing` |
+| `CORE_STRATAGEMS` | the core stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions`, `note` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `limit`, `cpNote`, `readOf` · **hand**: `id` · **ai**: `gist` |
+| `FACTIONS` | one row per faction: its army rules, detachments and aliases | **gw**: `name`, `armyRules`, `detachments`, `allies` · **hand**: `aliases` |
+| `FACTIONS.armyRules` | a faction's army rules | **newrecruit**: `tag` · **gw**: `name`, `text`, `table`, `note` · **wahapedia**: `tableAt` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `coreTwin`, `readOf` · **hand**: `missing` |
 | `FACTIONS.detachments` | a faction's detachments | **bsdata**: `dispositions`, `nr` · **gw**: `name`, `dp`, `rule`, `moreRules`, `enhancements`, `stratagems` · **derived**: `aiStatus` |
-| `FACTIONS.detachments.rule` | a detachment's rule | **newrecruit**: `tag` · **gw**: `name`, `text`, `table` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `readOf` · **hand**: `coreTwin`, `note`, `parts`, `statNote`, `tableAt`, `missing` |
-| `FACTIONS.detachments.moreRules` | a detachment's further rule (moreRules), with the columns of its first | **newrecruit**: `tag` · **gw**: `name`, `text`, `table` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `readOf` · **hand**: `coreTwin`, `note`, `parts`, `statNote`, `tableAt`, `missing` |
-| `FACTIONS.detachments.stratagems` | a detachment's stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `limit`, `readOf` · **hand**: `id`, `note`, `cpNote` · **ai**: `gist` |
+| `FACTIONS.detachments.rule` | a detachment's rule | **newrecruit**: `tag` · **gw**: `name`, `text`, `table`, `note` · **wahapedia**: `tableAt` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `coreTwin`, `readOf` · **hand**: `missing` |
+| `FACTIONS.detachments.moreRules` | a detachment's further rule (moreRules), with the columns of its first | **newrecruit**: `tag` · **gw**: `name`, `text`, `table`, `note` · **wahapedia**: `tableAt` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `coreTwin`, `readOf` · **hand**: `missing` |
+| `FACTIONS.detachments.stratagems` | a detachment's stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions`, `note` · **derived**: `id`, `gistOf`, `phases`, `turn`, `turns`, `needs`, `limit`, `cpNote`, `readOf` · **ai**: `gist` |
 | `FACTIONS.detachments.enhancements` | a detachment's enhancements | **newrecruit**: `pts`, `nr` · **bsdata**: `upgrade` · **gw**: `name`, `text` · **wahapedia**: `limit` |
-| `ARMIES` | one row per list | **newrecruit**: `name`, `faction`, `points`, `pointsUsed`, `battleSize`, `disposition`, `detachments`, `source`, `config` · **hand**: `id`, `units` |
-| `ARMIES.units` | a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS | **newrecruit**: `pts`, `ptsNote`, `copies`, `models`, `gear`, `unplaced`, `enhancement`, `warlord`, `enhOn`, `warlordOn`, `upgrade`, `leads`, `support`, `also`, `role`, `name`, `rules`, `kw`, `stats`, `ranged`, `melee`, `abilities` · **derived**: `ds`, `why` · **hand**: `id`, `short`, `kwNote`, `kwOnly`, `partialRules`, `srcNote`, `over`, `note` |
+| `ARMIES` | one row per list | **newrecruit**: `name`, `faction`, `points`, `pointsUsed`, `battleSize`, `disposition`, `detachments`, `source`, `config`, `units` · **hand**: `id` |
+| `ARMIES.units` | a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS | **newrecruit**: `pts`, `ptsNote`, `copies`, `models`, `gear`, `unplaced`, `enhancement`, `warlord`, `enhOn`, `warlordOn`, `upgrade`, `leads`, `support`, `also`, `role`, `name`, `rules`, `kw`, `stats`, `ranged`, `melee`, `abilities` · **gw**: `ref`, `note` · **wahapedia**: `kwOnly`, `partialRules` · **derived**: `id`, `ds`, `kwNote`, `srcNote`, `why` · **hand**: `short`, `over` |
 | `ARMIES.units.stats` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `printed` · **bsdata**: `from`, `M`, `T`, `Sv`, `W`, `Ld`, `OC`, `InSv`, `base` · **gw**: `own` · **derived**: `of`, `why` · **hand**: `over` |
-| `ARMIES.units.ranged` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `who`, `n`, `enh` · **bsdata**: `from`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw` · **derived**: `of`, `why` · **hand**: `over` |
-| `ARMIES.units.melee` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `who`, `n`, `enh` · **bsdata**: `from`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw` · **derived**: `of`, `why` · **hand**: `over` |
-| `ARMIES.units.abilities` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `who`, `tag` · **wahapedia**: `text` · **derived**: `of`, `ph`, `turn`, `turns`, `at`, `why`, `readOf`, `damaged` · **hand**: `over`, `note`, `na` |
-| `DATASHEETS` | one row per datasheet (faction + datasheet name): its facts, shared by every list that has it, and every row of a faction catalogue (docs/catalog.md) | **newrecruit**: `name`, `role`, `rules`, `kw`, `stats`, `ranged`, `melee` · **bsdata**: `bsId`, `leaders`, `composition`, `options` · **gw**: `points` · **wahapedia**: `abilities` · **derived**: `faction`, `aiStatus` · **hand**: `kwOnly`, `partialRules`, `srcNote` |
+| `ARMIES.units.ranged` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `who`, `n`, `enh` · **bsdata**: `from`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw` · **derived**: `of`, `why`, `group` · **hand**: `over` |
+| `ARMIES.units.melee` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `who`, `n`, `enh` · **bsdata**: `from`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw` · **derived**: `of`, `why`, `group` · **hand**: `over` |
+| `ARMIES.units.abilities` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `who`, `tag` · **gw**: `note` · **wahapedia**: `text` · **derived**: `of`, `ph`, `turn`, `turns`, `at`, `na`, `damaged`, `why`, `readOf` · **hand**: `over` |
+| `DATASHEETS` | one row per datasheet (faction + datasheet name): its facts, shared by every list that has it, and every row of a faction catalogue (docs/catalog.md) | **newrecruit**: `name`, `role`, `rules`, `kw`, `stats`, `ranged`, `melee` · **bsdata**: `bsId`, `leaders`, `composition`, `options` · **gw**: `points` · **wahapedia**: `kwOnly`, `partialRules`, `abilities` · **derived**: `faction`, `srcNote`, `aiStatus` |
 | `DATASHEETS.stats` | a datasheet's model profiles | **newrecruit**: `name`, `M`, `T`, `Sv`, `W`, `Ld`, `OC`, `InSv`, `base` · **gw**: `baseWith` |
-| `DATASHEETS.ranged` | a datasheet's ranged weapon profiles | **newrecruit**: `name`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw`, `hunter` · **bsdata**: `group`, `fireAll` |
-| `DATASHEETS.melee` | a datasheet's melee weapon profiles | **newrecruit**: `name`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw`, `hunter` · **bsdata**: `group`, `fireAll` |
-| `DATASHEETS.abilities` | a datasheet's abilities | **newrecruit**: `name`, `who`, `tag` · **wahapedia**: `text` · **derived**: `ph`, `turn`, `turns`, `at`, `readOf`, `damaged` · **hand**: `note`, `na` |
+| `DATASHEETS.ranged` | a datasheet's ranged weapon profiles | **newrecruit**: `name`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw`, `hunter` · **bsdata**: `group`, `fireAll` · **gw**: `carrier` |
+| `DATASHEETS.melee` | a datasheet's melee weapon profiles | **newrecruit**: `name`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw`, `hunter` · **bsdata**: `group`, `fireAll` · **gw**: `carrier` |
+| `DATASHEETS.abilities` | a datasheet's abilities | **newrecruit**: `name`, `who`, `tag` · **gw**: `note` · **wahapedia**: `text` · **derived**: `ph`, `turn`, `turns`, `at`, `na`, `damaged`, `readOf` |
 | `RULE_OPTIONS` | the options inside a rule or ability, each with the phases its words give | **derived**: `rule`, `option`, `text`, `found`, `explicit`, `trigger`, `used`, `phases` |
 | `GRANTS` | a rule or option giving units an ability or keyword | **derived**: `rule`, `option`, `grants`, `type`, `to`, `while`, `text` |
 | `BS_IDS` | the BSData ids the list import resolves an export by (verify/import-ids.js --write) | **bsdata**: `factions`, `roots`, `battleSizes`, `limits`, `dispositions`, `detachments`, `config`, `configKids`, `info`, `infoKids`, `units`, `names`, `maxPerList` |
-| `BOXES` | the Damage tab's boxes of a rule, ability or stratagem, and the datasheet's footnotes (verify/effects-migrate.js --write) | **derived**: `n`, `b`, `nc`, `reach`, `both`, `embarked`, `played`, `riled`, `d`, `dnc`, `dreach` |
+| `BOXES` | the Damage tab's boxes of a rule, ability or stratagem, and the datasheet's footnotes (verify/effects-migrate.js --write) | **derived**: `n`, `b`, `nc`, `reach`, `both`, `embarked`, `played`, `riled`, `d`, `dnc`, `dreach`, `st` |
 | `BOXES.b` | one box: what GW's sentence does, as effects.js reads it | **gw**: `quote`, `lead` · **derived**: `fx`, `on`, `kind`, `scope`, `reach`, `mark`, `notSelf`, `lasts`, `opt`, `pick`, `part`, `limit`, `tableRows`, `pool`, `excl` |
-| `BOXES.d` | one defence box: what GW's sentence does for a unit when it is attacked, as effects.js DF reads it (a "When targeted" line) | **gw**: `quote`, `lead` · **derived**: `df`, `on`, `kind`, `scope`, `reach`, `mark`, `notSelf`, `foe`, `opt`, `pick`, `term` · **gw**: `until` |
+| `BOXES.d` | one defence box: what GW's sentence does for a unit when it is attacked, as effects.js DF reads it (a "When targeted" line) | **gw**: `quote`, `lead`, `until` · **derived**: `df`, `on`, `kind`, `scope`, `reach`, `mark`, `notSelf`, `foe`, `opt`, `pick`, `term` |
 
 ## Faction catalogues
 
@@ -226,7 +255,7 @@ no list has is the catalogue's, `aiStatus:'not-read'` (no readings or AI-written
 
 ## AI-written columns
 
-(The readings are fingerprinted the same way: see Readings.) `gist` (stratagems) is AI-written (`def`, the "When targeted" line, is
+`gist` (stratagems) is AI-written, the one AI layer the owner keeps (`def`, the "When targeted" line, is
 retired: BOXES d). Next to it is its fingerprint, `gistOf`: the first 8 hex of the sha256 of the exact text it
 was written from (a stratagem's `WHEN: … TARGET: … EFFECT: … RESTRICTIONS: …`, a rule's text and table, an ability's
 text). The gate step `fingerprints` fails when that text no longer matches: the summary is stale. Rewrite it from the
@@ -256,7 +285,7 @@ As before (`README.md`, `verify/ADDING-AN-ARMY.md`): `node verify/add-army.js <l
 `node verify/import-nr.js <txt> <id> --write`. The import writes the list in full and runs `verify/tables.js --write`:
 datasheets another list has are shared, new ones are added. Write the hand-written parts on the datasheet in
 `DATASHEETS` (phase tags, `tag` of an ability: they are the datasheet's), the readings on the row they read (or on the
-unit in the old form: `--write` moves them), the list's own on its entry (`na`, notes), or in the old form (`--expand`, edit,
+unit in the old form: `--write` moves them), the list's own on its entry (notes: GW's words under a source label; `na`, `kwNote`, `srcNote` are derived), or in the old form (`--expand`, edit,
 `--write`). Then `--stamp` for the new fingerprints (after checking each against its text), and the gate (`node verify/run.js`).
 
 From a New Recruit JSON export: `node verify/from-json.js <export.json> <id> --write` (`verify/ADDING-AN-ARMY.md`, 1b) writes
