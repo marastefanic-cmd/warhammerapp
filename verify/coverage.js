@@ -228,7 +228,7 @@ function gaps(b, src, side, others, ctx){
     const isOpt = !!(opt || b.pick || b.tableRows || S.ids.has('opt'));
     const ruleDur = () => { if(src.type === 'strat') return ''; for(const l of String(src.text || '').split('\n')){ if(/^\*[^*]/.test(l.trim())) continue;
       for(const x of l.split(/(?<=[.!?])\s+/)){ const w = n(x); if(/\b(?:abilit(?:y|ies)|active|appl(?:y|ies)|the following|below)\b/.test(w) && durOf(w)) return durOf(w); } } return ''; };
-    const want = durOf(n([lead, b.quote].join(' '))) || (isOpt ? ruleDur() : '');
+    const own = n([lead, b.quote].join(' ')), want = durOf(own) || (isOpt && !/\buntil the end of the phase\b/.test(own) ? ruleDur() : '');
     if(want && side === 'defence' && !b.until) out.push('GW states a duration (' + want + ') and the box has no until');
     if(want && side === 'attack' && b.lasts !== want) out.push('GW states a duration (' + want + ') and the box lasts ' + JSON.stringify(b.lasts || 'the phase')); }
   // a stratagem's WHEN beyond its standard trigger, its TARGET's where (the defence side: a quoted condition, or one that reads it)
