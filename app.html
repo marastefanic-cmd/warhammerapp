@@ -4950,10 +4950,10 @@ function statLines(u){
   // the rule", never silent; not one the list printed into the value, its from mark)
   const said = new Set();
   // (each where its words reach: the friendly units it names (its reach; else, for a rule, the units that have it: its needs, as a stat box),
-  // a keyword of the unit it needs (on selfKw))
+  // a keyword of the unit it needs (on selfKw), "while this model is leading a unit" only on a unit that leads one (on leading))
   const snc = (key, name, link, v, needs) => { for(const x of ((D.boxes || {})[key] || {}).snc || []){
     if(x.reach ? !matches(x.reach, u) : needs !== undefined && !(needs && matches(needs, u))) continue;
-    if((x.on || []).some(([id, p]) => id === 'selfKw' && !hasKw(u, p))) continue;
+    if((x.on || []).some(([id, p]) => (id === 'selfKw' && !hasKw(u, p)) || (id === 'leading' && !u.leads))) continue;
     if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => [].concat((s.from || {})[x.stat] || []).join(', ').split(/\s*,\s*/).includes(name)))) continue;
     said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); out.push({ rule:name, a:link, v, text:(x.foe ? 'Enemy units’ ' : '') + x.stat + ': ' + FN_NC }); } };
   for(const ab of u.abilities || []) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab));

@@ -36,7 +36,8 @@
          the words to them: every sentence of an army or detachment rule that adds to or subtracts from a characteristic of models is a stat
          box, every "if / while / unless / (excluding …)" in it one of its conditions; then, under the profile, each BOXES snc (a
          characteristic no stat box counts) of its abilities, another unit's aura reaching it, its rules and its stratagems, "not counted"
-     LF  fixed cases: the wound-roll ignore-modifiers readings, the enemy-unit mark of a characteristic not counted
+     LF  fixed cases: the wound-roll ignore-modifiers readings, the enemy-unit mark of a characteristic not counted, and whom one is for
+         (its reach, an opening keyword, leading)
      LW  never silent: every sentence of a source the lists use with words of the numbers (hit, wound, AP, damage, save, Feel No Pain, OC,
          Move, a weapon ability) is a counted box or listed not counted in BOXES (verify/coverage.js silent)
 
@@ -261,6 +262,16 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
     ['While a friendly **THOUSAND SONS** unit is within 6" of this **PSYKER**, add 2" to the Move characteristic of models in that unit.', false], ['Add 2 to the bearer’s Wounds characteristic.', false]];
   for(const [t, foe] of FOE_FIX){ const x = X.statNc({ type:'ability', text:t }, [], [], [], null)[0];
     if(!x || !!x.foe !== foe) fail('LF', 'effects-extract.js statNc', '“' + t.slice(0, 70) + '” ' + (x ? (x.foe ? 'said' : 'not said') + ' as an enemy unit’s' : 'not read') + ', GW: ' + (foe ? 'an enemy unit’s' : 'its own or a friendly unit’s')); else n++; }
+  // (and whom a not-counted characteristic is for, as GW's words say: the friendly units it names, an opening keyword condition, leading;
+  // never a keyword of a clause inside the sentence)
+  const Vf = require('./derive').vocab(D), J = x => JSON.stringify(x === undefined ? null : x);
+  const WHO_FIX = [['While a friendly **WAR DOG** model is within 9" of this model, improve that **WAR DOG** model’s Leadership and Objective Control characteristics by 1.', { all:['War Dog'] }, null],
+    ['Friendly **LEGIONES DAEMONICA CHARACTER** models (excluding **MONSTER** models) have +1 **Ld** and **OC**.', { all:['Faction: Legiones Daemonica', 'Character'], none:['Monster'] }, null],
+    ['**Daemon Prince of Slaanesh:** If this model has the **SLAANESH** keyword, add 2" to this model’s Move characteristic.', null, [['selfKw', 'Slaanesh']]],
+    ['Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an **ARMIGER** or **DESTRIER** unit.', null, null],
+    ['While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.', null, [['leading', true]]]];
+  for(const [t, reach, on] of WHO_FIX){ const xs = X.statNc({ type:'ability', text:t }, [], [], [], Vf);
+    if(!xs.length || xs.some(x => J(x.reach) !== J(reach) || J(x.on) !== J(on))) fail('LF', 'effects-extract.js statNc', '“' + t.replace(/\*\*/g, '').slice(0, 70) + '” is for ' + (xs.length ? J(xs[0].reach) + ' ' + J(xs[0].on) : 'nothing') + ', GW: ' + J(reach) + ' ' + J(on)); else n++; }
   stats.fixed = n; }
 // LW never silent: every sentence of a source a list uses (its units' abilities and core weapon rules, its faction's army rules, its
 // detachments' rules and stratagems, the core stratagems) with words of the numbers (hit, wound, AP, damage, save, Feel No Pain, OC, Move,
@@ -300,7 +311,7 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
       // (where its words reach: its reach, else a rule's needs; a keyword of the unit it needs, on selfKw)
       const said = new Set(), snc = (key, name, needs) => { for(const x of ((D.boxes || {})[key] || {}).snc || []){
         if(x.reach ? !meetsN(x.reach, u) : needs !== undefined && !(needs && meetsN(needs, u))) continue;
-        if((x.on || []).some(([id, p]) => id === 'selfKw' && !hasK(u, p))) continue;
+        if((x.on || []).some(([id, p]) => (id === 'selfKw' && !hasK(u, p)) || (id === 'leading' && !u.leads))) continue;
         if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => String([].concat((s.from || {})[x.stat] || []).join(', ')).split(/\s*,\s*/).includes(name)))) continue;
         said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); want.push(name + ' | ' + (x.foe ? 'Enemy units’ ' : '') + x.stat + ': not counted here: see the rule'); } };
       for(const ab of u.abilities || []) snc(M.KEY.ability(ab), ab.name);

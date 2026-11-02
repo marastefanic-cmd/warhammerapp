@@ -559,7 +559,9 @@ function statNc(src, st, d, b, V){
     // model's Leadership", Dread Dominion), and a keyword of the unit its words need (on: selfKw, "If this model has the SLAANESH keyword"))
     const reach = foe || !V ? null : reachOf(V, u.s) || (u.prevS ? reachOf(V, u.prevS) : null);
     // (only where the keyword governs the whole sentence, it opens it: not Full Tilt's ", or 9" instead if your unit is an ARMIGER or DESTRIER unit")
-    const on = V && /^if this (?:model|unit) has the\b/.test(n.replace(/^[^:"]{1,40}:\s+/, '')) ? condsOf(V, u.s, '', { stat:true, inherit:true }).filter(([id]) => id === 'selfKw') : [];
+    // (and "While this model is leading a unit": leading, a fact of the list, the unit leads one)
+    const on = (V && /^if this (?:model|unit) has the\b/.test(n.replace(/^[^:"]{1,40}:\s+/, '')) ? condsOf(V, u.s, '', { stat:true, inherit:true }).filter(([id]) => id === 'selfKw') : [])
+      .concat(COND.leading.pats.some(re => re.test(n)) ? [['leading', true]] : []);
     for(const k of left) if(!out.some(x => x.quote === u.s && x.stat === k)) out.push(Object.assign({ quote:u.s, stat:k, why:'it changes ' + (foe ? 'an enemy unit\'s ' : '') + k + ', which the lines under a profile count only from army and detachment rules' },
       foe ? { foe:true } : {}, reach && Object.keys(reach).length ? { reach } : {}, on.length ? { on } : {})); }
   return out;
