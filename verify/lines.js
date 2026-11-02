@@ -8,6 +8,8 @@
          limit    a stratagem's "Once per battle" chip is exactly where its RESTRICTIONS say it can be used once per battle ("cannot use
                   this Stratagem more than once per battle", "can only use this Stratagem once per battle"; not "per battle round", not
                   "on the same … model")
+         cpNote   a stratagem's extra-CP chip ("Or: +1CP", "Into the Fray +1CP") is exactly the parts of its EFFECT GW prints with an extra
+                  cost: a line "**+1CP** Or: …", an option "**Into the Fray (+1CP):** …"; an EFFECT that names "+NCP" any other way fails
      the footnotes under a unit's weapons (its weapon rows' "(+N)" values, its Damaged band, riled-up and own-aura lines among them) are
      its boxes, data.js BOXES (made by script from GW's words, held to them by verify/evidence.js G1-G9), each said with the labels of
      its effects and conditions (effects.js), as G1-G8 hold the Damage tab's boxes:
@@ -67,6 +69,19 @@ const damagedOf = ab => { const m = DAMAGED_NAME.exec(ab.name || '') || DAMAGED_
     if(want) n++;
   }
   stats.limits = n; }
+
+// ---- L0 cpNote ----
+{ let n = 0;
+  const all = D.coreStratagems.map(s => ['Core · ' + s.name, s]).concat(Object.values(D.factions).flatMap(f => Object.values(f.detachments || {}).flatMap(d => (d.stratagems || []).map(s => [f.name + ' · ' + d.name + ' · ' + s.name, s]))));
+  for(const [where, s] of all){
+    const want = X.cpNoteOf(s.effect);
+    if(s.cpNote !== want) fail('L0', where, 'cpNote ' + JSON.stringify(s.cpNote) + ', its EFFECT gives ' + JSON.stringify(want || null));
+    // (an extra cost the two patterns do not read: never left without its chip)
+    const more = (String(s.effect || '').match(/\+\s?\d\s?CP\b/gi) || []).length, read = want ? want.split(' · ').length : 0;
+    if(more !== read) fail('L0', where, 'its EFFECT names ' + more + ' extra CP cost(s), the cpNote patterns read ' + read);
+    if(want) n++;
+  }
+  stats.cpNotes = n; }
 
 // ---- L1-L8: the footnotes under a unit's weapons are its boxes (data.js BOXES), said with the catalogue's labels ----
 // L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …) is left in data.js
@@ -274,6 +289,6 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/lines.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges and ' + stats.limits + ' once-per-battle chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
+console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips and ' + stats.cpNotes + ' extra-CP chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);

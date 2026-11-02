@@ -113,8 +113,8 @@
      "note": "\"Once per battle\": its RESTRICTIONS say it can be used once per battle (verify/lines.js L0)"
     },
     "cpNote": {
-     "source": "hand",
-     "note": "the extra CP part, from the words; signed off"
+     "source": "derived",
+     "note": "its extra-CP chip (“Or: +1CP”, “Into the Fray +1CP”): the parts of its EFFECT GW prints with an extra cost, by two closed patterns (verify/effects-extract.js cpNoteOf); verify/lines.js L0: stored = derived, and no other “+NCP” in the EFFECT"
     },
     "readOf": {
      "source": "derived",
@@ -435,8 +435,8 @@
      "note": "\"Once per battle\": its RESTRICTIONS say it can be used once per battle (verify/lines.js L0)"
     },
     "cpNote": {
-     "source": "hand",
-     "note": "the extra CP part, from the words; signed off"
+     "source": "derived",
+     "note": "its extra-CP chip (“Or: +1CP”, “Into the Fray +1CP”): the parts of its EFFECT GW prints with an extra cost, by two closed patterns (verify/effects-extract.js cpNoteOf); verify/lines.js L0: stored = derived, and no other “+NCP” in the EFFECT"
     },
     "readOf": {
      "source": "derived",

@@ -26,6 +26,13 @@ const plainCase = t => String(t == null ? '' : t).replace(/\*\*|~~|__/g, '').rep
 // it; verify/catalog-write.js writes it on a catalogue detachment's stratagems)
 const ONCE_PER_BATTLE = /\b(?:cannot use this stratagem more than once per battle|can only use this stratagem once per battle)\b(?! round)/i;
 const limitOf = restrictions => ONCE_PER_BATTLE.test(plainCase(restrictions || '')) ? 'Once per battle' : undefined;
+// a stratagem's extra-CP chip (cpNote): exactly the parts of its EFFECT GW prints with an extra cost, by two closed patterns: a line "**+1CP** Or: …"
+// ("Or: +1CP", Hulking Brutes) and an option "**Into the Fray (+1CP):** …" ("Into the Fray +1CP", Heroic Intervention); none else (verify/lines.js
+// L0 checks it; verify/catalog-write.js writes it on a catalogue detachment's stratagems)
+const CP_OR = /^(?:-\s+)?\*\*\+(\d)CP\*\* Or:/, CP_OPT = /^(?:-\s+)?\*\*([^*()]+?) \(\+(\d)CP\):\*\*/;
+const cpNoteOf = effect => { const out = [];
+  for(const l of String(effect || '').split('\n')){ let m; if((m = CP_OR.exec(l.trim()))) out.push('Or: +' + m[1] + 'CP'); else if((m = CP_OPT.exec(l.trim()))) out.push(m[1].trim() + ' +' + m[2] + 'CP'); }
+  return out.length ? out.join(' · ') : undefined; };
 // attacks against the unit, or an enemy's: not this unit's attacks (the defence side is not in the Damage tab)
 const DEFENCE = [/\beach time an? (?:enemy )?(?:ranged |melee |psychic )?attack (?:is made against|targets) (?:this|that|your|the bearer)\b/,
   /\b(?:ranged |melee |psychic )?attacks (?:that )?targets? (?:this|your|that) (?:unit|model)\b/, /\ban? (?:enemy )?model makes an attack that targets (?:this|your|that) unit\b/,
@@ -718,4 +725,4 @@ function shape(list, src){
   return final;
 }
 
-module.exports = { extract, statOf, sentencesOf, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };
+module.exports = { extract, statOf, sentencesOf, cpNoteOf, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };

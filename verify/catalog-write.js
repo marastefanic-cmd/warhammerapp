@@ -80,7 +80,8 @@ module.exports = function write(ROOT, faction, r, SRC) {
         const o = {};
         for (const [k, v] of Object.entries(s0)) {
           o[k] = v;
-          if (k === 'cp') { if (tm && tm.derived) { o.phases = tm.derived.ph; o.turn = tm.derived.turn; if (tm.derived.turns) o.turns = tm.derived.turns; }
+          if (k === 'cp') { { const cpn = require('./effects-extract').cpNoteOf(s0.effect); if (cpn) o.cpNote = cpn; }   // (its extra-CP chip, the rule verify/lines.js L0 checks)
+            if (tm && tm.derived) { o.phases = tm.derived.ph; o.turn = tm.derived.turn; if (tm.derived.turns) o.turns = tm.derived.turns; }
             // (its "Once per battle" chip where its RESTRICTIONS say so, the rule verify/lines.js L0 checks)
             const lim = require('./effects-extract').limitOf(s0.restrictions); if (lim) o.limit = lim;
             if (nd && nd.derived) o.needs = nd.derived; }
