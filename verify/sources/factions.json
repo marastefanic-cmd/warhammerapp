@@ -2,6 +2,7 @@
   "_about": "Every faction a list in data.js may use, and where its rules are checked: the Wahapedia faction page (wahapedia.ru/wh40k11ed/factions/<waha>/), the BSData catalogue (by name), and GW's Faction Pack PDF when there is one (assets.warhammer-community.com/<file>); allies: the Wahapedia faction of each allied faction New Recruit names in a list's roster (“Allies: Legiones Daemonica”), whose datasheet pages an allied unit's wording comes from. catalogFactions: the Faction keywords that make a BSData datasheet the faction's in its catalogue import (verify/from-bsdata.js, verify/bs-catalog.js; any other is an ally). fetch.sh, texts.js, bsdata.js and run.js read this file; verify/add-army.js adds to it.",
   "orks": { "waha": "orks", "bsdata": "Xenos - Orks", "pack": null },
   "world-eaters": { "waha": "world-eaters", "bsdata": "Chaos - World Eaters",
+    "leftOutRules": { "Pact of Blood": "Wahapedia's World Eaters army rules list Pact of Blood, a mustering restriction on BLOOD LEGIONS units; it does nothing in play, so data.js leaves it out (its FACTIONS comment) and no unit's Rules line names it" },
     "pack": { "file": "eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.pdf", "label": "GW Faction Pack World Eaters" } },
   "thousand-sons": { "waha": "thousand-sons", "bsdata": "Chaos - Thousand Sons",
     "pack": { "file": "eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.pdf", "label": "GW Faction Pack Thousand Sons" } },

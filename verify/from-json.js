@@ -83,6 +83,9 @@ const want = (where, what, why) => todo.push({ where, what, why });
 const HANDF = path.join(ROOT, 'verify/sources/hand', armyId + '.json');
 const HAND = fs.existsSync(HANDF) ? JSON.parse(fs.readFileSync(HANDF, 'utf8')) : {};
 const handDone = [];
+// a list with New Recruit's PDF too (verify/sources/nr/<army>.txt, which verify/nr.js checks the list against): its stat rows named as
+// the PDF names them
+const PDF_FIRST = fs.existsSync(path.join(ROOT, 'verify/sources/nr', armyId + '.txt'));
 // bookkeeping on a row that data.js does not get (not enumerable: the writer never sees it)
 const hide = (o, extra) => { for (const [k, v] of Object.entries(extra)) Object.defineProperty(o, k, { value: v, enumerable: false, writable: true }); return o; };
 
@@ -159,7 +162,10 @@ const refBase = n => REF_NAMES.has(nm(n)) ? nm(n).replace(/\s*\([^()]*\)$/, '') 
 const ALLIES = (FJ[factionId] || {}).allies || {};
 const allyOf = s => { const c = (s.categories || []).find(x => x.primary && /^Allies: /.test(nm(x.name))); return c ? nm(c.name).replace(/^Allies: /, '') : null; };
 const allyByName = new Map();   // a top-level selection's name -> its ally faction's name
-for (const s of FORCE.selections || []) { const a = allyOf(s); if (a) allyByName.set(nm(s.name), a); }
+// (an "Allies: X" unit whose datasheet is on the list's own faction's pages, which sources/factions.json does not name as an ally, is
+// the faction's own: the Ultramarines' Deathwatch Terminator Squad, "Allies: Deathwatch" in New Recruit, is Codex: Space Marines'
+// (Wahapedia space-marines/Deathwatch-Terminator-Squad), with its army rules, as the faction's note says)
+for (const s of FORCE.selections || []) { const a = allyOf(s); if (a && (ALLIES[a] || !WW.wahaPage(nm(s.name), factionId))) allyByName.set(nm(s.name), a); }
 const pageFac = name => { const a = allyByName.get(nm(name)); return a ? ALLIES[a] || null : factionId; };
 for (const a of new Set(allyByName.values())) if (!ALLIES[a]) want('faction', 'allied faction ' + a, 'name its Wahapedia faction in verify/sources/factions.json (' + factionId + '.allies), then run again');
 const wahaTxtFile = path.join(ROOT, 'verify/.cache/waha', factionId + '.txt');
@@ -340,10 +346,6 @@ const detIds = detNames.map(n => {
   // its rules: the first is `rule`, any further ones `moreRules` (Blood Legion's Blood Tainted after Murdercall)
   const ruleOf = (WR, i) => {
     const r = { name: typo(WR.name) };
-    // a Damage-tab reading written by hand (verify/sources/hand/<army>.json rules: the detachment's id for its first rule, "<id>/<rule
-    // name>" for a further one)
-    const hr = (HAND.rules || {})[i ? id + '/' + r.name : id];
-    if (hr && hr.calcMods) { r.calcMods = hr.calcMods; handDone.push({ what: 'calcMods of ' + WR.name + ' (' + n + ')', by: hr.by, text: hr.calcMods.map(m => m.from + ': ' + m.note).join('; ') }); }
     r.text = ruleLines(WR.lines).join('\n');
     return r;
   };
@@ -360,11 +362,9 @@ const detIds = detNames.map(n => {
   });
   det.stratagems = W.strats.map(s => {
     const o = { id: slug(s.name) };
-    // the hand file's columns for it (verify/sources/hand/<army>.json gists): its footnote (mod, hand) and When targeted line (def,
-    // AI-written, with the fingerprint of the text it was written from), then its gist
+    // the hand file's columns for it (verify/sources/hand/<army>.json gists): its gist and GW's FAQ on it (note); its footnote (mod) and
+    // When targeted line (def) are retired, BOXES has them
     const h0 = (HAND.gists || {})[id + '/' + o.id] || {};
-    if (h0.mod) { const m = Object.assign({}, h0.mod); delete m.by; o.mod = m; handDone.push({ what: 'footnote of ' + titleCase(s.name) + ' (' + n + ')', by: h0.mod.by, text: m.note }); }
-    if (h0.def) { o.def = h0.def; if (h0.defOf) o.defOf = h0.defOf; handDone.push({ what: 'When targeted line of ' + titleCase(s.name) + ' (' + n + ')', by: h0.by, text: h0.def }); }
     Object.assign(o, { gist: null, name: titleCase(s.name), cp: s.cp });
     for (const f of ['when', 'target', 'effect', 'restrictions']) if (s.fields[f]) o[f] = balanced(s.fields[f]).join('\n');
     // the gist is the app's own words: from verify/sources/hand/<army>.json, written by hand (AI-assisted, marked there)
@@ -523,20 +523,38 @@ function buildGroup(g, k) {
   if (warlordOn) u.warlordOn = warlordOn;
   if (named) { u.leads = partName(g.body); if (g.chars[0].support) u.support = true; if (g.chars.length > 1) u.also = g.chars.slice(1).map(c => Object.assign({ name: partName(c.s) }, c.support ? { support: true } : {})); }
   // models lines and their gear; wargear on the unit itself (no model's) is `unplaced`
-  const models = [], gear = [], unplaced = [];
+  const models = [], gear = [], unplaced = [], assoc = [];
   for (const p of parts) {
     const lines = [];   // this part's models lines: { n, name, wargear, weapons }
     for (const m of modelsOf(p)) {
       const n = m === p ? 1 : Number(m.number) || 1;
       const { weapons, wargear } = gearOf(m, n);
-      lines.push({ n, name: typo(nm(m.name)), wargear, weapons });
+      lines.push({ n, name: typo(nm(m.name)), wargear, weapons, sel: m });
     }
     if (p.type !== 'model') for (const c of kidsOf(p)) if (c.type !== 'model' && !isEnh(c) && nm(c.name) !== 'Warlord' && !kidsOf(c).some(x => x.type === 'model')) {
-      if (isWeaponSel(c)) { for (const w of uniq(weaponProfiles(c).map(p2 => { const w = weaponOf(p2, c); return w.group || w.name; }))) unplaced.push(typo(w)); continue; }
+      if (isWeaponSel(c)) {
+        const ws = uniq(weaponProfiles(c).map(p2 => { const w = weaponOf(p2, c); return w.group || w.name; })).map(typo);
+        // (a weapon upgrade on the unit the export associates with a model selection, one each: that models line's weapons, as for
+        // wargear below; Pubstomper's Hellfyre missile racks on the Scarab Occult Terminators w/ soulreaper cannon)
+        const kw = Number(c.number) || 1, toW = (c.associations || []).filter(a => a.type === 'outgoing').map(a => lines.find(l => l.sel && l.sel.id === a.to)).find(Boolean);
+        if (toW && kw === toW.n) { toW.weapons.push(...ws); for (const w of ws) assoc.push({ gear: w, model: toW.name }); continue; }
+        for (const w of ws) unplaced.push(w); continue;
+      }
       // wargear the datasheet gives one model ("1 model can be equipped with 1 Vexilla", WARGEAR OPTIONS): when exactly one
       // models line of such models has more of them, that one model is a line of its own with it, as New Recruit's PDF prints
       // it ("1× Allarus Custodian (Vexilla)"); else no models line can be said to carry it (unplaced)
-      const k = Number(c.number) || 1, who = oneModelCan(p, nm(c.name));
+      const k = Number(c.number) || 1;
+      // (an upgrade on the unit associated with one of its model selections, the export's "associations": that model's, as New Recruit
+      // carries it: Khârn's Berzerkers' Icon of Khorne on the Khorne Berzerker Champion, Pubstomper's Icon of Flame on the Rubric Marine
+      // w/ soulreaper cannon; of a line of several models, one model of it on a line of its own)
+      const to = (c.associations || []).filter(a => a.type === 'outgoing').map(a => lines.find(l => l.sel && l.sel.id === a.to)).find(Boolean);
+      if (to) {
+        assoc.push({ gear: typo(nm(c.name)), model: to.name });
+        if (to.n > k) { to.n -= k; to.splits = (to.splits || 0) + 1; lines.splice(lines.indexOf(to) + to.splits, 0, { n: k, name: to.name, wargear: to.wargear.concat(typo(nm(c.name))), weapons: to.weapons.slice() }); }
+        else to.wargear.push(typo(nm(c.name)));
+        continue;
+      }
+      const who = oneModelCan(p, nm(c.name));
       const can = who ? lines.filter(l => l.n > k && (who === 'model' || lc(l.name).startsWith(lc(who)))) : [];
       if (can.length === 1) { const l = can[0]; l.n -= k; l.splits = (l.splits || 0) + 1; lines.splice(lines.indexOf(l) + l.splits, 0, { n: k, name: l.name, wargear: l.wargear.concat(typo(nm(c.name))), weapons: l.weapons.slice() }); }
       else unplaced.push(typo(nm(c.name)));
@@ -547,19 +565,21 @@ function buildGroup(g, k) {
   const stats = [];
   for (const p of parts) {
     const rows = [];
-    const add = (prof, n) => {
+    const add = (prof, n, onUnit) => {
       const s = NR.nrStatName(prof.name, []), ch = Object.fromEntries(prof.characteristics.map(c => [c.name, c.$text || '']));
       // (BSData's "Blue/Brimstone Horror (ref. only)": a profile GW's datasheet prints for models a rule adds later (the Pink Horrors'
       // Split), named as New Recruit names it)
       if (s.parens.includes('ref. only')) s.name += ' (ref. only)';
       const row = { name: typo(s.name), M: cellV(ch.M), T: cellV(ch.T), Sv: cellV(ch.Sv), W: cellV(ch.W), Ld: cellV(ch.LD), OC: cellV(ch.OC), InSv: cellV(ch.InSv), base: cellV(ch.Base).replace(/(\d)x(\d)/g, '$1×$2') };
       const same = rows.find(r => JSON.stringify(Object.assign({}, r.row, { name: 0 })) === JSON.stringify(Object.assign({}, row, { name: 0 })) && r.row.name === row.name);
-      if (same) same.n += n; else rows.push({ row, n, pid: prof.id });
+      if (same) { same.n += n; same.sel++; } else rows.push({ row, n, pid: prof.id, sel: 1, onUnit });
     };
     // (a profile on the unit itself is every model's that has none of its own, as verify/bsdata.js counts)
     const own = s => (s.profiles || []).some(x => x.typeName === 'Unit');
-    dfs(p, s => { for (const prof of s.profiles || []) if (prof.typeName === 'Unit') add(prof, s.type === 'unit' ? modelsOf(s).filter(m => !own(m)).reduce((t, m) => t + (Number(m.number) || 1), 0) || 1 : s.type === 'model' && s !== p ? Number(s.number) || 1 : 1); });
-    for (const r of rows) stats.push(hide(Object.assign({}, r.row, { name: r.row.name + (r.n > 1 ? ' ×' + r.n : '') }), { _pid: r.pid, _part: p, _base: r.row.name }));
+    dfs(p, s => { for (const prof of s.profiles || []) if (prof.typeName === 'Unit') add(prof, s.type === 'unit' ? modelsOf(s).filter(m => !own(m)).reduce((t, m) => t + (Number(m.number) || 1), 0) || 1 : s.type === 'model' && s !== p ? Number(s.number) || 1 : 1, s.type === 'unit'); });
+    // (a profile on the unit's own entry, every model's: New Recruit prints it with no count, "Goremongers", as the app's lists first
+    // imported from its PDF have it; the app counts its models from the models lines, verify/render.js rowCounts)
+    for (const r of rows) stats.push(hide(Object.assign({}, r.row, { name: r.row.name + (r.n > 1 && !(r.onUnit && r.sel === 1 && PDF_FIRST) ? ' ×' + r.n : '') }), { _pid: r.pid, _part: p, _base: r.row.name }));
   }
   // weapon rows: every profile, depth first, with the number of models carrying it
   const kinds = { ranged: [], melee: [] };
@@ -641,19 +661,35 @@ function buildGroup(g, k) {
   // the Rules line and the keywords
   const rules = [];
   // (in the app's apostrophes, as the army rules are named: Martial Ka’tah)
-  parts.forEach(p => dfs(p, s => { for (const r of s.rules || []) rules.push(typo(nm(r.name))); }));
+  // (BSData's "Cabal of Sorcerers (Aspiring Sorcerer only)" in an attached unit: the rule Cabal of Sorcerers, which only that model of
+  // the part has; with the parts that have it themselves, the unit's partialRules, below. A unit of one datasheet keeps the name, "Deadly
+  // Demise D6+3 (Szarekh model only)", as GW prints it)
+  const onlyRules = {}, partOwn = new Map();
+  parts.forEach(p => dfs(p, s => { for (const r of s.rules || []) {
+    const n0 = typo(nm(r.name)), m = parts.length > 1 && /^(.*?) \(([^()]+?) only\)$/.exec(n0);
+    if (m) { rules.push(m[1]); (onlyRules[m[1]] = onlyRules[m[1]] || []).push({ p, model: m[2] }); continue; }
+    rules.push(n0); if (s.type === 'unit' || s.type === 'model') { if (!partOwn.has(p)) partOwn.set(p, new Set()); partOwn.get(p).add(n0); } } }));
   // (a category BSData hides, such as Leader, is no keyword: New Recruit does not print it)
   const catsOf = p => { const c = []; dfs(p, s => { if (!isWeaponSel(s)) for (const x of s.categories || []) { const ce = BS.get(x.entryId); if (!(ce && ce.hidden)) c.push(nm(x.name)); } }); return uniq(c).sort(); };
   const own = catsOf(first), extra = [];
   for (const p of parts.slice(1)) for (const c of catsOf(p)) if (!own.includes(c) && !extra.includes(c)) extra.push(c);
   Object.assign(u, { models, gear });
   if (unplaced.length) u.unplaced = unplaced;
+  if (assoc.length) hide(u, { _assoc: assoc });
   Object.assign(u, { stats, ranged: kinds.ranged, melee: kinds.melee, abilities, rules: uniq(rules), kw: own.concat(extra) });
   if (extra.length) u.kwNote = extra.join(', ') + (extra.length > 1 ? ' come' : ' comes') + ' from the ' + (g.chars.length > 1 ? 'combined unit' : (g.chars[0].support ? 'supported ' : 'led ') + partName(g.body)) + '.';
   u._at = g.at; u._parts = parts; hide(u, { _partNames: parts.map(p => nm(p.name)), _exportKw: u.kw.slice() });
   // the rules of the datasheet itself (the unit and its models), not those its wargear, weapons or enhancement bring
   const dsRules = []; parts.forEach(p => dfs(p, s => { if (s.type === 'unit' || s.type === 'model') for (const r of s.rules || []) dsRules.push(typo(nm(r.name))); }));
   u._dsRules = uniq(dsRules);
+  // (and those BSData links to a weapon entry: a weapon ability, on the Rules line for the weapon that has it)
+  const wRules = []; parts.forEach(p => dfs(p, s => { if (isWeaponSel(s)) for (const r of s.rules || []) wRules.push(typo(nm(r.name))); }));
+  hide(u, { _wRules: uniq(wRules) });
+  if (Object.keys(onlyRules).length && parts.length > 1) {
+    const pr = {};
+    for (const [r, xs] of Object.entries(onlyRules)) pr[r] = parts.flatMap(p => (partOwn.get(p) || new Set()).has(r) ? [typo(nm(p.name))] : xs.filter(x => x.p === p).map(x => x.model)).filter((x, i, l) => l.indexOf(x) === i).join(' and ');
+    hide(u, { _onlyRules: pr });
+  }
   u._exportRules = uniq(rules);   // (as the export has them, before the comparison with GW's datasheet)
   return u;
 }
@@ -680,6 +716,30 @@ for (const u of units) {
   let k = 2; const base = id; while (units.some(x => x.id === id)) id = base + '-' + k++;
   u.id = id;
 }
+// a list data.js already has keeps its units' ids (what the app keeps per unit, ticks and picks, is by id): each unit takes the id of
+// the list's unit it is, found as --compare finds it (name, leader, points and enhancement; else name and leader), where no other
+// unit of this run has that id (Shooty's Wazdakka Gutsmek stays "wazdakka", the id it was first imported with)
+{
+  const A0 = (D.armies || []).find(a => a.id === armyId);
+  if (A0 && !flag('--refs')) {
+    const pool = A0.units.slice(), taken = new Map();
+    const same = (x, u) => nm(x.name) === nm(typo(u.name)) && (x.leads || null) === (u.leads || null);
+    for (const u of units) {
+      const m = pool.find(x => same(x, u) && x.pts === u.pts && (x.enhancement || null) === (u.enhancement || null) && (x.copies || 1) === (u.copies || 1)) || pool.find(x => same(x, u) && x.pts === u.pts && (x.enhancement || null) === (u.enhancement || null)) || pool.find(x => same(x, u));
+      if (!m) continue; pool.splice(pool.indexOf(m), 1); taken.set(u, m.id);
+    }
+    const ids0 = new Map(units.map(u => [u, u.id]));
+    for (const u of units) if (taken.has(u)) u.id = taken.get(u);
+    // (a unit with no match, whose own id another unit now keeps: numbered on)
+    for (const u of units) if (!taken.has(u)) { let id = ids0.get(u), k = 2; const base = id; while (units.some(x => x !== u && x.id === id)) id = base + '-' + k++; u.id = id; }
+    // (an id other than the one its names give is kept only where the hand file names it, ids: { <id>: why }: an id renamed in data.js by
+    // hand is not taken over unseen)
+    for (const u of units) if (u.id !== ids0.get(u)) {
+      if ((HAND.ids || {})[u.id]) filled.push({ what: 'id ' + u.id + ' (not ' + ids0.get(u) + ')', from: 'the unit’s id in data.js, as the hand file names it (ids)' });
+      else want(u.name, 'id', 'data.js has the id ' + u.id + ' where its names give ' + ids0.get(u) + ': name it in verify/sources/hand/' + armyId + '.json ids, with why');
+    }
+  }
+}
 
 // (the export's reading, before GW's documents change anything: --compare tells the two apart)
 const readOf = new Map(units.map(u => [u, JSON.parse(JSON.stringify(u, (k, v) => k === '_parts' ? undefined : v))]));
@@ -693,6 +753,17 @@ const wahaDs = name => {
   if (!wahaHtml.has(f)) { const hit = fs.existsSync(dir) && fs.readdirSync(dir).find(x => x.toLowerCase() === f.toLowerCase()); wahaHtml.set(f, hit ? { file: hit, ds: require('./waha-words').wahaDatasheet(fs.readFileSync(path.join(dir, hit), 'utf8'), WW.chapter) } : null); }
   return wahaHtml.get(f);
 };
+// a model of a unit with a GW datasheet of its own that the unit's own page does not print (Sir Hekhtur, a model of BSData's and New
+// Recruit's Canis Rex unit, on Wahapedia his own EPIC HERO datasheet): { name, part, W } for each; its profile, weapons, abilities,
+// CORE ABILITIES and keywords are read from its page
+const ownModels = u => uniq(u.stats.filter(r => r._part && lc(r._base) !== lc(nm(r._part.name))).map(r => r._base)).map(n => {
+  const r = u.stats.find(x => x._base === n), P = wahaDs(nm(r._part.name)), W = wahaDs(nm(n));
+  if (!W || !W.ds || !P || !P.ds || P.file === W.file || P.ds.profiles.some(x => x.name && lc(x.name) === lc(n))) return null;
+  return { name: typo(nm(n)), part: r._part, W };
+}).filter(Boolean);
+// GW's own values where Wahapedia's transcription differs, as declared (verify/deviations-numbers.json: { ds, kind, row, field, app, waha })
+const DEVN = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-numbers.json'), 'utf8')); } catch (e) { return []; } })();
+const numDecl = (ds, kind, row, field, waha) => DEVN.find(x => x.ds === ds && x.kind === kind && nm(x.row || '') === nm(row || '') && x.field === field && gwN(x.waha) === gwN(waha));
 const gwN = v => nm(String(v == null ? '' : v)).replace(/\s*x\s*/gi, '×').replace(/^(?:-|–|N\/A)?$/, '–').replace(/- (?=[A-Z])/g, '-').toLowerCase();
 const gwKw = k => nm(k).toUpperCase().replace(/- (?=[A-Z])/g, '-');
 // keyword pairs the Core Rules make one keyword: "A/B" in a core stratagem's TARGET where the Core Rules say "The <B> Stratagem is the same
@@ -711,9 +782,14 @@ for (const u of units) {
   for (const p of u._parts) {
     const W = wahaDs(nm(p.name));
     if (!W || !W.ds) { want(u.name, 'GW check of ' + nm(p.name), 'no cached Wahapedia datasheet'); continue; }
-    const ds = W.ds, where = 'verify/.cache/waha/ds/' + W.file;
+    const ds0 = W.ds, where0 = 'verify/.cache/waha/ds/' + W.file;
     // stat rows
     for (const row of u.stats.filter(r => r._part === p)) {
+      // (a model of the unit with a GW datasheet of its own, which the unit's page does not print: Sir Hekhtur, in BSData's and New
+      // Recruit's Canis Rex unit, his own EPIC HERO datasheet on Wahapedia: his row against his page)
+      const own = lc(row._base) !== lc(nm(p.name)) && wahaDs(nm(row._base)), ownP = own && own.ds && !ds0.profiles.some(x => x.name && lc(x.name) === lc(row._base)) && (own.ds.profiles.find(x => x.name && lc(x.name) === lc(row._base)) || (own.ds.profiles.length === 1 && !own.ds.profiles[0].name ? own.ds.profiles[0] : null));
+      const ds = ownP ? own.ds : ds0, where = ownP ? 'verify/.cache/waha/ds/' + own.file : where0;
+      if (ownP) filled.push({ what: u.name + ' · ' + row.name + ': checked against ' + where, from: 'the model’s own GW datasheet (the unit’s page does not print its profile)' });
       // by its name; else, when every profile of the datasheet has the same values, any (BSData's "Heavy intercessor Squad" for
       // GW's Heavy Intercessor Sergeant and Heavy Intercessor); Wahapedia's "rn" read as "m" ("Dainal Komelius") is the same name
       const pn = x => lc(x).replace(/rn/g, 'm');
@@ -727,7 +803,7 @@ for (const u of units) {
       if (!wp || !bc) { want(u.name + ' · ' + row.name, 'GW check of the stat row', wp ? 'no BSData profile' : 'no Wahapedia profile of this name'); continue; }
       const MAP = { M: ['M', 'M'], T: ['T', 'T'], Sv: ['SV', 'Sv'], W: ['W', 'W'], Ld: ['LD', 'LD'], OC: ['OC', 'OC'], InSv: ['INSV', 'InSv'] };
       for (const [k, [wk, bk]] of Object.entries(MAP)) {
-        const gw = wp[wk] === undefined ? '–' : wp[wk], bs = bc[bk];
+        const gw0 = wp[wk] === undefined ? '–' : wp[wk], dn = numDecl(factionId + '/' + slug(nm(p.name)), 'stats', row._base, k, gw0), gw = dn ? dn.app : gw0, bs = bc[bk];
         // a value a rule of the list changed (New Recruit's 4 W from the Storm Shield): the datasheet's own value goes with it (own),
         // for the DATASHEETS row when no list shows it unchanged (verify/tables.js)
         if (gwN(gw) === gwN(bs)) { if (gwN(row[k]) !== gwN(gw)) row.own = Object.assign(row.own || {}, { [k]: cellV(gw) }); continue; }
@@ -754,6 +830,7 @@ for (const u of units) {
       }
     }
     // weapon rows
+    const ownPages = ownModels(u).filter(o => o.part === p).map(o => o.W);
     for (const kind of ['ranged', 'melee']) for (const row of u[kind].filter(r => r._part === p)) {
       // (Wahapedia's "Slaughter and Carnage – strike": its en dash is the " - " of a profile's name)
       const nameOf = x => lc(x).replace(/’/g, "'").replace(/\s[–—]\s/g, ' - ');
@@ -766,12 +843,14 @@ for (const u of units) {
       // "Melta Rifle - Hunter", "Chainfist - Hunter: Monster/Vehicle" for "Chainfist - Hunter")
       const gwName = x => nameOf(x).replace(/\s*\(ref\. only\)$/, '').replace(/^the /, '').replace(/\s*\[[^\]]*\]$/, '').replace(/ - hunter: .*$/, ' - hunter').replace(/\s+hunter:\s*\S.*$/, ' - hunter').replace(/\s+\(([^()]+)\)$/, ' - $1');
       const sameKind = x => (x.range === 'Melee') === (kind === 'melee');
-      let ww = null;
+      let ww = null, ds = ds0, where = where0;
       // (and a name whose apostrophe GW puts elsewhere: New Recruit's "Attendant's hellblades", GW's "Attendants’ hellblades")
       const noApos = x => gwName(x).replace(/'/g, '');
       // (and GW's plural name for a pair, the Maulerfiend's "Magma cutters" for New Recruit's "Magma cutter" ×2: listed below as named
       // otherwise)
       for (const n of wn) { ww = ds.weapons.find(x => sameKind(x) && nameOf(n) === nameOf(x.name)) || ds.weapons.find(x => sameKind(x) && gwName(n) === gwName(x.name)) || ds.weapons.find(x => sameKind(x) && noApos(n) === noApos(x.name)); if (ww) break; }
+      // (a weapon of a model with a GW datasheet of its own, which the unit's page does not print: Sir Hekhtur's pistol, on his page)
+      if (!ww) for (const o of ownPages) { for (const n of wn) { ww = o.ds.weapons.find(x => sameKind(x) && (nameOf(n) === nameOf(x.name) || gwName(n) === gwName(x.name) || noApos(n) === noApos(x.name))); if (ww) break; } if (ww) { ds = o.ds; where = 'verify/.cache/waha/ds/' + o.file; break; } }
       // (GW's one profile for the pair is one weapon row: its A is the pair's, so the app counts it once, n 1, declared; the gear keeps
       // New Recruit's two)
       // (only when one model carries both: two models with one each, 2 Meganobz with twin killsaws, are two weapons)
@@ -805,13 +884,16 @@ for (const u of units) {
       if (!ww || !bc) { want(u.name + ' · ' + (row.group || row.name), 'GW check of the weapon', ww ? 'no BSData profile' : 'not on the Wahapedia datasheet under this name'); continue; }
       const F2 = { range: ['range', 'Range'], A: ['A', 'A'], [kind === 'ranged' ? 'BS' : 'WS']: ['BS', kind === 'ranged' ? 'BS' : 'WS'], S: ['S', 'S'], AP: ['AP', 'AP'], D: ['D', 'D'] };
       for (const [k, [wk, bk]] of Object.entries(F2)) {
+        // (GW's own value where Wahapedia's differs, as verify/deviations-numbers.json declares it: the Master of Executions' bolt pistol BS 3+)
+        const dn = numDecl(factionId + '/' + slug(nm(p.name)), kind, row.group ? row.group + ' - ' + row.name : row.name, k, ww[wk]) || numDecl(factionId + '/' + slug(nm(p.name)), kind, row.name, k, ww[wk]);
+        const gwV = dn ? dn.app : ww[wk];
         // (a value a rule of the list changed, the Daemon Prince of Chaos's S 10 from Daemonic Allegiance: the datasheet's own value goes
         // with it, as for a stat)
-        if (gwN(ww[wk]) === gwN(bc[bk])) { if (gwN(row[k]) !== gwN(ww[wk])) row.own = Object.assign(row.own || {}, { [k]: cellV(ww[wk]) }); continue; }
-        gwFacts.set(u.id + '|' + kind + '|' + nm(row.group || row.name) + '|' + k, { gw: cellV(ww[wk]), pin: cellV(bc[bk]), nr: row[k], file: where });
-        if (gwN(row[k]) === gwN(ww[wk])) { gwFixed.push(u.name + ' · ' + (row.group || row.name) + ' ' + k + ': BSData’s entry at the pin has ' + bc[bk] + ', the export (a newer catalogue, or a modifier) GW’s ' + ww[wk]); continue; }
-        if (gwN(row[k]) === gwN(bc[bk])) { gwDevs.push({ unit: u.id, kind, row: row.group || row.name, field: k, app: cellV(ww[wk]), bsdata: cellV(bc[bk]), file: where }); row[k] = cellV(ww[wk]); }
-        else want(u.name + ' · ' + (row.group || row.name) + ' ' + k, 'GW value ' + ww[wk], 'BSData’s own value is ' + bc[bk] + ', New Recruit shows ' + row[k] + ': set by hand');
+        if (gwN(gwV) === gwN(bc[bk])) { if (gwN(row[k]) !== gwN(gwV)) row.own = Object.assign(row.own || {}, { [k]: cellV(gwV) }); continue; }
+        gwFacts.set(u.id + '|' + kind + '|' + nm(row.group || row.name) + '|' + k, { gw: cellV(gwV), pin: cellV(bc[bk]), nr: row[k], file: where });
+        if (gwN(row[k]) === gwN(gwV)) { gwFixed.push(u.name + ' · ' + (row.group || row.name) + ' ' + k + ': BSData’s entry at the pin has ' + bc[bk] + ', the export (a newer catalogue, or a modifier) GW’s ' + gwV); continue; }
+        if (gwN(row[k]) === gwN(bc[bk])) { gwDevs.push({ unit: u.id, kind, row: row.group || row.name, field: k, app: cellV(gwV), bsdata: cellV(bc[bk]), file: where }); row[k] = cellV(gwV); }
+        else want(u.name + ' · ' + (row.group || row.name) + ' ' + k, 'GW value ' + gwV, 'BSData’s own value is ' + bc[bk] + ', New Recruit shows ' + row[k] + ': set by hand');
       }
       const gk = ww.kw.map(gwKw).sort(), bk2 = splitItems(bc.Keywords || '').map(gwKw).filter(Boolean).sort();
       // GW's weapon keywords where New Recruit shows BSData's own (and those a rule of the list adds, kept: Furious Assault's
@@ -827,7 +909,8 @@ for (const u of units) {
     }
   }
   // keywords: every keyword the datasheets print (KEYWORDS and FACTION KEYWORDS) is the unit's
-  const printed = uniq(u._parts.flatMap(p => { const W = wahaDs(nm(p.name)); return W && W.ds ? W.ds.keywords.concat(W.ds.factionKeywords.map(k => 'Faction: ' + k)) : []; }));
+  const kwOf = W => W && W.ds ? W.ds.keywords.concat(W.ds.factionKeywords.map(k => 'Faction: ' + k)) : [];
+  const printed = uniq(u._parts.flatMap(p => kwOf(wahaDs(nm(p.name)))).concat(ownModels(u).flatMap(o => kwOf(o.W))));
   // a keyword only some models of the unit have (Wahapedia "Dainal Komelius: PSYKER"): kwOnly names the model (BSData's spelling,
   // the stats row of that name), and the kwNote leaves it out
   for (const p of u._parts) {
@@ -848,8 +931,10 @@ for (const u of units) {
       if (!row) mn = mn.toLowerCase().replace(/(^|[\s/-])([a-z])/g, (m0, a, b) => a + b.toUpperCase());
       // (and every other part of the attached unit whose datasheet gives all its models the keyword: the Master of Executions'
       // CHARACTER next to the Dark Apostle's, "Dark Apostle and Master of Executions", as Wahapedia names each model that has it)
-      const also = u._parts.filter(p2 => p2 !== p).filter(p2 => { const W2 = wahaDs(nm(p2.name)); return W2 && W2.ds && W2.ds.keywords.some(x => gwKw(x) === gwKw(k)); }).map(p2 => typo(nm(p2.name)));
-      u.kwOnly = Object.assign(u.kwOnly || {}, { [have]: [row ? row.name.replace(/ ×\d+$/, '') : mn].concat(also).join(' and ') });
+      // (in the unit's order of its parts: the leader first, "Exalted Sorcerer and Aspiring Sorcerer")
+      const also = u._parts.filter(p2 => p2 !== p).filter(p2 => { const W2 = wahaDs(nm(p2.name)); return W2 && W2.ds && W2.ds.keywords.some(x => gwKw(x) === gwKw(k)); }).map(p2 => ({ n: typo(nm(p2.name)), i: u._parts.indexOf(p2) }));
+      const who0 = [{ n: row ? row.name.replace(/ ×\d+$/, '') : mn, i: u._parts.indexOf(row && row._part || p) }].concat(also).sort((a, b) => a.i - b.i).map(x => x.n);
+      u.kwOnly = Object.assign(u.kwOnly || {}, { [have]: who0.join(' and ') });
       if (u.kwNote) { const ex = u.kwNote.replace(/ comes? from .*$/, '').split(', ').filter(x => x !== have), tail = (/ from .*$/.exec(u.kwNote) || [' from the led ' + u.leads + '.'])[0]; u.kwNote = ex.length ? ex.join(', ') + (ex.length > 1 ? ' come' : ' comes') + tail : undefined; if (!u.kwNote) delete u.kwNote; }
       filled.push({ what: 'kwOnly ' + u.name + ': ' + have + ' (' + u.kwOnly[have] + ')', from: 'verify/.cache/waha/ds/' + W.file + ' ("' + mn + ': ' + k + '")' });
     }
@@ -907,7 +992,7 @@ for (const u of units) {
 for (const d of gwDevs) filled.push({ what: 'GW over BSData: ' + d.unit + ' ' + (d.row ? d.row + ' ' : '') + d.field + ' = ' + (d.app === null ? 'without ' + d.bsdata + (d.why ? ' (' + d.why + ')' : ' (the ' + d.det + ' detachment’s keyword; BSData/New Recruit give it always)') : d.app + (d.bsdata ? ' (BSData/New Recruit: ' + d.bsdata + ')' : ' (not in BSData)')), from: 'Wahapedia datasheet ' + d.file });
 
 // ---------------------------------------------------------------- wording: Wahapedia's datasheet (GW's codex), found by BSData's words
-const wahaPagesOf = u => uniq(u._parts.map(p => nm(p.name))).map(n => pageFac(n) && WW.wahaPage(n, pageFac(n))).filter(Boolean);
+const wahaPagesOf = u => uniq(u._parts.map(p => nm(p.name))).map(n => pageFac(n) && WW.wahaPage(n, pageFac(n))).concat(ownModels(u).map(o => WW.wahaPage(o.name, pageFac(o.part.name)))).filter(Boolean);
 // a Wahapedia datasheet page in its sections (CORE ABILITIES / ARMY RULES, ABILITIES, a header box, DAMAGED, LEADER, SUPPORT): the shared
 // page reader (verify/gw-order.js wahaSectionsOf, on the datasheet cut out of its page), as verify/tables.js --write and verify/words.js
 // read it
@@ -940,24 +1025,37 @@ for (const u of units) {
   // (an allied unit: its own faction's army rules are not the unit's, see ALLIES)
   const isAlly = u._parts.some(p => allyByName.has(nm(p.name)));
   gwRules.set(u.id, { core: uniq(secs.flatMap(x => x.core)), army: isAlly ? [] : uniq(secs.flatMap(x => x.army)), allyArmy: isAlly ? uniq(secs.flatMap(x => x.army)).map(typo) : [], ally: isAlly ? allyByName.get(nm(u._parts[0].name)) : null, leader: uniq(secs.flatMap(x => x.leader)), support: uniq(secs.flatMap(x => x.support)), files: secs.map(x => x.file),
-    byPart: u._parts.map(p => { const pg = pageFac(p.name) && WW.wahaPage(nm(p.name), pageFac(p.name)); return pg ? { name: partName0(p), core: wahaSectionsOf(pg).core.map(typo) } : null; }) });
+    byPart: u._parts.map(p => { const pg = pageFac(p.name) && WW.wahaPage(nm(p.name), pageFac(p.name)); return pg ? { name: partName0(p), core: wahaSectionsOf(pg).core.map(typo), army: wahaSectionsOf(pg).army.map(typo) } : null; }) });
   const used = new Set();
   // an ability of a box of named abilities that another ability selects from ("select one of the abilities in the Daemon Primarch of
   // Slaanesh section"): who '<box>: pick one', as Angron's Wrathful Presence abilities (one model: who names no part)
-  const pickOf = g => g.group && u._parts.length === 1 && gwAbs.some(x => !x.box && selectsFrom(bare(x.text), g.group)) ? g.group + ': pick one' : null;
+  // ("<box>: pick one" where the ability that selects is named for the box, Angron's Wrathful Presence, the Silent King's Triarch Abilities,
+  // as verify/effects-migrate.js reads the pick; else the section as the selecting ability's words name it, Magnus's "Crimson King" from
+  // Unearthly Power, Wazdakka's "Throttlerokkit Shokka Engine" from Full Throttle's "select one Throttlerokkit Shokka Engine ability")
+  const pickOf = g => {
+    if (!g.group || u._parts.length !== 1) return null;
+    const sel = gwAbs.filter(x => !x.box && selectsFrom(bare(x.text), g.group)); if (!sel.length) return null;
+    if (sel.some(x => lc(x.name) === lc(g.group))) return g.group + ': pick one';
+    const t = bare(sel[0].text), m = /select one of the abilities in the (.+?) section/i.exec(t) || /select one (.+?) ability\b/i.exec(t);
+    return m ? m[1] : g.group;
+  };
   for (const ab of u.abilities) {
     const plain = plainBS(ab._bs);
     // an enhancement: its text from the detachment (data.js or this run's rows)
     if (ab._e) {
-      ab.text = ab._e.text;
+      // (without a line that defines a weapon ability the rules glossary has, "**[SUPA-HAZARDOUS]:** Each time …" of Supa-glowy Fing:
+      // the Rules line names it, and its words are the glossary's, data.js RULES)
+      ab.text = String(ab._e.text).split('\n').filter(l => { const m = /^\*\*\[([^\]]+)\]:\*\*/.exec(l); return !(m && Object.keys(D.rules || {}).some(k => lc(k) === lc(m[1]))); }).join('\n');
       if (ab._bs !== null && !textEq(ab._e.text, plain)) devs.push({ kind: 'bsdata', unit: u.id, field: 'ability.text', name: ab.name, app: ab.text, bsdata: plain, why: 'the enhancement as the detachment prints it (Wahapedia, the codex): BSData leaves out its first sentence or words it otherwise', file: 'verify/.cache/waha/' + factionId + '.txt' });
       continue;
     }
-    // a detachment rule BSData shows on the unit ("Flare Shields"): the rule's words, as the detachment prints them
+    // a detachment rule BSData shows on the unit ("Flare Shields", "This unit has a 4+ InSv against ranged attacks."): not an ability of
+    // the datasheet, which GW's page does not print; the unit has it as the list's detachment rule ("Friendly GRAV-ASSAULT units have
+    // 4+ InSv against ranged attacks."), whose boxes it gets: left out (as deviations-nr.json declares for Lite Knights' Caladius)
     const dr = detIds.flatMap(id => detRulesOf((F && F.detachments[id]) || facSrc.detachments[id])).find(r => r && lc(r.name) === lc(ab.name));
     if (dr) {
-      ab.text = dr.text;
-      if (!textEq(dr.text, plain)) devs.push({ kind: 'bsdata', unit: u.id, field: 'ability.text', name: ab.name, app: ab.text, bsdata: plain, why: 'the detachment rule as Wahapedia (the codex) prints it; BSData restates it for the unit', file: 'verify/.cache/waha/' + factionId + '.txt' });
+      hide(ab, { _detRule: true });
+      filled.push({ what: u.name + ' without the ability ' + ab.name, from: 'the list’s detachment rule ' + dr.name + ' (GW’s datasheet does not print it)' });
       continue;
     }
     // the datasheet's ability: the one with BSData's words, else the one of BSData's name (GW's name, tag and words win)
@@ -970,13 +1068,25 @@ for (const u of units) {
     const nearly = (a, b) => { const x = wordsOf(a), y = wordsOf(b); return x.length > 8 && x.length === y.length && x.filter((w, k) => w !== y[k]).length <= 2; };
     // (GW's words but for a layout cross-reference, "select one Triarch ability (see left)": BSData leaves it out)
     const seeL = t => String(t).replace(/ \(see (?:left|right|next page|overleaf)\)/gi, '');
+    // (a selector ability and the box of the same name it selects from, which BSData writes as one text: Belisarius Cawl's Canticles of
+    // the Omnissiah, "At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. …" and
+    // its box: the two as one ability, GW's words, as verify/gw-order.js reads it ("merged"))
+    const twin = gwAbs.filter(x => !used.has(x) && lc(x.name) === lc(ab.name)), sel = twin.find(x => !x.box), selBox = twin.find(x => x.box);
+    if (twin.length === 2 && sel && selBox && !textEq(sel.text, plain) && textEq(sel.text, plainBS(ab._bs).split(/\n/)[0])) {
+      used.add(selBox); used.add(sel); hide(ab, { _gw: sel.file });
+      ab.text = sel.text + '\n' + selBox.text;
+      if (!textEq(ab.text, plain)) devs.push({ kind: 'bsdata', unit: u.id, field: 'ability.text', name: typo(sel.name), app: ab.text, bsdata: plain, why: 'Wahapedia’s datasheet (the codex) words it otherwise than BSData (the ability and the box it selects from)', file: sel.file });
+      filled.push({ what: 'ability ' + u.name + ' · ' + ab.name, from: sel.file + ' (the ability and the box of its name it selects from, as one text)' });
+      continue;
+    }
     const g = gwAbs.find(x => !used.has(x) && textEq(x.text, plain)) || gwAbs.find(x => !used.has(x) && !x.box && /\(see (?:left|right|next page|overleaf)\)/i.test(x.text) && textEq(seeL(x.text), plain)) || gwAbs.find(x => !used.has(x) && lc(x.name) === lc(ab.name)) || gwAbs.find(x => !used.has(x) && loose(x.name) === loose(ab.name))
       || gwAbs.find(x => !used.has(x) && !x.box && nearly(x.text, plain) && lc(ab.name).split(' ').filter(w => !lc(x.name).split(' ').includes(w)).length <= 1);
     // an ability of the unit itself (not of its wargear) that GW's datasheet does not print (Roboute Guilliman's "Supreme
     // Commander"): GW wins, the app leaves it out
     // (BSData's "Invulnerable Save (4+*)" is GW's INSV* box with its footnote, "* against ranged attacks only": a header box GW prints,
     // kept with BSData's words, as the approved Knights lists have it; verify/texts.js reads it as the box)
-    const box = /^invulnerable save\b/i.test(ab.name) && u._parts.some(p => { const W = wahaDs(nm(p.name)); return W && W.ds && W.ds.profiles.some(x => x.INSV && /\*$/.test(x.INSV) && ab.name.includes('(' + x.INSV + ')')); });
+    // (and BSData's "*Invulnerable Save", the Chaos Knights' name of the same box)
+    const box = /^\*?invulnerable save\b/i.test(ab.name) && u._parts.some(p => { const W = wahaDs(nm(p.name)); return W && W.ds && W.ds.profiles.some(x => x.INSV && /\*$/.test(x.INSV) && (ab.name.includes('(' + x.INSV + ')') || /^\*/.test(ab.name))); });
     if (box) { ab.text = typo(nm(plain)); filled.push({ what: 'ability ' + u.name + ' · ' + ab.name, from: 'the INSV* box of GW’s datasheet (Wahapedia: "* against ranged attacks only"), BSData’s words' }); continue; }
     // a box GW prints after the unit's composition, its heading the ability's name (the Pink Horrors' "HORRORS ARE PINK. HORRORS ARE
     // BLUE. …": use the Blue Horrors datasheet once no Pink Horror is left): GW's words, its Designer’s Note an italic line
@@ -985,6 +1095,17 @@ for (const u of units) {
       ab.text = bx.text;
       if (!textEq(bx.text, plain)) devs.push({ kind: 'bsdata', unit: u.id, field: 'ability.text', name: ab.name, app: ab.text, bsdata: plain, why: 'GW’s datasheet (Wahapedia) prints the box ' + ab.name + ' otherwise than BSData', file: bx.file });
       filled.push({ what: 'ability ' + u.name + ' · ' + ab.name, from: bx.file + ' (the box after the unit composition, its heading the ability’s name)' });
+      continue;
+    }
+    // a BSData ability named for a box of abilities GW's page prints each as a box of its own (Thulia Ghuld's Icon of War: Fanatical
+    // Devotion, Adaptive Tactics, The Fires of Mars): one ability, the box's abilities as its named parts ("**Fanatical Devotion:** …"),
+    // as verify/gw-order.js reads it ("parts") and the app's Rod of the War Forge selects from it
+    const grp = !g ? gwAbs.filter(x => !used.has(x) && x.box && x.group && lc(x.group) === lc(ab.name)) : [];
+    if (grp.length > 1) {
+      for (const x of grp) used.add(x); hide(ab, { _gw: grp[0].file });
+      ab.text = grp.map(x => '**' + typo(x.name) + (x.tag ? ' (' + x.tag + ')' : '') + ':** ' + x.text).join('\n');
+      devs.push({ kind: 'bsdata', unit: u.id, field: 'ability.text', name: ab.name, app: ab.text, bsdata: plain, why: 'GW’s datasheet prints the abilities of ' + ab.name + ' each as a box of its own (Wahapedia)', file: grp[0].file });
+      filled.push({ what: 'ability ' + u.name + ' · ' + ab.name, from: grp[0].file + ' (the box ' + ab.name + ': its abilities as the ability’s named parts)' });
       continue;
     }
     if (!g && ab._sel && (ab._sel.type === 'model' || ab._sel.type === 'unit') && pages.length === u._parts.length) {
@@ -999,6 +1120,13 @@ for (const u of units) {
     }
     used.add(g); hide(ab, { _gw: g.file });
     ab.text = g.text;
+    // (GW's own words where the page prints others, as verify/deviations-words.json declares them: the Swarmlord's Malign Presence in
+    // the Faction Pack's words)
+    // (not where the hand file puts GW's words in itself, its texts: they are applied below, once)
+    const handTexts = Object.values(HAND.units || {}).some(h => (h.texts || {})[ab.name] || (h.texts || {})[typo(g.name)]) || Object.values(HAND.texts || {}).some(by => (by || {})[ab.name] || (by || {})[typo(g.name)]);
+    // (and not in a faction catalogue's reading, --emit: verify/from-bsdata.js puts the Faction Pack's words in itself, applyPack)
+    { const dw = !handTexts && !argv.includes('--emit') && GWO.DEVW.find(d => d.page === path.basename(g.file) && [ab.name, typo(g.name)].includes(d.ability) && GWO.norm(d.waha) === GWO.norm(g.text));
+      if (dw) { ab.text = dw.app; filled.push({ what: 'ability ' + u.name + ' · ' + ab.name + ': GW’s words as declared', from: 'verify/deviations-words.json (' + dw.page + ')' }); } }
     if (g.damaged) ab.damaged = g.damaged;
     // (Aura) is only what GW tags so (Core Rules 22.01): BSData's "One Head Looks Back (Aura)" is GW's One Head Looks Back, untagged
     if (!g.tag && ab.tag === 'Aura' && lc(typo(g.name)) === lc(ab.name)) { delete ab.tag; devs.push({ kind: 'bsdata', unit: u.id, field: 'ability.tag', name: ab.name, app: null, bsdata: 'Aura', why: 'GW’s datasheet does not tag ' + ab.name + ' (Aura); BSData names it "' + ab.name + ' (Aura)"', file: g.file }); }
@@ -1031,8 +1159,15 @@ for (const u of units) {
 for (const u of units) {
   const G = gwRules.get(u.id); if (!G || !G.files.length) continue;
   const gw = G.core.concat(G.army).map(typo), kind = n => lc(n).replace(/\s+(?:\d+\+?\*?|d\d+(?:[+-]\d+)?|\d+")$/, '');
+  // (an army rule the faction leaves out, verify/sources/factions.json leftOutRules: World Eaters' Pact of Blood, a mustering
+  // restriction that does nothing in play)
+  const leftOut = (FJ[factionId] || {}).leftOutRules || {};
   for (const r of gw) {
     if (u.rules.some(x => lc(x) === lc(r))) continue;
+    // (GW's "Cabal of Sorcerers (Aspiring Sorcerer only)" on the Rubric Marines' page: the rule Cabal of Sorcerers, which only that
+    // model of the part has (partialRules, below))
+    { const m = u._parts.length > 1 && /^(.*?) \(([^()]+?) only\)$/.exec(r); if (m) { if (!u.rules.some(x => lc(x) === lc(m[1]))) u.rules.push(typo(m[1])); continue; } }
+    if (Object.keys(leftOut).some(x => lc(x) === lc(r))) { filled.push({ what: 'Rules line of ' + u.name + ' without ' + r, from: 'verify/sources/factions.json leftOutRules: ' + leftOut[Object.keys(leftOut).find(x => lc(x) === lc(r))] }); continue; }
     const same = u._dsRules.find(x => kind(x) === kind(r) && !/\*$/.test(x));
     if (same) { u.rules[u.rules.indexOf(same)] = r; u._dsRules[u._dsRules.indexOf(same)] = r; devs.push({ kind: 'bsdata', unit: u.id, field: 'rules', name: r, app: r, bsdata: same, why: 'GW’s datasheet prints ' + r + ' (BSData: ' + same + ')', file: G.files.join(', ') }); }
     else { u.rules.splice(u._dsRules.length ? u.rules.indexOf(u._dsRules[u._dsRules.length - 1]) + 1 : 0, 0, r); u._dsRules.push(r); devs.push({ kind: 'bsdata', unit: u.id, field: 'rules', name: r, app: r, bsdata: null, why: 'GW’s datasheet prints ' + r + '; BSData’s entry does not', file: G.files.join(', ') }); }
@@ -1042,12 +1177,33 @@ for (const u of units) {
     // a weapon ability of a weapon of the unit ("Devastating Wounds" for the Vigilators' [DEVASTATING WOUNDS: PSYKER]): GW prints it on
     // the weapon, not under CORE ABILITIES; the Rules line names the weapons' abilities, so it stays
     { const k = lc(r); if (u.ranged.concat(u.melee).some(w => (w.kw || []).some(x => lc(x) === k || lc(x).startsWith(k + ' ') || lc(x).startsWith(k + ':')))) { filled.push({ what: 'Rules line of ' + u.name + ' keeps ' + r, from: 'a weapon ability of its weapons' }); continue; } }
+    // (and a weapon ability one of the unit's own abilities gives this model's attacks: the Knight Warden's Thin Their Ranks, "Each time
+    // this model makes a ranged attack that targets … that attack has the [DEVASTATING WOUNDS] ability"; not a Bondsman's, which gives
+    // another model's weapons it, "weapons equipped by that model")
+    { const k = lc(r), by = u.abilities.find(a => !a._e && bare(a.text || '').split(/(?<=\.)\s+/).some(t => /\bthis model makes an? (?:ranged |melee )?attack\b/i.test(t) && lc(t).includes('[' + k)));
+      if (by) { filled.push({ what: 'Rules line of ' + u.name + ' keeps ' + r, from: 'the weapon ability ' + by.name + ' gives this model’s attacks' }); continue; } }
+    // (and a core ability one of the unit's own abilities gives its own model, where the unit meets its condition: the Slaughterbound's
+    // Lord of the Eightbound, "If this model is attached to a WORLD EATERS POSSESSED unit …, this model has the Deep Strike and Scouts 6"
+    // abilities", leading Exalted Eightbound)
+    { const re = new RegExp('\\bthis model has the\\b[^.]*\\b' + r.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?=[\\s.,*]|$)', 'i');
+      const by = u.abilities.find(a => !a._e && bare(a.text || '').split(/(?<=\.)\s+/).some(t => re.test(t) && !/\bagainst\b/i.test(t)) && (m => !m || u.kw.some(k => lc(k) === lc(m[1].split(/\s+/).pop())))(/\battached to an? ([^.,]*?) unit\b/i.exec(bare(a.text || ''))));
+      if (by) { filled.push({ what: 'Rules line of ' + u.name + ' keeps ' + r, from: by.name + ' gives its model ' + r }); continue; } }
     // an army rule of the faction that GW's datasheet names as the tag of one of its abilities ("Defender’s Duty (Bondsman)"): the
     // datasheet names it, so it stays on the Rules line, as on every approved Imperial Knights list
     if (F && (F.armyRules || []).some(x => lc(x.name) === lc(r)) && u.abilities.some(a => (a.tag || '').split(' · ').some(t => lc(t) === lc(r)))) { filled.push({ what: 'Rules line of ' + u.name + ' keeps ' + r, from: 'the army rule its ability’s tag names (' + u.abilities.filter(a => (a.tag || '').split(' · ').some(t => lc(t) === lc(r))).map(a => a.name + ' (' + r + ')').join(', ') + ', ' + G.files.join(', ') + ')' }); continue; }
     u.rules.splice(u.rules.indexOf(r), 1); u._dsRules.splice(u._dsRules.indexOf(r), 1);
     if (G.allyArmy.some(x => lc(x) === lc(r))) { devs.push({ kind: 'ally', unit: u.id, field: 'rules', name: r, app: null, bsdata: r, why: r + ' is an army rule of the unit’s own faction (' + G.ally + '): an allied unit does not have it', file: G.files.join(', ') }); continue; }
     devs.push({ kind: 'bsdata', unit: u.id, field: 'rules', name: r, app: null, bsdata: r, why: 'GW’s datasheet does not print ' + r, file: G.files.join(', ') });
+  }
+  // a weapon ability BSData links to a weapon entry whose profiles (BSData's, New Recruit's and GW's) do not have it: not on the Rules line
+  // (Belisarius Cawl's Blast, linked to the Solar atomiser, [MELTA 3]; deviations-nr.json declares it, play-test finding B10)
+  for (const r of u.rules.slice()) {
+    if (!(u._wRules || []).includes(r) || u._dsRules.includes(r) || gw.some(x => lc(x) === lc(r))) continue;
+    const k = lc(r); if (u.ranged.concat(u.melee).some(w => (w.kw || []).some(x => lc(x) === k || lc(x).startsWith(k + ' ') || lc(x).startsWith(k + ':') || lc(x).startsWith(k + '-')))) continue;
+    if (u.abilities.some(a => lc(bare(a.text || '')).includes(k))) continue;
+    u.rules.splice(u.rules.indexOf(r), 1);
+    devs.push({ kind: 'nr', unit: u.id, field: 'rules', name: r, app: null, bsdata: r, why: 'no weapon of the unit has [' + r.toUpperCase() + '] (BSData links ' + r + ' to a weapon entry whose profile does not have it)', file: G.files.join(', ') });
+    filled.push({ what: 'Rules line of ' + u.name + ' without ' + r, from: 'none of its weapons has [' + r.toUpperCase() + ']' });
   }
   // a Feel No Pain its wargear gives only "against …" (Karanak's Brass Collar of Bloody Vengeance: "against Psychic Attacks and mortal
   // wounds"): not on the Rules line, where it would read as unconditional (GW's CORE ABILITIES do not print it); its When targeted line
@@ -1080,8 +1236,42 @@ for (const u of units) {
       if (toUnit) { filled.push({ what: 'no partialRules ' + u.name + ' for ' + r, from: toUnit.name + ' (' + has[0].name + ') gives the unit ' + r + ' (“This unit has”: the attached unit)' }); continue; }
       if (has.length === 1 && lack.length && lack.every(gives)) { filled.push({ what: 'no partialRules ' + u.name + ' for ' + r, from: lack.map(p => p.name + '’s ' + gives(p).name).join(', ') + ' gives it ' + r + ' (the unit has the keyword its condition names)' }); continue; }
       if (has.length === 1) pr[r] = has[0].name;
+      // (a core ability no part's page prints, which an ability of one part gives that part's model: the Slaughterbound's Scouts 6", from
+      // Lord of the Eightbound)
+      if (!has.length) { const giv = G.byPart.filter(x => u.abilities.some(a => a.who === x.name && re.test(bare(a.text || ''))));
+        if (giv.length && giv.length < G.byPart.length) pr[r] = giv.map(x => x.name).join(' and '); }
     }
-    if (Object.keys(pr).length) { u.partialRules = pr; filled.push({ what: 'partialRules ' + u.name + ': ' + JSON.stringify(pr), from: 'the datasheets’ CORE ABILITIES (' + G.files.join(', ') + ')' }); }
+    // (and a rule BSData gives one model of a part only, "Cabal of Sorcerers (Aspiring Sorcerer only)": that model and the parts that
+    // have it themselves)
+    for (const [r, who] of Object.entries(u._onlyRules || {})) if (u.rules.includes(r) && !pr[r]) pr[r] = who;
+    // (a core ability an enhancement gives its bearer, "The bearer has the Deep Strike ability" (Disciple of Khorne), where the other
+    // parts' pages do not print it: the bearer's)
+    for (const ab of u.abilities.filter(a => a._e && a.who)) {
+      const m = /\bThe bearer has the (.+?) abilit(?:y|ies)\b/.exec(bare(ab.text || '')); if (!m) continue;
+      for (const n of m[1].split(/,\s*|\s+and\s+/)) { const r = u.rules.find(x => lc(x) === lc(n.trim())); if (!r || pr[r]) continue;
+        const has = G.byPart.filter(x => x.core.some(c => lc(c) === lc(r))); if (!has.length) pr[r] = ab.who; }
+    }
+    for (const r of u.rules) {
+      const only = G.byPart.map(x => (x.army.concat(x.core).map(y => /^(.*?) \(([^()]+?) only\)$/.exec(y)).find(m => m && lc(m[1]) === lc(r)) || [])[2]);
+      if (pr[r] || !only.some(Boolean)) continue;
+      pr[r] = G.byPart.map((x, i) => x.army.concat(x.core).some(y => lc(y) === lc(r)) ? x.name : only[i]).filter(Boolean).join(' and ');
+    }
+    if (Object.keys(pr).length) { u.partialRules = pr; filled.push({ what: 'partialRules ' + u.name + ': ' + JSON.stringify(pr), from: 'the datasheets’ CORE ABILITIES (' + G.files.join(', ') + ')' + (u._onlyRules ? ' and BSData’s "(… only)" rules' : '') }); }
+  }
+  // a model with a GW datasheet of its own (ownModels: Sir Hekhtur): a core ability only its page prints is that model's (partialRules,
+  // his Lone Operative), and a keyword only one of the two pages prints is that page's model's (kwOnly: VEHICLE … CANIS REX the Canis
+  // Rex model's, INFANTRY and SIR HEKHTUR his), each in its page's order sorted by name
+  for (const o of ownModels(u)) {
+    const P = wahaDs(nm(o.part.name)), coreOf = W => wahaSectionsOf(WW.wahaPage(nm(W === P ? o.part.name : o.name), pageFac(o.part.name))).core.map(typo);
+    const mainCore = coreOf(P), pr = {};
+    for (const r of coreOf(o.W)) if (u.rules.some(x => lc(x) === lc(r)) && !mainCore.some(x => lc(x) === lc(r))) pr[u.rules.find(x => lc(x) === lc(r))] = o.name;
+    if (Object.keys(pr).length) { u.partialRules = Object.assign(u.partialRules || {}, pr); filled.push({ what: 'partialRules ' + u.name + ': ' + JSON.stringify(pr), from: 'verify/.cache/waha/ds/' + o.W.file + ' (CORE ABILITIES of the model’s own datasheet)' }); }
+    const kOf = W => W.ds.keywords.map(gwKw), kA = kOf(P), kB = kOf(o.W), app = k => u.kw.find(x => gwKw(x) === k);
+    const mainRow = (u.stats.find(r => r._part === o.part && lc(r._base) === lc(nm(o.part.name))) || {})._base || nm(o.part.name);
+    const ko = {};
+    for (const k of kA.filter(k => !kB.includes(k)).map(app).filter(Boolean).sort()) ko[k] = typo(nm(mainRow));
+    for (const k of kB.filter(k => !kA.includes(k)).map(app).filter(Boolean).sort()) ko[k] = o.name;
+    if (Object.keys(ko).length) { u.kwOnly = Object.assign(u.kwOnly || {}, ko); filled.push({ what: 'kwOnly ' + u.name + ': ' + JSON.stringify(ko), from: 'verify/.cache/waha/ds/' + P.file + ' and ' + o.W.file + ' (KEYWORDS of each)' }); }
   }
   // a leader: the unit it leads must be one GW's LEADER section names
   if (u.leads && G.leader.length && !G.leader.some(x => lc(x) === lc(u.leads))) want(u.name, 'leads ' + u.leads, 'GW’s LEADER section (' + G.files[0] + ') does not name it');
@@ -1102,9 +1292,6 @@ if (!F) {
   for (const r of W) {
     if (!ruleNames.some(n => lc(n) === lc(r.name)) && !lc(detText).includes(lc(r.name)) && !kws.has(lc(r.name)) && !heads(r).some(t => abText.includes(lc(t)))) continue;
     const ar = { name: typo(r.name) };
-    // the Feel No Pain it gives the units that have it, with its condition, as the "When targeted" line says it (def)
-    const fnp = /\bwith this ability have \**Feel No Pain (\d\+)\** against \**([^.*]+?)\**\./i.exec(r.lines.join(' '));
-    if (fnp) { ar.def = 'Feel No Pain ' + fnp[1] + ' against ' + fnp[2]; filled.push({ what: 'army rule ' + r.name + ' def: ' + ar.def, from: 'its words ("units with this ability have Feel No Pain … against …")' }); }
     ar.text = ruleLines(r.lines).join('\n');
     // a FAQ GW's Faction Pack prints about it (its Rules Updates), quoted: verify/sources/hand/<army>.json armyRules.<name>.faq, each
     // "*FAQ (Faction Pack 1.2): <question> <answer>*" (verify/texts.js checks it in the pack)
@@ -1113,9 +1300,6 @@ if (!F) {
     { const fx = ((HAND.armyRules || {})[ar.name] || {}).texts;
       if (fx) { if (ar.text.split(fx.from).length !== 2) want('army rule ' + ar.name, 'hand file text', 'its words are not there exactly once'); else { ar.text = ar.text.replace(fx.from, fx.to); handDone.push({ what: 'GW’s words in ' + ar.name, by: 'hand (Claude)', text: fx.why }); } } }
     for (const q of ((HAND.armyRules || {})[ar.name] || {}).faq || []) { ar.text += '\n' + q; handDone.push({ what: 'FAQ on ' + ar.name, by: 'hand (Claude), quoted', text: q }); }
-    // the Damage tab's reading of the rule, written by hand (verify/sources/hand/<army>.json armyRules: calcMods, both, limit)
-    const ha = (HAND.armyRules || {})[ar.name];
-    if (ha && (ha.calcMods || ha.both || ha.limit)) { for (const k of ['calcMods', 'both', 'limit']) if (ha[k]) ar[k] = ha[k]; handDone.push({ what: 'Damage-tab reading of ' + ar.name, by: ha.by, text: (ha.calcMods || []).map(m => m.from + ': ' + m.note).join('; ') + (ha.both ? '; both with ' + ha.both.map(b => b.strat || b.enhancement || b.ability).join(', ') : '') }); }
     facSrc.armyRules.push(ar);
     filled.push({ what: 'army rule ' + r.name, from: 'Wahapedia ' + factionId + '.txt (Army Rules)' });
   }
@@ -1166,11 +1350,15 @@ if (argv.includes('--emit')) {
 const army = { id: armyId, name: typo(nm(R.name)), faction: factionId, points: +bsm[2] || null, pointsUsed: ptsOf(R), battleSize: bsm[1] || null, disposition, detachments: detIds };
 if (Object.keys(config).length) army.config = config;
 // the export carries no date: the day it was committed (git), else the file's
-const gitDate = spawnSync('git', ['log', '-1', '--format=%cs', '--', path.relative(ROOT, path.resolve(srcFile))], { cwd: ROOT, encoding: 'utf8' }).stdout.trim();
+// (a copy of the folder without git, verify/reimport.js's: the git of the folder it copies, KODEX_GIT_ROOT)
+const gitDate = spawnSync('git', ['log', '-1', '--format=%cs', '--', path.relative(ROOT, path.resolve(srcFile))], { cwd: process.env.KODEX_GIT_ROOT || ROOT, encoding: 'utf8' }).stdout.trim();
 const dt = gitDate ? new Date(gitDate + 'T12:00:00Z') : fs.statSync(srcFile).mtime;
 const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 army.source = 'New Recruit, exported ' + dt.getUTCDate() + ' ' + MON[dt.getUTCMonth()] + ' ' + dt.getUTCFullYear() + ' (JSON)';
 filled.push({ what: 'source date ' + army.source, from: gitDate ? 'the commit that added ' + path.basename(srcFile) + ' (the export has no date)' : 'the file date (the export has no date)' });
+// (the hand file's source, where the list was first imported from New Recruit's PDF of the same list, which prints the day it was
+// exported: that line, as the list has always shown it)
+if (HAND.source) { army.source = HAND.source.text; handDone.push({ what: 'source ' + army.source, by: 'hand (Claude)', text: HAND.source.why || '' }); }
 
 // ---------------------------------------------------------------- --compare: the reading against a list data.js already has
 if (flag('--compare')) {
@@ -1264,7 +1452,9 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
     // abilities: the row's, in its order, then the list's own (an enhancement's); a part's in the place its abilities had
     const mineAbs = u.abilities.filter(a => !multi || a.who === pn), out = [];
     for (const sa of S.abilities || []) {
+      // (one datasheet: by its name, its who this reading's, "Crimson King: pick one" where the row has another list's)
       let i = mineAbs.findIndex(a => a.name === sa.name && (multi || (a.who || null) === (sa.who || null)));
+      if (i < 0 && !multi) i = mineAbs.findIndex(a => a.name === sa.name && !(S.abilities || []).some(x => x !== sa && x.name === sa.name));
       // (the row's ability under another name, word for word the same: Wahapedia's "Unnatural Resilience" for the row's (BSData's)
       // "Unnatural Resistance"; GW's name, below, else the row's is kept and the difference listed)
       const bareT = t => lc(plainBS(t)).replace(/[^a-z0-9]+/g, ' ').trim();
@@ -1273,8 +1463,12 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
       // (a row ability this reading lacks is carried only where another list shows it: one the catalogue alone gave the row, a
       // datasheet's Leader text no list's unit has, stays off the list, as for every list (docs/catalog.md: what a list shows does not change))
       if (!a && !(HAND.keptRows || []).includes(key) && !D.armies.some(ar => ar.id !== armyId && ar.units.some(x => (x.name === S.name || x.leads === S.name || (x.also || []).some(c => c.name === S.name))
-        && (x.abilities || []).some(y => y.name === sa.name && (!y.who || y.who === S.name))))) {
+        && (x.abilities || []).some(y => y.name === sa.name && (!y.who || y.who === S.name || /: pick one$/.test(y.who)))))) {
         note('ability ' + sa.name + ' (the catalogue’s: no list shows it, not carried)', 'on the row', 'not in this reading'); continue; }
+      // (nor where this list, as data.js has it, does not show it: a re-import gives the list what it shows (docs/catalog.md); the row's
+      // Leader ability, which Emperor's Chosen shows for Trajann Valoris and Lite Knights does not)
+      { const A0u = ((D.armies.find(x => x.id === armyId) || {}).units || []).find(x => x.id === u.id);
+        if (!a && A0u && !(A0u.abilities || []).some(y => y.name === sa.name)) { note('ability ' + sa.name + ' (this list does not show it, not carried)', 'on the row', 'not in this reading'); continue; } }
       // (GW's name and words, where this reading has them from GW's datasheet and the row has others, BSData's: GW's, for the row too;
       // markup alone, ** **, keeps the row's)
       const gwName = a && a._gw && a.name !== sa.name, gwText = a && a._gw && a.text !== undefined && String(a.text).replace(/\*\*/g, '') !== String(sa.text || '').replace(/\*\*/g, '');
@@ -1285,7 +1479,7 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
         if (!same(a[k], sa[k])) note('ability ' + sa.name + ' ' + k, sa[k], a[k]);
       }
       if (!a) note('ability ' + sa.name, 'on the row', 'not in this reading');
-      const o = Object.assign({}, sa); if (multi) o.who = pn;
+      const o = Object.assign({}, sa); if (multi) o.who = pn; else if (a) { if (a.who) o.who = a.who; else delete o.who; }
       if (gwName) { o.name = a.name; gwRows.push({ unit: u.id, key, what: 'ability ' + sa.name + ' name', row: sa.name, gw: a.name }); }
       if (gwText) { o.text = a.text; gwRows.push({ unit: u.id, key, what: 'ability ' + a.name + ' text', row: sa.text, gw: a.text }); }
       // (a note that names another list's detachment rule, Singular Purpose's "With Enraged Behemoths’ …": that list's, not carried)
@@ -1301,6 +1495,8 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
     // the Rules line: the row's, then a rule only this list's units bring (its wargear's or enhancement's); a part's row: its rules
     // stay in the unit's line (the other part's too)
     if (S.rules) {
+      // (a rule the row spells otherwise, New Recruit's straight apostrophe in "Martial Ka'tah": the row's spelling, one rule)
+      u.rules = uniq(u.rules.map(r => S.rules.find(x => typo(x) === typo(r)) || r));
       const extra = u.rules.filter(r => !S.rules.includes(r)), lost = S.rules.filter(r => !u.rules.includes(r));
       if (lost.length) note('rules', S.rules.join(', '), u.rules.join(', '));
       if (!multi) {
@@ -1323,38 +1519,76 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
 // ---------------------------------------------------------------- the hand file's unit columns (verify/sources/hand/<army>.json units)
 // an ability's When targeted line (def, AI-written, with its fingerprint), the unit's weapon footnotes (mods) and auras, and a stats
 // value a rule of the list gives that the export does not show (the Impulsor's Shield Dome 5+ InSv)
+// a model on a base of its own for its wargear (GW's base size guide: "Skitarii Rangers/Skitarii Vanguard: Transuranic Arquebus  60x35.5mm
+// Oval Base"): its stats row's baseWith { <wargear>: <base> }, as Bases & proxies counts it (verify/bases.js checks it)
+{
+  const G0 = baseGuide.guide(), secRows = secs => [].concat(secs).flatMap(x => { const k = Object.keys(G0.factions).find(y => baseGuide.norm(y) === baseGuide.norm(x)); return k ? G0.factions[k] : []; });
+  for (const u of units) for (const p of u._parts) {
+    const ally = allyByName.get(nm(p.name)), rowsG = secRows(ally ? (FJ[ALLIES[ally]] || {}).baseGuide || ally : (FJ[factionId] || {}).baseGuide || facName)
+      .filter(g => g.models && g.models.units.some(x => baseGuide.loose(x) === baseGuide.loose(nm(p.name))) && g.models.models.length);
+    for (const g of rowsG) for (const gear of uniq(u.gear.flat())) {
+      if (!g.models.models.some(x => baseGuide.loose(x) === baseGuide.loose(gear))) continue;
+      const mine = u.stats.filter(r => r._part === p); const r = mine.length === 1 ? mine[0] : null;
+      if (!r || r.base === g.base) continue;
+      r.baseWith = Object.assign(r.baseWith || {}, { [gear]: g.base });
+      filled.push({ what: u.name + ' · ' + r.name + ' baseWith ' + gear + ': ' + g.base, from: G0.file + ' line ' + g.line + ' ("' + g.name + '  ' + g.printed + '")' });
+    }
+  }
+}
+// an enhancement whose words give the bearer an invulnerable save ("The bearer has a 5+ invulnerable save.", Sanctuary), better than the
+// row's (or the same against all attacks where the datasheet's is against ranged attacks only, "5+*"): the row's InSv, marked as that
+// enhancement's (from), with what New Recruit prints (printed): BSData's enhancement changes no InSv (deviations-nr.json declares it)
+// (the bearer's row only: the stats row of the part that has the enhancement, when that part has one row)
+for (const u of units) {
+  for (const ab of u.abilities.filter(a => a._e)) {
+    const m = /\bThe bearer has an? (\d)\+ invulnerable save\.(?!\S)/.exec(bare(ab.text || '')); if (!m) continue;
+    const rows = u.stats.filter(r => r._part === ab._part);
+    if (rows.length !== 1) { want(u.name + ' · ' + ab.name, 'InSv', 'the bearer’s stats row is not one row of its part: set by hand'); continue; }
+    for (const r of rows) {
+      const cur = String(r.InSv || '–'), n = parseInt(cur, 10);
+      if (!(isNaN(n) || n > +m[1] || (n === +m[1] && /\*$/.test(cur)))) continue;
+      r.printed = Object.assign(r.printed || {}, { InSv: cur }); r.InSv = m[1] + '+'; r.from = Object.assign(r.from || {}, { InSv: ab.name });
+      filled.push({ what: u.name + ' · ' + r.name + ' InSv ' + r.InSv + ' (New Recruit: ' + cur + ')', from: ab.name + ': “' + m[0] + '”' });
+    }
+  }
+}
 const handKw = [], handStats = [];
+// (an ability by its name, or, where two parts of the unit have one of that name, "<name> / <who>")
+const handAb = (u, an) => { const m = /^(.*) \/ ([^/]+)$/.exec(an); return m ? u.abilities.find(a => a.name === m[1] && a.who === m[2]) : u.abilities.find(a => a.name === an); };
 for (const [uid, h] of Object.entries(HAND.units || {})) {
   const u = units.find(x => x.id === uid);
   if (!u) { want(uid, 'hand file', 'verify/sources/hand/' + armyId + '.json names a unit the list does not have'); continue; }
-  for (const [an, d] of Object.entries(h.defs || {})) {
-    const ab = u.abilities.find(a => a.name === an);
-    if (!ab) { want(uid + ' · ' + an, 'hand file def', 'no ability of this name'); continue; }
-    const t = ab.text; delete ab.text; ab.def = d.def; ab.text = t; if (d.defOf) ab.defOf = d.defOf;
-    handDone.push({ what: 'When targeted line of ' + u.name + ' · ' + an, by: d.by, text: d.def });
-  }
   // (GW's words where Wahapedia's transcription differs, texts: applied before the datasheet rows are compared, above)
   // why an ability does nothing in this list, when that is certain (na: { <ability>: why }: the Destrier's Thundercharge without its weapons)
   for (const [an, why] of Object.entries(h.na || {})) {
-    const ab = u.abilities.find(a => a.name === an);
+    const ab = handAb(u, an);
     if (!ab) { want(uid + ' · ' + an, 'hand file na', 'no ability of this name'); continue; }
     const t = ab.text; delete ab.text; ab.na = why; ab.text = t;
     handDone.push({ what: 'na on ' + u.name + ' · ' + an, by: 'hand (Claude)', text: why });
   }
   for (const [an, note] of Object.entries(h.notes || {})) {
-    const ab = u.abilities.find(a => a.name === an);
+    const ab = handAb(u, an);
     if (!ab) { want(uid + ' · ' + an, 'hand file note', 'no ability of this name'); continue; }
     const t = ab.text; delete ab.text; ab.note = note; ab.text = t;
     handDone.push({ what: 'note on ' + u.name + ' · ' + an, by: 'hand (Claude)', text: note });
   }
   // the keywords note where its reasons are more than the parts' (kwNote: a keyword a rule of the list gives, Sneaky Little Gitz' BATTLELINE)
   if (h.kwNote) { u.kwNote = h.kwNote; handDone.push({ what: 'kwNote of ' + u.name + ': ' + h.kwNote, by: 'hand (Claude)', text: h.why || '' }); }
+  // the unit's short name on the screen (short: "Daemon Prince" for the Daemon Prince of Khorne), its note on its sources (srcNote:
+  // { at, note }), and which model has a keyword or a core ability only some of its models have (kwOnly / partialRules: { <keyword or
+  // rule>: <model> }, the whole column, null for none) where GW's datasheet pages do not give it mechanically (Sir Hekhtur's)
+  for (const k of ['short', 'srcNote', 'kwOnly', 'partialRules']) if (h[k] !== undefined) {
+    if (h[k] === null) delete u[k]; else u[k] = JSON.parse(JSON.stringify(h[k]));
+    handDone.push({ what: k + ' of ' + u.name + ': ' + JSON.stringify(h[k]), by: 'hand (Claude)', text: (h.whyCols || {})[k] || h.why || '' });
+  }
   for (const [rn, vals0] of Object.entries(h.stats || {})) {
     const r = u.stats.find(x => x.name.replace(/ ×\d+$/, '') === rn);
     if (!r) { want(uid + ' · ' + rn, 'hand file stats', 'no stats row of this name'); continue; }
     // (its reason, `from`: the rule that gives the value, shown on the screen as for a "+" mark; { InSv: 'Soul Forge Boons' })
-    const vals = Object.assign({}, vals0); delete vals.from;
+    // (and what New Recruit prints for it, printed, where BSData's modifiers do not give the value: the Destrier's InSv 5+* before Sanctuary)
+    const vals = Object.assign({}, vals0); delete vals.from; delete vals.printed;
     if (vals0.from) r.from = Object.assign(r.from || {}, vals0.from);
+    if (vals0.printed) r.printed = Object.assign(r.printed || {}, vals0.printed);
     for (const k of Object.keys(vals)) if (r[k] !== undefined && r[k] !== vals[k] && !(r.own && k in r.own)) r.own = Object.assign(r.own || {}, { [k]: r[k] });
     Object.assign(r, vals); handDone.push({ what: 'stats ' + u.name + ' · ' + rn + ': ' + JSON.stringify(vals), by: 'hand (Claude)', text: h.why || '' });
     // (a value BSData's modifiers do not give either: declared with the hand file's evidence, statsEvidence)
@@ -1365,58 +1599,22 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
   for (const k of (h.kw || {}).drop || []) { const i = u.kw.indexOf(k); if (i < 0) { want(uid + ' · ' + k, 'hand file kw.drop', 'no keyword of this name'); continue; } u.kw.splice(i, 1); handDone.push({ what: 'keyword ' + k + ' of ' + u.name + ' left out', by: 'hand (Claude)', text: h.kw.why }); }
   for (const k of (h.kw || {}).add || []) { if (!u.kw.includes(k)) { u.kw.push(k); } handKw.push({ unit: uid, kw: k, why: h.kw.why, evidence: h.kw.evidence }); handDone.push({ what: 'keyword ' + k + ' of ' + u.name, by: 'hand (Claude)', text: h.kw.why }); }
 }
-// ---------------------------------------------------------------- the readings (docs/tables.md, Readings)
-// A reading (a footnote, mods; an aura; a guard line) is on the row of the rule it reads: a datasheet's ability's on its DATASHEETS
-// row, an army or detachment rule's on its row, an enhancement's on the enhancement. A row's readings: the hand file's (readings:
-// { datasheets, rules, enhancements } by name, each { mods, aura, guard } in its order), else the ones data.js has on that row
-// (another list's, or this list's from an earlier run); a datasheet's abilities none of those read that verify/derive.js's fixed
-// rules read (readingsOf: a Damaged ability, a riled-up weapon ability, a charge bonus) get the derived reading (readBy). Each unit
-// gets its rows' readings in the order data.js resolves them (verify/tables.js: the army rules on its Rules line, each datasheet of
-// the unit, its enhancement, the detachment rules whose needs it meets), then its own (the hand file's units.<id>.mods / aura / guard;
-// a name in that list stands for the rows' readings of that name, the list being the unit's whole list in its order). The list is
-// written in the old form; verify/tables.js --write then keeps each reading on its row (two lists reading one rule otherwise: listed).
+// ---------------------------------------------------------------- an ability row's own fingerprint (readOf)
+// (the readings a hand file once wrote, footnotes, auras and guard lines, and the When targeted lines, def, are retired: data.js BOXES
+// has every list's, made from GW's words by verify/effects-extract.js; an ability keeps the fingerprint data.js's row has for the same
+// words, readOf)
 {
-  const HR = HAND.readings || {}, READ = ['guard'], F0 = (D.factions || {})[factionId] || facSrc || {};
-  const { readingsOf, vocab, ruleNeeds, tidyNeeds } = require('./derive'), T = require('./tables');
-  // (a detachment rule this run adds has no needs yet: the labels step below writes the ones verify/derive.js reads from its words, on
-  // data.js as written; the same reading here, on data.js's other lists and this one, so a first --write gives the final readings)
-  const fresh = r => Object.values(facSrc.detachments || {}).some(d => d.rule === r || (d.moreRules || []).includes(r));
-  const V0 = vocab({ armies: D.armies.filter(a => a.id !== armyId).concat([{ units }]), factions: Object.assign({}, D.factions, { [factionId]: { name: ((D.factions || {})[factionId] || {}).name || typo(catName.replace(/^.* - /, '')) } }) });
-  const needsNow = r => { if (!fresh(r) || r.needs !== undefined) return r.needs; const dn = ruleNeeds(V0, r); return dn.needs ? tidyNeeds(dn.needs) : undefined; };
-  const nmR = s => String(s).toLowerCase().replace(/[’‘]/g, "'"), hasN = (l, x) => (l || []).some(y => nmR(y) === nmR(x));
-  const meets = (n, u) => !n || (!n.all || n.all.every(k => hasN(u.kw, k))) && (!n.any || n.any.some(k => hasN(u.kw, k))) && !(n.none || []).some(k => hasN(u.kw, k)) && (!n.rule || n.rule.some(r => hasN(u.rules, r)));
   const dsRow = name => Object.values(D.datasheets || {}).find(S => S.faction === factionId && S.name === nm(name));
-  const pick = (hand, row, kind) => hand && hand[kind] ? hand[kind] : row && row[kind] ? row[kind] : [];
-  const coreText = name => { if (D.rules[name]) return D.rules[name]; const k = ((D.ruleAliases || []).find(([re]) => re.test(name)) || [])[1]; return k && D.rules[k] && /\d/.test(name) ? name + ': ' + D.rules[k] : null; };
   for (const u of units) {
-    // (a detachment this run adds to a faction data.js has: its row from this run)
-    const h = (HAND.units || {})[u.id] || {}, dets = army.detachments.map(id => (F0.detachments || {})[id] || facSrc.detachments[id]).filter(Boolean);
     const parts = [u.name].concat((u.also || []).map(x => x.name), u.leads ? [u.leads] : []);
-    // an ability row's own readings (riled, damaged, defCalc, …): the fingerprint data.js's row has for the same words
+    // (a rule the list's own row spells otherwise, New Recruit's straight apostrophe in "Martial Ka'tah": the row's spelling, as for a row
+    // another list has, above)
+    { const rs = parts.flatMap(pn => (dsRow(pn) || {}).rules || []); u.rules = uniq(u.rules.map(r => rs.find(x => typo(x) === typo(r)) || r)); }
+    // (GW's words as a row of data.js has them, where they are this reading's but for markup and layout, verify/gw-order.js norm: the
+    // row's, as verify/tables.js --write keeps them (Bloody Fury's paragraphs, a bold "**Hit roll**"))
+    for (const ab of u.abilities) for (const pn of parts) { const row = dsRow(pn), sa = row && (row.abilities || []).find(x => x.name === ab.name && x.text !== ab.text && typeof x.text === 'string' && GWO.norm(x.text) === GWO.norm(ab.text)); if (sa) { ab.text = sa.text; break; } }
     for (const ab of u.abilities) for (const pn of parts) { const row = dsRow(pn), sa = row && (row.abilities || []).find(x => x.name === ab.name && x.text === ab.text && x.readOf); if (sa && ab.readOf === undefined) { ab.readOf = sa.readOf; break; } }
-    const enh = dets.flatMap(d => d.enhancements || []).find(e => e.name === u.enhancement || e.name === u.upgrade);
-    for (const kind of READ) {
-      const t = [];
-      for (const r of F0.armyRules || []) if (hasN(u.rules, r.name)) t.push(...pick((HR.rules || {})[r.name], r, kind));
-      parts.forEach((pn, i) => {
-        const hand = (HR.datasheets || {})[pn], row = dsRow(pn), have = pick(hand, row, kind);
-        t.push(...have);
-        // (derived: only a single datasheet's own abilities, the ones with no reading of their own here)
-        if (kind !== 'mods' || hand && !hand.derive) return;
-        if (row && row.mods) return;
-        const own = u.abilities.filter(a => !/\b(Enhancement|Upgrade)\b/.test(a.tag || '') && (parts.length === 1 || a.who === pn));
-        const texts = own.map(a => [a.text, a.name]).concat(i === 0 ? u.rules.map(r => [coreText(r), r]).filter(x => x[0]) : []);
-        for (const [text, name] of texts) { if (have.some(m => m.from === name)) continue; const d = readingsOf(text, name); if (d) t.push(...d.mods.map(m => Object.assign({}, m, { readOf: T.fp(text), readBy: 'derive' }))); }
-      });
-      if (enh) t.push(...pick((HR.enhancements || {})[enh.name], enh, kind));
-      for (const d of dets) for (const r of [d.rule].concat(d.moreRules || [])) if (r && meets(needsNow(r), u)) t.push(...pick((HR.rules || {})[r.name], r, kind));
-      const mine = h[kind];
-      const list = mine === null ? [] : !mine ? t : mine.some(x => typeof x === 'string') ? mine.flatMap(x => typeof x === 'string' ? t.filter(m => m.from === x) : [x]) : t.concat(mine);
-      if (list.length) u[kind] = JSON.parse(JSON.stringify(list)); else delete u[kind];
-      if (mine && mine.some(x => typeof x !== 'string')) handDone.push({ what: kind + ' of ' + u.name + ' (its own)', by: 'hand (Claude)', text: mine.filter(x => typeof x !== 'string').map(m => m.from + ': ' + m.note).join('; ') });
-    }
   }
-  for (const [k, by] of Object.entries(HR)) if (k !== '_about') for (const [n, r] of Object.entries(by)) handDone.push({ what: 'readings of ' + n + ' (' + k + ')', by: 'hand (Claude)', text: READ.flatMap(kd => (r[kd] || []).map(m => m.from + ': ' + m.note)).join('; ') });
 }
 // a reference sheet's reason (ref: { by, rule, quote }): the ability of a unit of the list whose words add a unit of its keyword to the
 // army ("you can add one new SPORE MINES unit to your army", Seed Spore Mines), quoted as GW prints it
@@ -1453,12 +1651,15 @@ for (const h of (HAND.refs || []).filter(x => x.of)) {
     stats: [Object.assign(JSON.parse(JSON.stringify(src.stats[0])), { name: h.model })], ranged, melee, abilities: JSON.parse(JSON.stringify(src.abilities.filter(a => !h.abilities || h.abilities.includes(a.name)))),
     rules: src.rules.slice(), kw: src.kw.filter(k => !(h.dropKw || []).includes(k)) };
   for (const [an, note] of Object.entries(h.notes || {})) { const ab = u.abilities.find(a => a.name === an); if (!ab) { want(h.name + ' · ' + an, 'hand file note', 'no ability of this name'); continue; } const t = ab.text; delete ab.text; ab.note = note; ab.text = t; }
+  // (no GW page of its own to order its keywords: the order data.js's row of it has, where its keywords are the same)
+  { const row = Object.values(D.datasheets || {}).find(S => S.faction === factionId && S.name === h.name);
+    if (row && Array.isArray(row.kw) && JSON.stringify([...row.kw].sort()) === JSON.stringify([...u.kw].sort())) u.kw = row.kw.slice(); }
   hide(u, { _ref: true, _at: src._at }); u._parts = [];
   units.splice(units.indexOf(src) + 1, 0, u);
   handDone.push({ what: 'reference sheet ' + h.name + ' (from ' + h.of + ')', by: 'hand (Claude)', text: JSON.stringify(h.ref) });
 }
-const abOrder = ['name', 'who', 'tag', 'damaged', 'at', 'ph', 'turn', 'turns', 'def', 'na', 'text'];
-for (const u of units) { for (const ab of u.abilities) { delete ab._bs; delete ab._e; delete ab._part; } delete u._parts; }
+const abOrder = ['name', 'who', 'tag', 'damaged', 'at', 'ph', 'turn', 'turns', 'na', 'text'];
+for (const u of units) { u.abilities = u.abilities.filter(a => !a._detRule); for (const ab of u.abilities) { delete ab._bs; delete ab._e; delete ab._part; } delete u._parts; }
 const armySrc = () => '{\n' + ['id', 'name', 'faction', 'points', 'pointsUsed'].map(k => k + ':' + lit(army[k])).join(', ').replace(/^/, '  ') + ',\n' +
   '  battleSize:' + lit(army.battleSize) + ', disposition:' + lit(army.disposition) + ',\n' +
   '  detachments:' + lit(army.detachments) + ',\n' + (army.config ? '  config:' + lit(army.config) + ',\n' : '') + '  source:' + lit(army.source) + ',\n  units:[\n' + units.map(u => { const v = Object.assign({}, u); delete v._at; return unitSrc(v); }).join(',\n') + '\n  ]\n},\n';
@@ -1561,9 +1762,13 @@ const newDs = [...dsWant].filter(l => !listed.has(l.toLowerCase()));
 if (newDs.length) { fs.appendFileSync(dsList, newDs.join('\n') + '\n'); filled.push({ what: 'verify/sources/waha-datasheets.txt: ' + newDs.join(', '), from: 'the units’ names (Wahapedia addresses as the faction page links them)' }); }
 
 // labels: derive.js on what is now in data.js; written where it derives one, listed where it cannot
+// (the labels data.js had for this list before this run: where derive.js read them as it reads the words now, "identical", their form
+// is kept: { turn:'either', turns:{ movement:'your', shooting:'your' } } and { turn:'your', turns:{ fight:'either' } } are one label)
+const D_OLD = D;
 D = loadD();
 const derive = require('./derive');
 const items = derive.derive(D);
+const oldItems = new Map(derive.derive(D_OLD).filter(it => it.where.startsWith(armyId + ' · ') && it.status === 'identical').map(it => [it.kind + '|' + it.where, it]));
 const mineWhere = it => it.where.startsWith(armyId + ' · ') || (Object.keys(facSrc.detachments).some(id => it.where.startsWith(D.factions[factionId].name + ' · ' + facSrc.detachments[id].name + ' ')) ) || (!F && it.where.startsWith(D.factions[factionId].name + ' '));
 const labels = items.filter(it => !it.coverage && mineWhere(it) && (!REFS || refNames.has(String(it.where.split(' · ')[1] || '').replace(/ \[.*\]$/, ''))));
 d = fs.readFileSync(DATA, 'utf8');
@@ -1599,7 +1804,7 @@ for (const it of labels) {
   if (it.kind === 'ability-timing') {
     // (a Damaged band, an always-on protection, a text opening "Each time an enemy unit … targets this model": verify/derive.js reads
     // no label for them, label-damaged and label-no-defence)
-    const o = lab(it.derived); if (!Object.keys(o).length) continue;
+    const was = oldItems.get(it.kind + '|' + it.where), o = was && JSON.stringify(was.derived) === JSON.stringify(it.derived) ? lab(Object.assign({}, was.stored, { ph: was.stored.ph || was.stored.phases })) : lab(it.derived); if (!Object.keys(o).length) continue;
     const [, uName, ...rest] = it.where.split(' · '); const abName = rest[rest.length - 1].replace(/ #\d+$/, '');
     const u = D.armies.find(a => a.id === armyId).units.find(x => x.name === uName.replace(/ \[.*\]$/, '') && (!/\[/.test(uName) || x.id === /\[(.*)\]/.exec(uName)[1]));
     const us = d.indexOf("      id:'" + u.id + "',", aStart());
@@ -1607,7 +1812,7 @@ for (const it of labels) {
     const after = d.indexOf(', ', ai + 8 + lit(abName).length) ;
     // after name (and who, tag): insert the labels before text
     // (before its When targeted line when it has one: data.js's order is ph, turn, turns, def, text)
-    const ti0 = d.indexOf(" text:'", ai), cand = [" note:'", " def:'"].map(x => d.indexOf(x, ai)).filter(x => x >= 0 && x < ti0), ti = cand.length ? Math.min(...cand) : ti0;
+    const ti0 = d.indexOf(" text:'", ai), cand = [" note:'"].map(x => d.indexOf(x, ai)).filter(x => x >= 0 && x < ti0), ti = cand.length ? Math.min(...cand) : ti0;
     d = d.slice(0, ti) + ' ' + litKV(o) + ',' + d.slice(ti);
     filled.push({ what: 'label ' + it.where + ': ' + JSON.stringify(o), from: 'verify/derive.js ' + (it.reasons || []).map(r => r.rule).join(', ') });
   } else if (it.kind === 'ability-tag') {
@@ -1625,7 +1830,8 @@ for (const it of labels) {
     // an enhancement whose words add a limit after its "… model only." restriction ("Once per turn, just after making a Hit roll …",
     // Pledge of Unholy Fortune): the export's "Enhancement" and the limit, as the approved lists store Necromechanic's
     // "Enhancement · Once per battle round" (review result-derive.json 209e61b314704242)
-    { const parts = String(it.derived || '').split(/\s*[,·]\s*/), lim = parts.filter(x => /^Once per /i.test(x));
+    // (and its limit per army: "Once per battle, per army", Archslaughterer's, one limit)
+    { const parts = String(it.derived || '').replace(/(Once per [a-z ]+?), (per army)\b/gi, '$1\u0001$2').split(/\s*[,·]\s*/).map(x => x.replace(/\u0001/g, ', ')), lim = parts.filter(x => /^Once per /i.test(x));
       if (it.stored === 'Enhancement' && parts[0] === 'Enhancement' && lim.length === 1 && parts.length === 2) {
         const at = abAt(it), row = at && at.ai >= 0 ? d.slice(at.ai, d.indexOf(' }', at.ai)) : '';
         if (row.includes("tag:'Enhancement',")) { const k = at.ai + row.indexOf("tag:'Enhancement',"); d = d.slice(0, k) + "tag:" + lit('Enhancement · ' + lim[0]) + ',' + d.slice(k + "tag:'Enhancement',".length);
@@ -1718,7 +1924,11 @@ for (const f of fails) {
     else if (missing && !gw.some(x => lc(x) === lc(typo(missing)))) { reason = pinS + ' gives the unit ' + missing + '; GW’s datasheet does not print it (' + expS + (u._exportRules && u._exportRules.some(x => lc(x) === lc(typo(missing))) ? ' has it too' : ' does not have it either') + '). GW wins.'; evidence = G.files.join(', ') + ': CORE ABILITIES / ARMY RULES "' + G.core.concat(G.army).join(', ') + '".'; }
   } else if (f.field === 'kw') {
     const rec = gwDevs.find(x => x.unit === f.unit && x.kind === 'kw' && x.app === f.app), hk = handKw.find(x => x.unit === f.unit && x.kw === f.app);
+    // (a keyword of the export GW's datasheet prints under another name or only as a faction keyword, gwDevs app null with its why:
+    // BSData's ANATHEMA PSYKANA category beside Faction: Anathema Psykana, its GRENADES for GW's EXPLOSIVES)
+    const recOut = !f.app && f.source && gwDevs.find(x => x.unit === f.unit && x.kind === 'kw' && x.app === null && x.why && gwKw(x.bsdata || '') === gwKw(f.source));
     if (hk) { reason = hk.why + ' ' + pinS + ' and ' + expS + ' do not give it. GW wins.'; evidence = hk.evidence; }
+    else if (recOut) { reason = pinS + ' gives the unit the category ' + f.source + '; ' + recOut.why + '. GW wins.'; evidence = recOut.file.split(', ').map(x => 'verify/.cache/waha/ds/' + x).join(', ') + ': KEYWORDS, FACTION KEYWORDS.'; }
     else if (rec) { reason = 'GW’s datasheet has the keyword ' + rec.app.toUpperCase() + '; ' + pinS + ' and ' + expS + ' do not. GW wins.'; evidence = 'verify/.cache/waha/ds/' + rec.file + ': KEYWORDS.'; }
     else {
       // a keyword GW's datasheet prints that the export has (a newer catalogue) and the pin does not (FRAME), or a category the pin
@@ -1743,13 +1953,45 @@ fs.writeFileSync(DEVF, JSON.stringify(inPlace(devList, devAt), null, 1) + '\n');
 spawnSync(process.execPath, [path.join(ROOT, 'verify/nr.js'), '--quiet'], { cwd: ROOT, encoding: 'utf8' });
 const NRDEVF = path.join(ROOT, 'verify/deviations-nr.json');
 const nrDevs = JSON.parse(fs.readFileSync(NRDEVF, 'utf8')).filter(x => !ours(x));
-for (const f of (JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/out/nr.json'), 'utf8')).failures || []).filter(f => f.army === armyId && (!REFS || refIds.has(f.unit)))) {
+const nrFails = (JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/out/nr.json'), 'utf8')).failures || []).filter(f => f.army === armyId && (!REFS || refIds.has(f.unit)));
+// what New Recruit's PDF of the list (verify/sources/nr/<army>.txt, the list as first imported) prints otherwise than its JSON export and
+// GW's datasheets give: each such difference by a fixed reason
+const PDFS = 'New Recruit’s PDF of the list (verify/sources/nr/' + armyId + '.txt)', nrOwn = (f, reason, evidence) => nrDevs.push({ army: f.army, unit: f.unit, field: f.field, app: f.app, source: f.source, reason, evidence, by: 'verify/from-json.js' });
+const nrPlain = l => String(l).replace(/^(\d+)x /, '$1× '), nrLine = l => /^(\d+)[x×] (.*?)(?: \(([^()]*)\))?$/.exec(l);
+const nrModelsUnplaced = (u, src, app) => {
+  // (the PDF's models lines with the wargear the export carries on the unit itself, unplaced, taken out and like lines added up: the app's)
+  if (!u || !u.unplaced || !Array.isArray(src) || !Array.isArray(app)) return false;
+  const out = [];
+  for (const l of src) { const m = nrLine(l); if (!m) return false; const w = (m[3] || '').split(/,\s*/).filter(x => x && !u.unplaced.includes(typo(x))); const k = m[2] + (w.length ? ' (' + w.join(', ') + ')' : ''); const o = out.find(x => x.k === k); if (o) o.n += +m[1]; else out.push({ n: +m[1], k }); }
+  return JSON.stringify(out.map(x => x.n + 'x ' + x.k)) === JSON.stringify(app.map(x => String(x).replace(/×/g, 'x')));
+};
+// (or the other way: the export puts a wargear on one model that the PDF prints apart; both sides without their models' wargear, like
+// lines added up, the same: Pubstomper's Icon of Flame, on one Rubric Marine w/ warpflamer in the export)
+const nrBare = ls => { const out = []; for (const l of ls || []) { const m = nrLine(String(l).replace(/×/g, 'x')); if (!m) return null; const o = out.find(x => x.k === m[2]); if (o) o.n += +m[1]; else out.push({ n: +m[1], k: m[2] }); } return JSON.stringify(out); };
+const nrPlacedUnits = new Set(nrFails.filter(f => f.field === 'models' && Array.isArray(f.app) && Array.isArray(f.source) && nrBare(f.app) && nrBare(f.app) === nrBare(f.source)).map(f => f.unit));
+const nrUnplacedUnits = new Set(nrFails.filter(f => f.field === 'models' && nrModelsUnplaced(units.find(x => x.id === f.unit), f.source, f.app)).map(f => f.unit));
+for (const f of nrFails) {
+  const u = units.find(x => x.id === f.unit) || {};
+  if (nrUnplacedUnits.has(f.unit) && (f.field === 'models' || /^gear\[/.test(f.field))) { nrOwn(f, PDFS + ' prints ' + (u.unplaced || []).join(', ') + ' on a models line; ' + expS + ' carries ' + ((u.unplaced || []).length > 1 ? 'them' : 'it') + ' on the unit itself, not on a model, so the app lists ' + ((u.unplaced || []).length > 1 ? 'them' : 'it') + ' as the unit’s (unplaced), its models lines added up as the export gives them; GW’s datasheet lets any one model carry it ("1 model can be equipped with …").', EXP + ': the unit’s own selections; ' + (f.where || PDFS) + '.'); continue; }
+  // (a models line's weapons with a weapon the export associates with that model, which the PDF prints apart: the same line otherwise)
+  if (/^gear\[/.test(f.field) && (u._assoc || []).length && Array.isArray(f.app) && Array.isArray(f.source)) {
+    const L = xs => xs.map(x => lc(x)), A = L(f.app), S = L(f.source), extra = A.filter(x => !S.includes(x)), gone = S.filter(x => !A.includes(x)), ag = L(u._assoc.map(x => x.gear));
+    if (!gone.length && extra.length && extra.every(x => ag.includes(x))) { nrOwn(f, PDFS + ' prints ' + u._assoc.filter(x => extra.includes(lc(x.gear))).map(x => x.gear).filter((x, i, l) => l.indexOf(x) === i).join(', ') + ' apart from the models lines; ' + expS + ' associates ' + u._assoc.filter(x => extra.includes(lc(x.gear))).map(x => x.gear + ' with the ' + x.model).join(', ') + ' (the upgrade’s association to that model selection), so the app gives it to those models.', EXP + ': the unit’s selections and their associations; ' + (f.where || PDFS) + '.'); continue; }
+  }
+  if (f.field === 'unplaced' && (u._assoc || []).length) { nrOwn(f, PDFS + ' prints wargear apart from the models lines that ' + expS + ' associates with a model (' + u._assoc.map(x => x.gear + ': the ' + x.model).join(', ') + '); the app gives it to that model.', EXP + ': the unit’s selections and their associations; ' + (f.where || PDFS) + '.'); continue; }
+  if (!nrUnplacedUnits.has(f.unit) && nrPlacedUnits.has(f.unit) && (f.field === 'models' || /^gear\[/.test(f.field))) { nrOwn(f, PDFS + ' prints the unit’s wargear on its models lines otherwise than ' + expS + ', which ' + ((u._assoc || []).length ? 'associates ' + u._assoc.map(x => x.gear + ' with the ' + x.model).join(', ') + ' (the upgrade’s association to that model selection)' : 'puts each on the model whose selection has it') + '; the app’s models lines are the export’s (the same models and weapons).', EXP + ': the unit’s selections and their associations; ' + (f.where || PDFS) + '.'); continue; }
+  // (an ability GW's datasheet prints as a box of its own that the PDF does not, Supreme Commander; one it does not print, Icon of War)
+  const am = /^abilities\[(.*?)(?: \| (.*))?\]$/.exec(f.field);
+  if (am && f.app === 'present' && !f.source) { const rec = devs.find(x => x.unit === f.unit && x.field === 'ability' && x.bsdata == null && x.app === am[1]); if (rec) { nrOwn(f, 'GW’s datasheet prints the ability ' + am[1] + ' (a box of its own); ' + PDFS + ' does not. GW wins.', rec.file + ': "' + am[1] + '".'); continue; } }
+  if (am && !f.app && f.source === 'present') { const rec = devs.find(x => x.unit === f.unit && x.field === 'ability' && x.app == null && x.bsdata === am[1]); if (rec) { nrOwn(f, 'GW’s datasheet does not print the ability ' + am[1] + ' (its abilities are each a box of their own); ' + PDFS + ' prints it. GW wins.', rec.file + ': no ability ' + am[1] + '.'); continue; } }
+  // (a rule GW's datasheet does not print, which the PDF's Rules line has)
+  if (f.field === 'rules' && !f.app && f.source) { const rec = devs.find(x => x.unit === f.unit && x.field === 'rules' && x.app == null && x.name === f.source && x.kind === 'bsdata'); if (rec) { nrOwn(f, PDFS + ' lists ' + f.source + ' on the Rules line; ' + rec.why + '. GW wins.', rec.file + ': CORE ABILITIES / ARMY RULES.'); continue; } }
   const m = /^stats\[(.*)\]\.base$/.exec(f.field), fact = m && gwFacts.get(f.unit + '|stats|' + nm(m[1]) + '|base');
   const nrRule = f.field === 'rules' || /^rules\b/.test(f.field) ? devs.find(x => x.kind === 'nr' && x.unit === f.unit && x.field === 'rules' && (x.name === f.source || String(f.source || '').includes(x.name))) : null;
   // (an allied unit's own faction's army rule, which New Recruit's Rules line has: left out, the reason as in deviations-bsdata.json)
   const allyRule = f.field === 'rules' || /^rules\b/.test(f.field) ? devs.find(x => x.kind === 'ally' && x.unit === f.unit && (x.name === f.source || String(f.source || '').includes(x.name))) : null;
   if (allyRule) { nrDevs.push({ army: f.army, unit: f.unit, field: f.field, app: f.app, source: f.source, reason: expS + ' lists ' + allyRule.name + ' on the Rules line; ' + allyRule.why + ' (the owner’s ruling: a unit taken as an ally or agent does not get its own faction’s army rule, as the Nurglings in Chaos Knights lists have no Shadow of Chaos).', evidence: allyRule.file + ': ARMY RULES "' + allyRule.name + '"; ' + EXP + ': rule ' + allyRule.name + '.', by: 'verify/from-json.js' }); continue; }
-  if (nrRule) { nrDevs.push({ army: f.army, unit: f.unit, field: f.field, app: f.app, source: f.source, reason: expS + ' lists ' + nrRule.name + ' on the Rules line; ' + nrRule.why + ', so the app leaves it off the Rules line (its When targeted line keeps the condition; GW’s datasheet does not print it among CORE ABILITIES). GW wins.', evidence: nrRule.file + '; ' + EXP + ': rule ' + nrRule.name + '.', by: 'verify/from-json.js' }); continue; }
+  if (nrRule) { nrDevs.push({ army: f.army, unit: f.unit, field: f.field, app: f.app, source: f.source, reason: expS + ' lists ' + nrRule.name + ' on the Rules line; ' + nrRule.why + ', so the app leaves it off the Rules line (' + (/^Feel No Pain/i.test(nrRule.name) ? 'its When targeted line keeps the condition; ' : '') + 'GW’s datasheet does not print it among CORE ABILITIES). GW wins.', evidence: nrRule.file + '; ' + EXP + ': rule ' + nrRule.name + '.', by: 'verify/from-json.js' }); continue; }
   if (fact && gwN(fact.gw) === gwN(f.app)) nrDevs.push({ army: f.army, unit: f.unit, field: f.field, app: f.app, source: f.source, reason: expS + ' gives the base as ' + f.source + '; ' + fact.src + ' has ' + fact.gw + '. GW wins (base sizes too).', evidence: fact.file + '; ' + EXP + ': Base ' + f.source + '.', by: 'verify/from-json.js' });
   else want(f.unit + ' ' + f.field, 'verify/nr.js: app ' + JSON.stringify(f.app) + ', export ' + JSON.stringify(f.source), 'no GW evidence from this run: look at it by hand');
 }
@@ -1771,6 +2013,13 @@ for (const args of [['verify/import-ids.js', '--write'], ['verify/bsdata.js', '-
   filled.push({ what: 'table form: ' + (t.stdout || t.stderr).trim().split('\n')[0], from: 'verify/tables.js --write' });
   // (and once more through the old form: the key order of the lists' objects, TABLE_ORDER, is then the one --expand/--write keeps)
   for (const a of ['--expand', '--write']) spawnSync(process.execPath, [path.join(ROOT, 'verify/tables.js'), a], { cwd: ROOT, encoding: 'utf8' });
+}
+// what data.js makes from the words written: the Phase checklist table (CHECKLIST, verify/derive.js --write) and the Damage tab's and the
+// When targeted lines' boxes (BOXES, verify/effects-migrate.js --write), so the list's data.js is whole (the gate's derive, evidence and
+// defence steps check both against the words)
+for (const sc of ['verify/derive.js', 'verify/effects-migrate.js']) {
+  const r = spawnSync(process.execPath, [path.join(ROOT, sc), '--write'], { cwd: ROOT, encoding: 'utf8' });
+  filled.push({ what: (r.stdout || r.stderr || '').trim().split('\n').pop(), from: sc + ' --write' });
 }
 fs.writeFileSync(path.join(ROOT, 'verify/out/from-json-' + armyId + '.md'), report());
 fs.writeFileSync(path.join(ROOT, 'verify/out/from-json-' + armyId + '.json'), JSON.stringify({ todo, filled, devs, modified: bsChecked.modified, datasheets: [...dsWant] }, null, 1) + '\n');

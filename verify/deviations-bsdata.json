@@ -626,32 +626,12 @@
  },
  {
   "army": "nerf-when",
-  "unit": "roboute-guilliman",
-  "field": "ability.text",
-  "app": "Primarch of the XIII: While a friendly **ADEPTUS ASTARTES** unit is within 6\" of this unit, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1.",
-  "source": "While a Friendly ADEPTUS ASTARTES unit is within 6\" of this unit, that unit's attacks can: \n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"While a Friendly ADEPTUS ASTARTES unit is within 6\" of this unit, that unit's attacks can: - Re-roll hit rolls of 1 - Re…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Roboute-Guilliman.html: \"While a friendly ADEPTUS ASTARTES unit is within 6\" of this unit, that unit's attacks can: - Re-roll hit rolls of 1. - Re-roll wound rolls of 1.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "roboute-guilliman",
-  "field": "ability.text",
-  "app": "Codex Adept: The **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit.",
-  "source": "The Assault Doctrine, Devastator Doctrine, and Tactical Doctrine are active for this unit.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"The Assault Doctrine, Devastator Doctrine, and Tactical Doctrine are active for this unit.\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Roboute-Guilliman.html: \"The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
   "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
   "field": "stats.base",
   "app": "Marneus Calgar: 50mm",
   "source": "Marneus Calgar: ~50mm",
-  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has Marneus Calgar: ~50mm; Wahapedia’s datasheet has 50mm; New Recruit’s export (catalogue revision 8) has ~50mm. GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Marneus-Calgar.html: \"(⌀50mm)\"; verify/sources/nr-json/nerf-when.json: ~50mm.",
+  "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has Marneus Calgar: ~50mm; verify/deviations-bases.json (declared) has 50mm; New Recruit’s export (catalogue revision 8) has ~50mm. GW wins.",
+  "evidence": "verify/deviations-bases.json (ultramarines/marneus-calgar · Marneus Calgar); verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3627: \"Marneus Calgar in Armour of Antilochus  50mm\"; verify/sources/nr-json/nerf-when.json: ~50mm.",
   "by": "verify/from-json.js"
  },
  {
@@ -708,79 +688,11 @@
   "army": "nerf-when",
   "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
   "field": "ability.text",
-  "app": "Codex Adept: The **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit.",
-  "source": "The Assault Doctrine, Devastator Doctrine, and Tactical Doctrine are active for this unit.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"The Assault Doctrine, Devastator Doctrine, and Tactical Doctrine are active for this unit.\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Marneus-Calgar.html: \"The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
-  "field": "ability.text",
-  "app": "Bladeguard: In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:\n- This unit’s melee attacks have +1 to **hit rolls**.\n- Or: Attacks that target this unit have -1 to **hit rolls**.",
-  "source": "(Once per turn, per unit): In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:\n\n\n▪ This unit’s melee attacks have +1 to hit rolls.\n▪ Or: Attacks that target this unit have ‑1 to hit rolls.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"(Once per turn, per unit): In the Fight phase, when this unit is selected to fight or when an enemy unit targets this un…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Bladeguard-Veteran-Squad.html: \"In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following: - This unit's melee attacks have +1 to hit rolls. - Or: Attacks that target this unit have -1 to hit rolls…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "marneus-calgar-wardens-of-ultramar-bladeguard-veteran-squad",
-  "field": "ability.text",
   "app": "Furious Assault: **ADEPTUS ASTARTES INFANTRY** unit only. This unit’s melee attacks have **[Sustained Hits 1: non-Monster/Vehicle]**.",
   "source": "Adeptus Astartes Infantry unit only. This unit's melee attacks have [Sustained Hits 1: non-Monster/Vehicle]",
   "reason": "The app has GW’s words: the enhancement as the detachment prints it (Wahapedia, the codex): BSData leaves out its first sentence or words it otherwise (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"Adeptus Astartes Infantry unit only. This unit's melee attacks have [Sustained Hits 1: non-Monster/Vehicle]\"). GW wins.",
   "evidence": "verify/.cache/waha/ultramarines.txt: \"ADEPTUS ASTARTES INFANTRY unit only. This unit's melee attacks have [Sustained Hits 1: non-Monster/Vehicle].\".",
   "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "librarian-in-phobos-armour",
-  "field": "ability.text",
-  "app": "Librarian: This model has the **psychic abilities** listed in the Psychic Abilities section.",
-  "source": "This model has the psychic abilities listed in the Psychic Abilities section (see left).",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"This model has the psychic abilities listed in the Psychic Abilities section (see left).\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: \"This model has the psychic abilities listed in the Psychic Abilities section.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "impulsor",
-  "field": "ability.text",
-  "app": "Rapid Disembarkation: In your Movement phase, when this unit ends an **advance move**, units embarked within this unit can make a **shock disembark move**.",
-  "source": "In your Movement phase, when this unit ends an advance move, units embarked within this unit can make a shock disembark move (pg 157).",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"In your Movement phase, when this unit ends an advance move, units embarked within this unit can make a shock disembark …\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Impulsor.html: \"In your Movement phase, when this unit ends an advance move, units embarked within this unit can make a shock disembark move.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "impulsor",
-  "field": "ability.text",
-  "app": "Shield Dome: This unit has 5+ **InSv**.",
-  "source": "This unit has a 5+ InvSv",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"This unit has a 5+ InvSv\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Impulsor.html: \"This unit has 5+ InSv.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "impulsor",
-  "field": "stats.InSv",
-  "app": "Impulsor: 5+",
-  "source": "Impulsor: ",
-  "reason": "GW’s datasheet: Shield Dome: \"This unit has 5+ InSv.\" The list’s Impulsors take Shield Dome. BSData b4dc3f4 (since 8aac786 \"SM bugs\", 17 Oct 2026) sets the Impulsor profile’s InSv to 5+ only while a Shield Dome is a direct child of the profile’s parent scope (includeChildSelections false); for a root Impulsor selection that scope is the force, so the modifier never applies and BSData (and New Recruit’s export, InSv \"-\") shows no InSv. At the previous pin 173d0ef the condition counted child selections and gave 5+. GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Impulsor.html: ABILITIES \"Shield Dome: This unit has 5+ InSv.\"; BSData Imperium - Space Marines.json, Impulsor profile 2dc8-b989-a231-bb82, InSv modifier condition on Shield Dome 7685-1ab3-8d12-fac7 (scope parent, includeChildSelections false); verify/sources/nr-json/nerf-when.json: Impulsor selections include Shield Dome, profile InSv empty."
- },
- {
-  "army": "nerf-when",
-  "unit": "impulsor",
-  "field": "stats.from",
-  "app": "Impulsor: InSv ← Shield Dome",
-  "source": "(not changed by a rule)",
-  "reason": "GW’s datasheet: Shield Dome: \"This unit has 5+ InSv.\" The list’s Impulsors take Shield Dome. BSData b4dc3f4 (since 8aac786 \"SM bugs\", 17 Oct 2026) sets the Impulsor profile’s InSv to 5+ only while a Shield Dome is a direct child of the profile’s parent scope (includeChildSelections false); for a root Impulsor selection that scope is the force, so the modifier never applies and BSData (and New Recruit’s export, InSv \"-\") shows no InSv. At the previous pin 173d0ef the condition counted child selections and gave 5+. GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Impulsor.html: ABILITIES \"Shield Dome: This unit has 5+ InSv.\"; BSData Imperium - Space Marines.json, Impulsor profile 2dc8-b989-a231-bb82, InSv modifier condition on Shield Dome 7685-1ab3-8d12-fac7 (scope parent, includeChildSelections false); verify/sources/nr-json/nerf-when.json: Impulsor selections include Shield Dome, profile InSv empty."
  },
  {
   "army": "nerf-when",
@@ -824,12 +736,12 @@
  },
  {
   "army": "nerf-when",
-  "unit": "eradicator-squad-with-melta-rifles",
-  "field": "ability.text",
-  "app": "Total Obliteration: This unit’s ranged attacks can re-roll **damage rolls**.",
-  "source": "This unit's ranged attacks can re-roll damage rolls",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"This unit's ranged attacks can re-roll damage rolls\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Eradicator-Squad-with-Melta-Rifles.html: \"This unit's ranged attacks can re-roll damage rolls.\".",
+  "unit": "deathwatch-terminator-squad",
+  "field": "melee.hunter",
+  "app": "Chainfist - Hunter: Monster/Vehicle: true",
+  "source": "no Hunter profile",
+  "reason": "The app marks Chainfist - Hunter: Monster/Vehicle as a Hunter profile: GW’s datasheet names it Chainfist - Hunter (its Hunter profile, used against MONSTER/VEHICLE units). BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) and New Recruit’s export (catalogue revision 8) name it \"Hunter: Monster/Vehicle\", which verify/bsdata.js does not read as a Hunter profile (\"… (Hunter: …)\"). GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Deathwatch-Terminator-Squad.html; verify/sources/nr-json/nerf-when.json: Hunter: Monster/Vehicle.",
   "by": "verify/from-json.js"
  },
  {
@@ -845,32 +757,30 @@
  {
   "army": "nerf-when",
   "unit": "deathwatch-terminator-squad",
-  "field": "melee.hunter",
-  "app": "Chainfist - Hunter: Monster/Vehicle: true",
-  "source": "no Hunter profile",
-  "reason": "The app marks Chainfist - Hunter: Monster/Vehicle as a Hunter profile: GW’s datasheet names it Chainfist - Hunter (its Hunter profile, used against MONSTER/VEHICLE units). BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) and New Recruit’s export (catalogue revision 8) name it \"Hunter: Monster/Vehicle\", which verify/bsdata.js does not read as a Hunter profile (\"… (Hunter: …)\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Deathwatch-Terminator-Squad.html; verify/sources/nr-json/nerf-when.json: Hunter: Monster/Vehicle.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "deathwatch-terminator-squad",
-  "field": "ability.text",
-  "app": "Storm Shield: This model has +1 **W**.",
-  "source": "The bearer has a Wounds characteristic of 4.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"The bearer has a Wounds characteristic of 4.\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Deathwatch-Terminator-Squad.html: \"This model has +1 W.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "nerf-when",
-  "unit": "deathwatch-terminator-squad",
   "field": "kw",
   "app": "",
   "source": "Plasma",
   "reason": "BSData at the pin (Imperium - Adeptus Astartes - Ultramarines catalogue revision 8) gives the unit the category Plasma (New Recruit’s export (catalogue revision 8) does not); GW’s datasheet does not print that keyword. GW wins.",
   "evidence": "verify/.cache/waha/ds/ultramarines_Deathwatch-Terminator-Squad.html: KEYWORDS (no PLASMA).",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "nerf-when",
+  "unit": "impulsor",
+  "field": "stats.InSv",
+  "app": "Impulsor: 5+",
+  "source": "Impulsor: ",
+  "reason": "GW’s datasheet: Shield Dome: \"This unit has 5+ InSv.\" The list’s Impulsors take Shield Dome. BSData b4dc3f4 (since 8aac786 \"SM bugs\", 17 Oct 2026) sets the Impulsor profile’s InSv to 5+ only while a Shield Dome is a direct child of the profile’s parent scope (includeChildSelections false); for a root Impulsor selection that scope is the force, so the modifier never applies and BSData (and New Recruit’s export, InSv \"-\") shows no InSv. At the previous pin 173d0ef the condition counted child selections and gave 5+. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Impulsor.html: ABILITIES \"Shield Dome: This unit has 5+ InSv.\"; BSData Imperium - Space Marines.json, Impulsor profile 2dc8-b989-a231-bb82, InSv modifier condition on Shield Dome 7685-1ab3-8d12-fac7 (scope parent, includeChildSelections false); verify/sources/nr-json/nerf-when.json: Impulsor selections include Shield Dome, profile InSv empty."
+ },
+ {
+  "army": "nerf-when",
+  "unit": "impulsor",
+  "field": "stats.from",
+  "app": "Impulsor: InSv ← Shield Dome",
+  "source": "(not changed by a rule)",
+  "reason": "GW’s datasheet: Shield Dome: \"This unit has 5+ InSv.\" The list’s Impulsors take Shield Dome. BSData b4dc3f4 (since 8aac786 \"SM bugs\", 17 Oct 2026) sets the Impulsor profile’s InSv to 5+ only while a Shield Dome is a direct child of the profile’s parent scope (includeChildSelections false); for a root Impulsor selection that scope is the force, so the modifier never applies and BSData (and New Recruit’s export, InSv \"-\") shows no InSv. At the previous pin 173d0ef the condition counted child selections and gave 5+. GW wins.",
+  "evidence": "verify/.cache/waha/ds/ultramarines_Impulsor.html: ABILITIES \"Shield Dome: This unit has 5+ InSv.\"; BSData Imperium - Space Marines.json, Impulsor profile 2dc8-b989-a231-bb82, InSv modifier condition on Shield Dome 7685-1ab3-8d12-fac7 (scope parent, includeChildSelections false); verify/sources/nr-json/nerf-when.json: Impulsor selections include Shield Dome, profile InSv empty."
  },
  {
   "army": "the-exiled-legion",
@@ -996,16 +906,6 @@
   "army": "fellhammer-siege-task-force",
   "unit": "lord-discordant-on-helstalker",
   "field": "ability.text",
-  "app": "Corrupt Machine Spirits: At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit within 12\" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 **mortal wounds**; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
-  "source": "At the start of your Shooting phase, select one visible enemy ^^**Vehicle^^** unit within 12\" of this model and roll one D6: on a 2‑3, that enemy unit suffers D3 mortal wounds; on a 4‑5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.’",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the start of your Shooting phase, select one visible enemy Vehicle unit within 12\" of this model and roll one D6: on …\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-space-marines_Lord-Discordant-On-Helstalker.html: \"At the start of your Shooting phase, select one visible enemy VEHICLE unit within 12\" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy u…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "fellhammer-siege-task-force",
-  "unit": "lord-discordant-on-helstalker",
-  "field": "ability.text",
   "app": "Mark of the Soul Forges: **HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.",
   "source": "Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
   "reason": "The app has GW’s words: the enhancement as the detachment prints it (Wahapedia, the codex): BSData leaves out its first sentence or words it otherwise (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.\"). GW wins.",
@@ -1064,54 +964,6 @@
  },
  {
   "army": "fellhammer-siege-task-force",
-  "unit": "dark-apostle-master-of-executions-nemesis-claw",
-  "field": "ability.text",
-  "app": "Attached Unit: If a **CHARACTER** unit from your army with the Leader ability (excluding **EPIC HERO**es) can be **attached** to a **LEGIONARIES** unit, it can be attached to this unit instead.",
-  "source": "If a CHARACTER UNIT unit from your army with the Leader ability (excluding EPIC HEROES) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"If a CHARACTER UNIT unit from your army with the Leader ability (excluding EPIC HEROES) can be attached to a LEGIONARIES…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-space-marines_Nemesis-Claw.html: \"If a CHARACTER unit from your army with the Leader ability (excluding EPIC HEROes) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "fellhammer-siege-task-force",
-  "unit": "dark-apostle-master-of-executions-nemesis-claw",
-  "field": "stats.from",
-  "app": "Master of Executions: InSv ← Soul Forge Boons",
-  "source": "Cybinfernal Font",
-  "reason": "GW: Soul Forge Boons (the detachment rule) gives SOUL FORGE units a 5+ invulnerable save; Cybinfernal Font (the Dark Apostle’s enhancement) only gives models in the bearer’s unit the SOUL FORGE keyword, every model of the attached unit (19.04). The app names the rule that gives the save, Soul Forge Boons, as it does for the list’s other SOUL FORGE units (Chaos Predators, Chaos Vindicator). BSData b4dc3f4 (since 0286f5c \"A lot of fixes\", 19 Oct 2026) gives the same 5+ but puts the InSv modifier on the Cybinfernal Font entry, so this check reads Cybinfernal Font as the rule that changes it. GW wins.",
-  "evidence": "verify/.cache/waha/chaos-space-marines.txt lines 927-935, Cult of the Arkifane: Soul Forge Boons \"SOUL FORGE units from your army have a 5+ invulnerable save.\" and Cybinfernal Font \"Models in the bearer’s unit have the SOUL FORGE keyword.\"; GW Faction Pack Chaos Space Marines p7 (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_space_marines-xlmrglqa2b-zd2fzntrqu.txt lines 334-356, the same words); BSData Chaos - Chaos Space Marines.json, Cybinfernal Font 2f57-9703-18b2-6390: modifier set InSv (55a7-5b54-c60d-11dc) 5+."
- },
- {
-  "army": "fellhammer-siege-task-force",
-  "unit": "dark-apostle-master-of-executions-nemesis-claw",
-  "field": "stats.from",
-  "app": "Nemesis Claw ×5: InSv ← Soul Forge Boons",
-  "source": "Cybinfernal Font",
-  "reason": "GW: Soul Forge Boons (the detachment rule) gives SOUL FORGE units a 5+ invulnerable save; Cybinfernal Font (the Dark Apostle’s enhancement) only gives models in the bearer’s unit the SOUL FORGE keyword, every model of the attached unit (19.04). The app names the rule that gives the save, Soul Forge Boons, as it does for the list’s other SOUL FORGE units (Chaos Predators, Chaos Vindicator). BSData b4dc3f4 (since 0286f5c \"A lot of fixes\", 19 Oct 2026) gives the same 5+ but puts the InSv modifier on the Cybinfernal Font entry, so this check reads Cybinfernal Font as the rule that changes it. GW wins.",
-  "evidence": "verify/.cache/waha/chaos-space-marines.txt lines 927-935, Cult of the Arkifane: Soul Forge Boons \"SOUL FORGE units from your army have a 5+ invulnerable save.\" and Cybinfernal Font \"Models in the bearer’s unit have the SOUL FORGE keyword.\"; GW Faction Pack Chaos Space Marines p7 (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_space_marines-xlmrglqa2b-zd2fzntrqu.txt lines 334-356, the same words); BSData Chaos - Chaos Space Marines.json, Cybinfernal Font 2f57-9703-18b2-6390: modifier set InSv (55a7-5b54-c60d-11dc) 5+."
- },
- {
-  "army": "fellhammer-siege-task-force",
-  "unit": "cultist-mob",
-  "field": "ability.text",
-  "app": "For the Dark Gods: At the end of your Command phase, if this unit is within range of an **objective** marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
-  "source": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of Control over that objective marker is greater than yours at the start or end of any phase.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-space-marines_Cultist-Mob.html: \"At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at t…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "fellhammer-siege-task-force",
-  "unit": "obliterators",
-  "field": "ability.text",
-  "app": "Warp Rift Firepower: In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**.",
-  "source": "(Once per battle, per unit): In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this unit's ranged attacks have **[INDIRECT FIRE]**.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Space Marines catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"(Once per battle, per unit): In your Shooting phase, when this unit is selected to shoot, you can use this ability. If y…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-space-marines_Obliterators.html: \"In your shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have [INDIRECT FIRE].\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "fellhammer-siege-task-force",
   "unit": "forgefiend",
   "field": "stats.base",
   "app": "Forgefiend: 120×92mm Oval",
@@ -1139,6 +991,24 @@
   "reason": "BSData at the pin (Chaos - Chaos Space Marines catalogue revision 28) has Maulerfiend: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 28) has 120×92mm. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3063: \"Maulerfiend  120x92mm Oval Base\"; verify/sources/nr-json/fellhammer-siege-task-force.json: 120×92mm.",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "dark-apostle-master-of-executions-nemesis-claw",
+  "field": "stats.from",
+  "app": "Master of Executions: InSv ← Soul Forge Boons",
+  "source": "Cybinfernal Font",
+  "reason": "GW: Soul Forge Boons (the detachment rule) gives SOUL FORGE units a 5+ invulnerable save; Cybinfernal Font (the Dark Apostle’s enhancement) only gives models in the bearer’s unit the SOUL FORGE keyword, every model of the attached unit (19.04). The app names the rule that gives the save, Soul Forge Boons, as it does for the list’s other SOUL FORGE units (Chaos Predators, Chaos Vindicator). BSData b4dc3f4 (since 0286f5c \"A lot of fixes\", 19 Oct 2026) gives the same 5+ but puts the InSv modifier on the Cybinfernal Font entry, so this check reads Cybinfernal Font as the rule that changes it. GW wins.",
+  "evidence": "verify/.cache/waha/chaos-space-marines.txt lines 927-935, Cult of the Arkifane: Soul Forge Boons \"SOUL FORGE units from your army have a 5+ invulnerable save.\" and Cybinfernal Font \"Models in the bearer’s unit have the SOUL FORGE keyword.\"; GW Faction Pack Chaos Space Marines p7 (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_space_marines-xlmrglqa2b-zd2fzntrqu.txt lines 334-356, the same words); BSData Chaos - Chaos Space Marines.json, Cybinfernal Font 2f57-9703-18b2-6390: modifier set InSv (55a7-5b54-c60d-11dc) 5+."
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "unit": "dark-apostle-master-of-executions-nemesis-claw",
+  "field": "stats.from",
+  "app": "Nemesis Claw ×5: InSv ← Soul Forge Boons",
+  "source": "Cybinfernal Font",
+  "reason": "GW: Soul Forge Boons (the detachment rule) gives SOUL FORGE units a 5+ invulnerable save; Cybinfernal Font (the Dark Apostle’s enhancement) only gives models in the bearer’s unit the SOUL FORGE keyword, every model of the attached unit (19.04). The app names the rule that gives the save, Soul Forge Boons, as it does for the list’s other SOUL FORGE units (Chaos Predators, Chaos Vindicator). BSData b4dc3f4 (since 0286f5c \"A lot of fixes\", 19 Oct 2026) gives the same 5+ but puts the InSv modifier on the Cybinfernal Font entry, so this check reads Cybinfernal Font as the rule that changes it. GW wins.",
+  "evidence": "verify/.cache/waha/chaos-space-marines.txt lines 927-935, Cult of the Arkifane: Soul Forge Boons \"SOUL FORGE units from your army have a 5+ invulnerable save.\" and Cybinfernal Font \"Models in the bearer’s unit have the SOUL FORGE keyword.\"; GW Faction Pack Chaos Space Marines p7 (verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_space_marines-xlmrglqa2b-zd2fzntrqu.txt lines 334-356, the same words); BSData Chaos - Chaos Space Marines.json, Cybinfernal Font 2f57-9703-18b2-6390: modifier set InSv (55a7-5b54-c60d-11dc) 5+."
  },
  {
   "army": "lite-knights",
@@ -1653,16 +1523,6 @@
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3895 (\"Lord on Juggernaut  90x52.5mm Oval Base\"); verify/.cache/bsdata/Chaos - World Eaters.json line 7156 (Lord on Juggernaut, Base 90x52.5mm)."
  },
  {
-  "army": "big-demons-baby",
-  "unit": "flesh-hounds",
-  "field": "stats.base",
-  "app": "Flesh Hounds: 60×35.5mm Oval",
-  "source": "Flesh Hounds: 60x35.5mm",
-  "where": "Flesh Hounds",
-  "reason": "GW’s base size guide prints the base as an oval, \"60x35.5mm Oval Base\"; BSData (Flesh Hounds) gives 60x35.5mm without \"Oval\". The owner: GW is the ultimate source of truth for base sizes, and GW’s wording is used everywhere. Bases & proxies counts its base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2507-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3904 (\"Flesh Hounds  60x35.5mm Oval Base\"); verify/.cache/bsdata/Chaos - Chaos Daemons Library.json line 5571 (Flesh Hounds, Base 60x35.5mm)."
- },
- {
   "army": "shooty",
   "unit": "mek-tankbustas",
   "field": "stats.base",
@@ -1745,61 +1605,11 @@
  {
   "army": "navigator-sounds-op-ngl",
   "unit": "navigator",
-  "field": "ability.text",
-  "app": "Third Eye: At the start of your Shooting phase, select one enemy unit within 12\" of and **visible** to this model. That unit must take a **Battle-shock test**, subtracting 2 from the result if it is an **INFANTRY** unit. If the test is failed, that enemy unit suffers 3 **mortal wounds**.",
-  "source": "At the start of your Shooting phase, select one enemy unit within 12\" of and visible to this model. That enemy unit must take a Battle-shock test, subtracting 2 from the result if it is an INFANTRY unit; if the test is failed, that enemy unit suffers 3 mortal wounds.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Imperium - Imperial Knights catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"At the start of your Shooting phase, select one enemy unit within 12\" of and visible to this model. That enemy unit must…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/imperial-agents_Navigator.html: \"At the start of your Shooting phase, select one enemy unit within 12\" of and visible to this model. That unit must take a Battle-shock test, subtracting 2 from the result if it is an INFANTRY unit. If the test is failed, that enemy unit suf…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "navigator-sounds-op-ngl",
-  "unit": "navigator",
   "field": "rules",
   "app": "",
   "source": "Assigned Agents",
   "reason": "BSData at the pin (Imperium - Imperial Knights catalogue revision 2) gives the unit Assigned Agents, the army rule of its own faction (Imperial Agents; GW’s datasheet prints it under ARMY RULES); the unit is an ally in a Imperial Knights army, and the owner’s ruling is that a unit taken as an ally or agent does not get its own faction’s army rule (as the Nurglings in Chaos Knights lists have no Shadow of Chaos).",
   "evidence": "verify/.cache/waha/ds/imperial-agents_Navigator.html: ARMY RULES \"Assigned Agents\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "lucius-the-eternal-flawless-blades",
-  "field": "ability.text",
-  "app": "Duellist’s Hubris: At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the **Fights First** ability.",
-  "source": "At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights First ability.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights Firs…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Lucius-the-Eternal.html: \"At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "lucius-the-eternal-flawless-blades",
-  "field": "ability.text",
-  "app": "A Challenge Worthy of Skill: Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.",
-  "source": "Each time this model makes an attack that targets a **^^Character, Monster^^** or **^^Walker^^** unit, you can re-roll the Hit roll and re-roll the Wound roll.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"Each time this model makes an attack that targets a Character, Monster or Walker unit, you can re-roll the Hit roll and …\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Lucius-the-Eternal.html: \"Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "lucius-the-eternal-flawless-blades",
-  "field": "ability.text",
-  "app": "Daemonic Patrons: Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed.",
-  "source": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack. an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, eac…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Flawless-Blades.html: \"Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the F…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "daemon-prince-of-slaanesh-with-wings",
-  "field": "ability.text",
-  "app": "Daemonic Destruction: Each time this model ends a **Charge move**, select one enemy unit within **Engagement Range** of it and roll one D6 for each of this model’s remaining wounds: for each 4+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 mortal wounds).",
-  "source": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6 for each of this model's remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"Each time this model ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6 for…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Daemon-Prince-of-Slaanesh-with-Wings.html: \"Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each of this model's remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).\".",
   "by": "verify/from-json.js"
  },
  {
@@ -1810,76 +1620,6 @@
   "source": "Once per turn, after making a Hit roll, a Wound roll or a saving throw for a model in the bearer's unit, if the bearer is not Battle-shocked, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.",
   "reason": "The app has GW’s words: the enhancement as the detachment prints it (Wahapedia, the codex): BSData leaves out its first sentence or words it otherwise (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"Once per turn, after making a Hit roll, a Wound roll or a saving throw for a model in the bearer's unit, if the bearer i…\"). GW wins.",
   "evidence": "verify/.cache/waha/emperors-children.txt: \"EMPEROR'S CHILDREN model only. Once per turn, just after making a Hit roll, a Wound roll or a saving throw for a model in the bearer's unit, if the bearer is not Battle-shocked, it can use this Enhancement. If it does, treat the result as a…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "lord-exultant-infractors",
-  "field": "ability.text",
-  "app": "Euphoric Strikes: Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.",
-  "source": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the p…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Lord-Exultant.html: \"Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration charac…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "lord-exultant-infractors",
-  "field": "ability.text",
-  "app": "Lord of the Host: If this model is **attached** to an **EMPEROR’S CHILDREN BATTLELINE** unit during the Declare Battle Formations step, this model has the **Infiltrators** and **Scouts 6\"** abilities.",
-  "source": "If this model is attached to an **^^Emperor's Children Battleline^^** unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6\" ability.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"If this model is attached to an Emperor's Children Battleline unit during the Declare Battle Formations step, this model…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Lord-Exultant.html: \"If this model is attached to an EMPEROR'S CHILDREN BATTLELINE unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6\" abilities.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "lord-exultant-infractors",
-  "field": "ability.text",
-  "app": "Icon of Excess: At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units that phase, the bearer’s unit takes a **Leadership test**. If that test is passed, you gain 1CP.",
-  "source": "At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units this phase, the bearer's unit takes a Leadership test. If that test is passed, you gain 1CP.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units this phase,…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Infractors.html: \"At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units that phase, the bearer's unit takes a Leadership test. If that test is passed, you gain 1CP.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "lord-exultant-infractors",
-  "field": "rules",
-  "app": "",
-  "source": "Infiltrators",
-  "reason": "BSData at the pin (Chaos - Emperor's Children catalogue revision 14) gives the unit Infiltrators; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 14) has it too). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Lord-Exultant.html, verify/.cache/waha/ds/emperors-children_Infractors.html: CORE ABILITIES / ARMY RULES \"Leader, Scouts 6\", Thrill Seekers\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "tormentors",
-  "field": "ability.text",
-  "app": "Icon of Excess: At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units that phase, the bearer’s unit takes a **Leadership test**. If that test is passed, you gain 1CP.",
-  "source": "At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units this phase, the bearer's unit takes a Leadership test. If that test is passed, you gain 1CP.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units this phase,…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Tormentors.html: \"At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units that phase, the bearer's unit takes a Leadership test. If that test is passed, you gain 1CP.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "chaos-rhino",
-  "field": "ability.text",
-  "app": "Assault Vehicle: Units can disembark from this **TRANSPORT** after it has Advanced. Units that do so make a **shock disembark move** (Core Rules, 18.07) for that disembarkation.",
-  "source": "Units can disembark from this **^^Vehicle**^^ after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"Units can disembark from this Vehicle after it has Advanced. Units that do so count as having made a Normal move that ph…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Chaos-Rhino.html: \"Units can disembark from this TRANSPORT after it has Advanced. Units that do so make a shock disembark move (Core Rules, 18.07) for that disembarkation.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "defilers-and-friends",
-  "unit": "chaos-rhino",
-  "field": "ability.text",
-  "app": "Transport: This model has a **transport capacity** of 12 **EMPEROR’S CHILDREN INFANTRY** models (excluding **TERMINATOR** and **FLAWLESS BLADE** models).",
-  "source": "This model has a transport capacity of 12 **^^Emperor's Children Infantry^^**models (excluding ^^**Terminator**^^ and ^^**Flawless Blade**^^ models).",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Emperor's Children catalogue revision 14) has its own wording; New Recruit’s export (catalogue revision 14) has \"This model has a transport capacity of 12 Emperor's Children Infantrymodels (excluding Terminator and Flawless Blade mod…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/emperors-children_Chaos-Rhino.html: \"This model has a transport capacity of 12 EMPEROR'S CHILDREN INFANTRY models (excluding TERMINATOR and FLAWLESS BLADE models).\".",
   "by": "verify/from-json.js"
  },
  {
@@ -2044,16 +1784,6 @@
  {
   "army": "healybois",
   "unit": "the-swarmlord-tyrant-guard",
-  "field": "ability.text",
-  "app": "Hive Commander: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
-  "source": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of your Command phase, if this model is on the battlefield, you gain 1CP\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html: \"At the start of your Command phase, if this model is on the battlefield, you gain 1CP.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "healybois",
-  "unit": "the-swarmlord-tyrant-guard",
   "field": "rules",
   "app": "",
   "source": "Feel No Pain 5+",
@@ -2123,36 +1853,6 @@
  },
  {
   "army": "healybois",
-  "unit": "norn-assimilator",
-  "field": "ability.text",
-  "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
-  "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battl…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "healybois",
-  "unit": "norn-assimilator",
-  "field": "ability.text",
-  "app": "Harpoon Barbs: Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.",
-  "source": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, tha…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: \"Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "healybois",
-  "unit": "norn-emissary",
-  "field": "ability.text",
-  "app": "Singular Purpose: At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
-  "source": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battl…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: \"At the start of the first battle round, select one of the following: - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wou…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "healybois",
   "unit": "norn-emissary",
   "field": "ability",
   "app": "Unnatural Resilience",
@@ -2183,16 +1883,6 @@
  },
  {
   "army": "healybois",
-  "unit": "psychophage",
-  "field": "ability.text",
-  "app": "Feeding Frenzy: Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the **Hit roll**. If that target is also **Below Half-strength**, add 1 to the **Wound roll** as well.",
-  "source": "Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half strength, add 1 to the Wound roll as well.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Tyranids catalogue revision 3) has its own wording; New Recruit’s export (catalogue revision 3) has \"Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/tyranids_Psychophage.html: \"Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "healybois",
   "unit": "tyrannofex",
   "field": "stats.base",
   "app": "Tyrannofex: 120×92mm Oval",
@@ -2209,6 +1899,16 @@
   "source": "Reference",
   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) gives the unit the category Reference; GW’s datasheet does not print that keyword. GW wins.",
   "evidence": "verify/.cache/waha/ds/tyranids_Spore-Mines.html: KEYWORDS (no REFERENCE).",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "mucho-mutantes",
+  "unit": "magnus-the-red",
+  "field": "ability",
+  "app": "Supreme Commander",
+  "source": "",
+  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); BSData at the pin (Chaos - Thousand Sons catalogue revision 17) and New Recruit’s export (catalogue revision 17) do not have it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Magnus-The-Red.html: \"Supreme Commander\".",
   "by": "verify/from-json.js"
  },
  {
@@ -2244,16 +1944,6 @@
  {
   "army": "u-w0t-m8",
   "unit": "the-silent-king",
-  "field": "ability.text",
-  "app": "Triarch Abilities: At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.",
-  "source": "At the start of the battle round, select one Triarch ability. Until the start of the next battle round, this unit has that ability.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the start of the battle round, select one Triarch ability. Until the start of the next battle round, this unit has th…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "the-silent-king",
   "field": "ability.tag",
   "app": "The Silent King: ",
   "source": "The Silent King (Aura)",
@@ -2264,31 +1954,11 @@
  {
   "army": "u-w0t-m8",
   "unit": "the-silent-king",
-  "field": "ability.text",
-  "app": "Phaeron of the Blades: While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
-  "source": "While a friendly ^^**Necrons^^** (excluding ^^**Monster^^** units) unit is within 6\" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"While a friendly Necrons (excluding Monster units) unit is within 6\" of this unit's Szarekh model, you can re-roll Charg…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"While a friendly NECRONS unit (excluding MONSTER units) is within 6\" of this unit's Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "the-silent-king",
   "field": "ability",
   "app": "Supreme Commander",
   "source": "",
   "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); BSData at the pin (Xenos - Necrons catalogue revision 28) and New Recruit’s export (catalogue revision 28) do not have it. GW wins.",
   "evidence": "verify/.cache/waha/ds/necrons_The-Silent-King.html: \"Supreme Commander\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "technomancer-immortals",
-  "field": "ability.text",
-  "app": "Technomancer: At the end of your Movement phase, you can select one friendly **NECRONS** model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
-  "source": "At the end of your Movement phase, select one friendly NECRONS model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"At the end of your Movement phase, select one friendly NECRONS model within 6\" of the bearer. That model regains up to D…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Technomancer.html: \"At the end of your Movement phase, you can select one friendly NECRONS model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.\".",
   "by": "verify/from-json.js"
  },
  {
@@ -2323,22 +1993,22 @@
  },
  {
   "army": "u-w0t-m8",
-  "unit": "canoptek-spyders",
-  "field": "ability.text",
-  "app": "Fabricator Claw Array: While a friendly **NECRONS VEHICLE** unit is within 6\" of the bearer, that unit has the **Feel No Pain** 6+ ability.",
-  "source": "While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, models in that unit have the Feel No Pain 6+ ability.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, models in that unit have the Feel No Pain 6+ ability.\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Canoptek-Spyders.html: \"While a friendly NECRONS VEHICLE unit is within 6\" of the bearer, that unit has the Feel No Pain 6+ ability.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
   "unit": "tesseract-vault",
   "field": "stats.base",
   "app": "Tesseract Vault: 120×92mm Oval",
   "source": "Tesseract Vault: 120x92mm",
   "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has Tesseract Vault: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 28) has 120×92mm. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3458: \"Tesseract Vault  120x92mm Oval Base\"; verify/sources/nr-json/u-w0t-m8.json: 120×92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "tesseract-vault",
+  "field": "ranged.kw",
+  "app": "Antimatter meteor: BLAST, C'TAN POWER, DEVASTATING WOUNDS, INDIRECT FIRE",
+  "source": "BLAST, DEVASTATING WOUNDS, INDIRECT FIRE",
+  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE; GW’s datasheet (the new codex, as Wahapedia transcribes it) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; New Recruit’s export (catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Antimatter meteor kw BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: BLAST, DEVASTATING WOUNDS, INDIRECT FIRE.",
   "by": "verify/from-json.js"
  },
  {
@@ -2363,32 +2033,22 @@
  },
  {
   "army": "u-w0t-m8",
-  "unit": "tesseract-vault",
-  "field": "ranged.kw",
-  "app": "Antimatter meteor: BLAST, C'TAN POWER, DEVASTATING WOUNDS, INDIRECT FIRE",
-  "source": "BLAST, DEVASTATING WOUNDS, INDIRECT FIRE",
-  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE; GW’s datasheet (the new codex, as Wahapedia transcribes it) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; New Recruit’s export (catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE. GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Antimatter meteor kw BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: BLAST, DEVASTATING WOUNDS, INDIRECT FIRE.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault",
-  "field": "ability.text",
-  "app": "Powers of the C’tan: In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
-  "source": "In your Shooting phase, when this model is selected to shoot, first select up to 2 different C’tan Powers weapons. Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"In your Shooting phase, when this model is selected to shoot, first select up to 2 different C'tan Powers weapons. Until…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: \"In your Shooting phase, when this model is selected to shoot, first select up to two different C'tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this mod…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
   "unit": "tesseract-vault-2",
   "field": "stats.base",
   "app": "Tesseract Vault: 120×92mm Oval",
   "source": "Tesseract Vault: 120x92mm",
   "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has Tesseract Vault: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 28) has 120×92mm. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3458: \"Tesseract Vault  120x92mm Oval Base\"; verify/sources/nr-json/u-w0t-m8.json: 120×92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "u-w0t-m8",
+  "unit": "tesseract-vault-2",
+  "field": "ranged.kw",
+  "app": "Antimatter meteor: BLAST, C'TAN POWER, DEVASTATING WOUNDS, INDIRECT FIRE",
+  "source": "BLAST, DEVASTATING WOUNDS, INDIRECT FIRE",
+  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE; GW’s datasheet (the new codex, as Wahapedia transcribes it) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; New Recruit’s export (catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE. GW wins.",
+  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Antimatter meteor kw BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: BLAST, DEVASTATING WOUNDS, INDIRECT FIRE.",
   "by": "verify/from-json.js"
  },
  {
@@ -2409,26 +2069,6 @@
   "source": "ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION",
   "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION; GW’s datasheet (the new codex, as Wahapedia transcribes it) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; New Recruit’s export (catalogue revision 28) has ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION. GW wins.",
   "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Time's arrow kw ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault-2",
-  "field": "ranged.kw",
-  "app": "Antimatter meteor: BLAST, C'TAN POWER, DEVASTATING WOUNDS, INDIRECT FIRE",
-  "source": "BLAST, DEVASTATING WOUNDS, INDIRECT FIRE",
-  "reason": "BSData at the pin (Xenos - Necrons catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE; GW’s datasheet (the new codex, as Wahapedia transcribes it) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; New Recruit’s export (catalogue revision 28) has BLAST, DEVASTATING WOUNDS, INDIRECT FIRE. GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: Antimatter meteor kw BLAST, DEVASTATING WOUNDS, INDIRECT FIRE, C'TAN POWER; verify/sources/nr-json/u-w0t-m8.json: BLAST, DEVASTATING WOUNDS, INDIRECT FIRE.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "u-w0t-m8",
-  "unit": "tesseract-vault-2",
-  "field": "ability.text",
-  "app": "Powers of the C’tan: In your Shooting phase, when this model is selected to shoot, first select up to two different C’tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
-  "source": "In your Shooting phase, when this model is selected to shoot, first select up to 2 different C’tan Powers weapons. Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this model cannot make attacks with any other C’tan Powers weapon you did not select in this way this phase).",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Necrons catalogue revision 28) has its own wording; New Recruit’s export (catalogue revision 28) has \"In your Shooting phase, when this model is selected to shoot, first select up to 2 different C'tan Powers weapons. Until…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/necrons_Tesseract-Vault.html: \"In your Shooting phase, when this model is selected to shoot, first select up to two different C'tan Powers weapons (see left). Until the end of the phase, this model is equipped with those weapons in addition to its other weapons (this mod…\".",
   "by": "verify/from-json.js"
  },
  {
@@ -2449,26 +2089,6 @@
   "source": "The Blue Scribes: 60mm Flying",
   "reason": "BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has The Blue Scribes: 60mm Flying; GW’s base size guide (Event Companion) has Large Flying; New Recruit’s export (catalogue revision 2) has 60mm Flying. GW wins.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 2974: \"The Blue Scribes  Large Flying Base\"; verify/sources/nr-json/tzeeeeentch.json: 60mm Flying.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "the-changeling",
-  "field": "ability.text",
-  "app": "Mischief and Confusion: At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase.",
-  "source": "At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot this phase",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"At the start of your opponent's Shooting phase, select one enemy unit within 12\" of and visible to this model and roll o…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_The-Changeling.html: \"At the start of your opponent's Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the H…\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "daemon-prince-of-chaos-with-wings",
-  "field": "ability.text",
-  "app": "Harbinger of Death: Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n- **[LETHAL HITS]**\n- **[PRECISION]**\n- **[SUSTAINED HITS 1]**",
-  "source": "Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n■ [LETHAL HITS]\n■ [PRECISION]\n■ [SUSTAINED HITS 1]",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Daemon-Prince-Of-Chaos-With-Wings.html: \"Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model's hellforged weapons have that ability: - [LETHAL HITS] - [PRECISION] - [SUSTAINED HITS 1]\".",
   "by": "verify/from-json.js"
  },
  {
@@ -2504,21 +2124,11 @@
  {
   "army": "tzeeeeentch",
   "unit": "fluxmaster-pink-horrors",
-  "field": "ability.text",
-  "app": "Altered Reality: Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.",
-  "source": "Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to a 6.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the resul…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html: \"Once per battle round, after a Hit roll, a Wound roll, or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "fluxmaster-pink-horrors",
-  "field": "ability.text",
-  "app": "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.: If, at any point, this unit contains no **PINK HORROR** models, use the **BLUE HORRORS** datasheet for this unit.\n*Designer’s Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.*",
-  "source": "If, at any point, this unit contains no ^^Pink Horrors^^ models, use the ^^Blue Horrors^^ datasheet for this unit. \n\n\n_Designer’s Note: While this unit contains one or more ^^Pink Horrors^^ models, the Cackling Horrors and Exploding Horrors abilities from the Blue Horrors datasheet do not apply to this unit._",
-  "reason": "The app has GW’s words: GW’s datasheet (Wahapedia) prints the box Horrors are Pink. Horrors are Blue. Where once there was one, now there are two. otherwise than BSData (BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) has its own wording; New Recruit’s export (catalogue revision 2) has \"If, at any point, this unit contains no Pink Horrors models, use the Blue Horrors datasheet for this unit. _Designer's N…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: \"If, at any point, this unit contains no PINK HORROR models, use the BLUE HORRORS datasheet for this unit. *Designer's Note: While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from…\".",
+  "field": "kw",
+  "app": "Horrors",
+  "source": "",
+  "reason": "GW’s datasheet has the keyword HORRORS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html, chaos-daemons_Pink-Horrors.html: KEYWORDS.",
   "by": "verify/from-json.js"
  },
  {
@@ -2529,16 +2139,6 @@
   "source": "",
   "reason": "GW’s datasheet has the keyword BRIMSTONE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html: KEYWORDS.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "tzeeeeentch",
-  "unit": "fluxmaster-pink-horrors",
-  "field": "kw",
-  "app": "Horrors",
-  "source": "",
-  "reason": "GW’s datasheet has the keyword HORRORS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
-  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html, chaos-daemons_Pink-Horrors.html: KEYWORDS.",
   "by": "verify/from-json.js"
  },
  {
@@ -2575,9 +2175,9 @@
   "army": "tzeeeeentch",
   "unit": "blue-horrors",
   "field": "kw",
-  "app": "Brimstone",
+  "app": "Horrors",
   "source": "",
-  "reason": "GW’s datasheet has the keyword BRIMSTONE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
+  "reason": "GW’s datasheet has the keyword HORRORS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS.",
   "by": "verify/from-json.js"
  },
@@ -2585,9 +2185,9 @@
   "army": "tzeeeeentch",
   "unit": "blue-horrors",
   "field": "kw",
-  "app": "Horrors",
+  "app": "Brimstone",
   "source": "",
-  "reason": "GW’s datasheet has the keyword HORRORS; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
+  "reason": "GW’s datasheet has the keyword BRIMSTONE; BSData at the pin (Chaos - Chaos Daemons catalogue revision 2) and New Recruit’s export (catalogue revision 2) do not. GW wins.",
   "evidence": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html: KEYWORDS.",
   "by": "verify/from-json.js"
  },
@@ -2613,36 +2213,6 @@
  },
  {
   "army": "simple-but-effective",
-  "unit": "mozrog-skragbad",
-  "field": "ability.text",
-  "app": "Da Bigger Dey Iz…: This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**.",
-  "source": "This unit's melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wounds rolls**.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Orks catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wounds rolls.\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/orks_Mozrog-Skragbad.html: \"This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "simple-but-effective",
-  "unit": "nazdreg-meganobz",
-  "field": "ability.text",
-  "app": "Nazdreg’s Know-wotz: - This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**.",
-  "source": "- This unit has **Deep Strike**\n- This unit's ranged attacks have **[IGNORES COVER]**.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Orks catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"- This unit has Deep Strike - This unit's ranged attacks have [IGNORES COVER].\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/orks_Nazdreg.html: \"- This unit has Deep Strike. - This unit's ranged attacks have [IGNORES COVER].\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "simple-but-effective",
-  "unit": "zodgrod-wortsnagga-runtherd-gretchin",
-  "field": "ability.text",
-  "app": "That’ll Learn Ya: When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- This unit is no longer **battle-shocked**.",
-  "source": "When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- That unit is no longer **battle-shocked**.",
-  "reason": "The app has GW’s words: Wahapedia’s datasheet (the codex) words it otherwise than BSData (BSData at the pin (Xenos - Orks catalogue revision 8) has its own wording; New Recruit’s export (catalogue revision 8) has \"When this unit becomes battle-shocked, if this unit contains 4+ Gretchin models, you can roll one D3: - That number of G…\"). GW wins.",
-  "evidence": "verify/.cache/waha/ds/orks_Runtherd.html: \"When this unit becomes battle-shocked, if this unit contains 4+ Gretchin models, you can roll one D3: - That number of Gretchin models in this unit are destroyed. - This unit is no longer battle-shocked.\".",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "simple-but-effective",
   "unit": "deffkoptas",
   "field": "stats.base",
   "app": "Deffkoptas ×3: 75×42mm Oval",
@@ -2657,8 +2227,8 @@
   "field": "kw",
   "app": "Explosives",
   "source": "",
-  "reason": "GW’s datasheet has the keyword EXPLOSIVES (\"KEYWORDS: INFANTRY; CHARACTER; EXPLOSIVES; WARBOSS\"); BSData at the pin has the category Grenades instead. The Core Rules make them one keyword (the Explosives stratagem’s TARGET \"EXPLOSIVES/GRENADES unit\"; \"The Grenade Stratagem is the same as the Explosives stratagem\"). GW wins: EXPLOSIVES.",
-  "evidence": "verify/.cache/waha/ds/orks_Warboss.html: KEYWORDS; rules/core-rules.md (Explosives, Grenades Stratagem).",
+  "reason": "GW’s datasheet has the keyword EXPLOSIVES; BSData at the pin (Xenos - Orks catalogue revision 8) and New Recruit’s export (catalogue revision 8) do not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/orks_Warboss.html: KEYWORDS.",
   "by": "verify/from-json.js"
  },
  {
@@ -2667,8 +2237,8 @@
   "field": "kw",
   "app": "",
   "source": "Grenades",
-  "reason": "BSData at the pin gives the Warboss the category Grenades; GW’s datasheet prints EXPLOSIVES, which the Core Rules make the same keyword (\"EXPLOSIVES/GRENADES\"). GW wins: EXPLOSIVES only.",
-  "evidence": "verify/.cache/waha/ds/orks_Warboss.html: KEYWORDS; rules/core-rules.md (Grenades Stratagem).",
+  "reason": "BSData at the pin (Xenos - Orks catalogue revision 8) gives the unit the category Grenades; the Core Rules’ EXPLOSIVES/GRENADES: one keyword; GW’s datasheet prints EXPLOSIVES. GW wins.",
+  "evidence": "verify/.cache/waha/ds/orks_Warboss.html: KEYWORDS, FACTION KEYWORDS.",
   "by": "verify/from-json.js"
  },
  {
@@ -2677,7 +2247,7 @@
   "field": "kw",
   "app": "",
   "source": "Anathema Psykana",
-  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) gives the unit the category Anathema Psykana; GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (Faction: ANATHEMA PSYKANA). GW wins.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html: KEYWORDS, FACTION KEYWORDS.",
   "by": "verify/from-json.js"
  },
@@ -2687,7 +2257,7 @@
   "field": "kw",
   "app": "",
   "source": "Anathema Psykana",
-  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) gives the unit the category Anathema Psykana; GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (Faction: ANATHEMA PSYKANA). GW wins.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: KEYWORDS, FACTION KEYWORDS.",
   "by": "verify/from-json.js"
  },
@@ -2697,7 +2267,7 @@
   "field": "kw",
   "app": "",
   "source": "Anathema Psykana",
-  "reason": "BSData at the pin gives the unit the category Anathema Psykana beside its faction (Faction: Anathema Psykana); GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (\"KEYWORDS: INFANTRY; IMPERIUM\", \"FACTION KEYWORDS: ANATHEMA PSYKANA\"). GW wins: the faction keyword, once.",
+  "reason": "BSData at the pin (Imperium - Adeptus Custodes catalogue revision 25) gives the unit the category Anathema Psykana; GW’s datasheet prints ANATHEMA PSYKANA under FACTION KEYWORDS only (Faction: ANATHEMA PSYKANA). GW wins.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: KEYWORDS, FACTION KEYWORDS.",
   "by": "verify/from-json.js"
  },
@@ -6949,5 +6519,75 @@
   "reason": "GW’s datasheet prints Deadly Demise D6 (BSData: Deadly Demise). GW wins.",
   "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: CORE ABILITIES / ARMY RULES.",
   "by": "verify/from-bsdata.js"
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "angron",
+  "field": "ability",
+  "app": "Supreme Commander",
+  "source": "",
+  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); BSData at the pin (Chaos - World Eaters catalogue revision 15) and New Recruit’s export (catalogue revision 15) do not have it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Angron.html: \"Supreme Commander\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "flesh-hounds",
+  "field": "stats.base",
+  "app": "Flesh Hounds: 60×35.5mm Oval",
+  "source": "Flesh Hounds: 60x35.5mm",
+  "reason": "BSData at the pin (Chaos - World Eaters catalogue revision 15) has Flesh Hounds: 60x35.5mm; GW’s base size guide (Event Companion) has 60×35.5mm Oval; New Recruit’s export (catalogue revision 15) has 60×35.5mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3904: \"Flesh Hounds  60x35.5mm Oval Base\"; verify/sources/nr-json/big-demons-baby.json: 60×35.5mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "flesh-hounds",
+  "field": "rules",
+  "app": "",
+  "source": "Feel No Pain 3+",
+  "reason": "BSData at the pin (Chaos - World Eaters catalogue revision 15) gives the unit Feel No Pain 3+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 15) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Flesh-Hounds.html: CORE ABILITIES / ARMY RULES \"Deep Strike, Pact of Blood\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "pubstomper",
+  "unit": "magnus-the-red",
+  "field": "ability",
+  "app": "Supreme Commander",
+  "source": "",
+  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); BSData at the pin (Chaos - Thousand Sons catalogue revision 17) and New Recruit’s export (catalogue revision 17) do not have it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Magnus-The-Red.html: \"Supreme Commander\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "cybernetica-datasmith-kastelan-robots",
+  "field": "rules",
+  "app": "",
+  "source": "Feel No Pain 4+",
+  "reason": "BSData at the pin (Imperium - Adeptus Mechanicus catalogue revision 22) gives the unit Feel No Pain 4+; GW’s datasheet does not print it (New Recruit’s export (catalogue revision 21) has it too). GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-mechanicus_Cybernetica-Datasmith.html, verify/.cache/waha/ds/adeptus-mechanicus_Kastelan-Robots.html: CORE ABILITIES / ARMY RULES \"Support, Deadly Demise 1, Doctrina Imperatives\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "standard",
+  "unit": "angron",
+  "field": "ability",
+  "app": "Supreme Commander",
+  "source": "",
+  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); BSData at the pin (Chaos - World Eaters catalogue revision 15) and New Recruit’s export (catalogue revision 15) do not have it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Angron.html: \"Supreme Commander\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "super-terminators",
+  "unit": "angron",
+  "field": "ability",
+  "app": "Supreme Commander",
+  "source": "",
+  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); BSData at the pin (Chaos - World Eaters catalogue revision 15) and New Recruit’s export (catalogue revision 15) do not have it. GW wins.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Angron.html: \"Supreme Commander\".",
+  "by": "verify/from-json.js"
  }
 ]

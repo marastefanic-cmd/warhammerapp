@@ -2075,8 +2075,8 @@ const ARMIES = [
       models:['1× Big Mek in Mega Armour'],
       gear:[['Kustom Mega-blasta','Power Klaw','Tellyport Blasta']],
       ranged:[
-        { name:'Kustom Mega-blasta', kw:['HAZARDOUS','IGNORES COVER','ASSAULT','ANTI-INFANTRY 4+','DEVASTATING WOUNDS','SUPA-HAZARDOUS'], from:{ 'IGNORES COVER':'More Dakka', ASSAULT:'Dakka! Dakka! Dakka!', 'ANTI-INFANTRY 4+':'Supa-glowy Fing', 'DEVASTATING WOUNDS':'Supa-glowy Fing', 'SUPA-HAZARDOUS':'Supa-glowy Fing' } },
-        { name:'Tellyport Blasta', kw:['BLAST 1','IGNORES COVER','ASSAULT','ANTI-INFANTRY 4+','DEVASTATING WOUNDS','SUPA-HAZARDOUS'], from:{ 'IGNORES COVER':'More Dakka', ASSAULT:'Dakka! Dakka! Dakka!', 'ANTI-INFANTRY 4+':'Supa-glowy Fing', 'DEVASTATING WOUNDS':'Supa-glowy Fing', 'SUPA-HAZARDOUS':'Supa-glowy Fing' } }
+        { name:'Kustom Mega-blasta', kw:['HAZARDOUS','ANTI-INFANTRY 4+','DEVASTATING WOUNDS','SUPA-HAZARDOUS','IGNORES COVER','ASSAULT'], from:{ 'ANTI-INFANTRY 4+':'Supa-glowy Fing', 'DEVASTATING WOUNDS':'Supa-glowy Fing', 'SUPA-HAZARDOUS':'Supa-glowy Fing', 'IGNORES COVER':'More Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } },
+        { name:'Tellyport Blasta', kw:['BLAST 1','ANTI-INFANTRY 4+','DEVASTATING WOUNDS','SUPA-HAZARDOUS','IGNORES COVER','ASSAULT'], from:{ 'ANTI-INFANTRY 4+':'Supa-glowy Fing', 'DEVASTATING WOUNDS':'Supa-glowy Fing', 'SUPA-HAZARDOUS':'Supa-glowy Fing', 'IGNORES COVER':'More Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } }
       ],
       abilities:[
         { name:'Fix Dat Armour Up' },
@@ -2108,9 +2108,9 @@ const ARMIES = [
       ],
       ranged:[
         { name:'Kustom Mega-slugga', who:'Mek', kw:['CLOSE-QUARTERS','HAZARDOUS','IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'Kustom Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Standard', who:'Tankbustas', n:6, kw:['ASSAULT','IGNORES COVER'], from:{ ASSAULT:'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } },
-        { name:'Hunter', who:'Tankbustas', n:6, kw:['ASSAULT','IGNORES COVER'], from:{ ASSAULT:'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } },
-        { name:'Rokkit pistol', who:'Tankbustas', n:2, kw:['CLOSE-QUARTERS','ASSAULT','IGNORES COVER'], from:{ ASSAULT:'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } }
+        { name:'Standard', who:'Tankbustas', n:6, kw:['IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'Kustom Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } },
+        { name:'Hunter', who:'Tankbustas', n:6, kw:['IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'Kustom Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } },
+        { name:'Rokkit pistol', who:'Tankbustas', n:2, kw:['CLOSE-QUARTERS','IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'Kustom Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } }
       ],
       melee:[
         { name:'Mek’s Toolz', who:'Mek' },
@@ -2129,7 +2129,6 @@ const ARMIES = [
       why:{ kwNote:'supports Tankbustas', ptsNote:'the points of its parts as the list has them (Mek + Tankbustas)' }
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'mek-flashgitz', ds:['orks/mek','orks/flash-gitz'], role:'Character', pts:300, ptsNote:'55 + Flash Gitz 245', upgrade:'Supa-snazz Dakka',
       leads:'Flash Gitz', support:true,
       models:['1× Mek','1× Kaptin','9× Flash Gitz'],
@@ -2140,9 +2139,9 @@ const ARMIES = [
       ],
       ranged:[
         { name:'Kustom Mega-slugga', who:'Mek', kw:['CLOSE-QUARTERS','HAZARDOUS','IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'Kustom Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Cutta', who:'Flash Gitz', n:10, kw:['HAZARDOUS','MELTA 2','ASSAULT','RAPID FIRE 1','IGNORES COVER'], from:{ ASSAULT:'Dakka! Dakka! Dakka!', 'RAPID FIRE 1':'Supa-snazz Dakka', 'IGNORES COVER':'Kustom Dakka' } },
-        { name:'Dakka', who:'Flash Gitz', n:10, kw:['LETHAL HITS: non-MONSTER/VEHICLE','SUSTAINED HITS 1','ASSAULT','RAPID FIRE 1','IGNORES COVER'], from:{ ASSAULT:'Dakka! Dakka! Dakka!', 'RAPID FIRE 1':'Supa-snazz Dakka', 'IGNORES COVER':'Kustom Dakka' } },
-        { name:'Kill Shot', who:'Flash Gitz', n:10, kw:['HAZARDOUS','ASSAULT','RAPID FIRE 1','IGNORES COVER'], from:{ ASSAULT:'Dakka! Dakka! Dakka!', 'RAPID FIRE 1':'Supa-snazz Dakka', 'IGNORES COVER':'Kustom Dakka' } }
+        { name:'Cutta', who:'Flash Gitz', n:10, kw:['HAZARDOUS','MELTA 2','IGNORES COVER','ASSAULT','RAPID FIRE 1'], from:{ 'IGNORES COVER':'Kustom Dakka', ASSAULT:'Dakka! Dakka! Dakka!', 'RAPID FIRE 1':'Supa-snazz Dakka' } },
+        { name:'Dakka', who:'Flash Gitz', n:10, kw:['LETHAL HITS: non-MONSTER/VEHICLE','SUSTAINED HITS 1','IGNORES COVER','ASSAULT','RAPID FIRE 1'], from:{ 'IGNORES COVER':'Kustom Dakka', ASSAULT:'Dakka! Dakka! Dakka!', 'RAPID FIRE 1':'Supa-snazz Dakka' } },
+        { name:'Kill Shot', who:'Flash Gitz', n:10, kw:['HAZARDOUS','IGNORES COVER','ASSAULT','RAPID FIRE 1'], from:{ 'IGNORES COVER':'Kustom Dakka', ASSAULT:'Dakka! Dakka! Dakka!', 'RAPID FIRE 1':'Supa-snazz Dakka' } }
       ],
       melee:[
         { name:'Mek’s Toolz', who:'Mek' },
@@ -2281,7 +2280,6 @@ const ARMIES = [
       ]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'lord-on-juggernaut-khorne-berzerkers', ds:['world-eaters/lord-on-juggernaut','world-eaters/khorne-berzerkers'], pts:455, ptsNote:'125 + Khorne Berzerkers 330', enhancement:'Archslaughterer',
       leads:'Khorne Berzerkers',
       models:['1× Lord on Juggernaut','1× Khorne Berzerker Champion','15× Khorne Berzerker','3× Khorne Berzerker w/ eviscerator and plasma pistol','1× Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)'],
@@ -2322,7 +2320,7 @@ const ARMIES = [
       gear:[['Lacerator and daemonic claw'],['Chainblades'],['Chainblades']],
       stats:[
         { name:'Slaughterbound' },
-        { name:'Exalted Eightbound ×3' }
+        { name:'Exalted Eightbound' }
       ],
       melee:[
         { name:'Lacerator and daemonic claw', who:'Slaughterbound', A:'7', from:{ A:'Relentless Rage' } },
@@ -2338,8 +2336,7 @@ const ARMIES = [
       rules:['Deadly Demise D3','Leader','Deep Strike','Blessings of Khorne','Scouts 6"','Anti'],
       kw:['Infantry','Character','Chaos','Khorne','Daemon','Possessed','Slaughterbound','Exalted Eightbound','Faction: World Eaters'],
       kwNote:'Exalted Eightbound comes from the led Exalted Eightbound.',
-      // only the Slaughterbound model has Scouts 6" (Lord of the Eightbound); its Exalted Eightbound don't, so the unit can't scout (24.31)
-      partialRules:{ 'Scouts 6"':'Slaughterbound' },
+      partialRules:{ 'Deadly Demise D3':'Slaughterbound', 'Scouts 6"':'Slaughterbound' },
       why:{ kwNote:'leads Exalted Eightbound', ptsNote:'the points of its parts as the list has them (Slaughterbound + Exalted Eightbound)' }
     },
     {
@@ -2468,7 +2465,7 @@ const ARMIES = [
       gear:[['Lacerator and daemonic claw'],['Chainblades'],['Chainblades']],
       stats:[
         { name:'Slaughterbound' },
-        { name:'Exalted Eightbound ×3' }
+        { name:'Exalted Eightbound' }
       ],
       melee:[
         { name:'Lacerator and daemonic claw', who:'Slaughterbound', A:'8', D:'3', from:{ A:['Berzerker Glaive','Relentless Rage'], D:'Berzerker Glaive' } },
@@ -2484,8 +2481,7 @@ const ARMIES = [
       rules:['Deadly Demise D3','Leader','Deep Strike','Blessings of Khorne','Scouts 6"','Anti'],
       kw:['Infantry','Character','Chaos','Khorne','Daemon','Possessed','Slaughterbound','Exalted Eightbound','Faction: World Eaters'],
       kwNote:'Exalted Eightbound comes from the led Exalted Eightbound.',
-      // only the Slaughterbound model has Scouts 6" (Lord of the Eightbound); its Exalted Eightbound don't, so the unit can't scout (24.31)
-      partialRules:{ 'Scouts 6"':'Slaughterbound' },
+      partialRules:{ 'Deadly Demise D3':'Slaughterbound', 'Scouts 6"':'Slaughterbound' },
       why:{ kwNote:'leads Exalted Eightbound', ptsNote:'the points of its parts as the list has them (Slaughterbound + Exalted Eightbound)' }
     },
     {
@@ -2582,13 +2578,9 @@ const ARMIES = [
       ]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'exalted-sorcerer-rubric-marines', ds:['thousand-sons/exalted-sorcerer','thousand-sons/rubric-marines'], role:'Character', pts:230, ptsNote:'115 + Rubric Marines 115', enhancement:'Incandaeum',
       leads:'Rubric Marines',
-      models:['1× Exalted Sorcerer','1× Aspiring Sorcerer','1× Rubric Marine w/ soulreaper cannon','3× Rubric Marine w/ warpflamer'],
-      // New Recruit prints "Icon of Flame - Rubric Marines" with the abilities, on no models line; BSData has it as an
-      // option of the unit for one of its Rubric Marines. Neither says which one carries it.
-      unplaced:['Icon of Flame'],
+      models:['1× Exalted Sorcerer','1× Aspiring Sorcerer','1× Rubric Marine w/ soulreaper cannon (Icon of Flame)','3× Rubric Marine w/ warpflamer'],
       gear:[['Astral Blast','Force weapon','Inferno bolt pistol','Prosperine khopesh'],['Force weapon','Malefic Curse','Warpflame pistol'],['Close combat weapon','Soulreaper cannon'],['Close combat weapon','Warpflamer']],
       stats:[
         { name:'Exalted Sorcerer' },
@@ -2612,8 +2604,6 @@ const ARMIES = [
       abilities:[
         { name:'Arcane Shield', who:'Exalted Sorcerer' },
         { name:'Rebind Rubricae', who:'Exalted Sorcerer' },
-        // Incandaeum: GW’s spelling and wording (Faction Pack Rules Updates, Wahapedia); New Recruit and BSData spell it "Incandeum" (the enhancement’s nr)
-        // and print it without "EXALTED SORCERER model only." and with "has" for GW's "have" (verify/deviations-nr.json)
         { name:'Incandaeum', who:'Exalted Sorcerer', tag:'Enhancement · Once per battle', ph:['shooting'], turn:'your', text:'**EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.' },
         { name:'Bringers of Change', who:'Rubric Marines' },
         { name:'Icon of Flame', who:'Rubric Marines' }
@@ -2621,22 +2611,15 @@ const ARMIES = [
       rules:['Leader','Cabal of Sorcerers','Blast','Devastating Wounds','Psychic','Pistol','Anti','Torrent','Ignores Cover'],
       kw:['Infantry','Character','Grenades','Psyker','Chaos','Tzeentch','Exalted Sorcerer','Battleline','Rubricae','Rubric Marines','Faction: Thousand Sons'],
       kwNote:'Battleline, Rubric, Rubric Marines, Rubricae come from the led Rubric Marines.',
-      partialRules:{ 'Cabal of Sorcerers':'Exalted Sorcerer and Aspiring Sorcerer' },
-      // Wahapedia's Rubric Marines: "ASPIRING SORCERER ONLY: PSYKER" and "Cabal of Sorcerers (Aspiring Sorcerer only)"; BSData has
-      // both on the Aspiring Sorcerer model; the Exalted Sorcerer has both on his own datasheet
       kwOnly:{ Psyker:'Exalted Sorcerer and Aspiring Sorcerer' },
+      partialRules:{ 'Cabal of Sorcerers':'Exalted Sorcerer and Aspiring Sorcerer' },
       why:{ kwNote:'leads Rubric Marines', ptsNote:'the points of its parts as the list has them (Exalted Sorcerer + Rubric Marines)' }
     },
     {
       id:'sorcerer-in-terminator-armour-scarab-occult-terminators', ds:['thousand-sons/sorcerer-in-terminator-armour','thousand-sons/scarab-occult-terminators'], role:'Character', pts:565, ptsNote:'140 + Scarab Occult Terminators 425', enhancement:'Umbralefic Crystal',
       leads:'Scarab Occult Terminators',
       models:['1× Sorcerer in Terminator Armour','1× Scarab Occult Sorcerer','7× Scarab Occult Terminator','2× Scarab Occult Terminator w/ soulreaper cannon'],
-      // New Recruit prints "Hellfyre missile rack (x2) - Scarab Occult Terminators" in the weapons table, on no models line.
-      // The datasheet: "For every 5 models in this unit, 1 Scarab Occult Terminator can be equipped with 1 hellfyre missile
-      // rack"; BSData: a unit option, max 2, each for one model of the "4-9 Scarab Occult Terminators" (plain or with a
-      // heavy weapon). No source says which two carry them.
-      unplaced:['Hellfyre missile rack'],
-      gear:[['Force weapon','Gaze of Hate','Inferno combi-bolter'],['Force weapon','Malefic Curse','Inferno combi-bolter'],['Inferno combi-bolter','Prosperine khopesh'],['Prosperine khopesh','Soulreaper cannon']],
+      gear:[['Force weapon','Gaze of Hate','Inferno combi-bolter'],['Force weapon','Malefic Curse','Inferno combi-bolter'],['Inferno combi-bolter','Prosperine khopesh'],['Prosperine khopesh','Soulreaper cannon','Hellfyre missile rack']],
       stats:[
         { name:'Sorcerer in Terminator Armour' },
         { name:'Scarab Occult Sorcerer' },
@@ -2664,10 +2647,8 @@ const ARMIES = [
       rules:['Deep Strike','Leader','Cabal of Sorcerers','Psychic','Anti','Devastating Wounds','Rapid Fire'],
       kw:['Infantry','Character','Psyker','Terminator','Chaos','Tzeentch','Sorcerer','Rubricae','Scarab Occult','Faction: Thousand Sons'],
       kwNote:'Rubricae, Scarab Occult come from the led Scarab Occult Terminators.',
-      partialRules:{ 'Cabal of Sorcerers':'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' },
-      // Wahapedia's Scarab Occult Terminators: "SCARAB OCCULT SORCERER ONLY: PSYKER" and "Cabal of Sorcerers (Scarab Occult Sorcerer
-      // only)"; BSData has both on the Scarab Occult Sorcerer model; the Sorcerer in Terminator Armour has both on his own datasheet
       kwOnly:{ Psyker:'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' },
+      partialRules:{ 'Cabal of Sorcerers':'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' },
       why:{ kwNote:'leads Scarab Occult Terminators', ptsNote:'the points of its parts as the list has them (Sorcerer in Terminator Armour + Scarab Occult Terminators)' }
     },
     {
@@ -2724,7 +2705,6 @@ const ARMIES = [
   source:'New Recruit, exported 20 Oct 2026',
   units:[
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'the-swarmlord', ds:'tyranids/the-swarmlord', pts:210,
       models:['1× The Swarmlord'],
       gear:[['Bone Sabres','Synaptic Pulse']],
@@ -2735,7 +2715,6 @@ const ARMIES = [
       ]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'hive-tyrant', ds:'tyranids/hive-tyrant', pts:220, enhancement:'Monstrous Nemesis', warlord:true,
       models:['1× Hive Tyrant'],
       gear:[['Monstrous bonesword and lash whip','Monstrous scything talons']],
@@ -2749,7 +2728,6 @@ const ARMIES = [
       why:{ kw:{ Warlord:'Warlord' } }
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'neurogaunts', ds:'tyranids/neurogaunts', pts:45, copies:2,
       models:['1× Neurogaunt Nodebeast','10× Neurogaunt'],
       gear:[['Chitinous claws and teeth'],['Chitinous claws and teeth']],
@@ -2807,7 +2785,7 @@ const ARMIES = [
         { name:'Protean Purpose' },
         { name:'Destabilising Predation', tag:'Enhancement', text:'**NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.' }
       ],
-      rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Anti','Extra Attacks','Melta','Blast','Psychic'],
+      rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Extra Attacks','Melta','Blast','Psychic','Anti'],
       why:{ rules:{ Anti:'Destabilising Predation' } }
     },
     {
@@ -2846,7 +2824,6 @@ const ARMIES = [
       abilities:[
         { name:'Invulnerable Save (5+*)' },
         { name:'Ram Jets' },
-        // this list's Destriers have Titanic feet, not a thundershock spear and bellatus reaper chainsword, so it does not apply
         { name:'Thundercharge', na:'Needs a thundershock spear and bellatus reaper chainsword: not this loadout' },
         { name:'Saturation Fire' },
         { name:'Damaged: 1-6 Wounds Remaining' }
@@ -2904,8 +2881,6 @@ const ARMIES = [
       gear:[['Cerastus shock lance']]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
-      // (Hunter's Eye's [IGNORES COVER] is already on every ranged weapon, as New Recruit prints them: no footnote)
       id:'knight-crusader', ds:'imperial-knights/knight-crusader', pts:435, enhancement:'Hunter’s Eye',
       models:['1× Knight Crusader'],
       gear:[['Avenger gatling cannon','Heavy flamer','Titanic feet','Stormspear rocket pod','Meltagun','Questoris heavy stubber','Rapid-fire battle cannon']],
@@ -2924,22 +2899,19 @@ const ARMIES = [
         { name:'Damaged: 1-9 Wounds Remaining' },
         { name:'Hunter’s Eye', tag:'Enhancement', text:'**IMPERIAL KNIGHTS** model only. Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability.' }
       ],
-      rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Sustained Hits','Bondsman','Ignores Cover','Torrent','Melta','Rapid Fire','Blast'],
+      rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Sustained Hits','Bondsman','Torrent','Melta','Rapid Fire','Blast','Ignores Cover'],
       why:{ rules:{ 'Ignores Cover':'Hunter’s Eye' } }
     },
     {
       id:'knight-destrier', ds:'imperial-knights/knight-destrier', pts:285, enhancement:'Sanctuary',
       models:['1× Knight Destrier'],
       gear:[['Questoris heavy stubber','Titanic feet','Chastiser gatling cannon','Frag bombard']],
-      // InSv 5+ against all attacks from Sanctuary ("The bearer has a 5+ invulnerable save"); New Recruit and BSData print
-      // the datasheet's 5+* (ranged attacks only): printed, checked by verify/nr.js (deviations-nr.json, deviations-bsdata.json)
       stats:[
-        { name:'Knight Destrier', InSv:'5+', from:{ InSv:'Sanctuary' }, printed:{ InSv:'5+*' } }
+        { name:'Knight Destrier', InSv:'5+', printed:{ InSv:'5+*' }, from:{ InSv:'Sanctuary' } }
       ],
       abilities:[
         { name:'Invulnerable Save (5+*)' },
         { name:'Ram Jets' },
-        // this list's Destrier has Titanic feet, not a thundershock spear and bellatus reaper chainsword, so it does not apply
         { name:'Thundercharge', na:'Needs a thundershock spear and bellatus reaper chainsword: not this loadout' },
         { name:'Saturation Fire' },
         { name:'Damaged: 1-6 Wounds Remaining' },
@@ -2980,7 +2952,6 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Bloody Fury' },
-        // already in the WS values above (from); its official text starts with the restriction New Recruit leaves out
         { name:'Gore-stained Veterans', tag:'Upgrade', text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
       ]
     },
@@ -2999,7 +2970,6 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Bloody Fury' },
-        // already in the WS values above (from); its official text starts with the restriction New Recruit leaves out
         { name:'Gore-stained Veterans', tag:'Upgrade', text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
       ]
     },
@@ -3068,8 +3038,6 @@ const ARMIES = [
       gear:[['Jericho-class conversion resonator','Rod of the War Forge']]
     },
     {
-      // the enhancement's "friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model": no calc (a choice once per battle round
-      // after a failed save, not numbers the calculator plays)
       id:'tech-priest-enginseer', ds:'adeptus-mechanicus/tech-priest-enginseer', pts:75, enhancement:'Necromechanic',
       models:['1× Tech-Priest Enginseer'],
       gear:[['Mechanicus pistol','Omnissian axe','Servo arm']],
@@ -3077,7 +3045,6 @@ const ARMIES = [
         { name:'Enginseer' },
         { name:'Omnissiah’s Blessing' },
         { name:'Vengeance for the Omnissiah' },
-        // the Cohort Cybernetica enhancement as data.js has it; New Recruit leaves out "TECH-PRIEST model only." (deviations-nr.json)
         { name:'Necromechanic', tag:'Enhancement · Once per battle round', text:'**TECH-PRIEST** model only. Once per battle round, when a saving throw made for a friendly **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.' }
       ]
     },
@@ -3105,9 +3072,10 @@ const ARMIES = [
         { name:'Robotic Bodyguard', who:'Kastelan Robots' },
         { name:'Repulsor Grid', who:'Kastelan Robots' }
       ],
-      rules:['Support','Deadly Demise 1','Doctrina Imperatives','Feel No Pain 4+','Devastating Wounds','Pistol','Twin-linked','Ignores Cover','Torrent'],
+      rules:['Support','Deadly Demise 1','Doctrina Imperatives','Devastating Wounds','Pistol','Twin-linked','Ignores Cover','Torrent'],
       kw:['Vehicle','Character','Imperium','Legio Cybernetica','Tech-Priest','Cybernetica Datasmith','Walker','Kastelan Robots','Faction: Adeptus Mechanicus','Skitarii'],
       kwNote:'Kastelan Robots, Walker come from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator.',
+      partialRules:{ 'Deadly Demise 1':'Kastelan Robots' },
       why:{ kw:{ Skitarii:'Martial Signatum Amplificator' }, kwNote:'supports Kastelan Robots', ptsNote:'the points of its parts as the list has them (Cybernetica Datasmith + Kastelan Robots)' }
     },
     {
@@ -3209,7 +3177,6 @@ const ARMIES = [
       why:{ kw:{ Warlord:'Warlord' }, kwNote:'leads Flawless Blades', ptsNote:'the points of its parts as the list has them (Lucius the Eternal + Flawless Blades)' }
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'daemon-prince-of-slaanesh-with-wings', ds:'emperors-children/daemon-prince-of-slaanesh-with-wings', pts:235, enhancement:'Pledge of Unholy Fortune',
       models:['1× Daemon Prince of Slaanesh with Wings'],
       gear:[['Hellforged weapons','Infernal cannon']],
@@ -3220,7 +3187,6 @@ const ARMIES = [
       ]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'sorcerer', ds:'emperors-children/sorcerer', pts:55,
       models:['1× Sorcerer'],
       gear:[['Agonising Energies','Bolt pistol','Force weapon']]
@@ -3254,13 +3220,13 @@ const ARMIES = [
         { name:'Excessive Assault', who:'Infractors' },
         { name:'Icon of Excess', who:'Infractors' }
       ],
-      rules:['Leader','Scouts 6"','Thrill Seekers','Pistol','Lance','Extra Attacks','Precision','Hazardous'],
+      rules:['Leader','Scouts 6"','Thrill Seekers','Infiltrators','Pistol','Lance','Extra Attacks','Precision','Hazardous'],
       kw:['Infantry','Character','Grenades','Chaos','Slaanesh','Lord Exultant','Battleline','Infractors','Faction: Emperor\'s Children'],
       kwNote:'Battleline, Infractors come from the led Infractors.',
+      partialRules:{ Infiltrators:'Lord Exultant' },
       why:{ kwNote:'leads Infractors', ptsNote:'the points of its parts as the list has them (Lord Exultant + Infractors)' }
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'tormentors', ds:'emperors-children/tormentors', pts:85,
       models:['1× Obsessionist','2× Tormentor','1× Tormentor (Icon of Excess)','1× Tormentor w/ meltagun'],
       gear:[['Plasma pistol','Power sword'],['Boltgun','Close combat weapon'],['Boltgun','Close combat weapon'],['Close combat weapon','Meltagun']],
@@ -3279,7 +3245,6 @@ const ARMIES = [
       ]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'chaos-rhino', ds:'emperors-children/chaos-rhino', pts:70,
       models:['1× Chaos Rhino'],
       gear:[['Armoured tracks','Combi-bolter']]
@@ -3530,7 +3495,6 @@ const ARMIES = [
       ]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'lord-on-juggernaut-khorne-berzerkers', ds:['world-eaters/lord-on-juggernaut','world-eaters/khorne-berzerkers'], pts:440, ptsNote:'110 + Khorne Berzerkers 330', enhancement:'Disciple of Khorne',
       leads:'Khorne Berzerkers',
       models:['1× Lord on Juggernaut','1× Khorne Berzerker Champion (Icon of Khorne)','15× Khorne Berzerker','4× Khorne Berzerker w/ eviscerator and plasma pistol'],
@@ -3563,7 +3527,6 @@ const ARMIES = [
       rules:['Leader','Blessings of Khorne','Deep Strike','Extra Attacks','Lance','Pistol','Hazardous'],
       kw:['Mounted','Character','Chaos','Khorne','Lord on Juggernaut','Infantry','Battleline','Grenades','Berzerkers','Faction: World Eaters','Faction: Blood Legions'],
       kwNote:'Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry come from the led Khorne Berzerkers; Faction: Blood Legions comes from Disciple of Khorne on the Lord on Juggernaut (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”).',
-      // Deep Strike is the Lord on Juggernaut's (Disciple of Khorne); the Khorne Berzerkers don't have it, so the unit can't use it (24.09)
       partialRules:{ 'Deep Strike':'Lord on Juggernaut' },
       why:{ kwNote:'leads Khorne Berzerkers', ptsNote:'the points of its parts as the list has them (Lord on Juggernaut + Khorne Berzerkers)' }
     },
@@ -3640,10 +3603,8 @@ const ARMIES = [
       rules:['Leader','Cabal of Sorcerers','Psychic','Pistol','Blast','Ignores Cover','Lethal Hits','Precision'],
       kw:['Infantry','Mounted','Character','Epic Hero','Fly','Psyker','Chaos','Tzeentch','Ahriman','Mutant','Tzaangor Enlightened','Tzaangor Enlightened with Fatecaster Greatbows','Faction: Thousand Sons'],
       kwNote:'Mutant, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster Greatbows come from the led Tzaangor Enlightened with Fatecaster greatbows.',
-      partialRules:{ 'Cabal of Sorcerers':'Ahriman' },
-      // Wahapedia: Ahriman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened with Fatecaster greatbows are MOUNTED, not INFANTRY or
-      // PSYKER, and have no Cabal of Sorcerers (BSData the same)
       kwOnly:{ Infantry:'Ahriman', Psyker:'Ahriman' },
+      partialRules:{ 'Cabal of Sorcerers':'Ahriman' },
       why:{ kwNote:'leads Tzaangor Enlightened with Fatecaster greatbows', ptsNote:'the points of its parts as the list has them (Ahriman + Tzaangor Enlightened with Fatecaster greatbows)' }
     },
     {
@@ -3678,10 +3639,8 @@ const ARMIES = [
       rules:['Leader','Cabal of Sorcerers','Torrent','Ignores Cover','Psychic','Pistol','Lethal Hits','Precision'],
       kw:['Infantry','Mounted','Character','Fly','Grenades','Psyker','Chaos','Tzeentch','Exalted Sorcerer','Mutant','Tzaangor Enlightened','Tzaangor Enlightened with Fatecaster Greatbows','Faction: Thousand Sons'],
       kwNote:'Mutant, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster Greatbows come from the led Tzaangor Enlightened with Fatecaster greatbows.',
-      partialRules:{ 'Cabal of Sorcerers':'Exalted Sorcerer on Disc of Tzeentch' },
-      // Wahapedia: the Exalted Sorcerer on Disc of Tzeentch is INFANTRY, MOUNTED … GRENADES, PSYKER; the Tzaangor Enlightened with Fatecaster
-      // greatbows are MOUNTED, without those, and have no Cabal of Sorcerers (BSData the same)
       kwOnly:{ Grenades:'Exalted Sorcerer on Disc of Tzeentch', Infantry:'Exalted Sorcerer on Disc of Tzeentch', Psyker:'Exalted Sorcerer on Disc of Tzeentch' },
+      partialRules:{ 'Cabal of Sorcerers':'Exalted Sorcerer on Disc of Tzeentch' },
       why:{ kwNote:'leads Tzaangor Enlightened with Fatecaster greatbows', ptsNote:'the points of its parts as the list has them (Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows)' }
     },
     {
@@ -3709,10 +3668,8 @@ const ARMIES = [
       rules:['Leader','Cabal of Sorcerers','Devastating Wounds','Blast','Psychic','Lance','Precision'],
       kw:['Infantry','Mounted','Character','Fly','Psyker','Chaos','Tzeentch','Mutant','Tzaangor Shaman','Tzaangor Enlightened','Faction: Thousand Sons'],
       kwNote:'Tzaangor Enlightened comes from the led Tzaangor Enlightened.',
-      partialRules:{ 'Cabal of Sorcerers':'Tzaangor Shaman' },
-      // Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have
-      // no Cabal of Sorcerers (BSData the same)
       kwOnly:{ Infantry:'Tzaangor Shaman', Psyker:'Tzaangor Shaman' },
+      partialRules:{ 'Cabal of Sorcerers':'Tzaangor Shaman' },
       why:{ kwNote:'leads Tzaangor Enlightened', ptsNote:'the points of its parts as the list has them (Tzaangor Shaman + Tzaangor Enlightened)' }
     },
     {
@@ -3740,10 +3697,8 @@ const ARMIES = [
       rules:['Leader','Cabal of Sorcerers','Devastating Wounds','Blast','Psychic','Lance','Precision'],
       kw:['Infantry','Mounted','Character','Fly','Psyker','Chaos','Tzeentch','Mutant','Tzaangor Shaman','Tzaangor Enlightened','Faction: Thousand Sons'],
       kwNote:'Tzaangor Enlightened comes from the led Tzaangor Enlightened.',
-      partialRules:{ 'Cabal of Sorcerers':'Tzaangor Shaman' },
-      // Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have
-      // no Cabal of Sorcerers (BSData the same)
       kwOnly:{ Infantry:'Tzaangor Shaman', Psyker:'Tzaangor Shaman' },
+      partialRules:{ 'Cabal of Sorcerers':'Tzaangor Shaman' },
       why:{ kwNote:'leads Tzaangor Enlightened', ptsNote:'the points of its parts as the list has them (Tzaangor Shaman + Tzaangor Enlightened)' }
     },
     {
@@ -3771,10 +3726,8 @@ const ARMIES = [
       rules:['Leader','Cabal of Sorcerers','Feel No Pain 4+','Devastating Wounds','Blast','Psychic','Lance','Precision'],
       kw:['Infantry','Mounted','Character','Fly','Psyker','Chaos','Tzeentch','Mutant','Tzaangor Shaman','Tzaangor Enlightened','Faction: Thousand Sons'],
       kwNote:'Tzaangor Enlightened comes from the led Tzaangor Enlightened.',
-      partialRules:{ 'Cabal of Sorcerers':'Tzaangor Shaman', 'Feel No Pain 4+':'Tzaangor Shaman' },
-      // Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have
-      // no Cabal of Sorcerers (BSData the same)
       kwOnly:{ Infantry:'Tzaangor Shaman', Psyker:'Tzaangor Shaman' },
+      partialRules:{ 'Cabal of Sorcerers':'Tzaangor Shaman', 'Feel No Pain 4+':'Tzaangor Shaman' },
       why:{ rules:{ 'Feel No Pain 4+':'Flowing Flesh' }, kwNote:'leads Tzaangor Enlightened', ptsNote:'the points of its parts as the list has them (Tzaangor Shaman + Tzaangor Enlightened)' }
     },
     {
@@ -3846,15 +3799,13 @@ const ARMIES = [
         { name:'Slayer of Tyrants', who:'Allarus Custodians' },
         { name:'Vexilla', who:'Allarus Custodians' }
       ],
-      rules:['Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Leader','Aegis of the Emperor','Aquila Commander','Martial Ka\'tah','Assault','Rapid Fire','Cleave','Blast'],
+      rules:['Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Leader','Aegis of the Emperor','Aquila Commander','Martial Ka’tah','Assault','Rapid Fire','Cleave','Blast'],
       kw:['Infantry','Character','Epic Hero','Imperium','Trajann Valoris','Terminator','Allarus Custodians','Faction: Adeptus Custodes','Warlord'],
       kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.',
-      // Feel No Pain 5+: a core ability of Trajann Valoris's datasheet (Wahapedia, CORE ABILITIES), not of the Allarus Custodians
       partialRules:{ 'Feel No Pain 5+':'Trajann Valoris' },
       why:{ kw:{ Warlord:'Warlord' }, kwNote:'leads Allarus Custodians', ptsNote:'the points of its parts as the list has them (Trajann Valoris + Allarus Custodians)' }
     },
     {
-      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
       id:'prosecutor-squad', ds:'adeptus-custodes/prosecutor-squad', pts:45, copies:2,
       models:['4× Prosecutor'],
       gear:[['Boltgun','Gun Stock']],
@@ -3869,7 +3820,6 @@ const ARMIES = [
       ]
     },
     {
-      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
       id:'witchseeker-squad', ds:'adeptus-custodes/witchseeker-squad', pts:55,
       models:['4× Witchseeker'],
       gear:[['Flamer','Gun Stock']],
@@ -3884,7 +3834,6 @@ const ARMIES = [
       ]
     },
     {
-      // Daughters of the Abyss: its Psychic Null aura, for the ADEPTUS CUSTODES units within 6" of this unit
       id:'witchseeker-squad-2', ds:'adeptus-custodes/witchseeker-squad', pts:60,
       models:['5× Witchseeker'],
       gear:[['Flamer','Gun Stock']],
@@ -3899,9 +3848,6 @@ const ARMIES = [
       ]
     },
     {
-      // CALADIUS: the datasheet's keywords (Wahapedia: "VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM"); New Recruit prints
-      // "Caladius Annihilator Grav-tank" and not CALADIUS. Flare Shields is the Grav-Assault Force detachment rule (GW's words), which
-      // applies to it as a GRAV-ASSAULT unit; New Recruit prints it as an ability of the unit in its own words (deviations-nr.json)
       id:'caladius-annihilator-grav-tank', ds:'adeptus-custodes/caladius-annihilator-grav-tank', pts:250,
       models:['1× Caladius Annihilator Grav-tank'],
       gear:[['Arachnus Blaze Carronade','Twin Lastrum Bolt Cannon','Armoured hull']],
@@ -3931,8 +3877,6 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Unyielding Ancient' },
-        // the upgrade's published text starts with its restriction, which New Recruit (BSData) leaves out; the +1 A, S and D are in the
-        // Warblade's melee profile already (from)
         { name:'Memento Moritoi', tag:'Upgrade', text:'**ADEPTUS CUSTODES DREADNOUGHT** model only. This model’s melee attacks have +1 **A**, **S** and **D**.' }
       ]
     },
@@ -3949,7 +3893,6 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Guardian Eternal' },
-        // the upgrade's published text starts with its restriction, which New Recruit (BSData) leaves out
         { name:'Augury Uplink', tag:'Upgrade', text:'**ADEPTUS CUSTODES DREADNOUGHT** model only. This model has **Feel No Pain 5+**.' }
       ],
       rules:['Damaged 5','Deadly Demise D3','Aegis of the Emperor','Martial Ka\'tah','Feel No Pain 5+*','Feel No Pain 5+','Blast','Twin-linked','Torrent'],
@@ -4036,8 +3979,8 @@ const ARMIES = [
       rules:['Deep Strike','Leader','Support','Combat Doctrines','Transhuman Strategist','Close-quarters','Twin-linked','Extra Attacks','Assault','Heavy','Rapid Fire','Blast','Psychic','Devastating Wounds'],
       kw:['Infantry','Chapter Master','Character','Epic Hero','Imperium','Terminator','Marneus Calgar','Explosives','Tacticus','Psyker','Wardens of Ultramar','Bladeguard Veteran Squad','Faction: Adeptus Astartes','Faction: Ultramarines'],
       kwNote:'Explosives, Tacticus, Wardens of Ultramar, Bladeguard Veteran Squad come from the combined unit.',
-      partialRules:{ 'Deep Strike':'Marneus Calgar' },
       kwOnly:{ Psyker:'Dainal Kornelius' },
+      partialRules:{ 'Deep Strike':'Marneus Calgar' },
       why:{ kwNote:'leads Bladeguard Veteran Squad (with Wardens of Ultramar)', ptsNote:'the points of its parts as the list has them (Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad)' }
     },
     {
@@ -4171,9 +4114,8 @@ const ARMIES = [
     {
       id:'skulltaker-bloodletters', ds:['chaos-daemons/skulltaker','chaos-daemons/bloodletters'], role:'Epic Hero', pts:210, ptsNote:'85 + Bloodletters 125', upgrade:'Bane-Forged Weapons',
       leads:'Bloodletters',
-      models:['1× Skulltaker','1× Bloodreaper','9× Bloodletter'],
-      unplaced:['Daemonic Icon','Instrument of Chaos'],
-      gear:[['The Slayer Sword'],['Hellblade'],['Hellblade']],
+      models:['1× Skulltaker','1× Bloodreaper','7× Bloodletter','1× Bloodletter (Daemonic Icon)','1× Bloodletter (Instrument of Chaos)'],
+      gear:[['The Slayer Sword'],['Hellblade'],['Hellblade'],['Hellblade'],['Hellblade']],
       stats:[
         { name:'Skulltaker', Ld:'6+', from:{ Ld:'Daemonic Icon' } },
         { name:'Bloodletters ×10', Ld:'6+', from:{ Ld:'Daemonic Icon' } }
@@ -4240,9 +4182,8 @@ const ARMIES = [
     {
       id:'bloodmaster-bloodletters', ds:['chaos-daemons/bloodmaster','chaos-daemons/bloodletters'], role:'Character', pts:190, ptsNote:'65 + Bloodletters 125', upgrade:'Bane-Forged Weapons',
       leads:'Bloodletters',
-      models:['1× Bloodmaster','1× Bloodreaper','9× Bloodletter'],
-      unplaced:['Daemonic Icon','Instrument of Chaos'],
-      gear:[['Blade of blood'],['Hellblade'],['Hellblade']],
+      models:['1× Bloodmaster','1× Bloodreaper','7× Bloodletter','1× Bloodletter (Daemonic Icon)','1× Bloodletter (Instrument of Chaos)'],
+      gear:[['Blade of blood'],['Hellblade'],['Hellblade'],['Hellblade'],['Hellblade']],
       stats:[
         { name:'Bloodmaster', Ld:'6+', from:{ Ld:'Daemonic Icon' } },
         { name:'Bloodletters ×10', Ld:'6+', from:{ Ld:'Daemonic Icon' } }
@@ -4267,9 +4208,8 @@ const ARMIES = [
     {
       id:'skullmaster-bloodcrushers', ds:['chaos-daemons/skullmaster','chaos-daemons/bloodcrushers'], role:'Character', pts:195, ptsNote:'100 + Bloodcrushers 95', enhancement:'Brazenmaw',
       leads:'Bloodcrushers',
-      models:['1× Skullmaster','1× Bloodhunter','2× Bloodcrusher'],
-      unplaced:['Daemonic Icon','Instrument of Chaos'],
-      gear:[['Blade of blood','Juggernaut’s bladed horn'],['Hellblade','Juggernaut’s bladed horn'],['Hellblade','Juggernaut’s bladed horn']],
+      models:['1× Skullmaster','1× Bloodhunter','1× Bloodcrusher (Instrument of Chaos)','1× Bloodcrusher (Daemonic Icon)'],
+      gear:[['Blade of blood','Juggernaut’s bladed horn'],['Hellblade','Juggernaut’s bladed horn'],['Hellblade','Juggernaut’s bladed horn'],['Hellblade','Juggernaut’s bladed horn']],
       stats:[
         { name:'Skullmaster', Ld:'6+', from:{ Ld:'Daemonic Icon' } },
         { name:'Bloodcrushers ×3', Ld:'6+', from:{ Ld:'Daemonic Icon' } }
@@ -4382,8 +4322,8 @@ const ARMIES = [
       rules:['Leader','Support','Stealth','Dark Pacts','Pistol','Devastating Wounds','Precision','Sustained Hits','Hazardous','Twin-linked'],
       kw:['Infantry','Grenades','Chaos','Character','Dark Apostle','Master of Executions','Psyker','Nemesis Claw','Faction: Heretic Astartes','Soul Forge'],
       kwNote:'Master of Executions, Nemesis Claw, Psyker come from the combined unit.',
-      partialRules:{ Stealth:'Nemesis Claw' },
       kwOnly:{ Character:'Dark Apostle and Master of Executions', 'Dark Apostle':'Dark Apostle' },
+      partialRules:{ Stealth:'Nemesis Claw' },
       why:{ kw:{ 'Soul Forge':'Cybinfernal Font' }, kwNote:'leads Nemesis Claw (with Master of Executions)', ptsNote:'the points of its parts as the list has them (Dark Apostle + Master of Executions + Nemesis Claw)' }
     },
     {
@@ -4522,10 +4462,14 @@ const ARMIES = [
         { name:'Castellan axe', who:'Allarus Custodians', n:3 }
       ],
       abilities:[
+        // SUPREME COMMANDER: the box on GW's datasheet (Wahapedia, between the weapons and CORE ABILITIES); New Recruit does not print it
         { name:'Supreme Commander', who:'Trajann Valoris' },
+        // the new codex's wording (Wahapedia); New Recruit prints the bullets without full stops
         { name:'Captain-General', who:'Trajann Valoris' },
+        // ph/turn: "at the start of any phase"; the +3 A is the Watcher's Axe footnote, the 3+ InSv the When targeted line (one of the two)
         { name:'Moment Shackle', who:'Trajann Valoris' },
         { name:'Leader', who:'Trajann Valoris' },
+        // the new codex's name (Wahapedia); New Recruit prints "Slayers of Tyrants"
         { name:'Slayer of Tyrants', who:'Allarus Custodians' },
         { name:'Vexilla', who:'Allarus Custodians' }
       ],
@@ -4610,6 +4554,7 @@ const ARMIES = [
         { name:'Boltgun', n:5 }
       ],
       melee:[
+        // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
         { name:'Gun Stock', n:5 }
       ]
     },
@@ -4625,7 +4570,12 @@ const ARMIES = [
         { name:'Flamer', n:5 }
       ],
       melee:[
+        // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
         { name:'Gun Stock', n:5 }
+      ],
+      abilities:[
+        // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
+        { name:'Sanctified Flames' }
       ]
     },
     {
@@ -4648,6 +4598,11 @@ const ARMIES = [
       id:'caladius-annihilator-grav-tank', ds:'adeptus-custodes/caladius-annihilator-grav-tank', pts:250,
       models:['1× Caladius Annihilator Grav-tank'],
       gear:[['Arachnus Blaze Carronade','Twin Lastrum Bolt Cannon','Armoured hull']],
+      stats:[
+        // base: GW's Base Size Guide (Event Companion, Oct 2026) "Caladius Grav-tank 170x109mm Oval Base"; BSData, and so New Recruit,
+        // give 150×95mm (deviations-nr.json, deviations-bsdata.json)
+        { name:'Caladius Annihilator Grav-tank' }
+      ],
       ranged:[
         { name:'Arachnus Blaze Carronade' },
         { name:'Twin Lastrum Bolt Cannon' }
@@ -4680,10 +4635,14 @@ const ARMIES = [
         { name:'Castellan axe', who:'Allarus Custodians', n:3 }
       ],
       abilities:[
+        // SUPREME COMMANDER: the box on GW's datasheet (Wahapedia, between the weapons and CORE ABILITIES); New Recruit does not print it
         { name:'Supreme Commander', who:'Trajann Valoris' },
+        // the new codex's wording (Wahapedia); New Recruit prints the bullets without full stops
         { name:'Captain-General', who:'Trajann Valoris' },
+        // ph/turn: "at the start of any phase"; the +3 A is the Watcher's Axe footnote, the 3+ InSv the When targeted line (one of the two)
         { name:'Moment Shackle', who:'Trajann Valoris' },
         { name:'Leader', who:'Trajann Valoris' },
+        // the new codex's name (Wahapedia); New Recruit prints "Slayers of Tyrants"
         { name:'Slayer of Tyrants', who:'Allarus Custodians' },
         { name:'Vexilla', who:'Allarus Custodians' }
       ],
@@ -4753,6 +4712,11 @@ const ARMIES = [
       ],
       melee:[
         { name:'Guardian Spear', n:2 }
+      ],
+      abilities:[
+        // the new codex's name (Wahapedia); New Recruit prints "Slayers of Tyrants"
+        { name:'Slayer of Tyrants' },
+        { name:'Vexilla' }
       ]
     },
     {
@@ -4783,6 +4747,7 @@ const ARMIES = [
         { name:'Boltgun', n:4 }
       ],
       melee:[
+        // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
         { name:'Gun Stock', n:4 }
       ]
     },
@@ -4798,7 +4763,12 @@ const ARMIES = [
         { name:'Flamer', n:5 }
       ],
       melee:[
+        // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
         { name:'Gun Stock', n:5 }
+      ],
+      abilities:[
+        // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
+        { name:'Sanctified Flames' }
       ]
     },
     // CALADIUS: the datasheet's keywords (Wahapedia: "VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM"); New Recruit prints
@@ -4807,6 +4777,11 @@ const ARMIES = [
       id:'caladius-annihilator-grav-tank', ds:'adeptus-custodes/caladius-annihilator-grav-tank', pts:250,
       models:['1× Caladius Annihilator Grav-tank'],
       gear:[['Arachnus Blaze Carronade','Twin Lastrum Bolt Cannon','Armoured hull']],
+      stats:[
+        // base: GW's Base Size Guide (Event Companion, Oct 2026) "Caladius Grav-tank 170x109mm Oval Base"; BSData, and so New Recruit,
+        // give 150×95mm (deviations-nr.json, deviations-bsdata.json)
+        { name:'Caladius Annihilator Grav-tank' }
+      ],
       ranged:[
         { name:'Arachnus Blaze Carronade' },
         { name:'Twin Lastrum Bolt Cannon' }
@@ -4839,7 +4814,6 @@ const ARMIES = [
       why:{ kw:{ Warlord:'Warlord' } }
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'knight-crusader', ds:'imperial-knights/knight-crusader', pts:435, enhancement:'Hunter’s Eye',
       models:['1× Knight Crusader'],
       gear:[['Avenger gatling cannon','Heavy flamer','Titanic feet','Stormspear rocket pod','Meltagun','Questoris heavy stubber','Rapid-fire battle cannon']],
@@ -4887,7 +4861,7 @@ const ARMIES = [
         { name:'Errant’s Duty' },
         { name:'Aggressive Assault' },
         { name:'Damaged: 1-9 Wounds Remaining' },
-        { name:'Mysterious Guardian', tag:'Enhancement', at:'End of your opponent’s turn', ph:['movement','fight'], turn:'your', turns:{ fight:'opp' }, text:'**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' }
+        { name:'Mysterious Guardian', tag:'Enhancement · Once per battle, per army', at:'End of your opponent’s turn', ph:['movement','fight'], turn:'your', turns:{ fight:'opp' }, text:'**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' }
       ],
       rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Bondsman','Melta','Blast','Deep Strike'],
       why:{ rules:{ 'Deep Strike':'Mysterious Guardian' } }
@@ -5061,7 +5035,6 @@ const ARMIES = [
       gear:[['Gaping maw','Scything talons']]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'the-swarmlord-tyrant-guard', ds:['tyranids/the-swarmlord','tyranids/tyrant-guard'], pts:380, ptsNote:'210 + Tyrant Guard 170', warlord:true,
       leads:'Tyrant Guard',
       models:['1× The Swarmlord','6× Tyrant Guard'],
@@ -5089,7 +5062,6 @@ const ARMIES = [
       why:{ kw:{ Warlord:'Warlord' }, kwNote:'leads Tyrant Guard', ptsNote:'the points of its parts as the list has them (The Swarmlord + Tyrant Guard)' }
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'hive-tyrant-tyrant-guard', ds:['tyranids/hive-tyrant','tyranids/tyrant-guard'], pts:390, ptsNote:'220 + Tyrant Guard 170', enhancement:'Parasitic Biomorphology',
       leads:'Tyrant Guard',
       models:['1× Hive Tyrant','6× Tyrant Guard'],
@@ -5115,13 +5087,11 @@ const ARMIES = [
       why:{ kwNote:'leads Tyrant Guard', ptsNote:'the points of its parts as the list has them (Hive Tyrant + Tyrant Guard)' }
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'biovores', ds:'tyranids/biovores', pts:60,
       models:['1× Biovore'],
       gear:[['Chitin-barbed limbs','Spore mine launcher']]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'pyrovores', ds:'tyranids/pyrovores', pts:100, copies:2,
       models:['3× Pyrovore'],
       gear:[['Chitin-barbed limbs','Flamespurt']],
@@ -5136,7 +5106,6 @@ const ARMIES = [
       ]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'ripper-swarms', ds:'tyranids/ripper-swarms', pts:30,
       models:['1× Ripper Swarm'],
       gear:[['Chitinous claws and teeth']],
@@ -5177,7 +5146,6 @@ const ARMIES = [
       ]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'spore-mines-biovore', ds:'tyranids/spore-mines-biovore', role:'Reference', pts:0,
       ref:{ by:'biovores', rule:'Seed Spore Mines', quote:'If it does, you can add one new SPORE MINES unit to your army and set it up anywhere on the battlefield that is wholly within 48" of this unit and more than 8" horizontally away from all enemy units.' },
       models:['1× Spore Mine'],
@@ -5193,7 +5161,6 @@ const ARMIES = [
   source:'New Recruit, exported 28 Oct 2026 (JSON)',
   units:[
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'imotekh-the-stormlord', ds:'necrons/imotekh-the-stormlord', pts:100,
       models:['1× Imotekh the Stormlord'],
       gear:[['Gauntlet of Fire','Staff of the Destroyer']]
@@ -5224,7 +5191,6 @@ const ARMIES = [
       gear:[['Close combat weapon','Relic gauss blaster']]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'technomancer-immortals', ds:['necrons/technomancer','necrons/immortals'], role:'Character', pts:145, ptsNote:'80 + Immortals 65',
       leads:'Immortals', support:true,
       models:['1× Technomancer','5× Immortal'],
@@ -5349,7 +5315,6 @@ const ARMIES = [
       gear:[['Big Chompa’s Jaws','Gutrippa','Thump Gun']]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'nazdreg-meganobz', ds:['orks/nazdreg','orks/meganobz'], role:'Epic Hero', pts:340, ptsNote:'165 + Meganobz 175',
       leads:'Meganobz',
       models:['1× Nazdreg','5× Meganob w/ Kombi-weapon and Power Klaw'],
@@ -5440,7 +5405,6 @@ const ARMIES = [
       gear:[['Blitzkannon','Multi-busta Launcha','Stompy Feet']]
     },
     {
-      // abilities that change this unit's attacks, shown inside its weapon tables
       id:'warboss-in-mega-armour-meganobz', ds:['orks/warboss-in-mega-armour','orks/meganobz'], role:'Character', pts:375, ptsNote:'135 + Meganobz 240', enhancement:'Da Gobshot Thunderbuss',
       leads:'Meganobz',
       models:['1× Warboss in Mega Armour','6× Meganob w/ Twin Killsaw'],
@@ -5682,7 +5646,6 @@ const DATASHEETS = {
   abilities:[
     { name:'Turbo Engine', who:'Throttlerokkit Shokka Engine', ph:['movement','charge'], turn:'your', text:'When this unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to declare a charge**.' },
     { name:'Shokk Attack Engine', who:'Throttlerokkit Shokka Engine', ph:['command'], turn:'your', text:'In your Command phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**.' },
-    // def: the "When targeted" line on the datasheet (the Pulse Jet Move's AFTER MOVING)
     { name:'Pulse Jet', who:'Throttlerokkit Shokka Engine', ph:['movement'], turn:'your', text:'In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**.' },
     { name:'Full Throttle', ph:['command','movement','charge'], turn:'your', text:'In your Command phase, select one Throttlerokkit Shokka Engine ability (see above). This unit has that ability until the start of your next Command phase.' }
   ],
@@ -6017,7 +5980,7 @@ const DATASHEETS = {
     { name:'supercharge', group:'Plasma pistol', range:'12"', A:'1', BS:'3+', S:'8', AP:'-3', D:'2', kw:['HAZARDOUS','PISTOL'] }
   ],
   melee:[
-    { name:'Gorechild', range:'Melee', WS:'2+', S:'7', AP:'-2', D:'3', kw:[] }
+    { name:'Gorechild', range:'Melee', WS:'2+', S:'7', AP:'-2', D:'3', kw:[], A:'8' }
   ],
   abilities:[
     { name:'Legendary Killer', ph:['fight'], turn:'either', text:'While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.' },
@@ -6042,8 +6005,6 @@ const DATASHEETS = {
   abilities:[
     { name:'Blood Surge', ph:['shooting'], turn:'opp', text:'In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".' },
     { name:'Murderous Charge', ph:['fight'], turn:'either', text:'If this unit made a charge move this turn, this unit’s melee attacks have +1 S.' },
-    // at/ph: when its extra dice are rolled, with a Blessings of Khorne roll (the start of the battle round; Skulls for the Skull
-    // Throne! in the Fight phase)
     { name:'Icon of Khorne', at:'Start of the battle round', ph:['command','movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
   ]
 },
@@ -6056,8 +6017,8 @@ const DATASHEETS = {
     { name:'Infernal cannon', range:'24"', A:'3', BS:'3+', S:'5', AP:'-1', D:'2', kw:['RAPID FIRE 1'] }
   ],
   melee:[
-    { name:'strike', group:'Hellforged weapons', range:'Melee', WS:'2+', S:'8', AP:'-2', D:'3', kw:[] },
-    { name:'sweep', group:'Hellforged weapons', range:'Melee', WS:'2+', S:'6', AP:'-1', D:'1', kw:[] }
+    { name:'strike', group:'Hellforged weapons', range:'Melee', WS:'2+', S:'8', AP:'-2', D:'3', kw:[], A:'8' },
+    { name:'sweep', group:'Hellforged weapons', range:'Melee', WS:'2+', S:'6', AP:'-1', D:'1', kw:[], A:'16' }
   ],
   abilities:[
     { name:'Lord of Murder', text:'While this model is within 3" of one or more friendly **WORLD EATERS INFANTRY** units, this model has the **Lone Operative** ability.' },
@@ -6093,7 +6054,7 @@ const DATASHEETS = {
     { name:'Slaughterbound', M:'10"', T:'6', Sv:'3+', W:'6', Ld:'6+', OC:'1', InSv:'5+', base:'50mm' }
   ],
   melee:[
-    { name:'Lacerator and daemonic claw', range:'Melee', WS:'2+', S:'10', AP:'-2', D:'2', kw:[] }
+    { name:'Lacerator and daemonic claw', range:'Melee', WS:'2+', S:'10', AP:'-2', D:'2', kw:[], A:'6' }
   ],
   abilities:[
     { name:'Lord of the Eightbound', text:'If this model is **attached** to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, until the end of the battle, this model has the **Deep Strike** and **Scouts 6"** abilities.' },
@@ -6109,7 +6070,7 @@ const DATASHEETS = {
     { name:'Exalted Eightbound', M:'10"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
   ],
   melee:[
-    { name:'Chainblades', range:'Melee', WS:'3+', S:'8', AP:'-3', D:'2', kw:['ANTI-MONSTER 3+','ANTI-VEHICLE 3+'] }
+    { name:'Chainblades', range:'Melee', WS:'3+', S:'8', AP:'-3', D:'2', kw:['ANTI-MONSTER 3+','ANTI-VEHICLE 3+'], A:'4' }
   ],
   abilities:[
     { name:'Rend and Tear', ph:['fight'], turn:'either', text:'Each time a model in this unit makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, until the end of the phase, improve the Damage characteristic of that attack by 1.' }
@@ -6126,7 +6087,7 @@ const DATASHEETS = {
     { name:'Combi-bolter', range:'24"', A:'2', BS:'4+', S:'5', AP:'-1', D:'1', kw:['RAPID FIRE 4'] }
   ],
   melee:[
-    { name:'Armoured tracks', range:'Melee', WS:'3+', S:'6', AP:'0', D:'1', kw:[] }
+    { name:'Armoured tracks', range:'Melee', WS:'3+', S:'6', AP:'0', D:'1', kw:[], A:'6' }
   ],
   abilities:[
     { name:'Meet Any Challenge', ph:['movement'], turn:'opp', text:'In your opponent’s Movement phase, each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within 8" of this model, any units embarked within it can disembark.' },
@@ -6141,7 +6102,7 @@ const DATASHEETS = {
     { name:'Eightbound', M:'10"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
   ],
   melee:[
-    { name:'Chainblades', range:'Melee', WS:'3+', S:'8', AP:'-2', D:'2', kw:[] }
+    { name:'Chainblades', range:'Melee', WS:'3+', S:'8', AP:'-2', D:'2', kw:[], A:'5' }
   ],
   abilities:[
     { name:'Beacons of Rage', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the **Hit roll**. If that attack targets a unit (excluding **MONSTERS** and **VEHICLES**) that is **Below Half-strength**, add 1 to the **Wound roll** as well.' }
@@ -6178,7 +6139,7 @@ const DATASHEETS = {
     { name:'Hades autocannon', range:'36"', A:'6', BS:'4+', S:'8', AP:'-1', D:'2', kw:['RAPID FIRE 4'] }
   ],
   melee:[
-    { name:'Forgefiend claws', range:'Melee', WS:'3+', S:'6', AP:'0', D:'1', kw:[] }
+    { name:'Forgefiend claws', range:'Melee', WS:'3+', S:'6', AP:'0', D:'1', kw:[], A:'6' }
   ],
   abilities:[
     { name:'Furious Onslaught', ph:['shooting'], turn:'your', text:'Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.' },
@@ -6197,11 +6158,10 @@ const DATASHEETS = {
     { name:'sweep', group:'Samni’arius and Spinegrinder', range:'Melee', WS:'2+', S:'7', AP:'-2', D:'2', kw:['DEVASTATING WOUNDS'], A:'16' }
   ],
   abilities:[
-    // the three Wrathful Presence abilities: Angron has the one selected at the start of the battle round
     { name:'The Blood God’s Favour', who:'Wrathful Presence: pick one', at:'Start of the battle round', ph:['command'], turn:'either', text:'Each time you make a **Blessings of Khorne roll**, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.' },
     { name:'Overwhelming Wrath', who:'Wrathful Presence: pick one', tag:'Aura', ph:['movement'], turn:'opp', text:'Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.' },
-    // GW Faction Pack Rules Update wording (BSData has it too)
     { name:'Driven by Ultimate Rage', who:'Wrathful Presence: pick one', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **WORLD EATERS** unit is within 6" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.' },
+    { name:'Supreme Commander', text:'If this model is in your army, it must be your **WARLORD**.' },
     { name:'Reborn in Blood', at:'Start of the battle round', ph:['command','movement'], turn:'either', turns:{ movement:'your' }, text:'At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining.' },
     { name:'Wrathful Presence', at:'Start of the battle round', ph:['command'], turn:'either', text:'At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.' },
     { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'71948d80' }
@@ -6237,13 +6197,11 @@ const DATASHEETS = {
     { name:'Reaper autocannon', range:'36"', A:'4', BS:'4+', S:'7', AP:'-1', D:'1', kw:['DEVASTATING WOUNDS','RAPID FIRE 2','SUSTAINED HITS 1'] }
   ],
   melee:[
-    { name:'Chainfist', range:'Melee', S:'8', AP:'-3', D:'2', kw:['ANTI-VEHICLE 3+'] },
-    { name:'Paired accursed weapons', range:'Melee', S:'5', AP:'-2', D:'1', kw:['TWIN-LINKED'] },
-    { name:'Power fist', range:'Melee', S:'8', AP:'-2', D:'2', kw:[] }
+    { name:'Chainfist', range:'Melee', S:'8', AP:'-3', D:'2', kw:['ANTI-VEHICLE 3+'], A:'3', WS:'4+' },
+    { name:'Paired accursed weapons', range:'Melee', S:'5', AP:'-2', D:'1', kw:['TWIN-LINKED'], A:'5', WS:'3+' },
+    { name:'Power fist', range:'Melee', S:'8', AP:'-2', D:'2', kw:[], A:'3', WS:'3+' }
   ],
   abilities:[
-    // GW Faction Pack Rules Update wording ("Chaos Terminators, Blood Fury Ability"), Wahapedia's bold. Its two parts are
-    // bullets there, the second with two sub-bullets; the app has one level of bullets, so the parts are paragraphs
     { name:'Bloody Fury', ph:['shooting','charge'], turn:'your', turns:{ charge:'either' }, text:'This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**.' }
   ],
   rules:['Deep Strike','Blessings of Khorne','Twin-linked','Anti','Rapid Fire','Sustained Hits','Devastating Wounds'],
@@ -6292,7 +6250,7 @@ const DATASHEETS = {
 'world-eaters/master-of-executions':{
   name:'Master of Executions', faction:'world-eaters', bsId:'1b56-682c-ac33-bc5f', role:'Character',
   stats:[
-    { name:'Master of Executions', M:'8"', T:'5', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'40mm' }
+    { name:'Master of Executions', M:'8"', T:'5', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'40mm', Sv:'3+' }
   ],
   ranged:[
     { name:'Bolt pistol', range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
@@ -6322,7 +6280,7 @@ const DATASHEETS = {
     { name:'Hunters from the Warp', at:'End of your opponent’s turn', ph:['fight'], turn:'opp', text:'At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.' },
     { name:'Collar of Khorne', text:'The bearer has the Feel No Pain 3+ ability against Psychic Attacks.' }
   ],
-  rules:['Deep Strike','Ignores Cover','Torrent','Feel No Pain 3+'],
+  rules:['Deep Strike','Ignores Cover','Torrent'],
   kw:['Beast','Chaos','Daemon','Khorne','Summoned','Flesh Hounds','Faction: Blood Legions']
 },
 'thousand-sons/magnus-the-red':{
@@ -6342,6 +6300,7 @@ const DATASHEETS = {
     { name:'Impossible Form', who:'Crimson King', tag:'Psychic', text:'Each time an attack is made against this **PSYKER** (excluding **Psychic Attacks**), subtract 1 from the Damage characteristic of that attack.' },
     { name:'Treason of Tzeentch', who:'Crimson King', tag:'Psychic', ph:['shooting'], turn:'opp', text:'At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this **PSYKER**. Until the end of the phase, ranged weapons equipped by models in that unit have the **[HAZARDOUS]** ability.' },
     { name:'Time Flux', who:'Crimson King', tag:'Aura, Psychic', ph:['movement'], turn:'your', text:'While a friendly **THOUSAND SONS** unit is within 6" of this **PSYKER**, add 2" to the Move characteristic of models in that unit.' },
+    { name:'Supreme Commander', text:'If this model is in your army, it must be your **WARLORD**.' },
     { name:'Unearthly Power', at:'Start of the battle round', ph:['command'], turn:'either', text:'At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability.' },
     { name:'Lord of the Planet of the Sorcerers', tag:'Psychic', ph:['shooting'], turn:'your', text:'This model can attempt up to two **Rituals** per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.' },
     { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'2c58235b' }
@@ -6364,7 +6323,6 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Hunter of Souls', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER** unit, this model regains up to 3 lost wounds instead).' },
-    // Aetherstride: the Faction Pack's Rules Updates wording ("that is more than 6\""); New Recruit and BSData print the older text
     { name:'Aetherstride', tag:'Psychic', ph:['movement','shooting','charge'], turn:'your', text:'In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge.' }
   ],
   rules:['Deadly Demise D3','Deep Strike','Cabal of Sorcerers','Ignores Cover','Sustained Hits','Psychic','Devastating Wounds'],
@@ -6391,8 +6349,8 @@ const DATASHEETS = {
 'thousand-sons/rubric-marines':{
   name:'Rubric Marines', faction:'thousand-sons', bsId:'5d3d-e13b-8b76-dad3',
   stats:[
-    { name:'Rubric Marine', M:'6"', T:'5', Sv:'3+', W:'2', Ld:'7+', OC:'2', base:'32mm' },
-    { name:'Aspiring Sorcerer', M:'6"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'2', base:'32mm' }
+    { name:'Rubric Marine', M:'6"', T:'5', Sv:'3+', W:'2', Ld:'7+', OC:'2', base:'32mm', InSv:'5+' },
+    { name:'Aspiring Sorcerer', M:'6"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'2', base:'32mm', InSv:'5+' }
   ],
   ranged:[
     { name:'Malefic Curse', range:'24"', A:'3', BS:'3+', S:'4', AP:'-3', D:'1' },
@@ -6495,7 +6453,6 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Scuttling Walker', ph:['movement'], turn:'your', text:'Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.' },
-    // every source ends the text with a stray closing quote mark (’); the app leaves it out
     { name:'Destroyer of Futures', tag:'Once per phase, per unit', ph:['fight'], turn:'opp', text:'You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that stratagem on other units this phase.' },
     { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'2c58235b' }
   ],
@@ -6534,7 +6491,6 @@ const DATASHEETS = {
     { name:'Black Staff of Ahriman', range:'Melee', A:'5', WS:'2+', S:'7', AP:'-1', D:'3', kw:['PSYCHIC'] }
   ],
   abilities:[
-    // Scryer of Fates: Wahapedia's wording ("If …", "three"); New Recruit and BSData print "if …" and "3" (deviations)
     { name:'Scryer of Fates', tag:'Psychic', text:'If your army includes this model, after both players have deployed their armies, you can select up to three **THOUSAND SONS** units from your army and redeploy them. When doing so, you can set those units up in **Strategic Reserves** if you wish, regardless of how many units are already in Strategic Reserves.' },
     { name:'Arch-Sorcerer of Tzeentch', tag:'Psychic', ph:['shooting'], turn:'your', text:'Each time this model attempts a **Ritual**, add 1 to the Psychic test result.' }
   ]
@@ -7270,8 +7226,8 @@ const DATASHEETS = {
   ],
   rules:['Deep Strike','Leader','Shadow in the Warp','Synapse','Anti','Twin-linked','Ignores Cover','Assault','Torrent'],
   kw:['Infantry','Great Devourer','Vanguard Invader','Burrowers','Hyperadapted Raveners','Character','Synapse','Faction: Tyranids'],
-  partialRules:{ 'Shadow in the Warp':'Ravener Prime' },
   kwOnly:{ Character:'Ravener Prime', Synapse:'Ravener Prime' },
+  partialRules:{ 'Shadow in the Warp':'Ravener Prime' },
   points:{ costs:[{ from:1, to:2, models:[{ models:5, pts:165 }] },{ from:3, to:null, models:[{ models:5, pts:175 }] }] },
   composition:[
     { model:'Ravener Prime', min:1, max:1 },
@@ -8013,7 +7969,6 @@ const DATASHEETS = {
     { name:'Aggressive Assault', ph:['shooting'], turn:'your', text:'Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the **Hit roll**.' },
     { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'56b999de' }
   ],
-  // New Recruit's Rules line also has Assault, named only by Errant’s Duty, which affects an ARMIGER model (deviations-nr.json)
   rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Bondsman','Melta','Blast'],
   kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Imperium','Knight Errant','Faction: Imperial Knights']
 },
@@ -8038,7 +7993,6 @@ const DATASHEETS = {
     { name:'Seasoned Noble', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.' },
     { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'56b999de' }
   ],
-  // New Recruit's Rules line also has Lethal Hits and Lance, named only by Paladin’s Duty, which affects an ARMIGER model (deviations-nr.json)
   rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Bondsman','Rapid Fire','Blast','Melta'],
   kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Imperium','Knight Paladin','Faction: Imperial Knights']
 },
@@ -8063,7 +8017,6 @@ const DATASHEETS = {
     { name:'Thin Their Ranks', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Each time this model makes a ranged attack that targets an enemy unit (excluding **MONSTERS** and **VEHICLES**), that attack has the **[DEVASTATING WOUNDS]** ability.' },
     { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'56b999de' }
   ],
-  // New Recruit's Rules line also has Sustained Hits, named only by Warden’s Duty, which affects an ARMIGER model (deviations-nr.json)
   rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Devastating Wounds','Bondsman','Ignores Cover','Torrent','Melta'],
   kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Imperium','Knight Warden','Faction: Imperial Knights']
 },
@@ -8089,19 +8042,13 @@ const DATASHEETS = {
     { name:'Legendary Freeblade', tag:'Once per turn', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.' },
     { name:'Chainbreaker', tag:'Once per battle', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per battle, at the start of any phase, you can select one friendly **IMPERIUM** unit that is **Battle-shocked** and within 12" of this model. That unit is no longer Battle-shocked.' },
     { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'56b999de' },
-    { name:'Using Sir Hekhtur', text:'If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.', readOf:'07121bc1' }
+    { name:'Using Sir Hekhtur', text:'If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed **TRANSPORT** and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.' }
   ],
   rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Sustained Hits','Blast','Lone Operative'],
   kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Epic Hero','Imperium','Canis Rex','Infantry','Sir Hekhtur','Faction: Imperial Knights'],
-  // BSData has Lone Operative on the Sir Hekhtur model only, not on Canis Rex (24.24.01: an attached unit benefits only if
-  // all its models have it). Sir Hekhtur's base: GW's Base Size Guide (Event Companion, Oct 2026) "Sir Hekhtur 25mm";
-  // BSData, and so New Recruit, give him Canis Rex's 170×109mm (deviations-nr.json, deviations-bsdata.json)
+  kwOnly:{ 'Canis Rex':'Canis Rex', Questoris:'Canis Rex', Titanic:'Canis Rex', Towering:'Canis Rex', Vehicle:'Canis Rex', Walker:'Canis Rex', Infantry:'Sir Hekhtur', 'Sir Hekhtur':'Sir Hekhtur' },
   partialRules:{ 'Lone Operative':'Sir Hekhtur' },
-  // Wahapedia's 11th-edition Canis Rex is "1 Canis Rex – EPIC HERO" (415 pts), Sir Hekhtur its own EPIC HERO datasheet; BSData
-  // and New Recruit have him in this unit (his base: as New Recruit prints it, the owner's rule)
-  srcNote:{ at:'Sir Hekhtur', note:'Wahapedia: his own EPIC HERO datasheet; BSData and New Recruit: in this unit' },
-  // BSData's categories on each model (the unit has the others)
-  kwOnly:{ 'Canis Rex':'Canis Rex', Questoris:'Canis Rex', Titanic:'Canis Rex', Towering:'Canis Rex', Vehicle:'Canis Rex', Walker:'Canis Rex', Infantry:'Sir Hekhtur', 'Sir Hekhtur':'Sir Hekhtur' }
+  srcNote:{ at:'Sir Hekhtur', note:'Wahapedia: his own EPIC HERO datasheet; BSData and New Recruit: in this unit' }
 },
 'imperial-knights/cerastus-knight-atrapos':{
   name:'Cerastus Knight Atrapos', faction:'imperial-knights', bsId:'37a7-d156-1e4c-8fe1', role:'Character',
@@ -8227,17 +8174,11 @@ const DATASHEETS = {
     { name:'Mechadendrite hive', range:'Melee', A:'2D6', WS:'3+', S:'4', AP:'0', D:'1', kw:['EXTRA ATTACKS'] }
   ],
   abilities:[
-    // New Recruit prints the ability and the Canticles of the Omnissiah section as one text. The words are the Rules
-    // Updates' in GW's Faction Pack v1.4 (PDF p17: Canticles, Invocation of Machine Vengeance, Mantra of Discipline,
-    // Shroudpsalm), with Wahapedia's markup and layout; New Recruit's "(Aura)" after Invocation of Machine Vengeance and
-    // its quote mark after "add 1 to that test." are not in them (deviations-nr.json, deviations-bsdata.json)
     { name:'Canticles of the Omnissiah', ph:['command'], turn:'your', text:'At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.\n**Invocation of Machine Vengeance:** At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly **ADEPTUS MECHANICUS** unit makes an attack that targets your Machine Vengeance target, you can re-roll the **Hit roll**.\n**Mantra of Discipline:** This model has the **BATTLELINE** keyword and has the following ability:\n- **Binharic Courage (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or **Leadership test** for that unit, add 1 to that test.\n**Shroudpsalm (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, that unit has the **Stealth** ability.' },
     { name:'Mechanicus Bodyguard', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.' },
     { name:'Self-repair Mechanisms', ph:['command'], turn:'your', text:'At the start of your Command phase, this model regains up to D3 lost wounds.' },
     { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your Warlord.' }
   ],
-  // no Blast: none of his weapons has [BLAST] (the Solar atomiser is [MELTA 3]); BSData still links a Blast rule to it, and
-  // New Recruit prints it (deviations-nr.json, deviations-bsdata.json)
   rules:['Doctrina Imperatives','Anti','Devastating Wounds','Extra Attacks','Melta'],
   kw:['Monster','Character','Mobile','Epic Hero','Imperium','Tech-Priest','Cult Mechanicus','Belisarius Cawl','Faction: Adeptus Mechanicus']
 },
@@ -8255,10 +8196,7 @@ const DATASHEETS = {
     { name:'sweep', group:'Rod of the War Forge', range:'Melee', A:'12', WS:'2+', S:'6', AP:'-1', D:'1', kw:[] }
   ],
   abilities:[
-    // the three abilities Rod of the War Forge selects from (its phase tags: Rod of the War Forge's and the three options', label-section)
-    { name:'Icon of War', ph:['command','movement','shooting','charge','fight'], turn:'your', note:'FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”', turns:{ movement:'either', fight:'either' }, text:'**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.' },
-    // GW's words: GW's Faction Pack and Wahapedia print "(see next page)" after "section", pointing at the pack's next
-    // page, where Icon of War is printed (here it is the first ability above); the app follows them (verify/words.js)
+    { name:'Icon of War', ph:['command','movement','shooting','charge','fight'], turn:'your', turns:{ movement:'either', fight:'either' }, note:'FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”', text:'**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.' },
     { name:'Rod of the War Forge', ph:['command'], turn:'your', text:'In your Command phase, select one of the abilities in the Icon of War section (see next page). Until the start of your next Command phase, this model has that ability.' },
     { name:'Mechanicus Bodyguard', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.' },
     { name:'Secutor of Olympus', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one enemy **VEHICLE** unit within 12" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 **mortal wounds**.' },
@@ -8281,7 +8219,6 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Enginseer', text:'While this model is within 3" of one or more friendly **ADEPTUS MECHANICUS VEHICLE** units, unless it is leading a unit, this model has the **Lone Operative** ability.' },
-    // Wahapedia's datasheet wording; New Recruit (BSData) has no full stop at the end (deviations-nr.json)
     { name:'Omnissiah’s Blessing', ph:['command'], turn:'your', text:'In your Command phase, select one friendly **ADEPTUS MECHANICUS** model within 3" of this model. That model regains up to D3 lost wounds and, if it is a **VEHICLE** model, until the start of your next Command phase, that model has the **Feel No Pain 5+** ability. Each model can only be selected for this ability once per Command phase.' },
     { name:'Vengeance for the Omnissiah', text:'If a friendly **ADEPTUS MECHANICUS VEHICLE** model is destroyed within 12" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.' }
   ],
@@ -8291,7 +8228,7 @@ const DATASHEETS = {
 'adeptus-mechanicus/cybernetica-datasmith':{
   name:'Cybernetica Datasmith', faction:'adeptus-mechanicus', bsId:'d59d-ef1-9ef8-4f44',
   stats:[
-    { name:'Cybernetica Datasmith', T:'4', Sv:'2+', W:'3', Ld:'7+', OC:'1', InSv:'5+', base:'32mm' }
+    { name:'Cybernetica Datasmith', T:'4', Sv:'2+', W:'3', Ld:'7+', OC:'1', InSv:'5+', base:'32mm', M:'6"' }
   ],
   ranged:[
     { name:'Mechanicus pistol', range:'12"', A:'1', BS:'3+', S:'6', AP:'-1', D:'1', kw:['DEVASTATING WOUNDS','PISTOL'] }
@@ -8301,14 +8238,13 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Battle Protocols', ph:['command'], turn:'your', text:'At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit.' },
-    // Wahapedia's markup and bullets (BSData and GW's Faction Pack, PDF p17, print the two bullets too)
     { name:'Data-severed', text:'If there are no **KASTELAN ROBOT** models in this unit:\n- This unit loses **VEHICLE**.\n- This unit has **INFANTRY**.' }
   ]
 },
 'adeptus-mechanicus/kastelan-robots':{
   name:'Kastelan Robots', faction:'adeptus-mechanicus', bsId:'bd6c-8683-8bc4-962d',
   stats:[
-    { name:'Kastelan Robot', T:'9', Sv:'2+', W:'7', Ld:'7+', OC:'2', InSv:'5+', base:'60mm' }
+    { name:'Kastelan Robot', T:'9', Sv:'2+', W:'7', Ld:'7+', OC:'2', InSv:'5+', base:'60mm', M:'6"' }
   ],
   ranged:[
     { name:'Incendine combustor', range:'12"', A:'D6', BS:'–', S:'6', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT'] }
@@ -8318,16 +8254,12 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Robotic Bodyguard', text:'While a **CYBERNETICA DATASMITH** model is leading this unit, that model has the **Feel No Pain** 4+ ability.' },
-    // GW's Faction Pack v1.4 Rules Update wording (PDF p17), with Wahapedia's markup
     { name:'Repulsor Grid', text:'When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a **save roll**:\n- On an unmodified 6, that enemy unit suffers 1 **mortal wound** after that enemy unit has shot.' }
   ]
 },
 'adeptus-mechanicus/skitarii-rangers':{
   name:'Skitarii Rangers', faction:'adeptus-mechanicus', bsId:'de59-f65c-181a-8509', role:'Battleline',
   stats:[
-    // New Recruit prints "Skitarii Rangers (x2)"; the unit's 10 models all have this profile (BSData ×10) (deviations-nr.json)
-    // baseWith: a model of this profile with that wargear is on its own base (GW's base size guide, line 2666: "Skitarii
-    // Rangers/Skitarii Vanguard: Transuranic Arquebus 60x35.5mm Oval Base"); Bases & proxies counts it (verify/bases.js checks it)
     { name:'Skitarii Rangers', M:'6"', T:'3', Sv:'4+', W:'1', Ld:'7+', OC:'2', InSv:'5+', base:'25mm', baseWith:{ 'Transuranic arquebus':'60×35.5mm Oval' } }
   ],
   ranged:[
@@ -8342,11 +8274,7 @@ const DATASHEETS = {
     { name:'Close combat weapon', range:'Melee', A:'1', WS:'4+', S:'3', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
-    // Wahapedia's datasheet wording (11th edition: "Level of Control", as in Core Rules 14.02); New Recruit (BSData) still
-    // prints the codex wording "…even if you have no models within range of it, until your opponent controls it at the
-    // start or end of any turn." (deviations-nr.json, deviations-bsdata.json)
     { name:'Objective Scouted', ph:['command'], turn:'your', text:'At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
-    // already in the weapons' keywords (their IGNORES COVER is marked as from the Omnispex)
     { name:'Omnispex', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'Ranged weapons equipped by models in the bearer’s unit have the **[IGNORES COVER]** ability.' }
   ],
   rules:['Scouts 6"','Doctrina Imperatives','Rapid Fire','Anti','Devastating Wounds','Hazardous','Heavy','Precision'],
@@ -8387,7 +8315,6 @@ const DATASHEETS = {
     { name:'Emanatus Force Field', tag:'Aura', text:'While a friendly **ADEPTUS MECHANICUS BATTLELINE** model is wholly within 6" of this model, that **BATTLELINE** model has a 4+ invulnerable save against ranged attacks.' },
     { name:'Scuttling Walker', ph:['movement'], turn:'your', text:'Each time this model makes a **Normal**, **Advance** or **Fall Back move**, it can move through friendly **MONSTER** and **VEHICLE** models and sections of **terrain features** that are 4" or less in height.' },
     { name:'Broad spectrum data-tether', text:'The bearer loses the **SMOKE** keyword, but each time you target the bearer with a **Stratagem**, roll one D6: on a 5+, you gain 1CP.' },
-    // "mdel" in New Recruit and BSData; Wahapedia's datasheet has "model" (deviations-nr.json, deviations-bsdata.json)
     { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'9c4d4e20' }
   ],
   rules:['Deadly Demise D3','Doctrina Imperatives','Rapid Fire','Sustained Hits','Ignores Cover','Twin-linked'],
@@ -8612,8 +8539,8 @@ const DATASHEETS = {
     { name:'singularity', group:'Graviton singularity cannon', range:'24"', A:'D3', BS:'3+', S:'16', AP:'-4', D:'D6+1', kw:['BLAST','DEVASTATING WOUNDS','HAZARDOUS'] }
   ],
   melee:[
-    { name:'low intensity', group:'Atrapos lascutter', range:'Melee', A:'12', S:'7', AP:'-1', D:'2', kw:['SUSTAINED HITS 1'] },
-    { name:'high intensity', group:'Atrapos lascutter', range:'Melee', A:'6', S:'14', AP:'-3', D:'4', kw:['SUSTAINED HITS 1'] }
+    { name:'low intensity', group:'Atrapos lascutter', range:'Melee', A:'12', S:'7', AP:'-1', D:'2', kw:['SUSTAINED HITS 1'], WS:'3+' },
+    { name:'high intensity', group:'Atrapos lascutter', range:'Melee', A:'6', S:'14', AP:'-3', D:'4', kw:['SUSTAINED HITS 1'], WS:'3+' }
   ],
   abilities:[
     { name:'Macro-extinction Protocols', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes an attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Hit roll**. If that target is **TITANIC** or **TOWERING**, add 1 to the **Wound roll** as well.' },
@@ -8626,7 +8553,7 @@ const DATASHEETS = {
 'chaos-knights/chaos-cerastus-knight-lancer':{
   name:'Chaos Cerastus Knight Lancer', faction:'chaos-knights', bsId:'4175-82c6-8e96-bef8', role:'Character',
   stats:[
-    { name:'Chaos Cerastus Knight Lancer', M:'14"', T:'11', Sv:'3+', Ld:'6+', OC:'10', InSv:'4+', base:'170×109mm Oval' }
+    { name:'Chaos Cerastus Knight Lancer', M:'14"', T:'11', Sv:'3+', Ld:'6+', OC:'10', InSv:'4+', base:'170×109mm Oval', W:'28' }
   ],
   ranged:[
     { name:'Cerastus shock lance', range:'12"', A:'6', BS:'3+', S:'6', AP:'0', D:'2', kw:['ASSAULT','SUSTAINED HITS 2'] }
@@ -8685,7 +8612,7 @@ const DATASHEETS = {
     { name:'Close-range Killers', tag:'Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While a friendly **WAR DOG** model is within 9" of this model, each time that **WAR DOG** model makes an attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.' },
     { name:'Damaged: 1-9 wounds remaining', damaged:'1-9', text:'While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.', readOf:'214508e4' }
   ],
-  rules:['Deadly Demise D6','Harbingers of Dread','Super-Heavy Walker','Ignores Cover','Torrent','Sustained Hits','Blast'],
+  rules:['Deadly Demise D6','Harbingers of Dread','Super-Heavy Walker','Ignores Cover','Torrent','Blast'],
   kw:['Vehicle','Walker','Titanic','Towering','Abhorrent','Character','Chaos','Knight Ruinator','Faction: Chaos Knights']
 },
 'chaos-knights/nurglings':{
@@ -8775,11 +8702,8 @@ const DATASHEETS = {
     { name:'Watcher’s Axe', range:'Melee', A:'6', WS:'2+', S:'12', AP:'-3', D:'4', kw:['CLEAVE 1'] }
   ],
   abilities:[
-    // SUPREME COMMANDER: the box on GW's datasheet (Wahapedia, between the weapons and CORE ABILITIES); New Recruit does not print it
     { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your **WARLORD**.' },
-    // the new codex's wording (Wahapedia); New Recruit prints the bullets without full stops
     { name:'Captain-General', tag:'Aura', text:'Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.' },
-    // ph/turn: "at the start of any phase"; the +3 A is the Watcher's Axe footnote, the 3+ InSv the When targeted line (one of the two)
     { name:'Moment Shackle', tag:'Once per battle, per army', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.' },
     { name:'Leader', text:'This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY' }
   ],
@@ -8808,7 +8732,6 @@ const DATASHEETS = {
     { name:'Guardian Spear', range:'Melee', A:'6', WS:'2+', S:'8', AP:'-2', D:'2', kw:[] }
   ],
   abilities:[
-    // the new codex's name (Wahapedia); New Recruit prints "Slayers of Tyrants"
     { name:'Slayer of Tyrants', text:'This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.' },
     { name:'Vexilla', text:'- This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**.' }
   ],
@@ -8833,7 +8756,6 @@ const DATASHEETS = {
     { name:'Boltgun', range:'24"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['ANTI-PSYKER 4+','ASSAULT','RAPID FIRE 1'] }
   ],
   melee:[
-    // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
     { name:'Gun Stock', range:'Melee', A:'2', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
@@ -8858,11 +8780,9 @@ const DATASHEETS = {
     { name:'Flamer', range:'12"', A:'3', BS:'–', S:'4', AP:'-1', D:'1', kw:['ANTI-PSYKER 4+','ASSAULT','BLAST 1','TORRENT'] }
   ],
   melee:[
-    // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
     { name:'Gun Stock', range:'Melee', A:'2', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
-    // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
     { name:'Sanctified Flames', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a **battle-shock roll**, with -1 to that **battle-shock roll** if that enemy unit is a **PSYKER** unit.' }
   ],
   rules:['Scouts 7"','Daughters of the Abyss','Feel No Pain 3+*','Anti','Torrent','Assault','Blast'],
@@ -8878,8 +8798,6 @@ const DATASHEETS = {
 'adeptus-custodes/caladius-annihilator-grav-tank':{
   name:'Caladius Annihilator Grav-tank', faction:'adeptus-custodes', bsId:'dbf0-5211-463c-40ec', role:'Vehicle',
   stats:[
-    // base: GW's Base Size Guide (Event Companion, Oct 2026) "Caladius Grav-tank 170x109mm Oval Base"; BSData, and so New Recruit,
-    // give 150×95mm (deviations-nr.json, deviations-bsdata.json)
     { name:'Caladius Annihilator Grav-tank', M:'10"', T:'11', Sv:'2+', W:'14', Ld:'5+', OC:'4', base:'170×109mm Oval', InSv:'5+' }
   ],
   ranged:[
@@ -9712,7 +9630,7 @@ const DATASHEETS = {
   abilities:[
     { name:'Rapid Disembarkation', ph:['movement'], turn:'your', text:'In your Movement phase, when this unit ends an **advance move**, units embarked within this unit can make a **shock disembark move**.' },
     { name:'Shield Dome', text:'This unit has 5+ **InSv**.' },
-    { name:'Transport', text:'This model has a **transport capacity** of 7 **ADEPTUS ASTARTES INFANTRY** models. It cannot transport **TERMINATOR/JUMP PACK** models. Each **GRAVIS** model takes up the space of 2 models.' }
+    { name:'Transport', tag:'Capacity', text:'This model has a **transport capacity** of 7 **ADEPTUS ASTARTES INFANTRY** models. It cannot transport **TERMINATOR/JUMP PACK** models. Each **GRAVIS** model takes up the space of 2 models.' }
   ],
   rules:['Deadly Demise D3','Firing Deck 7','Combat Doctrines','Rapid Fire'],
   kw:['Vehicle','Dedicated Transport','Frame','Imperium','Transport','Impulsor','Faction: Adeptus Astartes']
@@ -13174,7 +13092,6 @@ const CHECKLIST = {
   "a|1ea1dc8":{"u":"movement:your,charge:your"},
   "a|1ea364m":{"u":"shooting:opp,fight:either"},
   "a|1ea3wae":{"u":"shooting:your,fight:either"},
-  "a|1efhy66":{"x":1},
   "a|1eqyc2e":{"at":"End of your opponent’s turn","s":1},
   "a|1f3ae5d":{"t":"shooting:your","u":"shooting:your","a":1},
   "a|1f54nl3":{"u":"movement:your,charge:either"},
@@ -13423,6 +13340,7 @@ const CHECKLIST = {
   "a|mdtmf4":{"u":"fight:either"},
   "a|mehjlc":{"u":"shooting:your,fight:either"},
   "a|moccsj":{"u":"shooting:your,fight:either"},
+  "a|mro2xe":{"x":1},
   "a|mulesq":{"u":"shooting:your"},
   "a|nde2k":{"u":"movement:your"},
   "a|nfavgz":{"u":"charge:either,fight:either"},
@@ -13654,7 +13572,6 @@ const BOXES = {
   "a|1do0k8j":{"b":[{"quote":"If you do, this unit's ranged attacks have **[INDIRECT FIRE]**.","fx":[["indirect",true]],"on":[["oncePerBattle",true],["used",true]],"kind":"ranged","lead":"In your Shooting phase, when this unit is selected to shoot, you can use this ability."}],"n":"Warp Rift Firepower"},
   "a|1ea364m":{"d":[{"quote":"While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**.","df":[["hitMinus",1]],"on":[["bearerLeading",true]],"kind":"all","lead":"**TZAANGOR SHAMAN** model only."}],"n":"Diamond of Distortion"},
   "a|1ea3wae":{"b":[{"quote":"While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**.","fx":[["hit",1]],"on":[["leading",true]],"kind":"all"}],"n":"Bestial Prophet"},
-  "a|1efhy66":{"embarked":{"until":"Canis Rex"},"n":"Using Sir Hekhtur"},
   "a|1f7qtur":{"b":[{"quote":"Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.","fx":[["a",1],["d",1]],"on":[],"kind":"melee","lead":"**WORLD EATERS** model only.","scope":{"models":"model"}}],"n":"Berzerker Glaive"},
   "a|1fpl6vr":{"b":[{"quote":"While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**.","fx":[["wound",1]],"on":[["leading",true],["q","contains a DARK APOSTLE model"]],"kind":"melee"}],"n":"Dark Zealotry"},
   "a|1fses0j":{"d":[{"quote":"While this unit is within 3\" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.","df":[["loneOp",true]],"on":[["nearFriendly",{"d":3,"kw":"beast snagga","not":"monster character"}]],"kind":"all"}],"n":"Beast Snagga Following"},
@@ -13794,6 +13711,7 @@ const BOXES = {
   "a|mdtmf4":{"b":[{"quote":"This model’s melee attacks have +1 **A**, **S** and **D**.","fx":[["a",1],["s",1],["d",1]],"on":[],"kind":"melee","lead":"**ADEPTUS CUSTODES DREADNOUGHT** model only.","scope":{"models":"model"}}],"n":"Memento Moritoi"},
   "a|mehjlc":{"b":[{"quote":"Weapons equipped by models in this model’s unit have the **[SUSTAINED HITS 1]** ability.","fx":[["sus","1"]],"on":[],"kind":"all"}],"n":"Alpha Warrior"},
   "a|moccsj":{"b":[{"quote":"This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**.","fx":[["hit",1]],"on":[["maxT",6]],"kind":"all"}],"n":"Spiteful Power Trip"},
+  "a|mro2xe":{"embarked":{"until":"Canis Rex"},"n":"Using Sir Hekhtur"},
   "a|mulesq":{"b":[{"quote":"Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the **Hit roll** and any or all modifiers to the Ballistic Skill characteristic of that weapon.","fx":[["ignoreHitMods",true]],"on":[],"kind":"ranged"}],"n":"Stabilisation Talons"},
   "a|nfavgz":{"b":[{"quote":"Each time this model makes a **Charge move**, until the end of the turn, its melee weapons have the **[DEVASTATING WOUNDS]** ability.","fx":[["dev",true]],"on":[["charged",true]],"kind":"melee","scope":{"models":"model"},"lasts":"turn"}],"n":"Devastating Assault"},
   "a|oa3ptj":{"b":[{"quote":"Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.","fx":[["wound",1]],"on":[["targetKw",{"any":["Monster","Vehicle"]}]],"kind":"melee","lead":"**TYRANIDS MONSTER** model only.","scope":{"models":"model"}}],"n":"Monstrous Nemesis"},
@@ -13844,7 +13762,6 @@ const BOXES = {
   "c|drjj7w":{"b":[{"quote":"While a model’s remaining wounds are equal to or less than 4, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.*","fx":[["hit",-1]],"on":[["q","While a model's remaining wounds are equal to or less than 4"]],"kind":"all","lead":"Damaged 4: *Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X."}],"n":"Damaged 4"},
   "c|jeaaji":{"d":[{"quote":"Feel No Pain 4+: This ability always takes the form **Feel No Pain X+**.","df":[["fnp",4]],"on":[],"kind":"all"}],"n":"Feel No Pain 4+"},
   "c|vt2m8w":{"d":[{"quote":"Feel No Pain 3+*: This ability always takes the form **Feel No Pain X+**.","df":[["fnp",3]],"on":[],"kind":"all"}],"n":"Feel No Pain 3+*"},
-  "c|w5dr2q":{"d":[{"quote":"Feel No Pain 3+: This ability always takes the form **Feel No Pain X+**.","df":[["fnp",3]],"on":[],"kind":"all"}],"n":"Feel No Pain 3+"},
   "c|wpi57u":{"d":[{"quote":"Feel No Pain 5+: This ability always takes the form **Feel No Pain X+**.","df":[["fnp",5]],"on":[],"kind":"all"}],"n":"Feel No Pain 5+"},
   "c|z2left":{"b":[{"quote":"While a model’s remaining wounds are equal to or less than 5, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.*","fx":[["hit",-1]],"on":[["q","While a model's remaining wounds are equal to or less than 5"]],"kind":"all","lead":"Damaged 5: *Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X."}],"n":"Damaged 5"},
   "r|11gv1f1":{"d":[{"quote":"**TYRANID WARRIORS**/**TYRANID PRIME WITH LASH WHIP**/**WINGED TYRANID PRIME** models from your army have 5+ **InSv**.","df":[["inv",5]],"on":[],"kind":"all","lead":"Friendly **TYRANID WARRIORS WITH RANGED BIO-WEAPONS**/**TYRANID WARRIORS WITH MELEE BIO-WEAPONS** units have:","reach":{"any":["Tyranid Warriors","Tyranid Prime with Lash Whip","Winged Tyranid Prime"]},"mark":"friendly"}],"n":"Leader-beasts"},
@@ -14193,11 +14110,11 @@ const GRANTS = [
 
 // ---- resolveArmies: written by verify/tables.js --write (do not edit) ----
 const TABLE_ORDER = {
-  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','upgrade','warlord','ref','leads','also','support','models','unplaced','gear','stats','ranged','melee','abilities','rules','kw','kwNote','partialRules','srcNote','kwOnly'],
-  stats:['name','M','T','Sv','W','Ld','OC','InSv','base','from','printed','baseWith','own'],
+  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','upgrade','warlord','ref','leads','also','support','models','gear','stats','ranged','melee','abilities','rules','kw','kwNote','kwOnly','partialRules','srcNote'],
+  stats:['name','M','T','Sv','W','Ld','OC','InSv','base','printed','from','baseWith','own'],
   ranged:['group','fireAll','name','who','n','carrier','enh','hunter','range','A','BS','S','AP','D','kw','own','from'],
   melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],
-  abilities:['name','who','tag','at','na','damaged','ph','turn','note','turns','text','readOf']
+  abilities:['name','who','tag','at','na','damaged','ph','turn','turns','note','text','readOf']
 };
 // Each unit entry of ARMIES names its datasheet (ds: an id of DATASHEETS; a list of them for an attached unit: the leader,
 // the other characters, the bodyguard) and holds only what the list chose. The app gets each unit as one object: the

@@ -64,15 +64,6 @@
   }
  },
  {
-  "page": "imperial-knights_Canis-Rex.html",
-  "ability": "Using Sir Hekhtur",
-  "app": "If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.",
-  "waha": "(none)",
-  "reason": "Sir Hekhtur is a model of the Canis Rex unit; Wahapedia's Canis Rex page does not print this ability (its keyword index names a datasheet \"Sir Hekhtur\" of its own, which verify/sources/waha-datasheets.txt does not fetch, so it is not cached). The words are New Recruit's (BSData's), checked by verify/nr.js. Pending: fetch the Sir Hekhtur page (verify/sources/waha-datasheets.txt) and compare.",
-  "status": "pending",
-  "evidence": "verify/.cache/waha/ds/imperial-knights_Canis-Rex.html: no \"Using Sir Hekhtur\" (its keyword index: \"Infantry Epic Hero Sir Hekhtur\"); no verify/.cache/waha/ds/imperial-knights_Sir-Hekhtur.html; New Recruit verify/sources/nr/4-megas-and-a-destrier.txt lines 53-56"
- },
- {
   "page": "chaos-daemons_Kairos-Fateweaver.html",
   "ability": "One Head Looks Back",
   "app": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a **stratagem**, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.",

@@ -271,7 +271,7 @@ for (const nu of nrUnits) {
       // (New Recruit's plain words against the bold keywords as written: "Character unit" = "**CHARACTER** unit")
       if (appText(pa.text).s === appText(ab.text).s || (ab._plain && textEq(pa.text, ab.text)) || typoDev) { ab.text = pa.text; delete ab._plain; }
       else { note(tag0, 'ability ' + ab.name + ' has new words: its phase tags and footnotes were not kept'); continue; }
-      for (const k of ['damaged', 'at', 'ph', 'turn', 'turns', 'def', 'na']) if (pa[k] !== undefined) ab[k] = pa[k];
+      for (const k of ['damaged', 'at', 'ph', 'turn', 'turns', 'na']) if (pa[k] !== undefined) ab[k] = pa[k];
     }
     // a hand-written note on a keyword a selection of the unit gives it (Houndpack Lance Character), while the unit still has it
     if (!u.kwNote && prev.kwNote && /^(.+?) comes? from (.+?) \(/.test(prev.kwNote) && u.models.some(l => l.includes(/^(.+?) comes? from (.+?) \(/.exec(prev.kwNote)[2]))) u.kwNote = prev.kwNote;
@@ -295,12 +295,12 @@ for (const nu of nrUnits) {
       const sameWords = n => { const a1 = u.abilities.find(a => a.name === n), a2 = (d.abilities || []).find(a => a.name === n); return a1 && a2 && (appText(a1.text).s === appText(a2.text).s || (a1._plain && textEq(a2.text, a1.text))); };
     }
   }
-  // each ability's phase tags and "When targeted" line: from any copy of it with the same name and words
+  // each ability's phase tags: from any copy of it with the same name and words (its "When targeted" lines are its BOXES)
   for (const ab of u.abilities) {
     if (ab.ph !== undefined) continue;
     const da = donorUnits.flatMap(x => (x.abilities || []).map(a => [x, a])).find(([x, a]) => a.name === ab.name && (appText(a.text).s === appText(ab.text).s || (ab._plain && textEq(a.text, ab.text))));
     if (!da) continue;
-    for (const k of ['damaged', 'at', 'ph', 'turn', 'turns', 'def']) if (da[1][k] !== undefined) ab[k] = JSON.parse(JSON.stringify(da[1][k]));
+    for (const k of ['damaged', 'at', 'ph', 'turn', 'turns']) if (da[1][k] !== undefined) ab[k] = JSON.parse(JSON.stringify(da[1][k]));
     // "not usable here" (na) is about that list's units: not copied, only pointed out
     if (da[1].na) note(tag0, 'ability ' + ab.name + ': another list marks it "' + da[1].na + '"; check whether that holds for this list before writing na');
     if (ab._plain) { ab.text = da[1].text; delete ab._plain; }   // its markup as written there
@@ -338,7 +338,6 @@ for (const u of units) {
   for (const ab of u.abilities) {
     if (ab.ph === undefined && PHASE.test(appText(ab.text).s)) note(label(u), 'ability ' + ab.name + ': phase tags (ph, turn, turns) where its words name a phase or a moment');
     if (ATTACKS.test(appText(ab.text).s) && !u._applied.has(lc(ab.name)) ) note(label(u), 'ability ' + ab.name + ': changes attacks? a footnote under the weapons (mods) or for other units (aura), copied from its words');
-    if (/\b(targets? this unit|attacks? that target (this|your) unit)\b/i.test(appText(ab.text).s) && !ab.def) note(label(u), 'ability ' + ab.name + ': a "When targeted" line (def)?');
   }
 }
 if (F) for (const g of nr.glossary) {

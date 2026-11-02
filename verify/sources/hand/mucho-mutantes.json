@@ -14,6 +14,62 @@
     ],
     "why": "GW’s Chaos Spawn datasheet (Wahapedia thousand-sons/Chaos-Spawn) prints KEYWORDS: BEAST; CHAOS; TZEENTCH; MUTANT; CHAOS SPAWN — no SPAWN (BSData’s category of the entry): GW wins, declared (review result-reference-2.json 7f36fcfe233fe050)."
    }
+  },
+  "ahriman-tzaangor-enlightened-with-fatecaster-greatbows": {
+   "kwOnly": {
+    "Infantry": "Ahriman",
+    "Psyker": "Ahriman"
+   },
+   "partialRules": {
+    "Cabal of Sorcerers": "Ahriman"
+   },
+   "why": "Wahapedia: Ahriman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened with Fatecaster greatbows are MOUNTED, not INFANTRY or PSYKER, and have no Cabal of Sorcerers (BSData the same)."
+  },
+  "exalted-sorcerer-on-disc-of-tzeentch-tzaangor-enlightened-with-fatecaster-greatbows": {
+   "kwOnly": {
+    "Grenades": "Exalted Sorcerer on Disc of Tzeentch",
+    "Infantry": "Exalted Sorcerer on Disc of Tzeentch",
+    "Psyker": "Exalted Sorcerer on Disc of Tzeentch"
+   },
+   "partialRules": {
+    "Cabal of Sorcerers": "Exalted Sorcerer on Disc of Tzeentch"
+   },
+   "why": "Wahapedia: the Exalted Sorcerer on Disc of Tzeentch is INFANTRY, MOUNTED … GRENADES, PSYKER; the Tzaangor Enlightened with Fatecaster greatbows are MOUNTED, without those, and have no Cabal of Sorcerers (BSData the same)."
+  },
+  "tzaangor-shaman-tzaangor-enlightened-curse-of-life": {
+   "kwOnly": {
+    "Infantry": "Tzaangor Shaman",
+    "Psyker": "Tzaangor Shaman"
+   },
+   "partialRules": {
+    "Cabal of Sorcerers": "Tzaangor Shaman"
+   },
+   "why": "Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have no Cabal of Sorcerers (BSData the same)."
+  },
+  "tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion": {
+   "kwOnly": {
+    "Infantry": "Tzaangor Shaman",
+    "Psyker": "Tzaangor Shaman"
+   },
+   "partialRules": {
+    "Cabal of Sorcerers": "Tzaangor Shaman"
+   },
+   "why": "Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have no Cabal of Sorcerers (BSData the same)."
+  },
+  "tzaangor-shaman-tzaangor-enlightened-flowing-flesh": {
+   "kwOnly": {
+    "Infantry": "Tzaangor Shaman",
+    "Psyker": "Tzaangor Shaman"
+   },
+   "partialRules": {
+    "Cabal of Sorcerers": "Tzaangor Shaman",
+    "Feel No Pain 4+": "Tzaangor Shaman"
+   },
+   "why": "Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have no Cabal of Sorcerers (BSData the same); Feel No Pain 4+ is the Shaman's, from his Flowing Flesh enhancement (\"The bearer has the Feel No Pain 4+ ability and a Wounds characteristic of 5.\")."
   }
+ },
+ "source": {
+  "text": "New Recruit, exported 23 Oct 2026",
+  "why": "the day New Recruit’s PDF of this list was exported (verify/sources/nr/mucho-mutantes.txt), from which the list was first imported; the JSON export carries no date"
  }
 }

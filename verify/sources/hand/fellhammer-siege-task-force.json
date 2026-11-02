@@ -1,39 +1,5 @@
 {
  "_about": "What verify/from-json.js cannot fill mechanically for fellhammer-siege-task-force, written by hand and read by it on every run (from-json.js --write gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 24 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. mod: a stratagem's weapon footnote (hand). armyRules: Dark Pacts' Damage-tab reading (calcMods, the player's pick; both: what lets a unit take both abilities). fixes: GW's Faction Pack words where Wahapedia's transcription differs. units: per unit entry, its abilities' When targeted lines (def, AI-written, with defOf), its weapon footnotes (mods), its auras (only what GW tags (Aura), Core Rules 22.01), stats values a rule of the list gives that New Recruit's export does not show, and keywords a rule of the list gives that BSData's entry and the export lack. Each is a judgement verify/helpers.js lists for sign-off.",
- "armyRules": {
-  "Dark Pacts": {
-   "by": "hand (Claude)",
-   "why": "the Damage tab: a Dark Pact is the player's choice each time the unit is selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), and which ability it gains is theirs to pick; Touch of the Arkifane lets it select both",
-   "calcMods": [
-    {
-     "kind": "all",
-     "from": "Dark Pacts",
-     "when": "A Dark Pact made when selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), until the end of the phase",
-     "note": "[LETHAL HITS] or [SUSTAINED HITS 1]",
-     "pick": [
-      {
-       "name": "[LETHAL HITS]",
-       "note": "[LETHAL HITS]"
-      },
-      {
-       "name": "[SUSTAINED HITS 1]",
-       "note": "[SUSTAINED HITS 1]"
-      },
-      {
-       "name": "Both",
-       "both": true,
-       "note": "[LETHAL HITS], [SUSTAINED HITS 1]"
-      }
-     ]
-    }
-   ],
-   "both": [
-    {
-     "strat": "touch-of-the-arkifane"
-    }
-   ]
-  }
- },
  "fixes": [
   {
    "at": "devotees-of-destruction/enhancement/Pact of Destruction",
@@ -52,31 +18,12 @@
   "cult-of-the-arkifane/balefire-boon": {
    "by": "AI (Claude)",
    "gist": "Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks have +1 AP.",
-   "gistOf": "212a3924",
-   "mod": {
-    "by": "hand (Claude)",
-    "kind": "all",
-    "when": "Your Shooting phase or the Fight phase, until the end of the phase",
-    "note": "+1 AP"
-   }
+   "gistOf": "212a3924"
   },
   "cult-of-the-arkifane/soul-tally-offering": {
    "by": "AI (Claude)",
    "gist": "Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks that target a CHARACTER, MONSTER or VEHICLE unit can re-roll the wound roll.",
-   "gistOf": "80282bdc",
-   "mod": {
-    "by": "hand (Claude)",
-    "kind": "all",
-    "when": "Your Shooting phase or the Fight phase, until the end of the phase, vs CHARACTER, MONSTER or VEHICLE units",
-    "note": "re-roll the wound roll",
-    "vs": {
-     "any": [
-      "Character",
-      "Monster",
-      "Vehicle"
-     ]
-    }
-   }
+   "gistOf": "80282bdc"
   },
   "cult-of-the-arkifane/biomechanoid-regeneration": {
    "by": "AI (Claude)",
@@ -91,20 +38,12 @@
   "cult-of-the-arkifane/unholy-fortitude": {
    "by": "AI (Claude)",
    "gist": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets: your SOUL FORGE unit it targets has +1 T until the end of the phase.",
-   "gistOf": "21eb4840",
-   "def": "their Shooting phase, just after an enemy unit selected it as a target: +1 T until the end of the phase",
-   "defOf": "21eb4840"
+   "gistOf": "21eb4840"
   },
   "devotees-of-destruction/ruinations-bounty": {
    "by": "AI (Claude)",
    "gist": "Your Shooting phase, your HAVOCS/OBLITERATORS unit is selected to shoot: when it uses the Dark Pacts ability, its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].",
-   "gistOf": "872a02da",
-   "mod": {
-    "by": "hand (Claude)",
-    "kind": "ranged",
-    "when": "Your Shooting phase, selected to shoot, when your unit uses the Dark Pacts ability",
-    "note": "[LETHAL HITS] and [SUSTAINED HITS 1]"
-   }
+   "gistOf": "872a02da"
   },
   "devotees-of-destruction/snare-of-fire": {
    "by": "AI (Claude)",
@@ -114,44 +53,10 @@
   "devotees-of-destruction/undying-hatred": {
    "by": "AI (Claude)",
    "gist": "Your opponent’s Shooting phase, an enemy unit targets your HAVOCS/OBLITERATORS unit: attacks that target your unit with a S greater than its T have -1 to the wound roll.",
-   "gistOf": "7e2a015e",
-   "def": "their Shooting phase: -1 to wound when the attack’s S is greater than its T",
-   "defOf": "7e2a015e"
+   "gistOf": "7e2a015e"
   }
  },
  "units": {
-  "vashtorr-the-arkifane": {
-   "defs": {
-    "Reorder Reality": {
-     "by": "AI (Claude)",
-     "def": "an enemy unit within 18\" targets him: -1 to hit rolls, and its ranged weapons have [HAZARDOUS] until the end of the phase",
-     "defOf": "9eb7b966"
-    },
-    "Indentured Daemon Engines": {
-     "by": "AI (Claude)",
-     "def": "Lone Operative while within 3\" of a friendly DAEMON VEHICLE unit",
-     "defOf": "7e81e6e7"
-    }
-   },
-   "why": "Unholy Mechanisms (Aura): a friendly DAEMON VEHICLE unit within 6\" (Vashtorr is a MONSTER, not a VEHICLE: not his own)."
-  },
-  "lord-discordant-on-helstalker": {
-   "mods": [
-    "Mark of the Soul Forges",
-    "Spirit Thief"
-   ],
-   "why": "Spirit Thief: every friendly HERETIC ASTARTES model’s attacks against the VEHICLE unit picked at the start of your Shooting phase, until the end of the phase (a picked-target effect, recorded as approved lists record Clever Know-wotz and Omnissiah’s Blessing; not an (Aura)); his own in his footnotes."
-  },
-  "warpsmith": {
-   "defs": {
-    "Warpsmith": {
-     "by": "AI (Claude)",
-     "def": "Lone Operative while within 3\" of a friendly HERETIC ASTARTES VEHICLE unit",
-     "defOf": "1e3bf5fe"
-    }
-   },
-   "why": "Master of Mechanisms: one friendly HERETIC ASTARTES VEHICLE model within 3\", picked in your Command phase (a picked-target effect, recorded as Clever Know-wotz is; not an (Aura))."
-  },
   "dark-apostle-master-of-executions-nemesis-claw": {
    "stats": {
     "Master of Executions": {
@@ -170,7 +75,6 @@
    "why": "Cybinfernal Font (the Dark Apostle's): models in the bearer's unit have the SOUL FORGE keyword, every model of the attached unit (19.04); Soul Forge Boons: SOUL FORGE units have a 5+ invulnerable save. New Recruit's export shows none for the Master of Executions and the Nemesis Claw. Dark Zealotry, Warp-sighted Butcher and Visions of Suffering: every model of the attached unit (19.04, its FAQ: “A rule that applies to ’this/that unit’ … applies to all models in an attached unit”).",
    "statsEvidence": "verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane: Cybinfernal Font \"Models in the bearer’s unit have the SOUL FORGE keyword.\" and Soul Forge Boons \"SOUL FORGE units from your army have a 5+ invulnerable save.\"; GW Faction Pack Chaos Space Marines p7 (the same words); Core Rules 19.04 (Wahapedia core rules): \"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit\"; verify/sources/nr-json/fellhammer-siege-task-force.json: Master of Executions and Nemesis Claw InSv \"-\"."
   },
-  "havocs": {},
   "obliterators": {
    "texts": {
     "Warp Rift Firepower": {
@@ -180,9 +84,6 @@
     }
    }
   },
-  "chaos-predator-annihilator": {},
-  "chaos-predator-destructor": {},
-  "chaos-vindicator": {},
   "forgefiend": {
    "kw": {
     "add": [
@@ -192,270 +93,20 @@
     "evidence": "verify/.cache/waha/chaos-space-marines.txt, Cult of the Arkifane, Soul Forge Boons: \"HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword.\"; GW Faction Pack Chaos Space Marines p7 (the same words); verify/.cache/waha/ds/chaos-space-marines_Forgefiend.html: KEYWORDS VEHICLE; WALKER; CHAOS; DAEMON; FORGEFIEND, FACTION KEYWORDS HERETIC ASTARTES; verify/sources/nr-json/fellhammer-siege-task-force.json: Forgefiend categories without \"Heretic Astartes Vehicle\" and \"Soul Forge\" (the Maulerfiend and the Vindicator have both)."
    }
   },
-  "maulerfiend": {}
- },
- "readings": {
-  "_about": "The readings of this list's rows (docs/tables.md, Readings): by the row they read (a datasheet by name, an army or detachment rule, an enhancement), each { mods, aura, guard } in the row's order, with the fingerprint of the text each was read from (readOf; readBy:\"derive\" where verify/derive.js gives it from the words). verify/from-json.js gives each unit the readings of its rows in the order data.js resolves them, then the unit's own (units.<id>.mods / aura / guard; a name there stands for the rows' readings of that name, the list being the unit's whole list). A datasheet not here: data.js's row, else verify/derive.js's derived readings.",
-  "datasheets": {
-   "Vashtorr the Arkifane": {
-    "aura": [
-     {
-      "kind": "all",
-      "needs": {
-       "all": [
-        "Daemon",
-        "Vehicle"
-       ]
-      },
-      "when": "Within 6\" of Vashtorr the Arkifane",
-      "note": "+2 S",
-      "from": "Unholy Mechanisms",
-      "readOf": "56ff5891"
-     }
-    ]
-   },
-   "Lord Discordant on Helstalker": {
-    "mods": [
-     {
-      "kind": "ranged",
-      "when": "Your Shooting phase, vs the visible enemy VEHICLE unit picked at its start",
-      "note": "re-roll wound rolls of 1",
-      "from": "Spirit Thief",
-      "vs": {
-       "any": [
-        "Vehicle"
-       ]
-      },
-      "readOf": "cf4e855c"
-     }
-    ],
-    "aura": [
-     {
-      "kind": "ranged",
-      "needs": {
-       "all": [
-        "Faction: Heretic Astartes"
-       ]
-      },
-      "when": "Your Shooting phase, vs the visible enemy VEHICLE unit picked by the Lord Discordant’s Spirit Thief at its start",
-      "note": "re-roll wound rolls of 1",
-      "from": "Spirit Thief",
-      "vs": {
-       "any": [
-        "Vehicle"
-       ]
-      },
-      "notSelf": true,
-      "readOf": "cf4e855c"
-     }
-    ]
-   },
-   "Warpsmith": {
-    "aura": [
-     {
-      "kind": "all",
-      "needs": {
-       "all": [
-        "Faction: Heretic Astartes",
-        "Vehicle"
-       ]
-      },
-      "when": "Picked by the Warpsmith’s Master of Mechanisms in your Command phase (within 3\")",
-      "note": "that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Command phase",
-      "from": "Master of Mechanisms",
-      "calc": {
-       "hit": 1
-      },
-      "oneModel": true,
-      "lasts": "round",
-      "readOf": "266481da"
-     }
-    ]
-   },
-   "Dark Apostle": {
-    "mods": [
-     {
-      "kind": "melee",
-      "when": "While the Dark Apostle leads this unit and it contains its DARK APOSTLE model",
-      "note": "+1 to wound rolls",
-      "from": "Dark Zealotry",
-      "always": true,
-      "readOf": "b9aa750e"
-     }
-    ]
-   },
-   "Master of Executions": {
-    "mods": [
-     {
-      "kind": "melee",
-      "when": "While the Master of Executions leads this unit, target below its Starting Strength",
-      "note": "re-roll the hit roll; also the wound roll if Below Half-strength",
-      "from": "Warp-sighted Butcher",
-      "pick": [
-       {
-        "name": "Below Starting Strength",
-        "note": "re-roll hit rolls"
-       },
-       {
-        "name": "Below Half-strength",
-        "note": "re-roll hit rolls and wound rolls"
-       }
-      ],
-      "readOf": "06aa201e"
-     }
-    ]
-   },
-   "Nemesis Claw": {
-    "mods": [
-     {
-      "kind": "all",
-      "when": "Target below its Starting Strength",
-      "note": "+1 to hit rolls; also +1 to wound rolls if Below Half-strength",
-      "from": "Visions of Suffering",
-      "pick": [
-       {
-        "name": "Below Starting Strength",
-        "note": "+1 to hit rolls"
-       },
-       {
-        "name": "Below Half-strength",
-        "note": "+1 to hit rolls, +1 to wound rolls"
-       }
-      ],
-      "readOf": "ffa1b94e"
-     }
-    ]
-   },
-   "Havocs": {
-    "mods": [
-     {
-      "kind": "ranged",
-      "when": "Every ranged attack",
-      "note": "can ignore any or all modifiers to BS and any or all modifiers to the hit roll",
-      "from": "Stabilisation Talons",
-      "always": true,
-      "readOf": "d0e51e85"
-     }
-    ]
-   },
-   "Obliterators": {
-    "mods": [
-     {
-      "kind": "ranged",
-      "when": "Once per battle, your Shooting phase, when selected to shoot",
-      "note": "[INDIRECT FIRE]",
-      "from": "Warp Rift Firepower",
-      "readOf": "bf11a465"
-     }
-    ]
-   },
-   "Chaos Predator Annihilator": {
-    "mods": [
-     {
-      "kind": "ranged",
-      "when": "Allocated to a MONSTER or VEHICLE model",
-      "note": "can re-roll the damage roll",
-      "from": "Annihilator",
-      "always": true,
-      "vs": {
-       "any": [
-        "Monster",
-        "Vehicle"
-       ]
-      },
-      "readOf": "c62d4c71"
-     },
-     {
-      "kind": "all",
-      "when": "Damaged (1-4 wounds left)",
-      "note": "-1 to hit rolls",
-      "from": "Damaged: 1-4 wounds remaining",
-      "readOf": "9c4d4e20",
-      "readBy": "derive"
-     }
-    ]
-   },
-   "Chaos Predator Destructor": {
-    "mods": [
-     {
-      "kind": "ranged",
-      "when": "vs INFANTRY units",
-      "note": "+1 AP",
-      "from": "Destructor",
-      "always": true,
-      "vs": {
-       "any": [
-        "Infantry"
-       ]
-      },
-      "readOf": "a6bdb4e3"
-     },
-     {
-      "kind": "all",
-      "when": "Damaged (1-4 wounds left)",
-      "note": "-1 to hit rolls",
-      "from": "Damaged: 1-4 wounds remaining",
-      "readOf": "9c4d4e20",
-      "readBy": "derive"
-     }
-    ]
-   },
-   "Chaos Vindicator": {
-    "mods": [
-     {
-      "kind": "ranged",
-      "when": "Within Engagement Range of one or more enemy units",
-      "note": "no penalty to hit rolls for being within Engagement Range; the demolisher cannon can target enemy units within Engagement Range of it (no other friendly unit within Engagement Range of that unit)",
-      "from": "Siege Shield",
-      "always": true,
-      "readOf": "ff60fee3"
-     },
-     {
-      "kind": "all",
-      "when": "Damaged (1-4 wounds left)",
-      "note": "-1 to hit rolls",
-      "from": "Damaged: 1-4 wounds remaining",
-      "readOf": "9c4d4e20",
-      "readBy": "derive"
-     }
-    ]
-   },
-   "Forgefiend": {
-    "mods": [
-     {
-      "kind": "ranged",
-      "when": "Selected to shoot, if it uses this ability (until the end of the phase)",
-      "note": "[DEVASTATING WOUNDS] and [HAZARDOUS]",
-      "from": "Daemonic Ordnance",
-      "readOf": "95a13b90"
-     },
-     {
-      "kind": "all",
-      "when": "Damaged (1-4 wounds left)",
-      "note": "-1 to hit rolls",
-      "from": "Damaged: 1-4 wounds remaining",
-      "readOf": "9c4d4e20",
-      "readBy": "derive"
-     }
-    ]
-   }
+  "vashtorr-the-arkifane": {
+   "why": "Unholy Mechanisms (Aura): a friendly DAEMON VEHICLE unit within 6\" (Vashtorr is a MONSTER, not a VEHICLE: not his own)."
   },
-  "enhancements": {
-   "Mark of the Soul Forges": {
-    "mods": [
-     {
-      "kind": "all",
-      "when": "Every attack",
-      "note": "a Critical Hit on an unmodified hit roll of 5+",
-      "from": "Mark of the Soul Forges",
-      "always": true,
-      "calc": {
-       "critHit": 5
-      },
-      "readOf": "6b9be3c8"
-     }
-    ]
-   }
+  "lord-discordant-on-helstalker": {
+   "why": "Spirit Thief: every friendly HERETIC ASTARTES model’s attacks against the VEHICLE unit picked at the start of your Shooting phase, until the end of the phase (a picked-target effect, recorded as approved lists record Clever Know-wotz and Omnissiah’s Blessing; not an (Aura)); his own in his footnotes."
+  },
+  "warpsmith": {
+   "why": "Master of Mechanisms: one friendly HERETIC ASTARTES VEHICLE model within 3\", picked in your Command phase (a picked-target effect, recorded as Clever Know-wotz is; not an (Aura))."
+  }
+ },
+ "armyRules": {
+  "Dark Pacts": {
+   "by": "hand (Claude)",
+   "why": "the Damage tab: a Dark Pact is the player's choice each time the unit is selected to shoot or fight (Leadership test first; failed: D3 mortal wounds), and which ability it gains is theirs to pick; Touch of the Arkifane lets it select both"
   }
  }
 }

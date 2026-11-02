@@ -2063,6 +2063,12 @@
   "at": "2026-10-27",
   "why": "WHEN, TARGET and EFFECT kept, shorter, nothing added."
  },
+ "1a035ba17b0c264e": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "derive.js’s transport-capacity tag, which every other TRANSPORT ability in data.js carries; the words (\"This model has a transport capacity of 7 …\") are GW’s."
+ },
  "1a26079f75de4fea": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -2374,6 +2380,12 @@
   "by": "review:r5-code",
   "at": "2026-10-17",
   "why": "The headline is the granting rule(s) (`gs.map(g => g.name).join(' + ')`) with each rule's kind and full text. Then comes the note 'Already in the keywords/value shown (as New Recruit and BSData list them/it)', which is a source attribution, and then the keyword's own rule, smaller. 'Not the 1CP Kustom Dakka stratagem, which has the same name.' is a checkable fact: the stratagem exists in Shoota Boyz and gives +1 to wound, not IGNORES COVER. Rendered for every grant in this list. It adds no conditions and draws no conclusions. Safe on null: the unit is looked up with find and may be undefined, kw may be null, textWithTable/rt accept empty text."
+ },
+ "1e30843a5267f6ca": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "Unchanged from main 2b36d08 (re-keyed only): the keywords named are those the led/supported unit’s GW datasheet prints and the leader’s does not."
  },
  "1e368d554d5aae55": {
   "verdict": "ok",
@@ -5105,6 +5117,12 @@
   "at": "2026-10-22",
   "why": "WHEN: \"Your Shooting phase or the Fight phase\"."
  },
+ "40504569520d9126": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "Unchanged from main 2b36d08 (re-keyed only): the keywords named are those the led/supported unit’s GW datasheet prints and the leader’s does not."
+ },
  "4050c21fbcd3c974": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -5620,6 +5638,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"Your opponent's Movement phase\"."
+ },
+ "474b7b5ae09f8791": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "GW Kastelan Robots page: CORE ABILITIES \"Deadly Demise 1\"; Cybernetica Datasmith page: \"Support\" only. So the Kastelans alone have it."
  },
  "47536d26c2754edf": {
   "verdict": "ok",
@@ -6563,6 +6587,12 @@
   "at": "2026-10-29",
   "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Unlimited Endurance)."
  },
+ "54faaeccfb5cee1c": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "Unchanged from main (re-keyed: the Daemonic Icon and Instrument of Chaos now on one Bloodletter each, from the export’s associations, GW: \"1 Bloodletter that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos\", so two models). Battleline, Bloodletters are the Bloodletters’ page keywords."
+ },
  "54fcd9a5d24751a4": {
   "verdict": "ok",
   "by": "review:necrons-2",
@@ -7295,6 +7325,12 @@
   "at": "2026-10-17",
   "why": "The ability is selected “In your Command phase” and lasts “until the start of your next Command phase”. Its effects act on Psychic weapons: Range, “add 1 to the Wound roll”, [DEVASTATING WOUNDS]. Those weapons are used in Fire Overwatch (Movement), Shooting, and the Fight phase (Magnus, the Daemon Prince and both Sorcerers have Psychic melee weapons). No unit makes attacks in the Charge phase."
  },
+ "5ef4c19e1538c469": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "GW Sir Hekhtur page (imperial-knights_Sir-Hekhtur.html): CORE ABILITIES Lone Operative; Canis Rex’s page does not print it. Unchanged from main; now derived from his page."
+ },
  "5f02fcbd81c9d429": {
   "verdict": "ok",
   "by": "review:lite-knights",
@@ -7396,6 +7432,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"In your Shooting phase, if this unit made an ingress move this turn…\""
+ },
+ "6030fc896f140a83": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "Unchanged from main (re-keyed): PSYKER is the Aspiring Sorcerer’s only on GW’s Rubric Marines page; the Exalted Sorcerer’s page prints PSYKER."
  },
  "605ad0f8e4a5f5ee": {
   "verdict": "ok",
@@ -8213,6 +8255,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"End of your opponent’s Fight phase.\""
  },
+ "6cb2adadb487f1ab": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "Unchanged from main 2b36d08 (re-keyed: the models lines now carry the Icon of Flame on the Rubric Marine w/ soulreaper cannon, as the export’s association says): Battleline, Rubric, Rubric Marines, Rubricae are the Rubric Marines’ page keywords."
+ },
  "6cbc8951fa363ab4": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -8374,6 +8422,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "Bondsman: \"select one friendly Armiger model within 12\\\" ... that Armiger model is affected\", so needs ARMIGER is right; \"ranged weapons equipped by that model have the [ASSAULT] ability\" is the note (the Advance re-roll is left out as it is not about attacks). No ARMIGER is in 6-bigs, so it shows nowhere."
+ },
+ "6f214287582086eb": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "Unchanged from main (re-keyed): GW Rubric Marines ARMY RULES \"Cabal of Sorcerers (Aspiring Sorcerer only)\"; the Exalted Sorcerer has it on his own page."
  },
  "6f38c6d20a694e2b": {
   "verdict": "ok",
@@ -9850,6 +9904,12 @@
   "by": "review:tzeentch-data",
   "at": "2026-10-27",
   "why": "Either turn: both players spend tokens on their own rolls in both turns."
+ },
+ "83f6ca215fa32a44": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "Unchanged from main (re-keyed: the icon and instrument on one Bloodcrusher each, from the export’s associations; GW’s Bloodcrushers options forbid both on one model)."
  },
  "84005f1e14f9d1d2": {
   "verdict": "ok",
@@ -11938,6 +11998,12 @@
   "by": "review:catalog-custodes",
   "at": "2026-10-29",
   "why": "Read against GW’s words (Wahapedia faction page, the codex): {needs:{all:[Faction: Adeptus Custodes]}} follows the WHEN/TARGET/rule text as derive.js reads it (Guardians of the Throne · Prime Target)."
+ },
+ "9e9d0f474c2c4db4": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "The judgement is right per GW: Lord of the Host (\"If this model is attached to an EMPEROR’S CHILDREN BATTLELINE unit …, this model has the Infiltrators and Scouts 6\" abilities\"); Infractors CORE ABILITIES print Scouts 6\" only. Its screen consequence is not ok and is recorded separately (key reimport-pregame-scouts): app.html everyModel() tests Scouts and Infiltrators with one regex, so this partialRules entry also drops the unit’s Scouts 6\" from the pre-battle list."
  },
  "9e9f9fdd1693af6f": {
   "verdict": "ok",
@@ -14537,6 +14603,12 @@
   "at": "2026-10-24",
   "why": "Says only what the text says: WHEN (selected to make a consolidation move) and EFFECT (objective consolidation mode, regardless of that move's Before Moving restrictions). The italic sentence is GW's explanation, not an extra effect, so leaving it out loses nothing."
  },
+ "c37a6a65d2c75cdc": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "screenPregame: each of Scouts and Infiltrators now tested by itself (scoutRules keeps a rule only when everyModel holds for that rule’s key). Defilers’ pre-battle list is main’s again (\"Lord Exultant Scouts 6\"\", \"Tormentors Infiltrators\"); the Lord Exultant’s Infiltrators, his alone, is rightly not listed."
+ },
  "c38829cfd385e069": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -16127,6 +16199,12 @@
   "at": "2026-10-16",
   "why": "Wahapedia prints it as tooltip 04.01.05 linking to its rules appendix; the printed Core Rules do not contain \"selected to attack\" (grep), and their appendix says \"CONTINUED IN THE APP … The Warhammer 40,000 app contains an expanded range of definitions … The following pages present a selection\"."
  },
+ "d7e139500ce60564": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "As princes: GW’s Slaughterbound page alone prints Deadly Demise D3 (Exalted Eightbound: Deep Strike only); Scouts 6\" from Lord of the Eightbound, the Slaughterbound’s."
+ },
  "d80c9aade703b766": {
   "verdict": "ok",
   "by": "review:defilers2",
@@ -17237,6 +17315,12 @@
   "at": "2026-10-16",
   "why": "\"Each time this unit is selected to make a Normal or Advance move\": your Movement phase; nothing in this list moves Knights in the opponent’s turn."
  },
+ "e785a26c873de16c": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "Mysterious Guardian’s GW words print \"(Once per battle, per army)\" (data.js enhancement text); the same limit tag Archslaughterer and Umbralefic Crystal carry."
+ },
  "e7a6b614cf2a5937": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -17494,6 +17578,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "\"Your Shooting phase\"; blue \"Your turn\" card."
+ },
+ "eaa143fbeb26c2ef": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "GW pages: Slaughterbound CORE ABILITIES \"Deadly Demise D3, Leader\"; Exalted Eightbound CORE ABILITIES \"Deep Strike\" only. So Deadly Demise D3 is the Slaughterbound’s alone. Scouts 6\" comes from Lord of the Eightbound (attached to a WORLD EATERS POSSESSED unit), the Slaughterbound’s own, as main had it."
  },
  "eabb7a4cbf9dfbf3": {
   "verdict": "ok",
@@ -18575,6 +18665,12 @@
   "at": "2026-10-27",
   "why": "\"TARGET: That LEGIONES DAEMONICA MOUNTED unit.\""
  },
+ "fc115954550fd61a": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "As the Skulltaker’s: unchanged from main, re-keyed by the models lines."
+ },
  "fc1ced1ffef5c105": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -18796,6 +18892,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "NR: “1x Chaos Cerastus Knight Atrapos — Atrapos lascutter, Graviton singularity cannon”. The ranged profiles are lascutter low/high intensity and graviton contained/singularity, and the melee profiles are lascutter low/high intensity. The datasheet says “equipped with: Atrapos lascutter; graviton singularity cannon”."
+ },
+ "ff05d515bd504f4f": {
+  "verdict": "ok",
+  "by": "review:reimport",
+  "at": "2026-11-02",
+  "why": "GW Trajann Valoris page: CORE ABILITIES Feel No Pain 5+; the Allarus Custodians’ page does not print it. Unchanged from main."
  },
  "ff205dd581520bc3": {
   "verdict": "ok",

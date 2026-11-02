@@ -41,6 +41,8 @@
 //               verify/deviations-words.json (GW's own document's words over the page's quoted from verify/.cache/gw)
 //   calc        verify/calc-test.js: the damage calculator (calc.js) gives the averages worked out by hand from the Core Rules
 //   import      verify/import-test.js: the list import (import.js) turns each New Recruit JSON export into exactly its list in data.js
+//   reimport    verify/reimport.js: each list with a New Recruit JSON export, imported again alone (verify/from-json.js --write from its
+//               export and hand file), gives data.js (and the deviation files it writes) byte for byte
 //   screens     verify/render.js: every screen and popup renders; screen-level checks; no sideways scroll
 //   small phone the same at 320px wide
 //   snapshots   the text of every screen equals the accepted snapshot (verify/snapshots/)
@@ -96,6 +98,7 @@ step('keywords', ['verify/keywords.js']);   // every unit's keywords are GW's da
 step('words', ['verify/words.js']);   // every datasheet ability's words are its GW datasheet page's, and GW's documents' where declared
 step('calc', ['verify/calc-test.js']);   // the damage calculator against hand-worked cases
 step('import', ['verify/import-test.js']);   // the list import against every New Recruit JSON export
+step('reimport', ['verify/reimport.js']);   // every export, re-imported alone, gives data.js byte for byte
 // the screens need the built page: build it without the gate, check it, and the real build follows
 const b = node(['build.js'], { VERIFY_BUILDING:'1' });
 if(b.status !== 0){ console.log(b.stdout + b.stderr); process.exit(1); }

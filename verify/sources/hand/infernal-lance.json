@@ -1,0 +1,39 @@
+{
+ "_about": "What verify/from-json.js cannot fill mechanically for infernal-lance, written by hand and read by it on every run (from-json.js --write gives the same data.js again). The list was first imported from New Recruit’s PDF (verify/import-nr.js); these are the values data.js had then that its JSON export and GW’s pages do not give, each as data.js showed it and as its review signed it off: source (the day the PDF was exported; the export has none), units.<id>: na (why an ability does nothing in this list), notes (an FAQ or a rules note under an ability), kwNote (where a keyword comes from), short (the short name), srcNote (a note on the sources), kwOnly and partialRules (which model has a keyword or a core ability only some models of the unit have, where GW’s pages do not say it mechanically).",
+ "source": {
+  "text": "New Recruit, exported 22 Oct 2026",
+  "why": "the day New Recruit’s PDF of this list was exported (verify/sources/nr/infernal-lance.txt), from which the list was first imported; the JSON export carries no date"
+ },
+ "units": {
+  "chaos-cerastus-knight-atrapos": {
+   "na": {
+    "Consumed with Hunger": "No WAR DOG in this list"
+   },
+   "why": "Consumed with Hunger is an aura for friendly WAR DOG models; this list has no WAR DOG unit (New Recruit's export)."
+  },
+  "chaos-cerastus-knight-lancer": {
+   "na": {
+    "Dark Fervour": "No WAR DOG in this list"
+   },
+   "why": "Dark Fervour is an aura for friendly WAR DOG models; this list has no WAR DOG unit (New Recruit's export)."
+  },
+  "knight-despoiler": {
+   "na": {
+    "Dread Dominion": "No WAR DOG in this list"
+   },
+   "why": "Dread Dominion is an aura for friendly WAR DOG models; this list has no WAR DOG unit (New Recruit's export)."
+  },
+  "knight-ruinator-fleshmetal-fusion": {
+   "na": {
+    "Close-range Killers": "No WAR DOG in this list"
+   },
+   "why": "Close-range Killers is an aura for friendly WAR DOG models; this list has no WAR DOG unit (New Recruit's export)."
+  },
+  "knight-ruinator": {
+   "na": {
+    "Close-range Killers": "No WAR DOG in this list"
+   },
+   "why": "Close-range Killers is an aura for friendly WAR DOG models; this list has no WAR DOG unit (New Recruit's export)."
+  }
+ }
+}

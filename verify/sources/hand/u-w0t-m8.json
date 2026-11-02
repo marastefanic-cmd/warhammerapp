@@ -34,21 +34,11 @@
   },
   "obeisance-phalanx/enslaved-artifice": {
    "by": "AI (Claude)",
-   "gist": "Your Shooting phase or the Fight phase, your NECRONS unit (excluding TITANIC units) not yet selected to shoot or fight: until the end of the phase, its attacks score a Critical Hit on an unmodified Hit roll of 5+.",
-   "mod": {
-    "by": "hand (Claude)",
-    "kind": "all",
-    "when": "Your Shooting phase or the Fight phase, not yet selected to shoot or fight, until the end of the phase",
-    "note": "a Critical Hit on an unmodified hit roll of 5+",
-    "calc": {
-     "critHit": 5
-    }
-   }
+   "gist": "Your Shooting phase or the Fight phase, your NECRONS unit (excluding TITANIC units) not yet selected to shoot or fight: until the end of the phase, its attacks score a Critical Hit on an unmodified Hit roll of 5+."
   },
   "obeisance-phalanx/nanoassembly-protocols": {
    "by": "AI (Claude)",
-   "gist": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your NECRONS VEHICLE unit as a target: until the end of the phase, -1 to the Damage characteristic of each attack allocated to a model in your unit.",
-   "def": "Their Shooting phase or the Fight phase, just after an enemy unit selected it as a target: -1 Damage to each attack allocated to its models until the end of the phase"
+   "gist": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your NECRONS VEHICLE unit as a target: until the end of the phase, -1 to the Damage characteristic of each attack allocated to a model in your unit."
   },
   "obeisance-phalanx/sentinels-of-eternity": {
    "by": "AI (Claude)",
@@ -63,13 +53,7 @@
   },
   "obeisance-phalanx/suffer-no-rival": {
    "by": "AI (Claude)",
-   "gist": "Fight phase, your LYCHGUARD or TRIARCH unit not yet selected to fight: until the end of the phase, its melee weapons have [PRECISION].",
-   "mod": {
-    "by": "hand (Claude)",
-    "kind": "melee",
-    "when": "Fight phase, not yet selected to fight, until the end of the phase",
-    "note": "[PRECISION]"
-   }
+   "gist": "Fight phase, your LYCHGUARD or TRIARCH unit not yet selected to fight: until the end of the phase, its melee weapons have [PRECISION]."
   },
   "obeisance-phalanx/territorial-obsession": {
    "by": "AI (Claude)",
@@ -77,8 +61,7 @@
   },
   "the-phaerons-armoury/subsurface-quantumweave": {
    "by": "AI (Claude)",
-   "gist": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets your NECRONS TITANIC FLY unit: attacks that target your unit have -1 AP until that enemy unit has attacked.",
-   "def": "Their Shooting phase or the Fight phase, when an enemy unit targets it: attacks that target it have -1 AP until that enemy unit has attacked"
+   "gist": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets your NECRONS TITANIC FLY unit: attacks that target your unit have -1 AP until that enemy unit has attacked."
   },
   "the-phaerons-armoury/particle-pulse": {
    "by": "AI (Claude)",
@@ -86,14 +69,7 @@
   },
   "the-phaerons-armoury/cosmic-storm": {
    "by": "AI (Claude)",
-   "gist": "Your Shooting phase, when your OBELISK/TESSERACT VAULT unit is selected to shoot: its Tesla Sphere weapons have +1 AP.",
-   "mod": {
-    "by": "hand (Claude)",
-    "kind": "ranged",
-    "weapon": "Tesla sphere",
-    "when": "Your Shooting phase, selected to shoot: its Tesla Sphere weapons",
-    "note": "+1 AP"
-   }
+   "gist": "Your Shooting phase, when your OBELISK/TESSERACT VAULT unit is selected to shoot: its Tesla Sphere weapons have +1 AP."
   }
  },
  "units": {
@@ -123,12 +99,6 @@
    "why": "The Royal Warden leads no unit in this list (Leader: IMMORTALS, NECRON WARRIORS): the export attaches it to none, the Immortals included (the Technomancer supports them); Adaptive Strategy (\"This model’s unit\") is its own. Adaptive Strategy is labelled your Movement, Shooting and Charge phases (verify/derive.js): Fall Back and Advance are moves of your own Movement phase (Core Rules 09.02, 09.07), so its unit cannot have Fallen Back or Advanced in the opponent's Movement phase (Fire Overwatch); as the signed-off Bounding Leaps and Elevated Strider (review result-necrons.json 231348fb544bd6eb)."
   },
   "technomancer-immortals": {
-   "defs": {
-    "Rites of Reanimation": {
-     "by": "AI (Claude)",
-     "def": "While the Technomancer leads this unit: Feel No Pain 5+ for its models"
-    }
-   },
    "why": "The Technomancer supports the Immortals (SUPPORT on GW’s Technomancer datasheet: CANOPTEK WRAITHS, IMMORTALS, NECRON WARRIORS; the export’s “Supporting” association); a support unit leads its bodyguard as a leader does (Core Rules, Leader/Support), so Rites of Reanimation (“While this model is leading a unit”) gives the Immortals and itself Feel No Pain 5+. Technomancer (the ability): at the end of your Movement phase one friendly NECRONS model within 6\" regains up to D3 lost wounds. Implacable Eradication: re-roll a Wound roll of 1, the whole Wound roll against an enemy unit within range of an objective marker. 80 pts: GW’s price of a 1st Technomancer; Immortals 65 (5 models)."
   },
   "canoptek-spyders": {
@@ -136,133 +106,6 @@
   },
   "canoptek-scarab-swarms": {
    "why": "Three Canoptek Scarab Swarms (40 pts, GW’s 3 models). Chittering swarm (GW’s capitalisation; New Recruit: Chittering Swarm): enemy units in Engagement Range -1 OC (minimum 1); OC 1 within 6\" of a friendly CRYPTEK model (the Technomancer). Self-destruction at the start of the Fight phase."
-  }
- },
- "readings": {
-  "_about": "The readings of this list's rows (docs/tables.md, Readings): by the row they read (a datasheet by name, a detachment rule), each { mods, aura, guard } in the row's order, with the fingerprint of the text each was read from (readOf). A datasheet not here: verify/derive.js's derived readings.",
-  "datasheets": {
-   "The Silent King": {
-    "aura": [
-     {
-      "kind": "all",
-      "needs": {
-       "all": [
-        "Faction: Necrons"
-       ],
-       "none": [
-        "Monster"
-       ]
-      },
-      "when": "Within 6\" of Szarekh, if The Silent King has Phaeron of the Stars this battle round",
-      "selfWhen": "Own aura, if it has Phaeron of the Stars this battle round",
-      "note": "re-roll hit rolls of 1 and wound rolls of 1",
-      "from": "Phaeron of the Stars"
-     },
-     {
-      "kind": "melee",
-      "needs": {
-       "all": [
-        "Faction: Necrons"
-       ],
-       "none": [
-        "Monster"
-       ]
-      },
-      "when": "Within 6\" of Szarekh, if The Silent King has Phaeron of the Blades this battle round",
-      "selfWhen": "Own aura, if it has Phaeron of the Blades this battle round",
-      "note": "+1 S (and re-roll Charge rolls)",
-      "from": "Phaeron of the Blades"
-     }
-    ],
-    "mods": [
-     {
-      "kind": "all",
-      "when": "Damaged (Szarekh 1-6 wounds left)",
-      "note": "-1 to hit rolls; Szarekh’s weapons: halve A",
-      "from": "Damaged: 1-6 wounds remaining"
-     }
-    ]
-   },
-   "Flayed Ones": {
-    "mods": [
-     {
-      "kind": "melee",
-      "when": "Target Below Half-strength",
-      "note": "a successful hit roll scores a Critical Hit",
-      "from": "Flesh Hunger"
-     }
-    ]
-   },
-   "Immortals": {
-    "mods": [
-     {
-      "kind": "all",
-      "when": "Every attack",
-      "note": "re-roll wound rolls of 1",
-      "from": "Implacable Eradication",
-      "always": true,
-      "calc": {
-       "rrWound": "1s"
-      }
-     },
-     {
-      "kind": "all",
-      "when": "Target within range of an objective marker",
-      "cond": "targetObjective",
-      "note": "re-roll the wound roll",
-      "from": "Implacable Eradication",
-      "calc": {
-       "rrWound": "all"
-      }
-     }
-    ]
-   },
-   "Canoptek Spyders": {
-    "guard": [
-     {
-      "from": "Fabricator Claw Array",
-      "needs": {
-       "all": [
-        "Faction: Necrons",
-        "Vehicle"
-       ]
-      },
-      "kind": "all",
-      "when": "Within 6\" of a Canoptek Spyder with a fabricator claw array",
-      "selfWhen": "Own aura",
-      "selfAlways": true,
-      "note": "Feel No Pain 6+",
-      "calc": {
-       "fnp": 6
-      }
-     },
-     {
-      "from": "Gloom Prism",
-      "needs": {
-       "all": [
-        "Faction: Necrons"
-       ]
-      },
-      "kind": "all",
-      "when": "Within 6\" of a Canoptek Spyder with a gloom prism",
-      "selfWhen": "Own aura",
-      "selfAlways": true,
-      "note": "Feel No Pain 5+ against mortal wounds and Psychic Attacks"
-     }
-    ]
-   }
-  },
-  "rules": {
-   "Worthy Foes": {
-    "mods": [
-     {
-      "kind": "all",
-      "when": "Vs the enemy unit you selected in your Command phase, until the start of your next Command phase",
-      "note": "+1 to wound rolls",
-      "from": "Worthy Foes"
-     }
-    ]
-   }
   }
  },
  "armyRules": {
