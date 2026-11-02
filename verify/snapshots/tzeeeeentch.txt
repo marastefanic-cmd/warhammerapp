@@ -2513,7 +2513,8 @@ Kairos Fateweaver
 5
 4+
 WHEN TARGETED
-4
+5
+Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
 Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
@@ -2635,7 +2636,8 @@ Large Flying
 2
 4+
 WHEN TARGETED
-4
+5
+Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls
 Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
@@ -2719,7 +2721,8 @@ The Changeling
 1
 4+
 WHEN TARGETED
-6
+7
+Fates in Flux: not counted here: see the rule
 Formless Horror: not counted here: see the rule
 Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls
 Mischief and Confusion: not counted here: see the rule
@@ -2830,7 +2833,8 @@ Daemon Prince of Chaos with wings
 3
 4+
 WHEN TARGETED
-4
+5
+Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
 Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
@@ -2964,7 +2968,8 @@ Lord of Change
 5
 4+
 WHEN TARGETED
-4
+5
+Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
 Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
@@ -3102,7 +3107,8 @@ Lord of Change
 5
 4+
 WHEN TARGETED
-4
+5
+Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
 Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
@@ -3261,9 +3267,11 @@ Pink Horror×10
 2
 4+
 WHEN TARGETED
-6
+8
+Fates in Flux: not counted here: see the rule
 FLUXMASTER Fluxmaster: Stealth
 FLUXMASTER Fluxmaster: Melee attacks: −1 to Hit rolls
+FLUXMASTER Altered Reality: not counted here: see the rule
 FLUXMASTER Improbable Shield (Aura): Own aura: Feel No Pain 4+ against Psychic Attacks and mortal wounds
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
 Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
@@ -3455,7 +3463,8 @@ Flamers×3
 1
 4+
 WHEN TARGETED
-4
+5
+Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
 Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
@@ -3547,7 +3556,8 @@ Soul Grinder
 5
 4+
 WHEN TARGETED
-4
+5
+Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
 Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
@@ -3670,8 +3680,12 @@ Blue Horror
 8+
 1
 4+
+
+Enemy units’ Ld: not counted here: see the rule (Sullen Malevolence)
+
 WHEN TARGETED
-4
+5
+Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
 Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
@@ -3793,7 +3807,8 @@ Brimstone Horror
 1
 4+
 WHEN TARGETED
-4
+5
+Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
 Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
@@ -3861,7 +3876,18 @@ TZEENTCH
 Ask about this unit
 ‹ Blue Horrors
 
-######## popup ability:tzeeeeentch|Daemon Lord of Tzeentch|While a friendly **TZEENTCH LEGIONES DAEMONICA** unit is within 6" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack. · BRIMSTONE HORRORS Tzeeeeentch
+######## popup ability:tzeeeeentch|Altered Reality|Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6. · BRIMSTONE HORRORS Tzeeeeentch
+ABILITY · PSYCHIC
+
+Altered Reality
+
+Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.
+
+UNITFluxmaster + Pink Horrors · Improbable Shield (Aura)
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Daemon Lord of Tzeentch|While a friendly **TZEENTCH LEGIONES DAEMONICA** unit is within 6" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack. · TZEEEEENTCH Tzeeeeentch
 ABILITY · AURA · THEIR MOVEMENT / YOUR SHOOTING
 
 Daemon Lord of Tzeentch
@@ -4049,6 +4075,17 @@ Each time a PINK HORROR or BLUE HORROR model in this unit is destroyed, after th
 FAQ (Faction Pack 1.2): “When using the Pink Horrors Split ability, when adding Blue Horror models to this unit, can this ability take the unit above it's starting strength?” “Yes” FAQ (Faction Pack 1.2): “If a Pink Horror or a Blue Horror is destroyed as a result of its own weapon’s [HAZARDOUS] ability, can that model’s unit use its Split ability?” “Yes.” FAQ (Faction Pack 1.2): “Do Pink Horrors’ and Blue Horrors’ Split abilities trigger when the damage is dealt by something other than an attack?” “No.”
 
 UNITFluxmaster + Pink Horrors · Improbable Shield (Aura)
+
+Ask about this ability
+
+######## popup ability:tzeeeeentch|Sullen Malevolence|While an enemy unit is within 6" of this unit, if this unit contains one or more **BLUE HORROR** models, worsen the Leadership characteristic of models in that enemy unit by 1. · TZEEEEENTCH Tzeeeeentch
+ABILITY · AURA
+
+Sullen Malevolence
+
+While an enemy unit is within 6" of this unit, if this unit contains one or more BLUE HORROR models, worsen the Leadership characteristic of models in that enemy unit by 1.
+
+UNITBlue Horrors
 
 Ask about this ability
 

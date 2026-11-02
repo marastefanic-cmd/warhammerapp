@@ -2565,6 +2565,9 @@ Magnus the Red
 5+
 6
 4+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 2
 Impossible Form: Unearthly Power: the one selected (at the start of the battle round) · Not Psychic Attacks: −1 Damage
@@ -2727,6 +2730,9 @@ Tzaangor Enlightened with Fatecaster greatbows
 7+
 2
 5+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 3
 Warpmeld Sacrifice: If it uses this ability · “Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks”: −1 to Wound rolls
@@ -2875,6 +2881,9 @@ Daemon Prince of Tzeentch with wings
 6+
 3
 4+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 1
 Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
@@ -3010,6 +3019,11 @@ Tzaangor Enlightened with Fatecaster greatbows
 7+
 2
 5+
+
+Enemy units’ M: not counted here: see the rule (Binding Tendrils)
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 4
 Warpmeld Sacrifice: If it uses this ability · “Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks”: −1 to Wound rolls
@@ -3183,6 +3197,9 @@ Tzaangor Enlightened
 7+
 2
 5+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 3
 Warpmeld Sacrifice: If it uses this ability · “Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks”: −1 to Wound rolls
@@ -3335,6 +3352,9 @@ Tzaangor Enlightened
 7+
 2
 5+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 4
 Warpmeld Sacrifice: If it uses this ability · “Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks”: −1 to Wound rolls
@@ -3487,6 +3507,11 @@ Tzaangor Enlightened
 7+
 2
 5+
+
+W: not counted here: see the rule (Flowing Flesh)
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 4
 Warpmeld Sacrifice: If it uses this ability · “Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks”: −1 to Wound rolls
@@ -3630,6 +3655,8 @@ Tzaangors
 
 Not Battle-shocked: TZAANGOR models +1 OC (Warpmeld Sacrifice)
 
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 3
 Warpmeld Sacrifice: If it uses this ability · “Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks”: −1 to Wound rolls
@@ -3703,6 +3730,9 @@ Sekhetar Robots×2
 7+
 1
 5+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 1
 Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
@@ -3806,6 +3836,9 @@ Chaos Spawn
 7+
 1
 5+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 2
 Feel No Pain 5+
@@ -3887,6 +3920,17 @@ Bestial Prophet
 While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
 
 UNITTzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+Ask about this ability
+
+######## popup ability:mucho-mutantes|Binding Tendrils|In your Shooting phase, after this model has shot, select one enemy **INFANTRY** unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2" from its Move characteristic and subtract 2 from **Charge rolls** made for it. · MUCHO MUTANTES Mucho Mutantes
+ABILITY · PSYCHIC · SHOOTING · YOUR TURN
+
+Binding Tendrils
+
+In your Shooting phase, after this model has shot, select one enemy INFANTRY unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2" from its Move characteristic and subtract 2 from Charge rolls made for it.
+
+UNITExalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2
 
 Ask about this ability
 

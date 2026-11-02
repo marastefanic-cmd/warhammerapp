@@ -2566,6 +2566,10 @@ Norn Assimilator
 
 Lost no wounds (At its Starting Strength) · Not Battle-shocked: +2 OC (Enraged Behemoths)
 
+OC: not counted here: see the rule (Singular Purpose)
+
+Enemy units’ M: not counted here: see the rule (Tanglestrike Rounds)
+
 WHEN TARGETED
 4
 Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
@@ -2708,6 +2712,10 @@ Norn Assimilator
 
 Lost no wounds (At its Starting Strength) · Not Battle-shocked: +2 OC (Enraged Behemoths)
 
+OC: not counted here: see the rule (Singular Purpose)
+
+Enemy units’ M: not counted here: see the rule (Tanglestrike Rounds)
+
 WHEN TARGETED
 4
 Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
@@ -2848,6 +2856,8 @@ Norn Emissary
 4+
 
 Lost no wounds (At its Starting Strength) · Not Battle-shocked: +2 OC (Enraged Behemoths)
+
+OC: not counted here: see the rule (Singular Purpose)
 
 WHEN TARGETED
 4
@@ -3001,6 +3011,8 @@ Norn Emissary
 4+
 
 Lost no wounds (At its Starting Strength) · Not Battle-shocked: +2 OC (Enraged Behemoths)
+
+OC: not counted here: see the rule (Singular Purpose)
 
 WHEN TARGETED
 4

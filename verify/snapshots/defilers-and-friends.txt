@@ -332,7 +332,7 @@ The target: CHARACTER or MONSTER or WALKER: Lucius the Eternal Re-roll Hit rolls
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 Daemon Prince of Slaanesh with Wings
 Pledge of Unholy Fortune
 Infernal cannon
@@ -346,7 +346,7 @@ Infernal cannon
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 Sorcerer
 
 Can shoot with Bolt pistol or Agonising Energies, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
@@ -380,7 +380,7 @@ PISTOL
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 Lord Exultant
 + Infractors
 ×2 units
@@ -423,7 +423,7 @@ HAZARDOUS, PISTOL, LETHAL HITS
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 Tormentors
 Boltgun×3
 24"
@@ -462,7 +462,7 @@ HAZARDOUS, PISTOL, PRECISION
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 Chaos Rhino
 Combi-bolter
 24"
@@ -472,11 +472,12 @@ Combi-bolter
 -1
 1
 RAPID FIRE 2
+not counted here: see the rule (Firing Deck 2)
 1+ Pact points (cumulative): Re-roll Hit rolls of 1 (Pledges to the Dark Prince)
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 Defiler
 1 of 2
 Ectoplasma destructor
@@ -508,7 +509,7 @@ If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 Defiler
 2 of 2
 Ectoplasma destructor
@@ -540,7 +541,7 @@ If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 Maulerfiend
 ×2 units
 Magma cutter
@@ -558,7 +559,7 @@ If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Lucius the Eternal
@@ -596,7 +597,7 @@ If it uses this ability: Critical Wound on 3+ (Daemonic Patrons)
 5+ Pact points (cumulative): [LETHAL HITS], [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Command phase
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll, Command phase
 1CP Martial Perfection: Re-roll Hit rolls, Fight phase
 Daemon Prince of Slaanesh with Wings
 Pledge of Unholy Fortune
@@ -618,7 +619,7 @@ Hellforged weapons
 5+ Pact points (cumulative): [LETHAL HITS], [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Command phase
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll, Command phase
 1CP Martial Perfection: Re-roll Hit rolls, Fight phase
 Sorcerer
 Force weapon
@@ -633,7 +634,7 @@ PSYCHIC
 5+ Pact points (cumulative): [LETHAL HITS], [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Command phase
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll, Command phase
 1CP Martial Perfection: Re-roll Hit rolls, Fight phase
 Lord Exultant
 + Infractors
@@ -687,7 +688,7 @@ The target within range of an objective marker: Re-roll Wound rolls (Excessive A
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 Charged this turn: Phoenix power spear +1 to Wound rolls (Lance)
 STRATAGEMS · COTERIE OF THE CONCEITED
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Command phase
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll, Command phase
 1CP Martial Perfection: Re-roll Hit rolls, Fight phase
 Tormentors
 Close combat weapon×4
@@ -707,7 +708,7 @@ Power swordOBSESSIONIST
 5+ Pact points (cumulative): [LETHAL HITS], [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Command phase
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll, Command phase
 1CP Martial Perfection: Re-roll Hit rolls, Fight phase
 Chaos Rhino
 Armoured tracks
@@ -716,12 +717,13 @@ Armoured tracks
 6
 0
 1
+not counted here: see the rule (Firing Deck 2)
 1+ Pact points (cumulative): Re-roll Hit rolls of 1 (Pledges to the Dark Prince)
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 5+ Pact points (cumulative): [LETHAL HITS], [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Command phase
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll, Command phase
 1CP Martial Perfection: Re-roll Hit rolls, Fight phase
 Defiler
 1 of 2
@@ -746,7 +748,7 @@ If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
 5+ Pact points (cumulative): [LETHAL HITS], [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Command phase
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll, Command phase
 1CP Martial Perfection: Re-roll Hit rolls, Fight phase
 Defiler
 2 of 2
@@ -771,7 +773,7 @@ If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
 5+ Pact points (cumulative): [LETHAL HITS], [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Command phase
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll, Command phase
 1CP Martial Perfection: Re-roll Hit rolls, Fight phase
 Maulerfiend
 ×2 units
@@ -789,7 +791,7 @@ If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
 5+ Pact points (cumulative): [LETHAL HITS], [SUSTAINED HITS 1] (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Command phase
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll, Command phase
 1CP Martial Perfection: Re-roll Hit rolls, Fight phase
 
 ######## abilities · MELEE Abilities
@@ -1343,7 +1345,7 @@ BEST · MOST MODELS
 +0.1
 MODELS
 1CP Unshakeable Opponents
-Ignore modifiers to BS/WS and the Hit roll
+Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 if used
 0
 NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
@@ -1617,7 +1619,7 @@ if used
 ≈0
 MODELS
 1CP Unshakeable Opponents
-Ignore modifiers to BS/WS and the Hit roll
+Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 if used
 0
 1CP Epic Challenge
@@ -1852,7 +1854,7 @@ None that change these numbers.
 STRATAGEMS
 with their CP
 1CP Unshakeable Opponents
-Ignore modifiers to BS/WS and the Hit roll
+Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 if used
 0
 1CP Command Re-roll
@@ -1998,7 +2000,7 @@ if used
 ≈0
 MODELS
 1CP Unshakeable Opponents
-Ignore modifiers to BS/WS and the Hit roll
+Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 if used
 0
 1CP Epic Challenge
@@ -2482,7 +2484,7 @@ The target: CHARACTER or MONSTER or WALKER: Lucius the Eternal Re-roll Hit rolls
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 RANGED WEAPONS
 Range
 A
@@ -2609,8 +2611,9 @@ Daemon Prince of Slaanesh with Wings
 3
 4+
 WHEN TARGETED
-3
+4
 Stimulated by Pain: −1 Damage
+Pledge of Unholy Fortune: not counted here: see the rule
 1CP Protection of the Dark Prince: Any phase, If (see the rule): Feel No Pain 6+, Feel No Pain 4+ against mortal wounds
 1CP Armour of Abhorrence: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 ALL ATTACKS
@@ -2618,7 +2621,7 @@ ALL ATTACKS
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 RANGED WEAPONS
 Range
 A
@@ -2721,6 +2724,9 @@ Sorcerer
 6+
 1
 –
+
+Enemy units’ M: not counted here: see the rule (Wracking Agonies)
+
 WHEN TARGETED
 2
 1CP Protection of the Dark Prince: Any phase, If (see the rule): Feel No Pain 6+, Feel No Pain 4+ against mortal wounds
@@ -2730,7 +2736,7 @@ ALL ATTACKS
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 RANGED WEAPONS
 Range
 A
@@ -2870,7 +2876,7 @@ ALL ATTACKS · WHOLE UNIT
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 RANGED WEAPONS
 Bolt pistol ×5, Plasma pistol · all pistols
 Range
@@ -3072,7 +3078,7 @@ ALL ATTACKS
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 RANGED WEAPONS
 Range
 A
@@ -3199,11 +3205,12 @@ WHEN TARGETED
 1CP Protection of the Dark Prince: Any phase, If (see the rule): Feel No Pain 6+, Feel No Pain 4+ against mortal wounds
 1CP Armour of Abhorrence: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 ALL ATTACKS
+not counted here: see the rule (Firing Deck 2)
 1+ Pact points (cumulative): Re-roll Hit rolls of 1 (Pledges to the Dark Prince)
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 RANGED WEAPONS
 Range
 A
@@ -3307,7 +3314,7 @@ The target not Below Half-strength: +1 to Hit rolls (Revel in Desecration)
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 RANGED WEAPONS
 Range
 A
@@ -3434,7 +3441,7 @@ The target not Below Half-strength: +1 to Hit rolls (Revel in Desecration)
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 RANGED WEAPONS
 Range
 A
@@ -3561,7 +3568,7 @@ Lost any wounds (Below its Starting Strength) · 5 or fewer wounds left (Below H
 3+ Pact points (cumulative): Re-roll Wound rolls of 1 (Pledges to the Dark Prince)
 7+ Pact points (cumulative): Critical Hit on 5+ (Pledges to the Dark Prince)
 STRATAGEMS · COTERIE OF THE CONCEITED · COMMAND PHASE
-1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll
+1CP Unshakeable Opponents: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 RANGED WEAPONS
 Range
 A
@@ -3741,6 +3748,17 @@ UNITTormentors
 
 Ask about this ability
 
+######## popup ability:defilers-and-friends|Pledge of Unholy Fortune|**EMPEROR’S CHILDREN** model only. Once per turn, just after making a **Hit roll**, a **Wound roll** or a saving throw for a model in the bearer’s unit, if the bearer is not **Battle-shocked**, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead. · DEFILERS AND FRIENDS Defilers and friends
+ABILITY · ENHANCEMENT · ONCE PER TURN
+
+Pledge of Unholy Fortune
+
+EMPEROR’S CHILDREN model only. Once per turn, just after making a Hit roll, a Wound roll or a saving throw for a model in the bearer’s unit, if the bearer is not Battle-shocked, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.
+
+UNITDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune
+
+Ask about this ability
+
 ######## popup ability:defilers-and-friends|Revel in Desecration|Each time this model makes an attack that targets an enemy unit that is not **below Half-strength**, add 1 to the **Hit roll**. · DEFILERS AND FRIENDS Defilers and friends
 ABILITY · YOUR SHOOTING / FIGHT (EITHER TURN)
 
@@ -3760,6 +3778,17 @@ Stimulated by Pain
 Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.
 
 UNITDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune
+
+Ask about this ability
+
+######## popup ability:defilers-and-friends|Wracking Agonies|In your Shooting phase, after this model has shot, select one **INFANTRY** unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2" from its Move characteristic and subtract 2 from **Charge rolls** made for it. · DEFILERS AND FRIENDS Defilers and friends
+ABILITY · PSYCHIC · SHOOTING · YOUR TURN
+
+Wracking Agonies
+
+In your Shooting phase, after this model has shot, select one INFANTRY unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2" from its Move characteristic and subtract 2 from Charge rolls made for it.
+
+UNITSorcerer
 
 Ask about this ability
 

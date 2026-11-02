@@ -439,6 +439,7 @@ Combi-bolter
 -1
 1
 RAPID FIRE 4
+not counted here: see the rule (Firing Deck 2)
 Goremongers
 Autopistol×8
 12"
@@ -501,8 +502,8 @@ Wrathful Presence: the one selected (at the start of the battle round) · Own au
 If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
 Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 Khârn the Betrayer
@@ -533,8 +534,8 @@ Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of K
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 Lord on Juggernaut
@@ -560,8 +561,8 @@ Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTAT
 Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
 Charged this turn: Bladed horn +1 to Wound rolls (Lance)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
@@ -579,8 +580,8 @@ Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
@@ -610,8 +611,8 @@ Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
@@ -623,12 +624,13 @@ Armoured tracks
 6
 0
 1
+not counted here: see the rule (Firing Deck 2)
 Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 Eightbound
@@ -639,8 +641,8 @@ Chainblades×3
 8
 -2
 2
-Own aura · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Own aura · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Own aura · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Own aura · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
@@ -660,8 +662,8 @@ Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of K
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 Goremongers
@@ -686,8 +688,8 @@ Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Charged this turn: Chainblade +1 to Wound rolls (Lance)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 Jakhals
@@ -708,8 +710,8 @@ Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of K
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 Forgefiend
@@ -725,8 +727,8 @@ Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of K
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 
@@ -1732,13 +1734,13 @@ Wrathful Presence
 “At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Beacons of Rage (Eightbound (×2))
-Aura · Within 6" of it · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls
+Aura · Within 6" of it · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls
 if it applies
 +8% wiped
 +0.1
 MODELS
 Beacons of Rage (Eightbound (×2))
-Aura · Within 6" of it · The target: not MONSTER/VEHICLE: +1 to Hit rolls
+Aura · Within 6" of it · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls
 if it applies
 no change: already hits on 2+
 0
@@ -2208,11 +2210,11 @@ Aura · Wrathful Presence: the one selected (at the start of the battle round) �
 if it applies
 0
 Beacons of Rage (Eightbound (×2))
-Aura · Within 6" of it · The target: not MONSTER/VEHICLE: +1 to Hit rolls
+Aura · Within 6" of it · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls
 if it applies
 0
 Beacons of Rage (Eightbound (×2))
-Aura · Within 6" of it · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls
+Aura · Within 6" of it · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls
 if it applies
 0
 STRATAGEMS
@@ -2787,8 +2789,8 @@ DEVASTATING WOUNDS
 Wrathful Presence: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
 Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 ABILITIES
@@ -2991,8 +2993,8 @@ Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of K
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 ABILITIES
@@ -3149,8 +3151,8 @@ Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTAT
 Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
 Charged this turn: Bladed horn +1 to Wound rolls (Lance)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
@@ -3240,8 +3242,8 @@ Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
@@ -3364,8 +3366,8 @@ Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
@@ -3463,6 +3465,8 @@ Hull
 WHEN TARGETED
 1
 2CP Frenzied Resilience: Fight phase: −1 Damage
+ALL ATTACKS
+not counted here: see the rule (Firing Deck 2)
 RANGED WEAPONS
 Range
 A
@@ -3494,8 +3498,8 @@ Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of K
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 ABILITIES
@@ -3577,8 +3581,8 @@ Chainblades×3
 8
 -2
 2
-Own aura · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Own aura · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Own aura · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Own aura · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
@@ -3663,8 +3667,8 @@ Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of K
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 ABILITIES
@@ -3769,8 +3773,8 @@ Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Charged this turn: Chainblade +1 to Wound rolls (Lance)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 ABILITIES
@@ -3880,8 +3884,8 @@ Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of K
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 ABILITIES
@@ -3983,8 +3987,8 @@ Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of K
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: not MONSTER/VEHICLE: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: not MONSTER/VEHICLE: +1 to Wound rolls (Beacons of Rage)
+Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
+Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
 ABILITIES

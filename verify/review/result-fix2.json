@@ -1,0 +1,65 @@
+[
+ {
+  "key": "18ffd2ac006f92b6",
+  "where": "app.html · fnLine",
+  "verdict": "ok",
+  "fix": null,
+  "why": "Read against what it implements. ws0 is computed when the scope has only wkwNot. ws is set to null when wkwNot removes none of the unit's weapons, so the line names no weapons. It names the remaining weapons when wkwNot removes some, and there is no footnote when it removes all. That matches lines.js (weaponsOf + the same null rule) and dmReach / dmBoxRules wOf / dmCalc wIn, which all received wkwNot. Berzerker Glaive has no bearer today, so nothing shows. The rest of fnLine is unchanged from main."
+ },
+ {
+  "key": "d592137c81e570bb",
+  "where": "app.html · fnWeapons",
+  "verdict": "ok",
+  "fix": null,
+  "why": "The only change is && (!sc.wkwNot || !itemHasKw(it, sc.wkwNot)). itemHasKw is the same keyword test as wkw (exact, or 'KW ' prefix: 'SUSTAINED HITS' matches 'SUSTAINED HITS 1') over every profile of the item. It matches GW's '(excluding Extra Attacks weapons)': a weapon with that keyword is excluded. evidence G5 holds wkwNot to the quote's own '(excluding … weapons)', and coverage LC requires wkwNot or the words quoted."
+ },
+ {
+  "key": "1059113cd93e1061",
+  "where": "app.html · statLines",
+  "verdict": "ok",
+  "fix": null,
+  "why": "Round 3 (182315d, merged with main in a4bfdfd). The snc lines follow GW's words. A sentence's reach must meet the unit (Dread Dominion WAR DOG; Loci of Power LD CHARACTER excluding MONSTER; Time Flux THOUSAND SONS; Relentless March NECRONS). An opening keyword condition must hold (Daemonic Allegiance Slaanesh: neither prince). 'While this model is leading a unit' needs u.leads (Aggressive Advance: shown for the princes and big-demons-baby Lords on Juggernaut, which lead Khorne Berzerkers; not for the unattached standard/lord-on-juggernaut). Army rules go only to units that have them (hasRule or needs); detachment rules use unitDetRules; stratagems use canTarget. All 139 lines (75 units) were read against GW, with the stratagem TARGETs checked (Full Tilt, Motive Imperative, Tanglestrike Rounds, Territorial Obsession, Unleash Balefire). Enemy-unit lines are marked 'Enemy units’'. Code Chivalric lists M, OC and Ld. LS re-derives the same placement: my app-side mutations (army rules to every unit, the keyword skip removed, the leading skip removed) each fail LS. LF pins the extractor's readings of reach, keyword condition and leading (5 cases). The st part is unchanged from main."
+ },
+ {
+  "key": "fix2: 1 fixes vs GW",
+  "where": "BOXES, calc.js, effects.js",
+  "verdict": "ok",
+  "why": "Core Rules 02.02.02 (rules/core-rules.md): 'When a rule states you can ignore modifiers to a stated roll …, you can choose to ignore all of those modifiers, or only some of them … you can still choose to apply positive/beneficial modifiers while ignoring negative/detrimental modifiers'. So ignoring only the negative ones is the player's best choice, and it is allowed even for Salvus's bare 'ignore modifiers'. calc.js marks every v<0 why.wound entry ignored: a rule's, the target's woundMinus and woundMinusSgt (plan sgt and attackOnce wrS). It keeps the +1s, and sigOf carries ignoreWound. ignoreHitRollMods leaves the cover BS modifier alone (13.08: cover worsens BS); Bearers is melee-only anyway. Texts: Unshakeable 'BS or WS; the Hit roll; the Wound roll' → ignoreHitMods+ignoreWoundMods. Salvus 'BS. Hit rolls and wound rolls', Your Shooting phase, kind ranged → the same. Bearers 'melee attacks … hit rolls and wound rolls' → ignoreHitRollMods+ignoreWoundMods (not WS: right). The 10 new calc tests check out by hand: 60 torrent S4vT4 → 30; -1 ignored → 30; without → 20; +1 kept → 40; S5vT4 sgt ignored → 40; played 12×½×⅔ → 4; played torrent → 30; hit -1 ignored → 30; cover kept for ignoreHitRollMods → 20; ignored for ignoreHitMods → 30. calc-test 401/401 on my clean copy. kprobe rerun on clean main and head copies is byte-identical to the builder's: 33 changes, all woundMod -1 → 0. Ratios are 4/3 (4+→3+), 5/4 (3+→2+) and 3/2 (5+→4+); mixed groups (Infractors 1.222, Galatus 1.185) carry critical or re-roll parts. Ka'tah changes are shooting only (15). All 15 fight states are unchanged with woundMod -1, so Salvus is ranged-only. Swarming Masses split: GW's 'and If your unit contains 15 or more models' governs only the critical 5+. Plural labels are GW's words (G5 holds 'said' to the quote)."
+ },
+ {
+  "key": "fix2: 2 Burning Spray / Broodguard reach",
+  "where": "BOXES a|14ie9b1, s|3s7op5",
+  "verdict": "ok",
+  "why": "Burning Spray (Pyrovores): 'select one enemy unit hit … Until the end of the phase, that enemy unit cannot have the Benefit of Cover'. The box is ignoresCover, kind ranged, reach {} (every friendly unit's attacks), targetSelected ('The target is the enemy unit selected') and notSelf. It shows for 6 other healybois units' shooting, never the fight. Hits are unchanged until cover is ticked. Pyrovores are excluded: narrower, never broader (a second Pyrovores unit could benefit; that is a gap, not a fault). Broodguard Impulse: 'Until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that just destroyed your HARVESTER unit, add 1 to the Wound roll'. The box is +1 wound, reach Faction: Tyranids, the target clause quoted (shown 'If (see the rule)'), lasts battle. It shows for 17 healybois states, shooting and fight. Other HARVESTER units get it too, which is right: one Harvester's death helps the others."
+ },
+ {
+  "key": "fix2: 3 durations",
+  "where": "BOXES lasts / until",
+  "verdict": "ok",
+  "why": "Checked against the rule texts: Blessings of Khorne 'until the end of the battle round' → round; Blood Tithe 'activate one of the following abilities until the end of the battle' → battle/until; Harbingers 'active until the end of the battle' → battle; Code Chivalric 'Until the end of the battle, the ability described in the Quality' → battle; Doctrina 'Until the end of the battle round' → until round; Synaptic Imperatives 'Until the end of the battle round' → round / until end of battle round; Canticles 'Until the start of your next Command phase' → until (exact words); Combat Doctrines 'until the start of your next Command phase' → lasts 'round'. 'round' is main's carry class in lastsOf, the same for 'start of your next Command phase'. It means the box carries past the turn, and b-box lasts are not printed as words, so nothing reads wrongly. Cabal of Sorcerers' Rituals keep their own 'until the end of the phase' (2047d28)."
+ },
+ {
+  "key": "fix2: 4 BOXES main vs branch",
+  "where": "data.js BOXES",
+  "verdict": "ok",
+  "why": "Regenerated (the builder's boxes-diff.json is from 13:20, before c73ee3b/2047d28/acf3b54: 22 changed). Final: 410 → 447 sources, 37 added, 27 changed, 0 removed. Changed: 8 nc/dnc/snc additions, 3 'said' labels, Berzerker wkwNot, 4 ignore fx (Ka'tah, Unshakeable; Bearers and Parasitic Payload added), the Swarming split, 8 durations and Broodguard nc → b. Added: Burning Spray b, Parasitic Payload b ('[IGNORE COVER]'), Bearers b, 23 snc, 7 dnc, 3 nc. The 6 just-destroyed nc entries acf3b54 restored equal main. No b/d box is broader than its words. The only broader output is the snc placement under statLines."
+ },
+ {
+  "key": "fix2: 5 snc lines",
+  "where": "app.html statLines, effects-extract statNc",
+  "verdict": "ok",
+  "why": "Round 3: every placement I reported is fixed (Daemonic Allegiance, Dread Dominion, Navigator, Nurglings, Code Chivalric Ld, Aggressive Advance on the unattached Lord). The wording is '<stat>: not counted here: see the rule', with 'Enemy units’' for the enemy's characteristics, which LF pins. See statLines."
+ },
+ {
+  "key": "fix2: 6 mutations (mine)",
+  "where": "verify/coverage.js silent (LW), gaps duration (LC/DC)",
+  "verdict": "ok",
+  "why": "Round 2 at 7aa4d1b: all 19 of my round-1 mutations fail a check. LW now catches fragment quotes (W5, W5b). Durations are checked both ways (MIG-D3 61 LC fails, MIG-D7 Thin Their Ranks). The wound-roll reading is pinned by LF (MIG-W9), and so is the foe mark (MIG-W6). New mutations on the new rules: caught are N3 (app: army rules to every unit) and N4 (app: selfKw skip removed), both by LS, which re-derives the placement independently in its app-side logic; MIG-N5 (Ld pattern removed), by LW; MIG-N6 (snc quotes cut to 25 characters), by LW and G2; MIG-N7 (every snc foe), by LF; MIG-N8 ('this turn' read as round), by LC. Missed, each re-migrated so data.js and the words agree: MIG-N1 (the extractor never sets snc reach: Dread Dominion's lines go back under its bearer); MIG-N2 (never sets snc selfKw: the Slaanesh M line goes back under the KHORNE and TZEENTCH princes); MIG-N9 (snc reach read only from the sentence before, so Loci of Power loses its CHARACTER/excluding MONSTER reach). All three pass every check, because LS uses data.js's reach/on and the extractor's reading of them has no fixed case. Needed: LF cases for statNc reach and on (Dread Dominion → reach WAR DOG; Loci of Power → Faction: Legiones Daemonica + Character, none Monster; Daemonic Allegiance Slaanesh → on selfKw Slaanesh; Full Tilt's 'or 9\" instead if your unit is an ARMIGER' → no on). Round 3 at 2f517ea: the three that got through now fail LF. MIG-N1 (no snc reach) and MIG-N9 (reach from the sentence before only) fail on Dread Dominion and Loci of Power; MIG-N2 (no keyword condition) fails on Daemonic Allegiance. Two new ones: MIG-N10 (extractor: leading never set) fails LF on Aggressive Advance, and N11 (app: the leading skip removed) fails LS on standard/lord-on-juggernaut. Every mutation of mine (26) now fails a check."
+ },
+ {
+  "key": "fix2: 7 numbers, snapshots, reimport",
+  "where": "Damage tab, verify/snapshots",
+  "verdict": "ok",
+  "why": "My own sweep on clean main and head copies (every list unit, shooting and fight, the tab as it opens plus each box alone and each pick): 412 opening states, 0 changed; 13,045 shared single-box keys, 0 changed; 23 added (Broodguard Impulse 17, Burning Spray 6); 0 throws. My render on the head copy (build + render.js, 3331 screens, 0 failures) gives snapshots byte-identical to the builder's (25 lists, +716/−302). Every changed line is a known kind: target labels; Ka'tah/Unshakeable wording; Broodguard boxes and levers (the 'BEST · MOST MODELS' and count lines are the new levers); healybois headings ('Fight phase' said per stratagem); durations; Burning Spray; snc lines with their ability popups; When-targeted counts (Fates in Flux); the BOXES table card (447 rows, snc column). Reimport, rerun in a clean clone at f923dab: all 24 exports re-import byte for byte, exit 0. Round 2 at 7aa4d1b, rerun: my sweep gives the same 412 opening states (0 changed), 0 changed singles and the same 23 added keys, and its output is identical to round 1. kprobe is byte-identical to round 1 (33 changes). Reimport in a clean clone at 7aa4d1b: 24 of 24, exit 0. Render: 3328 screens, 0 failures, and the snapshots are byte-identical to the builder's (+693/−302 against the accepted ones). Against my round-1 render the only differences are the fixes: 14 'Ld: not counted (Code Chivalric)' lines added; Daemonic Allegiance ×2, Dread Dominion, Navigator's Code Chivalric and Nurglings' Harbingers lines removed, with their popups. Round 3 at 2f517ea, after the merge of main d331a7d: a4bfdfd's tree is byte-identical to git's automatic three-way merge of 182315d and d331a7d (merge-tree, tree 309600fb), so nothing was hand-resolved. The only files both sides touched are app.html and data.js. Every other file equals its one side's version. build-parity, rerun on my copy: 227 checks, 0 failures (6 built byte for byte, 18 copied, 0 differ). My sweep against the old main e99498c and the new main d331a7d alike: 412 opening states, 0 changed; 0 changed single-box values; the same 23 added keys. The head's sweep output is identical to round 2's, and kprobe still has its 33 changes against the new main."
+ }
+]

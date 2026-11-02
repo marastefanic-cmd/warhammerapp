@@ -1631,7 +1631,7 @@ MODELS
 Harbingers of Dread
 Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls
 if it applies
-+4% wiped
++5% wiped
 +0.4
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (1)
@@ -2301,9 +2301,12 @@ War Dog Brigand
 7+
 6
 5+*
+
+Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+
 WHEN TARGETED
 4
-Harbingers of Dread: Darkness · 3: Stealth
+Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
 *Invulnerable Save: 5+ invulnerable save against ranged attacks
 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
 1CP Stalking Focus: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): AP worsened by 1
@@ -2427,9 +2430,12 @@ War Dog Brigand
 7+
 6
 5+*
+
+Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+
 WHEN TARGETED
 4
-Harbingers of Dread: Darkness · 3: Stealth
+Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
 *Invulnerable Save: 5+ invulnerable save against ranged attacks
 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
 1CP Stalking Focus: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): AP worsened by 1
@@ -2546,9 +2552,12 @@ War Dog Brigand
 7+
 6
 5+*
+
+Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+
 WHEN TARGETED
 4
-Harbingers of Dread: Darkness · 3: Stealth
+Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
 *Invulnerable Save: 5+ invulnerable save against ranged attacks
 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
 1CP Stalking Focus: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): AP worsened by 1
@@ -2663,9 +2672,12 @@ War Dog Executioner
 7+
 6
 5+*
+
+Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+
 WHEN TARGETED
 4
-Harbingers of Dread: Darkness · 3: Stealth
+Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
 *Invulnerable Save: 5+ invulnerable save against ranged attacks
 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
 1CP Stalking Focus: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): AP worsened by 1
@@ -2776,9 +2788,12 @@ War Dog Karnivore
 7+
 6
 5+*
+
+Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+
 WHEN TARGETED
 5
-Harbingers of Dread: Darkness · 3: Stealth
+Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
 *Invulnerable Save: 5+ invulnerable save against ranged attacks
 Panoply of the Cursed Knights: AP worsened by 1
 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
@@ -2894,9 +2909,12 @@ War Dog Karnivore
 7+
 6
 5+*
+
+Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+
 WHEN TARGETED
 4
-Harbingers of Dread: Darkness · 3: Stealth
+Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
 *Invulnerable Save: 5+ invulnerable save against ranged attacks
 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
 1CP Stalking Focus: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): AP worsened by 1

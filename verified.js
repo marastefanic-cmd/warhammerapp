@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "32e194684f",
- "data": "2026-11-02.3",
+ "build": "065d36d2d7",
+ "data": "2026-11-02.4",
  "date": "2 Nov 2026",
  "checks": [
   {
@@ -31,7 +31,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Every screen:",
-   "detail": "3307 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "3327 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
@@ -159,7 +159,7 @@ window.WH_VERIFIED = {
   },
   "BOXES": {
    "what": "the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give",
-   "cols": "n:derived b:derived nc:derived reach:derived both:derived embarked:derived played:derived riled:derived d:derived dnc:derived dreach:derived st:derived"
+   "cols": "n:derived b:derived nc:derived reach:derived both:derived embarked:derived played:derived riled:derived d:derived dnc:derived dreach:derived st:derived snc:derived"
   },
   "BOXES.b": {
    "what": "one box of the Damage tab: what GW's sentence does, as the catalogue (effects.js) reads it",

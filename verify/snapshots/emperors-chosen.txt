@@ -437,7 +437,7 @@ Castellan axe×3
 2
 ASSAULT, RAPID FIRE 2
 Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
 Shield-Captain
 + Sentinel Guard Sodality
@@ -450,7 +450,7 @@ Sentinel Blade×3
 2
 ASSAULT, CLOSE-QUARTERS
 This unit or the target within range of an objective · The target: not MONSTER/VEHICLE: [LETHAL HITS] (Stand Vigil)
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
 Within range of an objective: Re-roll Wound rolls of 1 (Companion’s Watch)
 Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
@@ -464,7 +464,7 @@ Guardian Spear×3
 2
 ASSAULT, RAPID FIRE 2
 This unit or the target within range of an objective · The target: not MONSTER/VEHICLE: [SUSTAINED HITS 1] (Impenetrable Defence)
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
 Within range of an objective: Re-roll Wound rolls of 1 (Companion’s Watch)
 Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
@@ -477,7 +477,7 @@ Guardian Spear×2
 -1
 2
 ASSAULT, RAPID FIRE 2
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
 Within range of an objective: Re-roll Wound rolls of 1 (Companion’s Watch)
 Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
@@ -507,7 +507,7 @@ Salvo launcher×2
 10
 -2
 D3+2
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
 Within 6" of Trajann Valoris: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
 Caladius Annihilator Grav-tank
@@ -1270,7 +1270,7 @@ Martial Ka’tah
 if it applies
 0
 Salvus
-Ignore modifiers to BS/WS and the Hit roll
+Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 0
 NOT COUNTED IN THE DAMAGE TAB (3)
 Aegis of the Emperor
@@ -1816,7 +1816,7 @@ Martial Ka’tah
 if it applies
 0
 Salvus
-Ignore modifiers to BS/WS and the Hit roll
+Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 0
 Magna Imperator
 Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
@@ -2562,7 +2562,7 @@ Castellan axe×3
 2
 ASSAULT, RAPID FIRE 2
 WHOLE UNIT
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 MELEE WEAPONS
 A
 WS
@@ -2725,7 +2725,7 @@ Sentinel Blade×3
 2
 ASSAULT, CLOSE-QUARTERS
 WHOLE UNIT
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 MELEE WEAPONS
 A
 WS
@@ -2875,7 +2875,7 @@ Guardian Spear×3
 -1
 2
 ASSAULT, RAPID FIRE 2
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 MELEE WEAPONS
 A
 WS
@@ -2977,7 +2977,7 @@ Guardian Spear×2
 -1
 2
 ASSAULT, RAPID FIRE 2
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 MELEE WEAPONS
 A
 WS
@@ -3233,7 +3233,7 @@ Salvo launcher×2
 10
 -2
 D3+2
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 MELEE WEAPONS
 A
 WS

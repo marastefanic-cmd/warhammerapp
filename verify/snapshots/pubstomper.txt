@@ -2549,13 +2549,17 @@ Magnus the Red
 5+
 6
 4+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
-5
+6
 Impossible Form: Unearthly Power: the one selected (at the start of the battle round) · Not Psychic Attacks: −1 Damage
 Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS]
 1CP Psychic Dominion: Any phase, Psychic Attacks: the attacking weapons have [HAZARDOUS]
 1CP Psychic Dominion: Any phase: Feel No Pain 4+ against Psychic Attacks
 1CP Destined by Fate: Any phase, If (see the rule): Damage 0
+1CP Destined by Fate: not counted here: see the rule
 DAMAGED 1-6 W
 −1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
@@ -2703,12 +2707,16 @@ Daemon Prince of Tzeentch with wings
 6+
 3
 4+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
-4
+5
 Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
 1CP Psychic Dominion: Any phase, Psychic Attacks: the attacking weapons have [HAZARDOUS]
 1CP Psychic Dominion: Any phase: Feel No Pain 4+ against Psychic Attacks
 1CP Destined by Fate: Any phase, If (see the rule): Damage 0
+1CP Destined by Fate: not counted here: see the rule
 ALL ATTACKS
 The target: CHARACTER: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Hunter of Souls)
 The target: PSYKER CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (Hunter of Souls)
@@ -2862,12 +2870,16 @@ Aspiring Sorcerer
 6+
 2
 4+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
-4
+5
 Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
 1CP Psychic Dominion: Any phase, Psychic Attacks: the attacking weapons have [HAZARDOUS]
 1CP Psychic Dominion: Any phase: Feel No Pain 4+ against Psychic Attacks
 1CP Destined by Fate: Any phase, If (see the rule): Damage 0
+1CP Destined by Fate: not counted here: see the rule
 ALL ATTACKS · WHOLE UNIT
 Once per battle: RANGEDAstral Blast, Malefic Curse one of: Imbued Manifestation: +6" range · Psychic Maelstrom: +1 to Wound rolls (Kindred Sorcery) · MELEEForce weapon one of: Psychic Maelstrom: +1 to Wound rolls · Wrath of the Immaterium: [DEVASTATING WOUNDS] (Kindred Sorcery)
 RANGED WEAPONS
@@ -3098,13 +3110,17 @@ Scarab Occult Terminator×9
 7+
 1
 4+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
-5
+6
 SCARAB OCCULT TERMINATORS Rites of Coalescence: If (see the rule): −1 to Wound rolls
 Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
 1CP Psychic Dominion: Any phase, Psychic Attacks: the attacking weapons have [HAZARDOUS]
 1CP Psychic Dominion: Any phase: Feel No Pain 4+ against Psychic Attacks
 1CP Destined by Fate: Any phase, If (see the rule): Damage 0
+1CP Destined by Fate: not counted here: see the rule
 ALL ATTACKS · WHOLE UNIT
 Once per battle: RANGEDGaze of Hate, Malefic Curse one of: Imbued Manifestation: +6" range · Psychic Maelstrom: +1 to Wound rolls (Kindred Sorcery) · MELEEForce weapon one of: Psychic Maelstrom: +1 to Wound rolls · Wrath of the Immaterium: [DEVASTATING WOUNDS] (Kindred Sorcery)
 RANGED WEAPONS
@@ -3291,6 +3307,11 @@ Tzaangors
 7+
 1
 6+
+
+Ld: not counted here: see the rule (Herd banner)
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 3
 Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
@@ -3373,6 +3394,9 @@ Tzaangor Enlightened with Fatecaster greatbows
 7+
 2
 5+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 3
 Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
@@ -3461,6 +3485,9 @@ Defiler
 6+
 5
 5+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 3
 Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
@@ -3584,6 +3611,9 @@ Sekhetar Robots×2
 7+
 1
 5+
+
+M: not counted here: see the rule (Time Flux)
+
 WHEN TARGETED
 3
 Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
@@ -3710,6 +3740,17 @@ Damaged: 1-6 wounds remaining
 While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITMagnus the Red, Defiler
+
+Ask about this ability
+
+######## popup ability:pubstomper|Herd banner|While the bearer’s unit is within range of one or more objective markers you control, improve the Leadership characteristic of models in the bearer’s unit by 1. · PUBSTOMPER Pubstomper
+ABILITY
+
+Herd banner
+
+While the bearer’s unit is within range of one or more objective markers you control, improve the Leadership characteristic of models in the bearer’s unit by 1.
+
+UNITTzaangors
 
 Ask about this ability
 

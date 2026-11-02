@@ -67,7 +67,9 @@ const FX = {
   twin:Object.assign(kwFx('twin-linked', 'twin'), { custom:[true] }),
   lance:Object.assign(kwFx('lance', 'lance'), { custom:[true] }),
   precision:Object.assign(kwFx('precision', 'precision'), { custom:[true] }),
-  ignoresCover:Object.assign(kwFx('ignores cover', 'ignoresCover'), { custom:[true] }),
+  // (and an enemy unit that "cannot have the Benefit of Cover" (Burning Spray): every attack against it as if [IGNORES COVER], 13.08; GW's
+  // "[IGNORE COVER]" (Parasitic Payload) is that ability)
+  ignoresCover:Object.assign(kwFx('ignores cover', 'ignoresCover'), { custom:[true], pats:[/\[ignores? cover(?::[^\]]*)?\]/, /\bthat enemy unit cannot have the benefit of cover\b/] }),
   heavy:kwFx('heavy', 'heavy'),
   hazardous:kwFx('hazardous', 'hazardous'),
   indirect:kwFx('indirect fire', 'indirect'),
@@ -85,8 +87,15 @@ const FX = {
   skill:{ label:p => 'BS/WS improved by ' + p, mod:p => ({ skill:+p }), dom:[1, 2],
     pats:[/\bimprove the (?:ballistic|weapon) skill characteristic of [^.;]*? by (\d)\b/, /\bimprove the (?:bs|ws) characteristic of [^.;]*? by (\d)\b/, /\b(?:bs|ws) improved by (\d)\b/] },
   range:{ label:p => '+' + p + '" range', mod:p => ({ range:+p }), dom:[3, 6, 9, 12, 18], pats:[/\+(\d+)" r\b/, /\badd (\d+)" to the range characteristic\b/] },
+  // ("ignore modifiers to …: the Hit roll; the Wound roll", "ignore modifiers to your unit's: Hit rolls and wound rolls": the wound roll named after
+  // the words "ignore … modifiers to" in the same sentence; read before ignoreHitMods, whose words run to the sentence's end)
+  ignoreWoundMods:{ label:() => 'Ignore modifiers to the Wound roll', mod:() => ({ ignoreWoundMods:true }), dom:[true],
+    pats:[/(?<=\bignore (?:any or all )?modifiers to [^.]*?)\bwound rolls?\b/] },
   ignoreHitMods:{ label:() => 'Ignore modifiers to BS/WS and the Hit roll', mod:() => ({ ignoreHitMods:true }), dom:[true],
     pats:[/\bignore any or all modifiers to (?:the following: )?(?:that (?:model's|attack's) )?(?:ballistic skill|bs|weapon skill|the hit roll)\b[^.]*/, /\bignore modifiers to your unit's: bs\b[^.]*/] },
+  // (the Hit roll alone, "can ignore modifiers to hit rolls and wound rolls": not BS/WS, so not the benefit of cover; read after ignoreHitMods)
+  ignoreHitRollMods:{ label:() => 'Ignore modifiers to the Hit roll', mod:() => ({ ignoreHitRollMods:true }), dom:[true],
+    pats:[/\bignore (?:any or all )?modifiers to (?:the )?hit rolls?\b/] },
   // a weapon ability that changes nothing in these numbers (shown with the box, said as such)
   assault:{ label:() => '[ASSAULT]', mod:() => null, dom:[true], pats:[/\[assault\]/] },
   // its own Objective Control (a Damaged band: "subtract 4 from this model's Objective Control characteristic"), no effect on attacks
@@ -129,11 +138,13 @@ const COND = {
   targetNotBelowHalf:{ label:() => 'The target not Below Half-strength', pats:[/\btargets? an enemy unit that is not below half-strength\b/] },
   targetBelowHalf:{ label:() => 'The target Below Half-strength', pats:[/\btargets? (?:a |an enemy )?unit (?:\([^)]*\) )?(?:that is )?below half-strength\b/, /\bthat (?:enemy )?unit is below half-strength\b/, /\btarget of that attack is below half-strength\b/, /\bif that unit is below half-strength\b/] },
   targetBelowStarting:{ label:() => 'The target below its Starting Strength', pats:[/\btargets? (?:a |an enemy )?unit that is below (?:its )?starting strength\b/] },
-  targetSelected:{ label:() => 'The target is the enemy unit selected', pats:[/\btargets? (?:that|its|your) (?:enemy unit|unit|victim|prey|machine vengeance target)\b/, /\bthat target (?:that )?enemy unit\b/, /\branged attacks that target that enemy unit\b/] },
+  targetSelected:{ label:() => 'The target is the enemy unit selected', pats:[/\bthat enemy unit cannot have the benefit of cover\b/, /\btargets? (?:that|its|your) (?:enemy unit|unit|victim|prey|machine vengeance target)\b/, /\bthat target (?:that )?enemy unit\b/, /\branged attacks that target that enemy unit\b/] },
   oncePerBattle:{ label:() => 'Once per battle', pats:[/\bonce per battle\b/] },
   oncePerTurn:{ label:() => 'Once per turn', pats:[/\bonce per turn\b/] },
   used:{ label:() => 'If it uses this ability', pats:[/\b(?:you|it|this model) can use this ability\b/, /\bcan call upon\b/, /\bif (?:it|you) do(?:es)?\b/] },
-  targetKw:{ label:p => 'The target: ' + (p.none ? 'not ' + p.none.map(KW).join('/') : p.all ? p.all.map(KW).join(' ') : p.any.map(KW).join(' or ')), pats:[] },
+  // (matched by keyword, said in GW's words where they are not the keyword's, p.said: "INFANTRY, MOUNTED or BEASTS", "excluding MONSTERS and VEHICLES")
+  targetKw:{ label:p => 'The target: ' + (p.said ? (p.none ? 'excluding ' : '') + p.said.toUpperCase().replace(/ (OR|AND) /g, (m, w) => ' ' + w.toLowerCase() + ' ')
+    : p.none ? 'not ' + p.none.map(KW).join('/') : p.all ? p.all.map(KW).join(' ') : p.any.map(KW).join(' or ')), pats:[] },
   maxT:{ label:p => 'The target has no model with T ' + (p + 1) + '+', pats:[/\bno models with a t of (\d)\+/] },
   // a keyword of the unit the rule names ("If this model has the KHORNE keyword"): the unit's own keywords say it (the database)
   selfKw:{ label:p => 'It has the ' + KW(p) + ' keyword', pats:[/\bif this (?:model|unit) has the ([a-z' -]+?) keyword\b/, /\bif your unit is an? ([a-z' -]+?) unit\b/] },

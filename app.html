@@ -1508,16 +1508,21 @@ const FN_SET = { aSet:'A' };                       // one it sets ("7/10")
 const FN_RANGED = new Set(['range', 'bsSet', 'assault', 'heavy', 'indirect', 'pistol']);   // effects only ranged attacks have
 const FN_IF = 'If (see the rule)';   // a condition that is only GW's words, left to its rule's words
 const FN_NC = 'not counted here: see the rule';   // words of a rule about its attacks that no catalogue effect reads (BOXES nc atk)
-// the weapons of the unit a box's scope names (by name, or a weapon keyword), of this kind
+// a weapon item has a weapon keyword (one of its profiles: "SUSTAINED HITS" is "SUSTAINED HITS 1" too)
+const itemHasKw = (it, kw) => it.profiles.some(p => (p.kw || []).some(k => String(k).toUpperCase() === kw || String(k).toUpperCase().startsWith(kw + ' ')));
+// the weapons of the unit a box's scope names (by name, or a weapon keyword), of this kind; less those it excludes by a weapon keyword
+// (wkwNot: "(excluding Extra Attacks weapons)")
 const fnWeapons = (u, kind, sc) => { const lc = x => String(x || '').toLowerCase().replace(/[’']/g, "'");
   return weaponItems(kind === 'ranged' ? u.ranged || [] : u.melee || []).filter(it => (!sc.weapon || it.profiles.some(p => [p.name, it.group, itemName(it)].some(x => lc(x) === sc.weapon || lc(x).startsWith(sc.weapon))))
     && (!sc.wkw || it.profiles.some(p => (p.kw || []).some(k => String(k).toUpperCase() === sc.wkw || String(k).toUpperCase().startsWith(sc.wkw + ' '))))
-    && (!sc.part || lc(it.who).startsWith(lc(sc.part).replace(/s$/, '')))); };
+    && (!sc.part || lc(it.who).startsWith(lc(sc.part).replace(/s$/, ''))) && (!sc.wkwNot || !itemHasKw(it, sc.wkwNot))); };
 // one box as a footnote: { kind, when (its conditions' labels), note (its effects' labels; a pick's options), who (the weapons or models it
 // names), weapon + set (a box for one weapon's characteristic: in that row), from, rule / strat + cp / src (what it links), damaged }
 function fnLine(S, b, u, kind, ab){
   const E = WH_EFFECTS, sc = b.scope || {};
-  const ws = sc.weapon || sc.wkw || sc.part ? fnWeapons(u, kind, sc) : null;
+  // (a weapon keyword it excludes names its weapons only where one of the unit's has it)
+  const ws0 = sc.weapon || sc.wkw || sc.part || sc.wkwNot ? fnWeapons(u, kind, sc) : null;
+  const ws = ws0 && !sc.weapon && !sc.wkw && !sc.part && ws0.length === weaponItems(kind === 'ranged' ? u.ranged || [] : u.melee || []).length ? null : ws0;
   if(ws && !ws.length) return null;   // (for weapons this kind of attack has not)
   // (not an effect the list printed into the weapons, marked + there; nor a weapon ability every weapon it reaches has already: Waaagh!'s
   // [ASSAULT] for a unit whose ranged weapons all have it)
@@ -2345,8 +2350,8 @@ function dmBoxRules(A, au, kind, st){
     const mine = all.filter(([b]) => S.reachOnly ? !!b.reach && dmReaches(b.reach, au) : b.reach ? dmReaches(b.reach, au) && !(S.grp === 'unit' && b.notSelf) : S.grp !== 'other');
     const counted = mine.filter(([b]) => b.pick ? b.pick.some(p => dmHasFx(p.fx)) : dmHasFx(b.fx));
     // (a box for weapons by name or keyword is in a step with such a weapon: Moment Shackle's Watcher's Axe is not in the shooting)
-    const wOf = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw) return true; const ws = weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []);
-      return ws.some(it => dmReach(au, it, { from:S.name, ab:S.ab, src:S.src }, { scope:{ weapon:sc.weapon, wkw:sc.wkw } }) > 0); };
+    const wOf = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw && !sc.wkwNot) return true; const ws = weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []);
+      return ws.some(it => dmReach(au, it, { from:S.name, ab:S.ab, src:S.src }, { scope:{ weapon:sc.weapon, wkw:sc.wkw, wkwNot:sc.wkwNot } }) > 0); };
     for(const [b0, i] of counted){ const b = dmBothOf(A, au, b0), r = dmBoxRule(S, b, i, st); if((b.kind === 'all' || b.kind === kind) && wOf(b)) rules.push(r); else if(S.grp === 'strat' && b.kind !== 'all' && b.kind !== kind) other.push(r); }
     // (words of a source with counted boxes that are not counted, a rare mechanic beside an effect: listed with GW's words too)
     if(counted.length){ for(const q of o.nc || []) nc.push({ side:'a', grp:S.grp, name:(S.cp ? S.cp + 'CP ' : '') + S.name, strat:!!S.strat, s:S.s || null, text:'“' + dmQuoteOf(q.quote) + '”', why:q.why + ': ' + ncText }); continue; }
@@ -2368,6 +2373,7 @@ function dmReach(u, it, m, sc){
   const lc = x => String(x || '').toLowerCase().replace(/[’']/g, "'");
   if(s.weapon && !it.profiles.some(p => [p.name, it.group, name].some(x => lc(x) === s.weapon || lc(x).startsWith(s.weapon)))) return 0;
   if(s.wkw && !it.profiles.some(p => p.kw.some(k => String(k).toUpperCase() === s.wkw || String(k).toUpperCase().startsWith(s.wkw + ' ')))) return 0;
+  if(s.wkwNot && itemHasKw(it, s.wkwNot)) return 0;   // (weapons it excludes: "(excluding Extra Attacks weapons)")
   const isChar = () => u.leads ? charsOf(u).some(c => c.name === part) : hasKw(u, 'Character');
   if(s.models === 'char' && !isChar()) return 0;
   if(s.models === 'nonchar' && u.leads && charsOf(u).some(c => c.name === part)) return 0;
@@ -2684,7 +2690,7 @@ function dmCalc(st, A, au, tg, kind){
   const dmgOn = [], nc = B.nc.slice();
   for(const ab of damaged){
     // (a band for weapons by name, Skarbrand's Slaughter and Carnage: in a step with such a weapon; one for the other kind of attack: not here)
-    const wIn = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw) return true; return weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []).some(it => dmReach(au, it, { from:ab.name, ab, src:au }, { scope:{ weapon:sc.weapon, wkw:sc.wkw } }) > 0); };
+    const wIn = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw && !sc.wkwNot) return true; return weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []).some(it => dmReach(au, it, { from:ab.name, ab, src:au }, { scope:{ weapon:sc.weapon, wkw:sc.wkw, wkwNot:sc.wkwNot } }) > 0); };
     const o = dmBoxesOf(DM_KEY.a(ab)) || {}, fxB = (o.b || []).filter(b => dmHasFx(b.fx)), bs = fxB.filter(b => (b.kind === kind || b.kind === 'all') && wIn(b));
     if(fxB.length && !bs.length) continue;
     if(!bs.length){ nc.push({ side:'a', grp:'unit', name:ab.name, text:'“' + dmQuoteOf(o.nc && o.nc[0] ? o.nc[0].quote : ab.text) + '”', why:(o.nc && o.nc[0] ? o.nc[0].why + ': ' : '') + 'not counted in the Damage tab' }); continue; }
@@ -2777,6 +2783,7 @@ function dmHowLines(c, st, r0, plan){
   if(gi.some(i => g[i].kw.concat(g[i].mods.filter(m => m.sus).map(m => 'SUSTAINED HITS ' + m.sus)).some(k => /^(sustained hits|rapid fire|melta) \d*D\d/i.test(k))))
     L.push(['A dice roll in an ability ([SUSTAINED HITS D3], [RAPID FIRE D6+3])', 'the rules don’t say how often it is rolled; the calculator rolls [SUSTAINED HITS] for each critical hit, [RAPID FIRE] for each weapon and [MELTA] for each attack that inflicts damage.']);
   if(on.some(x => x.psychic)) L.push([on.some(x => x.psychicKw) ? '[PSYCHIC] (24.29)' : 'Ignoring modifiers (02.02.02)', 'an attack that can ignore any or all modifiers to BS and to the hit roll: the calculator ignores the ones that make it worse and keeps the others.']);
+  if(on.some(x => x.ignoreWound)) L.push(['Ignoring modifiers to the wound roll (02.02.02)', 'an attack that can ignore any or all modifiers to the wound roll: the calculator ignores the ones that make it worse (a rule’s, and the target’s -1 to wound) and keeps the others.']);
   if(c.ctx.snap && gi.some(i => g[i].kw.some(k => /^torrent/i.test(k)))) L.push(['[TORRENT] in snap shooting (24.37)', 'each attack made with a [TORRENT] weapon “automatically hits the target”: in Fire Overwatch too.']);
   if(c.rules.some(r => r.on && r.m.ar && r.m.ar.name === 'Doctrina Imperatives')) L.push(['Doctrina Imperatives', 'the Imperative picked counts for this unit; Both only where a rule of the list makes both active for it (Omnicogitator, Transcendent Cogitation, The Fires of Mars), else as your own call. A value a rule sets comes first and the Imperative improves it: the Faction Pack’s FAQ, Auto-divinatory Targeting’s BS 3+ improved by the Protector Imperative to 2+. The +1 AP (Conqueror) counts while “BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit” holds for the unit: a BATTLELINE unit by itself, else as you say.']);
   if(c.rules.some(r => r.on && r.m.limit)) L.push(['Blessings of Khorne', 'each one ticked counts as active this battle round; by the rules two are active at once (one more with Skulls for the Skull Throne! or, for a TERMINATOR SQUAD unit, Adamantine Avalanche; every one with Archslaughterer for its bearer’s unit), so a Blessing ticked past that is counted by you.']);
@@ -3787,7 +3794,7 @@ function dmLeverRow(C, x){
     const sc0 = (r.sc && r.sc.scope) || {}, bu0 = C.plan.beats[C.plan.k].atk.u;
     const one = sc0.models === 'one' && modelCount(bu0) > 1 ? ' · one model only: counted for the weapons of one model' : '';
     // (the models its words name: CHARACTER models, or the others; a re-roll of one die: how often, in GW's words, BOXES pool)
-    const who = (sc0.models === 'char' ? ' · CHARACTER models only' : sc0.models === 'nonchar' ? ' · not CHARACTER models' : '') + (sc0.wkw ? ' · ' + dmCap(sc0.wkw.toLowerCase()) + ' weapons only' : '') + (sc0.weapon && !part ? ' · its ' + sc0.weapon.replace(/ weapons?$/, '') + ' weapons' : '');
+    const who = (sc0.models === 'char' ? ' · CHARACTER models only' : sc0.models === 'nonchar' ? ' · not CHARACTER models' : '') + (sc0.wkw ? ' · ' + dmCap(sc0.wkw.toLowerCase()) + ' weapons only' : '') + (sc0.wkwNot ? ' · not ' + dmCap(sc0.wkwNot.toLowerCase()) + ' weapons' : '') + (sc0.weapon && !part ? ' · its ' + sc0.weapon.replace(/ weapons?$/, '') + ' weapons' : '');
     const PL = { selected:'one for the unit each time it is selected to shoot or fight, its weapons most valuable first', phase:'once in the phase', turn:'once per turn', round:'once per battle round' };
     const pool = r.m.box && r.m.box.pool && r.m.box.pool !== 'phase' ? ' · ' + PL[r.m.box.pool] : '';
     const bu = bu0, pt = r.m.part ? (words ? ' · ' : '') + r.m.part.note + ' with ' + andList(r.m.part.picks).replace(/ and /, ' or ') + ' (' + (DM_FACTS[r.m.part.cond] || r.m.part.cond) + ')' + (r.partOn ? ' counted (' + (r.m.part.cond === 'battleline6' && hasKw(bu, 'Battleline') ? 'it is BATTLELINE' : 'said above') + ')' : r.partIn ? ' only while it holds (above)' : '') : '';
@@ -4978,6 +4985,24 @@ function statLines(u){
       const val = one ? f.stat + ' ' + ((parseInt(vs[0], 10) || 0) + f.add(p)) + (f.inch ? '"' : '') : ((b.scope || {}).models ? (b.scope.models + ' models ') : '') + f.label(p);
       out.push({ rule:r.name, text:(when ? when + ': ' : '') + val }); }
   }
+  // (and the words of its sources that change a characteristic no stat box counts, BOXES snc: its abilities', an aura's of another unit of
+  // the list that reaches it (Time Flux), its army and detachment rules', the stratagems it can be the target of: "M: not counted here: see
+  // the rule", never silent; not one the list printed into the value, its from mark)
+  const said = new Set();
+  // (each where its words reach: the friendly units it names (its reach; else, for a rule, the units that have it: its needs, as a stat box),
+  // a keyword of the unit it needs (on selfKw), "while this model is leading a unit" only on a unit that leads one (on leading))
+  const snc = (key, name, link, v, needs) => { for(const x of ((D.boxes || {})[key] || {}).snc || []){
+    if(x.reach ? !matches(x.reach, u) : needs !== undefined && !(needs && matches(needs, u))) continue;
+    if((x.on || []).some(([id, p]) => (id === 'selfKw' && !hasKw(u, p)) || (id === 'leading' && !u.leads))) continue;
+    if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => [].concat((s.from || {})[x.stat] || []).join(', ').split(/\s*,\s*/).includes(name)))) continue;
+    said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); out.push({ rule:name, a:link, v, text:(x.foe ? 'Enemy units’ ' : '') + x.stat + ': ' + FN_NC }); } };
+  for(const ab of u.abilities || []) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab));
+  for(const x of army().units) if(x !== u) for(const ab of x.abilities || []){ const o = (D.boxes || {})[DM_KEY.a(ab)] || {};
+    if(/\baura\b/i.test(ab.tag || '') && o.reach && matches(o.reach, u)) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab)); }
+  // (a rule's: the units that have it, as the Damage tab takes them: an army rule on its Rules line (hasRule) or its needs met, a detachment
+  // rule's needs met (unitDetRules))
+  for(const r of faction().armyRules.filter(r => hasRule(u, r.name) || (r.needs && matches(r.needs, u))).concat(unitDetRules(u))) snc(DM_KEY.r(r), r.name, 'rule', r.name);
+  for(const st of allStratagems().filter(x => canTarget(x, u))) snc(DM_KEY.s(st), st.name, 'strat', st.id);
   return out;
 }
 // the keywords that come from the other part of an attached unit, from the importer's note
@@ -5031,7 +5056,7 @@ function screenUnit(){
         ['M','T','Sv','W','Ld','OC','InSv'].map((k, i) => '<span>' + granted(s, k, u, esc(s[k]), ['M','T','SV','W','LD','OC','INV'][i] + ' ' + s[k]) + '</span>').join('')).join('') + '</div>' +
     '<div class="dnt">' +
     // (a characteristic of its models a rule of the list changes: statLines)
-    statLines(u).map(x => '<p class="dsl">' + esc(x.text) + ' (' + linkTo('rule', x.rule, x.rule) + ')</p>').join('') +
+    statLines(u).map(x => '<p class="dsl">' + esc(x.text) + ' (' + linkTo(x.a || 'rule', x.v || x.rule, x.rule) + ')</p>').join('') +
     // (a fold, closed until opened and kept open for the session, as the Overview's army rules: its count on its line, a line each)
     (def.length ? '<details class="def tgt" data-tgfold="' + esc(tgKey) + '"' + (openStrats.has(tgKey) ? ' open' : '') + '><summary><span class="il">When targeted</span><span class="x">' + def.length + '</span>' + chev + '</summary>' +
       '<div class="tgls">' + def.map(x => '<div class="tgl">' + defLine(x, u) + '</div>').join('') + '</div></details>' : '') +

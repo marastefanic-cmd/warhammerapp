@@ -1759,10 +1759,9 @@ ARMY RULES
 Code Chivalric
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
 if it applies
-+3% wiped
-≈0
++5% wiped
++0.1
 MODELS
-+1 MORE ▾
 NOT COUNTED IN THE DAMAGE TAB (3)
 Bondsman
 “Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. …” · not counted in the Damage tab
@@ -2395,6 +2394,15 @@ Cerastus Knight Atrapos
 6+
 10
 5+
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 3
 Knights of Legend: Feel No Pain 6+
@@ -2547,6 +2555,15 @@ Knight Crusader
 6+
 10
 5+*
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 4
 Knights of Legend: Feel No Pain 6+
@@ -2705,6 +2722,15 @@ Knight Defender
 6+
 10
 4+*
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 3
 Knights of Legend: Feel No Pain 6+
@@ -2844,6 +2870,17 @@ Knight Destrier
 6+
 8
 5+*
+
+M: not counted here: see the rule (Ram Jets)
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 4
 Knights of Legend: Feel No Pain 6+
@@ -2976,6 +3013,15 @@ Knight Errant
 6+
 10
 5+*
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 4
 Knights of Legend: Feel No Pain 6+
@@ -3296,6 +3342,17 @@ Punishing Salvoes
 In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
 
 UNITKnight Crusader · Hunter’s Eye
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Ram Jets|Each time this unit is selected to make a **Normal** or **Advance move**, until the end of the phase, add D3" to the Move characteristic of this model. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY · MOVEMENT · YOUR TURN
+
+Ram Jets
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+UNITKnight Destrier
 
 Ask about this ability
 
