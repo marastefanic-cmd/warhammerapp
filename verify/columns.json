@@ -618,12 +618,12 @@
      "note": "the line under its keywords, by fixed templates over GW’s pages and the database’s reasons (verify/gw-order.js kwNoteOf; verify/tables.js --write writes it, its step “tables” holds data.js to it): an attached unit’s keywords a later part’s page prints and the first’s does not (“come from the led Khorne Berzerkers”), a keyword a rule gives the unit for a reason of the list (why.kw, GRANTS) with GW’s words quoted, a Faction keyword an ability gives “instead”; verify/nr.js: each New Recruit starred keyword named"
     },
     "kwOnly": {
-     "source": "hand",
-     "note": "keywords only some models have (Wahapedia / BSData); signed off"
+     "source": "wahapedia",
+     "note": "keywords only some models have ({ keyword: “Model and Model” }), as GW’s datasheet pages print them (a part’s KEYWORDS line, “ASPIRING SORCERER: PSYKER”, a model’s own page); verify/from-json.js takes them from the pages (a hand file’s, with its why, where the pages give them for an attached unit’s leader); verify/keywords.js KO holds every entry to the pages: each model named has it, some model of the unit does not"
     },
     "partialRules": {
-     "source": "hand",
-     "note": "rules only one model of the unit has; signed off"
+     "source": "wahapedia",
+     "note": "rules only some models have ({ rule: “Model” }), as GW’s datasheet pages list them (a part’s CORE ABILITIES / ARMY RULES, “(Aspiring Sorcerer only)”, a model’s own page) or an ability of that model gives them by name; verify/from-json.js takes them so (a hand file’s, with its why); verify/keywords.js PR holds every entry to them: each model named has it, some model of the unit does not"
     },
     "srcNote": {
      "source": "derived",
@@ -963,12 +963,12 @@
      "note": "the keywords (\"Categories\"), checked against BSData (verify/bsdata.js)"
     },
     "kwOnly": {
-     "source": "hand",
-     "note": "keywords only some models have (Wahapedia's \"… ONLY:\", BSData's categories on one model); signed off"
+     "source": "wahapedia",
+     "note": "keywords only some models have ({ keyword: “Model and Model” }), as GW’s datasheet pages print them (a part’s KEYWORDS line, “ASPIRING SORCERER: PSYKER”, a model’s own page); verify/from-json.js takes them from the pages (a hand file’s, with its why, where the pages give them for an attached unit’s leader); verify/keywords.js KO holds every entry to the pages: each model named has it, some model of the unit does not"
     },
     "partialRules": {
-     "source": "hand",
-     "note": "rules only one model has; signed off"
+     "source": "wahapedia",
+     "note": "rules only some models have ({ rule: “Model” }), as GW’s datasheet pages list them (a part’s CORE ABILITIES / ARMY RULES, “(Aspiring Sorcerer only)”, a model’s own page) or an ability of that model gives them by name; verify/from-json.js takes them so (a hand file’s, with its why); verify/keywords.js PR holds every entry to them: each model named has it, some model of the unit does not"
     },
     "srcNote": {
      "source": "derived",
