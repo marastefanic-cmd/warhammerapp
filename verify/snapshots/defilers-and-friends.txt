@@ -842,6 +842,9 @@ EMPEROR’S CHILDREN model only. Once per turn, just after making a Hit roll, a 
 
 Sorcerer
 Warped Interference
+Not leading a unit in this list
+
+Not leading a unit in this list
 
 Psychic
 
@@ -2252,7 +2255,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 
@@ -2308,7 +2311,7 @@ Resolve the following sequence:
 2. Select one unengaged enemy unit within 8" of and visible to that model.
 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”
 
 USED BYLucius the Eternal + Flawless Blades, Sorcerer, Lord Exultant + Infractors ×2, Tormentors
 
@@ -2346,7 +2349,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Chaos Rhino, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
@@ -2367,7 +2370,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYLucius the Eternal + Flawless Blades, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Sorcerer, Lord Exultant + Infractors ×2, Tormentors, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
@@ -2719,8 +2722,7 @@ Sorcerer
 1
 –
 WHEN TARGETED
-3
-Warped Interference: Ranged attacks, While leading a unit: the Benefit of Cover
+2
 1CP Protection of the Dark Prince: Any phase, If (see the rule): Feel No Pain 6+, Feel No Pain 4+ against mortal wounds
 1CP Armour of Abhorrence: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 ALL ATTACKS
@@ -2782,6 +2784,9 @@ STRATAGEMS · COTERIE OF THE CONCEITED · FIGHT PHASE
 1CP Martial Perfection: Re-roll Hit rolls
 ABILITIES
 Warped Interference
+Not leading a unit in this list
+
+Not leading a unit in this list
 
 Psychic
 
@@ -3758,17 +3763,6 @@ UNITDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune
 
 Ask about this ability
 
-######## popup ability:defilers-and-friends|Warped Interference|While this model is leading a unit, each time a ranged attack targets that unit, models in it have the **Benefit of Cover** against that attack. · DEFILERS AND FRIENDS Defilers and friends
-ABILITY · PSYCHIC
-
-Warped Interference
-
-While this model is leading a unit, each time a ranged attack targets that unit, models in it have the Benefit of Cover against that attack.
-
-UNITSorcerer
-
-Ask about this ability
-
 ######## popup enh:coterie-of-the-conceited|Pledge of Unholy Fortune · DEFILERS AND FRIENDS Defilers and friends
 ENHANCEMENT · COTERIE OF THE CONCEITED · 30 PTS
 
@@ -4050,8 +4044,6 @@ CORE RULE
 Deep Strike
 
 Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
-
-App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
 
 IN THIS ARMYDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune
 
@@ -4995,7 +4987,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYDaemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Chaos Rhino, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
@@ -5055,7 +5047,7 @@ Resolve the following sequence:
 2. Select one unengaged enemy unit within 8" of and visible to that model.
 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”
 
 USED BYLucius the Eternal + Flawless Blades, Sorcerer, Lord Exultant + Infractors ×2, Tormentors
 
@@ -5096,7 +5088,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYLucius the Eternal + Flawless Blades, Daemon Prince of Slaanesh with Wings · Pledge of Unholy Fortune, Sorcerer, Lord Exultant + Infractors ×2, Tormentors, Defiler (1 of 2), Defiler (2 of 2), Maulerfiend
 
@@ -5118,7 +5110,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 

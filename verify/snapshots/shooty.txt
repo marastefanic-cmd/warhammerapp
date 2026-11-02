@@ -625,7 +625,7 @@ Your New Recruit lists; BSData, the data New Recruit is built from; Games Worksh
 2 · How a list is built
 A program reads the list’s New Recruit export and writes it into the tables: each unit an entry that points at its datasheet, its stats, weapons, keywords, points and rules text copied from the sources. A list with only a PDF is typed in, and a program checks it against the PDF line by line.
 3 · The tables
-Everything the app shows is in 14 tables in one file, data.js, drawn below with their real row counts and columns. Each column is tagged: mechanical, AI summary, AI reading or decided by hand.
+Everything the app shows is in 14 tables in one file, data.js, drawn below with their real row counts and columns. Each column is tagged: mechanical, AI summary or decided by hand.
 4 · What checks every release
 A second program compares every table with its sources again and renders every screen; if a single check fails, nothing is released. What it checks
 5 · How the app draws pages
@@ -665,11 +665,9 @@ MECHANICAL copied by a program from GW, BSData, New Recruit or Wahapedia, or wor
 
 AI SUMMARY a one-line gist of a stratagem, written by AI. It carries a fingerprint of the text it sums up: a change in GW’s words flags it to be read again.
 
-AI READING the numbers and conditions behind the datasheets’ footnotes and the “When targeted” lines (not the Damage tab’s: its boxes are made by a program from GW’s words), read from GW’s words by AI (a few by a program): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.
-
 HAND a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.
 
-Of the 353 columns of the tables: Mechanical 299 · AI summary 2 · AI reading 6 · Hand 46.
+Of the 353 columns of the tables: Mechanical 338 · AI summary 2 · Hand 13.
 
 ARMIES
 26 rows · 225 unit entries · one row per list
@@ -743,9 +741,9 @@ ARMIES.units 225 rows
 
 a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS
 
-MECHANICAL id (computed), ds (computed), pts (New Recruit), ptsNote (New Recruit), copies (New Recruit), models (New Recruit), gear (New Recruit), unplaced (New Recruit), enhancement (New Recruit), warlord (New Recruit), enhOn (New Recruit), warlordOn (New Recruit), upgrade (New Recruit), leads (New Recruit), support (New Recruit), also (New Recruit), role (New Recruit), name (New Recruit), rules (New Recruit), kw (New Recruit), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (New Recruit), why (computed)
+MECHANICAL id (computed), ds (computed), pts (New Recruit), ptsNote (New Recruit), copies (New Recruit), models (New Recruit), gear (New Recruit), unplaced (New Recruit), enhancement (New Recruit), warlord (New Recruit), enhOn (New Recruit), warlordOn (New Recruit), ref (GW), upgrade (New Recruit), leads (New Recruit), support (New Recruit), also (New Recruit), role (New Recruit), name (New Recruit), rules (New Recruit), kw (New Recruit), kwNote (computed), kwOnly (Wahapedia), partialRules (Wahapedia), srcNote (computed), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (New Recruit), note (GW), why (computed)
 
-HAND ref, short, kwNote, kwOnly, partialRules, srcNote, over, note
+HAND short, over
 
 ARMIES.units.stats
 
@@ -775,9 +773,9 @@ ARMIES.units.abilities
 
 a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
 
-MECHANICAL name (New Recruit), who (New Recruit), of (computed), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), damaged (computed), why (computed), readOf (computed)
+MECHANICAL name (New Recruit), who (New Recruit), of (computed), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), note (GW), na (computed), damaged (computed), why (computed), readOf (computed)
 
-HAND over, note, na
+HAND over
 
 DATASHEETS
 261 rows · one row per datasheet (faction + datasheet name): its facts, shared by every list that has it
@@ -822,9 +820,7 @@ Every column and where it comes from
 66 columns, with 4 inner tables
 DATASHEETS 261 rows
 
-MECHANICAL name (New Recruit), faction (computed), bsId (BSData), role (New Recruit), rules (New Recruit), kw (New Recruit), leaders (BSData), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (Wahapedia), points (GW), composition (BSData), options (BSData), aiStatus (computed)
-
-HAND kwOnly, partialRules, srcNote
+MECHANICAL name (New Recruit), faction (computed), bsId (BSData), role (New Recruit), rules (New Recruit), kw (New Recruit), kwOnly (Wahapedia), partialRules (Wahapedia), srcNote (computed), leaders (BSData), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (Wahapedia), points (GW), composition (BSData), options (BSData), aiStatus (computed)
 
 DATASHEETS.stats 286 rows
 
@@ -848,9 +844,7 @@ DATASHEETS.abilities 631 rows
 
 a datasheet's abilities
 
-MECHANICAL name (New Recruit), who (New Recruit), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), damaged (computed), readOf (computed)
-
-HAND note, na
+MECHANICAL name (New Recruit), who (New Recruit), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), note (GW), na (computed), damaged (computed), readOf (computed)
 
 FACTIONS
 13 rows · one row per faction: its army rules, detachments and aliases
@@ -932,24 +926,22 @@ all: Walker; none: Titanic
 COMPUTED
 note
 Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on …
-HAND
+GW
 Every column and where it comes from
-85 columns, with 6 inner tables
+79 columns, with 6 inner tables
 FACTIONS 13 rows
 
-MECHANICAL name (GW), armyRules (GW), detachments (GW)
+MECHANICAL name (GW), armyRules (GW), detachments (GW), allies (GW)
 
-HAND aliases, allies
+HAND aliases
 
 FACTIONS.armyRules 29 rows
 
 a faction's army rules
 
-MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), readOf (computed)
+MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), needs (computed), coreTwin (computed), note (GW), tableAt (Wahapedia), readOf (computed)
 
-AI READING parts, statNote
-
-HAND needs, coreTwin, note, tableAt, missing
+HAND missing
 
 FACTIONS.detachments 59 rows
 
@@ -961,31 +953,25 @@ FACTIONS.detachments.rule 59 rows
 
 a detachment's rule
 
-MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), readOf (computed)
+MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), needs (computed), coreTwin (computed), note (GW), tableAt (Wahapedia), readOf (computed)
 
-AI READING parts, statNote
-
-HAND needs, coreTwin, note, tableAt, missing
+HAND missing
 
 FACTIONS.detachments.moreRules 4 rows
 
 a detachment's further rule (moreRules), with the columns of its first
 
-MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), readOf (computed)
+MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), needs (computed), coreTwin (computed), note (GW), tableAt (Wahapedia), readOf (computed)
 
-AI READING parts, statNote
-
-HAND needs, coreTwin, note, tableAt, missing
+HAND missing
 
 FACTIONS.detachments.stratagems 253 rows
 
 a detachment's stratagems
 
-MECHANICAL id (computed), gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), needs (computed), limit (computed), readOf (computed)
+MECHANICAL id (computed), gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), needs (computed), note (GW), limit (computed), cpNote (computed), readOf (computed)
 
 AI SUMMARY gist
-
-HAND note, cpNote
 
 FACTIONS.detachments.enhancements 173 rows
 
@@ -1034,11 +1020,11 @@ Every column and where it comes from
 17 columns
 CORE_STRATAGEMS 10 rows
 
-MECHANICAL gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), needs (computed), limit (computed), readOf (computed)
+MECHANICAL gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), needs (computed), note (GW), limit (computed), cpNote (computed), readOf (computed)
 
 AI SUMMARY gist
 
-HAND id, note, cpNote
+HAND id
 
 RULES
 67 rows · core rules and weapon abilities: name → text (glossary)
@@ -1071,12 +1057,14 @@ pattern
 HAND
 rule
 Supa-hazardous
-HAND
+COMPUTED
 Every column and where it comes from
 2 columns
 RULE_ALIASES 71 rows
 
-HAND pattern, rule
+MECHANICAL rule (computed)
+
+HAND pattern
 
 RULE_SRC
 7 rows · where a RULES entry comes from when it is not a core rule
@@ -1087,15 +1075,15 @@ ONE ROW
 
 name
 Reverberating Summons
-HAND
+COMPUTED
 source
-weapon ability of the Great Unclean One’s doomsday bell (Faction Pack Chaos Daemons: its datasheet)
-HAND
+weapon ability of the Doomsday bell (Great Unclean One)
+COMPUTED
 Every column and where it comes from
 2 columns
 RULE_SRC 7 rows
 
-HAND name, source
+MECHANICAL name (computed), source (computed)
 
 CONCEPTS
 20 rows · core terms kept out of a unit's rule list
@@ -1200,12 +1188,12 @@ COMPUTED
 t the phases it is triggered in · u the phases its effect is used in · s listed at a fixed moment of the turn · a listed when the unit is selected · at the moment it opens with · ae also at the end of the battle round · o its options, each with its own phases · g what it grants · f a rule it puts in force · pk a pick of options · oc its options cover its phases · x not placed (its words give no phase) · none no phase (before the battle, what a unit carries)
 
 BOXES
-408 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
+410 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
 Every column and where it comes from
-42 columns, with 2 inner tables
-BOXES 408 rows
+48 columns, with 3 inner tables
+BOXES 410 rows
 
-MECHANICAL n (computed), b (computed), nc (computed), reach (computed), both (computed), embarked (computed), played (computed), riled (computed), d (computed), dnc (computed), dreach (computed)
+MECHANICAL n (computed), b (computed), nc (computed), reach (computed), both (computed), embarked (computed), played (computed), riled (computed), d (computed), dnc (computed), dreach (computed), st (computed)
 
 BOXES.b
 
@@ -1218,6 +1206,12 @@ BOXES.d
 one defence box: what GW's sentence does for a unit when it is attacked, as the catalogue (effects.js DF) reads it; the datasheet's "When targeted" line
 
 MECHANICAL quote (GW), lead (GW), df (computed), on (computed), kind (computed), scope (computed), reach (computed), mark (computed), notSelf (computed), foe (computed), opt (computed), pick (computed), term (computed), until (GW)
+
+BOXES.st
+
+one stat box: a characteristic of a unit’s models GW’s sentence changes, as the catalogue (effects.js ST) reads it; the line under the unit’s profile (“Not Battle-shocked: OC 7”)
+
+MECHANICAL quote (GW), st (computed), on (computed), reach (computed), scope (computed)
 
 BS_IDS
 13 lookups · the BSData ids the list import resolves an export by (verify/import-ids.js --write)
@@ -1276,13 +1270,13 @@ one value · the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-02.1
+2026-11-02.2
 
 WHY YOU CAN TRUST THE DATA
 
 Games Workshop is the source of truth. Where New Recruit, BSData or Wahapedia say something else, the difference is written down with its reason, and every release checks it again.
 
-What AI wrote is marked on the tables above: summaries and readings. Each carries a fingerprint of the rule text it was written from, so a change in GW’s words stops the next release until it is read again. Every judgement the app adds, by AI or by hand, is signed off by an independent reviewer, and a changed rule voids its sign-off.
+What AI wrote is marked on the tables above: summaries. Each carries a fingerprint of the rule text it was written from, so a change in GW’s words stops the next release until it is read again. Every judgement the app adds, by AI or by hand, is signed off by an independent reviewer, and a changed rule voids its sign-off.
 
 In the app, every summary written by AI carries a small AI label, and a tap on it opens the rule as written.
 
@@ -2371,7 +2365,7 @@ At the start of the battle round, if a model with this ability is your WARLORD, 
 Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s printed Core Rules): you do not gain the 1CP while your WARLORD is destroyed.
 
 Pulse Jet Move
-special move type
+Orks army rule (Special Move Types)
 
 MAXIMUM DISTANCE: Pulse roll + 18"
 
@@ -2396,6 +2390,13 @@ Until the end of the turn, your unit is not eligible to declare a charge or star
 Until the start of your next turn, attacks that target your unit have -1 to hit rolls.
 
 USED BYWazdakka Gutsmek
+
+Supa-hazardous
+Shoota Boyz enhancement Supa-glowy Fing
+
+Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two hazard rolls for that unit for each [SUPA-HAZARDOUS] weapon you selected in the Select Weapons step.
+
+USED BYBig Mek · Supa-glowy Fing
 
 DETACHMENTS
 DREAD MOB
@@ -3721,7 +3722,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 
@@ -3777,7 +3778,7 @@ Resolve the following sequence:
 2. Select one unengaged enemy unit within 8" of and visible to that model.
 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”
 
 USED BYBig Mek · Supa-glowy Fing, Warboss, Mek + Tankbustas ×2, Mek + Flash Gitz, Deffkoptas
 
@@ -3815,7 +3816,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYWazdakka Gutsmek, Big Mek · Dreadherder, Big Mek · Cybork Boosta, Killa Kans
 
@@ -3836,7 +3837,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYany unit
 
@@ -5890,8 +5891,6 @@ Deep Strike
 
 Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
 
-App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
-
 IN THIS ARMYWazdakka Gutsmek, Deffkoptas
 
 Ask about this rule
@@ -5970,8 +5969,6 @@ Hunter
 Some of these profiles are known as Hunter profiles. Hunter profiles can only target units with the specified keywords.
 
 Note that if a unit is equipped with more than one such weapon, a different profile can be selected for each model within that unit.
-
-App note, not rules text: New Recruit prints these weapons as two profiles, one marked “Hunter: MONSTER/VEHICLE”. That profile can only target MONSTER or VEHICLE units. The Hunter rule is in the rules appendix of the Warhammer 40,000 app (Wahapedia 04.01.03), not in the printed Core Rules.
 
 IN THIS ARMYMek + Tankbustas
 
@@ -6104,9 +6101,6 @@ Dense:
 INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
 INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
 Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
-
-App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
-
 Ask about this rule
 
 ######## popup rule:PRECISION · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
@@ -6801,7 +6795,7 @@ AFTER MOVING: Your unit must be unengaged.
 Ask about this rule
 
 ######## popup rule:pulse jet move · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-ORKS ARMY RULE (SPECIAL MOVE TYPE)
+ORKS ARMY RULE (SPECIAL MOVE TYPES)
 
 pulse jet move
 
@@ -6851,8 +6845,6 @@ CORE RULE
 Selected to Attack
 
 04.01.05 Selected to Attack (app): Some rules use the term selected to attack. If a unit is selected to fight, selected to shoot or chosen to make attacks, that unit is selected to attack.
-
-App note, not rules text: from the rules appendix in the Warhammer 40,000 app, as Wahapedia prints it (04.01.05); the printed Core Rules do not include it.
 
 Ask about this rule
 
@@ -7002,7 +6994,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYWazdakka Gutsmek, Big Mek · Dreadherder, Big Mek · Cybork Boosta, Killa Kans
 
@@ -7080,7 +7072,7 @@ Resolve the following sequence:
 2. Select one unengaged enemy unit within 8" of and visible to that model.
 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”
 
 USED BYBig Mek · Supa-glowy Fing, Warboss, Mek + Tankbustas ×2, Mek + Flash Gitz, Deffkoptas
 
@@ -7175,7 +7167,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYany unit
 
@@ -7197,7 +7189,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 

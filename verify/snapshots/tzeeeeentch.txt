@@ -2308,7 +2308,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 
@@ -2364,7 +2364,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYKairos Fateweaver, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Tzeentch Soul Grinder
 
@@ -2385,7 +2385,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYany unit
 
@@ -2464,7 +2464,7 @@ Resolve the following sequence:
 2. Select one unengaged enemy unit within 8" of and visible to that model.
 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”
 
 USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
 
@@ -3837,7 +3837,7 @@ Fight · Either turn
 
 Each time this unit is selected to fight, you can select one enemy unit within Engagement Range of it, then select one or more BRIMSTONE HORROR models in this unit. For each BRIMSTONE HORROR model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 mortal wound.
 
-Designer’s Note (Faction Pack 1.2, GW’s Pink Horrors datasheet): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”
+Designer’s Note (Faction Pack 1.2, Pink Horrors datasheet): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”
 
 Rules
 Deep Strike, Infiltrators, The Shadow of Chaos, Fates in Flux
@@ -4356,8 +4356,6 @@ Deep Strike
 
 Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
 
-App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
-
 IN THIS ARMYKairos Fateweaver, The Blue Scribes, The Changeling, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Fluxmaster · Improbable Shield (Aura), Flamers, Tzeentch Soul Grinder
 
 Ask about this rule
@@ -4581,9 +4579,6 @@ Dense:
 INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
 INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
 Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
-
-App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
-
 Ask about this rule
 
 ######## popup rule:Normal · TZEEEEENTCH Tzeeeeentch
@@ -5340,7 +5335,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYKairos Fateweaver, Daemon Prince of Chaos with wings · Neverblade, Lord of Change · Infernal Puppeteer, Lord of Change · Inescapable Eye, Tzeentch Soul Grinder
 
@@ -5491,7 +5486,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYany unit
 
@@ -5549,7 +5544,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 

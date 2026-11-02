@@ -207,7 +207,7 @@ Add 3" to the range of this model’s Aura abilities.
 Super-heavy Walker
 Your Movement · no unit in this list it applies to
 
-CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
+Faction Pack datasheets: “FACTION: Harbingers of Dread, Super-heavy Walker”
 
 Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
 
@@ -732,7 +732,7 @@ Add 3" to the range of this model’s Aura abilities.
 Super-heavy Walker
 Your Movement · no unit in this list it applies to
 
-CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
+Faction Pack datasheets: “FACTION: Harbingers of Dread, Super-heavy Walker”
 
 Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
 
@@ -2096,7 +2096,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 
@@ -2152,7 +2152,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYany unit
 
@@ -2173,7 +2173,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYany unit
 
@@ -2252,7 +2252,7 @@ Resolve the following sequence:
 2. Select one unengaged enemy unit within 8" of and visible to that model.
 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”
 
 USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
 
@@ -2397,7 +2397,7 @@ FACTION: CHAOS KNIGHTS
 BATTLELINE
 CHARACTER*
 WARLORD
-*from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)
+*from Marked Prey (“When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)
 Ask about this unit
 War Dog Brigand (1 of 4) ›
 
@@ -2515,7 +2515,7 @@ BRIGAND
 FACTION: CHAOS KNIGHTS
 BATTLELINE
 CHARACTER*
-*from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)
+*from Marked Prey (“When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)
 Ask about this unit
 ‹ War Dog Brigand · Final Howl (Aura)
 War Dog Brigand (2–4 of 4) ›
@@ -2864,7 +2864,7 @@ KARNIVORE
 FACTION: CHAOS KNIGHTS
 BATTLELINE
 CHARACTER*
-*from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)
+*from Marked Prey (“When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)
 Ask about this unit
 ‹ War Dog Executioner
 War Dog Karnivore ›
@@ -3280,7 +3280,7 @@ Objective Consolidation: Your unit must be within range of the selected objectiv
 
 Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Consolidation): Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight
 
-App note, not rules text: the lines above the errata are the printed Core Rules (01/06/2026). GW’s Warhammer 40,000 app, as Wahapedia prints it, changes two After Moving lines: the errata replaces the Ongoing Consolidation line, and the Objective Consolidation line reads “Your unit must be unengaged and within range of the selected objective”. No GW PDF has either change yet (16 Oct 2026).
+Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Objective Consolidation): Your unit must be unengaged and within range of the selected objective.
 
 Ask about this rule
 
@@ -3655,7 +3655,7 @@ Each time a model with this ability makes a Normal, Advance or Fall Back move, i
 It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
 It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.
 
-CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
+Faction Pack datasheets: “FACTION: Harbingers of Dread, Super-heavy Walker”
 
 Ask about this rule
 
@@ -3944,8 +3944,6 @@ Selected to Attack
 
 04.01.05 Selected to Attack (app): Some rules use the term selected to attack. If a unit is selected to fight, selected to shoot or chosen to make attacks, that unit is selected to attack.
 
-App note, not rules text: from the rules appendix in the Warhammer 40,000 app, as Wahapedia prints it (04.01.05); the printed Core Rules do not include it.
-
 Ask about this rule
 
 ######## popup rule:snap shooting · WOOF WOOF Woof Woof
@@ -4090,7 +4088,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYany unit
 
@@ -4203,7 +4201,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYany unit
 
@@ -4243,7 +4241,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 

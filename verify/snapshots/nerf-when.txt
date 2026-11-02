@@ -2540,7 +2540,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 
@@ -2596,7 +2596,7 @@ Resolve the following sequence:
 2. Select one unengaged enemy unit within 8" of and visible to that model.
 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”
 
 USED BYMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles, Reiver Squad
 
@@ -2634,7 +2634,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYRoboute Guilliman, Impulsor
 
@@ -2655,7 +2655,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYRoboute Guilliman, Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles, Reiver Squad, Deathwatch Terminator Squad
 
@@ -4445,8 +4445,6 @@ Deep Strike
 
 Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
 
-App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
-
 IN THIS ARMYMarneus Calgar (Marneus Calgar only), Librarian in Phobos Armour, Deathwatch Terminator Squad
 
 Ask about this rule
@@ -4592,8 +4590,6 @@ Hunter
 Some of these profiles are known as Hunter profiles. Hunter profiles can only target units with the specified keywords.
 
 Note that if a unit is equipped with more than one such weapon, a different profile can be selected for each model within that unit.
-
-App note, not rules text: New Recruit prints these weapons as two profiles, one marked “Hunter: MONSTER/VEHICLE”. That profile can only target MONSTER or VEHICLE units. The Hunter rule is in the rules appendix of the Warhammer 40,000 app (Wahapedia 04.01.03), not in the printed Core Rules.
 
 IN THIS ARMYEradicator Squad with Melta Rifles, Deathwatch Terminator Squad
 
@@ -5608,7 +5604,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYRoboute Guilliman, Impulsor
 
@@ -5691,7 +5687,7 @@ Resolve the following sequence:
 2. Select one unengaged enemy unit within 8" of and visible to that model.
 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”
 
 USED BYMarneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles, Reiver Squad
 
@@ -5789,7 +5785,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYRoboute Guilliman, Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles, Reiver Squad, Deathwatch Terminator Squad
 
@@ -5811,7 +5807,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 

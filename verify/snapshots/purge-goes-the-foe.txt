@@ -1009,7 +1009,7 @@ Each time a model in this unit makes an attack, if this unit has the BATTLELINE 
 DETACHMENTS
 COHORT CYBERNETICA
 Cyber-psalm Programming
-Detachment rule
+Detachment rule · Already in M
 
 Add 2" to the Move characteristic of models in LEGIO CYBERNETICA units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit.
 
@@ -2380,7 +2380,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 
@@ -2452,7 +2452,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYBelisarius Cawl, Thulia Ghuld, Cybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
@@ -2473,7 +2473,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler
 
@@ -2552,7 +2552,7 @@ Resolve the following sequence:
 2. Select one unengaged enemy unit within 8" of and visible to that model.
 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”
 
 USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
 
@@ -2997,7 +2997,7 @@ Kastelan Robot×4
 2
 5+
 
-OC +1 for each model unless Battle-shocked, not in the OC above (Cyber-psalm Programming)
+Not Battle-shocked: +1 OC (Cyber-psalm Programming)
 
 WHEN TARGETED
 8
@@ -3136,7 +3136,7 @@ WALKER*
 KASTELAN ROBOTS*
 FACTION: ADEPTUS MECHANICUS
 SKITARII
-*from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator
+*from the supported Kastelan Robots; Skitarii comes from Martial Signatum Amplificator on the Cybernetica Datasmith (“Models in the bearer’s unit have the SKITARII keyword.”)
 Ask about this unit
 ‹ Tech-Priest Enginseer · Necromechanic
 Skitarii Rangers ›
@@ -5270,7 +5270,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYBelisarius Cawl, Thulia Ghuld, Cybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
@@ -5329,7 +5329,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler
 
@@ -5351,7 +5351,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 

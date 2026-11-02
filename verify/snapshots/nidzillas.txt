@@ -609,7 +609,7 @@ Aura · Once per turn · Any phase · Either turn
 
 Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
 
-Designer’s Note (Wahapedia’s datasheet, printed under the codex wording that Faction Pack 1.3 replaced): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”
+Designer’s Note (Wahapedia’s datasheet, under the codex wording): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”
 
 Domination of the Hive Mind
 
@@ -661,9 +661,6 @@ At the start of the first battle round, select one of the following:
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
-
 Harpoon Barbs
 Once per turn
 Their Movement
@@ -704,9 +701,6 @@ At the start of the first battle round, select one of the following:
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
-
 Harpoon Barbs
 Once per turn
 Their Movement
@@ -746,9 +740,6 @@ At the start of the first battle round, select one of the following:
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
-
 Unnatural Resilience
 
 This model has the Feel No Pain 4+ ability against mortal wounds.
@@ -782,9 +773,6 @@ At the start of the first battle round, select one of the following:
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
-
 Unnatural Resilience
 
 This model has the Feel No Pain 4+ ability against mortal wounds.
@@ -2072,7 +2060,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 
@@ -2128,7 +2116,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
@@ -2149,7 +2137,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYany unit
 
@@ -2228,7 +2216,7 @@ Resolve the following sequence:
 2. Select one unengaged enemy unit within 8" of and visible to that model.
 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”
 
 USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
 
@@ -2276,7 +2264,7 @@ The Swarmlord
 3
 4+
 
-OC 5 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
+Lost no wounds (At its Starting Strength) · Not Battle-shocked: OC 5 (Enraged Behemoths)
 
 WHEN TARGETED
 2
@@ -2335,7 +2323,7 @@ Aura · Once per turn · Any phase · Either turn
 
 Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
 
-Designer’s Note (Wahapedia’s datasheet, printed under the codex wording that Faction Pack 1.3 replaced): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”
+Designer’s Note (Wahapedia’s datasheet, under the codex wording): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”
 
 Domination of the Hive Mind
 
@@ -2394,7 +2382,7 @@ Hive Tyrant
 3
 4+
 
-OC 5 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
+Lost no wounds (At its Starting Strength) · Not Battle-shocked: OC 5 (Enraged Behemoths)
 
 WHEN TARGETED
 2
@@ -2576,7 +2564,7 @@ Norn Assimilator
 5
 4+
 
-OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
+Lost no wounds (At its Starting Strength) · Not Battle-shocked: +2 OC (Enraged Behemoths)
 
 WHEN TARGETED
 4
@@ -2645,9 +2633,6 @@ At the start of the first battle round, select one of the following:
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
-
 Harpoon Barbs
 Once per turn
 Their Movement
@@ -2721,7 +2706,7 @@ Norn Assimilator
 5
 4+
 
-OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
+Lost no wounds (At its Starting Strength) · Not Battle-shocked: +2 OC (Enraged Behemoths)
 
 WHEN TARGETED
 4
@@ -2790,9 +2775,6 @@ At the start of the first battle round, select one of the following:
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
-
 Harpoon Barbs
 Once per turn
 Their Movement
@@ -2865,7 +2847,7 @@ Norn Emissary
 5
 4+
 
-OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
+Lost no wounds (At its Starting Strength) · Not Battle-shocked: +2 OC (Enraged Behemoths)
 
 WHEN TARGETED
 4
@@ -2952,9 +2934,6 @@ At the start of the first battle round, select one of the following:
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
-
 Unnatural Resilience
 
 This model has the Feel No Pain 4+ ability against mortal wounds.
@@ -3021,7 +3000,7 @@ Norn Emissary
 5
 4+
 
-OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
+Lost no wounds (At its Starting Strength) · Not Battle-shocked: +2 OC (Enraged Behemoths)
 
 WHEN TARGETED
 4
@@ -3108,9 +3087,6 @@ At the start of the first battle round, select one of the following:
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
-
 Unnatural Resilience
 
 This model has the Feel No Pain 4+ ability against mortal wounds.
@@ -3170,7 +3146,7 @@ Tyrannofex
 5
 –
 
-OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
+Lost no wounds (At its Starting Strength) · Not Battle-shocked: OC 7 (Enraged Behemoths)
 
 WHEN TARGETED
 3
@@ -3328,8 +3304,6 @@ At the start of the first battle round, select one of the following:
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the Hit roll and you can re-roll the Wound roll.
 Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.
 
 UNITNorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary · Destabilising Predation, Norn Emissary
 
@@ -4440,7 +4414,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
@@ -4499,7 +4473,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYany unit
 
@@ -4521,7 +4495,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 

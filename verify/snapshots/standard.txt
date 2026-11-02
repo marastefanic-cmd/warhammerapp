@@ -177,8 +177,6 @@ Each time a model in this unit makes a melee attack that targets an INFANTRY uni
 Relentless Rage
 Berzerker Warband · Fight
 
-Already counted: every melee A value in this app includes this +1 A. Do not add it again.
-
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 APPLIES TOAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive, Chaos Rhino, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
@@ -1007,9 +1005,7 @@ Each time a model in this unit makes a melee attack that targets an INFANTRY uni
 DETACHMENTS
 BERZERKER WARBAND
 Relentless Rage
-Detachment rule · Fight
-
-Already counted: every melee A value in this app includes this +1 A. Do not add it again.
+Detachment rule · Fight · Already in A
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
@@ -2419,7 +2415,7 @@ EFFECT
 
 Do not roll a D6 to determine how far models in your unit can move when they make a surge move. Instead, when making a surge move, those models can move up to 8".
 
-Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.
+Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” “No.”
 
 USED BYKhârn the Betrayer + Khorne Berzerkers
 
@@ -2558,7 +2554,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 
@@ -2614,7 +2610,7 @@ Resolve the following sequence:
 2. Select one unengaged enemy unit within 8" of and visible to that model.
 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”
 
 USED BYKhârn the Betrayer + Khorne Berzerkers, Goremongers, Jakhals
 
@@ -2652,7 +2648,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYAngron, Chaos Rhino, Forgefiend
 
@@ -2673,7 +2669,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYAngron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
 
@@ -4779,7 +4775,7 @@ Objective Consolidation: Your unit must be within range of the selected objectiv
 
 Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Consolidation): Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight
 
-App note, not rules text: the lines above the errata are the printed Core Rules (01/06/2026). GW’s Warhammer 40,000 app, as Wahapedia prints it, changes two After Moving lines: the errata replaces the Ongoing Consolidation line, and the Objective Consolidation line reads “Your unit must be unengaged and within range of the selected objective”. No GW PDF has either change yet (16 Oct 2026).
+Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Objective Consolidation): Your unit must be unengaged and within range of the selected objective.
 
 Ask about this rule
 
@@ -4835,8 +4831,6 @@ CORE RULE
 Deep Strike
 
 Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
-
-App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
 
 IN THIS ARMYAngron, Slaughterbound (in Lord of the Eightbound), Slaughterbound · Berzerker Glaive, Exalted Eightbound
 
@@ -5004,9 +4998,6 @@ Dense:
 INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
 INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
 Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
-
-App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
-
 Ask about this rule
 
 ######## popup rule:Normal move · STANDARD Standard
@@ -5070,8 +5061,6 @@ BERZERKER WARBAND DETACHMENT RULE
 Relentless Rage
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
-
-Already counted: every melee A value in this app includes this +1 A. Do not add it again.
 
 IN THIS ARMYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive, Chaos Rhino, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
 
@@ -5811,7 +5800,7 @@ EFFECT
 
 Do not roll a D6 to determine how far models in your unit can move when they make a surge move. Instead, when making a surge move, those models can move up to 8".
 
-Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.
+Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” “No.”
 
 USED BYKhârn the Betrayer + Khorne Berzerkers
 
@@ -5898,7 +5887,7 @@ Resolve the following sequence:
 2. Select one model in your unit engaged with that enemy unit.
 3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
 USED BYAngron, Chaos Rhino, Forgefiend
 
@@ -5940,7 +5929,7 @@ Resolve the following sequence:
 2. Select one unengaged enemy unit within 8" of and visible to that model.
 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”
 
 USED BYKhârn the Betrayer + Khorne Berzerkers, Goremongers, Jakhals
 
@@ -6017,7 +6006,7 @@ Resolve a charge with your unit (11.02). While doing so, before making the charg
 Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
 Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
 
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
 USED BYAngron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
 
@@ -6039,7 +6028,7 @@ That battle-shock roll is automatically successful.
 
 RESTRICTIONSYou cannot use this stratagem more than once per battle.
 
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”
 
 USED BYany unit
 
