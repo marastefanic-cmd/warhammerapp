@@ -478,8 +478,32 @@ function extract(src, ctx){
   const dfn = defenceOf(src, us, V, ctx);
   const st = statOf(src, us, V);
   const snc = statNc(src, st, dfn.d, boxes);
+  // (and any other sentence with words of these numbers no box, no not-counted entry reads: listed not counted, never silent; about saving
+  // throws or attacks against the unit, the defence side's)
+  for(const x of unread(src, [boxes, nc, dfn.d, dfn.dnc, st, snc])){ const n = norm(x), u = us.find(y => quoteKey(y.s) === quoteKey(x));
+    if(/\bsav(?:e|ing throw)s?\b|\bsave rolls?\b/.test(n) || DEFENCE.concat(DEF_CTX).some(re => re.test(n)) || (u && (defenceLead(u) || enemyLeadThat(u, n)))) dfn.dnc.push({ quote:x, why:E.DNC.unread.why });
+    else nc.push(Object.assign({ quote:x, why:'its words are read by no catalogue effect' }, /\[[a-z]|\bweapons?\b|\bmakes? an? (?:ranged |melee )?attacks?\b/.test(n) ? { atk:true } : {})); }
   return Object.assign({ boxes:shape(boxes, src), nc, reach:reachOf(V, src.type === 'strat' ? '' : src.text || ''), both }, em ? { embarked:{ until:em[1] } } : {}, riled ? { riled:true } : {},
     dfn.d.length ? { d:dfn.d } : {}, dfn.dnc.length ? { dnc:dfn.dnc } : {}, dfn.dreach ? { dreach:dfn.dreach } : {}, st.length ? { st } : {}, snc.length ? { snc } : {});
+}
+
+// ---- the sentences of a source with words of the numbers (hit, wound, AP, damage, saves, Feel No Pain, OC, Move, a weapon ability) that no
+// box or not-counted entry of it quotes (each list's quotes, a pick's and a part's too): verify/coverage.js silent holds BOXES to the same,
+// with its own words
+const UNREAD_WORDS = /\bbenefit of cover\b|\bhit rolls?\b|\bwound rolls?\b|\bdamage rolls?\b|\barmou?r penetration\b|\bap\b|\bdamage characteristic\b|\bsaving throws?\b|\bsave rolls?\b|\binvulnerable save\b|\bfeel no pain\b|\bobjective control\b|\boc\b|\bmove characteristic\b|(?:^|\s)[+-]\d+"? m\b|\[[a-z][a-z -]*?(?: \d\+?| d3)?\]|\bcritical (?:hit|wound)\b|\battacks characteristic\b|\bstrength characteristic\b/;
+const quoteKey = t => norm(String(t).replace(/^\s*-\s+/, '')).replace(/^[^:"]{1,40}:\s+/, '').replace(/[.\s]+$/, '').trim();
+const quotesOf = lists => lists.flat().filter(Boolean).flatMap(b => [b.quote, b.part && b.part.quote].concat((b.pick || []).flatMap(p => [p.quote, p.part && p.part.quote]))).filter(Boolean)
+  .flatMap(q => String(q).split('\n')).map(quoteKey).filter(Boolean);
+// (a weapon's profile in its words, "Da Gobshot Thunderbuss: 24" A6 BS4+ …", is the weapon's; a designer's note is no rule)
+// (a line that leads a list, ending ":", is its bullets' context: "Your unit's [Torrent] attacks have:")
+const notRule = n => /\b\d+" a[\dd]+ (?:bs|ws)\d\+|\bmelee a[\dd]+ ws\d\+/.test(n) || /^designer's note:/.test(n) || /:\s*$/.test(n);
+function unread(src, lists){
+  const qs = quotesOf(lists), out = [];
+  const text = src.type === 'strat' ? src.effect : [src.text || ''].concat((src.table || []).map(r => r.slice(1).join('\n'))).join('\n');
+  for(const u of sentencesOf(text)){ const n = norm(u.s), k = quoteKey(u.s);
+    if(!UNREAD_WORDS.test(n) || notRule(n) || qs.some(q => k.includes(q) || q.includes(k))) continue;
+    out.push(u.s); }
+  return out;
 }
 
 // ---- a characteristic of a unit's (or an enemy's) models its words change that no stat box counts: "add 2" to the Move characteristic of
@@ -489,8 +513,16 @@ function extract(src, ctx){
 // see the rule" (snc: { quote, stat (M, OC, T, Sv, W, Ld), why }), never silent. T and Sv a defence box reads (DF t, svSet, svPlus) are
 // counted on the defence side.
 const STAT_OF = { move:'M', m:'M', 'objective control':'OC', oc:'OC', toughness:'T', t:'T', save:'Sv', sv:'Sv', wounds:'W', w:'W', leadership:'Ld', ld:'Ld' };
-const STAT_RE = /\b(?:add|subtract) (?:\d+|d3)"? (?:to|from) (?:the |this model's |its |that model's |this unit's |the bearer's )?(move|objective control|toughness|save|wounds|leadership) characteristics?\b|\b(?:has|have) (?:an? )?[+-]\d+"? ((?:oc|m|t|sv|w|ld)(?:(?:,|,? and) (?:oc|m|t|sv|w|ld))*)\b|\b(?:has|have) (?:[^.;]*? and )?an? (move|objective control|toughness|save|wounds|leadership) characteristic of \d/g;
-const statWords = n => [...new Set([...String(n).matchAll(STAT_RE)].flatMap(m => m[2] ? m[2].split(/,? and |, /).map(w => STAT_OF[w.trim()]) : [STAT_OF[m[1] || m[3]]]))];
+const ST_NAMES = 'move|objective control|toughness|save|wounds|leadership';
+// (a change of it: add or subtract, improve or worsen, halve, ignore modifiers to it, "+1 OC", "has a Move characteristic of 10"", "the
+// Objective Control characteristic of models in this unit is 1"; not a comparison, "a Toughness characteristic of 5 or less")
+const STAT_RE = new RegExp('\\b(?:add|subtract) (?:\\d+|d3)"? (?:to|from) (?:the |this model\'s |its |that model\'s |this unit\'s |the bearer\'s )?(' + ST_NAMES + ') characteristics?\\b'
+  + '|\\b(?:has|have) (?:an? )?[+-]\\d+"? ((?:oc|m|t|sv|w|ld)(?:(?:,|,? and) (?:oc|m|t|sv|w|ld))*)\\b'
+  + '|\\b(?:has|have) (?:[^.;]*? and )?an? (' + ST_NAMES + ') characteristic of \\d'
+  + '|\\b(?:improve|worsen|halve|double) (?:the |this model\'s |its |that [a-z\' ]*?model\'s )?((?:' + ST_NAMES + ')(?: and (?:' + ST_NAMES + '))?) characteristics?\\b'
+  + '|\\bignore any or all modifiers to (?:its |this model\'s |the )?(' + ST_NAMES + ') characteristic\\b'
+  + '|\\bthe (' + ST_NAMES + ') characteristic of [^.;]*? is \\d', 'g');
+const statWords = n => [...new Set([...String(n).matchAll(STAT_RE)].flatMap(m => { const w = m.slice(1).find(Boolean) || ''; return w.split(/,? and |, /).map(x => STAT_OF[x.trim()]).filter(Boolean); }))];
 function statNc(src, st, d, b){
   const out = [];
   // (a box whose quote is this sentence, or part of it: "**Aegis Protocol:** Add 1 to the Toughness …" is the box "Add 1 to the Toughness …")
@@ -777,4 +809,4 @@ function shape(list, src){
   return final;
 }
 
-module.exports = { statNc, statWords, STAT_RE, EVERY_FRIENDLY, WEAPON_KW, weaponExcl, extract, statOf, sentencesOf, cpNoteOf, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };
+module.exports = { unread, quotesOf, quoteKey, notRule, statNc, statWords, STAT_RE, EVERY_FRIENDLY, WEAPON_KW, weaponExcl, extract, statOf, sentencesOf, cpNoteOf, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };

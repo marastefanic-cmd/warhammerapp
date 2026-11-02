@@ -234,4 +234,20 @@ function srcGaps(o, src){
   const tn = n(src.target), other = /\bof a friendly .+? unit that was selected as the target\b/.test(tn) || (/\bwhen an enemy unit targets a friendly\b/.test(n(src.when)) && !/^that\b/.test(tn));
   return other && !o.dreach ? ['it protects a unit that is not its TARGET and has no dreach'] : [];
 }
-module.exports = { gaps, srcGaps, optionOf, counts };
+// a source's sentences with words of the numbers that are neither counted nor listed not counted (never silent): every sentence of its words
+// (a rule's table rows, a stratagem's EFFECT) that names a hit, wound or damage roll, AP, a save, Feel No Pain, OC, Move, a weapon ability
+// ("[LANCE]"), the Benefit of Cover, a critical hit or wound, or the Attacks or Strength characteristic is quoted by one of its BOXES entries: a box (b, d, st:
+// its quote, a pick's or a part's) or a not-counted one (nc, dnc, snc). Read by its own words, not the extractor's; not a weapon's profile
+// line, a designer's note or an example, nor a line that leads a list (":"), whose bullets are its words
+const NUM_WORDS = /\bbenefit of cover\b|\b(?:hit|wound|damage) rolls?\b|\barmou?r penetration\b|\bap\b|\bdamage characteristic\b|\bsaving throws?\b|\bsave rolls?\b|\binvulnerable saves?\b|\bfeel no pain\b|\bobjective control\b|\boc\b|\bmove characteristic\b|(?:^|\s)[+-]\d+"? m\b|\[[a-z][a-z -]*?(?: \d\+?| d3)?\]|\bcritical (?:hit|wound)s?\b|\b(?:attacks|strength) characteristics?\b/;
+const key = t => n(String(t).replace(/^\s*-\s+/, '')).replace(/^[^:"]{1,40}:\s+/, '').replace(/[.\s]+$/, '').trim();
+function silent(src, o){
+  o = o || {};
+  const qs = [].concat(o.b || [], o.d || [], o.st || [], o.nc || [], o.dnc || [], o.snc || []).flatMap(b => [b.quote, b.part && b.part.quote].concat((b.pick || []).flatMap(p => [p.quote, p.part && p.part.quote])))
+    .filter(Boolean).flatMap(q => String(q).split('\n')).map(key).filter(Boolean);
+  const text = src.type === 'strat' ? src.effect : [src.text || ''].concat((src.table || []).map(r => r.slice(1).join('\n'))).join('\n');
+  return X.sentencesOf(text).map(u => u.s).filter(s => { const w = n(s), k = key(s);
+    if(!NUM_WORDS.test(w) || /\b\d+" a[\dd]+ (?:bs|ws)\d\+|\bmelee a[\dd]+ ws\d\+/.test(w) || /^(?:designer's note|example):/.test(w) || /:\s*$/.test(w)) return false;
+    return !qs.some(q => k.includes(q) || q.includes(k)); });
+}
+module.exports = { gaps, srcGaps, optionOf, counts, silent, NUM_WORDS };

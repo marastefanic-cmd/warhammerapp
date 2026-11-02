@@ -34,7 +34,10 @@
          exactly the stat boxes (BOXES st, effects.js ST) of the list's army and detachment rules that reach it, each said with its
          conditions' labels and its effect (the unit's characteristic with it, else its label), none the list printed into the value; and
          the words to them: every sentence of an army or detachment rule that adds to or subtracts from a characteristic of models is a stat
-         box, every "if / while / unless / (excluding …)" in it one of its conditions
+         box, every "if / while / unless / (excluding …)" in it one of its conditions; then, under the profile, each BOXES snc (a
+         characteristic no stat box counts) of its abilities, another unit's aura reaching it, its rules and its stratagems, "not counted"
+     LW  never silent: every sentence of a source the lists use with words of the numbers (hit, wound, AP, damage, save, Feel No Pain, OC,
+         Move, a weapon ability) is a counted box or listed not counted in BOXES (verify/coverage.js silent)
 
      node verify/lines.js      the gate step; writes verify/out/lines.json */
 'use strict';
@@ -241,6 +244,18 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
   for(const [key, o] of Object.entries(Tw)){ const src = Sw.get(key); if(!src || o.played) continue;
     for(const b of o.b || []){ n++; for(const g of Cv.gaps(b, src, 'attack', src.others, CTX)) fail('LC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
   stats.covered = n; stats.reachChecked = Cv.counts.checked; stats.reachUnchecked = Cv.counts.unchecked; }
+// LW never silent: every sentence of a source a list uses (its units' abilities and core weapon rules, its faction's army rules, its
+// detachments' rules and stratagems, the core stratagems) with words of the numbers (hit, wound, AP, damage, save, Feel No Pain, OC, Move,
+// a weapon ability) is a counted box or listed not counted in data.js BOXES (verify/coverage.js silent, its own words)
+{ const Cv = require('./coverage'), Sw = M.sources(D), used = new Set(); let n = 0, k = 0;
+  for(const a of D.armies){ const F = D.factions[a.faction] || {};
+    for(const r of F.armyRules || []) used.add(M.KEY.rule(r));
+    for(const id of a.detachments || []){ const d = (F.detachments || {})[id]; if(!d) continue;
+      for(const r of d.rule ? [d.rule].concat(d.moreRules || []) : []) used.add(M.KEY.rule(r)); for(const st of d.stratagems || []) used.add(M.KEY.strat(st)); } }
+  for(const st of D.coreStratagems || []) used.add(M.KEY.strat(st));
+  for(const [key, src] of Sw){ if((src.type === 'rule' || src.type === 'strat') && !used.has(key)) continue; n++;
+    for(const s of Cv.silent(src, (D.boxes || {})[key])){ k++; fail('LW', key + ' ' + src.name, 'words of the numbers no box counts and none lists not counted: “' + X.plainCase(s).slice(0, 90) + '”'); } }
+  stats.silentSources = n; stats.silent = k; }
 // LS the lines under a unit's profile: the stat boxes of the list's army and detachment rules that reach it, worked out here again from
 // data.js alone (which rules, which boxes, the words: its conditions' labels, " · " between, a one-model unit's Starting Strength in its
 // wounds, "If (see the rule)" for GW's quoted words alone; its value the unit's characteristic with the effect where every profile has one value
@@ -332,6 +347,6 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/lines.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips, ' + stats.cpNotes + ' extra-CP chips and ' + stats.na + ' "does nothing here" chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
+console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips, ' + stats.cpNotes + ' extra-CP chips and ' + stats.na + ' "does nothing here" chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each; ' + stats.silentSources + ' sources the lists use, every sentence of the numbers counted or listed not counted');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);

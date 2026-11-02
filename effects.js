@@ -67,8 +67,9 @@ const FX = {
   twin:Object.assign(kwFx('twin-linked', 'twin'), { custom:[true] }),
   lance:Object.assign(kwFx('lance', 'lance'), { custom:[true] }),
   precision:Object.assign(kwFx('precision', 'precision'), { custom:[true] }),
-  // (and an enemy unit that "cannot have the Benefit of Cover" (Burning Spray): every attack against it as if [IGNORES COVER], 13.08)
-  ignoresCover:Object.assign(kwFx('ignores cover', 'ignoresCover'), { custom:[true], pats:[/\[ignores cover(?::[^\]]*)?\]/, /\bthat enemy unit cannot have the benefit of cover\b/] }),
+  // (and an enemy unit that "cannot have the Benefit of Cover" (Burning Spray): every attack against it as if [IGNORES COVER], 13.08; GW's
+  // "[IGNORE COVER]" (Parasitic Payload) is that ability)
+  ignoresCover:Object.assign(kwFx('ignores cover', 'ignoresCover'), { custom:[true], pats:[/\[ignores? cover(?::[^\]]*)?\]/, /\bthat enemy unit cannot have the benefit of cover\b/] }),
   heavy:kwFx('heavy', 'heavy'),
   hazardous:kwFx('hazardous', 'hazardous'),
   indirect:kwFx('indirect fire', 'indirect'),
