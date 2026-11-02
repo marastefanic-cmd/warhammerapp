@@ -1199,10 +1199,18 @@ function columnsInData(src){
   // the Damage tab's boxes (verify/effects-migrate.js --write) and each box's columns
   for(const o of Object.values(D.boxes || {})){ add('BOXES', o); (o.b || []).forEach(b => add('BOXES.b', b)); (o.d || []).forEach(b => add('BOXES.d', b)); }
   add('BS_IDS', D.bsIds);
+  // what builder.js reads on the phone beyond the other tables (verify/build-index.js --write): one object, its parts the columns
+  add('BUILD_INDEX', D.buildIndex);
   return Object.fromEntries(Object.entries(T).map(([k, v]) => [k, [...v]]));
 }
+// the tables of data.js's return line that columnsInData does not read (VERSION: one value; CHECKLIST: its columns are app.html's HW_CK, held
+// by verify/render.js and verify/derive.js)
+const UNREAD_TABLES = ['VERSION', 'CHECKLIST'];
 function unregistered(src){
   const reg = JSON.parse(fs.readFileSync(COLUMNS, 'utf8')).tables, out = [];
+  // (every table of data.js's return line is a table here, or one of UNREAD_TABLES: a new one, BUILD_INDEX, cannot pass unregistered)
+  const seen = new Set(Object.keys(columnsInData(src)).map(t => t.split('.')[0]).concat(Object.keys(reg)));
+  for(const t of Object.keys(dataTables(src))) if(!seen.has(t) && !UNREAD_TABLES.includes(t)) out.push(t + ' (a table of data.js no column of which is read here)');
   for(const [t, cols] of Object.entries(columnsInData(src))){
     if(!reg[t]){ out.push(t + ' (the table)'); continue; }
     for(const c of cols) if(!reg[t].columns[c]) out.push(t + '.' + c);
@@ -1236,15 +1244,20 @@ const SCREENS = ['screenUnit', 'stratItem', 'showStrat'];
 //   tables   the tables the code reaches (D.ruleAliases, 'ruleAliases', or D read whole: D[k], Object.values(D)); a table whose rows are
 //            not objects (RULE_ALIASES' [pattern, rule], RULES' name → text, CONCEPTS' terms) is read by position, every column of it
 //            (const [re, key] = row, row[1], [...row])
-function screenReads(html){
+function screenReads(html, opts){
+  opts = opts || {};
   html = html == null ? fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8') : html;
   const script = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]).sort((a, b) => b.length - a.length)[0] || '';
   const lines = script.split('\n'), START = /^(?:async )?function ([\w$]+)\(|^(?:const|let) ([\w$]+)\s*=/, ENDS = /^(?:(?:async )?function |const |let |var |\/\/|\/\*|[\w$.]+\s*\(|if\s*\(|for\s*\(|try\b)/;
   const decl = new Map(); for(let i = 0; i < lines.length; i++){ const m = START.exec(lines[i]); if(!m) continue; let j = i + 1; while(j < lines.length && !ENDS.test(lines[j])) j++; decl.set(m[1] || m[2], lines.slice(i, j).join('\n')); }
+  // (and the page's other scripts, <script src> of this folder: the code the screens call into, builder.js and import.js's list import,
+  // calc.js, effects.js; each read whole, all of it reached; not data.js and verified.js, which are data)
+  const PAGE = opts.page != null ? opts.page : [...html.matchAll(/<script src="([\w./-]+\.js)"><\/script>/g)].map(m => m[1]).filter(f => !['data.js', 'verified.js'].includes(f) && fs.existsSync(path.join(ROOT, f)));
+  for(const f of PAGE) decl.set('@' + f, typeof f === 'string' && opts.files && opts.files[f] != null ? opts.files[f] : fs.readFileSync(path.join(ROOT, f), 'utf8'));
   const uncomment = x => x.replace(/\/\*[\s\S]*?\*\/|\/\/[^\n]*/g, ' ');
   const STR = /'(?:[^'\\\n]|\\.)*'|"(?:[^"\\\n]|\\.)*"/g;
   const code = x => uncomment(x).replace(STR, "''");
-  const need = new Set(), todo = SCREENS.slice(), props = new Set(), whole = [], tables = new Set();
+  const need = new Set(), todo = SCREENS.concat(PAGE.map(f => '@' + f)), props = new Set(), whole = [], tables = new Set();
   let wholeD = false;
   while(todo.length){ const n = todo.pop(); if(need.has(n) || !decl.has(n)) continue; need.add(n); const raw = uncomment(decl.get(n)), c = code(decl.get(n));
     for(const m of c.matchAll(/\.\s*([A-Za-z_$][\w$]*)/g)) props.add(m[1]);
@@ -1283,9 +1296,23 @@ function wholeReads(c){
 // the tables of data.js as the app has them (D.key) and how their rows are: { NAME: { key, positional } } (positional: rows that are not
 // objects, read by position: an array's, a value's, a string's)
 function dataTables(src){
-  const ret = /\breturn \{([^{}]*)\};\s*\}\)\(\);?\s*$/.exec(src), out = {};
-  for(const [, key, expr] of (ret ? ret[1] : '').matchAll(/([\w$]+):([^,()]+(?:\([^()]*\))?)/g)){
-    const name = (/\b([A-Z][A-Z_]+)\b/.exec(expr) || [])[1]; if(!name || out[name]) continue;
+  const out = {}, at = src.lastIndexOf('\nreturn {');
+  if(at < 0) return out;
+  // (the object's top-level members, brackets and strings balanced: a member may be a function, resolve:function(a){ … })
+  const members = []; let depth = 0, cur = '', q = null;
+  for(let i = at + '\nreturn {'.length; i < src.length; i++){
+    const ch = src[i];
+    if(q){ cur += ch; if(ch === '\\'){ cur += src[++i]; } else if(ch === q) q = null; continue; }
+    if(ch === '\'' || ch === '"' || ch === '`'){ q = ch; cur += ch; continue; }
+    if('([{'.includes(ch)) depth++;
+    if(')]}'.includes(ch)){ if(!depth){ members.push(cur); break; } depth--; }
+    if(ch === ',' && !depth){ members.push(cur); cur = ''; continue; }
+    cur += ch;
+  }
+  for(const m of members){
+    // (a table: a constant, NAME, or a call over one, resolveArmies(ARMIES, …); a function member, resolve, is no table)
+    const x = /^\s*([\w$]+)\s*:\s*(?:([A-Z][A-Z0-9_]*)|[\w$]+\(\s*([A-Z][A-Z0-9_]*)\b[^]*\))\s*$/.exec(m); if(!x) continue;
+    const key = x[1], name = x[2] || x[3]; if(out[name]) continue;
     const c = constant(src, name); if(!c) continue;
     const rows = Array.isArray(c.value) ? c.value : c.value && typeof c.value === 'object' ? Object.values(c.value) : [];
     out[name] = { key, positional:rows.length > 0 && rows.every(r => !r || typeof r !== 'object' || Array.isArray(r) || r instanceof RegExp) };
@@ -1293,8 +1320,8 @@ function dataTables(src){
   return out;
 }
 // every column of verify/columns.json a screen reads, and how: { 'T.c': 'by name' | 'by position (…)' | 'whole (…)' }
-function screenColumns(reg, src, html){
-  const R = screenReads(html), T = dataTables(src), out = {};
+function screenColumns(reg, src, html, ro){
+  const R = screenReads(html, ro), T = dataTables(src), out = {};
   for(const [t, x] of Object.entries(reg)) for(const c of Object.keys(x.columns || {})){
     const top = T[t.split('.')[0]];
     if(!t.includes('.') && top && top.positional){
@@ -1341,24 +1368,41 @@ const SCAN_FIXTURES = [
   ['find, then index (a tuple table)', 'return (D.ruleAliases.find(([re]) => re.test(u)) || [])[1];', 'RULE_ALIASES.pattern', true],
   ['array spread (a tuple table)', 'return D.ruleAliases.map(r => [...r]);', 'RULE_ALIASES.pattern', true],
   ['the data read whole', "return Object.values(D).length;", 'RULE_ALIASES.pattern', true],
+  ['in a page script the screens load (builder.js)', 'return u.name;', 'ZZZ.zzz', true, { 'builder.js':'function build(u){ return u.zzz; }' }],
+  ['the data under a function member (data.js: resolve:function(a){ … })', 'for(const [re, key] of D.ruleAliases) return key;', 'RULE_ALIASES.pattern', true, null,
+    "return { version:VERSION, resolve:function(a){ return resolveArmies([a], DATASHEETS, TABLE_ORDER, FACTIONS)[0]; }, ruleAliases:RULE_ALIASES };\n})();"],
   ['not read (control)', 'return u.name + D.rules.x;', 'ZZZ.zzz', false], ['not read (control, a tuple table)', 'return u.name;', 'RULE_ALIASES.pattern', false]];
 function scanFixtures(src){
   const reg = { ZZZ:{ columns:{ name:{ source:'gw' }, zzz:{ source:'hand' } } }, RULE_ALIASES:{ columns:{ pattern:{ source:'hand' }, rule:{ source:'derived' } } } }, out = [];
-  for(const [form, body, col, want] of SCAN_FIXTURES){
-    const html = '<script>\nfunction screenUnit(u, k){\n  ' + body + '\n}\nfunction show(x){\n  return Object.values(x);\n}\nfunction stratItem(){}\nfunction showStrat(){}\n</script>';
-    const how = screenColumns(reg, src, html).cols[col];
+  for(const [form, body, col, want, files, ret] of SCAN_FIXTURES){
+    const html = (files ? Object.keys(files).map(f => '<script src="' + f + '"></script>\n').join('') : '') +
+      '<script>\nfunction screenUnit(u, k){\n  ' + body + '\n}\nfunction show(x){\n  return Object.values(x);\n}\nfunction stratItem(){}\nfunction showStrat(){}\n</script>';
+    // (ret: data.js with its return line as given)
+    const s2 = ret ? src.slice(0, src.lastIndexOf('\nreturn {') + 1) + ret : src;
+    const how = screenColumns(reg, s2, html, files ? { files } : undefined).cols[col];
     if(!!how !== want) out.push(form + ': ' + (want ? col + ' not seen read' : col + ' seen read (' + how + ') where nothing reads it'));
   }
   return out;
 }
-// the scripts the gate runs: verify/run.js's steps and every file of this folder they require, by name
+// a script's references to other files of this folder: what it requires (require('./x'), require(path.join(ROOT, 'x.js')),
+// require(ROOT + '/x.js')) and what it runs (spawn / spawnSync / execFileSync of node on path.join(ROOT | __dirname, 'x.js'); alone:
+// with no other argument, so it can run by itself as it is run there)
+function codeRefs(f){
+  const src = fs.readFileSync(path.join(ROOT, f), 'utf8'), dir = path.dirname(path.join(ROOT, f)), rel = g => path.relative(ROOT, g);
+  const requires = [], spawns = [];
+  for(const m of src.matchAll(/require\(\s*(?:ROOT \+ )?['"](\.{0,2}\/[\w./-]+?)(?:\.js)?['"]\s*\)/g)) requires.push(rel(m[1].startsWith('/') ? path.join(ROOT, m[1] + '.js') : path.resolve(dir, m[1] + '.js')));
+  for(const m of src.matchAll(/require\(\s*path\.join\(\s*(ROOT|__dirname)\s*,\s*'([\w./-]+\.js)'\s*\)\s*\)/g)) requires.push(rel(path.join(m[1] === 'ROOT' ? ROOT : dir, m[2])));
+  for(const m of src.matchAll(/\b(?:spawnSync|spawn|execFileSync)\(\s*process\.execPath\s*,\s*\[\s*path\.join\(\s*(ROOT|__dirname)\s*,\s*'([\w./-]+\.js)'\s*\)\s*(\]|,)/g))
+    spawns.push({ file:rel(path.join(m[1] === 'ROOT' ? ROOT : dir, m[2])), alone:m[3] === ']' });
+  return { requires, spawns };
+}
+// the scripts the gate runs: verify/run.js's steps and every file of this folder they require or run, by name
 let GATE_RUNS = null;
 function gateRuns(){
   if(GATE_RUNS) return GATE_RUNS;
   const out = new Set(), todo = [...fs.readFileSync(path.join(ROOT, 'verify/run.js'), 'utf8').matchAll(/\bstep\('[^']*', \['([^']+\.js)'/g)].map(m => m[1]).concat('build.js', 'app.html');
   while(todo.length){ const f = todo.pop(); if(out.has(f) || !fs.existsSync(path.join(ROOT, f))) continue; out.add(f);
-    for(const m of fs.readFileSync(path.join(ROOT, f), 'utf8').matchAll(/require\(\s*(?:ROOT \+ )?['"](\.{1,2}\/[\w./-]+?)(?:\.js)?['"]\s*\)/g)){
-      const g = path.relative(ROOT, path.resolve(path.dirname(path.join(ROOT, f)), m[1] + '.js')); todo.push(g); } }
+    if(f.endsWith('.js')){ const r = codeRefs(f); todo.push(...r.requires, ...r.spawns.map(x => x.file)); } }
   return (GATE_RUNS = out);
 }
 function screenJudgements(D, opts){
@@ -1448,7 +1492,7 @@ function report(t){
   return lines.join('\n') + '\n';
 }
 
-module.exports = { screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
+module.exports = { codeRefs, screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
 
 if(require.main === module){
   let src = fs.readFileSync(DATA, 'utf8');

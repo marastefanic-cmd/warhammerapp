@@ -1743,6 +1743,36 @@
      ]
     }
    }
+  },
+  "BUILD_INDEX": {
+   "what": "what builder.js needs on the phone to build an imported list beyond the other tables, written by verify/build-index.js --write from them and the gate's files (one object; its parts are the columns)",
+   "columns": {
+    "labels": {
+     "source": "derived",
+     "note": "an enhancement's phase labels (ph, turn, turns, at), as verify/derive.js reads its words: verify/build-index.js, held by the gate step build-parity (I)",
+     "by": "verify/build-index.js"
+    },
+    "marks": {
+     "source": "derived",
+     "note": "for each rule, ability or enhancement a list's \"+\" mark names, the values it marks (BSData's modifiers): verify/build-index.js, held by build-parity (I)",
+     "by": "verify/build-index.js"
+    },
+    "gw": {
+     "source": "derived",
+     "note": "a catalogued datasheet's value where GW's datasheet is not BSData's (verify/deviations-bsdata.json, army \"catalog\"): verify/build-index.js, held by build-parity (I)",
+     "by": "verify/build-index.js"
+    },
+    "battleSizes": {
+     "source": "derived",
+     "note": "GW's battle sizes (Core Rules 25.03, rules/core-rules.md): points, Detachment Points, enhancement and unit limits: verify/build-index.js, held by build-parity (I)",
+     "by": "verify/build-index.js"
+    },
+    "upgrades": {
+     "source": "derived",
+     "note": "an enhancement GW's Faction Pack heads \"<NAME> UPGRADE\" that its row does not mark: verify/build-index.js, held by build-parity (I)",
+     "by": "verify/build-index.js"
+    }
+   }
   }
  }
 }

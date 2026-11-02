@@ -23,27 +23,30 @@ const fs = require('fs'), path = require('path'), os = require('os');
 const { spawn } = require('child_process');
 const { ROOT, writeJSON, sha } = require('./lib');
 const { parse, lit } = require('./literal');
-const { dataTables, columnsInData, derivers, keysOf:keysIn, references } = require('./tables');
+const { dataTables, columnsInData, derivers, keysOf:keysIn, references, codeRefs } = require('./tables');
 
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : d; };
 const REG = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/columns.json'), 'utf8')).tables;
 const SRC = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');
 const TABLES = dataTables(SRC);
 
-// ---- the gate's steps, and the files each runs (its own, and every file of this folder it requires, by name)
+// ---- the gate's steps, and the files each runs (its own, and every file of this folder it requires or runs, by name: tables.js codeRefs)
 const RUN = fs.readFileSync(path.join(ROOT, 'verify/run.js'), 'utf8');
-const STEPS = [...RUN.matchAll(/\bstep\('([^']+)', \[([^\]]*)\](, \{[^}]*\})?\)/g)]
+const ALL_STEPS = [...RUN.matchAll(/\bstep\('([^']+)', \[([^\]]*)\](, \{[^}]*\})?\)/g)]
   .map(m => ({ name:m[1], args:[...m[2].matchAll(/'([^']*)'/g)].map(x => x[1]), env:!!m[3] }))
-  .filter(s => !s.env && s.args[0] !== path.relative(ROOT, __filename));   // (not the screens, run in a browser, nor this step)
-const requires = f => [...fs.readFileSync(path.join(ROOT, f), 'utf8').matchAll(/require\(\s*(?:ROOT \+ )?['"](\.{1,2}\/[\w./-]+?)(?:\.js)?['"]\s*\)|path\.join\(ROOT, '([\w./-]+\.js)'\)/g)]
-  .map(m => m[2] || path.relative(ROOT, path.resolve(path.dirname(path.join(ROOT, f)), m[1] + '.js')));
+  .filter(s => s.args[0] !== path.relative(ROOT, __filename));   // (not this step)
 // (code only: data.js and what the gate writes, verified.js and sw.js, are what a step reads, not what it is)
 const NOT_CODE = new Set(['data.js', 'verified.js', 'sw.js']);
 function closure(f){
   const out = new Set(), todo = [f];
-  while(todo.length){ const g = todo.pop(); if(out.has(g) || NOT_CODE.has(g) || !fs.existsSync(path.join(ROOT, g))) continue; out.add(g); todo.push(...requires(g)); }
+  while(todo.length){ const g = todo.pop(); if(out.has(g) || NOT_CODE.has(g) || !fs.existsSync(path.join(ROOT, g)) || !g.endsWith('.js')) continue; out.add(g);
+    const r = codeRefs(g); todo.push(...r.requires, ...r.spawns.map(x => x.file)); }
   return out;
 }
+// the steps a proof can run: each step not run in a browser (the screens, build-parity: env), and each script a step's own file runs
+// alone (build-parity's verify/build-index.js), as "step › script": the part of that step that fails when the script does
+const STEPS = ALL_STEPS.filter(s => !s.env).concat(ALL_STEPS.flatMap(s => codeRefs(s.args[0]).spawns.filter(x => x.alone && !ALL_STEPS.some(t => t.args[0] === x.file))
+  .map(x => ({ name:s.name + ' › ' + path.basename(x.file), args:[x.file], part:true }))));
 for(const s of STEPS) s.files = closure(s.args[0]);
 
 // ---- a column's derivers and the names they read it by, as tables.js has them
@@ -100,7 +103,7 @@ function change({ C, n, key }){
   if(!leaf) return null;
   const tok = SRC.slice(leaf.pos, leaf.end);
   let to;
-  if(/^['"]/.test(tok)){ const v = parse(tok, 0).value; to = lit(v + ' (changed)'); }
+  if(/^['"]/.test(tok)){ const v = parse(tok, 0).value; to = tok[0] === '"' ? JSON.stringify(v + ' (changed)') : lit(v + ' (changed)'); }   // (in its own quotes)
   else if(tok[0] === '/'){ const v = parse(tok, 0).value; to = String(new RegExp(v.source + 'q', v.flags)); }
   else if(tok === 'true' || tok === 'false') to = tok === 'true' ? 'false' : 'true';
   else if(/^-?\d/.test(tok)) to = String(Number(tok) + 1);
