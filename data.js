@@ -169,16 +169,16 @@ const CORE_STRATAGEMS = [
     when:'Fight phase, just after a friendly **CHARACTER** unit is **selected to fight**.',
     target:'That **CHARACTER** unit.',
     effect:'Select one **CHARACTER** model in your unit. Until the end of the phase, that model’s melee weapons have the **[PRECISION]** ability.' },
-  { id:'insane-bravery', gist:'The battle-shock roll you are about to make for your unit is automatically successful.', gistOf:'02ffa2fd', note:'Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).', name:'Insane Bravery', cp:1, phases:['command'], turn:'your', limit:'Once per battle', readOf:'02ffa2fd',
+  { id:'insane-bravery', gist:'The battle-shock roll you are about to make for your unit is automatically successful.', gistOf:'02ffa2fd', note:'Wahapedia FAQ: “Can I use the Insane Bravery stratagem on a battle-shocked unit?” “No, as a unit’s controlling player cannot target that unit with stratagems (01.07).”', name:'Insane Bravery', cp:1, phases:['command'], turn:'your', limit:'Once per battle', readOf:'02ffa2fd',
     when:'Battle-shock step of your Command phase, just before you make a **battle-shock roll** for a friendly unit.',
     target:'That unit.',
     effect:'That **battle-shock roll** is automatically successful.',
     restrictions:'You cannot use this **stratagem** more than once per battle.' },
-  { id:'explosives', gist:'Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.', gistOf:'a461971d', note:'Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.', name:'Explosives', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Explosives','Grenades'] },
+  { id:'explosives', gist:'Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.', gistOf:'a461971d', note:'Wahapedia errata: “The Grenade Stratagem is the same as the Explosives stratagem.”', name:'Explosives', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Explosives','Grenades'] },
     when:'Your Shooting phase.',
     target:'One friendly **unengaged** **EXPLOSIVES/GRENADES** unit that is **eligible to shoot** and did not make an **advance move** this turn.',
     effect:'Resolve the following sequence:\n- 1. Select one **EXPLOSIVES/GRENADES** model in your unit.\n- 2. Select one **unengaged** enemy unit within 8" of and **visible** to that model.\n- 3. Roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound** (06.02).' },
-  { id:'crushing-impact', gist:'After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…', gistOf:'78e19d20', note:'Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.', name:'Crushing Impact', cp:1, phases:['charge'], turn:'your', needs:{ any:['Monster','Vehicle'] },
+  { id:'crushing-impact', gist:'After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…', gistOf:'78e19d20', note:'Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”', name:'Crushing Impact', cp:1, phases:['charge'], turn:'your', needs:{ any:['Monster','Vehicle'] },
     when:'Your Charge phase, just after a friendly **MONSTER/VEHICLE** unit ends a **charge move**.',
     target:'That **MONSTER/VEHICLE** unit.',
     effect:'Resolve the following sequence:\n- 1. Select one enemy unit **engaged** with your unit.\n- 2. Select one model in your unit **engaged** with that enemy unit.\n- 3. Roll a number of D6 equal to the **T** characteristic of that model: for each 1, your unit suffers 1 **mortal wound**; for each 5+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 **mortal wounds** per unit).' },
@@ -195,7 +195,7 @@ const CORE_STRATAGEMS = [
     when:'Start of your opponent’s Shooting phase.',
     target:'One friendly **SMOKE** unit.',
     effect:'Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not **fully visible** to the attacking model because of one or more models in your **SMOKE** unit, the target has the **benefit of cover** against that attack (13.08).' },
-  { id:'heroic-intervention', gist:'Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…', gistOf:'67df1e2f', note:'Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.', name:'Heroic Intervention', cp:1, cpNote:'Into the Fray +1CP', phases:['charge'], turn:'opp', needs:{ unless:{ all:['Vehicle'], none:['Character','Walker'] } },
+  { id:'heroic-intervention', gist:'Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…', gistOf:'67df1e2f', note:'Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”', name:'Heroic Intervention', cp:1, cpNote:'Into the Fray +1CP', phases:['charge'], turn:'opp', needs:{ unless:{ all:['Vehicle'], none:['Character','Walker'] } },
     when:'End of your opponent’s Charge phase.',
     target:'One friendly **unengaged** unit within 12" of one or more enemy units. You can only select a **VEHICLE** unit if it is a **CHARACTER/WALKER** unit.',
     effect:'**Resolve a charge** with your unit (11.02). While doing so, before making the **charge roll**, you must select one of the following modes:\n- **Leap to Defend:** When selecting **charge targets**, you can only select enemy units that made a **charge move** this phase and are within the **maximum distance**.\n- **Into the Fray (+1CP):** When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6. When selecting **charge targets**, you can select any enemy units that are within 6" of your unit and within the **maximum distance**.' },
@@ -404,7 +404,6 @@ const FACTIONS = {
       // datasheets' Rules line opens; the two are shown together, and the note says the sources don't settle which applies
       // ph/turn: where its Normal, Advance and Fall Back moves are made
       { name:'Super-heavy Walker', coreTwin:'Super-Heavy Walker', ph:['movement'], turn:'your',
-        note:'IMPERIAL KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.',
         text:'Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**.' }
     ],
     detachments: {
@@ -436,7 +435,7 @@ const FACTIONS = {
           // The pack's Rules Updates entry "Full Tilt Stratagem, Target Section" (PDF p27) is under VALOURSTRIKE LANCE: it is that
           // detachment's 2CP Full Tilt, a different stratagem, so this one's target stays as printed.
           { id:'full-tilt', gist:'Until the end of the phase, if your unit Advances, no Advance roll: +6" Move instead (+9" for an ARMIGER or DESTRIER unit).', gistOf:'e0abe369',
-            note:'No datasheet has the DESTRIER keyword; the Knight Destrier has KNIGHT DESTRIER. Wahapedia FAQ (02.05 Keywords): “Do rules that affect a keyword include multi-word keywords that contain that keyword? For example, would rules that affect COMMISSAR units affect a unit that has the COMMISSAR GRAVES keyword?” “No.” So a Knight Destrier adds either 6" or 9": the sources don’t say whether this stratagem’s DESTRIER means KNIGHT DESTRIER.',
+            note:'Wahapedia FAQ: “Do rules that affect a keyword include multi-word keywords that contain that keyword? For example, would rules that affect COMMISSAR units affect a unit that has the COMMISSAR GRAVES keyword?” “No.”',
             name:'Full Tilt', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Imperial Knights'] },
             when:'Your Movement phase.',
             target:'One **IMPERIAL KNIGHTS** unit from your army.',
@@ -483,7 +482,6 @@ const FACTIONS = {
         name:'Berzerker Warband', dispositions:['Purge the Foe'], dp:2,
         // Wahapedia wording (the errata "Change to" text is the same as the main text)
         rule:{ name:'Relentless Rage', ph:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
-          tag:'Already in A', note:'Already counted: every melee A value in this app includes this +1 A. Do not add it again.',
           text:'Friendly **WORLD EATERS** units’ melee attacks have +1 **A**.' },
         enhancements:[
           { name:'Berzerker Glaive', pts:35, text:'**WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.' },
@@ -516,7 +514,7 @@ const FACTIONS = {
             effect:'Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.' },
           // target and effect: Wahapedia errata wording (bolds "surge move")
           { id:'berzerkers-wrath', gist:'Your unit’s surge move is up to 8" instead of a D6 roll.', gistOf:'cadbd052', name:'Berzerker’s Wrath', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Berzerkers'] },
-            note:'Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.',
+            note:'Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” “No.”',
             when:'Your opponent’s Shooting phase, just after an enemy unit has shot.',
             target:'One **KHORNE BERZERKERS** unit from your army that can make a **surge move** as a result of those attacks.',
             effect:'Do not roll a D6 to determine how far models in your unit can move when they make a **surge move**. Instead, when making a **surge move**, those models can move up to 8".' }
@@ -774,13 +772,13 @@ const FACTIONS = {
             target:'One **THOUSAND SONS PSYKER** model from your army, and one friendly **TZAANGORS** unit that is below its Starting Strength and within 12" of that **PSYKER** model.',
             effect:'Return up to D3+1 destroyed models (excluding **CHARACTERS**) to your **TZAANGORS** unit.' },
           { id:'touched-by-tzeentch', gist:'Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced.', gistOf:'dc3388e9', name:'Touched by Tzeentch', cp:1, phases:['movement'], turn:'your', needs:{ all:['Tzeentch','Mutant'] },
-            note:'FAQ (Faction Pack 1.3): When using the Touched by Tzeentch Stratagem in the Warpmeld Pact Detachment, do I have to declare if my unit will shoot or charge after Advancing as soon as I use the Stratagem? No, you may decide later in the turn.',
+            note:'FAQ (Faction Pack 1.3): “When using the Touched by Tzeentch Stratagem in the Warpmeld Pact Detachment, do I have to declare if my unit will shoot or charge after Advancing as soon as I use the Stratagem?” “No, you may decide later in the turn.”',
             when:'Start of your Movement phase.',
             target:'One **TZEENTCH MUTANT** unit from your army.',
             effect:'Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced.' },
           // effect: the Faction Pack's Rules Update (6" and 8"), as Wahapedia prints it
           { id:'twisted-mirage', gist:'Your unit arriving from Strategic Reserves can be set up anywhere on the battlefield more than 6" horizontally away from all enemy units (more than 8" for a MONSTER unit); until the end of the turn, it is not eligible to declare a charge.', gistOf:'48d6dbf1', name:'Twisted Mirage', cp:1, phases:['movement'], turn:'your', needs:{ all:['Tzeentch','Mutant'] },
-            note:'FAQ (Faction Pack 1.3): When going second, can a Tzaangor unit that started the game on the battlefield and was placed into Strategic Reserves by its Ambushing Hunters ability then arrive during my first turn using the Twisted Mirage Stratagem? No.',
+            note:'FAQ (Faction Pack 1.3): “When going second, can a Tzaangor unit that started the game on the battlefield and was placed into Strategic Reserves by its Ambushing Hunters ability then arrive during my first turn using the Twisted Mirage Stratagem?” “No.”',
             when:'Reinforcements step of your Movement phase.',
             target:'One **TZEENTCH MUTANT** unit from your army that is arriving from **Strategic Reserves** this phase.',
             effect:'Your unit can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units, or anywhere on the battlefield that is more than 8" horizontally away from all enemy units if it is a **MONSTER** unit. In either case, until the end of the turn, it is not eligible to declare a charge.' }
@@ -1227,7 +1225,6 @@ const FACTIONS = {
       // ph/turn: where its Normal, Advance and Fall Back moves are made; needs: only a unit whose Rules line names it has it
       // (the Knights; War Dogs only with Preyslayer's Mantle), so a list with none marks it as applying to no unit
       { name:'Super-heavy Walker', coreTwin:'Super-Heavy Walker', ph:['movement'], turn:'your', needs:{ rule:['Super-heavy Walker'] },
-        note:'CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.',
         text:'Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**.' }
     ],
     detachments: {
@@ -2732,7 +2729,7 @@ const ARMIES = [
         { name:'Norn Assimilator', InSv:'4+', from:{ InSv:'Synaptoprescience' } }
       ],
       abilities:[
-        { name:'Singular Purpose', note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.', why:{ note:'Enraged Behemoths' } },
+        { name:'Singular Purpose' },
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
         { name:'Protean Purpose' },
@@ -2747,7 +2744,7 @@ const ARMIES = [
         { name:'Norn Assimilator', InSv:'4+', from:{ InSv:'Synaptoprescience' } }
       ],
       abilities:[
-        { name:'Singular Purpose', note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.', why:{ note:'Enraged Behemoths' } },
+        { name:'Singular Purpose' },
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
         { name:'Protean Purpose' },
@@ -2764,7 +2761,7 @@ const ARMIES = [
         { name:'neurolance', kw:['MELTA 2','PSYCHIC','ANTI-CHARACTER 2+'], from:{ 'ANTI-CHARACTER 2+':'Destabilising Predation' } }
       ],
       abilities:[
-        { name:'Singular Purpose', note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.', why:{ note:'Enraged Behemoths' } },
+        { name:'Singular Purpose' },
         { name:'Unnatural Resilience' },
         { name:'Damaged: 1-5 Wounds Remaining' },
         { name:'Protean Purpose' },
@@ -2776,13 +2773,7 @@ const ARMIES = [
     {
       id:'norn-emissary', ds:'tyranids/norn-emissary', pts:270,
       models:['1× Norn Emissary'],
-      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']],
-      abilities:[
-        { name:'Singular Purpose', note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.', why:{ note:'Enraged Behemoths' } },
-        { name:'Unnatural Resilience' },
-        { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose' }
-      ]
+      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']]
     },
     {
       id:'tyrannofex', ds:'tyranids/tyrannofex', pts:180, copies:2,
@@ -6553,7 +6544,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Hive Commander', ph:['command'], turn:'your', text:'At the start of your Command phase, if this model is on the battlefield, you gain 1CP.' },
-    { name:'Malign Presence', tag:'Aura · Once per turn', ph:['command','movement','shooting','charge','fight'], turn:'either', note:'Designer’s Note (Wahapedia’s datasheet, printed under the codex wording that Faction Pack 1.3 replaced): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”', text:'Once per turn, when your opponent targets a unit from their army within 12" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP.' },
+    { name:'Malign Presence', tag:'Aura · Once per turn', ph:['command','movement','shooting','charge','fight'], turn:'either', note:'Designer’s Note (Wahapedia’s datasheet, under the codex wording): “This ability takes precedence over the Lord of Deceit ability presented in the Balance Dataslate June 2024.”', text:'Once per turn, when your opponent targets a unit from their army within 12" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP.' },
     { name:'Domination of the Hive Mind', tag:'Aura', text:'While a friendly **TYRANIDS** unit is within 9" of this model, that unit is within your army’s **Synapse Range**.' },
     { name:'Leader', text:'This model can be attached to the following units: TYRANT GUARD' }
   ],
@@ -10288,7 +10279,7 @@ const DATASHEETS = {
     { name:'Yellow claws', range:'Melee', A:'2', WS:'5+', S:'2', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Exploding Horrors', ph:['fight'], turn:'either', note:'Designer’s Note (Faction Pack 1.2, GW’s Pink Horrors datasheet): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”', text:'Each time this unit is selected to fight, you can select one enemy unit within **Engagement Range** of it, then select one or more **BRIMSTONE HORROR** models in this unit. For each **BRIMSTONE HORROR** model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 **mortal wound**.' }
+    { name:'Exploding Horrors', ph:['fight'], turn:'either', note:'Designer’s Note (Faction Pack 1.2): “While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.”', text:'Each time this unit is selected to fight, you can select one enemy unit within **Engagement Range** of it, then select one or more **BRIMSTONE HORROR** models in this unit. For each **BRIMSTONE HORROR** model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 **mortal wound**.' }
   ],
   rules:['Deep Strike','Infiltrators','The Shadow of Chaos','Psychic','Pistol'],
   kw:['Battleline','Brimstone','Chaos','Daemon','Faction: Legiones Daemonica','Horrors','Infantry','Tzeentch']

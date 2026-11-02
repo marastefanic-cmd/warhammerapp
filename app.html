@@ -4792,6 +4792,10 @@ const abilityNote = ab => ab.note ? '<p class="note it">' + esc(ab.note) + '</p>
 const STAT_KEYS = new Set(['M','T','Sv','W','Ld','OC','InSv','range','A','BS','WS','S','AP','D']);
 const alreadyIn = (ab, u) => !u ? '' : [...new Set([...u.stats, ...(u.ranged || []), ...(u.melee || [])].flatMap(x => Object.entries(x.from || {})
   .filter(([k, v]) => STAT_KEYS.has(k) && [].concat(v).includes(ab.name)).map(([k]) => k === 'range' ? 'Range' : k)))].join(', ');
+// the same for an army or detachment rule on the Rules screen: the values of the list's units its granted marks are in (Relentless Rage's
+// melee A: "Already in A"), from the from marks alone
+const alreadyInRule = name => [...new Set(army().units.flatMap(u => alreadyIn({ name }, u).split(', ')).filter(Boolean))].join(', ');
+const alreadyTag = name => { const inv = alreadyInRule(name); return inv ? '<span class="tg m">Already in ' + esc(inv) + '</span>' : ''; };
 // an enhancement's row has the Enhancement chip: its tag is "Enhancement" or has it as one part ("Enhancement · Aura")
 const isEnhancement = ab => /(^|, | · )Enhancement(, | · |$)/.test(ab.tag || '');
 function abilityList(abs, u, suffix){
@@ -5473,7 +5477,7 @@ function textWithTable(r){
 function armyRuleRows(f){
   return f.armyRules.map(r => {
     const once = r.tag && /^(once|twice) per /i.test(r.tag) ? r.tag : '';
-    return ruleRow(r.name, metaLine(once ? '<span class="tg once">' + esc(once) + '</span>' : r.tag ? esc(r.tag) : '', r.ph ? esc(shortWhen(r)) : '', inertRule(r.name) ? 'no unit in this list it applies to' : ''),
+    return ruleRow(r.name, metaLine(once ? '<span class="tg once">' + esc(once) + '</span>' : r.tag ? esc(r.tag) : '', r.ph ? esc(shortWhen(r)) : '', alreadyTag(r.name), inertRule(r.name) ? 'no unit in this list it applies to' : ''),
       (r.note ? '<p class="note it">' + esc(r.note) + '</p>' : '') + textWithTable(r) + ((r.missing || []).length ? '<p class="note">Not in the app yet: the ' + esc(r.missing.join(' and ')) + ' (they need that Wahapedia page).</p>' : '') +
       (r.coreTwin ? '<p class="usedby"><span class="il">Core rule</span>' + linkTo('rule', r.coreTwin, r.coreTwin) + '</p>' : ''), inertRule(r.name) ? 'na' : '');
   }).join('');
@@ -5495,7 +5499,7 @@ function screenRules(){
     // in the Stratagems tab's order: phase order, the ones no unit can use last
     const strats = (d.stratagems || []).map((x, i) => [x, i]).sort((x, y) => (eligible(x[0]).length ? 0 : 1) - (eligible(y[0]).length ? 0 : 1) || first(x[0]) - first(y[0]) || x[1] - y[1]).map(x => x[0]);
     h += '<h3 class="who">' + esc(d.name) + '</h3><div class="abl">' +
-      detRules(d).map(r => ruleRow(r.name, metaLine('Detachment rule', when(r)),
+      detRules(d).map(r => ruleRow(r.name, metaLine('Detachment rule', when(r), alreadyTag(r.name)),
         note(r) + textWithTable(r) + usedBy('Applies to', a.units.filter(u => matches(r.needs, u))))).join('') +
       mine.map(e => { const hs = holders(a, e.name); return ruleRow(e.name, metaLine('<span class="tg">' + (e.upgrade ? 'Upgrade' : 'Enhancement') + '</span>', e.pts ? esc(e.pts) + ' pts' : '', 'on ' + esc(hs.map(u => holderName(u, e.name)).join(', '))),
         rt(e.text) + '<p class="usedby"><span class="il">On</span>' + hs.map(u => linkTo('unit', u.id, holderName(u, e.name))).join(', ') + '</p>'); }).join('') +

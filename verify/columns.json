@@ -105,8 +105,8 @@
      "note": "which units it is for: the needs its TARGET gives by the closed patterns of verify/derive.js stratNeeds; verify/evidence.js \"targets\" fails on any difference or an unparsed TARGET"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "limit": {
      "source": "derived",
@@ -191,8 +191,8 @@
      "note": "the core ability of the same name it is shown with; signed off"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "tableAt": {
      "source": "hand",
@@ -293,8 +293,8 @@
      "note": "the core ability of the same name it is shown with; signed off"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "tableAt": {
      "source": "hand",
@@ -354,8 +354,8 @@
      "note": "the core ability of the same name it is shown with; signed off"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "tableAt": {
      "source": "hand",
@@ -427,8 +427,8 @@
      "note": "which units it is for: the needs its TARGET gives by the closed patterns of verify/derive.js stratNeeds; verify/evidence.js \"targets\" fails on any difference or an unparsed TARGET"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "limit": {
      "source": "derived",
@@ -650,8 +650,8 @@
      "note": "a datasheet fact this list has otherwise than another list with no reason found (verify/out/tables.md): kept until decided; none today"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "why": {
      "source": "derived",
@@ -914,8 +914,8 @@
      "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "na": {
      "source": "hand",
@@ -1207,8 +1207,8 @@
      "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "na": {
      "source": "hand",
