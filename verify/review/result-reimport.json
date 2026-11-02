@@ -1,0 +1,146 @@
+[
+ {
+  "key": "40504569520d9126",
+  "where": "shooty · Mek",
+  "verdict": "ok",
+  "why": "Unchanged from main 2b36d08 (re-keyed only): the keywords named are those the led/supported unit’s GW datasheet prints and the leader’s does not."
+ },
+ {
+  "key": "1e30843a5267f6ca",
+  "where": "shooty · Mek",
+  "verdict": "ok",
+  "why": "Unchanged from main 2b36d08 (re-keyed only): the keywords named are those the led/supported unit’s GW datasheet prints and the leader’s does not."
+ },
+ {
+  "key": "eaa143fbeb26c2ef",
+  "where": "princes · Slaughterbound",
+  "verdict": "ok",
+  "why": "GW pages: Slaughterbound CORE ABILITIES \"Deadly Demise D3, Leader\"; Exalted Eightbound CORE ABILITIES \"Deep Strike\" only. So Deadly Demise D3 is the Slaughterbound’s alone. Scouts 6\" comes from Lord of the Eightbound (attached to a WORLD EATERS POSSESSED unit), the Slaughterbound’s own, as main had it."
+ },
+ {
+  "key": "d7e139500ce60564",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "As princes: GW’s Slaughterbound page alone prints Deadly Demise D3 (Exalted Eightbound: Deep Strike only); Scouts 6\" from Lord of the Eightbound, the Slaughterbound’s."
+ },
+ {
+  "key": "6cb2adadb487f1ab",
+  "where": "pubstomper · Exalted Sorcerer",
+  "verdict": "ok",
+  "why": "Unchanged from main 2b36d08 (re-keyed: the models lines now carry the Icon of Flame on the Rubric Marine w/ soulreaper cannon, as the export’s association says): Battleline, Rubric, Rubric Marines, Rubricae are the Rubric Marines’ page keywords."
+ },
+ {
+  "key": "6f214287582086eb",
+  "where": "pubstomper · Exalted Sorcerer",
+  "verdict": "ok",
+  "why": "Unchanged from main (re-keyed): GW Rubric Marines ARMY RULES \"Cabal of Sorcerers (Aspiring Sorcerer only)\"; the Exalted Sorcerer has it on his own page."
+ },
+ {
+  "key": "6030fc896f140a83",
+  "where": "pubstomper · Exalted Sorcerer",
+  "verdict": "ok",
+  "why": "Unchanged from main (re-keyed): PSYKER is the Aspiring Sorcerer’s only on GW’s Rubric Marines page; the Exalted Sorcerer’s page prints PSYKER."
+ },
+ {
+  "key": "5ef4c19e1538c469",
+  "where": "4-megas-and-a-destrier · Canis Rex",
+  "verdict": "ok",
+  "why": "GW Sir Hekhtur page (imperial-knights_Sir-Hekhtur.html): CORE ABILITIES Lone Operative; Canis Rex’s page does not print it. Unchanged from main; now derived from his page."
+ },
+ {
+  "key": "474b7b5ae09f8791",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith",
+  "verdict": "ok",
+  "why": "GW Kastelan Robots page: CORE ABILITIES \"Deadly Demise 1\"; Cybernetica Datasmith page: \"Support\" only. So the Kastelans alone have it."
+ },
+ {
+  "key": "9e9d0f474c2c4db4",
+  "where": "defilers-and-friends · Lord Exultant",
+  "verdict": "ok",
+  "why": "The judgement is right per GW: Lord of the Host (\"If this model is attached to an EMPEROR’S CHILDREN BATTLELINE unit …, this model has the Infiltrators and Scouts 6\" abilities\"); Infractors CORE ABILITIES print Scouts 6\" only. Its screen consequence is not ok and is recorded separately (key reimport-pregame-scouts): app.html everyModel() tests Scouts and Infiltrators with one regex, so this partialRules entry also drops the unit’s Scouts 6\" from the pre-battle list."
+ },
+ {
+  "key": "ff05d515bd504f4f",
+  "where": "lite-knights · Trajann Valoris",
+  "verdict": "ok",
+  "why": "GW Trajann Valoris page: CORE ABILITIES Feel No Pain 5+; the Allarus Custodians’ page does not print it. Unchanged from main."
+ },
+ {
+  "key": "1a035ba17b0c264e",
+  "where": "nerf-when · Impulsor · Transport",
+  "verdict": "ok",
+  "why": "derive.js’s transport-capacity tag, which every other TRANSPORT ability in data.js carries; the words (\"This model has a transport capacity of 7 …\") are GW’s."
+ },
+ {
+  "key": "54faaeccfb5cee1c",
+  "where": "the-exiled-legion · Skulltaker",
+  "verdict": "ok",
+  "why": "Unchanged from main (re-keyed: the Daemonic Icon and Instrument of Chaos now on one Bloodletter each, from the export’s associations, GW: \"1 Bloodletter that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos\", so two models). Battleline, Bloodletters are the Bloodletters’ page keywords."
+ },
+ {
+  "key": "fc115954550fd61a",
+  "where": "the-exiled-legion · Bloodmaster",
+  "verdict": "ok",
+  "why": "As the Skulltaker’s: unchanged from main, re-keyed by the models lines."
+ },
+ {
+  "key": "83f6ca215fa32a44",
+  "where": "the-exiled-legion · Skullmaster",
+  "verdict": "ok",
+  "why": "Unchanged from main (re-keyed: the icon and instrument on one Bloodcrusher each, from the export’s associations; GW’s Bloodcrushers options forbid both on one model)."
+ },
+ {
+  "key": "e785a26c873de16c",
+  "where": "navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian",
+  "verdict": "ok",
+  "why": "Mysterious Guardian’s GW words print \"(Once per battle, per army)\" (data.js enhancement text); the same limit tag Archslaughterer and Umbralefic Crystal carry."
+ },
+ {
+  "key": "c37a6a65d2c75cdc",
+  "where": "screenPregame",
+  "verdict": "ok",
+  "why": "screenPregame: each of Scouts and Infiltrators now tested by itself (scoutRules keeps a rule only when everyModel holds for that rule’s key). Defilers’ pre-battle list is main’s again (\"Lord Exultant Scouts 6\"\", \"Tormentors Infiltrators\"); the Lord Exultant’s Infiltrators, his alone, is rightly not listed."
+ },
+ {
+  "key": "reimport-icon-placement",
+  "where": "verify/from-json.js (round 1 finding)",
+  "verdict": "note",
+  "why": "Resolved in af68216: an upgrade on the unit with an outgoing association to a model selection is that model’s. princes, standard and big-demons-baby are main’s models lines again (no snapshot change left for them); pubstomper’s Icon of Flame is on the Rubric Marine w/ soulreaper cannon (the export’s association, m1k4bcp); the-exiled-legion’s Bloodletters and Bloodcrushers get one model each for the icon and the instrument (associations to the Bloodletter/Bloodcrusher lines; GW requires different models). 69f3ecc applies the rule to weapon upgrades too: pubstomper’s 2 Hellfyre missile racks (export: n=2, associated with \"Scarab Occult Terminator w/ soulreaper cannon\", n=2) are those two models’ weapons; GW lets any Scarab Occult Terminator carry one (\"For every 5 models in this unit, 1 Scarab Occult Terminator can be equipped with 1 hellfyre missile rack\"). No other line changed."
+ },
+ {
+  "key": "reimport-pregame-scouts",
+  "where": "app.html screenPregame (round 1 finding)",
+  "verdict": "note",
+  "why": "Resolved in e045b87 (see c37a6a65d2c75cdc)."
+ },
+ {
+  "key": "reimport-hand-why-removed",
+  "where": "verify/sources/hand (round 1 finding)",
+  "verdict": "note",
+  "why": "Resolved in 9d88dce: the 45 entries and the Dark Pacts / Deathwatch Support whys are back. The reimport step fails on an entry without a reason. Mutations: a deleted why (princes) and a blank why (healybois) each FAIL \"hand-file entries without a reason\"."
+ },
+ {
+  "key": "reimport-hand-reasons",
+  "where": "verify/sources/hand (round 1 finding)",
+  "verdict": "note",
+  "why": "Resolved: every new entry has a why (spot-checked against GW: the WAR DOG auras, Thundercharge, Ahriman/Shaman keywords). Disciple of Khorne’s Deep Strike is now derived (\"The bearer has the X ability\" of an enhancement); the enhancement InSv rule touches the bearer’s row only."
+ },
+ {
+  "key": "reimport-scope-note",
+  "where": "verify/reimport.js (round 1 note)",
+  "verdict": "note",
+  "why": "Resolved: the header states what it guarantees and what not. An id kept from data.js must be named in the hand file’s ids: a hand-renamed id (princes chaos-rhino → chaos-rhino-x) and a dropped ids entry (shooty wazdakka) each FAIL. Re-run at 4bde364 and again at 69f3ecc (a8f535e changes app.html only; dmshown/dmsingle re-run there: 0 changes): 24/24 the same, reasons and ids checks pass; dmshown 0 of 675 and dmsingle 0 of 13566 changed against main 2b36d08."
+ },
+ {
+  "key": "reimport-in-ability-wording",
+  "where": "app.html givenBy/givenTag (round 2 finding)",
+  "verdict": "note",
+  "why": "Marneus Calgar fixed in 94f71ac: givesSelf counts only words that give the model itself the rule, and a rule the model’s own row prints is not \"(in …)\". nerf-when’s Deep Strike lines are main’s again (\"Marneus Calgar only\"). Kept and right: \"(in Lord of the Host)\" (defilers Infiltrators), \"(in Lord of the Eightbound)\" (princes, standard Scouts 6\"), \"(in Collar of Khorne)\", \"(in Robotic Bodyguard)\"."
+ },
+ {
+  "key": "reimport-only-dropped",
+  "where": "app.html givenIn/givenTag (round 3 finding)",
+  "verdict": "note",
+  "why": "Fixed in a8f535e: when the only source is the enhancement the unit label already names, the line falls back to \"only\". big-demons-baby (\"Lord on Juggernaut only\") and mucho-mutantes (\"Tzaangor Shaman only\") read as on main, which is right per GW (the Khorne Berzerkers and Tzaangor Enlightened pages print no CORE ABILITIES). Every changed \"(in …)\" / \"only\" line in the 15 snapshot diffs at a8f535e checked against GW: Kastelan Robots only (Deadly Demise 1), Slaughterbound only (Deadly Demise D3), in Lord of the Eightbound (Scouts 6\"), in Lord of the Host (Infiltrators), in Collar of Khorne, in Robotic Bodyguard. nerf-when’s Marneus Calgar is main’s. The builder’s refreshed diffs equal mine."
+ }
+]
