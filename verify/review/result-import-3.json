@@ -1,0 +1,62 @@
+[
+ {
+  "key": "53120aaa17744ee2",
+  "where": "runImport",
+  "verdict": "ok",
+  "why": "Round 3: helpers.js now matches `async function`, so the item holds the real code, and its implements text matches it. In the browser at 390px (round 2): refusals are listed one per line and nothing is kept; dedupe by sha256 id shows Already imported with Open; a quota error on setItem gives the 'for now' toast; Update replaces the stale row. New: the matching importStale row is dropped when the same id comes back, and listName is kept. Every export string reaching innerHTML goes through esc (names, errors)."
+ },
+ {
+  "key": "bd6386a415dc0cd7",
+  "where": "importedFoot",
+  "verdict": "ok",
+  "why": "It escapes the date, the faction name and gwPoints unit. g.export and g.gw are numbers the builder computes. The built/copied sentence is checked in the browser for Healybois (built) and Orks text C (copied), and the quota case reads 'This phone could not keep it'. The implements text now names the points note."
+ },
+ {
+  "key": "43797b8aebbd97cd",
+  "where": "removeKept",
+  "verdict": "ok",
+  "why": "Checked in a browser (round 2): wh-used-<id>, wh-check-<id>, the star, the kept export, the list and its stale row are all removed. It is used by Remove, and by Update only when the new export's id differs."
+ },
+ {
+  "key": "87e6d4a2d537a32e",
+  "where": "removeImported",
+  "verdict": "ok",
+  "why": "It calls removeKept, resets ONLY, hides the sheet, replaces the history entry with home and toasts the name. Checked in a browser: on home, nothing of the list is left."
+ },
+ {
+  "key": "area-builder-enh-limit",
+  "where": "builder.js rosterLegal: the enhancement limit and Upgrades",
+  "verdict": "ok",
+  "why": "Fixed in dca3732. The count is now `all.filter(e => !isUpg(e)).length + uniq(all.filter(isUpg)).length`, so each distinct Upgrade counts once, as Core Rules 25.04 says: only its second and third instances do not count. A gate negative covers it.\n\nMy probes on dca3732:\n- L5 (3 normal enhancements + Synaptoprescience + Destabilising Predation = 5) is refused: '5 enhancements not imported: Strike Force’s enhancement limit is 4…'.\n- L4 (= 4) builds.\n- Augury Uplink ×3 builds (counted once), and ×4 is refused.\n- Null Nodules ×2 is refused for the duplicate and for the count."
+ },
+ {
+  "key": "area-builder-values",
+  "where": "builder.js: values, names and counts from GW",
+  "verdict": "ok",
+  "why": "I re-ran all of round 2's probes on b7a5291 and again on dca3732 and every one now gets the right result:\n- Refused, each naming both values: a rule's value over or under its change (S 20 / S 3 vs GW 9+1 = 10) and InSv 2+ vs Synaptoprescience 4+.\n- Refused: a value no rule changes (T 14, A 12), a model name not on the datasheet, and unknown wargear.\n- Built correctly: the legal swap to Rupture cannon at GW's 190, Pyrovores at 2 models at GW's 70 (note naming both), and a catalogue-only Neurotyrant matching GW's datasheet."
+ },
+ {
+  "key": "area-builder-legality",
+  "where": "builder.js: GW's restrictions (19.01, 25.03, 25.04, datasheets)",
+  "verdict": "ok",
+  "why": "Refused with the rule cited:\n- Wargear: both guns of a one-of group, the required gun missing, 2× Stinger salvoes, and Pyrovores with 1 Flamespurt over 3 models.\n- Models: 4 Pyrovore models.\n- Enhancements: on a non-CHARACTER, on an EPIC HERO, against its own words (Synaptoprescience on a Norn Emissary), the same one twice, and Upgrade Augury Uplink ×4.\n- Exclusions: Regenerating Monstrosity on a MONSTER, Auric Eagle on TERMINATOR Allarus, and Auric Eagle on an Anathema Psykana Prosecutor Squad.\n- Warlord: on Pyrovores, or none.\n- Unit limits: 2 Swarmlords, 4 Pyrovores, and Hormagaunts ×7 (BATTLELINE limit 6).\n- 5 DP of detachments.\n- Attachments: two leaders on one Tyrant Guard, two Supports on one Witchseeker Squad, an unattached Knight-Centura, and Knight-Centura marked Leading (it has no Leader ability).\n\nBuilt as legal:\n- Hormagaunts ×6.\n- Augury Uplink ×3.\n- Instinctive Defence on the Hive Tyrant.\n- Knight-Centura supporting a Witchseeker Squad, as one unit with support:true and ptsNote 55 + 55.\n- A Leader + Support pair on one body. No catalogued body accepts both, so I gave Trajann WITCHSEEKER SQUAD in memory: it builds as one unit, with also:[Knight-Centura support].\n\nThe enhancement count is covered by area-builder-enh-limit, fixed in dca3732."
+ },
+ {
+  "key": "area-core-25.03",
+  "where": "BUILD_INDEX.battleSizes",
+  "verdict": "ok",
+  "why": "It matches rules/core-rules.md 25.03 and the Wahapedia baseline verify/sources/waha-baseline/core.txt line 1446 on: Incursion 1000 pts / 2 DP / 2 enhancements / unit limit 2; Strike Force 2000 / 3 / 4 / 3; BATTLELINE and DEDICATED TRANSPORT double; EPIC HERO 1. build-index.js reads it from core-rules.md and throws if the table is missing. BS_IDS has only Strike Force, so `if(BS)` never skips a list today."
+ },
+ {
+  "key": "area-parity",
+  "where": "the full gate and regression on dca3732",
+  "verdict": "ok",
+  "why": "I ran verify/run.js in full on a scratch copy of dca3732. Every step passes except snapshots and helpers (the 4 items here), as expected:\n- import: 24/24 with 46 negatives.\n- reimport: 24/24 byte for byte.\n- screens: 390 and 320px, 3307 screens, 0 failures.\n- build-parity: P1 built 6 byte for byte, 18 copied, 0 differ; P2 with the built-vs-copied and stamp checks; 227 checks, 0 failures.\n\nsnapshots: only shooty.txt changes, and only in the home folders and Built-in pills, the import sheet, the How screen (15 tables, BUILD_INDEX) and the refused-import popup, which now awaits runImport and shows 'NOT IMPORTED · 1 REASON'. No legal list is newly refused. dmshown and dmsingle are identical to main. The row overflow is fixed at 320 and 390px, and a missing DecompressionStream has its own message. My text-B probe now uses the file's no-break space and is refused: 'detachment Dred Mob not recognized'."
+ },
+ {
+  "key": "area-size",
+  "where": "builder.js size",
+  "verdict": "ok",
+  "why": "60.5 KB is acceptable. It is published with a ?v= tag, cached in sw.js CORE, and included in the run.js and render.js hashes."
+ }
+]
