@@ -8028,7 +8028,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Epic Hero','Imperium','Canis Rex','Infantry','Sir Hekhtur','Faction: Imperial Knights'],
   kwOnly:{ 'Canis Rex':'Canis Rex', Questoris:'Canis Rex', Titanic:'Canis Rex', Towering:'Canis Rex', Vehicle:'Canis Rex', Walker:'Canis Rex', Infantry:'Sir Hekhtur', 'Sir Hekhtur':'Sir Hekhtur' },
   partialRules:{ 'Lone Operative':'Sir Hekhtur' },
-  srcNote:{ at:'Sir Hekhtur', note:'Wahapedia: his own EPIC HERO datasheet; BSData and New Recruit: in this unit' }
+  srcNote:{ at:'Sir Hekhtur', note:'Wahapedia: its own EPIC HERO datasheet; BSData and New Recruit: in this unit' }
 },
 'imperial-knights/cerastus-knight-atrapos':{
   name:'Cerastus Knight Atrapos', faction:'imperial-knights', bsId:'37a7-d156-1e4c-8fe1', role:'Character',

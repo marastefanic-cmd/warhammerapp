@@ -580,6 +580,19 @@ module.exports = function make(ROOT) {
     for (const x of inst) if (kwN.has(n(x.give)) && !said.has(n(x.give))) { segs.push(x.give + ' comes from ' + x.ab.name + ' (“' + plainQ(x.sen) + '”)'); said.add(n(x.give)); }
     return segs.length ? segs.join('; ') + '.' : undefined;
   }
+  // ---- where the sources disagree about a unit (srcNote, under the model it is about), by one fixed template: a model of the unit (BSData's and
+  // New Recruit's profile of it, a stats row) that Wahapedia prints on a datasheet of its own, not on a page of the unit's parts (modelPages:
+  // Sir Hekhtur): { at:<that model>, note:"Wahapedia: its own <EPIC HERO >datasheet; BSData and New Recruit: in this unit" } ("EPIC HERO" where its
+  // page's KEYWORDS line has it). None else (verify/tables.js --write writes it; its step "tables" holds data.js to it)
+  function srcNoteOf(u, faction) {
+    const parts = partsOf(u, faction), pn = x => n(String(x).replace(/ ×\d+$/, ''));
+    for (const m of [...new Set((u.stats || []).map(r => String(r.name).replace(/ ×\d+$/, '')))]) {
+      if (parts.some(p => pn(p.name) === pn(m))) continue;
+      const M = pageFor(faction, m); if (!M || parts.some(p => p.page && (p.page.file === M.file || (p.page.profiles || []).some(x => x.name && pn(x.name) === pn(m))))) continue;
+      return { at:m, note:'Wahapedia: its own ' + ((M.unitKeywords || []).some(k => n(k) === n('EPIC HERO')) ? 'EPIC HERO ' : '') + 'datasheet; BSData and New Recruit: in this unit' };
+    }
+    return undefined;
+  }
   // every resolved unit of the lists (the old form): its rows, a weapon's keywords, the Rules line (keywords: orderKw, with the list's own)
   function units(armies) {
     for (const a of armies) for (const u of a.units) {
@@ -613,7 +626,7 @@ module.exports = function make(ROOT) {
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { modelPages, wordsPass, pageSpells, gwWords, gwWordsOf, declaredWords, DEVW, pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, kwNoteOf, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
+  return { modelPages, wordsPass, pageSpells, gwWords, gwWordsOf, declaredWords, DEVW, pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, kwNoteOf, srcNoteOf, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
 };
 module.exports.wahaSectionsOf = wahaSectionsOf;
 module.exports.selectsFrom = selectsFrom;

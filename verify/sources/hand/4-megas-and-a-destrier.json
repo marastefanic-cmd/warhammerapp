@@ -3,14 +3,5 @@
  "source": {
   "text": "New Recruit, exported 20 Oct 2026",
   "why": "the day New Recruit’s PDF of this list was exported (verify/sources/nr/4-megas-and-a-destrier.txt), from which the list was first imported; the JSON export carries no date"
- },
- "units": {
-  "canis-rex": {
-   "srcNote": {
-    "at": "Sir Hekhtur",
-    "note": "Wahapedia: his own EPIC HERO datasheet; BSData and New Recruit: in this unit"
-   },
-   "why": "srcNote: GW (Wahapedia) prints Sir Hekhtur on his own EPIC HERO datasheet (imperial-knights_Sir-Hekhtur.html); BSData and New Recruit have him as a model of the Canis Rex unit, as the app does. The note on his models line says so."
-  }
  }
 }

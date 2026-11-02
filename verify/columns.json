@@ -626,8 +626,8 @@
      "note": "rules only one model of the unit has; signed off"
     },
     "srcNote": {
-     "source": "hand",
-     "note": "where the sources disagree about the unit; signed off"
+     "source": "derived",
+     "note": "where the sources disagree about the unit, by one fixed template: a model of the unit (BSData’s and New Recruit’s profile of it) that Wahapedia prints on a datasheet of its own (verify/gw-order.js srcNoteOf: { at, note:“Wahapedia: its own EPIC HERO datasheet; BSData and New Recruit: in this unit” }); verify/tables.js --write writes it, its step “tables” holds data.js to it"
     },
     "stats": {
      "source": "newrecruit",
@@ -971,8 +971,8 @@
      "note": "rules only one model has; signed off"
     },
     "srcNote": {
-     "source": "hand",
-     "note": "where the sources disagree about the unit; signed off"
+     "source": "derived",
+     "note": "where the sources disagree about the unit, by one fixed template: a model of the unit (BSData’s and New Recruit’s profile of it) that Wahapedia prints on a datasheet of its own (verify/gw-order.js srcNoteOf: { at, note:“Wahapedia: its own EPIC HERO datasheet; BSData and New Recruit: in this unit” }); verify/tables.js --write writes it, its step “tables” holds data.js to it"
     },
     "leaders": {
      "source": "bsdata",

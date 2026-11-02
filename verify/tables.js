@@ -100,8 +100,8 @@ function gwWords(R){
 // the lists, the order of their rows, keywords and Rules line aside (what --write may change: GW's order, gwOrder)
 const ORDERED = ['ranged', 'melee', 'abilities', 'kw', 'rules'];
 // (--write: the keywords' content too, which GW's datasheets give: verify/keywords.js checks it; and the keywords note, kwNote, by its fixed
-// templates over them: verify/gw-order.js kwNoteOf)
-const noKw = A => A.map(a => Object.assign({}, a, { units:a.units.map(u => Object.assign({}, u, { kw:null, kwNote:null })) }));
+// templates over them: verify/gw-order.js kwNoteOf; and srcNote, srcNoteOf)
+const noKw = A => A.map(a => Object.assign({}, a, { units:a.units.map(u => Object.assign({}, u, { kw:null, kwNote:null, srcNote:null })) }));
 const unordered = A => { const un = x => Array.isArray(x) ? x.map(un) : x && typeof x === 'object' ? Object.fromEntries(Object.entries(x).map(([k, y]) => [k, ORDERED.includes(k) && Array.isArray(y) ? un(y).map(z => stable(z)).sort() : un(y)])) : x;
   return un(JSON.parse(JSON.stringify(A, (k, x) => FP_KEYS.includes(k) || k === 'own' ? undefined : x))); };   // (the fingerprints aside first: they are no part of a row)
 
@@ -451,6 +451,8 @@ function build(R){
   const kwNote = U => { const parts = GWO().partsOf(U.u, U.a.faction), k = GWO().kwNoteOf(U.u, U.a.faction, U.why, R.grants, GWO().partCats(bsIds, U.a.id + '/' + U.u.id, parts));
     if(k) U.u.kwNote = k; else delete U.u.kwNote; };
   for(const U of units) if(!U.u.ref) kwNote(U);
+  // (and where the sources disagree about it, srcNote: a model Wahapedia prints on a datasheet of its own, verify/gw-order.js srcNoteOf)
+  for(const U of units) if(!U.u.ref){ const sn = GWO().srcNoteOf(U.u, U.a.faction); if(sn) U.u.srcNote = sn; else delete U.u.srcNote; }
   for(const U of units){ const parts = GWO().partsOf(U.u, U.a.faction), own = Object.keys((U.why || {}).kw || {});
     const kw = GWO().gwKeywords(U.u, parts, own, GWO().partCats(bsIds, U.a.id + '/' + U.u.id, parts)); if(kw) U.u.kw = kw.slice();
     GWO().orderKw(U.u, parts, own, kw && kw.names); }

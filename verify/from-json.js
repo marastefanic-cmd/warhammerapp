@@ -1577,7 +1577,9 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
   // the unit's short name on the screen (short: "Daemon Prince" for the Daemon Prince of Khorne), its note on its sources (srcNote:
   // { at, note }), and which model has a keyword or a core ability only some of its models have (kwOnly / partialRules: { <keyword or
   // rule>: <model> }, the whole column, null for none) where GW's datasheet pages do not give it mechanically (Sir Hekhtur's)
-  for (const k of ['short', 'srcNote', 'kwOnly', 'partialRules']) if (h[k] !== undefined) {
+  // (srcNote is derived: verify/tables.js --write writes it by verify/gw-order.js srcNoteOf, never the hand file's)
+  if (h.srcNote !== undefined) want(uid, 'hand file srcNote', 'srcNote is derived (verify/gw-order.js srcNoteOf): take it out of the hand file');
+  for (const k of ['short', 'kwOnly', 'partialRules']) if (h[k] !== undefined) {
     if (h[k] === null) delete u[k]; else u[k] = JSON.parse(JSON.stringify(h[k]));
     handDone.push({ what: k + ' of ' + u.name + ': ' + JSON.stringify(h[k]), by: 'hand (Claude)', text: (h.whyCols || {})[k] || h.why || '' });
   }
