@@ -71,7 +71,7 @@ const steps = {};
 const step = (name, args, env) => {
   const file = args[0];
   if(!fs.existsSync(path.join(ROOT, file))){ steps[name] = { ok:false, out:'missing ' + file }; return; }
-  const t0 = Date.now(), r = node(args, Object.assign({ VERIFY_STEP_MS:JSON.stringify(Object.fromEntries(Object.entries(steps).map(([k, v]) => [k, v.ms])) ) }, env || {}));
+  const t0 = Date.now(), r = node(args, Object.assign({ VERIFY_PASSED:JSON.stringify(Object.fromEntries(Object.entries(steps).filter(([, v]) => v.ok).map(([k, v]) => [k, v.ms]))) }, env || {}));
   const out = (r.stdout + r.stderr).trim();
   steps[name] = { ok:r.status === 0, out:out.split('\n').slice(0, 40).join('\n'), ms:Date.now() - t0 };
   console.log((r.status === 0 ? 'PASS ' : 'FAIL ') + name + '  ' + out.split('\n')[0]);

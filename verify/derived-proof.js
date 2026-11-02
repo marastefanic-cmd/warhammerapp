@@ -167,11 +167,12 @@ const CACHE = (() => { try { return JSON.parse(fs.readFileSync(OUT, 'utf8')).col
     const c = !fresh && CACHE[w.id], p = c && c.proof;
     if(p && w.steps.some(x => x.s.name === p.step && x.f === p.deriver && w.tries.some(ch => ch.at === p.at && keyOf(w, x, ch) === p.key))){ res[w.id] = c; kept++; return false; }
     return true; });
-  // (the quicker steps first: the gate's earlier steps' times when it runs this one, VERIFY_STEP_MS)
-  const ms = (() => { try { return JSON.parse(process.env.VERIFY_STEP_MS || '{}'); } catch(e){ return {}; } })();
+  // (the quicker steps first: when the gate runs this one, VERIFY_PASSED gives the steps that passed before it, on this data.js, and their
+  // times: those need no run on the unchanged data.js)
+  const ms = (() => { try { return JSON.parse(process.env.VERIFY_PASSED || '{}'); } catch(e){ return {}; } })();
   for(const w of queue) w.steps.sort((a, b) => (b.own ? 1 : 0) - (a.own ? 1 : 0) || (ms[a.s.name] || 0) - (ms[b.s.name] || 0));
   // a step's run on the unchanged data.js, once, when a proof would stand on it (a step failing there proves nothing)
-  const base = {}, baseline = (dir, s) => base[s.name] || (base[s.name] = runStep(dir, s).then(r => { log('unchanged: ' + s.name + ' ' + (r.code === 0 ? 'passes' : 'FAILS') + ' (' + Math.round(r.ms / 1000) + 's)'); return r.code === 0; }));
+  const base = Object.fromEntries(Object.keys(ms).map(k => [k, Promise.resolve(true)])), baseline = (dir, s) => base[s.name] || (base[s.name] = runStep(dir, s).then(r => { log('unchanged: ' + s.name + ' ' + (r.code === 0 ? 'passes' : 'FAILS') + ' (' + Math.round(r.ms / 1000) + 's)'); return r.code === 0; }));
   const dirs = queue.length ? await Promise.all([...Array(Math.min(jobs, queue.length))].map((_, k) => copy(k))) : [];
   let done = 0, next = 0;
   await Promise.all(dirs.map(async dir => {
