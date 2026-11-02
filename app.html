@@ -5638,9 +5638,7 @@ function showRule(label){
   if(!r){ toast('No rule text stored for ' + label); return; }
   const users = r.src === 'Core rule' ? ruleUsers(r.key) : r.needs ? army().units.filter(u => matches(r.needs, u)) : [];
   sheetRule = r.key;   // the rule's own name inside its text is not a link to itself
-  const kws = army().units.flatMap(u => [...(u.ranged || []), ...(u.melee || [])].flatMap(w => w.kw)).join(' ').toLowerCase();
-  const text = r.text.split('\n').filter(l => { const m = /^\*App note[^\n]*suffix “([^”]+)”/.exec(l); return !m || kws.includes(m[1].toLowerCase()); }).join('\n');
-  const body = textWithTable({ text, table:r.table, tableAt:r.tableAt });
+  const body = textWithTable({ text:r.text, table:r.table, tableAt:r.tableAt });
   sheetRule = null;
   const gap = (r.missing || []).length ? '<p class="note">Not in the app yet: the ' + esc(r.missing.join(' and ')) + '.</p>' : '';
   // the faction's own text of this core ability (Imperial Knights' Super-heavy Walker), both shown with the note on them

@@ -20,8 +20,7 @@
      refQuote       a reference sheet's quote (ref) is GW's words of the ability or stratagem it names, verbatim, and what it names is the list's
    A line marked "*Wahapedia core rules (…): …*" (a sentence GW's Core Rules PDF does not print) is checked word for word in
    Wahapedia's core rules only.
-   Lines the app marks as its own ("*App note, not rules text: …*") are not checked; they are listed in out/texts.json
-   (appNotes). Any other line of a verbatim field that is in no source is a failure (also listed: notInAnySource).
+   A line the app marks as its own ("*App note, not rules text: …*") fails (appNote): a rules text is GW's words only. Any other line of a verbatim field that is in no source is a failure (also listed: notInAnySource).
 
    Sources (authority order): GW Core Rules, Universal Rules Updates and Faction Packs (verify/.cache/gw, read with
    `pdftotext -raw`), Wahapedia (verify/.cache/waha: <faction>.txt from waha-extract.py, and the .html pages),
@@ -329,7 +328,7 @@ function nearest(needle, docIds) {
 
 /* ------------------------------------------------------------------ line classes */
 // Lines of a rules text, by what they claim to be:
-//   appnote   "*App note, not rules text: …*"                  the app's own words, not checked (listed)
+//   appnote   "*App note, not rules text: …*"                  the app's own words: a failure (appNote)
 //   wfaq      "*Wahapedia FAQ: <question>? <answer>*"          Wahapedia FAQ (question and answer checked)
 //   werrata   "*Wahapedia … errata (…): …*"                    Wahapedia errata
 //   packfaq   "*FAQ (Faction Pack …): …*"                       the Faction Pack's FAQ
@@ -391,7 +390,8 @@ function checkLines(cat, army, unit, field, text, gwDocs, wahaDocs, opts = {}) {
     if (c.kind === 'appsec' || c.kind === 'sec') block = c.kind;
     else if (c.kind === 'text' && block) c = { kind: block, body: c.body, inherited: true };
     count(cat);
-    if (c.kind === 'appnote') { appWritten.push({ army, unit, field, text: raw.trim(), marked: true }); continue; }
+    // (an app note, "*App note, not rules text: …*", is the app's own words in GW's: none, appNote fails)
+    if (c.kind === 'appnote') { count('appNote'); fail('appNote', army, unit, field, raw.trim().slice(0, 120), 'the app\'s own words in a rules text: GW\'s words only', ''); continue; }
     if (opts.special) { const sp = opts.special(raw); if (sp) { if (sp.ok) { if (sp.at) provRow(item, field, sp.at.d, sp.at.off, { text: raw.trim().slice(0, 80), how: sp.how }); } else fail(cat, army, unit, field, raw.trim(), sp.source, sp.where || ''); continue; } }
     let docs = gwDocs, less = wahaDocs, parts = [c.body];
     if (c.kind === 'wcore') { docs = WAHA_CORE; less = null; }

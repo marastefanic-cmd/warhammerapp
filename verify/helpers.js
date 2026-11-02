@@ -137,9 +137,7 @@ function items(D, appSource){
   }
   for(const s of D.coreStratagems) for(const k of STRAT_KEYS)
     if(s[k] !== undefined) add('core', 'strat-' + k, 'Core · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
-  // app notes inside core rules text, and which rule each keyword spelling opens
-  for(const [name, text] of Object.entries(D.rules)) for(const line of text.split('\n')) if(/^\*App note/.test(line))
-    add('core', 'rule-appnote', name, { note:line }, { rule:name, text:text.split('\n').filter(l => l !== line).join('\n') });
+  // which rule each keyword spelling opens (app notes inside a rules text: none, verify/texts.js appNote)
   for(const [re, k] of D.ruleAliases) add('core', 'rule-alias', String(re), { opens:k }, { rule:k, text:(D.rules[k] || '').slice(0, 300) });
   for(const f of Object.values(D.factions)) for(const [re, k] of f.aliases || []) add(f.name, 'rule-alias', String(re), { opens:k }, { rule:k });
   // the allies a faction may take (FACTIONS.allies: the role New Recruit prints → the rule that brings them in), against those rules
