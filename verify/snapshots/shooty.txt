@@ -47,10 +47,14 @@ Data (version)
 YOUR ARMIES
 Favorites
 0
+Built-in lists
+26
+Local lists
+0
 All lists
 26
 Import a list from New Recruit
-Its JSON export
+Its export: .json, .ros, .rosz or text
 How the app works and why you should be able to trust the data
 Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
 
@@ -67,48 +71,56 @@ NEWEST FIRST
 RANDOM
 Basic Bitch
 2000 pts
+BUILT-IN
 Tyranids · Invasion Fleet
 PRIORITY ASSETS
 , CHOSEN
 TAKE AND HOLD
 Healybois
 2000 pts
+BUILT-IN
 Tyranids · Assimilation Swarm · Talons of the Norn Queen
 PRIORITY ASSETS
 TAKE AND HOLD
 , CHOSEN
 Simple but effective
 2000 pts
+BUILT-IN
 Orks · Brute Bosses · Bully Boyz · Runt Swarm
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 U w0t m8?
 2000 pts
+BUILT-IN
 Necrons · Obeisance Phalanx · The Phaeron’s Armoury
 DISRUPTION
 PRIORITY ASSETS
 , CHOSEN
 Tzeeeeentch
 2000 pts
+BUILT-IN
 Chaos Daemons · Cavalcade of Chaos · Scintillating Legion
 DISRUPTION
 PRIORITY ASSETS
 , CHOSEN
 Defilers and friends
 2000 pts
+BUILT-IN
 Emperor’s Children · Coterie of the Conceited
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Navigator sounds op ngl
 2000 pts
+BUILT-IN
 Imperial Knights · Freeblade Company
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Dread Host
 2000 pts
+BUILT-IN
 Adeptus Custodes · Dread Host · Honoured Companions · Lions of the Emperor
 DISRUPTION
 , CHOSEN
@@ -116,6 +128,7 @@ PURGE THE FOE
 TAKE AND HOLD
 Emperor’s Chosen
 2000 pts
+BUILT-IN
 Adeptus Custodes · Emperor’s Chosen · Honoured Companions · Lions of the Emperor
 DISRUPTION
 , CHOSEN
@@ -123,17 +136,20 @@ PRIORITY ASSETS
 TAKE AND HOLD
 Fellhammer Siege Task Force
 1995 pts
+BUILT-IN
 Chaos Space Marines · Cult of the Arkifane · Devotees of Destruction
 PRIORITY ASSETS
 , CHOSEN
 The Exiled Legion
 1995 pts
+BUILT-IN
 Chaos Daemons · Blood Legion · Warptide
 PURGE THE FOE
 , CHOSEN
 RECONNAISSANCE
 Nerf when
 2000 pts
+BUILT-IN
 Ultramarines · Assault Brethren · Deathwatch Support · Terminator Storm Force
 DISRUPTION
 PRIORITY ASSETS
@@ -141,6 +157,7 @@ TAKE AND HOLD
 , CHOSEN
 Lite Knights
 2000 pts
+BUILT-IN
 Adeptus Custodes · Emperor’s Chosen · Grav-Assault Force · Might of the Moritoi
 PRIORITY ASSETS
 TAKE AND HOLD
@@ -148,77 +165,90 @@ TAKE AND HOLD
 RECONNAISSANCE
 Mucho Mutantes
 2000 pts
+BUILT-IN
 Thousand Sons · Ritual of Regeneration · Warpmeld Pact
 PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
 Big demons baby
 2000 pts
+BUILT-IN
 World Eaters · Khorne Daemonkin · Vessels of Wrath
 PRIORITY ASSETS
 , CHOSEN
 RECONNAISSANCE
 Pubstomper
 2000 pts
+BUILT-IN
 Thousand Sons · Grand Coven
 DISRUPTION
 PRIORITY ASSETS
 , CHOSEN
 Woof Woof
 2000 pts
+BUILT-IN
 Chaos Knights · Houndpack Lance · Hunting Warpack
 RECONNAISSANCE
 , CHOSEN
 Infernal Lance
 2000 pts
+BUILT-IN
 Chaos Knights · Infernal Lance
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Purge goes the Foe
 2000 pts
+BUILT-IN
 Adeptus Mechanicus · Cohort Cybernetica · Eradication Cohort
 PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
 Super Terminators
 2000 pts
+BUILT-IN
 World Eaters · Berzerker Warband · Butchers of Khorne
 PURGE THE FOE
 TAKE AND HOLD
 , CHOSEN
 4 megas and a destrier
 2000 pts
+BUILT-IN
 Imperial Knights · Freeblade Company
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 6 bigs
 2000 pts
+BUILT-IN
 Imperial Knights · Freeblade Company
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Nidzillas
 2000 pts
+BUILT-IN
 Tyranids · Crusher Stampede · Talons of the Norn Queen
 PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
 Standard
 2000 pts
+BUILT-IN
 World Eaters · Berzerker Warband · Vessels of Wrath
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Princes
 2000 pts
+BUILT-IN
 World Eaters · Berzerker Warband · Vessels of Wrath
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Me shooty yer’ booty
 2000 pts
+BUILT-IN
 Orks · Dread Mob · Shoota Boyz · Wreckas
 PRIORITY ASSETS
 PURGE THE FOE
@@ -232,36 +262,42 @@ A TO Z
 RANDOM
 4 megas and a destrier
 2000 pts
+BUILT-IN
 Imperial Knights · Freeblade Company
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 6 bigs
 2000 pts
+BUILT-IN
 Imperial Knights · Freeblade Company
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Basic Bitch
 2000 pts
+BUILT-IN
 Tyranids · Invasion Fleet
 PRIORITY ASSETS
 , CHOSEN
 TAKE AND HOLD
 Big demons baby
 2000 pts
+BUILT-IN
 World Eaters · Khorne Daemonkin · Vessels of Wrath
 PRIORITY ASSETS
 , CHOSEN
 RECONNAISSANCE
 Defilers and friends
 2000 pts
+BUILT-IN
 Emperor’s Children · Coterie of the Conceited
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Dread Host
 2000 pts
+BUILT-IN
 Adeptus Custodes · Dread Host · Honoured Companions · Lions of the Emperor
 DISRUPTION
 , CHOSEN
@@ -269,6 +305,7 @@ PURGE THE FOE
 TAKE AND HOLD
 Emperor’s Chosen
 2000 pts
+BUILT-IN
 Adeptus Custodes · Emperor’s Chosen · Honoured Companions · Lions of the Emperor
 DISRUPTION
 , CHOSEN
@@ -276,23 +313,27 @@ PRIORITY ASSETS
 TAKE AND HOLD
 Fellhammer Siege Task Force
 1995 pts
+BUILT-IN
 Chaos Space Marines · Cult of the Arkifane · Devotees of Destruction
 PRIORITY ASSETS
 , CHOSEN
 Healybois
 2000 pts
+BUILT-IN
 Tyranids · Assimilation Swarm · Talons of the Norn Queen
 PRIORITY ASSETS
 TAKE AND HOLD
 , CHOSEN
 Infernal Lance
 2000 pts
+BUILT-IN
 Chaos Knights · Infernal Lance
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Lite Knights
 2000 pts
+BUILT-IN
 Adeptus Custodes · Emperor’s Chosen · Grav-Assault Force · Might of the Moritoi
 PRIORITY ASSETS
 TAKE AND HOLD
@@ -300,24 +341,28 @@ TAKE AND HOLD
 RECONNAISSANCE
 Me shooty yer’ booty
 2000 pts
+BUILT-IN
 Orks · Dread Mob · Shoota Boyz · Wreckas
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Mucho Mutantes
 2000 pts
+BUILT-IN
 Thousand Sons · Ritual of Regeneration · Warpmeld Pact
 PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
 Navigator sounds op ngl
 2000 pts
+BUILT-IN
 Imperial Knights · Freeblade Company
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Nerf when
 2000 pts
+BUILT-IN
 Ultramarines · Assault Brethren · Deathwatch Support · Terminator Storm Force
 DISRUPTION
 PRIORITY ASSETS
@@ -325,66 +370,77 @@ TAKE AND HOLD
 , CHOSEN
 Nidzillas
 2000 pts
+BUILT-IN
 Tyranids · Crusher Stampede · Talons of the Norn Queen
 PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
 Princes
 2000 pts
+BUILT-IN
 World Eaters · Berzerker Warband · Vessels of Wrath
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Pubstomper
 2000 pts
+BUILT-IN
 Thousand Sons · Grand Coven
 DISRUPTION
 PRIORITY ASSETS
 , CHOSEN
 Purge goes the Foe
 2000 pts
+BUILT-IN
 Adeptus Mechanicus · Cohort Cybernetica · Eradication Cohort
 PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
 Simple but effective
 2000 pts
+BUILT-IN
 Orks · Brute Bosses · Bully Boyz · Runt Swarm
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Standard
 2000 pts
+BUILT-IN
 World Eaters · Berzerker Warband · Vessels of Wrath
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Super Terminators
 2000 pts
+BUILT-IN
 World Eaters · Berzerker Warband · Butchers of Khorne
 PURGE THE FOE
 TAKE AND HOLD
 , CHOSEN
 The Exiled Legion
 1995 pts
+BUILT-IN
 Chaos Daemons · Blood Legion · Warptide
 PURGE THE FOE
 , CHOSEN
 RECONNAISSANCE
 Tzeeeeentch
 2000 pts
+BUILT-IN
 Chaos Daemons · Cavalcade of Chaos · Scintillating Legion
 DISRUPTION
 PRIORITY ASSETS
 , CHOSEN
 U w0t m8?
 2000 pts
+BUILT-IN
 Necrons · Obeisance Phalanx · The Phaeron’s Armoury
 DISRUPTION
 PRIORITY ASSETS
 , CHOSEN
 Woof Woof
 2000 pts
+BUILT-IN
 Chaos Knights · Houndpack Lance · Hunting Warpack
 RECONNAISSANCE
 , CHOSEN
@@ -399,6 +455,7 @@ ADEPTUS CUSTODES
 3
 Dread Host
 2000 pts
+BUILT-IN
 Dread Host · Honoured Companions · Lions of the Emperor
 DISRUPTION
 , CHOSEN
@@ -406,6 +463,7 @@ PURGE THE FOE
 TAKE AND HOLD
 Emperor’s Chosen
 2000 pts
+BUILT-IN
 Emperor’s Chosen · Honoured Companions · Lions of the Emperor
 DISRUPTION
 , CHOSEN
@@ -413,6 +471,7 @@ PRIORITY ASSETS
 TAKE AND HOLD
 Lite Knights
 2000 pts
+BUILT-IN
 Emperor’s Chosen · Grav-Assault Force · Might of the Moritoi
 PRIORITY ASSETS
 TAKE AND HOLD
@@ -422,6 +481,7 @@ ADEPTUS MECHANICUS
 1
 Purge goes the Foe
 2000 pts
+BUILT-IN
 Cohort Cybernetica · Eradication Cohort
 PURGE THE FOE
 , CHOSEN
@@ -430,12 +490,14 @@ CHAOS DAEMONS
 2
 The Exiled Legion
 1995 pts
+BUILT-IN
 Blood Legion · Warptide
 PURGE THE FOE
 , CHOSEN
 RECONNAISSANCE
 Tzeeeeentch
 2000 pts
+BUILT-IN
 Cavalcade of Chaos · Scintillating Legion
 DISRUPTION
 PRIORITY ASSETS
@@ -444,12 +506,14 @@ CHAOS KNIGHTS
 2
 Infernal Lance
 2000 pts
+BUILT-IN
 Infernal Lance
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Woof Woof
 2000 pts
+BUILT-IN
 Houndpack Lance · Hunting Warpack
 RECONNAISSANCE
 , CHOSEN
@@ -457,6 +521,7 @@ CHAOS SPACE MARINES
 1
 Fellhammer Siege Task Force
 1995 pts
+BUILT-IN
 Cult of the Arkifane · Devotees of Destruction
 PRIORITY ASSETS
 , CHOSEN
@@ -464,6 +529,7 @@ EMPEROR’S CHILDREN
 1
 Defilers and friends
 2000 pts
+BUILT-IN
 Coterie of the Conceited
 PRIORITY ASSETS
 PURGE THE FOE
@@ -472,18 +538,21 @@ IMPERIAL KNIGHTS
 3
 4 megas and a destrier
 2000 pts
+BUILT-IN
 Freeblade Company
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 6 bigs
 2000 pts
+BUILT-IN
 Freeblade Company
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Navigator sounds op ngl
 2000 pts
+BUILT-IN
 Freeblade Company
 PRIORITY ASSETS
 PURGE THE FOE
@@ -492,6 +561,7 @@ NECRONS
 1
 U w0t m8?
 2000 pts
+BUILT-IN
 Obeisance Phalanx · The Phaeron’s Armoury
 DISRUPTION
 PRIORITY ASSETS
@@ -500,12 +570,14 @@ ORKS
 2
 Me shooty yer’ booty
 2000 pts
+BUILT-IN
 Dread Mob · Shoota Boyz · Wreckas
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Simple but effective
 2000 pts
+BUILT-IN
 Brute Bosses · Bully Boyz · Runt Swarm
 PRIORITY ASSETS
 PURGE THE FOE
@@ -514,12 +586,14 @@ THOUSAND SONS
 2
 Mucho Mutantes
 2000 pts
+BUILT-IN
 Ritual of Regeneration · Warpmeld Pact
 PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
 Pubstomper
 2000 pts
+BUILT-IN
 Grand Coven
 DISRUPTION
 PRIORITY ASSETS
@@ -528,18 +602,21 @@ TYRANIDS
 3
 Basic Bitch
 2000 pts
+BUILT-IN
 Invasion Fleet
 PRIORITY ASSETS
 , CHOSEN
 TAKE AND HOLD
 Healybois
 2000 pts
+BUILT-IN
 Assimilation Swarm · Talons of the Norn Queen
 PRIORITY ASSETS
 TAKE AND HOLD
 , CHOSEN
 Nidzillas
 2000 pts
+BUILT-IN
 Crusher Stampede · Talons of the Norn Queen
 PURGE THE FOE
 , CHOSEN
@@ -548,6 +625,7 @@ ULTRAMARINES
 1
 Nerf when
 2000 pts
+BUILT-IN
 Assault Brethren · Deathwatch Support · Terminator Storm Force
 DISRUPTION
 PRIORITY ASSETS
@@ -557,24 +635,28 @@ WORLD EATERS
 4
 Big demons baby
 2000 pts
+BUILT-IN
 Khorne Daemonkin · Vessels of Wrath
 PRIORITY ASSETS
 , CHOSEN
 RECONNAISSANCE
 Princes
 2000 pts
+BUILT-IN
 Berzerker Warband · Vessels of Wrath
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Standard
 2000 pts
+BUILT-IN
 Berzerker Warband · Vessels of Wrath
 PRIORITY ASSETS
 PURGE THE FOE
 , CHOSEN
 Super Terminators
 2000 pts
+BUILT-IN
 Berzerker Warband · Butchers of Khorne
 PURGE THE FOE
 TAKE AND HOLD
@@ -593,12 +675,14 @@ A TO Z
 RANDOM
 Healybois
 2000 pts
+BUILT-IN
 Tyranids · Assimilation Swarm · Talons of the Norn Queen
 PRIORITY ASSETS
 TAKE AND HOLD
 , CHOSEN
 Me shooty yer’ booty
 2000 pts
+BUILT-IN
 Orks · Dread Mob · Shoota Boyz · Wreckas
 PRIORITY ASSETS
 PURGE THE FOE
@@ -608,10 +692,14 @@ PURGE THE FOE
 YOUR ARMIES
 Favorites
 2
+Built-in lists
+26
+Local lists
+0
 All lists
 26
 Import a list from New Recruit
-Its JSON export
+Its export: .json, .ros, .rosz or text
 How the app works and why you should be able to trust the data
 Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
 
@@ -625,13 +713,13 @@ Your New Recruit lists; BSData, the data New Recruit is built from; Games Worksh
 2 · How a list is built
 A program reads the list’s New Recruit export and writes it into the tables: each unit an entry that points at its datasheet, its stats, weapons, keywords, points and rules text copied from the sources. A list with only a PDF is typed in, and a program checks it against the PDF line by line.
 3 · The tables
-Everything the app shows is in 14 tables in one file, data.js, drawn below with their real row counts and columns. Each column is tagged: mechanical, AI summary or decided by hand.
+Everything the app shows is in 15 tables in one file, data.js, drawn below with their real row counts and columns. Each column is tagged: mechanical, AI summary or decided by hand.
 4 · What checks every release
 A second program compares every table with its sources again and renders every screen; if a single check fails, nothing is released. What it checks
 5 · How the app draws pages
 One page template reads the tables and draws every screen from them. Each release renders every screen of every list and compares its text with the last one accepted, so no screen changes unseen.
 THE TABLES
-14
+15
 ARMIES
 26 lists · 225 entries
 FACTIONS
@@ -1213,6 +1301,8 @@ one stat box: a characteristic of a unit’s models GW’s sentence changes, as 
 
 MECHANICAL quote (GW), st (computed), on (computed), reach (computed), scope (computed)
 
+BUILD_INDEX
+5 rows · what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values over BSData’s): written by verify/build-index.js
 BS_IDS
 13 lookups · the BSData ids the list import resolves an export by (verify/import-ids.js --write)
 
@@ -1270,7 +1360,7 @@ one value · the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-02.2
+2026-11-02.3
 
 WHY YOU CAN TRUST THE DATA
 
@@ -1296,30 +1386,32 @@ NEW RECRUIT
 
 Import a list
 
-In New Recruit, open the list, then Export and JSON. Choose that file here, or paste its text.
+In New Recruit, open the list, then Export. Choose the file here (.json, .ros, .rosz or .txt), or paste its text.
 
-CHOOSE THE .JSON FILE
+CHOOSE THE FILE
+LIST NAME
 Import
 
-The list is taken only when every unit, option, enhancement and detachment in it is one that the app’s own checked lists have, exactly. Otherwise nothing is added, and each item the app does not recognize is listed. An imported list is kept on this phone.
+A list of a faction the app has in full is built from the app’s own tables, exactly as its built-in lists are. Another faction’s list is taken only when every unit in it is one the app’s own lists have, exactly. Otherwise nothing is added, and each reason is listed. An imported list is kept on this phone.
 
 ######## popup import (not recognized) · KK Kunnin’ Kodex
 NEW RECRUIT
 
 Import a list
 
-In New Recruit, open the list, then Export and JSON. Choose that file here, or paste its text.
+In New Recruit, open the list, then Export. Choose the file here (.json, .ros, .rosz or .txt), or paste its text.
 
-CHOOSE THE .JSON FILE
+CHOOSE THE FILE
+LIST NAME
 Import
 
-NOT IMPORTED · 1 ITEM NOT RECOGNIZED
+NOT IMPORTED · 1 REASON
 
 Unit Knight Errant Mk II not recognized
 
-Nothing was added. The app takes a list only when it already has every part of it.
+Nothing was added.
 
-The list is taken only when every unit, option, enhancement and detachment in it is one that the app’s own checked lists have, exactly. Otherwise nothing is added, and each item the app does not recognize is listed. An imported list is kept on this phone.
+A list of a faction the app has in full is built from the app’s own tables, exactly as its built-in lists are. Another faction’s list is taken only when every unit in it is one the app’s own lists have, exactly. Otherwise nothing is added, and each reason is listed. An imported list is kept on this phone.
 
 ######## army · ARMIES Me shooty yer’ booty
 Orks · 2000 / 2000 pts · Strike Force
