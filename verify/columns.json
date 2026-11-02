@@ -32,7 +32,8 @@
    "columns": {
     "pattern": {
      "source": "hand",
-     "note": "which chip opens which rule: mechanical where it reads the rule’s own name (verify/texts.js alias: “feel no pain”, its value aside), a player’s word for a rule otherwise, signed off (approvals.json, rule-alias); it writes no line"
+     "note": "which chip opens which rule: mechanical where it reads the rule’s own name (verify/texts.js alias: “feel no pain”, its value aside), a player’s word for a rule otherwise, signed off (approvals.json, rule-alias); it writes no line",
+     "declared": "which chip opens which rule; it writes no line: mechanical where it reads the rule’s own name (verify/texts.js alias), a player’s word for a rule otherwise (verify/helpers.js rule-alias)"
     },
     "rule": {
      "source": "derived",
@@ -396,7 +397,8 @@
    "columns": {
     "id": {
      "source": "derived",
-     "note": "a stable id made from the stratagem's name by verify/from-json.js (the app links by it)"
+     "note": "a stable id made from the stratagem's name by verify/from-json.js (the app links by it)",
+     "by": "verify/reimport.js"
     },
     "gist": {
      "source": "ai-summary",
@@ -548,7 +550,8 @@
    "columns": {
     "id": {
      "source": "derived",
-     "note": "a stable id made from the unit's name by verify/from-json.js (per-list state, links)"
+     "note": "a stable id made from the unit's name by verify/from-json.js (per-list state, links)",
+     "by": "verify/reimport.js"
     },
     "ds": {
      "source": "derived",
@@ -971,7 +974,8 @@
     },
     "faction": {
      "source": "derived",
-     "note": "the faction of the list it is in"
+     "note": "the faction of the list it is in",
+     "by": "verify/tables.js"
     },
     "bsId": {
      "source": "bsdata",
@@ -1256,35 +1260,43 @@
    "columns": {
     "rule": {
      "source": "derived",
-     "note": "the rule or ability (faction · detachment · rule, or list · unit · ability)"
+     "note": "the rule or ability (faction · detachment · rule, or list · unit · ability)",
+     "by": "verify/derive.js"
     },
     "option": {
      "source": "derived",
-     "note": "the option's name"
+     "note": "the option's name",
+     "by": "verify/derive.js"
     },
     "text": {
      "source": "derived",
-     "note": "its words"
+     "note": "its words",
+     "by": "verify/derive.js"
     },
     "found": {
      "source": "derived",
-     "note": "how verify/derive.js found it (a table row, \"**Name:** effect\", a bullet)"
+     "note": "how verify/derive.js found it (a table row, \"**Name:** effect\", a bullet)",
+     "by": "verify/derive.js"
     },
     "explicit": {
      "source": "derived",
-     "note": "its own words name when it is used"
+     "note": "its own words name when it is used",
+     "by": "verify/derive.js"
     },
     "trigger": {
      "source": "derived",
-     "note": "when it is used (its words, or the rule's)"
+     "note": "when it is used (its words, or the rule's)",
+     "by": "verify/derive.js"
     },
     "used": {
      "source": "derived",
-     "note": "where its effect is used"
+     "note": "where its effect is used",
+     "by": "verify/derive.js"
     },
     "phases": {
      "source": "derived",
-     "note": "trigger and used together"
+     "note": "trigger and used together",
+     "by": "verify/derive.js"
     }
    }
   },
@@ -1293,31 +1305,38 @@
    "columns": {
     "rule": {
      "source": "derived",
-     "note": "the rule or ability"
+     "note": "the rule or ability",
+     "by": "verify/derive.js"
     },
     "option": {
      "source": "derived",
-     "note": "the option of it that gives it"
+     "note": "the option of it that gives it",
+     "by": "verify/derive.js"
     },
     "grants": {
      "source": "derived",
-     "note": "the ability or keyword given"
+     "note": "the ability or keyword given",
+     "by": "verify/derive.js"
     },
     "type": {
      "source": "derived",
-     "note": "ability, or keyword / weapon ability"
+     "note": "ability, or keyword / weapon ability",
+     "by": "verify/derive.js"
     },
     "to": {
      "source": "derived",
-     "note": "which units (needs), or this unit / model"
+     "note": "which units (needs), or this unit / model",
+     "by": "verify/derive.js"
     },
     "while": {
      "source": "derived",
-     "note": "the option active, or the words' condition"
+     "note": "the option active, or the words' condition",
+     "by": "verify/derive.js"
     },
     "text": {
      "source": "derived",
-     "note": "the sentence that gives it"
+     "note": "the sentence that gives it",
+     "by": "verify/derive.js"
     }
    }
   },
@@ -1383,51 +1402,63 @@
    "columns": {
     "n": {
      "source": "derived",
-     "note": "the source's name (its rule, ability or stratagem)"
+     "note": "the source's name (its rule, ability or stratagem)",
+     "by": "verify/effects-migrate.js"
     },
     "b": {
      "source": "derived",
-     "note": "its boxes (BOXES.b)"
+     "note": "its boxes (BOXES.b)",
+     "by": "verify/effects-migrate.js"
     },
     "nc": {
      "source": "derived",
-     "note": "its sentences of a rare mechanic the Damage tab does not play (effects.js NC): shown with GW's words, \"not counted in the Damage tab\""
+     "note": "its sentences of a rare mechanic the Damage tab does not play (effects.js NC): shown with GW's words, \"not counted in the Damage tab\"",
+     "by": "verify/effects-migrate.js"
     },
     "reach": {
      "source": "derived",
-     "note": "an aura's units (GW tags it Aura): the friendly units its words reach, literal keywords"
+     "note": "an aura's units (GW tags it Aura): the friendly units its words reach, literal keywords",
+     "by": "verify/effects-migrate.js"
     },
     "both": {
      "source": "derived",
-     "note": "another rule's two options at once for the units it reaches (\"the Conqueror Imperative and Protector Imperative are both active for that unit\", Icon of War): names, quote, reach, mark, opt, lasts, read by verify/effects-extract.js"
+     "note": "another rule's two options at once for the units it reaches (\"the Conqueror Imperative and Protector Imperative are both active for that unit\", Icon of War): names, quote, reach, mark, opt, lasts, read by verify/effects-extract.js",
+     "by": "verify/effects-migrate.js"
     },
     "embarked": {
      "source": "derived",
-     "note": "a model of the unit not on the battlefield yet, read by one fixed pattern of GW's words (\"If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport\"): until (the model it waits for)"
+     "note": "a model of the unit not on the battlefield yet, read by one fixed pattern of GW's words (\"If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport\"): until (the model it waits for)",
+     "by": "verify/effects-migrate.js"
     },
     "played": {
      "source": "derived",
-     "note": "a core rule the Damage tab plays itself (calc: [LANCE] from the weapon's keyword; situation: Plunging Fire): its boxes are the datasheet footnotes' only (verify/effects-migrate.js)"
+     "note": "a core rule the Damage tab plays itself (calc: [LANCE] from the weapon's keyword; situation: Plunging Fire): its boxes are the datasheet footnotes' only (verify/effects-migrate.js)",
+     "by": "verify/effects-migrate.js"
     },
     "riled": {
      "source": "derived",
-     "note": "an ability whose words say \"This unit is riled up.\" (one fixed pattern, verify/effects-extract.js): the unit is always riled up"
+     "note": "an ability whose words say \"This unit is riled up.\" (one fixed pattern, verify/effects-extract.js): the unit is always riled up",
+     "by": "verify/effects-migrate.js"
     },
     "d": {
      "source": "derived",
-     "note": "its defence boxes, the datasheet's \"When targeted\" lines (BOXES.d): read from GW's words by verify/effects-extract.js (defenceOf) with effects.js DF; held to them by verify/defence.js D1-D8; not the Damage tab's"
+     "note": "its defence boxes, the datasheet's \"When targeted\" lines (BOXES.d): read from GW's words by verify/effects-extract.js (defenceOf) with effects.js DF; held to them by verify/defence.js D1-D8; not the Damage tab's",
+     "by": "verify/effects-migrate.js"
     },
     "dnc": {
      "source": "derived",
-     "note": "its sentences about attacks against the unit that no defence reads (effects.js DNC, its why): shown as \"not counted here: see the rule\", never left out (verify/defence.js D4)"
+     "note": "its sentences about attacks against the unit that no defence reads (effects.js DNC, its why): shown as \"not counted here: see the rule\", never left out (verify/defence.js D4)",
+     "by": "verify/effects-migrate.js"
     },
     "dreach": {
      "source": "derived",
-     "note": "a stratagem that protects a unit other than its TARGET (its WHEN's \"targets a friendly X unit\", its TARGET's \"within N\\\" of a friendly X unit that was selected as the target\"): those units, literal keywords (Grot Shields, Blessing of Burning Blood)"
+     "note": "a stratagem that protects a unit other than its TARGET (its WHEN's \"targets a friendly X unit\", its TARGET's \"within N\\\" of a friendly X unit that was selected as the target\"): those units, literal keywords (Grot Shields, Blessing of Burning Blood)",
+     "by": "verify/effects-migrate.js"
     },
     "st": {
      "source": "derived",
-     "note": "a rule’s stat boxes: a characteristic of its units’ models its words change (“add 2 to the Objective Control characteristic of models in that unit”), the line under a unit’s profile on its screen (verify/effects-extract.js statOf; verify/lines.js LS)"
+     "note": "a rule’s stat boxes: a characteristic of its units’ models its words change (“add 2 to the Objective Control characteristic of models in that unit”), the line under a unit’s profile on its screen (verify/effects-extract.js statOf; verify/lines.js LS)",
+     "by": "verify/effects-migrate.js"
     }
    }
   },
@@ -1444,63 +1475,78 @@
     },
     "fx": {
      "source": "derived",
-     "note": "its effects: [[effects.js FX id, value]], found in the quote by the catalogue's patterns (evidence G1, G3)"
+     "note": "its effects: [[effects.js FX id, value]], found in the quote by the catalogue's patterns (evidence G1, G3)",
+     "by": "verify/effects-migrate.js"
     },
     "on": {
      "source": "derived",
-     "note": "its conditions: [[effects.js COND id, value]] (q: GW's own words of a condition no catalogue entry reads; opt: the option of its rule), the box's label (evidence G5)"
+     "note": "its conditions: [[effects.js COND id, value]] (q: GW's own words of a condition no catalogue entry reads; opt: the option of its rule), the box's label (evidence G5)",
+     "by": "verify/effects-migrate.js"
     },
     "kind": {
      "source": "derived",
-     "note": "ranged, melee or all: from its words (ranged attacks, the Shooting phase, …)"
+     "note": "ranged, melee or all: from its words (ranged attacks, the Shooting phase, …)",
+     "by": "verify/effects-migrate.js"
     },
     "scope": {
      "source": "derived",
-     "note": "the weapons and models it names: weapon (a weapon's name or the head word of it), wkw (a weapon keyword), models (model, one, char, nonchar), part (the models of an attached unit's part)"
+     "note": "the weapons and models it names: weapon (a weapon's name or the head word of it), wkw (a weapon keyword), models (model, one, char, nonchar), part (the models of an attached unit's part)",
+     "by": "verify/effects-migrate.js"
     },
     "reach": {
      "source": "derived",
-     "note": "the friendly units it reaches (an aura, a unit another unit selects, a rule's units): { all, any, none } of literal keywords (evidence G5)"
+     "note": "the friendly units it reaches (an aura, a unit another unit selects, a rule's units): { all, any, none } of literal keywords (evidence G5)",
+     "by": "verify/effects-migrate.js"
     },
     "mark": {
      "source": "derived",
-     "note": "how it reaches them: aura, selected or friendly"
+     "note": "how it reaches them: aura, selected or friendly",
+     "by": "verify/effects-migrate.js"
     },
     "notSelf": {
      "source": "derived",
-     "note": "\"other friendly\": not its own unit"
+     "note": "\"other friendly\": not its own unit",
+     "by": "verify/effects-migrate.js"
     },
     "lasts": {
      "source": "derived",
-     "note": "how long it lasts past its step: turn, round or battle (its words: until the end of the turn, …)"
+     "note": "how long it lasts past its step: turn, round or battle (its words: until the end of the turn, …)",
+     "by": "verify/effects-migrate.js"
     },
     "opt": {
      "source": "derived",
-     "note": "the option of its rule it is (a table's row, a named option, a bold heading)"
+     "note": "the option of its rule it is (a table's row, a named option, a bold heading)",
+     "by": "verify/effects-migrate.js"
     },
     "pick": {
      "source": "derived",
-     "note": "one of several (a table's rows its rule picks one of, \"Or:\" bullets, \"select one of the following\", \"select either the X or Y ability\", \", or … instead\"): [{ name, fx, quote, on, part }]"
+     "note": "one of several (a table's rows its rule picks one of, \"Or:\" bullets, \"select one of the following\", \"select either the X or Y ability\", \", or … instead\"): [{ name, fx, quote, on, part }]",
+     "by": "verify/effects-migrate.js"
     },
     "part": {
      "source": "derived",
-     "note": "a part of a pick counted only while a fact of the table holds (the Conqueror Imperative's +1 AP: BATTLELINE, or within 6\" …)"
+     "note": "a part of a pick counted only while a fact of the table holds (the Conqueror Imperative's +1 AP: BATTLELINE, or within 6\" …)",
+     "by": "verify/effects-migrate.js"
     },
     "limit": {
      "source": "derived",
-     "note": "how many of its rule's boxes can be active at once, in its words (\"activate up to two Blessings of Khorne\")"
+     "note": "how many of its rule's boxes can be active at once, in its words (\"activate up to two Blessings of Khorne\")",
+     "by": "verify/effects-migrate.js"
     },
     "tableRows": {
      "source": "derived",
-     "note": "the box is its rule's table, a pick of its rows (one tick for the rule)"
+     "note": "the box is its rule's table, a pick of its rows (one tick for the rule)",
+     "by": "verify/effects-migrate.js"
     },
     "pool": {
      "source": "derived",
-     "note": "a re-roll of one die: how often, read from GW's words by closed patterns (selected: each time the unit is selected to shoot or fight, one for the unit; phase, turn, round)"
+     "note": "a re-roll of one die: how often, read from GW's words by closed patterns (selected: each time the unit is selected to shoot or fight, one for the unit; phase, turn, round)",
+     "by": "verify/effects-migrate.js"
     },
     "excl": {
      "source": "derived",
-     "note": "one of a unit's abilities to pick from (New Recruit's \"X: pick one\", X the ability whose words say \"select one X ability\"): X; ticking one unticks the others"
+     "note": "one of a unit's abilities to pick from (New Recruit's \"X: pick one\", X the ability whose words say \"select one X ability\"): X; ticking one unticks the others",
+     "by": "verify/effects-migrate.js"
     }
    }
   },
@@ -1517,47 +1563,58 @@
     },
     "df": {
      "source": "derived",
-     "note": "its defences: [effects.js DF id, value], found in the quote by the catalogue's patterns; D1, D3"
+     "note": "its defences: [effects.js DF id, value], found in the quote by the catalogue's patterns; D1, D3",
+     "by": "verify/effects-migrate.js"
     },
     "on": {
      "source": "derived",
-     "note": "its conditions: effects.js COND and DCOND ids (q: GW's words of one no id reads); D5"
+     "note": "its conditions: effects.js COND and DCOND ids (q: GW's words of one no id reads); D5",
+     "by": "verify/effects-migrate.js"
     },
     "kind": {
      "source": "derived",
-     "note": "the attacks it is against (ranged, melee, psychic, all), from its clause's words"
+     "note": "the attacks it is against (ranged, melee, psychic, all), from its clause's words",
+     "by": "verify/effects-migrate.js"
     },
     "scope": {
      "source": "derived",
-     "note": "models: the models of the unit it is for (model: the one with the ability; a keyword: \"that CHARACTER\", \"KASTELAN ROBOT models in that unit\")"
+     "note": "models: the models of the unit it is for (model: the one with the ability; a keyword: \"that CHARACTER\", \"KASTELAN ROBOT models in that unit\")",
+     "by": "verify/effects-migrate.js"
     },
     "reach": {
      "source": "derived",
-     "note": "the friendly units it is given to, literal keywords; D5"
+     "note": "the friendly units it is given to, literal keywords; D5",
+     "by": "verify/effects-migrate.js"
     },
     "mark": {
      "source": "derived",
-     "note": "how it reaches them: aura, selected, friendly"
+     "note": "how it reaches them: aura, selected, friendly",
+     "by": "verify/effects-migrate.js"
     },
     "notSelf": {
      "source": "derived",
-     "note": "\"other friendly\", \"because of this … model\": not the unit with it"
+     "note": "\"other friendly\", \"because of this … model\": not the unit with it",
+     "by": "verify/effects-migrate.js"
     },
     "foe": {
      "source": "derived",
-     "note": "an enemy unit's attacks made worse, whatever they target (\"each time a model in that enemy unit makes an attack\"): every unit of the list"
+     "note": "an enemy unit's attacks made worse, whatever they target (\"each time a model in that enemy unit makes an attack\"): every unit of the list",
+     "by": "verify/effects-migrate.js"
     },
     "opt": {
      "source": "derived",
-     "note": "the option of its rule it is"
+     "note": "the option of its rule it is",
+     "by": "verify/effects-migrate.js"
     },
     "pick": {
      "source": "derived",
-     "note": "one of several to pick (\"select one of the following\"): name, df, quote"
+     "note": "one of several to pick (\"select one of the following\"): name, df, quote",
+     "by": "verify/effects-migrate.js"
     },
     "term": {
      "source": "derived",
-     "note": "a faction's own term the ability names in bold (a RULES entry RULE_SRC says is not a core rule: Pulse Jet Move) whose words the box reads; its condition the ability's sentence naming it"
+     "note": "a faction's own term the ability names in bold (a RULES entry RULE_SRC says is not a core rule: Pulse Jet Move) whose words the box reads; its condition the ability's sentence naming it",
+     "by": "verify/effects-migrate.js"
     },
     "until": {
      "source": "gw",
@@ -1574,19 +1631,23 @@
     },
     "st": {
      "source": "derived",
-     "note": "its effects: [effects.js ST id, value], found in the quote by the catalogue’s patterns; LS"
+     "note": "its effects: [effects.js ST id, value], found in the quote by the catalogue’s patterns; LS",
+     "by": "verify/effects-migrate.js"
     },
     "on": {
      "source": "derived",
-     "note": "its conditions: effects.js COND and STCOND ids (q: GW’s words of one no pattern reads), read in its sentence; LS"
+     "note": "its conditions: effects.js COND and STCOND ids (q: GW’s words of one no pattern reads), read in its sentence; LS",
+     "by": "verify/effects-migrate.js"
     },
     "reach": {
      "source": "derived",
-     "note": "the friendly units its words name (literal keywords), in its sentence or the one before it"
+     "note": "the friendly units its words name (literal keywords), in its sentence or the one before it",
+     "by": "verify/effects-migrate.js"
     },
     "scope": {
      "source": "derived",
-     "note": "models: the keyword of the models it is for (“of TZAANGOR models in that unit”)"
+     "note": "models: the keyword of the models it is for (“of TZAANGOR models in that unit”)",
+     "by": "verify/effects-migrate.js"
     }
    }
   }

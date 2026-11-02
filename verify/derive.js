@@ -1734,13 +1734,30 @@ function naOf(ab, u, units){
   return undefined;
 }
 // ---- where a RULES entry that is no core rule comes from (RULE_SRC, the label over its text on a rule sheet), by fixed templates over its place in
-// the tables, the first that holds: an ally's rule (FACTIONS.allies): "{ally} army rule (allies)"; a weapon keyword (a list's or a datasheet's
-// weapons, by RULE_ALIASES): "weapon ability of the {weapons} ({unit})"; a term an ability names in bold: "term in {ability} ({unit})". None:
-// undefined (verify/texts.js ruleSrc fails on it, and on a stored label that is not this)
+// the tables and GW's pages, the first that holds:
+//   an ally's rule (FACTIONS.allies): "{ally} army rule (allies)"
+//   a heading in a faction's Wahapedia page's Army Rules section (the title over it: "Special Move Types"): "{faction} army rule ({title})"
+//   a weapon keyword a weapon has by its from mark, an enhancement: "{detachment} enhancement {enhancement}"
+//   a weapon keyword (a list's or a datasheet's weapons, by RULE_ALIASES): "weapon ability of the {weapons} ({unit})"
+//   a term an ability names in bold: "term in {ability} ({unit})"
+// None: undefined (verify/texts.js ruleSrc fails on it, and on a stored label that is not this)
+function armyRuleTitle(fid, key){
+  const fs = require('fs'), path = require('path'), root = path.resolve(__dirname, '..');
+  let w = fid; try { const F = JSON.parse(fs.readFileSync(path.join(root, 'verify/sources/factions.json'), 'utf8')); if(F[fid] && F[fid].waha) w = F[fid].waha; } catch(e){}
+  let L; try { L = fs.readFileSync(path.join(root, 'verify/.cache/waha', w + '.txt'), 'utf8').split('\n'); } catch(e){ return null; }
+  const a = L.findIndex(l => /^#+ Army Rules\s*$/.test(l)); if(a < 0) return null;
+  const b = L.findIndex((l, i) => i > a && /^#+ /.test(l)), end = b < 0 ? L.length : b;
+  const k = L.findIndex((l, i) => i > a && i < end && l.trim().toLowerCase() === String(key).toLowerCase()); if(k < 0) return null;
+  for(let i = k - 1; i > a; i--){ const t = L[i].trim(); if(/^[A-Z][a-z’']+(?: [A-Z][a-z’']+)*$/.test(t)) return t; }
+  return null;
+}
 function ruleSrcOf(D, key){
   const al = n => ((D.ruleAliases || []).find(([re]) => re.test(n)) || [])[1];
   for(const f of Object.values(D.factions || {})) for(const [ally, r] of Object.entries(f.allies || {})) if(r === key) return ally + ' army rule (allies)';
+  for(const [fid, f] of Object.entries(D.factions || {})){ const t = armyRuleTitle(fid, key); if(t) return f.name + ' army rule (' + t + ')'; }
   const units = (D.armies || []).flatMap(a => a.units).concat(Object.values(D.datasheets || {}));
+  const enh = new Map(); for(const f of Object.values(D.factions || {})) for(const d of Object.values(f.detachments || {})) for(const e of d.enhancements || []) enh.set(e.name, d.name);
+  for(const u of units) for(const w of [].concat(u.ranged || [], u.melee || [])) for(const [k, v] of Object.entries(w.from || {})) if(al(k) === key) for(const x of [].concat(v).join(', ').split(/\s*,\s*/)) if(enh.has(x)) return enh.get(x) + ' enhancement ' + x;
   for(const u of units){ const ws = [...new Set([].concat(u.ranged || [], u.melee || []).filter(w => (w.kw || []).some(x => al(x) === key)).map(w => w.name))];
     if(ws.length) return 'weapon ability of the ' + ws.join(', ') + ' (' + u.name + ')'; }
   for(const u of units) for(const ab of u.abilities || []) if([...String(ab.text || '').matchAll(/\*\*([^*]+)\*\*/g)].some(m => al(m[1]) === key)) return 'term in ' + ab.name + ' (' + u.name + ')';

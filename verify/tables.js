@@ -1232,8 +1232,21 @@ function screenReads(){
   const need = new Set(), todo = SCREENS.slice(), props = new Set();
   while(todo.length){ const n = todo.pop(); if(need.has(n) || !decl.has(n)) continue; need.add(n); const c = code(decl.get(n));
     for(const m of c.matchAll(/\.\s*([A-Za-z_$][\w$]*)/g)) props.add(m[1]);
+    // (a read by a literal key, u['short'], and a destructured one, const { short, kwNote:k } = u, ({ srcNote }) =>)
+    for(const m of decl.get(n).replace(/\/\*[\s\S]*?\*\/|\/\/[^\n]*/g, ' ').matchAll(/\[\s*['"]([A-Za-z_$][\w$]*)['"]\s*\]/g)) props.add(m[1]);
+    for(const m of c.matchAll(/\{([^{}()]*)\}\s*(?:=(?![=>])|\)\s*=>)/g)) for(const x of m[1].split(',')){ const k = /^\s*(?:\.\.\.)?([A-Za-z_$][\w$]*)/.exec(x); if(k) props.add(k[1]); }
     for(const id of new Set(c.replace(/(?<!\.)\.\s*[A-Za-z_$][\w$]*/g, ' ').replace(/[A-Za-z_$][\w$]*:(?!:)/g, ' ').match(/[A-Za-z_$][\w$]*/g))) if(decl.has(id) && !need.has(id)) todo.push(id); }
   return { fns:need, props };
+}
+// the scripts the gate runs: verify/run.js's steps and every file of this folder they require, by name
+let GATE_RUNS = null;
+function gateRuns(){
+  if(GATE_RUNS) return GATE_RUNS;
+  const out = new Set(), todo = [...fs.readFileSync(path.join(ROOT, 'verify/run.js'), 'utf8').matchAll(/\bstep\('[^']*', \['([^']+\.js)'/g)].map(m => m[1]).concat('build.js', 'app.html');
+  while(todo.length){ const f = todo.pop(); if(out.has(f) || !fs.existsSync(path.join(ROOT, f))) continue; out.add(f);
+    for(const m of fs.readFileSync(path.join(ROOT, f), 'utf8').matchAll(/require\(\s*(?:ROOT \+ )?['"](\.{1,2}\/[\w./-]+?)(?:\.js)?['"]\s*\)/g)){
+      const g = path.relative(ROOT, path.resolve(path.dirname(path.join(ROOT, f)), m[1] + '.js')); todo.push(g); } }
+  return (GATE_RUNS = out);
 }
 function screenJudgements(D){
   const reg = JSON.parse(fs.readFileSync(COLUMNS, 'utf8')).tables, out = [], { fns, props } = screenReads();
@@ -1242,7 +1255,11 @@ function screenJudgements(D){
     if(!props.has(c)) continue;
     if(['gw', 'wahapedia', 'bsdata', 'newrecruit'].includes(v.source)) continue;
     if(v.source === 'ai-summary' && c === 'gist') continue;
-    if(v.source === 'derived'){ for(const d of v.declared || []) if(!d.at || !d.why || !d.evidence) out.push(t + '.' + c + ': a declared row without its at, why and evidence'); continue; }
+    if(v.source === 'derived'){ for(const d of v.declared || []) if(!d.at || !d.why || !d.evidence) out.push(t + '.' + c + ': a declared row without its at, why and evidence');
+      // (and it names the script that derives or holds it (by, or its note), one the gate runs: a step of verify/run.js, or a file one requires)
+      const files = [].concat(v.by || [], [...String(v.note || '').matchAll(/\b((?:verify\/)?[\w-]+\.js)\b/g)].map(m => m[1])).map(f => f.includes('/') || fs.existsSync(path.join(ROOT, f)) ? f : 'verify/' + f);
+      if(!files.some(f => gateRuns().has(f))) out.push(t + '.' + c + ' is "derived" but its note names no script the gate runs (' + (files.join(', ') || 'none') + ')');
+      continue; }
     if(v.source === 'hand' && typeof v.declared === 'string' && v.declared.trim()) continue;
     out.push(t + '.' + c + ' is "' + v.source + '"' + (v.source === 'hand' ? ' with no declared reason' : ''));
   }

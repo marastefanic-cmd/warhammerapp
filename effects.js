@@ -201,17 +201,18 @@ const DNC = {
 const dfLabel = df => (df || []).map(([id, p]) => DF[id] ? DF[id].label(p) : id).join(', ');
 // ---- a unit's own characteristics a rule changes (not its attacks, not the Damage tab's): the line under its profile on the unit screen
 // ("OC 7"). ST: stat effect id → { label(p), stat (the characteristic), add(p), dom, pats (over the normalised sentence; the capture is the
-// value) }: the characteristic of the models of a unit ("of models in that unit", "of TZAANGOR models in that unit"), never one model's own
+// value), name (GW's name of it) }: the characteristic of the models of a unit ("of models in that unit", "of TZAANGOR models in that unit",
+// "that unit has +2 OC" after "While a friendly … unit", "Friendly … units have +6" M"), never one model's own
 // (a Damaged band's "subtract 4 from this model's Objective Control characteristic" is FX oc, on its band)
 const ST = {
-  ocAdd:{ label:p => '+' + p + ' OC', stat:'OC', add:p => +p, dom:[1, 2, 3], pats:[/\badd (\d) to the objective control characteristic of (?:[a-z' -]+ )?models in (?:that|this|your|each) unit\b/] },
-  ocMinus:{ label:p => '−' + p + ' OC', stat:'OC', add:p => -p, dom:[1, 2, 3, 4], pats:[/\bsubtract (\d) from the objective control characteristic of (?:[a-z' -]+ )?models in (?:that|this|your|each) unit\b/] },
-  mAdd:{ label:p => '+' + p + '" M', stat:'M', add:p => +p, inch:true, dom:[1, 2, 3, 6], pats:[/\badd (\d)" to the move characteristic of models in (?:[a-z' -]+ )?units?\b/] }
+  ocAdd:{ label:p => '+' + p + ' OC', stat:'OC', name:'objective control', add:p => +p, dom:[1, 2, 3], pats:[/\badd (\d) to the objective control characteristic of (?:[a-z' -]+ )?models in (?:that|this|your|each) unit\b/, /\bthat unit has \+(\d) oc\b/] },
+  ocMinus:{ label:p => '−' + p + ' OC', stat:'OC', name:'objective control', add:p => -p, dom:[1, 2, 3, 4], pats:[/\bsubtract (\d) from the objective control characteristic of (?:[a-z' -]+ )?models in (?:that|this|your|each) unit\b/] },
+  mAdd:{ label:p => '+' + p + '" M', stat:'M', name:'move', add:p => +p, inch:true, dom:[1, 2, 3, 6], pats:[/\badd (\d)" to the move characteristic of models in (?:[a-z' -]+ )?units?\b/, /\bfriendly [a-z' -]+ units (?:from your army )?have \+(\d)" m\b/, /\bthat unit has \+(\d)" m\b/] }
 };
 // the conditions only a stat box reads (with COND's): "is at its Starting Strength", "(excluding Battle-shocked units)", "unless that unit is
 // Battle-shocked", "while such a unit is not Battle-shocked"
 const STCOND = {
-  atStarting:{ label:() => 'At its Starting Strength', pats:[/\bis at its starting strength\b/] },
+  atStarting:{ label:() => 'At its Starting Strength', pats:[/\bis at (?:its )?starting strength\b/] },
   notShocked:{ label:() => 'Not Battle-shocked', pats:[/\(excluding battle-shocked units\)/, /\bunless (?:that|this|your|the) unit is battle-shocked\b/, /\bwhile (?:such a|that|this|your) unit is not battle-shocked\b/] }
 };
 const stLabel = st => (st || []).map(([id, p]) => ST[id] ? ST[id].label(p) : id).join(', ');

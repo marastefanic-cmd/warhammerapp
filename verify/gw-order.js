@@ -551,6 +551,11 @@ module.exports = function make(ROOT) {
   //   joined "; ", with a full stop; none: no note
   const plainQ = t => String(t || '').replace(/^-\s+/, '').replace(/\*\*|~~/g, '').replace(/\*$/, '').replace(/\s+/g, ' ').trim();
   const INSTEAD = /\bhas the \*\*([A-Z][A-Z' -]+?)\*\* Faction keyword instead of the \*\*([A-Z][A-Z' -]+?)\*\* Faction keyword\b/;
+  // (the words of the rule a reason names: the unit's ability of that name, else an army or detachment rule of that name, data.js)
+  let RW = null;
+  const ruleWords = (r, ab) => { if (ab) return ab.text || ''; if (!RW) { RW = new Map(); try { global.window = global.window || {}; const D = require(path.join(ROOT, 'verify/lib')).loadData(path.join(ROOT, 'data.js'));
+      for (const f of Object.values(D.factions || {})) for (const x of (f.armyRules || []).concat(Object.values(f.detachments || {}).flatMap(d => d && d.rule ? [d.rule].concat(d.moreRules || []) : []))) RW.set(x.name, x.text); } catch (e) {} }
+    return RW.get(r) || ''; };
   function kwNoteOf(u, faction, why, grants, cats) {
     const parts = partsOf(u, faction), segs = [], kwN = new Set((u.kw || []).map(n)), said = new Set();
     // ("instead": the ability's sentence, the keywords it gives and takes)
@@ -574,24 +579,34 @@ module.exports = function make(ROOT) {
       const ab = own.has(r) ? (u.abilities || []).find(x => x.name === r) : null;
       const sen = ab ? String(ab.text || '').split(/(?<=[.!?])\s+/).find(t => new RegExp('\\*\\*' + k.toUpperCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\*\\* keyword').test(t)) : null;
       if (!(u.leads || ab || (g && g.to === null))) continue;
-      const q = sen || (g && g.text); if (!q) continue;
-      if (!by.has(r)) by.set(r, { ks:[], q }); by.get(r).ks.push(k); said.add(n(k)); }
-    for (const [r, x] of by) segs.push(x.ks.join(', ') + (x.ks.length > 1 ? ' come' : ' comes') + ' from ' + r + ' (“' + plainQ(x.q) + '”)');
-    for (const x of inst) if (kwN.has(n(x.give)) && !said.has(n(x.give))) { segs.push(x.give + ' comes from ' + x.ab.name + ' (“' + plainQ(x.sen) + '”)'); said.add(n(x.give)); }
+      let q = sen || (g && g.text); if (!q) continue;
+      // (a sentence that refers back, "those units", "that unit": with the sentence before it in its rule's words, "select three WAR DOG units …")
+      if (/^(?:-\s+)?(?:[^.]*?,\s*)?(?:those|these|that|this) (?:units?|models?)\b/i.test(plainQ(q))) {
+        // (its sentences line by line, as GW's lines run: the one before it on its line, else the last of the line before)
+        const core = plainQ(q).replace(/\.$/, ''), ss = String(ruleWords(r, ab)).split('\n').map(l => plainQ(l).split(/(?<=[.!?])\s+/));
+        const li = ss.findIndex(l => l.some(t => t.startsWith(core))), si = li < 0 ? -1 : ss[li].findIndex(t => t.startsWith(core));
+        const prevS = si > 0 ? ss[li][si - 1] : li > 0 ? ss[li - 1][ss[li - 1].length - 1] : '';
+        if (prevS) q = prevS + ' ' + plainQ(q); }
+      // (an ability of a model of an attached unit: on that model, "Disciple of Khorne on the Lord on Juggernaut")
+      const on = ab && u.leads && ab.who ? ' on the ' + ab.who : '';
+      if (!by.has(r)) by.set(r, { ks:[], q, on }); by.get(r).ks.push(k); said.add(n(k)); }
+    for (const [r, x] of by) segs.push(x.ks.join(', ') + (x.ks.length > 1 ? ' come' : ' comes') + ' from ' + r + x.on + ' (“' + plainQ(x.q) + '”)');
+    for (const x of inst) if (kwN.has(n(x.give)) && !said.has(n(x.give))) { segs.push(x.give + ' comes from ' + x.ab.name + (x.ab.who || u.leads ? ' on the ' + (x.ab.who || parts[0].name) : '') + ' (“' + plainQ(x.sen) + '”)'); said.add(n(x.give)); }
     return segs.length ? segs.join('; ') + '.' : undefined;
   }
   // ---- where the sources disagree about a unit (srcNote, under the model it is about), by one fixed template: a model of the unit (BSData's and
   // New Recruit's profile of it, a stats row) that Wahapedia prints on a datasheet of its own, not on a page of the unit's parts (modelPages:
   // Sir Hekhtur): { at:<that model>, note:"Wahapedia: its own <EPIC HERO >datasheet; BSData and New Recruit: in this unit" } ("EPIC HERO" where its
-  // page's KEYWORDS line has it). None else (verify/tables.js --write writes it; its step "tables" holds data.js to it)
+  // page's KEYWORDS line has it), one for each such model (a list where there are two or more). None else (verify/tables.js --write writes it; its step "tables" holds data.js to it)
   function srcNoteOf(u, faction) {
-    const parts = partsOf(u, faction), pn = x => n(String(x).replace(/ ×\d+$/, ''));
+    const parts = partsOf(u, faction), pn = x => n(String(x).replace(/ ×\d+$/, '')), out = [];
     for (const m of [...new Set((u.stats || []).map(r => String(r.name).replace(/ ×\d+$/, '')))]) {
       if (parts.some(p => pn(p.name) === pn(m))) continue;
       const M = pageFor(faction, m); if (!M || parts.some(p => p.page && (p.page.file === M.file || (p.page.profiles || []).some(x => x.name && pn(x.name) === pn(m))))) continue;
-      return { at:m, note:'Wahapedia: its own ' + ((M.unitKeywords || []).some(k => n(k) === n('EPIC HERO')) ? 'EPIC HERO ' : '') + 'datasheet; BSData and New Recruit: in this unit' };
+      out.push({ at:m, note:'Wahapedia: its own ' + ((M.unitKeywords || []).some(k => n(k) === n('EPIC HERO')) ? 'EPIC HERO ' : '') + 'datasheet; BSData and New Recruit: in this unit' });
     }
-    return undefined;
+    // (every such model: one note, or a list of them)
+    return out.length > 1 ? out : out[0];
   }
   // every resolved unit of the lists (the old form): its rows, a weapon's keywords, the Rules line (keywords: orderKw, with the list's own)
   function units(armies) {

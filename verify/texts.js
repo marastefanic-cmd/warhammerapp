@@ -1514,8 +1514,21 @@ const NOTE_LABELS = {
   'Wahapedia FAQ': 'waha', 'Wahapedia errata': 'waha', 'Wahapedia core rules, 25.04 Fill Your Army Roster': 'waha',
   'Designer’s Note (Wahapedia’s datasheet, under the codex wording)': 'waha',
   'FAQ (Faction Pack 1.2)': 'gw', 'Faction Pack datasheets': 'gw', 'FAQ (Faction Pack 1.3)': 'gw', 'FAQ (Faction Pack 1.4)': 'gw', 'Faction Pack FAQ': 'gw',
-  'Designer’s Note (Faction Pack 1.2)': 'gw'
+  'Designer’s Note (Faction Pack 1.2, Pink Horrors datasheet)': 'gw'
 };
+// (and what the label says of its document, held to where its first quote is found (noteLabel): "Faction Pack 1.3" the pack's VERSION line;
+// "Pink Horrors datasheet" a datasheet of that name in it; "FAQ" a question ("Q:") right before the quote; "errata" and "Designer's Note"
+// those words right before it)
+function labelGaps(label, r) {
+  const d = typeof r.d === 'string' ? DOCS[r.d] : r.d, N = d ? d.N : '', before = n => N.slice(Math.max(0, r.off - n), r.off), out = [];
+  const v = /Faction Pack (\d+\.\d+)/.exec(label);
+  if (v) { const m = /\bversion (\d+\.\d+)/.exec(N); if (!m || m[1] !== v[1]) out.push('the document is ' + (m ? 'version ' + m[1] : 'no versioned Faction Pack') + ', not ' + v[0]); }
+  const ds = /([A-Z][A-Za-z’' -]+?) datasheet\)/.exec(label); if (ds && !N.includes(norm(ds[1]))) out.push('the document has no ' + ds[1] + ' datasheet');
+  if (/\bFAQ\b/.test(label) && !/\bq:\s*$/.test(before(40).trim() + ' ') && !/\bq:\s*\S*$/.test(before(12))) out.push('its first quote is no FAQ question ("Q:" before it)');
+  if (/\berrata\b/.test(label) && !/errata/.test(before(250))) out.push('no "errata" right before its first quote');
+  if (/Designer’s Note/.test(label) && !/designer'?s note/.test(before(400).replace(/[’]/g, "'"))) out.push('no "Designer\'s Note" right before its first quote');
+  return out;
+}
 const LABELS_LONG = Object.keys(NOTE_LABELS).sort((a, b) => b.length - a.length);
 // a note's segments: [{ label, kind, qs }], or { bad: where its words leave the form }
 function noteSegments(note) {
@@ -1543,7 +1556,9 @@ function checkQuotes(army, unit, note, own, extra) {
       count('noteQuote');
       const docs = seg.kind === 'gw' ? GW_ALL : WAHA_DOCS().concat(extra || []);
       const r = locate(n, docs);
-      if (r) { provRow(army + ' / ' + unit, 'note', r.d, r.off, { text: piece.trim().slice(0, 80) }); continue; }
+      if (r) { provRow(army + ' / ' + unit, 'note', r.d, r.off, { text: piece.trim().slice(0, 80) });
+        if (q === seg.qs[0] && piece === q.split(/…|\.\.\./)[0]) { count('noteLabel'); for (const g of labelGaps(seg.label, r)) fail('noteLabel', army, unit, 'note', seg.label, g + ' (' + ((typeof r.d === 'string' ? DOCS[r.d] : r.d) || {}).label + ')', ''); }
+        continue; }
       fail('noteQuote', army, unit, 'note', '“' + q.slice(0, 80) + '”', 'quoted words under “' + seg.label + '” not in ' + (seg.kind === 'gw' ? 'GW’s documents' : 'Wahapedia') + ': "' + piece.trim() + '"' + (nearest(n, docs).text ? ' | ' + nearest(n, docs).text : ''), '');
     }
   }

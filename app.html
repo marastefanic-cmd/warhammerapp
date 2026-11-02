@@ -4915,7 +4915,8 @@ const shownElsewhere = ab => !!ab.damaged;
 // Behemoths)". Which rules: the army rules and the list's detachment rules whose box reaches the unit (its reach: the units its words name,
 // else the rule's needs). Each condition said, a one-model unit's Starting Strength in its wounds (as a footnote's); a box whose conditions are
 // only GW's words, quoted: "If (see the rule)". The value: the characteristic the unit's profile shows with it ("OC 7"), where every profile
-// has one and the box is for all its models; else the effect ("+1 OC", "TZAANGOR models +1 OC"). Not one the list printed into the value
+// has one, the box is for all its models and no ability of the unit can set that characteristic to a value; else the effect ("+1 OC",
+// "TZAANGOR models +1 OC"). Not one the list printed into the value
 // (its from mark: Cyber-psalm Programming's M). Nothing here reads a rule's words. ----
 function stCond(id, p, u){
   const C = WH_EFFECTS.STCOND[id];
@@ -4930,7 +4931,10 @@ function statLines(u){
     const when = onlyQ ? FN_IF : on.map(([id, p]) => stCond(id, p, u)).join(' · ');
     for(const [id, p] of b.st){ const f = E.ST[id]; if(!f) continue;
       if(u.stats.every(s => [].concat((s.from || {})[f.stat] || []).join(', ').split(/\s*,\s*/).includes(r.name))) continue;
-      const vs = [...new Set(u.stats.map(s => s[f.stat]))], one = !(b.scope || {}).models && vs.length === 1 && (f.inch ? /^\d+"$/ : /^\d+$/).test(String(vs[0]));
+      // (not where an ability of the unit can set that characteristic to a value, Singular Purpose's "an Objective Control characteristic of 15":
+      // then the effect, "+2 OC", never a total the unit may not have)
+      const sets = (u.abilities || []).some(ab => new RegExp('\\ban? ' + f.name + ' characteristic of \\d', 'i').test(String(ab.text || '').replace(/\*\*/g, '')));
+      const vs = [...new Set(u.stats.map(s => s[f.stat]))], one = !sets && !(b.scope || {}).models && vs.length === 1 && (f.inch ? /^\d+"$/ : /^\d+$/).test(String(vs[0]));
       const val = one ? f.stat + ' ' + ((parseInt(vs[0], 10) || 0) + f.add(p)) + (f.inch ? '"' : '') : ((b.scope || {}).models ? (b.scope.models + ' models ') : '') + f.label(p);
       out.push({ rule:r.name, text:(when ? when + ': ' : '') + val }); }
   }
@@ -4975,7 +4979,7 @@ function screenUnit(){
     const c = cs[csAt.indexOf(i)] || null;
     const role = c ? '<span class="mlt">' + linkTo('rule', c.support ? 'Support' : 'Leader', (c.support ? 'Supporting ' : 'Leading ') + u.leads) + '</span>' : '';
     const g = (u.gear || [])[i] || [];
-    const sn = u.srcNote && u.srcNote.at === m.replace(/^\d+× /, '') ? '<span class="mlt">' + esc(u.srcNote.note) + '</span>' : '';   // the sources disagree about this model
+    const sx = [].concat(u.srcNote || []).find(x => x.at === m.replace(/^\d+× /, '')), sn = sx ? '<span class="mlt">' + esc(sx.note) + '</span>' : '';   // the sources disagree about this model (srcNote: one, or one for each model)
     return '<div class="ml"><span class="mn">' + esc(m) + '</span><span class="mg">' + (g.length ? esc(gearText(g)) : '') + role + sn + '</span></div>';
   }).join('') + unplacedOf(u).map(x => '<div class="ml"><span class="mn">' + x.n + '× ' + esc(x.name) + '</span><span class="mg"><span class="mlt">' + esc(x.note) + '</span></span></div>').join('') + '</section>';
   const abil = u.abilities.filter(ab => !shownElsewhere(ab, u));
@@ -5007,7 +5011,7 @@ function screenUnit(){
     (rules.length ? '<div class="dkv" id="sec-rules"><span class="dk">Rules</span><span class="dv">' + rules.map(r => linkTo('rule', r, r) + (partialWho(u, r) ? ' <span class="from">(' + esc(partialWho(u, r)) + ')</span>' : '') + (inertRule(r) ? ' <span class="from">(no unit in this list it applies to)</span>' : '')).join(', ') + '</span></div>' : '') +
     stratLines(u, strats) +
     '<div class="dkv" id="sec-kw"><span class="dk">Keywords</span><span class="dv"><span class="pills">' + u.kw.filter(k => !hasOwn(only, k)).map(pill).join('') + '</span>' + kwModels +
-      (ks.note ? '<span class="kwn">' + esc(ks.note) + '</span>' : '') + (u.srcNote && u.srcNote.at === 'kw' ? '<span class="kwn">' + esc(u.srcNote.note) + '</span>' : '') + '</span></div></section>';
+      (ks.note ? '<span class="kwn">' + esc(ks.note) + '</span>' : '') + [].concat(u.srcNote || []).filter(x => x.at === 'kw').map(x => '<span class="kwn">' + esc(x.note) + '</span>').join('') + '</span></div></section>';
   return '<div class="ds"><section class="dbx">' + band + models + stats + '</section>' + unitWeapons(u) + abilities + foot + '</div>' + askRefBtn('unit', u.id, 'unit');
 }
 // every stratagem the unit can use: one line per detachment, then core, each in phase order;

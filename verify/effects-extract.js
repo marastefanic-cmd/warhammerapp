@@ -465,7 +465,8 @@ const ST_SCOPE = /\bcharacteristic of \*\*([A-Z][A-Z' -]+?)\*\* models in\b/;
 // (its sentences, every line of its text: a heading's too, "KEYWORDS" then "TZAANGORS units from your army have the BATTLELINE keyword, and
 // while such a unit is not Battle-shocked, add 1 to …", which the attack side does not read)
 const sentencesOf = text => { const out = []; for(const l of String(text || '').split('\n')){ const raw = l.trim().replace(/^-\s+/, '');
-  if(!raw || /^[A-Z][A-Z ’'-]{3,}$/.test(raw.replace(/\*\*/g, '')) || /^\*[^*].*\*$/.test(raw)) continue;
+  // (not a heading, an italic line, nor an example: "**Example:** If you selected the Solar Watch detachment, …")
+  if(!raw || /^[A-Z][A-Z ’'-]{3,}$/.test(raw.replace(/\*\*/g, '')) || /^\*[^*].*\*$/.test(raw) || /^\*\*Example:\*\*/.test(raw)) continue;
   const ss = raw.split(/(?<=[.!?])\s+(?=[A-Z(*\[])/).map(x => x.trim()).filter(Boolean);
   ss.forEach((x, i) => out.push({ s:x, prevS:i > 0 ? ss[i - 1] : '' })); } return out; };
 function statOf(src, us, V){

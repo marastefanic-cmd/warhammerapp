@@ -119,18 +119,21 @@ No line the app writes on a unit or stratagem screen stands on a judgement (the 
 filled from fields a script derives from GW's words or checks mechanically; the one AI layer is `gist`. The gate step `tables` fails when a
 column those screens read (every property the code of app.html's `screenUnit`, `stratItem` and `showStrat` reads, with every function they
 call) is `hand` or AI, but `gist` and a column `verify/columns.json` declares with its reason (an id; the short name a list gives a unit; a
-fact no list has today; a rule's `needs` its words do not give, Kindred Sorcery's, with its why and evidence).
+fact no list has today; a rule's `needs` its words do not give, Kindred Sorcery's, with its why and evidence). The reads count a
+property, a literal key (`u['short']`) and a destructured name; a `derived` column names the script the gate runs that derives or holds it
+(`by`, or its note).
 
 | Line | From | Held by |
 |---|---|---|
-| a note under an ability, rule or stratagem | GW's words, each quoted under a fixed source label ("Wahapedia FAQ: “…” “…”", "FAQ (Faction Pack 1.3): …") | `verify/texts.js` noteForm (the form, NOTE_LABELS), noteQuote (each quote in its label's documents) |
+| a note under an ability, rule or stratagem | GW's words, each quoted under a fixed source label ("Wahapedia FAQ: “…” “…”", "FAQ (Faction Pack 1.3): …") | `verify/texts.js` noteForm (the form, NOTE_LABELS), noteQuote (each quote in its label's documents), noteLabel (the label's version, datasheet, FAQ / errata / Designer's Note held to where its first quote is) |
 | "Once per battle", "Or: +1CP" | a stratagem's RESTRICTIONS, its EFFECT, by closed patterns (`limitOf`, `cpNoteOf`) | `verify/lines.js` L0 |
 | "Not leading a unit in this list", "Needs … : not this loadout", "No WAR DOG in this list" (`na`) | three closed patterns over the ability's words, the unit and the list (`verify/derive.js` naOf), written by the importer | L0 |
 | the keywords note (`kwNote`) | fixed templates over GW's pages (the parts' keywords), GRANTS and the list's reasons, GW's words quoted (`verify/gw-order.js` kwNoteOf) | `tables` (`--write` writes it) |
-| where the sources disagree (`srcNote`) | one template: a model Wahapedia prints on a datasheet of its own (`srcNoteOf`) | `tables` |
+| where the sources disagree (`srcNote`) | one template: each model Wahapedia prints on a datasheet of its own (`srcNoteOf`; a list where there are two) | `tables` |
 | keywords or rules only some models have (`kwOnly`, `partialRules`) | GW's pages (a part's KEYWORDS line or CORE ABILITIES, "MODEL: KW", "(Model only)", a model's own page, an ability that gives it) | `verify/keywords.js` KO, PR |
 | a reference sheet's quote (`ref`) | GW's words of the rule it names | `verify/texts.js` refQuote |
-| "Already in A" | the `from` marks (`alreadyIn`, `alreadyInRule`) | code |
+| "Already in A" | the `from` marks (`alreadyIn`, `alreadyInRule`) | `verify/lines.js` LA |
+| a rule sheet's source label (`RULE_SRC`) | fixed templates over the entry's place: an ally's army rule, a heading of a faction page's Army Rules, an enhancement's from mark, a weapon keyword, a term in bold (`verify/derive.js` ruleSrcOf) | texts ruleSrc |
 | an alias, an ally's rule, a core twin, a table's place | mechanical checks (`verify/texts.js` alias, allies, coreTwin, tableAt); a player's word for a rule stays a reviewed alias, no line | texts |
 
 A rules text holds no app note ("*App note, not rules text: …*"): `verify/texts.js` appNote fails on one.

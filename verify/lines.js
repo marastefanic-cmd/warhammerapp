@@ -29,6 +29,7 @@
      L7  (L2-L5 together: what the screen shows is what BOXES gives, worked out here again from data.js)
      L8  every catalogue effect and condition renders its label
      LC  every condition GW's words put on a box is on it (verify/coverage.js: option, once per, if / while / unless, within N", kind)
+     LA  the "Already in X" chips of ability rows and of the Rules screen's rule rows are what the from marks give
      LS  the lines under a unit's profile (app.html statLines, "Not Battle-shocked: OC 7 (Enraged Behemoths)"): for every list × unit
          exactly the stat boxes (BOXES st, effects.js ST) of the list's army and detachment rules that reach it, each said with its
          conditions' labels and its effect (the unit's characteristic with it, else its label), none the list printed into the value; and
@@ -44,7 +45,7 @@ const X = require('./effects-extract');
 const T = require('./tables');
 const M = require('./effects-migrate');
 
-const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines']);
+const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'alreadyIn', 'alreadyInRule']);
 const D = dm.D, A = dm.app, fails = [], stats = {};
 const fail = (g, where, what) => fails.push(g + ' ' + where + ': ' + what);
 
@@ -240,7 +241,8 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
 // LS the lines under a unit's profile: the stat boxes of the list's army and detachment rules that reach it, worked out here again from
 // data.js alone (which rules, which boxes, the words: its conditions' labels, " · " between, a one-model unit's Starting Strength in its
 // wounds, "If (see the rule)" for GW's quoted words alone; its value the unit's characteristic with the effect where every profile has one value
-// and the box is for all its models, else the effect's label, a keyword's models before it), never one the list printed into the value (from);
+// and the box is for all its models, and no ability of the unit can set it to a value (Singular Purpose), else the effect's label, a keyword's
+// models before it), never one the list printed into the value (from);
 // and the words to them (every sentence of a rule that changes a characteristic of models a stat box, its conditions read)
 { let n = 0;
   const meetsN = (x, u) => !x || ((!x.all || x.all.every(k => hasK(u, k))) && (!x.any || !x.any.length || x.any.some(k => hasK(u, k))) && (!x.none || !x.none.some(k => hasK(u, k))) && (!x.unless || !meetsN(x.unless, u)));
@@ -253,7 +255,8 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
         for(const [id, p] of b.st){ const f = E.ST[id];
           if(!f){ fail('LS', a.id + '/' + u.id, r.name + ': the stat effect ' + id + ' is not in effects.js ST'); continue; }
           if(u.stats.every(s => String([].concat((s.from || {})[f.stat] || []).join(', ')).split(/\s*,\s*/).includes(r.name))) continue;
-          const vs = [...new Set(u.stats.map(s => String(s[f.stat])))], whole = !(b.scope || {}).models && vs.length === 1 && (f.inch ? /^\d+"$/ : /^\d+$/).test(vs[0]);
+          const sets = (u.abilities || []).some(ab => new RegExp('\\ban? ' + f.name + ' characteristic of \\d', 'i').test(String(ab.text || '').replace(/\*\*/g, '')));
+          const vs = [...new Set(u.stats.map(s => String(s[f.stat])))], whole = !sets && !(b.scope || {}).models && vs.length === 1 && (f.inch ? /^\d+"$/ : /^\d+$/).test(vs[0]);
           const val = whole ? f.stat + ' ' + (parseInt(vs[0], 10) + f.add(p)) + (f.inch ? '"' : '') : ((b.scope || {}).models ? b.scope.models + ' models ' : '') + f.label(p);
           want.push(r.name + ' | ' + (when ? when + ': ' : '') + val); } }
       const got = A.inArmy(a, () => A.statLines(u)).map(x => x.rule + ' | ' + x.text);
@@ -272,7 +275,7 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
       else if(!f.pats.some(re => { const m = re.exec(E.norm(b.quote)); return m && +m[1] === p; })) fail('LS', where, 'stat effect ' + id + ' ' + p + ' is not in its quote'); }
     for(const [id] of b.on || []) if(!E.STCOND[id] && !E.COND[id]) fail('LS', where, 'condition ' + id + ' not in effects.js COND or STCOND'); }
   // the words to them: every rule of the database
-  const CH_RE = /\b(?:add|subtract) (?:\d+|d3)"? (?:to|from) the ([a-z ]+?) characteristic of (?:[a-z' -]+ )?models in\b/;
+  const CH_RE = /\b(?:add|subtract) (?:\d+|d3)"? (?:to|from) the ([a-z ]+?) characteristic of (?:[a-z' -]+ )?models in\b|\bthat unit has [+-]\d+"? (?:oc|m|t|sv|w|ld)\b|\bfriendly [a-z' -]+ units (?:from your army )?have [+-]\d+"? (?:oc|m|t|sv|w|ld)\b/;
   const CL_RE = /\b(?:if|while|unless)\b[^,.;:]+|\(excluding [^)]+\)/gi;
   for(const f of Object.values(D.factions)) for(const r of (f.armyRules || []).concat(Object.values(f.detachments || {}).flatMap(d => d && d.rule ? [d.rule].concat(d.moreRules || []) : []))){
     const st = ((D.boxes || {})[M.KEY.rule(r)] || {}).st || [];
@@ -283,6 +286,16 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
         const read = (b.on || []).some(([id, p]) => { const C = E.STCOND[id] || E.COND[id]; return (id === 'q' && E.norm(p).includes(cn.replace(/^\(|\)$/g, ''))) || (C && C.pats.some(re => re.test(cn) || re.test(E.norm(x.s)) && E.norm(x.s).match(re).index >= nn.indexOf(cn) && E.norm(x.s).match(re).index < nn.indexOf(cn) + cn.length)); });
         if(!read) fail('LS', f.name + ' · ' + r.name, 'its condition “' + m[0] + '” is not on its stat box'); } } }
   stats.statLines = n; }
+// LA the "Already in X" chips (an ability row's, alreadyIn; an army or detachment rule's on the Rules screen, alreadyInRule): exactly the
+// characteristics of the unit's (the list's units') rows whose from marks name it, worked out here again from data.js
+{ let n = 0; const KEYS = ['M', 'T', 'Sv', 'W', 'Ld', 'OC', 'InSv', 'range', 'A', 'BS', 'WS', 'S', 'AP', 'D'];
+  const marks = (u, name) => [...new Set([].concat(u.stats || [], u.ranged || [], u.melee || []).flatMap(x => Object.entries(x.from || {}).filter(([k, v]) => KEYS.includes(k) && [].concat(v).includes(name)).map(([k]) => k === 'range' ? 'Range' : k)))];
+  for(const a of D.armies){ const F = D.factions[a.faction] || {};
+    for(const u of a.units) for(const ab of u.abilities || []){ const want = marks(u, ab.name).join(', '), got = A.inArmy(a, () => A.alreadyIn(ab, u)); if(got !== want) fail('LA', a.id + '/' + u.id + ' · ' + ab.name, '"Already in ' + got + '", its from marks give "' + want + '"'); else if(want) n++; }
+    for(const r of (F.armyRules || []).concat((a.detachments || []).flatMap(id => { const d = (F.detachments || {})[id]; return d && d.rule ? [d.rule].concat(d.moreRules || []) : []; }))){
+      const want = [...new Set(a.units.flatMap(u => marks(u, r.name)))].join(', '), got = A.inArmy(a, () => A.alreadyInRule(r.name));
+      if(got !== want) fail('LA', a.id + ' · ' + r.name, '"Already in ' + got + '", its from marks give "' + want + '"'); else if(want) n++; } }
+  stats.alreadyIn = n; }
 // LB the Damaged band: its words are its boxes' effect labels, and "see the rule" where its words have a part not counted or no box
 { let n = 0;
   for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) if(ab.damaged){ const o = (D.boxes || {})[M.KEY.ability(ab)] || {};
