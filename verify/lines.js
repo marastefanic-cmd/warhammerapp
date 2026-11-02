@@ -274,6 +274,10 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
     for(const [id, p] of b.st || []){ const f = E.ST[id]; if(!f || !f.dom.includes(p)) fail('LS', where, 'stat effect ' + id + ' ' + JSON.stringify(p) + ' not in effects.js ST or its domain');
       else if(!f.pats.some(re => { const m = re.exec(E.norm(b.quote)); return m && +m[1] === p; })) fail('LS', where, 'stat effect ' + id + ' ' + p + ' is not in its quote'); }
     for(const [id] of b.on || []) if(!E.STCOND[id] && !E.COND[id]) fail('LS', where, 'condition ' + id + ' not in effects.js COND or STCOND'); }
+  // (and each stat effect and condition reads the ways GW words it, the catalogue's fixtures, as L8 holds the attack side's labels)
+  const ST_FIX = { ocAdd:['add 2 to the objective control characteristic of models in that unit', 'that unit has +2 oc'], mAdd:['add 2" to the move characteristic of models in legio cybernetica units', 'friendly necrons titanic fly units have +6" m'],
+    atStarting:['is at its starting strength', 'unit is at starting strength'], notShocked:['(excluding battle-shocked units)', 'unless that unit is battle-shocked', 'while such a unit is not battle-shocked'] };
+  for(const [id, xs] of Object.entries(ST_FIX)){ const C = E.ST[id] || E.STCOND[id]; for(const x of xs) if(!C || !C.pats.some(re => re.test(x))) fail('LS', 'effects.js ' + id, 'does not read GW\'s “' + x + '”'); }
   // the words to them: every rule of the database
   const CH_RE = /\b(?:add|subtract) (?:\d+|d3)"? (?:to|from) the ([a-z ]+?) characteristic of (?:[a-z' -]+ )?models in\b|\bthat unit has [+-]\d+"? (?:oc|m|t|sv|w|ld)\b|\bfriendly [a-z' -]+ units (?:from your army )?have [+-]\d+"? (?:oc|m|t|sv|w|ld)\b/;
   const CL_RE = /\b(?:if|while|unless)\b[^,.;:]+|\(excluding [^)]+\)/gi;
