@@ -1,0 +1,232 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "statLines",
+  "judgement": {
+   "code": "function statLines(u){\n  const E = WH_EFFECTS, out = [];\n  for(const r of faction().armyRules.concat(detachments().flatMap(detRules))) for(const b of ((D.boxes || {})[DM_KEY.r(r)] || {}).st || []){\n    if(!(b.reach ? matches(b.reach, u) : r.needs && matches(r.needs, u))) continue;\n    const on = b.on || [], onlyQ = on.length && on.every(([id]) => E.COND[id] && E.COND[id].quoted);\n    const when = onlyQ ? FN_IF : on.map(([id, p]) => stCond(id, p, u)).join(' · ');\n    for(const [id, p] of b.st){ const f = E.ST[id]; if(!f) continue;\n      if(u.stats.every(s => [].concat((s.from || {})[f.stat] || []).join(', ').split(/\\s*,\\s*/).includes(r.name))) continue;\n      const vs = [...new Set(u.stats.map(s => s[f.stat]))], one = !(b.scope || {}).models && vs.length === 1 && (f.inch ? /^\\d+\"$/ : /^\\d+$/).test(String(vs[0]));\n      const val = one ? f.stat + ' ' + ((parseInt(vs[0], 10) || 0) + f.add(p)) + (f.inch ? '\"' : '') : ((b.scope || {}).models ? (b.scope.models + ' models ') : '') + f.label(p);\n      out.push({ rule:r.name, text:(when ? when + ': ' : '') + val }); }\n  }\n  return out;\n}"
+  },
+  "source": {
+   "implements": "the lines under a unit's profile: the stat boxes (BOXES st) of the list's army and detachment rules that reach it (reach, else needs), \"{conditions}: OC 7 (rule)\"; the characteristic with the effect where every profile has one value and the box is for all models, else the effect's label with a keyword's models; none the list printed into the value (from); \"If (see the rule)\" for only quoted conditions (verify/lines.js LS)"
+  },
+  "key": "c0c3e9f797cb0844"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "stCond",
+  "judgement": {
+   "code": "function stCond(id, p, u){\n  const C = WH_EFFECTS.STCOND[id];\n  if(!C) return fnCond(id, p, u, '', false);\n  return id === 'atStarting' && modelCount(u) === 1 ? 'Lost no wounds (' + C.label(p) + ')' : C.label(p);\n}"
+  },
+  "source": {
+   "implements": "a stat box's condition as said: its STCOND label, a one-model unit's \"At its Starting Strength\" as \"Lost no wounds (…)\" (Core Rules: a one-model unit's Starting Strength in its wounds, as fnCond's Below Starting Strength)"
+  },
+  "key": "65a164ca72fd6f70"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "alreadyInRule",
+  "judgement": {
+   "code": "const alreadyInRule = name => [...new Set(army().units.flatMap(u => alreadyIn({ name }, u).split(', ')).filter(Boolean))].join(', ');"
+  },
+  "source": {
+   "implements": "an army or detachment rule's \"Already in\" chip on the Rules screen: the characteristics of the list's units its from marks are in (Relentless Rage's melee A)"
+  },
+  "key": "bdf7eaae72591f76"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "alreadyTag",
+  "judgement": {
+   "code": "const alreadyTag = name => { const inv = alreadyInRule(name); return inv ? '<span class=\"tg m\">Already in ' + esc(inv) + '</span>' : ''; };"
+  },
+  "source": {
+   "implements": "the \"Already in X\" chip of a rule row (alreadyInRule)"
+  },
+  "key": "a7f45ecb5b8c80e2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "naOf",
+  "judgement": {
+   "code": "function naOf(ab, u, units){\n  const ss = String(ab.text || '').split('\\n').flatMap(l => l.trim().replace(/^-\\s+/, '').split(/(?<=[.!?])\\s+(?=[A-Z*(])/)).map(x => x.trim()).filter(Boolean);\n  if(!ss.length) return undefined;\n  const lc = x => x.replace(/\\*\\*/g, '').replace(/[’‘]/g, \"'\").toLowerCase();\n  if(ss.every(x => NA_LEAD.test(lc(x)))) return u.leads ? undefined : 'Not leading a unit in this list';\n  const g = ss.map(x => NA_GEAR.exec(lc(x)));\n  if(g.every(Boolean) && g.every(m => m[1] === g[0][1])){\n    const gear = g[0][1].split(/,? and |, /).map(x => x.replace(/^(?:an?|the) /, '').trim());\n    const wn = [].concat(u.ranged || [], u.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase());\n    // (GW's words for them, as its text has them: \"Needs a thundershock spear and a bellatus reaper chainsword\")\n    const words = /^if this model is equipped with (.+?), /i.exec(ss[0].replace(/\\*\\*/g, ''))[1];\n    return gear.every(x => wn.some(n => n.startsWith(x))) ? undefined : 'Needs ' + words + ': not this loadout'; }\n  const k = ss.map(x => NA_KW.exec(x));\n  if(k.every(Boolean) && k.every(m => m[1] === k[0][1])){\n    const kw = k[0][1].trim(), has = x => (x.kw || []).some(y => String(y).replace(/^Faction: /, '').toLowerCase() === kw.toLowerCase());\n    return (units || []).some(has) ? undefined : 'No ' + kw + ' in this list'; }\n  return undefined;\n}\nmodule.exports = { naOf, derive, ruleTables, readingsOf, vocab, tidyNeeds, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };"
+  },
+  "source": {
+   "implements": "verify/derive.js: why an ability does nothing in this list, three closed patterns over its whole words (every sentence): \"While this model is leading a unit\" on a unit that leads none; \"If this model is equipped with A and B\" on a unit whose weapons are not each of them (GW's words for them); \"While a friendly KW model is within N\" of this model\" where no unit of the list has KW"
+  },
+  "key": "5c3ed7a2bdc9d6d3"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "statOf",
+  "judgement": {
+   "code": "function statOf(src, us, V){\n  if(src.type !== 'rule') return [];\n  const out = [];\n  for(const u of sentencesOf(src.text)){\n    const n = norm(u.s), st = [];\n    for(const [id, f] of Object.entries(E.ST)) for(const re of f.pats){ const m = re.exec(n); if(m) st.push([id, +m[1]]); }\n    if(!st.length) continue;\n    const box = { quote:u.s, st, on:condsOf(V, u.s, '', { stat:true, inherit:true }) };\n    const r = reachOf(V, u.s) || (u.prevS ? reachOf(V, u.prevS) : null);\n    if(r) box.reach = r;\n    const mk = ST_SCOPE.exec(u.s); if(mk) box.scope = { models:mk[1].trim() };\n    out.push(box);\n  }\n  return out;\n}"
+  },
+  "source": {
+   "implements": "verify/effects-extract.js: a rule's stat boxes: every sentence of its text (a heading's too) where effects.js ST finds an effect, its conditions (COND, STCOND, GW's words of any other \"if / while / unless\"), the friendly units it or the sentence before names (reach), a keyword's models (scope)"
+  },
+  "key": "751bc4b8d2f9b725"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "cpNoteOf",
+  "judgement": {
+   "code": "const cpNoteOf = effect => { const out = [];\n  for(const l of String(effect || '').split('\\n')){ let m; if((m = CP_OR.exec(l.trim()))) out.push('Or: +' + m[1] + 'CP'); else if((m = CP_OPT.exec(l.trim()))) out.push(m[1].trim() + ' +' + m[2] + 'CP'); }\n  return out.length ? out.join(' · ') : undefined; };"
+  },
+  "source": {
+   "implements": "verify/effects-extract.js: a stratagem's extra-CP chip: a line \"**+1CP** Or:\" (\"Or: +1CP\"), an option \"**Name (+1CP):**\" (\"Name +1CP\"); verify/lines.js L0 fails on any other \"+NCP\""
+  },
+  "key": "ff2b16a726073455"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "kwNoteOf",
+  "judgement": {
+   "code": "function kwNoteOf(u, faction, why, grants, cats) {\n    const parts = partsOf(u, faction), segs = [], kwN = new Set((u.kw || []).map(n)), said = new Set();\n    // (\"instead\": the ability's sentence, the keywords it gives and takes)\n    const inst = [];\n    for (const ab of u.abilities || []) for (const sen of String(ab.text || '').split(/(?<=[.!?])\\s+/)) { const m = INSTEAD.exec(sen); if (m) inst.push({ ab, sen, give:'Faction: ' + TC(m[1]), take:'Faction: ' + TC(m[2]) }); }\n    if (u.leads && parts.length > 1 && parts.every(p => p.page)) {\n      const names = parts.map((p, i) => nameKeyword(p, (cats || [])[i], faction));\n      const kwOf = (p, i) => new Set(p.page.unitKeywords.map(n).concat(p.page.factionKeywords.map(k => n('Faction: ' + k)), names[i] && !names[i].undeclared ? [n(names[i].kw)] : []));\n      const first = kwOf(parts[0], 0), only = new Set(Object.keys(u.kwOnly || {}).map(n));\n      // (the first part's ability that gives it another Faction keyword \"instead\": the one it takes is not the first's)\n      for (const x of inst) if (!x.ab.who || n(x.ab.who) === n(parts[0].name)) first.delete(n(x.take));\n      const extra = [];\n      parts.slice(1).forEach((p, j) => { const ks = kwOf(p, j + 1); for (const k of (u.kw || []).filter(k => ks.has(n(k))).sort()) if (!first.has(n(k)) && !only.has(n(k)) && !extra.includes(k)) extra.push(k); });\n      if (extra.length) { segs.push(extra.join(', ') + (extra.length > 1 ? ' come' : ' comes') + ' from the ' + ((u.also || []).length ? 'combined unit' : (u.support ? 'supported ' : 'led ') + u.leads)); extra.forEach(k => said.add(n(k))); }\n    }\n    // a rule's\n    const own = new Set((u.abilities || []).filter(x => /\\b(Enhancement|Upgrade)\\b/.test(x.tag || '')).map(x => x.name));\n    const by = new Map();\n    for (const k of u.kw || []) { const r = ((why || {}).kw || {})[k]; if (!r || r === 'Warlord' || said.has(n(k))) continue;\n      const g = (grants || []).find(x => /keyword/.test(x.type) && n(x.grants) === n(k) && (x.option === r || String(x.rule).split(' · ').pop() === r));\n      const ab = own.has(r) ? (u.abilities || []).find(x => x.name === r) : null;\n      const sen = ab ? String(ab.text || '').split(/(?<=[.!?])\\s+/).find(t => new RegExp('\\\\*\\\\*' + k.toUpperCase().replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&') + '\\\\*\\\\* keyword').test(t)) : null;\n      if (!(u.leads || ab || (g && g.to === null))) continue;\n      const q = sen || (g && g.text); if (!q) continue;\n      if (!by.has(r)) by.set(r, { ks:[], q }); by.get(r).ks.push(k); said.add(n(k)); }\n    for (const [r, x] of by) segs.push(x.ks.join(', ') + (x.ks.length > 1 ? ' come' : ' comes') + ' from ' + r + ' (“' + plainQ(x.q) + '”)');\n    for (const x of inst) if (kwN.has(n(x.give)) && !said.has(n(x.give))) { segs.push(x.give + ' comes from ' + x.ab.name + ' (“' + plainQ(x.sen) + '”)'); said.add(n(x.give)); }\n    return segs.length ? segs.join('; ') + '.' : undefined;\n  }"
+  },
+  "source": {
+   "implements": "verify/gw-order.js: the keywords note: an attached unit's keywords a later part's page prints and the first's does not (but kwOnly; the first's \"instead\" Faction keyword not the first's), \"come from the led / supported X / combined unit\"; a keyword a rule gives for a reason of the list (why.kw) where the unit is attached, the reason is its own enhancement, or GRANTS gives it to selected units, with GW's words quoted; an \"instead\" Faction keyword with its sentence"
+  },
+  "key": "d32dd7d453b67473"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "srcNoteOf",
+  "judgement": {
+   "code": "function srcNoteOf(u, faction) {\n    const parts = partsOf(u, faction), pn = x => n(String(x).replace(/ ×\\d+$/, ''));\n    for (const m of [...new Set((u.stats || []).map(r => String(r.name).replace(/ ×\\d+$/, '')))]) {\n      if (parts.some(p => pn(p.name) === pn(m))) continue;\n      const M = pageFor(faction, m); if (!M || parts.some(p => p.page && (p.page.file === M.file || (p.page.profiles || []).some(x => x.name && pn(x.name) === pn(m))))) continue;\n      return { at:m, note:'Wahapedia: its own ' + ((M.unitKeywords || []).some(k => n(k) === n('EPIC HERO')) ? 'EPIC HERO ' : '') + 'datasheet; BSData and New Recruit: in this unit' };\n    }\n    return undefined;\n  }"
+  },
+  "source": {
+   "implements": "verify/gw-order.js: a model of the unit Wahapedia prints on a datasheet of its own (modelPages): \"Wahapedia: its own [EPIC HERO ]datasheet; BSData and New Recruit: in this unit\""
+  },
+  "key": "54e49d67e9a8ae66"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "noteSegments",
+  "judgement": {
+   "code": "function noteSegments(note) {\n  const out = []; let t = String(note || '');\n  while (t.length) {\n    const L = LABELS_LONG.find(l => t.startsWith(l + ': '));\n    if (!L) return { bad: t.slice(0, 90) };\n    t = t.slice(L.length + 2);\n    const qs = []; let m;\n    while ((m = /^“([^”]+)”/.exec(t))) { qs.push(m[1]); t = t.slice(m[0].length); if (t.startsWith(' ')) t = t.slice(1); else break; }\n    if (!qs.length) return { bad: L + ': ' + t.slice(0, 80) };\n    out.push({ label: L, kind: NOTE_LABELS[L], qs });\n  }\n  return out.length ? { segs: out } : { bad: '(empty)' };\n}"
+  },
+  "source": {
+   "implements": "verify/texts.js: a note is \"{label}: “…” “…”\" segments only, each label one of NOTE_LABELS (gw or waha), each quote then found in that label's documents"
+  },
+  "key": "73aede35cc27b7e2"
+ },
+ {
+  "kind": "review-catalogue",
+  "where": "effects.js ST, STCOND, stLabel",
+  "judgement": {
+   "check": "ocAdd, ocMinus, mAdd and their patterns (a characteristic of models in a unit, never one model’s own: FX oc stays the Damaged band’s); STCOND atStarting, notShocked. Check each pattern reads only what its label says."
+  },
+  "source": {
+   "commit": "Phase 3: stat boxes"
+  }
+ },
+ {
+  "kind": "review-stat-lines",
+  "where": "app.html statLines (9 lines, 3 rules)",
+  "judgement": {
+   "check": "Enraged Behemoths (7 nidzillas units), Cyber-psalm Programming (Kastelan), Warpmeld Sacrifice (Tzaangors): the same values statNote had; the one-model wording “Lost no wounds (At its Starting Strength)” as fnCond’s Below Starting Strength; Cyber-psalm’s +2\" M is a box but not said (its from mark). scratchpad/notes-work/changes.md."
+  },
+  "source": {
+   "gate": "verify/lines.js LS"
+  }
+ },
+ {
+  "kind": "review-notes",
+  "where": "every note (verify/texts.js noteForm, NOTE_LABELS)",
+  "judgement": {
+   "check": "17 notes rewritten or removed: prose gone (Super-heavy Walker ×2, Singular Purpose ×4 rows, Relentless Rage, Full Tilt’s prefix); unquoted FAQs now quoted (Insane Bravery, Explosives, Crushing Impact, Heroic Intervention, Berzerker’s Wrath, Touched by Tzeentch, Twisted Mirage); two labels shortened (Malign Presence’s and Exploding Horrors’ Designer’s Notes). Check NOTE_LABELS (gw / waha) and that no note lost a fact the player needs."
+  },
+  "source": {
+   "file": "verify/texts.js"
+  }
+ },
+ {
+  "kind": "review-na",
+  "where": "verify/derive.js naOf",
+  "judgement": {
+   "check": "Three closed patterns; Thundercharge’s chip now in GW’s words (“a thundershock spear and a bellatus reaper chainsword”); new: defilers-and-friends Sorcerer · Warped Interference “Not leading a unit in this list” (its When targeted line goes with it)."
+  },
+  "source": {
+   "gate": "verify/lines.js L0 na"
+  }
+ },
+ {
+  "kind": "review-kwNote",
+  "where": "verify/gw-order.js kwNoteOf",
+  "judgement": {
+   "check": "kwNote by templates, written by verify/tables.js --write. Changes: pubstomper Exalted Sorcerer drops “Rubric” (no keyword of the unit: an old error); fellhammer Dark Apostle adds “Soul Forge comes from Cybinfernal Font (“…”)”; War Dogs “Character comes from Marked Prey (“Until the end of the battle, those units have the CHARACTER keyword.”)” (was “Houndpack Lance Character (Houndpack Lance: …)”); Zodgrod, Kastelan, Lord on Juggernaut reworded; Pink Horrors’ keyword order A–Z. verify/nr.js accepts a kwNote naming the GRANTS rule."
+  },
+  "source": {
+   "gate": "verify/tables.js (table form)"
+  }
+ },
+ {
+  "kind": "review-srcNote",
+  "where": "verify/gw-order.js srcNoteOf",
+  "judgement": {
+   "check": "Canis Rex: “his” → “its”; from GW’s pages (a model with a datasheet of its own), not from the deviations files (they hold only Sir Hekhtur’s base size)."
+  },
+  "source": {
+   "gate": "verify/tables.js"
+  }
+ },
+ {
+  "kind": "review-kwOnly-partialRules",
+  "where": "verify/keywords.js KO, PR",
+  "judgement": {
+   "check": "Each entry held to GW’s pages (the plan said BSData; GW’s pages rank above it). Not checked: completeness (Ahriman’s unit lists INFANTRY and PSYKER as Ahriman only, not CHARACTER)."
+  },
+  "source": {
+   "gate": "verify/keywords.js"
+  }
+ },
+ {
+  "kind": "review-rule-tables",
+  "where": "verify/texts.js alias, allies, coreTwin, tableAt, refQuote, appNote",
+  "judgement": {
+   "check": "Mechanical checks; the 14 aliases that are a player’s word stay rule-alias items. Six app notes removed from rules texts (Hunter, Deep Strike, Mobile, Selected to Attack, Consolidation Move, Cabal of Sorcerers’ Channel the Warp)."
+  },
+  "source": {
+   "gate": "verify/texts.js"
+  }
+ },
+ {
+  "kind": "review-end-state",
+  "where": "verify/tables.js screenJudgements, verify/columns.json declared",
+  "judgement": {
+   "check": "Columns read by screenUnit, stratItem and showStrat (by property name, with every function they call) must be gw, wahapedia, bsdata, newrecruit or derived; gist allowed; declared hand: ids, RULE_SRC, aliases, missing, short, over; rule needs derived, Kindred Sorcery declared with its why and evidence. Check the declared reasons."
+  },
+  "source": {
+   "gate": "verify/tables.js"
+  }
+ },
+ {
+  "kind": "review-damage-numbers",
+  "where": "Damage tab, main vs wt-notes",
+  "judgement": {
+   "check": "rev2/dmshown.js 675 keys and lines-work/dmsingle.js 13566 keys: 0 differences."
+  },
+  "source": {
+   "files": "scratchpad/notes-work/dms-*.json, dm1-*.json"
+  }
+ },
+ {
+  "kind": "review-mutations",
+  "where": "27 mutations of the new checks",
+  "judgement": {
+   "check": "scratchpad/notes-work/mut.js, mut-all.txt: every one caught by the check it targets."
+  },
+  "source": {
+   "file": "scratchpad/notes-work/mut-all.txt"
+  }
+ }
+]
