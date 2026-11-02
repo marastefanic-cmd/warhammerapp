@@ -1462,7 +1462,8 @@ const givenBy = (u, key) => { const who = partialWho(u, key); if(!who) return []
   const row = Object.values(D.datasheets || {}).find(S => S.faction === u.faction && S.name === who) || Object.values(D.datasheets || {}).find(S => S.name === who);
   if(row && (row.rules || []).some(r => ruleKey(r) === key)) return [];
   return u.abilities.filter(ab => (!ab.who || ab.who === who) && givesSelf(ab.text, key)).map(ab => ab.name); };
-// (the source said once: an enhancement the unit's label already names, "Lord on Juggernaut · Disciple of Khorne", is not said again)
+// (the source said once: an enhancement the unit's label already names, "Lord on Juggernaut · Disciple of Khorne", is not said again;
+// the rule is still the bearer's alone, "(Lord on Juggernaut only)")
 const givenIn = (u, key) => givenBy(u, key).filter(n => n !== u.enhancement && n !== u.upgrade);
 const givenTag = (u, key) => givenIn(u, key).length ? ' <span class="from">(in ' + esc(givenIn(u, key).join(', ')) + ')</span>' : '';
 // "Canis Rex: Sir Hekhtur only" on a line of its own, "Canis Rex (Sir Hekhtur only)" in a list
@@ -1667,7 +1668,7 @@ function usersVia(label, key){
   const us = ruleUsers(key);
   if(!us.length) return '';
   const own = u => unitRules(u).some(r => ruleKey(r) === key) || [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => ruleKey(k) === key) || (w.hunter && key === 'Hunter'));
-  return '<p class="usedby"><span class="il">' + label + '</span>' + us.map(u => { if(own(u)) return unitLink(u) + (givenBy(u, key).length ? givenTag(u, key) : onlyTag(u, key, true));
+  return '<p class="usedby"><span class="il">' + label + '</span>' + us.map(u => { if(own(u)) return unitLink(u) + (givenIn(u, key).length ? givenTag(u, key) : onlyTag(u, key, true));
     const abs = u.abilities.filter(ab => mentions(ab.text, key)).map(ab => ab.name);
     return unitLink(u) + (abs.length ? ' <span class="from">(in ' + esc(abs.join(', ')) + ')</span>' : ''); }).join(', ') + '</p>';
 }
@@ -5507,7 +5508,7 @@ function screenRules(){
     // a rule only one model has: which ("Canis Rex: Sir Hekhtur only")
     // a rule with no value ("Feel No Pain" on the Norn Emissary): the abilities that give it, too
     const bare = own.length && own.every(r => r.toLowerCase() === key.toLowerCase());
-    if(own.length) return [who(u, key) + own.filter(r => r.toLowerCase() !== key.toLowerCase()).map(r => ' <span class="from">' + esc(r.toLowerCase().startsWith(key.toLowerCase()) ? r.slice(key.length).trim() : r) + '</span>').join('') + (givenBy(u, key).length ? givenTag(u, key) : onlyTag(u, key)) + (bare ? abs : '')];
+    if(own.length) return [who(u, key) + own.filter(r => r.toLowerCase() !== key.toLowerCase()).map(r => ' <span class="from">' + esc(r.toLowerCase().startsWith(key.toLowerCase()) ? r.slice(key.length).trim() : r) + '</span>').join('') + (givenIn(u, key).length ? givenTag(u, key) : onlyTag(u, key)) + (bare ? abs : '')];
     return abs ? [who(u, key) + abs] : [];
   });
   const ur = [...used.values()].filter(r => !weaponKw.has(r.key)).sort((x, y) => x.key.localeCompare(y.key));
