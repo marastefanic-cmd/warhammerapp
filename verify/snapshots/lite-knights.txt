@@ -433,7 +433,7 @@ Castellan axe×2
 2
 ASSAULT, RAPID FIRE 2
 Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Captain-General)
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
 STRATAGEMS · MIGHT OF THE MORITOI
 1CP Honoured Interred: Re-roll Hit rolls of 1, Honoured Interred (Aura) · Within 6" of it
@@ -509,7 +509,7 @@ Lastrum storm bolter×2
 1
 RAPID FIRE 3
 If (see the rule): −1 to Hit rolls (Damaged 4)
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
 If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
 5 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
@@ -527,7 +527,7 @@ Warblade
 2
 BLAST 2, TORRENT, TWIN-LINKED
 If (see the rule): −1 to Hit rolls (Damaged 4)
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
 If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
 5 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
@@ -553,7 +553,7 @@ Twin Neutronium Cascade Projectors×2
 1
 BLAST 1, TORRENT, TWIN-LINKED
 If (see the rule): −1 to Hit rolls (Damaged 5)
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
 If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
 6 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
@@ -585,7 +585,7 @@ Twin Neutronium Cascade Projectors
 1
 BLAST 1, TORRENT, TWIN-LINKED
 If (see the rule): −1 to Hit rolls (Damaged 5)
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 Every attack: Re-roll one Hit roll, Re-roll one Wound roll (Magna Imperator)
 If (see the rule): Re-roll Hit rolls of 1 (Moritoi Ancients)
 6 or fewer wounds left (Below Half-strength) · “While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is below half-strength”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Moritoi Ancients)
@@ -1322,7 +1322,7 @@ Martial Ka’tah
 if it applies
 0
 Salvus
-Ignore modifiers to BS/WS and the Hit roll
+Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 0
 NOT COUNTED IN THE DAMAGE TAB (2)
 Aegis of the Emperor
@@ -1863,7 +1863,7 @@ Martial Ka’tah
 if it applies
 0
 Salvus
-Ignore modifiers to BS/WS and the Hit roll
+Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 0
 NOT COUNTED IN THE DAMAGE TAB (2)
 Aegis of the Emperor
@@ -2611,7 +2611,7 @@ Castellan axe×2
 2
 ASSAULT, RAPID FIRE 2
 WHOLE UNIT
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 MELEE WEAPONS
 A
 WS
@@ -3117,7 +3117,7 @@ Lastrum storm bolter×2
 -1
 1
 RAPID FIRE 3
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 STRATAGEMS · MIGHT OF THE MORITOI · YOUR MOVEMENT PHASE
 1CP Unceasing Onslaught: [ASSAULT]
 MELEE WEAPONS
@@ -3221,7 +3221,7 @@ Warblade
 -1
 2
 BLAST 2, TORRENT, TWIN-LINKED
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 STRATAGEMS · MIGHT OF THE MORITOI · YOUR MOVEMENT PHASE
 1CP Unceasing Onslaught: [ASSAULT]
 MELEE WEAPONS
@@ -3340,7 +3340,7 @@ Twin Neutronium Cascade Projectors×2
 -2
 1
 BLAST 1, TORRENT, TWIN-LINKED
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 STRATAGEMS · MIGHT OF THE MORITOI · YOUR MOVEMENT PHASE
 1CP Unceasing Onslaught: [ASSAULT]
 MELEE WEAPONS
@@ -3463,7 +3463,7 @@ Twin Neutronium Cascade Projectors
 -2
 1
 BLAST 1, TORRENT, TWIN-LINKED
-Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll (Martial Ka’tah)
+Every ranged attack: one of: Salvus: Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll (Martial Ka’tah)
 STRATAGEMS · MIGHT OF THE MORITOI · YOUR MOVEMENT PHASE
 1CP Unceasing Onslaught: [ASSAULT]
 MELEE WEAPONS

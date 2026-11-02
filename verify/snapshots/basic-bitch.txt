@@ -425,7 +425,7 @@ Scything talons
 7
 -2
 2
-The target: INFANTRY or MOUNTED or BEAST: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
+The target: INFANTRY, MOUNTED or BEASTS: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
 If (see the rule): +1 S (Synapse)
 The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
 The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
@@ -1424,7 +1424,7 @@ if it applies
 0
 UNIT RULES
 Swallow Whole
-The target: INFANTRY or MOUNTED or BEAST: Each successful unmodified Wound roll is a Critical Wound · for Gaping maw
+The target: INFANTRY, MOUNTED or BEASTS: Each successful unmodified Wound roll is a Critical Wound · for Gaping maw
 if it applies
 +6% wiped
 +0.2
@@ -2322,7 +2322,7 @@ Scything talons
 7
 -2
 2
-The target: INFANTRY or MOUNTED or BEAST: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
+The target: INFANTRY, MOUNTED or BEASTS: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
 If (see the rule): +1 S (Synapse)
 The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
 The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)

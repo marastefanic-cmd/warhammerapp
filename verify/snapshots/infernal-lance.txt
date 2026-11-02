@@ -1756,9 +1756,10 @@ ARMY RULES
 Harbingers of Dread
 Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls
 if it applies
-+1% wiped
++3% wiped
 ≈0
 MODELS
++1 MORE ▾
 Malefic Surge
 Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”
 if it applies
@@ -2408,9 +2409,16 @@ Chaos Cerastus Knight Atrapos
 6+
 10
 5+
+
+Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+
+M: not counted here: see the rule (Malefic Surge)
+
+Enemy units’ M: not counted here: see the rule (Unleash Balefire)
+
 WHEN TARGETED
 5
-Harbingers of Dread: Darkness · 3: Stealth
+Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
 Malefic Surge: If (see the rule): one of: 5+ invulnerable save · Feel No Pain 6+
 Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
 1CP Hellforged Construction: Fight phase: AP worsened by 1
@@ -2560,9 +2568,16 @@ Chaos Cerastus Knight Lancer
 6+
 10
 4+
+
+Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+
+M: not counted here: see the rule (Malefic Surge)
+
+Enemy units’ M: not counted here: see the rule (Unleash Balefire)
+
 WHEN TARGETED
 5
-Harbingers of Dread: Darkness · 3: Stealth
+Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
 Malefic Surge: If (see the rule): one of: 5+ invulnerable save · Feel No Pain 6+
 Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
 1CP Hellforged Construction: Fight phase: AP worsened by 1
@@ -2685,9 +2700,18 @@ Knight Despoiler
 6+
 10
 5+*
+
+M: not counted here: see the rule (Bestial Aspect)
+
+Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+
+M: not counted here: see the rule (Malefic Surge)
+
+Enemy units’ M: not counted here: see the rule (Unleash Balefire)
+
 WHEN TARGETED
 6
-Harbingers of Dread: Darkness · 3: Stealth
+Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
 Malefic Surge: If (see the rule): one of: 5+ invulnerable save · Feel No Pain 6+
 *Invulnerable Save: 5+ invulnerable save against ranged attacks
 Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
@@ -2830,9 +2854,16 @@ Knight Ruinator
 6+
 10
 5+*
+
+Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+
+M: not counted here: see the rule (Malefic Surge)
+
+Enemy units’ M: not counted here: see the rule (Unleash Balefire)
+
 WHEN TARGETED
 7
-Harbingers of Dread: Darkness · 3: Stealth
+Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
 Malefic Surge: If (see the rule): one of: 5+ invulnerable save · Feel No Pain 6+
 *Invulnerable Save: 5+ invulnerable save against ranged attacks
 Fleshmetal Fusion: If (see the rule): +1 to armour saving throws
@@ -2967,9 +2998,16 @@ Knight Ruinator
 6+
 10
 5+*
+
+Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+
+M: not counted here: see the rule (Malefic Surge)
+
+Enemy units’ M: not counted here: see the rule (Unleash Balefire)
+
 WHEN TARGETED
 6
-Harbingers of Dread: Darkness · 3: Stealth
+Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
 Malefic Surge: If (see the rule): one of: 5+ invulnerable save · Feel No Pain 6+
 *Invulnerable Save: 5+ invulnerable save against ranged attacks
 Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
@@ -3147,6 +3185,17 @@ ABILITY
 This model has a 5+ invulnerable save against ranged attacks.
 
 UNITKnight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this ability
+
+######## popup ability:infernal-lance|Bestial Aspect|**CHAOS KNIGHTS** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to **Advance rolls** made for its unit. · INFERNAL LANCE Infernal Lance
+ABILITY · ENHANCEMENT
+
+Bestial Aspect
+
+CHAOS KNIGHTS model only. The bearer’s ranged weapons have the [ASSAULT] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit.
+
+UNITKnight Despoiler · Bestial Aspect
 
 Ask about this ability
 

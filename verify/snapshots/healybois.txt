@@ -340,6 +340,9 @@ D6+3
 2
 PSYCHIC, TORRENT
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 Biovores
 Spore mine launcher
 48"
@@ -350,6 +353,9 @@ D3
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 Pyrovores
 ×2 units
 Flamespurt×3
@@ -361,6 +367,8 @@ D6+1
 1
 IGNORES COVER, TORRENT, TWIN-LINKED
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 Norn Assimilator
 Synaptoprescience
 Toxinjecter Harpoon
@@ -374,6 +382,9 @@ HARPOONED
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 Norn Emissary
 Psychic tendril
 ➤neuroparasite
@@ -403,6 +414,9 @@ MELTA 2, PSYCHIC
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 Psychophage
 Psychoclastic torrent
 12"
@@ -413,6 +427,8 @@ D6
 1
 IGNORES COVER, TORRENT
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 Tyrannofex
 Acid spray
 18"
@@ -431,6 +447,9 @@ Stinger salvoes
 1
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 The Red Terror
@@ -450,11 +469,12 @@ Scything talons
 7
 -2
 2
-The target: INFANTRY or MOUNTED or BEAST: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
+The target: INFANTRY, MOUNTED or BEASTS: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
 If (see the rule): +1 S (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
 The Swarmlord
 Warlord
 + Tyrant Guard
@@ -475,8 +495,9 @@ Scything talons and rending claws×6
 1
 If (see the rule): +1 S (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
 Hive Tyrant
 Parasitic Biomorphology
 + Tyrant Guard
@@ -508,8 +529,9 @@ Scything talons and rending claws×6
 If (see the rule): +1 A (Parasitic Biomorphology)
 If (see the rule): +1 S (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
 Biovores
 Chitin-barbed limbs
 2
@@ -519,8 +541,9 @@ Chitin-barbed limbs
 1
 If (see the rule): +1 S (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
 Pyrovores
 ×2 units
 Chitin-barbed limbs×3
@@ -531,9 +554,10 @@ Chitin-barbed limbs×3
 1
 If (see the rule): +1 S (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
-1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Secure Biomass: Critical Hit on 5+, Fight phase, It has the HARVESTER keyword
 Ripper Swarms
 Chitinous claws and teeth
 6
@@ -544,9 +568,10 @@ Chitinous claws and teeth
 SUSTAINED HITS 1
 If (see the rule): +1 S (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
-1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Secure Biomass: Critical Hit on 5+, Fight phase, It has the HARVESTER keyword
 Norn Assimilator
 Synaptoprescience
 
@@ -569,9 +594,10 @@ The target is the enemy unit selected · “At the start of the first battle rou
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
 If (see the rule): +1 S (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
-1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Secure Biomass: Critical Hit on 5+, Fight phase, It has the HARVESTER keyword
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
 1CP Lesser Prey: +2 S
 Norn Emissary
@@ -595,8 +621,9 @@ The target is the enemy unit selected · “At the start of the first battle rou
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
 If (see the rule): +1 S (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
 1CP Lesser Prey: +2 S
 Psychophage
@@ -611,9 +638,10 @@ The target is the enemy unit selected: +1 AP (Bio-stimulus)
 The target below its Starting Strength: +1 to Hit rolls (Feeding Frenzy)
 The target below its Starting Strength · “If that target is also Below Half-strength”: +1 to Wound rolls (Feeding Frenzy)
 If (see the rule): +1 S (Synapse)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
-1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Secure Biomass: Critical Hit on 5+, Fight phase, It has the HARVESTER keyword
 Tyrannofex
 Powerful limbs
 4
@@ -624,8 +652,9 @@ Powerful limbs
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
 If (see the rule): +1 S (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
 
 ######## abilities · MELEE Abilities
 The Red Terror
@@ -1189,10 +1218,22 @@ Domination of the Hive Mind
 Guardian Organism
 “While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
+1CP Broodguard Impulse
+From it · “that targets the enemy unit that just destroyed your HARVESTER unit”: +1 to Wound rolls
+if used
+BEST · MOST MODELS+5% wiped
++0.5
+MODELS
 Onslaught (Hive Tyrant)
 Aura · Within 6" of it: [ASSAULT], [LETHAL HITS]
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Burning Spray (Pyrovores (×2))
+Selected by it · The target is the enemy unit selected: [IGNORES COVER]
+if it applies
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
 ALL ▾
 STRATAGEMS
@@ -1395,7 +1436,7 @@ if it applies
 MODELS
 UNIT RULES
 Swallow Whole
-The target: INFANTRY or MOUNTED or BEAST: Each successful unmodified Wound roll is a Critical Wound · for Gaping maw
+The target: INFANTRY, MOUNTED or BEASTS: Each successful unmodified Wound roll is a Critical Wound · for Gaping maw
 if it applies
 +6% wiped
 +0.2
@@ -1404,6 +1445,12 @@ NOT COUNTED IN THE DAMAGE TAB (1)
 Subterranean Hunter
 “At the end of the Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
+1CP Broodguard Impulse
+From it · “that targets the enemy unit that just destroyed your HARVESTER unit”: +1 to Wound rolls
+if used
+BEST · MOST MODELS+24% wiped
++0.5
+MODELS
 Bio-stimulus (Psychophage)
 Selected by it · The target is the enemy unit selected: +1 AP
 if it applies
@@ -1418,7 +1465,7 @@ with their CP
 1CP Secure Biomass
 [LETHAL HITS]
 if used
-BEST · MOST MODELS+10% wiped
++10% wiped
 +0.2
 MODELS
 1CP Command Re-roll
@@ -1650,10 +1697,21 @@ Domination of the Hive Mind
 Guardian Organism
 “While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
+1CP Broodguard Impulse
+From it · “that targets the enemy unit that just destroyed your HARVESTER unit”: +1 to Wound rolls
+if used
+≈0
+MODELS
 Onslaught (Hive Tyrant)
 Aura · Within 6" of it: [ASSAULT], [LETHAL HITS]
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
+0
+ALL ▾
+Burning Spray (Pyrovores (×2))
+Selected by it · The target is the enemy unit selected: [IGNORES COVER]
+if it applies
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
 ALL ▾
 STRATAGEMS
@@ -1747,6 +1805,11 @@ FROM OTHER UNITS IN YOUR LIST
 Bio-stimulus (Psychophage)
 Selected by it · The target is the enemy unit selected: +1 AP
 if it applies
+≈0
+MODELS
+1CP Broodguard Impulse
+From it · “that targets the enemy unit that just destroyed your HARVESTER unit”: +1 to Wound rolls
+if used
 ≈0
 MODELS
 STRATAGEMS
@@ -2304,11 +2367,12 @@ Scything talons
 7
 -2
 2
-The target: INFANTRY or MOUNTED or BEAST: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
+The target: INFANTRY, MOUNTED or BEASTS: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
 If (see the rule): +1 S (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
 ABILITIES
 Swallow Whole
 
@@ -2385,6 +2449,9 @@ Tyrant Guard×6
 WHEN TARGETED
 1
 TYRANT GUARD Guardian Organism: While a CHARACTER model is leading it: CHARACTER models: Feel No Pain 5+
+ALL ATTACKS · WHOLE UNIT
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 RANGED WEAPONS
 Range
 A
@@ -2402,6 +2469,7 @@ D6+3
 PSYCHIC, TORRENT
 WHOLE UNIT
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -2564,8 +2632,9 @@ WHOLE UNIT
 If (see the rule): +1 A (Parasitic Biomorphology)
 If (see the rule): +1 S (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
 ABILITIES
 Will of the Hive Mind
 - Hive Tyrant
@@ -2649,6 +2718,9 @@ Biovore
 8+
 1
 –
+ALL ATTACKS
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 RANGED WEAPONS
 Range
 A
@@ -2665,6 +2737,7 @@ D3
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -2740,6 +2813,9 @@ WHEN TARGETED
 2
 2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 5+
 2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 4+
+ALL ATTACKS
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 RANGED WEAPONS
 Range
 A
@@ -2826,6 +2902,9 @@ Ripper Swarm
 8+
 0
 –
+
+Enemy units’ OC: not counted here: see the rule (Chitinous Horrors)
+
 WHEN TARGETED
 2
 2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 5+
@@ -2845,9 +2924,10 @@ Chitinous claws and teeth
 SUSTAINED HITS 1
 If (see the rule): +1 S (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
-1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Secure Biomass: Critical Hit on 5+, Fight phase, It has the HARVESTER keyword
 ABILITIES
 Chitinous Horrors
 
@@ -2901,6 +2981,11 @@ Norn Assimilator
 7+
 5
 4+
+
+OC: not counted here: see the rule (Singular Purpose)
+
+Enemy units’ M: not counted here: see the rule (Tanglestrike Rounds)
+
 WHEN TARGETED
 4
 Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
@@ -2911,6 +2996,8 @@ DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ALL ATTACKS
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 RANGED WEAPONS
 Range
 A
@@ -2927,6 +3014,7 @@ Toxinjecter Harpoon
 D6+1
 HARPOONED
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -3036,6 +3124,9 @@ Norn Emissary
 7+
 5
 4+
+
+OC: not counted here: see the rule (Singular Purpose)
+
 WHEN TARGETED
 2
 Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
@@ -3045,6 +3136,8 @@ DAMAGED 1-5 W
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 RANGED WEAPONS
 Range
 A
@@ -3078,6 +3171,7 @@ BLAST, PSYCHIC
 D6
 MELTA 2, PSYCHIC
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -3179,6 +3273,9 @@ WHEN TARGETED
 Feel No Pain 5+
 2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 5+
 2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 4+
+ALL ATTACKS
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 RANGED WEAPONS
 Range
 A
@@ -3281,6 +3378,9 @@ WHEN TARGETED
 Resilient Organism: Once per battle: Damage 0
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
+ALL ATTACKS
+STRATAGEMS · ASSIMILATION SWARM
+1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 RANGED WEAPONS
 Range
 A
@@ -3304,6 +3404,7 @@ Stinger salvoes
 0
 1
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -3415,6 +3516,17 @@ Bio-stimulus
 In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly TYRANIDS unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.
 
 UNITPsychophage
+
+Ask about this ability
+
+######## popup ability:healybois|Chitinous Horrors|While an enemy unit is within **Engagement Range** of this unit, halve the Objective Control characteristic of models in that enemy unit. · HEALYBOIS Healybois
+ABILITY · AURA
+
+Chitinous Horrors
+
+While an enemy unit is within Engagement Range of this unit, halve the Objective Control characteristic of models in that enemy unit.
+
+UNITRipper Swarms
 
 Ask about this ability
 

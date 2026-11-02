@@ -1699,7 +1699,7 @@ ARMY RULES
 Code Chivalric
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
 if it applies
-+2% wiped
++3% wiped
 ≈0
 MODELS
 +1 MORE ▾
@@ -2343,6 +2343,15 @@ Sir Hekhtur
 5+
 1
 –
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 3
 Knights of Legend: Feel No Pain 6+
@@ -2500,6 +2509,15 @@ Cerastus Knight Atrapos
 6+
 10
 5+
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 2
 Knights of Legend: Feel No Pain 6+
@@ -2649,6 +2667,15 @@ Cerastus Knight Lancer
 6+
 10
 4+
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 2
 Knights of Legend: Feel No Pain 6+
@@ -2762,6 +2789,15 @@ Knight Crusader
 6+
 10
 5+*
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 3
 Knights of Legend: Feel No Pain 6+
@@ -2919,6 +2955,17 @@ Knight Destrier
 6+
 8
 5+
+
+M: not counted here: see the rule (Ram Jets)
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 3
 Knights of Legend: Feel No Pain 6+
@@ -3116,6 +3163,17 @@ Punishing Salvoes
 In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
 
 UNITKnight Crusader · Hunter’s Eye
+
+Ask about this ability
+
+######## popup ability:4-megas-and-a-destrier|Ram Jets|Each time this unit is selected to make a **Normal** or **Advance move**, until the end of the phase, add D3" to the Move characteristic of this model. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ABILITY · MOVEMENT · YOUR TURN
+
+Ram Jets
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+UNITKnight Destrier · Sanctuary
 
 Ask about this ability
 

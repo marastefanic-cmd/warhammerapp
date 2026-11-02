@@ -2584,10 +2584,13 @@ Belisarius Cawl
 6+
 3
 4+
+
+OC: not counted here: see the rule (Canticles of the Omnissiah)
+
 WHEN TARGETED
 3
-Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls
-Canticles of the Omnissiah: Shroudpsalm (Aura) · Own aura: Stealth
+Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
+Canticles of the Omnissiah: Shroudpsalm (Aura) · Own aura: Stealth (until the start of your next Command phase)
 Mechanicus Bodyguard: Within 3" of another friendly ADEPTUS MECHANICUS unit: Lone Operative
 ALL ATTACKS
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
@@ -2723,9 +2726,9 @@ Thulia Ghuld
 4+
 WHEN TARGETED
 3
-Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls
+Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
 Mechanicus Bodyguard: Within 3" of another friendly ADEPTUS MECHANICUS unit: Lone Operative
-Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (Belisarius Cawl)
+Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
 ALL ATTACKS
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 RANGED WEAPONS
@@ -2864,10 +2867,11 @@ Tech-Priest Enginseer
 1
 5+
 WHEN TARGETED
-3
-Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls
+4
+Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
 Enginseer: Within 3" of a friendly ADEPTUS MECHANICUS VEHICLE unit · “unless it is leading a unit”: Lone Operative
-Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (Belisarius Cawl)
+Necromechanic: not counted here: see the rule
+Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
 ALL ATTACKS
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 RANGED WEAPONS
@@ -2999,13 +3003,15 @@ Kastelan Robot×4
 
 Not Battle-shocked: +1 OC (Cyber-psalm Programming)
 
+M: not counted here: see the rule (Motive Imperative)
+
 WHEN TARGETED
 8
-Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls
+Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
 CYBERNETICA DATASMITH Battle Protocols: Aegis Protocol: KASTELAN ROBOT models: +1 T
 KASTELAN ROBOTS Robotic Bodyguard: While a CYBERNETICA DATASMITH model is leading it: CYBERNETICA DATASMITH models: Feel No Pain 4+
 KASTELAN ROBOTS Repulsor Grid: not counted here: see the rule
-Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (Belisarius Cawl)
+Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
 Omnissiah’s Blessing: Within 3" of Tech-Priest Enginseer · Selected by Tech-Priest Enginseer · It is a VEHICLE model: Feel No Pain 5+ (until the start of your next Command phase) (Tech-Priest Enginseer)
 Necromechanic: “Once per battle round” · Within 12" of Tech-Priest Enginseer · After a failed saving throw · If the bearer uses it: Damage 0 (Tech-Priest Enginseer)
 1CP Benevolence of the Omnissiah: Your Command phase: Feel No Pain 6+, Feel No Pain 5+ against mortal wounds (until the start of your next Command phase)
@@ -3178,8 +3184,8 @@ Skitarii Rangers×10
 5+
 WHEN TARGETED
 3
-Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls
-Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (Belisarius Cawl)
+Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
+Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
 Emanatus Force Field: If (see the rule): BATTLELINE models: 4+ invulnerable save against ranged attacks (Onager Dunecrawler)
 ALL ATTACKS
 If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
@@ -3323,10 +3329,13 @@ Ironstrider Ballistarii×3
 7+
 2
 5+
+
+M: not counted here: see the rule (Motive Imperative)
+
 WHEN TARGETED
 5
-Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls
-Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (Belisarius Cawl)
+Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
+Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
 Omnissiah’s Blessing: Within 3" of Tech-Priest Enginseer · Selected by Tech-Priest Enginseer · It is a VEHICLE model: Feel No Pain 5+ (until the start of your next Command phase) (Tech-Priest Enginseer)
 Necromechanic: “Once per battle round” · Within 12" of Tech-Priest Enginseer · After a failed saving throw · If the bearer uses it: Damage 0 (Tech-Priest Enginseer)
 1CP Benevolence of the Omnissiah: Your Command phase: Feel No Pain 6+, Feel No Pain 5+ against mortal wounds (until the start of your next Command phase)
@@ -3436,10 +3445,13 @@ Ironstrider Ballistarii×3
 7+
 2
 5+
+
+M: not counted here: see the rule (Motive Imperative)
+
 WHEN TARGETED
 5
-Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls
-Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (Belisarius Cawl)
+Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
+Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
 Omnissiah’s Blessing: Within 3" of Tech-Priest Enginseer · Selected by Tech-Priest Enginseer · It is a VEHICLE model: Feel No Pain 5+ (until the start of your next Command phase) (Tech-Priest Enginseer)
 Necromechanic: “Once per battle round” · Within 12" of Tech-Priest Enginseer · After a failed saving throw · If the bearer uses it: Damage 0 (Tech-Priest Enginseer)
 1CP Benevolence of the Omnissiah: Your Command phase: Feel No Pain 6+, Feel No Pain 5+ against mortal wounds (until the start of your next Command phase)
@@ -3548,10 +3560,13 @@ Onager Dunecrawler
 7+
 3
 4+
+
+M: not counted here: see the rule (Motive Imperative)
+
 WHEN TARGETED
 5
-Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls
-Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (Belisarius Cawl)
+Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
+Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
 Omnissiah’s Blessing: Within 3" of Tech-Priest Enginseer · Selected by Tech-Priest Enginseer · It is a VEHICLE model: Feel No Pain 5+ (until the start of your next Command phase) (Tech-Priest Enginseer)
 Necromechanic: “Once per battle round” · Within 12" of Tech-Priest Enginseer · After a failed saving throw · If the bearer uses it: Damage 0 (Tech-Priest Enginseer)
 1CP Benevolence of the Omnissiah: Your Command phase: Feel No Pain 6+, Feel No Pain 5+ against mortal wounds (until the start of your next Command phase)
@@ -3673,10 +3688,13 @@ Hull
 7+
 3
 –
+
+M: not counted here: see the rule (Motive Imperative)
+
 WHEN TARGETED
 5
-Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls
-Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (Belisarius Cawl)
+Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
+Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
 Omnissiah’s Blessing: Within 3" of Tech-Priest Enginseer · Selected by Tech-Priest Enginseer · It is a VEHICLE model: Feel No Pain 5+ (until the start of your next Command phase) (Tech-Priest Enginseer)
 Necromechanic: “Once per battle round” · Within 12" of Tech-Priest Enginseer · After a failed saving throw · If the bearer uses it: Damage 0 (Tech-Priest Enginseer)
 1CP Benevolence of the Omnissiah: Your Command phase: Feel No Pain 6+, Feel No Pain 5+ against mortal wounds (until the start of your next Command phase)
@@ -3875,6 +3893,17 @@ Mechanicus Bodyguard
 While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS units, this model has the Lone Operative ability.
 
 UNITBelisarius Cawl, Thulia Ghuld
+
+Ask about this ability
+
+######## popup ability:purge-goes-the-foe|Necromechanic|**TECH-PRIEST** model only. Once per battle round, when a saving throw made for a friendly **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0. · PURGE GOES THE FOE Purge goes the Foe
+ABILITY · ENHANCEMENT · ONCE PER BATTLE ROUND
+
+Necromechanic
+
+TECH-PRIEST model only. Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.
+
+UNITTech-Priest Enginseer · Necromechanic
 
 Ask about this ability
 

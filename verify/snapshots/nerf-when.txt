@@ -634,6 +634,7 @@ Storm Bolters
 -1
 1
 RAPID FIRE 4
+not counted here: see the rule (Firing Deck 7)
 DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
 Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
@@ -867,6 +868,7 @@ Armoured Hull
 6
 0
 1
+not counted here: see the rule (Firing Deck 7)
 Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
 1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
@@ -3501,6 +3503,7 @@ WHEN TARGETED
 1CP Armour of Contempt: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 1CP Duty in Death: not counted here: see the rule
 ALL ATTACKS
+not counted here: see the rule (Firing Deck 7)
 Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 RANGED WEAPONS
 Range
@@ -3764,6 +3767,9 @@ Reiver Squad×4
 6+
 1
 –
+
+Enemy units’ OC: not counted here: see the rule (Terror Troops)
+
 WHEN TARGETED
 2
 1CP Armour of Contempt: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
@@ -3896,6 +3902,9 @@ Deathwatch Terminator×3
 6+
 1
 4+
+
+W: not counted here: see the rule (Storm Shield)
+
 WHEN TARGETED
 3
 1CP Armour of Contempt: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
@@ -4142,6 +4151,17 @@ UNITLibrarian in Phobos Armour
 
 Ask about this ability
 
+######## popup ability:nerf-when|Storm Shield|This model has +1 **W**. · NERF WHEN Nerf when
+ABILITY
+
+Storm Shield
+
+This model has +1 W.
+
+UNITDeathwatch Terminator Squad
+
+Ask about this ability
+
 ######## popup ability:nerf-when|Strategium Command|When both players have deployed their armies, you can redeploy up to three friendly **ADEPTUS ASTARTES** units. When doing so, you can set those units up in **strategic reserves**, regardless of how many units are already in **strategic reserves**. · NERF WHEN Nerf when
 ABILITY
 
@@ -4166,6 +4186,17 @@ When you target this unit with the Rapid Ingress stratagem, you can use that Tel
 If an enemy unit ends a move within 1" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield.
 
 UNITDeathwatch Terminator Squad
+
+Ask about this ability
+
+######## popup ability:nerf-when|Terror Troops|While an enemy model is within 3" of this unit, that enemy model has -1 **OC**. · NERF WHEN Nerf when
+ABILITY · AURA
+
+Terror Troops
+
+While an enemy model is within 3" of this unit, that enemy model has -1 OC.
+
+UNITReiver Squad
 
 Ask about this ability
 

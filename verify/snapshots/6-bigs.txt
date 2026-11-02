@@ -360,7 +360,7 @@ Stormspear rocket pod
 8
 -2
 D6
-The target: not MONSTER/VEHICLE: [DEVASTATING WOUNDS] (Thin Their Ranks)
+The target: excluding MONSTERS and VEHICLES: [DEVASTATING WOUNDS] (Thin Their Ranks)
 If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 If (see the rule): BS/WS improved by 1 (Plunging Fire)
@@ -1437,8 +1437,8 @@ ARMY RULES
 Code Chivalric
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll · one for the unit each time it is selected to shoot or fight, its weapons most valuable first
 if it applies
-+9% wiped
-+0.2
++15% wiped
++0.3
 MODELS
 NOT COUNTED IN THE DAMAGE TAB (2)
 Super-heavy Walker
@@ -2019,6 +2019,17 @@ Knight Destrier
 6+
 8
 5+*
+
+M: not counted here: see the rule (Ram Jets)
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 3
 Knights of Legend: Feel No Pain 6+
@@ -2148,6 +2159,15 @@ Knight Errant
 6+
 10
 5+*
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 3
 Knights of Legend: Feel No Pain 6+
@@ -2279,6 +2299,15 @@ Knight Paladin
 6+
 10
 5+*
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 3
 Knights of Legend: Feel No Pain 6+
@@ -2419,6 +2448,15 @@ Knight Warden
 6+
 10
 5+*
+
+M: not counted here: see the rule (Code Chivalric)
+
+OC: not counted here: see the rule (Code Chivalric)
+
+Ld: not counted here: see the rule (Code Chivalric)
+
+M: not counted here: see the rule (Full Tilt)
+
 WHEN TARGETED
 3
 Knights of Legend: Feel No Pain 6+
@@ -2468,7 +2506,7 @@ Stormspear rocket pod
 8
 -2
 D6
-The target: not MONSTER/VEHICLE: [DEVASTATING WOUNDS] (Thin Their Ranks)
+The target: excluding MONSTERS and VEHICLES: [DEVASTATING WOUNDS] (Thin Their Ranks)
 If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
@@ -2584,6 +2622,17 @@ Paladin’s Duty
 While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.
 
 UNITKnight Paladin
+
+Ask about this ability
+
+######## popup ability:6-bigs|Ram Jets|Each time this unit is selected to make a **Normal** or **Advance move**, until the end of the phase, add D3" to the Move characteristic of this model. · 6 BIGS 6 bigs
+ABILITY · MOVEMENT · YOUR TURN
+
+Ram Jets
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+UNITKnight Destrier
 
 Ask about this ability
 

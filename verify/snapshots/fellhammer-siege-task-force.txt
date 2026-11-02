@@ -4279,6 +4279,9 @@ Maulerfiend
 6+
 3
 5+
+
+M: not counted here: see the rule (Siege Crawler)
+
 WHEN TARGETED
 2
 Soul Forge Boons: 5+ invulnerable save
@@ -4504,6 +4507,17 @@ Reorder Reality
 Each time an enemy unit within 18" of this model targets this model, subtract 1 from the Hit roll and, until the end of the phase, that enemy unit’s ranged weapons have the [HAZARDOUS] ability.
 
 UNITVashtorr the Arkifane
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Siege Crawler|You can ignore any or all modifiers to this model’s Move characteristic and to **Advance** and **Charge rolls** made for it. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · YOUR MOVEMENT / CHARGE (EITHER TURN)
+
+Siege Crawler
+
+You can ignore any or all modifiers to this model’s Move characteristic and to Advance and Charge rolls made for it.
+
+UNITMaulerfiend
 
 Ask about this ability
 
