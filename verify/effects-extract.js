@@ -295,7 +295,9 @@ function unitsOf(src){
       const ps = []; const x = x0.replace(/\s*\((if [^()]*?)\)/gi, (m, y) => { ps.push(y); return ''; });
       // a sentence of two effects whose second has a condition of its own ("add 1 to the Hit roll if …, and add 1 to the Wound roll as
       // well if …"): two parts, the second continuing the first
-      const k = x.search(/, and (?=(?:add|improve|subtract|re-roll)\b)/i);
+      // (or opens with it: "… have the [SUSTAINED HITS 1] ability, and If your unit contains 15 or more models, … a Critical Hit", Swarming
+      // Masses: the first part has no condition of the second's)
+      const k = x.search(/, and (?=(?:add|improve|subtract|re-roll|if|while|unless)\b)/i);
       const a1 = k >= 0 ? x.slice(0, k) : x, b1 = k >= 0 ? x.slice(k + 6) : '';
       if(k >= 0 && findFx(norm(a1)).fx.length && findFx(norm(b1)).fx.length && /\b(?:if|while|unless)\b/i.test(b1)){ ss.push(a1, b1); split.add(b1); }
       // (a rare mechanic and an effect the catalogue reads in one sentence, "While …, halve the Attacks characteristic of that model's
