@@ -345,6 +345,9 @@ function make(kept, D, opt){
   if(bad) return { ok:false, errors:['not a New Recruit export (' + bad + ')'] };
   const fac = ((D.bsIds || {}).factions || {})[(j.roster.forces[0] || {}).catalogueId];
   if(fac && B().catalogued(D, fac)){
+    // (a list kept by an earlier version, whose kept export has no profiles: not built from half of it)
+    const prof = s => (s.profiles || []).length || (s.selections || []).some(prof);
+    if(!j.roster.forces[0].selections.some(prof)) return { ok:false, errors:['kept by an earlier version of the app without the values the build reads: import its export again'] };
     const r = B().build(j, D, opt);
     if(!r.ok) return r;
     const army = D.resolve(r.army); army.imported = true; army.built = true;
