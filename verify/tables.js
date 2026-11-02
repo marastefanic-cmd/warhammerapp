@@ -1098,8 +1098,9 @@ function sites(D, armies, unlisted){
   })));
   // the readings: a row's own reading columns (READ_COLS) under one readOf, the text of the row; every reading of a unit (mods, aura,
   // guard: on DATASHEETS, FACTIONS or the entry) its own readOf, the text it was read from (readSource)
+  // (a row's readOf with none of its reading columns left, the readings retired: still the fingerprint of its text, held as one)
   const rowSite = (table, path, where, o, source, cols) => { const c = Object.keys(o).filter(k => cols.includes(k) && o[k] !== undefined).pop();
-    if(c) out.push({ table, path, where, col:c, fpKey:READ_FP, has:o[READ_FP], source, reading:true }); };
+    if(c || o[READ_FP] !== undefined) out.push({ table, path, where, col:c || READ_FP, fpKey:READ_FP, has:o[READ_FP], source, reading:true }); };
   D.coreStratagems.forEach((x, i) => rowSite('CORE_STRATAGEMS', [i], 'Core · ' + x.name, x, stratText(x), READ_COLS.strat));
   for(const [fk, f] of Object.entries(D.factions)){
     (f.armyRules || []).forEach((r, i) => rowSite('FACTIONS', [fk, 'armyRules', i], f.name + ' army rule · ' + r.name, r, ruleText(r), READ_COLS.rule));
@@ -1302,7 +1303,25 @@ function screenColumns(reg, src, html){
     if(R.props.has(c)) out[t + '.' + c] = 'by name';
     else if(R.whole.length) out[t + '.' + c] = 'whole (' + R.whole[0] + (R.whole.length > 1 ? ', and ' + (R.whole.length - 1) + ' more' : '') + ')';
   }
-  return { cols:out, R };
+  return { cols:out, R, T };
+}
+// a derived column's derivers: the scripts it names (its by, and every .js its note names, verify/ unless it is the app's own)
+const derivers = v => [...new Set([].concat(v.by || [], [...String(v.note || '').matchAll(/\b((?:verify\/)?[\w-]+\.js)\b/g)].map(m => m[1]))
+  .map(f => f.includes('/') || fs.existsSync(path.join(ROOT, f)) ? f : 'verify/' + f))];
+// the names a script reads a column by: its key; a table read by position (RULE_SRC), the table's D key or its name
+const keysOf = (t, c, T) => { const top = T[t.split('.')[0]]; return !t.includes('.') && top && top.positional ? [top.key, t.split('.')[0]] : [c]; };
+// does a script's code (its comments aside) read one of keys: x.key, x?.key, 'key', key:, { key }
+const references = (file, keys) => { const code = fs.readFileSync(path.join(ROOT, file), 'utf8').replace(/\/\*[\s\S]*?\*\/|(^|[^:'"\\])\/\/[^\n]*/g, '$1');
+  return keys.some(k => new RegExp('(?:\\.|\\?\\.)' + k + '\\b|[\'"`]' + k + '[\'"`]|\\b' + k + '\\s*:|[{,]\\s*' + k + '\\s*[,}=]').test(code)); };
+// a detachment stratagem's id (derived): its name as verify/from-json.js makes it, slug(name), with its detachment's id after it where an
+// earlier stratagem (CORE_STRATAGEMS, then FACTIONS in order) already has that one (Guardians of the Throne's Superhuman Focus)
+function stratIds(D){
+  const seen = new Set(D.coreStratagems.map(x => x.id)), out = [];
+  for(const [fk, f] of Object.entries(D.factions)) for(const [dk, d] of Object.entries(f.detachments || {})) for(const x of d.stratagems || []){
+    const want = seen.has(slug(x.name)) ? slug(x.name) + '-' + dk : slug(x.name);
+    if(x.id !== want) out.push('the stratagem id of ' + fk + ' · ' + d.name + ' · ' + x.name + ' is "' + x.id + '", its name gives "' + want + '"');
+    seen.add(x.id); }
+  return out;
 }
 // the scan's own fixtures: a screen reading a column zzz (a table ZZZ's, of object rows) or RULE_ALIASES' pattern in each form is seen
 // reading it, and one that does not read it is not; [form, screenUnit's body, the column, read?]
@@ -1345,16 +1364,19 @@ function gateRuns(){
 function screenJudgements(D, opts){
   opts = opts || {};
   const reg = opts.reg || JSON.parse(fs.readFileSync(COLUMNS, 'utf8')).tables, out = [];
-  const { cols, R:{ fns } } = screenColumns(reg, opts.src || fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'), opts.html);
+  const { cols, R:{ fns }, T } = screenColumns(reg, opts.src || fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'), opts.html);
   if(!SCREENS.every(n => fns.has(n))) out.push('app.html has no ' + SCREENS.filter(n => !fns.has(n)).join(', '));
   for(const [t, x] of Object.entries(reg)) for(const [c, v] of Object.entries(x.columns || {})){
     const how = cols[t + '.' + c]; if(!how) continue;
     if(['gw', 'wahapedia', 'bsdata', 'newrecruit'].includes(v.source)) continue;
     if(v.source === 'ai-summary' && c === 'gist') continue;
     if(v.source === 'derived'){ for(const d of v.declared || []) if(!d.at || !d.why || !d.evidence) out.push(t + '.' + c + ': a declared row without its at, why and evidence');
-      // (and it names the script that derives or holds it (by, or its note), one the gate runs: a step of verify/run.js, or a file one requires)
-      const files = [].concat(v.by || [], [...String(v.note || '').matchAll(/\b((?:verify\/)?[\w-]+\.js)\b/g)].map(m => m[1])).map(f => f.includes('/') || fs.existsSync(path.join(ROOT, f)) ? f : 'verify/' + f);
-      if(!files.some(f => gateRuns().has(f))) out.push(t + '.' + c + ' is "derived" but its note names no script the gate runs (' + (files.join(', ') || 'none') + ')');
+      // (and it names the script that derives or holds it (by, or its note), one the gate runs (a step of verify/run.js, or a file one
+      // requires) whose code reads its key; that a change of its value fails that script's step is verify/derived-proof.js's, the gate's
+      // "derived" step)
+      const files = derivers(v), run = files.filter(f => gateRuns().has(f)), keys = keysOf(t, c, T);
+      if(!run.length) out.push(t + '.' + c + ' is "derived" but its note names no script the gate runs (' + (files.join(', ') || 'none') + ')');
+      else if(!run.some(f => references(f, keys))) out.push(t + '.' + c + ' is "derived" but no script it names reads it (' + keys.join(' or ') + ' in none of ' + run.join(', ') + ')');
       continue; }
     if(v.source === 'hand' && typeof v.declared === 'string' && v.declared.trim()) continue;
     out.push(t + '.' + c + ' is "' + v.source + '"' + (v.source === 'hand' ? ' with no declared reason' : '') + ' (read ' + how + ')');
@@ -1426,7 +1448,7 @@ function report(t){
   return lines.join('\n') + '\n';
 }
 
-module.exports = { screenJudgements, screenReads, screenColumns, scanFixtures, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
+module.exports = { screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
 
 if(require.main === module){
   let src = fs.readFileSync(DATA, 'utf8');
@@ -1494,6 +1516,7 @@ if(require.main === module){
   for(const u of unregistered(src)) fails.push('not in verify/columns.json: ' + u + ' (say where its values come from)');
   for(const u of screenJudgements(D0)) fails.push('a unit or stratagem screen reads a judgement: ' + u);
   for(const u of scanFixtures(src)) fails.push('the end-state scan does not see a read: ' + u);
+  for(const u of stratIds(D0)) fails.push(u);
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));
   const B = t.B, units = B.armies.reduce((n, a) => n + a.units.length, 0);
   console.log('tables: ' + (fails.length ? fails.length + ' failure(s); ' : '') + units + ' unit entries in ' + B.armies.length + ' lists over ' + Object.keys(B.sheets).length + ' datasheets, ' + (D0.ruleOptions || []).length + ' rule options, ' + (D0.grants || []).length + ' grants; ' + B.conflicts.length + ' datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)');
