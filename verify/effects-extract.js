@@ -162,7 +162,7 @@ function condsOf(V, sOrig, leadOrig, opts){
   // greater than this unit's T", "that targets the closest enemy unit"), what it can target ("they can only target units within range
   // of the selected objective marker"), the weapons ("with weapons selected for the Firing Deck ability")
   const QP = [/\bthat targets? (?:a|an|an enemy) unit (?:with|within) [^,.;:]+?(?= (?:have|has|can|gains?)\b|[,.;:]|$)/g, /\bthat targets? the closest enemy unit\b/g,
-    /(?<=\bbut )(?:they|it) can only target [^,.;:]+/g, /\bcontains (?:a|one or more) [A-Z][A-Za-z' ]+? models?\b/g, /\bmodels in (?:those|that|your|this) [A-Za-z ]+? units? can only target [^,.;:]+/g, /\bwith weapons selected for the [^,.;:]+? ability\b/g,
+    /(?<=\bbut )(?:they|it) can only target [^,.;:]+/g, /\bthat targets? the enemy unit that [^,.;:]+/g, /\bcontains (?:a|one or more) [A-Z][A-Za-z' ]+? models?\b/g, /\bmodels in (?:those|that|your|this) [A-Za-z ]+? units? can only target [^,.;:]+/g, /\bwith weapons selected for the [^,.;:]+? ability\b/g,
     // the target's status, which no condition above reads: "that target a hidden unit", "targets a unit that is Battle-shocked"
     /\bthat targets? an? (?!enemy\b|unit\b)(?:[a-z][a-z-]* )+?unit(?: containing one or more models on [a-z ]+?(?=,|$))?/g, /\btargets? (?:a|an|an enemy) unit that is (?!below\b|not below\b)[^,.;:]+/g,
     // (attacks it is not for, by their weapon ability: "(excluding [DEVASTATING WOUNDS] attacks)")
@@ -336,11 +336,19 @@ function unitsOf(src){
 }
 
 // the sentence of a rule's first line that introduces its options ("… activate one of the following abilities until the end of the battle:")
+// (or, failing that, the sentence of its words that says how long its options last: "Once activated, each Blessing of Khorne applies … until
+// the end of the battle round", "Any Dread abilities that have been selected are active until the end of the battle", "Until the end of the
+// battle, the ability described in the Quality selected applies", "Until the end of the battle round, that Doctrina Imperative is active")
+const optDur = src => { for(const l of String(src.text || '').split('\n')){ if(/^\*[^*]/.test(l.trim())) continue;
+  for(const x of l.split(/(?<=[.!?])\s+/)) if(/\b(?:abilit(?:y|ies)|active|appl(?:y|ies))\b/i.test(x) && lastsOf(norm(x))) return x; } return ''; };
 const optIntro = src => (String(src.text || '').split('\n')[0].split(/(?<=[.!?])\s+/).find(x => /\b(?:one of the following|listed below|shown below|below)\b/i.test(x)) || '');
 const BOTH_RE = /\bthe ([A-Z][\w'’]*(?: [A-Z][\w'’]*)*) and (?:the )?([A-Z][\w'’]*(?: [A-Z][\w'’]*)*) are both active for that unit\b/;
 function extract(src, ctx){
   const V = ctx.V, boxes = [], nc = [];
-  if(src.type === 'strat' && /\bthat was just destroyed\b/.test(norm(src.target))) return { boxes:[], nc:[{ quote:plainCase(src.effect), why:'its target was just destroyed: its effect is for other units, which cannot be its target' }], reach:null };
+  // (a stratagem whose TARGET was just destroyed: its effect is for other units, which cannot be its target; a box only for the friendly units
+  // its words name, "each time a friendly TYRANIDS model makes an attack that targets the enemy unit that just destroyed your HARVESTER unit")
+  const gone = src.type === 'strat' && /\bthat was just destroyed\b/.test(norm(src.target));
+  const goneWhy = 'its target was just destroyed: its effect is for other units, which cannot be its target';
   const us = unitsOf(src);
   let prev = null;   // the last sentence with an effect, for a sentence that continues it
   for(let i = 0; i < us.length; i++){
@@ -433,7 +441,7 @@ function extract(src, ctx){
     // (an option of its rule lasts as long as the sentence that introduces the options says: "activate one of the following abilities until
     // the end of the battle", Blood Tithe)
     const ls = lastsOf(norm(u.s + ' ' + (u.lead || '') + ' ' + u.ctx + (nx1 && nx1.lineBody === u.lineBody && /\b(?:has|have) (?:that|the selected) abilit/.test(norm(nx1.s)) ? ' ' + nx1.s : '')))
-      || (u.sec && src.type !== 'strat' ? lastsOf(norm(optIntro(src))) : ''); if(ls) box.lasts = ls;
+      || (u.sec && src.type !== 'strat' ? lastsOf(norm(optIntro(src))) || lastsOf(norm(optDur(src))) : ''); if(ls) box.lasts = ls;
     if(u.sec) box.opt = u.sec;
     // (a table of thresholds: "1+" of "how many Pact points you have gained" is "1+ Pact points")
     { const hm = /^\d+\+$/.test(u.sec || '') && /\bhow many ([A-Za-z' ]+?) you have\b/.exec(plainCase(src.text || '')); if(hm) box.opt = u.sec + ' ' + hm[1]; }
@@ -457,6 +465,7 @@ function extract(src, ctx){
     if(on.some(x => x[0] === 'targetSelected') && !on.some(x => x[0] === 'targetKw')){ const t = /\bselect one (?:\*\*visible\*\* |visible )?enemy \*\*([A-Z][A-Z ]+?)\*\* unit\b/.exec([u.prevS || '', u.lead || '', u.s].join(' '));
       if(t){ const ks = Dv.tokens(V, t[1]); if(ks.length) on.push(['targetKw', ks.length === 1 ? { any:ks } : { all:ks }]); } }
     if(TARGET_RESTR.test(n) && !hasTargetCond(on, n)){ nc.push({ quote:u.s, why:'a condition on its target the script does not read: not counted without it', atk:true }); prev = { u, n, fx, sc, kind, reach, on }; continue; }
+    if(gone){ if(reach){ box.reach = reach; box.mark = 'friendly'; } else { nc.push({ quote:u.s, why:goneWhy }); prev = { u, n, fx, sc, kind, reach, on }; continue; } }
     if(!box.reach && afterAttack(src, n)){ nc.push({ quote:u.s, why:'its unit has already attacked (WHEN): the attacks it helps are other units\'', atk:true }); prev = { u, n, fx, sc, kind, reach, on }; continue; }
     box.grp = u.grp; box.bullet = u.bullet;
     // (one sentence for two kinds of attack: "weapons equipped by that model have [LETHAL HITS], and melee weapons equipped by that model
@@ -689,7 +698,7 @@ function defenceOf(src, us, V, ctx){
     if(on.some(x => x[0] === 'nearFriendly') || df.every(([id]) => id === 'loneOp')) reach = null;
     // (how long it lasts, in GW's words, where that is longer than the phase: "until the start of your next Command phase", "until the start
     // of your next turn")
-    const until = /\buntil the (?:start of your next (?:command phase|turn)|end of (?:the|your opponent's next) (?:battle round|turn)|end of the battle)\b/i.exec(plainCase([u.lead || '', u.s, u.sec && src.type !== 'strat' ? optIntro(src) : ''].join(' ')));
+    const until = /\buntil the (?:start of your next (?:command phase|turn)|end of (?:the|your opponent's next) (?:battle round|turn)|end of the battle)\b/i.exec(plainCase([u.lead || '', u.s, u.sec && src.type !== 'strat' ? optIntro(src) + ' ' + optDur(src) : ''].join(' ')));
     // (a clause of the sentence with no defence the DNC patterns name: "on a 6, that enemy unit is not eligible to shoot this phase": not counted)
     for(const x of plainCase(u.s).split(/(?:,? and,? |; )(?=(?:until|that|each|all|models|melee|ranged|on a)\b)/i)) if(!findDf(norm(x)).df.length && dncOf(norm(x))) dnc.push({ quote:x.replace(/\.\s*$/, ''), why:E.DNC[dncOf(norm(x))].why });
     for(const [k, fs] of groups){

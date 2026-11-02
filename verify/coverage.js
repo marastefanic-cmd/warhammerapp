@@ -219,8 +219,18 @@ function gaps(b, src, side, others, ctx){
     const labelSays = df.length && df.every(([id]) => (k === 'ranged' && /Ranged$/.test(id)) || (k === 'psychic' && /^fnpPsy/.test(id)) || (k === 'ranged' && E.FX[id] && ['range', 'bsSet', 'assault', 'heavy', 'indirect', 'pistol'].includes(id)));
     if(b.kind !== k && !labelSays && !quotedHas(kinds[k]) && !(side === 'attack' && k === 'psychic' && (b.scope || {}).wkw === 'PSYCHIC') && !(src.type === 'strat'))
       out.push('its words say ' + k + ' attacks, the box is for ' + b.kind); }
-  // how long it lasts, beyond the phase (the defence side says it: until)
-  if(side === 'defence' && /\buntil the (?:start of your next (?:command phase|turn)|end of (?:the|your opponent's next) (?:battle round|turn)|end of the battle)\b/.test(n([lead, b.quote].join(' '))) && !b.until) out.push('a duration beyond the phase and no until');
+  // how long it lasts, beyond the phase, as GW states it: its own words (the quote, the line it continues) or, for an option of its rule (a
+  // table row, a bold option, a pick) whose own words say none, the sentence of the rule that says how long its options last ("Once
+  // activated, each Blessing of Khorne applies … until the end of the battle round"): the attack side's lasts ('battle', 'round', 'turn'),
+  // the defence side's until
+  { const durOf = t => /\buntil the end of the battle\b(?! round)/.test(t) ? 'battle' : /\buntil the (?:end of the battle round|start of your next (?:command|movement) phase|start of your next turn)\b/.test(t) ? 'round'
+      : /\buntil the end of (?:the|your opponent's next) turn\b/.test(t) && !/\buntil the end of the phase\b/.test(t) ? 'turn' : '';
+    const isOpt = !!(opt || b.pick || b.tableRows || S.ids.has('opt'));
+    const ruleDur = () => { if(src.type === 'strat') return ''; for(const l of String(src.text || '').split('\n')){ if(/^\*[^*]/.test(l.trim())) continue;
+      for(const x of l.split(/(?<=[.!?])\s+/)){ const w = n(x); if(/\b(?:abilit(?:y|ies)|active|appl(?:y|ies)|the following|below)\b/.test(w) && durOf(w)) return durOf(w); } } return ''; };
+    const want = durOf(n([lead, b.quote].join(' '))) || (isOpt ? ruleDur() : '');
+    if(want && side === 'defence' && !b.until) out.push('GW states a duration (' + want + ') and the box has no until');
+    if(want && side === 'attack' && b.lasts !== want) out.push('GW states a duration (' + want + ') and the box lasts ' + JSON.stringify(b.lasts || 'the phase')); }
   // a stratagem's WHEN beyond its standard trigger, its TARGET's where (the defence side: a quoted condition, or one that reads it)
   if(side === 'defence' && src.type === 'strat'){ const w = pc(src.when).split(/(?<=\.)\s+/)[0].replace(/\.\s*$/, ''), rest = n(w).replace(/^(?:any phase|(?:(?:start|end) of )?(?:your opponent's |your |the )?(?:command|movement|shooting|charge|fight) phase(?: or the (?:shooting|fight) phase)?),?\s*/, '');
     if(rest && !/^(?:just after|when) an enemy unit (?:has selected its targets|targets a friendly [^.]+? unit(?: \([^)]*\))?)$/.test(rest) && !covers(w, 0) && !S.q.some(q => q.includes(n(w).slice(0, 25)))) out.push('its WHEN “' + w + '” is no condition of the box');
