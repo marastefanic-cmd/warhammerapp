@@ -532,7 +532,14 @@ function buildGroup(g, k) {
       lines.push({ n, name: typo(nm(m.name)), wargear, weapons, sel: m });
     }
     if (p.type !== 'model') for (const c of kidsOf(p)) if (c.type !== 'model' && !isEnh(c) && nm(c.name) !== 'Warlord' && !kidsOf(c).some(x => x.type === 'model')) {
-      if (isWeaponSel(c)) { for (const w of uniq(weaponProfiles(c).map(p2 => { const w = weaponOf(p2, c); return w.group || w.name; }))) unplaced.push(typo(w)); continue; }
+      if (isWeaponSel(c)) {
+        const ws = uniq(weaponProfiles(c).map(p2 => { const w = weaponOf(p2, c); return w.group || w.name; })).map(typo);
+        // (a weapon upgrade on the unit the export associates with a model selection, one each: that models line's weapons, as for
+        // wargear below; Pubstomper's Hellfyre missile racks on the Scarab Occult Terminators w/ soulreaper cannon)
+        const kw = Number(c.number) || 1, toW = (c.associations || []).filter(a => a.type === 'outgoing').map(a => lines.find(l => l.sel && l.sel.id === a.to)).find(Boolean);
+        if (toW && kw === toW.n) { toW.weapons.push(...ws); for (const w of ws) assoc.push({ gear: w, model: toW.name }); continue; }
+        for (const w of ws) unplaced.push(w); continue;
+      }
       // wargear the datasheet gives one model ("1 model can be equipped with 1 Vexilla", WARGEAR OPTIONS): when exactly one
       // models line of such models has more of them, that one model is a line of its own with it, as New Recruit's PDF prints
       // it ("1× Allarus Custodian (Vexilla)"); else no models line can be said to carry it (unplaced)
@@ -1966,6 +1973,12 @@ const nrUnplacedUnits = new Set(nrFails.filter(f => f.field === 'models' && nrMo
 for (const f of nrFails) {
   const u = units.find(x => x.id === f.unit) || {};
   if (nrUnplacedUnits.has(f.unit) && (f.field === 'models' || /^gear\[/.test(f.field))) { nrOwn(f, PDFS + ' prints ' + (u.unplaced || []).join(', ') + ' on a models line; ' + expS + ' carries ' + ((u.unplaced || []).length > 1 ? 'them' : 'it') + ' on the unit itself, not on a model, so the app lists ' + ((u.unplaced || []).length > 1 ? 'them' : 'it') + ' as the unit’s (unplaced), its models lines added up as the export gives them; GW’s datasheet lets any one model carry it ("1 model can be equipped with …").', EXP + ': the unit’s own selections; ' + (f.where || PDFS) + '.'); continue; }
+  // (a models line's weapons with a weapon the export associates with that model, which the PDF prints apart: the same line otherwise)
+  if (/^gear\[/.test(f.field) && (u._assoc || []).length && Array.isArray(f.app) && Array.isArray(f.source)) {
+    const L = xs => xs.map(x => lc(x)), A = L(f.app), S = L(f.source), extra = A.filter(x => !S.includes(x)), gone = S.filter(x => !A.includes(x)), ag = L(u._assoc.map(x => x.gear));
+    if (!gone.length && extra.length && extra.every(x => ag.includes(x))) { nrOwn(f, PDFS + ' prints ' + u._assoc.filter(x => extra.includes(lc(x.gear))).map(x => x.gear).filter((x, i, l) => l.indexOf(x) === i).join(', ') + ' apart from the models lines; ' + expS + ' associates ' + u._assoc.filter(x => extra.includes(lc(x.gear))).map(x => x.gear + ' with the ' + x.model).join(', ') + ' (the upgrade’s association to that model selection), so the app gives it to those models.', EXP + ': the unit’s selections and their associations; ' + (f.where || PDFS) + '.'); continue; }
+  }
+  if (f.field === 'unplaced' && (u._assoc || []).length) { nrOwn(f, PDFS + ' prints wargear apart from the models lines that ' + expS + ' associates with a model (' + u._assoc.map(x => x.gear + ': the ' + x.model).join(', ') + '); the app gives it to that model.', EXP + ': the unit’s selections and their associations; ' + (f.where || PDFS) + '.'); continue; }
   if (!nrUnplacedUnits.has(f.unit) && nrPlacedUnits.has(f.unit) && (f.field === 'models' || /^gear\[/.test(f.field))) { nrOwn(f, PDFS + ' prints the unit’s wargear on its models lines otherwise than ' + expS + ', which ' + ((u._assoc || []).length ? 'associates ' + u._assoc.map(x => x.gear + ' with the ' + x.model).join(', ') + ' (the upgrade’s association to that model selection)' : 'puts each on the model whose selection has it') + '; the app’s models lines are the export’s (the same models and weapons).', EXP + ': the unit’s selections and their associations; ' + (f.where || PDFS) + '.'); continue; }
   // (an ability GW's datasheet prints as a box of its own that the PDF does not, Supreme Commander; one it does not print, Icon of War)
   const am = /^abilities\[(.*?)(?: \| (.*))?\]$/.exec(f.field);

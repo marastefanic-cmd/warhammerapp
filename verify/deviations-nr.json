@@ -2366,6 +2366,23 @@
  },
  {
   "army": "pubstomper",
+  "unit": "sorcerer-in-terminator-armour-scarab-occult-terminators",
+  "field": "gear[2x Scarab Occult Terminator w/ soulreaper cannon]",
+  "app": [
+   "hellfyre missile rack",
+   "prosperine khopesh",
+   "soulreaper cannon"
+  ],
+  "source": [
+   "prosperine khopesh",
+   "soulreaper cannon"
+  ],
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) prints Hellfyre missile rack apart from the models lines; New Recruit’s export (catalogue revision 17) associates Hellfyre missile rack with the Scarab Occult Terminator w/ soulreaper cannon (the upgrade’s association to that model selection), so the app gives it to those models.",
+  "evidence": "verify/sources/nr-json/pubstomper.json: the unit’s selections and their associations; verify/sources/nr/pubstomper.txt p3.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "pubstomper",
   "unit": "magnus-the-red",
   "field": "abilities[Supreme Commander]",
   "app": "present",

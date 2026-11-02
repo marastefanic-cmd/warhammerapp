@@ -2619,8 +2619,7 @@ const ARMIES = [
       id:'sorcerer-in-terminator-armour-scarab-occult-terminators', ds:['thousand-sons/sorcerer-in-terminator-armour','thousand-sons/scarab-occult-terminators'], role:'Character', pts:565, ptsNote:'140 + Scarab Occult Terminators 425', enhancement:'Umbralefic Crystal',
       leads:'Scarab Occult Terminators',
       models:['1× Sorcerer in Terminator Armour','1× Scarab Occult Sorcerer','7× Scarab Occult Terminator','2× Scarab Occult Terminator w/ soulreaper cannon'],
-      unplaced:['Hellfyre missile rack'],
-      gear:[['Force weapon','Gaze of Hate','Inferno combi-bolter'],['Force weapon','Malefic Curse','Inferno combi-bolter'],['Inferno combi-bolter','Prosperine khopesh'],['Prosperine khopesh','Soulreaper cannon']],
+      gear:[['Force weapon','Gaze of Hate','Inferno combi-bolter'],['Force weapon','Malefic Curse','Inferno combi-bolter'],['Inferno combi-bolter','Prosperine khopesh'],['Prosperine khopesh','Soulreaper cannon','Hellfyre missile rack']],
       stats:[
         { name:'Sorcerer in Terminator Armour' },
         { name:'Scarab Occult Sorcerer' },
@@ -14111,7 +14110,7 @@ const GRANTS = [
 
 // ---- resolveArmies: written by verify/tables.js --write (do not edit) ----
 const TABLE_ORDER = {
-  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','upgrade','warlord','ref','leads','also','support','models','unplaced','gear','stats','ranged','melee','abilities','rules','kw','kwNote','kwOnly','partialRules','srcNote'],
+  unit:['id','name','short','role','pts','copies','ptsNote','enhancement','upgrade','warlord','ref','leads','also','support','models','gear','stats','ranged','melee','abilities','rules','kw','kwNote','kwOnly','partialRules','srcNote'],
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','printed','from','baseWith','own'],
   ranged:['group','fireAll','name','who','n','carrier','enh','hunter','range','A','BS','S','AP','D','kw','own','from'],
   melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],
