@@ -68,6 +68,9 @@ for(const [key, o] of Object.entries(T)){
       if(c.pats.length && !c.pats.some(re => re.test(ctxT))) fail('G5', where, 'condition ' + id + ' has no words in its source');
       if(id === 'targetKw') for(const k of [].concat(p.any || [], p.all || [], p.none || [])) if(!text.includes(String(k).replace(/^Faction: /, '').toLowerCase().replace(/s$/, ''))) fail('G5', where, 'the target keyword ' + k + ' is not in its words');
       if(id === 'q' && !text.includes(flat(p).toLowerCase())) fail('G5', where, 'quoted condition not verbatim: ' + p);
+      // (the target's keywords as GW prints them, said: its words; a keyword printed otherwise, "BEASTS", is said so, never as the keyword)
+      if(id === 'targetKw' && p.said && !text.includes(flat(p.said).toLowerCase())) fail('G5', where, 'the target words said are not GW’s: ' + p.said);
+      if(id === 'targetKw' && !p.said) for(const k of [].concat(p.any || [], p.all || [], p.none || [])) if(new RegExp('\\b' + String(k).replace(/^Faction: /, '').toLowerCase() + 's\\b').test(text) && !new RegExp('\\b' + String(k).replace(/^Faction: /, '').toLowerCase() + '\\b').test(text)) fail('G5', where, 'GW prints ' + k + ' in the plural and the box says it singular (no said)');
       if(id === 'anyOf') for(const x of [].concat(p)) if(!text.includes(flat(x).toLowerCase())) fail('G5', where, 'a condition of the list not verbatim: ' + x);
     }
     if(/\[[A-Za-z0-9 -]+:\s*(?:non-)?[A-Za-z][^\]]*\]/.test(String(b.quote)) && (b.fx || []).length && !(b.on || []).some(x => x[0] === 'targetKw')) fail('G5', where, 'a weapon ability for some targets only (“[X: KEYWORD]”) and no target keyword condition');

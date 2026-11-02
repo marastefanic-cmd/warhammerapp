@@ -226,7 +226,7 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
     if(back && String(back[1]).toUpperCase() !== String(p).toUpperCase()) fail('L8', 'effects.js ' + id, 'its label “' + f.label(p) + '” reads back as ' + back[1]);
     const m = A.fnLine({ grp:'army', name:'R', key:'r|x' }, { quote:'', fx:[[id, p]], on:[], kind:'all' }, u0, 'ranged', null);
     if(!m || m.note !== f.label(p)) fail('L8', 'effects.js ' + id, 'a box of it alone says “' + (m && m.note) + '”, not “' + f.label(p) + '”'); }
-  const CV = { aura:[[3, '3"'], [6, '6"'], [9, '9"']], maxT:[[6, 'T 7+'], [3, 'T 4+']], targetKw:[[{ any:['Monster', 'Vehicle'] }, 'MONSTER or VEHICLE'], [{ none:['Monster', 'Vehicle'] }, 'not MONSTER/VEHICLE'], [{ all:['Psyker', 'Character'] }, 'PSYKER CHARACTER']],
+  const CV = { aura:[[3, '3"'], [6, '6"'], [9, '9"']], maxT:[[6, 'T 7+'], [3, 'T 4+']], targetKw:[[{ any:['Monster', 'Vehicle'] }, 'MONSTER or VEHICLE'], [{ none:['Monster', 'Vehicle'] }, 'not MONSTER/VEHICLE'], [{ any:['Infantry', 'Beast'], said:'INFANTRY or BEASTS' }, 'INFANTRY or BEASTS'], [{ none:['Monster', 'Vehicle'], said:'MONSTERS and VEHICLES' }, 'excluding MONSTERS and VEHICLES'], [{ all:['Psyker', 'Character'] }, 'PSYKER CHARACTER']],
     selfKw:[['Khorne', 'KHORNE']], selfGear:[[['gun', 'axe'], 'gun and axe']], opt:[['Option', 'Option']], q:[['If words', '“If words”']], anyOf:[[['A', 'B'], '“A” or “B”']] };
   for(const [id, c] of Object.entries(E.COND)){
     for(const [p, want] of CV[id] || [[true, null]]){ const l = c.label(p); if(want && !l.includes(want)) fail('L8', 'effects.js ' + id, 'its label for ' + JSON.stringify(p) + ' is “' + l + '”, not with “' + want + '”'); else n++; }

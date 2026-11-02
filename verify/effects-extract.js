@@ -90,19 +90,25 @@ const ncOf = n => { for(const [id, x] of Object.entries(NC)) if(x.pats.some(re =
 function targetKw(V, s){
   const p = Dv.prepBold(s.replace(/~~/g, ''));
   const known = w => { const k = w.trim().toLowerCase().replace(/\*\*/g, ''); return V.get(k) || (/s$/.test(k) && V.get(k.slice(0, -1))) || null; };
-  const list = run => { const parts = run.replace(/\*\*/g, '').split(/\s*,\s*(?:or\s+|and\s+)?|\s+or\s+|\s+and\s+|\s*\/\s*/).filter(Boolean); const ks = parts.map(known); return ks.every(Boolean) && ks.length ? ks : null; };
+  // (matched by the unit's keyword, "BEASTS" is BEAST; said as GW prints it: said, GW's words, where a word is not its keyword's, "INFANTRY,
+  // MOUNTED or BEASTS", "MONSTERS and VEHICLES")
+  let said = null;
+  const list = run => { const r = run.replace(/\*\*/g, '').trim(), parts = r.split(/\s*,\s*(?:or\s+|and\s+)?|\s+or\s+|\s+and\s+|\s*\/\s*/).filter(Boolean), ks = parts.map(known);
+    if(!(ks.every(Boolean) && ks.length)) return null;
+    said = parts.some((w, i) => w.trim().toUpperCase() !== String(ks[i]).replace(/^Faction: /, '').toUpperCase()) ? r : null; return ks; };
+  const withSaid = o => said ? Object.assign(o, { said }) : o;
   let m;
   // "[LETHAL HITS: non-MONSTER/VEHICLE]", "[Lethal Hits: Monster/Vehicle]"
-  if((m = /\[[A-Za-z0-9 -]+:\s*(non-)?([^\]]+)\]/i.exec(p))){ const ks = list(m[2]); if(ks) return m[1] ? { none:ks } : { any:ks }; }
+  if((m = /\[[A-Za-z0-9 -]+:\s*(non-)?([^\]]+)\]/i.exec(p))){ const ks = list(m[2]); if(ks) return withSaid(m[1] ? { none:ks } : { any:ks }); }
   // "targets a unit (excluding **MONSTER/VEHICLE** units)", "targets an enemy unit (excluding **MONSTERS** and **VEHICLES**)"
-  if((m = /\btargets? (?:a|an|an enemy) unit \(excluding ([^)]*)\)/i.exec(p))){ const ks = list(m[1].replace(/\s+units?$/i, '')); if(ks) return { none:ks }; }
+  if((m = /\btargets? (?:a|an|an enemy) unit \(excluding ([^)]*)\)/i.exec(p))){ const ks = list(m[1].replace(/\s+units?$/i, '')); if(ks) return withSaid({ none:ks }); }
   // "if that attack targets a **PSYKER CHARACTER** unit": every keyword of one run; "a CHARACTER, MONSTER or WALKER unit": any
   if((m = /\b(?:targets?|allocated to|if that target is) (?:a|an|an enemy) ((?:\*\*)?[A-Za-z][A-Za-z' -]*?(?:\*\*)?(?:(?:\s*,\s*|\s+or\s+|\s+and\s+|\s*\/\s*)(?:\*\*)?[A-Za-z][A-Za-z' -]*?(?:\*\*)?)*) (?:unit|model)s?\b/i.exec(p))){
     const run = m[1].replace(/\*\*/g, '');
-    if(/,| or |\//.test(run)){ const ks = list(run); if(ks) return { any:ks }; }
+    if(/,| or |\//.test(run)){ const ks = list(run); if(ks) return withSaid({ any:ks }); }
     const ks = Dv.tokens(V, run); if(ks.length && ks.every(k => known(k.replace(/^Faction: /, '')))) return ks.length === 1 ? { any:ks } : { all:ks };
   }
-  if((m = /\bif that target is ((?:\*\*)?[A-Z][A-Za-z]*(?:\*\*)?(?:\s+or\s+(?:\*\*)?[A-Z][A-Za-z]*(?:\*\*)?)+)/.exec(p))){ const ks = list(m[1]); if(ks) return { any:ks }; }
+  if((m = /\bif that target is ((?:\*\*)?[A-Z][A-Za-z]*(?:\*\*)?(?:\s+or\s+(?:\*\*)?[A-Z][A-Za-z]*(?:\*\*)?)+)/.exec(p))){ const ks = list(m[1]); if(ks) return withSaid({ any:ks }); }
   return null;
 }
 // the conditions a sentence (with the line it continues) states, and the GW words of any other "if / while / unless" it has

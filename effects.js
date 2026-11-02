@@ -140,7 +140,9 @@ const COND = {
   oncePerBattle:{ label:() => 'Once per battle', pats:[/\bonce per battle\b/] },
   oncePerTurn:{ label:() => 'Once per turn', pats:[/\bonce per turn\b/] },
   used:{ label:() => 'If it uses this ability', pats:[/\b(?:you|it|this model) can use this ability\b/, /\bcan call upon\b/, /\bif (?:it|you) do(?:es)?\b/] },
-  targetKw:{ label:p => 'The target: ' + (p.none ? 'not ' + p.none.map(KW).join('/') : p.all ? p.all.map(KW).join(' ') : p.any.map(KW).join(' or ')), pats:[] },
+  // (matched by keyword, said in GW's words where they are not the keyword's, p.said: "INFANTRY, MOUNTED or BEASTS", "excluding MONSTERS and VEHICLES")
+  targetKw:{ label:p => 'The target: ' + (p.said ? (p.none ? 'excluding ' : '') + p.said.toUpperCase().replace(/ (OR|AND) /g, (m, w) => ' ' + w.toLowerCase() + ' ')
+    : p.none ? 'not ' + p.none.map(KW).join('/') : p.all ? p.all.map(KW).join(' ') : p.any.map(KW).join(' or ')), pats:[] },
   maxT:{ label:p => 'The target has no model with T ' + (p + 1) + '+', pats:[/\bno models with a t of (\d)\+/] },
   // a keyword of the unit the rule names ("If this model has the KHORNE keyword"): the unit's own keywords say it (the database)
   selfKw:{ label:p => 'It has the ' + KW(p) + ' keyword', pats:[/\bif this (?:model|unit) has the ([a-z' -]+?) keyword\b/, /\bif your unit is an? ([a-z' -]+?) unit\b/] },
