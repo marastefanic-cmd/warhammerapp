@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '498aba46fe';</script>
+<script>window.WH_BUILD = 'f5ec723ca5';</script>
 </head>
 <body>
 <style>
@@ -1107,11 +1107,11 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=498aba46fe"></script>
-<script src="data.js?v=498aba46fe"></script>
-<script src="calc.js?v=498aba46fe"></script>
-<script src="effects.js?v=498aba46fe"></script>
-<script src="import.js?v=498aba46fe"></script>
+<script src="verified.js?v=f5ec723ca5"></script>
+<script src="data.js?v=f5ec723ca5"></script>
+<script src="calc.js?v=f5ec723ca5"></script>
+<script src="effects.js?v=f5ec723ca5"></script>
+<script src="import.js?v=f5ec723ca5"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1468,6 +1468,19 @@ const unitRules = u => allUnitRules(u).filter(r => !inertRule(r));   // the ones
 const partialWho = (u, label) => { const p = u.partialRules || {}; if(hasOwn(p, label)) return p[label];
   // (not another entry of the same Rules line: Trajann's own "Feel No Pain 5+" is not the unit's "Feel No Pain 5+*")
   const rl = u.rules || [], k = ruleKey(label), e = k && Object.entries(p).find(([r]) => ruleKey(r) === k && !(rl.includes(r) && rl.includes(label))); return e ? e[1] : ''; };
+// a rule only one model has, which an ability of that model gives the model itself ("this model has the Infiltrators … abilities", Lord
+// of the Host; "The bearer has the Deep Strike ability", Disciple of Khorne; "models in this unit have …"), where that model's own
+// datasheet row does not print it: those abilities, said where it has it, "(in Lord of the Host)", instead of "only". Not an ability that
+// gives it to another unit (Thunderhawk Insertion's "That unit has Deep Strike": Marneus Calgar's own Deep Strike stays "only")
+const givesSelf = (text, key) => String(text || '').replace(/\*\*/g, '').split(/(?<=\.)\s+/).some(t => /\b(?:this model has|the bearer has|models in this unit have)\b/i.test(t) && mentions(t, key));
+const givenBy = (u, key) => { const who = partialWho(u, key); if(!who) return [];
+  const row = Object.values(D.datasheets || {}).find(S => S.faction === u.faction && S.name === who) || Object.values(D.datasheets || {}).find(S => S.name === who);
+  if(row && (row.rules || []).some(r => ruleKey(r) === key)) return [];
+  return u.abilities.filter(ab => (!ab.who || ab.who === who) && givesSelf(ab.text, key)).map(ab => ab.name); };
+// (the source said once: an enhancement the unit's label already names, "Lord on Juggernaut · Disciple of Khorne", is not said again;
+// the rule is still the bearer's alone, "(Lord on Juggernaut only)")
+const givenIn = (u, key) => givenBy(u, key).filter(n => n !== u.enhancement && n !== u.upgrade);
+const givenTag = (u, key) => givenIn(u, key).length ? ' <span class="from">(in ' + esc(givenIn(u, key).join(', ')) + ')</span>' : '';
 // "Canis Rex: Sir Hekhtur only" on a line of its own, "Canis Rex (Sir Hekhtur only)" in a list
 const onlyTag = (u, label, inList) => !partialWho(u, label) ? '' : '<span class="from">' + (inList ? ' (' : ': ') + esc(partialWho(u, label)) + ' only' + (inList ? ')' : '') + '</span>';
 // an army rule that needs units this army doesn't have, e.g. Bondsman with no ARMIGER models
@@ -1670,7 +1683,7 @@ function usersVia(label, key){
   const us = ruleUsers(key);
   if(!us.length) return '';
   const own = u => unitRules(u).some(r => ruleKey(r) === key) || [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => ruleKey(k) === key) || (w.hunter && key === 'Hunter'));
-  return '<p class="usedby"><span class="il">' + label + '</span>' + us.map(u => { if(own(u)) return unitLink(u) + onlyTag(u, key, true);
+  return '<p class="usedby"><span class="il">' + label + '</span>' + us.map(u => { if(own(u)) return unitLink(u) + (givenIn(u, key).length ? givenTag(u, key) : onlyTag(u, key, true));
     const abs = u.abilities.filter(ab => mentions(ab.text, key)).map(ab => ab.name);
     return unitLink(u) + (abs.length ? ' <span class="from">(in ' + esc(abs.join(', ')) + ')</span>' : ''); }).join(', ') + '</p>';
 }
@@ -5200,8 +5213,9 @@ function screenPregame(){
     row('Transports', transports.join('<br>')));
 
   // deployment and pre-battle abilities
-  const scouts = units.filter(u => everyModel(u, r => /^scouts|^infiltrators/i.test(r)));
-  const scoutRules = u => unitRules(u).filter(r => /^scouts|^infiltrators/i.test(r));
+  // (each of Scouts and Infiltrators by itself: the Lord Exultant's Infiltrators, his alone, leaves the unit's Scouts 6")
+  const scoutRules = u => unitRules(u).filter(r => /^scouts|^infiltrators/i.test(r) && everyModel(u, x => ruleKey(x) === ruleKey(r)));
+  const scouts = units.filter(u => scoutRules(u).length);
   const scoutKeys = [...new Set(scouts.flatMap(u => scoutRules(u).map(ruleKey)))].sort((x, y) => (x === 'Scouts' ? 0 : 1) - (y === 'Scouts' ? 0 : 1));
   const pre = group(allAbs.filter(([u, ab]) => PREGAME_RE.test(ab.text) && !/start of the first battle round|read mission objectives/i.test(ab.text)));
   h += sec('Deployment and pre-battle abilities',
@@ -5509,7 +5523,7 @@ function screenRules(){
     // a rule only one model has: which ("Canis Rex: Sir Hekhtur only")
     // a rule with no value ("Feel No Pain" on the Norn Emissary): the abilities that give it, too
     const bare = own.length && own.every(r => r.toLowerCase() === key.toLowerCase());
-    if(own.length) return [who(u, key) + own.filter(r => r.toLowerCase() !== key.toLowerCase()).map(r => ' <span class="from">' + esc(r.toLowerCase().startsWith(key.toLowerCase()) ? r.slice(key.length).trim() : r) + '</span>').join('') + onlyTag(u, key) + (bare ? abs : '')];
+    if(own.length) return [who(u, key) + own.filter(r => r.toLowerCase() !== key.toLowerCase()).map(r => ' <span class="from">' + esc(r.toLowerCase().startsWith(key.toLowerCase()) ? r.slice(key.length).trim() : r) + '</span>').join('') + (givenIn(u, key).length ? givenTag(u, key) : onlyTag(u, key)) + (bare ? abs : '')];
     return abs ? [who(u, key) + abs] : [];
   });
   const ur = [...used.values()].filter(r => !weaponKw.has(r.key)).sort((x, y) => x.key.localeCompare(y.key));
