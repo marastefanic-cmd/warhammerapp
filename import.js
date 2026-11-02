@@ -581,7 +581,7 @@ function parseSync(text, D, format){
    DATASHEETS as the app's own lists are (WH_DATA.resolve): the same list the app would have built in. A faction without one: today's
    strict copy (resolve, above), marked copied. Kept on the phone as { id, json, date } (json: the export as slim keeps it, or a text
    export's text) and made again from this data.js at every start; the id is "local-" and the first 12 hex of the sha256 of the kept export.
-   WH_IMPORT.make(kept, WH_DATA, { id, date }) → { ok, army } | { ok:false, errors } (synchronous: a kept export is JSON or text)
+   WH_IMPORT.make(kept, WH_DATA, { id, date, name }) (name: the list's name given in the import box, over the export's) → { ok, army } | { ok:false, errors } (synchronous: a kept export is JSON or text)
    WH_IMPORT.read(input, WH_DATA) → Promise of { ok, kept } | { ok:false, errors } (a file's text or bytes, or pasted text)
    WH_IMPORT.localId(kept) → Promise of the id */
 const WB = () => root.WH_BUILDER || (typeof require === 'function' ? require('./builder.js') : null);
@@ -595,6 +595,8 @@ function make(kept, D, opt){
   if(kept && typeof kept.text === 'string'){ const p = parseSync(kept.text, D); if(!p.ok) return p; j = p.json; }
   const bad = WB().malformed(j);
   if(bad) return { ok:false, errors:['not a New Recruit export (' + bad + ')'] };
+  // (the list's name the player gave in the import box, opt.name: a text in format B names none)
+  if(opt && typeof opt.name === 'string' && opt.name.trim()) j = Object.assign({}, j, { roster:Object.assign({}, j.roster, { name:opt.name.trim() }) });
   const fac = ((D.bsIds || {}).factions || {})[(j.roster.forces[0] || {}).catalogueId];
   if(fac && WB().catalogued(D, fac)){
     // (a list kept by an earlier version, whose kept export has no profiles: not built from half of it)
@@ -609,12 +611,14 @@ function make(kept, D, opt){
   if(r.ok) r.army.copied = true;
   return r;
 }
+// the list's name the kept export carries ('' where it names none: text format B), to prefill the import box's name
+function nameOf(kept, D){ try { const j = kept && typeof kept.text === 'string' ? parseSync(kept.text, D).json : kept; return typo(nn(((j || {}).roster || {}).name || '')); } catch(e){ return ''; } }
 const canonical = kept => JSON.stringify(kept);
 async function localId(kept){
   const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(canonical(kept)));
   return 'local-' + [...new Uint8Array(d)].slice(0, 6).map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
-const API = { resolve, slim, signature, nn, read, make, localId, canonical, parse, parseSync, detect };
+const API = { resolve, slim, signature, nn, read, make, localId, canonical, parse, parseSync, detect, nameOf };
 if(typeof module !== 'undefined' && module.exports) module.exports = API; else root.WH_IMPORT = API;
 })(this);

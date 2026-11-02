@@ -8,7 +8,7 @@
        list does, at 390 and 320px, but its kind pill, its source line and its "On this phone" footer (needs a built index.html)
    P3  the build is deterministic: twice, and from the export with every object's keys in another order, the same entry
    F   the test list in every format (scratchpad import-design formats, copied to verify/sources/import-formats): .json, .ros, .rosz,
-       text B and text C give the same list (text B names no list: its name aside); text A is refused as not supported
+       text B and text C give the same list (text B names no list: given its name in the import box, the same byte for byte); text A is refused as not supported
    N   changed exports are refused with exactly these messages (or, for points, built with GW's and the note)
    I   data.js BUILD_INDEX is what verify/build-index.js writes
 
@@ -82,11 +82,26 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
   const base = out['list.json'];
   for(const f of Object.keys(out)) ok(JSON.stringify(Object.assign(JSON.parse(out[f]), { name:'*' })) === JSON.stringify(Object.assign(JSON.parse(base), { name:'*' })) && (f === 'text-b.txt' || out[f] === base), 'F ' + f + ': not the list .json gives' + firstDiff(base, out[f]));
   ok(JSON.parse(base).units.length === 10, 'F: the test list is not its 10 units');
+  // text B names no list: with the name given in the import box (WH_IMPORT.make's name) it is the .json's list byte for byte; without it,
+  // "Imported list"; a name given over a format that has one is the name given
+  { const kb = (await I.read(fs.readFileSync(path.join(FD, 'text-b.txt'), 'utf8'), D)).kept;
+    const named = I.make(kb, D, { id:'f', date:'2 Nov 2026', name:"Me shooty yer' booty" });
+    ok(named.ok && JSON.stringify(named.army) === base, 'F text-b with its name given: not the list .json gives' + (named.ok ? firstDiff(base, JSON.stringify(named.army)) : ': ' + named.errors.join('; ')));
+    const bare = I.make(kb, D, { id:'f', date:'2 Nov 2026' });
+    ok(bare.ok && bare.army.name === 'Imported list' && I.nameOf(kb, D) === '', 'F text-b without a name: ' + (bare.ok ? bare.army.name : bare.errors.join('; ')));
+    const kj = (await I.read(fs.readFileSync(path.join(FD, 'list.json'), 'utf8'), D)).kept;
+    ok(I.nameOf(kj, D) === 'Me shooty yer’ booty' && I.make(kj, D, { id:'f', date:'x', name:'Waaagh' }).army.name === 'Waaagh', 'F: the name a .json carries, or the one given, is not the list’s');
+    const kc = (await I.read(fs.readFileSync(path.join(FD, 'text-c.txt'), 'utf8'), D)).kept;
+    ok(I.nameOf(kc, D) === 'Me shooty yer’ booty', 'F text-c: its name is not prefilled: ' + I.nameOf(kc, D));
+    // (and a catalogued list built under a given name: the entry with that name, the rest byte for byte)
+    const hb = I.make(I.slim(exp('healybois')), D, { id:'healybois', date:'2 Nov 2026', name:'Heals' });
+    ok(hb.ok && hb.entry.name === 'Heals' && norm(Object.assign({}, hb.entry, { name:'Healybois' })) === norm(D.RAW.ARMIES.find(a => a.id === 'healybois')), 'F: a built list under a given name differs beyond its name');
+  }
   const ra = await I.read(fs.readFileSync(path.join(FD, 'text-a.txt'), 'utf8'), D);
   ok(!ra.ok && /^format not supported/.test(ra.errors[0]), 'F text-a: not refused as not supported: ' + JSON.stringify(ra.errors || ra.format));
   const ids = await Promise.all(['list.json', 'list.ros', 'list.rosz'].map(async f => { const buf = fs.readFileSync(path.join(FD, f)); return I.localId((await I.read(f.endsWith('.rosz') ? new Uint8Array(buf) : buf.toString('utf8'), D)).kept); }));
   ok(ids.every(x => x === ids[0]) && /^local-[0-9a-f]{12}$/.test(ids[0]), 'F: .json, .ros and .rosz of one list are not one local id: ' + ids.join(', '));
-  report.push('F: .json, .ros, .rosz, text B, text C: ' + Object.keys(out).length + ' of 5 build the same list (text B names no list); text A refused; local id ' + ids[0]);
+  report.push('F: .json, .ros, .rosz, text B, text C: ' + Object.keys(out).length + ' of 5 build the same list (text B with its name given in the import box byte for byte, without it "Imported list"); text A refused; local id ' + ids[0]);
 
   // ---- N: changed exports, each refused with exactly these messages
   const clone = o => JSON.parse(JSON.stringify(o));

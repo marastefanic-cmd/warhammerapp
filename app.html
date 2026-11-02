@@ -633,6 +633,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .impgo{display:block; width:100%; margin-top:10px}
 .kp{margin-left:8px; padding:2px 7px 1px; font-size:10.5px; vertical-align:2px}
 .kp.loc{color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent)}
+.impnl{display:block; margin:10px 0 4px; font:600 12px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--fg2)}
+.impn{display:block; width:100%; box-sizing:border-box; padding:9px 10px; border-radius:8px; border:1px solid var(--line); background:var(--bg); color:var(--fg); font:15px/1.35 var(--f-body, inherit); margin-bottom:10px}
 .impno{margin-top:12px; padding:10px 12px 12px; border-radius:10px; box-shadow:inset 0 0 0 1px var(--line)}
 .impno .qh{margin:0 0 6px; color:var(--dm-bad)}
 .impno .lead{margin:4px 0 0}
@@ -1120,7 +1122,7 @@ const importedKept = () => { const v = store.get(IMPORT_KEY, []); return Array.i
 const importStale = [];
 if(window.WH_IMPORT) for(const x of importedKept()){
   // (a kept export that cannot be read at all is listed as out of date, with Remove: it never stops the app)
-  let r; try { r = WH_IMPORT.make(x.json, D, { id:x.id, date:x.date }); } catch(e){ r = { ok:false, errors:['this kept export could not be read'] }; }
+  let r; try { r = WH_IMPORT.make(x.json, D, { id:x.id, date:x.date, name:x.listName }); } catch(e){ r = { ok:false, errors:['this kept export could not be read'] }; }
   if(r.ok && !D.armies.some(a => a.id === r.army.id)) D.armies.push(r.army);
   else importStale.push({ id:x.id, name:String(x.name || 'Imported list'), date:x.date, errors:r.ok ? ['a list with this id is already in the app'] : r.errors });
 }
@@ -1870,6 +1872,7 @@ function showImport(replace){
     '<p class="lead">In New Recruit, open the list, then Export. Choose the file here (.json, .ros, .rosz or .txt), or paste its text.</p>' +
     '<label class="btn2 impf"><input type="file" id="impFile" accept=".json,.ros,.rosz,.txt,application/json,text/plain,application/zip">Choose the file</label>' +
     '<textarea id="impText" class="impt" rows="4" placeholder="…or paste the export here (JSON, or text in the “+++” or “## Category” format)" aria-label="The New Recruit export" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>' +
+    '<label class="impnl" for="impName">List name</label><input id="impName" class="impn" type="text" placeholder="Imported list" value="' + esc(x && x.listName || '') + '" autocomplete="off" aria-label="List name (optional)">' +
     '<button class="btn impgo" data-impgo>' + (x ? 'Update' : 'Import') + '</button><div id="impOut" aria-live="polite"></div>' +
     '<p class="note">A list of a faction the app has in full is built from the app’s own tables, exactly as its built-in lists are. Another faction’s list is taken only when every unit in it is one the app’s own lists have, exactly. Otherwise nothing is added, and each reason is listed. An imported list is kept on this phone.</p>');
 }
@@ -1886,11 +1889,15 @@ async function runImport(input){
   if(kept.some(y => y.id === id) && id !== impReplace){ const y = D.armies.find(a => a.id === id);
     out.innerHTML = '<div class="impno"><p class="qh">Already imported</p><p class="lead">This export is already on this phone' + (y ? ' as ' + esc(y.name) : '') + '.</p>' + (y ? '<div class="racts"><button class="btn" data-army="' + esc(id) + '">Open ' + esc(y.name) + '</button></div>' : '') + '</div>'; return; }
   const date = today();
-  let m; try { m = WH_IMPORT.make(r.kept, D, { id, date }); } catch(e){ m = { ok:false, errors:['not a New Recruit export (it could not be read)'] }; }
+  // (the name in the box, else the export's: prefilled from it when the export carries one, else "Imported list")
+  const box = $('#impName'), given = box && box.value.trim() ? box.value.trim() : '';
+  if(box && !given){ const n = WH_IMPORT.nameOf(r.kept, D); if(n) box.value = n; }
+  const listName = given || null;
+  let m; try { m = WH_IMPORT.make(r.kept, D, { id, date, name:listName }); } catch(e){ m = { ok:false, errors:['not a New Recruit export (it could not be read)'] }; }
   if(!m.ok) return impFail('Not imported · ' + m.errors.length + (m.errors.length === 1 ? ' reason' : ' reasons'), m.errors);
   const A = m.army;
   if(impReplace && impReplace !== id) removeKept(impReplace);
-  try { store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id).concat([{ id, name:A.name, date, json:r.kept }])); } catch(e){}
+  try { store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id).concat([Object.assign({ id, name:A.name, date, json:r.kept }, listName ? { listName } : {})])); } catch(e){}
   const saved = importedKept().some(x => x.id === id);
   const i = D.armies.findIndex(y => y.id === id); if(i >= 0) D.armies.splice(i, 1);
   D.armies.push(splitRefs(A)); ONLY = D.armies.length === 1 ? D.armies[0] : null;
@@ -5951,6 +5958,14 @@ document.addEventListener('toggle', e => {
 }, true);
 $('#sheetBack').addEventListener('click', closeSheet);
 // the import sheet's file: read and imported at once
+// the import box's name: prefilled from a pasted export that carries one (not over a name the player typed)
+document.addEventListener('input', e => {
+  if(e.target.id === 'impName'){ e.target.dataset.typed = e.target.value ? '1' : ''; return; }
+  if(e.target.id !== 'impText' || !window.WH_IMPORT) return;
+  const box = $('#impName'); if(!box || box.dataset.typed) return;
+  let n = ''; try { const t = e.target.value.trim(), p = WH_IMPORT.parseSync(t, D); if(p.ok) n = WH_IMPORT.nameOf(p.text ? { text:t } : p.json, D); } catch(x){}
+  box.value = n;
+});
 document.addEventListener('change', e => {
   if(e.target.id !== 'impFile' || !e.target.files || !e.target.files[0]) return;
   const f = e.target.files[0];
