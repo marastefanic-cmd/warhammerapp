@@ -1005,7 +1005,16 @@ for (const u of units) {
   const used = new Set();
   // an ability of a box of named abilities that another ability selects from ("select one of the abilities in the Daemon Primarch of
   // Slaanesh section"): who '<box>: pick one', as Angron's Wrathful Presence abilities (one model: who names no part)
-  const pickOf = g => g.group && u._parts.length === 1 && gwAbs.some(x => !x.box && selectsFrom(bare(x.text), g.group)) ? g.group + ': pick one' : null;
+  // ("<box>: pick one" where the ability that selects is named for the box, Angron's Wrathful Presence, the Silent King's Triarch Abilities,
+  // as verify/effects-migrate.js reads the pick; else the section as the selecting ability's words name it, Magnus's "Crimson King" from
+  // Unearthly Power, Wazdakka's "Throttlerokkit Shokka Engine" from Full Throttle's "select one Throttlerokkit Shokka Engine ability")
+  const pickOf = g => {
+    if (!g.group || u._parts.length !== 1) return null;
+    const sel = gwAbs.filter(x => !x.box && selectsFrom(bare(x.text), g.group)); if (!sel.length) return null;
+    if (sel.some(x => lc(x.name) === lc(g.group))) return g.group + ': pick one';
+    const t = bare(sel[0].text), m = /select one of the abilities in the (.+?) section/i.exec(t) || /select one (.+?) ability\b/i.exec(t);
+    return m ? m[1] : g.group;
+  };
   for (const ab of u.abilities) {
     const plain = plainBS(ab._bs);
     // an enhancement: its text from the detachment (data.js or this run's rows)
@@ -1091,7 +1100,8 @@ for (const u of units) {
     // the Faction Pack's words)
     // (not where the hand file puts GW's words in itself, its texts: they are applied below, once)
     const handTexts = Object.values(HAND.units || {}).some(h => (h.texts || {})[ab.name] || (h.texts || {})[typo(g.name)]) || Object.values(HAND.texts || {}).some(by => (by || {})[ab.name] || (by || {})[typo(g.name)]);
-    { const dw = !handTexts && GWO.DEVW.find(d => d.page === path.basename(g.file) && [ab.name, typo(g.name)].includes(d.ability) && GWO.norm(d.waha) === GWO.norm(g.text));
+    // (and not in a faction catalogue's reading, --emit: verify/from-bsdata.js puts the Faction Pack's words in itself, applyPack)
+    { const dw = !handTexts && !argv.includes('--emit') && GWO.DEVW.find(d => d.page === path.basename(g.file) && [ab.name, typo(g.name)].includes(d.ability) && GWO.norm(d.waha) === GWO.norm(g.text));
       if (dw) { ab.text = dw.app; filled.push({ what: 'ability ' + u.name + ' · ' + ab.name + ': GW’s words as declared', from: 'verify/deviations-words.json (' + dw.page + ')' }); } }
     if (g.damaged) ab.damaged = g.damaged;
     // (Aura) is only what GW tags so (Core Rules 22.01): BSData's "One Head Looks Back (Aura)" is GW's One Head Looks Back, untagged
@@ -1152,7 +1162,7 @@ for (const u of units) {
     // Lord of the Eightbound, "If this model is attached to a WORLD EATERS POSSESSED unit …, this model has the Deep Strike and Scouts 6"
     // abilities", leading Exalted Eightbound)
     { const re = new RegExp('\\bthis model has the\\b[^.]*\\b' + r.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?=[\\s.,*]|$)', 'i');
-      const by = u.abilities.find(a => !a._e && re.test(bare(a.text || '')) && (m => !m || u.kw.some(k => lc(k) === lc(m[1].split(/\s+/).pop())))(/\battached to an? ([^.,]*?) unit\b/i.exec(bare(a.text || ''))));
+      const by = u.abilities.find(a => !a._e && bare(a.text || '').split(/(?<=\.)\s+/).some(t => re.test(t) && !/\bagainst\b/i.test(t)) && (m => !m || u.kw.some(k => lc(k) === lc(m[1].split(/\s+/).pop())))(/\battached to an? ([^.,]*?) unit\b/i.exec(bare(a.text || ''))));
       if (by) { filled.push({ what: 'Rules line of ' + u.name + ' keeps ' + r, from: by.name + ' gives its model ' + r }); continue; } }
     // an army rule of the faction that GW's datasheet names as the tag of one of its abilities ("Defender’s Duty (Bondsman)"): the
     // datasheet names it, so it stays on the Rules line, as on every approved Imperial Knights list
