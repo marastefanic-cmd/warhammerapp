@@ -1745,7 +1745,7 @@
    }
   },
   "BUILD_INDEX": {
-   "what": "what builder.js needs on the phone to build an imported list beyond the other tables, written by verify/build-index.js --write from them and the gate's files (one object; its parts are the columns)",
+   "what": "what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values over BSData’s): written by verify/build-index.js",
    "columns": {
     "labels": {
      "source": "derived",
