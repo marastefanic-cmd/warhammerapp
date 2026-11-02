@@ -1497,16 +1497,21 @@ const FN_SET = { aSet:'A' };                       // one it sets ("7/10")
 const FN_RANGED = new Set(['range', 'bsSet', 'assault', 'heavy', 'indirect', 'pistol']);   // effects only ranged attacks have
 const FN_IF = 'If (see the rule)';   // a condition that is only GW's words, left to its rule's words
 const FN_NC = 'not counted here: see the rule';   // words of a rule about its attacks that no catalogue effect reads (BOXES nc atk)
-// the weapons of the unit a box's scope names (by name, or a weapon keyword), of this kind
+// a weapon item has a weapon keyword (one of its profiles: "SUSTAINED HITS" is "SUSTAINED HITS 1" too)
+const itemHasKw = (it, kw) => it.profiles.some(p => (p.kw || []).some(k => String(k).toUpperCase() === kw || String(k).toUpperCase().startsWith(kw + ' ')));
+// the weapons of the unit a box's scope names (by name, or a weapon keyword), of this kind; less those it excludes by a weapon keyword
+// (wkwNot: "(excluding Extra Attacks weapons)")
 const fnWeapons = (u, kind, sc) => { const lc = x => String(x || '').toLowerCase().replace(/[’']/g, "'");
   return weaponItems(kind === 'ranged' ? u.ranged || [] : u.melee || []).filter(it => (!sc.weapon || it.profiles.some(p => [p.name, it.group, itemName(it)].some(x => lc(x) === sc.weapon || lc(x).startsWith(sc.weapon))))
     && (!sc.wkw || it.profiles.some(p => (p.kw || []).some(k => String(k).toUpperCase() === sc.wkw || String(k).toUpperCase().startsWith(sc.wkw + ' '))))
-    && (!sc.part || lc(it.who).startsWith(lc(sc.part).replace(/s$/, '')))); };
+    && (!sc.part || lc(it.who).startsWith(lc(sc.part).replace(/s$/, ''))) && (!sc.wkwNot || !itemHasKw(it, sc.wkwNot))); };
 // one box as a footnote: { kind, when (its conditions' labels), note (its effects' labels; a pick's options), who (the weapons or models it
 // names), weapon + set (a box for one weapon's characteristic: in that row), from, rule / strat + cp / src (what it links), damaged }
 function fnLine(S, b, u, kind, ab){
   const E = WH_EFFECTS, sc = b.scope || {};
-  const ws = sc.weapon || sc.wkw || sc.part ? fnWeapons(u, kind, sc) : null;
+  // (a weapon keyword it excludes names its weapons only where one of the unit's has it)
+  const ws0 = sc.weapon || sc.wkw || sc.part || sc.wkwNot ? fnWeapons(u, kind, sc) : null;
+  const ws = ws0 && !sc.weapon && !sc.wkw && !sc.part && ws0.length === weaponItems(kind === 'ranged' ? u.ranged || [] : u.melee || []).length ? null : ws0;
   if(ws && !ws.length) return null;   // (for weapons this kind of attack has not)
   // (not an effect the list printed into the weapons, marked + there; nor a weapon ability every weapon it reaches has already: Waaagh!'s
   // [ASSAULT] for a unit whose ranged weapons all have it)
@@ -2305,8 +2310,8 @@ function dmBoxRules(A, au, kind, st){
     const mine = all.filter(([b]) => S.reachOnly ? !!b.reach && dmReaches(b.reach, au) : b.reach ? dmReaches(b.reach, au) && !(S.grp === 'unit' && b.notSelf) : S.grp !== 'other');
     const counted = mine.filter(([b]) => b.pick ? b.pick.some(p => dmHasFx(p.fx)) : dmHasFx(b.fx));
     // (a box for weapons by name or keyword is in a step with such a weapon: Moment Shackle's Watcher's Axe is not in the shooting)
-    const wOf = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw) return true; const ws = weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []);
-      return ws.some(it => dmReach(au, it, { from:S.name, ab:S.ab, src:S.src }, { scope:{ weapon:sc.weapon, wkw:sc.wkw } }) > 0); };
+    const wOf = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw && !sc.wkwNot) return true; const ws = weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []);
+      return ws.some(it => dmReach(au, it, { from:S.name, ab:S.ab, src:S.src }, { scope:{ weapon:sc.weapon, wkw:sc.wkw, wkwNot:sc.wkwNot } }) > 0); };
     for(const [b0, i] of counted){ const b = dmBothOf(A, au, b0), r = dmBoxRule(S, b, i, st); if((b.kind === 'all' || b.kind === kind) && wOf(b)) rules.push(r); else if(S.grp === 'strat' && b.kind !== 'all' && b.kind !== kind) other.push(r); }
     // (words of a source with counted boxes that are not counted, a rare mechanic beside an effect: listed with GW's words too)
     if(counted.length){ for(const q of o.nc || []) nc.push({ side:'a', grp:S.grp, name:(S.cp ? S.cp + 'CP ' : '') + S.name, strat:!!S.strat, s:S.s || null, text:'“' + dmQuoteOf(q.quote) + '”', why:q.why + ': ' + ncText }); continue; }
@@ -2328,6 +2333,7 @@ function dmReach(u, it, m, sc){
   const lc = x => String(x || '').toLowerCase().replace(/[’']/g, "'");
   if(s.weapon && !it.profiles.some(p => [p.name, it.group, name].some(x => lc(x) === s.weapon || lc(x).startsWith(s.weapon)))) return 0;
   if(s.wkw && !it.profiles.some(p => p.kw.some(k => String(k).toUpperCase() === s.wkw || String(k).toUpperCase().startsWith(s.wkw + ' ')))) return 0;
+  if(s.wkwNot && itemHasKw(it, s.wkwNot)) return 0;   // (weapons it excludes: "(excluding Extra Attacks weapons)")
   const isChar = () => u.leads ? charsOf(u).some(c => c.name === part) : hasKw(u, 'Character');
   if(s.models === 'char' && !isChar()) return 0;
   if(s.models === 'nonchar' && u.leads && charsOf(u).some(c => c.name === part)) return 0;
@@ -2644,7 +2650,7 @@ function dmCalc(st, A, au, tg, kind){
   const dmgOn = [], nc = B.nc.slice();
   for(const ab of damaged){
     // (a band for weapons by name, Skarbrand's Slaughter and Carnage: in a step with such a weapon; one for the other kind of attack: not here)
-    const wIn = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw) return true; return weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []).some(it => dmReach(au, it, { from:ab.name, ab, src:au }, { scope:{ weapon:sc.weapon, wkw:sc.wkw } }) > 0); };
+    const wIn = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw && !sc.wkwNot) return true; return weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []).some(it => dmReach(au, it, { from:ab.name, ab, src:au }, { scope:{ weapon:sc.weapon, wkw:sc.wkw, wkwNot:sc.wkwNot } }) > 0); };
     const o = dmBoxesOf(DM_KEY.a(ab)) || {}, fxB = (o.b || []).filter(b => dmHasFx(b.fx)), bs = fxB.filter(b => (b.kind === kind || b.kind === 'all') && wIn(b));
     if(fxB.length && !bs.length) continue;
     if(!bs.length){ nc.push({ side:'a', grp:'unit', name:ab.name, text:'“' + dmQuoteOf(o.nc && o.nc[0] ? o.nc[0].quote : ab.text) + '”', why:(o.nc && o.nc[0] ? o.nc[0].why + ': ' : '') + 'not counted in the Damage tab' }); continue; }
@@ -3747,7 +3753,7 @@ function dmLeverRow(C, x){
     const sc0 = (r.sc && r.sc.scope) || {}, bu0 = C.plan.beats[C.plan.k].atk.u;
     const one = sc0.models === 'one' && modelCount(bu0) > 1 ? ' · one model only: counted for the weapons of one model' : '';
     // (the models its words name: CHARACTER models, or the others; a re-roll of one die: how often, in GW's words, BOXES pool)
-    const who = (sc0.models === 'char' ? ' · CHARACTER models only' : sc0.models === 'nonchar' ? ' · not CHARACTER models' : '') + (sc0.wkw ? ' · ' + dmCap(sc0.wkw.toLowerCase()) + ' weapons only' : '') + (sc0.weapon && !part ? ' · its ' + sc0.weapon.replace(/ weapons?$/, '') + ' weapons' : '');
+    const who = (sc0.models === 'char' ? ' · CHARACTER models only' : sc0.models === 'nonchar' ? ' · not CHARACTER models' : '') + (sc0.wkw ? ' · ' + dmCap(sc0.wkw.toLowerCase()) + ' weapons only' : '') + (sc0.wkwNot ? ' · not ' + dmCap(sc0.wkwNot.toLowerCase()) + ' weapons' : '') + (sc0.weapon && !part ? ' · its ' + sc0.weapon.replace(/ weapons?$/, '') + ' weapons' : '');
     const PL = { selected:'one for the unit each time it is selected to shoot or fight, its weapons most valuable first', phase:'once in the phase', turn:'once per turn', round:'once per battle round' };
     const pool = r.m.box && r.m.box.pool && r.m.box.pool !== 'phase' ? ' · ' + PL[r.m.box.pool] : '';
     const bu = bu0, pt = r.m.part ? (words ? ' · ' : '') + r.m.part.note + ' with ' + andList(r.m.part.picks).replace(/ and /, ' or ') + ' (' + (DM_FACTS[r.m.part.cond] || r.m.part.cond) + ')' + (r.partOn ? ' counted (' + (r.m.part.cond === 'battleline6' && hasKw(bu, 'Battleline') ? 'it is BATTLELINE' : 'said above') + ')' : r.partIn ? ' only while it holds (above)' : '') : '';

@@ -5,8 +5,8 @@
 //
 // A box: { quote (the verbatim sentence of GW's text it reads), lead (the verbatim line it continues, when it has one), fx:[[id, value]]
 // (effects.js FX), on:[[id, value]] (effects.js COND), kind ('ranged' | 'melee' | 'all'), scope: { weapon (a weapon's name or the head
-// word of its name), wkw (a weapon keyword), models ('model' | 'one' | 'char' | 'nonchar'), part (the models of an attached unit it
-// names) }, reach (the friendly units it reaches: { all, any, none }, a rule or another unit's ability), mark ('aura' | 'selected' |
+// word of its name), wkw (a weapon keyword), wkwNot (a weapon keyword it excludes: "(excluding Extra Attacks weapons)"), models ('model' | 'one' |
+// 'char' | 'nonchar'), part (the models of an attached unit it names) }, reach (the friendly units it reaches: { all, any, none }, a rule or another unit's ability), mark ('aura' | 'selected' |
 // 'friendly': how it reaches them), notSelf, lasts ('turn' | 'round' | 'battle'), opt (the option of its rule it is), pick:[pill]
 // (one of several: each { name, quote, fx, on }), part:{ on, fx } (a part counted only while a fact holds), limit (how many of its
 // rule's boxes can be active at once, its words: "up to two") }.
@@ -160,7 +160,9 @@ function condsOf(V, sOrig, leadOrig, opts){
     // the target's status, which no condition above reads: "that target a hidden unit", "targets a unit that is Battle-shocked"
     /\bthat targets? an? (?!enemy\b|unit\b)(?:[a-z][a-z-]* )+?unit(?: containing one or more models on [a-z ]+?(?=,|$))?/g, /\btargets? (?:a|an|an enemy) unit that is (?!below\b|not below\b)[^,.;:]+/g,
     // (attacks it is not for, by their weapon ability: "(excluding [DEVASTATING WOUNDS] attacks)")
-    /\(excluding \[[^\]]+\] attacks\)/g];
+    /\(excluding \[[^\]]+\] attacks\)/g,
+    // (weapons it is not for, in words no weapon keyword reads: "(excluding hellforged weapons)"; a weapon keyword is its scope, wkwNot)
+    new RegExp('\\(excluding (?!\\[?(?:' + WKW_ALT + ')\\]? weapons?\\))[^)]*\\bweapons?\\)', 'gi')];
   // (the defence side: the attacks or attackers it is for, which no condition above reads: "(excluding TITANIC units)", "Each time an enemy
   // unit … is selected to fight", "each time an attack with a Damage characteristic of 1 is allocated to the bearer", "When this unit is
   // selected as the target of an attack", "At the start of your opponent's Shooting phase, select one enemy unit …")
@@ -188,8 +190,16 @@ const hasTargetCond = (on, n) => { const m = TARGET_RESTR.exec(n || ''), t = m ?
 const afterAttack = (src, n) => src.type === 'strat' && /\bhas (?:shot|fought)\b/.test(norm(src.when || '')) && !/\b(?:your|this|that|its) unit\b|\bmodels in (?:your|this|that) unit\b|\bthe bearer\b/.test(n);
 // the weapons and models a sentence names: a weapon of the datasheet by its name ("its hellforged weapons", "this model's Omnissian
 // axe"), [PSYCHIC] ("Psychic weapons"), one model ("this model's", "the bearer"), CHARACTER models, a part of an attached unit
-function scopeOf(V, n, weapons, nOrig){
+// the core weapon abilities (24.xx) by their names: a weapon keyword GW names weapons by ("(excluding Extra Attacks weapons)")
+const WKW_ALT = 'anti-[a-z -]+|assault|blast|cleave \\d|close-quarters|conversion|devastating wounds|extra attacks|hazardous|heavy|hunter|ignores cover|indirect fire|lance|lethal hits|melta(?: \\d)?|pistol|precision|psychic|rapid fire(?: \\d)?|sustained hits(?: \\d)?|torrent|twin-linked', WEAPON_KW = new RegExp('^(?:' + WKW_ALT + ')$');
+// the weapons a sentence excludes: "(excluding Extra Attacks weapons)", "(excluding [PISTOL] weapons)": { kw } (a weapon keyword: the box's
+// scope wkwNot) or { words } (anything else: GW's words, quoted on the box), or null
+const weaponExcl = n => { const m = /\(excluding \[?([a-z][a-z0-9 -]*?)\]? weapons?\)/.exec(n); if(!m) return null; return WEAPON_KW.test(m[1]) ? { kw:m[1].toUpperCase() } : { words:m[0] }; };
+function scopeOf(V, n0, weapons, nOrig){
   const sc = {};
+  // (weapons it excludes are no weapons it names: "melee weapons (excluding Extra Attacks weapons)")
+  const ex = weaponExcl(n0); if(ex && ex.kw) sc.wkwNot = ex.kw;
+  const n = n0.replace(/\(excluding [^)]*\bweapons?\)/g, ' ');
   const ws = [...new Set((weapons || []).map(w => w.toLowerCase().replace(/[’']/g, "'")))].sort((a, b) => b.length - a.length);
   for(const w of ws){ if(n.includes(w) && !/^(?:ranged|melee)\b/.test(w)){ sc.weapon = w; break; } }
   let m;
@@ -726,4 +736,4 @@ function shape(list, src){
   return final;
 }
 
-module.exports = { extract, statOf, sentencesOf, cpNoteOf, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };
+module.exports = { WEAPON_KW, weaponExcl, extract, statOf, sentencesOf, cpNoteOf, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };

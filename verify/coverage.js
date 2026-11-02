@@ -190,8 +190,10 @@ function gaps(b, src, side, others, ctx){
         if(/psychic attacks/.test(pn)){ if(!S.ids.has('notPsychic') && !quotedHas(/excluding psychic attacks/)) out.push('“' + ph + '” and no Not Psychic Attacks condition'); continue; }
         const ks = pn.replace(/^\(excluding |\)$/g, '').replace(/\bunits?$|\bmodels?$/, '').split(/\/|,? and |, | or /).map(k => k.trim().replace(/s$/, '')).filter(Boolean);
         if(ks.every(k => S.kws.some(x => x.replace(/s$/, '').includes(k) || k.includes(x.replace(/s$/, ''))) || S.q.some(q => q.includes(k)))) continue;
-        // (weapons it is not for, "(excluding Extra Attacks weapons)": the box's weapons, its effects' own words)
-        if(/\bweapons?\)$/.test(pn)) continue;
+        // (weapons it is not for, "(excluding Extra Attacks weapons)": the box's scope wkwNot, that weapon keyword; other words: quoted)
+        if(/\bweapons?\)$/.test(pn)){ const ex = X.weaponExcl(pn);
+          if(!(ex && ex.kw && (b.scope || {}).wkwNot === ex.kw) && !quotedHas(new RegExp(pn.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')))) out.push('“' + ph + '”: weapons it excludes, and no wkwNot scope nor its words quoted');
+          continue; }
         if(side === 'attack' && covers(ph, m.index)) continue;
         out.push('“' + ph + '” is no condition of the box'); continue; }
       // (a failed save is its own condition, failedSave, or quoted; what a unit can only target is GW's words, never another condition's)

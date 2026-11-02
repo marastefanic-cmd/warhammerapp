@@ -133,7 +133,8 @@ let nLines = 0, nRows = 0, nNc = 0;
   const bakedOf = (u, name) => [...new Set([].concat(u.ranged || [], u.melee || []).flatMap(w => Object.entries(w.from || {}).filter(([, v]) => String(v).split(/\s*,\s*/).includes(name)).map(([k]) => String(k).toUpperCase())))];
   const items = (u, kind) => { const out = []; for(const w of (kind === 'ranged' ? u.ranged : u.melee) || []){ const l = out[out.length - 1]; if(w.group && l && l.group === w.group && l.who === w.who) l.ps.push(w); else out.push({ group:w.group, who:w.who, ps:[w] }); } return out; };
   const weaponsOf = (u, kind, sc) => items(u, kind).filter(it => (!sc.weapon || it.ps.some(p => [p.name, it.group, it.group || it.ps[0].name].some(x => lc(x) === sc.weapon || lc(x).startsWith(sc.weapon))))
-    && (!sc.wkw || it.ps.some(p => (p.kw || []).some(k => String(k).toUpperCase() === sc.wkw || String(k).toUpperCase().startsWith(sc.wkw + ' ')))) && (!sc.part || lc(it.who).startsWith(lc(sc.part).replace(/s$/, ''))));
+    && (!sc.wkw || it.ps.some(p => (p.kw || []).some(k => String(k).toUpperCase() === sc.wkw || String(k).toUpperCase().startsWith(sc.wkw + ' ')))) && (!sc.part || lc(it.who).startsWith(lc(sc.part).replace(/s$/, '')))
+    && (!sc.wkwNot || !it.ps.some(p => (p.kw || []).some(k => String(k).toUpperCase() === sc.wkwNot || String(k).toUpperCase().startsWith(sc.wkwNot + ' ')))));
   const meets = (n, u) => !n || ((!n.all || n.all.every(k => hasK(u, k))) && (!n.any || !n.any.length || n.any.some(k => hasK(u, k))) && (!n.none || !n.none.some(k => hasK(u, k))) && (!n.unless || !meets(n.unless, u)));
   for(const a of D.armies) for(const u of a.units) for(const kind of ['ranged', 'melee']){ if(!((kind === 'ranged' ? u.ranged : u.melee) || []).length) continue;
     const where = a.id + '/' + u.id + ' ' + kind, got = A.inArmy(a, () => A.unitMods(u, kind)), want = [];
@@ -148,7 +149,9 @@ let nLines = 0, nRows = 0, nNc = 0;
       for(const b of o.b || []){
         if(S.reachOnly ? !(b.reach && meets(b.reach, u)) : b.reach ? !meets(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;
         if(b.kind !== 'all' && b.kind !== kind) continue;
-        const sc = b.scope || {}, ws = sc.weapon || sc.wkw || sc.part ? weaponsOf(u, kind, sc) : null;
+        // (a weapon keyword it excludes, wkwNot, names its weapons only where one of the unit's has it)
+        const sc = b.scope || {}, ws0 = sc.weapon || sc.wkw || sc.part || sc.wkwNot ? weaponsOf(u, kind, sc) : null;
+        const ws = ws0 && !sc.weapon && !sc.wkw && !sc.part && ws0.length === items(u, kind).length ? null : ws0;
         if(ws && !ws.length) continue;
         // (a weapon ability every weapon it reaches has already says nothing)
         const its = ws || items(u, kind), hasAll = l => /^\[.+\]$/.test(l) && its.length && its.every(it => it.ps.every(w => (w.kw || []).some(k => '[' + String(k).toUpperCase() + ']' === l)));

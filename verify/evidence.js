@@ -74,6 +74,8 @@ for(const [key, o] of Object.entries(T)){
     if(/\bwhile this (?:model|unit) is leading a unit\b/.test(E.norm(b.quote)) && !(b.on || []).some(x => x[0] === 'leading')) fail('G5', where, '"while this model is leading a unit" and no leading condition');
     for(const k of [].concat(((b.reach || {}).all) || [], ((b.reach || {}).any) || [], ((b.reach || {}).none) || [])) if(!text.includes(String(k).replace(/^Faction: /, '').toLowerCase().replace(/s$/, ''))) fail('G5', where, 'reach keyword ' + k + ' is not a literal keyword of its words');
     const sc = b.scope || {};
+    // (a weapon keyword it excludes: its quote's "(excluding X weapons)", X that keyword)
+    if(sc.wkwNot && ((X.weaponExcl(E.norm(b.quote)) || {}).kw !== sc.wkwNot)) fail('G5', where, 'scope wkwNot ' + sc.wkwNot + ' is not its quote\'s “(excluding … weapons)”');
     if(sc.weapon && src.type !== 'strat' && !E.norm(b.quote).includes('attack with a ' + sc.weapon) && !E.norm(b.quote).includes('attack with an ' + sc.weapon) && !src.weapons.some(w => String(w).toLowerCase().replace(/[’']/g, "'").startsWith(sc.weapon) || String(w).toLowerCase().split(/\s+/)[0] === sc.weapon.split(/\s+/)[0])) fail('G5', where, 'weapon ' + sc.weapon + ' is no weapon of a unit with it');
   }
   for(const x of o.nc || []) if(!text.includes(flat(x.quote).replace(/\s*\.\s*$/, ''))) fail('G2', where, 'not counted, not GW’s words: “' + x.quote.slice(0, 80) + '”');
@@ -111,7 +113,7 @@ for(const [key, o] of Object.entries(T)){ const src = S.get(key); for(const b of
 // fails), in what the words give (T) and in data.js BOXES alike
 // (d, dnc, dreach: the defence side, held by verify/defence.js D1; st, the stat boxes, by verify/lines.js LS)
 { const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both', 'embarked', 'played', 'riled', 'd', 'dnc', 'dreach', 'st']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool', 'excl']),
-    PICK_KEYS = new Set(['name', 'fx', 'quote', 'on', 'lead', 'part']), SCOPE_KEYS = new Set(['models', 'weapon', 'part', 'wkw']), LIMIT_KEYS = new Set(['n', 'what']),
+    PICK_KEYS = new Set(['name', 'fx', 'quote', 'on', 'lead', 'part']), SCOPE_KEYS = new Set(['models', 'weapon', 'part', 'wkw', 'wkwNot']), LIMIT_KEYS = new Set(['n', 'what']),
     PART_KEYS = new Set(['on', 'fx', 'quote']), NC_KEYS = new Set(['quote', 'why', 'atk']), BOTH_KEYS = new Set(['names', 'quote', 'reach', 'mark', 'opt', 'lasts']);
   const extra = (o, keys) => Object.keys(o || {}).filter(k => !keys.has(k));
   for(const [name, TT] of [['the words', T], ['data.js BOXES', D.boxes || {}]]) for(const [key, o] of Object.entries(TT)){ const where = key + ' ' + (o.n || '') + ' (' + name + ')';
