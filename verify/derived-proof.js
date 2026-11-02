@@ -37,9 +37,11 @@ const STEPS = [...RUN.matchAll(/\bstep\('([^']+)', \[([^\]]*)\](, \{[^}]*\})?\)/
   .filter(s => !s.env && s.args[0] !== path.relative(ROOT, __filename));   // (not the screens, run in a browser, nor this step)
 const requires = f => [...fs.readFileSync(path.join(ROOT, f), 'utf8').matchAll(/require\(\s*(?:ROOT \+ )?['"](\.{1,2}\/[\w./-]+?)(?:\.js)?['"]\s*\)|path\.join\(ROOT, '([\w./-]+\.js)'\)/g)]
   .map(m => m[2] || path.relative(ROOT, path.resolve(path.dirname(path.join(ROOT, f)), m[1] + '.js')));
+// (code only: data.js and what the gate writes, verified.js and sw.js, are what a step reads, not what it is)
+const NOT_CODE = new Set(['data.js', 'verified.js', 'sw.js']);
 function closure(f){
   const out = new Set(), todo = [f];
-  while(todo.length){ const g = todo.pop(); if(out.has(g) || !fs.existsSync(path.join(ROOT, g))) continue; out.add(g); todo.push(...requires(g)); }
+  while(todo.length){ const g = todo.pop(); if(out.has(g) || NOT_CODE.has(g) || !fs.existsSync(path.join(ROOT, g))) continue; out.add(g); todo.push(...requires(g)); }
   return out;
 }
 for(const s of STEPS) s.files = closure(s.args[0]);
