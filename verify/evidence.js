@@ -82,6 +82,9 @@ for(const [key, o] of Object.entries(T)){
     if(sc.weapon && src.type !== 'strat' && !E.norm(b.quote).includes('attack with a ' + sc.weapon) && !E.norm(b.quote).includes('attack with an ' + sc.weapon) && !src.weapons.some(w => String(w).toLowerCase().replace(/[’']/g, "'").startsWith(sc.weapon) || String(w).toLowerCase().split(/\s+/)[0] === sc.weapon.split(/\s+/)[0])) fail('G5', where, 'weapon ' + sc.weapon + ' is no weapon of a unit with it');
   }
   for(const x of o.nc || []) if(!text.includes(flat(x.quote).replace(/\s*\.\s*$/, ''))) fail('G2', where, 'not counted, not GW’s words: “' + x.quote.slice(0, 80) + '”');
+  // (and its words that change a characteristic no stat box counts: GW's, a characteristic its words name)
+  for(const x of o.snc || []){ if(!flat(src.type === 'strat' ? src.effect : (src.table ? M.ruleText(src) : src.text || '')).includes(flat(x.quote).replace(/\s*\.\s*$/, ''))) fail('G2', where, 'stat words not counted, not GW’s words: “' + x.quote.slice(0, 80) + '”');
+    if(!X.statWords(E.norm(x.quote)).includes(x.stat)) fail('G2', where, 'stat words not counted: ' + x.stat + ' is not in “' + x.quote.slice(0, 80) + '”'); }
 }
 stats.boxes = nBox; stats.picks = nPill; stats.sources = Object.keys(T).length;
 // ---- G9: the classes the extractor once got wrong ----
@@ -115,7 +118,7 @@ for(const [key, o] of Object.entries(T)){ const src = S.get(key); for(const b of
 // G1 (the schema): a box, a pick, a scope, a limit, a part, a source carry the fields the script writes and no other (a hand note on a box
 // fails), in what the words give (T) and in data.js BOXES alike
 // (d, dnc, dreach: the defence side, held by verify/defence.js D1; st, the stat boxes, by verify/lines.js LS)
-{ const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both', 'embarked', 'played', 'riled', 'd', 'dnc', 'dreach', 'st']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool', 'excl']),
+{ const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both', 'embarked', 'played', 'riled', 'd', 'dnc', 'dreach', 'st', 'snc']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool', 'excl']),
     PICK_KEYS = new Set(['name', 'fx', 'quote', 'on', 'lead', 'part']), SCOPE_KEYS = new Set(['models', 'weapon', 'part', 'wkw', 'wkwNot']), LIMIT_KEYS = new Set(['n', 'what']),
     PART_KEYS = new Set(['on', 'fx', 'quote']), NC_KEYS = new Set(['quote', 'why', 'atk']), BOTH_KEYS = new Set(['names', 'quote', 'reach', 'mark', 'opt', 'lasts']);
   const extra = (o, keys) => Object.keys(o || {}).filter(k => !keys.has(k));

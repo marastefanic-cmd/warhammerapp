@@ -137,8 +137,8 @@ function gaps(b, src, side, others, ctx){
     // (nearest first: the quote, the line it continues, the sentence it refers back to, the sentences before it in its rule, its tag's rule)
     const us = X.unitsOf(src), at = u ? us.findIndex(x => x.s === u.s && x.lead === u.lead) : -1, before = at > 0 ? us.slice(0, at).reverse().map(x => x.s) : [];
     const ph = reachPhrase([b.quote, lead, back, u && u.prevS || ''].concat(before, [src.tagText || '']).map(t => String(t).replace(/~~[^~]*~~\/?/g, '')));
-    // ("Ranged attacks that target that enemy unit": every friendly unit's, an empty reach)
-    const every = /^(?:ranged |melee )?attacks that target that enemy unit\b/.test(n(b.quote)) && !Object.keys(b.reach).length;
+    // ("Ranged attacks that target that enemy unit", "that enemy unit cannot have the Benefit of Cover": every friendly unit's, an empty reach)
+    const every = X.EVERY_FRIENDLY.test(n(b.quote)) && !Object.keys(b.reach).length;
     const ifOnly = S.on.length && S.on.every(([id]) => C[id] && C[id].quoted);
     // (a reach checked against no phrase of GW's: only where the line says "If (see the rule)"; counted either way)
     const unchecked = why => { counts.unchecked++; if(!ifOnly) out.push('its reach is checked against no GW phrase (' + why + ') and its line does not say “If (see the rule)”'); };

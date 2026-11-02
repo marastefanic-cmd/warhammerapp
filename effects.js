@@ -67,7 +67,8 @@ const FX = {
   twin:Object.assign(kwFx('twin-linked', 'twin'), { custom:[true] }),
   lance:Object.assign(kwFx('lance', 'lance'), { custom:[true] }),
   precision:Object.assign(kwFx('precision', 'precision'), { custom:[true] }),
-  ignoresCover:Object.assign(kwFx('ignores cover', 'ignoresCover'), { custom:[true] }),
+  // (and an enemy unit that "cannot have the Benefit of Cover" (Burning Spray): every attack against it as if [IGNORES COVER], 13.08)
+  ignoresCover:Object.assign(kwFx('ignores cover', 'ignoresCover'), { custom:[true], pats:[/\[ignores cover(?::[^\]]*)?\]/, /\bthat enemy unit cannot have the benefit of cover\b/] }),
   heavy:kwFx('heavy', 'heavy'),
   hazardous:kwFx('hazardous', 'hazardous'),
   indirect:kwFx('indirect fire', 'indirect'),
@@ -136,7 +137,7 @@ const COND = {
   targetNotBelowHalf:{ label:() => 'The target not Below Half-strength', pats:[/\btargets? an enemy unit that is not below half-strength\b/] },
   targetBelowHalf:{ label:() => 'The target Below Half-strength', pats:[/\btargets? (?:a |an enemy )?unit (?:\([^)]*\) )?(?:that is )?below half-strength\b/, /\bthat (?:enemy )?unit is below half-strength\b/, /\btarget of that attack is below half-strength\b/, /\bif that unit is below half-strength\b/] },
   targetBelowStarting:{ label:() => 'The target below its Starting Strength', pats:[/\btargets? (?:a |an enemy )?unit that is below (?:its )?starting strength\b/] },
-  targetSelected:{ label:() => 'The target is the enemy unit selected', pats:[/\btargets? (?:that|its|your) (?:enemy unit|unit|victim|prey|machine vengeance target)\b/, /\bthat target (?:that )?enemy unit\b/, /\branged attacks that target that enemy unit\b/] },
+  targetSelected:{ label:() => 'The target is the enemy unit selected', pats:[/\bthat enemy unit cannot have the benefit of cover\b/, /\btargets? (?:that|its|your) (?:enemy unit|unit|victim|prey|machine vengeance target)\b/, /\bthat target (?:that )?enemy unit\b/, /\branged attacks that target that enemy unit\b/] },
   oncePerBattle:{ label:() => 'Once per battle', pats:[/\bonce per battle\b/] },
   oncePerTurn:{ label:() => 'Once per turn', pats:[/\bonce per turn\b/] },
   used:{ label:() => 'If it uses this ability', pats:[/\b(?:you|it|this model) can use this ability\b/, /\bcan call upon\b/, /\bif (?:it|you) do(?:es)?\b/] },

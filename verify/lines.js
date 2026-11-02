@@ -45,7 +45,7 @@ const X = require('./effects-extract');
 const T = require('./tables');
 const M = require('./effects-migrate');
 
-const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'alreadyIn', 'alreadyInRule']);
+const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'alreadyIn', 'alreadyInRule', 'allStratagems', 'canTarget']);
 const D = dm.D, A = dm.app, fails = [], stats = {};
 const fail = (g, where, what) => fails.push(g + ' ' + where + ': ' + what);
 
@@ -262,6 +262,16 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
           const vs = [...new Set(u.stats.map(s => String(s[f.stat])))], whole = !sets && !(b.scope || {}).models && vs.length === 1 && (f.inch ? /^\d+"$/ : /^\d+$/).test(vs[0]);
           const val = whole ? f.stat + ' ' + (parseInt(vs[0], 10) + f.add(p)) + (f.inch ? '"' : '') : ((b.scope || {}).models ? b.scope.models + ' models ' : '') + f.label(p);
           want.push(r.name + ' | ' + (when ? when + ': ' : '') + val); } }
+      // (and every snc of its sources, BOXES: its abilities, another unit's aura that reaches it, its army and detachment rules, the
+      // stratagems it can be the target of: "<stat>: not counted here: see the rule", once per source and characteristic, not one printed in)
+      const said = new Set(), snc = (key, name) => { for(const x of ((D.boxes || {})[key] || {}).snc || []){
+        if(said.has(name + '|' + x.stat) || (u.stats.length && u.stats.every(s => String([].concat((s.from || {})[x.stat] || []).join(', ')).split(/\s*,\s*/).includes(name)))) continue;
+        said.add(name + '|' + x.stat); want.push(name + ' | ' + (x.foe ? 'Enemy units’ ' : '') + x.stat + ': not counted here: see the rule'); } };
+      for(const ab of u.abilities || []) snc(M.KEY.ability(ab), ab.name);
+      for(const x of a.units) if(x !== u) for(const ab of x.abilities || []){ const o = (D.boxes || {})[M.KEY.ability(ab)] || {};
+        if(/\baura\b/i.test(ab.tag || '') && o.reach && meetsN(o.reach, u)) snc(M.KEY.ability(ab), ab.name); }
+      for(const r of rules) if(!r.needs || meetsN(r.needs, u)) snc(M.KEY.rule(r), r.name);
+      for(const st of A.inArmy(a, () => A.allStratagems().filter(x => A.canTarget(x, u)))) snc(M.KEY.strat(st), st.name);
       const got = A.inArmy(a, () => A.statLines(u)).map(x => x.rule + ' | ' + x.text);
       if(JSON.stringify(got) !== JSON.stringify(want)) fail('LS', a.id + '/' + u.id, 'the lines under its profile are ' + JSON.stringify(got) + ', its rules\' stat boxes give ' + JSON.stringify(want));
       else n += got.length; } }

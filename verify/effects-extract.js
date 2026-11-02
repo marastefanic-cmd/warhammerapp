@@ -229,6 +229,9 @@ function scopeOf(V, n0, weapons, nOrig){
   return sc;
 }
 // the friendly units a sentence reaches (an aura, a unit another unit selects, a rule's units): the first friendly unit phrase
+// a sentence about every friendly unit's attacks against the enemy unit selected: "Ranged attacks that target that enemy unit have …",
+// "(Until the end of the phase,) that enemy unit cannot have the Benefit of Cover" (Burning Spray): its reach is every friendly unit ({})
+const EVERY_FRIENDLY = /^(?:ranged |melee )?attacks that target that enemy unit\b|^(?:until the end of the (?:phase|turn), )?that enemy unit cannot have the benefit of cover\b/;
 function reachOf(V, s){
   // (the first friendly unit phrase with keywords: "models from your army with a Bondsman ability … select one friendly ARMIGER model")
   let t = s, u = null;
@@ -245,8 +248,9 @@ function reachOf(V, s){
   // a keyword GW did not set in bold ("a friendly War Dog model"): its words, when every one is a keyword of the lists
   const m = /\b(?:[Ww]hile|[Ss]elect one) (?:other )?(?:a )?friendly ((?:[A-Z][\w'’-]*\s)+?)(?:unit|model)s?\b/.exec(plainCase(s)) || /\b[Ww]hile a friendly ((?:[A-Z][\w'’-]*\s)+?)(?:unit|model)s? is within\b/.exec(plainCase(s));
   if(m){ const ks = Dv.tokens(V, m[1].trim()); if(ks.length && ks.every(k => V.get(String(k).replace(/^Faction: /, '').toLowerCase()))) return { all:ks }; }
-  // attacks of any unit ("Ranged attacks that target that enemy unit have [IGNORES COVER]"): every friendly unit
-  if(/^(?:ranged |melee )?attacks that target that enemy unit\b/.test(norm(s))) return {};
+  // attacks of any unit ("Ranged attacks that target that enemy unit have [IGNORES COVER]", "that enemy unit cannot have the Benefit of
+  // Cover"): every friendly unit
+  if(EVERY_FRIENDLY.test(norm(s))) return {};
   return null;
 }
 // the text as units: { s (a sentence, GW's words), lead (the line its bullet hangs from), sec (its option: a table row's name,
@@ -420,7 +424,10 @@ function extract(src, ctx){
     else if(reach && src.type === 'strat' && on.some(x => x[0] === 'aura') && /^friendly\b/.test(n)){ box.reach = reach; box.mark = 'aura'; }
     if(reach && src.type !== 'strat'){ box.reach = reach; const t = norm(u.s + ' ' + (box.lead || '') + ' ' + (u.prevS || '') + (byTag ? ' select one ' : ''));
       box.mark = /\(aura\)|\baura\b/i.test(src.tag || '') || /\bwithin \d+" of (?:this|the bearer)\b/.test(t) && !/\bselect one\b/.test(t) ? 'aura' : /\bselect one\b/.test(t) ? 'selected' : 'friendly';
-      if(/\bselect one other friendly\b|\bother friendly\b/.test(t)) box.notSelf = true; }
+      if(/\bselect one other friendly\b|\bother friendly\b/.test(t)) box.notSelf = true;
+      // (said after the unit has made those attacks, "after this unit has shot, select one enemy unit …" and a box for ranged attacks: for
+      // other units' attacks, as a stratagem's afterAttack; its own fight is still to come)
+      { const af = /\bafter this (?:unit|model) has (shot|fought)\b/.exec(t); if(af && kind === (af[1] === 'shot' ? 'ranged' : 'melee')) box.notSelf = true; } }
     const ls = lastsOf(norm(u.s + ' ' + (u.lead || '') + ' ' + u.ctx + (nx1 && nx1.lineBody === u.lineBody && /\b(?:has|have) (?:that|the selected) abilit/.test(norm(nx1.s)) ? ' ' + nx1.s : ''))); if(ls) box.lasts = ls;
     if(u.sec) box.opt = u.sec;
     // (a table of thresholds: "1+" of "how many Pact points you have gained" is "1+ Pact points")
@@ -470,8 +477,34 @@ function extract(src, ctx){
   const riled = src.type === 'ability' && /^(?:-\s+)?this unit is riled up\.?$/m.test(String(src.text || '').split('\n').map(l => norm(l).trim()).join('\n'));
   const dfn = defenceOf(src, us, V, ctx);
   const st = statOf(src, us, V);
+  const snc = statNc(src, st, dfn.d, boxes);
   return Object.assign({ boxes:shape(boxes, src), nc, reach:reachOf(V, src.type === 'strat' ? '' : src.text || ''), both }, em ? { embarked:{ until:em[1] } } : {}, riled ? { riled:true } : {},
-    dfn.d.length ? { d:dfn.d } : {}, dfn.dnc.length ? { dnc:dfn.dnc } : {}, dfn.dreach ? { dreach:dfn.dreach } : {}, st.length ? { st } : {});
+    dfn.d.length ? { d:dfn.d } : {}, dfn.dnc.length ? { dnc:dfn.dnc } : {}, dfn.dreach ? { dreach:dfn.dreach } : {}, st.length ? { st } : {}, snc.length ? { snc } : {});
+}
+
+// ---- a characteristic of a unit's (or an enemy's) models its words change that no stat box counts: "add 2" to the Move characteristic of
+// models in that unit" in an aura (Time Flux), a stratagem's "+1 OC" (Territorial Obsession), "that enemy model has -1 OC" (Terror Troops),
+// "add 2" to this model's Move characteristic" (Daemonic Allegiance), "an Objective Control characteristic of 15" (Singular Purpose). The
+// unit screen's lines under a profile count only an army or detachment rule's stat boxes (statOf); these are listed there "not counted here:
+// see the rule" (snc: { quote, stat (M, OC, T, Sv, W, Ld), why }), never silent. T and Sv a defence box reads (DF t, svSet, svPlus) are
+// counted on the defence side.
+const STAT_OF = { move:'M', m:'M', 'objective control':'OC', oc:'OC', toughness:'T', t:'T', save:'Sv', sv:'Sv', wounds:'W', w:'W', leadership:'Ld', ld:'Ld' };
+const STAT_RE = /\b(?:add|subtract) (?:\d+|d3)"? (?:to|from) (?:the |this model's |its |that model's |this unit's |the bearer's )?(move|objective control|toughness|save|wounds|leadership) characteristics?\b|\b(?:has|have) (?:an? )?[+-]\d+"? ((?:oc|m|t|sv|w|ld)(?:(?:,|,? and) (?:oc|m|t|sv|w|ld))*)\b|\b(?:has|have) (?:[^.;]*? and )?an? (move|objective control|toughness|save|wounds|leadership) characteristic of \d/g;
+const statWords = n => [...new Set([...String(n).matchAll(STAT_RE)].flatMap(m => m[2] ? m[2].split(/,? and |, /).map(w => STAT_OF[w.trim()]) : [STAT_OF[m[1] || m[3]]]))];
+function statNc(src, st, d, b){
+  const out = [];
+  // (a box whose quote is this sentence, or part of it: "**Aegis Protocol:** Add 1 to the Toughness …" is the box "Add 1 to the Toughness …")
+  const mine = (x, n) => { const q = norm(x.quote); return !!q && (n.includes(q.replace(/\.$/, '')) || q.includes(n.replace(/\.$/, ''))); };
+  const text = src.type === 'strat' ? src.effect : [src.text || ''].concat((src.table || []).map(r => r.slice(1).join('\n'))).join('\n');
+  for(const u of sentencesOf(text)){ const n = norm(u.s), stats = statWords(n); if(!stats.length) continue;
+    const left = stats.filter(k => !((st || []).some(x => mine(x, n) && x.st.some(([id]) => E.ST[id] && E.ST[id].stat === k)))
+      && !(['T', 'Sv'].includes(k) && (d || []).some(x => mine(x, n) && (x.df || []).concat((x.pick || []).flatMap(p => p.df || [])).some(([id]) => (k === 'T' ? ['t'] : ['svSet', 'svPlus', 'armourPlus']).includes(id))))
+      // (its own OC in a Damaged band, the attack side's FX oc)
+      && !(k === 'OC' && (b || []).some(x => mine(x, n) && (x.fx || []).some(([id]) => id === 'oc'))));
+    // (an enemy's characteristic: "that enemy model has -1 OC", "While a unit is wracked with agonies, subtract 2" from its Move": foe)
+    const foe = /\benemy (?:models?|units?)\b|^while a unit is\b/.test(n);
+    for(const k of left) if(!out.some(x => x.quote === u.s && x.stat === k)) out.push(Object.assign({ quote:u.s, stat:k, why:'it changes ' + (foe ? 'an enemy unit\'s ' : '') + k + ', which the lines under a profile count only from army and detachment rules' }, foe ? { foe:true } : {})); }
+  return out;
 }
 
 // ---- a unit's own characteristics a rule's words change (effects.js ST: "add 2 to the Objective Control characteristic of models in that
@@ -744,4 +777,4 @@ function shape(list, src){
   return final;
 }
 
-module.exports = { WEAPON_KW, weaponExcl, extract, statOf, sentencesOf, cpNoteOf, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };
+module.exports = { statNc, statWords, STAT_RE, EVERY_FRIENDLY, WEAPON_KW, weaponExcl, extract, statOf, sentencesOf, cpNoteOf, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };

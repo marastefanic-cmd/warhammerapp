@@ -4945,6 +4945,18 @@ function statLines(u){
       const val = one ? f.stat + ' ' + ((parseInt(vs[0], 10) || 0) + f.add(p)) + (f.inch ? '"' : '') : ((b.scope || {}).models ? (b.scope.models + ' models ') : '') + f.label(p);
       out.push({ rule:r.name, text:(when ? when + ': ' : '') + val }); }
   }
+  // (and the words of its sources that change a characteristic no stat box counts, BOXES snc: its abilities', an aura's of another unit of
+  // the list that reaches it (Time Flux), its army and detachment rules', the stratagems it can be the target of: "M: not counted here: see
+  // the rule", never silent; not one the list printed into the value, its from mark)
+  const said = new Set();
+  const snc = (key, name, link, v) => { for(const x of ((D.boxes || {})[key] || {}).snc || []){
+    if(said.has(name + '|' + x.stat) || (u.stats.length && u.stats.every(s => [].concat((s.from || {})[x.stat] || []).join(', ').split(/\s*,\s*/).includes(name)))) continue;
+    said.add(name + '|' + x.stat); out.push({ rule:name, a:link, v, text:(x.foe ? 'Enemy units’ ' : '') + x.stat + ': ' + FN_NC }); } };
+  for(const ab of u.abilities || []) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab));
+  for(const x of army().units) if(x !== u) for(const ab of x.abilities || []){ const o = (D.boxes || {})[DM_KEY.a(ab)] || {};
+    if(/\baura\b/i.test(ab.tag || '') && o.reach && matches(o.reach, u)) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab)); }
+  for(const r of faction().armyRules.concat(detachments().flatMap(detRules))) if(!r.needs || matches(r.needs, u)) snc(DM_KEY.r(r), r.name, 'rule', r.name);
+  for(const st of allStratagems().filter(x => canTarget(x, u))) snc(DM_KEY.s(st), st.name, 'strat', st.id);
   return out;
 }
 // the keywords that come from the other part of an attached unit, from the importer's note
@@ -4998,7 +5010,7 @@ function screenUnit(){
         ['M','T','Sv','W','Ld','OC','InSv'].map((k, i) => '<span>' + granted(s, k, u, esc(s[k]), ['M','T','SV','W','LD','OC','INV'][i] + ' ' + s[k]) + '</span>').join('')).join('') + '</div>' +
     '<div class="dnt">' +
     // (a characteristic of its models a rule of the list changes: statLines)
-    statLines(u).map(x => '<p class="dsl">' + esc(x.text) + ' (' + linkTo('rule', x.rule, x.rule) + ')</p>').join('') +
+    statLines(u).map(x => '<p class="dsl">' + esc(x.text) + ' (' + linkTo(x.a || 'rule', x.v || x.rule, x.rule) + ')</p>').join('') +
     // (a fold, closed until opened and kept open for the session, as the Overview's army rules: its count on its line, a line each)
     (def.length ? '<details class="def tgt" data-tgfold="' + esc(tgKey) + '"' + (openStrats.has(tgKey) ? ' open' : '') + '><summary><span class="il">When targeted</span><span class="x">' + def.length + '</span>' + chev + '</summary>' +
       '<div class="tgls">' + def.map(x => '<div class="tgl">' + defLine(x, u) + '</div>').join('') + '</div></details>' : '') +
