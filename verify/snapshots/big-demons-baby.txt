@@ -4225,7 +4225,7 @@ Objective Consolidation: Your unit must be within range of the selected objectiv
 
 Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Consolidation): Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight
 
-Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Objective Consolidation): Your unit must be unengaged and within range of the selected objective.
+Wahapedia core rules (12.08, not in GW’s Core Rules PDF, 01-06): Your unit must be unengaged and within range of the selected objective.
 
 Ask about this rule
 
