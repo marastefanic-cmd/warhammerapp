@@ -495,7 +495,7 @@ function extract(src, ctx){
   if(gone && !boxes.length && !nc.some(x => x.why === goneWhy)) nc.unshift({ quote:plainCase(src.effect), why:goneWhy });
   const dfn = defenceOf(src, us, V, ctx);
   const st = statOf(src, us, V);
-  const snc = statNc(src, st, dfn.d, boxes);
+  const snc = statNc(src, st, dfn.d, boxes, V);
   // (and any other sentence with words of these numbers no box, no not-counted entry reads: listed not counted, never silent; about saving
   // throws or attacks against the unit, the defence side's)
   for(const x of unread(src, [boxes, nc, dfn.d, dfn.dnc, st, snc])){ const n = norm(x), u = us.find(y => quoteKey(y.s) === quoteKey(x));
@@ -539,9 +539,11 @@ const STAT_RE = new RegExp('\\b(?:add|subtract) (?:\\d+|d3)"? (?:to|from) (?:the
   + '|\\b(?:has|have) (?:[^.;]*? and )?an? (' + ST_NAMES + ') characteristic of \\d'
   + '|\\b(?:improve|worsen|halve|double) (?:the |this model\'s |its |that [a-z\' ]*?model\'s )?((?:' + ST_NAMES + ')(?: and (?:' + ST_NAMES + '))?) characteristics?\\b'
   + '|\\bignore any or all modifiers to (?:its |this model\'s |the )?(' + ST_NAMES + ') characteristic\\b'
-  + '|\\bthe (' + ST_NAMES + ') characteristic of [^.;]*? is \\d', 'g');
+  + '|\\bthe (' + ST_NAMES + ') characteristic of [^.;]*? is \\d'
+  // (a second characteristic the same verb changes: "Improve this model's Objective Control characteristic by 2 and its Leadership characteristic by 1")
+  + '|\\band (?:its|this model\'s|that model\'s|their) (' + ST_NAMES + ') characteristics? by \\d', 'g');
 const statWords = n => [...new Set([...String(n).matchAll(STAT_RE)].flatMap(m => { const w = m.slice(1).find(Boolean) || ''; return w.split(/,? and |, /).map(x => STAT_OF[x.trim()]).filter(Boolean); }))];
-function statNc(src, st, d, b){
+function statNc(src, st, d, b, V){
   const out = [];
   // (a box whose quote is this sentence, or part of it: "**Aegis Protocol:** Add 1 to the Toughness …" is the box "Add 1 to the Toughness …")
   const mine = (x, n) => { const q = norm(x.quote); return !!q && (n.includes(q.replace(/\.$/, '')) || q.includes(n.replace(/\.$/, ''))); };
@@ -553,7 +555,13 @@ function statNc(src, st, d, b){
       && !(k === 'OC' && (b || []).some(x => mine(x, n) && (x.fx || []).some(([id]) => id === 'oc'))));
     // (an enemy's characteristic: "that enemy model has -1 OC", "While a unit is wracked with agonies, subtract 2" from its Move": foe)
     const foe = /\benemy (?:models?|units?)\b|^while a unit is\b/.test(n);
-    for(const k of left) if(!out.some(x => x.quote === u.s && x.stat === k)) out.push(Object.assign({ quote:u.s, stat:k, why:'it changes ' + (foe ? 'an enemy unit\'s ' : '') + k + ', which the lines under a profile count only from army and detachment rules' }, foe ? { foe:true } : {})); }
+    // (whom it is for, as a stat box's: the friendly units its words name, in the sentence or the one before it (reach: "improve that WAR DOG
+    // model's Leadership", Dread Dominion), and a keyword of the unit its words need (on: selfKw, "If this model has the SLAANESH keyword"))
+    const reach = foe || !V ? null : reachOf(V, u.s) || (u.prevS ? reachOf(V, u.prevS) : null);
+    // (only where the keyword governs the whole sentence, it opens it: not Full Tilt's ", or 9" instead if your unit is an ARMIGER or DESTRIER unit")
+    const on = V && /^if this (?:model|unit) has the\b/.test(n.replace(/^[^:"]{1,40}:\s+/, '')) ? condsOf(V, u.s, '', { stat:true, inherit:true }).filter(([id]) => id === 'selfKw') : [];
+    for(const k of left) if(!out.some(x => x.quote === u.s && x.stat === k)) out.push(Object.assign({ quote:u.s, stat:k, why:'it changes ' + (foe ? 'an enemy unit\'s ' : '') + k + ', which the lines under a profile count only from army and detachment rules' },
+      foe ? { foe:true } : {}, reach && Object.keys(reach).length ? { reach } : {}, on.length ? { on } : {})); }
   return out;
 }
 

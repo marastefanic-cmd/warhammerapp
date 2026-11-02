@@ -4949,13 +4949,19 @@ function statLines(u){
   // the list that reaches it (Time Flux), its army and detachment rules', the stratagems it can be the target of: "M: not counted here: see
   // the rule", never silent; not one the list printed into the value, its from mark)
   const said = new Set();
-  const snc = (key, name, link, v) => { for(const x of ((D.boxes || {})[key] || {}).snc || []){
+  // (each where its words reach: the friendly units it names (its reach; else, for a rule, the units that have it: its needs, as a stat box),
+  // a keyword of the unit it needs (on selfKw))
+  const snc = (key, name, link, v, needs) => { for(const x of ((D.boxes || {})[key] || {}).snc || []){
+    if(x.reach ? !matches(x.reach, u) : needs !== undefined && !(needs && matches(needs, u))) continue;
+    if((x.on || []).some(([id, p]) => id === 'selfKw' && !hasKw(u, p))) continue;
     if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => [].concat((s.from || {})[x.stat] || []).join(', ').split(/\s*,\s*/).includes(name)))) continue;
     said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); out.push({ rule:name, a:link, v, text:(x.foe ? 'Enemy units’ ' : '') + x.stat + ': ' + FN_NC }); } };
   for(const ab of u.abilities || []) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab));
   for(const x of army().units) if(x !== u) for(const ab of x.abilities || []){ const o = (D.boxes || {})[DM_KEY.a(ab)] || {};
     if(/\baura\b/i.test(ab.tag || '') && o.reach && matches(o.reach, u)) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab)); }
-  for(const r of faction().armyRules.concat(detachments().flatMap(detRules))) if(!r.needs || matches(r.needs, u)) snc(DM_KEY.r(r), r.name, 'rule', r.name);
+  // (a rule's: the units that have it, as the Damage tab takes them: an army rule on its Rules line (hasRule) or its needs met, a detachment
+  // rule's needs met (unitDetRules))
+  for(const r of faction().armyRules.filter(r => hasRule(u, r.name) || (r.needs && matches(r.needs, u))).concat(unitDetRules(u))) snc(DM_KEY.r(r), r.name, 'rule', r.name);
   for(const st of allStratagems().filter(x => canTarget(x, u))) snc(DM_KEY.s(st), st.name, 'strat', st.id);
   return out;
 }

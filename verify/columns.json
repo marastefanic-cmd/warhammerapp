@@ -1462,7 +1462,7 @@
     },
     "snc": {
      "source": "derived",
-     "note": "the sentences of a source’s words that change a characteristic (M, OC, T, Sv, W, Ld) no stat box counts: { quote, stat, why, foe (an enemy’s) }, listed under a unit’s profile “not counted here: see the rule” (verify/effects-extract.js statNc; verify/lines.js LS, LW)",
+     "note": "the sentences of a source’s words that change a characteristic (M, OC, T, Sv, W, Ld) no stat box counts: { quote, stat, why, foe (an enemy’s), reach (the friendly units its words name), on (selfKw: a keyword of the unit an opening “If this model has the X keyword” needs) }, listed under a unit’s profile “not counted here: see the rule” where it reaches (verify/effects-extract.js statNc; verify/lines.js LS, LW, LF)",
      "by": "verify/effects-migrate.js"
     }
    }
