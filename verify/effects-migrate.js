@@ -99,6 +99,8 @@ function build(D){
     if(r.dreach) o.dreach = r.dreach;
     // a unit's own characteristic its words change (the line under the unit's profile, "OC 7")
     if(r.st) o.st = r.st;
+    // its words that change a characteristic no stat box counts ("not counted here: see the rule" under the profile)
+    if(r.snc) o.snc = r.snc;
     if(s.played && Object.keys(o).length) o.played = s.played;
     if(Object.keys(o).length){ o.n = s.name; T[key] = o; }
   }
@@ -112,7 +114,8 @@ const block = T => START + '\n' +
   '// reach, mark, lasts, opt, pick, part, limit), nc the sentences of rare mechanics shown as not counted, reach an aura\'s units; n its name;\n' +
   '// d its defence boxes (the "When targeted" lines: quote, df its defences, on, kind, scope, reach, mark, foe, pick), dnc the defence words\n' +
   '// no effect reads, dreach the units a stratagem protects when they are not its TARGET; st its stat boxes (a unit\'s own characteristic\n' +
-  '// a rule changes, the line under its profile: quote, st its effects (effects.js ST), on, reach, scope, opt)\n' +
+  '// a rule changes, the line under its profile: quote, st its effects (effects.js ST), on, reach, scope, opt); snc the words that change a\n' +
+  '// characteristic no stat box counts (quote, stat, why: listed under the profile as not counted)\n' +
   'const BOXES = {\n' + Object.keys(T).sort().map(k => '  ' + JSON.stringify(k) + ':' + JSON.stringify(T[k])).join(',\n') + '\n};\n' + END;
 function write(src, T){
   const i = src.indexOf(START), j = src.indexOf(END);

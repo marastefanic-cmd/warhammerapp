@@ -1367,6 +1367,12 @@
   "at": "2026-10-24",
   "why": "\"Friendly **KILL TEAM** units with this ability\" gives needs {all:['Kill Team']}. In this list only the Deathwatch Terminator Squad has Kill Team (Wahapedia KEYWORDS: INFANTRY; KILL TEAM; TERMINATOR; IMPERIUM), and it gets the rule. The heading change does not touch the subject sentence."
  },
+ "1059113cd93e1061": {
+  "verdict": "ok",
+  "by": "review:fix2",
+  "at": "2026-11-02",
+  "why": "Round 3 (182315d, merged with main in a4bfdfd). The snc lines follow GW's words. A sentence's reach must meet the unit (Dread Dominion WAR DOG; Loci of Power LD CHARACTER excluding MONSTER; Time Flux THOUSAND SONS; Relentless March NECRONS). An opening keyword condition must hold (Daemonic Allegiance Slaanesh: neither prince). 'While this model is leading a unit' needs u.leads (Aggressive Advance: shown for the princes and big-demons-baby Lords on Juggernaut, which lead Khorne Berzerkers; not for the unattached standard/lord-on-juggernaut). Army rules go only to units that have them (hasRule or needs); detachment rules use unitDetRules; stratagems use canTarget. All 139 lines (75 units) were read against GW, with the stratagem TARGETs checked (Full Tilt, Motive Imperative, Tanglestrike Rounds, Territorial Obsession, Unleash Balefire). Enemy-unit lines are marked 'Enemy units’'. Code Chivalric lists M, OC and Ld. LS re-derives the same placement: my app-side mutations (army rules to every unit, the keyword skip removed, the leading skip removed) each fail LS. LF pins the extractor's readings of reach, keyword condition and leading (5 cases). The st part is unchanged from main."
+ },
  "105fddd727d792a1": {
   "verdict": "ok",
   "by": "review:order",
@@ -1960,6 +1966,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "Trigger \"just after an EMPEROR’S CHILDREN unit from your army destroys an enemy unit\", EFFECT \"Increase your pledge to Slaanesh by 1\", RESTRICTIONS \"once per battle round\": all kept; the phases are the row's tag."
+ },
+ "18ffd2ac006f92b6": {
+  "verdict": "ok",
+  "by": "review:fix2",
+  "at": "2026-11-02",
+  "why": "Read against what it implements. ws0 is computed when the scope has only wkwNot. ws is set to null when wkwNot removes none of the unit's weapons, so the line names no weapons. It names the remaining weapons when wkwNot removes some, and there is no footnote when it removes all. That matches lines.js (weaponsOf + the same null rule) and dmReach / dmBoxRules wOf / dmCalc wIn, which all received wkwNot. Berzerker Glaive has no bearer today, so nothing shows. The rest of fnLine is unchanged from main."
  },
  "19001be81418c53f": {
   "verdict": "ok",
@@ -16078,6 +16090,12 @@
   "by": "review:custodes-units",
   "at": "2026-10-24",
   "why": "Moment Shackle is Trajann's datasheet ability; text matches Wahapedia."
+ },
+ "d592137c81e570bb": {
+  "verdict": "ok",
+  "by": "review:fix2",
+  "at": "2026-11-02",
+  "why": "The only change is && (!sc.wkwNot || !itemHasKw(it, sc.wkwNot)). itemHasKw is the same keyword test as wkw (exact, or 'KW ' prefix: 'SUSTAINED HITS' matches 'SUSTAINED HITS 1') over every profile of the item. It matches GW's '(excluding Extra Attacks weapons)': a weapon with that keyword is excluded. evidence G5 holds wkwNot to the quote's own '(excluding … weapons)', and coverage LC requires wkwNot or the words quoted."
  },
  "d593106bad9e458b": {
   "verdict": "ok",

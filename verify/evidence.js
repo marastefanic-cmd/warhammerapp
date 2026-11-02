@@ -68,15 +68,23 @@ for(const [key, o] of Object.entries(T)){
       if(c.pats.length && !c.pats.some(re => re.test(ctxT))) fail('G5', where, 'condition ' + id + ' has no words in its source');
       if(id === 'targetKw') for(const k of [].concat(p.any || [], p.all || [], p.none || [])) if(!text.includes(String(k).replace(/^Faction: /, '').toLowerCase().replace(/s$/, ''))) fail('G5', where, 'the target keyword ' + k + ' is not in its words');
       if(id === 'q' && !text.includes(flat(p).toLowerCase())) fail('G5', where, 'quoted condition not verbatim: ' + p);
+      // (the target's keywords as GW prints them, said: its words; a keyword printed otherwise, "BEASTS", is said so, never as the keyword)
+      if(id === 'targetKw' && p.said && !text.includes(flat(p.said).toLowerCase())) fail('G5', where, 'the target words said are not GW’s: ' + p.said);
+      if(id === 'targetKw' && !p.said) for(const k of [].concat(p.any || [], p.all || [], p.none || [])) if(new RegExp('\\b' + String(k).replace(/^Faction: /, '').toLowerCase() + 's\\b').test(text) && !new RegExp('\\b' + String(k).replace(/^Faction: /, '').toLowerCase() + '\\b').test(text)) fail('G5', where, 'GW prints ' + k + ' in the plural and the box says it singular (no said)');
       if(id === 'anyOf') for(const x of [].concat(p)) if(!text.includes(flat(x).toLowerCase())) fail('G5', where, 'a condition of the list not verbatim: ' + x);
     }
     if(/\[[A-Za-z0-9 -]+:\s*(?:non-)?[A-Za-z][^\]]*\]/.test(String(b.quote)) && (b.fx || []).length && !(b.on || []).some(x => x[0] === 'targetKw')) fail('G5', where, 'a weapon ability for some targets only (“[X: KEYWORD]”) and no target keyword condition');
     if(/\bwhile this (?:model|unit) is leading a unit\b/.test(E.norm(b.quote)) && !(b.on || []).some(x => x[0] === 'leading')) fail('G5', where, '"while this model is leading a unit" and no leading condition');
     for(const k of [].concat(((b.reach || {}).all) || [], ((b.reach || {}).any) || [], ((b.reach || {}).none) || [])) if(!text.includes(String(k).replace(/^Faction: /, '').toLowerCase().replace(/s$/, ''))) fail('G5', where, 'reach keyword ' + k + ' is not a literal keyword of its words');
     const sc = b.scope || {};
+    // (a weapon keyword it excludes: its quote's "(excluding X weapons)", X that keyword)
+    if(sc.wkwNot && ((X.weaponExcl(E.norm(b.quote)) || {}).kw !== sc.wkwNot)) fail('G5', where, 'scope wkwNot ' + sc.wkwNot + ' is not its quote\'s “(excluding … weapons)”');
     if(sc.weapon && src.type !== 'strat' && !E.norm(b.quote).includes('attack with a ' + sc.weapon) && !E.norm(b.quote).includes('attack with an ' + sc.weapon) && !src.weapons.some(w => String(w).toLowerCase().replace(/[’']/g, "'").startsWith(sc.weapon) || String(w).toLowerCase().split(/\s+/)[0] === sc.weapon.split(/\s+/)[0])) fail('G5', where, 'weapon ' + sc.weapon + ' is no weapon of a unit with it');
   }
   for(const x of o.nc || []) if(!text.includes(flat(x.quote).replace(/\s*\.\s*$/, ''))) fail('G2', where, 'not counted, not GW’s words: “' + x.quote.slice(0, 80) + '”');
+  // (and its words that change a characteristic no stat box counts: GW's, a characteristic its words name)
+  for(const x of o.snc || []){ if(!flat(src.type === 'strat' ? src.effect : (src.table ? M.ruleText(src) : src.text || '')).includes(flat(x.quote).replace(/\s*\.\s*$/, ''))) fail('G2', where, 'stat words not counted, not GW’s words: “' + x.quote.slice(0, 80) + '”');
+    if(!X.statWords(E.norm(x.quote)).includes(x.stat)) fail('G2', where, 'stat words not counted: ' + x.stat + ' is not in “' + x.quote.slice(0, 80) + '”'); }
 }
 stats.boxes = nBox; stats.picks = nPill; stats.sources = Object.keys(T).length;
 // ---- G9: the classes the extractor once got wrong ----
@@ -110,8 +118,8 @@ for(const [key, o] of Object.entries(T)){ const src = S.get(key); for(const b of
 // G1 (the schema): a box, a pick, a scope, a limit, a part, a source carry the fields the script writes and no other (a hand note on a box
 // fails), in what the words give (T) and in data.js BOXES alike
 // (d, dnc, dreach: the defence side, held by verify/defence.js D1; st, the stat boxes, by verify/lines.js LS)
-{ const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both', 'embarked', 'played', 'riled', 'd', 'dnc', 'dreach', 'st']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool', 'excl']),
-    PICK_KEYS = new Set(['name', 'fx', 'quote', 'on', 'lead', 'part']), SCOPE_KEYS = new Set(['models', 'weapon', 'part', 'wkw']), LIMIT_KEYS = new Set(['n', 'what']),
+{ const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both', 'embarked', 'played', 'riled', 'd', 'dnc', 'dreach', 'st', 'snc']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool', 'excl']),
+    PICK_KEYS = new Set(['name', 'fx', 'quote', 'on', 'lead', 'part']), SCOPE_KEYS = new Set(['models', 'weapon', 'part', 'wkw', 'wkwNot']), LIMIT_KEYS = new Set(['n', 'what']),
     PART_KEYS = new Set(['on', 'fx', 'quote']), NC_KEYS = new Set(['quote', 'why', 'atk']), BOTH_KEYS = new Set(['names', 'quote', 'reach', 'mark', 'opt', 'lasts']);
   const extra = (o, keys) => Object.keys(o || {}).filter(k => !keys.has(k));
   for(const [name, TT] of [['the words', T], ['data.js BOXES', D.boxes || {}]]) for(const [key, o] of Object.entries(TT)){ const where = key + ' ' + (o.n || '') + ' (' + name + ')';

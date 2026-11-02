@@ -137,8 +137,8 @@ function gaps(b, src, side, others, ctx){
     // (nearest first: the quote, the line it continues, the sentence it refers back to, the sentences before it in its rule, its tag's rule)
     const us = X.unitsOf(src), at = u ? us.findIndex(x => x.s === u.s && x.lead === u.lead) : -1, before = at > 0 ? us.slice(0, at).reverse().map(x => x.s) : [];
     const ph = reachPhrase([b.quote, lead, back, u && u.prevS || ''].concat(before, [src.tagText || '']).map(t => String(t).replace(/~~[^~]*~~\/?/g, '')));
-    // ("Ranged attacks that target that enemy unit": every friendly unit's, an empty reach)
-    const every = /^(?:ranged |melee )?attacks that target that enemy unit\b/.test(n(b.quote)) && !Object.keys(b.reach).length;
+    // ("Ranged attacks that target that enemy unit", "that enemy unit cannot have the Benefit of Cover": every friendly unit's, an empty reach)
+    const every = X.EVERY_FRIENDLY.test(n(b.quote)) && !Object.keys(b.reach).length;
     const ifOnly = S.on.length && S.on.every(([id]) => C[id] && C[id].quoted);
     // (a reach checked against no phrase of GW's: only where the line says "If (see the rule)"; counted either way)
     const unchecked = why => { counts.unchecked++; if(!ifOnly) out.push('its reach is checked against no GW phrase (' + why + ') and its line does not say “If (see the rule)”'); };
@@ -190,8 +190,10 @@ function gaps(b, src, side, others, ctx){
         if(/psychic attacks/.test(pn)){ if(!S.ids.has('notPsychic') && !quotedHas(/excluding psychic attacks/)) out.push('“' + ph + '” and no Not Psychic Attacks condition'); continue; }
         const ks = pn.replace(/^\(excluding |\)$/g, '').replace(/\bunits?$|\bmodels?$/, '').split(/\/|,? and |, | or /).map(k => k.trim().replace(/s$/, '')).filter(Boolean);
         if(ks.every(k => S.kws.some(x => x.replace(/s$/, '').includes(k) || k.includes(x.replace(/s$/, ''))) || S.q.some(q => q.includes(k)))) continue;
-        // (weapons it is not for, "(excluding Extra Attacks weapons)": the box's weapons, its effects' own words)
-        if(/\bweapons?\)$/.test(pn)) continue;
+        // (weapons it is not for, "(excluding Extra Attacks weapons)": the box's scope wkwNot, that weapon keyword; other words: quoted)
+        if(/\bweapons?\)$/.test(pn)){ const ex = X.weaponExcl(pn);
+          if(!(ex && ex.kw && (b.scope || {}).wkwNot === ex.kw) && !quotedHas(new RegExp(pn.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')))) out.push('“' + ph + '”: weapons it excludes, and no wkwNot scope nor its words quoted');
+          continue; }
         if(side === 'attack' && covers(ph, m.index)) continue;
         out.push('“' + ph + '” is no condition of the box'); continue; }
       // (a failed save is its own condition, failedSave, or quoted; what a unit can only target is GW's words, never another condition's)
@@ -217,8 +219,22 @@ function gaps(b, src, side, others, ctx){
     const labelSays = df.length && df.every(([id]) => (k === 'ranged' && /Ranged$/.test(id)) || (k === 'psychic' && /^fnpPsy/.test(id)) || (k === 'ranged' && E.FX[id] && ['range', 'bsSet', 'assault', 'heavy', 'indirect', 'pistol'].includes(id)));
     if(b.kind !== k && !labelSays && !quotedHas(kinds[k]) && !(side === 'attack' && k === 'psychic' && (b.scope || {}).wkw === 'PSYCHIC') && !(src.type === 'strat'))
       out.push('its words say ' + k + ' attacks, the box is for ' + b.kind); }
-  // how long it lasts, beyond the phase (the defence side says it: until)
-  if(side === 'defence' && /\buntil the (?:start of your next (?:command phase|turn)|end of (?:the|your opponent's next) (?:battle round|turn)|end of the battle)\b/.test(n([lead, b.quote].join(' '))) && !b.until) out.push('a duration beyond the phase and no until');
+  // how long it lasts, beyond the phase, as GW states it: its own words (the quote, the line it continues) or, for an option of its rule (a
+  // table row, a bold option, a pick) whose own words say none, the sentence of the rule that says how long its options last ("Once
+  // activated, each Blessing of Khorne applies … until the end of the battle round"): the attack side's lasts ('battle', 'round', 'turn'),
+  // the defence side's until
+  { const durOf = t => /\buntil the end of the battle\b(?! round)/.test(t) ? 'battle' : /\buntil the (?:end of the battle round|start of your next (?:command|movement) phase|start of your next turn)\b/.test(t) ? 'round'
+      : /\buntil the end of (?:the|your opponent's next) turn\b|\bthis turn\b/.test(t) && !/\buntil the end of the phase\b/.test(t) ? 'turn' : '';
+    const isOpt = !!(opt || b.pick || b.tableRows || S.ids.has('opt'));
+    const ruleDur = () => { if(src.type === 'strat') return ''; for(const l of String(src.text || '').split('\n')){ if(/^\*[^*]/.test(l.trim())) continue;
+      for(const x of l.split(/(?<=[.!?])\s+/)){ const w = n(x).replace(/\bthis turn\b/g, ' '); if(/\b(?:abilit(?:y|ies)|active|appl(?:y|ies)|the following|below)\b/.test(w) && durOf(w)) return durOf(w); } } return ''; };
+    // (its own words: the quote, the line it continues, a stratagem's WHEN and TARGET; a pick's quotes)
+    const own = n([lead, b.quote].concat((b.pick || []).map(p => p.quote || ''), src.type === 'strat' ? [src.when || '', src.target || ''] : []).join(' '));
+    const want = durOf(own) || (isOpt && !/\buntil the end of the phase\b/.test(own) ? ruleDur() : '');
+    if(want && side === 'defence' && !b.until) out.push('GW states a duration (' + want + ') and the box has no until');
+    // (both ways: a box never lasts longer, nor shorter, than GW says)
+    if(side === 'attack' && (b.lasts || '') !== want) out.push('GW states ' + (want ? 'a duration (' + want + ')' : 'no duration beyond the phase') + ' and the box lasts ' + JSON.stringify(b.lasts || 'the phase'));
+    if(side === 'defence' && b.until && !want) out.push('GW states no duration beyond the phase and the box has until “' + b.until + '”'); }
   // a stratagem's WHEN beyond its standard trigger, its TARGET's where (the defence side: a quoted condition, or one that reads it)
   if(side === 'defence' && src.type === 'strat'){ const w = pc(src.when).split(/(?<=\.)\s+/)[0].replace(/\.\s*$/, ''), rest = n(w).replace(/^(?:any phase|(?:(?:start|end) of )?(?:your opponent's |your |the )?(?:command|movement|shooting|charge|fight) phase(?: or the (?:shooting|fight) phase)?),?\s*/, '');
     if(rest && !/^(?:just after|when) an enemy unit (?:has selected its targets|targets a friendly [^.]+? unit(?: \([^)]*\))?)$/.test(rest) && !covers(w, 0) && !S.q.some(q => q.includes(n(w).slice(0, 25)))) out.push('its WHEN “' + w + '” is no condition of the box');
@@ -232,4 +248,33 @@ function srcGaps(o, src){
   const tn = n(src.target), other = /\bof a friendly .+? unit that was selected as the target\b/.test(tn) || (/\bwhen an enemy unit targets a friendly\b/.test(n(src.when)) && !/^that\b/.test(tn));
   return other && !o.dreach ? ['it protects a unit that is not its TARGET and has no dreach'] : [];
 }
-module.exports = { gaps, srcGaps, optionOf, counts };
+// a source's sentences with words of the numbers that are neither counted nor listed not counted (never silent): every sentence of its words
+// (a rule's table rows, a stratagem's EFFECT) that names a hit, wound or damage roll, AP, a save, Feel No Pain, OC, Move, a weapon ability
+// ("[LANCE]"), the Benefit of Cover, a critical hit or wound, or the Attacks or Strength characteristic is quoted by one of its BOXES entries: a box (b, d, st:
+// its quote, a pick's or a part's) or a not-counted one (nc, dnc, snc). Read by its own words, not the extractor's; not a weapon's profile
+// line, a designer's note or an example, nor a line that leads a list (":"), whose bullets are its words. Quoted means whole: a quote that
+// is the sentence or holds it, or quotes inside it that leave no words of the numbers
+const NUM_WORDS = /\bbenefit of cover\b|\b(?:hit|wound|damage) rolls?\b|\barmou?r penetration\b|\bap\b|\bdamage characteristic\b|\bsaving throws?\b|\bsave rolls?\b|\binvulnerable saves?\b|\bfeel no pain\b|\bobjective control\b|\boc\b|\bmove characteristic\b|(?:^|\s)[+-]\d+"? m\b|\[[a-z][a-z -]*?(?: \d\+?| d3)?\]|\bcritical (?:hit|wound)s?\b|\b(?:attacks|strength) characteristics?\b/;
+const key = t => n(String(t).replace(/^\s*-\s+/, '')).replace(/^[^:"]{1,40}:\s+/, '').replace(/[.\s]+$/, '').trim();
+// (the characteristics a sentence names: "Objective Control characteristic", "Leadership and Objective Control characteristics", "+1 OC")
+const STAT_NAMES = /\b(move|objective control|toughness|wounds|leadership)\b(?=[^.;]*?\bcharacteristics?\b)|(?:^|\s)[+-]\d+"? (oc|m|ld|w|t)\b/g;
+const STAT_KEY = { move:'M', 'objective control':'OC', toughness:'T', wounds:'W', leadership:'Ld', oc:'OC', m:'M', ld:'Ld', w:'W', t:'T' };
+function silent(src, o){
+  o = o || {};
+  const qs = [].concat(o.b || [], o.d || [], o.st || [], o.nc || [], o.dnc || [], o.snc || []).flatMap(b => [b.quote, b.part && b.part.quote].concat((b.pick || []).flatMap(p => [p.quote, p.part && p.part.quote])))
+    .filter(Boolean).flatMap(q => String(q).split('\n')).map(key).filter(Boolean);
+  const text = src.type === 'strat' ? src.effect : [src.text || ''].concat((src.table || []).map(r => r.slice(1).join('\n'))).join('\n');
+  return X.sentencesOf(text).map(u => u.s).filter(s => { const w = n(s), k = key(s);
+    if(!NUM_WORDS.test(w) || /\b\d+" a[\dd]+ (?:bs|ws)\d\+|\bmelee a[\dd]+ ws\d\+/.test(w) || /^(?:designer's note|example):/.test(w) || /:\s*$/.test(w)) return false;
+    // (a quote covers the sentence whole, or the quotes inside it do, and what they leave has no words of the numbers: a fragment, "that enemy
+    // unit", does not)
+    // (a sentence only not-counted stat entries quote: each characteristic it names is one of theirs, "OC … and its Leadership": OC and Ld)
+    const sn = (o.snc || []).filter(x => { const q = key(x.quote); return q.includes(k) || k.includes(q); });
+    if(sn.length && !qs.some(q => (q.includes(k) || k.includes(q)) && !sn.some(x => key(x.quote) === q))){
+      const named = [...new Set([...w.matchAll(STAT_NAMES)].map(m => STAT_KEY[m[1] || m[2]]))];
+      if(named.some(st => !sn.some(x => x.stat === st))) return true; }
+    if(qs.some(q => q.includes(k))) return false;
+    let rest = k; for(const q of qs.filter(q => k.includes(q)).sort((a, b) => b.length - a.length)) rest = rest.split(q).join(' ');
+    return rest === k || NUM_WORDS.test(rest); });
+}
+module.exports = { gaps, srcGaps, optionOf, counts, silent, NUM_WORDS };

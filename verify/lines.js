@@ -34,7 +34,12 @@
          exactly the stat boxes (BOXES st, effects.js ST) of the list's army and detachment rules that reach it, each said with its
          conditions' labels and its effect (the unit's characteristic with it, else its label), none the list printed into the value; and
          the words to them: every sentence of an army or detachment rule that adds to or subtracts from a characteristic of models is a stat
-         box, every "if / while / unless / (excluding …)" in it one of its conditions
+         box, every "if / while / unless / (excluding …)" in it one of its conditions; then, under the profile, each BOXES snc (a
+         characteristic no stat box counts) of its abilities, another unit's aura reaching it, its rules and its stratagems, "not counted"
+     LF  fixed cases: the wound-roll ignore-modifiers readings, the enemy-unit mark of a characteristic not counted, and whom one is for
+         (its reach, an opening keyword, leading)
+     LW  never silent: every sentence of a source the lists use with words of the numbers (hit, wound, AP, damage, save, Feel No Pain, OC,
+         Move, a weapon ability) is a counted box or listed not counted in BOXES (verify/coverage.js silent)
 
      node verify/lines.js      the gate step; writes verify/out/lines.json */
 'use strict';
@@ -45,7 +50,7 @@ const X = require('./effects-extract');
 const T = require('./tables');
 const M = require('./effects-migrate');
 
-const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'alreadyIn', 'alreadyInRule']);
+const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'alreadyIn', 'alreadyInRule', 'allStratagems', 'canTarget', 'hasRule', 'unitDetRules']);
 const D = dm.D, A = dm.app, fails = [], stats = {};
 const fail = (g, where, what) => fails.push(g + ' ' + where + ': ' + what);
 
@@ -133,7 +138,8 @@ let nLines = 0, nRows = 0, nNc = 0;
   const bakedOf = (u, name) => [...new Set([].concat(u.ranged || [], u.melee || []).flatMap(w => Object.entries(w.from || {}).filter(([, v]) => String(v).split(/\s*,\s*/).includes(name)).map(([k]) => String(k).toUpperCase())))];
   const items = (u, kind) => { const out = []; for(const w of (kind === 'ranged' ? u.ranged : u.melee) || []){ const l = out[out.length - 1]; if(w.group && l && l.group === w.group && l.who === w.who) l.ps.push(w); else out.push({ group:w.group, who:w.who, ps:[w] }); } return out; };
   const weaponsOf = (u, kind, sc) => items(u, kind).filter(it => (!sc.weapon || it.ps.some(p => [p.name, it.group, it.group || it.ps[0].name].some(x => lc(x) === sc.weapon || lc(x).startsWith(sc.weapon))))
-    && (!sc.wkw || it.ps.some(p => (p.kw || []).some(k => String(k).toUpperCase() === sc.wkw || String(k).toUpperCase().startsWith(sc.wkw + ' ')))) && (!sc.part || lc(it.who).startsWith(lc(sc.part).replace(/s$/, ''))));
+    && (!sc.wkw || it.ps.some(p => (p.kw || []).some(k => String(k).toUpperCase() === sc.wkw || String(k).toUpperCase().startsWith(sc.wkw + ' ')))) && (!sc.part || lc(it.who).startsWith(lc(sc.part).replace(/s$/, '')))
+    && (!sc.wkwNot || !it.ps.some(p => (p.kw || []).some(k => String(k).toUpperCase() === sc.wkwNot || String(k).toUpperCase().startsWith(sc.wkwNot + ' ')))));
   const meets = (n, u) => !n || ((!n.all || n.all.every(k => hasK(u, k))) && (!n.any || !n.any.length || n.any.some(k => hasK(u, k))) && (!n.none || !n.none.some(k => hasK(u, k))) && (!n.unless || !meets(n.unless, u)));
   for(const a of D.armies) for(const u of a.units) for(const kind of ['ranged', 'melee']){ if(!((kind === 'ranged' ? u.ranged : u.melee) || []).length) continue;
     const where = a.id + '/' + u.id + ' ' + kind, got = A.inArmy(a, () => A.unitMods(u, kind)), want = [];
@@ -148,7 +154,9 @@ let nLines = 0, nRows = 0, nNc = 0;
       for(const b of o.b || []){
         if(S.reachOnly ? !(b.reach && meets(b.reach, u)) : b.reach ? !meets(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;
         if(b.kind !== 'all' && b.kind !== kind) continue;
-        const sc = b.scope || {}, ws = sc.weapon || sc.wkw || sc.part ? weaponsOf(u, kind, sc) : null;
+        // (a weapon keyword it excludes, wkwNot, names its weapons only where one of the unit's has it)
+        const sc = b.scope || {}, ws0 = sc.weapon || sc.wkw || sc.part || sc.wkwNot ? weaponsOf(u, kind, sc) : null;
+        const ws = ws0 && !sc.weapon && !sc.wkw && !sc.part && ws0.length === items(u, kind).length ? null : ws0;
         if(ws && !ws.length) continue;
         // (a weapon ability every weapon it reaches has already says nothing)
         const its = ws || items(u, kind), hasAll = l => /^\[.+\]$/.test(l) && its.length && its.every(it => it.ps.every(w => (w.kw || []).some(k => '[' + String(k).toUpperCase() + ']' === l)));
@@ -223,7 +231,7 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
     if(back && String(back[1]).toUpperCase() !== String(p).toUpperCase()) fail('L8', 'effects.js ' + id, 'its label “' + f.label(p) + '” reads back as ' + back[1]);
     const m = A.fnLine({ grp:'army', name:'R', key:'r|x' }, { quote:'', fx:[[id, p]], on:[], kind:'all' }, u0, 'ranged', null);
     if(!m || m.note !== f.label(p)) fail('L8', 'effects.js ' + id, 'a box of it alone says “' + (m && m.note) + '”, not “' + f.label(p) + '”'); }
-  const CV = { aura:[[3, '3"'], [6, '6"'], [9, '9"']], maxT:[[6, 'T 7+'], [3, 'T 4+']], targetKw:[[{ any:['Monster', 'Vehicle'] }, 'MONSTER or VEHICLE'], [{ none:['Monster', 'Vehicle'] }, 'not MONSTER/VEHICLE'], [{ all:['Psyker', 'Character'] }, 'PSYKER CHARACTER']],
+  const CV = { aura:[[3, '3"'], [6, '6"'], [9, '9"']], maxT:[[6, 'T 7+'], [3, 'T 4+']], targetKw:[[{ any:['Monster', 'Vehicle'] }, 'MONSTER or VEHICLE'], [{ none:['Monster', 'Vehicle'] }, 'not MONSTER/VEHICLE'], [{ any:['Infantry', 'Beast'], said:'INFANTRY or BEASTS' }, 'INFANTRY or BEASTS'], [{ none:['Monster', 'Vehicle'], said:'MONSTERS and VEHICLES' }, 'excluding MONSTERS and VEHICLES'], [{ all:['Psyker', 'Character'] }, 'PSYKER CHARACTER']],
     selfKw:[['Khorne', 'KHORNE']], selfGear:[[['gun', 'axe'], 'gun and axe']], opt:[['Option', 'Option']], q:[['If words', '“If words”']], anyOf:[[['A', 'B'], '“A” or “B”']] };
   for(const [id, c] of Object.entries(E.COND)){
     for(const [p, want] of CV[id] || [[true, null]]){ const l = c.label(p); if(want && !l.includes(want)) fail('L8', 'effects.js ' + id, 'its label for ' + JSON.stringify(p) + ' is “' + l + '”, not with “' + want + '”'); else n++; }
@@ -238,6 +246,45 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
   for(const [key, o] of Object.entries(Tw)){ const src = Sw.get(key); if(!src || o.played) continue;
     for(const b of o.b || []){ n++; for(const g of Cv.gaps(b, src, 'attack', src.others, CTX)) fail('LC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
   stats.covered = n; stats.reachChecked = Cv.counts.checked; stats.reachUnchecked = Cv.counts.unchecked; }
+// LF fixed cases of readings once wrong (each GW's words, verbatim): ignoring modifiers to the wound roll is read where GW says it, and only
+// there (Martial Ka'tah, Unshakeable Opponents, Bearers of His Light; Inevitable Annihilation's hit rolls alone and Stabilisation Talons not);
+// an enemy unit's characteristic is said as the enemy's (BOXES snc foe), a friendly one never is
+{ let n = 0;
+  const FX_FIX = [["Your unit can ignore modifiers to your unit’s: Hit rolls and wound rolls.", ['ignoreWoundMods']],
+    ["Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the **Hit roll**; the **Wound roll**.", ['ignoreHitMods', 'ignoreWoundMods']],
+    ["Your unit’s melee attacks can ignore modifiers to **hit rolls** and **wound rolls**.", ['ignoreHitRollMods', 'ignoreWoundMods']],
+    ["Your unit can ignore modifiers to your unit’s: **Hit rolls**.", []],
+    ["Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the **Hit roll** and any or all modifiers to the Ballistic Skill characteristic of that weapon.", ['ignoreHitMods']]];
+  for(const [t, want] of FX_FIX){ const got = X.findFx(E.norm(t)).fx.map(([id]) => id).filter(id => /^ignore/.test(id)).sort().join(',');
+    if(got !== want.slice().sort().join(',')) fail('LF', 'effects.js ignore modifiers', '“' + t.slice(0, 70) + '” reads ' + (got || 'nothing') + ', GW: ' + (want.join(',') || 'none of the wound roll')); else n++; }
+  const FOE_FIX = [['While an enemy model is within 3" of this unit, that enemy model has -1 **OC**.', true], ['While a unit is wracked with agonies, subtract 2" from its Move characteristic and subtract 2 from **Charge rolls** made for that unit.', true],
+    ['While an enemy unit is within **Engagement Range** of this unit, halve the Objective Control characteristic of models in that enemy unit.', true],
+    ['While a friendly **THOUSAND SONS** unit is within 6" of this **PSYKER**, add 2" to the Move characteristic of models in that unit.', false], ['Add 2 to the bearer’s Wounds characteristic.', false]];
+  for(const [t, foe] of FOE_FIX){ const x = X.statNc({ type:'ability', text:t }, [], [], [], null)[0];
+    if(!x || !!x.foe !== foe) fail('LF', 'effects-extract.js statNc', '“' + t.slice(0, 70) + '” ' + (x ? (x.foe ? 'said' : 'not said') + ' as an enemy unit’s' : 'not read') + ', GW: ' + (foe ? 'an enemy unit’s' : 'its own or a friendly unit’s')); else n++; }
+  // (and whom a not-counted characteristic is for, as GW's words say: the friendly units it names, an opening keyword condition, leading;
+  // never a keyword of a clause inside the sentence)
+  const Vf = require('./derive').vocab(D), J = x => JSON.stringify(x === undefined ? null : x);
+  const WHO_FIX = [['While a friendly **WAR DOG** model is within 9" of this model, improve that **WAR DOG** model’s Leadership and Objective Control characteristics by 1.', { all:['War Dog'] }, null],
+    ['Friendly **LEGIONES DAEMONICA CHARACTER** models (excluding **MONSTER** models) have +1 **Ld** and **OC**.', { all:['Faction: Legiones Daemonica', 'Character'], none:['Monster'] }, null],
+    ['**Daemon Prince of Slaanesh:** If this model has the **SLAANESH** keyword, add 2" to this model’s Move characteristic.', null, [['selfKw', 'Slaanesh']]],
+    ['Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an **ARMIGER** or **DESTRIER** unit.', null, null],
+    ['While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.', null, [['leading', true]]]];
+  for(const [t, reach, on] of WHO_FIX){ const xs = X.statNc({ type:'ability', text:t }, [], [], [], Vf);
+    if(!xs.length || xs.some(x => J(x.reach) !== J(reach) || J(x.on) !== J(on))) fail('LF', 'effects-extract.js statNc', '“' + t.replace(/\*\*/g, '').slice(0, 70) + '” is for ' + (xs.length ? J(xs[0].reach) + ' ' + J(xs[0].on) : 'nothing') + ', GW: ' + J(reach) + ' ' + J(on)); else n++; }
+  stats.fixed = n; }
+// LW never silent: every sentence of a source a list uses (its units' abilities and core weapon rules, its faction's army rules, its
+// detachments' rules and stratagems, the core stratagems) with words of the numbers (hit, wound, AP, damage, save, Feel No Pain, OC, Move,
+// a weapon ability) is a counted box or listed not counted in data.js BOXES (verify/coverage.js silent, its own words)
+{ const Cv = require('./coverage'), Sw = M.sources(D), used = new Set(); let n = 0, k = 0;
+  for(const a of D.armies){ const F = D.factions[a.faction] || {};
+    for(const r of F.armyRules || []) used.add(M.KEY.rule(r));
+    for(const id of a.detachments || []){ const d = (F.detachments || {})[id]; if(!d) continue;
+      for(const r of d.rule ? [d.rule].concat(d.moreRules || []) : []) used.add(M.KEY.rule(r)); for(const st of d.stratagems || []) used.add(M.KEY.strat(st)); } }
+  for(const st of D.coreStratagems || []) used.add(M.KEY.strat(st));
+  for(const [key, src] of Sw){ if((src.type === 'rule' || src.type === 'strat') && !used.has(key)) continue; n++;
+    for(const s of Cv.silent(src, (D.boxes || {})[key])){ k++; fail('LW', key + ' ' + src.name, 'words of the numbers no box counts and none lists not counted: “' + X.plainCase(s).slice(0, 90) + '”'); } }
+  stats.silentSources = n; stats.silent = k; }
 // LS the lines under a unit's profile: the stat boxes of the list's army and detachment rules that reach it, worked out here again from
 // data.js alone (which rules, which boxes, the words: its conditions' labels, " · " between, a one-model unit's Starting Strength in its
 // wounds, "If (see the rule)" for GW's quoted words alone; its value the unit's characteristic with the effect where every profile has one value
@@ -259,6 +306,22 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
           const vs = [...new Set(u.stats.map(s => String(s[f.stat])))], whole = !sets && !(b.scope || {}).models && vs.length === 1 && (f.inch ? /^\d+"$/ : /^\d+$/).test(vs[0]);
           const val = whole ? f.stat + ' ' + (parseInt(vs[0], 10) + f.add(p)) + (f.inch ? '"' : '') : ((b.scope || {}).models ? b.scope.models + ' models ' : '') + f.label(p);
           want.push(r.name + ' | ' + (when ? when + ': ' : '') + val); } }
+      // (and every snc of its sources, BOXES: its abilities, another unit's aura that reaches it, its army and detachment rules, the
+      // stratagems it can be the target of: "<stat>: not counted here: see the rule", once per source and characteristic, not one printed in)
+      // (where its words reach: its reach, else a rule's needs; a keyword of the unit it needs, on selfKw)
+      const said = new Set(), snc = (key, name, needs) => { for(const x of ((D.boxes || {})[key] || {}).snc || []){
+        if(x.reach ? !meetsN(x.reach, u) : needs !== undefined && !(needs && meetsN(needs, u))) continue;
+        if((x.on || []).some(([id, p]) => (id === 'selfKw' && !hasK(u, p)) || (id === 'leading' && !u.leads))) continue;
+        if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => String([].concat((s.from || {})[x.stat] || []).join(', ')).split(/\s*,\s*/).includes(name)))) continue;
+        said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); want.push(name + ' | ' + (x.foe ? 'Enemy units’ ' : '') + x.stat + ': not counted here: see the rule'); } };
+      for(const ab of u.abilities || []) snc(M.KEY.ability(ab), ab.name);
+      for(const x of a.units) if(x !== u) for(const ab of x.abilities || []){ const o = (D.boxes || {})[M.KEY.ability(ab)] || {};
+        if(/\baura\b/i.test(ab.tag || '') && o.reach && meetsN(o.reach, u)) snc(M.KEY.ability(ab), ab.name); }
+      // (a rule's: the units that have it, an army rule on its Rules line or its needs met, a detachment rule's needs met)
+      const own = new Set(A.inArmy(a, () => A.unitDetRules(u)).map(r => r.name));
+      for(const r of rules){ const army = (F.armyRules || []).includes(r);
+        if(army ? A.inArmy(a, () => A.hasRule(u, r.name)) || (r.needs && meetsN(r.needs, u)) : own.has(r.name)) snc(M.KEY.rule(r), r.name); }
+      for(const st of A.inArmy(a, () => A.allStratagems().filter(x => A.canTarget(x, u)))) snc(M.KEY.strat(st), st.name);
       const got = A.inArmy(a, () => A.statLines(u)).map(x => x.rule + ' | ' + x.text);
       if(JSON.stringify(got) !== JSON.stringify(want)) fail('LS', a.id + '/' + u.id, 'the lines under its profile are ' + JSON.stringify(got) + ', its rules\' stat boxes give ' + JSON.stringify(want));
       else n += got.length; } }
@@ -319,6 +382,6 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/lines.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips, ' + stats.cpNotes + ' extra-CP chips and ' + stats.na + ' "does nothing here" chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
+console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips, ' + stats.cpNotes + ' extra-CP chips and ' + stats.na + ' "does nothing here" chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each; ' + stats.silentSources + ' sources the lists use, every sentence of the numbers counted or listed not counted; ' + stats.fixed + ' fixed cases');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);
