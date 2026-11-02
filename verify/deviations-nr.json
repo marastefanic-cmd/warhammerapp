@@ -311,36 +311,6 @@
   "evidence": "verify/.cache/waha/ds/adeptus-mechanicus_Onager-Dunecrawler.html line 1532: \"While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.\"; verify/sources/nr/purge-goes-the-foe.txt line 299: \"While this mdel has 1-4 wounds remaining, …\"."
  },
  {
-  "army": "princes",
-  "unit": "slaughterbound-exalted-eightbound",
-  "field": "stats (rows)",
-  "app": [
-   "Slaughterbound",
-   "Exalted Eightbound x3"
-  ],
-  "source": [
-   "Slaughterbound",
-   "Exalted Eightbound"
-  ],
-  "reason": "New Recruit prints the attached unit's Exalted Eightbound row without its model count (\"(x3)\"), where it prints one for other bodyguard rows (\"Khorne Berzerker (x10)\"); the unit has three Exalted Eightbound models, so the row says \"×3\" (play-test finding C7b).",
-  "evidence": "verify/sources/nr/princes.txt line 20 (\"(3) Exalted Eightbound … 130\"), lines 149-150 (\"1x Exalted Eightbound Champion\", \"2x Exalted Eightbound\"), line 153 (\"Exalted Eightbound - Exalted Eightbound 10\" 6 3+ 3 6+ 1 5+ 40mm\", no count). The row's values are still compared (stats rows are matched by name without the count)."
- },
- {
-  "army": "standard",
-  "unit": "slaughterbound-exalted-eightbound",
-  "field": "stats (rows)",
-  "app": [
-   "Slaughterbound",
-   "Exalted Eightbound x3"
-  ],
-  "source": [
-   "Slaughterbound",
-   "Exalted Eightbound"
-  ],
-  "reason": "New Recruit prints the attached unit's Exalted Eightbound row without its model count (\"(x3)\"), where it prints one for other bodyguard rows; the unit has three Exalted Eightbound models, so the row says \"×3\" (play-test finding C7b).",
-  "evidence": "verify/sources/nr/standard.txt lines 20-22 (\"(3) Exalted Eightbound … 130\"), lines 94-95 (\"1x Exalted Eightbound Champion\", \"2x Exalted Eightbound\"), line 98 (\"Exalted Eightbound - Exalted Eightbound 10\" 6 3+ 3 6+ 1 5+ 40mm\", no count). The row's values are still compared (stats rows are matched by name without the count)."
- },
- {
   "army": "4-megas-and-a-destrier",
   "unit": "canis-rex",
   "field": "stats[Sir Hekhtur].base",
@@ -624,144 +594,6 @@
   "superseded": "verify/sources/nr-json/shooty.json"
  },
  {
-  "army": "princes",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
-  "field": "models",
-  "app": [
-   "1x Khârn the Betrayer",
-   "1x Khorne Berzerker Champion (Icon of Khorne)",
-   "7x Khorne Berzerker",
-   "2x Khorne Berzerker w/ eviscerator and plasma pistol"
-  ],
-  "source": [
-   "1x Khârn the Betrayer",
-   "1x Khorne Berzerker Champion",
-   "7x Khorne Berzerker",
-   "2x Khorne Berzerker w/ eviscerator and plasma pistol"
-  ],
-  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/princes.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): Khârn’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
-  "evidence": "verify/sources/nr-json/princes.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
-  "superseded": "verify/sources/nr-json/princes.json"
- },
- {
-  "army": "princes",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
-  "field": "gear[1x Khorne Berzerker Champion]",
-  "app": null,
-  "source": [
-   "Chainblade",
-   "Plasma pistol"
-  ],
-  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/princes.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): Khârn’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
-  "evidence": "verify/sources/nr-json/princes.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
-  "superseded": "verify/sources/nr-json/princes.json"
- },
- {
-  "army": "princes",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
-  "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
-  "app": [
-   "Chainblade",
-   "Plasma pistol"
-  ],
-  "source": null,
-  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/princes.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): Khârn’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
-  "evidence": "verify/sources/nr-json/princes.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
-  "superseded": "verify/sources/nr-json/princes.json"
- },
- {
-  "army": "standard",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
-  "field": "models",
-  "app": [
-   "1x Khârn the Betrayer",
-   "1x Khorne Berzerker Champion (Icon of Khorne)",
-   "7x Khorne Berzerker",
-   "2x Khorne Berzerker w/ eviscerator and plasma pistol"
-  ],
-  "source": [
-   "1x Khârn the Betrayer",
-   "1x Khorne Berzerker Champion",
-   "7x Khorne Berzerker",
-   "2x Khorne Berzerker w/ eviscerator and plasma pistol"
-  ],
-  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/standard.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): Khârn’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
-  "evidence": "verify/sources/nr-json/standard.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
-  "superseded": "verify/sources/nr-json/standard.json"
- },
- {
-  "army": "standard",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
-  "field": "gear[1x Khorne Berzerker Champion]",
-  "app": null,
-  "source": [
-   "Chainblade",
-   "Plasma pistol"
-  ],
-  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/standard.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): Khârn’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
-  "evidence": "verify/sources/nr-json/standard.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
-  "superseded": "verify/sources/nr-json/standard.json"
- },
- {
-  "army": "standard",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
-  "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
-  "app": [
-   "Chainblade",
-   "Plasma pistol"
-  ],
-  "source": null,
-  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/standard.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): Khârn’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
-  "evidence": "verify/sources/nr-json/standard.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
-  "superseded": "verify/sources/nr-json/standard.json"
- },
- {
-  "army": "big-demons-baby",
-  "unit": "lord-on-juggernaut-khorne-berzerkers",
-  "field": "models",
-  "app": [
-   "1x Lord on Juggernaut",
-   "1x Khorne Berzerker Champion (Icon of Khorne)",
-   "15x Khorne Berzerker",
-   "4x Khorne Berzerker w/ eviscerator and plasma pistol"
-  ],
-  "source": [
-   "1x Lord on Juggernaut",
-   "1x Khorne Berzerker Champion",
-   "15x Khorne Berzerker",
-   "4x Khorne Berzerker w/ eviscerator and plasma pistol"
-  ],
-  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/big-demons-baby.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): the Lord on Juggernaut’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
-  "evidence": "verify/sources/nr-json/big-demons-baby.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
-  "superseded": "verify/sources/nr-json/big-demons-baby.json"
- },
- {
-  "army": "big-demons-baby",
-  "unit": "lord-on-juggernaut-khorne-berzerkers",
-  "field": "gear[1x Khorne Berzerker Champion]",
-  "app": null,
-  "source": [
-   "Chainblade",
-   "Plasma pistol"
-  ],
-  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/big-demons-baby.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): the Lord on Juggernaut’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
-  "evidence": "verify/sources/nr-json/big-demons-baby.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
-  "superseded": "verify/sources/nr-json/big-demons-baby.json"
- },
- {
-  "army": "big-demons-baby",
-  "unit": "lord-on-juggernaut-khorne-berzerkers",
-  "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
-  "app": [
-   "Chainblade",
-   "Plasma pistol"
-  ],
-  "source": null,
-  "reason": "Superseded by the New Recruit JSON export (verify/sources/nr-json/big-demons-baby.json). The owner’s newer list (New Recruit JSON export, confirmed current by the owner on 23 Oct 2026): the Lord on Juggernaut’s Khorne Berzerkers carry an Icon of Khorne (on the Champion); the PDF is the older version.",
-  "evidence": "verify/sources/nr-json/big-demons-baby.json: import.js turns it into exactly this list of data.js (checked here and by verify/import-test.js); verify/bsdata.js checks the loadout against BSData.",
-  "superseded": "verify/sources/nr-json/big-demons-baby.json"
- },
- {
   "army": "lite-knights",
   "unit": "witchseeker-squad",
   "field": "abilities[Sanctified Flames].text",
@@ -944,8 +776,8 @@
   "field": "stats[Marneus Calgar].base",
   "app": "50mm",
   "source": "~50mm",
-  "reason": "New Recruit’s export (catalogue revision 8) gives the base as ~50mm; Wahapedia’s datasheet has 50mm. GW wins (base sizes too).",
-  "evidence": "verify/.cache/waha/ds/ultramarines_Marneus-Calgar.html: \"(⌀50mm)\"; verify/sources/nr-json/nerf-when.json: Base ~50mm.",
+  "reason": "New Recruit’s export (catalogue revision 8) gives the base as ~50mm; verify/deviations-bases.json (declared) has 50mm. GW wins (base sizes too).",
+  "evidence": "verify/deviations-bases.json (ultramarines/marneus-calgar · Marneus Calgar); verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3627: \"Marneus Calgar in Armour of Antilochus  50mm\"; verify/sources/nr-json/nerf-when.json: Base ~50mm.",
   "by": "verify/from-json.js"
  },
  {
@@ -2342,6 +2174,216 @@
   "source": "120x92mm",
   "reason": "New Recruit’s export (catalogue revision 3) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3857: \"Tyrannofex  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: Base 120x92mm.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "angron",
+  "field": "abilities[Supreme Commander]",
+  "app": "present",
+  "source": null,
+  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); New Recruit’s PDF of the list (verify/sources/nr/big-demons-baby.txt) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Angron.html: \"Supreme Commander\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "flesh-hounds",
+  "field": "rules",
+  "app": null,
+  "source": "Feel No Pain 3+",
+  "reason": "New Recruit’s export (catalogue revision 15) lists Feel No Pain 3+ on the Rules line; Collar of Khorne gives Feel No Pain only against what it names, so the app leaves it off the Rules line (its When targeted line keeps the condition; GW’s datasheet does not print it among CORE ABILITIES). GW wins.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Flesh-Hounds.html; verify/sources/nr-json/big-demons-baby.json: rule Feel No Pain 3+.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "infernal-lance",
+  "unit": "knight-ruinator-fleshmetal-fusion",
+  "field": "rules",
+  "app": null,
+  "source": "Sustained Hits",
+  "reason": "New Recruit’s export (catalogue revision 2) lists Sustained Hits on the Rules line; no weapon of the unit has [SUSTAINED HITS] (BSData links Sustained Hits to a weapon entry whose profile does not have it), so the app leaves it off the Rules line (GW’s datasheet does not print it among CORE ABILITIES). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-knights_Knight-Ruinator.html; verify/sources/nr-json/infernal-lance.json: rule Sustained Hits.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "infernal-lance",
+  "unit": "knight-ruinator",
+  "field": "rules",
+  "app": null,
+  "source": "Sustained Hits",
+  "reason": "New Recruit’s export (catalogue revision 2) lists Sustained Hits on the Rules line; no weapon of the unit has [SUSTAINED HITS] (BSData links Sustained Hits to a weapon entry whose profile does not have it), so the app leaves it off the Rules line (GW’s datasheet does not print it among CORE ABILITIES). GW wins.",
+  "evidence": "verify/.cache/waha/ds/chaos-knights_Knight-Ruinator.html; verify/sources/nr-json/infernal-lance.json: rule Sustained Hits.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "mucho-mutantes",
+  "unit": "magnus-the-red",
+  "field": "abilities[Supreme Commander]",
+  "app": "present",
+  "source": null,
+  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); New Recruit’s PDF of the list (verify/sources/nr/mucho-mutantes.txt) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Magnus-The-Red.html: \"Supreme Commander\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "princes",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "models",
+  "app": [
+   "1x Lord on Juggernaut",
+   "1x Khorne Berzerker Champion",
+   "15x Khorne Berzerker",
+   "4x Khorne Berzerker w/ eviscerator and plasma pistol"
+  ],
+  "source": [
+   "1x Lord on Juggernaut",
+   "1x Khorne Berzerker Champion",
+   "15x Khorne Berzerker",
+   "3x Khorne Berzerker w/ eviscerator and plasma pistol",
+   "1x Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)"
+  ],
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/princes.txt) prints Icon of Khorne on a models line; New Recruit’s export (catalogue revision 15) carries it on the unit itself, not on a model, so the app lists it as the unit’s (unplaced), its models lines added up as the export gives them; GW’s datasheet lets any one model carry it (\"1 model can be equipped with …\").",
+  "evidence": "verify/sources/nr-json/princes.json: the unit’s own selections; verify/sources/nr/princes.txt p3.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "princes",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "gear[3x Khorne Berzerker w/ eviscerator and plasma pistol]",
+  "app": null,
+  "source": [
+   "Khornate eviscerator",
+   "Plasma pistol"
+  ],
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/princes.txt) prints Icon of Khorne on a models line; New Recruit’s export (catalogue revision 15) carries it on the unit itself, not on a model, so the app lists it as the unit’s (unplaced), its models lines added up as the export gives them; GW’s datasheet lets any one model carry it (\"1 model can be equipped with …\").",
+  "evidence": "verify/sources/nr-json/princes.json: the unit’s own selections; verify/sources/nr/princes.txt p3.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "princes",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)]",
+  "app": null,
+  "source": [
+   "Khornate eviscerator",
+   "Plasma pistol"
+  ],
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/princes.txt) prints Icon of Khorne on a models line; New Recruit’s export (catalogue revision 15) carries it on the unit itself, not on a model, so the app lists it as the unit’s (unplaced), its models lines added up as the export gives them; GW’s datasheet lets any one model carry it (\"1 model can be equipped with …\").",
+  "evidence": "verify/sources/nr-json/princes.json: the unit’s own selections; verify/sources/nr/princes.txt p3.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "princes",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "gear[4x Khorne Berzerker w/ eviscerator and plasma pistol]",
+  "app": [
+   "Khornate eviscerator",
+   "Plasma pistol"
+  ],
+  "source": null,
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/princes.txt) prints Icon of Khorne on a models line; New Recruit’s export (catalogue revision 15) carries it on the unit itself, not on a model, so the app lists it as the unit’s (unplaced), its models lines added up as the export gives them; GW’s datasheet lets any one model carry it (\"1 model can be equipped with …\").",
+  "evidence": "verify/sources/nr-json/princes.json: the unit’s own selections; verify/sources/nr/princes.txt p3.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "pubstomper",
+  "unit": "exalted-sorcerer-rubric-marines",
+  "field": "models",
+  "app": [
+   "1x Exalted Sorcerer",
+   "1x Aspiring Sorcerer",
+   "1x Rubric Marine w/ soulreaper cannon",
+   "2x Rubric Marine w/ warpflamer",
+   "1x Rubric Marine w/ warpflamer (Icon of Flame)"
+  ],
+  "source": [
+   "1x Exalted Sorcerer",
+   "1x Aspiring Sorcerer",
+   "1x Rubric Marine w/ soulreaper cannon",
+   "3x Rubric Marine w/ warpflamer"
+  ],
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 17), which puts each on the model whose selection has it; the app’s models lines are the export’s (the same models and weapons, a wargear on another line).",
+  "evidence": "verify/sources/nr-json/pubstomper.json: the unit’s model selections; verify/sources/nr/pubstomper.txt p2.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "pubstomper",
+  "unit": "exalted-sorcerer-rubric-marines",
+  "field": "gear[3x Rubric Marine w/ warpflamer]",
+  "app": null,
+  "source": [
+   "Close combat weapon",
+   "Warpflamer"
+  ],
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 17), which puts each on the model whose selection has it; the app’s models lines are the export’s (the same models and weapons, a wargear on another line).",
+  "evidence": "verify/sources/nr-json/pubstomper.json: the unit’s model selections; verify/sources/nr/pubstomper.txt p2.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "pubstomper",
+  "unit": "exalted-sorcerer-rubric-marines",
+  "field": "gear[2x Rubric Marine w/ warpflamer]",
+  "app": [
+   "Close combat weapon",
+   "Warpflamer"
+  ],
+  "source": null,
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 17), which puts each on the model whose selection has it; the app’s models lines are the export’s (the same models and weapons, a wargear on another line).",
+  "evidence": "verify/sources/nr-json/pubstomper.json: the unit’s model selections; verify/sources/nr/pubstomper.txt p2.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "pubstomper",
+  "unit": "exalted-sorcerer-rubric-marines",
+  "field": "gear[1x Rubric Marine w/ warpflamer (Icon of Flame)]",
+  "app": [
+   "Close combat weapon",
+   "Warpflamer"
+  ],
+  "source": null,
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 17), which puts each on the model whose selection has it; the app’s models lines are the export’s (the same models and weapons, a wargear on another line).",
+  "evidence": "verify/sources/nr-json/pubstomper.json: the unit’s model selections; verify/sources/nr/pubstomper.txt p2.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "pubstomper",
+  "unit": "magnus-the-red",
+  "field": "abilities[Supreme Commander]",
+  "app": "present",
+  "source": null,
+  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/thousand-sons_Magnus-The-Red.html: \"Supreme Commander\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "cybernetica-datasmith-kastelan-robots",
+  "field": "rules",
+  "app": null,
+  "source": "Feel No Pain 4+",
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/purge-goes-the-foe.txt) lists Feel No Pain 4+ on the Rules line; GW’s datasheet does not print Feel No Pain 4+. GW wins.",
+  "evidence": "verify/.cache/waha/ds/adeptus-mechanicus_Cybernetica-Datasmith.html, verify/.cache/waha/ds/adeptus-mechanicus_Kastelan-Robots.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "standard",
+  "unit": "angron",
+  "field": "abilities[Supreme Commander]",
+  "app": "present",
+  "source": null,
+  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); New Recruit’s PDF of the list (verify/sources/nr/standard.txt) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Angron.html: \"Supreme Commander\".",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "super-terminators",
+  "unit": "angron",
+  "field": "abilities[Supreme Commander]",
+  "app": "present",
+  "source": null,
+  "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); New Recruit’s PDF of the list (verify/sources/nr/super-terminators.txt) does not. GW wins.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Angron.html: \"Supreme Commander\".",
   "by": "verify/from-json.js"
  }
 ]

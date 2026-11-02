@@ -1,0 +1,498 @@
+[
+ {
+  "army": "shooty",
+  "kind": "unit-kwNote",
+  "where": "shooty · Mek",
+  "judgement": {
+   "kwNote": "Tankbustas comes from the supported Tankbustas."
+  },
+  "source": {
+   "models": [
+    "1× Mek",
+    "1× Nob",
+    "1× Tankbusta w/ Two Busta Rokkit Launchas",
+    "4× Tankbusta w/ Busta Rokkit Launcha"
+   ],
+   "stats": [
+    "Mek W4 OC1",
+    "Nob W3 OC1",
+    "Tankbusta ×5 W2 OC1"
+   ],
+   "weapons": [
+    "Kustom Mega-slugga 3 -2 3 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Busta Rokkit Launcha Standard 2 -2 3 IGNORES COVER, ASSAULT",
+    "Busta Rokkit Launcha Hunter 3 -2 3 IGNORES COVER, ASSAULT",
+    "Rokkit pistol 1 -2 3 CLOSE-QUARTERS, IGNORES COVER, ASSAULT",
+    "Mek’s Toolz 3 0 1",
+    "Choppa 4 -1 1",
+    "Gitstikka 3 0 1"
+   ]
+  },
+  "key": "40504569520d9126"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-kwNote",
+  "where": "shooty · Mek",
+  "judgement": {
+   "kwNote": "Flash Gitz comes from the supported Flash Gitz."
+  },
+  "source": {
+   "models": [
+    "1× Mek",
+    "1× Kaptin",
+    "9× Flash Gitz"
+   ],
+   "stats": [
+    "Mek W4 OC1",
+    "Flash Gitz W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Mega-slugga 3 -2 3 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Snazzgun Cutta 1 -3 D3+2 HAZARDOUS, MELTA 2, IGNORES COVER, ASSAULT, RAPID FIRE 1",
+    "Snazzgun Dakka 3 -1 2 LETHAL HITS: non-MONSTER/VEHICLE, SUSTAINED HITS 1, IGNORES COVER, ASSAULT, RAPID FIRE 1",
+    "Snazzgun Kill Shot 2 -2 2 HAZARDOUS, IGNORES COVER, ASSAULT, RAPID FIRE 1",
+    "Mek’s Toolz 3 0 1",
+    "Choppa 4 -1 1"
+   ]
+  },
+  "key": "1e30843a5267f6ca"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-kwNote",
+  "where": "standard · Khârn the Betrayer",
+  "judgement": {
+   "kwNote": "Battleline, Berzerkers come from the led Khorne Berzerkers."
+  },
+  "source": {
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "stats": [
+    "Khârn the Betrayer W5 OC1",
+    "Khorne Berzerker ×10 W2 OC2"
+   ],
+   "weapons": [
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Gorechild 9 -2 3",
+    "Chainblade 5 -1 1",
+    "Khornate eviscerator 4 -2 2"
+   ]
+  },
+  "key": "dcf90c9309acc866"
+ },
+ {
+  "army": "princes",
+  "kind": "unit-kwNote",
+  "where": "princes · Lord on Juggernaut",
+  "judgement": {
+   "kwNote": "Battleline, Berzerkers, Grenades, Infantry come from the led Khorne Berzerkers."
+  },
+  "source": {
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "stats": [
+    "Lord on Juggernaut W7 OC2",
+    "Khorne Berzerker ×20 W2 OC2"
+   ],
+   "weapons": [
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Exalted chainblade 8 -1 2",
+    "Bladed horn 5 -1 2 EXTRA ATTACKS, LANCE",
+    "Chainblade 5 -1 1",
+    "Khornate eviscerator 4 -2 2"
+   ]
+  },
+  "key": "a7419a6925c9dfc4"
+ },
+ {
+  "army": "princes",
+  "kind": "unit-partialRules",
+  "where": "princes · Slaughterbound",
+  "judgement": {
+   "partialRules": {
+    "Deadly Demise D3": "Slaughterbound",
+    "Scouts 6\"": "Slaughterbound"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ],
+   "rules": [
+    "Deadly Demise D3",
+    "Leader",
+    "Deep Strike",
+    "Blessings of Khorne",
+    "Scouts 6\"",
+    "Anti"
+   ],
+   "abilities": [
+    "Slaughterbound · Lord of the Eightbound: If this model is **attached** to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, until the end of the battle, this model has the **Deep Strike** and **Scouts 6\"** abilities.",
+    "Slaughterbound · Rage Eternal: While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.",
+    "Slaughterbound · Possessed Lord: Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[DEVASTATING WOUNDS]** ability.",
+    "Slaughterbound · Battle-lust: **WORLD EATERS** model only. You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.",
+    "Exalted Eightbound · Rend and Tear: Each time a model in this unit makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, until the end of the phase, improve the Damage characteristic of that attack by 1."
+   ]
+  },
+  "key": "eaa143fbeb26c2ef"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-partialRules",
+  "where": "standard · Slaughterbound",
+  "judgement": {
+   "partialRules": {
+    "Deadly Demise D3": "Slaughterbound",
+    "Scouts 6\"": "Slaughterbound"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ],
+   "rules": [
+    "Deadly Demise D3",
+    "Leader",
+    "Deep Strike",
+    "Blessings of Khorne",
+    "Scouts 6\"",
+    "Anti"
+   ],
+   "abilities": [
+    "Slaughterbound · Lord of the Eightbound: If this model is **attached** to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, until the end of the battle, this model has the **Deep Strike** and **Scouts 6\"** abilities.",
+    "Slaughterbound · Rage Eternal: While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.",
+    "Slaughterbound · Possessed Lord: Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[DEVASTATING WOUNDS]** ability.",
+    "Slaughterbound · Berzerker Glaive: **WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.",
+    "Exalted Eightbound · Rend and Tear: Each time a model in this unit makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, until the end of the phase, improve the Damage characteristic of that attack by 1."
+   ]
+  },
+  "key": "d7e139500ce60564"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-kwNote",
+  "where": "pubstomper · Exalted Sorcerer",
+  "judgement": {
+   "kwNote": "Battleline, Rubric, Rubric Marines, Rubricae come from the led Rubric Marines."
+  },
+  "source": {
+   "models": [
+    "1× Exalted Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "2× Rubric Marine w/ warpflamer",
+    "1× Rubric Marine w/ warpflamer (Icon of Flame)"
+   ],
+   "stats": [
+    "Exalted Sorcerer W5 OC1",
+    "Rubric Marine W2 OC2",
+    "Aspiring Sorcerer W3 OC2"
+   ],
+   "weapons": [
+    "Astral Blast D6 -2 D3 BLAST, DEVASTATING WOUNDS, PSYCHIC",
+    "Inferno bolt pistol 1 -2 1 PISTOL",
+    "Malefic Curse 3 -3 1 ANTI-INFANTRY 4+, DEVASTATING WOUNDS, PSYCHIC, IGNORES COVER",
+    "Soulreaper cannon 6 -2 1 DEVASTATING WOUNDS, IGNORES COVER",
+    "Warpflame pistol D6 -1 1 IGNORES COVER, PISTOL, TORRENT",
+    "Warpflamer D6 -1 1 IGNORES COVER, TORRENT",
+    "Force weapon 5 -1 D3 PSYCHIC",
+    "Prosperine khopesh 4 -2 2",
+    "Close combat weapon 2 0 1",
+    "Force weapon 3 -1 D3 PSYCHIC"
+   ]
+  },
+  "key": "77fc75eafff7f451"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-partialRules",
+  "where": "pubstomper · Exalted Sorcerer",
+  "judgement": {
+   "partialRules": {
+    "Cabal of Sorcerers": "Exalted Sorcerer and Aspiring Sorcerer"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Exalted Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "2× Rubric Marine w/ warpflamer",
+    "1× Rubric Marine w/ warpflamer (Icon of Flame)"
+   ],
+   "rules": [
+    "Leader",
+    "Cabal of Sorcerers",
+    "Blast",
+    "Devastating Wounds",
+    "Psychic",
+    "Pistol",
+    "Anti",
+    "Torrent",
+    "Ignores Cover"
+   ],
+   "abilities": [
+    "Exalted Sorcerer · Arcane Shield: While this model is leading a unit, models in that unit have a 4+ invulnerable save.",
+    "Exalted Sorcerer · Rebind Rubricae: In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 **mortal wounds**; on a 2-5, you can return 1 destroyed **Bodyguard** model to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit.",
+    "Exalted Sorcerer · Incandaeum: **EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.",
+    "Rubric Marines · Bringers of Change: Each time a model in this unit makes a ranged attack, re-roll a **Wound roll** of 1. If that attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.",
+    "Rubric Marines · Icon of Flame: Ranged weapons equipped by models in the bearer’s unit (excluding **CHARACTERS**) have the **[IGNORES COVER]** ability."
+   ]
+  },
+  "key": "7befdf130e8682ce"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-kwOnly",
+  "where": "pubstomper · Exalted Sorcerer",
+  "judgement": {
+   "kwOnly": {
+    "Psyker": "Exalted Sorcerer and Aspiring Sorcerer"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Exalted Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "2× Rubric Marine w/ warpflamer",
+    "1× Rubric Marine w/ warpflamer (Icon of Flame)"
+   ],
+   "kw": [
+    "Infantry",
+    "Character",
+    "Grenades",
+    "Psyker",
+    "Chaos",
+    "Tzeentch",
+    "Exalted Sorcerer",
+    "Battleline",
+    "Rubricae",
+    "Rubric Marines",
+    "Faction: Thousand Sons"
+   ],
+   "kwNote": "Battleline, Rubric, Rubric Marines, Rubricae come from the led Rubric Marines."
+  },
+  "key": "dfad7314962eabeb"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-partialRules",
+  "where": "4-megas-and-a-destrier · Canis Rex",
+  "judgement": {
+   "partialRules": {
+    "Lone Operative": "Sir Hekhtur"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Canis Rex",
+    "1× Sir Hekhtur"
+   ],
+   "rules": [
+    "Deadly Demise D6",
+    "Code Chivalric",
+    "Super-Heavy Walker",
+    "Sustained Hits",
+    "Blast",
+    "Lone Operative"
+   ],
+   "abilities": [
+    "Invulnerable Save (5+*): This model has a 5+ invulnerable save against ranged attacks.",
+    "Legendary Freeblade: Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.",
+    "Chainbreaker: Once per battle, at the start of any phase, you can select one friendly **IMPERIUM** unit that is **Battle-shocked** and within 12\" of this model. That unit is no longer Battle-shocked.",
+    "Damaged: 1-9 Wounds Remaining: While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.",
+    "Using Sir Hekhtur: If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed **TRANSPORT** and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed."
+   ]
+  },
+  "key": "5ef4c19e1538c469"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-partialRules",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith",
+  "judgement": {
+   "partialRules": {
+    "Deadly Demise 1": "Kastelan Robots"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Cybernetica Datasmith",
+    "4× Kastelan Robot"
+   ],
+   "rules": [
+    "Support",
+    "Deadly Demise 1",
+    "Doctrina Imperatives",
+    "Devastating Wounds",
+    "Pistol",
+    "Twin-linked",
+    "Ignores Cover",
+    "Torrent"
+   ],
+   "abilities": [
+    "Cybernetica Datasmith · Battle Protocols: At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit.",
+    "Cybernetica Datasmith · Data-severed: If there are no **KASTELAN ROBOT** models in this unit:\n- This unit loses **VEHICLE**.\n- This unit has **INFANTRY**.",
+    "Cybernetica Datasmith · Martial Signatum Amplificator: **TECH-PRIEST** model only. Models in the bearer’s unit have the **SKITARII** keyword.",
+    "Kastelan Robots · Robotic Bodyguard: While a **CYBERNETICA DATASMITH** model is leading this unit, that model has the **Feel No Pain** 4+ ability.",
+    "Kastelan Robots · Repulsor Grid: When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a **save roll**:\n- On an unmodified 6, that enemy unit suffers 1 **mortal wound** after that enemy unit has shot."
+   ]
+  },
+  "key": "474b7b5ae09f8791"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "unit-partialRules",
+  "where": "defilers-and-friends · Lord Exultant",
+  "judgement": {
+   "partialRules": {
+    "Infiltrators": "Lord Exultant"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Lord Exultant",
+    "1× Obsessionist",
+    "3× Infractor",
+    "1× Infractor (Icon of Excess)"
+   ],
+   "rules": [
+    "Leader",
+    "Scouts 6\"",
+    "Thrill Seekers",
+    "Infiltrators",
+    "Pistol",
+    "Lance",
+    "Extra Attacks",
+    "Precision",
+    "Hazardous"
+   ],
+   "abilities": [
+    "Lord Exultant · Lord of the Host: If this model is **attached** to an **EMPEROR’S CHILDREN BATTLELINE** unit during the Declare Battle Formations step, this model has the **Infiltrators** and **Scouts 6\"** abilities.",
+    "Lord Exultant · Perfectionists: While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability.",
+    "Lord Exultant · Euphoric Strikes: Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.",
+    "Infractors · Excessive Assault: Each time a model in this unit targets an enemy unit with a melee attack, re-roll a **Wound roll** of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.",
+    "Infractors · Icon of Excess: At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units that phase, the bearer’s unit takes a **Leadership test**. If that test is passed, you gain 1CP."
+   ]
+  },
+  "key": "9e9d0f474c2c4db4"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-kwNote",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "judgement": {
+   "kwNote": "Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry come from the led Khorne Berzerkers; Faction: Blood Legions comes from Disciple of Khorne on the Lord on Juggernaut (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”)."
+  },
+  "source": {
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "stats": [
+    "Lord on Juggernaut W7 OC2",
+    "Khorne Berzerker ×20 W2 OC2"
+   ],
+   "weapons": [
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Exalted chainblade 7 -1 2",
+    "Bladed horn 4 -1 2 EXTRA ATTACKS, LANCE",
+    "Chainblade 4 -1 1",
+    "Khornate eviscerator 3 -2 2"
+   ]
+  },
+  "key": "4bd39d92b02f53e3"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "unit-partialRules",
+  "where": "lite-knights · Trajann Valoris",
+  "judgement": {
+   "partialRules": {
+    "Feel No Pain 5+": "Trajann Valoris"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Trajann Valoris",
+    "1× Allarus Custodian",
+    "1× Allarus Custodian (Vexilla)"
+   ],
+   "rules": [
+    "Deep Strike",
+    "Feel No Pain 5+*",
+    "Feel No Pain 5+",
+    "Leader",
+    "Aegis of the Emperor",
+    "Aquila Commander",
+    "Martial Ka’tah",
+    "Assault",
+    "Rapid Fire",
+    "Cleave",
+    "Blast"
+   ],
+   "abilities": [
+    "Trajann Valoris · Supreme Commander: If this model is in your army, it must be your **WARLORD**.",
+    "Trajann Valoris · Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+    "Trajann Valoris · Moment Shackle: At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.",
+    "Allarus Custodians · Slayer of Tyrants: This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.",
+    "Allarus Custodians · Vexilla: - This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**."
+   ]
+  },
+  "key": "ff05d515bd504f4f"
+ },
+ {
+  "army": "nerf-when",
+  "kind": "ability-tag",
+  "where": "nerf-when · Impulsor · Transport",
+  "judgement": {
+   "tag": "Capacity"
+  },
+  "source": {
+   "ability": "Transport",
+   "text": "This model has a **transport capacity** of 7 **ADEPTUS ASTARTES INFANTRY** models. It cannot transport **TERMINATOR/JUMP PACK** models. Each **GRAVIS** model takes up the space of 2 models."
+  },
+  "key": "1a035ba17b0c264e"
+ },
+ {
+  "army": "navigator-sounds-op-ngl",
+  "kind": "ability-tag",
+  "where": "navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian",
+  "judgement": {
+   "tag": "Enhancement · Once per battle, per army"
+  },
+  "source": {
+   "ability": "Mysterious Guardian",
+   "text": "**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+  },
+  "key": "e785a26c873de16c"
+ }
+]
