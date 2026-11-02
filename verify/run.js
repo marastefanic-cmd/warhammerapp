@@ -76,7 +76,7 @@ const step = (name, args, env) => {
 };
 
 // the verified files: the app, its data, the calculator's engine and the list import
-const hash = sha(['app.html', 'data.js', 'calc.js', 'effects.js', 'ask.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join(''));
+const hash = sha(['app.html', 'data.js', 'calc.js', 'effects.js', 'ask.js', 'builder.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join(''));
 step('data', ['check.js']);
 step('tables', ['verify/tables.js']);
 step('fingerprints', ['verify/tables.js', '--fingerprints']);
@@ -105,6 +105,7 @@ if(b.status !== 0){ console.log(b.stdout + b.stderr); process.exit(1); }
 const NODE_PATH = process.env.NODE_PATH || spawnSync('npm', ['root', '-g'], { encoding:'utf8' }).stdout.trim();
 step('screens', ['verify/render.js'], { NODE_PATH });
 step('small phone', ['verify/render.js'], { NODE_PATH, VERIFY_WIDTH:'320' });   // the same checks at 320px, where layouts break first
+step('build-parity', ['verify/build-parity.js'], { NODE_PATH });   // an imported list is the list the app would have built in (P1-P3, formats, refusals)
 
 // snapshots: any change to any screen is shown, and must be accepted on purpose
 const snapDir = path.join(ROOT, 'verify/snapshots'), outDir = path.join(ROOT, 'verify/out/snapshots');

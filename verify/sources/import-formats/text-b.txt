@@ -1,0 +1,54 @@
++++++++++++++++++++++++++++++++++++++++++++++++
++ FACTION KEYWORD: Xenos - Orks
++ DETACHMENT: Dread Mob, Shoota Boyz, Wreckas (Try Dat Button!)
++ FORCE DISPOSITION: Purge the Foe
++ TOTAL ARMY POINTS: 2000pts
++
++ WARLORD: Char8: Warboss
++ ENHANCEMENT: Dreadherder (on Char2: Big Mek Dakkarig)
+& Cybork Boosta (on Char3: Big Mek Dakkarig)
+& Supa-glowy Fing (on Char4: Big Mek in Mega Armour)
+& Supa-snazz Dakka (on Infa8: Flash Gitz)
++ NUMBER OF UNITS: 16
++ SECONDARY: - Bring It Down: (3x2) + (1x6) - Assassination: 8 Characters
++++++++++++++++++++++++++++++++++++++++++++++++
+
+Char2: 1x Big Mek Dakkarig (190 pts): Blitzkannon, Multi-busta Launcha, Stompy Feet
+Enhancement: Dreadherder (+30 pts)
+Char3: 1x Big Mek Dakkarig (170 pts): Blitzkannon, Multi-busta Launcha, Stompy Feet
+Enhancement: Cybork Boosta (+10 pts)
+Char4: 1x Big Mek in Mega Armour (115 pts): Kustom Mega-blasta, Power Klaw, Tellyport Blasta
+Enhancement: Supa-glowy Fing (+25 pts)
+Char5: 1x Mek (55 pts): Kustom Mega-slugga, Mek's Toolz
+Supporting Tankbustas[1]
+Char6: 1x Mek (55 pts): Kustom Mega-slugga, Mek's Toolz
+Supporting Tankbustas[2]
+Char7: 1x Mek (55 pts): Kustom Mega-slugga, Mek's Toolz
+Supporting Flash Gitz
+Char8: 1x Warboss (100 pts): Warlord, Kustom Choppa, Kustom Shoota
+Char1: 1x Wazdakka Gutsmek (200 pts): Fixit's Wrench, Grabba Dragga, Psyko-gatler, Speeding Bulk and Flaming Exhaust
+
+3x Deffkoptas (85 pts): 3 with Choppa, Rokkit Launcha, Slugga, Spinnin’ Blades
+10x Flash Gitz (245 pts)
+  Enhancement: Supa-snazz Dakka (+25 pts)
+• 1x Kaptin: Choppa, Snazzgun
+• 9x Flash Gitz: 9 with Choppa, Snazzgun
+  Attached to Mek[3]
+10x Gretchin (45 pts): 10 with Grot Blasta, Scavenged Shivs
+10x Gretchin (45 pts): 10 with Grot Blasta, Scavenged Shivs
+10x Gretchin (45 pts): 10 with Grot Blasta, Scavenged Shivs
+6x Killa Kans (275 pts): 6 with Kan Blasta, Kan Klaw
+6x Tankbustas (160 pts)
+• 5x Tankbusta
+    1 with 2x Busta Rokkit Launcha, Gitstikka
+    4 with Busta Rokkit Launcha, Gitstikka
+• 1x Nob: Choppa, 2x Rokkit Pistol
+  Attached to Mek[1]
+6x Tankbustas (160 pts)
+• 5x Tankbusta
+    1 with 2x Busta Rokkit Launcha, Gitstikka
+    4 with Busta Rokkit Launcha, Gitstikka
+• 1x Nob: Choppa, 2x Rokkit Pistol
+  Attached to Mek[2]
+
+Created with newrecruit.eu v37.7

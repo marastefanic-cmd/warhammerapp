@@ -1,6 +1,6 @@
 {
- "hash": "666cb5638b984dca0cc621f22633df493c4ce2cdffaafd893a1878f2e78222ee",
- "at": "2026-11-02T08:34:25.388Z",
+ "hash": "32e194684f2fc9b61d57026cd89346be6a1005407927afd50d27893efa6f9091",
+ "at": "2026-11-02T15:40:44.079Z",
  "ok": true,
  "steps": {
   "data": {
@@ -99,13 +99,17 @@
    "ok": true,
    "summary": "render at 320px: 3307 screens and popups, 2028 helper texts, 0 failures"
   },
+  "build-parity": {
+   "ok": true,
+   "summary": "build-parity: P1: 6 built byte for byte (basic-bitch, healybois, lite-knights, nidzillas, the-exiled-legion, tzeeeeentch), 18 copied (no catalogue), 0 differ; 227 checks, 0 failures"
+  },
   "snapshots": {
    "ok": true,
    "summary": "unchanged"
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 436 judgements, 436 approved, 0 to check, 2736 stale approvals"
+   "summary": "helpers: 437 judgements, 437 approved, 0 to check, 2739 stale approvals"
   }
  }
 }

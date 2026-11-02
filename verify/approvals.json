@@ -5399,6 +5399,12 @@
   "at": "2026-10-16",
   "why": "\"That unit's ranged attacks have [ASSAULT]\": true."
  },
+ "43797b8aebbd97cd": {
+  "verdict": "ok",
+  "by": "review:import-3",
+  "at": "2026-11-02",
+  "why": "Checked in a browser (round 2): wh-used-<id>, wh-check-<id>, the star, the kept export, the list and its stale row are all removed. It is used by Remove, and by Update only when the new export's id differs."
+ },
  "438f31c63d56fa7c": {
   "verdict": "ok",
   "by": "review:fellhammer-rules",
@@ -6448,6 +6454,12 @@
   "by": "review:fellhammer-rules",
   "at": "2026-10-24",
   "why": "Snare of Fire (1CP; GW p3 = Wahapedia = data.js): WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\\\" of a friendly unengaged HAVOCS unit.”; TARGET “That HAVOCS unit.”; EFFECT “Your unit can make a normal move of up to D3+3\\\".” The opponent’s."
+ },
+ "53120aaa17744ee2": {
+  "verdict": "ok",
+  "by": "review:import-3",
+  "at": "2026-11-02",
+  "why": "Round 3: helpers.js now matches `async function`, so the item holds the real code, and its implements text matches it. In the browser at 390px (round 2): refusals are listed one per line and nothing is kept; dedupe by sha256 id shows Already imported with Open; a quota error on setItem gives the 'for now' toast; Update replaces the stale row. New: the matching importStale row is dropped when the same id comes back, and listName is kept. Every export string reaching innerHTML goes through esc (names, errors)."
  },
  "5314ce9f0e883f4d": {
   "verdict": "ok",
@@ -10204,6 +10216,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "NR prints it under the \"Crimson King | Effect\" sub-table of Magnus, the only model; Unearthly Power: \"select one of the abilities in the Crimson King section\"."
+ },
+ "87e6d4a2d537a32e": {
+  "verdict": "ok",
+  "by": "review:import-3",
+  "at": "2026-11-02",
+  "why": "It calls removeKept, resets ONLY, hides the sheet, replaces the history entry with home and toasts the name. Checked in a browser: on home, nothing of the list is left."
  },
  "87fd0b90f5d17311": {
   "verdict": "ok",
@@ -14290,6 +14308,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"ranged attack that targets the closest eligible target, add 1 to the Hit roll.\""
+ },
+ "bd6386a415dc0cd7": {
+  "verdict": "ok",
+  "by": "review:import-3",
+  "at": "2026-11-02",
+  "why": "It escapes the date, the faction name and gwPoints unit. g.export and g.gw are numbers the builder computes. The built/copied sentence is checked in the browser for Healybois (built) and Orks text C (copied), and the quota case reads 'This phone could not keep it'. The implements text now names the points note."
  },
  "bd84d34d7a9b31c0": {
   "verdict": "ok",

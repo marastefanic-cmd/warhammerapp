@@ -28,7 +28,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   await page.route(/^https?:\/\/(?!127\.0\.0\.1)/, r => r.abort());   // the app ships its own fonts
   // verified.js is the result of the last gate run (this one writes it when it ends): a fixed stand-in, as if
   // this build passed, so the screens and their snapshots do not depend on how the previous run went
-  const build = sha(['app.html', 'data.js', 'calc.js', 'effects.js', 'ask.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('')).slice(0, 10);
+  const build = sha(['app.html', 'data.js', 'calc.js', 'effects.js', 'ask.js', 'builder.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('')).slice(0, 10);
   const stub = { ok:true, build, data:loadData().version, date:'(date of the check)', checks:[{ label:'(checks)', detail:'(as listed by verify/run.js)' }], sources:[{ label:'(sources)', detail:'(as listed by verify/run.js)' }], tables:columnSources() };
   await page.route(/\/verified\.js(\?|$)/, r => r.fulfill({ contentType:'application/javascript', body:'window.WH_VERIFIED = ' + JSON.stringify(stub) + ';' }));
   await page.goto(site.url + 'index.html');
@@ -47,7 +47,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   fs.mkdirSync(path.join(ROOT, 'verify/out/snapshots'), { recursive:true });
 
   // ---- the home screen's folders ----
-  // - home-folders: home is two rows, Favorites and All lists, each with its count; a tap opens the folder; Back returns home
+  // - home-folders: home is four rows, Favorites, Built-in lists, Local lists and All lists, each with its count; a tap opens the folder; Back returns home
   // - home-fav: a list's star in All lists adds it to Favorites (kept on this phone, over a reload) and stays in All lists, starred; the star
   //   on its Find screen says so and takes it off again; nothing is starred at first; an empty Favorites says how to add one
   // - home-sort: each order puts All lists in it (newest: by the date in its source line, A to Z by name, by faction under bands), kept over a
@@ -57,7 +57,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     const tap = async q => { await page.waitForTimeout(400); if(!await page.isVisible(q)){ fail('home-tap', '', q, 'nothing visible there to tap'); return; } await page.click(q); await page.waitForTimeout(200); };
     await page.evaluate(() => { localStorage.removeItem('wh-favs'); localStorage.removeItem('wh-home-sort'); hideSheet(); go({ s:'home' }); });
     const h = await page.evaluate(() => [...document.querySelectorAll('#view [data-folder]')].map(b => b.dataset.folder + ':' + b.querySelector('.c').textContent));
-    if(h.join() !== 'favs:0,lists:' + armies.length) fail('home-folders', '', 'home', h.join());
+    if(h.join() !== 'favs:0,builtin:' + armies.length + ',local:0,lists:' + armies.length) fail('home-folders', '', 'home', h.join());
     await tap('#view [data-folder="favs"]');
     const e = await page.evaluate(() => ({ s:cur.s, t:$('#top').innerText, rows:document.querySelectorAll('#view .arow').length, hint:/No favorites yet/.test($('#view').innerText), link:!!document.querySelector('#view [data-folder="lists"]') }));
     if(e.s !== 'favs' || !/Favorites/.test(e.t) || e.rows || !e.hint || !e.link) fail('home-fav', '', 'empty Favorites', JSON.stringify(e));
@@ -191,8 +191,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     const snap = [];
     // one screen: render it, open every fold, keep its text and its helpers
     const take = async (label, fn, folded) => {
-      const r = await page.evaluate(([fn, sel, folded]) => {
-        (0, eval)(fn)();
+      // (a screen whose making is async, the import's refusal: its text once it is made)
+      const r = await page.evaluate(async ([fn, sel, folded]) => {
+        await (0, eval)(fn)();
         if(!folded) document.querySelectorAll('#view details').forEach(d => d.open = true);
         const host = $('#sheetHost').hidden ? $('#view') : $('#sheetIn');
         const found = [...host.querySelectorAll(sel.join(','))].filter(el => !el.parentElement.closest(sel.join(',')));
@@ -241,7 +242,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       await howChecks();
       // the list import's sheet, empty and with an export it refuses (6 bigs with a unit renamed: verify/import-test.js has the rest)
       await take('popup import', `() => { hideSheet(); go({ s:'home' }); showImport(); }`);
-      await take('popup import (not recognized)', `() => { hideSheet(); go({ s:'home' }); showImport(); runImport(${JSON.stringify(JSON.stringify(IMPORT_BAD))}); }`); }
+      await take('popup import (not recognized)', `() => { hideSheet(); go({ s:'home' }); showImport(); return runImport(${JSON.stringify(JSON.stringify(IMPORT_BAD))}); }`); }
     // (the Phase checklist from Find, then back to Find: the screens after it are reached as before, their back buttons the same)
     for(const s of ['army','checklist','pregame','units','ranged','melee','abilities','rules','bases']){ await screen(s); if(s === 'checklist') await page.evaluate(id => { hideSheet(); go({ s:'army', army:id }); }, a.id); }
     // the damage calculator, at a target set by hand (a fresh one: 5 × T4 Sv 3+ W2): this list's first unit with ranged weapons
@@ -935,7 +936,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.waitForTimeout(400); await page.setInputFiles('#impFile', IMPORT_FILE); await page.waitForTimeout(600);
     const yes = await page.evaluate(() => ({ cur:plain(cur), kept:JSON.parse(localStorage.getItem('wh-imported') || '[]').map(x => x.id), sheet:$('#sheetHost').hidden }));
     const id = yes.cur.army;
-    if(yes.cur.s !== 'army' || !/^import-/.test(id || '') || yes.kept.join() !== id || !yes.sheet) fail('import-opens', L, '6 bigs', JSON.stringify(yes));
+    if(yes.cur.s !== 'army' || !/^local-[0-9a-f]{12}$/.test(id || '') || yes.kept.join() !== id || !yes.sheet) fail('import-opens', L, '6 bigs', JSON.stringify(yes));
     // kept over a reload, under its faction in All lists (and first by newest: imported today), and every screen as the app's own list's
     await page.reload(); await page.evaluate(() => document.fonts.ready);
     const same = await page.evaluate(([id, orig]) => { const out = [], A = armyById(id); if(!A) return ['not there after a reload'];
@@ -967,7 +968,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     // a kept export that cannot be read: the app starts, lists it as out of date with its Remove
     await page.evaluate(() => localStorage.setItem('wh-imported', JSON.stringify([{ id:'import-broken', name:'Broken', date:'1 Jan 2026', json:{ roster:{ forces:[{ catalogueId:'x', selections:[null] }] } } }])));
     await page.reload(); await page.evaluate(() => document.fonts.ready);
-    const st = await page.evaluate(() => { hideSheet(); go({ s:'home' }); const r = document.querySelector('#view [data-impstale="import-broken"]'); return { row:!!r, n:WH_DATA.armies.length }; });
+    const st = await page.evaluate(() => { hideSheet(); go({ s:'local' }); const r = document.querySelector('#view [data-impstale="import-broken"]'); return { row:!!r, n:WH_DATA.armies.length }; });
     if(!st.row || st.n !== armies.length) fail('import-stale', L, 'a kept export that cannot be read', JSON.stringify(st));
     await page.waitForTimeout(400); await page.click('#view [data-impstale="import-broken"]'); await page.waitForTimeout(450);   // (a tap right after the sheet opens is dropped)
     await page.click('#sheetIn [data-imprm]'); await page.waitForTimeout(200); await page.click('#sheetIn [data-imprmyes]'); await page.waitForTimeout(300);
