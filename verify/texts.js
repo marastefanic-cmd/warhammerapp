@@ -1513,7 +1513,7 @@ const dsDocIds = (faction, names) => {
 const NOTE_LABELS = {
   'Wahapedia FAQ': 'waha', 'Wahapedia errata': 'waha', 'Wahapedia core rules, 25.04 Fill Your Army Roster': 'waha',
   'Designer’s Note (Wahapedia’s datasheet, under the codex wording)': 'waha',
-  'FAQ (Faction Pack 1.2)': 'gw', 'FAQ (Faction Pack 1.3)': 'gw', 'FAQ (Faction Pack 1.4)': 'gw', 'Faction Pack FAQ': 'gw',
+  'FAQ (Faction Pack 1.2)': 'gw', 'Faction Pack datasheets': 'gw', 'FAQ (Faction Pack 1.3)': 'gw', 'FAQ (Faction Pack 1.4)': 'gw', 'Faction Pack FAQ': 'gw',
   'Designer’s Note (Faction Pack 1.2)': 'gw'
 };
 const LABELS_LONG = Object.keys(NOTE_LABELS).sort((a, b) => b.length - a.length);
@@ -1594,8 +1594,13 @@ for (const a of D.armies) for (const u of a.units) for (const ab of u.abilities 
 // allies     FACTIONS.allies { New Recruit's ally name: rule }: the rule exists, and for every unit of the faction's lists in that role ("Allies: X")
 //            the rule's words name one of its keywords in bold (its Faction keyword, AGENTS OF THE IMPERIUM; KILL TEAM); an entry no unit uses fails
 // coreTwin   an army rule's core ability of the same name: a RULES entry whose name is the army rule's, case aside
+// ruleSrc    a RULES entry's source label (RULE_SRC) is verify/derive.js ruleSrcOf's template, below
 // tableAt    where a rule's table is in its words: the number of its text lines Wahapedia's faction page prints before the table's first row
 //            (none: after them all), for every army or detachment rule with a table the page prints
+// ruleSrc   RULE_SRC, where a RULES entry that is no core rule comes from: verify/derive.js ruleSrcOf's template over its place in the tables
+{ const Dv = require('./derive'); for (const [k, v] of Object.entries(D.ruleSrc || {})) { count('ruleSrc'); const w = Dv.ruleSrcOf(D, k);
+  if (!w) fail('ruleSrc', 'core', 'ruleSrc:' + k, 'source', v, 'no ally\'s rule, weapon keyword or term in bold of the tables is this entry: no label', '');
+  else if (v !== w) fail('ruleSrc', 'core', 'ruleSrc:' + k, 'source', v, 'its place in the tables gives “' + w + '”', ''); } }
 const ruleIn = (F, name) => (F.armyRules || []).concat(Object.values(F.detachments || {}).flatMap(detRules_)).find(r => r && r.name === name);
 for (const [re, k] of D.ruleAliases || []) { count('alias'); if (!D.rules[k]) fail('alias', 'core', String(re), 'rule', k, 'no RULES entry of this name', ''); else if (re.test(k)) count('aliasName'); }
 for (const fk of FACTIONS) for (const [re, k] of D.factions[fk].aliases || []) { count('alias'); if (!D.rules[k] && !ruleIn(D.factions[fk], k)) fail('alias', fk, String(re), 'rule', k, 'no rule of this name', ''); else if (re.test(k)) count('aliasName'); }

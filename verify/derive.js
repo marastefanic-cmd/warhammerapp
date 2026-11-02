@@ -1733,6 +1733,19 @@ function naOf(ab, u, units){
     return (units || []).some(has) ? undefined : 'No ' + kw + ' in this list'; }
   return undefined;
 }
-module.exports = { naOf, derive, ruleTables, readingsOf, vocab, tidyNeeds, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+// ---- where a RULES entry that is no core rule comes from (RULE_SRC, the label over its text on a rule sheet), by fixed templates over its place in
+// the tables, the first that holds: an ally's rule (FACTIONS.allies): "{ally} army rule (allies)"; a weapon keyword (a list's or a datasheet's
+// weapons, by RULE_ALIASES): "weapon ability of the {weapons} ({unit})"; a term an ability names in bold: "term in {ability} ({unit})". None:
+// undefined (verify/texts.js ruleSrc fails on it, and on a stored label that is not this)
+function ruleSrcOf(D, key){
+  const al = n => ((D.ruleAliases || []).find(([re]) => re.test(n)) || [])[1];
+  for(const f of Object.values(D.factions || {})) for(const [ally, r] of Object.entries(f.allies || {})) if(r === key) return ally + ' army rule (allies)';
+  const units = (D.armies || []).flatMap(a => a.units).concat(Object.values(D.datasheets || {}));
+  for(const u of units){ const ws = [...new Set([].concat(u.ranged || [], u.melee || []).filter(w => (w.kw || []).some(x => al(x) === key)).map(w => w.name))];
+    if(ws.length) return 'weapon ability of the ' + ws.join(', ') + ' (' + u.name + ')'; }
+  for(const u of units) for(const ab of u.abilities || []) if([...String(ab.text || '').matchAll(/\*\*([^*]+)\*\*/g)].some(m => al(m[1]) === key)) return 'term in ' + ab.name + ' (' + u.name + ')';
+  return undefined;
+}
+module.exports = { ruleSrcOf, naOf, derive, ruleTables, readingsOf, vocab, tidyNeeds, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
 // (the keyword-phrase readers, for verify/effects-extract.js: who a rule's sentence reaches, which targets it names)
 Object.assign(module.exports, { norm, plain, prepBold, parseRun, friendlyUnit, needsOf, tokens, excluded, RUN });

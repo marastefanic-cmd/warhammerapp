@@ -65,7 +65,7 @@ const RULES = {
   'Anti': 'This ability always takes the form **[ANTI-X Y+]**. Each time an attack is made with an **[ANTI]** weapon, if the target unit has the keyword denoted by **X**, an unmodified **wound roll** of **Y+** is a **critical wound**.\n*Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.*',
   'Hunter': '**04.01.03 Multiple Weapon Profiles (app):** In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).\nSome of these profiles are known as **Hunter** profiles. **Hunter** profiles can only target units with the specified keywords.\nNote that if a unit is equipped with more than one such weapon, a different profile can be selected for each model within that unit.',
 
-  'Deep Strike': 'Each time this unit makes an **ingress move** (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.',
+  'Deep Strike': 'Each time this unit makes an **ingress move** (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.\n**20.03 Arriving from Strategic Reserves:** To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.',
   'Deadly Demise': 'This ability always takes the form **Deadly Demise X**. Each time a model in this unit is **destroyed**, after the units embarked within it (if any) have made their **emergency disembark moves**, roll one D6. On a 6, that model suffers a **deadly demise**; each unit within 6" of that model suffers a number of **mortal wounds** denoted by **X** (if this is a random number, roll separately for each unit within 6").',
   'Damaged': '*Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.*',
   'Feel No Pain': 'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.',
@@ -115,7 +115,7 @@ const RULES = {
 
 // Which RULES entry a keyword or rule chip opens ("RAPID FIRE 4" -> "Rapid Fire").
 // where a RULES entry comes from when it is not a core rule
-const RULE_SRC = { 'Reverberating Summons':'weapon ability of the Great Unclean One’s doomsday bell (Faction Pack Chaos Daemons: its datasheet)', 'Pulse Jet Move':'Orks army rule (special move type)', 'Supa-hazardous':'Shoota Boyz enhancement Supa-glowy Fing', 'Conversion':'weapon ability each datasheet defines for its own weapon (Knight Defender datasheet: conversion beam obliterator)', 'C’tan Power':'weapon keyword of the C’tan Powers weapons (Tesseract Vault datasheet: Powers of the C’tan)', 'Daemonic Pact':'Chaos Daemons army rule (Legiones Daemonica allies)', 'Assigned Agents':'Imperial Agents army rule (Agents of the Imperium units in another army)' };
+const RULE_SRC = { 'Reverberating Summons':'weapon ability of the Doomsday bell (Great Unclean One)', 'Pulse Jet Move':'term in Pulse Jet (Wazdakka Gutsmek)', 'Supa-hazardous':'weapon ability of the Kustom Mega-blasta, Tellyport Blasta (Big Mek in Mega Armour)', 'Conversion':'weapon ability of the Conversion beam obliterator (Knight Defender)', 'C’tan Power':'weapon ability of the Antimatter meteor, Cosmic fire, Time’s arrow (Tesseract Vault)', 'Daemonic Pact':'Legiones Daemonica army rule (allies)', 'Assigned Agents':'Imperial Agents army rule (allies)' };
 const RULE_ALIASES = [
   [/^supa-hazardous/i, 'Supa-hazardous'], [/^pulse jet move$/i, 'Pulse Jet Move'], [/^support$/i, 'Support'],
   [/^(below |at |at or below )?(starting|half)[- ]strength$/i, 'Starting Strength'], [/^towering$/i, 'Plunging Fire'], [/^(select|choosing) weapons?$/i, 'Select Weapons'],
@@ -404,6 +404,7 @@ const FACTIONS = {
       // datasheets' Rules line opens; the two are shown together, and the note says the sources don't settle which applies
       // ph/turn: where its Normal, Advance and Fall Back moves are made
       { name:'Super-heavy Walker', coreTwin:'Super-Heavy Walker', ph:['movement'], turn:'your',
+        note:'Faction Pack datasheets: “FACTION: Code Chivalric, Super-heavy Walker”',
         text:'Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**.' }
     ],
     detachments: {
@@ -1224,7 +1225,7 @@ const FACTIONS = {
       // Rules line opens; the two are shown together, and the note says the sources don't settle which applies
       // ph/turn: where its Normal, Advance and Fall Back moves are made; needs: only a unit whose Rules line names it has it
       // (the Knights; War Dogs only with Preyslayer's Mantle), so a list with none marks it as applying to no unit
-      { name:'Super-heavy Walker', coreTwin:'Super-Heavy Walker', ph:['movement'], turn:'your', needs:{ rule:['Super-heavy Walker'] },
+      { name:'Super-heavy Walker', coreTwin:'Super-Heavy Walker', ph:['movement'], turn:'your', needs:{ rule:['Super-heavy Walker'] }, note:'Faction Pack datasheets: “FACTION: Harbingers of Dread, Super-heavy Walker”',
         text:'Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**.' }
     ],
     detachments: {

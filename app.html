@@ -5489,8 +5489,9 @@ function screenRules(){
   const first = x => { const ph = phasesOf(x); return ph.length === PHASES.length ? 99 : PHASES.findIndex(([k]) => k === ph[0]); };
   let h = '<div class="rules"><div class="ds-meta"><span>' + esc(f.name + ' · ' + a.disposition) + '</span></div>';
   // army rules, and the faction's own terms this list uses (Pulse Jet Move)
-  const terms = Object.keys(D.ruleSrc || {}).filter(k => /army rule/i.test(D.ruleSrc[k]) && ruleUsers(k).length);
-  h += '<div class="dsec"><h2 class="lbl">Army rules</h2><div class="abl">' + armyRuleRows(f) + terms.map(k => ruleRow(k, metaLine(esc(D.ruleSrc[k].replace(/^.*?\((.*)\)$/, '$1'))), rt(D.rules[k]) + usedBy('Used by', ruleUsers(k)))).join('') + '</div></div>';
+  // (RULE_SRC's label is a template over the entry's place in the tables, verify/derive.js ruleSrcOf: an ally's army rule or a term an ability names)
+  const terms = Object.keys(D.ruleSrc || {}).filter(k => !/^weapon ability\b/i.test(D.ruleSrc[k]) && ruleUsers(k).length);
+  h += '<div class="dsec"><h2 class="lbl">Army rules</h2><div class="abl">' + armyRuleRows(f) + terms.map(k => ruleRow(k, metaLine(esc(D.ruleSrc[k])), rt(D.rules[k]) + usedBy('Used by', ruleUsers(k)))).join('') + '</div></div>';
   // detachments: the rule, the enhancements this list takes (and who has them), the others, its stratagems
   h += '<div class="dsec"><h2 class="lbl">Detachments</h2>';
   for(const d of dets){

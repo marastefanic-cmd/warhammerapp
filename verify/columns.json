@@ -18,14 +18,12 @@
    "what": "where a RULES entry comes from when it is not a core rule",
    "columns": {
     "name": {
-     "source": "hand",
-     "note": "the RULES entry",
-     "declared": "the key of the RULES entry it is about (no line of its own)"
+     "source": "derived",
+     "note": "a RULES entry that is no core rule (its faction’s or a datasheet’s term: verify/texts.js checks its text against those pages)"
     },
     "source": {
-     "source": "hand",
-     "note": "where it is from",
-     "declared": "where a RULES entry that is no core rule is printed (“Orks army rule”), the label over its text on a rule sheet; its text is checked by verify/texts.js against that document"
+     "source": "derived",
+     "note": "where it comes from, by fixed templates over its place in the tables (verify/derive.js ruleSrcOf: “{ally} army rule (allies)”, “weapon ability of the {weapons} ({unit})”, “term in {ability} ({unit})”); verify/texts.js ruleSrc: stored = derived"
     }
    }
   },
