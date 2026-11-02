@@ -3,13 +3,5 @@
  "source": {
   "text": "New Recruit, exported 20 Oct 2026",
   "why": "the day New Recruit’s PDF of this list was exported (verify/sources/nr/6-bigs.txt), from which the list was first imported; the JSON export carries no date"
- },
- "units": {
-  "knight-destrier": {
-   "na": {
-    "Thundercharge": "Needs a thundershock spear and bellatus reaper chainsword: not this loadout"
-   },
-   "why": "Thundercharge needs the thundershock spear and the bellatus reaper chainsword (GW's datasheet); this list's Destriers have titanic feet (New Recruit's export), so it does nothing here."
-  }
  }
 }

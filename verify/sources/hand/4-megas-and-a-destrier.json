@@ -11,12 +11,6 @@
     "note": "Wahapedia: his own EPIC HERO datasheet; BSData and New Recruit: in this unit"
    },
    "why": "srcNote: GW (Wahapedia) prints Sir Hekhtur on his own EPIC HERO datasheet (imperial-knights_Sir-Hekhtur.html); BSData and New Recruit have him as a model of the Canis Rex unit, as the app does. The note on his models line says so."
-  },
-  "knight-destrier": {
-   "na": {
-    "Thundercharge": "Needs a thundershock spear and bellatus reaper chainsword: not this loadout"
-   },
-   "why": "Thundercharge needs the thundershock spear and the bellatus reaper chainsword (GW's datasheet); this list's Destrier has titanic feet (New Recruit's export), so it does nothing here."
   }
  }
 }

@@ -1709,6 +1709,30 @@ if(require.main === module){
   if(items.tablesStale) console.log('  STALE data.js RULE_OPTIONS / GRANTS are not what the words give now: node verify/tables.js --write');
   process.exit(drift.length || hand.length || missing.length || staleUnread.length || items.tablesStale || ckStale ? 1 : 0);
 }
-module.exports = { derive, ruleTables, readingsOf, vocab, tidyNeeds, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+// ---- why an ability does nothing in this list (an ability row's na, the chip "Not leading a unit in this list"), by three closed patterns over
+// its whole words (each of its sentences starts so), the unit and the list: "While this model is leading a unit, …" on a unit that leads none:
+// "Not leading a unit in this list"; "If this model is equipped with A and B, …" on a unit whose weapons are not each of them: "Needs A and B:
+// not this loadout" (A and B in GW's words); "While a friendly KW model is within N" of this model, …" where no unit of the list has KW: "No KW in this list". None
+// else: an ability that says anything more has no chip (verify/lines.js L0 holds it, stored = derived; verify/from-json.js writes it)
+const NA_LEAD = /^while this model is leading a unit\b/, NA_GEAR = /^if this model is equipped with (.+?), /, NA_KW = /^While a friendly \*\*([A-Z][A-Z' -]+?)\*\* model is within \d+" of this model\b/;
+function naOf(ab, u, units){
+  const ss = String(ab.text || '').split('\n').flatMap(l => l.trim().replace(/^-\s+/, '').split(/(?<=[.!?])\s+(?=[A-Z*(])/)).map(x => x.trim()).filter(Boolean);
+  if(!ss.length) return undefined;
+  const lc = x => x.replace(/\*\*/g, '').replace(/[’‘]/g, "'").toLowerCase();
+  if(ss.every(x => NA_LEAD.test(lc(x)))) return u.leads ? undefined : 'Not leading a unit in this list';
+  const g = ss.map(x => NA_GEAR.exec(lc(x)));
+  if(g.every(Boolean) && g.every(m => m[1] === g[0][1])){
+    const gear = g[0][1].split(/,? and |, /).map(x => x.replace(/^(?:an?|the) /, '').trim());
+    const wn = [].concat(u.ranged || [], u.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase());
+    // (GW's words for them, as its text has them: "Needs a thundershock spear and a bellatus reaper chainsword")
+    const words = /^if this model is equipped with (.+?), /i.exec(ss[0].replace(/\*\*/g, ''))[1];
+    return gear.every(x => wn.some(n => n.startsWith(x))) ? undefined : 'Needs ' + words + ': not this loadout'; }
+  const k = ss.map(x => NA_KW.exec(x));
+  if(k.every(Boolean) && k.every(m => m[1] === k[0][1])){
+    const kw = k[0][1].trim(), has = x => (x.kw || []).some(y => String(y).replace(/^Faction: /, '').toLowerCase() === kw.toLowerCase());
+    return (units || []).some(has) ? undefined : 'No ' + kw + ' in this list'; }
+  return undefined;
+}
+module.exports = { naOf, derive, ruleTables, readingsOf, vocab, tidyNeeds, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
 // (the keyword-phrase readers, for verify/effects-extract.js: who a rule's sentence reaches, which targets it names)
 Object.assign(module.exports, { norm, plain, prepBold, parseRun, friendlyUnit, needsOf, tokens, excluded, RUN });

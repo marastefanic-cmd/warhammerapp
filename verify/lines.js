@@ -8,6 +8,9 @@
          limit    a stratagem's "Once per battle" chip is exactly where its RESTRICTIONS say it can be used once per battle ("cannot use
                   this Stratagem more than once per battle", "can only use this Stratagem once per battle"; not "per battle round", not
                   "on the same … model")
+         na       an ability's "does nothing here" chip ("Not leading a unit in this list", "Needs … : not this loadout", "No WAR DOG in
+                  this list") is exactly what verify/derive.js naOf's three closed patterns give from its words, the unit and the list, on
+                  every list unit's ability (none where they give none), and on no datasheet row (a list's own)
          cpNote   a stratagem's extra-CP chip ("Or: +1CP", "Into the Fray +1CP") is exactly the parts of its EFFECT GW prints with an extra
                   cost: a line "**+1CP** Or: …", an option "**Into the Fray (+1CP):** …"; an EFFECT that names "+NCP" any other way fails
      the footnotes under a unit's weapons (its weapon rows' "(+N)" values, its Damaged band, riled-up and own-aura lines among them) are
@@ -69,6 +72,16 @@ const damagedOf = ab => { const m = DAMAGED_NAME.exec(ab.name || '') || DAMAGED_
     if(want) n++;
   }
   stats.limits = n; }
+
+// ---- L0 na ----
+{ let n = 0; const Dv = require('./derive');
+  for(const a of D.armies) for(const u of a.units.concat(a.refs || [])) for(const ab of u.abilities || []){
+    const want = Dv.naOf(ab, u, a.units);
+    if(ab.na !== want) fail('L0', a.id + '/' + u.id + ' · ' + ab.name, 'na ' + JSON.stringify(ab.na || null) + ', its words give ' + JSON.stringify(want || null));
+    else if(want) n++; }
+  const RAW = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'));
+  for(const [sid, S] of Object.entries(RAW.S ? RAW.S.value : {})) for(const ab of S.abilities || []) if(ab.na !== undefined) fail('L0', 'DATASHEETS ' + sid + ' · ' + ab.name, 'na on a datasheet row: it is the list\'s, its units\'');
+  stats.na = n; }
 
 // ---- L0 cpNote ----
 { let n = 0;
@@ -289,6 +302,6 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/lines.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips and ' + stats.cpNotes + ' extra-CP chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
+console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips, ' + stats.cpNotes + ' extra-CP chips and ' + stats.na + ' "does nothing here" chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);

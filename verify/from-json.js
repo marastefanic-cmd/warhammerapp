@@ -1552,6 +1552,11 @@ for (const u of units) {
     }
   }
 }
+// why an ability does nothing in this list (na: "Not leading a unit in this list", "Needs … : not this loadout", "No WAR DOG in this list"), by
+// verify/derive.js naOf's closed patterns over its words, the unit and the list, on every unit's ability where they give one
+{ const { naOf } = require('./derive');
+  for (const u of units) for (const ab of u.abilities || []) { const na = naOf(ab, u, units); if (!na) continue;
+    const t = ab.text; delete ab.text; ab.na = na; ab.text = t; filled.push({ what: 'na on ' + u.name + ' · ' + ab.name + ': ' + na, from: 'its words (verify/derive.js naOf)' }); } }
 const handKw = [], handStats = [];
 // (an ability by its name, or, where two parts of the unit have one of that name, "<name> / <who>")
 const handAb = (u, an) => { const m = /^(.*) \/ ([^/]+)$/.exec(an); return m ? u.abilities.find(a => a.name === m[1] && a.who === m[2]) : u.abilities.find(a => a.name === an); };
@@ -1559,13 +1564,8 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
   const u = units.find(x => x.id === uid);
   if (!u) { want(uid, 'hand file', 'verify/sources/hand/' + armyId + '.json names a unit the list does not have'); continue; }
   // (GW's words where Wahapedia's transcription differs, texts: applied before the datasheet rows are compared, above)
-  // why an ability does nothing in this list, when that is certain (na: { <ability>: why }: the Destrier's Thundercharge without its weapons)
-  for (const [an, why] of Object.entries(h.na || {})) {
-    const ab = handAb(u, an);
-    if (!ab) { want(uid + ' · ' + an, 'hand file na', 'no ability of this name'); continue; }
-    const t = ab.text; delete ab.text; ab.na = why; ab.text = t;
-    handDone.push({ what: 'na on ' + u.name + ' · ' + an, by: 'hand (Claude)', text: why });
-  }
+  // (why an ability does nothing in this list, na, is derived, below: never the hand file's)
+  for (const an of Object.keys(h.na || {})) want(uid + ' · ' + an, 'hand file na', 'na is derived from the words (verify/derive.js naOf): take it out of the hand file');
   for (const [an, note] of Object.entries(h.notes || {})) {
     const ab = handAb(u, an);
     if (!ab) { want(uid + ' · ' + an, 'hand file note', 'no ability of this name'); continue; }

@@ -918,8 +918,8 @@
      "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "na": {
-     "source": "hand",
-     "note": "why it does nothing in this list; signed off"
+     "source": "derived",
+     "note": "why it does nothing in this list (“Not leading a unit in this list”, “Needs a thundershock spear and a bellatus reaper chainsword: not this loadout”, “No WAR DOG in this list”): verify/derive.js naOf’s three closed patterns over its words, the unit and the list (verify/from-json.js writes it); verify/lines.js L0: stored = derived on every list unit’s ability"
     },
     "damaged": {
      "source": "derived",
@@ -1211,8 +1211,8 @@
      "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "na": {
-     "source": "hand",
-     "note": "why it does nothing in this list; signed off"
+     "source": "derived",
+     "note": "none: why an ability does nothing is a list’s (ARMIES.units.abilities na); verify/lines.js L0 fails on one here"
     },
     "damaged": {
      "source": "derived",

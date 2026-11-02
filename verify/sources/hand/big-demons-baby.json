@@ -9,12 +9,6 @@
    "short": "Daemon Prince",
    "why": "short: the name the unit screen and the lists show for the Daemon Prince of Khorne, as data.js has always shown it (GW's datasheet name is long for a phone line)."
   },
-  "master-of-executions": {
-   "na": {
-    "Forwards, For Blood!": "Not leading a unit in this list"
-   },
-   "why": "Forwards, For Blood! works only \"While this model is leading a unit\"; the Master of Executions leads no unit in this list (New Recruit's export: no Leading association)."
-  },
   "lord-on-juggernaut-khorne-berzerkers": {
    "kwNote": "Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry come from the led Khorne Berzerkers; Faction: Blood Legions comes from Disciple of Khorne on the Lord on Juggernaut (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”).",
    "why": "kwNote: Faction: Blood Legions comes from Disciple of Khorne (\"… it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS one\"), the Lord on Juggernaut's enhancement; Deep Strike is the Lord on Juggernaut's alone (the same enhancement), so the unit cannot use it (24.09)."

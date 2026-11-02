@@ -3,37 +3,5 @@
  "source": {
   "text": "New Recruit, exported 22 Oct 2026",
   "why": "the day New Recruit’s PDF of this list was exported (verify/sources/nr/infernal-lance.txt), from which the list was first imported; the JSON export carries no date"
- },
- "units": {
-  "chaos-cerastus-knight-atrapos": {
-   "na": {
-    "Consumed with Hunger": "No WAR DOG in this list"
-   },
-   "why": "Consumed with Hunger is an aura for friendly WAR DOG models; this list has no WAR DOG unit (New Recruit's export)."
-  },
-  "chaos-cerastus-knight-lancer": {
-   "na": {
-    "Dark Fervour": "No WAR DOG in this list"
-   },
-   "why": "Dark Fervour is an aura for friendly WAR DOG models; this list has no WAR DOG unit (New Recruit's export)."
-  },
-  "knight-despoiler": {
-   "na": {
-    "Dread Dominion": "No WAR DOG in this list"
-   },
-   "why": "Dread Dominion is an aura for friendly WAR DOG models; this list has no WAR DOG unit (New Recruit's export)."
-  },
-  "knight-ruinator-fleshmetal-fusion": {
-   "na": {
-    "Close-range Killers": "No WAR DOG in this list"
-   },
-   "why": "Close-range Killers is an aura for friendly WAR DOG models; this list has no WAR DOG unit (New Recruit's export)."
-  },
-  "knight-ruinator": {
-   "na": {
-    "Close-range Killers": "No WAR DOG in this list"
-   },
-   "why": "Close-range Killers is an aura for friendly WAR DOG models; this list has no WAR DOG unit (New Recruit's export)."
-  }
  }
 }

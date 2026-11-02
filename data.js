@@ -2800,7 +2800,7 @@ const ARMIES = [
       abilities:[
         { name:'Invulnerable Save (5+*)' },
         { name:'Ram Jets' },
-        { name:'Thundercharge', na:'Needs a thundershock spear and bellatus reaper chainsword: not this loadout' },
+        { name:'Thundercharge', na:'Needs a thundershock spear and a bellatus reaper chainsword: not this loadout' },
         { name:'Saturation Fire' },
         { name:'Damaged: 1-6 Wounds Remaining' }
       ]
@@ -2888,7 +2888,7 @@ const ARMIES = [
       abilities:[
         { name:'Invulnerable Save (5+*)' },
         { name:'Ram Jets' },
-        { name:'Thundercharge', na:'Needs a thundershock spear and bellatus reaper chainsword: not this loadout' },
+        { name:'Thundercharge', na:'Needs a thundershock spear and a bellatus reaper chainsword: not this loadout' },
         { name:'Saturation Fire' },
         { name:'Damaged: 1-6 Wounds Remaining' },
         { name:'Sanctuary', tag:'Enhancement', text:'**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save.' }
@@ -3165,7 +3165,11 @@ const ARMIES = [
     {
       id:'sorcerer', ds:'emperors-children/sorcerer', pts:55,
       models:['1× Sorcerer'],
-      gear:[['Agonising Energies','Bolt pistol','Force weapon']]
+      gear:[['Agonising Energies','Bolt pistol','Force weapon']],
+      abilities:[
+        { name:'Warped Interference', na:'Not leading a unit in this list' },
+        { name:'Wracking Agonies' }
+      ]
     },
     {
       id:'lord-exultant-infractors', ds:['emperors-children/lord-exultant','emperors-children/infractors'], role:'Character', pts:190, copies:2, ptsNote:'95 + Infractors 95',
@@ -4823,7 +4827,7 @@ const ARMIES = [
       abilities:[
         { name:'Invulnerable Save (5+*)' },
         { name:'Ram Jets' },
-        { name:'Thundercharge', na:'Needs a thundershock spear and bellatus reaper chainsword: not this loadout' },
+        { name:'Thundercharge', na:'Needs a thundershock spear and a bellatus reaper chainsword: not this loadout' },
         { name:'Saturation Fire' },
         { name:'Damaged: 1-6 Wounds Remaining' }
       ]
@@ -14092,7 +14096,7 @@ const TABLE_ORDER = {
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','printed','from','baseWith','own'],
   ranged:['group','fireAll','name','who','n','carrier','enh','hunter','range','A','BS','S','AP','D','kw','own','from'],
   melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],
-  abilities:['name','who','tag','at','na','damaged','ph','turn','turns','note','text','readOf']
+  abilities:['name','who','tag','at','damaged','na','ph','turn','turns','note','text','readOf']
 };
 // Each unit entry of ARMIES names its datasheet (ds: an id of DATASHEETS; a list of them for an attached unit: the leader,
 // the other characters, the bodyguard) and holds only what the list chose. The app gets each unit as one object: the
