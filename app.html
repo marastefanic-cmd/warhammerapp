@@ -1453,9 +1453,18 @@ const unitRules = u => allUnitRules(u).filter(r => !inertRule(r));   // the ones
 const partialWho = (u, label) => { const p = u.partialRules || {}; if(hasOwn(p, label)) return p[label];
   // (not another entry of the same Rules line: Trajann's own "Feel No Pain 5+" is not the unit's "Feel No Pain 5+*")
   const rl = u.rules || [], k = ruleKey(label), e = k && Object.entries(p).find(([r]) => ruleKey(r) === k && !(rl.includes(r) && rl.includes(label))); return e ? e[1] : ''; };
-// a rule only one model has, which an ability of that model gives it ("this model has the Infiltrators … abilities", Lord of the Host):
-// those abilities, said where it has it, "(in Lord of the Host)", instead of "only"
-const givenBy = (u, key) => { const who = partialWho(u, key); return who ? u.abilities.filter(ab => (!ab.who || ab.who === who) && mentions(ab.text, key)).map(ab => ab.name) : []; };
+// a rule only one model has, which an ability of that model gives the model itself ("this model has the Infiltrators … abilities", Lord
+// of the Host; "The bearer has the Deep Strike ability", Disciple of Khorne; "models in this unit have …"), where that model's own
+// datasheet row does not print it: those abilities, said where it has it, "(in Lord of the Host)", instead of "only". Not an ability that
+// gives it to another unit (Thunderhawk Insertion's "That unit has Deep Strike": Marneus Calgar's own Deep Strike stays "only")
+const givesSelf = (text, key) => String(text || '').replace(/\*\*/g, '').split(/(?<=\.)\s+/).some(t => /\b(?:this model has|the bearer has|models in this unit have)\b/i.test(t) && mentions(t, key));
+const givenBy = (u, key) => { const who = partialWho(u, key); if(!who) return [];
+  const row = Object.values(D.datasheets || {}).find(S => S.faction === u.faction && S.name === who) || Object.values(D.datasheets || {}).find(S => S.name === who);
+  if(row && (row.rules || []).some(r => ruleKey(r) === key)) return [];
+  return u.abilities.filter(ab => (!ab.who || ab.who === who) && givesSelf(ab.text, key)).map(ab => ab.name); };
+// (the source said once: an enhancement the unit's label already names, "Lord on Juggernaut · Disciple of Khorne", is not said again)
+const givenIn = (u, key) => givenBy(u, key).filter(n => n !== u.enhancement && n !== u.upgrade);
+const givenTag = (u, key) => givenIn(u, key).length ? ' <span class="from">(in ' + esc(givenIn(u, key).join(', ')) + ')</span>' : '';
 // "Canis Rex: Sir Hekhtur only" on a line of its own, "Canis Rex (Sir Hekhtur only)" in a list
 const onlyTag = (u, label, inList) => !partialWho(u, label) ? '' : '<span class="from">' + (inList ? ' (' : ': ') + esc(partialWho(u, label)) + ' only' + (inList ? ')' : '') + '</span>';
 // an army rule that needs units this army doesn't have, e.g. Bondsman with no ARMIGER models
@@ -1658,8 +1667,7 @@ function usersVia(label, key){
   const us = ruleUsers(key);
   if(!us.length) return '';
   const own = u => unitRules(u).some(r => ruleKey(r) === key) || [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => ruleKey(k) === key) || (w.hunter && key === 'Hunter'));
-  const givenIn = u => givenBy(u, key);
-  return '<p class="usedby"><span class="il">' + label + '</span>' + us.map(u => { if(own(u)) return unitLink(u) + (givenIn(u).length ? ' <span class="from">(in ' + esc(givenIn(u).join(', ')) + ')</span>' : onlyTag(u, key, true));
+  return '<p class="usedby"><span class="il">' + label + '</span>' + us.map(u => { if(own(u)) return unitLink(u) + (givenBy(u, key).length ? givenTag(u, key) : onlyTag(u, key, true));
     const abs = u.abilities.filter(ab => mentions(ab.text, key)).map(ab => ab.name);
     return unitLink(u) + (abs.length ? ' <span class="from">(in ' + esc(abs.join(', ')) + ')</span>' : ''); }).join(', ') + '</p>';
 }
@@ -5499,7 +5507,7 @@ function screenRules(){
     // a rule only one model has: which ("Canis Rex: Sir Hekhtur only")
     // a rule with no value ("Feel No Pain" on the Norn Emissary): the abilities that give it, too
     const bare = own.length && own.every(r => r.toLowerCase() === key.toLowerCase());
-    if(own.length) return [who(u, key) + own.filter(r => r.toLowerCase() !== key.toLowerCase()).map(r => ' <span class="from">' + esc(r.toLowerCase().startsWith(key.toLowerCase()) ? r.slice(key.length).trim() : r) + '</span>').join('') + (givenBy(u, key).length ? ' <span class="from">(in ' + esc(givenBy(u, key).join(', ')) + ')</span>' : onlyTag(u, key)) + (bare ? abs : '')];
+    if(own.length) return [who(u, key) + own.filter(r => r.toLowerCase() !== key.toLowerCase()).map(r => ' <span class="from">' + esc(r.toLowerCase().startsWith(key.toLowerCase()) ? r.slice(key.length).trim() : r) + '</span>').join('') + (givenBy(u, key).length ? givenTag(u, key) : onlyTag(u, key)) + (bare ? abs : '')];
     return abs ? [who(u, key) + abs] : [];
   });
   const ur = [...used.values()].filter(r => !weaponKw.has(r.key)).sort((x, y) => x.key.localeCompare(y.key));
