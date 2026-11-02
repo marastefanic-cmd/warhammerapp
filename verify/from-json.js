@@ -523,20 +523,31 @@ function buildGroup(g, k) {
   if (warlordOn) u.warlordOn = warlordOn;
   if (named) { u.leads = partName(g.body); if (g.chars[0].support) u.support = true; if (g.chars.length > 1) u.also = g.chars.slice(1).map(c => Object.assign({ name: partName(c.s) }, c.support ? { support: true } : {})); }
   // models lines and their gear; wargear on the unit itself (no model's) is `unplaced`
-  const models = [], gear = [], unplaced = [];
+  const models = [], gear = [], unplaced = [], assoc = [];
   for (const p of parts) {
     const lines = [];   // this part's models lines: { n, name, wargear, weapons }
     for (const m of modelsOf(p)) {
       const n = m === p ? 1 : Number(m.number) || 1;
       const { weapons, wargear } = gearOf(m, n);
-      lines.push({ n, name: typo(nm(m.name)), wargear, weapons });
+      lines.push({ n, name: typo(nm(m.name)), wargear, weapons, sel: m });
     }
     if (p.type !== 'model') for (const c of kidsOf(p)) if (c.type !== 'model' && !isEnh(c) && nm(c.name) !== 'Warlord' && !kidsOf(c).some(x => x.type === 'model')) {
       if (isWeaponSel(c)) { for (const w of uniq(weaponProfiles(c).map(p2 => { const w = weaponOf(p2, c); return w.group || w.name; }))) unplaced.push(typo(w)); continue; }
       // wargear the datasheet gives one model ("1 model can be equipped with 1 Vexilla", WARGEAR OPTIONS): when exactly one
       // models line of such models has more of them, that one model is a line of its own with it, as New Recruit's PDF prints
       // it ("1× Allarus Custodian (Vexilla)"); else no models line can be said to carry it (unplaced)
-      const k = Number(c.number) || 1, who = oneModelCan(p, nm(c.name));
+      const k = Number(c.number) || 1;
+      // (an upgrade on the unit associated with one of its model selections, the export's "associations": that model's, as New Recruit
+      // carries it: Khârn's Berzerkers' Icon of Khorne on the Khorne Berzerker Champion, Pubstomper's Icon of Flame on the Rubric Marine
+      // w/ soulreaper cannon; of a line of several models, one model of it on a line of its own)
+      const to = (c.associations || []).filter(a => a.type === 'outgoing').map(a => lines.find(l => l.sel && l.sel.id === a.to)).find(Boolean);
+      if (to) {
+        assoc.push({ gear: typo(nm(c.name)), model: to.name });
+        if (to.n > k) { to.n -= k; to.splits = (to.splits || 0) + 1; lines.splice(lines.indexOf(to) + to.splits, 0, { n: k, name: to.name, wargear: to.wargear.concat(typo(nm(c.name))), weapons: to.weapons.slice() }); }
+        else to.wargear.push(typo(nm(c.name)));
+        continue;
+      }
+      const who = oneModelCan(p, nm(c.name));
       const can = who ? lines.filter(l => l.n > k && (who === 'model' || lc(l.name).startsWith(lc(who)))) : [];
       if (can.length === 1) { const l = can[0]; l.n -= k; l.splits = (l.splits || 0) + 1; lines.splice(lines.indexOf(l) + l.splits, 0, { n: k, name: l.name, wargear: l.wargear.concat(typo(nm(c.name))), weapons: l.weapons.slice() }); }
       else unplaced.push(typo(nm(c.name)));
@@ -657,6 +668,7 @@ function buildGroup(g, k) {
   for (const p of parts.slice(1)) for (const c of catsOf(p)) if (!own.includes(c) && !extra.includes(c)) extra.push(c);
   Object.assign(u, { models, gear });
   if (unplaced.length) u.unplaced = unplaced;
+  if (assoc.length) hide(u, { _assoc: assoc });
   Object.assign(u, { stats, ranged: kinds.ranged, melee: kinds.melee, abilities, rules: uniq(rules), kw: own.concat(extra) });
   if (extra.length) u.kwNote = extra.join(', ') + (extra.length > 1 ? ' come' : ' comes') + ' from the ' + (g.chars.length > 1 ? 'combined unit' : (g.chars[0].support ? 'supported ' : 'led ') + partName(g.body)) + '.';
   u._at = g.at; u._parts = parts; hide(u, { _partNames: parts.map(p => nm(p.name)), _exportKw: u.kw.slice() });
@@ -713,7 +725,12 @@ for (const u of units) {
     for (const u of units) if (taken.has(u)) u.id = taken.get(u);
     // (a unit with no match, whose own id another unit now keeps: numbered on)
     for (const u of units) if (!taken.has(u)) { let id = ids0.get(u), k = 2; const base = id; while (units.some(x => x !== u && x.id === id)) id = base + '-' + k++; u.id = id; }
-    for (const u of units) if (u.id !== ids0.get(u)) filled.push({ what: 'id ' + u.id + ' (not ' + ids0.get(u) + ')', from: 'the unit’s id in data.js (the list as first imported)' });
+    // (an id other than the one its names give is kept only where the hand file names it, ids: { <id>: why }: an id renamed in data.js by
+    // hand is not taken over unseen)
+    for (const u of units) if (u.id !== ids0.get(u)) {
+      if ((HAND.ids || {})[u.id]) filled.push({ what: 'id ' + u.id + ' (not ' + ids0.get(u) + ')', from: 'the unit’s id in data.js, as the hand file names it (ids)' });
+      else want(u.name, 'id', 'data.js has the id ' + u.id + ' where its names give ' + ids0.get(u) + ': name it in verify/sources/hand/' + armyId + '.json ids, with why');
+    }
   }
 }
 
@@ -1220,6 +1237,13 @@ for (const u of units) {
     // (and a rule BSData gives one model of a part only, "Cabal of Sorcerers (Aspiring Sorcerer only)": that model and the parts that
     // have it themselves)
     for (const [r, who] of Object.entries(u._onlyRules || {})) if (u.rules.includes(r) && !pr[r]) pr[r] = who;
+    // (a core ability an enhancement gives its bearer, "The bearer has the Deep Strike ability" (Disciple of Khorne), where the other
+    // parts' pages do not print it: the bearer's)
+    for (const ab of u.abilities.filter(a => a._e && a.who)) {
+      const m = /\bThe bearer has the (.+?) abilit(?:y|ies)\b/.exec(bare(ab.text || '')); if (!m) continue;
+      for (const n of m[1].split(/,\s*|\s+and\s+/)) { const r = u.rules.find(x => lc(x) === lc(n.trim())); if (!r || pr[r]) continue;
+        const has = G.byPart.filter(x => x.core.some(c => lc(c) === lc(r))); if (!has.length) pr[r] = ab.who; }
+    }
     for (const r of u.rules) {
       const only = G.byPart.map(x => (x.army.concat(x.core).map(y => /^(.*?) \(([^()]+?) only\)$/.exec(y)).find(m => m && lc(m[1]) === lc(r)) || [])[2]);
       if (pr[r] || !only.some(Boolean)) continue;
@@ -1507,11 +1531,13 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
 // an enhancement whose words give the bearer an invulnerable save ("The bearer has a 5+ invulnerable save.", Sanctuary), better than the
 // row's (or the same against all attacks where the datasheet's is against ranged attacks only, "5+*"): the row's InSv, marked as that
 // enhancement's (from), with what New Recruit prints (printed): BSData's enhancement changes no InSv (deviations-nr.json declares it)
+// (the bearer's row only: the stats row of the part that has the enhancement, when that part has one row)
 for (const u of units) {
-  if (u._parts.length !== 1) continue;
   for (const ab of u.abilities.filter(a => a._e)) {
     const m = /\bThe bearer has an? (\d)\+ invulnerable save\.(?!\S)/.exec(bare(ab.text || '')); if (!m) continue;
-    for (const r of u.stats) {
+    const rows = u.stats.filter(r => r._part === ab._part);
+    if (rows.length !== 1) { want(u.name + ' · ' + ab.name, 'InSv', 'the bearer’s stats row is not one row of its part: set by hand'); continue; }
+    for (const r of rows) {
       const cur = String(r.InSv || '–'), n = parseInt(cur, 10);
       if (!(isNaN(n) || n > +m[1] || (n === +m[1] && /\*$/.test(cur)))) continue;
       r.printed = Object.assign(r.printed || {}, { InSv: cur }); r.InSv = m[1] + '+'; r.from = Object.assign(r.from || {}, { InSv: ab.name });
@@ -1940,7 +1966,7 @@ const nrUnplacedUnits = new Set(nrFails.filter(f => f.field === 'models' && nrMo
 for (const f of nrFails) {
   const u = units.find(x => x.id === f.unit) || {};
   if (nrUnplacedUnits.has(f.unit) && (f.field === 'models' || /^gear\[/.test(f.field))) { nrOwn(f, PDFS + ' prints ' + (u.unplaced || []).join(', ') + ' on a models line; ' + expS + ' carries ' + ((u.unplaced || []).length > 1 ? 'them' : 'it') + ' on the unit itself, not on a model, so the app lists ' + ((u.unplaced || []).length > 1 ? 'them' : 'it') + ' as the unit’s (unplaced), its models lines added up as the export gives them; GW’s datasheet lets any one model carry it ("1 model can be equipped with …").', EXP + ': the unit’s own selections; ' + (f.where || PDFS) + '.'); continue; }
-  if (!nrUnplacedUnits.has(f.unit) && nrPlacedUnits.has(f.unit) && (f.field === 'models' || /^gear\[/.test(f.field))) { nrOwn(f, PDFS + ' prints the unit’s wargear on its models lines otherwise than ' + expS + ', which puts each on the model whose selection has it; the app’s models lines are the export’s (the same models and weapons, a wargear on another line).', EXP + ': the unit’s model selections; ' + (f.where || PDFS) + '.'); continue; }
+  if (!nrUnplacedUnits.has(f.unit) && nrPlacedUnits.has(f.unit) && (f.field === 'models' || /^gear\[/.test(f.field))) { nrOwn(f, PDFS + ' prints the unit’s wargear on its models lines otherwise than ' + expS + ', which ' + ((u._assoc || []).length ? 'associates ' + u._assoc.map(x => x.gear + ' with the ' + x.model).join(', ') + ' (the upgrade’s association to that model selection)' : 'puts each on the model whose selection has it') + '; the app’s models lines are the export’s (the same models and weapons).', EXP + ': the unit’s selections and their associations; ' + (f.where || PDFS) + '.'); continue; }
   // (an ability GW's datasheet prints as a box of its own that the PDF does not, Supreme Commander; one it does not print, Icon of War)
   const am = /^abilities\[(.*?)(?: \| (.*))?\]$/.exec(f.field);
   if (am && f.app === 'present' && !f.source) { const rec = devs.find(x => x.unit === f.unit && x.field === 'ability' && x.bsdata == null && x.app === am[1]); if (rec) { nrOwn(f, 'GW’s datasheet prints the ability ' + am[1] + ' (a box of its own); ' + PDFS + ' does not. GW wins.', rec.file + ': "' + am[1] + '".'); continue; } }
