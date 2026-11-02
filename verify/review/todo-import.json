@@ -4,12 +4,12 @@
   "kind": "code",
   "where": "runImport",
   "judgement": {
-   "code": "MISSING"
+   "code": "async function runImport(input){\n  const out = $('#impOut');\n  if(!out || !window.WH_IMPORT) return;\n  if(typeof input === 'string' && !input.trim()){ out.innerHTML = '<div class=\"impno\"><p class=\"qh\">Nothing to import</p><p class=\"lead\">Choose the file, or paste the export first.</p></div>'; return; }\n  let r; try { r = await WH_IMPORT.read(input, D); } catch(e){ r = { ok:false, errors:['not a New Recruit export (it could not be read)'] }; }\n  if(!r.ok) return impFail('Not imported · ' + r.errors.length + (r.errors.length === 1 ? ' reason' : ' reasons'), r.errors);\n  let id; try { id = await WH_IMPORT.localId(r.kept); } catch(e){ return impFail('Not imported', ['this browser cannot keep imported lists (no WebCrypto)']); }\n  const kept = importedKept();\n  if(kept.some(y => y.id === id) && id !== impReplace){ const y = D.armies.find(a => a.id === id);\n    out.innerHTML = '<div class=\"impno\"><p class=\"qh\">Already imported</p><p class=\"lead\">This export is already on this phone' + (y ? ' as ' + esc(y.name) : '') + '.</p>' + (y ? '<div class=\"racts\"><button class=\"btn\" data-army=\"' + esc(id) + '\">Open ' + esc(y.name) + '</button></div>' : '') + '</div>'; return; }\n  const date = today();\n  // (the name in the box, else the export's: prefilled from it when the export carries one, else \"Imported list\")\n  const box = $('#impName'), given = box && box.value.trim() ? box.value.trim() : '';\n  if(box && !given){ const n = WH_IMPORT.nameOf(r.kept, D); if(n) box.value = n; }\n  const listName = given || null;\n  let m; try { m = WH_IMPORT.make(r.kept, D, { id, date, name:listName }); } catch(e){ m = { ok:false, errors:['not a New Recruit export (it could not be read)'] }; }\n  if(!m.ok) return impFail('Not imported · ' + m.errors.length + (m.errors.length === 1 ? ' reason' : ' reasons'), m.errors);\n  const A = m.army;\n  // (Update: the list it replaces goes; the same export again keeps its id, and with it its star, ticks and checklist)\n  if(impReplace && impReplace !== id) removeKept(impReplace);\n  { const k = importStale.findIndex(y => y.id === id); if(k >= 0) importStale.splice(k, 1); }\n  try { store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id).concat([Object.assign({ id, name:A.name, date, json:r.kept }, listName ? { listName } : {})])); } catch(e){}\n  const saved = importedKept().some(x => x.id === id);\n  const i = D.armies.findIndex(y => y.id === id); if(i >= 0) D.armies.splice(i, 1);\n  D.armies.push(splitRefs(A)); ONLY = D.armies.length === 1 ? D.armies[0] : null;\n  impReplace = null;\n  hideSheet(); go({ s:'army', army:id }, 'sheet');\n  toast(saved ? 'Imported ' + A.name : 'Imported ' + A.name + ' for now: this phone could not keep it');\n}"
   },
   "source": {
-   "implements": "Import (the sheet): a refused export (or one resolve cannot read) lists every message, one per line, and nothing is kept; an imported one is kept on the phone as the export (resolved again at every start, each in a try: one that cannot be read is listed as out of date), gets an id no list has, and opens; if the phone cannot keep it, the toast says so"
+   "implements": "Import (the sheet): the input (a file's bytes or pasted text) is read by WH_IMPORT.read in any of New Recruit's formats; a refused one lists every reason, one per line, and nothing is kept; the list gets the id local- and 12 hex of the sha256 of the kept export (WH_IMPORT.localId): an export already kept says Already imported with its Open; it is made by WH_IMPORT.make (built from the tables for a catalogued faction, copied otherwise) under the List name given (else the export's), kept as { id, name, date, json, listName } and made again at every start; Update from a new export replaces the list it updates (its star, ticks and checklist kept when the new export has the same id); a phone that cannot keep it says so"
   },
-  "key": "2b604b35d6f1b2ee"
+  "key": "53120aaa17744ee2"
  },
  {
   "army": "code",
@@ -19,9 +19,21 @@
    "code": "const importedFoot = a => { const x = importedKept().find(y => y.id === a.id);\n  return '<div class=\"sec-h\"><h2>On this phone</h2></div><p class=\"note\">Imported from New Recruit' + (x && x.date ? ' on ' + esc(x.date) : '') + '. ' +\n    (a.built ? 'Built from its export and the app’s ' + esc(factionOf(a).name) + ' tables, as the app’s own lists are. ' : 'Copied from units the app’s own lists have: ' + esc(factionOf(a).name) + ' has no full catalogue in the app yet. ') +\n    (x ? 'Kept on this phone only.' : 'This phone could not keep it: it is gone when the app next starts.') + '</p>' +\n    ((a.gwPoints || []).length ? '<p class=\"note\">Points: GW’s are used where the export’s differ: ' + a.gwPoints.map(g => esc(g.unit) + ' ' + g.export + ' pts in the export, ' + g.gw + ' pts by GW').join('; ') + '.</p>' : '') +\n    '<div class=\"imprm\" id=\"impRm\">' + impRmBtn(a.id) + '</div>'; };"
   },
   "source": {
-   "implements": "an imported list's Overview ends with where it came from, whether this phone keeps it, and Remove this list (a confirm on the page: Remove / Keep it)"
+   "implements": "an imported list's Overview ends with where it came from and when, how it was made (built from its export and the app's tables of its faction, or copied from units the app's own lists have, its faction having no full catalogue), whether this phone keeps it, GW's points where the export's differ (each unit with both values), and Remove this list (a confirm on the page: Remove / Keep it)"
   },
-  "key": "8a502b8bfb4123b3"
+  "key": "bd6386a415dc0cd7"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "removeKept",
+  "judgement": {
+   "code": "function removeKept(id){\n  store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id));\n  const i = D.armies.findIndex(y => y.id === id && y.imported); if(i >= 0) D.armies.splice(i, 1);\n  const j = importStale.findIndex(y => y.id === id); if(j >= 0) importStale.splice(j, 1);\n  try { localStorage.removeItem('wh-used-' + id); localStorage.removeItem('wh-check-' + id); } catch(e){}\n  if(favIds().includes(id)) setFav(id, false);\n}"
+  },
+  "source": {
+   "implements": "what Remove and Update take off the phone for one kept list: the kept export, the list, its out-of-date row, its per-battle ticks (wh-used-<id>), its Phase checklist boxes (wh-check-<id>) and its star"
+  },
+  "key": "43797b8aebbd97cd"
  },
  {
   "army": "code",
