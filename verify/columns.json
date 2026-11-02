@@ -19,11 +19,13 @@
    "columns": {
     "name": {
      "source": "hand",
-     "note": "the RULES entry"
+     "note": "the RULES entry",
+     "declared": "the key of the RULES entry it is about (no line of its own)"
     },
     "source": {
      "source": "hand",
-     "note": "where it is from"
+     "note": "where it is from",
+     "declared": "where a RULES entry that is no core rule is printed (“Orks army rule”), the label over its text on a rule sheet; its text is checked by verify/texts.js against that document"
     }
    }
   },
@@ -54,7 +56,8 @@
    "columns": {
     "id": {
      "source": "hand",
-     "note": "stable id (the app links by it)"
+     "note": "stable id (the app links by it)",
+     "declared": "an id: what the app links by, no line"
     },
     "gist": {
      "source": "ai-summary",
@@ -131,7 +134,8 @@
     },
     "aliases": {
      "source": "hand",
-     "note": "words players use for a rule that has another name: mechanical where the pattern reads the rule’s name (verify/texts.js alias), signed off otherwise (rule-alias); it writes no line"
+     "note": "words players use for a rule that has another name: mechanical where the pattern reads the rule’s name (verify/texts.js alias), signed off otherwise (rule-alias); it writes no line",
+     "declared": "which rule a chip opens: it writes no line (verify/texts.js alias)"
     },
     "armyRules": {
      "source": "gw",
@@ -183,8 +187,9 @@
      "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "needs": {
-     "source": "hand",
-     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
+     "source": "derived",
+     "note": "which units it is for: verify/derive.js ruleNeeds from its words (the gate step derive keeps the stored value what it reads, verify/derive-agreed.json; verify/invariants.js too); a rule whose words it cannot read has none, or is declared here with its why",
+     "declared": []
     },
     "coreTwin": {
      "source": "derived",
@@ -200,7 +205,8 @@
     },
     "missing": {
      "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off",
+     "declared": "none today: the parts of a rule the app does not have yet, said as “Not in the app yet”"
     },
     "readOf": {
      "source": "derived",
@@ -285,8 +291,21 @@
      "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "needs": {
-     "source": "hand",
-     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
+     "source": "derived",
+     "note": "which units it is for: verify/derive.js ruleNeeds from its words (the gate step derive keeps the stored value what it reads, verify/derive-agreed.json; verify/invariants.js too); a rule whose words it cannot read has none, or is declared here with its why",
+     "declared": [
+      {
+       "at": "Thousand Sons · Grand Coven rule · Kindred Sorcery",
+       "value": {
+        "all": [
+         "Faction: Thousand Sons",
+         "Psyker"
+        ]
+       },
+       "why": "its words name no unit (“you can select one of the abilities listed below”); each ability is for “Psychic weapons equipped by THOUSAND SONS models from your army”, which only PSYKER models have: THOUSAND SONS PSYKER units, narrower than THOUSAND SONS units, so its “Applies to” never reads broader than GW",
+       "evidence": "data.js FACTIONS thousand-sons Grand Coven rule (its table: Imbued Manifestation, Psychic Maelstrom, Wrath of the Immaterium); verify/.cache/waha/thousand-sons.txt"
+      }
+     ]
     },
     "coreTwin": {
      "source": "derived",
@@ -302,7 +321,8 @@
     },
     "missing": {
      "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off",
+     "declared": "none today: the parts of a rule the app does not have yet, said as “Not in the app yet”"
     },
     "readOf": {
      "source": "derived",
@@ -346,8 +366,9 @@
      "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "needs": {
-     "source": "hand",
-     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
+     "source": "derived",
+     "note": "which units it is for: verify/derive.js ruleNeeds from its words (the gate step derive keeps the stored value what it reads, verify/derive-agreed.json; verify/invariants.js too); a rule whose words it cannot read has none, or is declared here with its why",
+     "declared": []
     },
     "coreTwin": {
      "source": "derived",
@@ -363,7 +384,8 @@
     },
     "missing": {
      "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off",
+     "declared": "none today: the parts of a rule the app does not have yet, said as “Not in the app yet”"
     },
     "readOf": {
      "source": "derived",
@@ -478,7 +500,8 @@
    "columns": {
     "id": {
      "source": "hand",
-     "note": "stable id (the app keeps per-list state by it)"
+     "note": "stable id (the app keeps per-list state by it)",
+     "declared": "an id: what the app links by, no line"
     },
     "name": {
      "source": "newrecruit",
@@ -595,7 +618,8 @@
     },
     "short": {
      "source": "hand",
-     "note": "a shorter name where two units share one"
+     "note": "a shorter name where two units share one",
+     "declared": "the shorter name a list gives a unit where two share one (“Big Mek”), each with its why in its hand file (verify/reimport.js)"
     },
     "role": {
      "source": "newrecruit",
@@ -647,7 +671,8 @@
     },
     "over": {
      "source": "hand",
-     "note": "a datasheet fact this list has otherwise than another list with no reason found (verify/out/tables.md): kept until decided; none today"
+     "note": "a datasheet fact this list has otherwise than another list with no reason found (verify/out/tables.md): kept until decided; none today",
+     "declared": "none today: a datasheet fact a list has otherwise than another list with no reason found, kept until decided (verify/out/tables.md)"
     },
     "note": {
      "source": "gw",
@@ -712,7 +737,8 @@
     },
     "over": {
      "source": "hand",
-     "note": "see ARMIES.units.over"
+     "note": "see ARMIES.units.over",
+     "declared": "none today: a datasheet fact a list has otherwise than another list with no reason found, kept until decided (verify/out/tables.md)"
     },
     "of": {
      "source": "derived",
@@ -781,7 +807,8 @@
     },
     "over": {
      "source": "hand",
-     "note": "see ARMIES.units.over"
+     "note": "see ARMIES.units.over",
+     "declared": "none today: a datasheet fact a list has otherwise than another list with no reason found, kept until decided (verify/out/tables.md)"
     },
     "of": {
      "source": "derived",
@@ -854,7 +881,8 @@
     },
     "over": {
      "source": "hand",
-     "note": "see ARMIES.units.over"
+     "note": "see ARMIES.units.over",
+     "declared": "none today: a datasheet fact a list has otherwise than another list with no reason found, kept until decided (verify/out/tables.md)"
     },
     "of": {
      "source": "derived",
@@ -883,7 +911,8 @@
     },
     "over": {
      "source": "hand",
-     "note": "see ARMIES.units.over"
+     "note": "see ARMIES.units.over",
+     "declared": "none today: a datasheet fact a list has otherwise than another list with no reason found, kept until decided (verify/out/tables.md)"
     },
     "of": {
      "source": "derived",

@@ -65,30 +65,18 @@ function items(D, appSource){
   for(const a of D.armies){
     for(const u of a.units){
       const w = a.id + ' · ' + u.name;
-      const unitFacts = { models:u.models, stats:u.stats.map(s => s.name + ' W' + s.W + ' OC' + s.OC), weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.group, x.name, x.A, x.AP, x.D, (x.kw || []).join(', ')].filter(Boolean).join(' ')) };
       for(const ab of u.abilities){
         const src = { ability:ab.name, text:ab.text };
         if(ab.ask) add(a.id, 'ability-ask', w + ' · ' + ab.name, { ask:ab.ask }, src);
         // (who: New Recruit's, compared exactly by verify/nr.js; no judgement. tag: a judgement again, nr.js lets the app add a tag part
         // its text names, so an extra "Aura" would pass it)
         if(ab.tag) add(a.id, 'ability-tag', w + ' · ' + ab.name, { tag:ab.tag }, src);
-        // a note under the ability (an FAQ, a core rule it meets, a question the rules leave open): its own words are the app's
-        // (the quotes in it are checked by verify/texts.js); the source is the unit's abilities and the list's rules it may quote
-        if(ab.note) add(a.id, 'ability-note', w + ' · ' + ab.name, { note:ab.note }, { ability:ab.name, text:ab.text,
-          others:u.abilities.filter(x => x !== ab).map(x => x.name + ': ' + x.text), listRules:fr(a.faction).armyRules.map(r => r.name).concat(a.detachments.flatMap(id => detRules_(fr(a.faction).detachments[id]).map(r => r.name))) });
-        if(ab.na) add(a.id, 'ability-na', w + ' · ' + ab.name, { na:ab.na, armyUnits:a.units.map(x => x.name + ' [' + x.kw.join(', ') + ']') }, src);
+        // (note: GW's words under a fixed source label, verify/texts.js noteForm and noteQuote; na: derived, verify/derive.js naOf, verify/lines.js
+        // L0; no judgement)
         // (damaged: the range its words give, verify/lines.js L0; def, its When targeted line: its defence boxes, BOXES d, verify/defence.js; no judgement)
       }
-      for(const k of ['kwNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
-      // a rule only one model of the unit has (Canis Rex's Lone Operative is Sir Hekhtur's): the unit can't use a rule every model
-      // must have, and the app names that model
-      if(u.partialRules) add(a.id, 'unit-partialRules', w, { partialRules:u.partialRules }, { models:u.models, rules:u.rules, abilities:u.abilities.map(x => (x.who ? x.who + ' · ' : '') + x.name + ': ' + x.text) });
-      // keywords only some models of the unit have (Rubric Marines: "ASPIRING SORCERER ONLY: PSYKER"): listed apart on the datasheet
-      if(u.kwOnly) add(a.id, 'unit-kwOnly', w, { kwOnly:u.kwOnly }, { models:u.models, kw:u.kw, kwNote:u.kwNote || null });
-      // where the sources disagree about the unit (Wahapedia's Tyrannofex FRAME, Sir Hekhtur's own datasheet), marked on its datasheet
-      if(u.srcNote) add(a.id, 'unit-srcNote', w, { srcNote:u.srcNote }, { models:u.models, kw:u.kw });
-      // a reference sheet (not in the army until a rule or stratagem adds it): the rule it cites and its quote
-      if(u.ref) add(a.id, 'unit-ref', w, { ref:u.ref }, cited(a.id, a.units.find(x => x.id === u.ref.by) || u, { from:u.ref.rule || u.ref.strat }));
+      // (kwNote and srcNote: derived, verify/gw-order.js kwNoteOf and srcNoteOf, written by verify/tables.js --write; kwOnly and partialRules:
+      // held to GW's pages, verify/keywords.js KO and PR; ref: its quote GW's words, verify/texts.js refQuote; a unit's note: noteForm; no judgement)
       // (weapons: which model has which, how many, the multi-profile groups, unplaced wargear: New Recruit's and BSData's, compared
       // exactly by verify/nr.js and verify/bsdata.js; the sentences that say them are code, useSentence and useLine; no judgement)
     }
@@ -123,9 +111,8 @@ function items(D, appSource){
       for(const ab of S.abilities || []){
         const src = { ability:ab.name, text:ab.text };
         if(ab.ph || ab.turn || ab.at) add('catalog', 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns }, src);
-        for(const k of ['note', 'na', 'damaged']) if(ab[k]) add('catalog', 'ability-' + k, w + ' · ' + ab.name, { [k]:ab[k] }, src);
+        // (note, na, damaged: GW's words under a label, derived; kwOnly, srcNote, partialRules: KO / PR, srcNoteOf: no judgement)
       }
-      for(const k of ['kwOnly', 'srcNote', 'partialRules']) if(S[k]) add('catalog', 'unit-' + k, w, { [k]:S[k] }, { kw:S.kw, rules:S.rules });
     }
     for(const [fk, f] of Object.entries(D.factions)) for(const [dk, d] of Object.entries(f.detachments || {})){
       if(d.aiStatus !== 'not-read') continue;
@@ -159,7 +146,6 @@ const CODE_RULES = {
   fnLine:'one box as a footnote: its conditions\' labels (fnCond), its effects\' labels (effects.js fxLabel; a pick\'s options, its part), the weapons or models its scope names (none of this kind: no footnote), less what the list printed into the weapons (dmBaked, marked +); none where the unit lacks the keyword or wargear it needs (selfKw, selfGear); a box for one weapon\'s A, S, AP or D only, not a Damaged band\'s or a stratagem\'s, is that weapon\'s row value ("8 (+6)", "A 6"); a stratagem\'s one phase from its derived phases and turn',
   fnCond:'a condition as a footnote says it: effects.js COND label; an aura of another unit "Within N\" of <its name>" (the model of an attached unit whose ability it is), the unit\'s own aura "Own aura" (22.01), "Selected by <its name>"; a one-model unit\'s Starting Strength "Lost any wounds", Half-strength "<halfBelow> or fewer wounds left" (Core Rules p86)',
   fnWeapons:'the weapons of the unit a box\'s scope names, of this kind: by name or its head word, by weapon keyword, by the part of an attached unit (19.04)',
-  unitDetParts:'the parts of a detachment rule that apply to a unit: those of the rules that apply to it (by keyword) whose own needs it meets (Blood Tithe: Daemonic Rage and Boon of Blood for BLOOD LEGIONS units, Might of Khorne giving them the Blessings of Khorne ability)',
   halfBelow:'Below half-strength for a one-model unit: remaining wounds less than half its W',
   defSources:'which sources a unit\'s "When targeted" lines come from (data.js BOXES d / dnc, made by script from GW\'s words): a core rule with its value on its Rules line (Feel No Pain 5+), the army rules on its Rules line (or GRANTS gives it, or one of the list\'s whose defence box reaches it: Psychic Null), the detachment rules whose needs it meets, its own abilities (not n/a), the other units\' abilities, the list\'s detachments\' stratagems it can be the TARGET of (canTarget), and one whose dreach it meets that another unit of the list can be the TARGET of (Grot Shields: 26.x, the GRETCHIN unit is the target, the ORKS INFANTRY unit the one protected); core stratagems are on the Stratagems tab',
   defenceItems:'every "When targeted" line of a unit: each defence box of its sources that is for it (a box given to friendly units where its reach meets the unit, the unit\'s own only where it is no "other" one, 22.01; an enemy unit\'s attacks made worse, foe: every unit; another unit\'s other boxes not), less an invulnerable save, Save characteristic or Toughness the list printed into its stats marked from that rule, and a Rules-line Feel No Pain its own ability says with its words (or, starred by New Recruit, any rule says); one "not counted here: see the rule" line for a source of the unit with words of the defence side no catalogue defence reads (never left out); the one model of an attached unit a Rules-line rule is on (partialRules)',
@@ -227,6 +213,17 @@ const CODE_RULES = {
   abilityGaps:'verify/readings.js: per sentence and per bonus, a gap when no reading of the ability says it: riled up needs a riled-up reading; an attack bonus with a condition (its own, or an earlier sentence\'s it refers back to), or a roll bonus with none, needs one; a defence needs a When targeted reading; na and options for keywords the unit lacks are skipped',
   covers:'verify/readings.js: a bonus said by a reading (its said pattern; a weapon ability by its name)',
   sentenceCtx:'verify/readings.js: the sentences of an ability (italic notes left out; a list line with the line that leads it), each with the earlier sentences of its paragraph',
+  // the lines Phase 3 and 4 made mechanical: their templates and closed patterns, reviewed as code
+  statLines:'the lines under a unit\'s profile: the stat boxes (BOXES st) of the list\'s army and detachment rules that reach it (reach, else needs), "{conditions}: OC 7 (rule)"; the characteristic with the effect where every profile has one value and the box is for all models, else the effect\'s label with a keyword\'s models; none the list printed into the value (from); "If (see the rule)" for only quoted conditions (verify/lines.js LS)',
+  stCond:'a stat box\'s condition as said: its STCOND label, a one-model unit\'s "At its Starting Strength" as "Lost no wounds (…)" (Core Rules: a one-model unit\'s Starting Strength in its wounds, as fnCond\'s Below Starting Strength)',
+  alreadyInRule:'an army or detachment rule\'s "Already in" chip on the Rules screen: the characteristics of the list\'s units its from marks are in (Relentless Rage\'s melee A)',
+  alreadyTag:'the "Already in X" chip of a rule row (alreadyInRule)',
+  naOf:'verify/derive.js: why an ability does nothing in this list, three closed patterns over its whole words (every sentence): "While this model is leading a unit" on a unit that leads none; "If this model is equipped with A and B" on a unit whose weapons are not each of them (GW\'s words for them); "While a friendly KW model is within N" of this model" where no unit of the list has KW',
+  statOf:'verify/effects-extract.js: a rule\'s stat boxes: every sentence of its text (a heading\'s too) where effects.js ST finds an effect, its conditions (COND, STCOND, GW\'s words of any other "if / while / unless"), the friendly units it or the sentence before names (reach), a keyword\'s models (scope)',
+  cpNoteOf:'verify/effects-extract.js: a stratagem\'s extra-CP chip: a line "**+1CP** Or:" ("Or: +1CP"), an option "**Name (+1CP):**" ("Name +1CP"); verify/lines.js L0 fails on any other "+NCP"',
+  kwNoteOf:'verify/gw-order.js: the keywords note: an attached unit\'s keywords a later part\'s page prints and the first\'s does not (but kwOnly; the first\'s "instead" Faction keyword not the first\'s), "come from the led / supported X / combined unit"; a keyword a rule gives for a reason of the list (why.kw) where the unit is attached, the reason is its own enhancement, or GRANTS gives it to selected units, with GW\'s words quoted; an "instead" Faction keyword with its sentence',
+  srcNoteOf:'verify/gw-order.js: a model of the unit Wahapedia prints on a datasheet of its own (modelPages): "Wahapedia: its own [EPIC HERO ]datasheet; BSData and New Recruit: in this unit"',
+  noteSegments:'verify/texts.js: a note is "{label}: “…” “…”" segments only, each label one of NOTE_LABELS (gw or waha), each quote then found in that label\'s documents',
   // data.js's own code (written by verify/tables.js)
   resolveArmies:'the lists as the app shows them (data.js, at load): each unit entry of ARMIES joined with its datasheet (DATASHEETS) into the unit the app has always had: the datasheet\'s columns, then the entry\'s own (null: none); each row the datasheet\'s row of that name, and of the group the entry names where the datasheet has two rows of the name (a stats row without its "×N"; for an attached unit the part its who or of names, else the first part that has it) with the entry row\'s fields on top, a row the datasheet does not have as the list\'s own; an entry without a kind of rows takes all of its datasheet\'s; over (a fact two lists have differently) on top of all; the readings (mods, aura, guard) from the rows of the rules they read, in this order: the army rules on the unit\'s Rules line (FACTIONS), each datasheet of the unit, its enhancement or upgrade (the first of the list\'s detachments that has it), the detachment rules (rule, moreRules) of the list whose needs (all, any, none, rule) the unit meets, then the entry\'s own; an entry\'s list with names in it is the whole list in its order, a name standing for the rows\' readings of that name; null: none; ds, over, of, faction, bsId, fingerprints (readOf too) and readBy hidden; keys in TABLE_ORDER; each unit its own copy of the datasheet\'s values. No rule is applied: verify/tables.js checks every list resolves to exactly what it was',
 };
@@ -236,11 +233,14 @@ function appFunctions(html){
   html += '\n' + fs.readFileSync(path.join(ROOT, 'verify/derive.js'), 'utf8');   // and how verify/derive.js writes data.js CHECKLIST (the Phase checklist table)
   html += '\n' + fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');     // data.js's resolver (resolveArmies)
   html += '\n' + fs.readFileSync(path.join(ROOT, 'verify/readings.js'), 'utf8');   // the gate step readings: which words need a reading
+  // (and the templates and closed patterns of the lines Phase 3 and 4 made mechanical: their extractor, the pages' reader, the notes' form)
+  for(const f of ['verify/effects-extract.js', 'verify/gw-order.js', 'verify/texts.js']) html += '\n' + fs.readFileSync(path.join(ROOT, f), 'utf8');
   for(const name of Object.keys(CODE_RULES)){
-    const m = new RegExp('\\n(function ' + name + '\\(|const ' + name + ' = )').exec(html);
+    // (a declaration at the top level, or one level in: gw-order.js's functions inside its loader)
+    const m = new RegExp('\\n( {0,2})(function ' + name + '\\(|const ' + name + ' = )').exec(html);
     if(!m){ out[name] = 'MISSING'; continue; }
-    // up to the next top-level declaration
-    const rest = html.slice(m.index + 1), end = rest.slice(1).search(/\n(function |const |let |\/\/ |\/\*)/);
+    // up to the next declaration at its level
+    const ind = m[1], rest = html.slice(m.index + 1), end = rest.slice(1).search(new RegExp('\\n' + ind + '(function |const |let |\\/\\/ |\\/\\*)'));
     out[name] = rest.slice(0, end < 0 ? undefined : end + 1).trim();
   }
   return out;
