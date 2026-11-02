@@ -1110,10 +1110,12 @@ Skulltaker
 Skulltaker
 1× 32mm
 Bloodreaper
-9× 32mm
+7× 32mm
 standard Hellblade
-1× Daemonic Icon: New Recruit lists it for the Bloodletters, not which model carries it
-1× Instrument of Chaos: New Recruit lists it for the Bloodletters, not which model carries it
+1× 32mm
+Daemonic Icon
+1× 32mm
+Instrument of Chaos
 Bloodthirster · Gateway Unto Damnation
 1× 120×92mm Oval
 Bloodthirster · Gateway Unto Damnation
@@ -1130,20 +1132,22 @@ Bloodmaster
 Bloodmaster
 1× 32mm
 Bloodreaper
-9× 32mm
+7× 32mm
 standard Hellblade
-1× Daemonic Icon: New Recruit lists it for the Bloodletters, not which model carries it
-1× Instrument of Chaos: New Recruit lists it for the Bloodletters, not which model carries it
+1× 32mm
+Daemonic Icon
+1× 32mm
+Instrument of Chaos
 Skullmaster · Brazenmaw
 + Bloodcrushers
 1× 90×52.5mm Oval
 Skullmaster · Brazenmaw
 1× 90×52.5mm Oval
-Bloodhunter
-2× 90×52.5mm Oval
 standard Hellblade, Juggernaut’s bladed horn
-1× Daemonic Icon: New Recruit lists it for the Bloodcrushers, not which model carries it
-1× Instrument of Chaos: New Recruit lists it for the Bloodcrushers, not which model carries it
+1× 90×52.5mm Oval
+Bloodcrusher · Instrument of Chaos
+1× 90×52.5mm Oval
+Bloodcrusher · Daemonic Icon
 Beasts of Nurgle
 1× 60mm
 Beast of Nurgle
@@ -2749,12 +2753,12 @@ The Slayer Sword
 Leading Bloodletters
 1× Bloodreaper
 Hellblade
-9× Bloodletter
+7× Bloodletter
 Hellblade
-1× Daemonic Icon
-New Recruit lists it for the Bloodletters, not which model carries it
-1× Instrument of Chaos
-New Recruit lists it for the Bloodletters, not which model carries it
+1× Bloodletter (Daemonic Icon)
+Hellblade
+1× Bloodletter (Instrument of Chaos)
+Hellblade
 Unit
 M
 T
@@ -3244,12 +3248,12 @@ Blade of blood
 Leading Bloodletters
 1× Bloodreaper
 Hellblade
-9× Bloodletter
+7× Bloodletter
 Hellblade
-1× Daemonic Icon
-New Recruit lists it for the Bloodletters, not which model carries it
-1× Instrument of Chaos
-New Recruit lists it for the Bloodletters, not which model carries it
+1× Bloodletter (Daemonic Icon)
+Hellblade
+1× Bloodletter (Instrument of Chaos)
+Hellblade
 Unit
 M
 T
@@ -3386,12 +3390,10 @@ Blade of blood, Juggernaut’s bladed horn
 Leading Bloodcrushers
 1× Bloodhunter
 Hellblade, Juggernaut’s bladed horn
-2× Bloodcrusher
+1× Bloodcrusher (Instrument of Chaos)
 Hellblade, Juggernaut’s bladed horn
-1× Daemonic Icon
-New Recruit lists it for the Bloodcrushers, not which model carries it
-1× Instrument of Chaos
-New Recruit lists it for the Bloodcrushers, not which model carries it
+1× Bloodcrusher (Daemonic Icon)
+Hellblade, Juggernaut’s bladed horn
 Unit
 M
 T

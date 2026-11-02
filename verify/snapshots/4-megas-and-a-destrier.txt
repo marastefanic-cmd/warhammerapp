@@ -582,7 +582,7 @@ While this model has 1‑9 wounds remaining, subtract 5 from this model’s Obje
 
 Using Sir Hekhtur
 
-If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.
+If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed TRANSPORT and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.
 
 Cerastus Knight Atrapos
 Bringer of Justice
@@ -1061,7 +1061,7 @@ AP
 D
 2
 PISTOL
-by the rules: Sir Hekhtur is not on the battlefield while Canis Rex lives: “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation” (Using Sir Hekhtur) · yours to count anyway
+by the rules: Sir Hekhtur is not on the battlefield while Canis Rex lives: “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed **TRANSPORT** and must perform an Emergency Disembarkation” (Using Sir Hekhtur) · yours to count anyway
 +6% wiped
 +0.2
 MODELS
@@ -1125,7 +1125,7 @@ Legendary Freeblade
 Chainbreaker
 “Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.” · not counted in the Damage tab
 Using Sir Hekhtur
-“If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. …” · not counted in the Damage tab
+“If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed TRANSPORT and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. …” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1357,7 +1357,7 @@ AP
 0
 D
 1
-by the rules: Sir Hekhtur is not on the battlefield while Canis Rex lives: “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation” (Using Sir Hekhtur) · yours to count anyway
+by the rules: Sir Hekhtur is not on the battlefield while Canis Rex lives: “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed **TRANSPORT** and must perform an Emergency Disembarkation” (Using Sir Hekhtur) · yours to count anyway
 ≈0
 MODELS
 SITUATION
@@ -1395,7 +1395,7 @@ Legendary Freeblade
 Chainbreaker
 “Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.” · not counted in the Damage tab
 Using Sir Hekhtur
-“If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. …” · not counted in the Damage tab
+“If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed TRANSPORT and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. …” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1660,7 +1660,7 @@ AP
 D
 2
 PISTOL
-by the rules: Sir Hekhtur is not on the battlefield while Canis Rex lives: “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation” (Using Sir Hekhtur) · yours to count anyway
+by the rules: Sir Hekhtur is not on the battlefield while Canis Rex lives: “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed **TRANSPORT** and must perform an Emergency Disembarkation” (Using Sir Hekhtur) · yours to count anyway
 ≈0
 MODELS
 SITUATION
@@ -1720,7 +1720,7 @@ Legendary Freeblade
 Chainbreaker
 “Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.” · not counted in the Damage tab
 Using Sir Hekhtur
-“If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. …” · not counted in the Damage tab
+“If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed TRANSPORT and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. …” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1822,7 +1822,7 @@ AP
 0
 D
 1
-by the rules: Sir Hekhtur is not on the battlefield while Canis Rex lives: “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation” (Using Sir Hekhtur) · yours to count anyway
+by the rules: Sir Hekhtur is not on the battlefield while Canis Rex lives: “If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed **TRANSPORT** and must perform an Emergency Disembarkation” (Using Sir Hekhtur) · yours to count anyway
 0
 SITUATION
 Charged this turn
@@ -1860,7 +1860,7 @@ Legendary Freeblade
 Chainbreaker
 “Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.” · not counted in the Damage tab
 Using Sir Hekhtur
-“If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. …” · not counted in the Damage tab
+“If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed TRANSPORT and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. …” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -2448,7 +2448,7 @@ Once per battle, at the start of any phase, you can select one friendly IMPERIUM
 
 Using Sir Hekhtur
 
-If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.
+If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed TRANSPORT and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.
 
 Rules
 Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Lone Operative (Sir Hekhtur), Knights of Legend

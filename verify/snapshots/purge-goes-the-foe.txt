@@ -1074,7 +1074,7 @@ STRATAGEMSUnrelenting Aggression, Unshackled Wrath, Threat-cogitation Targeters,
 
 UNIT RULES
 Deadly Demise
-Cybernetica Datasmith + Kastelan Robots 1
+Cybernetica Datasmith + Kastelan Robots 1: Kastelan Robots only
 Ironstrider Ballistarii (1 of 2) 1
 Ironstrider Ballistarii (2 of 2) 1
 Onager Dunecrawler D3
@@ -1082,7 +1082,8 @@ Skorpius Disintegrator D3
 Feel No Pain
 Tech-Priest Enginseer · Necromechanic
 Omnissiah’s Blessing: In your Command phase, select one friendly ADEPTUS MECHANICUS model within 3" of this model. That model regains up to D3 lost wounds and, if it is a VEHICLE model, until the start of your next Command phase, that model has the Feel No Pain 5+ ability. Each model can only be selected for this ability once per Command phase.
-Cybernetica Datasmith + Kastelan Robots 4+
+Cybernetica Datasmith + Kastelan Robots
+Robotic Bodyguard: While a CYBERNETICA DATASMITH model is leading this unit, that model has the Feel No Pain 4+ ability.
 Leader
 Tech-Priest Enginseer · Necromechanic
 Lone Operative
@@ -3115,7 +3116,7 @@ When an enemy unit targets this unit with ranged attacks, until that enemy unit 
 
 On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot.
 Rules
-Support, Deadly Demise 1, Doctrina Imperatives, Feel No Pain 4+, Cyber-psalm Programming, Murderous Imperative
+Support, Deadly Demise 1 (Kastelan Robots), Doctrina Imperatives, Cyber-psalm Programming, Murderous Imperative
 Stratagems
 
 COHORT CYBERNETICA Motive Imperative, Auto-divinatory Targeting, Machine Spirit Resurgent, Machine Superiority, Transcendent Cogitation, Benevolence of the Omnissiah
@@ -4243,7 +4244,7 @@ Deadly Demise
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator (Kastelan Robots only), Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this rule
 
@@ -4254,7 +4255,7 @@ Deadly Demise 1
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator (Kastelan Robots only), Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this rule
 
@@ -4265,7 +4266,7 @@ Deadly Demise D3
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator (Kastelan Robots only), Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this rule
 
@@ -4358,18 +4359,7 @@ Feel No Pain
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
-IN THIS ARMYTech-Priest Enginseer · Necromechanic (in Omnissiah’s Blessing), Cybernetica Datasmith · Martial Signatum Amplificator
-
-Ask about this rule
-
-######## popup rule:Feel No Pain 4+ · PURGE GOES THE FOE Purge goes the Foe
-CORE RULE
-
-Feel No Pain 4+
-
-This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
-
-IN THIS ARMYTech-Priest Enginseer · Necromechanic (in Omnissiah’s Blessing), Cybernetica Datasmith · Martial Signatum Amplificator
+IN THIS ARMYTech-Priest Enginseer · Necromechanic (in Omnissiah’s Blessing), Cybernetica Datasmith · Martial Signatum Amplificator (in Robotic Bodyguard)
 
 Ask about this rule
 
@@ -4380,7 +4370,7 @@ Feel No Pain 5+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
-IN THIS ARMYTech-Priest Enginseer · Necromechanic (in Omnissiah’s Blessing), Cybernetica Datasmith · Martial Signatum Amplificator
+IN THIS ARMYTech-Priest Enginseer · Necromechanic (in Omnissiah’s Blessing), Cybernetica Datasmith · Martial Signatum Amplificator (in Robotic Bodyguard)
 
 Ask about this rule
 
@@ -4391,7 +4381,7 @@ Feel No Pain 6+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
-IN THIS ARMYTech-Priest Enginseer · Necromechanic (in Omnissiah’s Blessing), Cybernetica Datasmith · Martial Signatum Amplificator
+IN THIS ARMYTech-Priest Enginseer · Necromechanic (in Omnissiah’s Blessing), Cybernetica Datasmith · Martial Signatum Amplificator (in Robotic Bodyguard)
 
 Ask about this rule
 

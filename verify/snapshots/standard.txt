@@ -18,7 +18,7 @@ Ranged weapons
 Melee weapons
 17
 Abilities
-30
+31
 Rules
 Damage calculator
 
@@ -759,6 +759,10 @@ While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s mele
 
 Re-roll hit rolls of 1.
 Re-roll wound rolls of 1.
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
+
 Reborn in Blood
 Start of the battle round
 
@@ -1064,7 +1068,7 @@ UNIT RULES
 Deadly Demise
 Angron D6
 Slaughterbound D3
-Slaughterbound + Exalted Eightbound D3
+Slaughterbound + Exalted Eightbound D3: Slaughterbound only
 Chaos Rhino D3
 Forgefiend D3
 Deep Strike
@@ -1087,7 +1091,7 @@ Slaughterbound leads Exalted Eightbound
 Scouts
 Slaughterbound
 Lord of the Eightbound: If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, until the end of the battle, this model has the Deep Strike and Scouts 6" abilities.
-Slaughterbound + Exalted Eightbound 6": Slaughterbound only
+Slaughterbound + Exalted Eightbound 6" (in Lord of the Eightbound)
 Eightbound 6"
 
 ######## bases · RULES Bases & proxies
@@ -1626,7 +1630,7 @@ of 5 destroyed
 Samni’arius and Spinegrinder: sweep
 Charged this turn
 ×
-15 NOT COUNTED
+16 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1719,11 +1723,13 @@ if it applies
 +10% wiped
 +0.1
 MODELS
-NOT COUNTED IN THE DAMAGE TAB (4)
+NOT COUNTED IN THE DAMAGE TAB (5)
 The Blood God’s Favour
 “Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.” · not counted in the Damage tab
 Overwhelming Wrath
 “Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
 Reborn in Blood
 “At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. …” · not counted in the Damage tab
 Wrathful Presence
@@ -2816,6 +2822,10 @@ While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s mele
 
 Re-roll hit rolls of 1.
 Re-roll wound rolls of 1.
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
+
 Reborn in Blood
 Start of the battle round
 
@@ -3316,7 +3326,7 @@ Slaughterbound
 6+
 1
 5+
-Exalted Eightbound×3
+Exalted Eightbound
 40mm
 10"
 6
@@ -3405,7 +3415,7 @@ Fight · Either turn
 Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
 
 Rules
-Deadly Demise D3, Leader, Deep Strike, Blessings of Khorne, Scouts 6" (Slaughterbound), Relentless Rage, Wrath of Khorne
+Deadly Demise D3 (Slaughterbound), Leader, Deep Strike, Blessings of Khorne, Scouts 6" (Slaughterbound), Relentless Rage, Wrath of Khorne
 Stratagems
 
 BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
@@ -4793,7 +4803,7 @@ Deadly Demise
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYAngron, Slaughterbound, Slaughterbound · Berzerker Glaive, Chaos Rhino, Forgefiend
+IN THIS ARMYAngron, Slaughterbound, Slaughterbound · Berzerker Glaive (Slaughterbound only), Chaos Rhino, Forgefiend
 
 Ask about this rule
 
@@ -4804,7 +4814,7 @@ Deadly Demise D3
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYAngron, Slaughterbound, Slaughterbound · Berzerker Glaive, Chaos Rhino, Forgefiend
+IN THIS ARMYAngron, Slaughterbound, Slaughterbound · Berzerker Glaive (Slaughterbound only), Chaos Rhino, Forgefiend
 
 Ask about this rule
 
@@ -4815,7 +4825,7 @@ Deadly Demise D6
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYAngron, Slaughterbound, Slaughterbound · Berzerker Glaive, Chaos Rhino, Forgefiend
+IN THIS ARMYAngron, Slaughterbound, Slaughterbound · Berzerker Glaive (Slaughterbound only), Chaos Rhino, Forgefiend
 
 Ask about this rule
 
@@ -5106,7 +5116,7 @@ EFFECT: Your unit moves as described in Moving (03).
 
 AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
 
-IN THIS ARMYSlaughterbound (in Lord of the Eightbound), Slaughterbound · Berzerker Glaive (Slaughterbound only), Eightbound
+IN THIS ARMYSlaughterbound (in Lord of the Eightbound), Slaughterbound · Berzerker Glaive (in Lord of the Eightbound), Eightbound
 
 Ask about this rule
 
@@ -5131,7 +5141,7 @@ EFFECT: Your unit moves as described in Moving (03).
 
 AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
 
-IN THIS ARMYSlaughterbound (in Lord of the Eightbound), Slaughterbound · Berzerker Glaive (Slaughterbound only), Eightbound
+IN THIS ARMYSlaughterbound (in Lord of the Eightbound), Slaughterbound · Berzerker Glaive (in Lord of the Eightbound), Eightbound
 
 Ask about this rule
 

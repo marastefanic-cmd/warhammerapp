@@ -1050,7 +1050,7 @@ Duellist’s Hubris: At the start of the Fight phase; if this model is not leadi
 Firing Deck
 Chaos Rhino 2
 Infiltrators
-Lord Exultant + Infractors
+Lord Exultant + Infractors (in Lord of the Host)
 Lord of the Host: If this model is attached to an EMPEROR’S CHILDREN BATTLELINE unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6" abilities.
 Tormentors
 Leader
@@ -3005,7 +3005,7 @@ Your Shooting / Fight (either turn)
 At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units that phase, the bearer’s unit takes a Leadership test. If that test is passed, you gain 1CP.
 
 Rules
-Leader, Scouts 6", Thrill Seekers, Pledges to the Dark Prince
+Leader, Scouts 6", Thrill Seekers, Infiltrators (Lord Exultant), Pledges to the Dark Prince
 Stratagems
 
 COTERIE OF THE CONCEITED Unshakeable Opponents, Unbound Arrogance, Armour of Abhorrence, Embrace the Pain, Martial Perfection, Protection of the Dark Prince

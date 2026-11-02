@@ -18,7 +18,7 @@ Ranged weapons
 Melee weapons
 13
 Abilities
-26
+27
 Rules
 Damage calculator
 
@@ -500,7 +500,7 @@ Inferno combi-bolter
 1
 RAPID FIRE 2, LETHAL HITS
 SCARAB OCCULT TERMINATORS
-Hellfyre missile rack×2WHICH MODELS: NOT SAID
+Hellfyre missile rack×2
 36"
 2
 3+
@@ -773,6 +773,10 @@ Your Movement
 Aura, Psychic · Movement · Your turn
 
 While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
+
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
 
 Unearthly Power
 Start of the battle round
@@ -1101,10 +1105,9 @@ Exalted Sorcerer · Incandaeum
 1× 32mm
 Aspiring Sorcerer · Force weapon + Malefic Curse + Warpflame pistol
 1× 32mm
-Soulreaper cannon · no Warpflamer
+Soulreaper cannon · no Warpflamer · Icon of Flame
 3× 32mm
 standard Close combat weapon, Warpflamer
-1× Icon of Flame: New Recruit lists it for the Rubric Marines, not which model carries it
 Sorcerer in Terminator Armour · Umbralefic Crystal
 + Scarab Occult Terminators
 1× 40mm
@@ -1114,8 +1117,7 @@ Scarab Occult Sorcerer · Force weapon + Malefic Curse
 7× 40mm
 standard Inferno combi-bolter, Prosperine khopesh
 2× 40mm
-Soulreaper cannon · no Inferno combi-bolter
-2× Hellfyre missile rack: New Recruit lists them for the Scarab Occult Terminators, not which models carry them
+Soulreaper cannon + Hellfyre missile rack · no Inferno combi-bolter
 Tzaangors
 1× 32mm
 Twistbray
@@ -1256,7 +1258,7 @@ Add a group
 of 5 destroyed
 8.6 wounds lost · wiped in 61% of games
 Nothing ticked: the datasheets as printed
-16 NOT COUNTED
+17 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1378,13 +1380,15 @@ UNIT RULES
 
 None that change these numbers.
 
-NOT COUNTED IN THE DAMAGE TAB (5)
+NOT COUNTED IN THE DAMAGE TAB (6)
 Impossible Form
 “Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.” · not counted in the Damage tab
 Treason of Tzeentch
 “At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.” · not counted in the Damage tab
 Time Flux
 “While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
 Unearthly Power
 “At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 Lord of the Planet of the Sorcerers
@@ -1552,7 +1556,7 @@ of 5 destroyed
 Blade of Magnus: sweep
 Charged this turn
 ×
-16 NOT COUNTED
+17 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1638,13 +1642,15 @@ UNIT RULES
 
 None that change these numbers.
 
-NOT COUNTED IN THE DAMAGE TAB (5)
+NOT COUNTED IN THE DAMAGE TAB (6)
 Impossible Form
 “Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.” · not counted in the Damage tab
 Treason of Tzeentch
 “At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.” · not counted in the Damage tab
 Time Flux
 “While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
 Unearthly Power
 “At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 Lord of the Planet of the Sorcerers
@@ -1813,7 +1819,7 @@ Shoot 4.30 · Fight 0.68 · the charge is taken to succeed
 Blade of Magnus: sweep
 Charged this turn
 ×
-32 NOT COUNTED
+34 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1931,13 +1937,15 @@ UNIT RULES
 
 None that change these numbers.
 
-NOT COUNTED IN THE DAMAGE TAB (5)
+NOT COUNTED IN THE DAMAGE TAB (6)
 Impossible Form
 “Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.” · not counted in the Damage tab
 Treason of Tzeentch
 “At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.” · not counted in the Damage tab
 Time Flux
 “While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
 Unearthly Power
 “At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 Lord of the Planet of the Sorcerers
@@ -2064,13 +2072,15 @@ UNIT RULES
 
 None that change these numbers.
 
-NOT COUNTED IN THE DAMAGE TAB (5)
+NOT COUNTED IN THE DAMAGE TAB (6)
 Impossible Form
 “Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.” · not counted in the Damage tab
 Treason of Tzeentch
 “At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.” · not counted in the Damage tab
 Time Flux
 “While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
 Unearthly Power
 “At the start of the battle round, select one of the abilities in the Crimson King section (see left). Until the start of the next battle round, this model has that ability.” · not counted in the Damage tab
 Lord of the Planet of the Sorcerers
@@ -2629,6 +2639,10 @@ Aura, Psychic · Movement · Your turn
 
 While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
 
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
+
 Unearthly Power
 Start of the battle round
 
@@ -2813,12 +2827,10 @@ Astral Blast, Force weapon, Inferno bolt pistol, Prosperine khopesh
 Leading Rubric Marines
 1× Aspiring Sorcerer
 Force weapon, Malefic Curse, Warpflame pistol
-1× Rubric Marine w/ soulreaper cannon
+1× Rubric Marine w/ soulreaper cannon (Icon of Flame)
 Close combat weapon, Soulreaper cannon
 3× Rubric Marine w/ warpflamer
 Close combat weapon, Warpflamer
-1× Icon of Flame
-New Recruit lists it for the Rubric Marines, not which model carries it
 Unit
 M
 T
@@ -3054,9 +3066,7 @@ Force weapon, Malefic Curse, Inferno combi-bolter
 7× Scarab Occult Terminator
 Inferno combi-bolter, Prosperine khopesh
 2× Scarab Occult Terminator w/ soulreaper cannon
-Prosperine khopesh, Soulreaper cannon
-2× Hellfyre missile rack
-New Recruit lists them for the Scarab Occult Terminators, not which models carry them
+Prosperine khopesh, Soulreaper cannon, Hellfyre missile rack
 Unit
 M
 T
@@ -3126,7 +3136,7 @@ Inferno combi-bolter
 1
 RAPID FIRE 2, LETHAL HITS
 SCARAB OCCULT TERMINATORS
-Hellfyre missile rack×2WHICH MODELS: NOT SAID
+Hellfyre missile rack×2
 36"
 2
 3+

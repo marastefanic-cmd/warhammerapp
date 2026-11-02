@@ -18,7 +18,7 @@ Ranged weapons
 Melee weapons
 13
 Abilities
-15
+16
 Rules
 Damage calculator
 
@@ -575,6 +575,10 @@ While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s mele
 
 Re-roll hit rolls of 1.
 Re-roll wound rolls of 1.
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
+
 Reborn in Blood
 Start of the battle round
 
@@ -1229,7 +1233,7 @@ of 5 destroyed
 Samni’arius and Spinegrinder: sweep
 Charged this turn
 ×
-14 NOT COUNTED
+15 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1322,11 +1326,13 @@ if it applies
 +10% wiped
 +0.1
 MODELS
-NOT COUNTED IN THE DAMAGE TAB (4)
+NOT COUNTED IN THE DAMAGE TAB (5)
 The Blood God’s Favour
 “Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.” · not counted in the Damage tab
 Overwhelming Wrath
 “Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.” · not counted in the Damage tab
+Supreme Commander
+“If this model is in your army, it must be your WARLORD.” · not counted in the Damage tab
 Reborn in Blood
 “At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. …” · not counted in the Damage tab
 Wrathful Presence
@@ -2331,6 +2337,10 @@ While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s mele
 
 Re-roll hit rolls of 1.
 Re-roll wound rolls of 1.
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
+
 Reborn in Blood
 Start of the battle round
 

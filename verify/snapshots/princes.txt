@@ -1081,7 +1081,7 @@ UNIT RULES
 Deadly Demise
 Daemon Prince · Helm of Brazen Ire D3
 Daemon Prince · Berzerker Glaive D3
-Slaughterbound + Exalted Eightbound D3
+Slaughterbound + Exalted Eightbound D3: Slaughterbound only
 Chaos Rhino D3
 Forgefiend D3
 Deep Strike
@@ -1106,7 +1106,7 @@ Lord of Murder: While this model is within 3" of one or more friendly WORLD EATE
 Daemon Prince · Berzerker Glaive
 Lord of Murder: While this model is within 3" of one or more friendly WORLD EATERS INFANTRY units, this model has the Lone Operative ability.
 Scouts
-Slaughterbound + Exalted Eightbound 6": Slaughterbound only
+Slaughterbound + Exalted Eightbound 6" (in Lord of the Eightbound)
 Eightbound 6"
 
 ######## bases · RULES Bases & proxies
@@ -3464,7 +3464,7 @@ Slaughterbound
 6+
 1
 5+
-Exalted Eightbound×3
+Exalted Eightbound
 40mm
 10"
 6
@@ -3552,7 +3552,7 @@ Fight · Either turn
 Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
 
 Rules
-Deadly Demise D3, Leader, Deep Strike, Blessings of Khorne, Scouts 6" (Slaughterbound), Relentless Rage, Wrath of Khorne
+Deadly Demise D3 (Slaughterbound), Leader, Deep Strike, Blessings of Khorne, Scouts 6" (Slaughterbound), Relentless Rage, Wrath of Khorne
 Stratagems
 
 BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
@@ -4770,7 +4770,7 @@ Deadly Demise
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Slaughterbound · Battle-lust, Chaos Rhino, Forgefiend
+IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Slaughterbound · Battle-lust (Slaughterbound only), Chaos Rhino, Forgefiend
 
 Ask about this rule
 
@@ -4781,7 +4781,7 @@ Deadly Demise D3
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Slaughterbound · Battle-lust, Chaos Rhino, Forgefiend
+IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Slaughterbound · Battle-lust (Slaughterbound only), Chaos Rhino, Forgefiend
 
 Ask about this rule
 
@@ -5076,7 +5076,7 @@ EFFECT: Your unit moves as described in Moving (03).
 
 AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
 
-IN THIS ARMYSlaughterbound · Battle-lust (Slaughterbound only), Eightbound
+IN THIS ARMYSlaughterbound · Battle-lust (in Lord of the Eightbound), Eightbound
 
 Ask about this rule
 
@@ -5101,7 +5101,7 @@ EFFECT: Your unit moves as described in Moving (03).
 
 AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
 
-IN THIS ARMYSlaughterbound · Battle-lust (Slaughterbound only), Eightbound
+IN THIS ARMYSlaughterbound · Battle-lust (in Lord of the Eightbound), Eightbound
 
 Ask about this rule
 

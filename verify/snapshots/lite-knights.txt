@@ -2676,7 +2676,7 @@ Already in OC
 This unit has +1 OC.
 This unit can ignore modifiers to this unit’s Ld.
 Rules
-Deep Strike, Feel No Pain 5+*, Feel No Pain 5+ (Trajann Valoris), Leader, Aegis of the Emperor, Aquila Commander, Martial Ka'tah, Magna Imperator
+Deep Strike, Feel No Pain 5+*, Feel No Pain 5+ (Trajann Valoris), Leader, Aegis of the Emperor, Aquila Commander, Martial Ka’tah, Magna Imperator
 Stratagems
 
 EMPEROR’S CHOSEN Impenetrable Bastion, In Auramite Clad, Superhuman Focus
