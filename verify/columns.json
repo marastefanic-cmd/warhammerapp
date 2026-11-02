@@ -32,11 +32,11 @@
    "columns": {
     "pattern": {
      "source": "hand",
-     "note": "signed off (approvals.json, rule-alias)"
+     "note": "which chip opens which rule: mechanical where it reads the rule’s own name (verify/texts.js alias: “feel no pain”, its value aside), a player’s word for a rule otherwise, signed off (approvals.json, rule-alias); it writes no line"
     },
     "rule": {
-     "source": "hand",
-     "note": "the RULES entry it opens"
+     "source": "derived",
+     "note": "the RULES entry it opens: verify/texts.js alias fails on one that is not there"
     }
    }
   },
@@ -131,7 +131,7 @@
     },
     "aliases": {
      "source": "hand",
-     "note": "words players use for a rule that has another name; signed off (rule-alias)"
+     "note": "words players use for a rule that has another name: mechanical where the pattern reads the rule’s name (verify/texts.js alias), signed off otherwise (rule-alias); it writes no line"
     },
     "armyRules": {
      "source": "gw",
@@ -142,8 +142,8 @@
      "note": "see FACTIONS.detachments"
     },
     "allies": {
-     "source": "hand",
-     "note": "an allied unit's reason to be in a list: New Recruit's ally name (role \"Allies: X\") -> the rule that lets X's units into this faction's army (Assigned Agents, Daemonic Pact, the Deathwatch Support detachment's Mission Tactics); its words are a RULES entry or the faction's own rule"
+     "source": "gw",
+     "note": "an allied unit’s reason to be in a list: New Recruit’s ally name (role “Allies: X”) -> the rule that lets X’s units into this faction’s army; verify/texts.js allies: the rule exists and its words name, in bold, a keyword of every unit of the faction’s lists in that role (AGENTS OF THE IMPERIUM, LEGIONES DAEMONICA, KILL TEAM)"
     }
    }
   },
@@ -187,16 +187,16 @@
      "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
     },
     "coreTwin": {
-     "source": "hand",
-     "note": "the core ability of the same name it is shown with; signed off"
+     "source": "derived",
+     "note": "the core ability of the same name it is shown with: verify/texts.js coreTwin, a RULES entry whose name is the rule’s, case aside"
     },
     "note": {
      "source": "gw",
      "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "tableAt": {
-     "source": "hand",
-     "note": "where Wahapedia prints the table inside the text (verify/texts.js reads it)"
+     "source": "wahapedia",
+     "note": "where its table is in its words: the number of its text lines Wahapedia’s faction page prints before the table’s first row (none: after them all); verify/texts.js tableAt checks it for every rule with a table the page prints"
     },
     "missing": {
      "source": "hand",
@@ -289,16 +289,16 @@
      "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
     },
     "coreTwin": {
-     "source": "hand",
-     "note": "the core ability of the same name it is shown with; signed off"
+     "source": "derived",
+     "note": "the core ability of the same name it is shown with: verify/texts.js coreTwin, a RULES entry whose name is the rule’s, case aside"
     },
     "note": {
      "source": "gw",
      "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "tableAt": {
-     "source": "hand",
-     "note": "where Wahapedia prints the table inside the text (verify/texts.js reads it)"
+     "source": "wahapedia",
+     "note": "where its table is in its words: the number of its text lines Wahapedia’s faction page prints before the table’s first row (none: after them all); verify/texts.js tableAt checks it for every rule with a table the page prints"
     },
     "missing": {
      "source": "hand",
@@ -350,16 +350,16 @@
      "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
     },
     "coreTwin": {
-     "source": "hand",
-     "note": "the core ability of the same name it is shown with; signed off"
+     "source": "derived",
+     "note": "the core ability of the same name it is shown with: verify/texts.js coreTwin, a RULES entry whose name is the rule’s, case aside"
     },
     "note": {
      "source": "gw",
      "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "tableAt": {
-     "source": "hand",
-     "note": "where Wahapedia prints the table inside the text (verify/texts.js reads it)"
+     "source": "wahapedia",
+     "note": "where its table is in its words: the number of its text lines Wahapedia’s faction page prints before the table’s first row (none: after them all); verify/texts.js tableAt checks it for every rule with a table the page prints"
     },
     "missing": {
      "source": "hand",

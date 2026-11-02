@@ -17,6 +17,7 @@
      noteForm       every app note (army/detachment rule, stratagem, ability) is GW's words alone, each quoted under a fixed source label
                     (NOTE_LABELS: "Wahapedia FAQ: “…” “…”", "FAQ (Faction Pack 1.3): “…” “…”"): no prose of the app's
      noteQuote      every quotation (“…”) inside a note, word for word in the documents its label names (GW's or Wahapedia's)
+     alias, allies, coreTwin, tableAt   the rule tables' own columns, by mechanical checks (below, "the rule tables' own columns")
      refQuote       a reference sheet's quote (ref) is GW's words of the ability or stratagem it names, verbatim, and what it names is the list's
    A line marked "*Wahapedia core rules (…): …*" (a sentence GW's Core Rules PDF does not print) is checked word for word in
    Wahapedia's core rules only.
@@ -1585,6 +1586,44 @@ for (const a of D.armies) for (const u of a.units) for (const ab of u.abilities 
   const by = u.ref && a.units.find(x => x.id === u.ref.by), names = x => [x.name, x.leads].concat((x.also || []).map(c => c.name));
   checkQuotes(a.id, u.id + ' / ability:' + ab.name, ab.note, own, dsDocIds(a.faction, names(u).concat(u.ref ? [u.ref.of] : [], by ? names(by) : [])));
 }
+
+/* ------------------------------------------------------------------ the rule tables' own columns, by mechanical checks */
+// alias      RULE_ALIASES / FACTIONS.aliases [pattern, rule]: the rule it opens exists (RULES, or the faction's army or detachment rule); a pattern
+//            that reads the rule's own name ("Feel No Pain" for /^feel no pain/i, its value aside) is mechanical, any other is a player's word
+//            for it, reviewed (verify/helpers.js rule-alias)
+// allies     FACTIONS.allies { New Recruit's ally name: rule }: the rule exists, and for every unit of the faction's lists in that role ("Allies: X")
+//            the rule's words name one of its keywords in bold (its Faction keyword, AGENTS OF THE IMPERIUM; KILL TEAM); an entry no unit uses fails
+// coreTwin   an army rule's core ability of the same name: a RULES entry whose name is the army rule's, case aside
+// tableAt    where a rule's table is in its words: the number of its text lines Wahapedia's faction page prints before the table's first row
+//            (none: after them all), for every army or detachment rule with a table the page prints
+const ruleIn = (F, name) => (F.armyRules || []).concat(Object.values(F.detachments || {}).flatMap(detRules_)).find(r => r && r.name === name);
+for (const [re, k] of D.ruleAliases || []) { count('alias'); if (!D.rules[k]) fail('alias', 'core', String(re), 'rule', k, 'no RULES entry of this name', ''); else if (re.test(k)) count('aliasName'); }
+for (const fk of FACTIONS) for (const [re, k] of D.factions[fk].aliases || []) { count('alias'); if (!D.rules[k] && !ruleIn(D.factions[fk], k)) fail('alias', fk, String(re), 'rule', k, 'no rule of this name', ''); else if (re.test(k)) count('aliasName'); }
+for (const fk of FACTIONS) for (const [ally, k] of Object.entries(D.factions[fk].allies || {})) {
+  count('allies');
+  const r = ruleIn(D.factions[fk], k), text = r ? [r.text].concat((r.table || []).map(t => t.join(' '))).join('\n') : D.rules[k];
+  if (!text) { fail('allies', fk, 'allies:' + ally, 'rule', k, 'no rule of this name', ''); continue; }
+  const bold = [...String(text).matchAll(/\*\*([^*]+)\*\*/g)].map(m => m[1].trim().toUpperCase());
+  const us = D.armies.filter(a => a.faction === fk).flatMap(a => a.units).filter(u => u.role === 'Allies: ' + ally);
+  if (!us.length) fail('allies', fk, 'allies:' + ally, 'rule', k, 'no unit of the faction\'s lists is in the role "Allies: ' + ally + '"', '');
+  for (const u of us) if (!u.kw.some(x => bold.includes(String(x).replace(/^Faction: /, '').toUpperCase()))) fail('allies', fk, u.id, 'allies:' + ally, k, 'its words name none of the unit\'s keywords in bold (' + u.kw.join(', ') + ')', '');
+}
+for (const fk of FACTIONS) for (const r of D.factions[fk].armyRules || []) if (r.coreTwin !== undefined) {
+  count('coreTwin');
+  if (!D.rules[r.coreTwin] || String(r.coreTwin).toLowerCase() !== String(r.name).toLowerCase()) fail('coreTwin', fk, r.name, 'coreTwin', r.coreTwin, 'not a RULES entry of the army rule\'s name, case aside', '');
+}
+{ const nl = t => norm(stripMarkup(String(t || ''))).replace(/[–—]/g, '-').toLowerCase();
+  for (const fk of FACTIONS) { const W = WAHA_ID[fk] || fk, file = path.join(CACHE, 'waha', W + '.txt'); if (!fs.existsSync(file)) continue;
+    const L = fs.readFileSync(file, 'utf8').split('\n'), LN = L.map(nl);
+    for (const r of (D.factions[fk].armyRules || []).concat(Object.values(D.factions[fk].detachments || {}).flatMap(detRules_))) { if (!r || !r.table) continue;
+      const at0 = LN.findIndex(l => l === nl(r.name)); if (at0 < 0) { if (r.tableAt != null) fail('tableAt', fk, r.name, 'tableAt', r.tableAt, 'the rule is not on its Wahapedia faction page: nothing to hold it to', ''); continue; }
+      const lines = String(r.text || '').split('\n'), pos = lines.map(x => { const n0 = nl(x).slice(0, 60); let j = at0 + 1; while (j < L.length && j < at0 + 80 && !LN[j].includes(n0)) j++; return j < at0 + 80 ? j : -1; });
+      const c0 = nl(r.table[0][0]).replace(/\s*·.*$/, '').slice(0, 20); let tj = at0 + 1; while (tj < L.length && tj < at0 + 80 && !LN[tj].startsWith(c0)) tj++;
+      if (pos.some(x => x < 0) || tj >= at0 + 80) { if (r.tableAt != null) fail('tableAt', fk, r.name, 'tableAt', r.tableAt, 'its words or its table are not found on its Wahapedia faction page', ''); continue; }
+      count('tableAt');
+      const before = pos.filter(x => x < tj).length, want = before === lines.length ? undefined : before;
+      if ((r.tableAt == null ? undefined : r.tableAt) !== want) fail('tableAt', fk, r.name, 'tableAt', r.tableAt, 'Wahapedia\'s page prints ' + before + ' of its ' + lines.length + ' text lines before the table', '');
+    } } }
 
 /* ------------------------------------------------------------------ deviations, output, provenance */
 let devs = [];

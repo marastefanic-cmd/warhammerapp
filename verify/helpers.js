@@ -102,8 +102,7 @@ function items(D, appSource){
       // (calcMods, calcDefs, calcNc, both, limit: the Damage tab's own reading of an army rule; parts: the parts of a detachment rule
       // for some of its units only, each with its needs and its footnote, "When targeted" line or the army rule it gives)
       for(const k of RULE_KEYS) if(r[k] !== undefined && !(k === 'needs' && needsDerived)) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
-      // an army rule shown with the core ability of the same name (Super-heavy Walker): the pairing, against both texts
-      if(r.coreTwin !== undefined) add(a.id, 'rule-coreTwin', where + ' · ' + r.name, { coreTwin:r.coreTwin }, { rule:r.name, text:srcText, core:D.rules[r.coreTwin] || null });
+      // (an army rule shown with the core ability of the same name, coreTwin: verify/texts.js coreTwin, the names case aside; no judgement)
     };
     for(const r of f.armyRules) rulesMeta(a.faction + ' army rule', r, r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : ''));
     for(const id of a.detachments){
@@ -138,10 +137,10 @@ function items(D, appSource){
   for(const s of D.coreStratagems) for(const k of STRAT_KEYS)
     if(s[k] !== undefined) add('core', 'strat-' + k, 'Core · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
   // which rule each keyword spelling opens (app notes inside a rules text: none, verify/texts.js appNote)
-  for(const [re, k] of D.ruleAliases) add('core', 'rule-alias', String(re), { opens:k }, { rule:k, text:(D.rules[k] || '').slice(0, 300) });
-  for(const f of Object.values(D.factions)) for(const [re, k] of f.aliases || []) add(f.name, 'rule-alias', String(re), { opens:k }, { rule:k });
-  // the allies a faction may take (FACTIONS.allies: the role New Recruit prints → the rule that brings them in), against those rules
-  for(const f of Object.values(D.factions)) if(f.allies) add(f.name, 'faction-allies', f.name, { allies:f.allies }, { rules:Object.values(f.allies).map(n => n + ': ' + (D.rules[n] || f.armyRules.concat(Object.values(f.detachments).flatMap(detRules_)).filter(r => r.name === n).map(r => r.text).join('\n'))) });
+  // (a pattern that reads its rule's own name is mechanical, verify/texts.js alias: only a player's word for a rule is a judgement)
+  for(const [re, k] of D.ruleAliases) if(!re.test(k)) add('core', 'rule-alias', String(re), { opens:k }, { rule:k, text:(D.rules[k] || '').slice(0, 300) });
+  for(const f of Object.values(D.factions)) for(const [re, k] of f.aliases || []) if(!re.test(k)) add(f.name, 'rule-alias', String(re), { opens:k }, { rule:k });
+  // (the allies a faction may take, FACTIONS.allies: verify/texts.js allies holds each to its rule's words, no judgement)
   // a sentence verify/readings.js reads as a bonus with no reading, declared no numeric bonus after all (readings-gaps.json
   // status:'not-applicable', with its why): that declaration, against the ability's words
   for(const [k, g] of Object.entries(readJSON(path.join(ROOT, 'verify/readings-gaps.json'), {}))) if(g && g.status === 'not-applicable')
