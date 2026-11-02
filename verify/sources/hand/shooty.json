@@ -6,13 +6,23 @@
  },
  "units": {
   "dakkarig-herder": {
-   "short": "Big Mek"
+   "short": "Big Mek",
+   "why": "short: the name the unit screen and the lists show for the Big Mek Dakkarig, as data.js has always shown it."
   },
   "dakkarig-boosta": {
-   "short": "Big Mek"
+   "short": "Big Mek",
+   "why": "short: the name the unit screen and the lists show for the Big Mek Dakkarig, as data.js has always shown it."
   },
   "bigmek-mega": {
-   "short": "Big Mek"
+   "short": "Big Mek",
+   "why": "short: the name the unit screen and the lists show for the Big Mek in Mega Armour, as data.js has always shown it."
   }
+ },
+ "ids": {
+  "wazdakka": "the unit's id since Shooty was first imported from New Recruit's PDF (verify/import-nr.js); the app keeps what a player sets per unit (ticks, picks) by id, so a re-import keeps it",
+  "dakkarig-herder": "the unit's id since Shooty was first imported from New Recruit's PDF (verify/import-nr.js); the app keeps what a player sets per unit (ticks, picks) by id, so a re-import keeps it",
+  "dakkarig-boosta": "the unit's id since Shooty was first imported from New Recruit's PDF (verify/import-nr.js); the app keeps what a player sets per unit (ticks, picks) by id, so a re-import keeps it",
+  "bigmek-mega": "the unit's id since Shooty was first imported from New Recruit's PDF (verify/import-nr.js); the app keeps what a player sets per unit (ticks, picks) by id, so a re-import keeps it",
+  "mek-flashgitz": "the unit's id since Shooty was first imported from New Recruit's PDF (verify/import-nr.js); the app keeps what a player sets per unit (ticks, picks) by id, so a re-import keeps it"
  }
 }

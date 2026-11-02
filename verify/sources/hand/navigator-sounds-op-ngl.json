@@ -10,6 +10,18 @@
     "Thundercharge": "Needs a thundershock spear and bellatus reaper chainsword: not this loadout"
    },
    "why": "As 4-megas-and-a-destrier's and 6-bigs's Destrier (the same datasheet and loadout: titanic feet, no thundershock spear or bellatus reaper chainsword)."
+  },
+  "cerastus-knight-atrapos": {
+   "why": "As 4-megas-and-a-destrier's Atrapos (the same datasheet and enhancement): Bringer of Justice's +2 A is already in the melee profiles (New Recruit's), only its +1 to hit is a footnote. No Atrapos’ Duty aura: it is tagged (Bondsman), not (Aura), and this list has no ARMIGER."
+  },
+  "knight-crusader": {
+   "why": "As 4-megas-and-a-destrier's Crusader (the same datasheet and enhancement): Hunter’s Eye's [IGNORES COVER] is already on every ranged weapon (New Recruit's), no footnote."
+  },
+  "knight-defender": {
+   "why": "Conversion: the conversion beam obliterator's weapon ability (GW's datasheet: \"Each time an attack is made with this weapon, if the target is more than 18\" away from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit\"); a condition the player ticks. Selfless Protector: not tagged (Aura), so not an aura; it protects other IMPERIAL KNIGHTS models from your army (a guard, as Emanatus Forcefield), not the Defender itself (it cannot be what hides itself). Defender’s Duty: tagged (Bondsman), affects only an ARMIGER model; this list has none."
+  },
+  "knight-errant": {
+   "why": "As 6-bigs's Errant (the same datasheet). Mysterious Guardian's timing is derive.js's (its moment, \"At the end of your opponent’s turn\", read after the enhancement's \"IMPERIAL KNIGHTS model only. (Once per battle, per army)\")."
   }
  }
 }

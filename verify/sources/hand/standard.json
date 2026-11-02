@@ -8,12 +8,14 @@
   "lord-on-juggernaut": {
    "na": {
     "Aggressive Advance": "Not leading a unit in this list"
-   }
+   },
+   "why": "Aggressive Advance works only \"While this model is leading a unit\"; the Lord on Juggernaut leads no unit in this list (New Recruit's export)."
   },
   "slaughterbound": {
    "na": {
     "Rage Eternal": "Not leading a unit in this list"
-   }
+   },
+   "why": "Rage Eternal works only \"While this model is leading a unit\"; this Slaughterbound leads no unit in this list (New Recruit's export)."
   }
  }
 }

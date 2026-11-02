@@ -81,6 +81,21 @@
      "why": "GW Faction Pack Chaos Daemons 1.2, Soul Grinder datasheet: \"… this model has that keyword and the additional wargear stated for that keyword below.\" followed by a table of four rows (keyword, wargear), which the app gives as Wahapedia marks them, one line each (Wahapedia: \"below:\")"
     }
    }
+  },
+  "daemon-prince-of-chaos-with-wings": {
+   "why": "Daemonic Allegiance: this list chose TZEENTCH (New Recruit: “Daemon Prince of Chaos with wings (Tzeentch)”); the TZEENTCH keyword and the infernal cannon’s A 6 (“add 3 to the Attacks characteristic of this model’s infernal cannon”) are the list’s values, the datasheet keeps GW’s A 3. Neverblade’s +2 S, +1 A and +1 AP are in the hellforged weapons’ profiles (New Recruit’s), its +1 to hit is a footnote."
+  },
+  "the-changeling": {
+   "why": "Mischief and Confusion is not tagged (Aura): its -1 to hit is on every attack of the enemy unit it selected, whatever that unit targets, so it is help for every unit of the list (a guard, as Necromechanic), not an aura."
+  },
+  "lord-of-change-infernal-puppeteer": {
+   "why": "Daemon Lord of Tzeentch (Aura): +1 S to the ranged attacks of friendly TZEENTCH LEGIONES DAEMONICA units within 6\", its own unit included (22.01). Greater Daemon of Tzeentch (Aura): Shadow of Chaos only, neither aura nor guard."
+  },
+  "lord-of-change-inescapable-eye": {
+   "why": "As the other Lord of Change (the same datasheet)."
+  },
+  "the-blue-scribes": {
+   "why": "P’tarix’s Sorcerous Syphon (Aura): -1 to the wound roll of Psychic Attacks made by enemy units within 12\" of The Blue Scribes, whatever they target: help for every unit of the list (guard), not an attack bonus."
   }
  },
  "refs": [

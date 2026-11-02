@@ -8,16 +8,19 @@
   "belisarius-cawl": {
    "notes": {
     "Supreme Commander": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
-   }
+   },
+   "why": "Supreme Commander: the Core Rules' 25.04 (Fill Your Army Roster) on what it means, quoted (verify/texts.js checks the quote)."
   },
   "thulia-ghuld": {
    "notes": {
     "Supreme Commander": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”",
     "Icon of War": "FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”"
-   }
+   },
+   "why": "Supreme Commander: the Core Rules' 25.04, quoted. Icon of War: GW's Faction Pack 1.4 FAQ on when the unit is selected, quoted (verify/texts.js checks it in the pack)."
   },
   "cybernetica-datasmith-kastelan-robots": {
-   "kwNote": "Kastelan Robots, Walker come from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator."
+   "kwNote": "Kastelan Robots, Walker come from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator.",
+   "why": "kwNote: SKITARII comes from the Martial Signatum Amplificator, the Datasmith's enhancement (\"Models in the bearer’s unit have the SKITARII keyword.\"), not from the parts' datasheets."
   }
  }
 }

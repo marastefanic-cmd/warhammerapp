@@ -1,12 +1,21 @@
 #!/usr/bin/env node
-/* verify/reimport.js: the gate step "reimport": every list with a New Recruit JSON export (verify/sources/nr-json/<list>.json) is
-   imported again, from nothing but its export, its hand file (verify/sources/hand/<list>.json) and the cached sources, and the result
-   must be data.js exactly, byte for byte: an imported list gets the very same outcome as the list the app has.
+/* verify/reimport.js: the gate step "reimport". What it guarantees:
 
-   Each list is re-imported alone (node verify/from-json.js <export> <list> --write) in a copy of this folder (its files as git lists
-   them, tracked and new, the source cache linked), so one list's run never sees another's. The files a --write writes must come out as
-   they are: data.js, verify/deviations-bsdata.json, verify/deviations-nr.json, verify/sources/waha-datasheets.txt and
-   verify/sources/bsdata-extract.json. A list without an export (Dread Host, Emperor's Chosen) keeps its stored rows; it is not re-imported.
+   1. Each list with a New Recruit JSON export (verify/sources/nr-json/<list>.json), imported again by verify/from-json.js --write
+      alone, in a copy of this folder (its files as git lists them, tracked and new, the source cache linked), gives data.js,
+      verify/deviations-bsdata.json, verify/deviations-nr.json, verify/sources/waha-datasheets.txt and verify/sources/bsdata-extract.json
+      byte for byte: a re-import changes nothing, so nothing in a list's data.js is a value only data.js holds, beyond what the import
+      itself keeps from it (below).
+   2. Every entry of every hand file (verify/sources/hand/*.json) carries its reason: a unit entry its why (or each of its columns its
+      own: texts.<ability>.why, kw.why), the source line, a stratagem gist its by, a rule's and a fix's why, an id its why.
+   3. An id that is not the one the unit's names give is kept only where the hand file names it (ids): an id renamed in data.js by hand
+      fails here.
+
+   What it does not guarantee: the import starts from data.js as it is, and keeps from it what a re-import is meant to keep (one
+   datasheet, one truth: a DATASHEETS row another list has; the units' ids as above; the old form of a label derive.js reads the same
+   way; words that equal GW's after markup normalisation). So it is not a proof that an import into a data.js without the list would
+   give the same; verify/import-test.js checks the in-app import of each export against its list. A list without an export (Dread
+   Host, Emperor's Chosen) keeps its stored rows; it is not re-imported.
 
      node verify/reimport.js              every export (in parallel, VERIFY_JOBS at a time, default 4)
      node verify/reimport.js <list> ...   only these
@@ -35,6 +44,17 @@ const firstDiff = (a, b) => {
   return { line: i + 1, data: clip(x[i]), reimport: clip(y[i]), lines: [x.length, y.length] };
 };
 
+// 2: every hand-file entry carries its reason
+const HDIR = path.join(ROOT, 'verify/sources/hand'), noWhy = [], said = x => typeof x === 'string' && x.trim().length > 0;
+for (const f of fs.readdirSync(HDIR).filter(f => f.endsWith('.json')).sort()) {
+  const h = JSON.parse(fs.readFileSync(path.join(HDIR, f), 'utf8'));
+  for (const [id, u] of Object.entries(h.units || {})) if (!said(u.why) && !Object.entries(u).filter(([k]) => k !== 'why').every(([k, v]) => k === 'texts' ? Object.values(v).every(x => said(x.why)) : k === 'kw' ? said(v.why) : false)) noWhy.push(f + ' units.' + id);
+  if (h.source && !said(h.source.why)) noWhy.push(f + ' source');
+  for (const [id, g] of Object.entries(h.gists || {})) if (!said(g.by) && !said(g.why)) noWhy.push(f + ' gists.' + id);
+  for (const k of ['rules', 'armyRules']) for (const [id, x] of Object.entries(h[k] || {})) if (!said(x.why) && !(x.texts && said(x.texts.why)) && !(x.faq || []).length) noWhy.push(f + ' ' + k + '.' + id);
+  for (const x of h.fixes || []) if (!said(x.why)) noWhy.push(f + ' fixes ' + x.at);
+  for (const [id, w] of Object.entries(h.ids || {})) if (!said(w)) noWhy.push(f + ' ids.' + id);
+}
 const base = fs.mkdtempSync(path.join(os.tmpdir(), 'kodex-reimport-'));
 const results = {};
 const runOne = a => new Promise(done => {
@@ -49,8 +69,10 @@ const runOne = a => new Promise(done => {
       const A = fs.existsSync(path.join(ROOT, f)) ? fs.readFileSync(path.join(ROOT, f), 'utf8') : '', B = fs.existsSync(path.join(dir, f)) ? fs.readFileSync(path.join(dir, f), 'utf8') : '';
       if (A !== B) differ.push(Object.assign({ file: f }, firstDiff(A, B)));
     }
-    results[a] = { exit: code, differ, log: log.trim().split('\n').slice(-3).join('\n') };
-    console.error((code === 0 && !differ.length ? 'same ' : 'DIFF ') + a + (differ.length ? ': ' + differ.map(d => d.file + ' line ' + d.line).join(', ') : code ? ': exit ' + code : ''));
+    // 3: an id kept from data.js that the hand file does not name (verify/from-json.js lists it as not filled)
+    let ids = []; try { ids = (JSON.parse(fs.readFileSync(path.join(dir, 'verify/out/from-json-' + a + '.json'), 'utf8')).todo || []).filter(t => t.what === 'id').map(t => t.why); } catch (e) {}
+    results[a] = { exit: code, differ, ids, log: log.trim().split('\n').slice(-3).join('\n') };
+    console.error((code === 0 && !differ.length && !ids.length ? 'same ' : 'DIFF ') + a + (differ.length ? ': ' + differ.map(d => d.file + ' line ' + d.line).join(', ') : code ? ': exit ' + code : ''));
     fs.rmSync(dir, { recursive: true, force: true });
     done();
   });
@@ -59,12 +81,13 @@ const runOne = a => new Promise(done => {
   const queue = lists.slice();
   await Promise.all(Array.from({ length: Math.min(JOBS, queue.length) }, async () => { while (queue.length) await runOne(queue.shift()); }));
   fs.rmSync(base, { recursive: true, force: true });
-  const bad = lists.filter(a => results[a].exit !== 0 || results[a].differ.length);
+  const bad = lists.filter(a => results[a].exit !== 0 || results[a].differ.length || results[a].ids.length);
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive: true });
   fs.writeFileSync(path.join(ROOT, 'verify/out/reimport.json'), JSON.stringify({ lists, results }, null, 1) + '\n');
+  if (noWhy.length) { console.log('FAIL reimport: ' + noWhy.length + ' hand-file entries without a reason\n' + noWhy.map(x => ' - ' + x).join('\n')); process.exit(1); }
   if (bad.length) {
-    console.log('FAIL reimport: ' + bad.length + ' of ' + lists.length + ' exports do not re-import to data.js exactly\n' + bad.map(a => ' - ' + a + ': ' + (results[a].exit ? 'exit ' + results[a].exit + ' (' + results[a].log + ')' : results[a].differ.map(d => d.file + ' line ' + d.line + ': data.js ' + JSON.stringify(d.data) + ', re-import ' + JSON.stringify(d.reimport)).join('; '))).join('\n'));
+    console.log('FAIL reimport: ' + bad.length + ' of ' + lists.length + ' exports do not re-import to data.js exactly\n' + bad.map(a => ' - ' + a + ': ' + (results[a].exit ? 'exit ' + results[a].exit + ' (' + results[a].log + ')' : results[a].ids.concat(results[a].differ.map(d => d.file + ' line ' + d.line + ': data.js ' + JSON.stringify(d.data) + ', re-import ' + JSON.stringify(d.reimport))).join('; '))).join('\n'));
     process.exit(1);
   }
-  console.log('reimport: all ' + lists.length + ' New Recruit exports re-import to data.js byte for byte (' + OUTPUTS.length + ' files each: ' + OUTPUTS.join(', ') + ')');
+  console.log('reimport: all ' + lists.length + ' New Recruit exports re-import to data.js byte for byte (' + OUTPUTS.length + ' files each: ' + OUTPUTS.join(', ') + '); every hand-file entry has its reason; every id kept from data.js is named in its hand file');
 })();

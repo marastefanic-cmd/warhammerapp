@@ -8,22 +8,26 @@
   "norn-assimilator-synaptoprescience": {
    "notes": {
     "Singular Purpose": "With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers."
-   }
+   },
+   "why": "Singular Purpose's \"an Objective Control characteristic of 15\" with Enraged Behemoths' \"add 2 to the Objective Control characteristic\": the sources do not say which applies first, so the note gives both readings (15 or 17)."
   },
   "norn-assimilator-synaptoprescience-2": {
    "notes": {
     "Singular Purpose": "With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers."
-   }
+   },
+   "why": "As the other Norn Assimilator: Singular Purpose's OC 15 with Enraged Behemoths' +2, both readings (15 or 17)."
   },
   "norn-emissary-destabilising-predation": {
    "notes": {
     "Singular Purpose": "With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers."
-   }
+   },
+   "why": "As the Norn Assimilators: Singular Purpose's OC 15 with Enraged Behemoths' +2, both readings (15 or 17)."
   },
   "norn-emissary": {
    "notes": {
     "Singular Purpose": "With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers."
-   }
+   },
+   "why": "As the Norn Assimilators: Singular Purpose's OC 15 with Enraged Behemoths' +2, both readings (15 or 17)."
   }
  }
 }

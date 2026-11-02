@@ -47,7 +47,20 @@
    "gistOf": "c0a88e05"
   }
  },
- "units": {},
+ "units": {
+  "skarbrand": {
+   "why": "Rage Embodied (Aura): friendly KHORNE LEGIONES DAEMONICA units within 6\", his own unit included (22.01). Greater Daemon of Khorne (Aura) puts units within your army’s Shadow of Chaos: no attack or defence numbers, so neither aura nor guard."
+  },
+  "bloodthirster": {
+   "why": "Daemon Lord of Khorne (Aura): friendly KHORNE LEGIONES DAEMONICA units within 6\", its own unit included (22.01)."
+  },
+  "rendmaster-on-blood-throne": {
+   "why": "Blood Throne gives every friendly KHORNE LEGIONES DAEMONICA unit the bonus against the selected unit, but GW does not tag it (Aura): shown on the Rendmaster’s own weapons only."
+  },
+  "daemon-prince-of-chaos": {
+   "why": "Slaughterthirst (Aura): KHORNE LEGIONES DAEMONICA units within 6\" excluding MONSTERS, so not the Daemon Prince itself (22.01). Prince of Darkness (Aura): Stealth for LEGIONES DAEMONICA units within 6\". Daemonic Allegiance: this list chose KHORNE (New Recruit: “Daemon Prince of Chaos (Khorne)”); the KHORNE keyword and the hellforged weapons’ S 10 / 8 are the list’s values (verify/tables.js why), the datasheet keeps GW’s S 8 / 6."
+  }
+ },
  "armyRules": {
   "The Shadow of Chaos": {
    "by": "hand (Claude), quoted from GW’s Faction Pack: Chaos Daemons 1.2, Rules Updates FAQ",

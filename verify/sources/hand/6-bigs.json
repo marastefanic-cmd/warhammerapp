@@ -8,7 +8,8 @@
   "knight-destrier": {
    "na": {
     "Thundercharge": "Needs a thundershock spear and bellatus reaper chainsword: not this loadout"
-   }
+   },
+   "why": "Thundercharge needs the thundershock spear and the bellatus reaper chainsword (GW's datasheet); this list's Destriers have titanic feet (New Recruit's export), so it does nothing here."
   }
  }
 }

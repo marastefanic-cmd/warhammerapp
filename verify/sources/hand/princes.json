@@ -6,10 +6,12 @@
  },
  "units": {
   "daemon-prince-of-khorne-helm-of-brazen-ire": {
-   "short": "Daemon Prince"
+   "short": "Daemon Prince",
+   "why": "short: the name the unit screen and the lists show for the Daemon Prince of Khorne, as data.js has always shown it."
   },
   "daemon-prince-of-khorne-berzerker-glaive": {
-   "short": "Daemon Prince"
+   "short": "Daemon Prince",
+   "why": "short: the name the unit screen and the lists show for the Daemon Prince of Khorne, as data.js has always shown it."
   }
  }
 }

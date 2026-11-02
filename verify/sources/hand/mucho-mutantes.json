@@ -22,7 +22,8 @@
    },
    "partialRules": {
     "Cabal of Sorcerers": "Ahriman"
-   }
+   },
+   "why": "Wahapedia: Ahriman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened with Fatecaster greatbows are MOUNTED, not INFANTRY or PSYKER, and have no Cabal of Sorcerers (BSData the same)."
   },
   "exalted-sorcerer-on-disc-of-tzeentch-tzaangor-enlightened-with-fatecaster-greatbows": {
    "kwOnly": {
@@ -32,7 +33,8 @@
    },
    "partialRules": {
     "Cabal of Sorcerers": "Exalted Sorcerer on Disc of Tzeentch"
-   }
+   },
+   "why": "Wahapedia: the Exalted Sorcerer on Disc of Tzeentch is INFANTRY, MOUNTED … GRENADES, PSYKER; the Tzaangor Enlightened with Fatecaster greatbows are MOUNTED, without those, and have no Cabal of Sorcerers (BSData the same)."
   },
   "tzaangor-shaman-tzaangor-enlightened-curse-of-life": {
    "kwOnly": {
@@ -41,7 +43,8 @@
    },
    "partialRules": {
     "Cabal of Sorcerers": "Tzaangor Shaman"
-   }
+   },
+   "why": "Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have no Cabal of Sorcerers (BSData the same)."
   },
   "tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion": {
    "kwOnly": {
@@ -50,7 +53,8 @@
    },
    "partialRules": {
     "Cabal of Sorcerers": "Tzaangor Shaman"
-   }
+   },
+   "why": "Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have no Cabal of Sorcerers (BSData the same)."
   },
   "tzaangor-shaman-tzaangor-enlightened-flowing-flesh": {
    "kwOnly": {
@@ -60,7 +64,8 @@
    "partialRules": {
     "Cabal of Sorcerers": "Tzaangor Shaman",
     "Feel No Pain 4+": "Tzaangor Shaman"
-   }
+   },
+   "why": "Wahapedia: the Tzaangor Shaman is INFANTRY, MOUNTED … PSYKER; the Tzaangor Enlightened are MOUNTED, not INFANTRY or PSYKER, and have no Cabal of Sorcerers (BSData the same); Feel No Pain 4+ is the Shaman's, from his Flowing Flesh enhancement (\"The bearer has the Feel No Pain 4+ ability and a Wounds characteristic of 5.\")."
   }
  },
  "source": {
