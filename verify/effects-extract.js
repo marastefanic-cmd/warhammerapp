@@ -491,6 +491,8 @@ function extract(src, ctx){
   // a unit always riled up by its own words, one fixed pattern ("- This unit is **riled up**.", Super Runts): the Waaagh! army rule's
   // riled-up lines say so
   const riled = src.type === 'ability' && /^(?:-\s+)?this unit is riled up\.?$/m.test(String(src.text || '').split('\n').map(l => norm(l).trim()).join('\n'));
+  // (a stratagem whose TARGET was just destroyed and no box for the units its words name: its EFFECT, not counted, as one)
+  if(gone && !boxes.length && !nc.some(x => x.why === goneWhy)) nc.unshift({ quote:plainCase(src.effect), why:goneWhy });
   const dfn = defenceOf(src, us, V, ctx);
   const st = statOf(src, us, V);
   const snc = statNc(src, st, dfn.d, boxes);

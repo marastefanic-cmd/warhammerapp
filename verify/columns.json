@@ -1459,6 +1459,11 @@
      "source": "derived",
      "note": "a rule’s stat boxes: a characteristic of its units’ models its words change (“add 2 to the Objective Control characteristic of models in that unit”), the line under a unit’s profile on its screen (verify/effects-extract.js statOf; verify/lines.js LS)",
      "by": "verify/effects-migrate.js"
+    },
+    "snc": {
+     "source": "derived",
+     "note": "the sentences of a source’s words that change a characteristic (M, OC, T, Sv, W, Ld) no stat box counts: { quote, stat, why, foe (an enemy’s) }, listed under a unit’s profile “not counted here: see the rule” (verify/effects-extract.js statNc; verify/lines.js LS, LW)",
+     "by": "verify/effects-migrate.js"
     }
    }
   },
