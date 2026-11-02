@@ -2216,8 +2216,7 @@ const ARMIES = [
     {
       id:'kh-rn-the-betrayer-khorne-berzerkers', ds:['world-eaters/kharn-the-betrayer','world-eaters/khorne-berzerkers'], role:'Epic Hero', pts:285, ptsNote:'115 + Khorne Berzerkers 170',
       leads:'Khorne Berzerkers',
-      models:['1× Khârn the Betrayer','1× Khorne Berzerker Champion','7× Khorne Berzerker','2× Khorne Berzerker w/ eviscerator and plasma pistol'],
-      unplaced:['Icon of Khorne'],
+      models:['1× Khârn the Betrayer','1× Khorne Berzerker Champion (Icon of Khorne)','7× Khorne Berzerker','2× Khorne Berzerker w/ eviscerator and plasma pistol'],
       gear:[['Gorechild','Plasma pistol'],['Chainblade','Plasma pistol'],['Bolt pistol','Chainblade'],['Khornate eviscerator','Plasma pistol']],
       stats:[
         { name:'Khârn the Betrayer' },
@@ -2283,9 +2282,8 @@ const ARMIES = [
     {
       id:'lord-on-juggernaut-khorne-berzerkers', ds:['world-eaters/lord-on-juggernaut','world-eaters/khorne-berzerkers'], pts:455, ptsNote:'125 + Khorne Berzerkers 330', enhancement:'Archslaughterer',
       leads:'Khorne Berzerkers',
-      models:['1× Lord on Juggernaut','1× Khorne Berzerker Champion','15× Khorne Berzerker','4× Khorne Berzerker w/ eviscerator and plasma pistol'],
-      unplaced:['Icon of Khorne'],
-      gear:[['Bladed horn','Exalted chainblade','Plasma pistol'],['Chainblade','Plasma pistol'],['Bolt pistol','Chainblade'],['Khornate eviscerator','Plasma pistol']],
+      models:['1× Lord on Juggernaut','1× Khorne Berzerker Champion','15× Khorne Berzerker','3× Khorne Berzerker w/ eviscerator and plasma pistol','1× Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)'],
+      gear:[['Bladed horn','Exalted chainblade','Plasma pistol'],['Chainblade','Plasma pistol'],['Bolt pistol','Chainblade'],['Khornate eviscerator','Plasma pistol'],['Khornate eviscerator','Plasma pistol']],
       stats:[
         { name:'Lord on Juggernaut' },
         { name:'Khorne Berzerker ×20', M:'10"', from:{ M:'Aggressive Advance' } }
@@ -2403,8 +2401,7 @@ const ARMIES = [
     {
       id:'kh-rn-the-betrayer-khorne-berzerkers', ds:['world-eaters/kharn-the-betrayer','world-eaters/khorne-berzerkers'], role:'Epic Hero', pts:285, ptsNote:'115 + Khorne Berzerkers 170',
       leads:'Khorne Berzerkers',
-      models:['1× Khârn the Betrayer','1× Khorne Berzerker Champion','7× Khorne Berzerker','2× Khorne Berzerker w/ eviscerator and plasma pistol'],
-      unplaced:['Icon of Khorne'],
+      models:['1× Khârn the Betrayer','1× Khorne Berzerker Champion (Icon of Khorne)','7× Khorne Berzerker','2× Khorne Berzerker w/ eviscerator and plasma pistol'],
       gear:[['Gorechild','Plasma pistol'],['Chainblade','Plasma pistol'],['Bolt pistol','Chainblade'],['Khornate eviscerator','Plasma pistol']],
       stats:[
         { name:'Khârn the Betrayer' },
@@ -2583,8 +2580,8 @@ const ARMIES = [
     {
       id:'exalted-sorcerer-rubric-marines', ds:['thousand-sons/exalted-sorcerer','thousand-sons/rubric-marines'], role:'Character', pts:230, ptsNote:'115 + Rubric Marines 115', enhancement:'Incandaeum',
       leads:'Rubric Marines',
-      models:['1× Exalted Sorcerer','1× Aspiring Sorcerer','1× Rubric Marine w/ soulreaper cannon','2× Rubric Marine w/ warpflamer','1× Rubric Marine w/ warpflamer (Icon of Flame)'],
-      gear:[['Astral Blast','Force weapon','Inferno bolt pistol','Prosperine khopesh'],['Force weapon','Malefic Curse','Warpflame pistol'],['Close combat weapon','Soulreaper cannon'],['Close combat weapon','Warpflamer'],['Close combat weapon','Warpflamer']],
+      models:['1× Exalted Sorcerer','1× Aspiring Sorcerer','1× Rubric Marine w/ soulreaper cannon (Icon of Flame)','3× Rubric Marine w/ warpflamer'],
+      gear:[['Astral Blast','Force weapon','Inferno bolt pistol','Prosperine khopesh'],['Force weapon','Malefic Curse','Warpflame pistol'],['Close combat weapon','Soulreaper cannon'],['Close combat weapon','Warpflamer']],
       stats:[
         { name:'Exalted Sorcerer' },
         { name:'Rubric Marine', InSv:'4+', from:{ InSv:'Arcane Shield' } },
@@ -3501,8 +3498,7 @@ const ARMIES = [
     {
       id:'lord-on-juggernaut-khorne-berzerkers', ds:['world-eaters/lord-on-juggernaut','world-eaters/khorne-berzerkers'], pts:440, ptsNote:'110 + Khorne Berzerkers 330', enhancement:'Disciple of Khorne',
       leads:'Khorne Berzerkers',
-      models:['1× Lord on Juggernaut','1× Khorne Berzerker Champion','15× Khorne Berzerker','4× Khorne Berzerker w/ eviscerator and plasma pistol'],
-      unplaced:['Icon of Khorne'],
+      models:['1× Lord on Juggernaut','1× Khorne Berzerker Champion (Icon of Khorne)','15× Khorne Berzerker','4× Khorne Berzerker w/ eviscerator and plasma pistol'],
       gear:[['Bladed horn','Exalted chainblade','Plasma pistol'],['Chainblade','Plasma pistol'],['Bolt pistol','Chainblade'],['Khornate eviscerator','Plasma pistol']],
       stats:[
         { name:'Lord on Juggernaut' },
@@ -4119,9 +4115,8 @@ const ARMIES = [
     {
       id:'skulltaker-bloodletters', ds:['chaos-daemons/skulltaker','chaos-daemons/bloodletters'], role:'Epic Hero', pts:210, ptsNote:'85 + Bloodletters 125', upgrade:'Bane-Forged Weapons',
       leads:'Bloodletters',
-      models:['1× Skulltaker','1× Bloodreaper','9× Bloodletter'],
-      unplaced:['Daemonic Icon','Instrument of Chaos'],
-      gear:[['The Slayer Sword'],['Hellblade'],['Hellblade']],
+      models:['1× Skulltaker','1× Bloodreaper','7× Bloodletter','1× Bloodletter (Daemonic Icon)','1× Bloodletter (Instrument of Chaos)'],
+      gear:[['The Slayer Sword'],['Hellblade'],['Hellblade'],['Hellblade'],['Hellblade']],
       stats:[
         { name:'Skulltaker', Ld:'6+', from:{ Ld:'Daemonic Icon' } },
         { name:'Bloodletters ×10', Ld:'6+', from:{ Ld:'Daemonic Icon' } }
@@ -4188,9 +4183,8 @@ const ARMIES = [
     {
       id:'bloodmaster-bloodletters', ds:['chaos-daemons/bloodmaster','chaos-daemons/bloodletters'], role:'Character', pts:190, ptsNote:'65 + Bloodletters 125', upgrade:'Bane-Forged Weapons',
       leads:'Bloodletters',
-      models:['1× Bloodmaster','1× Bloodreaper','9× Bloodletter'],
-      unplaced:['Daemonic Icon','Instrument of Chaos'],
-      gear:[['Blade of blood'],['Hellblade'],['Hellblade']],
+      models:['1× Bloodmaster','1× Bloodreaper','7× Bloodletter','1× Bloodletter (Daemonic Icon)','1× Bloodletter (Instrument of Chaos)'],
+      gear:[['Blade of blood'],['Hellblade'],['Hellblade'],['Hellblade'],['Hellblade']],
       stats:[
         { name:'Bloodmaster', Ld:'6+', from:{ Ld:'Daemonic Icon' } },
         { name:'Bloodletters ×10', Ld:'6+', from:{ Ld:'Daemonic Icon' } }
@@ -4215,9 +4209,8 @@ const ARMIES = [
     {
       id:'skullmaster-bloodcrushers', ds:['chaos-daemons/skullmaster','chaos-daemons/bloodcrushers'], role:'Character', pts:195, ptsNote:'100 + Bloodcrushers 95', enhancement:'Brazenmaw',
       leads:'Bloodcrushers',
-      models:['1× Skullmaster','1× Bloodhunter','2× Bloodcrusher'],
-      unplaced:['Daemonic Icon','Instrument of Chaos'],
-      gear:[['Blade of blood','Juggernaut’s bladed horn'],['Hellblade','Juggernaut’s bladed horn'],['Hellblade','Juggernaut’s bladed horn']],
+      models:['1× Skullmaster','1× Bloodhunter','1× Bloodcrusher (Instrument of Chaos)','1× Bloodcrusher (Daemonic Icon)'],
+      gear:[['Blade of blood','Juggernaut’s bladed horn'],['Hellblade','Juggernaut’s bladed horn'],['Hellblade','Juggernaut’s bladed horn'],['Hellblade','Juggernaut’s bladed horn']],
       stats:[
         { name:'Skullmaster', Ld:'6+', from:{ Ld:'Daemonic Icon' } },
         { name:'Bloodcrushers ×3', Ld:'6+', from:{ Ld:'Daemonic Icon' } }

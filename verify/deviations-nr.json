@@ -2178,6 +2178,52 @@
  },
  {
   "army": "big-demons-baby",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "models",
+  "app": [
+   "1x Lord on Juggernaut",
+   "1x Khorne Berzerker Champion (Icon of Khorne)",
+   "15x Khorne Berzerker",
+   "4x Khorne Berzerker w/ eviscerator and plasma pistol"
+  ],
+  "source": [
+   "1x Lord on Juggernaut",
+   "1x Khorne Berzerker Champion",
+   "15x Khorne Berzerker",
+   "4x Khorne Berzerker w/ eviscerator and plasma pistol"
+  ],
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/big-demons-baby.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 15), which associates Icon of Khorne with the Khorne Berzerker Champion (the upgrade’s association to that model selection); the app’s models lines are the export’s (the same models and weapons).",
+  "evidence": "verify/sources/nr-json/big-demons-baby.json: the unit’s selections and their associations; verify/sources/nr/big-demons-baby.txt p2.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker Champion]",
+  "app": null,
+  "source": [
+   "Chainblade",
+   "Plasma pistol"
+  ],
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/big-demons-baby.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 15), which associates Icon of Khorne with the Khorne Berzerker Champion (the upgrade’s association to that model selection); the app’s models lines are the export’s (the same models and weapons).",
+  "evidence": "verify/sources/nr-json/big-demons-baby.json: the unit’s selections and their associations; verify/sources/nr/big-demons-baby.txt p2.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
+  "app": [
+   "Chainblade",
+   "Plasma pistol"
+  ],
+  "source": null,
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/big-demons-baby.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 15), which associates Icon of Khorne with the Khorne Berzerker Champion (the upgrade’s association to that model selection); the app’s models lines are the export’s (the same models and weapons).",
+  "evidence": "verify/sources/nr-json/big-demons-baby.json: the unit’s selections and their associations; verify/sources/nr/big-demons-baby.txt p2.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "big-demons-baby",
   "unit": "angron",
   "field": "abilities[Supreme Commander]",
   "app": "present",
@@ -2228,62 +2274,48 @@
  },
  {
   "army": "princes",
-  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
   "field": "models",
   "app": [
-   "1x Lord on Juggernaut",
-   "1x Khorne Berzerker Champion",
-   "15x Khorne Berzerker",
-   "4x Khorne Berzerker w/ eviscerator and plasma pistol"
+   "1x Khârn the Betrayer",
+   "1x Khorne Berzerker Champion (Icon of Khorne)",
+   "7x Khorne Berzerker",
+   "2x Khorne Berzerker w/ eviscerator and plasma pistol"
   ],
   "source": [
-   "1x Lord on Juggernaut",
+   "1x Khârn the Betrayer",
    "1x Khorne Berzerker Champion",
-   "15x Khorne Berzerker",
-   "3x Khorne Berzerker w/ eviscerator and plasma pistol",
-   "1x Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)"
+   "7x Khorne Berzerker",
+   "2x Khorne Berzerker w/ eviscerator and plasma pistol"
   ],
-  "reason": "New Recruit’s PDF of the list (verify/sources/nr/princes.txt) prints Icon of Khorne on a models line; New Recruit’s export (catalogue revision 15) carries it on the unit itself, not on a model, so the app lists it as the unit’s (unplaced), its models lines added up as the export gives them; GW’s datasheet lets any one model carry it (\"1 model can be equipped with …\").",
-  "evidence": "verify/sources/nr-json/princes.json: the unit’s own selections; verify/sources/nr/princes.txt p3.",
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/princes.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 15), which associates Icon of Khorne with the Khorne Berzerker Champion (the upgrade’s association to that model selection); the app’s models lines are the export’s (the same models and weapons).",
+  "evidence": "verify/sources/nr-json/princes.json: the unit’s selections and their associations; verify/sources/nr/princes.txt p2.",
   "by": "verify/from-json.js"
  },
  {
   "army": "princes",
-  "unit": "lord-on-juggernaut-khorne-berzerkers",
-  "field": "gear[3x Khorne Berzerker w/ eviscerator and plasma pistol]",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker Champion]",
   "app": null,
   "source": [
-   "Khornate eviscerator",
+   "Chainblade",
    "Plasma pistol"
   ],
-  "reason": "New Recruit’s PDF of the list (verify/sources/nr/princes.txt) prints Icon of Khorne on a models line; New Recruit’s export (catalogue revision 15) carries it on the unit itself, not on a model, so the app lists it as the unit’s (unplaced), its models lines added up as the export gives them; GW’s datasheet lets any one model carry it (\"1 model can be equipped with …\").",
-  "evidence": "verify/sources/nr-json/princes.json: the unit’s own selections; verify/sources/nr/princes.txt p3.",
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/princes.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 15), which associates Icon of Khorne with the Khorne Berzerker Champion (the upgrade’s association to that model selection); the app’s models lines are the export’s (the same models and weapons).",
+  "evidence": "verify/sources/nr-json/princes.json: the unit’s selections and their associations; verify/sources/nr/princes.txt p2.",
   "by": "verify/from-json.js"
  },
  {
   "army": "princes",
-  "unit": "lord-on-juggernaut-khorne-berzerkers",
-  "field": "gear[1x Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)]",
-  "app": null,
-  "source": [
-   "Khornate eviscerator",
-   "Plasma pistol"
-  ],
-  "reason": "New Recruit’s PDF of the list (verify/sources/nr/princes.txt) prints Icon of Khorne on a models line; New Recruit’s export (catalogue revision 15) carries it on the unit itself, not on a model, so the app lists it as the unit’s (unplaced), its models lines added up as the export gives them; GW’s datasheet lets any one model carry it (\"1 model can be equipped with …\").",
-  "evidence": "verify/sources/nr-json/princes.json: the unit’s own selections; verify/sources/nr/princes.txt p3.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "princes",
-  "unit": "lord-on-juggernaut-khorne-berzerkers",
-  "field": "gear[4x Khorne Berzerker w/ eviscerator and plasma pistol]",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
   "app": [
-   "Khornate eviscerator",
+   "Chainblade",
    "Plasma pistol"
   ],
   "source": null,
-  "reason": "New Recruit’s PDF of the list (verify/sources/nr/princes.txt) prints Icon of Khorne on a models line; New Recruit’s export (catalogue revision 15) carries it on the unit itself, not on a model, so the app lists it as the unit’s (unplaced), its models lines added up as the export gives them; GW’s datasheet lets any one model carry it (\"1 model can be equipped with …\").",
-  "evidence": "verify/sources/nr-json/princes.json: the unit’s own selections; verify/sources/nr/princes.txt p3.",
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/princes.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 15), which associates Icon of Khorne with the Khorne Berzerker Champion (the upgrade’s association to that model selection); the app’s models lines are the export’s (the same models and weapons).",
+  "evidence": "verify/sources/nr-json/princes.json: the unit’s selections and their associations; verify/sources/nr/princes.txt p2.",
   "by": "verify/from-json.js"
  },
  {
@@ -2293,9 +2325,8 @@
   "app": [
    "1x Exalted Sorcerer",
    "1x Aspiring Sorcerer",
-   "1x Rubric Marine w/ soulreaper cannon",
-   "2x Rubric Marine w/ warpflamer",
-   "1x Rubric Marine w/ warpflamer (Icon of Flame)"
+   "1x Rubric Marine w/ soulreaper cannon (Icon of Flame)",
+   "3x Rubric Marine w/ warpflamer"
   ],
   "source": [
    "1x Exalted Sorcerer",
@@ -2303,47 +2334,34 @@
    "1x Rubric Marine w/ soulreaper cannon",
    "3x Rubric Marine w/ warpflamer"
   ],
-  "reason": "New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 17), which puts each on the model whose selection has it; the app’s models lines are the export’s (the same models and weapons, a wargear on another line).",
-  "evidence": "verify/sources/nr-json/pubstomper.json: the unit’s model selections; verify/sources/nr/pubstomper.txt p2.",
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 17), which associates Icon of Flame with the Rubric Marine w/ soulreaper cannon (the upgrade’s association to that model selection); the app’s models lines are the export’s (the same models and weapons).",
+  "evidence": "verify/sources/nr-json/pubstomper.json: the unit’s selections and their associations; verify/sources/nr/pubstomper.txt p2.",
   "by": "verify/from-json.js"
  },
  {
   "army": "pubstomper",
   "unit": "exalted-sorcerer-rubric-marines",
-  "field": "gear[3x Rubric Marine w/ warpflamer]",
+  "field": "gear[1x Rubric Marine w/ soulreaper cannon]",
   "app": null,
   "source": [
    "Close combat weapon",
-   "Warpflamer"
+   "Soulreaper cannon"
   ],
-  "reason": "New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 17), which puts each on the model whose selection has it; the app’s models lines are the export’s (the same models and weapons, a wargear on another line).",
-  "evidence": "verify/sources/nr-json/pubstomper.json: the unit’s model selections; verify/sources/nr/pubstomper.txt p2.",
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 17), which associates Icon of Flame with the Rubric Marine w/ soulreaper cannon (the upgrade’s association to that model selection); the app’s models lines are the export’s (the same models and weapons).",
+  "evidence": "verify/sources/nr-json/pubstomper.json: the unit’s selections and their associations; verify/sources/nr/pubstomper.txt p2.",
   "by": "verify/from-json.js"
  },
  {
   "army": "pubstomper",
   "unit": "exalted-sorcerer-rubric-marines",
-  "field": "gear[2x Rubric Marine w/ warpflamer]",
+  "field": "gear[1x Rubric Marine w/ soulreaper cannon (Icon of Flame)]",
   "app": [
    "Close combat weapon",
-   "Warpflamer"
+   "Soulreaper cannon"
   ],
   "source": null,
-  "reason": "New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 17), which puts each on the model whose selection has it; the app’s models lines are the export’s (the same models and weapons, a wargear on another line).",
-  "evidence": "verify/sources/nr-json/pubstomper.json: the unit’s model selections; verify/sources/nr/pubstomper.txt p2.",
-  "by": "verify/from-json.js"
- },
- {
-  "army": "pubstomper",
-  "unit": "exalted-sorcerer-rubric-marines",
-  "field": "gear[1x Rubric Marine w/ warpflamer (Icon of Flame)]",
-  "app": [
-   "Close combat weapon",
-   "Warpflamer"
-  ],
-  "source": null,
-  "reason": "New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 17), which puts each on the model whose selection has it; the app’s models lines are the export’s (the same models and weapons, a wargear on another line).",
-  "evidence": "verify/sources/nr-json/pubstomper.json: the unit’s model selections; verify/sources/nr/pubstomper.txt p2.",
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/pubstomper.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 17), which associates Icon of Flame with the Rubric Marine w/ soulreaper cannon (the upgrade’s association to that model selection); the app’s models lines are the export’s (the same models and weapons).",
+  "evidence": "verify/sources/nr-json/pubstomper.json: the unit’s selections and their associations; verify/sources/nr/pubstomper.txt p2.",
   "by": "verify/from-json.js"
  },
  {
@@ -2364,6 +2382,52 @@
   "source": "Feel No Pain 4+",
   "reason": "New Recruit’s PDF of the list (verify/sources/nr/purge-goes-the-foe.txt) lists Feel No Pain 4+ on the Rules line; GW’s datasheet does not print Feel No Pain 4+. GW wins.",
   "evidence": "verify/.cache/waha/ds/adeptus-mechanicus_Cybernetica-Datasmith.html, verify/.cache/waha/ds/adeptus-mechanicus_Kastelan-Robots.html: CORE ABILITIES / ARMY RULES.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "standard",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "models",
+  "app": [
+   "1x Khârn the Betrayer",
+   "1x Khorne Berzerker Champion (Icon of Khorne)",
+   "7x Khorne Berzerker",
+   "2x Khorne Berzerker w/ eviscerator and plasma pistol"
+  ],
+  "source": [
+   "1x Khârn the Betrayer",
+   "1x Khorne Berzerker Champion",
+   "7x Khorne Berzerker",
+   "2x Khorne Berzerker w/ eviscerator and plasma pistol"
+  ],
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/standard.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 15), which associates Icon of Khorne with the Khorne Berzerker Champion (the upgrade’s association to that model selection); the app’s models lines are the export’s (the same models and weapons).",
+  "evidence": "verify/sources/nr-json/standard.json: the unit’s selections and their associations; verify/sources/nr/standard.txt p2.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "standard",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker Champion]",
+  "app": null,
+  "source": [
+   "Chainblade",
+   "Plasma pistol"
+  ],
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/standard.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 15), which associates Icon of Khorne with the Khorne Berzerker Champion (the upgrade’s association to that model selection); the app’s models lines are the export’s (the same models and weapons).",
+  "evidence": "verify/sources/nr-json/standard.json: the unit’s selections and their associations; verify/sources/nr/standard.txt p2.",
+  "by": "verify/from-json.js"
+ },
+ {
+  "army": "standard",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
+  "app": [
+   "Chainblade",
+   "Plasma pistol"
+  ],
+  "source": null,
+  "reason": "New Recruit’s PDF of the list (verify/sources/nr/standard.txt) prints the unit’s wargear on its models lines otherwise than New Recruit’s export (catalogue revision 15), which associates Icon of Khorne with the Khorne Berzerker Champion (the upgrade’s association to that model selection); the app’s models lines are the export’s (the same models and weapons).",
+  "evidence": "verify/sources/nr-json/standard.json: the unit’s selections and their associations; verify/sources/nr/standard.txt p2.",
   "by": "verify/from-json.js"
  },
  {

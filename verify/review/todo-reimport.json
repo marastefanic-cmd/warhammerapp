@@ -59,69 +59,6 @@
   "key": "1e30843a5267f6ca"
  },
  {
-  "army": "standard",
-  "kind": "unit-kwNote",
-  "where": "standard · Khârn the Betrayer",
-  "judgement": {
-   "kwNote": "Battleline, Berzerkers come from the led Khorne Berzerkers."
-  },
-  "source": {
-   "models": [
-    "1× Khârn the Betrayer",
-    "1× Khorne Berzerker Champion",
-    "7× Khorne Berzerker",
-    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
-   ],
-   "stats": [
-    "Khârn the Betrayer W5 OC1",
-    "Khorne Berzerker ×10 W2 OC2"
-   ],
-   "weapons": [
-    "Plasma pistol standard 1 -2 1 PISTOL",
-    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
-    "Bolt pistol 1 -1 1 PISTOL",
-    "Plasma pistol standard 1 -2 1 PISTOL",
-    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
-    "Gorechild 9 -2 3",
-    "Chainblade 5 -1 1",
-    "Khornate eviscerator 4 -2 2"
-   ]
-  },
-  "key": "dcf90c9309acc866"
- },
- {
-  "army": "princes",
-  "kind": "unit-kwNote",
-  "where": "princes · Lord on Juggernaut",
-  "judgement": {
-   "kwNote": "Battleline, Berzerkers, Grenades, Infantry come from the led Khorne Berzerkers."
-  },
-  "source": {
-   "models": [
-    "1× Lord on Juggernaut",
-    "1× Khorne Berzerker Champion",
-    "15× Khorne Berzerker",
-    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
-   ],
-   "stats": [
-    "Lord on Juggernaut W7 OC2",
-    "Khorne Berzerker ×20 W2 OC2"
-   ],
-   "weapons": [
-    "Plasma pistol standard 1 -2 1 PISTOL",
-    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
-    "Bolt pistol 1 -1 1 PISTOL",
-    "Plasma pistol standard 1 -2 1 PISTOL",
-    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
-    "Exalted chainblade 8 -1 2",
-    "Bladed horn 5 -1 2 EXTRA ATTACKS, LANCE",
-    "Chainblade 5 -1 1",
-    "Khornate eviscerator 4 -2 2"
-   ]
-  },
-  "key": "a7419a6925c9dfc4"
- },
- {
   "army": "princes",
   "kind": "unit-partialRules",
   "where": "princes · Slaughterbound",
@@ -200,9 +137,8 @@
    "models": [
     "1× Exalted Sorcerer",
     "1× Aspiring Sorcerer",
-    "1× Rubric Marine w/ soulreaper cannon",
-    "2× Rubric Marine w/ warpflamer",
-    "1× Rubric Marine w/ warpflamer (Icon of Flame)"
+    "1× Rubric Marine w/ soulreaper cannon (Icon of Flame)",
+    "3× Rubric Marine w/ warpflamer"
    ],
    "stats": [
     "Exalted Sorcerer W5 OC1",
@@ -222,7 +158,7 @@
     "Force weapon 3 -1 D3 PSYCHIC"
    ]
   },
-  "key": "77fc75eafff7f451"
+  "key": "6cb2adadb487f1ab"
  },
  {
   "army": "pubstomper",
@@ -237,9 +173,8 @@
    "models": [
     "1× Exalted Sorcerer",
     "1× Aspiring Sorcerer",
-    "1× Rubric Marine w/ soulreaper cannon",
-    "2× Rubric Marine w/ warpflamer",
-    "1× Rubric Marine w/ warpflamer (Icon of Flame)"
+    "1× Rubric Marine w/ soulreaper cannon (Icon of Flame)",
+    "3× Rubric Marine w/ warpflamer"
    ],
    "rules": [
     "Leader",
@@ -260,7 +195,7 @@
     "Rubric Marines · Icon of Flame: Ranged weapons equipped by models in the bearer’s unit (excluding **CHARACTERS**) have the **[IGNORES COVER]** ability."
    ]
   },
-  "key": "7befdf130e8682ce"
+  "key": "6f214287582086eb"
  },
  {
   "army": "pubstomper",
@@ -275,9 +210,8 @@
    "models": [
     "1× Exalted Sorcerer",
     "1× Aspiring Sorcerer",
-    "1× Rubric Marine w/ soulreaper cannon",
-    "2× Rubric Marine w/ warpflamer",
-    "1× Rubric Marine w/ warpflamer (Icon of Flame)"
+    "1× Rubric Marine w/ soulreaper cannon (Icon of Flame)",
+    "3× Rubric Marine w/ warpflamer"
    ],
    "kw": [
     "Infantry",
@@ -294,7 +228,7 @@
    ],
    "kwNote": "Battleline, Rubric, Rubric Marines, Rubricae come from the led Rubric Marines."
   },
-  "key": "dfad7314962eabeb"
+  "key": "6030fc896f140a83"
  },
  {
   "army": "4-megas-and-a-destrier",
@@ -400,38 +334,6 @@
   "key": "9e9d0f474c2c4db4"
  },
  {
-  "army": "big-demons-baby",
-  "kind": "unit-kwNote",
-  "where": "big-demons-baby · Lord on Juggernaut",
-  "judgement": {
-   "kwNote": "Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry come from the led Khorne Berzerkers; Faction: Blood Legions comes from Disciple of Khorne on the Lord on Juggernaut (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”)."
-  },
-  "source": {
-   "models": [
-    "1× Lord on Juggernaut",
-    "1× Khorne Berzerker Champion",
-    "15× Khorne Berzerker",
-    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
-   ],
-   "stats": [
-    "Lord on Juggernaut W7 OC2",
-    "Khorne Berzerker ×20 W2 OC2"
-   ],
-   "weapons": [
-    "Plasma pistol standard 1 -2 1 PISTOL",
-    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
-    "Bolt pistol 1 -1 1 PISTOL",
-    "Plasma pistol standard 1 -2 1 PISTOL",
-    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
-    "Exalted chainblade 7 -1 2",
-    "Bladed horn 4 -1 2 EXTRA ATTACKS, LANCE",
-    "Chainblade 4 -1 1",
-    "Khornate eviscerator 3 -2 2"
-   ]
-  },
-  "key": "4bd39d92b02f53e3"
- },
- {
   "army": "lite-knights",
   "kind": "unit-partialRules",
   "where": "lite-knights · Trajann Valoris",
@@ -483,6 +385,85 @@
   "key": "1a035ba17b0c264e"
  },
  {
+  "army": "the-exiled-legion",
+  "kind": "unit-kwNote",
+  "where": "the-exiled-legion · Skulltaker",
+  "judgement": {
+   "kwNote": "Battleline, Bloodletters come from the led Bloodletters."
+  },
+  "source": {
+   "models": [
+    "1× Skulltaker",
+    "1× Bloodreaper",
+    "7× Bloodletter",
+    "1× Bloodletter (Daemonic Icon)",
+    "1× Bloodletter (Instrument of Chaos)"
+   ],
+   "stats": [
+    "Skulltaker W5 OC1",
+    "Bloodletters ×10 W1 OC2"
+   ],
+   "weapons": [
+    "The Slayer Sword 6 -2 3 DEVASTATING WOUNDS, PRECISION",
+    "Hellblade 2 -2 2 DEVASTATING WOUNDS"
+   ]
+  },
+  "key": "54faaeccfb5cee1c"
+ },
+ {
+  "army": "the-exiled-legion",
+  "kind": "unit-kwNote",
+  "where": "the-exiled-legion · Bloodmaster",
+  "judgement": {
+   "kwNote": "Battleline, Bloodletters come from the led Bloodletters."
+  },
+  "source": {
+   "models": [
+    "1× Bloodmaster",
+    "1× Bloodreaper",
+    "7× Bloodletter",
+    "1× Bloodletter (Daemonic Icon)",
+    "1× Bloodletter (Instrument of Chaos)"
+   ],
+   "stats": [
+    "Bloodmaster W4 OC1",
+    "Bloodletters ×10 W1 OC2"
+   ],
+   "weapons": [
+    "Blade of blood 5 -2 3",
+    "Hellblade 2 -2 2"
+   ]
+  },
+  "key": "fc115954550fd61a"
+ },
+ {
+  "army": "the-exiled-legion",
+  "kind": "unit-kwNote",
+  "where": "the-exiled-legion · Skullmaster",
+  "judgement": {
+   "kwNote": "Bloodcrushers comes from the led Bloodcrushers."
+  },
+  "source": {
+   "models": [
+    "1× Skullmaster",
+    "1× Bloodhunter",
+    "1× Bloodcrusher (Instrument of Chaos)",
+    "1× Bloodcrusher (Daemonic Icon)"
+   ],
+   "stats": [
+    "Skullmaster W6 OC2",
+    "Bloodcrushers ×3 W4 OC2"
+   ],
+   "weapons": [
+    "Blade of blood 5 -2 3",
+    "Juggernaut’s bladed horn 4 -1 1 EXTRA ATTACKS, LANCE",
+    "Hellblade 2 -2 2",
+    "Juggernaut’s bladed horn 4 -1 1 EXTRA ATTACKS, LANCE"
+   ]
+  },
+  "key": "83f6ca215fa32a44"
+ },
+ {
   "army": "navigator-sounds-op-ngl",
   "kind": "ability-tag",
   "where": "navigator-sounds-op-ngl · Knight Errant · Mysterious Guardian",
@@ -494,5 +475,17 @@
    "text": "**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
   },
   "key": "e785a26c873de16c"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "screenPregame",
+  "judgement": {
+   "code": "function screenPregame(){\n  const a = army(), f = faction(), units = a.units;\n  const row = (k, v) => v ? '<div class=\"pgr\"><span class=\"pgk\">' + k + '</span><span class=\"pgv\">' + v + '</span></div>' : '';\n  const sec = (title, body) => body ? '<div class=\"sec-h\"><h2>' + title + '</h2></div><div class=\"pg\">' + body + '</div>' : '';\n  // the same ability on several units is one line: \"Singular Purpose · Assimilator (280), Norn Emissary ×2\"\n  const group = list => { const m = new Map(); for(const [u, ab] of list){ const k = ab.name + '|' + ab.text; if(!m.has(k)) m.set(k, { ab, units:[] }); m.get(k).units.push(u); } return [...m.values()]; };\n  const abLine = g => linkTo('ability', abilityKey(g.ab), g.ab.name) + ' <span class=\"from\">· ' + esc(unitNames(g.units, g.ab)) + '</span>';\n  const rulesOf = units.length ? f.armyRules.filter(r => !inertRule(r.name)).map(r => ({ r, src:f.name + ' army rule' }))\n    .concat(detachments().flatMap(d => detRules(d).map(r => ({ r, src:d.name })))) : [];\n  const ruleLine = x => linkTo('rule', x.r.name, x.r.name) + ' <span class=\"from\">· ' + esc(x.src) + '</span>';\n  const nameLink = u => linkTo('unit', u.id, u.short || u.name);   // without its enhancement: the line says it\n  // a unit's short name, or its full one when another unit of the list has that short name too (Big Mek Dakkarig, Big Mek in Mega Armour)\n  const ownName = u => u.short && units.some(x => x !== u && (x.short || x.name) === u.short && x.name !== u.name) ? u.name : u.short || u.name;\n  const allAbs = units.flatMap(u => u.abilities.filter(ab => !naReason(ab)).map(ab => [u, ab]));\n  // Deep Strike (24.09) and Scouts (24.31) work only if every model in the unit has them; u.partialRules names\n  // the rules only some models of an attached unit have (Slaughterbound's Scouts 6\": its Exalted Eightbound have none)\n  const everyModel = (u, test) => unitRules(u).some(test) && !Object.keys(u.partialRules || {}).some(test);\n  // rules resolved before Declare Battle Formations (Code Chivalric: end of the Read Mission Objectives step)\n  const early = rulesOf.filter(x => /read mission objectives/i.test(x.r.text));\n\n  // your list\n  const warlord = units.filter(u => u.warlord);\n  const enh = units.flatMap(u => [u.enhancement, u.upgrade].filter(Boolean).map(n => { const d = detachments().find(x => (x.enhancements || []).some(e => e.name === n)), e = d && d.enhancements.find(x => x.name === n);\n    return (d ? linkTo('enh', d.id + '|' + n, n) : esc(n)) + (n === u.upgrade ? ' <span class=\"from\">(upgrade)</span>' : '') + (e && e.pts ? ' <span class=\"from\">' + e.pts + ' pts</span>' : '') + ' on ' + (n === u.enhancement && u.enhOn ? linkTo('unit', u.id, u.enhOn) : n === u.upgrade && u.leads ? linkTo('unit', u.id, u.leads) : linkTo('unit', u.id, ownName(u) + unitNo(u))); }));\n  const led = units.filter(u => u.leads).flatMap(u => charsOf(u).map((c, i) => (i ? linkTo('unit', u.id, c.name) : nameLink(u)) + (c.support ? ' supports ' : ' leads ') + esc(u.leads) + (u.copies > 1 ? ' <span class=\"from\">×' + u.copies + ' units</span>' : '')));\n  let h = sec('Your list',\n    row('Warlord', warlord.map(u => u.warlordOn ? linkTo('unit', u.id, u.warlordOn) + ' <span class=\"from\">(' + esc(unitLabel(u)) + ')</span>' : unitLink(u)).join(', ')) +\n    row('Enhance&shy;ments', enh.join('<br>')) +\n    row('Attached', led.join('<br>')) +\n    row('Detach&shy;ments', detachments().map(d => (d.rule ? linkTo('rule', d.rule.name, d.name) : esc(d.name)) + (d.dp ? ' <span class=\"from\">(' + d.dp + ' DP)</span>' : '')).join(', ')) +\n    row('Disposi&shy;tions', dispText(a)) +\n    // the other selections New Recruit prints under the army name, as printed; one that only names the parts of an army\n    // rule (\"Code Chivalric: Deed, Quality\", each part's table rows) is no pick: that rule is under Army rules\n    Object.entries(a.config || {}).filter(([k, v]) => !ruleParts(f, k, v)).map(([k, v]) => row(esc(k), esc(v))).join('') +\n    row('Points', esc(a.pointsUsed + ' / ' + a.points + ' · ' + a.battleSize)));\n  // the army rules and the detachment rules, folded: each opens to its text (the detachment's row as on the Rules tab)\n  const detRows = detachments().flatMap(d => detRules(d).map(r => ruleRow(r.name, metaLine(esc(d.name), r.ph ? esc(shortWhen(r)) : ''),\n    (r.note ? '<p class=\"note it\">' + esc(r.note) + '</p>' : '') + textWithTable(r) + usedBy('Applies to', units.filter(u => matches(r.needs, u)))))).join('');\n  h += f.armyRules.length || detRows ? '<div class=\"sec-h\"><h2>' + (detRows ? 'Army and detachment rules' : 'Army rules') + '</h2></div><div class=\"abl\">' + armyRuleRows(f) + detRows + '</div>' : '';\n\n  const earlyAbs = group(allAbs.filter(([u, ab]) => /read mission objectives/i.test(ab.text)));\n  h += sec('Read Mission Objectives step', row('Rules', early.map(ruleLine).join('<br>')) + row('Abilities', earlyAbs.map(abLine).join('<br>')));\n\n  // declare battle formations: reserves and transports\n  const ds = units.filter(u => everyModel(u, r => ruleKey(r) === 'Deep Strike'));\n  const dsPts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0);\n  const transports = units.filter(u => hasKw(u, 'Transport')).map(u => { const ab = u.abilities.find(x => /transport capacity/i.test(x.text)); return unitLink(u) + (ab ? ': <span class=\"from\">' + inline(ab.text.replace(/(^|\\n)\\*([^*\\n][^\\n]*[^*\\n])\\*(?=\\n|$)/g, '$1$2').replace(/\\n(- )?/g, ' ')) + '</span>' : ''); });\n  h += sec('Declare battle formations',\n    row(linkTo('rule', 'Deep Strike', 'Deep Strike'), ds.map(u => (u.leads ? linkTo('unit', u.id, unitLabel(u)) : unitLink(u)) + ' <span class=\"from\">' + u.pts + ' pts' + (u.copies > 1 ? ' each, ×' + u.copies : '') + '</span>').join('<br>') + (ds.length > 1 ? '<br><span class=\"from\">All of them: ' + dsPts + ' pts</span>' : '')) +\n    row('Transports', transports.join('<br>')));\n\n  // deployment and pre-battle abilities\n  // (each of Scouts and Infiltrators by itself: the Lord Exultant's Infiltrators, his alone, leaves the unit's Scouts 6\")\n  const scoutRules = u => unitRules(u).filter(r => /^scouts|^infiltrators/i.test(r) && everyModel(u, x => ruleKey(x) === ruleKey(r)));\n  const scouts = units.filter(u => scoutRules(u).length);\n  const scoutKeys = [...new Set(scouts.flatMap(u => scoutRules(u).map(ruleKey)))].sort((x, y) => (x === 'Scouts' ? 0 : 1) - (y === 'Scouts' ? 0 : 1));\n  const pre = group(allAbs.filter(([u, ab]) => PREGAME_RE.test(ab.text) && !/start of the first battle round|read mission objectives/i.test(ab.text)));\n  h += sec('Deployment and pre-battle abilities',\n    row(scoutKeys.map(k => linkTo('rule', k, k)).join(' and '), scouts.map(u => unitLink(u) + ' <span class=\"from\">' + scoutRules(u).map(r => linkTo('rule', r, r)).join(', ') + '</span>').join('<br>')) +\n    row('Abilities', pre.map(abLine).join('<br>')) +\n    row('Rules', rulesOf.filter(x => PREGAME_RE.test(x.r.text) && !early.includes(x)).map(ruleLine).join('<br>')));\n\n  // decided at the start of the battle (before the first battle round: Aegis Protocol, Code Chivalric's Deed 1–2, a row of its\n  // table), of the first battle round or of every battle round\n  const START = /\\bstart of the battle\\b(?! round)/i;\n  const atStart = rulesOf.flatMap(x => { const rows = START.test(x.r.text) ? [] : (x.r.table || []).filter(([, t]) => START.test(t)).map(([l]) => String(l).split(' · ')[0]);\n    return START.test(x.r.text) || rows.length ? [linkTo('rule', x.r.name, x.r.name) + ' <span class=\"from\">' + (rows.length ? '(' + esc(rows.join(', ')) + ') ' : '') + '· ' + esc(x.src) + '</span>'] : []; })\n    .concat(group(allAbs.filter(([u, ab]) => START.test(ab.text))).map(abLine));\n  const first = group(allAbs.filter(([u, ab]) => /start of the first battle round/i.test(ab.text)));\n  const round = rulesOf.filter(x => /start of (the|each|every) battle round/i.test(x.r.text)).map(ruleLine)\n    .concat(group(allAbs.filter(([u, ab]) => /start of (the|each|every) battle round/i.test(ab.text) && !/start of the first battle round/i.test(ab.text))).map(abLine));\n  const firstRules = rulesOf.filter(x => /start of the first battle round/i.test(x.r.text)).map(ruleLine);\n  h += sec('Start of the battle and the battle rounds', row('Start of the battle', atStart.join('<br>')) + row('First round', firstRules.concat(first.map(abLine)).join('<br>')) + row('Every round', round.join('<br>')));\n\n  // uses per battle: the resources you spend, ticked off until New game\n  // a rule that gives units a \"(Once per battle, per unit)\" ability (Higher Imperatives) is ticked on those units, not here\n  const ruleOnce = r => perBattle(r) && !/per battle\\b(?! round)[^.)]*\\bper unit\\b/i.test(r.text || '');\n  const onceRules = f.armyRules.filter(r => !inertRule(r.name) && ruleOnce(r)).map(r => ({ r, src:f.name + ' army rule' }))\n    .concat(detachments().flatMap(d => detRules(d).filter(ruleOnce).map(r => ({ r, src:d.name }))));\n  const tl = (boxes, text) => '<div class=\"tl\">' + boxes + '<span>' + text + '</span></div>';\n  const ruleTicks = x => { const r = x.r, pb = perBattle(r, true);\n    // \"You can only select each of these abilities once per battle\" (Kindred Sorcery), \"… each combat doctrine once per battle\": a box\n    // per option, and one more for each use another rule adds (eachOnce)\n    const each = eachOnce(r);\n    if(each) return '<div class=\"tl\"><span>' + ruleLine(x) + ':</span></div>' + each.map(([o, n]) => tl(ticks('r:' + r.name + ':' + o, n, '', o), esc(o))).join('');\n    return tl(ticks('r:' + r.name, pb.n, '', r.name), ruleLine(x)); };\n  const onceAbs = group(allAbs.filter(([u, ab]) => perBattle(ab)));\n  const abTicks = g => perBattle(g.ab).army ? tl(abilityTicks(g.ab, g.units[0]), abLine(g) + ' <span class=\"tg once\">per army</span>')\n    : g.units.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) => tl(ticks(copyKey(g.ab, u, i), perBattle(g.ab).n, '', g.ab.name + (u.copies > 1 ? ', Unit ' + (i + 1) : '')),\n        linkTo('ability', abilityKey(g.ab), g.ab.name) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class=\"from\">· Unit ' + (i + 1) + '</span>' : '')))).join('');\n  const onceStrats = allStratagems().filter(s => eligible(s).length && perBattle(s));\n  h += sec('Uses per battle',\n    row('Rules', onceRules.map(ruleTicks).join('')) +\n    row('Abilities', onceAbs.map(abTicks).join('')) +\n    row('Strata&shy;gems', onceStrats.map(s => tl(ticks('s:' + s.id, perBattle(s, true).n, '', s.name), linkTo('strat', s.id, s.cp + 'CP ' + s.name))).join('')));\n  if(onceRules.length || onceAbs.length || onceStrats.length) h = h.replace(/(<div class=\"sec-h\"><h2>Uses per battle<\\/h2>)/, '$1<button class=\"textbtn\" data-newgame>New game</button>');\n  return h + '<p class=\"note\">Gathered from this list’s datasheets and rules; each line opens the full text.</p>' + (a.imported ? importedFoot(a) : '');\n}"
+  },
+  "source": {
+   "implements": "Overview (before the battle): Warlord, enhancements, attached units, detachments (each opens its detachment rule), the army rules (folded), units with Deep Strike (24.09: every model must have it), transports, Scouts and Infiltrators (24.31, 24.20: every model must have it), start of the battle / round 1 / every round, once-per-battle items; the army rules block also holds the detachment rules (as on the Rules tab); an enhancement's holder by its full name when another unit of the list has the same short name"
+  },
+  "key": "c37a6a65d2c75cdc"
  }
 ]
