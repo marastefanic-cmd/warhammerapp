@@ -21,7 +21,7 @@ if (problems.length) { problems.forEach(p => console.error(' -', p)); throw new 
 
 const app = read('app.html');
 const data = read('data.js');
-const calc = read('calc.js') + read('effects.js') + read('ask.js') + read('import.js');   // the damage calculator's engine and its effects catalogue, the rules-question chat and the list import
+const calc = read('calc.js') + read('effects.js') + read('ask.js') + read('builder.js') + read('import.js');   // the damage calculator's engine and its effects catalogue, the rules-question chat, the list builder and the list import
 
 // the gate: only a verified app.html + data.js is built (node verify/run.js writes the report).
 // verify/run.js itself builds with VERIFY_BUILDING=1 to check the screens of the page it is about to verify.
@@ -29,7 +29,7 @@ if (!process.env.VERIFY_BUILDING) {
   let report = null;
   try { report = JSON.parse(read('verify/report.json')); } catch (e) {}
   const hash = crypto.createHash('sha256').update(app + data + calc).digest('hex');
-  if (!report || report.hash !== hash) throw new Error('not verified: app.html, data.js, calc.js, effects.js, ask.js or import.js changed since the last verification. Run: node verify/run.js');
+  if (!report || report.hash !== hash) throw new Error('not verified: app.html, data.js, calc.js, effects.js, ask.js, builder.js or import.js changed since the last verification. Run: node verify/run.js');
   if (!report.ok) throw new Error('verification failed (see verify/report.json). Fix it, then run: node verify/run.js');
 }
 const m = data.match(/const VERSION = '([^']+)'/);
@@ -48,6 +48,7 @@ body = body.replace(tag, `<script src="data.js?v=${build}"></script>`);
 body = body.replace('<script src="verified.js"></script>', `<script src="verified.js?v=${build}"></script>`);
 body = body.replace('<script src="calc.js"></script>', `<script src="calc.js?v=${build}"></script>`);
 body = body.replace('<script src="effects.js"></script>', `<script src="effects.js?v=${build}"></script>`);
+body = body.replace('<script src="builder.js"></script>', `<script src="builder.js?v=${build}"></script>`);
 body = body.replace('<script src="import.js"></script>', `<script src="import.js?v=${build}"></script>`);
 
 const head = `<!doctype html>

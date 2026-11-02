@@ -1,0 +1,55 @@
+Xenos - Orks - Me shooty yer' booty - [2000 pts]
+
+# ++ Army Roster ++ [2000 pts, 3 Detachment Points]
+## Configuration
+Battle Size: Strike Force (2000 Point limit)
+Detachment [3 Detachment Points]: Dread Mob [1 Detachment Points], Shoota Boyz [1 Detachment Points], Wreckas [1 Detachment Points]
+Force Disposition: Purge the Foe
+Show/Hide Options
+
+## Epic Hero [200 pts]
+Wazdakka Gutsmek [200 pts]: Fixit's Wrench, Grabba Dragga, Psyko-gatler, Speeding Bulk and Flaming Exhaust
+
+## Character [740 pts]
+Big Mek Dakkarig [190 pts]: Dreadherder [30 pts], Blitzkannon, Multi-busta Launcha, Stompy Feet
+Big Mek Dakkarig [170 pts]: Cybork Boosta [10 pts], Blitzkannon, Multi-busta Launcha, Stompy Feet
+Big Mek in Mega Armour [115 pts]: Supa-glowy Fing [25 pts], Kustom Mega-blasta, Power Klaw, Tellyport Blasta
+Mek [55 pts]: Kustom Mega-slugga, Mek's Toolz
+  • Supporting: Tankbustas[1]
+Mek [55 pts]: Kustom Mega-slugga, Mek's Toolz
+  • Supporting: Tankbustas[2]
+Mek [55 pts]: Kustom Mega-slugga, Mek's Toolz
+  • Supporting: Flash Gitz
+Warboss [100 pts]: Warlord, Kustom Choppa, Kustom Shoota
+
+## Infantry [700 pts]
+Flash Gitz [245 pts]: Supa-snazz Dakka [25 pts]
+• 1x Kaptin: Choppa, Snazzgun
+• 9x Flash Gitz: Choppa, Snazzgun
+  • Supported by: Mek[3]
+Gretchin [45 pts]:
+• 10x Gretchin: Grot Blasta, Scavenged Shivs
+Gretchin [45 pts]:
+• 10x Gretchin: Grot Blasta, Scavenged Shivs
+Gretchin [45 pts]:
+• 10x Gretchin: Grot Blasta, Scavenged Shivs
+Tankbustas [160 pts]:
+• 1x Nob: Choppa, 2x Rokkit Pistol
+• 1x Tankbusta w/ Two Busta Rokkit Launchas: 2x Busta Rokkit Launcha, Gitstikka
+• 4x Tankbusta w/ Busta Rokkit Launcha: Busta Rokkit Launcha, Gitstikka
+  • Supported by: Mek[1]
+Tankbustas [160 pts]:
+• 1x Nob: Choppa, 2x Rokkit Pistol
+• 1x Tankbusta w/ Two Busta Rokkit Launchas: 2x Busta Rokkit Launcha, Gitstikka
+• 4x Tankbusta w/ Busta Rokkit Launcha: Busta Rokkit Launcha, Gitstikka
+  • Supported by: Mek[2]
+
+## Mounted [85 pts]
+Deffkoptas [85 pts]:
+• 3x Deffkopta: Choppa, Rokkit Launcha, Slugga, Spinnin’ Blades
+
+## Vehicle [275 pts]
+Killa Kans [275 pts]:
+• 6x Killa Kan: Kan Blasta, Kan Klaw
+
+Created with newrecruit.eu v37.7

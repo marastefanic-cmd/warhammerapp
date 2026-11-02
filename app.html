@@ -173,7 +173,9 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .pxm i{font-style:normal; color:var(--muted); font-size:12.5px}
 .arow{padding:10px 2px 11px}
 .arow .rb{gap:5px}
-.arow .rb b{display:flex; align-items:baseline; gap:10px; font-size:19px}
+.arow .rb b{display:flex; flex-wrap:wrap; align-items:baseline; column-gap:10px; font-size:19px}
+.arow .rb b .an{min-width:0; overflow-wrap:anywhere}   /* (a long one-word name, an imported list's: wraps) */
+.row .rb b, #sheetTitle{overflow-wrap:anywhere}
 .arow .apts{font:600 13px var(--f-head); color:var(--muted); letter-spacing:.02em}
 .tags{display:flex; flex-wrap:wrap; gap:4px}
 .row .rb .adet{display:flex; flex-wrap:wrap; align-items:center; gap:3px 8px; font-size:14px; line-height:1.3}
@@ -631,6 +633,10 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .impf input{position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:pointer}
 .impt{display:block; width:100%; min-height:88px; resize:vertical; padding:9px 10px; border-radius:8px; border:1px solid var(--line); background:var(--bg); color:var(--fg); font:15px/1.35 var(--f-body)}
 .impgo{display:block; width:100%; margin-top:10px}
+.kp{margin-left:8px; padding:2px 7px 1px; font-size:10.5px; vertical-align:2px}
+.kp.loc{color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent)}
+.impnl{display:block; margin:10px 0 4px; font:600 12px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--fg2)}
+.impn{display:block; width:100%; box-sizing:border-box; padding:9px 10px; border-radius:8px; border:1px solid var(--line); background:var(--bg); color:var(--fg); font:15px/1.35 var(--f-body, inherit); margin-bottom:10px}
 .impno{margin-top:12px; padding:10px 12px 12px; border-radius:10px; box-shadow:inset 0 0 0 1px var(--line)}
 .impno .qh{margin:0 0 6px; color:var(--dm-bad)}
 .impno .lead{margin:4px 0 0}
@@ -1096,6 +1102,7 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 <script src="data.js"></script>
 <script src="calc.js"></script>
 <script src="effects.js"></script>
+<script src="builder.js"></script>
 <script src="import.js"></script>
 <script>
 'use strict';
@@ -1109,14 +1116,15 @@ const keep = area => ({
   set(k, v){ try { window[area].setItem(k, JSON.stringify(v)); } catch(e){} }
 });
 const store = keep('localStorage'), session = keep('sessionStorage');
-// lists imported from New Recruit on this phone (import.js): kept as the export and made again from this data.js at every start, so an
-// imported list shows exactly what the app's own lists show; one this data.js no longer has everything for is listed on the home screen
+// lists imported on this phone (import.js, builder.js): kept as the export ({ id, json, date }) and made again from this data.js at every
+// start, so an imported list shows exactly what the app's own lists show (a faction with a full catalogue: built from its tables; another:
+// copied from the app's own lists, marked). One this data.js no longer builds stays on the home screen with its reasons, never a stale copy.
 const IMPORT_KEY = 'wh-imported';
 const importedKept = () => { const v = store.get(IMPORT_KEY, []); return Array.isArray(v) ? v.filter(x => x && typeof x === 'object' && typeof x.id === 'string' && x.json) : []; };
 const importStale = [];
 if(window.WH_IMPORT) for(const x of importedKept()){
   // (a kept export that cannot be read at all is listed as out of date, with Remove: it never stops the app)
-  let r; try { r = WH_IMPORT.resolve(x.json, D, { id:x.id, date:x.date }); } catch(e){ r = { ok:false, errors:['this kept export could not be read'] }; }
+  let r; try { r = WH_IMPORT.make(x.json, D, { id:x.id, date:x.date, name:x.listName }); } catch(e){ r = { ok:false, errors:['this kept export could not be read'] }; }
   if(r.ok && !D.armies.some(a => a.id === r.army.id)) D.armies.push(r.army);
   else importStale.push({ id:x.id, name:String(x.name || 'Imported list'), date:x.date, errors:r.ok ? ['a list with this id is already in the app'] : r.errors });
 }
@@ -1191,9 +1199,12 @@ const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battl
   'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Allies':'Allies', 'Other':'Other', 'Reference':'Reference' };
 // a unit's group in the Units list: its role, an allied unit's under Allies (New Recruit's role "Allies: Legiones Daemonica")
 const roleGroup = u => u.ref ? 'Reference' : ROLE_ORDER.includes(u.role) ? u.role : /^Allies:/.test(u.role || '') ? 'Allies' : 'Other';
-// the home screen's two folders: the lists starred on this phone, and every list
-const FOLDER_TITLE = { favs:'Favorites', lists:'All lists' };
-const isFolder = s => s === 'favs' || s === 'lists';
+// the home screen's folders: the lists starred on this phone, the app's own lists, the lists imported on this phone, and every list
+const FOLDER_TITLE = { favs:'Favorites', builtin:'Built-in lists', local:'Local lists', lists:'All lists' };
+const isFolder = s => hasOwn(FOLDER_TITLE, s);
+const folderLists = s => s === 'favs' ? favLists() : s === 'builtin' ? D.armies.filter(a => !a.imported) : s === 'local' ? D.armies.filter(a => a.imported) : D.armies;
+// (a list's kind, as a pill on its row: the app's own, or imported on this phone)
+const kindPill = a => '<span class="pill kp' + (a.imported ? ' loc' : '') + '">' + (a.imported ? 'Local' : 'Built-in') + '</span>';
 const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies', checklist:'Phase checklist' };
 const BACK_TITLE = { pregame:'Overview', checklist:'Checklist', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
@@ -1740,7 +1751,7 @@ function setFav(id, on){ const f = favIds().filter(x => x !== id); if(on) f.push
 const favBtn = (a, cls) => { const on = isFav(a);
   return '<button class="' + (cls || 'fav') + (on ? ' on' : '') + '" data-fav="' + esc(a.id) + '" aria-pressed="' + on + '" aria-label="Favorite: ' + esc(a.name) + '"><svg aria-hidden="true"><use href="#i-star"/></svg></button>'; };
 // each army: its own (silly) name, then tags saying what it is (in a list not grouped by faction, its faction first), then its star
-const armyRow = (a, withFaction) => '<div class="arw"><button class="row arow" data-army="' + esc(a.id) + '"><span class="rb"><b>' + esc(a.name) + '<span class="apts">' + esc(a.pointsUsed) + ' pts</span></b>' +
+const armyRow = (a, withFaction) => '<div class="arw"><button class="row arow" data-army="' + esc(a.id) + '"><span class="rb"><b><span class="an">' + esc(a.name) + '</span><span class="apts">' + esc(a.pointsUsed) + ' pts</span>' + kindPill(a) + '</b>' +
   '<span class="adet"><span>' + (withFaction ? [factionOf(a).name] : []).concat(detachmentsOf(a).map(d => d.name)).map(esc).join(' · ') + '</span></span>' +
   '<span class="adisp tags">' + dispsOf(a).map(x => '<span class="t d' + (x === a.disposition ? ' on' : '') + '">' + esc(x) + (x === a.disposition ? '<span class="vh">, chosen</span>' : '') + '</span>').join('') + '</span></span>' + arrow + '</button>' + favBtn(a) + '</div>';
 // the order of a folder: newest (the date New Recruit exported it, or the day it was imported: "exported 17 Oct 2026"; the same day,
@@ -1768,14 +1779,21 @@ function armyList(list){
 function screenHome(){
   const row = (s, ic, n) => '<button class="row" data-folder="' + s + '"><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg><span class="rb"><b>' + FOLDER_TITLE[s] + '</b></span>' +
     '<span class="c">' + n + '</span>' + arrow + '</button>';
-  return '<div class="hlh"><div class="lbl grp-h">Your armies</div></div><div class="list">' + row('favs', 'i-star', favLists().length) + row('lists', 'i-folder', D.armies.length) + '</div>' +
+  return '<div class="hlh"><div class="lbl grp-h">Your armies</div></div><div class="list">' + row('favs', 'i-star', favLists().length) + row('builtin', 'i-folder', folderLists('builtin').length) +
+    row('local', 'i-folder', folderLists('local').length + importStale.length) + row('lists', 'i-folder', D.armies.length) + '</div>' +
     importRow() + '<div class="list hwrow"><button class="row" data-how><svg class="ic" aria-hidden="true"><use href="#i-checks"/></svg><span class="rb"><b>' + HOW_TITLE + '</b></span>' + arrow + '</button></div>' +
     verifiedLine() + (INSTALLED ? '' : '<p class="note">' + installText() + '</p>');
 }
 // a folder: its order (a button saying which, opening the three), Random, its lists; All lists has the filters too
 function screenFolder(s){
-  const favs = s === 'favs', all = favs ? favLists() : D.armies, f = favs ? {} : homeFilter(), shown = all.filter(a => hfMatch(a, f));
+  const favs = s === 'favs', all = folderLists(s), f = favs ? {} : homeFilter(), shown = all.filter(a => hfMatch(a, f));
   if(favs && !all.length) return '<p class="note">No favorites yet. Tap the star next to a list in <button class="link" data-folder="lists">All lists</button> to keep it here as well.</p>';
+  // (Local lists: the lists that no longer build first, with their reasons; empty, the import)
+  if(s === 'local' && !all.length) return staleRows() + '<p class="note">No lists imported on this phone yet.</p>' + importRow();
+  if(s === 'local' && importStale.length) return staleRows() + screenFolderList(s, all, f, shown, favs);
+  return screenFolderList(s, all, f, shown, favs);
+}
+function screenFolderList(s, all, f, shown, favs){
   const sortLabel = SORTS.find(([k]) => k === homeSort())[1];
   return (!favs && all.length > 2 ? homeFilters(f) : '') +
     '<div class="hlh"><span class="hll">' + (shown.length > 1 ? '<button class="srt" data-sort aria-label="Order: ' + sortLabel + '"><span class="lbl grp-h">' + sortLabel + '</span>' + chev + '</button>' : '') +
@@ -1820,7 +1838,7 @@ function showHomeFilter(k){
 
 // random army: a reel of names that slows down and stops on one of the lists the filters show
 function rollArmy(folder){
-  const pool = folder === 'favs' ? favLists() : D.armies.filter(a => hfMatch(a, homeFilter()));
+  const pool = folder === 'favs' ? favLists() : folderLists(folder || 'lists').filter(a => hfMatch(a, homeFilter()));
   if(pool.length < 2) return;
   const pick = pool[Math.floor(Math.random() * pool.length)], H = 64;
   const reel = Array.from({ length:26 }, (_, i) => pool[(Math.floor(Math.random() * pool.length) + i) % pool.length]);
@@ -1838,49 +1856,65 @@ function rollArmy(folder){
 }
 
 /* ---------- import a list from New Recruit ----------
-   New Recruit's JSON export, from a file or pasted: import.js takes it only when every unit, option, enhancement and detachment in
-   it is one the app's own lists have, exactly; otherwise nothing is added and each item it does not recognize is listed, one per
-   line. An imported list is kept on this phone (the export, made again from this data.js at every start) and removed from its Overview. */
+   One box: a file (.json, .ros, .rosz or .txt) or pasted text, in any of New Recruit's formats but text format A (builder.js reads them).
+   A faction with a full catalogue in the app's tables is built from them (the same list the app would have built in); another is copied
+   from the app's own lists' units, as before, and says so. Nothing is added when anything does not resolve exactly, and each reason is
+   listed. Kept on this phone as its export, made again at every start; removed from its Overview. */
 const importRow = () => '<div class="list imprt"><button class="row" data-import><svg class="ic" aria-hidden="true"><use href="#i-import"/></svg><span class="rb"><b>Import a list from New Recruit</b>' +
-    '<span>Its JSON export</span></span>' + arrow + '</button>' +
-  importStale.map(x => '<button class="row" data-impstale="' + esc(x.id) + '"><span class="rb"><b>' + esc(x.name) + '</b><span>Imported list: this version of the app no longer has all of it</span></span>' + arrow + '</button>').join('') + '</div>';
+    '<span>Its export: .json, .ros, .rosz or text</span></span>' + arrow + '</button></div>';
+const staleRows = () => importStale.length ? '<div class="list imprt">' + importStale.map(x => '<button class="row" data-impstale="' + esc(x.id) + '"><span class="rb"><b>' + esc(x.name) + kindPill({ imported:true }) + '</b><span>Imported list: this version of the app does not build it</span></span>' + arrow + '</button>').join('') + '</div>' : '';
 const today = () => new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
 const firstUp = t => String(t).charAt(0).toUpperCase() + String(t).slice(1);
 const impList = errors => '<ul class="impl">' + errors.map(e => '<li>' + esc(firstUp(e)) + '</li>').join('') + '</ul>';
-function showImport(){
-  openSheet('New Recruit', 'Import a list',
-    '<p class="lead">In New Recruit, open the list, then Export and JSON. Choose that file here, or paste its text.</p>' +
-    '<label class="btn2 impf"><input type="file" id="impFile" accept=".json,application/json">Choose the .json file</label>' +
-    '<textarea id="impText" class="impt" rows="4" placeholder="…or paste the export here" aria-label="The New Recruit JSON export" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>' +
-    '<button class="btn impgo" data-impgo>Import</button><div id="impOut" aria-live="polite"></div>' +
-    '<p class="note">The list is taken only when every unit, option, enhancement and detachment in it is one that the app’s own checked lists have, exactly. Otherwise nothing is added, and each item the app does not recognize is listed. An imported list is kept on this phone.</p>');
+let impReplace = null;   // the kept list an "Update from a new export" replaces
+function showImport(replace){
+  impReplace = replace || null;
+  const x = replace ? importedKept().find(y => y.id === replace) : null;
+  openSheet('New Recruit', x ? 'Update ' + x.name : 'Import a list',
+    '<p class="lead">In New Recruit, open the list, then Export. Choose the file here (.json, .ros, .rosz or .txt), or paste its text.</p>' +
+    '<label class="btn2 impf"><input type="file" id="impFile" accept=".json,.ros,.rosz,.txt,application/json,text/plain,application/zip">Choose the file</label>' +
+    '<textarea id="impText" class="impt" rows="4" placeholder="…or paste the export here (JSON, or text in the “+++” or “## Category” format)" aria-label="The New Recruit export" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>' +
+    '<label class="impnl" for="impName">List name</label><input id="impName" class="impn" type="text" placeholder="Imported list" value="' + esc(x && x.listName || '') + '" autocomplete="off" aria-label="List name (optional)">' +
+    '<button class="btn impgo" data-impgo>' + (x ? 'Update' : 'Import') + '</button><div id="impOut" aria-live="polite"></div>' +
+    '<p class="note">A list of a faction the app has in full is built from the app’s own tables, exactly as its built-in lists are. Another faction’s list is taken only when every unit in it is one the app’s own lists have, exactly. Otherwise nothing is added, and each reason is listed. An imported list is kept on this phone.</p>');
 }
-function runImport(text){
+const impFail = (title, errors, more) => { const out = $('#impOut'); if(!out) return;
+  out.innerHTML = '<div class="impno"><p class="qh">' + esc(title) + '</p>' + impList(errors) + '<p class="note">' + (more || 'Nothing was added.') + '</p></div>'; out.scrollIntoView({ block:'nearest' }); };
+async function runImport(input){
   const out = $('#impOut');
   if(!out || !window.WH_IMPORT) return;
-  if(!String(text || '').trim()){ out.innerHTML = '<div class="impno"><p class="qh">Nothing to import</p><p class="lead">Choose the .json file, or paste the export first.</p></div>'; return; }
-  let json = null; try { json = JSON.parse(text); } catch(e){}
-  const taken = new Set(D.armies.map(a => a.id).concat(importedKept().map(x => x.id)));
+  if(typeof input === 'string' && !input.trim()){ out.innerHTML = '<div class="impno"><p class="qh">Nothing to import</p><p class="lead">Choose the file, or paste the export first.</p></div>'; return; }
+  let r; try { r = await WH_IMPORT.read(input, D); } catch(e){ r = { ok:false, errors:['not a New Recruit export (it could not be read)'] }; }
+  if(!r.ok) return impFail('Not imported · ' + r.errors.length + (r.errors.length === 1 ? ' reason' : ' reasons'), r.errors);
+  let id; try { id = await WH_IMPORT.localId(r.kept); } catch(e){ return impFail('Not imported', ['this browser cannot keep imported lists (no WebCrypto)']); }
+  const kept = importedKept();
+  if(kept.some(y => y.id === id) && id !== impReplace){ const y = D.armies.find(a => a.id === id);
+    out.innerHTML = '<div class="impno"><p class="qh">Already imported</p><p class="lead">This export is already on this phone' + (y ? ' as ' + esc(y.name) : '') + '.</p>' + (y ? '<div class="racts"><button class="btn" data-army="' + esc(id) + '">Open ' + esc(y.name) + '</button></div>' : '') + '</div>'; return; }
   const date = today();
-  let r; try { r = WH_IMPORT.resolve(json || text, D, { date }); } catch(e){ r = { ok:false, errors:['not a New Recruit JSON export (it could not be read)'] }; }
-  if(!r.ok){
-    out.innerHTML = '<div class="impno"><p class="qh">Not imported · ' + r.errors.length + (r.errors.length === 1 ? ' item' : ' items') + ' not recognized</p>' + impList(r.errors) +
-      '<p class="note">Nothing was added. The app takes a list only when it already has every part of it.</p></div>';
-    out.scrollIntoView({ block:'nearest' });
-    return;
-  }
-  const A = r.army; let id = A.id, k = 2; while(taken.has(id)) id = A.id + '-' + k++;
-  A.id = id;
-  try { store.set(IMPORT_KEY, importedKept().concat([{ id, name:A.name, date, json:WH_IMPORT.slim(json) }])); } catch(e){}
+  // (the name in the box, else the export's: prefilled from it when the export carries one, else "Imported list")
+  const box = $('#impName'), given = box && box.value.trim() ? box.value.trim() : '';
+  if(box && !given){ const n = WH_IMPORT.nameOf(r.kept, D); if(n) box.value = n; }
+  const listName = given || null;
+  let m; try { m = WH_IMPORT.make(r.kept, D, { id, date, name:listName }); } catch(e){ m = { ok:false, errors:['not a New Recruit export (it could not be read)'] }; }
+  if(!m.ok) return impFail('Not imported · ' + m.errors.length + (m.errors.length === 1 ? ' reason' : ' reasons'), m.errors);
+  const A = m.army;
+  // (Update: the list it replaces goes; the same export again keeps its id, and with it its star, ticks and checklist)
+  if(impReplace && impReplace !== id) removeKept(impReplace);
+  { const k = importStale.findIndex(y => y.id === id); if(k >= 0) importStale.splice(k, 1); }
+  try { store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id).concat([Object.assign({ id, name:A.name, date, json:r.kept }, listName ? { listName } : {})])); } catch(e){}
   const saved = importedKept().some(x => x.id === id);
+  const i = D.armies.findIndex(y => y.id === id); if(i >= 0) D.armies.splice(i, 1);
   D.armies.push(splitRefs(A)); ONLY = D.armies.length === 1 ? D.armies[0] : null;
+  impReplace = null;
   hideSheet(); go({ s:'army', army:id }, 'sheet');
   toast(saved ? 'Imported ' + A.name : 'Imported ' + A.name + ' for now: this phone could not keep it');
 }
-// an imported list's Overview ends with where it came from and its Remove (a confirm on the page, not a browser dialog)
+// an imported list's Overview ends with where it came from, how it was made, GW's points where the export's differ, and its Remove
 const importedFoot = a => { const x = importedKept().find(y => y.id === a.id);
-  return '<div class="sec-h"><h2>On this phone</h2></div><p class="note">Imported from New Recruit' + (x && x.date ? ' on ' + esc(x.date) : '') + ', made of units the app’s own lists have. ' +
+  return '<div class="sec-h"><h2>On this phone</h2></div><p class="note">Imported from New Recruit' + (x && x.date ? ' on ' + esc(x.date) : '') + '. ' +
+    (a.built ? 'Built from its export and the app’s ' + esc(factionOf(a).name) + ' tables, as the app’s own lists are. ' : 'Copied from units the app’s own lists have: ' + esc(factionOf(a).name) + ' has no full catalogue in the app yet. ') +
     (x ? 'Kept on this phone only.' : 'This phone could not keep it: it is gone when the app next starts.') + '</p>' +
+    ((a.gwPoints || []).length ? '<p class="note">Points: GW’s are used where the export’s differ: ' + a.gwPoints.map(g => esc(g.unit) + ' ' + g.export + ' pts in the export, ' + g.gw + ' pts by GW').join('; ') + '.</p>' : '') +
     '<div class="imprm" id="impRm">' + impRmBtn(a.id) + '</div>'; };
 const impRmBtn = id => '<button class="btn2" data-imprm="' + esc(id) + '">Remove this list</button>';
 function askRemove(id){
@@ -1890,20 +1924,25 @@ function askRemove(id){
   const b = host.querySelector('[data-imprmno]'); if(b) b.focus({ preventScroll:true });
   host.scrollIntoView({ block:'center' });   // both buttons in sight, above the tab bar
 }
-function removeImported(id){
-  const a = armyById(id), x = importedKept().find(y => y.id === id), name = (a || x || {}).name || 'the list';
+// a kept list and everything this phone keeps for it: its per-battle ticks, its Phase checklist boxes, its star
+function removeKept(id){
   store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id));
   const i = D.armies.findIndex(y => y.id === id && y.imported); if(i >= 0) D.armies.splice(i, 1);
   const j = importStale.findIndex(y => y.id === id); if(j >= 0) importStale.splice(j, 1);
-  try { localStorage.removeItem('wh-used-' + id); localStorage.removeItem('wh-check-' + id); } catch(e){}   // its per-battle ticks and its Phase checklist boxes
+  try { localStorage.removeItem('wh-used-' + id); localStorage.removeItem('wh-check-' + id); } catch(e){}
+  if(favIds().includes(id)) setFav(id, false);
+}
+function removeImported(id){
+  const a = armyById(id), x = importedKept().find(y => y.id === id), name = (a || x || {}).name || 'the list';
+  removeKept(id);
   ONLY = D.armies.length === 1 ? D.armies[0] : null;
   hideSheet(); go({ s:'home' }, 'replace');
   toast('Removed ' + name);
 }
 function showStale(id){
   const x = importStale.find(y => y.id === id); if(!x) return;
-  openSheet('Imported list', x.name, '<p class="lead">This version of the app no longer has every part of this list, so it is not shown:</p>' + impList(x.errors) +
-    '<p class="note">Import its newest New Recruit export again, or remove it.</p><div class="imprm" id="impRm">' + impRmBtn(id) + '</div>');
+  openSheet('Imported list', x.name, '<p class="lead">This version of the app does not build this list, so it is not shown:</p>' + impList(x.errors) +
+    '<p class="note">Import a new New Recruit export of it, or remove it.</p><div class="racts"><button class="btn" data-impupdate="' + esc(id) + '">Update from a new export</button></div><div class="imprm" id="impRm">' + impRmBtn(id) + '</div>');
 }
 
 /* ---------- screen: settings ---------- */
@@ -1939,8 +1978,9 @@ const HOW_TITLE = 'How the app works and why you should be able to trust the dat
 // the tables of data.js, in the order the screen draws them: name, key in D, what one row is (verify/columns.json says it for most)
 const HW_TABLES = [['ARMIES', 'armies'], ['DATASHEETS', 'datasheets'], ['FACTIONS', 'factions'], ['CORE_STRATAGEMS', 'coreStratagems'], ['RULES', 'rules'],
   ['RULE_ALIASES', 'ruleAliases'], ['RULE_SRC', 'ruleSrc'], ['CONCEPTS', 'concepts'], ['GRANTS', 'grants'], ['RULE_OPTIONS', 'ruleOptions'],
-  ['CHECKLIST', 'checklist'], ['BOXES', 'boxes'], ['BS_IDS', 'bsIds'], ['VERSION', 'version']];
+  ['CHECKLIST', 'checklist'], ['BOXES', 'boxes'], ['BUILD_INDEX', 'buildIndex'], ['BS_IDS', 'bsIds'], ['VERSION', 'version']];
 const HW_WHAT = { CHECKLIST:'per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js',
+  BUILD_INDEX:'what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values over BSData’s): written by verify/build-index.js',
   VERSION:'the data’s version: one value, raised with every release' };
 // CHECKLIST's columns (verify/derive.js writes them; verify/render.js fails on one this does not name)
 const HW_CK = { t:'the phases it is triggered in', u:'the phases its effect is used in', s:'listed at a fixed moment of the turn', a:'listed when the unit is selected',
@@ -5763,9 +5803,10 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-settings')){ go({ s:'settings' }); return; }
   if(el.hasAttribute('data-import')){ showImport(); return; }
   if(el.hasAttribute('data-impgo')){ runImport(($('#impText') || {}).value); return; }
+  if(ds.impupdate){ showImport(ds.impupdate); return; }
   if(ds.impstale){ showStale(ds.impstale); return; }
   if(ds.imprm){ askRemove(ds.imprm); return; }
-  if(ds.imprmyes){ if(favIds().includes(ds.imprmyes)) setFav(ds.imprmyes, false); removeImported(ds.imprmyes); return; }   // (its star goes too)
+  if(ds.imprmyes){ removeImported(ds.imprmyes); return; }   // (its star, ticks and checklist boxes go too)
   if(ds.imprmno){ const h = $('#impRm'); if(h){ h.innerHTML = impRmBtn(ds.imprmno); h.querySelector('button').focus({ preventScroll:true }); } return; }
   if(ds.hfopen){ showHomeFilter(ds.hfopen); return; }
   if(ds.hf){ const i = ds.hf.indexOf('|'), k = ds.hf.slice(0, i), v = ds.hf.slice(i + 1), f = homeFilter();
@@ -5921,10 +5962,18 @@ document.addEventListener('toggle', e => {
 }, true);
 $('#sheetBack').addEventListener('click', closeSheet);
 // the import sheet's file: read and imported at once
+// the import box's name: prefilled from a pasted export that carries one (not over a name the player typed)
+document.addEventListener('input', e => {
+  if(e.target.id === 'impName'){ e.target.dataset.typed = e.target.value ? '1' : ''; return; }
+  if(e.target.id !== 'impText' || !window.WH_IMPORT) return;
+  const box = $('#impName'); if(!box || box.dataset.typed) return;
+  let n = ''; try { const t = e.target.value.trim(), p = WH_IMPORT.parseSync(t, D); if(p.ok) n = WH_IMPORT.nameOf(p.text ? { text:t } : p.json, D); } catch(x){}
+  box.value = n;
+});
 document.addEventListener('change', e => {
   if(e.target.id !== 'impFile' || !e.target.files || !e.target.files[0]) return;
   const f = e.target.files[0];
-  f.text().then(t => { const box = $('#impText'); if(box) box.value = ''; runImport(t); }, () => { const out = $('#impOut'); if(out) out.innerHTML = '<div class="impno"><p class="qh">Not imported</p><p class="lead">The file could not be read.</p></div>'; });
+  f.arrayBuffer().then(b => { const box = $('#impText'); if(box) box.value = ''; runImport(new Uint8Array(b)); }, () => { const out = $('#impOut'); if(out) out.innerHTML = '<div class="impno"><p class="qh">Not imported</p><p class="lead">The file could not be read.</p></div>'; });
 });
 addEventListener('keydown', e => {
   const t = e.target;

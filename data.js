@@ -20,7 +20,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-11-02.2';
+const VERSION = '2026-11-02.3';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text: the official Core Rules PDF (11th edition), BSData and the
@@ -13916,6 +13916,141 @@ const BOXES = {
   "s|zg2kak":{"b":[{"quote":"Until the end of the phase, melee weapons equipped by models in your unit have the **[LETHAL HITS]** ability.","fx":[["lethal",true]],"on":[],"kind":"melee"},{"quote":"If your unit is a **HARVESTER** unit, each time a model in that unit makes a melee attack, a successful unmodified **Hit roll** of 5+ scores a Critical Hit as well.","fx":[["critHit",5]],"on":[["selfKw","Harvester"]],"kind":"melee","lead":"Until the end of the phase, melee weapons equipped by models in your unit have the **[LETHAL HITS]** ability."}],"n":"Secure Biomass"}
 };
 // ---- end of BOXES ----
+// ---- BUILD_INDEX: written by verify/build-index.js --write from the other tables and the gate's files (do not edit) ----
+const BUILD_INDEX = {
+  labels:{
+    "Anti-gravitic Mobility":{"ph":["movement","shooting"],"turn":"either","turns":{"shooting":"your"}},
+    "Apocalyptic Steeds":{"ph":["movement"],"turn":"your"},
+    "Arae-Shrike":{"ph":["movement"],"turn":"your"},
+    "Auric Eagle":{"ph":["movement","charge"],"turn":"either","turns":{"movement":"your"}},
+    "Auric Exemplar":{"ph":["fight"],"turn":"either"},
+    "Auriferous Orb":{"ph":["shooting","fight"],"turn":"either","turns":{"shooting":"your"}},
+    "Avatar of Perfection":{"ph":["command","movement","shooting","charge","fight"],"turn":"either"},
+    "A’rgath, the King of Blades":{"ph":["fight"],"turn":"either"},
+    "Bane of Abominations":{"ph":["movement","shooting","fight"],"turn":"either","turns":{"movement":"opp","shooting":"your"}},
+    "Brazenmaw":{"ph":["charge"],"turn":"either"},
+    "Celeritous Sentries":{"ph":["charge"],"turn":"opp"},
+    "Combat Deployment":{"ph":["charge"],"turn":"either"},
+    "Dreaming Crown (Aura)":{"ph":["fight"],"turn":"either"},
+    "Droning Shroud (Aura)":{"ph":["movement","shooting"],"turn":"opp","turns":{"shooting":"your"}},
+    "Edge of the Blade":{"ph":["fight"],"turn":"either"},
+    "Elevated Might":{"ph":["fight"],"turn":"either"},
+    "Emperor’s Light":{"ph":["fight"],"turn":"either"},
+    "Encircling Horrors":{"ph":["movement"],"turn":"opp"},
+    "Enraged Reserves":{"ph":["fight"],"turn":"either"},
+    "Fade to Darkness":{"ph":["fight"],"turn":"either"},
+    "False Majesty (Aura)":{"ph":["fight"],"turn":"either"},
+    "Flawless Bladework":{"ph":["fight"],"turn":"either"},
+    "From the Hall of Armouries":{"ph":["fight"],"turn":"either"},
+    "Fury’s Cage":{"ph":["movement","shooting","fight"],"turn":"either","turns":{"movement":"opp","shooting":"your"}},
+    "Huntress’ Eye":{"ph":["movement"],"turn":"your"},
+    "Inescapable Eye":{"ph":["command"],"turn":"your"},
+    "Infernal Puppeteer":{"ph":["shooting"],"turn":"your"},
+    "Inspirational Exemplar":{"ph":["command","movement","shooting","charge","fight"],"turn":"either"},
+    "Instinctive Defence":{"ph":["charge","fight"],"turn":"either","turns":{"charge":"opp"}},
+    "Leonine Ferocity":{"ph":["movement"],"turn":"opp"},
+    "Lightning Descent":{"ph":["movement"],"turn":"either"},
+    "Maggot Maws":{"ph":["shooting"],"turn":"your"},
+    "Malice Made Manifest":{"ph":["fight"],"turn":"either"},
+    "Mantle of Gloom (Aura)":{"ph":["command","movement","shooting","charge","fight"],"turn":"either"},
+    "Monstrous Nemesis":{"ph":["fight"],"turn":"either"},
+    "Naturalised Camouflage":{"at":"Start of the first battle round","ph":["command","shooting"],"turn":"either","turns":{"shooting":"your"}},
+    "Neverblade":{"ph":["fight"],"turn":"either"},
+    "Not a Shell Wasted":{"ph":["movement","shooting"],"turn":"opp","turns":{"shooting":"your"}},
+    "Oblivion Knight":{"ph":["movement","shooting","fight"],"turn":"either","turns":{"movement":"opp","shooting":"your"}},
+    "Ocular Adaptation":{"ph":["fight"],"turn":"either"},
+    "Parasitic Biomorphology":{"ph":["fight"],"turn":"either"},
+    "Pareldor’s Caducatrix":{"ph":["command","movement","shooting","charge","fight"],"turn":"either"},
+    "Perfectly Adapted":{"ph":["command","movement","shooting","charge","fight"],"turn":"either"},
+    "Piercing Talons":{"ph":["movement","shooting","fight"],"turn":"either","turns":{"movement":"opp","shooting":"your"}},
+    "Relentless Hunger":{"ph":["movement"],"turn":"your"},
+    "Sally Forth":{"ph":["charge"],"turn":"your"},
+    "Slaughterthirst (Aura)":{"ph":["fight"],"turn":"either"},
+    "Soul Glutton":{"ph":["shooting","fight"],"turn":"either","turns":{"shooting":"your"}},
+    "Soul-Hungry Slaughterers":{"ph":["movement","charge"],"turn":"opp"},
+    "Soul-Shattering Charge":{"ph":["fight"],"turn":"either"},
+    "Soulstealer":{"ph":["fight"],"turn":"either"},
+    "Stalker":{"ph":["movement","shooting","fight"],"turn":"either","turns":{"movement":"opp","shooting":"your"}},
+    "Synaptic Strategy":{"ph":["movement"],"turn":"opp"},
+    "The Everstave":{"ph":["movement","shooting"],"turn":"opp","turns":{"shooting":"your"}},
+    "Trygon Prime":{"ph":["fight"],"turn":"either"},
+    "Unstoppable Destroyer":{"ph":["fight"],"turn":"either"},
+    "Vanguard Intellect":{"ph":["movement"],"turn":"either"}
+  },
+  marks:{
+    "Aggressive Advance":{"M":{"add":2}},
+    "Alpha Warrior":{"SUSTAINED HITS 1":"kw"},
+    "Arcane Shield":{"InSv":{"set":"4+"}},
+    "Bane-Forged Weapons":{"S":{"add":1}},
+    "Berzerker Glaive":{"A":{"add":2},"D":{"add":1}},
+    "Bestial Aspect":{"ASSAULT":"kw"},
+    "Blade of Endless Bloodshed":{"A":{"add":1},"D":{"add":1},"S":{"add":1}},
+    "Blasphemous Engine":{"W":{"add":2}},
+    "Blood-forged Armour":{"Sv":{"set":"2+"}},
+    "Bringer of Justice":{"A":{"add":2}},
+    "Brutal But Kunnin’":{"D":null},
+    "Cyber-psalm Programming":{"M":{"add":2}},
+    "Cybork Boosta":{"M":{"add":2}},
+    "Daemonic Allegiance":{"A":{"add":3},"S":{"add":2}},
+    "Daemonic Icon":{"Ld":{"set":"6+"}},
+    "Dakka! Dakka! Dakka!":{"ASSAULT":"kw"},
+    "Destabilising Predation":{"ANTI-CHARACTER 2+":"kw"},
+    "Displays of Savagery":{"SUSTAINED HITS 1":"kw"},
+    "Eldritch Vortex of E’taph":{"D":{"add":1},"S":{"add":1}},
+    "Empowered Engines":{"M":{"add":6}},
+    "Empyric Guidance":{"LETHAL HITS":"kw"},
+    "Flare Shields":{"InSv":{"set":"5+, 4+*"}},
+    "Fleshmetal Fusion":{"T":{"add":1}},
+    "Flowing Flesh":{"W":{"add":1}},
+    "Furious Assault":{"SUSTAINED HITS 1: NON-MONSTER/VEHICLE":"kw"},
+    "Gore-stained Veterans":{"WS":null},
+    "Hunter’s Eye":{"IGNORES COVER":"kw"},
+    "Icon of Flame":{"IGNORES COVER":"kw"},
+    "Knight Diabolus":{"WS":{"set":"2+"}},
+    "Kustom Dakka":{"IGNORES COVER":"kw"},
+    "Lord of Decapitations":{"DEVASTATING WOUNDS":"kw"},
+    "Memento Moritoi":{"A":{"add":1},"D":{"add":1},"S":{"add":1}},
+    "More Dakka":{"IGNORES COVER":"kw"},
+    "Nazdreg’s Know-wotz":{"IGNORES COVER":"kw"},
+    "Neverblade":{"A":{"add":1},"AP":{"add":-1},"S":{"add":2}},
+    "Omnispex":{"IGNORES COVER":"kw"},
+    "Parasitic Biomorphology":{"S":{"add":1}},
+    "Perfectionists":{"LETHAL HITS":"kw"},
+    "Rain of Ruin":{"HEAVY":"kw"},
+    "Relentless Rage":{"A":null},
+    "Sanctuary":{"InSv":{"set":"5+"}},
+    "Shield Dome":{"InSv":{"set":"5+"}},
+    "Snarling Rivalry":{"IGNORES COVER":"kw"},
+    "Soul Forge Boons":{"InSv":{"set":"5+"}},
+    "Storm Shield":{"W":{"add":1}},
+    "Supa-glowy Fing":{"ANTI-INFANTRY 4+":"kw","DEVASTATING WOUNDS":"kw","SUPA-HAZARDOUS":"kw"},
+    "Supa-snazz Dakka":{"RAPID FIRE 1":"kw"},
+    "Super Runts":{"A":{"add":1},"S":{"add":1},"WS":{"set":"4+"}},
+    "Synaptoprescience":{"InSv":{"set":"4+"}},
+    "Vexilla":{"OC":{"add":1}}
+  },
+  gw:{
+    "adeptus-custodes/ares-gunship":{"ranged|Arachnus magna-blaze cannon|AP":"-4"},
+    "adeptus-custodes/blade-champion":{"melee|Hurricanis (Vaultswords)|AP":"-1"},
+    "adeptus-custodes/coronus-grav-carrier":{"melee|Armoured hull|A":"4","melee|Armoured hull|S":"6"},
+    "adeptus-custodes/knight-centura":{"melee|Gun Stock|WS":"3+"},
+    "adeptus-custodes/pallas-grav-attack":{"melee|Armoured hull|A":"4"},
+    "adeptus-custodes/prosecutor-squad":{"melee|Gun Stock|A":"3"},
+    "adeptus-custodes/venatari-with-kinetic-destroyers":{"stats|Venatari|Ld":"6+"},
+    "adeptus-custodes/venatari-with-verutum-lances":{"stats|Venatari|Ld":"6+"},
+    "adeptus-custodes/witchseeker-squad":{"melee|Gun Stock|A":"3"},
+    "tyranids/sporocyst":{"ranged|Sporocyst bio-weapon|kw":"HIVE DEFENCES"}
+  },
+  battleSizes:{
+    "Incursion":{"points":1000,"dp":2,"enhancements":2,"units":2},
+    "Strike Force":{"points":2000,"dp":3,"enhancements":4,"units":3}
+  },
+  upgrades:{
+    "Destabilising Predation":"GW’s Faction Pack: “DESTABILISING PREDATION UPGRADE”",
+    "Synaptoprescience":"GW’s Faction Pack: “SYNAPTOPRESCIENCE UPGRADE”"
+  }
+};
+// ---- end of BUILD_INDEX ----
 
 // ---- RULE_OPTIONS, GRANTS: written by verify/tables.js --write from verify/derive.js (do not edit) ----
 // RULE_OPTIONS: the options inside a rule or ability (Blessings of Khorne's, Try Dat Button!'s), each with the phases its
@@ -14183,5 +14318,5 @@ function resolveArmies(armies, sheets, order, factions, opts){
 }
 // ---- end of resolveArmies ----
 
-return { version:VERSION, concepts:CONCEPTS, rules:RULES, ruleSrc:RULE_SRC, ruleAliases:RULE_ALIASES, coreStratagems:CORE_STRATAGEMS, factions:FACTIONS, armies:resolveArmies(ARMIES, DATASHEETS, TABLE_ORDER, FACTIONS), bsIds:BS_IDS, checklist:CHECKLIST, boxes:BOXES, datasheets:DATASHEETS, ruleOptions:RULE_OPTIONS, grants:GRANTS };
+return { version:VERSION, concepts:CONCEPTS, rules:RULES, ruleSrc:RULE_SRC, ruleAliases:RULE_ALIASES, coreStratagems:CORE_STRATAGEMS, factions:FACTIONS, armies:resolveArmies(ARMIES, DATASHEETS, TABLE_ORDER, FACTIONS), bsIds:BS_IDS, checklist:CHECKLIST, boxes:BOXES, buildIndex:BUILD_INDEX, resolve:function(a){ return resolveArmies([a], DATASHEETS, TABLE_ORDER, FACTIONS)[0]; }, datasheets:DATASHEETS, ruleOptions:RULE_OPTIONS, grants:GRANTS };
 })();

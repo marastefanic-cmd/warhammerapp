@@ -21,6 +21,7 @@ the gate fails on a column that is not there.
 | `GRANTS` | a rule (or option) giving units an ability or keyword, to whom, while what | `rule` + `option` + `grants` |
 | `BS_IDS` | the BSData ids the in-app import resolves an export by | — |
 | `BOXES` | the Damage tab's boxes of each rule, ability and stratagem, made by script from GW's words (`verify/effects-migrate.js --write`) | `a\|` / `r\|` / `s\|` / `c\|` + the hash of its name and text |
+| `BUILD_INDEX` | what the in-app build (`builder.js`) needs beyond the other tables: enhancement labels, the values a marked rule changes, GW's values over BSData's (`verify/build-index.js --write`) | enhancement / rule / datasheet name |
 
 A unit entry: `{ id, ds:'orks/warboss', pts, models, gear, enhancement, warlord, copies, leads, also, kwNote, ptsNote, why, … }`
 (the readings, once `mods` / `aura` / `guard`, are retired: see Readings).
@@ -306,3 +307,39 @@ what `verify/derive.js` derives from the words; each unit gets them in the resol
 4. AI-written? Add it to `FINGERPRINT` in `verify/tables.js` (`summary:'summaryOf'`), `node verify/tables.js --stamp`. A reading
    column of a rule, stratagem or ability row? Add it to `READ_COLS` (the row's `readOf` covers it), `--stamp`.
 5. `node verify/tables.js --write`, then the gate; accept the snapshots it changes on purpose (`--accept`).
+
+## The in-app build: `builder.js`
+
+An export imported on the phone gets the outcome the same export would get here: `builder.js` (browser and Node, no `fs`, no `require`)
+turns a New Recruit export into the list's `ARMIES` entry from the export and `data.js` alone, `WH_BUILDER.build(export, WH_DATA, { id, date })`,
+and the app joins it with `DATASHEETS` as it joins its own lists (`WH_DATA.resolve`). It builds only a faction with a full catalogue
+(Custodes, Tyranids, Chaos Daemons today: `DATASHEETS` rows with GW's `points`); a list of another faction is copied from the app's own
+lists' units by `import.js` as before, and the list says so. What it reads:
+
+| From | What |
+|---|---|
+| the export | the units and who leads whom, models lines and their gear, the weapons and models (each to its `DATASHEETS` row by name), the enhancement, the Warlord, the points, the values its profiles show |
+| `DATASHEETS` | the rows, a wargear ability only with its wargear (`options`), a Leader / Support ability (whom it may join; not a row of the unit), GW's `points` |
+| `FACTIONS` | detachments, enhancements (name, text, pts, `limit`, `upgrade`), army and detachment rules |
+| `BOXES`, `BUILD_INDEX` | a "+" mark: a value the export shows otherwise than the row is a rule of the list at work; its source is the one rule reaching the unit whose boxes give that effect, else the one `BUILD_INDEX.marks` names for it; a value `BUILD_INDEX.gw` says is BSData's where GW's datasheet differs is no rule at work. A change no rule explains, or two explain, refuses the import |
+| `BS_IDS` | the faction, battle size, detachments and disposition (as `import.js` reads them) |
+
+Nothing the list shows is the export's: a part's name is its datasheet's, a model's its datasheet's composition's, a weapon's its row's, a
+wargear its option's; a value is GW's row's, or GW's row's with the one rule's effect (its boxes' `fx`, else `BUILD_INDEX.marks`' `add` /
+`set`), and the export's value is only compared with it (a difference refuses the import, naming both). The export says what was selected,
+and that is held to GW's rules, each refusal citing the rule: the datasheet's models (`composition`) and wargear (`options`: each choice and
+group per model, every model of a line alike); enhancements (a CHARACTER's, not an EPIC HERO's, as the enhancement's own first sentence
+allows, one per unit, no two of one, an Upgrade (BSData's or GW's Faction Pack's, `BUILD_INDEX.upgrades`) up to three, the battle size's
+limit); one CHARACTER Warlord; the unit limit (EPIC HERO 1, BATTLELINE and DEDICATED TRANSPORT double); Detachment Points; one leader and one
+support per bodyguard, each by its own Leader / Support ability (Core Rules 19.01, 25.03, 25.04; the battle sizes' numbers are
+`BUILD_INDEX.battleSizes`, from rules/core-rules.md 25.03).
+
+The gate step `build-parity` (`verify/build-parity.js`) holds it: every export of a catalogued faction builds its entry byte for byte (P1),
+every list imported on the phone shows every screen as the built-in one at 390 and 320px (P2), the build is deterministic (P3), the test
+list in .json, .ros, .rosz, text B and text C gives one list, and changed exports are refused with exact messages. What the hand files hold
+has no effect on a build; a list whose built-in entry needs a hand file (an id, a `short`, a note) would differ, and P1 says so.
+
+The input formats (`import.js` `parse`): .json; .ros (BattleScribe XML, the same roster); .rosz (it zipped, inflated by the platform);
+New Recruit's text format B ("+++ FACTION KEYWORD …") and C ("## Category …"), each name looked up exactly (case, apostrophes and spaces
+aside) and any line that is not exactly one thing refusing the import with its line; format A is refused as not supported. A text names no
+values, so a text export of a catalogued faction is refused (import its .json, .ros or .rosz).
