@@ -182,6 +182,17 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
       null, r => !r.ok && r.errors.includes('unit Hive Tyrant + Tyrant Guard not imported: Instinctive Defence and Parasitic Biomorphology: no unit (including attached units) can have more than one enhancement (Core Rules 25.04)'));
     neg('enhancement excluded by its words', 'healybois', j => { const e = takeEnh(j, 'Hive Tyrant'); resetS(j); unit(j, 'Hive Tyrant').selections.unshift({ id:'e3', name:'Regenerating Monstrosity', entryId:'x::e', number:1, type:'upgrade', group:'Enhancements' }); },
       null, r => !r.ok && r.errors.includes('enhancement Regenerating Monstrosity on Hive Tyrant not imported: GW’s enhancement says “TYRANIDS model only (excluding MONSTERS models).”'));
+    // (nidzillas: Monstrous Nemesis, Synaptoprescience twice and Destabilising Predation count 3, each Upgrade once; two Neurotyrants with an
+    // enhancement each make 5, over Strike Force's 4)
+    neg('over the enhancement limit (an Upgrade counts once)', 'nidzillas', j => {
+      const S = D.datasheets['tyranids/neurotyrant'], ch = o => Object.entries(o).map(([n2, v]) => ({ name:n2, $text:v }));
+      const wp = (r, kind) => ({ name:r.name, typeName:kind === 'ranged' ? 'Ranged Weapons' : 'Melee Weapons', characteristics:ch({ Range:r.range, A:r.A, [kind === 'ranged' ? 'BS' : 'WS']:kind === 'ranged' ? r.BS : r.WS, S:r.S, AP:r.AP, D:r.D, Keywords:(r.kw || []).join(', ') }) });
+      const nt = (k, e) => ({ id:'nt' + k, name:S.name, entryId:'x::' + S.bsId, number:1, type:'model', costs:[{ name:'pts', value:S.points.costs[0].models[0].pts }],
+        profiles:[{ name:S.stats[0].name, typeName:'Unit', characteristics:ch({ M:S.stats[0].M, T:S.stats[0].T, Sv:S.stats[0].Sv, W:S.stats[0].W, LD:S.stats[0].Ld, OC:S.stats[0].OC, InSv:S.stats[0].InSv }) }],
+        selections:[{ id:'e' + k, name:e, entryId:'x::e', number:1, type:'upgrade', group:'Enhancements::Crusher Stampede Enhancements' }]
+          .concat((S.ranged || []).map(r => [r, 'ranged']).concat((S.melee || []).map(r => [r, 'melee'])).map(([r, kind], i) => ({ id:'w' + k + i, name:r.name, entryId:'x::w', number:1, type:'upgrade', group:'Wargear', profiles:[wp(r, kind)] }))) });
+      const s = sels(j); s.splice(s.findIndex(x => x.name === 'Tyrannofex'), 1); s.push(nt(1, 'Null Nodules'), nt(2, 'Enraged Reserves')); },
+      null, r => !r.ok && r.errors.includes('5 enhancements not imported: Strike Force’s enhancement limit is 4 (Core Rules 25.03; 25.04: the second and third instances of the same Upgrade do not count towards it)'));
     neg('Warlord not a CHARACTER', 'healybois', j => { const s0 = unit(j, 'The Swarmlord'), w = s0.selections.find(s => s.name === 'Warlord'); s0.selections = s0.selections.filter(s => s !== w); unit(j, 'Pyrovores').selections.unshift(w); },
       ['warlord Pyrovores not imported: the Warlord must be a CHARACTER model (Core Rules 25.04, Select Units)']);
     neg('an EPIC HERO twice', 'healybois', j => { const s = sels(j), sw = clone(unit(j, 'The Swarmlord')); sw.id = 'sw2'; sw.selections = sw.selections.filter(x => x.name !== 'Warlord'); sw.associations = []; s.splice(s.findIndex(x => x.name === 'Norn Emissary'), 1); s.push(sw); j.roster.costs[0].value += 210 - 250; },

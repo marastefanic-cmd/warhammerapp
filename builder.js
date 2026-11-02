@@ -331,8 +331,9 @@ function rosterLegal(B, D, top, units, groups, err){
   for(const e of uniq(all)){ const n = all.filter(x => x === e).length, max = isUpg(e) ? 3 : 1;
     if(n > max) err('enhancement ' + e.name + ' ×' + n + ' not imported: ' + (max === 1 ? 'your army cannot include more than one of the same enhancement' : 'you can include up to three of the same Upgrade') + ' (Core Rules 25.04, Select Enhancements)'); }
   if(BS){
-    const enh = all.filter(e => !isUpg(e)).length;
-    if(enh > BS.enhancements) err(enh + ' enhancements not imported: ' + top.battleSize + '’s enhancement limit is ' + BS.enhancements + ' (Core Rules 25.03)');
+    // (an Upgrade counts once: only its second and third instances are not counted, Core Rules 25.04)
+    const enh = all.filter(e => !isUpg(e)).length + uniq(all.filter(isUpg)).length;
+    if(enh > BS.enhancements) err(enh + ' enhancements not imported: ' + top.battleSize + '’s enhancement limit is ' + BS.enhancements + ' (Core Rules 25.03; 25.04: the second and third instances of the same Upgrade do not count towards it)');
     // detachments: their Detachment Points within the battle size's
     const dp = top.dets.reduce((t, d) => t + (Number(B.F.detachments[d].dp) || 0), 0);
     if(dp > BS.dp) err('detachments ' + and(top.dets.map(d => B.F.detachments[d].name)) + ' (' + dp + ' DP) not imported: ' + top.battleSize + ' has ' + BS.dp + ' DP (Core Rules 25.03, 25.04)');
