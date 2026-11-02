@@ -17,6 +17,7 @@
      noteForm       every app note (army/detachment rule, stratagem, ability) is GW's words alone, each quoted under a fixed source label
                     (NOTE_LABELS: "Wahapedia FAQ: “…” “…”", "FAQ (Faction Pack 1.3): “…” “…”"): no prose of the app's
      noteQuote      every quotation (“…”) inside a note, word for word in the documents its label names (GW's or Wahapedia's)
+     refQuote       a reference sheet's quote (ref) is GW's words of the ability or stratagem it names, verbatim, and what it names is the list's
    A line marked "*Wahapedia core rules (…): …*" (a sentence GW's Core Rules PDF does not print) is checked word for word in
    Wahapedia's core rules only.
    Lines the app marks as its own ("*App note, not rules text: …*") are not checked; they are listed in out/texts.json
@@ -1555,6 +1556,21 @@ for (const fk of FACTIONS) {
     for (const r of detRules_(d)) if (r.note) checkQuotes(fk, 'detachment:' + dk + '/rule' + (r === d.rule ? '' : ':' + r.name), r.note, [r.text]);
     for (const s of d.stratagems || []) if (s.note) checkQuotes(fk, 'detachment:' + dk + '/stratagem:' + s.id, s.note, stratOwn(s));
   }
+}
+// refQuote: a reference sheet's quote (ARMIES.units ref: { by, rule, quote } or { strat, rule, quote }) is GW's words of the rule it names,
+// verbatim: the ability of that name of the unit by names (by its id), or the stratagem of that id (its EFFECT); by, rule and strat must
+// name what the list has
+for (const a of D.armies) for (const u of (a.units || []).concat(a.refs || [])) if (u.ref) {
+  count('refQuote');
+  const r = u.ref, by = r.by ? a.units.find(x => x.id === r.by) : null;
+  const allSt = D.coreStratagems.concat(a.detachments.flatMap(id => ((D.factions[a.faction].detachments || {})[id] || {}).stratagems || []));
+  const st = r.strat ? allSt.find(x => x.id === r.strat) : null;
+  const src = by ? (by.abilities || []).find(x => x.name === r.rule) : st && st.name === r.rule ? st : null;
+  if (r.by && !by) { fail('refQuote', a.id, u.id, 'ref.by', r.by, 'no unit of the list has this id', ''); continue; }
+  if (r.strat && !st) { fail('refQuote', a.id, u.id, 'ref.strat', r.strat, 'no stratagem of the list has this id', ''); continue; }
+  if (!src) { fail('refQuote', a.id, u.id, 'ref.rule', r.rule, (by ? by.name + ' has no ability' : 'its stratagem is not') + ' of this name', ''); continue; }
+  const text = src.effect !== undefined ? src.effect : src.text;
+  if (!normField(text).includes(normField(r.quote))) fail('refQuote', a.id, u.id, 'ref.quote', r.quote, 'not GW\'s words of ' + r.rule + ' (' + (by ? by.name : 'stratagem') + '), verbatim', '');
 }
 // (a list's unit's own note, ARMIES.units note: none today)
 for (const a of D.armies) for (const u of a.units) if (u.note) checkQuotes(a.id, u.id, u.note, [], dsDocIds(a.faction, [u.name]));
