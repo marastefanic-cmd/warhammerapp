@@ -85,8 +85,15 @@ const FX = {
   skill:{ label:p => 'BS/WS improved by ' + p, mod:p => ({ skill:+p }), dom:[1, 2],
     pats:[/\bimprove the (?:ballistic|weapon) skill characteristic of [^.;]*? by (\d)\b/, /\bimprove the (?:bs|ws) characteristic of [^.;]*? by (\d)\b/, /\b(?:bs|ws) improved by (\d)\b/] },
   range:{ label:p => '+' + p + '" range', mod:p => ({ range:+p }), dom:[3, 6, 9, 12, 18], pats:[/\+(\d+)" r\b/, /\badd (\d+)" to the range characteristic\b/] },
+  // ("ignore modifiers to …: the Hit roll; the Wound roll", "ignore modifiers to your unit's: Hit rolls and wound rolls": the wound roll named after
+  // the words "ignore … modifiers to" in the same sentence; read before ignoreHitMods, whose words run to the sentence's end)
+  ignoreWoundMods:{ label:() => 'Ignore modifiers to the Wound roll', mod:() => ({ ignoreWoundMods:true }), dom:[true],
+    pats:[/(?<=\bignore (?:any or all )?modifiers to [^.]*?)\bwound rolls?\b/] },
   ignoreHitMods:{ label:() => 'Ignore modifiers to BS/WS and the Hit roll', mod:() => ({ ignoreHitMods:true }), dom:[true],
     pats:[/\bignore any or all modifiers to (?:the following: )?(?:that (?:model's|attack's) )?(?:ballistic skill|bs|weapon skill|the hit roll)\b[^.]*/, /\bignore modifiers to your unit's: bs\b[^.]*/] },
+  // (the Hit roll alone, "can ignore modifiers to hit rolls and wound rolls": not BS/WS, so not the benefit of cover; read after ignoreHitMods)
+  ignoreHitRollMods:{ label:() => 'Ignore modifiers to the Hit roll', mod:() => ({ ignoreHitRollMods:true }), dom:[true],
+    pats:[/\bignore (?:any or all )?modifiers to (?:the )?hit rolls?\b/] },
   // a weapon ability that changes nothing in these numbers (shown with the box, said as such)
   assault:{ label:() => '[ASSAULT]', mod:() => null, dom:[true], pats:[/\[assault\]/] },
   // its own Objective Control (a Damaged band: "subtract 4 from this model's Objective Control characteristic"), no effect on attacks

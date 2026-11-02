@@ -420,6 +420,23 @@ const fxCases = [
   ['fx:skill 1: hits', () => ex1([g({ n:60, mods:[fxm('skill', 1)] })], T4, { ranged:true }).hits, 40],
   ['fx:range +6: range', () => C.resolve({ groups:[g({ range:'24"', mods:[fxm('range', 6)] })], target:T4, ctx:{ ranged:true } }).groups[0].rangeIn, 30, 0],
   ['fx:ignoreHitMods: hits, its -1 ignored', () => ex1([g({ n:60, mods:[fxm('hit', -1), fxm('ignoreHitMods', true)] })], T4).hits, 30],
+  // ignoring modifiers to the wound roll (Martial Ka'tah, Unshakeable Opponents: "Hit rolls and wound rolls"): the ones that make it worse,
+  // a rule's and the target's, never one that makes it better. 60 [TORRENT] hits, S4 vs T4 (4+): 30 wounds; a -1 not ignored: 5+, 20
+  ['fx:ignoreWoundMods: a rule\'s -1 ignored', () => ex1([g({ n:60, kw:['TORRENT'], mods:[fxm('wound', -1), fxm('ignoreWoundMods', true)] })], T4).wounds, 30],
+  ['fx:ignoreWoundMods: the target\'s -1 to wound ignored', () => ex1([g({ n:60, kw:['TORRENT'], mods:[fxm('ignoreWoundMods', true)] })], { T:4, models:[big(100, 10)], mod:{ woundMinus:1 } }).wounds, 30],
+  ['fx:ignoreWoundMods: without it, the -1 counts', () => ex1([g({ n:60, kw:['TORRENT'] })], { T:4, models:[big(100, 10)], mod:{ woundMinus:1 } }).wounds, 20],
+  // (a +1 is kept: S4 vs T4 4+, +1 and the target's -1 ignored: 3+, 40)
+  ['fx:ignoreWoundMods: a +1 kept', () => ex1([g({ n:60, kw:['TORRENT'], mods:[fxm('wound', 1), fxm('ignoreWoundMods', true)] })], { T:4, models:[big(100, 10)], mod:{ woundMinus:1 } }).wounds, 40],
+  // (the target's -1 to wound when S is greater than T: S5 vs T4 3+, 40 of 60, not 30)
+  ['fx:ignoreWoundMods: -1 when S is greater than T ignored (working)', () => ex1([g({ n:60, S:5, kw:['TORRENT'], mods:[fxm('ignoreWoundMods', true)] })], { T:4, models:[big(100, 10)], mod:{ woundMinusSgt:1 } }).wounds, 40],
+  // (the same in the played games: 12 attacks × 3/6 = 6 hits, S5 vs T4 3+: 4, not 3 (the case above without it))
+  ['fx:ignoreWoundMods: -1 when S is greater than T ignored (played)', () => run([g({ n:12, S:5, mods:[fxm('ignoreWoundMods', true)] })], { T:4, models:[big(20, 10)], mod:{ woundMinusSgt:1 } }).groups[0].wounds, 4],
+  ['fx:ignoreWoundMods: a rule\'s -1 ignored (played)', () => run([g({ n:60, kw:['TORRENT'], mods:[fxm('wound', -1), fxm('ignoreWoundMods', true)] })], { T:4, models:[big(100, 10)] }).groups[0].wounds, 30],
+  // ignoring modifiers to the Hit roll only (Bearers of His Light): the -1 to hit, not the benefit of cover (a BS/WS modifier, 13.08):
+  // 60 ranged attacks at 4+ with cover: 5+, 20 (ignoreHitMods: BS too, 30)
+  ['fx:ignoreHitRollMods: hits, its -1 ignored', () => ex1([g({ n:60, mods:[fxm('hit', -1), fxm('ignoreHitRollMods', true)] })], T4).hits, 30],
+  ['fx:ignoreHitRollMods: cover not ignored', () => ex1([g({ n:60, mods:[fxm('ignoreHitRollMods', true)] })], T4, { ranged:true, cover:true }).hits, 20],
+  ['fx:ignoreHitMods: cover ignored', () => ex1([g({ n:60, mods:[fxm('ignoreHitMods', true)] })], T4, { ranged:true, cover:true }).hits, 30],
   // a weapon ability that changes no numbers: no mod at all (the box says "no effect in these numbers")
   ['fx:assault: no mod', () => Object.keys(fxm('assault', true)).length, 0, 0],
   ['fx:pistol: no mod', () => Object.keys(fxm('pistol', true)).length, 0, 0],
