@@ -15,10 +15,6 @@
  ],
  "keptRowsWhy": "The owner retired the lists Melee and Ooga booga for this one (“remove Melee Orks list and Ooga Booga lists, this is the new ultimate melee orks list”): these datasheet rows were theirs and are now this list’s alone; their signed-off facts (words, labels, When targeted lines, notes) stay the app’s, as for a row another list has (from-json.js keptRows).",
  "units": {
-  "zodgrod-wortsnagga-runtherd-gretchin": {
-   "why": "Zodgrod Wortsnagga leads the 20 Gretchin, the Runtherd supports them (the export’s associations; GW’s LEADER: GRETCHIN, the Runtherd’s SUPPORT: GRETCHIN). Super Runts (“This unit is riled up”, “This unit’s Scavenged Shivs weapons have +1 A, WS and S”): the attached unit, Core Rules 19.04. Extra Sneaky (Runt Swarm, UPGRADE: GRETCHIN unit only) is the Gretchin’s. That’ll Learn Ya in GW’s words (“This unit is no longer battle-shocked”; BSData: “That unit”).",
-   "kwNote": "Gretchin, Grots come from the combined unit; Battleline from Sneaky Little Gitz (Runt Swarm)."
-  },
   "gretchin": {
    "why": "Ten Gretchin with the Extra Sneaky upgrade (Runt Swarm, UPGRADE, “GRETCHIN unit only”; the export gives it to two Gretchin units, this one and Zodgrod’s): 45 + 10 pts. Legal: Core Rules 25.04 (Wahapedia) lets an army include “up to three of the same Upgrade … (the second and third instances of the same Upgrade do not count towards the total number of enhancements in your army, but you must still spend the stated points cost each time)”, and an attached unit can be given an Upgrade (FAQ). The other ten Gretchin (gretchin-2) have none."
   },

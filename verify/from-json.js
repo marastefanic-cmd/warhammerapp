@@ -1552,6 +1552,11 @@ for (const u of units) {
     }
   }
 }
+// why an ability does nothing in this list (na: "Not leading a unit in this list", "Needs … : not this loadout", "No WAR DOG in this list"), by
+// verify/derive.js naOf's closed patterns over its words, the unit and the list, on every unit's ability where they give one
+{ const { naOf } = require('./derive');
+  for (const u of units) for (const ab of u.abilities || []) { const na = naOf(ab, u, units); if (!na) continue;
+    const t = ab.text; delete ab.text; ab.na = na; ab.text = t; filled.push({ what: 'na on ' + u.name + ' · ' + ab.name + ': ' + na, from: 'its words (verify/derive.js naOf)' }); } }
 const handKw = [], handStats = [];
 // (an ability by its name, or, where two parts of the unit have one of that name, "<name> / <who>")
 const handAb = (u, an) => { const m = /^(.*) \/ ([^/]+)$/.exec(an); return m ? u.abilities.find(a => a.name === m[1] && a.who === m[2]) : u.abilities.find(a => a.name === an); };
@@ -1559,25 +1564,22 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
   const u = units.find(x => x.id === uid);
   if (!u) { want(uid, 'hand file', 'verify/sources/hand/' + armyId + '.json names a unit the list does not have'); continue; }
   // (GW's words where Wahapedia's transcription differs, texts: applied before the datasheet rows are compared, above)
-  // why an ability does nothing in this list, when that is certain (na: { <ability>: why }: the Destrier's Thundercharge without its weapons)
-  for (const [an, why] of Object.entries(h.na || {})) {
-    const ab = handAb(u, an);
-    if (!ab) { want(uid + ' · ' + an, 'hand file na', 'no ability of this name'); continue; }
-    const t = ab.text; delete ab.text; ab.na = why; ab.text = t;
-    handDone.push({ what: 'na on ' + u.name + ' · ' + an, by: 'hand (Claude)', text: why });
-  }
+  // (why an ability does nothing in this list, na, is derived, below: never the hand file's)
+  for (const an of Object.keys(h.na || {})) want(uid + ' · ' + an, 'hand file na', 'na is derived from the words (verify/derive.js naOf): take it out of the hand file');
   for (const [an, note] of Object.entries(h.notes || {})) {
     const ab = handAb(u, an);
     if (!ab) { want(uid + ' · ' + an, 'hand file note', 'no ability of this name'); continue; }
     const t = ab.text; delete ab.text; ab.note = note; ab.text = t;
     handDone.push({ what: 'note on ' + u.name + ' · ' + an, by: 'hand (Claude)', text: note });
   }
-  // the keywords note where its reasons are more than the parts' (kwNote: a keyword a rule of the list gives, Sneaky Little Gitz' BATTLELINE)
-  if (h.kwNote) { u.kwNote = h.kwNote; handDone.push({ what: 'kwNote of ' + u.name + ': ' + h.kwNote, by: 'hand (Claude)', text: h.why || '' }); }
+  // (it is derived: verify/tables.js --write writes it by verify/gw-order.js kwNoteOf's templates, never the hand file's)
+  if (h.kwNote) want(uid, 'hand file kwNote', 'kwNote is derived (verify/gw-order.js kwNoteOf): take it out of the hand file');
   // the unit's short name on the screen (short: "Daemon Prince" for the Daemon Prince of Khorne), its note on its sources (srcNote:
   // { at, note }), and which model has a keyword or a core ability only some of its models have (kwOnly / partialRules: { <keyword or
   // rule>: <model> }, the whole column, null for none) where GW's datasheet pages do not give it mechanically (Sir Hekhtur's)
-  for (const k of ['short', 'srcNote', 'kwOnly', 'partialRules']) if (h[k] !== undefined) {
+  // (srcNote is derived: verify/tables.js --write writes it by verify/gw-order.js srcNoteOf, never the hand file's)
+  if (h.srcNote !== undefined) want(uid, 'hand file srcNote', 'srcNote is derived (verify/gw-order.js srcNoteOf): take it out of the hand file');
+  for (const k of ['short', 'kwOnly', 'partialRules']) if (h[k] !== undefined) {
     if (h[k] === null) delete u[k]; else u[k] = JSON.parse(JSON.stringify(h[k]));
     handDone.push({ what: k + ' of ' + u.name + ': ' + JSON.stringify(h[k]), by: 'hand (Claude)', text: (h.whyCols || {})[k] || h.why || '' });
   }

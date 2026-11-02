@@ -1073,6 +1073,12 @@
   "at": "2026-10-16",
   "why": "Matches Wahapedia 15.06 errata: \"The Tank Shock Stratagem is the same as the Crushing Impact stratagem.\""
  },
+ "0c255938cf177f6e": {
+  "verdict": "ok",
+  "by": "review:notes",
+  "at": "2026-11-02",
+  "why": "Sir Hekhtur: \"its own EPIC HERO datasheet\" from GW's pages; now one note for each such model."
+ },
  "0c713661db509068": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -2512,6 +2518,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "Faithful and complete."
+ },
+ "20071c680707adaf": {
+  "verdict": "ok",
+  "by": "review:notes",
+  "at": "2026-11-02",
+  "why": "Rubric fix confirmed against Wahapedia (Rubric Marines: no RUBRIC keyword). War Dogs' quote is now GW's two sentences (\"When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.\", Wahapedia Houndpack Lance); \"Disciple of Khorne on the Lord on Juggernaut\" matches GW (\"LORD ON JUGGERNAUT model only. The bearer has …\"). A hand edit dropping the lead-in is caught (table form)."
  },
  "203203e2c13a6697": {
   "verdict": "ok",
@@ -7547,6 +7559,12 @@
   "at": "2026-10-17",
   "why": "It looks the name up: the unit's own ability first (kind = who + tag, else 'datasheet ability'), then ruleFor (army or detachment rule with its src, or a core rule). It returns that rule's own text, with no rule logic. I simulated every grant in the data: Cybork Boosta → 'Enhancement' (M); More Dakka → 'datasheet ability'; Dakka! Dakka! Dakka! → 'Shoota Boyz detachment rule'; Supa-glowy Fing → 'Enhancement'; Kustom Dakka → 'Mek · datasheet ability'; Supa-snazz Dakka → 'Flash Gitz · Upgrade'. Each source text does grant the marked keyword or value without a condition. Kustom Dakka is correctly taken from the Mek's ability ('This unit's ranged attacks have [IGNORES COVER]') and not from the Kustom Dakka stratagem (+1 to wound). Safe on null: when u is undefined it falls back to ruleFor, and an unknown name gives empty text."
  },
+ "615ea619f0bcced3": {
+  "verdict": "ok",
+  "by": "review:notes",
+  "at": "2026-11-02",
+  "why": "Values checked against the datasheets and GW: Swarmlord/Hive Tyrant OC 3→5, Tyrannofex OC 5→7, Contemptors OC 3→5, Telemons OC 4→6 (Moritoi Ancients: \"that unit has +2 OC\" at starting strength, no Battle-shock clause, none added); Kastelan \"+1 OC\" (OC 1 and 2), Tzaangors \"TZAANGOR models +1 OC\". The four nidzillas Norns now say \"+2 OC\", never a total Singular Purpose's \"Objective Control characteristic of 15\" can contradict. Removing the set-value guard is caught by LS (reviewer mutation)."
+ },
  "619726c92c431496": {
   "verdict": "ok",
   "by": "review:literal (its fix, applied as written)",
@@ -7828,6 +7846,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Your Movement phase."
+ },
+ "65a164ca72fd6f70": {
+  "verdict": "ok",
+  "by": "review:notes",
+  "at": "2026-11-02",
+  "why": "\"Lost no wounds (At its Starting Strength)\" for a one-model unit is Core Rules 01.02.01 (Starting Strength 1: below = remaining wounds < W). No multi-model atStarting unit today."
  },
  "65a7b6f3fe5be4f1": {
   "verdict": "ok",
@@ -8717,6 +8741,12 @@
   "at": "2026-10-26",
   "why": "An Infractors wargear ability (the export has Icon of Excess on each Infractors unit; the model line is “1× Infractor (Icon of Excess)”)."
  },
+ "73aede35cc27b7e2": {
+  "verdict": "ok",
+  "by": "review:notes",
+  "at": "2026-11-02",
+  "why": "Form and quotes held; labels now held to their document (noteLabel): a wrong Faction Pack version and an FAQ relabelled errata are caught (reviewer mutations). Residual: \"X datasheet\" is held only to a datasheet of that name existing in the document, not to the quote being on it."
+ },
  "73bb789eb21a9247": {
   "verdict": "ok",
   "by": "review:nerf-rules",
@@ -8818,6 +8848,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "Malign Trickery is on the Tzaangor Enlightened with Fatecaster Greatbows datasheet (Wahapedia), the led unit."
+ },
+ "751bc4b8d2f9b725": {
+  "verdict": "ok",
+  "by": "review:notes",
+  "at": "2026-11-02",
+  "why": "Now reads GW's 11th-edition phrasings (\"that unit has +2 OC\", \"Friendly … units have +6\\\" M\", \"is at starting strength\"), with fixtures in LS; Example lines skipped. Dropping the new pattern or the new condition is caught (reviewer mutations); Empowered Engines' box adds no line (its from mark)."
  },
  "75514117213ff390": {
   "verdict": "ok",
@@ -12743,6 +12779,12 @@
   "at": "2026-10-23",
   "why": "The text opens 'Once per turn, when you target this model with a stratagem…' (Wahapedia). No range."
  },
+ "a7f45ecb5b8c80e2": {
+  "verdict": "ok",
+  "by": "review:notes",
+  "at": "2026-11-02",
+  "why": "Prints alreadyInRule; held by LA."
+ },
  "a7fe6e9b31f9522e": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -14303,6 +14345,12 @@
   "at": "2026-10-28",
   "why": "GW: \"Onslaught (Aura, Psychic)\" on the Hive Tyrant datasheet (Wahapedia verify/.cache/waha/ds/tyranids_Hive-Tyrant.html). Who = Hive Tyrant."
  },
+ "bdf7eaae72591f76": {
+  "verdict": "ok",
+  "by": "review:notes",
+  "at": "2026-11-02",
+  "why": "Union of from marks; Relentless Rage (no World Eaters melee weapon in the Berzerker Warband lists lacks the mark), Flare Shields, Soul Forge Boons, Cyber-psalm M, Empowered Engines M all true. Now held by lines LA (reviewer mutation A→S caught)."
+ },
  "be00a44eee99c703": {
   "verdict": "ok",
   "by": "review:custodes-units",
@@ -15136,6 +15184,12 @@
   "by": "review:tzeentch-data",
   "at": "2026-10-27",
   "why": "\"One LEGIONES DAEMONICA TZEENTCH MONSTER unit\": Kairos, the Daemon Prince, both Lords of Change (the Soul Grinder is a VEHICLE)."
+ },
+ "caada49948b95e11": {
+  "verdict": "ok",
+  "by": "review:notes",
+  "at": "2026-11-02",
+  "why": "Re-derived over all 225 units: stored = derived; the 12 chips each correct (the defilers-and-friends Sorcerer leads none; Warped Interference is one \"While this model is leading a unit\" sentence)."
  },
  "cabff06f164883fe": {
   "verdict": "ok",
@@ -18904,6 +18958,12 @@
   "by": "review:reference-2",
   "at": "2026-10-28",
   "why": "GW’s carrier line: “Every Brimstone Horror added to this unit using the Split ability is equipped with: Coruscating Yellow Flames; yellow claws.” Rows without “(ref. only)” and carrier, as a sheet of those models should be."
+ },
+ "ff2b16a726073455": {
+  "verdict": "ok",
+  "by": "review:notes",
+  "at": "2026-11-02",
+  "why": "Only two \"+NCP\" texts exist (Into the Fray, Hulking Brutes); both read."
  },
  "ff65a03e35b0f2f7": {
   "verdict": "ok",

@@ -18,12 +18,12 @@
    "what": "where a RULES entry comes from when it is not a core rule",
    "columns": {
     "name": {
-     "source": "hand",
-     "note": "the RULES entry"
+     "source": "derived",
+     "note": "a RULES entry that is no core rule (its faction’s or a datasheet’s term: verify/texts.js checks its text against those pages)"
     },
     "source": {
-     "source": "hand",
-     "note": "where it is from"
+     "source": "derived",
+     "note": "where it comes from, by fixed templates over its place in the tables (verify/derive.js ruleSrcOf: “{ally} army rule (allies)”, “weapon ability of the {weapons} ({unit})”, “term in {ability} ({unit})”); verify/texts.js ruleSrc: stored = derived"
     }
    }
   },
@@ -32,11 +32,12 @@
    "columns": {
     "pattern": {
      "source": "hand",
-     "note": "signed off (approvals.json, rule-alias)"
+     "note": "which chip opens which rule: mechanical where it reads the rule’s own name (verify/texts.js alias: “feel no pain”, its value aside), a player’s word for a rule otherwise, signed off (approvals.json, rule-alias); it writes no line",
+     "declared": "which chip opens which rule; it writes no line: mechanical where it reads the rule’s own name (verify/texts.js alias), a player’s word for a rule otherwise (verify/helpers.js rule-alias)"
     },
     "rule": {
-     "source": "hand",
-     "note": "the RULES entry it opens"
+     "source": "derived",
+     "note": "the RULES entry it opens: verify/texts.js alias fails on one that is not there"
     }
    }
   },
@@ -54,7 +55,8 @@
    "columns": {
     "id": {
      "source": "hand",
-     "note": "stable id (the app links by it)"
+     "note": "stable id (the app links by it)",
+     "declared": "an id: what the app links by, no line"
     },
     "gist": {
      "source": "ai-summary",
@@ -105,16 +107,16 @@
      "note": "which units it is for: the needs its TARGET gives by the closed patterns of verify/derive.js stratNeeds; verify/evidence.js \"targets\" fails on any difference or an unparsed TARGET"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "limit": {
      "source": "derived",
      "note": "\"Once per battle\": its RESTRICTIONS say it can be used once per battle (verify/lines.js L0)"
     },
     "cpNote": {
-     "source": "hand",
-     "note": "the extra CP part, from the words; signed off"
+     "source": "derived",
+     "note": "its extra-CP chip (“Or: +1CP”, “Into the Fray +1CP”): the parts of its EFFECT GW prints with an extra cost, by two closed patterns (verify/effects-extract.js cpNoteOf); verify/lines.js L0: stored = derived, and no other “+NCP” in the EFFECT"
     },
     "readOf": {
      "source": "derived",
@@ -131,7 +133,8 @@
     },
     "aliases": {
      "source": "hand",
-     "note": "words players use for a rule that has another name; signed off (rule-alias)"
+     "note": "words players use for a rule that has another name: mechanical where the pattern reads the rule’s name (verify/texts.js alias), signed off otherwise (rule-alias); it writes no line",
+     "declared": "which rule a chip opens: it writes no line (verify/texts.js alias)"
     },
     "armyRules": {
      "source": "gw",
@@ -142,8 +145,8 @@
      "note": "see FACTIONS.detachments"
     },
     "allies": {
-     "source": "hand",
-     "note": "an allied unit's reason to be in a list: New Recruit's ally name (role \"Allies: X\") -> the rule that lets X's units into this faction's army (Assigned Agents, Daemonic Pact, the Deathwatch Support detachment's Mission Tactics); its words are a RULES entry or the faction's own rule"
+     "source": "gw",
+     "note": "an allied unit’s reason to be in a list: New Recruit’s ally name (role “Allies: X”) -> the rule that lets X’s units into this faction’s army; verify/texts.js allies: the rule exists and its words name, in bold, a keyword of every unit of the faction’s lists in that role (AGENTS OF THE IMPERIUM, LEGIONES DAEMONICA, KILL TEAM)"
     }
    }
   },
@@ -183,32 +186,26 @@
      "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "needs": {
-     "source": "hand",
-     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
+     "source": "derived",
+     "note": "which units it is for: verify/derive.js ruleNeeds from its words (the gate step derive keeps the stored value what it reads, verify/derive-agreed.json; verify/invariants.js too); a rule whose words it cannot read has none, or is declared here with its why",
+     "declared": []
     },
     "coreTwin": {
-     "source": "hand",
-     "note": "the core ability of the same name it is shown with; signed off"
+     "source": "derived",
+     "note": "the core ability of the same name it is shown with: verify/texts.js coreTwin, a RULES entry whose name is the rule’s, case aside"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
-    },
-    "parts": {
-     "source": "ai-reading",
-     "note": "the parts of the rule for some of its units only, each with its needs and its footnote, \"When targeted\" line (AI-written def, fingerprinted) or the ability it gives; signed off"
-    },
-    "statNote": {
-     "source": "ai-reading",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "tableAt": {
-     "source": "hand",
-     "note": "where Wahapedia prints the table inside the text (verify/texts.js reads it)"
+     "source": "wahapedia",
+     "note": "where its table is in its words: the number of its text lines Wahapedia’s faction page prints before the table’s first row (none: after them all); verify/texts.js tableAt checks it for every rule with a table the page prints"
     },
     "missing": {
      "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off",
+     "declared": "none today: the parts of a rule the app does not have yet, said as “Not in the app yet”"
     },
     "readOf": {
      "source": "derived",
@@ -293,32 +290,38 @@
      "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "needs": {
-     "source": "hand",
-     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
+     "source": "derived",
+     "note": "which units it is for: verify/derive.js ruleNeeds from its words (the gate step derive keeps the stored value what it reads, verify/derive-agreed.json; verify/invariants.js too); a rule whose words it cannot read has none, or is declared here with its why",
+     "declared": [
+      {
+       "at": "Thousand Sons · Grand Coven rule · Kindred Sorcery",
+       "value": {
+        "all": [
+         "Faction: Thousand Sons",
+         "Psyker"
+        ]
+       },
+       "why": "its words name no unit (“you can select one of the abilities listed below”); each ability is for “Psychic weapons equipped by THOUSAND SONS models from your army”, which only PSYKER models have: THOUSAND SONS PSYKER units, narrower than THOUSAND SONS units, so its “Applies to” never reads broader than GW",
+       "evidence": "data.js FACTIONS thousand-sons Grand Coven rule (its table: Imbued Manifestation, Psychic Maelstrom, Wrath of the Immaterium); verify/.cache/waha/thousand-sons.txt"
+      }
+     ]
     },
     "coreTwin": {
-     "source": "hand",
-     "note": "the core ability of the same name it is shown with; signed off"
+     "source": "derived",
+     "note": "the core ability of the same name it is shown with: verify/texts.js coreTwin, a RULES entry whose name is the rule’s, case aside"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
-    },
-    "parts": {
-     "source": "ai-reading",
-     "note": "the parts of the rule for some of its units only, each with its needs and its footnote, \"When targeted\" line (AI-written def, fingerprinted) or the ability it gives; signed off"
-    },
-    "statNote": {
-     "source": "ai-reading",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "tableAt": {
-     "source": "hand",
-     "note": "where Wahapedia prints the table inside the text (verify/texts.js reads it)"
+     "source": "wahapedia",
+     "note": "where its table is in its words: the number of its text lines Wahapedia’s faction page prints before the table’s first row (none: after them all); verify/texts.js tableAt checks it for every rule with a table the page prints"
     },
     "missing": {
      "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off",
+     "declared": "none today: the parts of a rule the app does not have yet, said as “Not in the app yet”"
     },
     "readOf": {
      "source": "derived",
@@ -362,32 +365,26 @@
      "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "needs": {
-     "source": "hand",
-     "note": "which units it is for, hand-written from TARGET / the rule text; checked against verify/derive.js, which derives it and must keep agreeing, and by verify/invariants.js"
+     "source": "derived",
+     "note": "which units it is for: verify/derive.js ruleNeeds from its words (the gate step derive keeps the stored value what it reads, verify/derive-agreed.json; verify/invariants.js too); a rule whose words it cannot read has none, or is declared here with its why",
+     "declared": []
     },
     "coreTwin": {
-     "source": "hand",
-     "note": "the core ability of the same name it is shown with; signed off"
+     "source": "derived",
+     "note": "the core ability of the same name it is shown with: verify/texts.js coreTwin, a RULES entry whose name is the rule’s, case aside"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
-    },
-    "parts": {
-     "source": "ai-reading",
-     "note": "the parts of the rule for some of its units only, each with its needs and its footnote, \"When targeted\" line (AI-written def, fingerprinted) or the ability it gives; signed off"
-    },
-    "statNote": {
-     "source": "ai-reading",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "tableAt": {
-     "source": "hand",
-     "note": "where Wahapedia prints the table inside the text (verify/texts.js reads it)"
+     "source": "wahapedia",
+     "note": "where its table is in its words: the number of its text lines Wahapedia’s faction page prints before the table’s first row (none: after them all); verify/texts.js tableAt checks it for every rule with a table the page prints"
     },
     "missing": {
      "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off",
+     "declared": "none today: the parts of a rule the app does not have yet, said as “Not in the app yet”"
     },
     "readOf": {
      "source": "derived",
@@ -400,7 +397,8 @@
    "columns": {
     "id": {
      "source": "derived",
-     "note": "a stable id made from the stratagem's name by verify/from-json.js (the app links by it)"
+     "note": "a stable id made from the stratagem's name by verify/from-json.js (the app links by it)",
+     "by": "verify/reimport.js"
     },
     "gist": {
      "source": "ai-summary",
@@ -451,16 +449,16 @@
      "note": "which units it is for: the needs its TARGET gives by the closed patterns of verify/derive.js stratNeeds; verify/evidence.js \"targets\" fails on any difference or an unparsed TARGET"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "limit": {
      "source": "derived",
      "note": "\"Once per battle\": its RESTRICTIONS say it can be used once per battle (verify/lines.js L0)"
     },
     "cpNote": {
-     "source": "hand",
-     "note": "the extra CP part, from the words; signed off"
+     "source": "derived",
+     "note": "its extra-CP chip (“Or: +1CP”, “Into the Fray +1CP”): the parts of its EFFECT GW prints with an extra cost, by two closed patterns (verify/effects-extract.js cpNoteOf); verify/lines.js L0: stored = derived, and no other “+NCP” in the EFFECT"
     },
     "readOf": {
      "source": "derived",
@@ -502,7 +500,8 @@
    "columns": {
     "id": {
      "source": "hand",
-     "note": "stable id (the app keeps per-list state by it)"
+     "note": "stable id (the app keeps per-list state by it)",
+     "declared": "an id: what the app links by, no line"
     },
     "name": {
      "source": "newrecruit",
@@ -551,7 +550,8 @@
    "columns": {
     "id": {
      "source": "derived",
-     "note": "a stable id made from the unit's name by verify/from-json.js (per-list state, links)"
+     "note": "a stable id made from the unit's name by verify/from-json.js (per-list state, links)",
+     "by": "verify/reimport.js"
     },
     "ds": {
      "source": "derived",
@@ -598,8 +598,8 @@
      "note": "the Warlord, when not the first character"
     },
     "ref": {
-     "source": "hand",
-     "note": "a reference sheet: a unit or models a rule of the list adds to the battle (not in the army until then; no points, not counted): by (the unit), rule (its ability), quote (GW's words, which check.js finds in that ability), of (models GW prints on that other reference sheet's datasheet, with no datasheet or BSData entry of their own: the Brimstone Horrors; verify/bsdata.js does not build it), strat (a stratagem of the list adds it: by is then empty, check.js finds the quote in the stratagem's EFFECT); from New Recruit's reference entry (category Reference) or the hand file's refs (verify/from-json.js)"
+     "source": "gw",
+     "note": "a reference sheet: a unit or models a rule of the list adds to the battle (not in the army until then; no points, not counted): by (the unit, its id), rule (its ability, or the stratagem’s name), quote (GW’s words of that rule, verbatim: check.js and verify/texts.js refQuote find it in that ability or the stratagem’s EFFECT, by, rule and strat naming what the list has), of (models GW prints on that other reference sheet’s datasheet, with no datasheet or BSData entry of their own: the Brimstone Horrors; verify/bsdata.js does not build it), strat (a stratagem of the list adds it: by is then empty); from New Recruit’s reference entry (category Reference) or the hand file’s refs, each with its why (verify/from-json.js, verify/reimport.js)"
     },
     "upgrade": {
      "source": "newrecruit",
@@ -619,7 +619,8 @@
     },
     "short": {
      "source": "hand",
-     "note": "a shorter name where two units share one"
+     "note": "a shorter name where two units share one",
+     "declared": "the shorter name a list gives a unit where two share one (“Big Mek”), each with its why in its hand file (verify/reimport.js)"
     },
     "role": {
      "source": "newrecruit",
@@ -638,20 +639,20 @@
      "note": "the keywords; on an entry only for an attached unit (the parts together)"
     },
     "kwNote": {
-     "source": "hand",
-     "note": "where an attached unit's keywords come from; signed off"
+     "source": "derived",
+     "note": "the line under its keywords, by fixed templates over GW’s pages and the database’s reasons (verify/gw-order.js kwNoteOf; verify/tables.js --write writes it, its step “tables” holds data.js to it): an attached unit’s keywords a later part’s page prints and the first’s does not (“come from the led Khorne Berzerkers”), a keyword a rule gives the unit for a reason of the list (why.kw, GRANTS) with GW’s words quoted, a Faction keyword an ability gives “instead”; verify/nr.js: each New Recruit starred keyword named"
     },
     "kwOnly": {
-     "source": "hand",
-     "note": "keywords only some models have (Wahapedia / BSData); signed off"
+     "source": "wahapedia",
+     "note": "keywords only some models have ({ keyword: “Model and Model” }), as GW’s datasheet pages print them (a part’s KEYWORDS line, “ASPIRING SORCERER: PSYKER”, a model’s own page); verify/from-json.js takes them from the pages (a hand file’s, with its why, where the pages give them for an attached unit’s leader); verify/keywords.js KO holds every entry to the pages: each model named has it, some model of the unit does not"
     },
     "partialRules": {
-     "source": "hand",
-     "note": "rules only one model of the unit has; signed off"
+     "source": "wahapedia",
+     "note": "rules only some models have ({ rule: “Model” }), as GW’s datasheet pages list them (a part’s CORE ABILITIES / ARMY RULES, “(Aspiring Sorcerer only)”, a model’s own page) or an ability of that model gives them by name; verify/from-json.js takes them so (a hand file’s, with its why); verify/keywords.js PR holds every entry to them: each model named has it, some model of the unit does not"
     },
     "srcNote": {
-     "source": "hand",
-     "note": "where the sources disagree about the unit; signed off"
+     "source": "derived",
+     "note": "where the sources disagree about the unit, by one fixed template: a model of the unit (BSData’s and New Recruit’s profile of it) that Wahapedia prints on a datasheet of its own (verify/gw-order.js srcNoteOf: { at, note:“Wahapedia: its own EPIC HERO datasheet; BSData and New Recruit: in this unit” }); verify/tables.js --write writes it, its step “tables” holds data.js to it"
     },
     "stats": {
      "source": "newrecruit",
@@ -671,11 +672,12 @@
     },
     "over": {
      "source": "hand",
-     "note": "a datasheet fact this list has otherwise than another list with no reason found (verify/out/tables.md): kept until decided; none today"
+     "note": "a datasheet fact this list has otherwise than another list with no reason found (verify/out/tables.md): kept until decided; none today",
+     "declared": "none today: a datasheet fact a list has otherwise than another list with no reason found, kept until decided (verify/out/tables.md)"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "why": {
      "source": "derived",
@@ -736,7 +738,8 @@
     },
     "over": {
      "source": "hand",
-     "note": "see ARMIES.units.over"
+     "note": "see ARMIES.units.over",
+     "declared": "none today: a datasheet fact a list has otherwise than another list with no reason found, kept until decided (verify/out/tables.md)"
     },
     "of": {
      "source": "derived",
@@ -805,7 +808,8 @@
     },
     "over": {
      "source": "hand",
-     "note": "see ARMIES.units.over"
+     "note": "see ARMIES.units.over",
+     "declared": "none today: a datasheet fact a list has otherwise than another list with no reason found, kept until decided (verify/out/tables.md)"
     },
     "of": {
      "source": "derived",
@@ -878,7 +882,8 @@
     },
     "over": {
      "source": "hand",
-     "note": "see ARMIES.units.over"
+     "note": "see ARMIES.units.over",
+     "declared": "none today: a datasheet fact a list has otherwise than another list with no reason found, kept until decided (verify/out/tables.md)"
     },
     "of": {
      "source": "derived",
@@ -907,7 +912,8 @@
     },
     "over": {
      "source": "hand",
-     "note": "see ARMIES.units.over"
+     "note": "see ARMIES.units.over",
+     "declared": "none today: a datasheet fact a list has otherwise than another list with no reason found, kept until decided (verify/out/tables.md)"
     },
     "of": {
      "source": "derived",
@@ -938,12 +944,12 @@
      "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "na": {
-     "source": "hand",
-     "note": "why it does nothing in this list; signed off"
+     "source": "derived",
+     "note": "why it does nothing in this list (“Not leading a unit in this list”, “Needs a thundershock spear and a bellatus reaper chainsword: not this loadout”, “No WAR DOG in this list”): verify/derive.js naOf’s three closed patterns over its words, the unit and the list (verify/from-json.js writes it); verify/lines.js L0: stored = derived on every list unit’s ability"
     },
     "damaged": {
      "source": "derived",
@@ -968,7 +974,8 @@
     },
     "faction": {
      "source": "derived",
-     "note": "the faction of the list it is in"
+     "note": "the faction of the list it is in",
+     "by": "verify/tables.js"
     },
     "bsId": {
      "source": "bsdata",
@@ -987,16 +994,16 @@
      "note": "the keywords (\"Categories\"), checked against BSData (verify/bsdata.js)"
     },
     "kwOnly": {
-     "source": "hand",
-     "note": "keywords only some models have (Wahapedia's \"… ONLY:\", BSData's categories on one model); signed off"
+     "source": "wahapedia",
+     "note": "keywords only some models have ({ keyword: “Model and Model” }), as GW’s datasheet pages print them (a part’s KEYWORDS line, “ASPIRING SORCERER: PSYKER”, a model’s own page); verify/from-json.js takes them from the pages (a hand file’s, with its why, where the pages give them for an attached unit’s leader); verify/keywords.js KO holds every entry to the pages: each model named has it, some model of the unit does not"
     },
     "partialRules": {
-     "source": "hand",
-     "note": "rules only one model has; signed off"
+     "source": "wahapedia",
+     "note": "rules only some models have ({ rule: “Model” }), as GW’s datasheet pages list them (a part’s CORE ABILITIES / ARMY RULES, “(Aspiring Sorcerer only)”, a model’s own page) or an ability of that model gives them by name; verify/from-json.js takes them so (a hand file’s, with its why); verify/keywords.js PR holds every entry to them: each model named has it, some model of the unit does not"
     },
     "srcNote": {
-     "source": "hand",
-     "note": "where the sources disagree about the unit; signed off"
+     "source": "derived",
+     "note": "where the sources disagree about the unit, by one fixed template: a model of the unit (BSData’s and New Recruit’s profile of it) that Wahapedia prints on a datasheet of its own (verify/gw-order.js srcNoteOf: { at, note:“Wahapedia: its own EPIC HERO datasheet; BSData and New Recruit: in this unit” }); verify/tables.js --write writes it, its step “tables” holds data.js to it"
     },
     "leaders": {
      "source": "bsdata",
@@ -1231,12 +1238,12 @@
      "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
     },
     "note": {
-     "source": "hand",
-     "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
+     "source": "gw",
+     "note": "GW’s words alone, each quoted under a fixed source label (“Wahapedia FAQ: “…” “…””, “FAQ (Faction Pack 1.3): …”): verify/texts.js noteForm (the form, the labels its NOTE_LABELS fix) and noteQuote (each quote word for word in the documents its label names, GW’s or Wahapedia’s); no prose of the app’s"
     },
     "na": {
-     "source": "hand",
-     "note": "why it does nothing in this list; signed off"
+     "source": "derived",
+     "note": "none: why an ability does nothing is a list’s (ARMIES.units.abilities na); verify/lines.js L0 fails on one here"
     },
     "damaged": {
      "source": "derived",
@@ -1253,35 +1260,43 @@
    "columns": {
     "rule": {
      "source": "derived",
-     "note": "the rule or ability (faction · detachment · rule, or list · unit · ability)"
+     "note": "the rule or ability (faction · detachment · rule, or list · unit · ability)",
+     "by": "verify/derive.js"
     },
     "option": {
      "source": "derived",
-     "note": "the option's name"
+     "note": "the option's name",
+     "by": "verify/derive.js"
     },
     "text": {
      "source": "derived",
-     "note": "its words"
+     "note": "its words",
+     "by": "verify/derive.js"
     },
     "found": {
      "source": "derived",
-     "note": "how verify/derive.js found it (a table row, \"**Name:** effect\", a bullet)"
+     "note": "how verify/derive.js found it (a table row, \"**Name:** effect\", a bullet)",
+     "by": "verify/derive.js"
     },
     "explicit": {
      "source": "derived",
-     "note": "its own words name when it is used"
+     "note": "its own words name when it is used",
+     "by": "verify/derive.js"
     },
     "trigger": {
      "source": "derived",
-     "note": "when it is used (its words, or the rule's)"
+     "note": "when it is used (its words, or the rule's)",
+     "by": "verify/derive.js"
     },
     "used": {
      "source": "derived",
-     "note": "where its effect is used"
+     "note": "where its effect is used",
+     "by": "verify/derive.js"
     },
     "phases": {
      "source": "derived",
-     "note": "trigger and used together"
+     "note": "trigger and used together",
+     "by": "verify/derive.js"
     }
    }
   },
@@ -1290,31 +1305,38 @@
    "columns": {
     "rule": {
      "source": "derived",
-     "note": "the rule or ability"
+     "note": "the rule or ability",
+     "by": "verify/derive.js"
     },
     "option": {
      "source": "derived",
-     "note": "the option of it that gives it"
+     "note": "the option of it that gives it",
+     "by": "verify/derive.js"
     },
     "grants": {
      "source": "derived",
-     "note": "the ability or keyword given"
+     "note": "the ability or keyword given",
+     "by": "verify/derive.js"
     },
     "type": {
      "source": "derived",
-     "note": "ability, or keyword / weapon ability"
+     "note": "ability, or keyword / weapon ability",
+     "by": "verify/derive.js"
     },
     "to": {
      "source": "derived",
-     "note": "which units (needs), or this unit / model"
+     "note": "which units (needs), or this unit / model",
+     "by": "verify/derive.js"
     },
     "while": {
      "source": "derived",
-     "note": "the option active, or the words' condition"
+     "note": "the option active, or the words' condition",
+     "by": "verify/derive.js"
     },
     "text": {
      "source": "derived",
-     "note": "the sentence that gives it"
+     "note": "the sentence that gives it",
+     "by": "verify/derive.js"
     }
    }
   },
@@ -1380,47 +1402,63 @@
    "columns": {
     "n": {
      "source": "derived",
-     "note": "the source's name (its rule, ability or stratagem)"
+     "note": "the source's name (its rule, ability or stratagem)",
+     "by": "verify/effects-migrate.js"
     },
     "b": {
      "source": "derived",
-     "note": "its boxes (BOXES.b)"
+     "note": "its boxes (BOXES.b)",
+     "by": "verify/effects-migrate.js"
     },
     "nc": {
      "source": "derived",
-     "note": "its sentences of a rare mechanic the Damage tab does not play (effects.js NC): shown with GW's words, \"not counted in the Damage tab\""
+     "note": "its sentences of a rare mechanic the Damage tab does not play (effects.js NC): shown with GW's words, \"not counted in the Damage tab\"",
+     "by": "verify/effects-migrate.js"
     },
     "reach": {
      "source": "derived",
-     "note": "an aura's units (GW tags it Aura): the friendly units its words reach, literal keywords"
+     "note": "an aura's units (GW tags it Aura): the friendly units its words reach, literal keywords",
+     "by": "verify/effects-migrate.js"
     },
     "both": {
      "source": "derived",
-     "note": "another rule's two options at once for the units it reaches (\"the Conqueror Imperative and Protector Imperative are both active for that unit\", Icon of War): names, quote, reach, mark, opt, lasts, read by verify/effects-extract.js"
+     "note": "another rule's two options at once for the units it reaches (\"the Conqueror Imperative and Protector Imperative are both active for that unit\", Icon of War): names, quote, reach, mark, opt, lasts, read by verify/effects-extract.js",
+     "by": "verify/effects-migrate.js"
     },
     "embarked": {
      "source": "derived",
-     "note": "a model of the unit not on the battlefield yet, read by one fixed pattern of GW's words (\"If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport\"): until (the model it waits for)"
+     "note": "a model of the unit not on the battlefield yet, read by one fixed pattern of GW's words (\"If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport\"): until (the model it waits for)",
+     "by": "verify/effects-migrate.js"
     },
     "played": {
      "source": "derived",
-     "note": "a core rule the Damage tab plays itself (calc: [LANCE] from the weapon's keyword; situation: Plunging Fire): its boxes are the datasheet footnotes' only (verify/effects-migrate.js)"
+     "note": "a core rule the Damage tab plays itself (calc: [LANCE] from the weapon's keyword; situation: Plunging Fire): its boxes are the datasheet footnotes' only (verify/effects-migrate.js)",
+     "by": "verify/effects-migrate.js"
     },
     "riled": {
      "source": "derived",
-     "note": "an ability whose words say \"This unit is riled up.\" (one fixed pattern, verify/effects-extract.js): the unit is always riled up"
+     "note": "an ability whose words say \"This unit is riled up.\" (one fixed pattern, verify/effects-extract.js): the unit is always riled up",
+     "by": "verify/effects-migrate.js"
     },
     "d": {
      "source": "derived",
-     "note": "its defence boxes, the datasheet's \"When targeted\" lines (BOXES.d): read from GW's words by verify/effects-extract.js (defenceOf) with effects.js DF; held to them by verify/defence.js D1-D8; not the Damage tab's"
+     "note": "its defence boxes, the datasheet's \"When targeted\" lines (BOXES.d): read from GW's words by verify/effects-extract.js (defenceOf) with effects.js DF; held to them by verify/defence.js D1-D8; not the Damage tab's",
+     "by": "verify/effects-migrate.js"
     },
     "dnc": {
      "source": "derived",
-     "note": "its sentences about attacks against the unit that no defence reads (effects.js DNC, its why): shown as \"not counted here: see the rule\", never left out (verify/defence.js D4)"
+     "note": "its sentences about attacks against the unit that no defence reads (effects.js DNC, its why): shown as \"not counted here: see the rule\", never left out (verify/defence.js D4)",
+     "by": "verify/effects-migrate.js"
     },
     "dreach": {
      "source": "derived",
-     "note": "a stratagem that protects a unit other than its TARGET (its WHEN's \"targets a friendly X unit\", its TARGET's \"within N\\\" of a friendly X unit that was selected as the target\"): those units, literal keywords (Grot Shields, Blessing of Burning Blood)"
+     "note": "a stratagem that protects a unit other than its TARGET (its WHEN's \"targets a friendly X unit\", its TARGET's \"within N\\\" of a friendly X unit that was selected as the target\"): those units, literal keywords (Grot Shields, Blessing of Burning Blood)",
+     "by": "verify/effects-migrate.js"
+    },
+    "st": {
+     "source": "derived",
+     "note": "a rule’s stat boxes: a characteristic of its units’ models its words change (“add 2 to the Objective Control characteristic of models in that unit”), the line under a unit’s profile on its screen (verify/effects-extract.js statOf; verify/lines.js LS)",
+     "by": "verify/effects-migrate.js"
     }
    }
   },
@@ -1437,63 +1475,78 @@
     },
     "fx": {
      "source": "derived",
-     "note": "its effects: [[effects.js FX id, value]], found in the quote by the catalogue's patterns (evidence G1, G3)"
+     "note": "its effects: [[effects.js FX id, value]], found in the quote by the catalogue's patterns (evidence G1, G3)",
+     "by": "verify/effects-migrate.js"
     },
     "on": {
      "source": "derived",
-     "note": "its conditions: [[effects.js COND id, value]] (q: GW's own words of a condition no catalogue entry reads; opt: the option of its rule), the box's label (evidence G5)"
+     "note": "its conditions: [[effects.js COND id, value]] (q: GW's own words of a condition no catalogue entry reads; opt: the option of its rule), the box's label (evidence G5)",
+     "by": "verify/effects-migrate.js"
     },
     "kind": {
      "source": "derived",
-     "note": "ranged, melee or all: from its words (ranged attacks, the Shooting phase, …)"
+     "note": "ranged, melee or all: from its words (ranged attacks, the Shooting phase, …)",
+     "by": "verify/effects-migrate.js"
     },
     "scope": {
      "source": "derived",
-     "note": "the weapons and models it names: weapon (a weapon's name or the head word of it), wkw (a weapon keyword), models (model, one, char, nonchar), part (the models of an attached unit's part)"
+     "note": "the weapons and models it names: weapon (a weapon's name or the head word of it), wkw (a weapon keyword), models (model, one, char, nonchar), part (the models of an attached unit's part)",
+     "by": "verify/effects-migrate.js"
     },
     "reach": {
      "source": "derived",
-     "note": "the friendly units it reaches (an aura, a unit another unit selects, a rule's units): { all, any, none } of literal keywords (evidence G5)"
+     "note": "the friendly units it reaches (an aura, a unit another unit selects, a rule's units): { all, any, none } of literal keywords (evidence G5)",
+     "by": "verify/effects-migrate.js"
     },
     "mark": {
      "source": "derived",
-     "note": "how it reaches them: aura, selected or friendly"
+     "note": "how it reaches them: aura, selected or friendly",
+     "by": "verify/effects-migrate.js"
     },
     "notSelf": {
      "source": "derived",
-     "note": "\"other friendly\": not its own unit"
+     "note": "\"other friendly\": not its own unit",
+     "by": "verify/effects-migrate.js"
     },
     "lasts": {
      "source": "derived",
-     "note": "how long it lasts past its step: turn, round or battle (its words: until the end of the turn, …)"
+     "note": "how long it lasts past its step: turn, round or battle (its words: until the end of the turn, …)",
+     "by": "verify/effects-migrate.js"
     },
     "opt": {
      "source": "derived",
-     "note": "the option of its rule it is (a table's row, a named option, a bold heading)"
+     "note": "the option of its rule it is (a table's row, a named option, a bold heading)",
+     "by": "verify/effects-migrate.js"
     },
     "pick": {
      "source": "derived",
-     "note": "one of several (a table's rows its rule picks one of, \"Or:\" bullets, \"select one of the following\", \"select either the X or Y ability\", \", or … instead\"): [{ name, fx, quote, on, part }]"
+     "note": "one of several (a table's rows its rule picks one of, \"Or:\" bullets, \"select one of the following\", \"select either the X or Y ability\", \", or … instead\"): [{ name, fx, quote, on, part }]",
+     "by": "verify/effects-migrate.js"
     },
     "part": {
      "source": "derived",
-     "note": "a part of a pick counted only while a fact of the table holds (the Conqueror Imperative's +1 AP: BATTLELINE, or within 6\" …)"
+     "note": "a part of a pick counted only while a fact of the table holds (the Conqueror Imperative's +1 AP: BATTLELINE, or within 6\" …)",
+     "by": "verify/effects-migrate.js"
     },
     "limit": {
      "source": "derived",
-     "note": "how many of its rule's boxes can be active at once, in its words (\"activate up to two Blessings of Khorne\")"
+     "note": "how many of its rule's boxes can be active at once, in its words (\"activate up to two Blessings of Khorne\")",
+     "by": "verify/effects-migrate.js"
     },
     "tableRows": {
      "source": "derived",
-     "note": "the box is its rule's table, a pick of its rows (one tick for the rule)"
+     "note": "the box is its rule's table, a pick of its rows (one tick for the rule)",
+     "by": "verify/effects-migrate.js"
     },
     "pool": {
      "source": "derived",
-     "note": "a re-roll of one die: how often, read from GW's words by closed patterns (selected: each time the unit is selected to shoot or fight, one for the unit; phase, turn, round)"
+     "note": "a re-roll of one die: how often, read from GW's words by closed patterns (selected: each time the unit is selected to shoot or fight, one for the unit; phase, turn, round)",
+     "by": "verify/effects-migrate.js"
     },
     "excl": {
      "source": "derived",
-     "note": "one of a unit's abilities to pick from (New Recruit's \"X: pick one\", X the ability whose words say \"select one X ability\"): X; ticking one unticks the others"
+     "note": "one of a unit's abilities to pick from (New Recruit's \"X: pick one\", X the ability whose words say \"select one X ability\"): X; ticking one unticks the others",
+     "by": "verify/effects-migrate.js"
     }
    }
   },
@@ -1510,51 +1563,91 @@
     },
     "df": {
      "source": "derived",
-     "note": "its defences: [effects.js DF id, value], found in the quote by the catalogue's patterns; D1, D3"
+     "note": "its defences: [effects.js DF id, value], found in the quote by the catalogue's patterns; D1, D3",
+     "by": "verify/effects-migrate.js"
     },
     "on": {
      "source": "derived",
-     "note": "its conditions: effects.js COND and DCOND ids (q: GW's words of one no id reads); D5"
+     "note": "its conditions: effects.js COND and DCOND ids (q: GW's words of one no id reads); D5",
+     "by": "verify/effects-migrate.js"
     },
     "kind": {
      "source": "derived",
-     "note": "the attacks it is against (ranged, melee, psychic, all), from its clause's words"
+     "note": "the attacks it is against (ranged, melee, psychic, all), from its clause's words",
+     "by": "verify/effects-migrate.js"
     },
     "scope": {
      "source": "derived",
-     "note": "models: the models of the unit it is for (model: the one with the ability; a keyword: \"that CHARACTER\", \"KASTELAN ROBOT models in that unit\")"
+     "note": "models: the models of the unit it is for (model: the one with the ability; a keyword: \"that CHARACTER\", \"KASTELAN ROBOT models in that unit\")",
+     "by": "verify/effects-migrate.js"
     },
     "reach": {
      "source": "derived",
-     "note": "the friendly units it is given to, literal keywords; D5"
+     "note": "the friendly units it is given to, literal keywords; D5",
+     "by": "verify/effects-migrate.js"
     },
     "mark": {
      "source": "derived",
-     "note": "how it reaches them: aura, selected, friendly"
+     "note": "how it reaches them: aura, selected, friendly",
+     "by": "verify/effects-migrate.js"
     },
     "notSelf": {
      "source": "derived",
-     "note": "\"other friendly\", \"because of this … model\": not the unit with it"
+     "note": "\"other friendly\", \"because of this … model\": not the unit with it",
+     "by": "verify/effects-migrate.js"
     },
     "foe": {
      "source": "derived",
-     "note": "an enemy unit's attacks made worse, whatever they target (\"each time a model in that enemy unit makes an attack\"): every unit of the list"
+     "note": "an enemy unit's attacks made worse, whatever they target (\"each time a model in that enemy unit makes an attack\"): every unit of the list",
+     "by": "verify/effects-migrate.js"
     },
     "opt": {
      "source": "derived",
-     "note": "the option of its rule it is"
+     "note": "the option of its rule it is",
+     "by": "verify/effects-migrate.js"
     },
     "pick": {
      "source": "derived",
-     "note": "one of several to pick (\"select one of the following\"): name, df, quote"
+     "note": "one of several to pick (\"select one of the following\"): name, df, quote",
+     "by": "verify/effects-migrate.js"
     },
     "term": {
      "source": "derived",
-     "note": "a faction's own term the ability names in bold (a RULES entry RULE_SRC says is not a core rule: Pulse Jet Move) whose words the box reads; its condition the ability's sentence naming it"
+     "note": "a faction's own term the ability names in bold (a RULES entry RULE_SRC says is not a core rule: Pulse Jet Move) whose words the box reads; its condition the ability's sentence naming it",
+     "by": "verify/effects-migrate.js"
     },
     "until": {
      "source": "gw",
      "note": "how long it lasts where its words say longer than the phase (\"until the start of your next Command phase\"), GW's words; verify/defence.js D5"
+    }
+   }
+  },
+  "BOXES.st": {
+   "what": "one stat box: a characteristic of a unit’s models GW’s sentence changes, as the catalogue (effects.js ST) reads it; the line under the unit’s profile (“Not Battle-shocked: OC 7”)",
+   "columns": {
+    "quote": {
+     "source": "gw",
+     "note": "the sentence of GW’s text the box reads, verbatim; verify/lines.js LS"
+    },
+    "st": {
+     "source": "derived",
+     "note": "its effects: [effects.js ST id, value], found in the quote by the catalogue’s patterns; LS",
+     "by": "verify/effects-migrate.js"
+    },
+    "on": {
+     "source": "derived",
+     "note": "its conditions: effects.js COND and STCOND ids (q: GW’s words of one no pattern reads), read in its sentence; LS",
+     "by": "verify/effects-migrate.js"
+    },
+    "reach": {
+     "source": "derived",
+     "note": "the friendly units its words name (literal keywords), in its sentence or the one before it",
+     "by": "verify/effects-migrate.js"
+    },
+    "scope": {
+     "source": "derived",
+     "note": "models: the keyword of the models it is for (“of TZAANGOR models in that unit”)",
+     "by": "verify/effects-migrate.js"
     }
    }
   }

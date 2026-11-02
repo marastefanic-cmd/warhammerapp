@@ -5,12 +5,6 @@
   "note": "verify/sources/nr-json/navigator-sounds-op-ngl.json is the owner's New Recruit export with one selection added: the owner forgot to pick a Warlord in New Recruit and said the Warlord is the Cerastus Knight Atrapos (owner's instruction, relayed 25 Oct 2026). The added selection is New Recruit's own Warlord upgrade, as its exports write one (6-bigs.json's Knight Warden): {categories:[Warlord 5c0e-4c31-d51b-e470], name:'Warlord', entryId:'fb98-f509-dbe3-8a3b::ddee-b14f-2f5f-b710::ad65-d3cb-c677-7cb3', number:1, type:'upgrade', from:'entry'}, first among the Atrapos's selections; ddee-b14f-2f5f-b710 is the Warlord link inside the Cerastus Knight Atrapos entry (37a7-d156-1e4c-8fe1) in BSData's Imperium - Imperial Knights - Library at the pin. Its selection id 'nvwrl01' is made up (New Recruit's are random). Everything else is the export byte for byte as JSON (the original's sha256 5a0369f44249f08f264180e8a8ee8018aebf69f19752eb4907f93dedde2f480c)."
  },
  "units": {
-  "knight-destrier": {
-   "na": {
-    "Thundercharge": "Needs a thundershock spear and bellatus reaper chainsword: not this loadout"
-   },
-   "why": "As 4-megas-and-a-destrier's and 6-bigs's Destrier (the same datasheet and loadout: titanic feet, no thundershock spear or bellatus reaper chainsword)."
-  },
   "cerastus-knight-atrapos": {
    "why": "As 4-megas-and-a-destrier's Atrapos (the same datasheet and enhancement): Bringer of Justice's +2 A is already in the melee profiles (New Recruit's), only its +1 to hit is a footnote. No Atrapos’ Duty aura: it is tagged (Bondsman), not (Aura), and this list has no ARMIGER."
   },

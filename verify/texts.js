@@ -14,12 +14,14 @@
      packUpdate     the Faction Packs' Rules Updates ("Change to …") for every army rule, detachment item and unit ability
                     in the lists; an update that concerns the lists but matches no app text is a failure
      packDatasheet  abilities of units whose datasheet a Faction Pack prints (Knight Destrier, Defiler)
-     noteQuote      every quotation (“…”) inside an app note (army/detachment rule, stratagem, ability, a stratagem's shield line), word for word in a
-                    source or in the verified text of the item the note is on (the note's own words are judgements: helpers.js)
+     noteForm       every app note (army/detachment rule, stratagem, ability) is GW's words alone, each quoted under a fixed source label
+                    (NOTE_LABELS: "Wahapedia FAQ: “…” “…”", "FAQ (Faction Pack 1.3): “…” “…”"): no prose of the app's
+     noteQuote      every quotation (“…”) inside a note, word for word in the documents its label names (GW's or Wahapedia's)
+     alias, allies, coreTwin, tableAt   the rule tables' own columns, by mechanical checks (below, "the rule tables' own columns")
+     refQuote       a reference sheet's quote (ref) is GW's words of the ability or stratagem it names, verbatim, and what it names is the list's
    A line marked "*Wahapedia core rules (…): …*" (a sentence GW's Core Rules PDF does not print) is checked word for word in
    Wahapedia's core rules only.
-   Lines the app marks as its own ("*App note, not rules text: …*") are not checked; they are listed in out/texts.json
-   (appNotes). Any other line of a verbatim field that is in no source is a failure (also listed: notInAnySource).
+   A line the app marks as its own ("*App note, not rules text: …*") fails (appNote): a rules text is GW's words only. Any other line of a verbatim field that is in no source is a failure (also listed: notInAnySource).
 
    Sources (authority order): GW Core Rules, Universal Rules Updates and Faction Packs (verify/.cache/gw, read with
    `pdftotext -raw`), Wahapedia (verify/.cache/waha: <faction>.txt from waha-extract.py, and the .html pages),
@@ -327,7 +329,7 @@ function nearest(needle, docIds) {
 
 /* ------------------------------------------------------------------ line classes */
 // Lines of a rules text, by what they claim to be:
-//   appnote   "*App note, not rules text: …*"                  the app's own words, not checked (listed)
+//   appnote   "*App note, not rules text: …*"                  the app's own words: a failure (appNote)
 //   wfaq      "*Wahapedia FAQ: <question>? <answer>*"          Wahapedia FAQ (question and answer checked)
 //   werrata   "*Wahapedia … errata (…): …*"                    Wahapedia errata
 //   packfaq   "*FAQ (Faction Pack …): …*"                       the Faction Pack's FAQ
@@ -389,7 +391,8 @@ function checkLines(cat, army, unit, field, text, gwDocs, wahaDocs, opts = {}) {
     if (c.kind === 'appsec' || c.kind === 'sec') block = c.kind;
     else if (c.kind === 'text' && block) c = { kind: block, body: c.body, inherited: true };
     count(cat);
-    if (c.kind === 'appnote') { appWritten.push({ army, unit, field, text: raw.trim(), marked: true }); continue; }
+    // (an app note, "*App note, not rules text: …*", is the app's own words in GW's: none, appNote fails)
+    if (c.kind === 'appnote') { count('appNote'); fail('appNote', army, unit, field, raw.trim().slice(0, 120), 'the app\'s own words in a rules text: GW\'s words only', ''); continue; }
     if (opts.special) { const sp = opts.special(raw); if (sp) { if (sp.ok) { if (sp.at) provRow(item, field, sp.at.d, sp.at.off, { text: raw.trim().slice(0, 80), how: sp.how }); } else fail(cat, army, unit, field, raw.trim(), sp.source, sp.where || ''); continue; } }
     let docs = gwDocs, less = wahaDocs, parts = [c.body];
     if (c.kind === 'wcore') { docs = WAHA_CORE; less = null; }
@@ -1503,16 +1506,60 @@ const dsDocIds = (faction, names) => {
   }
   return out;
 };
+// A note is GW's words alone, each quoted under a fixed source label: "{label}: “…” “…”", one or more such segments, nothing else
+// (noteForm; no app prose, no number of the app's). The label is one of NOTE_LABELS, which says which documents its quotes are in:
+// gw (GW's Core Rules, Universal Rules Updates, Faction Packs) or waha (Wahapedia: its core rules, faction pages, datasheet pages); each
+// quote is found word for word there (noteQuote), a piece at a time where it leaves words out ("…").
+const NOTE_LABELS = {
+  'Wahapedia FAQ': 'waha', 'Wahapedia errata': 'waha', 'Wahapedia core rules, 25.04 Fill Your Army Roster': 'waha',
+  'Designer’s Note (Wahapedia’s datasheet, under the codex wording)': 'waha',
+  'FAQ (Faction Pack 1.2)': 'gw', 'Faction Pack datasheets': 'gw', 'FAQ (Faction Pack 1.3)': 'gw', 'FAQ (Faction Pack 1.4)': 'gw', 'Faction Pack FAQ': 'gw',
+  'Designer’s Note (Faction Pack 1.2, Pink Horrors datasheet)': 'gw'
+};
+// (and what the label says of its document, held to where its first quote is found (noteLabel): "Faction Pack 1.3" the pack's VERSION line;
+// "Pink Horrors datasheet" a datasheet of that name in it; "FAQ" a question ("Q:") right before the quote; "errata" and "Designer's Note"
+// those words right before it)
+function labelGaps(label, r) {
+  const d = typeof r.d === 'string' ? DOCS[r.d] : r.d, N = d ? d.N : '', before = n => N.slice(Math.max(0, r.off - n), r.off), out = [];
+  const v = /Faction Pack (\d+\.\d+)/.exec(label);
+  if (v) { const m = /\bversion (\d+\.\d+)/.exec(N); if (!m || m[1] !== v[1]) out.push('the document is ' + (m ? 'version ' + m[1] : 'no versioned Faction Pack') + ', not ' + v[0]); }
+  const ds = /([A-Z][A-Za-z’' -]+?) datasheet\)/.exec(label); if (ds && !N.includes(norm(ds[1]))) out.push('the document has no ' + ds[1] + ' datasheet');
+  if (/\bFAQ\b/.test(label) && !/\bq:\s*$/.test(before(40).trim() + ' ') && !/\bq:\s*\S*$/.test(before(12))) out.push('its first quote is no FAQ question ("Q:" before it)');
+  if (/\berrata\b/.test(label) && !/errata/.test(before(250))) out.push('no "errata" right before its first quote');
+  if (/Designer’s Note/.test(label) && !/designer'?s note/.test(before(400).replace(/[’]/g, "'"))) out.push('no "Designer\'s Note" right before its first quote');
+  return out;
+}
+const LABELS_LONG = Object.keys(NOTE_LABELS).sort((a, b) => b.length - a.length);
+// a note's segments: [{ label, kind, qs }], or { bad: where its words leave the form }
+function noteSegments(note) {
+  const out = []; let t = String(note || '');
+  while (t.length) {
+    const L = LABELS_LONG.find(l => t.startsWith(l + ': '));
+    if (!L) return { bad: t.slice(0, 90) };
+    t = t.slice(L.length + 2);
+    const qs = []; let m;
+    while ((m = /^“([^”]+)”/.exec(t))) { qs.push(m[1]); t = t.slice(m[0].length); if (t.startsWith(' ')) t = t.slice(1); else break; }
+    if (!qs.length) return { bad: L + ': ' + t.slice(0, 80) };
+    out.push({ label: L, kind: NOTE_LABELS[L], qs });
+  }
+  return out.length ? { segs: out } : { bad: '(empty)' };
+}
+const WAHA_DOCS = () => ALL_DOCS.filter(k => !GW_ALL.includes(k));
 function checkQuotes(army, unit, note, own, extra) {
-  for (const m of String(note || '').matchAll(/“([^”]+)”/g)) {
-    for (const piece of m[1].split(/…|\.\.\./)) {
+  count('noteForm');
+  const S = noteSegments(note);
+  if (S.bad) { fail('noteForm', army, unit, 'note', String(note).slice(0, 120), 'not GW’s words under a fixed source label (' + LABELS_LONG.join(' | ') + '): “' + S.bad + '”', ''); return; }
+  for (const seg of S.segs) for (const q of seg.qs) {
+    for (const piece of q.split(/…|\.\.\./)) {
       const n = norm(stripMarkup(piece)).replace(/^[\s.,;:]+|[\s,;:]+$/g, '');
       if (!/[a-z0-9]/.test(n)) continue;
       count('noteQuote');
-      const r = locate(n, ALL_DOCS) || (extra && extra.length ? locate(n, extra) : null);
-      if (r) { provRow(army + ' / ' + unit, 'note', r.d, r.off, { text: piece.trim().slice(0, 80) }); continue; }
-      if (own.some(t => normField(t).includes(n))) { prov.push({ item: army + ' / ' + unit, field: 'note', doc: 'data.js', file: 'data.js', sha256: null, where: 'the text of the item the note is on', text: piece.trim().slice(0, 80) }); continue; }
-      fail('noteQuote', army, unit, 'note', m[0], 'quoted words not in any source, nor in the text the note is on: "' + piece.trim() + '"' + (nearest(n, ALL_DOCS).text ? ' | ' + nearest(n, ALL_DOCS).text : ''), '');
+      const docs = seg.kind === 'gw' ? GW_ALL : WAHA_DOCS().concat(extra || []);
+      const r = locate(n, docs);
+      if (r) { provRow(army + ' / ' + unit, 'note', r.d, r.off, { text: piece.trim().slice(0, 80) });
+        if (q === seg.qs[0] && piece === q.split(/…|\.\.\./)[0]) { count('noteLabel'); for (const g of labelGaps(seg.label, r)) fail('noteLabel', army, unit, 'note', seg.label, g + ' (' + ((typeof r.d === 'string' ? DOCS[r.d] : r.d) || {}).label + ')', ''); }
+        continue; }
+      fail('noteQuote', army, unit, 'note', '“' + q.slice(0, 80) + '”', 'quoted words under “' + seg.label + '” not in ' + (seg.kind === 'gw' ? 'GW’s documents' : 'Wahapedia') + ': "' + piece.trim() + '"' + (nearest(n, docs).text ? ' | ' + nearest(n, docs).text : ''), '');
     }
   }
 }
@@ -1524,10 +1571,28 @@ for (const fk of FACTIONS) {
   for (const [dk, d] of Object.entries(F.detachments || {})) {
     for (const r of detRules_(d)) if (r.note) checkQuotes(fk, 'detachment:' + dk + '/rule' + (r === d.rule ? '' : ':' + r.name), r.note, [r.text]);
     for (const s of d.stratagems || []) if (s.note) checkQuotes(fk, 'detachment:' + dk + '/stratagem:' + s.id, s.note, stratOwn(s));
-    // the "When targeted" line a stratagem gives the units it protects (Grot Shields), with the FAQ it quotes
-    for (const s of d.stratagems || []) if (s.shield && s.shield.def) checkQuotes(fk, 'detachment:' + dk + '/stratagem:' + s.id + ' (shield)', s.shield.def, stratOwn(s));
   }
 }
+// refQuote: a reference sheet's quote (ARMIES.units ref: { by, rule, quote } or { strat, rule, quote }) is GW's words of the rule it names,
+// verbatim: the ability of that name of the unit by names (by its id), or the stratagem of that id (its EFFECT); by, rule and strat must
+// name what the list has
+for (const a of D.armies) for (const u of (a.units || []).concat(a.refs || [])) if (u.ref) {
+  count('refQuote');
+  const r = u.ref, by = r.by ? a.units.find(x => x.id === r.by) : null;
+  const allSt = D.coreStratagems.concat(a.detachments.flatMap(id => ((D.factions[a.faction].detachments || {})[id] || {}).stratagems || []));
+  const st = r.strat ? allSt.find(x => x.id === r.strat) : null;
+  const src = by ? (by.abilities || []).find(x => x.name === r.rule) : st && st.name === r.rule ? st : null;
+  if (r.by && !by) { fail('refQuote', a.id, u.id, 'ref.by', r.by, 'no unit of the list has this id', ''); continue; }
+  if (r.strat && !st) { fail('refQuote', a.id, u.id, 'ref.strat', r.strat, 'no stratagem of the list has this id', ''); continue; }
+  if (!src) { fail('refQuote', a.id, u.id, 'ref.rule', r.rule, (by ? by.name + ' has no ability' : 'its stratagem is not') + ' of this name', ''); continue; }
+  const text = src.effect !== undefined ? src.effect : src.text;
+  if (!normField(text).includes(normField(r.quote))) fail('refQuote', a.id, u.id, 'ref.quote', r.quote, 'not GW\'s words of ' + r.rule + ' (' + (by ? by.name : 'stratagem') + '), verbatim', '');
+}
+// (a list's unit's own note, ARMIES.units note: none today)
+for (const a of D.armies) for (const u of a.units) if (u.note) checkQuotes(a.id, u.id, u.note, [], dsDocIds(a.faction, [u.name]));
+// (a DATASHEETS row no list has, a faction catalogue's: its notes' form and quotes too, against its faction's datasheet pages)
+for (const [sid, S0] of Object.entries(D.datasheets || {})) for (const ab of S0.abilities || []) if (ab.note && !D.armies.some(a => a.units.some(u => [].concat(u.ds || []).includes(sid))))
+  checkQuotes('catalog', sid + ' / ability:' + ab.name, ab.note, [], dsDocIds(S0.faction, [S0.name]));
 for (const a of D.armies) for (const u of a.units) for (const ab of u.abilities || []) if (ab.note) {
   const f = D.factions[a.faction], dets = a.detachments.map(x => f.detachments[x]).filter(Boolean);
   // the unit's abilities, and the rules of its list (Enraged Behemoths' words in a note on Singular Purpose)
@@ -1536,6 +1601,49 @@ for (const a of D.armies) for (const u of a.units) for (const ab of u.abilities 
   const by = u.ref && a.units.find(x => x.id === u.ref.by), names = x => [x.name, x.leads].concat((x.also || []).map(c => c.name));
   checkQuotes(a.id, u.id + ' / ability:' + ab.name, ab.note, own, dsDocIds(a.faction, names(u).concat(u.ref ? [u.ref.of] : [], by ? names(by) : [])));
 }
+
+/* ------------------------------------------------------------------ the rule tables' own columns, by mechanical checks */
+// alias      RULE_ALIASES / FACTIONS.aliases [pattern, rule]: the rule it opens exists (RULES, or the faction's army or detachment rule); a pattern
+//            that reads the rule's own name ("Feel No Pain" for /^feel no pain/i, its value aside) is mechanical, any other is a player's word
+//            for it, reviewed (verify/helpers.js rule-alias)
+// allies     FACTIONS.allies { New Recruit's ally name: rule }: the rule exists, and for every unit of the faction's lists in that role ("Allies: X")
+//            the rule's words name one of its keywords in bold (its Faction keyword, AGENTS OF THE IMPERIUM; KILL TEAM); an entry no unit uses fails
+// coreTwin   an army rule's core ability of the same name: a RULES entry whose name is the army rule's, case aside
+// ruleSrc    a RULES entry's source label (RULE_SRC) is verify/derive.js ruleSrcOf's template, below
+// tableAt    where a rule's table is in its words: the number of its text lines Wahapedia's faction page prints before the table's first row
+//            (none: after them all), for every army or detachment rule with a table the page prints
+// ruleSrc   RULE_SRC, where a RULES entry that is no core rule comes from: verify/derive.js ruleSrcOf's template over its place in the tables
+{ const Dv = require('./derive'); for (const [k, v] of Object.entries(D.ruleSrc || {})) { count('ruleSrc'); const w = Dv.ruleSrcOf(D, k);
+  if (!w) fail('ruleSrc', 'core', 'ruleSrc:' + k, 'source', v, 'no ally\'s rule, weapon keyword or term in bold of the tables is this entry: no label', '');
+  else if (v !== w) fail('ruleSrc', 'core', 'ruleSrc:' + k, 'source', v, 'its place in the tables gives “' + w + '”', ''); } }
+const ruleIn = (F, name) => (F.armyRules || []).concat(Object.values(F.detachments || {}).flatMap(detRules_)).find(r => r && r.name === name);
+for (const [re, k] of D.ruleAliases || []) { count('alias'); if (!D.rules[k]) fail('alias', 'core', String(re), 'rule', k, 'no RULES entry of this name', ''); else if (re.test(k)) count('aliasName'); }
+for (const fk of FACTIONS) for (const [re, k] of D.factions[fk].aliases || []) { count('alias'); if (!D.rules[k] && !ruleIn(D.factions[fk], k)) fail('alias', fk, String(re), 'rule', k, 'no rule of this name', ''); else if (re.test(k)) count('aliasName'); }
+for (const fk of FACTIONS) for (const [ally, k] of Object.entries(D.factions[fk].allies || {})) {
+  count('allies');
+  const r = ruleIn(D.factions[fk], k), text = r ? [r.text].concat((r.table || []).map(t => t.join(' '))).join('\n') : D.rules[k];
+  if (!text) { fail('allies', fk, 'allies:' + ally, 'rule', k, 'no rule of this name', ''); continue; }
+  const bold = [...String(text).matchAll(/\*\*([^*]+)\*\*/g)].map(m => m[1].trim().toUpperCase());
+  const us = D.armies.filter(a => a.faction === fk).flatMap(a => a.units).filter(u => u.role === 'Allies: ' + ally);
+  if (!us.length) fail('allies', fk, 'allies:' + ally, 'rule', k, 'no unit of the faction\'s lists is in the role "Allies: ' + ally + '"', '');
+  for (const u of us) if (!u.kw.some(x => bold.includes(String(x).replace(/^Faction: /, '').toUpperCase()))) fail('allies', fk, u.id, 'allies:' + ally, k, 'its words name none of the unit\'s keywords in bold (' + u.kw.join(', ') + ')', '');
+}
+for (const fk of FACTIONS) for (const r of D.factions[fk].armyRules || []) if (r.coreTwin !== undefined) {
+  count('coreTwin');
+  if (!D.rules[r.coreTwin] || String(r.coreTwin).toLowerCase() !== String(r.name).toLowerCase()) fail('coreTwin', fk, r.name, 'coreTwin', r.coreTwin, 'not a RULES entry of the army rule\'s name, case aside', '');
+}
+{ const nl = t => norm(stripMarkup(String(t || ''))).replace(/[–—]/g, '-').toLowerCase();
+  for (const fk of FACTIONS) { const W = WAHA_ID[fk] || fk, file = path.join(CACHE, 'waha', W + '.txt'); if (!fs.existsSync(file)) continue;
+    const L = fs.readFileSync(file, 'utf8').split('\n'), LN = L.map(nl);
+    for (const r of (D.factions[fk].armyRules || []).concat(Object.values(D.factions[fk].detachments || {}).flatMap(detRules_))) { if (!r || !r.table) continue;
+      const at0 = LN.findIndex(l => l === nl(r.name)); if (at0 < 0) { if (r.tableAt != null) fail('tableAt', fk, r.name, 'tableAt', r.tableAt, 'the rule is not on its Wahapedia faction page: nothing to hold it to', ''); continue; }
+      const lines = String(r.text || '').split('\n'), pos = lines.map(x => { const n0 = nl(x).slice(0, 60); let j = at0 + 1; while (j < L.length && j < at0 + 80 && !LN[j].includes(n0)) j++; return j < at0 + 80 ? j : -1; });
+      const c0 = nl(r.table[0][0]).replace(/\s*·.*$/, '').slice(0, 20); let tj = at0 + 1; while (tj < L.length && tj < at0 + 80 && !LN[tj].startsWith(c0)) tj++;
+      if (pos.some(x => x < 0) || tj >= at0 + 80) { if (r.tableAt != null) fail('tableAt', fk, r.name, 'tableAt', r.tableAt, 'its words or its table are not found on its Wahapedia faction page', ''); continue; }
+      count('tableAt');
+      const before = pos.filter(x => x < tj).length, want = before === lines.length ? undefined : before;
+      if ((r.tableAt == null ? undefined : r.tableAt) !== want) fail('tableAt', fk, r.name, 'tableAt', r.tableAt, 'Wahapedia\'s page prints ' + before + ' of its ' + lines.length + ' text lines before the table', '');
+    } } }
 
 /* ------------------------------------------------------------------ deviations, output, provenance */
 let devs = [];
