@@ -47,7 +47,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   fs.mkdirSync(path.join(ROOT, 'verify/out/snapshots'), { recursive:true });
 
   // ---- the home screen's folders ----
-  // - home-folders: home is two rows, Favorites and All lists, each with its count; a tap opens the folder; Back returns home
+  // - home-folders: home is four rows, Favorites, Built-in lists, Local lists and All lists, each with its count; a tap opens the folder; Back returns home
   // - home-fav: a list's star in All lists adds it to Favorites (kept on this phone, over a reload) and stays in All lists, starred; the star
   //   on its Find screen says so and takes it off again; nothing is starred at first; an empty Favorites says how to add one
   // - home-sort: each order puts All lists in it (newest: by the date in its source line, A to Z by name, by faction under bands), kept over a
@@ -57,7 +57,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     const tap = async q => { await page.waitForTimeout(400); if(!await page.isVisible(q)){ fail('home-tap', '', q, 'nothing visible there to tap'); return; } await page.click(q); await page.waitForTimeout(200); };
     await page.evaluate(() => { localStorage.removeItem('wh-favs'); localStorage.removeItem('wh-home-sort'); hideSheet(); go({ s:'home' }); });
     const h = await page.evaluate(() => [...document.querySelectorAll('#view [data-folder]')].map(b => b.dataset.folder + ':' + b.querySelector('.c').textContent));
-    if(h.join() !== 'favs:0,lists:' + armies.length) fail('home-folders', '', 'home', h.join());
+    if(h.join() !== 'favs:0,builtin:' + armies.length + ',local:0,lists:' + armies.length) fail('home-folders', '', 'home', h.join());
     await tap('#view [data-folder="favs"]');
     const e = await page.evaluate(() => ({ s:cur.s, t:$('#top').innerText, rows:document.querySelectorAll('#view .arow').length, hint:/No favorites yet/.test($('#view').innerText), link:!!document.querySelector('#view [data-folder="lists"]') }));
     if(e.s !== 'favs' || !/Favorites/.test(e.t) || e.rows || !e.hint || !e.link) fail('home-fav', '', 'empty Favorites', JSON.stringify(e));
