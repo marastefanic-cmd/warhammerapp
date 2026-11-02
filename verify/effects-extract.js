@@ -335,6 +335,8 @@ function unitsOf(src){
   return out;
 }
 
+// the sentence of a rule's first line that introduces its options ("… activate one of the following abilities until the end of the battle:")
+const optIntro = src => (String(src.text || '').split('\n')[0].split(/(?<=[.!?])\s+/).find(x => /\b(?:one of the following|listed below|shown below|below)\b/i.test(x)) || '');
 const BOTH_RE = /\bthe ([A-Z][\w'’]*(?: [A-Z][\w'’]*)*) and (?:the )?([A-Z][\w'’]*(?: [A-Z][\w'’]*)*) are both active for that unit\b/;
 function extract(src, ctx){
   const V = ctx.V, boxes = [], nc = [];
@@ -428,7 +430,10 @@ function extract(src, ctx){
       // (said after the unit has made those attacks, "after this unit has shot, select one enemy unit …" and a box for ranged attacks: for
       // other units' attacks, as a stratagem's afterAttack; its own fight is still to come)
       { const af = /\bafter this (?:unit|model) has (shot|fought)\b/.exec(t); if(af && kind === (af[1] === 'shot' ? 'ranged' : 'melee')) box.notSelf = true; } }
-    const ls = lastsOf(norm(u.s + ' ' + (u.lead || '') + ' ' + u.ctx + (nx1 && nx1.lineBody === u.lineBody && /\b(?:has|have) (?:that|the selected) abilit/.test(norm(nx1.s)) ? ' ' + nx1.s : ''))); if(ls) box.lasts = ls;
+    // (an option of its rule lasts as long as the sentence that introduces the options says: "activate one of the following abilities until
+    // the end of the battle", Blood Tithe)
+    const ls = lastsOf(norm(u.s + ' ' + (u.lead || '') + ' ' + u.ctx + (nx1 && nx1.lineBody === u.lineBody && /\b(?:has|have) (?:that|the selected) abilit/.test(norm(nx1.s)) ? ' ' + nx1.s : '')))
+      || (u.sec && src.type !== 'strat' ? lastsOf(norm(optIntro(src))) : ''); if(ls) box.lasts = ls;
     if(u.sec) box.opt = u.sec;
     // (a table of thresholds: "1+" of "how many Pact points you have gained" is "1+ Pact points")
     { const hm = /^\d+\+$/.test(u.sec || '') && /\bhow many ([A-Za-z' ]+?) you have\b/.exec(plainCase(src.text || '')); if(hm) box.opt = u.sec + ' ' + hm[1]; }
@@ -684,7 +689,7 @@ function defenceOf(src, us, V, ctx){
     if(on.some(x => x[0] === 'nearFriendly') || df.every(([id]) => id === 'loneOp')) reach = null;
     // (how long it lasts, in GW's words, where that is longer than the phase: "until the start of your next Command phase", "until the start
     // of your next turn")
-    const until = /\buntil the (?:start of your next (?:command phase|turn)|end of (?:the|your opponent's next) (?:battle round|turn)|end of the battle)\b/i.exec(plainCase([u.lead || '', u.s].join(' ')));
+    const until = /\buntil the (?:start of your next (?:command phase|turn)|end of (?:the|your opponent's next) (?:battle round|turn)|end of the battle)\b/i.exec(plainCase([u.lead || '', u.s, u.sec && src.type !== 'strat' ? optIntro(src) : ''].join(' ')));
     // (a clause of the sentence with no defence the DNC patterns name: "on a 6, that enemy unit is not eligible to shoot this phase": not counted)
     for(const x of plainCase(u.s).split(/(?:,? and,? |; )(?=(?:until|that|each|all|models|melee|ranged|on a)\b)/i)) if(!findDf(norm(x)).df.length && dncOf(norm(x))) dnc.push({ quote:x.replace(/\.\s*$/, ''), why:E.DNC[dncOf(norm(x))].why });
     for(const [k, fs] of groups){

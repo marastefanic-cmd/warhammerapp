@@ -280,8 +280,8 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
       // (and every snc of its sources, BOXES: its abilities, another unit's aura that reaches it, its army and detachment rules, the
       // stratagems it can be the target of: "<stat>: not counted here: see the rule", once per source and characteristic, not one printed in)
       const said = new Set(), snc = (key, name) => { for(const x of ((D.boxes || {})[key] || {}).snc || []){
-        if(said.has(name + '|' + x.stat) || (u.stats.length && u.stats.every(s => String([].concat((s.from || {})[x.stat] || []).join(', ')).split(/\s*,\s*/).includes(name)))) continue;
-        said.add(name + '|' + x.stat); want.push(name + ' | ' + (x.foe ? 'Enemy units’ ' : '') + x.stat + ': not counted here: see the rule'); } };
+        if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => String([].concat((s.from || {})[x.stat] || []).join(', ')).split(/\s*,\s*/).includes(name)))) continue;
+        said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); want.push(name + ' | ' + (x.foe ? 'Enemy units’ ' : '') + x.stat + ': not counted here: see the rule'); } };
       for(const ab of u.abilities || []) snc(M.KEY.ability(ab), ab.name);
       for(const x of a.units) if(x !== u) for(const ab of x.abilities || []){ const o = (D.boxes || {})[M.KEY.ability(ab)] || {};
         if(/\baura\b/i.test(ab.tag || '') && o.reach && meetsN(o.reach, u)) snc(M.KEY.ability(ab), ab.name); }

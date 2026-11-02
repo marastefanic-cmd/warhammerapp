@@ -4950,8 +4950,8 @@ function statLines(u){
   // the rule", never silent; not one the list printed into the value, its from mark)
   const said = new Set();
   const snc = (key, name, link, v) => { for(const x of ((D.boxes || {})[key] || {}).snc || []){
-    if(said.has(name + '|' + x.stat) || (u.stats.length && u.stats.every(s => [].concat((s.from || {})[x.stat] || []).join(', ').split(/\s*,\s*/).includes(name)))) continue;
-    said.add(name + '|' + x.stat); out.push({ rule:name, a:link, v, text:(x.foe ? 'Enemy units’ ' : '') + x.stat + ': ' + FN_NC }); } };
+    if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => [].concat((s.from || {})[x.stat] || []).join(', ').split(/\s*,\s*/).includes(name)))) continue;
+    said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); out.push({ rule:name, a:link, v, text:(x.foe ? 'Enemy units’ ' : '') + x.stat + ': ' + FN_NC }); } };
   for(const ab of u.abilities || []) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab));
   for(const x of army().units) if(x !== u) for(const ab of x.abilities || []){ const o = (D.boxes || {})[DM_KEY.a(ab)] || {};
     if(/\baura\b/i.test(ab.tag || '') && o.reach && matches(o.reach, u)) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab)); }
