@@ -557,7 +557,7 @@ async function parse(input, D){
       if(b[0] === 0x50 && b[1] === 0x4b){ text = await unzip(b); format = 'rosz'; }
       else text = new TextDecoder().decode(b);
     }
-  } catch(e){ return { ok:false, errors:['not a New Recruit export (the .rosz file could not be opened)'] }; }
+  } catch(e){ return { ok:false, errors:[typeof DecompressionStream === 'undefined' ? 'this browser cannot open a .rosz file (it has no DecompressionStream): import the .ros or .json export, or update the browser' : 'not a New Recruit export (the .rosz file could not be opened)'] }; }
   return parseSync(text, D, format);
 }
 // (the same for text, at once: a kept export is JSON or text)

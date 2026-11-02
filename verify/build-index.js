@@ -6,6 +6,8 @@
              enhancement row gets, for every enhancement of a catalogued faction
      marks   for each rule, ability or enhancement that a list's "+" mark names (from), the values it marks (a characteristic, a weapon
              keyword): which rule of the list changed a value the export shows (BSData's modifiers; verify/bsdata.js checks every mark)
+     battleSizes  GW's battle sizes (Core Rules 25.03, as rules/core-rules.md has them): points, Detachment Points, enhancement and unit limits
+     upgrades     an enhancement GW's Faction Pack heads "<NAME> UPGRADE" (verify/.cache/gw) that its row (BSData's upgrade) does not mark
      gw      a catalogued datasheet's value where GW's datasheet is not BSData's (verify/deviations-bsdata.json, army "catalog"):
              { "<datasheet>": { "<kind>|<row>|<field>": "<BSData's value>" } }, so the export's BSData value is no rule at work
 
@@ -38,10 +40,32 @@ function index(D, RAW){
     const l = t.how === 'none' || unread.includes(e.name + '\n' + sha8(e.text)) ? {} : asLabel(t.ph, t.at);
     if(Object.keys(l).length) labels[e.name] = l;
   }
-  const marks = {};
-  for(const a of RAW.ARMIES) for(const u of a.units) for(const k of ['stats', 'ranged', 'melee']) for(const r of u[k] || []) for(const [f, by] of Object.entries(r.from || {}))
-    for(const s of [].concat(by)){ const key = /^[A-Z][a-z]*$|^(InSv|AP|BS|WS)$/.test(f) ? f : f.toUpperCase(); (marks[s] = marks[s] || []).includes(key) || marks[s].push(key); }
-  for(const s of Object.keys(marks)) marks[s].sort();
+  // (each mark's effect, as the lists' rows show it over their datasheet rows: a number added ({ add }), a value set ({ set }), a weapon
+  // keyword given ('kw'); a source whose rows disagree has none: the build refuses what it alone would explain)
+  const marks = {}, num = v => { const m = /^(-?\d+)("?)$/.exec(String(v)); return m ? { n:+m[1], u:m[2] } : null; };
+  const rowOf = (u, kind, r) => { for(const k of [].concat(u.ds)){ const S = D.datasheets[k]; if(!S) continue; const name = kind === 'stats' ? String(r.name).replace(/ ×\d+$/, '') : r.name;
+    const hit = (S[kind] || []).find(x => x.name === name && (r.group === undefined || (x.group || null) === r.group) && (!r.who || S.name === r.who || [].concat(u.ds).length === 1)); if(hit) return hit; } return null; };
+  for(const a of RAW.ARMIES) for(const u of a.units) for(const k of ['stats', 'ranged', 'melee']) for(const r of u[k] || []) for(const [f, by] of Object.entries(r.from || {})){
+    const isKw = !/^(M|T|Sv|W|Ld|OC|InSv|range|A|BS|WS|S|AP|D)$/.test(f), base = rowOf(u, k, r);
+    let op = 'kw';
+    if(!isKw){ if(!base || !(f in r)) op = null; else { const x = num(base[f]), y = num(r[f]); op = x && y && x.u === y.u ? { add:y.n - x.n } : { set:r[f] }; } }
+    for(const s0 of [].concat(by)){ const m = marks[s0] = marks[s0] || {}, key = isKw ? f.toUpperCase() : f;
+      m[key] = !(key in m) || JSON.stringify(m[key]) === JSON.stringify(op) ? op : null; }
+  }
+  for(const s0 of Object.keys(marks)) marks[s0] = Object.fromEntries(Object.keys(marks[s0]).sort().map(k => [k, marks[s0][k]]));
+  // GW's battle sizes (Core Rules 25.03, rules/core-rules.md: points, Detachment Points, enhancement limit, unit limit)
+  const core = fs.readFileSync(path.join(ROOT, 'rules/core-rules.md'), 'utf8'), bsz = {};
+  const t = core.slice(core.indexOf('#### Select Battle Size 25.03'), core.indexOf('#### Fill Your Army Roster 25.04'));
+  for(const m of t.matchAll(/^\*\*([A-Z ]+)\*\* \| (\d+) \| (\d+) \| (\d+) \| (\d+)\s*$/gm)) bsz[m[1].toLowerCase().replace(/\b\w/g, c => c.toUpperCase())] = { points:+m[2], dp:+m[3], enhancements:+m[4], units:+m[5] };
+  if(!Object.keys(bsz).length) throw new Error('rules/core-rules.md: the 25.03 battle size table was not found');
+  // an enhancement GW's Faction Pack marks UPGRADE that the row (BSData's upgrade) does not
+  const gwTxt = fs.readdirSync(path.join(ROOT, 'verify/.cache/gw')).filter(f => f.endsWith('.txt')).sort().map(f => fs.readFileSync(path.join(ROOT, 'verify/.cache/gw', f), 'utf8')).join('\n');
+  const upgrades = [];
+  for(const f of cat) for(const d of Object.values(D.factions[f].detachments)) for(const e of d.enhancements || []){
+    const U = e.name.toUpperCase().replace(/[’'()]/g, '.');
+    if(!e.upgrade && new RegExp('^\\s*' + U + '\\s+UPGRADE\\b', 'm').test(gwTxt) && !upgrades.includes(e.name)) upgrades.push(e.name);
+  }
+  upgrades.sort();
   const gw = {};
   const dev = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-bsdata.json'), 'utf8'));
   for(const x of dev){
@@ -51,7 +75,7 @@ function index(D, RAW){
   }
   const sortObj = o => Object.fromEntries(Object.keys(o).sort().map(k => [k, o[k]]));
   for(const k of Object.keys(gw)) gw[k] = sortObj(gw[k]);
-  return { labels:sortObj(labels), marks:sortObj(marks), gw:sortObj(gw) };
+  return { labels:sortObj(labels), marks:sortObj(marks), gw:sortObj(gw), battleSizes:bsz, upgrades:Object.fromEntries(upgrades.map(n => [n, 'GW’s Faction Pack: “' + n.toUpperCase() + ' UPGRADE”'])) };
 }
 const text = I => 'const BUILD_INDEX = {\n' + Object.entries(I).map(([k, v]) => '  ' + k + ':{\n' + Object.entries(v).map(([n, x]) => '    ' + JSON.stringify(n) + ':' + JSON.stringify(x)).join(',\n') + '\n  }').join(',\n') + '\n};\n';
 const MARK = ['// ---- BUILD_INDEX: written by verify/build-index.js --write from the other tables and the gate\'s files (do not edit) ----', '// ---- end of BUILD_INDEX ----'];

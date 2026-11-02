@@ -191,8 +191,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     const snap = [];
     // one screen: render it, open every fold, keep its text and its helpers
     const take = async (label, fn, folded) => {
-      const r = await page.evaluate(([fn, sel, folded]) => {
-        (0, eval)(fn)();
+      // (a screen whose making is async, the import's refusal: its text once it is made)
+      const r = await page.evaluate(async ([fn, sel, folded]) => {
+        await (0, eval)(fn)();
         if(!folded) document.querySelectorAll('#view details').forEach(d => d.open = true);
         const host = $('#sheetHost').hidden ? $('#view') : $('#sheetIn');
         const found = [...host.querySelectorAll(sel.join(','))].filter(el => !el.parentElement.closest(sel.join(',')));
@@ -241,7 +242,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       await howChecks();
       // the list import's sheet, empty and with an export it refuses (6 bigs with a unit renamed: verify/import-test.js has the rest)
       await take('popup import', `() => { hideSheet(); go({ s:'home' }); showImport(); }`);
-      await take('popup import (not recognized)', `() => { hideSheet(); go({ s:'home' }); showImport(); runImport(${JSON.stringify(JSON.stringify(IMPORT_BAD))}); }`); }
+      await take('popup import (not recognized)', `() => { hideSheet(); go({ s:'home' }); showImport(); return runImport(${JSON.stringify(JSON.stringify(IMPORT_BAD))}); }`); }
     // (the Phase checklist from Find, then back to Find: the screens after it are reached as before, their back buttons the same)
     for(const s of ['army','checklist','pregame','units','ranged','melee','abilities','rules','bases']){ await screen(s); if(s === 'checklist') await page.evaluate(id => { hideSheet(); go({ s:'army', army:id }); }, a.id); }
     // the damage calculator, at a target set by hand (a fresh one: 5 × T4 Sv 3+ W2): this list's first unit with ranged weapons

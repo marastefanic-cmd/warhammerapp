@@ -134,9 +134,67 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
   neg('over the limit', 'basic-bitch', j => { const t = unit(j, 'Tyrannofex'); sels(j).push(Object.assign(clone(t), { id:'x3' })); },
     ['points total 2180 not recognized: over the Strike Force limit of 2000 pts']);
   neg('illegal attachment', 'healybois', j => { const g = unit(j, 'The Swarmlord'); g.associations[0].to = unit(j, 'Pyrovores').id; },
-    ['leader attachment The Swarmlord + Pyrovores not imported: The Swarmlord can be attached to TYRANT GUARD']);
+    ['leader attachment The Swarmlord + Pyrovores not imported: The Swarmlord can be attached to TYRANT GUARD (Core Rules 19.01)']);
   neg('two Warlords', 'healybois', j => { const w = unit(j, 'The Swarmlord').selections.find(s => s.name === 'Warlord'); unit(j, 'Hive Tyrant').selections.push(clone(w)); },
-    ['warlord not recognized: 2 units are the Warlord (The Swarmlord and Hive Tyrant)']);
+    ['warlord not recognized: 2 units are the Warlord (The Swarmlord and Hive Tyrant) (Core Rules 25.04, Select Units: select one CHARACTER unit to be your Warlord’s unit)']);
+
+  // (each of GW's restrictions the build holds an export to, refused with the rule it breaks)
+  {
+    const wsel = (k, nm, kind, n) => { const r = D.datasheets['tyranids/' + k][kind].find(x => x.name === nm);
+      return { id:'w' + nm, name:nm, entryId:'x::aaaa', number:n || 1, type:'upgrade', group:'Wargear::Fleshborer Hive', profiles:[{ name:nm, typeName:kind === 'ranged' ? 'Ranged Weapons' : 'Melee Weapons',
+        characteristics:[['Range', r.range], ['A', r.A], [kind === 'ranged' ? 'BS' : 'WS', kind === 'ranged' ? r.BS : r.WS], ['S', r.S], ['AP', r.AP], ['D', r.D], ['Keywords', (r.kw || []).join(', ')]].map(([n2, v]) => ({ name:n2, $text:v })) }] }; };
+    const prof = (s, f) => s.profiles[0].characteristics.find(c => c.name === f);
+    const takeEnh = (j, from) => { const h = unit(j, from), e = h.selections.find(s => s.group && /^Enhancements/.test(s.group)); h.selections = h.selections.filter(s => s !== e); return e; };
+    const resetS = j => { const ht = unit(j, 'Hive Tyrant'); for(const w of ht.selections.filter(s => /Monstrous/.test(s.name))){ const r = D.datasheets['tyranids/hive-tyrant'].melee.find(x => lc(x.name) === lc(w.name)); prof(w, 'S').$text = r.S; }
+      for(const tg of sels(j).filter(s => s.name === 'Tyrant Guard')) for(const w of tg.selections[0].selections) prof(w, 'S').$text = '5'; };
+    const lc = x => String(x).toLowerCase();
+    neg('wargear: two of a one-of group', 'healybois', j => { unit(j, 'Tyrannofex').selections.push(wsel('tyrannofex', 'Rupture cannon', 'ranged')); },
+      ['unit Tyrannofex not imported: Tyrannofex has 2 of Rupture cannon, Fleshborer hive and Acid spray each (GW’s datasheet Tyrannofex, Fleshborer Hive: 1)']);
+    neg('wargear: a required choice missing', 'healybois', j => { const t = unit(j, 'Tyrannofex'); t.selections = t.selections.filter(s => s.name !== 'Acid spray'); },
+      ['unit Tyrannofex not imported: Tyrannofex has 0 of Rupture cannon, Fleshborer hive and Acid spray each (GW’s datasheet Tyrannofex, Fleshborer Hive: 1)']);
+    neg('wargear: a choice over its limit', 'healybois', j => { unit(j, 'Tyrannofex').selections.find(s => s.name === 'Stinger salvoes').number = 2; },
+      ['unit Tyrannofex not imported: Tyrannofex has 2 Stinger salvoes each (GW’s datasheet Tyrannofex: 1)']);
+    neg('wargear: models of one line equipped otherwise', 'healybois', j => { unit(j, 'Pyrovores').selections[0].selections.find(s => s.name === 'Flamespurt').number = 1; },
+      ['option 1× Flamespurt on 3× Pyrovore not imported: 3 models, each equipped alike (GW’s datasheet Pyrovores)', 'unit Pyrovores not imported: 3× Pyrovore has 0 Flamespurt each (GW’s datasheet Pyrovores: 1)']);
+    neg('models: over the datasheet’s', 'healybois', j => { const m = unit(j, 'Pyrovores').selections[0]; m.number = 4; m.selections.forEach(s => { s.number = 4; }); },
+      ['unit Pyrovores not imported: 4 Pyrovore models (GW’s datasheet Pyrovores: 1–3)']);
+    neg('models: a name the datasheet has not', 'healybois', j => { unit(j, 'Pyrovores').selections[0].name = 'Pyrovore <b>'; },
+      ['model Pyrovore <b> on unit Pyrovores not recognized (GW’s datasheet Pyrovores has Pyrovore)', 'unit Pyrovores not imported: 0 Pyrovore models (GW’s datasheet Pyrovores: 1–3)']);
+    neg('a rule’s value: more than it gives', 'healybois', j => { prof(unit(j, 'Hive Tyrant').selections.find(s => /bonesword/.test(s.name)), 'S').$text = '20'; },
+      ['unit Hive Tyrant + Tyrant Guard: Monstrous bonesword and lash whip S is 20 in the export; GW’s 9 with Parasitic Biomorphology is 10: not imported']);
+    neg('a rule’s value: less than it gives', 'healybois', j => { prof(unit(j, 'Hive Tyrant').selections.find(s => /bonesword/.test(s.name)), 'S').$text = '3'; },
+      ['unit Hive Tyrant + Tyrant Guard: Monstrous bonesword and lash whip S is 3 in the export; GW’s 9 with Parasitic Biomorphology is 10: not imported']);
+    neg('a rule’s invulnerable save: better than it gives', 'healybois', j => { unit(j, 'Norn Assimilator').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'InSv').$text = '2+'; },
+      ['unit Norn Assimilator: Norn Assimilator InSv is 2+ in the export; GW’s – with Synaptoprescience is 4+: not imported']);
+    neg('a value no rule of the list changes', 'healybois', j => { unit(j, 'Tyrannofex').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'T').$text = '14'; },
+      ['unit Tyrannofex: Tyrannofex T is changed by a rule the app cannot name: not imported']);
+    neg('enhancement on a non-CHARACTER', 'healybois', j => { const e = takeEnh(j, 'Hive Tyrant'); resetS(j); unit(j, 'Pyrovores').selections.unshift(e); },
+      ['enhancement Parasitic Biomorphology on Pyrovores not imported: only CHARACTER units can be given enhancements (Core Rules 25.04, Select Enhancements)']);
+    neg('enhancement on an EPIC HERO', 'healybois', j => { const e = takeEnh(j, 'Hive Tyrant'); resetS(j); unit(j, 'The Swarmlord').selections.unshift(e); },
+      ['enhancement Parasitic Biomorphology on The Swarmlord not imported: EPIC HERO models cannot be given enhancements (Core Rules 25.04, Select Enhancements)']);
+    neg('enhancement its words do not allow', 'healybois', j => { const a = unit(j, 'Norn Assimilator'), e = takeEnh(j, 'Norn Assimilator');
+      a.profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'InSv').$text = '-'; unit(j, 'Norn Emissary').selections.unshift(e);
+      unit(j, 'Norn Emissary').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'InSv').$text = '4+'; },
+      ['enhancement Synaptoprescience on Norn Emissary not imported: GW’s enhancement says “NORN ASSIMILATOR unit only.”']);
+    neg('the same enhancement twice', 'basic-bitch', j => { for(const p of sels(j).filter(s => s.name === 'Tyranid Prime with Lash Whip')) p.selections.unshift({ id:'e' + p.id, name:'Adaptive Biology', entryId:'x::e', number:1, type:'upgrade', group:'Enhancements' }); },
+      null, r => !r.ok && r.errors.includes('enhancement Adaptive Biology ×2 not imported: your army cannot include more than one of the same enhancement (Core Rules 25.04, Select Enhancements)'));
+    neg('two enhancements on one unit', 'healybois', j => { unit(j, 'Hive Tyrant').selections.unshift({ id:'e2', name:'Instinctive Defence', entryId:'x::e', number:1, type:'upgrade', group:'Enhancements' }); },
+      null, r => !r.ok && r.errors.includes('unit Hive Tyrant + Tyrant Guard not imported: Instinctive Defence and Parasitic Biomorphology: no unit (including attached units) can have more than one enhancement (Core Rules 25.04)'));
+    neg('enhancement excluded by its words', 'healybois', j => { const e = takeEnh(j, 'Hive Tyrant'); resetS(j); unit(j, 'Hive Tyrant').selections.unshift({ id:'e3', name:'Regenerating Monstrosity', entryId:'x::e', number:1, type:'upgrade', group:'Enhancements' }); },
+      null, r => !r.ok && r.errors.includes('enhancement Regenerating Monstrosity on Hive Tyrant not imported: GW’s enhancement says “TYRANIDS model only (excluding MONSTERS models).”'));
+    neg('Warlord not a CHARACTER', 'healybois', j => { const s0 = unit(j, 'The Swarmlord'), w = s0.selections.find(s => s.name === 'Warlord'); s0.selections = s0.selections.filter(s => s !== w); unit(j, 'Pyrovores').selections.unshift(w); },
+      ['warlord Pyrovores not imported: the Warlord must be a CHARACTER model (Core Rules 25.04, Select Units)']);
+    neg('an EPIC HERO twice', 'healybois', j => { const s = sels(j), sw = clone(unit(j, 'The Swarmlord')); sw.id = 'sw2'; sw.selections = sw.selections.filter(x => x.name !== 'Warlord'); sw.associations = []; s.splice(s.findIndex(x => x.name === 'Norn Emissary'), 1); s.push(sw); j.roster.costs[0].value += 210 - 250; },
+      ['2× The Swarmlord not imported: every EPIC HERO has a unit limit of 1 (Core Rules 25.03)']);
+    neg('a datasheet over the unit limit', 'healybois', j => { const s = sels(j), p = unit(j, 'Pyrovores'); s.splice(s.findIndex(x => x.name === 'Norn Emissary'), 1); for(let k = 0; k < 2; k++){ const c = clone(p); c.id = 'pp' + k; s.push(c); } j.roster.costs[0].value += 200 - 250; },
+      ['4× Pyrovores not imported: Strike Force’s unit limit for Pyrovores is 3 (Core Rules 25.03)']);
+    neg('Detachment Points over the battle size’s', 'healybois', j => { const nd = clone(exp('nidzillas')).roster.forces[0].selections.find(s => s.name === 'Detachment').selections.find(s => /Crusher/.test(s.name)); sels(j).find(s => s.name === 'Detachment').selections.push(nd); },
+      ['detachments Assimilation Swarm, Talons of the Norn Queen and Crusher Stampede (5 DP) not imported: Strike Force has 3 DP (Core Rules 25.03, 25.04)']);
+    neg('two leaders on one bodyguard', 'healybois', j => { unit(j, 'Hive Tyrant').associations[0].to = unit(j, 'The Swarmlord').associations[0].to; },
+      null, r => !r.ok && r.errors.includes('leader attachment The Swarmlord + Hive Tyrant + Tyrant Guard not imported: each bodyguard unit can only have one leader unit attached to it (Core Rules 19.01)'));
+    neg('a leader attached as support', 'healybois', j => { unit(j, 'The Swarmlord').associations[0].name = 'Supporting'; },
+      ['leader attachment The Swarmlord + Tyrant Guard not imported: GW’s datasheet of The Swarmlord has no Support ability, so it cannot support a unit (Core Rules 19.01)']);
+  }
 
   // ---- I: the index
   const ix = require('child_process').spawnSync(process.execPath, [path.join(__dirname, 'build-index.js')], { encoding:'utf8' });
@@ -153,7 +211,13 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
 async function p2(){
   const { serve } = require('./lib');
   const { chromium } = require('playwright');
-  const kept = await Promise.all(lists.map(async id => { const k = I.slim(exp(id)); return { orig:id, id:await I.localId(k), json:k }; }));
+  const kept = await Promise.all(lists.map(async id => { const k = I.slim(exp(id)); return { orig:id, id:await I.localId(k), json:k, built:B.catalogued(D, D.RAW.ARMIES.find(a => a.id === id).faction) }; }));
+  // (the page is this app.html, data.js and scripts built: index.html's build stamp is build.js's for them now; a stale page fails)
+  const rd = f => fs.readFileSync(path.join(ROOT, f), 'utf8');
+  const stamp = crypto.createHash('sha256').update(rd('app.html')).update(rd('data.js')).update(['calc.js', 'effects.js', 'ask.js', 'builder.js', 'import.js'].map(rd).join('')).digest('hex').slice(0, 10);
+  const have = (/window\.WH_BUILD = '([0-9a-f]+)'/.exec(fs.existsSync(path.join(ROOT, 'index.html')) ? rd('index.html') : '') || [])[1];
+  ok(have === stamp, 'P2: index.html is not the build of this app.html, data.js and scripts (its stamp ' + have + ', build.js now gives ' + stamp + '): VERIFY_BUILDING=1 node build.js');
+  if(have !== stamp) return;
   const site = await serve(ROOT);
   const browser = await chromium.launch({ executablePath:'/opt/pw-browsers/chromium' });
   const shown = { same:0 };
@@ -177,6 +241,8 @@ async function p2(){
       }, [k.id, k.orig]);
       const out = Array.isArray(res) ? res : res.out;
       ok(!out.length, 'P2 ' + k.orig + ' at ' + W + 'px: ' + out.join(', '));
+      // (a catalogued faction's list was built from the tables, every other one copied: never the copy for a list the builder must build)
+      if(!Array.isArray(res)) ok(res.built === k.built && res.copied === !k.built, 'P2 ' + k.orig + ' at ' + W + 'px: ' + (k.built ? 'not built from the tables (built ' + res.built + ', copied ' + res.copied + ')' : 'not copied'));
       if(!out.length) shown.same++;
     }
     ok(!errs.length, 'P2 at ' + W + 'px: page errors: ' + errs.join(' | '));

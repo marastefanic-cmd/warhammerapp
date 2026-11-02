@@ -324,6 +324,16 @@ lists' units by `import.js` as before, and the list says so. What it reads:
 | `BOXES`, `BUILD_INDEX` | a "+" mark: a value the export shows otherwise than the row is a rule of the list at work; its source is the one rule reaching the unit whose boxes give that effect, else the one `BUILD_INDEX.marks` names for it; a value `BUILD_INDEX.gw` says is BSData's where GW's datasheet differs is no rule at work. A change no rule explains, or two explain, refuses the import |
 | `BS_IDS` | the faction, battle size, detachments and disposition (as `import.js` reads them) |
 
+Nothing the list shows is the export's: a part's name is its datasheet's, a model's its datasheet's composition's, a weapon's its row's, a
+wargear its option's; a value is GW's row's, or GW's row's with the one rule's effect (its boxes' `fx`, else `BUILD_INDEX.marks`' `add` /
+`set`), and the export's value is only compared with it (a difference refuses the import, naming both). The export says what was selected,
+and that is held to GW's rules, each refusal citing the rule: the datasheet's models (`composition`) and wargear (`options`: each choice and
+group per model, every model of a line alike); enhancements (a CHARACTER's, not an EPIC HERO's, as the enhancement's own first sentence
+allows, one per unit, no two of one, an Upgrade (BSData's or GW's Faction Pack's, `BUILD_INDEX.upgrades`) up to three, the battle size's
+limit); one CHARACTER Warlord; the unit limit (EPIC HERO 1, BATTLELINE and DEDICATED TRANSPORT double); Detachment Points; one leader and one
+support per bodyguard, each by its own Leader / Support ability (Core Rules 19.01, 25.03, 25.04; the battle sizes' numbers are
+`BUILD_INDEX.battleSizes`, from rules/core-rules.md 25.03).
+
 The gate step `build-parity` (`verify/build-parity.js`) holds it: every export of a catalogued faction builds its entry byte for byte (P1),
 every list imported on the phone shows every screen as the built-in one at 390 and 320px (P2), the build is deterministic (P3), the test
 list in .json, .ros, .rosz, text B and text C gives one list, and changed exports are refused with exact messages. What the hand files hold
