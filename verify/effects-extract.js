@@ -103,7 +103,8 @@ function condsOf(V, sOrig, leadOrig, opts){
   const n = norm(sOrig), ln = norm(leadOrig || ''), both = (ln ? ln + ' ' : '') + n, on = [];
   const has = id => on.some(x => x[0] === id);
   // (the defence side reads its own conditions too, effects.js DCOND)
-  const CT = opts && opts.def ? Object.assign({}, COND, E.DCOND) : COND;
+  // (and a stat box its own, effects.js STCOND)
+  const CT = opts && opts.def ? Object.assign({}, COND, E.DCOND) : opts && opts.stat ? Object.assign({}, COND, E.STCOND) : COND;
   for(const [id, c] of Object.entries(CT)){
     if(['targetKw', 'q', 'opt'].includes(id)) continue;
     if(id === 'anyOf' && !(opts && opts.anyOf)) continue;
@@ -443,8 +444,37 @@ function extract(src, ctx){
   // riled-up lines say so
   const riled = src.type === 'ability' && /^(?:-\s+)?this unit is riled up\.?$/m.test(String(src.text || '').split('\n').map(l => norm(l).trim()).join('\n'));
   const dfn = defenceOf(src, us, V, ctx);
+  const st = statOf(src, us, V);
   return Object.assign({ boxes:shape(boxes, src), nc, reach:reachOf(V, src.type === 'strat' ? '' : src.text || ''), both }, em ? { embarked:{ until:em[1] } } : {}, riled ? { riled:true } : {},
-    dfn.d.length ? { d:dfn.d } : {}, dfn.dnc.length ? { dnc:dfn.dnc } : {}, dfn.dreach ? { dreach:dfn.dreach } : {});
+    dfn.d.length ? { d:dfn.d } : {}, dfn.dnc.length ? { dnc:dfn.dnc } : {}, dfn.dreach ? { dreach:dfn.dreach } : {}, st.length ? { st } : {});
+}
+
+// ---- a unit's own characteristics a rule's words change (effects.js ST: "add 2 to the Objective Control characteristic of models in that
+// unit"), the unit screen's line under its profile, as stat boxes: { quote (the sentence), st:[[id, value]], on (COND and STCOND, read in that
+// sentence alone: "while … is at its Starting Strength", "(excluding Battle-shocked units)"; any other "if / while / unless" in GW's words, q),
+// reach (the friendly units it names, in the sentence or the one before it: "TZAANGORS units from your army", "LEGIO CYBERNETICA units from
+// your army"), scope.models (a keyword: "of TZAANGOR models in that unit") }. An army or detachment rule's only.
+const ST_SCOPE = /\bcharacteristic of \*\*([A-Z][A-Z' -]+?)\*\* models in\b/;
+// (its sentences, every line of its text: a heading's too, "KEYWORDS" then "TZAANGORS units from your army have the BATTLELINE keyword, and
+// while such a unit is not Battle-shocked, add 1 to …", which the attack side does not read)
+const sentencesOf = text => { const out = []; for(const l of String(text || '').split('\n')){ const raw = l.trim().replace(/^-\s+/, '');
+  if(!raw || /^[A-Z][A-Z ’'-]{3,}$/.test(raw.replace(/\*\*/g, '')) || /^\*[^*].*\*$/.test(raw)) continue;
+  const ss = raw.split(/(?<=[.!?])\s+(?=[A-Z(*\[])/).map(x => x.trim()).filter(Boolean);
+  ss.forEach((x, i) => out.push({ s:x, prevS:i > 0 ? ss[i - 1] : '' })); } return out; };
+function statOf(src, us, V){
+  if(src.type !== 'rule') return [];
+  const out = [];
+  for(const u of sentencesOf(src.text)){
+    const n = norm(u.s), st = [];
+    for(const [id, f] of Object.entries(E.ST)) for(const re of f.pats){ const m = re.exec(n); if(m) st.push([id, +m[1]]); }
+    if(!st.length) continue;
+    const box = { quote:u.s, st, on:condsOf(V, u.s, '', { stat:true, inherit:true }) };
+    const r = reachOf(V, u.s) || (u.prevS ? reachOf(V, u.prevS) : null);
+    if(r) box.reach = r;
+    const mk = ST_SCOPE.exec(u.s); if(mk) box.scope = { models:mk[1].trim() };
+    out.push(box);
+  }
+  return out;
 }
 
 // ---- the defence side: GW's sentences about attacks against the unit (or an enemy unit's attacks), and the defences the effects.js DF
@@ -688,4 +718,4 @@ function shape(list, src){
   return final;
 }
 
-module.exports = { extract, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };
+module.exports = { extract, statOf, sentencesOf, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };

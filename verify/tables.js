@@ -67,7 +67,7 @@ const READ_COLS = {
   // (the Damage tab's own reading columns, calcMods, calcNc, both, limit, are retired: its boxes are BOXES, made by script, "derived")
   // (and mod, help, riled, the footnote columns: retired, a unit's footnotes are its boxes; calcDefs, defCalc, calcDef, defAlways, react,
   // weaponKw, lasts, calcNote, fightOnDeath, comeback: the Damage tab's, retired with them)
-  rule:['parts', 'statNote'],
+  rule:[],   // (parts and statNote, the stat notes, are retired: a rule's stat boxes, BOXES st)
   strat:[],   // (shield, defPick: retired with the When targeted readings, BOXES d and dreach)
   ability:[],
 };

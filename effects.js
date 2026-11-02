@@ -17,7 +17,10 @@
      WH_EFFECTS.norm(t)   GW's text as the patterns read it: lower case, no bold, plain quotes and dashes
      WH_EFFECTS.DF        the defence side (the datasheet's "When targeted" lines, not the Damage tab's numbers): defence effect id →
                           { label(p), dom, pats, only }; DCOND its own conditions; DNC its words no effect reads (shown as "not counted
-                          here: see the rule"); dfLabel(df) the words a defence box shows */
+                          here: see the rule"); dfLabel(df) the words a defence box shows
+     WH_EFFECTS.ST        a unit's own characteristic a rule changes, not its attacks (the unit screen's line under its profile, "OC 7"):
+                          stat effect id → { label(p), stat (the characteristic), add(p) (what it adds), dom, pats }; STCOND its own
+                          conditions; stLabel(st) the words a stat box shows */
 (function(root){
 'use strict';
 const sg = p => (+p > 0 ? '+' : '−') + Math.abs(+p);
@@ -196,6 +199,22 @@ const DNC = {
   unread:{ why:'about attacks against it, in words no catalogue effect reads', pats:[] }
 };
 const dfLabel = df => (df || []).map(([id, p]) => DF[id] ? DF[id].label(p) : id).join(', ');
+// ---- a unit's own characteristics a rule changes (not its attacks, not the Damage tab's): the line under its profile on the unit screen
+// ("OC 7"). ST: stat effect id → { label(p), stat (the characteristic), add(p), dom, pats (over the normalised sentence; the capture is the
+// value) }: the characteristic of the models of a unit ("of models in that unit", "of TZAANGOR models in that unit"), never one model's own
+// (a Damaged band's "subtract 4 from this model's Objective Control characteristic" is FX oc, on its band)
+const ST = {
+  ocAdd:{ label:p => '+' + p + ' OC', stat:'OC', add:p => +p, dom:[1, 2, 3], pats:[/\badd (\d) to the objective control characteristic of (?:[a-z' -]+ )?models in (?:that|this|your|each) unit\b/] },
+  ocMinus:{ label:p => '−' + p + ' OC', stat:'OC', add:p => -p, dom:[1, 2, 3, 4], pats:[/\bsubtract (\d) from the objective control characteristic of (?:[a-z' -]+ )?models in (?:that|this|your|each) unit\b/] },
+  mAdd:{ label:p => '+' + p + '" M', stat:'M', add:p => +p, inch:true, dom:[1, 2, 3, 6], pats:[/\badd (\d)" to the move characteristic of models in (?:[a-z' -]+ )?units?\b/] }
+};
+// the conditions only a stat box reads (with COND's): "is at its Starting Strength", "(excluding Battle-shocked units)", "unless that unit is
+// Battle-shocked", "while such a unit is not Battle-shocked"
+const STCOND = {
+  atStarting:{ label:() => 'At its Starting Strength', pats:[/\bis at its starting strength\b/] },
+  notShocked:{ label:() => 'Not Battle-shocked', pats:[/\(excluding battle-shocked units\)/, /\bunless (?:that|this|your|the) unit is battle-shocked\b/, /\bwhile (?:such a|that|this|your) unit is not battle-shocked\b/] }
+};
+const stLabel = st => (st || []).map(([id, p]) => ST[id] ? ST[id].label(p) : id).join(', ');
 const FACT_OF = Object.fromEntries(Object.entries(COND).filter(([, c]) => c.fact).map(([k, c]) => [k, c.fact]));
 // the Custom modifiers group: every catalogue effect a player can set by hand, in this order (no rule, no AI: plain toggles)
 const CUSTOM = [];
@@ -215,7 +234,7 @@ const fxLabel = fx => (fx || []).map(([id, p]) => FX[id] ? FX[id].label(p) : id)
 // (a condition that is only GW's words, quoted (q, anyOf: quoted), is said here, on the Damage tab's boxes, where it tells two boxes of
 // one rule apart and is what the player ticks; the datasheet's footnotes leave it out, their rule's name opening the words: app.html fnLine)
 const condLabel = on => (on || []).map(([id, p]) => COND[id] ? COND[id].label(p) : id).join(' · ');
-const api = { FX, COND, NC, CUSTOM, FACT_OF, CHAR_RE, CH, KW, toMod, fxLabel, condLabel, norm, DF, DCOND, DNC, dfLabel };
+const api = { FX, COND, NC, CUSTOM, FACT_OF, CHAR_RE, CH, KW, toMod, fxLabel, condLabel, norm, DF, DCOND, DNC, dfLabel, ST, STCOND, stLabel };
 if(typeof module !== 'undefined' && module.exports) module.exports = api;
 root.WH_EFFECTS = api;
 })(typeof self !== 'undefined' ? self : this);

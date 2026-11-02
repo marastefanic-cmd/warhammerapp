@@ -1446,7 +1446,6 @@ const detRules = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];
 const unitDetRules = u => detachments().flatMap(d => detRules(d).filter(r => r.needs && matches(r.needs, u)));
 // the parts of a detachment rule that are for some of its units only (parts: Blood Tithe's Daemonic Rage and Boon of Blood are for
 // BLOOD LEGIONS units), each with the rule it is part of
-const unitDetParts = u => unitDetRules(u).flatMap(r => (r.parts || []).filter(p => matches(p.needs, u)).map(p => ({ rule:r, part:p })));
 const allUnitRules = u => u.rules.concat(unitDetRules(u).map(r => r.name).filter(n => !u.rules.includes(n)));
 const unitRules = u => allUnitRules(u).filter(r => !inertRule(r));   // the ones that do something in this list
 // a rule of the unit only one of its models has (data.js partialRules: Canis Rex's Lone Operative is Sir Hekhtur's): that model
@@ -4907,6 +4906,32 @@ const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex=
 // every ability of the datasheet is listed, as on the paper datasheet; footnotes and "When targeted"
 // only repeat it where it matters. The one exception: a Damaged profile is its band under the stats.
 const shownElsewhere = ab => !!ab.damaged;
+// ---- the lines under a unit's profile: a characteristic of its models a rule of the list changes, the rule's stat boxes (data.js BOXES st, made
+// by script from GW's words: verify/effects-extract.js statOf; effects.js ST its effects, STCOND its conditions), "{conditions}: OC 7 (Enraged
+// Behemoths)". Which rules: the army rules and the list's detachment rules whose box reaches the unit (its reach: the units its words name,
+// else the rule's needs). Each condition said, a one-model unit's Starting Strength in its wounds (as a footnote's); a box whose conditions are
+// only GW's words, quoted: "If (see the rule)". The value: the characteristic the unit's profile shows with it ("OC 7"), where every profile
+// has one and the box is for all its models; else the effect ("+1 OC", "TZAANGOR models +1 OC"). Not one the list printed into the value
+// (its from mark: Cyber-psalm Programming's M). Nothing here reads a rule's words. ----
+function stCond(id, p, u){
+  const C = WH_EFFECTS.STCOND[id];
+  if(!C) return fnCond(id, p, u, '', false);
+  return id === 'atStarting' && modelCount(u) === 1 ? 'Lost no wounds (' + C.label(p) + ')' : C.label(p);
+}
+function statLines(u){
+  const E = WH_EFFECTS, out = [];
+  for(const r of faction().armyRules.concat(detachments().flatMap(detRules))) for(const b of ((D.boxes || {})[DM_KEY.r(r)] || {}).st || []){
+    if(!(b.reach ? matches(b.reach, u) : r.needs && matches(r.needs, u))) continue;
+    const on = b.on || [], onlyQ = on.length && on.every(([id]) => E.COND[id] && E.COND[id].quoted);
+    const when = onlyQ ? FN_IF : on.map(([id, p]) => stCond(id, p, u)).join(' · ');
+    for(const [id, p] of b.st){ const f = E.ST[id]; if(!f) continue;
+      if(u.stats.every(s => [].concat((s.from || {})[f.stat] || []).join(', ').split(/\s*,\s*/).includes(r.name))) continue;
+      const vs = [...new Set(u.stats.map(s => s[f.stat]))], one = !(b.scope || {}).models && vs.length === 1 && (f.inch ? /^\d+"$/ : /^\d+$/).test(String(vs[0]));
+      const val = one ? f.stat + ' ' + ((parseInt(vs[0], 10) || 0) + f.add(p)) + (f.inch ? '"' : '') : ((b.scope || {}).models ? (b.scope.models + ' models ') : '') + f.label(p);
+      out.push({ rule:r.name, text:(when ? when + ': ' : '') + val }); }
+  }
+  return out;
+}
 // the keywords that come from the other part of an attached unit, from the importer's note
 // ("Explosives, Meganobz come from the led Meganobz."): starred, as New Recruit stars them
 function kwStars(u){
@@ -4957,9 +4982,8 @@ function screenUnit(){
       u.stats.map(s => '<span class="n"><b>' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</b><small>' + esc([s.base].concat(Object.entries(s.baseWith || {}).map(([g, b]) => b + ' w/ ' + g)).join(' · ')) + '</small></span>' +
         ['M','T','Sv','W','Ld','OC','InSv'].map((k, i) => '<span>' + granted(s, k, u, esc(s[k]), ['M','T','SV','W','LD','OC','INV'][i] + ' ' + s[k]) + '</span>').join('')).join('') + '</div>' +
     '<div class="dnt">' +
-    // (a part of a detachment rule for some of its units can carry one too: Warpmeld Sacrifice's KEYWORDS, for TZAANGORS units)
-    unitDetRules(u).filter(r => r.statNote).map(r => [r, r.statNote]).concat(unitDetParts(u).filter(x => x.part.statNote).map(x => [x.rule, x.part.statNote])).map(([r, sn]) => { const n = modelCount(u) === 1 && sn.single ? sn.single : sn.text;
-      return '<p class="dsl">' + esc(n.replace(/\{OC\+(\d)\}/, (x, d) => String((parseInt(u.stats[0].OC, 10) || 0) + +d))) + ' (' + linkTo('rule', r.name, r.name) + ')</p>'; }).join('') +
+    // (a characteristic of its models a rule of the list changes: statLines)
+    statLines(u).map(x => '<p class="dsl">' + esc(x.text) + ' (' + linkTo('rule', x.rule, x.rule) + ')</p>').join('') +
     // (a fold, closed until opened and kept open for the session, as the Overview's army rules: its count on its line, a line each)
     (def.length ? '<details class="def tgt" data-tgfold="' + esc(tgKey) + '"' + (openStrats.has(tgKey) ? ' open' : '') + '><summary><span class="il">When targeted</span><span class="x">' + def.length + '</span>' + chev + '</summary>' +
       '<div class="tgls">' + def.map(x => '<div class="tgl">' + defLine(x, u) + '</div>').join('') + '</div></details>' : '') +

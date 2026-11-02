@@ -194,14 +194,6 @@
      "source": "hand",
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
     },
-    "parts": {
-     "source": "ai-reading",
-     "note": "the parts of the rule for some of its units only, each with its needs and its footnote, \"When targeted\" line (AI-written def, fingerprinted) or the ability it gives; signed off"
-    },
-    "statNote": {
-     "source": "ai-reading",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
-    },
     "tableAt": {
      "source": "hand",
      "note": "where Wahapedia prints the table inside the text (verify/texts.js reads it)"
@@ -304,14 +296,6 @@
      "source": "hand",
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
     },
-    "parts": {
-     "source": "ai-reading",
-     "note": "the parts of the rule for some of its units only, each with its needs and its footnote, \"When targeted\" line (AI-written def, fingerprinted) or the ability it gives; signed off"
-    },
-    "statNote": {
-     "source": "ai-reading",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
-    },
     "tableAt": {
      "source": "hand",
      "note": "where Wahapedia prints the table inside the text (verify/texts.js reads it)"
@@ -372,14 +356,6 @@
     "note": {
      "source": "hand",
      "note": "the app's note: a quoted FAQ or errata (quotes checked by verify/texts.js) or a question the rules leave open; its words signed off"
-    },
-    "parts": {
-     "source": "ai-reading",
-     "note": "the parts of the rule for some of its units only, each with its needs and its footnote, \"When targeted\" line (AI-written def, fingerprinted) or the ability it gives; signed off"
-    },
-    "statNote": {
-     "source": "ai-reading",
-     "note": "the Damage tab's reading of the rule (its numbers and conditions), read from the words by AI, fingerprinted (readOf) and signed off (approvals.json)"
     },
     "tableAt": {
      "source": "hand",
@@ -1421,6 +1397,10 @@
     "dreach": {
      "source": "derived",
      "note": "a stratagem that protects a unit other than its TARGET (its WHEN's \"targets a friendly X unit\", its TARGET's \"within N\\\" of a friendly X unit that was selected as the target\"): those units, literal keywords (Grot Shields, Blessing of Burning Blood)"
+    },
+    "st": {
+     "source": "derived",
+     "note": "a rule’s stat boxes: a characteristic of its units’ models its words change (“add 2 to the Objective Control characteristic of models in that unit”), the line under a unit’s profile on its screen (verify/effects-extract.js statOf; verify/lines.js LS)"
     }
    }
   },
@@ -1555,6 +1535,31 @@
     "until": {
      "source": "gw",
      "note": "how long it lasts where its words say longer than the phase (\"until the start of your next Command phase\"), GW's words; verify/defence.js D5"
+    }
+   }
+  },
+  "BOXES.st": {
+   "what": "one stat box: a characteristic of a unit’s models GW’s sentence changes, as the catalogue (effects.js ST) reads it; the line under the unit’s profile (“Not Battle-shocked: OC 7”)",
+   "columns": {
+    "quote": {
+     "source": "gw",
+     "note": "the sentence of GW’s text the box reads, verbatim; verify/lines.js LS"
+    },
+    "st": {
+     "source": "derived",
+     "note": "its effects: [effects.js ST id, value], found in the quote by the catalogue’s patterns; LS"
+    },
+    "on": {
+     "source": "derived",
+     "note": "its conditions: effects.js COND and STCOND ids (q: GW’s words of one no pattern reads), read in its sentence; LS"
+    },
+    "reach": {
+     "source": "derived",
+     "note": "the friendly units its words name (literal keywords), in its sentence or the one before it"
+    },
+    "scope": {
+     "source": "derived",
+     "note": "models: the keyword of the models it is for (“of TZAANGOR models in that unit”)"
     }
    }
   }

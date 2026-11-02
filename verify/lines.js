@@ -11,8 +11,8 @@
      the footnotes under a unit's weapons (its weapon rows' "(+N)" values, its Damaged band, riled-up and own-aura lines among them) are
      its boxes, data.js BOXES (made by script from GW's words, held to them by verify/evidence.js G1-G9), each said with the labels of
      its effects and conditions (effects.js), as G1-G8 hold the Damage tab's boxes:
-     L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …) is left in data.js (statNote: not yet; the
-         When targeted columns, def and guard: verify/defence.js D1)
+     L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …), nor a rule's stat notes and parts (statNote,
+         parts: its stat boxes, below), is left in data.js (the When targeted columns, def and guard: verify/defence.js D1)
      L2  every footnote of every list × unit × kind is a box the database gives that unit
      L3  its effects' words are its box's effects' labels (a pick's options, a part), or its one weapon's row value (A, S, AP, D of one
          weapon, never a Damaged band's, a stratagem's or an ability's the unit uses)
@@ -24,6 +24,11 @@
      L7  (L2-L5 together: what the screen shows is what BOXES gives, worked out here again from data.js)
      L8  every catalogue effect and condition renders its label
      LC  every condition GW's words put on a box is on it (verify/coverage.js: option, once per, if / while / unless, within N", kind)
+     LS  the lines under a unit's profile (app.html statLines, "Not Battle-shocked: OC 7 (Enraged Behemoths)"): for every list × unit
+         exactly the stat boxes (BOXES st, effects.js ST) of the list's army and detachment rules that reach it, each said with its
+         conditions' labels and its effect (the unit's characteristic with it, else its label), none the list printed into the value; and
+         the words to them: every sentence of an army or detachment rule that adds to or subtracts from a characteristic of models is a stat
+         box, every "if / while / unless / (excluding …)" in it one of its conditions
 
      node verify/lines.js      the gate step; writes verify/out/lines.json */
 'use strict';
@@ -34,7 +39,7 @@ const X = require('./effects-extract');
 const T = require('./tables');
 const M = require('./effects-migrate');
 
-const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod']);
+const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines']);
 const D = dm.D, A = dm.app, fails = [], stats = {};
 const fail = (g, where, what) => fails.push(g + ' ' + where + ': ' + what);
 
@@ -65,11 +70,10 @@ const damagedOf = ab => { const m = DAMAGED_NAME.exec(ab.name || '') || DAMAGED_
 
 // ---- L1-L8: the footnotes under a unit's weapons are its boxes (data.js BOXES), said with the catalogue's labels ----
 // L1  schema: no reading column the footnotes once had (mods, aura, mod, help, riled, …) is left in data.js
-const RETIRED = new Set(['mods', 'aura', 'mod', 'help', 'riled', 'calcNote', 'fightOnDeath', 'comeback', 'calcDefs', 'react', 'weaponKw', 'defAlways', 'calcDef', 'defCalc', 'listWhy', 'lasts', 'single']);
-// (statNote, the stat notes: not from boxes yet)
+const RETIRED = new Set(['mods', 'aura', 'mod', 'help', 'riled', 'calcNote', 'fightOnDeath', 'comeback', 'calcDefs', 'react', 'weaponKw', 'defAlways', 'calcDef', 'defCalc', 'listWhy', 'lasts', 'single', 'statNote', 'parts']);
 { const RAW = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'));
   const walk = (x, where) => { if(Array.isArray(x)) return x.forEach((y, i) => walk(y, where + '[' + i + ']')); if(!x || typeof x !== 'object') return;
-    for(const [k, v] of Object.entries(x)){ if(k === 'statNote') continue; if(RETIRED.has(k)) fail('L1', where, 'keeps the retired column ' + k); walk(v, where + '.' + k); } };
+    for(const [k, v] of Object.entries(x)){ if(RETIRED.has(k)) fail('L1', where, 'keeps the retired column ' + k); walk(v, where + '.' + k); } };
   for(const [name, key] of [['ARMIES', 'A'], ['DATASHEETS', 'S']]) walk(RAW[key] ? RAW[key].value : null, name);
   walk(D.factions, 'FACTIONS'); walk(D.coreStratagems, 'CORE_STRATAGEMS'); }
 // L2-L5, L7: for every list × unit × kind of attack, the footnotes (app.html unitMods) are exactly the boxes the database gives it, each a
@@ -205,6 +209,52 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
   for(const [key, o] of Object.entries(Tw)){ const src = Sw.get(key); if(!src || o.played) continue;
     for(const b of o.b || []){ n++; for(const g of Cv.gaps(b, src, 'attack', src.others, CTX)) fail('LC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
   stats.covered = n; stats.reachChecked = Cv.counts.checked; stats.reachUnchecked = Cv.counts.unchecked; }
+// LS the lines under a unit's profile: the stat boxes of the list's army and detachment rules that reach it, worked out here again from
+// data.js alone (which rules, which boxes, the words: its conditions' labels, " · " between, a one-model unit's Starting Strength in its
+// wounds, "If (see the rule)" for GW's quoted words alone; its value the unit's characteristic with the effect where every profile has one value
+// and the box is for all its models, else the effect's label, a keyword's models before it), never one the list printed into the value (from);
+// and the words to them (every sentence of a rule that changes a characteristic of models a stat box, its conditions read)
+{ let n = 0;
+  const meetsN = (x, u) => !x || ((!x.all || x.all.every(k => hasK(u, k))) && (!x.any || !x.any.length || x.any.some(k => hasK(u, k))) && (!x.none || !x.none.some(k => hasK(u, k))) && (!x.unless || !meetsN(x.unless, u)));
+  const sw = (id, p, u) => id === 'atStarting' && mc(u) === 1 ? 'Lost no wounds (' + E.STCOND[id].label(p) + ')' : E.STCOND[id] ? E.STCOND[id].label(p) : condWords(id, p, u, '', false);
+  for(const a of D.armies){ const F = D.factions[a.faction] || {}, rules = (F.armyRules || []).concat((a.detachments || []).flatMap(id => { const d = (F.detachments || {})[id]; return d && d.rule ? [d.rule].concat(d.moreRules || []) : []; }));
+    for(const u of a.units){ const want = [];
+      for(const r of rules) for(const b of ((D.boxes || {})[M.KEY.rule(r)] || {}).st || []){
+        if(!(b.reach ? meetsN(b.reach, u) : r.needs && meetsN(r.needs, u))) continue;
+        const on = b.on || [], when = on.length && on.every(([id]) => E.COND[id] && E.COND[id].quoted) ? 'If (see the rule)' : on.map(([id, p]) => sw(id, p, u)).join(' · ');
+        for(const [id, p] of b.st){ const f = E.ST[id];
+          if(!f){ fail('LS', a.id + '/' + u.id, r.name + ': the stat effect ' + id + ' is not in effects.js ST'); continue; }
+          if(u.stats.every(s => String([].concat((s.from || {})[f.stat] || []).join(', ')).split(/\s*,\s*/).includes(r.name))) continue;
+          const vs = [...new Set(u.stats.map(s => String(s[f.stat])))], whole = !(b.scope || {}).models && vs.length === 1 && (f.inch ? /^\d+"$/ : /^\d+$/).test(vs[0]);
+          const val = whole ? f.stat + ' ' + (parseInt(vs[0], 10) + f.add(p)) + (f.inch ? '"' : '') : ((b.scope || {}).models ? b.scope.models + ' models ' : '') + f.label(p);
+          want.push(r.name + ' | ' + (when ? when + ': ' : '') + val); } }
+      const got = A.inArmy(a, () => A.statLines(u)).map(x => x.rule + ' | ' + x.text);
+      if(JSON.stringify(got) !== JSON.stringify(want)) fail('LS', a.id + '/' + u.id, 'the lines under its profile are ' + JSON.stringify(got) + ', its rules\' stat boxes give ' + JSON.stringify(want));
+      else n += got.length; } }
+  // (its schema: a stat box carries the fields statOf writes and no other, each effect and condition in the catalogue with its value in
+  // its domain, its quote GW's words of its rule)
+  const ST_KEYS = new Set(['quote', 'st', 'on', 'reach', 'scope']), ruleByKey = new Map();
+  for(const f of Object.values(D.factions)) for(const r of (f.armyRules || []).concat(Object.values(f.detachments || {}).flatMap(d => d && d.rule ? [d.rule].concat(d.moreRules || []) : []))) ruleByKey.set(M.KEY.rule(r), r);
+  for(const [key, o] of Object.entries(D.boxes || {})) for(const b of o.st || []){ const where = key + ' ' + o.n, r = ruleByKey.get(key);
+    const bad = Object.keys(b).filter(k => !ST_KEYS.has(k)).concat(Object.keys(b.scope || {}).filter(k => k !== 'models'));
+    if(bad.length) fail('LS', where, 'stat box fields no script writes: ' + bad.join(', '));
+    if(!r) fail('LS', where, 'a stat box of no army or detachment rule');
+    else if(!X.sentencesOf(r.text).some(x => x.s === b.quote)) fail('LS', where, 'its quote is not a sentence of its rule: “' + String(b.quote).slice(0, 70) + '”');
+    for(const [id, p] of b.st || []){ const f = E.ST[id]; if(!f || !f.dom.includes(p)) fail('LS', where, 'stat effect ' + id + ' ' + JSON.stringify(p) + ' not in effects.js ST or its domain');
+      else if(!f.pats.some(re => { const m = re.exec(E.norm(b.quote)); return m && +m[1] === p; })) fail('LS', where, 'stat effect ' + id + ' ' + p + ' is not in its quote'); }
+    for(const [id] of b.on || []) if(!E.STCOND[id] && !E.COND[id]) fail('LS', where, 'condition ' + id + ' not in effects.js COND or STCOND'); }
+  // the words to them: every rule of the database
+  const CH_RE = /\b(?:add|subtract) (?:\d+|d3)"? (?:to|from) the ([a-z ]+?) characteristic of (?:[a-z' -]+ )?models in\b/;
+  const CL_RE = /\b(?:if|while|unless)\b[^,.;:]+|\(excluding [^)]+\)/gi;
+  for(const f of Object.values(D.factions)) for(const r of (f.armyRules || []).concat(Object.values(f.detachments || {}).flatMap(d => d && d.rule ? [d.rule].concat(d.moreRules || []) : []))){
+    const st = ((D.boxes || {})[M.KEY.rule(r)] || {}).st || [];
+    for(const x of X.sentencesOf(r.text)){ const nn = E.norm(x.s); if(!CH_RE.test(nn)) continue;
+      const b = st.find(y => y.quote === x.s);
+      if(!b){ fail('LS', f.name + ' · ' + r.name, 'its words change a characteristic of models and are no stat box: “' + X.plainCase(x.s).slice(0, 90) + '”'); continue; }
+      for(const m of X.plainCase(x.s).matchAll(CL_RE)){ const cn = E.norm(m[0]);
+        const read = (b.on || []).some(([id, p]) => { const C = E.STCOND[id] || E.COND[id]; return (id === 'q' && E.norm(p).includes(cn.replace(/^\(|\)$/g, ''))) || (C && C.pats.some(re => re.test(cn) || re.test(E.norm(x.s)) && E.norm(x.s).match(re).index >= nn.indexOf(cn) && E.norm(x.s).match(re).index < nn.indexOf(cn) + cn.length)); });
+        if(!read) fail('LS', f.name + ' · ' + r.name, 'its condition “' + m[0] + '” is not on its stat box'); } } }
+  stats.statLines = n; }
 // LB the Damaged band: its words are its boxes' effect labels, and "see the rule" where its words have a part not counted or no box
 { let n = 0;
   for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) if(ab.damaged){ const o = (D.boxes || {})[M.KEY.ability(ab)] || {};
@@ -224,6 +274,6 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/lines.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges and ' + stats.limits + ' once-per-battle chips as their words give them; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
+console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges and ' + stats.limits + ' once-per-battle chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);
