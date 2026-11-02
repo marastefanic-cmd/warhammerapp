@@ -48,13 +48,16 @@ const conv = s => ({ id:lastId(s.entryId), n:Number(s.number) || 0, model:s.type
 const sigOf = s => signature(lastId(s.entryId), (s.selections || []).map(conv));
 const entries = sig => sig.slice(sig.indexOf('|') + 1).split(',').filter(Boolean);
 
-// what resolve reads, so a kept list is small
+// what resolve and builder.js read, so a kept list is small (its profiles' values, categories and rule names: builder.js's)
 function slim(j){
   const sel = s => {
     const o = { id:s.id, name:s.name, entryId:s.entryId, number:s.number, type:s.type };
     if(s.group) o.group = s.group;
+    if((s.categories || []).length) o.categories = s.categories.map(x => Object.assign({ name:x.name }, x.primary ? { primary:true } : {}));
+    if((s.profiles || []).length) o.profiles = s.profiles.map(x => ({ name:x.name, typeName:x.typeName, characteristics:(x.characteristics || []).map(c => c.$text == null || !String(c.$text).trim() ? { name:c.name } : { name:c.name, $text:String(c.$text) }) }));
+    if((s.rules || []).length) o.rules = s.rules.map(x => ({ name:x.name }));
     const c = (s.costs || []).filter(x => x.name === 'pts'); if(c.length) o.costs = c.map(x => ({ name:'pts', value:x.value }));
-    const a = (s.associations || []).filter(x => x.action === 'group').map(x => ({ type:x.type, to:x.to, name:x.name, action:x.action })); if(a.length) o.associations = a;
+    const a = (s.associations || []).filter(x => x.type === 'outgoing').map(x => Object.assign({ type:x.type, to:x.to, name:x.name }, x.action ? { action:x.action } : {})); if(a.length) o.associations = a;
     if((s.selections || []).length) o.selections = s.selections.map(sel);
     return o;
   };
@@ -321,6 +324,42 @@ function resolveRoster(j, D, opt){
   return { ok:true, army };
 }
 
-const API = { resolve, slim, signature, nn };
+/* the app's import: any New Recruit export (WH_BUILDER.parse reads its format), made into a list.
+   A faction with a full catalogue in data.js: built by builder.js from the export and the tables (WH_BUILDER.build), then joined with
+   DATASHEETS as the app's own lists are (WH_DATA.resolve): the same list the app would have built in. A faction without one: today's
+   strict copy (resolve, above), marked copied. Kept on the phone as { id, json, date } (json: the export as slim keeps it, or a text
+   export's text) and made again from this data.js at every start; the id is "local-" and the first 12 hex of the sha256 of the kept export.
+   WH_IMPORT.make(kept, WH_DATA, { id, date }) → { ok, army } | { ok:false, errors } (synchronous: a kept export is JSON or text)
+   WH_IMPORT.read(input, WH_DATA) → Promise of { ok, kept } | { ok:false, errors } (a file's text or bytes, or pasted text)
+   WH_IMPORT.localId(kept) → Promise of the id */
+const B = () => root.WH_BUILDER || (typeof require === 'function' ? require('./builder.js') : null);
+const keptOf = (p, input) => p.text ? { text:String(input).replace(/^\uFEFF/, '').replace(/\r/g, '').trim() } : slim(p.json);
+async function read(input, D){
+  const p = await B().parse(input, D);
+  return p.ok ? { ok:true, format:p.format, kept:keptOf(p, input) } : p;
+}
+function make(kept, D, opt){
+  let j = kept;
+  if(kept && typeof kept.text === 'string'){ const p = B().parseSync(kept.text, D); if(!p.ok) return p; j = p.json; }
+  const bad = B().malformed(j);
+  if(bad) return { ok:false, errors:['not a New Recruit export (' + bad + ')'] };
+  const fac = ((D.bsIds || {}).factions || {})[(j.roster.forces[0] || {}).catalogueId];
+  if(fac && B().catalogued(D, fac)){
+    const r = B().build(j, D, opt);
+    if(!r.ok) return r;
+    const army = D.resolve(r.army); army.imported = true; army.built = true;
+    return { ok:true, army, entry:r.army };
+  }
+  const r = resolve(j, D, opt);
+  if(r.ok) r.army.copied = true;
+  return r;
+}
+const canonical = kept => JSON.stringify(kept);
+async function localId(kept){
+  const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(canonical(kept)));
+  return 'local-' + [...new Uint8Array(d)].slice(0, 6).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+const API = { resolve, slim, signature, nn, read, make, localId, canonical };
 if(typeof module !== 'undefined' && module.exports) module.exports = API; else root.WH_IMPORT = API;
 })(this);
