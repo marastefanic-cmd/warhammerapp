@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "f5ec723ca5",
- "data": "2026-11-02.1",
+ "build": "666cb5638b",
+ "data": "2026-11-02.2",
  "date": "2 Nov 2026",
  "checks": [
   {
@@ -19,7 +19,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Games Workshop’s rules text:",
-   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (5788 texts)."
+   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (6073 texts)."
   },
   {
    "label": "Rules logic:",
@@ -27,11 +27,11 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "643 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "436 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "3308 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "3307 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
@@ -59,11 +59,11 @@ window.WH_VERIFIED = {
   },
   "RULE_SRC": {
    "what": "where a RULES entry comes from when it is not a core rule",
-   "cols": "name:hand source:hand"
+   "cols": "name:derived source:derived"
   },
   "RULE_ALIASES": {
    "what": "which RULES entry a keyword or rule chip opens: [pattern, rule]",
-   "cols": "pattern:hand rule:hand"
+   "cols": "pattern:hand rule:derived"
   },
   "CONCEPTS": {
    "what": "core terms kept out of a unit's rule list",
@@ -71,15 +71,15 @@ window.WH_VERIFIED = {
   },
   "CORE_STRATAGEMS": {
    "what": "the core stratagems",
-   "cols": "id:hand gist:ai-summary gistOf:derived name:gw cp:gw phases:derived turn:derived turns:derived when:gw target:gw effect:gw restrictions:gw needs:derived note:hand limit:derived cpNote:hand readOf:derived"
+   "cols": "id:hand gist:ai-summary gistOf:derived name:gw cp:gw phases:derived turn:derived turns:derived when:gw target:gw effect:gw restrictions:gw needs:derived note:gw limit:derived cpNote:derived readOf:derived"
   },
   "FACTIONS": {
    "what": "one row per faction: its army rules, detachments and aliases",
-   "cols": "name:gw aliases:hand armyRules:gw detachments:gw allies:hand"
+   "cols": "name:gw aliases:hand armyRules:gw detachments:gw allies:gw"
   },
   "FACTIONS.armyRules": {
    "what": "a faction's army rules",
-   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:hand coreTwin:hand note:hand parts:ai-reading statNote:ai-reading tableAt:hand missing:hand readOf:derived"
+   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:derived coreTwin:derived note:gw tableAt:wahapedia missing:hand readOf:derived"
   },
   "FACTIONS.detachments": {
    "what": "a faction's detachments",
@@ -87,15 +87,15 @@ window.WH_VERIFIED = {
   },
   "FACTIONS.detachments.rule": {
    "what": "a detachment's rule",
-   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:hand coreTwin:hand note:hand parts:ai-reading statNote:ai-reading tableAt:hand missing:hand readOf:derived"
+   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:derived coreTwin:derived note:gw tableAt:wahapedia missing:hand readOf:derived"
   },
   "FACTIONS.detachments.moreRules": {
    "what": "a detachment's further rule (moreRules), with the columns of its first",
-   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:hand coreTwin:hand note:hand parts:ai-reading statNote:ai-reading tableAt:hand missing:hand readOf:derived"
+   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:derived coreTwin:derived note:gw tableAt:wahapedia missing:hand readOf:derived"
   },
   "FACTIONS.detachments.stratagems": {
    "what": "a detachment's stratagems",
-   "cols": "id:derived gist:ai-summary gistOf:derived name:gw cp:gw phases:derived turn:derived turns:derived when:gw target:gw effect:gw restrictions:gw needs:derived note:hand limit:derived cpNote:hand readOf:derived"
+   "cols": "id:derived gist:ai-summary gistOf:derived name:gw cp:gw phases:derived turn:derived turns:derived when:gw target:gw effect:gw restrictions:gw needs:derived note:gw limit:derived cpNote:derived readOf:derived"
   },
   "FACTIONS.detachments.enhancements": {
    "what": "a detachment's enhancements",
@@ -107,7 +107,7 @@ window.WH_VERIFIED = {
   },
   "ARMIES.units": {
    "what": "a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS",
-   "cols": "id:derived ds:derived pts:newrecruit ptsNote:newrecruit copies:newrecruit models:newrecruit gear:newrecruit unplaced:newrecruit enhancement:newrecruit warlord:newrecruit enhOn:newrecruit warlordOn:newrecruit ref:hand upgrade:newrecruit leads:newrecruit support:newrecruit also:newrecruit short:hand role:newrecruit name:newrecruit rules:newrecruit kw:newrecruit kwNote:hand kwOnly:hand partialRules:hand srcNote:hand stats:newrecruit ranged:newrecruit melee:newrecruit abilities:newrecruit over:hand note:hand why:derived"
+   "cols": "id:derived ds:derived pts:newrecruit ptsNote:newrecruit copies:newrecruit models:newrecruit gear:newrecruit unplaced:newrecruit enhancement:newrecruit warlord:newrecruit enhOn:newrecruit warlordOn:newrecruit ref:gw upgrade:newrecruit leads:newrecruit support:newrecruit also:newrecruit short:hand role:newrecruit name:newrecruit rules:newrecruit kw:newrecruit kwNote:derived kwOnly:wahapedia partialRules:wahapedia srcNote:derived stats:newrecruit ranged:newrecruit melee:newrecruit abilities:newrecruit over:hand note:gw why:derived"
   },
   "ARMIES.units.stats": {
    "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
@@ -123,11 +123,11 @@ window.WH_VERIFIED = {
   },
   "ARMIES.units.abilities": {
    "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
-   "cols": "name:newrecruit who:newrecruit over:hand of:derived text:wahapedia tag:newrecruit ph:derived turn:derived turns:derived at:derived note:hand na:hand damaged:derived why:derived readOf:derived"
+   "cols": "name:newrecruit who:newrecruit over:hand of:derived text:wahapedia tag:newrecruit ph:derived turn:derived turns:derived at:derived note:gw na:derived damaged:derived why:derived readOf:derived"
   },
   "DATASHEETS": {
    "what": "one row per datasheet (faction + datasheet name): its facts, shared by every list that has it",
-   "cols": "name:newrecruit faction:derived bsId:bsdata role:newrecruit rules:newrecruit kw:newrecruit kwOnly:hand partialRules:hand srcNote:hand leaders:bsdata stats:newrecruit ranged:newrecruit melee:newrecruit abilities:wahapedia points:gw composition:bsdata options:bsdata aiStatus:derived"
+   "cols": "name:newrecruit faction:derived bsId:bsdata role:newrecruit rules:newrecruit kw:newrecruit kwOnly:wahapedia partialRules:wahapedia srcNote:derived leaders:bsdata stats:newrecruit ranged:newrecruit melee:newrecruit abilities:wahapedia points:gw composition:bsdata options:bsdata aiStatus:derived"
   },
   "DATASHEETS.stats": {
    "what": "a datasheet's model profiles",
@@ -143,7 +143,7 @@ window.WH_VERIFIED = {
   },
   "DATASHEETS.abilities": {
    "what": "a datasheet's abilities",
-   "cols": "name:newrecruit who:newrecruit text:wahapedia tag:newrecruit ph:derived turn:derived turns:derived at:derived note:hand na:hand damaged:derived readOf:derived"
+   "cols": "name:newrecruit who:newrecruit text:wahapedia tag:newrecruit ph:derived turn:derived turns:derived at:derived note:gw na:derived damaged:derived readOf:derived"
   },
   "RULE_OPTIONS": {
    "what": "the options inside a rule or ability, each with the phases its words give",
@@ -159,7 +159,7 @@ window.WH_VERIFIED = {
   },
   "BOXES": {
    "what": "the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give",
-   "cols": "n:derived b:derived nc:derived reach:derived both:derived embarked:derived played:derived riled:derived d:derived dnc:derived dreach:derived"
+   "cols": "n:derived b:derived nc:derived reach:derived both:derived embarked:derived played:derived riled:derived d:derived dnc:derived dreach:derived st:derived"
   },
   "BOXES.b": {
    "what": "one box of the Damage tab: what GW's sentence does, as the catalogue (effects.js) reads it",
@@ -168,6 +168,10 @@ window.WH_VERIFIED = {
   "BOXES.d": {
    "what": "one defence box: what GW's sentence does for a unit when it is attacked, as the catalogue (effects.js DF) reads it; the datasheet's \"When targeted\" line",
    "cols": "quote:gw lead:gw df:derived on:derived kind:derived scope:derived reach:derived mark:derived notSelf:derived foe:derived opt:derived pick:derived term:derived until:gw"
+  },
+  "BOXES.st": {
+   "what": "one stat box: a characteristic of a unit’s models GW’s sentence changes, as the catalogue (effects.js ST) reads it; the line under the unit’s profile (“Not Battle-shocked: OC 7”)",
+   "cols": "quote:gw st:derived on:derived reach:derived scope:derived"
   }
  }
 };
