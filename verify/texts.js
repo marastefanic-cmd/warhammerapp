@@ -22,7 +22,8 @@
    A line marked "*Wahapedia core rules (…): …*" (a sentence GW's Core Rules PDF does not print) is checked word for word in
    Wahapedia's core rules only. A line marked "*Wahapedia … errata (…): …*" is found in the FAQ / errata of its Wahapedia pages
    (not their rules text) and is not what GW's documents print (an errata line differs from the text it amends); a "*Wahapedia FAQ: …*"
-   line and a note under "Wahapedia FAQ" / "Wahapedia errata" are found there too.
+   line and a note under "Wahapedia FAQ" / "Wahapedia errata" are found there too. A note label naming a datasheet ("Pink Horrors
+   datasheet") holds its quote to that datasheet's pages.
    A line the app marks as its own ("*App note, not rules text: …*") fails (appNote): a rules text is GW's words only. Any other line of a verbatim field that is in no source is a failure (also listed: notInAnySource).
 
    Sources (authority order): GW Core Rules, Universal Rules Updates and Faction Packs (verify/.cache/gw, read with
@@ -1540,13 +1541,22 @@ const NOTE_LABELS = {
   'Designer’s Note (Faction Pack 1.2, Pink Horrors datasheet)': 'gw'
 };
 // (and what the label says of its document, held to where its first quote is found (noteLabel): "Faction Pack 1.3" the pack's VERSION line;
-// "Pink Horrors datasheet" a datasheet of that name in it; "FAQ" a question ("Q:") right before the quote; "errata" and "Designer's Note" those words right before it;
+// "Pink Horrors datasheet" the quote on that datasheet: on its two pages, the page whose first line is its name and the next, as the
+// packDatasheet check reads a datasheet (a Wahapedia datasheet page: the page of that name); "FAQ" a question ("Q:") right before the quote; "errata" and "Designer's Note" those words right before it;
 // a Wahapedia FAQ or errata in that page's FAQ / errata)
 function labelGaps(label, r, n, docs) {
   const d = typeof r.d === 'string' ? DOCS[r.d] : r.d, N = d ? d.N : '', before = n => N.slice(Math.max(0, r.off - n), r.off), out = [];
   const v = /Faction Pack (\d+\.\d+)/.exec(label);
   if (v) { const m = /\bversion (\d+\.\d+)/.exec(N); if (!m || m[1] !== v[1]) out.push('the document is ' + (m ? 'version ' + m[1] : 'no versioned Faction Pack') + ', not ' + v[0]); }
-  const ds = /([A-Z][A-Za-z’' -]+?) datasheet\)/.exec(label); if (ds && !N.includes(norm(ds[1]))) out.push('the document has no ' + ds[1] + ' datasheet');
+  const ds = /([A-Z][A-Za-z’' -]+?) datasheet\)/.exec(label);
+  if (ds && d) {
+    const name = squash(ds[1]), pg = [];
+    if (d.kind === 'wahahtml' && /^wahads:/.test(d.id)) { if (squash(d.label.replace(/^Wahapedia datasheet /, '')) === name) pg.push(...d.pages.keys()); }
+    else { const p0 = d.pages.findIndex((p, i) => i > 0 && squash(p.lines.find(l => l.trim()) || '') === name); if (p0 >= 0) pg.push(p0, Math.min(p0 + 1, d.pages.length - 1)); }
+    if (!pg.length) out.push('the document has no ' + ds[1] + ' datasheet');
+    else { const [s0, s1] = pageRange(d, pg[0], pg[pg.length - 1]);
+      if (!findAll(d, n || "", s0, s1).length) out.push('its first quote is not on the ' + ds[1] + ' datasheet (' + d.label + ' p' + (pg[0] + 1) + (pg.length > 1 ? '-' + (pg[pg.length - 1] + 1) : '') + ')'); }
+  }
   if (/\bFAQ\b/.test(label) && !/\bq:\s*$/.test(before(40).trim() + ' ') && !/\bq:\s*\S*$/.test(before(12))) out.push('its first quote is no FAQ question ("Q:" before it)');
   if (/\berrata\b/.test(label) && !/errata/.test(before(250))) out.push('no "errata" right before its first quote');
   if (/^Wahapedia (?:FAQ|errata)$/.test(label) && !locate(n || '', faqDocs((docs || []).map(k => k.replace(/^waha:/, 'wahahtml:')))))
