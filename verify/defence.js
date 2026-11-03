@@ -27,6 +27,7 @@
          the sentence listed not counted
      D7  data.js BOXES' defence side is exactly what the words give (node verify/effects-migrate.js --write)
      D8  every DF defence and DCOND condition says its own value in its label, and a box of it alone renders that label
+     DS  New Recruit's starred Feel No Pain (X+*) is never a plain Feel No Pain box: its words not counted (effects.js DNC starred)
      DL  the lines as the screen has them, for every list × unit: each "When targeted" line is a defence box the database gives that unit,
          said in its defences' and conditions' labels (a box whose only conditions are GW's quoted words: "If (see the rule)"); every box
          the database gives it is one line, once; a source of the unit with words not counted has one "not counted here: see the rule" line
@@ -154,6 +155,12 @@ stats.boxes = nBox; stats.notCounted = nDnc;
     if(!x || x.when !== l) fail('D8', 'effects.js DCOND ' + id, 'a box of it alone says “' + (x && x.when) + '”, not “' + l + '”'); }
   stats.labels = n; }
 
+// ---- DS New Recruit's starred Feel No Pain ("Feel No Pain 5+*"): the star is a condition its rule states (against Psychic Attacks, or mortal
+// wounds) that the name does not say: never a plain Feel No Pain box (effects.js DF fnp does not read it), its words not counted (DNC starred)
+for(const x of ['feel no pain 5+*: this ability always takes the form feel no pain x+.', 'has feel no pain 3+*']) if(E.DF.fnp.pats.some(re => re.test(x))) fail('DS', 'effects.js fnp', 'reads New Recruit’s starred “' + x + '” as a plain Feel No Pain');
+for(const [k, o] of Object.entries(D.boxes || {})) if(/^Feel No Pain \d\+\*$/.test(o.n || '')){
+  if((o.d || []).length) fail('DS', k + ' ' + o.n, 'a defence box of a starred Feel No Pain: ' + JSON.stringify(o.d.map(b => b.df)));
+  if(!(o.dnc || []).some(x => x.why === E.DNC.starred.why)) fail('DS', k + ' ' + o.n, 'its words are not listed not counted (DNC starred)'); }
 // ---- DL the lines as the screen has them ----
 { let n = 0, nc = 0; const BX = E.agreed(D.boxes, D.agree);
   const hasK = (u, k) => (u.kw || []).some(x => x.toLowerCase() === String(k).toLowerCase());
@@ -163,14 +170,19 @@ stats.boxes = nBox; stats.notCounted = nDnc;
     const want = [];
     // (the boxes as the screen counts them, the two-reader rule: data.js AGREE, effects.js agreed; one it does not confirm is its source's
     // words not counted, a "see the rule" line)
-    for(const Sx of srcs){ const o = BX[Sx.key] || {};
+    for(const Sx of srcs){ const o = BX[Sx.key] || {}; let fell = false;
       for(const b of o.d || []){
-        if(!b.pick && !(b.df || []).length) continue;
         if(b.foe ? false : Sx.reachOnly ? !(b.reach && meets(b.reach, u)) : b.reach ? !meets(b.reach, u) || (Sx.grp === 'unit' && b.notSelf) : Sx.grp === 'other') continue;
         if((b.on || []).some(([id, p]) => (id === 'selfKw' || id === 'itIs') && !hasK(u, p))) continue;
+        if(b.unconfirmed){ fell = true; continue; }
         want.push({ Sx, b }); }
-      // (its words not counted: one line; another unit's are its own)
-      if(Sx.grp !== 'other' && (o.dnc || []).length){ const ms = got.filter(x => x.ncLine && x.key === Sx.key);
+      // (its words not counted: one line; another unit's are its own, but for a box the two-reader rule does not confirm, where it reaches)
+      const msN = got.filter(x => x.ncLine && x.key === Sx.key && !!x.from === (Sx.grp === 'other'));   // (another unit's line names the unit it is from)
+      if(!(fell || (Sx.grp !== 'other' && (o.dnc || []).some(x => !x.unconfirmed)))){ if(msN.length) fail('DL', where, Sx.name + ': a "see the rule" line where nothing of it is left out'); }
+      // (New Recruit's starred Feel No Pain on the Rules line, DNC starred: not said where a line of the unit gives that Feel No Pain with its condition)
+      else if((st => st && got.some(y => !y.rl && y.box && (y.box.pick ? y.box.pick.flatMap(p => p.df) : y.box.df || []).some(([id, p]) => /^fnp/.test(id) && p === +st[1])))(Sx.rl && /^feel no pain (\d)\+\*$/i.exec(Sx.rl))){ if(msN.length) fail('DL', where, Sx.name + ': a starred Feel No Pain said twice'); }
+      else { const ms = msN;
+        if(Sx.grp === 'other' && ms.length === 1 && !ms[0].from) fail('DL', where, Sx.name + ': another unit\'s words not counted, without the unit it is from');
         if(ms.length !== 1) fail('DL', where, Sx.name + ': words not counted, ' + ms.length + ' "see the rule" lines'); else if(ms[0].text !== 'not counted here: see the rule') fail('DL', where, Sx.name + ' says “' + ms[0].text + '”'); else nc++; } }
     for(const w of want){ const ms = got.filter(x => x.box === w.b && x.key === w.Sx.key);
       // (left out where the list printed it into the stats, marked from this rule; a Rules-line Feel No Pain its own words say)

@@ -153,7 +153,7 @@ let nLines = 0, nRows = 0, nNc = 0;
     const wn = [].concat(u.ranged || [], u.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase());
     for(const S of srcs){ const o = BX[S.key]; if(!o) continue;
       if(S.played && !o.played) fail('L4', where, S.name + ' is not a played source in BOXES');
-      const bk = bakedOf(u, S.name);
+      const bk = bakedOf(u, S.name); let fell = false;
       for(const b of o.b || []){
         if(S.reachOnly ? !(b.reach && meets(b.reach, u)) : b.reach ? !meets(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;
         if(b.kind !== 'all' && b.kind !== kind) continue;
@@ -165,13 +165,19 @@ let nLines = 0, nRows = 0, nNc = 0;
         const its = ws || items(u, kind), hasAll = l => /^\[.+\]$/.test(l) && its.length && its.every(it => it.ps.every(w => (w.kw || []).some(k => '[' + String(k).toUpperCase() + ']' === l)));
         const keep = fx => (fx || []).filter(([id, p]) => !baked(bk, id, p) && !hasAll(E.fxLabel([[id, p]])) && !(kind === 'melee' && RANGED_FX.has(id)));
         if((b.on || []).some(([id, p]) => (id === 'selfKw' && !hasK(u, p)) || (id === 'selfGear' && !p.every(g => wn.some(n => n.startsWith(String(g).toLowerCase())))))) continue;
+        // (a box the two-reader rule does not confirm, where it would have been a footnote: its rule's words, not counted, below)
+        if(b.unconfirmed){ fell = true; continue; }
         if(b.pick ? !b.pick.some(p => keep(p.fx).length) : !keep(b.fx).length) continue;
         want.push({ S, b, ws, keep });
       }
       // (its words about its attacks no catalogue effect reads: one "not counted here: see the rule" line; not another unit's, not a band's)
-      if(!S.damaged && S.grp !== 'other' && (o.nc || []).some(x => x.atk)){ const ms = got.filter(m => m.ncLine && m.key === S.key);
-        if(ms.length !== 1) fail('L4', where, S.name + ': its words not counted, ' + ms.length + ' "see the rule" lines');
-        else if(ms[0].note !== 'not counted here: see the rule' || ms[0].when) fail('L3', where, S.name + ' not-counted line “' + ms[0].note + '”'); else nNc++; } }
+      // (and a box of it the two-reader rule does not confirm, where it reaches: another unit's too, the unit it is from in its line)
+      const ncWant = !S.damaged && (fell || (S.grp !== 'other' && (o.nc || []).some(x => x.atk && !x.unconfirmed))), msN = got.filter(m => m.ncLine && m.key === S.key);
+      if(ncWant){ const gv = S.grp === 'other' && S.src && S.src !== u ? (g => g && g.who && S.src.leads && (S.src.also || []).some(c => c.name === g.who) ? g.who : S.src.short || S.src.name)((S.src.abilities || []).find(x => x.name === S.name)) : '';
+        const exp = 'not counted here: see the rule' + (gv ? ' (' + gv + ')' : '');
+        if(msN.length !== 1) fail('L4', where, S.name + ': its words not counted, ' + msN.length + ' "see the rule" lines');
+        else if(msN[0].note !== exp || msN[0].when) fail('L3', where, S.name + ' not-counted line “' + msN[0].note + '”, want “' + exp + '”'); else nNc++; }
+      else if(msN.length) fail('L4', where, S.name + ': a "see the rule" line where nothing of it is left out here'); }
     // exactly these, once each
     for(const w of want){ const ms = got.filter(m => m.box === w.b && m.key === w.S.key);
       if(ms.length !== 1){ fail('L4', where, (ms.length ? ms.length + ' footnotes' : 'no footnote') + ' for the box of ' + w.S.name + ' “' + X.plainCase(w.b.quote).slice(0, 70) + '”'); continue; }

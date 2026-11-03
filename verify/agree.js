@@ -11,8 +11,10 @@
      B  both read it and disagree                   → confirmed only by a reviewed verdict of verify/sources/agree-verdicts.json with a GW
                                                       quote and the verdict "app right" or "both right" ("V")
      C  the app counts it, reader2 left it unread   → falls back (0)
-   A box of a Core Rules weapon ability or Feel No Pain X+ (BOXES c|): GW's Core Rules, outside the comparison (reader2 reads the lists'
-   rules, not the Core Rules): "core", counted as before (listed for the owner).
+   A box of BOXES c| (a rule of data.js RULES the lists' units have on their Rules line or as a weapon keyword) is outside the comparison
+   (reader2 reads the lists' rules, not the Core Rules): "core", counted as before, only where it is a Core Rules box (its rule not one
+   RULE_SRC gives to a datasheet or an army; check C: its words are GW's Core Rules or Wahapedia's); any other (Conversion, the Knight
+   Defender's weapon ability) falls back. Each "core" box is listed with its Core Rules words (verify/out/agree.json coreBoxes).
    A box that falls back is shown as GW's words with "see the rule" (moved to its source's not-counted words: effects.js agreed), never counted.
 
    The table: data.js AGREE (boxes: each BOXES key with a box → per field b / d / st, per box "A", "V", "core" or 0), written by
@@ -21,18 +23,26 @@
    Checks (each must pass):
      R1  verify/reader2/ never requires the app's reading code (effects-extract.js, effects-migrate.js, coverage.js, evidence.js, lines.js,
          defence.js, derive.js) nor reads data.js BOXES: every require is a builtin or a file of verify/reader2/, no string of its code
-         names one of those files, no name of its code is boxes / BOXES
-     R2  reader2's own tests pass (reader2.js --test) and its readings are what it reads now (reader2.js --check: deterministic)
+         names one of those files, no name of its code is boxes / BOXES (static: R2's sandbox and R3 are what hold it)
+     R2  reader2 runs in a sandbox: its files and a copy of data.js with only the text fields, names and keywords it reads (strip), in a
+         temp folder KODEX_APP names, under node's permission model (it can read that folder and verify/.cache, nothing else: no app
+         code, no BOXES or AGREE, no verify/out); there its tests pass (--test) and its readings are the stored ones (--check)
+     R3  reader2's files are the reviewed ones (verify/sources/agree-pins.json, sha256; node verify/agree.js --pin after a review)
      T   data.js AGREE is the table the comparison computes now
-     Q   every verdict's GW quotes are in GW's text (verify/.cache: Wahapedia's faction pages and datasheets, GW's documents)
-     S   every verdict is of a current class-B pair, and that pair is still what was reviewed (its fingerprint: the diffs, the app's
-         entries, reader2's reading); a stale verdict fails
+     Q   every verdict's GW quotes are in GW's text (verify/.cache) and in the words of the pair's own rule (its WHEN / TARGET / EFFECT /
+         RESTRICTIONS, its text, its table), never another rule's
+     S   every verdict is of a current class-B pair, and that pair and the verdict (its words, its quotes) are what was reviewed (their
+         fingerprint, recorded with --bind); a stale verdict fails
      K   no box AGREE marks confirmed is in class B or C without a verdict that confirms it
+     C   each "core" box's rule is GW's Core Rules (or Wahapedia's core rules)
+     N   never silent: every rule a unit's screens name with every box counted (main) is named there still, counted or "not counted here:
+         see the rule", on the same side (the footnotes of each kind of attack, When targeted, under the profile, the Damage tab of each phase)
    Then the counts per list (verify/out/agree.json).
 
      node verify/agree.js              the gate step
      node verify/agree.js --write      write data.js AGREE from the comparison
-     node verify/agree.js --bind ID    record the fingerprint of the pair a verdict was reviewed against (after reviewing it)
+     node verify/agree.js --bind ID    record the fingerprint of the pair and verdict as reviewed (after reviewing it)
+     node verify/agree.js --pin        pin reader2's files as reviewed (after reviewing a change to them)
      node verify/agree.js --pairs      also write verify/out/agree-pairs.json (every pair, its class and diffs) */
 'use strict';
 const fs = require('fs'), path = require('path'), crypto = require('crypto');
@@ -450,11 +460,20 @@ function release(P, okB){
 // ---- the table: per BOXES key with a box, per field, per entry: "A" (both readers), "V" (a reviewed verdict), "core" (a Core Rules box,
 // outside the comparison), 0 (falls back); null: no effect, nothing to count
 const hasFx = (f, e) => !!((f === 'b' ? e.fx : f === 'd' ? e.df : e.st) || []).length || !!(e.pick || []).length;
+// a genuine Core Rules box: a c| source whose rule is the Core Rules' (data.js RULES, not one RULE_SRC gives to a datasheet, an army or an
+// enhancement: Conversion is the Knight Defender's weapon ability), its value in its name the form the rule says it takes (Damaged 4,
+// Feel No Pain 5+). Its rule, by name or by RULE_ALIASES; null for any other (it falls back: 0)
+function coreRule(D, k){
+  const n = (D.boxes[k] || {}).n || '';
+  const base = D.rules[n] !== undefined ? n : ((D.ruleAliases || []).find(([re]) => re.test(n)) || [])[1];
+  if(!base || (D.ruleSrc || {})[base] || (D.ruleSrc || {})[n]) return null;
+  return { name:n, rule:base, text:D.rules[base] };
+}
 function table(D, byBox){
   const out = {};
   for(const k of Object.keys(D.boxes).sort()){ const o = D.boxes[k], row = {};
     for(const f of ['b', 'd', 'st']) if((o[f] || []).some(e => hasFx(f, e))) row[f] = o[f].map((e, i) => { if(!hasFx(f, e)) return null;
-      if(/^c\|/.test(k)) return 'core';
+      if(/^c\|/.test(k)) return coreRule(D, k) ? 'core' : 0;
       const b = byBox[k + '|' + f + i]; return b && b.c === 'A' ? 'A' : b && b.c === 'B-ok' ? 'V' : 0; });
     if(Object.keys(row).length) out[k] = row;
   }
@@ -474,6 +493,26 @@ function write(src, T){
   else { const k = src.indexOf('// ---- end of BOXES ----\n'); if(k < 0) throw new Error('data.js: no end of BOXES'); const at = k + '// ---- end of BOXES ----\n'.length; src = src.slice(0, at) + block(T) + src.slice(at); }
   if(!/agree:AGREE/.test(src)) src = src.replace(/boxes:BOXES/, 'boxes:BOXES, agree:AGREE');
   return src;
+}
+// ---- N: never silent. Every rule a unit's screens name with every box counted (as on main: damage-node opts.agree 'all') is named there
+// still, counted or as not counted, on the same side: the footnotes of each kind of attack, the "When targeted" lines, the lines under the
+// profile, the Damage tab of each phase (its boxes and its not-counted list). A Damaged band's footnote is its band ("see the rule")
+function silent(){
+  const load = require(path.join(ROOT, 'verify/damage-node.js')), ex = ['unitMods', 'defenceItems', 'statLines'];
+  const M = load(ex, { agree:'all' }), B = load(ex), out = [];
+  const names = (X, a, u) => { const o = {}, add = (k, n) => { (o[k] = o[k] || new Set()).add(String(n || '').replace(/^\d+CP /, '')); };
+    for(const kind of ['ranged', 'melee']) for(const m of X.app.inArmy(a, () => X.app.unitMods(u, kind))) add('footnotes, ' + kind, m.from || m.rule);
+    for(const x of X.app.inArmy(a, () => X.app.defenceItems(u))) add('When targeted', x.name);
+    for(const x of X.app.inArmy(a, () => X.app.statLines(u))) add('under the profile', x.rule);
+    for(const ph of ['shooting', 'fight']){ const c = X.calc({ army:a.id, ph, atk:u.id }); if(!c || c.au.id !== u.id) continue;
+      for(const r of c.rules) if(!/^Custom: /.test(r.m.from)) add('Damage tab, ' + ph, r.m.from);
+      for(const x of c.nc || []) add('Damage tab, ' + ph, x.name); }
+    return o; };
+  for(const a of M.D.armies) for(const u of a.units){ const ab = B.D.armies.find(x => x.id === a.id), ub = ab.units.find(x => x.id === u.id), m = names(M, a, u), b = names(B, ab, ub);
+    for(const [side, ns] of Object.entries(m)) for(const n of ns){ if(b[side] && b[side].has(n)) continue;
+      if(/^Damaged: /.test(n) && (u.abilities || []).some(x => x.name === n)) continue;   // (its band, under the profile: "see the rule")
+      out.push(a.id + '/' + u.id + ' ' + side + ': ' + n); } }
+  return out;
 }
 // ---- the checks
 // R1: what reader2's code requires and names (comments and the words of its strings apart: "defence" is a word of its readings)
@@ -527,9 +566,39 @@ function corpus(){
 // a quote's pieces (GW's words between an ellipsis or an editor's [ … ]), each at least 12 characters
 const pieces = q => String(q).split(/…|\.\.\.|\[[^\]]*\]/).map(sq).filter(x => x.length >= 12);
 // S: what a verdict was reviewed against (the class-B pair's diffs, the app's entries, reader2's reading)
-const fingerprint = p => crypto.createHash('sha256').update(JSON.stringify({ diffs:p.diffs || [], app:p.app || [], r2:p.r2 || null })).digest('hex').slice(0, 16);
+// (and the verdict itself, its words and quotes: a verdict changed by hand is stale until it is reviewed and bound again)
+const fingerprint = (p, v) => crypto.createHash('sha256').update(JSON.stringify({ diffs:p.diffs || [], app:p.app || [], r2:p.r2 || null, verdict:v ? v.verdict : null, quotes:v ? v.quotes || [] : null })).digest('hex').slice(0, 16);
+// Q: the words of a pair's own rule, as GW prints it (its WHEN / TARGET / EFFECT / RESTRICTIONS, its text, its table): a verdict's quotes
+// are from these, never from another rule (data.js's texts are GW's: the gate step texts)
+function ownText(D, p){
+  const s = sources(D).find(x => x.owner === p.owner && x.name === (p.parent || p.source)); if(!s) return '';
+  const r = s.raw;
+  return sq([r.when && 'WHEN: ' + r.when, r.target && 'TARGET: ' + r.target, r.effect && 'EFFECT: ' + r.effect, r.restrictions && 'RESTRICTIONS: ' + r.restrictions,
+    s.kind === 'stratagem' ? '' : r.text, (r.table || []).map(t => t.join(': ')).join('\n')].filter(Boolean).join('\n'));
+}
 const confirms = v => /^(app right|both right)/.test(v.verdict || '');
 
+// ---- reader2's sandbox and pins
+const PINFILE = path.join(ROOT, 'verify/sources/agree-pins.json');
+const pinsOf = () => Object.fromEntries(fs.readdirSync(R2DIR).filter(f => f !== 'readings2.json').sort().map(f => [f, crypto.createHash('sha256').update(fs.readFileSync(path.join(R2DIR, f))).digest('hex')]));
+// data.js as reader2 may see it: the text fields, names and keywords its sources.js names (and the ids and factions that place them), nothing else
+const pick = (o, ks) => Object.fromEntries(ks.filter(k => o && o[k] !== undefined).map(k => [k, o[k]]));
+const AB = ['name', 'tag', 'who', 'text'], RU = ['name', 'tag', 'text', 'table', 'tableAt'], ST = ['name', 'when', 'target', 'restrictions', 'effect'];
+function strip(D){
+  return { datasheets:Object.fromEntries(Object.entries(D.datasheets).map(([k, d]) => [k, Object.assign(pick(d, ['name', 'faction', 'kw']), { abilities:(d.abilities || []).map(a => pick(a, AB)) })])),
+    armies:D.armies.map(a => Object.assign(pick(a, ['id', 'faction']), { units:a.units.map(u => Object.assign(pick(u, ['id', 'name', 'kw']), { abilities:(u.abilities || []).map(x => pick(x, AB)) })) })),
+    factions:Object.fromEntries(Object.entries(D.factions).map(([k, f]) => [k, Object.assign(pick(f, ['name']), { armyRules:(f.armyRules || []).map(r => pick(r, RU)),
+      detachments:Object.fromEntries(Object.entries(f.detachments || {}).map(([dk, d]) => [dk, Object.assign(pick(d, ['name']), d.rule ? { rule:pick(d.rule, RU) } : {},
+        { moreRules:(d.moreRules || []).map(r => pick(r, RU)), enhancements:(d.enhancements || []).map(e => pick(e, ['name', 'text'])), stratagems:(d.stratagems || []).map(x => pick(x, ST)) })])) })])),
+    coreStratagems:(D.coreStratagems || []).map(x => pick(x, ST)) };
+}
+function sandbox(D){
+  const dir = fs.mkdtempSync(path.join(require('os').tmpdir(), 'kodex-reader2-'));
+  fs.writeFileSync(path.join(dir, 'data.js'), 'window.WH_DATA = ' + JSON.stringify(strip(D)) + ';\n');
+  fs.mkdirSync(path.join(dir, 'reader2'));
+  for(const f of fs.readdirSync(R2DIR)) fs.copyFileSync(path.join(R2DIR, f), path.join(dir, 'reader2', f));
+  return { dir:fs.realpathSync(dir), cache:fs.realpathSync(CACHE) };
+}
 function compute(D){
   const readings = JSON.parse(fs.readFileSync(path.join(R2DIR, 'readings2.json'), 'utf8')).readings;
   const USES = uses(D), P = compare(align(D, readings), D, USES);
@@ -548,23 +617,32 @@ if(require.main === module){
     console.log('agree: wrote data.js AGREE (' + n.length + ' boxes: ' + n.filter(x => x === 'A').length + ' A, ' + n.filter(x => x === 'V').length + ' V, ' + n.filter(x => x === 'core').length + ' core, ' + n.filter(x => x === 0).length + ' fall back)');
     process.exit(0);
   }
+  if(arg === '--pin'){ fs.writeFileSync(PINFILE, JSON.stringify({ about:'sha256 of each file of verify/reader2/ (its readings apart) as last reviewed: the gate step agree fails (R3) on any other; after a review, node verify/agree.js --pin', files:pinsOf() }, null, 1) + '\n'); console.log('agree: pinned verify/reader2/'); process.exit(0); }
   if(arg === '--bind'){
     const id = process.argv[3], { P } = compute(D), p = P.find(x => x.id === id && x.app);
     if(!p){ console.error('agree: no current pair ' + id); process.exit(1); }
     const F = JSON.parse(fs.readFileSync(VERDICTS, 'utf8')); if(!F.verdicts[id]){ console.error('agree: no verdict ' + id); process.exit(1); }
-    F.verdicts[id].pair = fingerprint(p); fs.writeFileSync(VERDICTS, JSON.stringify(F, null, 1) + '\n'); console.log('agree: bound ' + id + ' to ' + F.verdicts[id].pair); process.exit(0);
+    F.verdicts[id].pair = fingerprint(p, F.verdicts[id]); fs.writeFileSync(VERDICTS, JSON.stringify(F, null, 1) + '\n'); console.log('agree: bound ' + id + ' to ' + F.verdicts[id].pair); process.exit(0);
   }
   const fails = [], note = [];
   // R1
   const imp = readerImports(R2DIR);
   if(!imp.files.length) fails.push('R1 verify/reader2/ has no code');
   imp.bad.forEach(b => fails.push('R1 ' + b));
-  // R2
-  const env = Object.assign({}, process.env, { KODEX_APP:ROOT, KODEX_CACHE:CACHE });
-  for(const a of ['--test', '--check']){ const r = spawnSync(process.execPath, [path.join(R2DIR, 'reader2.js'), a], { cwd:R2DIR, env, encoding:'utf8' });
-    const o = (r.stdout + r.stderr).trim();
-    if(r.status !== 0) fails.push('R2 reader2.js ' + a + ' fails: ' + o.split('\n').slice(-3).join(' / '));
-    else note.push('reader2 ' + a + ': ' + o.split('\n')[a === '--check' ? 0 : o.split('\n').length - 1].slice(0, 80)); }
+  // R3: reader2's files are the reviewed ones (verify/sources/agree-pins.json, sha256): a change to it is reviewed, then pinned (--pin)
+  const PINS = JSON.parse(fs.readFileSync(PINFILE, 'utf8')).files, have3 = pinsOf();
+  for(const f of [...new Set(Object.keys(PINS).concat(Object.keys(have3)))].sort()) if(PINS[f] !== have3[f]) fails.push('R3 verify/reader2/' + f + (!have3[f] ? ' is gone' : !PINS[f] ? ' is not pinned' : ' is not the reviewed file') + ' (review it, then node verify/agree.js --pin)');
+  // R2: reader2 run in a sandbox: a copy of its files and of data.js's text fields, names and keywords only (strip) in a temp folder that
+  // KODEX_APP names, under node's permission model (it reads that folder and GW's text, verify/.cache, nothing else: no app code, no
+  // BOXES, no verify/out); its tests pass and its readings are the stored ones (--check: deterministic)
+  const box = sandbox(D);
+  try {
+    for(const a of ['--test', '--check']){ const r = spawnSync(process.execPath, ['--permission', '--allow-fs-read=' + box.dir, '--allow-fs-read=' + box.cache, path.join(box.dir, 'reader2', 'reader2.js'), a],
+        { cwd:path.join(box.dir, 'reader2'), env:Object.assign({}, process.env, { KODEX_APP:box.dir, KODEX_CACHE:box.cache }), encoding:'utf8' });
+      const o = (r.stdout + r.stderr).trim();
+      if(r.status !== 0) fails.push('R2 reader2.js ' + a + ' fails in its sandbox: ' + o.split('\n').filter(Boolean).slice(-3).join(' / ').slice(0, 300));
+      else note.push('reader2 ' + a + ' (sandbox): ' + o.split('\n')[a === '--check' ? 0 : o.split('\n').length - 1].slice(0, 80)); }
+  } finally { fs.rmSync(box.dir, { recursive:true, force:true }); }
   const { P, V, byBox, T } = compute(D);
   // T
   const have = (D.agree || {}).boxes || null, want = T.boxes;
@@ -580,35 +658,52 @@ if(require.main === module){
     for(const q of v.quotes || []){ const ps = pieces(q);
       if(!ps.length) fails.push('Q ' + id + ': the quote “' + q + '” has no words to find');
       for(const x of ps) if(!C.includes(x)) fails.push('Q ' + id + ': GW’s text has no “' + x + '”'); }
+    const lp = P.find(x => x.id === id && x.app), own = lp ? ownText(D, lp) : '';
+    if(lp) for(const q of v.quotes || []) for(const x of pieces(q)) if(!own.includes(x)) fails.push('Q ' + id + ': “' + x + '” is not in the words of its own rule (' + (lp.parent || lp.source) + ')');
   }
   // S
   const leads = {}; for(const p of P) if(p.app) leads[p.id] = p;
   for(const [id, v] of Object.entries(V)){ const p = leads[id];
     if(!p) fails.push('S stale verdict ' + id + ': no current pair');
     else if(p.cls !== 'B') fails.push('S stale verdict ' + id + ': the pair is class ' + p.cls + ' now, not B');
-    else if(v.pair !== fingerprint(p)) fails.push('S stale verdict ' + id + ': the pair is not what was reviewed (fingerprint ' + fingerprint(p) + ', reviewed ' + v.pair + ')'); }
+    else if(v.pair !== fingerprint(p, v)) fails.push('S stale verdict ' + id + ': the pair or the verdict is not what was reviewed (fingerprint ' + fingerprint(p, v) + ', reviewed ' + v.pair + ')'); }
   // K: what AGREE (stored) marks confirmed, against the classes
   for(const [k, row] of Object.entries(have || {})) for(const [f, xs] of Object.entries(row)) xs.forEach((x, i) => { if(x !== 'A' && x !== 'V') return;
     const b = byBox[k + '|' + f + i];
     if(!b) fails.push('K AGREE ' + k + ' ' + f + i + ' is confirmed (' + x + '), but no pair of the comparison has it');
     else if(b.c === 'C' || b.c === 'B') fails.push('K AGREE ' + k + ' ' + f + i + ' (' + b.name + ') is confirmed (' + x + '), but it is class ' + b.c + ' without a verdict that confirms it');
     else if(x === 'A' && b.c !== 'A') fails.push('K AGREE ' + k + ' ' + f + i + ' (' + b.name + ') says A, but it is ' + b.c); });
+  // C: each box kept as "core" is a Core Rules box: its rule's words (data.js RULES, its first sentence, a source note before it apart) are
+  // GW's Core Rules or Wahapedia's (verify/.cache)
+  const coreList = [];
+  for(const [k, row] of Object.entries(want)) if(Object.values(row).flat().includes('core')){ const c = coreRule(D, k), o = D.boxes[k];
+    const first = String(c.text).replace(/\*\*/g, '').replace(/^\*[^*:]*\):\s*/, '').split(/(?<=\.)\s+/)[0], ok = pieces(first).length && pieces(first).every(x => C.includes(x));
+    if(!ok) fails.push('C ' + k + ' (' + c.name + '): its rule ' + c.rule + ' is not in GW’s Core Rules text: “' + first.slice(0, 80) + '”');
+    coreList.push({ box:k, name:c.name, rule:c.rule, coreRules:first, boxes:['b', 'd', 'st'].flatMap(f => (o[f] || []).map(e => f + ': ' + e.quote)) }); }
+  // N
+  for(const x of silent()) fails.push('N silent: ' + x + ' is named with every box counted, and nowhere on that side now');
   // the counts, per list
-  const boxes = Object.values(byBox), lists = {};
-  const fb = b => b.c === 'C' || b.c === 'B';
+  // (and a c| box that is no Core Rules box, outside the comparison: it falls back, class "not core"; its lists: their units' weapons with it
+  // as a keyword, or the rule on their Rules line)
+  const notCore = [];
+  for(const [k, row] of Object.entries(want)) if(/^c\|/.test(k)) for(const [f, xs] of Object.entries(row)) xs.forEach((x, i) => { if(x !== 0) return;
+    const o = D.boxes[k], e = o[f][i], n = String(o.n).toLowerCase(), ls = D.armies.filter(a => a.units.some(u => (u.rules || []).some(r => String(r).toLowerCase() === n) || [].concat(u.ranged || [], u.melee || []).some(w => (w.kw || []).some(q => String(q).toLowerCase() === n)))).map(a => a.id);
+    notCore.push({ key:k, field:f, i, c:'not core', kind:kindOf(Object.assign({ field:f }, e)), name:o.n, lists:new Set(ls), units:new Set() }); });
+  const boxes = Object.values(byBox).concat(notCore), lists = {};
+  const fb = b => b.c === 'C' || b.c === 'B' || b.c === 'not core';
   for(const b of boxes) for(const l of b.lists){ const L = lists[l] = lists[l] || { boxes:0, number:0, fallsBack:0, fallsBackNumber:0, names:{} };
     L.boxes++; if(b.kind === 'number') L.number++;
     if(fb(b)){ L.fallsBack++; if(b.kind === 'number') L.fallsBackNumber++; const n = L.names[b.name] = L.names[b.name] || { boxes:0, number:0 }; n.boxes++; if(b.kind === 'number') n.number++; } }
   const tally = f => boxes.reduce((o, b) => { const k = f(b); o[k] = (o[k] || 0) + 1; return o; }, {});
   const core = Object.values(T.boxes).flatMap(r => Object.values(r).flat()).filter(x => x === 'core').length;
   const sum = { boxes:boxes.length, byClass:tally(b => b.c), fallsBack:boxes.filter(fb).length, fallsBackNumber:boxes.filter(b => fb(b) && b.kind === 'number').length, core,
-    verdicts:Object.keys(V).length, confirmedByVerdict:boxes.filter(b => b.c === 'B-ok').length,
+    coreBoxes:coreList, verdicts:Object.keys(V).length, confirmedByVerdict:boxes.filter(b => b.c === 'B-ok').length,
     lists:Object.fromEntries(Object.entries(lists).sort((a, b) => b[1].fallsBack - a[1].fallsBack || a[0].localeCompare(b[0]))),
     fallback:boxes.filter(fb).map(b => ({ box:b.key + '|' + b.field + b.i, name:b.name, cls:b.c, kind:b.kind, lists:[...b.lists].sort() })).sort((a, b) => a.name.localeCompare(b.name) || a.box.localeCompare(b.box)) };
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
   fs.writeFileSync(path.join(ROOT, 'verify/out/agree.json'), JSON.stringify(sum, null, 1) + '\n');
   if(process.argv.includes('--pairs')) fs.writeFileSync(path.join(ROOT, 'verify/out/agree-pairs.json'), JSON.stringify(P, null, 1) + '\n');
-  const head = 'agree: ' + sum.boxes + ' boxes compared, ' + sum.fallsBack + ' fall back (' + sum.fallsBackNumber + ' change a number), ' + sum.confirmedByVerdict + ' confirmed by a verdict, ' + core + ' core';
+  const head = 'agree: ' + (sum.boxes - notCore.length) + ' boxes compared (and ' + notCore.length + ' not Core Rules, outside it), ' + sum.fallsBack + ' fall back (' + sum.fallsBackNumber + ' change a number), ' + sum.confirmedByVerdict + ' confirmed by a verdict, ' + core + ' core';
   console.log((fails.length ? 'FAIL ' : '') + head + (fails.length ? '; ' + fails.length + ' problems' : ''));
   fails.forEach(f => console.log('  ' + f));
   note.forEach(n => console.log('  ' + n));

@@ -165,7 +165,7 @@ const DF = {
   fnpPsyMortal:{ only:true, label:p => 'Feel No Pain ' + p + '+ against Psychic Attacks and mortal wounds', dom:[2, 3, 4, 5, 6], pats:[/\bfeel no pain (\d)\+ (?:ability )?against (?:psychic attacks and mortal wounds|mortal wounds and psychic attacks)\b/] },
   fnpMortal:{ only:true, label:p => 'Feel No Pain ' + p + '+ against mortal wounds', dom:[2, 3, 4, 5, 6], pats:[/\bfeel no pain (\d)\+ (?:ability )?against mortal wounds\b(?! and\b)/] },
   fnpPsychic:{ only:true, label:p => 'Feel No Pain ' + p + '+ against Psychic Attacks', dom:[2, 3, 4, 5, 6], pats:[/\bfeel no pain (\d)\+ (?:ability )?against psychic attacks\b(?! and\b)/] },
-  fnp:{ only:true, label:p => 'Feel No Pain ' + p + '+', dom:[2, 3, 4, 5, 6], pats:[/\bfeel no pain (\d)\+(?! (?:ability )?against\b)/] },
+  fnp:{ only:true, label:p => 'Feel No Pain ' + p + '+', dom:[2, 3, 4, 5, 6], pats:[/\bfeel no pain (\d)\+(?!\*| (?:ability )?against\b)/] },   // (nor New Recruit's star, X+*: a condition it does not say, DNC starred)
   invRanged:{ only:true, label:p => p + '+ invulnerable save against ranged attacks', dom:[2, 3, 4, 5, 6], pats:[/\b(\d)\+\*? ?(?:invulnerable save|insv) against ranged attacks\b/] },
   // ("… and a 4+ invulnerable save against that attack": the attack the sentence is about, its kind the box's)
   inv:{ only:true, label:p => p + '+ invulnerable save', dom:[2, 3, 4, 5, 6], pats:[/\b(\d)\+\*? ?(?:invulnerable save|insv)\b(?! against (?!that attack\b))/] },
@@ -207,6 +207,7 @@ const DNC = {
   detection:{ why:'its detection range', pats:[/\bthis unit has -\d+" detection range\b/] },
   sequence:{ why:'an attack sequence that ends before it is resolved', pats:[/\bthe attack sequence ends\b/, /\bend the attack sequence\b/] },
   eligibility:{ why:'whether the enemy unit is eligible to attack', pats:[/\benemy unit is not eligible to (?:shoot|fight)\b/] },
+  starred:{ why:'New Recruit’s Feel No Pain X+*: the rule that gives it has a condition (against Psychic Attacks, or mortal wounds) this name does not say', pats:[/\bfeel no pain \d\+\*/] },
   unread:{ why:'about attacks against it, in words no catalogue effect reads', pats:[] }
 };
 const dfLabel = df => (df || []).map(([id, p]) => DF[id] ? DF[id].label(p) : id).join(', ');
@@ -250,7 +251,7 @@ const condLabel = on => (on || []).map(([id, p]) => COND[id] ? COND[id].label(p)
 // with an effect counts only where data.js AGREE (verify/agree.js) marks it confirmed: "A" (reader2, an independent second reading of GW's
 // words, agrees), "V" (a reviewed verdict with GW's quote shows the app right), "core" (a Core Rules box, outside the comparison). Any other
 // box is not counted, shown as GW's words with "see the rule": its effects are taken off (it stays in its place, so the other boxes of its
-// source keep their index, marked unconfirmed) and its sentence goes first among its source's not-counted words: a box about its attacks
+// source keep their index, marked unconfirmed: what it read, never counted) and its sentence goes first among its source's not-counted words: a box about its attacks
 // to nc (atk), a defence box to dnc, a stat box to snc (with its characteristic), each with its reach and conditions. With no AGREE, every
 // box falls back. The same for app.html (every screen), builder.js and the gate's scripts that draw the screens in node.
 const AGREE_WHY = 'not confirmed by a second reading of GW’s words';
@@ -263,7 +264,7 @@ function agreed(boxes, agree){
       if(!((e[AGREE_FX[f]] || []).length || (e.pick || []).length) || (row[f] && row[f][i])) return;
       if(x === o) x = Object.assign({}, o);
       if(x[f] === o[f]) x[f] = o[f].slice();
-      const off = Object.assign({}, e, { [AGREE_FX[f]]:[], unconfirmed:true }); delete off.pick; delete off.part; x[f][i] = off;
+      const off = Object.assign({}, e, { [AGREE_FX[f]]:[], unconfirmed:Object.assign({ [AGREE_FX[f]]:e[AGREE_FX[f]] || [] }, e.pick ? { pick:e.pick } : {}) }); delete off.pick; delete off.part; x[f][i] = off;
       const w = { quote:e.quote, why:AGREE_WHY, unconfirmed:true };
       if(e.reach) w.reach = e.reach; if((e.on || []).length) w.on = e.on;
       if(f === 'b') words.nc.push(Object.assign(w, { atk:true }));

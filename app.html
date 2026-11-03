@@ -1522,6 +1522,15 @@ const fnWeapons = (u, kind, sc) => { const lc = x => String(x || '').toLowerCase
     && (!sc.part || lc(it.who).startsWith(lc(sc.part).replace(/s$/, ''))) && (!sc.wkwNot || !itemHasKw(it, sc.wkwNot))); };
 // one box as a footnote: { kind, when (its conditions' labels), note (its effects' labels; a pick's options), who (the weapons or models it
 // names), weapon + set (a box for one weapon's characteristic: in that row), from, rule / strat + cp / src (what it links), damaged }
+// the unit a footnote's box is from, when it is another unit's (its name, or the model of an attached unit whose ability it is)
+const fnGiver = (S, u) => { const gab = S.src && S.src !== u ? (S.src.abilities || []).find(x => x.name === S.name) : null;
+  return S.src && S.src !== u ? (gab && gab.who && S.src.leads && charsOf(S.src).some(c => c.name === gab.who) ? gab.who : S.src.short || S.src.name) : ''; };
+// a box is one of this unit's footnotes of this kind of attack: its weapons (by name, keyword or part) are the unit's, a keyword or wargear
+// it needs the unit has (as fnLine takes them, its effects apart)
+const fnReaches = (S, b, u, kind) => { const sc = b.scope || {};
+  if((sc.weapon || sc.wkw || sc.part || sc.wkwNot) && !fnWeapons(u, kind, sc).length) return false;
+  const wn = [].concat(u.ranged || [], u.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase());
+  return !(b.on || []).some(([id, p]) => (id === 'selfKw' && !hasKw(u, p)) || (id === 'selfGear' && !p.every(g => wn.some(n => n.startsWith(String(g).toLowerCase()))))); };
 function fnLine(S, b, u, kind, ab){
   const E = WH_EFFECTS, sc = b.scope || {};
   // (a weapon keyword it excludes names its weapons only where one of the unit's has it)
@@ -1589,16 +1598,22 @@ function unitMods(u, kind){
   const listStrat = S => !S.strat || (S.s && S.s.src !== 'Core');
   for(const S of of('unit').filter(S => !S.core).concat(dmg, of('unit').filter(S => S.core).map(S => Object.assign({ rule:S.name }, S)), of('army'), core.filter(Boolean), of('other'), of('strat')).filter(listStrat)){
     const o = BOXES_AGREED[S.key] || {};
+    let fell = false;
     for(const b of o.b || []){
       if(S.reachOnly ? !(b.reach && dmReaches(b.reach, u)) : b.reach ? !dmReaches(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;
       if(b.kind !== 'all' && b.kind !== kind) continue;
+      // (a box the two-reader rule does not confirm, effects.js agreed: where it would have been a footnote, for this kind of attack and
+      // these weapons, its rule's words not counted)
+      if(b.unconfirmed){ if(fnReaches(S, b, u, kind)) fell = true; continue; }
       const m = fnLine(S, b, u, kind, S.ab);
       if(m) out.push(m);
     }
     // (words about its attacks no catalogue effect reads, BOXES nc atk: "not counted here: see the rule", the name opening them; not
-    // another unit's (its words may not reach this one), not a Damaged band's (its band says so))
-    if(!S.damaged && S.grp !== 'other' && (o.nc || []).some(x => x.atk) && !out.some(x => x.key === S.key && x.ncLine)) out.push(Object.assign({ kind:'all', when:'', note:FN_NC, who:'', from:S.name, key:S.key, box:null, ncLine:true },
-      S.rule ? { rule:S.rule } : {}, S.strat ? { strat:S.strat, cp:S.cp } : {}));
+    // another unit's words (they may not reach this one), not a Damaged band's (its band says so). And a box of it the two-reader rule
+    // does not confirm, where it reaches: another unit's too, with the unit it is from, "not counted here: see the rule (Tech-Priest Enginseer)")
+    const giver = S.grp === 'other' ? fnGiver(S, u) : '';
+    if(!S.damaged && (fell || (S.grp !== 'other' && (o.nc || []).some(x => x.atk && !x.unconfirmed))) && !out.some(x => x.key === S.key && x.ncLine)) out.push(Object.assign({ kind:'all', when:'', note:FN_NC + (giver ? ' (' + giver + ')' : ''), who:'', from:S.name, key:S.key, box:null, ncLine:true },
+      S.rule ? { rule:S.rule } : {}, S.strat ? { strat:S.strat, cp:S.cp } : {}, S.src && S.src !== u ? { src:S.src } : {}));
   }
   return out;
 }
@@ -2358,6 +2373,10 @@ function dmBoxRules(A, au, kind, st){
       return ws.some(it => dmReach(au, it, { from:S.name, ab:S.ab, src:S.src }, { scope:{ weapon:sc.weapon, wkw:sc.wkw, wkwNot:sc.wkwNot } }) > 0); };
     for(const [b0, i] of counted){ const b = dmBothOf(A, au, b0), r = dmBoxRule(S, b, i, st); if((b.kind === 'all' || b.kind === kind) && wOf(b)) rules.push(r); else if(S.grp === 'strat' && b.kind !== 'all' && b.kind !== kind) other.push(r); }
     // (words of a source with counted boxes that are not counted, a rare mechanic beside an effect: listed with GW's words too)
+    // (a source whose boxes the two-reader rule does not confirm, all for the other kind of attack or other weapons: not here, as such a
+    // box would not be; a stratagem's are listed, as its boxes for the other kind are)
+    const fell = mine.filter(([b]) => b.unconfirmed && (b.unconfirmed.pick ? b.unconfirmed.pick.some(p => dmHasFx(p.fx)) : dmHasFx(b.unconfirmed.fx)));   // (one that would have been counted)
+    if(S.grp !== 'strat' && !counted.length && fell.length && !fell.some(([b]) => (b.kind === 'all' || b.kind === kind) && wOf(b))) continue;
     if(counted.length){ for(const q of o.nc || []) nc.push({ side:'a', grp:S.grp, name:(S.cp ? S.cp + 'CP ' : '') + S.name, strat:!!S.strat, s:S.s || null, text:'“' + dmQuoteOf(q.quote) + '”', why:q.why + ': ' + ncText }); continue; }
     if(S.reachOnly) continue;
     // (another unit's ability is in the list only when it reaches this unit: an aura GW tags (Aura) with nothing counted)
@@ -4915,11 +4934,14 @@ function defLineOf(S, b, u){
 function defenceItems(u){
   const out = [];
   for(const S of defSources(u)){
+    let fell = false;
     for(const b of S.o.d || []){
-      if(!b.pick && !(b.df || []).length) continue;   // (a box the second reading does not confirm: its words are its dnc, effects.js agreed)
       // (a box given to friendly units: where it reaches this one; the unit's own for itself only where it is an aura, 22.01, not "other";
       // an enemy unit's attacks made worse: every unit of the list. Another unit's other boxes are its own)
       if(b.foe ? false : S.reachOnly ? !(b.reach && dmReaches(b.reach, u)) : b.reach ? !dmReaches(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;
+      // (a box the two-reader rule does not confirm, effects.js agreed: where it would have been a line, its rule's words not counted)
+      if(b.unconfirmed){ const wn = [].concat(u.ranged || [], u.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase());
+        if(!(b.on || []).some(([id, p]) => ((id === 'selfKw' || id === 'itIs') && !hasKw(u, p)) || (id === 'selfGear' && !p.every(g => wn.some(n => n.startsWith(String(g).toLowerCase())))))) fell = true; continue; }
       // (an invulnerable save or Save characteristic the list printed into its stats, marked as from this rule, the other models' as good or
       // better already: Arcane Shield's 4+ InSv on its Rubric Marines, as a footnote leaves out what is in the weapons)
       const inStats = (k, p) => (u.stats || []).some(r => r.from && String(r.from[k] || '').split(/\s*,\s*/).includes(S.name)) && (u.stats || []).every(r => (r.from && String(r.from[k] || '').split(/\s*,\s*/).includes(S.name)) || parseInt(r[k], 10) <= p);
@@ -4928,7 +4950,9 @@ function defenceItems(u){
       const x = defLineOf(S, b, u); if(x) out.push(x);
     }
     // (its words about attacks against it no defence reads: "not counted here: see the rule", once; not another unit's)
-    if(S.grp !== 'other' && (S.o.dnc || []).length) out.push({ a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads ? S.ab.who : '', when:'', text:FN_NC, key:S.key, ncLine:true, rl:S.rl || '' });
+    // (and a box of it the two-reader rule does not confirm, where it reaches: another unit's too, with the unit it is from)
+    const giver = S.grp === 'other' ? (S.ab && S.ab.who && S.src.leads && charsOf(S.src).some(c => c.name === S.ab.who) ? S.ab.who : S.src.short || S.src.name) : '';
+    if(fell || (S.grp !== 'other' && (S.o.dnc || []).some(x => !x.unconfirmed))) out.push({ a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp !== 'other' ? S.ab.who : '', when:'', text:FN_NC, from:giver, key:S.key, ncLine:true, rl:S.rl || '' });
   }
   // (a Feel No Pain on its Rules line that another of its lines says with its condition or its model: Aegis of the Emperor's "against mortal
   // wounds", New Recruit's starred "Feel No Pain 5+*"; Trajann's own: not said twice)
@@ -4936,7 +4960,10 @@ function defenceItems(u){
   // (a Feel No Pain on its Rules line that another of its lines says with its words: one of its own abilities ("the bearer has the Feel No Pain
   // 3+ ability against Psychic Attacks", Collar of Khorne), or, for New Recruit's starred "Feel No Pain 5+*", any rule ("against mortal wounds",
   // Aegis of the Emperor): not said twice, never without its condition)
-  const res = out.filter(x => !(x.rl && /^feel no pain/i.test(x.rl) && fnpOf(x).some(v => out.some(y => y !== x && !y.rl && (y.a === 'ability' || /\*$/.test(x.rl)) && fnpOf(y).includes(v)))));
+  // (New Recruit's starred one, "Feel No Pain 5+*", is its words not counted (effects.js DNC starred): not said where a rule of the unit says
+  // that Feel No Pain with its condition)
+  const starV = x => x.ncLine && x.rl && (/^feel no pain (\d)\+\*$/i.exec(x.rl) || [])[1];
+  const res = out.filter(x => !(x.rl && /^feel no pain/i.test(x.rl) && (starV(x) ? [+starV(x)] : fnpOf(x)).some(v => out.some(y => y !== x && !y.rl && (y.a === 'ability' || /\*$/.test(x.rl)) && fnpOf(y).includes(v)))));
   // (the one model of an attached unit a rule of its Rules line is on: partialRules)
   for(const x of res) if(x.rl && !x.who){ const w = partialWho(u, x.rl); if(w) x.who = w; }
   for(const x of res) x.t = x.rl && !x.when && x.text === x.name ? x.name : [x.cp ? x.cp + 'CP' : '', x.name + ':', x.when ? x.when + ':' : '', x.text, x.from ? '(' + x.from + ')' : ''].filter(Boolean).join(' ');
