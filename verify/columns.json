@@ -84,7 +84,8 @@
     },
     "turns": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "when": {
      "source": "gw",
@@ -308,7 +309,8 @@
     },
     "coreTwin": {
      "source": "derived",
-     "note": "the core ability of the same name it is shown with: verify/texts.js coreTwin, a RULES entry whose name is the rule’s, case aside"
+     "note": "the core ability of the same name it is shown with: verify/texts.js coreTwin, a RULES entry whose name is the rule’s, case aside",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "note": {
      "source": "gw",
@@ -358,11 +360,13 @@
     },
     "turns": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "at": {
      "source": "derived",
-     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)"
+     "note": "derived from the words by verify/derive.js (its rule tables) only: the gate fails on a stored timing label it does not derive (no hand labels); where its reading is not the signed-off label the row has none (verify/derive-unread.json, verify/out/derive.md)",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "needs": {
      "source": "derived",
@@ -371,7 +375,8 @@
     },
     "coreTwin": {
      "source": "derived",
-     "note": "the core ability of the same name it is shown with: verify/texts.js coreTwin, a RULES entry whose name is the rule’s, case aside"
+     "note": "the core ability of the same name it is shown with: verify/texts.js coreTwin, a RULES entry whose name is the rule’s, case aside",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "note": {
      "source": "gw",
@@ -388,7 +393,8 @@
     },
     "readOf": {
      "source": "derived",
-     "note": "fingerprint of the text this row's own readings (mod, calcMods, calcDefs, calcNc, parts, both, limit) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\""
+     "note": "fingerprint of the text this row's own readings (mod, calcMods, calcDefs, calcNc, parts, both, limit) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\"",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     }
    }
   },
@@ -655,7 +661,8 @@
     },
     "srcNote": {
      "source": "derived",
-     "note": "where the sources disagree about the unit, by one fixed template: a model of the unit (BSData’s and New Recruit’s profile of it) that Wahapedia prints on a datasheet of its own (verify/gw-order.js srcNoteOf: { at, note:“Wahapedia: its own EPIC HERO datasheet; BSData and New Recruit: in this unit” }); verify/tables.js --write writes it, its step “tables” holds data.js to it"
+     "note": "where the sources disagree about the unit, by one fixed template: a model of the unit (BSData’s and New Recruit’s profile of it) that Wahapedia prints on a datasheet of its own (verify/gw-order.js srcNoteOf: { at, note:“Wahapedia: its own EPIC HERO datasheet; BSData and New Recruit: in this unit” }); verify/tables.js --write writes it, its step “tables” holds data.js to it",
+     "unstored": "load: no value of it is stored in data.js; the lists' rows get it when data.js loads (resolveArmies, from the datasheet and the list), so no change of a stored value can prove it here"
     },
     "stats": {
      "source": "newrecruit",
@@ -746,11 +753,13 @@
     },
     "of": {
      "source": "derived",
-     "note": "which part of an attached unit the row is from, when who does not say (verify/tables.js)"
+     "note": "which part of an attached unit the row is from, when who does not say (verify/tables.js)",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "why": {
      "source": "derived",
-     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)"
+     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     }
    }
   },
@@ -816,15 +825,18 @@
     },
     "of": {
      "source": "derived",
-     "note": "which part of an attached unit the row is from (verify/tables.js)"
+     "note": "which part of an attached unit the row is from (verify/tables.js)",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "why": {
      "source": "derived",
-     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)"
+     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "group": {
      "source": "derived",
-     "note": "verify/tables.js --write: the datasheet row's group, written on the entry only where its datasheet has two rows of the name (two weapons' profiles of one name: the Bloodthirster's strike of its Great axe of Khorne and of its Axe of Khorne), as the resolver finds a row by name and group"
+     "note": "verify/tables.js --write: the datasheet row's group, written on the entry only where its datasheet has two rows of the name (two weapons' profiles of one name: the Bloodthirster's strike of its Great axe of Khorne and of its Axe of Khorne), as the resolver finds a row by name and group",
+     "unstored": "load: no value of it is stored in data.js; the lists' rows get it when data.js loads (resolveArmies, from the datasheet and the list), so no change of a stored value can prove it here"
     }
    }
   },
@@ -890,11 +902,13 @@
     },
     "of": {
      "source": "derived",
-     "note": "which part of an attached unit the row is from (verify/tables.js)"
+     "note": "which part of an attached unit the row is from (verify/tables.js)",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "why": {
      "source": "derived",
-     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)"
+     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "group": {
      "source": "derived",
@@ -920,7 +934,8 @@
     },
     "of": {
      "source": "derived",
-     "note": "which part of an attached unit the row is from (verify/tables.js)"
+     "note": "which part of an attached unit the row is from (verify/tables.js)",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "text": {
      "source": "wahapedia",
@@ -956,15 +971,18 @@
     },
     "damaged": {
      "source": "derived",
-     "note": "the wounds range of a Damaged ability: its words' \"has 1-N wounds remaining\", or its name's (verify/lines.js L0)"
+     "note": "the wounds range of a Damaged ability: its words' \"has 1-N wounds remaining\", or its name's (verify/lines.js L0)",
+     "unstored": "load: no value of it is stored in data.js; the lists' rows get it when data.js loads (resolveArmies, from the datasheet and the list), so no change of a stored value can prove it here"
     },
     "why": {
      "source": "derived",
-     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)"
+     "note": "why a value of this list is not its datasheet's: the rule in force that gives it (GRANTS), the Warlord, the enhancement or upgrade that names it, the ability (wargear) that gives it, or the wargear whose weapons carry it; derived by verify/tables.js --write, hidden from the app (the value itself is the list's, as with from)",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "readOf": {
      "source": "derived",
-     "note": "fingerprint of the text this row's own readings (riled, damaged, defAlways, defCalc, calcDef, fightOnDeath, comeback) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\""
+     "note": "fingerprint of the text this row's own readings (riled, damaged, defAlways, defCalc, calcDef, fightOnDeath, comeback) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\"",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     }
    }
   },
@@ -1246,7 +1264,8 @@
     },
     "na": {
      "source": "derived",
-     "note": "none: why an ability does nothing is a list’s (ARMIES.units.abilities na); verify/lines.js L0 fails on one here"
+     "note": "none: why an ability does nothing is a list’s (ARMIES.units.abilities na); verify/lines.js L0 fails on one here",
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "damaged": {
      "source": "derived",
@@ -1567,7 +1586,8 @@
      "by": [
       "verify/effects-extract.js",
       "verify/effects-migrate.js"
-     ]
+     ],
+     "unstored": "none: no row has a value of it today, stored or made when data.js loads (verify/derived-proof.js checks it), so no change of one can prove it; its static reference holds it until a row has one"
     },
     "limit": {
      "source": "derived",

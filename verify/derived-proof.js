@@ -11,7 +11,9 @@
 //     regular expression one more character, a map's name " (changed)"; only that token: the file keeps its form), and a swap, the
 //     value of the column another row has (a valid value, the next row's that differs). The first, middle and last row holding a value
 //     are tried, in that order, until one fails.
-// A column without such a deriver fails; a step that fails on the unchanged data.js proves nothing (it is run so, once, before a proof
+// A column with no value stored in data.js fails unless its entry says why (unstored: "none: …", no row has one even when data.js loads,
+// which is checked; "load: …", the rows get it when data.js loads, which is checked too): never skipped unsaid. A column without such a
+// deriver fails; a step that fails on the unchanged data.js proves nothing (it is run so, once, before a proof
 // stands on it). A proof is kept in verify/out/derived-proof.json and stands, without running again, while what it ran is the same: every
 // code file of its step, every other input of it (inputsOf: the JSON files of verify/ (the deviations, derive-agreed.json, columns.json …),
 // rules/, and, where its code names them, verify/sources, verify/review, verify/reader2's data, app.html and the cache of GW's
@@ -107,6 +109,17 @@ function swap(vals, i){
     if(t !== mine) return { pos:x.n.pos, end:x.n.end, from:mine.slice(0, 60), to:t.slice(0, 60), text:t, at:x.n.path.join('.') + ' ← ' + y.n.path.join('.') }; }
   return null;
 }
+// how many rows have a value of a column once data.js has loaded (the tables as the app has them: D.key, nested as verify/columns.json)
+let LOADED = null;
+function loadedCount(id){
+  if(!LOADED) LOADED = require('./lib').loadData();
+  const parts = id.split('.'), c = parts.pop(), top = TABLES[parts[0]]; if(!top || top.positional) return null;
+  const rowsIn = (v, t) => { if(v == null || typeof v !== 'object') return []; if(Array.isArray(v)) return v.filter(x => x && typeof x === 'object' && !Array.isArray(x));
+    const cols = Object.keys((REG[t] || {}).columns || {}); return cols.some(k => k in v) ? [v] : Object.values(v).filter(x => x && typeof x === 'object' && !Array.isArray(x)); };
+  let t = parts[0], rows = rowsIn(LOADED[top.key], t);
+  for(const p of parts.slice(1)){ t += '.' + p; rows = rows.flatMap(r => rowsIn(r[p], t)); }
+  return rows.filter(r => r[c] !== undefined).length;
+}
 // one change of a value in place: its first scalar token (a string, number, boolean, regular expression) → [pos, end, text]
 function change({ C, n, key }){
   if(key){ const m = /^'(?:[^'\\]|\\.)*'|^"(?:[^"\\]|\\.)*"|^[A-Za-z_$][\w$]*/.exec(SRC.slice(n.pos, n.pos + 300)); if(!m) return null;
@@ -194,7 +207,13 @@ const CACHE = (() => { try { return JSON.parse(fs.readFileSync(OUT, 'utf8')).col
     else if(!w.tries.length){
       // (none stored: a column the lists' rows get when data.js loads, or that no row has today; one stored but not found fails)
       if(STORED.has(w.id)) fails.push(w.id + ': data.js stores it, but no value of it was found to change');
-      res[w.id] = { proof:null, why:'no value stored in data.js' }; }
+      else { const u = String(w.v.unstored || ''), n = loadedCount(w.id);
+        if(!u) fails.push(w.id + ': no value of it is stored in data.js, so no change can prove it, and its entry says not why (unstored: "none: …" or "load: …" in verify/columns.json)');
+        else if(/^none:/.test(u) && n) fails.push(w.id + ': its unstored says no row has a value of it, but ' + n + ' rows have one when data.js loads');
+        else if(/^load:/.test(u) && !n) fails.push(w.id + ': its unstored says the rows get it when data.js loads, but none does');
+        else if(!/^(?:none|load):/.test(u)) fails.push(w.id + ': its unstored is neither "none: …" nor "load: …"'); }
+      res[w.id] = { proof:null, why:'no value stored in data.js', unstored:w.v.unstored || null }; }
+    else if(w.v.unstored) fails.push(w.id + ': its entry says no value is stored (unstored), but data.js stores ' + w.tries.length + ' to change');
   }
   if(process.argv.includes('--plan')){ for(const w of work) console.log(w.id + ' | ' + w.ds.join(',') + ' | ' + w.steps.map(x => x.s.name).join(',') + ' | ' + w.tries.map(c => c.at + ' ' + c.from + '→' + c.to).join(' ; ')); process.exit(0); }
   const keyOf = (w, x, ch) => sha(JSON.stringify(w.v) + '\n' + x.s.name + '\n' + codeOf(x.s) + '\n' + RULES_SHA + '\n' + ch.at + '\n' + ch.text);
