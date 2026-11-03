@@ -99,5 +99,16 @@
   "source": {
    "gate": "node verify/run.js"
   }
+ },
+ {
+  "kind": "review-resid-round-2",
+  "where": "verify/agree.js coverState / stateCovered, check F; verify/tables.js returnMembers (second key), pageScripts (static import, createElement, vendor/); verify/derived-proof.js inputsOf (literal-named files, page scripts); verify/texts.js headingCarries (sec, whole name), amends",
+  "judgement": {
+   "check": "The fixes of result-resid.json. (1) factionState / targetState / grantsState are covered only by their words in an app q (stateCovered → coverState); no pair changes class, 69/47; MS drop Empowered q now fails agree (70). Check F: Empowered q covers, an option lead, \"Shielded\", and opt/selected/targetSelected/stratagem without words do not; attackerWithin \"if the target is within 6\\\" of your SYNAPSE unit\" does not. Residual: rewriting the dispatch line itself while dropping the data q survives (F tests stateCovered, not condCmp). (2) A second key over a listed constant is unknown and fails; function members are no tables by design (comment). (3) Static import / export … from in inline scripts and page scripts, and createElement('script') with a literal src (.src =, setAttribute, src: in an object) are read; a non-literal one is missed; vendor/ is not read. (4) derived-proof keys every literal-named file of the step's code (verify/fetch.sh) and, with tables.js, the page scripts. (5, optional) errata: an unnumbered heading is tied only by the whole heading as name and, for a numbered ref, by the section it is printed under; a body restating a line of the text it amends fails (army rules pass their prose as amends). Mutation summary: scratchpad resid-work/mut/summary.md."
+  },
+  "source": {
+   "gate": "node verify/run.js (cold)",
+   "commits": "d10fdee ba8a243 7023de5 7b2c03c 2bc6fb1 86c5f89 (gate run at 2bc6fb1; 86c5f89 refactors the agree dispatch only, agree passes on it)"
+  }
  }
 ]
