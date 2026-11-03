@@ -35,6 +35,7 @@
          fingerprint, recorded with --bind); a stale verdict fails
      K   no box AGREE marks confirmed is in class B or C without a verdict that confirms it
      C   each "core" box's rule is GW's Core Rules (or Wahapedia's core rules)
+     F   the comparator's covers of reader2's attackerWithin and target (an app q in GW's words) on fixed cases
      N   never silent: every rule a unit's screens name with every box counted (main) is named there still, counted or "not counted here:
          see the rule", on the same side (the footnotes of each kind of attack, When targeted, under the profile, the Damage tab of each phase)
    Then the counts per list (verify/out/agree.json).
@@ -158,6 +159,11 @@ function align(D, readings){
   return JSON.parse(JSON.stringify({ rows, orphans }));
 }
 // ---- compare: each aligned sentence classed A-E, by group, with what differs
+// reader2's own conditions of where the attacking unit must be ("if the attacking model's unit is within 6" of your SYNAPSE unit") and of a
+// stratagem's TARGET: covered by an app q (lower case) with that distance of the same unit, in GW's words; by an app q that is that TARGET,
+// word for word (check F: fixed cases)
+const coverAttackerWithin = (v, qs) => !!v && v.d != null && qs.some(q => q.replace(/[’]/g, "'").includes('within ' + v.d + '" of ' + String(v.of || '').toLowerCase()) && /\battacking\b/.test(q));
+const coverTarget = (v, qs) => typeof v === 'string' && !!v.trim() && qs.some(q => q === v.toLowerCase().replace(/\.\s*$/, ''));
 function compare(aligned, DD, USES){
   const { rows, orphans } = aligned;
   const lc = s => String(s).toLowerCase().replace(/^faction: /, '').replace(/[’‘]/g, "'").trim();
@@ -316,6 +322,8 @@ function compare(aligned, DD, USES){
       else if(c.id === 'unengaged') ok = qs.some(q => /unengaged|engag/.test(q));
       else if(c.id === 'cost') ok = qs.some(q => /cp|btp/.test(q)) || appIds.has('opt');
       else if(c.id === 'onSelectedObjective') ok = qs.some(q => /objective/.test(q)) || appIds.has('opt');
+      else if(c.id === 'attackerWithin') ok = coverAttackerWithin(c.v, qs);
+      else if(c.id === 'target') ok = coverTarget(c.v, qs);
       else if(OWNCOVER[c.id]) ok = qs.some(q => OWNCOVER[c.id].test(q));
       if(!ok) diffs.push('reader2 only: ' + c.id + (c.v === true || c.v === undefined ? '' : '=' + JSON.stringify(c.v)));
     }
@@ -625,6 +633,13 @@ if(require.main === module){
     F.verdicts[id].pair = fingerprint(p, F.verdicts[id]); fs.writeFileSync(VERDICTS, JSON.stringify(F, null, 1) + '\n'); console.log('agree: bound ' + id + ' to ' + F.verdicts[id].pair); process.exit(0);
   }
   const fails = [], note = [];
+  // F: the comparator's covers of reader2's attackerWithin and target, fixed cases (GW's words of Irresistible Will, and near misses)
+  { const IWq = ["if the attacking model's unit is within 6\" of your synapse unit", 'one synapse unit from your army that has not been selected to shoot or fight this phase, and one enemy unit within 24" of and visible to the synapse unit'];
+    const IWt = 'One SYNAPSE unit from your army that has not been selected to shoot or fight this phase, and one enemy unit within 24" of and visible to the SYNAPSE unit.';
+    const FIX = [['attackerWithin', coverAttackerWithin({ d:6, of:'your SYNAPSE unit' }, IWq), true], ['attackerWithin 3"', coverAttackerWithin({ d:3, of:'your SYNAPSE unit' }, IWq), false],
+      ['attackerWithin of another unit', coverAttackerWithin({ d:6, of:'this model' }, IWq), false], ['attackerWithin, no app q', coverAttackerWithin({ d:6, of:'your SYNAPSE unit' }, IWq.slice(1)), false],
+      ['target', coverTarget(IWt, IWq), true], ['target, another TARGET', coverTarget('One SYNAPSE unit from your army.', IWq), false], ['target, a q inside it', coverTarget(IWt, ['one synapse unit from your army']), false]];
+    for(const [name, got, want] of FIX) if(got !== want) fails.push('F comparator fixed case ' + name + ': ' + (got ? 'covered' : 'not covered') + ', should be ' + (want ? 'covered' : 'not covered')); }
   // R1
   const imp = readerImports(R2DIR);
   if(!imp.files.length) fails.push('R1 verify/reader2/ has no code');

@@ -267,10 +267,10 @@ function unitsOf(src){
     push(src.text, '');
     for(const row of src.table || []) push(row.slice(1).join('\n'), row[0]);
   }
-  let lead = '', sub = '', grp = 0, secT = null, head = '', stop = false, pickLead = false, rowCtx = '', ctxAny = '';
+  let lead = '', sub = '', subSec = '', grp = 0, secT = null, head = '', stop = false, pickLead = false, rowCtx = '', ctxAny = '';
   const optsBelow = src.type !== 'strat' && /\bselect one [a-z' ]+? listed below\b/.test(norm(String(src.text || '').split('\n')[0]));
   for(const { l, sec, ctx:ctx0 } of lines){
-    if(sec !== secT){ secT = sec; head = ''; stop = false; lead = ''; sub = ''; grp++; rowCtx = ''; }
+    if(sec !== secT){ secT = sec; head = ''; stop = false; lead = ''; sub = ''; subSec = ''; grp++; rowCtx = ''; }
     const raw = l.trim();
     if(!raw || /^\*[^*].*\*$/.test(raw) || /^\*\*\*/.test(raw)) continue;                       // italics: an example, a FAQ, a designer's note
     // KEYWORDS, RESTRICTIONS: not the rule's effects (in a table's row, "KA'TAH ABILITY": its heading)
@@ -291,9 +291,14 @@ function unitsOf(src){
     const named = /^\*\*([^*]+?):\*\*\s*(.*)$/.exec(body) || /^\*\*([^*]+?)\*\*:\s*(.*)$/.exec(body);
     if(/^\*\*[^*.]+\*\*$/.test(body) && !/^\*\*\[/.test(body)){ head = (sec ? sec + ' · ' : '') + body.replace(/\*\*/g, '').trim(); lead = ''; sub = ''; grp++; continue; }
     if(head) osec = head;
-    if(named && !/^\[/.test(named[1])){ osec = (sec ? sec + ' · ' : '') + named[1].trim(); body = named[2]; }
-    if(!bullet){ lead = /:\s*$/.test(body) ? body : ''; sub = ''; grp++; pickLead = !!lead && PICK_LEAD.test(norm(lead)); }
-    else if(/:\s*$/.test(body)) sub = body;
+    const isNamed = !!named && !/^\[/.test(named[1]);
+    if(isNamed){ osec = (sec ? sec + ' · ' : '') + named[1].trim(); body = named[2]; }
+    // (a bullet of the list a named option's line leads, "- **Unnatural Fortitude:** … select one of the following …:" then "- Models in
+    // this unit have a 5+ invulnerable save.": that option's; the next named bullet ends it)
+    else if(bullet && subSec) osec = subSec;
+    if(!bullet){ lead = /:\s*$/.test(body) ? body : ''; sub = ''; subSec = ''; grp++; pickLead = !!lead && PICK_LEAD.test(norm(lead)); }
+    else if(/:\s*$/.test(body)){ sub = body; subSec = isNamed ? osec : subSec; }
+    else if(isNamed) subSec = '';
     const or = bullet && /^or:\s*/i.test(body);
     if(or) body = body.replace(/^or:\s*/i, '');
     const ld = bullet ? [lead, sub !== body ? sub : ''].filter(Boolean).join(' ') : '';
@@ -344,6 +349,15 @@ const optDur = src => { for(const l of String(src.text || '').split('\n')){ if(/
 // (a duration in "until …" words only: "a Ritual this turn" says which, not how long)
 const untilOf = t => lastsOf(norm(t).replace(/\bthis turn\b/g, ' '));
 const optIntro = src => (String(src.text || '').split('\n')[0].split(/(?<=[.!?])\s+/).find(x => /\b(?:one of the following|listed below|shown below|below)\b/i.test(x)) || '');
+// an option of a rule whose words say when one of its options can be used ("While a unit is Empowered it can use one of the Malefic Surge
+// abilities below"), or how often each ("You can only select each of these abilities once per battle"): conditions of each option's boxes,
+// the attack side's and the defence side's alike
+function optUse(src, u, on){
+  if(!u.sec || src.type === 'strat') return;
+  const rt = plainCase(String(src.text || '').split('\n')[0]);
+  const w = /\b(While [^,.]+? it can use one of the [^.]+? below)/.exec(rt); if(w && !on.some(x => x[0] === 'q' && x[1] === w[1])) on.push(['q', w[1]]);
+  if(/\bonly select each of these abilities once per battle\b/i.test(rt) && !on.some(x => x[0] === 'oncePerBattle')) on.push(['oncePerBattle', true]);
+}
 const BOTH_RE = /\bthe ([A-Z][\w'’]*(?: [A-Z][\w'’]*)*) and (?:the )?([A-Z][\w'’]*(?: [A-Z][\w'’]*)*) are both active for that unit\b/;
 function extract(src, ctx){
   const V = ctx.V, boxes = [], nc = [];
@@ -384,11 +398,7 @@ function extract(src, ctx){
     // (a part of a split sentence takes who and what it is about from the first part, not its condition)
     const WHO = ['aura', 'leading', 'targetKw', 'selected', 'targetSelected', 'oncePerBattle', 'oncePerTurn', 'used'];
     if(base){ const own = new Set(on.map(x => x[0])); on = base.on.filter(x => !own.has(x[0]) && !(x[0] === 'targetKw' && own.has('targetKw')) && (x[0] !== 'q' || (!u.split && !!u.lead && norm(u.lead).includes(norm(x[1])))) && (!u.split || WHO.includes(x[0]))).concat(on); }
-    // an option of a rule whose words say when one of its options can be used ("While a unit is Empowered it can use one of the Malefic
-    // Surge abilities below"), or how often each ("You can only select each of these abilities once per battle")
-    if(u.sec && src.type !== 'strat'){ const rt = plainCase(String(src.text || '').split('\n')[0]);
-      const w = /\b(While [^,.]+? it can use one of the [^.]+? below)/.exec(rt); if(w && !on.some(x => x[0] === 'q' && x[1] === w[1])) on.push(['q', w[1]]);
-      if(/\bonly select each of these abilities once per battle\b/i.test(rt) && !on.some(x => x[0] === 'oncePerBattle')) on.push(['oncePerBattle', true]); }
+    optUse(src, u, on);
     // one of a unit's abilities to pick from ("At the start of the battle round, select one Wrathful Presence ability", its options the
     // abilities New Recruit lists under it): the one selected, its moment in GW's words; one of them at a time (excl)
     if(src.pickOf){ const at = /^(At the start of [^,]+|In your [^,]+ phase)/i.exec(plainCase(src.pickOf.text));
@@ -434,6 +444,10 @@ function extract(src, ctx){
     // (an aura a stratagem gives its unit: "Your unit has the following ability: Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units
     // within 6" of this unit can re-roll hit rolls of 1")
     else if(reach && src.type === 'strat' && on.some(x => x[0] === 'aura') && /^friendly\b/.test(n)){ box.reach = reach; box.mark = 'aura'; }
+    // (a stratagem's box for every friendly unit its words name as the attacker, not only its TARGET: "Until the end of the phase, each time a
+    // friendly TYRANIDS model makes an attack that targets that enemy unit, if the attacking model's unit is within 6" of your SYNAPSE unit, …",
+    // Irresistible Will; the condition on where they are stays in GW's words)
+    else if(reach && src.type === 'strat' && !gone && /^(?:until the end of the (?:phase|turn|battle round|battle), )?each time an? friendly\b[^.,]*? makes an? (?:ranged |melee )?attack\b/.test(n)){ box.reach = reach; box.mark = 'friendly'; }
     if(reach && src.type !== 'strat'){ box.reach = reach; const t = norm(u.s + ' ' + (box.lead || '') + ' ' + (u.prevS || '') + (byTag ? ' select one ' : ''));
       box.mark = /\(aura\)|\baura\b/i.test(src.tag || '') || /\bwithin \d+" of (?:this|the bearer)\b/.test(t) && !/\bselect one\b/.test(t) ? 'aura' : /\bselect one\b/.test(t) ? 'selected' : 'friendly';
       if(/\bselect one other friendly\b|\bother friendly\b/.test(t)) box.notSelf = true;
@@ -688,6 +702,7 @@ function defenceOf(src, us, V, ctx){
     if(/\bonce per turn\b/i.test(src.tag || '') && !on.some(x => x[0] === 'oncePerTurn')) on.unshift(['oncePerTurn', true]);
     if(src.pickOf && !on.some(x => x[0] === 'opt')){ const at = /^(At the start of [^,]+|In your [^,]+ phase)/i.exec(plainCase(src.pickOf.text)); on.unshift(['opt', src.pickOf.name + ': the one selected' + (at ? ' (' + at[1].replace(/^./, c => c.toLowerCase()) + ')' : '')]); }
     if(u.sec && !on.some(x => x[0] === 'opt')) on.unshift(['opt', u.sec]);
+    optUse(src, u, on);
     // (one of several to pick: "select one of the following", "Or:": a choice, its line's words)
     const pickLead = !!u.lead && PICK_LEAD.test(norm(u.lead));
     if((pickLead || u.or) && u.lead){ const q = plainCase(u.lead).replace(/:\s*$/, ''); if(!on.some(x => x[0] === 'q' && x[1] === q)) on.push(['q', q]); }

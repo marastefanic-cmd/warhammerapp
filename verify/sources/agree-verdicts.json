@@ -82,17 +82,6 @@
    ],
    "pair": "f0083af776791c86"
   },
-  "det:chaos-knights/infernal-lance|Malefic Surge|9": {
-   "verdict": "app incomplete (label); reader2 right",
-   "severity": "less conditional than GW on the label: the box says “select one of the following …” but not that the unit must be Empowered. The player ticks it, so no number is applied by itself",
-   "gw": "Malefic Surge: “… that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.” Unnatural Fortitude: “When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase: 5+ invulnerable save / Feel No Pain 6+.” The app’s Diabolic Power box keeps the Empowered words; its Unnatural Fortitude box does not.",
-   "quotes": [
-    "… that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.",
-    "When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:"
-   ],
-   "note": "round 1 verdict (reader2 wrong) superseded: reader2 now reads it right",
-   "pair": "9ce409bfcd972ee0"
-  },
   "faction:adeptus-custodes|Daughters of the Abyss|2": {
    "verdict": "both right",
    "severity": "none: the app's opt here is only the sub-ability's name, not a choice",
@@ -230,15 +219,6 @@
     "When this unit is selected to shoot or fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability."
    ],
    "pair": "8a49e42ab7ca7eb9"
-  },
-  "det:tyranids/synaptic-nexus|Irresistible Will|0": {
-   "verdict": "app wrong (narrower); reader2 right",
-   "severity": "latent (no list): the app box has no reach, so only the stratagem’s SYNAPSE unit would see it",
-   "gw": "“TARGET: One SYNAPSE unit from your army …, and one enemy unit within 24\" of and visible to the SYNAPSE unit. EFFECT: Until the end of the phase, each time a friendly TYRANIDS model makes an attack that targets that enemy unit, if the attacking model’s unit is within 6\" of your SYNAPSE unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.”",
-   "quotes": [
-    "TARGET: One SYNAPSE unit from your army …, and one enemy unit within 24\" of and visible to the SYNAPSE unit. EFFECT: Until the end of the phase, each time a friendly TYRANIDS model makes an attack that targets that enemy unit, if the attacking model’s unit is within 6\" of your SYNAPSE unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
-   ],
-   "pair": "ededa2d035b96da5"
   },
   "det:adeptus-custodes/auric-champions|Assemblage of Might|1": {
    "verdict": "both right",
