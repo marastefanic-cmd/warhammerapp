@@ -339,6 +339,26 @@ every list imported on the phone shows every screen as the built-in one at 390 a
 list in .json, .ros, .rosz, text B and text C gives one list, and changed exports are refused with exact messages. What the hand files hold
 has no effect on a build; a list whose built-in entry needs a hand file (an id, a `short`, a note) would differ, and P1 says so.
 
+**One builder.** A built-in list of a catalogued faction is made by the same code as a phone import: `verify/from-json.js --write` ends
+by calling `WH_BUILDER.build` on the export with the `data.js` it has just written (after `verify/build-index.js --write`, so its "+" marks
+are in `BUILD_INDEX`), and the list's `ARMIES` entry is builder.js's, with from-json's source line (the day the export was committed, or the
+hand file's `source`). What stays from-json's is the Node-only part: BSData at the pin (every id, the extract), Wahapedia's pages and GW's
+documents (the datasheet facts `verify/tables.js --write` puts on `DATASHEETS`, the faction rows, the deviation files), and the hand file.
+Its own reading of the list's entry is kept as a check: where it is not builder.js's, the entry is builder.js's, the difference is listed
+and the run fails; `verify/reimport.js` (4) fails a catalogued list not built so, or built otherwise than from-json reads it. A list of a
+faction with no catalogue (18 of the 24 exports today) keeps from-json's reading until the faction's catalogue lands; the phone copies it.
+
+What from-json does that builder.js does not, and where each goes:
+
+| from-json | for builder.js |
+|---|---|
+| hand `source` (the PDF's export day) | a fact of this list (where it came from): a phone import says when it was imported (P1, P2 leave the source line aside) |
+| hand `units.<id>.why`, `gists.<id>.by`, `refs[].why`, `ids.<id>` | reasons, recorded for the reviewer: nothing shown (an id is the list's; a catalogued list's ids are builder.js's, none is in a hand file) |
+| hand `units.<id>.texts`, `units.<id>.notes`, `refs` (a reference sheet with no export entry, and one of models on another's datasheet) | datasheet facts, on the `DATASHEETS` rows builder.js reads (texts also in `verify/deviations-words.json`, Chaos Daemons' in the catalogue hand file): a phone import of any list with the datasheet has them; builder.js finds the reference sheets by GW's words (`sheetRefs`) |
+| hand `gists` (`gist`, `gistOf`, `note`), `armyRules` FAQs, `fixes` | `FACTIONS` rows, shared by every list of the faction (app and phone alike) |
+| a models line split by GW's WARGEAR OPTIONS ("1 model can be equipped with 1 …", Wahapedia's page), a stats row without its ×N where the list has a New Recruit PDF (`verify/sources/nr`) | none in a catalogued list's entry today; builder.js does neither (the export's association, else unplaced; always ×N), so a catalogued list needing one fails from-json's check |
+| "+" marks from BSData's modifiers (`verify/bsdata.js`, `write-grants.js`) | builder.js names a mark's rule from `BOXES` (agreed), else `BUILD_INDEX.marks`, which `verify/build-index.js` learns from the built-in lists' marks |
+
 The input formats (`import.js` `parse`): .json; .ros (BattleScribe XML, the same roster); .rosz (it zipped, inflated by the platform);
 New Recruit's text format B ("+++ FACTION KEYWORD …") and C ("## Category …"), each name looked up exactly (case, apostrophes and spaces
 aside) and any line that is not exactly one thing refusing the import with its line; format A is refused as not supported. A text names no
