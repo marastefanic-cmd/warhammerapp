@@ -1285,19 +1285,30 @@ function pageScripts(html, files, missed){
     const f = path.posix.normalize(raw.replace(/[?#].*$/, '').replace(/^\.\//, ''));
     if(!f || f.startsWith('..') || f.startsWith('/')){ missed.push(how + ' (not a file of this folder)'); return; }
     if(['data.js', 'verified.js'].includes(f) || seen.has(f)) return;
+    if(/^vendor\//.test(f)) return;   // (a third-party library, vendor/: no code of the app's, not read)
     seen.add(f);
     if(!has(f)){ missed.push(how + ' (' + f + ' not found)'); return; }
     out.push(f); };
   const dyn = (code, where) => { for(const m of code.replace(/\/\*[\s\S]*?\*\/|(^|[^:'"\\])\/\/[^\n]*/g, '$1').matchAll(/\bimport\s*\(\s*(?:(['"`])([^'"`$]+)\1|([^)]*))/g)){
       if(m[2] != null){ if(/\.m?js(?:[?#]|$)/.test(m[2])) local(m[2], where + ' import(' + m[1] + m[2] + m[1] + ')'); }
       else missed.push(where + ' import(' + String(m[3]).slice(0, 40) + ') (its name is no string literal)'); } };
+  // (a module's static import / export … from, and import './x.js': in an inline <script type="module"> and in a module the page loads;
+  // and a script element made in code, document.createElement('script'): its src a string literal set on it in the same script (.src =, setAttribute, src: in an object), read,
+  // or missed)
+  const stat = (code, where) => { const c = code.replace(/\/\*[\s\S]*?\*\/|(^|[^:'"\\])\/\/[^\n]*/g, '$1');
+    for(const m of c.matchAll(/(?:^|[;\n{}])\s*(?:import|export)\s+(?:[\w$*{}\s,]+?\s+from\s+)?(['"])([^'"]+)\1/g)) local(m[2], where + ' import ' + m[1] + m[2] + m[1]);
+    for(const m of c.matchAll(/\bcreateElement\(\s*(['"`])script\1\s*\)/gi)){
+      const after = c.slice(m.index), sm = /\.src\s*=\s*(['"])([^'"$]+)\1|\bsetAttribute\(\s*['"]src['"]\s*,\s*(['"])([^'"$]+)\3|\bsrc\s*:\s*(['"])([^'"$]+)\5/.exec(after.slice(0, 600));
+      if(sm) local(sm[2] || sm[4] || sm[6], where + ' createElement(\'script\') src ' + (sm[2] || sm[4] || sm[6]));
+      else missed.push(where + ' createElement(\'script\') (its src is no string literal set on it)'); } };
+  for(const m of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) if(!/\bsrc\s*=/i.test(m[1])) stat(m[2], 'app.html inline script');
   for(const m of html.matchAll(/<script\b([^>]*)>/gi)){
     const at = m[1]; if(!/\bsrc\s*=/i.test(at)) continue;
     const x = /\bsrc\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'>]+))/i.exec(at);
     if(!x || /\$\{|<%|\{\{/.test(x[1] ?? x[2] ?? x[3] ?? '')){ missed.push('<script' + at + '> (its src is no plain name)'); continue; }
     local(x[1] ?? x[2] ?? x[3], '<script' + at + '>'); }
   dyn(html, 'app.html');
-  for(let k = 0; k < out.length; k++){ const f = out[k]; dyn(files && files[f] != null ? files[f] : fs.readFileSync(path.join(ROOT, f), 'utf8'), f); }
+  for(let k = 0; k < out.length; k++){ const f = out[k], code = files && files[f] != null ? files[f] : fs.readFileSync(path.join(ROOT, f), 'utf8'); dyn(code, f); stat(code, f); }
   return out;
 }
 // the page-script scan's own fixtures: [the page's script tags and code, the scripts read, how many missed]
@@ -1307,7 +1318,12 @@ const PAGE_FIXTURES = [
   ['<script src="builder.js?v=3"></script>', 'builder.js', 0], ['<script type="module" src="builder.js"></script>', 'builder.js', 0],
   ["<script src='builder.js'></script>", 'builder.js', 0], ["<script>\nconst m = () => import('./builder.js' + (B ? '?v=' + B : ''));\n</script>", 'builder.js', 0],
   ['<script src="https://example.com/x.js"></script><script src="data.js"></script>', '', 0],
-  ['<script src="no-such-file.js"></script>', '', 1], ['<script>\nimport(name);\n</script>', '', 1]];
+  ['<script src="no-such-file.js"></script>', '', 1], ['<script>\nimport(name);\n</script>', '', 1],
+  ['<script type="module">\nimport \'./builder.js\';\n</script>', 'builder.js', 0], ['<script type="module">\nimport { build } from "./builder.js";\n</script>', 'builder.js', 0],
+  ["<script>\nconst s = document.createElement('script'); s.src = 'builder.js'; document.head.appendChild(s);\n</script>", 'builder.js', 0],
+  ["<script>\nconst s = document.createElement('script'); s.src = NAME; document.head.appendChild(s);\n</script>", '', 1],
+  ["<script>\ndocument.head.appendChild(Object.assign(document.createElement('script'), { src:'builder.js' }));\n</script>", 'builder.js', 0],
+  ['<script type="module">\nimport { x } from "./vendor/lib.mjs";\n</script>', '', 0]];
 function pageFixtures(){
   const out = [];
   for(const [html, want, nMissed] of PAGE_FIXTURES){ const missed = [], got = pageScripts(html, null, missed).join(',');
