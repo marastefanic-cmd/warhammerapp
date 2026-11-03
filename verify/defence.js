@@ -155,14 +155,17 @@ stats.boxes = nBox; stats.notCounted = nDnc;
   stats.labels = n; }
 
 // ---- DL the lines as the screen has them ----
-{ let n = 0, nc = 0;
+{ let n = 0, nc = 0; const BX = E.agreed(D.boxes, D.agree);
   const hasK = (u, k) => (u.kw || []).some(x => x.toLowerCase() === String(k).toLowerCase());
   const meets = (q, u) => !q || ((!q.all || q.all.every(k => hasK(u, k))) && (!q.any || !q.any.length || q.any.some(k => hasK(u, k))) && (!q.none || !q.none.some(k => hasK(u, k))) && (!q.unless || !meets(q.unless, u)));
   for(const a of D.armies) for(const u of a.units){
     const where = a.id + '/' + u.id, got = A.inArmy(a, () => A.defenceItems(u)), srcs = A.inArmy(a, () => A.defSources(u));
     const want = [];
-    for(const Sx of srcs){ const o = (D.boxes || {})[Sx.key] || {};
+    // (the boxes as the screen counts them, the two-reader rule: data.js AGREE, effects.js agreed; one it does not confirm is its source's
+    // words not counted, a "see the rule" line)
+    for(const Sx of srcs){ const o = BX[Sx.key] || {};
       for(const b of o.d || []){
+        if(!b.pick && !(b.df || []).length) continue;
         if(b.foe ? false : Sx.reachOnly ? !(b.reach && meets(b.reach, u)) : b.reach ? !meets(b.reach, u) || (Sx.grp === 'unit' && b.notSelf) : Sx.grp === 'other') continue;
         if((b.on || []).some(([id, p]) => (id === 'selfKw' || id === 'itIs') && !hasK(u, p))) continue;
         want.push({ Sx, b }); }

@@ -643,7 +643,8 @@ const ckHash = s => { let h = 0x811c9dc5; for(let i = 0; i < s.length; i++){ h ^
 const ruleText = r => r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : '');
 const FXF = { s:'S', a:'A', d:'D', ap:'AP' };
 function marksOf(B, army, u, parts, P, rows, abil){
-  const out = new Map(), boxes = B.D.boxes || {}, idx = ((B.D.buildIndex || {}).marks) || {}, E = root.WH_EFFECTS;
+  // (the boxes as the app counts them, the two-reader rule: a box data.js AGREE does not confirm names no value, effects.js agreed)
+  const E = root.WH_EFFECTS, out = new Map(), boxes = E && E.agreed ? E.agreed(B.D.boxes || {}, B.D.agree) : {}, idx = ((B.D.buildIndex || {}).marks) || {};
   // the rules that reach the unit, with their boxes
   const src = [];
   for(const x of abil){ const a = x.enh || x.row; src.push({ name:a.name, part:x.enh && x.enh.upgrade ? undefined : x.part, box:boxes['a|' + ckHash(a.name + '\n' + a.text)] }); }

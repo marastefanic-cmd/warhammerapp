@@ -1107,6 +1107,10 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 <script>
 'use strict';
 const D = window.WH_DATA;
+// the boxes as the app counts and shows them (the two-reader rule, the owner's decision, 3 Nov 2026): data.js BOXES with every box data.js
+// AGREE (verify/agree.js) does not mark confirmed shown as not counted, GW's words with "see the rule" (effects.js agreed). Every screen reads
+// these, never D.boxes
+const BOXES_AGREED = WH_EFFECTS.agreed(D.boxes, D.agree);
 const BUILD = window.WH_BUILD || '';      // set by build.js on the installable copy
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
@@ -1577,14 +1581,14 @@ function unitMods(u, kind){
   const of = g => srcs.filter(S => S.grp === g);
   const core = [];
   // (Lance for its [LANCE] weapons; Plunging Fire for a TOWERING unit, not AIRCRAFT: BOXES played, the Damage tab's own)
-  const played = (name, text) => { const key = DM_KEY.c(name, text), o = (D.boxes || {})[key]; return o && o.played ? { grp:'unit', name, rule:name, key, core:true } : null; };
+  const played = (name, text) => { const key = DM_KEY.c(name, text), o = BOXES_AGREED[key]; return o && o.played ? { grp:'unit', name, rule:name, key, core:true } : null; };
   if([].concat(u.ranged || [], u.melee || []).some(w => (w.kw || []).some(k => /^lance$/i.test(k))) && D.rules.Lance) core.push(played('Lance', D.rules.Lance));
   if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) core.push(played('Plunging Fire', D.rules['Plunging Fire']));
   const dmg = (u.abilities || []).filter(ab => /^Damaged: /i.test(ab.name)).map(ab => ({ grp:'unit', name:ab.name, key:DM_KEY.a(ab), ab, src:u, damaged:true }));
   // (the core stratagems, every unit's, are on the Stratagems tab: the footnotes name the list's detachments' stratagems)
   const listStrat = S => !S.strat || (S.s && S.s.src !== 'Core');
   for(const S of of('unit').filter(S => !S.core).concat(dmg, of('unit').filter(S => S.core).map(S => Object.assign({ rule:S.name }, S)), of('army'), core.filter(Boolean), of('other'), of('strat')).filter(listStrat)){
-    const o = (D.boxes || {})[S.key] || {};
+    const o = BOXES_AGREED[S.key] || {};
     for(const b of o.b || []){
       if(S.reachOnly ? !(b.reach && dmReaches(b.reach, u)) : b.reach ? !dmReaches(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;
       if(b.kind !== 'all' && b.kind !== kind) continue;
@@ -1600,7 +1604,7 @@ function unitMods(u, kind){
 }
 // a Damaged band's words: what its boxes do (effects.js labels); with words of it they do not count (Szarekh's halved Attacks, the Tesseract
 // Vault's C'tan Powers), or none, "see the rule", which opens its words
-const dmgBand = ab => { const o = (D.boxes || {})[DM_KEY.a(ab)] || {};
+const dmgBand = ab => { const o = BOXES_AGREED[DM_KEY.a(ab)] || {};
   return [WH_EFFECTS.fxLabel((o.b || []).flatMap(b => b.fx || [])), (o.nc || []).length || !(o.b || []).length ? 'see the rule' : ''].filter(Boolean).join('; '); };
 // the footnotes the weapon tables show (datasheet, Ranged and Melee screens)
 const shownMods = (u, kind) => unitMods(u, kind);
@@ -1983,7 +1987,7 @@ const HOW_TITLE = 'How the app works and why you should be able to trust the dat
 // the tables of data.js, in the order the screen draws them: name, key in D, what one row is (verify/columns.json says it for most)
 const HW_TABLES = [['ARMIES', 'armies'], ['DATASHEETS', 'datasheets'], ['FACTIONS', 'factions'], ['CORE_STRATAGEMS', 'coreStratagems'], ['RULES', 'rules'],
   ['RULE_ALIASES', 'ruleAliases'], ['RULE_SRC', 'ruleSrc'], ['CONCEPTS', 'concepts'], ['GRANTS', 'grants'], ['RULE_OPTIONS', 'ruleOptions'],
-  ['CHECKLIST', 'checklist'], ['BOXES', 'boxes'], ['BUILD_INDEX', 'buildIndex'], ['BS_IDS', 'bsIds'], ['VERSION', 'version']];
+  ['CHECKLIST', 'checklist'], ['BOXES', 'boxes'], ['AGREE', 'agree'], ['BUILD_INDEX', 'buildIndex'], ['BS_IDS', 'bsIds'], ['VERSION', 'version']];
 const HW_WHAT = { CHECKLIST:'per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js',
   BUILD_INDEX:'what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values over BSData’s): written by verify/build-index.js',
   VERSION:'the data’s version: one value, raised with every release' };
@@ -2252,7 +2256,7 @@ const DM_KEY = { a:ab => 'a|' + ckHash(ab.name + '\n' + ab.text), r:r => 'r|' + 
 // footnotes' only, played)
 // (a source with only defence boxes, d / dnc, the datasheet's "When targeted" lines: none here, as before them)
 const DM_ATK = ['b', 'nc', 'reach', 'both', 'embarked', 'riled'];
-const dmBoxesOf = key => { const o = (D.boxes || {})[key]; return o && !o.played && DM_ATK.some(k => k in o) ? o : null; };
+const dmBoxesOf = key => { const o = BOXES_AGREED[key]; return o && !o.played && DM_ATK.some(k => k in o) ? o : null; };
 // the five groups of the list, in this order: each box is in exactly one, by the row it reads (dmGroupOf: the source)
 const DM_GROUPS = [['army', 'Army rules'], ['unit', 'Unit rules'], ['other', 'From other units in your list'], ['strat', 'Stratagems'], ['custom', 'Custom modifiers']];
 // effects that change these numbers (an [ASSAULT] box changes nothing here)
@@ -4863,11 +4867,11 @@ function abilityList(abs, u, suffix){
 // unit (BOXES dreach: Grot Shields). Words of its rules about attacks against it that no defence reads: "not counted here: see the rule".
 // Nothing here reads a rule's words. ----
 // (the words of an ability's defences, for the search: "feel no pain", "invulnerable")
-const defWords = ab => (((D.boxes || {})[DM_KEY.a(ab)] || {}).d || []).map(b => WH_EFFECTS.dfLabel(b.pick ? b.pick.flatMap(p => p.df) : b.df)).join(' ');
+const defWords = ab => ((BOXES_AGREED[DM_KEY.a(ab)] || {}).d || []).map(b => WH_EFFECTS.dfLabel(b.pick ? b.pick.flatMap(p => p.df) : b.df)).join(' ');
 const DEF_KIND = { ranged:'Ranged attacks', melee:'Melee attacks', psychic:'Psychic Attacks' };
 // (a defence whose label says its kind already: "4+ invulnerable save against ranged attacks")
 const defKindSaid = (df, kind) => (df || []).every(([id]) => (kind === 'ranged' && /Ranged$/.test(id)) || (kind === 'psychic' && /^fnpPsy/.test(id)));
-const defBoxesOf = key => (D.boxes || {})[key] || null;
+const defBoxesOf = key => BOXES_AGREED[key] || null;
 function defSources(u){
   const A = army(), F = factionOf(A) || {}, out = [], seen = new Set();
   const put = x => { if(seen.has(x.key + '|' + x.grp)) return; seen.add(x.key + '|' + x.grp); const o = defBoxesOf(x.key); if(o && (o.d || o.dnc)) out.push(Object.assign(x, { o })); };
@@ -4912,6 +4916,7 @@ function defenceItems(u){
   const out = [];
   for(const S of defSources(u)){
     for(const b of S.o.d || []){
+      if(!b.pick && !(b.df || []).length) continue;   // (a box the second reading does not confirm: its words are its dnc, effects.js agreed)
       // (a box given to friendly units: where it reaches this one; the unit's own for itself only where it is an aura, 22.01, not "other";
       // an enemy unit's attacks made worse: every unit of the list. Another unit's other boxes are its own)
       if(b.foe ? false : S.reachOnly ? !(b.reach && dmReaches(b.reach, u)) : b.reach ? !dmReaches(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;
@@ -4939,7 +4944,7 @@ function defenceItems(u){
 }
 // a unit always riled up by one of its own rules (BOXES riled, from its words: Super Runts): its riled-up lines say so, with the model that has the
 // rule in an attached unit ("Riled up (Zodgrod Wortsnagga · Super Runts: always riled up)")
-const alwaysRiled = u => { const ab = u.abilities.find(x => ((D.boxes || {})[DM_KEY.a(x)] || {}).riled && !naReason(x));
+const alwaysRiled = u => { const ab = u.abilities.find(x => (BOXES_AGREED[DM_KEY.a(x)] || {}).riled && !naReason(x));
   return ab ? (ab.who && u.leads ? esc(ab.who) + ' · ' : '') + linkTo('ability', abilityKey(ab), ab.name) + ': always riled up' : ''; };
 const riledWhen = (html, u) => { const ar = /^Riled up\b/.test(html) && alwaysRiled(u); return ar ? html.replace(/^Riled up/, 'Riled up (' + ar + ')') : html; };
 // one "When targeted" line on the datasheet: the model of an attached unit it is on as a small label, its name in bold (a stratagem with its
@@ -4972,7 +4977,7 @@ function stCond(id, p, u){
 }
 function statLines(u){
   const E = WH_EFFECTS, out = [];
-  for(const r of faction().armyRules.concat(detachments().flatMap(detRules))) for(const b of ((D.boxes || {})[DM_KEY.r(r)] || {}).st || []){
+  for(const r of faction().armyRules.concat(detachments().flatMap(detRules))) for(const b of (BOXES_AGREED[DM_KEY.r(r)] || {}).st || []){
     if(!(b.reach ? matches(b.reach, u) : r.needs && matches(r.needs, u))) continue;
     const on = b.on || [], onlyQ = on.length && on.every(([id]) => E.COND[id] && E.COND[id].quoted);
     const when = onlyQ ? FN_IF : on.map(([id, p]) => stCond(id, p, u)).join(' · ');
@@ -4991,13 +4996,13 @@ function statLines(u){
   const said = new Set();
   // (each where its words reach: the friendly units it names (its reach; else, for a rule, the units that have it: its needs, as a stat box),
   // a keyword of the unit it needs (on selfKw), "while this model is leading a unit" only on a unit that leads one (on leading))
-  const snc = (key, name, link, v, needs) => { for(const x of ((D.boxes || {})[key] || {}).snc || []){
+  const snc = (key, name, link, v, needs) => { for(const x of (BOXES_AGREED[key] || {}).snc || []){
     if(x.reach ? !matches(x.reach, u) : needs !== undefined && !(needs && matches(needs, u))) continue;
     if((x.on || []).some(([id, p]) => (id === 'selfKw' && !hasKw(u, p)) || (id === 'leading' && !u.leads))) continue;
     if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => [].concat((s.from || {})[x.stat] || []).join(', ').split(/\s*,\s*/).includes(name)))) continue;
     said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); out.push({ rule:name, a:link, v, text:(x.foe ? 'Enemy units’ ' : '') + x.stat + ': ' + FN_NC }); } };
   for(const ab of u.abilities || []) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab));
-  for(const x of army().units) if(x !== u) for(const ab of x.abilities || []){ const o = (D.boxes || {})[DM_KEY.a(ab)] || {};
+  for(const x of army().units) if(x !== u) for(const ab of x.abilities || []){ const o = BOXES_AGREED[DM_KEY.a(ab)] || {};
     if(/\baura\b/i.test(ab.tag || '') && o.reach && matches(o.reach, u)) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab)); }
   // (a rule's: the units that have it, as the Damage tab takes them: an army rule on its Rules line (hasRule) or its needs met, a detachment
   // rule's needs met (unitDetRules))
@@ -5061,7 +5066,7 @@ function screenUnit(){
     (def.length ? '<details class="def tgt" data-tgfold="' + esc(tgKey) + '"' + (openStrats.has(tgKey) ? ' open' : '') + '><summary><span class="il">When targeted</span><span class="x">' + def.length + '</span>' + chev + '</summary>' +
       '<div class="tgls">' + def.map(x => '<div class="tgl">' + defLine(x, u) + '</div>').join('') + '</div></details>' : '') +
     // (a Damaged band: dmgBand)
-    u.abilities.filter(ab => ab.damaged).map(ab => { const o = (D.boxes || {})[DM_KEY.a(ab)] || {}, fx = (o.b || []).flatMap(b => b.fx || []);
+    u.abilities.filter(ab => ab.damaged).map(ab => { const o = BOXES_AGREED[DM_KEY.a(ab)] || {}, fx = (o.b || []).flatMap(b => b.fx || []);
       const psy = fx.some(([id]) => id === 'hit') && [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => /^psychic/i.test(k)));
       const says = dmgBand(ab);
       return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), says || 'see the rule') +

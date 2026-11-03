@@ -1201,6 +1201,8 @@ function columnsInData(src){
   add('BS_IDS', D.bsIds);
   // what builder.js reads on the phone beyond the other tables (verify/build-index.js --write): one object, its parts the columns
   add('BUILD_INDEX', D.buildIndex);
+  // which boxes two readings confirm (verify/agree.js --write, the two-reader rule): one object, its part the column
+  add('AGREE', D.agree);
   return Object.fromEntries(Object.entries(T).map(([k, v]) => [k, [...v]]));
 }
 // the tables of data.js's return line that columnsInData does not read (VERSION: one value; CHECKLIST: its columns are app.html's HW_CK, held

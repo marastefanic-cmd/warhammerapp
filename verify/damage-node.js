@@ -7,7 +7,10 @@
 const fs = require('fs'), path = require('path');
 const { ROOT, loadData } = require('./lib');
 
-module.exports = function load(extra){
+// opts.agree 'all': every box counted, as if both readers confirmed it (data.js AGREE taken as "A" for each box with an effect): the
+// hand-worked cases of the engine and of the screen's wiring of each box (verify/calc-test.js); without it, the boxes as the app counts
+// them (the two-reader rule, effects.js agreed)
+module.exports = function load(extra, opts){
   const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');
   const script = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]).sort((a, b) => b.length - a.length)[0];
   const lines = script.split('\n');
@@ -35,7 +38,9 @@ module.exports = function load(extra){
     for(const id of new Set(code.match(/[A-Za-z_$][\w$]*/g))) if(decl.has(id) && !need.has(id) && !given.has(id)) todo.push(id);
   }
   const src = [...need].sort((a, b) => decl.get(a).at - decl.get(b).at).map(n => decl.get(n).src).join('\n');
-  const D = loadData(), WH_CALC = require(path.join(ROOT, 'calc.js')), WH_EFFECTS = require(path.join(ROOT, 'effects.js'));
+  const D0 = loadData(), WH_CALC = require(path.join(ROOT, 'calc.js')), WH_EFFECTS = require(path.join(ROOT, 'effects.js'));
+  const allOk = () => ({ boxes:Object.fromEntries(Object.entries(D0.boxes || {}).map(([k, o]) => [k, Object.fromEntries(['b', 'd', 'st'].filter(f => o[f]).map(f => [f, o[f].map(() => 'A')]))])) });
+  const D = opts && opts.agree === 'all' ? Object.assign({}, D0, { agree:allOk() }) : D0;
   const mem = new Map(), store = { get:k => mem.get(k), set:(k, v) => mem.set(k, v) };
   const env = new Function('D', 'WH_CALC', 'WH_EFFECTS', 'store', 'window', 'let cur = { s:"damage", army:null }, sess = {};\n' + src + '\n' +
     'return { set:(a, st) => { cur.army = a; sess.dmg = { [a]:st }; }, dmState, dmSides, dmTypedVals, dmCalc, dmShown, dmUnits, army, unitLabel, modelCount, dmPair, dmPlan, dmIn, dmBeatAns, dmFx, dmLevers, dmNums, dmZero, dmDelta, dmSetUnit, dmCleanTicks, dmResetPair, dmCharged, dmSetCharge, dmMe, dmModeTurn, dmModeOf, dmModeOld, dmStart, dmTotalAns, dmAnsOf, dmWorth, dmSources, dmBoxRules, DM_GROUPS, dmGroupOf, matches, inArmy, allStratagems, canTarget' + (extra || []).map(n => ', ' + n).join('') + ' };');

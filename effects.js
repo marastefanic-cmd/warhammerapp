@@ -246,7 +246,37 @@ const fxLabel = fx => (fx || []).map(([id, p]) => FX[id] ? FX[id].label(p) : id)
 // (a condition that is only GW's words, quoted (q, anyOf: quoted), is said here, on the Damage tab's boxes, where it tells two boxes of
 // one rule apart and is what the player ticks; the datasheet's footnotes leave it out, their rule's name opening the words: app.html fnLine)
 const condLabel = on => (on || []).map(([id, p]) => COND[id] ? COND[id].label(p) : id).join(' · ');
-const api = { FX, COND, NC, CUSTOM, FACT_OF, CHAR_RE, CH, KW, toMod, fxLabel, condLabel, norm, DF, DCOND, DNC, dfLabel, ST, STCOND, stLabel };
+// ---- the two-reader rule (the owner's decision, 3 Nov 2026): the boxes as the app counts and shows them. A box of data.js BOXES (b, d, st)
+// with an effect counts only where data.js AGREE (verify/agree.js) marks it confirmed: "A" (reader2, an independent second reading of GW's
+// words, agrees), "V" (a reviewed verdict with GW's quote shows the app right), "core" (a Core Rules box, outside the comparison). Any other
+// box is not counted, shown as GW's words with "see the rule": its effects are taken off (it stays in its place, so the other boxes of its
+// source keep their index, marked unconfirmed) and its sentence goes first among its source's not-counted words: a box about its attacks
+// to nc (atk), a defence box to dnc, a stat box to snc (with its characteristic), each with its reach and conditions. With no AGREE, every
+// box falls back. The same for app.html (every screen), builder.js and the gate's scripts that draw the screens in node.
+const AGREE_WHY = 'not confirmed by a second reading of GW’s words';
+const AGREE_FX = { b:'fx', d:'df', st:'st' }, AGREE_NC = { b:'nc', d:'dnc', st:'snc' };
+function agreed(boxes, agree){
+  const ok = (agree && agree.boxes) || {}, out = {};
+  for(const [k, o] of Object.entries(boxes || {})){
+    const row = ok[k] || {}, words = { nc:[], dnc:[], snc:[] }; let x = o;
+    for(const f of ['b', 'd', 'st']) (o[f] || []).forEach((e, i) => {
+      if(!((e[AGREE_FX[f]] || []).length || (e.pick || []).length) || (row[f] && row[f][i])) return;
+      if(x === o) x = Object.assign({}, o);
+      if(x[f] === o[f]) x[f] = o[f].slice();
+      const off = Object.assign({}, e, { [AGREE_FX[f]]:[], unconfirmed:true }); delete off.pick; delete off.part; x[f][i] = off;
+      const w = { quote:e.quote, why:AGREE_WHY, unconfirmed:true };
+      if(e.reach) w.reach = e.reach; if((e.on || []).length) w.on = e.on;
+      if(f === 'b') words.nc.push(Object.assign(w, { atk:true }));
+      else if(f === 'd') words.dnc.push(w);
+      else { const st = (e.st || []).concat((e.pick || []).flatMap(p => p.st || [])), stats = [...new Set(st.map(([id]) => ST[id] ? ST[id].stat : id))];
+        (stats.length ? stats : ['?']).forEach(s => words.snc.push(Object.assign({}, w, { stat:s }))); }
+    });
+    for(const f of ['nc', 'dnc', 'snc']) if(words[f].length) x[f] = words[f].concat(o[f] || []);
+    out[k] = x;
+  }
+  return out;
+}
+const api = { FX, COND, NC, CUSTOM, FACT_OF, CHAR_RE, CH, KW, toMod, fxLabel, condLabel, norm, DF, DCOND, DNC, dfLabel, ST, STCOND, stLabel, agreed, AGREE_WHY };
 if(typeof module !== 'undefined' && module.exports) module.exports = api;
 root.WH_EFFECTS = api;
 })(typeof self !== 'undefined' ? self : this);
