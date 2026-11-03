@@ -432,7 +432,11 @@ function checkLines(cat, army, unit, field, text, gwDocs, wahaDocs, opts = {}) {
     if (c.kind === 'appnote') { count('appNote'); fail('appNote', army, unit, field, raw.trim().slice(0, 120), 'the app\'s own words in a rules text: GW\'s words only', ''); continue; }
     if (opts.special) { const sp = opts.special(raw); if (sp) { if (sp.ok) { if (sp.at) provRow(item, field, sp.at.d, sp.at.off, { text: raw.trim().slice(0, 80), how: sp.how }); } else fail(cat, army, unit, field, raw.trim(), sp.source, sp.where || ''); continue; } }
     let docs = gwDocs, less = wahaDocs, parts = [c.body];
-    if (c.kind === 'wcore') { docs = WAHA_CORE; less = null; }
+    if (c.kind === 'wcore') { docs = WAHA_CORE; less = null;
+      // (a line only Wahapedia's core rules print: not GW's printed words, as an errata line is not; one GW's documents print says nothing
+      // of Wahapedia's own)
+      const nb = normApp(c.body), g = nb && locate(nb, GW_ALL);
+      if (g) fail(cat, army, unit, field, raw.trim(), 'a "Wahapedia core rules" line that GW’s printed text already says (' + g.d.label + '): such a line is Wahapedia’s words alone', where(g.d, g.off)); }
     else if (c.kind === 'wfaq') {
       docs = faqDocs(wahaDocs); less = null;   // (a Wahapedia FAQ: in the FAQ / errata of its pages)
       const q = /^(.*?\?)\s+(.*)$/.exec(c.body);
@@ -1711,7 +1715,10 @@ const LINE_FIXTURES = [
   ['*Wahapedia core rules errata (Pact of Sorcery): you do not gain the 1CP while your **WARLORD** is **destroyed**.*', GW_ALL, WAHA_CORE, false],
   ['*Wahapedia core rules errata (13.09 Consolidation Move): Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight*', GW_ALL, WAHA_CORE, false],
   ['*Wahapedia core rules errata (12.08 Consolidation Move): For example, if an ability gave a unit +1 OC until the end of the turn, at the end of the turn, that unit would still have +1 OC.*', GW_ALL, WAHA_CORE, false],
-  ['*Wahapedia core rules errata (12.08 Consolidation Move): Consolidation Move, After Moving Section, Ongoing Consolidation*', GW_ALL, WAHA_CORE, false]];
+  ['*Wahapedia core rules errata (12.08 Consolidation Move): Consolidation Move, After Moving Section, Ongoing Consolidation*', GW_ALL, WAHA_CORE, false],
+  // ("Wahapedia core rules (…)": Wahapedia's core rules, and not GW's Core Rules PDF)
+  ['*Wahapedia core rules (12.08, not in GW’s Core Rules PDF, 01-06): Your unit must be unengaged and within range of the selected objective.*', GW_ALL, WAHA_CORE, true],
+  ['*Wahapedia core rules (12.08, not in GW’s Core Rules PDF, 01-06): Each model that is moved must end its move within range of the selected objective if possible, or closer to it if not.*', GW_ALL, WAHA_CORE, false]];
 { const f0 = failures.length, p0 = prov.length, a0 = appWritten.length, l0 = labelColons.length, c0 = Object.assign({}, checked), bad = [];
   for (const [line, gw, waha, ok] of LINE_FIXTURES) { const n0 = failures.length; checkLines('fixture', 'fixture', 'fixture', 'text', line, gw, waha); if ((failures.length === n0) !== ok) bad.push([line, ok]); }
   failures.splice(f0); prov.splice(p0); appWritten.splice(a0); labelColons.splice(l0); for (const k of Object.keys(checked)) delete checked[k]; Object.assign(checked, c0);
