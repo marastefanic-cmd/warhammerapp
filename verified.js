@@ -1,9 +1,9 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "065d36d2d7",
- "data": "2026-11-02.4",
- "date": "2 Nov 2026",
+ "build": "f5b46af566",
+ "data": "2026-11-03.1",
+ "date": "3 Nov 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
@@ -172,6 +172,10 @@ window.WH_VERIFIED = {
   "BOXES.st": {
    "what": "one stat box: a characteristic of a unit’s models GW’s sentence changes, as the catalogue (effects.js ST) reads it; the line under the unit’s profile (“Not Battle-shocked: OC 7”)",
    "cols": "quote:gw st:derived on:derived reach:derived scope:derived"
+  },
+  "BUILD_INDEX": {
+   "what": "what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values over BSData’s): written by verify/build-index.js",
+   "cols": "labels:derived marks:derived gw:derived battleSizes:derived upgrades:derived"
   }
  }
 };

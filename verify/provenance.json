@@ -164,10 +164,22 @@
    "sha256": "8784a40050fde8d531844cf604dfdc1c324327e4d77da9f42f3306392f0ae9c1"
   },
   {
+   "id": "wahafaq:wahahtml:orks",
+   "label": "Wahapedia orks (its FAQ and errata)",
+   "file": "verify/.cache/waha/orks.html",
+   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+  },
+  {
    "id": "wahahtml:orks",
    "label": "Wahapedia orks",
    "file": "verify/.cache/waha/orks.html",
    "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+  },
+  {
+   "id": "wahafaq:wahahtml:imperial-knights",
+   "label": "Wahapedia imperial-knights (its FAQ and errata)",
+   "file": "verify/.cache/waha/imperial-knights.html",
+   "sha256": "cd6b75588341f28c2705a5ec7c2208e4319c6d0bf07a21a3886db0d6b595caa9"
   },
   {
    "id": "wahahtml:imperial-knights",
@@ -176,10 +188,22 @@
    "sha256": "cd6b75588341f28c2705a5ec7c2208e4319c6d0bf07a21a3886db0d6b595caa9"
   },
   {
+   "id": "wahafaq:wahahtml:world-eaters",
+   "label": "Wahapedia world-eaters (its FAQ and errata)",
+   "file": "verify/.cache/waha/world-eaters.html",
+   "sha256": "7609b464b76e1f11635f1ad45d560c796142a13567e11504e5a18c090ddae8a1"
+  },
+  {
    "id": "wahahtml:world-eaters",
    "label": "Wahapedia world-eaters",
    "file": "verify/.cache/waha/world-eaters.html",
    "sha256": "7609b464b76e1f11635f1ad45d560c796142a13567e11504e5a18c090ddae8a1"
+  },
+  {
+   "id": "wahafaq:wahahtml:thousand-sons",
+   "label": "Wahapedia thousand-sons (its FAQ and errata)",
+   "file": "verify/.cache/waha/thousand-sons.html",
+   "sha256": "97b1480448fd9cf67fb816a54cfb8aa7ccd8d45c8838867a1cba939a4ca7666b"
   },
   {
    "id": "wahahtml:thousand-sons",
@@ -188,10 +212,22 @@
    "sha256": "97b1480448fd9cf67fb816a54cfb8aa7ccd8d45c8838867a1cba939a4ca7666b"
   },
   {
+   "id": "wahafaq:wahahtml:tyranids",
+   "label": "Wahapedia tyranids (its FAQ and errata)",
+   "file": "verify/.cache/waha/tyranids.html",
+   "sha256": "d200e7bceb8b757e48a637008a989b1b690e3918596faf318f67264644244cf7"
+  },
+  {
    "id": "wahahtml:tyranids",
    "label": "Wahapedia tyranids",
    "file": "verify/.cache/waha/tyranids.html",
    "sha256": "d200e7bceb8b757e48a637008a989b1b690e3918596faf318f67264644244cf7"
+  },
+  {
+   "id": "wahafaq:wahahtml:adeptus-mechanicus",
+   "label": "Wahapedia adeptus-mechanicus (its FAQ and errata)",
+   "file": "verify/.cache/waha/adeptus-mechanicus.html",
+   "sha256": "72a35cd059776363def7febc4444afcd2e93bbce7c1e91ac4d8f06660123fd60"
   },
   {
    "id": "wahahtml:adeptus-mechanicus",
@@ -200,10 +236,22 @@
    "sha256": "72a35cd059776363def7febc4444afcd2e93bbce7c1e91ac4d8f06660123fd60"
   },
   {
+   "id": "wahafaq:wahahtml:emperors-children",
+   "label": "Wahapedia emperors-children (its FAQ and errata)",
+   "file": "verify/.cache/waha/emperors-children.html",
+   "sha256": "d51c66edf227f9ad1cfeced6f4e3350612211af52461531d224705de499a770b"
+  },
+  {
    "id": "wahahtml:emperors-children",
    "label": "Wahapedia emperors-children",
    "file": "verify/.cache/waha/emperors-children.html",
    "sha256": "d51c66edf227f9ad1cfeced6f4e3350612211af52461531d224705de499a770b"
+  },
+  {
+   "id": "wahafaq:wahahtml:chaos-knights",
+   "label": "Wahapedia chaos-knights (its FAQ and errata)",
+   "file": "verify/.cache/waha/chaos-knights.html",
+   "sha256": "fd1ab9e09637c57491d66c4d6ecbf284358a3d6ad73d5f9af0428acbdcd89a5e"
   },
   {
    "id": "wahahtml:chaos-knights",
@@ -212,10 +260,22 @@
    "sha256": "fd1ab9e09637c57491d66c4d6ecbf284358a3d6ad73d5f9af0428acbdcd89a5e"
   },
   {
+   "id": "wahafaq:wahahtml:adeptus-custodes",
+   "label": "Wahapedia adeptus-custodes (its FAQ and errata)",
+   "file": "verify/.cache/waha/adeptus-custodes.html",
+   "sha256": "87fc3c5c0b21e5246f0df8f0c20825ee2ae071661edf1b69b7e7cff437697fef"
+  },
+  {
    "id": "wahahtml:adeptus-custodes",
    "label": "Wahapedia adeptus-custodes",
    "file": "verify/.cache/waha/adeptus-custodes.html",
    "sha256": "87fc3c5c0b21e5246f0df8f0c20825ee2ae071661edf1b69b7e7cff437697fef"
+  },
+  {
+   "id": "wahafaq:wahahtml:ultramarines",
+   "label": "Wahapedia ultramarines (its FAQ and errata)",
+   "file": "verify/.cache/waha/ultramarines.html",
+   "sha256": "c1515725aa7a4d80f283242576935365a9da8d92d999536ccc300b3516b5fbd3"
   },
   {
    "id": "wahahtml:ultramarines",
@@ -224,10 +284,22 @@
    "sha256": "c1515725aa7a4d80f283242576935365a9da8d92d999536ccc300b3516b5fbd3"
   },
   {
+   "id": "wahafaq:wahahtml:chaos-daemons",
+   "label": "Wahapedia chaos-daemons (its FAQ and errata)",
+   "file": "verify/.cache/waha/chaos-daemons.html",
+   "sha256": "2ee4c3ea3543cfa74eb2edff1b308649b159e41b786d7fba451ee1e8cda451cf"
+  },
+  {
    "id": "wahahtml:chaos-daemons",
    "label": "Wahapedia chaos-daemons",
    "file": "verify/.cache/waha/chaos-daemons.html",
    "sha256": "2ee4c3ea3543cfa74eb2edff1b308649b159e41b786d7fba451ee1e8cda451cf"
+  },
+  {
+   "id": "wahafaq:wahahtml:chaos-space-marines",
+   "label": "Wahapedia chaos-space-marines (its FAQ and errata)",
+   "file": "verify/.cache/waha/chaos-space-marines.html",
+   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
   },
   {
    "id": "wahahtml:chaos-space-marines",
@@ -236,16 +308,34 @@
    "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
   },
   {
+   "id": "wahafaq:wahahtml:necrons",
+   "label": "Wahapedia necrons (its FAQ and errata)",
+   "file": "verify/.cache/waha/necrons.html",
+   "sha256": "3781907ddd28ebe643406fe554eefa0cf042edf817e41063a81364923e648e11"
+  },
+  {
    "id": "wahahtml:necrons",
    "label": "Wahapedia necrons",
    "file": "verify/.cache/waha/necrons.html",
    "sha256": "3781907ddd28ebe643406fe554eefa0cf042edf817e41063a81364923e648e11"
   },
   {
+   "id": "wahafaq:wahahtml:core",
+   "label": "Wahapedia core rules (its FAQ and errata)",
+   "file": "verify/.cache/waha/core.html",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
    "id": "wahahtml:core",
    "label": "Wahapedia core rules",
    "file": "verify/.cache/waha/core.html",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "id": "wahafaq:wahahtml:imperial-agents",
+   "label": "Wahapedia imperial-agents (its FAQ and errata)",
+   "file": "verify/.cache/waha/imperial-agents.html",
+   "sha256": "582a156914cd1cbd1a90aa2573be80babde1d49ebc9d5e307ab6c1e17c21671b"
   },
   {
    "id": "wahahtml:imperial-agents",
@@ -260,10 +350,22 @@
    "sha256": "93d9392450c955b6d0146657a4e2f9b08e15e41ed2f12e9e007a519a55e7f61b"
   },
   {
+   "id": "wahafaq:wahads:orks_Ghazghkull-Thraka",
+   "label": "Wahapedia datasheet Ghazghkull-Thraka (its FAQ and errata)",
+   "file": "verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html",
+   "sha256": "2f3a3d2d690058c526c7b7331b4c21a0b63ba5f94ee32317f11bc98f4d8520aa"
+  },
+  {
    "id": "wahads:orks_Ghazghkull-Thraka",
    "label": "Wahapedia datasheet Ghazghkull-Thraka",
    "file": "verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html",
    "sha256": "2f3a3d2d690058c526c7b7331b4c21a0b63ba5f94ee32317f11bc98f4d8520aa"
+  },
+  {
+   "id": "wahafaq:wahads:tyranids_The-Swarmlord",
+   "label": "Wahapedia datasheet The-Swarmlord (its FAQ and errata)",
+   "file": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html",
+   "sha256": "b7952c4f9b46d19acbc53bde16a541c90c33367d1f459d42e99c8396b147fee9"
   },
   {
    "id": "wahads:tyranids_The-Swarmlord",
@@ -272,10 +374,22 @@
    "sha256": "b7952c4f9b46d19acbc53bde16a541c90c33367d1f459d42e99c8396b147fee9"
   },
   {
+   "id": "wahafaq:wahads:tyranids_Biovores",
+   "label": "Wahapedia datasheet Biovores (its FAQ and errata)",
+   "file": "verify/.cache/waha/ds/tyranids_Biovores.html",
+   "sha256": "edfb23d4a4677ef219bc407b5823d46430a3dd241a27cbac09cb0c59fb6a8ebb"
+  },
+  {
    "id": "wahads:tyranids_Biovores",
    "label": "Wahapedia datasheet Biovores",
    "file": "verify/.cache/waha/ds/tyranids_Biovores.html",
    "sha256": "edfb23d4a4677ef219bc407b5823d46430a3dd241a27cbac09cb0c59fb6a8ebb"
+  },
+  {
+   "id": "wahafaq:wahads:adeptus-mechanicus_Belisarius-Cawl",
+   "label": "Wahapedia datasheet Belisarius-Cawl (its FAQ and errata)",
+   "file": "verify/.cache/waha/ds/adeptus-mechanicus_Belisarius-Cawl.html",
+   "sha256": "69e7ff841ef9950e313fa5769323765f0f78cfe29b4e5dc2f8bbedcdcaefd63e"
   },
   {
    "id": "wahads:adeptus-mechanicus_Belisarius-Cawl",
@@ -284,10 +398,22 @@
    "sha256": "69e7ff841ef9950e313fa5769323765f0f78cfe29b4e5dc2f8bbedcdcaefd63e"
   },
   {
+   "id": "wahafaq:wahads:adeptus-mechanicus_Thulia-Ghuld",
+   "label": "Wahapedia datasheet Thulia-Ghuld (its FAQ and errata)",
+   "file": "verify/.cache/waha/ds/adeptus-mechanicus_Thulia-Ghuld.html",
+   "sha256": "d62d1402063399b5d3f771966d95b9170ae0f10330d752e77390e7658a16ff88"
+  },
+  {
    "id": "wahads:adeptus-mechanicus_Thulia-Ghuld",
    "label": "Wahapedia datasheet Thulia-Ghuld",
    "file": "verify/.cache/waha/ds/adeptus-mechanicus_Thulia-Ghuld.html",
    "sha256": "d62d1402063399b5d3f771966d95b9170ae0f10330d752e77390e7658a16ff88"
+  },
+  {
+   "id": "wahafaq:wahads:adeptus-custodes_Trajann-Valoris",
+   "label": "Wahapedia datasheet Trajann-Valoris (its FAQ and errata)",
+   "file": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html",
+   "sha256": "98201c144766b7aec46fa5816063b06ac04cae56c0d5d190c7a3b312caffe91a"
   },
   {
    "id": "wahads:adeptus-custodes_Trajann-Valoris",
@@ -296,10 +422,22 @@
    "sha256": "98201c144766b7aec46fa5816063b06ac04cae56c0d5d190c7a3b312caffe91a"
   },
   {
+   "id": "wahafaq:wahads:ultramarines_Roboute-Guilliman",
+   "label": "Wahapedia datasheet Roboute-Guilliman (its FAQ and errata)",
+   "file": "verify/.cache/waha/ds/ultramarines_Roboute-Guilliman.html",
+   "sha256": "446633518083122dd761b5b8a592d73257e4615e24814637c7172e3ca7344159"
+  },
+  {
    "id": "wahads:ultramarines_Roboute-Guilliman",
    "label": "Wahapedia datasheet Roboute-Guilliman",
    "file": "verify/.cache/waha/ds/ultramarines_Roboute-Guilliman.html",
    "sha256": "446633518083122dd761b5b8a592d73257e4615e24814637c7172e3ca7344159"
+  },
+  {
+   "id": "wahafaq:wahads:chaos-daemons_Pink-Horrors",
+   "label": "Wahapedia datasheet Pink-Horrors (its FAQ and errata)",
+   "file": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html",
+   "sha256": "8591132469f85503fb25901fb2ae63dd1371d73c119a8a688cc4c0b10d770925"
   },
   {
    "id": "wahads:chaos-daemons_Pink-Horrors",
@@ -308,10 +446,22 @@
    "sha256": "8591132469f85503fb25901fb2ae63dd1371d73c119a8a688cc4c0b10d770925"
   },
   {
+   "id": "wahafaq:wahads:adeptus-custodes_Allarus-Custodians",
+   "label": "Wahapedia datasheet Allarus-Custodians (its FAQ and errata)",
+   "file": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html",
+   "sha256": "9da98a472be2742df0b74b244ea25b29eae5a235e65bed814e7b1f7f71352549"
+  },
+  {
    "id": "wahads:adeptus-custodes_Allarus-Custodians",
    "label": "Wahapedia datasheet Allarus-Custodians",
    "file": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html",
    "sha256": "9da98a472be2742df0b74b244ea25b29eae5a235e65bed814e7b1f7f71352549"
+  },
+  {
+   "id": "wahafaq:wahads:chaos-daemons_Fluxmaster",
+   "label": "Wahapedia datasheet Fluxmaster (its FAQ and errata)",
+   "file": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html",
+   "sha256": "dd5dffe0d10e4cdb5daf0bb0f4a78955ce256a113cdcdc7d5526605efb6bde5a"
   },
   {
    "id": "wahads:chaos-daemons_Fluxmaster",
@@ -320,10 +470,22 @@
    "sha256": "dd5dffe0d10e4cdb5daf0bb0f4a78955ce256a113cdcdc7d5526605efb6bde5a"
   },
   {
+   "id": "wahafaq:wahads:chaos-daemons_Blue-Horrors",
+   "label": "Wahapedia datasheet Blue-Horrors (its FAQ and errata)",
+   "file": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html",
+   "sha256": "3045cec655906a7503919a514482efbf3fcfa3b670fda98ae8cd290a7db2f809"
+  },
+  {
    "id": "wahads:chaos-daemons_Blue-Horrors",
    "label": "Wahapedia datasheet Blue-Horrors",
    "file": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html",
    "sha256": "3045cec655906a7503919a514482efbf3fcfa3b670fda98ae8cd290a7db2f809"
+  },
+  {
+   "id": "wahafaq:wahads:tyranids_Tyrant-Guard",
+   "label": "Wahapedia datasheet Tyrant-Guard (its FAQ and errata)",
+   "file": "verify/.cache/waha/ds/tyranids_Tyrant-Guard.html",
+   "sha256": "aee0cda9a3eb64719f306bae4632e43df2eec600f0e8ea812c92f8c8ebf80939"
   },
   {
    "id": "wahads:tyranids_Tyrant-Guard",
@@ -1361,32 +1523,32 @@
    "item": "core / rule:Hazard Roll / text",
    "field": "text",
    "text": "*Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model ",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § 06.03 Hazard Rolls",
+   "doc": "wahafaq:wahahtml:core",
+   "where": "Wahapedia core rules § FAQ / Errata",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
    "item": "core / rule:Hazard Roll / text",
    "field": "text",
    "text": "*Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model ",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § 06.03 Hazard Rolls",
+   "doc": "wahafaq:wahahtml:core",
+   "where": "Wahapedia core rules § FAQ / Errata",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
    "item": "core / rule:Hazard Roll / text",
    "field": "text",
    "text": "*Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal ",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § Hazard Rolls 06.03",
+   "doc": "wahafaq:wahahtml:core",
+   "where": "Wahapedia core rules § FAQ / Errata",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
    "item": "core / rule:Hazard Roll / text",
    "field": "text",
    "text": "*Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal ",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § Hazard Rolls 06.03",
+   "doc": "wahafaq:wahahtml:core",
+   "where": "Wahapedia core rules § FAQ / Errata",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
@@ -1585,16 +1747,16 @@
    "item": "core / rule:Engagement / text",
    "field": "text",
    "text": "*Wahapedia FAQ: Does my model or unit become engaged while moving through a enem",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § Engagement 03.04",
+   "doc": "wahafaq:wahahtml:core",
+   "where": "Wahapedia core rules § FAQ / Errata",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
    "item": "core / rule:Engagement / text",
    "field": "text",
    "text": "*Wahapedia FAQ: Does my model or unit become engaged while moving through a enem",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § Engagement 03.04",
+   "doc": "wahafaq:wahahtml:core",
+   "where": "Wahapedia core rules § FAQ / Errata",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
@@ -1937,16 +2099,16 @@
    "item": "core / rule:Charge / text",
    "field": "text",
    "text": "*Wahapedia FAQ: When a rule instructs you to perform a charge outside of the cha",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § Failed Charges 11.02.01",
+   "doc": "wahafaq:wahahtml:core",
+   "where": "Wahapedia core rules § FAQ / Errata",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
    "item": "core / rule:Charge / text",
    "field": "text",
    "text": "*Wahapedia FAQ: When a rule instructs you to perform a charge outside of the cha",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § Failed Charges 11.02.01",
+   "doc": "wahafaq:wahahtml:core",
+   "where": "Wahapedia core rules § FAQ / Errata",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
@@ -2289,14 +2451,14 @@
    "item": "core / rule:Consolidation Move / text",
    "field": "text",
    "text": "*Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Co",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § 3. End of Charge Phase 11.03",
+   "doc": "wahafaq:wahahtml:core",
+   "where": "Wahapedia core rules § FAQ / Errata",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
    "item": "core / rule:Consolidation Move / text",
    "field": "text",
-   "text": "*Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Objective ",
+   "text": "*Wahapedia core rules (12.08, not in GW’s Core Rules PDF, 01-06): Your unit must",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 4. Consolidate 12.07",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
@@ -2409,16 +2571,16 @@
    "item": "core / rule:Attached Units / text",
    "field": "text",
    "text": "*Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply ",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § Revived 01.02.03",
+   "doc": "wahafaq:wahahtml:core",
+   "where": "Wahapedia core rules § FAQ / Errata",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
    "item": "core / rule:Attached Units / text",
    "field": "text",
    "text": "*Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply ",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § Revived 01.02.03",
+   "doc": "wahafaq:wahahtml:core",
+   "where": "Wahapedia core rules § FAQ / Errata",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
@@ -11917,8 +12079,8 @@
    "item": "orks / armyRule:Da Boss / text (marked lines)",
    "field": "text (marked lines)",
    "text": "*Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s prin",
-   "doc": "wahahtml:core",
-   "where": "Wahapedia core rules § 1. Start of Battle Round 07.01",
+   "doc": "wahafaq:wahahtml:core",
+   "where": "Wahapedia core rules § FAQ / Errata",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   },
   {
@@ -12418,32 +12580,32 @@
    "item": "chaos-space-marines / armyRule:Dark Pacts / text (marked lines)",
    "field": "text (marked lines)",
    "text": "*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets ",
-   "doc": "wahahtml:chaos-space-marines",
-   "where": "Wahapedia chaos-space-marines § Chaos Space Marines",
+   "doc": "wahafaq:wahahtml:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § FAQ / Errata",
    "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
   },
   {
    "item": "chaos-space-marines / armyRule:Dark Pacts / text (marked lines)",
    "field": "text (marked lines)",
    "text": "*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets ",
-   "doc": "wahahtml:chaos-space-marines",
-   "where": "Wahapedia chaos-space-marines § Chaos Space Marines",
+   "doc": "wahafaq:wahahtml:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § FAQ / Errata",
    "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
   },
   {
    "item": "chaos-space-marines / armyRule:Dark Pacts / text (marked lines)",
    "field": "text (marked lines)",
    "text": "*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratag",
-   "doc": "wahahtml:chaos-space-marines",
-   "where": "Wahapedia chaos-space-marines § FAQ",
+   "doc": "wahafaq:wahahtml:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § FAQ / Errata",
    "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
   },
   {
    "item": "chaos-space-marines / armyRule:Dark Pacts / text (marked lines)",
    "field": "text (marked lines)",
    "text": "*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratag",
-   "doc": "wahahtml:chaos-space-marines",
-   "where": "Wahapedia chaos-space-marines § FAQ",
+   "doc": "wahafaq:wahahtml:chaos-space-marines",
+   "where": "Wahapedia chaos-space-marines § FAQ / Errata",
    "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
   },
   {

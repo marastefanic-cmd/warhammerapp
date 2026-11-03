@@ -1,6 +1,6 @@
 {
- "hash": "065d36d2d793c8fdaf9db625b590d3013c0c767ea3ae883e10f1f190d961a9d7",
- "at": "2026-11-02T17:59:56.561Z",
+ "hash": "f5b46af566b78179121fedbb25061a842adf3178760fee10f8165edd34eb0793",
+ "at": "2026-11-03T10:01:27.935Z",
  "ok": true,
  "steps": {
   "data": {
@@ -13,7 +13,7 @@
   },
   "fingerprints": {
    "ok": true,
-   "summary": "fingerprints: 182 of 182 AI-written values (gist, def) and 0 of 0 readings (0 derived) match the text they were written or read from"
+   "summary": "fingerprints: 182 of 182 AI-written values (gist, def) and 85 of 85 readings (0 derived) match the text they were written or read from"
   },
   "readings": {
    "ok": true,
@@ -90,6 +90,10 @@
   "reimport": {
    "ok": true,
    "summary": "reimport: all 24 New Recruit exports re-import to data.js byte for byte (5 files each: data.js, verify/deviations-bsdata.json, verify/deviations-nr.json, verify/sources/waha-datasheets.txt, verify/sources/bsdata-extract.json); every hand-file entry has its reason; every id kept from data.js is named in its hand file"
+  },
+  "derived": {
+   "ok": true,
+   "summary": "derived: 117 of 137 derived columns held by the script they name: a change of one value fails its step (texts 4, fingerprints 8, derive 41, evidence 29, lines 7, catalog 1, tables 7, reimport 1, defence 13, readings 1, build-parity › build-index.js 5; 117 kept from a run of the same code); 20 with no value stored in data.js; verify/out/derived-proof.json"
   },
   "screens": {
    "ok": true,
