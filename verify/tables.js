@@ -1254,7 +1254,10 @@ function screenReads(html, opts){
   const decl = new Map(); for(let i = 0; i < lines.length; i++){ const m = START.exec(lines[i]); if(!m) continue; let j = i + 1; while(j < lines.length && !ENDS.test(lines[j])) j++; decl.set(m[1] || m[2], lines.slice(i, j).join('\n')); }
   // (and the page's other scripts, <script src> of this folder: the code the screens call into, builder.js and import.js's list import,
   // calc.js, effects.js; each read whole, all of it reached; not data.js and verified.js, which are data)
-  const PAGE = opts.page != null ? opts.page : [...html.matchAll(/<script src="([\w./-]+\.js)"><\/script>/g)].map(m => m[1]).filter(f => !['data.js', 'verified.js'].includes(f) && fs.existsSync(path.join(ROOT, f)));
+  // (every <script> tag's src, in any form: defer, async, type="module", single quotes, a query or hash, "./"; and every import('./x.js')
+  // of the page's code and of the scripts it loads, its name a string literal; a local one the scan cannot read is missed: the gate fails)
+  const missed = [];
+  const PAGE = opts.page != null ? opts.page : pageScripts(html, opts.files, missed);
   for(const f of PAGE) decl.set('@' + f, typeof f === 'string' && opts.files && opts.files[f] != null ? opts.files[f] : fs.readFileSync(path.join(ROOT, f), 'utf8'));
   const uncomment = x => x.replace(/\/\*[\s\S]*?\*\/|\/\/[^\n]*/g, ' ');
   const STR = /'(?:[^'\\\n]|\\.)*'|"(?:[^"\\\n]|\\.)*"/g;
@@ -1271,7 +1274,45 @@ function screenReads(html, opts){
     for(const m of c.matchAll(/\{([^{}()]*)\}\s*(?:=(?![=>])|\)\s*=>|\s+of\b|,)/g)) for(const x of m[1].split(',')){ const k = /^\s*(\.\.\.)?\s*([A-Za-z_$][\w$]*)/.exec(x); if(k && !k[1]) props.add(k[2]); }
     for(const site of wholeReads(c)){ whole.push(n + ': ' + site.text); if(/^(?:D|WH_DATA|window\.WH_DATA)$/.test(site.of)) wholeD = true; }
     for(const id of new Set(c.replace(/(?<!\.)\.\s*[A-Za-z_$][\w$]*/g, ' ').replace(/[A-Za-z_$][\w$]*:(?!:)/g, ' ').match(/[A-Za-z_$][\w$]*/g))) if(decl.has(id) && !need.has(id)) todo.push(id); }
-  return { fns:need, props, whole, wholeD };
+  return { fns:need, props, whole, wholeD, missed };
+}
+// the page's own scripts (this folder's, not data.js and verified.js, which are data): their names, as the page loads them; one named but
+// not found, or a tag whose src is no plain name, is pushed to missed (its tag or call, said)
+function pageScripts(html, files, missed){
+  const out = [], seen = new Set(), has = f => (files && files[f] != null) || fs.existsSync(path.join(ROOT, f));
+  const local = (raw, how) => {
+    if(/^(?:[a-z][\w+.-]*:|\/\/)/i.test(raw)) return;   // (another site's, or data:)
+    const f = path.posix.normalize(raw.replace(/[?#].*$/, '').replace(/^\.\//, ''));
+    if(!f || f.startsWith('..') || f.startsWith('/')){ missed.push(how + ' (not a file of this folder)'); return; }
+    if(['data.js', 'verified.js'].includes(f) || seen.has(f)) return;
+    seen.add(f);
+    if(!has(f)){ missed.push(how + ' (' + f + ' not found)'); return; }
+    out.push(f); };
+  const dyn = (code, where) => { for(const m of code.replace(/\/\*[\s\S]*?\*\/|(^|[^:'"\\])\/\/[^\n]*/g, '$1').matchAll(/\bimport\s*\(\s*(?:(['"`])([^'"`$]+)\1|([^)]*))/g)){
+      if(m[2] != null){ if(/\.m?js(?:[?#]|$)/.test(m[2])) local(m[2], where + ' import(' + m[1] + m[2] + m[1] + ')'); }
+      else missed.push(where + ' import(' + String(m[3]).slice(0, 40) + ') (its name is no string literal)'); } };
+  for(const m of html.matchAll(/<script\b([^>]*)>/gi)){
+    const at = m[1]; if(!/\bsrc\s*=/i.test(at)) continue;
+    const x = /\bsrc\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'>]+))/i.exec(at);
+    if(!x || /\$\{|<%|\{\{/.test(x[1] ?? x[2] ?? x[3] ?? '')){ missed.push('<script' + at + '> (its src is no plain name)'); continue; }
+    local(x[1] ?? x[2] ?? x[3], '<script' + at + '>'); }
+  dyn(html, 'app.html');
+  for(let k = 0; k < out.length; k++){ const f = out[k]; dyn(files && files[f] != null ? files[f] : fs.readFileSync(path.join(ROOT, f), 'utf8'), f); }
+  return out;
+}
+// the page-script scan's own fixtures: [the page's script tags and code, the scripts read, how many missed]
+const PAGE_FIXTURES = [
+  ['<script src="builder.js"></script>', 'builder.js', 0], ['<script src="./builder.js"></script>', 'builder.js', 0],
+  ['<script defer src="builder.js"></script>', 'builder.js', 0], ['<script src="builder.js" defer></script>', 'builder.js', 0],
+  ['<script src="builder.js?v=3"></script>', 'builder.js', 0], ['<script type="module" src="builder.js"></script>', 'builder.js', 0],
+  ["<script src='builder.js'></script>", 'builder.js', 0], ["<script>\nconst m = () => import('./builder.js' + (B ? '?v=' + B : ''));\n</script>", 'builder.js', 0],
+  ['<script src="https://example.com/x.js"></script><script src="data.js"></script>', '', 0],
+  ['<script src="no-such-file.js"></script>', '', 1], ['<script>\nimport(name);\n</script>', '', 1]];
+function pageFixtures(){
+  const out = [];
+  for(const [html, want, nMissed] of PAGE_FIXTURES){ const missed = [], got = pageScripts(html, null, missed).join(',');
+    if(got !== want || missed.length !== nMissed) out.push('page-script fixture ' + html.replace(/\n/g, ' ').slice(0, 80) + ': reads ' + (got || 'none') + ', ' + missed.length + ' missed (want ' + (want || 'none') + ', ' + nMissed + ')'); }
+  return out;
 }
 // the reads in code c (strings blanked) that name no column: [{ text, of }] (of: the object read, when it is a plain name)
 function wholeReads(c){
@@ -1602,6 +1643,8 @@ if(require.main === module){
   for(const u of literalFixtures()) fails.push(u);
   for(const u of returnMembers(src).unknown) fails.push('a member of data.js\'s return line that is no table and no function (say it as key:NAME, key:fn(NAME, …) or key:function(…){ … }): ' + u);
   for(const u of returnFixtures(src)) fails.push(u);
+  for(const u of screenReads().missed) fails.push('a script of the page the end-state scan does not read: ' + u);
+  for(const u of pageFixtures()) fails.push(u);
   for(const u of stratIds(D0)) fails.push(u);
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));
   const B = t.B, units = B.armies.reduce((n, a) => n + a.units.length, 0);
