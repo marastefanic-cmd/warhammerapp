@@ -21,6 +21,10 @@
      labels          phases, turn, needs, tags: verify/derive.js's fixed rules, on the words just written (never by hand);
                      where derive.js cannot derive one, or its reading is not the signed-off one (verify/derive-unread.json), the label is left out and listed
      "+" marks       verify/bsdata.js + verify/write-grants.js (BSData's modifiers), as for every list
+     the list        of a catalogued faction (data.js has its whole catalogue): the entry builder.js builds from the export and the
+                     tables, as the phone's import does (WH_BUILDER.build; one builder, docs/catalog.md), this file's source line on it;
+                     this file's own reading of the list is then a check, and the run fails where the two differ. Of another faction:
+                     this file's reading, until the faction's catalogue lands
    and lists everything it could not fill mechanically (verify/out/from-json-<army>.md), each marked as what a person (or
    an AI, marked as such) still writes. A stratagem's gist is such a column: it is written AI-assisted and marked
    (data.js comment "gist: AI-written").
@@ -2023,6 +2027,46 @@ for (const sc of ['verify/derive.js', 'verify/effects-migrate.js']) {
   const r = spawnSync(process.execPath, [path.join(ROOT, sc), '--write'], { cwd: ROOT, encoding: 'utf8' });
   filled.push({ what: (r.stdout || r.stderr || '').trim().split('\n').pop(), from: sc + ' --write' });
 }
+// ---------------------------------------------------------------- the list itself: builder.js, as on the phone (one builder)
+// A list of a catalogued faction (data.js has its whole catalogue: DATASHEETS rows with GW's points) is the list builder.js
+// (WH_BUILDER.build, the phone's import) builds from the export and data.js's tables alone: its ARMIES entry is builder.js's, byte for
+// byte, with this file's source line (the day the export was committed, or the hand file's). This file's own reading above is what
+// gives the tables their facts (BSData, Wahapedia's pages, GW's documents, the hand file: the Node-only part); its own entry for the list
+// is kept only as a check: where it is not builder.js's, the list is builder.js's, the difference is listed and this run fails (so the
+// two never part silently; verify/reimport.js fails on it). A faction with no catalogue keeps this file's entry (builder.js refuses it:
+// the phone copies such a list, import.js) until its catalogue lands (verify/from-bsdata.js).
+const listFrom = (() => {
+  if (REFS) return { from: 'verify/from-json.js', why: '--refs: only the list’s reference sheets are this run’s' };
+  // (builder.js and effects.js keep their tables on window where there is one, as in the browser: this file's loadD made one)
+  const E = require('../effects.js'); globalThis.WH_EFFECTS = E; if (global.window) global.window.WH_EFFECTS = E;
+  const W = require('../builder.js');
+  const loadRaw = () => { const w = {}; new Function('window', fs.readFileSync(DATA, 'utf8').replace(/\nreturn \{ version:VERSION,/, '\nreturn { RAW:{ ARMIES }, version:VERSION,'))(w); return w.WH_DATA; };
+  let D1 = loadRaw();
+  if (!W.catalogued(D1, factionId)) return { from: 'verify/from-json.js', why: (D1.factions[factionId] || {}).name + ' has no faction catalogue in data.js (catalogued: ' + W.catalogues(D1).join(', ') + ')' };
+  // (what builder.js reads beyond the other tables, BUILD_INDEX, written from them: this list's "+" marks among them)
+  spawnSync(process.execPath, [path.join(ROOT, 'verify/build-index.js'), '--write'], { cwd: ROOT, encoding: 'utf8' });
+  D1 = loadRaw();
+  const r = W.build(J, D1, { id: armyId });
+  if (!r.ok) { want('list', 'builder.js', 'builder.js refuses the export: ' + r.errors.join('; ') + ' (the phone would refuse it too)'); return { from: 'builder.js', refused: r.errors }; }
+  const built = Object.assign({}, r.army, { source: army.source });
+  const have = (D1.RAW.ARMIES || []).find(a => a.id === armyId);
+  if (have && JSON.stringify(have) === JSON.stringify(built)) return { from: 'builder.js', same: true };
+  // (this reading's entry is not builder.js's: builder.js's is the list, and the difference is this run's failure)
+  const a = JSON.stringify(have || null), b = JSON.stringify(built); let i = 0; while (i < a.length && a[i] === b[i]) i++;
+  const diff = { at: i, reading: a.slice(Math.max(0, i - 80), i + 80), builder: b.slice(Math.max(0, i - 80), i + 80) };
+  let d2 = fs.readFileSync(DATA, 'utf8');
+  const s0 = d2.indexOf("{\n  id:'" + armyId + "',");
+  if (s0 < 0) { want('list', 'builder.js', 'no entry ' + armyId + ' in data.js to put builder.js’s in'); return { from: 'builder.js', same: false, diff }; }
+  const e0 = d2.indexOf('\n},\n', s0);
+  d2 = d2.slice(0, s0) + lit(built) + d2.slice(e0 + 2);
+  fs.writeFileSync(DATA, d2);
+  for (const sc of [['verify/tables.js', '--write'], ['verify/derive.js', '--write'], ['verify/effects-migrate.js', '--write'], ['verify/build-index.js', '--write']])
+    spawnSync(process.execPath, [path.join(ROOT, sc[0]), sc[1]], { cwd: ROOT, encoding: 'utf8' });
+  want('list', 'builder.js', 'this run’s reading of the list is not builder.js’s entry (at ' + i + ': reading …' + diff.reading + '…, builder.js …' + diff.builder + '…): data.js has builder.js’s; make the two agree');
+  return { from: 'builder.js', same: false, diff };
+})();
+filled.push({ what: 'the list’s entry: ' + (listFrom.from === 'builder.js' ? 'builder.js (WH_BUILDER.build, as the phone builds it)' + (listFrom.same ? ', the same as this reading’s' : '') : 'this file’s reading (' + listFrom.why + ')'), from: listFrom.from });
 fs.writeFileSync(path.join(ROOT, 'verify/out/from-json-' + armyId + '.md'), report());
-fs.writeFileSync(path.join(ROOT, 'verify/out/from-json-' + armyId + '.json'), JSON.stringify({ todo, filled, devs, modified: bsChecked.modified, datasheets: [...dsWant] }, null, 1) + '\n');
-console.log('wrote ' + armyId + ' into data.js: ' + units.length + ' units; ' + todo.length + ' not filled mechanically (verify/out/from-json-' + armyId + '.md)');
+fs.writeFileSync(path.join(ROOT, 'verify/out/from-json-' + armyId + '.json'), JSON.stringify({ todo, filled, devs, modified: bsChecked.modified, datasheets: [...dsWant], list: listFrom }, null, 1) + '\n');
+console.log('wrote ' + armyId + ' into data.js: ' + units.length + ' units; ' + todo.length + ' not filled mechanically (verify/out/from-json-' + armyId + '.md); the list’s entry: ' + listFrom.from);
+if (listFrom.from === 'builder.js' && !listFrom.same) { console.error('from-json: ' + armyId + ': ' + (listFrom.refused ? 'builder.js refuses the export: ' + listFrom.refused.join('; ') : 'this reading’s entry is not builder.js’s (verify/out/from-json-' + armyId + '.json list.diff)')); process.exit(1); }
