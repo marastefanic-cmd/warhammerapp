@@ -1,0 +1,9 @@
+{
+ "about": "sha256 of each file of verify/reader2/ (its readings apart) as last reviewed: the gate step agree fails (R3) on any other; after a review, node verify/agree.js --pin",
+ "files": {
+  "README.md": "0905dc3dcec01127a01d6a872070fac9878d2e953f5d6076bf26c1fa5d759855",
+  "reader2.js": "9b96be93397525bbb692707ad3b4357ed2ac8f03774489f6a9b829374a6f0814",
+  "sources.js": "266d59f78672f48d3051d2e0ec12f8342f0395bd4388d9494afa309fed12d28b",
+  "test.js": "1813423844bfdc0799b9b693872b09b91bdfa7c11c72baf6a372d7acf0dbf250"
+ }
+}

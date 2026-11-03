@@ -52,6 +52,9 @@ const M = require('./effects-migrate');
 
 const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'alreadyIn', 'alreadyInRule', 'allStratagems', 'canTarget', 'hasRule', 'unitDetRules']);
 const D = dm.D, A = dm.app, fails = [], stats = {};
+// the boxes as the screens count them (the two-reader rule: data.js AGREE, effects.js agreed): the footnotes, the lines under a profile and
+// the Damaged bands are these; the boxes' own checks (their schema, their words) are of data.js BOXES itself
+const BX = E.agreed(D.boxes, D.agree);
 const fail = (g, where, what) => fails.push(g + ' ' + where + ': ' + what);
 
 // ---- L0 damaged ----
@@ -148,9 +151,9 @@ let nLines = 0, nRows = 0, nNc = 0;
     if([].concat(u.ranged || [], u.melee || []).some(w => (w.kw || []).some(k => /^lance$/i.test(k)))) srcs.push({ grp:'unit', name:'Lance', key:M.KEY.core('Lance', D.rules.Lance), played:true });
     if(hasK(u, 'Towering') && !hasK(u, 'Aircraft')) srcs.push({ grp:'unit', name:'Plunging Fire', key:M.KEY.core('Plunging Fire', D.rules['Plunging Fire']), played:true });
     const wn = [].concat(u.ranged || [], u.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase());
-    for(const S of srcs){ const o = (D.boxes || {})[S.key]; if(!o) continue;
+    for(const S of srcs){ const o = BX[S.key]; if(!o) continue;
       if(S.played && !o.played) fail('L4', where, S.name + ' is not a played source in BOXES');
-      const bk = bakedOf(u, S.name);
+      const bk = bakedOf(u, S.name); let fell = false;
       for(const b of o.b || []){
         if(S.reachOnly ? !(b.reach && meets(b.reach, u)) : b.reach ? !meets(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;
         if(b.kind !== 'all' && b.kind !== kind) continue;
@@ -162,13 +165,19 @@ let nLines = 0, nRows = 0, nNc = 0;
         const its = ws || items(u, kind), hasAll = l => /^\[.+\]$/.test(l) && its.length && its.every(it => it.ps.every(w => (w.kw || []).some(k => '[' + String(k).toUpperCase() + ']' === l)));
         const keep = fx => (fx || []).filter(([id, p]) => !baked(bk, id, p) && !hasAll(E.fxLabel([[id, p]])) && !(kind === 'melee' && RANGED_FX.has(id)));
         if((b.on || []).some(([id, p]) => (id === 'selfKw' && !hasK(u, p)) || (id === 'selfGear' && !p.every(g => wn.some(n => n.startsWith(String(g).toLowerCase())))))) continue;
+        // (a box the two-reader rule does not confirm, where it would have been a footnote: its rule's words, not counted, below)
+        if(b.unconfirmed){ fell = true; continue; }
         if(b.pick ? !b.pick.some(p => keep(p.fx).length) : !keep(b.fx).length) continue;
         want.push({ S, b, ws, keep });
       }
       // (its words about its attacks no catalogue effect reads: one "not counted here: see the rule" line; not another unit's, not a band's)
-      if(!S.damaged && S.grp !== 'other' && (o.nc || []).some(x => x.atk)){ const ms = got.filter(m => m.ncLine && m.key === S.key);
-        if(ms.length !== 1) fail('L4', where, S.name + ': its words not counted, ' + ms.length + ' "see the rule" lines');
-        else if(ms[0].note !== 'not counted here: see the rule' || ms[0].when) fail('L3', where, S.name + ' not-counted line “' + ms[0].note + '”'); else nNc++; } }
+      // (and a box of it the two-reader rule does not confirm, where it reaches: another unit's too, the unit it is from in its line)
+      const ncWant = !S.damaged && (fell || (S.grp !== 'other' && (o.nc || []).some(x => x.atk && !x.unconfirmed))), msN = got.filter(m => m.ncLine && m.key === S.key);
+      if(ncWant){ const gv = S.grp === 'other' && S.src && S.src !== u ? (g => g && g.who && S.src.leads && (S.src.also || []).some(c => c.name === g.who) ? g.who : S.src.short || S.src.name)((S.src.abilities || []).find(x => x.name === S.name)) : '';
+        const exp = 'not counted here: see the rule' + (gv ? ' (' + gv + ')' : '');
+        if(msN.length !== 1) fail('L4', where, S.name + ': its words not counted, ' + msN.length + ' "see the rule" lines');
+        else if(msN[0].note !== exp || msN[0].when) fail('L3', where, S.name + ' not-counted line “' + msN[0].note + '”, want “' + exp + '”'); else nNc++; }
+      else if(msN.length) fail('L4', where, S.name + ': a "see the rule" line where nothing of it is left out here'); }
     // exactly these, once each
     for(const w of want){ const ms = got.filter(m => m.box === w.b && m.key === w.S.key);
       if(ms.length !== 1){ fail('L4', where, (ms.length ? ms.length + ' footnotes' : 'no footnote') + ' for the box of ' + w.S.name + ' “' + X.plainCase(w.b.quote).slice(0, 70) + '”'); continue; }
@@ -296,7 +305,7 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
   const sw = (id, p, u) => id === 'atStarting' && mc(u) === 1 ? 'Lost no wounds (' + E.STCOND[id].label(p) + ')' : E.STCOND[id] ? E.STCOND[id].label(p) : condWords(id, p, u, '', false);
   for(const a of D.armies){ const F = D.factions[a.faction] || {}, rules = (F.armyRules || []).concat((a.detachments || []).flatMap(id => { const d = (F.detachments || {})[id]; return d && d.rule ? [d.rule].concat(d.moreRules || []) : []; }));
     for(const u of a.units){ const want = [];
-      for(const r of rules) for(const b of ((D.boxes || {})[M.KEY.rule(r)] || {}).st || []){
+      for(const r of rules) for(const b of (BX[M.KEY.rule(r)] || {}).st || []){
         if(!(b.reach ? meetsN(b.reach, u) : r.needs && meetsN(r.needs, u))) continue;
         const on = b.on || [], when = on.length && on.every(([id]) => E.COND[id] && E.COND[id].quoted) ? 'If (see the rule)' : on.map(([id, p]) => sw(id, p, u)).join(' · ');
         for(const [id, p] of b.st){ const f = E.ST[id];
@@ -309,13 +318,13 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
       // (and every snc of its sources, BOXES: its abilities, another unit's aura that reaches it, its army and detachment rules, the
       // stratagems it can be the target of: "<stat>: not counted here: see the rule", once per source and characteristic, not one printed in)
       // (where its words reach: its reach, else a rule's needs; a keyword of the unit it needs, on selfKw)
-      const said = new Set(), snc = (key, name, needs) => { for(const x of ((D.boxes || {})[key] || {}).snc || []){
+      const said = new Set(), snc = (key, name, needs) => { for(const x of (BX[key] || {}).snc || []){
         if(x.reach ? !meetsN(x.reach, u) : needs !== undefined && !(needs && meetsN(needs, u))) continue;
         if((x.on || []).some(([id, p]) => (id === 'selfKw' && !hasK(u, p)) || (id === 'leading' && !u.leads))) continue;
         if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => String([].concat((s.from || {})[x.stat] || []).join(', ')).split(/\s*,\s*/).includes(name)))) continue;
         said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); want.push(name + ' | ' + (x.foe ? 'Enemy units’ ' : '') + x.stat + ': not counted here: see the rule'); } };
       for(const ab of u.abilities || []) snc(M.KEY.ability(ab), ab.name);
-      for(const x of a.units) if(x !== u) for(const ab of x.abilities || []){ const o = (D.boxes || {})[M.KEY.ability(ab)] || {};
+      for(const x of a.units) if(x !== u) for(const ab of x.abilities || []){ const o = BX[M.KEY.ability(ab)] || {};
         if(/\baura\b/i.test(ab.tag || '') && o.reach && meetsN(o.reach, u)) snc(M.KEY.ability(ab), ab.name); }
       // (a rule's: the units that have it, an army rule on its Rules line or its needs met, a detachment rule's needs met)
       const own = new Set(A.inArmy(a, () => A.unitDetRules(u)).map(r => r.name));
@@ -365,7 +374,7 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
   stats.alreadyIn = n; }
 // LB the Damaged band: its words are its boxes' effect labels, and "see the rule" where its words have a part not counted or no box
 { let n = 0;
-  for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) if(ab.damaged){ const o = (D.boxes || {})[M.KEY.ability(ab)] || {};
+  for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) if(ab.damaged){ const o = BX[M.KEY.ability(ab)] || {};
     const exp = [E.fxLabel((o.b || []).flatMap(b => b.fx || [])), (o.nc || []).length || !(o.b || []).length ? 'see the rule' : ''].filter(Boolean).join('; ');
     const got = A.inArmy(a, () => A.dmgBand(ab)); if(got !== exp) fail('LB', a.id + '/' + u.id + ' · ' + ab.name, 'the band says “' + got + '”, its boxes “' + exp + '”'); else n++; }
   stats.bands = n; }
@@ -376,7 +385,9 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
     const lines = html.split('<div class="mod">').slice(1).map(l => l.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"'));
     const groups = new Set(ms.map(m => m.when ? m.when + '\0' + m.from : Math.random()));
     if(lines.length !== groups.size) fail('LG', a.id + '/' + u.id + ' ' + kind, lines.length + ' lines for ' + groups.size + ' conditions and sources');
-    for(const l of lines){ const froms = [...new Set(ms.map(m => m.from))].filter(f => l.includes(f) && !ms.some(x => x.from !== f && x.from.includes(f) && l.includes(x.from)));
+    // (the rule that makes a unit always riled up, named in its "Riled up (…: always riled up)" condition, is no source of the line: Super
+    // Runts, whose own box is a not-counted line of its own where the two-reader rule does not confirm it)
+    for(const l0 of lines){ const l = l0.replace(/\(([^()]*): always riled up\)/g, '(always riled up)'), froms = [...new Set(ms.map(m => m.from))].filter(f => l.includes(f) && !ms.some(x => x.from !== f && x.from.includes(f) && l.includes(x.from)));
       if(froms.length !== 1 && !(froms.length > 1 && froms.every(f => l.includes(f)) && ms.filter(m => froms.includes(m.from)).some(m => froms.some(f => f !== m.from && m.when.includes(f))))) fail('LG', a.id + '/' + u.id + ' ' + kind, 'a line names ' + froms.length + ' sources: “' + l.slice(0, 90) + '”'); else n++; } }
   stats.grouped = n; }
 

@@ -1,0 +1,58 @@
+[
+ {
+  "kind": "review-two-reader-rule",
+  "where": "verify/agree.js (gate step agree); data.js AGREE; verify/sources/agree-verdicts.json",
+  "judgement": {
+   "check": "The owner's two-reader rule is on: a box of BOXES (b, d, st) with an effect counts only where data.js AGREE marks it \"A\" (reader2 agrees, class A), \"V\" (a class-B pair with a reviewed verdict that has GW's quotes and says \"app right\" or \"both right\") or \"core\" (a genuine Core Rules box, see review-core-boxes). AGREE is written by node verify/agree.js --write. The step fails on T (stored table ≠ computed), Q (a verdict quote not in verify/.cache, or not in the words of the pair's own rule: its WHEN / TARGET / EFFECT / RESTRICTIONS, text or table), S (a verdict of no current class-B pair, or the pair or the verdict's own words and quotes not what was bound with --bind), K (a confirmed box in class B or C without a confirming verdict), C (a \"core\" box whose rule is not GW's Core Rules or Wahapedia's core rules text), N (see review-never-silent), R1-R3 (see review-reader2-isolation). Today: 447 boxes compared, 352 A, 25 V, 70 fall back (47 change a number); and Conversion, outside the comparison, falls back too (71 in all, 48 change a number)."
+  },
+  "source": { "gate": "verify/agree.js (agree step)", "commit": "Two-reader rule, steps 1-4" }
+ },
+ {
+  "kind": "review-never-silent",
+  "where": "app.html unitMods, fnReaches, fnGiver, defenceItems, dmBoxRules; effects.js agreed (unconfirmed keeps what it read); verify/agree.js N; verify/lines.js L4; verify/defence.js DL",
+  "judgement": {
+   "check": "The fix for the 53 silent losses: a box that falls back stays in its place with its effects taken off and unconfirmed holding what it read, so every screen applies to it the same reach, kind, weapons and keyword filters as to a counted box. Where it would have been a footnote (for that kind of attack) or a When targeted line, the unit gets one \"not counted here: see the rule\" line for its source, another unit's too, naming the unit it is from: \"not counted here: see the rule (Tech-Priest Enginseer)\" (footnote), \"(Tech-Priest Enginseer)\" after the line (When targeted). A melee-only fallen-back box (Synapse +1 S) no longer shows among a ranged-only unit's lines. On the Damage tab a source whose fallen-back boxes would have counted only for the other kind of attack is left out of that phase, as such a counted box was; one that would not have counted (Shudderblink's [ASSAULT]) is listed as before; a stratagem's are listed. New check N (agree step): per list × unit, every rule named with every box counted (main; damage-node opts.agree 'all') is named still on the same side, counted or not counted: footnotes ranged / melee, When targeted, under the profile, the Damage tab shooting / fight. It passes; the only main-named lines left are the Damaged bands' footnotes (Skarbrand, Tesseract Vault ×2), whose band under the profile says \"see the rule\" (allowed by name). The reviewer's rvs/tools/loss.js on the branch lists only those 5. Mutating unitMods or defenceItems back to silence fails N. L4 and DL expect exactly these lines (their giver, their kind)."
+  },
+  "source": { "gate": "agree N, lines L4/L3, defence DL", "commit": "Two-reader rule, step 4" }
+ },
+ {
+  "kind": "review-core-boxes",
+  "where": "verify/agree.js coreRule, check C; verify/out/agree.json coreBoxes; effects.js DF fnp, DNC starred; verify/defence.js DS; app.html defenceItems (starred line)",
+  "judgement": {
+   "check": "\"core\" is now only a c| box whose rule is a Core Rule: data.js RULES by name or RULE_ALIASES, and not one RULE_SRC gives to a datasheet, army or enhancement. Check C requires its rule's words (first sentence, a source note before it apart) in GW's Core Rules or Wahapedia's core rules text. Kept, each listed with its Core Rules words in verify/out/agree.json coreBoxes: Lance (24.21), Plunging Fire, Damaged 4 and 5 (Wahapedia core 24.39), Feel No Pain 4+ and 5+ (24.12). Conversion (RULE_SRC: the Knight Defender's weapon ability) is 0 and falls back: navigator-sounds-op-ngl's Knight Defender loses one number box (dmsingle shooting: Conversion). Feel No Pain 3+* and 5+*: the extractor read the name's \"5+\" as a plain fnp 5. By a general rule, effects.js DF fnp no longer reads New Recruit's starred X+* (a qualifier it does not say, as it already refuses \"against …\"), and a new DNC entry, starred, lists it as words not counted (why: the rule that gives it has a condition, against Psychic Attacks or mortal wounds, the name does not say). effects-migrate --write changed exactly those two BOXES rows. New check DS (defence step) holds it. The c| box is shared by every unit, so it cannot carry one unit's condition. That condition is read where it is written, in the rule that gives it (Daughters of the Abyss fnpPsychic, Aegis of the Emperor fnpMortal). On the screen the starred Rules-line entry is left out where such a line of the unit gives that value, as before; DL expects that. Check that DNC is the right reading of the star rather than resolving the condition per unit."
+  },
+  "source": { "gate": "agree C, T; defence DS, DL", "commit": "Two-reader rule, step 4" }
+ },
+ {
+  "kind": "review-verdicts",
+  "where": "verify/sources/agree-verdicts.json",
+  "judgement": {
+   "check": "27 verdicts, one per current class-B group lead. Changes since the first review: Avenge the Fallen|0 lost a second quote (\"excluding CHARACTER models\") which was reader2's words, not GW's. It was taken from the review note by the extraction and is caught now that Q requires the pair's own rule. The fingerprint now covers the verdict's words and quotes too, so a hand-flipped verdict (Irresistible Will \"app wrong\" → \"both right\") is stale until reviewed and bound again. All 27 were bound again after that change, with no other edit."
+  },
+  "source": { "gate": "agree Q, S", "commit": "Two-reader rule, step 4" }
+ },
+ {
+  "kind": "review-reader2-isolation",
+  "where": "verify/agree.js R1, R2 (sandbox, strip), R3 (verify/sources/agree-pins.json); verify/reader2/",
+  "judgement": {
+   "check": "R2 now runs reader2 (--test, --check) in a sandbox. It is a temp folder holding a copy of reader2's files and a data.js with only the fields sources.js reads (strip): datasheet and unit names, factions, keywords and abilities {name, tag, who, text}; army and detachment rules {name, tag, text, table, tableAt}; enhancements {name, text}; stratagems {name, when, target, restrictions, effect}; ids. KODEX_APP points there. It runs under node --permission with fs reads allowed only in that folder and verify/.cache (realpath). So BOXES, AGREE, GRANTS, the app's code and verify/out are not there and cannot be read: the readings from the stripped data are byte for byte the stored ones. R3 pins reader2's files (README.md, reader2.js, sources.js, test.js) by sha256: any change fails until it is reviewed and pinned with --pin. The reviewer's bypasses (D.agree, D.grants/checklist/ruleOptions, D['bo'+'xes'], Object.values(D).find(v => v.b), the rq alias require, reading verify/out/agree-pairs.json) all fail R3. Repinned as if a review let them through, the ones that reach outside (the alias require, verify/out, an absolute path to the repo's effects-extract.js or data.js) fail R2: the file is absent or the read is denied. The property reads find nothing in the stripped data. R1 (static) stays as a first, cheap line. switch-work/mutations.json: 36 of 36 caught."
+  },
+  "source": { "gate": "agree R1-R3", "commit": "Two-reader rule, step 4" }
+ },
+ {
+  "kind": "review-fallback-presentation",
+  "where": "effects.js agreed; app.html BOXES_AGREED (every screen); builder.js marksOf; calc.js prep",
+  "judgement": {
+   "check": "As reviewed (ok but for the silent losses, now fixed). Unchanged: a source with several fallen-back boxes quotes only its first sentence on the Damage tab (Enraged Behemoths' Below Half-strength), and \"see the rule\" opens the whole rule. builder.js P1 is still 6 byte for byte; calc.js drops a mod marked unconfirmed."
+  },
+  "source": { "gate": "build-parity, calc", "commit": "Two-reader rule, step 2" }
+ },
+ {
+  "kind": "accept-snapshots",
+  "where": "verify/snapshots (verify/out/snapshots)",
+  "judgement": {
+   "check": "The screen snapshots change where a box falls back (footnotes, When targeted, lines under a profile, the Damage tab), now with the receiving units' \"not counted here: see the rule (giver)\" lines. Three lists with nothing falling back (dread-host, emperors-chosen, super-terminators) change only by the Consolidation Move core-rules note, which is wt-harden's data change. The diffs are in scratchpad switch-work/diffs/; switch-work/changes.md lists every fallen-back box per list. Accept with node verify/run.js --accept after reading them; not accepted here."
+  },
+  "source": { "gate": "snapshots", "commit": "Two-reader rule" }
+ }
+]

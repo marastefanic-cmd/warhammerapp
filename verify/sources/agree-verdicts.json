@@ -1,0 +1,253 @@
+{
+ "about": "The reviewed verdicts of the two-reader rule (verify/agree.js): one per class-B pair (both readers read the sentence and disagree), keyed by reader2’s sentence (owner|source|index). Each was checked by hand against GW’s text in verify/.cache (scratchpad reader-cmp, round 5 against main 0b5f785, 2 Nov 2026). verdict: “app right …” or “both right …” confirms the app’s box (V in data.js AGREE) when quotes holds GW’s words, each found in verify/.cache (check Q); any other verdict leaves the box to fall back. gw: the review’s note; quotes: GW’s words it stands on; pair: the fingerprint of the pair as reviewed (check S: a changed pair makes the verdict stale; review it again, then node verify/agree.js --bind ID).",
+ "verdicts": {
+  "ds:thousand-sons/rubric-marines|Icon of Flame|0": {
+   "verdict": "both right (same reading, different form)",
+   "severity": "none",
+   "gw": "“Ranged weapons equipped by models in the bearer's unit (excluding CHARACTERS) have the [IGNORES COVER] ability.” The app's scope is nonchar and reader2 reads bearerUnit excluding CHARACTER: the same meaning.",
+   "quotes": [
+    "Ranged weapons equipped by models in the bearer's unit (excluding CHARACTERS) have the [IGNORES COVER] ability."
+   ],
+   "pair": "ea4c635f5c8c2582"
+  },
+  "ds:tyranids/the-red-terror|Swallow Whole|0": {
+   "verdict": "both right (fixed on main: the box label now says GW’s words)",
+   "severity": "none: the targetKw carries said “INFANTRY, MOUNTED or BEASTS”, which the label prints; the stored keyword “Beast” is only for matching, and target keywords are the player’s call (dmVs ok:null)",
+   "gw": "“… targets an Infantry, Mounted or Beasts unit, each successful unmodified Wound roll is a Critical Wound.”",
+   "quotes": [
+    "… targets an Infantry, Mounted or Beasts unit, each successful unmodified Wound roll is a Critical Wound."
+   ],
+   "pair": "fb602d57417b92a0"
+  },
+  "ds:adeptus-mechanicus/onager-dunecrawler|Emanatus Force Field|0": {
+   "verdict": "both right (same reading, different form)",
+   "severity": "none",
+   "gw": "“While a friendly ADEPTUS MECHANICUS BATTLELINE model is wholly within 6\" of this model, that BATTLELINE model has a 4+ invulnerable save against ranged attacks.” The app marks it as an aura scoped to BATTLELINE models; reader2 reads an aura.",
+   "quotes": [
+    "While a friendly ADEPTUS MECHANICUS BATTLELINE model is wholly within 6\" of this model, that BATTLELINE model has a 4+ invulnerable save against ranged attacks."
+   ],
+   "pair": "53849616330dddbb"
+  },
+  "ds:chaos-knights/knight-despoiler|Seething Hatred|0": {
+   "verdict": "both right",
+   "severity": "none",
+   "gw": "“Each time this model is selected to shoot or fight …” The Knight Despoiler is a one-model unit, so model and unit are the same.",
+   "quotes": [
+    "Each time this model is selected to shoot or fight …"
+   ],
+   "pair": "ba63e994d4fd544e"
+  },
+  "ds:chaos-space-marines/chaos-predator-annihilator|Annihilator|0": {
+   "verdict": "both right",
+   "severity": "none",
+   "gw": "One-model unit, so “this model” and “this unit” are the same. “allocated to a MONSTER or VEHICLE model” vs the app's targetKw MONSTER/VEHICLE: the same in play.",
+   "quotes": [
+    "allocated to a MONSTER or VEHICLE model"
+   ],
+   "pair": "164c2c6a1538391a"
+  },
+  "ds:chaos-space-marines/chaos-predator-destructor|Destructor|0": {
+   "verdict": "both right",
+   "severity": "none",
+   "gw": "One-model unit: “Each time a ranged attack made by this model targets an enemy INFANTRY unit, improve the Armour Penetration characteristic of that attack by 1.”",
+   "quotes": [
+    "Each time a ranged attack made by this model targets an enemy INFANTRY unit, improve the Armour Penetration characteristic of that attack by 1."
+   ],
+   "pair": "a45b70cf0f84661d"
+  },
+  "det:orks/bully-boyz|Hulking Brutes|1": {
+   "verdict": "both right",
+   "severity": "none",
+   "gw": "As above. The +1CP version: the app conditions it on q “+1CP”, reader2 calls it option 2. Same meaning.",
+   "quotes": [
+    "EFFECT: Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls. +1CP Or: Ranged attacks that target your unit have -1 to wound rolls."
+   ],
+   "pair": "f5a667d3a59dd5e8"
+  },
+  "det:tyranids/synaptic-nexus|Synaptic Imperatives|3": {
+   "verdict": "both right in effect; reader2 omits the duration (label only)",
+   "severity": "none for numbers; the app box now says it lasts the battle round, as GW does",
+   "gw": "“At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army …” reader2 keeps that sentence only as choiceTerms.",
+   "quotes": [
+    "At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army …"
+   ],
+   "pair": "f4267cc14b02bdeb"
+  },
+  "det:tyranids/synaptic-nexus|Synaptic Imperatives|5": {
+   "verdict": "both right in effect; reader2 omits the duration (label only)",
+   "severity": "none for numbers; the app box now says it lasts the battle round, as GW does",
+   "gw": "“At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army …” reader2 keeps that sentence only as choiceTerms.",
+   "quotes": [
+    "At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army …"
+   ],
+   "pair": "f0083af776791c86"
+  },
+  "det:chaos-knights/infernal-lance|Malefic Surge|9": {
+   "verdict": "app incomplete (label); reader2 right",
+   "severity": "less conditional than GW on the label: the box says “select one of the following …” but not that the unit must be Empowered. The player ticks it, so no number is applied by itself",
+   "gw": "Malefic Surge: “… that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.” Unnatural Fortitude: “When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase: 5+ invulnerable save / Feel No Pain 6+.” The app’s Diabolic Power box keeps the Empowered words; its Unnatural Fortitude box does not.",
+   "quotes": [
+    "… that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.",
+    "When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:"
+   ],
+   "note": "round 1 verdict (reader2 wrong) superseded: reader2 now reads it right",
+   "pair": "9ce409bfcd972ee0"
+  },
+  "faction:adeptus-custodes|Daughters of the Abyss|2": {
+   "verdict": "both right",
+   "severity": "none: the app's opt here is only the sub-ability's name, not a choice",
+   "gw": "“Friendly ANATHEMA PSYKANA units with this ability have the following ability: Psychic Null (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.”",
+   "quotes": [
+    "Friendly ANATHEMA PSYKANA units with this ability have the following ability: Psychic Null (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks."
+   ],
+   "pair": "443b5ee885b888ac"
+  },
+  "det:adeptus-custodes/might-of-the-moritoi|Honoured Interred|1": {
+   "verdict": "both right",
+   "severity": "none (opt is the aura's name)",
+   "gw": "“EFFECT: Your unit has the following ability: Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit can re-roll hit rolls of 1.”",
+   "quotes": [
+    "EFFECT: Your unit has the following ability: Honoured Interred (Aura): Friendly ADEPTUS CUSTODES units within 6\" of this unit can re-roll hit rolls of 1."
+   ],
+   "pair": "ad74821ca8a47165"
+  },
+  "det:adeptus-custodes/honoured-companions|Avenge the Fallen|0": {
+   "verdict": "both right",
+   "severity": "none",
+   "gw": "“WHEN: … TRUSTED SENTINEL unit that is below starting strength … EFFECT: Your unit’s melee attacks (excluding those made by CHARACTER models) have +2 A.” The app's scope nonchar ≡ reader2's “excluding CHARACTER models”. The app's belowStarting comes from WHEN.",
+   "quotes": [
+    "WHEN: … TRUSTED SENTINEL unit that is below starting strength … EFFECT: Your unit’s melee attacks (excluding those made by CHARACTER models) have +2 A."
+   ],
+   "pair": "5a4bb5e7963e664a"
+  },
+  "det:orks/bully-boyz|Hulking Brutes|0": {
+   "verdict": "both right",
+   "severity": "none",
+   "gw": "“EFFECT: Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls. +1CP Or: Ranged attacks that target your unit have -1 to wound rolls.” This is the base version; reader2 tags it as option 1 of the +1CP Or-group, and the app leaves it unconditioned. Both are fine.",
+   "quotes": [
+    "EFFECT: Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls. +1CP Or: Ranged attacks that target your unit have -1 to wound rolls."
+   ],
+   "pair": "ddc3c2a6925ca74d"
+  },
+  "ds:adeptus-mechanicus/cybernetica-datasmith|Battle Protocols|3": {
+   "verdict": "both right (app leaves the leading condition implicit)",
+   "severity": "none: the app scopes the box to KASTELAN ROBOT models in the unit, which exist only while the Datasmith leads Kastelan Robots. The box does not say “while leading”",
+   "gw": "“In your Command phase, if this model is leading a KASTELAN ROBOTS unit, you can select one protocol from those listed below for that unit to enter. … Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by KASTELAN ROBOT models in that unit. Conqueror Protocol: … melee weapons … Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit.”",
+   "quotes": [
+    "In your Command phase, if this model is leading a KASTELAN ROBOTS unit, you can select one protocol from those listed below for that unit to enter. … Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by KASTELAN ROBOT models in that unit. Conqueror Protocol: … melee weapons … Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit."
+   ],
+   "pair": "846c72c4c87a5b44"
+  },
+  "ds:adeptus-mechanicus/cybernetica-datasmith|Battle Protocols|4": {
+   "verdict": "both right (app leaves the leading condition implicit)",
+   "severity": "none: the app scopes the box to KASTELAN ROBOT models in the unit, which exist only while the Datasmith leads Kastelan Robots. The box does not say “while leading”",
+   "gw": "“In your Command phase, if this model is leading a KASTELAN ROBOTS unit, you can select one protocol from those listed below for that unit to enter. … Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by KASTELAN ROBOT models in that unit. Conqueror Protocol: … melee weapons … Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit.”",
+   "quotes": [
+    "In your Command phase, if this model is leading a KASTELAN ROBOTS unit, you can select one protocol from those listed below for that unit to enter. … Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by KASTELAN ROBOT models in that unit. Conqueror Protocol: … melee weapons … Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit."
+   ],
+   "pair": "f9f97c177ffd479b"
+  },
+  "ds:adeptus-mechanicus/cybernetica-datasmith|Battle Protocols|5": {
+   "verdict": "both right (app leaves the leading condition implicit)",
+   "severity": "none: the app scopes the box to KASTELAN ROBOT models in the unit, which exist only while the Datasmith leads Kastelan Robots. The box does not say “while leading”",
+   "gw": "“In your Command phase, if this model is leading a KASTELAN ROBOTS unit, you can select one protocol from those listed below for that unit to enter. … Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by KASTELAN ROBOT models in that unit. Conqueror Protocol: … melee weapons … Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit.”",
+   "quotes": [
+    "In your Command phase, if this model is leading a KASTELAN ROBOTS unit, you can select one protocol from those listed below for that unit to enter. … Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by KASTELAN ROBOT models in that unit. Conqueror Protocol: … melee weapons … Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit."
+   ],
+   "pair": "37fd974007849141"
+  },
+  "faction:imperial-knights|Code Chivalric › Quality 1–2 · …with our martial valour risen over all|0": {
+   "verdict": "both right",
+   "severity": "none: the duration is now on the box (fixed on main); model ≡ unit for a one-model Knight",
+   "gw": "Code Chivalric: “Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.” Quality: “Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.” Every Imperial Knights model with Code Chivalric is a one-model unit in these lists, so model ≡ unit.",
+   "quotes": [
+    "Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.",
+    "Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll."
+   ],
+   "pair": "9a0aac7a481657c6"
+  },
+  "faction:adeptus-mechanicus|Doctrina Imperatives › Conqueror Imperative|0": {
+   "verdict": "both right (the app splits the row over two pick boxes and a part)",
+   "severity": "none",
+   "gw": "Conqueror Imperative (errata): “Ranged weapons … have the [ASSAULT] ability. / Improve the Weapon Skill characteristic of melee weapons … by 1. / Each time a model in this unit makes an attack, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, improve the Armour Penetration characteristic of that attack by 1.” The app: ranged pick “Conqueror” = [ASSAULT] with part AP+1 (battleline6); melee pick “Conqueror” = WS+1. reader2: the three rows, AP+1 under battleline6. Same reading; the comparator cannot line a pick split across boxes up automatically.",
+   "quotes": [
+    "Ranged weapons … have the [ASSAULT] ability. / Improve the Weapon Skill characteristic of melee weapons … by 1. / Each time a model in this unit makes an attack, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, improve the Armour Penetration characteristic of that attack by 1."
+   ],
+   "pair": "caaa9ce6909eec9b"
+  },
+  "ds:thousand-sons/daemon-prince-of-tzeentch-with-wings|Hunter of Souls|0": {
+   "verdict": "both right",
+   "severity": "none",
+   "gw": "“Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead).” The app has two boxes (CHARACTER: re-roll 1s; PSYKER+CHARACTER: full re-rolls). reader2 has the same, with the parenthesis as an “instead” alternative. The diff is the comparator matching two targetKw at once.",
+   "quotes": [
+    "Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead)."
+   ],
+   "pair": "984c9e431543e5dd"
+  },
+  "army:purge-goes-the-foe/tech-priest-enginseer|Necromechanic|2": {
+   "verdict": "both right",
+   "severity": "none",
+   "gw": "Necromechanic: “Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.” The app reads LEGIO CYBERNETICA as ADEPTUS MECHANICUS + LEGIO CYBERNETICA (its faction), which is the same set of units; its bearerUses ≡ reader2’s used.",
+   "quotes": [
+    "Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0."
+   ],
+   "pair": "33cdb928704ab3cf"
+  },
+  "det:adeptus-mechanicus/cohort-cybernetica|Necromechanic|2": {
+   "verdict": "both right",
+   "severity": "none",
+   "gw": "Necromechanic: “Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.” The app reads LEGIO CYBERNETICA as ADEPTUS MECHANICUS + LEGIO CYBERNETICA (its faction), which is the same set of units; its bearerUses ≡ reader2’s used.",
+   "quotes": [
+    "Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0."
+   ],
+   "pair": "33cdb928704ab3cf"
+  },
+  "army:infernal-lance/knight-ruinator-fleshmetal-fusion|Fleshmetal Fusion|2": {
+   "verdict": "both right",
+   "severity": "none",
+   "gw": "Fleshmetal Fusion: “While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.” The app keeps “each time an attack with a Damage characteristic of 1” as GW’s words (q); reader2 has attackDamage = 1.",
+   "quotes": [
+    "While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.",
+    "each time an attack with a Damage characteristic of 1"
+   ],
+   "pair": "90d0c07057fc2b3a"
+  },
+  "det:chaos-knights/infernal-lance|Fleshmetal Fusion|2": {
+   "verdict": "both right",
+   "severity": "none",
+   "gw": "Fleshmetal Fusion: “While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.” The app keeps “each time an attack with a Damage characteristic of 1” as GW’s words (q); reader2 has attackDamage = 1.",
+   "quotes": [
+    "While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.",
+    "each time an attack with a Damage characteristic of 1"
+   ],
+   "pair": "90d0c07057fc2b3a"
+  },
+  "det:chaos-knights/infernal-lance|Malefic Surge|6": {
+   "verdict": "both right",
+   "severity": "none",
+   "gw": "Diabolic Power: “When this unit is selected to shoot or fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.” The app has a pick (lethal | sus) with opt Diabolic Power and the Empowered words. reader2 reads the same options on the second sentence, with Empowered. The only diff is the trigger, which the app leaves to the player.",
+   "quotes": [
+    "When this unit is selected to shoot or fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability."
+   ],
+   "pair": "8a49e42ab7ca7eb9"
+  },
+  "det:tyranids/synaptic-nexus|Irresistible Will|0": {
+   "verdict": "app wrong (narrower); reader2 right",
+   "severity": "latent (no list): the app box has no reach, so only the stratagem’s SYNAPSE unit would see it",
+   "gw": "“TARGET: One SYNAPSE unit from your army …, and one enemy unit within 24\" of and visible to the SYNAPSE unit. EFFECT: Until the end of the phase, each time a friendly TYRANIDS model makes an attack that targets that enemy unit, if the attacking model’s unit is within 6\" of your SYNAPSE unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.”",
+   "quotes": [
+    "TARGET: One SYNAPSE unit from your army …, and one enemy unit within 24\" of and visible to the SYNAPSE unit. EFFECT: Until the end of the phase, each time a friendly TYRANIDS model makes an attack that targets that enemy unit, if the attacking model’s unit is within 6\" of your SYNAPSE unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+   ],
+   "pair": "ededa2d035b96da5"
+  },
+  "det:adeptus-custodes/auric-champions|Assemblage of Might|1": {
+   "verdict": "both right",
+   "severity": "none (no list)",
+   "gw": "“In your Command phase, you can select one enemy unit to be a dreadful foe unit until the start of your next Command phase. Friendly ADEPTUS CUSTODES CHARACTER models’ attacks that target a dreadful foe unit have +1 to wound rolls.” The app marks the attackers (CUSTODES CHARACTER models) against the selected unit; reader2 reads friendly CUSTODES CHARACTER models with targetState dreadful foe.",
+   "quotes": [
+    "In your Command phase, you can select one enemy unit to be a dreadful foe unit until the start of your next Command phase. Friendly ADEPTUS CUSTODES CHARACTER models’ attacks that target a dreadful foe unit have +1 to wound rolls."
+   ],
+   "pair": "ea27b393e7f4ccca"
+  }
+ }
+}

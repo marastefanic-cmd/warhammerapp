@@ -1778,6 +1778,16 @@
      "by": "verify/build-index.js"
     }
    }
+  },
+  "AGREE": {
+   "what": "which boxes of BOXES (b, d, st) two independent readings of GW's words confirm, the two-reader rule (the owner's decision, 3 Nov 2026): written by verify/agree.js --write from BOXES, reader2's readings (verify/reader2/) and the reviewed verdicts (verify/sources/agree-verdicts.json); a box not confirmed is shown as GW's words, \"see the rule\", and never counted (effects.js agreed)",
+   "columns": {
+    "boxes": {
+     "source": "derived",
+     "note": "per BOXES key, per field b / d / st, per box: \"A\" both readers agree, \"V\" a reviewed verdict with GW's quote shows the app right, \"core\" a Core Rules box outside the comparison, 0 falls back, null no effect: verify/agree.js, held by the gate step agree (T)",
+     "by": "verify/agree.js"
+    }
+   }
   }
  }
 }

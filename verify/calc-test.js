@@ -445,7 +445,9 @@ const fxCases = [
 for(const x of fxCases) cases.push(x);
 
 // ---- the screen's own choices, through the app's dmCalc (verify/damage-node.js): your unit at the target set by hand ----
-const dm = require('./damage-node')();
+// (every box counted, as if both readers confirmed it: these cases are the engine's and the screen's wiring of each box; what the two-reader
+// rule leaves out, data.js AGREE, is in the cases of the rule itself, after them)
+const dm = require('./damage-node')(undefined, { agree:'all' });
 // (a box by its rule and what it does: the boxes are keyed by their source and place in it, data.js BOXES)
 const exact = (s, k) => { const c = dm.calc(s); return C.explain(c.input).total[k || 'dmg']; };
 const box = (s, from, pred) => dm.calc(s).rules.find(x => x.m.from === from && (!pred || pred(x))) || {};
@@ -1053,6 +1055,23 @@ cases.push(['Precision ticked: the Leader destroyed', () => GBP(true).r.fate[1],
 // without it the bodyguard model first: the Leader only when two of the 10 get through: 1 - (3/4)^10 - 10 × 1/4 × (3/4)^9 = 0.756
 cases.push(['Precision not ticked: the Leader after the bodyguard', () => GBP(false).r.fate[1], 1 - Math.pow(3 / 4, 10) - 10 / 4 * Math.pow(3 / 4, 9), 0.012]);
 cases.push(['target groups: none added, the target as before (one row, the unit-wide Feel No Pain)', () => { const c = dm.calc(GB(undefined)); return +(c.models.length === 1 && c.models[0].name === 'Target' && c.tmod.fnp === 6 && c.ctx.precision == null); }, 1]);
+
+// ---- the two-reader rule (data.js AGREE, verify/agree.js; effects.js agreed): the screen as the app draws it. A box AGREE does not confirm
+// is never a box of the Damage tab: its source is listed with GW's words, "not confirmed by a second reading of GW's words: not counted in
+// the Damage tab"; a confirmed one is counted as before; calc.js drops a rule's effect marked unconfirmed
+const dmA = require('./damage-node')();
+const SKR = { army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{} };
+const ncOf = (s, name) => (dmA.calc(s).nc || []).find(x => x.name.replace(/^\d+CP /, '') === name);
+for(const name of ['Murderous Imperative', 'Unshackled Wrath']){
+  cases.push(['two readers: ' + name + ' (falls back) is no box', () => +!dmA.calc(SKR).rules.some(x => x.m.from === name), 1, 0]);
+  cases.push(['two readers: ' + name + ' is listed with GW’s words, not counted', () => (x => +(!!x && /^“/.test(x.text) && x.why === dmA.WH_EFFECTS.AGREE_WHY + ': not counted in the Damage tab'))(ncOf(SKR, name)), 1, 0]);
+}
+cases.push(['two readers: a confirmed box (Doctrina Imperatives) is a box as before', () => +dmA.calc(SKR).rules.some(x => x.m.from === 'Doctrina Imperatives'), 1, 0]);
+cases.push(['two readers: the same unit’s boxes, every box counted, are more', () => +(dm.calc(SKR).rules.length > dmA.calc(SKR).rules.length), 1, 0]);
+// calc.js: a mod marked unconfirmed changes nothing (10 Grot Blastas at T3 W1 Sv 5+ FNP 6+, a +1 to hit marked unconfirmed: 1.39 as without it)
+cases.push(['two readers: calc.js never counts an unconfirmed mod', () => { const c = dmA.calc({ army:'shooty', ph:'shooting', atk:'gretchin', typed:{ n:10, T:3, W:1, Sv:5, fnp:6 } });
+  const inp = JSON.parse(JSON.stringify(c.input)); inp.groups.forEach(g => { g.mods = (g.mods || []).concat({ from:'Unconfirmed', hit:1, unconfirmed:true }); });
+  return C.explain(inp).total.dmg; }, 10 * 3 / 6 * 3 / 6 * 4 / 6 * 5 / 6]);
 
 for(const t of twice) console.log('  ' + t);
 
