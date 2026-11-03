@@ -1,0 +1,42 @@
+[
+ {
+  "kind": "review-one-builder",
+  "where": "verify/from-json.js (the list itself: builder.js, as on the phone; listFrom, at the end of --write)",
+  "judgement": {
+   "check": "For a catalogued faction (builder.js catalogued on the data.js just written), from-json --write ends by running verify/build-index.js --write, then WH_BUILDER.build(export, WH_DATA, { id }) with WH_EFFECTS set on the window builder.js keeps its tables on (from-json's loadD made one). The list's ARMIES entry is builder.js's with from-json's source line. Where from-json's own entry (its reading, through verify/tables.js --write) is byte for byte builder.js's, data.js is left as it is; else builder.js's entry replaces it (literal, then tables.js, derive.js, effects-migrate.js, build-index.js --write), the difference is listed (todo, list.diff) and the run exits 1. A refusal by builder.js is listed and exits 1 (data.js keeps from-json's reading). --refs and a faction with no catalogue keep from-json's entry (list.from verify/from-json.js, with why). Checked: reimport of all 24 exports byte for byte; a builder.js changed on purpose (army name + '!') made basic-bitch's re-import fail with data.js holding builder.js's entry and the run exiting 1."
+  },
+  "source": { "gate": "verify/reimport.js (reimport step), verify/build-parity.js P1", "commit": "One builder, step 2" }
+ },
+ {
+  "kind": "review-one-builder-gate",
+  "where": "verify/reimport.js (4: CATALOGUED, results[].builder)",
+  "judgement": {
+   "check": "reimport decides which lists are of a catalogued faction itself (builder.js catalogued on the checked-in data.js) and fails a catalogued list whose verify/out/from-json-<list>.json does not say list.from builder.js with list.same true (no list field: a from-json.js that no longer calls builder.js; refused; or from-json's reading not builder.js's), and a list of another faction not from from-json.js's own reading. So neither code path can change a catalogued list's entry without the other: a builder.js change fails P1 (build-parity) and reimport; a from-json.js change fails reimport."
+  },
+  "source": { "gate": "verify/reimport.js", "commit": "One builder, step 4" }
+ },
+ {
+  "kind": "review-one-builder-audit",
+  "where": "docs/tables.md (The in-app build: One builder); verify/sources/hand/{nidzillas,lite-knights,the-exiled-legion,tzeeeeentch,healybois,basic-bitch}.json",
+  "judgement": {
+   "check": "Every hand-file field of the six catalogued lists, and where a phone import gets it: source (nidzillas, lite-knights): a fact of the list itself (the day its PDF was exported), the phone's says when it was imported, P1 and P2 leave the source line aside. units.<id>.why, gists.<id>.by, refs[].why: reasons, nothing shown. units.<id>.texts (Malign Presence, Will of the Hive Mind, One Head Looks Back, Altered Reality, Daemonic Allegiance) and units.<id>.notes (Malign Presence, Seed Spore Mines, Split, Horrors are Pink…): on the DATASHEETS rows builder.js reads (the texts also declared in verify/deviations-words.json; Chaos Daemons' also in verify/sources/hand/catalog-chaos-daemons.json texts). refs (tzeeeeentch: Blue Horrors, Brimstone Horrors): builder.js's sheetRefs finds both from GW's words, on DATASHEETS rows (the Brimstone Horrors row exists only from this hand file: no BSData entry). gists (gist, gistOf, note) and armyRules FAQs: FACTIONS rows, every list's. No catalogued hand file has ids, short, kwOnly, partialRules, stats or kw."
+  },
+  "source": { "commit": "One builder, step 1" }
+ },
+ {
+  "kind": "review-one-builder-gaps",
+  "where": "data.js DATASHEETS tyranids/norn-emissary, tyranids/norn-assimilator; BUILD_INDEX.marks; chaos-daemons/brimstone-horrors; verify/from-json.js oneModelCan, PDF_FIRST",
+  "judgement": {
+   "check": "Gaps left, each with its reason (none changes what a built-in list or its phone import shows today: P1 and P2 pass): (1) Protean Purpose, the Talons of the Norn Queen detachment rule's ability, is on the Norn Emissary and Norn Assimilator DATASHEETS rows (verify/deviations-catalog.json): every built-in list with them takes that detachment, but a phone import of another Tyranids list would show it too. A fix is a detachment-given ability builder.js adds by the list's detachments, not the row's: a change of what the built-in lists' rows hold, for the owner. (2) BUILD_INDEX.marks is learned from the built-in lists' marks: a phone import whose export shows a change no agreed box explains and no built-in list marked is refused (never shown wrong). (3) The Brimstone Horrors row and the list hand texts/notes are datasheet facts whose source file is a list's hand file: the phone has them while that row is in DATASHEETS; moving them to the catalogue hand files (verify/from-bsdata.js, which has no notes or refs yet) is a follow-up. (4) from-json's WARGEAR OPTIONS split of a models line and its PDF stats-row naming are not builder.js's: no catalogued list needs either today, and one that does fails from-json's check. (5) The 18 lists of factions with no catalogue keep from-json's reading (and the phone's strict copy) until their catalogue lands."
+  },
+  "source": { "commit": "One builder, steps 1 and 3" }
+ },
+ {
+  "kind": "review-one-builder-not-retired",
+  "where": "verify/from-json.js buildGroup, ids, copies, sort",
+  "judgement": {
+   "check": "Not retired, and why: from-json's own list reading still serves the 18 uncatalogued lists, and for a catalogued list it is what verify/tables.js --write derives DATASHEETS from (the rows' list-decided facts: deviations-catalog's, the hand texts and notes, the stats rows' part by the models lines' gear), so it cannot go before those facts are the catalogue's alone. For a catalogued list it no longer writes the entry: it is the independent check the gate holds byte for byte to builder.js's."
+  },
+  "source": { "commit": "One builder, step 3" }
+ }
+]
