@@ -167,6 +167,8 @@ const coverAttackerWithin = (v, qs) => !!v && v.d != null && qs.some(q => q.repl
 // ("While a unit is Empowered …" for { who:'that unit', state:'empowered' })
 const stateWords = v => (JSON.stringify(v == null ? '' : v).toLowerCase().match(/[a-z][a-z' -]{3,}/g) || []).map(x => x.trim()).filter(x => !/^(?:who|that unit|this unit|your unit|state|unit)$/.test(x));
 const coverState = (v, qs) => { const st = stateWords(v); return st.length > 0 && qs.some(q => st.some(x => new RegExp('\\b' + x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b').test(q))); };
+// (the dispatch, as condCmp makes it: an opt, a selection, targetSelected or a stratagem never covers a state by itself; check F)
+const stateCovered = (c, qs, appIds, ctx) => coverState(c.v, qs);
 const coverTarget = (v, qs) => typeof v === 'string' && !!v.trim() && qs.some(q => q === v.toLowerCase().replace(/\.\s*$/, ''));
 function compare(aligned, DD, USES){
   const { rows, orphans } = aligned;
@@ -322,7 +324,7 @@ function compare(aligned, DD, USES){
       else if(c.id === 'abilityActive') ok = qs.some(q => /active|doctrine/.test(q)) || appIds.has('opt');
       else if(c.id === 'weaponKind') ok = apps.some(e => e.kind === c.v || (e.scope && e.scope.wkw));
       // (a state, "that unit is Empowered": its words in an app q, nothing else: an option, a selection or a stratagem says nothing of it)
-      else if(['factionState', 'targetState', 'grantsState'].includes(c.id)) ok = coverState(c.v, qs);
+      else if(['factionState', 'targetState', 'grantsState'].includes(c.id)) ok = stateCovered(c, qs, appIds, ctx);
       else if(c.id === 'grantsAbility'){ const w = JSON.stringify(c.v).toLowerCase().match(/[a-z][a-z' ]{3,}/g) || []; const st = w.filter(x => !/^(who|that unit|state)$/.test(x.trim())); ok = qs.some(q => st.some(x => q.includes(x.trim()))) || appIds.has('opt') || appIds.has('selected') || appIds.has('targetSelected') || (ctx && ctx.kind === 'stratagem'); }
       else if(c.id === 'leadingKw') ok = appIds.has('leading') || appIds.has('ledBy') || qs.some(q => /leading/.test(q));
       else if(c.id === 'unengaged') ok = qs.some(q => /unengaged|engag/.test(q));
@@ -647,6 +649,8 @@ if(require.main === module){
       ['attackerWithin, not the attacker', coverAttackerWithin({ d:6, of:'your SYNAPSE unit' }, ['if the target is within 6" of your synapse unit']), false],
       ['factionState', coverState({ who:'that unit', state:'empowered' }, ['while a unit is empowered it can use one of the malefic surge abilities below']), true],
       ['factionState, an option but no state words', coverState({ who:'that unit', state:'empowered' }, ['when this unit is selected as the target of an attack, select one of the following to apply until the end of the phase']), false],
+      ['factionState, with opt, selected, targetSelected, a stratagem and no state words', stateCovered({ id:'factionState', v:{ who:'that unit', state:'empowered' } }, ['when this unit is selected as the target of an attack, select one of the following to apply until the end of the phase'], new Set(['opt', 'selected', 'targetSelected']), { kind:'stratagem' }), false],
+      ['targetState, with opt and no state words', stateCovered({ id:'targetState', v:{ who:'that enemy unit', state:'battle-shocked' } }, ['until the end of the phase'], new Set(['opt']), null), false],
       ['factionState, another state', coverState({ who:'that unit', state:'empowered' }, ['while a unit is shielded it can use one of the malefic surge abilities below']), false],
       ['target', coverTarget(IWt, IWq), true], ['target, another TARGET', coverTarget('One SYNAPSE unit from your army.', IWq), false], ['target, a q inside it', coverTarget(IWt, ['one synapse unit from your army']), false]];
     for(const [name, got, want] of FIX) if(got !== want) fails.push('F comparator fixed case ' + name + ': ' + (got ? 'covered' : 'not covered') + ', should be ' + (want ? 'covered' : 'not covered')); }
