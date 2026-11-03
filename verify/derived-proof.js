@@ -12,8 +12,11 @@
 //     value of the column another row has (a valid value, the next row's that differs). The first, middle and last row holding a value
 //     are tried, in that order, until one fails.
 // A column without such a deriver fails; a step that fails on the unchanged data.js proves nothing (it is run so, once, before a proof
-// stands on it). A proof is kept in verify/out/derived-proof.json and stands, without running again, while the code it ran is the same
-// (every file of its step, the column's entry, the change); --fresh runs every one again.
+// stands on it). A proof is kept in verify/out/derived-proof.json and stands, without running again, while what it ran is the same: every
+// code file of its step, every other input of it (inputsOf: the JSON files of verify/ (the deviations, derive-agreed.json, columns.json …),
+// rules/, and, where its code names them, verify/sources, verify/review, verify/reader2's data, app.html and the cache of GW's
+// texts, verify/.cache, by its files' names, sizes and times), this script and literal.js (how it changes and proves), the column's entry
+// and the change; --fresh runs every one again.
 //
 //   node verify/derived-proof.js                 every derived column (the gate's "derived" step); verify/out/derived-proof.json
 //   node verify/derived-proof.js --only T.c,…    those columns only
@@ -145,7 +148,26 @@ const runStep = (dir, s) => new Promise(ok => {
 const crashed = out => /^\s+at .+:\d+:\d+\)?$/m.test(out) && !/^\s*FAIL\b|\bfailure/m.test(out);
 const firstFail = out => (out.split('\n').find(l => /FAIL|Error|fail|differ|not /.test(l)) || out.split('\n').find(Boolean) || '').trim().slice(0, 300);
 // a proof stands while the code it ran is the same: the files of its step, the column's entry in verify/columns.json and the change made
-const fileSha = {}, codeOf = s => sha([...s.files].sort().map(f => fileSha[f] || (fileSha[f] = sha(fs.readFileSync(path.join(ROOT, f), 'utf8')))).join(' '));
+const fileSha = {}, codeOf = s => sha([...s.files].sort().map(f => fileSha[f] || (fileSha[f] = sha(fs.readFileSync(path.join(ROOT, f), 'utf8')))).join(' ') + '\n' + inputsOf(s));
+// a step's other inputs: the areas of this folder a step reads besides code and data.js, each by the sha of its files (the cache of GW's
+// texts by its files' names, sizes and times); verify/*.json and rules/ always, the others where the step's code names them
+const GENERATED = new Set(['verify/report.json', 'verify/provenance.json']);
+const walk = (d, keep) => { const out = []; const go = r => { const a = path.join(ROOT, r); let st; try { st = fs.statSync(a); } catch(e){ return; }
+  if(st.isDirectory()){ for(const e of fs.readdirSync(a).sort()) go(r ? r + '/' + e : e); } else if(keep(r)) out.push(r); }; go(d); return out; };
+const AREAS = {
+  'verify/*.json':{ always:true, files:() => fs.readdirSync(path.join(ROOT, 'verify')).filter(f => f.endsWith('.json')).map(f => 'verify/' + f).filter(f => !GENERATED.has(f)).sort() },
+  'rules':{ always:true, files:() => walk('rules', () => true) },
+  'verify/sources':{ names:/\bsources\b/, files:() => walk('verify/sources', () => true) },
+  'verify/review':{ names:/\breview\b/, files:() => walk('verify/review', () => true) },
+  'verify/reader2':{ names:/\breader2\b/, files:() => walk('verify/reader2', f => !f.endsWith('.js')) },
+  'app.html':{ names:/\bapp\.html\b/, files:() => ['app.html'] },
+  'verify/.cache':{ names:/\.cache\b|\bCACHE\b/, stat:true, files:() => walk('verify/.cache', () => true) } };
+const areaSha = {}, areaOf = k => areaSha[k] || (areaSha[k] = sha(AREAS[k].files().map(f => { const a = path.join(ROOT, f);
+  if(AREAS[k].stat){ const st = fs.statSync(a); return f + ' ' + st.size + ' ' + st.mtimeMs; } return f + ' ' + sha(fs.readFileSync(a)); }).join('\n')));
+const inputsOf = s => { if(s.inputs) return s.inputs; const code = [...s.files].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('\n');
+  return (s.inputs = Object.keys(AREAS).filter(k => AREAS[k].always || AREAS[k].names.test(code)).map(k => k + ' ' + areaOf(k)).join(' ')); };
+// (and how a proof is made: this script and literal.js)
+const RULES_SHA = sha(['verify/derived-proof.js', 'verify/literal.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('\n'));
 const OUT = path.join(ROOT, 'verify/out/derived-proof.json');
 const CACHE = (() => { try { return JSON.parse(fs.readFileSync(OUT, 'utf8')).columns || {}; } catch(e){ return {}; } })();
 
@@ -175,7 +197,7 @@ const CACHE = (() => { try { return JSON.parse(fs.readFileSync(OUT, 'utf8')).col
       res[w.id] = { proof:null, why:'no value stored in data.js' }; }
   }
   if(process.argv.includes('--plan')){ for(const w of work) console.log(w.id + ' | ' + w.ds.join(',') + ' | ' + w.steps.map(x => x.s.name).join(',') + ' | ' + w.tries.map(c => c.at + ' ' + c.from + '→' + c.to).join(' ; ')); process.exit(0); }
-  const keyOf = (w, x, ch) => sha(JSON.stringify(w.v) + '\n' + x.s.name + '\n' + codeOf(x.s) + '\n' + ch.at + '\n' + ch.text);
+  const keyOf = (w, x, ch) => sha(JSON.stringify(w.v) + '\n' + x.s.name + '\n' + codeOf(x.s) + '\n' + RULES_SHA + '\n' + ch.at + '\n' + ch.text);
   // a proof kept from an earlier run whose code is the same (verify/out/derived-proof.json; --fresh: none)
   let kept = 0;
   const queue = work.filter(w => {
