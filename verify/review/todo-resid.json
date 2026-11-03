@@ -1,0 +1,103 @@
+[
+ {
+  "kind": "review-reading-fixes",
+  "where": "verify/effects-extract.js unitsOf (subSec), optUse, stratagem friendly reach; verify/agree.js coverAttackerWithin / coverTarget, check F; verify/lines.js LF; data.js BOXES r|1xk95t6, s|n71bil; AGREE; verify/sources/agree-verdicts.json",
+  "judgement": {
+   "check": "Malefic Surge › Unnatural Fortitude: the \"- \" lines under \"- **Unnatural Fortitude:** …:\" are now that option’s (sec), so its defence box carries opt Unnatural Fortitude and GW’s “While a unit is Empowered it can use one of the Malefic Surge abilities below” (as Diabolic Power’s attack box did). Irresistible Will: a stratagem sentence “each time a friendly X model makes an attack …” reaches friendly X (mark friendly; the 6\" condition stays as GW’s q). The comparator now covers reader2’s attackerWithin only by an app q with the same distance of the same unit, and target only by an app q equal to the TARGET. Both pairs are class A; their two class-B verdicts (app incomplete, app wrong) were removed as stale. BOXES changes only these two keys. Fallbacks 71 → 69 (48 → 47 changing a number); infernal-lance 1 → 0, every other list unchanged; no other pair changed class. Check: the comparator additions are not looser than GW (only this pair has these conditions), and the two verdict removals."
+  },
+  "source": {
+   "gate": "agree, lines (LF 18 fixed cases), evidence, defence",
+   "commit": "672e111"
+  }
+ },
+ {
+  "kind": "review-snapshot-infernal-lance",
+  "where": "verify/snapshots/infernal-lance.txt (not accepted); diff in scratchpad resid-work/snapshots.diff",
+  "judgement": {
+   "check": "The only snapshot change: 5 When-targeted lines “Malefic Surge: not counted here: see the rule” become “Malefic Surge: Unnatural Fortitude · “While a unit is Empowered …” · “When this unit is selected as the target of an attack, …”: one of: 5+ invulnerable save · Feel No Pain 6+”. Accept after review (node verify/run.js --accept)."
+  },
+  "source": {
+   "gate": "snapshots"
+  }
+ },
+ {
+  "kind": "review-literal",
+  "where": "verify/literal.js regex(); verify/tables.js literalFixtures",
+  "judgement": {
+   "check": "i < src.length in the flags loop; fixtures run parse in a child with a 10s limit (a hang fails)."
+  },
+  "source": {
+   "commit": "1d44622"
+  }
+ },
+ {
+  "kind": "review-return-line",
+  "where": "verify/tables.js returnMembers, RETURN_FIXTURES",
+  "judgement": {
+   "check": "Every member of data.js’s return line is key:NAME, key:fn(NAME, …) or key:function(…){…}, NAME a constant of data.js; anything else fails the tables step. Comments and regular-expression literals are skipped by the splitter. The same 16 tables as before."
+  },
+  "source": {
+   "commit": "3f0a053"
+  }
+ },
+ {
+  "kind": "review-page-scripts",
+  "where": "verify/tables.js pageScripts, PAGE_FIXTURES, screenReads().missed",
+  "judgement": {
+   "check": "Any <script> src form (defer/async either side, type=module, single/no quotes, query or hash, ./) and import('…') with a string-literal name, of the page and of the scripts it loads; a local script not found, a non-literal src, or a non-literal import() fails. ask.js is now read; screenColumns unchanged against main. Static `import … from` inside a module (ask.js → vendor SDK .mjs) is not followed (third-party)."
+  },
+  "source": {
+   "commit": "28edcb1"
+  }
+ },
+ {
+  "kind": "review-errata-lines",
+  "where": "verify/texts.js loadWahaHtml ERRATA_OF, refSection / headingCarries, checkLines werrata, LINE_FIXTURES",
+  "judgement": {
+   "check": "A werrata line’s body must be in the change (<div class=\"errata\">) of an errata block whose heading carries its section: a numbered heading by that number, an unnumbered one by the ref’s name before “;”. Fixtures: the 2 real lines pass; another section’s name or number, a FAQ answer, the heading as body fail. Errata blocks are not listed as documents in provenance."
+  },
+  "source": {
+   "commit": "aa7fca1"
+  }
+ },
+ {
+  "kind": "review-wcore-lines",
+  "where": "verify/texts.js checkLines wcore",
+  "judgement": {
+   "check": "A “Wahapedia core rules (…)” line fails when GW_ALL (Core Rules PDF, Universal Rules Updates, Faction Packs) locates its body. The reviewer’s rA fails; the 5 current lines pass."
+  },
+  "source": {
+   "commit": "a4d338b"
+  }
+ },
+ {
+  "kind": "review-datasheet-labels",
+  "where": "verify/texts.js labelGaps, LABEL_FIXTURES",
+  "judgement": {
+   "check": "“X datasheet” at the label’s start or after “(” or “,”, with or without “)”; not a possessive (Wahapedia’s datasheet) nor “datasheets”. rF1-type (unbracketed label on another datasheet) fails."
+  },
+  "source": {
+   "commit": "e6a9cd0"
+  }
+ },
+ {
+  "kind": "review-derived-proof",
+  "where": "verify/derived-proof.js; verify/columns.json unstored (20 columns)",
+  "judgement": {
+   "check": "(1) A crash is no proof; each tried row has its changed value and a swap (the next row’s differing value); kept crash proofs are dropped. ARMIES.units.ds is now proved by tables on a swap, BOXES.b.on / st.on by evidence, d.on by defence. (2) A kept proof’s key covers the step’s other inputs (verify/*.json but report/provenance, rules/ always; verify/sources, review, reader2 data, app.html, .cache by name/size/mtime where its code names them) and derived-proof.js + literal.js. The area inclusion by name is a heuristic: a step reading an area whose name its code never spells would be missed. (3) A column with no stored value fails unless columns.json declares unstored \"none: …\" (checked: no row has one once data.js loads) or \"load: …\" (checked: rows get it at load); 17 none, 3 load (ARMIES.units.srcNote, ranged.group, abilities.damaged) — please review the declarations. (4) A part proof (build-parity › build-index.js) needs its parent (build-parity --no-render) to fail on the same change and pass unchanged; the reviewer’s bX now fails. Gate: derived 118 of 138, 20 unstored, cold run."
+  },
+  "source": {
+   "commits": "586ae24 1a12870 9a4096b 731aef1"
+  }
+ },
+ {
+  "kind": "review-mutations-and-numbers",
+  "where": "scratchpad resid-work/mut (mut.js, m1…m9b.json)",
+  "judgement": {
+   "check": "Numbers: rev2/dmshown.js 675 keys and lines-work/dmsingle.js 13222 keys, main b9f6810 vs branch: 0 differences, 0 errors. Mutations: see the builder’s report; survivors are equivalent or controls (listed there). Gate in the worktree: every step passes but snapshots (infernal-lance, above); helpers 437/437 approved."
+  },
+  "source": {
+   "gate": "node verify/run.js"
+  }
+ }
+]
