@@ -12605,6 +12605,12 @@
   "at": "2026-10-28",
   "why": "+1 OC, +3 for a VEHICLE unit (The Silent King is VEHICLE)."
  },
+ "a594410cb162ff5b": {
+  "verdict": "ok",
+  "by": "review:switch-2",
+  "at": "2026-11-03",
+  "why": "Reads defSources, which reads BOXES_AGREED. An unconfirmed d box gives no line. After the same reach filter and its selfKw/itIs/selfGear conditions, it sets fell, and the source gets one 'not counted here: see the rule' line with its giver when it is another unit's. Checked across every list unit: Omnissiah's Blessing (Tech-Priest Enginseer) on 5 purge-goes-the-foe units, Selfless Protector (Knight Defender) on the 4 Knights, Mischief and Confusion (The Changeling) on 10 tzeeeeentch units. 0 When-targeted lines come from an unconfirmed box. Starred NR FNP (DNC starred) is a not-counted line, dropped only where a rule of the unit says that FNP with its condition: it shows on no unit today, since Aegis of the Emperor or Daughters of the Abyss say it everywhere. It is never broader than GW. One harmless difference from a counted box: an unconfirmed InSv box already printed in the stats (inStats) gives a 'see the rule' line rather than being skipped."
+ },
  "a5a287161527b4ba": {
   "verdict": "ok",
   "by": "review:lite-knights-2",
@@ -14254,6 +14260,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "\"your opponent's Movement phase\"; red \"Opponent's turn\" card."
+ },
+ "bc4ab16ab9f292e8": {
+  "verdict": "ok",
+  "by": "review:switch-2",
+  "at": "2026-11-03",
+  "why": "Reads BOXES_AGREED only (effects.js agreed of BOXES and AGREE). A box AGREE does not confirm has its fx emptied and is skipped as a footnote ('if(b.unconfirmed) … continue'). It still passes the same reach and kind filters first, plus fnReaches (its scope's weapons, selfKw, selfGear), so where it would have been a footnote the source gets one 'not counted here: see the rule' line, naming the giver (fnGiver) when it is another unit's. Checked by script against main (every box counted) for every list × unit × kind: 0 counted footnotes come from an unconfirmed box; every rule named on main is still named (except the Damaged bands, whose band says 'see the rule'). Giver lines are right per GW's datasheets: Master of Mechanisms (Warpsmith), Burning Spray (Pyrovores), Phaeron of the Blades (The Silent King, melee only). Played Lance / Plunging Fire are read from BOXES_AGREED and stay core-confirmed. The nc line of the source's own words still skips another unit's words not about this unit (unconfirmed words are excluded from that test)."
  },
  "bc54ee424e61683a": {
   "verdict": "ok",
@@ -17404,6 +17416,12 @@
   "by": "review:tzeentch-data",
   "at": "2026-10-27",
   "why": "\"WHEN: Your Shooting phase.\""
+ },
+ "e773232adfaf7d99": {
+  "verdict": "ok",
+  "by": "review:switch-2",
+  "at": "2026-11-03",
+  "why": "Reads BOXES_AGREED only. An unconfirmed st box has st [] and gives no value line. Its sentence is in snc with its reach, conditions and characteristic (effects.js agreed), so the same snc pass prints '<stat>: not counted here: see the rule (rule)' where it reaches. Seen in the snapshots: Enraged Behemoths 'OC: not counted here: see the rule' in place of 'Lost no wounds … OC 5', and Moritoi Ancients likewise on lite-knights. Confirmed st boxes are unchanged (lines L step and snapshots: only fallen-back sources change)."
  },
  "e77d5f7498438cbf": {
   "verdict": "ok",
