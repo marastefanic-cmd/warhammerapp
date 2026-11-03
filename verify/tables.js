@@ -1386,6 +1386,15 @@ function scanFixtures(src){
   }
   return out;
 }
+// literal.js's own fixtures: a regular expression at the very end of the text, and one with flags, parse (run in a child with a time limit: a
+// loop that never ends is a failure, not a gate that never ends)
+function literalFixtures(){
+  const out = [], CASES = [['/x/', '/x/'], ['/ab+c/gi', '/ab+c/gi'], ['[/a/i, 1]', '/a/i,1'], ['{ re:/[/]/ }', '[object Object]']];
+  const r = require('child_process').spawnSync(process.execPath, ['-e', 'const { parse } = require(' + JSON.stringify(path.join(__dirname, 'literal.js')) + '); process.stdout.write(JSON.stringify(' + JSON.stringify(CASES.map(c => c[0])) + '.map(t => String(parse(t, 0).value))))'], { encoding:'utf8', timeout:10000 });
+  if(r.error || r.status !== 0){ out.push('literal.js parse does not end on ' + CASES.map(c => c[0]).join(' ; ') + ' (' + (r.error ? r.error.code : String(r.stderr).split('\n').find(Boolean)) + ')'); return out; }
+  const got = JSON.parse(r.stdout); CASES.forEach(([t, want], k) => { if(got[k] !== want) out.push('literal.js parses ' + t + ' as ' + got[k] + ', not ' + want); });
+  return out;
+}
 // a script's references to other files of this folder: what it requires (require('./x'), require(path.join(ROOT, 'x.js')),
 // require(ROOT + '/x.js')) and what it runs (spawn / spawnSync / execFileSync of node on path.join(ROOT | __dirname, 'x.js'); alone:
 // with no other argument, so it can run by itself as it is run there)
@@ -1562,6 +1571,7 @@ if(require.main === module){
   for(const u of unregistered(src)) fails.push('not in verify/columns.json: ' + u + ' (say where its values come from)');
   for(const u of screenJudgements(D0)) fails.push('a unit or stratagem screen reads a judgement: ' + u);
   for(const u of scanFixtures(src)) fails.push('the end-state scan does not see a read: ' + u);
+  for(const u of literalFixtures()) fails.push(u);
   for(const u of stratIds(D0)) fails.push(u);
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));
   const B = t.B, units = B.armies.reduce((n, a) => n + a.units.length, 0);

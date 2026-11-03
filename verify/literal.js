@@ -61,7 +61,8 @@ function parse(src, at){
       if(c === '[') cls = true; else if(c === ']') cls = false; else if(c === '/' && !cls) break;
     }
     const body = src.slice(s + 1, i - 1); let flags = '';
-    while(/[a-z]/.test(src[i])) flags += src[i++];
+    // (i < src.length: at the end of the text src[i] is undefined, which /[a-z]/ reads as "undefined", a flag for ever)
+    while(i < src.length && /[a-z]/.test(src[i])) flags += src[i++];
     return new RegExp(body, flags);
   }
   function value(path){
