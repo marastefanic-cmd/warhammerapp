@@ -1367,11 +1367,14 @@ function returnMembers(src){
   if(!ended) unknown.push('the return line does not close');
   for(const m of members){
     if(!m.trim()) continue;
-    if(/^\s*[\w$]+\s*:\s*function\b[^]*\}\s*$/.test(m)) continue;   // (a function member: no table)
+    // (a function member is no table, by design, whatever it returns: resolve:function(a){ … }; key:function(){ return ARMIES; } is no
+    // second key over ARMIES either: the app calls it, and its result is no table the screens read by D.key)
+    if(/^\s*[\w$]+\s*:\s*function\b[^]*\}\s*$/.test(m)) continue;
     // (a table: a constant, NAME, or a call over one, resolveArmies(ARMIES, …))
     const x = /^\s*([\w$]+)\s*:\s*(?:([A-Z][A-Z0-9_]*)|[\w$]+\(\s*([A-Z][A-Z0-9_]*)\b[^]*\))\s*$/.exec(m);
     if(!x){ unknown.push(m.trim().slice(0, 80)); continue; }
-    const key = x[1], name = x[2] || x[3]; if(out[name]) continue;
+    // (one key per constant: a second key over one already listed, n:ARMIES or units:pick(ARMIES), is unknown, as tables.js models one)
+    const key = x[1], name = x[2] || x[3]; if(out[name]){ unknown.push(m.trim().slice(0, 80) + ' (a second key over ' + name + ', already ' + out[name].key + ')'); continue; }
     const c = constant(src, name); if(!c){ unknown.push(m.trim().slice(0, 80) + ' (no constant ' + name + ' in data.js)'); continue; }
     const rows = Array.isArray(c.value) ? c.value : c.value && typeof c.value === 'object' ? Object.values(c.value) : [];
     out[name] = { key, positional:rows.length > 0 && rows.every(r => !r || typeof r !== 'object' || Array.isArray(r) || r instanceof RegExp) };
@@ -1383,7 +1386,8 @@ const RETURN_FIXTURES = [
   ['return { version:VERSION, armies:resolveArmies(ARMIES, DATASHEETS), resolve:function(a){ return a; } };', 'VERSION,ARMIES', 0],
   ["return { version:VERSION, resolve:function(a){ return /[\"']/.test(a) ? a : 'x'; }, armies:ARMIES };", 'VERSION,ARMIES', 0],
   ['return { version:VERSION, newt:VERSION || {} };', 'VERSION', 1], ['return { version:VERSION, newt:ARMIES.a };', 'VERSION', 1],
-  ['return { version:VERSION, newt:NOSUCH };', 'VERSION', 1], ['return { version:VERSION, newt:() => ARMIES };', 'VERSION', 1]];
+  ['return { version:VERSION, newt:NOSUCH };', 'VERSION', 1], ['return { version:VERSION, armies:ARMIES, n:ARMIES };', 'VERSION,ARMIES', 1],
+  ['return { version:VERSION, units:String(DATASHEETS), datasheets:DATASHEETS };', 'VERSION,DATASHEETS', 1], ['return { version:VERSION, newt:() => ARMIES };', 'VERSION', 1]];
 function returnFixtures(src){
   const out = [], head = src.slice(0, src.lastIndexOf('\nreturn {') + 1);
   for(const [ret, tables, unknown] of RETURN_FIXTURES){ const r = returnMembers(head + ret + '\n})();'), got = Object.keys(r.tables).join(',');
