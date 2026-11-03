@@ -1,0 +1,58 @@
+[
+ {
+  "kind": "review-two-reader-rule",
+  "where": "verify/agree.js (gate step agree); data.js AGREE; verify/sources/agree-verdicts.json",
+  "judgement": {
+   "check": "The owner's two-reader rule is switched on: a box of BOXES (b, d, st) with an effect counts only where data.js AGREE marks it \"A\" (reader2 agrees, class A) or \"V\" (a class-B pair with a reviewed verdict that has GW's quotes and says \"app right\" or \"both right\"). AGREE is written by node verify/agree.js --write; the step fails when the stored table is not the one computed (T), a verdict's quote is not in verify/.cache (Q), a verdict is of no current class-B pair or its pair is not what was reviewed (S: a fingerprint of the diffs, the app's entries and reader2's reading, recorded with --bind), a confirmed box is class B or C without a confirming verdict (K), reader2 imports the app's reading code or reads boxes (R1), or reader2's own --test / --check fails (R2). Check that the comparison (align + compare + release, copied from scratchpad reader-cmp: it reproduces that pairs.json byte for byte) is the one the owner reviewed, and that T, S and K together leave no way to count an unconfirmed box. Today: 447 boxes compared, 352 A, 25 V, 70 fall back (47 change a number), as report.md §5."
+  },
+  "source": { "gate": "verify/agree.js (agree step)", "commit": "Two-reader rule, steps 1-3" }
+ },
+ {
+  "kind": "review-core-boxes-kept",
+  "where": "verify/agree.js table: BOXES keys c| (\"core\")",
+  "judgement": {
+   "check": "Not done by the general rule: the 9 BOXES c| boxes (Lance, Plunging Fire, Conversion, Damaged 4 and Damaged 5, Feel No Pain 3+*, 4+, 5+, 5+*) are GW's Core Rules and weapon abilities, which reader2 does not read (it reads the lists' rules), so the comparison has no pair for them. They are marked \"core\" and stay counted, as the owner's expected count (70 of 447) implies. If the owner wants the rule literal (every unconfirmed box falls back), set them to 0 in table(): Lance and Plunging Fire are played by the Damage tab itself, the Feel No Pain X+ lines are defence boxes on many units."
+  },
+  "source": { "gate": "verify/agree.js", "commit": "Two-reader rule, step 2" }
+ },
+ {
+  "kind": "review-verdicts-pruned",
+  "where": "verify/sources/agree-verdicts.json",
+  "judgement": {
+   "check": "Of the 54 verdicts in scratchpad reader-cmp/verdicts.json, the 27 of today's class-B pairs are kept; the other 27 are of pairs that are now class A (26) or C (1, Gilded Guardians), fixed since their round, and would fail S as stale. Quotes were taken from the verdicts' “…” words; two were set by hand: Hulking Brutes|1 (\"As above\": the quote of Hulking Brutes|0) and Malefic Surge|9 (its Unnatural Fortitude quote joined the PDF's list items: split into the two sentences GW prints). Check those two, and that a verdict for a group lead covers its member sentences (Doctrina Imperatives › Conqueror Imperative 1-2, Malefic Surge 7 and 10 have none of their own)."
+  },
+  "source": { "gate": "verify/agree.js Q, S", "commit": "Two-reader rule, step 1" }
+ },
+ {
+  "kind": "review-fallback-presentation",
+  "where": "effects.js agreed; app.html BOXES_AGREED (every screen), defenceItems; builder.js marksOf; calc.js prep",
+  "judgement": {
+   "check": "A box that falls back keeps its place in its source (its index, so the other boxes' tick keys do not move) with its effects taken off, and its sentence goes first among the source's not-counted words: b to nc (atk), d to dnc, st to snc (its characteristic), with its reach and conditions. So every screen shows it the existing not-counted way: a footnote \"not counted here: see the rule\", a \"When targeted\" line \"not counted here: see the rule\", \"OC: not counted here: see the rule\" under the profile, and on the Damage tab its source listed with GW's words, \"not confirmed by a second reading of GW's words: not counted in the Damage tab\". Points to check: (1) a source with several fallen-back boxes shows one Damage-tab row with the first sentence (Hyper-adaptations ×3, Murderous Imperative ×2), as any not-counted source does; (2) another unit's fallen-back aura or defence box is not repeated on the receiving unit's footnotes and When targeted lines (the existing rule for another unit's not-counted words), but its Damage tab lists it under From other units, not counted; (3) builder.js names a \"+\" mark's rule from confirmed boxes only, else BUILD_INDEX marks: P1 still builds the 6 catalogued lists byte for byte; (4) calc.js drops a mod marked unconfirmed (calc-test case), a guard the app never needs to use."
+  },
+  "source": { "gate": "verify/lines.js L4/LS/LB, verify/defence.js DL, verify/calc-test.js (two readers)", "commit": "Two-reader rule, step 2" }
+ },
+ {
+  "kind": "review-gate-checks-adapted",
+  "where": "verify/lines.js (BX), verify/defence.js DL (BX), verify/lines.js LG, verify/calc-test.js, verify/damage-node.js opts.agree",
+  "judgement": {
+   "check": "The presentation checks now hold the screens to the boxes as the app counts them (effects.js agreed of BOXES and AGREE): L4 footnotes, LS stat lines, LB Damaged bands, DL When targeted lines. The checks of the boxes themselves (their schema and words: LW, LS schema, D1-D8, evidence G1-G9) still read data.js BOXES. LG ignores the rule named in a \"Riled up (…: always riled up)\" condition (Super Runts, now a not-counted line of its own). calc-test's hand-worked cases run with every box counted (damage-node opts.agree 'all'): they test the engine and the screen's wiring of each box; 7 new cases test the rule (Murderous Imperative and Unshackled Wrath are no boxes and are listed with GW's words, Doctrina Imperatives still counts, calc.js ignores an unconfirmed mod). Check this split is acceptable rather than rewriting the cases around confirmed boxes."
+  },
+  "source": { "gate": "lines, defence, calc", "commit": "Two-reader rule, step 2" }
+ },
+ {
+  "kind": "review-reader2-isolation",
+  "where": "verify/reader2/ (reader2.js, sources.js, test.js, README.md, readings2.json)",
+  "judgement": {
+   "check": "reader2's code is copied unchanged from scratchpad reader2 (round 4) but for a header comment on its isolation; vocab.js (it requires effects.js by an absolute path) and show.js are not copied. sources.js still defaults KODEX_APP to /home/user/warhammerapp: the gate passes KODEX_APP and KODEX_CACHE for this repo; a hand run must too. R1 is a static scan (requires, strings naming the banned files, the names boxes / BOXES): a determined obfuscation (a computed property name, eval of a built string) would pass it. Check it is enough for release tooling, and whether the reader should be pinned (a hash of its files) so a change to it is reviewed."
+  },
+  "source": { "gate": "verify/agree.js R1, R2", "commit": "Two-reader rule, step 1" }
+ },
+ {
+  "kind": "accept-snapshots",
+  "where": "verify/snapshots (verify/out/snapshots)",
+  "judgement": {
+   "check": "The screen snapshots change where a box falls back (footnotes, When targeted, the lines under a profile, the Damage tab) and the How screen's table list (AGREE). The diffs are in scratchpad switch-work/diffs/; every changed line should be a fallen-back box's (switch-work/changes.md lists them per list) or AGREE on the How screen. Accept with node verify/run.js --accept after reading them; not accepted here."
+  },
+  "source": { "gate": "snapshots", "commit": "Two-reader rule" }
+ }
+]

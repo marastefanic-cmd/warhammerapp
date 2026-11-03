@@ -20,6 +20,10 @@
 //               unit's boxes
 //   defence     verify/defence.js: the "When targeted" lines are a unit's defence boxes (data.js BOXES d, dnc), made by script from GW's
 //               words (effects.js DF, DCOND, DNC), standing on them (D1-D8) and said in their labels (DL); none left out
+//   agree       verify/agree.js: the two-reader rule (the owner's decision, 3 Nov 2026): a box (BOXES b, d, st) counts only where reader2
+//               (verify/reader2/, an independent second reading that never imports the app's reading code) agrees with it, or a reviewed
+//               verdict with GW's quote (verify/sources/agree-verdicts.json) shows the app right; data.js AGREE is the table this computes,
+//               every verdict's quote is GW's and its pair current; any other box is shown as GW's words, "see the rule"
 //   invariants  verify/invariants.js: mechanical rules (phases, eligibility, cited numbers, counts)
 //   derive      verify/derive.js: phases, turn, needs and tags derived from the rules text by fixed rules; every label
 //               that agrees with data.js today must keep agreeing (verify/derive-agreed.json); differences are listed, not failed
@@ -86,6 +90,7 @@ step('readings', ['verify/readings.js']);   // abilities with a conditional bonu
 step('evidence', ['verify/evidence.js']);   // the Damage tab's boxes: by script from GW's words, in their groups; stratagems by TARGET
 step('lines', ['verify/lines.js']);   // the app's own lines on a unit or stratagem screen: from GW's words by fixed rules (L0-L8)
 step('defence', ['verify/defence.js']);   // the "When targeted" lines: defence boxes from GW's words by fixed rules (D1-D8, DL)
+step('agree', ['verify/agree.js']);   // the two-reader rule: a box counts only where reader2 agrees or a reviewed verdict shows the app right
 step('invariants', ['verify/invariants.js']);
 step('derive', ['verify/derive.js']);
 step('choice', ['verify/choice.js']);
