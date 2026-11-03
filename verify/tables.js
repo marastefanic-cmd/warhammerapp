@@ -1297,28 +1297,56 @@ function wholeReads(c){
 }
 // the tables of data.js as the app has them (D.key) and how their rows are: { NAME: { key, positional } } (positional: rows that are not
 // objects, read by position: an array's, a value's, a string's)
-function dataTables(src){
-  const out = {}, at = src.lastIndexOf('\nreturn {');
-  if(at < 0) return out;
-  // (the object's top-level members, brackets and strings balanced: a member may be a function, resolve:function(a){ … })
-  const members = []; let depth = 0, cur = '', q = null;
+const dataTables = src => returnMembers(src).tables;
+// data.js's return line, member by member: { tables (as dataTables), unknown:[a member that is neither a table nor a function, said] }.
+// Each member is one of three forms, or unknown (the gate fails on it: tables.js reads no table it does not know): a constant, key:NAME; a
+// call over one, key:fn(NAME, …) (armies:resolveArmies(ARMIES, …)); a function, key:function(…){ … } (resolve), no table. NAME must be a
+// top-level constant of data.js.
+function returnMembers(src){
+  const out = {}, unknown = [], at = src.lastIndexOf('\nreturn {');
+  if(at < 0) return { tables:out, unknown:['no return line ("\\nreturn {")'] };
+  // (the object's top-level members, brackets, strings and regular expression literals balanced: a member may be a function,
+  // resolve:function(a){ … }, holding a quote in a regular expression)
+  const members = []; let depth = 0, cur = '', q = null, ended = false;
+  // (a "/" opens a regular expression after an operator, a bracket or a keyword, not after a value: a / b)
+  const regexAt = () => { const t = cur.replace(/\s+$/, ''); return !t || /[(,=:[!&|?{};+\-*%<>~^]$/.test(t) || /(?:^|[^\w$])(?:return|typeof|case|do|else|in|of|void|delete|throw|new|yield|await)$/.test(t); };
   for(let i = at + '\nreturn {'.length; i < src.length; i++){
     const ch = src[i];
     if(q){ cur += ch; if(ch === '\\'){ cur += src[++i]; } else if(ch === q) q = null; continue; }
     if(ch === '\'' || ch === '"' || ch === '`'){ q = ch; cur += ch; continue; }
+    if(ch === '/' && src[i + 1] === '/'){ const e = src.indexOf('\n', i); i = e < 0 ? src.length : e - 1; continue; }
+    if(ch === '/' && src[i + 1] === '*'){ const e = src.indexOf('*/', i + 2); i = e < 0 ? src.length : e + 1; continue; }
+    if(ch === '/' && regexAt()){ let cls = false, j = i + 1; for(; j < src.length && src[j] !== '\n'; j++){ const c = src[j]; if(c === '\\'){ j++; continue; } if(c === '[') cls = true; else if(c === ']') cls = false; else if(c === '/' && !cls) break; }
+      cur += src.slice(i, j + 1); i = j; continue; }
     if('([{'.includes(ch)) depth++;
-    if(')]}'.includes(ch)){ if(!depth){ members.push(cur); break; } depth--; }
+    if(')]}'.includes(ch)){ if(!depth){ members.push(cur); ended = true; break; } depth--; }
     if(ch === ',' && !depth){ members.push(cur); cur = ''; continue; }
     cur += ch;
   }
+  if(!ended) unknown.push('the return line does not close');
   for(const m of members){
-    // (a table: a constant, NAME, or a call over one, resolveArmies(ARMIES, …); a function member, resolve, is no table)
-    const x = /^\s*([\w$]+)\s*:\s*(?:([A-Z][A-Z0-9_]*)|[\w$]+\(\s*([A-Z][A-Z0-9_]*)\b[^]*\))\s*$/.exec(m); if(!x) continue;
+    if(!m.trim()) continue;
+    if(/^\s*[\w$]+\s*:\s*function\b[^]*\}\s*$/.test(m)) continue;   // (a function member: no table)
+    // (a table: a constant, NAME, or a call over one, resolveArmies(ARMIES, …))
+    const x = /^\s*([\w$]+)\s*:\s*(?:([A-Z][A-Z0-9_]*)|[\w$]+\(\s*([A-Z][A-Z0-9_]*)\b[^]*\))\s*$/.exec(m);
+    if(!x){ unknown.push(m.trim().slice(0, 80)); continue; }
     const key = x[1], name = x[2] || x[3]; if(out[name]) continue;
-    const c = constant(src, name); if(!c) continue;
+    const c = constant(src, name); if(!c){ unknown.push(m.trim().slice(0, 80) + ' (no constant ' + name + ' in data.js)'); continue; }
     const rows = Array.isArray(c.value) ? c.value : c.value && typeof c.value === 'object' ? Object.values(c.value) : [];
     out[name] = { key, positional:rows.length > 0 && rows.every(r => !r || typeof r !== 'object' || Array.isArray(r) || r instanceof RegExp) };
   }
+  return { tables:out, unknown };
+}
+// the return line's own fixtures: [the return line, its tables, its unknown members]
+const RETURN_FIXTURES = [
+  ['return { version:VERSION, armies:resolveArmies(ARMIES, DATASHEETS), resolve:function(a){ return a; } };', 'VERSION,ARMIES', 0],
+  ["return { version:VERSION, resolve:function(a){ return /[\"']/.test(a) ? a : 'x'; }, armies:ARMIES };", 'VERSION,ARMIES', 0],
+  ['return { version:VERSION, newt:VERSION || {} };', 'VERSION', 1], ['return { version:VERSION, newt:ARMIES.a };', 'VERSION', 1],
+  ['return { version:VERSION, newt:NOSUCH };', 'VERSION', 1], ['return { version:VERSION, newt:() => ARMIES };', 'VERSION', 1]];
+function returnFixtures(src){
+  const out = [], head = src.slice(0, src.lastIndexOf('\nreturn {') + 1);
+  for(const [ret, tables, unknown] of RETURN_FIXTURES){ const r = returnMembers(head + ret + '\n})();'), got = Object.keys(r.tables).join(',');
+    if(got !== tables || r.unknown.length !== unknown) out.push('return line fixture “' + ret.slice(0, 70) + '”: tables ' + (got || 'none') + ', ' + r.unknown.length + ' unknown (want ' + tables + ', ' + unknown + ')'); }
   return out;
 }
 // every column of verify/columns.json a screen reads, and how: { 'T.c': 'by name' | 'by position (…)' | 'whole (…)' }
@@ -1503,7 +1531,7 @@ function report(t){
   return lines.join('\n') + '\n';
 }
 
-module.exports = { codeRefs, screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
+module.exports = { returnMembers, codeRefs, screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
 
 if(require.main === module){
   let src = fs.readFileSync(DATA, 'utf8');
@@ -1572,6 +1600,8 @@ if(require.main === module){
   for(const u of screenJudgements(D0)) fails.push('a unit or stratagem screen reads a judgement: ' + u);
   for(const u of scanFixtures(src)) fails.push('the end-state scan does not see a read: ' + u);
   for(const u of literalFixtures()) fails.push(u);
+  for(const u of returnMembers(src).unknown) fails.push('a member of data.js\'s return line that is no table and no function (say it as key:NAME, key:fn(NAME, …) or key:function(…){ … }): ' + u);
+  for(const u of returnFixtures(src)) fails.push(u);
   for(const u of stratIds(D0)) fails.push(u);
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));
   const B = t.B, units = B.armies.reduce((n, a) => n + a.units.length, 0);
