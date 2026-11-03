@@ -4,11 +4,13 @@
 // the column holds when one of them
 //   - references the column's key in its code (x.key, 'key', key:, { key }; a table read by position: the table's D key or name), and
 //   - fails its gate step when the column's value is changed: in a copy of this folder, one value of the column in data.js is changed
-//     in place (its first scalar: a string gets " (changed)", a number +1, a boolean flipped, a regular expression one more character,
-//     a map's name " (changed)"; only that token: the file keeps its form) and the deriver's step of verify/run.js is run (the step that
-//     is the deriver; for a deriver that is no step of its own, each step that requires it, the quicker first); it must fail (a crash
-//     too: the step cannot run with that value; said "crashed"). The first, middle and last row holding a value are tried, in that
-//     order, until one fails.
+//     in place, and the deriver's step of verify/run.js is run (the step that is the deriver; for a deriver that is no step of its own,
+//     each step that requires it, the quicker first); it must fail with a check failure. A crash (an exception, its stack trace, and no
+//     failure the step reports) is no proof: the step cannot run with that value, which says nothing of whether it checks it. Two
+//     changes of a row's value are tried: its first scalar changed (a string gets " (changed)", a number +1, a boolean flipped, a
+//     regular expression one more character, a map's name " (changed)"; only that token: the file keeps its form), and a swap, the
+//     value of the column another row has (a valid value, the next row's that differs). The first, middle and last row holding a value
+//     are tried, in that order, until one fails.
 // A column without such a deriver fails; a step that fails on the unchanged data.js proves nothing (it is run so, once, before a proof
 // stands on it). A proof is kept in verify/out/derived-proof.json and stands, without running again, while the code it ran is the same
 // (every file of its step, the column's entry, the change); --fresh runs every one again.
@@ -93,6 +95,15 @@ const STORED = (() => { const c = columnsInData(SRC), out = new Set();
   for(const [t, cs] of Object.entries(c)) for(const k of cs) out.add(t + '.' + k);
   for(const [name, x] of Object.entries(TABLES)) if(x.positional && (constOf(name) || {}).nodes) for(const k of Object.keys((REG[name] || {}).columns || {})) out.add(name + '.' + k);
   return out; })();
+// a swap: the value of the column the next row (in order, around) has that differs, in place of this row's: a valid value of the column
+// (none for a map's name: two rows of one name)
+function swap(vals, i){
+  const x = vals[i]; if(!x || x.key) return null;
+  const mine = SRC.slice(x.n.pos, x.n.end);
+  for(let k = 1; k < vals.length; k++){ const y = vals[(i + k) % vals.length]; if(y.key) continue; const t = SRC.slice(y.n.pos, y.n.end);
+    if(t !== mine) return { pos:x.n.pos, end:x.n.end, from:mine.slice(0, 60), to:t.slice(0, 60), text:t, at:x.n.path.join('.') + ' ← ' + y.n.path.join('.') }; }
+  return null;
+}
 // one change of a value in place: its first scalar token (a string, number, boolean, regular expression) → [pos, end, text]
 function change({ C, n, key }){
   if(key){ const m = /^'(?:[^'\\]|\\.)*'|^"(?:[^"\\]|\\.)*"|^[A-Za-z_$][\w$]*/.exec(SRC.slice(n.pos, n.pos + 300)); if(!m) return null;
@@ -153,7 +164,7 @@ const CACHE = (() => { try { return JSON.parse(fs.readFileSync(OUT, 'utf8')).col
     const steps = [];
     for(const f of ds) for(const s of STEPS.filter(s => s.args[0] === f)) steps.push({ s, f, own:true });
     for(const f of ds) if(!STEPS.some(s => s.args[0] === f)) for(const s of STEPS.filter(s => s.files.has(f))) if(!steps.some(x => x.s === s)) steps.push({ s, f });
-    const tries = [...new Set([0, vals.length >> 1, vals.length - 1])].filter(i => i >= 0 && i < vals.length).map(i => change(vals[i])).filter(Boolean);
+    const tries = [...new Set([0, vals.length >> 1, vals.length - 1])].filter(i => i >= 0 && i < vals.length).flatMap(i => [change(vals[i]), swap(vals, i)]).filter(Boolean);
     return { id, v, names, keys, ds, steps, tries };
   });
   for(const w of work){
@@ -170,7 +181,7 @@ const CACHE = (() => { try { return JSON.parse(fs.readFileSync(OUT, 'utf8')).col
   const queue = work.filter(w => {
     if(!w.ds.length || !w.tries.length) return false;
     const c = !fresh && CACHE[w.id], p = c && c.proof;
-    if(p && w.steps.some(x => x.s.name === p.step && x.f === p.deriver && w.tries.some(ch => ch.at === p.at && keyOf(w, x, ch) === p.key))){ res[w.id] = c; kept++; return false; }
+    if(p && !/^crashed\b/.test(p.failed || '') && w.steps.some(x => x.s.name === p.step && x.f === p.deriver && w.tries.some(ch => ch.at === p.at && keyOf(w, x, ch) === p.key))){ res[w.id] = c; kept++; return false; }
     return true; });
   // (the quicker steps first: when the gate runs this one, VERIFY_PASSED gives the steps that passed before it, on this data.js, and their
   // times: those need no run on the unchanged data.js)
@@ -191,9 +202,10 @@ const CACHE = (() => { try { return JSON.parse(fs.readFileSync(OUT, 'utf8')).col
           const r = await runStep(dir, x.s);
           fs.writeFileSync(df, SRC);
           if(r.code === 0){ tried.push(x.s.name + ' @ ' + ch.at + ' passed'); continue; }
+          // (a crash is no proof: the next change, or the next step)
+          if(crashed(r.out)){ tried.push(x.s.name + ' @ ' + ch.at + ' crashed (' + firstFail(r.out).slice(0, 80) + ')'); continue; }
           if(!await baseline(dir, x.s)){ tried.push(x.s.name + ' fails on the unchanged data.js'); break; }
-          // (a crash is the step failing too: the changed value is what it cannot run with; said as such)
-          proof = { deriver:x.f, step:x.s.name, at:ch.at, from:ch.from, to:ch.to, failed:(crashed(r.out) ? 'crashed: ' : '') + firstFail(r.out), key:keyOf(w, x, ch) };
+          proof = { deriver:x.f, step:x.s.name, at:ch.at, from:ch.from, to:ch.to, failed:firstFail(r.out), key:keyOf(w, x, ch) };
           break;
         } }
       res[w.id] = proof ? { proof } : { proof:null, tried };
