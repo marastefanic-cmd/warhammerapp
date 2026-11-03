@@ -17,7 +17,8 @@
 // stands on it). A proof is kept in verify/out/derived-proof.json and stands, without running again, while what it ran is the same: every
 // code file of its step, every other input of it (inputsOf: the JSON files of verify/ (the deviations, derive-agreed.json, columns.json …),
 // rules/, and, where its code names them, verify/sources, verify/review, verify/reader2's data, app.html and the cache of GW's
-// texts, verify/.cache, by its files' names, sizes and times), this script and literal.js (how it changes and proves), the column's entry
+// texts, verify/.cache, by its files' names, sizes and times; every file its code names by a literal name, verify/fetch.sh; the page's
+// scripts for a step with tables.js, which reads them as text), this script and literal.js (how it changes and proves), the column's entry
 // and the change; --fresh runs every one again.
 //
 //   node verify/derived-proof.js                 every derived column (the gate's "derived" step); verify/out/derived-proof.json
@@ -182,8 +183,16 @@ const AREAS = {
   'verify/.cache':{ names:/\.cache\b|\bCACHE\b/, stat:true, files:() => walk('verify/.cache', () => true) } };
 const areaSha = {}, areaOf = k => areaSha[k] || (areaSha[k] = sha(AREAS[k].files().map(f => { const a = path.join(ROOT, f);
   if(AREAS[k].stat){ const st = fs.statSync(a); return f + ' ' + st.size + ' ' + st.mtimeMs; } return f + ' ' + sha(fs.readFileSync(a)); }).join('\n')));
+// (and, by their files: every file of this folder the step's code names by a literal name, not code it requires, "fetch.sh" read for its
+// BSDATA_COMMIT; and the page's own scripts, which a step with tables.js reads as text, screenReads: calc.js, effects.js, ask.js, …)
+const named = code => [...new Set([...code.matchAll(/['"`]((?:\.{0,2}\/)?[\w.\/-]+\.(?:sh|txt|md|html|json|csv|tsv|mjs|js))['"`]/g)].map(m => m[1].replace(/^\.\//, ''))
+  .flatMap(f => [f, 'verify/' + f]).filter(f => !f.startsWith('/') && !f.includes('..') && !NOT_CODE.has(f) && !GENERATED.has(f) && !f.startsWith('verify/out/') && fs.existsSync(path.join(ROOT, f)) && fs.statSync(path.join(ROOT, f)).isFile()))].sort();
+let PAGE_JS = null;
+const pageJs = () => PAGE_JS || (PAGE_JS = require('./tables').pageScripts(fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8'), null, []));
 const inputsOf = s => { if(s.inputs) return s.inputs; const code = [...s.files].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('\n');
-  return (s.inputs = Object.keys(AREAS).filter(k => AREAS[k].always || AREAS[k].names.test(code)).map(k => k + ' ' + areaOf(k)).join(' ')); };
+  const files = [...new Set(named(code).concat(s.files.has('verify/tables.js') ? pageJs() : []))].filter(f => !s.files.has(f)).sort();
+  return (s.inputs = Object.keys(AREAS).filter(k => AREAS[k].always || AREAS[k].names.test(code)).map(k => k + ' ' + areaOf(k)).join(' ') + ' ' +
+    files.map(f => f + ':' + (fileSha[f] || (fileSha[f] = sha(fs.readFileSync(path.join(ROOT, f)))))).join(' ')); };
 // (and how a proof is made: this script and literal.js)
 const RULES_SHA = sha(['verify/derived-proof.js', 'verify/literal.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('\n'));
 const OUT = path.join(ROOT, 'verify/out/derived-proof.json');

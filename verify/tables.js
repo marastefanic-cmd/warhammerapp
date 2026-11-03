@@ -1592,7 +1592,7 @@ function report(t){
   return lines.join('\n') + '\n';
 }
 
-module.exports = { returnMembers, codeRefs, screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
+module.exports = { returnMembers, pageScripts, codeRefs, screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
 
 if(require.main === module){
   let src = fs.readFileSync(DATA, 'utf8');
