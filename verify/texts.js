@@ -1574,7 +1574,9 @@ function labelGaps(label, r, n, docs) {
   const d = typeof r.d === 'string' ? DOCS[r.d] : r.d, N = d ? d.N : '', before = n => N.slice(Math.max(0, r.off - n), r.off), out = [];
   const v = /Faction Pack (\d+\.\d+)/.exec(label);
   if (v) { const m = /\bversion (\d+\.\d+)/.exec(N); if (!m || m[1] !== v[1]) out.push('the document is ' + (m ? 'version ' + m[1] : 'no versioned Faction Pack') + ', not ' + v[0]); }
-  const ds = /([A-Z][A-Za-z’' -]+?) datasheet\)/.exec(label);
+  // ("X datasheet" anywhere in the label, at its start or after "(" or ",": "(Faction Pack 1.2, Pink Horrors datasheet)" and "Faction Pack
+  // 1.2, Pink Horrors datasheet" alike; not a possessive, "Wahapedia’s datasheet", nor "datasheets")
+  const ds = /(?:^|[(,]\s*)([A-Z][A-Za-z’' -]*?[A-Za-z])(?<![’']s) datasheet\b/.exec(label);
   if (ds && d) {
     const name = squash(ds[1]), pg = [];
     if (d.kind === 'wahahtml' && /^wahads:/.test(d.id)) { if (squash(d.label.replace(/^Wahapedia datasheet /, '')) === name) pg.push(...d.pages.keys()); }
@@ -1723,6 +1725,13 @@ const LINE_FIXTURES = [
   for (const [line, gw, waha, ok] of LINE_FIXTURES) { const n0 = failures.length; checkLines('fixture', 'fixture', 'fixture', 'text', line, gw, waha); if ((failures.length === n0) !== ok) bad.push([line, ok]); }
   failures.splice(f0); prov.splice(p0); appWritten.splice(a0); labelColons.splice(l0); for (const k of Object.keys(checked)) delete checked[k]; Object.assign(checked, c0);
   for (const [line, ok] of bad) fail('fixture', 'texts.js', 'line fixture', 'text', line, ok ? 'a fixed case that should pass fails' : 'a fixed case that should fail passes', ''); }
+// [a note label, its first quote (GW's words), held?]: what the label says of its datasheet, in either form, is held to where the quote is
+{ const PH = 'While this unit contains one or more PINK HORROR models, the Sullen Malevolence and Exploding Horrors abilities from the BLUE HORRORS datasheet do not apply to this unit.';
+  const LABEL_FIXTURES = [['Designer’s Note (Faction Pack 1.2, Pink Horrors datasheet)', PH, true], ['Designer’s Note (Faction Pack 1.2, Flamers datasheet)', PH, false],
+    ['Faction Pack 1.2, Pink Horrors datasheet', PH, true], ['Faction Pack 1.2, Flamers datasheet', PH, false], ['Flamers datasheet', PH, false],
+    ['Designer’s Note (Wahapedia’s datasheet, under the codex wording)', PH, null]];
+  for (const [label, q, held] of LABEL_FIXTURES) { const n = norm(q), r = locate(n, GW_ALL), gaps = r ? labelGaps(label, r, n, GW_ALL).filter(g => /datasheet/.test(g)) : ['quote not found'];
+    if (held === null ? gaps.length : held !== !gaps.length) fail('fixture', 'texts.js', 'label fixture', 'note', label, held === false ? 'a datasheet label on another datasheet’s quote is not caught' : 'a fixed case that should hold fails: ' + gaps.join('; '), ''); } }
 
 /* ------------------------------------------------------------------ deviations, output, provenance */
 let devs = [];
