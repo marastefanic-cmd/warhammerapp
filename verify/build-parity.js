@@ -205,6 +205,19 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
       null, r => !r.ok && r.errors.includes('leader attachment The Swarmlord + Hive Tyrant + Tyrant Guard not imported: each bodyguard unit can only have one leader unit attached to it (Core Rules 19.01)'));
     neg('a leader attached as support', 'healybois', j => { unit(j, 'The Swarmlord').associations[0].name = 'Supporting'; },
       ['leader attachment The Swarmlord + Tyrant Guard not imported: GW’s datasheet of The Swarmlord has no Support ability, so it cannot support a unit (Core Rules 19.01)']);
+    // an ability a detachment gives is the list's, never its datasheet's: a Norn Emissary in a list without Talons of the Norn Queen has no
+    // Protean Purpose (even with the export still showing it), with the detachment it has it, and no DATASHEETS row has a rule's ability
+    const noTalons = j => { const F = j.roster.forces[0], det = sels(j).find(s => s.name === 'Detachment');
+      det.selections = det.selections.filter(s => !/Talons/.test(s.name));
+      const enh = s => (s.selections || []).some(c => /^Enhancements/.test(c.group || '') || enh(c));
+      F.selections = F.selections.filter(s => !(s.type !== 'upgrade' && /Norn/.test(s.name) && enh(s)));
+      sels(j).find(s => s.name === 'Force Disposition').selections[0] = { id:'x4', name:'Priority Assets', entryId:'081d-bc07-5d4e-ab22', number:1, type:'upgrade' }; };
+    const pp = r => r.ok ? D.resolve(r.army).units.filter(u => /^Norn /.test(u.name)).map(u => u.name + ':' + u.abilities.some(a => a.name === 'Protean Purpose')) : r.errors;
+    neg('a Norn without Talons of the Norn Queen: no Protean Purpose', 'healybois', noTalons, null, r => JSON.stringify(pp(r)) === JSON.stringify(['Norn Emissary:false']));
+    report.push('N a Norn without Talons of the Norn Queen → ' + JSON.stringify(pp(B.build(((j => (noTalons(j), j))(clone(exp('healybois')))), D, { id:'n', date:'x' }))));
+    ok(JSON.stringify(pp(B.build(exp('healybois'), D, { id:'n', date:'x' })).slice().sort()) === JSON.stringify(['Norn Assimilator:true', 'Norn Emissary:true']), 'N with Talons of the Norn Queen: its Norns have no Protean Purpose');
+    const onRow = Object.entries(D.datasheets).filter(([, S]) => (S.abilities || []).some(a => (D.grants || []).some(g => g.type === 'ability' && g.grants === a.name && / rule · /.test(g.rule) && !g.option && (D.ruleOptions || []).some(o => o.rule === g.rule && o.option === g.grants)))).map(([k]) => k);
+    ok(!onRow.length, 'N: a DATASHEETS row has an ability an army or detachment rule gives (the list’s, not the datasheet’s): ' + onRow.join(', '));
   }
 
   // ---- I: the index

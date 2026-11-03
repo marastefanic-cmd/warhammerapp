@@ -2732,7 +2732,7 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose' },
+        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
       ]
     },
@@ -2747,7 +2747,7 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose' },
+        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
       ]
     },
@@ -2764,7 +2764,7 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Unnatural Resilience' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose' },
+        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Destabilising Predation', tag:'Enhancement', text:'**NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.' }
       ],
       rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Extra Attacks','Melta','Blast','Psychic','Anti'],
@@ -2773,7 +2773,13 @@ const ARMIES = [
     {
       id:'norn-emissary', ds:'tyranids/norn-emissary', pts:270,
       models:['1× Norn Emissary'],
-      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']]
+      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']],
+      abilities:[
+        { name:'Singular Purpose' },
+        { name:'Unnatural Resilience' },
+        { name:'Damaged: 1-5 Wounds Remaining' },
+        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
+      ]
     },
     {
       id:'tyrannofex', ds:'tyranids/tyrannofex', pts:180, copies:2,
@@ -5102,14 +5108,20 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose' },
+        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
       ]
     },
     {
       id:'norn-emissary', ds:'tyranids/norn-emissary', pts:250,
       models:['1× Norn Emissary'],
-      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']]
+      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']],
+      abilities:[
+        { name:'Singular Purpose' },
+        { name:'Unnatural Resilience' },
+        { name:'Damaged: 1-5 Wounds Remaining' },
+        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
+      ]
     },
     {
       id:'psychophage', ds:'tyranids/psychophage', pts:110,
@@ -6630,8 +6642,7 @@ const DATASHEETS = {
   abilities:[
     { name:'Singular Purpose', at:'Start of the first battle round', ph:['command','movement','shooting','fight'], turn:'either', text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
     { name:'Harpoon Barbs', tag:'Once per turn', ph:['movement'], turn:'opp', text:'Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.' },
-    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' },
-    { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
+    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' }
   ],
   rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Harpooned','Extra Attacks'],
   kw:['Monster','Great Devourer','Synapse','Harvester','Norn Assimilator','Faction: Tyranids'],
@@ -6660,8 +6671,7 @@ const DATASHEETS = {
   abilities:[
     { name:'Singular Purpose', at:'Start of the first battle round', ph:['command','movement','shooting','fight'], turn:'either', text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
     { name:'Unnatural Resilience', text:'This model has the **Feel No Pain 4+** ability against **mortal wounds**.' },
-    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' },
-    { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
+    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' }
   ],
   rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Extra Attacks','Melta','Blast','Psychic'],
   kw:['Monster','Psyker','Great Devourer','Synapse','Norn Emissary','Faction: Tyranids'],

@@ -481,6 +481,10 @@ function finish(B, army, u, units, out){
       if(opts.has(lc(a.name)) && !taken[i].has(lc(a.name))) continue;
       abil.push({ row:a, part:i });
     }
+    // (an ability a rule of the list gives it, Talons of the Norn Queen's Protean Purpose: the list's own row, not its datasheet's, where
+    // the export's unit carries it and a rule the list has in force gives it to units of its keywords)
+    const shown = new Set(); dfs(p, s => { for(const pr of s.profiles || []) if(pr.typeName === 'Abilities') shown.add(lc(pr.name)); });
+    for(const g of grantedAbilities(B.D, B.F, B.dets)) if(shown.has(lc(g.name)) && meetsTo(g.to, P[i].kw) && !(P[i].abilities || []).some(a => a.name === g.name)) abil.push({ granted:g, part:i });
     for(const x of u._enh || []) if((x.e.upgrade ? parts.length - 1 : x.i) === i) abil.push({ enh:x.e, part:i });
   });
   // the "+" marks: values a rule of the list changes
@@ -504,6 +508,10 @@ function finish(B, army, u, units, out){
   {
     const list = abil.map(x => {
       if(x.row){ const o = { name:x.row.name }; if(multi) o.who = who(x.part); return o; }
+      if(x.granted){ const g = x.granted, o = { name:g.name }; if(multi) o.who = who(x.part);
+        const lim = /^\(([^()]+)\)\s/.exec(g.opt.text); if(lim) o.tag = lim[1];   // (GW's limit before its words: "(Once per battle, per unit) …")
+        const ph = g.opt.phases || {}; if(ph.ph && ph.ph.length){ o.ph = ph.ph; o.turn = ph.turn; if(ph.turns) o.turns = ph.turns; }
+        o.text = g.opt.text; return sorted(o, ORDER.abilities); }
       const o = { name:x.enh.name }; if(multi) o.who = who(x.part);
       o.tag = (x.enh.upgrade ? 'Upgrade' : 'Enhancement') + (/\(Aura\)$/.test(x.enh.name) ? ' · Aura' : '');
       const lab = ((B.D.buildIndex || {}).labels || {})[x.enh.name]; if(lab) Object.assign(o, lab);
@@ -626,6 +634,17 @@ function catFilled(B, key, f){
   const S = B.S[key]; if(!S || !S.points || S[f] === undefined) return false;
   return !(B.D.armies || []).some(a => !a.imported && a.faction === S.faction && a.units.some(x => x.name === S.name && !x.leads && !x.ref));
 }
+// the abilities the rules a list has in force give units (verify/tables.js ruleAbilities reads them the same way): an army rule of its
+// faction or a rule of one of its detachments that gives units of these keywords an ability with no condition (GRANTS, type ability) and
+// defines its words (RULE_OPTIONS, the option of that name, with its phases)
+function grantedAbilities(D, F, dets){
+  const inForce = new Set((F.armyRules || []).map(r => F.name + ' army rule · ' + r.name));
+  for(const d of dets) for(const r of [d.rule].concat(d.moreRules || []).filter(Boolean)) inForce.add(F.name + ' · ' + d.name + ' rule · ' + r.name);
+  return (D.grants || []).filter(g => g.type === 'ability' && !g.option && g.while == null && g.to && typeof g.to === 'object' && inForce.has(g.rule))
+    .map(g => ({ name:g.grants, rule:g.rule, to:g.to, opt:(D.ruleOptions || []).find(o => o.rule === g.rule && o.option === g.grants) })).filter(x => x.opt);
+}
+const meetsTo = (to, kw) => { const has = k => (kw || []).some(x => lc(x) === lc(k));
+  return (to.all || []).every(has) && (!to.any || to.any.some(has)) && !(to.none || []).some(has); };
 // the rule a weapon keyword is ("SUSTAINED HITS 1": Sustained Hits), as the glossary names it
 function ruleOfKw(D, k){
   const names = Object.keys(D.rules || {}), u = k.toUpperCase();
@@ -647,7 +666,7 @@ function marksOf(B, army, u, parts, P, rows, abil){
   const E = root.WH_EFFECTS, out = new Map(), boxes = E && E.agreed ? E.agreed(B.D.boxes || {}, B.D.agree) : {}, idx = ((B.D.buildIndex || {}).marks) || {};
   // the rules that reach the unit, with their boxes
   const src = [];
-  for(const x of abil){ const a = x.enh || x.row; src.push({ name:a.name, part:x.enh && x.enh.upgrade ? undefined : x.part, box:boxes['a|' + ckHash(a.name + '\n' + a.text)] }); }
+  for(const x of abil){ const a = x.enh || x.row || { name:x.granted.name, text:x.granted.opt.text }; src.push({ name:a.name, part:x.enh && x.enh.upgrade ? undefined : x.part, box:boxes['a|' + ckHash(a.name + '\n' + a.text)] }); }
   for(const d of B.dets) for(const r of [d.rule].concat(d.moreRules || [])) if(r) src.push({ name:r.name, box:boxes['r|' + ckHash(r.name + '\n' + ruleText(r))] });
   for(const r of B.F.armyRules || []) src.push({ name:r.name, box:boxes['r|' + ckHash(r.name + '\n' + ruleText(r))] });
   const fxKw = (id, p) => { const f = E && E.FX[id]; if(!f) return null; const l = f.label(p); return /^\[.*\]$/.test(l) ? l.slice(1, -1).toUpperCase() : null; };

@@ -1062,6 +1062,18 @@ for (const u of units) {
       filled.push({ what: u.name + ' without the ability ' + ab.name, from: 'the list’s detachment rule ' + dr.name + ' (GW’s datasheet does not print it)' });
       continue;
     }
+    // an ability a rule of the list gives the unit ("Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability: Protean
+    // Purpose", Talons of the Norn Queen): the list's own row, not the datasheet's (GW's page does not print it), in the rule's words and
+    // with its phases (RULE_OPTIONS), its limit before them its tag, as builder.js gives it (verify/tables.js ruleAbilities)
+    const ra = require('./tables').ruleAbilities(D.factions, D.grants, D.ruleOptions, { faction: factionId, detachments: detIds }).find(x => x.name === ab.name && require('./tables').meetsTo(x.to, u.kw));
+    if (ra) {
+      for (const k of ['tag', 'ph', 'turn', 'turns', 'text']) delete ab[k];
+      const lim = /^\(([^()]+)\)\s/.exec(ra.opt.text); if (lim) ab.tag = lim[1];
+      const ph = ra.opt.phases || {}; if (ph.ph && ph.ph.length) { ab.ph = ph.ph; ab.turn = ph.turn; if (ph.turns) ab.turns = ph.turns; }
+      ab.text = ra.opt.text;
+      filled.push({ what: 'ability ' + u.name + ' · ' + ab.name, from: 'the list’s rule ' + ra.rule + ' (its words and phases, RULE_OPTIONS): the list’s own, not the datasheet’s' });
+      continue;
+    }
     // the datasheet's ability: the one with BSData's words, else the one of BSData's name (GW's name, tag and words win)
     // (BSData's "[Psychic Abilities] - Shrouding" is GW's Shrouding)
     // (and without its articles: BSData's "Master of the Ka'tahs" is GW's Master of Ka’tahs)

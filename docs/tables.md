@@ -359,6 +359,28 @@ What from-json does that builder.js does not, and where each goes:
 | a models line split by GW's WARGEAR OPTIONS ("1 model can be equipped with 1 …", Wahapedia's page), a stats row without its ×N where the list has a New Recruit PDF (`verify/sources/nr`) | none in a catalogued list's entry today; builder.js does neither (the export's association, else unplaced; always ×N), so a catalogued list needing one fails from-json's check |
 | "+" marks from BSData's modifiers (`verify/bsdata.js`, `write-grants.js`) | builder.js names a mark's rule from `BOXES` (agreed), else `BUILD_INDEX.marks`, which `verify/build-index.js` learns from the built-in lists' marks |
 
+**An ability a rule gives is the list's, never the datasheet's.** An army rule of the list's faction, or a rule of one of its detachments,
+that gives units "the following ability" (`GRANTS`, type ability, in force with no condition, to units of these keywords) and defines
+its words (`RULE_OPTIONS`, the option of that name) gives a list's unit a row of its own, the list's (in full on its entry, as an
+enhancement's), never one on `DATASHEETS`: Talons of the Norn Queen's Protean Purpose, on a Norn Emissary or Norn Assimilator only in a
+list that takes the detachment. `verify/tables.js` (`ruleAbilities`) keeps such a row off the datasheet, `verify/from-json.js` writes it in
+the rule's words and phases (its tag the limit GW prints before them), and builder.js adds it the same way where the export's unit carries
+it (`grantedAbilities`); `verify/catalog.js` counts it as the list's. build-parity N holds it: a Norn Emissary in a Tyranids list without
+the detachment has no Protean Purpose (even with the export still showing it), with it both Norns have it, and no `DATASHEETS` row has an
+ability an army or detachment rule gives.
+
+Known limits (accepted: each refuses rather than shows anything wrong, or no current list meets it):
+- `BUILD_INDEX.marks` is learned from the built-in lists' marks: a phone export showing a change no agreed box explains and no built-in
+  list has marked is refused.
+- A few datasheet facts have a list's hand file as their source: the hand texts and notes on `DATASHEETS` rows, and the Brimstone Horrors
+  row (no BSData entry), made from Tzeeeeentch's hand `refs`. The phone has them while those rows are in `DATASHEETS`. Moving them into
+  the catalogue hand files needs `notes` and `refs` in `verify/from-bsdata.js`.
+- from-json splits a models line by GW's WARGEAR OPTIONS and names a stats row without its ×N where the list has a New Recruit PDF;
+  builder.js does neither. No catalogued list needs either today; one that does fails from-json's check.
+- The 18 lists of factions with no catalogue keep from-json's reading (and the phone's strict copy) until their catalogue lands.
+- A rule's ability builder.js adds only where the export's unit carries it: Daughters of the Abyss gives Psychic Null (Aura) to ANATHEMA
+  PSYKANA units and Deathwatch Support gives KILL TEAM units its Tactics, but no export, and so no list, shows them on a unit today.
+
 The input formats (`import.js` `parse`): .json; .ros (BattleScribe XML, the same roster); .rosz (it zipped, inflated by the platform);
 New Recruit's text format B ("+++ FACTION KEYWORD …") and C ("## Category …"), each name looked up exactly (case, apostrophes and spaces
 aside) and any line that is not exactly one thing refusing the import with its line; format A is refused as not supported. A text names no

@@ -303,6 +303,16 @@ function keyOrder(seqs0, prev0){
   return out;
 }
 
+// the abilities the rules a list has in force give its units (see ruleAbility in build; builder.js grantedAbilities reads them the same way)
+function ruleAbilities(factions, grants, options, a){
+  const F = (factions || {})[a.faction]; if(!F) return [];
+  const inForce = new Set((F.armyRules || []).map(r => F.name + ' army rule · ' + r.name));
+  for(const k of a.detachments || []){ const d = (F.detachments || {})[k]; if(d) for(const r of [d.rule].concat(d.moreRules || []).filter(Boolean)) inForce.add(F.name + ' · ' + d.name + ' rule · ' + r.name); }
+  return (grants || []).filter(g => g.type === 'ability' && !g.option && g.while == null && g.to && typeof g.to === 'object' && inForce.has(g.rule))
+    .map(g => ({ name:g.grants, rule:g.rule, to:g.to, opt:(options || []).find(o => o.rule === g.rule && o.option === g.grants) })).filter(x => x.opt);
+}
+const meetsTo = (to, kw) => { const has = k => (kw || []).some(x => String(x).toLowerCase() === String(k).toLowerCase());
+  return (to.all || []).every(has) && (!to.any || to.any.some(has)) && !(to.none || []).some(has); };
 function build(R){
   const armies = R.armies, bsIds = R.bsIds || {}, C = R.comments;
   const order = { unit:keyOrder(armies.flatMap(a => a.units.map(u => Object.keys(u).filter(k => k !== 'ds'))), R.order.unit) };
@@ -326,6 +336,13 @@ function build(R){
     });
     return hit > 0 && hit < names.length - 1 ? hit : names.length - 1;
   };
+  // an ability a rule of the list gives the unit, not its datasheet (the list's own row, as builder.js adds it): an army rule of the list's
+  // faction or a rule of one of its detachments that gives units "the following ability" (GRANTS, type ability, in force with no
+  // condition, to units of these keywords) and defines its words (RULE_OPTIONS: the option of that name): Talons of the Norn Queen's
+  // Protean Purpose, on its Norn units only in a list that takes the detachment
+  // (GRANTS and RULE_OPTIONS as verify/derive.js reads them from the words: the old form, --expand's, has neither table)
+  let RA0 = null; const ruleTabs = () => RA0 || (RA0 = require('./derive').ruleTables(R.D));
+  const ruleAbility = (a, u, name) => ruleAbilities(R.D.factions, ruleTabs().grants, ruleTabs().options, a).some(x => x.name === name && meetsTo(x.to, u.kw));
   armies.forEach((a, ai) => a.units.forEach((u, ui) => {
     if(u.ds) throw new Error(a.id + '/' + u.id + ': not resolved');
     const names = u.leads ? [u.name].concat((u.also || []).map(x => x.name), [u.leads]) : [u.name];
@@ -346,7 +363,7 @@ function build(R){
       if(!Array.isArray(u[kind])) continue;
       U.rows[kind] = u[kind].map((r, k) => {
         let part = 0;
-        if((kind === 'abilities' && /\b(Enhancement|Upgrade)\b/.test(r.tag || '')) || ((kind === 'ranged' || kind === 'melee') && r.enh)) part = -1;   // the list's choice, not the datasheet's (an enhancement's ability, or the weapon it gives: Da Gobshot Thunderbuss)
+        if((kind === 'abilities' && (/\b(Enhancement|Upgrade)\b/.test(r.tag || '') || ruleAbility(a, u, r.name))) || ((kind === 'ranged' || kind === 'melee') && r.enh)) part = -1;   // the list's choice, not the datasheet's (an enhancement's ability, or the weapon it gives: Da Gobshot Thunderbuss; an ability a rule of the list gives, Protean Purpose)
         else if(U.multi){
           if(kind === 'stats'){ const i = names.indexOf(baseName(r.name)); part = i >= 0 ? i : partByGear(u, names, baseName(r.name)); }
           else { part = names.indexOf(r.who); if(part < 0){ part = -1; notes.push(a.id + '/' + u.id + ' ' + kind + ' ' + r.name + ': its who (' + r.who + ') names no part of the unit; kept as the list\'s own row'); } }
@@ -1494,7 +1511,7 @@ function report(t){
   return lines.join('\n') + '\n';
 }
 
-module.exports = { codeRefs, screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
+module.exports = { ruleAbilities, meetsTo, codeRefs, screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
 
 if(require.main === module){
   let src = fs.readFileSync(DATA, 'utf8');

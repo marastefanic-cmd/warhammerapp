@@ -294,7 +294,7 @@ function rowDiffs(S, R, opts) {
     const b = new Map((R[kind] || []).map(r => [key(r), r]));
     for (const r of S[kind] || []) {
       const c = b.get(key(r));
-      if (!c) { put(opts.listUnit && kind === 'abilities' && /\b(Enhancement|Upgrade)\b/.test(r.tag || '') ? 'list' : 'other', kind + ' ' + key(r) + ': not in the catalogue', r, null); continue; }
+      if (!c) { put(opts.listUnit && kind === 'abilities' && (/\b(Enhancement|Upgrade)\b/.test(r.tag || '') || (opts.ruleAb || []).includes(r.name)) ? 'list' : 'other', kind + ' ' + key(r) + ': not in the catalogue', r, null); continue; }
       const fields = kind === 'stats' ? ['M', 'T', 'Sv', 'W', 'Ld', 'OC', 'InSv', 'base'] : kind === 'abilities' ? ['tag', 'text'] : ['range', 'A', 'BS', 'WS', 'S', 'AP', 'D', 'kw', 'group', 'fireAll', 'hunter'];
       for (const f of fields) {
         if (stable(r[f]) === stable(c[f])) continue;
@@ -433,7 +433,9 @@ function main() {
         const multi = names.length > 1, mine = k => (u[k] || []).filter(r => !multi || r.who === n || (k === 'stats' && String(r.name).replace(/ ×\d+$/, '') in Object.fromEntries((R.stats || []).map(x => [x.name, 1]))));
         const S = { name: n, stats: mine('stats'), ranged: mine('ranged'), melee: mine('melee'), abilities: mine('abilities') };
         checked.nr += ['stats', 'ranged', 'melee', 'abilities'].reduce((t, k) => t + S[k].length, 0);   // (rows compared)
-        for (const d of rowDiffs(S, R, { listUnit: true })) {
+        // (an ability a rule of the list gives the unit is the list's, as an enhancement's: Protean Purpose, verify/tables.js ruleAbilities)
+        const ruleAb = require('./tables').ruleAbilities(D.factions, D.grants, D.ruleOptions, a).filter(x => require('./tables').meetsTo(x.to, u.kw)).map(x => x.name);
+        for (const d of rowDiffs(S, R, { listUnit: true, ruleAb })) {
           if (['markup', 'tag', 'list', 'label'].includes(d.kind)) continue;
           const dev = DEVC.find(x => x.datasheet === id && x.what === d.what && (!x.lists || x.lists.includes(a.id)));
           if (dev) { usedC.add(dev); continue; }

@@ -1,15 +1,15 @@
 {
  "reader": "reader2",
  "counts": {
-  "sources": 1261,
-  "sentences": 2478,
-  "read": 1274,
+  "sources": 1265,
+  "sentences": 2486,
+  "read": 1278,
   "readWithEffects": 633,
-  "readNoEffect": 641,
-  "unread": 1204,
-  "unreadOutside": 934,
+  "readNoEffect": 645,
+  "unread": 1208,
+  "unreadOutside": 938,
   "unreadUnparsed": 270,
-  "gwFound": 2342,
+  "gwFound": 2350,
   "gwNotFound": 48,
   "gwShort": 88
  },
@@ -4571,47 +4571,6 @@
    "duration": null,
    "gw": "found"
   },
-  "ds:tyranids/norn-assimilator|Protean Purpose|0": {
-   "owner": "ds:tyranids/norn-assimilator",
-   "ownerName": "Norn Assimilator",
-   "source": "Protean Purpose",
-   "sourceKind": "ability",
-   "idx": 0,
-   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
-   "status": "read",
-   "kind": "activation",
-   "effects": [],
-   "attack": null,
-   "side": null,
-   "reach": null,
-   "conditions": [
-    {
-     "id": "oncePerBattle",
-     "table": "COND"
-    },
-    {
-     "id": "phase",
-     "v": {
-      "phase": "command",
-      "turn": "your"
-     },
-     "table": "own"
-    }
-   ],
-   "duration": null,
-   "gw": "found"
-  },
-  "ds:tyranids/norn-assimilator|Protean Purpose|1": {
-   "owner": "ds:tyranids/norn-assimilator",
-   "ownerName": "Norn Assimilator",
-   "source": "Protean Purpose",
-   "sourceKind": "ability",
-   "idx": 1,
-   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
-   "status": "unread",
-   "reason": "outside-vocabulary:faction mechanic",
-   "gw": "found"
-  },
   "ds:tyranids/norn-emissary|Singular Purpose|0": {
    "owner": "ds:tyranids/norn-emissary",
    "ownerName": "Norn Emissary",
@@ -4859,47 +4818,6 @@
     }
    ],
    "duration": null,
-   "gw": "found"
-  },
-  "ds:tyranids/norn-emissary|Protean Purpose|0": {
-   "owner": "ds:tyranids/norn-emissary",
-   "ownerName": "Norn Emissary",
-   "source": "Protean Purpose",
-   "sourceKind": "ability",
-   "idx": 0,
-   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
-   "status": "read",
-   "kind": "activation",
-   "effects": [],
-   "attack": null,
-   "side": null,
-   "reach": null,
-   "conditions": [
-    {
-     "id": "oncePerBattle",
-     "table": "COND"
-    },
-    {
-     "id": "phase",
-     "v": {
-      "phase": "command",
-      "turn": "your"
-     },
-     "table": "own"
-    }
-   ],
-   "duration": null,
-   "gw": "found"
-  },
-  "ds:tyranids/norn-emissary|Protean Purpose|1": {
-   "owner": "ds:tyranids/norn-emissary",
-   "ownerName": "Norn Emissary",
-   "source": "Protean Purpose",
-   "sourceKind": "ability",
-   "idx": 1,
-   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
-   "status": "unread",
-   "reason": "outside-vocabulary:faction mechanic",
    "gw": "found"
   },
   "ds:tyranids/tyrannofex|Resilient Organism|0": {
@@ -23001,6 +22919,47 @@
    "duration": null,
    "gw": "found"
   },
+  "army:nidzillas/norn-assimilator-synaptoprescience|Protean Purpose|0": {
+   "owner": "army:nidzillas/norn-assimilator-synaptoprescience",
+   "ownerName": "Norn Assimilator",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:nidzillas/norn-assimilator-synaptoprescience|Protean Purpose|1": {
+   "owner": "army:nidzillas/norn-assimilator-synaptoprescience",
+   "ownerName": "Norn Assimilator",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
+   "gw": "found"
+  },
   "army:nidzillas/norn-assimilator-synaptoprescience|Synaptoprescience|0": {
    "owner": "army:nidzillas/norn-assimilator-synaptoprescience",
    "ownerName": "Norn Assimilator",
@@ -23062,6 +23021,47 @@
     }
    ],
    "duration": null,
+   "gw": "found"
+  },
+  "army:nidzillas/norn-assimilator-synaptoprescience-2|Protean Purpose|0": {
+   "owner": "army:nidzillas/norn-assimilator-synaptoprescience-2",
+   "ownerName": "Norn Assimilator",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:nidzillas/norn-assimilator-synaptoprescience-2|Protean Purpose|1": {
+   "owner": "army:nidzillas/norn-assimilator-synaptoprescience-2",
+   "ownerName": "Norn Assimilator",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
    "gw": "found"
   },
   "army:nidzillas/norn-assimilator-synaptoprescience-2|Synaptoprescience|0": {
@@ -23127,6 +23127,47 @@
    "duration": null,
    "gw": "found"
   },
+  "army:nidzillas/norn-emissary-destabilising-predation|Protean Purpose|0": {
+   "owner": "army:nidzillas/norn-emissary-destabilising-predation",
+   "ownerName": "Norn Emissary",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:nidzillas/norn-emissary-destabilising-predation|Protean Purpose|1": {
+   "owner": "army:nidzillas/norn-emissary-destabilising-predation",
+   "ownerName": "Norn Emissary",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
+   "gw": "found"
+  },
   "army:nidzillas/norn-emissary-destabilising-predation|Destabilising Predation|0": {
    "owner": "army:nidzillas/norn-emissary-destabilising-predation",
    "ownerName": "Norn Emissary",
@@ -23189,6 +23230,47 @@
     }
    ],
    "duration": null,
+   "gw": "found"
+  },
+  "army:nidzillas/norn-emissary|Protean Purpose|0": {
+   "owner": "army:nidzillas/norn-emissary",
+   "ownerName": "Norn Emissary",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:nidzillas/norn-emissary|Protean Purpose|1": {
+   "owner": "army:nidzillas/norn-emissary",
+   "ownerName": "Norn Emissary",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
    "gw": "found"
   },
   "army:4-megas-and-a-destrier/cerastus-knight-atrapos|Bringer of Justice|0": {
@@ -25889,6 +25971,47 @@
    ],
    "gw": "found"
   },
+  "army:healybois/norn-assimilator|Protean Purpose|0": {
+   "owner": "army:healybois/norn-assimilator",
+   "ownerName": "Norn Assimilator",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:healybois/norn-assimilator|Protean Purpose|1": {
+   "owner": "army:healybois/norn-assimilator",
+   "ownerName": "Norn Assimilator",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
+   "gw": "found"
+  },
   "army:healybois/norn-assimilator|Synaptoprescience|0": {
    "owner": "army:healybois/norn-assimilator",
    "ownerName": "Norn Assimilator",
@@ -25950,6 +26073,47 @@
     }
    ],
    "duration": null,
+   "gw": "found"
+  },
+  "army:healybois/norn-emissary|Protean Purpose|0": {
+   "owner": "army:healybois/norn-emissary",
+   "ownerName": "Norn Emissary",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:healybois/norn-emissary|Protean Purpose|1": {
+   "owner": "army:healybois/norn-emissary",
+   "ownerName": "Norn Emissary",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
    "gw": "found"
   },
   "army:simple-but-effective/zodgrod-wortsnagga-runtherd-gretchin|Extra Sneaky|0": {
