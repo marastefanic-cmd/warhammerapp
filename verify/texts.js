@@ -20,7 +20,10 @@
      alias, allies, coreTwin, tableAt   the rule tables' own columns, by mechanical checks (below, "the rule tables' own columns")
      refQuote       a reference sheet's quote (ref) is GW's words of the ability or stratagem it names, verbatim, and what it names is the list's
    A line marked "*Wahapedia core rules (…): …*" (a sentence GW's Core Rules PDF does not print) is checked word for word in
-   Wahapedia's core rules only.
+   Wahapedia's core rules only. A line marked "*Wahapedia … errata (…): …*" is found in the FAQ / errata of its Wahapedia pages
+   (not their rules text) and is not what GW's documents print (an errata line differs from the text it amends); a "*Wahapedia FAQ: …*"
+   line and a note under "Wahapedia FAQ" / "Wahapedia errata" are found there too. A note label naming a datasheet ("Pink Horrors
+   datasheet") holds its quote to that datasheet's pages.
    A line the app marks as its own ("*App note, not rules text: …*") fails (appNote): a rules text is GW's words only. Any other line of a verbatim field that is in no source is a failure (also listed: notInAnySource).
 
    Sources (authority order): GW Core Rules, Universal Rules Updates and Faction Packs (verify/.cache/gw, read with
@@ -252,8 +255,23 @@ function loadWahaHtml(id, file, label) {
     page.lines.push(l);
   });
   if (page.lines.length) pages.push(page);
+  // (and its FAQ and errata alone, as its own document FAQ_OF[id]: where a "Wahapedia … errata" line and a Wahapedia FAQ must be found.
+  // They are the page's FAQ / errata spoilers under a rule, and its FAQ and errata blocks elsewhere (a faction page's FAQ section): each
+  // <div> of class faqErrataSpoiler, faq (one question and its answer), errata_H or errata (an errata's heading and its change), whole;
+  // nothing of the rules around them)
+  const html = fs.readFileSync(f, 'utf8'), blocks = [];
+  for (const m of html.matchAll(/<div class="(?:faqErrataSpoiler|faq|errata_H|errata)[" ]/g)) {
+    if (blocks.length && m.index < blocks[blocks.length - 1][1]) continue;   // (inside one already taken)
+    let depth = 0; const re = /<(\/?)div\b[^>]*>/g; re.lastIndex = m.index;
+    for (let t; (t = re.exec(html));) { depth += t[1] ? -1 : 1; if (!depth) { blocks.push([m.index, re.lastIndex]); break; } }
+  }
+  const fl = flattenHtml(blocks.map(([a, b]) => html.slice(a, b)).join('<div></div>'));
+  FAQ_OF[id] = 'wahafaq:' + id;
+  makeDoc(FAQ_OF[id], label + ' (its FAQ and errata)', f, [{ where: label + ' § FAQ / Errata', lines: fl.lines }], 'wahafaq');
   return makeDoc(id, label, f, pages, 'wahahtml');
 }
+const FAQ_OF = {};   // a Wahapedia page's id → the id of its FAQ and errata alone
+const faqDocs = ids => ids.map(id => FAQ_OF[id]).filter(Boolean);
 
 function loadPacket() {
   const f = must(path.join(VERIFY, 'sources', 'packet', 'core-stratagems.txt'));
@@ -331,7 +349,7 @@ function nearest(needle, docIds) {
 // Lines of a rules text, by what they claim to be:
 //   appnote   "*App note, not rules text: …*"                  the app's own words: a failure (appNote)
 //   wfaq      "*Wahapedia FAQ: <question>? <answer>*"          Wahapedia FAQ (question and answer checked)
-//   werrata   "*Wahapedia … errata (…): …*"                    Wahapedia errata
+//   werrata   "*Wahapedia … errata (…): …*"                    Wahapedia errata (in its FAQ / errata; not GW's printed words)
 //   packfaq   "*FAQ (Faction Pack …): …*"                       the Faction Pack's FAQ
 //   appsec    "**NN.NN Title (app):** text"                    Wahapedia rules appendix
 //   sec       "**NN.NN Title:** text"                          a Core Rules section, quoted with its number
@@ -397,10 +415,16 @@ function checkLines(cat, army, unit, field, text, gwDocs, wahaDocs, opts = {}) {
     let docs = gwDocs, less = wahaDocs, parts = [c.body];
     if (c.kind === 'wcore') { docs = WAHA_CORE; less = null; }
     else if (c.kind === 'wfaq') {
-      docs = wahaDocs; less = null;
+      docs = faqDocs(wahaDocs); less = null;   // (a Wahapedia FAQ: in the FAQ / errata of its pages)
       const q = /^(.*?\?)\s+(.*)$/.exec(c.body);
       parts = q ? [q[1], q[2]] : [c.body];
-    } else if (c.kind === 'werrata' || c.kind === 'appsec') { docs = wahaDocs.concat(gwDocs); less = null; }
+    } else if (c.kind === 'werrata') {
+      // an errata line is Wahapedia's errata (or FAQ): found in the FAQ / errata of the Wahapedia pages it may come from, and not GW's
+      // printed words: one GW's documents print as it is amends nothing (a line restating the text it amends)
+      docs = faqDocs(wahaDocs); less = null;
+      const g = locate(normApp(c.body), GW_ALL.concat(gwDocs));
+      if (g) fail(cat, army, unit, field, raw.trim(), 'a Wahapedia errata line that GW’s printed text already says (' + g.d.label + '): an errata line differs from the text it amends', where(g.d, g.off));
+    } else if (c.kind === 'appsec') { docs = wahaDocs.concat(gwDocs); less = null; }
     else if (c.kind === 'packfaq') {
       docs = opts.packDocs || gwDocs; less = wahaDocs;
       const q = /^(.*?\?)\s+(.*)$/.exec(c.body);   // "<question>? <answer>": both word for word (the pack prints "Q: … A: …")
@@ -1486,7 +1510,7 @@ function nearLine(n, src) {
 // verify/helpers.js; the words it puts in quotation marks (“…”) are rules text. Each quote is found word for word in GW's
 // documents or Wahapedia, a piece at a time where it leaves words out ("…"), or in the text of the item the note is on
 // (its rule or stratagem, the unit's abilities), which the other checks verify.
-const ALL_DOCS = GW_ALL.concat(WAHA_CORE, Object.keys(DOCS).filter(k => !GW_ALL.includes(k) && !WAHA_CORE.includes(k)));   // GW's first
+const ALL_DOCS = GW_ALL.concat(WAHA_CORE, Object.keys(DOCS).filter(k => !GW_ALL.includes(k) && !WAHA_CORE.includes(k) && !k.startsWith('wahafaq:')));   // GW's first
 // (and, for a note on a unit's ability, the unit's Wahapedia datasheets: a Designer's Note GW prints under an ability, verify/.cache/waha/ds)
 // (a page is "<faction>_<Datasheet>.html" as verify/fetch.sh names it from sources/waha-datasheets.txt: the list's faction first, then
 // its Wahapedia id in sources/factions.json, then any other, an ally's)
@@ -1517,15 +1541,26 @@ const NOTE_LABELS = {
   'Designer’s Note (Faction Pack 1.2, Pink Horrors datasheet)': 'gw'
 };
 // (and what the label says of its document, held to where its first quote is found (noteLabel): "Faction Pack 1.3" the pack's VERSION line;
-// "Pink Horrors datasheet" a datasheet of that name in it; "FAQ" a question ("Q:") right before the quote; "errata" and "Designer's Note"
-// those words right before it)
-function labelGaps(label, r) {
+// "Pink Horrors datasheet" the quote on that datasheet: on its two pages, the page whose first line is its name and the next, as the
+// packDatasheet check reads a datasheet (a Wahapedia datasheet page: the page of that name); "FAQ" a question ("Q:") right before the quote; "errata" and "Designer's Note" those words right before it;
+// a Wahapedia FAQ or errata in that page's FAQ / errata)
+function labelGaps(label, r, n, docs) {
   const d = typeof r.d === 'string' ? DOCS[r.d] : r.d, N = d ? d.N : '', before = n => N.slice(Math.max(0, r.off - n), r.off), out = [];
   const v = /Faction Pack (\d+\.\d+)/.exec(label);
   if (v) { const m = /\bversion (\d+\.\d+)/.exec(N); if (!m || m[1] !== v[1]) out.push('the document is ' + (m ? 'version ' + m[1] : 'no versioned Faction Pack') + ', not ' + v[0]); }
-  const ds = /([A-Z][A-Za-z’' -]+?) datasheet\)/.exec(label); if (ds && !N.includes(norm(ds[1]))) out.push('the document has no ' + ds[1] + ' datasheet');
+  const ds = /([A-Z][A-Za-z’' -]+?) datasheet\)/.exec(label);
+  if (ds && d) {
+    const name = squash(ds[1]), pg = [];
+    if (d.kind === 'wahahtml' && /^wahads:/.test(d.id)) { if (squash(d.label.replace(/^Wahapedia datasheet /, '')) === name) pg.push(...d.pages.keys()); }
+    else { const p0 = d.pages.findIndex((p, i) => i > 0 && squash(p.lines.find(l => l.trim()) || '') === name); if (p0 >= 0) pg.push(p0, Math.min(p0 + 1, d.pages.length - 1)); }
+    if (!pg.length) out.push('the document has no ' + ds[1] + ' datasheet');
+    else { const [s0, s1] = pageRange(d, pg[0], pg[pg.length - 1]);
+      if (!findAll(d, n || "", s0, s1).length) out.push('its first quote is not on the ' + ds[1] + ' datasheet (' + d.label + ' p' + (pg[0] + 1) + (pg.length > 1 ? '-' + (pg[pg.length - 1] + 1) : '') + ')'); }
+  }
   if (/\bFAQ\b/.test(label) && !/\bq:\s*$/.test(before(40).trim() + ' ') && !/\bq:\s*\S*$/.test(before(12))) out.push('its first quote is no FAQ question ("Q:" before it)');
   if (/\berrata\b/.test(label) && !/errata/.test(before(250))) out.push('no "errata" right before its first quote');
+  if (/^Wahapedia (?:FAQ|errata)$/.test(label) && !locate(n || '', faqDocs((docs || []).map(k => k.replace(/^waha:/, 'wahahtml:')))))
+    out.push('its first quote is in no FAQ / errata of the Wahapedia pages it may come from');
   if (/Designer’s Note/.test(label) && !/designer'?s note/.test(before(400).replace(/[’]/g, "'"))) out.push('no "Designer\'s Note" right before its first quote');
   return out;
 }
@@ -1557,7 +1592,7 @@ function checkQuotes(army, unit, note, own, extra) {
       const docs = seg.kind === 'gw' ? GW_ALL : WAHA_DOCS().concat(extra || []);
       const r = locate(n, docs);
       if (r) { provRow(army + ' / ' + unit, 'note', r.d, r.off, { text: piece.trim().slice(0, 80) });
-        if (q === seg.qs[0] && piece === q.split(/…|\.\.\./)[0]) { count('noteLabel'); for (const g of labelGaps(seg.label, r)) fail('noteLabel', army, unit, 'note', seg.label, g + ' (' + ((typeof r.d === 'string' ? DOCS[r.d] : r.d) || {}).label + ')', ''); }
+        if (q === seg.qs[0] && piece === q.split(/…|\.\.\./)[0]) { count('noteLabel'); for (const g of labelGaps(seg.label, r, n, docs)) fail('noteLabel', army, unit, 'note', seg.label, g + ' (' + ((typeof r.d === 'string' ? DOCS[r.d] : r.d) || {}).label + ')', ''); }
         continue; }
       fail('noteQuote', army, unit, 'note', '“' + q.slice(0, 80) + '”', 'quoted words under “' + seg.label + '” not in ' + (seg.kind === 'gw' ? 'GW’s documents' : 'Wahapedia') + ': "' + piece.trim() + '"' + (nearest(n, docs).text ? ' | ' + nearest(n, docs).text : ''), '');
     }

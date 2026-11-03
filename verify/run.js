@@ -43,6 +43,8 @@
 //   import      verify/import-test.js: the list import (import.js) turns each New Recruit JSON export into exactly its list in data.js
 //   reimport    verify/reimport.js: each list with a New Recruit JSON export, imported again alone (verify/from-json.js --write from its
 //               export and hand file), gives data.js (and the deviation files it writes) byte for byte
+//   derived     verify/derived-proof.js: every "derived" column of verify/columns.json is held by a script it names: one the gate runs,
+//               whose code reads its key, and whose step fails when one value of the column in data.js is changed (in a copy)
 //   screens     verify/render.js: every screen and popup renders; screen-level checks; no sideways scroll
 //   small phone the same at 320px wide
 //   snapshots   the text of every screen equals the accepted snapshot (verify/snapshots/)
@@ -69,9 +71,9 @@ const steps = {};
 const step = (name, args, env) => {
   const file = args[0];
   if(!fs.existsSync(path.join(ROOT, file))){ steps[name] = { ok:false, out:'missing ' + file }; return; }
-  const r = node(args, env);
+  const t0 = Date.now(), r = node(args, Object.assign({ VERIFY_PASSED:JSON.stringify(Object.fromEntries(Object.entries(steps).filter(([, v]) => v.ok).map(([k, v]) => [k, v.ms]))) }, env || {}));
   const out = (r.stdout + r.stderr).trim();
-  steps[name] = { ok:r.status === 0, out:out.split('\n').slice(0, 40).join('\n') };
+  steps[name] = { ok:r.status === 0, out:out.split('\n').slice(0, 40).join('\n'), ms:Date.now() - t0 };
   console.log((r.status === 0 ? 'PASS ' : 'FAIL ') + name + '  ' + out.split('\n')[0]);
 };
 
@@ -99,6 +101,7 @@ step('words', ['verify/words.js']);   // every datasheet ability's words are its
 step('calc', ['verify/calc-test.js']);   // the damage calculator against hand-worked cases
 step('import', ['verify/import-test.js']);   // the list import against every New Recruit JSON export
 step('reimport', ['verify/reimport.js']);   // every export, re-imported alone, gives data.js byte for byte
+step('derived', ['verify/derived-proof.js']);   // every derived column: a change of one value fails the step of the script it names
 // the screens need the built page: build it without the gate, check it, and the real build follows
 const b = node(['build.js'], { VERIFY_BUILDING:'1' });
 if(b.status !== 0){ console.log(b.stdout + b.stderr); process.exit(1); }

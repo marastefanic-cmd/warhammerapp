@@ -1,0 +1,27 @@
+[
+ {
+  "where": "review-merge · f003f15 Merge main d331a7d (in-app import) into wt-harden",
+  "verdict": "ok",
+  "why": "Only data.js and verify/run.js changed on both sides, and `git diff --cc` shows no hunk unlike both parents. The merged data.js keeps the Consolidation relabel and Cabal's readOf 61911b16, and adds BUILD_INDEX and resolve. run.js has both the derived step and build-parity. (The coordinator's fa93d1b is no commit here; the fixes are 73f35f2 and f660fc6.)"
+ },
+ {
+  "where": "review-return-line · verify/tables.js dataTables, unregistered (73f35f2)",
+  "verdict": "ok",
+  "why": "The return object is now split on top-level commas, with brackets and quotes balanced. resolve:function(a){ … } is no table, and the fixture holds it. Reviewer mutations (scratchpad/rvh-tools/pmuts.js plus a direct rerun): a new constant on the return line as newt:NEWT is caught by the new check (\"a table of data.js no column of which is read here\"). A string member holding \", b:C}\" before it does not break the split. An indented return line throws (\"the return line not found\"). Missed by the new check, and caught today only by the older table-form check (tables.js --write would drop the constant): newt:NEWT || {}, newt:NEWT.a, and any table after a regular-expression literal holding a quote in a function member (the splitter knows no regex literals, so the quote opens a string that swallows the rest). Residual: fail on a member the parser does not recognise, instead of skipping it. Or, more robustly, evaluate data.js and map each WH_DATA member to the top-level constant it is (or is called over) by identity."
+ },
+ {
+  "where": "review-page-scripts · verify/tables.js screenReads PAGE (73f35f2)",
+  "verdict": "ok",
+  "why": "Today's app.html gives @builder.js, @import.js, @calc.js and @effects.js, each read whole; a read inside builder.js is seen, including a whole read (Object.values). Reviewer fixtures (scratchpad/rvh-tools/pscan.js): the forms src=\"builder.js\" and src=\"./builder.js\" are read. A file is silently not read for <script defer src>, <script src … defer>, src=\"builder.js?v=3\", type=\"module\", single quotes, and import('./x.js'). ask.js is loaded that way (askMod), but it reads no data (32 lines, prompt strings only), so nothing is missed today. While any whole read exists the miss changes nothing. Residual: match <script\\b[^>]*\\bsrc=[\"']([^\"'?#]+)\\.js, and fail when a local script tag is found but not read."
+ },
+ {
+  "where": "review-build-index-proof · verify/columns.json BUILD_INDEX (5 derived columns); verify/derived-proof.js step parts; tables.js codeRefs",
+  "verdict": "ok",
+  "why": "The proof is real in what it runs. build-index.js (no arguments) rebuilds BUILD_INDEX from the other tables, rules/core-rules.md, the GW pack texts and deviations-bsdata.json, and fails unless data.js holds exactly that. A fresh proof of marks and battleSizes fails at build-parity › build-index.js. Reviewer mutation bY: build-index.js copies marks and battleSizes from data.js instead of deriving them; check mode still passes, and the proof correctly refuses both (NO PROOF). bZ: marks naming verify/bases.js fails the static check. The JSON-quoted change (\"movement\" → \"movement (changed)\") keeps BUILD_INDEX valid. Gap (bX): with build-parity changed to ignore build-index's exit status (ok(true, …)), the proof still stands, because the part is run alone and nothing checks that its parent step fails with it. So a gate that no longer holds BUILD_INDEX would pass derived. Today build-parity does check it (ok(ix.status === 0, 'I: …')). Suggest: run the parent with --no-render (build-parity has it) as the proof's step, or check that the parent fails on the same change. Also, codeRefs only sees spawn / spawnSync / execFileSync(process.execPath, [path.join(ROOT|__dirname, 'x.js') …]). Other forms are not followed, which is safe: a missing step is a failed proof. reimport's spawn of from-json.js in its temp copies is still not followed (re-planned: a hand short named derived by from-json.js is still tried only through catalog, and refused). import › import-ids.js is a part too; no derived column names it."
+ },
+ {
+  "where": "review-snapshots · gate in a scratch copy at f660fc6",
+  "verdict": "ok",
+  "why": "Every step passes except snapshots: tables, derived (115 of 136, build-parity › build-index.js 5), build-parity (6 lists built byte for byte, 227 checks), reimport byte for byte, and helpers (437 of 437 approved, 0 to check). Snapshots change in 10 lists. In 9 lists the change is the Consolidation line (18 lines, one out and one in each). In shooty's How screen the count goes from \"Of the 353 columns … Mechanical 338\" to \"358 … Mechanical 343\" (+5, the BUILD_INDEX columns), and BUILD_INDEX gains the \"Every column and where it comes from / 5 columns / BUILD_INDEX 5 rows / MECHANICAL labels (computed), marks, gw, battleSizes, upgrades\" block every other table has; nothing else differs. The heading's \"5 rows\" counts the object's 5 parts, which are also its 5 columns; that is wording for the owner, not a fault. dmshown is unchanged against main d331a7d (675 keys, 0 differences). Snapshots not accepted."
+ }
+]

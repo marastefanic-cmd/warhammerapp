@@ -1,0 +1,62 @@
+[
+ {
+  "kind": "review-end-state-forms",
+  "where": "verify/tables.js screenReads, wholeReads, dataTables, screenColumns, SCAN_FIXTURES",
+  "judgement": {
+   "check": "The scan now sees a column read by name (x.c, x?.c, x['c'], a string of the code that is a name, a template's fixed part, destructuring), by position (a table whose rows are not objects, RULE_ALIASES / RULES / RULE_SRC / CONCEPTS, every column of it once D.<key> or its key as a string is reached, or D is read whole) and whole (a computed key, Object.entries / values / keys / assign / getOwnPropertyNames / getOwnPropertyDescriptors, Reflect.ownKeys, for … in, an object spread or rest, JSON.stringify, structuredClone: any one reads every column of every table). Today's screens have whole reads (the How screen's tables, D.rules[key], Object.assign({ src }, s)), so every registered column counts as read: each hand column must be declared, each derived one held. Check the soundness argument and whether the whole-read rule is too blunt for the owner (it is sound, not precise). 25 fixtures (2 controls) run in the tables step."
+  },
+  "source": { "gate": "verify/tables.js (tables step)", "commit": "tables: the end-state scan sees every read form" }
+ },
+ {
+  "kind": "review-derived-proof",
+  "where": "verify/derived-proof.js; verify/tables.js derivers, keysOf, references; verify/run.js step derived",
+  "judgement": {
+   "check": "A derived column's named scripts that the gate runs must read its key (tables, static); and the new gate step derived changes one value of the column in data.js in a copy (first scalar token in place; first, middle, last row) and runs the deriver's step (its own step; for a deriver with none, each step that requires it, quicker first): it must fail where the unchanged data passes. A crash counts as failing (\"crashed:\" in the proof: ARMIES.units.ds, a dangling datasheet reference). Proofs are cached in verify/out/derived-proof.json keyed by the step's files' contents, the column's entry and the change. 110 of 131 derived columns proved; 21 have no value stored in data.js (computed when data.js loads, e.g. ARMIES.units.stats.of, or none today) and are skipped, but a stored column the script cannot find fails. Cost: cold (no verify/out/derived-proof.json, or the steps' code changed) about 40 minutes here, with another worktree's gate on the same 4 CPUs (the whole gate 57 minutes; reimport and catalog proofs dominate); warm 1 second. A change to tables.js or derive.js makes most proofs cold again (most steps require them). Check whether the owner accepts that cost, and the step choice for derivers without a step of their own."
+  },
+  "source": { "gate": "verify/derived-proof.js (derived step)", "commit": "derived columns: the script a column names must read it, and fail its step when its value changes" }
+ },
+ {
+  "kind": "review-derived-findings",
+  "where": "verify/columns.json BOXES.b / .d / .st by; readOf; FACTIONS.detachments.stratagems.id",
+  "judgement": {
+   "check": "What the derived rule found: (1) the BOXES sub-columns named only effects-migrate.js, which writes BOXES but never reads their keys; they now name verify/effects-extract.js (the box maker), proved by evidence G7 / defence D7. (2) readOf on 110 rows was checked by nothing since readings were retired; Cabal of Sorcerers' was stale (its text lost an app note in the last release). The fingerprints step now holds every stored readOf to its row's text; the stale one restamped (07c0f798 → 61911b16, hidden, no screen change). (3) detachment stratagem ids were held by nothing (reimport rebuilds only the lists); tables now checks id = slug(name), with the detachment's id after it where an earlier stratagem has that slug (3 Guardians of the Throne ids); all 253 hold. Check (2): is holding a vestigial fingerprint better than dropping readOf from the rows (110 hidden values, from-json.js copies them)?"
+  },
+  "source": { "gate": "verify/tables.js --fingerprints, tables; verify/derived-proof.js" }
+ },
+ {
+  "kind": "review-errata-lines",
+  "where": "verify/texts.js loadWahaHtml (FAQ_OF), checkLines werrata / wfaq, labelGaps (Wahapedia FAQ / errata notes)",
+  "judgement": {
+   "check": "Each Wahapedia page gives its FAQ and errata alone as a document (every div of class faqErrataSpoiler, faq, errata_H or errata, whole; nothing of the rules around). A \"*Wahapedia … errata (…): …*\" line must be found there and must not be found in GW's documents (GW_ALL); \"*Wahapedia FAQ: …*\" lines and notes labelled \"Wahapedia FAQ\" / \"Wahapedia errata\" must be found there too. Check the block classes against a Wahapedia page and that no FAQ section is missed (World Eaters' FAQ section is plain faq blocks, not spoilers)."
+  },
+  "source": { "gate": "verify/texts.js (texts step)", "commit": "texts: a Wahapedia errata line is in Wahapedia's FAQ / errata and differs from GW's printed text" }
+ },
+ {
+  "kind": "review-data-consolidation",
+  "where": "data.js RULES Consolidation Move, its last line (screen: the Consolidation Move rule, every list)",
+  "judgement": {
+   "check": "Was \"*Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Objective Consolidation): Your unit must be unengaged and within range of the selected objective.*\"; Wahapedia lists no such errata (its 12.08 errata is Ongoing Consolidation only; cached page 21 Oct); the words are Wahapedia's 12.08 rules text, which GW's PDF does not print (GW: \"Your unit must be within range of the selected objective.\"). Now \"*Wahapedia core rules (12.08, not in GW’s Core Rules PDF, 01-06): …*\", the form the 24.39 lines use, words unchanged. The snapshots change by this line only. Check the label, or whether the line should go (GW's printed words are already above it)."
+  },
+  "source": { "gate": "verify/texts.js wcore", "file": "verify/snapshots (Consolidation Move popup)" }
+ },
+ {
+  "kind": "review-datasheet-labels",
+  "where": "verify/texts.js labelGaps (\"X datasheet\")",
+  "judgement": {
+   "check": "An \"X datasheet\" label holds its first quote to that datasheet's pages: in a GW document the page whose first line is the name and the next (as packDatasheet reads a datasheet; pdftotext -raw starts the second page with WARGEAR OPTIONS), on Wahapedia the datasheet page of that name. Only label today: Designer’s Note (Faction Pack 1.2, Pink Horrors datasheet), on p54-55. Check the two-page assumption for datasheets GW prints on more pages."
+  },
+  "source": { "gate": "verify/texts.js noteLabel", "commit": "texts: an \"X datasheet\" note label holds its quote to that datasheet's pages" }
+ },
+ {
+  "kind": "review-damage-numbers",
+  "where": "Damage tab, main e99498c vs wt-harden",
+  "judgement": { "check": "rev2/dmshown.js 675 keys and lines-work/dmsingle.js 13566 keys: 0 differences (scratchpad dms-h-*.json, dm1-h-*.json)." },
+  "source": { "files": "scratchpad/dms-h-main.json, dms-h-br.json, dm1-h-main.json, dm1-h-br.json" }
+ },
+ {
+  "kind": "review-mutations",
+  "where": "mutations of the four rules",
+  "judgement": { "check": "scratchpad/hmut.js with hmuts.js (texts: 10), smuts.js (end-state scan: 16) and dmuts.js (derived: 7 mutations, 9 step runs). Every mutation is caught by the gate; t1, t3 and t9 pass on main's texts.js. The two scan-only misses are by design: s13 (object rest is caught by the object-spread rule, so removing the rest branch changes nothing; the branch was removed), and d1/d2 pass the static tables check (tables.js / texts.js do contain the keys) but fail the derived step." },
+  "source": { "files": "scratchpad/hmut.js, hmuts.js, smuts.js, dmuts.js, dmut-out.txt" }
+ }
+]
