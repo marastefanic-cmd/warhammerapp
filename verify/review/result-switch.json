@@ -1,0 +1,44 @@
+[
+ {
+  "key": "review-two-reader-rule",
+  "where": "verify/agree.js (gate step agree); data.js AGREE; verify/sources/agree-verdicts.json",
+  "verdict": "ok",
+  "why": "Round 1 (20bf916): node verify/agree.js --pairs reproduced scratchpad reader-cmp/pairs.json exactly (2479 pairs: same ids, classes, diffs, app entries and readings). 20 class-A pairs and all 27 verdicts checked against GW's text; the hand-set quotes Hulking Brutes|1 (waha/orks.txt l.172-174) and Malefic Surge|9 (waha/chaos-knights.txt l.123, l.126) are GW's words exactly. Round 2 (f121ac2): 448 boxes, 447 compared plus Conversion (not a Core Rule); 352 A, 25 V, 6 core, 71 fall back (48 change a number). My mutations on a copy are all caught: Q (a Core Rules [TWIN-LINKED] quote and an Orks quote from another stratagem, each on Hulking Brutes|1: 'not in the words of its own rule'); S (verdict flipped 'app wrong' → 'both right' then --write: stale; changed app box: stale); T (V→A, Conversion set back to core); K (table() mutated to count class B, then --write)."
+ },
+ {
+  "key": "review-never-silent",
+  "where": "app.html unitMods, defenceItems, dmBoxRules (fnGiver, fnReaches); verify/agree.js N",
+  "verdict": "ok",
+  "why": "My loss.js reruns main (every box counted) against the branch for every list × unit × side. Of the 53 silent losses, 0 are left. The 5 remaining differences are Damaged bands (Skarbrand; the Tesseract Vault ×2, ranged and melee), whose band says 'see the rule'. Spot-checks name the right giver per GW's datasheets: Omnissiah's Blessing '(Tech-Priest Enginseer)' on the Onager Dunecrawler and on the Datasmith + Kastelans; Selfless Protector '(Knight Defender)' on the Knight Errant; Mischief and Confusion '(The Changeling)' on the Flamers and Kairos (waha/ds/chaos-daemons_The-Changeling.html); Master of Mechanisms '(Warpsmith)'; Burning Spray '(Pyrovores)'; Phaeron of the Blades '(The Silent King)' now on melee only. 0 lost lines belong to a confirmed box."
+ },
+ {
+  "key": "review-core-boxes",
+  "where": "verify/agree.js table() and C; data.js BOXES c|; effects.js DF fnp, DNC starred",
+  "verdict": "ok",
+  "why": "The 6 core boxes each read GW's Core Rules right. Lance (24.21: +1 to the wound roll if the unit charged). Plunging Fire (22.05: +1 BS, with both conditions as anyOf). Damaged 4 and 5 (Wahapedia core 24.39, marked as not in GW's PDF: -1 to hit at or below X wounds). Feel No Pain 4+ and 5+ (24.12). Conversion (the Knight Defender's datasheet weapon ability, RULE_SRC) is now 0 and falls back: 1 dmsingle row gone, and the Knight Defender shows 'Conversion: not counted here: see the rule'. Starred Feel No Pain 3+*/5+* is now dnc ('starred'). That is acceptable: a not-counted line is never broader than GW. Across all 225 units no starred line is shown, because each is said with its condition by Aegis of the Emperor or Daughters of the Abyss; the Custodes lists' snapshots are unchanged apart from wt-harden's Consolidation note."
+ },
+ {
+  "key": "review-verdicts",
+  "where": "verify/sources/agree-verdicts.json",
+  "verdict": "ok",
+  "why": "27 verdicts, one per class-B group lead, all bound and current (S passes). Avenge the Fallen|0 keeps only its GW quote (WHEN … EFFECT), which is in its own stratagem's words (Q passes). The rebinding changed nothing else."
+ },
+ {
+  "key": "review-reader2-isolation",
+  "where": "verify/agree.js R1, R2 (sandbox), R3 (verify/sources/agree-pins.json)",
+  "verdict": "ok",
+  "why": "My 8 bypass mutations of sources.js now all fail. Each fails R3 (the file is not the pinned one). These six also fail in the sandbox: a guarded D.agree read (the stripped data.js has no agree), require aliased to effects-extract, a read of verify/out/agree-pairs.json, an absolute read of /home/user/warhammerapp/data.js (ERR_ACCESS_DENIED under node --permission), and a literal require (also R1). The other two (D.agree || D.grants …, and D['bo'+'xes'] or Object.values(D)) only get undefined from the stripped data, and fail R3. strip() keeps only the fields sources.js reads. reader2's readings in the sandbox are byte for byte the stored ones (R2 --check)."
+ },
+ {
+  "key": "review-fallback-presentation",
+  "where": "effects.js agreed; app.html BOXES_AGREED; builder.js marksOf; calc.js prep",
+  "verdict": "ok",
+  "why": "No unconfirmed box is counted anywhere. dmsingle (re-run on f121ac2): 13589 rows on main, 13222 on the branch; 367 gone, each naming a fallen-back source (Conversion's is one); 0 changed, 0 new. dmshown: 1 of 675 changed, the exiled-legion Skullmaster 'both' (Skullmaster's Fury, class C, ticked by the charge 'both' takes as made). Both are identical to switch-work/after. Full gate on a copy of f121ac2: every step passes, build-parity included (P1 6 byte for byte, 0 differ), as do reimport (24 of 24) and calc (408 of 408). Only the unaccepted snapshots fail, plus helpers, which is pending approvals."
+ },
+ {
+  "key": "accept-snapshots",
+  "where": "verify/snapshots (verify/out/snapshots)",
+  "verdict": "ok",
+  "why": "Read on f121ac2's run: nidzillas, basic-bitch, purge-goes-the-foe, fellhammer-siege-task-force, navigator-sounds-op-ngl, tzeeeeentch, lite-knights and the three Custodes/terminator lists. Every changed line is one of: a fallen-back box; its 'not counted here: see the rule (giver)' line; its GW words on the Damage tab, with the counts that follow; a stratagem heading that loses its phase when a fallen-back stratagem leaves the group (the confirmed ones keep their phase in the line); or wt-harden's Consolidation Move note. No confirmed box changes. The owner may accept them (node verify/run.js --accept); I did not."
+ }
+]
