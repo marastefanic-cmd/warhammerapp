@@ -304,7 +304,7 @@ If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 Wounds Remaining)
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 Knight Crusader
 Hunter’s Eye
@@ -361,7 +361,7 @@ If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 Knight Defender
 Conversion beam obliterator
@@ -406,11 +406,11 @@ D6
 1
 IGNORES COVER, TORRENT, TWIN-LINKED
 If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
-If (see the rule): Conversion beam obliterator Critical Hit on 4+ (Conversion)
+not counted here: see the rule (Conversion)
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 Knight Destrier
 Chastiser gatling cannon
@@ -442,7 +442,7 @@ If (see the rule): −4 OC, −1 to Hit rolls (Damaged: 1-6 Wounds Remaining)
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 Knight Errant
 Mysterious Guardian
@@ -474,7 +474,7 @@ If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 If (see the rule): BS/WS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 Navigator
 Laspistol
@@ -511,7 +511,7 @@ Every melee attack: +1 to Hit rolls (Bringer of Justice)
 If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 Wounds Remaining)
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 Knight Crusader
 Hunter’s Eye
@@ -524,7 +524,7 @@ Titanic feet
 If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 Knight Defender
 Titanic feet
@@ -536,7 +536,7 @@ Titanic feet
 If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 Knight Destrier
 Titanic feet
@@ -548,7 +548,7 @@ Titanic feet
 If (see the rule): −4 OC, −1 to Hit rolls (Damaged: 1-6 Wounds Remaining)
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 Knight Errant
 Mysterious Guardian
@@ -568,7 +568,7 @@ Reaper chainsword
 If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 Navigator
 Force-orb cane
@@ -1016,7 +1016,7 @@ of 5 destroyed
 6.8 wounds lost · wiped in 30% of games
 Atrapos lascutter: high intensity
 Graviton singularity cannon: contained
-13 NOT COUNTED
+14 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1194,12 +1194,6 @@ None that change these numbers.
 
 STRATAGEMS
 with their CP
-1CP Strength from Exile
-“if there are no other friendly units within 9" of your unit”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
-if used
-BEST · MOST MODELS+26% wiped
-+0.8
-MODELS
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
@@ -1207,9 +1201,11 @@ if used
 +0.4
 MODELS
 NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
-NOT COUNTED IN THE DAMAGE TAB (9)
+NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Noble Sacrifice
 “Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+1CP Strength from Exile
+“Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Full Tilt
 “WHEN: Your Movement phase. TARGET: One IMPERIAL KNIGHTS unit from your army. EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. …” · not counted in the Damage tab
 1CP Point-Blank Barrage
@@ -1347,7 +1343,7 @@ of 5 destroyed
 Atrapos lascutter: high intensity
 Charged this turn
 ×
-13 NOT COUNTED
+14 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1454,25 +1450,21 @@ None that change these numbers.
 
 STRATAGEMS
 with their CP
-1CP Strength from Exile
-“if there are no other friendly units within 9" of your unit”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
-if used
-BEST · MOST MODELS+32% wiped
-+0.7
-MODELS
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-+12% wiped
+BEST · MOST MODELS+12% wiped
 +0.3
 MODELS
 1CP Epic Challenge
 [PRECISION] · CHARACTER models only
 if used
 0
-NOT COUNTED IN THE DAMAGE TAB (9)
+NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Noble Sacrifice
 “Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+1CP Strength from Exile
+“Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Full Tilt
 “WHEN: Your Movement phase. TARGET: One IMPERIAL KNIGHTS unit from your army. EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. …” · not counted in the Damage tab
 1CP Point-Blank Barrage
@@ -1614,7 +1606,7 @@ Atrapos lascutter: high intensity
 Graviton singularity cannon: contained
 Charged this turn
 ×
-26 NOT COUNTED
+28 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1792,12 +1784,6 @@ None that change these numbers.
 
 STRATAGEMS
 with their CP
-1CP Strength from Exile
-“if there are no other friendly units within 9" of your unit”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
-if used
-+4% wiped
-+0.1
-MODELS
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
@@ -1806,9 +1792,11 @@ if used
 MODELS
 +1 MORE ▾
 NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
-NOT COUNTED IN THE DAMAGE TAB (9)
+NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Noble Sacrifice
 “Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+1CP Strength from Exile
+“Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Full Tilt
 “WHEN: Your Movement phase. TARGET: One IMPERIAL KNIGHTS unit from your army. EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. …” · not counted in the Damage tab
 1CP Point-Blank Barrage
@@ -1928,12 +1916,6 @@ None that change these numbers.
 
 STRATAGEMS
 with their CP
-1CP Strength from Exile
-“if there are no other friendly units within 9" of your unit”: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
-if used
-+5% wiped
-+0.1
-MODELS
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
@@ -1945,9 +1927,11 @@ MODELS
 [PRECISION] · CHARACTER models only
 if used
 0
-NOT COUNTED IN THE DAMAGE TAB (9)
+NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Noble Sacrifice
 “Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
+1CP Strength from Exile
+“Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Full Tilt
 “WHEN: Your Movement phase. TARGET: One IMPERIAL KNIGHTS unit from your army. EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. …” · not counted in the Damage tab
 1CP Point-Blank Barrage
@@ -2406,7 +2390,7 @@ M: not counted here: see the rule (Full Tilt)
 WHEN TARGETED
 3
 Knights of Legend: Feel No Pain 6+
-Selfless Protector: Ranged attacks, If (see the rule): the Benefit of Cover, 4+ invulnerable save (Knight Defender)
+Selfless Protector: not counted here: see the rule (Knight Defender)
 1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-10 W
 −5 OC, −1 TO HIT ROLLS
@@ -2415,7 +2399,7 @@ The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
 The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
@@ -2568,14 +2552,14 @@ WHEN TARGETED
 4
 Knights of Legend: Feel No Pain 6+
 Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
-Selfless Protector: Ranged attacks, If (see the rule): the Benefit of Cover, 4+ invulnerable save (Knight Defender)
+Selfless Protector: not counted here: see the rule (Knight Defender)
 1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-9 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
@@ -2741,7 +2725,7 @@ DAMAGED 1-9 W
 ALL ATTACKS
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
@@ -2791,7 +2775,7 @@ D6
 -1
 1
 IGNORES COVER, TORRENT, TWIN-LINKED
-If (see the rule): Conversion beam obliterator Critical Hit on 4+ (Conversion)
+not counted here: see the rule (Conversion)
 If (see the rule): BS/WS improved by 1 (Plunging Fire)
 MELEE WEAPONS
 A
@@ -2885,14 +2869,14 @@ WHEN TARGETED
 4
 Knights of Legend: Feel No Pain 6+
 Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
-Selfless Protector: Ranged attacks, If (see the rule): the Benefit of Cover, 4+ invulnerable save (Knight Defender)
+Selfless Protector: not counted here: see the rule (Knight Defender)
 1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-6 W
 −4 OC, −1 TO HIT ROLLS
 ALL ATTACKS
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range
@@ -3026,14 +3010,14 @@ WHEN TARGETED
 4
 Knights of Legend: Feel No Pain 6+
 Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
-Selfless Protector: Ranged attacks, If (see the rule): the Benefit of Cover, 4+ invulnerable save (Knight Defender)
+Selfless Protector: not counted here: see the rule (Knight Defender)
 1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
 DAMAGED 1-9 W
 −5 OC, −1 TO HIT ROLLS
 ALL ATTACKS
 Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1, If (see the rule)
+1CP Strength from Exile: not counted here: see the rule
 1CP Point-Blank Barrage: not counted here: see the rule
 RANGED WEAPONS
 Range

@@ -406,16 +406,16 @@ D6
 IGNORES COVER, TORRENT
 A +2 Protector Protocol (Battle Protocols)
 one of: Protector Imperative: [HEAVY], BS/WS improved by 1 · Conqueror Imperative: [ASSAULT] (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
-1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER], Your Command phase, If (see the rule)
+1CP Auto-divinatory Targeting: not counted here: see the rule
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Below its Starting Strength
 1CP Machine Spirit Resurgent: Re-roll Wound rolls, Your Command phase, Below its Starting Strength · Below Half-strength
 1CP Machine Superiority: not counted here: see the rule
-STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP Unshackled Wrath: one of: [SUSTAINED HITS 1] · [LETHAL HITS] · [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS]
-1CP Threat-cogitation Targeters: Re-roll Damage rolls, The target: MONSTER or VEHICLE
+STRATAGEMS · ERADICATION COHORT
+1CP Unshackled Wrath: not counted here: see the rule
+1CP Threat-cogitation Targeters: Re-roll Damage rolls, Your Shooting phase, The target: MONSTER or VEHICLE
 Skitarii Rangers
 ×2 units
 Arc rifleSKITARII RANGER
@@ -460,10 +460,10 @@ Transuranic arquebusSKITARII RANGER
 D3
 HEAVY, PRECISION, IGNORES COVER
 one of: Protector Imperative: [HEAVY], BS/WS improved by 1 · Conqueror Imperative: [ASSAULT] (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
-STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP Unshackled Wrath: one of: [SUSTAINED HITS 1] · [LETHAL HITS] · [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS]
+STRATAGEMS · ERADICATION COHORT
+1CP Unshackled Wrath: not counted here: see the rule
 Ironstrider Ballistarii
 1 of 2
 Twin cognis lascannon×3
@@ -475,16 +475,16 @@ Twin cognis lascannon×3
 D6+1
 SUSTAINED HITS 1, TWIN-LINKED
 one of: Protector Imperative: [HEAVY], BS/WS improved by 1 · Conqueror Imperative: [ASSAULT] (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
-1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER], Your Command phase, If (see the rule)
+1CP Auto-divinatory Targeting: not counted here: see the rule
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Below its Starting Strength
 1CP Machine Spirit Resurgent: Re-roll Wound rolls, Your Command phase, Below its Starting Strength · Below Half-strength
 1CP Machine Superiority: not counted here: see the rule
-STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP Unshackled Wrath: one of: [LETHAL HITS] · [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS]: [LETHAL HITS], [HAZARDOUS]
-1CP Threat-cogitation Targeters: Re-roll Damage rolls, The target: MONSTER or VEHICLE
+STRATAGEMS · ERADICATION COHORT
+1CP Unshackled Wrath: not counted here: see the rule
+1CP Threat-cogitation Targeters: Re-roll Damage rolls, Your Shooting phase, The target: MONSTER or VEHICLE
 Ironstrider Ballistarii
 2 of 2
 Twin cognis autocannon×3
@@ -496,16 +496,16 @@ Twin cognis autocannon×3
 3
 SUSTAINED HITS 1, TWIN-LINKED
 one of: Protector Imperative: [HEAVY], BS/WS improved by 1 · Conqueror Imperative: [ASSAULT] (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
-1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER], Your Command phase, If (see the rule)
+1CP Auto-divinatory Targeting: not counted here: see the rule
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Below its Starting Strength
 1CP Machine Spirit Resurgent: Re-roll Wound rolls, Your Command phase, Below its Starting Strength · Below Half-strength
 1CP Machine Superiority: not counted here: see the rule
-STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP Unshackled Wrath: one of: [LETHAL HITS] · [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS]: [LETHAL HITS], [HAZARDOUS]
-1CP Threat-cogitation Targeters: Re-roll Damage rolls, The target: MONSTER or VEHICLE
+STRATAGEMS · ERADICATION COHORT
+1CP Unshackled Wrath: not counted here: see the rule
+1CP Threat-cogitation Targeters: Re-roll Damage rolls, Your Shooting phase, The target: MONSTER or VEHICLE
 Onager Dunecrawler
 Cognis heavy stubber
 36"
@@ -525,16 +525,16 @@ Twin Onager heavy phosphor blaster
 IGNORES COVER, TWIN-LINKED
 If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
 one of: Protector Imperative: [HEAVY], BS/WS improved by 1 · Conqueror Imperative: [ASSAULT] (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
-1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER], Your Command phase, If (see the rule)
+1CP Auto-divinatory Targeting: not counted here: see the rule
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Lost any wounds (Below its Starting Strength)
 1CP Machine Spirit Resurgent: Re-roll Wound rolls, Your Command phase, Lost any wounds (Below its Starting Strength) · 5 or fewer wounds left (Below Half-strength)
 1CP Machine Superiority: not counted here: see the rule
-STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP Unshackled Wrath: one of: [SUSTAINED HITS 1] · [LETHAL HITS] · [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS]
-1CP Threat-cogitation Targeters: Re-roll Damage rolls, The target: MONSTER or VEHICLE
+STRATAGEMS · ERADICATION COHORT
+1CP Unshackled Wrath: not counted here: see the rule
+1CP Threat-cogitation Targeters: Re-roll Damage rolls, Your Shooting phase, The target: MONSTER or VEHICLE
 Skorpius Disintegrator
 ×2 units
 Cognis heavy stubber×3
@@ -563,16 +563,16 @@ D6+1
 The target: MONSTER or VEHICLE: Ferrumite cannon +1 to Hit rolls (Blistering Salvoes)
 If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
 one of: Protector Imperative: [HEAVY], BS/WS improved by 1 · Conqueror Imperative: [ASSAULT] (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
-1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER], Your Command phase, If (see the rule)
+1CP Auto-divinatory Targeting: not counted here: see the rule
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Lost any wounds (Below its Starting Strength)
 1CP Machine Spirit Resurgent: Re-roll Wound rolls, Your Command phase, Lost any wounds (Below its Starting Strength) · 5 or fewer wounds left (Below Half-strength)
 1CP Machine Superiority: not counted here: see the rule
-STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP Unshackled Wrath: one of: [SUSTAINED HITS 1] · [LETHAL HITS] · [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS]
-1CP Threat-cogitation Targeters: Re-roll Damage rolls, The target: MONSTER or VEHICLE
+STRATAGEMS · ERADICATION COHORT
+1CP Unshackled Wrath: not counted here: see the rule
+1CP Threat-cogitation Targeters: Re-roll Damage rolls, Your Shooting phase, The target: MONSTER or VEHICLE
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Belisarius Cawl
@@ -628,12 +628,11 @@ Necromechanic
 Fights with both: Omnissian axe, plus Servo arm on top (extra attacks).
 
 Omnissian axe
-3/6
+3
 4+
 6
 -2
 2
-A 6 If (see the rule) (Vengeance for the Omnissiah)
 Servo arm
 1
 4+
@@ -641,6 +640,7 @@ Servo arm
 -2
 2
 EXTRA ATTACKS
+not counted here: see the rule (Vengeance for the Omnissiah)
 one of: Conqueror Imperative: BS/WS improved by 1 (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
@@ -666,7 +666,7 @@ Twin Kastelan fist×4
 TWIN-LINKED
 A +2 Conqueror Protocol (Battle Protocols)
 one of: Conqueror Imperative: BS/WS improved by 1 (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Below its Starting Strength
@@ -694,7 +694,7 @@ Close combat weapon×10
 0
 1
 one of: Conqueror Imperative: BS/WS improved by 1 (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
 1CP Servo-driven Charge: [LANCE]
@@ -707,7 +707,7 @@ Ironstrider feet×3
 0
 1
 one of: Conqueror Imperative: BS/WS improved by 1 (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Below its Starting Strength
@@ -724,7 +724,7 @@ Ironstrider feet×3
 0
 1
 one of: Conqueror Imperative: BS/WS improved by 1 (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Below its Starting Strength
@@ -741,7 +741,7 @@ Dunecrawler legs
 1
 If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
 one of: Conqueror Imperative: BS/WS improved by 1 (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Lost any wounds (Below its Starting Strength)
@@ -759,7 +759,7 @@ Armoured hull
 1
 If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
 one of: Conqueror Imperative: BS/WS improved by 1 (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Lost any wounds (Below its Starting Strength)
@@ -2900,12 +2900,11 @@ D
 Fights with both: Omnissian axe, plus Servo arm on top (extra attacks).
 
 Omnissian axe
-3/6
+3
 4+
 6
 -2
 2
-A 6 If (see the rule) (Vengeance for the Omnissiah)
 Servo arm
 1
 4+
@@ -2913,6 +2912,7 @@ Servo arm
 -2
 2
 EXTRA ATTACKS
+not counted here: see the rule (Vengeance for the Omnissiah)
 one of: Conqueror Imperative: BS/WS improved by 1 (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
 1CP Servo-driven Charge: [LANCE]
@@ -3012,11 +3012,11 @@ CYBERNETICA DATASMITH Battle Protocols: Aegis Protocol: KASTELAN ROBOT models: +
 KASTELAN ROBOTS Robotic Bodyguard: While a CYBERNETICA DATASMITH model is leading it: CYBERNETICA DATASMITH models: Feel No Pain 4+
 KASTELAN ROBOTS Repulsor Grid: not counted here: see the rule
 Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
-Omnissiah’s Blessing: Within 3" of Tech-Priest Enginseer · Selected by Tech-Priest Enginseer · It is a VEHICLE model: Feel No Pain 5+ (until the start of your next Command phase) (Tech-Priest Enginseer)
+Omnissiah’s Blessing: not counted here: see the rule (Tech-Priest Enginseer)
 Necromechanic: “Once per battle round” · Within 12" of Tech-Priest Enginseer · After a failed saving throw · If the bearer uses it: Damage 0 (Tech-Priest Enginseer)
-1CP Benevolence of the Omnissiah: Your Command phase: Feel No Pain 6+, Feel No Pain 5+ against mortal wounds (until the start of your next Command phase)
+1CP Benevolence of the Omnissiah: not counted here: see the rule
 ALL ATTACKS · WHOLE UNIT
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Below its Starting Strength
@@ -3051,11 +3051,11 @@ IGNORES COVER, TORRENT
 A +2 Protector Protocol (Battle Protocols)
 WHOLE UNIT
 one of: Protector Imperative: [HEAVY], BS/WS improved by 1 · Conqueror Imperative: [ASSAULT] (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER], If (see the rule)
-STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP Unshackled Wrath: one of: [SUSTAINED HITS 1] · [LETHAL HITS] · [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS]
-1CP Threat-cogitation Targeters: Re-roll Damage rolls, The target: MONSTER or VEHICLE
+STRATAGEMS · COHORT CYBERNETICA
+1CP Auto-divinatory Targeting: not counted here: see the rule
+STRATAGEMS · ERADICATION COHORT
+1CP Unshackled Wrath: not counted here: see the rule
+1CP Threat-cogitation Targeters: Re-roll Damage rolls, Your Shooting phase, The target: MONSTER or VEHICLE
 MELEE WEAPONS
 A
 WS
@@ -3188,7 +3188,7 @@ Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or with
 Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
 Emanatus Force Field: If (see the rule): BATTLELINE models: 4+ invulnerable save against ranged attacks (Onager Dunecrawler)
 ALL ATTACKS
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 RANGED WEAPONS
 Range
@@ -3239,8 +3239,8 @@ Transuranic arquebusSKITARII RANGER
 D3
 HEAVY, PRECISION, IGNORES COVER
 one of: Protector Imperative: [HEAVY], BS/WS improved by 1 · Conqueror Imperative: [ASSAULT] (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP Unshackled Wrath: one of: [SUSTAINED HITS 1] · [LETHAL HITS] · [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS]
+STRATAGEMS · ERADICATION COHORT
+1CP Unshackled Wrath: not counted here: see the rule
 MELEE WEAPONS
 A
 WS
@@ -3336,11 +3336,11 @@ WHEN TARGETED
 5
 Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
 Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
-Omnissiah’s Blessing: Within 3" of Tech-Priest Enginseer · Selected by Tech-Priest Enginseer · It is a VEHICLE model: Feel No Pain 5+ (until the start of your next Command phase) (Tech-Priest Enginseer)
+Omnissiah’s Blessing: not counted here: see the rule (Tech-Priest Enginseer)
 Necromechanic: “Once per battle round” · Within 12" of Tech-Priest Enginseer · After a failed saving throw · If the bearer uses it: Damage 0 (Tech-Priest Enginseer)
-1CP Benevolence of the Omnissiah: Your Command phase: Feel No Pain 6+, Feel No Pain 5+ against mortal wounds (until the start of your next Command phase)
+1CP Benevolence of the Omnissiah: not counted here: see the rule
 ALL ATTACKS
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Below its Starting Strength
@@ -3362,11 +3362,11 @@ Twin cognis lascannon×3
 D6+1
 SUSTAINED HITS 1, TWIN-LINKED
 one of: Protector Imperative: [HEAVY], BS/WS improved by 1 · Conqueror Imperative: [ASSAULT] (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER], If (see the rule)
-STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP Unshackled Wrath: one of: [LETHAL HITS] · [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS]: [LETHAL HITS], [HAZARDOUS]
-1CP Threat-cogitation Targeters: Re-roll Damage rolls, The target: MONSTER or VEHICLE
+STRATAGEMS · COHORT CYBERNETICA
+1CP Auto-divinatory Targeting: not counted here: see the rule
+STRATAGEMS · ERADICATION COHORT
+1CP Unshackled Wrath: not counted here: see the rule
+1CP Threat-cogitation Targeters: Re-roll Damage rolls, Your Shooting phase, The target: MONSTER or VEHICLE
 MELEE WEAPONS
 A
 WS
@@ -3452,11 +3452,11 @@ WHEN TARGETED
 5
 Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
 Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
-Omnissiah’s Blessing: Within 3" of Tech-Priest Enginseer · Selected by Tech-Priest Enginseer · It is a VEHICLE model: Feel No Pain 5+ (until the start of your next Command phase) (Tech-Priest Enginseer)
+Omnissiah’s Blessing: not counted here: see the rule (Tech-Priest Enginseer)
 Necromechanic: “Once per battle round” · Within 12" of Tech-Priest Enginseer · After a failed saving throw · If the bearer uses it: Damage 0 (Tech-Priest Enginseer)
-1CP Benevolence of the Omnissiah: Your Command phase: Feel No Pain 6+, Feel No Pain 5+ against mortal wounds (until the start of your next Command phase)
+1CP Benevolence of the Omnissiah: not counted here: see the rule
 ALL ATTACKS
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Below its Starting Strength
@@ -3478,11 +3478,11 @@ Twin cognis autocannon×3
 3
 SUSTAINED HITS 1, TWIN-LINKED
 one of: Protector Imperative: [HEAVY], BS/WS improved by 1 · Conqueror Imperative: [ASSAULT] (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER], If (see the rule)
-STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP Unshackled Wrath: one of: [LETHAL HITS] · [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS]: [LETHAL HITS], [HAZARDOUS]
-1CP Threat-cogitation Targeters: Re-roll Damage rolls, The target: MONSTER or VEHICLE
+STRATAGEMS · COHORT CYBERNETICA
+1CP Auto-divinatory Targeting: not counted here: see the rule
+STRATAGEMS · ERADICATION COHORT
+1CP Unshackled Wrath: not counted here: see the rule
+1CP Threat-cogitation Targeters: Re-roll Damage rolls, Your Shooting phase, The target: MONSTER or VEHICLE
 MELEE WEAPONS
 A
 WS
@@ -3567,13 +3567,13 @@ WHEN TARGETED
 5
 Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
 Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
-Omnissiah’s Blessing: Within 3" of Tech-Priest Enginseer · Selected by Tech-Priest Enginseer · It is a VEHICLE model: Feel No Pain 5+ (until the start of your next Command phase) (Tech-Priest Enginseer)
+Omnissiah’s Blessing: not counted here: see the rule (Tech-Priest Enginseer)
 Necromechanic: “Once per battle round” · Within 12" of Tech-Priest Enginseer · After a failed saving throw · If the bearer uses it: Damage 0 (Tech-Priest Enginseer)
-1CP Benevolence of the Omnissiah: Your Command phase: Feel No Pain 6+, Feel No Pain 5+ against mortal wounds (until the start of your next Command phase)
+1CP Benevolence of the Omnissiah: not counted here: see the rule
 DAMAGED 1-4 W
 −1 TO HIT ROLLS
 ALL ATTACKS
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Lost any wounds (Below its Starting Strength)
@@ -3603,11 +3603,11 @@ Twin Onager heavy phosphor blaster
 2
 IGNORES COVER, TWIN-LINKED
 one of: Protector Imperative: [HEAVY], BS/WS improved by 1 · Conqueror Imperative: [ASSAULT] (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER], If (see the rule)
-STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP Unshackled Wrath: one of: [SUSTAINED HITS 1] · [LETHAL HITS] · [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS]
-1CP Threat-cogitation Targeters: Re-roll Damage rolls, The target: MONSTER or VEHICLE
+STRATAGEMS · COHORT CYBERNETICA
+1CP Auto-divinatory Targeting: not counted here: see the rule
+STRATAGEMS · ERADICATION COHORT
+1CP Unshackled Wrath: not counted here: see the rule
+1CP Threat-cogitation Targeters: Re-roll Damage rolls, Your Shooting phase, The target: MONSTER or VEHICLE
 MELEE WEAPONS
 A
 WS
@@ -3695,13 +3695,13 @@ WHEN TARGETED
 5
 Doctrina Imperatives: Melee attacks, Protector Imperative · BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: −1 to Hit rolls (until the end of the battle round)
 Canticles of the Omnissiah: Shroudpsalm (Aura) · Within 6" of Belisarius Cawl: Stealth (until the start of your next Command phase) (Belisarius Cawl)
-Omnissiah’s Blessing: Within 3" of Tech-Priest Enginseer · Selected by Tech-Priest Enginseer · It is a VEHICLE model: Feel No Pain 5+ (until the start of your next Command phase) (Tech-Priest Enginseer)
+Omnissiah’s Blessing: not counted here: see the rule (Tech-Priest Enginseer)
 Necromechanic: “Once per battle round” · Within 12" of Tech-Priest Enginseer · After a failed saving throw · If the bearer uses it: Damage 0 (Tech-Priest Enginseer)
-1CP Benevolence of the Omnissiah: Your Command phase: Feel No Pain 6+, Feel No Pain 5+ against mortal wounds (until the start of your next Command phase)
+1CP Benevolence of the Omnissiah: not counted here: see the rule
 DAMAGED 1-4 W
 −1 TO HIT ROLLS
 ALL ATTACKS
-If (see the rule): Re-roll Hit rolls of 1 (Murderous Imperative) · Re-roll Wound rolls of 1 (Murderous Imperative)
+not counted here: see the rule (Murderous Imperative)
 Invocation of Machine Vengeance · The target is the enemy unit selected: Re-roll Hit rolls (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA
 1CP Machine Spirit Resurgent: Re-roll Hit rolls, Your Command phase, Lost any wounds (Below its Starting Strength)
@@ -3739,11 +3739,11 @@ Ferrumite cannon
 D6+1
 The target: MONSTER or VEHICLE: Ferrumite cannon +1 to Hit rolls (Blistering Salvoes)
 one of: Protector Imperative: [HEAVY], BS/WS improved by 1 · Conqueror Imperative: [ASSAULT] (BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit: +1 AP) (Doctrina Imperatives)
-STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER], If (see the rule)
-STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP Unshackled Wrath: one of: [SUSTAINED HITS 1] · [LETHAL HITS] · [SUSTAINED HITS 1], [LETHAL HITS], [HAZARDOUS]
-1CP Threat-cogitation Targeters: Re-roll Damage rolls, The target: MONSTER or VEHICLE
+STRATAGEMS · COHORT CYBERNETICA
+1CP Auto-divinatory Targeting: not counted here: see the rule
+STRATAGEMS · ERADICATION COHORT
+1CP Unshackled Wrath: not counted here: see the rule
+1CP Threat-cogitation Targeters: Re-roll Damage rolls, Your Shooting phase, The target: MONSTER or VEHICLE
 MELEE WEAPONS
 A
 WS

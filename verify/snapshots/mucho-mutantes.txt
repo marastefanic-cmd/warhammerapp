@@ -446,7 +446,7 @@ Infernal cannon
 2
 The target: CHARACTER: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Hunter of Souls)
 The target: PSYKER CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (Hunter of Souls)
-If it uses this ability · “when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride”: Dark Blessing [SUSTAINED HITS D3] (Aetherstride)
+not counted here: see the rule (Aetherstride)
 Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
 Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
 Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
@@ -500,7 +500,7 @@ D6
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
 While leading a unit: +1 to Hit rolls (Bestial Prophet)
-While leading a unit · If it uses this ability: Baleful Devolution +D3 A, +D3 S (Sacrificial Blessing)
+not counted here: see the rule (Sacrificial Blessing)
 Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
 Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
 Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
@@ -518,7 +518,7 @@ D6
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
 While leading a unit: +1 to Hit rolls (Bestial Prophet)
-While leading a unit · If it uses this ability: Baleful Devolution +D3 A, +D3 S (Sacrificial Blessing)
+not counted here: see the rule (Sacrificial Blessing)
 Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
 Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
 Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
@@ -536,7 +536,7 @@ D6
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
 While leading a unit: +1 to Hit rolls (Bestial Prophet)
-While leading a unit · If it uses this ability: Baleful Devolution +D3 A, +D3 S (Sacrificial Blessing)
+not counted here: see the rule (Sacrificial Blessing)
 Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
 Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
 Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
@@ -674,7 +674,7 @@ Divining spear×6
 2
 LANCE, PRECISION
 While leading a unit: +1 to Hit rolls (Bestial Prophet)
-While leading a unit · If it uses this ability: Force stave +D3 A, +D3 S (Sacrificial Blessing)
+not counted here: see the rule (Sacrificial Blessing)
 If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 Charged this turn: Divining spear +1 to Wound rolls (Lance)
 Tzaangor Shaman
@@ -697,7 +697,7 @@ Divining spear×6
 2
 LANCE, PRECISION
 While leading a unit: +1 to Hit rolls (Bestial Prophet)
-While leading a unit · If it uses this ability: Force stave +D3 A, +D3 S (Sacrificial Blessing)
+not counted here: see the rule (Sacrificial Blessing)
 If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 Charged this turn: Divining spear +1 to Wound rolls (Lance)
 Tzaangor Shaman
@@ -720,7 +720,7 @@ Divining spear×6
 2
 LANCE, PRECISION
 While leading a unit: +1 to Hit rolls (Bestial Prophet)
-While leading a unit · If it uses this ability: Force stave +D3 A, +D3 S (Sacrificial Blessing)
+not counted here: see the rule (Sacrificial Blessing)
 If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 Charged this turn: Divining spear +1 to Wound rolls (Lance)
 Tzaangors
@@ -2570,7 +2570,7 @@ M: not counted here: see the rule (Time Flux)
 
 WHEN TARGETED
 2
-Impossible Form: Unearthly Power: the one selected (at the start of the battle round) · Not Psychic Attacks: −1 Damage
+Impossible Form: not counted here: see the rule
 Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS]
 DAMAGED 1-6 W
 −1 TO HIT ROLLS
@@ -2912,7 +2912,7 @@ Infernal cannon
 5
 -2
 2
-If it uses this ability · “when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride”: Dark Blessing [SUSTAINED HITS D3] (Aetherstride)
+not counted here: see the rule (Aetherstride)
 Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
 Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
 Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
@@ -3207,7 +3207,7 @@ Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the s
 1CP Relentless Rebirth: Any phase, If (see the rule): Feel No Pain 5+ against mortal wounds
 ALL ATTACKS · WHOLE UNIT
 While leading a unit: +1 to Hit rolls (Bestial Prophet)
-While leading a unit · If it uses this ability: Baleful Devolution +D3 A, +D3 S (Sacrificial Blessing)
+not counted here: see the rule (Sacrificial Blessing)
 If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 RANGED WEAPONS
 Range
@@ -3363,7 +3363,7 @@ Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the s
 1CP Relentless Rebirth: Any phase, If (see the rule): Feel No Pain 5+ against mortal wounds
 ALL ATTACKS · WHOLE UNIT
 While leading a unit: +1 to Hit rolls (Bestial Prophet)
-While leading a unit · If it uses this ability: Baleful Devolution +D3 A, +D3 S (Sacrificial Blessing)
+not counted here: see the rule (Sacrificial Blessing)
 If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 RANGED WEAPONS
 Range
@@ -3520,7 +3520,7 @@ Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the s
 1CP Relentless Rebirth: Any phase, If (see the rule): Feel No Pain 5+ against mortal wounds
 ALL ATTACKS · WHOLE UNIT
 While leading a unit: +1 to Hit rolls (Bestial Prophet)
-While leading a unit · If it uses this ability: Baleful Devolution +D3 A, +D3 S (Sacrificial Blessing)
+not counted here: see the rule (Sacrificial Blessing)
 If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
 RANGED WEAPONS
 Range
@@ -3653,9 +3653,9 @@ Tzaangors
 1
 6+
 
-Not Battle-shocked: TZAANGOR models +1 OC (Warpmeld Sacrifice)
-
 M: not counted here: see the rule (Time Flux)
+
+OC: not counted here: see the rule (Warpmeld Sacrifice)
 
 WHEN TARGETED
 3

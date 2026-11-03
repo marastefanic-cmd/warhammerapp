@@ -340,7 +340,7 @@ D6+3
 2
 PSYCHIC, TORRENT
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+not counted here: see the rule (Pyrovores) (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 Biovores
@@ -353,7 +353,7 @@ D3
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+not counted here: see the rule (Pyrovores) (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 Pyrovores
@@ -382,7 +382,7 @@ HARPOONED
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+not counted here: see the rule (Pyrovores) (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 Norn Emissary
@@ -414,7 +414,7 @@ MELTA 2, PSYCHIC
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+not counted here: see the rule (Pyrovores) (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 Psychophage
@@ -427,6 +427,7 @@ D6
 1
 IGNORES COVER, TORRENT
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+not counted here: see the rule (Pyrovores) (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 Tyrannofex
@@ -447,7 +448,7 @@ Stinger salvoes
 1
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+not counted here: see the rule (Pyrovores) (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 
@@ -470,7 +471,7 @@ Scything talons
 -2
 2
 The target: INFANTRY, MOUNTED or BEASTS: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
@@ -493,7 +494,7 @@ Scything talons and rending claws×6
 5
 -1
 1
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
@@ -526,8 +527,8 @@ Scything talons and rending claws×6
 6
 -1
 1
-If (see the rule): +1 A (Parasitic Biomorphology)
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Parasitic Biomorphology)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
@@ -539,7 +540,7 @@ Chitin-barbed limbs
 5
 0
 1
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
@@ -552,7 +553,7 @@ Chitin-barbed limbs×3
 5
 0
 1
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
@@ -566,7 +567,7 @@ Chitinous claws and teeth
 0
 1
 SUSTAINED HITS 1
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
@@ -592,7 +593,7 @@ D6+1
 EXTRA ATTACKS
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
@@ -619,7 +620,7 @@ Monstrous rending claws
 EXTRA ATTACKS
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
@@ -637,7 +638,7 @@ ANTI-PSYKER 4+, DEVASTATING WOUNDS
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 The target below its Starting Strength: +1 to Hit rolls (Feeding Frenzy)
 The target below its Starting Strength · “If that target is also Below Half-strength”: +1 to Wound rolls (Feeding Frenzy)
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
 1CP Secure Biomass: [LETHAL HITS], Fight phase
@@ -650,7 +651,7 @@ Powerful limbs
 0
 2
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
@@ -1148,7 +1149,7 @@ Add a group
 of 5 destroyed
 4.3 wounds lost · wiped in 5% of games
 Nothing ticked: the datasheets as printed
-12 NOT COUNTED
+13 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1230,12 +1231,9 @@ if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
-Burning Spray (Pyrovores (×2))
-Selected by it · The target is the enemy unit selected: [IGNORES COVER]
-if it applies
-no change: [IGNORES COVER] counts only when the target has the benefit of cover
-0
-ALL ▾
+NOT COUNTED IN THE DAMAGE TAB (1)
+Burning Spray
+“Until the end of the phase, that enemy unit cannot have the Benefit of Cover.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -1382,7 +1380,7 @@ of 5 destroyed
 8.3 wounds lost · wiped in 54% of games
 Charged this turn
 ×
-9 NOT COUNTED
+10 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1428,12 +1426,12 @@ said to hold
 no change: no rule here needs it
 0
 ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (1)
 Synapse
-“If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
-if it applies
-+23% wiped
-+0.5
-MODELS
+“Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 UNIT RULES
 Swallow Whole
 The target: INFANTRY, MOUNTED or BEASTS: Each successful unmodified Wound roll is a Critical Wound · for Gaping maw
@@ -1629,7 +1627,7 @@ Shoot 2.14 · Fight 2.84 · the charge is taken to succeed
 
 Charged this turn
 ×
-24 NOT COUNTED
+26 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1708,12 +1706,9 @@ if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
-Burning Spray (Pyrovores (×2))
-Selected by it · The target is the enemy unit selected: [IGNORES COVER]
-if it applies
-no change: [IGNORES COVER] counts only when the target has the benefit of cover
-0
-ALL ▾
+NOT COUNTED IN THE DAMAGE TAB (1)
+Burning Spray
+“Until the end of the phase, that enemy unit cannot have the Benefit of Cover.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -1779,13 +1774,12 @@ holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
 Synapse
-“If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
-if it applies
-no change: S10 still wounds T4 on 2+; S6 still wounds T4 on 3+
-0
-ALL ▾
-NOT COUNTED IN THE DAMAGE TAB (1)
+“Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 Shadow in the Warp
 “If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
 UNIT RULES
@@ -2368,7 +2362,7 @@ Scything talons
 -2
 2
 The target: INFANTRY, MOUNTED or BEASTS: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
@@ -2469,7 +2463,7 @@ D6+3
 PSYCHIC, TORRENT
 WHOLE UNIT
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+not counted here: see the rule (Pyrovores) (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -2492,7 +2486,7 @@ Scything talons and rending claws×6
 -1
 1
 WHOLE UNIT
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS]
@@ -2629,8 +2623,8 @@ Scything talons and rending claws×6
 -1
 1
 WHOLE UNIT
-If (see the rule): +1 A (Parasitic Biomorphology)
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Parasitic Biomorphology)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
@@ -2737,7 +2731,7 @@ D3
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+not counted here: see the rule (Pyrovores) (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -2750,7 +2744,7 @@ Chitin-barbed limbs
 5
 0
 1
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS]
@@ -2844,7 +2838,7 @@ Chitin-barbed limbs×3
 5
 0
 1
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS]
@@ -2922,7 +2916,7 @@ Chitinous claws and teeth
 0
 1
 SUSTAINED HITS 1
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
@@ -3014,7 +3008,7 @@ Toxinjecter Harpoon
 D6+1
 HARPOONED
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+not counted here: see the rule (Pyrovores) (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -3037,7 +3031,7 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS]
@@ -3171,7 +3165,7 @@ BLAST, PSYCHIC
 D6
 MELTA 2, PSYCHIC
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+not counted here: see the rule (Pyrovores) (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -3194,7 +3188,7 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS]
@@ -3292,6 +3286,7 @@ D6
 1
 IGNORES COVER, TORRENT
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+not counted here: see the rule (Pyrovores) (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -3308,7 +3303,7 @@ ANTI-PSYKER 4+, DEVASTATING WOUNDS
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 The target below its Starting Strength: +1 to Hit rolls (Feeding Frenzy)
 The target below its Starting Strength · “If that target is also Below Half-strength”: +1 to Wound rolls (Feeding Frenzy)
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS]
 1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
@@ -3404,7 +3399,7 @@ Stinger salvoes
 0
 1
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected: [IGNORES COVER] (Burning Spray)
+not counted here: see the rule (Pyrovores) (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -3417,7 +3412,7 @@ Powerful limbs
 8
 0
 2
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
 1CP Secure Biomass: [LETHAL HITS]

@@ -558,15 +558,15 @@ EXTRA ATTACKS, LANCE
 Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
+not counted here: see the rule (Wrath of Khorne)
 Charged this turn: Bladed horn +1 to Wound rolls (Lance)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
 Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
 Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
-STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
-1CP Aspire to Infamy: CHARACTER models +1 A, +2 S
+STRATAGEMS · VESSELS OF WRATH
+1CP Aspire to Infamy: not counted here: see the rule
 Slaughterbound
 Lacerator and daemonic claw
 7
@@ -578,14 +578,14 @@ Once per battle · If it uses this ability: +3 A, [DEVASTATING WOUNDS] (Possesse
 Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
+not counted here: see the rule (Wrath of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
 Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
 Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
-STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
-1CP Aspire to Infamy: CHARACTER models +1 A, +2 S
+STRATAGEMS · VESSELS OF WRATH
+1CP Aspire to Infamy: not counted here: see the rule
 Slaughterbound
 Berzerker Glaive
 + Exalted Eightbound
@@ -609,14 +609,14 @@ The target: MONSTER or VEHICLE: +1 D (Rend and Tear)
 Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
+not counted here: see the rule (Wrath of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
 Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
 Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
-STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
-1CP Aspire to Infamy: CHARACTER models +1 A, +2 S
+STRATAGEMS · VESSELS OF WRATH
+1CP Aspire to Infamy: not counted here: see the rule
 Chaos Rhino
 Armoured tracks
 7
@@ -3148,15 +3148,15 @@ EXTRA ATTACKS, LANCE
 Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
+not counted here: see the rule (Wrath of Khorne)
 Charged this turn: Bladed horn +1 to Wound rolls (Lance)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
 Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
 Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
-STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
-1CP Aspire to Infamy: CHARACTER models +1 A, +2 S
+STRATAGEMS · VESSELS OF WRATH
+1CP Aspire to Infamy: not counted here: see the rule
 ABILITIES
 Aggressive Advance
 Not leading a unit in this list
@@ -3240,14 +3240,14 @@ Once per battle · If it uses this ability: +3 A, [DEVASTATING WOUNDS] (Possesse
 Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
+not counted here: see the rule (Wrath of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
 Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
 Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
-STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
-1CP Aspire to Infamy: CHARACTER models +1 A, +2 S
+STRATAGEMS · VESSELS OF WRATH
+1CP Aspire to Infamy: not counted here: see the rule
 ABILITIES
 Lord of the Eightbound
 
@@ -3364,14 +3364,14 @@ The target: MONSTER or VEHICLE: +1 D (Rend and Tear)
 Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
 Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
 Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Every melee attack: CHARACTER models one of: [CLEAVE 1] · +1 AP (Wrath of Khorne)
+not counted here: see the rule (Wrath of Khorne)
 Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
 Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
 Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
 1CP Hack and Slash: +1 AP, Charged this turn
-STRATAGEMS · VESSELS OF WRATH · FIGHT PHASE
-1CP Aspire to Infamy: CHARACTER models +1 A, +2 S
+STRATAGEMS · VESSELS OF WRATH
+1CP Aspire to Infamy: not counted here: see the rule
 ABILITIES
 Lord of the Eightbound
 - Slaughterbound

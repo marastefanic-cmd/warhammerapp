@@ -480,7 +480,6 @@ Slaughter and Carnage
 -2
 2
 Own aura: +1 A (Rage Embodied)
-If (see the rule): Slaughter and Carnage +2 A (Damaged: 1-7 wounds remaining)
 Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
 The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
 Karanak
@@ -648,7 +647,7 @@ Juggernaut’s bladed horn×3
 -1
 1
 EXTRA ATTACKS, LANCE
-While leading a unit · Charged this turn: Juggernaut’s bladed horn [DEVASTATING WOUNDS] (Skullmaster’s Fury)
+not counted here: see the rule (Skullmaster’s Fury)
 Charged this turn: Juggernaut’s bladed horn +1 to Wound rolls (Lance)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
 Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
@@ -1271,7 +1270,7 @@ Add a group
 of 5 destroyed
 2.9 wounds lost · wiped in <1% of games
 Nothing ticked: the datasheets as printed
-17 NOT COUNTED
+18 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1336,11 +1335,13 @@ UNIT RULES
 
 None that change these numbers.
 
-NOT COUNTED IN THE DAMAGE TAB (2)
+NOT COUNTED IN THE DAMAGE TAB (3)
 Greater Daemon of Khorne
 “While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
 Murderlust
 “This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+Damaged: 1-7 wounds remaining
+“While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1500,7 +1501,7 @@ of 5 destroyed
 Slaughter and Carnage: sweep
 Charged this turn
 ×
-17 NOT COUNTED
+18 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1552,12 +1553,6 @@ AP
 D
 2
 SITUATION
-Damaged: 1-7 wounds remaining
-+2 A
-if it applies
-+4% wiped
-+0.1
-MODELS
 Charged this turn
 said to hold
 no change: no rule here needs it
@@ -1581,11 +1576,13 @@ if it applies
 ≈0
 MODELS
 +1 MORE ▾
-NOT COUNTED IN THE DAMAGE TAB (2)
+NOT COUNTED IN THE DAMAGE TAB (3)
 Greater Daemon of Khorne
 “While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
 Murderlust
 “This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+Damaged: 1-7 wounds remaining
+“While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Blood Throne (Rendmaster on Blood Throne (×2))
 Selected by it · The target is the enemy unit selected: +1 S, +1 AP, +1 D
@@ -1761,7 +1758,7 @@ Shoot 1.19 · Fight 3.78 · the charge is taken to succeed
 Slaughter and Carnage: sweep
 Charged this turn
 ×
-34 NOT COUNTED
+36 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1825,11 +1822,13 @@ UNIT RULES
 
 None that change these numbers.
 
-NOT COUNTED IN THE DAMAGE TAB (2)
+NOT COUNTED IN THE DAMAGE TAB (3)
 Greater Daemon of Khorne
 “While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
 Murderlust
 “This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+Damaged: 1-7 wounds remaining
+“While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 
 None that change these numbers.
@@ -1916,12 +1915,6 @@ AP
 D
 2
 SITUATION
-Damaged: 1-7 wounds remaining
-+2 A
-if it applies
-+1% wiped
-≈0
-MODELS
 Charged this turn
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
@@ -1943,11 +1936,13 @@ Within 6" of it: +1 A
 if it applies
 ≈0
 MODELS
-NOT COUNTED IN THE DAMAGE TAB (2)
+NOT COUNTED IN THE DAMAGE TAB (3)
 Greater Daemon of Khorne
 “While a friendly KHORNE LEGIONES DAEMONICA unit is within 6" of this model, that unit is within your army’s Shadow of Chaos.” · not counted in the Damage tab
 Murderlust
 “This unit is eligible to declare a charge in a turn in which it Advanced.” · not counted in the Damage tab
+Damaged: 1-7 wounds remaining
+“While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
 Blood Throne (Rendmaster on Blood Throne (×2))
 Selected by it · The target is the enemy unit selected: +1 S, +1 AP, +1 D
@@ -2503,7 +2498,7 @@ Prince of Darkness: Within 6" of Daemon Prince of Chaos: Stealth (Daemon Prince 
 1CP Wrath Undeniable: not counted here: see the rule
 1CP Sheathed in Brass: Your opponent’s Shooting phase: Save characteristic of 3+
 DAMAGED 1-7 W
-+2 A
+SEE THE RULE
 RANGED WEAPONS
 Range
 A
@@ -3466,7 +3461,7 @@ Juggernaut’s bladed horn×3
 1
 EXTRA ATTACKS, LANCE
 WHOLE UNIT
-While leading a unit · Charged this turn: Juggernaut’s bladed horn [DEVASTATING WOUNDS] (Skullmaster’s Fury)
+not counted here: see the rule (Skullmaster’s Fury)
 Charged this turn: Juggernaut’s bladed horn +1 to Wound rolls (Lance)
 Within 6" of Skarbrand: +1 A (Rage Embodied)
 Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)

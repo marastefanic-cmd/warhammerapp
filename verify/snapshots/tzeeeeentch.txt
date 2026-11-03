@@ -351,7 +351,7 @@ BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
 If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
 Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 The Changeling
 Infernal Flames
 ➤witchfire
@@ -372,7 +372,7 @@ D3
 IGNORES COVER, HAZARDOUS, PSYCHIC, TORRENT
 Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 Daemon Prince of Chaos with wings
 Neverblade
 Infernal cannon
@@ -384,7 +384,7 @@ Infernal cannon
 2
 Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 Lord of Change
 Infernal Puppeteer
 Rod of sorcery
@@ -416,7 +416,7 @@ Own aura: +1 S (Daemon Lord of Tzeentch)
 Every ranged attack: Bolt of Change one of: [IGNORES COVER] · [LETHAL HITS] · [SUSTAINED HITS D3] (Master of Magicks)
 If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 Lord of Change
 Inescapable Eye
 Rod of sorcery
@@ -448,7 +448,7 @@ Own aura: +1 S (Daemon Lord of Tzeentch)
 Every ranged attack: Bolt of Change one of: [IGNORES COVER] · [LETHAL HITS] · [SUSTAINED HITS D3] (Master of Magicks)
 If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 Fluxmaster
 Improbable Shield (Aura)
 + Pink Horrors
@@ -497,7 +497,7 @@ Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
 PISTOL, PSYCHIC
 Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 Flamers
 ×3 units
 Flickering Flames×3
@@ -510,7 +510,7 @@ D6
 IGNORES COVER, PSYCHIC, TORRENT
 Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 Tzeentch Soul Grinder
 Harvester cannon
 36"
@@ -530,7 +530,7 @@ BLAST
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 wounds remaining)
 Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Kairos Fateweaver
@@ -544,7 +544,7 @@ Staff of Tomorrow
 PSYCHIC
 If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 The Blue Scribes
 Sharp quills
 4
@@ -554,7 +554,7 @@ Sharp quills
 1
 ANTI-PSYKER 2+
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 The Changeling
 The Trickster’s Staff
 3
@@ -564,7 +564,7 @@ The Trickster’s Staff
 D3
 PSYCHIC
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 Daemon Prince of Chaos with wings
 Neverblade
 Hellforged weapons
@@ -581,10 +581,10 @@ Hellforged weapons
 -1
 1
 Once per battle · If it uses this ability: Hellforged weapons +3 A (Malefic Destruction)
-Every melee attack: Hellforged weapons one of: [LETHAL HITS] · [PRECISION] · [SUSTAINED HITS 1] (Harbinger of Death)
+not counted here: see the rule (Harbinger of Death)
 Every melee attack: +1 to Hit rolls (Neverblade)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 Lord of Change
 Infernal Puppeteer
 Staff of Tzeentch
@@ -596,7 +596,7 @@ Staff of Tzeentch
 PSYCHIC
 If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 Lord of Change
 Inescapable Eye
 Staff of Tzeentch
@@ -608,7 +608,7 @@ Staff of Tzeentch
 PSYCHIC
 If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 Fluxmaster
 Improbable Shield (Aura)
 + Pink Horrors
@@ -640,7 +640,7 @@ Yellow claws (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
 0
 1
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 Flamers
 ×3 units
 Flamer mouths×3
@@ -650,7 +650,7 @@ Flamer mouths×3
 0
 1
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 Tzeentch Soul Grinder
 
 Fights with both: Iron claw, plus Warpclaw on top (extra attacks).
@@ -670,7 +670,7 @@ Warpclaw
 EXTRA ATTACKS
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 
 ######## abilities · MELEE Abilities
 Kairos Fateweaver
@@ -1215,7 +1215,7 @@ Add a group
 of 5 destroyed
 7.8 wounds lost · wiped in 41% of games
 Infernal Gateway: focused witchfire
-17 NOT COUNTED
+18 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1348,23 +1348,15 @@ with their CP
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-BEST · MOST MODELS+11% wiped
++11% wiped
 +0.3
 MODELS
-1CP Pyrogenesis
-if used
-no change: S11 still wounds T4 on 2+
-0
-+2 S
-0
-+3 S, +1 AP
-“spend one Flux token”
-+0.6
-BEST
 NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
-NOT COUNTED IN THE DAMAGE TAB (11)
+NOT COUNTED IN THE DAMAGE TAB (12)
 1CP Impossible Eclipse
 “WHEN: Any phase. TARGET: One LEGIONES DAEMONICA TZEENTCH MONSTER unit from your army that is on the battlefield. EFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. …” · not counted in the Damage tab
+1CP Pyrogenesis
+“Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Flickering Reality
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
 1CP Fateborne Nightmares
@@ -1505,7 +1497,7 @@ of 5 destroyed
 3.7 wounds lost · wiped in 1% of games
 Charged this turn
 ×
-17 NOT COUNTED
+18 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1576,23 +1568,15 @@ if used
 BEST · MOST MODELS+2% wiped
 +0.4
 MODELS
-1CP Pyrogenesis
-if used
-no change: S10 still wounds T4 on 2+
-0
-+2 S
-0
-+3 S, +1 AP
-“spend one Flux token”
-+0.5
-BEST
 1CP Epic Challenge
 [PRECISION] · CHARACTER models only
 if used
 0
-NOT COUNTED IN THE DAMAGE TAB (11)
+NOT COUNTED IN THE DAMAGE TAB (12)
 1CP Impossible Eclipse
 “WHEN: Any phase. TARGET: One LEGIONES DAEMONICA TZEENTCH MONSTER unit from your army that is on the battlefield. EFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. …” · not counted in the Damage tab
+1CP Pyrogenesis
+“Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Flickering Reality
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
 1CP Fateborne Nightmares
@@ -1737,7 +1721,7 @@ Shoot 3.9 · Fight 0.8 · the charge is taken to succeed
 Infernal Gateway: focused witchfire
 Charged this turn
 ×
-34 NOT COUNTED
+36 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1868,23 +1852,15 @@ with their CP
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-BEST · MOST MODELS+6% wiped
++6% wiped
 +0.1
 MODELS
-1CP Pyrogenesis
-if used
-no change: S11 still wounds T4 on 2+
-0
-+2 S
-0
-+3 S, +1 AP
-“spend one Flux token”
-+0.2
-BEST
 NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
-NOT COUNTED IN THE DAMAGE TAB (11)
+NOT COUNTED IN THE DAMAGE TAB (12)
 1CP Impossible Eclipse
 “WHEN: Any phase. TARGET: One LEGIONES DAEMONICA TZEENTCH MONSTER unit from your army that is on the battlefield. EFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. …” · not counted in the Damage tab
+1CP Pyrogenesis
+“Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Flickering Reality
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
 1CP Fateborne Nightmares
@@ -1974,23 +1950,15 @@ if used
 BEST · MOST MODELS+4% wiped
 +0.1
 MODELS
-1CP Pyrogenesis
-if used
-no change: S10 still wounds T4 on 2+
-0
-+2 S
-0
-+3 S, +1 AP
-“spend one Flux token”
-+0.1
-BEST
 1CP Epic Challenge
 [PRECISION] · CHARACTER models only
 if used
 0
-NOT COUNTED IN THE DAMAGE TAB (11)
+NOT COUNTED IN THE DAMAGE TAB (12)
 1CP Impossible Eclipse
 “WHEN: Any phase. TARGET: One LEGIONES DAEMONICA TZEENTCH MONSTER unit from your army that is on the battlefield. EFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. …” · not counted in the Damage tab
+1CP Pyrogenesis
+“Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Flickering Reality
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA TZEENTCH unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
 1CP Fateborne Nightmares
@@ -2516,7 +2484,7 @@ WHEN TARGETED
 5
 Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Mischief and Confusion: not counted here: see the rule (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
 1CP Flickering Reality: not counted here: see the rule
 DAMAGED 1-7 W
@@ -2524,7 +2492,7 @@ DAMAGED 1-7 W
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2639,7 +2607,7 @@ WHEN TARGETED
 5
 Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls
-Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Mischief and Confusion: not counted here: see the rule (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
 1CP Flickering Reality: not counted here: see the rule
 MELEE WEAPONS
@@ -2656,7 +2624,7 @@ Sharp quills
 1
 ANTI-PSYKER 2+
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 ABILITIES
 P’tarix’s Sorcerous Syphon
 
@@ -2721,17 +2689,16 @@ The Changeling
 1
 4+
 WHEN TARGETED
-7
+6
 Fates in Flux: not counted here: see the rule
 Formless Horror: not counted here: see the rule
-Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls
 Mischief and Confusion: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
 1CP Flickering Reality: not counted here: see the rule
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2836,12 +2803,12 @@ WHEN TARGETED
 5
 Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Mischief and Confusion: not counted here: see the rule (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
 1CP Flickering Reality: not counted here: see the rule
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -2877,7 +2844,7 @@ Hellforged weapons
 -1
 1
 Once per battle · If it uses this ability: Hellforged weapons +3 A (Malefic Destruction)
-Every melee attack: Hellforged weapons one of: [LETHAL HITS] · [PRECISION] · [SUSTAINED HITS 1] (Harbinger of Death)
+not counted here: see the rule (Harbinger of Death)
 Every melee attack: +1 to Hit rolls (Neverblade)
 ABILITIES
 Daemonic Allegiance
@@ -2971,7 +2938,7 @@ WHEN TARGETED
 5
 Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Mischief and Confusion: not counted here: see the rule (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
 1CP Flickering Reality: not counted here: see the rule
 DAMAGED 1-7 W
@@ -2979,7 +2946,7 @@ DAMAGED 1-7 W
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -3110,7 +3077,7 @@ WHEN TARGETED
 5
 Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Mischief and Confusion: not counted here: see the rule (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
 1CP Flickering Reality: not counted here: see the rule
 DAMAGED 1-7 W
@@ -3118,7 +3085,7 @@ DAMAGED 1-7 W
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -3274,11 +3241,11 @@ FLUXMASTER Fluxmaster: Melee attacks: −1 to Hit rolls
 FLUXMASTER Altered Reality: not counted here: see the rule
 FLUXMASTER Improbable Shield (Aura): Own aura: Feel No Pain 4+ against Psychic Attacks and mortal wounds
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Mischief and Confusion: not counted here: see the rule (The Changeling)
 1CP Flickering Reality: not counted here: see the rule
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -3466,12 +3433,12 @@ WHEN TARGETED
 5
 Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Mischief and Confusion: not counted here: see the rule (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
 1CP Flickering Reality: not counted here: see the rule
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -3559,14 +3526,14 @@ WHEN TARGETED
 5
 Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Mischief and Confusion: not counted here: see the rule (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
 1CP Flickering Reality: not counted here: see the rule
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 RANGED WEAPONS
 Range
 A
@@ -3687,12 +3654,12 @@ WHEN TARGETED
 5
 Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Mischief and Confusion: not counted here: see the rule (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
 1CP Flickering Reality: not counted here: see the rule
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 RANGED WEAPONS
 Coruscating Blue flames, Coruscating Yellow flames (ref. only) · all pistols
 Range
@@ -3810,12 +3777,12 @@ WHEN TARGETED
 5
 Fates in Flux: not counted here: see the rule
 P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: Ranged attacks, If (see the rule): −1 to Hit rolls (The Changeling)
+Mischief and Confusion: not counted here: see the rule (The Changeling)
 Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
 1CP Flickering Reality: not counted here: see the rule
 ALL ATTACKS
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: one of: +2 S · +3 S, +1 AP (“spend one Flux token”)
+1CP Pyrogenesis: not counted here: see the rule
 RANGED WEAPONS
 Range
 A

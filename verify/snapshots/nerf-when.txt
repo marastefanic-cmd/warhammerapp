@@ -742,10 +742,10 @@ Malleus Tactics · “If the tactical doctrine is active for your unit”: [LETH
 Purgatus Tactics · “If the assault doctrine is active for your unit” · “that target an enemy unit within 9" of this unit”: [PRECISION] (Mission Tactics)
 Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
 The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
-STRATAGEMS · DEATHWATCH SUPPORT · YOUR SHOOTING PHASE
-1CP Kraken Rounds: +6" range, +1 S
-1CP Dragonfire Rounds: Re-roll Wound rolls of 1, [IGNORES COVER]
-1CP Hellfire Rounds: [ANTI-NON-VEHICLE 4+], If (see the rule)
+STRATAGEMS · DEATHWATCH SUPPORT
+1CP Kraken Rounds: not counted here: see the rule
+1CP Dragonfire Rounds: Re-roll Wound rolls of 1, [IGNORES COVER], Your Shooting phase
+1CP Hellfire Rounds: [ANTI-NON-VEHICLE 4+], Your Shooting phase, If (see the rule)
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
 1CP Merciless Veterans: [LETHAL HITS], [SUSTAINED HITS 1]
 
@@ -3387,7 +3387,7 @@ Heavy intercessor Squad×4
 –
 WHEN TARGETED
 3
-Unyielding in the Face of the Foe: While it controls an objective: +1 to save rolls
+Unyielding in the Face of the Foe: not counted here: see the rule
 1CP Armour of Contempt: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 1CP Duty in Death: not counted here: see the rule
 ALL ATTACKS
@@ -3941,10 +3941,10 @@ BLAST 1
 HAZARDOUS, BLAST 1
 DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
 The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
-STRATAGEMS · DEATHWATCH SUPPORT · YOUR SHOOTING PHASE
-1CP Kraken Rounds: +6" range, +1 S
-1CP Dragonfire Rounds: Re-roll Wound rolls of 1, [IGNORES COVER]
-1CP Hellfire Rounds: [ANTI-NON-VEHICLE 4+], If (see the rule)
+STRATAGEMS · DEATHWATCH SUPPORT
+1CP Kraken Rounds: not counted here: see the rule
+1CP Dragonfire Rounds: Re-roll Wound rolls of 1, [IGNORES COVER], Your Shooting phase
+1CP Hellfire Rounds: [ANTI-NON-VEHICLE 4+], Your Shooting phase, If (see the rule)
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
 1CP Merciless Veterans: [LETHAL HITS], [SUSTAINED HITS 1]
 MELEE WEAPONS

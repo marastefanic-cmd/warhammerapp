@@ -287,8 +287,7 @@ D6+3
 -1
 2
 PSYCHIC, TORRENT
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-4 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Enraged Behemoths)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
 1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
@@ -305,8 +304,7 @@ D6+1
 HARPOONED
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Enraged Behemoths)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
 1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
@@ -323,8 +321,7 @@ D6+1
 HARPOONED
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Enraged Behemoths)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
 1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
@@ -357,8 +354,7 @@ D6
 MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Enraged Behemoths)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
 1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
@@ -390,8 +386,7 @@ D6
 MELTA 2, PSYCHIC
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Enraged Behemoths)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
 1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
@@ -413,8 +408,7 @@ Stinger salvoes
 0
 1
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Enraged Behemoths)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
 1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
@@ -428,9 +422,8 @@ Bone Sabres
 -2
 3
 TWIN-LINKED
-If (see the rule): +1 S (Synapse)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-4 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 Hive Tyrant
@@ -454,9 +447,8 @@ Monstrous scything talons
 2
 EXTRA ATTACKS
 The target: MONSTER or VEHICLE: +1 to Wound rolls (Monstrous Nemesis)
-If (see the rule): +1 S (Synapse)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-4 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 Neurogaunts
@@ -467,7 +459,7 @@ Chitinous claws and teeth×11
 3
 0
 1
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 Norn Assimilator
 Synaptoprescience
 1 of 2
@@ -489,9 +481,8 @@ D6+1
 EXTRA ATTACKS
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-If (see the rule): +1 S (Synapse)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
@@ -517,9 +508,8 @@ D6+1
 EXTRA ATTACKS
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-If (see the rule): +1 S (Synapse)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
@@ -544,9 +534,8 @@ Monstrous rending claws
 EXTRA ATTACKS
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-If (see the rule): +1 S (Synapse)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
@@ -570,9 +559,8 @@ Monstrous rending claws
 EXTRA ATTACKS
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-If (see the rule): +1 S (Synapse)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
@@ -586,9 +574,8 @@ Powerful limbs
 0
 2
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-If (see the rule): +1 S (Synapse)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 
@@ -1077,7 +1064,7 @@ Add a group
 of 5 destroyed
 4.3 wounds lost · wiped in 5% of games
 Nothing ticked: the datasheets as printed
-14 NOT COUNTED
+15 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1127,21 +1114,14 @@ no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
 ARMY RULES
-Enraged Behemoths
-Below Half-strength: +1 to Wound rolls
-if it applies
-+5% wiped
-+0.5
-MODELS
-Enraged Behemoths
-Below its Starting Strength: +1 to Hit rolls
-if it applies
-no change: [TORRENT] hits automatically: no hit roll
-0
-ALL ▾
-NOT COUNTED IN THE DAMAGE TAB (1)
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
 Shadow in the Warp
 “If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
+Enraged Behemoths
+“Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 UNIT RULES
 
 None that change these numbers.
@@ -1314,7 +1294,7 @@ of 5 destroyed
 8.1 wounds lost · wiped in 45% of games
 Charged this turn
 ×
-14 NOT COUNTED
+16 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1346,24 +1326,16 @@ said to hold
 no change: no rule here needs it
 0
 ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
 Synapse
-“If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
-if it applies
-no change: S10 still wounds T4 on 2+
-0
-Enraged Behemoths
-Below its Starting Strength: +1 to Hit rolls
-if it applies
-no change: already hits on 2+
-0
-Enraged Behemoths
-Below Half-strength: +1 to Wound rolls
-if it applies
-no change: already wounds on 2+
-0
-NOT COUNTED IN THE DAMAGE TAB (1)
+“Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 Shadow in the Warp
 “If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
+Enraged Behemoths
+“Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 UNIT RULES
 
 None that change these numbers.
@@ -1542,7 +1514,7 @@ Shoot 2.14 · Fight 2.63 · the charge is taken to succeed
 
 Charged this turn
 ×
-28 NOT COUNTED
+31 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1590,21 +1562,14 @@ no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
 ARMY RULES
-Enraged Behemoths
-Below Half-strength: +1 to Wound rolls
-if it applies
-+5% wiped
-+0.1
-MODELS
-Enraged Behemoths
-Below its Starting Strength: +1 to Hit rolls
-if it applies
-no change: [TORRENT] hits automatically: no hit roll
-0
-ALL ▾
-NOT COUNTED IN THE DAMAGE TAB (1)
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
 Shadow in the Warp
 “If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
+Enraged Behemoths
+“Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 UNIT RULES
 
 None that change these numbers.
@@ -1687,24 +1652,16 @@ holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
 Synapse
-“If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
-if it applies
-no change: S10 still wounds T4 on 2+
-0
-Enraged Behemoths
-Below its Starting Strength: +1 to Hit rolls
-if it applies
-no change: already hits on 2+
-0
-Enraged Behemoths
-Below Half-strength: +1 to Wound rolls
-if it applies
-no change: already wounds on 2+
-0
-NOT COUNTED IN THE DAMAGE TAB (1)
+“Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 Shadow in the Warp
 “If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
+Enraged Behemoths
+“Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 UNIT RULES
 
 None that change these numbers.
@@ -2264,15 +2221,13 @@ The Swarmlord
 3
 4+
 
-Lost no wounds (At its Starting Strength) · Not Battle-shocked: OC 5 (Enraged Behemoths)
+OC: not counted here: see the rule (Enraged Behemoths)
 
 WHEN TARGETED
-2
-1CP Savage Roar: Fight phase: −1 to Hit rolls
-1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
+1
+1CP Savage Roar: not counted here: see the rule
 ALL ATTACKS
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-4 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -2304,7 +2259,7 @@ Bone Sabres
 -2
 3
 TWIN-LINKED
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 ABILITIES
@@ -2382,12 +2337,11 @@ Hive Tyrant
 3
 4+
 
-Lost no wounds (At its Starting Strength) · Not Battle-shocked: OC 5 (Enraged Behemoths)
+OC: not counted here: see the rule (Enraged Behemoths)
 
 WHEN TARGETED
-2
-1CP Savage Roar: Fight phase: −1 to Hit rolls
-1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
+1
+1CP Savage Roar: not counted here: see the rule
 MELEE WEAPONS
 A
 WS
@@ -2412,9 +2366,8 @@ Monstrous scything talons
 2
 EXTRA ATTACKS
 The target: MONSTER or VEHICLE: +1 to Wound rolls (Monstrous Nemesis)
-If (see the rule): +1 S (Synapse)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-4 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 ABILITIES
@@ -2512,7 +2465,7 @@ Chitinous claws and teeth×11
 3
 0
 1
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 ABILITIES
 Neurocytes
 
@@ -2564,24 +2517,22 @@ Norn Assimilator
 5
 4+
 
-Lost no wounds (At its Starting Strength) · Not Battle-shocked: +2 OC (Enraged Behemoths)
-
 OC: not counted here: see the rule (Singular Purpose)
+
+OC: not counted here: see the rule (Enraged Behemoths)
 
 Enemy units’ M: not counted here: see the rule (Tanglestrike Rounds)
 
 WHEN TARGETED
-4
+3
 Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
-1CP Savage Roar: Fight phase: −1 to Hit rolls
-1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
+1CP Savage Roar: not counted here: see the rule
 1CP Catalytic Biofortification: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ALL ATTACKS
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -2622,7 +2573,7 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
@@ -2710,24 +2661,22 @@ Norn Assimilator
 5
 4+
 
-Lost no wounds (At its Starting Strength) · Not Battle-shocked: +2 OC (Enraged Behemoths)
-
 OC: not counted here: see the rule (Singular Purpose)
+
+OC: not counted here: see the rule (Enraged Behemoths)
 
 Enemy units’ M: not counted here: see the rule (Tanglestrike Rounds)
 
 WHEN TARGETED
-4
+3
 Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
-1CP Savage Roar: Fight phase: −1 to Hit rolls
-1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
+1CP Savage Roar: not counted here: see the rule
 1CP Catalytic Biofortification: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ALL ATTACKS
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -2768,7 +2717,7 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
@@ -2855,23 +2804,21 @@ Norn Emissary
 5
 4+
 
-Lost no wounds (At its Starting Strength) · Not Battle-shocked: +2 OC (Enraged Behemoths)
-
 OC: not counted here: see the rule (Singular Purpose)
 
+OC: not counted here: see the rule (Enraged Behemoths)
+
 WHEN TARGETED
-4
+3
 Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
 Unnatural Resilience: Feel No Pain 4+ against mortal wounds
-1CP Savage Roar: Fight phase: −1 to Hit rolls
-1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
+1CP Savage Roar: not counted here: see the rule
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -2929,7 +2876,7 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
@@ -3010,23 +2957,21 @@ Norn Emissary
 5
 4+
 
-Lost no wounds (At its Starting Strength) · Not Battle-shocked: +2 OC (Enraged Behemoths)
-
 OC: not counted here: see the rule (Singular Purpose)
 
+OC: not counted here: see the rule (Enraged Behemoths)
+
 WHEN TARGETED
-4
+3
 Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
 Unnatural Resilience: Feel No Pain 4+ against mortal wounds
-1CP Savage Roar: Fight phase: −1 to Hit rolls
-1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
+1CP Savage Roar: not counted here: see the rule
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
 The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -3084,7 +3029,7 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
@@ -3158,18 +3103,16 @@ Tyrannofex
 5
 –
 
-Lost no wounds (At its Starting Strength) · Not Battle-shocked: OC 7 (Enraged Behemoths)
+OC: not counted here: see the rule (Enraged Behemoths)
 
 WHEN TARGETED
-3
+2
 Resilient Organism: Once per battle: Damage 0
-1CP Savage Roar: Fight phase: −1 to Hit rolls
-1CP Savage Roar: Fight phase, If (see the rule): −1 to Wound rolls
+1CP Savage Roar: not counted here: see the rule
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ALL ATTACKS
-Lost any wounds (Below its Starting Strength): +1 to Hit rolls (Enraged Behemoths)
-7 or fewer wounds left (Below Half-strength): +1 to Wound rolls (Enraged Behemoths)
+not counted here: see the rule (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -3207,7 +3150,7 @@ Powerful limbs
 8
 0
 2
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
 1CP Rampaging Monstrosities: Re-roll Hit rolls
 ABILITIES

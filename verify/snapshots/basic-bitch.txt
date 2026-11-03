@@ -337,11 +337,9 @@ D6+3
 -1
 2
 PSYCHIC, TORRENT
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
+not counted here: see the rule (Hyper-adaptations)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 Biovores
 Spore mine launcher
 48"
@@ -351,11 +349,9 @@ D3
 -1
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
+not counted here: see the rule (Hyper-adaptations)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 Haruspex
 Grasping tongue
 12"
@@ -366,10 +362,9 @@ Grasping tongue
 D6+1
 PRECISION
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
+not counted here: see the rule (Hyper-adaptations)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 Psychophage
 Psychoclastic torrent
 12"
@@ -379,11 +374,9 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
+not counted here: see the rule (Hyper-adaptations)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 Tyrannofex
 Acid spray
 18"
@@ -401,11 +394,9 @@ Stinger salvoes
 0
 1
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
+not counted here: see the rule (Hyper-adaptations)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 The Red Terror
@@ -426,14 +417,12 @@ Scything talons
 -2
 2
 The target: INFANTRY, MOUNTED or BEASTS: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 The Swarmlord
 Warlord
 + Tyrant Guard
@@ -452,14 +441,12 @@ Scything talons and rending claws×6
 5
 -1
 1
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 Hive Tyrant
 + Tyrant Guard
 HIVE TYRANT
@@ -487,14 +474,12 @@ Scything talons and rending claws×6
 5
 -1
 1
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 Tyranid Prime with Lash Whip
 + Hormagaunts
 ×2 units
@@ -531,13 +516,12 @@ Hormagaunt talons×20
 -1
 1
 SUSTAINED HITS 1
-If (see the rule): +1 S (Synapse)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 Biovores
 Chitin-barbed limbs
 2
@@ -545,14 +529,12 @@ Chitin-barbed limbs
 5
 0
 1
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 Neurolictor
 ×2 units
 Piercing claws and talons
@@ -562,13 +544,12 @@ Piercing claws and talons
 -2
 1
 PRECISION
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
+not counted here: see the rule (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 Von Ryan’s Leapers
 ×2 units
 Leaper’s talons×3
@@ -577,14 +558,12 @@ Leaper’s talons×3
 5
 -1
 1
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 Haruspex
 
 Fights with both: Ravenous maw, plus Shovelling claws on top (extra attacks).
@@ -603,14 +582,12 @@ Shovelling claws
 D6+1
 EXTRA ATTACKS
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 Psychophage
 Talons and betentacled maw
 6
@@ -622,13 +599,11 @@ ANTI-PSYKER 4+, DEVASTATING WOUNDS
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 The target below its Starting Strength: +1 to Hit rolls (Feeding Frenzy)
 The target below its Starting Strength · “If that target is also Below Half-strength”: +1 to Wound rolls (Feeding Frenzy)
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 Tyrannofex
 Powerful limbs
 4
@@ -637,14 +612,12 @@ Powerful limbs
 0
 2
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 
 ######## abilities · MELEE Abilities
 The Red Terror
@@ -1107,7 +1080,7 @@ Add a group
 of 5 destroyed
 4.3 wounds lost · wiped in 5% of games
 Nothing ticked: the datasheets as printed
-15 NOT COUNTED
+18 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1157,25 +1130,14 @@ no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
 ARMY RULES
-Hyper-adaptations
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1]
-if it applies
-no change: [TORRENT] hits automatically: no hit roll
-0
-ALL ▾
-Hyper-adaptations
-The target: MONSTER or VEHICLE: [LETHAL HITS]
-if it applies
-no change: [TORRENT] hits automatically: no hit roll
-0
-ALL ▾
-Hyper-adaptations
-The target: CHARACTER: [PRECISION]
-if it applies
-0
-NOT COUNTED IN THE DAMAGE TAB (1)
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
 Shadow in the Warp
 “If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
+Hyper-adaptations
+“Each time a TYRANIDS model with this Hyper-adaptation makes an attack that targets an INFANTRY or SWARM unit, that attack has the [SUSTAINED HITS 1] ability.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 UNIT RULES
 
 None that change these numbers.
@@ -1190,18 +1152,15 @@ Domination of the Hive Mind
 Guardian Organism
 “While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
-Psychological Saboteur (Neurolictor (×2))
-Aura · The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls
-if it applies
-+5% wiped
-+0.5
-MODELS
 Onslaught (Hive Tyrant)
 Aura · Within 6" of it: [ASSAULT], [LETHAL HITS]
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
+NOT COUNTED IN THE DAMAGE TAB (1)
+Psychological Saboteur
+“Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -1210,10 +1169,12 @@ if used
 +2% wiped
 +0.3
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
-NOT COUNTED IN THE DAMAGE TAB (10)
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (11)
 1CP Rapid Regeneration
 “WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. …” · not counted in the Damage tab
+2CP Adrenal Surge
+“Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Death Frenzy
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
 1CP Overrun
@@ -1354,7 +1315,7 @@ of 5 destroyed
 8.3 wounds lost · wiped in 54% of games
 Charged this turn
 ×
-12 NOT COUNTED
+16 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1400,28 +1361,14 @@ said to hold
 no change: no rule here needs it
 0
 ARMY RULES
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
 Synapse
-“If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
-if it applies
-+23% wiped
-+0.5
-MODELS
+“Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 Hyper-adaptations
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1]
-if it applies
-+17% wiped
-+0.3
-MODELS
-Hyper-adaptations
-The target: MONSTER or VEHICLE: [LETHAL HITS]
-if it applies
-+10% wiped
-+0.2
-MODELS
-Hyper-adaptations
-The target: CHARACTER: [PRECISION]
-if it applies
-0
+“Each time a TYRANIDS model with this Hyper-adaptation makes an attack that targets an INFANTRY or SWARM unit, that attack has the [SUSTAINED HITS 1] ability.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 UNIT RULES
 Swallow Whole
 The target: INFANTRY, MOUNTED or BEASTS: Each successful unmodified Wound roll is a Critical Wound · for Gaping maw
@@ -1433,21 +1380,17 @@ NOT COUNTED IN THE DAMAGE TAB (1)
 Subterranean Hunter
 “At the end of the Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
-Psychological Saboteur (Neurolictor (×2))
-Aura · The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls
-if it applies
-+24% wiped
-+0.5
-MODELS
 Bio-stimulus (Psychophage)
 Selected by it · The target is the enemy unit selected: +1 AP
 if it applies
 +24% wiped
 +0.5
 MODELS
-NOT COUNTED IN THE DAMAGE TAB (1)
+NOT COUNTED IN THE DAMAGE TAB (2)
 Domination of the Hive Mind
 “While a friendly TYRANIDS unit is within 9" of this model, that unit is within your army’s Synapse Range.” · it changes what another rule needs, not these numbers: not counted in the Damage tab
+Psychological Saboteur
+“Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -1456,17 +1399,15 @@ if used
 BEST · MOST MODELS+8% wiped
 +0.2
 MODELS
-2CP Adrenal Surge
-Critical Hit on 5+
-if used
-0
 1CP Epic Challenge
 [PRECISION] · CHARACTER models only
 if used
 0
-NOT COUNTED IN THE DAMAGE TAB (10)
+NOT COUNTED IN THE DAMAGE TAB (11)
 1CP Rapid Regeneration
 “WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. …” · not counted in the Damage tab
+2CP Adrenal Surge
+“Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Death Frenzy
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
 1CP Overrun
@@ -1620,7 +1561,7 @@ Shoot 2.14 · Fight 2.84 · the charge is taken to succeed
 
 Charged this turn
 ×
-30 NOT COUNTED
+37 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1668,25 +1609,14 @@ no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
 ARMY RULES
-Hyper-adaptations
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1]
-if it applies
-no change: [TORRENT] hits automatically: no hit roll
-0
-ALL ▾
-Hyper-adaptations
-The target: MONSTER or VEHICLE: [LETHAL HITS]
-if it applies
-no change: [TORRENT] hits automatically: no hit roll
-0
-ALL ▾
-Hyper-adaptations
-The target: CHARACTER: [PRECISION]
-if it applies
-0
-NOT COUNTED IN THE DAMAGE TAB (1)
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (2)
 Shadow in the Warp
 “If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
+Hyper-adaptations
+“Each time a TYRANIDS model with this Hyper-adaptation makes an attack that targets an INFANTRY or SWARM unit, that attack has the [SUSTAINED HITS 1] ability.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 UNIT RULES
 
 None that change these numbers.
@@ -1701,27 +1631,27 @@ Domination of the Hive Mind
 Guardian Organism
 “While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
-Psychological Saboteur (Neurolictor (×2))
-Aura · The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls
-if it applies
-≈0
-MODELS
 Onslaught (Hive Tyrant)
 Aura · Within 6" of it: [ASSAULT], [LETHAL HITS]
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
+NOT COUNTED IN THE DAMAGE TAB (1)
+Psychological Saboteur
+“Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
-NOT COUNTED IN THE DAMAGE TAB (10)
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (11)
 1CP Rapid Regeneration
 “WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. …” · not counted in the Damage tab
+2CP Adrenal Surge
+“Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Death Frenzy
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
 1CP Overrun
@@ -1783,28 +1713,16 @@ holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 ARMY RULES
-Hyper-adaptations
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1]
-if it applies
-≈0
-MODELS
+
+None that change these numbers.
+
+NOT COUNTED IN THE DAMAGE TAB (3)
 Synapse
-“If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
-if it applies
-no change: S10 still wounds T4 on 2+; S6 still wounds T4 on 3+
-0
-ALL ▾
-Hyper-adaptations
-The target: MONSTER or VEHICLE: [LETHAL HITS]
-if it applies
-0
-Hyper-adaptations
-The target: CHARACTER: [PRECISION]
-if it applies
-0
-NOT COUNTED IN THE DAMAGE TAB (1)
+“Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 Shadow in the Warp
 “If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
+Hyper-adaptations
+“Each time a TYRANIDS model with this Hyper-adaptation makes an attack that targets an INFANTRY or SWARM unit, that attack has the [SUSTAINED HITS 1] ability.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 UNIT RULES
 
 None that change these numbers.
@@ -1824,11 +1742,9 @@ Selected by it · The target is the enemy unit selected: +1 AP
 if it applies
 ≈0
 MODELS
-Psychological Saboteur (Neurolictor (×2))
-Aura · The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls
-if it applies
-≈0
-MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
+Psychological Saboteur
+“Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -1836,17 +1752,15 @@ Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 ≈0
 MODELS
-2CP Adrenal Surge
-Critical Hit on 5+
-if used
-0
 1CP Epic Challenge
 [PRECISION] · CHARACTER models only · for Bone Sabres
 if used
 0
-NOT COUNTED IN THE DAMAGE TAB (10)
+NOT COUNTED IN THE DAMAGE TAB (11)
 1CP Rapid Regeneration
 “WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. …” · not counted in the Damage tab
+2CP Adrenal Surge
+“Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Death Frenzy
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
 1CP Overrun
@@ -2323,14 +2237,12 @@ Scything talons
 -2
 2
 The target: INFANTRY, MOUNTED or BEASTS: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 ABILITIES
 Swallow Whole
 
@@ -2409,10 +2321,8 @@ Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 ALL ATTACKS · WHOLE UNIT
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 RANGED WEAPONS
 Range
 A
@@ -2452,10 +2362,10 @@ Scything talons and rending claws×6
 -1
 1
 WHOLE UNIT
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 ABILITIES
 Hive Commander
 - The Swarmlord
@@ -2589,14 +2499,12 @@ Scything talons and rending claws×6
 -1
 1
 WHOLE UNIT
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 ABILITIES
 Will of the Hive Mind
 - Hive Tyrant
@@ -2725,13 +2633,12 @@ Hormagaunt talons×20
 1
 SUSTAINED HITS 1
 WHOLE UNIT
-If (see the rule): +1 S (Synapse)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 ABILITIES
 Alpha Warrior
 - Tyranid Prime with Lash Whip
@@ -2811,10 +2718,8 @@ Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 ALL ATTACKS
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 RANGED WEAPONS
 Range
 A
@@ -2843,10 +2748,10 @@ Chitin-barbed limbs
 5
 0
 1
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 ABILITIES
 Seed Spore Mines
 Once per turn
@@ -2918,13 +2823,12 @@ Piercing claws and talons
 -2
 1
 PRECISION
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
+not counted here: see the rule (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 ABILITIES
 Feeder Tendrils
 Their Move · Your Shoot · Fight
@@ -3010,14 +2914,12 @@ Leaper’s talons×3
 5
 -1
 1
-If (see the rule): +1 S (Synapse)
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Synapse)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 ABILITIES
 Pouncing Leap
 Their Charge
@@ -3079,9 +2981,8 @@ Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ALL ATTACKS
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 RANGED WEAPONS
 Range
 A
@@ -3120,11 +3021,10 @@ Shovelling claws
 -2
 D6+1
 EXTRA ATTACKS
-If (see the rule): +1 S (Synapse)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 ABILITIES
 Grisly Spectacle
 Fight
@@ -3183,10 +3083,8 @@ Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 ALL ATTACKS
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 RANGED WEAPONS
 Range
 A
@@ -3219,9 +3117,9 @@ ANTI-PSYKER 4+, DEVASTATING WOUNDS
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 The target below its Starting Strength: +1 to Hit rolls (Feeding Frenzy)
 The target below its Starting Strength · “If that target is also Below Half-strength”: +1 to Wound rolls (Feeding Frenzy)
-If (see the rule): +1 S (Synapse)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+not counted here: see the rule (Synapse)
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 ABILITIES
 Bio-stimulus
 Your Shoot/Fight
@@ -3290,10 +3188,8 @@ Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
 ALL ATTACKS
-The target: INFANTRY or SWARM: [SUSTAINED HITS 1] (Hyper-adaptations)
-The target: MONSTER or VEHICLE: [LETHAL HITS] (Hyper-adaptations)
-The target: CHARACTER: [PRECISION] (Hyper-adaptations)
-The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls (Psychological Saboteur)
+not counted here: see the rule (Hyper-adaptations)
+not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 RANGED WEAPONS
 Range
 A
@@ -3329,10 +3225,10 @@ Powerful limbs
 8
 0
 2
-If (see the rule): +1 S (Synapse)
+not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
-STRATAGEMS · INVASION FLEET · FIGHT PHASE
-2CP Adrenal Surge: Critical Hit on 5+
+STRATAGEMS · INVASION FLEET
+2CP Adrenal Surge: not counted here: see the rule
 ABILITIES
 Resilient Organism
 Once per battle

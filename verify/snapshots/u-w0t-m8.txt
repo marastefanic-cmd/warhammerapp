@@ -486,7 +486,6 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-If (see the rule): −4 OC (Damaged: 1-8 wounds remaining)
 If (see the rule): BS/WS improved by 1 (Plunging Fire)
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
@@ -525,7 +524,6 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-If (see the rule): −4 OC (Damaged: 1-8 wounds remaining)
 If (see the rule): BS/WS improved by 1 (Plunging Fire)
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
@@ -542,7 +540,7 @@ Staff of the Destroyer
 DEVASTATING WOUNDS
 The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: Critical Hit on 5+
 The Silent King
@@ -561,7 +559,7 @@ Weapons of the Final TriarchSZAREKH
 2
 LETHAL HITS
 Triarch Abilities: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Own aura: +1 S (Phaeron of the Blades)
+not counted here: see the rule (Phaeron of the Blades)
 If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
 The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
 STRATAGEMS · OBEISANCE PHALANX
@@ -575,7 +573,7 @@ Close combat weapon
 0
 1
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: Critical Hit on 5+
 Technomancer
@@ -597,7 +595,7 @@ Close combat weapon×5
 Every attack: Re-roll Wound rolls of 1 (Implacable Eradication)
 The target within range of an objective marker: Re-roll Wound rolls (Implacable Eradication)
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: Critical Hit on 5+
 Flayed Ones
@@ -610,7 +608,7 @@ Flayer claws×5
 SUSTAINED HITS 1, TWIN-LINKED
 not counted here: see the rule (Flesh Hunger)
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: Critical Hit on 5+
 Ophydian Destroyers
@@ -621,7 +619,7 @@ Ophydian hyperphase weapons×3
 -2
 2
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: Critical Hit on 5+
 Canoptek Scarab Swarms
@@ -633,7 +631,7 @@ Feeder mandibles×3
 1
 LETHAL HITS
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: Critical Hit on 5+
 Canoptek Reanimator
@@ -644,7 +642,7 @@ Reanimator’s claws
 0
 1
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: Critical Hit on 5+
 Canoptek Spyders
@@ -655,7 +653,7 @@ Automaton claws
 -2
 2
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: Critical Hit on 5+
 Tesseract Vault
@@ -666,9 +664,8 @@ Armoured bulk
 8
 0
 1
-If (see the rule): −4 OC (Damaged: 1-8 wounds remaining)
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 Tesseract Vault
 2 of 2
 Armoured bulk
@@ -677,9 +674,8 @@ Armoured bulk
 8
 0
 1
-If (see the rule): −4 OC (Damaged: 1-8 wounds remaining)
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 
 ######## abilities · MELEE Abilities
 Imotekh the Stormlord
@@ -1366,7 +1362,7 @@ of 5 destroyed
 3.8 wounds lost · wiped in <1% of games
 Charged this turn
 ×
-11 NOT COUNTED
+12 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1420,12 +1416,9 @@ Aura · Triarch Abilities: the one selected (at the start of the battle round) �
 if it applies
 +0.7
 MODELS
-Phaeron of the Blades (The Silent King)
-Aura · Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of it: +1 S
-if it applies
-no change: S7 still wounds T4 on 3+
-0
-NOT COUNTED IN THE DAMAGE TAB (3)
+NOT COUNTED IN THE DAMAGE TAB (4)
+Phaeron of the Blades
+“While a friendly NECRONS unit (excluding MONSTER units) is within 6" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 Relentless March
 “While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
 Nanoscarab Reanimation Beam
@@ -1582,7 +1575,7 @@ Shoot 1.73 · Fight 1.82 · the charge is taken to succeed
 
 Charged this turn
 ×
-22 NOT COUNTED
+23 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1751,12 +1744,9 @@ if it applies
 +19% wiped
 +0.6
 MODELS
-Phaeron of the Blades (The Silent King)
-Aura · Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of it: +1 S
-if it applies
-no change: S7 still wounds T4 on 3+
-0
-NOT COUNTED IN THE DAMAGE TAB (3)
+NOT COUNTED IN THE DAMAGE TAB (4)
+Phaeron of the Blades
+“While a friendly NECRONS unit (excluding MONSTER units) is within 6" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 Relentless March
 “While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
 Nanoscarab Reanimation Beam
@@ -2334,7 +2324,7 @@ Staff of the Destroyer
 -3
 2
 DEVASTATING WOUNDS
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 ABILITIES
 Grand Strategist
 Your Command
@@ -2474,7 +2464,7 @@ Weapons of the Final TriarchSZAREKH
 -3
 2
 LETHAL HITS
-Triarch Abilities: the one selected (at the start of the battle round) · Own aura: +1 S (Phaeron of the Blades)
+not counted here: see the rule (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX · FIGHT PHASE
 1CP Suffer No Rival: [PRECISION]
 ABILITIES
@@ -2606,7 +2596,7 @@ Close combat weapon
 5
 0
 1
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 ABILITIES
 Adaptive Strategy
 Your Move/Shoot/Charge
@@ -2737,7 +2727,7 @@ Close combat weapon×5
 0
 1
 WHOLE UNIT
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 ABILITIES
 Rites of Reanimation
 - Technomancer
@@ -2830,7 +2820,7 @@ Flayer claws×5
 SUSTAINED HITS 1, TWIN-LINKED
 not counted here: see the rule (Flesh Hunger)
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: Critical Hit on 5+
 ABILITIES
@@ -2903,7 +2893,7 @@ Ophydian hyperphase weapons×3
 -2
 2
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: Critical Hit on 5+
 ABILITIES
@@ -2984,7 +2974,7 @@ Feeder mandibles×3
 1
 LETHAL HITS
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
 1CP Enslaved Artifice: Critical Hit on 5+
 ABILITIES
@@ -3083,7 +3073,7 @@ Reanimator’s claws
 5
 0
 1
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 ABILITIES
 Nanoscarab Reanimation Beam
 
@@ -3175,7 +3165,7 @@ Automaton claws
 8
 -2
 2
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 ABILITIES
 Canoptek Swarm
 Your Command
@@ -3252,7 +3242,7 @@ Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Atta
 1CP Nanoassembly Protocols: Your opponent’s Shooting phase or the Fight phase: −1 Damage
 1CP Subsurface Quantumweave: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 DAMAGED 1-8 W
-−4 OC; SEE THE RULE
+SEE THE RULE
 ALL ATTACKS
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 RANGED WEAPONS
@@ -3309,7 +3299,7 @@ Armoured bulk
 8
 0
 1
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 ABILITIES
 Powers of the C’tan
 Your Shooting
@@ -3376,7 +3366,7 @@ Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Atta
 1CP Nanoassembly Protocols: Your opponent’s Shooting phase or the Fight phase: −1 Damage
 1CP Subsurface Quantumweave: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
 DAMAGED 1-8 W
-−4 OC; SEE THE RULE
+SEE THE RULE
 ALL ATTACKS
 Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
 RANGED WEAPONS
@@ -3433,7 +3423,7 @@ Armoured bulk
 8
 0
 1
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: +1 S (Phaeron of the Blades)
+not counted here: see the rule (The Silent King) (Phaeron of the Blades)
 ABILITIES
 Powers of the C’tan
 Your Shooting

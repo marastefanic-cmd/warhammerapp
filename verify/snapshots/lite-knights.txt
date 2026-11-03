@@ -3079,7 +3079,7 @@ Contemptor-Achillus Dreadnought
 3
 5+
 
-Lost no wounds (At its Starting Strength): OC 5 (Moritoi Ancients)
+OC: not counted here: see the rule (Moritoi Ancients)
 
 WHEN TARGETED
 5
@@ -3190,7 +3190,7 @@ Contemptor-Galatus Dreadnought
 3
 4+
 
-Lost no wounds (At its Starting Strength): OC 5 (Moritoi Ancients)
+OC: not counted here: see the rule (Moritoi Ancients)
 
 WHEN TARGETED
 5
@@ -3300,7 +3300,7 @@ Telemon Heavy Dreadnought
 4
 4+
 
-Lost no wounds (At its Starting Strength): OC 6 (Moritoi Ancients)
+OC: not counted here: see the rule (Moritoi Ancients)
 
 WHEN TARGETED
 6
@@ -3417,7 +3417,7 @@ Telemon Heavy Dreadnought
 4
 4+
 
-Lost no wounds (At its Starting Strength): OC 6 (Moritoi Ancients)
+OC: not counted here: see the rule (Moritoi Ancients)
 
 WHEN TARGETED
 5
