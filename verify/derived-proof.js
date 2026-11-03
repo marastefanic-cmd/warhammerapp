@@ -52,9 +52,14 @@ function closure(f){
 }
 // the steps a proof can run: each step not run in a browser (the screens, build-parity: env), and each script a step's own file runs
 // alone (build-parity's verify/build-index.js), as "step › script": the part of that step that fails when the script does
+// (a part's proof stands only where its parent step fails on the same change too: the parent is run, without its browser part where it
+// has one, --no-render; so a parent that stops holding the part's result, ignoring its exit status, leaves the part's proof standing on
+// nothing, and fails it)
+const noRender = f => /'--no-render'/.test(fs.readFileSync(path.join(ROOT, f), 'utf8'));
 const STEPS = ALL_STEPS.filter(s => !s.env).concat(ALL_STEPS.flatMap(s => codeRefs(s.args[0]).spawns.filter(x => x.alone && !ALL_STEPS.some(t => t.args[0] === x.file))
-  .map(x => ({ name:s.name + ' › ' + path.basename(x.file), args:[x.file], part:true }))));
-for(const s of STEPS) s.files = closure(s.args[0]);
+  .map(x => ({ name:s.name + ' › ' + path.basename(x.file), args:[x.file], part:true,
+    parent:{ name:s.name + (s.env && noRender(s.args[0]) ? ' --no-render' : ''), args:s.args.concat(s.env && noRender(s.args[0]) ? ['--no-render'] : []), files:closure(s.args[0]) } }))));
+for(const s of STEPS) s.files = new Set([...closure(s.args[0]), ...(s.parent ? s.parent.files : [])]);
 
 // ---- a column's derivers and the names they read it by, as tables.js has them
 const keysOf = (t, c) => keysIn(t, c, TABLES);
@@ -246,7 +251,17 @@ const CACHE = (() => { try { return JSON.parse(fs.readFileSync(OUT, 'utf8')).col
           // (a crash is no proof: the next change, or the next step)
           if(crashed(r.out)){ tried.push(x.s.name + ' @ ' + ch.at + ' crashed (' + firstFail(r.out).slice(0, 80) + ')'); continue; }
           if(!await baseline(dir, x.s)){ tried.push(x.s.name + ' fails on the unchanged data.js'); break; }
-          proof = { deriver:x.f, step:x.s.name, at:ch.at, from:ch.from, to:ch.to, failed:firstFail(r.out), key:keyOf(w, x, ch) };
+          // (a part: its parent step fails on the same change, with a check failure, and passes on the unchanged data.js)
+          let parentFailed;
+          if(x.s.parent){ const P = x.s.parent;
+            fs.writeFileSync(df, SRC.slice(0, ch.pos) + ch.text + SRC.slice(ch.end));
+            const rp = await runStep(dir, P);
+            fs.writeFileSync(df, SRC);
+            if(rp.code === 0){ tried.push(x.s.name + ' @ ' + ch.at + ' failed, but its parent ' + P.name + ' passes on it'); continue; }
+            if(crashed(rp.out)){ tried.push(x.s.name + ' @ ' + ch.at + ' failed, but its parent ' + P.name + ' crashed on it'); continue; }
+            if(!await baseline(dir, P)){ tried.push(P.name + ' fails on the unchanged data.js'); break; }
+            parentFailed = P.name + ': ' + firstFail(rp.out); }
+          proof = Object.assign({ deriver:x.f, step:x.s.name, at:ch.at, from:ch.from, to:ch.to, failed:firstFail(r.out), key:keyOf(w, x, ch) }, parentFailed ? { parent:parentFailed } : {});
           break;
         } }
       res[w.id] = proof ? { proof } : { proof:null, tried };
