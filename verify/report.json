@@ -1,6 +1,6 @@
 {
- "hash": "f5b46af566b78179121fedbb25061a842adf3178760fee10f8165edd34eb0793",
- "at": "2026-11-03T10:01:27.935Z",
+ "hash": "7f134c96151d43529a817f424afd506e34d232187eb0d6f985acaf625afb3e5f",
+ "at": "2026-11-03T12:30:40.201Z",
  "ok": true,
  "steps": {
   "data": {
@@ -25,11 +25,15 @@
   },
   "lines": {
    "ok": true,
-   "summary": "lines: 109 Damaged ranges, 2 once-per-battle chips, 2 extra-CP chips and 12 \"does nothing here\" chips as their words give them; 152 lines under a profile from stat boxes; 1684 footnotes (9 in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects' and conditions' labels, 53 \"see the rule\" lines; 130 catalogue labels with their values; 309 boxes with every condition of their words (68 reach boxes and models scopes checked against GW’s phrase, 0 unchecked, said “If (see the rule)”); 66 Damaged bands as their boxes; 1322 drawn lines, one source each; 686 sources the lists use, every sentence of the numbers counted or listed not counted; 15 fixed cases"
+   "summary": "lines: 109 Damaged ranges, 2 once-per-battle chips, 2 extra-CP chips and 12 \"does nothing here\" chips as their words give them; 152 lines under a profile from stat boxes; 1352 footnotes (8 in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects' and conditions' labels, 331 \"see the rule\" lines; 130 catalogue labels with their values; 309 boxes with every condition of their words (68 reach boxes and models scopes checked against GW’s phrase, 0 unchecked, said “If (see the rule)”); 66 Damaged bands as their boxes; 1281 drawn lines, one source each; 686 sources the lists use, every sentence of the numbers counted or listed not counted; 15 fixed cases"
   },
   "defence": {
    "ok": true,
-   "summary": "defence: 139 defence boxes and 29 sentences not counted, from GW's words (150 sentences of the defence side, each a box or listed; 139 boxes with every condition of their words; 26 reach boxes and models scopes checked against GW’s phrase, 0 unchecked (said “If (see the rule)”)); 58 catalogue labels with their values; 604 \"When targeted\" lines of every list unit, each a box said in its labels, 68 \"see the rule\" lines"
+   "summary": "defence: 137 defence boxes and 31 sentences not counted, from GW's words (150 sentences of the defence side, each a box or listed; 137 boxes with every condition of their words; 26 reach boxes and models scopes checked against GW’s phrase, 0 unchecked (said “If (see the rule)”)); 58 catalogue labels with their values; 534 \"When targeted\" lines of every list unit, each a box said in its labels, 117 \"see the rule\" lines"
+  },
+  "agree": {
+   "ok": true,
+   "summary": "agree: 447 boxes compared (and 1 not Core Rules, outside it), 71 fall back (48 change a number), 25 confirmed by a verdict, 6 core"
   },
   "invariants": {
    "ok": true,
@@ -81,7 +85,7 @@
   },
   "calc": {
    "ok": true,
-   "summary": "calc: 401 of 401 hand-worked cases within margin"
+   "summary": "calc: 408 of 408 hand-worked cases within margin"
   },
   "import": {
    "ok": true,
@@ -93,15 +97,15 @@
   },
   "derived": {
    "ok": true,
-   "summary": "derived: 117 of 137 derived columns held by the script they name: a change of one value fails its step (texts 4, fingerprints 8, derive 41, evidence 29, lines 7, catalog 1, tables 7, reimport 1, defence 13, readings 1, build-parity › build-index.js 5; 117 kept from a run of the same code); 20 with no value stored in data.js; verify/out/derived-proof.json"
+   "summary": "derived: 118 of 138 derived columns held by the script they name: a change of one value fails its step (texts 4, fingerprints 8, derive 41, evidence 29, lines 7, catalog 1, tables 7, reimport 1, defence 13, readings 1, build-parity › build-index.js 5, agree 1; 118 kept from a run of the same code); 20 with no value stored in data.js; verify/out/derived-proof.json"
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 3327 screens and popups, 2067 helper texts, 0 failures"
+   "summary": "render at 390px: 3327 screens and popups, 2056 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 3327 screens and popups, 2067 helper texts, 0 failures"
+   "summary": "render at 320px: 3327 screens and popups, 2056 helper texts, 0 failures"
   },
   "build-parity": {
    "ok": true,
@@ -113,7 +117,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 437 judgements, 437 approved, 0 to check, 2742 stale approvals"
+   "summary": "helpers: 437 judgements, 437 approved, 0 to check, 2745 stale approvals"
   }
  }
 }

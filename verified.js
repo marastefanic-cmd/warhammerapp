@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "f5b46af566",
- "data": "2026-11-03.1",
+ "build": "7f134c9615",
+ "data": "2026-11-03.2",
  "date": "3 Nov 2026",
  "checks": [
   {
@@ -176,6 +176,10 @@ window.WH_VERIFIED = {
   "BUILD_INDEX": {
    "what": "what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values over BSData’s): written by verify/build-index.js",
    "cols": "labels:derived marks:derived gw:derived battleSizes:derived upgrades:derived"
+  },
+  "AGREE": {
+   "what": "which boxes of BOXES (b, d, st) two independent readings of GW's words confirm, the two-reader rule (the owner's decision, 3 Nov 2026): written by verify/agree.js --write from BOXES, reader2's readings (verify/reader2/) and the reviewed verdicts (verify/sources/agree-verdicts.json); a box not confirmed is shown as GW's words, \"see the rule\", and never counted (effects.js agreed)",
+   "cols": "boxes:derived"
   }
  }
 };
