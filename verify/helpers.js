@@ -72,7 +72,7 @@ function items(D, appSource){
         // its text names, so an extra "Aura" would pass it)
         if(ab.tag) add(a.id, 'ability-tag', w + ' · ' + ab.name, { tag:ab.tag }, src);
         // (sumAtk / sumDef / sumSt / sumOv: the AI-written summaries a unit's screens show of the ability, one per placement)
-        for(const c of ['sumAtk', 'sumDef', 'sumSt', 'sumOv']) if(ab[c]) add(a.id, 'ability-' + c, w + ' · ' + ab.name, { [c]:ab[c] }, src);
+        for(const c of ['sumAtk', 'sumDef', 'sumSt', 'sumFoe', 'sumOv']) if(ab[c]) add(a.id, 'ability-' + c, w + ' · ' + ab.name, { [c]:ab[c] }, src);
         // (note: GW's words under a fixed source label, verify/texts.js noteForm and noteQuote; na: derived, verify/derive.js naOf, verify/lines.js
         // L0; no judgement)
         // (damaged: the range its words give, verify/lines.js L0; def, its When targeted line: its defence boxes, BOXES d, verify/defence.js; no judgement)
@@ -101,7 +101,7 @@ function items(D, appSource){
       for(const s of d.stratagems || []) for(const k of STRAT_KEYS)
         if(s[k] !== undefined) add(a.id, 'strat-' + k, d.name + ' · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
       // (an enhancement's short summary, as an ability's: written from its text)
-      for(const e of d.enhancements || []) for(const c of ['sumAtk', 'sumDef', 'sumSt', 'sumOv']) if(e[c]) add(a.id, 'enhancement-' + c, d.name + ' · ' + e.name, { [c]:e[c] }, { enhancement:e.name, text:e.text });
+      for(const e of d.enhancements || []) for(const c of ['sumAtk', 'sumDef', 'sumSt', 'sumFoe', 'sumOv']) if(e[c]) add(a.id, 'enhancement-' + c, d.name + ' · ' + e.name, { [c]:e[c] }, { enhancement:e.name, text:e.text });
     }
   }
   // the DATASHEETS rows no list has (a faction catalogue's, docs/catalog.md) and the detachments a catalogue added (aiStatus 'not-read'):

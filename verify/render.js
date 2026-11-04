@@ -314,7 +314,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       for(const u of A.units){
         for(const k of [...openStrats]) if(k.startsWith('tg|')) openStrats.delete(k);
         go({ s:'unit', army:armyId, unit:u.id }); navAt = -1e9;   // (a tap just after a screen is drawn is let through)
-        const items = defenceItems(u).filter(x => !x.dup);   // (a source drawn as its summary: once)
+        const items = defLines(defenceItems(u).filter(x => !x.dup)).filter(x => !(x.sum && isCommonDef(x)));   // (a source drawn as its summary: once; a line every unit has alike: the Units screen's ALL block)
         const fold = () => document.querySelector('#view details.tgt');
         if(!items.length){ if(fold()) out.push(['targeted-fold', u.id, 'a When targeted fold with nothing in it']); continue; }
         let d = fold();
@@ -371,8 +371,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           const mr = unitMods(u, 'ranged'), mm = new Set(unitMods(u, 'melee').map(k));
           const all = (document.querySelector('.mods.all') || {}).innerText || '';
           // (a line drawn as its source's summary says the summary (a blanket rule its name); a not-counted line its name or summary: ncHtml)
-          const said = m => sumMode(m) ? m.short : m.ncLine ? m.short || m.from : m.note.slice(0, 40);
-          for(const m of mr) if(mm.has(k(m)) && !(m.weapon && m.set) && !u.abilities.some(ab => ab.damaged && ab.name === m.from) && !all.includes(said(m)))
+          const said = m => sumMode(m) ? sumLines(m.short)[0] : m.ncLine ? m.short || m.from : m.note.slice(0, 40);
+          for(const m of mr) if(mm.has(k(m)) && !(m.weapon && m.set) && !(sumMode(m) && isCommonAtk(m)) && !u.abilities.some(ab => ab.damaged && ab.name === m.from) && !all.includes(said(m)))
             out.push(['all-attacks-block', u.id, m.from + ': ' + m.note]);
         }
         // the army facts the datasheet shows where they matter:
@@ -393,7 +393,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         //   line has an AI label
         searchIndex();
         // (the column of the line's placement: under the weapons sumAtk, When targeted sumDef, under the profile sumSt; a stratagem's gist)
-        const colOf = line => line.closest('.tgl') ? 'sumDef' : line.closest('.dsl') ? 'sumSt' : line.closest('.pgv') ? 'sumOv' : 'sumAtk';
+        const colOf = line => line.closest('.tgl') ? 'sumDef' : line.closest('.dsl.foe') ? 'sumFoe' : line.closest('.dsl') ? 'sumSt' : line.closest('.pgv') ? 'sumOv' : 'sumAtk';
         const shortOf = (el, c) => !el ? undefined : el.dataset.ability ? (e => e ? e.ab[c] || (enhRowOf(e.ab.name) || {})[c] : undefined)(abilityIndex.get(el.dataset.ability))
           : el.dataset.strat ? (allStratagems().find(s => s.id === el.dataset.strat) || {}).gist : el.dataset.rule ? (ruleRowOf(el.dataset.rule) || {})[c] : undefined;
         for(const lab of document.querySelectorAll('#view .ai')){ const line = lab.closest('.mod, .tgl, .varc, .dsl, .pgv');
@@ -402,10 +402,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           // (its source's name: "(<name>)" after it, or a stratagem's "<cp>CP <name>:" before it)
           const nm = [...line.querySelectorAll('[data-ability], [data-strat], [data-rule]')].find(x => x !== el && key(x) === key(el));
           const want = shortOf(el, colOf(line));
-          if(!want || el.textContent !== want) out.push(['ai-summary', u.id, 'an AI-labelled summary that is not its source’s short column: ' + line.textContent.slice(0, 80)]);
+          if(!want || !String(want).split('\n').includes(el.textContent)) out.push(['ai-summary', u.id, 'an AI-labelled summary that is not its source’s short column: ' + line.textContent.slice(0, 80)]);
           if(!nm) out.push(['ai-summary', u.id, 'a summary without the name of the rule it opens: ' + line.textContent.slice(0, 80)]); }
-        for(const x of defenceItems(u)) if((x.sum || (x.ncLine && !x.blanket)) && x.short && !when.includes(x.short)) out.push(['ai-summary', u.id, x.name + ': its short summary is not under When targeted']);
-        for(const kind of ['ranged', 'melee']) if(((kind === 'ranged' ? u.ranged : u.melee) || []).length) for(const m of unitMods(u, kind)) if(sumMode(m) && m.short && !m.damaged && ![...document.querySelectorAll('#view .mod, #view .varc')].some(l => l.textContent.includes(m.short) && l.querySelector('.ai'))) out.push(['ai-summary', u.id, m.from + ': its short summary is not under its weapons with the AI label']);
+        for(const x of defLines(defenceItems(u))) if((x.sum || (x.ncLine && !x.blanket)) && x.short && !(x.sum && isCommonDef(x)) && !when.includes(x.short)) out.push(['ai-summary', u.id, x.name + ': its short summary is not under When targeted']);
+        for(const kind of ['ranged', 'melee']) if(((kind === 'ranged' ? u.ranged : u.melee) || []).length) for(const m of unitMods(u, kind)) if(sumMode(m) && m.short && !m.damaged && !isCommonAtk(m) && ![...document.querySelectorAll('#view .mod, #view .varc')].some(l => l.textContent.includes(sumLines(m.short)[0]) && l.querySelector('.ai'))) out.push(['ai-summary', u.id, m.from + ': its short summary is not under its weapons with the AI label']);
         const pills = [...document.querySelectorAll('#sec-kw .pill')].map(x => x.textContent.replace(/\*$/, '').toLowerCase());
         if(pills.length !== u.kw.length || u.kw.some(x => !pills.includes(x.toLowerCase()))) out.push(['keywords-shown', u.id, pills.length + ' keyword pills for ' + u.kw.length + ' keywords']);
       }

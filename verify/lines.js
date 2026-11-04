@@ -415,9 +415,9 @@ const sumMisses = (label, sum) => { const out = [], l = String(label), t = Strin
     for(const kind of ['ranged', 'melee']) for(const m of A.unitMods(u, kind)){ if(m.ncLine || !m.box || !A.sumMode(m) || !m.short) continue; n++;
       for(const l of (m.box.pick ? m.box.pick.map(p => E.fxLabel(p.fx || [])) : [E.fxLabel(m.box.fx || [])]).concat(m.box.part && m.box.part.fx ? [E.fxLabel(m.box.part.fx)] : []))
         for(const x of sumMisses(l, m.short)) fail('LN', where + ' ' + kind, m.from + ': its summary “' + m.short + '” lacks “' + x + '” of its counted “' + l + '”'); }
-    for(const x of A.defenceItems(u)){ if(x.ncLine || !x.box || !x.sum) continue; n++;
+    for(const x of A.defenceItems(u)){ if(x.ncLine || !x.box || !x.sum) continue; n++; const sumAll = x.short;
       for(const l of x.box.pick ? x.box.pick.map(p => E.dfLabel(p.df || [])) : [E.dfLabel(x.box.df || [])])
-        for(const y of sumMisses(l, x.short)) fail('LN', where + ' When targeted', x.name + ': its summary “' + x.short + '” lacks “' + y + '” of its counted “' + l + '”'); }
+        for(const y of sumMisses(l, sumAll)) fail('LN', where + ' When targeted', x.name + ': its summary “' + sumAll + '” lacks “' + y + '” of its counted “' + l + '”'); }
     for(const x of A.statShown(u)){ if(!x.short) continue; const r = A.ruleRowOf(x.rule); if(!r) continue;
       for(const b of (BX[M.KEY.rule(r)] || {}).st || []) for(const [id, p] of b.st || []){ const f = E.ST[id]; if(!f) continue; n++;
         for(const y of sumMisses(f.label(p), x.short)) fail('LN', where + ' profile', x.rule + ': its summary “' + x.short + '” lacks “' + y + '” of its counted “' + f.label(p) + '”'); } }
@@ -429,12 +429,14 @@ const sumMisses = (label, sum) => { const out = [], l = String(label), t = Strin
     const ms = A.inArmy(a, () => A.unitMods(u, kind)).filter(m => !A.rowMod(m, u) && !m.strat), html = A.inArmy(a, () => A.modLines(ms, u, false));
     const lines = html.split('<div class="mod">').slice(1).map(l => l.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"'));
     // (a source drawn as its summary is one line, whatever its conditions: app.html lineKey)
-    const groups = new Set(ms.map(m => A.sumMode(m) ? 'K\0' + m.key + '\0' + (m.giver || '') : m.when ? m.when + '\0' + m.from : Math.random()));
+    const gm = new Map(); for(const m of ms){ const k = A.sumMode(m) || m.damaged ? 'K\0' + m.key + '\0' + (m.giver || '') : m.when ? m.when + '\0' + m.from : Math.random(); if(!gm.has(k)) gm.set(k, m); }
+    // (a summary of named options: a line each, app.html sumLines)
+    const groups = { size:[...gm.values()].reduce((t, m) => t + (A.sumMode(m) ? String(m.short).split('\n').filter(Boolean).length : 1), 0) };
     if(lines.length !== groups.size) fail('LG', a.id + '/' + u.id + ' ' + kind, lines.length + ' lines for ' + groups.size + ' conditions and sources');
     // (the rule that makes a unit always riled up, named in its "Riled up (…: always riled up)" condition, is no source of the line: Super
     // Runts, whose own box is a not-counted line of its own where the two-reader rule does not confirm it)
     // (a summary's own words may name another rule, Blood Tithe's "Blessings of Khorne": the source a line names is its "(name)", the summary aside)
-    const sums = [...new Set(ms.filter(m => A.sumMode(m)).map(m => m.short))].sort((x, y) => y.length - x.length);
+    const sums = [...new Set(ms.filter(m => A.sumMode(m)).flatMap(m => String(m.short).split('\n')))].filter(Boolean).sort((x, y) => y.length - x.length);
     for(const l1 of lines){ const l0 = sums.reduce((t, x) => t.split(x).join(' '), l1), l = l0.replace(/\(([^()]*): always riled up\)/g, '(always riled up)'), froms = [...new Set(ms.map(m => m.from))].filter(f => l.includes(f) && !ms.some(x => x.from !== f && x.from.includes(f) && l.includes(x.from)));
       if(froms.length !== 1 && !(froms.length > 1 && froms.every(f => l.includes(f)) && ms.filter(m => froms.includes(m.from)).some(m => froms.some(f => f !== m.from && m.when.includes(f))))) fail('LG', a.id + '/' + u.id + ' ' + kind, 'a line names ' + froms.length + ' sources: “' + l.slice(0, 90) + '”'); else n++; } }
   stats.grouped = n; }

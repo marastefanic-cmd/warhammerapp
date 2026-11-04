@@ -55,3 +55,24 @@ More approved examples:
 - Feel No Pain 5+; 4+ for the rest of the battle if damaged at the start of any turn (Adaptive Biology)
 - Redeploy up to 3 TYRANIDS units after deployment, Strategic Reserves allowed (Alien Cunning), on the deployment overview
 - Re-roll one Hit and one Wound each time it shoots or fights (knight's own re-roll ability)
+
+## Rounds 7–9 (owner, 4 Nov 2026)
+18. A bonus switched on during the game is named by its switch, not how you reach it: "If Warp Blades is active: [LETHAL HITS]" (no dice).
+19. A pre-game pick the app doesn't know is labelled by its number and name: "If your Quality is 1–2 (martial valour): …".
+20. Show every part, even one the profile already marks with +: "+1 OC; ignores Ld modifiers" (Vexilla).
+21. Each source gets its own line, even when two lines share a condition: "If this unit is riled up: [ASSAULT] (Waaagh!)" and "If this unit is riled up: [SUSTAINED HITS 1] (Even More Dakka)".
+22. Options with names (ka'tahs, Hyper-adaptations, Blessings) get one line each: "If readied, Dacatarai: …", "If Swarming Instincts: …". Unnamed alternatives stay on one line: "Pick one when it fights: [SUSTAINED HITS 1] or [LETHAL HITS]". This supersedes the one-line Hyper-adaptations example.
+23. Always write "Hit roll(s)" and "Wound roll(s)", never bare "Hit"/"Wound" ("Wound" also means a hitpoint): "+1 to Wound rolls", "−1 to Hit rolls", "re-roll Hit rolls of 1". This supersedes the bare forms in the earlier examples. These are fine: "vs", slash lists (INFANTRY/MOUNTED/BEASTS), stat letters (+1 S, +3 A, +1 AP, OC, Ld). Write saves in full: "5+ invulnerable save", not "5++".
+24. A leader's ability on the unit it leads takes "Granted by: <leader>": "Granted by: Trajann Valoris - re-roll Hit rolls of 1 and Wound rolls of 1 (Captain-General)".
+25. A rule that affects enemy units gets an aura line under the profile: "Enemies within 9\": −1 Ld (Deathly Terror)". This is a new placement.
+26. A line that would be identical on every unit of a list (same placement, same summary, no giver; e.g. Synapse "+1 S in melee") is shown once in an "ALL <FACTION> UNITS" block at the top of the units screen, not on each sheet. Lines that differ per unit, or that name a giver, stay on the sheets. The Damage tab is unchanged.
+
+More approved examples:
+- If Warp Blades is active: [LETHAL HITS] (Blessings of Khorne)
+- If your Quality is 1–2 (martial valour): re-roll one Hit roll and one Wound roll each time it shoots or fights (Code Chivalric)
+- +1 OC; ignores Ld modifiers (Vexilla), under the profile
+- If readied, Dacatarai: re-roll Hit rolls of 1, not vs MONSTER/VEHICLE (Martial Ka'tah)
+- If readied, Rendax: [LETHAL HITS] vs MONSTER/VEHICLE (Martial Ka'tah)
+- If this unit is riled up: 5+ invulnerable save (Waaagh!), when targeted
+- On an objective (it or the target), vs non-MONSTER/VEHICLE: [LETHAL HITS] (Stand Vigil)
+- ALL TYRANIDS UNITS: In Synapse Range: +1 S in melee (Synapse)

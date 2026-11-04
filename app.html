@@ -421,6 +421,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
   clip-path:polygon(var(--ch) 0, calc(100% - var(--ch)) 0, 100% var(--ch), 100% 100%, 0 100%, 0 var(--ch))}   /* the side lines start where the angled corner meets them */
 .ds > .dbx:first-child{--ch:9px}
 .dbx.dft{clip-path:none}
+.dbx.allu{border-top:1px solid var(--line); border-radius:3px; clip-path:none; margin:0 0 14px}   /* the lines every unit of the list has alike (ALL <FACTION> UNITS) */
 .ds .dbx + .dbx{margin-top:14px}
 .dbx.dft{border-top:1px solid var(--line); border-radius:3px}
 .dh2, .ds .dbx > .wh.both, .ds .dbx > .ab.pf > summary{margin:0 -1px; background:var(--ds-h2); clip-path:polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 0 100%, 0 7px)}
@@ -1587,6 +1588,8 @@ function fnLine(S, b, u, kind, ab){
   if(S.rule) m.rule = S.rule;
   if(S.strat){ m.strat = S.strat; m.cp = S.cp; }
   if(S.src && S.src !== u){ m.src = S.src; m.giver = giver; }
+  // (a leader's ability on the unit it leads: "Granted by: <leader>", docs/summaries.md 24)
+  else if(S.ab && S.ab.who && u.leads && charsOf(u).some(c => c.name === S.ab.who)) m.leader = S.ab.who;
   if(S.damaged){ m.damaged = true; m.gw = gwPlain((S.ab || {}).text); }
   // a box for one weapon's characteristics, nothing else: that weapon's row shows it ("8 (+6)", "6/7"), its condition under it
   // (not a stratagem's, nor an ability's the unit uses, "if it uses this ability": the player's to use, as a one-off is: oneOffMod)
@@ -4557,10 +4560,47 @@ function rowCounts(u){
   }
   return new Map(rows.map(r => [r.s, r.n]));
 }
+// ---- the lines every unit of the list has alike (docs/summaries.md 26): same placement, same summary, no giver (nor a leader), on every unit
+// that has that placement (under its weapons: every unit with weapons; When targeted and under the profile: every unit), two or more:
+// shown once, in an "ALL <FACTION> UNITS" block at the top of the Units screen, and not on the sheets. The Damage tab is unchanged. ----
+const atkCommonKey = m => 'atk\0' + m.key + '\0' + m.short;
+const defCommonKey = x => 'def\0' + x.key + '\0' + x.short;
+const stCommonKey = x => (x.foe ? 'foe' : 'st') + '\0' + x.rule + '\0' + x.short;
+const COMMON = new Map();
+function unitLinesOf(u){
+  const atk = new Map(), def = new Map(), st = new Map();
+  for(const kind of ['ranged', 'melee']) if(((kind === 'ranged' ? u.ranged : u.melee) || []).length)
+    for(const m of unitMods(u, kind)) if(sumMode(m) && !m.giver && !m.leader && !rowMod(m, u) && !m.damaged) atk.set(atkCommonKey(m), m);
+  for(const x of defLines(defenceItems(u))) if(x.sum && !x.from && !x.leader && !x.dup) def.set(defCommonKey(x), x);
+  for(const x of statShown(u)) if(x.short && !x.from) st.set(stCommonKey(x), x);
+  return { atk, def, st, armed:!!((u.ranged || []).length || (u.melee || []).length) };
+}
+function commonLines(){
+  const a = army(); if(COMMON.has(a.id)) return COMMON.get(a.id);
+  const us = a.units.filter(u => !u.ref), per = us.map(unitLinesOf), out = { atk:new Map(), def:new Map(), st:new Map() };
+  const inter = (list, f) => { if(list.length < 2) return new Map(); const [first, ...rest] = list.map(f); return new Map([...first].filter(([k]) => rest.every(m => m.has(k)))); };
+  out.atk = inter(per.filter(x => x.armed), x => x.atk); out.def = inter(per, x => x.def); out.st = inter(per, x => x.st); out.u = us[0];
+  COMMON.set(a.id, out); return out;
+}
+// (a When targeted summary of named options as drawn: a line each, docs/summaries.md 22)
+const defLines = xs => xs.flatMap(x => x.sum && sumLines(x.short).length > 1 ? sumLines(x.short).map(l => Object.assign({}, x, { short:l, t:x.t.split(x.short).join(l) })) : [x]);
+const isCommonAtk = m => commonLines().atk.has(atkCommonKey(m));
+const isCommonDef = x => commonLines().def.has(defCommonKey(x));
+const isCommonSt = x => commonLines().st.has(stCommonKey(x));
+function allUnitsBlock(){
+  const c = commonLines(), u = c.u; if(!u || !(c.atk.size + c.def.size + c.st.size)) return '';
+  const lab = t => '<i class="sc">' + t + '</i> ';
+  const strat = [...c.atk.values()].filter(m => m.strat), rest = [...c.atk.values()].filter(m => !m.strat);
+  const lines = rest.map(m => sumHtml([m], u, false)).join('') +
+    (strat.length ? strat.map(m => '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + ncSum(['strat', m.strat], m.short) + '</div>').join('') : '') +
+    [...c.def.values()].map(x => '<div class="mod">' + lab('When targeted') + defLine(x, u) + '</div>').join('') +
+    [...c.st.values()].map(x => '<div class="mod">' + lab('Profile') + statHtml(x, u).replace(/^<p class="dsl">|<\/p>$/g, '') + '</div>').join('');
+  return '<section class="dbx allu"><div class="dh2"><span>All ' + esc(faction().name) + ' units</span></div><div class="mods all">' + lines + '</div></section>';
+}
 function screenUnits(){
   const a = army(), groups = {};
   for(const u of a.units.concat(a.refs || [])){ const r = roleGroup(u); (groups[r] = groups[r] || []).push(u); }
-  return ROLE_ORDER.filter(r => groups[r]).map(r => '<h2 class="rgh"><span>' + ROLE_LABEL[r] + '</span><span class="c">' + groups[r].reduce((t, u) => t + (u.copies || 1), 0) + '</span></h2><div class="list ul">' + groups[r].map(u => {
+  return allUnitsBlock() + ROLE_ORDER.filter(r => groups[r]).map(r => '<h2 class="rgh"><span>' + ROLE_LABEL[r] + '</span><span class="c">' + groups[r].reduce((t, u) => t + (u.copies || 1), 0) + '</span></h2><div class="list ul">' + groups[r].map(u => {
     // one model type: its count goes after the name ("Gretchin ×10"), like a weapon count
     const one = u.models.length === 1 && u.models[0].match(/^(\d+)× /);
     const n = one && one[1] !== '1' ? '<span class="x">×' + one[1] + '</span>' : '';
@@ -4602,8 +4642,9 @@ function modFrom(m, u){
 const enhRowOf = name => detachments().flatMap(d => d.enhancements || []).find(e => e.name === name) || null;
 const ruleRowOf = name => faction().armyRules.concat(detachments().flatMap(detRules)).find(r => r.name === name) || null;
 // (a source's summary for one placement (the owner's guidelines, docs/summaries.md 13): under the weapons sumAtk, When targeted sumDef,
-// under the profile sumSt, on the Overview sumOv; a stratagem's gist wherever it is shown; a core rule none)
-const SUM_COL = { atk:'sumAtk', def:'sumDef', st:'sumSt', ov:'sumOv' };
+// under the profile sumSt (and what it does to enemy units there, sumFoe: docs/summaries.md 25), on the Overview sumOv; a stratagem's gist
+// wherever it is shown; a core rule none. A summary of named options is one line each, its lines split at "\n" (22))
+const SUM_COL = { atk:'sumAtk', def:'sumDef', st:'sumSt', foe:'sumFoe', ov:'sumOv' };
 const srcShort = (S, place) => { const c = SUM_COL[place || 'atk'];
   return S.core || S.rl || S.grp === 'core' ? '' : S.s ? S.s.gist || '' : S.ab ? S.ab[c] || (enhRowOf(S.ab.name) || {})[c] || ''
   : S.grp === 'army' || S.a === 'rule' ? (ruleRowOf(S.name) || {})[c] || '' : ''; };
@@ -4620,10 +4661,13 @@ const grantedBy = (src, giver) => '<span class="gby">Granted by: ' + (src ? link
 const sumMode = m => !!m.short && !m.core;
 // (one line per source: the footnotes of one source, from one unit, are one summary line)
 const lineKey = m => sumMode(m) || m.damaged ? 'K\0' + m.key + '\0' + (m.giver || '') : [m.from, m.when, m.note].join('|');
+// (a summary's lines: one per named option, docs/summaries.md 22)
+const sumLines = t => String(t || '').split('\n').filter(Boolean);
 function sumHtml(items, u, hasHunter){
   const m = items[0], t = modTarget(m, u);
   const hunt = items.find(x => x.hunter) && hasHunter ? ' (the (+' + Object.values(items.find(x => x.hunter).hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '';
-  return '<div class="mod">' + (m.giver ? grantedBy(m.src, m.giver) : '') + ncSum(t, m.short) + hunt + ' <span class="from">(' + modFrom(m, u) + ')</span></div>';
+  const by = m.giver ? grantedBy(m.src, m.giver) : m.leader ? grantedBy({ id:u.id }, m.leader) : '';
+  return sumLines(m.short).map((l, i) => '<div class="mod">' + by + ncSum(t, l) + (i ? '' : hunt) + ' <span class="from">(' + modFrom(m, u) + ')</span></div>').join('');
 }
 function ncHtml(m, u){
   const t = modTarget(m, u);
@@ -4654,7 +4698,7 @@ function weaponBlock(it, keys, mods, u){
     const changed = keys.filter(k => vm.set[k] != null).map(k => KEY_LABEL[k] + ' ' + vm.set[k]).join(', ');
     // (its source's summary, as every line: the changed values the row shows, then the summary)
     return row(named(w0.name, w0.n), cells) + kwl(w0) +
-      '<div class="varc"><b>' + esc(changed) + '</b> ' + (sumMode(vm) ? (vm.giver ? grantedBy(vm.src, vm.giver) : '') + ncSum(modTarget(vm, u), vm.short) : esc(vm.when) + (vm.note ? ', ' + esc(vm.note) : '')) + ' <span class="from">(' + modFrom(vm, u) + ')</span></div>';
+      '<div class="varc"><b>' + esc(changed) + '</b> ' + (sumMode(vm) ? (vm.giver ? grantedBy(vm.src, vm.giver) : vm.leader ? grantedBy({ id:u.id }, vm.leader) : '') + sumLines(vm.short).map(l => ncSum(modTarget(vm, u), l)).join(' · ') : esc(vm.when) + (vm.note ? ', ' + esc(vm.note) : '')) + ' <span class="from">(' + modFrom(vm, u) + ')</span></div>';
   }
   if(it.group){
     // Hunter weapons: the profile depends on the target; rules that add to Hunter attacks are built in
@@ -4829,7 +4873,7 @@ const rowMod = (m, u) => !!(m.weapon && m.set) && !oneOffMod(m, u);
 const footMod = (m, u) => m.weapon && m.set && oneOffMod(m, u) ? Object.assign({}, m, { note:(m.weapon + ' ' + Object.entries(m.set).map(([k, v]) => /^[+-]/.test(v) ? v + ' ' + k : k + ' ' + v).join(', ') + ' ' + m.note).trim() }) : m;
 function weaponTable(list, kind, mods, u){
   // the same footnote from several units (three Meks' Clever Know-wotz) once, as on the datasheet
-  const seen = new Set(), notes = mods.filter(m => !rowMod(m, u)).map(m => footMod(m, u)).filter(m => { const k = lineKey(m); return !seen.has(k) && seen.add(k); });
+  const seen = new Set(), notes = mods.filter(m => !rowMod(m, u) && !(sumMode(m) && isCommonAtk(m))).map(m => footMod(m, u)).filter(m => { const k = lineKey(m); return !seen.has(k) && seen.add(k); });
   const hasHunter = (list || []).some(w => w.hunter) && mods.some(m => m.hunter);
   return '<div class="wt ' + kind + '">' + weaponRows(list, kind === 'ranged' ? RANGED_KEYS : MELEE_KEYS, mods, u, kind) +
     (notes.length ? '<div class="mods">' + modLines(notes, u, hasHunter) + '</div>' : '') + '</div>';
@@ -4857,6 +4901,7 @@ function unitWeapons(u){
   for(const x of mr.concat(mm)){
     const k = key(x);
     if(rowMod(x, u) || seen.has(k) || x.damaged) continue;   // (a Damaged band's: its band under the stats)
+    if(sumMode(x) && isCommonAtk(x)) continue;   // (a line every unit has alike: the Units screen's ALL block)
     seen.add(k);
     notes.push(Object.assign({}, footMod(x, u), { scope: !r.length || !m.length || (inR.has(k) && inM.has(k)) ? '' : inR.has(k) ? 'Ranged' : 'Melee' }));
   }
@@ -5042,10 +5087,12 @@ function defenceItems(u){
     x.sum = !!x.short && !x.rl;
     if(x.blanket){ const k = x.key + '\0b'; if(sums.has(k)) x.dup = true; sums.add(k); }
     if(x.sum){ const k = x.key + '\0' + (x.from || ''); if(sums.has(k)) x.dup = true; sums.add(k); } }
+  // (a leader's ability on the unit it leads: "Granted by: <leader>", docs/summaries.md 24)
+  for(const x of res) if(x.sum && !x.from && x.who && charsOf(u).some(c => c.name === x.who)) x.leader = x.who;
   // (as defLine draws it: a rule's name alone; a summary for its words; another unit's "Granted by")
   for(const x of res){ if(x.blanket){ x.t = x.name; continue; }
     const text = x.sum ? x.short : x.ncLine ? x.short || FN_NC : x.text;
-    if(x.sum){ x.t = x.from ? 'Granted by: ' + x.from + ' - ' + text + ' (' + x.name + ')' : x.cp ? x.cp + 'CP ' + x.name + ': ' + text : text + ' (' + x.name + ')'; continue; }
+    if(x.sum){ x.t = x.from || x.leader ? 'Granted by: ' + (x.from || x.leader) + ' - ' + text + ' (' + x.name + ')' : x.cp ? x.cp + 'CP ' + x.name + ': ' + text : text + ' (' + x.name + ')'; continue; }
     x.t = (x.rl && !x.when && x.text === x.name) || (x.ncLine && x.a === 'rule') ? x.name : x.from ? ['Granted by: ' + x.from + ' -', x.when ? x.when + ':' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ')
       : x.ncLine ? [x.cp ? x.cp + 'CP' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ') : [x.cp ? x.cp + 'CP' : '', x.name + ':', x.when ? x.when + ':' : '', text].filter(Boolean).join(' '); }
   return res;
@@ -5071,6 +5118,7 @@ function defLine(x, u){
   if(x.from) return who + grantedBy(x.a === 'unit' ? { id:x.v } : null, x.from) + (w && !x.sum ? '<span class="tw">' + w + ':</span> ' : '') + text + ' <span class="from">(' + linkTo(ra, rv, x.name) + ')</span>';
   // (a stratagem: "<cp>CP <name>: <summary> AI"; another source: "<summary> AI (<name>)")
   if(x.cp && (x.ncLine || x.sum)) return who + '<b class="cpb">' + esc(x.cp) + 'CP</b> <b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + text;
+  if(x.leader) return grantedBy({ id:u.id }, x.leader) + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
   if(x.ncLine || x.sum) return who + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
   return who + (x.cp ? '<b class="cpb">' + esc(x.cp) + 'CP</b> ' : '') + '<b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + (w ? '<span class="tw">' + w + ':</span> ' : '') + text;
 }
@@ -5116,7 +5164,7 @@ function statLines(u){
     if(x.reach ? !matches(x.reach, u) : needs !== undefined && !(needs && matches(needs, u))) continue;
     if((x.on || []).some(([id, p]) => (id === 'selfKw' && !hasKw(u, p)) || (id === 'leading' && !u.leads))) continue;
     if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => [].concat((s.from || {})[x.stat] || []).join(', ').split(/\s*,\s*/).includes(name)))) continue;
-    said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); out.push(Object.assign({ rule:name, a:link, v, text:(x.foe ? 'Enemy units’ ' : '') + x.stat + ': ' + FN_NC }, gu ? { from:gu.short || gu.name, gid:gu.id } : {})); } };
+    said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); out.push(Object.assign({ rule:name, a:link, v, text:(x.foe ? 'Enemy units’ ' : '') + x.stat + ': ' + FN_NC }, x.foe ? { foe:true } : {}, gu ? { from:gu.short || gu.name, gid:gu.id } : {})); } };
   for(const ab of u.abilities || []) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab));
   for(const x of army().units) if(x !== u) for(const ab of x.abilities || []){ const o = BOXES_AGREED[DM_KEY.a(ab)] || {};
     if(/\baura\b/i.test(ab.tag || '') && o.reach && matches(o.reach, u)) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab), undefined, x); }
@@ -5132,17 +5180,19 @@ function statShown(u){
   searchIndex();
   const out = [], said = new Set(), xs = statLines(u);
   for(const x of xs){
-    const short = x.a === 'ability' ? srcShort({ ab:(abilityIndex.get(x.v) || {}).ab }, 'st') : x.a === 'strat' ? srcShort({ s:allStratagems().find(s => s.id === x.v) }, 'st') : srcShort({ a:'rule', name:x.rule }, 'st');
+    const pl = x.foe ? 'foe' : 'st';   // (what it does to enemy units: its aura line, docs/summaries.md 25)
+    const short = x.a === 'ability' ? srcShort({ ab:(abilityIndex.get(x.v) || {}).ab }, pl) : x.a === 'strat' ? srcShort({ s:allStratagems().find(s => s.id === x.v) }, pl) : srcShort({ a:'rule', name:x.rule }, pl);
     const r = (!x.a || x.a === 'rule') && ruleRowOf(x.rule), blanket = !!r && !short && (menuRule(DM_KEY.r(r)) || xs.every(y => y.rule !== x.rule || /not counted here/.test(y.text)));
     if(!short && !blanket){ out.push(x); continue; }
-    if(said.has(x.rule + '\0' + (x.from || ''))) continue; said.add(x.rule + '\0' + (x.from || ''));
+    if(said.has(x.rule + '\0' + (x.from || '') + '\0' + pl)) continue; said.add(x.rule + '\0' + (x.from || '') + '\0' + pl);
     out.push(Object.assign({}, x, blanket ? { name:true } : { short }));
   }
   return out;
 }
 const statHtml = (x, u) => { const t = [x.a || 'rule', x.v || x.rule];
   if(x.name) return '<p class="dsl">' + linkTo(t[0], t[1], x.rule) + '</p>';
-  return '<p class="dsl">' + (x.from ? grantedBy(x.gid ? { id:x.gid } : null, x.from) : '') + (x.short ? ncSum(t, x.short) : esc(x.text)) + ' <span class="from">(' + linkTo(t[0], t[1], x.rule) + ')</span></p>'; };
+  const by = x.from ? grantedBy(x.gid ? { id:x.gid } : null, x.from) : '';
+  return (x.short ? sumLines(x.short) : [null]).map(l => '<p class="dsl' + (x.foe ? ' foe' : '') + '">' + by + (l ? ncSum(t, l) : esc(x.text)) + ' <span class="from">(' + linkTo(t[0], t[1], x.rule) + ')</span></p>').join(''); };
 // the keywords that come from the other part of an attached unit, from the importer's note
 // ("Explosives, Meganobz come from the led Meganobz."): starred, as New Recruit stars them
 function kwStars(u){
@@ -5158,7 +5208,8 @@ function screenUnit(){
   const u = unitById(cur.unit);
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
   const strats = allStratagems().filter(s => canTarget(s, u));   // every one it can be the target of (its needs, from GW's TARGET)
-  const def = defenceItems(u), defShown = def.filter(x => !x.dup);   // (a source's summary once)
+  // (a source's summary once; one every unit has alike: the ALL block; a summary of named options a line each, defLines)
+  const def = defenceItems(u), defShown = defLines(def.filter(x => !x.dup)).filter(x => !(x.sum && isCommonDef(x)));
   const tgKey = 'tg|' + cur.army + '|' + u.id;
   const meta = (u.ref ? [] : [esc(u.role)]).concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
   // an allied unit: the rule that brings it into this army (the faction's allies: Assigned Agents, Daemonic Pact), once, as its reason
@@ -5194,7 +5245,7 @@ function screenUnit(){
         ['M','T','Sv','W','Ld','OC','InSv'].map((k, i) => '<span>' + granted(s, k, u, esc(s[k]), ['M','T','SV','W','LD','OC','INV'][i] + ' ' + s[k]) + '</span>').join('')).join('') + '</div>' +
     '<div class="dnt">' +
     // (a characteristic of its models a rule of the list changes: statLines)
-    statShown(u).map(x => statHtml(x, u)).join('') +
+    statShown(u).filter(x => !(x.short && !x.from && isCommonSt(x))).map(x => statHtml(x, u)).join('') +
     // (a fold, closed until opened and kept open for the session, as the Overview's army rules: its count on its line, a line each)
     (def.length ? '<details class="def tgt" data-tgfold="' + esc(tgKey) + '"' + (openStrats.has(tgKey) ? ' open' : '') + '><summary><span class="il">When targeted</span><span class="x">' + defShown.length + '</span>' + chev + '</summary>' +
       '<div class="tgls">' + defShown.map(x => '<div class="tgl">' + defLine(x, u) + '</div>').join('') + '</div></details>' : '') +
@@ -5388,7 +5439,7 @@ function screenPregame(){
   // the same ability on several units is one line: "Singular Purpose · Assimilator (280), Norn Emissary ×2"
   const group = list => { const m = new Map(); for(const [u, ab] of list){ const k = ab.name + '|' + ab.text; if(!m.has(k)) m.set(k, { ab, units:[] }); m.get(k).units.push(u); } return [...m.values()]; };
   // (a line with its source's Overview summary, sumOv: "<summary> AI (<name>) · <units>"; one with none, its name)
-  const ovSum = (t, sum, name) => sum ? ncSum(t, sum) + ' <span class="from">(' + linkTo(t[0], t[1], name) + ')</span>' : linkTo(t[0], t[1], name);
+  const ovSum = (t, sum, name) => sum ? sumLines(sum).map(l => ncSum(t, l)).join('; ') + ' <span class="from">(' + linkTo(t[0], t[1], name) + ')</span>' : linkTo(t[0], t[1], name);
   const abLine = g => ovSum(['ability', abilityKey(g.ab)], srcShort({ ab:g.ab }, 'ov'), g.ab.name) + ' <span class="from">· ' + esc(unitNames(g.units, g.ab)) + '</span>';
   const rulesOf = units.length ? f.armyRules.filter(r => !inertRule(r.name)).map(r => ({ r, src:f.name + ' army rule' }))
     .concat(detachments().flatMap(d => detRules(d).map(r => ({ r, src:d.name })))) : [];

@@ -54,8 +54,8 @@ const WEAPON_FIELDS = ['range', 'A', 'BS', 'WS', 'S', 'AP', 'D'];
 // AI-written columns and the column holding the fingerprint of the text each was written from
 // (sumAtk / sumDef / sumSt / sumOv: an ability's, enhancement's, army or detachment rule's summary for each place a unit's screens show it, under
 // its weapons, When targeted, under its profile, on the Overview, labelled AI: the owner's decision, 4 Nov 2026, docs/summaries.md)
-const FINGERPRINT = { gist:'gistOf', sumAtk:'sumAtkOf', sumDef:'sumDefOf', sumSt:'sumStOf', sumOv:'sumOvOf' };
-const SUM_COLS = ['sumAtk', 'sumDef', 'sumSt', 'sumOv'];   // (def, the When targeted line, is retired: a unit's When targeted lines are its defence boxes, BOXES d)
+const FINGERPRINT = { gist:'gistOf', sumAtk:'sumAtkOf', sumDef:'sumDefOf', sumSt:'sumStOf', sumFoe:'sumFoeOf', sumOv:'sumOvOf' };
+const SUM_COLS = ['sumAtk', 'sumDef', 'sumSt', 'sumFoe', 'sumOv'];   // (def, the When targeted line, is retired: a unit's When targeted lines are its defence boxes, BOXES d)
 // the readings: the app's interpretations of rule text into numbers and lines. A unit's footnotes (mods), what it gives other
 // units (aura) and their "When targeted" help (guard) are rows of readings, each on the row of the rule it reads (DATASHEETS for a
 // datasheet's ability, FACTIONS for an army or detachment rule or an enhancement, the list's entry for what is the list's own);

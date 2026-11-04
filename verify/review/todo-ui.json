@@ -1,10 +1,10 @@
 [
  {
   "kind": "review-ui-scope",
-  "where": "unit sheets, weapon lists and the Overview: every line is its source's summary for that placement",
+  "where": "unit sheets, weapon lists, the Units screen and the Overview: every line is its source's summary for that placement",
   "judgement": {
-   "check": "docs/summaries.md (the owner's guidelines and approved examples, rounds 1-6): one summary per placement (sumAtk under the weapons, sumDef When targeted, sumSt under the profile, sumOv the Overview), only the part that matters there; a stratagem's gist everywhere (<cp>CP <name>: <gist>); every rule has one (no name only); Damaged bands GW's words; the Abilities section GW's text. AI writes only these columns; the program places the lines, Granted by, the order and the (name). A counted box's summary has its numbers (verify/lines.js LN, mechanical); this review checks the rest against GW's text.",
-   "deviations": "Psychological Saboteur: the approved attack line as written; its When targeted line (counted −1 to Hit) has its own sumDef. Onslaught: one datasheet row shared by The Swarmlord and Hive Tyrant, so \"within 6\" of this model\" (the Granted by names the unit) instead of the example's \"of The Swarmlord\"."
+   "check": "docs/summaries.md (the owner's guidelines and approved examples, rounds 1-9): one summary per placement (sumAtk under the weapons, sumDef When targeted, sumSt under the profile, sumFoe under the profile for what it does to enemies, sumOv the Overview), only the part that matters there; named options a line each; Hit roll(s) / Wound roll(s) written out; a leader's ability \"Granted by: <leader>\" on the unit it leads; a stratagem's gist everywhere (<cp>CP <name>: <gist>); a line every unit of a list has alike once, in ALL <FACTION> UNITS on the Units screen; Damaged bands GW's words; the Abilities section GW's text. AI writes only these columns; the program places the lines, Granted by, the order and the (name). A counted box's summary has its numbers (verify/lines.js LN, mechanical); this review checks the rest against GW's text.",
+   "deviations": "Onslaught: one datasheet row shared by The Swarmlord and Hive Tyrant, so \"within 6\" of this model\" (the Granted by names the unit) instead of the example's \"of The Swarmlord\". Deathly Terror: an option of Harbingers of Dread, so its aura line names it in the summary (\"Deathly Terror: enemies within 9\": −1 Ld\") and the (name) is Harbingers of Dread. Examples updated to rule 23: Psychological Saboteur \"+1 to Wound rolls vs …\", Swallow Whole \"successful unmodified Wound rolls are Critical Wounds\", Encephalic Diffusion \"−1 to Hit rolls … −1 to Wound rolls\"."
   }
  },
  {
@@ -12,15 +12,15 @@
   "where": "adeptus-custodes",
   "judgement": {
    "count": 22,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
     {
      "where": "army rule · Martial Ka’tah",
      "summaries": {
-      "under its weapons": "Picked when readied: Salvus, ignore modifiers to BS, Hit and Wound rolls shooting; Dacatarai, re-roll Hit rolls of 1 in melee vs non-MONSTER/VEHICLE; Rendax, melee [LETHAL HITS] vs MONSTER/VEHICLE",
-      "When targeted": "Picked when readied: Kaptaris, −1 to Hit vs melee attacks on it"
+      "under its weapons": "If readied, Salvus: ignore modifiers to BS, Hit rolls and Wound rolls when shooting\nIf readied, Dacatarai: re-roll Hit rolls of 1, not vs MONSTER/VEHICLE\nIf readied, Rendax: [LETHAL HITS] vs MONSTER/VEHICLE",
+      "When targeted": "If readied, Kaptaris: −1 to Hit rolls vs melee attacks on it"
      },
      "text": "At the start of your Command phase, friendly **ADEPTUS CUSTODES** units with this ability are **readied**. While a friendly unit is **readied**, you can select one of the **ka’tah abilities** presented below for that unit to use. If you do, that unit is no longer **readied**.\nEach **ka’tah ability** will tell you when that **ka’tah ability** can be used, and the effects that **ka’tah ability** has on the unit using it.\nWe recommend placing a token next to each **readied** unit, removing it when that unit is no longer **readied**.\n**Favoured Ka’tah**\nAll **detachments** tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these **detachments**, the **ka’tah ability** that is the Favoured Ka’tah of that **detachment** grants the additional effect listed in that **detachment**.\n**Example:** If you selected the Solar Watch **detachment**, when you select the Calistus **ka’tah ability** for a **readied** unit, that unit has +2\" **M** in addition to the normal effect of Calistus.\nConservai: KA’TAH ABILITY\n**WHEN:** Your Command phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Until the end of the turn:\n- Being **engaged**/**battle-shocked** does not prevent your unit from being eligible to start an action.\n- Starting an action does not prevent your unit from being eligible to shoot.\nCalistus: KA’TAH ABILITY\n**WHEN:** Your Movement phase, when a friendly **readied** unit is selected to move.\n**TARGET:** That **readied** unit.\n**EFFECT:** When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.\nSalvus: KA’TAH ABILITY\n**WHEN:** Your Shooting phase, when a friendly **readied** unit is selected to shoot.\n**TARGET:** That **readied** unit.\n**EFFECT:** Your unit can ignore modifiers to your unit’s:\n- **BS.**\n- Hit rolls and wound rolls.\nDacatarai: KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks that target an enemy unit (excluding **MONSTER**/**VEHICLE** units) can **re-roll hit rolls** of 1.\nKaptaris: KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Melee attacks that target your unit have -1 to hit rolls.\nRendax: KA’TAH ABILITY\n**WHEN:** Fight phase, when a friendly **readied** unit is selected to fight.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks have **[Lethal Hits: Monster/Vehicle]**."
     },
@@ -91,22 +91,22 @@
     {
      "where": "ability · Captain-General (Trajann Valoris)",
      "summaries": {
-      "under its weapons": "ADEPTUS CUSTODES (not MONSTER/VEHICLE) within 6\" of Trajann Valoris re-roll Hit rolls of 1 and Wound rolls of 1"
+      "under its weapons": "re-roll Hit rolls of 1 and Wound rolls of 1 within 6\" of Trajann Valoris (not MONSTER/VEHICLE)"
      },
      "text": "Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
     },
     {
      "where": "ability · Moment Shackle (Trajann Valoris)",
      "summaries": {
-      "under its weapons": "Picked at start of a phase: Watcher’s Axe +3 A",
-      "When targeted": "Picked at start of a phase: 3+ invulnerable save"
+      "under its weapons": "If picked at the start of the phase: Watcher’s Axe +3 A",
+      "When targeted": "If picked at the start of the phase: 3+ invulnerable save"
      },
      "text": "At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**."
     },
     {
      "where": "ability · Slayer of Tyrants (Allarus Custodians)",
      "summaries": {
-      "under its weapons": "+1 to Wound in melee vs targets with a higher T"
+      "under its weapons": "+1 to Wound rolls in melee vs targets with a higher T"
      },
      "text": "This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**."
     },
@@ -120,7 +120,7 @@
     {
      "where": "ability · Unyielding Ancient (Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought)",
      "summaries": {
-      "When targeted": "−1 to Wound vs attacks with S greater than its T"
+      "When targeted": "−1 to Wound rolls vs attacks with S greater than its T"
      },
      "text": "Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**."
     },
@@ -141,21 +141,21 @@
     {
      "where": "ability · Stand Vigil (Sentinel Guard Sodality)",
      "summaries": {
-      "under its weapons": "[LETHAL HITS] vs non-MONSTER/VEHICLE if it or the target is on an objective"
+      "under its weapons": "On an objective (it or the target), vs non-MONSTER/VEHICLE: [LETHAL HITS]"
      },
      "text": "This unit’s attacks have **[LETHAL HITS: non-MONSTER/VEHICLE]** if any of the following apply:\n- This unit is within range of an **objective**.\n- The target of those attacks is within range of an **objective**."
     },
     {
      "where": "ability · Praesidium Shield (Sentinel Guard Sodality)",
      "summaries": {
-      "When targeted": "−1 to Wound vs attacks with S greater than its T"
+      "When targeted": "−1 to Wound rolls vs attacks with S greater than its T"
      },
      "text": "Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**."
     },
     {
      "where": "ability · Impenetrable Defence (Custodian Guard Sodality)",
      "summaries": {
-      "under its weapons": "[SUSTAINED HITS 1] vs non-MONSTER/VEHICLE if it or the target is on an objective"
+      "under its weapons": "On an objective (it or the target), vs non-MONSTER/VEHICLE: [SUSTAINED HITS 1]"
      },
      "text": "This unit’s attacks have **[SUSTAINED HITS 1: non-MONSTER/VEHICLE]** if any of the following apply:\n- This unit is within range of an **objective**.\n- The target of those attacks is within range of an **objective**."
     },
@@ -181,16 +181,16 @@
   "where": "adeptus-mechanicus",
   "judgement": {
    "count": 14,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
     {
      "where": "army rule · Doctrina Imperatives",
      "summaries": {
-      "under its weapons": "Picked each round: Protector [HEAVY], BS improved by 1; Conqueror [ASSAULT], WS improved by 1, +1 AP if BATTLELINE or within 6\" of one",
-      "When targeted": "Picked each round: Protector, −1 to Hit vs it in melee if BATTLELINE or within 6\" of one",
-      "Overview": "Pick one at the start of each round: Protector [HEAVY], BS improved by 1; Conqueror [ASSAULT], WS improved by 1"
+      "under its weapons": "If Protector Imperative: [HEAVY], BS improved by 1\nIf Conqueror Imperative: [ASSAULT], WS improved by 1; +1 AP if BATTLELINE or within 6\" of one",
+      "When targeted": "If Protector Imperative: −1 to Hit rolls vs melee attacks on it if BATTLELINE or within 6\" of one",
+      "Overview": "Pick one at the start of each round: Protector Imperative; Conqueror Imperative"
      },
      "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\nProtector Imperative: - Ranged weapons equipped by models in this unit have the **[HEAVY]** ability.\n- Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n- Each time a melee attack targets this unit, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, subtract 1 from the **Hit roll**.\nConqueror Imperative: - Ranged weapons equipped by models in this unit have the **[ASSAULT]** ability.\n- Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n- Each time a model in this unit makes an attack, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, improve the Armour Penetration characteristic of that attack by 1."
     },
@@ -218,9 +218,9 @@
     {
      "where": "ability · Canticles of the Omnissiah (Belisarius Cawl)",
      "summaries": {
-      "under its weapons": "Picked each Command phase: ADEPTUS MECHANICUS re-roll Hit rolls vs one enemy",
-      "When targeted": "Picked each Command phase: Stealth within 6\" of it",
-      "under its profile": "Picked each Command phase: BATTLELINE, and +1 OC within 6\" of it"
+      "under its weapons": "If Invocation of Machine Vengeance: friendly ADEPTUS MECHANICUS re-roll Hit rolls vs its Machine Vengeance target",
+      "When targeted": "If Shroudpsalm: Stealth within 6\" of it",
+      "under its profile": "If Mantra of Discipline: BATTLELINE; +1 OC within 6\" of it"
      },
      "text": "At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.\n**Invocation of Machine Vengeance:** At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly **ADEPTUS MECHANICUS** unit makes an attack that targets your Machine Vengeance target, you can re-roll the **Hit roll**.\n**Mantra of Discipline:** This model has the **BATTLELINE** keyword and has the following ability:\n- **Binharic Courage (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or **Leadership test** for that unit, add 1 to that test.\n**Shroudpsalm (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6\" of this model, that unit has the **Stealth** ability."
     },
@@ -255,8 +255,8 @@
     {
      "where": "ability · Battle Protocols (Cybernetica Datasmith)",
      "summaries": {
-      "under its weapons": "While leading KASTELAN ROBOTS, picked protocol: Protector +2 A ranged; Conqueror +2 A melee",
-      "When targeted": "While leading KASTELAN ROBOTS, picked protocol: Aegis +1 T",
+      "under its weapons": "If Protector Protocol: KASTELAN ROBOTS +2 A ranged\nIf Conqueror Protocol: KASTELAN ROBOTS +2 A melee",
+      "When targeted": "If Aegis Protocol: KASTELAN ROBOTS +1 T",
       "Overview": "Leading KASTELAN ROBOTS: they start the battle in Aegis Protocol (+1 T)"
      },
      "text": "At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit."
@@ -285,7 +285,7 @@
     {
      "where": "ability · Blistering Salvoes (Skorpius Disintegrator)",
      "summaries": {
-      "under its weapons": "+1 to Hit with belleros energy cannon vs INFANTRY and with ferrumite cannon vs MONSTER or VEHICLE"
+      "under its weapons": "+1 to Hit rolls with belleros energy cannon vs INFANTRY and with ferrumite cannon vs MONSTER or VEHICLE"
      },
      "text": "Each time this model makes an attack with a belleros energy cannon that targets an **INFANTRY** unit, add 1 to the **Hit roll**. Each time this model makes an attack with a ferrumite cannon that targets a **MONSTER** or **VEHICLE** unit, add 1 to the Hit roll."
     }
@@ -297,7 +297,7 @@
   "where": "chaos-daemons",
   "judgement": {
    "count": 28,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
@@ -311,7 +311,7 @@
     {
      "where": "Scintillating Legion enhancement · Neverblade",
      "summaries": {
-      "under its weapons": "+2 S, +1 A, +1 AP and +1 to Hit in melee"
+      "under its weapons": "+2 S, +1 A, +1 AP and +1 to Hit rolls in melee"
      },
      "text": "**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the **Hit roll**."
     },
@@ -375,7 +375,7 @@
     {
      "where": "ability · Daemon Lord of Khorne (Bloodthirster)",
      "summaries": {
-      "under its weapons": "+1 to Hit in melee within 6\" of Bloodthirster"
+      "under its weapons": "+1 to Hit rolls in melee within 6\" of Bloodthirster"
      },
      "text": "While a friendly **KHORNE LEGIONES DAEMONICA** unit is within 6\" of this model, each time a model in that unit makes a melee attack, add 1 to the **Hit roll**."
     },
@@ -417,7 +417,7 @@
     {
      "where": "ability · Bloodmaster (Bloodmaster)",
      "summaries": {
-      "under its weapons": "While leading: +1 to Wound"
+      "under its weapons": "While leading: +1 to Wound rolls"
      },
      "text": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Wound roll**."
     },
@@ -431,7 +431,7 @@
     {
      "where": "ability · P’tarix’s Sorcerous Syphon (The Blue Scribes)",
      "summaries": {
-      "When targeted": "Enemies within 12\": −1 to Wound with Psychic Attacks"
+      "When targeted": "Enemies within 12\": −1 to Wound rolls with Psychic Attacks"
      },
      "text": "While an enemy unit is within 12\" of this model, each time a model in that unit makes a **Psychic Attack**, subtract 1 from the **Wound roll**."
     },
@@ -445,7 +445,7 @@
     {
      "where": "ability · Mischief and Confusion (The Changeling)",
      "summaries": {
-      "When targeted": "Start of the opponent's Shooting, pick a visible enemy within 12\" and roll D6: 2-5 −1 to Hit; 6 it can't shoot"
+      "When targeted": "Start of the opponent's Shooting, pick a visible enemy within 12\" and roll D6: 2-5 −1 to Hit rolls; 6 it can't shoot"
      },
      "text": "At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase."
     },
@@ -480,7 +480,7 @@
     {
      "where": "ability · Fluxmaster (Fluxmaster)",
      "summaries": {
-      "When targeted": "Stealth; −1 to Hit vs melee attacks on it"
+      "When targeted": "Stealth; −1 to Hit rolls vs melee attacks on it"
      },
      "text": "- This unit has **Stealth**.\n- Melee attacks that target this unit have -1 to **hit rolls**."
     },
@@ -494,7 +494,7 @@
     {
      "where": "ability · Sullen Malevolence (Blue Horrors)",
      "summaries": {
-      "under its profile": "With a BLUE HORROR: enemies within 6\" have Leadership worsened by 1"
+      "under its profile, on enemy units": "With a BLUE HORROR: enemies within 6\": −1 Ld"
      },
      "text": "While an enemy unit is within 6\" of this unit, if this unit contains one or more **BLUE HORROR** models, worsen the Leadership characteristic of models in that enemy unit by 1."
     }
@@ -506,26 +506,26 @@
   "where": "chaos-knights",
   "judgement": {
    "count": 15,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
     {
      "where": "army rule · Harbingers of Dread",
      "summaries": {
-      "under its weapons": "Picked in rounds 1, 3 and 5: Doom, +1 to Wound vs Battle-shocked",
-      "When targeted": "Picked in rounds 1, 3 and 5: Darkness, Stealth",
-      "under its profile": "Enemies within 9\": −1 Leadership (Despair: −1 more)",
-      "Overview": "Deathly Terror from the start; pick one more Dread ability (or roll two) at the start of rounds 1, 3 and 5"
+      "under its weapons": "If Doom is active: +1 to Wound rolls vs Battle-shocked targets",
+      "When targeted": "If Darkness is active: Stealth",
+      "under its profile, on enemy units": "Deathly Terror: enemies within 9\": −1 Ld\nIf Despair is active: enemies within 9\": −1 Ld more",
+      "Overview": "Deathly Terror from the start; pick one more Dread ability (or roll two) at the start of rounds 1, 3 and 5: Despair; Doom; Darkness; Dismay; Delirium; Dominion"
      },
      "text": "If your Army Faction is **CHAOS KNIGHTS**, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.\nAny Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.\nDeathly Terror (Aura) · N/A: While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.\nDespair (Aura) · 1: While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).\nDoom · 2: Each time this model makes an attack, if the target of that attack is **Battle-shocked**, add 1 to the **Wound roll**.\nDarkness · 3: This model has **Stealth**.\nDismay (Aura) · 4: In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9\" of this model, that enemy unit must take a Battle-shock test.\nDelirium (Aura) · 5: While an enemy unit that is **Below Half-strength** is within 9\" of this model, each time that unit fails a Battle-shock test, it suffers D3 **mortal wounds**.\nDominion · 6: Add 3\" to the range of this model’s **Aura abilities**."
     },
     {
      "where": "Infernal Lance rule · Malefic Surge",
      "summaries": {
-      "under its weapons": "If Empowered: [LETHAL HITS] or [SUSTAINED HITS 1] when it shoots or fights",
-      "When targeted": "If Empowered: 5+ invulnerable save or Feel No Pain 6+ when targeted",
-      "under its profile": "If Empowered: +3\" Move"
+      "under its weapons": "If Empowered, Diabolic Power: [LETHAL HITS] or [SUSTAINED HITS 1] when it shoots or fights",
+      "When targeted": "If Empowered, Unnatural Fortitude: 5+ invulnerable save or Feel No Pain 6+ when targeted",
+      "under its profile": "If Empowered, Unholy Hunger: +3\" Move"
      },
      "text": "In your Command phase, one or more **CHAOS KNIGHTS** units from your army can make a Malefic Surge. Each one that does must first take a **Leadership test**; if that test is failed, that unit suffers D3 **mortal wounds**. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.\n- **Unholy Hunger:** When a model in this unit makes a **Normal**, **Advance** or **Fall Back move**, until the end of the phase, add 3\" to its Move characteristic.\n- **Diabolic Power:** When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.\n- **Unnatural Fortitude:** When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:\n- Models in this unit have a 5+ invulnerable save.\n- Models in this unit have the **Feel No Pain 6+** ability.\n*Designer’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.*"
     },
@@ -574,7 +574,7 @@
     {
      "where": "ability · Macro-extinction Protocols (Chaos Cerastus Knight Atrapos)",
      "summaries": {
-      "under its weapons": "+1 to Hit vs MONSTER or VEHICLE; also +1 to Wound if TITANIC or TOWERING"
+      "under its weapons": "+1 to Hit rolls vs MONSTER or VEHICLE; also +1 to Wound rolls if TITANIC or TOWERING"
      },
      "text": "Each time this model makes an attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Hit roll**. If that target is **TITANIC** or **TOWERING**, add 1 to the **Wound roll** as well."
     },
@@ -603,7 +603,7 @@
     {
      "where": "ability · Mischief Makers (Nurglings)",
      "summaries": {
-      "When targeted": "Enemies (not TITANIC) in Engagement Range of it: −1 to Hit in melee"
+      "When targeted": "Enemies (not TITANIC) in Engagement Range of it: −1 to Hit rolls in melee"
      },
      "text": "Each time an enemy unit (excluding **TITANIC** units) within **Engagement Range** of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the **Hit roll**."
     },
@@ -617,7 +617,7 @@
     {
      "where": "ability · Executioner (War Dog Executioner)",
      "summaries": {
-      "under its weapons": "+1 to Hit vs Below Half-strength"
+      "under its weapons": "+1 to Hit rolls vs Below Half-strength"
      },
      "text": "Each time this model makes an attack that targets a unit **Below Half-strength**, add 1 to the **Hit roll**. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3\" of it must take a **Battle-shock test**."
     }
@@ -629,7 +629,7 @@
   "where": "chaos-space-marines",
   "judgement": {
    "count": 19,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
@@ -664,7 +664,7 @@
     {
      "where": "ability · Reorder Reality (Vashtorr the Arkifane)",
      "summaries": {
-      "When targeted": "Enemies within 18\" targeting it: −1 to Hit; their ranged weapons gain [HAZARDOUS]"
+      "When targeted": "Enemies within 18\" targeting it: −1 to Hit rolls; their ranged weapons gain [HAZARDOUS]"
      },
      "text": "Each time an enemy unit within 18\" of this model targets this model, subtract 1 from the **Hit roll** and, until the end of the phase, that enemy unit’s ranged weapons have the **[HAZARDOUS]** ability."
     },
@@ -692,14 +692,14 @@
     {
      "where": "ability · Master of Mechanisms (Warpsmith)",
      "summaries": {
-      "under its weapons": "Command phase: a HERETIC ASTARTES VEHICLE within 3\" of the Warpsmith heals D3 and has +1 to Hit"
+      "under its weapons": "Command phase: a HERETIC ASTARTES VEHICLE within 3\" of the Warpsmith heals D3 and has +1 to Hit rolls"
      },
      "text": "In your Command phase, select one friendly **HERETIC ASTARTES VEHICLE** model within 3\" of this model. That **VEHICLE** model regains up to D3 lost wounds and, until the start of your next Command phase, each time that **VEHICLE** makes an attack, add 1 to the **Hit roll**. Each model can only be selected for this ability once per Command phase."
     },
     {
      "where": "ability · Dark Zealotry (Dark Apostle)",
      "summaries": {
-      "under its weapons": "While leading: +1 to Wound in melee"
+      "under its weapons": "While leading: +1 to Wound rolls in melee"
      },
      "text": "While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**."
     },
@@ -713,7 +713,7 @@
     {
      "where": "ability · Visions of Suffering (Nemesis Claw)",
      "summaries": {
-      "under its weapons": "+1 to Hit vs targets below Starting Strength; also +1 to Wound if Below Half-strength"
+      "under its weapons": "+1 to Hit rolls vs targets below Starting Strength; also +1 to Wound rolls if Below Half-strength"
      },
      "text": "Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll**. If that enemy unit is **Below Half-strength**, add 1 to the **Wound roll** as well."
     },
@@ -748,7 +748,7 @@
     {
      "where": "ability · Siege Shield (Chaos Vindicator)",
      "summaries": {
-      "under its weapons": "Demolisher cannon can shoot enemies in Engagement Range; no Engagement Range penalty to Hit"
+      "under its weapons": "Demolisher cannon can shoot enemies in Engagement Range; no Engagement Range penalty to Hit rolls"
      },
      "text": "When making ranged attacks with its demolisher cannon, this model can target enemy units within **Engagement Range** of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units."
     },
@@ -774,14 +774,14 @@
   "where": "emperors-children",
   "judgement": {
    "count": 11,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
     {
      "where": "Coterie of the Conceited rule · Pledges to the Dark Prince",
      "summaries": {
-      "under its weapons": "By Pact points: 1+ re-roll Hit rolls of 1; 3+ re-roll Wound rolls of 1; 5+ melee [LETHAL HITS] and [SUSTAINED HITS 1]; 7+ hits crit on 5+",
+      "under its weapons": "With 1+ Pact points: re-roll Hit rolls of 1\nWith 3+ Pact points: re-roll Wound rolls of 1\nWith 5+ Pact points: melee [LETHAL HITS] and [SUSTAINED HITS 1]\nWith 7+ Pact points: Critical Hits on 5+",
       "Overview": "Start of each round, pledge how many enemy units die this round: Pact points if met, else D3 mortal wounds to your WARLORD"
      },
      "text": "At the start of the battle round, if your **WARLORD** is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your **WARLORD** model suffers D3 **mortal wounds**.\n**EMPEROR’S CHILDREN** units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).\n1+: Each time a model in this unit makes an attack, re-roll a **Hit roll** of 1.\n3+: Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1.\n5+: Melee weapons equipped by models in this unit have the **[LETHAL HITS]** and **[SUSTAINED HITS 1]** abilities.\n7+: Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified **Hit roll** of 5+."
@@ -817,7 +817,7 @@
     {
      "where": "ability · Wracking Agonies (Sorcerer)",
      "summaries": {
-      "under its profile": "After it shoots: one INFANTRY unit hit by Agonising Energies has −2\" Move and −2 to Charge"
+      "under its profile, on enemy units": "One INFANTRY unit hit by its Agonising Energies: −2\" Move and −2 to Charge rolls"
      },
      "text": "In your Shooting phase, after this model has shot, select one **INFANTRY** unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
     },
@@ -845,14 +845,14 @@
     {
      "where": "ability · Revel in Desecration (Defiler)",
      "summaries": {
-      "under its weapons": "+1 to Hit vs targets not Below Half-strength"
+      "under its weapons": "+1 to Hit rolls vs targets not Below Half-strength"
      },
      "text": "Each time this model makes an attack that targets an enemy unit that is not **below Half-strength**, add 1 to the **Hit roll**."
     },
     {
      "where": "ability · Glutton for Punishment (Maulerfiend)",
      "summaries": {
-      "under its weapons": "+1 to Hit if below Starting Strength; also +1 to Wound if Below Half-strength"
+      "under its weapons": "+1 to Hit rolls if below Starting Strength; also +1 to Wound rolls if Below Half-strength"
      },
      "text": "Each time this model makes an attack, if it is below its Starting Strength, add 1 to the **Hit roll**. If this model is also **Below Half-strength**, add 1 to the **Wound roll** as well."
     }
@@ -864,15 +864,15 @@
   "where": "imperial-knights",
   "judgement": {
    "count": 13,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
     {
      "where": "army rule · Code Chivalric",
      "summaries": {
-      "under its weapons": "Quality picked or rolled before the battle: re-roll one Hit and one Wound roll when it shoots or fights (1–2)",
-      "under its profile": "Quality picked or rolled before the battle: +2\" Move (3–4); +2 OC and Leadership improved by 1 (5–6)",
+      "under its weapons": "If your Quality is 1–2 (martial valour): re-roll one Hit roll and one Wound roll each time it shoots or fights",
+      "under its profile": "If your Quality is 3–4 (eager for the challenge): +2\" Move, +1 to Advance and Charge rolls\nIf your Quality is 5–6 (legacy unsullied): +2 OC, Leadership improved by 1",
       "Overview": "Pick or roll a Deed and a Quality at Read Mission Objectives; Deed done: Honoured, +2CP (3CP if rolled)"
      },
      "text": "If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).\nDeed 1–2 · We vow to lay low the tyrant…: At the start of the battle, select one **CHARACTER** model in your opponent’s army. This Deed is completed at the end of a turn if that **CHARACTER** is destroyed.\nDeed 3–4 · We swear to reclaim the realm…: This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.\nDeed 5–6 · We pledge to reap a great tally…: This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).\nQuality 1–2 · …with our martial valour risen over all: Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** and you can re-roll one **Wound roll**.\nQuality 3–4 · …and we are eager for the challenge: Add 2\" to this model’s Move characteristic and add 1 to **Advance** and **Charge rolls** made for this model.\nQuality 5–6 · …yet shall our legacy be unsullied: Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1."
@@ -887,7 +887,7 @@
     {
      "where": "Freeblade Company enhancement · Bringer of Justice",
      "summaries": {
-      "under its weapons": "+2 A and +1 to Hit in melee"
+      "under its weapons": "+2 A and +1 to Hit rolls in melee"
      },
      "text": "**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**."
     },
@@ -915,7 +915,7 @@
     {
      "where": "ability · Aggressive Assault (Knight Errant)",
      "summaries": {
-      "under its weapons": "+1 to Hit vs the closest eligible target"
+      "under its weapons": "+1 to Hit rolls vs the closest eligible target"
      },
      "text": "Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the **Hit roll**."
     },
@@ -936,7 +936,7 @@
     {
      "where": "ability · Macro-extinction Protocols (Cerastus Knight Atrapos)",
      "summaries": {
-      "under its weapons": "+1 to Hit vs MONSTER or VEHICLE; also +1 to Wound if TITANIC or TOWERING"
+      "under its weapons": "+1 to Hit rolls vs MONSTER or VEHICLE; also +1 to Wound rolls if TITANIC or TOWERING"
      },
      "text": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well."
     },
@@ -969,14 +969,14 @@
   "where": "necrons",
   "judgement": {
    "count": 11,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
     {
      "where": "Obeisance Phalanx rule · Worthy Foes",
      "summaries": {
-      "under its weapons": "Pick an enemy each Command phase: NOBLE, LYCHGUARD and TRIARCH get +1 to Wound vs it"
+      "under its weapons": "Pick an enemy each Command phase: NOBLE, LYCHGUARD and TRIARCH get +1 to Wound rolls vs it"
      },
      "text": "In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a **NOBLE**, **LYCHGUARD** or **TRIARCH** unit from your army makes an attack that targets that unit, add 1 to the **Wound roll**."
     },
@@ -1032,7 +1032,8 @@
     {
      "where": "ability · Chittering swarm (Canoptek Scarab Swarms)",
      "summaries": {
-      "under its profile": "Enemies in Engagement Range: −1 OC (min 1); OC 1 within 6\" of a CRYPTEK"
+      "under its profile": "OC 1 within 6\" of a CRYPTEK",
+      "under its profile, on enemy units": "Enemies in Engagement Range: −1 OC (min 1)"
      },
      "text": "While an enemy unit is within **Engagement Range** of this unit, subtract 1 from the Objective Control characteristic of models in that enemy unit (to a minimum of 1). While this unit is within 6\" of one or more friendly **CRYPTEK** models, the Objective Control characteristic of models in this unit is 1."
     },
@@ -1058,7 +1059,7 @@
   "where": "orks",
   "judgement": {
    "count": 28,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
@@ -1158,7 +1159,7 @@
     {
      "where": "ability · Boss’ Ammo Runt (Warboss)",
      "summaries": {
-      "under its weapons": "When it shoots, if it uses this: +1 to Hit with its ranged attacks"
+      "under its weapons": "When it shoots, if it uses this: +1 to Hit rolls with its ranged attacks"
      },
      "text": "In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.\nPlace a Boss’ Ammo Runt token next to the unit, removing it when this ability is used."
     },
@@ -1172,7 +1173,7 @@
     {
      "where": "ability · Clever Know-wotz (Mek)",
      "summaries": {
-      "under its weapons": "Movement phase: an ORKS VEHICLE (not AIRCRAFT/TITANIC) within 3\" of the Mek has +1 to Hit"
+      "under its weapons": "Movement phase: an ORKS VEHICLE (not AIRCRAFT/TITANIC) within 3\" of the Mek has +1 to Hit rolls"
      },
      "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS VEHICLE** model (excluding **AIRCRAFT**/**TITANIC** models) within 3\" of this model:\n- That **VEHICLE** model **heals** D3 wounds.\n- That **VEHICLE** model’s attacks have +1 to **hit rolls** until the start of your next Movement phase."
     },
@@ -1186,14 +1187,14 @@
     {
      "where": "ability · Deff from Above (Deffkoptas)",
      "summaries": {
-      "under its weapons": "If it made an ingress move this turn: +1 to Hit with ranged attacks"
+      "under its weapons": "If it made an ingress move this turn: +1 to Hit rolls with ranged attacks"
      },
      "text": "In your Shooting phase, if this unit made an **ingress move** this turn, this unit’s ranged attacks have +1 to **hit rolls**."
     },
     {
      "where": "ability · Spiteful Power Trip (Killa Kans)",
      "summaries": {
-      "under its weapons": "+1 to Hit vs units with no models of T 7+"
+      "under its weapons": "+1 to Hit rolls vs units with no models of T 7+"
      },
      "text": "This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**."
     },
@@ -1207,7 +1208,7 @@
     {
      "where": "ability · Prophet of da Great Waaagh! (Ghazghkull Thraka)",
      "summaries": {
-      "under its weapons": "+1 to Hit and +1 to Wound in melee within 6\" of Ghazghkull Thraka"
+      "under its weapons": "+1 to Hit rolls and +1 to Wound rolls in melee within 6\" of Ghazghkull Thraka"
      },
      "text": "While a friendly **ORKS** unit is within 6\" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**."
     },
@@ -1242,7 +1243,7 @@
     {
      "where": "ability · Krumpin’ Time (Meganobz)",
      "summaries": {
-      "under its weapons": "Fight phase, if this unit is riled up: +1 to Hit"
+      "under its weapons": "Fight phase, if this unit is riled up: +1 to Hit rolls"
      },
      "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
     },
@@ -1268,29 +1269,29 @@
   "where": "thousand-sons",
   "judgement": {
    "count": 20,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
     {
      "where": "army rule · Cabal of Sorcerers",
      "summaries": {
-      "under its weapons": "Rituals by Psychic test at start of Shooting: Destiny’s Ruin (5) re-roll Hit rolls of 1 vs an enemy within 24\" (all Hit rolls on 10+); Twist of Fate (9) +1 AP vs an enemy within 24\" (+2 on 12+)"
+      "under its weapons": "If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs its target (all Hit rolls on 10+)\nIf Twist of Fate is manifested (9): +1 AP vs its target (+2 on 12+)"
      },
      "text": "If your Army Faction is **THOUSAND SONS**, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.\n**Psychic Test Sequence**\n- **Roll 2D6**\n- **Channel the Warp** (Optional)\n- Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.\n- If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.\n*FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.*\nDestiny’s Ruin (Psychic) · Warp Charge 5: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, re-roll a **Hit roll** of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.\nTemporal Surge (Psychic) · Warp Charge 6: Select one friendly **THOUSAND SONS** or **SCINTILLATING LEGIONS** unit that is not within **Engagement Range** of one or more enemy units and is within 24\" of and **visible** to the manifesting model. That unit can make a **Normal move** of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.\nDoombolt (Psychic) · Warp Charge 7: Select one enemy unit within 24\" of and **visible** to the manifesting model (excluding units with the **Lone Operative** ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 **mortal wounds**. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.\nTwist of Fate (Psychic) · Warp Charge 9: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead."
     },
     {
      "where": "Grand Coven rule · Kindred Sorcery",
      "summaries": {
-      "under its weapons": "Pick one each Command phase, each once per battle: +6\" range for ranged Psychic weapons; +1 to Wound with Psychic weapons; or Psychic weapons gain [DEVASTATING WOUNDS]"
+      "under its weapons": "If Imbued Manifestation: +6\" range for ranged Psychic weapons\nIf Psychic Maelstrom: +1 to Wound rolls with Psychic weapons\nIf Wrath of the Immaterium: Psychic weapons gain [DEVASTATING WOUNDS]"
      },
      "text": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.\nPsychic Maelstrom: Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.\nWrath of the Immaterium: Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability."
     },
     {
      "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
      "summaries": {
-      "under its weapons": "If it sacrifices when it shoots or fights: +1 to Wound, then D3 mortal wounds",
-      "When targeted": "If it sacrifices when targeted: −1 to Wound vs attacks on it, then D3 mortal wounds",
+      "under its weapons": "If it sacrifices when it shoots or fights: +1 to Wound rolls, then D3 mortal wounds",
+      "When targeted": "If it sacrifices when targeted: −1 to Wound rolls vs attacks on it, then D3 mortal wounds",
       "under its profile": "TZAANGORS not Battle-shocked: +1 OC"
      },
      "text": "Each time an enemy unit is selected to shoot or fight and one or more **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** units from your army are selected as a target of one or more of those attacks, each of those **TZEENTCH MUTANT** units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nEach time a **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nKEYWORDS\n**TZAANGORS** units from your army have the **BATTLELINE** keyword, and while such a unit is not **Battle-shocked**, add 1 to the Objective Control characteristic of **TZAANGOR** models in that unit."
@@ -1298,7 +1299,7 @@
     {
      "where": "Warpmeld Pact enhancement · Diamond of Distortion",
      "summaries": {
-      "When targeted": "While the bearer leads: −1 to Hit vs attacks on its unit"
+      "When targeted": "While the bearer leads: −1 to Hit rolls vs attacks on its unit"
      },
      "text": "**TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**."
     },
@@ -1362,14 +1363,14 @@
     {
      "where": "ability · Marked by Fate (Sorcerer in Terminator Armour)",
      "summaries": {
-      "under its weapons": "Pick a visible enemy at start of Shooting: +1 to Hit vs it"
+      "under its weapons": "Pick a visible enemy at start of Shooting: +1 to Hit rolls vs it"
      },
      "text": "At the start of your Shooting phase, select one enemy unit that is **visible** to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**."
     },
     {
      "where": "ability · Rites of Coalescence (Scarab Occult Terminators)",
      "summaries": {
-      "When targeted": "While it has a PSYKER model: −1 to Wound vs attacks on it"
+      "When targeted": "While it has a PSYKER model: −1 to Wound rolls vs attacks on it"
      },
      "text": "While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the **Wound roll**."
     },
@@ -1397,14 +1398,14 @@
     {
      "where": "ability · Binding Tendrils (Exalted Sorcerer on Disc of Tzeentch)",
      "summaries": {
-      "under its profile": "After it shoots: one INFANTRY unit hit by Arcane Fire has −2\" Move and −2 to Charge"
+      "under its profile, on enemy units": "One INFANTRY unit hit by its Arcane Fire: −2\" Move and −2 to Charge rolls"
      },
      "text": "In your Shooting phase, after this model has shot, select one enemy **INFANTRY** unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
     },
     {
      "where": "ability · Bestial Prophet (Tzaangor Shaman)",
      "summaries": {
-      "under its weapons": "While leading: +1 to Hit"
+      "under its weapons": "While leading: +1 to Hit rolls"
      },
      "text": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**."
     },
@@ -1423,14 +1424,14 @@
   "where": "tyranids",
   "judgement": {
    "count": 17,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
     {
      "where": "army rule · Synapse",
      "summaries": {
-      "under its weapons": "In Synapse Range: +1 S"
+      "under its weapons": "In Synapse Range: +1 S in melee"
      },
      "text": "If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6\" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n- Each time that unit takes a **Battle-shock test**, take that test on 3D6 instead of 2D6.\n- Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
     },
@@ -1444,7 +1445,7 @@
     {
      "where": "Crusher Stampede rule · Enraged Behemoths",
      "summaries": {
-      "under its weapons": "TYRANIDS MONSTER: +1 to Hit if below Starting Strength; also +1 to Wound if Below Half-strength",
+      "under its weapons": "TYRANIDS MONSTER: +1 to Hit rolls if below Starting Strength; also +1 to Wound rolls if Below Half-strength",
       "under its profile": "TYRANIDS MONSTER at Starting Strength, not Battle-shocked: +2 OC"
      },
      "text": "Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength, and add 1 to the **Wound roll** as well if that model’s unit is **Below Half-strength**. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding **Battle-shocked** units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit."
@@ -1452,15 +1453,15 @@
     {
      "where": "Crusher Stampede enhancement · Monstrous Nemesis",
      "summaries": {
-      "under its weapons": "+1 to Wound in melee vs MONSTER or VEHICLE"
+      "under its weapons": "+1 to Wound rolls in melee vs MONSTER or VEHICLE"
      },
      "text": "**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**."
     },
     {
      "where": "Invasion Fleet rule · Hyper-adaptations",
      "summaries": {
-      "under its weapons": "Picked at battle start: vs INFANTRY/SWARM [SUSTAINED HITS 1]; vs MONSTER/VEHICLE [LETHAL HITS]; vs CHARACTER crits get [PRECISION]",
-      "Overview": "Picked at battle start: vs INFANTRY/SWARM [SUSTAINED HITS 1]; vs MONSTER/VEHICLE [LETHAL HITS]; vs CHARACTER crits get [PRECISION]"
+      "under its weapons": "If Swarming Instincts: [SUSTAINED HITS 1] vs INFANTRY/SWARM\nIf Hyper-aggression: [LETHAL HITS] vs MONSTER/VEHICLE\nIf Hive Predators: Critical Hits vs CHARACTER get [PRECISION]",
+      "Overview": "Picked at battle start, one of: Swarming Instincts; Hyper-aggression; Hive Predators"
      },
      "text": "At the start of the first battle round, select one of the following Hyper-adaptations to be active for **TYRANIDS** units from your army until the end of the battle:\nSwarming Instincts\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets an **INFANTRY** or **SWARM** unit, that attack has the **[SUSTAINED HITS 1]** ability.\nHyper-aggression\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.\nHive Predators\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **CHARACTER** unit, on a Critical Hit, that attack has the **[PRECISION]** ability."
     },
@@ -1498,7 +1499,7 @@
     {
      "where": "ability · Swallow Whole (The Red Terror)",
      "summaries": {
-      "under its weapons": "vs INFANTRY/MOUNTED/BEASTS: wounds are crits; heals D3+2 per model killed"
+      "under its weapons": "vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed"
      },
      "text": "Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound. Each time an **INFANTRY**, **MOUNTED** or **BEASTS** model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds."
     },
@@ -1519,7 +1520,7 @@
     {
      "where": "ability · Chitinous Horrors (Ripper Swarms)",
      "summaries": {
-      "under its profile": "Enemies in Engagement Range: OC halved"
+      "under its profile, on enemy units": "Enemies in Engagement Range: OC halved"
      },
      "text": "While an enemy unit is within **Engagement Range** of this unit, halve the Objective Control characteristic of models in that enemy unit."
     },
@@ -1533,22 +1534,22 @@
     {
      "where": "ability · Feeding Frenzy (Psychophage)",
      "summaries": {
-      "under its weapons": "+1 to Hit in melee vs targets below Starting Strength; also +1 to Wound if Below Half-strength"
+      "under its weapons": "+1 to Hit rolls in melee vs targets below Starting Strength; also +1 to Wound rolls if Below Half-strength"
      },
      "text": "Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the **Hit roll**. If that target is also **Below Half-strength**, add 1 to the **Wound roll** as well."
     },
     {
      "where": "ability · Psychological Saboteur (Neurolictor)",
      "summaries": {
-      "under its weapons": "+1 to Wound vs Battle-shocked enemies within 12\" of the Neurolictor",
-      "When targeted": "Battle-shocked enemies within 12\" of the Neurolictor: −1 to Hit"
+      "under its weapons": "+1 to Wound rolls vs Battle-shocked enemies within 12\" of the Neurolictor",
+      "When targeted": "Battle-shocked enemies within 12\" of the Neurolictor: −1 to Hit rolls"
      },
      "text": "While an enemy unit is within 12\" of this model, if that unit is **Battle-shocked**:\n- Each time a model in that unit makes an attack, subtract 1 from the **Hit roll**.\n- Each time a friendly **TYRANIDS** model makes an attack that targets that unit, add 1 to the **Wound roll**."
     },
     {
      "where": "ability · Encephalic Diffusion (Maleceptor)",
      "summaries": {
-      "When targeted": "Enemies within 6\": −1 to Hit; also −1 to Wound if they're Below Half-strength"
+      "When targeted": "Enemies within 6\": −1 to Hit rolls; also −1 to Wound rolls if they're Below Half-strength"
      },
      "text": "While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well."
     }
@@ -1560,14 +1561,14 @@
   "where": "ultramarines",
   "judgement": {
    "count": 16,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
     {
      "where": "army rule · Combat Doctrines",
      "summaries": {
-      "under its weapons": "Picked each Command phase, each once per battle: Devastator, ranged [ASSAULT]"
+      "under its weapons": "If the devastator doctrine is active: ranged [ASSAULT]"
      },
      "text": "At the start of your Command phase, you can select one **combat doctrine** listed below. If you do, that **combat doctrine** is active for friendly **ADEPTUS ASTARTES** units with this ability until the start of your next Command phase.\nASSAULT DOCTRINE\nWhen this unit is selected to make an **advance move**, that **advance move** does not prevent this unit from being **eligible to declare a charge**.\nDEVASTATOR DOCTRINE\nThis unit’s ranged attacks have **[ASSAULT]**.\nTACTICAL DOCTRINE\nWhen this unit is selected to make a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to shoot** and **eligible to declare a charge**.\nUnless otherwise stated:\n- You can only select each **combat doctrine** once per battle.\n- Only one **combat doctrine** can be active for each unit. If a rule makes a **combat doctrine** active for a unit, any **combat doctrine** previously active for that unit is no longer active for that unit."
     },
@@ -1581,7 +1582,7 @@
     {
      "where": "Deathwatch Support rule · Mission Tactics",
      "summaries": {
-      "under its weapons": "KILL TEAM: [SUSTAINED HITS 1] with the devastator doctrine; [LETHAL HITS] with the tactical doctrine; [PRECISION] vs targets within 9\" with the assault doctrine"
+      "under its weapons": "If the devastator doctrine is active: [SUSTAINED HITS 1]\nIf the tactical doctrine is active: [LETHAL HITS]\nIf the assault doctrine is active: [PRECISION] vs targets within 9\""
      },
      "text": "Friendly **KILL TEAM** units with this ability have the following abilities:\n**Furor Tactics**\nIf the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.\n**Malleus Tactics**\nIf the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.\n**Purgatus Tactics**\nIf the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9\" of this unit have **[PRECISION]**.\nDEATHWATCH ALLIES\nYou can include **DEATHWATCH** units in your army, even though they do not have the same Chapter faction keyword as other units in your army. The combined points value of such units cannot exceed 500 points.\nWhen mustering your army, unless otherwise stated, you cannot select a **DEATHWATCH** model to be your **WARLORD**. In addition **KILL TEAM** units can only contain **enhancements** taken from this detachment.\nThis an exception to the Space Marine Chapters Army Rules."
     },
@@ -1616,15 +1617,15 @@
     {
      "where": "ability · Bladeguard (Bladeguard Veteran Squad)",
      "summaries": {
-      "under its weapons": "Fight phase, if picked: +1 to Hit in melee",
-      "When targeted": "Fight phase, if picked: −1 to Hit vs attacks on it"
+      "under its weapons": "Fight phase, if picked: +1 to Hit rolls in melee",
+      "When targeted": "Fight phase, if picked: −1 to Hit rolls vs attacks on it"
      },
      "text": "In the Fight phase, when this unit is **selected to fight** or when an enemy unit targets this unit, you can select one of the following:\n- This unit’s melee attacks have +1 to **hit rolls**.\n- Or: Attacks that target this unit have -1 to **hit rolls**."
     },
     {
      "where": "ability · Shrouding (Librarian in Phobos Armour)",
      "summaries": {
-      "When targeted": "When targeted, if not Battle-shocked, psychic roll (Battle-shocked on a 1): −1 to Hit vs attacks on it"
+      "When targeted": "When targeted, if not Battle-shocked, psychic roll (Battle-shocked on a 1): −1 to Hit rolls vs attacks on it"
      },
      "text": "When an enemy unit targets this unit, if this unit is not **battle-shocked**, you can make a psychic roll for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- Attacks that target this unit have -1 to **hit rolls** until the end of the phase."
     },
@@ -1659,7 +1660,7 @@
     {
      "where": "ability · Terror Troops (Reiver Squad)",
      "summaries": {
-      "under its profile": "Enemy models within 3\": −1 OC"
+      "under its profile, on enemy units": "Enemy models within 3\": −1 OC"
      },
      "text": "While an enemy model is within 3\" of this unit, that enemy model has -1 **OC**."
     },
@@ -1685,15 +1686,15 @@
   "where": "world-eaters",
   "judgement": {
    "count": 23,
-   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added."
+   "check": "Each placement summary against its GW text: only the part for that place, numbers, conditions, triggers, limits, nothing added; named options a line each."
   },
   "source": {
    "items": [
     {
      "where": "army rule · Blessings of Khorne",
      "summaries": {
-      "under its weapons": "Picked each round by a Blessings roll: melee [SUSTAINED HITS 1] (double 4+ or triple 1+); melee [LETHAL HITS] (double 5+ or triple 2+); melee [DEVASTATING WOUNDS] vs INFANTRY (double 6 or triple 3+)",
-      "Overview": "Start of each round, roll 8D6 to activate two: +1 to Charge (double 1+); 6\" Pile-in and Consolidate (double 2+); fight on death on a 4+ (double 3+); melee [SUSTAINED HITS 1] (double 4+ or triple 1+); melee [LETHAL HITS] (double 5+ or triple 2+); melee [DEVASTATING WOUNDS] vs INFANTRY (double 6 or triple 3+)"
+      "under its weapons": "If Martial Excellence is active: melee [SUSTAINED HITS 1]\nIf Warp Blades is active: [LETHAL HITS]\nIf Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY",
+      "Overview": "Start of each round, roll 8D6 to activate two Blessings: Unbridled Bloodlust (double 1+); Rage-fuelled Invigoration (double 2+); Total Carnage (double 3+); Martial Excellence (double 4+ or triple 1+); Warp Blades (double 5+ or triple 2+); Decapitating Strikes (double 6 or triple 3+)"
      },
      "text": "If your Army Faction is **WORLD EATERS**, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\n*Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.*\n*First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.*\n*They then use the two 2s to activate Unbridled Bloodlust.*\n*Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.*\nUnbridled Bloodlust · double 1+: This unit has +1 to **charge rolls**.\nRage-fuelled Invigoration · double 2+: Each time a model in this unit makes a Pile-in or **Consolidation move**, it can move up to 6\" instead of up to 3\".\nTotal Carnage · double 3+: Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.\nMartial Excellence · double 4+ or triple 1+: Melee weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability.\nWarp Blades · double 5+ or triple 2+: Melee weapons equipped by models in this unit have the **[LETHAL HITS]** ability.\nDecapitating Strikes · double 6 or triple 3+: Each time a model in this unit makes a melee attack that targets an **INFANTRY** unit, that attack has the **[DEVASTATING WOUNDS]** ability."
     },
@@ -1707,8 +1708,8 @@
     {
      "where": "Khorne Daemonkin rule · Blood Tithe",
      "summaries": {
-      "under its weapons": "Bought with BTP for the battle: BLOOD LEGIONS melee [LANCE] (3BTP)",
-      "When targeted": "Bought with BTP for the battle: Feel No Pain 5+ vs Psychic Attacks and mortal wounds (2BTP); BLOOD LEGIONS 4+ invulnerable save (4BTP)"
+      "under its weapons": "If Daemonic Rage is active: BLOOD LEGIONS melee [LANCE]",
+      "When targeted": "If Enraged Abjuration is active: Feel No Pain 5+ vs Psychic Attacks and mortal wounds\nIf Boon of Blood is active: BLOOD LEGIONS 4+ invulnerable save"
      },
      "text": "Each time a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle:\n- **Enraged Abjuration [2BTP]**\n**BLOOD LEGIONS** and **WORLD EATERS** models from your army have the **Feel No Pain 5+** ability against **Psychic Attacks** and **mortal wounds**.\n- **Daemonic Rage [3BTP]**\nMelee weapons equipped by **BLOOD LEGIONS** units from your army have the **[lance]** ability.\n- **Boon of Blood [4BTP]**\n**BLOOD LEGIONS** units from your army have a 4+ invulnerable save.\n- **Might of Khorne [5BTP]**\n**BLOOD LEGIONS** units from your army gain the Blessings of Khorne ability.\nRESTRICTIONS\nYou can include the **BLOOD LEGIONS** units in your army. The combined points cost of such units you can include in your army is:\n- **Incursion:** Up to 500 pts\n- **Strike Force:** Up to 1000 pts\n- **Onslaught:** Up to 1500 pts\nNo **BLOOD LEGIONS** model from your army can be your **WARLORD**."
     },
@@ -1785,7 +1786,7 @@
     {
      "where": "ability · Beacons of Rage (Eightbound)",
      "summaries": {
-      "under its weapons": "+1 to Hit in melee vs non-MONSTER/VEHICLE within 6\" of the Eightbound; also +1 to Wound if the target is Below Half-strength"
+      "under its weapons": "+1 to Hit rolls in melee vs non-MONSTER/VEHICLE within 6\" of the Eightbound; also +1 to Wound rolls if the target is Below Half-strength"
      },
      "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the **Hit roll**. If that attack targets a unit (excluding **MONSTERS** and **VEHICLES**) that is **Below Half-strength**, add 1 to the **Wound roll** as well."
     },
@@ -1834,7 +1835,7 @@
     {
      "where": "ability · Daemon Lord of Khorne (Bloodthirster)",
      "summaries": {
-      "under its weapons": "+1 to Hit in melee within 6\" of Bloodthirster"
+      "under its weapons": "+1 to Hit rolls in melee within 6\" of Bloodthirster"
      },
      "text": "While a friendly **BLOOD LEGIONS** unit is within 6\" of this model, each time a model in that unit makes a melee attack, add 1 to the **Hit roll**."
     },
@@ -1873,7 +1874,7 @@
     {
      "where": "Golden Light of the Moiraides",
      "old": "Your unit is selected to make an ingress move: until the start of your next turn, attacks that target it have -1 to hit rolls and enemy units cannot target it with snap shooting attacks.",
-     "new": "After an ingress move: −1 to Hit vs it; no snap shooting at it",
+     "new": "After an ingress move: −1 to Hit rolls vs it; no snap shooting at it",
      "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make an **ingress move**.\nTARGET: That **ADEPTUS CUSTODES** Unit.\nEFFECT: Until the start of your next turn:\n- Attacks that target your unit have -1 to **hit rolls**.\n- Enemy units cannot target your unit with **snap shooting** attacks."
     },
     {
@@ -2281,7 +2282,7 @@
     {
      "where": "Incorporeal Entities",
      "old": "Your opponent’s Shooting phase, an enemy unit targets your LEGIONES DAEMONICA BATTLELINE unit: ranged attacks that target it with a S greater than its T have -1 to wound rolls.",
-     "new": "When LEGIONES DAEMONICA BATTLELINE is shot: −1 to Wound vs ranged attacks with S greater than its T",
+     "new": "When LEGIONES DAEMONICA BATTLELINE is shot: −1 to Wound rolls vs ranged attacks with S greater than its T",
      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **LEGIONES DAEMONICA BATTLELINE** unit.\nTARGET: That **LEGIONES DAEMONICA BATTLELINE** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**."
     }
    ]
@@ -2485,7 +2486,7 @@
     {
      "where": "Undying Hatred",
      "old": "Your opponent’s Shooting phase, an enemy unit targets your HAVOCS/OBLITERATORS unit: attacks that target your unit with a S greater than its T have -1 to the wound roll.",
-     "new": "When HAVOCS/OBLITERATORS are shot: −1 to Wound vs attacks with S greater than its T",
+     "new": "When HAVOCS/OBLITERATORS are shot: −1 to Wound rolls vs attacks with S greater than its T",
      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **HAVOCS**/**OBLITERATORS** unit.\nTARGET: That **HAVOCS/OBLITERATORS** unit.\nEFFECT: Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**."
     }
    ]
@@ -2641,13 +2642,13 @@
     {
      "where": "Point-Blank Barrage",
      "old": "Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.",
-     "new": "Blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit; unmodified 1 to Hit with Blast there: 1 mortal wound to your unit",
+     "new": "Blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit",
      "text": "WHEN: Your Shooting phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within **Engagement Range** of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 **mortal wound** after all of its attacks have been resolved."
     },
     {
      "where": "Survivor of Strife",
      "old": "Until the end of the phase, attacks against your unit whose S is greater than its T have -1 to the wound roll.",
-     "new": "When shot: −1 to Wound vs attacks with S greater than its T",
+     "new": "When shot: −1 to Wound rolls vs attacks with S greater than its T",
      "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the **Wound roll**."
     },
     {
@@ -2761,7 +2762,7 @@
     {
      "where": "Hulking Brutes",
      "old": "Ranged attacks that target your unit with S greater than its T have -1 to wound rolls; for +1CP, all ranged attacks that target it do.",
-     "new": "When shot: −1 to Wound vs ranged attacks with S greater than its T; +1CP: −1 to Wound vs all ranged attacks",
+     "new": "When shot: −1 to Wound rolls vs ranged attacks with S greater than its T; +1CP: −1 to Wound rolls vs all ranged attacks",
      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
     }
    ]
@@ -2821,7 +2822,7 @@
     {
      "where": "Grot Shields",
      "old": "An enemy unit targets an ORKS INFANTRY unit (excluding GRETCHIN units) within 3\" of your GRETCHIN unit: if a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound.",
-     "new": "When an ORKS INFANTRY unit is shot: a hit on it ends that attack and a GRETCHIN unit within 3\" takes 1 mortal wound",
+     "new": "each hit on ORKS INFANTRY within 3\" becomes 1 mortal wound on the Gretchin",
      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
     }
    ]
@@ -2839,7 +2840,7 @@
     {
      "where": "Kustom Dakka",
      "old": "Your unit’s ranged attacks have +1 to wound rolls against a unit (excluding MONSTER/VEHICLE units).",
-     "new": "ORKS INFANTRY: +1 to Wound vs non-MONSTER/VEHICLE with ranged attacks",
+     "new": "ORKS INFANTRY: +1 to Wound rolls vs non-MONSTER/VEHICLE with ranged attacks",
      "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks that target a unit (excluding **MONSTER**/**VEHICLE** units) have +1 to **wound rolls**."
     },
     {
@@ -2869,7 +2870,7 @@
     {
      "where": "Drive-by Bustin’",
      "old": "Your unit’s ranged attacks with weapons selected for Firing Deck have +1 to hit rolls.",
-     "new": "ORKS TRANSPORT: +1 to Hit with its Firing Deck weapons",
+     "new": "ORKS TRANSPORT: +1 to Hit rolls with its Firing Deck weapons",
      "text": "WHEN: Your Shooting phase, when a friendly **ORKS TRANSPORT** unit is **selected to shoot**.\nTARGET: That **ORKS TRANSPORT** unit.\nEFFECT: Your unit’s ranged attacks with weapons selected for the **Firing Deck** ability have +1 to **hit rolls**."
     },
     {
@@ -3025,7 +3026,7 @@
     {
      "where": "Broodguard Impulse",
      "old": "Any phase, your HARVESTER unit just destroyed: until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that destroyed it, +1 to the Wound roll.",
-     "new": "A HARVESTER unit is destroyed: +1 to Wound vs the unit that killed it for the rest of the battle",
+     "new": "A HARVESTER unit is destroyed: +1 to Wound rolls vs the unit that killed it for the rest of the battle",
      "text": "WHEN: Any phase.\nTARGET: One **HARVESTER** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.\nEFFECT: Until the end of the battle, each time a friendly **TYRANIDS** model makes an attack that targets the enemy unit that just destroyed your **HARVESTER** unit, add 1 to the **Wound roll**."
     },
     {
@@ -3085,7 +3086,7 @@
     {
      "where": "Savage Roar",
      "old": "An enemy unit has selected your unit as a target: it takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.",
-     "new": "TYRANIDS MONSTER, when targeted: the attacker takes a Battle-shock test and has −1 to Hit vs it; also −1 to Wound if it fails",
+     "new": "TYRANIDS MONSTER, when targeted: the attacker takes a Battle-shock test and has −1 to Hit rolls vs it; also −1 to Wound rolls if it fails",
      "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS MONSTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: That enemy unit must take a **Battle-shock test** and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the **Hit roll**. If that Battle-shock test was failed, subtract 1 from the **Wound roll** as well."
     },
     {
@@ -3349,7 +3350,7 @@
     {
      "where": "A Trophy for the Throne",
      "old": "Your unit’s attacks against a MONSTER/VEHICLE unit have +1 to wound rolls.",
-     "new": "TERMINATOR SQUAD: +1 to Wound vs MONSTER/VEHICLE",
+     "new": "TERMINATOR SQUAD: +1 to Wound rolls vs MONSTER/VEHICLE",
      "text": "WHEN: Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Your unit’s attacks that target a **MONSTER/VEHICLE** unit have +1 to **wound rolls**."
     },
     {
@@ -3441,7 +3442,7 @@
  },
  {
   "kind": "review-ui-code",
-  "where": "app.html SUM_COL, srcShort(S, place), sumMode, lineKey, sumHtml, ncHtml, modGroupLines, stratModLines, weaponBlock (varc), weaponTable, unitWeapons, defLineOf/defenceItems (sum, blanket, dup), defLine, statShown, statHtml, statLines (giver), screenPregame (ovSum, abLine, ruleLine), dmgBand/gwPlain, useSentence/useLine/weaponChoice, fnCond (targetSelected), modTarget/modFrom; verify/tables.js FINGERPRINT (sumAtk..sumOv), SUM_COLS; verify/lines.js L5 condWords, LN, LG, LB; verify/render.js ai-summary (placement), targeted-items (dup), guard-shown, all-attacks-block, riled-assault; verify/helpers.js; verify/from-json.js; verify/columns.json; docs/tables.md, docs/summaries.md",
+  "where": "app.html SUM_COL, srcShort(S, place), sumLines, sumMode, lineKey, sumHtml (leader), ncHtml, modGroupLines, stratModLines, weaponBlock (varc), weaponTable, unitWeapons, defLineOf/defenceItems (sum, blanket, dup, leader), defLines, defLine, statShown (foe), statHtml, statLines (giver, foe), commonLines/unitLinesOf/allUnitsBlock/isCommon*, screenUnits, screenPregame (ovSum, abLine, ruleLine), dmgBand/gwPlain, useSentence/useLine/weaponChoice, fnCond (targetSelected), modTarget/modFrom; verify/tables.js FINGERPRINT, SUM_COLS; verify/lines.js L5 condWords, LN, LG, LB; verify/render.js ai-summary (placement, lines), targeted-items, guard-shown, all-attacks-block, riled-assault; verify/helpers.js; verify/from-json.js; verify/columns.json; docs/tables.md, docs/summaries.md",
   "judgement": {
    "check": "The layout is program output; the app writes no summary text (render ai-summary); Damage numbers unchanged."
   }
