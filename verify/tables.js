@@ -1254,7 +1254,10 @@ function screenReads(html, opts){
   const decl = new Map(); for(let i = 0; i < lines.length; i++){ const m = START.exec(lines[i]); if(!m) continue; let j = i + 1; while(j < lines.length && !ENDS.test(lines[j])) j++; decl.set(m[1] || m[2], lines.slice(i, j).join('\n')); }
   // (and the page's other scripts, <script src> of this folder: the code the screens call into, builder.js and import.js's list import,
   // calc.js, effects.js; each read whole, all of it reached; not data.js and verified.js, which are data)
-  const PAGE = opts.page != null ? opts.page : [...html.matchAll(/<script src="([\w./-]+\.js)"><\/script>/g)].map(m => m[1]).filter(f => !['data.js', 'verified.js'].includes(f) && fs.existsSync(path.join(ROOT, f)));
+  // (every <script> tag's src, in any form: defer, async, type="module", single quotes, a query or hash, "./"; and every import('./x.js')
+  // of the page's code and of the scripts it loads, its name a string literal; a local one the scan cannot read is missed: the gate fails)
+  const missed = [];
+  const PAGE = opts.page != null ? opts.page : pageScripts(html, opts.files, missed);
   for(const f of PAGE) decl.set('@' + f, typeof f === 'string' && opts.files && opts.files[f] != null ? opts.files[f] : fs.readFileSync(path.join(ROOT, f), 'utf8'));
   const uncomment = x => x.replace(/\/\*[\s\S]*?\*\/|\/\/[^\n]*/g, ' ');
   const STR = /'(?:[^'\\\n]|\\.)*'|"(?:[^"\\\n]|\\.)*"/g;
@@ -1271,7 +1274,95 @@ function screenReads(html, opts){
     for(const m of c.matchAll(/\{([^{}()]*)\}\s*(?:=(?![=>])|\)\s*=>|\s+of\b|,)/g)) for(const x of m[1].split(',')){ const k = /^\s*(\.\.\.)?\s*([A-Za-z_$][\w$]*)/.exec(x); if(k && !k[1]) props.add(k[2]); }
     for(const site of wholeReads(c)){ whole.push(n + ': ' + site.text); if(/^(?:D|WH_DATA|window\.WH_DATA)$/.test(site.of)) wholeD = true; }
     for(const id of new Set(c.replace(/(?<!\.)\.\s*[A-Za-z_$][\w$]*/g, ' ').replace(/[A-Za-z_$][\w$]*:(?!:)/g, ' ').match(/[A-Za-z_$][\w$]*/g))) if(decl.has(id) && !need.has(id)) todo.push(id); }
-  return { fns:need, props, whole, wholeD };
+  return { fns:need, props, whole, wholeD, missed };
+}
+// the page's own scripts (this folder's, not data.js and verified.js, which are data): their names, as the page loads them; one named but
+// not found, or a tag whose src is no plain name, is pushed to missed (its tag or call, said)
+// the vendor/ files sw.js's CORE lists (the bundled third-party SDK): the only files of this folder the scan does not read
+let VENDOR_SET = null;
+const VENDOR = () => VENDOR_SET || (VENDOR_SET = (() => { const t = fs.readFileSync(path.join(ROOT, 'sw.js'), 'utf8'), core = /\bconst\s+CORE\s*=\s*\[([^\]]*)\]/.exec(t);
+  return new Set(core ? [...core[1].matchAll(/['"](?:\.\/)?(vendor\/[^'"]+)['"]/g)].map(m => m[1]) : []); })());
+function pageScripts(html, files, missed){
+  const out = [], seen = new Set(), has = f => (files && files[f] != null) || fs.existsSync(path.join(ROOT, f));
+  const local = (raw, how) => {
+    if(/^(?:[a-z][\w+.-]*:|\/\/)/i.test(raw)) return;   // (another site's, or data:)
+    const f = path.posix.normalize(raw.replace(/[?#].*$/, '').replace(/^\.\//, ''));
+    if(!f || f.startsWith('..') || f.startsWith('/')){ missed.push(how + ' (not a file of this folder)'); return; }
+    if(['data.js', 'verified.js'].includes(f) || seen.has(f)) return;
+    if(VENDOR().has(f)) return;   // (a third-party library sw.js's CORE lists under vendor/, the bundled SDK: no code of the app's, not read; any other vendor/ file is read)
+    seen.add(f);
+    if(!has(f)){ missed.push(how + ' (' + f + ' not found)'); return; }
+    out.push(f); };
+  const dyn = (code, where) => { for(const m of code.replace(/\/\*[\s\S]*?\*\/|(^|[^:'"\\])\/\/[^\n]*/g, '$1').matchAll(/\bimport\s*\(\s*(?:(['"`])([^'"`$]+)\1|([^)]*))/g)){
+      if(m[2] != null){ if(/\.m?js(?:[?#]|$)/.test(m[2])) local(m[2], where + ' import(' + m[1] + m[2] + m[1] + ')'); }
+      else missed.push(where + ' import(' + String(m[3]).slice(0, 40) + ') (its name is no string literal)'); } };
+  // (a module's static import / export … from, and import './x.js': in an inline <script type="module"> and in a module the page loads;
+  // and a script element made in code, document.createElement('script'), its src tied to that element: X = document.createElement('script')
+  // then X.src = '<literal>' / X.setAttribute('src', '<literal>') (every src X is given, each a literal, read), or
+  // Object.assign(document.createElement('script'), { src:'<literal>' }) as that call's own argument; anything else is missed: no src set
+  // on X, a src on X that is no literal, a script element made any other way (a src set on another element is not its src))
+  const LIT = String.raw`(['"\`])([^'"\`$\\\n]*)\1(?=\s*(?:[;,)}\n]|$))`;
+  const stat = (code, where) => { const c = code.replace(/\/\*[\s\S]*?\*\/|(^|[^:'"\\])\/\/[^\n]*/g, '$1');
+    for(const m of c.matchAll(/(?:^|[;\n{}])\s*(?:import|export)\s+(?:[\w$*{}\s,]+?\s+from\s+)?(['"])([^'"]+)\1/g)) local(m[2], where + ' import ' + m[1] + m[2] + m[1]);
+    const CE = String.raw`document\s*\.\s*createElement\(\s*(?:'script'|"script"|\`script\`)\s*\)`, how = where + ' createElement(\'script\')', done = new Set();
+    for(const m of c.matchAll(new RegExp(String.raw`\bObject\.assign\(\s*` + CE + String.raw`\s*,\s*\{([^{}]*)\}\s*\)`, 'g'))){
+      done.add(m.index + m[0].indexOf('document'));
+      const sm = new RegExp(String.raw`(?:^|,)\s*(?:src|'src'|"src")\s*:\s*` + LIT).exec(m[1]);
+      if(sm) local(sm[2], how + ' src ' + sm[2]); else missed.push(how + ' in Object.assign (its src is no string literal of that call\'s own argument)'); }
+    for(const m of c.matchAll(new RegExp(String.raw`(?:\b(?:const|let|var)\s+)?([A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*)*)\s*=\s*` + CE, 'g'))){
+      done.add(m.index + m[0].indexOf('document'));
+      const X = m[1].replace(/[.$]/g, '\\$&'), sets = [...c.matchAll(new RegExp(String.raw`(?<![\w$.])` + X + String.raw`\s*(?:\.\s*src\s*=(?!=)|\[\s*['"]src['"]\s*\]\s*=(?!=)|\.\s*setAttribute\(\s*['"]src['"]\s*,)`, 'g'))];
+      if(!sets.length){ missed.push(how + ' ' + m[1] + ' (no src set on it)'); continue; }
+      for(const x of sets){ const v = new RegExp('^\\s*' + LIT).exec(c.slice(x.index + x[0].length)), ok = v && (/setAttribute/.test(x[0]) ? /^\s*\)/.test(c.slice(x.index + x[0].length + v[0].length)) : true);
+        if(ok) local(v[2], how + ' ' + m[1] + '.src ' + v[2]); else missed.push(how + ' ' + m[1] + ' (a src set on it is no string literal)'); } }
+    for(const m of c.matchAll(/\b(?:document\s*\.\s*)?createElement\(\s*(['"`])script\1\s*\)/gi)) if(!done.has(m.index)) missed.push(how + ' (made where its src cannot be tied to it)'); };
+  for(const m of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) if(!/\bsrc\s*=/i.test(m[1])) stat(m[2], 'app.html inline script');
+  for(const m of html.matchAll(/<script\b([^>]*)>/gi)){
+    const at = m[1]; if(!/\bsrc\s*=/i.test(at)) continue;
+    const x = /\bsrc\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'>]+))/i.exec(at);
+    if(!x || /\$\{|<%|\{\{/.test(x[1] ?? x[2] ?? x[3] ?? '')){ missed.push('<script' + at + '> (its src is no plain name)'); continue; }
+    local(x[1] ?? x[2] ?? x[3], '<script' + at + '>'); }
+  dyn(html, 'app.html');
+  for(let k = 0; k < out.length; k++){ const f = out[k], code = files && files[f] != null ? files[f] : fs.readFileSync(path.join(ROOT, f), 'utf8'); dyn(code, f); stat(code, f); }
+  return out;
+}
+// the page-script scan's own fixtures: [the page's script tags and code, the scripts read, how many missed]
+const PAGE_FIXTURES = [
+  ['<script src="builder.js"></script>', 'builder.js', 0], ['<script src="./builder.js"></script>', 'builder.js', 0],
+  ['<script defer src="builder.js"></script>', 'builder.js', 0], ['<script src="builder.js" defer></script>', 'builder.js', 0],
+  ['<script src="builder.js?v=3"></script>', 'builder.js', 0], ['<script type="module" src="builder.js"></script>', 'builder.js', 0],
+  ["<script src='builder.js'></script>", 'builder.js', 0], ["<script>\nconst m = () => import('./builder.js' + (B ? '?v=' + B : ''));\n</script>", 'builder.js', 0],
+  ['<script src="https://example.com/x.js"></script><script src="data.js"></script>', '', 0],
+  ['<script src="no-such-file.js"></script>', '', 1], ['<script>\nimport(name);\n</script>', '', 1],
+  ['<script type="module">\nimport \'./builder.js\';\n</script>', 'builder.js', 0], ['<script type="module">\nimport { build } from "./builder.js";\n</script>', 'builder.js', 0],
+  ["<script>\nconst s = document.createElement('script'); s.src = 'builder.js'; document.head.appendChild(s);\n</script>", 'builder.js', 0],
+  ["<script>\nconst s = document.createElement('script'); s.src = NAME; document.head.appendChild(s);\n</script>", '', 1],
+  ["<script>\ndocument.head.appendChild(Object.assign(document.createElement('script'), { src:'builder.js' }));\n</script>", 'builder.js', 0],
+  ["<script>\nconst s = document.createElement('script'); s.setAttribute('src', 'builder.js'); document.head.appendChild(s);\n</script>", 'builder.js', 0],
+  // (a src set on another element is not the script's: the icon's, then the script's own made in code)
+  ["<script>\nconst cs = document.createElement('script'); const ic = new Image(); ic.src = 'icon-192.png'; cs.src = ['calc', 'js'].join('.'); document.head.appendChild(cs);\n</script>", '', 1],
+  ["<script>\nconst s = document.createElement('script'); other.src = 'builder.js'; s.src = NAME; document.head.appendChild(s);\n</script>", '', 1],
+  ["<script>\nconst s = document.createElement('script'); s.src = 'builder' + '.js'; document.head.appendChild(s);\n</script>", '', 1],
+  ["<script>\nconst s = document.createElement('script'); s.src = 'builder.js' + Q; document.head.appendChild(s);\n</script>", '', 1],
+  ["<script>\nconst s = document.createElement('script'); s.setAttribute('src', 'builder.js', Q); document.head.appendChild(s);\n</script>", '', 1],
+  ["<script>\nconst s = document.createElement('script'); s.src = 'builder.js'; cs.src = 'calc.js'; document.head.appendChild(s);\n</script>", 'builder.js', 0],
+  ["<script>\ndocument.head.appendChild(Object.assign(document.createElement('script'), opts, { src:'builder.js' }));\n</script>", '', 1],
+  ["<script>\nconst o = { src:'builder.js' }; document.head.appendChild(Object.assign(document.createElement('script'), o));\n</script>", '', 1],
+  ["<script>\ndocument.head.appendChild(document.createElement('script')).src = 'builder.js';\n</script>", '', 1],
+  ["<script>\nconst s = document.createElement('script'); document.head.appendChild(s);\n</script>", '', 1],
+  ["<script>\ndocument.head.appendChild(Object.assign(document.createElement('script'), { async:true }));\n</script>", '', 1],
+  ["<script>\ndocument.head.appendChild(Object.assign(document.createElement('script'), { src:NAME }));\n</script>", '', 1],
+  // (vendor/: only the files sw.js's CORE lists are not read)
+  ['<script type="module">\nimport { Anthropic } from "./vendor/anthropic-sdk-0.131.0.mjs";\n</script>', '', 0],
+  ['<script type="module">\nimport { x } from "./vendor/lib.mjs";\n</script>', '', 1],
+  // (a module the page loads, read in its turn: its static import, its script elements)
+  ['<script type="module" src="m.js"></script>', 'm.js,builder.js', 0, { 'm.js':"import './builder.js';", 'builder.js':'' }],
+  ['<script type="module" src="m.js"></script>', 'm.js', 1, { 'm.js':"const s = document.createElement('script'); s.src = NAME; document.head.appendChild(s);" }]];
+function pageFixtures(){
+  const out = [];
+  for(const [html, want, nMissed, files] of PAGE_FIXTURES){ const missed = [], got = pageScripts(html, files || null, missed).join(',');
+    if(got !== want || missed.length !== nMissed) out.push('page-script fixture ' + html.replace(/\n/g, ' ').slice(0, 80) + ': reads ' + (got || 'none') + ', ' + missed.length + ' missed (want ' + (want || 'none') + ', ' + nMissed + ')'); }
+  return out;
 }
 // the reads in code c (strings blanked) that name no column: [{ text, of }] (of: the object read, when it is a plain name)
 function wholeReads(c){
@@ -1297,28 +1388,60 @@ function wholeReads(c){
 }
 // the tables of data.js as the app has them (D.key) and how their rows are: { NAME: { key, positional } } (positional: rows that are not
 // objects, read by position: an array's, a value's, a string's)
-function dataTables(src){
-  const out = {}, at = src.lastIndexOf('\nreturn {');
-  if(at < 0) return out;
-  // (the object's top-level members, brackets and strings balanced: a member may be a function, resolve:function(a){ … })
-  const members = []; let depth = 0, cur = '', q = null;
+const dataTables = src => returnMembers(src).tables;
+// data.js's return line, member by member: { tables (as dataTables), unknown:[a member that is neither a table nor a function, said] }.
+// Each member is one of three forms, or unknown (the gate fails on it: tables.js reads no table it does not know): a constant, key:NAME; a
+// call over one, key:fn(NAME, …) (armies:resolveArmies(ARMIES, …)); a function, key:function(…){ … } (resolve), no table. NAME must be a
+// top-level constant of data.js.
+function returnMembers(src){
+  const out = {}, unknown = [], at = src.lastIndexOf('\nreturn {');
+  if(at < 0) return { tables:out, unknown:['no return line ("\\nreturn {")'] };
+  // (the object's top-level members, brackets, strings and regular expression literals balanced: a member may be a function,
+  // resolve:function(a){ … }, holding a quote in a regular expression)
+  const members = []; let depth = 0, cur = '', q = null, ended = false;
+  // (a "/" opens a regular expression after an operator, a bracket or a keyword, not after a value: a / b)
+  const regexAt = () => { const t = cur.replace(/\s+$/, ''); return !t || /[(,=:[!&|?{};+\-*%<>~^]$/.test(t) || /(?:^|[^\w$])(?:return|typeof|case|do|else|in|of|void|delete|throw|new|yield|await)$/.test(t); };
   for(let i = at + '\nreturn {'.length; i < src.length; i++){
     const ch = src[i];
     if(q){ cur += ch; if(ch === '\\'){ cur += src[++i]; } else if(ch === q) q = null; continue; }
     if(ch === '\'' || ch === '"' || ch === '`'){ q = ch; cur += ch; continue; }
+    if(ch === '/' && src[i + 1] === '/'){ const e = src.indexOf('\n', i); i = e < 0 ? src.length : e - 1; continue; }
+    if(ch === '/' && src[i + 1] === '*'){ const e = src.indexOf('*/', i + 2); i = e < 0 ? src.length : e + 1; continue; }
+    if(ch === '/' && regexAt()){ let cls = false, j = i + 1; for(; j < src.length && src[j] !== '\n'; j++){ const c = src[j]; if(c === '\\'){ j++; continue; } if(c === '[') cls = true; else if(c === ']') cls = false; else if(c === '/' && !cls) break; }
+      cur += src.slice(i, j + 1); i = j; continue; }
     if('([{'.includes(ch)) depth++;
-    if(')]}'.includes(ch)){ if(!depth){ members.push(cur); break; } depth--; }
+    if(')]}'.includes(ch)){ if(!depth){ members.push(cur); ended = true; break; } depth--; }
     if(ch === ',' && !depth){ members.push(cur); cur = ''; continue; }
     cur += ch;
   }
+  if(!ended) unknown.push('the return line does not close');
   for(const m of members){
-    // (a table: a constant, NAME, or a call over one, resolveArmies(ARMIES, …); a function member, resolve, is no table)
-    const x = /^\s*([\w$]+)\s*:\s*(?:([A-Z][A-Z0-9_]*)|[\w$]+\(\s*([A-Z][A-Z0-9_]*)\b[^]*\))\s*$/.exec(m); if(!x) continue;
-    const key = x[1], name = x[2] || x[3]; if(out[name]) continue;
-    const c = constant(src, name); if(!c) continue;
+    if(!m.trim()) continue;
+    // (a function member is no table, by design, whatever it returns: resolve:function(a){ … }; key:function(){ return ARMIES; } is no
+    // second key over ARMIES either: the app calls it, and its result is no table the screens read by D.key)
+    if(/^\s*[\w$]+\s*:\s*function\b[^]*\}\s*$/.test(m)) continue;
+    // (a table: a constant, NAME, or a call over one, resolveArmies(ARMIES, …))
+    const x = /^\s*([\w$]+)\s*:\s*(?:([A-Z][A-Z0-9_]*)|[\w$]+\(\s*([A-Z][A-Z0-9_]*)\b[^]*\))\s*$/.exec(m);
+    if(!x){ unknown.push(m.trim().slice(0, 80)); continue; }
+    // (one key per constant: a second key over one already listed, n:ARMIES or units:pick(ARMIES), is unknown, as tables.js models one)
+    const key = x[1], name = x[2] || x[3]; if(out[name]){ unknown.push(m.trim().slice(0, 80) + ' (a second key over ' + name + ', already ' + out[name].key + ')'); continue; }
+    const c = constant(src, name); if(!c){ unknown.push(m.trim().slice(0, 80) + ' (no constant ' + name + ' in data.js)'); continue; }
     const rows = Array.isArray(c.value) ? c.value : c.value && typeof c.value === 'object' ? Object.values(c.value) : [];
     out[name] = { key, positional:rows.length > 0 && rows.every(r => !r || typeof r !== 'object' || Array.isArray(r) || r instanceof RegExp) };
   }
+  return { tables:out, unknown };
+}
+// the return line's own fixtures: [the return line, its tables, its unknown members]
+const RETURN_FIXTURES = [
+  ['return { version:VERSION, armies:resolveArmies(ARMIES, DATASHEETS), resolve:function(a){ return a; } };', 'VERSION,ARMIES', 0],
+  ["return { version:VERSION, resolve:function(a){ return /[\"']/.test(a) ? a : 'x'; }, armies:ARMIES };", 'VERSION,ARMIES', 0],
+  ['return { version:VERSION, newt:VERSION || {} };', 'VERSION', 1], ['return { version:VERSION, newt:ARMIES.a };', 'VERSION', 1],
+  ['return { version:VERSION, newt:NOSUCH };', 'VERSION', 1], ['return { version:VERSION, armies:ARMIES, n:ARMIES };', 'VERSION,ARMIES', 1],
+  ['return { version:VERSION, units:String(DATASHEETS), datasheets:DATASHEETS };', 'VERSION,DATASHEETS', 1], ['return { version:VERSION, newt:() => ARMIES };', 'VERSION', 1]];
+function returnFixtures(src){
+  const out = [], head = src.slice(0, src.lastIndexOf('\nreturn {') + 1);
+  for(const [ret, tables, unknown] of RETURN_FIXTURES){ const r = returnMembers(head + ret + '\n})();'), got = Object.keys(r.tables).join(',');
+    if(got !== tables || r.unknown.length !== unknown) out.push('return line fixture “' + ret.slice(0, 70) + '”: tables ' + (got || 'none') + ', ' + r.unknown.length + ' unknown (want ' + tables + ', ' + unknown + ')'); }
   return out;
 }
 // every column of verify/columns.json a screen reads, and how: { 'T.c': 'by name' | 'by position (…)' | 'whole (…)' }
@@ -1384,6 +1507,15 @@ function scanFixtures(src){
     const how = screenColumns(reg, s2, html, files ? { files } : undefined).cols[col];
     if(!!how !== want) out.push(form + ': ' + (want ? col + ' not seen read' : col + ' seen read (' + how + ') where nothing reads it'));
   }
+  return out;
+}
+// literal.js's own fixtures: a regular expression at the very end of the text, and one with flags, parse (run in a child with a time limit: a
+// loop that never ends is a failure, not a gate that never ends)
+function literalFixtures(){
+  const out = [], CASES = [['/x/', '/x/'], ['/ab+c/gi', '/ab+c/gi'], ['[/a/i, 1]', '/a/i,1'], ['{ re:/[/]/ }', '[object Object]']];
+  const r = require('child_process').spawnSync(process.execPath, ['-e', 'const { parse } = require(' + JSON.stringify(path.join(__dirname, 'literal.js')) + '); process.stdout.write(JSON.stringify(' + JSON.stringify(CASES.map(c => c[0])) + '.map(t => String(parse(t, 0).value))))'], { encoding:'utf8', timeout:10000 });
+  if(r.error || r.status !== 0){ out.push('literal.js parse does not end on ' + CASES.map(c => c[0]).join(' ; ') + ' (' + (r.error ? r.error.code : String(r.stderr).split('\n').find(Boolean)) + ')'); return out; }
+  const got = JSON.parse(r.stdout); CASES.forEach(([t, want], k) => { if(got[k] !== want) out.push('literal.js parses ' + t + ' as ' + got[k] + ', not ' + want); });
   return out;
 }
 // a script's references to other files of this folder: what it requires (require('./x'), require(path.join(ROOT, 'x.js')),
@@ -1494,7 +1626,7 @@ function report(t){
   return lines.join('\n') + '\n';
 }
 
-module.exports = { codeRefs, screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
+module.exports = { returnMembers, pageScripts, codeRefs, screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
 
 if(require.main === module){
   let src = fs.readFileSync(DATA, 'utf8');
@@ -1562,6 +1694,11 @@ if(require.main === module){
   for(const u of unregistered(src)) fails.push('not in verify/columns.json: ' + u + ' (say where its values come from)');
   for(const u of screenJudgements(D0)) fails.push('a unit or stratagem screen reads a judgement: ' + u);
   for(const u of scanFixtures(src)) fails.push('the end-state scan does not see a read: ' + u);
+  for(const u of literalFixtures()) fails.push(u);
+  for(const u of returnMembers(src).unknown) fails.push('a member of data.js\'s return line that is no table and no function (say it as key:NAME, key:fn(NAME, …) or key:function(…){ … }): ' + u);
+  for(const u of returnFixtures(src)) fails.push(u);
+  for(const u of screenReads().missed) fails.push('a script of the page the end-state scan does not read: ' + u);
+  for(const u of pageFixtures()) fails.push(u);
   for(const u of stratIds(D0)) fails.push(u);
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));
   const B = t.B, units = B.armies.reduce((n, a) => n + a.units.length, 0);

@@ -37,7 +37,8 @@
          box, every "if / while / unless / (excluding …)" in it one of its conditions; then, under the profile, each BOXES snc (a
          characteristic no stat box counts) of its abilities, another unit's aura reaching it, its rules and its stratagems, "not counted"
      LF  fixed cases: the wound-roll ignore-modifiers readings, the enemy-unit mark of a characteristic not counted, and whom one is for
-         (its reach, an opening keyword, leading)
+         (its reach, an opening keyword, leading), an option's own list (its option and its rule's "While … it can use one of …"), and
+         a stratagem's reach to the friendly models its words name as attackers
      LW  never silent: every sentence of a source the lists use with words of the numbers (hit, wound, AP, damage, save, Feel No Pain, OC,
          Move, a weapon ability) is a counted box or listed not counted in BOXES (verify/coverage.js silent)
 
@@ -281,6 +282,18 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
     ['While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.', null, [['leading', true]]]];
   for(const [t, reach, on] of WHO_FIX){ const xs = X.statNc({ type:'ability', text:t }, [], [], [], Vf);
     if(!xs.length || xs.some(x => J(x.reach) !== J(reach) || J(x.on) !== J(on))) fail('LF', 'effects-extract.js statNc', '“' + t.replace(/\*\*/g, '').slice(0, 70) + '” is for ' + (xs.length ? J(xs[0].reach) + ' ' + J(xs[0].on) : 'nothing') + ', GW: ' + J(reach) + ' ' + J(on)); else n++; }
+  // (an option's own list keeps the option and its rule's words of when an option can be used: Malefic Surge's Unnatural Fortitude, its
+  // "- " lines under "- **Unnatural Fortitude:** …:", is Empowered as Diabolic Power is; GW's words, verbatim)
+  const MS = 'Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below.\n- **Unholy Hunger:** When a model in this unit makes a **Normal**, **Advance** or **Fall Back move**, until the end of the phase, add 3" to its Move characteristic.\n- **Unnatural Fortitude:** When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:\n- Models in this unit have a 5+ invulnerable save.\n- Models in this unit have the **Feel No Pain 6+** ability.';
+  const OPT_FIX = [[MS, 'Unnatural Fortitude', 'While a unit is Empowered it can use one of the Malefic Surge abilities below']];
+  for(const [t, opt, q] of OPT_FIX){ const r = X.extract({ type:'rule', name:'fixed', text:t }, { V:Vf, weapons:[] }), d = (r.d || [])[0];
+    if(!d || J(d.on.filter(x => x[0] === 'opt' || x[0] === 'q' && x[1] === q)) !== J([['opt', opt], ['q', q]]) || (d.pick || []).length !== 2) fail('LF', 'effects-extract.js option list', '“' + t.slice(0, 70) + '” reads ' + (d ? J(d.on) : 'no defence box') + ', GW: the option ' + opt + ', “' + q + '”'); else n++; }
+  // (a stratagem's box for the friendly models its words name as attackers reaches them; one for its own unit's attacks does not)
+  const IW = { type:'strat', name:'fixed', when:'Your Shooting phase or the Fight phase.', target:'One **SYNAPSE** unit from your army that has not been selected to shoot or fight this phase, and one enemy unit within 24" of and visible to the **SYNAPSE** unit.' };
+  const REACH_FIX = [[Object.assign({}, IW, { effect:'Until the end of the phase, each time a friendly **TYRANIDS** model makes an attack that targets that enemy unit, if the attacking model’s unit is within 6" of your **SYNAPSE** unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1.' }), { all:['Faction: Tyranids'] }, 'friendly'],
+    [{ type:'strat', name:'fixed', when:'Your Shooting phase or the Fight phase.', target:'One **TYRANIDS** unit from your army that has not been selected to shoot or fight this phase.', effect:'Until the end of the phase, each time a model in your unit makes an attack, re-roll a **Hit roll** of 1.' }, null, null]];
+  for(const [s, reach, mark] of REACH_FIX){ const b = (X.extract(s, { V:Vf, weapons:[] }).boxes || [])[0];
+    if(!b || J(b.reach) !== J(reach) || J(b.mark) !== J(mark)) fail('LF', 'effects-extract.js stratagem reach', '“' + X.plainCase(s.effect).slice(0, 70) + '” reaches ' + (b ? J(b.reach) + ' ' + J(b.mark) : 'no box') + ', GW: ' + J(reach) + ' ' + J(mark)); else n++; }
   stats.fixed = n; }
 // LW never silent: every sentence of a source a list uses (its units' abilities and core weapon rules, its faction's army rules, its
 // detachments' rules and stratagems, the core stratagems) with words of the numbers (hit, wound, AP, damage, save, Feel No Pain, OC, Move,

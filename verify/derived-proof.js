@@ -4,14 +4,22 @@
 // the column holds when one of them
 //   - references the column's key in its code (x.key, 'key', key:, { key }; a table read by position: the table's D key or name), and
 //   - fails its gate step when the column's value is changed: in a copy of this folder, one value of the column in data.js is changed
-//     in place (its first scalar: a string gets " (changed)", a number +1, a boolean flipped, a regular expression one more character,
-//     a map's name " (changed)"; only that token: the file keeps its form) and the deriver's step of verify/run.js is run (the step that
-//     is the deriver; for a deriver that is no step of its own, each step that requires it, the quicker first); it must fail (a crash
-//     too: the step cannot run with that value; said "crashed"). The first, middle and last row holding a value are tried, in that
-//     order, until one fails.
-// A column without such a deriver fails; a step that fails on the unchanged data.js proves nothing (it is run so, once, before a proof
-// stands on it). A proof is kept in verify/out/derived-proof.json and stands, without running again, while the code it ran is the same
-// (every file of its step, the column's entry, the change); --fresh runs every one again.
+//     in place, and the deriver's step of verify/run.js is run (the step that is the deriver; for a deriver that is no step of its own,
+//     each step that requires it, the quicker first); it must fail with a check failure. A crash (an exception, its stack trace, and no
+//     failure the step reports) is no proof: the step cannot run with that value, which says nothing of whether it checks it. Two
+//     changes of a row's value are tried: its first scalar changed (a string gets " (changed)", a number +1, a boolean flipped, a
+//     regular expression one more character, a map's name " (changed)"; only that token: the file keeps its form), and a swap, the
+//     value of the column another row has (a valid value, the next row's that differs). The first, middle and last row holding a value
+//     are tried, in that order, until one fails.
+// A column with no value stored in data.js fails unless its entry says why (unstored: "none: …", no row has one even when data.js loads,
+// which is checked; "load: …", the rows get it when data.js loads, which is checked too): never skipped unsaid. A column without such a
+// deriver fails; a step that fails on the unchanged data.js proves nothing (it is run so, once, before a proof
+// stands on it). A proof is kept in verify/out/derived-proof.json and stands, without running again, while what it ran is the same: every
+// code file of its step, every other input of it (inputsOf: the JSON files of verify/ (the deviations, derive-agreed.json, columns.json …),
+// rules/, and, where its code names them, verify/sources, verify/review, verify/reader2's data, app.html and the cache of GW's
+// texts, verify/.cache, by its files' names, sizes and times; every file its code names by a literal name, verify/fetch.sh; the page's
+// scripts for a step with tables.js, which reads them as text), this script and literal.js (how it changes and proves), the column's entry
+// and the change; --fresh runs every one again.
 //
 //   node verify/derived-proof.js                 every derived column (the gate's "derived" step); verify/out/derived-proof.json
 //   node verify/derived-proof.js --only T.c,…    those columns only
@@ -45,9 +53,14 @@ function closure(f){
 }
 // the steps a proof can run: each step not run in a browser (the screens, build-parity: env), and each script a step's own file runs
 // alone (build-parity's verify/build-index.js), as "step › script": the part of that step that fails when the script does
+// (a part's proof stands only where its parent step fails on the same change too: the parent is run, without its browser part where it
+// has one, --no-render; so a parent that stops holding the part's result, ignoring its exit status, leaves the part's proof standing on
+// nothing, and fails it)
+const noRender = f => /'--no-render'/.test(fs.readFileSync(path.join(ROOT, f), 'utf8'));
 const STEPS = ALL_STEPS.filter(s => !s.env).concat(ALL_STEPS.flatMap(s => codeRefs(s.args[0]).spawns.filter(x => x.alone && !ALL_STEPS.some(t => t.args[0] === x.file))
-  .map(x => ({ name:s.name + ' › ' + path.basename(x.file), args:[x.file], part:true }))));
-for(const s of STEPS) s.files = closure(s.args[0]);
+  .map(x => ({ name:s.name + ' › ' + path.basename(x.file), args:[x.file], part:true,
+    parent:{ name:s.name + (s.env && noRender(s.args[0]) ? ' --no-render' : ''), args:s.args.concat(s.env && noRender(s.args[0]) ? ['--no-render'] : []), files:closure(s.args[0]) } }))));
+for(const s of STEPS) s.files = new Set([...closure(s.args[0]), ...(s.parent ? s.parent.files : [])]);
 
 // ---- a column's derivers and the names they read it by, as tables.js has them
 const keysOf = (t, c) => keysIn(t, c, TABLES);
@@ -93,6 +106,26 @@ const STORED = (() => { const c = columnsInData(SRC), out = new Set();
   for(const [t, cs] of Object.entries(c)) for(const k of cs) out.add(t + '.' + k);
   for(const [name, x] of Object.entries(TABLES)) if(x.positional && (constOf(name) || {}).nodes) for(const k of Object.keys((REG[name] || {}).columns || {})) out.add(name + '.' + k);
   return out; })();
+// a swap: the value of the column the next row (in order, around) has that differs, in place of this row's: a valid value of the column
+// (none for a map's name: two rows of one name)
+function swap(vals, i){
+  const x = vals[i]; if(!x || x.key) return null;
+  const mine = SRC.slice(x.n.pos, x.n.end);
+  for(let k = 1; k < vals.length; k++){ const y = vals[(i + k) % vals.length]; if(y.key) continue; const t = SRC.slice(y.n.pos, y.n.end);
+    if(t !== mine) return { pos:x.n.pos, end:x.n.end, from:mine.slice(0, 60), to:t.slice(0, 60), text:t, at:x.n.path.join('.') + ' ← ' + y.n.path.join('.') }; }
+  return null;
+}
+// how many rows have a value of a column once data.js has loaded (the tables as the app has them: D.key, nested as verify/columns.json)
+let LOADED = null;
+function loadedCount(id){
+  if(!LOADED) LOADED = require('./lib').loadData();
+  const parts = id.split('.'), c = parts.pop(), top = TABLES[parts[0]]; if(!top || top.positional) return null;
+  const rowsIn = (v, t) => { if(v == null || typeof v !== 'object') return []; if(Array.isArray(v)) return v.filter(x => x && typeof x === 'object' && !Array.isArray(x));
+    const cols = Object.keys((REG[t] || {}).columns || {}); return cols.some(k => k in v) ? [v] : Object.values(v).filter(x => x && typeof x === 'object' && !Array.isArray(x)); };
+  let t = parts[0], rows = rowsIn(LOADED[top.key], t);
+  for(const p of parts.slice(1)){ t += '.' + p; rows = rows.flatMap(r => rowsIn(r[p], t)); }
+  return rows.filter(r => r[c] !== undefined).length;
+}
 // one change of a value in place: its first scalar token (a string, number, boolean, regular expression) → [pos, end, text]
 function change({ C, n, key }){
   if(key){ const m = /^'(?:[^'\\]|\\.)*'|^"(?:[^"\\]|\\.)*"|^[A-Za-z_$][\w$]*/.exec(SRC.slice(n.pos, n.pos + 300)); if(!m) return null;
@@ -134,7 +167,34 @@ const runStep = (dir, s) => new Promise(ok => {
 const crashed = out => /^\s+at .+:\d+:\d+\)?$/m.test(out) && !/^\s*FAIL\b|\bfailure/m.test(out);
 const firstFail = out => (out.split('\n').find(l => /FAIL|Error|fail|differ|not /.test(l)) || out.split('\n').find(Boolean) || '').trim().slice(0, 300);
 // a proof stands while the code it ran is the same: the files of its step, the column's entry in verify/columns.json and the change made
-const fileSha = {}, codeOf = s => sha([...s.files].sort().map(f => fileSha[f] || (fileSha[f] = sha(fs.readFileSync(path.join(ROOT, f), 'utf8')))).join(' '));
+const fileSha = {}, codeOf = s => sha([...s.files].sort().map(f => fileSha[f] || (fileSha[f] = sha(fs.readFileSync(path.join(ROOT, f), 'utf8')))).join(' ') + '\n' + inputsOf(s));
+// a step's other inputs: the areas of this folder a step reads besides code and data.js, each by the sha of its files (the cache of GW's
+// texts by its files' names, sizes and times); verify/*.json and rules/ always, the others where the step's code names them
+const GENERATED = new Set(['verify/report.json', 'verify/provenance.json']);
+const walk = (d, keep) => { const out = []; const go = r => { const a = path.join(ROOT, r); let st; try { st = fs.statSync(a); } catch(e){ return; }
+  if(st.isDirectory()){ for(const e of fs.readdirSync(a).sort()) go(r ? r + '/' + e : e); } else if(keep(r)) out.push(r); }; go(d); return out; };
+const AREAS = {
+  'verify/*.json':{ always:true, files:() => fs.readdirSync(path.join(ROOT, 'verify')).filter(f => f.endsWith('.json')).map(f => 'verify/' + f).filter(f => !GENERATED.has(f)).sort() },
+  'rules':{ always:true, files:() => walk('rules', () => true) },
+  'verify/sources':{ names:/\bsources\b/, files:() => walk('verify/sources', () => true) },
+  'verify/review':{ names:/\breview\b/, files:() => walk('verify/review', () => true) },
+  'verify/reader2':{ names:/\breader2\b/, files:() => walk('verify/reader2', f => !f.endsWith('.js')) },
+  'app.html':{ names:/\bapp\.html\b/, files:() => ['app.html'] },
+  'verify/.cache':{ names:/\.cache\b|\bCACHE\b/, stat:true, files:() => walk('verify/.cache', () => true) } };
+const areaSha = {}, areaOf = k => areaSha[k] || (areaSha[k] = sha(AREAS[k].files().map(f => { const a = path.join(ROOT, f);
+  if(AREAS[k].stat){ const st = fs.statSync(a); return f + ' ' + st.size + ' ' + st.mtimeMs; } return f + ' ' + sha(fs.readFileSync(a)); }).join('\n')));
+// (and, by their files: every file of this folder the step's code names by a literal name, not code it requires, "fetch.sh" read for its
+// BSDATA_COMMIT; and the page's own scripts, which a step with tables.js reads as text, screenReads: calc.js, effects.js, ask.js, …)
+const named = code => [...new Set([...code.matchAll(/['"`]((?:\.{0,2}\/)?[\w.\/-]+\.(?:sh|txt|md|html|json|csv|tsv|mjs|js))['"`]/g)].map(m => m[1].replace(/^\.\//, ''))
+  .flatMap(f => [f, 'verify/' + f]).filter(f => !f.startsWith('/') && !f.includes('..') && !NOT_CODE.has(f) && !GENERATED.has(f) && !f.startsWith('verify/out/') && fs.existsSync(path.join(ROOT, f)) && fs.statSync(path.join(ROOT, f)).isFile()))].sort();
+let PAGE_JS = null;
+const pageJs = () => PAGE_JS || (PAGE_JS = require('./tables').pageScripts(fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8'), null, []));
+const inputsOf = s => { if(s.inputs) return s.inputs; const code = [...s.files].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('\n');
+  const files = [...new Set(named(code).concat(s.files.has('verify/tables.js') ? pageJs() : []))].filter(f => !s.files.has(f)).sort();
+  return (s.inputs = Object.keys(AREAS).filter(k => AREAS[k].always || AREAS[k].names.test(code)).map(k => k + ' ' + areaOf(k)).join(' ') + ' ' +
+    files.map(f => f + ':' + (fileSha[f] || (fileSha[f] = sha(fs.readFileSync(path.join(ROOT, f)))))).join(' ')); };
+// (and how a proof is made: this script and literal.js)
+const RULES_SHA = sha(['verify/derived-proof.js', 'verify/literal.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('\n'));
 const OUT = path.join(ROOT, 'verify/out/derived-proof.json');
 const CACHE = (() => { try { return JSON.parse(fs.readFileSync(OUT, 'utf8')).columns || {}; } catch(e){ return {}; } })();
 
@@ -153,7 +213,7 @@ const CACHE = (() => { try { return JSON.parse(fs.readFileSync(OUT, 'utf8')).col
     const steps = [];
     for(const f of ds) for(const s of STEPS.filter(s => s.args[0] === f)) steps.push({ s, f, own:true });
     for(const f of ds) if(!STEPS.some(s => s.args[0] === f)) for(const s of STEPS.filter(s => s.files.has(f))) if(!steps.some(x => x.s === s)) steps.push({ s, f });
-    const tries = [...new Set([0, vals.length >> 1, vals.length - 1])].filter(i => i >= 0 && i < vals.length).map(i => change(vals[i])).filter(Boolean);
+    const tries = [...new Set([0, vals.length >> 1, vals.length - 1])].filter(i => i >= 0 && i < vals.length).flatMap(i => [change(vals[i]), swap(vals, i)]).filter(Boolean);
     return { id, v, names, keys, ds, steps, tries };
   });
   for(const w of work){
@@ -161,16 +221,22 @@ const CACHE = (() => { try { return JSON.parse(fs.readFileSync(OUT, 'utf8')).col
     else if(!w.tries.length){
       // (none stored: a column the lists' rows get when data.js loads, or that no row has today; one stored but not found fails)
       if(STORED.has(w.id)) fails.push(w.id + ': data.js stores it, but no value of it was found to change');
-      res[w.id] = { proof:null, why:'no value stored in data.js' }; }
+      else { const u = String(w.v.unstored || ''), n = loadedCount(w.id);
+        if(!u) fails.push(w.id + ': no value of it is stored in data.js, so no change can prove it, and its entry says not why (unstored: "none: …" or "load: …" in verify/columns.json)');
+        else if(/^none:/.test(u) && n) fails.push(w.id + ': its unstored says no row has a value of it, but ' + n + ' rows have one when data.js loads');
+        else if(/^load:/.test(u) && !n) fails.push(w.id + ': its unstored says the rows get it when data.js loads, but none does');
+        else if(!/^(?:none|load):/.test(u)) fails.push(w.id + ': its unstored is neither "none: …" nor "load: …"'); }
+      res[w.id] = { proof:null, why:'no value stored in data.js', unstored:w.v.unstored || null }; }
+    else if(w.v.unstored) fails.push(w.id + ': its entry says no value is stored (unstored), but data.js stores ' + w.tries.length + ' to change');
   }
   if(process.argv.includes('--plan')){ for(const w of work) console.log(w.id + ' | ' + w.ds.join(',') + ' | ' + w.steps.map(x => x.s.name).join(',') + ' | ' + w.tries.map(c => c.at + ' ' + c.from + '→' + c.to).join(' ; ')); process.exit(0); }
-  const keyOf = (w, x, ch) => sha(JSON.stringify(w.v) + '\n' + x.s.name + '\n' + codeOf(x.s) + '\n' + ch.at + '\n' + ch.text);
+  const keyOf = (w, x, ch) => sha(JSON.stringify(w.v) + '\n' + x.s.name + '\n' + codeOf(x.s) + '\n' + RULES_SHA + '\n' + ch.at + '\n' + ch.text);
   // a proof kept from an earlier run whose code is the same (verify/out/derived-proof.json; --fresh: none)
   let kept = 0;
   const queue = work.filter(w => {
     if(!w.ds.length || !w.tries.length) return false;
     const c = !fresh && CACHE[w.id], p = c && c.proof;
-    if(p && w.steps.some(x => x.s.name === p.step && x.f === p.deriver && w.tries.some(ch => ch.at === p.at && keyOf(w, x, ch) === p.key))){ res[w.id] = c; kept++; return false; }
+    if(p && !/^crashed\b/.test(p.failed || '') && w.steps.some(x => x.s.name === p.step && x.f === p.deriver && w.tries.some(ch => ch.at === p.at && keyOf(w, x, ch) === p.key))){ res[w.id] = c; kept++; return false; }
     return true; });
   // (the quicker steps first: when the gate runs this one, VERIFY_PASSED gives the steps that passed before it, on this data.js, and their
   // times: those need no run on the unchanged data.js)
@@ -191,9 +257,20 @@ const CACHE = (() => { try { return JSON.parse(fs.readFileSync(OUT, 'utf8')).col
           const r = await runStep(dir, x.s);
           fs.writeFileSync(df, SRC);
           if(r.code === 0){ tried.push(x.s.name + ' @ ' + ch.at + ' passed'); continue; }
+          // (a crash is no proof: the next change, or the next step)
+          if(crashed(r.out)){ tried.push(x.s.name + ' @ ' + ch.at + ' crashed (' + firstFail(r.out).slice(0, 80) + ')'); continue; }
           if(!await baseline(dir, x.s)){ tried.push(x.s.name + ' fails on the unchanged data.js'); break; }
-          // (a crash is the step failing too: the changed value is what it cannot run with; said as such)
-          proof = { deriver:x.f, step:x.s.name, at:ch.at, from:ch.from, to:ch.to, failed:(crashed(r.out) ? 'crashed: ' : '') + firstFail(r.out), key:keyOf(w, x, ch) };
+          // (a part: its parent step fails on the same change, with a check failure, and passes on the unchanged data.js)
+          let parentFailed;
+          if(x.s.parent){ const P = x.s.parent;
+            fs.writeFileSync(df, SRC.slice(0, ch.pos) + ch.text + SRC.slice(ch.end));
+            const rp = await runStep(dir, P);
+            fs.writeFileSync(df, SRC);
+            if(rp.code === 0){ tried.push(x.s.name + ' @ ' + ch.at + ' failed, but its parent ' + P.name + ' passes on it'); continue; }
+            if(crashed(rp.out)){ tried.push(x.s.name + ' @ ' + ch.at + ' failed, but its parent ' + P.name + ' crashed on it'); continue; }
+            if(!await baseline(dir, P)){ tried.push(P.name + ' fails on the unchanged data.js'); break; }
+            parentFailed = P.name + ': ' + firstFail(rp.out); }
+          proof = Object.assign({ deriver:x.f, step:x.s.name, at:ch.at, from:ch.from, to:ch.to, failed:firstFail(r.out), key:keyOf(w, x, ch) }, parentFailed ? { parent:parentFailed } : {});
           break;
         } }
       res[w.id] = proof ? { proof } : { proof:null, tried };
