@@ -2808,23 +2808,45 @@ const ARMIES = [
         { name:'Ram Jets' },
         { name:'Thundercharge', na:'Needs a thundershock spear and a bellatus reaper chainsword: not this loadout' },
         { name:'Saturation Fire' },
-        { name:'Damaged: 1-6 Wounds Remaining' }
+        { name:'Damaged: 1-6 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
       ]
     },
     {
       id:'knight-errant', ds:'imperial-knights/knight-errant', pts:355,
       models:['1× Knight Errant'],
-      gear:[['Thermal cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']]
+      gear:[['Thermal cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']],
+      abilities:[
+        { name:'Invulnerable Save (5+*)' },
+        { name:'Errant’s Duty' },
+        { name:'Aggressive Assault' },
+        { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
+      ]
     },
     {
       id:'knight-paladin', ds:'imperial-knights/knight-paladin', pts:375, copies:2,
       models:['1× Knight Paladin'],
-      gear:[['Questoris heavy stubber','Rapid-fire battle cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']]
+      gear:[['Questoris heavy stubber','Rapid-fire battle cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']],
+      abilities:[
+        { name:'Invulnerable Save (5+*)' },
+        { name:'Paladin’s Duty' },
+        { name:'Seasoned Noble' },
+        { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
+      ]
     },
     {
       id:'knight-warden', ds:'imperial-knights/knight-warden', pts:365, warlord:true,
       models:['1× Knight Warden'],
       gear:[['Avenger gatling cannon','Heavy flamer','Stormspear rocket pod','Meltagun','Reaper chainsword']],
+      abilities:[
+        { name:'Invulnerable Save (5+*)' },
+        { name:'Warden’s Duty' },
+        { name:'Thin Their Ranks' },
+        { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
+      ],
       kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Imperium','Knight Warden','Faction: Imperial Knights','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     }
@@ -2840,7 +2862,15 @@ const ARMIES = [
     {
       id:'canis-rex', ds:'imperial-knights/canis-rex', pts:415,
       models:['1× Canis Rex','1× Sir Hekhtur'],
-      gear:[['Freedom’s Hand','Las-impulsor','Questoris multi-laser'],['Close combat weapon','Hekhtur’s pistol']]
+      gear:[['Freedom’s Hand','Las-impulsor','Questoris multi-laser'],['Close combat weapon','Hekhtur’s pistol']],
+      abilities:[
+        { name:'Invulnerable Save (5+*)' },
+        { name:'Legendary Freeblade' },
+        { name:'Chainbreaker' },
+        { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Using Sir Hekhtur' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
+      ]
     },
     {
       id:'cerastus-knight-atrapos', ds:'imperial-knights/cerastus-knight-atrapos', pts:450, enhancement:'Bringer of Justice',
@@ -2854,13 +2884,20 @@ const ARMIES = [
         { name:'Atrapos’ Duty' },
         { name:'Macro-extinction Protocols' },
         { name:'Damaged: 1-10 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' },
         { name:'Bringer of Justice', tag:'Enhancement', text:'**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**.' }
       ]
     },
     {
       id:'cerastus-knight-lancer', ds:'imperial-knights/cerastus-knight-lancer', pts:415,
       models:['1× Cerastus Knight Lancer'],
-      gear:[['Cerastus shock lance']]
+      gear:[['Cerastus shock lance']],
+      abilities:[
+        { name:'Lancer’s Duty' },
+        { name:'Shock Charge' },
+        { name:'Damaged: 1-10 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
+      ]
     },
     {
       id:'knight-crusader', ds:'imperial-knights/knight-crusader', pts:435, enhancement:'Hunter’s Eye',
@@ -2879,6 +2916,7 @@ const ARMIES = [
         { name:'Crusader’s Duty' },
         { name:'Punishing Salvoes' },
         { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' },
         { name:'Hunter’s Eye', tag:'Enhancement', text:'**IMPERIAL KNIGHTS** model only. Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability.' }
       ],
       rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Sustained Hits','Bondsman','Torrent','Melta','Rapid Fire','Blast','Ignores Cover'],
@@ -2897,6 +2935,7 @@ const ARMIES = [
         { name:'Thundercharge', na:'Needs a thundershock spear and a bellatus reaper chainsword: not this loadout' },
         { name:'Saturation Fire' },
         { name:'Damaged: 1-6 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' },
         { name:'Sanctuary', tag:'Enhancement', text:'**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save.' }
       ]
     }
@@ -4824,6 +4863,7 @@ const ARMIES = [
         { name:'Atrapos’ Duty' },
         { name:'Macro-extinction Protocols' },
         { name:'Damaged: 1-10 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' },
         { name:'Bringer of Justice', tag:'Enhancement', ph:['fight'], turn:'either', text:'**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**.' }
       ],
       kw:['Vehicle','Walker','Character','Titanic','Towering','Imperium','Cerastus','Knight Atrapos','Faction: Imperial Knights','Warlord'],
@@ -4846,6 +4886,7 @@ const ARMIES = [
         { name:'Crusader’s Duty' },
         { name:'Punishing Salvoes' },
         { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' },
         { name:'Hunter’s Eye', tag:'Enhancement', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'**IMPERIAL KNIGHTS** model only. Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability.' }
       ],
       rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Sustained Hits','Bondsman','Torrent','Melta','Rapid Fire','Blast','Ignores Cover'],
@@ -4854,7 +4895,14 @@ const ARMIES = [
     {
       id:'knight-defender', ds:'imperial-knights/knight-defender', pts:385,
       models:['1× Knight Defender'],
-      gear:[['Conversion beam obliterator','Phosphor blaster','Plasma executor','Titanic feet','Twin incendine combustor']]
+      gear:[['Conversion beam obliterator','Phosphor blaster','Plasma executor','Titanic feet','Twin incendine combustor']],
+      abilities:[
+        { name:'Invulnerable Save (4+*)' },
+        { name:'Defender’s Duty' },
+        { name:'Selfless Protector' },
+        { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
+      ]
     },
     {
       id:'knight-destrier', ds:'imperial-knights/knight-destrier', pts:265,
@@ -4865,7 +4913,8 @@ const ARMIES = [
         { name:'Ram Jets' },
         { name:'Thundercharge', na:'Needs a thundershock spear and a bellatus reaper chainsword: not this loadout' },
         { name:'Saturation Fire' },
-        { name:'Damaged: 1-6 Wounds Remaining' }
+        { name:'Damaged: 1-6 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
       ]
     },
     {
@@ -4877,6 +4926,7 @@ const ARMIES = [
         { name:'Errant’s Duty' },
         { name:'Aggressive Assault' },
         { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' },
         { name:'Mysterious Guardian', tag:'Enhancement · Once per battle, per army', at:'End of your opponent’s turn', ph:['movement','fight'], turn:'your', turns:{ fight:'opp' }, text:'**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' }
       ],
       rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Bondsman','Melta','Blast','Deep Strike'],
@@ -13062,6 +13112,7 @@ const CHECKLIST = {
   "a|15rzi5r":{"u":"shooting:your,fight:either"},
   "a|15sy99j":{"x":1},
   "a|15wfj8w":{"t":"movement:your","s":1},
+  "a|1688m9q":{"u":"shooting:opp,fight:either"},
   "a|16933gp":{"x":1,"g":[{"name":"Stealth","to":{"all":["Faction: Legiones Daemonica"]},"while":"While a friendly LEGIONES DAEMONICA unit is within 6\" of this model"}]},
   "a|16gssms":{"u":"fight:either"},
   "a|16mwpe4":{"t":"fight:either","s":1},

@@ -364,12 +364,16 @@ What from-json does that builder.js does not, and where each goes:
 **An ability a rule gives is the list's, never the datasheet's.** The owner's rule (4 Nov 2026): every ability a rule gives a unit is a
 row of its own on the unit's datasheet screen, marked with the rule that gives it, wherever that rule is in force for the list, derived
 from GW's rule text and the unit's keywords and never from what an export prints. Which: an army rule of the list's faction, or a rule of
-one of its detachments, that gives units of some keywords "the following ability" (or abilities), with no condition (`GRANTS`, type
-ability, `while` null). Today: Higher Imperatives (Talons of the Norn Queen) gives Protean Purpose to NORN EMISSARY/NORN ASSIMILATOR
+one of its detachments, that gives units of some keywords an ability, with no condition (`GRANTS`, type ability, no option, `while`
+null): one whose words it prints ("the following ability"), or a core ability it names ("have the **Feel No Pain 6+** ability"). Today: Higher Imperatives (Talons of the Norn Queen) gives Protean Purpose to NORN EMISSARY/NORN ASSIMILATOR
 units (Nidzillas, Healybois); Daughters of the Abyss (the Adeptus Custodes army rule) gives Psychic Null (Aura) to ANATHEMA PSYKANA units
 (the Prosecutor and Witchseeker Squads of Lite Knights, Emperor's Chosen and Dread Host); Mission Tactics (Deathwatch Support) gives
 Furor, Malleus and Purgatus Tactics to KILL TEAM units (Nerf when's Deathwatch Terminator Squad); Silent Sisterhood (Null Maiden Vigil)
-gives Creeping Dread (Aura) to ANATHEMA PSYKANA units (no list takes the detachment). One function reads them, `builder.js`
+gives Creeping Dread (Aura) to ANATHEMA PSYKANA units (no list takes the detachment). Core abilities: Knights of Legend (Freeblade
+Company) gives Feel No Pain 6+ to IMPERIAL KNIGHTS models (every Knight of 6 bigs, 4 megas and a destrier, Navigator sounds op ngl);
+Heralds of the Throne (Emissaries Imperatus) Fights First to ADEPTUS CUSTODES units, Mindhunger (Ambush Predators) Deep Strike to
+DEATHLEAPER/LICTOR/NEUROLICTOR units, First Prince of Chaos (Shadow Legion) Deep Strike to SHADOW LEGION HERETIC ASTARTES units (no list
+takes these three detachments). One function reads them, `builder.js`
 `ruleAbilities`, and builder.js, `verify/from-json.js`, `verify/tables.js` and `verify/catalog.js` all call it, so both paths give the
 same row:
 - its words: GW's, quoted from the rule's own text, the words `RULE_OPTIONS` reads for the option of that name, found right after the
@@ -377,6 +381,9 @@ same row:
   characters are kept). Where they cannot be found so, or `RULE_OPTIONS` has no such option, nothing is guessed: builder.js refuses a
   list with a unit that meets the rule, from-json lists it as not filled, and the gate fails (`verify/tables.js`, for every detachment of
   every faction, whether a list takes it or not).
+- a core ability's row: GW's name for it ("Feel No Pain 6+") and the core rule's words, the ones its popup shows (the app's `ruleFor`:
+  the faction's aliases, `RULE_ALIASES`, `RULES`; `builder.js` `coreText`); no phases; tag the rule's name. A name no core rule has is
+  an error, as above.
 - its tag, the mark: the rule's name, then the limit GW prints before the words, then Aura where GW's name says "(Aura)", as an
   enhancement's tag names it: "Higher Imperatives · Once per battle, per unit", "Daughters of the Abyss · Aura", "Mission Tactics". The
   screen shows it as every tag (under the name when the row is opened, and in search); a once-per-battle limit is the row's chip, as
@@ -393,16 +400,22 @@ same row:
   Not being the datasheet's, it is not asked of the datasheet's sources: `verify/words.js` does not look for it on the Wahapedia
   datasheet page (the two declared Protean Purpose entries of `verify/deviations-words.json` are gone with that), `verify/bsdata.js`
   does not ask BSData's entry for it, and `verify/nr.js` lets New Recruit's PDF leave it out and leave the rule's name out of its tag;
-  `verify/texts.js` checks the rule's words against GW's, and the row quotes them. A faction catalogue's reading (`verify/from-bsdata.js`,
+  `verify/texts.js` checks the rule's words against GW's, and the row quotes them (it does not look for the row on a Faction Pack
+  datasheet page either). A faction catalogue's reading (`verify/from-bsdata.js`,
   from-json `--emit`) has no such row: the datasheets alone.
-- a core ability a rule gives ("IMPERIAL KNIGHTS models from your army have the **Feel No Pain 6+** ability", Knights of Legend; Fights
-  First, Deep Strike) prints no words of its own in the rule: it is not one of these rows (the Core Rules' words; the rule itself is on
-  the Rules screen).
+- left as today, with a condition or not by keyword (`GRANTS` rows of type ability skipped): an option's grant while it is active
+  (Psychic Null's Feel No Pain 5+ against psychic attacks, Daughters of the Abyss; Blood Tithe's Enraged Abjuration and Might of
+  Khorne; Harbingers of Dread's Darkness Stealth; First Prince of Chaos's Penumbral Puppetry Stealth), one under a condition
+  (Harbingers of Dread's Dread abilities, "if your Army Faction is CHAOS KNIGHTS"), one to "this unit / model" a rule selects rather
+  than by keyword (Malefic Surge's Feel No Pain 6+, Infernal Lance; First Prince of Chaos's Dark Pacts), and the grants a unit's own
+  ability or an enhancement makes (on that unit's own row already). Daughters of the Abyss' "Feel No Pain 3+ against psychic attacks"
+  is no `GRANTS` row (GW does not word it as an ability); the units show it on their Rules line, as their datasheets do.
 
 The gate holds it: `verify/tables.js` fails any list unit whose rule-given rows are not exactly those the rules in force give it (so the
 two PDF-only lists too) and any unresolved words; build-parity N builds exports with the ability's profile removed (the row is still
 there), with Talons of the Norn Queen removed (no Protean Purpose, even with the export still showing it), with the profile on a unit
-without the keyword (no row), and Lite Knights (Psychic Null (Aura) on its three ANATHEMA PSYKANA units only).
+without the keyword (no row), Lite Knights (Psychic Null (Aura) on its three ANATHEMA PSYKANA units only), Mindhunger's Deep Strike
+(the core rule's words, for its keywords only) and a core ability no core rule names (an error).
 
 Known limits (accepted: each refuses rather than shows anything wrong, or no current list meets it):
 - `BUILD_INDEX.marks` is learned from the built-in lists' marks: a phone export showing a change no agreed box explains and no built-in

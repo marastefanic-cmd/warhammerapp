@@ -1008,7 +1008,7 @@ let NR_DATA = null;   // (data.js: the rule in force that gives a list's row, ru
 function ruleGiven(army, ab) {
   const A = typeof army === 'string' ? ((NR_DATA || {}).armies || []).find(a => a.id === army) : army; if (!A || !ab) return null;
   const F = (NR_DATA.factions || {})[A.faction]; if (!F) return null;
-  return require(path.join(__dirname, '..', 'builder.js')).ruleOfRow(F, (A.detachments || []).map(k => (F.detachments || {})[k]), ab);
+  return require(path.join(__dirname, '..', 'builder.js')).ruleOfRow(F, (A.detachments || []).map(k => (F.detachments || {})[k]), ab, NR_DATA);
 }
 function main(args) {
   const ctx = { window: {} }; vm.createContext(ctx);

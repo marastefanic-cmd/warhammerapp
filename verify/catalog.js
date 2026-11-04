@@ -434,7 +434,7 @@ function main() {
         const S = { name: n, stats: mine('stats'), ranged: mine('ranged'), melee: mine('melee'), abilities: mine('abilities') };
         checked.nr += ['stats', 'ranged', 'melee', 'abilities'].reduce((t, k) => t + S[k].length, 0);   // (rows compared)
         // (an ability a rule of the list gives the unit is the list's, as an enhancement's: Protean Purpose, verify/tables.js ruleAbilities)
-        const ruleAb = require('./tables').ruleAbilities(D.factions, D.grants, D.ruleOptions, a).filter(x => require('./tables').meetsTo(x.to, u.kw)).map(x => x.name);
+        const ruleAb = require('./tables').ruleAbilities(D.factions, D.grants, D.ruleOptions, a, D).filter(x => require('./tables').meetsTo(x.to, u.kw)).map(x => x.name);
         for (const d of rowDiffs(S, R, { listUnit: true, ruleAb })) {
           if (['markup', 'tag', 'list', 'label'].includes(d.kind)) continue;
           const dev = DEVC.find(x => x.datasheet === id && x.what === d.what && (!x.lists || x.lists.includes(a.id)));

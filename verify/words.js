@@ -35,7 +35,7 @@ function differ(x){
 // (a row a rule of the list gives the unit, Protean Purpose from Higher Imperatives: not the datasheet's, so not on its page; its words are
 // the rule's, quoted from it by builder.js ruleAbilities, which verify/texts.js checks against GW's)
 const ruleGiven = (list, ab) => { const A = (D.armies || []).find(a => a.id === list), F = A && (D.factions || {})[A.faction];
-  return !!F && !!require(path.join(ROOT, 'builder.js')).ruleOfRow(F, (A.detachments || []).map(k => (F.detachments || {})[k]), ab); };
+  return !!F && !!require(path.join(ROOT, 'builder.js')).ruleOfRow(F, (A.detachments || []).map(k => (F.detachments || {})[k]), ab, D); };
 function check(faction, u, ab, list, unit){
   if(/\b(Enhancement|Upgrade)\b/.test(ab.tag || '') || /^\*?invulnerable save\b/i.test(ab.name)) return;
   if(list !== 'DATASHEETS' && ruleGiven(list, ab)) return;

@@ -1020,7 +1020,7 @@ const partName0 = p => typo(nm(p.name));
 // the abilities the rules this list has in force give its units by keyword (builder.js ruleAbilities: GRANTS and RULE_OPTIONS, the rule's
 // words; a faction data.js does not have yet has none: GRANTS are read from data.js's rules)
 const BW = require('../builder.js');
-const RA = F ? BW.ruleAbilities(D.grants, D.ruleOptions, F, detIds.map(id => F.detachments[id] || facSrc.detachments[id]).filter(Boolean)) : { rows: [], errors: [] };
+const RA = F ? BW.ruleAbilities(D.grants, D.ruleOptions, F, detIds.map(id => F.detachments[id] || facSrc.detachments[id]).filter(Boolean), D) : { rows: [], errors: [] };
 const wahaFile = page => 'verify/.cache/waha/ds/' + page.file;
 const dsWant = new Set();
 const gwRules = new Map();   // unit id -> { core, army, leader, files }

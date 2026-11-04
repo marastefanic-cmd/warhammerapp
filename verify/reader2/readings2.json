@@ -1,15 +1,15 @@
 {
  "reader": "reader2",
  "counts": {
-  "sources": 1265,
-  "sentences": 2486,
-  "read": 1278,
-  "readWithEffects": 633,
+  "sources": 1289,
+  "sentences": 2524,
+  "read": 1288,
+  "readWithEffects": 643,
   "readNoEffect": 645,
-  "unread": 1208,
-  "unreadOutside": 938,
-  "unreadUnparsed": 270,
-  "gwFound": 2350,
+  "unread": 1236,
+  "unreadOutside": 952,
+  "unreadUnparsed": 284,
+  "gwFound": 2388,
   "gwNotFound": 48,
   "gwShort": 88
  },
@@ -23273,6 +23273,138 @@
    "reason": "outside-vocabulary:faction mechanic",
    "gw": "found"
   },
+  "army:6-bigs/knight-destrier|Feel No Pain 6+|0": {
+   "owner": "army:6-bigs/knight-destrier",
+   "ownerName": "Knight Destrier",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-destrier|Feel No Pain 6+|1": {
+   "owner": "army:6-bigs/knight-destrier",
+   "ownerName": "Knight Destrier",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-errant|Feel No Pain 6+|0": {
+   "owner": "army:6-bigs/knight-errant",
+   "ownerName": "Knight Errant",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-errant|Feel No Pain 6+|1": {
+   "owner": "army:6-bigs/knight-errant",
+   "ownerName": "Knight Errant",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-paladin|Feel No Pain 6+|0": {
+   "owner": "army:6-bigs/knight-paladin",
+   "ownerName": "Knight Paladin",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-paladin|Feel No Pain 6+|1": {
+   "owner": "army:6-bigs/knight-paladin",
+   "ownerName": "Knight Paladin",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-warden|Feel No Pain 6+|0": {
+   "owner": "army:6-bigs/knight-warden",
+   "ownerName": "Knight Warden",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-warden|Feel No Pain 6+|1": {
+   "owner": "army:6-bigs/knight-warden",
+   "ownerName": "Knight Warden",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/canis-rex|Feel No Pain 6+|0": {
+   "owner": "army:4-megas-and-a-destrier/canis-rex",
+   "ownerName": "Canis Rex",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/canis-rex|Feel No Pain 6+|1": {
+   "owner": "army:4-megas-and-a-destrier/canis-rex",
+   "ownerName": "Canis Rex",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/cerastus-knight-atrapos|Feel No Pain 6+|0": {
+   "owner": "army:4-megas-and-a-destrier/cerastus-knight-atrapos",
+   "ownerName": "Cerastus Knight Atrapos",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/cerastus-knight-atrapos|Feel No Pain 6+|1": {
+   "owner": "army:4-megas-and-a-destrier/cerastus-knight-atrapos",
+   "ownerName": "Cerastus Knight Atrapos",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
   "army:4-megas-and-a-destrier/cerastus-knight-atrapos|Bringer of Justice|0": {
    "owner": "army:4-megas-and-a-destrier/cerastus-knight-atrapos",
    "ownerName": "Cerastus Knight Atrapos",
@@ -23343,6 +23475,50 @@
    "duration": null,
    "gw": "found"
   },
+  "army:4-megas-and-a-destrier/cerastus-knight-lancer|Feel No Pain 6+|0": {
+   "owner": "army:4-megas-and-a-destrier/cerastus-knight-lancer",
+   "ownerName": "Cerastus Knight Lancer",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/cerastus-knight-lancer|Feel No Pain 6+|1": {
+   "owner": "army:4-megas-and-a-destrier/cerastus-knight-lancer",
+   "ownerName": "Cerastus Knight Lancer",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/knight-crusader|Feel No Pain 6+|0": {
+   "owner": "army:4-megas-and-a-destrier/knight-crusader",
+   "ownerName": "Knight Crusader",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/knight-crusader|Feel No Pain 6+|1": {
+   "owner": "army:4-megas-and-a-destrier/knight-crusader",
+   "ownerName": "Knight Crusader",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
   "army:4-megas-and-a-destrier/knight-crusader|Hunter’s Eye|0": {
    "owner": "army:4-megas-and-a-destrier/knight-crusader",
    "ownerName": "Knight Crusader",
@@ -23405,6 +23581,28 @@
     }
    ],
    "duration": null,
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/knight-destrier|Feel No Pain 6+|0": {
+   "owner": "army:4-megas-and-a-destrier/knight-destrier",
+   "ownerName": "Knight Destrier",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/knight-destrier|Feel No Pain 6+|1": {
+   "owner": "army:4-megas-and-a-destrier/knight-destrier",
+   "ownerName": "Knight Destrier",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
    "gw": "found"
   },
   "army:4-megas-and-a-destrier/knight-destrier|Sanctuary|0": {
@@ -24731,6 +24929,108 @@
    "who": "Tzaangor Shaman",
    "gw": "found"
   },
+  "army:lite-knights/prosecutor-squad|Psychic Null (Aura)|0": {
+   "owner": "army:lite-knights/prosecutor-squad",
+   "ownerName": "Prosecutor Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
+  "army:lite-knights/witchseeker-squad|Psychic Null (Aura)|0": {
+   "owner": "army:lite-knights/witchseeker-squad",
+   "ownerName": "Witchseeker Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
+  "army:lite-knights/witchseeker-squad-2|Psychic Null (Aura)|0": {
+   "owner": "army:lite-knights/witchseeker-squad-2",
+   "ownerName": "Witchseeker Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
   "army:lite-knights/contemptor-galatus-dreadnought|Memento Moritoi|0": {
    "owner": "army:lite-knights/contemptor-galatus-dreadnought",
    "ownerName": "Contemptor-Galatus Dreadnought",
@@ -24947,6 +25247,113 @@
    ],
    "duration": null,
    "who": "Bladeguard Veteran Squad",
+   "gw": "found"
+  },
+  "army:nerf-when/deathwatch-terminator-squad|Furor Tactics|0": {
+   "owner": "army:nerf-when/deathwatch-terminator-squad",
+   "ownerName": "Deathwatch Terminator Squad",
+   "source": "Furor Tactics",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "If the devastator doctrine is active for your unit, your unit's attacks have [SUSTAINED HITS 1].",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "sus",
+     "v": "1",
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target"
+   },
+   "conditions": [
+    {
+     "id": "abilityActive",
+     "v": "devastator doctrine",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:nerf-when/deathwatch-terminator-squad|Malleus Tactics|0": {
+   "owner": "army:nerf-when/deathwatch-terminator-squad",
+   "ownerName": "Deathwatch Terminator Squad",
+   "source": "Malleus Tactics",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "If the tactical doctrine is active for your unit, your unit's attacks have [LETHAL HITS].",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "lethal",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target"
+   },
+   "conditions": [
+    {
+     "id": "abilityActive",
+     "v": "tactical doctrine",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:nerf-when/deathwatch-terminator-squad|Purgatus Tactics|0": {
+   "owner": "army:nerf-when/deathwatch-terminator-squad",
+   "ownerName": "Deathwatch Terminator Squad",
+   "source": "Purgatus Tactics",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "If the assault doctrine is active for your unit, your unit's attacks that target an enemy unit within 9\" of this unit have [PRECISION].",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "precision",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target"
+   },
+   "conditions": [
+    {
+     "id": "abilityActive",
+     "v": "assault doctrine",
+     "table": "own"
+    },
+    {
+     "id": "targetWithin",
+     "v": {
+      "d": 9,
+      "of": "this unit"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
    "gw": "found"
   },
   "army:the-exiled-legion/skulltaker-bloodletters|Bane-Forged Weapons|0": {
@@ -25401,6 +25808,164 @@
    "reason": "outside-vocabulary:keyword",
    "gw": "found"
   },
+  "army:emperors-chosen/prosecutor-squad|Psychic Null (Aura)|0": {
+   "owner": "army:emperors-chosen/prosecutor-squad",
+   "ownerName": "Prosecutor Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
+  "army:emperors-chosen/witchseeker-squad|Psychic Null (Aura)|0": {
+   "owner": "army:emperors-chosen/witchseeker-squad",
+   "ownerName": "Witchseeker Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
+  "army:dread-host/prosecutor-squad|Psychic Null (Aura)|0": {
+   "owner": "army:dread-host/prosecutor-squad",
+   "ownerName": "Prosecutor Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
+  "army:dread-host/witchseeker-squad|Psychic Null (Aura)|0": {
+   "owner": "army:dread-host/witchseeker-squad",
+   "ownerName": "Witchseeker Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/cerastus-knight-atrapos|Feel No Pain 6+|0": {
+   "owner": "army:navigator-sounds-op-ngl/cerastus-knight-atrapos",
+   "ownerName": "Cerastus Knight Atrapos",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/cerastus-knight-atrapos|Feel No Pain 6+|1": {
+   "owner": "army:navigator-sounds-op-ngl/cerastus-knight-atrapos",
+   "ownerName": "Cerastus Knight Atrapos",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
   "army:navigator-sounds-op-ngl/cerastus-knight-atrapos|Bringer of Justice|0": {
    "owner": "army:navigator-sounds-op-ngl/cerastus-knight-atrapos",
    "ownerName": "Cerastus Knight Atrapos",
@@ -25471,6 +26036,28 @@
    "duration": null,
    "gw": "found"
   },
+  "army:navigator-sounds-op-ngl/knight-crusader|Feel No Pain 6+|0": {
+   "owner": "army:navigator-sounds-op-ngl/knight-crusader",
+   "ownerName": "Knight Crusader",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-crusader|Feel No Pain 6+|1": {
+   "owner": "army:navigator-sounds-op-ngl/knight-crusader",
+   "ownerName": "Knight Crusader",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
   "army:navigator-sounds-op-ngl/knight-crusader|Hunter’s Eye|0": {
    "owner": "army:navigator-sounds-op-ngl/knight-crusader",
    "ownerName": "Knight Crusader",
@@ -25533,6 +26120,72 @@
     }
    ],
    "duration": null,
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-defender|Feel No Pain 6+|0": {
+   "owner": "army:navigator-sounds-op-ngl/knight-defender",
+   "ownerName": "Knight Defender",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-defender|Feel No Pain 6+|1": {
+   "owner": "army:navigator-sounds-op-ngl/knight-defender",
+   "ownerName": "Knight Defender",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-destrier|Feel No Pain 6+|0": {
+   "owner": "army:navigator-sounds-op-ngl/knight-destrier",
+   "ownerName": "Knight Destrier",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-destrier|Feel No Pain 6+|1": {
+   "owner": "army:navigator-sounds-op-ngl/knight-destrier",
+   "ownerName": "Knight Destrier",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-errant|Feel No Pain 6+|0": {
+   "owner": "army:navigator-sounds-op-ngl/knight-errant",
+   "ownerName": "Knight Errant",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-errant|Feel No Pain 6+|1": {
+   "owner": "army:navigator-sounds-op-ngl/knight-errant",
+   "ownerName": "Knight Errant",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
    "gw": "found"
   },
   "army:navigator-sounds-op-ngl/knight-errant|Mysterious Guardian|0": {

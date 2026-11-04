@@ -306,24 +306,24 @@ function keyOrder(seqs0, prev0){
 // the abilities the rules a list has in force give its units (see ruleAbility in build): builder.js ruleAbilities, the one reading of them
 // (the app's, the gate's and from-json's): [{ name, rule, to, row }]; a list of { faction, detachments } (ids)
 const BUILDER = () => require(path.join(ROOT, 'builder.js'));
-function ruleAbilitiesFull(factions, grants, options, a){
+function ruleAbilitiesFull(factions, grants, options, a, core){
   const F = (factions || {})[a.faction];
-  return BUILDER().ruleAbilities(grants, options, F, (a.detachments || []).map(k => F && (F.detachments || {})[k]).filter(Boolean));
+  return BUILDER().ruleAbilities(grants, options, F, (a.detachments || []).map(k => F && (F.detachments || {})[k]).filter(Boolean), core);
 }
-const ruleAbilities = (factions, grants, options, a) => ruleAbilitiesFull(factions, grants, options, a).rows;
+const ruleAbilities = (factions, grants, options, a, core) => ruleAbilitiesFull(factions, grants, options, a, core).rows;
 const meetsTo = (to, kw) => BUILDER().meetsTo(to, kw);
 // a list's row a rule in force gives (builder.js ruleOfRow): the rule's words, read as the rule's
-const ruleGiven = (D, a, ab) => { const F = (D.factions || {})[a.faction]; return !!F && !!BUILDER().ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab); };
+const ruleGiven = (D, a, ab) => { const F = (D.factions || {})[a.faction]; return !!F && !!BUILDER().ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab, D); };
 // the gate: every list's unit has, for each part, exactly the rows the rules in force give it (in GW's order, after the part's datasheet
 // abilities), and no rule's words fail to resolve, in a list or in any detachment of a faction (never guessed: the gate fails)
 function ruleAbilityFails(D){
   const fails = [], dsOf = (fac, n) => { const all = Object.values(D.datasheets || {}).filter(S => S.name === n); return all.find(S => S.faction === fac) || all[0]; };
   for(const [fk, F] of Object.entries(D.factions || {})){
-    const RA = ruleAbilitiesFull(D.factions, D.grants, D.ruleOptions, { faction:fk, detachments:Object.keys(F.detachments || {}) });
+    const RA = ruleAbilitiesFull(D.factions, D.grants, D.ruleOptions, { faction:fk, detachments:Object.keys(F.detachments || {}) }, D);
     for(const e of RA.errors) fails.push(F.name + ': ' + e.error);
   }
   for(const a of D.armies || []){
-    const RA = ruleAbilitiesFull(D.factions, D.grants, D.ruleOptions, a), names = new Set(RA.rows.map(x => x.name).concat((D.grants || []).filter(g => g.type === 'ability' && /\bthe following abilit(?:y|ies)\b/i.test(g.text || '')).map(g => g.grants)));
+    const RA = ruleAbilitiesFull(D.factions, D.grants, D.ruleOptions, a, D), names = new Set(RA.rows.map(x => x.name).concat((D.grants || []).filter(g => g.type === 'ability' && / rule · /.test(g.rule)).map(g => g.grants)));
     for(const u of a.units){
       if(u.ref) continue;
       const parts = u.leads ? [u.name].concat((u.also || []).map(x => x.name), [u.leads]) : [u.name], multi = parts.length > 1;
@@ -370,7 +370,7 @@ function build(R){
   // Protean Purpose, on its Norn units only in a list that takes the detachment
   // (GRANTS and RULE_OPTIONS as verify/derive.js reads them from the words: the old form, --expand's, has neither table)
   let RA0 = null; const ruleTabs = () => RA0 || (RA0 = require('./derive').ruleTables(R.D));
-  const ruleAbility = (a, u, name) => ruleAbilities(R.D.factions, ruleTabs().grants, ruleTabs().options, a).some(x => x.name === name && meetsTo(x.to, u.kw));
+  const ruleAbility = (a, u, name) => ruleAbilities(R.D.factions, ruleTabs().grants, ruleTabs().options, a, R.D).some(x => x.name === name && meetsTo(x.to, u.kw));
   armies.forEach((a, ai) => a.units.forEach((u, ui) => {
     if(u.ds) throw new Error(a.id + '/' + u.id + ': not resolved');
     const names = u.leads ? [u.name].concat((u.also || []).map(x => x.name), [u.leads]) : [u.name];

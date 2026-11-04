@@ -400,7 +400,7 @@ function build(j, D, opt){
   if(gwNotes.length) army.gwPoints = gwNotes;
   if(Object.keys(top.config).length) army.config = top.config;
   army.source = 'New Recruit, imported ' + (opt.date || '');
-  B.err = err; B.D = D; B.RA = ruleAbilities(D.grants, D.ruleOptions, B.F, B.dets);
+  B.err = err; B.D = D; B.RA = ruleAbilities(D.grants, D.ruleOptions, B.F, B.dets, D);
   for(const u of units) finish(B, army, u, units);
   if(errors.length) return fail();
   // identical units are one, with copies
@@ -638,22 +638,32 @@ function catFilled(B, key, f){
 // units, Daughters of the Abyss' Psychic Null (Aura) to ANATHEMA PSYKANA units, Mission Tactics' Furor, Malleus and Purgatus Tactics to
 // KILL TEAM units). Its words are GW's in the rule itself: the words RULE_OPTIONS reads for the option of that name, found in the rule's
 // text right after the ability's bold name, exactly once (apostrophes aside; the rule's own characters are quoted). One that cannot be
-// found so is an error, never a guess. (A core ability a rule gives, "have the Feel No Pain 6+ ability", prints no words of its own: not
-// one of these.) verify/tables.js, verify/from-json.js and verify/catalog.js read them with this same function.
+// found so is an error, never a guess. A core ability a rule gives the same way ("IMPERIAL KNIGHTS models from your army have the
+// **Feel No Pain 6+** ability", Knights of Legend; Heralds of the Throne's Fights First; Mindhunger's Deep Strike) prints no words of its
+// own: its row has GW's name for it and the core rule's words, the ones its popup shows (the app's ruleFor: the faction's aliases, then
+// RULE_ALIASES, then RULES; core: WH_DATA), and a name no core rule has is an error too. verify/tables.js, verify/from-json.js and
+// verify/catalog.js read them with this same function.
 //   { rows:[{ name, rule (GRANTS' key), to, row:{ name, tag, ph, turn, turns, text } }], errors:[{ to, error }] }
 // tag: the rule's name, then the limit GW prints before the words ("(Once per battle, per unit) …"), then Aura where GW's name says
 // "(Aura)", as an enhancement's tag names it: "Higher Imperatives · Once per battle, per unit", "Daughters of the Abyss · Aura"
 const RULE_AB = /\bthe following abilit(?:y|ies)\b/i;
-function ruleAbilities(grants, options, F, dets){
+function ruleAbilities(grants, options, F, dets, core){
   const out = { rows:[], errors:[] }; if(!F) return out;
   const inForce = new Map();
   for(const r of F.armyRules || []) inForce.set(F.name + ' army rule · ' + r.name, r);
   for(const d of dets || []) if(d) for(const r of [d.rule].concat(d.moreRules || []).filter(Boolean)) inForce.set(F.name + ' · ' + d.name + ' rule · ' + r.name, r);
   const ap = s => String(s).replace(/[’‘]/g, "'");
   for(const g of grants || []){
-    if(g.type !== 'ability' || g.option || g.while != null || !g.to || typeof g.to !== 'object' || !RULE_AB.test(g.text || '') || !inForce.has(g.rule)) continue;
+    if(g.type !== 'ability' || g.option || g.while != null || !g.to || typeof g.to !== 'object' || !inForce.has(g.rule)) continue;
     const r = inForce.get(g.rule), opts = (options || []).filter(o => o.rule === g.rule && o.option === g.grants);
     const no = why => out.errors.push({ to:g.to, error:'the ability ' + g.grants + ' that ' + r.name + ' gives ' + kwWords(g.to) + ' units: ' + why + ' (never guessed): not built' });
+    // (a core ability: GW's name for it, the core rule's words, as its popup shows them; no phases of its own)
+    if(!RULE_AB.test(g.text || '')){
+      const t = coreText(core, F, g.grants);
+      if(!t){ no('no core rule of that name (RULES, RULE_ALIASES)'); continue; }
+      out.rows.push({ name:g.grants, rule:g.rule, to:g.to, core:true, row:sorted({ name:g.grants, tag:r.name, text:t }, ORDER.abilities) });
+      continue;
+    }
     if(opts.length !== 1){ no(opts.length ? 'more than one set of words for it in the rule' : 'its words are not read from the rule (RULE_OPTIONS has no option of that name)'); continue; }
     const t = ruleText(r), T = ap(t), w = ap(opts[0].text), esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const head = new RegExp('\\*\\*' + esc(ap(g.grants)) + '(?::\\*\\*|\\*\\*:?)\\s*$');
@@ -673,11 +683,22 @@ const meetsTo = (to, kw) => { const has = k => (kw || []).some(x => lc(x) === lc
 // the rule in force that gives a list's row (one of ruleAbilities' rows): its tag names the rule first and its words are in the rule's
 // text (apostrophes aside). Such a row's words are the rule's: verify/derive.js and verify/effects-migrate.js read them as the rule's
 // (its options, grants and boxes), never as a source of their own, so nothing is counted twice
-function ruleOfRow(F, dets, ab){
+// (or a core ability the rule names: the core rule's words, coreText, and the rule's text naming the ability)
+function ruleOfRow(F, dets, ab, core){
   if(!F || !ab || !ab.tag || typeof ab.text !== 'string') return null;
-  const n = String(ab.tag).split(' · ')[0], ap = s => String(s).replace(/[’‘]/g, "'");
+  const n = String(ab.tag).split(' · ')[0], ap = s => String(s).replace(/[’‘]/g, "'"), bare = s => ap(s).replace(/\*\*/g, '').toLowerCase();
   const rs = (F.armyRules || []).concat(...(dets || []).filter(Boolean).map(d => [d.rule].concat(d.moreRules || []).filter(Boolean)));
-  return rs.find(r => r.name === n && ap(ruleText(r)).includes(ap(ab.text))) || null;
+  return rs.find(r => r.name === n && (ap(ruleText(r)).includes(ap(ab.text)) || (core && coreText(core, F, ab.name) === ab.text && bare(ruleText(r)).includes(bare(ab.name))))) || null;
+}
+// the words of a core ability by the name a rule gives it ("Feel No Pain 6+"), as the app's rule popup finds them (ruleFor): the faction's
+// aliases, then RULE_ALIASES, then RULES; null where no core rule has that name (an army or detachment rule of that name is not one)
+function coreText(core, F, name){
+  if(!core || !core.rules) return null;
+  let clean = String(name).replace(/^\[|\]$/g, '').replace(/\*$/, '').trim();
+  for(const [re, key] of F.aliases || []) if(re.test(clean)){ clean = key; break; }
+  if((F.armyRules || []).some(r => r.name.toLowerCase() === clean.toLowerCase() && !r.coreTwin)) return null;
+  for(const [re, key] of core.ruleAliases || []) if(re.test(clean)) return core.rules[key] || null;
+  return core.rules[clean] || null;
 }
 // a unit part's rows of them: those whose keywords it has and its datasheet does not already have
 const ruleAbilitiesOf = (RA, kw, own) => RA.rows.filter(x => meetsTo(x.to, kw) && !(own || []).some(a => a.name === x.name));
@@ -768,7 +789,7 @@ function marksOf(B, army, u, parts, P, rows, abil){
 }
 const where = parts => 'unit ' + parts.map(p => nn(p.name)).join(' + ');
 
-const api = { build, ruleAbilities, ruleAbilitiesOf, ruleOfRow, meetsTo, catalogued, catalogues, malformed, nn, lc, typo, slug, uniq, and, splitList, lastId };
+const api = { build, ruleAbilities, ruleAbilitiesOf, ruleOfRow, coreText, meetsTo, catalogued, catalogues, malformed, nn, lc, typo, slug, uniq, and, splitList, lastId };
 root.WH_BUILDER = api;
 if(typeof module !== 'undefined' && module.exports) module.exports = api;
 })(typeof window !== 'undefined' ? window : globalThis);

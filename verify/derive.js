@@ -875,7 +875,8 @@ function defSaid(D, ab){ const o = (D.boxes || {})['a|' + ckHash(ab.name + '\n' 
   return (o.d || []).flatMap(b => b.pick ? b.pick.flatMap(p => p.df) : b.df).map(([id]) => DF_SAID[id] || id).concat((o.dnc || []).length ? ['not counted'] : []).join(', '); }
 // the same for a rule's boxes of one of its options (a row the rule gives: Psychic Null (Aura), Daughters of the Abyss)
 function defSaidOpt(D, r, opt){ const o = (D.boxes || {})['r|' + ckHash(r.name + '\n' + r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : ''))] || {};
-  return (o.d || []).filter(b => b.opt === opt).flatMap(b => b.pick ? b.pick.flatMap(p => p.df) : b.df).map(([id]) => DF_SAID[id] || id).concat((o.dnc || []).filter(x => x.opt === opt).length ? ['not counted'] : []).join(', '); }
+  const mine = x => (o.d || []).concat(o.dnc || []).some(y => y.opt === opt) ? x.opt === opt : !x.opt;   // (a core ability the rule gives: its boxes of no option)
+  return (o.d || []).filter(mine).flatMap(b => b.pick ? b.pick.flatMap(p => p.df) : b.df).map(([id]) => DF_SAID[id] || id).concat((o.dnc || []).filter(mine).length ? ['not counted'] : []).join(', '); }
 const DEF_RULES = [
   { id:'fnp',        re:/feel no pain (\d)\+|feel no pain\*?\*? (\d)\+/i,                                   note:/feel no pain|FNP/i },
   { id:'invuln',     re:/(\d)\+ (?:invulnerable save|insv)/i,                                                note:/invulnerable save|InSv/i },
@@ -1373,8 +1374,8 @@ function storedOptionsOfAbility(u, ab){
 // a detachment's rules: `rule`, then any further ones (`moreRules`: Blood Legion's Blood Tainted)
 function detRules(d){ return d && d.rule ? [d.rule].concat(d.moreRules || []) : []; }
 // a list's row a rule in force gives it (builder.js ruleOfRow: its tag names the rule, its words are the rule's)
-const builderRuleOfRow = (D, a, ab) => { const F = (D.factions || {})[a.faction]; return F ? require(path.join(__dirname, '..', 'builder.js')).ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab) : null; };
-const ruleGivenRow = (D, a, ab) => { const F = (D.factions || {})[a.faction]; return !!F && !!require(path.join(__dirname, '..', 'builder.js')).ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab); };
+const builderRuleOfRow = (D, a, ab) => { const F = (D.factions || {})[a.faction]; return F ? require(path.join(__dirname, '..', 'builder.js')).ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab, D) : null; };
+const ruleGivenRow = (D, a, ab) => { const F = (D.factions || {})[a.faction]; return !!F && !!require(path.join(__dirname, '..', 'builder.js')).ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab, D); };
 function ruleSources(D){
   const out = [];
   for(const [fk, f] of Object.entries(D.factions)){

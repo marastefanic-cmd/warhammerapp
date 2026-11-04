@@ -234,6 +234,13 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
     const PN = ['Prosecutor Squad', 'Witchseeker Squad', 'Witchseeker Squad'];
     neg('Lite Knights: Psychic Null (Aura) on its ANATHEMA PSYKANA units only', 'lite-knights', j => j, null, r => JSON.stringify(pn(r)) === JSON.stringify(PN));
     neg('Lite Knights with no Psychic Null profile in the export: the same rows', 'lite-knights', j => { walkP(j.roster, x => { if(x.profiles) x.profiles = x.profiles.filter(p => !/Psychic Null/.test(p.name)); }); }, null, r => JSON.stringify(pn(r)) === JSON.stringify(PN));
+    // a core ability a rule gives (Mindhunger: "Friendly DEATHLEAPER/LICTOR/NEUROLICTOR units have Deep Strike"): GW's name, the core
+    // rule's words as its popup shows them, marked with the rule; only for the keywords; and a name no core rule has is refused
+    { const F = D.factions.tyranids, RA = B.ruleAbilities(D.grants, D.ruleOptions, F, [F.detachments['ambush-predators']], D), ds = RA.rows.find(x => x.name === 'Deep Strike');
+      ok(ds && ds.row.tag === 'Mindhunger' && ds.row.text === D.rules['Deep Strike'] && B.meetsTo(ds.to, D.datasheets['tyranids/lictor'].kw) && !B.meetsTo(ds.to, D.datasheets['tyranids/norn-emissary'].kw),
+        'N a core ability a rule gives: Mindhunger’s Deep Strike ' + JSON.stringify(ds && ds.row));
+      const G2 = D.grants.map(g => g.rule === 'Tyranids · Ambush Predators rule · Mindhunger' ? Object.assign({}, g, { grants:'Deep Striek' }) : g), R2 = B.ruleAbilities(G2, D.ruleOptions, F, [F.detachments['ambush-predators']], D);
+      ok(R2.errors.some(e => /Deep Striek .*no core rule of that name/.test(e.error)), 'N a core ability no core rule has is an error: ' + JSON.stringify(R2.errors)); }
     // (and its words never guessed: a rule whose words for the ability cannot be found refuses the list, naming it)
     { const D2 = Object.assign({}, D, { ruleOptions:(D.ruleOptions || []).filter(o => o.option !== 'Psychic Null (Aura)') }), r = B.build(exp('lite-knights'), D2, { id:'n', date:'x' });
       ok(!r.ok && r.errors.some(e => /Psychic Null \(Aura\) that Daughters of the Abyss gives .*never guessed/.test(e)), 'N an ability whose words cannot be found is refused: ' + JSON.stringify(r.ok ? 'built' : r.errors));

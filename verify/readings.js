@@ -149,7 +149,9 @@ const DF_OF = { fnp:'fnp', fnpMortal:'fnp', fnpPsychic:'fnp', fnpPsyMortal:'fnp'
 function boxDefences(ab, rule){
   // (a row a rule of the list gives, Psychic Null (Aura) from Daughters of the Abyss: the rule's boxes of the option of its name)
   const o0 = rule ? (D.boxes || {})[KEY.rule(rule)] || {} : null;
-  const o = o0 ? { d:(o0.d || []).filter(b => b.opt === ab.name), dnc:(o0.dnc || []).filter(x => x.opt === ab.name) } : (D.boxes || {})[KEY.ability(ab)] || {};
+  // (a core ability the rule gives, Knights of Legend's Feel No Pain 6+: the rule's boxes of no option)
+  const mine = x => (o0.d || []).concat(o0.dnc || []).some(y => y.opt === ab.name) ? x.opt === ab.name : !x.opt;
+  const o = o0 ? { d:(o0.d || []).filter(mine), dnc:(o0.dnc || []).filter(mine) } : (D.boxes || {})[KEY.ability(ab)] || {};
   const ids = new Set((o.d || []).flatMap(b => b.pick ? b.pick.flatMap(p => p.df) : b.df).flatMap(([id]) => [].concat(DF_OF[id] || [])));
   return { ids, nc:(o.dnc || []).map(x => norm(x.quote).replace(/\*\*/g, '')) };
 }
@@ -166,7 +168,7 @@ function gapsOf(){
 }
 // one ability of one unit: each sentence stating a bonus that no reading of the ability says
 // the rule in force a list's row is given by (builder.js ruleOfRow), or null
-const ruleOf = (a, ab) => { const F = (D.factions || {})[a.faction]; return F ? require(path.join(ROOT, 'builder.js')).ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab) : null; };
+const ruleOf = (a, ab) => { const F = (D.factions || {})[a.faction]; return F ? require(path.join(ROOT, 'builder.js')).ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab, D) : null; };
 function abilityGaps(u, ab, rule){
   const found = [];
   if(ab.na) return found;
