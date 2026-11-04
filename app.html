@@ -421,7 +421,6 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
   clip-path:polygon(var(--ch) 0, calc(100% - var(--ch)) 0, 100% var(--ch), 100% 100%, 0 100%, 0 var(--ch))}   /* the side lines start where the angled corner meets them */
 .ds > .dbx:first-child{--ch:9px}
 .dbx.dft{clip-path:none}
-.dbx.allu{border-top:1px solid var(--line); border-radius:3px; clip-path:none; margin:0 0 14px}   /* the lines every unit of the list has alike (ALL <FACTION> UNITS) */
 .ds .dbx + .dbx{margin-top:14px}
 .dbx.dft{border-top:1px solid var(--line); border-radius:3px}
 .dh2, .ds .dbx > .wh.both, .ds .dbx > .ab.pf > summary{margin:0 -1px; background:var(--ds-h2); clip-path:polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 0 100%, 0 7px)}
@@ -1610,15 +1609,17 @@ function unitMods(u, kind){
   const dmg = (u.abilities || []).filter(ab => /^Damaged: /i.test(ab.name)).map(ab => ({ grp:'unit', name:ab.name, key:DM_KEY.a(ab), ab, src:u, damaged:true }));
   // (the core stratagems, every unit's, are on the Stratagems tab: the footnotes name the list's detachments' stratagems)
   const listStrat = S => !S.strat || (S.s && S.s.src !== 'Core');
-  for(const S of of('unit').filter(S => !S.core).concat(dmg, of('unit').filter(S => S.core).map(S => Object.assign({ rule:S.name }, S)), of('army'), core.filter(Boolean), of('other'), of('strat')).filter(listStrat)){
+  // (the order of the lines, docs/summaries.md 40: army-wide (army and detachment rules), the unit's own (its abilities, enhancement,
+  // wargear, Damaged bands, its weapons' core abilities), other units' auras and grants, stratagems; GW's order within each)
+  for(const S of of('army').concat(of('unit').filter(S => !S.core), dmg, of('unit').filter(S => S.core).map(S => Object.assign({ rule:S.name }, S)), core.filter(Boolean), of('other'), of('strat')).filter(listStrat)){
     const o = BOXES_AGREED[S.key] || {};
-    let fell = false;
+    let fell = false; const fellOpts = [];
     for(const b of o.b || []){
       if(S.reachOnly ? !(b.reach && dmReaches(b.reach, u)) : b.reach ? !dmReaches(b.reach, u) || (S.grp === 'unit' && b.notSelf) : S.grp === 'other') continue;
       if(b.kind !== 'all' && b.kind !== kind) continue;
       // (a box the two-reader rule does not confirm, effects.js agreed: where it would have been a footnote, for this kind of attack and
       // these weapons, its rule's words not counted)
-      if(b.unconfirmed){ if(fnReaches(S, b, u, kind)) fell = true; continue; }
+      if(b.unconfirmed){ if(fnReaches(S, b, u, kind)){ fell = true; fellOpts.push(...boxOpts(b, S.name)); } continue; }
       const m = fnLine(S, b, u, kind, S.ab);
       if(m) out.push(m);
     }
@@ -1627,7 +1628,7 @@ function unitMods(u, kind){
     // does not confirm, where it reaches: another unit's too, with the unit it is from, "not counted here: see the rule (Tech-Priest Enginseer)")
     const giver = S.grp === 'other' ? fnGiver(S, u) : '';
     // (drawn as ncHtml: a rule's name alone, else its name and its short summary, another unit's "Granted by")
-    if(!S.damaged && (fell || (S.grp !== 'other' && (o.nc || []).some(x => x.atk && !x.unconfirmed))) && !out.some(x => x.key === S.key && x.ncLine)) out.push(Object.assign({ kind:'all', when:'', note:FN_NC + (giver ? ' (' + giver + ')' : ''), who:'', from:S.name, key:S.key, box:null, ncLine:true, short:srcShort(S, 'atk') }, S.core ? { core:true } : {},
+    if(!S.damaged && (fell || (S.grp !== 'other' && (o.nc || []).some(x => x.atk && !x.unconfirmed))) && !out.some(x => x.key === S.key && x.ncLine)) out.push(Object.assign({ kind:'all', when:'', note:FN_NC + (giver ? ' (' + giver + ')' : ''), who:'', from:S.name, key:S.key, box:null, ncLine:true, short:srcShort(S, 'atk'), opts:[...new Set(fellOpts)] }, S.core ? { core:true } : {},
       S.rule ? { rule:S.rule } : {}, S.strat ? { strat:S.strat, cp:S.cp } : {}, S.src && S.src !== u ? { src:S.src, giver } : {}));
   }
   return out;
@@ -4560,47 +4561,17 @@ function rowCounts(u){
   }
   return new Map(rows.map(r => [r.s, r.n]));
 }
-// ---- the lines every unit of the list has alike (docs/summaries.md 26): same placement, same summary, no giver (nor a leader), on every unit
-// that has that placement (under its weapons: every unit with weapons; When targeted and under the profile: every unit), two or more:
-// shown once, in an "ALL <FACTION> UNITS" block at the top of the Units screen, and not on the sheets. The Damage tab is unchanged. ----
-const atkCommonKey = m => 'atk\0' + m.key + '\0' + m.short;
-const defCommonKey = x => 'def\0' + x.key + '\0' + x.short;
-const stCommonKey = x => (x.foe ? 'foe' : 'st') + '\0' + x.rule + '\0' + x.short;
-const COMMON = new Map();
-function unitLinesOf(u){
-  const atk = new Map(), def = new Map(), st = new Map();
-  for(const kind of ['ranged', 'melee']) if(((kind === 'ranged' ? u.ranged : u.melee) || []).length)
-    for(const m of unitMods(u, kind)) if(sumMode(m) && !m.giver && !m.leader && !rowMod(m, u) && !m.damaged) atk.set(atkCommonKey(m), m);
-  for(const x of defLines(defenceItems(u))) if(x.sum && !x.from && !x.leader && !x.dup) def.set(defCommonKey(x), x);
-  for(const x of statShown(u)) if(x.short && !x.from) st.set(stCommonKey(x), x);
-  return { atk, def, st, armed:!!((u.ranged || []).length || (u.melee || []).length) };
-}
-function commonLines(){
-  const a = army(); if(COMMON.has(a.id)) return COMMON.get(a.id);
-  const us = a.units.filter(u => !u.ref), per = us.map(unitLinesOf), out = { atk:new Map(), def:new Map(), st:new Map() };
-  const inter = (list, f) => { if(list.length < 2) return new Map(); const [first, ...rest] = list.map(f); return new Map([...first].filter(([k]) => rest.every(m => m.has(k)))); };
-  out.atk = inter(per.filter(x => x.armed), x => x.atk); out.def = inter(per, x => x.def); out.st = inter(per, x => x.st); out.u = us[0];
-  COMMON.set(a.id, out); return out;
-}
 // (a When targeted summary of named options as drawn: a line each, docs/summaries.md 22)
-const defLines = xs => xs.flatMap(x => x.sum && sumLines(x.short).length > 1 ? sumLines(x.short).map(l => Object.assign({}, x, { short:l, t:x.t.split(x.short).join(l) })) : [x]);
-const isCommonAtk = m => commonLines().atk.has(atkCommonKey(m));
-const isCommonDef = x => commonLines().def.has(defCommonKey(x));
-const isCommonSt = x => commonLines().st.has(stCommonKey(x));
-function allUnitsBlock(){
-  const c = commonLines(), u = c.u; if(!u || !(c.atk.size + c.def.size + c.st.size)) return '';
-  const lab = t => '<i class="sc">' + t + '</i> ';
-  const strat = [...c.atk.values()].filter(m => m.strat), rest = [...c.atk.values()].filter(m => !m.strat);
-  const lines = rest.map(m => sumHtml([m], u, false)).join('') +
-    (strat.length ? strat.map(m => '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + ncSum(['strat', m.strat], m.short) + '</div>').join('') : '') +
-    [...c.def.values()].map(x => '<div class="mod">' + lab('When targeted') + defLine(x, u) + '</div>').join('') +
-    [...c.st.values()].map(x => '<div class="mod">' + lab('Profile') + statHtml(x, u).replace(/^<p class="dsl">|<\/p>$/g, '') + '</div>').join('');
-  return '<section class="dbx allu"><div class="dh2"><span>All ' + esc(faction().name) + ' units</span></div><div class="mods all">' + lines + '</div></section>';
-}
+const defLines = xs => xs.flatMap(x => { if(!x.sum) return [x]; const ls = sumLinesOf([x]);
+  return ls.map(l => Object.assign({}, x, { short:l.text || FN_NC, opt:l.opt, gap:!l.text, t:x.t.split(x.short).join(l.text || FN_NC) })); });
+// (this unit's own rule's effect on enemy units, a When targeted box of the enemy's attacks: under the profile, its sumFoe (else its
+// When targeted summary), docs/summaries.md 34)
+const foeLine = (x, u) => { const t = [x.abv ? 'ability' : x.a, x.abv || x.v], sum = srcShort(x.S || {}, 'foe') || x.short;
+  return (sum ? sumLines(sum) : [null]).map(l => '<p class="dsl foe">' + (l ? ncSum(t, l) : esc(x.t)) + ' <span class="from">(' + linkTo(t[0], t[1], x.name) + ')</span></p>').join(''); };
 function screenUnits(){
   const a = army(), groups = {};
   for(const u of a.units.concat(a.refs || [])){ const r = roleGroup(u); (groups[r] = groups[r] || []).push(u); }
-  return allUnitsBlock() + ROLE_ORDER.filter(r => groups[r]).map(r => '<h2 class="rgh"><span>' + ROLE_LABEL[r] + '</span><span class="c">' + groups[r].reduce((t, u) => t + (u.copies || 1), 0) + '</span></h2><div class="list ul">' + groups[r].map(u => {
+  return ROLE_ORDER.filter(r => groups[r]).map(r => '<h2 class="rgh"><span>' + ROLE_LABEL[r] + '</span><span class="c">' + groups[r].reduce((t, u) => t + (u.copies || 1), 0) + '</span></h2><div class="list ul">' + groups[r].map(u => {
     // one model type: its count goes after the name ("Gretchin ×10"), like a weapon count
     const one = u.models.length === 1 && u.models[0].match(/^(\d+)× /);
     const n = one && one[1] !== '1' ? '<span class="x">×' + one[1] + '</span>' : '';
@@ -4649,30 +4620,59 @@ const srcShort = (S, place) => { const c = SUM_COL[place || 'atk'];
   return S.core || S.rl || S.grp === 'core' ? '' : S.s ? S.s.gist || '' : S.ab ? S.ab[c] || (enhRowOf(S.ab.name) || {})[c] || ''
   : S.grp === 'army' || S.a === 'rule' ? (ruleRowOf(S.name) || {})[c] || '' : ''; };
 const ncShortOf = S => srcShort(S, 'def');
+// (a stratagem line's phase, from its phases and turn columns, never its gist: "in the Fight phase", "in your opponent’s Shooting phase or the
+// Fight phase", docs/summaries.md 28)
+const stratPhase = s => { const ph = (s && s.phases) || []; if(!ph.length) return ''; if(ph.length === PHASES.length) return 'in any phase';
+  return 'in ' + ph.map(p => (T => T === 'your' ? 'your ' : T === 'opp' ? 'your opponent’s ' : 'the ')(phTurn(s, p)) + PHASE_NAME[p] + ' phase').join(' or '); };
+const stratLead = s => { const p = stratPhase(s); return p ? esc(p) + ', ' : ''; };
 // (an army or detachment rule that is a menu, every box of it one of its options, a table's rows or a pick (Blessings of Khorne, Martial
 // Ka'tah, Combat Doctrines): a blanket rule, its name, as one whose words a line does not count)
 const menuRule = key => { const o = (D.boxes || {})[key] || {}, bx = [].concat(o.b || [], o.d || [], o.st || []); return bx.length > 0 && bx.every(b => b.opt || b.pick || b.tableRows); };
 // (the summary, opening the rule as its name does, with the AI label; none written yet: GW's words a tap away, as before)
 const ncSum = (t, short) => short ? (t ? linkTo(t[0], t[1], short) : esc(short)) + ' ' + aiLabel : FN_NC;
 // (another unit's line: "Granted by: Neurolictor - …", the unit's name opening its datasheet)
-const grantedBy = (src, giver) => '<span class="gby">Granted by: ' + (src ? linkTo('unit', src.id, giver) : esc(giver)) + '</span> - ';
+// (an enhancement's giver is marked "(enhancement)", docs/summaries.md 37)
+const grantedBy = (src, giver, name) => '<span class="gby">Granted by: ' + (src ? linkTo('unit', src.id, giver) : esc(giver)) + (name && enhRowOf(name) ? ' (enhancement)' : '') + '</span> - ';
 // (a footnote drawn as its source's summary: one with a short that is no core rule's, and not an army or detachment rule's line of words not
 // counted alone (its name: sumRule))
 const sumMode = m => !!m.short && !m.core;
 // (one line per source: the footnotes of one source, from one unit, are one summary line)
 const lineKey = m => sumMode(m) || m.damaged ? 'K\0' + m.key + '\0' + (m.giver || '') : [m.from, m.when, m.note].join('|');
-// (a summary's lines: one per named option, docs/summaries.md 22)
+// (one footnote of a source line, for the same footnote from several units once: its line and its option)
+const noteKey = m => lineKey(m) + '\0' + (sumMode(m) ? (m.box ? boxOpts(m.box, m.from) : m.opts || []).join('|') + '\0' + (m.box ? m.note : '') : '');
+// (a summary's lines, docs/summaries.md 22: a source's line is the program's, one per named option of its boxes the program places (a table's
+// row, a "Name:" option, a named pick; the rule's RULE_OPTIONS where it has them), the AI column only its text: "<option> ⇒ <text>" per option,
+// a line with no "⇒" the text of the source's line with no option)
 const sumLines = t => String(t || '').split('\n').filter(Boolean);
+const OPT_SEP = ' ⇒ ';
+const sumParse = t => { const plain = [], opts = new Map(); for(const l of sumLines(t)){ const i = l.indexOf(OPT_SEP); if(i > 0) opts.set(l.slice(0, i), l.slice(i + OPT_SEP.length)); else plain.push(l); } return { plain, opts }; };
+const ruleOptsOf = name => (D.ruleOptions || []).filter(o => String(o.rule).split(' · ').pop() === name).map(o => o.option);
+const boxOpts = (b, name) => { if(!b) return []; const n = [];
+  if(b.opt) n.push(String(b.opt).split(' · ')[0]);
+  for(const p of b.pick || []) if(p.name && p.name !== WH_EFFECTS.fxLabel(p.fx || []) && (!p.df || p.name !== WH_EFFECTS.dfLabel(p.df))) n.push(String(p.name).split(' · ')[0]);
+  const ro = ruleOptsOf(name); if(!ro.length) return n;
+  return [...new Set(n.map(x => ro.find(o => x === o || x.startsWith(o + ' ') || x.startsWith(o + ' (')) || null).filter(Boolean))]; };
+// (the lines a source's footnotes are drawn as: [{ opt, text }], text null where the column has none for it, a gap the gate fails, verify/lines.js LM)
+function sumLinesOf(items){
+  const nm = x => x.kind ? x.from : x.name;   // (a footnote's source is its from; a When targeted line's its name, its from the giver)
+  const P = sumParse(items[0].short), out = [], opts = [], plain = items.some(x => !(x.box ? boxOpts(x.box, nm(x)) : x.opts || []).length);
+  for(const x of items) for(const o of x.box ? boxOpts(x.box, nm(x)) : x.opts || []) if(!opts.includes(o)) opts.push(o);
+  if(plain) for(const l of P.plain.length ? P.plain : [null]) out.push({ opt:'', text:l });
+  for(const o of opts) out.push({ opt:o, text:P.opts.has(o) ? P.opts.get(o) : null });
+  return out;
+}
 function sumHtml(items, u, hasHunter){
   const m = items[0], t = modTarget(m, u);
   const hunt = items.find(x => x.hunter) && hasHunter ? ' (the (+' + Object.values(items.find(x => x.hunter).hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '';
-  const by = m.giver ? grantedBy(m.src, m.giver) : m.leader ? grantedBy({ id:u.id }, m.leader) : '';
-  return sumLines(m.short).map((l, i) => '<div class="mod">' + by + ncSum(t, l) + (i ? '' : hunt) + ' <span class="from">(' + modFrom(m, u) + ')</span></div>').join('');
+  const by = m.giver ? grantedBy(m.src, m.giver, m.from) : m.leader ? grantedBy({ id:u.id }, m.leader, m.from) : '';
+  // (a rule for one weapon: the weapon's name before it, docs/summaries.md 36)
+  const wp = items.every(x => x.who && x.who === m.who && x.box && x.box.scope && x.box.scope.weapon) ? esc(m.who) + ': ' : '';
+  return sumLinesOf(items).map((l, i) => '<div class="mod">' + by + wp + (l.text ? ncSum(t, l.text) : esc(FN_NC)) + (i ? '' : hunt) + ' <span class="from">(' + modFrom(m, u) + ')</span></div>').join('');
 }
 function ncHtml(m, u){
   const t = modTarget(m, u);
   if(m.rule) return '<div class="mod">' + modFrom(m, u) + '</div>';
-  if(m.giver) return '<div class="mod">' + grantedBy(m.src, m.giver) + ncSum(t, m.short) + ' <span class="from">(' + modFrom(m, u) + ')</span></div>';
+  if(m.giver) return '<div class="mod">' + grantedBy(m.src, m.giver, m.from) + ncSum(t, m.short) + ' <span class="from">(' + modFrom(m, u) + ')</span></div>';
   return '<div class="mod">' + ncSum(t, m.short) + ' <span class="from">(' + modFrom(m, u) + ')</span></div>';
 }
 // AP -2 improved by 1 is AP -3
@@ -4698,7 +4698,7 @@ function weaponBlock(it, keys, mods, u){
     const changed = keys.filter(k => vm.set[k] != null).map(k => KEY_LABEL[k] + ' ' + vm.set[k]).join(', ');
     // (its source's summary, as every line: the changed values the row shows, then the summary)
     return row(named(w0.name, w0.n), cells) + kwl(w0) +
-      '<div class="varc"><b>' + esc(changed) + '</b> ' + (sumMode(vm) ? (vm.giver ? grantedBy(vm.src, vm.giver) : vm.leader ? grantedBy({ id:u.id }, vm.leader) : '') + sumLines(vm.short).map(l => ncSum(modTarget(vm, u), l)).join(' · ') : esc(vm.when) + (vm.note ? ', ' + esc(vm.note) : '')) + ' <span class="from">(' + modFrom(vm, u) + ')</span></div>';
+      '<div class="varc"><b>' + esc(changed) + '</b> ' + (sumMode(vm) ? (vm.giver ? grantedBy(vm.src, vm.giver, vm.from) : vm.leader ? grantedBy({ id:u.id }, vm.leader, vm.from) : '') + sumLinesOf([vm]).map(l => l.text ? ncSum(modTarget(vm, u), l.text) : esc(FN_NC)).join(' · ') : esc(vm.when) + (vm.note ? ', ' + esc(vm.note) : '')) + ' <span class="from">(' + modFrom(vm, u) + ')</span></div>';
   }
   if(it.group){
     // Hunter weapons: the profile depends on the target; rules that add to Hunter attacks are built in
@@ -4741,7 +4741,7 @@ function stratModLines(det, list, u, hasHunter){
     const cond = shared ? m.when.slice(shared.length).replace(/^, /, '') : m.when;
     // (its summary, once: its short, else its gist)
     // ("<cp>CP <name>: <summary> AI")
-    if(sumMode(m)){ if(said.has(m.strat)) return ''; said.add(m.strat); return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + ncSum(['strat', m.strat], m.short) + '</div>'; }
+    if(sumMode(m)){ if(said.has(m.strat)) return ''; said.add(m.strat); return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + stratLead(allStratagems().find(x => x.id === m.strat)) + ncSum(['strat', m.strat], m.short) + '</div>'; }
     if(m.ncLine) return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + ncSum(['strat', m.strat], m.short) + '</div>';
     return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + (m.scope ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) +
       (cond ? (/^vs\b/i.test(cond) ? ' ' : ', ') + esc(cond) : '') + (m.hunter && hasHunter ? ' (the (+' + Object.values(m.hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '') + '</div>';
@@ -4873,7 +4873,7 @@ const rowMod = (m, u) => !!(m.weapon && m.set) && !oneOffMod(m, u);
 const footMod = (m, u) => m.weapon && m.set && oneOffMod(m, u) ? Object.assign({}, m, { note:(m.weapon + ' ' + Object.entries(m.set).map(([k, v]) => /^[+-]/.test(v) ? v + ' ' + k : k + ' ' + v).join(', ') + ' ' + m.note).trim() }) : m;
 function weaponTable(list, kind, mods, u){
   // the same footnote from several units (three Meks' Clever Know-wotz) once, as on the datasheet
-  const seen = new Set(), notes = mods.filter(m => !rowMod(m, u) && !(sumMode(m) && isCommonAtk(m))).map(m => footMod(m, u)).filter(m => { const k = lineKey(m); return !seen.has(k) && seen.add(k); });
+  const seen = new Set(), notes = mods.filter(m => !rowMod(m, u)).map(m => footMod(m, u)).filter(m => { const k = noteKey(m); return !seen.has(k) && seen.add(k); });
   const hasHunter = (list || []).some(w => w.hunter) && mods.some(m => m.hunter);
   return '<div class="wt ' + kind + '">' + weaponRows(list, kind === 'ranged' ? RANGED_KEYS : MELEE_KEYS, mods, u, kind) +
     (notes.length ? '<div class="mods">' + modLines(notes, u, hasHunter) + '</div>' : '') + '</div>';
@@ -4896,12 +4896,11 @@ function unitWeapons(u){
   } else if(r.length) h += head('ranged', 'Ranged Weapons', ['Range','A','BS','S','AP','D']) + weaponRows(r, RANGED_KEYS, mr, u, 'ranged');
   if(r.length) h += '<!--R--></section>';
   if(m.length) h += '<section class="dbx wt both">' + head('melee', 'Melee Weapons', ['A','WS','S','AP','D'], true) + weaponRows(m, ['none'].concat(MELEE_KEYS), mm, u, 'melee') + '<!--M--></section>';
-  const key = lineKey;
+  const key = noteKey;
   const inR = new Set(mr.map(key)), inM = new Set(mm.map(key)), seen = new Set(), notes = [];
   for(const x of mr.concat(mm)){
     const k = key(x);
     if(rowMod(x, u) || seen.has(k) || x.damaged) continue;   // (a Damaged band's: its band under the stats)
-    if(sumMode(x) && isCommonAtk(x)) continue;   // (a line every unit has alike: the Units screen's ALL block)
     seen.add(k);
     notes.push(Object.assign({}, footMod(x, u), { scope: !r.length || !m.length || (inR.has(k) && inM.has(k)) ? '' : inR.has(k) ? 'Ranged' : 'Melee' }));
   }
@@ -5007,12 +5006,13 @@ const defBoxesOf = key => BOXES_AGREED[key] || null;
 function defSources(u){
   const A = army(), F = factionOf(A) || {}, out = [], seen = new Set();
   const put = x => { if(seen.has(x.key + '|' + x.grp)) return; seen.add(x.key + '|' + x.grp); const o = defBoxesOf(x.key); if(o && (o.d || o.dnc)) out.push(Object.assign(x, { o })); };
-  for(const r of u.rules || []){ if(!/\d/.test(r) || D.rules[r]) continue; const t = dmCoreText(r); if(t) put({ grp:'core', name:r, a:'rule', v:r, key:DM_KEY.c(r, t), rl:r }); }
   for(const r of F.armyRules || []){ const own = hasRule(u, r.name) || !!dmGrantOf(A, u, r.name), o = defBoxesOf(DM_KEY.r(r));
     const reach = !own && A.units.some(x => x !== u && hasRule(x, r.name)) && ((o || {}).d || []).some(b => b.reach && dmReaches(b.reach, u));
     if(own || reach) put({ grp:'army', name:r.name, a:'rule', v:r.name, key:DM_KEY.r(r), reachOnly:reach, holders:reach ? A.units.filter(x => hasRule(x, r.name)) : null }); }
   for(const r of unitDetRules(u)) put({ grp:'army', name:r.name, a:'rule', v:r.name, key:DM_KEY.r(r) });
   for(const ab of u.abilities || []) if(!naReason(ab)) put({ grp:'unit', name:ab.name, a:'ability', v:abilityKey(ab), key:DM_KEY.a(ab), ab, src:u });
+  // (its Rules line's core rules with a value, Feel No Pain 5+: the unit's own, after its abilities, docs/summaries.md 40)
+  for(const r of u.rules || []){ if(!/\d/.test(r) || D.rules[r]) continue; const t = dmCoreText(r); if(t) put({ grp:'core', name:r, a:'rule', v:r, key:DM_KEY.c(r, t), rl:r }); }
   for(const x of A.units) if(x !== u) for(const ab of x.abilities || []) if(!naReason(ab)) put({ grp:'other', name:ab.name, a:'unit', v:x.id, key:DM_KEY.a(ab), ab, src:x, abv:abilityKey(ab) });
   // (the core stratagems, every unit's, are on the Stratagems tab, as for the footnotes)
   for(const s of allStratagems().filter(s => s.src !== 'Core')){ const o = defBoxesOf(DM_KEY.s(s)); if(!o) continue;
@@ -5040,7 +5040,7 @@ function defLineOf(S, b, u){
   const sc = b.scope || {}, models = sc.models && sc.models !== 'model' ? sc.models + ' models: ' : '';
   // (how long it lasts where its words say it lasts beyond the phase: "until the start of your next Command phase")
   const text = models + (b.pick ? 'one of: ' + b.pick.map(p => E.dfLabel(p.df)).join(' · ') : E.dfLabel(b.df)) + (b.until ? ' (' + b.until + ')' : '');
-  return { a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp === 'unit' ? S.ab.who : '', when, text, from:S.grp === 'other' ? giver : '', abv:S.abv, riled:on.some(x => x[0] === 'riled'), box:b, key:S.key, rl:S.rl || '', short:srcShort(S, 'def') };
+  return { a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp === 'unit' ? S.ab.who : '', when, text, from:S.grp === 'other' ? giver : '', abv:S.abv, riled:on.some(x => x[0] === 'riled'), box:b, key:S.key, rl:S.rl || '', short:srcShort(S, 'def'), foeOwn:S.grp === 'unit' && !!b.foe && !!S.ab, S };
 }
 // every "When targeted" line of a unit, in the order: its Rules line's core rules, army and detachment rules, its own abilities, other units',
 // stratagems; t the line's words (as drawn)
@@ -5066,7 +5066,7 @@ function defenceItems(u){
     // (and a box of it the two-reader rule does not confirm, where it reaches: another unit's too, with the unit it is from)
     const giver = S.grp === 'other' ? (S.ab && S.ab.who && S.src.leads && charsOf(S.src).some(c => c.name === S.ab.who) ? S.ab.who : S.src.short || S.src.name) : '';
     // (drawn by defLine as a not-counted line is, ncHtml: a rule's name alone, else its name and short summary, another unit's "Granted by")
-    if(fell || (S.grp !== 'other' && (S.o.dnc || []).some(x => !x.unconfirmed))) out.push({ a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp !== 'other' ? S.ab.who : '', when:'', text:FN_NC, from:giver, abv:S.abv, key:S.key, ncLine:true, short:ncShortOf(S), rl:S.rl || '' });
+    if(fell || (S.grp !== 'other' && (S.o.dnc || []).some(x => !x.unconfirmed))) out.push({ a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp !== 'other' ? S.ab.who : '', when:'', text:FN_NC, from:giver, abv:S.abv, key:S.key, ncLine:true, short:ncShortOf(S), rl:S.rl || '', S });
   }
   // (a Feel No Pain on its Rules line that another of its lines says with its condition or its model: Aegis of the Emperor's "against mortal
   // wounds", New Recruit's starred "Feel No Pain 5+*"; Trajann's own: not said twice)
@@ -5086,13 +5086,13 @@ function defenceItems(u){
   for(const x of res){ x.blanket = x.a === 'rule' && !x.rl && !x.short && (menuRule(x.key) || res.every(y => y.key !== x.key || y.ncLine));
     x.sum = !!x.short && !x.rl;
     if(x.blanket){ const k = x.key + '\0b'; if(sums.has(k)) x.dup = true; sums.add(k); }
-    if(x.sum){ const k = x.key + '\0' + (x.from || ''); if(sums.has(k)) x.dup = true; sums.add(k); } }
+    if(x.sum){ x.opts = boxOpts(x.box, x.name); const k = x.key + '\0' + (x.from || '') + '\0' + (x.opts.join('|') || '-'); if(sums.has(k)) x.dup = true; sums.add(k); } }
   // (a leader's ability on the unit it leads: "Granted by: <leader>", docs/summaries.md 24)
   for(const x of res) if(x.sum && !x.from && x.who && charsOf(u).some(c => c.name === x.who)) x.leader = x.who;
   // (as defLine draws it: a rule's name alone; a summary for its words; another unit's "Granted by")
   for(const x of res){ if(x.blanket){ x.t = x.name; continue; }
     const text = x.sum ? x.short : x.ncLine ? x.short || FN_NC : x.text;
-    if(x.sum){ x.t = x.from || x.leader ? 'Granted by: ' + (x.from || x.leader) + ' - ' + text + ' (' + x.name + ')' : x.cp ? x.cp + 'CP ' + x.name + ': ' + text : text + ' (' + x.name + ')'; continue; }
+    if(x.sum){ x.t = x.from || x.leader ? 'Granted by: ' + (x.from || x.leader) + ' - ' + text + ' (' + x.name + ')' : x.cp ? x.cp + 'CP ' + x.name + ': ' + stratLead((x.S || {}).s) + text : text + ' (' + x.name + ')'; continue; }
     x.t = (x.rl && !x.when && x.text === x.name) || (x.ncLine && x.a === 'rule') ? x.name : x.from ? ['Granted by: ' + x.from + ' -', x.when ? x.when + ':' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ')
       : x.ncLine ? [x.cp ? x.cp + 'CP' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ') : [x.cp ? x.cp + 'CP' : '', x.name + ':', x.when ? x.when + ':' : '', text].filter(Boolean).join(' '); }
   return res;
@@ -5115,10 +5115,10 @@ function defLine(x, u){
   // (what opens its rule: another unit's ability its rule, not that unit, which its "Granted by" opens)
   const ra = x.abv ? 'ability' : x.a, rv = x.abv || x.v, text = x.sum || x.ncLine ? ncSum([ra, rv], x.short) : esc(x.text);
   // (a source's summary: its conditions are in it)
-  if(x.from) return who + grantedBy(x.a === 'unit' ? { id:x.v } : null, x.from) + (w && !x.sum ? '<span class="tw">' + w + ':</span> ' : '') + text + ' <span class="from">(' + linkTo(ra, rv, x.name) + ')</span>';
+  if(x.from) return who + grantedBy(x.a === 'unit' ? { id:x.v } : null, x.from, x.name) + (w && !x.sum ? '<span class="tw">' + w + ':</span> ' : '') + text + ' <span class="from">(' + linkTo(ra, rv, x.name) + ')</span>';
   // (a stratagem: "<cp>CP <name>: <summary> AI"; another source: "<summary> AI (<name>)")
-  if(x.cp && (x.ncLine || x.sum)) return who + '<b class="cpb">' + esc(x.cp) + 'CP</b> <b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + text;
-  if(x.leader) return grantedBy({ id:u.id }, x.leader) + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
+  if(x.cp && (x.ncLine || x.sum)) return who + '<b class="cpb">' + esc(x.cp) + 'CP</b> <b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + stratLead((x.S || {}).s) + text;
+  if(x.leader) return grantedBy({ id:u.id }, x.leader, x.name) + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
   if(x.ncLine || x.sum) return who + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
   return who + (x.cp ? '<b class="cpb">' + esc(x.cp) + 'CP</b> ' : '') + '<b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + (w ? '<span class="tw">' + w + ':</span> ' : '') + text;
 }
@@ -5165,12 +5165,12 @@ function statLines(u){
     if((x.on || []).some(([id, p]) => (id === 'selfKw' && !hasKw(u, p)) || (id === 'leading' && !u.leads))) continue;
     if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => [].concat((s.from || {})[x.stat] || []).join(', ').split(/\s*,\s*/).includes(name)))) continue;
     said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); out.push(Object.assign({ rule:name, a:link, v, text:(x.foe ? 'Enemy units’ ' : '') + x.stat + ': ' + FN_NC }, x.foe ? { foe:true } : {}, gu ? { from:gu.short || gu.name, gid:gu.id } : {})); } };
-  for(const ab of u.abilities || []) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab));
-  for(const x of army().units) if(x !== u) for(const ab of x.abilities || []){ const o = BOXES_AGREED[DM_KEY.a(ab)] || {};
-    if(/\baura\b/i.test(ab.tag || '') && o.reach && matches(o.reach, u)) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab), undefined, x); }
   // (a rule's: the units that have it, as the Damage tab takes them: an army rule on its Rules line (hasRule) or its needs met, a detachment
   // rule's needs met (unitDetRules))
   for(const r of faction().armyRules.filter(r => hasRule(u, r.name) || (r.needs && matches(r.needs, u))).concat(unitDetRules(u))) snc(DM_KEY.r(r), r.name, 'rule', r.name);
+  for(const ab of u.abilities || []) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab));
+  for(const x of army().units) if(x !== u) for(const ab of x.abilities || []){ const o = BOXES_AGREED[DM_KEY.a(ab)] || {};
+    if(/\baura\b/i.test(ab.tag || '') && o.reach && matches(o.reach, u)) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab), undefined, x); }
   for(const st of allStratagems().filter(x => canTarget(x, u))) snc(DM_KEY.s(st), st.name, 'strat', st.id);
   return out;
 }
@@ -5191,7 +5191,7 @@ function statShown(u){
 }
 const statHtml = (x, u) => { const t = [x.a || 'rule', x.v || x.rule];
   if(x.name) return '<p class="dsl">' + linkTo(t[0], t[1], x.rule) + '</p>';
-  const by = x.from ? grantedBy(x.gid ? { id:x.gid } : null, x.from) : '';
+  const by = x.from ? grantedBy(x.gid ? { id:x.gid } : null, x.from, x.rule) : '';
   return (x.short ? sumLines(x.short) : [null]).map(l => '<p class="dsl' + (x.foe ? ' foe' : '') + '">' + by + (l ? ncSum(t, l) : esc(x.text)) + ' <span class="from">(' + linkTo(t[0], t[1], x.rule) + ')</span></p>').join(''); };
 // the keywords that come from the other part of an attached unit, from the importer's note
 // ("Explosives, Meganobz come from the led Meganobz."): starred, as New Recruit stars them
@@ -5208,8 +5208,9 @@ function screenUnit(){
   const u = unitById(cur.unit);
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
   const strats = allStratagems().filter(s => canTarget(s, u));   // every one it can be the target of (its needs, from GW's TARGET)
-  // (a source's summary once; one every unit has alike: the ALL block; a summary of named options a line each, defLines)
-  const def = defenceItems(u), defShown = defLines(def.filter(x => !x.dup)).filter(x => !(x.sum && isCommonDef(x)));
+  // (a source's summary once; a summary of named options a line each, defLines; what this unit's own rule does to enemy units near it or
+  // picked by it, foeOwn: its aura line under the profile, docs/summaries.md 34)
+  const def = defenceItems(u), defShown = defLines(def.filter(x => !x.dup && !x.foeOwn)), foeOwn = def.filter(x => x.foeOwn && !x.dup);
   const tgKey = 'tg|' + cur.army + '|' + u.id;
   const meta = (u.ref ? [] : [esc(u.role)]).concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
   // an allied unit: the rule that brings it into this army (the faction's allies: Assigned Agents, Daemonic Pact), once, as its reason
@@ -5245,9 +5246,9 @@ function screenUnit(){
         ['M','T','Sv','W','Ld','OC','InSv'].map((k, i) => '<span>' + granted(s, k, u, esc(s[k]), ['M','T','SV','W','LD','OC','INV'][i] + ' ' + s[k]) + '</span>').join('')).join('') + '</div>' +
     '<div class="dnt">' +
     // (a characteristic of its models a rule of the list changes: statLines)
-    statShown(u).filter(x => !(x.short && !x.from && isCommonSt(x))).map(x => statHtml(x, u)).join('') +
+    statShown(u).map(x => statHtml(x, u)).join('') + foeOwn.map(x => foeLine(x, u)).join('') +
     // (a fold, closed until opened and kept open for the session, as the Overview's army rules: its count on its line, a line each)
-    (def.length ? '<details class="def tgt" data-tgfold="' + esc(tgKey) + '"' + (openStrats.has(tgKey) ? ' open' : '') + '><summary><span class="il">When targeted</span><span class="x">' + defShown.length + '</span>' + chev + '</summary>' +
+    (defShown.length ? '<details class="def tgt" data-tgfold="' + esc(tgKey) + '"' + (openStrats.has(tgKey) ? ' open' : '') + '><summary><span class="il">When targeted</span><span class="x">' + defShown.length + '</span>' + chev + '</summary>' +
       '<div class="tgls">' + defShown.map(x => '<div class="tgl">' + defLine(x, u) + '</div>').join('') + '</div></details>' : '') +
     // (a Damaged band: dmgBand)
     u.abilities.filter(ab => ab.damaged).map(ab => { const o = BOXES_AGREED[DM_KEY.a(ab)] || {}, fx = (o.b || []).flatMap(b => b.fx || []);
