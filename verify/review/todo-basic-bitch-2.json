@@ -94,19 +94,6 @@
  },
  {
   "army": "basic-bitch",
-  "kind": "question",
-  "where": "Maleceptor · Encephalic Diffusion · defence box a|uj59ei (gate: defence, agree, derived fail)",
-  "judgement": {
-   "app": "BOXES a|uj59ei d[0]: df [hitMinus 1, woundMinus 1], on [q \"While an enemy unit is within 6\\\" of this model\"], foe. The Wound-roll part is shown unconditional; GW makes it conditional on the attacking enemy unit being Below Half-strength. The app falls back to \"not counted here: see the rule\" (AGREE null), so no number is shown wrongly today."
-  },
-  "source": {
-   "reason": "defence DC: “if that enemy unit is Below Half-strength” is no condition of the box. agree: reader2 disagrees ({\"d\":[0]}) and verify/reader2/readings2.json is out of date (needs node reader2.js, not run: verify/reader2 not to be edited by this branch). The effects vocabulary has no condition for the attacking unit being Below Half-strength, so the fix is a code decision (effects-extract.js / effects.js: split the box, or count only the Hit-roll part and list the Wound-roll clause as not counted), then effects-migrate --write, reader2, agree --write. Not done here: needs the coordinator.",
-   "text": "While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well."
-  },
-  "key": "b120e3decceabad9"
- },
- {
-  "army": "basic-bitch",
   "kind": "hand-file",
   "where": "verify/sources/hand/basic-bitch.json (unchanged)",
   "judgement": {
@@ -141,5 +128,128 @@
    "diff": "scratchpad/bb-work/shooty.diff"
   },
   "key": "07be1f71942d51e4"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "box-change",
+  "where": "BOXES a|uj59ei · Maleceptor · Encephalic Diffusion",
+  "judgement": {
+   "d": [
+    {
+     "df": [
+      [
+       "hitMinus",
+       1
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "While an enemy unit is within 6\" of this model"
+      ]
+     ],
+     "kind": "all",
+     "foe": true
+    },
+    {
+     "df": [
+      [
+       "woundMinus",
+       1
+      ]
+     ],
+     "on": [
+      [
+       "q",
+       "While an enemy unit is within 6\" of this model"
+      ],
+      [
+       "attackerBelowHalf",
+       true
+      ]
+     ],
+     "kind": "all",
+     "foe": true
+    }
+   ],
+   "agree": {
+    "d": [
+     0,
+     0
+    ]
+   }
+  },
+  "source": {
+   "text": "While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well.",
+   "reason": "Two boxes: −1 to Hit rolls under the 6\" aura condition; −1 to Wound rolls under that and attackerBelowHalf (\"if that enemy unit is Below Half-strength\": the attacker, in a sentence about an enemy unit’s attacks). reader2 leaves the sentence unparsed (readings2.json \"unparsed:and, if that enemy unit is below half-strength …\", the Hit part partial), so both fall back: \"Encephalic Diffusion: not counted here: see the rule\" on every unit’s When targeted, as before. The defence side is never in the Damage tab’s numbers.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Maleceptor.html; data.js BOXES / AGREE; verify/reader2/readings2.json ds:tyranids/maleceptor|Encephalic Diffusion|0"
+  },
+  "key": "07602cb726badb36"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "code",
+  "where": "effects.js DCOND attackerBelowHalf",
+  "judgement": {
+   "label": "That enemy unit is Below Half-strength",
+   "pats": [
+    "\\bif that enemy unit is (?:also )?below half-strength\\b"
+   ]
+  },
+  "source": {
+   "reason": "A defence-side condition for the attacking unit’s state, in GW’s words. Before: the words matched COND targetBelowHalf, which defenceOf drops on the defence side (the attacker’s target is this unit), so the condition was lost and the Wound part shown unconditional. Only this sentence in data.js has it.",
+   "diff": "git show be6a7bd -- effects.js"
+  },
+  "key": "477f012547325f89"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "code",
+  "where": "verify/effects-extract.js defenceOf · IF_CUT",
+  "judgement": {
+   "change": "a clause joined mid-sentence by \", and, if …\" is a box of its own with that clause’s conditions (condsOf over its GW words, target conditions dropped as before); the sentence’s other boxes lose them. A sentence that starts with \"If …\" is not split (first version did, changing r|19a2dls Warpmeld Sacrifice’s and s|12inbnz’s conditions; fixed before commit)."
+  },
+  "source": {
+   "reason": "Before/after: effects-migrate --write changes only BOXES a|uj59ei (one box → two); every other box byte for byte. Other \"Below Half-strength\" boxes checked and not mis-boxed: Executioner, Visions of Suffering, Revel in Desecration, Warp-sighted Butcher, Feeding Frenzy (quoted \"If that target is also Below Half-strength\"), Glutton for Punishment, Beacons of Rage, Enraged Behemoths, Machine Spirit Resurgent (attack side, the target’s or the unit’s own state); Flesh Hunger not counted.",
+   "diff": "git show be6a7bd -- verify/effects-extract.js"
+  },
+  "key": "d01804bf66afdb4d"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "code",
+  "where": "verify/coverage.js gaps · defence endAt",
+  "judgement": {
+   "change": "on the defence side a \", and, if …\" clause after a box’s last effect is another box’s (DC checks it against that box)"
+  },
+  "source": {
+   "reason": "Keeps the DC check in step with defenceOf IF_CUT: the Hit box is not held to the Wound clause’s condition; the Wound box is (attackerBelowHalf covers it). defence: 139 boxes, 0 failures.",
+   "diff": "git show be6a7bd -- verify/coverage.js"
+  },
+  "key": "aa65b383a72dde44"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "housekeeping",
+  "where": "verify/reader2/readings2.json refreshed",
+  "judgement": {
+   "change": "node reader2.js in agree.js’s sandbox (KODEX_APP a stripped data.js copy, node --permission): Encephalic Diffusion and the Maleceptor’s Damaged band in, the Haruspex’s readings moved (now a catalogue row); 26 lines. reader2’s code unchanged, not re-pinned; --check and --test (97) pass."
+  },
+  "source": {
+   "diff": "git show be6a7bd -- verify/reader2/readings2.json"
+  },
+  "key": "f711bb7c1758d4c1"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "damage-compare",
+  "where": "Damage tab against main (b9f6810)",
+  "judgement": {
+   "change": "none: 2250 attacks (every list unit, shooting and fight, against MEQ / GEQ / TEQ / tank / monster profiles) by verify/damage-node.js give the same input and results on main and wt-bb for every unit both have; only basic-bitch’s Haruspex (main) and Maleceptor (wt-bb) are on one side only."
+  },
+  "source": {
+   "script": "scratchpad/bb-work/dmg-dump.js"
+  },
+  "key": "5f44f526032932f7"
  }
 ]
