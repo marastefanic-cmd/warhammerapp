@@ -1601,7 +1601,7 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
   for (const k of (h.kw || {}).drop || []) { const i = u.kw.indexOf(k); if (i < 0) { want(uid + ' · ' + k, 'hand file kw.drop', 'no keyword of this name'); continue; } u.kw.splice(i, 1); handDone.push({ what: 'keyword ' + k + ' of ' + u.name + ' left out', by: 'hand (Claude)', text: h.kw.why }); }
   for (const k of (h.kw || {}).add || []) { if (!u.kw.includes(k)) { u.kw.push(k); } handKw.push({ unit: uid, kw: k, why: h.kw.why, evidence: h.kw.evidence }); handDone.push({ what: 'keyword ' + k + ' of ' + u.name, by: 'hand (Claude)', text: h.kw.why }); }
 }
-// ---------------------------------------------------------------- an ability row's own fingerprint (readOf)
+// ---------------------------------------------------------------- an ability row's own fingerprint (readOf) and short summary (short)
 // (the readings a hand file once wrote, footnotes, auras and guard lines, and the When targeted lines, def, are retired: data.js BOXES
 // has every list's, made from GW's words by verify/effects-extract.js; an ability keeps the fingerprint data.js's row has for the same
 // words, readOf)
@@ -1616,6 +1616,8 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
     // row's, as verify/tables.js --write keeps them (Bloody Fury's paragraphs, a bold "**Hit roll**"))
     for (const ab of u.abilities) for (const pn of parts) { const row = dsRow(pn), sa = row && (row.abilities || []).find(x => x.name === ab.name && x.text !== ab.text && typeof x.text === 'string' && GWO.norm(x.text) === GWO.norm(ab.text)); if (sa) { ab.text = sa.text; break; } }
     for (const ab of u.abilities) for (const pn of parts) { const row = dsRow(pn), sa = row && (row.abilities || []).find(x => x.name === ab.name && x.text === ab.text && x.readOf); if (sa && ab.readOf === undefined) { ab.readOf = sa.readOf; break; } }
+    // (and its short summary, AI-written, with its fingerprint: data.js's row's for the same words, as a gist is the hand file's)
+    for (const ab of u.abilities) for (const pn of parts) { const row = dsRow(pn), sa = row && (row.abilities || []).find(x => x.name === ab.name && x.text === ab.text && typeof x.short === 'string'); if (sa && ab.short === undefined) { ab.short = sa.short; if (sa.shortOf !== undefined) ab.shortOf = sa.shortOf; break; } }
   }
 }
 // a reference sheet's reason (ref: { by, rule, quote }): the ability of a unit of the list whose words add a unit of its keyword to the
