@@ -110,5 +110,16 @@
    "gate": "node verify/run.js (cold)",
    "commits": "d10fdee ba8a243 7023de5 7b2c03c 2bc6fb1 86c5f89 (gate run at 2bc6fb1; 86c5f89 refactors the agree dispatch only, agree passes on it)"
   }
+ },
+ {
+  "kind": "review-resid-round-3",
+  "where": "verify/agree.js stateWords, check F (end to end through compare, synthetic stratagem row); verify/tables.js pageScripts stat() (createElement('script') tied to its variable, Object.assign), VENDOR (sw.js CORE), PAGE_FIXTURES with a files map",
+  "judgement": {
+   "check": "The round-2 fixes of result-resid.json. (1A) Check F runs the real comparison: a second loadData() copy with every ['q', /Empowered/] dropped from BOXES r|1xk95t6 (b and d) gives det:chaos-knights/infernal-lance|Malefic Surge|9 class B with 'reader2 only: factionState={\"who\":\"that unit\",\"state\":\"empowered\"}'; on data.js as it is, A. A synthetic row (the same sentence as stratagem Diabolic Bulwark's, ctx.kind stratagem, its box entry with opt, selected, targetSelected and no state words) leaves factionState uncovered. The dispatch line reverted to '|| appIds.has(opt)', '= true', '|| selected', '|| targetSelected', '|| a stratagem', or removed, now fails agree. (1B) stateWords is the state alone; fixed cases {who:'this model'} / {who:'the bearer', state:'readied'} against a q naming only the who: not covered. (1C) 'empowered' vs 'disempowered': not covered (\\b). (3A) createElement('script') is read only as X = document.createElement('script') with every X.src = / X.setAttribute('src', …) a literal, or Object.assign(document.createElement('script'), { src:'<lit>' }) as that call's own argument; anything else is missed. Fixtures: the icon case, other.src then s.src = NAME, no src, a concatenated src, Object.assign with a non-literal / no src / a variable / an extra argument, appendChild(…).src: each 1 missed. (3B) PAGE_FIXTURES take a files map: m.js importing builder.js reads m.js,builder.js; m.js making a script element with a non-literal src: 1 missed; removing stat(code, f) from the loaded-files loop fails tables. vendor/: only the files sw.js's CORE lists are skipped (a vendor/lib.mjs it does not list is read, here missed as not found). Mutation results: scratchpad mut3-t2.out and the round-3 report."
+  },
+  "source": {
+   "gate": "node verify/run.js (cold verify/out)",
+   "commits": "802ad12 c08012c"
+  }
  }
 ]
