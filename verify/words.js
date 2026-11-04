@@ -32,8 +32,13 @@ function differ(x){
   used.add(i); counts.declared++;
   if(DEVS[i].status === 'pending') pending.push(Object.assign({ pending:DEVS[i].reason }, x));
 }
+// (a row a rule of the list gives the unit, Protean Purpose from Higher Imperatives: not the datasheet's, so not on its page; its words are
+// the rule's, quoted from it by builder.js ruleAbilities, which verify/texts.js checks against GW's)
+const ruleGiven = (list, ab) => { const A = (D.armies || []).find(a => a.id === list), F = A && (D.factions || {})[A.faction];
+  return !!F && !!require(path.join(ROOT, 'builder.js')).ruleOfRow(F, (A.detachments || []).map(k => (F.detachments || {})[k]), ab); };
 function check(faction, u, ab, list, unit){
   if(/\b(Enhancement|Upgrade)\b/.test(ab.tag || '') || /^\*?invulnerable save\b/i.test(ab.name)) return;
+  if(list !== 'DATASHEETS' && ruleGiven(list, ab)) return;
   counts.texts++;
   let P = O.abilityPage(faction, u, ab); const at = where(list, unit);
   if(!P) return differ({ page:'(no page)', ability:ab.name, app:ab.text, waha:'(none)', where:at });
