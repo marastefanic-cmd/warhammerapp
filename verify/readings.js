@@ -150,7 +150,11 @@ function boxDefences(ab, rule){
   // (a row a rule of the list gives, Psychic Null (Aura) from Daughters of the Abyss: the rule's boxes of the option of its name)
   const o0 = rule ? (D.boxes || {})[KEY.rule(rule)] || {} : null;
   // (a core ability the rule gives, Knights of Legend's Feel No Pain 6+: the rule's boxes of no option)
-  const mine = x => (o0.d || []).concat(o0.dnc || []).some(y => y.opt === ab.name) ? x.opt === ab.name : !x.opt;
+  // (by what the row is: a core ability the rule gives, Knights of Legend's Feel No Pain 6+, the core rule's words: the rule's boxes of no
+  // option; else the rule's boxes of the option of its name, "(Aura)", case and apostrophes aside: Deathly Terror for Deathly Terror (Aura))
+  const ap = x => String(x).replace(/[’‘]/g, "'"), isCore = !!rule && !ap(rule.text + (rule.table ? '\n' + rule.table.map(t => t.join(': ')).join('\n') : '')).includes(ap(ab.text));
+  const optN = n => String(n || '').replace(/\s*\(Aura\)$/, '').replace(/[’‘]/g, "'").toLowerCase();
+  const mine = x => isCore ? !x.opt : optN(x.opt) === optN(ab.name);
   const o = o0 ? { d:(o0.d || []).filter(mine), dnc:(o0.dnc || []).filter(mine) } : (D.boxes || {})[KEY.ability(ab)] || {};
   const ids = new Set((o.d || []).flatMap(b => b.pick ? b.pick.flatMap(p => p.df) : b.df).flatMap(([id]) => [].concat(DF_OF[id] || [])));
   return { ids, nc:(o.dnc || []).map(x => norm(x.quote).replace(/\*\*/g, '')) };

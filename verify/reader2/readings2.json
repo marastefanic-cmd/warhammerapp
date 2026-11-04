@@ -1,15 +1,15 @@
 {
  "reader": "reader2",
  "counts": {
-  "sources": 1289,
-  "sentences": 2524,
+  "sources": 1300,
+  "sentences": 2535,
   "read": 1288,
   "readWithEffects": 643,
   "readNoEffect": 645,
-  "unread": 1236,
-  "unreadOutside": 952,
+  "unread": 1247,
+  "unreadOutside": 963,
   "unreadUnparsed": 284,
-  "gwFound": 2388,
+  "gwFound": 2399,
   "gwNotFound": 48,
   "gwShort": 88
  },
@@ -24001,6 +24001,17 @@
    "reason": "unparsed:treat the result as an unmodified roll of 6 instead",
    "gw": "found"
   },
+  "army:infernal-lance/chaos-cerastus-knight-atrapos|Deathly Terror (Aura)|0": {
+   "owner": "army:infernal-lance/chaos-cerastus-knight-atrapos",
+   "ownerName": "Chaos Cerastus Knight Atrapos",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
   "army:infernal-lance/chaos-cerastus-knight-atrapos|Knight Diabolus|0": {
    "owner": "army:infernal-lance/chaos-cerastus-knight-atrapos",
    "ownerName": "Chaos Cerastus Knight Atrapos",
@@ -24109,6 +24120,17 @@
    "duration": null,
    "gw": "found"
   },
+  "army:infernal-lance/chaos-cerastus-knight-lancer|Deathly Terror (Aura)|0": {
+   "owner": "army:infernal-lance/chaos-cerastus-knight-lancer",
+   "ownerName": "Chaos Cerastus Knight Lancer",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
   "army:infernal-lance/chaos-cerastus-knight-lancer|Blasphemous Engine|0": {
    "owner": "army:infernal-lance/chaos-cerastus-knight-lancer",
    "ownerName": "Chaos Cerastus Knight Lancer",
@@ -24154,6 +24176,17 @@
    "text": "Each time the bearer's unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal wounds.",
    "status": "unread",
    "reason": "outside-vocabulary:mortal wounds",
+   "gw": "found"
+  },
+  "army:infernal-lance/knight-despoiler|Deathly Terror (Aura)|0": {
+   "owner": "army:infernal-lance/knight-despoiler",
+   "ownerName": "Knight Despoiler",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
    "gw": "found"
   },
   "army:infernal-lance/knight-despoiler|Bestial Aspect|0": {
@@ -24229,6 +24262,17 @@
    "text": "While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit.",
    "status": "unread",
    "reason": "unparsed:it can ignore any or all modifiers to its move characteristic and/or to advance rolls made for its unit",
+   "gw": "found"
+  },
+  "army:infernal-lance/knight-ruinator-fleshmetal-fusion|Deathly Terror (Aura)|0": {
+   "owner": "army:infernal-lance/knight-ruinator-fleshmetal-fusion",
+   "ownerName": "Knight Ruinator",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
    "gw": "found"
   },
   "army:infernal-lance/knight-ruinator-fleshmetal-fusion|Fleshmetal Fusion|0": {
@@ -24343,6 +24387,28 @@
    "duration": null,
    "gw": "found"
   },
+  "army:infernal-lance/knight-ruinator|Deathly Terror (Aura)|0": {
+   "owner": "army:infernal-lance/knight-ruinator",
+   "ownerName": "Knight Ruinator",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
+  "army:woof-woof/war-dog-brigand-final-howl-aura|Deathly Terror (Aura)|0": {
+   "owner": "army:woof-woof/war-dog-brigand-final-howl-aura",
+   "ownerName": "War Dog Brigand",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
   "army:woof-woof/war-dog-brigand-final-howl-aura|Final Howl (Aura)|0": {
    "owner": "army:woof-woof/war-dog-brigand-final-howl-aura",
    "ownerName": "War Dog Brigand",
@@ -24421,6 +24487,39 @@
    "tagAura": true,
    "gw": "found"
   },
+  "army:woof-woof/war-dog-brigand|Deathly Terror (Aura)|0": {
+   "owner": "army:woof-woof/war-dog-brigand",
+   "ownerName": "War Dog Brigand",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
+  "army:woof-woof/war-dog-brigand-2|Deathly Terror (Aura)|0": {
+   "owner": "army:woof-woof/war-dog-brigand-2",
+   "ownerName": "War Dog Brigand",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
+  "army:woof-woof/war-dog-executioner|Deathly Terror (Aura)|0": {
+   "owner": "army:woof-woof/war-dog-executioner",
+   "ownerName": "War Dog Executioner",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
   "army:woof-woof/war-dog-executioner|Snarling Rivalry|0": {
    "owner": "army:woof-woof/war-dog-executioner",
    "ownerName": "War Dog Executioner",
@@ -24485,6 +24584,17 @@
    "duration": null,
    "gw": "found"
   },
+  "army:woof-woof/war-dog-karnivore-panoply-of-the-cursed-knights|Deathly Terror (Aura)|0": {
+   "owner": "army:woof-woof/war-dog-karnivore-panoply-of-the-cursed-knights",
+   "ownerName": "War Dog Karnivore",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
   "army:woof-woof/war-dog-karnivore-panoply-of-the-cursed-knights|Panoply of the Cursed Knights|0": {
    "owner": "army:woof-woof/war-dog-karnivore-panoply-of-the-cursed-knights",
    "ownerName": "War Dog Karnivore",
@@ -24547,6 +24657,17 @@
     }
    ],
    "duration": null,
+   "gw": "found"
+  },
+  "army:woof-woof/war-dog-karnivore|Deathly Terror (Aura)|0": {
+   "owner": "army:woof-woof/war-dog-karnivore",
+   "ownerName": "War Dog Karnivore",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
    "gw": "found"
   },
   "army:big-demons-baby/daemon-prince-of-khorne|Blade of Endless Bloodshed|0": {

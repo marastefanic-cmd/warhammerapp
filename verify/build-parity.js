@@ -241,6 +241,20 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
         'N a core ability a rule gives: Mindhunger’s Deep Strike ' + JSON.stringify(ds && ds.row));
       const G2 = D.grants.map(g => g.rule === 'Tyranids · Ambush Predators rule · Mindhunger' ? Object.assign({}, g, { grants:'Deep Striek' }) : g), R2 = B.ruleAbilities(G2, D.ruleOptions, F, [F.detachments['ambush-predators']], D);
       ok(R2.errors.some(e => /Deep Striek .*no core rule of that name/.test(e.error)), 'N a core ability no core rule has is an error: ' + JSON.stringify(R2.errors)); }
+    // the three the round-2 review found: Seductive Gambit (a rule named as its ability); Harbingers of Dread's Deathly Terror (Aura), from
+    // its table row, for units with the rule and only where the Army Faction is CHAOS KNIGHTS; First Prince of Chaos's headed abilities, by
+    // the keywords their headings name, SHADOW LEGION among them as Thralls of the First Prince gives it
+    { const Fd = D.factions['chaos-daemons'], RG = (F, dets) => B.ruleAbilities(D.grants, D.ruleOptions, F, dets, D), DS = k => D.datasheets[k];
+      const names = (RA, k) => B.ruleAbilitiesOf(RA, DS(k).kw, DS(k).abilities, DS(k).rules).map(x => x.row.name + ' [' + x.row.tag + ']').join(', ');
+      const ex = RG(Fd, [Fd.detachments['legion-of-excess']]), sl = RG(Fd, [Fd.detachments['shadow-legion']]);
+      ok(names(ex, 'chaos-daemons/daemonettes') === 'Seductive Gambit [Seductive Gambit]' && names(ex, 'chaos-daemons/bloodletters') === '', 'N Seductive Gambit: ' + names(ex, 'chaos-daemons/daemonettes') + ' / ' + names(ex, 'chaos-daemons/bloodletters'));
+      ok(names(sl, 'chaos-daemons/bloodletters') === 'Murderer’s Cowl [First Prince of Chaos]' && names(sl, 'chaos-daemons/daemonettes') === 'Shadow’s Caress [First Prince of Chaos]', 'N First Prince of Chaos: ' + names(sl, 'chaos-daemons/bloodletters') + ' / ' + names(sl, 'chaos-daemons/daemonettes'));
+      ok(names(RG(Fd, []), 'chaos-daemons/bloodletters') === '', 'N First Prince of Chaos without Shadow Legion: no row');
+      const Fk = D.factions['chaos-knights'], dt = RG(Fk, []), other = RG(Object.assign({}, Fk, { name:'Imperial Knights' }), []);
+      ok(names(dt, 'chaos-knights/war-dog-brigand') === 'Deathly Terror (Aura) [Harbingers of Dread · Aura]' && names(other, 'chaos-knights/war-dog-brigand') === '',
+        'N Deathly Terror (Aura): Chaos Knights ' + names(dt, 'chaos-knights/war-dog-brigand') + '; another Army Faction ' + names(other, 'chaos-knights/war-dog-brigand'));
+      const cut = D.grants.map(g => /First Prince of Chaos/.test(g.rule) && g.grants === 'GLOAM ROT' ? Object.assign({}, g, { to:{ unread:'SHADOW LEGION NERGLE' } }) : g);
+      ok(B.ruleAbilities(cut, D.ruleOptions, Fd, [Fd.detachments['shadow-legion']], D).errors.some(e => /NERGLE.*not read/.test(e.error)), 'N a heading whose keywords are not read is an error'); }
     // (and its words never guessed: a rule whose words for the ability cannot be found refuses the list, naming it)
     { const D2 = Object.assign({}, D, { ruleOptions:(D.ruleOptions || []).filter(o => o.option !== 'Psychic Null (Aura)') }), r = B.build(exp('lite-knights'), D2, { id:'n', date:'x' });
       ok(!r.ok && r.errors.some(e => /Psychic Null \(Aura\) that Daughters of the Abyss gives .*never guessed/.test(e)), 'N an ability whose words cannot be found is refused: ' + JSON.stringify(r.ok ? 'built' : r.errors));

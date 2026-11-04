@@ -364,21 +364,36 @@ What from-json does that builder.js does not, and where each goes:
 **An ability a rule gives is the list's, never the datasheet's.** The owner's rule (4 Nov 2026): every ability a rule gives a unit is a
 row of its own on the unit's datasheet screen, marked with the rule that gives it, wherever that rule is in force for the list, derived
 from GW's rule text and the unit's keywords and never from what an export prints. Which: an army rule of the list's faction, or a rule of
-one of its detachments, that gives units of some keywords an ability, with no condition (`GRANTS`, type ability, no option, `while`
-null): one whose words it prints ("the following ability"), or a core ability it names ("have the **Feel No Pain 6+** ability"). Today: Higher Imperatives (Talons of the Norn Queen) gives Protean Purpose to NORN EMISSARY/NORN ASSIMILATOR
+one of its detachments, that gives units an ability with no condition (`GRANTS`, type ability, no option, `while` null), or whose only
+condition is the Army Faction ("If your Army Faction is **CHAOS KNIGHTS**": a fact of the list, met where the list's faction is that
+one, and no grant otherwise): one whose words it prints ("the following ability", a heading's lines, a row of its table), or a core
+ability it names ("have the **Feel No Pain 6+** ability"). Who: units of some keywords (counting the keywords a rule in force gives by
+keyword, Thralls of the First Prince's SHADOW LEGION), or "each unit from your army with this ability" (the units whose Rules line names
+the rule). Today: Higher Imperatives (Talons of the Norn Queen) gives Protean Purpose to NORN EMISSARY/NORN ASSIMILATOR
 units (Nidzillas, Healybois); Daughters of the Abyss (the Adeptus Custodes army rule) gives Psychic Null (Aura) to ANATHEMA PSYKANA units
 (the Prosecutor and Witchseeker Squads of Lite Knights, Emperor's Chosen and Dread Host); Mission Tactics (Deathwatch Support) gives
 Furor, Malleus and Purgatus Tactics to KILL TEAM units (Nerf when's Deathwatch Terminator Squad); Silent Sisterhood (Null Maiden Vigil)
-gives Creeping Dread (Aura) to ANATHEMA PSYKANA units (no list takes the detachment). Core abilities: Knights of Legend (Freeblade
+gives Creeping Dread (Aura) to ANATHEMA PSYKANA units, and Seductive Gambit (Legion of Excess) Seductive Gambit to LEGIONES DAEMONICA
+SLAANESH units (no list takes these two detachments); Harbingers of Dread (the Chaos Knights army rule) gives Deathly Terror (Aura), the
+row of its table "active for your army from the start of the battle", to each unit with the rule where the Army Faction is CHAOS KNIGHTS
+(all 11 units of Infernal Lance and Woof Woof; tag "Harbingers of Dread · Aura"); First Prince of Chaos (Shadow Legion) gives "the
+relevant abilities presented below" by their headings' keywords, Murderer's Cowl to SHADOW LEGION KHORNE, Penumbral Puppetry to
+SHADOW LEGION TZEENTCH, Gloam Rot to SHADOW LEGION NURGLE, Shadow's Caress to SHADOW LEGION SLAANESH and Disciples of Be'lakor to
+SHADOW LEGION UNDIVIDED units (GW's capitals in the case of other names; no list takes the detachment). Mission Tactics reads "Friendly
+KILL TEAM units with this ability": GW's Deathwatch Terminator Squad page lists only Combat Doctrines as its army rule, so "this
+ability" is read as the detachment rule itself, and every KILL TEAM unit of a list that takes it has the rows. Core abilities: Knights of Legend (Freeblade
 Company) gives Feel No Pain 6+ to IMPERIAL KNIGHTS models (every Knight of 6 bigs, 4 megas and a destrier, Navigator sounds op ngl);
 Heralds of the Throne (Emissaries Imperatus) Fights First to ADEPTUS CUSTODES units, Mindhunger (Ambush Predators) Deep Strike to
 DEATHLEAPER/LICTOR/NEUROLICTOR units, First Prince of Chaos (Shadow Legion) Deep Strike to SHADOW LEGION HERETIC ASTARTES units (no list
 takes these three detachments). One function reads them, `builder.js`
 `ruleAbilities`, and builder.js, `verify/from-json.js`, `verify/tables.js` and `verify/catalog.js` all call it, so both paths give the
 same row:
-- its words: GW's, quoted from the rule's own text, the words `RULE_OPTIONS` reads for the option of that name, found right after the
-  ability's bold name ("**Protean Purpose:** …", "**Furor Tactics**" and its line) exactly once, apostrophes aside (the rule's own
-  characters are kept). Where they cannot be found so, or `RULE_OPTIONS` has no such option, nothing is guessed: builder.js refuses a
+- its words: GW's, quoted from the rule's own text, the words `RULE_OPTIONS` reads for the option of that name ("(Aura)", case and
+  apostrophes aside), found exactly once right after the ability's bold name ("**Protean Purpose:** …", "**Furor Tactics**" and its
+  line), under its heading in capitals with its lines up to the next heading ("MURDERER’S COWL"; Disciples of Be’lakor's bullets), or
+  as a row of the rule's table (Deathly Terror (Aura): its name, " · N/A" aside, and its words); the rule's own characters are kept. A
+  heading's keywords (`verify/derive.js`: "**SHADOW LEGION UNDIVIDED** units only.") are each one the program knows, a datasheet's or
+  one a rule gives, split longest first; a run it cannot read so is `{ unread }` in `GRANTS` and fails the gate. Where they cannot be found so, or `RULE_OPTIONS` has no such option, nothing is guessed: builder.js refuses a
   list with a unit that meets the rule, from-json lists it as not filled, and the gate fails (`verify/tables.js`, for every detachment of
   every faction, whether a list takes it or not).
 - a core ability's row: GW's name for it ("Feel No Pain 6+") and the core rule's words, the ones its popup shows (the app's `ruleFor`:
@@ -396,7 +411,8 @@ same row:
 - its words are the rule's, so they are read as the rule's: `verify/effects-migrate.js` and `verify/derive.js` make no boxes, options or
   grants of their own from it (the rule's are already there: the Damage tab and "When targeted" count Psychic Null and the Tactics
   once, from the rule, and the Damage tab, `app.html` `dmSources`, does not list the row as a source of its own, not even under "not
-  counted": verify/evidence.js holds it so), `verify/readings.js` and derive's defence coverage read the rule's boxes of that option (`builder.js`
+  counted": verify/evidence.js holds it so), `verify/readings.js` and derive's defence coverage read the rule's boxes of that option (of no option for a core ability's row,
+  by what the row is) (`builder.js`
   `ruleOfRow`: a row whose tag names a rule in force and whose words are in it). It has a Phase checklist entry, as Protean Purpose had.
   Not being the datasheet's, it is not asked of the datasheet's sources: `verify/words.js` does not look for it on the Wahapedia
   datasheet page (the two declared Protean Purpose entries of `verify/deviations-words.json` are gone with that), `verify/bsdata.js`
@@ -405,18 +421,22 @@ same row:
   datasheet page either). A faction catalogue's reading (`verify/from-bsdata.js`,
   from-json `--emit`) has no such row: the datasheets alone.
 - left as today, with a condition or not by keyword (`GRANTS` rows of type ability skipped): an option's grant while it is active
-  (Psychic Null's Feel No Pain 5+ against psychic attacks, Daughters of the Abyss; Blood Tithe's Enraged Abjuration and Might of
-  Khorne; Harbingers of Dread's Darkness Stealth; First Prince of Chaos's Penumbral Puppetry Stealth), one under a condition
-  (Harbingers of Dread's Dread abilities, "if your Army Faction is CHAOS KNIGHTS"), one to "this unit / model" a rule selects rather
-  than by keyword (Malefic Surge's Feel No Pain 6+, Infernal Lance; First Prince of Chaos's Dark Pacts), and the grants a unit's own
-  ability or an enhancement makes (on that unit's own row already). Daughters of the Abyss' "Feel No Pain 3+ against psychic attacks"
-  is no `GRANTS` row (GW does not word it as an ability); the units show it on their Rules line, as their datasheets do.
+  (Psychic Null's Feel No Pain 5+ against psychic attacks, Daughters of the Abyss; Blood Tithe's Enraged Abjuration and Might of Khorne,
+  bought with Blood Tithe points; Harbingers of Dread's other Dread abilities, Darkness's Stealth among them, selected or rolled during
+  the battle), one to "this unit / model" a rule selects rather than by keyword (Malefic Surge's Feel No Pain 6+, Infernal Lance,
+  "Empowered"), what a headed ability gives inside its own words (Penumbral Puppetry's Stealth, its `GRANTS` row now with no option's
+  condition: it is in that row's words; Disciples of Be'lakor's Dark Pacts army rule), and the grants a unit's own ability or an
+  enhancement makes (on that unit's own row already). Daughters of the Abyss' "Feel No Pain 3+ against psychic attacks" and Aegis of the
+  Emperor's Feel No Pain against mortal wounds are no `GRANTS` rows (GW does not word them as an ability given): the rule's own effect
+  on the units that have it, on their Rules line, as their datasheets print it.
 
 The gate holds it: `verify/tables.js` fails any list unit whose rule-given rows are not exactly those the rules in force give it (so the
 two PDF-only lists too) and any unresolved words; build-parity N builds exports with the ability's profile removed (the row is still
 there), with Talons of the Norn Queen removed (no Protean Purpose, even with the export still showing it), with the profile on a unit
 without the keyword (no row), Lite Knights (Psychic Null (Aura) on its three ANATHEMA PSYKANA units only), Mindhunger's Deep Strike
-(the core rule's words, for its keywords only) and a core ability no core rule names (an error).
+(the core rule's words, for its keywords only) a core ability no core rule names (an error), Seductive Gambit (DAEMONETTES, not BLOODLETTERS), First Prince of Chaos (Murderer's Cowl
+on BLOODLETTERS and Shadow's Caress on DAEMONETTES, through SHADOW LEGION; none without the detachment; an unread heading an error) and
+Deathly Terror (Aura) (on a War Dog Brigand where the Army Faction is CHAOS KNIGHTS, none under another).
 
 Known limits (accepted: each refuses rather than shows anything wrong, or no current list meets it):
 - `BUILD_INDEX.marks` is learned from the built-in lists' marks: a phone export showing a change no agreed box explains and no built-in
