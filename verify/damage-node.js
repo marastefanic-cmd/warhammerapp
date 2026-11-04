@@ -44,7 +44,7 @@ module.exports = function load(extra, opts){
   const mem = new Map(), store = { get:k => mem.get(k), set:(k, v) => mem.set(k, v) };
   const env = new Function('D', 'WH_CALC', 'WH_EFFECTS', 'store', 'window', 'let cur = { s:"damage", army:null }, sess = {};\n' + src + '\n' +
     'return { set:(a, st) => { cur.army = a; sess.dmg = { [a]:st }; }, dmState, dmSides, dmTypedVals, dmCalc, dmShown, dmUnits, army, unitLabel, modelCount, dmPair, dmPlan, dmIn, dmBeatAns, dmFx, dmLevers, dmNums, dmZero, dmDelta, dmSetUnit, dmCleanTicks, dmResetPair, dmCharged, dmSetCharge, dmMe, dmModeTurn, dmModeOf, dmModeOld, dmStart, dmTotalAns, dmAnsOf, dmWorth, dmSources, dmBoxRules, DM_GROUPS, dmGroupOf, matches, inArmy, allStratagems, canTarget' + (extra || []).map(n => ', ' + n).join('') + ' };');
-  const app = env(D, WH_CALC, WH_EFFECTS, store, { WH_DATA:D, WH_EFFECTS });
+  const app = env(D, WH_CALC, WH_EFFECTS, store, { WH_DATA:D, WH_EFFECTS, WH_BUILDER:require(path.join(ROOT, 'builder.js')) });
   // one attack as the screen builds it: s = { army, ph, atk, typed, left, on, off, pick, man, val, fx }: the unit as the screen picks it
   // (dmSides), at the target set by hand; left: the models left of each models line
   const calc = s => {

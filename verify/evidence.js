@@ -264,7 +264,9 @@ function wantSources(a, u){
   const army = new Set(), unit = new Set(), other = new Set();
   for(const r of F.armyRules || []) if(own(r) || granted(r) || (a.units.some(x => (x.rules || []).some(y => rn(y) === rn(r.name))) && reachB(boxOf(M.KEY.rule(r)), u))) army.add(r.name);
   for(const r of detR) if(r.needs && meetsN(r.needs, u)) army.add(r.name);
-  for(const ab of u.abilities || []) if(!/^Damaged: /i.test(ab.name)) unit.add(ab.name);
+  // (not a row a rule of the list gives, Knights of Legend's Feel No Pain 6+: the rule is its source, above; builder.js ruleOfRow)
+  const RR = require(path.join(ROOT, 'builder.js')).ruleOfRow;
+  for(const ab of u.abilities || []) if(!/^Damaged: /i.test(ab.name) && !RR(F, dets, ab, D)) unit.add(ab.name);
   for(const w of [].concat(u.ranged || [], u.melee || [])) for(const k of w.kw || []){ const n = Object.keys(D.rules).find(r => r.toLowerCase() === String(k).toLowerCase()); if(n && boxOf(M.KEY.core(n, D.rules[n]))) unit.add(n); }
   for(const r of u.rules || []){ if(!/\d/.test(r) || D.rules[r]) continue; const t = M.coreText(D, r); if(t && boxOf(M.KEY.core(r, t))) unit.add(r); }
   const ownKeys = new Set((u.abilities || []).map(ab => M.KEY.ability(ab)));

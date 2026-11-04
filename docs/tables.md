@@ -395,7 +395,8 @@ same row:
   off, and `verify/build-parity.js` N fails a `DATASHEETS` row that has one).
 - its words are the rule's, so they are read as the rule's: `verify/effects-migrate.js` and `verify/derive.js` make no boxes, options or
   grants of their own from it (the rule's are already there: the Damage tab and "When targeted" count Psychic Null and the Tactics
-  once, from the rule), `verify/readings.js` and derive's defence coverage read the rule's boxes of that option (`builder.js`
+  once, from the rule, and the Damage tab, `app.html` `dmSources`, does not list the row as a source of its own, not even under "not
+  counted": verify/evidence.js holds it so), `verify/readings.js` and derive's defence coverage read the rule's boxes of that option (`builder.js`
   `ruleOfRow`: a row whose tag names a rule in force and whose words are in it). It has a Phase checklist entry, as Protean Purpose had.
   Not being the datasheet's, it is not asked of the datasheet's sources: `verify/words.js` does not look for it on the Wahapedia
   datasheet page (the two declared Protean Purpose entries of `verify/deviations-words.json` are gone with that), `verify/bsdata.js`
