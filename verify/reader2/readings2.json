@@ -5627,20 +5627,28 @@
    "reason": "outside-vocabulary:stratagems",
    "gw": "found"
   },
-  "ds:tyranids/haruspex|Grisly Spectacle|0": {
-   "owner": "ds:tyranids/haruspex",
-   "ownerName": "Haruspex",
-   "source": "Grisly Spectacle",
+  "ds:tyranids/maleceptor|Encephalic Diffusion|0": {
+   "owner": "ds:tyranids/maleceptor",
+   "ownerName": "Maleceptor",
+   "source": "Encephalic Diffusion",
    "sourceKind": "ability",
    "idx": 0,
-   "text": "Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6\" of this model must take a Battle-shock test.",
+   "text": "While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the Hit roll, and, if that enemy unit is Below Half-strength, subtract 1 from the Wound roll as well.",
    "status": "unread",
-   "reason": "outside-vocabulary:battle-shock / leadership",
+   "reason": "unparsed:and, if that enemy unit is below half-strength, subtract 1 from the wound roll as well",
+   "partial": [
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": -1,
+     "attack": "any"
+    }
+   ],
    "gw": "found"
   },
-  "ds:tyranids/haruspex|Damaged: 1-5 Wounds Remaining|0": {
-   "owner": "ds:tyranids/haruspex",
-   "ownerName": "Haruspex",
+  "ds:tyranids/maleceptor|Damaged: 1-5 Wounds Remaining|0": {
+   "owner": "ds:tyranids/maleceptor",
+   "ownerName": "Maleceptor",
    "source": "Damaged: 1-5 Wounds Remaining",
    "sourceKind": "ability",
    "idx": 0,
@@ -6952,28 +6960,20 @@
    "reason": "outside-vocabulary:mortal wounds",
    "gw": "found"
   },
-  "ds:tyranids/maleceptor|Encephalic Diffusion|0": {
-   "owner": "ds:tyranids/maleceptor",
-   "ownerName": "Maleceptor",
-   "source": "Encephalic Diffusion",
+  "ds:tyranids/haruspex|Grisly Spectacle|0": {
+   "owner": "ds:tyranids/haruspex",
+   "ownerName": "Haruspex",
+   "source": "Grisly Spectacle",
    "sourceKind": "ability",
    "idx": 0,
-   "text": "While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the Hit roll, and, if that enemy unit is Below Half-strength, subtract 1 from the Wound roll as well.",
+   "text": "Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6\" of this model must take a Battle-shock test.",
    "status": "unread",
-   "reason": "unparsed:and, if that enemy unit is below half-strength, subtract 1 from the wound roll as well",
-   "partial": [
-    {
-     "table": "FX",
-     "id": "hit",
-     "v": -1,
-     "attack": "any"
-    }
-   ],
+   "reason": "outside-vocabulary:battle-shock / leadership",
    "gw": "found"
   },
-  "ds:tyranids/maleceptor|Damaged: 1-5 Wounds Remaining|0": {
-   "owner": "ds:tyranids/maleceptor",
-   "ownerName": "Maleceptor",
+  "ds:tyranids/haruspex|Damaged: 1-5 Wounds Remaining|0": {
+   "owner": "ds:tyranids/haruspex",
+   "ownerName": "Haruspex",
    "source": "Damaged: 1-5 Wounds Remaining",
    "sourceKind": "ability",
    "idx": 0,

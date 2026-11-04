@@ -5471,9 +5471,9 @@ const ARMIES = [
 },
 {
   id:'basic-bitch', name:'Basic Bitch', faction:'tyranids', points:2000, pointsUsed:2000,
-  battleSize:'Strike Force', disposition:'Priority Assets',
+  battleSize:'Strike Force', disposition:'Take and Hold',
   detachments:['invasion-fleet'],
-  source:'New Recruit, exported 1 Nov 2026 (JSON)',
+  source:'New Recruit, exported 4 Nov 2026 (JSON)',
   units:[
     {
       id:'the-red-terror', ds:'tyranids/the-red-terror', pts:120,
@@ -5567,7 +5567,7 @@ const ARMIES = [
       gear:[['Piercing claws and talons']]
     },
     {
-      id:'von-ryans-leapers', ds:'tyranids/von-ryans-leapers', pts:55, copies:2,
+      id:'von-ryans-leapers', ds:'tyranids/von-ryans-leapers', pts:55,
       models:['3× Von Ryan’s Leaper'],
       gear:[['Leaper’s talons']],
       stats:[
@@ -5578,9 +5578,9 @@ const ARMIES = [
       ]
     },
     {
-      id:'haruspex', ds:'tyranids/haruspex', pts:125,
-      models:['1× Haruspex'],
-      gear:[['Grasping tongue','Ravenous maw','Shovelling claws']]
+      id:'maleceptor', ds:'tyranids/maleceptor', pts:180,
+      models:['1× Maleceptor'],
+      gear:[['Massive scything talons','Psychic overload']]
     },
     {
       id:'psychophage', ds:'tyranids/psychophage', pts:110,
@@ -6951,30 +6951,30 @@ const DATASHEETS = {
     { on:'Von Ryan\'s Leaper', choices:[{ name:'Leaper\'s talons', min:1, max:1 }] }
   ]
 },
-'tyranids/haruspex':{
-  name:'Haruspex', faction:'tyranids', bsId:'6249-358f-27d7-ef60', role:'Monster',
+'tyranids/maleceptor':{
+  name:'Maleceptor', faction:'tyranids', bsId:'2c2d-a2f9-61a8-a6c6', role:'Monster',
   stats:[
-    { name:'Haruspex', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'8+', OC:'4', InSv:'–', base:'120×92mm Oval' }
+    { name:'Maleceptor', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'7+', OC:'4', InSv:'4+', base:'120×92mm Oval' }
   ],
   ranged:[
-    { name:'Grasping tongue', range:'12"', A:'1', BS:'3+', S:'6', AP:'-2', D:'D6+1', kw:['PRECISION'] }
+    { name:'Psychic overload', range:'18"', A:'D6+3', BS:'3+', S:'10', AP:'-2', D:'3', kw:['BLAST','PSYCHIC'] }
   ],
   melee:[
-    { name:'Ravenous maw', range:'Melee', A:'14', WS:'3+', S:'7', AP:'-1', D:'2', kw:[] },
-    { name:'Shovelling claws', range:'Melee', A:'4', WS:'3+', S:'14', AP:'-2', D:'D6+1', kw:['EXTRA ATTACKS'] }
+    { name:'strike', group:'Massive scything talons', range:'Melee', A:'3', WS:'3+', S:'9', AP:'-2', D:'D6+1', kw:[] },
+    { name:'sweep', group:'Massive scything talons', range:'Melee', A:'6', WS:'3+', S:'7', AP:'-1', D:'2', kw:[] }
   ],
   abilities:[
-    { name:'Grisly Spectacle', ph:['fight'], turn:'either', text:'Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6" of this model must take a **Battle-shock test**.' },
+    { name:'Encephalic Diffusion', tag:'Aura, Psychic', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While an enemy unit is within 6" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well.' },
     { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
   ],
-  rules:['Deadly Demise D3','Synapse','Precision','Extra Attacks'],
-  kw:['Monster','Great Devourer','Harvester','Haruspex','Faction: Tyranids'],
-  points:{ costs:[{ from:1, to:2, models:[{ models:1, pts:125 }] },{ from:3, to:null, models:[{ models:1, pts:135 }] }] },
+  rules:['Deadly Demise D3','Shadow in the Warp','Synapse','Psychic','Blast'],
+  kw:['Monster','Psyker','Great Devourer','Synapse','Maleceptor','Faction: Tyranids'],
+  points:{ costs:[{ from:1, to:2, models:[{ models:1, pts:180 }] },{ from:3, to:null, models:[{ models:1, pts:190 }] }] },
   composition:[
-    { model:'Haruspex', min:1, max:1 }
+    { model:'Maleceptor', min:1, max:1 }
   ],
   options:[
-    { on:'Haruspex', choices:[{ name:'Grasping tongue', min:1, max:1 },{ name:'Shovelling claws', min:1, max:1 },{ name:'Ravenous maw', min:1, max:1 }], group:'Wargear' }
+    { on:'Maleceptor', choices:[{ name:'Massive scything talons', min:1, max:1 },{ name:'Psychic overload', min:1, max:1 }], group:'Wargear' }
   ]
 },
 'tyranids/old-one-eye':{
@@ -7601,30 +7601,30 @@ const DATASHEETS = {
   ],
   aiStatus:'not-read'
 },
-'tyranids/maleceptor':{
-  name:'Maleceptor', faction:'tyranids', bsId:'2c2d-a2f9-61a8-a6c6', role:'Monster',
+'tyranids/haruspex':{
+  name:'Haruspex', faction:'tyranids', bsId:'6249-358f-27d7-ef60', role:'Monster',
   stats:[
-    { name:'Maleceptor', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'7+', OC:'4', InSv:'4+', base:'120×92mm Oval' }
+    { name:'Haruspex', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'8+', OC:'4', InSv:'–', base:'120×92mm Oval' }
   ],
   ranged:[
-    { name:'Psychic overload', range:'18"', A:'D6+3', BS:'3+', S:'10', AP:'-2', D:'3', kw:['BLAST','PSYCHIC'] }
+    { name:'Grasping tongue', range:'12"', A:'1', BS:'3+', S:'6', AP:'-2', D:'D6+1', kw:['PRECISION'] }
   ],
   melee:[
-    { name:'strike', group:'Massive scything talons', range:'Melee', A:'3', WS:'3+', S:'9', AP:'-2', D:'D6+1', kw:[] },
-    { name:'sweep', group:'Massive scything talons', range:'Melee', A:'6', WS:'3+', S:'7', AP:'-1', D:'2', kw:[] }
+    { name:'Ravenous maw', range:'Melee', A:'14', WS:'3+', S:'7', AP:'-1', D:'2', kw:[] },
+    { name:'Shovelling claws', range:'Melee', A:'4', WS:'3+', S:'14', AP:'-2', D:'D6+1', kw:['EXTRA ATTACKS'] }
   ],
   abilities:[
-    { name:'Encephalic Diffusion', tag:'Aura, Psychic', text:'While an enemy unit is within 6" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well.' },
+    { name:'Grisly Spectacle', text:'Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6" of this model must take a **Battle-shock test**.' },
     { name:'Damaged: 1-5 Wounds Remaining', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
   ],
-  rules:['Deadly Demise D3','Shadow in the Warp','Synapse','Psychic','Blast'],
-  kw:['Monster','Psyker','Great Devourer','Synapse','Maleceptor','Faction: Tyranids'],
-  points:{ costs:[{ from:1, to:2, models:[{ models:1, pts:180 }] },{ from:3, to:null, models:[{ models:1, pts:190 }] }] },
+  rules:['Deadly Demise D3','Synapse','Precision','Extra Attacks'],
+  kw:['Monster','Great Devourer','Harvester','Haruspex','Faction: Tyranids'],
+  points:{ costs:[{ from:1, to:2, models:[{ models:1, pts:125 }] },{ from:3, to:null, models:[{ models:1, pts:135 }] }] },
   composition:[
-    { model:'Maleceptor', min:1, max:1 }
+    { model:'Haruspex', min:1, max:1 }
   ],
   options:[
-    { on:'Maleceptor', choices:[{ name:'Massive scything talons', min:1, max:1 },{ name:'Psychic overload', min:1, max:1 }], group:'Wargear' }
+    { on:'Haruspex', choices:[{ name:'Grasping tongue', min:1, max:1 },{ name:'Shovelling claws', min:1, max:1 },{ name:'Ravenous maw', min:1, max:1 }], group:'Wargear' }
   ],
   aiStatus:'not-read'
 },
@@ -11842,8 +11842,8 @@ const BS_IDS = {
     "6-bigs/knight-paladin":["8441-8356-5e7c-69ee|1×1187-f3db-ea97-bada,1×273-38fa-249e-3aa4,1×441c-a2a8-59a4-85a4,1×93c3-d64f-2d6e-ea,1×d6c0-4d42-c3c4-db8a"],
     "6-bigs/knight-warden":["c609-c87e-f9dd-5006|1×1187-f3db-ea97-bada,1×273-38fa-249e-3aa4,1×441c-a2a8-59a4-85a4,1×4fc1-2679-a110-3cd,1×ad65-d3cb-c677-7cb3,1×ca02-db54-10e6-f20e"],
     "basic-bitch/biovores":["3f2c-85ec-d83c-4a2f|1×dd57-9c1f-d425-6711,1×dd57-9c1f-d425-6711/1fff-0a90-a8dd-28b5,1×dd57-9c1f-d425-6711/2d4b-61bd-f1f3-c32b"],
-    "basic-bitch/haruspex":["6249-358f-27d7-ef60|1×3bf9-a705-9145-dbb9,1×7a6c-1971-6ffb-70b5,1×e240-8306-941-b848"],
     "basic-bitch/hive-tyrant-tyrant-guard":["3e96-8098-3401-77af|1×d0cf-a582-5166-fbba,1×effb-d65d-a1b1-51d6","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/72c5-1443-529a-59ad"],
+    "basic-bitch/maleceptor":["2c2d-a2f9-61a8-a6c6|1×4b96-d104-c37f-f697,1×8124-9c22-8028-433c"],
     "basic-bitch/neurolictor":["642f-9302-4fdc-ab68|1×60e7-ac95-974c-fd76"],
     "basic-bitch/psychophage":["b6ac-f091-a018-dab2|1×56f9-bb79-7be0-dbf2,1×9edf-e542-77fa-e4c2"],
     "basic-bitch/spore-mines-biovore":["80c2-aecc-5b59-7345|1×1a43-6f35-30bd-ec50"],
@@ -12171,6 +12171,7 @@ const BS_IDS = {
     "2b6b-56b9-13a8-3320":"Master-crafted power weapon",
     "2ba4-635b-fffd-0f59":"Bolt pistol",
     "2bb4-99f4-3659-5eda":"Gauntlets of Ultramar",
+    "2c2d-a2f9-61a8-a6c6":"Maleceptor",
     "2c4c-5aac-b510-28ef":"Berzerker Glaive",
     "2c61-621f-9a2e-f681":"Helstalker autocannon",
     "2c98-86cf-889-2293":"Warlord",
@@ -12221,7 +12222,6 @@ const BS_IDS = {
     "3b2-8c11-616a-1005":"Mek",
     "3b8f-1cb7-3c6e-4455":"Heavy Bolt Pistol",
     "3bee-8c85-68f7-e54b":"Warlord",
-    "3bf9-a705-9145-dbb9":"Grasping tongue",
     "3bfa-bf00-b5ed-cc81":"Ahriman",
     "3cbf-631a-2bbe-6b54":"Rubric Marine w/ soulreaper cannon",
     "3d5c-4127-b923-d579":"Boltgun",
@@ -12287,6 +12287,7 @@ const BS_IDS = {
     "4aea-b1cc-6c69-1c44":"Roboute Guilliman",
     "4b2a-4860-aed5-56b6":"Forgefiend claws",
     "4b4d-ba83-4eba-ba61":"Veteran Sergeant Metaurus",
+    "4b96-d104-c37f-f697":"Massive scything talons",
     "4ba8-dbf3-05f9-f868":"Sekhetar Robot w/ pyreflux meltagun",
     "4bfd-ad0f-5e78-ccf9":"Havoc launcher",
     "4bff-1982-fbf1-7a8f":"Multi-melta",
@@ -12354,7 +12355,6 @@ const BS_IDS = {
     "6105-a18c-fcd1-a9da":"Axe of dismemberment",
     "6155-c404-a228-cb72":"Bolt Rifle",
     "615e-5655-130f-d14a":"Plasma executor",
-    "6249-358f-27d7-ef60":"Haruspex",
     "626e-72e0-7869-82c1":"Skitarii Ranger w/ omnispex",
     "62a1-1fa7-70b7-614d":"Twin Lastrum Bolt Cannon",
     "62ab-b83f-26b-b699":"Techno-virus injector",
@@ -12451,7 +12451,6 @@ const BS_IDS = {
     "7945-a359-64b8-4bda":"Gore Hound",
     "7998-d0a-baa4-e8b3":"Skarbrand",
     "7a17-4fb0-c0f5-e22":"Bone Sabres",
-    "7a6c-1971-6ffb-70b5":"Shovelling claws",
     "7acc-f148-1490-419d":"Monomolecular Combat Knife",
     "7b41-35aa-3265-14d7":"Augury Uplink",
     "7b4c-dfe0-6a0a-304a":"Lord Exultant",
@@ -12476,6 +12475,7 @@ const BS_IDS = {
     "80c2-aecc-5b59-7345":"Spore Mines (Biovore)",
     "80c4-14b2-d02d-d289":"Nazdreg",
     "811f-e844-83ab-78a4":"Rokkit Pistol",
+    "8124-9c22-8028-433c":"Psychic overload",
     "819a-63a5-f90c-7794":"Great axe of Khorne",
     "81b-e6a8-24bb-1f63":"Flayer claws",
     "81d1-50cc-2825-7475":"Chainblade",
@@ -12803,7 +12803,6 @@ const BS_IDS = {
     "e135-2748-1287-ec58":"Gauntlet of Fire",
     "e13a-503d-72dc-f4ed":"Plasma pistol",
     "e1b1-146f-6f77-3a15":"Tzeentch Soul Grinder",
-    "e240-8306-941-b848":"Ravenous maw",
     "e390-b58b-db9-816":"Lucius the Eternal",
     "e403-3a9-279e-41b7":"Nurglings",
     "e439-47c1-afed-50c4":"Von Ryan's Leaper",
@@ -13229,7 +13228,6 @@ const CHECKLIST = {
   "a|8kfs3x":{"u":"shooting:opp"},
   "a|8p52es":{"u":"shooting:your"},
   "a|8yl01e":{"u":"fight:either","a":1},
-  "a|911utx":{"u":"fight:either","a":1},
   "a|92qgnt":{"u":"shooting:opp"},
   "a|97frp":{"u":"shooting:either","a":1},
   "a|9dsaql":{"none":1},
@@ -13366,6 +13364,7 @@ const CHECKLIST = {
   "a|u86jue":{"t":"shooting:your","s":1},
   "a|uc39pe":{"u":"fight:either","f":[{"n":"riled up","r":"Waaagh!","x":1}]},
   "a|udum88":{"u":"shooting:your,fight:either"},
+  "a|uj59ei":{"u":"shooting:your,fight:either"},
   "a|uulhog":{"t":"fight:either","u":"fight:either"},
   "a|uwea7i":{"x":1},
   "a|v2j916":{"t":"shooting:your","s":1},
@@ -13738,6 +13737,7 @@ const BOXES = {
   "a|u5ddi":{"b":[{"quote":"If this model has the **KHORNE** keyword, add 2 to the Strength characteristic of this model’s hellforged weapons.","fx":[["s",2]],"on":[["opt","Daemon Prince of Khorne"],["selfKw","Khorne"]],"kind":"all","scope":{"weapon":"hellforged weapons","models":"model"},"opt":"Daemon Prince of Khorne"},{"quote":"If this model has the **TZEENTCH** keyword, add 3 to the Attacks characteristic of this model’s infernal cannon.","fx":[["a",3]],"on":[["opt","Daemon Prince of Tzeentch"],["selfKw","Tzeentch"]],"kind":"all","scope":{"weapon":"infernal cannon","models":"model"},"opt":"Daemon Prince of Tzeentch"}],"d":[{"quote":"If this model has the **NURGLE** keyword, add 1 to this model’s Toughness characteristic.","df":[["t",1]],"on":[["opt","Daemon Prince of Nurgle"],["selfKw","Nurgle"]],"kind":"all","scope":{"models":"model"},"opt":"Daemon Prince of Nurgle"}],"snc":[{"quote":"**Daemon Prince of Slaanesh:** If this model has the **SLAANESH** keyword, add 2\" to this model’s Move characteristic.","stat":"M","why":"it changes M, which the lines under a profile count only from army and detachment rules","on":[["selfKw","Slaanesh"]]}],"n":"Daemonic Allegiance"},
   "a|uc39pe":{"b":[{"quote":"This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**.","fx":[["a",1],["skill",1],["s",1]],"on":[],"kind":"all","scope":{"weapon":"scavenged shivs"}}],"riled":true,"n":"Super Runts"},
   "a|udum88":{"b":[{"quote":"Each time this model makes an attack, if it is below its Starting Strength, add 1 to the **Hit roll**.","fx":[["hit",1]],"on":[["belowStarting",true]],"kind":"all","scope":{"models":"model"}},{"quote":"If this model is also **Below Half-strength**, add 1 to the **Wound roll** as well.","fx":[["wound",1]],"on":[["belowStarting",true],["belowHalf",true]],"kind":"all","lead":"Each time this model makes an attack, if it is below its Starting Strength, add 1 to the **Hit roll**.","scope":{"models":"model"}}],"n":"Glutton for Punishment"},
+  "a|uj59ei":{"d":[{"quote":"While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well.","df":[["hitMinus",1]],"on":[["q","While an enemy unit is within 6\" of this model"]],"kind":"all","foe":true},{"quote":"While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well.","df":[["woundMinus",1]],"on":[["q","While an enemy unit is within 6\" of this model"],["attackerBelowHalf",true]],"kind":"all","foe":true}],"n":"Encephalic Diffusion"},
   "a|uulhog":{"b":[{"quote":"Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit.","fx":[["s",1]],"on":[],"kind":"melee","lead":"**TYRANIDS** model only."},{"quote":"The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.","fx":[["a",1]],"on":[["q","The first time the bearer's unit destroys an enemy unit in the Fight phase"],["q","while the bearer is within 6\" of one or more friendly HARVESTER units"]],"kind":"melee","lead":"Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit.","lasts":"battle"}],"n":"Parasitic Biomorphology"},
   "a|vaick5":{"b":[{"quote":"This unit’s attacks have **[SUSTAINED HITS 1: non-MONSTER/VEHICLE]** if any of the following apply:","fx":[["sus","1"]],"on":[["objective",true],["targetKw",{"none":["Monster","Vehicle"]}]],"kind":"all"}],"n":"Impenetrable Defence"},
   "a|vplgbc":{"b":[{"quote":"While a friendly War Dog model is within 6\" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1.","fx":[["rrWound1",true]],"on":[["aura",6]],"kind":"all","lead":"**WAR DOG** model only.","reach":{"all":["War Dog"]},"mark":"aura"}],"reach":{"all":["War Dog"]},"n":"Final Howl (Aura)"},
@@ -14159,6 +14159,7 @@ const AGREE = {
     "a|u5ddi":{"b":["A","A"],"d":["A"]},
     "a|uc39pe":{"b":[0]},
     "a|udum88":{"b":["A","A"]},
+    "a|uj59ei":{"d":[0,0]},
     "a|uulhog":{"b":["A",0]},
     "a|vaick5":{"b":["A"]},
     "a|vplgbc":{"b":["A"]},

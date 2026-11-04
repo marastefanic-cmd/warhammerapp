@@ -55,6 +55,8 @@ const PICK_LEAD = /\b(?:select|choose) one of the (?:following|abilities listed 
 // how long it lasts (the Damage tab carries a tick from the shooting into the fight)
 const lastsOf = n => /\buntil the end of the battle\b(?! round)/.test(n) ? 'battle' : /\buntil the (?:start of your next (?:command|movement) phase|end of the battle round)\b/.test(n) ? 'round' : /\buntil the end of the turn\b|\bthis turn\b/.test(n) && !/\buntil the end of the phase\b/.test(n) ? 'turn' : '';
 // (a phase named only in how long it lasts, "until the end of your next Fight phase", says nothing of which attacks)
+// a clause joined by "and, if …" (its own condition): the defence side's boxes split there (defenceOf)
+const IF_CUT = /,? and,? (?=if\b)/, IF_CUT_I = /,? and,? (?=if\b)/i;
 const DURATION_RE = /\buntil the (?:end|start) of (?:the |your |your opponent's |your next |the next |your opponent's next )?(?:command|movement|shooting|charge|fight) phase\b/g;
 const kindOf = n0 => { const n = String(n0).replace(DURATION_RE, ' '), r = /\branged (?:attacks?|weapons?)\b|\bshooting phase\b|\bselected to shoot\b|\bshoot\b/.test(n), m = /\bmelee (?:attacks?|weapons?)\b|\bfight phase\b|\bselected to fight\b|\bfight\b/.test(n);
   return r && !m ? 'ranged' : m && !r ? 'melee' : r && m ? 'all' : ''; };
@@ -711,12 +713,20 @@ function defenceOf(src, us, V, ctx){
     // the kind of attack, clause by clause ("subtract 1 from the Hit roll and, until the end of the phase, that enemy unit's ranged weapons
     // have [HAZARDOUS]": two boxes)
     const segs = n.split(/(?:,? and,? |; )(?=(?:until|that|each|all|models|melee|ranged|on a)\b)/);
+    // (a clause with a condition of its own, joined by "and, if …": "subtract 1 from the Hit roll, and, if that enemy unit is Below
+    // Half-strength, subtract 1 from the Wound roll as well" (Encephalic Diffusion): that clause's defences have its condition, the
+    // sentence's other defences do not; read in GW's words, as the sentence's own conditions)
+    const ifOwn = sg => condsOf(V, (plainCase(u.s.replace(/~~[^~]*~~\/?/g, '')).split(IF_CUT_I).find(x => norm(x).trim() === sg.trim()) || sg).trim(), '', { def:true, inherit:true })
+      .filter(([id]) => !/^target|^closest|^maxT$/.test(id));
     const groups = new Map();
-    for(const sg of segs){ const f = findDf(sg.replace(/\(excluding psychic attacks\)/g, ' ')); const fs = f.df.filter(([id]) => E.DF[id].only || inCtx); if(!fs.length) continue;
+    for(const sg0 of segs) for(const [j, sg] of sg0.split(IF_CUT).entries()){ const f = findDf(sg.replace(/\(excluding psychic attacks\)/g, ' ')); const fs = f.df.filter(([id]) => E.DF[id].only || inCtx); if(!fs.length) continue;
       const r = f.rest.replace(/\(excluding [^)]*\)/g, ' ').replace(DURATION_RE, ' ');
       const k = /\bpsychic attacks?\b|\bwith psychic weapons\b/.test(r) ? 'psychic' : kindOf(r) || '';
-      groups.set(k, (groups.get(k) || []).concat(fs)); }
-    if(!groups.size) groups.set('', df);
+      const own = j ? ifOwn(sg) : [], gk = k + (own.length ? '\u0000' + JSON.stringify(own) : '');
+      const g = groups.get(gk) || { k, fs:[], own }; g.fs = g.fs.concat(fs); groups.set(gk, g); }
+    if(!groups.size) groups.set('', { k:'', fs:df, own:[] });
+    // (the sentence's conditions less those of its "and, if …" clauses: the other defences' conditions)
+    const ownAll = [...groups.values()].flatMap(g => g.own).map(x => JSON.stringify(x)), onBase = ownAll.length ? on.filter(x => !ownAll.includes(JSON.stringify(x))) : on;
     const base = kindOf(norm(u.lead || '').replace(DURATION_RE, ' ')) || 'all';
     let reach = reachOf(V, u.s) || (u.lead ? reachOf(V, u.lead) : null) || (u.prevS && /^(?:that|those|models in that|until)\b/.test(n) ? reachOf(V, u.prevS) : null);
     let byTag = false;
@@ -730,8 +740,8 @@ function defenceOf(src, us, V, ctx){
     const until = /\buntil the (?:start of your next (?:command phase|turn)|end of (?:the|your opponent's next) (?:battle round|turn)|end of the battle)\b/i.exec(plainCase([u.lead || '', u.s, u.sec && src.type !== 'strat' && !/\buntil the end of the phase\b/.test(n) ? optIntro(src) + ' ' + optDur(src) : ''].join(' ')));
     // (a clause of the sentence with no defence the DNC patterns name: "on a 6, that enemy unit is not eligible to shoot this phase": not counted)
     for(const x of plainCase(u.s).split(/(?:,? and,? |; )(?=(?:until|that|each|all|models|melee|ranged|on a)\b)/i)) if(!findDf(norm(x)).df.length && dncOf(norm(x))) dnc.push({ quote:x.replace(/\.\s*$/, ''), why:E.DNC[dncOf(norm(x))].why });
-    for(const [k, fs] of groups){
-      const box = { quote:u.s, df:fs, on, kind:k || base };
+    for(const { k, fs, own } of groups.values()){
+      const box = { quote:u.s, df:fs, on:ownAll.length ? onBase.concat(own.filter(x => !onBase.some(y => JSON.stringify(y) === JSON.stringify(x)))) : on, kind:k || base };
       if(until) box.until = until[0].replace(/^U/, 'u');
       if(u.lead) box.lead = u.lead;
       if(models) box.scope = { models };

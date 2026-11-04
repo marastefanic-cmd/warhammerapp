@@ -25,6 +25,9 @@
          one of the following", "Or:", one of a section's abilities another ability selects), once per battle / turn / battle round, each
          "if / while / unless" clause, each "within N"", the kind of attack (melee, ranged, psychic): said, quoted ("If (see the rule)"), or
          the sentence listed not counted
+     DI  a condition of an ", and, if …" clause of a box's quote (one whose pattern reads that clause, not the words before it) is on the box
+         only when every defence of the box is in that clause (DC finds a condition missing, DI one too many); and a fixed case: GW's
+         Encephalic Diffusion gives two boxes, −1 Hit without attackerBelowHalf, −1 Wound with it
      D7  data.js BOXES' defence side is exactly what the words give (node verify/effects-migrate.js --write)
      D8  every DF defence and DCOND condition says its own value in its label, and a box of it alone renders that label
      DS  New Recruit's starred Feel No Pain (X+*) is never a plain Feel No Pain box: its words not counted (effects.js DNC starred)
@@ -119,6 +122,28 @@ stats.boxes = nBox; stats.notCounted = nDnc;
     for(const g of Cv.srcGaps(o, src)) fail('DC', key + ' ' + o.n, g);
     for(const b of o.d || []){ n++; for(const g of Cv.gaps(b, src, 'defence', src.others, CTX)) fail('DC', key + ' ' + o.n, g + ': “' + X.plainCase(b.quote).slice(0, 70) + '”'); } }
   stats.covered = n; stats.reachChecked = Cv.counts.checked; stats.reachUnchecked = Cv.counts.unchecked; }
+// ---- DI a condition of an ", and, if …" clause (verify/effects-extract.js defenceOf IF_CUT) is on a box only with that clause's defences:
+// for each clause cut so from a defence box's quote (GW's struck words left out), a condition of the box whose pattern reads that clause and
+// not the words before the cut is that clause's, and every defence of the box must be in it (DC finds a condition missing, this one a
+// condition too many: Encephalic Diffusion's −1 Hit under "if that enemy unit is Below Half-strength"); and the fixed case ----
+{ const IF_CUT = /,? and,? (?=if\b)/i, cut = s => X.plainCase(String(s).replace(/~~[^~]*~~\/?/g, '')).toLowerCase().split(IF_CUT);
+  const pr = (id, t) => ((C[id] || {}).pats || []).some(re => re.test(t));
+  const check = (where, b) => { const parts = cut(b.quote); if(parts.length < 2) return 0; let k = 0;
+    for(const cl of parts.slice(1)){ k++;
+      const conds = [...new Set((b.on || []).map(([id]) => id).filter(id => pr(id, cl) && !pr(id, parts[0])))], here = X.findDf(cl).df.map(([id]) => id);
+      const out = (b.pick ? b.pick.flatMap(p => p.df) : b.df || []).map(([id]) => id).filter(id => !here.includes(id));
+      if(conds.length && out.length) fail('DI', where, conds.join(', ') + ' is the condition of the clause “' + cl.trim().slice(0, 70) + '”, not of ' + out.join(', ')); }
+    return k; };
+  let n = 0;
+  for(const [name, TT] of [['', T], [' (data.js)', D.boxes || {}]]) for(const [key, o] of Object.entries(TT)) for(const b of o.d || []) n += check(key + ' ' + o.n + name, b);
+  // the fixed case: GW's Encephalic Diffusion (Maleceptor) gives exactly two boxes, −1 Hit without attackerBelowHalf, −1 Wound with it
+  { const text = 'While an enemy unit is within 6" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well.';
+    const src = { type:'ability', name:'Encephalic Diffusion', tag:'Aura, Psychic', text }, r = X.defenceOf(src, X.unitsOf(src), require('./derive').vocab(D), {});
+    const sig = r.d.map(b => b.df.map(([id, p]) => id + ' ' + p).join('+') + ((b.on || []).some(([id]) => id === 'attackerBelowHalf') ? ' | attackerBelowHalf' : ''));
+    const want = ['hitMinus 1', 'woundMinus 1 | attackerBelowHalf'];
+    if(JSON.stringify(sig) !== JSON.stringify(want)) fail('DI', 'fixed case Encephalic Diffusion', 'gives ' + JSON.stringify(sig) + ', not ' + JSON.stringify(want));
+    for(const b of r.d) n += check('fixed case Encephalic Diffusion', b); }
+  stats.ifClauses = n; }
 // ---- D6 the code ----
 { const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');
   const fnSrc = name => { const m = new RegExp('\\n(?:function ' + name + '\\(|const ' + name + ' = )').exec(html); if(!m) return ''; const rest = html.slice(m.index + 1), e = rest.slice(1).search(/\n(?:function |const |let |\/\/ |\/\*)/); return rest.slice(0, e < 0 ? undefined : e + 1); };
@@ -208,6 +233,6 @@ for(const [k, o] of Object.entries(D.boxes || {})) if(/^Feel No Pain \d\+\*$/.te
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/defence.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('defence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.boxes + ' defence boxes and ' + stats.notCounted + ' sentences not counted, from GW\'s words (' + stats.sentences + ' sentences of the defence side, each a box or listed; ' + stats.covered + ' boxes with every condition of their words; ' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked (said “If (see the rule)”)); ' + stats.labels + ' catalogue labels with their values; ' + stats.lines + ' "When targeted" lines of every list unit, each a box said in its labels, ' + stats.ncLines + ' "see the rule" lines');
+console.log('defence: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.boxes + ' defence boxes and ' + stats.notCounted + ' sentences not counted, from GW\'s words (' + stats.sentences + ' sentences of the defence side, each a box or listed; ' + stats.covered + ' boxes with every condition of their words; ' + stats.ifClauses + ' ", and, if" clauses with their own conditions only (and the Encephalic Diffusion fixed case); ' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked (said “If (see the rule)”)); ' + stats.labels + ' catalogue labels with their values; ' + stats.lines + ' "When targeted" lines of every list unit, each a box said in its labels, ' + stats.ncLines + ' "see the rule" lines');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);

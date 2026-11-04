@@ -10175,6 +10175,12 @@
   "at": "2026-10-21",
   "why": "\"At the start of the battle round, select one Wrathful Presence ability\": the ability carries at:'Start of the battle round' and is listed under Command in either turn, the app's settled convention for that timing (as for Blessings of Khorne and Reborn in Blood)."
  },
+ "877358dd83d8af7d": {
+  "verdict": "ok",
+  "by": "review:basic-bitch-2",
+  "at": "2026-11-04",
+  "why": "Wahapedia's Maleceptor page (verify/.cache/waha/ds/tyranids_Maleceptor.html) prints \"Encephalic Diffusion (Aura, Psychic):\", and New Recruit's export names the profile \"Encephalic Diffusion (Aura, Psychic)\". The tag is the same form as the approved Onslaught, Time Flux, Spirit Leech and Feculent Despair rows. The text is GW's word for word."
+ },
  "877bc4d0766d9e3e": {
   "verdict": "ok",
   "by": "review:lite-knights",
