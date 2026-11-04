@@ -1,8 +1,9 @@
 # data.js as tables
 
 Every unit, stratagem and rule is a row of a table in `data.js`; the app is a template over them. The AI
-part is transcribing the sources, plus one AI-written column (`gist`, the stratagems' one-line summaries: labelled "AI", the
-rules as written a tap away, carrying a fingerprint of the text it was written from; the owner keeps it). No reading is left: the
+part is transcribing the sources, plus the AI-written summaries (`gist`, the stratagems' one-line summaries, and `short`, the short summary
+a unit's screen shows of a rule it does not count: labelled "AI", the rules as written a tap away, carrying a fingerprint of the text it was
+written from; the owner keeps them). No reading is left: the
 footnotes under a unit's weapons, its "When targeted" lines and the lines under its profile are `BOXES`, made by script from GW's
 words, and every other line a unit or stratagem screen writes is GW's words quoted or a fixed template over derived fields (The
 screens' lines, below). `verify/columns.json` says, for every column, where its values come from;
@@ -117,9 +118,9 @@ the words to them. A rule's `statNote` and `parts` are gone.
 ## The screens' lines
 
 No line the app writes on a unit or stratagem screen stands on a judgement (the owner's rule). Each is GW's words quoted, or a fixed template
-filled from fields a script derives from GW's words or checks mechanically; the one AI layer is `gist`. The gate step `tables` fails when a
+filled from fields a script derives from GW's words or checks mechanically; the AI layers are `gist` and `short`. The gate step `tables` fails when a
 column those screens read (every property the code of app.html's `screenUnit`, `stratItem` and `showStrat` reads, with every function they
-call) is `hand` or AI, but `gist` and a column `verify/columns.json` declares with its reason (an id; the short name a list gives a unit; a
+call) is `hand` or AI, but `gist`, `short` and a column `verify/columns.json` declares with its reason (an id; the short name a list gives a unit; a
 fact no list has today; a rule's `needs` its words do not give, Kindred Sorcery's, with its why and evidence). The reads count a
 property, a literal key (`u['short']`) and a destructured name; a `derived` column names the script the gate runs that derives or holds it
 (`by`, or its note).
@@ -259,8 +260,13 @@ no list has is the catalogue's, `aiStatus:'not-read'` (no readings or AI-written
 
 ## AI-written columns
 
-`gist` (stratagems) is AI-written, the one AI layer the owner keeps (`def`, the "When targeted" line, is
-retired: BOXES d). Next to it is its fingerprint, `gistOf`: the first 8 hex of the sha256 of the exact text it
+`gist` (stratagems) and `short` (an ability's, an enhancement's, a stratagem's) are AI-written, the AI layers the owner keeps (`def`, the
+"When targeted" line, is retired: BOXES d). `short` is what a unit's screen shows for a source whose words it does not count (BOXES nc / dnc,
+or a box the two-reader rule does not confirm, AGREE 0): terse, every number from the text, nothing it does not say, labelled AI and followed
+by the source's name, which opens its rules as written; another unit's line is "Granted by: <unit> - <short> (<name>)", the unit's name
+opening its datasheet. An army or detachment rule, or a core rule, not counted there is its name alone. The Damage tab keeps its own "Not
+counted" list. Its fingerprint is `shortOf`, as `gistOf` below; `verify/render.js` (ai-summary) holds every AI-labelled summary on a unit's
+screen to its source's `short`, word for word. Next to it is its fingerprint, `gistOf`: the first 8 hex of the sha256 of the exact text it
 was written from (a stratagem's `WHEN: … TARGET: … EFFECT: … RESTRICTIONS: …`, a rule's text and table, an ability's
 text). The gate step `fingerprints` fails when that text no longer matches: the summary is stale. Rewrite it from the
 new text, then `node verify/tables.js --restamp`. A new one without a fingerprint fails too: check it against its

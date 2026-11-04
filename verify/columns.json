@@ -1,5 +1,5 @@
 {
- "about": "Where every column of data.js gets its values. verify/tables.js (the gate) fails on a column of data.js that is not here. Sources: bsdata (BSData wh40k-11e), wahapedia, gw (Games Workshop's documents), newrecruit (the owner's New Recruit PDFs), derived (computed by a verify/ script), hand (written by hand, with the note saying how it is checked), ai-summary (an AI-written one-line summary; carries a fingerprint of the text it was written from, gistOf), ai-reading (the app's reading of a rule's words into numbers and lines, by AI or by verify/derive.js's fixed rules where readBy says so; fingerprinted, readOf or defOf). verify/tables.js fails unless the ai-reading columns are exactly the fingerprinted ones and the ai-summary columns exactly gist.",
+ "about": "Where every column of data.js gets its values. verify/tables.js (the gate) fails on a column of data.js that is not here. Sources: bsdata (BSData wh40k-11e), wahapedia, gw (Games Workshop's documents), newrecruit (the owner's New Recruit PDFs), derived (computed by a verify/ script), hand (written by hand, with the note saying how it is checked), ai-summary (an AI-written one-line summary; carries a fingerprint of the text it was written from, gistOf), ai-reading (the app's reading of a rule's words into numbers and lines, by AI or by verify/derive.js's fixed rules where readBy says so; fingerprinted, readOf or defOf). verify/tables.js fails unless the ai-reading columns are exactly the fingerprinted ones and the ai-summary columns exactly gist and short (a rule row's; a unit entry's short is its short name, hand).",
  "tables": {
   "RULES": {
    "what": "core rules and weapon abilities: name → text (glossary)",
@@ -472,6 +472,17 @@
     "readOf": {
      "source": "derived",
      "note": "fingerprint of the text this row's own readings (mod, help, shield, defCalc, defPick) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\""
+    },
+    "short": {
+     "source": "ai-summary",
+     "note": "AI-written short summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), where the screen does not count its words (its words no catalogue effect reads, or a box the two-reader rule does not confirm, AGREE 0): terse, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
+    },
+    "shortOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
     }
    }
   },
@@ -501,6 +512,17 @@
     "limit": {
      "source": "wahapedia",
      "note": "\"(one per army)\" as Wahapedia prints it after the name"
+    },
+    "short": {
+     "source": "ai-summary",
+     "note": "AI-written short summary of the enhancement, written from its text: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), where the screen does not count its words (its words no catalogue effect reads, or a box the two-reader rule does not confirm, AGREE 0): terse, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
+    },
+    "shortOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
     }
    }
   },
@@ -1274,6 +1296,17 @@
     "readOf": {
      "source": "derived",
      "note": "fingerprint of the text this row's own readings (riled, damaged, defAlways, defCalc, calcDef, fightOnDeath, comeback) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\""
+    },
+    "short": {
+     "source": "ai-summary",
+     "note": "AI-written short summary of the ability, written from its text: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), where the screen does not count its words (its words no catalogue effect reads, or a box the two-reader rule does not confirm, AGREE 0): terse, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
+    },
+    "shortOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
     }
    }
   },
