@@ -1,0 +1,1145 @@
+[
+ {
+  "kind": "short-summary",
+  "where": "ability · Pulse Jet",
+  "judgement": {
+   "short": "Unengaged, when selected to move in your Movement phase: can make a pulse jet move",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**.",
+   "lists": [
+    "shooty"
+   ],
+   "units": [
+    "Wazdakka Gutsmek"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Crazed Rampage",
+  "judgement": {
+   "short": "Fight phase: a model of your unit destroyed before it is selected to fight: on a D6 roll of 4+, removed only once your unit has fought or at the end of the phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).\nTARGET: That **ORKS WALKER** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
+   "lists": [
+    "shooty"
+   ],
+   "units": [
+    "Big Mek Dakkarig",
+    "Killa Kans"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "enhancement · Supa-glowy Fing (Shoota Boyz)",
+  "judgement": {
+   "short": "This model’s ranged attacks: [ANTI-INFANTRY 4+], [DEVASTATING WOUNDS], [SUPA-HAZARDOUS]",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.\n**[SUPA-HAZARDOUS]:** Each time a unit is **selected to shoot**, after that unit has resolved all of its attacks, make two **hazard rolls** for that unit for each **[SUPA-HAZARDOUS]** weapon you selected in the Select Weapons step.",
+   "lists": [
+    "shooty"
+   ],
+   "units": [
+    "Big Mek in Mega Armour"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "enhancement · Supa-snazz Dakka (Wreckas)",
+  "judgement": {
+   "short": "This unit’s Snazzgun weapons: [RAPID FIRE 1]",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "**FLASH GITZ** unit only. This unit’s Snazzgun weapons have **[RAPID FIRE 1]**.",
+   "lists": [
+    "shooty"
+   ],
+   "units": [
+    "Mek"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Berzerker Frenzy",
+  "judgement": {
+   "short": "The first time it is destroyed: at the end of the phase, on a D6 roll of 2+, set back up with 3 wounds remaining",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within **Engagement Range** of one or more enemy units, with 3 wounds remaining.",
+   "lists": [
+    "princes",
+    "standard"
+   ],
+   "units": [
+    "Khârn the Betrayer"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Aspire to Infamy",
+  "judgement": {
+   "short": "Your unit’s CHARACTER models’ melee attacks: +1 A, +2 S",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Fight phase, when a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) is **selected to fight**.\nTARGET: That **WORLD EATERS CHARACTER** unit.\nEFFECT: Your unit’s **CHARACTER** models’ melee attacks have:\n- +1 **A**.\n- +2 **S**.",
+   "lists": [
+    "princes",
+    "standard",
+    "big-demons-baby"
+   ],
+   "units": [
+    "Daemon Prince of Khorne",
+    "Lord on Juggernaut",
+    "Slaughterbound",
+    "Master of Executions"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Impossible Form",
+  "judgement": {
+   "short": "−1 Damage to attacks against this PSYKER (excluding Psychic Attacks)",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "Each time an attack is made against this **PSYKER** (excluding **Psychic Attacks**), subtract 1 from the Damage characteristic of that attack.",
+   "lists": [
+    "pubstomper",
+    "mucho-mutantes"
+   ],
+   "units": [
+    "Magnus the Red"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Psychic Dominion",
+  "judgement": {
+   "short": "Until the end of the phase: Feel No Pain 4+ against Psychic Attacks; Psychic weapons attacking your unit have [HAZARDOUS]",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Any phase, just after an enemy unit has selected its targets.\nTARGET: One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, all attacks made against your unit with Psychic weapons have the **[HAZARDOUS]** ability and all models in your unit have the **Feel No Pain 4+** ability against **Psychic Attacks**.",
+   "lists": [
+    "pubstomper"
+   ],
+   "units": [
+    "Magnus the Red",
+    "Daemon Prince of Tzeentch with wings",
+    "Exalted Sorcerer",
+    "Sorcerer in Terminator Armour",
+    "Tzaangors",
+    "Tzaangor Enlightened with Fatecaster greatbows",
+    "Defiler",
+    "Sekhetar Robots"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Destined by Fate",
+  "judgement": {
+   "short": "After a failed saving throw for a THOUSAND SONS PSYKER model: that attack’s Damage becomes 0",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Any phase, just after a saving throw is failed for a **THOUSAND SONS PSYKER** model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.\nTARGET: That **PSYKER** model.\nEFFECT: Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for.",
+   "lists": [
+    "pubstomper"
+   ],
+   "units": [
+    "Magnus the Red",
+    "Daemon Prince of Tzeentch with wings",
+    "Exalted Sorcerer",
+    "Sorcerer in Terminator Armour"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Aetherstride",
+  "judgement": {
+   "short": "Set up by Deep Strike more than 6\" horizontally from all enemy units; until the end of the turn its Dark Blessing has [SUSTAINED HITS D3] and it cannot declare a charge",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge.",
+   "lists": [
+    "pubstomper",
+    "mucho-mutantes"
+   ],
+   "units": [
+    "Daemon Prince of Tzeentch with wings"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Savage Roar",
+  "judgement": {
+   "short": "The attacking enemy unit takes a Battle-shock test; until the end of the phase −1 to its Hit rolls against your unit, and −1 to its Wound rolls too if it failed that test",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS MONSTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: That enemy unit must take a **Battle-shock test** and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the **Hit roll**. If that Battle-shock test was failed, subtract 1 from the **Wound roll** as well.",
+   "lists": [
+    "nidzillas"
+   ],
+   "units": [
+    "The Swarmlord",
+    "Hive Tyrant",
+    "Norn Assimilator",
+    "Norn Emissary",
+    "Tyrannofex"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Strength from Exile",
+  "judgement": {
+   "short": "Until the end of the phase, with no other friendly units within 9\": re-roll a Hit roll of 1 and a Wound roll of 1",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1.",
+   "lists": [
+    "6-bigs",
+    "4-megas-and-a-destrier",
+    "navigator-sounds-op-ngl"
+   ],
+   "units": [
+    "Knight Destrier",
+    "Knight Errant",
+    "Knight Paladin",
+    "Knight Warden",
+    "Canis Rex",
+    "Cerastus Knight Atrapos",
+    "Cerastus Knight Lancer",
+    "Knight Crusader",
+    "Knight Defender"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Point-Blank Barrage",
+  "judgement": {
+   "short": "Until the end of the phase: Blast weapons can target enemy units within Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with a Blast weapon at such a unit: 1 mortal wound to your unit",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within **Engagement Range** of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 **mortal wound** after all of its attacks have been resolved.",
+   "lists": [
+    "6-bigs",
+    "4-megas-and-a-destrier",
+    "navigator-sounds-op-ngl"
+   ],
+   "units": [
+    "Knight Destrier",
+    "Knight Errant",
+    "Knight Paladin",
+    "Knight Warden",
+    "Canis Rex",
+    "Cerastus Knight Atrapos",
+    "Cerastus Knight Lancer",
+    "Knight Crusader",
+    "Knight Defender"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Vengeance for the Omnissiah",
+  "judgement": {
+   "short": "After a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\": its Omnissian axe has A 6 until the end of the battle",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "If a friendly **ADEPTUS MECHANICUS VEHICLE** model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.",
+   "lists": [
+    "purge-goes-the-foe"
+   ],
+   "units": [
+    "Tech-Priest Enginseer"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "enhancement · Necromechanic (Cohort Cybernetica)",
+  "judgement": {
+   "short": "Once per battle round, after a failed saving throw for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\" of the bearer: that attack’s Damage becomes 0",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "**TECH-PRIEST** model only. Once per battle round, when a saving throw made for a friendly **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.",
+   "lists": [
+    "purge-goes-the-foe"
+   ],
+   "units": [
+    "Tech-Priest Enginseer"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Auto-divinatory Targeting",
+  "judgement": {
+   "short": "Until the start of your next Command phase: ranged weapons BS 3+ and [IGNORES COVER], only at units within range of the selected objective marker",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army, and one objective marker.\nEFFECT: Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the **[IGNORES COVER]** ability, but they can only target units within range of the selected objective marker.",
+   "lists": [
+    "purge-goes-the-foe"
+   ],
+   "units": [
+    "Cybernetica Datasmith",
+    "Ironstrider Ballistarii",
+    "Onager Dunecrawler",
+    "Skorpius Disintegrator"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Machine Superiority",
+  "judgement": {
+   "short": "Until the end of the turn: eligible to shoot in a turn it Fell Back; ignore any or all modifiers to its characteristics, rolls and tests (excluding saving throws)",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws).",
+   "lists": [
+    "purge-goes-the-foe"
+   ],
+   "units": [
+    "Cybernetica Datasmith",
+    "Ironstrider Ballistarii",
+    "Onager Dunecrawler",
+    "Skorpius Disintegrator"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Unshackled Wrath",
+  "judgement": {
+   "short": "Until the end of the phase, ranged weapons: [SUSTAINED HITS 1] or [LETHAL HITS], or [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS]",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII** unit from your army that has not been selected to shoot this phase.\nEFFECT: Select the **[SUSTAINED HITS 1]** or **[LETHAL HITS]** ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the **[SUSTAINED HITS 1]**, **[LETHAL HITS]** and **[HAZARDOUS]** abilities to apply to those weapons until the end of the phase.",
+   "lists": [
+    "purge-goes-the-foe"
+   ],
+   "units": [
+    "Cybernetica Datasmith",
+    "Skitarii Rangers",
+    "Ironstrider Ballistarii",
+    "Onager Dunecrawler",
+    "Skorpius Disintegrator"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Repulsor Grid",
+  "judgement": {
+   "short": "Against an enemy unit’s ranged attacks: each unmodified save roll of 6, 1 mortal wound to that unit after it has shot",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a **save roll**:\n- On an unmodified 6, that enemy unit suffers 1 **mortal wound** after that enemy unit has shot.",
+   "lists": [
+    "purge-goes-the-foe"
+   ],
+   "units": [
+    "Cybernetica Datasmith"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Omnissiah’s Blessing",
+  "judgement": {
+   "short": "In your Command phase, one friendly ADEPTUS MECHANICUS model within 3\" of the Tech-Priest Enginseer regains up to D3 lost wounds; a VEHICLE model also has Feel No Pain 5+ until the start of your next Command phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "In your Command phase, select one friendly **ADEPTUS MECHANICUS** model within 3\" of this model. That model regains up to D3 lost wounds and, if it is a **VEHICLE** model, until the start of your next Command phase, that model has the **Feel No Pain 5+** ability. Each model can only be selected for this ability once per Command phase.",
+   "lists": [
+    "purge-goes-the-foe"
+   ],
+   "units": [
+    "Cybernetica Datasmith",
+    "Ironstrider Ballistarii",
+    "Onager Dunecrawler",
+    "Skorpius Disintegrator"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Benevolence of the Omnissiah",
+  "judgement": {
+   "short": "Until the start of your next Command phase: Feel No Pain 6+, 5+ against mortal wounds",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, models in your unit have the **Feel No Pain 6+** ability, which is improved to Feel No Pain 5+ against **mortal wounds**.",
+   "lists": [
+    "purge-goes-the-foe"
+   ],
+   "units": [
+    "Cybernetica Datasmith",
+    "Ironstrider Ballistarii",
+    "Onager Dunecrawler",
+    "Skorpius Disintegrator"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Unshakeable Opponents",
+  "judgement": {
+   "short": "Until the end of the turn: ignore any or all modifiers to BS or WS, the Hit roll and the Wound roll",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Command phase.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army.\nEFFECT: Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the **Hit roll**; the **Wound roll**.",
+   "lists": [
+    "defilers-and-friends"
+   ],
+   "units": [
+    "Lucius the Eternal",
+    "Daemon Prince of Slaanesh with Wings",
+    "Sorcerer",
+    "Lord Exultant",
+    "Tormentors",
+    "Chaos Rhino",
+    "Defiler",
+    "Maulerfiend"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "enhancement · Pledge of Unholy Fortune (Coterie of the Conceited)",
+  "judgement": {
+   "short": "Once per turn, if the bearer is not Battle-shocked: a Hit roll, Wound roll or saving throw for a model in its unit becomes an unmodified 6",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "**EMPEROR’S CHILDREN** model only. Once per turn, just after making a **Hit roll**, a **Wound roll** or a saving throw for a model in the bearer’s unit, if the bearer is not **Battle-shocked**, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.",
+   "lists": [
+    "defilers-and-friends"
+   ],
+   "units": [
+    "Daemon Prince of Slaanesh with Wings"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Excessive Assault",
+  "judgement": {
+   "short": "Melee attacks: re-roll a Wound roll of 1; any Wound roll if the target is within range of an objective marker",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a **Wound roll** of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.",
+   "lists": [
+    "defilers-and-friends"
+   ],
+   "units": [
+    "Lord Exultant"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Hungry for Combat",
+  "judgement": {
+   "short": "Until the end of the phase: only target the selected enemy unit; an unmodified Hit roll of 5+ scores a Critical Hit",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Start of the Fight phase.\nTARGET: Two or more **WAR DOG** units from your army within **Engagement Range** of the same enemy unit.\nEFFECT: Select one enemy unit within Engagement Range of those **WAR DOG** units. Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.",
+   "lists": [
+    "woof-woof"
+   ],
+   "units": [
+    "War Dog Brigand",
+    "War Dog Executioner",
+    "War Dog Karnivore"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Illusions of Tzeentch",
+  "judgement": {
+   "short": "While leading a unit: that unit can be the target of a ranged attack only from within 18\"",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+   "lists": [
+    "mucho-mutantes"
+   ],
+   "units": [
+    "Exalted Sorcerer on Disc of Tzeentch"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Sacrificial Blessing",
+  "judgement": {
+   "short": "While leading a unit, when it is selected to shoot or fight: destroy one Bodyguard model for +D3 A and S to this model’s Psychic weapons until the end of the phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.",
+   "lists": [
+    "mucho-mutantes"
+   ],
+   "units": [
+    "Tzaangor Shaman"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Duty in Death",
+  "judgement": {
+   "short": "Fight phase: a model of your unit destroyed before it is selected to fight: on a D6 roll of 4+ (+1 with the assault doctrine), removed only once your unit has fought or at the end of the phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ADEPTUS ASTARTES** unit.\nTARGET: That **ADEPTUS ASTARTES** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if the **assault doctrine** is active for your unit:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
+   "lists": [
+    "nerf-when"
+   ],
+   "units": [
+    "Roboute Guilliman",
+    "Marneus Calgar",
+    "Librarian in Phobos Armour",
+    "Heavy Intercessor Squad",
+    "Impulsor",
+    "Eradicator Squad with Melta Rifles",
+    "Reiver Squad",
+    "Deathwatch Terminator Squad"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Unyielding in the Face of the Foe",
+  "judgement": {
+   "short": "While controlling an objective: +1 to save rolls",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "While this unit is controlling an **objective**, this unit has +1 to **save rolls**.",
+   "lists": [
+    "nerf-when"
+   ],
+   "units": [
+    "Heavy Intercessor Squad"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Kraken Rounds",
+  "judgement": {
+   "short": "Your unit’s ranged attacks: +6\" range, +1 S",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Your Shooting phase when a **KILL TEAM** unit is **selected to shoot**.\nTARGET: That **KILL TEAM** unit.\nEFFECT: Your unit’s ranged attacks have:\n- Have +6\" **R**.\n- Have +1 **S**.",
+   "lists": [
+    "nerf-when"
+   ],
+   "units": [
+    "Deathwatch Terminator Squad"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Wrath Undeniable",
+  "judgement": {
+   "short": "Until the end of the phase: a model destroyed by a melee attack before it has fought: on a D6 roll of 4+, it fights after the attacking unit, then is removed",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LEGIONES DAEMONICA KHORNE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+   "lists": [
+    "the-exiled-legion"
+   ],
+   "units": [
+    "Skarbrand",
+    "Karanak",
+    "Skulltaker",
+    "Bloodthirster",
+    "Daemon Prince of Chaos",
+    "Rendmaster on Blood Throne",
+    "Bloodmaster",
+    "Skullmaster"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Skullmaster’s Fury",
+  "judgement": {
+   "short": "While leading a unit, after it ends a Charge move: Juggernaut’s bladed horns have [DEVASTATING WOUNDS] until the end of the turn",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "While this model is leading a unit, each time that unit ends a **Charge move**, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability.",
+   "lists": [
+    "the-exiled-legion"
+   ],
+   "units": [
+    "Skullmaster"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Reorder Reality",
+  "judgement": {
+   "short": "An enemy unit within 18\" that targets this model: −1 to the Hit roll, and its ranged weapons have [HAZARDOUS] until the end of the phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "Each time an enemy unit within 18\" of this model targets this model, subtract 1 from the **Hit roll** and, until the end of the phase, that enemy unit’s ranged weapons have the **[HAZARDOUS]** ability.",
+   "lists": [
+    "fellhammer-siege-task-force"
+   ],
+   "units": [
+    "Vashtorr the Arkifane"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Dark Zealotry",
+  "judgement": {
+   "short": "While leading a unit: +1 to the Wound roll of its melee attacks",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**.",
+   "lists": [
+    "fellhammer-siege-task-force"
+   ],
+   "units": [
+    "Dark Apostle"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Ruination’s Bounty",
+  "judgement": {
+   "short": "When your unit uses Dark Pacts: its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1]",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Your Shooting phase, when a friendly **HAVOCS**/**OBLITERATORS** unit is **selected to shoot**.\nTARGET: That **HAVOCS/OBLITERATORS** unit.\nEFFECT: When your unit uses the **Dark Pacts** ability, your unit’s ranged attacks have:\n- **[LETHAL HITS]**.\n- **[SUSTAINED HITS 1]**.",
+   "lists": [
+    "fellhammer-siege-task-force"
+   ],
+   "units": [
+    "Havocs",
+    "Obliterators"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Master of Mechanisms",
+  "judgement": {
+   "short": "In your Command phase, one friendly HERETIC ASTARTES VEHICLE model within 3\" of the Warpsmith regains up to D3 lost wounds and has +1 to the Hit roll until the start of your next Command phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "In your Command phase, select one friendly **HERETIC ASTARTES VEHICLE** model within 3\" of this model. That **VEHICLE** model regains up to D3 lost wounds and, until the start of your next Command phase, each time that **VEHICLE** makes an attack, add 1 to the **Hit roll**. Each model can only be selected for this ability once per Command phase.",
+   "lists": [
+    "fellhammer-siege-task-force"
+   ],
+   "units": [
+    "Chaos Predator Annihilator",
+    "Chaos Predator Destructor",
+    "Chaos Vindicator",
+    "Forgefiend",
+    "Maulerfiend"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Siege Shield",
+  "judgement": {
+   "short": "Its demolisher cannon can target enemy units within Engagement Range; no Engagement Range penalty to the Hit rolls of its ranged attacks",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "When making ranged attacks with its demolisher cannon, this model can target enemy units within **Engagement Range** of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units.",
+   "lists": [
+    "fellhammer-siege-task-force"
+   ],
+   "units": [
+    "Chaos Vindicator"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Daemonic Ordnance",
+  "judgement": {
+   "short": "When selected to shoot, if it uses this ability: its ranged weapons have [DEVASTATING WOUNDS] and [HAZARDOUS] until the end of the phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "Each time this model is selected to shoot, it can use this ability. If it does, until the end of the phase, its ranged weapons have the **[DEVASTATING WOUNDS]** and **[HAZARDOUS]** abilities.",
+   "lists": [
+    "fellhammer-siege-task-force"
+   ],
+   "units": [
+    "Forgefiend"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Golden Light of the Moiraides",
+  "judgement": {
+   "short": "Until the start of your next turn: attacks that target your unit have −1 to Hit rolls; enemy units cannot target it with snap shooting attacks",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES** unit is selected to make an **ingress move**.\nTARGET: That **ADEPTUS CUSTODES** Unit.\nEFFECT: Until the start of your next turn:\n- Attacks that target your unit have -1 to **hit rolls**.\n- Enemy units cannot target your unit with **snap shooting** attacks.",
+   "lists": [
+    "dread-host"
+   ],
+   "units": [
+    "Trajann Valoris",
+    "Shield-Captain",
+    "Custodian Guard Sodality",
+    "Allarus Custodians",
+    "Custodian Wardens",
+    "Caladius Annihilator Grav-tank"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Selfless Protector",
+  "judgement": {
+   "short": "A ranged attack allocated to an IMPERIAL KNIGHTS model not fully visible because of the Knight Defender: Benefit of Cover and a 4+ invulnerable save against it",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "Each time a ranged attack is allocated to an **IMPERIAL KNIGHTS** model from your army, if that model is not fully **visible** to every model in the attacking unit because of this Knight Defender model, that model has the **Benefit of Cover** and a 4+ invulnerable save against that attack.",
+   "lists": [
+    "navigator-sounds-op-ngl"
+   ],
+   "units": [
+    "Cerastus Knight Atrapos",
+    "Knight Crusader",
+    "Knight Destrier",
+    "Knight Errant"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Pyrogenesis",
+  "judgement": {
+   "short": "Until the end of the phase: +2 S, or one Flux token for +3 S and AP improved by 1",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that has not been selected to shoot or fight that phase.\nEFFECT: Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead.",
+   "lists": [
+    "tzeeeeentch"
+   ],
+   "units": [
+    "Kairos Fateweaver",
+    "The Blue Scribes",
+    "The Changeling",
+    "Daemon Prince of Chaos with wings",
+    "Lord of Change",
+    "Fluxmaster",
+    "Flamers",
+    "Tzeentch Soul Grinder",
+    "Blue Horrors",
+    "Brimstone Horrors"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Mischief and Confusion",
+  "judgement": {
+   "short": "At the start of your opponent’s Shooting phase, one enemy unit within 12\" and visible, D6: 2-5, −1 to its Hit rolls this phase; 6, it is not eligible to shoot this phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase.",
+   "lists": [
+    "tzeeeeentch"
+   ],
+   "units": [
+    "Kairos Fateweaver",
+    "The Blue Scribes",
+    "The Changeling",
+    "Daemon Prince of Chaos with wings",
+    "Lord of Change",
+    "Fluxmaster",
+    "Flamers",
+    "Tzeentch Soul Grinder",
+    "Blue Horrors",
+    "Brimstone Horrors"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Flickering Reality",
+  "judgement": {
+   "short": "Roll one D6 (a Flux token re-rolls it): until the end of the phase, an attack against your unit with an unmodified Hit roll of that result ends its attack sequence",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Roll one D6, then you can spend one Flux token to re-roll the result: until the end of the phase, each time an attack targets your unit, on an unmodified **Hit roll** (after any re-roll) of that result, the attack sequence ends, even if the original Hit roll would have been a Critical Hit.\n**Example:** If you roll a 2 and choose to spend one Flux token to re-roll the result, and the re-roll is a 6, then until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll of 6 the attack sequence ends, that attack fails to hit and no Critical Hit effects (e.g. Lethal Hits) are resolved.",
+   "lists": [
+    "tzeeeeentch"
+   ],
+   "units": [
+    "Kairos Fateweaver",
+    "The Blue Scribes",
+    "The Changeling",
+    "Daemon Prince of Chaos with wings",
+    "Lord of Change",
+    "Fluxmaster",
+    "Flamers",
+    "Tzeentch Soul Grinder",
+    "Blue Horrors",
+    "Brimstone Horrors"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Formless Horror",
+  "judgement": {
+   "short": "An enemy unit selecting this model as a target first takes a Battle-shock test; if it fails, it cannot target this model this phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "Each time an enemy unit wishes to select this model as the target of an attack, that unit must first take a **Battle-shock test**. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase.",
+   "lists": [
+    "tzeeeeentch"
+   ],
+   "units": [
+    "The Changeling"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Harbinger of Death",
+  "judgement": {
+   "short": "When selected to fight: its hellforged weapons have one of [LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1] until the end of the phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "Each time this model is selected to fight, select one of the following abilities. Until the end of the phase, this model’s hellforged weapons have that ability:\n- **[LETHAL HITS]**\n- **[PRECISION]**\n- **[SUSTAINED HITS 1]**",
+   "lists": [
+    "tzeeeeentch"
+   ],
+   "units": [
+    "Daemon Prince of Chaos with wings"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Altered Reality",
+  "judgement": {
+   "short": "Once per battle round: a Hit roll, Wound roll or saving throw for this model becomes an unmodified 6",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.",
+   "lists": [
+    "tzeeeeentch"
+   ],
+   "units": [
+    "Fluxmaster"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Burning Spray",
+  "judgement": {
+   "short": "After it has shot in your Shooting phase: one enemy unit it hit cannot have the Benefit of Cover until the end of the phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the **Benefit of Cover**.",
+   "lists": [
+    "healybois"
+   ],
+   "units": [
+    "The Red Terror",
+    "The Swarmlord",
+    "Hive Tyrant",
+    "Biovores",
+    "Ripper Swarms",
+    "Norn Assimilator",
+    "Norn Emissary",
+    "Psychophage",
+    "Tyrannofex",
+    "Spore Mines (Biovore)"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "enhancement · Parasitic Biomorphology (Assimilation Swarm)",
+  "judgement": {
+   "short": "+1 S to the bearer’s unit’s melee weapons; +1 A to them until the end of the battle after the unit first destroys an enemy unit in the Fight phase with the bearer within 6\" of a friendly HARVESTER unit",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.",
+   "lists": [
+    "healybois"
+   ],
+   "units": [
+    "Hive Tyrant"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Phaeron of the Blades",
+  "judgement": {
+   "short": "Friendly NECRONS units (excluding MONSTER units) within 6\" of Szarekh: re-roll Charge rolls; +1 S to melee attacks",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6\" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+   "lists": [
+    "u-w0t-m8"
+   ],
+   "units": [
+    "Imotekh the Stormlord",
+    "The Silent King",
+    "Royal Warden",
+    "Technomancer",
+    "Flayed Ones",
+    "Ophydian Destroyers",
+    "Canoptek Scarab Swarms",
+    "Canoptek Reanimator",
+    "Canoptek Spyders",
+    "Tesseract Vault"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Flesh Hunger",
+  "judgement": {
+   "short": "Melee attacks against a Below Half-strength target: a successful Hit roll scores a Critical Hit",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "Each time a model in this unit makes a melee attack, if the target of that attack is **Below Half-strength**, a successful **Hit roll** scores a Critical Hit.",
+   "lists": [
+    "u-w0t-m8"
+   ],
+   "units": [
+    "Flayed Ones"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Grot Shields",
+  "judgement": {
+   "short": "Your opponent’s Shooting phase: a hit by that enemy unit’s ranged attacks on the ORKS INFANTRY unit ends its attack sequence, and 1 mortal wound to your GRETCHIN unit",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**.",
+   "lists": [
+    "simple-but-effective"
+   ],
+   "units": [
+    "Ghazghkull Thraka",
+    "Nazdreg",
+    "Warboss in Mega Armour"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · One Last Kill",
+  "judgement": {
+   "short": "Fight phase: destroyed before it is selected to fight: on a D6 roll of 2+, removed only once this unit has fought or at the end of the phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.",
+   "lists": [
+    "simple-but-effective"
+   ],
+   "units": [
+    "Mozrog Skragbad"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Too Arrogant to Die",
+  "judgement": {
+   "short": "Fight phase: a model of your unit destroyed before it is selected to fight: on a D6 roll of 4+ (+1 if riled up), removed only once your unit has fought or at the end of the phase",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
+   "lists": [
+    "simple-but-effective"
+   ],
+   "units": [
+    "Nazdreg",
+    "Warboss in Mega Armour"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Super Runts",
+  "judgement": {
+   "short": "This unit is riled up; its Scavenged Shivs weapons have +1 A, WS and S",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "- This unit is **riled up**.\n- This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**.",
+   "lists": [
+    "simple-but-effective"
+   ],
+   "units": [
+    "Zodgrod Wortsnagga"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "enhancement · Extra Sneaky (Runt Swarm)",
+  "judgement": {
+   "short": "−3\" detection range",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on defence lines (When targeted) where the screen does not count these words."
+  },
+  "source": {
+   "text": "**GRETCHIN** unit only. This unit has -3\" **detection range**.",
+   "lists": [
+    "simple-but-effective"
+   ],
+   "units": [
+    "Zodgrod Wortsnagga",
+    "Gretchin"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "ability · Psychological Saboteur",
+  "judgement": {
+   "short": "+1 to Wound vs a Battle-shocked enemy unit within 12\" of the Neurolictor",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "While an enemy unit is within 12\" of this model, if that unit is **Battle-shocked**:\n- Each time a model in that unit makes an attack, subtract 1 from the **Hit roll**.\n- Each time a friendly **TYRANIDS** model makes an attack that targets that unit, add 1 to the **Wound roll**.",
+   "lists": [
+    "basic-bitch"
+   ],
+   "units": [
+    "The Red Terror",
+    "The Swarmlord",
+    "Hive Tyrant",
+    "Tyranid Prime with Lash Whip",
+    "Biovores",
+    "Neurolictor",
+    "Von Ryan’s Leapers",
+    "Haruspex",
+    "Psychophage",
+    "Tyrannofex",
+    "Spore Mines (Biovore)"
+   ]
+  }
+ },
+ {
+  "kind": "short-summary",
+  "where": "stratagem · Adrenal Surge",
+  "judgement": {
+   "short": "Critical Hit on unmodified Hit roll of 5+",
+   "check": "Every number and word of the summary is in the GW text; nothing it does not say, no advice. Shown on attack lines (under the weapons) where the screen does not count these words."
+  },
+  "source": {
+   "text": "WHEN: Fight phase.\nTARGET: Up to two **TYRANIDS** units from your army that are within Synapse Range of your army and are eligible to fight, or one other **TYRANIDS** unit from your army that is eligible to fight.\nEFFECT: Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.",
+   "lists": [
+    "basic-bitch"
+   ],
+   "units": [
+    "The Red Terror",
+    "The Swarmlord",
+    "Hive Tyrant",
+    "Tyranid Prime with Lash Whip",
+    "Biovores",
+    "Neurolictor",
+    "Von Ryan’s Leapers",
+    "Haruspex",
+    "Psychophage",
+    "Tyrannofex",
+    "Spore Mines (Biovore)"
+   ]
+  }
+ },
+ {
+  "kind": "review-ui-code",
+  "where": "app.html useSentence/useLine/weaponChoice (no EXTRA ATTACKS sentence), fnCond (targetSelected on another unit: Target selected by the <giver> + BOXES lasts), modTarget/modFrom (another unit's line opens its ability), ncShortOf/ncSum/grantedBy/ncHtml, modGroupLines, stratModLines, defSources (abv), defLine, defenceItems (t); verify/tables.js FINGERPRINT short:shortOf, sites (enhancements), stampRows, layerOf, screenJudgements; verify/lines.js condWords; verify/render.js ai-summary, guard-shown, all-attacks-block; verify/helpers.js ability-short, enhancement-short; verify/columns.json; docs/tables.md",
+  "judgement": {
+   "check": "The line layout is program output only: an army, detachment or core rule not counted is its name; any other source not counted is <short> AI (<name>), another unit's Granted by: <unit> - <short or its counted text> (<name>); the unit name opens the datasheet, the summary and name open the rule. The app writes no summary text: every AI-labelled summary is its source's short column (render ai-summary). Damage numbers unchanged."
+  },
+  "source": {
+   "owner": "requests 1-4 of 4 Nov 2026 (the Red Terror sheet), and the Granted by layout"
+  }
+ }
+]
