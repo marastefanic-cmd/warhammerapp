@@ -60,7 +60,7 @@
     },
     "gist": {
      "source": "ai-summary",
-     "note": "AI-written one-line summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS; signed off (approvals.json); gistOf is the fingerprint of that text"
+     "note": "AI-written summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS to docs/summaries.md: the Stratagems tab's one line and, on a unit's sheet, \"<cp>CP <name>: <gist>\"; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); gistOf is the fingerprint of that text"
     },
     "gistOf": {
      "source": "derived",
@@ -214,7 +214,7 @@
     },
     "short": {
      "source": "ai-summary",
-     "note": "AI-written short summary of the army rule, written from its text and table: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), where the screen does not count its words (its words no catalogue effect reads, or a box the two-reader rule does not confirm, AGREE 0): terse, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
+     "note": "AI-written short summary of the army rule, written from its text and table: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), where the screen does not count its words (its words no catalogue effect reads, or a box the two-reader rule does not confirm, AGREE 0) to docs/summaries.md (the owner's guidelines): gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
     },
     "shortOf": {
      "source": "derived",
@@ -342,7 +342,7 @@
     },
     "short": {
      "source": "ai-summary",
-     "note": "AI-written short summary of the detachment rule, written from its text and table: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), where the screen does not count its words (its words no catalogue effect reads, or a box the two-reader rule does not confirm, AGREE 0): terse, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
+     "note": "AI-written short summary of the detachment rule, written from its text and table: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), where the screen does not count its words (its words no catalogue effect reads, or a box the two-reader rule does not confirm, AGREE 0) to docs/summaries.md (the owner's guidelines): gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
     },
     "shortOf": {
      "source": "derived",
@@ -420,7 +420,7 @@
     },
     "short": {
      "source": "ai-summary",
-     "note": "AI-written short summary of the detachment rule, written from its text and table: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), where the screen does not count its words (its words no catalogue effect reads, or a box the two-reader rule does not confirm, AGREE 0): terse, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
+     "note": "AI-written short summary of the detachment rule, written from its text and table: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), where the screen does not count its words (its words no catalogue effect reads, or a box the two-reader rule does not confirm, AGREE 0) to docs/summaries.md (the owner's guidelines): gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
     },
     "shortOf": {
      "source": "derived",
@@ -444,7 +444,7 @@
     },
     "gist": {
      "source": "ai-summary",
-     "note": "AI-written one-line summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS; signed off (approvals.json); gistOf is the fingerprint of that text"
+     "note": "AI-written summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS to docs/summaries.md: the Stratagems tab's one line and, on a unit's sheet, \"<cp>CP <name>: <gist>\"; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); gistOf is the fingerprint of that text"
     },
     "gistOf": {
      "source": "derived",
@@ -505,17 +505,6 @@
     "readOf": {
      "source": "derived",
      "note": "fingerprint of the text this row's own readings (mod, help, shield, defCalc, defPick) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\""
-    },
-    "short": {
-     "source": "ai-summary",
-     "note": "AI-written short summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), for every line it has on a unit's screen (under its weapons, When targeted, under its profile), counted or not; a counted line's summary has its box's numbers (verify/lines.js LN): terse, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
-    },
-    "shortOf": {
-     "source": "derived",
-     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
-     "by": [
-      "verify/tables.js"
-     ]
     }
    }
   },
@@ -548,7 +537,7 @@
     },
     "short": {
      "source": "ai-summary",
-     "note": "AI-written short summary of the enhancement, written from its text: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), for every line it has on a unit's screen (under its weapons, When targeted, under its profile), counted or not; a counted line's summary has its box's numbers (verify/lines.js LN): terse, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
+     "note": "AI-written short summary of the enhancement, written from its text: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), for every line it has on a unit's screen (under its weapons, When targeted, under its profile), counted or not; a counted line's summary has its box's numbers (verify/lines.js LN) to docs/summaries.md (the owner's guidelines): gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
     },
     "shortOf": {
      "source": "derived",
@@ -1332,7 +1321,7 @@
     },
     "short": {
      "source": "ai-summary",
-     "note": "AI-written short summary of the ability, written from its text: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), for every line it has on a unit's screen (under its weapons, When targeted, under its profile), counted or not; a counted line's summary has its box's numbers (verify/lines.js LN): terse, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
+     "note": "AI-written short summary of the ability, written from its text: what a unit's screen shows, labelled AI and followed by the source's name (opening its rules as written), for every line it has on a unit's screen (under its weapons, When targeted, under its profile), counted or not; a counted line's summary has its box's numbers (verify/lines.js LN) to docs/summaries.md (the owner's guidelines): gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; signed off (approvals.json); shortOf is the fingerprint of that text"
     },
     "shortOf": {
      "source": "derived",

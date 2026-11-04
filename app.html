@@ -1587,7 +1587,7 @@ function fnLine(S, b, u, kind, ab){
   if(S.rule) m.rule = S.rule;
   if(S.strat){ m.strat = S.strat; m.cp = S.cp; }
   if(S.src && S.src !== u){ m.src = S.src; m.giver = giver; }
-  if(S.damaged) m.damaged = true;
+  if(S.damaged){ m.damaged = true; m.gw = gwPlain((S.ab || {}).text); }
   // a box for one weapon's characteristics, nothing else: that weapon's row shows it ("8 (+6)", "6/7"), its condition under it
   // (not a stratagem's, nor an ability's the unit uses, "if it uses this ability": the player's to use, as a one-off is: oneOffMod)
   if(fx && ws && ws.length === 1 && !ws[0].group && !S.damaged && !S.strat && !(b.on || []).some(x => x[0] === 'used') && fx.every(([id]) => FN_ROW[id] || FN_SET[id])){
@@ -1629,10 +1629,9 @@ function unitMods(u, kind){
   }
   return out;
 }
-// a Damaged band's words: what its boxes do (effects.js labels); with words of it they do not count (Szarekh's halved Attacks, the Tesseract
-// Vault's C'tan Powers), or none, "see the rule", which opens its words
-const dmgBand = ab => { const o = BOXES_AGREED[DM_KEY.a(ab)] || {};
-  return [WH_EFFECTS.fxLabel((o.b || []).flatMap(b => b.fx || [])), (o.nc || []).length || !(o.b || []).length ? 'see the rule' : ''].filter(Boolean).join('; '); };
+// a Damaged band's words: GW's, as written (the owner's decision, 4 Nov 2026: short enough, no AI), its markup aside
+const gwPlain = t => String(t || '').replace(/\*\*/g, '').replace(/\s*\n\s*/g, ' ').trim();
+const dmgBand = ab => gwPlain(ab.text);
 // the footnotes the weapon tables show (datasheet, Ranged and Melee screens)
 const shownMods = (u, kind) => unitMods(u, kind);
 // phases and turn: turns can override the turn for one phase ("your Shooting phase or the Fight phase")
@@ -4614,12 +4613,11 @@ const ncSum = (t, short) => short ? (t ? linkTo(t[0], t[1], short) : esc(short))
 const grantedBy = (src, giver) => '<span class="gby">Granted by: ' + (src ? linkTo('unit', src.id, giver) : esc(giver)) + '</span> - ';
 // (a footnote drawn as its source's summary: one with a short that is no core rule's, and not an army or detachment rule's line of words not
 // counted alone (its name: sumRule))
-const sumMode = m => (!!m.short || (!!m.rule && menuRule(m.key))) && !m.core;
+const sumMode = m => !!m.short && !m.core;
 // (one line per source: the footnotes of one source, from one unit, are one summary line)
-const lineKey = m => sumMode(m) ? 'K\0' + m.key + '\0' + (m.giver || '') : [m.from, m.when, m.note].join('|');
+const lineKey = m => sumMode(m) || m.damaged ? 'K\0' + m.key + '\0' + (m.giver || '') : [m.from, m.when, m.note].join('|');
 function sumHtml(items, u, hasHunter){
   const m = items[0], t = modTarget(m, u);
-  if(m.rule && (items.every(x => x.ncLine) || menuRule(m.key))) return '<div class="mod">' + modFrom(m, u) + '</div>';   // (a blanket rule: its name)
   const hunt = items.find(x => x.hunter) && hasHunter ? ' (the (+' + Object.values(items.find(x => x.hunter).hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '';
   return '<div class="mod">' + (m.giver ? grantedBy(m.src, m.giver) : '') + ncSum(t, m.short) + hunt + ' <span class="from">(' + modFrom(m, u) + ')</span></div>';
 }
@@ -4694,8 +4692,9 @@ function stratModLines(det, list, u, hasHunter){
   return '<div class="msep">Stratagems · ' + esc(det) + (shared ? ' · ' + esc(shared) : '') + '</div>' + list.map(m => {
     const cond = shared ? m.when.slice(shared.length).replace(/^, /, '') : m.when;
     // (its summary, once: its short, else its gist)
-    if(sumMode(m)){ if(said.has(m.strat)) return ''; said.add(m.strat); return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> ' + ncSum(['strat', m.strat], m.short) + ' <span class="from">(' + linkTo('strat', m.strat, m.from) + ')</span></div>'; }
-    if(m.ncLine) return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> ' + ncSum(['strat', m.strat], m.short) + ' <span class="from">(' + linkTo('strat', m.strat, m.from) + ')</span></div>';
+    // ("<cp>CP <name>: <summary> AI")
+    if(sumMode(m)){ if(said.has(m.strat)) return ''; said.add(m.strat); return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + ncSum(['strat', m.strat], m.short) + '</div>'; }
+    if(m.ncLine) return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + ncSum(['strat', m.strat], m.short) + '</div>';
     return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + (m.scope ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) +
       (cond ? (/^vs\b/i.test(cond) ? ' ' : ', ') + esc(cond) : '') + (m.hunter && hasHunter ? ' (the (+' + Object.values(m.hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '') + '</div>';
   }).join('');
@@ -4705,9 +4704,11 @@ function modGroupLines(mods, u, hasHunter){
   // (a footnote with no condition said, its rule's words being its condition, is a line of its own)
   // (by condition and by source: two rules with the same condition are two lines)
   // (a source drawn as its summary: one line, whatever its conditions)
-  for(const m of mods){ const k = sumMode(m) ? lineKey(m) : m.when ? norm(m.when) + '\0' + m.from : '\0' + groups.size; if(!groups.has(k)) groups.set(k, { when:m.when, items:[] }); groups.get(k).items.push(m); }
+  for(const m of mods){ const k = sumMode(m) || m.damaged ? lineKey(m) : m.when ? norm(m.when) + '\0' + m.from : '\0' + groups.size; if(!groups.has(k)) groups.set(k, { when:m.when, items:[] }); groups.get(k).items.push(m); }
   return [...groups.values()].map(g => {
     if(sumMode(g.items[0])) return sumHtml(g.items, u, hasHunter);
+    // (a Damaged band's footnote: GW's words, as the band says them)
+    if(g.items[0].damaged) return '<div class="mod">' + esc(g.items[0].gw) + ' <span class="from">(' + modFrom(g.items[0], u) + ')</span></div>';
     if(g.items[0].ncLine) return ncHtml(g.items[0], u);
     // (another unit's: "Granted by: <unit> - <its conditions>: <its effects> (<its name>)", the name opening its rule)
     const m0 = g.items[0];
@@ -5033,14 +5034,14 @@ function defenceItems(u){
   // (a source with a summary is one line, its summary (sum); a rule's words not counted, its only lines here, its name (a blanket rule);
   // the source's other lines are that one line (dup), not drawn)
   const sums = new Set();
-  for(const x of res){ x.blanket = x.a === 'rule' && !x.rl && (menuRule(x.key) || res.every(y => y.key !== x.key || y.ncLine));
-    x.sum = !!x.short && !x.rl && !x.blanket;
+  for(const x of res){ x.blanket = x.a === 'rule' && !x.rl && !x.short && (menuRule(x.key) || res.every(y => y.key !== x.key || y.ncLine));
+    x.sum = !!x.short && !x.rl;
     if(x.blanket){ const k = x.key + '\0b'; if(sums.has(k)) x.dup = true; sums.add(k); }
     if(x.sum){ const k = x.key + '\0' + (x.from || ''); if(sums.has(k)) x.dup = true; sums.add(k); } }
   // (as defLine draws it: a rule's name alone; a summary for its words; another unit's "Granted by")
   for(const x of res){ if(x.blanket){ x.t = x.name; continue; }
     const text = x.sum ? x.short : x.ncLine ? x.short || FN_NC : x.text;
-    if(x.sum){ x.t = x.from ? 'Granted by: ' + x.from + ' - ' + text + ' (' + x.name + ')' : [x.cp ? x.cp + 'CP' : '', text, '(' + x.name + ')'].filter(Boolean).join(' '); continue; }
+    if(x.sum){ x.t = x.from ? 'Granted by: ' + x.from + ' - ' + text + ' (' + x.name + ')' : x.cp ? x.cp + 'CP ' + x.name + ': ' + text : text + ' (' + x.name + ')'; continue; }
     x.t = (x.rl && !x.when && x.text === x.name) || (x.ncLine && x.a === 'rule') ? x.name : x.from ? ['Granted by: ' + x.from + ' -', x.when ? x.when + ':' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ')
       : x.ncLine ? [x.cp ? x.cp + 'CP' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ') : [x.cp ? x.cp + 'CP' : '', x.name + ':', x.when ? x.when + ':' : '', text].filter(Boolean).join(' '); }
   return res;
@@ -5064,7 +5065,9 @@ function defLine(x, u){
   const ra = x.abv ? 'ability' : x.a, rv = x.abv || x.v, text = x.sum || x.ncLine ? ncSum([ra, rv], x.short) : esc(x.text);
   // (a source's summary: its conditions are in it)
   if(x.from) return who + grantedBy(x.a === 'unit' ? { id:x.v } : null, x.from) + (w && !x.sum ? '<span class="tw">' + w + ':</span> ' : '') + text + ' <span class="from">(' + linkTo(ra, rv, x.name) + ')</span>';
-  if(x.ncLine || x.sum) return who + (x.cp ? '<b class="cpb">' + esc(x.cp) + 'CP</b> ' : '') + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
+  // (a stratagem: "<cp>CP <name>: <summary> AI"; another source: "<summary> AI (<name>)")
+  if(x.cp && (x.ncLine || x.sum)) return who + '<b class="cpb">' + esc(x.cp) + 'CP</b> <b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + text;
+  if(x.ncLine || x.sum) return who + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
   return who + (x.cp ? '<b class="cpb">' + esc(x.cp) + 'CP</b> ' : '') + '<b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + (w ? '<span class="tw">' + w + ':</span> ' : '') + text;
 }
 const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';
@@ -5126,7 +5129,7 @@ function statShown(u){
   const out = [], said = new Set(), xs = statLines(u);
   for(const x of xs){
     const short = x.a === 'ability' ? srcShort({ ab:(abilityIndex.get(x.v) || {}).ab }) : x.a === 'strat' ? srcShort({ s:allStratagems().find(s => s.id === x.v) }) : srcShort({ a:'rule', name:x.rule });
-    const r = (!x.a || x.a === 'rule') && ruleRowOf(x.rule), blanket = !!r && (menuRule(DM_KEY.r(r)) || xs.every(y => y.rule !== x.rule || /not counted here/.test(y.text)));
+    const r = (!x.a || x.a === 'rule') && ruleRowOf(x.rule), blanket = !!r && !short && (menuRule(DM_KEY.r(r)) || xs.every(y => y.rule !== x.rule || /not counted here/.test(y.text)));
     if(!short && !blanket){ out.push(x); continue; }
     if(said.has(x.rule + '\0' + (x.from || ''))) continue; said.add(x.rule + '\0' + (x.from || ''));
     out.push(Object.assign({}, x, blanket ? { name:true } : { short }));

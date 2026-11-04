@@ -261,7 +261,7 @@ no list has is the catalogue's, `aiStatus:'not-read'` (no readings or AI-written
 ## AI-written columns
 
 `gist` (stratagems) and `short` (an ability's, an enhancement's, an army or detachment rule's, a stratagem's) are AI-written, the AI
-layers the owner keeps (`def`, the "When targeted" line, is retired: BOXES d). `short` is what a unit's screen shows for each source with a
+layers the owner keeps (`def`, the "When targeted" line, is retired: BOXES d). The summaries follow the owner's guidelines and approved examples, `docs/summaries.md`. `short` is what a unit's screen shows for each source with a
 line there, under its weapons, When targeted and under its profile (the owner's decision, 4 Nov 2026): one sentence with the rule's
 conditions and numbers in its own terms, every number from the text, nothing it does not say, labelled AI and followed by the source's
 name, which opens its rules as written (a stratagem without one: its gist). The program writes the rest: which units get a line and where

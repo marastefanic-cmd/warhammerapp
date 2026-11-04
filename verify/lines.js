@@ -30,6 +30,7 @@
      L8  every catalogue effect and condition renders its label
      LC  every condition GW's words put on a box is on it (verify/coverage.js: option, once per, if / while / unless, within N", kind)
      LA  the "Already in X" chips of ability rows and of the Rules screen's rule rows are what the from marks give
+     LB  a Damaged band (under the profile, and its footnote under the weapons) is GW's words as written
      LS  the lines under a unit's profile (app.html statLines, "Not Battle-shocked: OC 7 (Enraged Behemoths)"): for every list × unit
          exactly the stat boxes (BOXES st, effects.js ST) of the list's army and detachment rules that reach it, each said with its
          conditions' labels and its effect (the unit's characteristic with it, else its label), none the list printed into the value; and
@@ -392,10 +393,11 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
       const want = [...new Set(a.units.flatMap(u => marks(u, r.name)))].join(', '), got = A.inArmy(a, () => A.alreadyInRule(r.name));
       if(got !== want) fail('LA', a.id + ' · ' + r.name, '"Already in ' + got + '", its from marks give "' + want + '"'); else if(want) n++; } }
   stats.alreadyIn = n; }
-// LB the Damaged band: its words are its boxes' effect labels, and "see the rule" where its words have a part not counted or no box
+// LB the Damaged band: its words are GW's, as written (no AI, no label)
 { let n = 0;
   for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) if(ab.damaged){ const o = BX[M.KEY.ability(ab)] || {};
-    const exp = [E.fxLabel((o.b || []).flatMap(b => b.fx || [])), (o.nc || []).length || !(o.b || []).length ? 'see the rule' : ''].filter(Boolean).join('; ');
+    // (GW's words, as written, their markup aside: the owner's decision, 4 Nov 2026)
+    const exp = String(ab.text || '').replace(/\*\*/g, '').replace(/\s*\n\s*/g, ' ').trim(); void o;
     const got = A.inArmy(a, () => A.dmgBand(ab)); if(got !== exp) fail('LB', a.id + '/' + u.id + ' · ' + ab.name, 'the band says “' + got + '”, its boxes “' + exp + '”'); else n++; }
   stats.bands = n; }
 // LN a summary has its counted box's numbers
@@ -431,7 +433,9 @@ const sumMisses = (label, sum) => { const out = [], l = String(label), t = Strin
     if(lines.length !== groups.size) fail('LG', a.id + '/' + u.id + ' ' + kind, lines.length + ' lines for ' + groups.size + ' conditions and sources');
     // (the rule that makes a unit always riled up, named in its "Riled up (…: always riled up)" condition, is no source of the line: Super
     // Runts, whose own box is a not-counted line of its own where the two-reader rule does not confirm it)
-    for(const l0 of lines){ const l = l0.replace(/\(([^()]*): always riled up\)/g, '(always riled up)'), froms = [...new Set(ms.map(m => m.from))].filter(f => l.includes(f) && !ms.some(x => x.from !== f && x.from.includes(f) && l.includes(x.from)));
+    // (a summary's own words may name another rule, Blood Tithe's "Blessings of Khorne": the source a line names is its "(name)", the summary aside)
+    const sums = [...new Set(ms.filter(m => A.sumMode(m)).map(m => m.short))].sort((x, y) => y.length - x.length);
+    for(const l1 of lines){ const l0 = sums.reduce((t, x) => t.split(x).join(' '), l1), l = l0.replace(/\(([^()]*): always riled up\)/g, '(always riled up)'), froms = [...new Set(ms.map(m => m.from))].filter(f => l.includes(f) && !ms.some(x => x.from !== f && x.from.includes(f) && l.includes(x.from)));
       if(froms.length !== 1 && !(froms.length > 1 && froms.every(f => l.includes(f)) && ms.filter(m => froms.includes(m.from)).some(m => froms.some(f => f !== m.from && m.when.includes(f))))) fail('LG', a.id + '/' + u.id + ' ' + kind, 'a line names ' + froms.length + ' sources: “' + l.slice(0, 90) + '”'); else n++; } }
   stats.grouped = n; }
 
