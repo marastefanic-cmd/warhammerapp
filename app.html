@@ -4685,11 +4685,9 @@ function useSentence(set, kind, u, who){
     const w = guns === 2 ? 'one or both' : 'one or more of these';
     return v('Can shoot with ' + w, 'can shoot with ' + w) + (cq.length && rest.length ? ' (' + cqLink + ' does not limit ' + big + ' models)' : '') + '.';
   }
-  const ea = set.filter(isEA), other = set.filter(it => !isEA(it));
-  const extra = ea.length ? ', <b>plus</b> ' + andList(nm(ea)) + ' on top (extra attacks)' : '';
-  if(other.length > 1) return v('Pick one to fight with:', 'picks one to fight with:') + ' ' + orList(nm(other)) + extra + '.';
-  if(other.length === 1){ const w = ea.length === 1 ? 'both' : 'all of these'; return v('Fights with ' + w + ':', 'fights with ' + w + ':') + ' ' + nm(other)[0] + extra + '.'; }
-  return v('Fights with all of these', 'fights with all of these') + ' (extra attacks).';
+  // (melee: an [EXTRA ATTACKS] weapon is no choice, its keyword on its row says it is used too (24.11): only the pick is said)
+  const other = set.filter(it => !isEA(it));
+  return other.length > 1 ? v('Pick one to fight with:', 'picks one to fight with:') + ' ' + orList(nm(other)) + '.' : '';
 }
 // the line under a weapons heading that says which of them a model uses
 function useLine(items, kind, u, who){
@@ -4704,7 +4702,8 @@ function useLine(items, kind, u, who){
   const lines = mine.map(i => ({ i, who:nameOf(i), set:items.flatMap(it => Array(u.gear[i].filter(x => x === itemName(it)).length).fill(it)) })).filter(l => l.set.length);
   const everyLine = lines.length === mine.length;   // "every model" / "per model" only when every models line has some
   const none = everyLine ? '' : '<p class="use"><b class="m">' + andList(mine.filter(i => !lines.some(l => l.i === i)).map(i => esc(nameOf(i)))) + ':</b> none of these.</p>';
-  const multi = lines.filter(l => l.set.length > 1);
+  // (melee: its [EXTRA ATTACKS] weapons are no choice, their keyword says they are used too: a line with one other weapon has none)
+  const multi = lines.filter(l => (kind === 'melee' ? l.set.filter(it => !isEA(it)) : l.set).length > 1);
   // a weapon only one model has, in a squad of mixed loadouts: name that model (the champion's pistol)
   if(lines.length > 1) for(const it of items){ const ls = lines.filter(l => l.set.includes(it)); if(!it.n && !it.carrier && ls.length === 1 && /^1× /.test(u.models[ls[0].i]) && ls[0].set.filter(x => x === it).length === 1) it.carrier = short(ls[0].i); }
   if(!multi.length){
@@ -4712,7 +4711,7 @@ function useLine(items, kind, u, who){
     for(const it of items){ const ls = lines.filter(l => l.set.includes(it)); if(!it.n && ls.length === 1) it.carrier = short(ls[0].i); }   // name the one models line that has it
     return '<p class="use"><b class="m">' + (everyLine ? 'One of these per model' : 'At most one of these per model') + '</b> · ×N = how many the unit has.</p>' + none;
   }
-  const key = l => l.set.map(itemName).join('|');
+  const key = l => (kind === 'melee' ? l.set.filter(it => !isEA(it)) : l.set).map(itemName).join('|');
   if(everyLine && multi.length === lines.length && multi.every(l => key(l) === key(multi[0]))) return '<p class="use">' + useSentence(multi[0].set, kind, u) + '</p>';
   const others = multi.length < lines.length;
   if(kind === 'ranged' && !others && everyLine && multi.every(l => /data-rule="Select Weapons">Can shoot with one or (both|more of these)/.test(useSentence(l.set, kind, u))))
@@ -4723,7 +4722,8 @@ function useLine(items, kind, u, who){
 }
 // weapon rows are in GW's datasheet order (data.js, verify/gw-order.js); which of them a model uses together is said in words
 // (useLine) when a model has a choice: ranged, a model (not MONSTER/VEHICLE) with [CLOSE-QUARTERS] weapons and other ones uses those
-// or the others (Close-quarters); melee, a model with two or more melee weapons picks one, an [EXTRA ATTACKS] weapon on top
+// or the others (Close-quarters); melee, a model with two or more melee weapons other than [EXTRA ATTACKS] ones picks one (an [EXTRA ATTACKS]
+// weapon is no choice: its keyword on its row says so)
 function weaponChoice(items, kind, u, who){
   if(!u.gear) return false;
   const own = i => who == null || whoOfLine(u, i) === who;
@@ -4731,7 +4731,7 @@ function weaponChoice(items, kind, u, who){
   const short = i => u.models[i].replace(/^\d+× /, '').replace(/ w\/.*$/, '');
   // a weapon only one models line of one model has, in a squad of mixed loadouts: that model's name on its row (the weapon tells which one)
   const mine = u.gear.map((g, i) => i).filter(own), has = mine.map(i => ({ i, has:items.filter(it => u.gear[i].includes(itemName(it))) })).filter(l => l.has.length);
-  const choice = kind === 'ranged' ? !(hasKw(u, 'Monster') || hasKw(u, 'Vehicle')) && lines.some(l => l.some(isCQ) && l.some(it => !isCQ(it))) : lines.some(l => l.length > 1);
+  const choice = kind === 'ranged' ? !(hasKw(u, 'Monster') || hasKw(u, 'Vehicle')) && lines.some(l => l.some(isCQ) && l.some(it => !isCQ(it))) : lines.some(l => l.filter(it => !isEA(it)).length > 1);
   // (with a choice, the sentence names the models: useLine)
   if(!choice && has.length > 1) for(const it of items){ const ls = has.filter(l => l.has.includes(it)); if(!it.n && !it.carrier && ls.length === 1 && /^1× /.test(u.models[ls[0].i])) it.carrier = short(ls[0].i); }
   return choice;
