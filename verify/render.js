@@ -314,7 +314,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       for(const u of A.units){
         for(const k of [...openStrats]) if(k.startsWith('tg|')) openStrats.delete(k);
         go({ s:'unit', army:armyId, unit:u.id }); navAt = -1e9;   // (a tap just after a screen is drawn is let through)
-        const items = defenceItems(u);
+        const items = defenceItems(u).filter(x => !x.dup);   // (a source drawn as its summary: once)
         const fold = () => document.querySelector('#view details.tgt');
         if(!items.length){ if(fold()) out.push(['targeted-fold', u.id, 'a When targeted fold with nothing in it']); continue; }
         let d = fold();
@@ -370,8 +370,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           const k = m => [m.from, m.when, m.note].join('|');
           const mr = unitMods(u, 'ranged'), mm = new Set(unitMods(u, 'melee').map(k));
           const all = (document.querySelector('.mods.all') || {}).innerText || '';
-          // (a not-counted line says its source's name, or its short summary, not its note: ncHtml)
-          for(const m of mr) if(mm.has(k(m)) && !(m.weapon && m.set) && !u.abilities.some(ab => ab.damaged && ab.name === m.from) && !all.includes(m.ncLine ? m.short || m.from : m.note.slice(0, 40)))
+          // (a line drawn as its source's summary says the summary (a blanket rule its name); a not-counted line its name or summary: ncHtml)
+          const said = m => sumMode(m) ? (m.rule && (menuRule(m.key) || m.ncLine) ? m.from : m.short) : m.ncLine ? m.short || m.from : m.note.slice(0, 40);
+          for(const m of mr) if(mm.has(k(m)) && !(m.weapon && m.set) && !u.abilities.some(ab => ab.damaged && ab.name === m.from) && !all.includes(said(m)))
             out.push(['all-attacks-block', u.id, m.from + ': ' + m.note]);
         }
         // the army facts the datasheet shows where they matter:
@@ -381,7 +382,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         // - every keyword once, a keyword only some models have under those models (kwOnly)
         const lines = [...document.querySelectorAll('#view .tgl, #view .mod')].map(x => x.innerText.replace(/\s+/g, ' '));   // (When targeted: a line each)
         if(u.abilities.some(ab => ((D.boxes || {})[DM_KEY.a(ab)] || {}).riled && !ab.na)) for(const l of lines) if(/(^|· |TARGETED ?)Riled up(?! \()/i.test(l)) out.push(['always-riled', u.id, 'a riled-up line without “always riled up”: ' + l.slice(0, 80)]);
-        if(u.rules.includes('Waaagh!') && (u.ranged || []).some(w => !w.kw.some(x => /^assault$/i.test(x))) && !lines.some(l => l.includes('[ASSAULT] (Waaagh!)')))
+        if(u.rules.includes('Waaagh!') && (u.ranged || []).some(w => !w.kw.some(x => /^assault$/i.test(x))) && !lines.some(l => l.includes('[ASSAULT] (Waaagh!)') || (l.includes('[ASSAULT]') && l.includes('(Waaagh!)'))))
           out.push(['riled-assault', u.id, 'no “Riled up: [ASSAULT] (Waaagh!)” footnote']);
         const when = (document.querySelector('#view .def.tgt') || {}).innerText || '';
         // (another unit's defence box that reaches it: under When targeted with that unit's name, verify/defence.js DL; drawn)
@@ -392,15 +393,15 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         //   line has an AI label
         searchIndex();
         const shortOf = el => !el ? undefined : el.dataset.ability ? (e => e ? e.ab.short || (enhRowOf(e.ab.name) || {}).short : undefined)(abilityIndex.get(el.dataset.ability))
-          : el.dataset.strat ? (allStratagems().find(s => s.id === el.dataset.strat) || {}).short : undefined;
-        for(const lab of document.querySelectorAll('#view .ai')){ const line = lab.closest('.mod, .tgl');
+          : el.dataset.strat ? (s => s.short || s.gist)(allStratagems().find(s => s.id === el.dataset.strat) || {}) : undefined;
+        for(const lab of document.querySelectorAll('#view .ai')){ const line = lab.closest('.mod, .tgl, .varc, .dsl');
           if(!line){ if(!lab.closest('.cpw')) out.push(['ai-summary', u.id, 'an AI label outside a line: ' + (lab.parentElement || {}).textContent]); continue; }
           const el = lab.previousElementSibling, nm = [...line.querySelectorAll('.from [data-ability], .from [data-strat]')].pop(), key = x => x && (x.dataset.ability || x.dataset.strat);
           const want = shortOf(el);
           if(!want || el.textContent !== want) out.push(['ai-summary', u.id, 'an AI-labelled summary that is not its source’s short column: ' + line.textContent.slice(0, 80)]);
           if(!nm || key(nm) !== key(el)) out.push(['ai-summary', u.id, 'a summary not followed by the name of the rule it opens: ' + line.textContent.slice(0, 80)]); }
-        for(const x of defenceItems(u)) if(x.ncLine && x.short && !when.includes(x.short)) out.push(['ai-summary', u.id, x.name + ': its short summary is not under When targeted']);
-        for(const kind of ['ranged', 'melee']) for(const m of unitMods(u, kind)) if(m.ncLine && m.short && ![...document.querySelectorAll('#view .mod')].some(l => l.textContent.includes(m.short) && l.querySelector('.ai'))) out.push(['ai-summary', u.id, m.from + ': its short summary is not under its weapons with the AI label']);
+        for(const x of defenceItems(u)) if((x.sum || (x.ncLine && !x.blanket)) && x.short && !when.includes(x.short)) out.push(['ai-summary', u.id, x.name + ': its short summary is not under When targeted']);
+        for(const kind of ['ranged', 'melee']) if(((kind === 'ranged' ? u.ranged : u.melee) || []).length) for(const m of unitMods(u, kind)) if(sumMode(m) && m.short && !(m.rule && (menuRule(m.key) || m.ncLine)) && !m.damaged && ![...document.querySelectorAll('#view .mod, #view .varc')].some(l => l.textContent.includes(m.short) && l.querySelector('.ai'))) out.push(['ai-summary', u.id, m.from + ': its short summary is not under its weapons with the AI label']);
         const pills = [...document.querySelectorAll('#sec-kw .pill')].map(x => x.textContent.replace(/\*$/, '').toLowerCase());
         if(pills.length !== u.kw.length || u.kw.some(x => !pills.includes(x.toLowerCase()))) out.push(['keywords-shown', u.id, pills.length + ' keyword pills for ' + u.kw.length + ' keywords']);
       }

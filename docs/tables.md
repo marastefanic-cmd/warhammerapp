@@ -1,8 +1,8 @@
 # data.js as tables
 
 Every unit, stratagem and rule is a row of a table in `data.js`; the app is a template over them. The AI
-part is transcribing the sources, plus the AI-written summaries (`gist`, the stratagems' one-line summaries, and `short`, the short summary
-a unit's screen shows of a rule it does not count: labelled "AI", the rules as written a tap away, carrying a fingerprint of the text it was
+part is transcribing the sources, plus the AI-written summaries (`gist`, the stratagems' one-line summaries, and `short`, the summary a unit's
+screen shows of each rule with a line there: labelled "AI", the rules as written a tap away, carrying a fingerprint of the text it was
 written from; the owner keeps them). No reading is left: the
 footnotes under a unit's weapons, its "When targeted" lines and the lines under its profile are `BOXES`, made by script from GW's
 words, and every other line a unit or stratagem screen writes is GW's words quoted or a fixed template over derived fields (The
@@ -260,13 +260,17 @@ no list has is the catalogue's, `aiStatus:'not-read'` (no readings or AI-written
 
 ## AI-written columns
 
-`gist` (stratagems) and `short` (an ability's, an enhancement's, a stratagem's) are AI-written, the AI layers the owner keeps (`def`, the
-"When targeted" line, is retired: BOXES d). `short` is what a unit's screen shows for a source whose words it does not count (BOXES nc / dnc,
-or a box the two-reader rule does not confirm, AGREE 0): terse, every number from the text, nothing it does not say, labelled AI and followed
-by the source's name, which opens its rules as written; another unit's line is "Granted by: <unit> - <short> (<name>)", the unit's name
-opening its datasheet. An army or detachment rule, or a core rule, not counted there is its name alone. The Damage tab keeps its own "Not
-counted" list. Its fingerprint is `shortOf`, as `gistOf` below; `verify/render.js` (ai-summary) holds every AI-labelled summary on a unit's
-screen to its source's `short`, word for word. Next to it is its fingerprint, `gistOf`: the first 8 hex of the sha256 of the exact text it
+`gist` (stratagems) and `short` (an ability's, an enhancement's, an army or detachment rule's, a stratagem's) are AI-written, the AI
+layers the owner keeps (`def`, the "When targeted" line, is retired: BOXES d). `short` is what a unit's screen shows for each source with a
+line there, under its weapons, When targeted and under its profile (the owner's decision, 4 Nov 2026): one sentence with the rule's
+conditions and numbers in its own terms, every number from the text, nothing it does not say, labelled AI and followed by the source's
+name, which opens its rules as written (a stratagem without one: its gist). The program writes the rest: which units get a line and where
+(BOXES, their reach, GRANTS, as before), one line per source, another unit's "Granted by: <unit> - <short> (<name>)", the unit's name
+opening its datasheet. An army or detachment rule that is a menu (every box an option: Blessings of Khorne, Martial Ka'tah) or whose words a
+line does not count (Synapse) is its name alone; a core rule keeps its counted line; a weapon row's "+" marks and "(+6)" values stay. The
+Damage tab keeps its own counting and its "Not counted" list. Its fingerprint is `shortOf`, as `gistOf` below; `verify/render.js`
+(ai-summary) holds every AI-labelled summary on a unit's screen to its source's column, word for word, and `verify/lines.js` LN holds a
+summary of a counted box to that box's numbers. Next to it is its fingerprint, `gistOf`: the first 8 hex of the sha256 of the exact text it
 was written from (a stratagem's `WHEN: … TARGET: … EFFECT: … RESTRICTIONS: …`, a rule's text and table, an ability's
 text). The gate step `fingerprints` fails when that text no longer matches: the summary is stale. Rewrite it from the
 new text, then `node verify/tables.js --restamp`. A new one without a fingerprint fails too: check it against its

@@ -39,6 +39,10 @@
      LF  fixed cases: the wound-roll ignore-modifiers readings, the enemy-unit mark of a characteristic not counted, and whom one is for
          (its reach, an opening keyword, leading), an option's own list (its option and its rule's "While … it can use one of …"), and
          a stratagem's reach to the friendly models its words name as attackers
+     LN  a summary never contradicts a counted number: a unit's line drawn as its source's summary (the AI-written short column, or a
+         stratagem's gist: app.html srcShort) for a box that is counted (a footnote, a When targeted line, a line under the profile) has
+         every number of that box's effects' labels (all of a pick's options), each "+1 AP" pair's characteristic (or its name: Move,
+         Damage, Toughness, Leadership, Wounds), every [WEAPON ABILITY], and "hit" / "wound" where the label is about that roll
      LW  never silent: every sentence of a source the lists use with words of the numbers (hit, wound, AP, damage, save, Feel No Pain, OC,
          Move, a weapon ability) is a counted box or listed not counted in BOXES (verify/coverage.js silent)
 
@@ -51,7 +55,7 @@ const X = require('./effects-extract');
 const T = require('./tables');
 const M = require('./effects-migrate');
 
-const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'alreadyIn', 'alreadyInRule', 'allStratagems', 'canTarget', 'hasRule', 'unitDetRules']);
+const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'statShown', 'defenceItems', 'sumMode', 'alreadyIn', 'alreadyInRule', 'allStratagems', 'canTarget', 'hasRule', 'unitDetRules', 'ruleRowOf']);
 const D = dm.D, A = dm.app, fails = [], stats = {};
 // the boxes as the screens count them (the two-reader rule: data.js AGREE, effects.js agreed): the footnotes, the lines under a profile and
 // the Damaged bands are these; the boxes' own checks (their schema, their words) are of data.js BOXES itself
@@ -394,12 +398,36 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
     const exp = [E.fxLabel((o.b || []).flatMap(b => b.fx || [])), (o.nc || []).length || !(o.b || []).length ? 'see the rule' : ''].filter(Boolean).join('; ');
     const got = A.inArmy(a, () => A.dmgBand(ab)); if(got !== exp) fail('LB', a.id + '/' + u.id + ' · ' + ab.name, 'the band says “' + got + '”, its boxes “' + exp + '”'); else n++; }
   stats.bands = n; }
-// LG the lines as drawn (modLines): one line for each condition and source, its source's name in it, no two sources on one line
+// LN a summary has its counted box's numbers
+const STAT_NAME = { M:'Move', D:'Damage', T:'Toughness', Ld:'Leadership', W:'Wounds', A:'Attacks', S:'Strength', OC:'Objective Control', BS:'Ballistic Skill', WS:'Weapon Skill', AP:'Armour Penetration' };
+const sumMisses = (label, sum) => { const out = [], l = String(label), t = String(sum), lc = t.toLowerCase();
+  for(const m of l.matchAll(/(?<![\w-])(D?\d+(?:[-–]\d+)?\+?)/g)){ const n = m[1].replace('–', '-'); if(!new RegExp('(?<![\\d])' + n.replace(/[+]/g, '\\+') + (/\+$/.test(n) ? '' : '(?![\\d])')).test(t.replace('–', '-'))) out.push(n); }
+  for(const m of l.matchAll(/\d+"? ?(A|S|AP|D|BS|WS|OC|M|T|W|Ld)\b/g)){ const k = m[1]; if(!new RegExp('(?<![\\w-])' + k + '(?![\\w])').test(t) && !lc.includes(STAT_NAME[k].toLowerCase())) out.push(k); }
+  for(const m of l.matchAll(/\[([^\]:]+)/g)) if(!lc.includes('[' + m[1].toLowerCase())) out.push('[' + m[1] + ']');
+  if(/\bhit\b/i.test(l) && !/\bhit/i.test(t)) out.push('hit'); if(/\bwound roll/i.test(l) && !/\bwound/i.test(t)) out.push('wound');
+  return out; };
+{ let n = 0;
+  const boxLabels = (b, f) => b.pick ? b.pick.map(p => f(p[b.df ? 'df' : 'fx'] || p.fx || p.df || [])) : [f(b.fx || b.df || [])];
+  for(const a of D.armies) for(const u of a.units) A.inArmy(a, () => {
+    const where = a.id + '/' + u.id;
+    for(const kind of ['ranged', 'melee']) for(const m of A.unitMods(u, kind)){ if(m.ncLine || !m.box || !A.sumMode(m) || !m.short) continue; n++;
+      for(const l of (m.box.pick ? m.box.pick.map(p => E.fxLabel(p.fx || [])) : [E.fxLabel(m.box.fx || [])]).concat(m.box.part && m.box.part.fx ? [E.fxLabel(m.box.part.fx)] : []))
+        for(const x of sumMisses(l, m.short)) fail('LN', where + ' ' + kind, m.from + ': its summary “' + m.short + '” lacks “' + x + '” of its counted “' + l + '”'); }
+    for(const x of A.defenceItems(u)){ if(x.ncLine || !x.box || !x.sum) continue; n++;
+      for(const l of x.box.pick ? x.box.pick.map(p => E.dfLabel(p.df || [])) : [E.dfLabel(x.box.df || [])])
+        for(const y of sumMisses(l, x.short)) fail('LN', where + ' When targeted', x.name + ': its summary “' + x.short + '” lacks “' + y + '” of its counted “' + l + '”'); }
+    for(const x of A.statShown(u)){ if(!x.short) continue; const r = A.ruleRowOf(x.rule); if(!r) continue;
+      for(const b of (BX[M.KEY.rule(r)] || {}).st || []) for(const [id, p] of b.st || []){ const f = E.ST[id]; if(!f) continue; n++;
+        for(const y of sumMisses(f.label(p), x.short)) fail('LN', where + ' profile', x.rule + ': its summary “' + x.short + '” lacks “' + y + '” of its counted “' + f.label(p) + '”'); } }
+  });
+  stats.summaries = n; }
+// LG the lines as drawn (modLines): one line for each condition and source (a source drawn as its summary: one line), its source's name in it, no two sources on one line
 { let n = 0;
   for(const a of D.armies) for(const u of a.units) for(const kind of ['ranged', 'melee']){ if(!((kind === 'ranged' ? u.ranged : u.melee) || []).length) continue;
     const ms = A.inArmy(a, () => A.unitMods(u, kind)).filter(m => !A.rowMod(m, u) && !m.strat), html = A.inArmy(a, () => A.modLines(ms, u, false));
     const lines = html.split('<div class="mod">').slice(1).map(l => l.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"'));
-    const groups = new Set(ms.map(m => m.when ? m.when + '\0' + m.from : Math.random()));
+    // (a source drawn as its summary is one line, whatever its conditions: app.html lineKey)
+    const groups = new Set(ms.map(m => A.sumMode(m) ? 'K\0' + m.key + '\0' + (m.giver || '') : m.when ? m.when + '\0' + m.from : Math.random()));
     if(lines.length !== groups.size) fail('LG', a.id + '/' + u.id + ' ' + kind, lines.length + ' lines for ' + groups.size + ' conditions and sources');
     // (the rule that makes a unit always riled up, named in its "Riled up (…: always riled up)" condition, is no source of the line: Super
     // Runts, whose own box is a not-counted line of its own where the two-reader rule does not confirm it)
@@ -409,6 +437,6 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/lines.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips, ' + stats.cpNotes + ' extra-CP chips and ' + stats.na + ' "does nothing here" chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each; ' + stats.silentSources + ' sources the lists use, every sentence of the numbers counted or listed not counted; ' + stats.fixed + ' fixed cases');
+console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips, ' + stats.cpNotes + ' extra-CP chips and ' + stats.na + ' "does nothing here" chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each; ' + stats.silentSources + ' sources the lists use, every sentence of the numbers counted or listed not counted; ' + stats.fixed + ' fixed cases; ' + stats.summaries + ' counted boxes drawn as a summary, each summary with their numbers (LN)');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);
