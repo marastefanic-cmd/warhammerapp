@@ -1278,6 +1278,10 @@ function screenReads(html, opts){
 }
 // the page's own scripts (this folder's, not data.js and verified.js, which are data): their names, as the page loads them; one named but
 // not found, or a tag whose src is no plain name, is pushed to missed (its tag or call, said)
+// the vendor/ files sw.js's CORE lists (the bundled third-party SDK): the only files of this folder the scan does not read
+let VENDOR_SET = null;
+const VENDOR = () => VENDOR_SET || (VENDOR_SET = (() => { const t = fs.readFileSync(path.join(ROOT, 'sw.js'), 'utf8'), core = /\bconst\s+CORE\s*=\s*\[([^\]]*)\]/.exec(t);
+  return new Set(core ? [...core[1].matchAll(/['"](?:\.\/)?(vendor\/[^'"]+)['"]/g)].map(m => m[1]) : []); })());
 function pageScripts(html, files, missed){
   const out = [], seen = new Set(), has = f => (files && files[f] != null) || fs.existsSync(path.join(ROOT, f));
   const local = (raw, how) => {
@@ -1285,7 +1289,7 @@ function pageScripts(html, files, missed){
     const f = path.posix.normalize(raw.replace(/[?#].*$/, '').replace(/^\.\//, ''));
     if(!f || f.startsWith('..') || f.startsWith('/')){ missed.push(how + ' (not a file of this folder)'); return; }
     if(['data.js', 'verified.js'].includes(f) || seen.has(f)) return;
-    if(/^vendor\//.test(f)) return;   // (a third-party library, vendor/: no code of the app's, not read)
+    if(VENDOR().has(f)) return;   // (a third-party library sw.js's CORE lists under vendor/, the bundled SDK: no code of the app's, not read; any other vendor/ file is read)
     seen.add(f);
     if(!has(f)){ missed.push(how + ' (' + f + ' not found)'); return; }
     out.push(f); };
@@ -1293,14 +1297,25 @@ function pageScripts(html, files, missed){
       if(m[2] != null){ if(/\.m?js(?:[?#]|$)/.test(m[2])) local(m[2], where + ' import(' + m[1] + m[2] + m[1] + ')'); }
       else missed.push(where + ' import(' + String(m[3]).slice(0, 40) + ') (its name is no string literal)'); } };
   // (a module's static import / export … from, and import './x.js': in an inline <script type="module"> and in a module the page loads;
-  // and a script element made in code, document.createElement('script'): its src a string literal set on it in the same script (.src =, setAttribute, src: in an object), read,
-  // or missed)
+  // and a script element made in code, document.createElement('script'), its src tied to that element: X = document.createElement('script')
+  // then X.src = '<literal>' / X.setAttribute('src', '<literal>') (every src X is given, each a literal, read), or
+  // Object.assign(document.createElement('script'), { src:'<literal>' }) as that call's own argument; anything else is missed: no src set
+  // on X, a src on X that is no literal, a script element made any other way (a src set on another element is not its src))
+  const LIT = String.raw`(['"\`])([^'"\`$\\\n]*)\1(?=\s*(?:[;,)}\n]|$))`;
   const stat = (code, where) => { const c = code.replace(/\/\*[\s\S]*?\*\/|(^|[^:'"\\])\/\/[^\n]*/g, '$1');
     for(const m of c.matchAll(/(?:^|[;\n{}])\s*(?:import|export)\s+(?:[\w$*{}\s,]+?\s+from\s+)?(['"])([^'"]+)\1/g)) local(m[2], where + ' import ' + m[1] + m[2] + m[1]);
-    for(const m of c.matchAll(/\bcreateElement\(\s*(['"`])script\1\s*\)/gi)){
-      const after = c.slice(m.index), sm = /\.src\s*=\s*(['"])([^'"$]+)\1|\bsetAttribute\(\s*['"]src['"]\s*,\s*(['"])([^'"$]+)\3|\bsrc\s*:\s*(['"])([^'"$]+)\5/.exec(after.slice(0, 600));
-      if(sm) local(sm[2] || sm[4] || sm[6], where + ' createElement(\'script\') src ' + (sm[2] || sm[4] || sm[6]));
-      else missed.push(where + ' createElement(\'script\') (its src is no string literal set on it)'); } };
+    const CE = String.raw`document\s*\.\s*createElement\(\s*(?:'script'|"script"|\`script\`)\s*\)`, how = where + ' createElement(\'script\')', done = new Set();
+    for(const m of c.matchAll(new RegExp(String.raw`\bObject\.assign\(\s*` + CE + String.raw`\s*,\s*\{([^{}]*)\}\s*\)`, 'g'))){
+      done.add(m.index + m[0].indexOf('document'));
+      const sm = new RegExp(String.raw`(?:^|,)\s*(?:src|'src'|"src")\s*:\s*` + LIT).exec(m[1]);
+      if(sm) local(sm[2], how + ' src ' + sm[2]); else missed.push(how + ' in Object.assign (its src is no string literal of that call\'s own argument)'); }
+    for(const m of c.matchAll(new RegExp(String.raw`(?:\b(?:const|let|var)\s+)?([A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*)*)\s*=\s*` + CE, 'g'))){
+      done.add(m.index + m[0].indexOf('document'));
+      const X = m[1].replace(/[.$]/g, '\\$&'), sets = [...c.matchAll(new RegExp(String.raw`(?<![\w$.])` + X + String.raw`\s*(?:\.\s*src\s*=(?!=)|\[\s*['"]src['"]\s*\]\s*=(?!=)|\.\s*setAttribute\(\s*['"]src['"]\s*,)`, 'g'))];
+      if(!sets.length){ missed.push(how + ' ' + m[1] + ' (no src set on it)'); continue; }
+      for(const x of sets){ const v = new RegExp('^\\s*' + LIT).exec(c.slice(x.index + x[0].length)), ok = v && (/setAttribute/.test(x[0]) ? /^\s*\)/.test(c.slice(x.index + x[0].length + v[0].length)) : true);
+        if(ok) local(v[2], how + ' ' + m[1] + '.src ' + v[2]); else missed.push(how + ' ' + m[1] + ' (a src set on it is no string literal)'); } }
+    for(const m of c.matchAll(/\b(?:document\s*\.\s*)?createElement\(\s*(['"`])script\1\s*\)/gi)) if(!done.has(m.index)) missed.push(how + ' (made where its src cannot be tied to it)'); };
   for(const m of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) if(!/\bsrc\s*=/i.test(m[1])) stat(m[2], 'app.html inline script');
   for(const m of html.matchAll(/<script\b([^>]*)>/gi)){
     const at = m[1]; if(!/\bsrc\s*=/i.test(at)) continue;
@@ -1323,10 +1338,29 @@ const PAGE_FIXTURES = [
   ["<script>\nconst s = document.createElement('script'); s.src = 'builder.js'; document.head.appendChild(s);\n</script>", 'builder.js', 0],
   ["<script>\nconst s = document.createElement('script'); s.src = NAME; document.head.appendChild(s);\n</script>", '', 1],
   ["<script>\ndocument.head.appendChild(Object.assign(document.createElement('script'), { src:'builder.js' }));\n</script>", 'builder.js', 0],
-  ['<script type="module">\nimport { x } from "./vendor/lib.mjs";\n</script>', '', 0]];
+  ["<script>\nconst s = document.createElement('script'); s.setAttribute('src', 'builder.js'); document.head.appendChild(s);\n</script>", 'builder.js', 0],
+  // (a src set on another element is not the script's: the icon's, then the script's own made in code)
+  ["<script>\nconst cs = document.createElement('script'); const ic = new Image(); ic.src = 'icon-192.png'; cs.src = ['calc', 'js'].join('.'); document.head.appendChild(cs);\n</script>", '', 1],
+  ["<script>\nconst s = document.createElement('script'); other.src = 'builder.js'; s.src = NAME; document.head.appendChild(s);\n</script>", '', 1],
+  ["<script>\nconst s = document.createElement('script'); s.src = 'builder' + '.js'; document.head.appendChild(s);\n</script>", '', 1],
+  ["<script>\nconst s = document.createElement('script'); s.src = 'builder.js' + Q; document.head.appendChild(s);\n</script>", '', 1],
+  ["<script>\nconst s = document.createElement('script'); s.setAttribute('src', 'builder.js', Q); document.head.appendChild(s);\n</script>", '', 1],
+  ["<script>\nconst s = document.createElement('script'); s.src = 'builder.js'; cs.src = 'calc.js'; document.head.appendChild(s);\n</script>", 'builder.js', 0],
+  ["<script>\ndocument.head.appendChild(Object.assign(document.createElement('script'), opts, { src:'builder.js' }));\n</script>", '', 1],
+  ["<script>\nconst o = { src:'builder.js' }; document.head.appendChild(Object.assign(document.createElement('script'), o));\n</script>", '', 1],
+  ["<script>\ndocument.head.appendChild(document.createElement('script')).src = 'builder.js';\n</script>", '', 1],
+  ["<script>\nconst s = document.createElement('script'); document.head.appendChild(s);\n</script>", '', 1],
+  ["<script>\ndocument.head.appendChild(Object.assign(document.createElement('script'), { async:true }));\n</script>", '', 1],
+  ["<script>\ndocument.head.appendChild(Object.assign(document.createElement('script'), { src:NAME }));\n</script>", '', 1],
+  // (vendor/: only the files sw.js's CORE lists are not read)
+  ['<script type="module">\nimport { Anthropic } from "./vendor/anthropic-sdk-0.131.0.mjs";\n</script>', '', 0],
+  ['<script type="module">\nimport { x } from "./vendor/lib.mjs";\n</script>', '', 1],
+  // (a module the page loads, read in its turn: its static import, its script elements)
+  ['<script type="module" src="m.js"></script>', 'm.js,builder.js', 0, { 'm.js':"import './builder.js';", 'builder.js':'' }],
+  ['<script type="module" src="m.js"></script>', 'm.js', 1, { 'm.js':"const s = document.createElement('script'); s.src = NAME; document.head.appendChild(s);" }]];
 function pageFixtures(){
   const out = [];
-  for(const [html, want, nMissed] of PAGE_FIXTURES){ const missed = [], got = pageScripts(html, null, missed).join(',');
+  for(const [html, want, nMissed, files] of PAGE_FIXTURES){ const missed = [], got = pageScripts(html, files || null, missed).join(',');
     if(got !== want || missed.length !== nMissed) out.push('page-script fixture ' + html.replace(/\n/g, ' ').slice(0, 80) + ': reads ' + (got || 'none') + ', ' + missed.length + ' missed (want ' + (want || 'none') + ', ' + nMissed + ')'); }
   return out;
 }
