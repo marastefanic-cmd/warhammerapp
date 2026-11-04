@@ -2432,12 +2432,12 @@
  },
  {
   "army": "basic-bitch",
-  "unit": "haruspex",
+  "unit": "maleceptor",
   "field": "stats.base",
-  "app": "Haruspex: 120×92mm Oval",
-  "source": "Haruspex: 120x92mm",
-  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Haruspex: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3817: \"Haruspex  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: 120×92mm.",
+  "app": "Maleceptor: 120×92mm Oval",
+  "source": "Maleceptor: 120x92mm",
+  "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Maleceptor: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3824: \"Maleceptor  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: 120×92mm.",
   "by": "verify/from-json.js"
  },
  {

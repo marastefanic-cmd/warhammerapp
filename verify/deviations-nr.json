@@ -2148,12 +2148,12 @@
  },
  {
   "army": "basic-bitch",
-  "unit": "haruspex",
-  "field": "stats[Haruspex].base",
+  "unit": "maleceptor",
+  "field": "stats[Maleceptor].base",
   "app": "120×92mm Oval",
   "source": "120x92mm",
   "reason": "New Recruit’s export (catalogue revision 3) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3817: \"Haruspex  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: Base 120x92mm.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3824: \"Maleceptor  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: Base 120x92mm.",
   "by": "verify/from-json.js"
  },
  {
