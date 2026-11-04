@@ -392,14 +392,16 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         //   "(name)" after it opens; every line of a source whose words are not counted that has a short shows it, AI-labelled; no other
         //   line has an AI label
         searchIndex();
-        const shortOf = el => !el ? undefined : el.dataset.ability ? (e => e ? e.ab.short || (enhRowOf(e.ab.name) || {}).short : undefined)(abilityIndex.get(el.dataset.ability))
-          : el.dataset.strat ? (s => s.short || s.gist)(allStratagems().find(s => s.id === el.dataset.strat) || {}) : el.dataset.rule ? (ruleRowOf(el.dataset.rule) || {}).short : undefined;
-        for(const lab of document.querySelectorAll('#view .ai')){ const line = lab.closest('.mod, .tgl, .varc, .dsl');
+        // (the column of the line's placement: under the weapons sumAtk, When targeted sumDef, under the profile sumSt; a stratagem's gist)
+        const colOf = line => line.closest('.tgl') ? 'sumDef' : line.closest('.dsl') ? 'sumSt' : line.closest('.pgv') ? 'sumOv' : 'sumAtk';
+        const shortOf = (el, c) => !el ? undefined : el.dataset.ability ? (e => e ? e.ab[c] || (enhRowOf(e.ab.name) || {})[c] : undefined)(abilityIndex.get(el.dataset.ability))
+          : el.dataset.strat ? (allStratagems().find(s => s.id === el.dataset.strat) || {}).gist : el.dataset.rule ? (ruleRowOf(el.dataset.rule) || {})[c] : undefined;
+        for(const lab of document.querySelectorAll('#view .ai')){ const line = lab.closest('.mod, .tgl, .varc, .dsl, .pgv');
           if(!line){ if(!lab.closest('.cpw')) out.push(['ai-summary', u.id, 'an AI label outside a line: ' + (lab.parentElement || {}).textContent]); continue; }
           const el = lab.previousElementSibling, key = x => x && (x.dataset.ability || x.dataset.strat || x.dataset.rule);
           // (its source's name: "(<name>)" after it, or a stratagem's "<cp>CP <name>:" before it)
           const nm = [...line.querySelectorAll('[data-ability], [data-strat], [data-rule]')].find(x => x !== el && key(x) === key(el));
-          const want = shortOf(el);
+          const want = shortOf(el, colOf(line));
           if(!want || el.textContent !== want) out.push(['ai-summary', u.id, 'an AI-labelled summary that is not its source’s short column: ' + line.textContent.slice(0, 80)]);
           if(!nm) out.push(['ai-summary', u.id, 'a summary without the name of the rule it opens: ' + line.textContent.slice(0, 80)]); }
         for(const x of defenceItems(u)) if((x.sum || (x.ncLine && !x.blanket)) && x.short && !when.includes(x.short)) out.push(['ai-summary', u.id, x.name + ': its short summary is not under When targeted']);
