@@ -196,6 +196,9 @@ const DCOND = {
   notPsychic:{ label:() => 'Not Psychic Attacks', pats:[/\(excluding psychic attacks\)/] },
   failedSave:{ label:() => 'After a failed saving throw', pats:[/\bwhen a saving throw (?:made )?for [^.]*? is failed\b/, /\bjust after a saving throw is failed\b/] },
   bearerUses:{ label:() => 'If the bearer uses it', pats:[/\bthe bearer can use this enhancement\b/] },
+  // (the attacking unit's state, in a sentence about an enemy unit's attacks: "if that enemy unit is Below Half-strength", Encephalic
+  // Diffusion; the attacker is "that enemy unit" there, not the target. Said in GW's words; the Damage tab does not play the defence side)
+  attackerBelowHalf:{ label:() => 'That enemy unit is Below Half-strength', pats:[/\bif that enemy unit is (?:also )?below half-strength\b/] },
   // (a keyword of the model it is given to: "if it is a VEHICLE model"; the unit's keywords say it, as selfKw)
   itIs:{ label:p => 'It is a ' + KW(p) + ' model', pats:[/\bif it is an? ([a-z][a-z ]*?) model\b/] }
 };

@@ -1,0 +1,98 @@
+[
+ {
+  "key": "877358dd83d8af7d",
+  "where": "basic-bitch · Maleceptor · Encephalic Diffusion",
+  "verdict": "ok",
+  "why": "Wahapedia's Maleceptor page (verify/.cache/waha/ds/tyranids_Maleceptor.html) prints \"Encephalic Diffusion (Aura, Psychic):\", and New Recruit's export names the profile \"Encephalic Diffusion (Aura, Psychic)\". The tag is the same form as the approved Onslaught, Time Flux, Spirit Leech and Feculent Despair rows. The text is GW's word for word."
+ },
+ {
+  "key": "96e272f305246f8f",
+  "where": "deviations-bsdata.json · maleceptor · stats.base",
+  "verdict": "ok",
+  "why": "Event Companion txt line 3824: \"Maleceptor 120x92mm Oval Base\". The export's Maleceptor profile has Base=120x92mm, and Wahapedia's header has \"(⌀120 x 92mm)\". GW wins, as for the Haruspex declaration it replaces."
+ },
+ {
+  "key": "726f89b11d4549bf",
+  "where": "deviations-nr.json · maleceptor · stats[Maleceptor].base",
+  "verdict": "ok",
+  "why": "Same evidence: GW's guide line 3824 says 120×92mm Oval, and New Recruit says 120x92mm."
+ },
+ {
+  "key": "b3d63ff7264a2f00",
+  "where": "points (basic-bitch export, 4 Nov 2026)",
+  "verdict": "ok",
+  "why": "I diffed the old and new exports (verify/sources/nr-json/basic-bitch.json, byte-identical to the upload 1e735030-Basic_Bitch_1.json). Only three things change: Force Disposition Priority Assets → Take and Hold; Haruspex (125) → Maleceptor (180: Massive scything talons, Psychic overload); Von Ryan's Leapers 2 units → 1. Roster cost is 2000. Wahapedia: \"YOUR 1ST TO 2ND UNITS COST 1 model 180 / 3RD+ 190\". The unit points add up to 2000."
+ },
+ {
+  "key": "b424e0c4de0d69d0",
+  "where": "DATASHEETS tyranids/maleceptor (now a list row)",
+  "verdict": "ok",
+  "why": "The row is the catalogue row from main moved over, without aiStatus, with derive.js labels and the damaged marker added. It matches Wahapedia: M8\" T11 Sv3+ W14 Ld7+ OC4 InSv4+; Psychic overload 18\" D6+3 3+ 10 -2 3 [BLAST, PSYCHIC]; Massive scything talons strike 3 3+ 9 -2 D6+1 and sweep 6 3+ 7 -1 2; CORE Deadly Demise D3; ARMY RULES Shadow in the Warp, Synapse; KEYWORDS MONSTER; PSYKER; GREAT DEVOURER; SYNAPSE; MALECEPTOR; Damaged 1-5. All are in GW page order. The Tyranids Faction Pack has no Maleceptor change. The export matches too: same stats, weapons and rules, and its categories are the same keywords. The Their Movement / Your Shooting / Fight label is the same derive.js result as the approved Psychological Saboteur aura of the same shape."
+ },
+ {
+  "key": "f1d38b47c25ae040",
+  "where": "DATASHEETS tyranids/haruspex (back to the catalogue)",
+  "verdict": "ok",
+  "why": "The data.js diff shows the Haruspex row in the catalogue position, with aiStatus:'not-read' and no ph/turn or damaged marker. It is byte-identical to main's Maleceptor treatment, only mirrored. BS_IDS drop the 4 Haruspex ids and add the 3 Maleceptor ids (names 833→832). CHECKLIST drops a|911utx (Grisly Spectacle) and adds a|uj59ei."
+ },
+ {
+  "key": "6481dbaa5e8e3845",
+  "where": "verify/sources/hand/basic-bitch.json (unchanged)",
+  "verdict": "ok",
+  "why": "git diff b9f6810..154c16a shows no change to the hand file. Its six gists are invasion-fleet stratagems. Its six unit entries (the-swarmlord-tyrant-guard, hive-tyrant-tyrant-guard, tyranid-prime-with-lash-whip-hormagaunts, biovores, spore-mines-biovore, tyrannofex) do not name the Haruspex, a second Leapers unit or Priority Assets. reimport passes in my cold gate."
+ },
+ {
+  "key": "a405132418f3b63c",
+  "where": "verify/snapshots/basic-bitch.txt",
+  "verdict": "ok",
+  "why": "My cold gate (fresh clone S/rbb at 154c16a) rendered basic-bitch.txt byte for byte equal to scratchpad/bb-work/basic-bitch.txt. Its diff against the accepted snapshot is the builder's basic-bitch.diff. Every hunk follows from the three changes: disposition and source line; bases 69→66, units 13→12, INFANTRY 5→4, 6×→3× 40mm, ×2/mark-apart lines gone (one Leapers unit); Haruspex→Maleceptor everywhere it is named; melee 18→17 (one grouped weapon in place of two); Precision and Extra Attacks lose the Haruspex; Psychic and Blast gain the Maleceptor; the new Psychic popup; Rules +Shadow in the Warp; keywords; \"[PSYCHIC] weapons can ignore it\" under Damaged (Psychic overload is PSYCHIC, Core Rules Psychic); the Encephalic Diffusion \"not counted here\" line on every unit's When targeted (an aura on enemy attackers, falling back under the two-reader rule)."
+ },
+ {
+  "key": "07be1f71942d51e4",
+  "where": "verify/snapshots/shooty.txt",
+  "verdict": "ok",
+  "why": "Matches my cold run: \"chosen\" moves to Take and Hold (3 places); BOXES 447→448 rows (a|uj59ei is new; the Maleceptor's Damaged has the same key as the Haruspex's); BSDATA names 833→832 (−4 Haruspex ids, +3 Maleceptor ids)."
+ },
+ {
+  "key": "07602cb726badb36",
+  "where": "BOXES a|uj59ei · Maleceptor · Encephalic Diffusion",
+  "verdict": "ok",
+  "why": "The box is GW's reading: −1 Hit under the 6\" aura; −1 Wound under that and the attacker Below Half-strength (\"that enemy unit\" is the attacker in this sentence). The quote is GW's exact wording (Wahapedia and the export, compared). AGREE {\"d\":[0,0]}: reader2 leaves it unparsed (reproduced), so both boxes fall back."
+ },
+ {
+  "key": "12ef7aab694c6e11",
+  "where": "effects.js DCOND attackerBelowHalf",
+  "verdict": "ok",
+  "why": "The label and pattern are right. Removing the DCOND (mutant M2, then effects-migrate --write and agree --write) fails defence DC on a|uj59ei. The reason now says correctly that Visions of Suffering has the same phrase on the attack side (a|1gg1hfo, targetBelowHalf, unchanged) and that DCOND is read on the defence side only. I checked data.js: the pattern matches only Encephalic Diffusion and the 2 Visions of Suffering rows."
+ },
+ {
+  "key": "d01804bf66afdb4d",
+  "where": "verify/effects-extract.js defenceOf · IF_CUT",
+  "verdict": "ok",
+  "why": "Round 1 found that dropping the split (mutant M1) was not caught; see 4bf4e2efa20d9544. Round 2 (92e25ce) catches it. Checked independently: (1) Every other box is byte for byte unchanged: effects-migrate --write with main’s effects code changes only BOXES a|uj59ei. (2) M1 (effects-extract.js of b9f6810, effects-migrate --write, agree --write) now fails defence with 4 DI failures: a|uj59ei in the words and in data.js, the fixed case’s signature, and the fixed case’s box. (3) M3 (a sentence-initial \"If\" also split) reorders the conditions of r|19a2dls and s|12inbnz, and the mucho-mutantes snapshot changes 6 lines. (4) No other Below Half-strength box is mis-read: Executioner, Visions of Suffering, Revel in Desecration, Warp-sighted Butcher, Feeding Frenzy, Glutton for Punishment, Beacons of Rage, Enraged Behemoths, Moritoi Ancients, Machine Spirit Resurgent; Flesh Hunger is not counted."
+ },
+ {
+  "key": "aa65b383a72dde44",
+  "where": "verify/coverage.js gaps · defence endAt",
+  "verdict": "ok",
+  "why": "Correct and needed: with the split in place, the Hit box's endAt stops before \", and, if …\", so DC does not ask the Hit box for attackerBelowHalf. The Wound box is held to it, and mutant M2 (no DCOND) fails DC. The change is limited to side === 'defence'. In my cold gate, defence passes with 139 boxes and 0 failures. The missing check for an over-conditioned box is listed under d01804bf66afdb4d."
+ },
+ {
+  "key": "f711bb7c1758d4c1",
+  "where": "verify/reader2/readings2.json refreshed",
+  "verdict": "ok",
+  "why": "reader2 code is unchanged: git diff b9f6810..154c16a -- verify/reader2 touches only readings2.json, and agree-pins.json is unchanged. The sha256 of README.md, reader2.js, sources.js and test.js equal the pins. I reproduced the file with my own script (scratchpad/rbb-tools/r2repro.js): strip() taken from agree.js, reader2.js run with no arguments under node --permission (read: the temp dir and verify/.cache; write: its reader2 dir) with KODEX_APP/KODEX_CACHE set. On the branch data.js the output is byte-identical to the committed readings2.json. On main's data.js it is identical to main's (a control). The diff is only the Maleceptor/Haruspex swap of position and content. agree R2 --test 97 passed and --check is up to date."
+ },
+ {
+  "key": "5f44f526032932f7",
+  "where": "Damage tab against main (b9f6810)",
+  "verdict": "ok",
+  "why": "I wrote my own dump (scratchpad/rbb-tools/dmg.js, verify/damage-node.js calc for every list unit, shooting and fight, against 6 targets including knight and horde FNP). It gives 2700 results each on main and on 154c16a. 2688 are identical. The 24 that differ are only basic-bitch|haruspex (main only) and basic-bitch|maleceptor (branch only)."
+ },
+ {
+  "key": "4bf4e2efa20d9544",
+  "where": "verify/defence.js DI · \", and, if …\" clause conditions and the Encephalic Diffusion fixed case",
+  "verdict": "ok",
+  "why": "I re-ran my M1 mutant in a fresh clone at 92e25ce. defence fails with 4 DI failures; on the clean branch it passes, with 8 clauses checked. Omnissiah’s Blessing (a|xebbb5, \"regains up to D3 lost wounds and, if it is a VEHICLE model, … Feel No Pain 5+\") gives no false failure: its itIs condition and its fnp are both in the clause. My own DI mutations, each run on clean data and on M1 data. (a) IF_CUT regex made never to match: M1 is still caught by the fixed case’s signature. With the fixed case also removed, M1 passes, so the regex carries the clause check. (b) findDf over the whole quote in place of the clause: the same, caught by the fixed case alone, and M1 passes without it. (c) The before/after-cut test inverted (pr(id, parts[0])): the same. (d) The fixed case removed: still caught by the clause check (2 failures). (e) The \"&& !pr(id, parts[0])\" guard dropped: M1 is still caught (4 failures), and clean data still passes (0 failures). This guard only stops false failures; no sentence in today’s data has the condition before the cut too, so no case exercises it, and dropping it makes DI stricter, not weaker. No mutation raises a false failure on clean data. Cold gate at 92e25ce, in a fresh clone with nothing in verify/out: 27 steps pass; only snapshots (basic-bitch, shooty, byte-identical to scratchpad/bb-work) and helpers (1 item, the ability tag) fail."
+ }
+]

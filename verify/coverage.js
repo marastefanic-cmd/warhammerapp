@@ -98,7 +98,9 @@ function gaps(b, src, side, others, ctx){
   const mine0 = (b.pick ? b.pick.flatMap(p => p.df || p.fx || []) : (b.df || b.fx || [])).map(([id]) => id);
   const pq = pc(String(b.quote).replace(/~~[^~]*~~\/?/g, '')), qAt = pcw.lastIndexOf(pq);
   let endAt = pcw.length;
-  { const parts = pq.split(/(?=(?:,? and,? |; )(?:until|that|each|all|models|melee|ranged|on a|weapons)\b)/i); let pos = 0, last = -1;
+  // (and on the defence side a clause of its own condition, "…, and, if that enemy unit is Below Half-strength, …": another box's,
+  // verify/effects-extract.js defenceOf IF_CUT)
+  { const parts = pq.split(side === 'defence' ? /(?=(?:,? and,? |; )(?:until|that|each|all|models|melee|ranged|on a|weapons)\b|,? and,? if\b)/i : /(?=(?:,? and,? |; )(?:until|that|each|all|models|melee|ranged|on a|weapons)\b)/i); let pos = 0, last = -1;
     parts.forEach((x, i) => { const ids = (side === 'defence' ? X.findDf(n(x)).df : X.findFx(n(x)).fx).map(([id]) => id); if(ids.some(id => mine0.includes(id))) last = i; });
     if(last >= 0 && qAt >= 0){ for(let i = 0; i <= last; i++) pos += parts[i].length; endAt = qAt + pos; } }
   const quotedHas = re => S.q.some(q => re.test(q));
