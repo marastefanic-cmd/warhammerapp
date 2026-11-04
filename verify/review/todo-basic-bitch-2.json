@@ -197,10 +197,10 @@
    ]
   },
   "source": {
-   "reason": "A defence-side condition for the attacking unit’s state, in GW’s words. Before: the words matched COND targetBelowHalf, which defenceOf drops on the defence side (the attacker’s target is this unit), so the condition was lost and the Wound part shown unconditional. Only this sentence in data.js has it.",
+   "reason": "A defence-side condition for the attacking unit’s state, in GW’s words. Before: the words matched COND targetBelowHalf, which defenceOf drops on the defence side (the attacker’s target is this unit), so the condition was lost and the Wound part shown unconditional. Encephalic Diffusion is the only defence-side sentence of the lists with the phrase. Visions of Suffering also has “If that enemy unit is Below Half-strength”, but on the attack side, where that enemy unit is the target (COND targetBelowHalf, a|1gg1hfo b 1, unchanged); DCOND is read on the defence side only.",
    "diff": "git show be6a7bd -- effects.js"
   },
-  "key": "477f012547325f89"
+  "key": "12ef7aab694c6e11"
  },
  {
   "army": "basic-bitch",
@@ -251,5 +251,19 @@
    "script": "scratchpad/bb-work/dmg-dump.js"
   },
   "key": "5f44f526032932f7"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "code",
+  "where": "verify/defence.js DI · \", and, if …\" clause conditions and the Encephalic Diffusion fixed case",
+  "judgement": {
+   "change": "for each defence box (the words and data.js BOXES) whose quote has a clause cut by /,? and,? (?=if\\b)/i, a condition whose pattern reads that clause and not the words before the cut is that clause’s; every defence of the box must be in it (findDf), else fail “<cond> is the condition of the clause “…”, not of <df ids>”. Fixed case: GW’s Encephalic Diffusion through defenceOf gives exactly [hitMinus 1] and [woundMinus 1 | attackerBelowHalf]."
+  },
+  "source": {
+   "reason": "The review (result-basic-bitch-2.json): with effects-extract.js reverted to main and the DCOND and coverage.js change kept, one box with both defences under attackerBelowHalf passed the gate (both fall back, DC finds only missing conditions). Today: 8 clauses checked (Encephalic Diffusion ×2 boxes and Omnissiah’s Blessing, in the words and data.js; the fixed case’s 2), 0 failures. The mutant (effects-extract.js of b9f6810, effects-migrate --write, agree --write) fails the defence step with 4 failures (DI a|uj59ei in the words and in data.js, the fixed case’s signature, the fixed case’s box).",
+   "diff": "git show 5b92037 -- verify/defence.js",
+   "mutant": "scratchpad/bb-work/mutant-defence.log"
+  },
+  "key": "4bf4e2efa20d9544"
  }
 ]
