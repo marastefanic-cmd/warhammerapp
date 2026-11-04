@@ -3,26 +3,26 @@ Tyranids · 2000 / 2000 pts · Strike Force
 
 Invasion Fleet
 
-Dispositions: Priority Assets (chosen) · Take and Hold
+Dispositions: Priority Assets · Take and Hold (chosen)
 
 Overview
 Phase checklist
 Bases & proxies
-69
+66
 Units
-13
+12
 Stratagems
 16
 Ranged weapons
 6
 Melee weapons
-18
+17
 Abilities
 23
 Rules
 Damage calculator
 
-New Recruit, exported 1 Nov 2026 (JSON)
+New Recruit, exported 4 Nov 2026 (JSON)
 
 ######## checklist · BASIC BITCH Phase checklist
 PHASE BY PHASE
@@ -124,7 +124,7 @@ Tyranid Prime with Lash Whip leads Hormagaunts ×2 units
 DETACH­MENTS
 Invasion Fleet (3 DP)
 DISPOSI­TIONS
-Priority Assets (chosen) · Take and Hold
+Priority Assets · Take and Hold (chosen)
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES
@@ -158,7 +158,7 @@ Hive Predators
 
 Each time a TYRANIDS model with this Hyper-adaptation makes an attack that targets a CHARACTER unit, on a Critical Hit, that attack has the [PRECISION] ability.
 
-APPLIES TOThe Red Terror, The Swarmlord, Hive Tyrant, Tyranid Prime with Lash Whip, Biovores, Neurolictor, Von Ryan’s Leapers, Haruspex, Psychophage, Tyrannofex
+APPLIES TOThe Red Terror, The Swarmlord, Hive Tyrant, Tyranid Prime with Lash Whip, Biovores, Neurolictor, Von Ryan’s Leapers, Maleceptor, Psychophage, Tyrannofex
 
 DECLARE BATTLE FORMATIONS
 DEEP STRIKE
@@ -254,7 +254,7 @@ Hormagaunts×20
 2
 –
 INFANTRY
-5
+4
 Biovores
 5"
 6
@@ -282,18 +282,18 @@ Von Ryan’s Leapers
 8+
 1
 6+
-2×55
+55
 MONSTERS
 3
-Haruspex
+Maleceptor
 8"
 11
 3+
 14
-8+
+7+
 4
-–
-125
+4+
+180
 Psychophage
 12"
 9
@@ -352,15 +352,15 @@ BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
 not counted here: see the rule (Hyper-adaptations)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-Haruspex
-Grasping tongue
-12"
-1
+Maleceptor
+Psychic overload
+18"
+D6+3
 3+
-6
+10
 -2
-D6+1
-PRECISION
+3
+BLAST, PSYCHIC
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
 not counted here: see the rule (Hyper-adaptations)
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
@@ -551,7 +551,6 @@ The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
 2CP Adrenal Surge: not counted here: see the rule
 Von Ryan’s Leapers
-×2 units
 Leaper’s talons×3
 6
 3+
@@ -564,23 +563,20 @@ not counted here: see the rule (Neurolictor) (Psychological Saboteur)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
 2CP Adrenal Surge: not counted here: see the rule
-Haruspex
-
-Fights with both: Ravenous maw, plus Shovelling claws on top (extra attacks).
-
-Ravenous maw
-14
+Maleceptor
+Massive scything talons
+➤strike
+3
+3+
+9
+-2
+D6+1
+➤sweep
+6
 3+
 7
 -1
 2
-Shovelling claws
-4
-3+
-14
--2
-D6+1
-EXTRA ATTACKS
 If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
 not counted here: see the rule (Synapse)
 not counted here: see the rule (Hyper-adaptations)
@@ -750,7 +746,6 @@ While an enemy unit is within 12" of this model, if that unit is Battle-shocked:
 Each time a model in that unit makes an attack, subtract 1 from the Hit roll.
 Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.
 Von Ryan’s Leapers
-×2 units
 Pouncing Leap
 Their Charge
 
@@ -760,13 +755,13 @@ You can target this unit with the Heroic Intervention stratagem, regardless of a
 
 That use is -1 CP.
 That use does not prevent any uses of that stratagem on other units this phase.
-Haruspex
-Grisly Spectacle
-Fight
+Maleceptor
+Encephalic Diffusion
+Their Move · Your Shoot · Fight
 
-Fight · Either turn
+Aura, Psychic · Their Movement / Your Shooting / Fight (either turn)
 
-Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6" of this model must take a Battle-shock test.
+While an enemy unit is within 6" of this model, each time a model in that unit makes an attack, subtract 1 from the Hit roll, and, if that enemy unit is Below Half-strength, subtract 1 from the Wound roll as well.
 
 Damaged: 1-5 Wounds Remaining
 
@@ -800,7 +795,7 @@ Damaged: 1-5 Wounds Remaining
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 ######## rules · ABILITIES Rules
-Tyranids · Priority Assets
+Tyranids · Take and Hold
 ARMY RULES
 Synapse
 
@@ -834,7 +829,7 @@ Hive Predators
 
 Each time a TYRANIDS model with this Hyper-adaptation makes an attack that targets a CHARACTER unit, on a Critical Hit, that attack has the [PRECISION] ability.
 
-APPLIES TOThe Red Terror, The Swarmlord, Hive Tyrant, Tyranid Prime with Lash Whip, Biovores, Neurolictor, Von Ryan’s Leapers, Haruspex, Psychophage, Tyrannofex
+APPLIES TOThe Red Terror, The Swarmlord, Hive Tyrant, Tyranid Prime with Lash Whip, Biovores, Neurolictor, Von Ryan’s Leapers, Maleceptor, Psychophage, Tyrannofex
 
 Other enhancements
 4 not in this list
@@ -864,7 +859,7 @@ Deadly Demise
 The Swarmlord + Tyrant Guard D3: The Swarmlord only
 Hive Tyrant + Tyrant Guard D3: Hive Tyrant only
 Biovores 1
-Haruspex D3
+Maleceptor D3
 Psychophage 1
 Tyrannofex D6
 Deep Strike
@@ -897,7 +892,7 @@ Von Ryan’s Leapers
 BASES TO PRINT
 
 40× 28.5mm
-6× 40mm
+3× 40mm
 16× 50mm
 2× 60mm
 1× 80mm
@@ -936,12 +931,11 @@ Neurolictor
 1× 50mm
 Neurolictor
 Von Ryan’s Leapers
-2 units: mark them apart (1, 2)
 3× 40mm
 standard Leaper’s talons
-Haruspex
+Maleceptor
 1× 120×92mm Oval
-Haruspex
+Maleceptor
 Psychophage
 1× 120×92mm Oval
 Psychophage
@@ -1840,7 +1834,7 @@ CP
 AI
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
-End of their Movement The Swarmlord + Tyrant Guard, Biovores, Haruspex, Psychophage, Tyrannofex
+End of their Movement The Swarmlord + Tyrant Guard, Biovores, Maleceptor, Psychophage, Tyrannofex
 1
 CP
 AI
@@ -1852,7 +1846,7 @@ CP
 AI
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
-Your Charge The Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Haruspex, Psychophage, Tyrannofex
+Your Charge The Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Maleceptor, Psychophage, Tyrannofex
 1
 CP
 AI
@@ -2031,7 +2025,7 @@ USED BYany unit
 1
 CP
 Fire Overwatch
-End of their Movement The Swarmlord + Tyrant Guard, Biovores, Haruspex, Psychophage, Tyrannofex
+End of their Movement The Swarmlord + Tyrant Guard, Biovores, Maleceptor, Psychophage, Tyrannofex
 WHEN
 
 End of your opponent’s Movement phase.
@@ -2042,7 +2036,7 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYThe Swarmlord + Tyrant Guard, Biovores, Haruspex, Psychophage, Tyrannofex
+USED BYThe Swarmlord + Tyrant Guard, Biovores, Maleceptor, Psychophage, Tyrannofex
 
 1
 CP
@@ -2063,7 +2057,7 @@ USED BYPsychophage
 1
 CP
 Crushing Impact
-Your Charge The Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Haruspex, Psychophage, Tyrannofex
+Your Charge The Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Maleceptor, Psychophage, Tyrannofex
 WHEN
 
 Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
@@ -2080,7 +2074,7 @@ Resolve the following sequence:
 
 Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
-USED BYThe Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Haruspex, Psychophage, Tyrannofex
+USED BYThe Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Maleceptor, Psychophage, Tyrannofex
 
 1
 CP
@@ -2210,8 +2204,9 @@ The Red Terror
 3
 –
 WHEN TARGETED
-3
+4
 Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
+Encephalic Diffusion: not counted here: see the rule (Maleceptor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 MELEE WEAPONS
@@ -2315,9 +2310,10 @@ Tyrant Guard×6
 1
 –
 WHEN TARGETED
-4
+5
 TYRANT GUARD Guardian Organism: While a CHARACTER model is leading it: CHARACTER models: Feel No Pain 5+
 Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
+Encephalic Diffusion: not counted here: see the rule (Maleceptor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 ALL ATTACKS · WHOLE UNIT
@@ -2462,9 +2458,10 @@ Tyrant Guard×6
 1
 –
 WHEN TARGETED
-4
+5
 TYRANT GUARD Guardian Organism: While a CHARACTER model is leading it: CHARACTER models: Feel No Pain 5+
 Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
+Encephalic Diffusion: not counted here: see the rule (Maleceptor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 MELEE WEAPONS
@@ -2589,8 +2586,9 @@ Hormagaunts×20
 2
 –
 WHEN TARGETED
-3
+4
 Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
+Encephalic Diffusion: not counted here: see the rule (Maleceptor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 MELEE WEAPONS
@@ -2713,8 +2711,9 @@ Biovore
 1
 –
 WHEN TARGETED
-3
+4
 Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
+Encephalic Diffusion: not counted here: see the rule (Maleceptor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 ALL ATTACKS
@@ -2806,8 +2805,9 @@ Neurolictor
 1
 4+
 WHEN TARGETED
-3
+4
 Psychological Saboteur: If (see the rule): −1 to Hit rolls
+Encephalic Diffusion: not counted here: see the rule (Maleceptor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 MELEE WEAPONS
@@ -2874,8 +2874,8 @@ Von Ryan’s Leapers ›
 
 ######## unit von-ryans-leapers · NEUROLICTOR Basic Bitch
 VON RYAN’S LEAPERS
-55 PTS EACH
-Infantry · ×2 in list
+55 PTS
+Infantry
 Models
 Options
 3× Von Ryan’s Leaper
@@ -2898,8 +2898,9 @@ Von Ryan’s Leaper×3
 1
 6+
 WHEN TARGETED
-3
+4
 Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
+Encephalic Diffusion: not counted here: see the rule (Maleceptor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 MELEE WEAPONS
@@ -2946,16 +2947,16 @@ VON RYAN'S LEAPERS
 FACTION: TYRANIDS
 Ask about this unit
 ‹ Neurolictor
-Haruspex ›
+Maleceptor ›
 
-######## unit haruspex · VON RYAN’S LEAPERS Basic Bitch
-HARUSPEX
-125 PTS
+######## unit maleceptor · VON RYAN’S LEAPERS Basic Bitch
+MALECEPTOR
+180 PTS
 Monster
 Models
 Options
-1× Haruspex
-Grasping tongue, Ravenous maw, Shovelling claws
+1× Maleceptor
+Massive scything talons, Psychic overload
 Unit
 M
 T
@@ -2964,22 +2965,24 @@ W
 LD
 OC
 InSv
-Haruspex
+Maleceptor
 120×92mm Oval
 8"
 11
 3+
 14
-8+
+7+
 4
-–
+4+
 WHEN TARGETED
-3
+4
+Encephalic Diffusion: not counted here: see the rule
 Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 DAMAGED 1-5 W
 −1 TO HIT ROLLS
+([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
 not counted here: see the rule (Hyper-adaptations)
 not counted here: see the rule (Neurolictor) (Psychological Saboteur)
@@ -2990,14 +2993,14 @@ BS
 S
 AP
 D
-Grasping tongue
-12"
-1
+Psychic overload
+18"
+D6+3
 3+
-6
+10
 -2
-D6+1
-PRECISION
+3
+BLAST, PSYCHIC
 Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
 MELEE WEAPONS
 A
@@ -3005,36 +3008,33 @@ WS
 S
 AP
 D
-
-Fights with both: Ravenous maw, plus Shovelling claws on top (extra attacks).
-
-Ravenous maw
-14
+Massive scything talons
+➤strike
+3
+3+
+9
+-2
+D6+1
+➤sweep
+6
 3+
 7
 -1
 2
-Shovelling claws
-4
-3+
-14
--2
-D6+1
-EXTRA ATTACKS
 not counted here: see the rule (Synapse)
 The target is the enemy unit selected: +1 AP (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
 2CP Adrenal Surge: not counted here: see the rule
 ABILITIES
-Grisly Spectacle
-Fight
+Encephalic Diffusion
+Their Move · Your Shoot · Fight
 
-Fight · Either turn
+Aura, Psychic · Their Movement / Your Shooting / Fight (either turn)
 
-Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6" of this model must take a Battle-shock test.
+While an enemy unit is within 6" of this model, each time a model in that unit makes an attack, subtract 1 from the Hit roll, and, if that enemy unit is Below Half-strength, subtract 1 from the Wound roll as well.
 
 Rules
-Deadly Demise D3, Synapse, Hyper-adaptations
+Deadly Demise D3, Shadow in the Warp, Synapse, Hyper-adaptations
 Stratagems
 
 INVASION FLEET Predatory Imperative, Rapid Regeneration, Adrenal Surge, Death Frenzy, Overrun
@@ -3043,15 +3043,16 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 
 Keywords
 MONSTER
+PSYKER
 GREAT DEVOURER
-HARVESTER
-HARUSPEX
+SYNAPSE
+MALECEPTOR
 FACTION: TYRANIDS
 Ask about this unit
 ‹ Von Ryan’s Leapers
 Psychophage ›
 
-######## unit psychophage · HARUSPEX Basic Bitch
+######## unit psychophage · MALECEPTOR Basic Bitch
 PSYCHOPHAGE
 110 PTS
 Monster
@@ -3077,9 +3078,10 @@ Psychophage
 3
 –
 WHEN TARGETED
-4
+5
 Feel No Pain 5+
 Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
+Encephalic Diffusion: not counted here: see the rule (Maleceptor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 ALL ATTACKS
@@ -3151,7 +3153,7 @@ SMOKE
 PSYCHOPHAGE
 FACTION: TYRANIDS
 Ask about this unit
-‹ Haruspex
+‹ Maleceptor
 Tyrannofex ›
 
 ######## unit tyrannofex · PSYCHOPHAGE Basic Bitch
@@ -3180,9 +3182,10 @@ Tyrannofex
 5
 –
 WHEN TARGETED
-4
+5
 Resilient Organism: Once per battle: Damage 0
 Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
+Encephalic Diffusion: not counted here: see the rule (Maleceptor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 DAMAGED 1-5 W
@@ -3281,8 +3284,9 @@ Spore Mine
 0
 –
 WHEN TARGETED
-3
+4
 Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
+Encephalic Diffusion: not counted here: see the rule (Maleceptor)
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
 1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
 ABILITIES
@@ -3335,7 +3339,7 @@ Damaged: 1-5 Wounds Remaining
 
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
-UNITHaruspex
+UNITMaleceptor
 
 Ask about this ability
 
@@ -3347,6 +3351,17 @@ Damaged: 1-5 Wounds Remaining
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITTyrannofex
+
+Ask about this ability
+
+######## popup ability:basic-bitch|Encephalic Diffusion|While an enemy unit is within 6" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well. · BASIC BITCH Basic Bitch
+ABILITY · AURA, PSYCHIC · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Encephalic Diffusion
+
+While an enemy unit is within 6" of this model, each time a model in that unit makes an attack, subtract 1 from the Hit roll, and, if that enemy unit is Below Half-strength, subtract 1 from the Wound roll as well.
+
+UNITMaleceptor
 
 Ask about this ability
 
@@ -3555,7 +3570,7 @@ If this ability takes the form [BLAST X], each time you gather attack dice for s
 
 Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
 
-IN THIS ARMYBiovores
+IN THIS ARMYBiovores, Maleceptor
 
 Ask about this rule
 
@@ -3717,7 +3732,7 @@ Deadly Demise
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant (Hive Tyrant only), Biovores, Haruspex, Psychophage, Tyrannofex
+IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant (Hive Tyrant only), Biovores, Maleceptor, Psychophage, Tyrannofex
 
 Ask about this rule
 
@@ -3728,7 +3743,7 @@ Deadly Demise 1
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant (Hive Tyrant only), Biovores, Haruspex, Psychophage, Tyrannofex
+IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant (Hive Tyrant only), Biovores, Maleceptor, Psychophage, Tyrannofex
 
 Ask about this rule
 
@@ -3739,7 +3754,7 @@ Deadly Demise D3
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant (Hive Tyrant only), Biovores, Haruspex, Psychophage, Tyrannofex
+IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant (Hive Tyrant only), Biovores, Maleceptor, Psychophage, Tyrannofex
 
 Ask about this rule
 
@@ -3750,7 +3765,7 @@ Deadly Demise D6
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant (Hive Tyrant only), Biovores, Haruspex, Psychophage, Tyrannofex
+IN THIS ARMYThe Swarmlord (The Swarmlord only), Hive Tyrant (Hive Tyrant only), Biovores, Maleceptor, Psychophage, Tyrannofex
 
 Ask about this rule
 
@@ -3775,7 +3790,7 @@ Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fi
 All of that model’s [EXTRA ATTACKS] weapons.
 One of that model’s other melee weapons, if possible.
 
-IN THIS ARMYThe Red Terror, Hive Tyrant, Tyranid Prime with Lash Whip, Haruspex
+IN THIS ARMYThe Red Terror, Hive Tyrant, Tyranid Prime with Lash Whip
 
 Ask about this rule
 
@@ -3888,7 +3903,7 @@ Hive Predators
 
 Each time a TYRANIDS model with this Hyper-adaptation makes an attack that targets a CHARACTER unit, on a Critical Hit, that attack has the [PRECISION] ability.
 
-IN THIS ARMYThe Red Terror, The Swarmlord, Hive Tyrant, Tyranid Prime with Lash Whip, Biovores, Neurolictor, Von Ryan’s Leapers, Haruspex, Psychophage, Tyrannofex
+IN THIS ARMYThe Red Terror, The Swarmlord, Hive Tyrant, Tyranid Prime with Lash Whip, Biovores, Neurolictor, Von Ryan’s Leapers, Maleceptor, Psychophage, Tyrannofex
 
 Ask about this rule
 
@@ -3996,7 +4011,7 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
 
-IN THIS ARMYThe Red Terror, Neurolictor, Haruspex
+IN THIS ARMYThe Red Terror, Neurolictor
 
 Ask about this rule
 
@@ -4007,7 +4022,18 @@ PSYCHIC
 
 Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
 
-IN THIS ARMYThe Swarmlord
+IN THIS ARMYThe Swarmlord, Maleceptor
+
+Ask about this rule
+
+######## popup rule:Psychic · BASIC BITCH Basic Bitch
+CORE RULE
+
+Psychic
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYThe Swarmlord, Maleceptor
 
 Ask about this rule
 
@@ -4183,7 +4209,7 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
 
-IN THIS ARMYThe Red Terror, Neurolictor, Haruspex
+IN THIS ARMYThe Red Terror, Neurolictor
 
 Ask about this rule
 
@@ -4609,7 +4635,7 @@ Resolve the following sequence:
 
 Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
-USED BYThe Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Haruspex, Psychophage, Tyrannofex
+USED BYThe Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Maleceptor, Psychophage, Tyrannofex
 
 Ask about this stratagem
 
@@ -4681,7 +4707,7 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYThe Swarmlord + Tyrant Guard, Biovores, Haruspex, Psychophage, Tyrannofex
+USED BYThe Swarmlord + Tyrant Guard, Biovores, Maleceptor, Psychophage, Tyrannofex
 
 Ask about this stratagem
 

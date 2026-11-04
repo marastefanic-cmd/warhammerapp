@@ -74,8 +74,8 @@ Basic Bitch
 BUILT-IN
 Tyranids · Invasion Fleet
 PRIORITY ASSETS
-, CHOSEN
 TAKE AND HOLD
+, CHOSEN
 Healybois
 2000 pts
 BUILT-IN
@@ -279,8 +279,8 @@ Basic Bitch
 BUILT-IN
 Tyranids · Invasion Fleet
 PRIORITY ASSETS
-, CHOSEN
 TAKE AND HOLD
+, CHOSEN
 Big demons baby
 2000 pts
 BUILT-IN
@@ -605,8 +605,8 @@ Basic Bitch
 BUILT-IN
 Invasion Fleet
 PRIORITY ASSETS
-, CHOSEN
 TAKE AND HOLD
+, CHOSEN
 Healybois
 2000 pts
 BUILT-IN
@@ -1276,10 +1276,10 @@ COMPUTED
 t the phases it is triggered in · u the phases its effect is used in · s listed at a fixed moment of the turn · a listed when the unit is selected · at the moment it opens with · ae also at the end of the battle round · o its options, each with its own phases · g what it grants · f a rule it puts in force · pk a pick of options · oc its options cover its phases · x not placed (its words give no phase) · none no phase (before the battle, what a unit carries)
 
 BOXES
-447 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
+448 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
 Every column and where it comes from
 49 columns, with 3 inner tables
-BOXES 447 rows
+BOXES 448 rows
 
 MECHANICAL n (computed), b (computed), nc (computed), reach (computed), both (computed), embarked (computed), played (computed), riled (computed), d (computed), dnc (computed), dreach (computed), st (computed), snc (computed)
 
@@ -1358,7 +1358,7 @@ units
 224 ids
 BSDATA
 names
-833 ids
+832 ids
 BSDATA
 maxPerList
 82 ids
@@ -1374,7 +1374,7 @@ one value · the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-04.1
+2026-11-04.2
 
 WHY YOU CAN TRUST THE DATA
 
