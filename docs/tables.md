@@ -339,7 +339,9 @@ every list imported on the phone shows every screen as the built-in one at 390 a
 list in .json, .ros, .rosz, text B and text C gives one list, and changed exports are refused with exact messages. What the hand files hold
 has no effect on a build; a list whose built-in entry needs a hand file (an id, a `short`, a note) would differ, and P1 says so.
 
-**One builder.** A built-in list of a catalogued faction is made by the same code as a phone import: `verify/from-json.js --write` ends
+**One builder.** A built-in list of a catalogued faction that has a New Recruit JSON export (6 lists today: Basic Bitch, Healybois, Lite
+Knights, Nidzillas, The Exiled Legion, Tzeeeeentch) is made by the same code as a phone import; the two catalogued lists made from New
+Recruit PDFs alone, with no export (Emperor's Chosen and Dread Host, Adeptus Custodes), are not (see the known limits). `verify/from-json.js --write` ends
 by calling `WH_BUILDER.build` on the export with the `data.js` it has just written (after `verify/build-index.js --write`, so its "+" marks
 are in `BUILD_INDEX`), and the list's `ARMIES` entry is builder.js's, with from-json's source line (the day the export was committed, or the
 hand file's `source`). What stays from-json's is the Node-only part: BSData at the pin (every id, the extract), Wahapedia's pages and GW's
@@ -359,15 +361,48 @@ What from-json does that builder.js does not, and where each goes:
 | a models line split by GW's WARGEAR OPTIONS ("1 model can be equipped with 1 …", Wahapedia's page), a stats row without its ×N where the list has a New Recruit PDF (`verify/sources/nr`) | none in a catalogued list's entry today; builder.js does neither (the export's association, else unplaced; always ×N), so a catalogued list needing one fails from-json's check |
 | "+" marks from BSData's modifiers (`verify/bsdata.js`, `write-grants.js`) | builder.js names a mark's rule from `BOXES` (agreed), else `BUILD_INDEX.marks`, which `verify/build-index.js` learns from the built-in lists' marks |
 
-**An ability a rule gives is the list's, never the datasheet's.** An army rule of the list's faction, or a rule of one of its detachments,
-that gives units "the following ability" (`GRANTS`, type ability, in force with no condition, to units of these keywords) and defines
-its words (`RULE_OPTIONS`, the option of that name) gives a list's unit a row of its own, the list's (in full on its entry, as an
-enhancement's), never one on `DATASHEETS`: Talons of the Norn Queen's Protean Purpose, on a Norn Emissary or Norn Assimilator only in a
-list that takes the detachment. `verify/tables.js` (`ruleAbilities`) keeps such a row off the datasheet, `verify/from-json.js` writes it in
-the rule's words and phases (its tag the limit GW prints before them), and builder.js adds it the same way where the export's unit carries
-it (`grantedAbilities`); `verify/catalog.js` counts it as the list's. build-parity N holds it: a Norn Emissary in a Tyranids list without
-the detachment has no Protean Purpose (even with the export still showing it), with it both Norns have it, and no `DATASHEETS` row has an
-ability an army or detachment rule gives.
+**An ability a rule gives is the list's, never the datasheet's.** The owner's rule (4 Nov 2026): every ability a rule gives a unit is a
+row of its own on the unit's datasheet screen, marked with the rule that gives it, wherever that rule is in force for the list, derived
+from GW's rule text and the unit's keywords and never from what an export prints. Which: an army rule of the list's faction, or a rule of
+one of its detachments, that gives units of some keywords "the following ability" (or abilities), with no condition (`GRANTS`, type
+ability, `while` null). Today: Higher Imperatives (Talons of the Norn Queen) gives Protean Purpose to NORN EMISSARY/NORN ASSIMILATOR
+units (Nidzillas, Healybois); Daughters of the Abyss (the Adeptus Custodes army rule) gives Psychic Null (Aura) to ANATHEMA PSYKANA units
+(the Prosecutor and Witchseeker Squads of Lite Knights, Emperor's Chosen and Dread Host); Mission Tactics (Deathwatch Support) gives
+Furor, Malleus and Purgatus Tactics to KILL TEAM units (Nerf when's Deathwatch Terminator Squad); Silent Sisterhood (Null Maiden Vigil)
+gives Creeping Dread (Aura) to ANATHEMA PSYKANA units (no list takes the detachment). One function reads them, `builder.js`
+`ruleAbilities`, and builder.js, `verify/from-json.js`, `verify/tables.js` and `verify/catalog.js` all call it, so both paths give the
+same row:
+- its words: GW's, quoted from the rule's own text, the words `RULE_OPTIONS` reads for the option of that name, found right after the
+  ability's bold name ("**Protean Purpose:** …", "**Furor Tactics**" and its line) exactly once, apostrophes aside (the rule's own
+  characters are kept). Where they cannot be found so, or `RULE_OPTIONS` has no such option, nothing is guessed: builder.js refuses a
+  list with a unit that meets the rule, from-json lists it as not filled, and the gate fails (`verify/tables.js`, for every detachment of
+  every faction, whether a list takes it or not).
+- its tag, the mark: the rule's name, then the limit GW prints before the words, then Aura where GW's name says "(Aura)", as an
+  enhancement's tag names it: "Higher Imperatives · Once per battle, per unit", "Daughters of the Abyss · Aura", "Mission Tactics". The
+  screen shows it as every tag (under the name when the row is opened, and in search); a once-per-battle limit is the row's chip, as
+  for any ability.
+- its phases: those `RULE_OPTIONS` gives the option (the program's reading of the rule's words); `verify/derive.js` holds them so.
+- its place: after the part's datasheet abilities, in the order GW's rule prints them, before an enhancement's (in an attached unit, on
+  the part that has the keywords). A datasheet that itself has an ability of that name keeps its own.
+- it is the list's own row (in full on the list's entry, as an enhancement's), never one on `DATASHEETS` (`verify/tables.js` keeps it
+  off, and `verify/build-parity.js` N fails a `DATASHEETS` row that has one).
+- its words are the rule's, so they are read as the rule's: `verify/effects-migrate.js` and `verify/derive.js` make no boxes, options or
+  grants of their own from it (the rule's are already there: the Damage tab and "When targeted" count Psychic Null and the Tactics
+  once, from the rule), `verify/readings.js` and derive's defence coverage read the rule's boxes of that option (`builder.js`
+  `ruleOfRow`: a row whose tag names a rule in force and whose words are in it). It has a Phase checklist entry, as Protean Purpose had.
+  Not being the datasheet's, it is not asked of the datasheet's sources: `verify/words.js` does not look for it on the Wahapedia
+  datasheet page (the two declared Protean Purpose entries of `verify/deviations-words.json` are gone with that), `verify/bsdata.js`
+  does not ask BSData's entry for it, and `verify/nr.js` lets New Recruit's PDF leave it out and leave the rule's name out of its tag;
+  `verify/texts.js` checks the rule's words against GW's, and the row quotes them. A faction catalogue's reading (`verify/from-bsdata.js`,
+  from-json `--emit`) has no such row: the datasheets alone.
+- a core ability a rule gives ("IMPERIAL KNIGHTS models from your army have the **Feel No Pain 6+** ability", Knights of Legend; Fights
+  First, Deep Strike) prints no words of its own in the rule: it is not one of these rows (the Core Rules' words; the rule itself is on
+  the Rules screen).
+
+The gate holds it: `verify/tables.js` fails any list unit whose rule-given rows are not exactly those the rules in force give it (so the
+two PDF-only lists too) and any unresolved words; build-parity N builds exports with the ability's profile removed (the row is still
+there), with Talons of the Norn Queen removed (no Protean Purpose, even with the export still showing it), with the profile on a unit
+without the keyword (no row), and Lite Knights (Psychic Null (Aura) on its three ANATHEMA PSYKANA units only).
 
 Known limits (accepted: each refuses rather than shows anything wrong, or no current list meets it):
 - `BUILD_INDEX.marks` is learned from the built-in lists' marks: a phone export showing a change no agreed box explains and no built-in
@@ -378,8 +413,11 @@ Known limits (accepted: each refuses rather than shows anything wrong, or no cur
 - from-json splits a models line by GW's WARGEAR OPTIONS and names a stats row without its ×N where the list has a New Recruit PDF;
   builder.js does neither. No catalogued list needs either today; one that does fails from-json's check.
 - The 18 lists of factions with no catalogue keep from-json's reading (and the phone's strict copy) until their catalogue lands.
-- A rule's ability builder.js adds only where the export's unit carries it: Daughters of the Abyss gives Psychic Null (Aura) to ANATHEMA
-  PSYKANA units and Deathwatch Support gives KILL TEAM units its Tactics, but no export, and so no list, shows them on a unit today.
+- Emperor's Chosen and Dread Host (Adeptus Custodes, a catalogued faction) were written from their New Recruit PDFs
+  (`verify/sources/nr/*.txt`) and have no export: builder.js never builds them, and neither `verify/reimport.js` nor build-parity P1
+  holds them to what builder.js would give an export of the same list. The owner keeps them and has no export for them. What holds them
+  is the rest of the gate (nr, bsdata, words and the others, as for every list), and `verify/tables.js` for the abilities their rules
+  give (above).
 
 The input formats (`import.js` `parse`): .json; .ros (BattleScribe XML, the same roster); .rosz (it zipped, inflated by the platform);
 New Recruit's text format B ("+++ FACTION KEYWORD …") and C ("## Category …"), each name looked up exactly (case, apostrophes and spaces
