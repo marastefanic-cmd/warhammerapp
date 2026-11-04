@@ -1374,7 +1374,7 @@ one value · the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-03.2
+2026-11-04.1
 
 WHY YOU CAN TRUST THE DATA
 

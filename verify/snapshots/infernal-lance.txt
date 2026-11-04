@@ -2419,7 +2419,7 @@ Enemy units’ M: not counted here: see the rule (Unleash Balefire)
 WHEN TARGETED
 5
 Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-Malefic Surge: not counted here: see the rule
+Malefic Surge: Unnatural Fortitude · “While a unit is Empowered it can use one of the Malefic Surge abilities below” · “When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase”: one of: 5+ invulnerable save · Feel No Pain 6+
 Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
 1CP Hellforged Construction: Fight phase: AP worsened by 1
 1CP Diabolic Bulwark: Your opponent’s Shooting phase: 4+ invulnerable save
@@ -2578,7 +2578,7 @@ Enemy units’ M: not counted here: see the rule (Unleash Balefire)
 WHEN TARGETED
 5
 Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-Malefic Surge: not counted here: see the rule
+Malefic Surge: Unnatural Fortitude · “While a unit is Empowered it can use one of the Malefic Surge abilities below” · “When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase”: one of: 5+ invulnerable save · Feel No Pain 6+
 Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
 1CP Hellforged Construction: Fight phase: AP worsened by 1
 1CP Diabolic Bulwark: Your opponent’s Shooting phase: 4+ invulnerable save
@@ -2712,7 +2712,7 @@ Enemy units’ M: not counted here: see the rule (Unleash Balefire)
 WHEN TARGETED
 6
 Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-Malefic Surge: not counted here: see the rule
+Malefic Surge: Unnatural Fortitude · “While a unit is Empowered it can use one of the Malefic Surge abilities below” · “When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase”: one of: 5+ invulnerable save · Feel No Pain 6+
 *Invulnerable Save: 5+ invulnerable save against ranged attacks
 Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
 1CP Hellforged Construction: Fight phase: AP worsened by 1
@@ -2864,7 +2864,7 @@ Enemy units’ M: not counted here: see the rule (Unleash Balefire)
 WHEN TARGETED
 7
 Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-Malefic Surge: not counted here: see the rule
+Malefic Surge: Unnatural Fortitude · “While a unit is Empowered it can use one of the Malefic Surge abilities below” · “When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase”: one of: 5+ invulnerable save · Feel No Pain 6+
 *Invulnerable Save: 5+ invulnerable save against ranged attacks
 Fleshmetal Fusion: If (see the rule): +1 to armour saving throws
 Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
@@ -3008,7 +3008,7 @@ Enemy units’ M: not counted here: see the rule (Unleash Balefire)
 WHEN TARGETED
 6
 Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-Malefic Surge: not counted here: see the rule
+Malefic Surge: Unnatural Fortitude · “While a unit is Empowered it can use one of the Malefic Surge abilities below” · “When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase”: one of: 5+ invulnerable save · Feel No Pain 6+
 *Invulnerable Save: 5+ invulnerable save against ranged attacks
 Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
 1CP Hellforged Construction: Fight phase: AP worsened by 1
