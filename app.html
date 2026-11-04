@@ -397,7 +397,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .mod .from{color:var(--muted)}
 /* a line from another unit's rule: "Granted by: <unit>" (its datasheet) - <what it does> (<its rule>); a summary's AI label, as a gist's */
 .mod .gby, .tgl .gby{color:var(--muted)} .mod .gby .link, .tgl .gby .link{color:var(--fg); font-weight:600}
-.mod .ai, .tgl .ai, .varc .ai, .dsl .ai{font-size:10.5px; letter-spacing:.04em; vertical-align:1px}
+.mod .ai, .tgl .ai, .varc .ai, .dsl .ai, .pgv .ai{font-size:10.5px; letter-spacing:.04em; vertical-align:1px}
 .varc .gby, .dsl .gby{color:var(--muted)} .varc .gby .link, .dsl .gby .link{color:var(--fg); font-weight:600}
 /* whose weapons these are (leader vs bodyguard): a chip, not a whisper */
 .who{display:inline-block; justify-self:start; margin:12px 0 4px; padding:4px 8px 3px; border-radius:4px; border:1px solid var(--line); background:var(--surface2); font:700 14px/1 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--fg)}
@@ -1582,7 +1582,7 @@ function fnLine(S, b, u, kind, ab){
   else { fx = keep(b.fx); if(!fx.length) return null; note = E.fxLabel(fx) + part(b.part); }
   const who = ws ? [...new Set(ws.map(itemName))].join(', ') : sc.models === 'char' ? 'CHARACTER models' : sc.models === 'nonchar' ? 'Models (not CHARACTER)' : sc.models === 'one' ? 'One model' :
     sc.part ? sc.part + ' models' : sc.models === 'model' && ab && ab.who && u.leads ? ab.who : '';
-  const m = { kind:b.kind, when, note, who, from:S.name, box:b, key:S.key, short:srcShort(S) };
+  const m = { kind:b.kind, when, note, who, from:S.name, box:b, key:S.key, short:srcShort(S, 'atk') };
   if(S.core) m.core = true;
   if(S.rule) m.rule = S.rule;
   if(S.strat){ m.strat = S.strat; m.cp = S.cp; }
@@ -1624,7 +1624,7 @@ function unitMods(u, kind){
     // does not confirm, where it reaches: another unit's too, with the unit it is from, "not counted here: see the rule (Tech-Priest Enginseer)")
     const giver = S.grp === 'other' ? fnGiver(S, u) : '';
     // (drawn as ncHtml: a rule's name alone, else its name and its short summary, another unit's "Granted by")
-    if(!S.damaged && (fell || (S.grp !== 'other' && (o.nc || []).some(x => x.atk && !x.unconfirmed))) && !out.some(x => x.key === S.key && x.ncLine)) out.push(Object.assign({ kind:'all', when:'', note:FN_NC + (giver ? ' (' + giver + ')' : ''), who:'', from:S.name, key:S.key, box:null, ncLine:true, short:srcShort(S) }, S.core ? { core:true } : {},
+    if(!S.damaged && (fell || (S.grp !== 'other' && (o.nc || []).some(x => x.atk && !x.unconfirmed))) && !out.some(x => x.key === S.key && x.ncLine)) out.push(Object.assign({ kind:'all', when:'', note:FN_NC + (giver ? ' (' + giver + ')' : ''), who:'', from:S.name, key:S.key, box:null, ncLine:true, short:srcShort(S, 'atk') }, S.core ? { core:true } : {},
       S.rule ? { rule:S.rule } : {}, S.strat ? { strat:S.strat, cp:S.cp } : {}, S.src && S.src !== u ? { src:S.src, giver } : {}));
   }
   return out;
@@ -4601,9 +4601,13 @@ function modFrom(m, u){
 // detachment rule's row; a core rule none)
 const enhRowOf = name => detachments().flatMap(d => d.enhancements || []).find(e => e.name === name) || null;
 const ruleRowOf = name => faction().armyRules.concat(detachments().flatMap(detRules)).find(r => r.name === name) || null;
-const srcShort = S => S.core || S.rl || S.grp === 'core' ? '' : S.s ? S.s.short || S.s.gist || '' : S.ab ? S.ab.short || (enhRowOf(S.ab.name) || {}).short || ''
-  : S.grp === 'army' || S.a === 'rule' ? (ruleRowOf(S.name) || {}).short || '' : '';
-const ncShortOf = srcShort;
+// (a source's summary for one placement (the owner's guidelines, docs/summaries.md 13): under the weapons sumAtk, When targeted sumDef,
+// under the profile sumSt, on the Overview sumOv; a stratagem's gist wherever it is shown; a core rule none)
+const SUM_COL = { atk:'sumAtk', def:'sumDef', st:'sumSt', ov:'sumOv' };
+const srcShort = (S, place) => { const c = SUM_COL[place || 'atk'];
+  return S.core || S.rl || S.grp === 'core' ? '' : S.s ? S.s.gist || '' : S.ab ? S.ab[c] || (enhRowOf(S.ab.name) || {})[c] || ''
+  : S.grp === 'army' || S.a === 'rule' ? (ruleRowOf(S.name) || {})[c] || '' : ''; };
+const ncShortOf = S => srcShort(S, 'def');
 // (an army or detachment rule that is a menu, every box of it one of its options, a table's rows or a pick (Blessings of Khorne, Martial
 // Ka'tah, Combat Doctrines): a blanket rule, its name, as one whose words a line does not count)
 const menuRule = key => { const o = (D.boxes || {})[key] || {}, bx = [].concat(o.b || [], o.d || [], o.st || []); return bx.length > 0 && bx.every(b => b.opt || b.pick || b.tableRows); };
@@ -4991,7 +4995,7 @@ function defLineOf(S, b, u){
   const sc = b.scope || {}, models = sc.models && sc.models !== 'model' ? sc.models + ' models: ' : '';
   // (how long it lasts where its words say it lasts beyond the phase: "until the start of your next Command phase")
   const text = models + (b.pick ? 'one of: ' + b.pick.map(p => E.dfLabel(p.df)).join(' · ') : E.dfLabel(b.df)) + (b.until ? ' (' + b.until + ')' : '');
-  return { a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp === 'unit' ? S.ab.who : '', when, text, from:S.grp === 'other' ? giver : '', abv:S.abv, riled:on.some(x => x[0] === 'riled'), box:b, key:S.key, rl:S.rl || '', short:srcShort(S) };
+  return { a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp === 'unit' ? S.ab.who : '', when, text, from:S.grp === 'other' ? giver : '', abv:S.abv, riled:on.some(x => x[0] === 'riled'), box:b, key:S.key, rl:S.rl || '', short:srcShort(S, 'def') };
 }
 // every "When targeted" line of a unit, in the order: its Rules line's core rules, army and detachment rules, its own abilities, other units',
 // stratagems; t the line's words (as drawn)
@@ -5128,7 +5132,7 @@ function statShown(u){
   searchIndex();
   const out = [], said = new Set(), xs = statLines(u);
   for(const x of xs){
-    const short = x.a === 'ability' ? srcShort({ ab:(abilityIndex.get(x.v) || {}).ab }) : x.a === 'strat' ? srcShort({ s:allStratagems().find(s => s.id === x.v) }) : srcShort({ a:'rule', name:x.rule });
+    const short = x.a === 'ability' ? srcShort({ ab:(abilityIndex.get(x.v) || {}).ab }, 'st') : x.a === 'strat' ? srcShort({ s:allStratagems().find(s => s.id === x.v) }, 'st') : srcShort({ a:'rule', name:x.rule }, 'st');
     const r = (!x.a || x.a === 'rule') && ruleRowOf(x.rule), blanket = !!r && !short && (menuRule(DM_KEY.r(r)) || xs.every(y => y.rule !== x.rule || /not counted here/.test(y.text)));
     if(!short && !blanket){ out.push(x); continue; }
     if(said.has(x.rule + '\0' + (x.from || ''))) continue; said.add(x.rule + '\0' + (x.from || ''));
@@ -5383,10 +5387,12 @@ function screenPregame(){
   const sec = (title, body) => body ? '<div class="sec-h"><h2>' + title + '</h2></div><div class="pg">' + body + '</div>' : '';
   // the same ability on several units is one line: "Singular Purpose · Assimilator (280), Norn Emissary ×2"
   const group = list => { const m = new Map(); for(const [u, ab] of list){ const k = ab.name + '|' + ab.text; if(!m.has(k)) m.set(k, { ab, units:[] }); m.get(k).units.push(u); } return [...m.values()]; };
-  const abLine = g => linkTo('ability', abilityKey(g.ab), g.ab.name) + ' <span class="from">· ' + esc(unitNames(g.units, g.ab)) + '</span>';
+  // (a line with its source's Overview summary, sumOv: "<summary> AI (<name>) · <units>"; one with none, its name)
+  const ovSum = (t, sum, name) => sum ? ncSum(t, sum) + ' <span class="from">(' + linkTo(t[0], t[1], name) + ')</span>' : linkTo(t[0], t[1], name);
+  const abLine = g => ovSum(['ability', abilityKey(g.ab)], srcShort({ ab:g.ab }, 'ov'), g.ab.name) + ' <span class="from">· ' + esc(unitNames(g.units, g.ab)) + '</span>';
   const rulesOf = units.length ? f.armyRules.filter(r => !inertRule(r.name)).map(r => ({ r, src:f.name + ' army rule' }))
     .concat(detachments().flatMap(d => detRules(d).map(r => ({ r, src:d.name })))) : [];
-  const ruleLine = x => linkTo('rule', x.r.name, x.r.name) + ' <span class="from">· ' + esc(x.src) + '</span>';
+  const ruleLine = x => ovSum(['rule', x.r.name], x.r.sumOv, x.r.name) + ' <span class="from">· ' + esc(x.src) + '</span>';
   const nameLink = u => linkTo('unit', u.id, u.short || u.name);   // without its enhancement: the line says it
   // a unit's short name, or its full one when another unit of the list has that short name too (Big Mek Dakkarig, Big Mek in Mega Armour)
   const ownName = u => u.short && units.some(x => x !== u && (x.short || x.name) === u.short && x.name !== u.name) ? u.name : u.short || u.name;

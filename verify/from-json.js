@@ -1616,8 +1616,8 @@ for (const [uid, h] of Object.entries(HAND.units || {})) {
     // row's, as verify/tables.js --write keeps them (Bloody Fury's paragraphs, a bold "**Hit roll**"))
     for (const ab of u.abilities) for (const pn of parts) { const row = dsRow(pn), sa = row && (row.abilities || []).find(x => x.name === ab.name && x.text !== ab.text && typeof x.text === 'string' && GWO.norm(x.text) === GWO.norm(ab.text)); if (sa) { ab.text = sa.text; break; } }
     for (const ab of u.abilities) for (const pn of parts) { const row = dsRow(pn), sa = row && (row.abilities || []).find(x => x.name === ab.name && x.text === ab.text && x.readOf); if (sa && ab.readOf === undefined) { ab.readOf = sa.readOf; break; } }
-    // (and its short summary, AI-written, with its fingerprint: data.js's row's for the same words, as a gist is the hand file's)
-    for (const ab of u.abilities) for (const pn of parts) { const row = dsRow(pn), sa = row && (row.abilities || []).find(x => x.name === ab.name && x.text === ab.text && typeof x.short === 'string'); if (sa && ab.short === undefined) { ab.short = sa.short; if (sa.shortOf !== undefined) ab.shortOf = sa.shortOf; break; } }
+    // (and its summaries, AI-written, one per placement, with their fingerprints: data.js's row's for the same words, as a gist is the hand file's)
+    for (const c of ['sumAtk', 'sumDef', 'sumSt', 'sumOv']) for (const ab of u.abilities) for (const pn of parts) { const row = dsRow(pn), sa = row && (row.abilities || []).find(x => x.name === ab.name && x.text === ab.text && typeof x[c] === 'string'); if (sa && ab[c] === undefined) { ab[c] = sa[c]; if (sa[c + 'Of'] !== undefined) ab[c + 'Of'] = sa[c + 'Of']; break; } }
   }
 }
 // a reference sheet's reason (ref: { by, rule, quote }): the ability of a unit of the list whose words add a unit of its keyword to the

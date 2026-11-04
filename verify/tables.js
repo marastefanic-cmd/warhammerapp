@@ -52,9 +52,10 @@ function catalogRows(){
 }
 const WEAPON_FIELDS = ['range', 'A', 'BS', 'WS', 'S', 'AP', 'D'];
 // AI-written columns and the column holding the fingerprint of the text each was written from
-// (short: the short summary a unit's screen shows for a source whose words it does not count, beside its name and "(name)", labelled AI:
-// an ability's, an enhancement's, a stratagem's; the owner's decision, 4 Nov 2026)
-const FINGERPRINT = { gist:'gistOf', short:'shortOf' };   // (def, the When targeted line, is retired: a unit's When targeted lines are its defence boxes, BOXES d)
+// (sumAtk / sumDef / sumSt / sumOv: an ability's, enhancement's, army or detachment rule's summary for each place a unit's screens show it, under
+// its weapons, When targeted, under its profile, on the Overview, labelled AI: the owner's decision, 4 Nov 2026, docs/summaries.md)
+const FINGERPRINT = { gist:'gistOf', sumAtk:'sumAtkOf', sumDef:'sumDefOf', sumSt:'sumStOf', sumOv:'sumOvOf' };
+const SUM_COLS = ['sumAtk', 'sumDef', 'sumSt', 'sumOv'];   // (def, the When targeted line, is retired: a unit's When targeted lines are its defence boxes, BOXES d)
 // the readings: the app's interpretations of rule text into numbers and lines. A unit's footnotes (mods), what it gives other
 // units (aura) and their "When targeted" help (guard) are rows of readings, each on the row of the rule it reads (DATASHEETS for a
 // datasheet's ability, FACTIONS for an army or detachment rule or an enhancement, the list's entry for what is the list's own);
@@ -1551,7 +1552,7 @@ function screenJudgements(D, opts){
   for(const [t, x] of Object.entries(reg)) for(const [c, v] of Object.entries(x.columns || {})){
     const how = cols[t + '.' + c]; if(!how) continue;
     if(['gw', 'wahapedia', 'bsdata', 'newrecruit'].includes(v.source)) continue;
-    if(v.source === 'ai-summary' && (c === 'gist' || c === 'short')) continue;
+    if(v.source === 'ai-summary' && (c === 'gist' || SUM_COLS.includes(c))) continue;
     if(v.source === 'derived'){ for(const d of v.declared || []) if(!d.at || !d.why || !d.evidence) out.push(t + '.' + c + ': a declared row without its at, why and evidence');
       // (and it names the script that derives or holds it (by, or its note), one the gate runs (a step of verify/run.js, or a file one
       // requires) whose code reads its key; that a change of its value fails that script's step is verify/derived-proof.js's, the gate's
@@ -1575,7 +1576,7 @@ const READ_KIND = { 'CORE_STRATAGEMS':'strat', 'FACTIONS.detachments.stratagems'
   'FACTIONS.detachments.moreRules':'rule', 'DATASHEETS.abilities':'ability', 'ARMIES.units.abilities':'ability' };
 function layerOf(t, c){
   if(/\.(mods|aura|guard|readings)$/.test(t)) return [READ_FP, READ_BY, READ_WHY].includes(c) ? null : 'ai-reading';
-  if(c === 'gist' || (c === 'short' && t !== 'ARMIES.units')) return 'ai-summary';   // (a unit entry's short is the short name the list gives it)
+  if(c === 'gist' || SUM_COLS.includes(c)) return 'ai-summary';
   if(READ.includes(c) || (READ_KIND[t] && READ_COLS[READ_KIND[t]].includes(c))) return 'ai-reading';
   return null;
 }
