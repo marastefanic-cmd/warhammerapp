@@ -873,6 +873,9 @@ const DF_SAID = { fnp:'Feel No Pain', fnpMortal:'Feel No Pain', fnpPsychic:'Feel
   dmgMinus:'-1 Damage', dmg0:'Damage to 0', apWorse:'-1 AP', hitMinus:'-1 to hit', woundMinus:'-1 to wound' };
 function defSaid(D, ab){ const o = (D.boxes || {})['a|' + ckHash(ab.name + '\n' + ab.text)] || {};
   return (o.d || []).flatMap(b => b.pick ? b.pick.flatMap(p => p.df) : b.df).map(([id]) => DF_SAID[id] || id).concat((o.dnc || []).length ? ['not counted'] : []).join(', '); }
+// the same for a rule's boxes of one of its options (a row the rule gives: Psychic Null (Aura), Daughters of the Abyss)
+function defSaidOpt(D, r, opt){ const o = (D.boxes || {})['r|' + ckHash(r.name + '\n' + r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : ''))] || {};
+  return (o.d || []).filter(b => b.opt === opt).flatMap(b => b.pick ? b.pick.flatMap(p => p.df) : b.df).map(([id]) => DF_SAID[id] || id).concat((o.dnc || []).filter(x => x.opt === opt).length ? ['not counted'] : []).join(', '); }
 const DEF_RULES = [
   { id:'fnp',        re:/feel no pain (\d)\+|feel no pain\*?\*? (\d)\+/i,                                   note:/feel no pain|FNP/i },
   { id:'invuln',     re:/(\d)\+ (?:invulnerable save|insv)/i,                                                note:/invulnerable save|InSv/i },
@@ -1227,7 +1230,12 @@ function derive(D){
           const r = f.armyRules.concat(a.detachments.flatMap(id => detRules(f.detachments[id]))).find(x => norm(x.name).toLowerCase() === norm(n).toLowerCase());
           return r ? r.text : null;
         } };
-        timingItem('ability-timing', where, ab, ab.text, { comments, dedupe:ab.name + '\n' + ab.text }, actx);
+        // (a row a rule of the list gives, Psychic Null (Aura) from Daughters of the Abyss: its phases are the program's reading of that
+        // rule's option, RULE_OPTIONS phases, as builder.js ruleAbilities writes them; its own words alone name no phase)
+        const rg = ruleGivenRow(D, a, ab), ro = rg && (D.ruleOptions || []).find(o => o.option === ab.name && o.rule.endsWith(' rule · ' + String(ab.tag).split(' · ')[0]) && o.rule.startsWith(f.name + ' '));
+        if(rg){ const stored = (ab.ph || []).length ? Object.assign({ ph:ab.ph, turn:ab.turn }, ab.turns ? { turns:ab.turns } : {}) : {}, dv = ro && ro.phases ? ro.phases : null;
+          add({ kind:'ability-timing', where, stored, derived:dv, how:dv ? 'the rule\'s option (RULE_OPTIONS)' : 'none', status:!dv ? (Object.keys(stored).length ? 'different' : 'not-derivable') : JSON.stringify(stored) === JSON.stringify(dv) ? 'identical' : 'different', reasons:[], text:ab.text, comments, dedupe:ab.name + '\n' + ab.text }); }
+        else timingItem('ability-timing', where, ab, ab.text, { comments, dedupe:ab.name + '\n' + ab.text }, actx);
         { const own = withoutOptions(ab.text, null), ce = ckEntry(timing(own, ckCtx(actx)), own), fo = inForce(own, f, ab.name, ce); if(fo.length) ce.f = fo; if(seqTrigger(own)) ce.s = 1; else if(actOf(own)) ce.a = 1; const pk = pickCover(own, ce); if(pk) ce.pk = pk; { const oc = optCover(ab.text, own, null, ce); if(oc) ce.oc = oc; } ckPut(abilityCk(ab), ce); }
         const tItem = items[items.length - 1]; Object.defineProperty(tItem, 'ab', { value:ab, enumerable:false });
         const before = items.length;
@@ -1238,7 +1246,9 @@ function derive(D){
       // (the "When targeted" lines: the ability's defence boxes, data.js BOXES d, made from its words by script (verify/defence.js); coverage of
       // the protections its words name by them)
       for(const ab of u.abilities){
-        const text = plain(ab.text), said = defSaid(D, ab);
+        // (a row a rule of the list gives: its "When targeted" lines are that rule's boxes of the option of its name)
+        const rg = builderRuleOfRow(D, a, ab);
+        const text = plain(ab.text), said = rg ? defSaidOpt(D, rg, ab.name) : defSaid(D, ab);
         if(!DEF_RULES.some(r => r.re.test(text)) && !said) continue;
         cover('ability-def', a.id + ' · ' + uName + ' · ' + ab.name, DEF_RULES, text, said + elsewhere(u, ab), said || null, ab.text, ab.name + '\n' + ab.text + '\n' + said);
       }
@@ -1362,6 +1372,9 @@ function storedOptionsOfAbility(u, ab){
 // the rules and abilities read for options and grants: every army and detachment rule, then every ability of every list (once per words)
 // a detachment's rules: `rule`, then any further ones (`moreRules`: Blood Legion's Blood Tainted)
 function detRules(d){ return d && d.rule ? [d.rule].concat(d.moreRules || []) : []; }
+// a list's row a rule in force gives it (builder.js ruleOfRow: its tag names the rule, its words are the rule's)
+const builderRuleOfRow = (D, a, ab) => { const F = (D.factions || {})[a.faction]; return F ? require(path.join(__dirname, '..', 'builder.js')).ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab) : null; };
+const ruleGivenRow = (D, a, ab) => { const F = (D.factions || {})[a.faction]; return !!F && !!require(path.join(__dirname, '..', 'builder.js')).ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab); };
 function ruleSources(D){
   const out = [];
   for(const [fk, f] of Object.entries(D.factions)){
@@ -1372,6 +1385,8 @@ function ruleSources(D){
   const seen = new Set();
   for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities){
     const k = ab.name + '\n' + ab.text; if(seen.has(k)) continue; seen.add(k);
+    // (a row a rule of the list gives, Psychic Null (Aura) from Daughters of the Abyss: the rule's words, read above as the rule's)
+    if(ruleGivenRow(D, a, ab)) continue;
     out.push({ where:a.id + ' · ' + u.name + ' · ' + ab.name, text:ab.text, table:null, stored:storedOptionsOfAbility(u, ab), fk:a.faction, self:u, ck:abilityCk(ab) });
   }
   return out;

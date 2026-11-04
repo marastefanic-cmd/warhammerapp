@@ -218,6 +218,26 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
     ok(JSON.stringify(pp(B.build(exp('healybois'), D, { id:'n', date:'x' })).slice().sort()) === JSON.stringify(['Norn Assimilator:true', 'Norn Emissary:true']), 'N with Talons of the Norn Queen: its Norns have no Protean Purpose');
     const onRow = Object.entries(D.datasheets).filter(([, S]) => (S.abilities || []).some(a => (D.grants || []).some(g => g.type === 'ability' && g.grants === a.name && / rule · /.test(g.rule) && !g.option && (D.ruleOptions || []).some(o => o.rule === g.rule && o.option === g.grants)))).map(([k]) => k);
     ok(!onRow.length, 'N: a DATASHEETS row has an ability an army or detachment rule gives (the list’s, not the datasheet’s): ' + onRow.join(', '));
+    // (the owner's rule: the row comes from the rule and the unit's keywords, never from what the export prints) an export without the
+    // ability's profile still gets the row; a unit without the keyword gets none, even with the profile in its export; the row is marked
+    // with the rule (its tag)
+    const walkP = (s, f) => { f(s); for(const c of s.selections || []) walkP(c, f); for(const c of s.forces || []) walkP(c, f); };
+    const PP = 'Higher Imperatives · Once per battle, per unit';
+    const ppTag = r => r.ok ? D.resolve(r.army).units.filter(u => u.abilities.some(a => a.name === 'Protean Purpose')).map(u => u.name + ':' + u.abilities.find(a => a.name === 'Protean Purpose').tag).sort() : r.errors;
+    neg('an export without the Protean Purpose profile: both Norns still have it', 'healybois', j => { walkP(j.roster, x => { if(x.profiles) x.profiles = x.profiles.filter(p => p.name !== 'Protean Purpose'); }); },
+      null, r => JSON.stringify(ppTag(r)) === JSON.stringify(['Norn Assimilator:' + PP, 'Norn Emissary:' + PP]));
+    neg('the Protean Purpose profile on a unit without the keyword (The Swarmlord): no row', 'healybois', j => { let pr; walkP(j.roster, x => { for(const p of x.profiles || []) if(p.name === 'Protean Purpose' && !pr) pr = p; });
+        const sl = unit(j, 'The Swarmlord'); sl.profiles = (sl.profiles || []).concat([pr]); },
+      null, r => JSON.stringify(ppTag(r)) === JSON.stringify(['Norn Assimilator:' + PP, 'Norn Emissary:' + PP]));
+    // Daughters of the Abyss: Psychic Null (Aura) on Lite Knights' ANATHEMA PSYKANA units only, whatever the export prints
+    const pn = r => r.ok ? D.resolve(r.army).units.filter(u => u.abilities.some(a => a.name === 'Psychic Null (Aura)' && a.tag === 'Daughters of the Abyss · Aura')).map(u => u.name).sort() : r.errors;
+    const PN = ['Prosecutor Squad', 'Witchseeker Squad', 'Witchseeker Squad'];
+    neg('Lite Knights: Psychic Null (Aura) on its ANATHEMA PSYKANA units only', 'lite-knights', j => j, null, r => JSON.stringify(pn(r)) === JSON.stringify(PN));
+    neg('Lite Knights with no Psychic Null profile in the export: the same rows', 'lite-knights', j => { walkP(j.roster, x => { if(x.profiles) x.profiles = x.profiles.filter(p => !/Psychic Null/.test(p.name)); }); }, null, r => JSON.stringify(pn(r)) === JSON.stringify(PN));
+    // (and its words never guessed: a rule whose words for the ability cannot be found refuses the list, naming it)
+    { const D2 = Object.assign({}, D, { ruleOptions:(D.ruleOptions || []).filter(o => o.option !== 'Psychic Null (Aura)') }), r = B.build(exp('lite-knights'), D2, { id:'n', date:'x' });
+      ok(!r.ok && r.errors.some(e => /Psychic Null \(Aura\) that Daughters of the Abyss gives .*never guessed/.test(e)), 'N an ability whose words cannot be found is refused: ' + JSON.stringify(r.ok ? 'built' : r.errors));
+      report.push('N an ability whose words cannot be found → ' + (r.ok ? 'BUILT' : r.errors[0])); }
   }
 
   // ---- I: the index

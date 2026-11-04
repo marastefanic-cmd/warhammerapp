@@ -400,7 +400,7 @@ function build(j, D, opt){
   if(gwNotes.length) army.gwPoints = gwNotes;
   if(Object.keys(top.config).length) army.config = top.config;
   army.source = 'New Recruit, imported ' + (opt.date || '');
-  B.err = err; B.D = D;
+  B.err = err; B.D = D; B.RA = ruleAbilities(D.grants, D.ruleOptions, B.F, B.dets);
   for(const u of units) finish(B, army, u, units);
   if(errors.length) return fail();
   // identical units are one, with copies
@@ -481,10 +481,10 @@ function finish(B, army, u, units, out){
       if(opts.has(lc(a.name)) && !taken[i].has(lc(a.name))) continue;
       abil.push({ row:a, part:i });
     }
-    // (an ability a rule of the list gives it, Talons of the Norn Queen's Protean Purpose: the list's own row, not its datasheet's, where
-    // the export's unit carries it and a rule the list has in force gives it to units of its keywords)
-    const shown = new Set(); dfs(p, s => { for(const pr of s.profiles || []) if(pr.typeName === 'Abilities') shown.add(lc(pr.name)); });
-    for(const g of grantedAbilities(B.D, B.F, B.dets)) if(shown.has(lc(g.name)) && meetsTo(g.to, P[i].kw) && !(P[i].abilities || []).some(a => a.name === g.name)) abil.push({ granted:g, part:i });
+    // (an ability a rule of the list gives it: its own row, marked with the rule, wherever the rule is in force and the part has its
+    // keywords, whatever the export prints; ruleAbilities)
+    for(const g of ruleAbilitiesOf(B.RA, P[i].kw, P[i].abilities)) abil.push({ granted:g, part:i });
+    for(const f of B.RA.errors) if(meetsTo(f.to, P[i].kw)) B.err('unit ' + parts.map(x => nn(x.name)).join(' + ') + ' not imported: ' + f.error);
     for(const x of u._enh || []) if((x.e.upgrade ? parts.length - 1 : x.i) === i) abil.push({ enh:x.e, part:i });
   });
   // the "+" marks: values a rule of the list changes
@@ -508,10 +508,7 @@ function finish(B, army, u, units, out){
   {
     const list = abil.map(x => {
       if(x.row){ const o = { name:x.row.name }; if(multi) o.who = who(x.part); return o; }
-      if(x.granted){ const g = x.granted, o = { name:g.name }; if(multi) o.who = who(x.part);
-        const lim = /^\(([^()]+)\)\s/.exec(g.opt.text); if(lim) o.tag = lim[1];   // (GW's limit before its words: "(Once per battle, per unit) …")
-        const ph = g.opt.phases || {}; if(ph.ph && ph.ph.length){ o.ph = ph.ph; o.turn = ph.turn; if(ph.turns) o.turns = ph.turns; }
-        o.text = g.opt.text; return sorted(o, ORDER.abilities); }
+      if(x.granted){ const o = Object.assign({}, x.granted.row); if(multi) o.who = who(x.part); return sorted(o, ORDER.abilities); }
       const o = { name:x.enh.name }; if(multi) o.who = who(x.part);
       o.tag = (x.enh.upgrade ? 'Upgrade' : 'Enhancement') + (/\(Aura\)$/.test(x.enh.name) ? ' · Aura' : '');
       const lab = ((B.D.buildIndex || {}).labels || {})[x.enh.name]; if(lab) Object.assign(o, lab);
@@ -634,17 +631,56 @@ function catFilled(B, key, f){
   const S = B.S[key]; if(!S || !S.points || S[f] === undefined) return false;
   return !(B.D.armies || []).some(a => !a.imported && a.faction === S.faction && a.units.some(x => x.name === S.name && !x.leads && !x.ref));
 }
-// the abilities the rules a list has in force give units (verify/tables.js ruleAbilities reads them the same way): an army rule of its
-// faction or a rule of one of its detachments that gives units of these keywords an ability with no condition (GRANTS, type ability) and
-// defines its words (RULE_OPTIONS, the option of that name, with its phases)
-function grantedAbilities(D, F, dets){
-  const inForce = new Set((F.armyRules || []).map(r => F.name + ' army rule · ' + r.name));
-  for(const d of dets) for(const r of [d.rule].concat(d.moreRules || []).filter(Boolean)) inForce.add(F.name + ' · ' + d.name + ' rule · ' + r.name);
-  return (D.grants || []).filter(g => g.type === 'ability' && !g.option && g.while == null && g.to && typeof g.to === 'object' && inForce.has(g.rule))
-    .map(g => ({ name:g.grants, rule:g.rule, to:g.to, opt:(D.ruleOptions || []).find(o => o.rule === g.rule && o.option === g.grants) })).filter(x => x.opt);
+// the abilities the rules a list has in force give its units by keyword, each its own row, marked with the rule that gives it (the
+// owner's rule, 4 Nov 2026: derived from GW's rule text and the unit's keywords wherever that rule is in force, never from what an export
+// prints): an army rule of the faction or a rule of one of the list's detachments that gives units of these keywords "the following
+// ability" (or abilities), with no condition (GRANTS, type ability: Higher Imperatives' Protean Purpose to NORN EMISSARY/NORN ASSIMILATOR
+// units, Daughters of the Abyss' Psychic Null (Aura) to ANATHEMA PSYKANA units, Mission Tactics' Furor, Malleus and Purgatus Tactics to
+// KILL TEAM units). Its words are GW's in the rule itself: the words RULE_OPTIONS reads for the option of that name, found in the rule's
+// text right after the ability's bold name, exactly once (apostrophes aside; the rule's own characters are quoted). One that cannot be
+// found so is an error, never a guess. (A core ability a rule gives, "have the Feel No Pain 6+ ability", prints no words of its own: not
+// one of these.) verify/tables.js, verify/from-json.js and verify/catalog.js read them with this same function.
+//   { rows:[{ name, rule (GRANTS' key), to, row:{ name, tag, ph, turn, turns, text } }], errors:[{ to, error }] }
+// tag: the rule's name, then the limit GW prints before the words ("(Once per battle, per unit) …"), then Aura where GW's name says
+// "(Aura)", as an enhancement's tag names it: "Higher Imperatives · Once per battle, per unit", "Daughters of the Abyss · Aura"
+const RULE_AB = /\bthe following abilit(?:y|ies)\b/i;
+function ruleAbilities(grants, options, F, dets){
+  const out = { rows:[], errors:[] }; if(!F) return out;
+  const inForce = new Map();
+  for(const r of F.armyRules || []) inForce.set(F.name + ' army rule · ' + r.name, r);
+  for(const d of dets || []) if(d) for(const r of [d.rule].concat(d.moreRules || []).filter(Boolean)) inForce.set(F.name + ' · ' + d.name + ' rule · ' + r.name, r);
+  const ap = s => String(s).replace(/[’‘]/g, "'");
+  for(const g of grants || []){
+    if(g.type !== 'ability' || g.option || g.while != null || !g.to || typeof g.to !== 'object' || !RULE_AB.test(g.text || '') || !inForce.has(g.rule)) continue;
+    const r = inForce.get(g.rule), opts = (options || []).filter(o => o.rule === g.rule && o.option === g.grants);
+    const no = why => out.errors.push({ to:g.to, error:'the ability ' + g.grants + ' that ' + r.name + ' gives ' + kwWords(g.to) + ' units: ' + why + ' (never guessed): not built' });
+    if(opts.length !== 1){ no(opts.length ? 'more than one set of words for it in the rule' : 'its words are not read from the rule (RULE_OPTIONS has no option of that name)'); continue; }
+    const t = ruleText(r), T = ap(t), w = ap(opts[0].text), esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const head = new RegExp('\\*\\*' + esc(ap(g.grants)) + '(?::\\*\\*|\\*\\*:?)\\s*$');
+    const at = []; for(let i = T.indexOf(w); i >= 0 && w; i = T.indexOf(w, i + 1)) if(head.test(T.slice(0, i))) at.push(i);
+    if(at.length !== 1){ no(at.length ? 'its words are in the rule more than once' : 'its words are not in the rule’s text after its name'); continue; }
+    const text = t.slice(at[0], at[0] + w.length), lim = /^\(([^()]+)\)\s/.exec(text);
+    const row = { name:g.grants, tag:[r.name, lim ? lim[1] : '', /\(Aura\)$/.test(g.grants) ? 'Aura' : ''].filter(Boolean).join(' · ') };
+    const ph = opts[0].phases || {}; if(ph.ph && ph.ph.length){ row.ph = ph.ph; row.turn = ph.turn; if(ph.turns) row.turns = ph.turns; }
+    row.text = text;
+    out.rows.push({ name:g.grants, rule:g.rule, to:g.to, row:sorted(row, ORDER.abilities) });
+  }
+  return out;
 }
+const kwWords = to => [to.all && to.all.join(' '), to.any && to.any.join('/')].filter(Boolean).join(' ').replace(/^Faction: /, '').toUpperCase() + (to.none && to.none.length ? ' (excluding ' + to.none.join('/').toUpperCase() + ')' : '');
 const meetsTo = (to, kw) => { const has = k => (kw || []).some(x => lc(x) === lc(k));
   return (to.all || []).every(has) && (!to.any || to.any.some(has)) && !(to.none || []).some(has); };
+// the rule in force that gives a list's row (one of ruleAbilities' rows): its tag names the rule first and its words are in the rule's
+// text (apostrophes aside). Such a row's words are the rule's: verify/derive.js and verify/effects-migrate.js read them as the rule's
+// (its options, grants and boxes), never as a source of their own, so nothing is counted twice
+function ruleOfRow(F, dets, ab){
+  if(!F || !ab || !ab.tag || typeof ab.text !== 'string') return null;
+  const n = String(ab.tag).split(' · ')[0], ap = s => String(s).replace(/[’‘]/g, "'");
+  const rs = (F.armyRules || []).concat(...(dets || []).filter(Boolean).map(d => [d.rule].concat(d.moreRules || []).filter(Boolean)));
+  return rs.find(r => r.name === n && ap(ruleText(r)).includes(ap(ab.text))) || null;
+}
+// a unit part's rows of them: those whose keywords it has and its datasheet does not already have
+const ruleAbilitiesOf = (RA, kw, own) => RA.rows.filter(x => meetsTo(x.to, kw) && !(own || []).some(a => a.name === x.name));
 // the rule a weapon keyword is ("SUSTAINED HITS 1": Sustained Hits), as the glossary names it
 function ruleOfKw(D, k){
   const names = Object.keys(D.rules || {}), u = k.toUpperCase();
@@ -666,7 +702,7 @@ function marksOf(B, army, u, parts, P, rows, abil){
   const E = root.WH_EFFECTS, out = new Map(), boxes = E && E.agreed ? E.agreed(B.D.boxes || {}, B.D.agree) : {}, idx = ((B.D.buildIndex || {}).marks) || {};
   // the rules that reach the unit, with their boxes
   const src = [];
-  for(const x of abil){ const a = x.enh || x.row || { name:x.granted.name, text:x.granted.opt.text }; src.push({ name:a.name, part:x.enh && x.enh.upgrade ? undefined : x.part, box:boxes['a|' + ckHash(a.name + '\n' + a.text)] }); }
+  for(const x of abil){ const a = x.enh || x.row || x.granted.row; src.push({ name:a.name, part:x.enh && x.enh.upgrade ? undefined : x.part, box:boxes['a|' + ckHash(a.name + '\n' + a.text)] }); }
   for(const d of B.dets) for(const r of [d.rule].concat(d.moreRules || [])) if(r) src.push({ name:r.name, box:boxes['r|' + ckHash(r.name + '\n' + ruleText(r))] });
   for(const r of B.F.armyRules || []) src.push({ name:r.name, box:boxes['r|' + ckHash(r.name + '\n' + ruleText(r))] });
   const fxKw = (id, p) => { const f = E && E.FX[id]; if(!f) return null; const l = f.label(p); return /^\[.*\]$/.test(l) ? l.slice(1, -1).toUpperCase() : null; };
@@ -732,7 +768,7 @@ function marksOf(B, army, u, parts, P, rows, abil){
 }
 const where = parts => 'unit ' + parts.map(p => nn(p.name)).join(' + ');
 
-const api = { build, catalogued, catalogues, malformed, nn, lc, typo, slug, uniq, and, splitList, lastId };
+const api = { build, ruleAbilities, ruleAbilitiesOf, ruleOfRow, meetsTo, catalogued, catalogues, malformed, nn, lc, typo, slug, uniq, and, splitList, lastId };
 root.WH_BUILDER = api;
 if(typeof module !== 'undefined' && module.exports) module.exports = api;
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -682,7 +682,7 @@ function buildGroup(g, k) {
   if (assoc.length) hide(u, { _assoc: assoc });
   Object.assign(u, { stats, ranged: kinds.ranged, melee: kinds.melee, abilities, rules: uniq(rules), kw: own.concat(extra) });
   if (extra.length) u.kwNote = extra.join(', ') + (extra.length > 1 ? ' come' : ' comes') + ' from the ' + (g.chars.length > 1 ? 'combined unit' : (g.chars[0].support ? 'supported ' : 'led ') + partName(g.body)) + '.';
-  u._at = g.at; u._parts = parts; hide(u, { _partNames: parts.map(p => nm(p.name)), _exportKw: u.kw.slice() });
+  u._at = g.at; u._parts = parts; hide(u, { _partNames: parts.map(p => nm(p.name)), _exportKw: u.kw.slice(), _partKw: parts.map(catsOf) });
   // the rules of the datasheet itself (the unit and its models), not those its wargear, weapons or enhancement bring
   const dsRules = []; parts.forEach(p => dfs(p, s => { if (s.type === 'unit' || s.type === 'model') for (const r of s.rules || []) dsRules.push(typo(nm(r.name))); }));
   u._dsRules = uniq(dsRules);
@@ -1017,6 +1017,10 @@ function boxAfterComposition(name, pages) {
   return null;
 }
 const partName0 = p => typo(nm(p.name));
+// the abilities the rules this list has in force give its units by keyword (builder.js ruleAbilities: GRANTS and RULE_OPTIONS, the rule's
+// words; a faction data.js does not have yet has none: GRANTS are read from data.js's rules)
+const BW = require('../builder.js');
+const RA = F ? BW.ruleAbilities(D.grants, D.ruleOptions, F, detIds.map(id => F.detachments[id] || facSrc.detachments[id]).filter(Boolean)) : { rows: [], errors: [] };
 const wahaFile = page => 'verify/.cache/waha/ds/' + page.file;
 const dsWant = new Set();
 const gwRules = new Map();   // unit id -> { core, army, leader, files }
@@ -1063,17 +1067,9 @@ for (const u of units) {
       continue;
     }
     // an ability a rule of the list gives the unit ("Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability: Protean
-    // Purpose", Talons of the Norn Queen): the list's own row, not the datasheet's (GW's page does not print it), in the rule's words and
-    // with its phases (RULE_OPTIONS), its limit before them its tag, as builder.js gives it (verify/tables.js ruleAbilities)
-    const ra = require('./tables').ruleAbilities(D.factions, D.grants, D.ruleOptions, { faction: factionId, detachments: detIds }).find(x => x.name === ab.name && require('./tables').meetsTo(x.to, u.kw));
-    if (ra) {
-      for (const k of ['tag', 'ph', 'turn', 'turns', 'text']) delete ab[k];
-      const lim = /^\(([^()]+)\)\s/.exec(ra.opt.text); if (lim) ab.tag = lim[1];
-      const ph = ra.opt.phases || {}; if (ph.ph && ph.ph.length) { ab.ph = ph.ph; ab.turn = ph.turn; if (ph.turns) ab.turns = ph.turns; }
-      ab.text = ra.opt.text;
-      filled.push({ what: 'ability ' + u.name + ' · ' + ab.name, from: 'the list’s rule ' + ra.rule + ' (its words and phases, RULE_OPTIONS): the list’s own, not the datasheet’s' });
-      continue;
-    }
+    // Purpose", Talons of the Norn Queen): not the export's to say; the rule's row is written below, from the rule (builder.js
+    // ruleAbilities), whether or not the export prints it
+    if (RA.rows.some(x => x.name === ab.name)) { hide(ab, { _drop: true }); continue; }
     // the datasheet's ability: the one with BSData's words, else the one of BSData's name (GW's name, tag and words win)
     // (BSData's "[Psychic Abilities] - Shrouding" is GW's Shrouding)
     // (and without its articles: BSData's "Master of the Ka'tahs" is GW's Master of Ka’tahs)
@@ -1156,6 +1152,20 @@ for (const u of units) {
     if (g.damaged || !caseGW.has(nm(ab.name)) ? lc(typo(g.name)) !== lc(ab.name) : typo(g.name) !== ab.name) { devs.push({ kind: 'bsdata', unit: u.id, field: 'ability', name: typo(g.name), app: typo(g.name), bsdata: ab.name, why: 'GW’s name for the ability (Wahapedia’s datasheet); BSData names it ' + ab.name, file: g.file }); ab.name = typo(g.name); }
   }
   u.abilities = u.abilities.filter(a => !a._drop);
+  // the abilities a rule of the list gives it (the owner's rule: every one its own row, marked with the rule, wherever the rule is in force
+  // and the part has its keywords, never from what the export prints; in GW's words, builder.js ruleAbilities, as the phone builds it):
+  // each part's after its datasheet's abilities, before its enhancement's (not in a faction catalogue's reading, --emit: the datasheets
+  // alone, verify/from-bsdata.js; there the rule's ability is only left off, as above)
+  if (!argv.includes('--emit')) u._parts.forEach((p, pi) => {
+    const multi = u._parts.length > 1, pn = partName0(p), mine = a => !multi || a.who === pn;
+    for (const e of RA.errors) if (BW.meetsTo(e.to, u._partKw[pi])) want(u.name + (multi ? ' · ' + pn : ''), 'ability', e.error);
+    const add = BW.ruleAbilitiesOf(RA, u._partKw[pi], u.abilities.filter(mine)).map(x => { const o = Object.assign({}, x.row); if (multi) { const r = { name: o.name, who: pn }; delete o.name; Object.assign(r, o); return hide(r, { _ra: x.rule }); } return hide(o, { _ra: x.rule }); });
+    if (!add.length) return;
+    let at = -1; u.abilities.forEach((a, i) => { if (mine(a) && !a._e) at = i; });
+    if (at < 0) { const i = u.abilities.findIndex(mine); at = i < 0 ? u.abilities.length - 1 : i - 1; }
+    u.abilities.splice(at + 1, 0, ...add);
+    for (const o of add) filled.push({ what: 'ability ' + u.name + ' · ' + o.name, from: 'the list’s rule ' + o._ra + ' (its words in the rule, RULE_OPTIONS phases; builder.js ruleAbilities): the list’s own, not the datasheet’s' });
+  });
   // a rule GW prints in a header box of its own that BSData's entry does not have (the Daemon Prince of Chaos's Daemonic Allegiance):
   // GW wins, the app adds it with GW's words (an ability BSData has that GW does not print is left out, above)
   for (const g of gwAbs) if (g.box && !used.has(g) && !u.abilities.some(a => lc(a.name) === lc(g.name))) {
@@ -1505,7 +1515,7 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
       if (a) for (const k of Object.keys(a)) if (k.startsWith('_')) Object.defineProperty(o, k, { value: a[k], enumerable: false, writable: true, configurable: true });
       out.push(o); reusedAbs.add(u.name + ' · ' + (multi ? pn + ' · ' : '') + o.name);
     }
-    for (const a of mineAbs) { if (!a._e) note('ability ' + a.name, 'not on the row', 'in this reading'); out.push(a); }
+    for (const a of mineAbs) { if (!a._e && !a._ra) note('ability ' + a.name, 'not on the row', 'in this reading'); out.push(a); }
     if (!multi) u.abilities = out;
     else { const at = u.abilities.findIndex(a => a.who === pn), rest = u.abilities.filter(a => a.who !== pn); rest.splice(at < 0 ? rest.length : u.abilities.slice(0, at).filter(a => a.who !== pn).length, 0, ...out); u.abilities = rest; }
     // the Rules line: the row's, then a rule only this list's units bring (its wargear's or enhancement's); a part's row: its rules
@@ -2051,6 +2061,9 @@ const listFrom = (() => {
   if (REFS) return { from: 'verify/from-json.js', why: '--refs: only the list’s reference sheets are this run’s' };
   // (builder.js and effects.js keep their tables on window where there is one, as in the browser: this file's loadD made one)
   const E = require('../effects.js'); globalThis.WH_EFFECTS = E; if (global.window) global.window.WH_EFFECTS = E;
+  // (a fresh copy: builder.js keeps the window it was first loaded with, and this file's ruleAbilities (RA) loaded it on an earlier loadD's
+  // window, which has no WH_EFFECTS; the build would then not see the agreed boxes)
+  delete require.cache[require.resolve('../builder.js')];
   const W = require('../builder.js');
   const loadRaw = () => { const w = {}; new Function('window', fs.readFileSync(DATA, 'utf8').replace(/\nreturn \{ version:VERSION,/, '\nreturn { RAW:{ ARMIES }, version:VERSION,'))(w); return w.WH_DATA; };
   let D1 = loadRaw();

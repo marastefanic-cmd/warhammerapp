@@ -43,7 +43,10 @@ function sources(D){
     const ws = weaponNames(u);
     // (an ability whose tag names an army rule of its faction, Bondsman: that rule's words say whom it reaches)
     const F = D.factions[a.faction] || {};
-    for(const ab of u.abilities || []){ const tr = (F.armyRules || []).find(r => String(ab.tag || '').split(/ · |, /).includes(r.name));
+    // (a row a rule of the list gives, Furor Tactics from Mission Tactics: the rule's words, whose boxes are the rule's, below; not a
+    // source of its own, or the Damage tab would count them twice)
+    const RG = require(path.join(ROOT, 'builder.js')).ruleOfRow, dets = (a.detachments || []).map(k => (F.detachments || {})[k]);
+    for(const ab of u.abilities || []){ if(RG(F, dets, ab)) continue; const tr = (F.armyRules || []).find(r => String(ab.tag || '').split(/ · |, /).includes(r.name));
       // (one of the abilities to pick from: New Recruit lists it under "X: pick one", X the unit's ability whose words say "select one
       // X ability")
       // (or the section its who names, another ability of the unit selecting one of that section's abilities: "select one of the abilities in

@@ -2732,7 +2732,7 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
       ]
     },
@@ -2747,7 +2747,7 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
       ]
     },
@@ -2764,7 +2764,7 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Unnatural Resilience' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Destabilising Predation', tag:'Enhancement', text:'**NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.' }
       ],
       rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Extra Attacks','Melta','Blast','Psychic','Anti'],
@@ -2778,7 +2778,7 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Unnatural Resilience' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
       ]
     },
     {
@@ -3803,6 +3803,10 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:4 }
+      ],
+      abilities:[
+        { name:'Purity of Execution' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     {
@@ -3817,6 +3821,10 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:4 }
+      ],
+      abilities:[
+        { name:'Sanctified Flames' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     {
@@ -3831,6 +3839,10 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:5 }
+      ],
+      abilities:[
+        { name:'Sanctified Flames' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     {
@@ -4051,6 +4063,14 @@ const ARMIES = [
         { name:'Hunter: Monster/Vehicle', n:3 },
         { name:'Standard', n:3 },
         { name:'Thunder Hammer', n:2 }
+      ],
+      abilities:[
+        { name:'Terminatus Assault' },
+        { name:'Teleport Homer' },
+        { name:'Storm Shield' },
+        { name:'Furor Tactics', tag:'Mission Tactics', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.' },
+        { name:'Malleus Tactics', tag:'Mission Tactics', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.' },
+        { name:'Purgatus Tactics', tag:'Mission Tactics', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9" of this unit have **[PRECISION]**.' }
       ]
     }
   ]
@@ -4542,6 +4562,10 @@ const ARMIES = [
       melee:[
         // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
         { name:'Gun Stock', n:5 }
+      ],
+      abilities:[
+        { name:'Purity of Execution' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     {
@@ -4561,7 +4585,8 @@ const ARMIES = [
       ],
       abilities:[
         // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
-        { name:'Sanctified Flames' }
+        { name:'Sanctified Flames' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     {
@@ -4735,6 +4760,10 @@ const ARMIES = [
       melee:[
         // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
         { name:'Gun Stock', n:4 }
+      ],
+      abilities:[
+        { name:'Purity of Execution' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     {
@@ -4754,7 +4783,8 @@ const ARMIES = [
       ],
       abilities:[
         // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
-        { name:'Sanctified Flames' }
+        { name:'Sanctified Flames' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     // CALADIUS: the datasheet's keywords (Wahapedia: "VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM"); New Recruit prints
@@ -5108,7 +5138,7 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
       ]
     },
@@ -5120,7 +5150,7 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Unnatural Resilience' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
       ]
     },
     {
@@ -13045,6 +13075,7 @@ const CHECKLIST = {
   "a|17smx15":{"u":"shooting:your,fight:either"},
   "a|17tabo3":{"t":"fight:either","s":1},
   "a|17vrn9o":{"u":"shooting:opp"},
+  "a|17who3l":{"u":"shooting:opp,fight:either"},
   "a|17yjt8a":{"u":"shooting:opp,fight:either"},
   "a|181c91p":{"u":"shooting:your,fight:either"},
   "a|1826tj4":{"u":"shooting:your"},
@@ -13064,6 +13095,7 @@ const CHECKLIST = {
   "a|1b0bosi":{"t":"shooting:your","u":"shooting:your"},
   "a|1b583l5":{"u":"shooting:opp,fight:either"},
   "a|1b88y45":{"t":"command:your","s":1},
+  "a|1b9x58g":{"u":"shooting:your,fight:either"},
   "a|1bndwyj":{"x":1},
   "a|1c2pjdd":{"u":"fight:either"},
   "a|1cel7e3":{"u":"shooting:your"},
@@ -13165,6 +13197,7 @@ const CHECKLIST = {
   "a|1sufx47":{"u":"shooting:your"},
   "a|1sul8lz":{"t":"movement:your","u":"charge:your"},
   "a|1susps1":{"u":"shooting:your"},
+  "a|1sw0lr0":{"u":"shooting:your,fight:either"},
   "a|1sw1st7":{"u":"shooting:opp,fight:either"},
   "a|1syrdzo":{"t":"movement:your","u":"shooting:your,fight:either"},
   "a|1t0m8vl":{"u":"shooting:your"},
@@ -13217,6 +13250,7 @@ const CHECKLIST = {
   "a|5cu3n5":{"u":"fight:either"},
   "a|5ffkd6":{"u":"movement:your"},
   "a|5pzucl":{"u":"shooting:opp"},
+  "a|5r7ufk":{"u":"shooting:your,fight:either"},
   "a|5r85a":{"t":"movement:your","s":1},
   "a|5tl14a":{"u":"shooting:opp,fight:either"},
   "a|5wv1pt":{"u":"shooting:your,fight:either"},

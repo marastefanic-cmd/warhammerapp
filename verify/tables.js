@@ -303,16 +303,44 @@ function keyOrder(seqs0, prev0){
   return out;
 }
 
-// the abilities the rules a list has in force give its units (see ruleAbility in build; builder.js grantedAbilities reads them the same way)
-function ruleAbilities(factions, grants, options, a){
-  const F = (factions || {})[a.faction]; if(!F) return [];
-  const inForce = new Set((F.armyRules || []).map(r => F.name + ' army rule · ' + r.name));
-  for(const k of a.detachments || []){ const d = (F.detachments || {})[k]; if(d) for(const r of [d.rule].concat(d.moreRules || []).filter(Boolean)) inForce.add(F.name + ' · ' + d.name + ' rule · ' + r.name); }
-  return (grants || []).filter(g => g.type === 'ability' && !g.option && g.while == null && g.to && typeof g.to === 'object' && inForce.has(g.rule))
-    .map(g => ({ name:g.grants, rule:g.rule, to:g.to, opt:(options || []).find(o => o.rule === g.rule && o.option === g.grants) })).filter(x => x.opt);
+// the abilities the rules a list has in force give its units (see ruleAbility in build): builder.js ruleAbilities, the one reading of them
+// (the app's, the gate's and from-json's): [{ name, rule, to, row }]; a list of { faction, detachments } (ids)
+const BUILDER = () => require(path.join(ROOT, 'builder.js'));
+function ruleAbilitiesFull(factions, grants, options, a){
+  const F = (factions || {})[a.faction];
+  return BUILDER().ruleAbilities(grants, options, F, (a.detachments || []).map(k => F && (F.detachments || {})[k]).filter(Boolean));
 }
-const meetsTo = (to, kw) => { const has = k => (kw || []).some(x => String(x).toLowerCase() === String(k).toLowerCase());
-  return (to.all || []).every(has) && (!to.any || to.any.some(has)) && !(to.none || []).some(has); };
+const ruleAbilities = (factions, grants, options, a) => ruleAbilitiesFull(factions, grants, options, a).rows;
+const meetsTo = (to, kw) => BUILDER().meetsTo(to, kw);
+// a list's row a rule in force gives (builder.js ruleOfRow): the rule's words, read as the rule's
+const ruleGiven = (D, a, ab) => { const F = (D.factions || {})[a.faction]; return !!F && !!BUILDER().ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab); };
+// the gate: every list's unit has, for each part, exactly the rows the rules in force give it (in GW's order, after the part's datasheet
+// abilities), and no rule's words fail to resolve, in a list or in any detachment of a faction (never guessed: the gate fails)
+function ruleAbilityFails(D){
+  const fails = [], dsOf = (fac, n) => { const all = Object.values(D.datasheets || {}).filter(S => S.name === n); return all.find(S => S.faction === fac) || all[0]; };
+  for(const [fk, F] of Object.entries(D.factions || {})){
+    const RA = ruleAbilitiesFull(D.factions, D.grants, D.ruleOptions, { faction:fk, detachments:Object.keys(F.detachments || {}) });
+    for(const e of RA.errors) fails.push(F.name + ': ' + e.error);
+  }
+  for(const a of D.armies || []){
+    const RA = ruleAbilitiesFull(D.factions, D.grants, D.ruleOptions, a), names = new Set(RA.rows.map(x => x.name).concat((D.grants || []).filter(g => g.type === 'ability' && /\bthe following abilit(?:y|ies)\b/i.test(g.text || '')).map(g => g.grants)));
+    for(const u of a.units){
+      if(u.ref) continue;
+      const parts = u.leads ? [u.name].concat((u.also || []).map(x => x.name), [u.leads]) : [u.name], multi = parts.length > 1;
+      for(const pn of parts){
+        const S = dsOf(a.faction, pn); if(!S){ fails.push(a.id + '/' + u.id + ': no datasheet ' + pn); continue; }
+        for(const e of RA.errors) if(meetsTo(e.to, S.kw)) fails.push(a.id + '/' + u.id + ' ' + pn + ': ' + e.error);
+        const mine = (u.abilities || []).filter(ab => !multi || ab.who === pn), own = S.abilities || [];
+        const want = BUILDER().ruleAbilitiesOf(RA, S.kw, own).map(x => JSON.stringify(x.row));
+        const got = mine.filter(ab => names.has(ab.name) && !own.some(x => x.name === ab.name)).map(ab => { const o = Object.assign({}, ab); delete o.who; return JSON.stringify(o); });
+        if(JSON.stringify(got) !== JSON.stringify(want)) fails.push(a.id + '/' + u.id + ' ' + pn + ': the abilities the list\'s rules give it are ' + (want.join(', ') || 'none') + '; the list has ' + (got.join(', ') || 'none'));
+        const last = Math.max(-1, ...mine.map((ab, i) => own.some(x => x.name === ab.name) ? i : -1)), first = mine.findIndex(ab => want.some(w => JSON.parse(w).name === ab.name));
+        if(first >= 0 && first < last) fails.push(a.id + '/' + u.id + ' ' + pn + ': an ability a rule gives it is before one of its datasheet\'s (GW\'s order: the datasheet\'s, then the rules\', then an enhancement\'s)');
+      }
+    }
+  }
+  return fails;
+}
 function build(R){
   const armies = R.armies, bsIds = R.bsIds || {}, C = R.comments;
   const order = { unit:keyOrder(armies.flatMap(a => a.units.map(u => Object.keys(u).filter(k => k !== 'ds'))), R.order.unit) };
@@ -1511,7 +1539,7 @@ function report(t){
   return lines.join('\n') + '\n';
 }
 
-module.exports = { ruleAbilities, meetsTo, codeRefs, screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
+module.exports = { ruleAbilities, ruleAbilitiesFull, ruleAbilityFails, ruleGiven, meetsTo, codeRefs, screenJudgements, screenReads, screenColumns, scanFixtures, derivers, keysOf, references, gateRuns, wholeReads, dataTables, readSources, readFp, readingStats, RESOLVER, resolveArmies, read, build, tableForm, oldForm, evaluate, stable, eq, fp, sites, columnsInData, FINGERPRINT, FP_KEYS, READ, READ_FP, READ_BY, READ_COLS, readSource, ROWS, DS_UNIT, MARK };
 
 if(require.main === module){
   let src = fs.readFileSync(DATA, 'utf8');
@@ -1580,6 +1608,7 @@ if(require.main === module){
   for(const u of screenJudgements(D0)) fails.push('a unit or stratagem screen reads a judgement: ' + u);
   for(const u of scanFixtures(src)) fails.push('the end-state scan does not see a read: ' + u);
   for(const u of stratIds(D0)) fails.push(u);
+  for(const u of ruleAbilityFails(D0)) fails.push('an ability a rule gives: ' + u);
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));
   const B = t.B, units = B.armies.reduce((n, a) => n + a.units.length, 0);
   console.log('tables: ' + (fails.length ? fails.length + ' failure(s); ' : '') + units + ' unit entries in ' + B.armies.length + ' lists over ' + Object.keys(B.sheets).length + ' datasheets, ' + (D0.ruleOptions || []).length + ' rule options, ' + (D0.grants || []).length + ' grants; ' + B.conflicts.length + ' datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)');
