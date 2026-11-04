@@ -165,7 +165,8 @@ function align(D, readings){
 const coverAttackerWithin = (v, qs) => !!v && v.d != null && qs.some(q => q.replace(/[’]/g, "'").includes('within ' + v.d + '" of ' + String(v.of || '').toLowerCase()) && /\battacking\b/.test(q));
 // reader2's state condition (factionState / targetState / grantsState: { who, state }): covered only by an app q holding the state's words
 // ("While a unit is Empowered …" for { who:'that unit', state:'empowered' })
-const stateWords = v => (JSON.stringify(v == null ? '' : v).toLowerCase().match(/[a-z][a-z' -]{3,}/g) || []).map(x => x.trim()).filter(x => !/^(?:who|that unit|this unit|your unit|state|unit)$/.test(x));
+// (the state alone: never the who, "this model" / "the bearer" / "it", which any q of the rule may name)
+const stateWords = v => typeof v === 'string' ? [v.toLowerCase()] : v && v.state ? [String(v.state).toLowerCase()] : [];
 const coverState = (v, qs) => { const st = stateWords(v); return st.length > 0 && qs.some(q => st.some(x => new RegExp('\\b' + x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b').test(q))); };
 // (the dispatch, as condCmp makes it: an opt, a selection, targetSelected or a stratagem never covers a state by itself; check F)
 const stateCovered = (c, qs, appIds, ctx) => coverState(c.v, qs);
@@ -652,8 +653,36 @@ if(require.main === module){
       ['factionState, with opt, selected, targetSelected, a stratagem and no state words', stateCovered({ id:'factionState', v:{ who:'that unit', state:'empowered' } }, ['when this unit is selected as the target of an attack, select one of the following to apply until the end of the phase'], new Set(['opt', 'selected', 'targetSelected']), { kind:'stratagem' }), false],
       ['targetState, with opt and no state words', stateCovered({ id:'targetState', v:{ who:'that enemy unit', state:'battle-shocked' } }, ['until the end of the phase'], new Set(['opt']), null), false],
       ['factionState, another state', coverState({ who:'that unit', state:'empowered' }, ['while a unit is shielded it can use one of the malefic surge abilities below']), false],
+      ['factionState, only the who in a q (this model)', coverState({ who:'this model', state:'empowered' }, ['each time this model makes an attack, add 1 to the hit roll']), false],
+      ['grantsState, only the who in a q (the bearer)', coverState({ who:'the bearer', state:'readied' }, ['the bearer has the fights first ability']), false],
+      ['factionState, a longer word (disempowered)', coverState({ who:'that unit', state:'empowered' }, ['while a unit is disempowered it can use one of the malefic surge abilities below']), false],
       ['target', coverTarget(IWt, IWq), true], ['target, another TARGET', coverTarget('One SYNAPSE unit from your army.', IWq), false], ['target, a q inside it', coverTarget(IWt, ['one synapse unit from your army']), false]];
-    for(const [name, got, want] of FIX) if(got !== want) fails.push('F comparator fixed case ' + name + ': ' + (got ? 'covered' : 'not covered') + ', should be ' + (want ? 'covered' : 'not covered')); }
+    for(const [name, got, want] of FIX) if(got !== want) fails.push('F comparator fixed case ' + name + ': ' + (got ? 'covered' : 'not covered') + ', should be ' + (want ? 'covered' : 'not covered'));
+    // end to end, through compare (condCmp's own dispatch): Malefic Surge's defence box with its Empowered q dropped (a second copy of
+    // data.js) is class B, reader2's factionState not covered; the same pair on data.js as it is, class A
+    const MS = 'det:chaos-knights/infernal-lance|Malefic Surge|9', MSD = 'reader2 only: factionState=' + JSON.stringify({ who:'that unit', state:'empowered' });
+    const rd = JSON.parse(fs.readFileSync(path.join(R2DIR, 'readings2.json'), 'utf8')).readings;
+    const condsOf = p => (p && p.diffs || []).filter(x => x.what === 'conditions').flatMap(x => x.list);
+    const D2 = loadData(src), bx = D2.boxes['r|1xk95t6']; let dropped = 0;
+    if(!bx) fails.push('F end to end: data.js has no BOXES r|1xk95t6 (Malefic Surge)');
+    else {
+      for(const f of ['b', 'd']) for(const e of bx[f] || []){ const n = (e.on || []).length; e.on = (e.on || []).filter(c => !(c[0] === 'q' && /Empowered/.test(c[1]))); dropped += n - e.on.length; }
+      if(!dropped) fails.push('F end to end: r|1xk95t6 has no Empowered q to drop');
+      const p0 = compare(align(D, rd), D, uses(D)).find(x => x.id === MS && x.app), al2 = align(D2, rd), p2 = compare(al2, D2, uses(D2)).find(x => x.id === MS && x.app);
+      if(!p0 || p0.cls !== 'A') fails.push('F end to end: ' + MS + ' on data.js is class ' + (p0 ? p0.cls : 'none') + ', should be A');
+      if(!p2 || p2.cls !== 'B' || !condsOf(p2).includes(MSD)) fails.push('F end to end: ' + MS + ' without its Empowered q is class ' + (p2 ? p2.cls : 'none') + ' (' + JSON.stringify(condsOf(p2)) + '), should be B with ' + MSD);
+      // a synthetic row: the same sentence as a stratagem's (Diabolic Bulwark, ctx.kind stratagem), its box entry with an opt, selected and
+      // targetSelected and no state words: still not covered
+      const r9 = al2.rows.find(r => r.id === MS), SB = 'Diabolic Bulwark';
+      if(!r9 || !sources(D2).some(x => x.kind === 'stratagem' && x.owner === r9.owner && x.name === SB)) fails.push('F end to end: no row ' + MS + ' or no stratagem ' + SB + ' to make the synthetic row from');
+      else {
+        const row = JSON.parse(JSON.stringify(r9));
+        Object.assign(row, { id:'synthetic|' + SB + '|0', sourceKind:'stratagem', source:SB, parent:SB });
+        row.app.forEach(e => { e.on = [['opt', 'Unnatural Fortitude'], ['selected', true], ['targetSelected', true], ['q', 'When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase']]; });
+        const ps = compare({ rows:[row], orphans:[] }, D2, uses(D2)).find(x => x.id === row.id && x.app);
+        if(!ps || !condsOf(ps).includes(MSD)) fails.push('F end to end: a stratagem row with opt, selected, targetSelected and no state words covers factionState (' + (ps ? ps.cls + ' ' + JSON.stringify(condsOf(ps)) : 'no pair') + '), should not');
+      }
+    } }
   // R1
   const imp = readerImports(R2DIR);
   if(!imp.files.length) fails.push('R1 verify/reader2/ has no code');
