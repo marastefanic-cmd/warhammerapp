@@ -370,7 +370,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           const k = m => [m.from, m.when, m.note].join('|');
           const mr = unitMods(u, 'ranged'), mm = new Set(unitMods(u, 'melee').map(k));
           const all = (document.querySelector('.mods.all') || {}).innerText || '';
-          for(const m of mr) if(mm.has(k(m)) && !(m.weapon && m.set) && !u.abilities.some(ab => ab.damaged && ab.name === m.from) && !all.includes(m.note.slice(0, 40)))
+          // (a not-counted line says its source's name, or its short summary, not its note: ncHtml)
+          for(const m of mr) if(mm.has(k(m)) && !(m.weapon && m.set) && !u.abilities.some(ab => ab.damaged && ab.name === m.from) && !all.includes(m.ncLine ? m.short || m.from : m.note.slice(0, 40)))
             out.push(['all-attacks-block', u.id, m.from + ': ' + m.note]);
         }
         // the army facts the datasheet shows where they matter:
@@ -384,7 +385,22 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           out.push(['riled-assault', u.id, 'no “Riled up: [ASSAULT] (Waaagh!)” footnote']);
         const when = (document.querySelector('#view .def.tgt') || {}).innerText || '';
         // (another unit's defence box that reaches it: under When targeted with that unit's name, verify/defence.js DL; drawn)
-        for(const x of defenceItems(u)) if(x.from && !when.includes('(' + x.from + ')')) out.push(['guard-shown', u.id, x.name + ' (' + x.from + ') is not under When targeted']);
+        for(const x of defenceItems(u)) if(x.from && !when.includes('Granted by: ' + x.from + ' - ')) out.push(['guard-shown', u.id, x.name + ' (Granted by: ' + x.from + ') is not under When targeted']);
+        // - ai-summary: the one AI layer of a unit's lines is its sources' short column (AI-written, fingerprinted by shortOf: verify/tables.js
+        //   --fingerprints): every AI label on them follows a summary that is word for word its source's short, opening what the source's
+        //   "(name)" after it opens; every line of a source whose words are not counted that has a short shows it, AI-labelled; no other
+        //   line has an AI label
+        searchIndex();
+        const shortOf = el => !el ? undefined : el.dataset.ability ? (e => e ? e.ab.short || (enhRowOf(e.ab.name) || {}).short : undefined)(abilityIndex.get(el.dataset.ability))
+          : el.dataset.strat ? (allStratagems().find(s => s.id === el.dataset.strat) || {}).short : undefined;
+        for(const lab of document.querySelectorAll('#view .ai')){ const line = lab.closest('.mod, .tgl');
+          if(!line){ if(!lab.closest('.cpw')) out.push(['ai-summary', u.id, 'an AI label outside a line: ' + (lab.parentElement || {}).textContent]); continue; }
+          const el = lab.previousElementSibling, nm = [...line.querySelectorAll('.from [data-ability], .from [data-strat]')].pop(), key = x => x && (x.dataset.ability || x.dataset.strat);
+          const want = shortOf(el);
+          if(!want || el.textContent !== want) out.push(['ai-summary', u.id, 'an AI-labelled summary that is not its source’s short column: ' + line.textContent.slice(0, 80)]);
+          if(!nm || key(nm) !== key(el)) out.push(['ai-summary', u.id, 'a summary not followed by the name of the rule it opens: ' + line.textContent.slice(0, 80)]); }
+        for(const x of defenceItems(u)) if(x.ncLine && x.short && !when.includes(x.short)) out.push(['ai-summary', u.id, x.name + ': its short summary is not under When targeted']);
+        for(const kind of ['ranged', 'melee']) for(const m of unitMods(u, kind)) if(m.ncLine && m.short && ![...document.querySelectorAll('#view .mod')].some(l => l.textContent.includes(m.short) && l.querySelector('.ai'))) out.push(['ai-summary', u.id, m.from + ': its short summary is not under its weapons with the AI label']);
         const pills = [...document.querySelectorAll('#sec-kw .pill')].map(x => x.textContent.replace(/\*$/, '').toLowerCase());
         if(pills.length !== u.kw.length || u.kw.some(x => !pills.includes(x.toLowerCase()))) out.push(['keywords-shown', u.id, pills.length + ' keyword pills for ' + u.kw.length + ' keywords']);
       }

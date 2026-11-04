@@ -129,9 +129,12 @@ const used = b => (b.on || []).some(x => x[0] === 'used');
 const RANGED_FX = new Set(['range', 'bsSet', 'assault', 'heavy', 'indirect', 'pistol']);   // (effects only ranged attacks have)   // (an ability the unit uses: the player's, never in the weapon's row)
 const hasK = (u, k) => (u.kw || []).some(x => x.toLowerCase() === String(k).toLowerCase());
 const mc = u => u.models.reduce((t, m) => t + (parseInt(m, 10) || 1), 0);
-const condWords = (id, p, u, giver, own) => { const C = E.COND[id];
+// (the enemy unit another unit's rule selects, on a unit other than that one: "Target selected by the Psychophage", no article before an EPIC
+// HERO's name or one with its own; how long only where its box's lasts says: "this turn", "until the end of the battle")
+const condWords = (id, p, u, giver, own, b, gu) => { const C = E.COND[id];
   if(id === 'aura') return own ? 'Own aura' : giver ? 'Within ' + p + '" of ' + giver : C.label(p);
   if(id === 'selected' && giver) return 'Selected by ' + giver;
+  if(id === 'targetSelected' && giver) return 'Target selected by ' + (/^the /i.test(giver) || (gu && (gu.kw || []).some(k => /^epic hero$/i.test(k))) ? '' : 'the ') + giver + ({ turn:' this turn', battle:' until the end of the battle' }[(b || {}).lasts] || '');
   if(id === 'belowStarting' && mc(u) === 1) return 'Lost any wounds (' + C.label(p) + ')';
   if(id === 'belowHalf' && mc(u) === 1) return (Math.ceil((parseInt(u.stats[0].W, 10) || 0) / 2) - 1) + ' or fewer wounds left (' + C.label(p) + ')';
   return C.label(p); };
@@ -188,7 +191,7 @@ let nLines = 0, nRows = 0, nNc = 0;
       const giver = w.S.src && w.S.src !== u ? (g => g && g.who && w.S.src.leads ? g.who : w.S.src.short || w.S.src.name)((w.S.src.abilities || []).find(x => x.name === w.S.name)) : '';
       const gv = giver && w.S.src.leads && ![w.S.src.name].concat((w.S.src.also || []).map(c => c.name)).includes(giver) ? w.S.src.short || w.S.src.name : giver;
       const own = w.S.grp === 'unit' && w.b.mark === 'aura';
-      const cw = on => (on || []).map(([id, p]) => condWords(id, p, u, gv, own)).join(' · ');
+      const cw = on => (on || []).map(([id, p]) => condWords(id, p, u, gv, own, w.b, w.S.src)).join(' · ');
       const part = x => x && x.fx && x.fx.length ? ' (' + (cw(x.on) ? cw(x.on) + ': ' : '') + E.fxLabel(x.fx) + ')' : '';
       if(m.set){ nRows++;
         if(!fx || !w.ws || w.ws.length !== 1 || w.S.damaged || w.S.strat || used(w.b) || !fx.every(([id]) => ROW[id] || SET[id])) fail('L3', where, 'a row value of ' + w.S.name + ' that is no one weapon\'s characteristic');

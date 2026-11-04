@@ -395,6 +395,9 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .mods.all > .il{margin:0 0 1px}
 .mod{border-left:2px solid var(--accent); padding:1px 0 1px 8px; font-size:13px; line-height:1.35}
 .mod .from{color:var(--muted)}
+/* a line from another unit's rule: "Granted by: <unit>" (its datasheet) - <what it does> (<its rule>); a summary's AI label, as a gist's */
+.mod .gby, .tgl .gby{color:var(--muted)} .mod .gby .link, .tgl .gby .link{color:var(--fg); font-weight:600}
+.mod .ai, .tgl .ai{font-size:10.5px; letter-spacing:.04em; vertical-align:1px}
 /* whose weapons these are (leader vs bodyguard): a chip, not a whisper */
 .who{display:inline-block; justify-self:start; margin:12px 0 4px; padding:4px 8px 3px; border-radius:4px; border:1px solid var(--line); background:var(--surface2); font:700 14px/1 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--fg)}
 /* phones under 360px: narrower columns (after the rules it overrides) */
@@ -1499,10 +1502,16 @@ const naReason = ab => ab.na || (/bondsman/i.test(ab.tag || '') && inertRule('Bo
 // "Within 6" of Eightbound"), the unit's own aura is its "Own aura" (22.01); a one-model unit's Starting Strength and Half-strength in
 // its wounds (halfBelow)
 const halfBelow = u => Math.ceil((parseInt(u.stats[0].W, 10) || 0) / 2) - 1;
-function fnCond(id, p, u, giver, own){
+// the enemy unit another unit's rule selects, said on a unit other than that one: "Target selected by the Psychophage" (no article before an EPIC
+// HERO's name or one with its own: "The Swarmlord"), how long only where its box says so from its words (BOXES lasts, verify/effects-extract.js
+// lastsOf: "until the end of the turn" is "this turn"; "until the end of the battle"; none else)
+const FN_LASTS = { turn:'this turn', battle:'until the end of the battle' };
+const theGiver = (giver, gu) => (/^the /i.test(giver) || (gu && hasKw(gu, 'Epic Hero')) ? '' : 'the ') + giver;
+function fnCond(id, p, u, giver, own, b, gu){
   const C = WH_EFFECTS.COND[id];
   if(id === 'aura') return own ? 'Own aura' : giver ? 'Within ' + p + '" of ' + giver : C.label(p);
   if(id === 'selected' && giver) return 'Selected by ' + giver;
+  if(id === 'targetSelected' && giver) return ['Target selected by ' + theGiver(giver, gu), FN_LASTS[(b || {}).lasts] || ''].filter(Boolean).join(' ');
   if(id === 'belowStarting' && modelCount(u) === 1) return 'Lost any wounds (' + C.label(p) + ')';
   if(id === 'belowHalf' && modelCount(u) === 1) return halfBelow(u) + ' or fewer wounds left (' + C.label(p) + ')';
   return C ? C.label(p) : id;
@@ -1557,7 +1566,7 @@ function fnLine(S, b, u, kind, ab){
   // rule. A box whose only conditions are quoted says "If (see the rule)" (FN_IF), the rule's name opening its words: the owner's
   // decision, 31 Oct, never shown as always on. "Every attack": no condition at all, in the box or its options)
   const quoted = ([id]) => !!(E.COND[id] && E.COND[id].quoted), on = b.on || [];
-  const conds = on => (on || []).map(([id, p]) => fnCond(id, p, u, giver, own)).join(' · ');
+  const conds = on => (on || []).map(([id, p]) => fnCond(id, p, u, giver, own, b, S.src)).join(' · ');
   const onlyQ = on.length && on.every(quoted);
   const anyPickOn = (b.pick || []).some(p => (p.on || []).length || p.part);
   const when = [sPh, onlyQ ? FN_IF : conds(on)].filter(Boolean).join(', ') || (S.strat || anyPickOn ? '' : b.kind === 'ranged' ? 'Every ranged attack' : b.kind === 'melee' ? 'Every melee attack' : 'Every attack');
@@ -1575,7 +1584,7 @@ function fnLine(S, b, u, kind, ab){
   const m = { kind:b.kind, when, note, who, from:S.name, box:b, key:S.key };
   if(S.rule) m.rule = S.rule;
   if(S.strat){ m.strat = S.strat; m.cp = S.cp; }
-  if(S.src && S.src !== u) m.src = S.src;
+  if(S.src && S.src !== u){ m.src = S.src; m.giver = giver; }
   if(S.damaged) m.damaged = true;
   // a box for one weapon's characteristics, nothing else: that weapon's row shows it ("8 (+6)", "6/7"), its condition under it
   // (not a stratagem's, nor an ability's the unit uses, "if it uses this ability": the player's to use, as a one-off is: oneOffMod)
@@ -1612,8 +1621,9 @@ function unitMods(u, kind){
     // another unit's words (they may not reach this one), not a Damaged band's (its band says so). And a box of it the two-reader rule
     // does not confirm, where it reaches: another unit's too, with the unit it is from, "not counted here: see the rule (Tech-Priest Enginseer)")
     const giver = S.grp === 'other' ? fnGiver(S, u) : '';
-    if(!S.damaged && (fell || (S.grp !== 'other' && (o.nc || []).some(x => x.atk && !x.unconfirmed))) && !out.some(x => x.key === S.key && x.ncLine)) out.push(Object.assign({ kind:'all', when:'', note:FN_NC + (giver ? ' (' + giver + ')' : ''), who:'', from:S.name, key:S.key, box:null, ncLine:true },
-      S.rule ? { rule:S.rule } : {}, S.strat ? { strat:S.strat, cp:S.cp } : {}, S.src && S.src !== u ? { src:S.src } : {}));
+    // (drawn as ncHtml: a rule's name alone, else its name and its short summary, another unit's "Granted by")
+    if(!S.damaged && (fell || (S.grp !== 'other' && (o.nc || []).some(x => x.atk && !x.unconfirmed))) && !out.some(x => x.key === S.key && x.ncLine)) out.push(Object.assign({ kind:'all', when:'', note:FN_NC + (giver ? ' (' + giver + ')' : ''), who:'', from:S.name, key:S.key, box:null, ncLine:true, short:ncShortOf(S) },
+      S.rule ? { rule:S.rule } : {}, S.strat ? { strat:S.strat, cp:S.cp } : {}, S.src && S.src !== u ? { src:S.src, giver } : {}));
   }
   return out;
 }
@@ -2013,7 +2023,7 @@ const HW_CK = { t:'the phases it is triggered in', u:'the phases its effect is u
 const HW_SRC = { gw:'GW', bsdata:'BSData', newrecruit:'New Recruit', wahapedia:'Wahapedia', derived:'computed' };
 const HW_LAYERS = [
   ['mech', 'Mechanical', 'copied by a program from GW, BSData, New Recruit or Wahapedia, or worked out from them by a program; the tag names the source.'],
-  ['sum', 'AI summary', 'a one-line gist of a stratagem, written by AI. It carries a fingerprint of the text it sums up: a change in GW’s words flags it to be read again.'],
+  ['sum', 'AI summary', 'a one-line gist of a stratagem, or the short summary a datasheet shows of a rule it does not count (an ability, an enhancement, a stratagem), written by AI and labelled AI, its rules as written a tap away. It carries a fingerprint of the text it sums up: a change in GW’s words flags it to be read again.'],
   ['read', 'AI reading', 'the numbers and conditions behind the datasheets’ footnotes and the “When targeted” lines (not the Damage tab’s: its boxes are made by a program from GW’s words), read from GW’s words by AI (a few by a program): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.'],
   ['hand', 'Hand', 'a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.']];
 // a column's layer: its source in verify/columns.json (verify/tables.js fails unless ai-summary and ai-reading are exactly what it fingerprints)
@@ -4570,14 +4580,31 @@ function screenUnits(){
 
 /* ---------- weapon tables ---------- */
 const colHeader = kind => '<div class="wh ' + kind + '"><span class="n">Weapon</span>' + (kind === 'ranged' ? ['RNG','A','BS','S','AP','D'] : ['A','WS','S','AP','D']).map(c => '<span>' + c + '</span>').join('') + '</div>';
+// where a footnote's rule comes from: what its name opens (its rule, its stratagem, its ability: another unit's too, its rule not that unit,
+// which its "Granted by" opens)
+const modTarget = (m, u) => { if(m.rule) return ['rule', m.rule]; if(m.strat) return ['strat', m.strat];
+  const ab = ((m.src || u).abilities || []).find(a => a.name === m.from); return ab ? ['ability', abilityKey(ab)] : null; };
 // where a footnote's rule comes from, as a link to its text
 function modFrom(m, u){
-  const link = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';
-  if(m.rule) return link('rule', m.rule, m.from);
-  if(m.strat) return link('strat', m.strat, m.cp + 'CP ' + m.from);
-  if(m.src && m.src !== u) return link('unit', m.src.id, m.from);   // the condition already names the unit
-  const ab = (m.src || u).abilities.find(a => a.name === m.from);
-  return ab ? link('ability', abilityKey(ab), m.from) : esc(m.from);
+  const t = modTarget(m, u);
+  return t ? linkTo(t[0], t[1], m.strat ? m.cp + 'CP ' + m.from : m.from) : esc(m.from);
+}
+// ---- a source whose words are not counted here (BOXES nc / dnc, or a box the two-reader rule does not confirm, AGREE 0): an army or
+// detachment rule, or a core rule, is its name alone, opening it; any other (an ability, its own or another unit's, an enhancement, a
+// stratagem) its name and its short summary (short: AI-written, labelled AI as a gist is, fingerprinted by shortOf, the rule a tap away),
+// another unit's as "Granted by: <unit> - <summary> (<name>)". The Damage tab keeps its own "Not counted" list. ----
+// (the short summary of a source: its stratagem's, its ability's, an enhancement's row of the list's detachments)
+const enhRowOf = name => detachments().flatMap(d => d.enhancements || []).find(e => e.name === name) || null;
+const ncShortOf = S => S.rule || S.a === 'rule' ? '' : S.s ? S.s.short || '' : S.ab ? S.ab.short || (enhRowOf(S.ab.name) || {}).short || '' : '';
+// (the summary, opening the rule as its name does, with the AI label; none written yet: GW's words a tap away, as before)
+const ncSum = (t, short) => short ? (t ? linkTo(t[0], t[1], short) : esc(short)) + ' ' + aiLabel : FN_NC;
+// (another unit's line: "Granted by: Neurolictor - …", the unit's name opening its datasheet)
+const grantedBy = (src, giver) => '<span class="gby">Granted by: ' + (src ? linkTo('unit', src.id, giver) : esc(giver)) + '</span> - ';
+function ncHtml(m, u){
+  const t = modTarget(m, u);
+  if(m.rule) return '<div class="mod">' + modFrom(m, u) + '</div>';
+  if(m.giver) return '<div class="mod">' + grantedBy(m.src, m.giver) + ncSum(t, m.short) + ' <span class="from">(' + modFrom(m, u) + ')</span></div>';
+  return '<div class="mod">' + ncSum(t, m.short) + ' <span class="from">(' + modFrom(m, u) + ')</span></div>';
 }
 // AP -2 improved by 1 is AP -3
 function weaponBlock(it, keys, mods, u){
@@ -4641,6 +4668,7 @@ function stratModLines(det, list, u, hasHunter){
   const shared = list.every(m => lead(m) && lead(m) === lead(list[0])) ? lead(list[0]) : '';
   return '<div class="msep">Stratagems · ' + esc(det) + (shared ? ' · ' + esc(shared) : '') + '</div>' + list.map(m => {
     const cond = shared ? m.when.slice(shared.length).replace(/^, /, '') : m.when;
+    if(m.ncLine) return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> ' + ncSum(['strat', m.strat], m.short) + ' <span class="from">(' + linkTo('strat', m.strat, m.from) + ')</span></div>';
     return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + (m.scope ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) +
       (cond ? (/^vs\b/i.test(cond) ? ' ' : ', ') + esc(cond) : '') + (m.hunter && hasHunter ? ' (the (+' + Object.values(m.hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '') + '</div>';
   }).join('');
@@ -4651,6 +4679,12 @@ function modGroupLines(mods, u, hasHunter){
   // (by condition and by source: two rules with the same condition are two lines)
   for(const m of mods){ const k = m.when ? norm(m.when) + '\0' + m.from : '\0' + groups.size; if(!groups.has(k)) groups.set(k, { when:m.when, items:[] }); groups.get(k).items.push(m); }
   return [...groups.values()].map(g => {
+    if(g.items[0].ncLine) return ncHtml(g.items[0], u);
+    // (another unit's: "Granted by: <unit> - <its conditions>: <its effects> (<its name>)", the name opening its rule)
+    const m0 = g.items[0];
+    if(m0.giver && g.items.every(m => m.giver === m0.giver && m.from === m0.from))
+      return '<div class="mod">' + grantedBy(m0.src, m0.giver) + (g.when ? '<b>' + riledWhen(esc(g.when), u) + ':</b> ' : '') + g.items.map(m => (m.scope ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) +
+        (m.hunter && hasHunter ? ' (the (+' + Object.values(m.hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '')).join(' · ') + ' <span class="from">(' + modFrom(m0, u) + ')</span></div>';
     const named = g.items.length === 1 && g.when.indexOf(g.items[0].from) >= 0 ? g.items[0] : null;
     const when = riledWhen(named ? esc(g.when).replace(esc(named.from), modFrom(named, u)) : esc(g.when), u);
     return '<div class="mod">' + (g.items.every(m => m.scope === g.items[0].scope) && g.items[0].scope ? '<i class="sc">' + g.items[0].scope + '</i>' : '') +
@@ -4900,7 +4934,7 @@ function defSources(u){
     if(own || reach) put({ grp:'army', name:r.name, a:'rule', v:r.name, key:DM_KEY.r(r), reachOnly:reach, holders:reach ? A.units.filter(x => hasRule(x, r.name)) : null }); }
   for(const r of unitDetRules(u)) put({ grp:'army', name:r.name, a:'rule', v:r.name, key:DM_KEY.r(r) });
   for(const ab of u.abilities || []) if(!naReason(ab)) put({ grp:'unit', name:ab.name, a:'ability', v:abilityKey(ab), key:DM_KEY.a(ab), ab, src:u });
-  for(const x of A.units) if(x !== u) for(const ab of x.abilities || []) if(!naReason(ab)) put({ grp:'other', name:ab.name, a:'unit', v:x.id, key:DM_KEY.a(ab), ab, src:x });
+  for(const x of A.units) if(x !== u) for(const ab of x.abilities || []) if(!naReason(ab)) put({ grp:'other', name:ab.name, a:'unit', v:x.id, key:DM_KEY.a(ab), ab, src:x, abv:abilityKey(ab) });
   // (the core stratagems, every unit's, are on the Stratagems tab, as for the footnotes)
   for(const s of allStratagems().filter(s => s.src !== 'Core')){ const o = defBoxesOf(DM_KEY.s(s)); if(!o) continue;
     const mine = o.dreach ? matches(o.dreach, u) && A.units.some(x => x !== u && canTarget(s, x)) : canTarget(s, u);
@@ -4916,7 +4950,7 @@ function defLineOf(S, b, u){
   const giver = S.grp === 'other' ? (S.ab && S.ab.who && S.src.leads && charsOf(S.src).some(c => c.name === S.ab.who) ? S.ab.who : S.src.short || S.src.name)
     : S.holders ? 'a unit with ' + S.name : '';
   const own = S.grp === 'unit' && b.mark === 'aura';
-  const said = ([id, p]) => E.DCOND[id] ? E.DCOND[id].label(p) : fnCond(id, p, u, giver, own);
+  const said = ([id, p]) => E.DCOND[id] ? E.DCOND[id].label(p) : fnCond(id, p, u, giver, own, b, S.src);
   const quoted = ([id]) => !!(E.COND[id] && E.COND[id].quoted);
   const ph = S.s && (S.s.phases || []).length === PHASES.length ? 'Any phase' : S.s && (S.s.phases || []).length ? S.s.phases.map((p, i) => (T => (T === 'your' ? 'Your ' : T === 'opp' ? 'Your opponent’s ' : i ? 'the ' : '') + PHASE_NAME[p] + ' phase')(phTurn(S.s, p))).join(' or ') : '';
   const df = b.pick ? b.pick.flatMap(p => p.df) : b.df;
@@ -4927,7 +4961,7 @@ function defLineOf(S, b, u){
   const sc = b.scope || {}, models = sc.models && sc.models !== 'model' ? sc.models + ' models: ' : '';
   // (how long it lasts where its words say it lasts beyond the phase: "until the start of your next Command phase")
   const text = models + (b.pick ? 'one of: ' + b.pick.map(p => E.dfLabel(p.df)).join(' · ') : E.dfLabel(b.df)) + (b.until ? ' (' + b.until + ')' : '');
-  return { a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp === 'unit' ? S.ab.who : '', when, text, from:S.grp === 'other' ? giver : '', riled:on.some(x => x[0] === 'riled'), box:b, key:S.key, rl:S.rl || '' };
+  return { a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp === 'unit' ? S.ab.who : '', when, text, from:S.grp === 'other' ? giver : '', abv:S.abv, riled:on.some(x => x[0] === 'riled'), box:b, key:S.key, rl:S.rl || '' };
 }
 // every "When targeted" line of a unit, in the order: its Rules line's core rules, army and detachment rules, its own abilities, other units',
 // stratagems; t the line's words (as drawn)
@@ -4952,7 +4986,8 @@ function defenceItems(u){
     // (its words about attacks against it no defence reads: "not counted here: see the rule", once; not another unit's)
     // (and a box of it the two-reader rule does not confirm, where it reaches: another unit's too, with the unit it is from)
     const giver = S.grp === 'other' ? (S.ab && S.ab.who && S.src.leads && charsOf(S.src).some(c => c.name === S.ab.who) ? S.ab.who : S.src.short || S.src.name) : '';
-    if(fell || (S.grp !== 'other' && (S.o.dnc || []).some(x => !x.unconfirmed))) out.push({ a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp !== 'other' ? S.ab.who : '', when:'', text:FN_NC, from:giver, key:S.key, ncLine:true, rl:S.rl || '' });
+    // (drawn by defLine as a not-counted line is, ncHtml: a rule's name alone, else its name and short summary, another unit's "Granted by")
+    if(fell || (S.grp !== 'other' && (S.o.dnc || []).some(x => !x.unconfirmed))) out.push({ a:S.a, v:S.v, name:S.name, cp:S.cp || '', who:S.ab && S.ab.who && u.leads && S.grp !== 'other' ? S.ab.who : '', when:'', text:FN_NC, from:giver, abv:S.abv, key:S.key, ncLine:true, short:ncShortOf(S), rl:S.rl || '' });
   }
   // (a Feel No Pain on its Rules line that another of its lines says with its condition or its model: Aegis of the Emperor's "against mortal
   // wounds", New Recruit's starred "Feel No Pain 5+*"; Trajann's own: not said twice)
@@ -4966,7 +5001,10 @@ function defenceItems(u){
   const res = out.filter(x => !(x.rl && /^feel no pain/i.test(x.rl) && (starV(x) ? [+starV(x)] : fnpOf(x)).some(v => out.some(y => y !== x && !y.rl && (y.a === 'ability' || /\*$/.test(x.rl)) && fnpOf(y).includes(v)))));
   // (the one model of an attached unit a rule of its Rules line is on: partialRules)
   for(const x of res) if(x.rl && !x.who){ const w = partialWho(u, x.rl); if(w) x.who = w; }
-  for(const x of res) x.t = x.rl && !x.when && x.text === x.name ? x.name : [x.cp ? x.cp + 'CP' : '', x.name + ':', x.when ? x.when + ':' : '', x.text, x.from ? '(' + x.from + ')' : ''].filter(Boolean).join(' ');
+  // (as defLine draws it: a not-counted rule's name alone; a not-counted source's short summary for its words; another unit's "Granted by")
+  for(const x of res){ const text = x.ncLine ? x.short || FN_NC : x.text;
+    x.t = (x.rl && !x.when && x.text === x.name) || (x.ncLine && x.a === 'rule') ? x.name : x.from ? ['Granted by: ' + x.from + ' -', x.when ? x.when + ':' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ')
+      : x.ncLine ? [x.cp ? x.cp + 'CP' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ') : [x.cp ? x.cp + 'CP' : '', x.name + ':', x.when ? x.when + ':' : '', text].filter(Boolean).join(' '); }
   return res;
 }
 // a unit always riled up by one of its own rules (BOXES riled, from its words: Super Runts): its riled-up lines say so, with the model that has the
@@ -4982,8 +5020,13 @@ function defLine(x, u){
   const w = ar ? when.replace(/^(.*?)Riled up/, (m, pre) => pre + 'Riled up (' + ar + ')') : when;
   // (a rule of its Rules line that is its defence, "Feel No Pain 5+": its name)
   if(x.rl && !w && x.text === x.name) return who + '<b>' + linkTo(x.a, x.v, x.name) + '</b>';
-  return who + (x.cp ? '<b class="cpb">' + esc(x.cp) + 'CP</b> ' : '') + '<b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + (w ? '<span class="tw">' + w + ':</span> ' : '') + esc(x.text) +
-    (x.from ? ' <span class="from">(' + linkTo('unit', x.v, x.from) + ')</span>' : '');
+  // (a rule whose words are not counted here: its name alone; another source's: its short summary, AI-labelled, opening its rule: ncHtml)
+  if(x.ncLine && x.a === 'rule') return who + linkTo(x.a, x.v, x.name);
+  // (what opens its rule: another unit's ability its rule, not that unit, which its "Granted by" opens)
+  const ra = x.abv ? 'ability' : x.a, rv = x.abv || x.v, text = x.ncLine ? ncSum([ra, rv], x.short) : esc(x.text);
+  if(x.from) return who + grantedBy(x.a === 'unit' ? { id:x.v } : null, x.from) + (w ? '<span class="tw">' + w + ':</span> ' : '') + text + ' <span class="from">(' + linkTo(ra, rv, x.name) + ')</span>';
+  if(x.ncLine) return who + (x.cp ? '<b class="cpb">' + esc(x.cp) + 'CP</b> ' : '') + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
+  return who + (x.cp ? '<b class="cpb">' + esc(x.cp) + 'CP</b> ' : '') + '<b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + (w ? '<span class="tw">' + w + ':</span> ' : '') + text;
 }
 const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';
 // every ability of the datasheet is listed, as on the paper datasheet; footnotes and "When targeted"
