@@ -1,0 +1,145 @@
+[
+ {
+  "army": "basic-bitch",
+  "kind": "ability-tag",
+  "where": "basic-bitch · Maleceptor · Encephalic Diffusion",
+  "judgement": {
+   "tag": "Aura, Psychic"
+  },
+  "source": {
+   "ability": "Encephalic Diffusion",
+   "text": "While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well."
+  },
+  "key": "877358dd83d8af7d"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-bsdata.json · maleceptor · stats.base",
+  "judgement": {
+   "app": "Maleceptor: 120×92mm Oval",
+   "source": "Maleceptor: 120x92mm"
+  },
+  "source": {
+   "reason": "BSData at the pin (Xenos - Tyranids catalogue revision 3) has Maleceptor: 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval; New Recruit’s export (catalogue revision 3) has 120×92mm. GW wins.",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3824: \"Maleceptor  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: 120×92mm."
+  },
+  "key": "96e272f305246f8f"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "deviation",
+  "where": "deviations-nr.json · maleceptor · stats[Maleceptor].base",
+  "judgement": {
+   "app": "120×92mm Oval",
+   "source": "120x92mm"
+  },
+  "source": {
+   "reason": "New Recruit’s export (catalogue revision 3) gives the base as 120x92mm; GW’s base size guide (Event Companion) has 120×92mm Oval. GW wins (base sizes too).",
+   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3824: \"Maleceptor  120x92mm Oval Base\"; verify/sources/nr-json/basic-bitch.json: Base 120x92mm."
+  },
+  "key": "726f89b11d4549bf"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "points",
+  "where": "points (basic-bitch export, 4 Nov 2026)",
+  "judgement": {
+   "app": {
+    "The Red Terror": 120,
+    "The Swarmlord + Tyrant Guard": "210 + 170",
+    "Hive Tyrant + Tyrant Guard": "195 + 170",
+    "Tyranid Prime with Lash Whip + Hormagaunts": "75 + 120 ×2",
+    "Biovores": 60,
+    "Neurolictor": "80 ×2",
+    "Von Ryan’s Leapers": 55,
+    "Maleceptor": 180,
+    "Psychophage": 110,
+    "Tyrannofex": "170 + Acid spray 10",
+    "Spore Mines (Biovore)": 0
+   },
+   "total": 2000
+  },
+  "source": {
+   "reason": "Against the reviewed list (todo-basic-bitch.json d57bfa720d2613b3): Von Ryan’s Leapers one unit (was ×2, 55 each), Haruspex 125 out, Maleceptor 180 in (GW: YOUR 1ST TO 2ND UNITS COST 1 model 180). 2000 − 55 − 125 + 180 = 2000.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Maleceptor.html line 1530: \"YOUR 1ST TO 2ND UNITS COST … 1 model 180\"; data.js DATASHEETS tyranids/maleceptor points; verify/sources/nr-json/basic-bitch.json"
+  },
+  "key": "b3d63ff7264a2f00"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "catalogue-row",
+  "where": "DATASHEETS tyranids/maleceptor (now a list row)",
+  "judgement": {
+   "app": "the catalogue row as verify/from-bsdata.js wrote it (stats, Psychic overload, Massive scything talons strike/sweep, Encephalic Diffusion tag Aura, Psychic, Damaged 1-5, Rules line Deadly Demise D3 / Shadow in the Warp / Synapse / Psychic / Blast, keywords, points 180/190, base 120×92mm Oval); aiStatus dropped, Encephalic Diffusion labelled by verify/derive.js (Their Movement / Your Shooting / Fight)"
+  },
+  "source": {
+   "reason": "Nothing hand-written: catalogue row (review result-catalog-tyranids*.json) and derive.js labels; the numbers, keywords and words steps pass against GW’s datasheet.",
+   "evidence": "verify/.cache/waha/ds/tyranids_Maleceptor.html; verify/sources/catalog/tyranids.json \"tyranids/maleceptor\""
+  },
+  "key": "b424e0c4de0d69d0"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "catalogue-row",
+  "where": "DATASHEETS tyranids/haruspex (back to the catalogue)",
+  "judgement": {
+   "app": "no list uses the Haruspex now: its row is the catalogue’s again (aiStatus:'not-read'), Grisly Spectacle without the derive.js timing label and its Damaged band marker, as every catalogue-only row"
+  },
+  "source": {
+   "reason": "verify/tables.js --write: a row no list has is the catalogue’s (docs/tables.md, Faction catalogues).",
+   "evidence": "git show f80ddde -- data.js"
+  },
+  "key": "f1d38b47c25ae040"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "question",
+  "where": "Maleceptor · Encephalic Diffusion · defence box a|uj59ei (gate: defence, agree, derived fail)",
+  "judgement": {
+   "app": "BOXES a|uj59ei d[0]: df [hitMinus 1, woundMinus 1], on [q \"While an enemy unit is within 6\\\" of this model\"], foe. The Wound-roll part is shown unconditional; GW makes it conditional on the attacking enemy unit being Below Half-strength. The app falls back to \"not counted here: see the rule\" (AGREE null), so no number is shown wrongly today."
+  },
+  "source": {
+   "reason": "defence DC: “if that enemy unit is Below Half-strength” is no condition of the box. agree: reader2 disagrees ({\"d\":[0]}) and verify/reader2/readings2.json is out of date (needs node reader2.js, not run: verify/reader2 not to be edited by this branch). The effects vocabulary has no condition for the attacking unit being Below Half-strength, so the fix is a code decision (effects-extract.js / effects.js: split the box, or count only the Hit-roll part and list the Wound-roll clause as not counted), then effects-migrate --write, reader2, agree --write. Not done here: needs the coordinator.",
+   "text": "While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well."
+  },
+  "key": "b120e3decceabad9"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "hand-file",
+  "where": "verify/sources/hand/basic-bitch.json (unchanged)",
+  "judgement": {
+   "app": "no change: none of its six gists or six unit entries names the Haruspex, the second Von Ryan’s Leapers or Priority Assets; every entry still applies to a unit or detachment the list has"
+  },
+  "source": {
+   "reason": "Hand entries: Invasion Fleet gists (the detachment stays), the-swarmlord-tyrant-guard, hive-tyrant-tyrant-guard, tyranid-prime-with-lash-whip-hormagaunts, biovores, spore-mines-biovore, tyrannofex. The reimport step passes with it (every hand-file entry has its reason).",
+   "evidence": "verify/sources/hand/basic-bitch.json"
+  },
+  "key": "6481dbaa5e8e3845"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/basic-bitch.txt",
+  "judgement": {
+   "change": "Disposition Take and Hold (chosen) on the home and army screens and the rules header; source \"exported 4 Nov 2026\"; counts: bases 69→66, units 13→12, melee weapons 18→17; one Von Ryan’s Leapers (55, no \"×2 units\" / \"mark them apart\", 3× 40mm bases instead of 6×); Haruspex → Maleceptor in GW’s datasheet order (between Von Ryan’s Leapers and Psychophage) on the roster, weapons, abilities, bases, unit pages and every APPLIES TO / USED BY / IN THIS ARMY line (Deadly Demise, Hyper-adaptations, Fire Overwatch, Crushing Impact; Precision and Extra Attacks lose the Haruspex; Blast and Psychic gain the Maleceptor, new Psychic popup); Maleceptor page: 180 pts, M8 T11 Sv3+ W14 Ld7+ OC4 InSv4+, Psychic overload, Massive scything talons strike/sweep, Encephalic Diffusion (Aura, Psychic · Their Movement / Your Shooting / Fight), Damaged 1-5 with “[PSYCHIC] weapons can ignore it”, Rules gains Shadow in the Warp, keywords PSYKER / SYNAPSE / MALECEPTOR, Invasion Fleet stratagems; every unit’s WHEN TARGETED +1: “Encephalic Diffusion: not counted here: see the rule (Maleceptor)”."
+  },
+  "source": {
+   "diff": "scratchpad/bb-work/basic-bitch.diff (verify/out/snapshots/basic-bitch.txt of the gate run on f80ddde)"
+  },
+  "key": "a405132418f3b63c"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "snapshot-change",
+  "where": "verify/snapshots/shooty.txt",
+  "judgement": {
+   "change": "Home screen: Basic Bitch’s “chosen” moves from Priority Assets to Take and Hold (3 places); table counts BOXES 447→448 rows, ids 833→832."
+  },
+  "source": {
+   "diff": "scratchpad/bb-work/shooty.diff"
+  },
+  "key": "07be1f71942d51e4"
+ }
+]
