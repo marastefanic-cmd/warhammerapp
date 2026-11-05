@@ -1,6 +1,6 @@
 {
- "hash": "15d37fb029663d6fc27ecc91fe9196e83e56b825c3b951b4f4fdf30f8164bf22",
- "at": "2026-11-05T00:53:45.751Z",
+ "hash": "c3a92851aacbce72b4847fe7b3db14de9f7c54670c986559521138575d4db490",
+ "at": "2026-11-05T13:31:11.904Z",
  "ok": true,
  "steps": {
   "data": {
@@ -9,7 +9,7 @@
   },
   "tables": {
    "ok": true,
-   "summary": "tables: 225 unit entries in 26 lists over 261 datasheets, 89 rule options, 74 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
+   "summary": "tables: 225 unit entries in 26 lists over 261 datasheets, 89 rule options, 81 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
   },
   "fingerprints": {
    "ok": true,
@@ -25,7 +25,7 @@
   },
   "lines": {
    "ok": true,
-   "summary": "lines: 109 Damaged ranges, 2 once-per-battle chips, 2 extra-CP chips and 12 \"does nothing here\" chips as their words give them; 152 lines under a profile from stat boxes; 1352 footnotes (8 in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects' and conditions' labels, 331 \"see the rule\" lines; 130 catalogue labels with their values; 309 boxes with every condition of their words (69 reach boxes and models scopes checked against GW’s phrase, 0 unchecked, said “If (see the rule)”); 66 Damaged bands as their boxes; 1281 drawn lines, one source each; 686 sources the lists use, every sentence of the numbers counted or listed not counted; 18 fixed cases"
+   "summary": "lines: 109 Damaged ranges, 2 once-per-battle chips, 2 extra-CP chips and 12 \"does nothing here\" chips as their words give them; 152 lines under a profile from stat boxes; 1352 footnotes (8 in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects' and conditions' labels, 331 \"see the rule\" lines; 130 catalogue labels with their values; 309 boxes with every condition of their words (69 reach boxes and models scopes checked against GW’s phrase, 0 unchecked, said “If (see the rule)”); 66 Damaged bands as their boxes; 1281 drawn lines, one source each; 685 sources the lists use, every sentence of the numbers counted or listed not counted; 18 fixed cases"
   },
   "defence": {
    "ok": true,
@@ -41,7 +41,7 @@
   },
   "derive": {
    "ok": true,
-   "summary": "derive: 1070 agreed labels hold; 1 differ, 199 not derivable (verify/out/derive.md)"
+   "summary": "derive: 1070 agreed labels hold; 1 differ, 241 not derivable (verify/out/derive.md)"
   },
   "choice": {
    "ok": true,
@@ -49,7 +49,7 @@
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 17058 facts checked against BSData b4dc3f4 (clone) {\"gear\":1205,\"stats\":2619,\"weapons\":8040,\"abilities\":1546,\"keywords\":1930,\"rules\":1158,\"grants\":254,\"points\":305,\"extract\":1}; 257 deviations used; 99 ability texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win); 0 failures"
+   "summary": "bsdata: 17093 facts checked against BSData b4dc3f4 (clone) {\"gear\":1205,\"stats\":2619,\"weapons\":8040,\"abilities\":1581,\"keywords\":1930,\"rules\":1158,\"grants\":254,\"points\":305,\"extract\":1}; 257 deviations used; 99 ability texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win); 0 failures"
   },
   "dispositions": {
    "ok": true,
@@ -61,11 +61,11 @@
   },
   "catalog": {
    "ok": true,
-   "summary": "catalog: adeptus-custodes 29 datasheets, 13 detachments, 93 left out; chaos-daemons 56 datasheets, 9 detachments, 73 left out; tyranids 52 datasheets, 10 detachments, 42 left out; checked {\"filter\":168,\"complete\":169,\"fresh\":3,\"tables\":155,\"nr\":524,\"bsdata\":404,\"texts\":461}; 404 BSData deviations used"
+   "summary": "catalog: adeptus-custodes 29 datasheets, 13 detachments, 93 left out; chaos-daemons 56 datasheets, 9 detachments, 73 left out; tyranids 52 datasheets, 10 detachments, 42 left out; checked {\"filter\":168,\"complete\":169,\"fresh\":3,\"tables\":155,\"nr\":531,\"bsdata\":404,\"texts\":461}; 404 BSData deviations used"
   },
   "nr": {
    "ok": true,
-   "summary": "nr: 0 failure(s); 11258 facts checked (army 186, units 126, roster 531, pts 252, copies 126, models 126, enhancement 252, warlord 252, leads 378, gear 220, stats 1508, ranged 2259, from 71, melee 2007, abilities 1165, kw 172, rules 1329, glossary 298); 214 declared deviations used; 59 names and texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win) Report: verify/out/nr.json"
+   "summary": "nr: 0 failure(s); 11285 facts checked (army 186, units 126, roster 531, pts 252, copies 126, models 126, enhancement 252, warlord 252, leads 378, gear 220, stats 1508, ranged 2259, from 71, melee 2007, abilities 1192, kw 172, rules 1329, glossary 298); 214 declared deviations used; 59 names and texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win) Report: verify/out/nr.json"
   },
   "texts": {
    "ok": true,
@@ -81,7 +81,7 @@
   },
   "words": {
    "ok": true,
-   "summary": "words: 1232 ability texts of 261 datasheets and 225 list units checked against their Wahapedia datasheet pages: 1196 equal (36 Leader lines as unit lists); 14 declared differences (verify/deviations-words.json)"
+   "summary": "words: 1224 ability texts of 261 datasheets and 225 list units checked against their Wahapedia datasheet pages: 1196 equal (36 Leader lines as unit lists); 12 declared differences (verify/deviations-words.json)"
   },
   "calc": {
    "ok": true,
@@ -93,23 +93,23 @@
   },
   "reimport": {
    "ok": true,
-   "summary": "reimport: all 24 New Recruit exports re-import to data.js byte for byte (5 files each: data.js, verify/deviations-bsdata.json, verify/deviations-nr.json, verify/sources/waha-datasheets.txt, verify/sources/bsdata-extract.json); every hand-file entry has its reason; every id kept from data.js is named in its hand file"
+   "summary": "reimport: all 24 New Recruit exports (and 1 changed on purpose, 5) re-import to data.js byte for byte (5 files each: data.js, verify/deviations-bsdata.json, verify/deviations-nr.json, verify/sources/waha-datasheets.txt, verify/sources/bsdata-extract.json); every hand-file entry has its reason; every id kept from data.js is named in its hand file; 6 of a catalogued faction built by builder.js as on the phone (basic-bitch, healybois, lite-knights, nidzillas, the-exiled-legion, tzeeeeentch), 18 by from-json.js until their faction’s catalogue lands"
   },
   "derived": {
    "ok": true,
-   "summary": "derived: 118 of 138 derived columns held by the script they name: a change of one value fails its step (reimport 1, nr 1, fingerprints 7, derive 41, texts 4, evidence 28, lines 8, tables 7, defence 13, readings 1, catalog 1, build-parity › build-index.js 5, agree 1; 2 kept from a run of the same code); 20 with no value stored in data.js; verify/out/derived-proof.json"
+   "summary": "derived: 118 of 138 derived columns held by the script they name: a change of one value fails its step (reimport 1, nr 1, fingerprints 7, texts 4, derive 41, evidence 28, lines 8, tables 7, defence 13, readings 1, catalog 1, build-parity › build-index.js 5, agree 1; 2 kept from a run of the same code); 20 with no value stored in data.js; verify/out/derived-proof.json"
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 3329 screens and popups, 2057 helper texts, 0 failures"
+   "summary": "render at 390px: 3344 screens and popups, 2073 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 3329 screens and popups, 2057 helper texts, 0 failures"
+   "summary": "render at 320px: 3344 screens and popups, 2073 helper texts, 0 failures"
   },
   "build-parity": {
    "ok": true,
-   "summary": "build-parity: P1: 6 built byte for byte (basic-bitch, healybois, lite-knights, nidzillas, the-exiled-legion, tzeeeeentch), 18 copied (no catalogue), 0 differ; 227 checks, 0 failures"
+   "summary": "build-parity: P1: 6 built byte for byte (basic-bitch, healybois, lite-knights, nidzillas, the-exiled-legion, tzeeeeentch), 18 copied (no catalogue), 0 differ; 243 checks, 0 failures"
   },
   "snapshots": {
    "ok": true,
@@ -117,7 +117,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 438 judgements, 438 approved, 0 to check, 2745 stale approvals"
+   "summary": "helpers: 444 judgements, 444 approved, 0 to check, 2747 stale approvals"
   }
  }
 }

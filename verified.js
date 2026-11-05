@@ -1,17 +1,17 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "15d37fb029",
- "data": "2026-11-04.2",
+ "build": "c3a92851aa",
+ "data": "2026-11-05.1",
  "date": "5 Nov 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
-   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (11258 facts)."
+   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (11285 facts)."
   },
   {
    "label": "BSData,",
-   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (17058 facts)."
+   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (17093 facts)."
   },
   {
    "label": "Granted values:",
@@ -27,11 +27,11 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "438 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "444 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "3329 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "3344 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
