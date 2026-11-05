@@ -682,7 +682,7 @@ function buildGroup(g, k) {
   if (assoc.length) hide(u, { _assoc: assoc });
   Object.assign(u, { stats, ranged: kinds.ranged, melee: kinds.melee, abilities, rules: uniq(rules), kw: own.concat(extra) });
   if (extra.length) u.kwNote = extra.join(', ') + (extra.length > 1 ? ' come' : ' comes') + ' from the ' + (g.chars.length > 1 ? 'combined unit' : (g.chars[0].support ? 'supported ' : 'led ') + partName(g.body)) + '.';
-  u._at = g.at; u._parts = parts; hide(u, { _partNames: parts.map(p => nm(p.name)), _exportKw: u.kw.slice(), _partKw: parts.map(catsOf), _partRules: parts.map(p => [...(partOwn.get(p) || [])]) });
+  u._at = g.at; u._parts = parts; hide(u, { _partNames: parts.map(p => nm(p.name)), _exportKw: u.kw.slice(), _partKw: parts.map(catsOf) });
   // the rules of the datasheet itself (the unit and its models), not those its wargear, weapons or enhancement bring
   const dsRules = []; parts.forEach(p => dfs(p, s => { if (s.type === 'unit' || s.type === 'model') for (const r of s.rules || []) dsRules.push(typo(nm(r.name))); }));
   u._dsRules = uniq(dsRules);
@@ -1158,8 +1158,11 @@ for (const u of units) {
   // alone, verify/from-bsdata.js; there the rule's ability is only left off, as above)
   if (!argv.includes('--emit')) u._parts.forEach((p, pi) => {
     const multi = u._parts.length > 1, pn = partName0(p), mine = a => !multi || a.who === pn;
-    for (const e of BW.ruleAbilityErrorsOf(RA, u._partKw[pi], u._partRules[pi])) want(u.name + (multi ? ' · ' + pn : ''), 'ability', e.error);
-    const add = BW.ruleAbilitiesOf(RA, u._partKw[pi], u.abilities.filter(mine), u._partRules[pi]).map(x => { const o = Object.assign({}, x.row); if (multi) { const r = { name: o.name, who: pn }; delete o.name; Object.assign(r, o); return hide(r, { _ra: x.rule }); } return hide(o, { _ra: x.rule }); });
+    // (its Rules line: GW's datasheet page's CORE and army rules for the part, else the DATASHEETS row's; never the export's)
+    const G0 = gwRules.get(u.id), gp = G0 && G0.byPart[pi], row = Object.values(D.datasheets || {}).find(S => S.faction === factionId && S.bsId === lastId(p.entryId));
+    const partRules = gp ? gp.core.concat(gp.army) : row ? row.rules || [] : [];
+    for (const e of BW.ruleAbilityErrorsOf(RA, u._partKw[pi], partRules)) want(u.name + (multi ? ' · ' + pn : ''), 'ability', e.error);
+    const add = BW.ruleAbilitiesOf(RA, u._partKw[pi], u.abilities.filter(mine), partRules).map(x => { const o = Object.assign({}, x.row); if (multi) { const r = { name: o.name, who: pn }; delete o.name; Object.assign(r, o); return hide(r, { _ra: x.rule }); } return hide(o, { _ra: x.rule }); });
     if (!add.length) return;
     let at = -1; u.abilities.forEach((a, i) => { if (mine(a) && !a._e) at = i; });
     if (at < 0) { const i = u.abilities.findIndex(mine); at = i < 0 ? u.abilities.length - 1 : i - 1; }

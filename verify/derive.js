@@ -274,6 +274,18 @@ function usedIn(text, ctx, trig){
       }
       if(skip) continue;
     }
+    // a core ability the unit "has" ("This unit has Stealth", Penumbral Puppetry; "This model has Stealth", Darkness): that core ability's
+    // phases, read from its own words by this table (Stealth's "each time a ranged attack targets that unit": the attacker's Shooting
+    // phase), as a rule's option is used; a label (an ability's row) shows a protection by its When targeted line, as before (label-no-defence)
+    // (not one this table already reads by its own rule: Lone Operative, lone-operative)
+    if(!(ctx && ctx.label) && !(ctx && ctx.inCore) && coreRules() && !ACTIVITY_RULES.some(r => r.def && r.re && r.re.test(sent))){
+      for(const [name, text] of Object.entries(coreRules())){
+        // (GW's name as GW writes it, capitals and all: "has the psychic abilities" is no Psychic)
+        const m = new RegExp('\\b(?:[Hh]as|[Hh]ave|[Gg]ains?) (?:the )?' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b(?! (?:army rule|keyword|abilities))').exec(sent); if(!m) continue;
+        const w = usedIn(text, Object.assign({}, ctx || {}, { inCore:true, label:false }));
+        if(Object.keys(w.ph).length){ add(w.ph, { id:'has-core' }); reasons.push({ rule:'has-core', match:m[0] + ' → ' + JSON.stringify(w.ph).replace(/"/g, '') }); if(w.ph.shooting) guarded = true; }
+      }
+    }
     // a sentence about the unit being attacked is read by the "targeted" rules only
     const defs = ACTIVITY_RULES.filter(r => r.def).map(r => [r, r.re.exec(sent)]).filter(x => x[1]);
     if(defs.length){
@@ -1129,6 +1141,7 @@ function ckBlock(T){
 // its own (Higher Imperatives' Protean Purpose, Silent Sisterhood's Creeping Dread: label-granted-ability)
 let CARD_ABILITIES = null;
 function derive(D){
+  CORE_RULES = D.rules || CORE_RULES;
   const V = vocab(D);
   CARD_ABILITIES = new Set([].concat(...Object.values(D.datasheets || {}).map(u => u.abilities || []), ...(D.armies || []).flatMap(a => a.units || []).map(u => u.abilities || [])).map(a => norm(a.name || '').toLowerCase()));
   const UNREAD = (readJSON(UNREAD_FILE, {}).items) || {};
@@ -1413,8 +1426,12 @@ function knownKw(D, grants){ const m = new Map();
   for(const S of Object.values(D.datasheets || {})) for(const k of S.kw || []){ const b = String(k).replace(/^Faction: /, '').toLowerCase(); if(!m.has(b) || !/^Faction: /.test(m.get(b))) m.set(b, k); }
   for(const g of grants || []) if(g.type === 'keyword or weapon ability' && /^[A-Z’' -]+$/.test(g.grants)){ const b = g.grants.toLowerCase(); if(!m.has(b)) m.set(b, g.grants.split(' ').map(w => w[0] + w.slice(1).toLowerCase()).join(' ')); }
   return m; }
+// the core rules' words, for a core ability a unit "has" (usedIn: has-core); set by ruleTables
+let CORE_RULES = null;
+const coreRules = () => CORE_RULES || (CORE_RULES = (() => { try { return loadData().rules || null; } catch(e){ return null; } })());
 const RELEVANT = /\bhave the relevant abilities presented below\b/i, UNITS_ONLY = /^\*\*([^*]+)\*\* units only\./;
 function ruleTables(D){
+  CORE_RULES = D.rules || CORE_RULES;
   const V = vocab(D), options = [], grants = [], reasons = [], sinks = {}, headedKw = [];   // sinks: the checklist's options and grants per CHECKLIST key
   let ck;
   const grantSink = g => { if(g.type === 'ability' && g.to && typeof g.to === 'object') ck.grants.push(Object.assign({ name:g.grants, to:g.to }, g.option !== undefined ? { opt:g.option } : {}, g.while ? { while:g.while } : {})); };
@@ -1519,6 +1536,20 @@ function ruleTables(D){
       let to = n.bad ? { unread:kw } : tidyNeeds(n);
       if(!to.unread) for(const f of ['all', 'any']) if(to[f]){ const parts = to[f].map(k => known.has(k.toLowerCase()) ? [known.get(k.toLowerCase())] : split(k)); if(parts.some(x => !x)){ to = { unread:kw }; break; } to[f] = [].concat(...parts); }
       grants.splice(at + added++, 0, { rule:s.where, grants:o.name, type:'ability', to, while:null, text:o.text.split('\n')[0] });
+    }
+    // (and an ability a heading's words give "this unit", Penumbral Puppetry's "This unit has **Stealth**": given by the same keywords, its
+    // own grant right after the heading's, not the heading's option; an army rule, "This unit has the **Dark Pacts** army rule", is no ability)
+    for(const { s, o } of headedKw){
+      const head = grants.find(g => g.rule === s.where && g.grants === o.name && !g.option); if(!head) continue;
+      const inner = grants.filter(g => g.rule === s.where && g.option === o.name && g.to === 'this unit / model' && g.type === 'ability' && !/\barmy rule\b/i.test(g.text));
+      for(const g of inner){ grants.splice(grants.indexOf(g), 1); delete g.option; g.to = head.to; g.while = null; }
+      // (and a grant of the rule's other words that stand under this heading, Disciples of Be’lakor's "- SHADOW LEGION HERETIC ASTARTES
+      // models in this unit have the Deep Strike ability": after the heading's too, in GW's order)
+      const T = norm(s.text), heads = headedKw.filter(x => x.s === s).map(x => T.indexOf(x.o.name + '\n')).filter(i => i >= 0).sort((x, y) => x - y);
+      const at0 = T.indexOf(o.name + '\n'), at1 = heads.find(i => i > at0), block = at0 >= 0 ? T.slice(at0, at1 === undefined ? T.length : at1) : '';
+      const under = grants.filter(g => g.rule === s.where && !g.option && g !== head && !headedKw.some(x => x.s === s && x.o.name === g.grants) && g.type === 'ability' && !/\barmy rule\b/i.test(g.text) && block && block.includes(norm(g.text).replace(/^-\s*/, '')));
+      for(const g of under) grants.splice(grants.indexOf(g), 1);
+      grants.splice(grants.indexOf(head) + 1, 0, ...inner, ...under);
     } }
   return { options, grants, reasons, sinks };
 }

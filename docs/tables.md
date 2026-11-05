@@ -369,7 +369,9 @@ condition is the Army Faction ("If your Army Faction is **CHAOS KNIGHTS**": a fa
 one, and no grant otherwise): one whose words it prints ("the following ability", a heading's lines, a row of its table), or a core
 ability it names ("have the **Feel No Pain 6+** ability"). Who: units of some keywords (counting the keywords a rule in force gives by
 keyword, Thralls of the First Prince's SHADOW LEGION), or "each unit from your army with this ability" (the units whose Rules line names
-the rule). Today: Higher Imperatives (Talons of the Norn Queen) gives Protean Purpose to NORN EMISSARY/NORN ASSIMILATOR
+the rule: GW's datasheet's Rules line, the `DATASHEETS` row's in builder.js and the gate, the Wahapedia datasheet page's CORE and army
+rules in from-json, never the export's; `verify/reimport.js` (5) re-imports Woof Woof with the rule stripped from its Karnivores in the
+export and still gets their rows). Today: Higher Imperatives (Talons of the Norn Queen) gives Protean Purpose to NORN EMISSARY/NORN ASSIMILATOR
 units (Nidzillas, Healybois); Daughters of the Abyss (the Adeptus Custodes army rule) gives Psychic Null (Aura) to ANATHEMA PSYKANA units
 (the Prosecutor and Witchseeker Squads of Lite Knights, Emperor's Chosen and Dread Host); Mission Tactics (Deathwatch Support) gives
 Furor, Malleus and Purgatus Tactics to KILL TEAM units (Nerf when's Deathwatch Terminator Squad); Silent Sisterhood (Null Maiden Vigil)
@@ -379,7 +381,13 @@ row of its table "active for your army from the start of the battle", to each un
 (all 11 units of Infernal Lance and Woof Woof; tag "Harbingers of Dread · Aura"); First Prince of Chaos (Shadow Legion) gives "the
 relevant abilities presented below" by their headings' keywords, Murderer's Cowl to SHADOW LEGION KHORNE, Penumbral Puppetry to
 SHADOW LEGION TZEENTCH, Gloam Rot to SHADOW LEGION NURGLE, Shadow's Caress to SHADOW LEGION SLAANESH and Disciples of Be'lakor to
-SHADOW LEGION UNDIVIDED units (GW's capitals in the case of other names; no list takes the detachment). Mission Tactics reads "Friendly
+SHADOW LEGION UNDIVIDED units (GW's capitals in the case of other names), and what a heading's own words give "this unit" by the same
+keywords is a row of its own right after it, as every ability a rule gives (Penumbral Puppetry's "This unit has **Stealth**": a Stealth
+row, the core rule's words; Disciples of Be’lakor's bullet "SHADOW LEGION HERETIC ASTARTES models in this unit have the **Deep Strike**
+ability": a Deep Strike row, to those units); no list takes the detachment. Disciples of Be’lakor's "This unit has the **Dark Pacts**
+army rule" is not a row: GW gives an army rule (of Codex: Chaos Space Marines), not an ability; an army rule is shown on a unit's Rules
+line, and one of another faction is not one the app's rule popup finds (it reads the list's faction's army rules), so it stays in
+Disciples of Be’lakor's words. Mission Tactics reads "Friendly
 KILL TEAM units with this ability": GW's Deathwatch Terminator Squad page lists only Combat Doctrines as its army rule, so "this
 ability" is read as the detachment rule itself, and every KILL TEAM unit of a list that takes it has the rows. Core abilities: Knights of Legend (Freeblade
 Company) gives Feel No Pain 6+ to IMPERIAL KNIGHTS models (every Knight of 6 bigs, 4 megas and a destrier, Navigator sounds op ngl);
@@ -403,7 +411,11 @@ same row:
   enhancement's tag names it: "Higher Imperatives · Once per battle, per unit", "Daughters of the Abyss · Aura", "Mission Tactics". The
   screen shows it as every tag (under the name when the row is opened, and in search); a once-per-battle limit is the row's chip, as
   for any ability.
-- its phases: those `RULE_OPTIONS` gives the option (the program's reading of the rule's words); `verify/derive.js` holds them so.
+- its phases: those `RULE_OPTIONS` gives the option (the program's reading of the rule's words); `verify/derive.js` holds them so. A
+  core ability the words say a unit has ("This unit has **Stealth**") is read with that core ability's own words (derive.js has-core:
+  Stealth's "each time a ranged attack targets that unit", the attacker's Shooting phase; Deep Strike's ingress move, your Movement
+  phase), not for a label (an ability row shows a protection by its When targeted line) nor where this table already reads it (Lone
+  Operative).
 - its place: after the part's datasheet abilities, in the order GW's rule prints them, before an enhancement's (in an attached unit, on
   the part that has the keywords). A datasheet that itself has an ability of that name keeps its own.
 - it is the list's own row (in full on the list's entry, as an enhancement's), never one on `DATASHEETS` (`verify/tables.js` keeps it
@@ -424,8 +436,7 @@ same row:
   (Psychic Null's Feel No Pain 5+ against psychic attacks, Daughters of the Abyss; Blood Tithe's Enraged Abjuration and Might of Khorne,
   bought with Blood Tithe points; Harbingers of Dread's other Dread abilities, Darkness's Stealth among them, selected or rolled during
   the battle), one to "this unit / model" a rule selects rather than by keyword (Malefic Surge's Feel No Pain 6+, Infernal Lance,
-  "Empowered"), what a headed ability gives inside its own words (Penumbral Puppetry's Stealth, its `GRANTS` row now with no option's
-  condition: it is in that row's words; Disciples of Be'lakor's Dark Pacts army rule), and the grants a unit's own ability or an
+  "Empowered"), Disciples of Be'lakor's Dark Pacts army rule (above), and the grants a unit's own ability or an
   enhancement makes (on that unit's own row already). Daughters of the Abyss' "Feel No Pain 3+ against psychic attacks" and Aegis of the
   Emperor's Feel No Pain against mortal wounds are no `GRANTS` rows (GW does not word them as an ability given): the rule's own effect
   on the units that have it, on their Rules line, as their datasheets print it.

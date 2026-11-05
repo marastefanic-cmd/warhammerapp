@@ -216,7 +216,9 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
     neg('a Norn without Talons of the Norn Queen: no Protean Purpose', 'healybois', noTalons, null, r => JSON.stringify(pp(r)) === JSON.stringify(['Norn Emissary:false']));
     report.push('N a Norn without Talons of the Norn Queen → ' + JSON.stringify(pp(B.build(((j => (noTalons(j), j))(clone(exp('healybois')))), D, { id:'n', date:'x' }))));
     ok(JSON.stringify(pp(B.build(exp('healybois'), D, { id:'n', date:'x' })).slice().sort()) === JSON.stringify(['Norn Assimilator:true', 'Norn Emissary:true']), 'N with Talons of the Norn Queen: its Norns have no Protean Purpose');
-    const onRow = Object.entries(D.datasheets).filter(([, S]) => (S.abilities || []).some(a => (D.grants || []).some(g => g.type === 'ability' && g.grants === a.name && / rule · /.test(g.rule) && !g.option && (D.ruleOptions || []).some(o => o.rule === g.rule && o.option === g.grants)))).map(([k]) => k);
+    // (names compared as ruleAbilities compares them: "(Aura)", case and apostrophes aside, Deathly Terror (Aura) for the option Deathly Terror)
+    const nmA = n => String(n || '').replace(/\s*\(Aura\)$/, '').replace(/[’‘]/g, "'").toLowerCase();
+    const onRow = Object.entries(D.datasheets).filter(([, S]) => (S.abilities || []).some(a => (D.grants || []).some(g => g.type === 'ability' && nmA(g.grants) === nmA(a.name) && / rule · /.test(g.rule) && !g.option && (D.ruleOptions || []).some(o => o.rule === g.rule && nmA(o.option) === nmA(g.grants))))).map(([k]) => k);
     ok(!onRow.length, 'N: a DATASHEETS row has an ability an army or detachment rule gives (the list’s, not the datasheet’s): ' + onRow.join(', '));
     // (the owner's rule: the row comes from the rule and the unit's keywords, never from what the export prints) an export without the
     // ability's profile still gets the row; a unit without the keyword gets none, even with the profile in its export; the row is marked
@@ -250,6 +252,9 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
       ok(names(ex, 'chaos-daemons/daemonettes') === 'Seductive Gambit [Seductive Gambit]' && names(ex, 'chaos-daemons/bloodletters') === '', 'N Seductive Gambit: ' + names(ex, 'chaos-daemons/daemonettes') + ' / ' + names(ex, 'chaos-daemons/bloodletters'));
       ok(names(sl, 'chaos-daemons/bloodletters') === 'Murderer’s Cowl [First Prince of Chaos]' && names(sl, 'chaos-daemons/daemonettes') === 'Shadow’s Caress [First Prince of Chaos]', 'N First Prince of Chaos: ' + names(sl, 'chaos-daemons/bloodletters') + ' / ' + names(sl, 'chaos-daemons/daemonettes'));
       ok(names(RG(Fd, []), 'chaos-daemons/bloodletters') === '', 'N First Prince of Chaos without Shadow Legion: no row');
+      // (a headed ability's own core grant is a row of its own after it: Penumbral Puppetry's "This unit has **Stealth**", on a TZEENTCH daemon)
+      { const tz = Object.keys(D.datasheets).find(k => k.startsWith('chaos-daemons/') && (DS(k).kw || []).includes('Tzeentch') && !(DS(k).abilities || []).some(a => a.name === 'Stealth'));
+        ok(names(sl, tz) === 'Penumbral Puppetry [First Prince of Chaos], Stealth [First Prince of Chaos]', 'N Penumbral Puppetry and its Stealth on ' + tz + ': ' + names(sl, tz)); }
       const Fk = D.factions['chaos-knights'], dt = RG(Fk, []), other = RG(Object.assign({}, Fk, { name:'Imperial Knights' }), []);
       ok(names(dt, 'chaos-knights/war-dog-brigand') === 'Deathly Terror (Aura) [Harbingers of Dread · Aura]' && names(other, 'chaos-knights/war-dog-brigand') === '',
         'N Deathly Terror (Aura): Chaos Knights ' + names(dt, 'chaos-knights/war-dog-brigand') + '; another Army Faction ' + names(other, 'chaos-knights/war-dog-brigand'));
