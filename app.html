@@ -4685,7 +4685,7 @@ function sumHtml(items, u, hasHunter){
   const wn = x => x.who || x.weapon || '';
   const wp = items.every(x => wn(x) && wn(x) === wn(m) && x.box && x.box.scope && x.box.scope.weapon) ? esc(wn(m)) + ': ' : '';
   const rn = riledNote(u, items);
-  return sumLinesOf(items).map((l, i) => '<div class="mod">' + by + (l.wp ? esc(l.wp) + ': ' : wp) + (l.text ? ncSum(t, l.text) : esc(FN_NC)) + rn + (i ? '' : hunt) + ' <span class="from">(' + modFrom(m, u) + ')</span></div>').join('');
+  return sumLinesOf(items).map((l, i) => '<div class="mod">' + by + (l.wp ? esc(l.wp) + ': ' : wp) + (l.text ? ncSum(t, l.text) : esc(FN_NC)) + (i ? '' : hunt) + ' <span class="from">(' + modFrom(m, u) + ')</span>' + rn + '</div>').join('');
 }
 function ncHtml(m, u){
   const t = modTarget(m, u);
@@ -4717,7 +4717,7 @@ function weaponBlock(it, keys, mods, u){
     // (its source's summary, as every line: the changed values the row shows, then the summary)
     return row(named(w0.name, w0.n), cells) + kwl(w0) +
       // (a summary says the change itself: "Granted by" first, then the summary, no chip of the row's change before them)
-      '<div class="varc">' + (sumMode(vm) ? (vm.giver ? grantedBy(vm.src, vm.giver, vm.from) : vm.leader ? grantedBy({ id:u.id }, vm.leader, vm.from) : '') + sumLinesOf([vm]).map(l => l.text ? ncSum(modTarget(vm, u), l.text) : esc(FN_NC)).join(' · ') + riledNote(u, [vm]) : '<b>' + esc(changed) + '</b> ' + esc(vm.when) + (vm.note ? ', ' + esc(vm.note) : '')) + ' <span class="from">(' + modFrom(vm, u) + ')</span></div>';
+      '<div class="varc">' + (sumMode(vm) ? (vm.giver ? grantedBy(vm.src, vm.giver, vm.from) : vm.leader ? grantedBy({ id:u.id }, vm.leader, vm.from) : '') + sumLinesOf([vm]).map(l => l.text ? ncSum(modTarget(vm, u), l.text) : esc(FN_NC)).join(' · ') : '<b>' + esc(changed) + '</b> ' + esc(vm.when) + (vm.note ? ', ' + esc(vm.note) : '')) + ' <span class="from">(' + modFrom(vm, u) + ')</span>' + (sumMode(vm) ? riledNote(u, [vm]) : '') + '</div>';
   }
   if(it.group){
     // Hunter weapons: the profile depends on the target; rules that add to Hunter attacks are built in
@@ -5140,13 +5140,15 @@ function defLine(x, u){
   // (a rule whose words are not counted here: its name alone; another source's: its short summary, AI-labelled, opening its rule: ncHtml)
   if(x.blanket || (x.ncLine && x.a === 'rule' && !x.short)) return who + linkTo(x.a, x.v, x.name);
   // (what opens its rule: another unit's ability its rule, not that unit, which its "Granted by" opens)
-  const ra = x.abv ? 'ability' : x.a, rv = x.abv || x.v, text = x.sum || x.ncLine ? ncSum([ra, rv], x.short) + (x.sum ? riledNote(u, [x]) : '') : esc(x.text);
+  const ra = x.abv ? 'ability' : x.a, rv = x.abv || x.v, text = x.sum || x.ncLine ? ncSum([ra, rv], x.short) : esc(x.text);
+  // (the always-riled note after the line's "(name)", never read as part of the AI text)
+  const rn = x.sum ? riledNote(u, [x]) : '';
   // (a source's summary: its conditions are in it)
-  if(x.from) return who + grantedBy(x.a === 'unit' ? { id:x.v } : null, x.from, x.name) + (w && !x.sum ? '<span class="tw">' + w + ':</span> ' : '') + text + ' <span class="from">(' + linkTo(ra, rv, x.name) + ')</span>';
+  if(x.from) return who + grantedBy(x.a === 'unit' ? { id:x.v } : null, x.from, x.name) + (w && !x.sum ? '<span class="tw">' + w + ':</span> ' : '') + text + ' <span class="from">(' + linkTo(ra, rv, x.name) + ')</span>' + rn;
   // (a stratagem: "<cp>CP <name>: <summary> AI"; another source: "<summary> AI (<name>)")
-  if(x.cp && (x.ncLine || x.sum)) return who + '<b class="cpb">' + esc(x.cp) + 'CP</b> <b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + stratLead((x.S || {}).s) + text;
-  if(x.leader) return grantedBy({ id:u.id }, x.leader, x.name) + modelOnly(x, u) + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
-  if(x.ncLine || x.sum) return who + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
+  if(x.cp && (x.ncLine || x.sum)) return who + '<b class="cpb">' + esc(x.cp) + 'CP</b> <b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + stratLead((x.S || {}).s) + text + rn;
+  if(x.leader) return grantedBy({ id:u.id }, x.leader, x.name) + modelOnly(x, u) + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>' + rn;
+  if(x.ncLine || x.sum) return who + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>' + rn;
   return who + (x.cp ? '<b class="cpb">' + esc(x.cp) + 'CP</b> ' : '') + '<b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + (w ? '<span class="tw">' + w + ':</span> ' : '') + text;
 }
 const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';

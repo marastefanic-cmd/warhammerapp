@@ -18,7 +18,7 @@ The owner's guidelines (rounds 1–13, 4 Nov 2026, the spot-check of 5 Nov: rule
   `phases`, `turn` and `turns`: "in the Fight phase", "in your opponent’s Shooting phase or the Fight phase"), a weapon's name before a
   rule for that one weapon (36), and the order of the lines (40: army-wide rules, the unit's own (its abilities, enhancement, wargear,
   Damaged bands, core abilities), other units' auras and grants, stratagems; GW's order within each).
-- **Marks the program adds** (5 Nov review round): "(always riled up: <model> · <rule>)" after the summary of a box with a riled-up
+- **Marks the program adds** (5 Nov review round): "(always riled up: <model> · <rule>)" after the "(<name>)" of a summary line of a box with a riled-up
   condition on a unit always riled up by its own rule (Super Runts; as "Riled up (…)" on a condition line); "<model> only:" after the
   "Granted by" of a leader's box for its own model only, with no weapon of it named, on the sheet of the unit it leads (Praesidium Shield's
   −1 Damage, Moment Shackle's 3+ invulnerable save; a box for one of its weapons takes that weapon's name instead, "Watcher’s Axe:");
@@ -45,7 +45,7 @@ holds the program's parts. LN: a summary of a counted box has that box's numbers
 the current fingerprint of the GW text it was written from. `verify/render.js` lines-placed: every placed line is drawn on its sheet;
 ai-summary: every AI-labelled text on a sheet is its source's column for that placement, word for word. LN also holds each number with its
 sign and kind ("+1 AP" is not "−1 AP", a "5+ invulnerable save" not a "5+ Feel No Pain") and fails a number in a summary or gist that its
-source's GW words do not have ("5+ invulnerable save (4+ vs ranged)"). LM takes the Overview's lines as screenPregame draws them.
+source's GW words do not have ("5+ invulnerable save (4+ vs ranged)"). LN compares a summary's numbers with their kinds to its GW words and boxes (an option's line to its option's, "+1 AP and +1 A" fails). LM takes the Overview's lines as screenPregame draws them. LO: a leader's own-model box on the unit it leads says "<model> only:". `verify/defence.js` DL: every other unit's defence box that reaches a unit, an enemy-attacks one on every unit, is a "Granted by" line of it.
 
 ---
 
@@ -78,17 +78,17 @@ The summary column is the only AI-written content in the app. Everything around 
 
 ## Approved examples
 - Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls (Psychological Saboteur)
-- Granted by: Psychophage - After the Psychophage shoots in your Shooting phase, vs one enemy unit it hit: +1 AP in melee until the end of the turn (Bio-stimulus)
-- 2CP Adrenal Surge: in the Fight phase, up to two TYRANIDS units in Synapse Range (or one other): Critical Hits on 5+
-- When targeted: Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they're Below Half-strength (Encephalic Diffusion)
-- Gaping maw: vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; each such model destroyed: regains up to D3+2 lost wounds (Swallow Whole)
+- Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) (Bio-stimulus)
+- 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+
+- When targeted: Enemies within 6": −1 to Hit rolls; also −1 to Wound rolls if they're Below Half-strength (Encephalic Diffusion)
+- Gaping maw: vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed (Swallow Whole)
 - Once per battle: one attack's Damage becomes 0 (Resilient Organism)
 - Granted by: Hive Tyrant - Once per round, on a unit within 12" of the Hive Tyrant: a stratagem costs 1CP less (Will of the Hive Mind)
 - Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee (Daemon Lord of Khorne)
 - If this unit charged this turn: +3 A and +2 S (Might is Right)
 - Pick a visible enemy at start of Shooting: +1 to Hit rolls vs that unit (Marked by Fate)
 - Pick one when this unit fights: [SUSTAINED HITS 1] or [LETHAL HITS] (Martial Mastery)
-- Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: TYRANIDS ranged weapons gain [ASSAULT] and [LETHAL HITS] (Onslaught)
+- Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] (Onslaught)
 - 1CP Rapid Regeneration: Feel No Pain 6+ (5+ in Synapse Range)
 
 ## Rounds 5–6 (owner, 4 Nov 2026)
@@ -142,14 +142,14 @@ More approved examples:
 - 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit
 - 1CP Survivor of Strife: in your opponent's Shooting phase, if the attack's S > this unit's T: −1 to Wound rolls
 - 1CP Armour of Contempt: in your opponent's Shooting phase or the Fight phase, attacks against this unit get −1 AP
-- Granted by: Canoptek Spyders - Within 6" of the bearer: Feel No Pain 5+ vs mortal wounds and Psychic Attacks (Gloom Prism)
+- Granted by: Canoptek Spyders - Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks (Gloom Prism)
 - Feel No Pain 5+ vs mortal wounds (Aegis of the Emperor), when targeted, on every sheet
 - Skitarii ranged: If Protector Imperative is active: [HEAVY] and +1 BS (Doctrina Imperatives)
 - Skitarii when targeted: If Protector Imperative is active, BATTLELINE or within 6" of one: −1 to Hit rolls vs melee (Doctrina Imperatives)
 
 ## Rounds 13–14 (owner, 4 Nov 2026)
 35. A switchable ability keeps its cost: "If Daemonic Rage is active (3 BTP): [LANCE] (Blood Tithe)".
-36. [program] A rule for one weapon gets the weapon name as a program-made prefix: "Gaping maw: vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; each such model destroyed: regains up to D3+2 lost wounds (Swallow Whole)". The AI text doesn't name the weapon.
+36. [program] A rule for one weapon gets the weapon name as a program-made prefix: "Gaping maw: vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed (Swallow Whole)". The AI text doesn't name the weapon.
 37. [program] An enhancement's giver is marked: "Granted by: Daemon Prince of Chaos (enhancement) - Within 6" of the bearer: [LANCE] (Slaughterthirst (Aura))".
 38. A once-per-battle pick reads "once per battle, if used:": "Watcher's Axe: once per battle, if used: +3 A (Moment Shackle)".
 39. A plain core-ability grant still gets an AI summary like everything else: "Feel No Pain 6+ (Knights of Legend)".
@@ -167,7 +167,7 @@ More approved examples:
 
 ## Review round (owner, 5 Nov 2026)
 44. Conditions come first everywhere (rule 29), ranges included, on aura and "Granted by" lines too: "Within 6" of Bloodthirster: +1 to Hit rolls in melee". The earlier approved examples above are rewritten to it.
-45. A line another unit gives names that unit, never "this model", "this unit" or "this PSYKER": "within 6" of Belisarius Cawl", "Enemies within 12" of The Blue Scribes". An enhancement's is "the bearer".
+45. A line another unit gives names that unit, never "this model", "this unit" or "this PSYKER": "within 6" of Belisarius Cawl", "Enemies within 12" of The Blue Scribes". An enhancement's is "the bearer" (and see rule 51).
 46. "This model" where GW says model: Praesidium Shield's "−1 Damage to attacks allocated to this model", Stimulated by Pain, Seething Hatred's "When this model shoots or fights". A leader's box for its own model on the unit it leads takes the program's "<model> only:" (above).
 47. A picked ability keeps "If <name> is picked:": Phaeron of the Stars, Phaeron of the Blades, Relentless March, Time Flux, Driven by Ultimate Rage, Impossible Form, Treason of Tzeentch. Keep GW's "up to" in distances and counts ("a Normal move of up to D3+3"", "regains up to D3 lost wounds"), and GW's "not been selected to fight" as written.
 48. A stratagem's gist starts in lower case ("a DREADNOUGHT selected to move or charge has MOBILE"), a keyword or a game term (Feel No Pain, No Man's Land) as GW prints it.
@@ -182,3 +182,15 @@ More approved examples:
 - Granted by: Belisarius Cawl - If Shroudpsalm, within 6" of Belisarius Cawl: Stealth (Canticles of the Omnissiah)
 - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 (Phaeron of the Stars)
 - an enemy ends a move within 8": an unengaged TRUSTED SENTINEL makes a Normal move of up to D3+3" (Swift as the Eagle)
+
+## Review round 2 (coordinator's decisions, 5 Nov 2026)
+Owner-approved texts always win over later rules: an example the owner approved, or a text approved as written in a spot-check, stays verbatim
+(Necromechanic, Encephalic Diffusion, Swallow Whole, Bio-stimulus, Onslaught's order of words, Resilient Organism), apart from rule 23's "Hit
+rolls"/"Wound rolls", rule 44's conditions first and the crit wording.
+49. A once-per-battle limit in GW's datasheet heading is part of the rule: an Overview line keeps it ("Once per battle, at the start of any phase, if used: pick one: +3 A with the Watcher’s Axe, or a 3+ invulnerable save" (Moment Shackle); Warp Rift Firepower) and drops the duration ("this model has a 3+ invulnerable save", Unholy Vigour).
+50. GW's "is destroyed", not "dies": "First time this model is destroyed: back on a 2+ …" (Berzerker Frenzy), Summoned by Slaughter, Your Time Is Nigh.
+51. Wargear on another unit's "Granted by" line names that unit, not "the bearer": "Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks" (Gloom Prism), Fabricator Claw Array. "The bearer" is only for enhancements.
+- A limit GW states is kept (rule 5): "+1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit)" (Bio-stimulus).
+- A shared once-per-round or once-per-turn use says so: "Once per round (one use, shared with saving throws): you can change one Hit roll or one Wound roll for the Fluxmaster to an unmodified 6" (Altered Reality, Pledge of Unholy Fortune).
+- Every "S greater than T" defence reads conditions first: "vs attacks with S greater than this unit’s T: −1 to Wound rolls".
+- [program] The always-riled note comes after the line's "(<name>)", never read as part of the AI text.
