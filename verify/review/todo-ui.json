@@ -5854,30 +5854,30 @@
   "kind": "ability-sumAtk",
   "where": "tzeeeeentch · Fluxmaster · Altered Reality",
   "judgement": {
-   "sumAtk": "Once per round (one use, shared with saving throws): you can change one Hit roll or one Wound roll for the Fluxmaster to an unmodified 6"
+   "sumAtk": "once per round (one use, shared with saving throws): you can change one Hit roll or one Wound roll for this model to an unmodified 6"
   },
   "source": {
    "ability": "Altered Reality",
    "text": "Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6."
   },
-  "key": "af3d450b709a12ee",
+  "key": "bd6c6950f58f77cd",
   "was": "Once per round (one use, shared with saving throws): you can change one Hit roll or one Wound roll for the Fluxmaster to an unmodified 6",
-  "changed": false
+  "changed": true
  },
  {
   "army": "tzeeeeentch",
   "kind": "ability-sumDef",
   "where": "tzeeeeentch · Fluxmaster · Altered Reality",
   "judgement": {
-   "sumDef": "Once per round (one use, shared with Hit and Wound rolls): you can change one saving throw for the Fluxmaster to an unmodified 6"
+   "sumDef": "once per round (one use, shared with Hit and Wound rolls): you can change one saving throw for this model to an unmodified 6"
   },
   "source": {
    "ability": "Altered Reality",
    "text": "Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6."
   },
-  "key": "7c07dd5bafffb20b",
+  "key": "c0cb58006b5b9aee",
   "was": "Once per round (one use, shared with Hit and Wound rolls): you can change one saving throw for the Fluxmaster to an unmodified 6",
-  "changed": false
+  "changed": true
  },
  {
   "army": "tzeeeeentch",
@@ -6941,8 +6941,8 @@
    "text": "While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well."
   },
   "key": "e2dc7aa87a0217c5",
-  "was": "Enemies within 6\": −1 to Hit rolls; also −1 to Wound rolls if they're Below Half-strength",
-  "changed": true
+  "was": "Enemies within 6\" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength",
+  "changed": false
  },
  {
   "army": "basic-bitch",

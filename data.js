@@ -10255,7 +10255,7 @@ const DATASHEETS = {
   ],
   abilities:[
     { name:'Fluxmaster', text:'- This unit has **Stealth**.\n- Melee attacks that target this unit have -1 to **hit rolls**.', sumDef:'Stealth; −1 to Hit rolls vs melee attacks on this unit', sumDefOf:'55ebfa69' },
-    { name:'Altered Reality', tag:'Psychic', text:'Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.', sumAtk:'Once per round (one use, shared with saving throws): you can change one Hit roll or one Wound roll for the Fluxmaster to an unmodified 6', sumDef:'Once per round (one use, shared with Hit and Wound rolls): you can change one saving throw for the Fluxmaster to an unmodified 6', sumAtkOf:'467ead59', sumDefOf:'467ead59' },
+    { name:'Altered Reality', tag:'Psychic', text:'Once per battle round, after a **Hit roll**, a **Wound roll** or a saving throw is made for this model, you can change the result of that roll to an unmodified 6.', sumAtk:'once per round (one use, shared with saving throws): you can change one Hit roll or one Wound roll for this model to an unmodified 6', sumDef:'once per round (one use, shared with Hit and Wound rolls): you can change one saving throw for this model to an unmodified 6', sumAtkOf:'467ead59', sumDefOf:'467ead59' },
     { name:'Leader', text:'This model can be attached to the following units: BLUE HORRORS, PINK HORRORS' }
   ],
   rules:['Deep Strike','Leader','The Shadow of Chaos','Devastating Wounds','Hazardous','Psychic'],
