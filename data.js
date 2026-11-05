@@ -7080,7 +7080,7 @@ const DATASHEETS = {
     { name:'sweep', group:'Massive scything talons', range:'Melee', A:'6', WS:'3+', S:'7', AP:'-1', D:'2', kw:[] }
   ],
   abilities:[
-    { name:'Encephalic Diffusion', tag:'Aura, Psychic', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While an enemy unit is within 6" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well.', sumDef:'Enemies within 6": −1 to Hit rolls; also −1 to Wound rolls if they\'re Below Half-strength', sumDefOf:'cdee8b6b' },
+    { name:'Encephalic Diffusion', tag:'Aura, Psychic', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'While an enemy unit is within 6" of this model, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**, and, if that enemy unit is **Below Half-strength**, subtract 1 from the **Wound roll** as well.', sumDef:'Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength', sumDefOf:'cdee8b6b' },
     { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
   ],
   rules:['Deadly Demise D3','Shadow in the Warp','Synapse','Psychic','Blast'],

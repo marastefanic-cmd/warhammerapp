@@ -80,7 +80,7 @@ The summary column is the only AI-written content in the app. Everything around 
 - Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls (Psychological Saboteur)
 - Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) (Bio-stimulus)
 - 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+
-- When targeted: Enemies within 6": −1 to Hit rolls; also −1 to Wound rolls if they're Below Half-strength (Encephalic Diffusion)
+- When targeted: Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength (Encephalic Diffusion)
 - Gaping maw: vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed (Swallow Whole)
 - Once per battle: one attack's Damage becomes 0 (Resilient Organism)
 - Granted by: Hive Tyrant - Once per round, on a unit within 12" of the Hive Tyrant: a stratagem costs 1CP less (Will of the Hive Mind)
@@ -185,7 +185,7 @@ More approved examples:
 
 ## Review round 2 (coordinator's decisions, 5 Nov 2026)
 Owner-approved texts always win over later rules: an example the owner approved, or a text approved as written in a spot-check, stays verbatim
-(Necromechanic, Encephalic Diffusion, Swallow Whole, Bio-stimulus, Onslaught's order of words, Resilient Organism), apart from rule 23's "Hit
+(Necromechanic, Swallow Whole, Bio-stimulus, Onslaught's order of words, Resilient Organism), apart from rule 23's "Hit
 rolls"/"Wound rolls", rule 44's conditions first and the crit wording.
 49. A once-per-battle limit in GW's datasheet heading is part of the rule: an Overview line keeps it ("Once per battle, at the start of any phase, if used: pick one: +3 A with the Watcher’s Axe, or a 3+ invulnerable save" (Moment Shackle); Warp Rift Firepower) and drops the duration ("this model has a 3+ invulnerable save", Unholy Vigour).
 50. GW's "is destroyed", not "dies": "First time this model is destroyed: back on a 2+ …" (Berzerker Frenzy), Summoned by Slaughter, Your Time Is Nigh.
@@ -194,3 +194,5 @@ rolls"/"Wound rolls", rule 44's conditions first and the crit wording.
 - A shared once-per-round or once-per-turn use says so: "Once per round (one use, shared with saving throws): you can change one Hit roll or one Wound roll for the Fluxmaster to an unmodified 6" (Altered Reality, Pledge of Unholy Fortune).
 - Every "S greater than T" defence reads conditions first: "vs attacks with S greater than this unit’s T: −1 to Wound rolls".
 - [program] The always-riled note comes after the line's "(<name>)", never read as part of the AI text.
+- Round 3: correctness beats an approved wording where the approved one misleads on another unit's sheet: "Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength" (Encephalic Diffusion; an unanchored 6" reads as measured from the viewing unit).
+- [program] "<model> only:" also marks a leader's words not counted that are about its own model alone, on the unit it leads: "Granted by: Khârn the Betrayer - Khârn the Betrayer only: First time this model is destroyed: …" (Berzerker Frenzy), Altered Reality (verify/lines.js LO).

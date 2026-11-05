@@ -37,7 +37,8 @@
          the words to them: every sentence of an army or detachment rule that adds to or subtracts from a characteristic of models is a stat
          box, every "if / while / unless / (excluding …)" in it one of its conditions; then, under the profile, each BOXES snc (a
          characteristic no stat box counts) of its abilities, another unit's aura reaching it, its rules and its stratagems, "not counted"
-     LO  a leader's box for its own model only (no weapon named), on the unit it leads: its line says "<model> only:"
+     LO  a leader's box for its own model only (no weapon named), or its words not counted about that model alone, on the unit it leads:
+         its line says "<model> only:"
      LF  fixed cases: the wound-roll ignore-modifiers readings, the enemy-unit mark of a characteristic not counted, and whom one is for
          (its reach, an opening keyword, leading), an option's own list (its option and its rule's "While … it can use one of …"), and
          a stratagem's reach to the friendly models its words name as attackers
@@ -578,6 +579,14 @@ const gwToks = text => { const out = numToks(text), t = String(text).toLowerCase
       const mine = b => b && (b.scope || {}).models === 'model' && !(b.scope || {}).weapon;
       for(const b of (o.d || []).filter(mine)) for(const x of A.defenceItems(u).filter(x => x.box === b && x.sum && !x.dup && !x.from)){ n++;
         if(!strip(A.defLine(x, u)).includes(ab.who + ' only:')) fail('LO', a.id + '/' + u.id, ab.name + ': its When targeted line is for ' + ab.who + ' only and does not say “' + ab.who + ' only:”'); }
+      // (its words not counted, every sentence about this model alone, "The first time this model is destroyed" (Berzerker Frenzy): the
+      // same, under When targeted (dnc) and under the weapons (nc of its attacks))
+      const solo = q => /\bthis model\b/i.test(q) && !/\bthis unit\b|\bthat unit\b|\bleading\b|\bbearer’s unit\b|\bmodels? in\b|\bfriendly\b/i.test(q);
+      const dnc = (o.dnc || []).filter(e => !e.unconfirmed), nca = (o.nc || []).filter(e => e.atk && !e.unconfirmed);
+      if(dnc.length && dnc.every(e => solo(e.quote || ''))) for(const x of A.defenceItems(u).filter(x => x.key === M.KEY.ability(ab) && x.ncLine && x.sum && !x.dup && !x.from)){ n++;
+        if(!strip(A.defLine(x, u)).includes(ab.who + ' only:')) fail('LO', a.id + '/' + u.id, ab.name + ': its words not counted are about ' + ab.who + ' alone and its When targeted line does not say “' + ab.who + ' only:”'); }
+      if(nca.length && nca.every(e => solo(e.quote || ''))) for(const kind of ['ranged', 'melee']){ const ms = A.unitMods(u, kind).filter(m => m.ncLine && m.key === M.KEY.ability(ab) && A.sumMode(m)); if(!ms.length) continue; n++;
+        if(!strip(A.modLines(ms, u, false)).includes(ab.who + ' only:')) fail('LO', a.id + '/' + u.id + ' ' + kind, ab.name + ': its words not counted are about ' + ab.who + ' alone and its line does not say “' + ab.who + ' only:”'); }
       for(const kind of ['ranged', 'melee']){ const ms = A.unitMods(u, kind).filter(m => m.box && mine(m.box) && m.key === M.KEY.ability(ab) && A.sumMode(m) && !A.rowMod(m, u)); if(!ms.length) continue; n++;
         if(!strip(A.modLines(ms, u, false)).includes(ab.who + ' only:')) fail('LO', a.id + '/' + u.id + ' ' + kind, ab.name + ': its line is for ' + ab.who + ' only and does not say “' + ab.who + ' only:”'); } } } });
   stats.modelOnly = n; }

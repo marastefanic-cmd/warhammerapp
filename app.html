@@ -4675,8 +4675,13 @@ function sumLinesOf(items){
 }
 // (a leader's box for its own model only, no weapon of it named, on the sheet of the unit it leads: "<model> only:" after its "Granted by",
 // docs/summaries.md 46: Praesidium Shield's −1 Damage, Moment Shackle's 3+ invulnerable save)
+// (and a leader's words not counted on the unit it leads whose every sentence is about this model alone, "The first time this model is
+// destroyed" (Berzerker Frenzy): BOXES dnc, or nc for its attacks, none of them about its unit, the unit it leads or its models)
+const OWN_MODEL_ONLY = q => /\bthis model\b/i.test(q) && !/\bthis unit\b|\bthat unit\b|\bleading\b|\bbearer’s unit\b|\bmodels? in\b|\bfriendly\b/i.test(q);
+const ownModelNc = x => { if(!x.ncLine || x.box) return false; const o = BOXES_AGREED[x.key] || {}, es = x.kind ? (o.nc || []).filter(e => e.atk && !e.unconfirmed) : (o.dnc || []).filter(e => !e.unconfirmed);
+  return es.length > 0 && es.every(e => OWN_MODEL_ONLY(e.quote || '')); };
 const modelOnly = (x, u) => { const sc = (x.box || {}).scope || {}, who = x.leader || '';
-  return who && sc.models === 'model' && !sc.weapon && charsOf(u).some(c => c.name === who) ? '<b class="mo">' + esc(who) + ' only:</b> ' : ''; };
+  return who && ((sc.models === 'model' && !sc.weapon) || ownModelNc(x)) && charsOf(u).some(c => c.name === who) ? '<b class="mo">' + esc(who) + ' only:</b> ' : ''; };
 function sumHtml(items, u, hasHunter){
   const m = items[0], t = modTarget(m, u);
   const hunt = items.find(x => x.hunter) && hasHunter ? ' (the (+' + Object.values(items.find(x => x.hunter).hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '';
