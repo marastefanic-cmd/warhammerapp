@@ -1,6 +1,6 @@
 {
- "hash": "f6d7c1505e836f0205e0e54f0e86f65a89a7c47ff77df874464ecffa6770ef0f",
- "at": "2026-11-04T21:26:33.841Z",
+ "hash": "15d37fb029663d6fc27ecc91fe9196e83e56b825c3b951b4f4fdf30f8164bf22",
+ "at": "2026-11-05T00:53:45.751Z",
  "ok": true,
  "steps": {
   "data": {
@@ -17,11 +17,11 @@
   },
   "readings": {
    "ok": true,
-   "summary": "readings: 0 sentences stating a bonus with no reading (0 riled up, 0 other, 0 defences; listed in verify/out/readings.md, known in verify/readings-gaps.json); 92 not read yet (catalogue rows and detachments, aiStatus not-read)"
+   "summary": "readings: 0 sentences stating a bonus with no reading (0 riled up, 0 other, 0 defences; listed in verify/out/readings.md, known in verify/readings-gaps.json); 91 not read yet (catalogue rows and detachments, aiStatus not-read)"
   },
   "evidence": {
    "ok": true,
-   "summary": "evidence: 447 sources, 294 boxes and 40 picks made by script from GW’s words (G1-G9; 5 of 5 G9 bites); the army, unit and other-units groups of 225 units as the database gives them; 263 stratagems read from their TARGET, shown for 225 units exactly as their keywords meet it (a broken tag on Crazed Rampage is caught); 5 of 5 fixed TARGET cases of alternatives with an exclusion"
+   "summary": "evidence: 448 sources, 294 boxes and 40 picks made by script from GW’s words (G1-G9; 5 of 5 G9 bites); the army, unit and other-units groups of 225 units as the database gives them; 263 stratagems read from their TARGET, shown for 225 units exactly as their keywords meet it (a broken tag on Crazed Rampage is caught); 5 of 5 fixed TARGET cases of alternatives with an exclusion"
   },
   "lines": {
    "ok": true,
@@ -29,11 +29,11 @@
   },
   "defence": {
    "ok": true,
-   "summary": "defence: 137 defence boxes and 31 sentences not counted, from GW's words (150 sentences of the defence side, each a box or listed; 137 boxes with every condition of their words; 26 reach boxes and models scopes checked against GW’s phrase, 0 unchecked (said “If (see the rule)”)); 58 catalogue labels with their values; 539 \"When targeted\" lines of every list unit, each a box said in its labels, 112 \"see the rule\" lines"
+   "summary": "defence: 139 defence boxes and 31 sentences not counted, from GW's words (151 sentences of the defence side, each a box or listed; 139 boxes with every condition of their words; 8 \", and, if\" clauses with their own conditions only (and the Encephalic Diffusion fixed case); 26 reach boxes and models scopes checked against GW’s phrase, 0 unchecked (said “If (see the rule)”)); 59 catalogue labels with their values; 539 \"When targeted\" lines of every list unit, each a box said in its labels, 123 \"see the rule\" lines"
   },
   "agree": {
    "ok": true,
-   "summary": "agree: 447 boxes compared (and 1 not Core Rules, outside it), 69 fall back (47 change a number), 25 confirmed by a verdict, 6 core"
+   "summary": "agree: 449 boxes compared (and 1 not Core Rules, outside it), 71 fall back (47 change a number), 25 confirmed by a verdict, 6 core"
   },
   "invariants": {
    "ok": true,
@@ -41,15 +41,15 @@
   },
   "derive": {
    "ok": true,
-   "summary": "derive: 1070 agreed labels hold; 1 differ, 198 not derivable (verify/out/derive.md)"
+   "summary": "derive: 1070 agreed labels hold; 1 differ, 199 not derivable (verify/out/derive.md)"
   },
   "choice": {
    "ok": true,
-   "summary": "choice: 68 weapons with several profiles checked against BSData and Wahapedia, 0 failures"
+   "summary": "choice: 69 weapons with several profiles checked against BSData and Wahapedia, 0 failures"
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 17057 facts checked against BSData b4dc3f4 (clone) {\"gear\":1206,\"stats\":2619,\"weapons\":8040,\"abilities\":1545,\"keywords\":1929,\"rules\":1157,\"grants\":254,\"points\":306,\"extract\":1}; 257 deviations used; 99 ability texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win); 0 failures"
+   "summary": "bsdata: 17058 facts checked against BSData b4dc3f4 (clone) {\"gear\":1205,\"stats\":2619,\"weapons\":8040,\"abilities\":1546,\"keywords\":1930,\"rules\":1158,\"grants\":254,\"points\":305,\"extract\":1}; 257 deviations used; 99 ability texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win); 0 failures"
   },
   "dispositions": {
    "ok": true,
@@ -69,7 +69,7 @@
   },
   "texts": {
    "ok": true,
-   "summary": "0 failure(s) in 6073 checked facts, 27 deviation(s) used; verify/out/texts.json, verify/provenance.json"
+   "summary": "0 failure(s) in 6074 checked facts, 27 deviation(s) used; verify/out/texts.json, verify/provenance.json"
   },
   "numbers": {
    "ok": true,
@@ -97,15 +97,15 @@
   },
   "derived": {
    "ok": true,
-   "summary": "derived: 118 of 138 derived columns held by the script they name: a change of one value fails its step (reimport 1, nr 1, fingerprints 7, texts 4, derive 41, evidence 28, lines 8, tables 7, defence 13, readings 1, build-parity › build-index.js 5, agree 1, catalog 1; 2 kept from a run of the same code); 20 with no value stored in data.js; verify/out/derived-proof.json"
+   "summary": "derived: 118 of 138 derived columns held by the script they name: a change of one value fails its step (reimport 1, nr 1, fingerprints 7, derive 41, texts 4, evidence 28, lines 8, tables 7, defence 13, readings 1, catalog 1, build-parity › build-index.js 5, agree 1; 2 kept from a run of the same code); 20 with no value stored in data.js; verify/out/derived-proof.json"
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 3327 screens and popups, 2056 helper texts, 0 failures"
+   "summary": "render at 390px: 3329 screens and popups, 2057 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 3327 screens and popups, 2056 helper texts, 0 failures"
+   "summary": "render at 320px: 3329 screens and popups, 2057 helper texts, 0 failures"
   },
   "build-parity": {
    "ok": true,
@@ -117,7 +117,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 437 judgements, 437 approved, 0 to check, 2745 stale approvals"
+   "summary": "helpers: 438 judgements, 438 approved, 0 to check, 2745 stale approvals"
   }
  }
 }
