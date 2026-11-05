@@ -1,6 +1,6 @@
 # AI summaries: what the program writes, what the AI writes
 
-The owner's guidelines (rounds 1–13, 4 Nov 2026) are below as given. They split in two, and only one side is AI.
+The owner's guidelines (rounds 1–13, 4 Nov 2026, and the spot-check of 5 Nov: rules 42–43) are below as given. They split in two, and only one side is AI.
 
 ## Program-written (app.html, from the tables; never in an AI column)
 
@@ -25,7 +25,7 @@ The owner's guidelines (rounds 1–13, 4 Nov 2026) are below as given. They spli
 
 `sumAtk`, `sumDef`, `sumSt`, `sumFoe`, `sumOv` on the row of an ability, enhancement, army or detachment rule, and a stratagem's `gist`:
 the effect sentence only, keyed by placement, and, for a source with named options, one "<option> ⇒ <text>" line per option the program
-places. Wording rules 1–12, 15, 16, 18–20, 22 (the text of each option line), 23, 27, 29, 30, 35, 38, 39. A summary never repeats what the
+places. Wording rules 1–12, 15, 16, 18–20, 22 (the text of each option line), 23, 27, 29, 30, 35, 38, 39, 42, 43. A summary never repeats what the
 program writes: no "Granted by", no "(<its name>)", no CP cost, no stratagem phase, no weapon name where the program prefixes it.
 
 ## The gate
@@ -147,3 +147,9 @@ More approved examples:
 
 More approved examples:
 - vs CHARACTER/MONSTER/VEHICLE: +1 to Wound rolls (Slayer of Tyrants)
+
+## Spot-check (owner, 5 Nov 2026)
+- Approved as written: Necromechanic, Harbingers of Dread (Deathly Terror enemy line), Pledges to the Dark Prince (4 lines).
+- Changed: Daemonic Patrons → "When this unit fights, if it uses this ability: wounds crit on 3+; this unit loses a model if it kills nothing". Rule 42: an optional own ability reads "if it uses this ability", not a paraphrase of GW's flavour ("calls on them").
+- Approved as written: Omnissiah's Blessing, Glutton for Punishment, Executioner (weapon part only).
+- Changed: Methodical Destruction → "Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit". Rule 43: use plain game words, not GW's flavour nouns ("target", not "victim"); refer back with "that unit", not "it".

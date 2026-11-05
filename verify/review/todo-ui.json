@@ -134,7 +134,7 @@
     {
      "where": "ability · Stand Vigil (Sentinel Guard Sodality)",
      "summaries": {
-      "under its weapons": "On an objective (it or the target), vs non-MONSTER/VEHICLE: [LETHAL HITS]"
+      "under its weapons": "On an objective (this unit or the target), vs non-MONSTER/VEHICLE: [LETHAL HITS]"
      },
      "text": "This unit’s attacks have **[LETHAL HITS: non-MONSTER/VEHICLE]** if any of the following apply:\n- This unit is within range of an **objective**.\n- The target of those attacks is within range of an **objective**."
     },
@@ -148,7 +148,7 @@
     {
      "where": "ability · Impenetrable Defence (Custodian Guard Sodality)",
      "summaries": {
-      "under its weapons": "On an objective (it or the target), vs non-MONSTER/VEHICLE: [SUSTAINED HITS 1]"
+      "under its weapons": "On an objective (this unit or the target), vs non-MONSTER/VEHICLE: [SUSTAINED HITS 1]"
      },
      "text": "This unit’s attacks have **[SUSTAINED HITS 1: non-MONSTER/VEHICLE]** if any of the following apply:\n- This unit is within range of an **objective**.\n- The target of those attacks is within range of an **objective**."
     },
@@ -211,7 +211,7 @@
     {
      "where": "ability · Canticles of the Omnissiah (Belisarius Cawl)",
      "summaries": {
-      "under its weapons": "Invocation of Machine Vengeance ⇒ If Invocation of Machine Vengeance: friendly ADEPTUS MECHANICUS re-roll Hit rolls vs its Machine Vengeance target",
+      "under its weapons": "Invocation of Machine Vengeance ⇒ If Invocation of Machine Vengeance: friendly ADEPTUS MECHANICUS re-roll Hit rolls vs the enemy unit picked",
       "When targeted": "Shroudpsalm (Aura) ⇒ If Shroudpsalm: Stealth within 6\" of this model",
       "under its profile": "If Mantra of Discipline: BATTLELINE; +1 OC within 6\" of this model"
      },
@@ -332,8 +332,8 @@
     {
      "where": "ability · Prey of the Blood God (Karanak)",
      "summaries": {
-      "under its weapons": "Pick its prey at start of round 1 (a new one when it dies): its unit re-rolls Wound rolls vs it in melee",
-      "Overview": "Pick its prey at start of round 1 (a new one when it dies): its unit re-rolls Wound rolls vs it in melee"
+      "under its weapons": "Pick a target at start of round 1 (a new one when it dies): this unit re-rolls Wound rolls vs that unit in melee",
+      "Overview": "Pick a target at start of round 1 (a new one when it dies): this unit re-rolls Wound rolls vs that unit in melee"
      },
      "text": "At the start of the first battle round, select one enemy unit to be this model’s prey. Each time a model in this model’s unit makes a melee attack that targets its prey, you can re-roll the **Wound roll**. Each time this model’s prey is destroyed, select one new enemy unit to be this model’s prey."
     },
@@ -389,7 +389,7 @@
     {
      "where": "ability · Blood Throne (Rendmaster on Blood Throne)",
      "summaries": {
-      "under its weapons": "Pick a visible enemy within 18\" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs it"
+      "under its weapons": "Pick a visible enemy within 18\" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit"
      },
      "text": "At the start of the Fight phase, select one enemy unit within 18\" of and visible to this model. Until the end of the phase, each time a friendly **KHORNE LEGIONES DAEMONICA** unit makes an attack that targets that unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 1."
     },
@@ -410,7 +410,7 @@
     {
      "where": "ability · Skullmaster’s Fury (Skullmaster)",
      "summaries": {
-      "under its weapons": "While leading, if its unit charged this turn: Juggernaut’s bladed horns gain [DEVASTATING WOUNDS]"
+      "under its weapons": "While leading, if the led unit charged this turn: Juggernaut’s bladed horns gain [DEVASTATING WOUNDS]"
      },
      "text": "While this model is leading a unit, each time that unit ends a **Charge move**, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability."
     },
@@ -425,14 +425,14 @@
     {
      "where": "ability · Formless Horror (The Changeling)",
      "summaries": {
-      "When targeted": "An enemy must pass a Battle-shock test to target this model; if it fails, it can't target it this phase"
+      "When targeted": "An enemy unit must pass a Battle-shock test to target this model; if it fails, that unit can’t target this model this phase"
      },
      "text": "Each time an enemy unit wishes to select this model as the target of an attack, that unit must first take a **Battle-shock test**. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase."
     },
     {
      "where": "ability · Mischief and Confusion (The Changeling)",
      "summaries": {
-      "When targeted": "Start of the opponent's Shooting, pick a visible enemy within 12\" and roll D6: 2-5 −1 to Hit rolls; 6 it can't shoot"
+      "When targeted": "Start of the opponent’s Shooting, pick a visible enemy within 12\" and roll D6: 2-5 −1 to Hit rolls; 6 that unit can’t shoot"
      },
      "text": "At the start of your opponent’s Shooting phase, select one enemy unit within 12\" of and visible to this model and roll one D6: on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the **Hit roll**; on a 6, that enemy unit is not eligible to shoot this phase."
     },
@@ -540,7 +540,7 @@
     {
      "where": "Houndpack Lance rule · Marked Prey",
      "summaries": {
-      "under its weapons": "Picked each Command phase: WAR DOG attacks vs it gain [SUSTAINED HITS 1] if visible"
+      "under its weapons": "Picked each Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if visible"
      },
      "text": "At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a **WAR DOG** model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the **[SUSTAINED HITS 1]** ability.\nKEYWORDS\nWhile using the Houndpack Lance Detachment, the following rules apply:\n- Your army must include three or more **WAR DOG** units.\n- **WAR DOG** units from your army have the **BATTLELINE** keyword.\n- When mustering your army, select three **WAR DOG** units from your army. Until the end of the battle, those units have the **CHARACTER** keyword.*\n***Designer’s Note:** This means that the selected units can be given Enhancements and one of them can be selected as your **WARLORD**."
     },
@@ -582,8 +582,8 @@
     {
      "where": "ability · Methodical Destruction (Knight Ruinator)",
      "summaries": {
-      "under its weapons": "Pick a victim at start of round 1 (a new one when it dies): re-roll Wound rolls vs it",
-      "Overview": "Pick a victim at start of round 1 (a new one when it dies): re-roll Wound rolls vs it"
+      "under its weapons": "Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit",
+      "Overview": "Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit"
      },
      "text": "At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the **Wound roll**. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim."
     },
@@ -624,7 +624,7 @@
     {
      "where": "army rule · Dark Pacts",
      "summaries": {
-      "under its weapons": "When this unit shoots or fights: Leadership test (fail: D3 mortal wounds), then its weapons gain [LETHAL HITS] or [SUSTAINED HITS 1]"
+      "under its weapons": "When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1]"
      },
      "text": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a **Leadership test** before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 **mortal wounds**. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n- **[LETHAL HITS]**\n- **[SUSTAINED HITS 1]**\n*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets so that unit can make a Dark Pact? No.*\n*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratagem, can that unit make a Dark Pact? Yes, as the unit is selected to shoot.*"
     },
@@ -666,7 +666,7 @@
     {
      "where": "ability · Spirit Thief (Lord Discordant on Helstalker)",
      "summaries": {
-      "under its weapons": "Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs it"
+      "under its weapons": "Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit"
      },
      "text": "At the start of your Shooting phase, select one **visible** enemy **VEHICLE** unit. Until the end of the phase, each time a friendly **HERETIC ASTARTES** model makes an attack that targets that unit, re-roll a **Wound roll** of 1."
     },
@@ -743,7 +743,7 @@
     {
      "where": "ability · Daemonic Ordnance (Forgefiend)",
      "summaries": {
-      "under its weapons": "When this unit shoots, if this unit uses this: ranged weapons gain [DEVASTATING WOUNDS] and [HAZARDOUS]"
+      "under its weapons": "When this unit shoots, if it uses this ability: ranged weapons gain [DEVASTATING WOUNDS] and [HAZARDOUS]"
      },
      "text": "Each time this model is selected to shoot, it can use this ability. If it does, until the end of the phase, its ranged weapons have the **[DEVASTATING WOUNDS]** and **[HAZARDOUS]** abilities."
     },
@@ -777,7 +777,7 @@
     {
      "where": "Coterie of the Conceited enhancement · Pledge of Unholy Fortune",
      "summaries": {
-      "When targeted": "Once per turn, if the bearer is not Battle-shocked: a Hit, Wound or save roll for its unit becomes an unmodified 6"
+      "When targeted": "Once per turn, if the bearer is not Battle-shocked: a Hit, Wound or save roll for the bearer’s unit becomes an unmodified 6"
      },
      "text": "**EMPEROR’S CHILDREN** model only. Once per turn, just after making a **Hit roll**, a **Wound roll** or a saving throw for a model in the bearer’s unit, if the bearer is not **Battle-shocked**, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead."
     },
@@ -791,7 +791,7 @@
     {
      "where": "ability · Daemonic Patrons (Flawless Blades)",
      "summaries": {
-      "under its weapons": "When this unit fights, if it calls on them: wounds crit on 3+; this unit loses a model if it kills nothing"
+      "under its weapons": "When this unit fights, if it uses this ability: wounds crit on 3+; this unit loses a model if it kills nothing"
      },
      "text": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed."
     },
@@ -805,7 +805,7 @@
     {
      "where": "ability · Wracking Agonies (Sorcerer)",
      "summaries": {
-      "enemy line under its profile": "One INFANTRY unit hit by its Agonising Energies: −2\" Move and −2 to Charge rolls"
+      "enemy line under its profile": "One INFANTRY unit hit by this model’s Agonising Energies: −2\" Move and −2 to Charge rolls"
      },
      "text": "In your Shooting phase, after this model has shot, select one **INFANTRY** unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
     },
@@ -964,7 +964,7 @@
     {
      "where": "Obeisance Phalanx rule · Worthy Foes",
      "summaries": {
-      "under its weapons": "Pick an enemy each Command phase: NOBLE, LYCHGUARD and TRIARCH get +1 to Wound rolls vs it"
+      "under its weapons": "Pick an enemy each Command phase: NOBLE, LYCHGUARD and TRIARCH get +1 to Wound rolls vs that unit"
      },
      "text": "In your Command phase, select one enemy unit. Until the start of your next Command phase, each time a **NOBLE**, **LYCHGUARD** or **TRIARCH** unit from your army makes an attack that targets that unit, add 1 to the **Wound roll**."
     },
@@ -1203,7 +1203,7 @@
     {
      "where": "ability · One Last Kill (Mozrog Skragbad)",
      "summaries": {
-      "When targeted": "Fight phase, if this model is killed before it fought: it stays on a 2+ until this unit has fought"
+      "When targeted": "Fight phase, if this model is destroyed before it has fought: on a 2+ it stays until this unit has fought"
      },
      "text": "In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
     },
@@ -1264,7 +1264,7 @@
     {
      "where": "army rule · Cabal of Sorcerers",
      "summaries": {
-      "under its weapons": "Destiny’s Ruin ⇒ If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs its target (all Hit rolls on 10+)\nTwist of Fate ⇒ If Twist of Fate is manifested (9): +1 AP vs its target (+2 on 12+)"
+      "under its weapons": "Destiny’s Ruin ⇒ If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+)\nTwist of Fate ⇒ If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+)"
      },
      "text": "If your Army Faction is **THOUSAND SONS**, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.\n**Psychic Test Sequence**\n- **Roll 2D6**\n- **Channel the Warp** (Optional)\n- Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.\n- If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.\n*FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.*\nDestiny’s Ruin (Psychic) · Warp Charge 5: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, re-roll a **Hit roll** of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.\nTemporal Surge (Psychic) · Warp Charge 6: Select one friendly **THOUSAND SONS** or **SCINTILLATING LEGIONS** unit that is not within **Engagement Range** of one or more enemy units and is within 24\" of and **visible** to the manifesting model. That unit can make a **Normal move** of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.\nDoombolt (Psychic) · Warp Charge 7: Select one enemy unit within 24\" of and **visible** to the manifesting model (excluding units with the **Lone Operative** ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 **mortal wounds**. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.\nTwist of Fate (Psychic) · Warp Charge 9: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead."
     },
@@ -1278,8 +1278,8 @@
     {
      "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
      "summaries": {
-      "under its weapons": "If this unit sacrifices when this unit shoots or fights: +1 to Wound rolls, then D3 mortal wounds",
-      "When targeted": "If this unit sacrifices when targeted: −1 to Wound rolls vs attacks on this unit, then D3 mortal wounds",
+      "under its weapons": "When this unit shoots or fights, if it uses this ability: +1 to Wound rolls, then D3 mortal wounds",
+      "When targeted": "When targeted, if it uses this ability: −1 to Wound rolls vs attacks on this unit, then D3 mortal wounds",
       "under its profile": "TZAANGORS not Battle-shocked: +1 OC"
      },
      "text": "Each time an enemy unit is selected to shoot or fight and one or more **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** units from your army are selected as a target of one or more of those attacks, each of those **TZEENTCH MUTANT** units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nEach time a **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nKEYWORDS\n**TZAANGORS** units from your army have the **BATTLELINE** keyword, and while such a unit is not **Battle-shocked**, add 1 to the Objective Control characteristic of **TZAANGOR** models in that unit."
@@ -1287,7 +1287,7 @@
     {
      "where": "Warpmeld Pact enhancement · Diamond of Distortion",
      "summaries": {
-      "When targeted": "While the bearer leads: −1 to Hit rolls vs attacks on its unit"
+      "When targeted": "While the bearer leads: −1 to Hit rolls vs attacks on the bearer’s unit"
      },
      "text": "**TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**."
     },
@@ -1310,7 +1310,7 @@
      "where": "ability · Treason of Tzeentch (Magnus the Red)",
      "summaries": {
       "When targeted": "Start of the opponent's Shooting, pick an enemy within 24\": that unit's ranged weapons gain [HAZARDOUS]",
-      "enemy line under its profile": "If Treason of Tzeentch is picked: one enemy unit within 24\" gets [HAZARDOUS] on its ranged weapons in their Shooting phase"
+      "enemy line under its profile": "If Treason of Tzeentch is picked: one enemy unit within 24\" gets [HAZARDOUS] on that unit’s ranged weapons in their Shooting phase"
      },
      "text": "At the start of your opponent’s Shooting phase, select one enemy unit within 24\" of this **PSYKER**. Until the end of the phase, ranged weapons equipped by models in that unit have the **[HAZARDOUS]** ability."
     },
@@ -1338,7 +1338,7 @@
     {
      "where": "ability · Aetherstride (Daemon Prince of Tzeentch with wings)",
      "summaries": {
-      "under its weapons": "After a Deep Strike aetherstride: Dark Blessing gains [SUSTAINED HITS D3]"
+      "under its weapons": "After a Deep Strike, if it uses this ability: Dark Blessing gains [SUSTAINED HITS D3]"
      },
      "text": "In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge."
     },
@@ -1352,7 +1352,7 @@
     {
      "where": "ability · Marked by Fate (Sorcerer in Terminator Armour)",
      "summaries": {
-      "under its weapons": "Pick a visible enemy at start of Shooting: +1 to Hit rolls vs it"
+      "under its weapons": "Pick a visible enemy at start of Shooting: +1 to Hit rolls vs that unit"
      },
      "text": "At the start of your Shooting phase, select one enemy unit that is **visible** to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**."
     },
@@ -1387,7 +1387,7 @@
     {
      "where": "ability · Binding Tendrils (Exalted Sorcerer on Disc of Tzeentch)",
      "summaries": {
-      "enemy line under its profile": "One INFANTRY unit hit by its Arcane Fire: −2\" Move and −2 to Charge rolls"
+      "enemy line under its profile": "One INFANTRY unit hit by this model’s Arcane Fire: −2\" Move and −2 to Charge rolls"
      },
      "text": "In your Shooting phase, after this model has shot, select one enemy **INFANTRY** unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
     },
@@ -1401,7 +1401,7 @@
     {
      "where": "ability · Sacrificial Blessing (Tzaangor Shaman)",
      "summaries": {
-      "under its weapons": "While leading, when this unit shoots or fights: kill one Bodyguard model for +D3 A and S on its Psychic weapons"
+      "under its weapons": "While leading, when this unit shoots or fights, if it uses this ability: one Bodyguard model is destroyed for +D3 A and S on this model’s Psychic weapons"
      },
      "text": "While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model."
     }
@@ -1427,7 +1427,7 @@
     {
      "where": "Assimilation Swarm enhancement · Parasitic Biomorphology",
      "summaries": {
-      "under its weapons": "+1 S in melee for the bearer's unit; +1 A too for the battle after its first kill in the Fight phase within 6\" of a HARVESTER"
+      "under its weapons": "+1 S in melee for the bearer’s unit; +1 A too for the battle after that unit first destroys an enemy unit in the Fight phase within 6\" of a HARVESTER"
      },
      "text": "**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit."
     },
@@ -1502,7 +1502,7 @@
     {
      "where": "ability · Burning Spray (Pyrovores)",
      "summaries": {
-      "under its weapons": "After this unit shoots: one enemy it hit loses the Benefit of Cover"
+      "under its weapons": "After this unit shoots: one enemy unit hit by this unit cannot have the Benefit of Cover"
      },
      "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the **Benefit of Cover**."
     },
@@ -1615,14 +1615,14 @@
     {
      "where": "ability · Shrouding (Librarian in Phobos Armour)",
      "summaries": {
-      "When targeted": "When targeted, if not Battle-shocked, psychic roll (Battle-shocked on a 1): −1 to Hit rolls vs attacks on this unit"
+      "When targeted": "When targeted, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): −1 to Hit rolls vs attacks on this unit"
      },
      "text": "When an enemy unit targets this unit, if this unit is not **battle-shocked**, you can make a psychic roll for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- Attacks that target this unit have -1 to **hit rolls** until the end of the phase."
     },
     {
      "where": "ability · Soul Sight (Librarian in Phobos Armour)",
      "summaries": {
-      "under its weapons": "Shooting, if not Battle-shocked, psychic roll (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy"
+      "under its weapons": "In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit"
      },
      "text": "In your Shooting phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- Select one **visible** enemy unit. Ranged attacks that target that enemy unit have **[IGNORES COVER]**."
     },
@@ -1657,7 +1657,7 @@
     {
      "where": "ability · Teleport Homer (Deathwatch Terminator Squad)",
      "summaries": {
-      "Overview": "Start of the battle: place a Teleport Homer; Rapid Ingress at it costs −1CP, set up within 3\" of it and not within 8\" of enemies"
+      "Overview": "Start of the battle: place a Teleport Homer; Rapid Ingress onto the token costs −1CP, set up within 3\" of the token and not within 8\" of enemies"
      },
      "text": "At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do:\n- When you target this unit with the **Rapid Ingress stratagem**, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that **stratagem**, this unit must be set up within 3\" of that Teleport Homer token and not within 8\" of an enemy unit. That Teleport Homer token is then removed from the battlefield.\n- If an enemy unit ends a move within 1\" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield."
     },
@@ -1706,7 +1706,7 @@
     {
      "where": "Vessels of Wrath rule · Wrath of Khorne",
      "summaries": {
-      "under its weapons": "WORLD EATERS CHARACTER (not EPIC HERO) fights: its CHARACTER models gain [CLEAVE 1] or +1 AP in melee"
+      "under its weapons": "WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee"
      },
      "text": "When a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) is **selected to fight**, that unit’s **CHARACTER** models’ melee attacks can have:\n- **[CLEAVE 1]**.\n- Or: +1 **AP**."
     },
@@ -1797,7 +1797,7 @@
     {
      "where": "ability · Reborn in Blood (Angron)",
      "summaries": {
-      "Overview": "If destroyed: a triple 6 from the Blessings of Khorne roll brings it back by Deep Strike next Movement phase with 8 wounds"
+      "Overview": "If this model is destroyed: a triple 6 from the Blessings of Khorne roll brings this model back by Deep Strike next Movement phase with 8 wounds"
      },
      "text": "At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining."
     },
@@ -1918,7 +1918,7 @@
     {
      "where": "Victory Before Death",
      "old": "Your unit within range of an objective is destroyed: select one objective it was controlling when it was destroyed, with no enemy units (excluding AIRCRAFT) within range of it: that objective is secured.",
-     "new": "A GRAV-ASSAULT unit dies on an objective it controlled with no enemies on it: that objective is secured",
+     "new": "A GRAV-ASSAULT unit dies on an objective that unit controlled with no enemies on it: that objective is secured",
      "text": "WHEN: Any phase, when a friendly **GRAV-ASSAULT** unit within range of an **objective** is **destroyed**.\nTARGET: That **GRAV-ASSAULT** unit. You can target that unit with this **stratagem** even though it is **destroyed**.\nEFFECT: Select one **objective** that:\n- Your unit was controlling when it was **destroyed**.\n- Has no enemy units (excluding **AIRCRAFT** units) within range of it.\nThat **objective** is **secured**."
     },
     {
@@ -1948,7 +1948,7 @@
     {
      "where": "Emperor’s Domain",
      "old": "Your unit is selected to make a consolidation move: you can select the objective consolidation mode, regardless of that move’s Before Moving restrictions.",
-     "new": "TRUSTED SENTINEL can use the objective consolidation mode regardless of its Before Moving restrictions",
+     "new": "TRUSTED SENTINEL can use the objective consolidation mode regardless of that move’s Before Moving restrictions",
      "text": "WHEN: Fight phase, when a friendly **TRUSTED SENTINEL** unit is selected to make a **consolidation move**.\nTARGET: That **TRUSTED SENTINEL** unit.\nEFFECT: You can select the **objective consolidation mode** for that **consolidation move**, regardless of that **consolidation move**’s Before Moving restrictions.\n*This means your unit can move out of **engagement range** with enemy units, provided it meets the conditions of the **objective consolidation mode**.*"
     },
     {
@@ -2014,7 +2014,7 @@
     {
      "where": "Unceasing Onslaught",
      "old": "Your unit ended an advance move: its ranged attacks have [ASSAULT] until the end of the turn, and that move does not prevent it from declaring a charge.",
-     "new": "after a DREADNOUGHT Advances: ranged attacks gain [ASSAULT] and it can still charge",
+     "new": "after a DREADNOUGHT Advances: ranged attacks gain [ASSAULT] and this unit can still charge",
      "text": "WHEN: Your Movement phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit ends an **advance move**.\nTARGET: That **ADEPTUS CUSTODES DREADNOUGHT** unit.\nEFFECT: - Your unit’s ranged attacks have **[Assault]** until the end of the turn.\n- That move does not prevent your unit from being **eligible to declare a charge**."
     },
     {
@@ -2056,7 +2056,7 @@
     {
      "where": "Machine Superiority",
      "old": "Until the end of the turn, your unit is eligible to shoot after Falling Back, and you can ignore any or all modifiers to its characteristics and to its rolls and tests (not saving throws).",
-     "new": "can shoot after Falling Back; ignore modifiers to its characteristics, rolls and tests (not saves)",
+     "new": "can shoot after Falling Back; ignore modifiers to this unit’s characteristics, rolls and tests (not saves)",
      "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws)."
     },
     {
@@ -2134,7 +2134,7 @@
     {
      "where": "Wrath Undeniable",
      "old": "Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA KHORNE unit it targeted: until the end of the phase, each time a model in it is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed.",
-     "new": "when targeted: a model killed in melee before it fought fights on a 4+, then is removed",
+     "new": "when targeted: a model killed in melee before it has fought fights on a 4+, then is removed",
      "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LEGIONES DAEMONICA KHORNE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play."
     },
     {
@@ -2158,7 +2158,7 @@
     {
      "where": "Fools’ Flight",
      "old": "Your opponent’s Movement phase, an enemy unit ends a fall-back move: your unengaged LEGIONES DAEMONICA KHORNE unit within 6\" of it declares a charge, selecting only enemy units that fell back this phase and are within the maximum distance.",
-     "new": "an enemy falls back: an unengaged LEGIONES DAEMONICA KHORNE unit within 6\" charges it",
+     "new": "an enemy falls back: an unengaged LEGIONES DAEMONICA KHORNE unit within 6\" charges that unit",
      "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a **fall-back move**.\nTARGET: One friendly **unengaged LEGIONES DAEMONICA KHORNE** unit that is within 6\" of that enemy unit.\nEFFECT: Declare a charge with your unit. When selecting **charge targets**, you can only select enemy units that made a fall-back move this phase and are within the maximum distance."
     },
     {
@@ -2194,7 +2194,7 @@
     {
      "where": "Inescapable Manifestations",
      "old": "Your opponent’s Movement phase, when a unit engaged with your LEGIONES DAEMONICA MOUNTED unit is selected to make a Fall Back move: an enemy unit engaged with your unit that is selected to Fall Back must use the desperate escape mode (if it is Battle-shocked, -1 to those hazard rolls).",
-     "new": "an enemy falling back from LEGIONES DAEMONICA MOUNTED must use desperate escape (−1 to its hazard rolls if Battle-shocked)",
+     "new": "an enemy falling back from LEGIONES DAEMONICA MOUNTED must use desperate escape (−1 to that unit’s hazard rolls if Battle-shocked)",
      "text": "WHEN: Your opponent’s Movement phase, when a unit is selected to make a **fall-back move**, if that unit is **engaged** with a friendly **LEGIONES DAEMONICA MOUNTED** unit.\nTARGET: That **LEGIONES DAEMONICA MOUNTED** unit.\nEFFECT: When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape mode**. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**."
     }
    ]
@@ -2224,7 +2224,7 @@
     {
      "where": "Flickering Reality",
      "old": "Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA TZEENTCH unit it targeted: roll one D6 (spend one Flux token to re-roll it); until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll (after any re-roll) of that result the attack sequence ends, even if it would have been a Critical Hit.",
-     "new": "when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs it ends the attack",
+     "new": "when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs that unit ends the attack",
      "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Roll one D6, then you can spend one Flux token to re-roll the result: until the end of the phase, each time an attack targets your unit, on an unmodified **Hit roll** (after any re-roll) of that result, the attack sequence ends, even if the original Hit roll would have been a Critical Hit.\n**Example:** If you roll a 2 and choose to spend one Flux token to re-roll the result, and the re-roll is a 6, then until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll of 6 the attack sequence ends, that attack fails to hit and no Critical Hit effects (e.g. Lethal Hits) are resolved."
     },
     {
@@ -2236,7 +2236,7 @@
     {
      "where": "Ficklefire",
      "old": "Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks.",
-     "new": "LEGIONES DAEMONICA TZEENTCH shoots as if not in Engagement Range; each enemy model killed in Engagement Range: 1 mortal wound to it on a 5+",
+     "new": "LEGIONES DAEMONICA TZEENTCH shoots as if not in Engagement Range; each enemy model killed in Engagement Range: 1 mortal wound to this unit on a 5+",
      "text": "WHEN: Your Shooting phase.\nTARGET: One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is within **Engagement Range** of one or more enemy units.\nEFFECT: Until the end of the phase, enemy units are not considered to be within Engagement Range of your unit for the purposes of selecting targets for, and resolving attacks with, ranged weapons. Until the end of the phase, each time an enemy model is destroyed while its unit is within Engagement Range of your unit, roll one D6: on a 5+, your unit suffers 1 **mortal wound** after the attacking unit has finished making its attacks."
     },
     {
@@ -2296,7 +2296,7 @@
     {
      "where": "Hungry for Combat",
      "old": "Two or more of your WAR DOG units within Engagement Range of the same enemy unit: until the end of the phase, they can only target one enemy unit within Engagement Range of them, but their attacks score a Critical Hit on an unmodified hit roll of 5+.",
-     "new": "2+ WAR DOG units engaged with one enemy: only target it, hits crit on 5+",
+     "new": "2+ WAR DOG units engaged with one enemy: only target that unit, hits crit on 5+",
      "text": "WHEN: Start of the Fight phase.\nTARGET: Two or more **WAR DOG** units from your army within **Engagement Range** of the same enemy unit.\nEFFECT: Select one enemy unit within Engagement Range of those **WAR DOG** units. Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
     },
     {
@@ -2308,7 +2308,7 @@
     {
      "where": "Animalistic Rage",
      "old": "Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.",
-     "new": "A WAR DOG not yet attacked is destroyed: it shoots or fights the unit that killed it, then Deadly Demise",
+     "new": "A WAR DOG not yet attacked is destroyed: that unit shoots or fights the enemy unit that destroyed it, then Deadly Demise",
      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after a **WAR DOG** unit from your army that has not been **selected to attack** this phase is **destroyed**.\nTARGET: That **WAR DOG** unit. You can use this **Stratagem** on that unit even though it was just destroyed.\nEFFECT: Before resolving your unit’s **Deadly Demise** ability, it can either shoot or fight. When doing so, it must target only the enemy unit that just destroyed it, and can only do so if that enemy unit is an eligible target. After it has done so and after any **Consolidation moves** have been made, resolve your unit’s **Deadly Demise** ability as normal."
     },
     {
@@ -2344,7 +2344,7 @@
     {
      "where": "Leash of the Masters",
      "old": "Your unit has shot: those attacks do not prevent it from being eligible to start an action.",
-     "new": "after a WAR DOG shoots: it can still start an action",
+     "new": "after a WAR DOG shoots: this unit can still start an action",
      "text": "WHEN: Your Shooting phase, when a friendly **WAR DOG** unit has shot.\nTARGET: That **WAR DOG** unit.\nEFFECT: Those attacks do not prevent your unit from being **eligible to start an action**."
     },
     {
@@ -2380,13 +2380,13 @@
     {
      "where": "Corrupting Taint",
      "old": "Just after your unit makes a Malefic Surge: select one objective marker you control that your unit is within range of; it stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.",
-     "new": "after a CHAOS KNIGHTS CHARACTER makes a Malefic Surge on an objective you control: it stays yours until the opponent takes it",
+     "new": "after a CHAOS KNIGHTS CHARACTER makes a Malefic Surge on an objective you control: that objective stays yours until the opponent takes it",
      "text": "WHEN: Your Command phase, just after a **CHAOS KNIGHTS CHARACTER** unit from your army makes a Malefic Surge.\nTARGET: That **CHAOS KNIGHTS CHARACTER** unit.\nEFFECT: Select one objective marker your unit is within range of that you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
     },
     {
      "where": "Unleash Balefire",
      "old": "After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2\" Move, -2 to Charge rolls).",
-     "new": "after this unit shoots: one enemy it hit takes a Battle-shock test; if failed, −2\" Move and −2 to Charge rolls",
+     "new": "after this unit shoots: one enemy unit this unit hit takes a Battle-shock test; if failed, −2\" Move and −2 to Charge rolls",
      "text": "WHEN: Your Shooting phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: After your unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a **Battle-shock test**; if the test is failed, until the end of your opponent’s next turn, it is aflame. While a unit is aflame, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
     },
     {
@@ -2536,7 +2536,7 @@
     {
      "where": "Smokescreen",
      "old": "Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…",
-     "new": "at the start of the phase: Benefit of Cover for your SMOKE unit and units it hides",
+     "new": "at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides",
      "text": "WHEN: Start of your opponent’s Shooting phase.\nTARGET: One friendly **SMOKE** unit.\nEFFECT: Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not **fully visible** to the attacking model because of one or more models in your **SMOKE** unit, the target has the **benefit of cover** against that attack (13.08)."
     },
     {
@@ -2590,7 +2590,7 @@
     {
      "where": "Unbound Arrogance",
      "old": "Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).",
-     "new": "once per round, after it destroys an enemy unit: raise your pledge to Slaanesh by 1",
+     "new": "once per round, after this unit destroys an enemy unit: raise your pledge to Slaanesh by 1",
      "text": "WHEN: Your Shooting phase or the Fight phase, just after an **EMPEROR’S CHILDREN** unit from your army destroys an enemy unit.\nTARGET: That **EMPEROR’S CHILDREN** unit.\nEFFECT: Increase your pledge to Slaanesh by 1.\nRESTRICTIONS: You can only use this Stratagem once per battle round."
     },
     {
@@ -2680,7 +2680,7 @@
     {
      "where": "Sentinels of Eternity",
      "old": "Fight phase, just after an enemy unit selected your LYCHGUARD or TRIARCH PRAETORIANS unit as a target: until the end of the phase, each time a model in your unit that has not fought is destroyed, on a D6 of 4+ it fights after the attacking unit has finished its attacks, then is removed.",
-     "new": "LYCHGUARD/TRIARCH PRAETORIANS, when targeted: a model killed before it fought fights on a 4+, then is removed",
+     "new": "LYCHGUARD/TRIARCH PRAETORIANS, when targeted: a model killed before it has fought fights on a 4+, then is removed",
      "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **LYCHGUARD** or **TRIARCH PRAETORIANS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks, and is then removed from play."
     },
     {
@@ -2860,7 +2860,7 @@
     {
      "where": "Drive-by Bustin’",
      "old": "Your unit’s ranged attacks with weapons selected for Firing Deck have +1 to hit rolls.",
-     "new": "ORKS TRANSPORT: +1 to Hit rolls with its Firing Deck weapons",
+     "new": "ORKS TRANSPORT: +1 to Hit rolls with this unit’s Firing Deck weapons",
      "text": "WHEN: Your Shooting phase, when a friendly **ORKS TRANSPORT** unit is **selected to shoot**.\nTARGET: That **ORKS TRANSPORT** unit.\nEFFECT: Your unit’s ranged attacks with weapons selected for the **Firing Deck** ability have +1 to **hit rolls**."
     },
     {
@@ -2872,7 +2872,7 @@
     {
      "where": "Gun-crazy Show-offs",
      "old": "After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit.",
-     "new": "after an enemy shoots: a FLASH GITZ/TANKBUSTAS unit it hit shoots back, only at that unit",
+     "new": "after an enemy shoots: a FLASH GITZ/TANKBUSTAS unit hit by that enemy unit shoots back, only at that unit",
      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit has shot.\nTARGET: One friendly **FLASH GITZ**/**TANKBUSTAS** unit hit by those attacks.\nEFFECT: Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit."
     }
    ]
@@ -2908,13 +2908,13 @@
     {
      "where": "Desecration of Worlds",
      "old": "An objective marker you control that your unit is within range of stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.",
-     "new": "A THOUSAND SONS PSYKER on an objective you control: it stays yours until the opponent takes it",
+     "new": "A THOUSAND SONS PSYKER on an objective you control: that objective stays yours until the opponent takes it",
      "text": "WHEN: Your Command phase.\nTARGET: One **THOUSAND SONS PSYKER** unit from your army within range of an objective marker you control.\nEFFECT: That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
     },
     {
      "where": "Arcane Focus",
      "old": "Just after your model’s Psychic test with Channelling the Warp, before resolving that Ritual: re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).",
-     "new": "after a Psychic test with Channel the Warp: re-roll all its D6",
+     "new": "after a Psychic test with Channel the Warp: re-roll all of that test’s D6",
      "text": "WHEN: Your Shooting phase, just after you take a Psychic test for a **THOUSAND SONS** model from your army that Channelled the Warp (before resolving that **Ritual**).\nTARGET: That **THOUSAND SONS** model.\nEFFECT: Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp)."
     },
     {
@@ -2950,7 +2950,7 @@
     {
      "where": "Multitudinous Limbs",
      "old": "Your unit’s advance or fall back move does not prevent it from being eligible to start an action.",
-     "new": "INFANTRY/MOUNTED THOUSAND SONS PSYKER: an advance or fall back move still lets it start an action",
+     "new": "INFANTRY/MOUNTED THOUSAND SONS PSYKER: an advance or fall back move still lets this unit start an action",
      "text": "WHEN: Your Movement phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit is selected to make an **advance**/**fall back move**.\nTARGET: That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit.\nEFFECT: That move does not prevent your unit from being **eligible to start an action**."
     }
    ]
@@ -2968,7 +2968,7 @@
     {
      "where": "Gift of Change",
      "old": "Your CHARACTER model just destroyed: at the end of the phase, add a TZEENTCH CHAOS SPAWN unit of one model to your army, set up as close as possible to where it was destroyed and unengaged (once per battle round).",
-     "new": "once per round, a destroyed THOUSAND SONS CHARACTER (not MONSTER): a TZEENTCH CHAOS SPAWN of one model arrives where it fell",
+     "new": "once per round, a destroyed THOUSAND SONS CHARACTER (not MONSTER): a TZEENTCH CHAOS SPAWN of one model arrives where that model fell",
      "text": "WHEN: Any phase.\nTARGET: One **THOUSAND SONS CHARACTER** model from your army (excluding **MONSTERS**) that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.\nEFFECT: At the end of the phase, add one **TZEENTCH CHAOS SPAWN** unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within **Engagement Range** of one or more enemy units.\nRESTRICTIONS: You can only use this Stratagem once per battle round."
     },
     {
@@ -3016,7 +3016,7 @@
     {
      "where": "Broodguard Impulse",
      "old": "Any phase, your HARVESTER unit just destroyed: until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that destroyed it, +1 to the Wound roll.",
-     "new": "A HARVESTER unit is destroyed: +1 to Wound rolls vs the unit that killed it for the rest of the battle",
+     "new": "A HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle",
      "text": "WHEN: Any phase.\nTARGET: One **HARVESTER** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.\nEFFECT: Until the end of the battle, each time a friendly **TYRANIDS** model makes an attack that targets the enemy unit that just destroyed your **HARVESTER** unit, add 1 to the **Wound roll**."
     },
     {
@@ -3028,7 +3028,7 @@
     {
      "where": "Tyrannoformed",
      "old": "Command phase, your HARVESTER unit within range of an objective marker you control: that objective marker stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.",
-     "new": "A HARVESTER on an objective you control: it stays yours until the opponent takes it",
+     "new": "A HARVESTER on an objective you control: that objective stays yours until the opponent takes it",
      "text": "WHEN: Command phase.\nTARGET: One **HARVESTER** unit from your army that is within range of an objective marker you control.\nEFFECT: That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
     },
     {
@@ -3046,7 +3046,7 @@
     {
      "where": "Rapacious Hunger",
      "old": "Your Fight phase, your TYRANIDS unit that just destroyed an enemy unit: it Regenerates at once (see Feed the Swarm); a HARVESTER unit regaining up to D3 lost wounds for one model regains up to 3 instead.",
-     "new": "after a TYRANIDS unit kills an enemy unit: it Regenerates (a HARVESTER model regains 3 wounds instead of D3)",
+     "new": "after a TYRANIDS unit kills an enemy unit: that unit Regenerates (a HARVESTER model regains 3 wounds instead of D3)",
      "text": "WHEN: Your Fight phase.\nTARGET: One **TYRANIDS** unit from your army that just destroyed an enemy unit.\nEFFECT: Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a **HARVESTER** unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead."
     }
    ]
@@ -3064,7 +3064,7 @@
     {
      "where": "Corrosive Viscera",
      "old": "Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).",
-     "new": "A TYRANIDS MONSTER without FLY dies: its Deadly Demise mortal wounds are automatic",
+     "new": "A TYRANIDS MONSTER without FLY dies: that model’s Deadly Demise mortal wounds are automatic",
      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after a **TYRANIDS MONSTER** model from your army with the **Deadly Demise** ability that cannot **FLY** is destroyed.\nTARGET: That **TYRANIDS MONSTER** model. You can use this Stratagem on that model even though it was just destroyed.\nEFFECT: Do not roll one D6 to determine whether **mortal wounds** are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
     },
     {
@@ -3076,7 +3076,7 @@
     {
      "where": "Savage Roar",
      "old": "An enemy unit has selected your unit as a target: it takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.",
-     "new": "TYRANIDS MONSTER, when targeted: the attacker takes a Battle-shock test and has −1 to Hit rolls vs it; also −1 to Wound rolls if it fails",
+     "new": "TYRANIDS MONSTER, when targeted: the attacker takes a Battle-shock test and has −1 to Hit rolls vs that unit; also −1 to Wound rolls if that unit fails",
      "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS MONSTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: That enemy unit must take a **Battle-shock test** and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the **Hit roll**. If that Battle-shock test was failed, subtract 1 from the **Wound roll** as well."
     },
     {
@@ -3124,13 +3124,13 @@
     {
      "where": "Death Frenzy",
      "old": "Fight phase, just after an enemy unit selected your TYRANIDS unit as a target: until the end of the phase, each time a model in it that has not fought this phase is destroyed, on a 4+ it is not removed yet: it can fight after the attacking unit has finished its attacks, then it is removed from play.",
-     "new": "when targeted: a model killed before it fought fights on a 4+, then is removed",
+     "new": "when targeted: a model killed before it has fought fights on a 4+, then is removed",
      "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
     },
     {
      "where": "Overrun",
      "old": "Fight phase, just before your TYRANIDS unit Consolidates: until the end of the phase, its models can move an additional 3\" when it Consolidates, if it can end that move within Engagement Range of an enemy unit; within Synapse Range of your army and not within Engagement Range of any enemy unit, it can make a Normal move of up to 6\" instead.",
-     "new": "consolidate 3\" more if it ends engaged; in Synapse Range and not engaged: a 6\" Normal move instead",
+     "new": "consolidate 3\" more if this unit ends engaged; in Synapse Range and not engaged: a 6\" Normal move instead",
      "text": "WHEN: Fight phase, just before a **TYRANIDS** unit from your army Consolidates.\nTARGET: That **TYRANIDS** unit.\nEFFECT: Until the end of the phase, each time your unit Consolidates, models in it can move an additional 3\" as long as your unit can end that move within **Engagement Range** of one or more enemy units. If your unit is within Synapse Range of your army and not within Engagement Range of any enemy units, instead of making that **Consolidation move**, it can make a **Normal move** of up to 6\"."
     },
     {
@@ -3172,7 +3172,7 @@
     {
      "where": "Tanglestrike Rounds",
      "old": "After your unit has shot: one enemy unit hit by those attacks is tethered (-2\" M) until the start of your next Command phase.",
-     "new": "after a NORN ASSIMILATOR shoots: one enemy it hit has −2\" Move until your next Command phase",
+     "new": "after a NORN ASSIMILATOR shoots: one enemy unit this unit hit has −2\" Move until your next Command phase",
      "text": "WHEN: Your Shooting phase, when a friendly **NORN ASSIMILATOR** unit has shot.\nTARGET: That **NORN ASSIMILATOR** unit.\nEFFECT: Select one enemy unit hit by those attacks. That enemy unit is **tethered** until the start of your next Command phase:\n- While a unit is **tethered**, that unit has -2\" **M**."
     }
    ]
@@ -3364,7 +3364,7 @@
     {
      "where": "Summoned by Slaughter",
      "old": "The last model of a unit is destroyed: set your BLOODLETTERS unit in Reserves up wholly within 9\" of that model and more than 6\" horizontally away from all enemy units (once per battle round).",
-     "new": "once per round, when a unit's last model dies: BLOODLETTERS from Reserves set up wholly within 9\" of it, more than 6\" from enemies",
+     "new": "once per round, when a unit's last model dies: BLOODLETTERS from Reserves set up wholly within 9\" of that model, more than 6\" from enemies",
      "text": "WHEN: Any phase, when the last model in a unit is destroyed, before removing it from play. (If that unit is a **TRANSPORT**, any units embarked within that **TRANSPORT** model must disembark first).\nTARGET: One **BLOODLETTERS** unit from your army that is in Reserves.\nEFFECT: Set your unit up anywhere on the battlefield wholly within 9\" of that destroyed model and more than 6\" horizontally away from all enemy units, then remove the destroyed model from play.\nRESTRICTIONS: You cannot use this Stratagem more than once per battle round."
     },
     {
@@ -3376,7 +3376,7 @@
     {
      "where": "A Worthy Skull",
      "old": "Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities.",
-     "new": "after it kills an enemy CHARACTER or MONSTER: gain D3BTP and can spend BTP on a Blood Tithe ability",
+     "new": "after this unit kills an enemy CHARACTER or MONSTER: gain D3BTP and can spend BTP on a Blood Tithe ability",
      "text": "WHEN: Fight phase, just after a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army has fought, and one or more enemy **CHARACTER** or **MONSTER** models were destroyed as a result of those attacks.\nTARGET: That **BLOOD LEGIONS** or **WORLD EATERS** unit.\nEFFECT: You gain D3BTP and you can then spend one or more BTP you have to activate one of the Blood Tithe abilities."
     },
     {
@@ -3424,7 +3424,7 @@
     {
      "where": "Punish the Craven",
      "old": "An enemy unit engaged with your unit is selected to fall back: it must use desperate escape (-1 to those hazard rolls if it is battle-shocked).",
-     "new": "an enemy falling back from a WORLD EATERS CHARACTER must use desperate escape (−1 to its hazard rolls if Battle-shocked)",
+     "new": "an enemy falling back from a WORLD EATERS CHARACTER must use desperate escape (−1 to that unit’s hazard rolls if Battle-shocked)",
      "text": "WHEN: Your opponent’s Movement phase, when a unit is selected to make a **fall-back move**, if that unit is **engaged** with a friendly **WORLD EATERS CHARACTER** unit.\nTARGET: That **WORLD EATERS CHARACTER** unit.\nEFFECT: When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape** mode. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**."
     }
    ]
