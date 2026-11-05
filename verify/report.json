@@ -1,6 +1,6 @@
 {
- "hash": "c3a92851aacbce72b4847fe7b3db14de9f7c54670c986559521138575d4db490",
- "at": "2026-11-05T13:31:11.904Z",
+ "hash": "cc27248a747136bf0dd3eb37f925b99d9659d2534602d5bfcf1f18bcb18ad4cf",
+ "at": "2026-11-05T19:07:16.145Z",
  "ok": true,
  "steps": {
   "data": {
@@ -13,7 +13,7 @@
   },
   "fingerprints": {
    "ok": true,
-   "summary": "fingerprints: 182 of 182 AI-written values (gist, def) and 85 of 85 readings (0 derived) match the text they were written or read from"
+   "summary": "fingerprints: 481 of 481 AI-written values (gist 182, sumAtk 140, sumDef 84, sumSt 18, sumFoe 11, sumOv 46) and 85 of 85 readings (0 derived) match the text they were written or read from"
   },
   "readings": {
    "ok": true,
@@ -25,7 +25,7 @@
   },
   "lines": {
    "ok": true,
-   "summary": "lines: 109 Damaged ranges, 2 once-per-battle chips, 2 extra-CP chips and 12 \"does nothing here\" chips as their words give them; 152 lines under a profile from stat boxes; 1352 footnotes (8 in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects' and conditions' labels, 331 \"see the rule\" lines; 130 catalogue labels with their values; 309 boxes with every condition of their words (69 reach boxes and models scopes checked against GW’s phrase, 0 unchecked, said “If (see the rule)”); 66 Damaged bands as their boxes; 1281 drawn lines, one source each; 685 sources the lists use, every sentence of the numbers counted or listed not counted; 18 fixed cases"
+   "summary": "lines: 109 Damaged ranges, 2 once-per-battle chips, 2 extra-CP chips and 12 \"does nothing here\" chips as their words give them; 160 lines under a profile from stat boxes; 1352 footnotes (8 in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects' and conditions' labels, 356 \"see the rule\" lines; 130 catalogue labels with their values; 309 boxes with every condition of their words (69 reach boxes and models scopes checked against GW’s phrase, 0 unchecked, said “If (see the rule)”); 66 Damaged bands as their boxes; 1273 drawn lines, one source each; 685 sources the lists use, every sentence of the numbers counted or listed not counted; 18 fixed cases; 2254 counted boxes drawn as a summary, each summary with their numbers (LN); 2070 placed lines, each with its summary, every summary used (LM); 19 leader lines for its own model, each \"<model> only:\" (LO)"
   },
   "defence": {
    "ok": true,
@@ -97,15 +97,15 @@
   },
   "derived": {
    "ok": true,
-   "summary": "derived: 118 of 138 derived columns held by the script they name: a change of one value fails its step (reimport 1, nr 1, fingerprints 7, texts 4, derive 41, evidence 28, lines 8, tables 7, defence 13, readings 1, catalog 1, build-parity › build-index.js 5, agree 1; 2 kept from a run of the same code); 20 with no value stored in data.js; verify/out/derived-proof.json"
+   "summary": "derived: 136 of 156 derived columns held by the script they name: a change of one value fails its step (reimport 1, nr 1, fingerprints 25, texts 4, derive 41, evidence 28, lines 8, tables 7, defence 13, readings 1, catalog 1, build-parity › build-index.js 5, agree 1; 2 kept from a run of the same code); 20 with no value stored in data.js; verify/out/derived-proof.json"
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 3344 screens and popups, 2073 helper texts, 0 failures"
+   "summary": "render at 390px: 3345 screens and popups, 2036 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 3344 screens and popups, 2073 helper texts, 0 failures"
+   "summary": "render at 320px: 3345 screens and popups, 2036 helper texts, 0 failures"
   },
   "build-parity": {
    "ok": true,
@@ -117,7 +117,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 444 judgements, 444 approved, 0 to check, 2747 stale approvals"
+   "summary": "helpers: 743 judgements, 743 approved, 0 to check, 2942 stale approvals"
   }
  }
 }

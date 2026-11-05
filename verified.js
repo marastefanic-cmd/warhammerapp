@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "c3a92851aa",
- "data": "2026-11-05.1",
+ "build": "cc27248a74",
+ "data": "2026-11-05.2",
  "date": "5 Nov 2026",
  "checks": [
   {
@@ -27,11 +27,11 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "444 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "743 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "3344 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "3345 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
@@ -79,7 +79,7 @@ window.WH_VERIFIED = {
   },
   "FACTIONS.armyRules": {
    "what": "a faction's army rules",
-   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:derived coreTwin:derived note:gw tableAt:wahapedia missing:hand readOf:derived"
+   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:derived coreTwin:derived note:gw tableAt:wahapedia missing:hand readOf:derived sumAtk:ai-summary sumAtkOf:derived sumDef:ai-summary sumDefOf:derived sumSt:ai-summary sumStOf:derived sumOv:ai-summary sumOvOf:derived sumFoe:ai-summary sumFoeOf:derived"
   },
   "FACTIONS.detachments": {
    "what": "a faction's detachments",
@@ -87,7 +87,7 @@ window.WH_VERIFIED = {
   },
   "FACTIONS.detachments.rule": {
    "what": "a detachment's rule",
-   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:derived coreTwin:derived note:gw tableAt:wahapedia missing:hand readOf:derived"
+   "cols": "name:gw text:gw table:gw tag:newrecruit ph:derived turn:derived turns:derived at:derived needs:derived coreTwin:derived note:gw tableAt:wahapedia missing:hand readOf:derived sumAtk:ai-summary sumAtkOf:derived sumDef:ai-summary sumDefOf:derived sumSt:ai-summary sumStOf:derived sumOv:ai-summary sumOvOf:derived"
   },
   "FACTIONS.detachments.moreRules": {
    "what": "a detachment's further rule (moreRules), with the columns of its first",
@@ -99,7 +99,7 @@ window.WH_VERIFIED = {
   },
   "FACTIONS.detachments.enhancements": {
    "what": "a detachment's enhancements",
-   "cols": "name:gw pts:newrecruit text:gw upgrade:bsdata nr:newrecruit limit:wahapedia"
+   "cols": "name:gw pts:newrecruit text:gw upgrade:bsdata nr:newrecruit limit:wahapedia sumAtk:ai-summary sumAtkOf:derived sumDef:ai-summary sumDefOf:derived sumSt:ai-summary sumStOf:derived sumOv:ai-summary sumOvOf:derived"
   },
   "ARMIES": {
    "what": "one row per list",
@@ -143,7 +143,7 @@ window.WH_VERIFIED = {
   },
   "DATASHEETS.abilities": {
    "what": "a datasheet's abilities",
-   "cols": "name:newrecruit who:newrecruit text:wahapedia tag:newrecruit ph:derived turn:derived turns:derived at:derived note:gw na:derived damaged:derived readOf:derived"
+   "cols": "name:newrecruit who:newrecruit text:wahapedia tag:newrecruit ph:derived turn:derived turns:derived at:derived note:gw na:derived damaged:derived readOf:derived sumAtk:ai-summary sumAtkOf:derived sumDef:ai-summary sumDefOf:derived sumSt:ai-summary sumStOf:derived sumOv:ai-summary sumOvOf:derived sumFoe:ai-summary sumFoeOf:derived"
   },
   "RULE_OPTIONS": {
    "what": "the options inside a rule or ability, each with the phases its words give",
