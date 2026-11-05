@@ -1,5 +1,5 @@
 {
- "about": "Where every column of data.js gets its values. verify/tables.js (the gate) fails on a column of data.js that is not here. Sources: bsdata (BSData wh40k-11e), wahapedia, gw (Games Workshop's documents), newrecruit (the owner's New Recruit PDFs), derived (computed by a verify/ script), hand (written by hand, with the note saying how it is checked), ai-summary (an AI-written one-line summary; carries a fingerprint of the text it was written from, gistOf), ai-reading (the app's reading of a rule's words into numbers and lines, by AI or by verify/derive.js's fixed rules where readBy says so; fingerprinted, readOf or defOf). verify/tables.js fails unless the ai-reading columns are exactly the fingerprinted ones and the ai-summary columns exactly gist.",
+ "about": "Where every column of data.js gets its values. verify/tables.js (the gate) fails on a column of data.js that is not here. Sources: bsdata (BSData wh40k-11e), wahapedia, gw (Games Workshop's documents), newrecruit (the owner's New Recruit PDFs), derived (computed by a verify/ script), hand (written by hand, with the note saying how it is checked), ai-summary (an AI-written one-line summary; carries a fingerprint of the text it was written from, gistOf), ai-reading (the app's reading of a rule's words into numbers and lines, by AI or by verify/derive.js's fixed rules where readBy says so; fingerprinted, readOf or defOf). verify/tables.js fails unless the ai-reading columns are exactly the fingerprinted ones and the ai-summary columns exactly gist and the placement summaries sumAtk, sumDef, sumSt, sumFoe, sumOv.",
  "tables": {
   "RULES": {
    "what": "core rules and weapon abilities: name → text (glossary)",
@@ -60,7 +60,7 @@
     },
     "gist": {
      "source": "ai-summary",
-     "note": "AI-written one-line summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS; signed off (approvals.json); gistOf is the fingerprint of that text"
+     "note": "AI-written summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS to docs/summaries.md: the Stratagems tab's one line and, on a unit's sheet, \"<cp>CP <name>: <gist>\"; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); gistOf is the fingerprint of that text"
     },
     "gistOf": {
      "source": "derived",
@@ -211,6 +211,61 @@
     "readOf": {
      "source": "derived",
      "note": "fingerprint of the text this row's own readings (mod, calcMods, calcDefs, calcNc, parts, both, limit) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\""
+    },
+    "sumAtk": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under its weapons (and a weapon row's changed-value line): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumAtkOf is the fingerprint of that text"
+    },
+    "sumAtkOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumDef": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under When targeted: only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumDefOf is the fingerprint of that text"
+    },
+    "sumDefOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumSt": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under its profile: only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumStOf is the fingerprint of that text"
+    },
+    "sumStOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumOv": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows on the Overview (deployment, pre-battle, the start of the battle and its rounds, the uses per battle): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumOvOf is the fingerprint of that text"
+    },
+    "sumOvOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumFoe": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under its profile for what it does to enemy units (its aura line, docs/summaries.md 25): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumFoeOf is the fingerprint of that text"
+    },
+    "sumFoeOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
     }
    }
   },
@@ -328,6 +383,50 @@
     "readOf": {
      "source": "derived",
      "note": "fingerprint of the text this row's own readings (mod, calcMods, calcDefs, calcNc, parts, both, limit) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\""
+    },
+    "sumAtk": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under its weapons (and a weapon row's changed-value line): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumAtkOf is the fingerprint of that text"
+    },
+    "sumAtkOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumDef": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under When targeted: only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumDefOf is the fingerprint of that text"
+    },
+    "sumDefOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumSt": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under its profile: only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumStOf is the fingerprint of that text"
+    },
+    "sumStOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumOv": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows on the Overview (deployment, pre-battle, the start of the battle and its rounds, the uses per battle): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumOvOf is the fingerprint of that text"
+    },
+    "sumOvOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
     }
    }
   },
@@ -411,7 +510,7 @@
     },
     "gist": {
      "source": "ai-summary",
-     "note": "AI-written one-line summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS; signed off (approvals.json); gistOf is the fingerprint of that text"
+     "note": "AI-written summary of the stratagem, written from its WHEN / TARGET / EFFECT / RESTRICTIONS to docs/summaries.md: the Stratagems tab's one line and, on a unit's sheet, \"<cp>CP <name>: <gist>\"; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); gistOf is the fingerprint of that text"
     },
     "gistOf": {
      "source": "derived",
@@ -501,6 +600,50 @@
     "limit": {
      "source": "wahapedia",
      "note": "\"(one per army)\" as Wahapedia prints it after the name"
+    },
+    "sumAtk": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under its weapons (and a weapon row's changed-value line): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumAtkOf is the fingerprint of that text"
+    },
+    "sumAtkOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumDef": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under When targeted: only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumDefOf is the fingerprint of that text"
+    },
+    "sumDefOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumSt": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under its profile: only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumStOf is the fingerprint of that text"
+    },
+    "sumStOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumOv": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows on the Overview (deployment, pre-battle, the start of the battle and its rounds, the uses per battle): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumOvOf is the fingerprint of that text"
+    },
+    "sumOvOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
     }
    }
   },
@@ -1274,6 +1417,61 @@
     "readOf": {
      "source": "derived",
      "note": "fingerprint of the text this row's own readings (riled, damaged, defAlways, defCalc, calcDef, fightOnDeath, comeback) were read from (8 hex of its sha256 of the row's text): verify/tables.js --stamp / --restamp, checked by the gate step \"fingerprints\""
+    },
+    "sumAtk": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under its weapons (and a weapon row's changed-value line): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumAtkOf is the fingerprint of that text"
+    },
+    "sumAtkOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumDef": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under When targeted: only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumDefOf is the fingerprint of that text"
+    },
+    "sumDefOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumSt": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under its profile: only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumStOf is the fingerprint of that text"
+    },
+    "sumStOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumOv": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows on the Overview (deployment, pre-battle, the start of the battle and its rounds, the uses per battle): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumOvOf is the fingerprint of that text"
+    },
+    "sumOvOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumFoe": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under its profile for what it does to enemy units (its aura line, docs/summaries.md 25): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumFoeOf is the fingerprint of that text"
+    },
+    "sumFoeOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
     }
    }
   },

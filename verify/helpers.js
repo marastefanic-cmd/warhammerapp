@@ -71,6 +71,8 @@ function items(D, appSource){
         // (who: New Recruit's, compared exactly by verify/nr.js; no judgement. tag: a judgement again, nr.js lets the app add a tag part
         // its text names, so an extra "Aura" would pass it)
         if(ab.tag) add(a.id, 'ability-tag', w + ' · ' + ab.name, { tag:ab.tag }, src);
+        // (sumAtk / sumDef / sumSt / sumOv: the AI-written summaries a unit's screens show of the ability, one per placement)
+        for(const c of ['sumAtk', 'sumDef', 'sumSt', 'sumFoe', 'sumOv']) if(ab[c]) add(a.id, 'ability-' + c, w + ' · ' + ab.name, { [c]:ab[c] }, src);
         // (note: GW's words under a fixed source label, verify/texts.js noteForm and noteQuote; na: derived, verify/derive.js naOf, verify/lines.js
         // L0; no judgement)
         // (damaged: the range its words give, verify/lines.js L0; def, its When targeted line: its defence boxes, BOXES d, verify/defence.js; no judgement)
@@ -98,6 +100,8 @@ function items(D, appSource){
       for(const r of detRules_(d)) rulesMeta(d.name + ' rule', r, r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : ''));
       for(const s of d.stratagems || []) for(const k of STRAT_KEYS)
         if(s[k] !== undefined) add(a.id, 'strat-' + k, d.name + ' · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
+      // (an enhancement's short summary, as an ability's: written from its text)
+      for(const e of d.enhancements || []) for(const c of ['sumAtk', 'sumDef', 'sumSt', 'sumFoe', 'sumOv']) if(e[c]) add(a.id, 'enhancement-' + c, d.name + ' · ' + e.name, { [c]:e[c] }, { enhancement:e.name, text:e.text });
     }
   }
   // the DATASHEETS rows no list has (a faction catalogue's, docs/catalog.md) and the detachments a catalogue added (aiStatus 'not-read'):
@@ -141,7 +145,7 @@ function items(D, appSource){
 const CODE_RULES = {
   useSentence:'04.01 Select Weapons; Close-quarters (non-MONSTER/VEHICLE: pistols or other ranged weapons); Extra Attacks (24.11); a multi-profile weapon uses one profile (04.01.03)',
   useLine:'which models carry which weapons (gear per models line); attached units (19.04)',
-  weaponChoice:'whether a model of these weapon rows has a choice between them, said in words (useLine) under the rows, which keep GW\'s datasheet order: 04.01 Select Weapons (melee: a model with two or more melee weapons fights with one, [EXTRA ATTACKS] on top); Close-quarters (a non-MONSTER/VEHICLE model with [CLOSE-QUARTERS] weapons and other ones: those or the others); per models line (gear); attached units by part; without a choice, a weapon only one 1× models line has names that model on its row',
+  weaponChoice:'whether a model of these weapon rows has a choice between them, said in words (useLine) under the rows, which keep GW\'s datasheet order: 04.01 Select Weapons (melee: a model with two or more melee weapons other than [EXTRA ATTACKS] ones fights with one; an [EXTRA ATTACKS] weapon is no choice, its keyword on its row says so, 24.11); Close-quarters (a non-MONSTER/VEHICLE model with [CLOSE-QUARTERS] weapons and other ones: those or the others); per models line (gear); attached units by part; without a choice, a weapon only one 1× models line has names that model on its row',
   unitMods:'which footnotes a unit gets, each a box of data.js BOXES (made by script from GW\'s words): the sources the Damage tab gives it (dmSources: its army and detachment rules, its own abilities, its weapons\' core abilities, the boxes of other units of the list that reach it, the detachments\' stratagems it can be the TARGET of; not the core stratagems, every unit\'s), its Damaged bands, Lance for its [LANCE] weapons (24.24), Plunging Fire for a TOWERING unit that is not AIRCRAFT (22.05, 23.03); a box that reaches other units only where it reaches this one (its own aura too, 22.01; not one "other" friendly units), of this kind of attack',
   fnLine:'one box as a footnote: its conditions\' labels (fnCond), its effects\' labels (effects.js fxLabel; a pick\'s options, its part), the weapons or models its scope names (none of this kind: no footnote), less what the list printed into the weapons (dmBaked, marked +); none where the unit lacks the keyword or wargear it needs (selfKw, selfGear); a box for one weapon\'s A, S, AP or D only, not a Damaged band\'s or a stratagem\'s, is that weapon\'s row value ("8 (+6)", "A 6"); a stratagem\'s one phase from its derived phases and turn',
   fnCond:'a condition as a footnote says it: effects.js COND label; an aura of another unit "Within N\" of <its name>" (the model of an attached unit whose ability it is), the unit\'s own aura "Own aura" (22.01), "Selected by <its name>"; a one-model unit\'s Starting Strength "Lost any wounds", Half-strength "<halfBelow> or fewer wounds left" (Core Rules p86)',

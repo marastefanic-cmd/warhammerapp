@@ -23,7 +23,10 @@ module.exports = function load(extra, opts){
     if(!m) continue;
     let j = i + 1;
     while(j < lines.length && !ENDS.test(lines[j])) j++;
-    decl.set(m[1] || m[2], { at:i, src:lines.slice(i, j).join('\n') });
+    const d = { at:i, src:lines.slice(i, j).join('\n') };
+    decl.set(m[1] || m[2], d);
+    // (opts.page: the other names of one "let a = null, b = null, …" line, the same declaration: a screen reads them)
+    if(m[2] && opts && opts.page) for(const x of lines[i].matchAll(/,\s*([\w$]+)\s*=(?!=)/g)) if(!decl.has(x[1])) decl.set(x[1], d);
   }
   // what the Damage helpers use, followed name by name (the page's state is given here instead)
   const given = new Set(['D', 'cur', 'sess', 'store', 'session', 'BUILD', '$', '$$', 'WH_CALC', 'WH_EFFECTS']);
@@ -37,12 +40,15 @@ module.exports = function load(extra, opts){
       .replace(/(?<!\.)\.\s*[A-Za-z_$][\w$]*/g, ' ').replace(/[A-Za-z_$][\w$]*:(?!:)/g, ' ');
     for(const id of new Set(code.match(/[A-Za-z_$][\w$]*/g))) if(decl.has(id) && !need.has(id) && !given.has(id)) todo.push(id);
   }
-  const src = [...need].sort((a, b) => decl.get(a).at - decl.get(b).at).map(n => decl.get(n).src).join('\n');
+  const src = [...new Set([...need].map(n => decl.get(n)))].sort((a, b) => a.at - b.at).map(d => d.src).join('\n');
   const D0 = loadData(), WH_CALC = require(path.join(ROOT, 'calc.js')), WH_EFFECTS = require(path.join(ROOT, 'effects.js'));
   const allOk = () => ({ boxes:Object.fromEntries(Object.entries(D0.boxes || {}).map(([k, o]) => [k, Object.fromEntries(['b', 'd', 'st'].filter(f => o[f]).map(f => [f, o[f].map(() => 'A')]))])) });
   const D = opts && opts.agree === 'all' ? Object.assign({}, D0, { agree:allOk() }) : D0;
   const mem = new Map(), store = { get:k => mem.get(k), set:(k, v) => mem.set(k, v) };
-  const env = new Function('D', 'WH_CALC', 'WH_EFFECTS', 'store', 'window', 'let cur = { s:"damage", army:null }, sess = {};\n' + src + '\n' +
+  // (opts.page: a screen drawn as a string, screenPregame: the page's globals it reads at load, none of them used to draw it)
+  const page = opts && opts.page ? 'const matchMedia = () => ({ matches:false, addEventListener(){} }), navigator = {}, location = { hostname:"", search:"", hash:"", pathname:"/" }, ' +
+    'document = { addEventListener(){}, querySelector(){ return null; }, querySelectorAll(){ return []; }, documentElement:{ dataset:{}, style:{} } }, addEventListener = () => {}, localStorage = { getItem(){ return null; }, setItem(){}, removeItem(){} }, sessionStorage = localStorage;\n' : '';
+  const env = new Function('D', 'WH_CALC', 'WH_EFFECTS', 'store', 'window', page + 'let cur = { s:"damage", army:null }, sess = {};\n' + src + '\n' +
     'return { set:(a, st) => { cur.army = a; sess.dmg = { [a]:st }; }, dmState, dmSides, dmTypedVals, dmCalc, dmShown, dmUnits, army, unitLabel, modelCount, dmPair, dmPlan, dmIn, dmBeatAns, dmFx, dmLevers, dmNums, dmZero, dmDelta, dmSetUnit, dmCleanTicks, dmResetPair, dmCharged, dmSetCharge, dmMe, dmModeTurn, dmModeOf, dmModeOld, dmStart, dmTotalAns, dmAnsOf, dmWorth, dmSources, dmBoxRules, DM_GROUPS, dmGroupOf, matches, inArmy, allStratagems, canTarget' + (extra || []).map(n => ', ' + n).join('') + ' };');
   const app = env(D, WH_CALC, WH_EFFECTS, store, { WH_DATA:D, WH_EFFECTS, WH_BUILDER:require(path.join(ROOT, 'builder.js')) });
   // one attack as the screen builds it: s = { army, ph, atk, typed, left, on, off, pick, man, val, fx }: the unit as the screen picks it

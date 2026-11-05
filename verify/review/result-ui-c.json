@@ -1,0 +1,297 @@
+[
+ {
+  "key": "review-ui-code",
+  "where": "todo-ui.json review-ui-code: app.html summary layout, verify/lines.js LM/LN/LG/LB/LS, verify/render.js lines-placed/ai-summary, tables.js FINGERPRINT",
+  "verdict": "superseded",
+  "why": "(superseded: fixed in a later round, see the round-2/3/4 entries) Which lines exist and where they go come only from BOXES, GRANTS and placement. The AI columns supply the text and nothing else: srcShort reads them; sumLinesOf builds option lines from boxOpts/RULE_OPTIONS; grantedBy, the AI label, \"(name)\", stratLead (phases/turn), the weapon prefix and the order are all program-built. If a summary is missing, the counted line or FN_NC is drawn and LM fails; nothing is dropped. Comparing (list, unit, placement, source, giver) across all 26 lists between f8e8966 and f9989d1 gives 1796 = 1796 distinct entries and nothing lost. The only differences are 26 stat lines (Time Flux, Relentless March) that now carry a giver, and foeOwn lines moved from When targeted to the enemy line by design. Damage numbers are identical: dmshown 675 keys and dmsingle 13222 keys, 0 differences, 0 errors. Mutations caught: deleting Guardian Organism sumDef (4 LM); dropping a Try Dat Button option (LM + LN); a stale sumAtk and a stale option (LM); a wrong number (+3\" to +6\", 5+ to 4+: LN); a bad or missing fingerprint (fingerprints); drawing drops for giver lines under the weapons, leader lines When targeted and foe lines under the profile (render lines-placed, ai-summary, targeted-items). Gaps found: (1) LN checks only that a number is present. A sign flip (\"+1 AP\" to \"−1 AP\"), the wrong kind (\"5+ invulnerable save\" to \"5+ Feel No Pain\") and an added contradicting number (\"5+ invulnerable save (4+ vs ranged)\") all pass. (2) On sheets the \"Riled up (Zodgrod Wortsnagga · Super Runts: always riled up)\" condition is gone: 3 lines on main, 0 now, because sumHtml/defLine summary branches skip riledWhen. render.js always-riled can no longer fire, since its regex never matches a summary line. (3) Completeness of When targeted sources still depends on the app itself: defence.js DL and render.js both take defSources from the app. Dropping other-unit sources in one list only (basic-bitch) was caught only by LM stale-summary on Psychological Saboteur. Sources shared with other lists would pass. This gap predates the branch. (4) The LM Overview filter re-implements screenPregame's regexes and leaves out the per-battle and start-of-battle table rows (e.g. \"Code Chivalric (Deed 1–2)\", \"Resilient Organism\", \"Chainbreaker\"), which are drawn by name only. (5) Minor: LM statShown looks up the ability by name across the army and ignores x.v (with the leftover `require('./tables') &&`), and the under-weapons lookup uses the name too, which collides on duplicate names (Praesidium Shield on Shield-Captain + Sentinel Guard Sodality). The varc row repeats the value (\"A +6 +6 A vs …\", Blitz Dem Gitz!) and puts \"Granted by\" after the bold value (\"A +2 Granted by: Cybernetica Datasmith - …\"). The fingerprints message still says \"(gist, def)\".",
+  "fix": "verify/lines.js sumMisses: match each number with its sign (+1 / −1 / -1 normalised) and its unit or roll (\"AP\", \"invulnerable save\", \"Feel No Pain\", \"cover\"), and fail any number in a summary that is in neither its box labels nor its GW text (so \"5+ invulnerable save (4+ vs ranged)\" fails). sumHtml / defLine sum branches / statHtml: when alwaysRiled(u) and the box has a riled condition, add the program's \"(always riled up: <model> · <rule>)\" after the summary, and widen render.js always-riled to look at summary lines. Give defence.js DL (or LM) an independent enumeration of the other units whose defence boxes reach this unit (as L4 does for footnotes, using dmSources/reach), not A.defSources. LM Overview: take the lines from screenPregame's own ovSum calls (export the list it draws), not a copy of its regexes. LM: look up rows by abilityKey (x.v / m.key), not by name."
+ },
+ {
+  "key": "gate",
+  "where": "node verify/run.js in a fresh clone (gate-ui-c) of f9989d1, after VERIFY_BUILDING=1 node build.js",
+  "verdict": "ok",
+  "why": "All steps PASS except the two expected ones. Passing: data, tables, fingerprints (455 of 455), readings, evidence, lines (1760 summaries LN, 1884 placed lines LM), defence, agree, invariants, derive, choice, bsdata, dispositions, bases, catalog, nr, texts, numbers, keywords, words, calc, import, reimport, derived, screens 390 (3345 screens and popups, 0 failures), small phone 320 (0 failures), build-parity (P1 6 built byte for byte, 18 copied, 0 differ; 243 checks, 0 failures). FAIL snapshots: 26 lists changed, the clone's verify/out/snapshots byte-identical to the builder's. FAIL helpers: 468 to check. Log: /tmp/claude-0/-home-user/212a9808-0fe7-5a60-ad42-e5b59a26fbde/scratchpad/gate-ui-c.log",
+  "fix": null
+ },
+ {
+  "key": "layout",
+  "where": "Playwright at 390 and 320px: basic-bitch The Red Terror and Hive Tyrant + Tyrant Guard, emperors-chosen Shield-Captain + Sentinel Guard Sodality and Trajann + Allarus, infernal-lance Knight Despoiler, simple-but-effective Nazdreg + Meganobz and Gretchin, pubstomper Magnus",
+  "verdict": "ok",
+  "why": "No horizontal overflow at either width (scrollWidth equals clientWidth; no element outside the viewport). Taps work: \"Granted by: <giver>\" opens the giver's datasheet (Neurolictor, Nurglings, Ghazghkull Thraka; for a leader it opens the attached unit's sheet, which is the leader's), and the summary and \"(name)\" open the rule or ability popup. The giver and summary links are inline, about 26-27px tall per text line, and separated by \" - \", the same inline-link size as before. Order within each block is army-wide, then the unit's own, then other units, then stratagems. The \"All attacks · whole unit\" block comes before the ranged and melee blocks, as on main. Abilities show GW's full text. Screenshots: /tmp/claude-0/-home-user/212a9808-0fe7-5a60-ad42-e5b59a26fbde/scratchpad/uic-shots/*.png",
+  "fix": null
+ },
+ {
+  "key": "snapshots",
+  "where": "verify/out/snapshots against verify/snapshots",
+  "verdict": "ok",
+  "why": "Removed: 5 \"rule:Select Weapons\" popups (healybois, nidzillas, princes, the-exiled-legion, tzeeeeentch). In each list the only Select Weapons link was a \"Fights with both/all … (extra attacks)\" sentence (8/10/2/6/2 occurrences, all gone); the 26 \"Pick one to fight with\" sentences are unchanged. Added: 6 ability popups (Unholy Mechanisms, Burning Spray, Selfless Protector, Emanatus Force Field, Clever Know-wotz, Slaughterthirst (Aura)), because the \"(name)\" on another unit's line now opens the ability, not the unit (modTarget). In simple-but-effective, old counted lines become \"<summary> AI (<name>)\", other units' lines become \"Granted by: … - …\", stratagem lines carry phase words, and the \"not counted here\" lines become summaries. Exception: the always-riled-up marker is lost (see review-ui-code). Deadly Demise and Shadow in the Warp text counts are unchanged; neither has a sheet line.",
+  "fix": null
+ },
+ {
+  "key": "04c76dca2c9c46e3",
+  "where": "code · unitMods",
+  "verdict": "ok",
+  "why": "Order is army, then own, Damaged, core, other, strat (docs/summaries.md 40). fellOpts carries the unconfirmed boxes' options to the not-counted line. Same source set as main and Damage numbers identical.",
+  "fix": null
+ },
+ {
+  "key": "bf38ce2e599d24ed",
+  "where": "code · defenceItems",
+  "verdict": "superseded",
+  "why": "(superseded: fixed in a later round, see the round-2/3/4 entries) sum/blanket/dup/leader/x.t are mechanical, but a summary line drops the riled-up condition riledWhen used to add (\"always riled up: Super Runts\"). Fix: append the program's always-riled marker in the sum branch.",
+  "fix": "Append the program-made always-riled marker (alwaysRiled(u)) to summary lines of riled boxes, and widen render.js always-riled to match \"riled up\" inside summaries."
+ },
+ {
+  "key": "753f3b404bd46dd7",
+  "where": "code · defLine",
+  "verdict": "superseded",
+  "why": "(superseded: fixed in a later round, see the round-2/3/4 entries) Granted by, CP and stratLead, leader and \"(name)\" are program-built and the links open the right targets. The sum branch ignores w (riled, always riled), so the always-riled marker is lost; render always-riled is now blind. Fix as for defenceItems.",
+  "fix": "Append the program-made always-riled marker (alwaysRiled(u)) to summary lines of riled boxes, and widen render.js always-riled to match \"riled up\" inside summaries."
+ },
+ {
+  "key": "cf581a75884cef1a",
+  "where": "code · screenPregame",
+  "verdict": "ok",
+  "why": "ovSum \"<summary> AI (<name>) · <src>\", or the name when there is no sumOv. Fine, but the LM Overview coverage copies its regexes and leaves out the per-battle and start-of-battle table rows (non-blocking).",
+  "fix": null
+ },
+ {
+  "key": "b464367a5bd133d4",
+  "where": "code · statLines",
+  "verdict": "ok",
+  "why": "Order is rules, then own abilities, then auras, then stratagems (LS updated to match); giver and foe set from data; independently checked by lines.js LS.",
+  "fix": null
+ },
+ {
+  "key": "review-ui-code-r2",
+  "where": "round 2 at 5d8657e: the builder's items 1-8",
+  "verdict": "superseded",
+  "why": "(superseded: fixed in a later round, see the round-2/3/4 entries) All checked with my own mutations in a clone of 5d8657e. (1) Always riled up: \"(always riled up: Zodgrod Wortsnagga · Super Runts)\" is on both Waaagh! lines on Zodgrod's sheet at 390 and 320. With riledNote returning '', render always-riled fails twice, so it is caught. (2) LN: sign (+1 AP to −1 AP: 18 LN), kind (5+ invulnerable to 5+ Feel No Pain: 20 LN) and extra numbers (\"(4+ vs ranged)\", \"+1 to save rolls\") are all caught. Still passing: an added effect whose number appears elsewhere in GW's text (\"+1 AP and +1 A\" on Try Dat Button 5–6), because the extra-number check works on tokens, not facts. Non-blocking. (3) \"<model> only:\" is right on Praesidium Shield, Moment Shackle, Brass Collar, Flowing Flesh, Euphoric Strikes, Possessed Lord, Skulls for Khorne and Challenge Worthy. No gate checks it: with modelOnly returning '' nothing fails but snapshots. Non-blocking. (4) Blistering Salvoes: \"Ferrumite cannon: vs MONSTER or VEHICLE: +1 to Hit rolls AI (Blistering Salvoes)\". Disabling the per-weapon branch fails LM. The weapon row now starts with Granted by and the duplicate chip is gone. (5) Binharic Courage: dropping the \"(Aura)\" quote branch in statLines fails LS ×8. The lines show at 390 and 320 on Thulia Ghuld and the Enginseer. (6) The three attack-side not-counted entries add lines: Fates in Flux 11, Altered Reality 1, Pledge 1. Damage is unchanged. (7) Plunging Fire is judged below. (8) Deleting Incandaeum's new sumOv fails LM \"Overview · Uses per battle\". LM now finds rows by key. Gap: the claim \"DL is independent of defSources\" holds only for reach boxes. Dropping other units' sources in purge-goes-the-foe gives 14 DL fails. Dropping them in basic-bitch gives 0 DL fails, because the new loop skips b.foe boxes, and those are 41 of the 87 \"Granted by\" When targeted lines across the lists (Psychological Saboteur, Mischief Makers and others).",
+  "fix": "verify/defence.js DL, the new independent loop: also require a \"Granted by\" line for every other unit's defence box with b.foe (an enemy debuff such as Psychological Saboteur or Mischief Makers, which defenceItems includes for every unit of the list), not only reach boxes; drop the `b.foe ||` skip and, for foe boxes, skip the reach test."
+ },
+ {
+  "key": "gate-r2",
+  "where": "node verify/run.js in a fresh clone (gate2-ui-c) of 5d8657e, after VERIFY_BUILDING=1 node build.js",
+  "verdict": "ok",
+  "why": "Every step passes except snapshots and helpers. Fingerprints 481 of 481 (gist 182, sumAtk 140, sumDef 84, sumSt 18, sumFoe 11, sumOv 46); lines, defence, screens at 390 and 320 (3345 screens and popups, 0 failures); build-parity 243 checks, 0 failures. FAIL snapshots: 26 changed, byte-identical to the builder's verify/out/snapshots. FAIL helpers: 494 to check. Log: /tmp/claude-0/-home-user/212a9808-0fe7-5a60-ad42-e5b59a26fbde/scratchpad/gate2-ui-c.log",
+  "fix": null
+ },
+ {
+  "key": "lines-set-r2",
+  "where": "(list, unit, placement, source, giver) across all 26 lists, f8e8966 against 5d8657e",
+  "verdict": "ok",
+  "why": "Nothing lost: ignoring the giver, 0 lost and 21 added (Canticles of the Omnissiah under the profile on 8 AdMech units, Fates in Flux 11, Altered Reality 1, Pledge of Unholy Fortune 1 under the weapons). With the giver, the only change is the 26 Time Flux and Relentless March profile lines that now name it.",
+  "fix": null
+ },
+ {
+  "key": "damage-r2",
+  "where": "Damage tab against main (rev2/dmshown.js, lines-work/dmsingle.js)",
+  "verdict": "ok",
+  "why": "dmshown 675 keys and dmsingle 13222 keys: 0 differences, 0 errors.",
+  "fix": null
+ },
+ {
+  "key": "plunging-fire-r2",
+  "where": "core rule line \"Plunging Fire: BS/WS improved by 1 (when the rule applies)\"",
+  "verdict": "ok",
+  "why": "It fits \"AI only in the summary column\": it has no AI text and no AI label. \"Plunging Fire\" is the rule's name and opens GW's Core Rules text. \"BS/WS improved by 1\" is effects.js fxLabel of the BOXES box, made by script from GW's words, the same label main showed as \"If (see the rule): BS/WS improved by 1 (Plunging Fire)\". \"(when the rule applies)\" is a fixed program phrase in place of \"If (see the rule)\". Strictly, the effect label is the program's reading, not GW's sentence. If the owner wants core rules in GW's own wording on the sheet, the line would have to be the name alone, with the wording one tap away. As the rules are written now (rule 32: a core rule with a weapon effect keeps its counted line), it is consistent.",
+  "fix": null
+ },
+ {
+  "key": "protean-purpose-r2",
+  "where": "Protean Purpose (Higher Imperatives) name only on the Overview",
+  "verdict": "ok",
+  "why": "Rule 31 is about sheet lines: every line on every sheet. Protean Purpose has no box with a number (it only swaps the Singular Purpose pick), so it places no sheet line, the same case as rule 32. Its only appearance is the \"Uses per battle\" tick on the Overview, by name, which rule 31 does not cover. Non-blocking: LM exempts it as a category (an ability a rule gives with no datasheet or enhancement row), not by name the way OV_NAME_ONLY names Shadow in the Warp. A future rule-given ability on the Overview would be exempt silently. Better to list it by name in OV_NAME_ONLY.",
+  "fix": null
+ },
+ {
+  "key": "layout-r2",
+  "where": "Playwright at 390 and 320px: model-only marks (8 sheets), Binharic Courage (Thulia Ghuld, Tech-Priest Enginseer), Zodgrod + Gretchin, Skorpius Disintegrator",
+  "verdict": "ok",
+  "why": "No overflow (scrollWidth equals clientWidth, no element outside the viewport). The giver, summary and \"(name)\" taps open the right datasheet, rule or ability. \"Granted by: <leader> - <leader> only: …\" reads clearly. Cosmetic: the always-riled note sits between the AI label and \"(Waaagh!)\" (\"… AI (always riled up: …) (Waaagh!)\"), so it can look like part of the AI text. Moving it after \"(Waaagh!)\" would be clearer. Screenshots: /tmp/claude-0/-home-user/212a9808-0fe7-5a60-ad42-e5b59a26fbde/scratchpad/uic-shots2/*.png",
+  "fix": null
+ },
+ {
+  "key": "e58f49fa2abcf36a",
+  "where": "code · defLine (round 2)",
+  "verdict": "ok",
+  "why": "The summary branch now adds riledNote, which render always-riled gates; modelOnly after a leader's Granted by. Round 1's fix is applied.",
+  "fix": null
+ },
+ {
+  "key": "review-ui-code-r3",
+  "round": 3,
+  "where": "round 3 at 189dbab: DL foe boxes, riled-note position, LO, LN kind pairs, Protean Purpose in OV_NAME_ONLY",
+  "verdict": "ok",
+  "why": "All checked with my own mutations in a clone of 189dbab (mut3). (1) DL: dropping other units' When targeted sources in basic-bitch, whose lines are foe boxes such as Psychological Saboteur, gives 10 DL failures (0 before); infernal-lance and lite-knights give 5 (Mischief Makers). healybois gives 0, correctly, since it has no other-unit lines. Round 2's fix is applied. (2) The riled note now follows \"(Waaagh!)\": \"If this unit is riled up: 5+ invulnerable save AI (Waaagh!) (always riled up: Zodgrod Wortsnagga · Super Runts)\", at 390 and 320. (3) LO: with modelOnly returning '', LO fails 14 times across 12 sheets. (4) LN: \"+1 AP and +1 A\" on Try Dat Button 5–6 now fails (A:+1). A sign flip fails 19, the wrong kind (5+ Feel No Pain) 20, and an extra \"+1 to Hit rolls\" 2. (5) Protean Purpose is named in OV_NAME_ONLY; the category exemption is gone.",
+  "fix": null
+ },
+ {
+  "key": "gate-r3",
+  "round": 3,
+  "where": "node verify/run.js in a fresh clone (gate3-ui-c) of 189dbab, after VERIFY_BUILDING=1 node build.js",
+  "verdict": "ok",
+  "why": "Every step passes except snapshots and helpers. Fingerprints 481 of 481; lines pass, including \"14 leader lines for its own model, each <model> only: (LO)\"; defence passes; screens at 390 and 320: 3345 screens and popups, 0 failures; build-parity 243 checks, 0 failures. FAIL snapshots: 26 changed. FAIL helpers: 494 to check. Against my round-2 gate's snapshots there are 428 changed lines: text only, no screen or popup added or removed, including the 3 riled-note moves. wt-ui/verify/out/snapshots is from an earlier builder run (16:43, before 189dbab at 17:06), so it does not match this gate's output; the snapshots to accept are this run's. Log: /tmp/claude-0/-home-user/212a9808-0fe7-5a60-ad42-e5b59a26fbde/scratchpad/gate3-ui-c.log",
+  "fix": null
+ },
+ {
+  "key": "lines-set-r3",
+  "round": 3,
+  "where": "(list, unit, placement, source, giver) across all 26 lists, f8e8966 against 189dbab",
+  "verdict": "ok",
+  "why": "Ignoring the giver: 0 lost, 21 added (Canticles of the Omnissiah under the profile ×8, Fates in Flux 11, Altered Reality 1, Pledge of Unholy Fortune 1 under the weapons). With the giver, the only changes are the 26 Time Flux and Relentless March profile lines that now name it. Same as round 2.",
+  "fix": null
+ },
+ {
+  "key": "damage-r3",
+  "round": 3,
+  "where": "Damage tab against main",
+  "verdict": "ok",
+  "why": "dmshown 675 keys and dmsingle 13222 keys: 0 differences, 0 errors.",
+  "fix": null
+ },
+ {
+  "key": "layout-r3",
+  "round": 3,
+  "where": "Playwright at 390 and 320: Zodgrod + Gretchin and the 12 sheets of the 14 LO lines (Lord Exultant, Lucius, Shield-Captain ×2, Trajann ×3, Tzaangor Shaman (Flowing Flesh), Slaughterbound ×2, Karanak, Skulltaker)",
+  "verdict": "ok",
+  "why": "No overflow at either width. The giver, summary and \"(name)\" taps all work. Every LO line reads \"Granted by: <leader> - <leader> only: …\". The LO count is 14 because Lucius's line is checked for ranged and melee but drawn once in the shared block. Screenshots: /tmp/claude-0/-home-user/212a9808-0fe7-5a60-ad42-e5b59a26fbde/scratchpad/uic-shots3/*.png",
+  "fix": null
+ },
+ {
+  "key": "review-ui-code-r4",
+  "round": 4,
+  "where": "round 4: LO extended to a leader's own-model not-counted words (e4d5732); final head 2b56294 (Altered Reality wording only)",
+  "verdict": "ok",
+  "why": "Mutation: with ownModelNc returning false, LO fails 5 times (Berzerker Frenzy on princes and standard; Altered Reality When targeted, ranged and melee). False-positive check: every not-counted sentence of every leader ability in all lists is classed by OWN_MODEL_ONLY. Only 3 count as solo: Altered Reality dnc and nc, and Berzerker Frenzy dnc, all genuinely the model's own. The unit-level one, Illusions of Tzeentch (\"While this model is leading a unit, that unit…\"), is correctly not marked. No marked not-counted line shares its line with a counted box for the unit (all have no counted siblings). The 11 distinct marked lines all read correctly. Non-blocking: LO checks only one direction. Widening the app's regex so Illusions of Tzeentch gets a wrong \"Exalted Sorcerer … only:\" mark passes lines.js; only the snapshots show it. A reverse check would catch it: fail any \"<model> only:\" on a line LO's own criteria do not select. Also non-blocking: sumHtml decides the mark from items[0], so a future source with an own-model not-counted line plus a unit-wide counted box on the same line would mark the whole line. No such case exists today.",
+  "fix": null
+ },
+ {
+  "key": "gate-r4",
+  "round": 4,
+  "where": "node verify/run.js in a fresh clone (gate5-ui-c) of 2b56294, after VERIFY_BUILDING=1 node build.js, under nohup. The e4d5732 run (gate4) was stopped on request.",
+  "verdict": "ok",
+  "why": "27 steps pass. FAIL snapshots (26 changed) and FAIL helpers (743 judgements, 249 approved, 494 to check), as expected. Fingerprints 481 of 481; lines including \"19 leader lines for its own model, each <model> only: (LO)\"; screens at 390 and 320: 3345 screens and popups, 0 failures; build-parity passes. Since my round-3 gate the only snapshot changes are Encephalic Diffusion's wording (\"Enemies within 6\\\" of the Maleceptor\", \"they are\"), the Fluxmaster only: mark with \"this model\" on 4 Altered Reality lines, and Khârn the Betrayer only: on 2 Berzerker Frenzy lines. Log: /tmp/claude-0/-home-user/212a9808-0fe7-5a60-ad42-e5b59a26fbde/scratchpad/gate5-ui-c.log",
+  "fix": null
+ },
+ {
+  "key": "lines-set-r4",
+  "round": 4,
+  "where": "(list, unit, placement, source, giver) across all 26 lists, f8e8966 against 2b56294",
+  "verdict": "ok",
+  "why": "Identical to round 3. Ignoring the giver: 0 lost, 21 added (Canticles ×8, Fates in Flux 11, Altered Reality 1, Pledge of Unholy Fortune 1). With the giver, only the 26 Time Flux and Relentless March lines that now name it differ.",
+  "fix": null
+ },
+ {
+  "key": "damage-r4",
+  "round": 4,
+  "where": "Damage tab against main at 2b56294",
+  "verdict": "ok",
+  "why": "dmshown 675 keys and dmsingle 13222 keys: 0 differences, 0 errors.",
+  "fix": null
+ },
+ {
+  "key": "12c51308243772d3",
+  "round": 4,
+  "where": "code · useSentence (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok.",
+  "fix": null
+ },
+ {
+  "key": "c03d39dc40edc516",
+  "round": 4,
+  "where": "code · useLine (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok.",
+  "fix": null
+ },
+ {
+  "key": "7bc6db4468f51a22",
+  "round": 4,
+  "where": "code · weaponChoice (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok.",
+  "fix": null
+ },
+ {
+  "key": "bf7b87784e92a9b8",
+  "round": 4,
+  "where": "code · unitMods (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok.",
+  "fix": null
+ },
+ {
+  "key": "870ebdafe344f5f3",
+  "round": 4,
+  "where": "code · fnLine (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok.",
+  "fix": null
+ },
+ {
+  "key": "ea71e4326f884807",
+  "round": 4,
+  "where": "code · fnCond (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok.",
+  "fix": null
+ },
+ {
+  "key": "d92b6c74649ae6ab",
+  "round": 4,
+  "where": "code · defSources (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok.",
+  "fix": null
+ },
+ {
+  "key": "9d9884599c0eccbe",
+  "round": 4,
+  "where": "code · defenceItems (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok.",
+  "fix": null
+ },
+ {
+  "key": "2b82d78fafecc2fc",
+  "round": 4,
+  "where": "code · defLineOf (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok.",
+  "fix": null
+ },
+ {
+  "key": "f9885678859cf03f",
+  "round": 4,
+  "where": "code · defLine (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok. modelOnly/ownModelNc, which it calls, are covered by LO (checked above).",
+  "fix": null
+ },
+ {
+  "key": "3e23f661571c1748",
+  "round": 4,
+  "where": "code · screenPregame (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok.",
+  "fix": null
+ },
+ {
+  "key": "9b2735c8be7951b4",
+  "round": 4,
+  "where": "code · statLines (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok.",
+  "fix": null
+ },
+ {
+  "key": "6df688a29694eebe",
+  "round": 4,
+  "where": "code · resolveArmies (round 4)",
+  "verdict": "ok",
+  "why": "Key unchanged at 2b56294; still ok.",
+  "fix": null
+ }
+]

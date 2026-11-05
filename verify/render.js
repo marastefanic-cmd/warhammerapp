@@ -314,7 +314,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       for(const u of A.units){
         for(const k of [...openStrats]) if(k.startsWith('tg|')) openStrats.delete(k);
         go({ s:'unit', army:armyId, unit:u.id }); navAt = -1e9;   // (a tap just after a screen is drawn is let through)
-        const items = defenceItems(u);
+        const items = defLines(defenceItems(u).filter(x => !x.dup && !x.foeOwn));   // (this unit's own effect on enemies: its aura line under the profile)   // (a source drawn as its summary: once; a line every unit has alike: the Units screen's ALL block)
         const fold = () => document.querySelector('#view details.tgt');
         if(!items.length){ if(fold()) out.push(['targeted-fold', u.id, 'a When targeted fold with nothing in it']); continue; }
         let d = fold();
@@ -370,7 +370,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           const k = m => [m.from, m.when, m.note].join('|');
           const mr = unitMods(u, 'ranged'), mm = new Set(unitMods(u, 'melee').map(k));
           const all = (document.querySelector('.mods.all') || {}).innerText || '';
-          for(const m of mr) if(mm.has(k(m)) && !(m.weapon && m.set) && !u.abilities.some(ab => ab.damaged && ab.name === m.from) && !all.includes(m.note.slice(0, 40)))
+          // (a line drawn as its source's summary says the summary (a blanket rule its name); a not-counted line its name or summary: ncHtml)
+          const said = m => sumMode(m) ? (sumLinesOf([m])[0] || {}).text || m.from : m.ncLine ? m.short || m.from : m.note.slice(0, 40);
+          for(const m of mr) if(mm.has(k(m)) && !(m.weapon && m.set) && !u.abilities.some(ab => ab.damaged && ab.name === m.from) && !all.includes(said(m)))
             out.push(['all-attacks-block', u.id, m.from + ': ' + m.note]);
         }
         // the army facts the datasheet shows where they matter:
@@ -379,12 +381,48 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         // - what another unit of the list gives it when it is attacked (its defence boxes, BOXES d), under When targeted
         // - every keyword once, a keyword only some models have under those models (kwOnly)
         const lines = [...document.querySelectorAll('#view .tgl, #view .mod')].map(x => x.innerText.replace(/\s+/g, ' '));   // (When targeted: a line each)
-        if(u.abilities.some(ab => ((D.boxes || {})[DM_KEY.a(ab)] || {}).riled && !ab.na)) for(const l of lines) if(/(^|· |TARGETED ?)Riled up(?! \()/i.test(l)) out.push(['always-riled', u.id, 'a riled-up line without “always riled up”: ' + l.slice(0, 80)]);
-        if(u.rules.includes('Waaagh!') && (u.ranged || []).some(w => !w.kw.some(x => /^assault$/i.test(x))) && !lines.some(l => l.includes('[ASSAULT] (Waaagh!)')))
+        // (a summary line that says "riled up" too, its program-made "(always riled up: …)" after it; the rule that makes it so, its own line aside)
+        { const src = u.abilities.filter(ab => ((D.boxes || {})[DM_KEY.a(ab)] || {}).riled && !ab.na);
+          if(src.length) for(const l of lines) if(/(^|· |TARGETED ?)Riled up(?! \()/i.test(l) || (/\briled up\b/i.test(l) && !/always riled up/i.test(l) && !src.some(ab => l.includes('(' + ab.name + ')'))))
+            out.push(['always-riled', u.id, 'a riled-up line without “always riled up”: ' + l.slice(0, 80)]); }
+        if(u.rules.includes('Waaagh!') && (u.ranged || []).some(w => !w.kw.some(x => /^assault$/i.test(x))) && !lines.some(l => l.includes('[ASSAULT] (Waaagh!)') || (l.includes('[ASSAULT]') && l.includes('(Waaagh!)'))))
           out.push(['riled-assault', u.id, 'no “Riled up: [ASSAULT] (Waaagh!)” footnote']);
         const when = (document.querySelector('#view .def.tgt') || {}).innerText || '';
         // (another unit's defence box that reaches it: under When targeted with that unit's name, verify/defence.js DL; drawn)
-        for(const x of defenceItems(u)) if(x.from && !when.includes('(' + x.from + ')')) out.push(['guard-shown', u.id, x.name + ' (' + x.from + ') is not under When targeted']);
+        for(const x of defenceItems(u)) if(x.from && !when.includes('Granted by: ' + x.from + ' - ') && !when.includes('Granted by: ' + x.from + ' (enhancement) - ')) out.push(['guard-shown', u.id, x.name + ' (Granted by: ' + x.from + ') is not under When targeted']);
+        // - lines-placed: every line the program places on this unit (its sources under its weapons, per named option; When targeted; under its
+        //   profile; its enemy lines) is drawn on its sheet, with its source's name: none dropped (the owner's rule: completeness is mechanical)
+        { const drawn = sel => [...document.querySelectorAll(sel)].map(x => x.textContent.replace(/\s+/g, ' '));
+          const wl = drawn('#view .mod, #view .varc'), dl = drawn('#view .tgl'), sl = drawn('#view .dsl'), fl = drawn('#view .dsl.foe');
+          const has = (ls, name, text) => ls.some(l => l.includes(name) && (!text || l.includes(text)));
+          for(const kind of ['ranged', 'melee']) if(((kind === 'ranged' ? u.ranged : u.melee) || []).length){ const g = new Map();
+            for(const m of unitMods(u, kind)){ if(m.damaged) continue; const k = lineKey(m); if(!g.has(k)) g.set(k, []); g.get(k).push(m); }
+            for(const items of g.values()){ const m = items[0];
+              // (a line for one weapon of several, under that weapon's name: "Ferrumite cannon: …")
+              if(sumMode(m)) for(const l of sumLinesOf(items)){ if(!has(wl, m.from, (l.wp ? l.wp + ': ' : '') + (l.text || FN_NC))) out.push(['lines-placed', u.id, m.from + (l.opt ? ' · ' + l.opt : '') + ': its line under the weapons is not drawn']); }
+              else if(!has(wl, m.from)) out.push(['lines-placed', u.id, m.from + ': its line under the weapons is not drawn']); } }
+          for(const x of defLines(defenceItems(u).filter(y => !y.dup && !y.foeOwn))) if(!has(dl, x.name, x.sum ? x.short : '')) out.push(['lines-placed', u.id, x.name + (x.opt ? ' · ' + x.opt : '') + ': its When targeted line is not drawn']);
+          for(const x of defenceItems(u).filter(y => y.foeOwn && !y.dup)) if(!has(fl, x.name)) out.push(['lines-placed', u.id, x.name + ': its enemy line under the profile is not drawn']);
+          for(const x of statShown(u)) if(!has(x.foe ? fl : sl, x.rule, x.short ? (sumParse(x.short).plain[0] || '') : '')) out.push(['lines-placed', u.id, x.rule + ': its line under the profile is not drawn']); }
+        // - ai-summary: the one AI layer of a unit's lines is its sources' short column (AI-written, fingerprinted by shortOf: verify/tables.js
+        //   --fingerprints): every AI label on them follows a summary that is word for word its source's short, opening what the source's
+        //   "(name)" after it opens; every line of a source whose words are not counted that has a short shows it, AI-labelled; no other
+        //   line has an AI label
+        searchIndex();
+        // (the column of the line's placement: under the weapons sumAtk, When targeted sumDef, under the profile sumSt; a stratagem's gist)
+        const colOf = line => line.closest('.tgl') ? 'sumDef' : line.closest('.dsl.foe') ? 'sumFoe' : line.closest('.dsl') ? 'sumSt' : line.closest('.pgv') ? 'sumOv' : 'sumAtk';
+        const shortOf = (el, c) => !el ? undefined : el.dataset.ability ? (e => e ? e.ab[c] || (enhRowOf(e.ab.name) || {})[c] : undefined)(abilityIndex.get(el.dataset.ability))
+          : el.dataset.strat ? (allStratagems().find(s => s.id === el.dataset.strat) || {}).gist : el.dataset.rule ? (ruleRowOf(el.dataset.rule) || {})[c] : undefined;
+        for(const lab of document.querySelectorAll('#view .ai')){ const line = lab.closest('.mod, .tgl, .varc, .dsl, .pgv');
+          if(!line){ if(!lab.closest('.cpw')) out.push(['ai-summary', u.id, 'an AI label outside a line: ' + (lab.parentElement || {}).textContent]); continue; }
+          const el = lab.previousElementSibling, key = x => x && (x.dataset.ability || x.dataset.strat || x.dataset.rule);
+          // (its source's name: "(<name>)" after it, or a stratagem's "<cp>CP <name>:" before it)
+          const nm = [...line.querySelectorAll('[data-ability], [data-strat], [data-rule]')].find(x => x !== el && key(x) === key(el));
+          const want = shortOf(el, colOf(line));
+          if(!want || !(P => P.plain.concat([...P.opts.values()]))(sumParse(want)).includes(el.textContent)) out.push(['ai-summary', u.id, 'an AI-labelled summary that is not its source’s short column: ' + line.textContent.slice(0, 80)]);
+          if(!nm) out.push(['ai-summary', u.id, 'a summary without the name of the rule it opens: ' + line.textContent.slice(0, 80)]); }
+        for(const x of defLines(defenceItems(u))) if((x.sum || (x.ncLine && !x.blanket)) && x.short && !x.foeOwn && !when.includes(x.short)) out.push(['ai-summary', u.id, x.name + ': its short summary is not under When targeted']);
+        for(const kind of ['ranged', 'melee']) if(((kind === 'ranged' ? u.ranged : u.melee) || []).length) for(const m of unitMods(u, kind)) if(sumMode(m) && m.short && !m.damaged && ![...document.querySelectorAll('#view .mod, #view .varc')].some(l => l.textContent.includes((sumLinesOf([m])[0] || {}).text || m.short) && l.querySelector('.ai'))) out.push(['ai-summary', u.id, m.from + ': its short summary is not under its weapons with the AI label']);
         const pills = [...document.querySelectorAll('#sec-kw .pill')].map(x => x.textContent.replace(/\*$/, '').toLowerCase());
         if(pills.length !== u.kw.length || u.kw.some(x => !pills.includes(x.toLowerCase()))) out.push(['keywords-shown', u.id, pills.length + ' keyword pills for ' + u.kw.length + ' keywords']);
       }

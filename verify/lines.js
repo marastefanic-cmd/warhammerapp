@@ -30,15 +30,28 @@
      L8  every catalogue effect and condition renders its label
      LC  every condition GW's words put on a box is on it (verify/coverage.js: option, once per, if / while / unless, within N", kind)
      LA  the "Already in X" chips of ability rows and of the Rules screen's rule rows are what the from marks give
+     LB  a Damaged band (under the profile, and its footnote under the weapons) is GW's words as written
      LS  the lines under a unit's profile (app.html statLines, "Not Battle-shocked: OC 7 (Enraged Behemoths)"): for every list × unit
          exactly the stat boxes (BOXES st, effects.js ST) of the list's army and detachment rules that reach it, each said with its
          conditions' labels and its effect (the unit's characteristic with it, else its label), none the list printed into the value; and
          the words to them: every sentence of an army or detachment rule that adds to or subtracts from a characteristic of models is a stat
          box, every "if / while / unless / (excluding …)" in it one of its conditions; then, under the profile, each BOXES snc (a
          characteristic no stat box counts) of its abilities, another unit's aura reaching it, its rules and its stratagems, "not counted"
+     LO  a leader's box for its own model only (no weapon named), or its words not counted about that model alone, on the unit it leads:
+         its line says "<model> only:"
      LF  fixed cases: the wound-roll ignore-modifiers readings, the enemy-unit mark of a characteristic not counted, and whom one is for
          (its reach, an opening keyword, leading), an option's own list (its option and its rule's "While … it can use one of …"), and
          a stratagem's reach to the friendly models its words name as attackers
+     LN  a summary never contradicts a counted number: a unit's line drawn as its source's summary (the AI-written short column, or a
+         stratagem's gist: app.html srcShort) for a box that is counted (a footnote, a When targeted line, a line under the profile) has
+         every number of that box's effects' labels (all of a pick's options), each "+1 AP" pair's characteristic (or its name: Move,
+         Damage, Toughness, Leadership, Wounds), every [WEAPON ABILITY], and "hit" / "wound" where the label is about that roll
+     LM  complete, mechanically: every line the program places on a list unit's screens (under its weapons, When targeted, under its profile,
+         its enemy line, the Overview), one per source and named option (app.html sumLinesOf: a box's option, RULE_OPTIONS where the rule
+         has them), finds its summary in its row's column for that placement (sumAtk, sumDef, sumSt, sumFoe, sumOv; a stratagem's gist): a
+         missing one fails, naming the source, the placement, the option and the list; and every entry of those columns (its text, each
+         "<option> ⇒" line) is a line some list shows: a stale one fails. A summary holds only its effect: no "Granted by", no "(<its
+         name>)", no CP cost, no stratagem phase (the program writes them), and lines only for options
      LW  never silent: every sentence of a source the lists use with words of the numbers (hit, wound, AP, damage, save, Feel No Pain, OC,
          Move, a weapon ability) is a counted box or listed not counted in BOXES (verify/coverage.js silent)
 
@@ -51,8 +64,10 @@ const X = require('./effects-extract');
 const T = require('./tables');
 const M = require('./effects-migrate');
 
-const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'alreadyIn', 'alreadyInRule', 'allStratagems', 'canTarget', 'hasRule', 'unitDetRules']);
+const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'statShown', 'defenceItems', 'defLines', 'sumMode', 'sumLinesOf', 'srcShort', 'enhRowOf', 'lineKey', 'PREGAME_RE', 'naReason', 'inertRule', 'faction', 'detachments', 'detRules', 'alreadyIn', 'alreadyInRule', 'allStratagems', 'canTarget', 'hasRule', 'unitDetRules', 'ruleRowOf', 'abilityKey', 'defLine']);
 const D = dm.D, A = dm.app, fails = [], stats = {};
+// (the Overview as the app draws it: screenPregame, with the page's globals it reads at load stubbed)
+const PG = require('./damage-node')(['screenPregame', 'inArmy'], { page:true });
 // the boxes as the screens count them (the two-reader rule: data.js AGREE, effects.js agreed): the footnotes, the lines under a profile and
 // the Damaged bands are these; the boxes' own checks (their schema, their words) are of data.js BOXES itself
 const BX = E.agreed(D.boxes, D.agree);
@@ -129,9 +144,12 @@ const used = b => (b.on || []).some(x => x[0] === 'used');
 const RANGED_FX = new Set(['range', 'bsSet', 'assault', 'heavy', 'indirect', 'pistol']);   // (effects only ranged attacks have)   // (an ability the unit uses: the player's, never in the weapon's row)
 const hasK = (u, k) => (u.kw || []).some(x => x.toLowerCase() === String(k).toLowerCase());
 const mc = u => u.models.reduce((t, m) => t + (parseInt(m, 10) || 1), 0);
-const condWords = (id, p, u, giver, own) => { const C = E.COND[id];
+// (the enemy unit another unit's rule selects, on a unit other than that one: "Target selected by the Psychophage", no article before an EPIC
+// HERO's name or one with its own; how long only where its box's lasts says: "this turn", "until the end of the battle")
+const condWords = (id, p, u, giver, own, b, gu) => { const C = E.COND[id];
   if(id === 'aura') return own ? 'Own aura' : giver ? 'Within ' + p + '" of ' + giver : C.label(p);
   if(id === 'selected' && giver) return 'Selected by ' + giver;
+  if(id === 'targetSelected' && giver) return 'Target selected by ' + (/^the /i.test(giver) || (gu && (gu.kw || []).some(k => /^epic hero$/i.test(k))) ? '' : 'the ') + giver + ({ turn:' this turn', battle:' until the end of the battle' }[(b || {}).lasts] || '');
   if(id === 'belowStarting' && mc(u) === 1) return 'Lost any wounds (' + C.label(p) + ')';
   if(id === 'belowHalf' && mc(u) === 1) return (Math.ceil((parseInt(u.stats[0].W, 10) || 0) / 2) - 1) + ' or fewer wounds left (' + C.label(p) + ')';
   return C.label(p); };
@@ -188,7 +206,7 @@ let nLines = 0, nRows = 0, nNc = 0;
       const giver = w.S.src && w.S.src !== u ? (g => g && g.who && w.S.src.leads ? g.who : w.S.src.short || w.S.src.name)((w.S.src.abilities || []).find(x => x.name === w.S.name)) : '';
       const gv = giver && w.S.src.leads && ![w.S.src.name].concat((w.S.src.also || []).map(c => c.name)).includes(giver) ? w.S.src.short || w.S.src.name : giver;
       const own = w.S.grp === 'unit' && w.b.mark === 'aura';
-      const cw = on => (on || []).map(([id, p]) => condWords(id, p, u, gv, own)).join(' · ');
+      const cw = on => (on || []).map(([id, p]) => condWords(id, p, u, gv, own, w.b, w.S.src)).join(' · ');
       const part = x => x && x.fx && x.fx.length ? ' (' + (cw(x.on) ? cw(x.on) + ': ' : '') + E.fxLabel(x.fx) + ')' : '';
       if(m.set){ nRows++;
         if(!fx || !w.ws || w.ws.length !== 1 || w.S.damaged || w.S.strat || used(w.b) || !fx.every(([id]) => ROW[id] || SET[id])) fail('L3', where, 'a row value of ' + w.S.name + ' that is no one weapon\'s characteristic');
@@ -331,18 +349,21 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
       // (and every snc of its sources, BOXES: its abilities, another unit's aura that reaches it, its army and detachment rules, the
       // stratagems it can be the target of: "<stat>: not counted here: see the rule", once per source and characteristic, not one printed in)
       // (where its words reach: its reach, else a rule's needs; a keyword of the unit it needs, on selfKw)
-      const said = new Set(), snc = (key, name, needs) => { for(const x of (BX[key] || {}).snc || []){
+      const said = new Set(), snc = (key, name, needs, other, aura) => { for(const x of (BX[key] || {}).snc || []){
+        if(other && !aura && !/\(Aura\)/.test(x.quote || '')) continue;
         if(x.reach ? !meetsN(x.reach, u) : needs !== undefined && !(needs && meetsN(needs, u))) continue;
         if((x.on || []).some(([id, p]) => (id === 'selfKw' && !hasK(u, p)) || (id === 'leading' && !u.leads))) continue;
         if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => String([].concat((s.from || {})[x.stat] || []).join(', ')).split(/\s*,\s*/).includes(name)))) continue;
         said.add(name + '|' + x.stat + (x.foe ? '|foe' : '')); want.push(name + ' | ' + (x.foe ? 'Enemy units’ ' : '') + x.stat + ': not counted here: see the rule'); } };
-      for(const ab of u.abilities || []) snc(M.KEY.ability(ab), ab.name);
-      for(const x of a.units) if(x !== u) for(const ab of x.abilities || []){ const o = BX[M.KEY.ability(ab)] || {};
-        if(/\baura\b/i.test(ab.tag || '') && o.reach && meetsN(o.reach, u)) snc(M.KEY.ability(ab), ab.name); }
+      // (in the order of docs/summaries.md 40: army-wide rules, then the unit's own, then other units', then stratagems)
       // (a rule's: the units that have it, an army rule on its Rules line or its needs met, a detachment rule's needs met)
       const own = new Set(A.inArmy(a, () => A.unitDetRules(u)).map(r => r.name));
       for(const r of rules){ const army = (F.armyRules || []).includes(r);
         if(army ? A.inArmy(a, () => A.hasRule(u, r.name)) || (r.needs && meetsN(r.needs, u)) : own.has(r.name)) snc(M.KEY.rule(r), r.name); }
+      for(const ab of u.abilities || []) snc(M.KEY.ability(ab), ab.name);
+      // (another unit's aura: its ability's tag, or the option of it the entry is, "Binharic Courage (Aura)")
+      for(const x of a.units) if(x !== u) for(const ab of x.abilities || []){ const o = BX[M.KEY.ability(ab)] || {}, aura = /\baura\b/i.test(ab.tag || '');
+        if((o.snc || []).some(y => (aura || /\(Aura\)/.test(y.quote || '')) && (y.reach || o.reach) && meetsN(y.reach || o.reach, u))) snc(M.KEY.ability(ab), ab.name, undefined, true, aura); }
       for(const st of A.inArmy(a, () => A.allStratagems().filter(x => A.canTarget(x, u)))) snc(M.KEY.strat(st), st.name);
       const got = A.inArmy(a, () => A.statLines(u)).map(x => x.rule + ' | ' + x.text);
       if(JSON.stringify(got) !== JSON.stringify(want)) fail('LS', a.id + '/' + u.id, 'the lines under its profile are ' + JSON.stringify(got) + ', its rules\' stat boxes give ' + JSON.stringify(want));
@@ -385,27 +406,210 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
       const want = [...new Set(a.units.flatMap(u => marks(u, r.name)))].join(', '), got = A.inArmy(a, () => A.alreadyInRule(r.name));
       if(got !== want) fail('LA', a.id + ' · ' + r.name, '"Already in ' + got + '", its from marks give "' + want + '"'); else if(want) n++; } }
   stats.alreadyIn = n; }
-// LB the Damaged band: its words are its boxes' effect labels, and "see the rule" where its words have a part not counted or no box
+// LB the Damaged band: its words are GW's, as written (no AI, no label)
 { let n = 0;
   for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) if(ab.damaged){ const o = BX[M.KEY.ability(ab)] || {};
-    const exp = [E.fxLabel((o.b || []).flatMap(b => b.fx || [])), (o.nc || []).length || !(o.b || []).length ? 'see the rule' : ''].filter(Boolean).join('; ');
+    // (GW's words, as written, their markup aside: the owner's decision, 4 Nov 2026)
+    const exp = String(ab.text || '').replace(/\*\*/g, '').replace(/\s*\n\s*/g, ' ').trim(); void o;
     const got = A.inArmy(a, () => A.dmgBand(ab)); if(got !== exp) fail('LB', a.id + '/' + u.id + ' · ' + ab.name, 'the band says “' + got + '”, its boxes “' + exp + '”'); else n++; }
   stats.bands = n; }
-// LG the lines as drawn (modLines): one line for each condition and source, its source's name in it, no two sources on one line
+// LN a summary has its counted box's numbers
+const STAT_NAME = { M:'Move', D:'Damage', T:'Toughness', Ld:'Leadership', W:'Wounds', A:'Attacks', S:'Strength', OC:'Objective Control', BS:'Ballistic Skill', WS:'Weapon Skill', AP:'Armour Penetration' };
+const sumMisses = (label, sum) => { const out = [], l = String(label), t = String(sum), lc = t.toLowerCase();
+  for(const m of l.matchAll(/(?<![\w-])(D?\d+(?:[-–]\d+)?\+?)/g)){ const n = m[1].replace('–', '-'); if(!new RegExp('(?<![\\d])' + n.replace(/[+]/g, '\\+') + (/\+$/.test(n) ? '' : '(?![\\d])')).test(t.replace('–', '-'))) out.push(n); }
+  for(const m of l.matchAll(/\d+"? ?(A|S|AP|D|BS|WS|OC|M|T|W|Ld)\b/g)){ const k = m[1]; if(!new RegExp('(?<![\\w-])' + k + '(?![\\w])').test(t) && !lc.includes(STAT_NAME[k].toLowerCase())) out.push(k); }
+  for(const m of l.matchAll(/\[([^\]:]+)/g)) if(!lc.includes('[' + m[1].toLowerCase())) out.push('[' + m[1] + ']');
+  if(/\bhit\b/i.test(l) && !/\bhit/i.test(t)) out.push('hit'); if(/\bwound roll/i.test(l) && !/\bwound/i.test(t)) out.push('wound');
+  // (and each of its numbers with its sign and its kind: "+1 AP" is not "−1 AP", a "5+ invulnerable save" not a "5+ Feel No Pain")
+  const have = numFacts(t); for(const f of numFacts(l)) if(!have.has(f)) out.push(f);
+  return out; };
+// the numbers of a label or a summary with their sign and kind, one form for GW's and the AI's ways of saying them ("A:+1", "inv:5",
+// "fnp:4", "Hit:-1", "AP:-1" for "AP worsened by 1" and "attacks get −1 AP", "BSWS:+1" for "BS/WS improved by 1" and "+1 WS")
+const numFacts = text => { const t = String(text).replace(/[−–]/g, '-').replace(/\*\*/g, ''), out = new Set(), at = [];
+  const add = (k, v, i, end, plus) => { out.add(k + ':' + v); at.push({ k, end, plus }); };
+  const kind = k => /^(BS|WS|BS\/WS)$/.test(k) ? 'BSWS' : /^(Damage|D)$/.test(k) ? 'D' : /^(Move|M)$/.test(k) ? 'M' : /^(Leadership|Ld)$/.test(k) ? 'Ld' : k;
+  const each = (re, f) => { for(const m of t.matchAll(re)) f(m, m.index + m[0].length); };
+  each(/([+-])(\d+|D\d)"? ?(AP|A|S|D|T|OC|W|Ld|M|BS\/WS|BS|WS|Damage(?! rolls?)|Move|range)\b/g, (m, e) => add(kind(m[3]), m[1] + m[2], m.index, e, false));
+  each(/([+-])(\d+) to (?:the )?(Hit|Wound|Charge|Advance) rolls?/gi, (m, e) => add(m[3][0].toUpperCase() + m[3].slice(1).toLowerCase(), m[1] + m[2], m.index, e, false));
+  each(/([+-])(\d+) to (?:the )?(?:armour )?sav(?:e|es|ing throws?|e rolls?)\b/gi, (m, e) => add('save', m[1] + m[2], m.index, e, false));
+  each(/(\d)\+ invulnerable save/gi, (m, e) => add('inv', m[1], m.index, e, true));
+  each(/Feel No Pain (\d)\+/gi, (m, e) => add('fnp', m[1], m.index, e, true));
+  each(/Critical (Hit|Wound)s? on (?:an? )?(\d)\+/gi, (m, e) => add('crit' + m[1][0].toUpperCase() + m[1].slice(1).toLowerCase(), m[2], m.index, e, true));
+  each(/Save characteristic of (\d)\+|\bSave (\d)\+|(?<!invulnerable )\bSv (\d)\+|(?<![\w+])(\d)\+ (?:armour )?save\b(?! rolls?)/g, (m, e) => add('sv', m[1] || m[2] || m[3] || m[4], m.index, e, true));
+  each(/\b(BS\/WS|BS|WS|AP|Leadership|Ld) (improved|worsened) by (\d+)/g, (m, e) => add(kind(m[1]), (m[2] === 'improved' ? '+' : '-') + m[3], m.index, e, false));
+  if(/\bDamage (?:characteristic )?(?:becomes |of |is )?0\b|\bDamage 0\b/.test(t)) out.add('D:=0');
+  // (GW's own phrasing of them: "add 1 to the Hit roll", "add 3 to the Attacks characteristic", "improve the Armour Penetration characteristic
+  // of that attack by 1")
+  const CH = { attacks:'A', strength:'S', damage:'D', toughness:'T', 'objective control':'OC', move:'M', leadership:'Ld', wounds:'W', 'armour penetration':'AP', 'ballistic skill':'BSWS', 'weapon skill':'BSWS' };
+  each(/\b(add|subtract) (\d+|D\d)"? (?:to|from) (?:the |that |each |its )?(hit|wound|charge|advance) rolls?\b/gi, (m, e) => add(m[3][0].toUpperCase() + m[3].slice(1).toLowerCase(), (/^add$/i.test(m[1]) ? '+' : '-') + m[2], m.index, e, false));
+  each(/\b(add|subtract) (\d+|D\d)"? (?:to|from) (?:[a-z’']+ ){0,3}?((?:attacks|strength|damage|toughness|objective control|move|leadership|wounds|armour penetration)(?: and (?:attacks|strength|damage|toughness))?) characteristics?\b/gi, (m, e) => { for(const k of m[3].toLowerCase().split(' and ')) add(CH[k], (/^add$/i.test(m[1]) ? '+' : '-') + m[2], m.index, e, false); });
+  each(/\b(improve|worsen) (?:[a-z’']+ ){0,3}?(armour penetration|ballistic skill|weapon skill|leadership|objective control) characteristic[^.]*? by (\d+)(?: and its (armour penetration|ballistic skill|weapon skill|leadership|objective control) characteristic by (\d+))?/gi, (m, e) => {
+    const sg = /^improve$/i.test(m[1]) ? '+' : '-'; add(CH[m[2].toLowerCase()], sg + m[3], m.index, e, false); if(m[4]) add(CH[m[4].toLowerCase()], sg + m[5], m.index, e, false); });
+  // (a number in brackets after one, of its kind: "Feel No Pain 6+ (5+ in Synapse Range)", "+1 AP vs the unit picked (+2 on 12+)")
+  each(/\((?:up to )?([+-]\d+|\d\+)/g, (m) => { const f = at.filter(x => x.end <= m.index).sort((x, y) => y.end - x.end)[0]; if(!f) return;
+    if(f.plus && /^\d\+$/.test(m[1])) out.add(f.k + ':' + m[1].slice(0, -1)); else if(!f.plus && /^[+-]/.test(m[1])) out.add(f.k + ':' + m[1]); });
+  return out; };
+// the numbers a summary may hold: its source's GW words' (and their number words, "first battle round" for "round 1"); one not there is not GW's
+const NUM_WORDS = { one:1, two:2, three:3, four:4, five:5, six:6, seven:7, eight:8, nine:9, ten:10, twelve:12, first:1, second:2, third:3, fourth:4, fifth:5, sixth:6 };
+const numToks = text => { const t = String(text).replace(/[−–]/g, '-').replace(/\*\*/g, ''), out = new Set();
+  for(const m of t.matchAll(/(?<![\w.])(D?\d+)(?:-(\d+))?(\+|")?/g)){ out.add(m[1] + (m[3] || '')); if(m[2]) out.add(m[2] + (m[3] || '')); }
+  return out; };
+const gwToks = text => { const out = numToks(text), t = String(text).toLowerCase();
+  for(const [w, n] of Object.entries(NUM_WORDS)) if(new RegExp('\\b' + w + '\\b').test(t)){ out.add(String(n)); out.add(n + '+'); }
+  // (a number of the words is that number of any kind: "1" for "a 1", "6\"" for "6"", "2+" for "a 2+")
+  for(const x of [...out]){ const n = x.replace(/[+"]$/, ''); out.add(n); }
+  return out; };
+{ let n = 0;
+  const boxLabels = (b, f) => b.pick ? b.pick.map(p => f(p[b.df ? 'df' : 'fx'] || p.fx || p.df || [])) : [f(b.fx || b.df || [])];
+  for(const a of D.armies) for(const u of a.units) A.inArmy(a, () => {
+    const where = a.id + '/' + u.id;
+    for(const kind of ['ranged', 'melee']) for(const m of A.unitMods(u, kind)){ if(m.ncLine || !m.box || !A.sumMode(m) || !m.short) continue; n++;
+      for(const l of (m.box.pick ? m.box.pick.map(p => E.fxLabel(p.fx || [])) : [E.fxLabel(m.box.fx || [])]).concat(m.box.part && m.box.part.fx ? [E.fxLabel(m.box.part.fx)] : []))
+        for(const x of sumMisses(l, m.short)) fail('LN', where + ' ' + kind, m.from + ': its summary “' + m.short + '” lacks “' + x + '” of its counted “' + l + '”'); }
+    for(const x of A.defenceItems(u)){ if(x.ncLine || !x.box || !x.sum) continue; n++; const sumAll = x.short;
+      for(const l of x.box.pick ? x.box.pick.map(p => E.dfLabel(p.df || [])) : [E.dfLabel(x.box.df || [])])
+        for(const y of sumMisses(l, sumAll)) fail('LN', where + ' When targeted', x.name + ': its summary “' + sumAll + '” lacks “' + y + '” of its counted “' + l + '”'); }
+    for(const x of A.statShown(u)){ if(!x.short) continue; const r = A.ruleRowOf(x.rule); if(!r) continue;
+      for(const b of (BX[M.KEY.rule(r)] || {}).st || []) for(const [id, p] of b.st || []){ const f = E.ST[id]; if(!f) continue; n++;
+        for(const y of sumMisses(f.label(p), x.short)) fail('LN', where + ' profile', x.rule + ': its summary “' + x.short + '” lacks “' + y + '” of its counted “' + f.label(p) + '”'); } }
+  });
+  // (and the other way: no number in a summary or a gist that its source's GW words do not have, "5+ invulnerable save (4+ vs ranged)"; for
+  // every row of the database with one, whether a list shows it or not)
+  { const SUMS = ['sumAtk', 'sumDef', 'sumSt', 'sumFoe', 'sumOv'], rows = [];
+    for(const S of Object.values(D.datasheets || {})) for(const ab of S.abilities || []) rows.push([S.name + ' · ' + ab.name, ab, ab.text]);
+    for(const F of Object.values(D.factions)){ const tx = r => [r.text].concat((r.table || []).map(x => [].concat(x).join(' '))).join('\n');
+      for(const r of F.armyRules || []) rows.push([F.name + ' · ' + r.name, r, tx(r)]);
+      for(const d of Object.values(F.detachments || {})){ for(const r of d.rule ? [d.rule].concat(d.moreRules || []) : []) rows.push([d.name + ' · ' + r.name, r, tx(r)]);
+        for(const e of d.enhancements || []) rows.push([d.name + ' · ' + e.name, e, e.text]);
+        for(const st of d.stratagems || []) rows.push([d.name + ' · ' + st.name, st, [st.when, st.target, st.effect, st.restrictions].join('\n')]); } }
+    for(const st of D.coreStratagems || []) rows.push(['Core · ' + st.name, st, [st.when, st.target, st.effect, st.restrictions].join('\n')]);
+    // (its boxes' words too: a term's definition its box quotes, Pulse Jet Move's "-1 to hit rolls")
+    const keyOf = (r, c) => c === 'gist' ? M.KEY.strat(r) : r.text !== undefined && D.factions && Object.values(D.factions).some(F => (F.armyRules || []).includes(r) || Object.values(F.detachments || {}).some(d => d.rule === r || (d.moreRules || []).includes(r))) ? M.KEY.rule(r) : M.KEY.ability(r);
+    // (its boxes' labels, effects.js: what the program counts from them, "+1 AP", "−1 Damage")
+    const labelsOf = (r, c) => { const o = (D.boxes || {})[keyOf(r, c)] || {}, ls = [];
+      for(const b of (o.b || []).concat(o.d || [])){ for(const x of [b].concat(b.pick || [], b.part ? [b.part] : [])){ if(x.fx) ls.push(E.fxLabel(x.fx)); if(x.df) ls.push(E.dfLabel(x.df)); } }
+      for(const b of o.st || []) for(const [id, p] of b.st || []) if(E.ST[id]) ls.push(E.ST[id].label(p));
+      return ls.join('\n'); };
+    const quotesOf = (r, c) => { const o = (D.boxes || {})[keyOf(r, c)]; if(!o) return ''; const qs = []; JSON.stringify(o, (k, v) => { if(k === 'quote' && typeof v === 'string') qs.push(v); return v; }); return qs.join('\n'); };
+    const seen = new Set();
+    for(const [where, r, gw] of rows) for(const c of SUMS.concat('gist')) if(typeof r[c] === 'string' && !seen.has(where + c + r[c])){ seen.add(where + c + r[c]); n++;
+      const ok = gwToks(gw + '\n' + quotesOf(r, c)), ext = new Set(c === 'gist' ? [] : String(r[c]).split('\n').filter(l => l.includes(' ⇒ ')).flatMap(l => [...numToks(l.slice(0, l.indexOf(' ⇒ ')))]));
+      for(const l of String(r[c]).split('\n')) for(const x of numToks(l.includes(' ⇒ ') ? l.slice(l.indexOf(' ⇒ ') + 3) : l))
+        if(!ok.has(x) && !ext.has(x)) fail('LN', where, c + ' has the number “' + x + '”, which its GW words do not: “' + l.slice(0, 80) + '”');
+      // (and each number with its kind, "+1 A" beside "+1 AP": a pair its GW words and its boxes' labels have)
+      const okF = new Set([...numFacts(gw + '\n' + quotesOf(r, c)), ...numFacts(labelsOf(r, c))]);
+      // (an option's line, "<option> ⇒ …": its option's words, RULE_OPTIONS, where the database has them, "5–6 ⇒ … +1 AP and +1 A" not
+      // borrowing the "+1 A" of 1–2)
+      const optF = k => { const ro = (D.ruleOptions || []).filter(o => String(o.rule).split(' · ').pop() === r.name && o.option === k); if(!ro.length) return okF;
+        const o2 = (D.boxes || {})[keyOf(r, c)] || {}, is = n => n && (n === k || String(n).startsWith(k + ' ') || String(n).startsWith(k + ':')), ls = [];
+        for(const b of (o2.b || []).concat(o2.d || [])){ if(is(b.opt)){ if(b.fx) ls.push(E.fxLabel(b.fx)); if(b.df) ls.push(E.dfLabel(b.df)); }
+          for(const p of b.pick || []) if(is(p.name) || is(b.opt)){ if(p.fx) ls.push(E.fxLabel(p.fx)); if(p.df) ls.push(E.dfLabel(p.df)); } }
+        return new Set(ro.flatMap(o => [...numFacts(o.text)]).concat([...numFacts(ls.join('\n'))])); };
+      for(const l of String(r[c]).split('\n')){ const k = l.includes(' ⇒ ') ? l.slice(0, l.indexOf(' ⇒ ')) : '', ref = k ? optF(k) : okF;
+        for(const f of numFacts(k ? l.slice(l.indexOf(' ⇒ ') + 3) : l)) if(!ref.has(f)) fail('LN', where, c + ' says “' + f + '” (a number and its kind), which neither its GW words nor its boxes say: “' + l.slice(0, 80) + '”'); } } }
+  stats.summaries = n; }
+// LM every placed line finds its summary; every summary entry is used; a summary holds only its effect
+{ const used = new Set(), C = { atk:'sumAtk', def:'sumDef', st:'sumSt', foe:'sumFoe', ov:'sumOv' };
+  let n = 0;
+  // (the row a summary is read from, as app.html srcShort reads it)
+  const rowOf = (ab, name, ruleName, col) => ab && ab[col] !== undefined ? 'ab|' + ab.name + '|' + ab.text : ab && A.enhRowOf(ab.name) ? 'enh|' + ab.name : ruleName ? 'rule|' + ruleName : ab ? 'ab|' + ab.name + '|' + ab.text : 'rule|' + name;
+  const need = (where, src, place, opt, ok, row) => { n++; if(row) used.add(row + '|' + C[place] + '|' + (opt || '')); if(!ok) fail('LM', where, src + ': no summary for its line ' + ({ atk:'under the weapons', def:'When targeted', st:'under the profile', foe:'on enemy units', ov:'on the Overview' })[place] + (opt ? ', option ' + opt : '') + ' (' + C[place] + ')'); };
+  for(const a of D.armies) A.inArmy(a, () => { for(const u of a.units){ const where = a.id + '/' + u.id;
+    // under the weapons: each source's line (a stratagem: its gist), per named option
+    const g = new Map();
+    for(const kind of ['ranged', 'melee']) if(((kind === 'ranged' ? u.ranged : u.melee) || []).length) for(const m of A.unitMods(u, kind)){ if(m.core || m.damaged) continue; const k = A.lineKey(m); if(!g.has(k)) g.set(k, []); g.get(k).push(m); }
+    for(const items of g.values()){ const m = items[0];
+      if(m.strat){ need(where, m.from, 'atk', '', !!m.short); continue; }
+      // (the row by its box's key, BOXES: two rows of one name on an attached unit, Praesidium Shield's, are two rows)
+      const ab = m.rule ? null : ((m.src || u).abilities || []).find(x => M.KEY.ability(x) === m.key) || ((m.src || u).abilities || []).find(x => x.name === m.from), row = rowOf(ab, m.from, m.rule, 'sumAtk');
+      if(!m.short){ need(where, m.from, 'atk', '', false); continue; }
+      for(const l of A.sumLinesOf(items)) need(where, m.from, 'atk', l.opt, !!l.text, row); }
+    // When targeted, and this unit's own effects on enemies (its enemy line)
+    for(const x of A.defenceItems(u)){ if(x.rl || x.dup) continue; const S = x.S || {};
+      if(x.foeOwn){ const t = A.srcShort(S, 'foe'); need(where, x.name, 'foe', '', !!t, rowOf(S.ab, x.name, null, 'sumFoe')); continue; }
+      if(x.a === 'strat'){ need(where, x.name, 'def', '', !!x.short); continue; }
+      const row = rowOf(S.ab, x.name, x.a === 'rule' ? x.name : null, 'sumDef');
+      if(!x.short){ need(where, x.name, 'def', '', false); continue; }
+      for(const l of A.defLines([x])) need(where, x.name, 'def', l.opt, !l.gap, row); }
+    // under the profile (and enemy lines there)
+    for(const x of A.statShown(u)){ const pl = x.foe ? 'foe' : 'st'; if(x.a === 'strat'){ need(where, x.rule, pl, '', !!x.short); continue; }
+      // (the row by the key its line opens, abilityKey: two rows of one name, Praesidium Shield's, are two rows)
+      const ab = x.a === 'ability' ? u.abilities.concat(...a.units.map(y => y.abilities)).find(y => A.abilityKey(y) === x.v) : null;
+      need(where, x.rule, pl, '', !!x.short, ab ? rowOf(ab, x.rule, null, C[pl]) : 'rule|' + x.rule); } }
+    // the Overview's lines, as app.html screenPregame draws them (verify/damage-node.js, its page's globals stubbed): each line of its
+    // sections after "Your list" that opens an army or detachment rule, an ability or a stratagem carries its summary (its sumOv, a
+    // stratagem's gist); a core rule's (Scouts 6", Infiltrators) is its name, Shadow in the Warp's too (docs/summaries.md 33), and Protean
+    // Purpose's (an ability Higher Imperatives gives, a row of no datasheet: no summary column of its own, its only line this tick)
+    const h = PG.app.inArmy(PG.D.armies.find(x => x.id === a.id), () => PG.app.screenPregame()), OV_NAME_ONLY = new Set(['Shadow in the Warp', 'Protean Purpose']);
+    for(const sec of h.split('<div class="sec-h"><h2>').slice(1)){ const title = sec.slice(0, sec.indexOf('</h2>')); if(title === 'Your list' || /rules$/.test(title)) continue;
+      for(const v of sec.matchAll(/<span class="pgv">([\s\S]*?)<\/span><\/div>(?=<div class="pgr">|<\/div>|$)/g)) for(const l of v[1].split(/<br>|<div class="tl">/)){
+        const ai = l.includes('class="tg m ai"');
+        for(const [, k, val] of l.matchAll(/data-(rule|ability|strat)="([^"]*)"/g)){ const v0 = val.replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/&#39;/g, "'");
+          if(k === 'rule'){ if(D.rules[v0] || /^(Scouts|Infiltrators|Deep Strike)\b/.test(v0) || OV_NAME_ONLY.has(v0)) continue; need(a.id + ' Overview · ' + title, v0, 'ov', '', ai, 'rule|' + v0); }
+          else if(k === 'ability'){ const ab = a.units.flatMap(y => y.abilities).find(y => A.inArmy(a, () => A.abilityKey(y)) === v0);
+            if(ab && !OV_NAME_ONLY.has(ab.name)) need(a.id + ' Overview · ' + title, ab.name, 'ov', '', ai, rowOf(ab, ab.name, null, 'sumOv')); }
+          else need(a.id + ' Overview · ' + title, v0, 'ov', '', ai); } } }
+  });
+  // (every entry of a summary column is used; none holds what the program writes)
+  const RAW = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8')), rows = [];
+  for(const S of Object.values(RAW.S ? RAW.S.value : {})) for(const ab of S.abilities || []) rows.push(['ab|' + ab.name + '|' + ab.text, ab, ab.name]);
+  for(const fk of Object.keys(D.factions)){ const F = D.factions[fk];
+    for(const r of F.armyRules || []) rows.push(['rule|' + r.name, r, r.name]);
+    for(const d of Object.values(F.detachments || {})){ for(const r of d.rule ? [d.rule].concat(d.moreRules || []) : []) rows.push(['rule|' + r.name, r, r.name]); for(const e of d.enhancements || []) rows.push(['enh|' + e.name, e, e.name]); } }
+  const P = t => { const plain = [], opts = []; for(const l of String(t).split('\n').filter(Boolean)){ const i = l.indexOf(' ⇒ '); if(i > 0) opts.push([l.slice(0, i), l.slice(i + 3)]); else plain.push(l); } return { plain, opts }; };
+  const own = t => /granted by/i.test(t) ? 'a "Granted by"' : /^\d+CP\b/.test(t) ? 'a CP cost' : '';
+  const seenRow = new Set();
+  for(const [id, o, name] of rows){ if(seenRow.has(id + '|' + JSON.stringify(Object.keys(C).map(k => o[C[k]])))) continue; seenRow.add(id + '|' + JSON.stringify(Object.keys(C).map(k => o[C[k]])));
+    for(const c of Object.values(C)) if(typeof o[c] === 'string'){ const p = P(o[c]);
+      for(const t of p.plain.concat(p.opts.map(x => x[1]))){ const w = own(t) || (t.includes('(' + name + ')') ? 'its name in brackets' : ''); if(w) fail('LM', id.split('|').slice(0, 2).join(' · '), c + ' holds ' + w + ', which the program writes: “' + t.slice(0, 60) + '”'); }
+      if(p.plain.length > 1) fail('LM', id.split('|').slice(0, 2).join(' · '), c + ' has ' + p.plain.length + ' lines with no option: one line, or one per option (“<option> ⇒ …”)');
+      if(p.plain.length && !used.has(id + '|' + c + '|')) fail('LM', id.split('|').slice(0, 2).join(' · '), c + ' is stale: no list shows its line there');
+      // (a line for a weapon its boxes name, "<weapon> ⇒ …": that weapon's, whether a list has it or not; app.html sumLinesOf)
+      const wsOf = () => { const o2 = (D.boxes || {})[id.startsWith('rule|') ? M.KEY.rule(o) : M.KEY.ability(o)], ws = new Set(); JSON.stringify(o2 || {}, (k, v) => { if(k === 'weapon' && typeof v === 'string') ws.add(v.toLowerCase()); return v; }); return ws; };
+      for(const [opt] of p.opts) if(!used.has(id + '|' + c + '|' + opt) && !(c === 'sumAtk' && wsOf().has(opt.toLowerCase().replace(/[’']/g, "'")))) fail('LM', id.split('|').slice(0, 2).join(' · '), c + ' option ' + opt + ' is stale: no list shows that option there'); } }
+  const PHASE_LEAD = /^(in|at) (the (start|end) of )?(the |your |your opponent’s |your opponent's )?(any|command|movement|shooting|charge|fight) phase\b/i;
+  for(const s of D.coreStratagems.concat(...Object.values(D.factions).flatMap(F => Object.values(F.detachments || {}).map(d => d.stratagems || []))))
+    if(s.gist && (PHASE_LEAD.test(s.gist) || own(s.gist) || s.gist.includes('(' + s.name + ')'))) fail('LM', 'stratagem ' + s.name, 'its gist holds what the program writes (the phase, a CP cost, "Granted by" or its name): “' + s.gist.slice(0, 60) + '”');
+  stats.placed = n; }
+// LO a leader's box for its own model only, no weapon of it named (BOXES scope models "model"), drawn on the sheet of the unit it leads:
+// its line says "<model> only:" after its "Granted by" (docs/summaries.md 46); worked out from the boxes and the unit's parts, the lines as drawn
+{ let n = 0; const strip = h => h.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
+  for(const a of D.armies) A.inArmy(a, () => { for(const u of a.units){ if(!u.leads) continue; const leaders = [u.name].concat((u.also || []).map(x => x.name));
+    for(const ab of u.abilities || []){ if(!ab.who || !leaders.includes(ab.who)) continue; const o = BX[M.KEY.ability(ab)] || {};
+      const mine = b => b && (b.scope || {}).models === 'model' && !(b.scope || {}).weapon;
+      for(const b of (o.d || []).filter(mine)) for(const x of A.defenceItems(u).filter(x => x.box === b && x.sum && !x.dup && !x.from)){ n++;
+        if(!strip(A.defLine(x, u)).includes(ab.who + ' only:')) fail('LO', a.id + '/' + u.id, ab.name + ': its When targeted line is for ' + ab.who + ' only and does not say “' + ab.who + ' only:”'); }
+      // (its words not counted, every sentence about this model alone, "The first time this model is destroyed" (Berzerker Frenzy): the
+      // same, under When targeted (dnc) and under the weapons (nc of its attacks))
+      const solo = q => /\bthis model\b/i.test(q) && !/\bthis unit\b|\bthat unit\b|\bleading\b|\bbearer’s unit\b|\bmodels? in\b|\bfriendly\b/i.test(q);
+      const dnc = (o.dnc || []).filter(e => !e.unconfirmed), nca = (o.nc || []).filter(e => e.atk && !e.unconfirmed);
+      if(dnc.length && dnc.every(e => solo(e.quote || ''))) for(const x of A.defenceItems(u).filter(x => x.key === M.KEY.ability(ab) && x.ncLine && x.sum && !x.dup && !x.from)){ n++;
+        if(!strip(A.defLine(x, u)).includes(ab.who + ' only:')) fail('LO', a.id + '/' + u.id, ab.name + ': its words not counted are about ' + ab.who + ' alone and its When targeted line does not say “' + ab.who + ' only:”'); }
+      if(nca.length && nca.every(e => solo(e.quote || ''))) for(const kind of ['ranged', 'melee']){ const ms = A.unitMods(u, kind).filter(m => m.ncLine && m.key === M.KEY.ability(ab) && A.sumMode(m)); if(!ms.length) continue; n++;
+        if(!strip(A.modLines(ms, u, false)).includes(ab.who + ' only:')) fail('LO', a.id + '/' + u.id + ' ' + kind, ab.name + ': its words not counted are about ' + ab.who + ' alone and its line does not say “' + ab.who + ' only:”'); }
+      for(const kind of ['ranged', 'melee']){ const ms = A.unitMods(u, kind).filter(m => m.box && mine(m.box) && m.key === M.KEY.ability(ab) && A.sumMode(m) && !A.rowMod(m, u)); if(!ms.length) continue; n++;
+        if(!strip(A.modLines(ms, u, false)).includes(ab.who + ' only:')) fail('LO', a.id + '/' + u.id + ' ' + kind, ab.name + ': its line is for ' + ab.who + ' only and does not say “' + ab.who + ' only:”'); } } } });
+  stats.modelOnly = n; }
+// LG the lines as drawn (modLines): one line for each condition and source (a source drawn as its summary: one line), its source's name in it, no two sources on one line
 { let n = 0;
   for(const a of D.armies) for(const u of a.units) for(const kind of ['ranged', 'melee']){ if(!((kind === 'ranged' ? u.ranged : u.melee) || []).length) continue;
     const ms = A.inArmy(a, () => A.unitMods(u, kind)).filter(m => !A.rowMod(m, u) && !m.strat), html = A.inArmy(a, () => A.modLines(ms, u, false));
     const lines = html.split('<div class="mod">').slice(1).map(l => l.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"'));
-    const groups = new Set(ms.map(m => m.when ? m.when + '\0' + m.from : Math.random()));
+    // (a source drawn as its summary is one line, whatever its conditions: app.html lineKey)
+    const gm = new Map(); for(const m of ms){ const k = A.sumMode(m) || m.damaged ? A.lineKey(m) : m.when ? m.when + '\0' + m.from : Math.random(); if(!gm.has(k)) gm.set(k, []); gm.get(k).push(m); }
+    // (a source drawn as its summary: a line per named option, app.html sumLinesOf)
+    const groups = { size:[...gm.values()].reduce((t, it) => t + (A.sumMode(it[0]) ? A.sumLinesOf(it).length : 1), 0) };
     if(lines.length !== groups.size) fail('LG', a.id + '/' + u.id + ' ' + kind, lines.length + ' lines for ' + groups.size + ' conditions and sources');
     // (the rule that makes a unit always riled up, named in its "Riled up (…: always riled up)" condition, is no source of the line: Super
     // Runts, whose own box is a not-counted line of its own where the two-reader rule does not confirm it)
-    for(const l0 of lines){ const l = l0.replace(/\(([^()]*): always riled up\)/g, '(always riled up)'), froms = [...new Set(ms.map(m => m.from))].filter(f => l.includes(f) && !ms.some(x => x.from !== f && x.from.includes(f) && l.includes(x.from)));
+    // (a summary's own words may name another rule, Blood Tithe's "Blessings of Khorne": the source a line names is its "(name)", the summary aside)
+    const sums = [...new Set(ms.filter(m => A.sumMode(m)).flatMap(m => String(m.short).split('\n').map(l => l.includes(' ⇒ ') ? l.slice(l.indexOf(' ⇒ ') + 3) : l)))].filter(Boolean).sort((x, y) => y.length - x.length);
+    for(const l1 of lines){ const l0 = sums.reduce((t, x) => t.split(x).join(' '), l1), l = l0.replace(/\(([^()]*): always riled up\)/g, '(always riled up)').replace(/\(always riled up: [^()]*\)/g, '(always riled up)'), froms = [...new Set(ms.map(m => m.from))].filter(f => l.includes(f) && !ms.some(x => x.from !== f && x.from.includes(f) && l.includes(x.from)));
       if(froms.length !== 1 && !(froms.length > 1 && froms.every(f => l.includes(f)) && ms.filter(m => froms.includes(m.from)).some(m => froms.some(f => f !== m.from && m.when.includes(f))))) fail('LG', a.id + '/' + u.id + ' ' + kind, 'a line names ' + froms.length + ' sources: “' + l.slice(0, 90) + '”'); else n++; } }
   stats.grouped = n; }
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/lines.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips, ' + stats.cpNotes + ' extra-CP chips and ' + stats.na + ' "does nothing here" chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each; ' + stats.silentSources + ' sources the lists use, every sentence of the numbers counted or listed not counted; ' + stats.fixed + ' fixed cases');
+console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips, ' + stats.cpNotes + ' extra-CP chips and ' + stats.na + ' "does nothing here" chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each; ' + stats.silentSources + ' sources the lists use, every sentence of the numbers counted or listed not counted; ' + stats.fixed + ' fixed cases; ' + stats.summaries + ' counted boxes drawn as a summary, each summary with their numbers (LN); ' + stats.placed + ' placed lines, each with its summary, every summary used (LM); ' + stats.modelOnly + ' leader lines for its own model, each "<model> only:" (LO)');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);

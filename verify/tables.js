@@ -8,7 +8,7 @@
      node verify/tables.js               the gate: data.js is in table form exactly as --write would write it (a list
                                          added in the old form, a stale RULE_OPTIONS / GRANTS, fail), every column is in
                                          verify/columns.json; writes verify/out/tables.md (the datasheet conflicts)
-     node verify/tables.js --fingerprints   the gate: every AI-written column (gist, def) and every reading (mods, aura,
+     node verify/tables.js --fingerprints   the gate: every AI-written column (gist and the placement summaries sumAtk, sumDef, sumSt, sumFoe, sumOv) and every reading (mods, aura,
                                          guard; a rule's, stratagem's or ability's reading columns, READ_COLS) carries the
                                          fingerprint of the text it was written or read from, and that text has not changed
      node verify/tables.js --write       converts data.js: every unit entry written in full (the old form, as
@@ -52,7 +52,10 @@ function catalogRows(){
 }
 const WEAPON_FIELDS = ['range', 'A', 'BS', 'WS', 'S', 'AP', 'D'];
 // AI-written columns and the column holding the fingerprint of the text each was written from
-const FINGERPRINT = { gist:'gistOf' };   // (def, the When targeted line, is retired: a unit's When targeted lines are its defence boxes, BOXES d)
+// (sumAtk / sumDef / sumSt / sumOv: an ability's, enhancement's, army or detachment rule's summary for each place a unit's screens show it, under
+// its weapons, When targeted, under its profile, on the Overview, labelled AI: the owner's decision, 4 Nov 2026, docs/summaries.md)
+const FINGERPRINT = { gist:'gistOf', sumAtk:'sumAtkOf', sumDef:'sumDefOf', sumSt:'sumStOf', sumFoe:'sumFoeOf', sumOv:'sumOvOf' };
+const SUM_COLS = ['sumAtk', 'sumDef', 'sumSt', 'sumFoe', 'sumOv'];   // (def, the When targeted line, is retired: a unit's When targeted lines are its defence boxes, BOXES d)
 // the readings: the app's interpretations of rule text into numbers and lines. A unit's footnotes (mods), what it gives other
 // units (aura) and their "When targeted" help (guard) are rows of readings, each on the row of the rule it reads (DATASHEETS for a
 // datasheet's ability, FACTIONS for an army or detachment rule or an enhancement, the list's entry for what is the list's own);
@@ -1134,6 +1137,7 @@ function sites(D, armies, unlisted){
       if(d.rule) rule([fk, 'detachments', dk, 'rule'], f.name + ' · ' + d.name + ' rule · ' + d.rule.name, d.rule);
       (d.moreRules || []).forEach((r, i) => rule([fk, 'detachments', dk, 'moreRules', i], f.name + ' · ' + d.name + ' rule · ' + r.name, r));
       (d.stratagems || []).forEach((x, i) => each('FACTIONS', [fk, 'detachments', dk, 'stratagems', i], f.name + ' · ' + d.name + ' · ' + x.name, x, stratText(x)));
+      (d.enhancements || []).forEach((x, i) => each('FACTIONS', [fk, 'detachments', dk, 'enhancements', i], f.name + ' · ' + d.name + ' enhancement · ' + x.name, x, x.text));
     }
   }
   const seen = new Set();
@@ -1201,6 +1205,7 @@ const stampRows = restamp => (armies, D) => {
   for(const a of armies) for(const u of a.units){
     for(const ab of u.abilities || []){
       if(typeof ab.def === 'string' && need(ab, 'defOf', ab.text)){ ab.defOf = fp(ab.text); n++; }
+      for(const [c, f] of Object.entries(FINGERPRINT)) if(typeof ab[c] === 'string' && need(ab, f, ab.text)){ ab[f] = fp(ab.text); n++; }
       if(READ_COLS.ability.some(c => ab[c] !== undefined) && need(ab, READ_FP, ab.text)){ ab[READ_FP] = fp(ab.text); n++; }
     }
     // (a reading's readOf covers every text it uses: one with fewer fingerprints than texts gets the rest; --restamp: all again)
@@ -1592,7 +1597,7 @@ function screenJudgements(D, opts){
   for(const [t, x] of Object.entries(reg)) for(const [c, v] of Object.entries(x.columns || {})){
     const how = cols[t + '.' + c]; if(!how) continue;
     if(['gw', 'wahapedia', 'bsdata', 'newrecruit'].includes(v.source)) continue;
-    if(v.source === 'ai-summary' && c === 'gist') continue;
+    if(v.source === 'ai-summary' && (c === 'gist' || SUM_COLS.includes(c))) continue;
     if(v.source === 'derived'){ for(const d of v.declared || []) if(!d.at || !d.why || !d.evidence) out.push(t + '.' + c + ': a declared row without its at, why and evidence');
       // (and it names the script that derives or holds it (by, or its note), one the gate runs (a step of verify/run.js, or a file one
       // requires) whose code reads its key; that a change of its value fails that script's step is verify/derived-proof.js's, the gate's
@@ -1616,7 +1621,7 @@ const READ_KIND = { 'CORE_STRATAGEMS':'strat', 'FACTIONS.detachments.stratagems'
   'FACTIONS.detachments.moreRules':'rule', 'DATASHEETS.abilities':'ability', 'ARMIES.units.abilities':'ability' };
 function layerOf(t, c){
   if(/\.(mods|aura|guard|readings)$/.test(t)) return [READ_FP, READ_BY, READ_WHY].includes(c) ? null : 'ai-reading';
-  if(c === 'gist') return 'ai-summary';
+  if(c === 'gist' || SUM_COLS.includes(c)) return 'ai-summary';
   if(READ.includes(c) || (READ_KIND[t] && READ_COLS[READ_KIND[t]].includes(c))) return 'ai-reading';
   return null;
 }
@@ -1696,7 +1701,7 @@ if(require.main === module){
       else if(x.has !== fp(x.source)) bad.push('STALE ' + x.where + ' · ' + x.col + ' (' + x.fpKey + ' ' + x.has + ', its text now ' + fp(x.source) + '): the text the ' + what + ' ' + (x.reading ? 'reads' : 'summarises') + ' changed; ' + (x.reading ? 'read it again from the new text' : 'rewrite it from the new text') + ', then node verify/tables.js --restamp');
     }
     const ai = all.filter(x => !x.reading), rd = all.filter(x => x.reading), ok = xs => xs.filter(x => x.source != null && x.has === (x.want || fp(x.source))).length;
-    console.log('fingerprints: ' + ok(ai) + ' of ' + ai.length + ' AI-written values (gist, def) and ' + ok(rd) + ' of ' + rd.length + ' readings (' + rd.filter(x => x.derived).length + ' derived) match the text they were written or read from' + (bad.length ? '; ' + bad.length + ' do not' : ''));
+    console.log('fingerprints: ' + ok(ai) + ' of ' + ai.length + ' AI-written values (' + Object.keys(FINGERPRINT).map(c => c + ' ' + ai.filter(x => x.col === c).length).join(', ') + ') and ' + ok(rd) + ' of ' + rd.length + ' readings (' + rd.filter(x => x.derived).length + ' derived) match the text they were written or read from' + (bad.length ? '; ' + bad.length + ' do not' : ''));
     bad.forEach(b => console.log('  ' + b));
     process.exit(bad.length ? 1 : 0);
   }

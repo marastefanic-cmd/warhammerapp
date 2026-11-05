@@ -1,0 +1,2502 @@
+[
+ {
+  "key": "d13c91eb0e2cf29f",
+  "where": "summaries · adeptus-custodes · army rule · Martial Ka’tah",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] Salvus ⇒ If readied, Salvus: ignore modifiers to BS, Hit rolls and Wound rolls when shooting / Dacatarai ⇒ If readied, Dacatarai: re-roll Hit rolls of 1, not vs MONSTER/VEHICLE / Rendax ⇒ If readied, Rendax: [LETHAL HITS] vs MONSTER/VEHICLE | [When targeted] Kaptaris ⇒ If readied, Kaptaris: −1 to Hit rolls vs melee attacks on this unit Dacatarai, Rendax and Kaptaris are the owner’s approved wording. On screen (dread-host) Dacatarai and Rendax are drawn under the melee block only, so the GW word “melee” is carried by the placement.",
+  "fix": null
+ },
+ {
+  "key": "a80eaae2ca9658a7",
+  "where": "summaries · adeptus-custodes · army rule · Aegis of the Emperor",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Feel No Pain 5+ vs mortal wounds",
+  "fix": null
+ },
+ {
+  "key": "50eee377fb6d920a",
+  "where": "summaries · adeptus-custodes · army rule · Aquila Commander",
+  "verdict": "fix",
+  "why": "Rule 29 (conditions first). GW: “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.” Same words, reordered.",
+  "fix": {
+   "source": "army rule · Aquila Commander",
+   "placement": "Overview",
+   "current": "Start of each round: +1CP if a model with this ability is your WARLORD",
+   "corrected": "Start of each round, if a model with this ability is your WARLORD: +1CP"
+  }
+ },
+ {
+  "key": "646e19f59a9c9a46",
+  "where": "summaries · adeptus-custodes · army rule · Daughters of the Abyss",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] ANATHEMA PSYKANA: Feel No Pain 3+ vs psychic attacks / Psychic Null (Aura) ⇒ ADEPTUS CUSTODES within 6\" of an ANATHEMA PSYKANA unit: Feel No Pain 5+ vs psychic attacks",
+  "fix": null
+ },
+ {
+  "key": "bc1590838992a901",
+  "where": "summaries · adeptus-custodes · Emperor’s Chosen rule · Magna Imperator",
+  "verdict": "fix",
+  "why": "GW: “Favoured ka’tah: RENDAX … You can select one enemy MONSTER/VEHICLE unit engaged with your unit and roll one D6 …”. “Rendax also D6” is not plain words and drops the player’s pick (rule 4); “if it uses Rendax” follows rule 42; units on 3–5/6 stated.",
+  "fix": {
+   "source": "Emperor’s Chosen rule · Magna Imperator",
+   "placement": "under its weapons",
+   "current": "When this unit attacks: re-roll one Hit roll and one Wound roll; Rendax also D6 vs an engaged MONSTER/VEHICLE: 1-2 1 mortal wound, 3-5 D3, 6 3",
+   "corrected": "When this unit attacks: re-roll one Hit roll and one Wound roll; if it uses Rendax, also pick one engaged enemy MONSTER/VEHICLE and roll one D6: 1–2 1 mortal wound, 3–5 D3 mortal wounds, 6 3 mortal wounds"
+  }
+ },
+ {
+  "key": "2869a837ae3260be",
+  "where": "summaries · adeptus-custodes · Grav-Assault Force rule · Flare Shields",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] GRAV-ASSAULT: 4+ invulnerable save vs ranged attacks",
+  "fix": null
+ },
+ {
+  "key": "aa7b0426a872bd70",
+  "where": "summaries · adeptus-custodes · Might of the Moritoi rule · Moritoi Ancients",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] DREADNOUGHT below starting strength: re-roll Hit rolls of 1; below half-strength, Wound rolls of 1 too | [under its profile] DREADNOUGHT at starting strength: +2 OC The weapons and profile parts are split as rule 13 asks.",
+  "fix": null
+ },
+ {
+  "key": "e71ee8fb62115586",
+  "where": "summaries · adeptus-custodes · Might of the Moritoi enhancement · Augury Uplink",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Feel No Pain 5+",
+  "fix": null
+ },
+ {
+  "key": "31d79fad10c8bc58",
+  "where": "summaries · adeptus-custodes · Honoured Companions rule · Companion’s Watch",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] TRUSTED SENTINEL on an objective: re-roll Wound rolls of 1",
+  "fix": null
+ },
+ {
+  "key": "5fef84af2a615f36",
+  "where": "summaries · adeptus-custodes · ability · Captain-General (Trajann Valoris)",
+  "verdict": "fix",
+  "why": "Rule 29: the range and the MONSTER/VEHICLE exclusion are conditions (GW: “Friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6\" of this model can …”), so they go first. On screen the trailing “(not MONSTER/VEHICLE)” runs straight into the program’s “(Captain-General)”, giving two brackets in a row.",
+  "fix": {
+   "source": "ability · Captain-General (Trajann Valoris)",
+   "placement": "under its weapons",
+   "current": "re-roll Hit rolls of 1 and Wound rolls of 1 within 6\" of Trajann Valoris (not MONSTER/VEHICLE)",
+   "corrected": "Within 6\" of Trajann Valoris, if not MONSTER/VEHICLE: re-roll Hit rolls of 1 and Wound rolls of 1"
+  }
+ },
+ {
+  "key": "2b32d7b0e18a3ec1",
+  "where": "summaries · adeptus-custodes · ability · Moment Shackle (Trajann Valoris)",
+  "verdict": "fix",
+  "why": "GW (datasheet heading “Once per battle, per army”): “This model has 3+ InSv.” Only Trajann gets the save, but on the Trajann + Allarus sheet the line reads “Granted by: Trajann Valoris - … 3+ invulnerable save” under WHEN TARGETED, which suggests the whole unit gets it. Rule 27: name the model where GW says model. PROGRAM NOTE: the attack line is drawn as “Granted by: Trajann Valoris - once per battle, if used: +3 A” under the whole melee block with no “Watcher’s Axe:” prefix. Approved example 38 has the prefix, and without it the Allarus axes seem to get +3 A. The summary text “once per battle, if used: +3 A” is correct once the prefix is there.",
+  "fix": {
+   "source": "ability · Moment Shackle (Trajann Valoris)",
+   "placement": "When targeted",
+   "current": "once per battle, if used: 3+ invulnerable save",
+   "corrected": "once per battle, if used: Trajann Valoris has a 3+ invulnerable save"
+  }
+ },
+ {
+  "key": "f771f531e91ce305",
+  "where": "summaries · adeptus-custodes · ability · Slayer of Tyrants (Allarus Custodians)",
+  "verdict": "fix",
+  "why": "GW: “melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls”. “a higher T” gives no comparison (higher than what?). Rule 29: condition first.",
+  "fix": {
+   "source": "ability · Slayer of Tyrants (Allarus Custodians)",
+   "placement": "under its weapons",
+   "current": "+1 to Wound rolls in melee vs targets with a higher T",
+   "corrected": "In melee vs a target with higher T than this unit: +1 to Wound rolls"
+  }
+ },
+ {
+  "key": "3bb67c621d8eab95",
+  "where": "summaries · adeptus-custodes · ability · Advanced Firepower (Caladius Annihilator Grav-tank)",
+  "verdict": "fix",
+  "why": "Rule 23: never a bare “Hit”/“Wound”. GW: “ranged attacks that target a MONSTER/VEHICLE unit can re-roll one hit roll, one wound roll, one damage roll”.",
+  "fix": {
+   "source": "ability · Advanced Firepower (Caladius Annihilator Grav-tank)",
+   "placement": "under its weapons",
+   "current": "Shooting MONSTER/VEHICLE: re-roll one Hit, one Wound and one Damage roll",
+   "corrected": "Ranged attacks vs MONSTER/VEHICLE: re-roll one Hit roll, one Wound roll and one Damage roll"
+  }
+ },
+ {
+  "key": "b5160229bdc9d236",
+  "where": "summaries · adeptus-custodes · ability · Unyielding Ancient (Contemptor-Achillus Dreadnought, Contemptor-Galatus Dreadnought)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] −1 to Wound rolls vs attacks with S greater than this unit’s T",
+  "fix": null
+ },
+ {
+  "key": "8989886c186f1960",
+  "where": "summaries · adeptus-custodes · ability · Guardian Eternal (Telemon Heavy Dreadnought)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] −1 D vs ranged attacks on this unit",
+  "fix": null
+ },
+ {
+  "key": "f75fc2510e6e1c96",
+  "where": "summaries · adeptus-custodes · ability · Praesidium Shield (Shield-Captain)",
+  "verdict": "fix",
+  "why": "GW: “Attacks allocated to this model have -1 D.” Rule 27: “this model” where GW says model. On a Shield-Captain + bodyguard sheet, “this unit” wrongly extends it to the bodyguards. “−1 Damage to attacks” follows the approved Frenzied Resilience wording; “vs” is wrong here (it’s the attacks’ Damage).",
+  "fix": {
+   "source": "ability · Praesidium Shield (Shield-Captain)",
+   "placement": "When targeted",
+   "current": "−1 D vs attacks allocated to this unit",
+   "corrected": "−1 Damage to attacks allocated to this model"
+  }
+ },
+ {
+  "key": "4335dbb7c82fdee3",
+  "where": "summaries · adeptus-custodes · ability · Stand Vigil (Sentinel Guard Sodality)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] On an objective (this unit or the target), vs non-MONSTER/VEHICLE: [LETHAL HITS]",
+  "fix": null
+ },
+ {
+  "key": "9c494ddc1daa3f8f",
+  "where": "summaries · adeptus-custodes · ability · Praesidium Shield (Sentinel Guard Sodality)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] −1 to Wound rolls vs attacks with S greater than this unit’s T",
+  "fix": null
+ },
+ {
+  "key": "606f256a96711d10",
+  "where": "summaries · adeptus-custodes · ability · Impenetrable Defence (Custodian Guard Sodality)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] On an objective (this unit or the target), vs non-MONSTER/VEHICLE: [SUSTAINED HITS 1]",
+  "fix": null
+ },
+ {
+  "key": "77f4586ddae41468",
+  "where": "summaries · adeptus-custodes · ability · Living Fortress (Custodian Wardens)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] attacks against this unit get −1 AP",
+  "fix": null
+ },
+ {
+  "key": "7e7787c81a76a3b8",
+  "where": "summaries · adeptus-custodes · ability · Quicksilver Execution (Vertus Praetors)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] If this unit charged this turn: melee gains [SUSTAINED HITS 1]",
+  "fix": null
+ },
+ {
+  "key": "59df48b6ef15b6cb",
+  "where": "summaries · adeptus-mechanicus · army rule · Doctrina Imperatives",
+  "verdict": "fix",
+  "why": "Rule 29, matching the approved Protector line for When targeted (“If Protector Imperative is active, BATTLELINE or within 6\" of one: …”). GW numbers and condition unchanged.",
+  "fix": {
+   "source": "army rule · Doctrina Imperatives",
+   "placement": "under its weapons (Conqueror Imperative)",
+   "current": "If Conqueror Imperative is active: [ASSAULT] and +1 WS; +1 AP if BATTLELINE or within 6\" of one",
+   "corrected": "If Conqueror Imperative is active: [ASSAULT] and +1 WS; if BATTLELINE or within 6\" of one: +1 AP"
+  }
+ },
+ {
+  "key": "2f997abb9748bd82",
+  "where": "summaries · adeptus-mechanicus · Cohort Cybernetica rule · Cyber-psalm Programming",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its profile] LEGIO CYBERNETICA: +2\" Move; +1 OC if not Battle-shocked",
+  "fix": null
+ },
+ {
+  "key": "71c728c9889f9605",
+  "where": "summaries · adeptus-mechanicus · Cohort Cybernetica enhancement · Necromechanic",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Once per round: after a failed save for a LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\", that attack's Damage becomes 0",
+  "fix": null
+ },
+ {
+  "key": "2e007afecb3d6200",
+  "where": "summaries · adeptus-mechanicus · Eradication Cohort rule · Murderous Imperative",
+  "verdict": "fix",
+  "why": "GW: “If the Protector Imperative is active for that unit, re-roll a Hit roll of 1. If the Conqueror Imperative is active …”. Rule 18 names the switch in full (“If X is active:”, as the Doctrina lines on the same screen do), and rule 29 puts the condition first.",
+  "fix": {
+   "source": "Eradication Cohort rule · Murderous Imperative",
+   "placement": "under its weapons",
+   "current": "SKITARII: re-roll Hit rolls of 1 with Protector; re-roll Wound rolls of 1 with Conqueror",
+   "corrected": "SKITARII: if Protector Imperative is active, re-roll Hit rolls of 1; if Conqueror Imperative is active, re-roll Wound rolls of 1"
+  }
+ },
+ {
+  "key": "f228f911a2301069",
+  "where": "summaries · adeptus-mechanicus · ability · Canticles of the Omnissiah (Belisarius Cawl)",
+  "verdict": "fix",
+  "why": "Invocation: keep the trigger and pick (rule 4); “that unit” (rule 43). Shroudpsalm is drawn as “Granted by: Belisarius Cawl - … within 6\" of this model” on 8 other units’ sheets, where “this model” reads as the sheet’s own model; name the giver (rule 10) and put the condition first (29). Mantra: GW also gives Binharic Courage “+1 to Battle-shock or Leadership test”, which a profile line must show (rule 7/20). The BATTLELINE keyword is Cawl’s only, while +1 OC is for units within 6\". PROGRAM NOTE: the Mantra/Binharic Courage line appears only on Cawl’s own sheet (1 occurrence in purge-goes-the-foe), not as a grant on the other AdMech units within 6\". Check whether its reach is missing.",
+  "fix": {
+   "source": "ability · Canticles of the Omnissiah (Belisarius Cawl)",
+   "placement": "under its weapons / When targeted / under its profile",
+   "current": "Invocation ⇒ If Invocation of Machine Vengeance: friendly ADEPTUS MECHANICUS re-roll Hit rolls vs the enemy unit picked | Shroudpsalm ⇒ If Shroudpsalm: Stealth within 6\" of this model | profile: If Mantra of Discipline: BATTLELINE; +1 OC within 6\" of this model",
+   "corrected": "Invocation of Machine Vengeance ⇒ If Invocation of Machine Vengeance: pick an enemy unit at the start of your Command phase; re-roll Hit rolls vs that unit\nShroudpsalm (Aura) ⇒ If Shroudpsalm, within 6\" of Belisarius Cawl: Stealth\nprofile: If Mantra of Discipline: Belisarius Cawl has BATTLELINE; ADEPTUS MECHANICUS units within 6\" of him: +1 OC and +1 to Battle-shock and Leadership tests"
+  }
+ },
+ {
+  "key": "aa93166d51c2e3dc",
+  "where": "summaries · adeptus-mechanicus · ability · Mechanicus Bodyguard (Belisarius Cawl, Thulia Ghuld)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Within 3\" of another ADEPTUS MECHANICUS unit: Lone Operative",
+  "fix": null
+ },
+ {
+  "key": "5b1bef91cd65fd6f",
+  "where": "summaries · adeptus-mechanicus · ability · Enginseer (Tech-Priest Enginseer)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Within 3\" of an ADEPTUS MECHANICUS VEHICLE, unless leading: Lone Operative",
+  "fix": null
+ },
+ {
+  "key": "1d514dddb23fe452",
+  "where": "summaries · adeptus-mechanicus · ability · Omnissiah’s Blessing (Tech-Priest Enginseer)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Command phase: a VEHICLE within 3\" of the Tech-Priest Enginseer gets Feel No Pain 5+",
+  "fix": null
+ },
+ {
+  "key": "e2f9dfef6b050a58",
+  "where": "summaries · adeptus-mechanicus · ability · Vengeance for the Omnissiah (Tech-Priest Enginseer)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] After a friendly ADEPTUS MECHANICUS VEHICLE dies within 12\": Omnissian axe A 6 for the battle The program adds no weapon prefix here (purge-goes-the-foe), so naming the Omnissian axe is right; “for the battle” is kept because it is the effect itself, not fine print.",
+  "fix": null
+ },
+ {
+  "key": "ab282d1a658fa341",
+  "where": "summaries · adeptus-mechanicus · ability · Battle Protocols (Cybernetica Datasmith)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] Protector Protocol ⇒ If Protector Protocol: KASTELAN ROBOTS +2 A ranged / Conqueror Protocol ⇒ If Conqueror Protocol: KASTELAN ROBOTS +2 A melee | [When targeted] Aegis Protocol ⇒ If Aegis Protocol: KASTELAN ROBOTS +1 T | [Overview] Leading KASTELAN ROBOTS: they start the battle in Aegis Protocol (+1 T)",
+  "fix": null
+ },
+ {
+  "key": "3e4c989519bba680",
+  "where": "summaries · adeptus-mechanicus · ability · Robotic Bodyguard (Kastelan Robots)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] A CYBERNETICA DATASMITH leading this unit has Feel No Pain 4+",
+  "fix": null
+ },
+ {
+  "key": "8a197ad931686816",
+  "where": "summaries · adeptus-mechanicus · ability · Repulsor Grid (Kastelan Robots)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] When shot: each unmodified save of 6, 1 mortal wound to the shooter",
+  "fix": null
+ },
+ {
+  "key": "2fef2c097502960e",
+  "where": "summaries · adeptus-mechanicus · ability · Emanatus Force Field (Onager Dunecrawler)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] ADEPTUS MECHANICUS BATTLELINE models wholly within 6\": 4+ invulnerable save vs ranged attacks",
+  "fix": null
+ },
+ {
+  "key": "816772772a7e9b78",
+  "where": "summaries · adeptus-mechanicus · ability · Blistering Salvoes (Skorpius Disintegrator)",
+  "verdict": "fix",
+  "why": "On screen (purge-goes-the-foe) the program prefixes it “Ferrumite cannon: +1 to Hit rolls with belleros energy cannon vs INFANTRY and with ferrumite cannon …”. That breaks rule 36 (the AI text names the weapons) and rule 13 (only the part for that weapon), and the line reads wrong. GW gives a separate condition per weapon. Needs per-weapon summaries keyed to the prefixed weapon, or no prefix with the current text (needs program support either way).",
+  "fix": {
+   "source": "ability · Blistering Salvoes (Skorpius Disintegrator)",
+   "placement": "under its weapons",
+   "current": "+1 to Hit rolls with belleros energy cannon vs INFANTRY and with ferrumite cannon vs MONSTER or VEHICLE",
+   "corrected": "Belleros energy cannon ⇒ vs INFANTRY: +1 to Hit rolls\nFerrumite cannon ⇒ vs MONSTER or VEHICLE: +1 to Hit rolls"
+  }
+ },
+ {
+  "key": "55f6254b6e6b71dc",
+  "where": "summaries · chaos-daemons · Scintillating Legion rule · Fates in Flux",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Spend a Flux token to re-roll a saving throw (the opponent gains it)",
+  "fix": null
+ },
+ {
+  "key": "afef93a4960634ab",
+  "where": "summaries · chaos-daemons · Scintillating Legion enhancement · Neverblade",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] +2 S, +1 A, +1 AP and +1 to Hit rolls in melee",
+  "fix": null
+ },
+ {
+  "key": "c73f11ba9015984f",
+  "where": "summaries · chaos-daemons · Scintillating Legion enhancement · Improbable Shield (Aura)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] LEGIONES DAEMONICA TZEENTCH within 6\" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds",
+  "fix": null
+ },
+ {
+  "key": "316358243981e03c",
+  "where": "summaries · chaos-daemons · Blood Legion enhancement · Slaughterthirst (Aura)",
+  "verdict": "fix",
+  "why": "The owner approved this exact text (rule 37 example: “Granted by: Daemon Prince of Chaos (enhancement) - within 6\": [LANCE] (Slaughterthirst)”). The added bracket is the program’s reach (only non-MONSTER KHORNE units get the line), and on screen it doubles up with the program’s “(Slaughterthirst (Aura))”. If the keyword is kept, it must go first (rule 29): “LEGIONES DAEMONICA KHORNE (not MONSTERS) within 6\": [LANCE]”.",
+  "fix": {
+   "source": "Blood Legion enhancement · Slaughterthirst (Aura)",
+   "placement": "under its weapons",
+   "current": "within 6\": [LANCE] (LEGIONES DAEMONICA KHORNE, not MONSTERS)",
+   "corrected": "within 6\": [LANCE]"
+  }
+ },
+ {
+  "key": "6e405eeffc50d63f",
+  "where": "summaries · chaos-daemons · ability · Rage Embodied (Skarbrand)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] KHORNE LEGIONES DAEMONICA within 6\" of Skarbrand: +1 A in melee",
+  "fix": null
+ },
+ {
+  "key": "66426efd077850e0",
+  "where": "summaries · chaos-daemons · ability · Prey of the Blood God (Karanak)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] Pick a target at start of round 1 (a new one when it dies): this unit re-rolls Wound rolls vs that unit in melee | [Overview] Pick a target at start of round 1 (a new one when it dies): this unit re-rolls Wound rolls vs that unit in melee",
+  "fix": null
+ },
+ {
+  "key": "b077ad9392bbfe45",
+  "where": "summaries · chaos-daemons · ability · Brass Collar of Bloody Vengeance (Karanak)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Feel No Pain 3+ vs Psychic Attacks and mortal wounds",
+  "fix": null
+ },
+ {
+  "key": "924cd9bb62efd91d",
+  "where": "summaries · chaos-daemons · ability · Collar of Khorne (Flesh Hounds)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Feel No Pain 3+ vs Psychic Attacks",
+  "fix": null
+ },
+ {
+  "key": "3bf8595a1c176c92",
+  "where": "summaries · chaos-daemons · ability · Skulls for Khorne (Skulltaker)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] Re-roll Hit and Wound rolls vs CHARACTER",
+  "fix": null
+ },
+ {
+  "key": "e7c75acec0c7d519",
+  "where": "summaries · chaos-daemons · ability · Daemon Lord of Khorne (Bloodthirster)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] +1 to Hit rolls in melee within 6\" of Bloodthirster",
+  "fix": null
+ },
+ {
+  "key": "a6a4bc400f529db5",
+  "where": "summaries · chaos-daemons · ability · Daemonic Lord (Daemon Prince of Chaos)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Within 3\" of a LEGIONES DAEMONICA INFANTRY unit: Lone Operative",
+  "fix": null
+ },
+ {
+  "key": "87a390c56b2b924e",
+  "where": "summaries · chaos-daemons · ability · Prince of Darkness (Daemon Prince of Chaos)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] LEGIONES DAEMONICA within 6\" of the Daemon Prince of Chaos: Stealth",
+  "fix": null
+ },
+ {
+  "key": "46930ce68adea0e9",
+  "where": "summaries · chaos-daemons · ability · Unholy Vigour (Daemon Prince of Chaos)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] once per battle, if used: 3+ invulnerable save",
+  "fix": null
+ },
+ {
+  "key": "6eba1f1079319278",
+  "where": "summaries · chaos-daemons · ability · Blood Throne (Rendmaster on Blood Throne)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] Pick a visible enemy within 18\" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit",
+  "fix": null
+ },
+ {
+  "key": "3f57feb5dd16b6b4",
+  "where": "summaries · chaos-daemons · ability · Champion Slayer (Rendmaster on Blood Throne)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] Re-roll Wound rolls in melee vs CHARACTER or MONSTER; heals D6 per such unit killed",
+  "fix": null
+ },
+ {
+  "key": "530dee404c534efc",
+  "where": "summaries · chaos-daemons · ability · Bloodmaster (Bloodmaster)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] While leading: +1 to Wound rolls",
+  "fix": null
+ },
+ {
+  "key": "097d43d64c5c2911",
+  "where": "summaries · chaos-daemons · ability · Skullmaster’s Fury (Skullmaster)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] While leading, if the led unit charged this turn: Juggernaut’s bladed horns gain [DEVASTATING WOUNDS]",
+  "fix": null
+ },
+ {
+  "key": "a48f7b3163aefd09",
+  "where": "summaries · chaos-daemons · ability · P’tarix’s Sorcerous Syphon (The Blue Scribes)",
+  "verdict": "fix",
+  "why": "GW: “within 12\" of this model”. On 10 other sheets it is drawn as “Granted by: The Blue Scribes - Enemies within 12\": …”, where the range reads as measured from the sheet’s own unit. Name the giver (rule 10), as the enemy line already does (“of this model”).",
+  "fix": {
+   "source": "ability · P’tarix’s Sorcerous Syphon (The Blue Scribes)",
+   "placement": "When targeted",
+   "current": "Enemies within 12\": −1 to Wound rolls with Psychic Attacks",
+   "corrected": "Enemies within 12\" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks"
+  }
+ },
+ {
+  "key": "a366cb99215e8b67",
+  "where": "summaries · chaos-daemons · ability · Formless Horror (The Changeling)",
+  "verdict": "fix",
+  "why": "GW: “that unit must first take a Battle-shock test. If that test is failed, in addition to being Battle-shocked, that enemy unit cannot target this model this phase.” The summary drops the Battle-shocked result (rule 7: every part that changes play) and says “must pass”, which is not GW’s “must take”.",
+  "fix": {
+   "source": "ability · Formless Horror (The Changeling)",
+   "placement": "When targeted",
+   "current": "An enemy unit must pass a Battle-shock test to target this model; if it fails, that unit can’t target this model this phase",
+   "corrected": "Each time an enemy unit wants to target this model: that unit takes a Battle-shock test; if it fails, it is Battle-shocked and can’t target this model this phase"
+  }
+ },
+ {
+  "key": "fe6e6a68adb8feb1",
+  "where": "summaries · chaos-daemons · ability · Mischief and Confusion (The Changeling)",
+  "verdict": "fix",
+  "why": "GW: “select one enemy unit within 12\" of and visible to this model … on a 2-5 … each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, that enemy unit is not eligible to shoot”. As written, “2-5 −1 to Hit rolls” does not say whose rolls. It is drawn as “Granted by: The Changeling - …” on other sheets, so name the range’s origin (rule 10). “Shooting” → “Shooting phase”.",
+  "fix": {
+   "source": "ability · Mischief and Confusion (The Changeling)",
+   "placement": "When targeted",
+   "current": "Start of the opponent’s Shooting, pick a visible enemy within 12\" and roll D6: 2-5 −1 to Hit rolls; 6 that unit can’t shoot",
+   "corrected": "At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12\" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot"
+  }
+ },
+ {
+  "key": "a6a6c32d46ecc216",
+  "where": "summaries · chaos-daemons · ability · Malefic Destruction (Daemon Prince of Chaos with wings)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] once per battle, if used: +3 A",
+  "fix": null
+ },
+ {
+  "key": "73302dcfb39c0236",
+  "where": "summaries · chaos-daemons · ability · Harbinger of Death (Daemon Prince of Chaos with wings)",
+  "verdict": "fix",
+  "why": "GW: “Each time this model is selected to fight”. Rule 27: “this model” where GW says model.",
+  "fix": {
+   "source": "ability · Harbinger of Death (Daemon Prince of Chaos with wings)",
+   "placement": "under its weapons",
+   "current": "Pick one when this unit fights: hellforged weapons gain [LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1]",
+   "corrected": "Pick one when this model fights: hellforged weapons gain [LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1]"
+  }
+ },
+ {
+  "key": "d2b48c48a0891d93",
+  "where": "summaries · chaos-daemons · ability · Daemon Lord of Tzeentch (Lord of Change)",
+  "verdict": "fix",
+  "why": "GW: “within 6\" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength”. “+1 S shooting” is not a sentence. Rule 29: condition first.",
+  "fix": {
+   "source": "ability · Daemon Lord of Tzeentch (Lord of Change)",
+   "placement": "under its weapons",
+   "current": "+1 S shooting within 6\" of Lord of Change",
+   "corrected": "Within 6\" of Lord of Change: +1 S to ranged attacks"
+  }
+ },
+ {
+  "key": "010500480f085fcb",
+  "where": "summaries · chaos-daemons · ability · Master of Magicks (Lord of Change)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] pick one in your Shooting phase: [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3]",
+  "fix": null
+ },
+ {
+  "key": "4c24fbebe63ef968",
+  "where": "summaries · chaos-daemons · ability · Fluxmaster (Fluxmaster)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Stealth; −1 to Hit rolls vs melee attacks on this unit",
+  "fix": null
+ },
+ {
+  "key": "de2011faa46313e9",
+  "where": "summaries · chaos-daemons · ability · Altered Reality (Fluxmaster)",
+  "verdict": "fix",
+  "why": "Rule 13: under WHEN TARGETED only the saving-throw part applies (the Hit/Wound part is an attack effect), and rule 23 says “save roll”/“saving throw” in full. GW: “for this model” is the Fluxmaster only, but the line is drawn as “Granted by: Fluxmaster - … for this model” on the Fluxmaster + Pink Horrors sheet, so name the model. If an attack placement is wanted, it is the Hit/Wound part (a program/coverage question).",
+  "fix": {
+   "source": "ability · Altered Reality (Fluxmaster)",
+   "placement": "When targeted",
+   "current": "Once per round: a Hit, Wound or save roll for this model becomes an unmodified 6",
+   "corrected": "Once per round: you can change one saving throw for the Fluxmaster to an unmodified 6"
+  }
+ },
+ {
+  "key": "38c9de1ef40cb8bb",
+  "where": "summaries · chaos-daemons · ability · Sullen Malevolence (Blue Horrors)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [enemy line under its profile] With a BLUE HORROR: enemies within 6\": −1 Ld",
+  "fix": null
+ },
+ {
+  "key": "354613e8dbac2efd",
+  "where": "summaries · chaos-knights · army rule · Harbingers of Dread",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] Doom ⇒ If Doom is active: +1 to Wound rolls vs Battle-shocked targets | [When targeted] Darkness ⇒ If Darkness is active: Stealth | [enemy line under its profile] Deathly Terror: enemies within 9\": −1 Ld (−1 more if Despair is active) | [Overview] Deathly Terror from the start; pick one more Dread ability (or roll two) at the start of rounds 1, 3 and 5: Despair; Doom; Darkness; Dismay; Delirium; Dominion",
+  "fix": null
+ },
+ {
+  "key": "c4181f95f610c862",
+  "where": "summaries · chaos-knights · Infernal Lance rule · Malefic Surge",
+  "verdict": "fix",
+  "why": "Rule 4/29: the trigger and choice come first (approved form “Pick one when it fights: [SUSTAINED HITS 1] or [LETHAL HITS]”). GW: “When this unit is selected to shoot or fight, select either …”, “When this unit is selected as the target of an attack, select one of the following”. The Unholy Hunger profile line is fine.",
+  "fix": {
+   "source": "Infernal Lance rule · Malefic Surge",
+   "placement": "under its weapons / When targeted",
+   "current": "Diabolic Power ⇒ If Empowered, Diabolic Power: [LETHAL HITS] or [SUSTAINED HITS 1] when this unit shoots or fights | Unnatural Fortitude ⇒ If Empowered, Unnatural Fortitude: 5+ invulnerable save or Feel No Pain 6+ when targeted",
+   "corrected": "Diabolic Power ⇒ If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1]\nUnnatural Fortitude ⇒ If Empowered, Unnatural Fortitude: pick one when this unit is targeted: 5+ invulnerable save or Feel No Pain 6+"
+  }
+ },
+ {
+  "key": "9976c6033ec86cbf",
+  "where": "summaries · chaos-knights · Infernal Lance enhancement · Knight Diabolus",
+  "verdict": "fix",
+  "why": "Rule 1 shorthand (“+1 WS”, as Doctrina’s “+1 WS”). Rule 29: condition first. GW: “Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have [LANCE].”",
+  "fix": {
+   "source": "Infernal Lance enhancement · Knight Diabolus",
+   "placement": "under its weapons",
+   "current": "WS improved by 1 in melee; melee gains [LANCE] while using Diabolic Power",
+   "corrected": "+1 WS in melee; while using Diabolic Power: melee weapons gain [LANCE]"
+  }
+ },
+ {
+  "key": "b937013633600107",
+  "where": "summaries · chaos-knights · Infernal Lance enhancement · Fleshmetal Fusion",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] +1 T; while using Unnatural Fortitude, +1 to armour saves vs Damage 1 attacks",
+  "fix": null
+ },
+ {
+  "key": "b1805d9b88e1b6dc",
+  "where": "summaries · chaos-knights · Infernal Lance enhancement · Bestial Aspect",
+  "verdict": "fix",
+  "why": "Rule 29: condition first. GW: “While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls”. NOTE: GW’s first sentence (“The bearer’s ranged weapons have [ASSAULT]”) has no summary; the snapshot shows it as a weapon-keyword grant (popup grant:Bestial Aspect … ASSAULT), so no line is expected. The coverage question is the program’s.",
+  "fix": {
+   "source": "Infernal Lance enhancement · Bestial Aspect",
+   "placement": "under its profile",
+   "current": "Ignore modifiers to Move and Advance rolls while using Unholy Hunger",
+   "corrected": "While using Unholy Hunger: ignore modifiers to Move and Advance rolls"
+  }
+ },
+ {
+  "key": "1521d430075bf735",
+  "where": "summaries · chaos-knights · Houndpack Lance rule · Marked Prey",
+  "verdict": "fix",
+  "why": "“Picked each Command phase:” has no object, so “that unit” has nothing to refer to. Rule 4: keep the pick (the approved form is “Pick a visible enemy at start of Shooting: …”). GW: “At the start of your Command phase, select one unit from your opponent’s army … if that unit is visible to the attacking model, that attack has [SUSTAINED HITS 1]”.",
+  "fix": {
+   "source": "Houndpack Lance rule · Marked Prey",
+   "placement": "under its weapons",
+   "current": "Picked each Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if visible",
+   "corrected": "Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker"
+  }
+ },
+ {
+  "key": "a24eee62f18bea0c",
+  "where": "summaries · chaos-knights · Houndpack Lance enhancement · Final Howl (Aura)",
+  "verdict": "fix",
+  "why": "Rule 2: keywords in capitals (the rule is “WAR DOG model only”). Rule 29: condition first, then the effect after a colon (the pattern of the other aura lines).",
+  "fix": {
+   "source": "Houndpack Lance enhancement · Final Howl (Aura)",
+   "placement": "under its weapons",
+   "current": "War Dog models within 6\" of the bearer re-roll Wound rolls of 1",
+   "corrected": "WAR DOG models within 6\" of the bearer: re-roll Wound rolls of 1"
+  }
+ },
+ {
+  "key": "93a2373b2b3ab70f",
+  "where": "summaries · chaos-knights · Houndpack Lance enhancement · Panoply of the Cursed Knights",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] attacks against the bearer get −1 AP",
+  "fix": null
+ },
+ {
+  "key": "243c1b534193c576",
+  "where": "summaries · chaos-knights · ability · Macro-extinction Protocols (Chaos Cerastus Knight Atrapos)",
+  "verdict": "fix",
+  "why": "Rule 29 and approved example “vs CHARACTER/MONSTER/VEHICLE: +1 to Wound rolls”. GW numbers unchanged.",
+  "fix": {
+   "source": "ability · Macro-extinction Protocols (Chaos Cerastus Knight Atrapos)",
+   "placement": "under its weapons",
+   "current": "+1 to Hit rolls vs MONSTER or VEHICLE; also +1 to Wound rolls if TITANIC or TOWERING",
+   "corrected": "vs MONSTER or VEHICLE: +1 to Hit rolls; also +1 to Wound rolls if TITANIC or TOWERING"
+  }
+ },
+ {
+  "key": "de7a01149b77d0c7",
+  "where": "summaries · chaos-knights · ability · *Invulnerable Save (Knight Despoiler, Knight Ruinator, War Dog Brigand, War Dog Executioner, War Dog Karnivore)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] 5+ invulnerable save vs ranged attacks",
+  "fix": null
+ },
+ {
+  "key": "9cf1908be1e018d7",
+  "where": "summaries · chaos-knights · ability · Seething Hatred (Knight Despoiler)",
+  "verdict": "fix",
+  "why": "GW: “Each time this model is selected to shoot or fight, you can re-roll one Hit roll or … one Wound roll”. Rule 27 (“this model”, as in the approved Code Chivalric example) and rule 23 (no bare “Hit”).",
+  "fix": {
+   "source": "ability · Seething Hatred (Knight Despoiler)",
+   "placement": "under its weapons",
+   "current": "When this unit shoots or fights: re-roll one Hit or Wound roll",
+   "corrected": "When this model shoots or fights: re-roll one Hit roll or one Wound roll"
+  }
+ },
+ {
+  "key": "fd4977c829f2707f",
+  "where": "summaries · chaos-knights · ability · Methodical Destruction (Knight Ruinator)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit | [Overview] Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit",
+  "fix": null
+ },
+ {
+  "key": "8e0a35258fa5dd3d",
+  "where": "summaries · chaos-knights · ability · Mischief Makers (Nurglings)",
+  "verdict": "fix",
+  "why": "Drawn 5 times as “Granted by: Nurglings - Enemies … in Engagement Range of this unit”, where “this unit” reads as the sheet’s own unit. GW: “within Engagement Range of one or more units with this ability”. Name the giver (rule 10). The enemy line under the Nurglings’ own profile (“of this unit”) is right as it is.",
+  "fix": {
+   "source": "ability · Mischief Makers (Nurglings)",
+   "placement": "When targeted",
+   "current": "Enemies (not TITANIC) in Engagement Range of this unit: −1 to Hit rolls in melee",
+   "corrected": "Enemies (not TITANIC) in Engagement Range of the Nurglings: −1 to Hit rolls in melee"
+  }
+ },
+ {
+  "key": "d4b863c6b48d87f8",
+  "where": "summaries · chaos-knights · ability · Brigand (War Dog Brigand)",
+  "verdict": "fix",
+  "why": "Rule 29: condition first (as in “On an objective (…): [LETHAL HITS]”). GW: “ranged attack that targets a unit that is within range of one or more objective markers, that attack has [IGNORES COVER]”.",
+  "fix": {
+   "source": "ability · Brigand (War Dog Brigand)",
+   "placement": "under its weapons",
+   "current": "Ranged attacks gain [IGNORES COVER] vs targets on an objective",
+   "corrected": "Ranged attacks vs a target on an objective: [IGNORES COVER]"
+  }
+ },
+ {
+  "key": "05c26ab6670c128b",
+  "where": "summaries · chaos-knights · ability · Executioner (War Dog Executioner)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] +1 to Hit rolls vs Below Half-strength",
+  "fix": null
+ },
+ {
+  "key": "b898a9e2a55bead2",
+  "where": "summaries · chaos-space-marines · army rule · Dark Pacts",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1]",
+  "fix": null
+ },
+ {
+  "key": "a887cc18f30f6200",
+  "where": "summaries · chaos-space-marines · Cult of the Arkifane rule · Soul Forge Boons",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] SOUL FORGE units: 5+ invulnerable save",
+  "fix": null
+ },
+ {
+  "key": "321b7ff5dbe0aed0",
+  "where": "summaries · chaos-space-marines · Cult of the Arkifane enhancement · Mark of the Soul Forges",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] Hits crit on 5+ “Hits crit on 5+” is the shorthand the owner approved after rule 23 (Adrenal Surge; Daemonic Patrons “wounds crit on 3+”).",
+  "fix": null
+ },
+ {
+  "key": "411adb08549ca477",
+  "where": "summaries · chaos-space-marines · ability · Unholy Mechanisms (Vashtorr the Arkifane)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] DAEMON VEHICLE within 6\" of Vashtorr the Arkifane: +2 S",
+  "fix": null
+ },
+ {
+  "key": "9ec161f51588c560",
+  "where": "summaries · chaos-space-marines · ability · Reorder Reality (Vashtorr the Arkifane)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Enemies within 18\" targeting this model: −1 to Hit rolls; their ranged weapons gain [HAZARDOUS]",
+  "fix": null
+ },
+ {
+  "key": "ef331233353cd983",
+  "where": "summaries · chaos-space-marines · ability · Indentured Daemon Engines (Vashtorr the Arkifane)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Within 3\" of a DAEMON VEHICLE unit: Lone Operative",
+  "fix": null
+ },
+ {
+  "key": "2b179043e29c23e9",
+  "where": "summaries · chaos-space-marines · ability · Spirit Thief (Lord Discordant on Helstalker)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit",
+  "fix": null
+ },
+ {
+  "key": "e7adb56a7ab1d57f",
+  "where": "summaries · chaos-space-marines · ability · Warpsmith (Warpsmith)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [When targeted] Within 3\" of a HERETIC ASTARTES VEHICLE unit: Lone Operative",
+  "fix": null
+ },
+ {
+  "key": "1f65c0f4e562e6ed",
+  "where": "summaries · chaos-space-marines · ability · Master of Mechanisms (Warpsmith)",
+  "verdict": "fix",
+  "why": "Rule 13: under the weapons only the attack part. The owner approved the parallel Omnissiah’s Blessing (“Command phase: a VEHICLE within 3\" of the Tech-Priest Enginseer gets Feel No Pain 5+”), which drops the D3 heal. GW: “regains up to D3 lost wounds and … each time that VEHICLE makes an attack, add 1 to the Hit roll”.",
+  "fix": {
+   "source": "ability · Master of Mechanisms (Warpsmith)",
+   "placement": "under its weapons",
+   "current": "Command phase: a HERETIC ASTARTES VEHICLE within 3\" of the Warpsmith heals D3 and has +1 to Hit rolls",
+   "corrected": "Command phase: a HERETIC ASTARTES VEHICLE within 3\" of the Warpsmith gets +1 to Hit rolls"
+  }
+ },
+ {
+  "key": "40df068eb9f99f30",
+  "where": "summaries · chaos-space-marines · ability · Dark Zealotry (Dark Apostle)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] While leading: +1 to Wound rolls in melee",
+  "fix": null
+ },
+ {
+  "key": "4e149c7df71131a0",
+  "where": "summaries · chaos-space-marines · ability · Warp-sighted Butcher (Master of Executions)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] While leading: re-roll Hit rolls in melee vs targets below Starting Strength; also Wound rolls if Below Half-strength",
+  "fix": null
+ },
+ {
+  "key": "93a67b17251b87b0",
+  "where": "summaries · chaos-space-marines · ability · Visions of Suffering (Nemesis Claw)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] +1 to Hit rolls vs targets below Starting Strength; also +1 to Wound rolls if Below Half-strength",
+  "fix": null
+ },
+ {
+  "key": "975a51e87d7e7df8",
+  "where": "summaries · chaos-space-marines · ability · Stabilisation Talons (Havocs)",
+  "verdict": "fix",
+  "why": "“… Hit rolls shooting” is not a sentence. GW: “Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the Hit roll and … to the Ballistic Skill”. Rule 29: the condition (ranged) first.",
+  "fix": {
+   "source": "ability · Stabilisation Talons (Havocs)",
+   "placement": "under its weapons",
+   "current": "Ignore modifiers to BS and Hit rolls shooting",
+   "corrected": "Ranged attacks: ignore modifiers to BS and Hit rolls"
+  }
+ },
+ {
+  "key": "15061612e0f41a79",
+  "where": "summaries · chaos-space-marines · ability · Warp Rift Firepower (Obliterators)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] once per battle, if used: ranged attacks gain [INDIRECT FIRE] The row’s text has no limit, but GW’s datasheet heading and errata (Faction Pack CSM; waha ds Obliterators) say “(Once per battle, per unit)”, so “once per battle, if used:” is right (rule 38).",
+  "fix": null
+ },
+ {
+  "key": "bf27bb15235bae0b",
+  "where": "summaries · chaos-space-marines · ability · Annihilator (Chaos Predator Annihilator)",
+  "verdict": "fix",
+  "why": "GW: “Each time a ranged attack made by this model is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.” The fix gives the condition first in plain words (rule 29) and keeps GW’s “allocated”.",
+  "fix": {
+   "source": "ability · Annihilator (Chaos Predator Annihilator)",
+   "placement": "under its weapons",
+   "current": "Re-roll Damage rolls shooting MONSTER or VEHICLE models",
+   "corrected": "Ranged attacks allocated to a MONSTER or VEHICLE model: re-roll the Damage roll"
+  }
+ },
+ {
+  "key": "de124ad6869fd0cf",
+  "where": "summaries · chaos-space-marines · ability · Destructor (Chaos Predator Destructor)",
+  "verdict": "fix",
+  "why": "GW: “Each time a ranged attack made by this model targets an enemy INFANTRY unit, improve the AP … by 1.” Rule 29 condition first; “+1 AP shooting INFANTRY” is not a sentence.",
+  "fix": {
+   "source": "ability · Destructor (Chaos Predator Destructor)",
+   "placement": "under its weapons",
+   "current": "+1 AP shooting INFANTRY",
+   "corrected": "Ranged attacks vs INFANTRY: +1 AP"
+  }
+ },
+ {
+  "key": "8627b139407ea1bf",
+  "where": "summaries · chaos-space-marines · ability · Siege Shield (Chaos Vindicator)",
+  "verdict": "fix",
+  "why": "Rule 3: GW’s condition “(provided no other friendly units are also within Engagement Range of that enemy unit)” decides whether it applies and was dropped. The program gives the line no weapon prefix (fellhammer snapshot), so naming the demolisher cannon is right.",
+  "fix": {
+   "source": "ability · Siege Shield (Chaos Vindicator)",
+   "placement": "under its weapons",
+   "current": "Demolisher cannon can shoot enemies in Engagement Range; no Engagement Range penalty to Hit rolls",
+   "corrected": "Demolisher cannon can target enemies within Engagement Range of this model, if no other friendly unit is within Engagement Range of them; ranged attacks ignore the Hit roll penalty for being within Engagement Range"
+  }
+ },
+ {
+  "key": "61f89e7a38625bb5",
+  "where": "summaries · chaos-space-marines · ability · Daemonic Ordnance (Forgefiend)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] When this unit shoots, if it uses this ability: ranged weapons gain [DEVASTATING WOUNDS] and [HAZARDOUS]",
+  "fix": null
+ },
+ {
+  "key": "dccea9ed1edb1d5a",
+  "where": "summaries · chaos-space-marines · ability · Siege Crawler (Maulerfiend)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its profile] Ignore modifiers to this model’s Move, Advance and Charge rolls",
+  "fix": null
+ },
+ {
+  "key": "7139ad1415bdad37",
+  "where": "summaries · emperors-children · Coterie of the Conceited rule · Pledges to the Dark Prince",
+  "verdict": "fix",
+  "why": "Rule 3: GW’s condition “if your WARLORD is on the battlefield” was dropped. Rule 16: “Pact points” → GW’s “a number of Pact points equal to your pledge”; “greater than or equal to” = “met or beaten”. (The owner approved the 4 weapon lines; this overview line is separate.)",
+  "fix": {
+   "source": "Coterie of the Conceited rule · Pledges to the Dark Prince",
+   "placement": "Overview",
+   "current": "Start of each round, pledge how many enemy units die this round: Pact points if met, else D3 mortal wounds to your WARLORD",
+   "corrected": "Start of each round, if your WARLORD is on the battlefield: pledge how many enemy units will be destroyed this round; if met or beaten, gain that many Pact points, else your WARLORD suffers D3 mortal wounds"
+  }
+ },
+ {
+  "key": "562937893cb32572",
+  "where": "summaries · emperors-children · Coterie of the Conceited enhancement · Pledge of Unholy Fortune",
+  "verdict": "fix",
+  "why": "Rule 13: under WHEN TARGETED only the saving-throw part (Hit/Wound rolls are an attack effect); rule 23: “saving throw”/“Hit roll” in full. GW: “just after making a Hit roll, a Wound roll or a saving throw for a model in the bearer’s unit”. Rule 27: on the bearer’s sheet “the bearer’s unit” = “this unit”.",
+  "fix": {
+   "source": "Coterie of the Conceited enhancement · Pledge of Unholy Fortune",
+   "placement": "When targeted",
+   "current": "Once per turn, if the bearer is not Battle-shocked: a Hit, Wound or save roll for the bearer’s unit becomes an unmodified 6",
+   "corrected": "Once per turn, if the bearer is not Battle-shocked: a saving throw for a model in this unit becomes an unmodified 6"
+  }
+ },
+ {
+  "key": "941a8479fc4bdd13",
+  "where": "summaries · emperors-children · ability · A Challenge Worthy of Skill (Lucius the Eternal)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] Re-roll Hit and Wound rolls vs CHARACTER, MONSTER or WALKER",
+  "fix": null
+ },
+ {
+  "key": "60cf7289fd40c2ec",
+  "where": "summaries · emperors-children · ability · Daemonic Patrons (Flawless Blades)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] When this unit fights, if it uses this ability: wounds crit on 3+; this unit loses a model if it kills nothing",
+  "fix": null
+ },
+ {
+  "key": "4b3ae021f7cae8c6",
+  "where": "summaries · emperors-children · ability · Stimulated by Pain (Daemon Prince of Slaanesh with Wings)",
+  "verdict": "fix",
+  "why": "GW: “Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.” Rule 27: “this model”, and keep “allocated”, which decides when it applies (approved form: “−1 Damage to attacks on this unit”). “vs” is wrong here, since it is the attack’s own Damage.",
+  "fix": {
+   "source": "ability · Stimulated by Pain (Daemon Prince of Slaanesh with Wings)",
+   "placement": "When targeted",
+   "current": "−1 Damage vs attacks on this unit",
+   "corrected": "−1 Damage to attacks allocated to this model"
+  }
+ },
+ {
+  "key": "c688ec6208096eb5",
+  "where": "summaries · emperors-children · ability · Wracking Agonies (Sorcerer)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [enemy line under its profile] One INFANTRY unit hit by this model’s Agonising Energies: −2\" Move and −2 to Charge rolls",
+  "fix": null
+ },
+ {
+  "key": "c5c14d341f043639",
+  "where": "summaries · emperors-children · ability · Lord of the Host (Lord Exultant)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [Overview] Attached to EMPEROR’S CHILDREN BATTLELINE at Declare Battle Formations: Infiltrators and Scouts 6\"",
+  "fix": null
+ },
+ {
+  "key": "2d5130006d09105a",
+  "where": "summaries · emperors-children · ability · Euphoric Strikes (Lord Exultant)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] once per battle, if used: +3 A and +1 AP in melee",
+  "fix": null
+ },
+ {
+  "key": "62837cfbaf5cbedb",
+  "where": "summaries · emperors-children · ability · Excessive Assault (Infractors)",
+  "verdict": "fix",
+  "why": "GW: “targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.” The second clause is melee only too, but the current text leaves that open. Condition first (rule 29).",
+  "fix": {
+   "source": "ability · Excessive Assault (Infractors)",
+   "placement": "under its weapons",
+   "current": "Re-roll Wound rolls of 1 in melee; re-roll Wound rolls vs a target on an objective",
+   "corrected": "In melee: re-roll Wound rolls of 1; vs a target on an objective, re-roll all Wound rolls instead"
+  }
+ },
+ {
+  "key": "ac2d3de939cfaaf9",
+  "where": "summaries · emperors-children · ability · Revel in Desecration (Defiler)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] +1 to Hit rolls vs targets not Below Half-strength",
+  "fix": null
+ },
+ {
+  "key": "755402f17fc6b20b",
+  "where": "summaries · emperors-children · ability · Glutton for Punishment (Maulerfiend)",
+  "verdict": "ok",
+  "why": "Checked against GW’s text and how it shows on the snapshot sheets: numbers, keywords and the deciding condition come from GW, durations dropped, it follows the guidelines and has none of the program-made parts. Summaries: [under its weapons] +1 to Hit rolls if below Starting Strength; also +1 to Wound rolls if Below Half-strength",
+  "fix": null
+ },
+ {
+  "key": "6282d07546c8f2f4",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · super-terminators · Forgefiend · Furious Onslaught",
+  "verdict": "ok",
+  "why": "Changed (was: Re-roll Hit rolls shooting the closest eligible target within 18\"): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Shooting the closest eligible target within 18\": re-roll Hit rolls",
+  "fix": null
+ },
+ {
+  "key": "1859e867a4628112",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumAtk · purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah",
+  "verdict": "ok",
+  "why": "The pick was added as asked. “friendly ADEPTUS MECHANICUS re-roll” reads right on the 24 granted lines. Now: sumAtk: Invocation of Machine Vengeance ⇒ If Invocation of Machine Vengeance: pick an enemy unit at the start of your Command phase; friendly ADEPTUS MECHANICUS re-roll Hit rolls vs that unit",
+  "fix": null
+ },
+ {
+  "key": "f5456186dbb7b4c8",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumDef · purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah",
+  "verdict": "ok",
+  "why": "The round-1 fix, which is now the approved example. Now: sumDef: Shroudpsalm (Aura) ⇒ If Shroudpsalm, within 6\" of Belisarius Cawl: Stealth",
+  "fix": null
+ },
+ {
+  "key": "8a9cbcedd2fd9c69",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumSt · purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah",
+  "verdict": "ok",
+  "why": "The round-1 fix as given. It is now also drawn as “Granted by: Belisarius Cawl” on 8 other sheets, so the round-1 program note is resolved. Now: sumSt: If Mantra of Discipline: Belisarius Cawl has BATTLELINE; ADEPTUS MECHANICUS units within 6\" of Belisarius Cawl: +1 OC and +1 to Battle-shock and Leadership tests",
+  "fix": null
+ },
+ {
+  "key": "7b6ca2f81ea23208",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumDef · purge-goes-the-foe · Thulia Ghuld · Mechanicus Bodyguard",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Within 3\" of another ADEPTUS MECHANICUS unit: Lone Operative",
+  "fix": null
+ },
+ {
+  "key": "4c4fe070cbb465c0",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumDef · purge-goes-the-foe · Tech-Priest Enginseer · Enginseer",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Within 3\" of an ADEPTUS MECHANICUS VEHICLE, unless leading: Lone Operative",
+  "fix": null
+ },
+ {
+  "key": "f29725cce7ce2133",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumDef · purge-goes-the-foe · Tech-Priest Enginseer · Omnissiah’s Blessing",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Command phase: a VEHICLE within 3\" of the Tech-Priest Enginseer gets Feel No Pain 5+",
+  "fix": null
+ },
+ {
+  "key": "75de37f4fbbb75f0",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumAtk · purge-goes-the-foe · Tech-Priest Enginseer · Vengeance for the Omnissiah",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: After a friendly ADEPTUS MECHANICUS VEHICLE dies within 12\": Omnissian axe A 6 for the battle",
+  "fix": null
+ },
+ {
+  "key": "d52263d0379e92e0",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumAtk · purge-goes-the-foe · Cybernetica Datasmith · Battle Protocols",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: Protector Protocol ⇒ If Protector Protocol: KASTELAN ROBOTS +2 A ranged\nConqueror Protocol ⇒ If Conqueror Protocol: KASTELAN ROBOTS +2 A melee",
+  "fix": null
+ },
+ {
+  "key": "5be5900a47eb6565",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumDef · purge-goes-the-foe · Cybernetica Datasmith · Battle Protocols",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Aegis Protocol ⇒ If Aegis Protocol: KASTELAN ROBOTS +1 T",
+  "fix": null
+ },
+ {
+  "key": "2e48c8f68d5795bb",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumOv · purge-goes-the-foe · Cybernetica Datasmith · Battle Protocols",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumOv: Leading KASTELAN ROBOTS: they start the battle in Aegis Protocol (+1 T)",
+  "fix": null
+ },
+ {
+  "key": "973636be4e09a80e",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumDef · purge-goes-the-foe · Cybernetica Datasmith · Robotic Bodyguard",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: A CYBERNETICA DATASMITH leading this unit has Feel No Pain 4+",
+  "fix": null
+ },
+ {
+  "key": "ad92163cfb7eebc8",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumDef · purge-goes-the-foe · Cybernetica Datasmith · Repulsor Grid",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: When shot: each unmodified save of 6, 1 mortal wound to the shooter",
+  "fix": null
+ },
+ {
+  "key": "dae331a44ea46c21",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumDef · purge-goes-the-foe · Onager Dunecrawler · Emanatus Force Field",
+  "verdict": "ok",
+  "why": "Changed (was: ADEPTUS MECHANICUS BATTLELINE models wholly within 6\": 4+ invulnerable save vs ranged attacks): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumDef: ADEPTUS MECHANICUS BATTLELINE models wholly within 6\" of the Onager Dunecrawler: 4+ invulnerable save vs ranged attacks",
+  "fix": null
+ },
+ {
+  "key": "c755fdd95226844a",
+  "round": 2,
+  "where": "adeptus-mechanicus · ability-sumAtk · purge-goes-the-foe · Skorpius Disintegrator · Blistering Salvoes",
+  "verdict": "ok",
+  "why": "Per-weapon options as asked in round 1. On screen: “Ferrumite cannon: vs MONSTER or VEHICLE: +1 to Hit rolls”, which matches the new approved example. Now: sumAtk: Belleros energy cannon ⇒ vs INFANTRY: +1 to Hit rolls\nFerrumite cannon ⇒ vs MONSTER or VEHICLE: +1 to Hit rolls",
+  "fix": null
+ },
+ {
+  "key": "ee52237afb85ff1d",
+  "round": 2,
+  "where": "adeptus-mechanicus · rule-sumAtk · adeptus-mechanicus army rule · Doctrina Imperatives",
+  "verdict": "ok",
+  "why": "Changed (new line): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Protector Imperative ⇒ If Protector Imperative is active: [HEAVY] and +1 BS\nConqueror Imperative ⇒ If Conqueror Imperative is active: [ASSAULT] and +1 WS; if BATTLELINE or within 6\" of one: +1 AP",
+  "fix": null
+ },
+ {
+  "key": "fb1fd0463c8580b8",
+  "round": 2,
+  "where": "adeptus-mechanicus · rule-sumDef · adeptus-mechanicus army rule · Doctrina Imperatives",
+  "verdict": "ok",
+  "why": "Changed (new line): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumDef: Protector Imperative ⇒ If Protector Imperative is active, BATTLELINE or within 6\" of one: −1 to Hit rolls vs melee",
+  "fix": null
+ },
+ {
+  "key": "c5e7d55750092360",
+  "round": 2,
+  "where": "adeptus-mechanicus · rule-sumOv · adeptus-mechanicus army rule · Doctrina Imperatives",
+  "verdict": "ok",
+  "why": "Changed (new line): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumOv: Pick one at the start of each round: Protector Imperative; Conqueror Imperative",
+  "fix": null
+ },
+ {
+  "key": "bbd8c000cee8a3de",
+  "round": 2,
+  "where": "adeptus-mechanicus · rule-sumSt · Cohort Cybernetica rule · Cyber-psalm Programming",
+  "verdict": "ok",
+  "why": "Changed (was: LEGIO CYBERNETICA: +2\" Move; +1 OC if not Battle-shocked): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumSt: LEGIO CYBERNETICA: +2\" Move; if not Battle-shocked: +1 OC",
+  "fix": null
+ },
+ {
+  "key": "67d41d91ecf8bb8d",
+  "round": 2,
+  "where": "adeptus-mechanicus · strat-gist · Cohort Cybernetica · Auto-divinatory Targeting",
+  "verdict": "fix",
+  "why": "GW: “ranged weapons … have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability, but they can only target units within range of the selected objective marker.” The rule-44 reordering (“vs units on the selected objective only: ranged weapons BS 3+ and [IGNORES COVER]”) makes the restriction look like a limit on the bonus. GW's actual restriction is on what the unit can target, so it is the effect, not a condition.",
+  "fix": {
+   "source": "Cohort Cybernetica · Auto-divinatory Targeting",
+   "placement": "strat-gist",
+   "current": "vs units on the selected objective only: ranged weapons BS 3+ and [IGNORES COVER]",
+   "corrected": "ranged weapons BS 3+ and [IGNORES COVER]; they can only target units on the selected objective"
+  }
+ },
+ {
+  "key": "f7262c173a0c632b",
+  "round": 2,
+  "where": "adeptus-mechanicus · strat-gist · Cohort Cybernetica · Machine Spirit Resurgent",
+  "verdict": "ok",
+  "why": "Changed (was: below Starting Strength: re-roll Hit rolls; also Wound rolls if Below Half-strength): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: below Starting Strength: re-roll Hit rolls; also re-roll Wound rolls if Below Half-strength",
+  "fix": null
+ },
+ {
+  "key": "21124452d592f875",
+  "round": 2,
+  "where": "adeptus-mechanicus · enhancement-sumDef · Cohort Cybernetica · Necromechanic",
+  "verdict": "fix",
+  "why": "Rule 45: an enhancement's line says “the bearer”. GW says “TECH-PRIEST model only … within 12\" of the bearer”, so the bearer can be any TECH-PRIEST, not just the Tech-Priest Enginseer. On screen it reads “Granted by: Tech-Priest Enginseer (enhancement) - … within 12\" of the Tech-Priest Enginseer”. The sweep also rewrote a text the owner approved as written (spot-check: Necromechanic). If the owner's approval outranks rule 44, restore the approved text instead.",
+  "fix": {
+   "source": "Cohort Cybernetica · Necromechanic",
+   "placement": "enhancement-sumDef",
+   "current": "Once per round, within 12\" of the Tech-Priest Enginseer: after a failed save for a LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model, that attack's Damage becomes 0",
+   "corrected": "Once per round, within 12\" of the bearer: after a failed save for a LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model, that attack's Damage becomes 0"
+  }
+ },
+ {
+  "key": "11462de57024aece",
+  "round": 2,
+  "where": "adeptus-mechanicus · rule-sumAtk · Eradication Cohort rule · Murderous Imperative",
+  "verdict": "ok",
+  "why": "Changed (was: SKITARII: re-roll Hit rolls of 1 with Protector; re-roll Wound rolls of 1 with Conqueror): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: SKITARII: if Protector Imperative is active, re-roll Hit rolls of 1; if Conqueror Imperative is active, re-roll Wound rolls of 1",
+  "fix": null
+ },
+ {
+  "key": "75a4f014238f5481",
+  "round": 2,
+  "where": "adeptus-mechanicus · strat-gist · Eradication Cohort · Threat-cogitation Targeters",
+  "verdict": "ok",
+  "why": "Changed (was: SKITARII VEHICLE: re-roll the Damage roll of ranged attacks vs MONSTER/VEHICLE models): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: SKITARII VEHICLE, ranged attacks vs MONSTER/VEHICLE models: re-roll the Damage roll",
+  "fix": null
+ },
+ {
+  "key": "23d50b9772771843",
+  "round": 2,
+  "where": "adeptus-mechanicus · strat-gist · Eradication Cohort · Analytic Reprisals",
+  "verdict": "ok",
+  "why": "Changed (was: after an enemy kills SKITARII INFANTRY models by shooting: the unit shoots back, only at that enemy): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: after an enemy unit's shooting destroys models of this SKITARII INFANTRY unit: this unit shoots back, only at that enemy unit",
+  "fix": null
+ },
+ {
+  "key": "7b959c5b80618a20",
+  "round": 2,
+  "where": "emperors-children · ability-sumAtk · defilers-and-friends · Lucius the Eternal · A Challenge Worthy of Skill",
+  "verdict": "ok",
+  "why": "Changed (was: Re-roll Hit and Wound rolls vs CHARACTER, MONSTER or WALKER): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: vs CHARACTER, MONSTER or WALKER: re-roll Hit rolls and Wound rolls",
+  "fix": null
+ },
+ {
+  "key": "a6bf5c5b2ca80e30",
+  "round": 2,
+  "where": "emperors-children · ability-sumAtk · defilers-and-friends · Lucius the Eternal · Daemonic Patrons",
+  "verdict": "ok",
+  "why": "The crit wording sweep: “Critical Wounds on 3+”. Otherwise the owner's text. Now: sumAtk: When this unit fights, if it uses this ability: Critical Wounds on 3+; this unit loses a model if it kills nothing",
+  "fix": null
+ },
+ {
+  "key": "82d737ab176981eb",
+  "round": 2,
+  "where": "emperors-children · ability-sumDef · defilers-and-friends · Daemon Prince of Slaanesh with Wings · Stimulated by Pain",
+  "verdict": "ok",
+  "why": "Changed (was: −1 Damage vs attacks on this unit): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumDef: −1 Damage to attacks allocated to this model",
+  "fix": null
+ },
+ {
+  "key": "1f1d01dec9119111",
+  "round": 2,
+  "where": "emperors-children · ability-sumFoe · defilers-and-friends · Sorcerer · Wracking Agonies",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumFoe: One INFANTRY unit hit by this model’s Agonising Energies: −2\" Move and −2 to Charge rolls",
+  "fix": null
+ },
+ {
+  "key": "f46b92f277bd445c",
+  "round": 2,
+  "where": "emperors-children · ability-sumOv · defilers-and-friends · Lord Exultant · Lord of the Host",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumOv: Attached to EMPEROR’S CHILDREN BATTLELINE at Declare Battle Formations: Infiltrators and Scouts 6\"",
+  "fix": null
+ },
+ {
+  "key": "c1682de92657e8cf",
+  "round": 2,
+  "where": "emperors-children · ability-sumAtk · defilers-and-friends · Lord Exultant · Euphoric Strikes",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: once per battle, if used: +3 A and +1 AP in melee",
+  "fix": null
+ },
+ {
+  "key": "3b1328e0cd4dd44e",
+  "round": 2,
+  "where": "emperors-children · ability-sumOv · defilers-and-friends · Lord Exultant · Euphoric Strikes",
+  "verdict": "ok",
+  "why": "New Overview line: GW's limit, trigger and numbers kept, and the duration dropped. Now: sumOv: Once per battle, at the start of the Fight phase, if used: +3 A and +1 AP with this model’s melee weapons",
+  "fix": null
+ },
+ {
+  "key": "0528fe2deb993158",
+  "round": 2,
+  "where": "emperors-children · ability-sumAtk · defilers-and-friends · Lord Exultant · Excessive Assault",
+  "verdict": "ok",
+  "why": "Changed (was: Re-roll Wound rolls of 1 in melee; re-roll Wound rolls vs a target on an objective): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: In melee: re-roll Wound rolls of 1; vs a target on an objective, re-roll all Wound rolls instead",
+  "fix": null
+ },
+ {
+  "key": "5f74d11643ff1cfc",
+  "round": 2,
+  "where": "emperors-children · ability-sumAtk · defilers-and-friends · Defiler · Revel in Desecration",
+  "verdict": "ok",
+  "why": "Changed (was: +1 to Hit rolls vs targets not Below Half-strength): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: vs targets not Below Half-strength: +1 to Hit rolls",
+  "fix": null
+ },
+ {
+  "key": "af61823577998cca",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · defilers-and-friends · Maulerfiend · Glutton for Punishment",
+  "verdict": "ok",
+  "why": "Changed (was: +1 to Hit rolls if below Starting Strength; also +1 to Wound rolls if Below Half-strength): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: If below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength",
+  "fix": null
+ },
+ {
+  "key": "3acc9b45fca45425",
+  "round": 2,
+  "where": "emperors-children · rule-sumAtk · Coterie of the Conceited rule · Pledges to the Dark Prince",
+  "verdict": "ok",
+  "why": "Changed (new line): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: 1+ ⇒ With 1+ Pact points: re-roll Hit rolls of 1\n3+ ⇒ With 3+ Pact points: re-roll Wound rolls of 1\n5+ ⇒ With 5+ Pact points: melee [LETHAL HITS] and [SUSTAINED HITS 1]\n7+ ⇒ With 7+ Pact points: Critical Hits on 5+",
+  "fix": null
+ },
+ {
+  "key": "c38779c2111d6186",
+  "round": 2,
+  "where": "emperors-children · rule-sumOv · Coterie of the Conceited rule · Pledges to the Dark Prince",
+  "verdict": "ok",
+  "why": "The round-1 fix as given (WARLORD condition, pledge amount). Now: sumOv: Start of each round, if your WARLORD is on the battlefield: pledge how many enemy units will be destroyed this round; if met or beaten, gain that many Pact points, else your WARLORD suffers D3 mortal wounds",
+  "fix": null
+ },
+ {
+  "key": "a5475c42ba5e50c6",
+  "round": 2,
+  "where": "emperors-children · enhancement-sumAtk · Coterie of the Conceited · Pledge of Unholy Fortune",
+  "verdict": "fix",
+  "why": "GW: “Once per turn, just after making a Hit roll, a Wound roll or a saving throw for a model in the bearer’s unit …”. “(instead of a saving throw)” reads as a swap of rolls; the point is the shared once-per-turn use (rule 5).",
+  "fix": {
+   "source": "Coterie of the Conceited · Pledge of Unholy Fortune",
+   "placement": "enhancement-sumAtk",
+   "current": "Once per turn, if the bearer is not Battle-shocked: a Hit roll or a Wound roll for a model in this unit becomes an unmodified 6 (instead of a saving throw)",
+   "corrected": "Once per turn (one use, shared with saving throws), if the bearer is not Battle-shocked: a Hit roll or a Wound roll for a model in this unit becomes an unmodified 6"
+  }
+ },
+ {
+  "key": "a4898351542a53a2",
+  "round": 2,
+  "where": "emperors-children · enhancement-sumDef · Coterie of the Conceited · Pledge of Unholy Fortune",
+  "verdict": "fix",
+  "why": "Same as the attack line.",
+  "fix": {
+   "source": "Coterie of the Conceited · Pledge of Unholy Fortune",
+   "placement": "enhancement-sumDef",
+   "current": "Once per turn, if the bearer is not Battle-shocked: a saving throw for a model in this unit becomes an unmodified 6 (instead of a Hit roll or a Wound roll)",
+   "corrected": "Once per turn (one use, shared with Hit and Wound rolls), if the bearer is not Battle-shocked: a saving throw for a model in this unit becomes an unmodified 6"
+  }
+ },
+ {
+  "key": "496ccf47349aa38c",
+  "round": 2,
+  "where": "chaos-knights · ability-sumAtk · infernal-lance · Chaos Cerastus Knight Atrapos · Macro-extinction Protocols",
+  "verdict": "ok",
+  "why": "Changed (was: +1 to Hit rolls vs MONSTER or VEHICLE; also +1 to Wound rolls if TITANIC or TOWERING): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: vs MONSTER or VEHICLE: +1 to Hit rolls; also +1 to Wound rolls if TITANIC or TOWERING",
+  "fix": null
+ },
+ {
+  "key": "97645c668712aa8d",
+  "round": 2,
+  "where": "chaos-knights · ability-sumDef · woof-woof · War Dog Karnivore · *Invulnerable Save",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: 5+ invulnerable save vs ranged attacks",
+  "fix": null
+ },
+ {
+  "key": "c68ec5025db754cc",
+  "round": 2,
+  "where": "chaos-knights · ability-sumAtk · infernal-lance · Knight Despoiler · Seething Hatred",
+  "verdict": "ok",
+  "why": "Changed (was: When this unit shoots or fights: re-roll one Hit or Wound roll): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: When this model shoots or fights: re-roll one Hit roll or one Wound roll",
+  "fix": null
+ },
+ {
+  "key": "8541aa14a28f68a2",
+  "round": 2,
+  "where": "chaos-knights · ability-sumAtk · infernal-lance · Knight Ruinator · Methodical Destruction",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit",
+  "fix": null
+ },
+ {
+  "key": "961f1e56663e1807",
+  "round": 2,
+  "where": "chaos-knights · ability-sumOv · infernal-lance · Knight Ruinator · Methodical Destruction",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumOv: Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit",
+  "fix": null
+ },
+ {
+  "key": "3e4757b00574227d",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumDef · infernal-lance · Nurglings · Mischief Makers",
+  "verdict": "ok",
+  "why": "Changed (was: Enemies (not TITANIC) in Engagement Range of this unit: −1 to Hit rolls in melee): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumDef: Enemies (not TITANIC) in Engagement Range of the Nurglings: −1 to Hit rolls in melee",
+  "fix": null
+ },
+ {
+  "key": "9e8265ffa6cd27f3",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumFoe · infernal-lance · Nurglings · Mischief Makers",
+  "verdict": "ok",
+  "why": "Changed (was: Enemy units (not TITANIC) in Engagement Range of this unit: −1 to Hit rolls in melee): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumFoe: Enemy units (not TITANIC) in Engagement Range of the Nurglings: −1 to Hit rolls in melee",
+  "fix": null
+ },
+ {
+  "key": "ea8a7f0a438afee7",
+  "round": 2,
+  "where": "chaos-knights · rule-sumAtk · chaos-knights army rule · Harbingers of Dread",
+  "verdict": "ok",
+  "why": "Changed (new line): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Doom ⇒ If Doom is active: +1 to Wound rolls vs Battle-shocked targets",
+  "fix": null
+ },
+ {
+  "key": "c177abc9d95f74d9",
+  "round": 2,
+  "where": "chaos-knights · rule-sumDef · chaos-knights army rule · Harbingers of Dread",
+  "verdict": "ok",
+  "why": "Changed (new line): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumDef: Darkness ⇒ If Darkness is active: Stealth",
+  "fix": null
+ },
+ {
+  "key": "5ec3a0057440db40",
+  "round": 2,
+  "where": "chaos-knights · rule-sumOv · chaos-knights army rule · Harbingers of Dread",
+  "verdict": "ok",
+  "why": "Changed (new line): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumOv: Deathly Terror from the start; pick one more Dread ability (or roll two) at the start of rounds 1, 3 and 5: Despair; Doom; Darkness; Dismay; Delirium; Dominion",
+  "fix": null
+ },
+ {
+  "key": "bd85577cced0cd78",
+  "round": 2,
+  "where": "chaos-knights · rule-sumFoe · chaos-knights army rule · Harbingers of Dread",
+  "verdict": "ok",
+  "why": "Changed (new line): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumFoe: Deathly Terror: enemies within 9\": −1 Ld (−1 more if Despair is active)",
+  "fix": null
+ },
+ {
+  "key": "b5a13dd16f907ea2",
+  "round": 2,
+  "where": "chaos-knights · rule-sumAtk · Infernal Lance rule · Malefic Surge",
+  "verdict": "ok",
+  "why": "Changed (was: Diabolic Power ⇒ If Empowered, Diabolic Power: [LETHAL HITS] or [SUSTAINED HITS 1] when this unit shoots or fights): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Diabolic Power ⇒ If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1]",
+  "fix": null
+ },
+ {
+  "key": "027ac392a8f47ec4",
+  "round": 2,
+  "where": "chaos-knights · rule-sumDef · Infernal Lance rule · Malefic Surge",
+  "verdict": "ok",
+  "why": "Changed (was: Unnatural Fortitude ⇒ If Empowered, Unnatural Fortitude: 5+ invulnerable save or Feel No Pain 6+ when targeted): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumDef: Unnatural Fortitude ⇒ If Empowered, Unnatural Fortitude: pick one when this unit is targeted: 5+ invulnerable save or Feel No Pain 6+",
+  "fix": null
+ },
+ {
+  "key": "12d1133dee6a4152",
+  "round": 2,
+  "where": "chaos-knights · rule-sumSt · Infernal Lance rule · Malefic Surge",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumSt: If Empowered, Unholy Hunger: +3\" Move",
+  "fix": null
+ },
+ {
+  "key": "9b6449bce08a79ea",
+  "round": 2,
+  "where": "chaos-knights · enhancement-sumAtk · Infernal Lance · Knight Diabolus",
+  "verdict": "ok",
+  "why": "Changed (was: WS improved by 1 in melee; melee gains [LANCE] while using Diabolic Power): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: +1 WS in melee; while using Diabolic Power: melee weapons gain [LANCE]",
+  "fix": null
+ },
+ {
+  "key": "4585c3e84860393f",
+  "round": 2,
+  "where": "chaos-knights · enhancement-sumDef · Infernal Lance · Fleshmetal Fusion",
+  "verdict": "ok",
+  "why": "Changed (was: +1 T; while using Unnatural Fortitude, +1 to armour saves vs Damage 1 attacks): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumDef: +1 T; while using Unnatural Fortitude, vs Damage 1 attacks: +1 to armour saves",
+  "fix": null
+ },
+ {
+  "key": "b0afcb98fc48e4ae",
+  "round": 2,
+  "where": "chaos-knights · enhancement-sumSt · Infernal Lance · Bestial Aspect",
+  "verdict": "ok",
+  "why": "Changed (was: Ignore modifiers to Move and Advance rolls while using Unholy Hunger): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumSt: While using Unholy Hunger: ignore modifiers to Move and Advance rolls",
+  "fix": null
+ },
+ {
+  "key": "1f61c8db90bb2093",
+  "round": 2,
+  "where": "chaos-knights · ability-sumAtk · woof-woof · War Dog Brigand · Brigand",
+  "verdict": "ok",
+  "why": "Changed (was: Ranged attacks gain [IGNORES COVER] vs targets on an objective): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Ranged attacks vs a target on an objective: [IGNORES COVER]",
+  "fix": null
+ },
+ {
+  "key": "8a7f8a6d58935224",
+  "round": 2,
+  "where": "chaos-knights · ability-sumAtk · woof-woof · War Dog Executioner · Executioner",
+  "verdict": "ok",
+  "why": "Changed (was: +1 to Hit rolls vs Below Half-strength): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: vs Below Half-strength targets: +1 to Hit rolls",
+  "fix": null
+ },
+ {
+  "key": "12bf71c675c317f8",
+  "round": 2,
+  "where": "chaos-knights · rule-sumAtk · Houndpack Lance rule · Marked Prey",
+  "verdict": "ok",
+  "why": "Changed (was: Picked each Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if visible): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker",
+  "fix": null
+ },
+ {
+  "key": "d31cfb792ddf9772",
+  "round": 2,
+  "where": "chaos-knights · strat-gist · Houndpack Lance · Hungry for Combat",
+  "verdict": "ok",
+  "why": "Changed (was: 2+ WAR DOG units engaged with one enemy: only target that unit, hits crit on 5+): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+",
+  "fix": null
+ },
+ {
+  "key": "495e9100c5f3d937",
+  "round": 2,
+  "where": "chaos-knights · strat-gist · Houndpack Lance · Animalistic Rage",
+  "verdict": "fix",
+  "why": "Rule 47: keep GW's “not been selected to attack” as written (GW: “a WAR DOG unit from your army that has not been selected to attack this phase is destroyed”). “has not attacked” is a looser condition.",
+  "fix": {
+   "source": "Houndpack Lance · Animalistic Rage",
+   "placement": "strat-gist",
+   "current": "when a WAR DOG that has not attacked this phase is destroyed: that unit shoots or fights the enemy unit that destroyed it, then Deadly Demise",
+   "corrected": "when a WAR DOG that has not been selected to attack this phase is destroyed: that unit shoots or fights the enemy unit that destroyed it, then Deadly Demise"
+  }
+ },
+ {
+  "key": "bb83d8c76b703c06",
+  "round": 2,
+  "where": "chaos-knights · enhancement-sumAtk · Houndpack Lance · Final Howl (Aura)",
+  "verdict": "ok",
+  "why": "Changed (was: War Dog models within 6\" of the bearer re-roll Wound rolls of 1): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: WAR DOG models within 6\" of the bearer: re-roll Wound rolls of 1",
+  "fix": null
+ },
+ {
+  "key": "8d0a121e1c3ebfba",
+  "round": 2,
+  "where": "chaos-knights · enhancement-sumDef · Houndpack Lance · Panoply of the Cursed Knights",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: attacks against the bearer get −1 AP",
+  "fix": null
+ },
+ {
+  "key": "a9af724667b9be92",
+  "round": 2,
+  "where": "chaos-knights · strat-gist · Hunting Warpack · Stalking Focus",
+  "verdict": "ok",
+  "why": "Changed (was: A WAR DOG on an objective is shot: −1 AP vs those ranged attacks): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: when a WAR DOG on an objective is shot: ranged attacks against this unit get −1 AP",
+  "fix": null
+ },
+ {
+  "key": "99d7dfc7585aa939",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · big-demons-baby · Skarbrand · Rage Embodied",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: BLOOD LEGIONS within 6\" of Skarbrand: +1 A in melee",
+  "fix": null
+ },
+ {
+  "key": "a7707fb0ad02af35",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · big-demons-baby · Bloodthirster · Daemon Lord of Khorne",
+  "verdict": "ok",
+  "why": "Changed (was: +1 to Hit rolls in melee within 6\" of Bloodthirster): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Within 6\" of Bloodthirster: +1 to Hit rolls in melee",
+  "fix": null
+ },
+ {
+  "key": "e1ff926f2838da66",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · big-demons-baby · Master of Executions · A Worthy Skull",
+  "verdict": "ok",
+  "why": "Changed (was: Re-roll Hit and Wound rolls in melee vs CHARACTER): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: vs CHARACTER: re-roll Hit rolls and Wound rolls in melee",
+  "fix": null
+ },
+ {
+  "key": "537b2bb94ee992d6",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumDef · big-demons-baby · Flesh Hounds · Collar of Khorne",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Feel No Pain 3+ vs Psychic Attacks",
+  "fix": null
+ },
+ {
+  "key": "607dbc4590c964b6",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumAtk · dread-host · Trajann Valoris · Captain-General",
+  "verdict": "ok",
+  "why": "Changed (was: re-roll Hit rolls of 1 and Wound rolls of 1 within 6\" of Trajann Valoris (not MONSTER/VEHICLE)): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Within 6\" of Trajann Valoris, if not MONSTER/VEHICLE: re-roll Hit rolls of 1 and Wound rolls of 1",
+  "fix": null
+ },
+ {
+  "key": "bd89f408edb6f40b",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumAtk · dread-host · Trajann Valoris · Moment Shackle",
+  "verdict": "ok",
+  "why": "Unchanged text. On screen it is now prefixed “Watcher’s Axe:” (the round-1 program note is resolved). Now: sumAtk: once per battle, if used: +3 A",
+  "fix": null
+ },
+ {
+  "key": "64b371ad81f64cd1",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumDef · dread-host · Trajann Valoris · Moment Shackle",
+  "verdict": "ok",
+  "why": "Unchanged text. On screen it is now marked “Trajann Valoris only:” (the round-1 program note is resolved). Now: sumDef: once per battle, if used: 3+ invulnerable save",
+  "fix": null
+ },
+ {
+  "key": "6051b6e14b0e5693",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumOv · dread-host · Trajann Valoris · Moment Shackle",
+  "verdict": "fix",
+  "why": "The datasheet heading (waha ds Trajann Valoris) says “Moment Shackle (Once per battle, per army)”, and the sumAtk/sumDef lines say “once per battle”, but the new Overview line drops the limit (rules 5, 38). It also keeps “until the end of the phase” (rule 6). On screen: “… AI (Moment Shackle) · Trajann Valoris per army”.",
+  "fix": {
+   "source": "dread-host · Trajann Valoris · Moment Shackle",
+   "placement": "ability-sumOv",
+   "current": "At the start of any phase, if used: pick one until the end of the phase: +3 A with the Watcher’s Axe, or a 3+ invulnerable save",
+   "corrected": "Once per battle, at the start of any phase, if used: pick one: +3 A with the Watcher’s Axe, or a 3+ invulnerable save"
+  }
+ },
+ {
+  "key": "cd8d9fa5eb0b7ecd",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumAtk · dread-host · Allarus Custodians · Slayer of Tyrants",
+  "verdict": "ok",
+  "why": "Changed (was: +1 to Wound rolls in melee vs targets with a higher T): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: In melee vs a target with higher T than this unit: +1 to Wound rolls",
+  "fix": null
+ },
+ {
+  "key": "d382474c7543ea0e",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumAtk · dread-host · Caladius Annihilator Grav-tank · Advanced Firepower",
+  "verdict": "ok",
+  "why": "Changed (was: Shooting MONSTER/VEHICLE: re-roll one Hit, one Wound and one Damage roll): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Ranged attacks vs MONSTER/VEHICLE: re-roll one Hit roll, one Wound roll and one Damage roll",
+  "fix": null
+ },
+ {
+  "key": "cf26cba41b663245",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumDef · lite-knights · Contemptor-Galatus Dreadnought · Unyielding Ancient",
+  "verdict": "fix",
+  "why": "Rule 44, for consistency: the sweep reordered the same GW sentence in the gists (Incorporeal Entities, Undying Hatred: “vs attacks with S greater than this unit’s T: −1 to Wound rolls”) but left this sumDef effect-first.",
+  "fix": {
+   "source": "lite-knights · Contemptor-Galatus Dreadnought · Unyielding Ancient",
+   "placement": "ability-sumDef",
+   "current": "−1 to Wound rolls vs attacks with S greater than this unit’s T",
+   "corrected": "vs attacks with S greater than this unit’s T: −1 to Wound rolls"
+  }
+ },
+ {
+  "key": "4394dc153ee9d71a",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumDef · lite-knights · Telemon Heavy Dreadnought · Guardian Eternal",
+  "verdict": "fix",
+  "why": "GW: “Ranged attacks that target this unit have -1 D.” Match the approved form (“−1 Damage to attacks on this unit”) and Praesidium Shield's new “−1 Damage to attacks allocated to this model”. “vs” wrongly makes the attacks the target of the −1.",
+  "fix": {
+   "source": "lite-knights · Telemon Heavy Dreadnought · Guardian Eternal",
+   "placement": "ability-sumDef",
+   "current": "−1 D vs ranged attacks on this unit",
+   "corrected": "−1 Damage to ranged attacks on this unit"
+  }
+ },
+ {
+  "key": "0d02f568e0267b42",
+  "round": 2,
+  "where": "adeptus-custodes · rule-sumAtk · adeptus-custodes army rule · Martial Ka’tah",
+  "verdict": "ok",
+  "why": "Ka’tah options rewritten to rule 44 (condition after the option name). Numbers and conditions are GW's; on screen under the melee block. Now: sumAtk: Salvus ⇒ If readied, Salvus, when shooting: ignore modifiers to BS, Hit rolls and Wound rolls\nDacatarai ⇒ If readied, Dacatarai, not vs MONSTER/VEHICLE: re-roll Hit rolls of 1\nRendax ⇒ If readied, Rendax, vs MONSTER/VEHICLE: [LETHAL HITS]",
+  "fix": null
+ },
+ {
+  "key": "719ad3bd15b6da28",
+  "round": 2,
+  "where": "adeptus-custodes · rule-sumDef · adeptus-custodes army rule · Martial Ka’tah",
+  "verdict": "ok",
+  "why": "Changed (new line): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumDef: Kaptaris ⇒ If readied, Kaptaris: −1 to Hit rolls vs melee attacks on this unit",
+  "fix": null
+ },
+ {
+  "key": "c9130088b9e36f23",
+  "round": 2,
+  "where": "adeptus-custodes · rule-sumDef · adeptus-custodes army rule · Aegis of the Emperor",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Feel No Pain 5+ vs mortal wounds",
+  "fix": null
+ },
+ {
+  "key": "e98180e029b98d43",
+  "round": 2,
+  "where": "adeptus-custodes · rule-sumOv · adeptus-custodes army rule · Aquila Commander",
+  "verdict": "ok",
+  "why": "Changed (was: Start of each round: +1CP if a model with this ability is your WARLORD): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumOv: Start of each round, if a model with this ability is your WARLORD: +1CP",
+  "fix": null
+ },
+ {
+  "key": "fc76304f66f62b60",
+  "round": 2,
+  "where": "adeptus-custodes · rule-sumDef · adeptus-custodes army rule · Daughters of the Abyss",
+  "verdict": "ok",
+  "why": "Changed (was: ANATHEMA PSYKANA: Feel No Pain 3+ vs psychic attacks\nPsychic Null (Aura) ⇒ ADEPTUS CUSTODES within 6\" of an ANATHEMA PSYKANA unit: Feel No Pain 5+ vs psychic attacks): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumDef: ANATHEMA PSYKANA: Feel No Pain 3+ vs Psychic Attacks\nPsychic Null (Aura) ⇒ ADEPTUS CUSTODES within 6\" of an ANATHEMA PSYKANA unit: Feel No Pain 5+ vs Psychic Attacks",
+  "fix": null
+ },
+ {
+  "key": "068ea61c7d34b0ef",
+  "round": 2,
+  "where": "adeptus-custodes · rule-sumAtk · Emperor’s Chosen rule · Magna Imperator",
+  "verdict": "ok",
+  "why": "Changed (was: When this unit attacks: re-roll one Hit roll and one Wound roll; Rendax also D6 vs an engaged MONSTER/VEHICLE: 1-2 1 mortal wound, 3-5 D3, 6 3): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: When this unit attacks: re-roll one Hit roll and one Wound roll; if it uses Rendax, also pick one engaged enemy MONSTER/VEHICLE and roll one D6: 1–2 1 mortal wound, 3–5 D3 mortal wounds, 6 3 mortal wounds",
+  "fix": null
+ },
+ {
+  "key": "7afb9b9132cbd0e1",
+  "round": 2,
+  "where": "adeptus-custodes · rule-sumDef · Grav-Assault Force rule · Flare Shields",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: GRAV-ASSAULT: 4+ invulnerable save vs ranged attacks",
+  "fix": null
+ },
+ {
+  "key": "e6b4475c9b4d60b5",
+  "round": 2,
+  "where": "adeptus-custodes · strat-gist · Grav-Assault Force · Victory Before Death",
+  "verdict": "ok",
+  "why": "Changed (was: A GRAV-ASSAULT unit dies on an objective that unit controlled with no enemies on it: that objective is secured): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: when a GRAV-ASSAULT unit is destroyed on an objective: one objective it controlled with no enemy units (not AIRCRAFT) in range is secured",
+  "fix": null
+ },
+ {
+  "key": "dd3cec3f879dfbb5",
+  "round": 2,
+  "where": "adeptus-custodes · rule-sumAtk · Might of the Moritoi rule · Moritoi Ancients",
+  "verdict": "ok",
+  "why": "Changed (was: DREADNOUGHT below starting strength: re-roll Hit rolls of 1; below half-strength, Wound rolls of 1 too): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: DREADNOUGHT below Starting Strength: re-roll Hit rolls of 1; if Below Half-strength, re-roll Wound rolls of 1 too",
+  "fix": null
+ },
+ {
+  "key": "c3be2a7e55674172",
+  "round": 2,
+  "where": "adeptus-custodes · rule-sumSt · Might of the Moritoi rule · Moritoi Ancients",
+  "verdict": "ok",
+  "why": "Changed (was: DREADNOUGHT at starting strength: +2 OC): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumSt: DREADNOUGHT at Starting Strength: +2 OC",
+  "fix": null
+ },
+ {
+  "key": "7d0c91ed85aee21f",
+  "round": 2,
+  "where": "adeptus-custodes · strat-gist · Might of the Moritoi · Honoured Interred",
+  "verdict": "ok",
+  "why": "Changed (was: A DREADNOUGHT gains an aura: friendly ADEPTUS CUSTODES within 6\" re-roll Hit rolls of 1): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: a DREADNOUGHT gains an aura: friendly ADEPTUS CUSTODES within 6\" re-roll Hit rolls of 1",
+  "fix": null
+ },
+ {
+  "key": "e838aeeefa1d69f0",
+  "round": 2,
+  "where": "adeptus-custodes · strat-gist · Might of the Moritoi · Unstoppable Momentum",
+  "verdict": "ok",
+  "why": "Changed (was: A DREADNOUGHT selected to move or charge has MOBILE): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: a DREADNOUGHT selected to move or charge has MOBILE",
+  "fix": null
+ },
+ {
+  "key": "cee7fe6a7c409657",
+  "round": 2,
+  "where": "adeptus-custodes · enhancement-sumDef · Might of the Moritoi · Augury Uplink",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Feel No Pain 5+",
+  "fix": null
+ },
+ {
+  "key": "6e4ceddfef360e86",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · the-exiled-legion · Skarbrand · Rage Embodied",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: KHORNE LEGIONES DAEMONICA within 6\" of Skarbrand: +1 A in melee",
+  "fix": null
+ },
+ {
+  "key": "5c3b67953879beb5",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · the-exiled-legion · Karanak · Prey of the Blood God",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: Pick a target at start of round 1 (a new one when it dies): this unit re-rolls Wound rolls vs that unit in melee",
+  "fix": null
+ },
+ {
+  "key": "b4bcb73e06171872",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumOv · the-exiled-legion · Karanak · Prey of the Blood God",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumOv: Pick a target at start of round 1 (a new one when it dies): this unit re-rolls Wound rolls vs that unit in melee",
+  "fix": null
+ },
+ {
+  "key": "c23143907594d1c5",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumDef · the-exiled-legion · Karanak · Brass Collar of Bloody Vengeance",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Feel No Pain 3+ vs Psychic Attacks and mortal wounds",
+  "fix": null
+ },
+ {
+  "key": "adb23442ff96893c",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumDef · the-exiled-legion · Karanak · Collar of Khorne",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Feel No Pain 3+ vs Psychic Attacks",
+  "fix": null
+ },
+ {
+  "key": "540904f5c071e8c9",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · the-exiled-legion · Skulltaker · Skulls for Khorne",
+  "verdict": "ok",
+  "why": "Changed (was: Re-roll Hit and Wound rolls vs CHARACTER): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: vs CHARACTER: re-roll Hit rolls and Wound rolls",
+  "fix": null
+ },
+ {
+  "key": "d9585ad3001d8942",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · the-exiled-legion · Bloodthirster · Daemon Lord of Khorne",
+  "verdict": "ok",
+  "why": "Changed (was: +1 to Hit rolls in melee within 6\" of Bloodthirster): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Within 6\" of Bloodthirster: +1 to Hit rolls in melee",
+  "fix": null
+ },
+ {
+  "key": "7fe8f00bb51cddd3",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumDef · the-exiled-legion · Daemon Prince of Chaos · Daemonic Lord",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Within 3\" of a LEGIONES DAEMONICA INFANTRY unit: Lone Operative",
+  "fix": null
+ },
+ {
+  "key": "9bd62b289562b6b8",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumDef · the-exiled-legion · Daemon Prince of Chaos · Prince of Darkness",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: LEGIONES DAEMONICA within 6\" of the Daemon Prince of Chaos: Stealth",
+  "fix": null
+ },
+ {
+  "key": "46e89e4baa608031",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumDef · the-exiled-legion · Daemon Prince of Chaos · Unholy Vigour",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: once per battle, if used: 3+ invulnerable save",
+  "fix": null
+ },
+ {
+  "key": "2df0a6828438bacd",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumOv · the-exiled-legion · Daemon Prince of Chaos · Unholy Vigour",
+  "verdict": "fix",
+  "why": "Rule 6: drop “until the end of the phase”. The other new Overview lines (Malefic Destruction, Euphoric Strikes) already leave it out. Small fix, for consistency.",
+  "fix": {
+   "source": "the-exiled-legion · Daemon Prince of Chaos · Unholy Vigour",
+   "placement": "ability-sumOv",
+   "current": "Once per battle, at the start of any phase, if used: this model has a 3+ invulnerable save until the end of the phase",
+   "corrected": "Once per battle, at the start of any phase, if used: this model has a 3+ invulnerable save"
+  }
+ },
+ {
+  "key": "2e402e7646924cf2",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · the-exiled-legion · Rendmaster on Blood Throne · Blood Throne",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: Pick a visible enemy within 18\" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit",
+  "fix": null
+ },
+ {
+  "key": "b41166d395d52de9",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · the-exiled-legion · Rendmaster on Blood Throne · Champion Slayer",
+  "verdict": "fix",
+  "why": "Rule 46/27: “it” → “this model” (GW: “Each time this model destroys … this model regains up to D6 lost wounds”). “regains” also had no subject.",
+  "fix": {
+   "source": "the-exiled-legion · Rendmaster on Blood Throne · Champion Slayer",
+   "placement": "ability-sumAtk",
+   "current": "vs CHARACTER or MONSTER: re-roll Wound rolls in melee; each such enemy unit it destroys: regains up to D6 lost wounds",
+   "corrected": "vs CHARACTER or MONSTER: re-roll Wound rolls in melee; each such enemy unit this model destroys: this model regains up to D6 lost wounds"
+  }
+ },
+ {
+  "key": "eadcd7773c3c828c",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · the-exiled-legion · Bloodmaster · Bloodmaster",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: While leading: +1 to Wound rolls",
+  "fix": null
+ },
+ {
+  "key": "f09dbd0cdc1d32d8",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · the-exiled-legion · Skullmaster · Skullmaster’s Fury",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: While leading, if the led unit charged this turn: Juggernaut’s bladed horns gain [DEVASTATING WOUNDS]",
+  "fix": null
+ },
+ {
+  "key": "d3c1e332d991b28d",
+  "round": 2,
+  "where": "chaos-daemons · strat-gist · Blood Legion · Wrath Undeniable",
+  "verdict": "fix",
+  "why": "In “a model destroyed by a melee attack that has not fought this phase”, the “that has not fought” attaches to the attack, not the model. GW: “each time a model in your unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+ … it can fight after the attacking unit has finished making its attacks, and is then removed”. The fix also puts back “after the attacking unit” (rule 7).",
+  "fix": {
+   "source": "Blood Legion · Wrath Undeniable",
+   "placement": "strat-gist",
+   "current": "when targeted: a model destroyed by a melee attack that has not fought this phase fights on a 4+, then is removed",
+   "corrected": "when targeted: each model destroyed by a melee attack, if it has not fought this phase, fights on a 4+ after the attacking unit, then is removed"
+  }
+ },
+ {
+  "key": "14af1671845ee160",
+  "round": 2,
+  "where": "chaos-daemons · enhancement-sumAtk · Blood Legion · Slaughterthirst (Aura)",
+  "verdict": "ok",
+  "why": "Rule 45 (“the bearer” for an enhancement) plus rule 44. Reads correctly after “Granted by: Daemon Prince of Chaos (enhancement) -”. Now: sumAtk: Within 6\" of the bearer: [LANCE]",
+  "fix": null
+ },
+ {
+  "key": "6d966f07137e615e",
+  "round": 2,
+  "where": "chaos-daemons · strat-gist · Warptide · Incorporeal Entities",
+  "verdict": "ok",
+  "why": "Changed (was: when LEGIONES DAEMONICA BATTLELINE is shot: −1 to Wound rolls vs ranged attacks with S greater than this unit’s T): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: when LEGIONES DAEMONICA BATTLELINE is shot, vs ranged attacks with S greater than this unit’s T: −1 to Wound rolls",
+  "fix": null
+ },
+ {
+  "key": "f2f36b4a1d5f8d2f",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · fellhammer-siege-task-force · Vashtorr the Arkifane · Unholy Mechanisms",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: DAEMON VEHICLE within 6\" of Vashtorr the Arkifane: +2 S",
+  "fix": null
+ },
+ {
+  "key": "7ef4ba0b0f870be3",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumDef · fellhammer-siege-task-force · Vashtorr the Arkifane · Reorder Reality",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Enemies within 18\" targeting this model: −1 to Hit rolls; their ranged weapons gain [HAZARDOUS]",
+  "fix": null
+ },
+ {
+  "key": "900d19f5b779c585",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumDef · fellhammer-siege-task-force · Vashtorr the Arkifane · Indentured Daemon Engines",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Within 3\" of a DAEMON VEHICLE unit: Lone Operative",
+  "fix": null
+ },
+ {
+  "key": "50e2d72eb571ce58",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · fellhammer-siege-task-force · Lord Discordant on Helstalker · Spirit Thief",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit",
+  "fix": null
+ },
+ {
+  "key": "3bf315f48a8aca87",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumDef · fellhammer-siege-task-force · Warpsmith · Warpsmith",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Within 3\" of a HERETIC ASTARTES VEHICLE unit: Lone Operative",
+  "fix": null
+ },
+ {
+  "key": "befaab27a7b2dbd8",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · fellhammer-siege-task-force · Warpsmith · Master of Mechanisms",
+  "verdict": "ok",
+  "why": "Changed (was: Command phase: a HERETIC ASTARTES VEHICLE within 3\" of the Warpsmith heals D3 and has +1 to Hit rolls): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Command phase: a HERETIC ASTARTES VEHICLE within 3\" of the Warpsmith gets +1 to Hit rolls",
+  "fix": null
+ },
+ {
+  "key": "ab5022d8eb418a4d",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · fellhammer-siege-task-force · Dark Apostle · Dark Zealotry",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: While leading: +1 to Wound rolls in melee",
+  "fix": null
+ },
+ {
+  "key": "5da07fcc5aac8fc2",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumOv · fellhammer-siege-task-force · Dark Apostle · Demagogue",
+  "verdict": "ok",
+  "why": "New Overview line: GW's once per battle, Battle-shocked state and 12\" of the DARK APOSTLE all kept. Now: sumOv: Once per battle, at the start of any phase: one Battle-shocked friendly HERETIC ASTARTES unit within 12\" of the DARK APOSTLE is no longer Battle-shocked",
+  "fix": null
+ },
+ {
+  "key": "cc4e9a26cf5323f4",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · fellhammer-siege-task-force · Dark Apostle · Warp-sighted Butcher",
+  "verdict": "ok",
+  "why": "Changed (was: While leading: re-roll Hit rolls in melee vs targets below Starting Strength; also Wound rolls if Below Half-strength): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: While leading, vs targets below Starting Strength: re-roll Hit rolls in melee; also re-roll Wound rolls if Below Half-strength",
+  "fix": null
+ },
+ {
+  "key": "9efacf5c654bfc70",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · fellhammer-siege-task-force · Dark Apostle · Visions of Suffering",
+  "verdict": "ok",
+  "why": "Changed (was: +1 to Hit rolls vs targets below Starting Strength; also +1 to Wound rolls if Below Half-strength): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: vs targets below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength",
+  "fix": null
+ },
+ {
+  "key": "686430a3871da53e",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · fellhammer-siege-task-force · Havocs · Stabilisation Talons",
+  "verdict": "ok",
+  "why": "Changed (was: Ignore modifiers to BS and Hit rolls shooting): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Ranged attacks: ignore modifiers to BS and Hit rolls",
+  "fix": null
+ },
+ {
+  "key": "d81423085276e363",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · fellhammer-siege-task-force · Obliterators · Warp Rift Firepower",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: once per battle, if used: ranged attacks gain [INDIRECT FIRE]",
+  "fix": null
+ },
+ {
+  "key": "424df9aab2438fb1",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumOv · fellhammer-siege-task-force · Obliterators · Warp Rift Firepower",
+  "verdict": "fix",
+  "why": "GW's datasheet heading and the CSM Faction Pack errata both say “Warp Rift Firepower (Once per battle, per unit)”. The sumAtk line has “once per battle” but the new Overview line drops it (rules 5, 38).",
+  "fix": {
+   "source": "fellhammer-siege-task-force · Obliterators · Warp Rift Firepower",
+   "placement": "ability-sumOv",
+   "current": "In your Shooting phase, when this unit is selected to shoot, if used: ranged attacks gain [INDIRECT FIRE]",
+   "corrected": "Once per battle, in your Shooting phase, when this unit is selected to shoot, if used: ranged attacks gain [INDIRECT FIRE]"
+  }
+ },
+ {
+  "key": "8834abc10618d075",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · fellhammer-siege-task-force · Chaos Predator Annihilator · Annihilator",
+  "verdict": "ok",
+  "why": "Changed (was: Re-roll Damage rolls shooting MONSTER or VEHICLE models): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Ranged attacks allocated to a MONSTER or VEHICLE model: re-roll the Damage roll",
+  "fix": null
+ },
+ {
+  "key": "d9b53f6bed22c388",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · fellhammer-siege-task-force · Chaos Predator Destructor · Destructor",
+  "verdict": "ok",
+  "why": "Changed (was: +1 AP shooting INFANTRY): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Ranged attacks vs INFANTRY: +1 AP",
+  "fix": null
+ },
+ {
+  "key": "534ba1aa3336b1d7",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · fellhammer-siege-task-force · Chaos Vindicator · Siege Shield",
+  "verdict": "ok",
+  "why": "Changed (was: Demolisher cannon can shoot enemies in Engagement Range; no Engagement Range penalty to Hit rolls): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Demolisher cannon can target enemies within Engagement Range of this model, if no other friendly unit is within Engagement Range of them; ranged attacks ignore the Hit roll penalty for being within Engagement Range",
+  "fix": null
+ },
+ {
+  "key": "89b8e811c058ead1",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumAtk · fellhammer-siege-task-force · Forgefiend · Daemonic Ordnance",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: When this unit shoots, if it uses this ability: ranged weapons gain [DEVASTATING WOUNDS] and [HAZARDOUS]",
+  "fix": null
+ },
+ {
+  "key": "43cef83bf017402b",
+  "round": 2,
+  "where": "chaos-space-marines · ability-sumSt · fellhammer-siege-task-force · Maulerfiend · Siege Crawler",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumSt: Ignore modifiers to this model’s Move, Advance and Charge rolls",
+  "fix": null
+ },
+ {
+  "key": "034bab7d3aab6732",
+  "round": 2,
+  "where": "chaos-space-marines · rule-sumAtk · chaos-space-marines army rule · Dark Pacts",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1]",
+  "fix": null
+ },
+ {
+  "key": "6009c8a36313da95",
+  "round": 2,
+  "where": "chaos-space-marines · rule-sumDef · Cult of the Arkifane rule · Soul Forge Boons",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: SOUL FORGE units: 5+ invulnerable save",
+  "fix": null
+ },
+ {
+  "key": "947028a2989b1276",
+  "round": 2,
+  "where": "chaos-space-marines · strat-gist · Cult of the Arkifane · Soul-Tally Offering",
+  "verdict": "ok",
+  "why": "Changed (was: SOUL FORGE: re-roll Wound rolls vs CHARACTER, MONSTER or VEHICLE): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls",
+  "fix": null
+ },
+ {
+  "key": "0e30bf744387e2ea",
+  "round": 2,
+  "where": "chaos-space-marines · strat-gist · Cult of the Arkifane · Biomechanoid Regeneration",
+  "verdict": "ok",
+  "why": "Changed (was: HERETIC ASTARTES (not DAMNED): one model regains D3 wounds (3 if SOUL FORGE)): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: HERETIC ASTARTES (not DAMNED): one model regains up to D3 lost wounds (up to 3 if SOUL FORGE)",
+  "fix": null
+ },
+ {
+  "key": "4737f1e40801da41",
+  "round": 2,
+  "where": "chaos-space-marines · enhancement-sumAtk · Cult of the Arkifane · Mark of the Soul Forges",
+  "verdict": "ok",
+  "why": "The crit wording sweep: “Critical Hits on 5+”. Now: sumAtk: Critical Hits on 5+",
+  "fix": null
+ },
+ {
+  "key": "f0e6b6b9cf812116",
+  "round": 2,
+  "where": "chaos-space-marines · strat-gist · Devotees of Destruction · Snare of Fire",
+  "verdict": "ok",
+  "why": "Changed (was: an enemy ends a move within 8\": unengaged HAVOCS make a Normal move of D3+3\"): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: an enemy ends a move within 8\": unengaged HAVOCS make a Normal move of up to D3+3\"",
+  "fix": null
+ },
+ {
+  "key": "3688e368db6df38f",
+  "round": 2,
+  "where": "chaos-space-marines · strat-gist · Devotees of Destruction · Undying Hatred",
+  "verdict": "ok",
+  "why": "Changed (was: when HAVOCS/OBLITERATORS are shot: −1 to Wound rolls vs attacks with S greater than this unit’s T): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: when HAVOCS/OBLITERATORS are shot, vs attacks with S greater than this unit’s T: −1 to Wound rolls",
+  "fix": null
+ },
+ {
+  "key": "ac9c6a3809c04de7",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumOv · dread-host · Shield-Captain · Vengeful Surge",
+  "verdict": "ok",
+  "why": "New Overview line: GW's trigger and “up to D6+2\"” kept (rule 47). Now: sumOv: In your opponent’s Shooting phase, after an enemy unit’s attacks cost a model of this unit a wound: a surge move of up to D6+2\"",
+  "fix": null
+ },
+ {
+  "key": "6bd09c17225fc038",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumDef · dread-host · Shield-Captain · Praesidium Shield",
+  "verdict": "ok",
+  "why": "On screen: “Granted by: Shield-Captain - Shield-Captain only: −1 Damage to attacks allocated to this model”, as in the approved example. Now: sumDef: −1 Damage to attacks allocated to this model",
+  "fix": null
+ },
+ {
+  "key": "53dee538a68871fc",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumAtk · dread-host · Shield-Captain · Stand Vigil",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: On an objective (this unit or the target), vs non-MONSTER/VEHICLE: [LETHAL HITS]",
+  "fix": null
+ },
+ {
+  "key": "600b60698a4e00bd",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumDef · dread-host · Shield-Captain · Praesidium Shield",
+  "verdict": "fix",
+  "why": "Same as Unyielding Ancient: rule 44 and the swept gists put this condition first.",
+  "fix": {
+   "source": "dread-host · Shield-Captain · Praesidium Shield",
+   "placement": "ability-sumDef",
+   "current": "−1 to Wound rolls vs attacks with S greater than this unit’s T",
+   "corrected": "vs attacks with S greater than this unit’s T: −1 to Wound rolls"
+  }
+ },
+ {
+  "key": "75c76faa149657a6",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumAtk · dread-host · Custodian Guard Sodality · Impenetrable Defence",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: On an objective (this unit or the target), vs non-MONSTER/VEHICLE: [SUSTAINED HITS 1]",
+  "fix": null
+ },
+ {
+  "key": "81dc6e315be4391b",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumDef · dread-host · Custodian Wardens · Living Fortress",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: attacks against this unit get −1 AP",
+  "fix": null
+ },
+ {
+  "key": "d96c474e471b2590",
+  "round": 2,
+  "where": "adeptus-custodes · ability-sumAtk · emperors-chosen · Vertus Praetors · Quicksilver Execution",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: If this unit charged this turn: melee gains [SUSTAINED HITS 1]",
+  "fix": null
+ },
+ {
+  "key": "3288d91c0d4ad3d1",
+  "round": 2,
+  "where": "adeptus-custodes · rule-sumAtk · Honoured Companions rule · Companion’s Watch",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: TRUSTED SENTINEL on an objective: re-roll Wound rolls of 1",
+  "fix": null
+ },
+ {
+  "key": "ca1220f42f02b830",
+  "round": 2,
+  "where": "adeptus-custodes · strat-gist · Honoured Companions · Swift as the Eagle",
+  "verdict": "ok",
+  "why": "Changed (was: an enemy ends a move within 8\": an unengaged TRUSTED SENTINEL makes a Normal move of D3+3\"): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: gist: an enemy ends a move within 8\": an unengaged TRUSTED SENTINEL makes a Normal move of up to D3+3\"",
+  "fix": null
+ },
+ {
+  "key": "5d572dcc8dd42735",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumDef · tzeeeeentch · The Blue Scribes · P’tarix’s Sorcerous Syphon",
+  "verdict": "ok",
+  "why": "Changed (was: Enemies within 12\": −1 to Wound rolls with Psychic Attacks): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumDef: Enemies within 12\" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks",
+  "fix": null
+ },
+ {
+  "key": "e09317572f410627",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumFoe · tzeeeeentch · The Blue Scribes · P’tarix’s Sorcerous Syphon",
+  "verdict": "ok",
+  "why": "Changed (was: Enemies within 12\" of this model: −1 to Wound rolls with Psychic Attacks): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumFoe: Enemies within 12\" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks",
+  "fix": null
+ },
+ {
+  "key": "35f2e00f6aff8ae6",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumDef · tzeeeeentch · The Changeling · Formless Horror",
+  "verdict": "ok",
+  "why": "Changed (was: An enemy unit must pass a Battle-shock test to target this model; if it fails, that unit can’t target this model this phase): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumDef: Each time an enemy unit wants to target this model: that unit takes a Battle-shock test; if it fails, it is Battle-shocked and can’t target this model this phase",
+  "fix": null
+ },
+ {
+  "key": "5984e919dd8739fa",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumDef · tzeeeeentch · The Changeling · Mischief and Confusion",
+  "verdict": "ok",
+  "why": "Changed (was: Start of the opponent’s Shooting, pick a visible enemy within 12\" and roll D6: 2-5 −1 to Hit rolls; 6 that unit can’t shoot): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumDef: At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12\" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot",
+  "fix": null
+ },
+ {
+  "key": "afbb49c9ae9ce263",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · tzeeeeentch · Daemon Prince of Chaos with wings · Malefic Destruction",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: once per battle, if used: +3 A",
+  "fix": null
+ },
+ {
+  "key": "54a54d9df4c0590d",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumOv · tzeeeeentch · Daemon Prince of Chaos with wings · Malefic Destruction",
+  "verdict": "ok",
+  "why": "New Overview line: GW's limit, trigger and numbers kept. Now: sumOv: Once per battle, at the start of the Fight phase, if used: +3 A with this model’s hellforged weapons",
+  "fix": null
+ },
+ {
+  "key": "5f19654bb397f01b",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · tzeeeeentch · Daemon Prince of Chaos with wings · Harbinger of Death",
+  "verdict": "ok",
+  "why": "Changed (was: Pick one when this unit fights: hellforged weapons gain [LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1]): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Pick one when this model fights: hellforged weapons gain [LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1]",
+  "fix": null
+ },
+ {
+  "key": "856475a33e91ae45",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · tzeeeeentch · Lord of Change · Daemon Lord of Tzeentch",
+  "verdict": "ok",
+  "why": "Changed (was: +1 S shooting within 6\" of Lord of Change): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: Within 6\" of Lord of Change: +1 S to ranged attacks",
+  "fix": null
+ },
+ {
+  "key": "9110bf5888cf867d",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · tzeeeeentch · Lord of Change · Master of Magicks",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: pick one in your Shooting phase: [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3]",
+  "fix": null
+ },
+ {
+  "key": "55f35b412f63e6b3",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumDef · tzeeeeentch · Fluxmaster · Fluxmaster",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Stealth; −1 to Hit rolls vs melee attacks on this unit",
+  "fix": null
+ },
+ {
+  "key": "d624afb44a77f58f",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumAtk · tzeeeeentch · Fluxmaster · Altered Reality",
+  "verdict": "fix",
+  "why": "GW: “Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result … to an unmodified 6.” “(instead of a saving throw)” reads as if the roll replaces a saving throw. What it means is that the one use per round is shared (rule 5).",
+  "fix": {
+   "source": "tzeeeeentch · Fluxmaster · Altered Reality",
+   "placement": "ability-sumAtk",
+   "current": "Once per round: you can change one Hit roll or one Wound roll for the Fluxmaster to an unmodified 6 (instead of a saving throw)",
+   "corrected": "Once per round (one use, shared with saving throws): you can change one Hit roll or one Wound roll for the Fluxmaster to an unmodified 6"
+  }
+ },
+ {
+  "key": "b9732ef50b86c84b",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumDef · tzeeeeentch · Fluxmaster · Altered Reality",
+  "verdict": "fix",
+  "why": "Same as the attack line: “(instead of a Hit roll or a Wound roll)” reads as a swap of rolls, not a shared limit.",
+  "fix": {
+   "source": "tzeeeeentch · Fluxmaster · Altered Reality",
+   "placement": "ability-sumDef",
+   "current": "Once per round: you can change one saving throw for the Fluxmaster to an unmodified 6 (instead of a Hit roll or a Wound roll)",
+   "corrected": "Once per round (one use, shared with Hit and Wound rolls): you can change one saving throw for the Fluxmaster to an unmodified 6"
+  }
+ },
+ {
+  "key": "d78915b3549d32c7",
+  "round": 2,
+  "where": "chaos-daemons · ability-sumFoe · tzeeeeentch · Blue Horrors · Sullen Malevolence",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumFoe: With a BLUE HORROR: enemies within 6\": −1 Ld",
+  "fix": null
+ },
+ {
+  "key": "1de5659a20c35a3b",
+  "round": 2,
+  "where": "chaos-daemons · rule-sumAtk · Scintillating Legion rule · Fates in Flux",
+  "verdict": "ok",
+  "why": "New attack line: Hit, Wound and Damage rolls are all in GW's list (Advance and Hazardous belong elsewhere). Same frame as the approved save line. Now: sumAtk: Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it)",
+  "fix": null
+ },
+ {
+  "key": "23aa2eefa3ae4124",
+  "round": 2,
+  "where": "chaos-daemons · rule-sumDef · Scintillating Legion rule · Fates in Flux",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: Spend a Flux token to re-roll a saving throw (the opponent gains it)",
+  "fix": null
+ },
+ {
+  "key": "77a2bb9d9cdcf52a",
+  "round": 2,
+  "where": "chaos-daemons · enhancement-sumAtk · Scintillating Legion · Neverblade",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumAtk: +2 S, +1 A, +1 AP and +1 to Hit rolls in melee",
+  "fix": null
+ },
+ {
+  "key": "0e82d84017d93e76",
+  "round": 2,
+  "where": "chaos-daemons · enhancement-sumDef · Scintillating Legion · Improbable Shield (Aura)",
+  "verdict": "ok",
+  "why": "Unchanged since round 1; still right under rules 44–48 and in context in a render of 5d8657e. Now: sumDef: LEGIONES DAEMONICA TZEENTCH within 6\" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds",
+  "fix": null
+ },
+ {
+  "key": "87cf04bc0af7e466",
+  "round": 3,
+  "where": "adeptus-mechanicus · ability-sumAtk · purge-goes-the-foe · Tech-Priest Enginseer · Vengeance for the Omnissiah",
+  "verdict": "ok",
+  "why": "Rule 50: GW's “is destroyed”. Everything else unchanged; on screen there is no weapon prefix, so naming the Omnissian axe is still right. Reads correctly in context in a single-list render of 189dbab. Now: sumAtk: After a friendly ADEPTUS MECHANICUS VEHICLE is destroyed within 12\": Omnissian axe A 6 for the battle",
+  "fix": null
+ },
+ {
+  "key": "ee52237afb85ff1d",
+  "round": 3,
+  "where": "adeptus-mechanicus · rule-sumAtk · adeptus-mechanicus army rule · Doctrina Imperatives",
+  "verdict": "ok",
+  "why": "Text unchanged (was: None means re-keyed or newly listed); still right under rules 44–51. Reads correctly in context in a single-list render of 189dbab. Now: sumAtk: Protector Imperative ⇒ If Protector Imperative is active: [HEAVY] and +1 BS\nConqueror Imperative ⇒ If Conqueror Imperative is active: [ASSAULT] and +1 WS; if BATTLELINE or within 6\" of one: +1 AP",
+  "fix": null
+ },
+ {
+  "key": "fb1fd0463c8580b8",
+  "round": 3,
+  "where": "adeptus-mechanicus · rule-sumDef · adeptus-mechanicus army rule · Doctrina Imperatives",
+  "verdict": "ok",
+  "why": "Text unchanged (was: None means re-keyed or newly listed); still right under rules 44–51. Reads correctly in context in a single-list render of 189dbab. Now: sumDef: Protector Imperative ⇒ If Protector Imperative is active, BATTLELINE or within 6\" of one: −1 to Hit rolls vs melee",
+  "fix": null
+ },
+ {
+  "key": "c5e7d55750092360",
+  "round": 3,
+  "where": "adeptus-mechanicus · rule-sumOv · adeptus-mechanicus army rule · Doctrina Imperatives",
+  "verdict": "ok",
+  "why": "Text unchanged (was: None means re-keyed or newly listed); still right under rules 44–51. Reads correctly in context in a single-list render of 189dbab. Now: sumOv: Pick one at the start of each round: Protector Imperative; Conqueror Imperative",
+  "fix": null
+ },
+ {
+  "key": "4ead85827a06f0f1",
+  "round": 3,
+  "where": "adeptus-mechanicus · strat-gist · Cohort Cybernetica · Auto-divinatory Targeting",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given and checked against GW. Reads correctly in context in a single-list render of 189dbab. Now: gist: ranged weapons BS 3+ and [IGNORES COVER]; they can only target units on the selected objective",
+  "fix": null
+ },
+ {
+  "key": "e90d8ca4c7898a9f",
+  "round": 3,
+  "where": "adeptus-mechanicus · enhancement-sumDef · Cohort Cybernetica · Necromechanic",
+  "verdict": "ok",
+  "why": "Restored to the owner's exact approved text (spot-check: Necromechanic), which overrides my round-2 fix 6. Matches GW: TECH-PRIEST bearer, once per battle round, failed save within 12\", Damage 0. On screen: “Granted by: Tech-Priest Enginseer (enhancement) - Once per round: …”. Reads correctly in context in a single-list render of 189dbab. Now: sumDef: Once per round: after a failed save for a LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\", that attack's Damage becomes 0",
+  "fix": null
+ },
+ {
+  "key": "3acc9b45fca45425",
+  "round": 3,
+  "where": "emperors-children · rule-sumAtk · Coterie of the Conceited rule · Pledges to the Dark Prince",
+  "verdict": "ok",
+  "why": "Text unchanged (was: None means re-keyed or newly listed); still right under rules 44–51. Reads correctly in context in a single-list render of 189dbab. Now: sumAtk: 1+ ⇒ With 1+ Pact points: re-roll Hit rolls of 1\n3+ ⇒ With 3+ Pact points: re-roll Wound rolls of 1\n5+ ⇒ With 5+ Pact points: melee [LETHAL HITS] and [SUSTAINED HITS 1]\n7+ ⇒ With 7+ Pact points: Critical Hits on 5+",
+  "fix": null
+ },
+ {
+  "key": "c38779c2111d6186",
+  "round": 3,
+  "where": "emperors-children · rule-sumOv · Coterie of the Conceited rule · Pledges to the Dark Prince",
+  "verdict": "ok",
+  "why": "Text unchanged (was: None means re-keyed or newly listed); still right under rules 44–51. Reads correctly in context in a single-list render of 189dbab. Now: sumOv: Start of each round, if your WARLORD is on the battlefield: pledge how many enemy units will be destroyed this round; if met or beaten, gain that many Pact points, else your WARLORD suffers D3 mortal wounds",
+  "fix": null
+ },
+ {
+  "key": "31e938789f194120",
+  "round": 3,
+  "where": "emperors-children · enhancement-sumAtk · Coterie of the Conceited · Pledge of Unholy Fortune",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given and checked against GW. Reads correctly in context in a single-list render of 189dbab. Now: sumAtk: Once per turn (one use, shared with saving throws), if the bearer is not Battle-shocked: a Hit roll or a Wound roll for a model in this unit becomes an unmodified 6",
+  "fix": null
+ },
+ {
+  "key": "fecd9cff937f2c6a",
+  "round": 3,
+  "where": "emperors-children · enhancement-sumDef · Coterie of the Conceited · Pledge of Unholy Fortune",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given and checked against GW. Reads correctly in context in a single-list render of 189dbab. Now: sumDef: Once per turn (one use, shared with Hit and Wound rolls), if the bearer is not Battle-shocked: a saving throw for a model in this unit becomes an unmodified 6",
+  "fix": null
+ },
+ {
+  "key": "ea8a7f0a438afee7",
+  "round": 3,
+  "where": "chaos-knights · rule-sumAtk · chaos-knights army rule · Harbingers of Dread",
+  "verdict": "ok",
+  "why": "Text unchanged (was: None means re-keyed or newly listed); still right under rules 44–51. Reads correctly in context in a single-list render of 189dbab. Now: sumAtk: Doom ⇒ If Doom is active: +1 to Wound rolls vs Battle-shocked targets",
+  "fix": null
+ },
+ {
+  "key": "c177abc9d95f74d9",
+  "round": 3,
+  "where": "chaos-knights · rule-sumDef · chaos-knights army rule · Harbingers of Dread",
+  "verdict": "ok",
+  "why": "Text unchanged (was: None means re-keyed or newly listed); still right under rules 44–51. Reads correctly in context in a single-list render of 189dbab. Now: sumDef: Darkness ⇒ If Darkness is active: Stealth",
+  "fix": null
+ },
+ {
+  "key": "5ec3a0057440db40",
+  "round": 3,
+  "where": "chaos-knights · rule-sumOv · chaos-knights army rule · Harbingers of Dread",
+  "verdict": "ok",
+  "why": "Text unchanged (was: None means re-keyed or newly listed); still right under rules 44–51. Reads correctly in context in a single-list render of 189dbab. Now: sumOv: Deathly Terror from the start; pick one more Dread ability (or roll two) at the start of rounds 1, 3 and 5: Despair; Doom; Darkness; Dismay; Delirium; Dominion",
+  "fix": null
+ },
+ {
+  "key": "bd85577cced0cd78",
+  "round": 3,
+  "where": "chaos-knights · rule-sumFoe · chaos-knights army rule · Harbingers of Dread",
+  "verdict": "ok",
+  "why": "Text unchanged (was: None means re-keyed or newly listed); still right under rules 44–51. Reads correctly in context in a single-list render of 189dbab. Now: sumFoe: Deathly Terror: enemies within 9\": −1 Ld (−1 more if Despair is active)",
+  "fix": null
+ },
+ {
+  "key": "6d2fd7bd0b6e51ba",
+  "round": 3,
+  "where": "chaos-knights · strat-gist · Houndpack Lance · Animalistic Rage",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given and checked against GW. Reads correctly in context in a single-list render of 189dbab. Now: gist: when a WAR DOG that has not been selected to attack this phase is destroyed: that unit shoots or fights the enemy unit that destroyed it, then Deadly Demise",
+  "fix": null
+ },
+ {
+  "key": "f01eb50196553575",
+  "round": 3,
+  "where": "adeptus-custodes · ability-sumOv · dread-host · Trajann Valoris · Moment Shackle",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given; rule 49 (the GW heading “Once per battle, per army”). On screen it is still followed by the program's “· Trajann Valoris per army”: a program label, not a wording issue. Reads correctly in context in a single-list render of 189dbab. Now: sumOv: Once per battle, at the start of any phase, if used: pick one: +3 A with the Watcher’s Axe, or a 3+ invulnerable save",
+  "fix": null
+ },
+ {
+  "key": "90ba2cdb165b98ba",
+  "round": 3,
+  "where": "adeptus-custodes · ability-sumDef · lite-knights · Contemptor-Galatus Dreadnought · Unyielding Ancient",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given and checked against GW. Reads correctly in context in a single-list render of 189dbab. Now: sumDef: vs attacks with S greater than this unit’s T: −1 to Wound rolls",
+  "fix": null
+ },
+ {
+  "key": "3bd7c0f9c7c24797",
+  "round": 3,
+  "where": "adeptus-custodes · ability-sumDef · lite-knights · Telemon Heavy Dreadnought · Guardian Eternal",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given and checked against GW. Reads correctly in context in a single-list render of 189dbab. Now: sumDef: −1 Damage to ranged attacks on this unit",
+  "fix": null
+ },
+ {
+  "key": "0d02f568e0267b42",
+  "round": 3,
+  "where": "adeptus-custodes · rule-sumAtk · adeptus-custodes army rule · Martial Ka’tah",
+  "verdict": "ok",
+  "why": "Text unchanged (was: None means re-keyed or newly listed); still right under rules 44–51. Reads correctly in context in a single-list render of 189dbab. Now: sumAtk: Salvus ⇒ If readied, Salvus, when shooting: ignore modifiers to BS, Hit rolls and Wound rolls\nDacatarai ⇒ If readied, Dacatarai, not vs MONSTER/VEHICLE: re-roll Hit rolls of 1\nRendax ⇒ If readied, Rendax, vs MONSTER/VEHICLE: [LETHAL HITS]",
+  "fix": null
+ },
+ {
+  "key": "719ad3bd15b6da28",
+  "round": 3,
+  "where": "adeptus-custodes · rule-sumDef · adeptus-custodes army rule · Martial Ka’tah",
+  "verdict": "ok",
+  "why": "Text unchanged (was: None means re-keyed or newly listed); still right under rules 44–51. Reads correctly in context in a single-list render of 189dbab. Now: sumDef: Kaptaris ⇒ If readied, Kaptaris: −1 to Hit rolls vs melee attacks on this unit",
+  "fix": null
+ },
+ {
+  "key": "d5fbdbe3844302fe",
+  "round": 3,
+  "where": "chaos-daemons · ability-sumAtk · the-exiled-legion · Karanak · Prey of the Blood God",
+  "verdict": "ok",
+  "why": "Rule 50: “is destroyed”. On the Karanak + Flesh Hounds sheet it reads “Granted by: Karanak - … this unit re-rolls …”, which is correct: GW says “a model in this model's unit”, and the unit is the combined one. Reads correctly in context in a single-list render of 189dbab. Now: sumAtk: Pick a target at start of round 1 (a new one when it is destroyed): this unit re-rolls Wound rolls vs that unit in melee",
+  "fix": null
+ },
+ {
+  "key": "ef23d925094478cc",
+  "round": 3,
+  "where": "chaos-daemons · ability-sumOv · the-exiled-legion · Karanak · Prey of the Blood God",
+  "verdict": "ok",
+  "why": "Rule 50: “is destroyed”. Reads correctly in context in a single-list render of 189dbab. Now: sumOv: Pick a target at start of round 1 (a new one when it is destroyed): this unit re-rolls Wound rolls vs that unit in melee",
+  "fix": null
+ },
+ {
+  "key": "302ebb7b55257c40",
+  "round": 3,
+  "where": "chaos-daemons · ability-sumOv · the-exiled-legion · Daemon Prince of Chaos · Unholy Vigour",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given; rule 49 drops the duration. Reads correctly in context in a single-list render of 189dbab. Now: sumOv: Once per battle, at the start of any phase, if used: this model has a 3+ invulnerable save",
+  "fix": null
+ },
+ {
+  "key": "ae87120a28d8b32c",
+  "round": 3,
+  "where": "chaos-daemons · ability-sumAtk · the-exiled-legion · Rendmaster on Blood Throne · Champion Slayer",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given and checked against GW. Reads correctly in context in a single-list render of 189dbab. Now: sumAtk: vs CHARACTER or MONSTER: re-roll Wound rolls in melee; each such enemy unit this model destroys: this model regains up to D6 lost wounds",
+  "fix": null
+ },
+ {
+  "key": "e3e24dbb02b3c604",
+  "round": 3,
+  "where": "chaos-daemons · strat-gist · Blood Legion · Wrath Undeniable",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given and checked against GW. Reads correctly in context in a single-list render of 189dbab. Now: gist: when targeted: each model destroyed by a melee attack, if it has not fought this phase, fights on a 4+ after the attacking unit, then is removed",
+  "fix": null
+ },
+ {
+  "key": "cad6ddbaad5448e4",
+  "round": 3,
+  "where": "chaos-space-marines · ability-sumOv · fellhammer-siege-task-force · Obliterators · Warp Rift Firepower",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given; rule 49 (GW heading/errata “Once per battle, per unit”). Reads correctly in context in a single-list render of 189dbab. Now: sumOv: Once per battle, in your Shooting phase, when this unit is selected to shoot, if used: ranged attacks gain [INDIRECT FIRE]",
+  "fix": null
+ },
+ {
+  "key": "9db1053e732a8911",
+  "round": 3,
+  "where": "adeptus-custodes · ability-sumDef · dread-host · Shield-Captain · Praesidium Shield",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given and checked against GW. Reads correctly in context in a single-list render of 189dbab. Now: sumDef: vs attacks with S greater than this unit’s T: −1 to Wound rolls",
+  "fix": null
+ },
+ {
+  "key": "af3d450b709a12ee",
+  "round": 3,
+  "where": "chaos-daemons · ability-sumAtk · tzeeeeentch · Fluxmaster · Altered Reality",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given and checked against GW. Reads correctly in context in a single-list render of 189dbab. Now: sumAtk: Once per round (one use, shared with saving throws): you can change one Hit roll or one Wound roll for the Fluxmaster to an unmodified 6",
+  "fix": null
+ },
+ {
+  "key": "7c07dd5bafffb20b",
+  "round": 3,
+  "where": "chaos-daemons · ability-sumDef · tzeeeeentch · Fluxmaster · Altered Reality",
+  "verdict": "ok",
+  "why": "Round-2 fix applied as given and checked against GW. Reads correctly in context in a single-list render of 189dbab. Now: sumDef: Once per round (one use, shared with Hit and Wound rolls): you can change one saving throw for the Fluxmaster to an unmodified 6",
+  "fix": null
+ }
+]
