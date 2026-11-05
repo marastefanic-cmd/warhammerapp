@@ -169,15 +169,15 @@ Deffkoptas 85 pts
 All of them: 425 pts
 START OF THE BATTLE AND THE BATTLE ROUNDS
 EVERY ROUND
-Da Boss · Orks army rule
+Start of each round, if a model with this ability is your WARLORD: +1CP AI (Da Boss) · Orks army rule
 USES PER BATTLE
 NEW GAME
 RULES
-War Cry · Orks army rule
+At the start of the Command phase, if used: friendly ORKS units with Waaagh! are riled up until the end of the next turn AI (War Cry) · Orks army rule
 ABILITIES
-Makari, Hoist Dat Banner! · Ghazghkull Thraka per army
+In your Movement phase, if used: up to as many friendly ORKS units as the battle round number are riled up until the start of your next turn AI (Makari, Hoist Dat Banner!) · Ghazghkull Thraka per army
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -347,7 +347,7 @@ LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 4
 -1
 1
 CLOSE-QUARTERS, TORRENT
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 Mozrog Skragbad
 Thump Gun
 18"
@@ -357,7 +357,7 @@ Thump Gun
 0
 2
 ANTI-MONSTER/VEHICLE 4+
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 Nazdreg
 + Meganobz
 NAZDREG
@@ -412,10 +412,9 @@ IGNORES COVER
 0
 1
 BLAST 1, TORRENT, IGNORES COVER
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 STRATAGEMS · BULLY BOYZ
-1CP Armed to da Teef: Re-roll Hit rolls of 1
-1CP Armed to da Teef: Re-roll Hit rolls, Riled up
+1CP Armed to da Teef: in your Shooting phase or the Fight phase, MEGANOBZ/NOBZ: re-roll Hit rolls of 1; if this unit is riled up, re-roll all Hit rolls AI
 Zodgrod Wortsnagga
 + Runtherd + Gretchin
 Extra Sneaky
@@ -446,7 +445,7 @@ Grot Blasta×20
 0
 1
 CLOSE-QUARTERS
-Riled up (Zodgrod Wortsnagga · Super Runts: always riled up): [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!) (always riled up: Zodgrod Wortsnagga · Super Runts)
 Beastboss on Squigosaur
 Brutal But Kunnin’
 Slugga
@@ -465,7 +464,7 @@ Thump Gun
 0
 2
 ANTI-MONSTER/VEHICLE 4+
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 Big Mek Dakkarig
 ×2 units
 Blitzkannon
@@ -477,7 +476,7 @@ Blitzkannon
 -2
 2
 IGNORES COVER, LETHAL HITS: NON-MONSTER/VEHICLE
-A +6 The target: not MONSTER/VEHICLE (Blitz Dem Gitz!)
+In your Shooting phase, vs non-MONSTER/VEHICLE: +6 A AI (Blitz Dem Gitz!)
 Multi-busta Launcha
 24"
 6
@@ -486,8 +485,8 @@ Multi-busta Launcha
 -2
 3
 IGNORES COVER, LETHAL HITS
-Riled up: [SUSTAINED HITS 1] (Even More Dakka)
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
+If this unit is riled up: ranged attacks gain [SUSTAINED HITS 1] AI (Even More Dakka)
 Warboss in Mega Armour
 Da Gobshot Thunderbuss
 + Meganobz
@@ -507,10 +506,9 @@ Da Gobshot Thunderbuss
 -2
 2
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 6
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 STRATAGEMS · BULLY BOYZ
-1CP Armed to da Teef: Re-roll Hit rolls of 1
-1CP Armed to da Teef: Re-roll Hit rolls, Riled up
+1CP Armed to da Teef: in your Shooting phase or the Fight phase, MEGANOBZ/NOBZ: re-roll Hit rolls of 1; if this unit is riled up, re-roll all Hit rolls AI
 Gretchin
 Extra Sneaky
 Grot Blasta×10
@@ -521,7 +519,7 @@ Grot Blasta×10
 0
 1
 CLOSE-QUARTERS
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 Gretchin
 Grot Blasta×10
 12"
@@ -531,7 +529,7 @@ Grot Blasta×10
 0
 1
 CLOSE-QUARTERS
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 Deffkoptas
 
 Can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
@@ -561,15 +559,12 @@ Slugga×3
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
-If (see the rule): +1 to Hit rolls (Deff from Above)
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
+If this unit made an ingress move this turn: +1 to Hit rolls with ranged attacks AI (Deff from Above)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Ghazghkull Thraka
 Warlord
-
-Fights with both: Gork’s Klaw, plus Adamantine ’Eadbutt on top (extra attacks).
-
 Adamantine ’Eadbutt
 1
 2+
@@ -584,11 +579,8 @@ Gork’s Klaw
 -3
 4
 CLEAVE 2, DEVASTATING WOUNDS
-Own aura: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 Mozrog Skragbad
-
-Fights with both: Gutrippa, plus Big Chompa’s Jaws on top (extra attacks).
-
 Big Chompa’s Jaws
 3
 3+
@@ -611,14 +603,11 @@ CLEAVE 1
 -2
 D6+1
 LETHAL HITS
-The target: MONSTER or VEHICLE: Re-roll Wound rolls (Da Bigger Dey Iz…)
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+vs MONSTER/VEHICLE: re-roll Wound rolls in melee AI (Da Bigger Dey Iz…)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 Nazdreg
 + Meganobz
 NAZDREG
-
-Fights with both: Moonchewa, plus Kustom Blasta X on top (extra attacks).
-
 Kustom Blasta X
 6
 2+
@@ -641,11 +630,10 @@ Power Klaw×5
 -2
 2
 SUSTAINED HITS 1
-Riled up: +1 to Hit rolls (Krumpin’ Time)
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Fight phase, if this unit is riled up: +1 to Hit rolls AI (Krumpin’ Time)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 STRATAGEMS · BULLY BOYZ
-1CP Armed to da Teef: Re-roll Hit rolls of 1
-1CP Armed to da Teef: Re-roll Hit rolls, Riled up
+1CP Armed to da Teef: in your Shooting phase or the Fight phase, MEGANOBZ/NOBZ: re-roll Hit rolls of 1; if this unit is riled up, re-roll all Hit rolls AI
 Zodgrod Wortsnagga
 + Runtherd + Gretchin
 Extra Sneaky
@@ -670,13 +658,10 @@ Scavenged Shivs×20
 3
 0
 1
-not counted here: see the rule (Super Runts)
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Granted by: Zodgrod Wortsnagga - This unit is riled up; Scavenged Shivs +1 A, WS and S AI (Super Runts)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 Beastboss on Squigosaur
 Brutal But Kunnin’
-
-Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
-
 Beastchoppa
 ➤Standard
 6
@@ -698,7 +683,7 @@ Squigosaur’s jaws
 -2
 4
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 Big Mek Dakkarig
 ×2 units
 Stompy Feet
@@ -707,7 +692,7 @@ Stompy Feet
 6
 -1
 1
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 Warboss in Mega Armour
 Da Gobshot Thunderbuss
 + Meganobz
@@ -727,11 +712,10 @@ Twin Killsaw×6
 -2
 3
 TWIN-LINKED, SUSTAINED HITS 1
-Riled up: +1 to Hit rolls (Krumpin’ Time)
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Fight phase, if this unit is riled up: +1 to Hit rolls AI (Krumpin’ Time)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 STRATAGEMS · BULLY BOYZ
-1CP Armed to da Teef: Re-roll Hit rolls of 1
-1CP Armed to da Teef: Re-roll Hit rolls, Riled up
+1CP Armed to da Teef: in your Shooting phase or the Fight phase, MEGANOBZ/NOBZ: re-roll Hit rolls of 1; if this unit is riled up, re-roll all Hit rolls AI
 Gretchin
 Extra Sneaky
 Scavenged Shivs×10
@@ -740,7 +724,7 @@ Scavenged Shivs×10
 2
 0
 1
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 Gretchin
 Scavenged Shivs×10
 1
@@ -748,7 +732,7 @@ Scavenged Shivs×10
 2
 0
 1
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 Deffkoptas
 
 Pick one to fight with: Choppa or Spinnin’ Blades.
@@ -766,7 +750,7 @@ Spinnin’ Blades×3
 -1
 1
 CLEAVE 1, HAZARDOUS
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 
 ######## abilities · MELEE Abilities
 Ghazghkull Thraka
@@ -2058,19 +2042,19 @@ BULLY BOYZ
 CP
 AI
 Armed to da Teef
-Your unit’s attacks can re-roll hit rolls of 1, or re-roll hit rolls if your unit is riled up.
+MEGANOBZ/NOBZ: re-roll Hit rolls of 1; if this unit is riled up, re-roll all Hit rolls
 Your Shoot · Fight Nazdreg + Meganobz, Warboss in Mega Armour + Meganobz
 1
 CP
 AI
 Hulking Brutes
-Ranged attacks that target your unit with S greater than its T have -1 to wound rolls; for +1CP, all ranged attacks that target it do.
+when shot, vs ranged attacks with S greater than this unit’s T: −1 to Wound rolls; +1CP: −1 to Wound rolls vs all ranged attacks
 Their Shooting · Or: +1CP Nazdreg + Meganobz, Warboss in Mega Armour + Meganobz
 1
 CP
 AI
 Too Arrogant to Die
-An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.
+when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ (+1 if riled up) until this unit has fought or the phase ends
 Fight Nazdreg + Meganobz, Warboss in Mega Armour + Meganobz
 RUNT SWARM
 3
@@ -2078,19 +2062,19 @@ RUNT SWARM
 CP
 AI
 Scarper!
-An enemy unit ends a move within 8" of your unengaged unit: your unit can make a normal move of up to D6", or up to 6" if it is an attached unit.
+an enemy ends a move within 8": an unengaged GRETCHIN unit makes a Normal move of up to D6" (up to 6" if attached)
 Their Movement Zodgrod Wortsnagga + Runtherd + Gretchin, Gretchin ×2
 1
 CP
 AI
 Grot Shields
-An enemy unit targets an ORKS INFANTRY unit (excluding GRETCHIN units) within 3" of your GRETCHIN unit: if a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound.
+each hit on ORKS INFANTRY within 3" becomes 1 mortal wound on the Gretchin
 Their Shooting Zodgrod Wortsnagga + Runtherd + Gretchin, Gretchin ×2
 2
 CP
 AI
 Infested War Zone
-After an enemy unit has attacked: add a new GRETCHIN unit identical to your just-destroyed unit to your army, in strategic reserves, at its starting strength.
+a destroyed GRETCHIN unit returns in Strategic Reserves at Starting Strength with full wounds
 Any phase Zodgrod Wortsnagga + Runtherd + Gretchin, Gretchin ×2
 CORE STRATAGEMS
 10
@@ -2098,61 +2082,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement Any unit
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting Ghazghkull Thraka, Nazdreg + Meganobz, Warboss in Mega Armour + Meganobz, Deffkoptas
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge Mozrog Skragbad, Beastboss on Squigosaur, Big Mek Dakkarig ×2
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight Ghazghkull Thraka, Mozrog Skragbad, Nazdreg + Meganobz, Zodgrod Wortsnagga + Runtherd + Gretchin, Beastboss on Squigosaur, Big Mek Dakkarig ×2, Warboss in Mega Armour + Meganobz
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting No unit in this list can use it (needs SMOKE)
 
 Brute Bosses has no stratagems (a rule and enhancements only).
@@ -2499,9 +2483,9 @@ Ghazghkull Thraka
 4+
 WHEN TARGETED
 3
-Waaagh!: Riled up: 5+ invulnerable save
-Da Grand Warlord’s Ladz: Within 3" of another friendly ORKS INFANTRY unit: Lone Operative
-1CP Grot Shields: not counted here: see the rule
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
+Within 3" of another ORKS INFANTRY unit: Lone Operative AI (Da Grand Warlord’s Ladz)
+1CP Grot Shields: in your opponent’s Shooting phase, each hit on ORKS INFANTRY within 3" becomes 1 mortal wound on the Gretchin AI
 RANGED WEAPONS
 Range
 A
@@ -2526,16 +2510,13 @@ LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 4
 -1
 1
 CLOSE-QUARTERS, TORRENT
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Gork’s Klaw, plus Adamantine ’Eadbutt on top (extra attacks).
-
 Adamantine ’Eadbutt
 1
 2+
@@ -2550,7 +2531,7 @@ Gork’s Klaw
 -3
 4
 CLEAVE 2, DEVASTATING WOUNDS
-Own aura: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 ABILITIES
 Supreme Commander
 
@@ -2628,10 +2609,10 @@ Mozrog Skragbad
 4+
 WHEN TARGETED
 4
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
+Fight phase, if this model is destroyed and this unit has not been selected to fight: on a 2+ it stays until this unit has fought or the phase ends AI (One Last Kill)
+Within 3" of a BEAST SNAGGA unit (not MONSTER CHARACTER): Lone Operative AI (Beast Snagga Following)
 Feel No Pain 5+
-Waaagh!: Riled up: 5+ invulnerable save
-One Last Kill: not counted here: see the rule
-Beast Snagga Following: Within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER): Lone Operative
 RANGED WEAPONS
 Range
 A
@@ -2647,16 +2628,13 @@ Thump Gun
 0
 2
 ANTI-MONSTER/VEHICLE 4+
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Gutrippa, plus Big Chompa’s Jaws on top (extra attacks).
-
 Big Chompa’s Jaws
 3
 3+
@@ -2679,8 +2657,8 @@ CLEAVE 1
 -2
 D6+1
 LETHAL HITS
-The target: MONSTER or VEHICLE: Re-roll Wound rolls (Da Bigger Dey Iz…)
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+vs MONSTER/VEHICLE: re-roll Wound rolls in melee AI (Da Bigger Dey Iz…)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 ABILITIES
 One Last Kill
 Fight
@@ -2758,17 +2736,15 @@ Meganob×5
 1
 –
 WHEN TARGETED
-6
-Waaagh!: Riled up: 5+ invulnerable save
-MEGANOBZ Arrogant Invulnerability: AP worsened by 1
-1CP Too Arrogant to Die: not counted here: see the rule
-1CP Hulking Brutes: Your opponent’s Shooting phase, Ranged attacks, The attack’s S greater than its T: −1 to Wound rolls
-1CP Hulking Brutes: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): −1 to Wound rolls
-1CP Grot Shields: not counted here: see the rule
+5
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
+MEGANOBZ attacks against this unit get −1 AP AI (Arrogant Invulnerability)
+1CP Too Arrogant to Die: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ (+1 if riled up) until this unit has fought or the phase ends AI
+1CP Hulking Brutes: in your opponent’s Shooting phase, when shot, vs ranged attacks with S greater than this unit’s T: −1 to Wound rolls; +1CP: −1 to Wound rolls vs all ranged attacks AI
+1CP Grot Shields: in your opponent’s Shooting phase, each hit on ORKS INFANTRY within 3" becomes 1 mortal wound on the Gretchin AI
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · BULLY BOYZ
-1CP Armed to da Teef: Re-roll Hit rolls of 1
-1CP Armed to da Teef: Re-roll Hit rolls, Riled up
+1CP Armed to da Teef: in your Shooting phase or the Fight phase, MEGANOBZ/NOBZ: re-roll Hit rolls of 1; if this unit is riled up, re-roll all Hit rolls AI
 RANGED WEAPONS
 Range
 A
@@ -2829,7 +2805,7 @@ IGNORES COVER
 1
 BLAST 1, TORRENT, IGNORES COVER
 WHOLE UNIT
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 MELEE WEAPONS
 A
 WS
@@ -2837,9 +2813,6 @@ S
 AP
 D
 NAZDREG
-
-Fights with both: Moonchewa, plus Kustom Blasta X on top (extra attacks).
-
 Kustom Blasta X
 6
 2+
@@ -2863,8 +2836,8 @@ Power Klaw×5
 2
 SUSTAINED HITS 1
 WHOLE UNIT
-Riled up: +1 to Hit rolls (Krumpin’ Time)
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Fight phase, if this unit is riled up: +1 to Hit rolls AI (Krumpin’ Time)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 ABILITIES
 Intimidating Motivation
 - Nazdreg
@@ -2982,8 +2955,8 @@ Gretchin×20
 –
 WHEN TARGETED
 2
-Waaagh!: Riled up (Zodgrod Wortsnagga · Super Runts: always riled up): 5+ invulnerable save
-GRETCHIN Extra Sneaky: not counted here: see the rule
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!) (always riled up: Zodgrod Wortsnagga · Super Runts)
+GRETCHIN −3" detection range AI (Extra Sneaky)
 RANGED WEAPONS
 Squigstoppa, Slugga, Grot Blasta ×20 · all pistols
 Range
@@ -3020,7 +2993,7 @@ Grot Blasta×20
 1
 CLOSE-QUARTERS
 WHOLE UNIT
-Riled up (Zodgrod Wortsnagga · Super Runts: always riled up): [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!) (always riled up: Zodgrod Wortsnagga · Super Runts)
 MELEE WEAPONS
 A
 WS
@@ -3049,8 +3022,8 @@ Scavenged Shivs×20
 0
 1
 WHOLE UNIT
-not counted here: see the rule (Super Runts)
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Granted by: Zodgrod Wortsnagga - This unit is riled up; Scavenged Shivs +1 A, WS and S AI (Super Runts)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 ABILITIES
 Super Runts
 - Zodgrod Wortsnagga
@@ -3140,9 +3113,9 @@ Beastboss on Squigosaur
 5+
 WHEN TARGETED
 3
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
+Within 3" of a BEAST SNAGGA unit (not MONSTER CHARACTER): Lone Operative AI (Boss of da Hunt)
 Feel No Pain 5+
-Waaagh!: Riled up: 5+ invulnerable save
-Boss of da Hunt: Within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER): Lone Operative
 RANGED WEAPONS
 Range
 A
@@ -3166,16 +3139,13 @@ Thump Gun
 0
 2
 ANTI-MONSTER/VEHICLE 4+
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
-
 Beastchoppa
 ➤Standard
 6
@@ -3197,7 +3167,7 @@ Squigosaur’s jaws
 -2
 4
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 ABILITIES
 Thundering Stampede
 Charge
@@ -3275,7 +3245,7 @@ Big Mek Dakkarig
 5+
 WHEN TARGETED
 1
-Waaagh!: Riled up: 5+ invulnerable save
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
 RANGED WEAPONS
 Range
 A
@@ -3292,7 +3262,7 @@ Blitzkannon
 -2
 2
 IGNORES COVER, LETHAL HITS: NON-MONSTER/VEHICLE
-A +6 The target: not MONSTER/VEHICLE (Blitz Dem Gitz!)
+In your Shooting phase, vs non-MONSTER/VEHICLE: +6 A AI (Blitz Dem Gitz!)
 Multi-busta Launcha
 24"
 6
@@ -3301,8 +3271,8 @@ Multi-busta Launcha
 -2
 3
 IGNORES COVER, LETHAL HITS
-Riled up: [SUSTAINED HITS 1] (Even More Dakka)
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
+If this unit is riled up: ranged attacks gain [SUSTAINED HITS 1] AI (Even More Dakka)
 MELEE WEAPONS
 A
 WS
@@ -3315,7 +3285,7 @@ Stompy Feet
 6
 -1
 1
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 ABILITIES
 Even More Dakka
 Their Move · Your Shoot
@@ -3389,17 +3359,15 @@ Meganob×6
 1
 –
 WHEN TARGETED
-6
-Waaagh!: Riled up: 5+ invulnerable save
-MEGANOBZ Arrogant Invulnerability: AP worsened by 1
-1CP Too Arrogant to Die: not counted here: see the rule
-1CP Hulking Brutes: Your opponent’s Shooting phase, Ranged attacks, The attack’s S greater than its T: −1 to Wound rolls
-1CP Hulking Brutes: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): −1 to Wound rolls
-1CP Grot Shields: not counted here: see the rule
+5
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
+MEGANOBZ attacks against this unit get −1 AP AI (Arrogant Invulnerability)
+1CP Too Arrogant to Die: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ (+1 if riled up) until this unit has fought or the phase ends AI
+1CP Hulking Brutes: in your opponent’s Shooting phase, when shot, vs ranged attacks with S greater than this unit’s T: −1 to Wound rolls; +1CP: −1 to Wound rolls vs all ranged attacks AI
+1CP Grot Shields: in your opponent’s Shooting phase, each hit on ORKS INFANTRY within 3" becomes 1 mortal wound on the Gretchin AI
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · BULLY BOYZ
-1CP Armed to da Teef: Re-roll Hit rolls of 1
-1CP Armed to da Teef: Re-roll Hit rolls, Riled up
+1CP Armed to da Teef: in your Shooting phase or the Fight phase, MEGANOBZ/NOBZ: re-roll Hit rolls of 1; if this unit is riled up, re-roll all Hit rolls AI
 RANGED WEAPONS
 Range
 A
@@ -3424,7 +3392,7 @@ Da Gobshot Thunderbuss
 2
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 6
 WHOLE UNIT
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 MELEE WEAPONS
 A
 WS
@@ -3448,8 +3416,8 @@ Twin Killsaw×6
 3
 TWIN-LINKED, SUSTAINED HITS 1
 WHOLE UNIT
-Riled up: +1 to Hit rolls (Krumpin’ Time)
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Fight phase, if this unit is riled up: +1 to Hit rolls AI (Krumpin’ Time)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 ABILITIES
 Krushin’ Impetus
 - Warboss in Mega Armour
@@ -3546,8 +3514,8 @@ Gretchin×10
 –
 WHEN TARGETED
 2
-Waaagh!: Riled up: 5+ invulnerable save
-Extra Sneaky: not counted here: see the rule
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
+−3" detection range AI (Extra Sneaky)
 RANGED WEAPONS
 Range
 A
@@ -3563,7 +3531,7 @@ Grot Blasta×10
 0
 1
 CLOSE-QUARTERS
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 MELEE WEAPONS
 A
 WS
@@ -3576,7 +3544,7 @@ Scavenged Shivs×10
 2
 0
 1
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 ABILITIES
 Downtrodden
 
@@ -3642,7 +3610,7 @@ Gretchin×10
 –
 WHEN TARGETED
 1
-Waaagh!: Riled up: 5+ invulnerable save
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
 RANGED WEAPONS
 Range
 A
@@ -3658,7 +3626,7 @@ Grot Blasta×10
 0
 1
 CLOSE-QUARTERS
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 MELEE WEAPONS
 A
 WS
@@ -3671,7 +3639,7 @@ Scavenged Shivs×10
 2
 0
 1
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 ABILITIES
 Downtrodden
 
@@ -3731,7 +3699,7 @@ Deffkoptas×3
 6+
 WHEN TARGETED
 1
-Waaagh!: Riled up: 5+ invulnerable save
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
 RANGED WEAPONS
 Range
 A
@@ -3767,8 +3735,8 @@ Slugga×3
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
-If (see the rule): +1 to Hit rolls (Deff from Above)
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
+If this unit made an ingress move this turn: +1 to Hit rolls with ranged attacks AI (Deff from Above)
 MELEE WEAPONS
 A
 WS
@@ -3791,7 +3759,7 @@ Spinnin’ Blades×3
 -1
 1
 CLEAVE 1, HAZARDOUS
-Within 6" of Ghazghkull Thraka: +1 to Hit rolls, +1 to Wound rolls (Prophet of da Great Waaagh!)
+Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 ABILITIES
 Deff from Above
 Your Shooting

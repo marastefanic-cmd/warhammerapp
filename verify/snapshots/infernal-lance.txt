@@ -233,13 +233,13 @@ INFILTRATORS
 Nurglings Infiltrators
 START OF THE BATTLE AND THE BATTLE ROUNDS
 START OF THE BATTLE
-Harbingers of Dread · Chaos Knights army rule
+Deathly Terror from the start; pick one more Dread ability (or roll two) at the start of rounds 1, 3 and 5: Despair; Doom; Darkness; Dismay; Delirium; Dominion AI (Harbingers of Dread) · Chaos Knights army rule
 FIRST ROUND
-Methodical Destruction · Knight Ruinator ×2
+Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit AI (Methodical Destruction) · Knight Ruinator ×2
 USES PER BATTLE
 NEW GAME
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -346,14 +346,13 @@ D3
 -4
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
-The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
-The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+vs MONSTER or VEHICLE: +1 to Hit rolls; also +1 to Wound rolls if TITANIC or TOWERING AI (Macro-extinction Protocols)
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-10 wounds remaining)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: [IGNORES COVER]
+1CP Warp Vision: in your Shooting phase, CHAOS KNIGHTS: ranged weapons gain [IGNORES COVER] AI
 Chaos Cerastus Knight Lancer
 Blasphemous Engine
 Cerastus shock lance
@@ -364,12 +363,12 @@ Cerastus shock lance
 0
 2
 ASSAULT, SUSTAINED HITS 2
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-10 wounds remaining)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: [IGNORES COVER]
+1CP Warp Vision: in your Shooting phase, CHAOS KNIGHTS: ranged weapons gain [IGNORES COVER] AI
 Knight Despoiler
 Warlord
 Bestial Aspect
@@ -405,13 +404,13 @@ Ruinspear rocket pod
 -2
 D6
 ASSAULT
-Every attack: Re-roll one Hit or Wound roll (Seething Hatred)
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+When this model shoots or fights: re-roll one Hit roll or one Wound roll AI (Seething Hatred)
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-9 wounds remaining)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: [IGNORES COVER]
+1CP Warp Vision: in your Shooting phase, CHAOS KNIGHTS: ranged weapons gain [IGNORES COVER] AI
 Knight Ruinator
 Fleshmetal Fusion
 Darkflame lance
@@ -430,13 +429,13 @@ D6+6
 -2
 2
 BLAST
-The target is the enemy unit selected: Re-roll Wound rolls (Methodical Destruction)
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit AI (Methodical Destruction)
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-9 wounds remaining)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: [IGNORES COVER]
+1CP Warp Vision: in your Shooting phase, CHAOS KNIGHTS: ranged weapons gain [IGNORES COVER] AI
 Knight Ruinator
 Darkflame lance
 18"
@@ -454,13 +453,13 @@ D6+6
 -2
 2
 BLAST
-The target is the enemy unit selected: Re-roll Wound rolls (Methodical Destruction)
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit AI (Methodical Destruction)
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-9 wounds remaining)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: [IGNORES COVER]
+1CP Warp Vision: in your Shooting phase, CHAOS KNIGHTS: ranged weapons gain [IGNORES COVER] AI
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Chaos Cerastus Knight Atrapos
@@ -480,12 +479,11 @@ SUSTAINED HITS 1
 -3
 4
 SUSTAINED HITS 1
-The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
-The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
-If (see the rule): [LANCE] (Knight Diabolus)
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS]
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+vs MONSTER or VEHICLE: +1 to Hit rolls; also +1 to Wound rolls if TITANIC or TOWERING AI (Macro-extinction Protocols)
++1 WS in melee; while using Diabolic Power: melee weapons gain [LANCE] AI (Knight Diabolus)
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-10 wounds remaining)
 Chaos Cerastus Knight Lancer
 Blasphemous Engine
 Cerastus shock lance
@@ -502,9 +500,9 @@ LANCE
 10
 -2
 3
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-10 wounds remaining)
 Charged this turn: Cerastus shock lance +1 to Wound rolls (Lance)
 Knight Despoiler
 Warlord
@@ -515,10 +513,10 @@ Titanic feet
 8
 -1
 2
-Every attack: Re-roll one Hit or Wound roll (Seething Hatred)
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+When this model shoots or fights: re-roll one Hit roll or one Wound roll AI (Seething Hatred)
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-9 wounds remaining)
 Knight Ruinator
 Fleshmetal Fusion
 Fellbore
@@ -535,10 +533,10 @@ ANTI-MONSTER 2+, ANTI-VEHICLE 2+
 9
 -2
 2
-The target is the enemy unit selected: Re-roll Wound rolls (Methodical Destruction)
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit AI (Methodical Destruction)
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-9 wounds remaining)
 Knight Ruinator
 Fellbore
 ➤strike
@@ -554,10 +552,10 @@ ANTI-MONSTER 2+, ANTI-VEHICLE 2+
 9
 -2
 2
-The target is the enemy unit selected: Re-roll Wound rolls (Methodical Destruction)
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit AI (Methodical Destruction)
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-9 wounds remaining)
 Nurglings
 Diseased claws and teeth×3
 4
@@ -2009,37 +2007,37 @@ INFERNAL LANCE
 CP
 AI
 Corrupting Taint
-Just after your unit makes a Malefic Surge: select one objective marker you control that your unit is within range of; it stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+after a CHAOS KNIGHTS CHARACTER makes a Malefic Surge on an objective you control: that objective stays yours until the opponent takes it
 Your Command All but Nurglings
 1
 CP
 AI
 Unleash Balefire
-After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2" Move, -2 to Charge rolls).
+after this unit shoots: one enemy unit this unit hit takes a Battle-shock test; if failed, −2" Move and −2 to Charge rolls
 Your Shooting All but Nurglings
 1
 CP
 AI
 Warp Vision
-Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER].
+CHAOS KNIGHTS: ranged weapons gain [IGNORES COVER]
 Your Shooting All but Nurglings
 1
 CP
 AI
 Diabolic Bulwark
-Just after an enemy unit selects your unit as a target: until the end of the phase, your unit’s models have a 4+ invulnerable save.
+when shot: 4+ invulnerable save
 Their Shooting All but Nurglings
 1
 CP
 AI
 Hellforged Construction
-Just after an enemy unit selects your unit as a target: until that unit has finished making its attacks, worsen the AP of each attack that targets your unit by 1.
+when targeted: attacks against this unit get −1 AP
 Fight All but Nurglings
 1
 CP
 AI
 Profane Symbiosis
-End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
+once per round per unit, end of any phase: a CHAOS KNIGHTS unit not Empowered makes a Malefic Surge
 Any phase All but Nurglings
 CORE STRATAGEMS
 10
@@ -2047,61 +2045,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement No unit in this list can use it
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge All but Nurglings
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight All but Nurglings
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting No unit in this list can use it (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2431,26 +2429,25 @@ Chaos Cerastus Knight Atrapos
 10
 5+
 
-Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+Deathly Terror: enemies within 9": −1 Ld (−1 more if Despair is active) AI (Harbingers of Dread)
 
-M: not counted here: see the rule (Malefic Surge)
+If Empowered, Unholy Hunger: +3" Move AI (Malefic Surge)
 
-Enemy units’ M: not counted here: see the rule (Unleash Balefire)
+1CP Unleash Balefire: in your Shooting phase, after this unit shoots: one enemy unit this unit hit takes a Battle-shock test; if failed, −2" Move and −2 to Charge rolls AI
 
 WHEN TARGETED
 5
-Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-Malefic Surge: Unnatural Fortitude · “While a unit is Empowered it can use one of the Malefic Surge abilities below” · “When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase”: one of: 5+ invulnerable save · Feel No Pain 6+
-Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
-1CP Hellforged Construction: Fight phase: AP worsened by 1
-1CP Diabolic Bulwark: Your opponent’s Shooting phase: 4+ invulnerable save
+If Darkness is active: Stealth AI (Harbingers of Dread)
+If Empowered, Unnatural Fortitude: pick one when this unit is targeted: 5+ invulnerable save or Feel No Pain 6+ AI (Malefic Surge)
+Granted by: Nurglings - Enemies (not TITANIC) in Engagement Range of the Nurglings: −1 to Hit rolls in melee AI (Mischief Makers)
+1CP Hellforged Construction: in the Fight phase, when targeted: attacks against this unit get −1 AP AI
+1CP Diabolic Bulwark: in your opponent’s Shooting phase, when shot: 4+ invulnerable save AI
 DAMAGED 1-10 W
-−5 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-10 WOUNDS REMAINING, SUBTRACT 5 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
-The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: RANGEDone of: [LETHAL HITS] · [SUSTAINED HITS 1] (Malefic Surge) · MELEEone of: [LETHAL HITS] (Malefic Surge)
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+vs MONSTER or VEHICLE: +1 to Hit rolls; also +1 to Wound rolls if TITANIC or TOWERING AI (Macro-extinction Protocols)
 RANGED WEAPONS
 Range
 A
@@ -2492,9 +2489,9 @@ D3
 -4
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: [IGNORES COVER]
+1CP Warp Vision: in your Shooting phase, CHAOS KNIGHTS: ranged weapons gain [IGNORES COVER] AI
 MELEE WEAPONS
 A
 WS
@@ -2516,7 +2513,7 @@ SUSTAINED HITS 1
 -3
 4
 SUSTAINED HITS 1
-If (see the rule): [LANCE] (Knight Diabolus)
++1 WS in melee; while using Diabolic Power: melee weapons gain [LANCE] AI (Knight Diabolus)
 ABILITIES
 Macro-extinction Protocols
 Their Move · Your Shoot · Fight
@@ -2596,24 +2593,24 @@ Chaos Cerastus Knight Lancer
 10
 4+
 
-Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+Deathly Terror: enemies within 9": −1 Ld (−1 more if Despair is active) AI (Harbingers of Dread)
 
-M: not counted here: see the rule (Malefic Surge)
+If Empowered, Unholy Hunger: +3" Move AI (Malefic Surge)
 
-Enemy units’ M: not counted here: see the rule (Unleash Balefire)
+1CP Unleash Balefire: in your Shooting phase, after this unit shoots: one enemy unit this unit hit takes a Battle-shock test; if failed, −2" Move and −2 to Charge rolls AI
 
 WHEN TARGETED
 5
-Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-Malefic Surge: Unnatural Fortitude · “While a unit is Empowered it can use one of the Malefic Surge abilities below” · “When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase”: one of: 5+ invulnerable save · Feel No Pain 6+
-Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
-1CP Hellforged Construction: Fight phase: AP worsened by 1
-1CP Diabolic Bulwark: Your opponent’s Shooting phase: 4+ invulnerable save
+If Darkness is active: Stealth AI (Harbingers of Dread)
+If Empowered, Unnatural Fortitude: pick one when this unit is targeted: 5+ invulnerable save or Feel No Pain 6+ AI (Malefic Surge)
+Granted by: Nurglings - Enemies (not TITANIC) in Engagement Range of the Nurglings: −1 to Hit rolls in melee AI (Mischief Makers)
+1CP Hellforged Construction: in the Fight phase, when targeted: attacks against this unit get −1 AP AI
+1CP Diabolic Bulwark: in your opponent’s Shooting phase, when shot: 4+ invulnerable save AI
 DAMAGED 1-10 W
-−5 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-10 WOUNDS REMAINING, SUBTRACT 5 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
 RANGED WEAPONS
 Range
 A
@@ -2629,9 +2626,9 @@ Cerastus shock lance
 0
 2
 ASSAULT, SUSTAINED HITS 2
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: [IGNORES COVER]
+1CP Warp Vision: in your Shooting phase, CHAOS KNIGHTS: ranged weapons gain [IGNORES COVER] AI
 MELEE WEAPONS
 A
 WS
@@ -2734,28 +2731,28 @@ Knight Despoiler
 10
 5+*
 
-M: not counted here: see the rule (Bestial Aspect)
+Deathly Terror: enemies within 9": −1 Ld (−1 more if Despair is active) AI (Harbingers of Dread)
 
-Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+If Empowered, Unholy Hunger: +3" Move AI (Malefic Surge)
 
-M: not counted here: see the rule (Malefic Surge)
+While using Unholy Hunger: ignore modifiers to Move and Advance rolls AI (Bestial Aspect)
 
-Enemy units’ M: not counted here: see the rule (Unleash Balefire)
+1CP Unleash Balefire: in your Shooting phase, after this unit shoots: one enemy unit this unit hit takes a Battle-shock test; if failed, −2" Move and −2 to Charge rolls AI
 
 WHEN TARGETED
 6
-Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-Malefic Surge: Unnatural Fortitude · “While a unit is Empowered it can use one of the Malefic Surge abilities below” · “When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase”: one of: 5+ invulnerable save · Feel No Pain 6+
-*Invulnerable Save: 5+ invulnerable save against ranged attacks
-Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
-1CP Hellforged Construction: Fight phase: AP worsened by 1
-1CP Diabolic Bulwark: Your opponent’s Shooting phase: 4+ invulnerable save
+If Darkness is active: Stealth AI (Harbingers of Dread)
+If Empowered, Unnatural Fortitude: pick one when this unit is targeted: 5+ invulnerable save or Feel No Pain 6+ AI (Malefic Surge)
+5+ invulnerable save vs ranged attacks AI (*Invulnerable Save)
+Granted by: Nurglings - Enemies (not TITANIC) in Engagement Range of the Nurglings: −1 to Hit rolls in melee AI (Mischief Makers)
+1CP Hellforged Construction: in the Fight phase, when targeted: attacks against this unit get −1 AP AI
+1CP Diabolic Bulwark: in your opponent’s Shooting phase, when shot: 4+ invulnerable save AI
 DAMAGED 1-9 W
-−5 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-9 WOUNDS REMAINING, SUBTRACT 5 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-Every attack: Re-roll one Hit or Wound roll (Seething Hatred)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+When this model shoots or fights: re-roll one Hit roll or one Wound roll AI (Seething Hatred)
 RANGED WEAPONS
 Range
 A
@@ -2795,9 +2792,9 @@ Ruinspear rocket pod
 -2
 D6
 ASSAULT
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: [IGNORES COVER]
+1CP Warp Vision: in your Shooting phase, CHAOS KNIGHTS: ranged weapons gain [IGNORES COVER] AI
 MELEE WEAPONS
 A
 WS
@@ -2894,27 +2891,27 @@ Knight Ruinator
 10
 5+*
 
-Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+Deathly Terror: enemies within 9": −1 Ld (−1 more if Despair is active) AI (Harbingers of Dread)
 
-M: not counted here: see the rule (Malefic Surge)
+If Empowered, Unholy Hunger: +3" Move AI (Malefic Surge)
 
-Enemy units’ M: not counted here: see the rule (Unleash Balefire)
+1CP Unleash Balefire: in your Shooting phase, after this unit shoots: one enemy unit this unit hit takes a Battle-shock test; if failed, −2" Move and −2 to Charge rolls AI
 
 WHEN TARGETED
 7
-Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-Malefic Surge: Unnatural Fortitude · “While a unit is Empowered it can use one of the Malefic Surge abilities below” · “When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase”: one of: 5+ invulnerable save · Feel No Pain 6+
-*Invulnerable Save: 5+ invulnerable save against ranged attacks
-Fleshmetal Fusion: If (see the rule): +1 to armour saving throws
-Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
-1CP Hellforged Construction: Fight phase: AP worsened by 1
-1CP Diabolic Bulwark: Your opponent’s Shooting phase: 4+ invulnerable save
+If Darkness is active: Stealth AI (Harbingers of Dread)
+If Empowered, Unnatural Fortitude: pick one when this unit is targeted: 5+ invulnerable save or Feel No Pain 6+ AI (Malefic Surge)
+5+ invulnerable save vs ranged attacks AI (*Invulnerable Save)
++1 T; while using Unnatural Fortitude, vs Damage 1 attacks: +1 to armour saves AI (Fleshmetal Fusion)
+Granted by: Nurglings - Enemies (not TITANIC) in Engagement Range of the Nurglings: −1 to Hit rolls in melee AI (Mischief Makers)
+1CP Hellforged Construction: in the Fight phase, when targeted: attacks against this unit get −1 AP AI
+1CP Diabolic Bulwark: in your opponent’s Shooting phase, when shot: 4+ invulnerable save AI
 DAMAGED 1-9 W
-−5 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-9 WOUNDS REMAINING, SUBTRACT 5 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-The target is the enemy unit selected: Re-roll Wound rolls (Methodical Destruction)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit AI (Methodical Destruction)
 RANGED WEAPONS
 Range
 A
@@ -2938,9 +2935,9 @@ D6+6
 -2
 2
 BLAST
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: [IGNORES COVER]
+1CP Warp Vision: in your Shooting phase, CHAOS KNIGHTS: ranged weapons gain [IGNORES COVER] AI
 MELEE WEAPONS
 A
 WS
@@ -3044,26 +3041,26 @@ Knight Ruinator
 10
 5+*
 
-Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+Deathly Terror: enemies within 9": −1 Ld (−1 more if Despair is active) AI (Harbingers of Dread)
 
-M: not counted here: see the rule (Malefic Surge)
+If Empowered, Unholy Hunger: +3" Move AI (Malefic Surge)
 
-Enemy units’ M: not counted here: see the rule (Unleash Balefire)
+1CP Unleash Balefire: in your Shooting phase, after this unit shoots: one enemy unit this unit hit takes a Battle-shock test; if failed, −2" Move and −2 to Charge rolls AI
 
 WHEN TARGETED
 6
-Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-Malefic Surge: Unnatural Fortitude · “While a unit is Empowered it can use one of the Malefic Surge abilities below” · “When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase”: one of: 5+ invulnerable save · Feel No Pain 6+
-*Invulnerable Save: 5+ invulnerable save against ranged attacks
-Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls (Nurglings)
-1CP Hellforged Construction: Fight phase: AP worsened by 1
-1CP Diabolic Bulwark: Your opponent’s Shooting phase: 4+ invulnerable save
+If Darkness is active: Stealth AI (Harbingers of Dread)
+If Empowered, Unnatural Fortitude: pick one when this unit is targeted: 5+ invulnerable save or Feel No Pain 6+ AI (Malefic Surge)
+5+ invulnerable save vs ranged attacks AI (*Invulnerable Save)
+Granted by: Nurglings - Enemies (not TITANIC) in Engagement Range of the Nurglings: −1 to Hit rolls in melee AI (Mischief Makers)
+1CP Hellforged Construction: in the Fight phase, when targeted: attacks against this unit get −1 AP AI
+1CP Diabolic Bulwark: in your opponent’s Shooting phase, when shot: 4+ invulnerable save AI
 DAMAGED 1-9 W
-−5 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-9 WOUNDS REMAINING, SUBTRACT 5 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-The target is the enemy unit selected: Re-roll Wound rolls (Methodical Destruction)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-Diabolic Power · “While a unit is Empowered it can use one of the Malefic Surge abilities below”: one of: [LETHAL HITS] · [SUSTAINED HITS 1]
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+If Empowered, Diabolic Power: pick one when this unit shoots or fights: [LETHAL HITS] or [SUSTAINED HITS 1] AI (Malefic Surge)
+Pick a target at start of round 1 (a new one when it dies): re-roll Wound rolls vs that unit AI (Methodical Destruction)
 RANGED WEAPONS
 Range
 A
@@ -3087,9 +3084,9 @@ D6+6
 -2
 2
 BLAST
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
-1CP Warp Vision: [IGNORES COVER]
+1CP Warp Vision: in your Shooting phase, CHAOS KNIGHTS: ranged weapons gain [IGNORES COVER] AI
 MELEE WEAPONS
 A
 WS
@@ -3184,9 +3181,9 @@ Nurglings
 8+
 0
 5+
-WHEN TARGETED
-1
-Mischief Makers: Melee attacks, If (see the rule): −1 to Hit rolls
+
+Enemy units (not TITANIC) in Engagement Range of the Nurglings: −1 to Hit rolls in melee AI (Mischief Makers)
+
 MELEE WEAPONS
 A
 WS

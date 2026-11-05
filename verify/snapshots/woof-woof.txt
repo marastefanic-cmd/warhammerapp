@@ -235,11 +235,11 @@ APPLIES TOWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Do
 
 START OF THE BATTLE AND THE BATTLE ROUNDS
 START OF THE BATTLE
-Harbingers of Dread · Chaos Knights army rule
+Deathly Terror from the start; pick one more Dread ability (or roll two) at the start of rounds 1, 3 and 5: Despair; Doom; Darkness; Dismay; Delirium; Dominion AI (Harbingers of Dread) · Chaos Knights army rule
 USES PER BATTLE
 NEW GAME
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -336,11 +336,11 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-The target within range of an objective marker: [IGNORES COVER] (Brigand)
-Own aura: Re-roll Wound rolls of 1 (Final Howl (Aura))
-If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+Ranged attacks vs a target on an objective: [IGNORES COVER] AI (Brigand)
+WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
 War Dog Brigand
 1 of 4
 Avenger chaincannon
@@ -366,11 +366,11 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-The target within range of an objective marker: [IGNORES COVER] (Brigand)
-If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+Ranged attacks vs a target on an objective: [IGNORES COVER] AI (Brigand)
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 War Dog Brigand
 2–4 of 4
 ×3 units
@@ -397,11 +397,11 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-The target within range of an objective marker: [IGNORES COVER] (Brigand)
-If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+Ranged attacks vs a target on an objective: [IGNORES COVER] AI (Brigand)
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 War Dog Executioner
 Snarling Rivalry
 ×3 units
@@ -421,11 +421,11 @@ War Dog autocannon×2
 -1
 3
 IGNORES COVER
-The target Below Half-strength: +1 to Hit rolls (Executioner)
-If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+vs Below Half-strength targets: +1 to Hit rolls AI (Executioner)
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 War Dog Karnivore
 Panoply of the Cursed Knights
 Diabolus heavy stubber
@@ -436,10 +436,10 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 War Dog Karnivore
 ×5 units
 Diabolus heavy stubber
@@ -450,10 +450,10 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 War Dog Brigand
@@ -465,12 +465,12 @@ Armoured feet
 6
 0
 1
-Own aura: Re-roll Wound rolls of 1 (Final Howl (Aura))
-If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
 STRATAGEMS · HOUNDPACK LANCE
-1CP Hungry for Combat: not counted here: see the rule
+1CP Hungry for Combat: in the Fight phase, 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+ AI
 War Dog Brigand
 1 of 4
 Armoured feet
@@ -479,12 +479,12 @@ Armoured feet
 6
 0
 1
-If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 STRATAGEMS · HOUNDPACK LANCE
-1CP Hungry for Combat: not counted here: see the rule
+1CP Hungry for Combat: in the Fight phase, 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+ AI
 War Dog Brigand
 2–4 of 4
 ×3 units
@@ -494,12 +494,12 @@ Armoured feet
 6
 0
 1
-If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 STRATAGEMS · HOUNDPACK LANCE
-1CP Hungry for Combat: not counted here: see the rule
+1CP Hungry for Combat: in the Fight phase, 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+ AI
 War Dog Executioner
 Snarling Rivalry
 ×3 units
@@ -509,13 +509,13 @@ Armoured feet
 6
 0
 1
-The target Below Half-strength: +1 to Hit rolls (Executioner)
-If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+vs Below Half-strength targets: +1 to Hit rolls AI (Executioner)
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 STRATAGEMS · HOUNDPACK LANCE
-1CP Hungry for Combat: not counted here: see the rule
+1CP Hungry for Combat: in the Fight phase, 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+ AI
 War Dog Karnivore
 Panoply of the Cursed Knights
 
@@ -535,12 +535,12 @@ Slaughterclaw
 -3
 D6+2
 SUSTAINED HITS 1
-If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 STRATAGEMS · HOUNDPACK LANCE
-1CP Hungry for Combat: not counted here: see the rule
+1CP Hungry for Combat: in the Fight phase, 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+ AI
 War Dog Karnivore
 ×5 units
 
@@ -560,12 +560,12 @@ Slaughterclaw
 -3
 D6+2
 SUSTAINED HITS 1
-If (see the rule): −3 OC, −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 STRATAGEMS · HOUNDPACK LANCE
-1CP Hungry for Combat: not counted here: see the rule
+1CP Hungry for Combat: in the Fight phase, 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+ AI
 
 ######## abilities · MELEE Abilities
 War Dog Brigand
@@ -1824,37 +1824,37 @@ HOUNDPACK LANCE
 CP
 AI
 Cunning Hunter
-Until the end of the turn, your unit can shoot and declare a charge in a turn in which it Fell Back.
+after a WAR DOG Falls Back: can shoot and charge
 Your Movement Any unit
 1
 CP
 AI
 Harrying Hounds
-An enemy unit just ended a Normal, Advance or Fall Back move within 8" of your unit: your unit can make a Normal move of up to 6".
+an enemy ends a move within 8": a WAR DOG makes a 6" Normal move
 Their Movement Any unit
 2
 CP
 AI
 Vox-howl
-Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
+once per turn: enemies within 6" take a Battle-shock test; Battle-shocked WAR DOG units within 6" that pass a Leadership test recover
 Start of Shoot/Fight War Dog Brigand ×2, War Dog Karnivore
 1
 CP
 AI
 Animalistic Rage
-Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.
+when a WAR DOG that has not been selected to attack this phase is destroyed: that unit shoots or fights the enemy unit that destroyed it, then Deadly Demise
 Their Shoot · Fight Any unit
 1
 CP
 AI
 Hungry for Combat
-Two or more of your WAR DOG units within Engagement Range of the same enemy unit: until the end of the phase, they can only target one enemy unit within Engagement Range of them, but their attacks score a Critical Hit on an unmodified hit roll of 5+.
+2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+
 Start of Fight Any unit
 1
 CP
 AI
 Encircling Pack
-Your unit wholly within 12" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
+at the end of the phase: a WAR DOG wholly within 12" of an edge and not engaged goes into Strategic Reserves
 End of their Fight Any unit
 HUNTING WARPACK
 3
@@ -1862,19 +1862,19 @@ HUNTING WARPACK
 CP
 AI
 Leash of the Masters
-Your unit has shot: those attacks do not prevent it from being eligible to start an action.
+after a WAR DOG shoots: this unit can still start an action
 Your Shooting Any unit
 1
 CP
 AI
 Stalking Focus
-An enemy unit targets your unit within range of an objective: ranged attacks that target your unit have -1 AP until that enemy unit has attacked.
+when a WAR DOG on an objective is shot: ranged attacks against this unit get −1 AP
 Their Shooting Any unit
 1
 CP
 AI
 Insensate Bloodthirst
-An enemy unit targets your unit in the Fight phase: your unit has Feel No Pain 5+.
+when a WAR DOG is targeted: Feel No Pain 5+
 Fight Any unit
 CORE STRATAGEMS
 10
@@ -1882,61 +1882,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement Any unit
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge Any unit
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight War Dog Brigand ×2, War Dog Karnivore
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting No unit in this list can use it (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2317,20 +2317,20 @@ War Dog Brigand
 6
 5+*
 
-Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+Deathly Terror: enemies within 9": −1 Ld (−1 more if Despair is active) AI (Harbingers of Dread)
 
 WHEN TARGETED
 4
-Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-*Invulnerable Save: 5+ invulnerable save against ranged attacks
-1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
-1CP Stalking Focus: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): AP worsened by 1
+If Darkness is active: Stealth AI (Harbingers of Dread)
+5+ invulnerable save vs ranged attacks AI (*Invulnerable Save)
+1CP Insensate Bloodthirst: in the Fight phase, when a WAR DOG is targeted: Feel No Pain 5+ AI
+1CP Stalking Focus: in your opponent’s Shooting phase, when a WAR DOG on an objective is shot: ranged attacks against this unit get −1 AP AI
 DAMAGED 1-5 W
-−3 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, SUBTRACT 3 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-Own aura: Re-roll Wound rolls of 1 (Final Howl (Aura))
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 RANGED WEAPONS
 Range
 A
@@ -2361,7 +2361,7 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-The target within range of an objective marker: [IGNORES COVER] (Brigand)
+Ranged attacks vs a target on an objective: [IGNORES COVER] AI (Brigand)
 MELEE WEAPONS
 A
 WS
@@ -2375,7 +2375,7 @@ Armoured feet
 0
 1
 STRATAGEMS · HOUNDPACK LANCE
-1CP Hungry for Combat: not counted here: see the rule
+1CP Hungry for Combat: in the Fight phase, 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+ AI
 ABILITIES
 *Invulnerable Save
 
@@ -2452,20 +2452,20 @@ War Dog Brigand
 6
 5+*
 
-Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+Deathly Terror: enemies within 9": −1 Ld (−1 more if Despair is active) AI (Harbingers of Dread)
 
 WHEN TARGETED
 4
-Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-*Invulnerable Save: 5+ invulnerable save against ranged attacks
-1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
-1CP Stalking Focus: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): AP worsened by 1
+If Darkness is active: Stealth AI (Harbingers of Dread)
+5+ invulnerable save vs ranged attacks AI (*Invulnerable Save)
+1CP Insensate Bloodthirst: in the Fight phase, when a WAR DOG is targeted: Feel No Pain 5+ AI
+1CP Stalking Focus: in your opponent’s Shooting phase, when a WAR DOG on an objective is shot: ranged attacks against this unit get −1 AP AI
 DAMAGED 1-5 W
-−3 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, SUBTRACT 3 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 RANGED WEAPONS
 Range
 A
@@ -2496,7 +2496,7 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-The target within range of an objective marker: [IGNORES COVER] (Brigand)
+Ranged attacks vs a target on an objective: [IGNORES COVER] AI (Brigand)
 MELEE WEAPONS
 A
 WS
@@ -2510,7 +2510,7 @@ Armoured feet
 0
 1
 STRATAGEMS · HOUNDPACK LANCE
-1CP Hungry for Combat: not counted here: see the rule
+1CP Hungry for Combat: in the Fight phase, 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+ AI
 ABILITIES
 *Invulnerable Save
 
@@ -2580,20 +2580,20 @@ War Dog Brigand
 6
 5+*
 
-Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+Deathly Terror: enemies within 9": −1 Ld (−1 more if Despair is active) AI (Harbingers of Dread)
 
 WHEN TARGETED
 4
-Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-*Invulnerable Save: 5+ invulnerable save against ranged attacks
-1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
-1CP Stalking Focus: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): AP worsened by 1
+If Darkness is active: Stealth AI (Harbingers of Dread)
+5+ invulnerable save vs ranged attacks AI (*Invulnerable Save)
+1CP Insensate Bloodthirst: in the Fight phase, when a WAR DOG is targeted: Feel No Pain 5+ AI
+1CP Stalking Focus: in your opponent’s Shooting phase, when a WAR DOG on an objective is shot: ranged attacks against this unit get −1 AP AI
 DAMAGED 1-5 W
-−3 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, SUBTRACT 3 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 RANGED WEAPONS
 Range
 A
@@ -2624,7 +2624,7 @@ Diabolus heavy stubber
 0
 1
 RAPID FIRE 3
-The target within range of an objective marker: [IGNORES COVER] (Brigand)
+Ranged attacks vs a target on an objective: [IGNORES COVER] AI (Brigand)
 MELEE WEAPONS
 A
 WS
@@ -2638,7 +2638,7 @@ Armoured feet
 0
 1
 STRATAGEMS · HOUNDPACK LANCE
-1CP Hungry for Combat: not counted here: see the rule
+1CP Hungry for Combat: in the Fight phase, 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+ AI
 ABILITIES
 *Invulnerable Save
 
@@ -2706,21 +2706,21 @@ War Dog Executioner
 6
 5+*
 
-Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+Deathly Terror: enemies within 9": −1 Ld (−1 more if Despair is active) AI (Harbingers of Dread)
 
 WHEN TARGETED
 4
-Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-*Invulnerable Save: 5+ invulnerable save against ranged attacks
-1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
-1CP Stalking Focus: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): AP worsened by 1
+If Darkness is active: Stealth AI (Harbingers of Dread)
+5+ invulnerable save vs ranged attacks AI (*Invulnerable Save)
+1CP Insensate Bloodthirst: in the Fight phase, when a WAR DOG is targeted: Feel No Pain 5+ AI
+1CP Stalking Focus: in your opponent’s Shooting phase, when a WAR DOG on an objective is shot: ranged attacks against this unit get −1 AP AI
 DAMAGED 1-5 W
-−3 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, SUBTRACT 3 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-The target Below Half-strength: +1 to Hit rolls (Executioner)
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+vs Below Half-strength targets: +1 to Hit rolls AI (Executioner)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 RANGED WEAPONS
 Range
 A
@@ -2757,7 +2757,7 @@ Armoured feet
 0
 1
 STRATAGEMS · HOUNDPACK LANCE
-1CP Hungry for Combat: not counted here: see the rule
+1CP Hungry for Combat: in the Fight phase, 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+ AI
 ABILITIES
 *Invulnerable Save
 
@@ -2828,21 +2828,21 @@ War Dog Karnivore
 6
 5+*
 
-Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+Deathly Terror: enemies within 9": −1 Ld (−1 more if Despair is active) AI (Harbingers of Dread)
 
 WHEN TARGETED
 5
-Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-*Invulnerable Save: 5+ invulnerable save against ranged attacks
-Panoply of the Cursed Knights: AP worsened by 1
-1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
-1CP Stalking Focus: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): AP worsened by 1
+If Darkness is active: Stealth AI (Harbingers of Dread)
+5+ invulnerable save vs ranged attacks AI (*Invulnerable Save)
+attacks against the bearer get −1 AP AI (Panoply of the Cursed Knights)
+1CP Insensate Bloodthirst: in the Fight phase, when a WAR DOG is targeted: Feel No Pain 5+ AI
+1CP Stalking Focus: in your opponent’s Shooting phase, when a WAR DOG on an objective is shot: ranged attacks against this unit get −1 AP AI
 DAMAGED 1-5 W
-−3 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, SUBTRACT 3 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 RANGED WEAPONS
 Range
 A
@@ -2882,7 +2882,7 @@ Slaughterclaw
 D6+2
 SUSTAINED HITS 1
 STRATAGEMS · HOUNDPACK LANCE
-1CP Hungry for Combat: not counted here: see the rule
+1CP Hungry for Combat: in the Fight phase, 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+ AI
 ABILITIES
 *Invulnerable Save
 
@@ -2955,20 +2955,20 @@ War Dog Karnivore
 6
 5+*
 
-Enemy units’ Ld: not counted here: see the rule (Harbingers of Dread)
+Deathly Terror: enemies within 9": −1 Ld (−1 more if Despair is active) AI (Harbingers of Dread)
 
 WHEN TARGETED
 4
-Harbingers of Dread: Darkness · 3: Stealth (until the end of the battle)
-*Invulnerable Save: 5+ invulnerable save against ranged attacks
-1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+
-1CP Stalking Focus: Your opponent’s Shooting phase, Ranged attacks, If (see the rule): AP worsened by 1
+If Darkness is active: Stealth AI (Harbingers of Dread)
+5+ invulnerable save vs ranged attacks AI (*Invulnerable Save)
+1CP Insensate Bloodthirst: in the Fight phase, when a WAR DOG is targeted: Feel No Pain 5+ AI
+1CP Stalking Focus: in your opponent’s Shooting phase, when a WAR DOG on an objective is shot: ranged attacks against this unit get −1 AP AI
 DAMAGED 1-5 W
-−3 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, SUBTRACT 3 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-Doom · 2 · “if the target of that attack is Battle-shocked”: +1 to Wound rolls (Harbingers of Dread)
-not counted here: see the rule (Marked Prey)
-Within 6" of War Dog Brigand: Re-roll Wound rolls of 1 (Final Howl (Aura))
+If Doom is active: +1 to Wound rolls vs Battle-shocked targets AI (Harbingers of Dread)
+Pick an enemy unit at the start of your Command phase: WAR DOG attacks vs that unit gain [SUSTAINED HITS 1] if it is visible to the attacker AI (Marked Prey)
+Granted by: War Dog Brigand (enhancement) - WAR DOG models within 6" of the bearer: re-roll Wound rolls of 1 AI (Final Howl (Aura))
 RANGED WEAPONS
 Range
 A
@@ -3008,7 +3008,7 @@ Slaughterclaw
 D6+2
 SUSTAINED HITS 1
 STRATAGEMS · HOUNDPACK LANCE
-1CP Hungry for Combat: not counted here: see the rule
+1CP Hungry for Combat: in the Fight phase, 2+ WAR DOG units engaged with one enemy: only target that unit, Critical Hits on 5+ AI
 ABILITIES
 *Invulnerable Save
 

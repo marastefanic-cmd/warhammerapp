@@ -169,15 +169,15 @@ Neurolictor Infiltrators
 Von Ryan’s Leapers Infiltrators
 START OF THE BATTLE AND THE BATTLE ROUNDS
 FIRST ROUND
-Hyper-adaptations · Invasion Fleet
+Picked at battle start, one of: Swarming Instincts; Hyper-aggression; Hive Predators AI (Hyper-adaptations) · Invasion Fleet
 USES PER BATTLE
 NEW GAME
 RULES
 Shadow in the Warp · Tyranids army rule
 ABILITIES
-Resilient Organism · Tyrannofex
+Once per battle: one attack's Damage becomes 0 AI (Resilient Organism) · Tyrannofex
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -337,9 +337,9 @@ D6+3
 -1
 2
 PSYCHIC, TORRENT
-not counted here: see the rule (Hyper-adaptations)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Biovores
 Spore mine launcher
 48"
@@ -349,9 +349,9 @@ D3
 -1
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
-not counted here: see the rule (Hyper-adaptations)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Maleceptor
 Psychic overload
 18"
@@ -361,10 +361,10 @@ D6+3
 -2
 3
 BLAST, PSYCHIC
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Hyper-adaptations)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Psychophage
 Psychoclastic torrent
 12"
@@ -374,9 +374,9 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-not counted here: see the rule (Hyper-adaptations)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Tyrannofex
 Acid spray
 18"
@@ -393,16 +393,13 @@ Stinger salvoes
 5
 0
 1
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Hyper-adaptations)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 The Red Terror
-
-Fights with both: Scything talons, plus Gaping maw on top (extra attacks).
-
 Gaping maw
 1
 2+
@@ -416,13 +413,13 @@ Scything talons
 7
 -2
 2
-The target: INFANTRY, MOUNTED or BEASTS: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Gaping maw: vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed AI (Swallow Whole)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 The Swarmlord
 Warlord
 + Tyrant Guard
@@ -441,18 +438,15 @@ Scything talons and rending claws×6
 5
 -1
 1
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Hive Tyrant
 + Tyrant Guard
 HIVE TYRANT
-
-Fights with both: Monstrous bonesword and lash whip, plus Monstrous scything talons on top (extra attacks).
-
 Monstrous bonesword and lash whip
 6
 2+
@@ -474,18 +468,18 @@ Scything talons and rending claws×6
 5
 -1
 1
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Tyranid Prime with Lash Whip
 + Hormagaunts
 ×2 units
 TYRANID PRIME WITH LASH WHIP
 
-Pick one to fight with: Rending claw or Scything talons, plus Lash whip on top (extra attacks).
+Pick one to fight with: Rending claw or Scything talons.
 
 Rending claw
 4
@@ -516,12 +510,12 @@ Hormagaunt talons×20
 -1
 1
 SUSTAINED HITS 1
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Biovores
 Chitin-barbed limbs
 2
@@ -529,12 +523,12 @@ Chitin-barbed limbs
 5
 0
 1
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Neurolictor
 ×2 units
 Piercing claws and talons
@@ -544,12 +538,12 @@ Piercing claws and talons
 -2
 1
 PRECISION
-not counted here: see the rule (Psychological Saboteur)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Von Ryan’s Leapers
 Leaper’s talons×3
 6
@@ -557,12 +551,12 @@ Leaper’s talons×3
 5
 -1
 1
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Maleceptor
 Massive scything talons
 ➤strike
@@ -577,13 +571,13 @@ D6+1
 7
 -1
 2
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Psychophage
 Talons and betentacled maw
 6
@@ -592,14 +586,13 @@ Talons and betentacled maw
 -2
 2
 ANTI-PSYKER 4+, DEVASTATING WOUNDS
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
-The target below its Starting Strength: +1 to Hit rolls (Feeding Frenzy)
-The target below its Starting Strength · “If that target is also Below Half-strength”: +1 to Wound rolls (Feeding Frenzy)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
++1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
+vs targets below Starting Strength: +1 to Hit rolls in melee; also +1 to Wound rolls if Below Half-strength AI (Feeding Frenzy)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Tyrannofex
 Powerful limbs
 4
@@ -607,13 +600,13 @@ Powerful limbs
 8
 0
 2
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 
 ######## abilities · MELEE Abilities
 The Red Terror
@@ -1783,37 +1776,37 @@ INVASION FLEET
 CP
 AI
 Predatory Imperative
-Your Command phase, up to two TYRANIDS units from your army within Synapse Range of your army (or one other TYRANIDS unit): select one more Hyper-adaptation, active for them until the start of your next Command phase; not the one selected at the start of the first battle round.
+2 targets: one more Hyper-adaptation for them (not the one chosen in round 1)
 Your Command Any unit
 1
 CP
 AI
 Endless Swarm
-Your Command phase, up to two ENDLESS MULTITUDE units from your army within Synapse Range of your army (or one other ENDLESS MULTITUDE unit): return up to D3+3 destroyed models to each of them.
+2 targets: ENDLESS MULTITUDE units get back up to D3+3 models each
 Your Command Tyranid Prime with Lash Whip + Hormagaunts ×2
 1
 CP
 AI
 Rapid Regeneration
-Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your TYRANIDS unit as a target: until the end of the phase, its models have Feel No Pain 6+ (5+ if it is within Synapse Range of your army).
+Feel No Pain 6+ (5+ in Synapse Range)
 Their Shoot · Fight Any unit
 2
 CP
 AI
 Adrenal Surge
-Fight phase, up to two TYRANIDS units from your army within Synapse Range of your army and eligible to fight (or one other eligible TYRANIDS unit): until the end of the phase, their attacks score a Critical Hit on an unmodified Hit roll of 5+.
+2 targets, Critical Hits on 5+
 Fight Any unit
 1
 CP
 AI
 Death Frenzy
-Fight phase, just after an enemy unit selected your TYRANIDS unit as a target: until the end of the phase, each time a model in it that has not fought this phase is destroyed, on a 4+ it is not removed yet: it can fight after the attacking unit has finished its attacks, then it is removed from play.
+when targeted: a destroyed model that has not fought this phase fights on a 4+, then is removed
 Fight Any unit
 1
 CP
 AI
 Overrun
-Fight phase, just before your TYRANIDS unit Consolidates: until the end of the phase, its models can move an additional 3" when it Consolidates, if it can end that move within Engagement Range of an enemy unit; within Synapse Range of your army and not within Engagement Range of any enemy unit, it can make a Normal move of up to 6" instead.
+consolidate 3" more if this unit ends engaged; in Synapse Range and not engaged: a 6" Normal move instead
 Fight Any unit
 CORE STRATAGEMS
 10
@@ -1821,61 +1814,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement The Swarmlord + Tyrant Guard, Biovores, Maleceptor, Psychophage, Tyrannofex
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting Psychophage
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge The Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Maleceptor, Psychophage, Tyrannofex
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight The Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Tyranid Prime with Lash Whip + Hormagaunts ×2
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2204,20 +2197,16 @@ The Red Terror
 3
 –
 WHEN TARGETED
-4
-Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
-Encephalic Diffusion: not counted here: see the rule (Maleceptor)
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
+3
+Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: −1 to Hit rolls AI (Psychological Saboteur)
+Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
+1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Scything talons, plus Gaping maw on top (extra attacks).
-
 Gaping maw
 1
 2+
@@ -2231,13 +2220,13 @@ Scything talons
 7
 -2
 2
-The target: INFANTRY, MOUNTED or BEASTS: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Gaping maw: vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed AI (Swallow Whole)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Swallow Whole
 
@@ -2310,15 +2299,14 @@ Tyrant Guard×6
 1
 –
 WHEN TARGETED
-5
-TYRANT GUARD Guardian Organism: While a CHARACTER model is leading it: CHARACTER models: Feel No Pain 5+
-Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
-Encephalic Diffusion: not counted here: see the rule (Maleceptor)
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
+4
+TYRANT GUARD A CHARACTER leading this unit has Feel No Pain 5+ AI (Guardian Organism)
+Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: −1 to Hit rolls AI (Psychological Saboteur)
+Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
+1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 ALL ATTACKS · WHOLE UNIT
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 RANGED WEAPONS
 Range
 A
@@ -2335,7 +2323,7 @@ D6+3
 2
 PSYCHIC, TORRENT
 WHOLE UNIT
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -2358,10 +2346,10 @@ Scything talons and rending claws×6
 -1
 1
 WHOLE UNIT
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Hive Commander
 - The Swarmlord
@@ -2458,12 +2446,11 @@ Tyrant Guard×6
 1
 –
 WHEN TARGETED
-5
-TYRANT GUARD Guardian Organism: While a CHARACTER model is leading it: CHARACTER models: Feel No Pain 5+
-Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
-Encephalic Diffusion: not counted here: see the rule (Maleceptor)
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
+4
+TYRANT GUARD A CHARACTER leading this unit has Feel No Pain 5+ AI (Guardian Organism)
+Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: −1 to Hit rolls AI (Psychological Saboteur)
+Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
+1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 MELEE WEAPONS
 A
 WS
@@ -2471,9 +2458,6 @@ S
 AP
 D
 HIVE TYRANT
-
-Fights with both: Monstrous bonesword and lash whip, plus Monstrous scything talons on top (extra attacks).
-
 Monstrous bonesword and lash whip
 6
 2+
@@ -2496,12 +2480,12 @@ Scything talons and rending claws×6
 -1
 1
 WHOLE UNIT
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Will of the Hive Mind
 - Hive Tyrant
@@ -2586,11 +2570,10 @@ Hormagaunts×20
 2
 –
 WHEN TARGETED
-4
-Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
-Encephalic Diffusion: not counted here: see the rule (Maleceptor)
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
+3
+Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: −1 to Hit rolls AI (Psychological Saboteur)
+Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
+1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 MELEE WEAPONS
 A
 WS
@@ -2599,7 +2582,7 @@ AP
 D
 TYRANID PRIME WITH LASH WHIP
 
-Pick one to fight with: Rending claw or Scything talons, plus Lash whip on top (extra attacks).
+Pick one to fight with: Rending claw or Scything talons.
 
 Rending claw
 4
@@ -2631,12 +2614,12 @@ Hormagaunt talons×20
 1
 SUSTAINED HITS 1
 WHOLE UNIT
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Alpha Warrior
 - Tyranid Prime with Lash Whip
@@ -2711,14 +2694,13 @@ Biovore
 1
 –
 WHEN TARGETED
-4
-Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
-Encephalic Diffusion: not counted here: see the rule (Maleceptor)
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
+3
+Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: −1 to Hit rolls AI (Psychological Saboteur)
+Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
+1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 ALL ATTACKS
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 RANGED WEAPONS
 Range
 A
@@ -2734,7 +2716,7 @@ D3
 -1
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -2747,10 +2729,10 @@ Chitin-barbed limbs
 5
 0
 1
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Seed Spore Mines
 Once per turn
@@ -2804,12 +2786,13 @@ Neurolictor
 7+
 1
 4+
+
+Battle-shocked enemies within 12" of the Neurolictor: −1 to Hit rolls AI (Psychological Saboteur)
+
 WHEN TARGETED
-4
-Psychological Saboteur: If (see the rule): −1 to Hit rolls
-Encephalic Diffusion: not counted here: see the rule (Maleceptor)
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
+2
+Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
+1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 MELEE WEAPONS
 A
 WS
@@ -2823,12 +2806,12 @@ Piercing claws and talons
 -2
 1
 PRECISION
-not counted here: see the rule (Psychological Saboteur)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Feeder Tendrils
 Their Move · Your Shoot · Fight
@@ -2898,11 +2881,10 @@ Von Ryan’s Leaper×3
 1
 6+
 WHEN TARGETED
-4
-Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
-Encephalic Diffusion: not counted here: see the rule (Maleceptor)
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
+3
+Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: −1 to Hit rolls AI (Psychological Saboteur)
+Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
+1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 MELEE WEAPONS
 A
 WS
@@ -2915,12 +2897,12 @@ Leaper’s talons×3
 5
 -1
 1
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Pouncing Leap
 Their Charge
@@ -2975,17 +2957,16 @@ Maleceptor
 4
 4+
 WHEN TARGETED
-4
-Encephalic Diffusion: not counted here: see the rule
-Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
+3
+Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
+Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: −1 to Hit rolls AI (Psychological Saboteur)
+1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 DAMAGED 1-5 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 RANGED WEAPONS
 Range
 A
@@ -3001,7 +2982,7 @@ D6+3
 -2
 3
 BLAST, PSYCHIC
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -3021,10 +3002,10 @@ D6+1
 7
 -1
 2
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Encephalic Diffusion
 Their Move · Your Shoot · Fight
@@ -3078,15 +3059,14 @@ Psychophage
 3
 –
 WHEN TARGETED
-5
+4
 Feel No Pain 5+
-Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
-Encephalic Diffusion: not counted here: see the rule (Maleceptor)
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
+Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: −1 to Hit rolls AI (Psychological Saboteur)
+Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
+1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 ALL ATTACKS
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 RANGED WEAPONS
 Range
 A
@@ -3102,7 +3082,7 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -3116,12 +3096,11 @@ Talons and betentacled maw
 -2
 2
 ANTI-PSYKER 4+, DEVASTATING WOUNDS
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
-The target below its Starting Strength: +1 to Hit rolls (Feeding Frenzy)
-The target below its Starting Strength · “If that target is also Below Half-strength”: +1 to Wound rolls (Feeding Frenzy)
-not counted here: see the rule (Synapse)
+In Synapse Range: +1 S in melee AI (Synapse)
++1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
+vs targets below Starting Strength: +1 to Hit rolls in melee; also +1 to Wound rolls if Below Half-strength AI (Feeding Frenzy)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Bio-stimulus
 Your Shoot/Fight
@@ -3182,17 +3161,16 @@ Tyrannofex
 5
 –
 WHEN TARGETED
-5
-Resilient Organism: Once per battle: Damage 0
-Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
-Encephalic Diffusion: not counted here: see the rule (Maleceptor)
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
+4
+Once per battle: one attack's Damage becomes 0 AI (Resilient Organism)
+Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: −1 to Hit rolls AI (Psychological Saboteur)
+Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
+1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 DAMAGED 1-5 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-not counted here: see the rule (Hyper-adaptations)
-not counted here: see the rule (Neurolictor) (Psychological Saboteur)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 RANGED WEAPONS
 Range
 A
@@ -3215,7 +3193,7 @@ Stinger salvoes
 5
 0
 1
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -3228,10 +3206,10 @@ Powerful limbs
 8
 0
 2
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · INVASION FLEET
-2CP Adrenal Surge: not counted here: see the rule
+2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Resilient Organism
 Once per battle
@@ -3284,11 +3262,10 @@ Spore Mine
 0
 –
 WHEN TARGETED
-4
-Psychological Saboteur: If (see the rule): −1 to Hit rolls (Neurolictor)
-Encephalic Diffusion: not counted here: see the rule (Maleceptor)
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 6+
-1CP Rapid Regeneration: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 5+
+3
+Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: −1 to Hit rolls AI (Psychological Saboteur)
+Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
+1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 ABILITIES
 Bio-minefield
 Their Movement

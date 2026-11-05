@@ -265,13 +265,13 @@ SCOUTS
 Beasts of Nurgle Scouts 6"
 START OF THE BATTLE AND THE BATTLE ROUNDS
 FIRST ROUND
-Prey of the Blood God · Karanak
+Pick a target at start of round 1 (a new one when it is destroyed): this unit re-rolls Wound rolls vs that unit in melee AI (Prey of the Blood God) · Karanak
 USES PER BATTLE
 NEW GAME
 ABILITIES
-Unholy Vigour · Daemon Prince of Chaos
+Once per battle, at the start of any phase, if used: this model has a 3+ invulnerable save AI (Unholy Vigour) · Daemon Prince of Chaos
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -441,7 +441,7 @@ D6
 0
 1
 IGNORES COVER, TORRENT
-Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Granted by: Daemon Prince of Chaos (enhancement) - Within 6" of the bearer: [LANCE] AI (Slaughterthirst (Aura))
 Bloodthirster
 Gateway Unto Damnation
 Hellfire breath
@@ -452,7 +452,7 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-6 wounds remaining)
 Daemon Prince of Chaos
 Slaughterthirst (Aura)
 Infernal cannon
@@ -479,9 +479,9 @@ Slaughter and Carnage
 8
 -2
 2
-Own aura: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 Karanak
 + Flesh Hounds
 KARANAK
@@ -499,11 +499,11 @@ Gore-drenched fangs×5
 5
 -1
 1
-The target is the enemy unit selected: Re-roll Wound rolls (Prey of the Blood God)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+Granted by: Karanak - Pick a target at start of round 1 (a new one when it is destroyed): this unit re-rolls Wound rolls vs that unit in melee AI (Prey of the Blood God)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Daemon Prince of Chaos (enhancement) - Within 6" of the bearer: [LANCE] AI (Slaughterthirst (Aura))
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 Skulltaker
 + Bloodletters
 Bane-Forged Weapons
@@ -523,11 +523,11 @@ Hellblade×10
 -2
 2
 DEVASTATING WOUNDS
-The target: CHARACTER: Skulltaker Re-roll Hit rolls, Re-roll Wound rolls (Skulls for Khorne)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+Granted by: Skulltaker - Skulltaker only: vs CHARACTER: re-roll Hit rolls and Wound rolls AI (Skulls for Khorne)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Daemon Prince of Chaos (enhancement) - Within 6" of the bearer: [LANCE] AI (Slaughterthirst (Aura))
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 Bloodthirster
 Gateway Unto Damnation
 Great axe of Khorne
@@ -543,10 +543,10 @@ D6+2
 10
 -2
 2
-Own aura: +1 to Hit rolls (Daemon Lord of Khorne)
-If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-6 wounds remaining)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 Daemon Prince of Chaos
 Slaughterthirst (Aura)
 Hellforged weapons
@@ -562,14 +562,11 @@ Hellforged weapons
 8
 0
 1
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 Rendmaster on Blood Throne
 ×2 units
-
-Fights with both: Blade of blood, plus Attendant’s hellblades on top (extra attacks).
-
 Attendant’s hellblades
 4
 3+
@@ -583,11 +580,11 @@ Blade of blood
 6
 -2
 3
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
-The target: CHARACTER or MONSTER: Re-roll Wound rolls (Champion Slayer)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
+vs CHARACTER or MONSTER: re-roll Wound rolls in melee; each such enemy unit this model destroys: this model regains up to D6 lost wounds AI (Champion Slayer)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Daemon Prince of Chaos (enhancement) - Within 6" of the bearer: [LANCE] AI (Slaughterthirst (Aura))
 Bloodmaster
 + Bloodletters
 Bane-Forged Weapons
@@ -605,18 +602,15 @@ Hellblade×10
 6
 -2
 2
-While leading a unit: +1 to Wound rolls (Bloodmaster)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+Granted by: Bloodmaster - While leading: +1 to Wound rolls AI (Bloodmaster)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Daemon Prince of Chaos (enhancement) - Within 6" of the bearer: [LANCE] AI (Slaughterthirst (Aura))
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 Skullmaster
 Brazenmaw
 + Bloodcrushers
 SKULLMASTER
-
-Fights with both: Blade of blood, plus Juggernaut’s bladed horn on top (extra attacks).
-
 Blade of blood
 5
 2+
@@ -631,9 +625,6 @@ Juggernaut’s bladed horn
 1
 EXTRA ATTACKS, LANCE
 BLOODCRUSHERS
-
-Fights with both: Hellblade, plus Juggernaut’s bladed horn on top (extra attacks).
-
 Hellblade×3
 2
 3+
@@ -647,12 +638,12 @@ Juggernaut’s bladed horn×3
 -1
 1
 EXTRA ATTACKS, LANCE
-not counted here: see the rule (Skullmaster’s Fury)
+Granted by: Skullmaster - While leading, if the led unit charged this turn: Juggernaut’s bladed horns gain [DEVASTATING WOUNDS] AI (Skullmaster’s Fury)
 Charged this turn: Juggernaut’s bladed horn +1 to Wound rolls (Lance)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Daemon Prince of Chaos (enhancement) - Within 6" of the bearer: [LANCE] AI (Slaughterthirst (Aura))
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 Beasts of Nurgle
 Putrid appendages
 6
@@ -2003,37 +1994,37 @@ BLOOD LEGION
 CP
 AI
 Gore‑hungry Onslaught
-Your Movement or Charge phase: until the end of the phase, models in your LEGIONES DAEMONICA KHORNE unit can move through terrain features.
+LEGIONES DAEMONICA KHORNE moves through terrain features
 Your Move/Charge All but Beasts of Nurgle
 2
 CP
 AI
 Fools’ Flight
-Your opponent’s Movement phase, an enemy unit ends a fall-back move: your unengaged LEGIONES DAEMONICA KHORNE unit within 6" of it declares a charge, selecting only enemy units that fell back this phase and are within the maximum distance.
+an enemy falls back: an unengaged LEGIONES DAEMONICA KHORNE unit within 6" charges that unit
 Their Movement All but Beasts of Nurgle
 1
 CP
 AI
 Skulls Beget Blood
-Your Shooting phase, your unengaged LEGIONES DAEMONICA KHORNE INFANTRY or MOUNTED unit that did not Fall Back this turn: select an enemy unit within 8" of and visible to it, not within Engagement Range of your army; roll six D6, 1 mortal wound for each 4+.
+unengaged KHORNE INFANTRY/MOUNTED, not Fell Back: six D6 vs an enemy within 8" not engaged with your army, 1 mortal wound per 4+
 Your Shooting Skulltaker + Bloodletters, Rendmaster on Blood Throne ×2, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers
 1
 CP
 AI
 Sheathed in Brass
-Your opponent’s Shooting phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA KHORNE unit it targeted: until the end of the phase, its models have a Save characteristic of 3+.
+when shot: Save 3+
 Their Shooting All but Beasts of Nurgle
 1
 CP
 AI
 Blood Begets Skulls
-Your Charge phase, your LEGIONES DAEMONICA KHORNE unit not yet selected to charge: until the end of the phase it can declare a charge in a turn in which it Advanced.
+LEGIONES DAEMONICA KHORNE can charge after Advancing
 Your Charge All but Beasts of Nurgle
 1
 CP
 AI
 Wrath Undeniable
-Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA KHORNE unit it targeted: until the end of the phase, each time a model in it is destroyed by a melee attack, if that model has not fought this phase, on a D6 of 4+ it is not removed; it can fight after the attacking unit has finished its attacks, then is removed.
+when targeted: each model destroyed by a melee attack, if it has not fought this phase, fights on a 4+ after the attacking unit, then is removed
 Fight All but Beasts of Nurgle
 WARPTIDE
 3
@@ -2041,19 +2032,19 @@ WARPTIDE
 CP
 AI
 Daemonic Infestation
-Your Command phase: your LEGIONES DAEMONICA BATTLELINE unit (not PINK HORRORS) heals 3 wounds.
+LEGIONES DAEMONICA BATTLELINE (not PINK HORRORS) heals 3 wounds
 Your Command Skulltaker + Bloodletters, Bloodmaster + Bloodletters
 1
 CP
 AI
 Soulseeing
-Start of your Shooting phase, your LEGIONES DAEMONICA BATTLELINE unit: one visible enemy unit within 12" of it has +6" detection range.
+one visible enemy within 12" of LEGIONES DAEMONICA BATTLELINE: +6" detection range
 Start of your Shooting Skulltaker + Bloodletters, Bloodmaster + Bloodletters
 1
 CP
 AI
 Incorporeal Entities
-Your opponent’s Shooting phase, an enemy unit targets your LEGIONES DAEMONICA BATTLELINE unit: ranged attacks that target it with a S greater than its T have -1 to wound rolls.
+when LEGIONES DAEMONICA BATTLELINE is shot, vs ranged attacks with S greater than this unit’s T: −1 to Wound rolls
 Their Shooting Skulltaker + Bloodletters, Bloodmaster + Bloodletters
 CORE STRATAGEMS
 10
@@ -2061,61 +2052,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement Skarbrand, Karanak + Flesh Hounds, Bloodthirster, Daemon Prince of Chaos
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge Skarbrand, Bloodthirster, Daemon Prince of Chaos
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight All but Beasts of Nurgle
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting No unit in this list can use it (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2494,11 +2485,11 @@ Skarbrand
 4+
 WHEN TARGETED
 3
-Prince of Darkness: Within 6" of Daemon Prince of Chaos: Stealth (Daemon Prince of Chaos)
-1CP Wrath Undeniable: not counted here: see the rule
-1CP Sheathed in Brass: Your opponent’s Shooting phase: Save characteristic of 3+
+Granted by: Daemon Prince of Chaos - LEGIONES DAEMONICA within 6" of the Daemon Prince of Chaos: Stealth AI (Prince of Darkness)
+1CP Wrath Undeniable: in the Fight phase, when targeted: each model destroyed by a melee attack, if it has not fought this phase, fights on a 4+ after the attacking unit, then is removed AI
+1CP Sheathed in Brass: in your opponent’s Shooting phase, when shot: Save 3+ AI
 DAMAGED 1-7 W
-SEE THE RULE
+WHILE THIS MODEL HAS 1-7 WOUNDS REMAINING, ADD 2 TO THE ATTACKS CHARACTERISTIC OF THIS MODEL’S SLAUGHTER AND CARNAGE.
 RANGED WEAPONS
 Range
 A
@@ -2533,9 +2524,9 @@ Slaughter and Carnage
 8
 -2
 2
-Own aura: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 ABILITIES
 Greater Daemon of Khorne
 
@@ -2618,13 +2609,13 @@ Flesh Hounds×5
 5+
 WHEN TARGETED
 5
-KARANAK Brass Collar of Bloody Vengeance: Feel No Pain 3+ against Psychic Attacks and mortal wounds
-FLESH HOUNDS Collar of Khorne: Feel No Pain 3+ against Psychic Attacks
-Prince of Darkness: Within 6" of Daemon Prince of Chaos: Stealth (Daemon Prince of Chaos)
-1CP Wrath Undeniable: not counted here: see the rule
-1CP Sheathed in Brass: Your opponent’s Shooting phase: Save characteristic of 3+
+Granted by: Karanak - Karanak only: Feel No Pain 3+ vs Psychic Attacks and mortal wounds AI (Brass Collar of Bloody Vengeance)
+FLESH HOUNDS Feel No Pain 3+ vs Psychic Attacks AI (Collar of Khorne)
+Granted by: Daemon Prince of Chaos - LEGIONES DAEMONICA within 6" of the Daemon Prince of Chaos: Stealth AI (Prince of Darkness)
+1CP Wrath Undeniable: in the Fight phase, when targeted: each model destroyed by a melee attack, if it has not fought this phase, fights on a 4+ after the attacking unit, then is removed AI
+1CP Sheathed in Brass: in your opponent’s Shooting phase, when shot: Save 3+ AI
 ALL ATTACKS · WHOLE UNIT
-Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Granted by: Daemon Prince of Chaos (enhancement) - Within 6" of the bearer: [LANCE] AI (Slaughterthirst (Aura))
 RANGED WEAPONS
 Range
 A
@@ -2672,10 +2663,10 @@ Gore-drenched fangs×5
 -1
 1
 WHOLE UNIT
-The target is the enemy unit selected: Re-roll Wound rolls (Prey of the Blood God)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+Granted by: Karanak - Pick a target at start of round 1 (a new one when it is destroyed): this unit re-rolls Wound rolls vs that unit in melee AI (Prey of the Blood God)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 ABILITIES
 Pack Leader
 - Karanak
@@ -2782,10 +2773,10 @@ Bloodletters×10
 5+
 WHEN TARGETED
 4
-Prince of Darkness: Within 6" of Daemon Prince of Chaos: Stealth (Daemon Prince of Chaos)
-1CP Wrath Undeniable: not counted here: see the rule
-1CP Sheathed in Brass: Your opponent’s Shooting phase: Save characteristic of 3+
-1CP Incorporeal Entities: Your opponent’s Shooting phase, Ranged attacks, The attack’s S greater than its T: −1 to Wound rolls
+Granted by: Daemon Prince of Chaos - LEGIONES DAEMONICA within 6" of the Daemon Prince of Chaos: Stealth AI (Prince of Darkness)
+1CP Wrath Undeniable: in the Fight phase, when targeted: each model destroyed by a melee attack, if it has not fought this phase, fights on a 4+ after the attacking unit, then is removed AI
+1CP Sheathed in Brass: in your opponent’s Shooting phase, when shot: Save 3+ AI
+1CP Incorporeal Entities: in your opponent’s Shooting phase, when LEGIONES DAEMONICA BATTLELINE is shot, vs ranged attacks with S greater than this unit’s T: −1 to Wound rolls AI
 MELEE WEAPONS
 A
 WS
@@ -2809,11 +2800,11 @@ Hellblade×10
 2
 DEVASTATING WOUNDS
 WHOLE UNIT
-The target: CHARACTER: Skulltaker Re-roll Hit rolls, Re-roll Wound rolls (Skulls for Khorne)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+Granted by: Skulltaker - Skulltaker only: vs CHARACTER: re-roll Hit rolls and Wound rolls AI (Skulls for Khorne)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Daemon Prince of Chaos (enhancement) - Within 6" of the bearer: [LANCE] AI (Slaughterthirst (Aura))
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 ABILITIES
 Lord of Decapitations
 - Skulltaker
@@ -2915,11 +2906,11 @@ Bloodthirster
 4+
 WHEN TARGETED
 3
-Prince of Darkness: Within 6" of Daemon Prince of Chaos: Stealth (Daemon Prince of Chaos)
-1CP Wrath Undeniable: not counted here: see the rule
-1CP Sheathed in Brass: Your opponent’s Shooting phase: Save characteristic of 3+
+Granted by: Daemon Prince of Chaos - LEGIONES DAEMONICA within 6" of the Daemon Prince of Chaos: Stealth AI (Prince of Darkness)
+1CP Wrath Undeniable: in the Fight phase, when targeted: each model destroyed by a melee attack, if it has not fought this phase, fights on a 4+ after the attacking unit, then is removed AI
+1CP Sheathed in Brass: in your opponent’s Shooting phase, when shot: Save 3+ AI
 DAMAGED 1-6 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-6 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 RANGED WEAPONS
 Range
 A
@@ -2954,9 +2945,9 @@ D6+2
 10
 -2
 2
-Own aura: +1 to Hit rolls (Daemon Lord of Khorne)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 ABILITIES
 Daemon Lord of Khorne
 Fight
@@ -3036,11 +3027,11 @@ Daemon Prince of Chaos
 4+
 WHEN TARGETED
 5
-Daemonic Lord: Within 3" of a friendly LEGIONES DAEMONICA INFANTRY unit: Lone Operative
-Prince of Darkness: Own aura: Stealth
-Unholy Vigour: Once per battle · If it uses this ability: 3+ invulnerable save
-1CP Wrath Undeniable: not counted here: see the rule
-1CP Sheathed in Brass: Your opponent’s Shooting phase: Save characteristic of 3+
+Within 3" of a LEGIONES DAEMONICA INFANTRY unit: Lone Operative AI (Daemonic Lord)
+LEGIONES DAEMONICA within 6" of the Daemon Prince of Chaos: Stealth AI (Prince of Darkness)
+once per battle, if used: 3+ invulnerable save AI (Unholy Vigour)
+1CP Wrath Undeniable: in the Fight phase, when targeted: each model destroyed by a melee attack, if it has not fought this phase, fights on a 4+ after the attacking unit, then is removed AI
+1CP Sheathed in Brass: in your opponent’s Shooting phase, when shot: Save 3+ AI
 RANGED WEAPONS
 Range
 A
@@ -3074,9 +3065,9 @@ Hellforged weapons
 8
 0
 1
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 ABILITIES
 Daemonic Allegiance
 Already in S
@@ -3164,18 +3155,15 @@ Rendmaster on Blood Throne
 4+
 WHEN TARGETED
 3
-Prince of Darkness: Within 6" of Daemon Prince of Chaos: Stealth (Daemon Prince of Chaos)
-1CP Wrath Undeniable: not counted here: see the rule
-1CP Sheathed in Brass: Your opponent’s Shooting phase: Save characteristic of 3+
+Granted by: Daemon Prince of Chaos - LEGIONES DAEMONICA within 6" of the Daemon Prince of Chaos: Stealth AI (Prince of Darkness)
+1CP Wrath Undeniable: in the Fight phase, when targeted: each model destroyed by a melee attack, if it has not fought this phase, fights on a 4+ after the attacking unit, then is removed AI
+1CP Sheathed in Brass: in your opponent’s Shooting phase, when shot: Save 3+ AI
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Blade of blood, plus Attendant’s hellblades on top (extra attacks).
-
 Attendant’s hellblades
 4
 3+
@@ -3189,11 +3177,11 @@ Blade of blood
 6
 -2
 3
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
-The target: CHARACTER or MONSTER: Re-roll Wound rolls (Champion Slayer)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
+Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
+vs CHARACTER or MONSTER: re-roll Wound rolls in melee; each such enemy unit this model destroys: this model regains up to D6 lost wounds AI (Champion Slayer)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Daemon Prince of Chaos (enhancement) - Within 6" of the bearer: [LANCE] AI (Slaughterthirst (Aura))
 ABILITIES
 Blood Throne
 Fight
@@ -3277,10 +3265,10 @@ Bloodletters×10
 5+
 WHEN TARGETED
 4
-Prince of Darkness: Within 6" of Daemon Prince of Chaos: Stealth (Daemon Prince of Chaos)
-1CP Wrath Undeniable: not counted here: see the rule
-1CP Sheathed in Brass: Your opponent’s Shooting phase: Save characteristic of 3+
-1CP Incorporeal Entities: Your opponent’s Shooting phase, Ranged attacks, The attack’s S greater than its T: −1 to Wound rolls
+Granted by: Daemon Prince of Chaos - LEGIONES DAEMONICA within 6" of the Daemon Prince of Chaos: Stealth AI (Prince of Darkness)
+1CP Wrath Undeniable: in the Fight phase, when targeted: each model destroyed by a melee attack, if it has not fought this phase, fights on a 4+ after the attacking unit, then is removed AI
+1CP Sheathed in Brass: in your opponent’s Shooting phase, when shot: Save 3+ AI
+1CP Incorporeal Entities: in your opponent’s Shooting phase, when LEGIONES DAEMONICA BATTLELINE is shot, vs ranged attacks with S greater than this unit’s T: −1 to Wound rolls AI
 MELEE WEAPONS
 A
 WS
@@ -3302,11 +3290,11 @@ Hellblade×10
 -2
 2
 WHOLE UNIT
-While leading a unit: +1 to Wound rolls (Bloodmaster)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+Granted by: Bloodmaster - While leading: +1 to Wound rolls AI (Bloodmaster)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Daemon Prince of Chaos (enhancement) - Within 6" of the bearer: [LANCE] AI (Slaughterthirst (Aura))
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 ABILITIES
 Bloodmaster
 - Bloodmaster
@@ -3417,9 +3405,9 @@ Bloodcrushers×3
 5+
 WHEN TARGETED
 3
-Prince of Darkness: Within 6" of Daemon Prince of Chaos: Stealth (Daemon Prince of Chaos)
-1CP Wrath Undeniable: not counted here: see the rule
-1CP Sheathed in Brass: Your opponent’s Shooting phase: Save characteristic of 3+
+Granted by: Daemon Prince of Chaos - LEGIONES DAEMONICA within 6" of the Daemon Prince of Chaos: Stealth AI (Prince of Darkness)
+1CP Wrath Undeniable: in the Fight phase, when targeted: each model destroyed by a melee attack, if it has not fought this phase, fights on a 4+ after the attacking unit, then is removed AI
+1CP Sheathed in Brass: in your opponent’s Shooting phase, when shot: Save 3+ AI
 MELEE WEAPONS
 A
 WS
@@ -3427,9 +3415,6 @@ S
 AP
 D
 SKULLMASTER
-
-Fights with both: Blade of blood, plus Juggernaut’s bladed horn on top (extra attacks).
-
 Blade of blood
 5
 2+
@@ -3444,9 +3429,6 @@ Juggernaut’s bladed horn
 1
 EXTRA ATTACKS, LANCE
 BLOODCRUSHERS
-
-Fights with both: Hellblade, plus Juggernaut’s bladed horn on top (extra attacks).
-
 Hellblade×3
 2
 3+
@@ -3461,12 +3443,12 @@ Juggernaut’s bladed horn×3
 1
 EXTRA ATTACKS, LANCE
 WHOLE UNIT
-not counted here: see the rule (Skullmaster’s Fury)
+Granted by: Skullmaster - While leading, if the led unit charged this turn: Juggernaut’s bladed horns gain [DEVASTATING WOUNDS] AI (Skullmaster’s Fury)
 Charged this turn: Juggernaut’s bladed horn +1 to Wound rolls (Lance)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
-Within 6" of Daemon Prince of Chaos: [LANCE] (Slaughterthirst (Aura))
-The target is the enemy unit selected: +1 S, +1 AP, +1 D (Blood Throne)
+Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Daemon Prince of Chaos (enhancement) - Within 6" of the bearer: [LANCE] AI (Slaughterthirst (Aura))
+Granted by: Rendmaster on Blood Throne - Pick a visible enemy within 18" at start of the Fight phase: KHORNE LEGIONES DAEMONICA get +1 S, +1 AP and +1 D vs that unit AI (Blood Throne)
 ABILITIES
 Skullmaster’s Fury
 - Skullmaster
@@ -3566,7 +3548,7 @@ Beast of Nurgle
 5+
 WHEN TARGETED
 1
-Prince of Darkness: Within 6" of Daemon Prince of Chaos: Stealth (Daemon Prince of Chaos)
+Granted by: Daemon Prince of Chaos - LEGIONES DAEMONICA within 6" of the Daemon Prince of Chaos: Stealth AI (Prince of Darkness)
 MELEE WEAPONS
 A
 WS
@@ -3790,6 +3772,17 @@ Skulls for Khorne
 Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model destroys an enemy Character unit, you gain 1CP.
 
 UNITSkulltaker + Bloodletters
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Slaughterthirst (Aura)|**LEGIONES DAEMONICA KHORNE** model only. While a friendly **LEGIONES DAEMONICA KHORNE** unit (excluding **MONSTERS**) is within 6" of the bearer, weapons equipped by models in that unit have the **[LANCE]** ability. · THE EXILED LEGION The Exiled Legion
+ABILITY · ENHANCEMENT · AURA · FIGHT · EITHER TURN
+
+Slaughterthirst (Aura)
+
+LEGIONES DAEMONICA KHORNE model only. While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6" of the bearer, weapons equipped by models in that unit have the [LANCE] ability.
+
+UNITDaemon Prince of Chaos · Slaughterthirst (Aura)
 
 Ask about this ability
 
@@ -4467,25 +4460,6 @@ EFFECT: Your unit moves as described in Moving (03).
 AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
 
 IN THIS ARMYBeasts of Nurgle
-
-Ask about this rule
-
-######## popup rule:Select Weapons · THE EXILED LEGION The Exiled Legion
-CORE RULE
-
-Select Weapons
-
-For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
-
-While shooting: You can select one or more ranged weapons that model has.
-
-While fighting: You must select one melee weapon that model has.
-
-Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
-
-24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
-
-04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
 
 Ask about this rule
 

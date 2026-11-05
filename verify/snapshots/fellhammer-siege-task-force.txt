@@ -182,10 +182,10 @@ All of them: 380 pts
 USES PER BATTLE
 NEW GAME
 ABILITIES
-Demagogue · Dark Apostle + Master of Executions + Nemesis Claw
-Warp Rift Firepower · Obliterators
+Once per battle, at the start of any phase: one Battle-shocked friendly HERETIC ASTARTES unit within 12" of the DARK APOSTLE is no longer Battle-shocked AI (Demagogue) · Dark Apostle + Master of Executions + Nemesis Claw
+Once per battle, in your Shooting phase, when this unit is selected to shoot, if used: ranged attacks gain [INDIRECT FIRE] AI (Warp Rift Firepower) · Obliterators
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -369,12 +369,12 @@ D6
 -2
 1
 ANTI-VEHICLE 4+, TORRENT
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
-not counted here: see the rule (Dark Pacts)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Lord Discordant on Helstalker
 Mark of the Soul Forges
 
@@ -395,12 +395,12 @@ Helstalker autocannon
 9
 -1
 3
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
-Every attack: Critical Hit on 5+ (Mark of the Soul Forges)
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
+Critical Hits on 5+ AI (Mark of the Soul Forges)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Warpsmith
 Wyredjinn
 Flamer tendril
@@ -436,8 +436,8 @@ PISTOL
 -3
 2
 PISTOL, HAZARDOUS
-not counted here: see the rule (Dark Pacts)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 Dark Apostle
 Cybinfernal Font
 + Master of Executions + Nemesis Claw
@@ -485,13 +485,12 @@ PISTOL
 -3
 2
 HAZARDOUS, PISTOL
-The target below its Starting Strength: +1 to Hit rolls (Visions of Suffering)
-The target below its Starting Strength · The target Below Half-strength: +1 to Wound rolls (Visions of Suffering)
-not counted here: see the rule (Dark Pacts)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+vs targets below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Visions of Suffering)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Cultist Mob
 Autopistol×9
 12"
@@ -509,8 +508,8 @@ Bolt pistolCULTIST CHAMPION
 0
 1
 PISTOL
-not counted here: see the rule (Dark Pacts)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 Havocs
 ×2 units
 Havoc lascannon×4
@@ -538,11 +537,11 @@ RAPID FIRE 1, HEAVY
 -3
 2
 HAZARDOUS, RAPID FIRE 1, HEAVY
-Every ranged attack: Ignore modifiers to BS/WS and the Hit roll (Stabilisation Talons)
-not counted here: see the rule (Dark Pacts)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Ranged attacks: ignore modifiers to BS and Hit rolls AI (Stabilisation Talons)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 STRATAGEMS · DEVOTEES OF DESTRUCTION
-1CP Ruination’s Bounty: not counted here: see the rule
+1CP Ruination’s Bounty: in your Shooting phase, HAVOCS/OBLITERATORS using Dark Pacts: ranged attacks gain [LETHAL HITS] and [SUSTAINED HITS 1] AI
 Obliterators
 Fleshmetal guns×2
 ➤focused malice
@@ -569,11 +568,11 @@ D6+3
 -1
 1
 SUSTAINED HITS 1, HEAVY
-Once per battle · If it uses this ability: [INDIRECT FIRE] (Warp Rift Firepower)
-not counted here: see the rule (Dark Pacts)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+once per battle, if used: ranged attacks gain [INDIRECT FIRE] AI (Warp Rift Firepower)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 STRATAGEMS · DEVOTEES OF DESTRUCTION
-1CP Ruination’s Bounty: not counted here: see the rule
+1CP Ruination’s Bounty: in your Shooting phase, HAVOCS/OBLITERATORS using Dark Pacts: ranged attacks gain [LETHAL HITS] and [SUSTAINED HITS 1] AI
 Chaos Predator Annihilator
 Combi-bolter
 24"
@@ -606,15 +605,15 @@ Predator twin lascannon
 -3
 D6+1
 TWIN-LINKED
-The target: MONSTER or VEHICLE: Re-roll Damage rolls (Annihilator)
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Ranged attacks allocated to a MONSTER or VEHICLE model: re-roll the Damage roll AI (Annihilator)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Chaos Predator Destructor
 Combi-bolter
 24"
@@ -648,15 +647,15 @@ Predator autocannon
 -1
 3
 RAPID FIRE 2
-The target: INFANTRY: +1 AP (Destructor)
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Ranged attacks vs INFANTRY: +1 AP AI (Destructor)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Chaos Vindicator
 Combi-bolter
 24"
@@ -682,15 +681,15 @@ D6
 0
 1
 BLAST
-not counted here: see the rule (Siege Shield)
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Demolisher cannon can target enemies within Engagement Range of this model, if no other friendly unit is within Engagement Range of them; ranged attacks ignore the Hit roll penalty for being within Engagement Range AI (Siege Shield)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Forgefiend
 Ectoplasma cannon×3
 36"
@@ -700,15 +699,15 @@ D3
 -3
 3
 BLAST
-not counted here: see the rule (Daemonic Ordnance)
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+When this unit shoots, if it uses this ability: ranged weapons gain [DEVASTATING WOUNDS] and [HAZARDOUS] AI (Daemonic Ordnance)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Vashtorr the Arkifane
@@ -728,16 +727,13 @@ ANTI-VEHICLE 4+, DEVASTATING WOUNDS
 -1
 2
 ANTI-VEHICLE 4+, DEVASTATING WOUNDS
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Lord Discordant on Helstalker
 Mark of the Soul Forges
-
-Fights with all of these: Impaler chainglaive, plus Bladed limbs and Techno-virus injector on top (extra attacks).
-
 Bladed limbs
 4
 3+
@@ -759,12 +755,12 @@ Techno-virus injector
 -3
 2
 ANTI-VEHICLE 2+, EXTRA ATTACKS
-Every attack: Critical Hit on 5+ (Mark of the Soul Forges)
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Critical Hits on 5+ AI (Mark of the Soul Forges)
 Charged this turn: Impaler chainglaive +1 to Wound rolls (Lance)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Warpsmith
 Wyredjinn
 Forge weapon
@@ -774,7 +770,7 @@ Forge weapon
 -2
 2
 ANTI-VEHICLE 4+
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
 Dark Apostle
 Cybinfernal Font
 + Master of Executions + Nemesis Claw
@@ -852,15 +848,13 @@ Paired accursed weaponsLEGIONARY
 -2
 1
 TWIN-LINKED
-not counted here: see the rule (Dark Zealotry)
-While leading a unit · The target below its Starting Strength: Re-roll Hit rolls (Warp-sighted Butcher)
-While leading a unit · The target below its Starting Strength · The target Below Half-strength: Re-roll Wound rolls (Warp-sighted Butcher)
-The target below its Starting Strength: +1 to Hit rolls (Visions of Suffering)
-The target below its Starting Strength · The target Below Half-strength: +1 to Wound rolls (Visions of Suffering)
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Granted by: Dark Apostle - While leading: +1 to Wound rolls in melee AI (Dark Zealotry)
+Granted by: Master of Executions - While leading, vs targets below Starting Strength: re-roll Hit rolls in melee; also re-roll Wound rolls if Below Half-strength AI (Warp-sighted Butcher)
+vs targets below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Visions of Suffering)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Cultist Mob
 Brutal assault weapon×10
 2
@@ -868,7 +862,7 @@ Brutal assault weapon×10
 3
 0
 1
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
 Havocs
 ×2 units
 Close combat weapon×4
@@ -883,7 +877,7 @@ Power fistHAVOC CHAMPION
 8
 -2
 2
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
 Obliterators
 Crushing fists×2
 4
@@ -891,7 +885,7 @@ Crushing fists×2
 9
 -2
 2
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
 Chaos Predator Annihilator
 Armoured tracks
 3
@@ -899,13 +893,13 @@ Armoured tracks
 6
 0
 1
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Chaos Predator Destructor
 Armoured tracks
 3
@@ -913,13 +907,13 @@ Armoured tracks
 6
 0
 1
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Chaos Vindicator
 Armoured tracks
 3
@@ -927,14 +921,14 @@ Armoured tracks
 6
 0
 1
-not counted here: see the rule (Siege Shield)
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Demolisher cannon can target enemies within Engagement Range of this model, if no other friendly unit is within Engagement Range of them; ranged attacks ignore the Hit roll penalty for being within Engagement Range AI (Siege Shield)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Forgefiend
 Armoured limbs
 2
@@ -942,17 +936,14 @@ Armoured limbs
 6
 0
 2
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 Maulerfiend
-
-Fights with both: Maulerfiend fists, plus Lasher tendrils on top (extra attacks).
-
 Lasher tendrils
 6
 3+
@@ -966,13 +957,13 @@ Maulerfiend fists
 14
 -2
 D6+1
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 
 ######## abilities · MELEE Abilities
 Vashtorr the Arkifane
@@ -2274,37 +2265,37 @@ CULT OF THE ARKIFANE
 CP
 AI
 Biomechanoid Regeneration
-Your Command phase: one model in your HERETIC ASTARTES unit (not DAMNED) regains up to D3 lost wounds, or up to 3 if your unit has the SOUL FORGE keyword.
+HERETIC ASTARTES (not DAMNED): one model regains up to D3 lost wounds (up to 3 if SOUL FORGE)
 Your Command All but Cultist Mob
 1
 CP
 AI
 Forge-Fire Surge
-Your Movement phase, just after your HERETIC ASTARTES unit Advances: until the end of the turn it is eligible to shoot, or, if it has the SOUL FORGE keyword, to shoot and declare a charge.
+after Advancing: can shoot (SOUL FORGE: shoot and charge)
 Your Movement Any unit
 1
 CP
 AI
 Balefire Boon
-Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks have +1 AP.
+SOUL FORGE: +1 AP
 Your Shoot · Fight Vashtorr the Arkifane, Lord Discordant on Helstalker, Dark Apostle + Master of Executions + Nemesis Claw, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
 2
 CP
 AI
 Soul-Tally Offering
-Your SOUL FORGE unit that has not shot or fought this phase: until the end of the phase, its attacks that target a CHARACTER, MONSTER or VEHICLE unit can re-roll the wound roll.
+SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls
 Your Shoot · Fight Vashtorr the Arkifane, Lord Discordant on Helstalker, Dark Apostle + Master of Executions + Nemesis Claw, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
 1
 CP
 AI
 Unholy Fortitude
-Your opponent’s Shooting phase, just after an enemy unit has selected its targets: your SOUL FORGE unit it targets has +1 T until the end of the phase.
+SOUL FORGE, when shot: +1 T
 Their Shooting Vashtorr the Arkifane, Lord Discordant on Helstalker, Dark Apostle + Master of Executions + Nemesis Claw, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
 1
 CP
 AI
 Touch of the Arkifane
-Your HERETIC ASTARTES unit (not DAMNED) that has not shot or fought this phase: until the end of the phase, if it makes a Dark Pact, you can select both abilities for its weapons to gain.
+HERETIC ASTARTES (not DAMNED): a Dark Pact gives both abilities
 Any phase All but Cultist Mob
 DEVOTEES OF DESTRUCTION
 3
@@ -2312,19 +2303,19 @@ DEVOTEES OF DESTRUCTION
 CP
 AI
 Snare of Fire
-Your opponent’s Movement phase, an enemy unit ends a move within 8" of your unengaged HAVOCS unit: your unit can make a normal move of up to D3+3".
+an enemy ends a move within 8": unengaged HAVOCS make a Normal move of up to D3+3"
 Their Movement Havocs ×2
 1
 CP
 AI
 Ruination’s Bounty
-Your Shooting phase, your HAVOCS/OBLITERATORS unit is selected to shoot: when it uses the Dark Pacts ability, its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].
+HAVOCS/OBLITERATORS using Dark Pacts: ranged attacks gain [LETHAL HITS] and [SUSTAINED HITS 1]
 Your Shooting Havocs ×2, Obliterators
 1
 CP
 AI
 Undying Hatred
-Your opponent’s Shooting phase, an enemy unit targets your HAVOCS/OBLITERATORS unit: attacks that target your unit with a S greater than its T have -1 to the wound roll.
+when HAVOCS/OBLITERATORS are shot, vs attacks with S greater than this unit’s T: −1 to Wound rolls
 Their Shooting Havocs ×2, Obliterators
 CORE STRATAGEMS
 10
@@ -2332,61 +2323,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement All but Maulerfiend
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting Warpsmith, Dark Apostle + Master of Executions + Nemesis Claw, Cultist Mob
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge Vashtorr the Arkifane, Chaos Predator Annihilator, Chaos Predator Destructor, Chaos Vindicator, Forgefiend, Maulerfiend
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Vashtorr the Arkifane, Lord Discordant on Helstalker, Warpsmith, Dark Apostle + Master of Executions + Nemesis Claw, Cultist Mob, Havocs ×2, Obliterators, Forgefiend, Maulerfiend
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight Vashtorr the Arkifane, Lord Discordant on Helstalker, Warpsmith, Dark Apostle + Master of Executions + Nemesis Claw
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2768,17 +2759,17 @@ Vashtorr the Arkifane
 4+
 WHEN TARGETED
 4
-Soul Forge Boons: 5+ invulnerable save
-Reorder Reality: not counted here: see the rule
-Indentured Daemon Engines: Within 3" of a friendly DAEMON VEHICLE unit: Lone Operative
-1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
+SOUL FORGE units: 5+ invulnerable save AI (Soul Forge Boons)
+Enemies within 18" targeting this model: −1 to Hit rolls; their ranged weapons gain [HAZARDOUS] AI (Reorder Reality)
+Within 3" of a DAEMON VEHICLE unit: Lone Operative AI (Indentured Daemon Engines)
+1CP Unholy Fortitude: in your opponent’s Shooting phase, SOUL FORGE, when shot: +1 T AI
 DAMAGED 1-4 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-4 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 RANGED WEAPONS
 Range
 A
@@ -2794,7 +2785,7 @@ D6
 -2
 1
 ANTI-VEHICLE 4+, TORRENT
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 MELEE WEAPONS
 A
 WS
@@ -2883,14 +2874,14 @@ Lord Discordant on Helstalker
 4+
 WHEN TARGETED
 2
-Soul Forge Boons: 5+ invulnerable save
-1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
+SOUL FORGE units: 5+ invulnerable save AI (Soul Forge Boons)
+1CP Unholy Fortitude: in your opponent’s Shooting phase, SOUL FORGE, when shot: +1 T AI
 ALL ATTACKS
-Every attack: Critical Hit on 5+ (Mark of the Soul Forges)
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Critical Hits on 5+ AI (Mark of the Soul Forges)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 RANGED WEAPONS
 Range
 A
@@ -2916,16 +2907,13 @@ Helstalker autocannon
 9
 -1
 3
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with all of these: Impaler chainglaive, plus Bladed limbs and Techno-virus injector on top (extra attacks).
-
 Bladed limbs
 4
 3+
@@ -3021,9 +3009,9 @@ Warpsmith
 –
 WHEN TARGETED
 1
-Warpsmith: Within 3" of a friendly HERETIC ASTARTES VEHICLE unit: Lone Operative
+Within 3" of a HERETIC ASTARTES VEHICLE unit: Lone Operative AI (Warpsmith)
 ALL ATTACKS
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
 RANGED WEAPONS
 Flamer tendril, Melta tendril, Plasma pistol · all pistols
 Range
@@ -3065,7 +3053,7 @@ PISTOL
 -3
 2
 PISTOL, HAZARDOUS
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 MELEE WEAPONS
 A
 WS
@@ -3198,14 +3186,13 @@ Nemesis Claw×5
 5+
 WHEN TARGETED
 1
-1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
+1CP Unholy Fortitude: in your opponent’s Shooting phase, SOUL FORGE, when shot: +1 T AI
 ALL ATTACKS · WHOLE UNIT
-The target below its Starting Strength: +1 to Hit rolls (Visions of Suffering)
-The target below its Starting Strength · The target Below Half-strength: +1 to Wound rolls (Visions of Suffering)
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+vs targets below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Visions of Suffering)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 RANGED WEAPONS
 Bolt pistol ×6, Plasma pistol · all pistols
 Range
@@ -3259,7 +3246,7 @@ PISTOL
 2
 HAZARDOUS, PISTOL
 WHOLE UNIT
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 MELEE WEAPONS
 A
 WS
@@ -3341,9 +3328,8 @@ Paired accursed weaponsLEGIONARY
 1
 TWIN-LINKED
 WHOLE UNIT
-not counted here: see the rule (Dark Zealotry)
-While leading a unit · The target below its Starting Strength: Re-roll Hit rolls (Warp-sighted Butcher)
-While leading a unit · The target below its Starting Strength · The target Below Half-strength: Re-roll Wound rolls (Warp-sighted Butcher)
+Granted by: Dark Apostle - While leading: +1 to Wound rolls in melee AI (Dark Zealotry)
+Granted by: Master of Executions - While leading, vs targets below Starting Strength: re-roll Hit rolls in melee; also re-roll Wound rolls if Below Half-strength AI (Warp-sighted Butcher)
 ABILITIES
 Dark Zealotry
 - Dark Apostle
@@ -3477,7 +3463,7 @@ Cultist Champion
 1
 –
 ALL ATTACKS
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
 RANGED WEAPONS
 Autopistol ×9, Bolt pistol · all pistols
 Range
@@ -3502,7 +3488,7 @@ Bolt pistolCULTIST CHAMPION
 0
 1
 PISTOL
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 MELEE WEAPONS
 A
 WS
@@ -3583,9 +3569,9 @@ Havocs×4
 –
 WHEN TARGETED
 1
-1CP Undying Hatred: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
+1CP Undying Hatred: in your opponent’s Shooting phase, when HAVOCS/OBLITERATORS are shot, vs attacks with S greater than this unit’s T: −1 to Wound rolls AI
 ALL ATTACKS
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
 RANGED WEAPONS
 Range
 A
@@ -3618,10 +3604,10 @@ RAPID FIRE 1, HEAVY
 -3
 2
 HAZARDOUS, RAPID FIRE 1, HEAVY
-Every ranged attack: Ignore modifiers to BS/WS and the Hit roll (Stabilisation Talons)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+Ranged attacks: ignore modifiers to BS and Hit rolls AI (Stabilisation Talons)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 STRATAGEMS · DEVOTEES OF DESTRUCTION
-1CP Ruination’s Bounty: not counted here: see the rule
+1CP Ruination’s Bounty: in your Shooting phase, HAVOCS/OBLITERATORS using Dark Pacts: ranged attacks gain [LETHAL HITS] and [SUSTAINED HITS 1] AI
 MELEE WEAPONS
 A
 WS
@@ -3694,9 +3680,9 @@ Obliterators×2
 5+
 WHEN TARGETED
 1
-1CP Undying Hatred: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
+1CP Undying Hatred: in your opponent’s Shooting phase, when HAVOCS/OBLITERATORS are shot, vs attacks with S greater than this unit’s T: −1 to Wound rolls AI
 ALL ATTACKS
-not counted here: see the rule (Dark Pacts)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
 RANGED WEAPONS
 Range
 A
@@ -3729,10 +3715,10 @@ D6+3
 -1
 1
 SUSTAINED HITS 1, HEAVY
-Once per battle · If it uses this ability: [INDIRECT FIRE] (Warp Rift Firepower)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+once per battle, if used: ranged attacks gain [INDIRECT FIRE] AI (Warp Rift Firepower)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 STRATAGEMS · DEVOTEES OF DESTRUCTION
-1CP Ruination’s Bounty: not counted here: see the rule
+1CP Ruination’s Bounty: in your Shooting phase, HAVOCS/OBLITERATORS using Dark Pacts: ranged attacks gain [LETHAL HITS] and [SUSTAINED HITS 1] AI
 MELEE WEAPONS
 A
 WS
@@ -3801,16 +3787,16 @@ Hull
 5+
 WHEN TARGETED
 1
-1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
+1CP Unholy Fortitude: in your opponent’s Shooting phase, SOUL FORGE, when shot: +1 T AI
 DAMAGED 1-4 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-4 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 RANGED WEAPONS
 Range
 A
@@ -3849,8 +3835,8 @@ Predator twin lascannon
 -3
 D6+1
 TWIN-LINKED
-The target: MONSTER or VEHICLE: Re-roll Damage rolls (Annihilator)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+Ranged attacks allocated to a MONSTER or VEHICLE model: re-roll the Damage roll AI (Annihilator)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 MELEE WEAPONS
 A
 WS
@@ -3921,16 +3907,16 @@ Hull
 5+
 WHEN TARGETED
 1
-1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
+1CP Unholy Fortitude: in your opponent’s Shooting phase, SOUL FORGE, when shot: +1 T AI
 DAMAGED 1-4 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-4 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 RANGED WEAPONS
 Range
 A
@@ -3970,8 +3956,8 @@ Predator autocannon
 -1
 3
 RAPID FIRE 2
-The target: INFANTRY: +1 AP (Destructor)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+Ranged attacks vs INFANTRY: +1 AP AI (Destructor)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 MELEE WEAPONS
 A
 WS
@@ -4042,17 +4028,17 @@ Hull
 5+
 WHEN TARGETED
 1
-1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
+1CP Unholy Fortitude: in your opponent’s Shooting phase, SOUL FORGE, when shot: +1 T AI
 DAMAGED 1-4 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-4 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-not counted here: see the rule (Siege Shield)
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Demolisher cannon can target enemies within Engagement Range of this model, if no other friendly unit is within Engagement Range of them; ranged attacks ignore the Hit roll penalty for being within Engagement Range AI (Siege Shield)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 RANGED WEAPONS
 Range
 A
@@ -4084,7 +4070,7 @@ D6
 0
 1
 BLAST
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 MELEE WEAPONS
 A
 WS
@@ -4155,17 +4141,17 @@ Forgefiend
 5+
 WHEN TARGETED
 2
-Soul Forge Boons: 5+ invulnerable save
-1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
+SOUL FORGE units: 5+ invulnerable save AI (Soul Forge Boons)
+1CP Unholy Fortitude: in your opponent’s Shooting phase, SOUL FORGE, when shot: +1 T AI
 DAMAGED 1-4 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-4 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 RANGED WEAPONS
 Range
 A
@@ -4181,8 +4167,8 @@ D3
 -3
 3
 BLAST
-not counted here: see the rule (Daemonic Ordnance)
-The target is the enemy unit selected · The target: VEHICLE: Re-roll Wound rolls of 1 (Spirit Thief)
+When this unit shoots, if it uses this ability: ranged weapons gain [DEVASTATING WOUNDS] and [HAZARDOUS] AI (Daemonic Ordnance)
+Granted by: Lord Discordant on Helstalker - Pick a visible enemy VEHICLE at start of Shooting: HERETIC ASTARTES re-roll Wound rolls of 1 vs that unit AI (Spirit Thief)
 MELEE WEAPONS
 A
 WS
@@ -4251,23 +4237,20 @@ Maulerfiend
 3
 5+
 
-M: not counted here: see the rule (Siege Crawler)
+Ignore modifiers to this model’s Move, Advance and Charge rolls AI (Siege Crawler)
 
 WHEN TARGETED
 2
-Soul Forge Boons: 5+ invulnerable save
-1CP Unholy Fortitude: Your opponent’s Shooting phase: +1 T
+SOUL FORGE units: 5+ invulnerable save AI (Soul Forge Boons)
+1CP Unholy Fortitude: in your opponent’s Shooting phase, SOUL FORGE, when shot: +1 T AI
 DAMAGED 1-4 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-4 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Maulerfiend fists, plus Lasher tendrils on top (extra attacks).
-
 Lasher tendrils
 6
 3+
@@ -4281,12 +4264,12 @@ Maulerfiend fists
 14
 -2
 D6+1
-not counted here: see the rule (Dark Pacts)
-Within 6" of Vashtorr the Arkifane: +2 S (Unholy Mechanisms)
-not counted here: see the rule (Warpsmith) (Master of Mechanisms)
+When this unit shoots or fights, if it uses this ability: Leadership test (fail: D3 mortal wounds), then this unit’s weapons gain [LETHAL HITS] or [SUSTAINED HITS 1] AI (Dark Pacts)
+Granted by: Vashtorr the Arkifane - DAEMON VEHICLE within 6" of Vashtorr the Arkifane: +2 S AI (Unholy Mechanisms)
+Granted by: Warpsmith - Command phase: a HERETIC ASTARTES VEHICLE within 3" of the Warpsmith gets +1 to Hit rolls AI (Master of Mechanisms)
 STRATAGEMS · CULT OF THE ARKIFANE
-1CP Balefire Boon: +1 AP
-2CP Soul-Tally Offering: Re-roll Wound rolls, The target: CHARACTER or MONSTER or VEHICLE
+1CP Balefire Boon: in your Shooting phase or the Fight phase, SOUL FORGE: +1 AP AI
+2CP Soul-Tally Offering: in your Shooting phase or the Fight phase, SOUL FORGE vs CHARACTER, MONSTER or VEHICLE: re-roll Wound rolls AI
 ABILITIES
 Siege Crawler
 Your Move · Charge
@@ -4522,6 +4505,17 @@ Stabilisation Talons
 Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the Hit roll and any or all modifiers to the Ballistic Skill characteristic of that weapon.
 
 UNITHavocs
+
+Ask about this ability
+
+######## popup ability:fellhammer-siege-task-force|Unholy Mechanisms|While a friendly **DAEMON VEHICLE** unit is within 6" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit. · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
+ABILITY · AURA
+
+Unholy Mechanisms
+
+While a friendly DAEMON VEHICLE unit is within 6" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit.
+
+UNITVashtorr the Arkifane
 
 Ask about this ability
 

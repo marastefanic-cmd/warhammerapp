@@ -175,7 +175,7 @@ Ripper Swarms 30 pts
 All of them: 150 pts
 START OF THE BATTLE AND THE BATTLE ROUNDS
 FIRST ROUND
-Singular Purpose · Norn Assimilator, Norn Emissary
+Pick at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy; or Feel No Pain 5+ and OC 15 on one objective AI (Singular Purpose) · Norn Assimilator, Norn Emissary
 USES PER BATTLE
 NEW GAME
 RULES
@@ -183,9 +183,9 @@ Shadow in the Warp · Tyranids army rule
 ABILITIES
 Protean Purpose · Norn Assimilator
 Protean Purpose · Norn Emissary
-Resilient Organism · Tyrannofex
+Once per battle: one attack's Damage becomes 0 AI (Resilient Organism) · Tyrannofex
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -339,10 +339,10 @@ D6+3
 -1
 2
 PSYCHIC, TORRENT
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Pyrovores) (Burning Spray)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 Biovores
 Spore mine launcher
 48"
@@ -352,10 +352,10 @@ D3
 -1
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Pyrovores) (Burning Spray)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 Pyrovores
 ×2 units
 Flamespurt×3
@@ -366,9 +366,9 @@ D6+1
 -1
 1
 IGNORES COVER, TORRENT, TWIN-LINKED
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 Norn Assimilator
 Synaptoprescience
 Toxinjecter Harpoon
@@ -379,12 +379,12 @@ Toxinjecter Harpoon
 -3
 D6+1
 HARPOONED
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Pyrovores) (Burning Spray)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 Norn Emissary
 Psychic tendril
 ➤neuroparasite
@@ -411,12 +411,12 @@ BLAST, PSYCHIC
 -3
 D6
 MELTA 2, PSYCHIC
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Pyrovores) (Burning Spray)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 Psychophage
 Psychoclastic torrent
 12"
@@ -426,10 +426,10 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Pyrovores) (Burning Spray)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 Tyrannofex
 Acid spray
 18"
@@ -446,17 +446,14 @@ Stinger salvoes
 5
 0
 1
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Pyrovores) (Burning Spray)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 The Red Terror
-
-Fights with both: Scything talons, plus Gaping maw on top (extra attacks).
-
 Gaping maw
 1
 2+
@@ -470,12 +467,12 @@ Scything talons
 7
 -2
 2
-The target: INFANTRY, MOUNTED or BEASTS: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Gaping maw: vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed AI (Swallow Whole)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 The Swarmlord
 Warlord
 + Tyrant Guard
@@ -494,18 +491,15 @@ Scything talons and rending claws×6
 5
 -1
 1
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 Hive Tyrant
 Parasitic Biomorphology
 + Tyrant Guard
 HIVE TYRANT
-
-Fights with both: Monstrous bonesword and lash whip, plus Monstrous scything talons on top (extra attacks).
-
 Monstrous bonesword and lash whip
 6
 2+
@@ -527,12 +521,12 @@ Scything talons and rending claws×6
 6
 -1
 1
-not counted here: see the rule (Parasitic Biomorphology)
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Hive Tyrant (enhancement) - The bearer’s unit: +1 S in melee; after that unit first destroys an enemy unit in the Fight phase within 6" of a HARVESTER: +1 A too for the battle AI (Parasitic Biomorphology)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 Biovores
 Chitin-barbed limbs
 2
@@ -540,11 +534,11 @@ Chitin-barbed limbs
 5
 0
 1
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 Pyrovores
 ×2 units
 Chitin-barbed limbs×3
@@ -553,12 +547,11 @@ Chitin-barbed limbs×3
 5
 0
 1
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
-1CP Secure Biomass: Critical Hit on 5+, Fight phase, It has the HARVESTER keyword
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 Ripper Swarms
 Chitinous claws and teeth
 6
@@ -567,17 +560,13 @@ Chitinous claws and teeth
 0
 1
 SUSTAINED HITS 1
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
-1CP Secure Biomass: Critical Hit on 5+, Fight phase, It has the HARVESTER keyword
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 Norn Assimilator
 Synaptoprescience
-
-Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
-
 Monstrous scything talons
 6
 2+
@@ -591,20 +580,16 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
-1CP Secure Biomass: Critical Hit on 5+, Fight phase, It has the HARVESTER keyword
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
-1CP Lesser Prey: +2 S
+1CP Lesser Prey: in the Fight phase, NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee AI
 Norn Emissary
-
-Fights with both: Monstrous scything talons, plus Monstrous rending claws on top (extra attacks).
-
 Monstrous scything talons
 6
 2+
@@ -618,15 +603,15 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
-1CP Lesser Prey: +2 S
+1CP Lesser Prey: in the Fight phase, NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee AI
 Psychophage
 Talons and betentacled maw
 6
@@ -635,14 +620,12 @@ Talons and betentacled maw
 -2
 2
 ANTI-PSYKER 4+, DEVASTATING WOUNDS
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
-The target below its Starting Strength: +1 to Hit rolls (Feeding Frenzy)
-The target below its Starting Strength · “If that target is also Below Half-strength”: +1 to Wound rolls (Feeding Frenzy)
-not counted here: see the rule (Synapse)
+In Synapse Range: +1 S in melee AI (Synapse)
++1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
+vs targets below Starting Strength: +1 to Hit rolls in melee; also +1 to Wound rolls if Below Half-strength AI (Feeding Frenzy)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
-1CP Secure Biomass: Critical Hit on 5+, Fight phase, It has the HARVESTER keyword
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 Tyrannofex
 Powerful limbs
 4
@@ -650,12 +633,12 @@ Powerful limbs
 8
 0
 2
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 
 ######## abilities · MELEE Abilities
 The Red Terror
@@ -1847,37 +1830,37 @@ ASSIMILATION SWARM
 CP
 AI
 Tyrannoformed
-Command phase, your HARVESTER unit within range of an objective marker you control: that objective marker stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+a HARVESTER on an objective you control: that objective stays yours until the opponent takes it
 Command Pyrovores ×2, Ripper Swarms, Norn Assimilator, Psychophage
 2
 CP
 AI
 Ablative Carapace
-Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your HARVESTER unit as a target: until the end of the phase, its models have Feel No Pain 5+ (4+ if it is within range of an objective marker you control).
+HARVESTER, when targeted: Feel No Pain 5+ (4+ on an objective you control)
 Their Shoot · Fight Pyrovores ×2, Ripper Swarms, Norn Assimilator, Psychophage
 1
 CP
 AI
 Secure Biomass
-Fight phase, your TYRANIDS unit not yet selected to fight: until the end of the phase, its melee weapons have [LETHAL HITS]; if it is a HARVESTER unit, its melee attacks also score a Critical Hit on an unmodified Hit roll of 5+.
+TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee
 Fight Any unit
 1
 CP
 AI
 Rapacious Hunger
-Your Fight phase, your TYRANIDS unit that just destroyed an enemy unit: it Regenerates at once (see Feed the Swarm); a HARVESTER unit regaining up to D3 lost wounds for one model regains up to 3 instead.
+after a TYRANIDS unit kills an enemy unit: that unit Regenerates (a HARVESTER model regains 3 wounds instead of D3)
 Your Fight Any unit
 1
 CP
 AI
 Broodguard Impulse
-Any phase, your HARVESTER unit just destroyed: until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that destroyed it, +1 to the Wound roll.
+after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle
 Any phase Pyrovores ×2, Ripper Swarms, Norn Assimilator, Psychophage
 1
 CP
 AI
 Reclaim Biomass
-Any phase, a TYRANIDS unit from your army is destroyed (before its last model is removed), your HARVESTER unit within 6" of it: Regenerate one friendly TYRANIDS unit within 6" of your HARVESTER unit (see Feed the Swarm).
+when a TYRANIDS unit is destroyed within 6" of a HARVESTER: one TYRANIDS unit within 6" of that HARVESTER Regenerates
 Any phase Pyrovores ×2, Ripper Swarms, Norn Assimilator, Psychophage
 TALONS OF THE NORN QUEEN
 3
@@ -1885,19 +1868,19 @@ TALONS OF THE NORN QUEEN
 CP
 AI
 Tanglestrike Rounds
-After your unit has shot: one enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
+after a NORN ASSIMILATOR shoots: one enemy unit this unit hit has −2" Move until your next Command phase
 Your Shooting Norn Assimilator
 1
 CP
 AI
 Lesser Prey
-Your unit’s melee attacks have +2 S.
+NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee
 Fight Norn Assimilator, Norn Emissary
 1
 CP
 AI
 Catalytic Biofortification
-Your unit has Feel No Pain 4+ against mortal wounds.
+when a NORN ASSIMILATOR suffers a mortal wound: Feel No Pain 4+ vs mortal wounds
 Any phase Norn Assimilator
 CORE STRATAGEMS
 10
@@ -1905,61 +1888,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement The Swarmlord + Tyrant Guard, Biovores, Pyrovores ×2, Norn Assimilator, Norn Emissary, Psychophage, Tyrannofex
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting Psychophage
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge The Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard, Norn Assimilator, Norn Emissary, Psychophage, Tyrannofex
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight The Red Terror, The Swarmlord + Tyrant Guard, Hive Tyrant + Tyrant Guard
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2345,9 +2328,6 @@ WS
 S
 AP
 D
-
-Fights with both: Scything talons, plus Gaping maw on top (extra attacks).
-
 Gaping maw
 1
 2+
@@ -2361,12 +2341,12 @@ Scything talons
 7
 -2
 2
-The target: INFANTRY, MOUNTED or BEASTS: Gaping maw Each successful unmodified Wound roll is a Critical Wound (Swallow Whole)
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Gaping maw: vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed AI (Swallow Whole)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 ABILITIES
 Swallow Whole
 
@@ -2442,10 +2422,10 @@ Tyrant Guard×6
 –
 WHEN TARGETED
 1
-TYRANT GUARD Guardian Organism: While a CHARACTER model is leading it: CHARACTER models: Feel No Pain 5+
+TYRANT GUARD A CHARACTER leading this unit has Feel No Pain 5+ AI (Guardian Organism)
 ALL ATTACKS · WHOLE UNIT
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 RANGED WEAPONS
 Range
 A
@@ -2462,8 +2442,8 @@ D6+3
 2
 PSYCHIC, TORRENT
 WHOLE UNIT
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Pyrovores) (Burning Spray)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -2486,10 +2466,10 @@ Scything talons and rending claws×6
 -1
 1
 WHOLE UNIT
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 ABILITIES
 Hive Commander
 - The Swarmlord
@@ -2590,7 +2570,7 @@ Tyrant Guard×6
 –
 WHEN TARGETED
 1
-TYRANT GUARD Guardian Organism: While a CHARACTER model is leading it: CHARACTER models: Feel No Pain 5+
+TYRANT GUARD A CHARACTER leading this unit has Feel No Pain 5+ AI (Guardian Organism)
 MELEE WEAPONS
 A
 WS
@@ -2598,9 +2578,6 @@ S
 AP
 D
 HIVE TYRANT
-
-Fights with both: Monstrous bonesword and lash whip, plus Monstrous scything talons on top (extra attacks).
-
 Monstrous bonesword and lash whip
 6
 2+
@@ -2623,12 +2600,12 @@ Scything talons and rending claws×6
 -1
 1
 WHOLE UNIT
-not counted here: see the rule (Parasitic Biomorphology)
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Hive Tyrant (enhancement) - The bearer’s unit: +1 S in melee; after that unit first destroys an enemy unit in the Fight phase within 6" of a HARVESTER: +1 A too for the battle AI (Parasitic Biomorphology)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 ABILITIES
 Will of the Hive Mind
 - Hive Tyrant
@@ -2714,7 +2691,7 @@ Biovore
 –
 ALL ATTACKS
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 RANGED WEAPONS
 Range
 A
@@ -2730,8 +2707,8 @@ D3
 -1
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Pyrovores) (Burning Spray)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -2744,10 +2721,10 @@ Chitin-barbed limbs
 5
 0
 1
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 ABILITIES
 Seed Spore Mines
 Once per turn
@@ -2804,12 +2781,11 @@ Pyrovores×3
 1
 –
 WHEN TARGETED
-2
-2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 5+
-2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 4+
+1
+2CP Ablative Carapace: in your opponent’s Shooting phase or the Fight phase, HARVESTER, when targeted: Feel No Pain 5+ (4+ on an objective you control) AI
 ALL ATTACKS
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 RANGED WEAPONS
 Range
 A
@@ -2825,7 +2801,7 @@ D6+1
 -1
 1
 IGNORES COVER, TORRENT, TWIN-LINKED
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -2838,11 +2814,10 @@ Chitin-barbed limbs×3
 5
 0
 1
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
-1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 ABILITIES
 Burning Spray
 Your Shooting
@@ -2897,12 +2872,11 @@ Ripper Swarm
 0
 –
 
-Enemy units’ OC: not counted here: see the rule (Chitinous Horrors)
+Enemies in Engagement Range: OC halved AI (Chitinous Horrors)
 
 WHEN TARGETED
-2
-2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 5+
-2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 4+
+1
+2CP Ablative Carapace: in your opponent’s Shooting phase or the Fight phase, HARVESTER, when targeted: Feel No Pain 5+ (4+ on an objective you control) AI
 MELEE WEAPONS
 A
 WS
@@ -2916,12 +2890,11 @@ Chitinous claws and teeth
 0
 1
 SUSTAINED HITS 1
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
-1CP Secure Biomass: [LETHAL HITS], Fight phase
-1CP Secure Biomass: Critical Hit on 5+, Fight phase, It has the HARVESTER keyword
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 ABILITIES
 Chitinous Horrors
 
@@ -2976,22 +2949,21 @@ Norn Assimilator
 5
 4+
 
-OC: not counted here: see the rule (Singular Purpose)
+Picked at start of round 1: OC 15 on one objective AI (Singular Purpose)
 
-Enemy units’ M: not counted here: see the rule (Tanglestrike Rounds)
+1CP Tanglestrike Rounds: in your Shooting phase, after a NORN ASSIMILATOR shoots: one enemy unit this unit hit has −2" Move until your next Command phase AI
 
 WHEN TARGETED
-4
-Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
-2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 5+
-2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 4+
-1CP Catalytic Biofortification: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
+3
+Picked at start of round 1: Feel No Pain 5+ on one objective AI (Singular Purpose)
+2CP Ablative Carapace: in your opponent’s Shooting phase or the Fight phase, HARVESTER, when targeted: Feel No Pain 5+ (4+ on an objective you control) AI
+1CP Catalytic Biofortification: in any phase, when a NORN ASSIMILATOR suffers a mortal wound: Feel No Pain 4+ vs mortal wounds AI
 DAMAGED 1-5 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 RANGED WEAPONS
 Range
 A
@@ -3007,17 +2979,14 @@ Toxinjecter Harpoon
 -3
 D6+1
 HARPOONED
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Pyrovores) (Burning Spray)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
-
 Monstrous scything talons
 6
 2+
@@ -3031,13 +3000,12 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
-1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
-1CP Lesser Prey: +2 S
+1CP Lesser Prey: in the Fight phase, NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee AI
 ABILITIES
 Singular Purpose
 Start of the first battle round
@@ -3119,19 +3087,19 @@ Norn Emissary
 5
 4+
 
-OC: not counted here: see the rule (Singular Purpose)
+Picked at start of round 1: OC 15 on one objective AI (Singular Purpose)
 
 WHEN TARGETED
 2
-Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
-Unnatural Resilience: Feel No Pain 4+ against mortal wounds
+Picked at start of round 1: Feel No Pain 5+ on one objective AI (Singular Purpose)
+Feel No Pain 4+ vs mortal wounds AI (Unnatural Resilience)
 DAMAGED 1-5 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 RANGED WEAPONS
 Range
 A
@@ -3164,17 +3132,14 @@ BLAST, PSYCHIC
 -3
 D6
 MELTA 2, PSYCHIC
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Pyrovores) (Burning Spray)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Monstrous scything talons, plus Monstrous rending claws on top (extra attacks).
-
 Monstrous scything talons
 6
 2+
@@ -3188,12 +3153,12 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
-1CP Lesser Prey: +2 S
+1CP Lesser Prey: in the Fight phase, NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee AI
 ABILITIES
 Singular Purpose
 Start of the first battle round
@@ -3263,13 +3228,12 @@ Psychophage
 3
 –
 WHEN TARGETED
-3
+2
 Feel No Pain 5+
-2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase: Feel No Pain 5+
-2CP Ablative Carapace: Your opponent’s Shooting phase or the Fight phase, If (see the rule): Feel No Pain 4+
+2CP Ablative Carapace: in your opponent’s Shooting phase or the Fight phase, HARVESTER, when targeted: Feel No Pain 5+ (4+ on an objective you control) AI
 ALL ATTACKS
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 RANGED WEAPONS
 Range
 A
@@ -3285,8 +3249,8 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Pyrovores) (Burning Spray)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -3300,13 +3264,11 @@ Talons and betentacled maw
 -2
 2
 ANTI-PSYKER 4+, DEVASTATING WOUNDS
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
-The target below its Starting Strength: +1 to Hit rolls (Feeding Frenzy)
-The target below its Starting Strength · “If that target is also Below Half-strength”: +1 to Wound rolls (Feeding Frenzy)
-not counted here: see the rule (Synapse)
+In Synapse Range: +1 S in melee AI (Synapse)
++1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
+vs targets below Starting Strength: +1 to Hit rolls in melee; also +1 to Wound rolls if Below Half-strength AI (Feeding Frenzy)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
-1CP Secure Biomass: Critical Hit on 5+, It has the HARVESTER keyword
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 ABILITIES
 Bio-stimulus
 Your Shoot/Fight
@@ -3370,12 +3332,12 @@ Tyrannofex
 –
 WHEN TARGETED
 1
-Resilient Organism: Once per battle: Damage 0
+Once per battle: one attack's Damage becomes 0 AI (Resilient Organism)
 DAMAGED 1-5 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
 STRATAGEMS · ASSIMILATION SWARM
-1CP Broodguard Impulse: +1 to Wound rolls, If (see the rule)
+1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 RANGED WEAPONS
 Range
 A
@@ -3398,8 +3360,8 @@ Stinger salvoes
 5
 0
 1
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
-not counted here: see the rule (Pyrovores) (Burning Spray)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -3412,10 +3374,10 @@ Powerful limbs
 8
 0
 2
-not counted here: see the rule (Synapse)
-The target is the enemy unit selected: +1 AP (Bio-stimulus)
+In Synapse Range: +1 S in melee AI (Synapse)
+Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 STRATAGEMS · ASSIMILATION SWARM · FIGHT PHASE
-1CP Secure Biomass: [LETHAL HITS]
+1CP Secure Biomass: in the Fight phase, TYRANIDS: melee weapons gain [LETHAL HITS]; HARVESTER: also Critical Hits on 5+ in melee AI
 ABILITIES
 Resilient Organism
 Once per battle
@@ -3511,6 +3473,17 @@ Bio-stimulus
 In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly TYRANIDS unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.
 
 UNITPsychophage
+
+Ask about this ability
+
+######## popup ability:healybois|Burning Spray|In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the **Benefit of Cover**. · HEALYBOIS Healybois
+ABILITY · SHOOTING · YOUR TURN
+
+Burning Spray
+
+In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover.
+
+UNITPyrovores
 
 Ask about this ability
 
@@ -4251,25 +4224,6 @@ If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within
 
 Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.
 Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.
-Ask about this rule
-
-######## popup rule:Select Weapons · HEALYBOIS Healybois
-CORE RULE
-
-Select Weapons
-
-For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
-
-While shooting: You can select one or more ranged weapons that model has.
-
-While fighting: You must select one melee weapon that model has.
-
-Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
-
-24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
-
-04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
-
 Ask about this rule
 
 ######## popup rule:Shadow in the Warp · HEALYBOIS Healybois

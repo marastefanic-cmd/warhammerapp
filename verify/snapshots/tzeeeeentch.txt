@@ -185,9 +185,9 @@ All of them: 2000 pts
 USES PER BATTLE
 NEW GAME
 ABILITIES
-Malefic Destruction · Daemon Prince of Chaos with wings
+Once per battle, at the start of the Fight phase, if used: +3 A with this model’s hellforged weapons AI (Malefic Destruction) · Daemon Prince of Chaos with wings
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -348,10 +348,11 @@ D3+6
 -2
 3
 BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
-If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-7 wounds remaining)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 The Changeling
 Infernal Flames
 ➤witchfire
@@ -370,9 +371,10 @@ D6+3
 -1
 D3
 IGNORES COVER, HAZARDOUS, PSYCHIC, TORRENT
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 Daemon Prince of Chaos with wings
 Neverblade
 Infernal cannon
@@ -382,9 +384,10 @@ Infernal cannon
 5
 -1
 2
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 Lord of Change
 Infernal Puppeteer
 Rod of sorcery
@@ -412,11 +415,12 @@ PSYCHIC
 -2
 3
 HAZARDOUS, PSYCHIC
-Own aura: +1 S (Daemon Lord of Tzeentch)
-Every ranged attack: Bolt of Change one of: [IGNORES COVER] · [LETHAL HITS] · [SUSTAINED HITS D3] (Master of Magicks)
-If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
+Bolt of Change: pick one in your Shooting phase: [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] AI (Master of Magicks)
+While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 Lord of Change
 Inescapable Eye
 Rod of sorcery
@@ -444,11 +448,12 @@ PSYCHIC
 -2
 3
 HAZARDOUS, PSYCHIC
-Own aura: +1 S (Daemon Lord of Tzeentch)
-Every ranged attack: Bolt of Change one of: [IGNORES COVER] · [LETHAL HITS] · [SUSTAINED HITS D3] (Master of Magicks)
-If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
+Bolt of Change: pick one in your Shooting phase: [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] AI (Master of Magicks)
+While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 Fluxmaster
 Improbable Shield (Aura)
 + Pink Horrors
@@ -495,9 +500,11 @@ Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
 -1
 1
 PISTOL, PSYCHIC
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+Granted by: Fluxmaster - Fluxmaster only: once per round (one use, shared with saving throws): you can change one Hit roll or one Wound roll for this model to an unmodified 6 AI (Altered Reality)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 Flamers
 ×3 units
 Flickering Flames×3
@@ -508,9 +515,10 @@ D6
 -1
 1
 IGNORES COVER, PSYCHIC, TORRENT
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 Tzeentch Soul Grinder
 Harvester cannon
 36"
@@ -527,10 +535,11 @@ D3
 -2
 D6+2
 BLAST
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 wounds remaining)
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Kairos Fateweaver
@@ -542,9 +551,10 @@ Staff of Tomorrow
 -2
 2D3
 PSYCHIC
-If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 The Blue Scribes
 Sharp quills
 4
@@ -553,8 +563,9 @@ Sharp quills
 0
 1
 ANTI-PSYKER 2+
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 The Changeling
 The Trickster’s Staff
 3
@@ -563,8 +574,9 @@ The Trickster’s Staff
 -1
 D3
 PSYCHIC
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 Daemon Prince of Chaos with wings
 Neverblade
 Hellforged weapons
@@ -580,11 +592,12 @@ Hellforged weapons
 8
 -1
 1
-Once per battle · If it uses this ability: Hellforged weapons +3 A (Malefic Destruction)
-not counted here: see the rule (Harbinger of Death)
-Every melee attack: +1 to Hit rolls (Neverblade)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+Hellforged weapons: once per battle, if used: +3 A AI (Malefic Destruction)
+Pick one when this model fights: hellforged weapons gain [LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1] AI (Harbinger of Death)
++2 S, +1 A, +1 AP and +1 to Hit rolls in melee AI (Neverblade)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 Lord of Change
 Infernal Puppeteer
 Staff of Tzeentch
@@ -594,9 +607,10 @@ Staff of Tzeentch
 -1
 3
 PSYCHIC
-If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 Lord of Change
 Inescapable Eye
 Staff of Tzeentch
@@ -606,9 +620,10 @@ Staff of Tzeentch
 -1
 3
 PSYCHIC
-If (see the rule): −1 to Hit rolls (Damaged: 1-7 wounds remaining)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-7 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 Fluxmaster
 Improbable Shield (Aura)
 + Pink Horrors
@@ -639,8 +654,10 @@ Yellow claws (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
 2
 0
 1
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+Granted by: Fluxmaster - Fluxmaster only: once per round (one use, shared with saving throws): you can change one Hit roll or one Wound roll for this model to an unmodified 6 AI (Altered Reality)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 Flamers
 ×3 units
 Flamer mouths×3
@@ -649,12 +666,10 @@ Flamer mouths×3
 4
 0
 1
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 Tzeentch Soul Grinder
-
-Fights with both: Iron claw, plus Warpclaw on top (extra attacks).
-
 Iron claw
 5
 3+
@@ -668,9 +683,10 @@ Warpclaw
 -1
 2
 EXTRA ATTACKS
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 wounds remaining)
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 wounds remaining)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 
 ######## abilities · MELEE Abilities
 Kairos Fateweaver
@@ -1322,7 +1338,7 @@ NOT COUNTED IN THE DAMAGE TAB (2)
 The Shadow of Chaos
 “If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: - Your deployment zone is always within your army’s Shadow of Chaos. …” · not counted in the Damage tab
 Fates in Flux
-“You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). …” · not counted in the Damage tab
+“You can spend one Flux token just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test is made for a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army to re-roll the result of that roll, throw or test.” · its words are read by no catalogue effect: not counted in the Damage tab
 UNIT RULES
 
 None that change these numbers.
@@ -1541,7 +1557,7 @@ NOT COUNTED IN THE DAMAGE TAB (2)
 The Shadow of Chaos
 “If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: - Your deployment zone is always within your army’s Shadow of Chaos. …” · not counted in the Damage tab
 Fates in Flux
-“You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). …” · not counted in the Damage tab
+“You can spend one Flux token just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test is made for a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army to re-roll the result of that roll, throw or test.” · its words are read by no catalogue effect: not counted in the Damage tab
 UNIT RULES
 
 None that change these numbers.
@@ -1826,7 +1842,7 @@ NOT COUNTED IN THE DAMAGE TAB (2)
 The Shadow of Chaos
 “If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: - Your deployment zone is always within your army’s Shadow of Chaos. …” · not counted in the Damage tab
 Fates in Flux
-“You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). …” · not counted in the Damage tab
+“You can spend one Flux token just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test is made for a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army to re-roll the result of that roll, throw or test.” · its words are read by no catalogue effect: not counted in the Damage tab
 UNIT RULES
 
 None that change these numbers.
@@ -1923,7 +1939,7 @@ NOT COUNTED IN THE DAMAGE TAB (2)
 The Shadow of Chaos
 “If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: - Your deployment zone is always within your army’s Shadow of Chaos. …” · not counted in the Damage tab
 Fates in Flux
-“You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). …” · not counted in the Damage tab
+“You can spend one Flux token just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test is made for a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army to re-roll the result of that roll, throw or test.” · its words are read by no catalogue effect: not counted in the Damage tab
 UNIT RULES
 
 None that change these numbers.
@@ -1989,19 +2005,19 @@ CAVALCADE OF CHAOS
 CP
 AI
 From Beyond the Veil
-End of the Movement phase, from the start of the battle, your LEGIONES DAEMONICA MOUNTED unit in Strategic Reserves: it can make an Ingress move.
+at the end of the phase, from the start of the battle: a LEGIONES DAEMONICA MOUNTED unit in Strategic Reserves makes an ingress move
 End of Movement The Blue Scribes, Fluxmaster + Pink Horrors
 1
 CP
 AI
 Warp-Riders
-Your Movement phase, when your LEGIONES DAEMONICA MOUNTED unit is selected to move: it has MOBILE.
+LEGIONES DAEMONICA MOUNTED selected to move: MOBILE
 Your Movement The Blue Scribes, Fluxmaster + Pink Horrors
 1
 CP
 AI
 Inescapable Manifestations
-Your opponent’s Movement phase, when a unit engaged with your LEGIONES DAEMONICA MOUNTED unit is selected to make a Fall Back move: an enemy unit engaged with your unit that is selected to Fall Back must use the desperate escape mode (if it is Battle-shocked, -1 to those hazard rolls).
+an enemy falling back from LEGIONES DAEMONICA MOUNTED must use desperate escape (−1 to that unit’s hazard rolls if Battle-shocked)
 Their Movement The Blue Scribes, Fluxmaster + Pink Horrors
 SCINTILLATING LEGION
 6
@@ -2009,37 +2025,37 @@ SCINTILLATING LEGION
 CP
 AI
 Fateborne Nightmares
-Your Movement or Charge phase: until the end of the phase, models in your LEGIONES DAEMONICA TZEENTCH unit can move through terrain features.
+LEGIONES DAEMONICA TZEENTCH moves through terrain features
 Your Move/Charge Any unit
 1
 CP
 AI
 Pyrogenesis
-Your Shooting phase or the Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not yet selected to shoot or fight: until the end of the phase, +2 S to its weapons, or spend one Flux token for +3 S and +1 AP instead.
++2 S, or a Flux token: +3 S and +1 AP
 Your Shoot · Fight Any unit
 1
 CP
 AI
 Ficklefire
-Your Shooting phase, your LEGIONES DAEMONICA TZEENTCH unit within Engagement Range of enemy units: until the end of the phase, enemy units are not within Engagement Range of it for selecting targets for and resolving ranged attacks; each time an enemy model is destroyed while its unit is within Engagement Range of your unit, on a D6 of 5+ your unit suffers 1 mortal wound after the attacking unit has finished its attacks.
+LEGIONES DAEMONICA TZEENTCH shoots as if not in Engagement Range; each enemy model killed in Engagement Range: 1 mortal wound to this unit on a 5+
 Your Shooting Any unit
 1
 CP
 AI
 Flickering Reality
-Fight phase, just after an enemy unit selects its targets, your LEGIONES DAEMONICA TZEENTCH unit it targeted: roll one D6 (spend one Flux token to re-roll it); until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll (after any re-roll) of that result the attack sequence ends, even if it would have been a Critical Hit.
+when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs this unit ends the attack
 Fight Any unit
 1
 CP
 AI
 Delirium Unmade
-End of your opponent’s Fight phase, your LEGIONES DAEMONICA TZEENTCH unit not within Engagement Range (or spend one Flux token: up to two such units, engaged or not): remove them from the battlefield and place them into Strategic Reserves.
+at the end of the phase: a LEGIONES DAEMONICA TZEENTCH unit not engaged goes into Strategic Reserves (2 targets, engaged or not, for a Flux token)
 End of their Fight Any unit
 1
 CP
 AI
 Impossible Eclipse
-Any phase, your LEGIONES DAEMONICA TZEENTCH MONSTER unit on the battlefield: until the end of the phase, No Man’s Land or your opponent’s deployment zone (spend one Flux token: both) is within your army’s Shadow of Chaos.
+No Man's Land or the opponent's deployment zone (both for a Flux token) is in your Shadow of Chaos
 Any phase Kairos Fateweaver, Daemon Prince of Chaos with wings, Lord of Change ×2
 CORE STRATAGEMS
 10
@@ -2047,61 +2063,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement All but The Blue Scribes
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge Kairos Fateweaver, Daemon Prince of Chaos with wings, Lord of Change ×2, Tzeentch Soul Grinder
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight All but Flamers ×3, Tzeentch Soul Grinder
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting No unit in this list can use it (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2482,17 +2498,18 @@ Kairos Fateweaver
 4+
 WHEN TARGETED
 5
-Fates in Flux: not counted here: see the rule
-P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: not counted here: see the rule (The Changeling)
-Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
-1CP Flickering Reality: not counted here: see the rule
+Spend a Flux token to re-roll a saving throw (the opponent gains it) AI (Fates in Flux)
+Granted by: The Blue Scribes - Enemies within 12" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks AI (P’tarix’s Sorcerous Syphon)
+Granted by: The Changeling - At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot AI (Mischief and Confusion)
+Granted by: Fluxmaster (enhancement) - LEGIONES DAEMONICA TZEENTCH within 6" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds AI (Improbable Shield (Aura))
+1CP Flickering Reality: in the Fight phase, when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs this unit ends the attack AI
 DAMAGED 1-7 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-7 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 RANGED WEAPONS
 Range
 A
@@ -2517,7 +2534,7 @@ D3+6
 -2
 3
 BLAST, INDIRECT FIRE, HAZARDOUS, PSYCHIC
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -2603,13 +2620,15 @@ Large Flying
 8+
 2
 4+
+
+Enemies within 12" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks AI (P’tarix’s Sorcerous Syphon)
+
 WHEN TARGETED
-5
-Fates in Flux: not counted here: see the rule
-P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls
-Mischief and Confusion: not counted here: see the rule (The Changeling)
-Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
-1CP Flickering Reality: not counted here: see the rule
+4
+Spend a Flux token to re-roll a saving throw (the opponent gains it) AI (Fates in Flux)
+Granted by: The Changeling - At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot AI (Mischief and Confusion)
+Granted by: Fluxmaster (enhancement) - LEGIONES DAEMONICA TZEENTCH within 6" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds AI (Improbable Shield (Aura))
+1CP Flickering Reality: in the Fight phase, when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs this unit ends the attack AI
 MELEE WEAPONS
 A
 WS
@@ -2623,8 +2642,9 @@ Sharp quills
 0
 1
 ANTI-PSYKER 2+
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 ABILITIES
 P’tarix’s Sorcerous Syphon
 
@@ -2690,15 +2710,16 @@ The Changeling
 4+
 WHEN TARGETED
 6
-Fates in Flux: not counted here: see the rule
-Formless Horror: not counted here: see the rule
-Mischief and Confusion: not counted here: see the rule
-P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
-1CP Flickering Reality: not counted here: see the rule
+Spend a Flux token to re-roll a saving throw (the opponent gains it) AI (Fates in Flux)
+Each time an enemy unit wants to target this model: that unit takes a Battle-shock test; if it fails, it is Battle-shocked and can’t target this model this phase AI (Formless Horror)
+At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot AI (Mischief and Confusion)
+Granted by: The Blue Scribes - Enemies within 12" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks AI (P’tarix’s Sorcerous Syphon)
+Granted by: Fluxmaster (enhancement) - LEGIONES DAEMONICA TZEENTCH within 6" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds AI (Improbable Shield (Aura))
+1CP Flickering Reality: in the Fight phase, when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs this unit ends the attack AI
 ALL ATTACKS
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 RANGED WEAPONS
 Range
 A
@@ -2723,7 +2744,7 @@ D6+3
 -1
 D3
 IGNORES COVER, HAZARDOUS, PSYCHIC, TORRENT
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -2801,14 +2822,15 @@ Daemon Prince of Chaos with wings
 4+
 WHEN TARGETED
 5
-Fates in Flux: not counted here: see the rule
-P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: not counted here: see the rule (The Changeling)
-Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
-1CP Flickering Reality: not counted here: see the rule
+Spend a Flux token to re-roll a saving throw (the opponent gains it) AI (Fates in Flux)
+Granted by: The Blue Scribes - Enemies within 12" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks AI (P’tarix’s Sorcerous Syphon)
+Granted by: The Changeling - At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot AI (Mischief and Confusion)
+Granted by: Fluxmaster (enhancement) - LEGIONES DAEMONICA TZEENTCH within 6" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds AI (Improbable Shield (Aura))
+1CP Flickering Reality: in the Fight phase, when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs this unit ends the attack AI
 ALL ATTACKS
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 RANGED WEAPONS
 Range
 A
@@ -2823,7 +2845,7 @@ Infernal cannon
 5
 -1
 2
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -2843,9 +2865,9 @@ Hellforged weapons
 8
 -1
 1
-Once per battle · If it uses this ability: Hellforged weapons +3 A (Malefic Destruction)
-not counted here: see the rule (Harbinger of Death)
-Every melee attack: +1 to Hit rolls (Neverblade)
+Hellforged weapons: once per battle, if used: +3 A AI (Malefic Destruction)
+Pick one when this model fights: hellforged weapons gain [LETHAL HITS], [PRECISION] or [SUSTAINED HITS 1] AI (Harbinger of Death)
++2 S, +1 A, +1 AP and +1 to Hit rolls in melee AI (Neverblade)
 ABILITIES
 Daemonic Allegiance
 Already in A
@@ -2936,17 +2958,18 @@ Lord of Change
 4+
 WHEN TARGETED
 5
-Fates in Flux: not counted here: see the rule
-P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: not counted here: see the rule (The Changeling)
-Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
-1CP Flickering Reality: not counted here: see the rule
+Spend a Flux token to re-roll a saving throw (the opponent gains it) AI (Fates in Flux)
+Granted by: The Blue Scribes - Enemies within 12" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks AI (P’tarix’s Sorcerous Syphon)
+Granted by: The Changeling - At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot AI (Mischief and Confusion)
+Granted by: Fluxmaster (enhancement) - LEGIONES DAEMONICA TZEENTCH within 6" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds AI (Improbable Shield (Aura))
+1CP Flickering Reality: in the Fight phase, when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs this unit ends the attack AI
 DAMAGED 1-7 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-7 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 RANGED WEAPONS
 Range
 A
@@ -2979,8 +3002,8 @@ PSYCHIC
 -2
 3
 HAZARDOUS, PSYCHIC
-Own aura: +1 S (Daemon Lord of Tzeentch)
-Every ranged attack: Bolt of Change one of: [IGNORES COVER] · [LETHAL HITS] · [SUSTAINED HITS D3] (Master of Magicks)
+Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
+Bolt of Change: pick one in your Shooting phase: [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] AI (Master of Magicks)
 MELEE WEAPONS
 A
 WS
@@ -3075,17 +3098,18 @@ Lord of Change
 4+
 WHEN TARGETED
 5
-Fates in Flux: not counted here: see the rule
-P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: not counted here: see the rule (The Changeling)
-Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
-1CP Flickering Reality: not counted here: see the rule
+Spend a Flux token to re-roll a saving throw (the opponent gains it) AI (Fates in Flux)
+Granted by: The Blue Scribes - Enemies within 12" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks AI (P’tarix’s Sorcerous Syphon)
+Granted by: The Changeling - At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot AI (Mischief and Confusion)
+Granted by: Fluxmaster (enhancement) - LEGIONES DAEMONICA TZEENTCH within 6" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds AI (Improbable Shield (Aura))
+1CP Flickering Reality: in the Fight phase, when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs this unit ends the attack AI
 DAMAGED 1-7 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-7 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 RANGED WEAPONS
 Range
 A
@@ -3118,8 +3142,8 @@ PSYCHIC
 -2
 3
 HAZARDOUS, PSYCHIC
-Own aura: +1 S (Daemon Lord of Tzeentch)
-Every ranged attack: Bolt of Change one of: [IGNORES COVER] · [LETHAL HITS] · [SUSTAINED HITS D3] (Master of Magicks)
+Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
+Bolt of Change: pick one in your Shooting phase: [IGNORES COVER], [LETHAL HITS] or [SUSTAINED HITS D3] AI (Master of Magicks)
 MELEE WEAPONS
 A
 WS
@@ -3234,18 +3258,19 @@ Pink Horror×10
 2
 4+
 WHEN TARGETED
-8
-Fates in Flux: not counted here: see the rule
-FLUXMASTER Fluxmaster: Stealth
-FLUXMASTER Fluxmaster: Melee attacks: −1 to Hit rolls
-FLUXMASTER Altered Reality: not counted here: see the rule
-FLUXMASTER Improbable Shield (Aura): Own aura: Feel No Pain 4+ against Psychic Attacks and mortal wounds
-P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: not counted here: see the rule (The Changeling)
-1CP Flickering Reality: not counted here: see the rule
+7
+Spend a Flux token to re-roll a saving throw (the opponent gains it) AI (Fates in Flux)
+Granted by: Fluxmaster - Stealth; −1 to Hit rolls vs melee attacks on this unit AI (Fluxmaster)
+Granted by: Fluxmaster - Fluxmaster only: once per round (one use, shared with Hit and Wound rolls): you can change one saving throw for this model to an unmodified 6 AI (Altered Reality)
+Granted by: Fluxmaster (enhancement) - LEGIONES DAEMONICA TZEENTCH within 6" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds AI (Improbable Shield (Aura))
+Granted by: The Blue Scribes - Enemies within 12" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks AI (P’tarix’s Sorcerous Syphon)
+Granted by: The Changeling - At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot AI (Mischief and Confusion)
+1CP Flickering Reality: in the Fight phase, when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs this unit ends the attack AI
 ALL ATTACKS · WHOLE UNIT
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
+Granted by: Fluxmaster - Fluxmaster only: once per round (one use, shared with saving throws): you can change one Hit roll or one Wound roll for this model to an unmodified 6 AI (Altered Reality)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 RANGED WEAPONS
 Range
 A
@@ -3297,7 +3322,7 @@ Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
 1
 PISTOL, PSYCHIC
 WHOLE UNIT
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -3431,14 +3456,15 @@ Flamers×3
 4+
 WHEN TARGETED
 5
-Fates in Flux: not counted here: see the rule
-P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: not counted here: see the rule (The Changeling)
-Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
-1CP Flickering Reality: not counted here: see the rule
+Spend a Flux token to re-roll a saving throw (the opponent gains it) AI (Fates in Flux)
+Granted by: The Blue Scribes - Enemies within 12" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks AI (P’tarix’s Sorcerous Syphon)
+Granted by: The Changeling - At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot AI (Mischief and Confusion)
+Granted by: Fluxmaster (enhancement) - LEGIONES DAEMONICA TZEENTCH within 6" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds AI (Improbable Shield (Aura))
+1CP Flickering Reality: in the Fight phase, when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs this unit ends the attack AI
 ALL ATTACKS
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 RANGED WEAPONS
 Range
 A
@@ -3454,7 +3480,7 @@ D6
 -1
 1
 IGNORES COVER, PSYCHIC, TORRENT
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -3524,16 +3550,17 @@ Soul Grinder
 4+
 WHEN TARGETED
 5
-Fates in Flux: not counted here: see the rule
-P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: not counted here: see the rule (The Changeling)
-Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
-1CP Flickering Reality: not counted here: see the rule
+Spend a Flux token to re-roll a saving throw (the opponent gains it) AI (Fates in Flux)
+Granted by: The Blue Scribes - Enemies within 12" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks AI (P’tarix’s Sorcerous Syphon)
+Granted by: The Changeling - At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot AI (Mischief and Confusion)
+Granted by: Fluxmaster (enhancement) - LEGIONES DAEMONICA TZEENTCH within 6" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds AI (Improbable Shield (Aura))
+1CP Flickering Reality: in the Fight phase, when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs this unit ends the attack AI
 DAMAGED 1-5 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 RANGED WEAPONS
 Range
 A
@@ -3556,16 +3583,13 @@ D3
 -2
 D6+2
 BLAST
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Iron claw, plus Warpclaw on top (extra attacks).
-
 Iron claw
 5
 3+
@@ -3648,18 +3672,19 @@ Blue Horror
 1
 4+
 
-Enemy units’ Ld: not counted here: see the rule (Sullen Malevolence)
+With a BLUE HORROR: enemies within 6": −1 Ld AI (Sullen Malevolence)
 
 WHEN TARGETED
 5
-Fates in Flux: not counted here: see the rule
-P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: not counted here: see the rule (The Changeling)
-Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
-1CP Flickering Reality: not counted here: see the rule
+Spend a Flux token to re-roll a saving throw (the opponent gains it) AI (Fates in Flux)
+Granted by: The Blue Scribes - Enemies within 12" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks AI (P’tarix’s Sorcerous Syphon)
+Granted by: The Changeling - At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot AI (Mischief and Confusion)
+Granted by: Fluxmaster (enhancement) - LEGIONES DAEMONICA TZEENTCH within 6" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds AI (Improbable Shield (Aura))
+1CP Flickering Reality: in the Fight phase, when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs this unit ends the attack AI
 ALL ATTACKS
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 RANGED WEAPONS
 Coruscating Blue flames, Coruscating Yellow flames (ref. only) · all pistols
 Range
@@ -3684,7 +3709,7 @@ Coruscating Yellow flames (ref. only)BRIMSTONE HORRORS ADDED BY SPLIT
 -1
 1
 PISTOL, PSYCHIC
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -3775,14 +3800,15 @@ Brimstone Horror
 4+
 WHEN TARGETED
 5
-Fates in Flux: not counted here: see the rule
-P’tarix’s Sorcerous Syphon: Psychic Attacks, If (see the rule): −1 to Wound rolls (The Blue Scribes)
-Mischief and Confusion: not counted here: see the rule (The Changeling)
-Improbable Shield (Aura): Within 6" of Fluxmaster: Feel No Pain 4+ against Psychic Attacks and mortal wounds (Fluxmaster)
-1CP Flickering Reality: not counted here: see the rule
+Spend a Flux token to re-roll a saving throw (the opponent gains it) AI (Fates in Flux)
+Granted by: The Blue Scribes - Enemies within 12" of The Blue Scribes: −1 to Wound rolls with Psychic Attacks AI (P’tarix’s Sorcerous Syphon)
+Granted by: The Changeling - At the start of your opponent’s Shooting phase, pick a visible enemy unit within 12" of The Changeling and roll one D6: on 2–5, that unit gets −1 to Hit rolls; on a 6, that unit can’t shoot AI (Mischief and Confusion)
+Granted by: Fluxmaster (enhancement) - LEGIONES DAEMONICA TZEENTCH within 6" of the bearer: Feel No Pain 4+ vs Psychic Attacks and mortal wounds AI (Improbable Shield (Aura))
+1CP Flickering Reality: in the Fight phase, when targeted: roll a D6 (Flux token to re-roll); an unmodified Hit roll of that number vs this unit ends the attack AI
 ALL ATTACKS
+Spend a Flux token to re-roll a Hit roll, Wound roll or Damage roll (the opponent gains it) AI (Fates in Flux)
 STRATAGEMS · SCINTILLATING LEGION
-1CP Pyrogenesis: not counted here: see the rule
+1CP Pyrogenesis: in your Shooting phase or the Fight phase, +2 S, or a Flux token: +3 S and +1 AP AI
 RANGED WEAPONS
 Range
 A
@@ -3798,7 +3824,7 @@ Coruscating Yellow flames
 -1
 1
 PISTOL, PSYCHIC
-Within 6" of Lord of Change: +1 S (Daemon Lord of Tzeentch)
+Granted by: Lord of Change - Within 6" of Lord of Change: +1 S to ranged attacks AI (Daemon Lord of Tzeentch)
 MELEE WEAPONS
 A
 WS
@@ -4668,25 +4694,6 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
-
-Ask about this rule
-
-######## popup rule:Select Weapons · TZEEEEENTCH Tzeeeeentch
-CORE RULE
-
-Select Weapons
-
-For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
-
-While shooting: You can select one or more ranged weapons that model has.
-
-While fighting: You must select one melee weapon that model has.
-
-Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
-
-24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
-
-04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
 
 Ask about this rule
 

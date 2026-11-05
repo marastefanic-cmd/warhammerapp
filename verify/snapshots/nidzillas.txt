@@ -162,7 +162,7 @@ APPLIES TONorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Sy
 
 START OF THE BATTLE AND THE BATTLE ROUNDS
 FIRST ROUND
-Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+Pick at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy; or Feel No Pain 5+ and OC 15 on one objective AI (Singular Purpose) · Norn Assimilator ×2, Norn Emissary ×2
 USES PER BATTLE
 NEW GAME
 RULES
@@ -172,10 +172,10 @@ Protean Purpose · Norn Assimilator
 Protean Purpose · Norn Assimilator
 Protean Purpose · Norn Emissary
 Protean Purpose · Norn Emissary
-Resilient Organism · Tyrannofex · Unit 1
-Resilient Organism · Tyrannofex · Unit 2
+Once per battle: one attack's Damage becomes 0 AI (Resilient Organism) · Tyrannofex · Unit 1
+Once per battle: one attack's Damage becomes 0 AI (Resilient Organism) · Tyrannofex · Unit 2
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -287,10 +287,10 @@ D6+3
 -1
 2
 PSYCHIC, TORRENT
-not counted here: see the rule (Enraged Behemoths)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
+1CP Swarm-guided Salvoes: in your Shooting phase, TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls AI
 Norn Assimilator
 Synaptoprescience
 1 of 2
@@ -302,12 +302,12 @@ Toxinjecter Harpoon
 -3
 D6+1
 HARPOONED
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Enraged Behemoths)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
+1CP Swarm-guided Salvoes: in your Shooting phase, TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls AI
 Norn Assimilator
 Synaptoprescience
 2 of 2
@@ -319,12 +319,12 @@ Toxinjecter Harpoon
 -3
 D6+1
 HARPOONED
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Enraged Behemoths)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
+1CP Swarm-guided Salvoes: in your Shooting phase, TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls AI
 Norn Emissary
 Destabilising Predation
 Psychic tendril
@@ -352,12 +352,12 @@ BLAST, PSYCHIC, ANTI-CHARACTER 2+
 -3
 D6
 MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Enraged Behemoths)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
+1CP Swarm-guided Salvoes: in your Shooting phase, TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls AI
 Norn Emissary
 Psychic tendril
 ➤neuroparasite
@@ -384,12 +384,12 @@ BLAST, PSYCHIC
 -3
 D6
 MELTA 2, PSYCHIC
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Enraged Behemoths)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
+1CP Swarm-guided Salvoes: in your Shooting phase, TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls AI
 Tyrannofex
 ×2 units
 Acid spray
@@ -407,11 +407,11 @@ Stinger salvoes
 5
 0
 1
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Enraged Behemoths)
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
+1CP Swarm-guided Salvoes: in your Shooting phase, TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls AI
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 The Swarmlord
@@ -422,16 +422,13 @@ Bone Sabres
 -2
 3
 TWIN-LINKED
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Enraged Behemoths)
+In Synapse Range: +1 S in melee AI (Synapse)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 Hive Tyrant
 Warlord
 Monstrous Nemesis
-
-Fights with both: Monstrous bonesword and lash whip, plus Monstrous scything talons on top (extra attacks).
-
 Monstrous bonesword and lash whip
 6
 2+
@@ -446,11 +443,11 @@ Monstrous scything talons
 -2
 2
 EXTRA ATTACKS
-The target: MONSTER or VEHICLE: +1 to Wound rolls (Monstrous Nemesis)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Enraged Behemoths)
+In Synapse Range: +1 S in melee AI (Synapse)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+vs MONSTER or VEHICLE: +1 to Wound rolls in melee AI (Monstrous Nemesis)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 Neurogaunts
 ×2 units
 Chitinous claws and teeth×11
@@ -459,13 +456,10 @@ Chitinous claws and teeth×11
 3
 0
 1
-not counted here: see the rule (Synapse)
+In Synapse Range: +1 S in melee AI (Synapse)
 Norn Assimilator
 Synaptoprescience
 1 of 2
-
-Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
-
 Monstrous scything talons
 6
 2+
@@ -479,20 +473,17 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Enraged Behemoths)
+In Synapse Range: +1 S in melee AI (Synapse)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
-1CP Lesser Prey: +2 S
+1CP Lesser Prey: in the Fight phase, NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee AI
 Norn Assimilator
 Synaptoprescience
 2 of 2
-
-Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
-
 Monstrous scything talons
 6
 2+
@@ -506,19 +497,16 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Enraged Behemoths)
+In Synapse Range: +1 S in melee AI (Synapse)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
-1CP Lesser Prey: +2 S
+1CP Lesser Prey: in the Fight phase, NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee AI
 Norn Emissary
 Destabilising Predation
-
-Fights with both: Monstrous scything talons, plus Monstrous rending claws on top (extra attacks).
-
 Monstrous scything talons
 6
 2+
@@ -532,18 +520,15 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Enraged Behemoths)
+In Synapse Range: +1 S in melee AI (Synapse)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
-1CP Lesser Prey: +2 S
+1CP Lesser Prey: in the Fight phase, NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee AI
 Norn Emissary
-
-Fights with both: Monstrous scything talons, plus Monstrous rending claws on top (extra attacks).
-
 Monstrous scything talons
 6
 2+
@@ -557,14 +542,14 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Enraged Behemoths)
+In Synapse Range: +1 S in melee AI (Synapse)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
-1CP Lesser Prey: +2 S
+1CP Lesser Prey: in the Fight phase, NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee AI
 Tyrannofex
 ×2 units
 Powerful limbs
@@ -573,11 +558,11 @@ Powerful limbs
 8
 0
 2
-If (see the rule): −1 to Hit rolls (Damaged: 1-5 Wounds Remaining)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Enraged Behemoths)
+In Synapse Range: +1 S in melee AI (Synapse)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 
 ######## abilities · MELEE Abilities
 The Swarmlord
@@ -1727,37 +1712,37 @@ CRUSHER STAMPEDE
 CP
 AI
 Untrammelled Ferocity
-Until the end of the phase, your unit’s Normal, Advance and Fall Back moves can pass through models (excluding TITANIC) and terrain up to 4" tall, and through Engagement Range without ending there; taller terrain too, but then, after your unit has moved, roll one D6: on a 1, your unit is Battle-shocked.
+TYRANIDS MONSTER moves through models (not TITANIC) and terrain up to 4"; taller terrain: Battle-shocked on a 1
 Your Movement All but Neurogaunts ×2
 1
 CP
 AI
 Corrosive Viscera
-Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+when a TYRANIDS MONSTER model without FLY is destroyed: that model’s Deadly Demise mortal wounds are automatic
 Their Shoot · Fight All but Neurogaunts ×2
 1
 CP
 AI
 Swarm-guided Salvoes
-Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER], and its attacks can ignore any or all modifiers to BS and to the hit roll.
+TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls
 Your Shooting All but Neurogaunts ×2
 1
 CP
 AI
 Massive Impact
-Your model has ended a Charge move: select one enemy unit within Engagement Range of it and roll six D6: 1 mortal wound for each 4+.
+after a TYRANIDS MONSTER charges: six D6 vs one engaged enemy, 1 mortal wound per 4+
 Your Charge All but Neurogaunts ×2
 1
 CP
 AI
 Rampaging Monstrosities
-Until the end of the phase, your unit’s attacks can re-roll the hit roll.
+TYRANIDS MONSTER: re-roll Hit rolls
 Fight All but Neurogaunts ×2
 1
 CP
 AI
 Savage Roar
-An enemy unit has selected your unit as a target: it takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
+TYRANIDS MONSTER, when targeted: the attacking unit takes a Battle-shock test and has −1 to Hit rolls vs this unit; also −1 to Wound rolls if that unit fails the test
 Fight All but Neurogaunts ×2
 TALONS OF THE NORN QUEEN
 3
@@ -1765,19 +1750,19 @@ TALONS OF THE NORN QUEEN
 CP
 AI
 Tanglestrike Rounds
-After your unit has shot: one enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
+after a NORN ASSIMILATOR shoots: one enemy unit this unit hit has −2" Move until your next Command phase
 Your Shooting Norn Assimilator ×2
 1
 CP
 AI
 Lesser Prey
-Your unit’s melee attacks have +2 S.
+NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee
 Fight Norn Assimilator ×2, Norn Emissary ×2
 1
 CP
 AI
 Catalytic Biofortification
-Your unit has Feel No Pain 4+ against mortal wounds.
+when a NORN ASSIMILATOR suffers a mortal wound: Feel No Pain 4+ vs mortal wounds
 Any phase Norn Assimilator ×2
 CORE STRATAGEMS
 10
@@ -1785,61 +1770,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement All but Hive Tyrant, Neurogaunts ×2
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge All but Neurogaunts ×2
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight The Swarmlord, Hive Tyrant
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting No unit in this list can use it (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2221,13 +2206,13 @@ The Swarmlord
 3
 4+
 
-OC: not counted here: see the rule (Enraged Behemoths)
+TYRANIDS MONSTER at Starting Strength, not Battle-shocked: +2 OC AI (Enraged Behemoths)
 
 WHEN TARGETED
 1
-1CP Savage Roar: not counted here: see the rule
+1CP Savage Roar: in the Fight phase, TYRANIDS MONSTER, when targeted: the attacking unit takes a Battle-shock test and has −1 to Hit rolls vs this unit; also −1 to Wound rolls if that unit fails the test AI
 ALL ATTACKS
-not counted here: see the rule (Enraged Behemoths)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -2243,9 +2228,9 @@ D6+3
 -1
 2
 PSYCHIC, TORRENT
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
+1CP Swarm-guided Salvoes: in your Shooting phase, TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls AI
 MELEE WEAPONS
 A
 WS
@@ -2259,9 +2244,9 @@ Bone Sabres
 -2
 3
 TWIN-LINKED
-not counted here: see the rule (Synapse)
+In Synapse Range: +1 S in melee AI (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 ABILITIES
 Hive Commander
 Your Command
@@ -2337,20 +2322,17 @@ Hive Tyrant
 3
 4+
 
-OC: not counted here: see the rule (Enraged Behemoths)
+TYRANIDS MONSTER at Starting Strength, not Battle-shocked: +2 OC AI (Enraged Behemoths)
 
 WHEN TARGETED
 1
-1CP Savage Roar: not counted here: see the rule
+1CP Savage Roar: in the Fight phase, TYRANIDS MONSTER, when targeted: the attacking unit takes a Battle-shock test and has −1 to Hit rolls vs this unit; also −1 to Wound rolls if that unit fails the test AI
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Monstrous bonesword and lash whip, plus Monstrous scything talons on top (extra attacks).
-
 Monstrous bonesword and lash whip
 6
 2+
@@ -2365,11 +2347,11 @@ Monstrous scything talons
 -2
 2
 EXTRA ATTACKS
-The target: MONSTER or VEHICLE: +1 to Wound rolls (Monstrous Nemesis)
-not counted here: see the rule (Synapse)
-not counted here: see the rule (Enraged Behemoths)
+In Synapse Range: +1 S in melee AI (Synapse)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+vs MONSTER or VEHICLE: +1 to Wound rolls in melee AI (Monstrous Nemesis)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 ABILITIES
 Will of the Hive Mind
 Once per battle round, per army
@@ -2465,7 +2447,7 @@ Chitinous claws and teeth×11
 3
 0
 1
-not counted here: see the rule (Synapse)
+In Synapse Range: +1 S in melee AI (Synapse)
 ABILITIES
 Neurocytes
 
@@ -2517,22 +2499,22 @@ Norn Assimilator
 5
 4+
 
-OC: not counted here: see the rule (Singular Purpose)
+TYRANIDS MONSTER at Starting Strength, not Battle-shocked: +2 OC AI (Enraged Behemoths)
 
-OC: not counted here: see the rule (Enraged Behemoths)
+Picked at start of round 1: OC 15 on one objective AI (Singular Purpose)
 
-Enemy units’ M: not counted here: see the rule (Tanglestrike Rounds)
+1CP Tanglestrike Rounds: in your Shooting phase, after a NORN ASSIMILATOR shoots: one enemy unit this unit hit has −2" Move until your next Command phase AI
 
 WHEN TARGETED
 3
-Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
-1CP Savage Roar: not counted here: see the rule
-1CP Catalytic Biofortification: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
+Picked at start of round 1: Feel No Pain 5+ on one objective AI (Singular Purpose)
+1CP Savage Roar: in the Fight phase, TYRANIDS MONSTER, when targeted: the attacking unit takes a Battle-shock test and has −1 to Hit rolls vs this unit; also −1 to Wound rolls if that unit fails the test AI
+1CP Catalytic Biofortification: in any phase, when a NORN ASSIMILATOR suffers a mortal wound: Feel No Pain 4+ vs mortal wounds AI
 DAMAGED 1-5 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-not counted here: see the rule (Enraged Behemoths)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
 RANGED WEAPONS
 Range
 A
@@ -2548,18 +2530,15 @@ Toxinjecter Harpoon
 -3
 D6+1
 HARPOONED
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
+1CP Swarm-guided Salvoes: in your Shooting phase, TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls AI
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
-
 Monstrous scything talons
 6
 2+
@@ -2573,11 +2552,11 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-not counted here: see the rule (Synapse)
+In Synapse Range: +1 S in melee AI (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
-1CP Lesser Prey: +2 S
+1CP Lesser Prey: in the Fight phase, NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee AI
 ABILITIES
 Singular Purpose
 Start of the first battle round
@@ -2661,22 +2640,22 @@ Norn Assimilator
 5
 4+
 
-OC: not counted here: see the rule (Singular Purpose)
+TYRANIDS MONSTER at Starting Strength, not Battle-shocked: +2 OC AI (Enraged Behemoths)
 
-OC: not counted here: see the rule (Enraged Behemoths)
+Picked at start of round 1: OC 15 on one objective AI (Singular Purpose)
 
-Enemy units’ M: not counted here: see the rule (Tanglestrike Rounds)
+1CP Tanglestrike Rounds: in your Shooting phase, after a NORN ASSIMILATOR shoots: one enemy unit this unit hit has −2" Move until your next Command phase AI
 
 WHEN TARGETED
 3
-Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
-1CP Savage Roar: not counted here: see the rule
-1CP Catalytic Biofortification: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
+Picked at start of round 1: Feel No Pain 5+ on one objective AI (Singular Purpose)
+1CP Savage Roar: in the Fight phase, TYRANIDS MONSTER, when targeted: the attacking unit takes a Battle-shock test and has −1 to Hit rolls vs this unit; also −1 to Wound rolls if that unit fails the test AI
+1CP Catalytic Biofortification: in any phase, when a NORN ASSIMILATOR suffers a mortal wound: Feel No Pain 4+ vs mortal wounds AI
 DAMAGED 1-5 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-not counted here: see the rule (Enraged Behemoths)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
 RANGED WEAPONS
 Range
 A
@@ -2692,18 +2671,15 @@ Toxinjecter Harpoon
 -3
 D6+1
 HARPOONED
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
+1CP Swarm-guided Salvoes: in your Shooting phase, TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls AI
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Monstrous scything talons, plus Toxinjecter Harpoon on top (extra attacks).
-
 Monstrous scything talons
 6
 2+
@@ -2717,11 +2693,11 @@ Toxinjecter Harpoon
 -3
 D6+1
 EXTRA ATTACKS
-not counted here: see the rule (Synapse)
+In Synapse Range: +1 S in melee AI (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
-1CP Lesser Prey: +2 S
+1CP Lesser Prey: in the Fight phase, NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee AI
 ABILITIES
 Singular Purpose
 Start of the first battle round
@@ -2804,21 +2780,21 @@ Norn Emissary
 5
 4+
 
-OC: not counted here: see the rule (Singular Purpose)
+TYRANIDS MONSTER at Starting Strength, not Battle-shocked: +2 OC AI (Enraged Behemoths)
 
-OC: not counted here: see the rule (Enraged Behemoths)
+Picked at start of round 1: OC 15 on one objective AI (Singular Purpose)
 
 WHEN TARGETED
 3
-Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
-Unnatural Resilience: Feel No Pain 4+ against mortal wounds
-1CP Savage Roar: not counted here: see the rule
+Picked at start of round 1: Feel No Pain 5+ on one objective AI (Singular Purpose)
+Feel No Pain 4+ vs mortal wounds AI (Unnatural Resilience)
+1CP Savage Roar: in the Fight phase, TYRANIDS MONSTER, when targeted: the attacking unit takes a Battle-shock test and has −1 to Hit rolls vs this unit; also −1 to Wound rolls if that unit fails the test AI
 DAMAGED 1-5 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-not counted here: see the rule (Enraged Behemoths)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
 RANGED WEAPONS
 Range
 A
@@ -2851,18 +2827,15 @@ BLAST, PSYCHIC, ANTI-CHARACTER 2+
 -3
 D6
 MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
+1CP Swarm-guided Salvoes: in your Shooting phase, TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls AI
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Monstrous scything talons, plus Monstrous rending claws on top (extra attacks).
-
 Monstrous scything talons
 6
 2+
@@ -2876,11 +2849,11 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-not counted here: see the rule (Synapse)
+In Synapse Range: +1 S in melee AI (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
-1CP Lesser Prey: +2 S
+1CP Lesser Prey: in the Fight phase, NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee AI
 ABILITIES
 Singular Purpose
 Start of the first battle round
@@ -2957,21 +2930,21 @@ Norn Emissary
 5
 4+
 
-OC: not counted here: see the rule (Singular Purpose)
+TYRANIDS MONSTER at Starting Strength, not Battle-shocked: +2 OC AI (Enraged Behemoths)
 
-OC: not counted here: see the rule (Enraged Behemoths)
+Picked at start of round 1: OC 15 on one objective AI (Singular Purpose)
 
 WHEN TARGETED
 3
-Singular Purpose: If (see the rule): Feel No Pain 5+ (until the end of the battle)
-Unnatural Resilience: Feel No Pain 4+ against mortal wounds
-1CP Savage Roar: not counted here: see the rule
+Picked at start of round 1: Feel No Pain 5+ on one objective AI (Singular Purpose)
+Feel No Pain 4+ vs mortal wounds AI (Unnatural Resilience)
+1CP Savage Roar: in the Fight phase, TYRANIDS MONSTER, when targeted: the attacking unit takes a Battle-shock test and has −1 to Hit rolls vs this unit; also −1 to Wound rolls if that unit fails the test AI
 DAMAGED 1-5 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
-The target is the enemy unit selected · “At the start of the first battle round, select one of the following”: Re-roll Hit rolls, Re-roll Wound rolls (Singular Purpose)
-not counted here: see the rule (Enraged Behemoths)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
+Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
 RANGED WEAPONS
 Range
 A
@@ -3004,18 +2977,15 @@ BLAST, PSYCHIC
 -3
 D6
 MELTA 2, PSYCHIC
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
+1CP Swarm-guided Salvoes: in your Shooting phase, TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls AI
 MELEE WEAPONS
 A
 WS
 S
 AP
 D
-
-Fights with both: Monstrous scything talons, plus Monstrous rending claws on top (extra attacks).
-
 Monstrous scything talons
 6
 2+
@@ -3029,11 +2999,11 @@ Monstrous rending claws
 -2
 2
 EXTRA ATTACKS
-not counted here: see the rule (Synapse)
+In Synapse Range: +1 S in melee AI (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 STRATAGEMS · TALONS OF THE NORN QUEEN · FIGHT PHASE
-1CP Lesser Prey: +2 S
+1CP Lesser Prey: in the Fight phase, NORN ASSIMILATOR/NORN EMISSARY: +2 S in melee AI
 ABILITIES
 Singular Purpose
 Start of the first battle round
@@ -3103,16 +3073,16 @@ Tyrannofex
 5
 –
 
-OC: not counted here: see the rule (Enraged Behemoths)
+TYRANIDS MONSTER at Starting Strength, not Battle-shocked: +2 OC AI (Enraged Behemoths)
 
 WHEN TARGETED
 2
-Resilient Organism: Once per battle: Damage 0
-1CP Savage Roar: not counted here: see the rule
+Once per battle: one attack's Damage becomes 0 AI (Resilient Organism)
+1CP Savage Roar: in the Fight phase, TYRANIDS MONSTER, when targeted: the attacking unit takes a Battle-shock test and has −1 to Hit rolls vs this unit; also −1 to Wound rolls if that unit fails the test AI
 DAMAGED 1-5 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-not counted here: see the rule (Enraged Behemoths)
+TYRANIDS MONSTER below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if Below Half-strength AI (Enraged Behemoths)
 RANGED WEAPONS
 Range
 A
@@ -3135,9 +3105,9 @@ Stinger salvoes
 5
 0
 1
-Within 6" of Hive Tyrant: [ASSAULT], [LETHAL HITS] (Onslaught)
+Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP Swarm-guided Salvoes: [IGNORES COVER], Ignore modifiers to BS/WS and the Hit roll
+1CP Swarm-guided Salvoes: in your Shooting phase, TYRANIDS MONSTER: ranged weapons gain [IGNORES COVER]; ignore modifiers to BS and Hit rolls AI
 MELEE WEAPONS
 A
 WS
@@ -3150,9 +3120,9 @@ Powerful limbs
 8
 0
 2
-not counted here: see the rule (Synapse)
+In Synapse Range: +1 S in melee AI (Synapse)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP Rampaging Monstrosities: Re-roll Hit rolls
+1CP Rampaging Monstrosities: in the Fight phase, TYRANIDS MONSTER: re-roll Hit rolls AI
 ABILITIES
 Resilient Organism
 Once per battle
@@ -3853,25 +3823,6 @@ If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within
 
 Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.
 Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.
-Ask about this rule
-
-######## popup rule:Select Weapons · NIDZILLAS Nidzillas
-CORE RULE
-
-Select Weapons
-
-For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
-
-While shooting: You can select one or more ranged weapons that model has.
-
-While fighting: You must select one melee weapon that model has.
-
-Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
-
-24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
-
-04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
-
 Ask about this rule
 
 ######## popup rule:Shadow in the Warp · NIDZILLAS Nidzillas

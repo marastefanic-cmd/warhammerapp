@@ -261,13 +261,13 @@ INFILTRATORS
 Goremongers Infiltrators
 START OF THE BATTLE AND THE BATTLE ROUNDS
 EVERY ROUND
-Blessings of Khorne · World Eaters army rule
-Reborn in Blood · Angron
-Wrathful Presence · Angron
+Start of each round, roll 8D6 to activate up to two Blessings: Unbridled Bloodlust (double 1+); Rage-fuelled Invigoration (double 2+); Total Carnage (double 3+); Martial Excellence (double 4+ or triple 1+); Warp Blades (double 5+ or triple 2+); Decapitating Strikes (double 6 or triple 3+) AI (Blessings of Khorne) · World Eaters army rule
+If this model is destroyed: use a triple 6 from the Blessings of Khorne roll instead of activating any Blessings; this model is set up by Deep Strike in your next Movement phase with 8 wounds remaining AI (Reborn in Blood) · Angron
+Pick one at the start of each round: The Blood God’s Favour; Overwhelming Wrath; Driven by Ultimate Rage AI (Wrathful Presence) · Angron
 USES PER BATTLE
 NEW GAME
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -406,7 +406,7 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-6 wounds remaining)
 Daemon Prince of Khorne
 Blade of Endless Bloodshed
 Infernal cannon
@@ -521,13 +521,12 @@ DEVASTATING WOUNDS
 -2
 2
 DEVASTATING WOUNDS
-Wrathful Presence: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-6 wounds remaining)
 STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
-1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
-1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+1CP Daemonic Fury: in your Fight phase, at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage) AI
 Skarbrand
 Slaughter and Carnage
 ➤strike
@@ -542,13 +541,13 @@ Slaughter and Carnage
 8
 -2
 2
-Own aura: +1 A (Rage Embodied)
-If (see the rule): +2 A (Damaged: 1-7 wounds remaining)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+If Daemonic Rage is active (3 BTP): BLOOD LEGIONS melee [LANCE] AI (Blood Tithe)
+BLOOD LEGIONS within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s melee weapons. (Damaged: 1-7 wounds remaining)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
 Bloodthirster
 Great axe of Khorne
 ➤strike
@@ -563,13 +562,13 @@ D6+2
 10
 -2
 2
-Own aura: +1 to Hit rolls (Daemon Lord of Khorne)
-If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+If Daemonic Rage is active (3 BTP): BLOOD LEGIONS melee [LANCE] AI (Blood Tithe)
+Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-6 wounds remaining)
+Granted by: Skarbrand - BLOOD LEGIONS within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
 Daemon Prince of Khorne
 Blade of Endless Bloodshed
 Hellforged weapons
@@ -585,17 +584,16 @@ Hellforged weapons
 7
 -1
 2
-Charged this turn: [DEVASTATING WOUNDS] (Devastating Assault)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-not counted here: see the rule (Wrath of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee AI (Wrath of Khorne)
+If this model charged this turn: melee weapons gain [DEVASTATING WOUNDS] AI (Devastating Assault)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
 STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
-1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
-1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+1CP Daemonic Fury: in your Fight phase, at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage) AI
 STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: not counted here: see the rule
+1CP Aspire to Infamy: in the Fight phase, CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee AI
 Master of Executions
 Blood-forged Armour
 Axe of dismemberment
@@ -605,23 +603,19 @@ Axe of dismemberment
 -2
 2
 DEVASTATING WOUNDS, PRECISION
-The target: CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (A Worthy Skull)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-not counted here: see the rule (Wrath of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee AI (Wrath of Khorne)
+vs CHARACTER: re-roll Hit rolls and Wound rolls in melee AI (A Worthy Skull)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
 STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
-1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
-1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+1CP Daemonic Fury: in your Fight phase, at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage) AI
 STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: not counted here: see the rule
+1CP Aspire to Infamy: in the Fight phase, CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee AI
 Lord on Juggernaut
 Disciple of Khorne
 + Khorne Berzerkers
 LORD ON JUGGERNAUT
-
-Fights with both: Exalted chainblade, plus Bladed horn on top (extra attacks).
-
 Exalted chainblade
 7
 2+
@@ -648,21 +642,20 @@ Khornate eviscerator×4
 8
 -2
 2
-Charged this turn: +1 S (Murderous Charge)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
-not counted here: see the rule (Wrath of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+If Daemonic Rage is active (3 BTP): BLOOD LEGIONS melee [LANCE] AI (Blood Tithe)
+WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee AI (Wrath of Khorne)
+If this unit charged this turn: +1 S in melee AI (Murderous Charge)
 Charged this turn: Bladed horn +1 to Wound rolls (Lance)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Skarbrand - BLOOD LEGIONS within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
 STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
-1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
-1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+1CP Daemonic Fury: in your Fight phase, at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage) AI
 STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: not counted here: see the rule
+1CP Aspire to Infamy: in the Fight phase, CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee AI
 Goremongers
 
 Pick one to fight with: Chainblade or Close combat weapon.
@@ -680,14 +673,13 @@ Close combat weapon×8
 3
 0
 1
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
 Charged this turn: Chainblade +1 to Wound rolls (Lance)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
 STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
-1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
-1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+1CP Daemonic Fury: in your Fight phase, at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage) AI
 Jakhals
 Chainblades×9
 3
@@ -701,13 +693,12 @@ Paired manglersDISHONOURED
 4
 0
 1
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
 STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
-1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
-1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+1CP Daemonic Fury: in your Fight phase, at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage) AI
 Flesh Hounds
 ×2 units
 Gore-drenched fangs×5
@@ -716,12 +707,12 @@ Gore-drenched fangs×5
 5
 -1
 1
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+If Daemonic Rage is active (3 BTP): BLOOD LEGIONS melee [LANCE] AI (Blood Tithe)
+Granted by: Skarbrand - BLOOD LEGIONS within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
 
 ######## abilities · MELEE Abilities
 Angron
@@ -1994,37 +1985,37 @@ KHORNE DAEMONKIN
 CP
 AI
 Daemontide
-Select one friendly BLOOD LEGIONS unit within 6" of your unit: one destroyed MOUNTED model, up to D3 destroyed BEAST models or up to D6 destroyed INFANTRY models return to it with full wounds (not CHARACTER models to Attached units).
+a BLOOD LEGIONS unit within 6" of this unit gets back 1 MOUNTED, up to D3 BEAST or up to D6 INFANTRY models (not CHARACTERS of Attached units)
 Your Command Angron, Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers, Goremongers, Jakhals
 1
 CP
 AI
 Blessing of Burning Blood
-A WORLD EATERS unit within 6" of your unit is selected as a target: until the end of the phase, models in that WORLD EATERS unit have a 5+ invulnerable save (4+ if Boon of Blood is active).
+a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit, when targeted: 5+ invulnerable save (4+ with Boon of Blood)
 Their Shoot · Fight Skarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers, Flesh Hounds ×2
 1
 CP
 AI
 Daemonic Fury
-Select one friendly WORLD EATERS unit within 6" of your unit: until the end of the turn its melee weapons have [LANCE] (and [TWIN-LINKED] until the end of the phase if Daemonic Rage is active).
+at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage)
 Start of your Fight Skarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers, Flesh Hounds ×2
 1
 CP
 AI
 A Worthy Skull
-Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities.
+after this unit kills an enemy CHARACTER or MONSTER: gain D3BTP and can spend BTP on a Blood Tithe ability
 Fight Any unit
 1
 CP
 AI
 Murder-call
-Your unit on the battlefield and not within Engagement Range of one or more enemy units: remove it from the battlefield and place it into Strategic Reserves.
+at the end of the phase: a BLOOD LEGIONS unit not engaged goes into Strategic Reserves
 End of their Fight Skarbrand, Bloodthirster, Lord on Juggernaut + Khorne Berzerkers, Flesh Hounds ×2
 1
 CP
 AI
 Summoned by Slaughter
-The last model of a unit is destroyed: set your BLOODLETTERS unit in Reserves up wholly within 9" of that model and more than 6" horizontally away from all enemy units (once per battle round).
+once per round, when a unit's last model is destroyed: BLOODLETTERS from Reserves set up wholly within 9" of that model, more than 6" from enemies
 Any phase No unit in this list can use it (needs BLOODLETTERS)
 VESSELS OF WRATH
 3
@@ -2032,19 +2023,19 @@ VESSELS OF WRATH
 CP
 AI
 Punish the Craven
-An enemy unit engaged with your unit is selected to fall back: it must use desperate escape (-1 to those hazard rolls if it is battle-shocked).
+an enemy falling back from a WORLD EATERS CHARACTER must use desperate escape (−1 to that unit’s hazard rolls if Battle-shocked)
 Their Movement Angron, Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
 1
 CP
 AI
 Aspire to Infamy
-Your unit’s CHARACTER models’ melee attacks have +1 A and +2 S.
+CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee
 Fight Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
 1
 CP
 AI
 Scorn the Witch
-Your unit has Feel No Pain 4+ against mortal wounds.
+when a WORLD EATERS CHARACTER (not EPIC HERO) suffers a mortal wound: Feel No Pain 4+ vs mortal wounds
 Any phase Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
 CORE STRATAGEMS
 10
@@ -2052,61 +2043,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement All but Angron
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting Lord on Juggernaut + Khorne Berzerkers, Goremongers, Jakhals
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge Angron, Skarbrand, Bloodthirster, Daemon Prince of Khorne
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight Angron, Skarbrand, Bloodthirster, Daemon Prince of Khorne, Master of Executions, Lord on Juggernaut + Khorne Berzerkers
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting No unit in this list can use it (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2491,12 +2482,11 @@ Angron
 6
 4+
 WHEN TARGETED
-3
-Blood Tithe: Enraged Abjuration [2BTP]: Feel No Pain 5+ against Psychic Attacks and mortal wounds (until the end of the battle)
-1CP Blessing of Burning Blood: Your opponent’s Shooting phase or the Fight phase, If (see the rule): 5+ invulnerable save
-1CP Blessing of Burning Blood: Your opponent’s Shooting phase or the Fight phase, If (see the rule): 4+ invulnerable save
+2
+If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
+1CP Blessing of Burning Blood: in your opponent’s Shooting phase or the Fight phase, a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit, when targeted: 5+ invulnerable save (4+ with Boon of Blood) AI
 DAMAGED 1-6 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-6 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 MELEE WEAPONS
 A
 WS
@@ -2518,12 +2508,11 @@ DEVASTATING WOUNDS
 -2
 2
 DEVASTATING WOUNDS
-Wrathful Presence: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
 STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
-1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
-1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+1CP Daemonic Fury: in your Fight phase, at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage) AI
 ABILITIES
 The Blood God’s Favour
 - Wrathful Presence: pick one
@@ -2621,10 +2610,10 @@ Skarbrand
 4+
 WHEN TARGETED
 2
-Blood Tithe: Enraged Abjuration [2BTP]: Feel No Pain 5+ against Psychic Attacks and mortal wounds (until the end of the battle)
-Blood Tithe: Boon of Blood [4BTP]: 4+ invulnerable save (until the end of the battle)
+If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
+If Boon of Blood is active (4 BTP): BLOOD LEGIONS 4+ invulnerable save AI (Blood Tithe)
 DAMAGED 1-7 W
-+2 A
+WHILE THIS MODEL HAS 1-7 WOUNDS REMAINING, ADD 2 TO THE ATTACKS CHARACTERISTIC OF THIS MODEL’S MELEE WEAPONS.
 RANGED WEAPONS
 Range
 A
@@ -2659,12 +2648,12 @@ Slaughter and Carnage
 8
 -2
 2
-Own aura: +1 A (Rage Embodied)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+If Daemonic Rage is active (3 BTP): BLOOD LEGIONS melee [LANCE] AI (Blood Tithe)
+BLOOD LEGIONS within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
 ABILITIES
 Rage Embodied
 Fight
@@ -2728,10 +2717,10 @@ Bloodthirster
 4+
 WHEN TARGETED
 2
-Blood Tithe: Enraged Abjuration [2BTP]: Feel No Pain 5+ against Psychic Attacks and mortal wounds (until the end of the battle)
-Blood Tithe: Boon of Blood [4BTP]: 4+ invulnerable save (until the end of the battle)
+If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
+If Boon of Blood is active (4 BTP): BLOOD LEGIONS 4+ invulnerable save AI (Blood Tithe)
 DAMAGED 1-6 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-6 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 RANGED WEAPONS
 Range
 A
@@ -2766,12 +2755,12 @@ D6+2
 10
 -2
 2
-Own aura: +1 to Hit rolls (Daemon Lord of Khorne)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+If Daemonic Rage is active (3 BTP): BLOOD LEGIONS melee [LANCE] AI (Blood Tithe)
+Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
+Granted by: Skarbrand - BLOOD LEGIONS within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
 ABILITIES
 Daemon Lord of Khorne
 Fight
@@ -2838,12 +2827,11 @@ Daemon Prince of Khorne
 3
 4+
 WHEN TARGETED
-5
-Blood Tithe: Enraged Abjuration [2BTP]: Feel No Pain 5+ against Psychic Attacks and mortal wounds (until the end of the battle)
-Lord of Murder: Within 3" of a friendly WORLD EATERS INFANTRY unit: Lone Operative
-1CP Blessing of Burning Blood: Your opponent’s Shooting phase or the Fight phase, If (see the rule): 5+ invulnerable save
-1CP Blessing of Burning Blood: Your opponent’s Shooting phase or the Fight phase, If (see the rule): 4+ invulnerable save
-1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
+4
+If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
+Within 3" of a WORLD EATERS INFANTRY unit: Lone Operative AI (Lord of Murder)
+1CP Blessing of Burning Blood: in your opponent’s Shooting phase or the Fight phase, a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit, when targeted: 5+ invulnerable save (4+ with Boon of Blood) AI
+1CP Scorn the Witch: in any phase, when a WORLD EATERS CHARACTER (not EPIC HERO) suffers a mortal wound: Feel No Pain 4+ vs mortal wounds AI
 RANGED WEAPONS
 Range
 A
@@ -2878,17 +2866,16 @@ Hellforged weapons
 7
 -1
 2
-Charged this turn: [DEVASTATING WOUNDS] (Devastating Assault)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-not counted here: see the rule (Wrath of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee AI (Wrath of Khorne)
+If this model charged this turn: melee weapons gain [DEVASTATING WOUNDS] AI (Devastating Assault)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
 STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
-1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
-1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+1CP Daemonic Fury: in your Fight phase, at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage) AI
 STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: not counted here: see the rule
+1CP Aspire to Infamy: in the Fight phase, CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee AI
 ABILITIES
 Lord of Murder
 
@@ -2966,11 +2953,10 @@ Master of Executions
 1
 –
 WHEN TARGETED
-4
-Blood Tithe: Enraged Abjuration [2BTP]: Feel No Pain 5+ against Psychic Attacks and mortal wounds (until the end of the battle)
-1CP Blessing of Burning Blood: Your opponent’s Shooting phase or the Fight phase, If (see the rule): 5+ invulnerable save
-1CP Blessing of Burning Blood: Your opponent’s Shooting phase or the Fight phase, If (see the rule): 4+ invulnerable save
-1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
+3
+If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
+1CP Blessing of Burning Blood: in your opponent’s Shooting phase or the Fight phase, a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit, when targeted: 5+ invulnerable save (4+ with Boon of Blood) AI
+1CP Scorn the Witch: in any phase, when a WORLD EATERS CHARACTER (not EPIC HERO) suffers a mortal wound: Feel No Pain 4+ vs mortal wounds AI
 RANGED WEAPONS
 Range
 A
@@ -2999,16 +2985,15 @@ Axe of dismemberment
 -2
 2
 DEVASTATING WOUNDS, PRECISION
-The target: CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (A Worthy Skull)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-not counted here: see the rule (Wrath of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee AI (Wrath of Khorne)
+vs CHARACTER: re-roll Hit rolls and Wound rolls in melee AI (A Worthy Skull)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
 STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
-1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
-1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+1CP Daemonic Fury: in your Fight phase, at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage) AI
 STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: not counted here: see the rule
+1CP Aspire to Infamy: in the Fight phase, CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee AI
 ABILITIES
 Forwards, For Blood!
 Not leading a unit in this list
@@ -3098,15 +3083,14 @@ Khorne Berzerker×20
 2
 –
 
-M: not counted here: see the rule (Aggressive Advance)
+While leading: the led unit has M 10" and can move horizontally through terrain features on Normal, Advance, Fall Back and Charge moves AI (Aggressive Advance)
 
 WHEN TARGETED
-5
-Blood Tithe: Enraged Abjuration [2BTP]: Feel No Pain 5+ against Psychic Attacks and mortal wounds (until the end of the battle)
-Blood Tithe: Boon of Blood [4BTP]: 4+ invulnerable save (until the end of the battle)
-1CP Blessing of Burning Blood: Your opponent’s Shooting phase or the Fight phase, If (see the rule): 5+ invulnerable save
-1CP Blessing of Burning Blood: Your opponent’s Shooting phase or the Fight phase, If (see the rule): 4+ invulnerable save
-1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
+4
+If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
+If Boon of Blood is active (4 BTP): BLOOD LEGIONS 4+ invulnerable save AI (Blood Tithe)
+1CP Blessing of Burning Blood: in your opponent’s Shooting phase or the Fight phase, a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit, when targeted: 5+ invulnerable save (4+ with Boon of Blood) AI
+1CP Scorn the Witch: in any phase, when a WORLD EATERS CHARACTER (not EPIC HERO) suffers a mortal wound: Feel No Pain 4+ vs mortal wounds AI
 RANGED WEAPONS
 Plasma pistol ×6, Bolt pistol ×15 · all pistols
 Range
@@ -3166,9 +3150,6 @@ S
 AP
 D
 LORD ON JUGGERNAUT
-
-Fights with both: Exalted chainblade, plus Bladed horn on top (extra attacks).
-
 Exalted chainblade
 7
 2+
@@ -3196,21 +3177,20 @@ Khornate eviscerator×4
 -2
 2
 WHOLE UNIT
-Charged this turn: +1 S (Murderous Charge)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
-not counted here: see the rule (Wrath of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+If Daemonic Rage is active (3 BTP): BLOOD LEGIONS melee [LANCE] AI (Blood Tithe)
+WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee AI (Wrath of Khorne)
+If this unit charged this turn: +1 S in melee AI (Murderous Charge)
 Charged this turn: Bladed horn +1 to Wound rolls (Lance)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Skarbrand - BLOOD LEGIONS within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
 STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
-1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
-1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+1CP Daemonic Fury: in your Fight phase, at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage) AI
 STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: not counted here: see the rule
+1CP Aspire to Infamy: in the Fight phase, CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee AI
 ABILITIES
 Aggressive Advance
 - Lord on Juggernaut
@@ -3316,10 +3296,9 @@ Goremongers
 1
 –
 WHEN TARGETED
-3
-Blood Tithe: Enraged Abjuration [2BTP]: Feel No Pain 5+ against Psychic Attacks and mortal wounds (until the end of the battle)
-1CP Blessing of Burning Blood: Your opponent’s Shooting phase or the Fight phase, If (see the rule): 5+ invulnerable save
-1CP Blessing of Burning Blood: Your opponent’s Shooting phase or the Fight phase, If (see the rule): 4+ invulnerable save
+2
+If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
+1CP Blessing of Burning Blood: in your opponent’s Shooting phase or the Fight phase, a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit, when targeted: 5+ invulnerable save (4+ with Boon of Blood) AI
 RANGED WEAPONS
 Range
 A
@@ -3357,14 +3336,13 @@ Close combat weapon×8
 3
 0
 1
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
 Charged this turn: Chainblade +1 to Wound rolls (Lance)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
 STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
-1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
-1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+1CP Daemonic Fury: in your Fight phase, at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage) AI
 ABILITIES
 Loping Speed
 Their Movement
@@ -3433,10 +3411,9 @@ Dishonoured w/ paired manglers
 1
 –
 WHEN TARGETED
-3
-Blood Tithe: Enraged Abjuration [2BTP]: Feel No Pain 5+ against Psychic Attacks and mortal wounds (until the end of the battle)
-1CP Blessing of Burning Blood: Your opponent’s Shooting phase or the Fight phase, If (see the rule): 5+ invulnerable save
-1CP Blessing of Burning Blood: Your opponent’s Shooting phase or the Fight phase, If (see the rule): 4+ invulnerable save
+2
+If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
+1CP Blessing of Burning Blood: in your opponent’s Shooting phase or the Fight phase, a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit, when targeted: 5+ invulnerable save (4+ with Boon of Blood) AI
 RANGED WEAPONS
 Range
 A
@@ -3470,13 +3447,12 @@ Paired manglersDISHONOURED
 4
 0
 1
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
 STRATAGEMS · KHORNE DAEMONKIN · YOUR FIGHT PHASE
-1CP Daemonic Fury: [LANCE], Within 6" of it · Selected by it
-1CP Daemonic Fury: [TWIN-LINKED], Within 6" of it · Selected by it · “If the Daemonic Rage ability is active for your army”
+1CP Daemonic Fury: in your Fight phase, at the start of the phase: a WORLD EATERS unit within 6" of a BLOOD LEGIONS unit gains [LANCE] in melee ([TWIN-LINKED] too with Daemonic Rage) AI
 ABILITIES
 Objective Ravaged
 Your Command
@@ -3535,9 +3511,9 @@ Flesh Hounds
 5+
 WHEN TARGETED
 3
-Blood Tithe: Enraged Abjuration [2BTP]: Feel No Pain 5+ against Psychic Attacks and mortal wounds (until the end of the battle)
-Blood Tithe: Boon of Blood [4BTP]: 4+ invulnerable save (until the end of the battle)
-Collar of Khorne: Feel No Pain 3+ against Psychic Attacks
+If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
+If Boon of Blood is active (4 BTP): BLOOD LEGIONS 4+ invulnerable save AI (Blood Tithe)
+Feel No Pain 3+ vs Psychic Attacks AI (Collar of Khorne)
 RANGED WEAPONS
 Range
 A
@@ -3565,12 +3541,12 @@ Gore-drenched fangs×5
 5
 -1
 1
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Daemonic Rage [3BTP]: [LANCE] (Blood Tithe)
-Within 6" of Skarbrand: +1 A (Rage Embodied)
-Within 6" of Bloodthirster: +1 to Hit rolls (Daemon Lord of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+If Daemonic Rage is active (3 BTP): BLOOD LEGIONS melee [LANCE] AI (Blood Tithe)
+Granted by: Skarbrand - BLOOD LEGIONS within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
+Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
 ABILITIES
 Hunters from the Warp
 End of your opponent’s turn

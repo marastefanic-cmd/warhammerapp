@@ -198,14 +198,14 @@ SCOUTS AND INFILTRATORS
 Tzaangors Scouts 6"
 Sekhetar Robots Infiltrators
 ABILITIES
-Scryer of Fates · Ahriman
+After deployment: redeploy up to 3 THOUSAND SONS units, Strategic Reserves allowed AI (Scryer of Fates) · Ahriman
 START OF THE BATTLE AND THE BATTLE ROUNDS
 EVERY ROUND
-Unearthly Power · Magnus the Red
+Pick one at the start of each round: Impossible Form; Treason of Tzeentch; Time Flux AI (Unearthly Power) · Magnus the Red
 USES PER BATTLE
 NEW GAME
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -387,11 +387,9 @@ D6+3
 -1
 2
 BLAST, IGNORES COVER, PSYCHIC
-If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-6 wounds remaining)
 Ahriman
 + Tzaangor Enlightened with Fatecaster greatbows
 AHRIMAN
@@ -423,11 +421,9 @@ Fatecaster greatbow×6
 -2
 2
 IGNORES COVER, LETHAL HITS, PRECISION
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
 Daemon Prince of Tzeentch with wings
 Dark Blessing
 24"
@@ -444,13 +440,10 @@ Infernal cannon
 5
 -2
 2
-The target: CHARACTER: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Hunter of Souls)
-The target: PSYKER CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (Hunter of Souls)
-not counted here: see the rule (Aetherstride)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
+vs CHARACTER: re-roll Hit rolls of 1 and Wound rolls of 1 (all Hit rolls and Wound rolls vs a PSYKER CHARACTER); each CHARACTER unit this model destroys: regains up to D3 lost wounds (up to 3 for a PSYKER) AI (Hunter of Souls)
+After a Deep Strike, if it uses this ability: Dark Blessing gains [SUSTAINED HITS D3] AI (Aetherstride)
 Exalted Sorcerer on Disc of Tzeentch
 + Tzaangor Enlightened with Fatecaster greatbows
 ×2 units
@@ -483,11 +476,9 @@ Fatecaster greatbow×6
 -2
 2
 IGNORES COVER, LETHAL HITS, PRECISION
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
 Tzaangor Shaman
 Curse of Life
 + Tzaangor Enlightened
@@ -499,13 +490,11 @@ D6
 0
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
-While leading a unit: +1 to Hit rolls (Bestial Prophet)
-not counted here: see the rule (Sacrificial Blessing)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Tzaangor Shaman - While leading: +1 to Hit rolls AI (Bestial Prophet)
+Granted by: Tzaangor Shaman - While leading, when this unit shoots or fights, if the Tzaangor Shaman uses this ability: one Bodyguard model is destroyed, and the Tzaangor Shaman's Psychic weapons get +D3 A and S AI (Sacrificial Blessing)
 Tzaangor Shaman
 Diamond of Distortion
 + Tzaangor Enlightened
@@ -517,13 +506,11 @@ D6
 0
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
-While leading a unit: +1 to Hit rolls (Bestial Prophet)
-not counted here: see the rule (Sacrificial Blessing)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Tzaangor Shaman - While leading: +1 to Hit rolls AI (Bestial Prophet)
+Granted by: Tzaangor Shaman - While leading, when this unit shoots or fights, if the Tzaangor Shaman uses this ability: one Bodyguard model is destroyed, and the Tzaangor Shaman's Psychic weapons get +D3 A and S AI (Sacrificial Blessing)
 Tzaangor Shaman
 Flowing Flesh
 + Tzaangor Enlightened
@@ -535,13 +522,11 @@ D6
 0
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
-While leading a unit: +1 to Hit rolls (Bestial Prophet)
-not counted here: see the rule (Sacrificial Blessing)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Tzaangor Shaman - While leading: +1 to Hit rolls AI (Bestial Prophet)
+Granted by: Tzaangor Shaman - While leading, when this unit shoots or fights, if the Tzaangor Shaman uses this ability: one Bodyguard model is destroyed, and the Tzaangor Shaman's Psychic weapons get +D3 A and S AI (Sacrificial Blessing)
 Sekhetar Robots
 Heavy warpflamer×2
 12"
@@ -566,10 +551,8 @@ Pyreflux meltagun×2
 -4
 D6
 MELTA 2
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Magnus the Red
@@ -589,7 +572,7 @@ DEVASTATING WOUNDS, PSYCHIC
 -1
 2
 PSYCHIC
-If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-6 wounds remaining)
 Ahriman
 + Tzaangor Enlightened with Fatecaster greatbows
 AHRIMAN
@@ -607,7 +590,7 @@ Close combat weapon×6
 4
 0
 1
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
 Daemon Prince of Tzeentch with wings
 Hellforged weapons
 ➤strike
@@ -624,8 +607,7 @@ DEVASTATING WOUNDS, PSYCHIC
 -1
 1
 DEVASTATING WOUNDS, PSYCHIC
-The target: CHARACTER: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Hunter of Souls)
-The target: PSYKER CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (Hunter of Souls)
+vs CHARACTER: re-roll Hit rolls of 1 and Wound rolls of 1 (all Hit rolls and Wound rolls vs a PSYKER CHARACTER); each CHARACTER unit this model destroys: regains up to D3 lost wounds (up to 3 for a PSYKER) AI (Hunter of Souls)
 Exalted Sorcerer on Disc of Tzeentch
 + Tzaangor Enlightened with Fatecaster greatbows
 ×2 units
@@ -653,7 +635,7 @@ Close combat weapon×6
 4
 0
 1
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
 Tzaangor Shaman
 Curse of Life
 + Tzaangor Enlightened
@@ -673,9 +655,9 @@ Divining spear×6
 -1
 2
 LANCE, PRECISION
-While leading a unit: +1 to Hit rolls (Bestial Prophet)
-not counted here: see the rule (Sacrificial Blessing)
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Tzaangor Shaman - While leading: +1 to Hit rolls AI (Bestial Prophet)
+Granted by: Tzaangor Shaman - While leading, when this unit shoots or fights, if the Tzaangor Shaman uses this ability: one Bodyguard model is destroyed, and the Tzaangor Shaman's Psychic weapons get +D3 A and S AI (Sacrificial Blessing)
 Charged this turn: Divining spear +1 to Wound rolls (Lance)
 Tzaangor Shaman
 Diamond of Distortion
@@ -696,9 +678,9 @@ Divining spear×6
 -1
 2
 LANCE, PRECISION
-While leading a unit: +1 to Hit rolls (Bestial Prophet)
-not counted here: see the rule (Sacrificial Blessing)
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Tzaangor Shaman - While leading: +1 to Hit rolls AI (Bestial Prophet)
+Granted by: Tzaangor Shaman - While leading, when this unit shoots or fights, if the Tzaangor Shaman uses this ability: one Bodyguard model is destroyed, and the Tzaangor Shaman's Psychic weapons get +D3 A and S AI (Sacrificial Blessing)
 Charged this turn: Divining spear +1 to Wound rolls (Lance)
 Tzaangor Shaman
 Flowing Flesh
@@ -719,9 +701,9 @@ Divining spear×6
 -1
 2
 LANCE, PRECISION
-While leading a unit: +1 to Hit rolls (Bestial Prophet)
-not counted here: see the rule (Sacrificial Blessing)
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Tzaangor Shaman - While leading: +1 to Hit rolls AI (Bestial Prophet)
+Granted by: Tzaangor Shaman - While leading, when this unit shoots or fights, if the Tzaangor Shaman uses this ability: one Bodyguard model is destroyed, and the Tzaangor Shaman's Psychic weapons get +D3 A and S AI (Sacrificial Blessing)
 Charged this turn: Divining spear +1 to Wound rolls (Lance)
 Tzaangors
 ×2 units
@@ -731,7 +713,7 @@ Tzaangor blades×10
 5
 0
 1
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
 Sekhetar Robots
 Close combat weapon×2
 3
@@ -2068,19 +2050,19 @@ RITUAL OF REGENERATION
 CP
 AI
 Multitudinous Limbs
-Your unit’s advance or fall back move does not prevent it from being eligible to start an action.
+INFANTRY/MOUNTED THOUSAND SONS PSYKER: an advance or fall back move still lets this unit start an action
 Your Movement Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3
 1
 CP
 AI
 Mutagenic Magicks
-Your engaged unit: select one enemy unit engaged with it and roll six D6; for each 4+, that enemy unit suffers 1 mortal wound.
+at the start of the phase: an engaged THOUSAND SONS PSYKER unit rolls six D6 vs one engaged enemy, 1 mortal wound per 4+
 Start of Fight All but Tzaangors ×2, Sekhetar Robots
 1
 CP
 AI
 Relentless Rebirth
-When your unit suffers a mortal wound: it has Feel No Pain 5+ against mortal wounds.
+an INFANTRY/MOUNTED THOUSAND SONS PSYKER suffers a mortal wound: Feel No Pain 5+ vs mortal wounds
 Any phase Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3
 WARPMELD PACT
 6
@@ -2088,37 +2070,37 @@ WARPMELD PACT
 CP
 AI
 Blessed Transmutations
-Return up to D3+1 destroyed models (excluding CHARACTERS) to a TZAANGORS unit below its Starting Strength within 12" of your PSYKER model.
+TZAANGORS below Starting Strength within 12" of a THOUSAND SONS PSYKER: return up to D3+1 models (not CHARACTERS)
 Your Command All but Sekhetar Robots
 1
 CP
 AI
 Touched by Tzeentch
-Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced.
+TZEENTCH MUTANT unit can shoot or charge after Advancing this turn
 Start of your Movement Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3, Tzaangors ×2
 1
 CP
 AI
 Twisted Mirage
-Your unit arriving from Strategic Reserves can be set up anywhere on the battlefield more than 6" horizontally away from all enemy units (more than 8" for a MONSTER unit); until the end of the turn, it is not eligible to declare a charge.
+TZEENTCH MUTANT unit arriving from Strategic Reserves: set up more than 6" from enemies (8" for a MONSTER); no charge this turn
 Your Movement Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3, Tzaangors ×2
 1
 CP
 AI
 Warped Vicissitude
-Just after an enemy unit selects your unit as a target: until the end of the phase, your unit’s models have a 4+ invulnerable save.
+TZAANGORS, when targeted: 4+ invulnerable save
 Their Shoot · Fight Tzaangors ×2
 1
 CP
 AI
 Deranged Ferocity
-Until the end of the phase, your unit’s models pile in and consolidate up to 6", and models within 3" of enemy models are eligible to fight (targeting an enemy unit within 3" of them and engaged with their unit).
+TZEENTCH MUTANT unit: 6" Pile-in and Consolidation; models within 3" of an enemy fight
 Fight Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3, Tzaangors ×2
 1
 CP
 AI
 Gift of Change
-Your CHARACTER model just destroyed: at the end of the phase, add a TZEENTCH CHAOS SPAWN unit of one model to your army, set up as close as possible to where it was destroyed and unengaged (once per battle round).
+once per round, when a THOUSAND SONS CHARACTER model (not MONSTER) is destroyed: at the end of the phase, a one-model TZEENTCH CHAOS SPAWN unit is set up as close as possible to where that model was destroyed
 Any phase Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3
 CORE STRATAGEMS
 10
@@ -2126,61 +2108,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement All but Tzaangors ×2
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge Magnus the Red, Daemon Prince of Tzeentch with wings, Sekhetar Robots
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight All but Tzaangors ×2, Sekhetar Robots
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting No unit in this list can use it (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2566,14 +2548,15 @@ Magnus the Red
 6
 4+
 
-M: not counted here: see the rule (Time Flux)
+If Time Flux is picked: THOUSAND SONS within 6" of Magnus the Red: +2" Move AI (Time Flux)
+
+If Treason of Tzeentch is picked: one enemy unit within 24" of Magnus the Red gets [HAZARDOUS] on that unit’s ranged weapons in their Shooting phase AI (Treason of Tzeentch)
 
 WHEN TARGETED
-2
-Impossible Form: not counted here: see the rule
-Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS]
+1
+If Impossible Form is picked: −1 Damage vs attacks on Magnus the Red (not Psychic Attacks) AI (Impossible Form)
 DAMAGED 1-6 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-6 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 RANGED WEAPONS
 Range
@@ -2598,10 +2581,8 @@ D6+3
 -1
 2
 BLAST, IGNORES COVER, PSYCHIC
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -2731,15 +2712,15 @@ Tzaangor Enlightened with Fatecaster greatbows
 2
 5+
 
-M: not counted here: see the rule (Time Flux)
+Granted by: Magnus the Red - If Time Flux is picked: THOUSAND SONS within 6" of Magnus the Red: +2" Move AI (Time Flux)
 
 WHEN TARGETED
 3
-Warpmeld Sacrifice: If it uses this ability · “Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks”: −1 to Wound rolls
-Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
-1CP Relentless Rebirth: Any phase, If (see the rule): Feel No Pain 5+ against mortal wounds
+When targeted, if it uses this ability: −1 to Wound rolls vs attacks on this unit; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Magnus the Red - If Treason of Tzeentch is picked: at the start of your opponent's Shooting phase, one enemy unit within 24" of Magnus the Red gets [HAZARDOUS] on that unit’s ranged weapons AI (Treason of Tzeentch)
+1CP Relentless Rebirth: in any phase, an INFANTRY/MOUNTED THOUSAND SONS PSYKER suffers a mortal wound: Feel No Pain 5+ vs mortal wounds AI
 ALL ATTACKS · WHOLE UNIT
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
 RANGED WEAPONS
 Range
 A
@@ -2777,10 +2758,8 @@ Fatecaster greatbow×6
 2
 IGNORES COVER, LETHAL HITS, PRECISION
 WHOLE UNIT
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -2882,14 +2861,13 @@ Daemon Prince of Tzeentch with wings
 3
 4+
 
-M: not counted here: see the rule (Time Flux)
+Granted by: Magnus the Red - If Time Flux is picked: THOUSAND SONS within 6" of Magnus the Red: +2" Move AI (Time Flux)
 
 WHEN TARGETED
 1
-Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
+Granted by: Magnus the Red - If Treason of Tzeentch is picked: at the start of your opponent's Shooting phase, one enemy unit within 24" of Magnus the Red gets [HAZARDOUS] on that unit’s ranged weapons AI (Treason of Tzeentch)
 ALL ATTACKS
-The target: CHARACTER: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Hunter of Souls)
-The target: PSYKER CHARACTER: Re-roll Hit rolls, Re-roll Wound rolls (Hunter of Souls)
+vs CHARACTER: re-roll Hit rolls of 1 and Wound rolls of 1 (all Hit rolls and Wound rolls vs a PSYKER CHARACTER); each CHARACTER unit this model destroys: regains up to D3 lost wounds (up to 3 for a PSYKER) AI (Hunter of Souls)
 RANGED WEAPONS
 Range
 A
@@ -2912,11 +2890,9 @@ Infernal cannon
 5
 -2
 2
-not counted here: see the rule (Aetherstride)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
+After a Deep Strike, if it uses this ability: Dark Blessing gains [SUSTAINED HITS D3] AI (Aetherstride)
 MELEE WEAPONS
 A
 WS
@@ -3020,18 +2996,18 @@ Tzaangor Enlightened with Fatecaster greatbows
 2
 5+
 
-Enemy units’ M: not counted here: see the rule (Binding Tendrils)
+One INFANTRY unit hit by this model’s Arcane Fire: −2" Move and −2 to Charge rolls AI (Binding Tendrils)
 
-M: not counted here: see the rule (Time Flux)
+Granted by: Magnus the Red - If Time Flux is picked: THOUSAND SONS within 6" of Magnus the Red: +2" Move AI (Time Flux)
 
 WHEN TARGETED
 4
-Warpmeld Sacrifice: If it uses this ability · “Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks”: −1 to Wound rolls
-EXALTED SORCERER ON DISC OF TZEENTCH Illusions of Tzeentch: not counted here: see the rule
-Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
-1CP Relentless Rebirth: Any phase, If (see the rule): Feel No Pain 5+ against mortal wounds
+When targeted, if it uses this ability: −1 to Wound rolls vs attacks on this unit; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Exalted Sorcerer on Disc of Tzeentch - While leading: the led unit can only be shot from within 18" AI (Illusions of Tzeentch)
+Granted by: Magnus the Red - If Treason of Tzeentch is picked: at the start of your opponent's Shooting phase, one enemy unit within 24" of Magnus the Red gets [HAZARDOUS] on that unit’s ranged weapons AI (Treason of Tzeentch)
+1CP Relentless Rebirth: in any phase, an INFANTRY/MOUNTED THOUSAND SONS PSYKER suffers a mortal wound: Feel No Pain 5+ vs mortal wounds AI
 ALL ATTACKS · WHOLE UNIT
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
 RANGED WEAPONS
 Range
 A
@@ -3069,10 +3045,8 @@ Fatecaster greatbow×6
 2
 IGNORES COVER, LETHAL HITS, PRECISION
 WHOLE UNIT
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -3198,17 +3172,17 @@ Tzaangor Enlightened
 2
 5+
 
-M: not counted here: see the rule (Time Flux)
+Granted by: Magnus the Red - If Time Flux is picked: THOUSAND SONS within 6" of Magnus the Red: +2" Move AI (Time Flux)
 
 WHEN TARGETED
 3
-Warpmeld Sacrifice: If it uses this ability · “Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks”: −1 to Wound rolls
-Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
-1CP Relentless Rebirth: Any phase, If (see the rule): Feel No Pain 5+ against mortal wounds
+When targeted, if it uses this ability: −1 to Wound rolls vs attacks on this unit; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Magnus the Red - If Treason of Tzeentch is picked: at the start of your opponent's Shooting phase, one enemy unit within 24" of Magnus the Red gets [HAZARDOUS] on that unit’s ranged weapons AI (Treason of Tzeentch)
+1CP Relentless Rebirth: in any phase, an INFANTRY/MOUNTED THOUSAND SONS PSYKER suffers a mortal wound: Feel No Pain 5+ vs mortal wounds AI
 ALL ATTACKS · WHOLE UNIT
-While leading a unit: +1 to Hit rolls (Bestial Prophet)
-not counted here: see the rule (Sacrificial Blessing)
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Tzaangor Shaman - While leading: +1 to Hit rolls AI (Bestial Prophet)
+Granted by: Tzaangor Shaman - While leading, when this unit shoots or fights, if the Tzaangor Shaman uses this ability: one Bodyguard model is destroyed, and the Tzaangor Shaman's Psychic weapons get +D3 A and S AI (Sacrificial Blessing)
 RANGED WEAPONS
 Range
 A
@@ -3225,10 +3199,8 @@ D6
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
 WHOLE UNIT
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -3353,18 +3325,18 @@ Tzaangor Enlightened
 2
 5+
 
-M: not counted here: see the rule (Time Flux)
+Granted by: Magnus the Red - If Time Flux is picked: THOUSAND SONS within 6" of Magnus the Red: +2" Move AI (Time Flux)
 
 WHEN TARGETED
 4
-Warpmeld Sacrifice: If it uses this ability · “Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks”: −1 to Wound rolls
-TZAANGOR SHAMAN Diamond of Distortion: While leading a unit: −1 to Hit rolls
-Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
-1CP Relentless Rebirth: Any phase, If (see the rule): Feel No Pain 5+ against mortal wounds
+When targeted, if it uses this ability: −1 to Wound rolls vs attacks on this unit; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Tzaangor Shaman (enhancement) - While the bearer leads: −1 to Hit rolls vs attacks on the bearer’s unit AI (Diamond of Distortion)
+Granted by: Magnus the Red - If Treason of Tzeentch is picked: at the start of your opponent's Shooting phase, one enemy unit within 24" of Magnus the Red gets [HAZARDOUS] on that unit’s ranged weapons AI (Treason of Tzeentch)
+1CP Relentless Rebirth: in any phase, an INFANTRY/MOUNTED THOUSAND SONS PSYKER suffers a mortal wound: Feel No Pain 5+ vs mortal wounds AI
 ALL ATTACKS · WHOLE UNIT
-While leading a unit: +1 to Hit rolls (Bestial Prophet)
-not counted here: see the rule (Sacrificial Blessing)
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Tzaangor Shaman - While leading: +1 to Hit rolls AI (Bestial Prophet)
+Granted by: Tzaangor Shaman - While leading, when this unit shoots or fights, if the Tzaangor Shaman uses this ability: one Bodyguard model is destroyed, and the Tzaangor Shaman's Psychic weapons get +D3 A and S AI (Sacrificial Blessing)
 RANGED WEAPONS
 Range
 A
@@ -3381,10 +3353,8 @@ D6
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
 WHOLE UNIT
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -3508,20 +3478,20 @@ Tzaangor Enlightened
 2
 5+
 
-W: not counted here: see the rule (Flowing Flesh)
+W 5 AI (Flowing Flesh)
 
-M: not counted here: see the rule (Time Flux)
+Granted by: Magnus the Red - If Time Flux is picked: THOUSAND SONS within 6" of Magnus the Red: +2" Move AI (Time Flux)
 
 WHEN TARGETED
 4
-Warpmeld Sacrifice: If it uses this ability · “Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks”: −1 to Wound rolls
-TZAANGOR SHAMAN Flowing Flesh: Feel No Pain 4+
-Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
-1CP Relentless Rebirth: Any phase, If (see the rule): Feel No Pain 5+ against mortal wounds
+When targeted, if it uses this ability: −1 to Wound rolls vs attacks on this unit; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Tzaangor Shaman (enhancement) - Tzaangor Shaman only: Feel No Pain 4+ AI (Flowing Flesh)
+Granted by: Magnus the Red - If Treason of Tzeentch is picked: at the start of your opponent's Shooting phase, one enemy unit within 24" of Magnus the Red gets [HAZARDOUS] on that unit’s ranged weapons AI (Treason of Tzeentch)
+1CP Relentless Rebirth: in any phase, an INFANTRY/MOUNTED THOUSAND SONS PSYKER suffers a mortal wound: Feel No Pain 5+ vs mortal wounds AI
 ALL ATTACKS · WHOLE UNIT
-While leading a unit: +1 to Hit rolls (Bestial Prophet)
-not counted here: see the rule (Sacrificial Blessing)
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Tzaangor Shaman - While leading: +1 to Hit rolls AI (Bestial Prophet)
+Granted by: Tzaangor Shaman - While leading, when this unit shoots or fights, if the Tzaangor Shaman uses this ability: one Bodyguard model is destroyed, and the Tzaangor Shaman's Psychic weapons get +D3 A and S AI (Sacrificial Blessing)
 RANGED WEAPONS
 Range
 A
@@ -3538,10 +3508,8 @@ D6
 1
 BLAST, DEVASTATING WOUNDS, PSYCHIC
 WHOLE UNIT
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -3653,15 +3621,15 @@ Tzaangors
 1
 6+
 
-M: not counted here: see the rule (Time Flux)
+TZAANGORS: BATTLELINE; while not Battle-shocked: +1 OC AI (Warpmeld Sacrifice)
 
-OC: not counted here: see the rule (Warpmeld Sacrifice)
+Granted by: Magnus the Red - If Time Flux is picked: THOUSAND SONS within 6" of Magnus the Red: +2" Move AI (Time Flux)
 
 WHEN TARGETED
 3
-Warpmeld Sacrifice: If it uses this ability · “Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks”: −1 to Wound rolls
-Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
-1CP Warped Vicissitude: Your opponent’s Shooting phase or the Fight phase: 4+ invulnerable save
+When targeted, if it uses this ability: −1 to Wound rolls vs attacks on this unit; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
+Granted by: Magnus the Red - If Treason of Tzeentch is picked: at the start of your opponent's Shooting phase, one enemy unit within 24" of Magnus the Red gets [HAZARDOUS] on that unit’s ranged weapons AI (Treason of Tzeentch)
+1CP Warped Vicissitude: in your opponent’s Shooting phase or the Fight phase, TZAANGORS, when targeted: 4+ invulnerable save AI
 MELEE WEAPONS
 A
 WS
@@ -3674,7 +3642,7 @@ Tzaangor blades×10
 5
 0
 1
-If it uses this ability · “that unit can make a Warpmeld Sacrifice”: +1 to Wound rolls
+When this unit shoots or fights, if it uses this ability: +1 to Wound rolls; this unit suffers D3 mortal wounds at the end of the phase AI (Warpmeld Sacrifice)
 ABILITIES
 Ambushing Hunters
 End of your opponent’s turn
@@ -3731,11 +3699,11 @@ Sekhetar Robots×2
 1
 5+
 
-M: not counted here: see the rule (Time Flux)
+Granted by: Magnus the Red - If Time Flux is picked: THOUSAND SONS within 6" of Magnus the Red: +2" Move AI (Time Flux)
 
 WHEN TARGETED
 1
-Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
+Granted by: Magnus the Red - If Treason of Tzeentch is picked: at the start of your opponent's Shooting phase, one enemy unit within 24" of Magnus the Red gets [HAZARDOUS] on that unit’s ranged weapons AI (Treason of Tzeentch)
 RANGED WEAPONS
 Range
 A
@@ -3766,10 +3734,8 @@ Pyreflux meltagun×2
 -4
 D6
 MELTA 2
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected: Re-roll Hit rolls of 1 (Cabal of Sorcerers)
-Destiny’s Ruin (Psychic) · Warp Charge 5 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 10+”: Re-roll Hit rolls (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected: +1 AP (Cabal of Sorcerers)
-Twist of Fate (Psychic) · Warp Charge 9 · The target is the enemy unit selected · “If the Psychic test result for this Ritual was 12+”: +2 AP (Cabal of Sorcerers)
+If Destiny’s Ruin is manifested (5): re-roll Hit rolls of 1 vs the enemy unit picked (all Hit rolls on 10+) AI (Cabal of Sorcerers)
+If Twist of Fate is manifested (9): +1 AP vs the enemy unit picked (+2 on 12+) AI (Cabal of Sorcerers)
 MELEE WEAPONS
 A
 WS
@@ -3837,12 +3803,12 @@ Chaos Spawn
 1
 5+
 
-M: not counted here: see the rule (Time Flux)
+Granted by: Magnus the Red - If Time Flux is picked: THOUSAND SONS within 6" of Magnus the Red: +2" Move AI (Time Flux)
 
 WHEN TARGETED
 2
 Feel No Pain 5+
-Treason of Tzeentch: Ranged attacks, Unearthly Power: the one selected (at the start of the battle round) · “At the start of your opponent's Shooting phase, select one enemy unit within 24" of this PSYKER”: the attacking weapons have [HAZARDOUS] (Magnus the Red)
+Granted by: Magnus the Red - If Treason of Tzeentch is picked: at the start of your opponent's Shooting phase, one enemy unit within 24" of Magnus the Red gets [HAZARDOUS] on that unit’s ranged weapons AI (Treason of Tzeentch)
 MELEE WEAPONS
 A
 WS

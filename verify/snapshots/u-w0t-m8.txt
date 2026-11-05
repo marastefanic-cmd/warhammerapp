@@ -195,14 +195,14 @@ INFILTRATORS
 Flayed Ones Infiltrators
 START OF THE BATTLE AND THE BATTLE ROUNDS
 EVERY ROUND
-Triarch Abilities · The Silent King
+Pick one at the start of each round: Phaeron of the Stars; Phaeron of the Blades; Relentless March AI (Triarch Abilities) · The Silent King
 USES PER BATTLE
 NEW GAME
 ABILITIES
-Lord of the Storm · Imotekh the Stormlord
-Engrammatic Logic · Royal Warden
+Once per battle, at the end of your Command phase, if used: roll one D6 for each enemy unit within 12" of this model: on 2–5, D3 mortal wounds; on a 6, D3+3 mortal wounds AI (Lord of the Storm) · Imotekh the Stormlord
+Once per battle, at the start of any phase: one Battle-shocked friendly NECRONS unit within 12" of this model is no longer Battle-shocked AI (Engrammatic Logic) · Royal Warden
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -359,10 +359,10 @@ Staff of the Destroyer
 6
 -3
 2
-The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Pick an enemy each Command phase: NOBLE, LYCHGUARD and TRIARCH get +1 to Wound rolls vs that unit AI (Worthy Foes)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 The Silent King
 Warlord
 Annihilator beam×2
@@ -388,11 +388,11 @@ Staff of StarsSZAREKH
 -1
 1
 INDIRECT FIRE
-Triarch Abilities: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
-The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
+Pick an enemy each Command phase: NOBLE, LYCHGUARD and TRIARCH get +1 to Wound rolls vs that unit AI (Worthy Foes)
+If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+While this unit’s Szarekh model has 1-6 wounds remaining, halve the Attacks characteristic of that model’s weapons, and each time this unit makes an attack, subtract 1 from the Hit roll. (Damaged: 1-6 wounds remaining)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 Royal Warden
 Relic gauss blaster
 24"
@@ -402,9 +402,9 @@ Relic gauss blaster
 -1
 2
 LETHAL HITS, RAPID FIRE 2
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 Technomancer
 + Immortals
 TECHNOMANCER
@@ -424,11 +424,10 @@ Gauss blaster×5
 -1
 1
 LETHAL HITS
-Every attack: Re-roll Wound rolls of 1 (Implacable Eradication)
-The target within range of an objective marker: Re-roll Wound rolls (Implacable Eradication)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Re-roll Wound rolls of 1; vs a target on an objective, re-roll all Wound rolls instead AI (Implacable Eradication)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 Canoptek Reanimator
 Atomiser beam×2
 12"
@@ -437,9 +436,9 @@ Atomiser beam×2
 6
 -2
 1
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 Canoptek Spyders
 Particle beamer×2
 18"
@@ -449,9 +448,9 @@ D6
 0
 1
 BLAST, DEVASTATING WOUNDS
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 Tesseract Vault
 1 of 2
 Tesla sphere×4
@@ -486,10 +485,10 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
-1CP Cosmic Storm: Tesla sphere +1 AP
+1CP Cosmic Storm: in your Shooting phase, OBELISK/TESSERACT VAULT: +1 AP with Tesla Sphere weapons AI
 Tesseract Vault
 2 of 2
 Tesla sphere×4
@@ -524,10 +523,10 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
-1CP Cosmic Storm: Tesla sphere +1 AP
+1CP Cosmic Storm: in your Shooting phase, OBELISK/TESSERACT VAULT: +1 AP with Tesla Sphere weapons AI
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Imotekh the Stormlord
@@ -538,11 +537,11 @@ Staff of the Destroyer
 -3
 2
 DEVASTATING WOUNDS
-The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Pick an enemy each Command phase: NOBLE, LYCHGUARD and TRIARCH get +1 to Wound rolls vs that unit AI (Worthy Foes)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 The Silent King
 Warlord
 Armoured bulk×2
@@ -558,13 +557,13 @@ Weapons of the Final TriarchSZAREKH
 -3
 2
 LETHAL HITS
-Triarch Abilities: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (Phaeron of the Blades)
-If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
-The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
+Pick an enemy each Command phase: NOBLE, LYCHGUARD and TRIARCH get +1 to Wound rolls vs that unit AI (Worthy Foes)
+If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
+While this unit’s Szarekh model has 1-6 wounds remaining, halve the Attacks characteristic of that model’s weapons, and each time this unit makes an attack, subtract 1 from the Hit roll. (Damaged: 1-6 wounds remaining)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
-1CP Suffer No Rival: [PRECISION], Fight phase
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
+1CP Suffer No Rival: in the Fight phase, LYCHGUARD/TRIARCH: melee weapons gain [PRECISION] AI
 Royal Warden
 Close combat weapon
 4
@@ -572,10 +571,10 @@ Close combat weapon
 5
 0
 1
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 Technomancer
 + Immortals
 TECHNOMANCER
@@ -592,12 +591,11 @@ Close combat weapon×5
 4
 0
 1
-Every attack: Re-roll Wound rolls of 1 (Implacable Eradication)
-The target within range of an objective marker: Re-roll Wound rolls (Implacable Eradication)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Re-roll Wound rolls of 1; vs a target on an objective, re-roll all Wound rolls instead AI (Implacable Eradication)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 Flayed Ones
 Flayer claws×5
 4
@@ -606,11 +604,11 @@ Flayer claws×5
 -1
 1
 SUSTAINED HITS 1, TWIN-LINKED
-not counted here: see the rule (Flesh Hunger)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Melee vs Below Half-strength targets: every successful Hit roll is a Critical Hit AI (Flesh Hunger)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 Ophydian Destroyers
 Ophydian hyperphase weapons×3
 5
@@ -618,10 +616,10 @@ Ophydian hyperphase weapons×3
 4
 -2
 2
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 Canoptek Scarab Swarms
 Feeder mandibles×3
 6
@@ -630,10 +628,10 @@ Feeder mandibles×3
 0
 1
 LETHAL HITS
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 Canoptek Reanimator
 Reanimator’s claws
 4
@@ -641,10 +639,10 @@ Reanimator’s claws
 5
 0
 1
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 Canoptek Spyders
 Automaton claws
 5
@@ -652,10 +650,10 @@ Automaton claws
 8
 -2
 2
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 Tesseract Vault
 1 of 2
 Armoured bulk
@@ -664,8 +662,8 @@ Armoured bulk
 8
 0
 1
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 Tesseract Vault
 2 of 2
 Armoured bulk
@@ -674,8 +672,8 @@ Armoured bulk
 8
 0
 1
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 
 ######## abilities · MELEE Abilities
 Imotekh the Stormlord
@@ -1790,37 +1788,37 @@ OBEISANCE PHALANX
 CP
 AI
 Territorial Obsession
-Your Command phase, your LYCHGUARD or TRIARCH unit: until the start of your next Command phase, +1 OC for its models (+3 instead if it is a VEHICLE unit).
+LYCHGUARD/TRIARCH: +1 OC (+3 for a VEHICLE)
 Your Command The Silent King
 1
 CP
 AI
 Enslaved Artifice
-Your Shooting phase or the Fight phase, your NECRONS unit (excluding TITANIC units) not yet selected to shoot or fight: until the end of the phase, its attacks score a Critical Hit on an unmodified Hit roll of 5+.
+NECRONS (not TITANIC): Critical Hits on 5+
 Your Shoot · Fight All but Tesseract Vault ×2
 1
 CP
 AI
 Nanoassembly Protocols
-Your opponent’s Shooting phase or the Fight phase, just after an enemy unit selected your NECRONS VEHICLE unit as a target: until the end of the phase, -1 to the Damage characteristic of each attack allocated to a model in your unit.
+NECRONS VEHICLE, when targeted: −1 Damage to attacks allocated to this unit
 Their Shoot · Fight The Silent King, Canoptek Reanimator, Canoptek Spyders, Tesseract Vault ×2
 1
 CP
 AI
 Suffer No Rival
-Fight phase, your LYCHGUARD or TRIARCH unit not yet selected to fight: until the end of the phase, its melee weapons have [PRECISION].
+LYCHGUARD/TRIARCH: melee weapons gain [PRECISION]
 Fight The Silent King
 1
 CP
 AI
 Your Time Is Nigh
-Any phase, just after your opponent’s WARLORD is destroyed, your NECRONS WARLORD: until the end of the battle, each time an enemy unit takes a Battle-shock or Leadership test, -1 to the result.
+after the opponent's WARLORD is destroyed: −1 to enemy Battle-shock and Leadership tests for the rest of the battle
 Any phase The Silent King
 1
 CP
 AI
 Sentinels of Eternity
-Fight phase, just after an enemy unit selected your LYCHGUARD or TRIARCH PRAETORIANS unit as a target: until the end of the phase, each time a model in your unit that has not fought is destroyed, on a D6 of 4+ it fights after the attacking unit has finished its attacks, then is removed.
+LYCHGUARD/TRIARCH PRAETORIANS, when targeted: a destroyed model that has not fought this phase fights on a 4+, then is removed
 Fight No unit in this list can use it (needs LYCHGUARD OR TRIARCH PRAETORIANS)
 THE PHAERON’S ARMOURY
 3
@@ -1828,19 +1826,19 @@ THE PHAERON’S ARMOURY
 CP
 AI
 Subsurface Quantumweave
-Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets your NECRONS TITANIC FLY unit: attacks that target your unit have -1 AP until that enemy unit has attacked.
+when a NECRONS TITANIC FLY unit is targeted: −1 AP vs those attacks
 Their Shoot · Fight Tesseract Vault ×2
 1
 CP
 AI
 Particle Pulse
-Start of your Shooting phase, your NECRONS TITANIC FLY unit: one visible enemy unit within 12" of it has +3" detection range.
+one visible enemy within 12" of a NECRONS TITANIC FLY unit: +3" detection range
 Start of your Shooting Tesseract Vault ×2
 1
 CP
 AI
 Cosmic Storm
-Your Shooting phase, when your OBELISK/TESSERACT VAULT unit is selected to shoot: its Tesla Sphere weapons have +1 AP.
+OBELISK/TESSERACT VAULT: +1 AP with Tesla Sphere weapons
 Your Shooting Tesseract Vault ×2
 CORE STRATAGEMS
 10
@@ -1848,61 +1846,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement Imotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Canoptek Reanimator, Canoptek Spyders
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge The Silent King, Canoptek Reanimator, Canoptek Spyders, Tesseract Vault ×2
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Imotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals, Flayed Ones, Ophydian Destroyers, Canoptek Scarab Swarms, Canoptek Reanimator
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight Imotekh the Stormlord, The Silent King, Royal Warden, Technomancer + Immortals
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting No unit in this list can use it (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2279,16 +2277,16 @@ Imotekh the Stormlord
 1
 4+
 
-M: not counted here: see the rule (Relentless March)
+Granted by: The Silent King - If Relentless March is picked: NECRONS within 6" of Szarekh: +2" Move AI (Relentless March)
 
 WHEN TARGETED
 1
-Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
+Granted by: Canoptek Spyders - Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks AI (Gloom Prism)
 ALL ATTACKS
-The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Pick an enemy each Command phase: NOBLE, LYCHGUARD and TRIARCH get +1 to Wound rolls vs that unit AI (Worthy Foes)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 RANGED WEAPONS
 Range
 A
@@ -2324,7 +2322,7 @@ Staff of the Destroyer
 -3
 2
 DEVASTATING WOUNDS
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 ABILITIES
 Grand Strategist
 Your Command
@@ -2399,22 +2397,22 @@ Triarchal Menhir×2
 1
 4+
 
-M: not counted here: see the rule (Relentless March)
+If Relentless March is picked: NECRONS within 6" of Szarekh: +2" Move AI (Relentless March)
 
-OC: not counted here: see the rule (Territorial Obsession)
+1CP Territorial Obsession: in your Command phase, LYCHGUARD/TRIARCH: +1 OC (+3 for a VEHICLE) AI
 
 WHEN TARGETED
 3
-Fabricator Claw Array: Within 6" of Canoptek Spyders: Feel No Pain 6+ (Canoptek Spyders)
-Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
-1CP Nanoassembly Protocols: Your opponent’s Shooting phase or the Fight phase: −1 Damage
+Granted by: Canoptek Spyders - NECRONS VEHICLE within 6" of the Canoptek Spyders: Feel No Pain 6+ AI (Fabricator Claw Array)
+Granted by: Canoptek Spyders - Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks AI (Gloom Prism)
+1CP Nanoassembly Protocols: in your opponent’s Shooting phase or the Fight phase, NECRONS VEHICLE, when targeted: −1 Damage to attacks allocated to this unit AI
 DAMAGED 1-6 W
-−1 TO HIT ROLLS; SEE THE RULE
+WHILE THIS UNIT’S SZAREKH MODEL HAS 1-6 WOUNDS REMAINING, HALVE THE ATTACKS CHARACTERISTIC OF THAT MODEL’S WEAPONS, AND EACH TIME THIS UNIT MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-Triarch Abilities: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-The target is the enemy unit selected: +1 to Wound rolls (Worthy Foes)
+Pick an enemy each Command phase: NOBLE, LYCHGUARD and TRIARCH get +1 to Wound rolls vs that unit AI (Worthy Foes)
+If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 RANGED WEAPONS
 Range
 A
@@ -2464,9 +2462,9 @@ Weapons of the Final TriarchSZAREKH
 -3
 2
 LETHAL HITS
-not counted here: see the rule (Phaeron of the Blades)
+If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX · FIGHT PHASE
-1CP Suffer No Rival: [PRECISION]
+1CP Suffer No Rival: in the Fight phase, LYCHGUARD/TRIARCH: melee weapons gain [PRECISION] AI
 ABILITIES
 Phaeron of the Stars
 - Triarch Abilities: pick one
@@ -2560,15 +2558,15 @@ Royal Warden
 1
 –
 
-M: not counted here: see the rule (Relentless March)
+Granted by: The Silent King - If Relentless March is picked: NECRONS within 6" of Szarekh: +2" Move AI (Relentless March)
 
 WHEN TARGETED
 1
-Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
+Granted by: Canoptek Spyders - Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks AI (Gloom Prism)
 ALL ATTACKS
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 RANGED WEAPONS
 Range
 A
@@ -2596,7 +2594,7 @@ Close combat weapon
 5
 0
 1
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 ABILITIES
 Adaptive Strategy
 Your Move/Shoot/Charge
@@ -2670,18 +2668,17 @@ Immortals×5
 2
 –
 
-M: not counted here: see the rule (Relentless March)
+Granted by: The Silent King - If Relentless March is picked: NECRONS within 6" of Szarekh: +2" Move AI (Relentless March)
 
 WHEN TARGETED
 2
-TECHNOMANCER Rites of Reanimation: While leading a unit: Feel No Pain 5+
-Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
+Granted by: Technomancer - While leading: Feel No Pain 5+ AI (Rites of Reanimation)
+Granted by: Canoptek Spyders - Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks AI (Gloom Prism)
 ALL ATTACKS · WHOLE UNIT
-Every attack: Re-roll Wound rolls of 1 (Implacable Eradication)
-The target within range of an objective marker: Re-roll Wound rolls (Implacable Eradication)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Re-roll Wound rolls of 1; vs a target on an objective, re-roll all Wound rolls instead AI (Implacable Eradication)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 RANGED WEAPONS
 Range
 A
@@ -2727,7 +2724,7 @@ Close combat weapon×5
 0
 1
 WHOLE UNIT
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 ABILITIES
 Rites of Reanimation
 - Technomancer
@@ -2800,11 +2797,11 @@ Flayed Ones×5
 1
 –
 
-M: not counted here: see the rule (Relentless March)
+Granted by: The Silent King - If Relentless March is picked: NECRONS within 6" of Szarekh: +2" Move AI (Relentless March)
 
 WHEN TARGETED
 1
-Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
+Granted by: Canoptek Spyders - Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks AI (Gloom Prism)
 MELEE WEAPONS
 A
 WS
@@ -2818,11 +2815,11 @@ Flayer claws×5
 -1
 1
 SUSTAINED HITS 1, TWIN-LINKED
-not counted here: see the rule (Flesh Hunger)
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Melee vs Below Half-strength targets: every successful Hit roll is a Critical Hit AI (Flesh Hunger)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 ABILITIES
 Flesh Hunger
 Fight
@@ -2875,11 +2872,11 @@ Ophydian Destroyers×3
 2
 –
 
-M: not counted here: see the rule (Relentless March)
+Granted by: The Silent King - If Relentless March is picked: NECRONS within 6" of Szarekh: +2" Move AI (Relentless March)
 
 WHEN TARGETED
 1
-Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
+Granted by: Canoptek Spyders - Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks AI (Gloom Prism)
 MELEE WEAPONS
 A
 WS
@@ -2892,10 +2889,10 @@ Ophydian hyperphase weapons×3
 4
 -2
 2
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 ABILITIES
 Tunnelling Horrors
 End of your opponent’s turn
@@ -2951,15 +2948,15 @@ Canoptek Scarab Swarms×3
 0
 –
 
-Enemy units’ OC: not counted here: see the rule (Chittering swarm)
+Enemies in Engagement Range: −1 OC (min 1) AI (Chittering swarm)
 
-OC: not counted here: see the rule (Chittering swarm)
+Within 6" of a friendly CRYPTEK: OC 1 AI (Chittering swarm)
 
-M: not counted here: see the rule (Relentless March)
+Granted by: The Silent King - If Relentless March is picked: NECRONS within 6" of Szarekh: +2" Move AI (Relentless March)
 
 WHEN TARGETED
 1
-Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
+Granted by: Canoptek Spyders - Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks AI (Gloom Prism)
 MELEE WEAPONS
 A
 WS
@@ -2973,10 +2970,10 @@ Feeder mandibles×3
 0
 1
 LETHAL HITS
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 ABILITIES
 Self-destruction
 Fight
@@ -3035,18 +3032,18 @@ Canoptek Reanimator
 3
 –
 
-M: not counted here: see the rule (Relentless March)
+Granted by: The Silent King - If Relentless March is picked: NECRONS within 6" of Szarekh: +2" Move AI (Relentless March)
 
 WHEN TARGETED
 4
 Feel No Pain 4+
-Fabricator Claw Array: Within 6" of Canoptek Spyders: Feel No Pain 6+ (Canoptek Spyders)
-Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
-1CP Nanoassembly Protocols: Your opponent’s Shooting phase or the Fight phase: −1 Damage
+Granted by: Canoptek Spyders - NECRONS VEHICLE within 6" of the Canoptek Spyders: Feel No Pain 6+ AI (Fabricator Claw Array)
+Granted by: Canoptek Spyders - Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks AI (Gloom Prism)
+1CP Nanoassembly Protocols: in your opponent’s Shooting phase or the Fight phase, NECRONS VEHICLE, when targeted: −1 Damage to attacks allocated to this unit AI
 ALL ATTACKS
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 RANGED WEAPONS
 Range
 A
@@ -3073,7 +3070,7 @@ Reanimator’s claws
 5
 0
 1
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 ABILITIES
 Nanoscarab Reanimation Beam
 
@@ -3127,17 +3124,17 @@ Canoptek Spyder
 2
 –
 
-M: not counted here: see the rule (Relentless March)
+Granted by: The Silent King - If Relentless March is picked: NECRONS within 6" of Szarekh: +2" Move AI (Relentless March)
 
 WHEN TARGETED
 3
-Fabricator Claw Array: Own aura: Feel No Pain 6+
-Gloom Prism: Own aura: Feel No Pain 5+ against Psychic Attacks and mortal wounds
-1CP Nanoassembly Protocols: Your opponent’s Shooting phase or the Fight phase: −1 Damage
+NECRONS VEHICLE within 6" of the Canoptek Spyders: Feel No Pain 6+ AI (Fabricator Claw Array)
+Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks AI (Gloom Prism)
+1CP Nanoassembly Protocols: in your opponent’s Shooting phase or the Fight phase, NECRONS VEHICLE, when targeted: −1 Damage to attacks allocated to this unit AI
 ALL ATTACKS
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 STRATAGEMS · OBEISANCE PHALANX
-1CP Enslaved Artifice: Critical Hit on 5+
+1CP Enslaved Artifice: in your Shooting phase or the Fight phase, NECRONS (not TITANIC): Critical Hits on 5+ AI
 RANGED WEAPONS
 Range
 A
@@ -3165,7 +3162,7 @@ Automaton claws
 8
 -2
 2
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 ABILITIES
 Canoptek Swarm
 Your Command
@@ -3233,18 +3230,18 @@ Tesseract Vault
 8
 4+
 
-M: not counted here: see the rule (Relentless March)
+Granted by: The Silent King - If Relentless March is picked: NECRONS within 6" of Szarekh: +2" Move AI (Relentless March)
 
 WHEN TARGETED
 4
-Fabricator Claw Array: Within 6" of Canoptek Spyders: Feel No Pain 6+ (Canoptek Spyders)
-Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
-1CP Nanoassembly Protocols: Your opponent’s Shooting phase or the Fight phase: −1 Damage
-1CP Subsurface Quantumweave: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
+Granted by: Canoptek Spyders - NECRONS VEHICLE within 6" of the Canoptek Spyders: Feel No Pain 6+ AI (Fabricator Claw Array)
+Granted by: Canoptek Spyders - Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks AI (Gloom Prism)
+1CP Nanoassembly Protocols: in your opponent’s Shooting phase or the Fight phase, NECRONS VEHICLE, when targeted: −1 Damage to attacks allocated to this unit AI
+1CP Subsurface Quantumweave: in your opponent’s Shooting phase or the Fight phase, when a NECRONS TITANIC FLY unit is targeted: −1 AP vs those attacks AI
 DAMAGED 1-8 W
-SEE THE RULE
+WHILE THIS MODEL HAS 1-8 WOUNDS REMAINING, SUBTRACT 4 FROM ITS OBJECTIVE CONTROL CHARACTERISTIC AND YOU CAN ONLY SELECT ONE OF THE C’TAN POWERS WEAPONS IN YOUR SHOOTING PHASE, INSTEAD OF TWO.
 ALL ATTACKS
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 RANGED WEAPONS
 Range
 A
@@ -3284,9 +3281,9 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
-1CP Cosmic Storm: Tesla sphere +1 AP
+1CP Cosmic Storm: in your Shooting phase, OBELISK/TESSERACT VAULT: +1 AP with Tesla Sphere weapons AI
 MELEE WEAPONS
 A
 WS
@@ -3299,7 +3296,7 @@ Armoured bulk
 8
 0
 1
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 ABILITIES
 Powers of the C’tan
 Your Shooting
@@ -3357,18 +3354,18 @@ Tesseract Vault
 8
 4+
 
-M: not counted here: see the rule (Relentless March)
+Granted by: The Silent King - If Relentless March is picked: NECRONS within 6" of Szarekh: +2" Move AI (Relentless March)
 
 WHEN TARGETED
 4
-Fabricator Claw Array: Within 6" of Canoptek Spyders: Feel No Pain 6+ (Canoptek Spyders)
-Gloom Prism: Within 6" of Canoptek Spyders: Feel No Pain 5+ against Psychic Attacks and mortal wounds (Canoptek Spyders)
-1CP Nanoassembly Protocols: Your opponent’s Shooting phase or the Fight phase: −1 Damage
-1CP Subsurface Quantumweave: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
+Granted by: Canoptek Spyders - NECRONS VEHICLE within 6" of the Canoptek Spyders: Feel No Pain 6+ AI (Fabricator Claw Array)
+Granted by: Canoptek Spyders - Within 6" of the Canoptek Spyders: Feel No Pain 5+ vs mortal wounds and Psychic Attacks AI (Gloom Prism)
+1CP Nanoassembly Protocols: in your opponent’s Shooting phase or the Fight phase, NECRONS VEHICLE, when targeted: −1 Damage to attacks allocated to this unit AI
+1CP Subsurface Quantumweave: in your opponent’s Shooting phase or the Fight phase, when a NECRONS TITANIC FLY unit is targeted: −1 AP vs those attacks AI
 DAMAGED 1-8 W
-SEE THE RULE
+WHILE THIS MODEL HAS 1-8 WOUNDS REMAINING, SUBTRACT 4 FROM ITS OBJECTIVE CONTROL CHARACTERISTIC AND YOU CAN ONLY SELECT ONE OF THE C’TAN POWERS WEAPONS IN YOUR SHOOTING PHASE, INSTEAD OF TWO.
 ALL ATTACKS
-Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of The Silent King: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Phaeron of the Stars)
+Granted by: The Silent King - If Phaeron of the Stars is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Hit rolls of 1 and Wound rolls of 1 AI (Phaeron of the Stars)
 RANGED WEAPONS
 Range
 A
@@ -3408,9 +3405,9 @@ Time’s arrow
 -2
 6
 ANTI-CHARACTER 4+, DEVASTATING WOUNDS, PRECISION, C'TAN POWER
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · THE PHAERON’S ARMOURY · YOUR SHOOTING PHASE
-1CP Cosmic Storm: Tesla sphere +1 AP
+1CP Cosmic Storm: in your Shooting phase, OBELISK/TESSERACT VAULT: +1 AP with Tesla Sphere weapons AI
 MELEE WEAPONS
 A
 WS
@@ -3423,7 +3420,7 @@ Armoured bulk
 8
 0
 1
-not counted here: see the rule (The Silent King) (Phaeron of the Blades)
+Granted by: The Silent King - If Phaeron of the Blades is picked: NECRONS (not MONSTER) within 6" of Szarekh: re-roll Charge rolls; +1 S in melee AI (Phaeron of the Blades)
 ABILITIES
 Powers of the C’tan
 Your Shooting

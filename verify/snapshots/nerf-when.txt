@@ -242,22 +242,22 @@ SCOUTS AND INFILTRATORS
 Librarian in Phobos Armour Infiltrators, Scouts 6"
 Reiver Squad Scouts 6"
 ABILITIES
-Thunderhawk Insertion · Marneus Calgar
-Strategium Command · Wardens of Ultramar
+At Declare Battle Formations: one GRAVIS/PHOBOS/TACTICUS unit gains Deep Strike AI (Thunderhawk Insertion) · Marneus Calgar
+After deployment: redeploy up to 3 ADEPTUS ASTARTES units, Strategic Reserves allowed AI (Strategium Command) · Wardens of Ultramar
 START OF THE BATTLE AND THE BATTLE ROUNDS
 START OF THE BATTLE
-Teleport Homer · Deathwatch Terminator Squad
+Start of the battle: place a Teleport Homer; Rapid Ingress onto the token costs −1CP, set up within 3" of the token and not within 8" of enemies AI (Teleport Homer) · Deathwatch Terminator Squad
 EVERY ROUND
-Transhuman Strategist · Ultramarines army rule
+Start of each round, if a model with this ability is your WARLORD: +1CP AI (Transhuman Strategist) · Ultramarines army rule
 USES PER BATTLE
 NEW GAME
 RULES
-Combat Doctrines · Ultramarines army rule:
+At the start of your Command phase: pick one combat doctrine, active until your next Command phase; each once per battle AI (Combat Doctrines) · Ultramarines army rule:
 ASSAULT DOCTRINE
 DEVASTATOR DOCTRINE
 TACTICAL DOCTRINE
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -470,9 +470,9 @@ Hand of Dominion
 -2
 2
 RAPID FIRE 2, SUSTAINED HITS 1
-Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 Marneus Calgar
 + Wardens of Ultramar + Bladeguard Veteran Squad
 Furious Assault
@@ -544,11 +544,11 @@ Neo-volkite PistolBLADEGUARD VETERAN SERGEANT
 0
 2
 CLOSE-QUARTERS, DEVASTATING WOUNDS
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
-1CP Merciless Veterans: [LETHAL HITS], [SUSTAINED HITS 1]
+1CP Merciless Veterans: in your Shooting phase, ADEPTUS ASTARTES TERMINATOR: ranged attacks gain [LETHAL HITS] and [SUSTAINED HITS 1] AI
 Librarian in Phobos Armour
 
 Can shoot with Bolt pistol or Smite, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
@@ -578,9 +578,9 @@ D6
 -1
 2
 PSYCHIC
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 Heavy Intercessor Squad
 
 Heavy Intercessor Sergeant can shoot with Bolt pistol or Heavy Bolt Rifle, not both (Close-quarters); in close-quarters shooting, Bolt pistol only.
@@ -613,9 +613,9 @@ Heavy BolterHEAVY INTERCESSOR
 -1
 2
 HEAVY, SUSTAINED HITS 1, RAPID FIRE 2
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 Impulsor
 ×2 units
 Ironhail Heavy Stubber
@@ -634,10 +634,10 @@ Storm Bolters
 -1
 1
 RAPID FIRE 4
-not counted here: see the rule (Firing Deck 7)
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Firing Deck 7
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 Eradicator Squad with Melta Rifles
 ×2 units
 
@@ -689,10 +689,10 @@ MELTA 3
 -3
 D3+2
 MELTA 3
-Every ranged attack: Re-roll Damage rolls (Total Obliteration)
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Ranged attacks: re-roll Damage rolls AI (Total Obliteration)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 Reiver Squad
 ×2 units
 
@@ -714,9 +714,9 @@ Special-issue Bolt Pistol×5
 -2
 1
 CLOSE-QUARTERS, PRECISION
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 Deathwatch Terminator Squad
 ×2 units
 Plasma cannon×3
@@ -736,18 +736,18 @@ BLAST 1
 -3
 3
 HAZARDOUS, BLAST 1
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-Furor Tactics · “If the devastator doctrine is active for your unit”: [SUSTAINED HITS 1] (Mission Tactics)
-Malleus Tactics · “If the tactical doctrine is active for your unit”: [LETHAL HITS] (Mission Tactics)
-Purgatus Tactics · “If the assault doctrine is active for your unit” · “that target an enemy unit within 9" of this unit”: [PRECISION] (Mission Tactics)
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+If the devastator doctrine is active: [SUSTAINED HITS 1] AI (Mission Tactics)
+If the tactical doctrine is active: [LETHAL HITS] AI (Mission Tactics)
+If the assault doctrine is active, vs targets within 9": [PRECISION] AI (Mission Tactics)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 STRATAGEMS · DEATHWATCH SUPPORT
-1CP Kraken Rounds: not counted here: see the rule
-1CP Dragonfire Rounds: Re-roll Wound rolls of 1, [IGNORES COVER], Your Shooting phase
-1CP Hellfire Rounds: [ANTI-NON-VEHICLE 4+], Your Shooting phase, If (see the rule)
+1CP Kraken Rounds: in your Shooting phase, KILL TEAM: +6" range and +1 S with ranged attacks AI
+1CP Dragonfire Rounds: in your Shooting phase, KILL TEAM ranged attacks: re-roll Wound rolls of 1; [IGNORES COVER] AI
+1CP Hellfire Rounds: in your Shooting phase, KILL TEAM ranged attacks (not [DEVASTATING WOUNDS]) gain [ANTI-non-VEHICLE 4+] AI
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
-1CP Merciless Veterans: [LETHAL HITS], [SUSTAINED HITS 1]
+1CP Merciless Veterans: in your Shooting phase, ADEPTUS ASTARTES TERMINATOR: ranged attacks gain [LETHAL HITS] and [SUSTAINED HITS 1] AI
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Roboute Guilliman
@@ -769,9 +769,9 @@ Hand of Dominion
 -4
 4
 LETHAL HITS
-Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 Marneus Calgar
 + Wardens of Ultramar + Bladeguard Veteran Squad
 Furious Assault
@@ -835,10 +835,10 @@ Master-crafted power weapon×6
 -2
 2
 SUSTAINED HITS 1: NON-MONSTER/VEHICLE
-Once per turn · “In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following”: +1 to Hit rolls (Bladeguard)
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Fight phase, if picked: +1 to Hit rolls in melee AI (Bladeguard)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 Librarian in Phobos Armour
 Force weapon [Psychic]
 4
@@ -847,9 +847,9 @@ Force weapon [Psychic]
 -2
 2
 PSYCHIC
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 Heavy Intercessor Squad
 Ceramite Fists×5
 3
@@ -857,9 +857,9 @@ Ceramite Fists×5
 5
 0
 1
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 Impulsor
 ×2 units
 Armoured Hull
@@ -868,10 +868,10 @@ Armoured Hull
 6
 0
 1
-not counted here: see the rule (Firing Deck 7)
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Firing Deck 7
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 Eradicator Squad with Melta Rifles
 ×2 units
 Ceramite Fists×3
@@ -880,9 +880,9 @@ Ceramite Fists×3
 5
 0
 1
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 Reiver Squad
 ×2 units
 Monomolecular Combat Knife×5
@@ -892,9 +892,9 @@ Monomolecular Combat Knife×5
 -1
 1
 PRECISION
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 Deathwatch Terminator Squad
 ×2 units
 Chainfist×3
@@ -917,12 +917,12 @@ Thunder Hammer×2
 -2
 3
 DEVASTATING WOUNDS
-Furor Tactics · “If the devastator doctrine is active for your unit”: [SUSTAINED HITS 1] (Mission Tactics)
-Malleus Tactics · “If the tactical doctrine is active for your unit”: [LETHAL HITS] (Mission Tactics)
-Purgatus Tactics · “If the assault doctrine is active for your unit” · “that target an enemy unit within 9" of this unit”: [PRECISION] (Mission Tactics)
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+If the devastator doctrine is active: [SUSTAINED HITS 1] AI (Mission Tactics)
+If the tactical doctrine is active: [LETHAL HITS] AI (Mission Tactics)
+If the assault doctrine is active, vs targets within 9": [PRECISION] AI (Mission Tactics)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 
 ######## abilities · MELEE Abilities
 Roboute Guilliman
@@ -2238,19 +2238,19 @@ ASSAULT BRETHREN
 CP
 AI
 Armour of Contempt
-Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: attacks that target your unit have -1 AP until that enemy unit has attacked.
+attacks against this unit get −1 AP
 Their Shoot · Fight Any unit
 1
 CP
 AI
 Gene-Wrought Might
-Your ADEPTUS ASTARTES unit is selected to fight: its melee attacks have [LANCE]; or, if the assault doctrine is active for it, [LANCE] and +1 AP.
+melee attacks gain [LANCE] (and +1 AP with the assault doctrine)
 Fight Any unit
 1
 CP
 AI
 Duty in Death
-Fight phase, an enemy unit targets your ADEPTUS ASTARTES unit: when a model of it is destroyed before your unit has been selected to fight, roll one D6 (+1 if the assault doctrine is active for it); on a 4+ that model is removed only when your unit has fought or at the end of the phase.
+when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ (+1 with the assault doctrine) until this unit has fought or the phase ends
 Fight Any unit
 DEATHWATCH SUPPORT
 4
@@ -2258,25 +2258,25 @@ DEATHWATCH SUPPORT
 CP
 AI
 Kraken Rounds
-Your KILL TEAM unit is selected to shoot: its ranged attacks have +6" range and +1 S.
+KILL TEAM: +6" range and +1 S with ranged attacks
 Your Shooting Deathwatch Terminator Squad ×2
 1
 CP
 AI
 Dragonfire Rounds
-Your KILL TEAM unit is selected to shoot: its ranged attacks can re-roll wound rolls of 1 and have [IGNORES COVER].
+KILL TEAM ranged attacks: re-roll Wound rolls of 1; [IGNORES COVER]
 Your Shooting Deathwatch Terminator Squad ×2
 1
 CP
 AI
 Hellfire Rounds
-Your KILL TEAM unit is selected to shoot: its ranged attacks (not [DEVASTATING WOUNDS] attacks) have [ANTI-non-VEHICLE 4+].
+KILL TEAM ranged attacks (not [DEVASTATING WOUNDS]) gain [ANTI-non-VEHICLE 4+]
 Your Shooting Deathwatch Terminator Squad ×2
 1
 CP
 AI
 Blackstar Extraction
-End of your opponent’s Fight phase: place your unengaged KILL TEAM unit in strategic reserves.
+at the end of the phase: an unengaged KILL TEAM goes into Strategic Reserves
 End of their Fight Deathwatch Terminator Squad ×2
 TERMINATOR STORM FORCE
 3
@@ -2284,19 +2284,19 @@ TERMINATOR STORM FORCE
 CP
 AI
 Tactical Dreadnought Fortitude
-Your opponent’s Shooting phase or the Fight phase, an enemy unit targets your ADEPTUS ASTARTES TERMINATOR unit: attacks that target your unit have -1 D until that enemy unit has attacked.
+when an ADEPTUS ASTARTES TERMINATOR unit is targeted: −1 D vs those attacks
 Their Shoot · Fight Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad ×2
 1
 CP
 AI
 Merciless Veterans
-Your ADEPTUS ASTARTES TERMINATOR unit is selected to shoot: its ranged attacks have [LETHAL HITS] and [SUSTAINED HITS 1].
+ADEPTUS ASTARTES TERMINATOR: ranged attacks gain [LETHAL HITS] and [SUSTAINED HITS 1]
 Your Shooting Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad ×2
 1
 CP
 AI
 Gunship Extraction
-End of your opponent’s Fight phase: place your unengaged ADEPTUS ASTARTES TERMINATOR unit in strategic reserves.
+at the end of the phase: an unengaged ADEPTUS ASTARTES TERMINATOR unit goes into Strategic Reserves
 End of their Fight Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Deathwatch Terminator Squad ×2
 CORE STRATAGEMS
 10
@@ -2304,61 +2304,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement Any unit
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour, Heavy Intercessor Squad, Eradicator Squad with Melta Rifles ×2, Reiver Squad ×2
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting Reiver Squad ×2
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge Roboute Guilliman, Impulsor ×2
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP All but Impulsor ×2
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight Roboute Guilliman, Marneus Calgar + Wardens of Ultramar + Bladeguard Veteran Squad, Librarian in Phobos Armour
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2769,12 +2769,12 @@ Roboute Guilliman
 4+
 WHEN TARGETED
 4
+Within 3" of an ADEPTUS ASTARTES INFANTRY unit: Lone Operative AI (Leader of Astartes)
 Feel No Pain 5+
-Leader of Astartes: Within 3" of a friendly ADEPTUS ASTARTES INFANTRY unit: Lone Operative
-1CP Armour of Contempt: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
-1CP Duty in Death: not counted here: see the rule
+1CP Armour of Contempt: in your opponent’s Shooting phase or the Fight phase, attacks against this unit get −1 AP AI
+1CP Duty in Death: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ (+1 with the assault doctrine) until this unit has fought or the phase ends AI
 ALL ATTACKS
-Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -2790,8 +2790,8 @@ Hand of Dominion
 -2
 2
 RAPID FIRE 2, SUSTAINED HITS 1
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 MELEE WEAPONS
 A
 WS
@@ -2816,7 +2816,7 @@ Hand of Dominion
 4
 LETHAL HITS
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 ABILITIES
 Supreme Commander
 
@@ -2990,12 +2990,12 @@ Bladeguard Veteran×5
 4+
 WHEN TARGETED
 4
-BLADEGUARD VETERAN SQUAD Bladeguard: Melee attacks, Once per turn · “In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following”: −1 to Hit rolls
-1CP Armour of Contempt: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
-1CP Duty in Death: not counted here: see the rule
-2CP Tactical Dreadnought Fortitude: Your opponent’s Shooting phase or the Fight phase: −1 Damage
+BLADEGUARD VETERAN SQUAD Fight phase, if picked: −1 to Hit rolls vs attacks on this unit AI (Bladeguard)
+1CP Armour of Contempt: in your opponent’s Shooting phase or the Fight phase, attacks against this unit get −1 AP AI
+1CP Duty in Death: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ (+1 with the assault doctrine) until this unit has fought or the phase ends AI
+2CP Tactical Dreadnought Fortitude: in your opponent’s Shooting phase or the Fight phase, when an ADEPTUS ASTARTES TERMINATOR unit is targeted: −1 D vs those attacks AI
 ALL ATTACKS · WHOLE UNIT
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3072,10 +3072,10 @@ Neo-volkite PistolBLADEGUARD VETERAN SERGEANT
 2
 CLOSE-QUARTERS, DEVASTATING WOUNDS
 WHOLE UNIT
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
-1CP Merciless Veterans: [LETHAL HITS], [SUSTAINED HITS 1]
+1CP Merciless Veterans: in your Shooting phase, ADEPTUS ASTARTES TERMINATOR: ranged attacks gain [LETHAL HITS] and [SUSTAINED HITS 1] AI
 MELEE WEAPONS
 A
 WS
@@ -3143,9 +3143,9 @@ Master-crafted power weapon×6
 2
 SUSTAINED HITS 1: NON-MONSTER/VEHICLE
 WHOLE UNIT
-Once per turn · “In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following”: +1 to Hit rolls (Bladeguard)
+Fight phase, if picked: +1 to Hit rolls in melee AI (Bladeguard)
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 ABILITIES
 Codex Adept
 - Marneus Calgar
@@ -3257,12 +3257,12 @@ Librarian in Phobos Armor
 –
 WHEN TARGETED
 4
-Shrouding: If it uses this ability · “if this unit is not battle-shocked”: −1 to Hit rolls
-Psychic Hood: Feel No Pain 4+ against Psychic Attacks
-1CP Armour of Contempt: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
-1CP Duty in Death: not counted here: see the rule
+When targeted, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): −1 to Hit rolls vs attacks on this unit AI (Shrouding)
+Feel No Pain 4+ vs Psychic Attacks AI (Psychic Hood)
+1CP Armour of Contempt: in your opponent’s Shooting phase or the Fight phase, attacks against this unit get −1 AP AI
+1CP Duty in Death: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ (+1 with the assault doctrine) until this unit has fought or the phase ends AI
 ALL ATTACKS
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3298,8 +3298,8 @@ D6
 -1
 2
 PSYCHIC
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 MELEE WEAPONS
 A
 WS
@@ -3314,7 +3314,7 @@ Force weapon [Psychic]
 2
 PSYCHIC
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 ABILITIES
 Shrouding
 
@@ -3408,11 +3408,11 @@ Heavy intercessor Squad×4
 –
 WHEN TARGETED
 3
-Unyielding in the Face of the Foe: not counted here: see the rule
-1CP Armour of Contempt: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
-1CP Duty in Death: not counted here: see the rule
+While controlling an objective: +1 to save rolls AI (Unyielding in the Face of the Foe)
+1CP Armour of Contempt: in your opponent’s Shooting phase or the Fight phase, attacks against this unit get −1 AP AI
+1CP Duty in Death: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ (+1 with the assault doctrine) until this unit has fought or the phase ends AI
 ALL ATTACKS
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3451,8 +3451,8 @@ Heavy BolterHEAVY INTERCESSOR
 -1
 2
 HEAVY, SUSTAINED HITS 1, RAPID FIRE 2
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 MELEE WEAPONS
 A
 WS
@@ -3466,7 +3466,7 @@ Ceramite Fists×5
 0
 1
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 ABILITIES
 Unyielding in the Face of the Foe
 
@@ -3521,11 +3521,11 @@ Impulsor
 5+
 WHEN TARGETED
 2
-1CP Armour of Contempt: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
-1CP Duty in Death: not counted here: see the rule
+1CP Armour of Contempt: in your opponent’s Shooting phase or the Fight phase, attacks against this unit get −1 AP AI
+1CP Duty in Death: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ (+1 with the assault doctrine) until this unit has fought or the phase ends AI
 ALL ATTACKS
-not counted here: see the rule (Firing Deck 7)
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Firing Deck 7
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3549,8 +3549,8 @@ Storm Bolters
 -1
 1
 RAPID FIRE 4
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 MELEE WEAPONS
 A
 WS
@@ -3564,7 +3564,7 @@ Armoured Hull
 0
 1
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 ABILITIES
 Rapid Disembarkation
 Your Movement
@@ -3646,10 +3646,10 @@ Eradicator Sergeant
 –
 WHEN TARGETED
 2
-1CP Armour of Contempt: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
-1CP Duty in Death: not counted here: see the rule
+1CP Armour of Contempt: in your opponent’s Shooting phase or the Fight phase, attacks against this unit get −1 AP AI
+1CP Duty in Death: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ (+1 with the assault doctrine) until this unit has fought or the phase ends AI
 ALL ATTACKS
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3706,9 +3706,9 @@ MELTA 3
 -3
 D3+2
 MELTA 3
-Every ranged attack: Re-roll Damage rolls (Total Obliteration)
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Ranged attacks: re-roll Damage rolls AI (Total Obliteration)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 MELEE WEAPONS
 A
 WS
@@ -3722,7 +3722,7 @@ Ceramite Fists×3
 0
 1
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 ABILITIES
 Total Obliteration
 Their Move · Your Shoot
@@ -3789,14 +3789,14 @@ Reiver Squad×4
 1
 –
 
-Enemy units’ OC: not counted here: see the rule (Terror Troops)
+Enemy models within 3": −1 OC AI (Terror Troops)
 
 WHEN TARGETED
 2
-1CP Armour of Contempt: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
-1CP Duty in Death: not counted here: see the rule
+1CP Armour of Contempt: in your opponent’s Shooting phase or the Fight phase, attacks against this unit get −1 AP AI
+1CP Duty in Death: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ (+1 with the assault doctrine) until this unit has fought or the phase ends AI
 ALL ATTACKS
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3823,8 +3823,8 @@ Special-issue Bolt Pistol×5
 -2
 1
 CLOSE-QUARTERS, PRECISION
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 MELEE WEAPONS
 A
 WS
@@ -3839,7 +3839,7 @@ Monomolecular Combat Knife×5
 1
 PRECISION
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 ABILITIES
 Terror Troops
 
@@ -3924,18 +3924,18 @@ Deathwatch Terminator×3
 1
 4+
 
-W: not counted here: see the rule (Storm Shield)
++1 W AI (Storm Shield)
 
 WHEN TARGETED
 3
-1CP Armour of Contempt: Your opponent’s Shooting phase or the Fight phase: AP worsened by 1
-1CP Duty in Death: not counted here: see the rule
-2CP Tactical Dreadnought Fortitude: Your opponent’s Shooting phase or the Fight phase: −1 Damage
+1CP Armour of Contempt: in your opponent’s Shooting phase or the Fight phase, attacks against this unit get −1 AP AI
+1CP Duty in Death: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ (+1 with the assault doctrine) until this unit has fought or the phase ends AI
+2CP Tactical Dreadnought Fortitude: in your opponent’s Shooting phase or the Fight phase, when an ADEPTUS ASTARTES TERMINATOR unit is targeted: −1 D vs those attacks AI
 ALL ATTACKS
-Furor Tactics · “If the devastator doctrine is active for your unit”: [SUSTAINED HITS 1] (Mission Tactics)
-Malleus Tactics · “If the tactical doctrine is active for your unit”: [LETHAL HITS] (Mission Tactics)
-Purgatus Tactics · “If the assault doctrine is active for your unit” · “that target an enemy unit within 9" of this unit”: [PRECISION] (Mission Tactics)
-Within 6" of Roboute Guilliman: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Primarch of the XIII)
+If the devastator doctrine is active: [SUSTAINED HITS 1] AI (Mission Tactics)
+If the tactical doctrine is active: [LETHAL HITS] AI (Mission Tactics)
+If the assault doctrine is active, vs targets within 9": [PRECISION] AI (Mission Tactics)
+Granted by: Roboute Guilliman - Within 6" of Roboute Guilliman: ADEPTUS ASTARTES re-roll Hit rolls of 1 and Wound rolls of 1 AI (Primarch of the XIII)
 RANGED WEAPONS
 Range
 A
@@ -3960,14 +3960,14 @@ BLAST 1
 -3
 3
 HAZARDOUS, BLAST 1
-DEVASTATOR DOCTRINE: [ASSAULT] (Combat Doctrines)
-The target is the enemy unit selected · If it uses this ability · “if this unit is not battle-shocked” · “you can make a psychic roll for this unit by rolling one D6”: [IGNORES COVER] (Soul Sight)
+If the devastator doctrine is active: ranged [ASSAULT] AI (Combat Doctrines)
+Granted by: Librarian in Phobos Armour - In your Shooting phase, if not Battle-shocked and it uses this ability (Battle-shocked on a 1): ranged attacks gain [IGNORES COVER] vs one visible enemy unit AI (Soul Sight)
 STRATAGEMS · DEATHWATCH SUPPORT
-1CP Kraken Rounds: not counted here: see the rule
-1CP Dragonfire Rounds: Re-roll Wound rolls of 1, [IGNORES COVER], Your Shooting phase
-1CP Hellfire Rounds: [ANTI-NON-VEHICLE 4+], Your Shooting phase, If (see the rule)
+1CP Kraken Rounds: in your Shooting phase, KILL TEAM: +6" range and +1 S with ranged attacks AI
+1CP Dragonfire Rounds: in your Shooting phase, KILL TEAM ranged attacks: re-roll Wound rolls of 1; [IGNORES COVER] AI
+1CP Hellfire Rounds: in your Shooting phase, KILL TEAM ranged attacks (not [DEVASTATING WOUNDS]) gain [ANTI-non-VEHICLE 4+] AI
 STRATAGEMS · TERMINATOR STORM FORCE · YOUR SHOOTING PHASE
-1CP Merciless Veterans: [LETHAL HITS], [SUSTAINED HITS 1]
+1CP Merciless Veterans: in your Shooting phase, ADEPTUS ASTARTES TERMINATOR: ranged attacks gain [LETHAL HITS] and [SUSTAINED HITS 1] AI
 MELEE WEAPONS
 A
 WS
@@ -3995,7 +3995,7 @@ Thunder Hammer×2
 3
 DEVASTATING WOUNDS
 STRATAGEMS · ASSAULT BRETHREN · FIGHT PHASE
-1CP Gene-Wrought Might: one of: [LANCE] · [LANCE], +1 AP (“If the assault doctrine is active for your unit”)
+1CP Gene-Wrought Might: in the Fight phase, melee attacks gain [LANCE] (and +1 AP with the assault doctrine) AI
 ABILITIES
 Terminatus Assault
 Charge

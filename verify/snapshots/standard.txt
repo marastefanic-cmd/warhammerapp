@@ -204,19 +204,19 @@ SCOUTS AND INFILTRATORS
 Eightbound Scouts 6"
 Goremongers Infiltrators
 ABILITIES
-Lord of the Eightbound · Slaughterbound ×2
+Attached to WORLD EATERS POSSESSED at Declare Battle Formations: Deep Strike and Scouts 6" AI (Lord of the Eightbound) · Slaughterbound ×2
 START OF THE BATTLE AND THE BATTLE ROUNDS
 EVERY ROUND
-Blessings of Khorne · World Eaters army rule
-Reborn in Blood · Angron
-Wrathful Presence · Angron
+Start of each round, roll 8D6 to activate up to two Blessings: Unbridled Bloodlust (double 1+); Rage-fuelled Invigoration (double 2+); Total Carnage (double 3+); Martial Excellence (double 4+ or triple 1+); Warp Blades (double 5+ or triple 2+); Decapitating Strikes (double 6 or triple 3+) AI (Blessings of Khorne) · World Eaters army rule
+If this model is destroyed: use a triple 6 from the Blessings of Khorne roll instead of activating any Blessings; this model is set up by Deep Strike in your next Movement phase with 8 wounds remaining AI (Reborn in Blood) · Angron
+Pick one at the start of each round: The Blood God’s Favour; Overwhelming Wrath; Driven by Ultimate Rage AI (Wrathful Presence) · Angron
 USES PER BATTLE
 NEW GAME
 ABILITIES
-Possessed Lord · Slaughterbound
-Possessed Lord · Slaughterbound + Exalted Eightbound
+Once per battle, at the start of the Fight phase, if used: +3 A and [DEVASTATING WOUNDS] with this model’s melee weapons AI (Possessed Lord) · Slaughterbound
+Once per battle, at the start of the Fight phase, if used: +3 A and [DEVASTATING WOUNDS] with this model’s melee weapons AI (Possessed Lord) · Slaughterbound + Exalted Eightbound
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -439,7 +439,7 @@ Combi-bolter
 -1
 1
 RAPID FIRE 4
-not counted here: see the rule (Firing Deck 2)
+Firing Deck 2
 Goremongers
 Autopistol×8
 12"
@@ -477,8 +477,8 @@ Hades autocannon×2
 -1
 2
 RAPID FIRE 4
-The target is the closest eligible target within 18": Re-roll Hit rolls (Furious Onslaught)
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
+Shooting the closest eligible target within 18": re-roll Hit rolls AI (Furious Onslaught)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Angron
@@ -498,14 +498,13 @@ DEVASTATING WOUNDS
 -2
 2
 DEVASTATING WOUNDS
-Wrathful Presence: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-If (see the rule): −1 to Hit rolls (Damaged: 1-6 wounds remaining)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-6 wounds remaining)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 Khârn the Betrayer
 + Khorne Berzerkers
 KHÂRN THE BETRAYER
@@ -528,20 +527,16 @@ Khornate eviscerator×2
 8
 -2
 2
-While leading a unit: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Legendary Killer)
-Charged this turn: +1 S (Murderous Charge)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+Granted by: Khârn the Betrayer - While leading: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Legendary Killer)
+If this unit charged this turn: +1 S in melee AI (Murderous Charge)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 Lord on Juggernaut
-
-Fights with both: Exalted chainblade, plus Bladed horn on top (extra attacks).
-
 Exalted chainblade
 8
 2+
@@ -555,18 +550,17 @@ Bladed horn
 -1
 2
 EXTRA ATTACKS, LANCE
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-not counted here: see the rule (Wrath of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee AI (Wrath of Khorne)
 Charged this turn: Bladed horn +1 to Wound rolls (Lance)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: not counted here: see the rule
+1CP Aspire to Infamy: in the Fight phase, CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee AI
 Slaughterbound
 Lacerator and daemonic claw
 7
@@ -574,18 +568,17 @@ Lacerator and daemonic claw
 10
 -2
 2
-Once per battle · If it uses this ability: +3 A, [DEVASTATING WOUNDS] (Possessed Lord)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-not counted here: see the rule (Wrath of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee AI (Wrath of Khorne)
+once per battle, if used: +3 A and [DEVASTATING WOUNDS] in melee AI (Possessed Lord)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: not counted here: see the rule
+1CP Aspire to Infamy: in the Fight phase, CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee AI
 Slaughterbound
 Berzerker Glaive
 + Exalted Eightbound
@@ -604,19 +597,18 @@ Chainblades×3
 -3
 2
 ANTI-MONSTER 3+, ANTI-VEHICLE 3+
-Once per battle · If it uses this ability: Slaughterbound +3 A, [DEVASTATING WOUNDS] (Possessed Lord)
-The target: MONSTER or VEHICLE: +1 D (Rend and Tear)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-not counted here: see the rule (Wrath of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee AI (Wrath of Khorne)
+Granted by: Slaughterbound - Slaughterbound only: once per battle, if used: +3 A and [DEVASTATING WOUNDS] in melee AI (Possessed Lord)
+vs MONSTER or VEHICLE: +1 D in melee AI (Rend and Tear)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: not counted here: see the rule
+1CP Aspire to Infamy: in the Fight phase, CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee AI
 Chaos Rhino
 Armoured tracks
 7
@@ -624,15 +616,14 @@ Armoured tracks
 6
 0
 1
-not counted here: see the rule (Firing Deck 2)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+Firing Deck 2
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 Eightbound
 ×2 units
 Chainblades×3
@@ -641,14 +632,13 @@ Chainblades×3
 8
 -2
 2
-Own aura · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Own aura · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 Exalted Eightbound
 Chainblades×3
 5
@@ -657,15 +647,14 @@ Chainblades×3
 -3
 2
 ANTI-MONSTER 3+, ANTI-VEHICLE 3+
-The target: MONSTER or VEHICLE: +1 D (Rend and Tear)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+vs MONSTER or VEHICLE: +1 D in melee AI (Rend and Tear)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 Goremongers
 
 Pick one to fight with: Chainblade or Close combat weapon.
@@ -683,15 +672,14 @@ Close combat weapon×8
 3
 0
 1
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
 Charged this turn: Chainblade +1 to Wound rolls (Lance)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 Jakhals
 ×2 units
 Chainblades×9
@@ -706,14 +694,13 @@ Paired manglersDISHONOURED
 4
 0
 1
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 Forgefiend
 ×2 units
 Forgefiend claws
@@ -722,15 +709,14 @@ Forgefiend claws
 6
 0
 1
-If (see the rule): −1 to Hit rolls (Damaged: 1-4 wounds remaining)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-4 wounds remaining)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 
 ######## abilities · MELEE Abilities
 Angron
@@ -2266,37 +2252,37 @@ BERZERKER WARBAND
 CP
 AI
 Apoplectic Frenzy
-Until the end of the turn, your unit is eligible to declare a charge even though it Advanced.
+a KHORNE BERZERKERS unit that Advances can still charge this turn
 Your Movement Khârn the Betrayer + Khorne Berzerkers
 1
 CP
 AI
 Berzerker’s Wrath
-Your unit’s surge move is up to 8" instead of a D6 roll.
+after an enemy shoots: KHORNE BERZERKERS surge 8" instead of a D6 roll
 Their Shooting Khârn the Betrayer + Khorne Berzerkers
 1
 CP
 AI
 Hack and Slash
-Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.
+WORLD EATERS unit that charged this turn: +1 AP in melee
 Fight Any unit
 2
 CP
 AI
 Frenzied Resilience
-Until the end of the phase, -1 Damage to each attack allocated to a model in your unit.
+−1 Damage to attacks on this unit
 Fight Any unit
 1
 CP
 AI
 Skulls for the Skull Throne!
-Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+after a WORLD EATERS unit kills a CHARACTER or MONSTER model: roll and activate one more Blessing of Khorne
 Fight Any unit
 1
 CP
 AI
 Blood Offering
-Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+when a WORLD EATERS unit is destroyed on an objective you controlled: that objective stays yours until the opponent takes it
 Any phase Any unit
 VESSELS OF WRATH
 3
@@ -2304,19 +2290,19 @@ VESSELS OF WRATH
 CP
 AI
 Punish the Craven
-An enemy unit engaged with your unit is selected to fall back: it must use desperate escape (-1 to those hazard rolls if it is battle-shocked).
+an enemy falling back from a WORLD EATERS CHARACTER must use desperate escape (−1 to that unit’s hazard rolls if Battle-shocked)
 Their Movement Angron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
 1
 CP
 AI
 Aspire to Infamy
-Your unit’s CHARACTER models’ melee attacks have +1 A and +2 S.
+CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee
 Fight Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
 1
 CP
 AI
 Scorn the Witch
-Your unit has Feel No Pain 4+ against mortal wounds.
+when a WORLD EATERS CHARACTER (not EPIC HERO) suffers a mortal wound: Feel No Pain 4+ vs mortal wounds
 Any phase Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
 CORE STRATAGEMS
 10
@@ -2324,61 +2310,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Chaos Rhino, Goremongers, Jakhals ×2, Forgefiend ×2
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting Khârn the Betrayer + Khorne Berzerkers, Goremongers, Jakhals ×2
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting Chaos Rhino
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge Angron, Chaos Rhino, Forgefiend ×2
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP All but Chaos Rhino
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight Angron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2762,9 +2748,9 @@ Angron
 4+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: −1 Damage
+2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
 DAMAGED 1-6 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-6 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 MELEE WEAPONS
 A
 WS
@@ -2786,13 +2772,12 @@ DEVASTATING WOUNDS
 -2
 2
 DEVASTATING WOUNDS
-Wrathful Presence: the one selected (at the start of the battle round) · Own aura: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 ABILITIES
 The Blood God’s Favour
 - Wrathful Presence: pick one
@@ -2906,8 +2891,8 @@ Khorne Berzerker×10
 –
 WHEN TARGETED
 2
-KHÂRN THE BETRAYER Berzerker Frenzy: not counted here: see the rule
-2CP Frenzied Resilience: Fight phase: −1 Damage
+Granted by: Khârn the Betrayer - Khârn the Betrayer only: First time this model is destroyed: back on a 2+ at the end of the phase with 3 wounds AI (Berzerker Frenzy)
+2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
 RANGED WEAPONS
 Plasma pistol ×4, Bolt pistol ×7 · all pistols
 Range
@@ -2987,16 +2972,15 @@ Khornate eviscerator×2
 -2
 2
 WHOLE UNIT
-While leading a unit: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Legendary Killer)
-Charged this turn: +1 S (Murderous Charge)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+Granted by: Khârn the Betrayer - While leading: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Legendary Killer)
+If this unit charged this turn: +1 S in melee AI (Murderous Charge)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 ABILITIES
 Legendary Killer
 - Khârn the Betrayer
@@ -3097,8 +3081,8 @@ Lord on Juggernaut
 4+
 WHEN TARGETED
 2
-2CP Frenzied Resilience: Fight phase: −1 Damage
-1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
+2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
+1CP Scorn the Witch: in any phase, when a WORLD EATERS CHARACTER (not EPIC HERO) suffers a mortal wound: Feel No Pain 4+ vs mortal wounds AI
 RANGED WEAPONS
 Range
 A
@@ -3129,9 +3113,6 @@ WS
 S
 AP
 D
-
-Fights with both: Exalted chainblade, plus Bladed horn on top (extra attacks).
-
 Exalted chainblade
 8
 2+
@@ -3145,18 +3126,17 @@ Bladed horn
 -1
 2
 EXTRA ATTACKS, LANCE
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-not counted here: see the rule (Wrath of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee AI (Wrath of Khorne)
 Charged this turn: Bladed horn +1 to Wound rolls (Lance)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: not counted here: see the rule
+1CP Aspire to Infamy: in the Fight phase, CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee AI
 ABILITIES
 Aggressive Advance
 Not leading a unit in this list
@@ -3222,8 +3202,8 @@ Slaughterbound
 5+
 WHEN TARGETED
 2
-2CP Frenzied Resilience: Fight phase: −1 Damage
-1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
+2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
+1CP Scorn the Witch: in any phase, when a WORLD EATERS CHARACTER (not EPIC HERO) suffers a mortal wound: Feel No Pain 4+ vs mortal wounds AI
 MELEE WEAPONS
 A
 WS
@@ -3236,18 +3216,17 @@ Lacerator and daemonic claw
 10
 -2
 2
-Once per battle · If it uses this ability: +3 A, [DEVASTATING WOUNDS] (Possessed Lord)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-not counted here: see the rule (Wrath of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee AI (Wrath of Khorne)
+once per battle, if used: +3 A and [DEVASTATING WOUNDS] in melee AI (Possessed Lord)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: not counted here: see the rule
+1CP Aspire to Infamy: in the Fight phase, CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee AI
 ABILITIES
 Lord of the Eightbound
 
@@ -3335,8 +3314,8 @@ Exalted Eightbound
 5+
 WHEN TARGETED
 2
-2CP Frenzied Resilience: Fight phase: −1 Damage
-1CP Scorn the Witch: Any phase, If (see the rule): Feel No Pain 4+ against mortal wounds
+2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
+1CP Scorn the Witch: in any phase, when a WORLD EATERS CHARACTER (not EPIC HERO) suffers a mortal wound: Feel No Pain 4+ vs mortal wounds AI
 MELEE WEAPONS
 A
 WS
@@ -3359,19 +3338,18 @@ Chainblades×3
 2
 ANTI-MONSTER 3+, ANTI-VEHICLE 3+
 WHOLE UNIT
-Once per battle · If it uses this ability: Slaughterbound +3 A, [DEVASTATING WOUNDS] (Possessed Lord)
-The target: MONSTER or VEHICLE: +1 D (Rend and Tear)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-not counted here: see the rule (Wrath of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+WORLD EATERS CHARACTER (not EPIC HERO) fights: that unit’s CHARACTER models gain [CLEAVE 1] or +1 AP in melee AI (Wrath of Khorne)
+Granted by: Slaughterbound - Slaughterbound only: once per battle, if used: +3 A and [DEVASTATING WOUNDS] in melee AI (Possessed Lord)
+vs MONSTER or VEHICLE: +1 D in melee AI (Rend and Tear)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 STRATAGEMS · VESSELS OF WRATH
-1CP Aspire to Infamy: not counted here: see the rule
+1CP Aspire to Infamy: in the Fight phase, CHARACTER models of a WORLD EATERS CHARACTER unit (not EPIC HERO): +1 A and +2 S in melee AI
 ABILITIES
 Lord of the Eightbound
 - Slaughterbound
@@ -3464,9 +3442,9 @@ Hull
 –
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: −1 Damage
+2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
 ALL ATTACKS
-not counted here: see the rule (Firing Deck 2)
+Firing Deck 2
 RANGED WEAPONS
 Range
 A
@@ -3494,14 +3472,13 @@ Armoured tracks
 6
 0
 1
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 ABILITIES
 Meet Any Challenge
 Their Movement
@@ -3568,7 +3545,7 @@ Eightbound
 5+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: −1 Damage
+2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
 MELEE WEAPONS
 A
 WS
@@ -3581,14 +3558,13 @@ Chainblades×3
 8
 -2
 2
-Own aura · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Own aura · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 ABILITIES
 Beacons of Rage
 Fight
@@ -3648,7 +3624,7 @@ Exalted Eightbound
 5+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: −1 Damage
+2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
 MELEE WEAPONS
 A
 WS
@@ -3662,15 +3638,14 @@ Chainblades×3
 -3
 2
 ANTI-MONSTER 3+, ANTI-VEHICLE 3+
-The target: MONSTER or VEHICLE: +1 D (Rend and Tear)
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+vs MONSTER or VEHICLE: +1 D in melee AI (Rend and Tear)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 ABILITIES
 Rend and Tear
 Fight
@@ -3730,7 +3705,7 @@ Goremongers
 –
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: −1 Damage
+2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
 RANGED WEAPONS
 Range
 A
@@ -3768,15 +3743,14 @@ Close combat weapon×8
 3
 0
 1
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
 Charged this turn: Chainblade +1 to Wound rolls (Lance)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 ABILITIES
 Loping Speed
 Their Movement
@@ -3846,7 +3820,7 @@ Dishonoured w/ paired manglers
 –
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: −1 Damage
+2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
 RANGED WEAPONS
 Range
 A
@@ -3880,14 +3854,13 @@ Paired manglersDISHONOURED
 4
 0
 1
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 ABILITIES
 Objective Ravaged
 Your Command
@@ -3944,9 +3917,9 @@ Forgefiend
 5+
 WHEN TARGETED
 1
-2CP Frenzied Resilience: Fight phase: −1 Damage
+2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
 DAMAGED 1-4 W
-−1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-4 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 RANGED WEAPONS
 Range
 A
@@ -3970,7 +3943,7 @@ Hades autocannon×2
 -1
 2
 RAPID FIRE 4
-The target is the closest eligible target within 18": Re-roll Hit rolls (Furious Onslaught)
+Shooting the closest eligible target within 18": re-roll Hit rolls AI (Furious Onslaught)
 MELEE WEAPONS
 A
 WS
@@ -3983,14 +3956,13 @@ Forgefiend claws
 6
 0
 1
-Martial Excellence · double 4+ or triple 1+: [SUSTAINED HITS 1] (Blessings of Khorne)
-Warp Blades · double 5+ or triple 2+: [LETHAL HITS] (Blessings of Khorne)
-Decapitating Strikes · double 6 or triple 3+ · The target: INFANTRY: [DEVASTATING WOUNDS] (Blessings of Khorne)
-Wrathful Presence: the one selected (at the start of the battle round) · Within 6" of Angron: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1 (Driven by Ultimate Rage)
-Within 6" of Eightbound · The target: excluding MONSTERS and VEHICLES: +1 to Hit rolls (Beacons of Rage)
-Within 6" of Eightbound · The target Below Half-strength · The target: excluding MONSTERS and VEHICLES: +1 to Wound rolls (Beacons of Rage)
+If Martial Excellence is active: melee [SUSTAINED HITS 1] AI (Blessings of Khorne)
+If Warp Blades is active: [LETHAL HITS] AI (Blessings of Khorne)
+If Decapitating Strikes is active: melee [DEVASTATING WOUNDS] vs INFANTRY AI (Blessings of Khorne)
+Granted by: Angron - If Driven by Ultimate Rage is picked: WORLD EATERS within 6" of Angron: re-roll Hit rolls of 1 and Wound rolls of 1 in melee AI (Driven by Ultimate Rage)
+Granted by: Eightbound - Within 6" of the Eightbound, vs non-MONSTER/VEHICLE: +1 to Hit rolls in melee; also +1 to Wound rolls if the target is Below Half-strength AI (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND · FIGHT PHASE
-1CP Hack and Slash: +1 AP, Charged this turn
+1CP Hack and Slash: in the Fight phase, WORLD EATERS unit that charged this turn: +1 AP in melee AI
 ABILITIES
 Furious Onslaught
 Your Shooting

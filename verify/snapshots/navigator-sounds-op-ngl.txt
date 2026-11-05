@@ -180,19 +180,19 @@ APPLIES TOCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunt
 
 READ MISSION OBJECTIVES STEP
 RULES
-Code Chivalric · Imperial Knights army rule
+Pick or roll a Deed and a Quality at Read Mission Objectives; Deed done: Honoured, +2CP (3CP if rolled) AI (Code Chivalric) · Imperial Knights army rule
 DECLARE BATTLE FORMATIONS
 DEEP STRIKE
 Knight Errant · Mysterious Guardian 390 pts
 START OF THE BATTLE AND THE BATTLE ROUNDS
 START OF THE BATTLE
-Code Chivalric (Deed 1–2) · Imperial Knights army rule
+Pick or roll a Deed and a Quality at Read Mission Objectives; Deed done: Honoured, +2CP (3CP if rolled) AI (Code Chivalric) (Deed 1–2) · Imperial Knights army rule
 USES PER BATTLE
 NEW GAME
 ABILITIES
-Mysterious Guardian · Knight Errant per army
+At the end of your opponent’s turn, if this unit is unengaged and it uses this ability: this unit goes into Strategic Reserves with Deep Strike and must make an ingress move in your next Movement phase AI (Mysterious Guardian) · Knight Errant per army
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -298,14 +298,13 @@ D3
 -4
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
-The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
-The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 Wounds Remaining)
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
+vs MONSTER or VEHICLE: +1 to Hit rolls; also +1 to Wound rolls if TITANIC or TOWERING AI (Macro-extinction Protocols)
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-10 Wounds Remaining)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 Knight Crusader
 Hunter’s Eye
 Avenger gatling cannon
@@ -356,13 +355,13 @@ Stormspear rocket pod
 -2
 D6
 IGNORES COVER
-Remained Stationary: [SUSTAINED HITS 1] (Punishing Salvoes)
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
+If this model Remained Stationary: ranged weapons gain [SUSTAINED HITS 1] AI (Punishing Salvoes)
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-9 Wounds Remaining)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 Knight Defender
 Conversion beam obliterator
 36"
@@ -405,13 +404,13 @@ D6
 -1
 1
 IGNORES COVER, TORRENT, TWIN-LINKED
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
-not counted here: see the rule (Conversion)
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-9 Wounds Remaining)
+Conversion
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 Knight Destrier
 Chastiser gatling cannon
 24"
@@ -437,13 +436,13 @@ Questoris heavy stubber
 -1
 1
 ASSAULT, RAPID FIRE 3
-The target within range of an objective marker: [IGNORES COVER] (Saturation Fire)
-If (see the rule): −4 OC, −1 to Hit rolls (Damaged: 1-6 Wounds Remaining)
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
+Ranged attacks vs a target on an objective: [IGNORES COVER] AI (Saturation Fire)
+While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-6 Wounds Remaining)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 Knight Errant
 Mysterious Guardian
 Meltagun
@@ -469,13 +468,13 @@ Thermal cannon
 -4
 D6
 BLAST, MELTA 6
-The target is the closest eligible target: +1 to Hit rolls (Aggressive Assault)
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
+vs the closest eligible target: +1 to Hit rolls AI (Aggressive Assault)
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-9 Wounds Remaining)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 Navigator
 Laspistol
 12"
@@ -505,14 +504,13 @@ SUSTAINED HITS 1
 -3
 4
 SUSTAINED HITS 1
-The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
-The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
-Every melee attack: +1 to Hit rolls (Bringer of Justice)
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-10 Wounds Remaining)
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
+vs MONSTER or VEHICLE: +1 to Hit rolls; also +1 to Wound rolls if TITANIC or TOWERING AI (Macro-extinction Protocols)
++2 A and +1 to Hit rolls in melee AI (Bringer of Justice)
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-10 Wounds Remaining)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 Knight Crusader
 Hunter’s Eye
 Titanic feet
@@ -521,11 +519,11 @@ Titanic feet
 8
 -1
 2
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-9 Wounds Remaining)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 Knight Defender
 Titanic feet
 4
@@ -533,11 +531,11 @@ Titanic feet
 8
 -1
 2
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-9 Wounds Remaining)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 Knight Destrier
 Titanic feet
 4
@@ -545,11 +543,11 @@ Titanic feet
 7
 -1
 2
-If (see the rule): −4 OC, −1 to Hit rolls (Damaged: 1-6 Wounds Remaining)
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
+While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-6 Wounds Remaining)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 Knight Errant
 Mysterious Guardian
 Reaper chainsword
@@ -565,11 +563,11 @@ Reaper chainsword
 9
 -3
 2
-If (see the rule): −5 OC, −1 to Hit rolls (Damaged: 1-9 Wounds Remaining)
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-9 Wounds Remaining)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 Navigator
 Force-orb cane
 3
@@ -1999,37 +1997,37 @@ FREEBLADE COMPANY
 CP
 AI
 Full Tilt
-Until the end of the phase, if your unit Advances, no Advance roll: +6" Move instead (+9" for an ARMIGER or DESTRIER unit).
+if an IMPERIAL KNIGHTS unit Advances: +6" Move (9" for ARMIGER or DESTRIER) instead of an Advance roll
 Your Movement All but Navigator
 1
 CP
 AI
 Strength from Exile
-Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.
+if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1
 Your Shoot · Fight All but Navigator
 1
 CP
 AI
 Point-Blank Barrage
-Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
+blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit
 Your Shooting All but Navigator
 1
 CP
 AI
 Survivor of Strife
-Until the end of the phase, attacks against your unit whose S is greater than its T have -1 to the wound roll.
+if the attack’s S > this unit’s T: −1 to Wound rolls
 Their Shooting All but Navigator
 1
 CP
 AI
 Noble Sacrifice
-Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+a destroyed IMPERIAL KNIGHTS unit's Deadly Demise triggers on a 4+ (+1 if ARMIGER)
 Any phase All but Navigator
 1
 CP
 AI
 Flanking Manoeuvres
-Your unit within 9" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
+at the end of the phase: an ARMIGER unit within 9" of an edge and not engaged goes into Strategic Reserves
 End of their Fight No unit in this list can use it (needs ARMIGER)
 CORE STRATAGEMS
 10
@@ -2037,61 +2035,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement Navigator
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge All but Navigator
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight Any unit
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting No unit in this list can use it (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2420,28 +2418,23 @@ Cerastus Knight Atrapos
 10
 5+
 
-M: not counted here: see the rule (Code Chivalric)
+If your Quality is 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls; if 5–6 (legacy unsullied): +2 OC, Leadership improved by 1 AI (Code Chivalric)
 
-OC: not counted here: see the rule (Code Chivalric)
-
-Ld: not counted here: see the rule (Code Chivalric)
-
-M: not counted here: see the rule (Full Tilt)
+1CP Full Tilt: in your Movement phase, if an IMPERIAL KNIGHTS unit Advances: +6" Move (9" for ARMIGER or DESTRIER) instead of an Advance roll AI
 
 WHEN TARGETED
 3
-Knights of Legend: Feel No Pain 6+
-Selfless Protector: not counted here: see the rule (Knight Defender)
-1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
+Feel No Pain 6+ AI (Knights of Legend)
+Granted by: Knight Defender - Ranged attacks on an IMPERIAL KNIGHTS model the Knight Defender blocks from view: Benefit of Cover and 4+ invulnerable save AI (Selfless Protector)
+1CP Survivor of Strife: in your opponent’s Shooting phase, if the attack’s S > this unit’s T: −1 to Wound rolls AI
 DAMAGED 1-10 W
-−5 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-10 WOUNDS REMAINING, SUBTRACT 5 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-The target: MONSTER or VEHICLE: +1 to Hit rolls (Macro-extinction Protocols)
-The target: MONSTER or VEHICLE · “If that target is TITANIC or TOWERING”: +1 to Wound rolls (Macro-extinction Protocols)
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
+vs MONSTER or VEHICLE: +1 to Hit rolls; also +1 to Wound rolls if TITANIC or TOWERING AI (Macro-extinction Protocols)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 RANGED WEAPONS
 Range
 A
@@ -2483,7 +2476,7 @@ D3
 -4
 D6+1
 BLAST, DEVASTATING WOUNDS, HAZARDOUS
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 MELEE WEAPONS
 A
 WS
@@ -2505,7 +2498,7 @@ SUSTAINED HITS 1
 -3
 4
 SUSTAINED HITS 1
-Every melee attack: +1 to Hit rolls (Bringer of Justice)
++2 A and +1 to Hit rolls in melee AI (Bringer of Justice)
 ABILITIES
 Atrapos’ Duty
 No ARMIGER models in this list
@@ -2587,27 +2580,23 @@ Knight Crusader
 10
 5+*
 
-M: not counted here: see the rule (Code Chivalric)
+If your Quality is 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls; if 5–6 (legacy unsullied): +2 OC, Leadership improved by 1 AI (Code Chivalric)
 
-OC: not counted here: see the rule (Code Chivalric)
-
-Ld: not counted here: see the rule (Code Chivalric)
-
-M: not counted here: see the rule (Full Tilt)
+1CP Full Tilt: in your Movement phase, if an IMPERIAL KNIGHTS unit Advances: +6" Move (9" for ARMIGER or DESTRIER) instead of an Advance roll AI
 
 WHEN TARGETED
 4
-Knights of Legend: Feel No Pain 6+
-Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
-Selfless Protector: not counted here: see the rule (Knight Defender)
-1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
+Feel No Pain 6+ AI (Knights of Legend)
+5+ invulnerable save vs ranged attacks AI (Invulnerable Save (5+*))
+Granted by: Knight Defender - Ranged attacks on an IMPERIAL KNIGHTS model the Knight Defender blocks from view: Benefit of Cover and 4+ invulnerable save AI (Selfless Protector)
+1CP Survivor of Strife: in your opponent’s Shooting phase, if the attack’s S > this unit’s T: −1 to Wound rolls AI
 DAMAGED 1-9 W
-−5 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1‑9 WOUNDS REMAINING, SUBTRACT 5 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 RANGED WEAPONS
 Range
 A
@@ -2663,8 +2652,8 @@ Stormspear rocket pod
 -2
 D6
 IGNORES COVER
-Remained Stationary: [SUSTAINED HITS 1] (Punishing Salvoes)
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+If this model Remained Stationary: ranged weapons gain [SUSTAINED HITS 1] AI (Punishing Salvoes)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 MELEE WEAPONS
 A
 WS
@@ -2760,26 +2749,22 @@ Knight Defender
 10
 4+*
 
-M: not counted here: see the rule (Code Chivalric)
+If your Quality is 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls; if 5–6 (legacy unsullied): +2 OC, Leadership improved by 1 AI (Code Chivalric)
 
-OC: not counted here: see the rule (Code Chivalric)
-
-Ld: not counted here: see the rule (Code Chivalric)
-
-M: not counted here: see the rule (Full Tilt)
+1CP Full Tilt: in your Movement phase, if an IMPERIAL KNIGHTS unit Advances: +6" Move (9" for ARMIGER or DESTRIER) instead of an Advance roll AI
 
 WHEN TARGETED
 3
-Knights of Legend: Feel No Pain 6+
-Invulnerable Save (4+*): 4+ invulnerable save against ranged attacks
-1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
+Feel No Pain 6+ AI (Knights of Legend)
+4+ invulnerable save vs ranged attacks AI (Invulnerable Save (4+*))
+1CP Survivor of Strife: in your opponent’s Shooting phase, if the attack’s S > this unit’s T: −1 to Wound rolls AI
 DAMAGED 1-9 W
-−5 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1‑9 WOUNDS REMAINING, SUBTRACT 5 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 RANGED WEAPONS
 Range
 A
@@ -2828,8 +2813,8 @@ D6
 -1
 1
 IGNORES COVER, TORRENT, TWIN-LINKED
-not counted here: see the rule (Conversion)
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+Conversion
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 MELEE WEAPONS
 A
 WS
@@ -2914,29 +2899,25 @@ Knight Destrier
 8
 5+*
 
-M: not counted here: see the rule (Ram Jets)
+If your Quality is 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls; if 5–6 (legacy unsullied): +2 OC, Leadership improved by 1 AI (Code Chivalric)
 
-M: not counted here: see the rule (Code Chivalric)
+On a Normal or Advance move: +D3" Move AI (Ram Jets)
 
-OC: not counted here: see the rule (Code Chivalric)
-
-Ld: not counted here: see the rule (Code Chivalric)
-
-M: not counted here: see the rule (Full Tilt)
+1CP Full Tilt: in your Movement phase, if an IMPERIAL KNIGHTS unit Advances: +6" Move (9" for ARMIGER or DESTRIER) instead of an Advance roll AI
 
 WHEN TARGETED
 4
-Knights of Legend: Feel No Pain 6+
-Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
-Selfless Protector: not counted here: see the rule (Knight Defender)
-1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
+Feel No Pain 6+ AI (Knights of Legend)
+5+ invulnerable save vs ranged attacks AI (Invulnerable Save (5+*))
+Granted by: Knight Defender - Ranged attacks on an IMPERIAL KNIGHTS model the Knight Defender blocks from view: Benefit of Cover and 4+ invulnerable save AI (Selfless Protector)
+1CP Survivor of Strife: in your opponent’s Shooting phase, if the attack’s S > this unit’s T: −1 to Wound rolls AI
 DAMAGED 1-6 W
-−4 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1-6 WOUNDS REMAINING, SUBTRACT 4 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 RANGED WEAPONS
 Range
 A
@@ -2968,8 +2949,8 @@ Questoris heavy stubber
 -1
 1
 ASSAULT, RAPID FIRE 3
-The target within range of an objective marker: [IGNORES COVER] (Saturation Fire)
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+Ranged attacks vs a target on an objective: [IGNORES COVER] AI (Saturation Fire)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 MELEE WEAPONS
 A
 WS
@@ -3063,27 +3044,23 @@ Knight Errant
 10
 5+*
 
-M: not counted here: see the rule (Code Chivalric)
+If your Quality is 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls; if 5–6 (legacy unsullied): +2 OC, Leadership improved by 1 AI (Code Chivalric)
 
-OC: not counted here: see the rule (Code Chivalric)
-
-Ld: not counted here: see the rule (Code Chivalric)
-
-M: not counted here: see the rule (Full Tilt)
+1CP Full Tilt: in your Movement phase, if an IMPERIAL KNIGHTS unit Advances: +6" Move (9" for ARMIGER or DESTRIER) instead of an Advance roll AI
 
 WHEN TARGETED
 4
-Knights of Legend: Feel No Pain 6+
-Invulnerable Save (5+*): 5+ invulnerable save against ranged attacks
-Selfless Protector: not counted here: see the rule (Knight Defender)
-1CP Survivor of Strife: Your opponent’s Shooting phase, The attack’s S greater than its T: −1 to Wound rolls
+Feel No Pain 6+ AI (Knights of Legend)
+5+ invulnerable save vs ranged attacks AI (Invulnerable Save (5+*))
+Granted by: Knight Defender - Ranged attacks on an IMPERIAL KNIGHTS model the Knight Defender blocks from view: Benefit of Cover and 4+ invulnerable save AI (Selfless Protector)
+1CP Survivor of Strife: in your opponent’s Shooting phase, if the attack’s S > this unit’s T: −1 to Wound rolls AI
 DAMAGED 1-9 W
-−5 OC, −1 TO HIT ROLLS
+WHILE THIS MODEL HAS 1‑9 WOUNDS REMAINING, SUBTRACT 5 FROM THIS MODEL’S OBJECTIVE CONTROL CHARACTERISTIC AND EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-Quality 1–2 · …with our martial valour risen over all: Re-roll one Hit roll, Re-roll one Wound roll (Code Chivalric)
+If your Quality is 1–2 (martial valour), each time this model shoots or fights: re-roll one Hit roll and one Wound roll AI (Code Chivalric)
 STRATAGEMS · FREEBLADE COMPANY
-1CP Strength from Exile: not counted here: see the rule
-1CP Point-Blank Barrage: not counted here: see the rule
+1CP Strength from Exile: in your Shooting phase or the Fight phase, if no other friendly unit is within 9": re-roll Hit rolls of 1 and Wound rolls of 1 AI
+1CP Point-Blank Barrage: in your Shooting phase, blast weapons can target enemies in Engagement Range; no Engagement Range penalty to Hit rolls; an unmodified Hit roll of 1 with Blast there: 1 mortal wound to your unit AI
 RANGED WEAPONS
 Range
 A
@@ -3114,8 +3091,8 @@ Thermal cannon
 -4
 D6
 BLAST, MELTA 6
-The target is the closest eligible target: +1 to Hit rolls (Aggressive Assault)
-If (see the rule): BS/WS improved by 1 (Plunging Fire)
+vs the closest eligible target: +1 to Hit rolls AI (Aggressive Assault)
+Plunging Fire: BS/WS improved by 1 (when the rule applies)
 MELEE WEAPONS
 A
 WS
@@ -3430,6 +3407,17 @@ Saturation Fire
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 UNITKnight Destrier
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Selfless Protector|Each time a ranged attack is allocated to an **IMPERIAL KNIGHTS** model from your army, if that model is not fully **visible** to every model in the attacking unit because of this Knight Defender model, that model has the **Benefit of Cover** and a 4+ invulnerable save against that attack. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY
+
+Selfless Protector
+
+Each time a ranged attack is allocated to an IMPERIAL KNIGHTS model from your army, if that model is not fully visible to every model in the attacking unit because of this Knight Defender model, that model has the Benefit of Cover and a 4+ invulnerable save against that attack.
+
+UNITKnight Defender
 
 Ask about this ability
 

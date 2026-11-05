@@ -751,11 +751,11 @@ How they link: an army’s unit entries name their DATASHEETS row (ds) and the a
 
 MECHANICAL copied by a program from GW, BSData, New Recruit or Wahapedia, or worked out from them by a program; the tag names the source.
 
-AI SUMMARY a one-line gist of a stratagem, written by AI. It carries a fingerprint of the text it sums up: a change in GW’s words flags it to be read again.
+AI SUMMARY a one-line gist of a stratagem, or the short summary a datasheet shows of each rule with a line there (an ability, an enhancement, an army or detachment rule, a stratagem), written by AI and labelled AI, its rules as written a tap away. It carries a fingerprint of the text it sums up: a change in GW’s words flags it to be read again.
 
 HAND a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.
 
-Of the 360 columns of the tables: Mechanical 345 · AI summary 2 · Hand 13.
+Of the 396 columns of the tables: Mechanical 363 · AI summary 20 · Hand 13.
 
 ARMIES
 26 rows · 225 unit entries · one row per list
@@ -905,7 +905,7 @@ abilities
 4 rows: Turbo Engine, Shokk Attack Engine, Pulse Jet, Full Throttle
 WAHAPEDIA
 Every column and where it comes from
-66 columns, with 4 inner tables
+76 columns, with 4 inner tables
 DATASHEETS 261 rows
 
 MECHANICAL name (New Recruit), faction (computed), bsId (BSData), role (New Recruit), rules (New Recruit), kw (New Recruit), kwOnly (Wahapedia), partialRules (Wahapedia), srcNote (computed), leaders (BSData), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (Wahapedia), points (GW), composition (BSData), options (BSData), aiStatus (computed)
@@ -932,7 +932,9 @@ DATASHEETS.abilities 629 rows
 
 a datasheet's abilities
 
-MECHANICAL name (New Recruit), who (New Recruit), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), note (GW), na (computed), damaged (computed), readOf (computed)
+MECHANICAL name (New Recruit), who (New Recruit), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), note (GW), na (computed), damaged (computed), readOf (computed), sumAtkOf (computed), sumDefOf (computed), sumStOf (computed), sumOvOf (computed), sumFoeOf (computed)
+
+AI SUMMARY sumAtk, sumDef, sumSt, sumOv, sumFoe
 
 FACTIONS
 13 rows · one row per faction: its army rules, detachments and aliases
@@ -968,7 +970,7 @@ dp
 1
 GW
 rule
-Try Dat Button! (+ 8 columns)
+Try Dat Button! (+ 10 columns)
 GW
 enhancements
 2 rows: Cybork Boosta, Dreadherder
@@ -983,7 +985,7 @@ id
 crazed-rampage
 COMPUTED
 gist
-An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight …
+when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ until this unit …
 AI SUMMARY
 gistOf
 263b4efe
@@ -1016,7 +1018,7 @@ note
 Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on …
 GW
 Every column and where it comes from
-79 columns, with 6 inner tables
+105 columns, with 6 inner tables
 FACTIONS 13 rows
 
 MECHANICAL name (GW), armyRules (GW), detachments (GW), allies (GW)
@@ -1027,7 +1029,9 @@ FACTIONS.armyRules 29 rows
 
 a faction's army rules
 
-MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), needs (computed), coreTwin (computed), note (GW), tableAt (Wahapedia), readOf (computed)
+MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), needs (computed), coreTwin (computed), note (GW), tableAt (Wahapedia), readOf (computed), sumAtkOf (computed), sumDefOf (computed), sumStOf (computed), sumOvOf (computed), sumFoeOf (computed)
+
+AI SUMMARY sumAtk, sumDef, sumSt, sumOv, sumFoe
 
 HAND missing
 
@@ -1041,7 +1045,9 @@ FACTIONS.detachments.rule 59 rows
 
 a detachment's rule
 
-MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), needs (computed), coreTwin (computed), note (GW), tableAt (Wahapedia), readOf (computed)
+MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), needs (computed), coreTwin (computed), note (GW), tableAt (Wahapedia), readOf (computed), sumAtkOf (computed), sumDefOf (computed), sumStOf (computed), sumOvOf (computed)
+
+AI SUMMARY sumAtk, sumDef, sumSt, sumOv
 
 HAND missing
 
@@ -1065,7 +1071,9 @@ FACTIONS.detachments.enhancements 173 rows
 
 a detachment's enhancements
 
-MECHANICAL name (GW), pts (New Recruit), text (GW), upgrade (BSData), nr (New Recruit), limit (Wahapedia)
+MECHANICAL name (GW), pts (New Recruit), text (GW), upgrade (BSData), nr (New Recruit), limit (Wahapedia), sumAtkOf (computed), sumDefOf (computed), sumStOf (computed), sumOvOf (computed)
+
+AI SUMMARY sumAtk, sumDef, sumSt, sumOv
 
 CORE_STRATAGEMS
 10 rows · the core stratagems
@@ -1078,7 +1086,7 @@ id
 command-re-roll
 HAND
 gist
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of …
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a …
 AI SUMMARY
 gistOf
 377ce33f
@@ -1374,7 +1382,7 @@ one value · the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-05.1
+2026-11-05.2
 
 WHY YOU CAN TRUST THE DATA
 
@@ -1622,18 +1630,18 @@ Deffkoptas 85 pts
 All of them: 285 pts
 START OF THE BATTLE AND THE BATTLE ROUNDS
 EVERY ROUND
-Da Boss · Orks army rule
+Start of each round, if a model with this ability is your WARLORD: +1CP AI (Da Boss) · Orks army rule
 USES PER BATTLE
 NEW GAME
 RULES
-War Cry · Orks army rule
+At the start of the Command phase, if used: friendly ORKS units with Waaagh! are riled up until the end of the next turn AI (War Cry) · Orks army rule
 ABILITIES
-Fix Dat Armour Up · Big Mek in Mega Armour
-Boss’ Ammo Runt · Warboss
-Bomb Squigs · Mek + Tankbustas · Unit 1
-Bomb Squigs · Mek + Tankbustas · Unit 2
+In your Command phase, if used: this unit heals 3 wounds AI (Fix Dat Armour Up) · Big Mek in Mega Armour
+In your Shooting phase, when this unit is selected to shoot, if used: +1 to Hit rolls with this model’s ranged attacks AI (Boss’ Ammo Runt) · Warboss
+In your Movement phase, after a normal move, if used: roll one D6 for one visible enemy unit within 12" of this unit: on a 3+, that unit suffers D3 mortal wounds AI (Bomb Squigs) · Mek + Tankbustas · Unit 1
+In your Movement phase, after a normal move, if used: roll one D6 for one visible enemy unit within 12" of this unit: on a 3+, that unit suffers D3 mortal wounds AI (Bomb Squigs) · Mek + Tankbustas · Unit 2
 STRATA­GEMS
-1CP Insane Bravery
+1CP Insane Bravery: in your Command phase, once per battle: a Battle-shock roll automatically passes AI
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -1793,7 +1801,7 @@ Psyko-gatler
 -2
 2
 ASSAULT, LETHAL HITS: NON-MONSTER/VEHICLE, SUSTAINED HITS 1
-Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
+Granted by: Mek - If picked by the Mek in your Movement phase (one ORKS VEHICLE model within 3", not AIRCRAFT/TITANIC): +1 to Hit rolls AI (Clever Know-wotz)
 Big Mek Dakkarig
 Dreadherder
 Blitzkannon
@@ -1805,7 +1813,7 @@ Blitzkannon
 -2
 2
 IGNORES COVER, LETHAL HITS: NON-MONSTER/VEHICLE
-A +6 The target: not MONSTER/VEHICLE (Blitz Dem Gitz!)
+In your Shooting phase, vs non-MONSTER/VEHICLE: +6 A AI (Blitz Dem Gitz!)
 Multi-busta Launcha
 24"
 6
@@ -1814,11 +1822,13 @@ Multi-busta Launcha
 -2
 3
 IGNORES COVER, LETHAL HITS
-Riled up: [SUSTAINED HITS 1] (Even More Dakka)
-Within 3" of it · Selected by it · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
-Riled up: [ASSAULT] (Waaagh!)
-If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
+If you rolled 1–2: +1 A AI (Try Dat Button!)
+If you rolled 3–4: +2 S AI (Try Dat Button!)
+If you rolled 5–6: +1 AP AI (Try Dat Button!)
+If this unit is riled up: ranged attacks gain [SUSTAINED HITS 1] AI (Even More Dakka)
+If picked by the Big Mek in your Shooting phase (one ORKS WALKER within 3", not BIG MEK): re-roll Hit rolls of 1 AI (Dreadherder)
+Granted by: Mek - If picked by the Mek in your Movement phase (one ORKS VEHICLE model within 3", not AIRCRAFT/TITANIC): +1 to Hit rolls AI (Clever Know-wotz)
 Big Mek Dakkarig
 Cybork Boosta
 Blitzkannon
@@ -1830,7 +1840,7 @@ Blitzkannon
 -2
 2
 IGNORES COVER, LETHAL HITS: NON-MONSTER/VEHICLE
-A +6 The target: not MONSTER/VEHICLE (Blitz Dem Gitz!)
+In your Shooting phase, vs non-MONSTER/VEHICLE: +6 A AI (Blitz Dem Gitz!)
 Multi-busta Launcha
 24"
 6
@@ -1839,11 +1849,13 @@ Multi-busta Launcha
 -2
 3
 IGNORES COVER, LETHAL HITS
-Riled up: [SUSTAINED HITS 1] (Even More Dakka)
-Riled up: [ASSAULT] (Waaagh!)
-If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Within 3" of Big Mek · Selected by Big Mek · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
-Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
+If you rolled 1–2: +1 A AI (Try Dat Button!)
+If you rolled 3–4: +2 S AI (Try Dat Button!)
+If you rolled 5–6: +1 AP AI (Try Dat Button!)
+If this unit is riled up: ranged attacks gain [SUSTAINED HITS 1] AI (Even More Dakka)
+Granted by: Big Mek (enhancement) - If picked by the Big Mek in your Shooting phase (one ORKS WALKER within 3", not BIG MEK): re-roll Hit rolls of 1 AI (Dreadherder)
+Granted by: Mek - If picked by the Mek in your Movement phase (one ORKS VEHICLE model within 3", not AIRCRAFT/TITANIC): +1 to Hit rolls AI (Clever Know-wotz)
 Big Mek in Mega Armour
 Supa-glowy Fing
 Kustom Mega-blasta
@@ -1862,13 +1874,13 @@ Tellyport Blasta
 -2
 3
 BLAST 1, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS, IGNORES COVER, ASSAULT
-Riled up: [SUSTAINED HITS 1] (More Dakka)
-not counted here: see the rule (Supa-glowy Fing)
-Riled up: +3" range (Dakka! Dakka! Dakka!)
+ORKS INFANTRY ranged attacks gain [ASSAULT]; if this unit is riled up, +3" range AI (Dakka! Dakka! Dakka!)
+Ranged attacks gain [IGNORES COVER]; if this unit is riled up, [SUSTAINED HITS 1] too AI (More Dakka)
+The bearer’s ranged attacks gain [ANTI-INFANTRY 4+], [DEVASTATING WOUNDS] and [SUPA-HAZARDOUS] AI (Supa-glowy Fing)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
-1CP Glowin’ Dakka: +1 AP, If (see the rule)
-1CP Never Enough Dakka: [SUSTAINED HITS 1]
+1CP Kustom Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs non-MONSTER/VEHICLE: +1 to Wound rolls AI
+1CP Glowin’ Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs targets within 9": +1 AP AI
+1CP Never Enough Dakka: in your Shooting phase, ORKS INFANTRY: ranged attacks gain [SUSTAINED HITS 1] AI
 Warboss
 Warlord
 Kustom Shoota
@@ -1879,12 +1891,12 @@ Kustom Shoota
 0
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, ASSAULT
-Once per battle · If it uses this ability: +1 to Hit rolls (Boss’ Ammo Runt)
-Riled up: +3" range (Dakka! Dakka! Dakka!)
+ORKS INFANTRY ranged attacks gain [ASSAULT]; if this unit is riled up, +3" range AI (Dakka! Dakka! Dakka!)
+once per battle, if used: +1 to Hit rolls with this model’s ranged attacks AI (Boss’ Ammo Runt)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
-1CP Glowin’ Dakka: +1 AP, If (see the rule)
-1CP Never Enough Dakka: [SUSTAINED HITS 1]
+1CP Kustom Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs non-MONSTER/VEHICLE: +1 to Wound rolls AI
+1CP Glowin’ Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs targets within 9": +1 AP AI
+1CP Never Enough Dakka: in your Shooting phase, ORKS INFANTRY: ranged attacks gain [SUSTAINED HITS 1] AI
 Mek
 + Tankbustas
 ×2 units
@@ -1923,12 +1935,12 @@ Rokkit pistol×2
 -2
 3
 CLOSE-QUARTERS, IGNORES COVER, ASSAULT
-Riled up: +3" range (Dakka! Dakka! Dakka!)
-This unit or the target within range of an objective: Re-roll Hit rolls of 1 (Wreckin’ and Lootin’)
+ORKS INFANTRY ranged attacks gain [ASSAULT]; if this unit is riled up, +3" range AI (Dakka! Dakka! Dakka!)
+BREAKA BOYZ/FLASH GITZ/TANKBUSTAS, when shooting, if they or the target are on an objective: re-roll Hit rolls of 1 AI (Wreckin’ and Lootin’)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
-1CP Glowin’ Dakka: +1 AP, If (see the rule)
-1CP Never Enough Dakka: [SUSTAINED HITS 1]
+1CP Kustom Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs non-MONSTER/VEHICLE: +1 to Wound rolls AI
+1CP Glowin’ Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs targets within 9": +1 AP AI
+1CP Never Enough Dakka: in your Shooting phase, ORKS INFANTRY: ranged attacks gain [SUSTAINED HITS 1] AI
 Mek
 + Flash Gitz
 Supa-snazz Dakka
@@ -1967,14 +1979,14 @@ LETHAL HITS: NON-MONSTER/VEHICLE, SUSTAINED HITS 1, IGNORES COVER, ASSAULT, RAPI
 -2
 2
 HAZARDOUS, IGNORES COVER, ASSAULT, RAPID FIRE 1
-This unit or the target within range of an objective: +1 AP (Finderz Keeperz)
-not counted here: see the rule (Supa-snazz Dakka)
-Riled up: +3" range (Dakka! Dakka! Dakka!)
-This unit or the target within range of an objective: Re-roll Hit rolls of 1 (Wreckin’ and Lootin’)
+ORKS INFANTRY ranged attacks gain [ASSAULT]; if this unit is riled up, +3" range AI (Dakka! Dakka! Dakka!)
+BREAKA BOYZ/FLASH GITZ/TANKBUSTAS, when shooting, if they or the target are on an objective: re-roll Hit rolls of 1 AI (Wreckin’ and Lootin’)
+Ranged attacks, if this unit or the target is on an objective: +1 AP AI (Finderz Keeperz)
+Snazzgun weapons gain [RAPID FIRE 1] AI (Supa-snazz Dakka)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
-1CP Glowin’ Dakka: +1 AP, If (see the rule)
-1CP Never Enough Dakka: [SUSTAINED HITS 1]
+1CP Kustom Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs non-MONSTER/VEHICLE: +1 to Wound rolls AI
+1CP Glowin’ Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs targets within 9": +1 AP AI
+1CP Never Enough Dakka: in your Shooting phase, ORKS INFANTRY: ranged attacks gain [SUSTAINED HITS 1] AI
 Gretchin
 ×3 units
 Grot Blasta×10
@@ -1985,11 +1997,11 @@ Grot Blasta×10
 0
 1
 CLOSE-QUARTERS, ASSAULT
-Riled up: +3" range (Dakka! Dakka! Dakka!)
+ORKS INFANTRY ranged attacks gain [ASSAULT]; if this unit is riled up, +3" range AI (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
-1CP Glowin’ Dakka: +1 AP, If (see the rule)
-1CP Never Enough Dakka: [SUSTAINED HITS 1]
+1CP Kustom Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs non-MONSTER/VEHICLE: +1 to Wound rolls AI
+1CP Glowin’ Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs targets within 9": +1 AP AI
+1CP Never Enough Dakka: in your Shooting phase, ORKS INFANTRY: ranged attacks gain [SUSTAINED HITS 1] AI
 Deffkoptas
 
 Can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
@@ -2019,8 +2031,8 @@ Slugga×3
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
-If (see the rule): +1 to Hit rolls (Deff from Above)
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
+If this unit made an ingress move this turn: +1 to Hit rolls with ranged attacks AI (Deff from Above)
 Killa Kans
 Kan Blasta×6
 ➤Dakka
@@ -2046,17 +2058,16 @@ BLAST 1, IGNORES COVER, SUSTAINED HITS 1
 -1
 1
 BLAST 2, TORRENT
-The target has no model with T 7+: +1 to Hit rolls (Spiteful Power Trip)
-Riled up: [ASSAULT] (Waaagh!)
-If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Within 3" of Big Mek · Selected by Big Mek · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
-Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
+If you rolled 1–2: +1 A AI (Try Dat Button!)
+If you rolled 3–4: +2 S AI (Try Dat Button!)
+If you rolled 5–6: +1 AP AI (Try Dat Button!)
+vs units with no models of T 7+: +1 to Hit rolls AI (Spiteful Power Trip)
+Granted by: Big Mek (enhancement) - If picked by the Big Mek in your Shooting phase (one ORKS WALKER within 3", not BIG MEK): re-roll Hit rolls of 1 AI (Dreadherder)
+Granted by: Mek - If picked by the Mek in your Movement phase (one ORKS VEHICLE model within 3", not AIRCRAFT/TITANIC): +1 to Hit rolls AI (Clever Know-wotz)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Wazdakka Gutsmek
-
-Fights with all of these: Grabba Dragga, plus Speeding Bulk and Flaming Exhaust and Fixit’s Wrench on top (extra attacks).
-
 Speeding Bulk and Flaming Exhaust
 3
 2+
@@ -2079,7 +2090,7 @@ Grabba Dragga
 3
 CLEAVE 2, LANCE
 Charged this turn: Grabba Dragga +1 to Wound rolls (Lance)
-Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
+Granted by: Mek - If picked by the Mek in your Movement phase (one ORKS VEHICLE model within 3", not AIRCRAFT/TITANIC): +1 to Hit rolls AI (Clever Know-wotz)
 Big Mek Dakkarig
 Dreadherder
 Stompy Feet
@@ -2088,9 +2099,11 @@ Stompy Feet
 6
 -1
 1
-Within 3" of it · Selected by it · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
-If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
+If you rolled 1–2: +1 A AI (Try Dat Button!)
+If you rolled 3–4: +2 S AI (Try Dat Button!)
+If you rolled 5–6: +1 AP AI (Try Dat Button!)
+If picked by the Big Mek in your Shooting phase (one ORKS WALKER within 3", not BIG MEK): re-roll Hit rolls of 1 AI (Dreadherder)
+Granted by: Mek - If picked by the Mek in your Movement phase (one ORKS VEHICLE model within 3", not AIRCRAFT/TITANIC): +1 to Hit rolls AI (Clever Know-wotz)
 Big Mek Dakkarig
 Cybork Boosta
 Stompy Feet
@@ -2099,9 +2112,11 @@ Stompy Feet
 6
 -1
 1
-If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Within 3" of Big Mek · Selected by Big Mek · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
-Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
+If you rolled 1–2: +1 A AI (Try Dat Button!)
+If you rolled 3–4: +2 S AI (Try Dat Button!)
+If you rolled 5–6: +1 AP AI (Try Dat Button!)
+Granted by: Big Mek (enhancement) - If picked by the Big Mek in your Shooting phase (one ORKS WALKER within 3", not BIG MEK): re-roll Hit rolls of 1 AI (Dreadherder)
+Granted by: Mek - If picked by the Mek in your Movement phase (one ORKS VEHICLE model within 3", not AIRCRAFT/TITANIC): +1 to Hit rolls AI (Clever Know-wotz)
 Big Mek in Mega Armour
 Supa-glowy Fing
 Power Klaw
@@ -2110,7 +2125,7 @@ Power Klaw
 10
 -2
 2
-not counted here: see the rule (Supa-glowy Fing)
+The bearer’s ranged attacks gain [ANTI-INFANTRY 4+], [DEVASTATING WOUNDS] and [SUPA-HAZARDOUS] AI (Supa-glowy Fing)
 Warboss
 Warlord
 Kustom Choppa
@@ -2120,7 +2135,7 @@ Kustom Choppa
 -2
 2
 CLEAVE 2
-Charged this turn: +3 A, +2 S (Might is Right)
+If this unit charged this turn: +3 A and +2 S AI (Might is Right)
 Mek
 + Tankbustas
 ×2 units
@@ -2161,7 +2176,7 @@ Choppa×10
 5
 -1
 1
-not counted here: see the rule (Supa-snazz Dakka)
+Snazzgun weapons gain [RAPID FIRE 1] AI (Supa-snazz Dakka)
 Gretchin
 ×3 units
 Scavenged Shivs×10
@@ -2194,10 +2209,12 @@ Kan Klaw×6
 8
 -2
 3
-The target has no model with T 7+: +1 to Hit rolls (Spiteful Power Trip)
-If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Within 3" of Big Mek · Selected by Big Mek · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
-Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
+If you rolled 1–2: +1 A AI (Try Dat Button!)
+If you rolled 3–4: +2 S AI (Try Dat Button!)
+If you rolled 5–6: +1 AP AI (Try Dat Button!)
+vs units with no models of T 7+: +1 to Hit rolls AI (Spiteful Power Trip)
+Granted by: Big Mek (enhancement) - If picked by the Big Mek in your Shooting phase (one ORKS WALKER within 3", not BIG MEK): re-roll Hit rolls of 1 AI (Dreadherder)
+Granted by: Mek - If picked by the Mek in your Movement phase (one ORKS VEHICLE model within 3", not AIRCRAFT/TITANIC): +1 to Hit rolls AI (Clever Know-wotz)
 
 ######## abilities · MELEE Abilities
 Wazdakka Gutsmek
@@ -3539,19 +3556,19 @@ DREAD MOB
 CP
 AI
 Dread Power
-Your unit is riled up until the start of your next turn.
+an ORKS WALKER unit is riled up until the start of your next turn
 Your Movement Big Mek Dakkarig ×2, Killa Kans
 1
 CP
 AI
 Stomping Juggernaut
-When your unit is selected to move or declares a charge: it has MOBILE.
+an ORKS WALKER unit selected to move or charge has MOBILE
 Your Move/Charge Big Mek Dakkarig ×2, Killa Kans
 1
 CP
 AI
 Crazed Rampage
-An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…
+when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ until this unit has fought or the phase ends
 Fight Big Mek Dakkarig ×2, Killa Kans
 SHOOTA BOYZ
 3
@@ -3559,19 +3576,19 @@ SHOOTA BOYZ
 CP
 AI
 Kustom Dakka
-Your unit’s ranged attacks have +1 to wound rolls against a unit (excluding MONSTER/VEHICLE units).
+ORKS INFANTRY, ranged attacks vs non-MONSTER/VEHICLE: +1 to Wound rolls
 Your Shooting Big Mek in Mega Armour, Warboss, Mek + Tankbustas ×2, Mek + Flash Gitz, Gretchin ×3
 1
 CP
 AI
 Glowin’ Dakka
-Your unit’s ranged attacks against a unit within 9" have +1 AP.
+ORKS INFANTRY, ranged attacks vs targets within 9": +1 AP
 Your Shooting Big Mek in Mega Armour, Warboss, Mek + Tankbustas ×2, Mek + Flash Gitz, Gretchin ×3
 1
 CP
 AI
 Never Enough Dakka
-Your unit’s ranged attacks have [SUSTAINED HITS 1].
+ORKS INFANTRY: ranged attacks gain [SUSTAINED HITS 1]
 Your Shooting Big Mek in Mega Armour, Warboss, Mek + Tankbustas ×2, Mek + Flash Gitz, Gretchin ×3
 WRECKAS
 3
@@ -3579,19 +3596,19 @@ WRECKAS
 CP
 AI
 Grab It
-After shooting, if unengaged: can make a normal move of up to 6", ending within range of an objective; not eligible to declare a charge this turn.
+after BREAKA BOYZ/FLASH GITZ/TANKBUSTAS shoot: Normal move of up to 6" ending within range of an objective; no charge this turn
 Your Shooting Mek + Tankbustas ×2, Mek + Flash Gitz
 1
 CP
 AI
 Gun-crazy Show-offs
-After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit.
+after an enemy shoots: a FLASH GITZ/TANKBUSTAS unit hit by that enemy unit shoots back, only at that unit
 Their Shooting Mek + Tankbustas ×2, Mek + Flash Gitz
 1
 CP
 AI
 Drive-by Bustin’
-Your unit’s ranged attacks with weapons selected for Firing Deck have +1 to hit rolls.
+ORKS TRANSPORT: +1 to Hit rolls with this unit’s Firing Deck weapons
 Your Shooting No unit in this list can use it (needs TRANSPORT)
 CORE STRATAGEMS
 10
@@ -3599,61 +3616,61 @@ CORE STRATAGEMS
 CP
 AI
 Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
+once per battle: a Battle-shock roll automatically passes
 Your Command · Once per battle Any unit
 1
 CP
 AI
 Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
+at the end of the phase, not in battle round 1: a unit in Strategic Reserves (not AIRCRAFT) makes an ingress move
 End of their Movement Any unit
 1
 CP
 AI
 Fire Overwatch
-Your unengaged unit shoots using snap shooting.
+at the end of the phase: an unengaged unit (not TITANIC) shoots with snap shooting
 End of their Movement Any unit
 1
 CP
 AI
 Explosives
-Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+one EXPLOSIVES/GRENADES model, unengaged and no advance: six D6 vs an unengaged enemy within 8", 1 mortal wound per 4+
 Your Shooting Big Mek in Mega Armour, Warboss, Mek + Tankbustas ×2, Mek + Flash Gitz, Deffkoptas
 1
 CP
 AI
 Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+at the start of the phase: Benefit of Cover for your SMOKE unit and units this unit hides
 Start of their Shooting Wazdakka Gutsmek
 1
 CP
 AI
 Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+after a MONSTER/VEHICLE charges: D6 per T of one engaged model, 1 mortal wound to the enemy per 5+ (max 6), 1 to your unit per 1
 Your Charge Wazdakka Gutsmek, Big Mek Dakkarig ×2, Killa Kans
 1
 CP
 AI
 Heroic Intervention
-Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+at the end of the phase: an unengaged unit within 12" charges; Leap to Defend (only units that charged) or Into the Fray (+1CP, roll capped at 6, any enemy within 6")
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
 AI
 Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+one CHARACTER model in the unit: melee weapons gain [PRECISION]
 Fight Wazdakka Gutsmek, Big Mek Dakkarig ×2, Big Mek in Mega Armour, Warboss, Mek + Tankbustas ×2, Mek + Flash Gitz
 2
 CP
 AI
 Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+after an enemy unit fights: one of your units has Fights First and fights next
 Their Fight Any unit
 1
 CP
 AI
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a Charge roll in full)
 Any phase Any unit
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -4037,10 +4054,10 @@ Wazdakka Gutsmek
 4+
 WHEN TARGETED
 2
-Waaagh!: Riled up: 5+ invulnerable save
-Pulse Jet: not counted here: see the rule
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
+If Full Throttle picked Pulse Jet and this unit made a pulse jet move: −1 to Hit rolls vs attacks on this unit until the start of your next turn AI (Pulse Jet)
 ALL ATTACKS
-Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
+Granted by: Mek - If picked by the Mek in your Movement phase (one ORKS VEHICLE model within 3", not AIRCRAFT/TITANIC): +1 to Hit rolls AI (Clever Know-wotz)
 RANGED WEAPONS
 Range
 A
@@ -4070,9 +4087,6 @@ WS
 S
 AP
 D
-
-Fights with all of these: Grabba Dragga, plus Speeding Bulk and Flaming Exhaust and Fixit’s Wrench on top (extra attacks).
-
 Speeding Bulk and Flaming Exhaust
 3
 2+
@@ -4175,13 +4189,15 @@ Big Mek Dakkarig
 5+
 WHEN TARGETED
 3
-Waaagh!: Riled up: 5+ invulnerable save
-Dreadherder: Within 3" of a friendly ORKS WALKER unit (not BIG MEK): Lone Operative
-1CP Crazed Rampage: not counted here: see the rule
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
+Within 3" of an ORKS WALKER (not BIG MEK): Lone Operative AI (Dreadherder)
+1CP Crazed Rampage: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ until this unit has fought or the phase ends AI
 ALL ATTACKS
-Within 3" of it · Selected by it · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
-If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
+If you rolled 1–2: +1 A AI (Try Dat Button!)
+If you rolled 3–4: +2 S AI (Try Dat Button!)
+If you rolled 5–6: +1 AP AI (Try Dat Button!)
+If picked by the Big Mek in your Shooting phase (one ORKS WALKER within 3", not BIG MEK): re-roll Hit rolls of 1 AI (Dreadherder)
+Granted by: Mek - If picked by the Mek in your Movement phase (one ORKS VEHICLE model within 3", not AIRCRAFT/TITANIC): +1 to Hit rolls AI (Clever Know-wotz)
 RANGED WEAPONS
 Range
 A
@@ -4198,7 +4214,7 @@ Blitzkannon
 -2
 2
 IGNORES COVER, LETHAL HITS: NON-MONSTER/VEHICLE
-A +6 The target: not MONSTER/VEHICLE (Blitz Dem Gitz!)
+In your Shooting phase, vs non-MONSTER/VEHICLE: +6 A AI (Blitz Dem Gitz!)
 Multi-busta Launcha
 24"
 6
@@ -4207,8 +4223,8 @@ Multi-busta Launcha
 -2
 3
 IGNORES COVER, LETHAL HITS
-Riled up: [SUSTAINED HITS 1] (Even More Dakka)
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
+If this unit is riled up: ranged attacks gain [SUSTAINED HITS 1] AI (Even More Dakka)
 MELEE WEAPONS
 A
 WS
@@ -4295,12 +4311,14 @@ Big Mek Dakkarig
 5+
 WHEN TARGETED
 2
-Waaagh!: Riled up: 5+ invulnerable save
-1CP Crazed Rampage: not counted here: see the rule
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
+1CP Crazed Rampage: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ until this unit has fought or the phase ends AI
 ALL ATTACKS
-If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Within 3" of Big Mek · Selected by Big Mek · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
-Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
+If you rolled 1–2: +1 A AI (Try Dat Button!)
+If you rolled 3–4: +2 S AI (Try Dat Button!)
+If you rolled 5–6: +1 AP AI (Try Dat Button!)
+Granted by: Big Mek (enhancement) - If picked by the Big Mek in your Shooting phase (one ORKS WALKER within 3", not BIG MEK): re-roll Hit rolls of 1 AI (Dreadherder)
+Granted by: Mek - If picked by the Mek in your Movement phase (one ORKS VEHICLE model within 3", not AIRCRAFT/TITANIC): +1 to Hit rolls AI (Clever Know-wotz)
 RANGED WEAPONS
 Range
 A
@@ -4317,7 +4335,7 @@ Blitzkannon
 -2
 2
 IGNORES COVER, LETHAL HITS: NON-MONSTER/VEHICLE
-A +6 The target: not MONSTER/VEHICLE (Blitz Dem Gitz!)
+In your Shooting phase, vs non-MONSTER/VEHICLE: +6 A AI (Blitz Dem Gitz!)
 Multi-busta Launcha
 24"
 6
@@ -4326,8 +4344,8 @@ Multi-busta Launcha
 -2
 3
 IGNORES COVER, LETHAL HITS
-Riled up: [SUSTAINED HITS 1] (Even More Dakka)
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
+If this unit is riled up: ranged attacks gain [SUSTAINED HITS 1] AI (Even More Dakka)
 MELEE WEAPONS
 A
 WS
@@ -4412,9 +4430,9 @@ Big Mek in Mega Armour
 –
 WHEN TARGETED
 1
-Waaagh!: Riled up: 5+ invulnerable save
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
 ALL ATTACKS
-not counted here: see the rule (Supa-glowy Fing)
+The bearer’s ranged attacks gain [ANTI-INFANTRY 4+], [DEVASTATING WOUNDS] and [SUPA-HAZARDOUS] AI (Supa-glowy Fing)
 RANGED WEAPONS
 Range
 A
@@ -4438,12 +4456,12 @@ Tellyport Blasta
 -2
 3
 BLAST 1, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS, IGNORES COVER, ASSAULT
-Riled up: [SUSTAINED HITS 1] (More Dakka)
-Riled up: +3" range (Dakka! Dakka! Dakka!)
+ORKS INFANTRY ranged attacks gain [ASSAULT]; if this unit is riled up, +3" range AI (Dakka! Dakka! Dakka!)
+Ranged attacks gain [IGNORES COVER]; if this unit is riled up, [SUSTAINED HITS 1] too AI (More Dakka)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
-1CP Glowin’ Dakka: +1 AP, If (see the rule)
-1CP Never Enough Dakka: [SUSTAINED HITS 1]
+1CP Kustom Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs non-MONSTER/VEHICLE: +1 to Wound rolls AI
+1CP Glowin’ Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs targets within 9": +1 AP AI
+1CP Never Enough Dakka: in your Shooting phase, ORKS INFANTRY: ranged attacks gain [SUSTAINED HITS 1] AI
 MELEE WEAPONS
 A
 WS
@@ -4533,7 +4551,7 @@ Warboss
 5+
 WHEN TARGETED
 1
-Waaagh!: Riled up: 5+ invulnerable save
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
 RANGED WEAPONS
 Range
 A
@@ -4549,12 +4567,12 @@ Kustom Shoota
 0
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, ASSAULT
-Once per battle · If it uses this ability: +1 to Hit rolls (Boss’ Ammo Runt)
-Riled up: +3" range (Dakka! Dakka! Dakka!)
+ORKS INFANTRY ranged attacks gain [ASSAULT]; if this unit is riled up, +3" range AI (Dakka! Dakka! Dakka!)
+once per battle, if used: +1 to Hit rolls with this model’s ranged attacks AI (Boss’ Ammo Runt)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
-1CP Glowin’ Dakka: +1 AP, If (see the rule)
-1CP Never Enough Dakka: [SUSTAINED HITS 1]
+1CP Kustom Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs non-MONSTER/VEHICLE: +1 to Wound rolls AI
+1CP Glowin’ Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs targets within 9": +1 AP AI
+1CP Never Enough Dakka: in your Shooting phase, ORKS INFANTRY: ranged attacks gain [SUSTAINED HITS 1] AI
 MELEE WEAPONS
 A
 WS
@@ -4568,7 +4586,7 @@ Kustom Choppa
 -2
 2
 CLEAVE 2
-Charged this turn: +3 A, +2 S (Might is Right)
+If this unit charged this turn: +3 A and +2 S AI (Might is Right)
 ABILITIES
 Boss’ Ammo Runt
 Once per battle, per unit
@@ -4672,7 +4690,7 @@ Tankbusta×5
 –
 WHEN TARGETED
 1
-Waaagh!: Riled up: 5+ invulnerable save
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
 RANGED WEAPONS
 Range
 A
@@ -4716,12 +4734,12 @@ Rokkit pistol×2
 3
 CLOSE-QUARTERS, IGNORES COVER, ASSAULT
 WHOLE UNIT
-Riled up: +3" range (Dakka! Dakka! Dakka!)
-This unit or the target within range of an objective: Re-roll Hit rolls of 1 (Wreckin’ and Lootin’)
+ORKS INFANTRY ranged attacks gain [ASSAULT]; if this unit is riled up, +3" range AI (Dakka! Dakka! Dakka!)
+BREAKA BOYZ/FLASH GITZ/TANKBUSTAS, when shooting, if they or the target are on an objective: re-roll Hit rolls of 1 AI (Wreckin’ and Lootin’)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
-1CP Glowin’ Dakka: +1 AP, If (see the rule)
-1CP Never Enough Dakka: [SUSTAINED HITS 1]
+1CP Kustom Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs non-MONSTER/VEHICLE: +1 to Wound rolls AI
+1CP Glowin’ Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs targets within 9": +1 AP AI
+1CP Never Enough Dakka: in your Shooting phase, ORKS INFANTRY: ranged attacks gain [SUSTAINED HITS 1] AI
 MELEE WEAPONS
 A
 WS
@@ -4853,9 +4871,9 @@ Flash Gitz
 –
 WHEN TARGETED
 1
-Waaagh!: Riled up: 5+ invulnerable save
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
 ALL ATTACKS · WHOLE UNIT
-not counted here: see the rule (Supa-snazz Dakka)
+Snazzgun weapons gain [RAPID FIRE 1] AI (Supa-snazz Dakka)
 RANGED WEAPONS
 Range
 A
@@ -4899,13 +4917,13 @@ LETHAL HITS: NON-MONSTER/VEHICLE, SUSTAINED HITS 1, IGNORES COVER, ASSAULT, RAPI
 2
 HAZARDOUS, IGNORES COVER, ASSAULT, RAPID FIRE 1
 WHOLE UNIT
-This unit or the target within range of an objective: +1 AP (Finderz Keeperz)
-Riled up: +3" range (Dakka! Dakka! Dakka!)
-This unit or the target within range of an objective: Re-roll Hit rolls of 1 (Wreckin’ and Lootin’)
+ORKS INFANTRY ranged attacks gain [ASSAULT]; if this unit is riled up, +3" range AI (Dakka! Dakka! Dakka!)
+BREAKA BOYZ/FLASH GITZ/TANKBUSTAS, when shooting, if they or the target are on an objective: re-roll Hit rolls of 1 AI (Wreckin’ and Lootin’)
+Ranged attacks, if this unit or the target is on an objective: +1 AP AI (Finderz Keeperz)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
-1CP Glowin’ Dakka: +1 AP, If (see the rule)
-1CP Never Enough Dakka: [SUSTAINED HITS 1]
+1CP Kustom Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs non-MONSTER/VEHICLE: +1 to Wound rolls AI
+1CP Glowin’ Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs targets within 9": +1 AP AI
+1CP Never Enough Dakka: in your Shooting phase, ORKS INFANTRY: ranged attacks gain [SUSTAINED HITS 1] AI
 MELEE WEAPONS
 A
 WS
@@ -5010,7 +5028,7 @@ Gretchin×10
 –
 WHEN TARGETED
 1
-Waaagh!: Riled up: 5+ invulnerable save
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
 RANGED WEAPONS
 Range
 A
@@ -5026,11 +5044,11 @@ Grot Blasta×10
 0
 1
 CLOSE-QUARTERS, ASSAULT
-Riled up: +3" range (Dakka! Dakka! Dakka!)
+ORKS INFANTRY ranged attacks gain [ASSAULT]; if this unit is riled up, +3" range AI (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
-1CP Kustom Dakka: +1 to Wound rolls, The target: not MONSTER/VEHICLE
-1CP Glowin’ Dakka: +1 AP, If (see the rule)
-1CP Never Enough Dakka: [SUSTAINED HITS 1]
+1CP Kustom Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs non-MONSTER/VEHICLE: +1 to Wound rolls AI
+1CP Glowin’ Dakka: in your Shooting phase, ORKS INFANTRY, ranged attacks vs targets within 9": +1 AP AI
+1CP Never Enough Dakka: in your Shooting phase, ORKS INFANTRY: ranged attacks gain [SUSTAINED HITS 1] AI
 MELEE WEAPONS
 A
 WS
@@ -5101,7 +5119,7 @@ Deffkoptas×3
 6+
 WHEN TARGETED
 1
-Waaagh!: Riled up: 5+ invulnerable save
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
 RANGED WEAPONS
 Range
 A
@@ -5137,8 +5155,8 @@ Slugga×3
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
-If (see the rule): +1 to Hit rolls (Deff from Above)
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
+If this unit made an ingress move this turn: +1 to Hit rolls with ranged attacks AI (Deff from Above)
 MELEE WEAPONS
 A
 WS
@@ -5222,13 +5240,15 @@ Killa Kan×6
 6+
 WHEN TARGETED
 2
-Waaagh!: Riled up: 5+ invulnerable save
-1CP Crazed Rampage: not counted here: see the rule
+If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
+1CP Crazed Rampage: in the Fight phase, when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ until this unit has fought or the phase ends AI
 ALL ATTACKS
-The target has no model with T 7+: +1 to Hit rolls (Spiteful Power Trip)
-If it uses this ability: one of: 1–2: +1 A · 3–4: +2 S · 5–6: +1 AP · 1–2 and 3–4: +1 A, +2 S · 1–2 and 5–6: +1 A, +1 AP · 3–4 and 5–6: +2 S, +1 AP (Try Dat Button!)
-Within 3" of Big Mek · Selected by Big Mek · “While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)”: Re-roll Hit rolls of 1 (Dreadherder)
-Selected by Mek: One model +1 to Hit rolls (Clever Know-wotz)
+If you rolled 1–2: +1 A AI (Try Dat Button!)
+If you rolled 3–4: +2 S AI (Try Dat Button!)
+If you rolled 5–6: +1 AP AI (Try Dat Button!)
+vs units with no models of T 7+: +1 to Hit rolls AI (Spiteful Power Trip)
+Granted by: Big Mek (enhancement) - If picked by the Big Mek in your Shooting phase (one ORKS WALKER within 3", not BIG MEK): re-roll Hit rolls of 1 AI (Dreadherder)
+Granted by: Mek - If picked by the Mek in your Movement phase (one ORKS VEHICLE model within 3", not AIRCRAFT/TITANIC): +1 to Hit rolls AI (Clever Know-wotz)
 RANGED WEAPONS
 Range
 A
@@ -5260,7 +5280,7 @@ BLAST 1, IGNORES COVER, SUSTAINED HITS 1
 -1
 1
 BLAST 2, TORRENT
-Riled up: [ASSAULT] (Waaagh!)
+If this unit is riled up: ranged attacks gain [ASSAULT] AI (Waaagh!)
 MELEE WEAPONS
 A
 WS
@@ -5350,6 +5370,22 @@ In your Shooting phase, when this unit is selected to shoot, you can use this ab
 Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.
 
 UNITWarboss
+
+Ask about this ability
+
+######## popup ability:shooty|Clever Know-wotz|In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS VEHICLE** model (excluding **AIRCRAFT**/**TITANIC** models) within 3" of this model:
+- That **VEHICLE** model **heals** D3 wounds.
+- That **VEHICLE** model’s attacks have +1 to **hit rolls** until the start of your next Movement phase. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
+ABILITY · YOUR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Clever Know-wotz
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly ORKS VEHICLE model (excluding AIRCRAFT/TITANIC models) within 3" of this model:
+
+That VEHICLE model heals D3 wounds.
+That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase.
+
+UNITMek + Tankbustas ×2, Mek + Flash Gitz
 
 Ask about this ability
 
