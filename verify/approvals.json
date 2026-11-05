@@ -1055,6 +1055,12 @@
   "at": "2026-10-17",
   "why": "“In your Shooting phase, you can select one friendly ORKS WALKER unit within 3\" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.” That covers your Shooting phase and, through “until the end of the turn”, your Fight phase. No core rule gives attacks in the Charge phase. The other bullet, “This model has Lone Operative”, is carried by the ability’s own def line (“Lone Operative while within 3\" of a friendly ORKS WALKER unit (not BIG MEK)”), which shows under “When targeted” in their Shooting and Fight phases. The app’s other Lone Operative abilities (Lord of Murder, Da Grand Warlord’s Ladz) also have no phase tag."
  },
+ "0bc383a43d0056c0": {
+  "verdict": "ok",
+  "by": "review:unify",
+  "at": "2026-11-05",
+  "why": "abilityGaps(u, ab, rule): a rule-given row is checked against the rule's boxes, of no option for a core grant (decided by whether the row's text is in the rule's own text or table) and otherwise of the option of its name ('(Aura)', case and apostrophes aside). Right for every current row: Psychic Null gets fnpPsychic 5, FNP 6+ gets the no-option fnp 6, Deathly Terror and the Tactics have no defence. readings passes in the gate."
+ },
  "0bd7f1f824fa0685": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -1180,6 +1186,12 @@
   "by": "review:catalog-custodes",
   "at": "2026-10-29",
   "why": "Read against GW’s words (Wahapedia faction page, the codex): {phases:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Aquilan Shield · Rapid Reactions)."
+ },
+ "0d6676dbb3ff6525": {
+  "verdict": "ok",
+  "by": "review:unify",
+  "at": "2026-11-05",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
  },
  "0d77214e7d7d92cc": {
   "verdict": "ok",
@@ -5681,6 +5693,12 @@
   "at": "2026-10-26",
   "why": "Feel No Pain 5+ and Lone Operative are Lucius’s CORE ABILITIES only (Flawless Blades has none). Lone Operative is inert while he leads the unit (“Unless part of an attached unit”), which the rule’s own text says."
  },
+ "476544f109997d65": {
+  "verdict": "ok",
+  "by": "review:unify",
+  "at": "2026-11-05",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
+ },
  "476d760bf2af518b": {
   "verdict": "ok",
   "by": "review:order",
@@ -6436,6 +6454,12 @@
   "by": "review:gists (its fix)",
   "at": "2026-10-17",
   "why": "EFFECT: “Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne.” The gist drops “use the results to”, which ties the Blessing to that roll; “and activate one Blessing of Khorne” reads as a free pick. The duration (“Until the end of the battle round … in addition to any other Blessings of Khorne that are currently active”) is literal."
+ },
+ "528f00154805564d": {
+  "verdict": "ok",
+  "by": "review:unify",
+  "at": "2026-11-05",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
  },
  "52947dff81738878": {
   "verdict": "ok",
@@ -7432,6 +7456,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "WHEN “Your Charge phase”. Matches GW word for word; 1CP."
+ },
+ "5fca4733e824be55": {
+  "verdict": "ok",
+  "by": "review:unify",
+  "at": "2026-11-05",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
  },
  "5fcdb9a239c61138": {
   "verdict": "ok",
@@ -10168,6 +10198,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability\"; Dark Blessing is ranged."
+ },
+ "8747b875b1e8e0a6": {
+  "verdict": "ok",
+  "by": "review:unify",
+  "at": "2026-11-05",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
  },
  "87516ef3c85932f6": {
   "verdict": "ok",
@@ -17633,6 +17669,12 @@
   "at": "2026-10-16",
   "why": "\"IMPERIAL KNIGHTS models from your army\": every unit here."
  },
+ "ea0da321c2e02848": {
+  "verdict": "ok",
+  "by": "review:unify",
+  "at": "2026-11-05",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
+ },
  "ea10b1dad5d39f7e": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -18598,6 +18640,12 @@
   "by": "review:catalog-custodes",
   "at": "2026-10-29",
   "why": "Read against GW’s words (Wahapedia faction page, the codex): {turn:opp} follows the WHEN/TARGET/rule text as derive.js reads it (Emissaries Imperatus · Selfless Service)."
+ },
+ "f93aa4e5ec22c705": {
+  "verdict": "ok",
+  "by": "review:unify",
+  "at": "2026-11-05",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
  },
  "f9711fef849e1774": {
   "verdict": "ok",
