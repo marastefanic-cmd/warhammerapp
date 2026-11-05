@@ -2732,7 +2732,7 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose' },
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
       ]
     },
@@ -2747,7 +2747,7 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose' },
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
       ]
     },
@@ -2764,7 +2764,7 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Unnatural Resilience' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose' },
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Destabilising Predation', tag:'Enhancement', text:'**NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.' }
       ],
       rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Extra Attacks','Melta','Blast','Psychic','Anti'],
@@ -2773,7 +2773,13 @@ const ARMIES = [
     {
       id:'norn-emissary', ds:'tyranids/norn-emissary', pts:270,
       models:['1× Norn Emissary'],
-      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']]
+      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']],
+      abilities:[
+        { name:'Singular Purpose' },
+        { name:'Unnatural Resilience' },
+        { name:'Damaged: 1-5 Wounds Remaining' },
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
+      ]
     },
     {
       id:'tyrannofex', ds:'tyranids/tyrannofex', pts:180, copies:2,
@@ -2802,23 +2808,45 @@ const ARMIES = [
         { name:'Ram Jets' },
         { name:'Thundercharge', na:'Needs a thundershock spear and a bellatus reaper chainsword: not this loadout' },
         { name:'Saturation Fire' },
-        { name:'Damaged: 1-6 Wounds Remaining' }
+        { name:'Damaged: 1-6 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
       ]
     },
     {
       id:'knight-errant', ds:'imperial-knights/knight-errant', pts:355,
       models:['1× Knight Errant'],
-      gear:[['Thermal cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']]
+      gear:[['Thermal cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']],
+      abilities:[
+        { name:'Invulnerable Save (5+*)' },
+        { name:'Errant’s Duty' },
+        { name:'Aggressive Assault' },
+        { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
+      ]
     },
     {
       id:'knight-paladin', ds:'imperial-knights/knight-paladin', pts:375, copies:2,
       models:['1× Knight Paladin'],
-      gear:[['Questoris heavy stubber','Rapid-fire battle cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']]
+      gear:[['Questoris heavy stubber','Rapid-fire battle cannon','Stormspear rocket pod','Meltagun','Reaper chainsword']],
+      abilities:[
+        { name:'Invulnerable Save (5+*)' },
+        { name:'Paladin’s Duty' },
+        { name:'Seasoned Noble' },
+        { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
+      ]
     },
     {
       id:'knight-warden', ds:'imperial-knights/knight-warden', pts:365, warlord:true,
       models:['1× Knight Warden'],
       gear:[['Avenger gatling cannon','Heavy flamer','Stormspear rocket pod','Meltagun','Reaper chainsword']],
+      abilities:[
+        { name:'Invulnerable Save (5+*)' },
+        { name:'Warden’s Duty' },
+        { name:'Thin Their Ranks' },
+        { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
+      ],
       kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Imperium','Knight Warden','Faction: Imperial Knights','Warlord'],
       why:{ kw:{ Warlord:'Warlord' } }
     }
@@ -2834,7 +2862,15 @@ const ARMIES = [
     {
       id:'canis-rex', ds:'imperial-knights/canis-rex', pts:415,
       models:['1× Canis Rex','1× Sir Hekhtur'],
-      gear:[['Freedom’s Hand','Las-impulsor','Questoris multi-laser'],['Close combat weapon','Hekhtur’s pistol']]
+      gear:[['Freedom’s Hand','Las-impulsor','Questoris multi-laser'],['Close combat weapon','Hekhtur’s pistol']],
+      abilities:[
+        { name:'Invulnerable Save (5+*)' },
+        { name:'Legendary Freeblade' },
+        { name:'Chainbreaker' },
+        { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Using Sir Hekhtur' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
+      ]
     },
     {
       id:'cerastus-knight-atrapos', ds:'imperial-knights/cerastus-knight-atrapos', pts:450, enhancement:'Bringer of Justice',
@@ -2848,13 +2884,20 @@ const ARMIES = [
         { name:'Atrapos’ Duty' },
         { name:'Macro-extinction Protocols' },
         { name:'Damaged: 1-10 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' },
         { name:'Bringer of Justice', tag:'Enhancement', text:'**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**.' }
       ]
     },
     {
       id:'cerastus-knight-lancer', ds:'imperial-knights/cerastus-knight-lancer', pts:415,
       models:['1× Cerastus Knight Lancer'],
-      gear:[['Cerastus shock lance']]
+      gear:[['Cerastus shock lance']],
+      abilities:[
+        { name:'Lancer’s Duty' },
+        { name:'Shock Charge' },
+        { name:'Damaged: 1-10 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
+      ]
     },
     {
       id:'knight-crusader', ds:'imperial-knights/knight-crusader', pts:435, enhancement:'Hunter’s Eye',
@@ -2873,6 +2916,7 @@ const ARMIES = [
         { name:'Crusader’s Duty' },
         { name:'Punishing Salvoes' },
         { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' },
         { name:'Hunter’s Eye', tag:'Enhancement', text:'**IMPERIAL KNIGHTS** model only. Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability.' }
       ],
       rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Sustained Hits','Bondsman','Torrent','Melta','Rapid Fire','Blast','Ignores Cover'],
@@ -2891,6 +2935,7 @@ const ARMIES = [
         { name:'Thundercharge', na:'Needs a thundershock spear and a bellatus reaper chainsword: not this loadout' },
         { name:'Saturation Fire' },
         { name:'Damaged: 1-6 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' },
         { name:'Sanctuary', tag:'Enhancement', text:'**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save.' }
       ]
     }
@@ -3274,6 +3319,7 @@ const ARMIES = [
         { name:'Macro-extinction Protocols' },
         { name:'Consumed with Hunger', na:'No WAR DOG in this list' },
         { name:'Damaged: 1-10 wounds remaining' },
+        { name:'Deathly Terror (Aura)', tag:'Harbingers of Dread · Aura', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.' },
         { name:'Knight Diabolus', tag:'Enhancement', text:'**CHAOS KNIGHTS** model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the **[LANCE]** ability.' }
       ]
     },
@@ -3288,6 +3334,7 @@ const ARMIES = [
         { name:'Shock Charge' },
         { name:'Dark Fervour', na:'No WAR DOG in this list' },
         { name:'Damaged: 1-10 wounds remaining' },
+        { name:'Deathly Terror (Aura)', tag:'Harbingers of Dread · Aura', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.' },
         { name:'Blasphemous Engine', tag:'Enhancement', text:'**CHAOS KNIGHTS** model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the **Leadership test** taken to see if it suffers any **mortal wounds**.' }
       ]
     },
@@ -3306,6 +3353,7 @@ const ARMIES = [
         { name:'Dread Dominion', na:'No WAR DOG in this list' },
         { name:'Seething Hatred' },
         { name:'Damaged: 1-9 wounds remaining' },
+        { name:'Deathly Terror (Aura)', tag:'Harbingers of Dread · Aura', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.' },
         { name:'Bestial Aspect', tag:'Enhancement', text:'**CHAOS KNIGHTS** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to **Advance rolls** made for its unit.' }
       ],
       rules:['Deadly Demise D6','Harbingers of Dread','Super-Heavy Walker','Assault','Torrent','Ignores Cover','Rapid Fire'],
@@ -3324,6 +3372,7 @@ const ARMIES = [
         { name:'Methodical Destruction' },
         { name:'Close-range Killers', na:'No WAR DOG in this list' },
         { name:'Damaged: 1-9 wounds remaining' },
+        { name:'Deathly Terror (Aura)', tag:'Harbingers of Dread · Aura', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.' },
         { name:'Fleshmetal Fusion', tag:'Enhancement', text:'**CHAOS KNIGHTS** model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.' }
       ]
     },
@@ -3335,7 +3384,8 @@ const ARMIES = [
         { name:'*Invulnerable Save' },
         { name:'Methodical Destruction' },
         { name:'Close-range Killers', na:'No WAR DOG in this list' },
-        { name:'Damaged: 1-9 wounds remaining' }
+        { name:'Damaged: 1-9 wounds remaining' },
+        { name:'Deathly Terror (Aura)', tag:'Harbingers of Dread · Aura', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.' }
       ]
     },
     {
@@ -3362,6 +3412,7 @@ const ARMIES = [
         { name:'*Invulnerable Save' },
         { name:'Brigand' },
         { name:'Damaged: 1-5 wounds remaining' },
+        { name:'Deathly Terror (Aura)', tag:'Harbingers of Dread · Aura', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.' },
         { name:'Final Howl (Aura)', tag:'Enhancement · Aura', text:'**WAR DOG** model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1.' }
       ],
       kw:['Vehicle','Walker','Chaos','War Dog','Brigand','Faction: Chaos Knights','Battleline','Character','Warlord'],
@@ -3372,6 +3423,12 @@ const ARMIES = [
       id:'war-dog-brigand', ds:'chaos-knights/war-dog-brigand', role:'Battleline', pts:135,
       models:['1× War Dog Brigand (Houndpack Lance Character)'],
       gear:[['Armoured feet','Avenger chaincannon','Daemonbreath spear','Diabolus heavy stubber']],
+      abilities:[
+        { name:'*Invulnerable Save' },
+        { name:'Brigand' },
+        { name:'Damaged: 1-5 wounds remaining' },
+        { name:'Deathly Terror (Aura)', tag:'Harbingers of Dread · Aura', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.' }
+      ],
       kw:['Vehicle','Walker','Chaos','War Dog','Brigand','Faction: Chaos Knights','Battleline','Character'],
       kwNote:'Character comes from Marked Prey (“When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).',
       why:{ kw:{ Battleline:'Marked Prey', Character:'Marked Prey' }, role:{ Battleline:'Marked Prey' }, kwNote:'Marked Prey' }
@@ -3380,6 +3437,12 @@ const ARMIES = [
       id:'war-dog-brigand-2', ds:'chaos-knights/war-dog-brigand', role:'Battleline', pts:135, copies:3,
       models:['1× War Dog Brigand'],
       gear:[['Armoured feet','Avenger chaincannon','Daemonbreath spear','Diabolus heavy stubber']],
+      abilities:[
+        { name:'*Invulnerable Save' },
+        { name:'Brigand' },
+        { name:'Damaged: 1-5 wounds remaining' },
+        { name:'Deathly Terror (Aura)', tag:'Harbingers of Dread · Aura', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.' }
+      ],
       kw:['Vehicle','Walker','Chaos','War Dog','Brigand','Faction: Chaos Knights','Battleline'],
       why:{ kw:{ Battleline:'Marked Prey' }, role:{ Battleline:'Marked Prey' } }
     },
@@ -3395,6 +3458,7 @@ const ARMIES = [
         { name:'*Invulnerable Save' },
         { name:'Executioner' },
         { name:'Damaged: 1-5 wounds remaining' },
+        { name:'Deathly Terror (Aura)', tag:'Harbingers of Dread · Aura', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.' },
         { name:'Snarling Rivalry', tag:'Upgrade', text:'**EXECUTIONER** unit only. This unit’s ranged attacks have **[IGNORES COVER]**.' }
       ],
       kw:['Vehicle','Walker','Chaos','War Dog','Executioner','Faction: Chaos Knights','Battleline'],
@@ -3408,6 +3472,7 @@ const ARMIES = [
         { name:'*Invulnerable Save' },
         { name:'Karnivore' },
         { name:'Damaged: 1-5 wounds remaining' },
+        { name:'Deathly Terror (Aura)', tag:'Harbingers of Dread · Aura', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.' },
         { name:'Panoply of the Cursed Knights', tag:'Enhancement', text:'**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.' }
       ],
       kw:['Vehicle','Walker','Chaos','War Dog','Karnivore','Faction: Chaos Knights','Battleline','Character'],
@@ -3418,6 +3483,12 @@ const ARMIES = [
       id:'war-dog-karnivore', ds:'chaos-knights/war-dog-karnivore', role:'Battleline', pts:145, copies:5,
       models:['1× War Dog Karnivore'],
       gear:[['Reaper chaintalon','Slaughterclaw','Diabolus heavy stubber']],
+      abilities:[
+        { name:'*Invulnerable Save' },
+        { name:'Karnivore' },
+        { name:'Damaged: 1-5 wounds remaining' },
+        { name:'Deathly Terror (Aura)', tag:'Harbingers of Dread · Aura', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.' }
+      ],
       kw:['Vehicle','Walker','Chaos','War Dog','Karnivore','Faction: Chaos Knights','Battleline'],
       why:{ kw:{ Battleline:'Marked Prey' }, role:{ Battleline:'Marked Prey' } }
     }
@@ -3797,6 +3868,10 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:4 }
+      ],
+      abilities:[
+        { name:'Purity of Execution' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     {
@@ -3811,6 +3886,10 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:4 }
+      ],
+      abilities:[
+        { name:'Sanctified Flames' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     {
@@ -3825,6 +3904,10 @@ const ARMIES = [
       ],
       melee:[
         { name:'Gun Stock', n:5 }
+      ],
+      abilities:[
+        { name:'Sanctified Flames' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     {
@@ -4045,6 +4128,14 @@ const ARMIES = [
         { name:'Hunter: Monster/Vehicle', n:3 },
         { name:'Standard', n:3 },
         { name:'Thunder Hammer', n:2 }
+      ],
+      abilities:[
+        { name:'Terminatus Assault' },
+        { name:'Teleport Homer' },
+        { name:'Storm Shield' },
+        { name:'Furor Tactics', tag:'Mission Tactics', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.' },
+        { name:'Malleus Tactics', tag:'Mission Tactics', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.' },
+        { name:'Purgatus Tactics', tag:'Mission Tactics', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9" of this unit have **[PRECISION]**.' }
       ]
     }
   ]
@@ -4536,6 +4627,10 @@ const ARMIES = [
       melee:[
         // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
         { name:'Gun Stock', n:5 }
+      ],
+      abilities:[
+        { name:'Purity of Execution' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     {
@@ -4555,7 +4650,8 @@ const ARMIES = [
       ],
       abilities:[
         // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
-        { name:'Sanctified Flames' }
+        { name:'Sanctified Flames' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     {
@@ -4729,6 +4825,10 @@ const ARMIES = [
       melee:[
         // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
         { name:'Gun Stock', n:4 }
+      ],
+      abilities:[
+        { name:'Purity of Execution' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     {
@@ -4748,7 +4848,8 @@ const ARMIES = [
       ],
       abilities:[
         // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
-        { name:'Sanctified Flames' }
+        { name:'Sanctified Flames' },
+        { name:'Psychic Null (Aura)', tag:'Daughters of the Abyss · Aura', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' }, text:'Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' }
       ]
     },
     // CALADIUS: the datasheet's keywords (Wahapedia: "VEHICLE; CALADIUS; FLY; FRAME; GRAV-ASSAULT; IMPERIUM"); New Recruit prints
@@ -4788,6 +4889,7 @@ const ARMIES = [
         { name:'Atrapos’ Duty' },
         { name:'Macro-extinction Protocols' },
         { name:'Damaged: 1-10 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' },
         { name:'Bringer of Justice', tag:'Enhancement', ph:['fight'], turn:'either', text:'**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**.' }
       ],
       kw:['Vehicle','Walker','Character','Titanic','Towering','Imperium','Cerastus','Knight Atrapos','Faction: Imperial Knights','Warlord'],
@@ -4810,6 +4912,7 @@ const ARMIES = [
         { name:'Crusader’s Duty' },
         { name:'Punishing Salvoes' },
         { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' },
         { name:'Hunter’s Eye', tag:'Enhancement', ph:['movement','shooting'], turn:'opp', turns:{ shooting:'your' }, text:'**IMPERIAL KNIGHTS** model only. Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability.' }
       ],
       rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Sustained Hits','Bondsman','Torrent','Melta','Rapid Fire','Blast','Ignores Cover'],
@@ -4818,7 +4921,14 @@ const ARMIES = [
     {
       id:'knight-defender', ds:'imperial-knights/knight-defender', pts:385,
       models:['1× Knight Defender'],
-      gear:[['Conversion beam obliterator','Phosphor blaster','Plasma executor','Titanic feet','Twin incendine combustor']]
+      gear:[['Conversion beam obliterator','Phosphor blaster','Plasma executor','Titanic feet','Twin incendine combustor']],
+      abilities:[
+        { name:'Invulnerable Save (4+*)' },
+        { name:'Defender’s Duty' },
+        { name:'Selfless Protector' },
+        { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
+      ]
     },
     {
       id:'knight-destrier', ds:'imperial-knights/knight-destrier', pts:265,
@@ -4829,7 +4939,8 @@ const ARMIES = [
         { name:'Ram Jets' },
         { name:'Thundercharge', na:'Needs a thundershock spear and a bellatus reaper chainsword: not this loadout' },
         { name:'Saturation Fire' },
-        { name:'Damaged: 1-6 Wounds Remaining' }
+        { name:'Damaged: 1-6 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' }
       ]
     },
     {
@@ -4841,6 +4952,7 @@ const ARMIES = [
         { name:'Errant’s Duty' },
         { name:'Aggressive Assault' },
         { name:'Damaged: 1-9 Wounds Remaining' },
+        { name:'Feel No Pain 6+', tag:'Knights of Legend', text:'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.' },
         { name:'Mysterious Guardian', tag:'Enhancement · Once per battle, per army', at:'End of your opponent’s turn', ph:['movement','fight'], turn:'your', turns:{ fight:'opp' }, text:'**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' }
       ],
       rules:['Deadly Demise D6','Code Chivalric','Super-Heavy Walker','Bondsman','Melta','Blast','Deep Strike'],
@@ -5102,14 +5214,20 @@ const ARMIES = [
         { name:'Singular Purpose' },
         { name:'Harpoon Barbs' },
         { name:'Damaged: 1-5 Wounds Remaining' },
-        { name:'Protean Purpose' },
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
       ]
     },
     {
       id:'norn-emissary', ds:'tyranids/norn-emissary', pts:250,
       models:['1× Norn Emissary'],
-      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']]
+      gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']],
+      abilities:[
+        { name:'Singular Purpose' },
+        { name:'Unnatural Resilience' },
+        { name:'Damaged: 1-5 Wounds Remaining' },
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
+      ]
     },
     {
       id:'psychophage', ds:'tyranids/psychophage', pts:110,
@@ -6630,8 +6748,7 @@ const DATASHEETS = {
   abilities:[
     { name:'Singular Purpose', at:'Start of the first battle round', ph:['command','movement','shooting','fight'], turn:'either', text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
     { name:'Harpoon Barbs', tag:'Once per turn', ph:['movement'], turn:'opp', text:'Once per turn, when an enemy unit within **Engagement Range** of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 **mortal wounds**.' },
-    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' },
-    { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
+    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' }
   ],
   rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Harpooned','Extra Attacks'],
   kw:['Monster','Great Devourer','Synapse','Harvester','Norn Assimilator','Faction: Tyranids'],
@@ -6660,8 +6777,7 @@ const DATASHEETS = {
   abilities:[
     { name:'Singular Purpose', at:'Start of the first battle round', ph:['command','movement','shooting','fight'], turn:'either', text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
     { name:'Unnatural Resilience', text:'This model has the **Feel No Pain 4+** ability against **mortal wounds**.' },
-    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' },
-    { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' }
+    { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.', readOf:'59b4c593' }
   ],
   rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Extra Attacks','Melta','Blast','Psychic'],
   kw:['Monster','Psyker','Great Devourer','Synapse','Norn Emissary','Faction: Tyranids'],
@@ -13003,7 +13119,7 @@ const CHECKLIST = {
   "a|12u09c2":{"u":"charge:either"},
   "a|139ou05":{"u":"shooting:your"},
   "a|13o0mkf":{"u":"shooting:your,fight:either"},
-  "a|13tyxa7":{"none":1},
+  "a|13tyxa7":{"u":"movement:your"},
   "a|13ur237":{"t":"shooting:your","u":"shooting:your","s":1},
   "a|1445rha":{"u":"fight:either"},
   "a|14a8muj":{"u":"shooting:your,fight:either"},
@@ -13021,7 +13137,8 @@ const CHECKLIST = {
   "a|15rzi5r":{"u":"shooting:your,fight:either"},
   "a|15sy99j":{"x":1},
   "a|15wfj8w":{"t":"movement:your","s":1},
-  "a|16933gp":{"x":1,"g":[{"name":"Stealth","to":{"all":["Faction: Legiones Daemonica"]},"while":"While a friendly LEGIONES DAEMONICA unit is within 6\" of this model"}]},
+  "a|1688m9q":{"u":"shooting:opp,fight:either"},
+  "a|16933gp":{"u":"shooting:opp","g":[{"name":"Stealth","to":{"all":["Faction: Legiones Daemonica"]},"while":"While a friendly LEGIONES DAEMONICA unit is within 6\" of this model"}]},
   "a|16gssms":{"u":"fight:either"},
   "a|16mwpe4":{"t":"fight:either","s":1},
   "a|16oy7t8":{"u":"shooting:your,fight:either"},
@@ -13034,11 +13151,12 @@ const CHECKLIST = {
   "a|17smx15":{"u":"shooting:your,fight:either"},
   "a|17tabo3":{"t":"fight:either","s":1},
   "a|17vrn9o":{"u":"shooting:opp"},
+  "a|17who3l":{"u":"shooting:opp,fight:either"},
   "a|17yjt8a":{"u":"shooting:opp,fight:either"},
   "a|181c91p":{"u":"shooting:your,fight:either"},
   "a|1826tj4":{"u":"shooting:your"},
   "a|18khr67":{"u":"shooting:your,fight:either"},
-  "a|18qfwhq":{"u":"shooting:your"},
+  "a|18qfwhq":{"u":"movement:your,shooting:your"},
   "a|19570y3":{"u":"charge:either"},
   "a|19i250e":{"t":"command:your","s":1},
   "a|19myj2w":{"x":1},
@@ -13053,6 +13171,7 @@ const CHECKLIST = {
   "a|1b0bosi":{"t":"shooting:your","u":"shooting:your"},
   "a|1b583l5":{"u":"shooting:opp,fight:either"},
   "a|1b88y45":{"t":"command:your","s":1},
+  "a|1b9x58g":{"u":"shooting:your,fight:either"},
   "a|1bndwyj":{"x":1},
   "a|1c2pjdd":{"u":"fight:either"},
   "a|1cel7e3":{"u":"shooting:your"},
@@ -13114,7 +13233,7 @@ const CHECKLIST = {
   "a|1l9f4gj":{"x":1},
   "a|1lddfv3":{"u":"shooting:your"},
   "a|1ls4r72":{"u":"shooting:your,fight:either"},
-  "a|1lx0g6o":{"t":"command:your","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Invocation of Machine Vengeance","t":"command:your","u":"shooting:your,fight:either","s":1},{"n":"Mantra of Discipline"},{"n":"Binharic Courage (Aura)"},{"n":"Shroudpsalm (Aura)"}],"g":[{"name":"Stealth","to":{"all":["Faction: Adeptus Mechanicus"]},"opt":"Shroudpsalm (Aura)","while":"Shroudpsalm (Aura) active; While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model"}]},
+  "a|1lx0g6o":{"t":"command:your","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Invocation of Machine Vengeance","t":"command:your","u":"shooting:your,fight:either","s":1},{"n":"Mantra of Discipline"},{"n":"Binharic Courage (Aura)"},{"n":"Shroudpsalm (Aura)","u":"shooting:opp"}],"g":[{"name":"Stealth","to":{"all":["Faction: Adeptus Mechanicus"]},"opt":"Shroudpsalm (Aura)","while":"Shroudpsalm (Aura) active; While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model"}]},
   "a|1m3sbur":{"u":"fight:either"},
   "a|1md9ojx":{"t":"shooting:opp","u":"shooting:opp"},
   "a|1mkrij5":{"u":"shooting:opp,fight:either"},
@@ -13154,6 +13273,7 @@ const CHECKLIST = {
   "a|1sufx47":{"u":"shooting:your"},
   "a|1sul8lz":{"t":"movement:your","u":"charge:your"},
   "a|1susps1":{"u":"shooting:your"},
+  "a|1sw0lr0":{"u":"shooting:your,fight:either"},
   "a|1sw1st7":{"u":"shooting:opp,fight:either"},
   "a|1syrdzo":{"t":"movement:your","u":"shooting:your,fight:either"},
   "a|1t0m8vl":{"u":"shooting:your"},
@@ -13181,7 +13301,7 @@ const CHECKLIST = {
   "a|1y13n39":{"u":"fight:either"},
   "a|1y7dm8c":{"t":"shooting:your","u":"shooting:your"},
   "a|1yca6xs":{"x":1},
-  "a|1yjo1i0":{"none":1},
+  "a|1yjo1i0":{"u":"movement:your"},
   "a|1yx0ge2":{"u":"shooting:opp,fight:either"},
   "a|1yzm5vq":{"t":"shooting:your","u":"shooting:your"},
   "a|1zttx":{"u":"shooting:opp"},
@@ -13206,6 +13326,7 @@ const CHECKLIST = {
   "a|5cu3n5":{"u":"fight:either"},
   "a|5ffkd6":{"u":"movement:your"},
   "a|5pzucl":{"u":"shooting:opp"},
+  "a|5r7ufk":{"u":"shooting:your,fight:either"},
   "a|5r85a":{"t":"movement:your","s":1},
   "a|5tl14a":{"u":"shooting:opp,fight:either"},
   "a|5wv1pt":{"u":"shooting:your,fight:either"},
@@ -13248,7 +13369,7 @@ const CHECKLIST = {
   "a|bghuln":{"t":"command:your","s":1},
   "a|bqtobi":{"x":1},
   "a|bryfv4":{"t":"movement:your","f":[{"n":"riled up","r":"Waaagh!","u":"command:opp,movement:either,shooting:either,charge:either,fight:either"}],"s":1},
-  "a|bwwxyk":{"u":"fight:either"},
+  "a|bwwxyk":{"u":"shooting:opp,fight:either"},
   "a|c1v9iq":{"t":"command:your","u":"shooting:your,fight:either","s":1},
   "a|c6hqsp":{"x":1},
   "a|c73q9i":{"t":"command:your","s":1},
@@ -13294,10 +13415,11 @@ const CHECKLIST = {
   "a|hsdi46":{"u":"shooting:opp,fight:either","g":[{"name":"Feel No Pain 5+","to":{"all":["Character"]},"while":"While a CHARACTER model is leading this unit"}]},
   "a|i0iopt":{"at":"Start of the battle round","s":1,"pk":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"}},
   "a|i0q45v":{"u":"movement:your"},
+  "a|ig7204":{"x":1},
   "a|inerxb":{"u":"charge:either"},
   "a|io1qy9":{"u":"shooting:opp"},
   "a|iv04nt":{"u":"shooting:opp,fight:either"},
-  "a|j2qj5o":{"x":1},
+  "a|j2qj5o":{"u":"movement:your"},
   "a|j4crxj":{"u":"shooting:opp,fight:either"},
   "a|j4iojd":{"x":1},
   "a|jst03m":{"u":"fight:either","a":1},
@@ -13425,17 +13547,17 @@ const CHECKLIST = {
   "r|chaos-daemons|Beguiling Aura":{"u":"charge:your"},
   "r|chaos-daemons|Blood Tainted":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1},
   "r|chaos-daemons|Fates in Flux":{"t":"command:your","s":1},
-  "r|chaos-daemons|First Prince of Chaos":{"x":1,"o":[{"n":"MURDERER'S COWL","u":"movement:your,shooting:your,charge:your"},{"n":"PENUMBRAL PUPPETRY","u":"fight:either"},{"n":"GLOAM ROT","u":"shooting:opp,fight:either"},{"n":"SHADOW'S CARESS","x":1},{"n":"DISCIPLES OF BE'LAKOR","x":1}],"g":[{"name":"Deep Strike","to":{"all":["Shadow Legion","Faction: Heretic Astartes"]}}]},
+  "r|chaos-daemons|First Prince of Chaos":{"u":"movement:your","o":[{"n":"MURDERER'S COWL","u":"movement:your,shooting:your,charge:your"},{"n":"PENUMBRAL PUPPETRY","u":"shooting:opp,fight:either"},{"n":"GLOAM ROT","u":"shooting:opp,fight:either"},{"n":"SHADOW'S CARESS","x":1},{"n":"DISCIPLES OF BE'LAKOR","x":1}],"g":[{"name":"Deep Strike","to":{"all":["Shadow Legion","Faction: Heretic Astartes"]}}]},
   "r|chaos-daemons|Loci of Power":{"x":1},
   "r|chaos-daemons|Melancholic Miasma":{"t":"command:either"},
   "r|chaos-daemons|Murdercall":{"t":"movement:opp","u":"movement:opp"},
-  "r|chaos-daemons|Seductive Gambit":{"x":1,"o":[{"n":"Seductive Gambit","u":"charge:either,fight:either"}]},
+  "r|chaos-daemons|Seductive Gambit":{"x":1,"o":[{"n":"Seductive Gambit","u":"charge:either,fight:either"}],"g":[{"name":"Seductive Gambit","to":{"all":["Faction: Legiones Daemonica","Slaanesh"]}}]},
   "r|chaos-daemons|Shudderblink":{"u":"movement:your,shooting:your,charge:your"},
   "r|chaos-daemons|The Shadow of Chaos":{"t":"command:either,movement:either,shooting:either,charge:either,fight:either","s":1,"o":[{"n":"DAEMONIC MANIFESTATION"},{"n":"DAEMONIC TERROR"}]},
   "r|chaos-daemons|Thralls of the First Prince":{"x":1,"o":[{"n":"WARP TALONS","x":1}]},
   "r|chaos-daemons|Unholy Avalanche":{"u":"movement:your,shooting:your,charge:your"},
   "r|chaos-daemons|Warp Rifts":{"x":1},
-  "r|chaos-knights|Harbingers of Dread":{"x":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Deathly Terror","row":"Deathly Terror (Aura) · N/A","x":1},{"n":"Despair","row":"Despair (Aura) · 1","x":1},{"n":"Doom","row":"Doom · 2","u":"shooting:your,fight:either"},{"n":"Darkness","row":"Darkness · 3","x":1},{"n":"Dismay","row":"Dismay (Aura) · 4","t":"command:opp","s":1},{"n":"Delirium","row":"Delirium (Aura) · 5","x":1},{"n":"Dominion","row":"Dominion · 6","x":1}]},
+  "r|chaos-knights|Harbingers of Dread":{"x":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Deathly Terror","row":"Deathly Terror (Aura) · N/A","x":1},{"n":"Despair","row":"Despair (Aura) · 1","x":1},{"n":"Doom","row":"Doom · 2","u":"shooting:your,fight:either"},{"n":"Darkness","row":"Darkness · 3","u":"shooting:opp"},{"n":"Dismay","row":"Dismay (Aura) · 4","t":"command:opp","s":1},{"n":"Delirium","row":"Delirium (Aura) · 5","x":1},{"n":"Dominion","row":"Dominion · 6","x":1}]},
   "r|chaos-knights|Malefic Surge":{"t":"command:your","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Unholy Hunger","a":1},{"n":"Diabolic Power","a":1},{"n":"Unnatural Fortitude","a":1}]},
   "r|chaos-knights|Marked Prey":{"at":"Start of your Command phase","t":"command:your","u":"shooting:your,fight:either","s":1},
   "r|chaos-knights|Scenting Fear":{"t":"shooting:your","s":1},
@@ -13473,7 +13595,7 @@ const CHECKLIST = {
   "r|tyranids|Hyper-adaptations":{"at":"Start of the first battle round","u":"shooting:your,fight:either","s":1},
   "r|tyranids|Insurmountable Odds":{"t":"shooting:opp","u":"shooting:opp"},
   "r|tyranids|Leader-beasts":{"u":"shooting:opp,fight:either"},
-  "r|tyranids|Mindhunger":{"x":1,"g":[{"name":"Deep Strike","to":{"any":["Deathleaper","Lictor","Neurolictor"]}}]},
+  "r|tyranids|Mindhunger":{"u":"movement:your","g":[{"name":"Deep Strike","to":{"any":["Deathleaper","Lictor","Neurolictor"]}}]},
   "r|tyranids|Questing Tendrils":{"u":"movement:your,charge:your"},
   "r|tyranids|Shadow in the Warp":{"t":"command:either","s":1},
   "r|tyranids|Surprise Assault":{"t":"movement:your","s":1},
@@ -14523,7 +14645,7 @@ const RULE_OPTIONS = [
   { rule:'Chaos Knights army rule · Harbingers of Dread', option:'Deathly Terror', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.', found:'table row', explicit:false, trigger:null, used:null, phases:null },
   { rule:'Chaos Knights army rule · Harbingers of Dread', option:'Despair', text:'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).', found:'table row', explicit:false, trigger:null, used:null, phases:null },
   { rule:'Chaos Knights army rule · Harbingers of Dread', option:'Doom', text:'Each time this model makes an attack, if the target of that attack is **Battle-shocked**, add 1 to the **Wound roll**.', found:'table row', explicit:false, trigger:null, used:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } }, phases:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } } },
-  { rule:'Chaos Knights army rule · Harbingers of Dread', option:'Darkness', text:'This model has **Stealth**.', found:'table row', explicit:false, trigger:null, used:null, phases:null },
+  { rule:'Chaos Knights army rule · Harbingers of Dread', option:'Darkness', text:'This model has **Stealth**.', found:'table row', explicit:false, trigger:null, used:{ ph:['movement','shooting'], turn:'your', turns:{ shooting:'opp' } }, phases:{ ph:['movement','shooting'], turn:'your', turns:{ shooting:'opp' } } },
   { rule:'Chaos Knights army rule · Harbingers of Dread', option:'Dismay', text:'In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9" of this model, that enemy unit must take a Battle-shock test.', found:'table row', explicit:true, trigger:{ ph:['command'], turn:'opp' }, used:null, phases:{ ph:['command'], turn:'opp' } },
   { rule:'Chaos Knights army rule · Harbingers of Dread', option:'Delirium', text:'While an enemy unit that is **Below Half-strength** is within 9" of this model, each time that unit fails a Battle-shock test, it suffers D3 **mortal wounds**.', found:'table row', explicit:false, trigger:null, used:null, phases:null },
   { rule:'Chaos Knights army rule · Harbingers of Dread', option:'Dominion', text:'Add 3" to the range of this model’s **Aura abilities**.', found:'table row', explicit:false, trigger:null, used:null, phases:null },
@@ -14555,14 +14677,14 @@ const RULE_OPTIONS = [
   { rule:'Chaos Daemons · Legion of Excess rule · Seductive Gambit', option:'Seductive Gambit', text:'Each time this unit ends a **Charge move**, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the **Fights First** ability, but instead, each time a model in this unit makes an attack, you can re-roll the **Hit roll** and you can re-roll a **Wound roll** of 1.', found:'"**Name:** effect"', explicit:false, trigger:null, used:{ ph:['charge','fight'], turn:'either' }, phases:{ ph:['charge','fight'], turn:'either' } },
   { rule:'Chaos Daemons · Shadow Legion rule · Thralls of the First Prince', option:'WARP TALONS', text:'The combined points value of such units depends on your battle size, as shown below.', found:'bullet "**Name**" and its line', explicit:false, trigger:null, used:null, phases:null },
   { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', option:'MURDERER\'S COWL', text:'**SHADOW LEGION KHORNE** units only. This unit is eligible to shoot and declare a charge in a turn in which it Advanced.', found:'heading in capitals and its line', explicit:false, trigger:null, used:{ ph:['movement','shooting','charge'], turn:'your' }, phases:{ ph:['movement','shooting','charge'], turn:'your' } },
-  { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', option:'PENUMBRAL PUPPETRY', text:'**SHADOW LEGION TZEENTCH** units only. This unit has **Stealth**. Each time a melee attack targets this unit, subtract 1 from the **Hit roll**.', found:'heading in capitals and its line', explicit:false, trigger:null, used:{ ph:['fight'], turn:'either' }, phases:{ ph:['fight'], turn:'either' } },
+  { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', option:'PENUMBRAL PUPPETRY', text:'**SHADOW LEGION TZEENTCH** units only. This unit has **Stealth**. Each time a melee attack targets this unit, subtract 1 from the **Hit roll**.', found:'heading in capitals and its line', explicit:false, trigger:null, used:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' } }, phases:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' } } },
   { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', option:'GLOAM ROT', text:'**SHADOW LEGION NURGLE** units only. Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit\'s Toughness characteristic, subtract 1 from the **Wound roll**.', found:'heading in capitals and its line', explicit:false, trigger:null, used:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' } }, phases:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'opp' } } },
   { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', option:'SHADOW\'S CARESS', text:'**SHADOW LEGION SLAANESH** units only. Enemy units cannot target this unit with **snap shooting** attacks.', found:'heading in capitals and its line', explicit:false, trigger:null, used:null, phases:null },
   { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', option:'DISCIPLES OF BE\'LAKOR', text:'**SHADOW LEGION UNDIVIDED** units only.', found:'heading in capitals and its line', explicit:false, trigger:null, used:null, phases:null },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Invocation of Machine Vengeance', text:'At the start of your Command phase, select one unit from your opponent\'s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly **ADEPTUS MECHANICUS** unit makes an attack that targets your Machine Vengeance target, you can re-roll the **Hit roll**.', found:'"**Name:** effect"', explicit:true, trigger:{ ph:['command'], turn:'your' }, used:{ ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' } }, phases:{ ph:['command','shooting','fight'], turn:'your', turns:{ fight:'either' } } },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Mantra of Discipline', text:'This model has the **BATTLELINE** keyword and has the following ability:', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:null, phases:{ ph:['command'], turn:'your' } },
   { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Binharic Courage (Aura)', text:'While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or **Leadership test** for that unit, add 1 to that test.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:null, phases:{ ph:['command'], turn:'your' } },
-  { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Shroudpsalm (Aura)', text:'While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, that unit has the **Stealth** ability.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:null, phases:{ ph:['command'], turn:'your' } },
+  { rule:'purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah', option:'Shroudpsalm (Aura)', text:'While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, that unit has the **Stealth** ability.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:{ ph:['movement','shooting'], turn:'your', turns:{ shooting:'opp' } }, phases:{ ph:['command','movement','shooting'], turn:'your', turns:{ shooting:'opp' } } },
   { rule:'purge-goes-the-foe · Thulia Ghuld · Icon of War', option:'Fanatical Devotion', text:'You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.', found:'"**Name:** effect"', explicit:false, trigger:null, used:{ ph:['movement','shooting','charge'], turn:'your' }, phases:{ ph:['movement','shooting','charge'], turn:'your' } },
   { rule:'purge-goes-the-foe · Thulia Ghuld · Icon of War', option:'Adaptive Tactics', text:'You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.', found:'"**Name:** effect"', explicit:false, trigger:null, used:{ ph:['movement','shooting','charge'], turn:'your' }, phases:{ ph:['movement','shooting','charge'], turn:'your' } },
   { rule:'purge-goes-the-foe · Thulia Ghuld · Icon of War', option:'The Fires of Mars', text:'You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.', found:'"**Name:** effect"', explicit:false, trigger:null, used:null, phases:null },
@@ -14586,6 +14708,7 @@ const GRANTS = [
   { rule:'Tyranids · Ambush Predators rule · Mindhunger', grants:'Deep Strike', type:'ability', to:{ any:['Deathleaper','Lictor','Neurolictor'] }, while:null, text:'- Friendly **DEATHLEAPER**/**LICTOR**/**NEUROLICTOR** units have **Deep Strike**.' },
   { rule:'Chaos Knights army rule · Harbingers of Dread', option:'Darkness', grants:'Stealth', type:'ability', to:'this unit / model', while:'Darkness active', text:'This model has **Stealth**.' },
   { rule:'Chaos Knights army rule · Harbingers of Dread', grants:'Dread', type:'ability', to:null, while:'If your Army Faction is CHAOS KNIGHTS', text:'If your Army Faction is **CHAOS KNIGHTS**, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below).' },
+  { rule:'Chaos Knights army rule · Harbingers of Dread', grants:'Deathly Terror (Aura)', type:'ability', to:'units from your army with this ability', while:'If your Army Faction is CHAOS KNIGHTS', text:'The Deathly Terror ability is active for your army from the start of the battle.' },
   { rule:'Chaos Knights · Infernal Lance rule · Malefic Surge', grants:'Feel No Pain 6+', type:'ability', to:'this unit / model', while:null, text:'- Models in this unit have the **Feel No Pain 6+** ability.' },
   { rule:'Chaos Knights · Houndpack Lance rule · Marked Prey', grants:'BATTLELINE', type:'keyword or weapon ability', to:{ all:['War Dog'] }, while:null, text:'- **WAR DOG** units from your army have the **BATTLELINE** keyword.' },
   { rule:'Chaos Knights · Houndpack Lance rule · Marked Prey', grants:'CHARACTER', type:'keyword or weapon ability', to:null, while:'Until the end of the battle', text:'Until the end of the battle, those units have the **CHARACTER** keyword.*' },
@@ -14597,11 +14720,17 @@ const GRANTS = [
   { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Furor Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
   { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Malleus Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
   { rule:'Ultramarines · Deathwatch Support rule · Mission Tactics', grants:'Purgatus Tactics', type:'ability', to:{ all:['Kill Team'] }, while:null, text:'Friendly **KILL TEAM** units with this ability have the following abilities:' },
+  { rule:'Chaos Daemons · Legion of Excess rule · Seductive Gambit', grants:'Seductive Gambit', type:'ability', to:{ all:['Faction: Legiones Daemonica','Slaanesh'] }, while:null, text:'**LEGIONES DAEMONICA SLAANESH** units from your army have the following ability:' },
   { rule:'Chaos Daemons · Shadow Legion rule · Thralls of the First Prince', grants:'SHADOW LEGION', type:'keyword or weapon ability', to:{ any:['Be\'lakor','Faction: Heretic Astartes'] }, while:null, text:'**BE\'LAKOR** and **HERETIC ASTARTES** units from your army gain the **SHADOW LEGION** and **UNDIVIDED** keywords.' },
   { rule:'Chaos Daemons · Shadow Legion rule · Thralls of the First Prince', grants:'UNDIVIDED', type:'keyword or weapon ability', to:{ any:['Be\'lakor','Faction: Heretic Astartes'] }, while:null, text:'**BE\'LAKOR** and **HERETIC ASTARTES** units from your army gain the **SHADOW LEGION** and **UNDIVIDED** keywords.' },
   { rule:'Chaos Daemons · Shadow Legion rule · Thralls of the First Prince', grants:'SHADOW LEGION', type:'keyword or weapon ability', to:{ all:['Faction: Legiones Daemonica'] }, while:null, text:'**LEGIONES DAEMONICA** units from your army gain the **SHADOW LEGION** keyword.' },
-  { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', option:'PENUMBRAL PUPPETRY', grants:'Stealth', type:'ability', to:'this unit / model', while:'PENUMBRAL PUPPETRY active', text:'This unit has **Stealth**.' },
   { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', grants:'Dark Pacts', type:'ability', to:'this unit / model', while:null, text:'- This unit has the **Dark Pacts** army rule, and can use it as described in Codex: Chaos Space Marines, even though your Army Faction is not **HERETIC ASTARTES**.' },
+  { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', grants:'MURDERER\'S COWL', type:'ability', to:{ all:['Shadow Legion','Khorne'] }, while:null, text:'**SHADOW LEGION KHORNE** units only. This unit is eligible to shoot and declare a charge in a turn in which it Advanced.' },
+  { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', grants:'PENUMBRAL PUPPETRY', type:'ability', to:{ all:['Shadow Legion','Tzeentch'] }, while:null, text:'**SHADOW LEGION TZEENTCH** units only. This unit has **Stealth**. Each time a melee attack targets this unit, subtract 1 from the **Hit roll**.' },
+  { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', grants:'Stealth', type:'ability', to:{ all:['Shadow Legion','Tzeentch'] }, while:null, text:'This unit has **Stealth**.' },
+  { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', grants:'GLOAM ROT', type:'ability', to:{ all:['Shadow Legion','Nurgle'] }, while:null, text:'**SHADOW LEGION NURGLE** units only. Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit\'s Toughness characteristic, subtract 1 from the **Wound roll**.' },
+  { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', grants:'SHADOW\'S CARESS', type:'ability', to:{ all:['Shadow Legion','Slaanesh'] }, while:null, text:'**SHADOW LEGION SLAANESH** units only. Enemy units cannot target this unit with **snap shooting** attacks.' },
+  { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', grants:'DISCIPLES OF BE\'LAKOR', type:'ability', to:{ all:['Shadow Legion','Undivided'] }, while:null, text:'**SHADOW LEGION UNDIVIDED** units only.' },
   { rule:'Chaos Daemons · Shadow Legion rule · First Prince of Chaos', grants:'Deep Strike', type:'ability', to:{ all:['Shadow Legion','Faction: Heretic Astartes'] }, while:null, text:'- **SHADOW LEGION HERETIC ASTARTES** models in this unit have the **Deep Strike** ability.' },
   { rule:'Chaos Space Marines · Cult of the Arkifane rule · Soul Forge Boons', grants:'DAEMON', type:'keyword or weapon ability', to:{ all:['Faction: Heretic Astartes','Vehicle'] }, while:null, text:'**HERETIC ASTARTES VEHICLE** units from your army gain the **DAEMON** keyword.' },
   { rule:'Chaos Space Marines · Cult of the Arkifane rule · Soul Forge Boons', grants:'SOUL FORGE', type:'keyword or weapon ability', to:{ all:['Faction: Heretic Astartes'], any:['Vehicle','Lord Discordant','Vashtorr the Arkifane'] }, while:null, text:'**HERETIC ASTARTES VEHICLE**, **LORD DISCORDANT** and **VASHTORR THE ARKIFANE** units from your army gain the **SOUL FORGE** keyword.' },

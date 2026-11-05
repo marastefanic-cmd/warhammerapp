@@ -36,22 +36,6 @@
   }
  },
  {
-  "page": "tyranids_Norn-Assimilator.html",
-  "ability": "Protean Purpose",
-  "app": "(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).",
-  "waha": "(none)",
-  "reason": "A detachment rule's ability (Talons of the Norn Queen gives it to NORN ASSIMILATOR / NORN EMISSARY units: \"… units have the following ability: Protean Purpose\"), not the datasheet's own: its page prints no ability of that name (verify/texts.js unitText checks it against the detachment).",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Assimilator.html: no \"Protean Purpose\" among its abilities; verify/.cache/waha/tyranids.html (Talons of the Norn Queen): \"have the following ability: Protean Purpose\""
- },
- {
-  "page": "tyranids_Norn-Emissary.html",
-  "ability": "Protean Purpose",
-  "app": "(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).",
-  "waha": "(none)",
-  "reason": "A detachment rule's ability (Talons of the Norn Queen gives it to NORN ASSIMILATOR / NORN EMISSARY units: \"… units have the following ability: Protean Purpose\"), not the datasheet's own: its page prints no ability of that name (verify/texts.js unitText checks it against the detachment).",
-  "evidence": "verify/.cache/waha/ds/tyranids_Norn-Emissary.html: no \"Protean Purpose\" among its abilities; verify/.cache/waha/tyranids.html (Talons of the Norn Queen): \"have the following ability: Protean Purpose\""
- },
- {
   "page": "tyranids_Winged-Hive-Tyrant.html",
   "ability": "Will of the Hive Mind",
   "app": "Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the **CP** cost of that use of that Stratagem by 1CP.",

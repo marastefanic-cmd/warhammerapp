@@ -21,6 +21,10 @@
      labels          phases, turn, needs, tags: verify/derive.js's fixed rules, on the words just written (never by hand);
                      where derive.js cannot derive one, or its reading is not the signed-off one (verify/derive-unread.json), the label is left out and listed
      "+" marks       verify/bsdata.js + verify/write-grants.js (BSData's modifiers), as for every list
+     the list        of a catalogued faction (data.js has its whole catalogue): the entry builder.js builds from the export and the
+                     tables, as the phone's import does (WH_BUILDER.build; one builder, docs/catalog.md), this file's source line on it;
+                     this file's own reading of the list is then a check, and the run fails where the two differ. Of another faction:
+                     this file's reading, until the faction's catalogue lands
    and lists everything it could not fill mechanically (verify/out/from-json-<army>.md), each marked as what a person (or
    an AI, marked as such) still writes. A stratagem's gist is such a column: it is written AI-assisted and marked
    (data.js comment "gist: AI-written").
@@ -678,7 +682,7 @@ function buildGroup(g, k) {
   if (assoc.length) hide(u, { _assoc: assoc });
   Object.assign(u, { stats, ranged: kinds.ranged, melee: kinds.melee, abilities, rules: uniq(rules), kw: own.concat(extra) });
   if (extra.length) u.kwNote = extra.join(', ') + (extra.length > 1 ? ' come' : ' comes') + ' from the ' + (g.chars.length > 1 ? 'combined unit' : (g.chars[0].support ? 'supported ' : 'led ') + partName(g.body)) + '.';
-  u._at = g.at; u._parts = parts; hide(u, { _partNames: parts.map(p => nm(p.name)), _exportKw: u.kw.slice() });
+  u._at = g.at; u._parts = parts; hide(u, { _partNames: parts.map(p => nm(p.name)), _exportKw: u.kw.slice(), _partKw: parts.map(catsOf) });
   // the rules of the datasheet itself (the unit and its models), not those its wargear, weapons or enhancement bring
   const dsRules = []; parts.forEach(p => dfs(p, s => { if (s.type === 'unit' || s.type === 'model') for (const r of s.rules || []) dsRules.push(typo(nm(r.name))); }));
   u._dsRules = uniq(dsRules);
@@ -1013,6 +1017,10 @@ function boxAfterComposition(name, pages) {
   return null;
 }
 const partName0 = p => typo(nm(p.name));
+// the abilities the rules this list has in force give its units by keyword (builder.js ruleAbilities: GRANTS and RULE_OPTIONS, the rule's
+// words; a faction data.js does not have yet has none: GRANTS are read from data.js's rules)
+const BW = require('../builder.js');
+const RA = F ? BW.ruleAbilities(D.grants, D.ruleOptions, F, detIds.map(id => F.detachments[id] || facSrc.detachments[id]).filter(Boolean), D) : { rows: [], errors: [] };
 const wahaFile = page => 'verify/.cache/waha/ds/' + page.file;
 const dsWant = new Set();
 const gwRules = new Map();   // unit id -> { core, army, leader, files }
@@ -1058,6 +1066,10 @@ for (const u of units) {
       filled.push({ what: u.name + ' without the ability ' + ab.name, from: 'the list’s detachment rule ' + dr.name + ' (GW’s datasheet does not print it)' });
       continue;
     }
+    // an ability a rule of the list gives the unit ("Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability: Protean
+    // Purpose", Talons of the Norn Queen): not the export's to say; the rule's row is written below, from the rule (builder.js
+    // ruleAbilities), whether or not the export prints it
+    if (RA.rows.some(x => x.name === ab.name)) { hide(ab, { _drop: true }); continue; }
     // the datasheet's ability: the one with BSData's words, else the one of BSData's name (GW's name, tag and words win)
     // (BSData's "[Psychic Abilities] - Shrouding" is GW's Shrouding)
     // (and without its articles: BSData's "Master of the Ka'tahs" is GW's Master of Ka’tahs)
@@ -1140,6 +1152,23 @@ for (const u of units) {
     if (g.damaged || !caseGW.has(nm(ab.name)) ? lc(typo(g.name)) !== lc(ab.name) : typo(g.name) !== ab.name) { devs.push({ kind: 'bsdata', unit: u.id, field: 'ability', name: typo(g.name), app: typo(g.name), bsdata: ab.name, why: 'GW’s name for the ability (Wahapedia’s datasheet); BSData names it ' + ab.name, file: g.file }); ab.name = typo(g.name); }
   }
   u.abilities = u.abilities.filter(a => !a._drop);
+  // the abilities a rule of the list gives it (the owner's rule: every one its own row, marked with the rule, wherever the rule is in force
+  // and the part has its keywords, never from what the export prints; in GW's words, builder.js ruleAbilities, as the phone builds it):
+  // each part's after its datasheet's abilities, before its enhancement's (not in a faction catalogue's reading, --emit: the datasheets
+  // alone, verify/from-bsdata.js; there the rule's ability is only left off, as above)
+  if (!argv.includes('--emit')) u._parts.forEach((p, pi) => {
+    const multi = u._parts.length > 1, pn = partName0(p), mine = a => !multi || a.who === pn;
+    // (its Rules line: GW's datasheet page's CORE and army rules for the part, else the DATASHEETS row's; never the export's)
+    const G0 = gwRules.get(u.id), gp = G0 && G0.byPart[pi], row = Object.values(D.datasheets || {}).find(S => S.faction === factionId && S.bsId === lastId(p.entryId));
+    const partRules = gp ? gp.core.concat(gp.army) : row ? row.rules || [] : [];
+    for (const e of BW.ruleAbilityErrorsOf(RA, u._partKw[pi], partRules)) want(u.name + (multi ? ' · ' + pn : ''), 'ability', e.error);
+    const add = BW.ruleAbilitiesOf(RA, u._partKw[pi], u.abilities.filter(mine), partRules).map(x => { const o = Object.assign({}, x.row); if (multi) { const r = { name: o.name, who: pn }; delete o.name; Object.assign(r, o); return hide(r, { _ra: x.rule }); } return hide(o, { _ra: x.rule }); });
+    if (!add.length) return;
+    let at = -1; u.abilities.forEach((a, i) => { if (mine(a) && !a._e) at = i; });
+    if (at < 0) { const i = u.abilities.findIndex(mine); at = i < 0 ? u.abilities.length - 1 : i - 1; }
+    u.abilities.splice(at + 1, 0, ...add);
+    for (const o of add) filled.push({ what: 'ability ' + u.name + ' · ' + o.name, from: 'the list’s rule ' + o._ra + ' (its words in the rule, RULE_OPTIONS phases; builder.js ruleAbilities): the list’s own, not the datasheet’s' });
+  });
   // a rule GW prints in a header box of its own that BSData's entry does not have (the Daemon Prince of Chaos's Daemonic Allegiance):
   // GW wins, the app adds it with GW's words (an ability BSData has that GW does not print is left out, above)
   for (const g of gwAbs) if (g.box && !used.has(g) && !u.abilities.some(a => lc(a.name) === lc(g.name))) {
@@ -1489,7 +1518,7 @@ const reusedAbs = new Set();  // "<unit name> · <ability>": the row's labels, w
       if (a) for (const k of Object.keys(a)) if (k.startsWith('_')) Object.defineProperty(o, k, { value: a[k], enumerable: false, writable: true, configurable: true });
       out.push(o); reusedAbs.add(u.name + ' · ' + (multi ? pn + ' · ' : '') + o.name);
     }
-    for (const a of mineAbs) { if (!a._e) note('ability ' + a.name, 'not on the row', 'in this reading'); out.push(a); }
+    for (const a of mineAbs) { if (!a._e && !a._ra) note('ability ' + a.name, 'not on the row', 'in this reading'); out.push(a); }
     if (!multi) u.abilities = out;
     else { const at = u.abilities.findIndex(a => a.who === pn), rest = u.abilities.filter(a => a.who !== pn); rest.splice(at < 0 ? rest.length : u.abilities.slice(0, at).filter(a => a.who !== pn).length, 0, ...out); u.abilities = rest; }
     // the Rules line: the row's, then a rule only this list's units bring (its wargear's or enhancement's); a part's row: its rules
@@ -2023,6 +2052,49 @@ for (const sc of ['verify/derive.js', 'verify/effects-migrate.js']) {
   const r = spawnSync(process.execPath, [path.join(ROOT, sc), '--write'], { cwd: ROOT, encoding: 'utf8' });
   filled.push({ what: (r.stdout || r.stderr || '').trim().split('\n').pop(), from: sc + ' --write' });
 }
+// ---------------------------------------------------------------- the list itself: builder.js, as on the phone (one builder)
+// A list of a catalogued faction (data.js has its whole catalogue: DATASHEETS rows with GW's points) is the list builder.js
+// (WH_BUILDER.build, the phone's import) builds from the export and data.js's tables alone: its ARMIES entry is builder.js's, byte for
+// byte, with this file's source line (the day the export was committed, or the hand file's). This file's own reading above is what
+// gives the tables their facts (BSData, Wahapedia's pages, GW's documents, the hand file: the Node-only part); its own entry for the list
+// is kept only as a check: where it is not builder.js's, the list is builder.js's, the difference is listed and this run fails (so the
+// two never part silently; verify/reimport.js fails on it). A faction with no catalogue keeps this file's entry (builder.js refuses it:
+// the phone copies such a list, import.js) until its catalogue lands (verify/from-bsdata.js).
+const listFrom = (() => {
+  if (REFS) return { from: 'verify/from-json.js', why: '--refs: only the list’s reference sheets are this run’s' };
+  // (builder.js and effects.js keep their tables on window where there is one, as in the browser: this file's loadD made one)
+  const E = require('../effects.js'); globalThis.WH_EFFECTS = E; if (global.window) global.window.WH_EFFECTS = E;
+  // (a fresh copy: builder.js keeps the window it was first loaded with, and this file's ruleAbilities (RA) loaded it on an earlier loadD's
+  // window, which has no WH_EFFECTS; the build would then not see the agreed boxes)
+  delete require.cache[require.resolve('../builder.js')];
+  const W = require('../builder.js');
+  const loadRaw = () => { const w = {}; new Function('window', fs.readFileSync(DATA, 'utf8').replace(/\nreturn \{ version:VERSION,/, '\nreturn { RAW:{ ARMIES }, version:VERSION,'))(w); return w.WH_DATA; };
+  let D1 = loadRaw();
+  if (!W.catalogued(D1, factionId)) return { from: 'verify/from-json.js', why: (D1.factions[factionId] || {}).name + ' has no faction catalogue in data.js (catalogued: ' + W.catalogues(D1).join(', ') + ')' };
+  // (what builder.js reads beyond the other tables, BUILD_INDEX, written from them: this list's "+" marks among them)
+  spawnSync(process.execPath, [path.join(ROOT, 'verify/build-index.js'), '--write'], { cwd: ROOT, encoding: 'utf8' });
+  D1 = loadRaw();
+  const r = W.build(J, D1, { id: armyId });
+  if (!r.ok) { want('list', 'builder.js', 'builder.js refuses the export: ' + r.errors.join('; ') + ' (the phone would refuse it too)'); return { from: 'builder.js', refused: r.errors }; }
+  const built = Object.assign({}, r.army, { source: army.source });
+  const have = (D1.RAW.ARMIES || []).find(a => a.id === armyId);
+  if (have && JSON.stringify(have) === JSON.stringify(built)) return { from: 'builder.js', same: true };
+  // (this reading's entry is not builder.js's: builder.js's is the list, and the difference is this run's failure)
+  const a = JSON.stringify(have || null), b = JSON.stringify(built); let i = 0; while (i < a.length && a[i] === b[i]) i++;
+  const diff = { at: i, reading: a.slice(Math.max(0, i - 80), i + 80), builder: b.slice(Math.max(0, i - 80), i + 80) };
+  let d2 = fs.readFileSync(DATA, 'utf8');
+  const s0 = d2.indexOf("{\n  id:'" + armyId + "',");
+  if (s0 < 0) { want('list', 'builder.js', 'no entry ' + armyId + ' in data.js to put builder.js’s in'); return { from: 'builder.js', same: false, diff }; }
+  const e0 = d2.indexOf('\n},\n', s0);
+  d2 = d2.slice(0, s0) + lit(built) + d2.slice(e0 + 2);
+  fs.writeFileSync(DATA, d2);
+  for (const sc of [['verify/tables.js', '--write'], ['verify/derive.js', '--write'], ['verify/effects-migrate.js', '--write'], ['verify/build-index.js', '--write']])
+    spawnSync(process.execPath, [path.join(ROOT, sc[0]), sc[1]], { cwd: ROOT, encoding: 'utf8' });
+  want('list', 'builder.js', 'this run’s reading of the list is not builder.js’s entry (at ' + i + ': reading …' + diff.reading + '…, builder.js …' + diff.builder + '…): data.js has builder.js’s; make the two agree');
+  return { from: 'builder.js', same: false, diff };
+})();
+filled.push({ what: 'the list’s entry: ' + (listFrom.from === 'builder.js' ? 'builder.js (WH_BUILDER.build, as the phone builds it)' + (listFrom.same ? ', the same as this reading’s' : '') : 'this file’s reading (' + listFrom.why + ')'), from: listFrom.from });
 fs.writeFileSync(path.join(ROOT, 'verify/out/from-json-' + armyId + '.md'), report());
-fs.writeFileSync(path.join(ROOT, 'verify/out/from-json-' + armyId + '.json'), JSON.stringify({ todo, filled, devs, modified: bsChecked.modified, datasheets: [...dsWant] }, null, 1) + '\n');
-console.log('wrote ' + armyId + ' into data.js: ' + units.length + ' units; ' + todo.length + ' not filled mechanically (verify/out/from-json-' + armyId + '.md)');
+fs.writeFileSync(path.join(ROOT, 'verify/out/from-json-' + armyId + '.json'), JSON.stringify({ todo, filled, devs, modified: bsChecked.modified, datasheets: [...dsWant], list: listFrom }, null, 1) + '\n');
+console.log('wrote ' + armyId + ' into data.js: ' + units.length + ' units; ' + todo.length + ' not filled mechanically (verify/out/from-json-' + armyId + '.md); the list’s entry: ' + listFrom.from);
+if (listFrom.from === 'builder.js' && !listFrom.same) { console.error('from-json: ' + armyId + ': ' + (listFrom.refused ? 'builder.js refuses the export: ' + listFrom.refused.join('; ') : 'this reading’s entry is not builder.js’s (verify/out/from-json-' + armyId + '.json list.diff)')); process.exit(1); }

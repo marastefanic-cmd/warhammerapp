@@ -1,0 +1,123 @@
+[
+ {
+  "where": "review-one-builder · verify/from-json.js (the list itself: builder.js, as on the phone; listFrom, at the end of --write)",
+  "verdict": "ok",
+  "why": "Checked in scratch clones. A builder.js mutation (the tag of a rule-given ability gets ' X') made healybois fail reimport: data.js differs and the run exits 1, while shooty stayed the same. A mutation of from-json's reading of that tag made healybois exit 1 with list.same false, and data.js kept builder.js's entry. So did a mutation of from-json's army reading (pointsUsed +1 for Tyranids). reimport on the branch: 24/24, and the 6 catalogued exports (basic-bitch, healybois, lite-knights, nidzillas, the-exiled-legion, tzeeeeentch) report list.from builder.js with same true. build-parity P1: 6 built byte for byte, 18 copied. 230 checks, 0 failures, after VERIFY_BUILDING=1 node build.js. Before the build, P2 fails only on the branch's stale index.html stamp."
+ },
+ {
+  "where": "review-one-builder-gate · verify/reimport.js (4: CATALOGUED, results[].builder)",
+  "verdict": "ok",
+  "why": "Mutation: from-json's listFrom made to return from 'verify/from-json.js' for every list. data.js then re-imports byte for byte and from-json exits 0, yet reimport fails healybois on check 4 alone ('a catalogued faction's list not built by builder.js … (from verify/from-json.js)'). The gate does not depend on from-json's exit code."
+ },
+ {
+  "where": "review-one-builder-audit · docs/tables.md (The in-app build: One builder); verify/sources/hand/{nidzillas,lite-knights,the-exiled-legion,tzeeeeentch,healybois,basic-bitch}.json",
+  "verdict": "fix",
+  "why": "The field audit of the six hand files holds. But the section opens 'A built-in list of a catalogued faction is made by the same code as a phone import', and that is not true of every list. emperors-chosen and dread-host are Adeptus Custodes (catalogued) lists. They were written from New Recruit PDFs (verify/sources/nr/*.txt, commit 4b68526) and have no nr-json export. builder.js never builds them, and neither reimport nor P1 holds them to what builder.js would give an export of the same list. Fix: say so in the One builder section and list it under known limits (the 6 are the catalogued lists with an export; 2 catalogued lists are PDF-only), or get their exports."
+ },
+ {
+  "where": "review-one-builder-not-retired · verify/from-json.js buildGroup, ids, copies, sort",
+  "verdict": "ok",
+  "why": "Right. from-json's reading still writes the 18 uncatalogued lists. For catalogued lists it feeds tables.js the DATASHEETS facts and is the independent check (the mutations above show both roles)."
+ },
+ {
+  "where": "review-rule-abilities · verify/tables.js (ruleAbilities, meetsTo; build: ruleAbility); builder.js (grantedAbilities, finish); verify/from-json.js; verify/catalog.js; data.js",
+  "verdict": "fix",
+  "why": "The audit is complete. My scan of every DATASHEETS ability against every army rule, detachment rule, enhancement and stratagem text for 'has/have the (following) ability … <name>' found only Protean Purpose on main (Singular Purpose is only named, not given). words.js agrees: the only DATASHEETS abilities whose GW page prints no ability of that name are Protean Purpose ×2 and Exploding Horrors (no page). The move itself is screen-neutral: dmsingle and dmshown over 225 units × shooting/fight × 2 targets give 900/900 identical on main and branch. The snapshot diff is exactly shooty DATASHEETS.abilities 631 → 629. The bug is the condition 'only where the export's unit carries the ability's profile', which is not GW's: Higher Imperatives gives Protean Purpose to every NORN EMISSARY/NORN ASSIMILATOR with no condition. Test, healybois with Talons kept and the PP profile removed from both Norns (or from everything): WH_BUILDER.build and WH_IMPORT.make both return ok with Norn Assimilator and Norn Emissary without Protean Purpose. Nothing refuses, so an ability the list has is silently omitted. In the other direction the condition hides abilities GW gives in current lists. Daughters of the Abyss (Adeptus Custodes army rule): 'Friendly ANATHEMA PSYKANA units with this ability have the following ability: Psychic Null (Aura)'. This is on the Wahapedia Prosecutor and Witchseeker pages and in the lite-knights export's rule text; every such datasheet lists Daughters of the Abyss. Mission Tactics (Ultramarines Deathwatch Support): 'Friendly KILL TEAM units with this ability have the following abilities: Furor Tactics, Malleus Tactics, Purgatus Tactics'. By the commit's own rule these units should carry those rows, and today they get none. They do show the words through the Daughters of the Abyss rule pill and the detachment rule. Fix: builder.js grantedAbilities (and from-json's ruleAbilities use) should add the row wherever the rule is in force and the unit's keywords meet GRANTS.to, independent of the export. Either a missing profile is ignored, or a unit whose export lacks it is refused. This adds rows: see the units in the limits item. The owner or coordinator must accept the screen change, or explicitly decide that a rule pill counts as showing the ability. If the latter, Protean Purpose needs no row of its own either."
+ },
+ {
+  "where": "review-one-builder-limits · docs/tables.md (One builder: known limits)",
+  "verdict": "fix",
+  "why": "Limits 1–4 are acceptable. Each either refuses (1: an unexplained change is refused; 3: from-json's check fails) or keeps today's data as it is (2, 4). Limit 5 is not acceptable as written. It says 'no export, and so no list, shows them on a unit today', but GW gives the abilities in current lists. Psychic Null (Aura): lite-knights Prosecutor Squad and both Witchseeker Squads (catalogued; built by builder.js), plus emperors-chosen and dread-host Prosecutor Squad and Witchseeker Squad (PDF-only Custodes lists). Furor/Malleus/Purgatus Tactics: nerf-when Deathwatch Terminator Squad (Ultramarines, from-json path, same export-gated rule). It also neither refuses nor stays out of use when a Talons export lacks the profile: the Norns silently lose Protean Purpose (above). Add the PDF-only Custodes lists (emperors-chosen, dread-host) as a limit too."
+ },
+ {
+  "where": "review-rule-abilities-2 · builder.js ruleAbilities/ruleAbilitiesOf/ruleOfRow/coreText; from-json RA; tables.js ruleAbilityFails; data.js (round 2/2b, head 391e77a)",
+  "verdict": "fix",
+  "why": "Reviewed in my own clones (S/ru2). What was added is right. The 30 rows that ruleOfRow treats as rule-given are exactly the intended ones: Protean Purpose ×6, Feel No Pain 6+ ×14 (4+5+5), Psychic Null (Aura) ×7, and Furor, Malleus and Purgatus Tactics ×1 each. Their words are verbatim from the Wahapedia cache (Freeblade Company/Knights of Legend, Daughters of the Abyss, Mission Tactics, Higher Imperatives). The FNP row text is RULES['Feel No Pain'], which is the core.txt text. They go only on units with the keyword, and the tags follow the format '<Rule> · …'. The phases are RULE_OPTIONS' derived values, the same values Mission Tactics' own ph shows. They follow the program-wide pattern for attack and defence effects (33 other rows show 'movement:opp, shooting:your'): Overwatch is in the movement phase, and Overwatch in the charge phase is left out, as it is everywhere else. They are not wrong per the rule text. Export independence: with every Protean Purpose or Psychic Null profile removed, WH_BUILDER.build and WH_IMPORT.make both still give the rows. With the profile added to The Swarmlord, or to Trajann, Telemon and Caladius, no row appears. from-json with nerf-when's Tactics stripped still writes the 3 rows, and with Furor Tactics put on Marneus Calgar it adds none. Hand rows on the PDF lists: changing one word of the emperors-chosen Witchseeker row, deleting the dread-host Prosecutor row, changing a tag or changing the phases each makes tables.js fail ('an ability a rule gives'). An invented rule-tagged row fails tables.js on table form. Damage: ru/dm.js gives 900/900 single and 900/900 shown, identical to main. dmSources, main against branch: only Protean Purpose ×6 drops as a unit source. Branch with and without the filter: 30 removals, and each one's rule is still an 'army' source. No such row has boxes. MISSED, which the owner's rule requires: (a) Harbingers of Dread: 'If your Army Faction is CHAOS KNIGHTS, each unit … with this ability gains Dread abilities … The Deathly Terror ability is active for your army from the start of the battle.' infernal-lance and woof-woof are Chaos Knights lists, so the condition is met. Deathly Terror (Aura) is then unconditional for all 11 Harbingers of Dread units (Atrapos, Lancer, Despoiler, Ruinator ×2; Brigand ×3, Executioner, Karnivore ×2). The other Dread abilities are chosen, so they are option-gated. (b) Seductive Gambit (Chaos Daemons, Legion of Excess, a catalogued faction): 'LEGIONES DAEMONICA SLAANESH units from your army have the following ability: **Seductive Gambit:** …' has no GRANTS row. derive.js notAGrant drops it because the ability has the rule's own name. No list takes the detachment, but a phone import of one would silently lack the row. Confirmed: guarding the own-name clause with !m[2] in a scratch copy gives exactly one new GRANTS row ({all:['Faction: Legiones Daemonica','Slaanesh']}), and ruleAbilities then resolves it (tag 'Seductive Gambit', ph charge/fight). (c) First Prince of Chaos (Shadow Legion) opens 'Units from your army have the relevant abilities presented below.' MURDERER'S COWL, PENUMBRAL PUPPETRY, GLOAM ROT, SHADOW'S CARESS and DISCIPLES OF BE'LAKOR are abilities given by keyword (SHADOW LEGION <god> units only), not options to pick. GRANTS treats Penumbral Puppetry's Stealth as option-gated ('while PENUMBRAL PUPPETRY active'), and Dark Pacts as 'this unit'. No list takes it. Other exclusions checked and right per GW's wording: Blood Tithe (spent BTP), Malefic Surge (Empowered, select), Darkness and the other chosen Dread abilities, Shroudpsalm and the unit and enhancement grants. Daughters' FNP 3+ and Aegis' FNP 5+ vs mortal wounds are the rule's own effect on units that carry it, and they show on the Rules line. Note: Mission Tactics says 'KILL TEAM units with this ability', and the Wahapedia Deathwatch Terminator Squad page lists only Combat Doctrines as its army rule, so the grant reads 'this ability' as the detachment rule. Acceptable, but worth a line in the docs. Minor robustness, not blocking: readings.js boxDefences and derive.js defSaidOpt pick a row's boxes by 'any box has opt === name ? that opt : no opt'. A non-core row whose option has no defence box would then be credited with the rule's no-option boxes (for example Daughters' FNP 3+). Decide by row.core instead. FIX: (1) derive.js notAGrant: do not apply the own-name exclusion to a 'the following ability' match; then tables.js --write. (2) Harbingers of Dread: in a list whose faction is CHAOS KNIGHTS, give every unit with Harbingers of Dread a 'Deathly Terror (Aura)' row with tag 'Harbingers of Dread · Aura' and the words from RULE_OPTIONS' table row ('While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.'). Or get an explicit owner ruling that a Dread table ability is not a row. (3) First Prince of Chaos: read the five headed abilities as keyword grants (to SHADOW LEGION + god keyword / UNDIVIDED), or get an owner ruling. Correct the docs either way."
+ },
+ {
+  "where": "review-one-builder-limits-2 · docs/tables.md (One builder; An ability a rule gives; Known limits)",
+  "verdict": "fix",
+  "why": "The opening is now true: the 6 catalogued lists with an export are built by builder.js (P1 6/6 byte for byte, reimport 6 from builder.js), and emperors-chosen and dread-host are named as not built. Old limit 5 is gone and the behaviour matches. The new PDF-only limit is true, and tables.js really holds their rows (mutations above). Two things are not yet true. The 'Today:' list of rules that give abilities leaves out Seductive Gambit (Legion of Excess). The 'left as today' list calls Harbingers of Dread's Dread abilities conditional and First Prince of Chaos's Penumbral Puppetry option-gated. Per GW, Deathly Terror is active from the start of the battle in a Chaos Knights army (infernal-lance and woof-woof meet the condition), and First Prince's headings are given by keyword ('Units from your army have the relevant abilities presented below'). Fix these with the code fixes in review-rule-abilities-2, or state the owner's ruling if it differs."
+ },
+ {
+  "where": "round-2 helpers (7) · verify/out/helpers-todo.json",
+  "verdict": "ok",
+  "why": "Six ability tags are right per the mark rule and GW: 'Higher Imperatives · Once per battle, per unit' (GW prints '(Once per battle, per unit)' before the words), 'Knights of Legend', 'Daughters of the Abyss · Aura', and 'Mission Tactics' ×3. The sources are the verbatim rule or core words. The code item verify/readings.js abilityGaps(u, ab, rule) is correct for every current row: Psychic Null reads Daughters' boxes of opt Psychic Null (fnpPsychic 5), FNP 6+ reads Knights of Legend's no-option fnp 6, and the Tactics have no defence. See the robustness note in review-rule-abilities-2. Approve once the fixes above land, because they will change the judgements."
+ },
+ {
+  "where": "round-2 gate · node verify/run.js (cold, fresh clone at 391e77a, after VERIFY_BUILDING=1 node build.js)",
+  "verdict": "ok",
+  "why": "Every step passes except snapshots (the same 10 files) and helpers (442 judgements, 7 to check). My verify/out/snapshots diff is byte for byte S/snap-r2c.diff (379 changed lines). Every line is explained: the new rows (FNP 6+ ×14, Psychic Null ×7, Tactics ×3) and their short phase labels ('Your Move · Their Shoot · Fight', 'Their Move · Your Shoot · Fight'); Protean Purpose's tag now leads with Higher Imperatives (12 lines plus the 2 uppercase popup headers); the new popups (ability popups, the core rules Feel No Pain, Feel No Pain X+ and Psychic, reached from the rows' bold words); 'IN THIS ARMY' lists now naming those units; the Abilities tab counts (+5, +4, +2, +2, +3, +5, +3, which match the rows); and shooty's data screen (DATASHEETS.abilities 631→629 from round 1, CHECKLIST 506→511 and A|FINGERPRINT 414→419, which are the 5 new distinct rows)."
+ },
+ {
+  "where": "review-rule-abilities-2 (round 3: 15961c8 + e43659e) · builder.js ruleAbilities / armyFactionMet / keywordsOf / ruleAbilitiesOf; derive.js grants, has-core and headed keywords; from-json partRules; reimport 5; build-parity N",
+  "verdict": "ok",
+  "why": "The round-2 fixes and the round-3 findings 1-4 are all in, and each was checked in my own clones (S/ru2). Words: Seductive Gambit, Deathly Terror (Aura) (from Harbingers' table row), the five First Prince headings and Penumbral Puppetry's Stealth (the core rule's text) are verbatim against the Wahapedia cache. Who gets them, scanned over all datasheets with Shadow Legion in force: Murderer's Cowl 13 KHORNE, Penumbral Puppetry plus Stealth 14 TZEENTCH, Gloam Rot 13 NURGLE, Shadow's Caress 13 SLAANESH, Disciples of Be'lakor on Be'lakor and the 11 HERETIC ASTARTES datasheets (with Deep Strike on the HERETIC ASTARTES only), and none on the Daemon Princes of Chaos (their god keyword is chosen in the list). Army Faction rule: only Harbingers of Dread uses it. The same CK datasheets with the faction named anything else get no rows; a unit without the rule on its datasheet's Rules line gets none; allies are not reached, because only the list's own faction's rules are in force. Mutations: an unknown heading keyword (SHADOW LEGION NERGLE) is read as unread and tables.js fails. 'SHADOW LEGION BEASTS OF NURGLE' splits longest first into Shadow Legion + Beasts of Nurgle. Headings the subject reader cannot parse ('LEGIONES DAEMONICA NURGLE', 'THE MASQUE OF SLAANESH') also come out unread, which fails closed: never a guess. The Army Faction changed in the rule text, then tables.js --write, puts Deathly Terror on 7 DATASHEETS rows; words.js fails, and the new build-parity N compare finds all 7 where the old compare found 0 (0 on clean data). has-core reverted: derive.js exits 1 (RULE_OPTIONS stale) and tables.js fails on table form. from-json with Harbingers of Dread stripped from woof-woof's Karnivores in the export now gives all 6 Deathly Terror rows (it gave 4 at 15961c8), and reimport 5 holds this. Phases are the program's: Penumbral Puppetry your Movement, their Shooting, Fight; Darkness your Movement, their Shooting; Shroudpsalm Command, your Movement, their Shooting; Deep Strike grants your Movement. All are right per Stealth's and Deep Strike's own words, and no ability-row label changed. Damage at e43659e: ru/dm.js gives 900/900 single and 900/900 shown, identical to b9f6810. dmSources against main: only Protean Purpose ×6 drops, as before. Notes, not blocking: (a) todo-unify.json's round-2d text does not name the visible Phase checklist change: Darkness (infernal-lance, woof-woof) and Shroudpsalm (Aura) (purge-goes-the-foe, CHECKLIST a|1lx0g6o's option u → shooting:opp) are now listed only under Their Shooting instead of every phase. This is right per GW: Stealth applies when targeted by ranged attacks. Add it to the todo. (b) The branch is not on main 74e26b1 (release 2026-11-04.2: the Basic Bitch update, a catalogued list). The merge needs a re-gate, and P1 and reimport will rebuild basic-bitch."
+ },
+ {
+  "where": "review-one-builder-limits-2 (round 3) · docs/tables.md",
+  "verdict": "ok",
+  "why": "True now. The opening is right (P1 6/6, reimport 24 plus 1 variant). The Today list includes Seductive Gambit, Deathly Terror (Aura) with its Army Faction condition and 'with this ability' read from GW's datasheet Rules line, and the First Prince headings with their inner Stealth and Deep Strike rows. Dark Pacts' exclusion is explained (another faction's army rule, not an ability). The Mission Tactics note and the has-core phases are described, the left-as-today list is now right per GW's wording, and the PDF-only limit holds."
+ },
+ {
+  "where": "round-3 gate · S/ru2/gate4.log (cold, fresh clone at e43659e, VERIFY_BUILDING=1 node build.js first)",
+  "verdict": "ok",
+  "why": "27 steps pass. Only snapshots (13 files) and helpers (8 to check) fail. reimport: '24 … (and 1 changed on purpose, 5)'. build-parity: 243 checks, 0 failures. derive: 1070 agreed labels hold, and not-derivable rose 229→240 (the 11 Deathly Terror rows, which have no phases). Snapshots: the verify/out/snapshots diff equals S/snap-r2d.diff, explained in round 3 (the round-2 rows and popups; Deathly Terror (Aura) ×11 with tag 'Harbingers of Dread · Aura'; Abilities counts infernal-lance 23→28 and woof-woof 21→27; shooty GRANTS 74→81, RULE→ 4→5 / 26→32, CHECKLIST 512, A|FINGERPRINT 420), except for three blocks. infernal-lance and woof-woof Phase checklist: 'Darkness · option of Harbingers of Dread' leaves the 9 phases other than Their Shooting, and each of those 9 phases' active count drops by 1. purge-goes-the-foe, the new file: 'Shroudpsalm (Aura) · option of Canticles of the Omnissiah' likewise stays only under Their Shooting, and the counts drop by 1 in each of the other 9 phases. Cause: has-core reads 'has the **Stealth** ability' with Stealth's words, so the checklist u is shooting:opp instead of none, which listed it everywhere. The other changed CHECKLIST u values (Thunderhawk Insertion, Lord of the Eightbound, Disciple of Khorne, Nazdreg's Know-wotz, Prince of Darkness, Fluxmaster) are on unit abilities that the Phase checklist does not list, so they change no screen. No list takes Shadow Legion or Legion of Excess, so those rows change no screen either."
+ },
+ {
+  "key": "476544f109997d65",
+  "kind": "ability-tag",
+  "where": "healybois · Norn Emissary · Protean Purpose",
+  "verdict": "ok",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
+ },
+ {
+  "key": "f93aa4e5ec22c705",
+  "kind": "ability-tag",
+  "where": "navigator-sounds-op-ngl · Knight Errant · Feel No Pain 6+",
+  "verdict": "ok",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
+ },
+ {
+  "key": "5fca4733e824be55",
+  "kind": "ability-tag",
+  "where": "woof-woof · War Dog Karnivore · Deathly Terror (Aura)",
+  "verdict": "ok",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
+ },
+ {
+  "key": "8747b875b1e8e0a6",
+  "kind": "ability-tag",
+  "where": "dread-host · Witchseeker Squad · Psychic Null (Aura)",
+  "verdict": "ok",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
+ },
+ {
+  "key": "528f00154805564d",
+  "kind": "ability-tag",
+  "where": "nerf-when · Deathwatch Terminator Squad · Furor Tactics",
+  "verdict": "ok",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
+ },
+ {
+  "key": "ea0da321c2e02848",
+  "kind": "ability-tag",
+  "where": "nerf-when · Deathwatch Terminator Squad · Malleus Tactics",
+  "verdict": "ok",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
+ },
+ {
+  "key": "0d6676dbb3ff6525",
+  "kind": "ability-tag",
+  "where": "nerf-when · Deathwatch Terminator Squad · Purgatus Tactics",
+  "verdict": "ok",
+  "why": "The tag names the rule that gives the row first, then GW's limit or Aura, per the owner's mark rule; the source is GW's words (the rule's, or the core rule's for FNP 6+), verbatim against the Wahapedia cache."
+ },
+ {
+  "key": "0bc383a43d0056c0",
+  "kind": "code",
+  "where": "abilityGaps",
+  "verdict": "ok",
+  "why": "abilityGaps(u, ab, rule): a rule-given row is checked against the rule's boxes, of no option for a core grant (decided by whether the row's text is in the rule's own text or table) and otherwise of the option of its name ('(Aura)', case and apostrophes aside). Right for every current row: Psychic Null gets fnpPsychic 5, FNP 6+ gets the no-option fnp 6, Deathly Terror and the Tactics have no defence. readings passes in the gate."
+ }
+]

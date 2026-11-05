@@ -1459,6 +1459,9 @@ for (const a of D.armies.concat(CATALOG)) {
     for (const ab of u.abilities || []) {
       if (ab.who && norm(ab.who) !== norm(u.name)) continue;
       if (enhNames(a).has(norm(ab.name))) continue;
+      // (a row a rule of the list gives the unit, Knights of Legend's Feel No Pain 6+: not the datasheet's; its words are the rule's or the
+      // core rule's, checked with them)
+      if (a.id !== 'catalog' && (() => { const F = (D.factions || {})[a.faction]; return F && require(path.join(__dirname, '..', 'builder.js')).ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab, D); })()) continue;
       if (/^invulnerable save/.test(norm(ab.name))) continue;   // a box ("INVULNERABLE SAVE* 5+ * Against ranged attacks only"), not text
       // (LEADER: GW prints "This model can be attached to the following unit(s):" and a "■ Name" line per unit; the app writes them in one
       // line, "…: BLOODLETTERS, FLAMERS": the same units, compared as a list)

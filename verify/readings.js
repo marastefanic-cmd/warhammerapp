@@ -146,8 +146,16 @@ function readingsOfUnit(u, ab){
 // ids; and the sentences of it listed as not counted (dnc): a defence in them is said, "not counted here: see the rule"
 const DF_OF = { fnp:'fnp', fnpMortal:'fnp', fnpPsychic:'fnp', fnpPsyMortal:'fnp', inv:'invuln', invRanged:'invuln', svSet:'sv-set', svPlus:'save+1', armourPlus:'save+1', t:'t+',
   stealth:'stealth', cover:'stealth', hitMinus:['hit-vs', 'enemy-hit-1'], woundMinus:'wound-vs', apWorse:'ap-worse', dmgMinus:'dmg-1', dmgHalf:'dmg-half', dmg0:'dmg-0' };
-function boxDefences(ab){
-  const o = (D.boxes || {})[KEY.ability(ab)] || {};
+function boxDefences(ab, rule){
+  // (a row a rule of the list gives, Psychic Null (Aura) from Daughters of the Abyss: the rule's boxes of the option of its name)
+  const o0 = rule ? (D.boxes || {})[KEY.rule(rule)] || {} : null;
+  // (a core ability the rule gives, Knights of Legend's Feel No Pain 6+: the rule's boxes of no option)
+  // (by what the row is: a core ability the rule gives, Knights of Legend's Feel No Pain 6+, the core rule's words: the rule's boxes of no
+  // option; else the rule's boxes of the option of its name, "(Aura)", case and apostrophes aside: Deathly Terror for Deathly Terror (Aura))
+  const ap = x => String(x).replace(/[’‘]/g, "'"), isCore = !!rule && !ap(rule.text + (rule.table ? '\n' + rule.table.map(t => t.join(': ')).join('\n') : '')).includes(ap(ab.text));
+  const optN = n => String(n || '').replace(/\s*\(Aura\)$/, '').replace(/[’‘]/g, "'").toLowerCase();
+  const mine = x => isCore ? !x.opt : optN(x.opt) === optN(ab.name);
+  const o = o0 ? { d:(o0.d || []).filter(mine), dnc:(o0.dnc || []).filter(mine) } : (D.boxes || {})[KEY.ability(ab)] || {};
   const ids = new Set((o.d || []).flatMap(b => b.pick ? b.pick.flatMap(p => p.df) : b.df).flatMap(([id]) => [].concat(DF_OF[id] || [])));
   return { ids, nc:(o.dnc || []).map(x => norm(x.quote).replace(/\*\*/g, '')) };
 }
@@ -155,7 +163,7 @@ function boxDefences(ab){
 // per bonus (Warden's Duty's [SUSTAINED HITS 1] and [IGNORES COVER] are two)
 function gapsOf(){
   const out = new Map();   // key -> gap
-  for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) for(const g of abilityGaps(u, ab)){
+  for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) for(const g of abilityGaps(u, ab, ruleOf(a, ab))){
     const key = g.check + '|' + ab.name + '|' + fp(ab.text) + '|' + fp(g.sentence);
     if(!out.has(key)) out.set(key, Object.assign(g, { ability:ab.name, text:ab.text, units:[] }));
     out.get(key).units.push(a.id + '/' + u.id);
@@ -163,7 +171,9 @@ function gapsOf(){
   return out;
 }
 // one ability of one unit: each sentence stating a bonus that no reading of the ability says
-function abilityGaps(u, ab){
+// the rule in force a list's row is given by (builder.js ruleOfRow), or null
+const ruleOf = (a, ab) => { const F = (D.factions || {})[a.faction]; return F ? require(path.join(ROOT, 'builder.js')).ruleOfRow(F, (a.detachments || []).map(k => (F.detachments || {})[k]), ab, D) : null; };
+function abilityGaps(u, ab, rule){
   const found = [];
   if(ab.na) return found;
   const r = readingsOfUnit(u, ab), all = r.attackSaid + ' | ' + r.defSaid;
@@ -177,7 +187,7 @@ function abilityGaps(u, ab){
     // (an attack bonus: the unit's footnotes and the Damage tab's boxes are data.js BOXES, made from these words by script; verify/evidence.js
     // G4 holds every attack effect of them to a box or to its words listed as not counted. Only the defence side is a reading)
     // (a defence is said by a "When targeted" reading, not by an attack footnote that happens to say "damage" or "AP")
-    const bd = boxDefences(ab);
+    const bd = boxDefences(ab, rule);
     if(bd.nc.some(q => q.includes(s.slice(0, 40)))) continue;
     const dmiss = b.def.filter(id => !bd.ids.has(id) && !covers(id, r.defSaid + ' | ' + r.marks.join(' | '), DEFENCE));
     if(dmiss.length){ check = check || 'defence'; miss.push(...dmiss); }

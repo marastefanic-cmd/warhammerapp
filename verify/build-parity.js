@@ -205,6 +205,65 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
       null, r => !r.ok && r.errors.includes('leader attachment The Swarmlord + Hive Tyrant + Tyrant Guard not imported: each bodyguard unit can only have one leader unit attached to it (Core Rules 19.01)'));
     neg('a leader attached as support', 'healybois', j => { unit(j, 'The Swarmlord').associations[0].name = 'Supporting'; },
       ['leader attachment The Swarmlord + Tyrant Guard not imported: GW’s datasheet of The Swarmlord has no Support ability, so it cannot support a unit (Core Rules 19.01)']);
+    // an ability a detachment gives is the list's, never its datasheet's: a Norn Emissary in a list without Talons of the Norn Queen has no
+    // Protean Purpose (even with the export still showing it), with the detachment it has it, and no DATASHEETS row has a rule's ability
+    const noTalons = j => { const F = j.roster.forces[0], det = sels(j).find(s => s.name === 'Detachment');
+      det.selections = det.selections.filter(s => !/Talons/.test(s.name));
+      const enh = s => (s.selections || []).some(c => /^Enhancements/.test(c.group || '') || enh(c));
+      F.selections = F.selections.filter(s => !(s.type !== 'upgrade' && /Norn/.test(s.name) && enh(s)));
+      sels(j).find(s => s.name === 'Force Disposition').selections[0] = { id:'x4', name:'Priority Assets', entryId:'081d-bc07-5d4e-ab22', number:1, type:'upgrade' }; };
+    const pp = r => r.ok ? D.resolve(r.army).units.filter(u => /^Norn /.test(u.name)).map(u => u.name + ':' + u.abilities.some(a => a.name === 'Protean Purpose')) : r.errors;
+    neg('a Norn without Talons of the Norn Queen: no Protean Purpose', 'healybois', noTalons, null, r => JSON.stringify(pp(r)) === JSON.stringify(['Norn Emissary:false']));
+    report.push('N a Norn without Talons of the Norn Queen → ' + JSON.stringify(pp(B.build(((j => (noTalons(j), j))(clone(exp('healybois')))), D, { id:'n', date:'x' }))));
+    ok(JSON.stringify(pp(B.build(exp('healybois'), D, { id:'n', date:'x' })).slice().sort()) === JSON.stringify(['Norn Assimilator:true', 'Norn Emissary:true']), 'N with Talons of the Norn Queen: its Norns have no Protean Purpose');
+    // (names compared as ruleAbilities compares them: "(Aura)", case and apostrophes aside, Deathly Terror (Aura) for the option Deathly Terror)
+    const nmA = n => String(n || '').replace(/\s*\(Aura\)$/, '').replace(/[’‘]/g, "'").toLowerCase();
+    const onRow = Object.entries(D.datasheets).filter(([, S]) => (S.abilities || []).some(a => (D.grants || []).some(g => g.type === 'ability' && nmA(g.grants) === nmA(a.name) && / rule · /.test(g.rule) && !g.option && (D.ruleOptions || []).some(o => o.rule === g.rule && nmA(o.option) === nmA(g.grants))))).map(([k]) => k);
+    ok(!onRow.length, 'N: a DATASHEETS row has an ability an army or detachment rule gives (the list’s, not the datasheet’s): ' + onRow.join(', '));
+    // (the owner's rule: the row comes from the rule and the unit's keywords, never from what the export prints) an export without the
+    // ability's profile still gets the row; a unit without the keyword gets none, even with the profile in its export; the row is marked
+    // with the rule (its tag)
+    const walkP = (s, f) => { f(s); for(const c of s.selections || []) walkP(c, f); for(const c of s.forces || []) walkP(c, f); };
+    const PP = 'Higher Imperatives · Once per battle, per unit';
+    const ppTag = r => r.ok ? D.resolve(r.army).units.filter(u => u.abilities.some(a => a.name === 'Protean Purpose')).map(u => u.name + ':' + u.abilities.find(a => a.name === 'Protean Purpose').tag).sort() : r.errors;
+    neg('an export without the Protean Purpose profile: both Norns still have it', 'healybois', j => { walkP(j.roster, x => { if(x.profiles) x.profiles = x.profiles.filter(p => p.name !== 'Protean Purpose'); }); },
+      null, r => JSON.stringify(ppTag(r)) === JSON.stringify(['Norn Assimilator:' + PP, 'Norn Emissary:' + PP]));
+    neg('the Protean Purpose profile on a unit without the keyword (The Swarmlord): no row', 'healybois', j => { let pr; walkP(j.roster, x => { for(const p of x.profiles || []) if(p.name === 'Protean Purpose' && !pr) pr = p; });
+        const sl = unit(j, 'The Swarmlord'); sl.profiles = (sl.profiles || []).concat([pr]); },
+      null, r => JSON.stringify(ppTag(r)) === JSON.stringify(['Norn Assimilator:' + PP, 'Norn Emissary:' + PP]));
+    // Daughters of the Abyss: Psychic Null (Aura) on Lite Knights' ANATHEMA PSYKANA units only, whatever the export prints
+    const pn = r => r.ok ? D.resolve(r.army).units.filter(u => u.abilities.some(a => a.name === 'Psychic Null (Aura)' && a.tag === 'Daughters of the Abyss · Aura')).map(u => u.name).sort() : r.errors;
+    const PN = ['Prosecutor Squad', 'Witchseeker Squad', 'Witchseeker Squad'];
+    neg('Lite Knights: Psychic Null (Aura) on its ANATHEMA PSYKANA units only', 'lite-knights', j => j, null, r => JSON.stringify(pn(r)) === JSON.stringify(PN));
+    neg('Lite Knights with no Psychic Null profile in the export: the same rows', 'lite-knights', j => { walkP(j.roster, x => { if(x.profiles) x.profiles = x.profiles.filter(p => !/Psychic Null/.test(p.name)); }); }, null, r => JSON.stringify(pn(r)) === JSON.stringify(PN));
+    // a core ability a rule gives (Mindhunger: "Friendly DEATHLEAPER/LICTOR/NEUROLICTOR units have Deep Strike"): GW's name, the core
+    // rule's words as its popup shows them, marked with the rule; only for the keywords; and a name no core rule has is refused
+    { const F = D.factions.tyranids, RA = B.ruleAbilities(D.grants, D.ruleOptions, F, [F.detachments['ambush-predators']], D), ds = RA.rows.find(x => x.name === 'Deep Strike');
+      ok(ds && ds.row.tag === 'Mindhunger' && ds.row.text === D.rules['Deep Strike'] && B.meetsTo(ds.to, D.datasheets['tyranids/lictor'].kw) && !B.meetsTo(ds.to, D.datasheets['tyranids/norn-emissary'].kw),
+        'N a core ability a rule gives: Mindhunger’s Deep Strike ' + JSON.stringify(ds && ds.row));
+      const G2 = D.grants.map(g => g.rule === 'Tyranids · Ambush Predators rule · Mindhunger' ? Object.assign({}, g, { grants:'Deep Striek' }) : g), R2 = B.ruleAbilities(G2, D.ruleOptions, F, [F.detachments['ambush-predators']], D);
+      ok(R2.errors.some(e => /Deep Striek .*no core rule of that name/.test(e.error)), 'N a core ability no core rule has is an error: ' + JSON.stringify(R2.errors)); }
+    // the three the round-2 review found: Seductive Gambit (a rule named as its ability); Harbingers of Dread's Deathly Terror (Aura), from
+    // its table row, for units with the rule and only where the Army Faction is CHAOS KNIGHTS; First Prince of Chaos's headed abilities, by
+    // the keywords their headings name, SHADOW LEGION among them as Thralls of the First Prince gives it
+    { const Fd = D.factions['chaos-daemons'], RG = (F, dets) => B.ruleAbilities(D.grants, D.ruleOptions, F, dets, D), DS = k => D.datasheets[k];
+      const names = (RA, k) => B.ruleAbilitiesOf(RA, DS(k).kw, DS(k).abilities, DS(k).rules).map(x => x.row.name + ' [' + x.row.tag + ']').join(', ');
+      const ex = RG(Fd, [Fd.detachments['legion-of-excess']]), sl = RG(Fd, [Fd.detachments['shadow-legion']]);
+      ok(names(ex, 'chaos-daemons/daemonettes') === 'Seductive Gambit [Seductive Gambit]' && names(ex, 'chaos-daemons/bloodletters') === '', 'N Seductive Gambit: ' + names(ex, 'chaos-daemons/daemonettes') + ' / ' + names(ex, 'chaos-daemons/bloodletters'));
+      ok(names(sl, 'chaos-daemons/bloodletters') === 'Murderer’s Cowl [First Prince of Chaos]' && names(sl, 'chaos-daemons/daemonettes') === 'Shadow’s Caress [First Prince of Chaos]', 'N First Prince of Chaos: ' + names(sl, 'chaos-daemons/bloodletters') + ' / ' + names(sl, 'chaos-daemons/daemonettes'));
+      ok(names(RG(Fd, []), 'chaos-daemons/bloodletters') === '', 'N First Prince of Chaos without Shadow Legion: no row');
+      // (a headed ability's own core grant is a row of its own after it: Penumbral Puppetry's "This unit has **Stealth**", on a TZEENTCH daemon)
+      { const tz = Object.keys(D.datasheets).find(k => k.startsWith('chaos-daemons/') && (DS(k).kw || []).includes('Tzeentch') && !(DS(k).abilities || []).some(a => a.name === 'Stealth'));
+        ok(names(sl, tz) === 'Penumbral Puppetry [First Prince of Chaos], Stealth [First Prince of Chaos]', 'N Penumbral Puppetry and its Stealth on ' + tz + ': ' + names(sl, tz)); }
+      const Fk = D.factions['chaos-knights'], dt = RG(Fk, []), other = RG(Object.assign({}, Fk, { name:'Imperial Knights' }), []);
+      ok(names(dt, 'chaos-knights/war-dog-brigand') === 'Deathly Terror (Aura) [Harbingers of Dread · Aura]' && names(other, 'chaos-knights/war-dog-brigand') === '',
+        'N Deathly Terror (Aura): Chaos Knights ' + names(dt, 'chaos-knights/war-dog-brigand') + '; another Army Faction ' + names(other, 'chaos-knights/war-dog-brigand'));
+      const cut = D.grants.map(g => /First Prince of Chaos/.test(g.rule) && g.grants === 'GLOAM ROT' ? Object.assign({}, g, { to:{ unread:'SHADOW LEGION NERGLE' } }) : g);
+      ok(B.ruleAbilities(cut, D.ruleOptions, Fd, [Fd.detachments['shadow-legion']], D).errors.some(e => /NERGLE.*not read/.test(e.error)), 'N a heading whose keywords are not read is an error'); }
+    // (and its words never guessed: a rule whose words for the ability cannot be found refuses the list, naming it)
+    { const D2 = Object.assign({}, D, { ruleOptions:(D.ruleOptions || []).filter(o => o.option !== 'Psychic Null (Aura)') }), r = B.build(exp('lite-knights'), D2, { id:'n', date:'x' });
+      ok(!r.ok && r.errors.some(e => /Psychic Null \(Aura\) that Daughters of the Abyss gives .*never guessed/.test(e)), 'N an ability whose words cannot be found is refused: ' + JSON.stringify(r.ok ? 'built' : r.errors));
+      report.push('N an ability whose words cannot be found → ' + (r.ok ? 'BUILT' : r.errors[0])); }
   }
 
   // ---- I: the index

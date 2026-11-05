@@ -1,15 +1,15 @@
 {
  "reader": "reader2",
  "counts": {
-  "sources": 1261,
-  "sentences": 2478,
-  "read": 1274,
-  "readWithEffects": 633,
-  "readNoEffect": 641,
-  "unread": 1204,
-  "unreadOutside": 934,
-  "unreadUnparsed": 270,
-  "gwFound": 2342,
+  "sources": 1300,
+  "sentences": 2535,
+  "read": 1288,
+  "readWithEffects": 643,
+  "readNoEffect": 645,
+  "unread": 1247,
+  "unreadOutside": 963,
+  "unreadUnparsed": 284,
+  "gwFound": 2399,
   "gwNotFound": 48,
   "gwShort": 88
  },
@@ -4571,47 +4571,6 @@
    "duration": null,
    "gw": "found"
   },
-  "ds:tyranids/norn-assimilator|Protean Purpose|0": {
-   "owner": "ds:tyranids/norn-assimilator",
-   "ownerName": "Norn Assimilator",
-   "source": "Protean Purpose",
-   "sourceKind": "ability",
-   "idx": 0,
-   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
-   "status": "read",
-   "kind": "activation",
-   "effects": [],
-   "attack": null,
-   "side": null,
-   "reach": null,
-   "conditions": [
-    {
-     "id": "oncePerBattle",
-     "table": "COND"
-    },
-    {
-     "id": "phase",
-     "v": {
-      "phase": "command",
-      "turn": "your"
-     },
-     "table": "own"
-    }
-   ],
-   "duration": null,
-   "gw": "found"
-  },
-  "ds:tyranids/norn-assimilator|Protean Purpose|1": {
-   "owner": "ds:tyranids/norn-assimilator",
-   "ownerName": "Norn Assimilator",
-   "source": "Protean Purpose",
-   "sourceKind": "ability",
-   "idx": 1,
-   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
-   "status": "unread",
-   "reason": "outside-vocabulary:faction mechanic",
-   "gw": "found"
-  },
   "ds:tyranids/norn-emissary|Singular Purpose|0": {
    "owner": "ds:tyranids/norn-emissary",
    "ownerName": "Norn Emissary",
@@ -4859,47 +4818,6 @@
     }
    ],
    "duration": null,
-   "gw": "found"
-  },
-  "ds:tyranids/norn-emissary|Protean Purpose|0": {
-   "owner": "ds:tyranids/norn-emissary",
-   "ownerName": "Norn Emissary",
-   "source": "Protean Purpose",
-   "sourceKind": "ability",
-   "idx": 0,
-   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
-   "status": "read",
-   "kind": "activation",
-   "effects": [],
-   "attack": null,
-   "side": null,
-   "reach": null,
-   "conditions": [
-    {
-     "id": "oncePerBattle",
-     "table": "COND"
-    },
-    {
-     "id": "phase",
-     "v": {
-      "phase": "command",
-      "turn": "your"
-     },
-     "table": "own"
-    }
-   ],
-   "duration": null,
-   "gw": "found"
-  },
-  "ds:tyranids/norn-emissary|Protean Purpose|1": {
-   "owner": "ds:tyranids/norn-emissary",
-   "ownerName": "Norn Emissary",
-   "source": "Protean Purpose",
-   "sourceKind": "ability",
-   "idx": 1,
-   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
-   "status": "unread",
-   "reason": "outside-vocabulary:faction mechanic",
    "gw": "found"
   },
   "ds:tyranids/tyrannofex|Resilient Organism|0": {
@@ -23001,6 +22919,47 @@
    "duration": null,
    "gw": "found"
   },
+  "army:nidzillas/norn-assimilator-synaptoprescience|Protean Purpose|0": {
+   "owner": "army:nidzillas/norn-assimilator-synaptoprescience",
+   "ownerName": "Norn Assimilator",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:nidzillas/norn-assimilator-synaptoprescience|Protean Purpose|1": {
+   "owner": "army:nidzillas/norn-assimilator-synaptoprescience",
+   "ownerName": "Norn Assimilator",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
+   "gw": "found"
+  },
   "army:nidzillas/norn-assimilator-synaptoprescience|Synaptoprescience|0": {
    "owner": "army:nidzillas/norn-assimilator-synaptoprescience",
    "ownerName": "Norn Assimilator",
@@ -23062,6 +23021,47 @@
     }
    ],
    "duration": null,
+   "gw": "found"
+  },
+  "army:nidzillas/norn-assimilator-synaptoprescience-2|Protean Purpose|0": {
+   "owner": "army:nidzillas/norn-assimilator-synaptoprescience-2",
+   "ownerName": "Norn Assimilator",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:nidzillas/norn-assimilator-synaptoprescience-2|Protean Purpose|1": {
+   "owner": "army:nidzillas/norn-assimilator-synaptoprescience-2",
+   "ownerName": "Norn Assimilator",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
    "gw": "found"
   },
   "army:nidzillas/norn-assimilator-synaptoprescience-2|Synaptoprescience|0": {
@@ -23127,6 +23127,47 @@
    "duration": null,
    "gw": "found"
   },
+  "army:nidzillas/norn-emissary-destabilising-predation|Protean Purpose|0": {
+   "owner": "army:nidzillas/norn-emissary-destabilising-predation",
+   "ownerName": "Norn Emissary",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:nidzillas/norn-emissary-destabilising-predation|Protean Purpose|1": {
+   "owner": "army:nidzillas/norn-emissary-destabilising-predation",
+   "ownerName": "Norn Emissary",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
+   "gw": "found"
+  },
   "army:nidzillas/norn-emissary-destabilising-predation|Destabilising Predation|0": {
    "owner": "army:nidzillas/norn-emissary-destabilising-predation",
    "ownerName": "Norn Emissary",
@@ -23189,6 +23230,179 @@
     }
    ],
    "duration": null,
+   "gw": "found"
+  },
+  "army:nidzillas/norn-emissary|Protean Purpose|0": {
+   "owner": "army:nidzillas/norn-emissary",
+   "ownerName": "Norn Emissary",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:nidzillas/norn-emissary|Protean Purpose|1": {
+   "owner": "army:nidzillas/norn-emissary",
+   "ownerName": "Norn Emissary",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-destrier|Feel No Pain 6+|0": {
+   "owner": "army:6-bigs/knight-destrier",
+   "ownerName": "Knight Destrier",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-destrier|Feel No Pain 6+|1": {
+   "owner": "army:6-bigs/knight-destrier",
+   "ownerName": "Knight Destrier",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-errant|Feel No Pain 6+|0": {
+   "owner": "army:6-bigs/knight-errant",
+   "ownerName": "Knight Errant",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-errant|Feel No Pain 6+|1": {
+   "owner": "army:6-bigs/knight-errant",
+   "ownerName": "Knight Errant",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-paladin|Feel No Pain 6+|0": {
+   "owner": "army:6-bigs/knight-paladin",
+   "ownerName": "Knight Paladin",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-paladin|Feel No Pain 6+|1": {
+   "owner": "army:6-bigs/knight-paladin",
+   "ownerName": "Knight Paladin",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-warden|Feel No Pain 6+|0": {
+   "owner": "army:6-bigs/knight-warden",
+   "ownerName": "Knight Warden",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:6-bigs/knight-warden|Feel No Pain 6+|1": {
+   "owner": "army:6-bigs/knight-warden",
+   "ownerName": "Knight Warden",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/canis-rex|Feel No Pain 6+|0": {
+   "owner": "army:4-megas-and-a-destrier/canis-rex",
+   "ownerName": "Canis Rex",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/canis-rex|Feel No Pain 6+|1": {
+   "owner": "army:4-megas-and-a-destrier/canis-rex",
+   "ownerName": "Canis Rex",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/cerastus-knight-atrapos|Feel No Pain 6+|0": {
+   "owner": "army:4-megas-and-a-destrier/cerastus-knight-atrapos",
+   "ownerName": "Cerastus Knight Atrapos",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/cerastus-knight-atrapos|Feel No Pain 6+|1": {
+   "owner": "army:4-megas-and-a-destrier/cerastus-knight-atrapos",
+   "ownerName": "Cerastus Knight Atrapos",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
    "gw": "found"
   },
   "army:4-megas-and-a-destrier/cerastus-knight-atrapos|Bringer of Justice|0": {
@@ -23261,6 +23475,50 @@
    "duration": null,
    "gw": "found"
   },
+  "army:4-megas-and-a-destrier/cerastus-knight-lancer|Feel No Pain 6+|0": {
+   "owner": "army:4-megas-and-a-destrier/cerastus-knight-lancer",
+   "ownerName": "Cerastus Knight Lancer",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/cerastus-knight-lancer|Feel No Pain 6+|1": {
+   "owner": "army:4-megas-and-a-destrier/cerastus-knight-lancer",
+   "ownerName": "Cerastus Knight Lancer",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/knight-crusader|Feel No Pain 6+|0": {
+   "owner": "army:4-megas-and-a-destrier/knight-crusader",
+   "ownerName": "Knight Crusader",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/knight-crusader|Feel No Pain 6+|1": {
+   "owner": "army:4-megas-and-a-destrier/knight-crusader",
+   "ownerName": "Knight Crusader",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
   "army:4-megas-and-a-destrier/knight-crusader|Hunter’s Eye|0": {
    "owner": "army:4-megas-and-a-destrier/knight-crusader",
    "ownerName": "Knight Crusader",
@@ -23323,6 +23581,28 @@
     }
    ],
    "duration": null,
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/knight-destrier|Feel No Pain 6+|0": {
+   "owner": "army:4-megas-and-a-destrier/knight-destrier",
+   "ownerName": "Knight Destrier",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:4-megas-and-a-destrier/knight-destrier|Feel No Pain 6+|1": {
+   "owner": "army:4-megas-and-a-destrier/knight-destrier",
+   "ownerName": "Knight Destrier",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
    "gw": "found"
   },
   "army:4-megas-and-a-destrier/knight-destrier|Sanctuary|0": {
@@ -23721,6 +24001,17 @@
    "reason": "unparsed:treat the result as an unmodified roll of 6 instead",
    "gw": "found"
   },
+  "army:infernal-lance/chaos-cerastus-knight-atrapos|Deathly Terror (Aura)|0": {
+   "owner": "army:infernal-lance/chaos-cerastus-knight-atrapos",
+   "ownerName": "Chaos Cerastus Knight Atrapos",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
   "army:infernal-lance/chaos-cerastus-knight-atrapos|Knight Diabolus|0": {
    "owner": "army:infernal-lance/chaos-cerastus-knight-atrapos",
    "ownerName": "Chaos Cerastus Knight Atrapos",
@@ -23829,6 +24120,17 @@
    "duration": null,
    "gw": "found"
   },
+  "army:infernal-lance/chaos-cerastus-knight-lancer|Deathly Terror (Aura)|0": {
+   "owner": "army:infernal-lance/chaos-cerastus-knight-lancer",
+   "ownerName": "Chaos Cerastus Knight Lancer",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
   "army:infernal-lance/chaos-cerastus-knight-lancer|Blasphemous Engine|0": {
    "owner": "army:infernal-lance/chaos-cerastus-knight-lancer",
    "ownerName": "Chaos Cerastus Knight Lancer",
@@ -23874,6 +24176,17 @@
    "text": "Each time the bearer's unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal wounds.",
    "status": "unread",
    "reason": "outside-vocabulary:mortal wounds",
+   "gw": "found"
+  },
+  "army:infernal-lance/knight-despoiler|Deathly Terror (Aura)|0": {
+   "owner": "army:infernal-lance/knight-despoiler",
+   "ownerName": "Knight Despoiler",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
    "gw": "found"
   },
   "army:infernal-lance/knight-despoiler|Bestial Aspect|0": {
@@ -23949,6 +24262,17 @@
    "text": "While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit.",
    "status": "unread",
    "reason": "unparsed:it can ignore any or all modifiers to its move characteristic and/or to advance rolls made for its unit",
+   "gw": "found"
+  },
+  "army:infernal-lance/knight-ruinator-fleshmetal-fusion|Deathly Terror (Aura)|0": {
+   "owner": "army:infernal-lance/knight-ruinator-fleshmetal-fusion",
+   "ownerName": "Knight Ruinator",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
    "gw": "found"
   },
   "army:infernal-lance/knight-ruinator-fleshmetal-fusion|Fleshmetal Fusion|0": {
@@ -24063,6 +24387,28 @@
    "duration": null,
    "gw": "found"
   },
+  "army:infernal-lance/knight-ruinator|Deathly Terror (Aura)|0": {
+   "owner": "army:infernal-lance/knight-ruinator",
+   "ownerName": "Knight Ruinator",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
+  "army:woof-woof/war-dog-brigand-final-howl-aura|Deathly Terror (Aura)|0": {
+   "owner": "army:woof-woof/war-dog-brigand-final-howl-aura",
+   "ownerName": "War Dog Brigand",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
   "army:woof-woof/war-dog-brigand-final-howl-aura|Final Howl (Aura)|0": {
    "owner": "army:woof-woof/war-dog-brigand-final-howl-aura",
    "ownerName": "War Dog Brigand",
@@ -24141,6 +24487,39 @@
    "tagAura": true,
    "gw": "found"
   },
+  "army:woof-woof/war-dog-brigand|Deathly Terror (Aura)|0": {
+   "owner": "army:woof-woof/war-dog-brigand",
+   "ownerName": "War Dog Brigand",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
+  "army:woof-woof/war-dog-brigand-2|Deathly Terror (Aura)|0": {
+   "owner": "army:woof-woof/war-dog-brigand-2",
+   "ownerName": "War Dog Brigand",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
+  "army:woof-woof/war-dog-executioner|Deathly Terror (Aura)|0": {
+   "owner": "army:woof-woof/war-dog-executioner",
+   "ownerName": "War Dog Executioner",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
   "army:woof-woof/war-dog-executioner|Snarling Rivalry|0": {
    "owner": "army:woof-woof/war-dog-executioner",
    "ownerName": "War Dog Executioner",
@@ -24205,6 +24584,17 @@
    "duration": null,
    "gw": "found"
   },
+  "army:woof-woof/war-dog-karnivore-panoply-of-the-cursed-knights|Deathly Terror (Aura)|0": {
+   "owner": "army:woof-woof/war-dog-karnivore-panoply-of-the-cursed-knights",
+   "ownerName": "War Dog Karnivore",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
+   "gw": "found"
+  },
   "army:woof-woof/war-dog-karnivore-panoply-of-the-cursed-knights|Panoply of the Cursed Knights|0": {
    "owner": "army:woof-woof/war-dog-karnivore-panoply-of-the-cursed-knights",
    "ownerName": "War Dog Karnivore",
@@ -24267,6 +24657,17 @@
     }
    ],
    "duration": null,
+   "gw": "found"
+  },
+  "army:woof-woof/war-dog-karnivore|Deathly Terror (Aura)|0": {
+   "owner": "army:woof-woof/war-dog-karnivore",
+   "ownerName": "War Dog Karnivore",
+   "source": "Deathly Terror (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.",
+   "status": "unread",
+   "reason": "outside-vocabulary:characteristic leadership (worsen)",
    "gw": "found"
   },
   "army:big-demons-baby/daemon-prince-of-khorne|Blade of Endless Bloodshed|0": {
@@ -24649,6 +25050,108 @@
    "who": "Tzaangor Shaman",
    "gw": "found"
   },
+  "army:lite-knights/prosecutor-squad|Psychic Null (Aura)|0": {
+   "owner": "army:lite-knights/prosecutor-squad",
+   "ownerName": "Prosecutor Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
+  "army:lite-knights/witchseeker-squad|Psychic Null (Aura)|0": {
+   "owner": "army:lite-knights/witchseeker-squad",
+   "ownerName": "Witchseeker Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
+  "army:lite-knights/witchseeker-squad-2|Psychic Null (Aura)|0": {
+   "owner": "army:lite-knights/witchseeker-squad-2",
+   "ownerName": "Witchseeker Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
   "army:lite-knights/contemptor-galatus-dreadnought|Memento Moritoi|0": {
    "owner": "army:lite-knights/contemptor-galatus-dreadnought",
    "ownerName": "Contemptor-Galatus Dreadnought",
@@ -24865,6 +25368,113 @@
    ],
    "duration": null,
    "who": "Bladeguard Veteran Squad",
+   "gw": "found"
+  },
+  "army:nerf-when/deathwatch-terminator-squad|Furor Tactics|0": {
+   "owner": "army:nerf-when/deathwatch-terminator-squad",
+   "ownerName": "Deathwatch Terminator Squad",
+   "source": "Furor Tactics",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "If the devastator doctrine is active for your unit, your unit's attacks have [SUSTAINED HITS 1].",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "sus",
+     "v": "1",
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target"
+   },
+   "conditions": [
+    {
+     "id": "abilityActive",
+     "v": "devastator doctrine",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:nerf-when/deathwatch-terminator-squad|Malleus Tactics|0": {
+   "owner": "army:nerf-when/deathwatch-terminator-squad",
+   "ownerName": "Deathwatch Terminator Squad",
+   "source": "Malleus Tactics",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "If the tactical doctrine is active for your unit, your unit's attacks have [LETHAL HITS].",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "lethal",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target"
+   },
+   "conditions": [
+    {
+     "id": "abilityActive",
+     "v": "tactical doctrine",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:nerf-when/deathwatch-terminator-squad|Purgatus Tactics|0": {
+   "owner": "army:nerf-when/deathwatch-terminator-squad",
+   "ownerName": "Deathwatch Terminator Squad",
+   "source": "Purgatus Tactics",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "If the assault doctrine is active for your unit, your unit's attacks that target an enemy unit within 9\" of this unit have [PRECISION].",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "precision",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target"
+   },
+   "conditions": [
+    {
+     "id": "abilityActive",
+     "v": "assault doctrine",
+     "table": "own"
+    },
+    {
+     "id": "targetWithin",
+     "v": {
+      "d": 9,
+      "of": "this unit"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
    "gw": "found"
   },
   "army:the-exiled-legion/skulltaker-bloodletters|Bane-Forged Weapons|0": {
@@ -25319,6 +25929,164 @@
    "reason": "outside-vocabulary:keyword",
    "gw": "found"
   },
+  "army:emperors-chosen/prosecutor-squad|Psychic Null (Aura)|0": {
+   "owner": "army:emperors-chosen/prosecutor-squad",
+   "ownerName": "Prosecutor Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
+  "army:emperors-chosen/witchseeker-squad|Psychic Null (Aura)|0": {
+   "owner": "army:emperors-chosen/witchseeker-squad",
+   "ownerName": "Witchseeker Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
+  "army:dread-host/prosecutor-squad|Psychic Null (Aura)|0": {
+   "owner": "army:dread-host/prosecutor-squad",
+   "ownerName": "Prosecutor Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
+  "army:dread-host/witchseeker-squad|Psychic Null (Aura)|0": {
+   "owner": "army:dread-host/witchseeker-squad",
+   "ownerName": "Witchseeker Squad",
+   "source": "Psychic Null (Aura)",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "Friendly ADEPTUS CUSTODES units within 6\" of this unit have Feel No Pain 5+ against psychic attacks.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnpPsychic",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "aura",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "ADEPTUS CUSTODES"
+     ]
+    },
+    "range": 6,
+    "of": "this unit"
+   },
+   "conditions": [],
+   "duration": null,
+   "tagAura": true,
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/cerastus-knight-atrapos|Feel No Pain 6+|0": {
+   "owner": "army:navigator-sounds-op-ngl/cerastus-knight-atrapos",
+   "ownerName": "Cerastus Knight Atrapos",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/cerastus-knight-atrapos|Feel No Pain 6+|1": {
+   "owner": "army:navigator-sounds-op-ngl/cerastus-knight-atrapos",
+   "ownerName": "Cerastus Knight Atrapos",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
   "army:navigator-sounds-op-ngl/cerastus-knight-atrapos|Bringer of Justice|0": {
    "owner": "army:navigator-sounds-op-ngl/cerastus-knight-atrapos",
    "ownerName": "Cerastus Knight Atrapos",
@@ -25389,6 +26157,28 @@
    "duration": null,
    "gw": "found"
   },
+  "army:navigator-sounds-op-ngl/knight-crusader|Feel No Pain 6+|0": {
+   "owner": "army:navigator-sounds-op-ngl/knight-crusader",
+   "ownerName": "Knight Crusader",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-crusader|Feel No Pain 6+|1": {
+   "owner": "army:navigator-sounds-op-ngl/knight-crusader",
+   "ownerName": "Knight Crusader",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
   "army:navigator-sounds-op-ngl/knight-crusader|Hunter’s Eye|0": {
    "owner": "army:navigator-sounds-op-ngl/knight-crusader",
    "ownerName": "Knight Crusader",
@@ -25451,6 +26241,72 @@
     }
    ],
    "duration": null,
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-defender|Feel No Pain 6+|0": {
+   "owner": "army:navigator-sounds-op-ngl/knight-defender",
+   "ownerName": "Knight Defender",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-defender|Feel No Pain 6+|1": {
+   "owner": "army:navigator-sounds-op-ngl/knight-defender",
+   "ownerName": "Knight Defender",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-destrier|Feel No Pain 6+|0": {
+   "owner": "army:navigator-sounds-op-ngl/knight-destrier",
+   "ownerName": "Knight Destrier",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-destrier|Feel No Pain 6+|1": {
+   "owner": "army:navigator-sounds-op-ngl/knight-destrier",
+   "ownerName": "Knight Destrier",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-errant|Feel No Pain 6+|0": {
+   "owner": "army:navigator-sounds-op-ngl/knight-errant",
+   "ownerName": "Knight Errant",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "This ability always takes the form Feel No Pain X+.",
+   "status": "unread",
+   "reason": "unparsed:this ability always takes the form feel no pain x+",
+   "gw": "found"
+  },
+  "army:navigator-sounds-op-ngl/knight-errant|Feel No Pain 6+|1": {
+   "owner": "army:navigator-sounds-op-ngl/knight-errant",
+   "ownerName": "Knight Errant",
+   "source": "Feel No Pain 6+",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:dice roll result table",
    "gw": "found"
   },
   "army:navigator-sounds-op-ngl/knight-errant|Mysterious Guardian|0": {
@@ -25889,6 +26745,47 @@
    ],
    "gw": "found"
   },
+  "army:healybois/norn-assimilator|Protean Purpose|0": {
+   "owner": "army:healybois/norn-assimilator",
+   "ownerName": "Norn Assimilator",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:healybois/norn-assimilator|Protean Purpose|1": {
+   "owner": "army:healybois/norn-assimilator",
+   "ownerName": "Norn Assimilator",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
+   "gw": "found"
+  },
   "army:healybois/norn-assimilator|Synaptoprescience|0": {
    "owner": "army:healybois/norn-assimilator",
    "ownerName": "Norn Assimilator",
@@ -25950,6 +26847,47 @@
     }
    ],
    "duration": null,
+   "gw": "found"
+  },
+  "army:healybois/norn-emissary|Protean Purpose|0": {
+   "owner": "army:healybois/norn-emissary",
+   "ownerName": "Norn Emissary",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 0,
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "army:healybois/norn-emissary|Protean Purpose|1": {
+   "owner": "army:healybois/norn-emissary",
+   "ownerName": "Norn Emissary",
+   "source": "Protean Purpose",
+   "sourceKind": "unitAbility",
+   "idx": 1,
+   "text": "If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
    "gw": "found"
   },
   "army:simple-but-effective/zodgrod-wortsnagga-runtherd-gretchin|Extra Sneaky|0": {
