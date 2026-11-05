@@ -18,7 +18,7 @@ Ranged weapons
 Melee weapons
 6
 Abilities
-23
+28
 Rules
 Damage calculator
 
@@ -584,6 +584,12 @@ Using Sir Hekhtur
 
 If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed TRANSPORT and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Cerastus Knight Atrapos
 Bringer of Justice
 Atrapos’ Duty
@@ -605,6 +611,12 @@ Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add
 Damaged: 1-10 Wounds Remaining
 
 While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 Bringer of Justice
 Enhancement
@@ -635,6 +647,12 @@ Damaged: 1-10 Wounds Remaining
 
 While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Knight Crusader
 Hunter’s Eye
 Invulnerable Save (5+*)
@@ -660,6 +678,12 @@ In your Movement phase, if this model Remains Stationary, until the end of the t
 Damaged: 1-9 Wounds Remaining
 
 While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 Hunter’s Eye
 Enhancement
@@ -698,6 +722,12 @@ Each time this model makes a ranged attack that targets a unit within range of o
 Damaged: 1-6 Wounds Remaining
 
 While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 Sanctuary
 Enhancement
@@ -810,6 +840,17 @@ Cerastus Knight Atrapos · Bringer of Justice D6+2
 Cerastus Knight Lancer D6+2
 Knight Crusader · Hunter’s Eye D6
 Knight Destrier · Sanctuary D6
+Feel No Pain
+Canis Rex
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+Cerastus Knight Atrapos · Bringer of Justice
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+Cerastus Knight Lancer
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+Knight Crusader · Hunter’s Eye
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+Knight Destrier · Sanctuary
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 Lone Operative
 Canis Rex: Sir Hekhtur only
 Super-Heavy Walker
@@ -2439,6 +2480,12 @@ Using Sir Hekhtur
 
 If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed TRANSPORT and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Rules
 Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Lone Operative (Sir Hekhtur), Knights of Legend
 Stratagems
@@ -2594,6 +2641,12 @@ Their Movement / Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Bringer of Justice
 Enhancement
 Already in A
@@ -2722,6 +2775,12 @@ Your Charge
 Charge · Your turn
 
 You can target this model with the Crushing Impact Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
+
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 Rules
 Deadly Demise D6+2, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
@@ -2882,6 +2941,12 @@ Movement / Shooting · Your turn
 
 In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Hunter’s Eye
 Enhancement
 
@@ -3031,6 +3096,12 @@ Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Sanctuary
 Enhancement
 Already in InSv
@@ -3112,6 +3183,17 @@ Damaged: 1-9 Wounds Remaining
 While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITCanis Rex, Knight Crusader · Hunter’s Eye
+
+Ask about this ability
+
+######## popup ability:4-megas-and-a-destrier|Feel No Pain 6+|This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ABILITY · KNIGHTS OF LEGEND
+
+Feel No Pain 6+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+UNITCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
 
 Ask about this ability
 
@@ -3553,12 +3635,36 @@ Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
 Ask about this rule
 
+######## popup rule:Feel No Pain · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Feel No Pain
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYCanis Rex (in Feel No Pain 6+), Cerastus Knight Atrapos · Bringer of Justice (in Feel No Pain 6+), Cerastus Knight Lancer (in Feel No Pain 6+), Knight Crusader · Hunter’s Eye (in Feel No Pain 6+), Knight Destrier · Sanctuary (in Feel No Pain 6+)
+
+Ask about this rule
+
 ######## popup rule:Feel No Pain 6+ · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
 Feel No Pain 6+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYCanis Rex (in Feel No Pain 6+), Cerastus Knight Atrapos · Bringer of Justice (in Feel No Pain 6+), Cerastus Knight Lancer (in Feel No Pain 6+), Knight Crusader · Hunter’s Eye (in Feel No Pain 6+), Knight Destrier · Sanctuary (in Feel No Pain 6+)
+
+Ask about this rule
+
+######## popup rule:Feel No Pain X+ · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Feel No Pain X+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYCanis Rex (in Feel No Pain 6+), Cerastus Knight Atrapos · Bringer of Justice (in Feel No Pain 6+), Cerastus Knight Lancer (in Feel No Pain 6+), Knight Crusader · Hunter’s Eye (in Feel No Pain 6+), Knight Destrier · Sanctuary (in Feel No Pain 6+)
 
 Ask about this rule
 

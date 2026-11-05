@@ -18,7 +18,7 @@ Ranged weapons
 Melee weapons
 8
 Abilities
-21
+27
 Rules
 Damage calculator
 
@@ -34,7 +34,7 @@ TO DO NOW
 
 Harbingers of Dread · Chaos Knights army rule (first, third and fifth battle rounds)
 Command · Your turn
-1 to do · 5 active
+1 to do · 4 active
 
 TO DO NOW
 
@@ -44,11 +44,10 @@ ACTIVE NOW
 
 Deathly Terror · option of Harbingers of Dread
 Despair · option of Harbingers of Dread
-Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
 Command · Their turn
-1 to do · 5 active
+1 to do · 4 active
 
 TO DO NOW
 
@@ -58,31 +57,28 @@ ACTIVE NOW
 
 Deathly Terror · option of Harbingers of Dread
 Despair · option of Harbingers of Dread
-Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
 Movement · Your turn
-5 active
+4 active
 
 ACTIVE NOW
 
 Deathly Terror · option of Harbingers of Dread
 Despair · option of Harbingers of Dread
-Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
 Movement · Their turn
-5 active
+4 active
 
 ACTIVE NOW
 
 Deathly Terror · option of Harbingers of Dread
 Despair · option of Harbingers of Dread
-Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
 Shooting · Your turn
-1 to do · 7 active
+1 to do · 6 active
 
 TO DO NOW
 
@@ -93,7 +89,6 @@ ACTIVE NOW
 Deathly Terror · option of Harbingers of Dread
 Despair · option of Harbingers of Dread
 Doom · option of Harbingers of Dread
-Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
 Marked Prey · Houndpack Lance
@@ -108,46 +103,42 @@ Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
 Charge · Your turn
-5 active
+4 active
 
 ACTIVE NOW
 
 Deathly Terror · option of Harbingers of Dread
 Despair · option of Harbingers of Dread
-Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
 Charge · Their turn
-5 active
+4 active
 
 ACTIVE NOW
 
 Deathly Terror · option of Harbingers of Dread
 Despair · option of Harbingers of Dread
-Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
 Fight · Your turn
-7 active
+6 active
 
 ACTIVE NOW
 
 Deathly Terror · option of Harbingers of Dread
 Despair · option of Harbingers of Dread
 Doom · option of Harbingers of Dread
-Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
 Marked Prey · Houndpack Lance
 Fight · Their turn
-7 active
+6 active
 
 ACTIVE NOW
 
 Deathly Terror · option of Harbingers of Dread
 Despair · option of Harbingers of Dread
 Doom · option of Harbingers of Dread
-Darkness · option of Harbingers of Dread
 Delirium · option of Harbingers of Dread
 Dominion · option of Harbingers of Dread
 Marked Prey · Houndpack Lance
@@ -595,6 +586,12 @@ Damaged: 1-5 wounds remaining
 
 While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
+Deathly Terror (Aura)
+
+Harbingers of Dread · Aura
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
 Final Howl (Aura)
 Enhancement
 
@@ -619,6 +616,12 @@ Damaged: 1-5 wounds remaining
 
 While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
+Deathly Terror (Aura)
+
+Harbingers of Dread · Aura
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
 War Dog Brigand
 2–4 of 4
 ×3 units
@@ -637,6 +640,12 @@ Damaged: 1-5 wounds remaining
 
 While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
+Deathly Terror (Aura)
+
+Harbingers of Dread · Aura
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
 War Dog Executioner
 Snarling Rivalry
 ×3 units
@@ -651,6 +660,12 @@ Each time this model makes an attack that targets a unit Below Half-strength, ad
 Damaged: 1-5 wounds remaining
 
 While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Deathly Terror (Aura)
+
+Harbingers of Dread · Aura
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
 
 Snarling Rivalry
 
@@ -672,6 +687,12 @@ Damaged: 1-5 wounds remaining
 
 While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
+Deathly Terror (Aura)
+
+Harbingers of Dread · Aura
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
 Panoply of the Cursed Knights
 Enhancement
 
@@ -692,6 +713,12 @@ You can re-roll Advance and Charge rolls made for this model.
 Damaged: 1-5 wounds remaining
 
 While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Deathly Terror (Aura)
+
+Harbingers of Dread · Aura
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
 
 ######## rules · ABILITIES Rules
 Chaos Knights · Reconnaissance
@@ -2361,6 +2388,12 @@ Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
+Deathly Terror (Aura)
+
+Harbingers of Dread · Aura
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
 Final Howl (Aura)
 Enhancement
 
@@ -2490,6 +2523,12 @@ Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
+Deathly Terror (Aura)
+
+Harbingers of Dread · Aura
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
 Rules
 Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
 Stratagems
@@ -2612,6 +2651,12 @@ Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
+Deathly Terror (Aura)
+
+Harbingers of Dread · Aura
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
 Rules
 Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
 Stratagems
@@ -2721,6 +2766,12 @@ This model has a 5+ invulnerable save against ranged attacks.
 Executioner
 
 Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3" of it must take a Battle-shock test.
+
+Deathly Terror (Aura)
+
+Harbingers of Dread · Aura
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
 
 Snarling Rivalry
 
@@ -2841,6 +2892,12 @@ Karnivore
 
 You can re-roll Advance and Charge rolls made for this model.
 
+Deathly Terror (Aura)
+
+Harbingers of Dread · Aura
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
 Panoply of the Cursed Knights
 Enhancement
 
@@ -2960,6 +3017,12 @@ This model has a 5+ invulnerable save against ranged attacks.
 Karnivore
 
 You can re-roll Advance and Charge rolls made for this model.
+
+Deathly Terror (Aura)
+
+Harbingers of Dread · Aura
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
 
 Rules
 Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear

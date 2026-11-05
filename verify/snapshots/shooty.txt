@@ -738,9 +738,9 @@ rules
 RULE_ALIASES 71
 RULE_SRC 7
 CONCEPTS 20
-GRANTS 74
+GRANTS 81
 RULE_OPTIONS 89
-CHECKLIST 506
+CHECKLIST 512
 rule / key → a rule or an ability
 CORE_STRATAGEMS
 10 · used by every list
@@ -928,7 +928,7 @@ a datasheet's melee weapon profiles
 
 MECHANICAL name (New Recruit), range (New Recruit), A (New Recruit), BS (New Recruit), WS (New Recruit), S (New Recruit), AP (New Recruit), D (New Recruit), kw (New Recruit), group (BSData), fireAll (BSData), hunter (New Recruit), carrier (GW)
 
-DATASHEETS.abilities 631 rows
+DATASHEETS.abilities 629 rows
 
 a datasheet's abilities
 
@@ -1187,9 +1187,9 @@ CONCEPTS 20 rows
 MECHANICAL term (GW)
 
 GRANTS
-74 rows · a rule or option giving units an ability or keyword
+81 rows · a rule or option giving units an ability or keyword
 
-RULE→ an army rule (4) or detachment rule (26) in FACTIONS, or a unit’s ability (44) in a list (ARMIES → DATASHEETS)
+RULE→ an army rule (5) or detachment rule (32) in FACTIONS, or a unit’s ability (44) in a list (ARMIES → DATASHEETS)
 
 ONE ROW
 
@@ -1213,7 +1213,7 @@ text
 COMPUTED
 Every column and where it comes from
 7 columns
-GRANTS 74 rows
+GRANTS 81 rows
 
 MECHANICAL rule (computed), option (computed), grants (computed), type (computed), to (computed), while (computed), text (computed)
 
@@ -1255,11 +1255,11 @@ RULE_OPTIONS 89 rows
 MECHANICAL rule (computed), option (computed), text (computed), found (computed), explicit (computed), trigger (computed), used (computed), phases (computed)
 
 CHECKLIST
-506 rows · per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
+512 rows · per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
 
 R|FACTION|NAME→ an army or detachment rule in FACTIONS (92)
 
-A|FINGERPRINT→ an ability, by a fingerprint of its name and words (414), in DATASHEETS
+A|FINGERPRINT→ an ability, by a fingerprint of its name and words (420), in DATASHEETS
 
 ONE ROW: TURBO ENGINE (WAZDAKKA GUTSMEK)
 
@@ -1374,7 +1374,7 @@ one value · the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-04.2
+2026-11-05.1
 
 WHY YOU CAN TRUST THE DATA
 

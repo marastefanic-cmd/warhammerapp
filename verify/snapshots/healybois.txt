@@ -789,7 +789,7 @@ Protean Purpose
 Once per battle, per unit
 Your Command
 
-Once per battle, per unit · Command · Your turn
+Higher Imperatives · Once per battle, per unit · Command · Your turn
 
 (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
 
@@ -823,7 +823,7 @@ Protean Purpose
 Once per battle, per unit
 Your Command
 
-Once per battle, per unit · Command · Your turn
+Higher Imperatives · Once per battle, per unit · Command · Your turn
 
 (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
 
@@ -3060,7 +3060,7 @@ Protean Purpose
 Once per battle, per unit
 Your Command
 
-Once per battle, per unit · Command · Your turn
+Higher Imperatives · Once per battle, per unit · Command · Your turn
 
 (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
 
@@ -3212,7 +3212,7 @@ Protean Purpose
 Once per battle, per unit
 Your Command
 
-Once per battle, per unit · Command · Your turn
+Higher Imperatives · Once per battle, per unit · Command · Your turn
 
 (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
 
@@ -3592,7 +3592,7 @@ UNITHive Tyrant + Tyrant Guard · Parasitic Biomorphology
 Ask about this ability
 
 ######## popup ability:healybois|Protean Purpose|(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection). · HEALYBOIS Healybois
-ABILITY · ONCE PER BATTLE, PER UNIT · COMMAND · YOUR TURN
+ABILITY · HIGHER IMPERATIVES · ONCE PER BATTLE, PER UNIT · COMMAND · YOUR TURN
 
 Protean Purpose
 

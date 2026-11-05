@@ -18,7 +18,7 @@ Ranged weapons
 Melee weapons
 6
 Abilities
-25
+30
 Rules
 Damage calculator
 
@@ -603,6 +603,12 @@ Damaged: 1-10 Wounds Remaining
 
 While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Bringer of Justice
 Enhancement
 Already in A
@@ -638,6 +644,12 @@ Damaged: 1-9 Wounds Remaining
 
 While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Hunter’s Eye
 Enhancement
 Their Move · Your Shoot
@@ -667,6 +679,12 @@ Each time a ranged attack is allocated to an IMPERIAL KNIGHTS model from your ar
 Damaged: 1-9 Wounds Remaining
 
 While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 Knight Destrier
 Invulnerable Save (5+*)
@@ -698,6 +716,12 @@ Damaged: 1-6 Wounds Remaining
 
 While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Knight Errant
 Mysterious Guardian
 Invulnerable Save (5+*)
@@ -723,6 +747,12 @@ Each time this model makes a ranged attack that targets the closest eligible tar
 Damaged: 1-9 Wounds Remaining
 
 While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 Mysterious Guardian
 Enhancement
@@ -859,6 +889,17 @@ Mysterious Guardian: IMPERIAL KNIGHTS model only. (Once per battle, per army) At
 Place this unit in strategic reserves.
 This unit has Deep Strike until the start of your next Shooting phase.
 This unit must make an ingress move in your next Movement phase (including in your first turn).
+Feel No Pain
+Cerastus Knight Atrapos · Bringer of Justice
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+Knight Crusader · Hunter’s Eye
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+Knight Defender
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+Knight Destrier
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+Knight Errant · Mysterious Guardian
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 Leader
 Navigator
 Super-Heavy Walker
@@ -2482,6 +2523,12 @@ Their Movement / Your Shooting / Fight (either turn)
 
 Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Bringer of Justice
 Enhancement
 Already in A
@@ -2651,6 +2698,12 @@ Movement / Shooting · Your turn
 
 In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Hunter’s Eye
 Enhancement
 Their Move · Your Shoot
@@ -2807,6 +2860,12 @@ Selfless Protector
 
 Each time a ranged attack is allocated to an IMPERIAL KNIGHTS model from your army, if that model is not fully visible to every model in the attacking unit because of this Knight Defender model, that model has the Benefit of Cover and a 4+ invulnerable save against that attack.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Rules
 Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
 Stratagems
@@ -2949,6 +3008,12 @@ Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Rules
 Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Knights of Legend
 Stratagems
@@ -3090,6 +3155,12 @@ Your Shooting
 Shooting · Your turn
 
 Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 Mysterious Guardian
 Enhancement
@@ -3264,6 +3335,17 @@ Damaged: 1-9 Wounds Remaining
 While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITKnight Crusader · Hunter’s Eye, Knight Defender, Knight Errant · Mysterious Guardian
+
+Ask about this ability
+
+######## popup ability:navigator-sounds-op-ngl|Feel No Pain 6+|This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost. · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+ABILITY · KNIGHTS OF LEGEND
+
+Feel No Pain 6+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+UNITCerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Defender, Knight Destrier, Knight Errant · Mysterious Guardian
 
 Ask about this ability
 
@@ -3837,12 +3919,36 @@ Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
 Ask about this rule
 
+######## popup rule:Feel No Pain · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Feel No Pain
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice (in Feel No Pain 6+), Knight Crusader · Hunter’s Eye (in Feel No Pain 6+), Knight Defender (in Feel No Pain 6+), Knight Destrier (in Feel No Pain 6+), Knight Errant · Mysterious Guardian (in Feel No Pain 6+)
+
+Ask about this rule
+
 ######## popup rule:Feel No Pain 6+ · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
 CORE RULE
 
 Feel No Pain 6+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice (in Feel No Pain 6+), Knight Crusader · Hunter’s Eye (in Feel No Pain 6+), Knight Defender (in Feel No Pain 6+), Knight Destrier (in Feel No Pain 6+), Knight Errant · Mysterious Guardian (in Feel No Pain 6+)
+
+Ask about this rule
+
+######## popup rule:Feel No Pain X+ · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
+CORE RULE
+
+Feel No Pain X+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice (in Feel No Pain 6+), Knight Crusader · Hunter’s Eye (in Feel No Pain 6+), Knight Defender (in Feel No Pain 6+), Knight Destrier (in Feel No Pain 6+), Knight Errant · Mysterious Guardian (in Feel No Pain 6+)
 
 Ask about this rule
 

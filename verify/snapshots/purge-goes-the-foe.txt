@@ -34,7 +34,7 @@ TO DO NOW
 
 Doctrina Imperatives · Adeptus Mechanicus army rule
 Command · Your turn
-7 to do · 5 active
+7 to do · 4 active
 
 TO DO NOW
 
@@ -50,41 +50,37 @@ ACTIVE NOW
 
 Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
 Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
-Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
 Icon of War (Rod of the War Forge) · Thulia Ghuld
 Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
 Command · Their turn
-5 active
+4 active
 
 ACTIVE NOW
 
 Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
 Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
-Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
 Icon of War (Rod of the War Forge) · Thulia Ghuld
 Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
 Movement · Your turn
-5 active
+4 active
 
 ACTIVE NOW
 
 Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
 Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
-Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
 Icon of War (Rod of the War Forge) · Thulia Ghuld
 Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
 Movement · Their turn
-5 active
+4 active
 
 ACTIVE NOW
 
 Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
 Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
-Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
 Icon of War (Rod of the War Forge) · Thulia Ghuld
 Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
 Shooting · Your turn
-1 to do · 9 active
+1 to do · 8 active
 
 TO DO NOW
 
@@ -97,7 +93,6 @@ Conqueror Imperative · option of Doctrina Imperatives
 Invocation of Machine Vengeance · option of Canticles of the Omnissiah · Belisarius Cawl
 Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
 Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
-Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
 Icon of War (Rod of the War Forge) · Thulia Ghuld
 Protector Protocol · option of Battle Protocols · Cybernetica Datasmith
 Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
@@ -113,27 +108,25 @@ Icon of War (Rod of the War Forge) · Thulia Ghuld
 Omnissiah’s Blessing · Tech-Priest Enginseer
 Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
 Charge · Your turn
-5 active
+4 active
 
 ACTIVE NOW
 
 Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
 Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
-Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
 Icon of War (Rod of the War Forge) · Thulia Ghuld
 Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
 Charge · Their turn
-5 active
+4 active
 
 ACTIVE NOW
 
 Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
 Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
-Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
 Icon of War (Rod of the War Forge) · Thulia Ghuld
 Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
 Fight · Your turn
-10 active
+9 active
 
 ACTIVE NOW
 
@@ -142,13 +135,12 @@ Conqueror Imperative · option of Doctrina Imperatives
 Invocation of Machine Vengeance · option of Canticles of the Omnissiah · Belisarius Cawl
 Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
 Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
-Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
 Icon of War (Rod of the War Forge) · Thulia Ghuld
 Omnissiah’s Blessing · Tech-Priest Enginseer
 Conqueror Protocol · option of Battle Protocols · Cybernetica Datasmith
 Aegis Protocol · option of Battle Protocols · Cybernetica Datasmith
 Fight · Their turn
-10 active
+9 active
 
 ACTIVE NOW
 
@@ -157,7 +149,6 @@ Conqueror Imperative · option of Doctrina Imperatives
 Invocation of Machine Vengeance · option of Canticles of the Omnissiah · Belisarius Cawl
 Mantra of Discipline · option of Canticles of the Omnissiah · Belisarius Cawl
 Binharic Courage (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
-Shroudpsalm (Aura) · option of Canticles of the Omnissiah · Belisarius Cawl
 Icon of War (Rod of the War Forge) · Thulia Ghuld
 Omnissiah’s Blessing · Tech-Priest Enginseer
 Conqueror Protocol · option of Battle Protocols · Cybernetica Datasmith
