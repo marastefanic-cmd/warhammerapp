@@ -1086,6 +1086,9 @@ function compareUnit(army, u, F, fail) {
     // (an enhancement BSData gives only as the weapon it gives, Da Gobshot Thunderbuss: no ability profile; its weapon is checked with
     // the weapons, its words against the detachment by verify/texts.js)
     if (!cands.length && isEnh && F.weapons.some((w) => w.enh && (!whoRoot || w.root === whoRoot) && nn(w.where).includes(nn(spelt || a.name)))) continue;
+    // (a row a rule of the list gives the unit, Psychic Null (Aura) from Daughters of the Abyss: the rule's words, not the datasheet's, so
+    // BSData's entry need not have it; its words are the rule's, checked against GW's by verify/texts.js)
+    if (!cands.length && (() => { const FA = (BOX_D().factions || {})[army.faction]; return FA && require(path.join(__dirname, '..', 'builder.js')).ruleOfRow(FA, (army.detachments || []).map((k) => (FA.detachments || {})[k]), a, BOX_D()); })()) continue;
     if (!cands.length) { fail('ability', a.name, '', `no BSData ability "${a.name}"${a.who ? ' for ' + a.who : ''}${isEnh ? ' (enhancement)' : ''}${a.na ? ' (looked in the whole datasheet)' : ''}`); continue; }
     const best = cands.find((b) => nt(b.text) === nt(a.text)) || cands[0];
     usedA.add(best);

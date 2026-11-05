@@ -32,7 +32,7 @@ const NORMALISATION = [
   'Weapon names: NR "➤" dropped; "[1]"/"[2]" (NR\'s disambiguation of two same-named weapons) dropped; "(xN)" is the app\'s n; " - <unit>" is the app\'s who; "(Hunter: …)" is hunter:true; "A - B" is group A, profile B; a parenthesis lists the abilities, enhancements and detachment rules already applied to the profile: each name must be one of the names in that weapon\'s `from` marks.',
   'Stat rows: " - <unit>" suffix dropped (stat rows are matched by model name); "(xN)" is the app\'s "×N"; a parenthesis naming what is already applied must be one of the names in that row\'s `from` marks; Base compared as printed.',
   'Models: "Nx Name" is the app\'s "N× Name", compared as an ordered list. Options per model line: "Warlord" is warlord:true, "• Leading: X[n]" is leads X, an item that is one of the faction\'s enhancements is the enhancement; an NR option "Group (a, b)" counts as its weapons a and b and "2x Weapon" as Weapon; the remaining items that are weapons printed in the unit\'s weapon tables are that line\'s gear, compared as a set; an item that is not a printed weapon (wargear, e.g. Icon of Khorne) must be on the app\'s model line as "N× Name (Item)".',
-  'Abilities: matched by name and who (" - <unit>" suffix). NR "Name (Tag)" is the app\'s name + tag. The app may add a tag part NR does not print only when it is "Enhancement" on the unit\'s enhancement, the second header of the NR table the ability sits in (e.g. "Capacity"), the first header of a sub-table (e.g. "Crimson King") or words printed in the ability\'s own NR text (e.g. "Once per battle"); the app\'s who may name a sub-table ("Crimson King: pick one").',
+  'Abilities: matched by name and who (" - <unit>" suffix). NR "Name (Tag)" is the app\'s name + tag. The app may add a tag part NR does not print only when it is "Enhancement" on the unit\'s enhancement, the second header of the NR table the ability sits in (e.g. "Capacity"), the first header of a sub-table (e.g. "Crimson King") or words printed in the ability\'s own NR text (e.g. "Once per battle"), or the name of the rule that gives the unit the ability (the app\'s mark: "Higher Imperatives"); the app\'s who may name a sub-table ("Crimson King: pick one"). A row a rule of the list gives the unit (Psychic Null (Aura), Daughters of the Abyss) New Recruit may not print: its words are the rule\'s (verify/texts.js).',
   'GW\'s words over New Recruit\'s (verify/words.js, a mechanical rule): an ability whose words pass verify/words.js (its Wahapedia datasheet page\'s after markup normalisation, or GW\'s own document\'s as verify/deviations-words.json declares) may be printed otherwise by New Recruit, and New Recruit\'s name of it may be one its page spells as GW does (Berserker Frenzy for GW\'s Berzerker Frenzy): listed in the report (gwWords) when no deviation declares it, not failed.',
   'Categories (kw) compared as a set; NR\'s "*from combined unit" marks must each be named in the app\'s kwNote. Rules line compared as a set (duplicates dropped); an NR rule that is a weapon ability counts as present when one of the unit\'s weapons has that keyword in the app.',
   'Army: the page-1 bullets Battle Size, Detachment and Force Disposition are the app\'s battleSize and points, detachments and disposition; every other "Label: value" bullet is the app\'s config, label and value as printed (a bullet with no value, e.g. "Blessings of Khorne Reference", is not a selection).',
@@ -935,7 +935,8 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
     // tag: NR's "(…)" against the app's tag, less the parts the app may add (see NORMALISATION)
     const enhA = au.enhancement && ax.name === nm(au.enhancement);
     let parts = ax.tag ? ax.tag.split(' · ').map(nm) : [];
-    parts = parts.filter(p => !(p === 'Enhancement' && enhA) && !(p === 'Upgrade' && au.upgrade && ax.name === nm(au.upgrade)) && !(sub && (p === nm(na.table) || p === nm(na.col2))) && !(p !== na.paren && lc(na.text).includes(lc(p))));
+    const rg = ruleGiven(army, ax.x);
+    parts = parts.filter(p => !(rg && p === nm(rg.name)) && !(p === 'Enhancement' && enhA) && !(p === 'Upgrade' && au.upgrade && ax.name === nm(au.upgrade)) && !(sub && (p === nm(na.table) || p === nm(na.col2))) && !(p !== na.paren && lc(na.text).includes(lc(p))));
     // "Invulnerable Save (5+*)": the app keeps NR's parenthesis in the name
     const parenInName = na.paren !== null && ax.name === na.full;
     const appParen = parts.length ? parts.join(', ') : null;
@@ -947,7 +948,9 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
     // the report, not failed: gw, below)
     if (!textEq(ax.x.text, na.text)) { fail('abilities[' + key + '].text', appText(ax.x.text).s, nm(na.text)); if (markGw && gwPasses(faction, au, ax.x)) markGw(ax.x.name); }
   }
-  for (const ax of appA.filter(x => !used.has(x))) { chk('abilities'); fail('abilities[' + ax.name + (ax.who ? ' | ' + ax.who : '') + ']', 'present', null); }
+  // (a row a rule of the list gives the unit, Psychic Null (Aura) from Daughters of the Abyss, the app's own by the owner's rule: New Recruit
+  // prints the rule, not the row; its words are the rule's, which verify/texts.js checks)
+  for (const ax of appA.filter(x => !used.has(x))) { chk('abilities'); if (ruleGiven(army, ax.x)) continue; fail('abilities[' + ax.name + (ax.who ? ' | ' + ax.who : '') + ']', 'present', null); }
 
   // keywords ("Categories")
   const cats = nu.cats.filter(c => !/^\*from combined unit$/.test(c));
@@ -1000,11 +1003,18 @@ function compareJsonArmy(D, A, J, out, where) {
 
 // ---------------------------------------------------------------- main
 let NR_GRANTS = [];   // (data.js GRANTS: the rule a kwNote names for a keyword, compareUnit)
+let NR_DATA = null;   // (data.js: the rule in force that gives a list's row, ruleGiven)
+// the rule in force a list's row is given by (builder.js ruleOfRow: its tag names it first, its words are the rule's), or null
+function ruleGiven(army, ab) {
+  const A = typeof army === 'string' ? ((NR_DATA || {}).armies || []).find(a => a.id === army) : army; if (!A || !ab) return null;
+  const F = (NR_DATA.factions || {})[A.faction]; if (!F) return null;
+  return require(path.join(__dirname, '..', 'builder.js')).ruleOfRow(F, (A.detachments || []).map(k => (F.detachments || {})[k]), ab, NR_DATA);
+}
 function main(args) {
   const ctx = { window: {} }; vm.createContext(ctx);
   vm.runInContext(fs.readFileSync(args.data, 'utf8'), ctx);
   const D = ctx.window.WH_DATA;
-  NR_GRANTS = D.grants || [];
+  NR_GRANTS = D.grants || []; NR_DATA = D;
   const enhOf = A => enhNamesOf(D.factions[A.faction]);
   if (args.dump) {
     const A = D.armies.find(x => x.id === args.dump);

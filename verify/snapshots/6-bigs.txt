@@ -18,7 +18,7 @@ Ranged weapons
 Melee weapons
 4
 Abilities
-17
+21
 Rules
 Damage calculator
 
@@ -474,6 +474,12 @@ Damaged: 1-6 Wounds Remaining
 
 While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Knight Errant
 Invulnerable Save (5+*)
 
@@ -498,6 +504,12 @@ Each time this model makes a ranged attack that targets the closest eligible tar
 Damaged: 1-9 Wounds Remaining
 
 While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 Knight Paladin
 ×2 units
@@ -525,6 +537,12 @@ Damaged: 1-9 Wounds Remaining
 
 While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Knight Warden
 Warlord
 Invulnerable Save (5+*)
@@ -550,6 +568,12 @@ Each time this model makes a ranged attack that targets an enemy unit (excluding
 Damaged: 1-9 Wounds Remaining
 
 While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 ######## rules · ABILITIES Rules
 Imperial Knights · Purge the Foe
@@ -646,6 +670,15 @@ Knight Warden D6
 Devastating Wounds
 Knight Warden
 Thin Their Ranks: Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
+Feel No Pain
+Knight Destrier
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+Knight Errant
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+Knight Paladin
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+Knight Warden
+Feel No Pain 6+: This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 Lance
 Knight Paladin
 Paladin’s Duty (No ARMIGER models in this list): While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.
@@ -2098,6 +2131,12 @@ Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Rules
 Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Knights of Legend
 Stratagems
@@ -2236,6 +2275,12 @@ Your Shooting
 Shooting · Your turn
 
 Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 Rules
 Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
@@ -2385,6 +2430,12 @@ Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Rules
 Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
 Stratagems
@@ -2533,6 +2584,12 @@ Their Movement / Your Shooting
 
 Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
 
+Feel No Pain 6+
+
+Knights of Legend
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
 Rules
 Deadly Demise D6, Code Chivalric, Super-Heavy Walker, Devastating Wounds, Bondsman (no unit in this list it applies to), Knights of Legend
 Stratagems
@@ -2585,6 +2642,17 @@ Damaged: 1-9 Wounds Remaining
 While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITKnight Errant, Knight Paladin, Knight Warden
+
+Ask about this ability
+
+######## popup ability:6-bigs|Feel No Pain 6+|This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost. · 6 BIGS 6 bigs
+ABILITY · KNIGHTS OF LEGEND
+
+Feel No Pain 6+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+UNITKnight Destrier, Knight Errant, Knight Paladin, Knight Warden
 
 Ask about this ability
 
@@ -2975,12 +3043,36 @@ Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
 Ask about this rule
 
+######## popup rule:Feel No Pain · 6 BIGS 6 bigs
+CORE RULE
+
+Feel No Pain
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYKnight Destrier (in Feel No Pain 6+), Knight Errant (in Feel No Pain 6+), Knight Paladin (in Feel No Pain 6+), Knight Warden (in Feel No Pain 6+)
+
+Ask about this rule
+
 ######## popup rule:Feel No Pain 6+ · 6 BIGS 6 bigs
 CORE RULE
 
 Feel No Pain 6+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYKnight Destrier (in Feel No Pain 6+), Knight Errant (in Feel No Pain 6+), Knight Paladin (in Feel No Pain 6+), Knight Warden (in Feel No Pain 6+)
+
+Ask about this rule
+
+######## popup rule:Feel No Pain X+ · 6 BIGS 6 bigs
+CORE RULE
+
+Feel No Pain X+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYKnight Destrier (in Feel No Pain 6+), Knight Errant (in Feel No Pain 6+), Knight Paladin (in Feel No Pain 6+), Knight Warden (in Feel No Pain 6+)
 
 Ask about this rule
 

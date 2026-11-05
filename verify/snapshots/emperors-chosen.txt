@@ -18,7 +18,7 @@ Ranged weapons
 Melee weapons
 10
 Abilities
-21
+23
 Rules
 Damage calculator
 
@@ -755,6 +755,13 @@ Shooting · Your turn
 In your Shooting phase, you can select one visible enemy unit within 18" of this unit. That unit is detected:
 
 While a unit is detected, that unit has +3" detection range.
+Psychic Null (Aura)
+Your Move · Their Shoot · Fight
+
+Daughters of the Abyss · Aura · Your Movement / Their Shooting / Fight (either turn)
+
+Friendly ADEPTUS CUSTODES units within 6" of this unit have Feel No Pain 5+ against psychic attacks.
+
 Witchseeker Squad
 Sanctified Flames
 Your Shooting
@@ -762,6 +769,13 @@ Your Shooting
 Shooting · Your turn
 
 In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.
+
+Psychic Null (Aura)
+Your Move · Their Shoot · Fight
+
+Daughters of the Abyss · Aura · Your Movement / Their Shooting / Fight (either turn)
+
+Friendly ADEPTUS CUSTODES units within 6" of this unit have Feel No Pain 5+ against psychic attacks.
 
 Vertus Praetors
 Quicksilver Execution
@@ -990,6 +1004,11 @@ Caladius Annihilator Grav-tank 5+*
 Leader
 Trajann Valoris leads Allarus Custodians
 Shield-Captain leads Sentinel Guard Sodality
+Psychic
+Prosecutor Squad
+Psychic Null (Aura): Friendly ADEPTUS CUSTODES units within 6" of this unit have Feel No Pain 5+ against psychic attacks.
+Witchseeker Squad
+Psychic Null (Aura): Friendly ADEPTUS CUSTODES units within 6" of this unit have Feel No Pain 5+ against psychic attacks.
 Scouts
 Witchseeker Squad 7"
 
@@ -3088,6 +3107,13 @@ Shooting · Your turn
 In your Shooting phase, you can select one visible enemy unit within 18" of this unit. That unit is detected:
 
 While a unit is detected, that unit has +3" detection range.
+Psychic Null (Aura)
+Your Move · Their Shoot · Fight
+
+Daughters of the Abyss · Aura · Your Movement / Their Shooting / Fight (either turn)
+
+Friendly ADEPTUS CUSTODES units within 6" of this unit have Feel No Pain 5+ against psychic attacks.
+
 Rules
 Daughters of the Abyss, Feel No Pain 3+*
 Stratagems
@@ -3167,6 +3193,13 @@ Your Shooting
 Shooting · Your turn
 
 In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.
+
+Psychic Null (Aura)
+Your Move · Their Shoot · Fight
+
+Daughters of the Abyss · Aura · Your Movement / Their Shooting / Fight (either turn)
+
+Friendly ADEPTUS CUSTODES units within 6" of this unit have Feel No Pain 5+ against psychic attacks.
 
 Rules
 Scouts 7", Daughters of the Abyss, Feel No Pain 3+*
@@ -3476,6 +3509,17 @@ Praesidium Shield
 Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.
 
 UNITShield-Captain + Sentinel Guard Sodality
+
+Ask about this ability
+
+######## popup ability:emperors-chosen|Psychic Null (Aura)|Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**. · EMPEROR’S CHOSEN Emperor’s Chosen
+ABILITY · DAUGHTERS OF THE ABYSS · AURA · YOUR MOVEMENT / THEIR SHOOTING / FIGHT (EITHER TURN)
+
+Psychic Null (Aura)
+
+Friendly ADEPTUS CUSTODES units within 6" of this unit have Feel No Pain 5+ against psychic attacks.
+
+UNITProsecutor Squad, Witchseeker Squad
 
 Ask about this ability
 
@@ -4142,6 +4186,17 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
 
 IN THIS ARMYShield-Captain
+
+Ask about this rule
+
+######## popup rule:Psychic · EMPEROR’S CHOSEN Emperor’s Chosen
+CORE RULE
+
+Psychic
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYProsecutor Squad (in Psychic Null (Aura)), Witchseeker Squad (in Psychic Null (Aura))
 
 Ask about this rule
 

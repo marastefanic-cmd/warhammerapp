@@ -1,0 +1,86 @@
+[
+ {
+  "kind": "review-one-builder",
+  "where": "verify/from-json.js (the list itself: builder.js, as on the phone; listFrom, at the end of --write)",
+  "judgement": {
+   "check": "For a catalogued faction (builder.js catalogued on the data.js just written), from-json --write ends by running verify/build-index.js --write, then WH_BUILDER.build(export, WH_DATA, { id }) with WH_EFFECTS set on the window builder.js keeps its tables on (from-json's loadD made one). The list's ARMIES entry is builder.js's with from-json's source line. Where from-json's own entry (its reading, through verify/tables.js --write) is byte for byte builder.js's, data.js is left as it is; else builder.js's entry replaces it (literal, then tables.js, derive.js, effects-migrate.js, build-index.js --write), the difference is listed (todo, list.diff) and the run exits 1. A refusal by builder.js is listed and exits 1 (data.js keeps from-json's reading). --refs and a faction with no catalogue keep from-json's entry (list.from verify/from-json.js, with why). Checked: reimport of all 24 exports byte for byte; a builder.js changed on purpose (army name + '!') made basic-bitch's re-import fail with data.js holding builder.js's entry and the run exiting 1."
+  },
+  "source": {
+   "gate": "verify/reimport.js (reimport step), verify/build-parity.js P1",
+   "commit": "One builder, step 2"
+  }
+ },
+ {
+  "kind": "review-one-builder-gate",
+  "where": "verify/reimport.js (4: CATALOGUED, results[].builder)",
+  "judgement": {
+   "check": "reimport decides which lists are of a catalogued faction itself (builder.js catalogued on the checked-in data.js) and fails a catalogued list whose verify/out/from-json-<list>.json does not say list.from builder.js with list.same true (no list field: a from-json.js that no longer calls builder.js; refused; or from-json's reading not builder.js's), and a list of another faction not from from-json.js's own reading. So neither code path can change a catalogued list's entry without the other: a builder.js change fails P1 (build-parity) and reimport; a from-json.js change fails reimport."
+  },
+  "source": {
+   "gate": "verify/reimport.js",
+   "commit": "One builder, step 4"
+  }
+ },
+ {
+  "kind": "review-one-builder-audit",
+  "where": "docs/tables.md (The in-app build: One builder); verify/sources/hand/{nidzillas,lite-knights,the-exiled-legion,tzeeeeentch,healybois,basic-bitch}.json",
+  "judgement": {
+   "check": "Every hand-file field of the six catalogued lists, and where a phone import gets it: source (nidzillas, lite-knights): a fact of the list itself (the day its PDF was exported), the phone's says when it was imported, P1 and P2 leave the source line aside. units.<id>.why, gists.<id>.by, refs[].why: reasons, nothing shown. units.<id>.texts (Malign Presence, Will of the Hive Mind, One Head Looks Back, Altered Reality, Daemonic Allegiance) and units.<id>.notes (Malign Presence, Seed Spore Mines, Split, Horrors are Pink…): on the DATASHEETS rows builder.js reads (the texts also declared in verify/deviations-words.json; Chaos Daemons' also in verify/sources/hand/catalog-chaos-daemons.json texts). refs (tzeeeeentch: Blue Horrors, Brimstone Horrors): builder.js's sheetRefs finds both from GW's words, on DATASHEETS rows (the Brimstone Horrors row exists only from this hand file: no BSData entry). gists (gist, gistOf, note) and armyRules FAQs: FACTIONS rows, every list's. No catalogued hand file has ids, short, kwOnly, partialRules, stats or kw."
+  },
+  "source": {
+   "commit": "One builder, step 1"
+  }
+ },
+ {
+  "kind": "review-one-builder-not-retired",
+  "where": "verify/from-json.js buildGroup, ids, copies, sort",
+  "judgement": {
+   "check": "Not retired, and why: from-json's own list reading still serves the 18 uncatalogued lists, and for a catalogued list it is what verify/tables.js --write derives DATASHEETS from (the rows' list-decided facts: deviations-catalog's, the hand texts and notes, the stats rows' part by the models lines' gear), so it cannot go before those facts are the catalogue's alone. For a catalogued list it no longer writes the entry: it is the independent check the gate holds byte for byte to builder.js's."
+  },
+  "source": {
+   "commit": "One builder, step 3"
+  }
+ },
+ {
+  "kind": "review-rule-abilities",
+  "where": "verify/tables.js (ruleAbilities, meetsTo; build: ruleAbility); builder.js (grantedAbilities, finish); verify/from-json.js (the ability a rule of the list gives); verify/catalog.js (rowDiffs ruleAb); data.js ARMIES nidzillas, healybois, DATASHEETS tyranids/norn-emissary, tyranids/norn-assimilator; verify/deviations-catalog.json; verify/reader2/readings2.json",
+  "judgement": {
+   "check": "The coordinator's rule: an ability an army rule or detachment rule gives is the list's, never a DATASHEETS row's. Which: an army rule of the list's faction or a rule of one of its detachments whose GRANTS row is type ability, with no option and no condition (while null), to units of keywords (an object), and whose words RULE_OPTIONS defines (the option of that name). Scanned every DATASHEETS row two ways (GRANTS of type ability; and every faction rule, enhancement and stratagem text for \"has / have the (following) ability … <name>\"): Protean Purpose on tyranids/norn-emissary and tyranids/norn-assimilator was the only one. tables.js --write now keeps it off the rows and writes it in full on the 6 entries (nidzillas 4, healybois 2), its tag, ph, turn and text as they were; the resolved lists are byte for byte the old ones (all 26), so no screen changes (snapshots). In the old form (--expand) data.js has no GRANTS / RULE_OPTIONS, so tables.js reads them with verify/derive.js ruleTables; --expand then --write gives data.js back. from-json writes the row from the rule (RULE_OPTIONS words and phases; tag: the limit GW prints before the words, \"(Once per battle, per unit)\") instead of dropping it as not on the page. builder.js adds it the same way, but only where the export's unit carries the ability's profile, so Psychic Null (Aura) and Deathwatch Support's Tactics, which match the pattern but no export shows on a unit, are not added (the screens stay as they are). catalog.js counts it as the list's (as an enhancement's); the two deviations-catalog entries for it are gone (stale). reader2's readings2.json was regenerated (KODEX_APP, as the gate runs it): the Protean Purpose sources moved from the 2 rows to the 6 entries, the same readings; agree: 447 boxes, as before."
+  },
+  "source": {
+   "gate": "verify/build-parity.js N (a Norn without Talons of the Norn Queen; with it; no row has a rule's ability), verify/tables.js, verify/catalog.js, verify/reimport.js, verify/agree.js",
+   "commit": "One builder, step 5"
+  }
+ },
+ {
+  "kind": "review-one-builder-limits",
+  "where": "docs/tables.md (One builder: known limits)",
+  "judgement": {
+   "check": "Accepted by the coordinator as known limits, documented. (1) BUILD_INDEX.marks is learned from the built-in lists' marks: a phone export with a change no agreed box explains and no built-in list marked is refused. (2) Hand texts and notes, and the Brimstone Horrors row, are datasheet facts sourced from a list's hand file: the phone has them while those rows are in DATASHEETS. Moving them to the catalogue hand files needs notes and refs in verify/from-bsdata.js. (3) from-json's WARGEAR OPTIONS models-line split and its stats-row naming where the list has a PDF are not builder.js's: no catalogued list needs either, and one that does fails from-json's check. (4) The 18 uncatalogued lists stay on from-json's reading. (5) A rule's ability is added by builder.js only where the export carries it on the unit (Psychic Null, Deathwatch Tactics: no list shows them today)."
+  },
+  "source": {
+   "commit": "One builder, step 5"
+  }
+ },
+ {
+  "kind": "review-rule-abilities-2",
+  "where": "builder.js (ruleAbilities, ruleAbilitiesOf, ruleOfRow, finish); verify/from-json.js (RA: the abilities a rule of the list gives); verify/tables.js (ruleAbilities, ruleAbilityFails, the gate); verify/derive.js, verify/effects-migrate.js, verify/readings.js, verify/bsdata.js, verify/words.js, verify/nr.js, verify/texts.js, verify/evidence.js, app.html dmSources (a rule-given row is the rule's words); verify/build-parity.js N; data.js ARMIES nidzillas, healybois, lite-knights, nerf-when, emperors-chosen, dread-host; docs/tables.md",
+  "judgement": {
+   "check": "Round 2, the owner's binding decision on findings A-C of result-unify.json. Every ability an army or detachment rule in force gives units of some keywords \"the following ability/abilities\" (GRANTS type ability, no option, while null) is its own row on the unit, derived from GW's rule text and the unit's datasheet keywords and never from the export: one function, builder.js ruleAbilities, called by builder.js, from-json, tables.js and catalog.js. Words: RULE_OPTIONS' option text found in the rule's own text right after the ability's bold name exactly once (apostrophes aside, the rule's characters quoted: the Tactics keep GW's ’); else builder.js refuses a list with a unit that meets the rule, from-json lists it, and verify/tables.js fails the gate (for every detachment of every faction). Mark: the tag names the rule first (\"Higher Imperatives · Once per battle, per unit\", \"Daughters of the Abyss · Aura\", \"Mission Tactics\"), as an enhancement's tag names Enhancement; phases RULE_OPTIONS'; place after the part's datasheet abilities, before an enhancement's. New rows: Psychic Null (Aura) on lite-knights Prosecutor Squad and both Witchseeker Squads, emperors-chosen and dread-host Prosecutor Squad and Witchseeker Squad; Furor, Malleus and Purgatus Tactics on nerf-when's Deathwatch Terminator Squad; Protean Purpose's tag now names Higher Imperatives (nidzillas 4, healybois 2). Such a row's words are the rule's (builder.js ruleOfRow): effects-migrate and derive make no boxes, options or grants from it (Damage: dmsingle/dmshown 900/900 identical to f7a22d7), readings and derive's defence coverage read the rule's boxes of that option, derive holds its phases to RULE_OPTIONS', bsdata.js does not ask BSData's entry for it. Negative tests (build-parity N): healybois with every Protean Purpose profile removed still gives both Norns the row; the profile added to The Swarmlord gives it none; Lite Knights with and without the Psychic Null profiles: the row on its 3 ANATHEMA PSYKANA units only; RULE_OPTIONS without the option refuses the list naming it. Round 2b (coordinator, the owner's \"show everything, marked\"): a core ability such a rule gives by keyword with no condition is a row too, GW's name, the core rule's words as its popup shows them (builder.js coreText, the app's ruleFor), tag the rule's name: Knights of Legend's Feel No Pain 6+ on every Knight of 6-bigs (4), 4-megas-and-a-destrier (5) and navigator-sounds-op-ngl (5); Heralds of the Throne's Fights First, Mindhunger's Deep Strike and First Prince of Chaos's Deep Strike resolve but no list takes their detachments. Left as today: option grants while active (Psychic Null's FNP 5+, Enraged Abjuration, Might of Khorne, Darkness, Penumbral Puppetry), conditional ones (Dread: if your Army Faction is CHAOS KNIGHTS), 'this unit / model' grants (Malefic Surge's FNP 6+, Dark Pacts), unit- and enhancement-made grants. No box, option or grant is made from these rows (Damage 900/900 identical to f7a22d7). verify/reader2/readings2.json regenerated (KODEX_APP, the coordinator's go-ahead; the reader2 code and pins untouched). The Damage tab (app.html dmSources) takes no rule-given row as a source of its own (the rule is one already; else Feel No Pain 6+ was listed twice under \"not counted\"); verify/evidence.js expects the same, verify/damage-node.js gives the app's code WH_BUILDER. verify/texts.js does not look for a rule-given row on a Faction Pack datasheet. Full gate: all pass but snapshots (10 lists: the rows above, their ability and core-rule popups, the Abilities tab counts, shooty's data screen DATASHEETS.abilities 631→629, CHECKLIST 506→511, A|FINGERPRINT 414→419) and helpers (6 ability tags and verify/readings.js abilityGaps to check). Round 2c (the round-2 review's three missed grants): (1) Seductive Gambit (Legion of Excess): derive.js notAGrant keeps a rule's own name when it is \"the following ability\" (!m[2]); tables.js --write adds exactly that GRANTS row. (2) Harbingers of Dread: a grant whose only condition is the Army Faction is decided by the list's faction (builder.js armyFactionMet); derive.js reads \"The Deathly Terror ability is active for your army from the start of the battle\" with \"each unit from your army with this ability\" as a grant of that table row to the units whose Rules line has the rule (to 'units from your army with this ability'); rows: Deathly Terror (Aura), tag 'Harbingers of Dread · Aura', the table row's words, on all 11 units of infernal-lance and woof-woof; the other Dread abilities, chosen in the battle, stay out. (3) First Prince of Chaos: \"Units from your army have the relevant abilities presented below\" and each heading's \"**SHADOW LEGION <X>** units only.\" are keyword grants (derive.js, after every rule's grants, each keyword one the program knows, split longest first, else { unread } and the gate fails); the unit's keywords count those a rule in force gives (Thralls' SHADOW LEGION, builder.js keywordsOf); the row's words are the heading's lines up to the next heading, its name GW's capitals in the case of other names; Penumbral Puppetry's Stealth GRANTS row has no option condition now. No list takes Legion of Excess or Shadow Legion. (5) readings.js boxDefences and derive.js defSaidOpt choose the rule's boxes by what the row is (a core ability: no option; else the option of its name). No BOXES change; ru/dm.js 900/900 identical to f7a22d7; readings2.json regenerated. build-parity N: Seductive Gambit, First Prince of Chaos (with and without the detachment, an unread heading), Deathly Terror (Chaos Knights and another Army Faction). Round 2d (round-3 review): (1) from-json reads a part's Rules line for \"units with this ability\" from GW's Wahapedia datasheet page (CORE and army rules), else the DATASHEETS row, never the export; verify/reimport.js (5) re-imports Woof Woof with Harbingers of Dread stripped from its Karnivores in the export and gets data.js byte for byte. (2) derive.js has-core: a core ability the words say a unit has (\"This unit has **Stealth**\") is read with that core ability's own words, except for a label and where a rule of the table reads it already (Lone Operative); GW's capitalisation (\"psychic abilities\" is no Psychic). Changed: RULE_OPTIONS phases of Penumbral Puppetry (fight → your movement, their shooting, fight), Darkness (none → your movement, their shooting) and Shroudpsalm (Aura) (command → command, your movement, their shooting); CHECKLIST u of Thunderhawk Insertion, Lord of the Eightbound, Disciple of Khorne (none/x → movement:your), Nazdreg's Know-wotz (+movement:your), Prince of Darkness (x → shooting:opp), Fluxmaster (+shooting:opp), Mindhunger (x → movement:your), First Prince of Chaos (rule u movement:your; Penumbral Puppetry +shooting:opp) and Harbingers of Dread's Darkness. No ability row label changes (derive's 1070 agreed labels hold). (3) A heading's own core grant is its own row right after it: Penumbral Puppetry's Stealth (GRANTS to SHADOW LEGION TZEENTCH, no option), Disciples of Be’lakor's Deep Strike moved after it; Dark Pacts is an army rule (not an ability) of another faction: not a row, said in the docs. (4) build-parity N compares GRANTS and option names with \"(Aura)\" stripped; N: Penumbral Puppetry then Stealth on a TZEENTCH daemon."
+  },
+  "source": {
+   "gate": "verify/tables.js (ruleAbilityFails), verify/build-parity.js N, verify/reimport.js, verify/derive.js, verify/readings.js, verify/bsdata.js",
+   "commit": "One builder, round 2 / round 2b"
+  }
+ },
+ {
+  "kind": "review-one-builder-limits-2",
+  "where": "docs/tables.md (The in-app build: One builder; An ability a rule gives; Known limits)",
+  "judgement": {
+   "check": "Round 2. The One builder paragraph now opens with the 6 catalogued lists that have an export, and says the 2 catalogued Custodes lists made from New Recruit PDFs (emperors-chosen, dread-host) are not built by builder.js. Old limit 5 (rule abilities only where the export carries them) is gone: the behaviour changed. New limit: emperors-chosen and dread-host have no export, so neither reimport nor P1 holds them to builder.js; the owner keeps them; verify/tables.js holds their rule-given rows like every list's. Round 2c: the \"Today:\" list adds Seductive Gambit, Deathly Terror (Aura) and First Prince of Chaos's five headed abilities; \"left as today\" now names only the chosen, selected and in-words grants (Dread abilities chosen in the battle, Blood Tithe's, Malefic Surge's, Penumbral Puppetry's Stealth and Disciples' Dark Pacts within their rows' words); a line on Mission Tactics' \"KILL TEAM units with this ability\" read as the detachment rule."
+  },
+  "source": {
+   "commit": "One builder, round 2"
+  }
+ }
+]
