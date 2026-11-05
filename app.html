@@ -4655,6 +4655,8 @@ const boxOpts = (b, name) => { if(!b) return []; const n = [];
 // (the lines a source's footnotes are drawn as: [{ opt, text }], text null where the column has none for it, a gap the gate fails, verify/lines.js LM)
 function sumLinesOf(items){
   const nm = x => x.kind ? x.from : x.name;   // (a footnote's source is its from; a When targeted line's its name, its from the giver)
+  // (a stratagem's line is its gist, one line: its options are no lines of their own)
+  if(items[0].strat || items[0].a === 'strat') return [{ opt:'', text:items[0].short || null }];
   const P = sumParse(items[0].short), out = [], opts = [], plain = items.some(x => !(x.box ? boxOpts(x.box, nm(x)) : x.opts || []).length);
   for(const x of items) for(const o of x.box ? boxOpts(x.box, nm(x)) : x.opts || []) if(!opts.includes(o)) opts.push(o);
   if(plain) for(const l of P.plain.length ? P.plain : [null]) out.push({ opt:'', text:l });
@@ -5093,7 +5095,7 @@ function defenceItems(u){
   for(const x of res){ if(x.blanket){ x.t = x.name; continue; }
     const text = x.sum ? x.short : x.ncLine ? x.short || FN_NC : x.text;
     if(x.sum){ x.t = x.from || x.leader ? 'Granted by: ' + (x.from || x.leader) + ' - ' + text + ' (' + x.name + ')' : x.cp ? x.cp + 'CP ' + x.name + ': ' + stratLead((x.S || {}).s) + text : text + ' (' + x.name + ')'; continue; }
-    x.t = (x.rl && !x.when && x.text === x.name) || (x.ncLine && x.a === 'rule') ? x.name : x.from ? ['Granted by: ' + x.from + ' -', x.when ? x.when + ':' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ')
+    x.t = (x.rl && !x.when && x.text === x.name) || (x.ncLine && x.a === 'rule' && !x.short) ? x.name : x.from ? ['Granted by: ' + x.from + ' -', x.when ? x.when + ':' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ')
       : x.ncLine ? [x.cp ? x.cp + 'CP' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ') : [x.cp ? x.cp + 'CP' : '', x.name + ':', x.when ? x.when + ':' : '', text].filter(Boolean).join(' '); }
   return res;
 }
@@ -5111,7 +5113,7 @@ function defLine(x, u){
   // (a rule of its Rules line that is its defence, "Feel No Pain 5+": its name)
   if(x.rl && !w && x.text === x.name) return who + '<b>' + linkTo(x.a, x.v, x.name) + '</b>';
   // (a rule whose words are not counted here: its name alone; another source's: its short summary, AI-labelled, opening its rule: ncHtml)
-  if(x.blanket || (x.ncLine && x.a === 'rule')) return who + linkTo(x.a, x.v, x.name);
+  if(x.blanket || (x.ncLine && x.a === 'rule' && !x.short)) return who + linkTo(x.a, x.v, x.name);
   // (what opens its rule: another unit's ability its rule, not that unit, which its "Granted by" opens)
   const ra = x.abv ? 'ability' : x.a, rv = x.abv || x.v, text = x.sum || x.ncLine ? ncSum([ra, rv], x.short) : esc(x.text);
   // (a source's summary: its conditions are in it)

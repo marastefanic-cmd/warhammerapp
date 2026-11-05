@@ -386,7 +386,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           out.push(['riled-assault', u.id, 'no “Riled up: [ASSAULT] (Waaagh!)” footnote']);
         const when = (document.querySelector('#view .def.tgt') || {}).innerText || '';
         // (another unit's defence box that reaches it: under When targeted with that unit's name, verify/defence.js DL; drawn)
-        for(const x of defenceItems(u)) if(x.from && !when.includes('Granted by: ' + x.from + ' - ')) out.push(['guard-shown', u.id, x.name + ' (Granted by: ' + x.from + ') is not under When targeted']);
+        for(const x of defenceItems(u)) if(x.from && !when.includes('Granted by: ' + x.from + ' - ') && !when.includes('Granted by: ' + x.from + ' (enhancement) - ')) out.push(['guard-shown', u.id, x.name + ' (Granted by: ' + x.from + ') is not under When targeted']);
         // - lines-placed: every line the program places on this unit (its sources under its weapons, per named option; When targeted; under its
         //   profile; its enemy lines) is drawn on its sheet, with its source's name: none dropped (the owner's rule: completeness is mechanical)
         { const drawn = sel => [...document.querySelectorAll(sel)].map(x => x.textContent.replace(/\s+/g, ' '));
