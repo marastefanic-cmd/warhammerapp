@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '15d37fb029';</script>
+<script>window.WH_BUILD = 'c3a92851aa';</script>
 </head>
 <body>
 <style>
@@ -1113,12 +1113,12 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=15d37fb029"></script>
-<script src="data.js?v=15d37fb029"></script>
-<script src="calc.js?v=15d37fb029"></script>
-<script src="effects.js?v=15d37fb029"></script>
-<script src="builder.js?v=15d37fb029"></script>
-<script src="import.js?v=15d37fb029"></script>
+<script src="verified.js?v=c3a92851aa"></script>
+<script src="data.js?v=c3a92851aa"></script>
+<script src="calc.js?v=c3a92851aa"></script>
+<script src="effects.js?v=c3a92851aa"></script>
+<script src="builder.js?v=c3a92851aa"></script>
+<script src="import.js?v=c3a92851aa"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -2320,7 +2320,10 @@ function dmSources(A, au){
     const reach = !own && !g && A.units.some(x => hasRule(x, r.name)) && ((dmBoxesOf(DM_KEY.r(r)) || {}).b || []).some(b => b.reach && dmReaches(b.reach, au));
     if(own || g || reach) put({ grp:'army', name:r.name, rule:r.name, key:DM_KEY.r(r), text:dmRuleText(r), ar:r, via:g, reachOnly:reach }); }
   for(const r of inArmy(A, () => unitDetRules(au))) put({ grp:'army', name:r.name, rule:r.name, key:DM_KEY.r(r), text:dmRuleText(r) });
-  for(const ab of au.abilities || []) if(!/^Damaged: /i.test(ab.name)) put({ grp:'unit', name:ab.name, key:DM_KEY.a(ab), text:ab.text, ab, src:au });
+  // (not a row a rule of the list gives the unit, Knights of Legend's Feel No Pain 6+: its words are the rule's, a source above already,
+  // whose boxes decide what is counted; builder.js ruleOfRow)
+  const ruleRow = ab => window.WH_BUILDER && window.WH_BUILDER.ruleOfRow(F, (A.detachments || []).map(k => (F.detachments || {})[k]), ab, D);
+  for(const ab of au.abilities || []) if(!/^Damaged: /i.test(ab.name) && !ruleRow(ab)) put({ grp:'unit', name:ab.name, key:DM_KEY.a(ab), text:ab.text, ab, src:au });
   for(const w of [].concat(au.ranged || [], au.melee || [])) for(const k of w.kw || []){ const n = Object.keys(D.rules).find(r => r.toLowerCase() === String(k).toLowerCase());
     if(n && dmBoxesOf(DM_KEY.c(n, D.rules[n]))) put({ grp:'unit', name:n, key:DM_KEY.c(n, D.rules[n]), text:D.rules[n], core:true }); }
   for(const r of au.rules || []){ if(!/\d/.test(r) || D.rules[r]) continue; const t = dmCoreText(r); if(t && dmBoxesOf(DM_KEY.c(r, t))) put({ grp:'unit', name:r, key:DM_KEY.c(r, t), text:t, core:true }); }
