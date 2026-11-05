@@ -515,12 +515,18 @@ function extract(src, ctx){
   // (and any other sentence with words of these numbers no box, no not-counted entry reads: listed not counted, never silent; about saving
   // throws or attacks against the unit, the defence side's)
   for(const x of unread(src, [boxes, nc, dfn.d, dfn.dnc, st, snc])){ const n = norm(x), u = us.find(y => quoteKey(y.s) === quoteKey(x));
-    if(/\bsav(?:e|ing throw)s?\b|\bsave rolls?\b/.test(n) || DEFENCE.concat(DEF_CTX).some(re => re.test(n)) || (u && (defenceLead(u) || enemyLeadThat(u, n)))) dfn.dnc.push({ quote:x, why:E.DNC.unread.why });
+    if(/\bsav(?:e|ing throw)s?\b|\bsave rolls?\b/.test(n) || DEFENCE.concat(DEF_CTX).some(re => re.test(n)) || (u && (defenceLead(u) || enemyLeadThat(u, n)))){ dfn.dnc.push({ quote:x, why:E.DNC.unread.why });
+      // (one sentence about its own Hit or Wound roll and a saving throw for it, "after a Hit roll, a Wound roll or a saving throw is made
+      // for this model" (Altered Reality, Pledge of Unholy Fortune, Fates in Flux): its attacks' side too, not counted there either)
+      if(OWN_ROLL.test(n) && !ATTACKED.test(n)) nc.push({ quote:x, why:'its words are read by no catalogue effect', atk:true }); }
     else nc.push(Object.assign({ quote:x, why:'its words are read by no catalogue effect' }, /\[[a-z]|\bweapons?\b|\bmakes? an? (?:ranged |melee )?attacks?\b/.test(n) ? { atk:true } : {})); }
   return Object.assign({ boxes:shape(boxes, src), nc, reach:reachOf(V, src.type === 'strat' ? '' : src.text || ''), both }, em ? { embarked:{ until:em[1] } } : {}, riled ? { riled:true } : {},
     dfn.d.length ? { d:dfn.d } : {}, dfn.dnc.length ? { dnc:dfn.dnc } : {}, dfn.dreach ? { dreach:dfn.dreach } : {}, st.length ? { st } : {}, snc.length ? { snc } : {});
 }
 
+// (a roll the unit makes for its own attacks, named beside a saving throw; not one of an enemy's attacks against it)
+const OWN_ROLL = /\b(?:after|just after)\b[^.]*\b(?:a |an )?hit roll, (?:a |an )?wound roll\b[^.]*\bsaving throw\b[^.]*\b(?:is made|made|making)\b|\bjust after making a hit roll, a wound roll or a saving throw\b/;
+const ATTACKED = /\battacks? (?:that|which) targets?\b|\btargeted\b|\ballocated to\b|\byour opponent\b|\btheir army\b/;
 // ---- the sentences of a source with words of the numbers (hit, wound, AP, damage, saves, Feel No Pain, OC, Move, a weapon ability) that no
 // box or not-counted entry of it quotes (each list's quotes, a pick's and a part's too): verify/coverage.js silent holds BOXES to the same,
 // with its own words

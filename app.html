@@ -1629,7 +1629,7 @@ function unitMods(u, kind){
     const giver = S.grp === 'other' ? fnGiver(S, u) : '';
     // (drawn as ncHtml: a rule's name alone, else its name and its short summary, another unit's "Granted by")
     if(!S.damaged && (fell || (S.grp !== 'other' && (o.nc || []).some(x => x.atk && !x.unconfirmed))) && !out.some(x => x.key === S.key && x.ncLine)) out.push(Object.assign({ kind:'all', when:'', note:FN_NC + (giver ? ' (' + giver + ')' : ''), who:'', from:S.name, key:S.key, box:null, ncLine:true, short:srcShort(S, 'atk'), opts:[...new Set(fellOpts)] }, S.core ? { core:true } : {},
-      S.rule ? { rule:S.rule } : {}, S.strat ? { strat:S.strat, cp:S.cp } : {}, S.src && S.src !== u ? { src:S.src, giver } : {}));
+      S.rule ? { rule:S.rule } : {}, S.strat ? { strat:S.strat, cp:S.cp } : {}, S.src && S.src !== u ? { src:S.src, giver } : S.ab && S.ab.who && u.leads && charsOf(u).some(c => c.name === S.ab.who) ? { leader:S.ab.who } : {}));
   }
   return out;
 }
@@ -4661,18 +4661,31 @@ function sumLinesOf(items){
   // (a stratagem's line is its gist, one line: its options are no lines of their own)
   if(items[0].strat || items[0].a === 'strat') return [{ opt:'', text:items[0].short || null }];
   const P = sumParse(items[0].short), out = [], opts = [], plain = items.some(x => !(x.box ? boxOpts(x.box, nm(x)) : x.opts || []).length);
+  // (a source whose boxes are for different weapons, its column a line per weapon, "<weapon> ⇒ …": the line of each weapon of its boxes here,
+  // under that weapon's name, docs/summaries.md 36; Blistering Salvoes)
+  const wk = x => String(x).toLowerCase().replace(/[’']/g, "'"), wsc = x => ((x.box || {}).scope || {}).weapon || '';
+  const wkeys = [...P.opts.keys()].filter(k => items.some(x => wsc(x) && wk(wsc(x)) === wk(k)));
+  if(wkeys.length){ const seen = new Set();
+    return items.filter(x => wsc(x) && !seen.has(wk(wsc(x))) && seen.add(wk(wsc(x)))).map(x => { const k = [...P.opts.keys()].find(k => wk(k) === wk(wsc(x)));
+      return { opt:k || wsc(x), wp:x.who || x.weapon || wsc(x), text:k ? P.opts.get(k) : null }; }); }
   for(const x of items) for(const o of x.box ? boxOpts(x.box, nm(x)) : x.opts || []) if(!opts.includes(o)) opts.push(o);
   if(plain) for(const l of P.plain.length ? P.plain : [null]) out.push({ opt:'', text:l });
   for(const o of opts) out.push({ opt:o, text:P.opts.has(o) ? P.opts.get(o) : null });
   return out;
 }
+// (a leader's box for its own model only, no weapon of it named, on the sheet of the unit it leads: "<model> only:" after its "Granted by",
+// docs/summaries.md 46: Praesidium Shield's −1 Damage, Moment Shackle's 3+ invulnerable save)
+const modelOnly = (x, u) => { const sc = (x.box || {}).scope || {}, who = x.leader || '';
+  return who && sc.models === 'model' && !sc.weapon && charsOf(u).some(c => c.name === who) ? '<b class="mo">' + esc(who) + ' only:</b> ' : ''; };
 function sumHtml(items, u, hasHunter){
   const m = items[0], t = modTarget(m, u);
   const hunt = items.find(x => x.hunter) && hasHunter ? ' (the (+' + Object.values(items.find(x => x.hunter).hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '';
-  const by = m.giver ? grantedBy(m.src, m.giver, m.from) : m.leader ? grantedBy({ id:u.id }, m.leader, m.from) : '';
-  // (a rule for one weapon: the weapon's name before it, docs/summaries.md 36)
-  const wp = items.every(x => x.who && x.who === m.who && x.box && x.box.scope && x.box.scope.weapon) ? esc(m.who) + ': ' : '';
-  return sumLinesOf(items).map((l, i) => '<div class="mod">' + by + wp + (l.text ? ncSum(t, l.text) : esc(FN_NC)) + (i ? '' : hunt) + ' <span class="from">(' + modFrom(m, u) + ')</span></div>').join('');
+  const by = m.giver ? grantedBy(m.src, m.giver, m.from) : m.leader ? grantedBy({ id:u.id }, m.leader, m.from) + modelOnly(m, u) : '';
+  // (a rule for one weapon: the weapon's name before it, docs/summaries.md 36; a weapon whose row shows the change too, its row's name)
+  const wn = x => x.who || x.weapon || '';
+  const wp = items.every(x => wn(x) && wn(x) === wn(m) && x.box && x.box.scope && x.box.scope.weapon) ? esc(wn(m)) + ': ' : '';
+  const rn = riledNote(u, items);
+  return sumLinesOf(items).map((l, i) => '<div class="mod">' + by + (l.wp ? esc(l.wp) + ': ' : wp) + (l.text ? ncSum(t, l.text) : esc(FN_NC)) + rn + (i ? '' : hunt) + ' <span class="from">(' + modFrom(m, u) + ')</span></div>').join('');
 }
 function ncHtml(m, u){
   const t = modTarget(m, u);
@@ -4703,7 +4716,8 @@ function weaponBlock(it, keys, mods, u){
     const changed = keys.filter(k => vm.set[k] != null).map(k => KEY_LABEL[k] + ' ' + vm.set[k]).join(', ');
     // (its source's summary, as every line: the changed values the row shows, then the summary)
     return row(named(w0.name, w0.n), cells) + kwl(w0) +
-      '<div class="varc"><b>' + esc(changed) + '</b> ' + (sumMode(vm) ? (vm.giver ? grantedBy(vm.src, vm.giver, vm.from) : vm.leader ? grantedBy({ id:u.id }, vm.leader, vm.from) : '') + sumLinesOf([vm]).map(l => l.text ? ncSum(modTarget(vm, u), l.text) : esc(FN_NC)).join(' · ') : esc(vm.when) + (vm.note ? ', ' + esc(vm.note) : '')) + ' <span class="from">(' + modFrom(vm, u) + ')</span></div>';
+      // (a summary says the change itself: "Granted by" first, then the summary, no chip of the row's change before them)
+      '<div class="varc">' + (sumMode(vm) ? (vm.giver ? grantedBy(vm.src, vm.giver, vm.from) : vm.leader ? grantedBy({ id:u.id }, vm.leader, vm.from) : '') + sumLinesOf([vm]).map(l => l.text ? ncSum(modTarget(vm, u), l.text) : esc(FN_NC)).join(' · ') + riledNote(u, [vm]) : '<b>' + esc(changed) + '</b> ' + esc(vm.when) + (vm.note ? ', ' + esc(vm.note) : '')) + ' <span class="from">(' + modFrom(vm, u) + ')</span></div>';
   }
   if(it.group){
     // Hunter weapons: the profile depends on the target; rules that add to Hunter attacks are built in
@@ -4746,7 +4760,7 @@ function stratModLines(det, list, u, hasHunter){
     const cond = shared ? m.when.slice(shared.length).replace(/^, /, '') : m.when;
     // (its summary, once: its short, else its gist)
     // ("<cp>CP <name>: <summary> AI")
-    if(sumMode(m)){ if(said.has(m.strat)) return ''; said.add(m.strat); return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + stratLead(allStratagems().find(x => x.id === m.strat)) + ncSum(['strat', m.strat], m.short) + '</div>'; }
+    if(sumMode(m)){ if(said.has(m.strat)) return ''; said.add(m.strat); return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + stratLead(allStratagems().find(x => x.id === m.strat)) + ncSum(['strat', m.strat], m.short) + riledNote(u, list.filter(x => x.strat === m.strat)) + '</div>'; }
     if(m.ncLine) return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + ncSum(['strat', m.strat], m.short) + '</div>';
     return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + (m.scope ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) +
       (cond ? (/^vs\b/i.test(cond) ? ' ' : ', ') + esc(cond) : '') + (m.hunter && hasHunter ? ' (the (+' + Object.values(m.hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '') + '</div>';
@@ -4768,6 +4782,9 @@ function modGroupLines(mods, u, hasHunter){
     if(m0.giver && g.items.every(m => m.giver === m0.giver && m.from === m0.from))
       return '<div class="mod">' + grantedBy(m0.src, m0.giver) + (g.when ? '<b>' + riledWhen(esc(g.when), u) + ':</b> ' : '') + g.items.map(m => (m.scope ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) +
         (m.hunter && hasHunter ? ' (the (+' + Object.values(m.hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '')).join(' · ') + ' <span class="from">(' + modFrom(m0, u) + ')</span></div>';
+    // (a core rule whose conditions are only its words, Plunging Fire: its name first, then its effect, "when the rule applies", not
+    // "If (see the rule)"; a core rule has no summary, docs/summaries.md 32)
+    if(g.items.length === 1 && m0.core && g.when === FN_IF) return '<div class="mod"><b>' + modFrom(m0, u) + ':</b> ' + (m0.who ? esc(m0.who) + ' ' : '') + esc(m0.note) + ' <span class="tw">(when the rule applies)</span></div>';
     const named = g.items.length === 1 && g.when.indexOf(g.items[0].from) >= 0 ? g.items[0] : null;
     const when = riledWhen(named ? esc(g.when).replace(esc(named.from), modFrom(named, u)) : esc(g.when), u);
     return '<div class="mod">' + (g.items.every(m => m.scope === g.items[0].scope) && g.items[0].scope ? '<i class="sc">' + g.items[0].scope + '</i>' : '') +
@@ -5097,7 +5114,7 @@ function defenceItems(u){
   // (as defLine draws it: a rule's name alone; a summary for its words; another unit's "Granted by")
   for(const x of res){ if(x.blanket){ x.t = x.name; continue; }
     const text = x.sum ? x.short : x.ncLine ? x.short || FN_NC : x.text;
-    if(x.sum){ x.t = x.from || x.leader ? 'Granted by: ' + (x.from || x.leader) + ' - ' + text + ' (' + x.name + ')' : x.cp ? x.cp + 'CP ' + x.name + ': ' + stratLead((x.S || {}).s) + text : text + ' (' + x.name + ')'; continue; }
+    if(x.sum){ x.t = x.from || x.leader ? 'Granted by: ' + (x.from || x.leader) + ' - ' + (!x.from && modelOnly(x, u) ? x.leader + ' only: ' : '') + text + ' (' + x.name + ')' : x.cp ? x.cp + 'CP ' + x.name + ': ' + stratLead((x.S || {}).s) + text : text + ' (' + x.name + ')'; continue; }
     x.t = (x.rl && !x.when && x.text === x.name) || (x.ncLine && x.a === 'rule' && !x.short) ? x.name : x.from ? ['Granted by: ' + x.from + ' -', x.when ? x.when + ':' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ')
       : x.ncLine ? [x.cp ? x.cp + 'CP' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ') : [x.cp ? x.cp + 'CP' : '', x.name + ':', x.when ? x.when + ':' : '', text].filter(Boolean).join(' '); }
   return res;
@@ -5107,6 +5124,11 @@ function defenceItems(u){
 const alwaysRiled = u => { const ab = u.abilities.find(x => (BOXES_AGREED[DM_KEY.a(x)] || {}).riled && !naReason(x));
   return ab ? (ab.who && u.leads ? esc(ab.who) + ' · ' : '') + linkTo('ability', abilityKey(ab), ab.name) + ': always riled up' : ''; };
 const riledWhen = (html, u) => { const ar = /^Riled up\b/.test(html) && alwaysRiled(u); return ar ? html.replace(/^Riled up/, 'Riled up (' + ar + ')') : html; };
+// (a summary line of a box with a riled-up condition, on a unit always riled up: the program's "(always riled up: <model> · <rule>)" after it,
+// as riledWhen says it on a condition; docs/summaries.md 21)
+const boxRiled = b => !!b && JSON.stringify(b).includes('["riled"');
+const riledNote = (u, items) => { if(!items.some(x => x && (x.riled || boxRiled(x.box)))) return ''; const ar = alwaysRiled(u);
+  return ar ? ' <span class="arl">(always riled up: ' + ar.replace(/: always riled up$/, '') + ')</span>' : ''; };
 // one "When targeted" line on the datasheet: the model of an attached unit it is on as a small label, its name in bold (a stratagem with its
 // CP), opening the rule (another unit's: that unit), its phases and conditions muted, then its defences; the unit that gives it after
 function defLine(x, u){
@@ -5118,12 +5140,12 @@ function defLine(x, u){
   // (a rule whose words are not counted here: its name alone; another source's: its short summary, AI-labelled, opening its rule: ncHtml)
   if(x.blanket || (x.ncLine && x.a === 'rule' && !x.short)) return who + linkTo(x.a, x.v, x.name);
   // (what opens its rule: another unit's ability its rule, not that unit, which its "Granted by" opens)
-  const ra = x.abv ? 'ability' : x.a, rv = x.abv || x.v, text = x.sum || x.ncLine ? ncSum([ra, rv], x.short) : esc(x.text);
+  const ra = x.abv ? 'ability' : x.a, rv = x.abv || x.v, text = x.sum || x.ncLine ? ncSum([ra, rv], x.short) + (x.sum ? riledNote(u, [x]) : '') : esc(x.text);
   // (a source's summary: its conditions are in it)
   if(x.from) return who + grantedBy(x.a === 'unit' ? { id:x.v } : null, x.from, x.name) + (w && !x.sum ? '<span class="tw">' + w + ':</span> ' : '') + text + ' <span class="from">(' + linkTo(ra, rv, x.name) + ')</span>';
   // (a stratagem: "<cp>CP <name>: <summary> AI"; another source: "<summary> AI (<name>)")
   if(x.cp && (x.ncLine || x.sum)) return who + '<b class="cpb">' + esc(x.cp) + 'CP</b> <b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + stratLead((x.S || {}).s) + text;
-  if(x.leader) return grantedBy({ id:u.id }, x.leader, x.name) + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
+  if(x.leader) return grantedBy({ id:u.id }, x.leader, x.name) + modelOnly(x, u) + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
   if(x.ncLine || x.sum) return who + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>';
   return who + (x.cp ? '<b class="cpb">' + esc(x.cp) + 'CP</b> ' : '') + '<b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + (w ? '<span class="tw">' + w + ':</span> ' : '') + text;
 }
@@ -5165,7 +5187,9 @@ function statLines(u){
   const said = new Set();
   // (each where its words reach: the friendly units it names (its reach; else, for a rule, the units that have it: its needs, as a stat box),
   // a keyword of the unit it needs (on selfKw), "while this model is leading a unit" only on a unit that leads one (on leading))
-  const snc = (key, name, link, v, needs, gu) => { for(const x of (BOXES_AGREED[key] || {}).snc || []){
+  // (another unit's: an aura, its ability's tag or the option of it the entry is, "Binharic Courage (Aura)" of Canticles of the Omnissiah)
+  const snc = (key, name, link, v, needs, gu, aura) => { for(const x of (BOXES_AGREED[key] || {}).snc || []){
+    if(gu && !aura && !/\(Aura\)/.test(x.quote || '')) continue;
     if(x.reach ? !matches(x.reach, u) : needs !== undefined && !(needs && matches(needs, u))) continue;
     if((x.on || []).some(([id, p]) => (id === 'selfKw' && !hasKw(u, p)) || (id === 'leading' && !u.leads))) continue;
     if(said.has(name + '|' + x.stat + (x.foe ? '|foe' : '')) || (u.stats.length && u.stats.every(s => [].concat((s.from || {})[x.stat] || []).join(', ').split(/\s*,\s*/).includes(name)))) continue;
@@ -5174,8 +5198,8 @@ function statLines(u){
   // rule's needs met (unitDetRules))
   for(const r of faction().armyRules.filter(r => hasRule(u, r.name) || (r.needs && matches(r.needs, u))).concat(unitDetRules(u))) snc(DM_KEY.r(r), r.name, 'rule', r.name);
   for(const ab of u.abilities || []) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab));
-  for(const x of army().units) if(x !== u) for(const ab of x.abilities || []){ const o = BOXES_AGREED[DM_KEY.a(ab)] || {};
-    if(/\baura\b/i.test(ab.tag || '') && o.reach && matches(o.reach, u)) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab), undefined, x); }
+  for(const x of army().units) if(x !== u) for(const ab of x.abilities || []){ const o = BOXES_AGREED[DM_KEY.a(ab)] || {}, aura = /\baura\b/i.test(ab.tag || '');
+    if((o.snc || []).some(y => (aura || /\(Aura\)/.test(y.quote || '')) && (y.reach || o.reach) && matches(y.reach || o.reach, u))) snc(DM_KEY.a(ab), ab.name, 'ability', abilityKey(ab), undefined, x, aura); }
   for(const st of allStratagems().filter(x => canTarget(x, u))) snc(DM_KEY.s(st), st.name, 'strat', st.id);
   return out;
 }
@@ -5197,6 +5221,9 @@ function statShown(u){
 const statHtml = (x, u) => { const t = [x.a || 'rule', x.v || x.rule];
   if(x.name) return '<p class="dsl">' + linkTo(t[0], t[1], x.rule) + '</p>';
   const by = x.from ? grantedBy(x.gid ? { id:x.gid } : null, x.from, x.rule) : '';
+  // (a stratagem's: "<cp>CP <name>: <its phase>, <its gist>", as under the weapons and When targeted)
+  const s = x.a === 'strat' && x.short ? allStratagems().find(y => y.id === x.v) : null;
+  if(s) return '<p class="dsl' + (x.foe ? ' foe' : '') + '"><b class="cpb">' + esc(s.cp) + 'CP</b> <b>' + linkTo('strat', s.id, s.name) + ':</b> ' + stratLead(s) + ncSum(t, x.short) + '</p>';
   return (x.short ? sumLines(x.short) : [null]).map(l => '<p class="dsl' + (x.foe ? ' foe' : '') + '">' + by + (l ? ncSum(t, l) : esc(x.text)) + ' <span class="from">(' + linkTo(t[0], t[1], x.rule) + ')</span></p>').join(''); };
 // the keywords that come from the other part of an attached unit, from the importer's note
 // ("Explosives, Meganobz come from the led Meganobz."): starred, as New Recruit stars them
@@ -5506,7 +5533,7 @@ function screenPregame(){
   // table), of the first battle round or of every battle round
   const START = /\bstart of the battle\b(?! round)/i;
   const atStart = rulesOf.flatMap(x => { const rows = START.test(x.r.text) ? [] : (x.r.table || []).filter(([, t]) => START.test(t)).map(([l]) => String(l).split(' · ')[0]);
-    return START.test(x.r.text) || rows.length ? [linkTo('rule', x.r.name, x.r.name) + ' <span class="from">' + (rows.length ? '(' + esc(rows.join(', ')) + ') ' : '') + '· ' + esc(x.src) + '</span>'] : []; })
+    return START.test(x.r.text) || rows.length ? [ovSum(['rule', x.r.name], x.r.sumOv, x.r.name) + ' <span class="from">' + (rows.length ? '(' + esc(rows.join(', ')) + ') ' : '') + '· ' + esc(x.src) + '</span>'] : []; })
     .concat(group(allAbs.filter(([u, ab]) => START.test(ab.text))).map(abLine));
   const first = group(allAbs.filter(([u, ab]) => /start of the first battle round/i.test(ab.text)));
   const round = rulesOf.filter(x => /start of (the|each|every) battle round/i.test(x.r.text)).map(ruleLine)
@@ -5529,12 +5556,13 @@ function screenPregame(){
   const onceAbs = group(allAbs.filter(([u, ab]) => perBattle(ab)));
   const abTicks = g => perBattle(g.ab).army ? tl(abilityTicks(g.ab, g.units[0]), abLine(g) + ' <span class="tg once">per army</span>')
     : g.units.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) => tl(ticks(copyKey(g.ab, u, i), perBattle(g.ab).n, '', g.ab.name + (u.copies > 1 ? ', Unit ' + (i + 1) : '')),
-        linkTo('ability', abilityKey(g.ab), g.ab.name) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class="from">· Unit ' + (i + 1) + '</span>' : '')))).join('');
+        ovSum(['ability', abilityKey(g.ab)], srcShort({ ab:g.ab }, 'ov'), g.ab.name) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class="from">· Unit ' + (i + 1) + '</span>' : '')))).join('');
   const onceStrats = allStratagems().filter(s => eligible(s).length && perBattle(s));
   h += sec('Uses per battle',
     row('Rules', onceRules.map(ruleTicks).join('')) +
     row('Abilities', onceAbs.map(abTicks).join('')) +
-    row('Strata&shy;gems', onceStrats.map(s => tl(ticks('s:' + s.id, perBattle(s, true).n, '', s.name), linkTo('strat', s.id, s.cp + 'CP ' + s.name))).join('')));
+    // (a stratagem's line as everywhere: "<cp>CP <name>: <its phase>, <its gist>")
+    row('Strata&shy;gems', onceStrats.map(s => tl(ticks('s:' + s.id, perBattle(s, true).n, '', s.name), '<b class="cpb">' + esc(s.cp) + 'CP</b> <b>' + linkTo('strat', s.id, s.name) + ':</b> ' + stratLead(s) + ncSum(['strat', s.id], s.gist))).join('')));
   if(onceRules.length || onceAbs.length || onceStrats.length) h = h.replace(/(<div class="sec-h"><h2>Uses per battle<\/h2>)/, '$1<button class="textbtn" data-newgame>New game</button>');
   return h + '<p class="note">Gathered from this list’s datasheets and rules; each line opens the full text.</p>' + (a.imported ? importedFoot(a) : '');
 }

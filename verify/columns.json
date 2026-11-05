@@ -247,7 +247,7 @@
     },
     "sumOv": {
      "source": "ai-summary",
-     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows on the Overview (deployment, pre-battle, the start of the battle and its rounds): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumOvOf is the fingerprint of that text"
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows on the Overview (deployment, pre-battle, the start of the battle and its rounds, the uses per battle): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumOvOf is the fingerprint of that text"
     },
     "sumOvOf": {
      "source": "derived",
@@ -419,7 +419,7 @@
     },
     "sumOv": {
      "source": "ai-summary",
-     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows on the Overview (deployment, pre-battle, the start of the battle and its rounds): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumOvOf is the fingerprint of that text"
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows on the Overview (deployment, pre-battle, the start of the battle and its rounds, the uses per battle): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumOvOf is the fingerprint of that text"
     },
     "sumOvOf": {
      "source": "derived",
@@ -628,6 +628,17 @@
      "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows under its profile: only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumStOf is the fingerprint of that text"
     },
     "sumStOf": {
+     "source": "derived",
+     "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
+     "by": [
+      "verify/tables.js"
+     ]
+    },
+    "sumOv": {
+     "source": "ai-summary",
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows on the Overview (deployment, pre-battle, the start of the battle and its rounds, the uses per battle): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumOvOf is the fingerprint of that text"
+    },
+    "sumOvOf": {
      "source": "derived",
      "note": "fingerprint of the text the AI-written short summary was written from (8 hex of its sha256): verify/tables.js --stamp writes it, the gate step \"fingerprints\" fails when the text no longer matches",
      "by": [
@@ -1442,7 +1453,7 @@
     },
     "sumOv": {
      "source": "ai-summary",
-     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows on the Overview (deployment, pre-battle, the start of the battle and its rounds): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumOvOf is the fingerprint of that text"
+     "note": "AI-written summary of this row, written from its text to docs/summaries.md (the owner's guidelines), for the line a unit's screen shows on the Overview (deployment, pre-battle, the start of the battle and its rounds, the uses per battle): only the part that matters there, gamer shorthand, the conditions, trigger and limits that decide it, every number from the text, nothing it does not say; labelled AI and followed by the source's name, which opens its rules as written; a counted box's summary has its numbers (verify/lines.js LN); signed off (approvals.json); sumOvOf is the fingerprint of that text"
     },
     "sumOvOf": {
      "source": "derived",

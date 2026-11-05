@@ -44,7 +44,7 @@ const X = require('./effects-extract');
 const M = require('./effects-migrate');
 const T0 = require('./tables');
 
-const dm = require('./damage-node')(['defenceItems', 'defSources', 'defLineOf', 'defLine', 'abilityKey']);
+const dm = require('./damage-node')(['defenceItems', 'defSources', 'defLineOf', 'defLine', 'abilityKey', 'naReason']);
 const D = dm.D, A = dm.app, fails = [], stats = {};
 const fail = (g, where, what) => fails.push(g + ' ' + where + ': ' + what);
 const flat = s => X.plainCase(s).toLowerCase();
@@ -228,6 +228,14 @@ for(const [k, o] of Object.entries(D.boxes || {})) if(/^Feel No Pain \d\+\*$/.te
       if(w.Sx.s && !m.when) fail('DL', where, w.Sx.name + ': a stratagem line with no phase');
       if((w.b.kind === 'ranged' || w.b.kind === 'melee') && !/[Rr]anged|[Mm]elee/.test(m.when + ' ' + m.text)) fail('DL', where, w.Sx.name + ': a ' + w.b.kind + '-only defence that does not say so'); }
     for(const m of got) if(!m.ncLine && !want.some(w => w.b === m.box && w.Sx.key === m.key)) fail('DL', where, 'the line of ' + m.name + ' “' + m.text + '” is no defence box the database gives this unit');
+    // (and, worked out here again without app.html defSources: every other unit of the list whose ability's defence box reaches this one
+    // (its reach met, a keyword of this unit it needs had, confirmed by the two-reader rule, the ability doing something in this list) is a
+    // line of it with that unit's name ("Granted by"), unless the list printed it into this unit's stats)
+    for(const x of a.units) if(x !== u) for(const ab of x.abilities || []){ if(A.inArmy(a, () => A.naReason(ab))) continue; const key = M.KEY.ability(ab);
+      for(const b of (BX[key] || {}).d || []){
+        if(b.foe || b.unconfirmed || !b.reach || !meets(b.reach, u) || (b.on || []).some(([id, p]) => (id === 'selfKw' || id === 'itIs') && !hasK(u, p))) continue;
+        const baked = !b.pick && (b.df || []).every(([id]) => ['inv', 'svSet', 't'].includes(id)) && (u.stats || []).some(r => r.from && Object.values(r.from).some(v => String(v).split(/\s*,\s*/).includes(ab.name)));
+        if(!baked && !got.some(y => y.key === key && y.box === b && y.from)) fail('DL', where, ab.name + ' of ' + x.id + ' reaches it (“' + X.plainCase(b.quote).slice(0, 60) + '”) and is no line of it with that unit\'s name'); } }
   }
   stats.lines = n; stats.ncLines = nc; }
 

@@ -265,10 +265,10 @@ detachment rule's) are AI-written, the AI layers the owner keeps (`def`, the "Wh
 owner's guidelines and approved examples, `docs/summaries.md`: one summary per place a unit's screens show a rule, each only the part that
 matters there: `sumAtk` under its weapons (and a weapon row's changed-value line), `sumDef` under When targeted, `sumSt` under its profile,
 `sumFoe` under its profile for what it does to enemy units ("Enemies within 9\": −1 Ld"), `sumOv` on the Overview (deployment,
-pre-battle, the start of the battle and its rounds); a summary of named options is a line each (its lines split at a line break); a
-leader's ability on the unit it leads is "Granted by: <leader> - …"; a line every unit of a list has alike (same placement and summary,
-no giver) is shown once, in an "ALL <FACTION> UNITS" block at the top of the Units screen, not on the sheets; a stratagem's `gist` is its line everywhere
-("<cp>CP <name>: <gist>"). Each is labelled AI and followed by the source's name, which opens its rules as written; another unit's line is
+pre-battle, the start of the battle and its rounds, the uses per battle); a summary of named options is a line each (its lines split at a
+line break), and so is one of boxes for different weapons ("<weapon> ⇒ …", each under that weapon's name); a leader's ability on the unit
+it leads is "Granted by: <leader> - …" ("<model> only:" after it for a box of its own model only); every line is on every sheet it applies
+to (no top block); a stratagem's `gist` is its line everywhere ("<cp>CP <name>: <its phase>, <gist>"). Each is labelled AI and followed by the source's name, which opens its rules as written; another unit's line is
 "Granted by: <unit> - <summary> (<name>)", the unit's name opening its datasheet. The program writes the rest: which units get a line and
 where (BOXES, their reach, GRANTS, as before), one line per source, the order, the labels and links. A core rule keeps its counted line; a
 Damaged band is GW's words as written; the Abilities section is GW's full text; a weapon row's "+" marks and "(+6)" values stay; the Damage

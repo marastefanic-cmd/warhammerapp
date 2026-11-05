@@ -381,7 +381,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         // - what another unit of the list gives it when it is attacked (its defence boxes, BOXES d), under When targeted
         // - every keyword once, a keyword only some models have under those models (kwOnly)
         const lines = [...document.querySelectorAll('#view .tgl, #view .mod')].map(x => x.innerText.replace(/\s+/g, ' '));   // (When targeted: a line each)
-        if(u.abilities.some(ab => ((D.boxes || {})[DM_KEY.a(ab)] || {}).riled && !ab.na)) for(const l of lines) if(/(^|· |TARGETED ?)Riled up(?! \()/i.test(l)) out.push(['always-riled', u.id, 'a riled-up line without “always riled up”: ' + l.slice(0, 80)]);
+        // (a summary line that says "riled up" too, its program-made "(always riled up: …)" after it; the rule that makes it so, its own line aside)
+        { const src = u.abilities.filter(ab => ((D.boxes || {})[DM_KEY.a(ab)] || {}).riled && !ab.na);
+          if(src.length) for(const l of lines) if(/(^|· |TARGETED ?)Riled up(?! \()/i.test(l) || (/\briled up\b/i.test(l) && !/always riled up/i.test(l) && !src.some(ab => l.includes('(' + ab.name + ')'))))
+            out.push(['always-riled', u.id, 'a riled-up line without “always riled up”: ' + l.slice(0, 80)]); }
         if(u.rules.includes('Waaagh!') && (u.ranged || []).some(w => !w.kw.some(x => /^assault$/i.test(x))) && !lines.some(l => l.includes('[ASSAULT] (Waaagh!)') || (l.includes('[ASSAULT]') && l.includes('(Waaagh!)'))))
           out.push(['riled-assault', u.id, 'no “Riled up: [ASSAULT] (Waaagh!)” footnote']);
         const when = (document.querySelector('#view .def.tgt') || {}).innerText || '';
@@ -395,7 +398,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           for(const kind of ['ranged', 'melee']) if(((kind === 'ranged' ? u.ranged : u.melee) || []).length){ const g = new Map();
             for(const m of unitMods(u, kind)){ if(m.damaged) continue; const k = lineKey(m); if(!g.has(k)) g.set(k, []); g.get(k).push(m); }
             for(const items of g.values()){ const m = items[0];
-              if(sumMode(m)) for(const l of sumLinesOf(items)){ if(!has(wl, m.from, l.text || FN_NC)) out.push(['lines-placed', u.id, m.from + (l.opt ? ' · ' + l.opt : '') + ': its line under the weapons is not drawn']); }
+              // (a line for one weapon of several, under that weapon's name: "Ferrumite cannon: …")
+              if(sumMode(m)) for(const l of sumLinesOf(items)){ if(!has(wl, m.from, (l.wp ? l.wp + ': ' : '') + (l.text || FN_NC))) out.push(['lines-placed', u.id, m.from + (l.opt ? ' · ' + l.opt : '') + ': its line under the weapons is not drawn']); }
               else if(!has(wl, m.from)) out.push(['lines-placed', u.id, m.from + ': its line under the weapons is not drawn']); } }
           for(const x of defLines(defenceItems(u).filter(y => !y.dup && !y.foeOwn))) if(!has(dl, x.name, x.sum ? x.short : '')) out.push(['lines-placed', u.id, x.name + (x.opt ? ' · ' + x.opt : '') + ': its When targeted line is not drawn']);
           for(const x of defenceItems(u).filter(y => y.foeOwn && !y.dup)) if(!has(fl, x.name)) out.push(['lines-placed', u.id, x.name + ': its enemy line under the profile is not drawn']);

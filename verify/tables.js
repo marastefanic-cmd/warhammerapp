@@ -8,7 +8,7 @@
      node verify/tables.js               the gate: data.js is in table form exactly as --write would write it (a list
                                          added in the old form, a stale RULE_OPTIONS / GRANTS, fail), every column is in
                                          verify/columns.json; writes verify/out/tables.md (the datasheet conflicts)
-     node verify/tables.js --fingerprints   the gate: every AI-written column (gist, def) and every reading (mods, aura,
+     node verify/tables.js --fingerprints   the gate: every AI-written column (gist and the placement summaries sumAtk, sumDef, sumSt, sumFoe, sumOv) and every reading (mods, aura,
                                          guard; a rule's, stratagem's or ability's reading columns, READ_COLS) carries the
                                          fingerprint of the text it was written or read from, and that text has not changed
      node verify/tables.js --write       converts data.js: every unit entry written in full (the old form, as
@@ -1701,7 +1701,7 @@ if(require.main === module){
       else if(x.has !== fp(x.source)) bad.push('STALE ' + x.where + ' · ' + x.col + ' (' + x.fpKey + ' ' + x.has + ', its text now ' + fp(x.source) + '): the text the ' + what + ' ' + (x.reading ? 'reads' : 'summarises') + ' changed; ' + (x.reading ? 'read it again from the new text' : 'rewrite it from the new text') + ', then node verify/tables.js --restamp');
     }
     const ai = all.filter(x => !x.reading), rd = all.filter(x => x.reading), ok = xs => xs.filter(x => x.source != null && x.has === (x.want || fp(x.source))).length;
-    console.log('fingerprints: ' + ok(ai) + ' of ' + ai.length + ' AI-written values (gist, def) and ' + ok(rd) + ' of ' + rd.length + ' readings (' + rd.filter(x => x.derived).length + ' derived) match the text they were written or read from' + (bad.length ? '; ' + bad.length + ' do not' : ''));
+    console.log('fingerprints: ' + ok(ai) + ' of ' + ai.length + ' AI-written values (' + Object.keys(FINGERPRINT).map(c => c + ' ' + ai.filter(x => x.col === c).length).join(', ') + ') and ' + ok(rd) + ' of ' + rd.length + ' readings (' + rd.filter(x => x.derived).length + ' derived) match the text they were written or read from' + (bad.length ? '; ' + bad.length + ' do not' : ''));
     bad.forEach(b => console.log('  ' + b));
     process.exit(bad.length ? 1 : 0);
   }
