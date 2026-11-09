@@ -639,7 +639,7 @@ Juggernaut’s bladed horn×3
 -1
 1
 EXTRA ATTACKS, LANCE
-Granted by: Skullmaster - While leading, if the led unit charged this turn: Juggernaut’s bladed horns gain [DEVASTATING WOUNDS] AI (Skullmaster’s Fury)
+Granted by: Skullmaster - Juggernaut’s bladed horn: While leading, if the led unit charged this turn: Juggernaut’s bladed horns gain [DEVASTATING WOUNDS] AI (Skullmaster’s Fury)
 Charged this turn: Juggernaut’s bladed horn +1 to Wound rolls (Lance)
 Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
 Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)
@@ -1346,7 +1346,6 @@ Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +0.2
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (11)
 1CP Wrath Undeniable
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
@@ -1834,7 +1833,6 @@ with their CP
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (11)
 1CP Wrath Undeniable
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One LEGIONES DAEMONICA KHORNE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
@@ -3448,7 +3446,7 @@ Juggernaut’s bladed horn×3
 1
 EXTRA ATTACKS, LANCE
 WHOLE UNIT
-Granted by: Skullmaster - While leading, if the led unit charged this turn: Juggernaut’s bladed horns gain [DEVASTATING WOUNDS] AI (Skullmaster’s Fury)
+Granted by: Skullmaster - Juggernaut’s bladed horn: While leading, if the led unit charged this turn: Juggernaut’s bladed horns gain [DEVASTATING WOUNDS] AI (Skullmaster’s Fury)
 Charged this turn: Juggernaut’s bladed horn +1 to Wound rolls (Lance)
 Granted by: Skarbrand - KHORNE LEGIONES DAEMONICA within 6" of Skarbrand: +1 A in melee AI (Rage Embodied)
 Granted by: Bloodthirster - Within 6" of Bloodthirster: +1 to Hit rolls in melee AI (Daemon Lord of Khorne)

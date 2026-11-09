@@ -617,11 +617,12 @@ STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
 Tech-Priest Enginseer
 Necromechanic
 Omnissian axe
-3
+3/6
 4+
 6
 -2
 2
+After a friendly ADEPTUS MECHANICUS VEHICLE is destroyed within 12": Omnissian axe A 6 for the battle AI (Vengeance for the Omnissiah)
 Servo arm
 1
 4+
@@ -630,7 +631,6 @@ Servo arm
 2
 EXTRA ATTACKS
 If Conqueror Imperative is active: [ASSAULT] and +1 WS; if BATTLELINE or within 6" of one: +1 AP AI (Doctrina Imperatives)
-After a friendly ADEPTUS MECHANICUS VEHICLE is destroyed within 12": Omnissian axe A 6 for the battle AI (Vengeance for the Omnissiah)
 Granted by: Belisarius Cawl - If Invocation of Machine Vengeance: pick an enemy unit at the start of your Command phase; friendly ADEPTUS MECHANICUS re-roll Hit rolls vs that unit AI (Canticles of the Omnissiah)
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
 1CP Servo-driven Charge: in the Fight phase, ADEPTUS MECHANICUS: melee weapons gain [LANCE] AI
@@ -1364,7 +1364,6 @@ Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +0.5
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (7)
 1CP Unrelenting Aggression
 “WHEN: Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. …” · not counted in the Damage tab
@@ -1862,7 +1861,6 @@ if used
 +16% wiped
 +0.3
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (7)
 1CP Unrelenting Aggression
 “WHEN: Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. …” · not counted in the Damage tab
@@ -2885,11 +2883,12 @@ S
 AP
 D
 Omnissian axe
-3
+3/6
 4+
 6
 -2
 2
+After a friendly ADEPTUS MECHANICUS VEHICLE is destroyed within 12": Omnissian axe A 6 for the battle AI (Vengeance for the Omnissiah)
 Servo arm
 1
 4+
@@ -2897,7 +2896,6 @@ Servo arm
 -2
 2
 EXTRA ATTACKS
-After a friendly ADEPTUS MECHANICUS VEHICLE is destroyed within 12": Omnissian axe A 6 for the battle AI (Vengeance for the Omnissiah)
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
 1CP Servo-driven Charge: in the Fight phase, ADEPTUS MECHANICUS: melee weapons gain [LANCE] AI
 ABILITIES

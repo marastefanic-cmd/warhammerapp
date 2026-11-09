@@ -1347,7 +1347,6 @@ MODELS
 Ignore modifiers to BS/WS and the Hit roll, Ignore modifiers to the Wound roll
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Protection of the Dark Prince
 “WHEN: Any phase, just after a mortal wound or attack is allocated to a model in an EMPEROR’S CHILDREN unit from your army. TARGET: That EMPEROR’S CHILDREN unit. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability, and the Feel No Pain 4+ ability against mortal wounds.” · not counted in the Damage tab
@@ -1860,7 +1859,6 @@ if used
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Protection of the Dark Prince
 “WHEN: Any phase, just after a mortal wound or attack is allocated to a model in an EMPEROR’S CHILDREN unit from your army. TARGET: That EMPEROR’S CHILDREN unit. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability, and the Feel No Pain 4+ ability against mortal wounds.” · not counted in the Damage tab

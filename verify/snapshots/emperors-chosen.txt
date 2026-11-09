@@ -1329,7 +1329,6 @@ if used
 +9% wiped
 +0.2
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (11)
 1CP In Auramite Clad
 “WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS CUSTODES unit (excluding CUSTODIAN WARDENS units). TARGET: That ADEPTUS CUSTODES unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
@@ -1875,7 +1874,6 @@ with their CP
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (11)
 1CP In Auramite Clad
 “WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS CUSTODES unit (excluding CUSTODIAN WARDENS units). TARGET: That ADEPTUS CUSTODES unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab

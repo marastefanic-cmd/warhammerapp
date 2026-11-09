@@ -1479,7 +1479,6 @@ if used
 +1% wiped
 +0.4
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (12)
 1CP Blood Offering
 “Select one of those objective markers. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
@@ -2093,7 +2092,6 @@ with their CP
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (12)
 1CP Blood Offering
 “Select one of those objective markers. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab

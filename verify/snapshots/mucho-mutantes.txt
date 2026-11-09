@@ -1399,7 +1399,6 @@ if used
 +10% wiped
 +0.2
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (8)
 1CP Mutagenic Magicks
 “WHEN: Start of the Fight phase. TARGET: One friendly engaged THOUSAND SONS PSYKER unit. EFFECT: Select one enemy unit engaged with your unit. Roll six D6: - For each 4+, that enemy unit suffers 1 mortal wound.” · not counted in the Damage tab
@@ -1908,7 +1907,6 @@ Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 ≈0
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (8)
 1CP Mutagenic Magicks
 “WHEN: Start of the Fight phase. TARGET: One friendly engaged THOUSAND SONS PSYKER unit. EFFECT: Select one enemy unit engaged with your unit. Roll six D6: - For each 4+, that enemy unit suffers 1 mortal wound.” · not counted in the Damage tab

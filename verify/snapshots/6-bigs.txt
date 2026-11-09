@@ -836,7 +836,7 @@ Add a group
 of 5 destroyed
 8.3 wounds lost · wiped in 50% of games
 Nothing ticked: the datasheets as printed
-14 NOT COUNTED
+13 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -982,18 +982,21 @@ None that change these numbers.
 
 STRATAGEMS
 with their CP
+1CP Strength from Exile
+No other friendly units within 9" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if used
+BEST · MOST MODELS+30% wiped
++0.7
+MODELS
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +5% wiped
 +0.1
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
-NOT COUNTED IN THE DAMAGE TAB (10)
+NOT COUNTED IN THE DAMAGE TAB (9)
 1CP Noble Sacrifice
 “Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
-1CP Strength from Exile
-“Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Full Tilt
 “WHEN: Your Movement phase. TARGET: One IMPERIAL KNIGHTS unit from your army. EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. …” · not counted in the Damage tab
 1CP Point-Blank Barrage
@@ -1130,7 +1133,7 @@ of 5 destroyed
 1.3 wounds lost · wiped in <1% of games
 Charged this turn
 ×
-14 NOT COUNTED
+13 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1191,21 +1194,24 @@ None that change these numbers.
 
 STRATAGEMS
 with their CP
+1CP Strength from Exile
+No other friendly units within 9" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if used
+BEST · MOST MODELS
++0.3
+MODELS
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-BEST · MOST MODELS
 +0.2
 MODELS
 1CP Epic Challenge
 [PRECISION] · CHARACTER models only
 if used
 0
-NOT COUNTED IN THE DAMAGE TAB (10)
+NOT COUNTED IN THE DAMAGE TAB (9)
 1CP Noble Sacrifice
 “Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
-1CP Strength from Exile
-“Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Full Tilt
 “WHEN: Your Movement phase. TARGET: One IMPERIAL KNIGHTS unit from your army. EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. …” · not counted in the Damage tab
 1CP Point-Blank Barrage
@@ -1345,7 +1351,7 @@ Shoot 4.0 · Fight 0.3 · the charge is taken to succeed
 
 Charged this turn
 ×
-28 NOT COUNTED
+26 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1489,18 +1495,21 @@ None that change these numbers.
 
 STRATAGEMS
 with their CP
+1CP Strength from Exile
+No other friendly units within 9" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if used
+BEST · MOST MODELS+24% wiped
++0.5
+MODELS
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +5% wiped
 +0.1
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
-NOT COUNTED IN THE DAMAGE TAB (10)
+NOT COUNTED IN THE DAMAGE TAB (9)
 1CP Noble Sacrifice
 “Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
-1CP Strength from Exile
-“Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Full Tilt
 “WHEN: Your Movement phase. TARGET: One IMPERIAL KNIGHTS unit from your army. EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. …” · not counted in the Damage tab
 1CP Point-Blank Barrage
@@ -1578,21 +1587,25 @@ None that change these numbers.
 
 STRATAGEMS
 with their CP
+1CP Strength from Exile
+No other friendly units within 9" of it: Re-roll Hit rolls of 1, Re-roll Wound rolls of 1
+if used
++4% wiped
++0.1
+MODELS
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
-BEST · MOST MODELS+3% wiped
++3% wiped
 +0.1
 MODELS
 1CP Epic Challenge
 [PRECISION] · CHARACTER models only
 if used
 0
-NOT COUNTED IN THE DAMAGE TAB (10)
+NOT COUNTED IN THE DAMAGE TAB (9)
 1CP Noble Sacrifice
 “Your unit's Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” · its target was just destroyed: its effect is for other units, which cannot be its target: not counted in the Damage tab
-1CP Strength from Exile
-“Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Full Tilt
 “WHEN: Your Movement phase. TARGET: One IMPERIAL KNIGHTS unit from your army. EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. …” · not counted in the Damage tab
 1CP Point-Blank Barrage

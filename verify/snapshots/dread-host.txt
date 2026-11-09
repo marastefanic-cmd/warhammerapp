@@ -1310,7 +1310,6 @@ if used
 +9% wiped
 +0.2
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (11)
 1CP Lightning Wrath
 “WHEN: Fight phase, when a friendly ADEPTUS CUSTODES unit is selected to make a pile-in move. TARGET: That ADEPTUS CUSTODES unit. EFFECT: When making that pile-in move, your unit can move up to D3+3".” · not counted in the Damage tab
@@ -1850,7 +1849,6 @@ with their CP
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (11)
 1CP Lightning Wrath
 “WHEN: Fight phase, when a friendly ADEPTUS CUSTODES unit is selected to make a pile-in move. TARGET: That ADEPTUS CUSTODES unit. EFFECT: When making that pile-in move, your unit can move up to D3+3".” · not counted in the Damage tab

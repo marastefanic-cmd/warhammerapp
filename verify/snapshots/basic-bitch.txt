@@ -1195,7 +1195,6 @@ if used
 +2% wiped
 +0.3
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Rapid Regeneration
 “WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. …” · not counted in the Damage tab
@@ -1679,7 +1678,6 @@ with their CP
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Rapid Regeneration
 “WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. …” · not counted in the Damage tab

@@ -1619,7 +1619,6 @@ if used
 +2% wiped
 +0.4
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (8)
 1CP Armour of Contempt
 “WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit. TARGET: That ADEPTUS ASTARTES unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab
@@ -2097,7 +2096,6 @@ Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 ≈0
 MODELS
-NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (8)
 1CP Armour of Contempt
 “WHEN: Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly ADEPTUS ASTARTES unit. TARGET: That ADEPTUS ASTARTES unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked.” · not counted in the Damage tab

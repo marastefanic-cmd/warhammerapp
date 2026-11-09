@@ -1152,7 +1152,6 @@ if used
 +3% wiped
 +0.5
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (15)
 2CP Vox-howl
 “WHEN: Start of the Shooting phase or the start of the Fight phase. TARGET: One ~~WAR DOG CHARACTER~~ unit from your army. EFFECT: Each enemy unit within 6" of your unit must take a Battle-shock test. …” · not counted in the Damage tab
@@ -1683,7 +1682,6 @@ if used
 +6% wiped
 +0.6
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (15)
 2CP Vox-howl
 “WHEN: Start of the Shooting phase or the start of the Fight phase. TARGET: One ~~WAR DOG CHARACTER~~ unit from your army. EFFECT: Each enemy unit within 6" of your unit must take a Battle-shock test. …” · not counted in the Damage tab

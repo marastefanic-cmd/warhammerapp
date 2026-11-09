@@ -1338,7 +1338,6 @@ Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +0.2
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Daemonic Fury
 “WHEN: Start of your Fight phase. TARGET: One BLOOD LEGIONS unit from your army. EFFECT: Select one friendly WORLD EATERS unit within 6" of your unit. Until the end of the turn, melee weapons equipped by models in your WORLD EATERS unit have the [LANCE] ability. …” · not counted in the Damage tab
@@ -1824,7 +1823,6 @@ with their CP
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Daemonic Fury
 “WHEN: Start of your Fight phase. TARGET: One BLOOD LEGIONS unit from your army. EFFECT: Select one friendly WORLD EATERS unit within 6" of your unit. Until the end of the turn, melee weapons equipped by models in your WORLD EATERS unit have the [LANCE] ability. …” · not counted in the Damage tab

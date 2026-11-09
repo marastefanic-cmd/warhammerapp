@@ -1634,7 +1634,7 @@ the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-09.1
+2026-11-09.2
 
 a list from an export
 3
@@ -1670,13 +1670,13 @@ verify/reader2/: written apart, never uses the app’s reading code; the gate ru
 
 456 boxes from 448 rules, abilities and stratagems:
 
-375
+378
 both readers agree
 25
 a reviewed verdict quoting GW
 6
 Core Rules boxes
-50
+47
 not counted
 
 AGREE records the comparison. A box counts, in the Damage tab and on the sheets, only where both readers agree, or a reviewed verdict with GW’s quote shows the app right (the Core Rules boxes, which reader 2 does not read, count as GW’s Core Rules). Any other is shown as GW’s words, “see the rule”, and never counted.
@@ -3294,7 +3294,6 @@ if used
 +6% wiped
 +0.2
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (7)
 1CP Insane Bravery
 “WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab
@@ -3778,7 +3777,6 @@ if used
 ≈0
 MODELS
 +1 MORE ▾
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (7)
 1CP Insane Bravery
 “WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle.” · not counted in the Damage tab

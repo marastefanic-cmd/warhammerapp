@@ -1367,7 +1367,6 @@ if used
 +11% wiped
 +0.3
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (12)
 1CP Impossible Eclipse
 “WHEN: Any phase. TARGET: One LEGIONES DAEMONICA TZEENTCH MONSTER unit from your army that is on the battlefield. EFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. …” · not counted in the Damage tab
@@ -1871,7 +1870,6 @@ if used
 +6% wiped
 +0.1
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (12)
 1CP Impossible Eclipse
 “WHEN: Any phase. TARGET: One LEGIONES DAEMONICA TZEENTCH MONSTER unit from your army that is on the battlefield. EFFECT: Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. …” · not counted in the Damage tab

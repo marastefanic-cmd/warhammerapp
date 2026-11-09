@@ -1406,7 +1406,6 @@ if used
 +10% wiped
 +0.2
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (11)
 1CP Psychic Dominion
 “WHEN: Any phase, just after an enemy unit has selected its targets. TARGET: One THOUSAND SONS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
@@ -1666,7 +1665,6 @@ MODELS
 [PRECISION] · CHARACTER models only
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (11)
 1CP Psychic Dominion
 “WHEN: Any phase, just after an enemy unit has selected its targets. TARGET: One THOUSAND SONS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
@@ -1962,7 +1960,6 @@ Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 ≈0
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (11)
 1CP Psychic Dominion
 “WHEN: Any phase, just after an enemy unit has selected its targets. TARGET: One THOUSAND SONS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
@@ -2095,7 +2092,6 @@ MODELS
 [PRECISION] · CHARACTER models only
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (11)
 1CP Psychic Dominion
 “WHEN: Any phase, just after an enemy unit has selected its targets. TARGET: One THOUSAND SONS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab

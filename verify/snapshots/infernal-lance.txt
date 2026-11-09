@@ -1216,7 +1216,6 @@ if used
 no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
 ALL ▾
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Profane Symbiosis
 “WHEN: End of any phase. TARGET: One CHAOS KNIGHTS unit from your army that is not Empowered. EFFECT: Your unit makes a Malefic Surge. RESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round.” · not counted in the Damage tab
@@ -1483,7 +1482,6 @@ MODELS
 [PRECISION] · CHARACTER models only
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Profane Symbiosis
 “WHEN: End of any phase. TARGET: One CHAOS KNIGHTS unit from your army that is not Empowered. EFFECT: Your unit makes a Malefic Surge. RESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round.” · not counted in the Damage tab
@@ -1827,7 +1825,6 @@ if used
 no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
 ALL ▾
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Profane Symbiosis
 “WHEN: End of any phase. TARGET: One CHAOS KNIGHTS unit from your army that is not Empowered. EFFECT: Your unit makes a Malefic Surge. RESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round.” · not counted in the Damage tab
@@ -1975,7 +1972,6 @@ MODELS
 [PRECISION] · CHARACTER models only
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Profane Symbiosis
 “WHEN: End of any phase. TARGET: One CHAOS KNIGHTS unit from your army that is not Empowered. EFFECT: Your unit makes a Malefic Surge. RESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round.” · not counted in the Damage tab

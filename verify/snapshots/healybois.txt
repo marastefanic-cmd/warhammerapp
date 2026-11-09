@@ -1227,7 +1227,6 @@ if used
 +2% wiped
 +0.3
 MODELS
-NOT FOR THIS STEP, BY THE RULES (3) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (7)
 1CP Rapacious Hunger
 “WHEN: Your Fight phase. TARGET: One TYRANIDS unit from your army that just destroyed an enemy unit. EFFECT: Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a HARVESTER unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead.” · not counted in the Damage tab
@@ -1703,7 +1702,6 @@ with their CP
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (3) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (7)
 1CP Rapacious Hunger
 “WHEN: Your Fight phase. TARGET: One TYRANIDS unit from your army that just destroyed an enemy unit. EFFECT: Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a HARVESTER unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead.” · not counted in the Damage tab

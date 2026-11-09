@@ -1586,7 +1586,6 @@ Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 +0.1
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Touch of the Arkifane
 “WHEN: Any phase. TARGET: One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase. EFFECT: Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” · not counted in the Damage tab
@@ -2098,7 +2097,6 @@ if used
 ≈0
 MODELS
 +1 MORE ▾
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Touch of the Arkifane
 “WHEN: Any phase. TARGET: One HERETIC ASTARTES unit from your army (excluding DAMNED units) that has not been selected to shoot or fight this phase. EFFECT: Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.” · not counted in the Damage tab
