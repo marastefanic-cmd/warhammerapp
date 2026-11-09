@@ -160,12 +160,12 @@
   "kind": "how-diagram",
   "where": "3 builder · other factions",
   "judgement": {
-   "text": "the 18 lists of the other 10 factions each give the same list again when re-imported from their export alone (verify/from-json.js); an import of one on the phone is made of units those lists already have"
+   "text": "the 18 lists of the other 10 factions each give the same data.js again, byte for byte, when re-imported from their export (verify/from-json.js, which keeps the datasheet rows and ids data.js already has); an import of one on the phone is made of units those lists already have"
   },
   "source": {
-   "code": "verify/reimport.js (every list with an export, re-imported alone, gives data.js byte for byte); import.js header (a non-catalogued export resolves only to units data.js has)"
+   "code": "verify/reimport.js (every list with an export, re-imported by verify/from-json.js --write from its export and hand file, gives data.js byte for byte; from-json keeps the DATASHEETS rows and ids data.js has); import.js header (a non-catalogued export resolves only to units data.js has)"
   },
-  "key": "68a8ac431144f40e"
+  "key": "3a73b56d9f0542c9"
  },
  {
   "army": "code",
@@ -184,12 +184,12 @@
   "kind": "how-diagram",
   "where": "4 readers · reader 2",
   "judgement": {
-   "text": "verify/reader2/ is written apart, never uses the app’s reading code; the gate runs it in a sandbox that sees only its own files, GW’s words and the units’ names and keywords"
+   "text": "verify/reader2/ is written apart, never uses the app’s reading code; the gate runs it in a sandbox that can read only its own files, GW’s documents and Wahapedia’s pages, and a copy of data.js cut down to the rules’ words and what places them (names, ids, keywords, tags)"
   },
   "source": {
-   "code": "verify/agree.js R1 (no require of the app’s reading code, no BOXES), R2 (node permission model; a copy of data.js stripped to text fields, names and keywords; verify/.cache), R3 (pinned files)"
+   "code": "verify/agree.js R1 (no require of the app’s reading code, no BOXES); R2: sandbox() (its folder: reader2’s files and strip(D): datasheets name/faction/kw, abilities name/tag/who/text, armies id/faction, units id/name/kw, rules name/tag/text/table/tableAt, enhancements name/text, stratagems name/when/target/restrictions/effect), SANDBOX_READ = that folder + verify/.cache/gw + verify/.cache/waha (with ds), sandboxArgs (--permission and those reads only), sandboxFails (the flags exactly those; a probe refused bsdata, donors, data.js, app.html, effects.js, verify/out, verify/effects-extract.js, verify/sources, and allowed its own); R3 (pinned files)"
   },
-  "key": "1a66fc33d738d77e"
+  "key": "633ae2decc6709f9"
  },
  {
   "army": "code",
@@ -278,6 +278,18 @@
  {
   "army": "code",
   "kind": "how-diagram",
+  "where": "5 AI layer · everything else",
+  "judgement": {
+   "text": "everything else is copied, worked out by a script, or (a few ids, short names, aliases and notes) written by hand"
+  },
+  "source": {
+   "code": "verify/columns.json: every source other than ai-summary (hand: CORE_STRATAGEMS.id, ARMIES.id, ARMIES.units.short, FACTIONS.aliases, RULE_ALIASES.pattern, *.missing notes, *.over none today)"
+  },
+  "key": "beb02358820db822"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
   "where": "6 gate · steps",
   "judgement": {
    "text": "29 checks in 10 groups; each group says how many of its steps passed, from verified.js"
@@ -298,6 +310,18 @@
    "code": "build.js (report.ok and report.hash of app.html, data.js, calc.js, effects.js, ask.js, builder.js, import.js)"
   },
   "key": "1b1647e7c06a9485"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "6 gate · facts",
+  "judgement": {
+   "text": "Facts against GW, BSData and New Recruit: every unit fact equal to BSData and your New Recruit PDFs and exports, every base GW’s base size guide’s, every faction catalogue complete, every program column held by its script"
+  },
+  "source": {
+   "code": "verify/bsdata.js, verify/nr.js (the 16 PDFs), verify/bases.js, verify/catalog.js, verify/derived-proof.js; the 24 exports are held by verify/import-test.js, reimport.js and build-parity.js (shown in the builder group)"
+  },
+  "key": "ce44a9284eafd707"
  },
  {
   "army": "code",
@@ -352,12 +376,12 @@
   "kind": "how-diagram",
   "where": "code",
   "judgement": {
-   "text": "verify/render.js: how-tables (chips and cells), how-diagram, how-gate; the stand-in verified.js gets steps from run.js"
+   "text": "verify/render.js: how-tables (every chip and cell has SRC_CLASS[its columns.json source], a map fixed in render.js; the seven classes distinct; the seven sources drawn in seven distinct computed looks), how-diagram (every [data-fig] text on the screen equals the figure worked out from data.js, columns.json, nr-json and run.js; every figure shown), how-gate; the stand-in verified.js gets steps from run.js"
   },
   "source": {
-   "code": "this branch’s diff of verify/render.js"
+   "code": "this branch’s diff of verify/render.js; mutations shown failing: 456→457 (how-diagram boxes), 29 of 29→28 of 29 (how-diagram passed), GW chips s-wa (how-tables, 121 failures incl. colours: 6 distinct looks for 7 sources)"
   },
-  "key": "f7bb58255da37ba1"
+  "key": "95e2b3771d66d005"
  },
  {
   "army": "code",
@@ -370,5 +394,17 @@
    "code": "this branch’s diff of verify/run.js"
   },
   "key": "f308c6771636dfc8"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "code",
+  "judgement": {
+   "text": "verify/agree.js: reader2’s sandbox reads only its own folder, verify/.cache/gw and verify/.cache/waha; R2 fails on any other grant or any other readable path (sandboxFails)"
+  },
+  "source": {
+   "code": "this branch’s diff of verify/agree.js; mutations shown failing: a donors grant, the whole cache; reader2 reading donors/current.js refused (ERR_ACCESS_DENIED); reader2 --test 97 passed and its readings byte-identical in the sandbox"
+  },
+  "key": "b0278028c5c7eeda"
  }
 ]

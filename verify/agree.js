@@ -25,8 +25,10 @@
          defence.js, derive.js) nor reads data.js BOXES: every require is a builtin or a file of verify/reader2/, no string of its code
          names one of those files, no name of its code is boxes / BOXES (static: R2's sandbox and R3 are what hold it)
      R2  reader2 runs in a sandbox: its files and a copy of data.js with only the text fields, names and keywords it reads (strip), in a
-         temp folder KODEX_APP names, under node's permission model (it can read that folder and verify/.cache, nothing else: no app
-         code, no BOXES or AGREE, no verify/out); there its tests pass (--test) and its readings are the stored ones (--check)
+         temp folder KODEX_APP names, under node's permission model: it can read that folder and GW's text, verify/.cache/gw and
+         verify/.cache/waha (with waha/ds), nothing else (no BSData, no donors, no app code, no BOXES or AGREE, no verify/out); the
+         sandbox's flags are exactly those (SANDBOX_READ, sandboxArgs), and a probe run under them is refused every other path and
+         allowed those; there its tests pass (--test) and its readings are the stored ones (--check)
      R3  reader2's files are the reviewed ones (verify/sources/agree-pins.json, sha256; node verify/agree.js --pin after a review)
      T   data.js AGREE is the table the comparison computes now
      Q   every verdict's GW quotes are in GW's text (verify/.cache) and in the words of the pair's own rule (its WHEN / TARGET / EFFECT /
@@ -609,6 +611,36 @@ function strip(D){
         { moreRules:(d.moreRules || []).map(r => pick(r, RU)), enhancements:(d.enhancements || []).map(e => pick(e, ['name', 'text'])), stratagems:(d.stratagems || []).map(x => pick(x, ST)) })])) })])),
     coreStratagems:(D.coreStratagems || []).map(x => pick(x, ST)) };
 }
+// what reader2's sandbox may read: its own folder (its files and the stripped data.js) and GW's words (Wahapedia's pages, with ds/, and
+// GW's documents), nothing else of verify/.cache (BSData, donors) and nothing of the app
+const SANDBOX_CACHE = ['gw', 'waha'];
+const SANDBOX_READ = box => [box.dir].concat(SANDBOX_CACHE.map(d => path.join(box.cache, d)));
+// node's flags for a script run in the sandbox: the permission model, a read grant per SANDBOX_READ path, nothing else
+const sandboxArgs = (box, script, args) => ['--permission'].concat(SANDBOX_READ(box).map(p => '--allow-fs-read=' + p), [script], args || []);
+const sandboxRun = (box, script, args) => spawnSync(process.execPath, sandboxArgs(box, script, args),
+  { cwd:path.dirname(script), env:Object.assign({}, process.env, { KODEX_APP:box.dir, KODEX_CACHE:box.cache }), encoding:'utf8' });
+// R2's own check of the sandbox: its flags grant reading SANDBOX_READ only (no other grant, no write, child process, worker, addon or
+// WASI flag), and a probe run under them is refused every other path (BSData, donors, the app's files, verify/out) and allowed its own
+function sandboxFails(box){
+  const fails = [], args = sandboxArgs(box, '<script>'), allowed = SANDBOX_READ(box);
+  for(const a of args) if(a !== '--permission' && a !== '<script>' && !(a.startsWith('--allow-fs-read=') && allowed.includes(a.slice(16)))) fails.push('R2 the sandbox has a flag it should not: ' + a);
+  if(args.filter(a => a.startsWith('--allow-fs-read=')).length !== allowed.length) fails.push('R2 the sandbox grants ' + args.filter(a => a.startsWith('--allow-fs-read=')).length + ' reads, not ' + allowed.length);
+  const deny = [path.join(box.cache, 'bsdata'), path.join(box.cache, 'donors', 'current.js'), path.join(box.cache, 'donors'), path.join(ROOT, 'data.js'), path.join(ROOT, 'app.html'),
+    path.join(ROOT, 'effects.js'), path.join(ROOT, 'verify', 'out'), path.join(ROOT, 'verify', 'effects-extract.js'), path.join(ROOT, 'verify', 'sources')].filter(p => fs.existsSync(p));
+  const allow = [path.join(box.dir, 'data.js'), path.join(box.cache, 'gw'), path.join(box.cache, 'waha'), path.join(box.cache, 'waha', 'ds')].filter(p => fs.existsSync(p));
+  const probe = path.join(box.dir, 'probe.js');
+  fs.writeFileSync(probe, "const fs = require('fs'), out = {};\nfor(const p of JSON.parse(process.argv[2])){ try { const st = fs.statSync(p); st.isDirectory() ? fs.readdirSync(p) : fs.readFileSync(p); out[p] = 'read'; } catch(e){ out[p] = e.code || String(e); } }\nconsole.log(JSON.stringify(out));\n");
+  try {
+    const r = sandboxRun(box, probe, [JSON.stringify(deny.concat(allow))]);
+    let got = null; try { got = JSON.parse(r.stdout); } catch(e){}
+    if(!got) fails.push('R2 the sandbox probe did not run: ' + (r.stdout + r.stderr).trim().slice(0, 200));
+    else {
+      for(const p of deny) if(got[p] !== 'ERR_ACCESS_DENIED') fails.push('R2 the sandbox lets reader2 read ' + path.relative(ROOT, p) + ' (' + got[p] + ')');
+      for(const p of allow) if(got[p] !== 'read') fails.push('R2 the sandbox does not let reader2 read ' + p + ' (' + got[p] + ')');
+    }
+  } finally { fs.rmSync(probe, { force:true }); }
+  return fails;
+}
 function sandbox(D){
   const dir = fs.mkdtempSync(path.join(require('os').tmpdir(), 'kodex-reader2-'));
   fs.writeFileSync(path.join(dir, 'data.js'), 'window.WH_DATA = ' + JSON.stringify(strip(D)) + ';\n');
@@ -691,12 +723,13 @@ if(require.main === module){
   const PINS = JSON.parse(fs.readFileSync(PINFILE, 'utf8')).files, have3 = pinsOf();
   for(const f of [...new Set(Object.keys(PINS).concat(Object.keys(have3)))].sort()) if(PINS[f] !== have3[f]) fails.push('R3 verify/reader2/' + f + (!have3[f] ? ' is gone' : !PINS[f] ? ' is not pinned' : ' is not the reviewed file') + ' (review it, then node verify/agree.js --pin)');
   // R2: reader2 run in a sandbox: a copy of its files and of data.js's text fields, names and keywords only (strip) in a temp folder that
-  // KODEX_APP names, under node's permission model (it reads that folder and GW's text, verify/.cache, nothing else: no app code, no
-  // BOXES, no verify/out); its tests pass and its readings are the stored ones (--check: deterministic)
+  // KODEX_APP names, under node's permission model (it reads that folder and GW's text, verify/.cache/gw and waha, nothing else: no
+  // BSData, no donors, no app code, no BOXES, no verify/out: sandboxFails holds it); its tests pass and its readings are the stored ones
+  // (--check: deterministic)
   const box = sandbox(D);
   try {
-    for(const a of ['--test', '--check']){ const r = spawnSync(process.execPath, ['--permission', '--allow-fs-read=' + box.dir, '--allow-fs-read=' + box.cache, path.join(box.dir, 'reader2', 'reader2.js'), a],
-        { cwd:path.join(box.dir, 'reader2'), env:Object.assign({}, process.env, { KODEX_APP:box.dir, KODEX_CACHE:box.cache }), encoding:'utf8' });
+    sandboxFails(box).forEach(f => fails.push(f));
+    for(const a of ['--test', '--check']){ const r = sandboxRun(box, path.join(box.dir, 'reader2', 'reader2.js'), [a]);
       const o = (r.stdout + r.stderr).trim();
       if(r.status !== 0) fails.push('R2 reader2.js ' + a + ' fails in its sandbox: ' + o.split('\n').filter(Boolean).slice(-3).join(' / ').slice(0, 300));
       else note.push('reader2 ' + a + ' (sandbox): ' + o.split('\n')[a === '--check' ? 0 : o.split('\n').length - 1].slice(0, 80)); }
@@ -769,4 +802,4 @@ if(require.main === module){
     (L.fallsBack ? ': ' + Object.entries(L.names).map(([n, x]) => n + ' ' + x.number + '/' + x.boxes).join(', ') : ''));
   process.exit(fails.length ? 1 : 0);
 }
-module.exports = { loadData, sources, uses, align, compare, release, table, write, readerImports, fingerprint, pieces, START, END };
+module.exports = { sandbox, sandboxArgs, sandboxRun, sandboxFails, SANDBOX_READ, loadData, sources, uses, align, compare, release, table, write, readerImports, fingerprint, pieces, START, END };
