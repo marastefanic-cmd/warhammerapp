@@ -316,12 +316,12 @@
   "kind": "how-diagram",
   "where": "6 gate · facts",
   "judgement": {
-   "text": "Facts against GW, BSData and New Recruit: every unit fact equal to BSData and your New Recruit PDFs and exports, every base GW’s base size guide’s, every faction catalogue complete, every program column held by its script"
+   "text": "Facts against GW, BSData and New Recruit: every unit fact equal to BSData and, for the 16 lists with one, your New Recruit PDF, every base GW’s base size guide’s, every faction catalogue complete, every program column held by its script"
   },
   "source": {
-   "code": "verify/bsdata.js, verify/nr.js (the 16 PDFs), verify/bases.js, verify/catalog.js, verify/derived-proof.js; the 24 exports are held by verify/import-test.js, reimport.js and build-parity.js (shown in the builder group)"
+   "code": "verify/bsdata.js, verify/nr.js (the 16 lists with a PDF in verify/sources/nr: app.html HW_NR_PDFS, held by verify/render.js how-diagram nr-pdfs), verify/bases.js, verify/catalog.js, verify/derived-proof.js; the exports are the builder group’s (import-test.js, reimport.js, build-parity.js)"
   },
-  "key": "ce44a9284eafd707"
+  "key": "2e456284049ce778"
  },
  {
   "army": "code",

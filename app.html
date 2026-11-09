@@ -2100,9 +2100,11 @@ const hwSrc = s => HW_SRC.find(x => x[0] === s) || [s, 's-x', s, ''];
 // the lists of a catalogued faction written from New Recruit PDFs alone, with no export: builder.js never builds them
 // (verify/render.js how-diagram: exactly the catalogued lists with no file in verify/sources/nr-json)
 const HW_PDF_ONLY = ['emperors-chosen', 'dread-host'];
+// how many lists have a New Recruit PDF the gate step nr checks (verify/render.js how-diagram: the files of verify/sources/nr that are a list's)
+const HW_NR_PDFS = 16;
 // the release gate: verify/run.js's steps, in groups (verify/render.js how-gate: every step in exactly one group)
 const HW_GATE = [
-  ['Facts against GW, BSData and New Recruit', 'every unit fact equal to BSData and your New Recruit PDFs and exports, every base GW’s base size guide’s, every faction catalogue complete, every program column held by its script', ['data', 'tables', 'bsdata', 'dispositions', 'bases', 'catalog', 'nr', 'choice', 'derived']],
+  ['Facts against GW, BSData and New Recruit', 'every unit fact equal to BSData and, for the ' + HW_NR_PDFS + ' lists with one, your New Recruit PDF, every base GW’s base size guide’s, every faction catalogue complete, every program column held by its script', ['data', 'tables', 'bsdata', 'dispositions', 'bases', 'catalog', 'nr', 'choice', 'derived']],
   ['Wording', 'every rules text the words of GW’s newest document (or Wahapedia’s), every ability word for word, every AI summary still on the words it was written from', ['texts', 'words', 'fingerprints']],
   ['Numbers', 'every profile number GW’s datasheet’s, the damage calculator against hand-worked cases, the mechanical rules', ['numbers', 'calc', 'invariants']],
   ['Keywords', 'every unit’s keywords its GW datasheets’, the list’s own only by a named rule', ['keywords']],
@@ -2300,7 +2302,7 @@ function screenHow(){
   // 6 the release gate
   const gate = HW_GATE.map(([g, what, ss]) => { const ok = ss.filter(stepOk).length;
     return '<div class="hdg" data-steps="' + esc(ss.join(',')) + '"><div class="hdgt"><b>' + g + '</b>' + (steps ? '<span class="hdok' + (ok === ss.length ? ' on' : '') + '">' + (ok === ss.length ? '<svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>' : '') + hwF('group:' + ss.join(','), ok + ' of ' + ss.length) + '</span>' : '<span class="hdok">' + hwN(ss.length, 'step', 'steps') + '</span>') + '</div>' +
-      '<span>' + esc(what) + '</span><span class="hdsn">' + ss.map(esc).join(' · ') + '</span></div>'; }).join('');
+      '<span>' + esc(what).replace(/for the (\d+) lists/, (m, n) => 'for the ' + hwF('nr-pdfs', n) + ' lists') + '</span><span class="hdsn">' + ss.map(esc).join(' · ') + '</span></div>'; }).join('');
   const nSteps = HW_GATE.reduce((t, g) => t + g[2].length, 0);
   const s6 = hwStage(6, 'gate', 'The release gate', 'verify/run.js', '<p class="hwp">Before any change reaches your phone, ' + hwF('steps', nSteps) + ' checks compare every table with its sources again' +
     (steps ? ': ' + hwF('passed', passed + ' of ' + steps.length) + ' passed for this build' : '') + '. Nothing ships unless all pass: build.js refuses to build otherwise.</p>' + '<div class="hdgate">' + gate + '</div>');

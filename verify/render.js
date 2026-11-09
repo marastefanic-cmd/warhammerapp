@@ -195,7 +195,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     const fname = k => RAW.FACTIONS[k].name, built = catLists.filter(hasExport), others = RAW.ARMIES.filter(a => !cats.includes(a.faction));
     const want = { tables:names.length, columns:allCols.length, catalogued:cats.length, 'catalogued-names':and(cats.map(fname)), built:built.length, 'built-names':and(built.map(a => a.name)),
       'pdf-only-names':and(catLists.filter(a => !hasExport(a)).map(a => a.name)), others:others.length, 'other-factions':new Set(others.map(a => a.faction)).size,
-      boxes:bx.boxes, 'box-sources':bx.sources, agree:bx.A, verdict:bx.V, core:bx.core, 'not-counted':bx.off, steps:RUN_STEPS.length, passed:RUN_STEPS.length + ' of ' + RUN_STEPS.length };
+      boxes:bx.boxes, 'box-sources':bx.sources, agree:bx.A, verdict:bx.V, core:bx.core, 'not-counted':bx.off, steps:RUN_STEPS.length, passed:RUN_STEPS.length + ' of ' + RUN_STEPS.length,
+      'nr-pdfs':RAW.ARMIES.filter(a => fs.existsSync(path.join(ROOT, 'verify/sources/nr', a.id + '.txt'))).length };
     for(const [k, n] of Object.entries(bySource)) want['src:' + k] = n;
     let aiAll = 0; for(const c of aiCols){ const n = aiRows.filter(r => r && typeof r[c] === 'string' && r[c]).length; want['ai:' + c] = n; aiAll += n; } want.ai = aiAll;
     for(const g of got.gate) want['group:' + g.steps.join(',')] = g.steps.length + ' of ' + g.steps.length;
