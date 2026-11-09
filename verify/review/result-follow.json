@@ -1,0 +1,45 @@
+[
+ {
+  "key": "damage-when|dmWhenOut",
+  "where": "app.html dmBoxRules · dmWhenOut · dmAttacksOf; calc.js prep (mod.attacks)",
+  "verdict": "ok",
+  "why": "dmWhenOut offers a box in a step only where its kind matches (melee in the fight, ranged in the shooting, all in both) and, for a stratagem, where the step is one of its phases (or its effect lasts turn/round/battle). In the shooting it is also hidden when the stratagem is for the opponent's turn there. calc.js prep drops any mod whose attacks is the other kind or 'none'. Across all 46 stratagems with attack boxes in the lists: all fight-only ones are hidden in the shooting and all shooting-only ones in the fight. The 7 'Your Shooting phase or the Fight phase' stratagems (Strength from Exile, Armed to da Teef, Balefire Boon, Enslaved Artifice, Honoured Interred, Pyrogenesis, Soul-Tally Offering), Command Re-roll and Broodguard Impulse are offered in both steps. Lasting ones carry over as GW allows: Machine Spirit Resurgent ('until the start of your next Command phase', all) and Unshakeable Opponents ('until the end of the turn', all) in both steps; Auto-divinatory Targeting (round, ranged) and Unceasing Onslaught (turn, ranged) in the shooting only, by kind; Daemonic Fury's LANCE box (turn, melee) in the fight only. I re-ran rev2/dmshown.js on main vs the branch: 674 of 675 defaults are the same, and the one change is the-exiled-legion skullmaster-bloodcrushers both: killed 4.3 to 4.5, lost 8.7 to 9.0, wipe 60 to 68. lines-work/dmsingle.js: 227 entries are gone and none changed; all 227 are a fight-only stratagem in the shooting or a shooting-only one in the fight. 30 entries are new, all ticks of the 3 newly confirmed boxes. Gate calc 411/411."
+ },
+ {
+  "key": "s|16ujjs9|b0",
+  "where": "Strength from Exile · s|16ujjs9|b0",
+  "verdict": "ok",
+  "why": "The quote is word for word the Imperial Knights Faction Pack (Freeblade Company, WHEN: Your Shooting phase or the Fight phase). fx rrHit1 + rrWound1, kind all, condition noFriendlyNear {d:9, other:true}. Reader2 reads it as a negated nearFriendly with the same value {d:9, other:true}. That is the same meaning: 'no other friendly unit within 9\"' is the negation of 'another friendly unit within 9\"'. Near misses all stay class B: d 6, no 'other', an extra kw, the positive nearFriendly, and reader2 not negated. The stratagem is offered in both steps."
+ },
+ {
+  "key": "a|sctta1|b0",
+  "where": "Vengeance for the Omnissiah · a|sctta1|b0",
+  "verdict": "ok",
+  "why": "The quote is GW's (Wahapedia Tech-Priest Enginseer page, word for word). fx aSet 6, scope Omnissian axe and this model, lasts battle, condition friendlyDestroyed {ADEPTUS MECHANICUS VEHICLE, 12}. Ticked, it changes A from 3 to 6 on the axe group only (the servo arm stays at A 1). End-to-end near misses stay B: d 9, kw ADEPTUS MECHANICUS INFANTRY, kw VEHICLE alone, and the condition dropped."
+ },
+ {
+  "key": "a|19tcvxo|b0",
+  "where": "Skullmaster’s Fury · a|19tcvxo|b0",
+  "verdict": "ok",
+  "why": "The quote is word for word the Chaos Daemons Faction Pack. The weapon is singular 'Juggernaut’s bladed horn' on both the Skullmaster and Bloodcrushers datasheets, so the plural in the ability is the same weapon. Ticked, DEV goes on both bladed-horn groups (Skullmaster ×1 and Bloodcrushers ×3) and not on the blade of blood or the hellblades. Both mode pre-ticks it through the charge fact (leading + charged, lasts turn), which is right per GW. The default change 4.3/8.7/60% to 4.5/9.0/68% is that. Near misses stay B: scope 'bladed hoof', 'blade of blood', and no scope."
+ },
+ {
+  "key": "a|h8yrk5|b0",
+  "where": "Eldritch Flames (Burning Chariot) · a|h8yrk5|b0",
+  "verdict": "ok",
+  "why": "I ran extract on the text. It gives ignoresCover with targetSelected, kind ranged, reach every friendly unit, notSelf (the model has already shot), which is right per GW: the Benefit of Cover is for ranged attacks only. With a friendly selection before it, or with no sentence before it, 'that unit cannot have the Benefit of Cover' gives no box (ENEMY_THAT guard). No list has it, and data.js BOXES are unchanged apart from the two readings."
+ },
+ {
+  "key": "agree|follow-covers",
+  "where": "verify/agree.js CEQ, coverDestroyed, coverWeapon (check F cases)",
+  "verdict": "fix (round 1; applied in 6827377, see round 2)",
+  "fix": "Make coverDestroyed and coverWeapon accept only exactly equal values. coverDestroyed should also require v.of === 'model' and no kw.any or kw.none on reader2's side; today it ignores 'of', so a reader2 'friendly unit destroyed' would match the app's 'model'. coverWeapon should compare the depluralised name as whole words, or equal to a weapon name, not as a substring; today 'horns' becomes 'horn', which is found inside 'hornet sting', and the old exact-substring test did not match that. Add check-F cases for both.",
+  "why": "The three equivalences are true for the pairs they touch. I recomputed every pair (2536 sentences, 449 boxes compared) with the old and new agree.js on main and branch data: exactly s|16ujjs9, a|sctta1 and a|19tcvxo change class (B to A), nothing else moves, and none of these three boxes needs the slack. CEQ noFriendlyNear compares the whole value, key order included. But two of the covers accept more than exactly equal values, which loosens the two-reader rule: coverDestroyed ignores reader2's 'of' (model vs unit) and kw.none, and coverWeapon's plural strip plus substring test matches a prefix of another weapon's word."
+ },
+ {
+  "key": "agree|follow-covers",
+  "where": "verify/agree.js CEQ, coverDestroyed, coverWeapon (check F cases) · round 2, 6827377",
+  "verdict": "ok",
+  "why": "Round 2 (6827377): the fix is applied. coverDestroyed now requires of === \"model\", near \"this model\", equal kw.all and distance, and no kw.any or kw.none. coverWeapon now matches the name, or its singular with one final \"s\" removed, as whole words in the scope or a q (lookarounds, regex characters escaped). My near misses do not match: of unit, of missing, kw.none, kw.any, distance 6, kw VEHICLE alone, an extra kw, INFANTRY, near this unit, only a q, horns vs hornet sting in the scope and in a q, horn vs horned helm, axe vs battle axes, blade(s) of blood and bladed claws vs the bladed horn. The true cases still match: the exact Enginseer pair, the plural or singular bladed horn, and the name in a q. The 5 new check-F cases all match with the ca179d4 covers, so they test the change. I recomputed every pair: 0 of 2536 change against ca179d4 on both branch and main data, so only s|16ujjs9, a|sctta1 and a|19tcvxo are class A by these covers. agree --write leaves data.js byte-identical (456 boxes: 378 A, 25 V, 6 core, 47 fall back). Single steps on 6827377 pass: agree (F cases and reader2 --test 128/128), calc 411/411, lines."
+ }
+]
