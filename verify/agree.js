@@ -174,6 +174,16 @@ const coverState = (v, qs) => { const st = stateWords(v); return st.length > 0 &
 // (the dispatch, as condCmp makes it: an opt, a selection, targetSelected or a stratagem never covers a state by itself; check F)
 const stateCovered = (c, qs, appIds, ctx) => coverState(c.v, qs);
 const coverTarget = (v, qs) => typeof v === 'string' && !!v.trim() && qs.some(q => q === v.toLowerCase().replace(/\.\s*$/, ''));
+// reader2's own condition of a friendly model destroyed near this one ({ kw:{ all }, within, near:'this model' }, Vengeance for the
+// Omnissiah): covered by the app's friendlyDestroyed of the same keywords and distance ({ kw, d }, effects.js COND; check F), and only a
+// model destroyed (of 'model'), with no alternative or excluded keyword (kw.any / kw.none) the app's does not have
+const coverDestroyed = (v, ons) => !!v && v.within != null && v.of === 'model' && /^this model$/i.test(v.near || '') && ![].concat((v.kw || {}).any || [], (v.kw || {}).none || []).length && ons.some(([id, p]) => id === 'friendlyDestroyed' && p && +p.d === +v.within
+  && String(p.kw || '').toLowerCase().split(/\s+/).sort().join(' ') === [].concat((v.kw || {}).all || []).join(' ').toLowerCase().split(/\s+/).sort().join(' '));
+// reader2's weapon condition, GW's words ("Juggernaut's bladed horns"): covered by the app's weapon scope (a weapon's name, singular) or a q
+// holding it as whole words, the plural's last "s" aside ("horns" is "horn", never "hornet": check F)
+const coverWeapon = (v, scopeW, qs) => { const w = String(v).toLowerCase().replace(/[’]/g, "'"), ws = [w, w.replace(/s$/, '')];
+  const whole = (t, x) => new RegExp('(?<![\\w])' + x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![\\w])').test(String(t).toLowerCase().replace(/[’]/g, "'"));
+  return ws.some(x => !!x && (whole(scopeW, x) || qs.some(q => whole(q, x)))); };
 function compare(aligned, DD, USES){
   const { rows, orphans } = aligned;
   const lc = s => String(s).toLowerCase().replace(/^faction: /, '').replace(/[’‘]/g, "'").trim();
@@ -249,7 +259,9 @@ function compare(aligned, DD, USES){
   // ---- conditions ----------------------------------------------------------------------------------------------
   // vocabulary ids compared as a set; equivalences: bearerLeading ≡ leading; aura implied by an aura reach; 'selected'
   // (a unit it selects) ≡ reader2's selected / affectedByThisAbility / selectedEnemy reach; phase (stratagem WHEN context) ignored
-  const CEQ = { bearerLeading:'leading', objective:'targetObjective|onObjective' };
+  // (noFriendlyNear, "if there are no other friendly units within 9" of your unit" ≡ reader2's negated nearFriendly, the same value;
+  // the app's friendlyDestroyed is reader2's own condition of it where that covers it, coverDestroyed, else app only)
+  const CEQ = { bearerLeading:'leading', objective:'targetObjective|onObjective', noFriendlyNear:'not:nearFriendly' };
   const IGNORE_APP = new Set(['q', 'opt', 'selected', 'aura', 'anyOf']);
   const IGNORE_R2 = new Set(['phase', 'opt', 'aura']);
   const QCOVER = { belowHalf:/below half/, targetBelowHalf:/below half/, belowStarting:/below (its )?starting/, targetBelowStarting:/below (its )?starting/, controlling:/you control|controlling/,
@@ -260,6 +272,7 @@ function compare(aligned, DD, USES){
     for(const e of apps) for(const [id, v] of e.on || []) if(!IGNORE_APP.has(id)) a.set(CEQ[id] || id, v && typeof v === 'object' && !Array.isArray(v) && v.said ? (({ said, ...rest }) => rest)(v) : v);   // targetKw.said: GW's words for the label
     const tk = [];   // reader2 can carry several targetKw (a continuation keeps the earlier one); an effect's own restriction (only) is one too
     for(const c of r.conditions || []) if(c.table !== 'own' && !IGNORE_R2.has(c.id)){ if(c.negated){ b.set('not:' + c.id, c.v); continue; } if(c.id === 'targetKw') tk.push(c.v); else b.set(c.id, c.v); }
+    if(a.has('friendlyDestroyed') && (r.conditions || []).some(c => c.table === 'own' && c.id === 'friendlyDestroyed' && coverDestroyed(c.v, [['friendlyDestroyed', a.get('friendlyDestroyed')]]))) a.delete('friendlyDestroyed');
     for(const e of r.effects || []) if(e.only && e.only.targetKw) tk.push(e.only.targetKw);
     // the selection's keywords (reader2 own 'selected' with kw, e.g. "select one visible enemy VEHICLE unit") ≡ the app's targetKw on attacks against it
     const sel = (r.conditions || []).find(c => c.id === 'selected' && c.v && c.v.kw && c.v.type === 'selectedEnemy'); if(sel) tk.push(sel.v.kw);
@@ -315,7 +328,8 @@ function compare(aligned, DD, USES){
       const leads = apps.map(e => String(e.lead || '').replace(/\*\*/g, '').toLowerCase()).join(' ');
       const kwWords = v => { const k = v && v.kw; return k ? Object.values(k).flat().map(w => String(w).toLowerCase().replace(/s$/, '')) : []; };
       const appKw = JSON.stringify(apps.map(e => [e.reach, e.boxReach, e.scope, (e.on || []).filter(x => ['targetKw', 'selfKw', 'ledBy', 'nearFriendly'].includes(x[0]))])).toLowerCase();
-      if(c.id === 'weapon') ok = scopeW.toLowerCase().includes(String(c.v).toLowerCase()) || qs.some(q => q.includes(String(c.v).toLowerCase()));
+      if(c.id === 'weapon') ok = coverWeapon(c.v, scopeW, qs);
+      else if(c.id === 'friendlyDestroyed') ok = coverDestroyed(c.v, apps.flatMap(e => e.on || []));
       else if(c.id === 'weaponExcluding') ok = apps.some(e => e.excl || (e.scope && (e.scope.wkw || e.scope.wkwNot))) || apps.some(e => (e.on || []).some(x => x[0] === 'q' && /excluding/i.test(x[1])));
       else if(c.id === 'allocatedToKw') ok = true;   // compared as targetKw above
       else if(c.id === 'trigger') ok = (ctx && ctx.kind === 'stratagem') || apps.some(e => e.pool || e.kind === 'ranged' || e.kind === 'melee') || qs.some(q => OWNCOVER.trigger.test(q)) || appIds.has('used');
@@ -707,6 +721,15 @@ if(require.main === module){
       ['factionState, only the who in a q (this model)', coverState({ who:'this model', state:'empowered' }, ['each time this model makes an attack, add 1 to the hit roll']), false],
       ['grantsState, only the who in a q (the bearer)', coverState({ who:'the bearer', state:'readied' }, ['the bearer has the fights first ability']), false],
       ['factionState, a longer word (disempowered)', coverState({ who:'that unit', state:'empowered' }, ['while a unit is disempowered it can use one of the malefic surge abilities below']), false],
+      ['friendlyDestroyed', coverDestroyed({ kw:{ all:['ADEPTUS MECHANICUS', 'VEHICLE'] }, of:'model', within:12, near:'this model' }, [['friendlyDestroyed', { kw:'ADEPTUS MECHANICUS VEHICLE', d:12 }]]), true],
+      ['friendlyDestroyed, another distance', coverDestroyed({ kw:{ all:['ADEPTUS MECHANICUS', 'VEHICLE'] }, within:9, near:'this model' }, [['friendlyDestroyed', { kw:'ADEPTUS MECHANICUS VEHICLE', d:12 }]]), false],
+      ['friendlyDestroyed, other keywords', coverDestroyed({ kw:{ all:['ADEPTUS MECHANICUS', 'INFANTRY'] }, within:12, near:'this model' }, [['friendlyDestroyed', { kw:'ADEPTUS MECHANICUS VEHICLE', d:12 }]]), false],
+      ['friendlyDestroyed, only a q', coverDestroyed({ kw:{ all:['ADEPTUS MECHANICUS', 'VEHICLE'] }, within:12, near:'this model' }, [['q', 'If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12" of this model']]), false],
+      ['friendlyDestroyed, a unit destroyed', coverDestroyed({ kw:{ all:['ADEPTUS MECHANICUS', 'VEHICLE'] }, of:'unit', within:12, near:'this model' }, [['friendlyDestroyed', { kw:'ADEPTUS MECHANICUS VEHICLE', d:12 }]]), false],
+      ['friendlyDestroyed, an excluded keyword (kw.none)', coverDestroyed({ kw:{ all:['ADEPTUS MECHANICUS', 'VEHICLE'], none:['TITANIC'] }, of:'model', within:12, near:'this model' }, [['friendlyDestroyed', { kw:'ADEPTUS MECHANICUS VEHICLE', d:12 }]]), false],
+      ['friendlyDestroyed, an alternative keyword (kw.any)', coverDestroyed({ kw:{ all:['ADEPTUS MECHANICUS', 'VEHICLE'], any:['WALKER'] }, of:'model', within:12, near:'this model' }, [['friendlyDestroyed', { kw:'ADEPTUS MECHANICUS VEHICLE', d:12 }]]), false],
+      ['weapon, plural of the scope', coverWeapon("Juggernaut's bladed horns", "juggernaut's bladed horn", []), true], ['weapon, another weapon', coverWeapon('Blades of blood', "juggernaut's bladed horn", []), false],
+      ['weapon, "horns" in "hornet sting"', coverWeapon('horns', 'hornet sting', []), false], ['weapon, "horns" in a q with "hornet sting"', coverWeapon('horns', '', ['its hornet sting has [lethal hits]']), false],
       ['target', coverTarget(IWt, IWq), true], ['target, another TARGET', coverTarget('One SYNAPSE unit from your army.', IWq), false], ['target, a q inside it', coverTarget(IWt, ['one synapse unit from your army']), false]];
     for(const [name, got, want] of FIX) if(got !== want) fails.push('F comparator fixed case ' + name + ': ' + (got ? 'covered' : 'not covered') + ', should be ' + (want ? 'covered' : 'not covered'));
     // end to end, through compare (condCmp's own dispatch): Malefic Surge's defence box with its Empowered q dropped (a second copy of

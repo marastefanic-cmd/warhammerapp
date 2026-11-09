@@ -131,6 +131,8 @@ function condsOf(V, sOrig, leadOrig, opts){
       if(id === 'aura' && opts && opts.self) break;
       if(id === 'nearFriendly'){ on.push([id, Object.assign({ d:+m[1], kw:m[3].trim() }, m[2] ? { other:true } : {}, m[4] ? { not:m[4].trim() } : {})]); break; }
       if(id === 'ledBy' || id === 'itIs'){ on.push([id, m[1].trim()]); break; }
+      if(id === 'noFriendlyNear'){ on.push([id, Object.assign({ d:+m[2] }, m[1] ? { other:true } : {})]); break; }
+      if(id === 'friendlyDestroyed'){ on.push([id, { kw:m[1].trim().toUpperCase(), d:+m[2] }]); break; }
       on.push([id, id === 'anyOf' ? opts.anyOf : id === 'aura' ? +m[1] : id === 'maxT' ? +m[1] - 1 : id === 'selfKw' ? m[1].replace(/(^|\s)([a-z])/g, (x, a, b) => a + b.toUpperCase()) : id === 'selfGear' ? m[1].split(/,? and |, /).map(x => x.replace(/^an? /, '').trim()) : true]); break; }
   }
   const tk = targetKw(V, sOrig) || (opts && opts.inherit ? null : targetKw(V, leadOrig || ''));
@@ -232,8 +234,14 @@ function scopeOf(V, n0, weapons, nOrig){
 }
 // the friendly units a sentence reaches (an aura, a unit another unit selects, a rule's units): the first friendly unit phrase
 // a sentence about every friendly unit's attacks against the enemy unit selected: "Ranged attacks that target that enemy unit have …",
-// "(Until the end of the phase,) that enemy unit cannot have the Benefit of Cover" (Burning Spray): its reach is every friendly unit ({})
-const EVERY_FRIENDLY = /^(?:ranged |melee )?attacks that target that enemy unit\b|^(?:until the end of the (?:phase|turn), )?that enemy unit cannot have the benefit of cover\b/;
+// "(Until the end of the phase,) that enemy unit cannot have the Benefit of Cover" (Burning Spray; "that unit", the enemy unit its sentence
+// before selects: Eldritch Flames, ENEMY_THAT): its reach is every friendly unit ({})
+const EVERY_FRIENDLY = /^(?:ranged |melee )?attacks that target that enemy unit\b|^(?:until the end of the (?:phase|turn), )?that (?:enemy )?unit cannot have the benefit of cover\b/;
+// "that unit" is the enemy unit the sentence before selects ("… select one enemy unit that was hit by one or more of those attacks. Until the
+// end of the phase, that unit cannot have the Benefit of Cover", Eldritch Flames): read as "that enemy unit" (Burning Spray's words); after
+// any other sentence its words are not about an enemy unit, and nothing is read from them
+const ENEMY_THAT = /\bthat unit cannot have the benefit of cover\b/;
+const enemySelectedBefore = u => /\bselect one (?:visible )?enemy unit\b/.test(norm([u.prevS || '', u.lead || ''].join(' ')));
 function reachOf(V, s){
   // (the first friendly unit phrase with keywords: "models from your army with a Bondsman ability … select one friendly ARMIGER model")
   let t = s, u = null;
@@ -379,6 +387,7 @@ function extract(src, ctx){
     if(/\b\d+" a[\dd]+ (?:bs|ws)\d\+|\bmelee a[\dd]+ ws\d\+/.test(n)) continue;
     const nx = ncOf(n);
     let { fx } = findFx(n);
+    if(ENEMY_THAT.test(n) && !enemySelectedBefore(u)) fx = fx.filter(([id]) => id !== 'ignoresCover');
     // (a core weapon ability's own keyword in its words names the weapons it is for, its scope, not an effect: "Each time an attack is made
     // with a [LANCE] weapon, …")
     if(src.type === 'core' && src.wkw) fx = fx.filter(([id, p]) => !(FX[id] && FX[id].label(p) === '[' + src.wkw + ']'));

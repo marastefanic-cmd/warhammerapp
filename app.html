@@ -2473,14 +2473,14 @@ function dmBoxRule(S, b, i, st){
   const e = E.toMod(fx); if(e.anti) e.anti = Object.assign({}, e.anti, { assume:true });   // [ANTI-…]: the target's keyword is the box's
   const parts = b.pick ? b.pick.filter(p => p.part) : [];
   const part = parts.length ? { cond:dmFactOf(parts[0].part.on), picks:parts.map(p => p.name), calc:E.toMod(parts[0].part.fx), note:E.fxLabel(parts[0].part.fx) } : null;
-  const m = { from:S.name, rule:S.rule || '', strat:S.strat || '', cp:S.cp, src:S.src || null, ab:S.ab || null, ar:S.ar || null, kind:b.kind, box:b, on, grp:S.grp, lasts:b.lasts || '',
+  const m = { from:S.name, rule:S.rule || '', strat:S.strat || '', s:S.s || null, cp:S.cp, src:S.src || null, ab:S.ab || null, ar:S.ar || null, kind:b.kind, box:b, on, grp:S.grp, lasts:b.lasts || '',
     baked:fx.length < fx0.length ? S.baked : null, cond:dmFactOf(on), vs:dmVsOf(on), limit:b.limit ? S.name + '|limit' : '', limitOf:b.limit || null, part, mark:S.grp === 'other' ? (S.aura ? 'aura' : b.mark === 'selected' ? 'selected' : 'friendly') : '' };
   return { k:'m:' + S.name + '|' + (b.tableRows ? 'rows' : i) + (S.grp === 'strat' ? '|s' : ''), m, e, fx, fx0, sc:{ scope:b.scope || {} }, grp:S.grp, label:E.condLabel(m.mark === 'selected' ? on.filter(x => x[0] !== 'selected') : on),   // (the mark says "Selected by it" already)
    
     pills:b.pick ? b.pick.map(p => [p.name, p === ch]) : null, pillKey:pk, note0:'', pick:ch ? ch.name : '', pickLabel:ch ? ch.name : '', dice:null, diceKey:'' };
 }
 // every box of your unit for these attacks (kind), and what of its sources has none (nc: shown with GW's words, "not counted in the Damage
-// tab"); a stratagem's boxes for the other kind of attack too (other: ruled out here, the player's to count anyway)
+// tab"); a box whose WHEN gives another phase or kind of attack is not offered (dmWhenOut: a Fight phase stratagem in the shooting)
 // a pick of two options at once where another ability of the list says so for this unit ("the Conqueror Imperative and Protector
 // Imperative are both active for that unit": Icon of War's The Fires of Mars, BOXES both, for the SKITARII or THULIA GHULD unit it
 // selects): a pill of both, their effects together, with its words
@@ -2493,8 +2493,28 @@ function dmBothOf(A, au, b){
       add.push(Object.assign({ name:g.names.join(' and ') + ' (' + ab.name + (g.opt ? ': ' + g.opt : '') + ')', fx:ps.flatMap(p => p.fx), quote:g.quote, on:[['selected', true]] }, part ? { part:part.part } : {})); } }
   return add.length ? Object.assign({}, b, { pick:b.pick.concat(add) }) : b;
 }
+// what a box's WHEN allows in a step of the Damage tab (ph: shooting or fight): its kind of attack (BOXES kind: melee, ranged, all) and,
+// for a stratagem, its phases and turn (phases, turn, turns): one for another phase is not offered, unless its effect lasts the turn, the
+// battle round or the battle (lasts); one for the other player's turn neither (the Damage tab's attacks are in your turn, the fight in
+// either). '' when it is offered, else why not ("Fight phase only")
+const DM_PH = { shooting:'Shooting', fight:'Fight' };
+const dmLasting = l => l === 'turn' || l === 'round' || l === 'battle';
+function dmWhenOut(b, s, ph){
+  if(s){ const at = (s.phases || []).filter(p => DM_PH[p]);
+    if(!(s.phases || []).includes(ph) && !dmLasting(b.lasts)) return (at.length ? at.map(p => DM_PH[p]).join(' or ') : PHASE_NAME[(s.phases || [])[0]] || 'Another') + ' phase only';
+    if((s.phases || []).includes(ph) && ph !== 'fight' && phTurn(s, ph) === 'opp') return 'in the other player’s turn only'; }
+  if(b.kind && b.kind !== 'all' && b.kind !== (ph === 'fight' ? 'melee' : 'ranged')) return b.kind === 'melee' ? 'melee attacks only' : 'ranged attacks only';
+  return '';
+}
+// the attacks a box's WHEN allows, for calc.js (mod.attacks, which never counts it for the other kind): its kind, and a stratagem's phases
+// (Shooting: ranged, Fight: melee) unless its effect lasts; '' for both
+function dmAttacksOf(b, s){
+  const k = b.kind === 'melee' || b.kind === 'ranged' ? [b.kind] : ['ranged', 'melee'];
+  const p = s && !dmLasting(b.lasts) ? k.filter(x => (s.phases || []).includes(x === 'ranged' ? 'shooting' : 'fight')) : k;
+  return p.length === 2 ? '' : p.length ? p[0] : 'none';
+}
 function dmBoxRules(A, au, kind, st){
-  const rules = [], other = [], nc = [], ncText = 'not counted in the Damage tab';
+  const rules = [], nc = [], ncText = 'not counted in the Damage tab', ph = st.ph || (kind === 'melee' ? 'fight' : 'shooting');
   for(const S of dmSources(A, au)){
     const o = dmBoxesOf(S.key) || {}, all = (o.b || []).map((b, i) => [b, i]);
     // a box that reaches other units counts here when it reaches this one; another unit's box about its own unit does not
@@ -2503,10 +2523,11 @@ function dmBoxRules(A, au, kind, st){
     // (a box for weapons by name or keyword is in a step with such a weapon: Moment Shackle's Watcher's Axe is not in the shooting)
     const wOf = b => { const sc = b.scope || {}; if(!sc.weapon && !sc.wkw && !sc.wkwNot) return true; const ws = weaponItems(kind === 'ranged' ? au.ranged || [] : au.melee || []);
       return ws.some(it => dmReach(au, it, { from:S.name, ab:S.ab, src:S.src }, { scope:{ weapon:sc.weapon, wkw:sc.wkw, wkwNot:sc.wkwNot } }) > 0); };
-    for(const [b0, i] of counted){ const b = dmBothOf(A, au, b0), r = dmBoxRule(S, b, i, st); if((b.kind === 'all' || b.kind === kind) && wOf(b)) rules.push(r); else if(S.grp === 'strat' && b.kind !== 'all' && b.kind !== kind) other.push(r); }
+    // (a box whose WHEN is for another phase or kind of attack is not offered: a Fight phase stratagem is not in the shooting, dmWhenOut)
+    for(const [b0, i] of counted){ const b = dmBothOf(A, au, b0); if(!dmWhenOut(b, S.s, ph) && wOf(b)) rules.push(dmBoxRule(S, b, i, st)); }
     // (words of a source with counted boxes that are not counted, a rare mechanic beside an effect: listed with GW's words too)
     // (a source whose boxes the two-reader rule does not confirm, all for the other kind of attack or other weapons: not here, as such a
-    // box would not be; a stratagem's are listed, as its boxes for the other kind are)
+    // box would not be; a stratagem's are listed)
     const fell = mine.filter(([b]) => b.unconfirmed && (b.unconfirmed.pick ? b.unconfirmed.pick.some(p => dmHasFx(p.fx)) : dmHasFx(b.unconfirmed.fx)));   // (one that would have been counted)
     if(S.grp !== 'strat' && !counted.length && fell.length && !fell.some(([b]) => (b.kind === 'all' || b.kind === kind) && wOf(b))) continue;
     if(counted.length){ for(const q of o.nc || []) nc.push({ side:'a', grp:S.grp, name:(S.cp ? S.cp + 'CP ' : '') + S.name, strat:!!S.strat, s:S.s || null, text:'“' + dmQuoteOf(q.quote) + '”', why:q.why + ': ' + ncText }); continue; }
@@ -2516,7 +2537,7 @@ function dmBoxRules(A, au, kind, st){
     nc.push({ side:'a', grp:S.grp, name:(S.cp ? S.cp + 'CP ' : '') + S.name, strat:!!S.strat, s:S.s || null,
       text:'“' + dmQuoteOf(q ? q.quote : noFx ? noFx[0].quote : S.text) + '”', why:q ? q.why + ': ' + ncText : noFx ? 'no effect in these numbers: ' + ncText : ncText });
   }
-  return { rules, other, nc };
+  return { rules, nc };
 }
 // the group a box is in: the row it reads (its source); a custom modifier is its own
 const dmGroupOf = r => r.grp || (r.m && r.m.grp) || '';
@@ -2722,16 +2743,7 @@ function dmCalc(st, A, au, tg, kind){
   const fx = isObj(st.fx) ? st.fx : {}, fxWhy = isObj(st.fxWhy) ? st.fxWhy : {};
   const sitOn = k => fx[k] != null ? !!fx[k] : k === 'battleline6' ? hasKw(au, 'Battleline') : false;
   const sitWhy = k => fxWhy[k] || 'ticked with “' + (DM_FACTS[k] || k) + '”';
-  // a stratagem's own phase and turn: one for another phase, or the other player's turn, is unticked with the reason
-  const stratOf = id => inArmy(A, () => allStratagems().find(s => s.id === id));
-  const PH = { shooting:'Shooting', fight:'Fight' };
-  const stratOut = (s, lasts) => { if(!s || !st.ph) return '';
-    const at = s.phases.filter(p => PH[p]);
-    const L = !s.phases.includes(st.ph) ? lasts || '' : '';
-    if(L === 'round' || L === 'turn') return '';
-    if(!s.phases.includes(st.ph)) return (at.length ? at.map(p => PH[p]).join(' or ') : PHASE_NAME[s.phases[0]] || 'another') + ' phase only';
-    const t = phTurn(s, st.ph);
-    return st.ph === 'fight' || t !== 'opp' ? '' : 'in the other player’s turn only'; };
+  // (a stratagem's own phase and turn, and a box's kind of attack: one its WHEN does not give here is not offered, dmBoxRules)
   // a rule that only changes range counts only through half range ([RAPID FIRE] 24.30, [MELTA] 24.25): every weapon is in range
   const halfKw = w => w.kw.some(k => /^(rapid fire|melta) /i.test(k));
   // every box starts unticked (the owner's decision, 29 Oct 2026); a fact of the table the player says holds ticks the boxes whose
@@ -2744,12 +2756,12 @@ function dmCalc(st, A, au, tg, kind){
     if(m.baked && !Object.keys(r.e).length && !r.pills) return Object.assign(r, { state:'nc', why:'already in its weapons’ profiles above (' + m.baked.join(', ') + ', marked +): counted there' });
     if(!r.pills && Object.keys(r.e).length && Object.keys(r.e).every(k => k === 'range') && !chosen.some(c => c.ps.some(halfKw) && dmReach(au, c.it, m, r.sc) > 0))   // (a pick stays a box: its other effects can count)
       return Object.assign(r, { state:'nc', why:'it changes only range: every weapon is taken to be in range, and none it reaches has [RAPID FIRE] or [MELTA]' });
-    const v = dmVs(m.vs, tg), so = m.strat ? stratOut(stratOf(m.strat), m.lasts) : '';
+    const v = dmVs(m.vs, tg);
     // a keyword of the unit the box needs ("If this model has the KHORNE keyword"): the unit's keywords say it
     const kw = (m.on || []).find(x => x[0] === 'selfKw' && !hasKw(au, x[1]));
     // the wargear the box needs ("If this model is equipped with a thundershock spear and a bellatus reaper chainsword"): the unit's weapons say it
     const wn = [].concat(au.ranged || [], au.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase()), gear = (m.on || []).find(x => x[0] === 'selfGear' && !x[1].every(g => wn.some(n => n.startsWith(String(g).toLowerCase()))));
-    if(v.ok === false || so || kw || gear) return Object.assign(r, { state:'out', why:so || v.why || (kw ? 'it has no ' + String(kw[1]).toUpperCase() + ' keyword' : 'it is not equipped with ' + gear[1].join(' and ')) });
+    if(v.ok === false || kw || gear) return Object.assign(r, { state:'out', why:v.why || (kw ? 'it has no ' + String(kw[1]).toUpperCase() + ' keyword' : 'it is not equipped with ' + gear[1].join(' and ')) });
     const pre = !m.strat && !r.help && v.ok !== false && sit && sitOn(sit) ? sitWhy(sit) : '';
     return Object.assign(r, { state:pre ? 'on' : 'choice', why:pre });
   };
@@ -2759,15 +2771,6 @@ function dmCalc(st, A, au, tg, kind){
     // help from another unit of the list (an aura, a unit another unit selects): named with its giver
     r.help = r.m.src && r.m.src !== au ? dmGiver(r.m, A) : '';
     rules.push(decide(r));
-  }
-  // the attacker's stratagems for the other kind of attack (a Shooting phase one in a fight): unticked, the reason said, the
-  // player's to count anyway (their numbers on these weapons, as if it were that phase)
-  for(const r of B.other){
-    if(seen.has(r.k)) continue; seen.add(r.k);
-    const s = stratOf(r.m.strat);
-    decide(r);
-    if(r.state !== 'nc'){ r.state = 'out'; r.why = stratOut(s, r.m.lasts) || (PH[(s.phases || []).find(p => PH[p])] || 'Another') + ' phase only'; }
-    rules.push(r);
   }
   // the custom modifiers: the catalogue's effects as plain boxes, no rule's (effects.js CUSTOM), all unticked
   for(const [id, p] of WH_EFFECTS.CUSTOM){ const fx1 = [[id, p]], label = WH_EFFECTS.fxLabel(fx1);
@@ -2857,8 +2860,8 @@ function dmCalc(st, A, au, tg, kind){
   const groups = [], gOf = [];
   for(const c of ticked){
     const appl = [], kx = kwOf(c);
-    for(const r of rules) if(r.on){ const n = dmReach(au, c.it, r.m, r.sc); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pick ? ': ' + r.pickLabel : '') + (r.over ? ' (counted by you)' : '') }, r.m.strat ? { strat:r.m.strat } : {}, r.e), r }); }
-    for(const x of dmgOn){ const n = dmReach(au, c.it, x.m, x.sc); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:x.m.from }, x.e), r:{ m:x.m } }); }
+    for(const r of rules) if(r.on){ const n = dmReach(au, c.it, r.m, r.sc); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pick ? ': ' + r.pickLabel : '') + (r.over ? ' (counted by you)' : '') }, r.m.strat ? { strat:r.m.strat } : {}, r.e, r.m.box && dmAttacksOf(r.m.box, r.m.s) ? { attacks:dmAttacksOf(r.m.box, r.m.s) } : {}), r }); }
+    for(const x of dmgOn){ const n = dmReach(au, c.it, x.m, x.sc); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:x.m.from }, x.e, dmAttacksOf(x.m.box) ? { attacks:dmAttacksOf(x.m.box) } : {}), r:{ m:x.m } }); }
     const cuts = [...new Set(appl.map(x => x.n).concat(c.n))].sort((a, b) => a - b);
     let lo = 0;
     for(const hi of cuts){

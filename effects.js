@@ -69,7 +69,9 @@ const FX = {
   precision:Object.assign(kwFx('precision', 'precision'), { custom:[true] }),
   // (and an enemy unit that "cannot have the Benefit of Cover" (Burning Spray): every attack against it as if [IGNORES COVER], 13.08; GW's
   // "[IGNORE COVER]" (Parasitic Payload) is that ability)
-  ignoresCover:Object.assign(kwFx('ignores cover', 'ignoresCover'), { custom:[true], pats:[/\[ignores? cover(?::[^\]]*)?\]/, /\bthat enemy unit cannot have the benefit of cover\b/] }),
+  // (and "that unit cannot have the Benefit of Cover" after a sentence that selects one enemy unit, Eldritch Flames: verify/effects-extract.js
+  // reads it only there)
+  ignoresCover:Object.assign(kwFx('ignores cover', 'ignoresCover'), { custom:[true], pats:[/\[ignores? cover(?::[^\]]*)?\]/, /\bthat (?:enemy )?unit cannot have the benefit of cover\b/] }),
   heavy:kwFx('heavy', 'heavy'),
   hazardous:kwFx('hazardous', 'hazardous'),
   indirect:kwFx('indirect fire', 'indirect'),
@@ -122,6 +124,11 @@ const COND = {
   leading:{ label:() => 'While leading a unit', pats:[/\bwhile this (?:model|unit) is leading a unit\b/, /\bif this model is leading\b/] },
   aura:{ label:p => 'Within ' + p + '" of it', pats:[/(?<!\bno (?:other )?)\bfriendly [^.]*?\b(?:is|are|units?|models?|unit \([^)]*\)|units \([^)]*\)) within (\d+)" of (?:this|the bearer|the selected|your unit\b)/, /\bfriendly [^.]*?within (\d+)" of this unit's [a-z]+ model\b/] },
   selected:{ label:() => 'Selected by it', pats:[/\bselect one (?:other )?friendly\b/] },
+  // no friendly unit near it ("if there are no other friendly units within 9" of your unit", Strength from Exile): { d, other }
+  noFriendlyNear:{ label:p => 'No ' + (p.other ? 'other ' : '') + 'friendly units within ' + p.d + '" of it', pats:[/\bif there are no (other )?friendly units within (\d+)" of (?:your|this) unit\b/] },
+  // a friendly model destroyed near it ("If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12" of this model",
+  // Vengeance for the Omnissiah): { kw, d }
+  friendlyDestroyed:{ label:p => 'A friendly ' + KW(p.kw) + ' model destroyed within ' + p.d + '" of it', pats:[/\bif an? friendly ([a-z' -]+?) model is destroyed within (\d+)" of this model\b/] },
   battleline6:{ fact:'battleline6', label:() => 'BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit', pats:[/\bif this unit has the battleline keyword and\/or it is within 6" of one or more friendly adeptus mechanicus battleline units\b/] },
   charged:{ fact:'charged', label:() => 'Charged this turn', pats:[/\b(?:made|makes|ends) a charge move\b/] },
   riled:{ fact:'riled', label:() => 'Riled up', pats:[/\briled up\b/] },
@@ -138,7 +145,7 @@ const COND = {
   targetNotBelowHalf:{ label:() => 'The target not Below Half-strength', pats:[/\btargets? an enemy unit that is not below half-strength\b/] },
   targetBelowHalf:{ label:() => 'The target Below Half-strength', pats:[/\btargets? (?:a |an enemy )?unit (?:\([^)]*\) )?(?:that is )?below half-strength\b/, /\bthat (?:enemy )?unit is below half-strength\b/, /\btarget of that attack is below half-strength\b/, /\bif that unit is below half-strength\b/] },
   targetBelowStarting:{ label:() => 'The target below its Starting Strength', pats:[/\btargets? (?:a |an enemy )?unit that is below (?:its )?starting strength\b/] },
-  targetSelected:{ label:() => 'The target is the enemy unit selected', pats:[/\bthat enemy unit cannot have the benefit of cover\b/, /\btargets? (?:that|its|your) (?:enemy unit|unit|victim|prey|machine vengeance target)\b/, /\bthat target (?:that )?enemy unit\b/, /\branged attacks that target that enemy unit\b/] },
+  targetSelected:{ label:() => 'The target is the enemy unit selected', pats:[/\bthat (?:enemy )?unit cannot have the benefit of cover\b/, /\btargets? (?:that|its|your) (?:enemy unit|unit|victim|prey|machine vengeance target)\b/, /\bthat target (?:that )?enemy unit\b/, /\branged attacks that target that enemy unit\b/] },
   oncePerBattle:{ label:() => 'Once per battle', pats:[/\bonce per battle\b/] },
   oncePerTurn:{ label:() => 'Once per turn', pats:[/\bonce per turn\b/] },
   used:{ label:() => 'If it uses this ability', pats:[/\b(?:you|it|this model) can use this ability\b/, /\bcan call upon\b/, /\bif (?:it|you) do(?:es)?\b/] },

@@ -23,7 +23,9 @@
                               ignoreWoundMods (to the wound roll, the target's -1 to wound when S is greater than T too), set:{ A|S|AP|D|BS: '10' or '+6' }, strat (a stratagem's id),
                               oneHit, oneWound, oneDmg (re-roll one Hit / Wound / Damage roll), oneEither (one Hit or Wound roll),
                               oneAny (one Hit, Wound or Damage roll): how many; phase: it lasts the phase (see play);
-                              unconfirmed: a box the two-reader rule does not confirm (data.js AGREE): never counted }] }]   one entry per weapon
+                              unconfirmed: a box the two-reader rule does not confirm (data.js AGREE): never counted;
+                              attacks ('melee' | 'ranged' | 'none'): the attacks its WHEN allows (a box's kind, a stratagem's phases):
+                              never counted for the other kind (a Fight phase stratagem on ranged weapons), 'none' never }] }]   one entry per weapon
                     (every weapon is taken to be in range)
                     (mod: one more entry of mods, for a rule with no name)
                     A re-roll of one die is the unit's, not the weapon's: the same rule on several weapons is one re-roll, for any of them
@@ -163,7 +165,8 @@ const ONE_WORD = { h:'a hit roll', w:'a wound roll', d:'a Damage roll', hw:'a hi
 function prep(g, X){
   const ctx = X.ctx, tm = X.tm, tsrc = tm.src || {}, ranged = !!ctx.ranged;
   // (a rule's effect the two-reader rule does not confirm, unconfirmed: never counted; the app shows its words instead, effects.js agreed)
-  const mods = [].concat(g.mods || [], g.mod ? [g.mod] : []).filter(m => m && !m.unconfirmed);
+  // (and one whose WHEN is for the other kind of attack, attacks: a Fight phase stratagem is never counted for ranged weapons)
+  const mods = [].concat(g.mods || [], g.mod ? [g.mod] : []).filter(m => m && !m.unconfirmed && (!m.attacks || m.attacks === (ranged ? 'ranged' : 'melee')));
   const from = g.from || {}, skillKey = ranged ? 'BS' : 'WS';
   const srcName = m => m.from || 'set by hand';
   // a value the printed weapon already includes from a rule (New Recruit adds some, never a stratagem's): that rule never
