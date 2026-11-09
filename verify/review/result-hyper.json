@@ -1,0 +1,20 @@
+[
+ {
+  "key": "bb6c4b8e61df75cf",
+  "where": "Invasion Fleet rule · Hyper-adaptations (sumAtk, one line per option)",
+  "verdict": "ok",
+  "why": "Rule 22: one line per named option, keyed to the three RULE_OPTIONS rows (Swarming Instincts, Hyper-aggression, Hive Predators), each as GW's text gives it. Swarming Instincts: [SUSTAINED HITS 1] vs INFANTRY or SWARM. Hyper-aggression: [LETHAL HITS] vs MONSTER or VEHICLE. Hive Predators: vs CHARACTER, 'on a Critical Hit, that attack has [PRECISION]', written as 'Critical Hits get [PRECISION]', the owner's approved wording. Each line opens 'If <option>,', has keywords in capitals and weapon abilities in brackets, and holds nothing the program writes. The sumOv and sumAtkOf fingerprint 7cbca983 are unchanged (fingerprints pass). In a fresh clone of 8e4918b the gate fails only on snapshots and helpers. The basic-bitch sheets show the old combined line as these three lines under every weapon group. Phase checklist: the three options replace the rule in Shooting (your turn) and Fight (both turns). 'Start of the first battle round · Hyper-adaptations' stays as the to-do. The rule's own timing label is unchanged: derive.js on main and the branch differs only by the three new rule-option rows. Damage on every list is unchanged against main: dmshown 675/675 and dmsingle 13222/13222 values are identical. plainHeads matches only this rule: I scanned all 273 multi-line texts in data.js and the three catalogue files, and the only near misses are capitals headings, which are excluded."
+ },
+ {
+  "key": "d03c24c7764b5561",
+  "where": "app.html defenceItems (x.lineK, x.lineItems; modelOnly over a line's items)",
+  "verdict": "ok",
+  "why": "This item comes from the LO commit (8e4918b) but is missing from todo-hyper.json; the gate's helpers step lists it. A When targeted summary line now carries every summary item drawn into it: same key, giver and options, its dups included. '<model> only:' is written only when all of those items are the leader's own model's. With the right app and data, the same 19 marks are drawn on all 26 lists as on main (diffed), and lines.js passes. Mutation: Fluxmaster d[0] (Stealth) given models:'model' while d[1] stays unit-wide. The app then draws no mark on the merged line, and LO fails it as mixed. With both boxes own-model, the line is marked and LO passes. Never marking gives 20 LO failures."
+ },
+ {
+  "key": "5252c52bd40c2005",
+  "where": "app.html defLine (modelOnly(x.lineItems || x, u))",
+  "verdict": "ok",
+  "why": "This item comes from the LO commit (8e4918b) but is missing from todo-hyper.json; the gate's helpers step lists it. The leader's When targeted line asks modelOnly about all of its items, not the first only. The drawn text is unchanged on all 26 lists: the same 19 marks as main. Mutations show the mark follows the items. Marking every leader line gives 40 LO failures (reverse check). A wrong model name gives 19. A mixed When targeted line (Fluxmaster data mutation) fails LO even when modelOnly is reverted to the first item only or to some()."
+ }
+]
