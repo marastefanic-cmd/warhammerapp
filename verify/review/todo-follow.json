@@ -1,0 +1,171 @@
+[
+ {
+  "army": "(every list)",
+  "kind": "damage-when",
+  "where": "app.html dmBoxRules · dmWhenOut · dmAttacksOf; calc.js prep (mod.attacks)",
+  "judgement": {
+   "rule": "A box is offered in a Damage-tab step only where its WHEN gives it: the box's kind (melee / ranged / all) and, for a stratagem, its phases / turn / turns unless its effect lasts the turn, round or battle (lasts). Not offered otherwise (no \"yours to count anyway\"); a saved tick of one counts nothing. Every mod passed to calc.js carries attacks (melee / ranged / none) and calc.js never counts it for the other kind.",
+   "before": "a Fight-only stratagem in the Shooting step (and a Shooting one in the fight) was shown \"<phase> phase only · yours to count anyway\" and, ticked, applied to the other kind of weapons",
+   "check": "verify/calc-test.js: WHEN cases (Kustom Dakka in a fight, Hack and Slash in the shooting, even ticked; calc.js attacks guard; the app marks the mod melee) and a sweep of every unit of every list in both steps against data.js phases / turn / turns and BOXES kind",
+   "damage": "default numbers unchanged (675 of 675 list/unit/mode results); 222 ticked-box results removed (the ticks no longer exist), every other ticked-box result unchanged"
+  },
+  "source": {
+   "gw": "Hack and Slash, WHEN: Fight phase; Kustom Dakka, WHEN: Your Shooting phase (each stratagem's WHEN line)"
+  },
+  "key": "damage-when|dmWhenOut"
+ },
+ {
+  "army": "6-bigs, 4-megas-and-a-destrier, navigator-sounds-op-ngl",
+  "kind": "reader1-box",
+  "where": "Strength from Exile · s|16ujjs9|b0",
+  "judgement": {
+   "before": {
+    "on": [
+     [
+      "q",
+      "if there are no other friendly units within 9\" of your unit"
+     ]
+    ]
+   },
+   "after": {
+    "on": [
+     [
+      "noFriendlyNear",
+      {
+       "d": 9,
+       "other": true
+      }
+     ]
+    ]
+   },
+   "label": "No other friendly units within 9\" of it",
+   "counted": "0 on main (reader2 leaves it unread); A with wt-r2 merged (agree.js CEQ noFriendlyNear ≡ not:nearFriendly)"
+  },
+  "source": {
+   "ability": "Strength from Exile",
+   "gw": "Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+  },
+  "key": "s|16ujjs9|b0"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "reader1-box",
+  "where": "Vengeance for the Omnissiah · a|sctta1|b0",
+  "judgement": {
+   "before": {
+    "on": [
+     [
+      "q",
+      "If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model"
+     ]
+    ]
+   },
+   "after": {
+    "on": [
+     [
+      "friendlyDestroyed",
+      {
+       "kw": "ADEPTUS MECHANICUS VEHICLE",
+       "d": 12
+      }
+     ]
+    ]
+   },
+   "label": "A friendly ADEPTUS MECHANICUS VEHICLE model destroyed within 12\" of it",
+   "counted": "0 on main; A with wt-r2 merged (agree.js coverDestroyed)"
+  },
+  "source": {
+   "ability": "Vengeance for the Omnissiah",
+   "gw": "If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6."
+  },
+  "key": "a|sctta1|b0"
+ },
+ {
+  "army": "the-exiled-legion",
+  "kind": "reader1-box",
+  "where": "Skullmaster’s Fury · a|19tcvxo|b0",
+  "judgement": {
+   "unchanged": {
+    "quote": "While this model is leading a unit, each time that unit ends a **Charge move**, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability.",
+    "fx": [
+     [
+      "dev",
+      true
+     ]
+    ],
+    "on": [
+     [
+      "leading",
+      true
+     ],
+     [
+      "charged",
+      true
+     ]
+    ],
+    "kind": "all",
+    "scope": {
+     "weapon": "juggernaut's bladed horn"
+    },
+    "lasts": "turn"
+   },
+   "why": "reader 1 already restricts it to the weapon (scope.weapon \"juggernaut's bladed horn\"; the Damage tab gives [DEVASTATING WOUNDS] to the Skullmaster's and the Bloodcrushers' bladed horns only); the class-B diff on wt-r2 was the comparator matching \"juggernaut's bladed horns\" (plural) against it",
+   "counted": "0 on main; A with wt-r2 merged (agree.js coverWeapon)"
+  },
+  "source": {
+   "ability": "Skullmaster’s Fury",
+   "gw": "While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+  },
+  "key": "a|19tcvxo|b0"
+ },
+ {
+  "army": "(no list uses it)",
+  "kind": "reader1-box",
+  "where": "Eldritch Flames (Burning Chariot) · a|h8yrk5|b0",
+  "judgement": {
+   "before": "not counted: \"its words are read by no catalogue effect\"",
+   "after": {
+    "fx": [
+     [
+      "ignoresCover",
+      true
+     ]
+    ],
+    "on": [
+     [
+      "targetSelected",
+      true
+     ]
+    ],
+    "kind": "ranged",
+    "reach": {},
+    "mark": "selected",
+    "notSelf": true
+   },
+   "why": "\"that unit\" read as the enemy unit the sentence before selects (ENEMY_THAT), as Burning Spray's \"that enemy unit\"; no list has a Burning Chariot, so BOXES has no source for it",
+   "counted": "no box in data.js; reader2 leaves the sentence unread on main and wt-r2 (class D there)"
+  },
+  "source": {
+   "ability": "Eldritch Flames",
+   "gw": "In your Shooting phase, after this model has shot, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, that unit cannot have the Benefit of Cover."
+  },
+  "key": "a|h8yrk5|b0"
+ },
+ {
+  "army": "(comparator)",
+  "kind": "agree-comparator",
+  "where": "verify/agree.js CEQ, coverDestroyed, coverWeapon (check F cases)",
+  "judgement": {
+   "covers": [
+    "app noFriendlyNear ≡ reader2 not:nearFriendly, equal values",
+    "reader2 own friendlyDestroyed covered only by the app's friendlyDestroyed with the same keywords and distance of this model",
+    "reader2 weapon (GW's words, plural) covered by the app's weapon scope (singular) or a q"
+   ],
+   "effect": "none on main; with wt-r2 merged: s|16ujjs9, a|sctta1, a|19tcvxo class A (47 fall back instead of 50)"
+  },
+  "source": {
+   "gw": "see the three boxes above"
+  },
+  "key": "agree|follow-covers"
+ }
+]
