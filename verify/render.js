@@ -29,7 +29,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   // verified.js is the result of the last gate run (this one writes it when it ends): a fixed stand-in, as if
   // this build passed, so the screens and their snapshots do not depend on how the previous run went
   const build = sha(['app.html', 'data.js', 'calc.js', 'effects.js', 'ask.js', 'builder.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('')).slice(0, 10);
-  const stub = { ok:true, build, data:loadData().version, date:'(date of the check)', checks:[{ label:'(checks)', detail:'(as listed by verify/run.js)' }], sources:[{ label:'(sources)', detail:'(as listed by verify/run.js)' }], tables:columnSources() };
+  // (its steps: verify/run.js's, in the order it runs them, each passed)
+  const RUN_STEPS = [...fs.readFileSync(path.join(ROOT, 'verify/run.js'), 'utf8').matchAll(/^(?:step\('([^']+)'|steps\.(\w+) = )/gm)].map(m => m[1] || m[2]);
+  const stub = { ok:true, build, data:loadData().version, date:'(date of the check)', checks:[{ label:'(checks)', detail:'(as listed by verify/run.js)' }], sources:[{ label:'(sources)', detail:'(as listed by verify/run.js)' }], tables:columnSources(),
+    steps:RUN_STEPS.map(name => ({ name, ok:true })) };
   await page.route(/\/verified\.js(\?|$)/, r => r.fulfill({ contentType:'application/javascript', body:'window.WH_VERIFIED = ' + JSON.stringify(stub) + ';' }));
   await page.goto(site.url + 'index.html');
   await page.evaluate(() => document.fonts.ready);
@@ -115,8 +118,14 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   // ---- How the app works (from the home screen) ----
   // - how-row: home has the row "How the app works and why you should be able to trust the data"; it opens the screen, which comes back
   //   on a reload with its Back, and Back returns home
-  // - how-tables: every table of data.js (TABLE_ORDER aside: the key order verify/tables.js writes, which the app never gets) has its card,
-  //   with its real row count (and ARMIES its unit entries); every table of verify/columns.json has its columns, as columns.json lists them
+  // - how-tables: every table of data.js (TABLE_ORDER aside: the key order verify/tables.js writes, which the app never gets) has its box,
+  //   with its real row count (and ARMIES its unit entries) and a cell per column of it and its inner tables; every table of
+  //   verify/columns.json has its columns, as columns.json lists them, each a chip in the colour of its columns.json source
+  // - how-diagram: every number of the diagram is data.js's, columns.json's or run.js's: the lists, the tables, the columns by source,
+  //   the catalogued factions (DATASHEETS rows with points: builder.js catalogues), the catalogued lists built from an export and those
+  //   with none (no file in verify/sources/nr-json: the PDF-only exceptions), the boxes and what AGREE makes of them, the AI texts per
+  //   ai-summary column, the steps and how many passed
+  // - how-gate: every step of verify/run.js is in exactly one group of the release gate, and each group says how many of its steps passed
   // - how-example: the unit entry shown is the one data.js stores (its ds and every field shown, as data.js has them)
   // - how-links: every GRANTS and RULE_OPTIONS row's rule is where the card says (an army rule, a detachment rule, a list's unit's ability);
   //   every CHECKLIST column is explained
@@ -134,31 +143,49 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     if(label){ await page.click('#view [data-how]'); await page.waitForTimeout(300); }
     const o = await page.evaluate(() => ({ s:cur.s, t:$('#top').innerText, back:($('#top [data-back]') || {}).textContent || '' }));
     if(o.s !== 'how' || !/How the app works/.test(o.t) || o.back !== 'Armies') fail('how-row', '', 'the row opens it', JSON.stringify(o));
-    const got = await page.evaluate(() => ({ cards:[...document.querySelectorAll('#view .hwc')].map(c => ({ t:c.dataset.table, rows:+c.dataset.rows, head:c.querySelector('summary .hwcnt').textContent })),
-      cols:Object.fromEntries([...document.querySelectorAll('#view .hwct')].map(x => [x.dataset.t, x.dataset.cols])),
+    const got = await page.evaluate(() => ({ cards:[...document.querySelectorAll('#view .hwc')].map(c => ({ t:c.dataset.table, rows:+c.dataset.rows, head:c.querySelector('summary .hwcnt').textContent, cells:c.querySelectorAll('summary .hdcells i').length })),
+      cols:Object.fromEntries([...document.querySelectorAll('#view .hwct[data-t]')].map(x => [x.dataset.t, x.dataset.cols])),
       n:Object.fromEntries([...document.querySelectorAll('#view .hwct[data-n]')].map(x => [x.dataset.t, +x.dataset.n])),
-      lines:[...document.querySelectorAll('#view .hwct .hwl[data-l]')].map(x => ({ t:x.closest('.hwct').dataset.t, l:x.dataset.l, c:x.dataset.c.split(',') })),
-      map:JSON.parse((document.querySelector('#view .hwmap') || { dataset:{ counts:'{}' } }).dataset.counts) }));
+      chips:[...document.querySelectorAll('#view .hwct[data-t] .hwcol')].map(x => ({ t:x.closest('.hwct').dataset.t, c:x.textContent, s:x.dataset.src, cls:x.className, want:'hwcol ' + hwSrc(x.dataset.src)[1] })),
+      map:JSON.parse((document.querySelector('#view .hdia') || { dataset:{ counts:'{}' } }).dataset.counts),
+      gate:[...document.querySelectorAll('#view .hdg')].map(x => ({ steps:x.dataset.steps.split(','), ok:x.querySelector('.hdok').textContent })) }));
     for(const n of names){ const c = got.cards.find(x => x.t === n), want = rows(RAW[n]);
       if(!c) fail('how-tables', '', n, 'no card'); else if(c.rows !== want || !(n === 'VERSION' ? c.head === 'one value' : c.head.startsWith(want + ' '))) fail('how-tables', '', n, 'shows ' + c.rows + ' (' + c.head + '), data.js has ' + want); }
     for(const c of got.cards) if(!names.includes(c.t)) fail('how-tables', '', c.t, 'a card for a table data.js does not have');
     const entries = RAW.ARMIES.reduce((x, a) => x + a.units.length, 0), ac = got.cards.find(x => x.t === 'ARMIES');
     if(ac && !ac.head.includes(entries + ' unit entries')) fail('how-tables', '', 'ARMIES', 'unit entries: ' + ac.head + ', data.js has ' + entries);
     for(const t of Object.keys(COLS)){ const want = Object.entries(COLS[t].columns || {}).map(([n, x]) => n + ':' + x.source).join(','); if(got.cols[t] !== want) fail('how-tables', '', t, 'columns ' + got.cols[t] + ', columns.json ' + want); }
-    // each column under the layer its columns.json source gives
-    const LAYER = { 'ai-summary':'sum', 'ai-reading':'read', hand:'hand' };
-    for(const x of got.lines) for(const c of x.c){ const s = ((COLS[x.t] || { columns:{} }).columns[c] || {}).source; if((LAYER[s] || 'mech') !== x.l) fail('how-tables', '', x.t + '.' + c, 'shown as ' + x.l + ', columns.json source ' + s); }
+    // each column a chip in the colour of its columns.json source; each box a cell per column of it and its inner tables (CHECKLIST: its columns)
+    for(const x of got.chips){ const s = ((COLS[x.t] || { columns:{} }).columns[x.c] || {}).source; if(s !== x.s || x.cls !== x.want) fail('how-tables', '', x.t + '.' + x.c, 'drawn as ' + x.s + ' (' + x.cls + '), columns.json source ' + s); }
+    const ckCols = [...new Set(Object.values(RAW.CHECKLIST).flatMap(Object.keys))].length;
+    for(const c of got.cards){ const want = c.t === 'CHECKLIST' ? ckCols : Object.keys(COLS).filter(k => k === c.t || k.startsWith(c.t + '.')).reduce((n, k) => n + Object.keys(COLS[k].columns || {}).length, 0);
+      if(c.cells !== want) fail('how-tables', '', c.t, 'its box draws ' + c.cells + ' column cells, it has ' + want + ' columns'); }
     // the inner tables' rows and the map's numbers, counted here from data.js as stored
     const walk = (root, parts) => parts.reduce((xs, k) => xs.flatMap(x => { const v = x[k]; return v == null ? [] : Array.isArray(v) ? v : k === 'detachments' ? Object.values(v) : [v]; }), root);
-    const ROOTS = { ARMIES:RAW.ARMIES, DATASHEETS:Object.values(RAW.DATASHEETS), FACTIONS:Object.values(RAW.FACTIONS) };
+    const ROOTS = { ARMIES:RAW.ARMIES, DATASHEETS:Object.values(RAW.DATASHEETS), FACTIONS:Object.values(RAW.FACTIONS), BOXES:Object.values(RAW.BOXES) };
     for(const [t, n] of Object.entries(got.n)){ const p = t.split('.'); if(p.length < 2) continue; const want = ROOTS[p[0]] ? walk(ROOTS[p[0]], p.slice(1)).length : null;
       if(want !== n) fail('how-tables', '', t, 'shows ' + n + ' rows, data.js has ' + want); }
     for(const t of ['DATASHEETS.stats', 'DATASHEETS.abilities', 'FACTIONS.detachments', 'FACTIONS.detachments.stratagems', 'ARMIES.units']) if(!(t in got.n)) fail('how-tables', '', t, 'no row count shown');
     const dets = walk(ROOTS.FACTIONS, ['detachments']);
-    const wantMap = { lists:RAW.ARMIES.length, entries, factions:rows(RAW.FACTIONS), armyRules:walk(ROOTS.FACTIONS, ['armyRules']).length, detachments:dets.length,
-      stratagems:walk(dets, ['stratagems']).length, enhancements:walk(dets, ['enhancements']).length, datasheets:rows(RAW.DATASHEETS), rules:rows(RAW.RULES), aliases:rows(RAW.RULE_ALIASES),
-      ruleSrc:rows(RAW.RULE_SRC), concepts:rows(RAW.CONCEPTS), grants:rows(RAW.GRANTS), ruleOptions:rows(RAW.RULE_OPTIONS), checklist:rows(RAW.CHECKLIST), core:rows(RAW.CORE_STRATAGEMS), bsIds:rows(RAW.BS_IDS) };
-    if(JSON.stringify(got.map) !== JSON.stringify(wantMap)) fail('how-tables', '', 'the map', 'shows ' + JSON.stringify(got.map) + ', data.js has ' + JSON.stringify(wantMap));
+    // the diagram's numbers, worked out here from data.js as stored, columns.json, verify/sources/nr-json and run.js
+    const allCols = Object.values(COLS).flatMap(x => Object.values(x.columns || {}).map(c => c.source)), bySource = {};
+    for(const s of allCols) bySource[s] = (bySource[s] || 0) + 1;
+    const cats = [...new Set(Object.values(RAW.DATASHEETS).filter(r => r.points).map(r => r.faction))].sort(), catLists = RAW.ARMIES.filter(a => cats.includes(a.faction));
+    const hasExport = a => fs.existsSync(path.join(ROOT, 'verify/sources/nr-json', a.id + '.json'));
+    const bx = { sources:rows(RAW.BOXES), boxes:0, A:0, V:0, core:0, off:0 };
+    for(const o of Object.values(RAW.BOXES)) for(const f of ['b', 'd', 'st']) bx.boxes += (o[f] || []).length;
+    for(const o of Object.values(RAW.AGREE.boxes || {})) for(const f of Object.keys(o)) for(const v of o[f]) bx[['A', 'V', 'core'].includes(v) ? v : 'off']++;
+    const aiCols = [...new Set(Object.values(COLS).flatMap(x => Object.entries(x.columns || {}).filter(([, c]) => c.source === 'ai-summary').map(([n]) => n)))];
+    const aiRows = walk(ROOTS.DATASHEETS, ['abilities']).concat(RAW.CORE_STRATAGEMS, walk(ROOTS.FACTIONS, ['armyRules']), ['rule', 'moreRules', 'stratagems', 'enhancements'].flatMap(k => walk(dets, [k])));
+    const wantMap = { lists:RAW.ARMIES.length, tables:names.length, columns:allCols.length, bySource, catalogued:cats, built:catLists.filter(hasExport).map(a => a.id), pdfOnly:catLists.filter(a => !hasExport(a)).map(a => a.id),
+      others:RAW.ARMIES.length - catLists.length, boxes:bx, ai:Object.fromEntries(aiCols.map(c => [c, aiRows.filter(r => r && typeof r[c] === 'string' && r[c]).length])), steps:RUN_STEPS.length, passed:RUN_STEPS.length };
+    const canon = v => JSON.stringify(v, (k, x) => x && typeof x === 'object' && !Array.isArray(x) ? Object.fromEntries(Object.keys(x).sort().map(y => [y, x[y]])) : x);
+    if(canon(got.map) !== canon(wantMap)) fail('how-diagram', '', 'the diagram', 'shows ' + canon(got.map) + ', the sources have ' + canon(wantMap));
+    // the release gate: every step of run.js in one group, each group with its steps passed (the stand-in verified.js: all of them)
+    const inGate = got.gate.flatMap(g => g.steps);
+    for(const s of RUN_STEPS) if(inGate.filter(x => x === s).length !== 1) fail('how-gate', '', s, 'in ' + inGate.filter(x => x === s).length + ' groups of the release gate, not one');
+    for(const s of inGate) if(!RUN_STEPS.includes(s)) fail('how-gate', '', s, 'a step verify/run.js does not run');
+    for(const g of got.gate) if(g.ok !== g.steps.length + ' of ' + g.steps.length) fail('how-gate', '', g.steps.join(','), 'says ' + JSON.stringify(g.ok) + ', ' + g.steps.length + ' of ' + g.steps.length + ' passed');
     for(const t of Object.keys(got.cols)) if(!COLS[t]) fail('how-tables', '', t, 'columns of a table columns.json does not have');
     const ex = await page.evaluate(() => { const el = document.querySelector('#view [data-hwentry]'); return el && { at:el.dataset.hwentry, rows:[...el.querySelectorAll('.pgr')].map(r => [r.querySelector('.pgk').textContent, r.querySelector('.pgv > span').textContent]) }; });
     if(!ex) fail('how-example', '', 'ARMIES', 'no unit entry shown');

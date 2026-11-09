@@ -1,0 +1,374 @@
+[
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "1 sources · Games Workshop",
+  "judgement": {
+   "text": "Core Rules, Faction Packs, errata and FAQs: the source of truth"
+  },
+  "source": {
+   "code": "verify/texts.js (every rules text against GW’s newest document); verify/run.js writeVerified \"Games Workshop:\" source list; docs/tables.md \"GW's words\""
+  },
+  "key": "7b9ab72bfb9eca9f"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "1 sources · Wahapedia",
+  "judgement": {
+   "text": "GW’s datasheets and faction pages: counts as GW, and GW’s own document wins where they differ"
+  },
+  "source": {
+   "code": "verify/words.js (ability words = Wahapedia datasheet page), verify/numbers.js (Wahapedia datasheet, GW documents on top), verify/deviations-words.json (GW document over the page)"
+  },
+  "key": "4b9171089cae0fc7"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "1 sources · BSData",
+  "judgement": {
+   "text": "the data New Recruit is built from, pinned to one commit (b4dc3f4 from verified.js): ids, points, wargear options"
+  },
+  "source": {
+   "code": "verify/fetch.sh BSDATA_COMMIT; verify/run.js writeVerified \"BSData:\"; columns.json bsdata columns (bsId, points via composition/options, BS_IDS)"
+  },
+  "key": "c270c53afb43241f"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "1 sources · New Recruit",
+  "judgement": {
+   "text": "your lists’ exports and PDFs: what each list chose"
+  },
+  "source": {
+   "code": "verify/sources/nr-json/*.json (24), verify/sources/nr/*.txt (16); verify/nr.js; columns.json ARMIES.* newrecruit"
+  },
+  "key": "e68802a5b9552615"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "1 sources · note",
+  "judgement": {
+   "text": "Where they disagree, GW wins; each difference is written down with GW’s words as evidence and checked again at every release"
+  },
+  "source": {
+   "code": "verify/deviations-*.json (each with evidence), checked by verify/bsdata.js, nr.js, words.js, numbers.js, keywords.js, bases.js every gate run"
+  },
+  "key": "7c840cedd06fa1b7"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "2 tables · count",
+  "judgement": {
+   "text": "16 tables in data.js; every table a box with its real row count"
+  },
+  "source": {
+   "code": "app.html HW_GROUPS / hwCard / hwRows; verify/render.js how-tables (every const of data.js but TABLE_ORDER has a box with its row count)"
+  },
+  "key": "412b521114c6a977"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "2 tables · columns",
+  "judgement": {
+   "text": "every column of a table and its inner tables drawn as a cell (closed) and a chip (open) in the colour of its verify/columns.json source; 396 columns: GW 56, Wahapedia 11, BSData 51, New Recruit 89, Program 156, Hand 13, AI summary 20"
+  },
+  "source": {
+   "code": "app.html hwAllCols / hwCells / hwColumns / hwChip from VER.tables (verify/lib.js columnSources → verified.js); verify/render.js how-tables (chips’ data-src and class = columns.json source; cells per box = column count) and how-diagram (bySource)"
+  },
+  "key": "b0344112a7ab4b74"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "2 tables · hand",
+  "judgement": {
+   "text": "a few columns are written by hand (ids, short names, aliases, notes)"
+  },
+  "source": {
+   "code": "verify/columns.json source hand: CORE_STRATAGEMS.id, ARMIES.id, ARMIES.units.short, FACTIONS.aliases, RULE_ALIASES.pattern, *.missing (the app’s note), ARMIES.units*.over (none today)"
+  },
+  "key": "99f33dda7afb9406"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "2 tables · gate on columns",
+  "judgement": {
+   "text": "the gate fails on a column verify/columns.json does not list"
+  },
+  "source": {
+   "code": "verify/tables.js unregistered()"
+  },
+  "key": "6b3589520220d913"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "2 tables · written by",
+  "judgement": {
+   "text": "ARMIES: verify/from-json.js (builder.js for a catalogued faction) or verify/import-nr.js; DATASHEETS: verify/tables.js --write with verify/from-bsdata.js catalogues; BS_IDS: verify/import-ids.js --write; BOXES: verify/effects-migrate.js --write; AGREE: verify/agree.js --write; BUILD_INDEX: verify/build-index.js --write; GRANTS, RULE_OPTIONS: verify/tables.js --write from verify/derive.js; CHECKLIST: verify/derive.js --write"
+  },
+  "source": {
+   "code": "app.html HW_BY; the writers: verify/tables.js MARK.rules (\"RULE_OPTIONS, GRANTS: written by verify/tables.js --write from verify/derive.js\"), verify/derive.js CK_START, verify/agree.js header, verify/build-index.js, verify/import-ids.js, verify/effects-migrate.js, docs/tables.md \"The in-app build\""
+  },
+  "key": "d06b477511556705"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "3 builder",
+  "judgement": {
+   "text": "builder.js turns a New Recruit export into a list from the export and the tables alone; the phone’s Import runs it, the gate runs it, and the built-in lists of the catalogued factions are made by the same call"
+  },
+  "source": {
+   "code": "builder.js header (WH_BUILDER.build, \"reads no file and asks no network\"); import.js resolve (WB().catalogued → WH_BUILDER.build); verify/build-parity.js (P1-P3); verify/from-json.js --write calls WH_BUILDER.build (docs/tables.md \"One builder\")"
+  },
+  "key": "5fad34aa4ea13e1a"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "3 builder · catalogued",
+  "judgement": {
+   "text": "3 catalogued factions: Adeptus Custodes, Chaos Daemons and Tyranids; 6 lists built from their export: Nidzillas, Lite Knights, The Exiled Legion, Tzeeeeentch, Healybois, Basic Bitch"
+  },
+  "source": {
+   "code": "builder.js catalogues() (DATASHEETS rows with points), live in app.html screenHow; verify/render.js how-diagram (built = catalogued lists with verify/sources/nr-json/<id>.json)"
+  },
+  "key": "dfa63e2189ad68d6"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "3 builder · exceptions",
+  "judgement": {
+   "text": "Emperor’s Chosen and Dread Host (Adeptus Custodes) have no export, only New Recruit PDFs: written from the PDFs, held by every other check, not by the builder"
+  },
+  "source": {
+   "code": "app.html HW_PDF_ONLY; verify/render.js how-diagram (pdfOnly = catalogued lists with no nr-json file); docs/tables.md Known limits"
+  },
+  "key": "6f5dce4bf7bc9cc4"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "3 builder · other factions",
+  "judgement": {
+   "text": "the 18 lists of the other 10 factions each give the same list again when re-imported from their export alone (verify/from-json.js); an import of one on the phone is made of units those lists already have"
+  },
+  "source": {
+   "code": "verify/reimport.js (every list with an export, re-imported alone, gives data.js byte for byte); import.js header (a non-catalogued export resolves only to units data.js has)"
+  },
+  "key": "68a8ac431144f40e"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "4 readers · reader 1",
+  "judgement": {
+   "text": "the app’s reader reads GW’s words sentence by sentence into BOXES (effects.js)"
+  },
+  "source": {
+   "code": "verify/effects-extract.js (sentences, list lines, options) with effects.js patterns; verify/effects-migrate.js --write"
+  },
+  "key": "9a1e528575f9b1b4"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "4 readers · reader 2",
+  "judgement": {
+   "text": "verify/reader2/ is written apart, never uses the app’s reading code; the gate runs it in a sandbox that sees only its own files, GW’s words and the units’ names and keywords"
+  },
+  "source": {
+   "code": "verify/agree.js R1 (no require of the app’s reading code, no BOXES), R2 (node permission model; a copy of data.js stripped to text fields, names and keywords; verify/.cache), R3 (pinned files)"
+  },
+  "key": "1a66fc33d738d77e"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "4 readers · counts",
+  "judgement": {
+   "text": "456 boxes from 448 rules, abilities and stratagems: 354 both readers agree, 25 a reviewed verdict quoting GW, 6 Core Rules boxes, 71 not counted"
+  },
+  "source": {
+   "code": "app.html hwBoxCounts (BOXES b/d/st; AGREE \"A\"/\"V\"/\"core\"/0); verify/render.js how-diagram recounts from data.js"
+  },
+  "key": "68cfb4974b0a5b83"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "4 readers · rule",
+  "judgement": {
+   "text": "a box counts, in the Damage tab and on the sheets, only where both readers agree or a reviewed verdict with GW’s quote shows the app right (Core Rules boxes, which reader 2 does not read, count as GW’s Core Rules); any other is shown as GW’s words, “see the rule”, never counted"
+  },
+  "source": {
+   "code": "effects.js agreed(); app.html BOXES_AGREED (every screen); verify/agree.js classes A/B/C, verdicts (Q, S, K), core (C)"
+  },
+  "key": "47e94fefbd9f2296"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "5 AI layer · columns",
+  "judgement": {
+   "text": "the only AI columns: gist 182, sumAtk 141, sumDef 96, sumSt 19, sumOv 47, sumFoe 11 (496 values in the tables)"
+  },
+  "source": {
+   "code": "verify/columns.json ai-summary sources; verify/tables.js unregistered() (ai-summary exactly gist and the placement summaries); app.html hwAiCounts; verify/render.js how-diagram. NB the gate step fingerprints reports 481: it counts one site per distinct ability name+text (verify/tables.js sites), and the same ability is on several datasheets; all 224 datasheet copies carry the current fingerprint (checked by hand: sumXOf = sha256(text)[0..8])"
+  },
+  "key": "14c08641a10160b7"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "5 AI layer · label and tap",
+  "judgement": {
+   "text": "each carries the AI label, and a tap on it opens GW’s full text"
+  },
+  "source": {
+   "code": "app.html aiLabel and its uses (stratHead, ncSum, the sheet’s summary lines); docs/summaries.md \"Line layout\"; verify/render.js ai-summary"
+  },
+  "key": "d6f8aa779730aa89"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "5 AI layer · fingerprint",
+  "judgement": {
+   "text": "each sits next to a fingerprint of the GW words it was written from (gistOf, sumAtkOf, …): when GW’s words change, the gate fails until it is written again"
+  },
+  "source": {
+   "code": "verify/tables.js FINGERPRINT and --fingerprints (gate step fingerprints)"
+  },
+  "key": "14a3cfe7a0bdf3ba"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "5 AI layer · placement",
+  "judgement": {
+   "text": "the program decides which lines exist, where and on which units; the AI writes only the sentence"
+  },
+  "source": {
+   "code": "docs/summaries.md \"Program-written\"; verify/lines.js LM/LN/LO; verify/render.js lines-placed, ai-summary"
+  },
+  "key": "368827844f10e9d6"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "5 AI layer · sign-off",
+  "judgement": {
+   "text": "every summary and gist a list shows is signed off by an independent reviewer"
+  },
+  "source": {
+   "code": "verify/helpers.js items (ability-sum*, enhancement-sum*, STRAT_KEYS, RULE_KEYS) and verify/approvals.json (gate step helpers: 743 of 743)"
+  },
+  "key": "003f66a41108e257"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "6 gate · steps",
+  "judgement": {
+   "text": "29 checks in 10 groups; each group says how many of its steps passed, from verified.js"
+  },
+  "source": {
+   "code": "verify/run.js step(...) and steps.snapshots; writeVerified steps (new); app.html HW_GATE; verify/render.js how-gate (every run.js step in exactly one group)"
+  },
+  "key": "eb66cdadda69ce15"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "6 gate · ships",
+  "judgement": {
+   "text": "nothing ships unless all pass: build.js refuses to build otherwise"
+  },
+  "source": {
+   "code": "build.js (report.ok and report.hash of app.html, data.js, calc.js, effects.js, ask.js, builder.js, import.js)"
+  },
+  "key": "1b1647e7c06a9485"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "6 gate · group texts",
+  "judgement": {
+   "text": "Facts (data, tables, bsdata, dispositions, bases, catalog, nr, choice, derived); Wording (texts, words, fingerprints); Numbers (numbers, calc, invariants); Keywords (keywords); Both readers (evidence, defence, agree); Every sheet line complete (lines, readings, derive); The one builder (import, reimport, build-parity); Every screen at 390 and 320px (screens, small phone); Snapshots; Sign-off (helpers)"
+  },
+  "source": {
+   "code": "verify/run.js header (each step’s description) and the step scripts"
+  },
+  "key": "5c7a16c89b7a7b40"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "7 app",
+  "judgement": {
+   "text": "one page template reads the tables and places every line on every screen: which units get a line and where (BOXES, GRANTS, RULE_OPTIONS), “Granted by”, the order and the labels; every line is GW’s words, an AI summary labelled AI, or a fixed template over the tables"
+  },
+  "source": {
+   "code": "app.html (screenUnit, unitMods, defenceItems, statLines; data.js resolveArmies); docs/tables.md \"The screens' lines\"; docs/summaries.md \"Program-written\"; verify/tables.js screenColumns (no hand or AI column read but the summaries)"
+  },
+  "key": "8897304db8706320"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "7 app · chat",
+  "judgement": {
+   "text": "the Rules questions chat (the ? in the top bar) asks Claude live and writes nothing into the tables"
+  },
+  "source": {
+   "code": "ask.js; app.html (the ? button); README \"Rules questions\""
+  },
+  "key": "7285f109c42e21b1"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "code",
+  "judgement": {
+   "text": "app.html: screenHow, hwCard, hwColumns, hwBoxCounts, hwAiCounts, HW_GROUPS, HW_GATE, HW_PDF_ONLY, HW_BY; CSS \"How the app works\"; applyTheme adds class lt for the light scheme"
+  },
+  "source": {
+   "code": "this branch’s diff of app.html"
+  },
+  "key": "53c02a4568d86793"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "code",
+  "judgement": {
+   "text": "verify/render.js: how-tables (chips and cells), how-diagram, how-gate; the stand-in verified.js gets steps from run.js"
+  },
+  "source": {
+   "code": "this branch’s diff of verify/render.js"
+  },
+  "key": "f7bb58255da37ba1"
+ },
+ {
+  "army": "code",
+  "kind": "how-diagram",
+  "where": "code",
+  "judgement": {
+   "text": "verify/run.js writeVerified: verified.js gets steps [{ name, ok }]"
+  },
+  "source": {
+   "code": "this branch’s diff of verify/run.js"
+  },
+  "key": "f308c6771636dfc8"
+ }
+]
