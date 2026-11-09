@@ -1,0 +1,596 @@
+[
+ {
+  "key": "7b9ab72bfb9eca9f",
+  "where": "1 sources · Games Workshop",
+  "verdict": "ok",
+  "why": "verify/texts.js checks every rules text against GW’s newest document; run.js writeVerified lists the GW documents. Matches the screen."
+ },
+ {
+  "key": "4b9171089cae0fc7",
+  "where": "1 sources · Wahapedia",
+  "verdict": "ok",
+  "why": "words.js/numbers.js check against the Wahapedia datasheet pages; deviations-words.json (12) and deviations-numbers.json declare GW’s document over the page. True as written."
+ },
+ {
+  "key": "c270c53afb43241f",
+  "where": "1 sources · BSData",
+  "verdict": "ok",
+  "why": "fetch.sh BSDATA_COMMIT=b4dc3f4; writeVerified puts “commit b4dc3f4” in the BSData source, which screenHow reads (regex /commit ([0-9a-f]{6,})/). The gate’s bsdata step says “against BSData b4dc3f4 (clone)”."
+ },
+ {
+  "key": "e68802a5b9552615",
+  "where": "1 sources · New Recruit",
+  "verdict": "ok",
+  "why": "24 exports in verify/sources/nr-json, 16 PDF texts in verify/sources/nr; ARMIES columns sourced newrecruit (89)."
+ },
+ {
+  "key": "7c840cedd06fa1b7",
+  "where": "1 sources · note",
+  "verdict": "ok",
+  "why": "Every entry of all eight deviations-*.json files has reason and evidence (bsdata 661/661, nr 214/214, texts 27/27, words 12/12, numbers 23/23, keywords 13/13, bases 17/17, catalog 5/5); sampled ones cite GW/Wahapedia pages and end “GW wins”. They are used by the gate steps every run."
+ },
+ {
+  "key": "412b521114c6a977",
+  "where": "2 tables · count",
+  "verdict": "ok",
+  "why": "data.js has 17 top-level consts; TABLE_ORDER aside, 16, each a box with its row count (checked by how-tables; removing RULE_SRC from HW_GROUPS fails “RULE_SRC · no card”)."
+ },
+ {
+  "key": "b0344112a7ab4b74",
+  "where": "2 tables · columns",
+  "verdict": "ok",
+  "why": "Recounted columns.json: gw 56, wahapedia 11, bsdata 51, newrecruit 89, derived 156, hand 13, ai-summary 20 = 396. Chips/cells carry the source class; mutations of a chip’s data-src or class and of a box’s cells each fail how-tables. (The fixed colour per source is not pinned by the check: see f7bb58255da37ba1.)"
+ },
+ {
+  "key": "99f33dda7afb9406",
+  "where": "2 tables · hand",
+  "verdict": "ok",
+  "why": "The 13 hand columns are RULE_ALIASES.pattern, CORE_STRATAGEMS.id, FACTIONS.aliases, three *.missing, ARMIES.id, ARMIES.units.short and five *.over; data.js today holds no missing and no over value (counted on the raw tables). “ids, short names, aliases, notes” is fair."
+ },
+ {
+  "key": "6b3589520220d913",
+  "where": "2 tables · gate on columns",
+  "verdict": "ok",
+  "why": "verify/tables.js unregistered() fails on a table or column of data.js columns.json does not list; the gate step tables passes with “every column has a source”."
+ },
+ {
+  "key": "d06b477511556705",
+  "where": "2 tables · written by",
+  "verdict": "ok",
+  "why": "Each writer checked: tables.js writes DATASHEETS and RULE_OPTIONS/GRANTS (lines 1029, 1048), effects-migrate.js writes BOXES, build-index.js BUILD_INDEX, import-ids.js BS_IDS, derive.js CHECKLIST, agree.js --write AGREE; ARMIES by from-json.js (builder.js for the six catalogued lists, reimport point 4) and import-nr.js for the two PDF-only lists."
+ },
+ {
+  "key": "5fad34aa4ea13e1a",
+  "where": "3 builder",
+  "verdict": "ok",
+  "why": "builder.js header (reads no file, no network); import.js make() calls WB().build for a catalogued faction; from-json.js --write takes builder.js’s entry; build-parity P1 in this gate: 6 built byte for byte."
+ },
+ {
+  "key": "dfa63e2189ad68d6",
+  "where": "3 builder · catalogued",
+  "verdict": "ok",
+  "why": "Catalogues = DATASHEETS factions with points: adeptus-custodes, chaos-daemons, tyranids. Their 8 lists: 6 with an nr-json export (the six named), 2 without. reimport in this gate: “6 of a catalogued faction built by builder.js as on the phone”. Mutating HW_PDF_ONLY fails how-diagram."
+ },
+ {
+  "key": "6f5dce4bf7bc9cc4",
+  "where": "3 builder · exceptions",
+  "verdict": "ok",
+  "why": "emperors-chosen and dread-host have no nr-json file and a PDF text each in verify/sources/nr; reimport.js header says a list without an export keeps its stored rows. nr.js checks them against the PDFs."
+ },
+ {
+  "key": "68a8ac431144f40e",
+  "where": "3 builder · other factions",
+  "verdict": "fix",
+  "why": "Overstated. “each give the same list again when re-imported from their export alone” reads as: the export alone yields the list. verify/reimport.js says the opposite in its own header: “the import starts from data.js as it is, and keeps from it what a re-import is meant to keep (one datasheet, one truth: a DATASHEETS row another list has; the units’ ids …; the old form of a label …). So it is not a proof that an import into a data.js without the list would give the same.” (“alone” in reimport.js means each list re-imported on its own.) The counts (18 lists, 10 factions) are right, and “an import of one on your phone is made of units those lists already have” is true (import.js resolve). Fix the sentence, e.g.: “The 18 lists of the other 10 factions each give the same data.js again, byte for byte, when re-imported from their export (verify/from-json.js, which keeps the datasheet rows and ids data.js already has); an import of one on your phone is made of units those lists already have.”"
+ },
+ {
+  "key": "9a1e528575f9b1b4",
+  "where": "4 readers · reader 1",
+  "verdict": "ok",
+  "why": "BOXES are written by effects-migrate.js from effects-extract.js’s sentence reading with effects.js patterns; the evidence step holds the table to what the words give."
+ },
+ {
+  "key": "1a66fc33d738d77e",
+  "where": "4 readers · reader 2",
+  "verdict": "fix",
+  "why": "False as worded. agree.js R2 runs reader2 with --allow-fs-read for the temp folder and the whole of verify/.cache. verify/.cache holds, besides GW’s and Wahapedia’s documents, the BSData catalogues and verify/.cache/donors/*.js (current.js, 3f64990_.js): earlier copies of data.js with the app’s own readings (100 “mods:” entries in current.js), put there by verify/add-army.js. So the sandbox does not “see only its own files, GW’s words and the units’ names and keywords”; what keeps reader2 off the app’s readings today is R1 (static) and R3 (its files pinned after review), and reader2.js reads only waha, waha/ds and gw. Fix the code to match the claim: in agree.js sandbox, allow-fs-read only verify/.cache/gw and verify/.cache/waha (and correct the R2 comment, which says “nothing else: no app code”); or reword the screen, e.g. “… in a sandbox with its own files, the downloaded sources and only the rules’ words, names and keywords of data.js”. The first is better: it makes the stronger claim true."
+ },
+ {
+  "key": "68cfb4974b0a5b83",
+  "where": "4 readers · counts",
+  "verdict": "ok",
+  "why": "Recounted from data.js: 456 boxes over 448 BOXES rows; AGREE A 354, V 25, core 6, 0 = 70 + 1 (the c| box outside the comparison) = 71. Every box has an AGREE entry. Agrees with the gate’s agree step (449 compared, 71 fall back, 25 verdict, 6 core). n.A++ in hwBoxCounts fails how-diagram."
+ },
+ {
+  "key": "47e94fefbd9f2296",
+  "where": "4 readers · rule",
+  "verdict": "ok",
+  "why": "agree.js classes A/B/C, verdicts with Q/S/K, core boxes with C; a box falling back is shown as GW’s words with “see the rule” (effects.js agreed), as the header and the N check state."
+ },
+ {
+  "key": "14c08641a10160b7",
+  "where": "5 AI layer · columns",
+  "verdict": "fix",
+  "why": "The column counts are right (gist 182, sumAtk 141, sumDef 96, sumSt 19, sumOv 47, sumFoe 11 = 496; aicount mutation fails how-diagram; the fingerprints step’s 481 is per distinct site, explained). But the sentence under them, “Everything else is copied or worked out by a script.”, contradicts stage 2 (“a few columns are written by hand”, 13 hand columns: ids, short names, aliases, rule patterns) on the same screen. Fix: “Everything else is copied, worked out by a script, or (a few ids, short names and aliases) written by hand.”"
+ },
+ {
+  "key": "d6f8aa779730aa89",
+  "where": "5 AI layer · label and tap",
+  "verdict": "ok",
+  "why": "aiLabel (“Summary written by AI: tap for the rules as written”); render.js ai-summary checks every stratagem gist row has the label and opens WHEN/TARGET/EFFECT, and every labelled unit line is its source’s summary with the rule’s name it opens."
+ },
+ {
+  "key": "14a3cfe7a0bdf3ba",
+  "where": "5 AI layer · fingerprint",
+  "verdict": "ok",
+  "why": "tables.js --fingerprints: gate step fingerprints “481 of 481 AI-written values … match the text they were written from”; a changed text fails it."
+ },
+ {
+  "key": "368827844f10e9d6",
+  "where": "5 AI layer · placement",
+  "verdict": "ok",
+  "why": "lines.js LM/LN/LO and render lines-placed: placement is the program’s; the AI column holds only the sentence."
+ },
+ {
+  "key": "003f66a41108e257",
+  "where": "5 AI layer · sign-off",
+  "verdict": "ok",
+  "why": "helpers.js items include ability-sum*, enhancement-sum*, STRAT_KEYS (gist) and RULE_KEYS for lists, catalogue rows and core stratagems; gate step helpers: 743 judgements, 743 approved. “an independent reviewer” is a review agent, as for every sign-off in this project."
+ },
+ {
+  "key": "eb66cdadda69ce15",
+  "where": "6 gate · steps",
+  "verdict": "ok",
+  "why": "run.js runs 28 step() calls plus steps.snapshots = 29; HW_GATE has the same 29 in 10 groups; the real verified.js written by this gate carries steps (29, 28 ok + snapshots). Removing a step from a group, or putting one in two, fails how-gate; a wrong group count fails how-gate."
+ },
+ {
+  "key": "1b1647e7c06a9485",
+  "where": "6 gate · ships",
+  "verdict": "ok",
+  "why": "build.js refuses unless verify/report.json has ok and the sha256 of app.html, data.js, calc.js, effects.js, ask.js, builder.js and import.js. (VERIFY_BUILDING=1 skips the check; it is the documented internal build run.js uses to render the screens, and the same claim stood on main.)"
+ },
+ {
+  "key": "5c7a16c89b7a7b40",
+  "where": "6 gate · group texts",
+  "verdict": "fix",
+  "why": "One group text overstates: “Facts … every unit fact equal to BSData and your New Recruit PDFs”. Only 16 of the 26 lists have a PDF (verify/sources/nr); nr.js checks those. The other 10 (nerf-when, the-exiled-legion, fellhammer, navigator, tzeeeeentch, healybois, u-w0t-m8, simple-but-effective, defilers-and-friends, basic-bitch) are held to their JSON export by import/reimport/build-parity, not to a PDF. Fix: “every unit fact equal to BSData and your New Recruit PDFs and exports, …”. The other nine group texts match their steps (texts/words/fingerprints; numbers/calc/invariants; keywords; evidence/defence/agree; lines/readings/derive; import/reimport/build-parity; screens/small phone; snapshots; helpers)."
+ },
+ {
+  "key": "8897304db8706320",
+  "where": "7 app",
+  "verdict": "ok",
+  "why": "No hand prose reaches a screen today (missing and over hold no values); lines are GW’s words (texts/words/notes), AI summaries with the label, or templates (kwNote, srcNote, na, why: derived by fixed templates per columns.json). tables.js screenColumns holds it."
+ },
+ {
+  "key": "7285f109c42e21b1",
+  "where": "7 app · chat",
+  "verdict": "ok",
+  "why": "ask.js sends the question to api.anthropic.com with the owner’s key; it neither reads nor writes data.js tables."
+ },
+ {
+  "key": "53c02a4568d86793",
+  "where": "code",
+  "verdict": "ok",
+  "why": "Read the diff. Rendered at 390 and 320, light (paper) and dark: no sideways scroll, no element past the edge, every box opens and closes on tap (DATASHEETS, CHECKLIST) with no overflow when open, a table link (ARMIES in stage 3) opens its box and scrolls to it. Box summaries are full-width tap targets; the only small targets are inline text links (22px tall), as on main. Readable in both schemes."
+ },
+ {
+  "key": "f7bb58255da37ba1",
+  "where": "code",
+  "verdict": "fix",
+  "why": "The new checks catch most mutations (each run in a scratch clone, VERIFY_LISTS=shooty): box count off by one, an AI count off by one, a step removed from a group, a step in two groups, a group’s “N of M” wrong, a chip’s data-src wrong, a chip’s class wrong, a table box removed, the PDF-only list wrong, a box’s cells one short — all fail. Three do not: (1) the visible numbers are never read: changing “456 boxes” to 457 in the stage 4 text, or “29 of 29 passed” to “28 of 29”, passes (how-diagram compares only the hdia data-counts attribute, which is computed apart from the text); only the snapshot step would show it. (2) The colour of a source is not pinned: making HW_SRC give gw the class s-wa (GW chips drawn in Wahapedia’s colour) passes, since the check’s “want” is the page’s own hwSrc. Fix: in how-diagram, read the figures from the shown text (or put each figure’s number in a data attribute on the element that shows it and compare those); in how-tables, compare chip classes with a fixed source→class map in render.js and require the seven classes distinct."
+ },
+ {
+  "key": "f308c6771636dfc8",
+  "where": "code",
+  "verdict": "ok",
+  "why": "run.js writeVerified writes steps [{ name, ok }] in run order; the verified.js written by this gate has 29 steps."
+ },
+ {
+  "key": "7b9ab72bfb9eca9f",
+  "where": "1 sources · Games Workshop",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "4b9171089cae0fc7",
+  "where": "1 sources · Wahapedia",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "c270c53afb43241f",
+  "where": "1 sources · BSData",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "e68802a5b9552615",
+  "where": "1 sources · New Recruit",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "7c840cedd06fa1b7",
+  "where": "1 sources · note",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "412b521114c6a977",
+  "where": "2 tables · count",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "b0344112a7ab4b74",
+  "where": "2 tables · columns",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "99f33dda7afb9406",
+  "where": "2 tables · hand",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "6b3589520220d913",
+  "where": "2 tables · gate on columns",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "d06b477511556705",
+  "where": "2 tables · written by",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "5fad34aa4ea13e1a",
+  "where": "3 builder",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "dfa63e2189ad68d6",
+  "where": "3 builder · catalogued",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "6f5dce4bf7bc9cc4",
+  "where": "3 builder · exceptions",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "3a73b56d9f0542c9",
+  "where": "3 builder · other factions",
+  "verdict": "ok",
+  "why": "Round 2: “give the same data.js again, byte for byte, when re-imported from their export (verify/from-json.js, which keeps the datasheet rows and ids data.js already has)” is what reimport.js guarantees and disclaims; it no longer says “from their export alone”. 18 lists, 10 factions (figures others/other-factions, held by how-diagram)."
+ },
+ {
+  "key": "9a1e528575f9b1b4",
+  "where": "4 readers · reader 1",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "633ae2decc6709f9",
+  "where": "4 readers · reader 2",
+  "verdict": "fix",
+  "why": "Round 2: the sandbox now matches the claim’s first half (verified myself: a probe under sandboxArgs gets ERR_ACCESS_DENIED for verify/.cache/donors, donors/current.js, bsdata, the repo’s data.js, app.html, effects.js, verify/effects-extract.js, verify/out, .git, /home/user/warhammerapp/data.js, /etc/passwd, /tmp; reads the stripped data.js, gw, waha, waha/ds; child process, worker and write refused). But the parenthesis is not exactly what strip() keeps. strip keeps: datasheets name, faction, kw, abilities name/tag/who/text; armies id, faction, units id/name/kw and abilities name/tag/who/text; factions name, armyRules name/tag/text/table, detachments name, rule name/tag/text/table/tableAt, moreRules name/text, enhancements name/text, stratagems name/when/target/restrictions/effect; coreStratagems the same. So “what places them (names, ids, keywords, tags)” leaves out factions and who (the model or part of a unit an ability is on). Fix: “… a copy of data.js cut down to the rules’ words and what places them (names, ids, factions, keywords, tags, which model has it)”."
+ },
+ {
+  "key": "68cfb4974b0a5b83",
+  "where": "4 readers · counts",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "47e94fefbd9f2296",
+  "where": "4 readers · rule",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "14c08641a10160b7",
+  "where": "5 AI layer · columns",
+  "verdict": "ok",
+  "why": "Round 2: the sentence this item was held on moved to its own item (beb02358820db822) and now admits the hand columns; the counts stand as checked in round 1."
+ },
+ {
+  "key": "d6f8aa779730aa89",
+  "where": "5 AI layer · label and tap",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "14a3cfe7a0bdf3ba",
+  "where": "5 AI layer · fingerprint",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "368827844f10e9d6",
+  "where": "5 AI layer · placement",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "003f66a41108e257",
+  "where": "5 AI layer · sign-off",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "beb02358820db822",
+  "where": "5 AI layer · everything else",
+  "verdict": "ok",
+  "why": "Round 2: “Everything else is copied, worked out by a script, or (a few ids, short names, aliases and notes) written by hand” matches columns.json (13 hand columns; missing and over hold no value today) and no longer contradicts stage 2."
+ },
+ {
+  "key": "eb66cdadda69ce15",
+  "where": "6 gate · steps",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "1b1647e7c06a9485",
+  "where": "6 gate · ships",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "2e456284049ce778",
+  "where": "6 gate · facts",
+  "verdict": "ok",
+  "why": "Round 2: “every unit fact equal to BSData and, for the 16 lists with one, your New Recruit PDF”: 16 lists have verify/sources/nr/<id>.txt and nr.js checks them; HW_NR_PDFS = 16 is held by how-diagram nr-pdfs (mutated to 17: fails “shows 17, the sources have 16”)."
+ },
+ {
+  "key": "5c7a16c89b7a7b40",
+  "where": "6 gate · group texts",
+  "verdict": "ok",
+  "why": "Round 2: the Facts text moved to its own item (2e456284049ce778) and is now true; the other nine group texts were already right."
+ },
+ {
+  "key": "8897304db8706320",
+  "where": "7 app",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "7285f109c42e21b1",
+  "where": "7 app · chat",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "53c02a4568d86793",
+  "where": "code",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "95e2b3771d66d005",
+  "where": "code",
+  "verdict": "ok",
+  "why": "Round 2, in a clone of 10757f3, VERIFY_LISTS=shooty render.js: the three mutations that passed in round 1 now fail — stage 4 “456”→457 (how-diagram boxes shows 457), “29 of 29”→“28 of 29” (how-diagram passed), GW chips given s-wa in HW_SRC (how-tables, every gw chip and “colours”). Also fail: the box figure written without its data-fig (“boxes not shown”), the .hwcol.s-wa CSS rule removed so Wahapedia looks like GW (“6 distinct looks for 7 sources”), HW_NR_PDFS 17. Unmutated: render 390 and 320 pass, 0 failures; tables step passes."
+ },
+ {
+  "key": "f308c6771636dfc8",
+  "where": "code",
+  "verdict": "ok",
+  "why": "Round 2: unchanged since round 1 and still true at 10757f3."
+ },
+ {
+  "key": "b0278028c5c7eeda",
+  "where": "code",
+  "verdict": "fix",
+  "why": "Round 2: the narrowed grants are real and agree.js passes (reader2 --test 97 passed, --check: readings2.json up to date; verify/reader2/ is byte-identical to c54b2c7 and main). Grant mutations of mine that fail R2: SANDBOX_CACHE + bsdata, the whole cache in SANDBOX_READ, --allow-child-process, an extra read of the repo, no --permission. One does not: replacing the reader2 run (sandboxRun) with the old spawnSync that grants verify/.cache whole — agree.js exits 0, because sandboxFails checks sandboxArgs and its own probe, not the call that runs reader2. So “R2 fails on any other grant” is not yet held. Fix: make R2 check that reader2 is run only through sandboxRun, e.g. a static check that the only spawnSync(process.execPath, …) in verify/agree.js is sandboxRun’s, or have sandboxRun record the args it ran reader2 with and compare them to sandboxArgs after the run. Also “any other readable path” in the item overstates the probe: it tests a fixed list of paths (that list is the right one)."
+ },
+ {
+  "key": "7b9ab72bfb9eca9f",
+  "where": "1 sources · Games Workshop",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "4b9171089cae0fc7",
+  "where": "1 sources · Wahapedia",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "c270c53afb43241f",
+  "where": "1 sources · BSData",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "e68802a5b9552615",
+  "where": "1 sources · New Recruit",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "7c840cedd06fa1b7",
+  "where": "1 sources · note",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "412b521114c6a977",
+  "where": "2 tables · count",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "b0344112a7ab4b74",
+  "where": "2 tables · columns",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "99f33dda7afb9406",
+  "where": "2 tables · hand",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "6b3589520220d913",
+  "where": "2 tables · gate on columns",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "d06b477511556705",
+  "where": "2 tables · written by",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "5fad34aa4ea13e1a",
+  "where": "3 builder",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "dfa63e2189ad68d6",
+  "where": "3 builder · catalogued",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "6f5dce4bf7bc9cc4",
+  "where": "3 builder · exceptions",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "3a73b56d9f0542c9",
+  "where": "3 builder · other factions",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "9a1e528575f9b1b4",
+  "where": "4 readers · reader 1",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "5022a0b61cbd40ac",
+  "where": "4 readers · reader 2",
+  "verdict": "ok",
+  "why": "Round 3: the parenthesis is now exactly what agree.js strip() keeps besides the rules’ words (text, table, WHEN/TARGET/EFFECT/RESTRICTIONS): names, ids (datasheet keys, army and unit ids), factions (datasheets, armies), keywords (kw), tags, which model has it (who), where a rule’s table sits (tableAt). Checked by dumping every key path of the stripped data.js the sandbox gets. The sandbox half was verified in round 2 (probe: donors, bsdata, app code, data.js, verify/out, .git, /etc and /tmp refused; gw, waha, waha/ds and the stripped data.js read; child process, worker and write refused)."
+ },
+ {
+  "key": "68cfb4974b0a5b83",
+  "where": "4 readers · counts",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "47e94fefbd9f2296",
+  "where": "4 readers · rule",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "14c08641a10160b7",
+  "where": "5 AI layer · columns",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "d6f8aa779730aa89",
+  "where": "5 AI layer · label and tap",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "14a3cfe7a0bdf3ba",
+  "where": "5 AI layer · fingerprint",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "368827844f10e9d6",
+  "where": "5 AI layer · placement",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "003f66a41108e257",
+  "where": "5 AI layer · sign-off",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "beb02358820db822",
+  "where": "5 AI layer · everything else",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "eb66cdadda69ce15",
+  "where": "6 gate · steps",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "1b1647e7c06a9485",
+  "where": "6 gate · ships",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "2e456284049ce778",
+  "where": "6 gate · facts",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "5c7a16c89b7a7b40",
+  "where": "6 gate · group texts",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "8897304db8706320",
+  "where": "7 app",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "7285f109c42e21b1",
+  "where": "7 app · chat",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "53c02a4568d86793",
+  "where": "code",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "95e2b3771d66d005",
+  "where": "code",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "f308c6771636dfc8",
+  "where": "code",
+  "verdict": "ok",
+  "why": "Round 3: unchanged since round 2 and still true at 07a5720."
+ },
+ {
+  "key": "d674155bee33ae64",
+  "where": "code",
+  "verdict": "ok",
+  "why": "Round 3, in a clone of 07a5720: agree.js passes (reader2 --test 97 passed; --check readings2.json up to date; verify/reader2/ byte-identical to main). My bypass mutations of the reader2 run all fail R2: the old wide spawnSync (spawnSync called twice; ran 0 times through sandboxRun), execFileSync via a second require of child_process, require(\"child_\" + \"process\").spawnSync, an aliased spawnSync (ran 0 times through sandboxRun), NODE_OPTIONS=--allow-fs-read of the whole cache in sandboxRun’s env (the probe reads bsdata and donors), and a sandboxRun that logs the sandbox argv but returns a second wide run (spawnSync twice). With the round-2 grant mutations (bsdata in SANDBOX_CACHE, the whole cache, --allow-child-process, an extra read, no --permission) also failing, the text is held. The one evasion I found needs deliberate obfuscation of agree.js itself: run reader2 through sandboxRun and then again through an alias of spawnSync and use that result; a static check cannot rule that out, and agree.js is reviewed code. Not a reason to hold this."
+ }
+]
