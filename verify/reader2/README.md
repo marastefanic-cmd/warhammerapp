@@ -221,6 +221,24 @@ Anything left over makes the sentence unread. A partly read sentence is also unr
 - **Bug found and fixed:** "Once per battle round" had been read as "once per battle" (in the text, and in tags such as
   "Once per battle round, per army"). It is now `oncePer: "battle round"`.
 
+### 7b. Round 5 (from agree.js's list of boxes that fall back; written from GW's sentences, each with a test in `test.js`)
+- **Each-time subjects:** "a model in any of / one of those [selected] units" (the stratagem's TARGET in full, never an enemy
+  selection); "a model in a X unit from your army"; "targets an enemy unit with a melee attack"; "while a X unit from your army is
+  within Synapse Range of your army" (own `synapse`).
+- **A clause outside the vocabulary joined by "and"** ("you can re-roll Advance/Charge rolls made for …", "… regains up to D3 lost
+  wounds", "that enemy unit must take a Battle-shock test"): the other clause is read, this one listed in `alsoOutsideVocabulary`.
+  "if it is a VEHICLE model" → `selfKw`; an enemy's attack "that targets your unit" → own `targetIs`.
+- **Named weapons:** "+1 A, WS and S"; a name with "and" (Slaughter and Carnage); "its Dark Blessing" ("its" after "when this model
+  …" or a selected-to-shoot trigger); "<weapon> equipped by models in that unit"; "has an Attacks characteristic of 6"; "if a friendly X
+  model is destroyed within 12" of this model" (own `friendlyDestroyed`); "each time that unit ends a Charge move" (the led unit).
+- **Self-check:** "cannot have the Benefit of Cover" is the negation `ignoresCover` carries; a "while" inside a `firstTime` trigger's own
+  words is not an opener of its own; a negated condition carries the sentence's "no"; a friendly attacker of an enemy aura's unit is
+  `reach2` (its effects are not the enemy's).
+- **Unit states:** "leading a unit and contains a X model"; "if there are no other friendly units within 9"" (`nearFriendly`,
+  negated); "is at (its) Starting Strength" (with "(excluding Battle-shocked units)" → `notShocked`).
+- **Referents:** "your selected units" (the TARGET); "each time such a weapon targets …" (the weapons the sentence before named).
+- **Ignoring modifiers "to the following: … BS or WS …; the Hit roll; the Wound roll"** → `ignoreHitMods` and `ignoreWoundMods`.
+
 ### 8. Self-check: never looser than the sentence
 Every effect reading must carry the sentence's:
 

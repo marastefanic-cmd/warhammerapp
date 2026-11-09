@@ -3,12 +3,12 @@
  "counts": {
   "sources": 1300,
   "sentences": 2535,
-  "read": 1288,
-  "readWithEffects": 643,
+  "read": 1319,
+  "readWithEffects": 674,
   "readNoEffect": 645,
-  "unread": 1247,
+  "unread": 1216,
   "unreadOutside": 963,
-  "unreadUnparsed": 284,
+  "unreadUnparsed": 253,
   "gwFound": 2399,
   "gwNotFound": 48,
   "gwShort": 88
@@ -1525,16 +1525,41 @@
    "sourceKind": "ability",
    "idx": 1,
    "text": "This unit's Scavenged Shivs weapons have +1 A, WS and S.",
-   "status": "unread",
-   "reason": "unparsed:ws and s",
-   "partial": [
+   "status": "read",
+   "kind": "effect",
+   "effects": [
     {
      "table": "FX",
      "id": "a",
      "v": 1,
      "attack": "any"
+    },
+    {
+     "table": "FX",
+     "id": "skill",
+     "v": 1,
+     "attack": "any"
+    },
+    {
+     "table": "FX",
+     "id": "s",
+     "v": 1,
+     "attack": "any"
     }
    ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit"
+   },
+   "conditions": [
+    {
+     "id": "weapon",
+     "v": "scavenged shivs",
+     "table": "own"
+    }
+   ],
+   "duration": null,
    "gw": "found"
   },
   "ds:orks/runtherd|That’ll Learn Ya|0": {
@@ -3007,7 +3032,7 @@
    "idx": 0,
    "text": "While this model is leading a unit, you can re-roll Advance rolls made for that unit and each time that unit makes a Blood Surge move, you can re-roll the D6 used to determine how far models in that unit move.",
    "status": "unread",
-   "reason": "outside-vocabulary:movement / charge eligibility",
+   "reason": "outside-vocabulary:movement / deployment",
    "gw": "found"
   },
   "ds:world-eaters/master-of-executions|A Worthy Skull|0": {
@@ -3504,8 +3529,34 @@
    "idx": 3,
    "text": "Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.",
    "lead": "If it does:",
-   "status": "unread",
-   "reason": "unparsed:its dark blessing has the [SUSTAINED HITS D3] ability",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "sus",
+     "v": "D3",
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "weapon",
+     "v": "dark blessing",
+     "table": "own"
+    },
+    {
+     "id": "used",
+     "table": "COND"
+    }
+   ],
+   "duration": "end of the turn",
+   "psychicAbility": true,
    "gw": "found"
   },
   "ds:thousand-sons/daemon-prince-of-tzeentch-with-wings|Aetherstride|4": {
@@ -5060,15 +5111,64 @@
    "sourceKind": "ability",
    "idx": 1,
    "text": "Until the end of the phase, that enemy unit cannot have the Benefit of Cover.",
-   "status": "unread",
-   "reason": "unparsed:self-check: a negation is not in the reading",
-   "partial": [
+   "status": "read",
+   "kind": "effect",
+   "effects": [
     {
      "table": "FX",
      "id": "ignoresCover",
      "v": true
     }
    ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "anyAttacker",
+    "against": {
+     "type": "selectedEnemy",
+     "unitsOrModels": "units",
+     "count": "one",
+     "qualifiers": [
+      "hit by one or more of those attacks"
+     ],
+     "enemy": true,
+     "selection": true
+    }
+   },
+   "conditions": [
+    {
+     "id": "targetSelected",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "shooting",
+      "turn": "your"
+     },
+     "table": "own"
+    },
+    {
+     "id": "timing",
+     "v": "after shot",
+     "table": "own"
+    },
+    {
+     "id": "selected",
+     "v": {
+      "type": "selectedEnemy",
+      "unitsOrModels": "units",
+      "count": "one",
+      "qualifiers": [
+       "hit by one or more of those attacks"
+      ],
+      "enemy": true,
+      "selection": true
+     },
+     "table": "own"
+    }
+   ],
+   "duration": "end of the phase",
    "gw": "found"
   },
   "ds:tyranids/ripper-swarms|Chitinous Horrors|0": {
@@ -5481,9 +5581,9 @@
    "idx": 2,
    "text": "Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.",
    "lead": "While an enemy unit is within 12\" of this model, if that unit is Battle-shocked:",
-   "status": "unread",
-   "reason": "unparsed:self-check: keyword TYRANIDS is not in the reading",
-   "partial": [
+   "status": "read",
+   "kind": "effect",
+   "effects": [
     {
      "table": "FX",
      "id": "wound",
@@ -5491,6 +5591,40 @@
      "attack": "any"
     }
    ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "enemyAura",
+    "range": 12,
+    "of": "this model"
+   },
+   "conditions": [
+    {
+     "id": "aura",
+     "v": 12,
+     "table": "COND"
+    },
+    {
+     "id": "battleShocked",
+     "v": true,
+     "table": "own"
+    },
+    {
+     "id": "targetSelected",
+     "table": "COND"
+    }
+   ],
+   "duration": null,
+   "reach2": {
+    "type": "friendly",
+    "kw": {
+     "any": [
+      "TYRANIDS"
+     ]
+    },
+    "unitsOrModels": "models"
+   },
+   "debuff": true,
    "gw": "found"
   },
   "ds:tyranids/von-ryans-leapers|Pouncing Leap|0": {
@@ -7800,8 +7934,33 @@
    "sourceKind": "ability",
    "idx": 0,
    "text": "While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability.",
-   "status": "unread",
-   "reason": "unparsed:you can re-roll advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "assault",
+     "v": true,
+     "attack": "ranged"
+    }
+   ],
+   "attack": "ranged",
+   "side": "attack",
+   "reach": {
+    "type": "affectedModel",
+    "models": true
+   },
+   "conditions": [
+    {
+     "id": "affectedByThisAbility",
+     "v": true,
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "alsoOutsideVocabulary": [
+    "you can re-roll advance rolls made for that model"
+   ],
    "gw": "found"
   },
   "ds:imperial-knights/knight-errant|Aggressive Assault|0": {
@@ -9357,8 +9516,66 @@
    "sourceKind": "ability",
    "idx": 1,
    "text": "That model regains up to D3 lost wounds and, if it is a VEHICLE model, until the start of your next Command phase, that model has the Feel No Pain 5+ ability.",
-   "status": "unread",
-   "reason": "unparsed:that model regains up to d3 lost wounds and, if it is a VEHICLE model, until the start of your next command phase, tha",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnp",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "selected",
+    "unitsOrModels": "models",
+    "count": "one",
+    "kw": {
+     "any": [
+      "ADEPTUS MECHANICUS"
+     ]
+    },
+    "range": 3,
+    "of": "this model",
+    "selection": true
+   },
+   "conditions": [
+    {
+     "id": "selfKw",
+     "v": "VEHICLE",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    },
+    {
+     "id": "selected",
+     "v": {
+      "type": "selected",
+      "unitsOrModels": "models",
+      "count": "one",
+      "kw": {
+       "any": [
+        "ADEPTUS MECHANICUS"
+       ]
+      },
+      "range": 3,
+      "of": "this model",
+      "selection": true
+     },
+     "table": "own"
+    }
+   ],
+   "duration": "start of your next command phase",
+   "alsoOutsideVocabulary": [
+    "that model regains up to d3 lost wounds"
+   ],
    "gw": "found"
   },
   "ds:adeptus-mechanicus/tech-priest-enginseer|Omnissiah’s Blessing|2": {
@@ -9379,8 +9596,44 @@
    "sourceKind": "ability",
    "idx": 0,
    "text": "If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model, until the end of the battle, this model's Omnissian axe has an Attacks characteristic of 6.",
-   "status": "unread",
-   "reason": "unparsed:if a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model, until the end of the battle, thi",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "aSet",
+     "v": 6,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "friendlyDestroyed",
+     "v": {
+      "kw": {
+       "all": [
+        "ADEPTUS MECHANICUS",
+        "VEHICLE"
+       ]
+      },
+      "of": "model",
+      "within": 12,
+      "near": "this model"
+     },
+     "table": "own"
+    },
+    {
+     "id": "weapon",
+     "v": "omnissian axe",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the battle",
    "gw": "found"
   },
   "ds:adeptus-mechanicus/cybernetica-datasmith|Battle Protocols|0": {
@@ -10416,8 +10669,23 @@
    "sourceKind": "ability",
    "idx": 0,
    "text": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1.",
-   "status": "unread",
-   "reason": "unparsed:each time a model in this unit targets an enemy unit with a melee attack, re-roll a wound roll of 1",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "rrWound1",
+     "v": true,
+     "attack": "melee"
+    }
+   ],
+   "attack": "melee",
+   "side": "attack",
+   "reach": {
+    "type": "unit"
+   },
+   "conditions": [],
+   "duration": null,
    "gw": "found"
   },
   "ds:emperors-children/infractors|Excessive Assault|1": {
@@ -10427,8 +10695,29 @@
    "sourceKind": "ability",
    "idx": 1,
    "text": "If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.",
-   "status": "unread",
-   "reason": "unparsed:if that enemy unit is within range of an objective marker, you can re-roll the wound roll instead",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "rrWound",
+     "v": true
+    }
+   ],
+   "attack": "melee",
+   "side": "attack",
+   "reach": {
+    "type": "unit"
+   },
+   "conditions": [
+    {
+     "id": "targetObjective",
+     "table": "COND"
+    }
+   ],
+   "duration": null,
+   "instead": true,
+   "continues": "previous attack sentence",
    "gw": "found"
   },
   "ds:emperors-children/infractors|Icon of Excess|0": {
@@ -14818,9 +15107,9 @@
    "sourceKind": "ability",
    "idx": 0,
    "text": "While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model's Slaughter and Carnage.",
-   "status": "unread",
-   "reason": "unparsed:carnage",
-   "partial": [
+   "status": "read",
+   "kind": "effect",
+   "effects": [
     {
      "table": "FX",
      "id": "a",
@@ -14828,6 +15117,24 @@
      "attack": "any"
     }
    ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "woundsRemaining",
+     "v": "1-7",
+     "table": "own"
+    },
+    {
+     "id": "weapon",
+     "v": "slaughter and carnage",
+     "table": "own"
+    }
+   ],
+   "duration": null,
    "gw": "found"
   },
   "ds:chaos-daemons/karanak|Pack Leader|0": {
@@ -15798,8 +16105,37 @@
    "sourceKind": "ability",
    "idx": 0,
    "text": "While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, Juggernaut's bladed horns equipped by models in that unit have the [DEVASTATING WOUNDS] ability.",
-   "status": "unread",
-   "reason": "unparsed:each time that unit ends a charge move, until the end of the turn, juggernaut's bladed horns equipped by models in that ",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "dev",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "ledUnit"
+   },
+   "conditions": [
+    {
+     "id": "leading",
+     "table": "COND"
+    },
+    {
+     "id": "charged",
+     "table": "COND"
+    },
+    {
+     "id": "weapon",
+     "v": "juggernaut's bladed horns",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the turn",
    "gw": "found"
   },
   "ds:chaos-daemons/skullmaster|Devastating Charge|0": {
@@ -19164,15 +19500,65 @@
    "sourceKind": "ability",
    "idx": 1,
    "text": "Until the end of the phase, that unit cannot have the Benefit of Cover.",
-   "status": "unread",
-   "reason": "unparsed:self-check: a negation is not in the reading",
-   "partial": [
+   "status": "read",
+   "kind": "effect",
+   "effects": [
     {
      "table": "FX",
      "id": "ignoresCover",
      "v": true
     }
    ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "anyAttacker",
+    "against": {
+     "type": "selectedEnemy",
+     "unitsOrModels": "units",
+     "count": "one",
+     "qualifiers": [
+      "that was hit by one or more of those attacks"
+     ],
+     "enemy": true,
+     "selection": true
+    }
+   },
+   "conditions": [
+    {
+     "id": "targetSelected",
+     "table": "COND"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "shooting",
+      "turn": "your"
+     },
+     "table": "own"
+    },
+    {
+     "id": "timing",
+     "v": "after shot",
+     "table": "own"
+    },
+    {
+     "id": "selected",
+     "v": {
+      "type": "selectedEnemy",
+      "unitsOrModels": "units",
+      "count": "one",
+      "qualifiers": [
+       "that was hit by one or more of those attacks"
+      ],
+      "enemy": true,
+      "selection": true
+     },
+     "table": "own"
+    }
+   ],
+   "duration": "end of the phase",
+   "psychicAbility": true,
    "gw": "found"
   },
   "ds:chaos-daemons/hellflayers|Cutting Down the Foe|0": {
@@ -20297,8 +20683,64 @@
    "sourceKind": "ability",
    "idx": 1,
    "text": "That VEHICLE model regains up to D3 lost wounds and, until the start of your next Command phase, each time that VEHICLE makes an attack, add 1 to the Hit roll.",
-   "status": "unread",
-   "reason": "unparsed:that VEHICLE model regains up to d3 lost wounds and, until the start of your next command phase, each time that VEHIC",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": 1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "selected",
+    "unitsOrModels": "models",
+    "count": "one",
+    "kw": {
+     "all": [
+      "HERETIC ASTARTES",
+      "VEHICLE"
+     ]
+    },
+    "range": 3,
+    "of": "this model",
+    "selection": true
+   },
+   "conditions": [
+    {
+     "id": "phase",
+     "v": {
+      "phase": "command",
+      "turn": "your"
+     },
+     "table": "own"
+    },
+    {
+     "id": "selected",
+     "v": {
+      "type": "selected",
+      "unitsOrModels": "models",
+      "count": "one",
+      "kw": {
+       "all": [
+        "HERETIC ASTARTES",
+        "VEHICLE"
+       ]
+      },
+      "range": 3,
+      "of": "this model",
+      "selection": true
+     },
+     "table": "own"
+    }
+   ],
+   "duration": "start of your next command phase",
+   "alsoOutsideVocabulary": [
+    "that VEHICLE model regains up to d3 lost wounds"
+   ],
    "gw": "found"
   },
   "ds:chaos-space-marines/warpsmith|Master of Mechanisms|2": {
@@ -20366,8 +20808,33 @@
    "sourceKind": "ability",
    "idx": 0,
    "text": "While this unit is leading a unit and contains a DARK APOSTLE model, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
-   "status": "unread",
-   "reason": "unparsed:while this unit is leading a unit and contains a DARK APOSTLE model, each time a model in that unit makes a melee atta",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "wound",
+     "v": 1,
+     "attack": "melee"
+    }
+   ],
+   "attack": "melee",
+   "side": "attack",
+   "reach": {
+    "type": "ledUnit"
+   },
+   "conditions": [
+    {
+     "id": "leading",
+     "table": "COND"
+    },
+    {
+     "id": "contains",
+     "v": "DARK APOSTLE",
+     "table": "own"
+    }
+   ],
+   "duration": null,
    "gw": "found"
   },
   "ds:chaos-space-marines/dark-apostle|Demagogue|0": {
@@ -20913,8 +21380,34 @@
    "sourceKind": "ability",
    "idx": 1,
    "text": "If it does, until the end of the phase, its ranged weapons have the [DEVASTATING WOUNDS] and [HAZARDOUS] abilities.",
-   "status": "unread",
-   "reason": "unparsed:its ranged weapons have the [DEVASTATING WOUNDS] and [HAZARDOUS] abilities",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "dev",
+     "v": true,
+     "attack": "ranged"
+    },
+    {
+     "table": "FX",
+     "id": "hazardous",
+     "v": true,
+     "attack": "ranged"
+    }
+   ],
+   "attack": "ranged",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "used",
+     "table": "COND"
+    }
+   ],
+   "duration": "end of the phase",
    "gw": "found"
   },
   "ds:chaos-space-marines/forgefiend|Damaged: 1-4 wounds remaining|0": {
@@ -21108,8 +21601,54 @@
    "sourceKind": "ability",
    "idx": 0,
    "text": "While a friendly NECRONS unit (excluding MONSTER units) is within 6\" of this unit's Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
-   "status": "unread",
-   "reason": "unparsed:you can re-roll charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the st",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "s",
+     "v": 1,
+     "attack": "melee"
+    }
+   ],
+   "attack": "melee",
+   "side": "attack",
+   "reach": {
+    "type": "aura",
+    "range": 6,
+    "of": "this unit's szarekh model",
+    "unitsOrModels": "units",
+    "kw": {
+     "any": [
+      "NECRONS"
+     ]
+    },
+    "excluding": [
+     "MONSTER"
+    ]
+   },
+   "conditions": [
+    {
+     "id": "aura",
+     "v": 6,
+     "table": "COND"
+    },
+    {
+     "id": "opt",
+     "v": "Phaeron of the Blades",
+     "table": "COND"
+    },
+    {
+     "id": "choice",
+     "v": "picked by Triarch Abilities: At the start of the battle round, select one Triarch ability (see left). Until the start of the next battle round, this unit has that ability. (Triarch Abilities)",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "alsoOutsideVocabulary": [
+    "you can re-roll charge rolls made for that unit"
+   ],
+   "tagAura": true,
    "gw": "found"
   },
   "ds:necrons/the-silent-king|Relentless March|0": {
@@ -26733,9 +27272,9 @@
    "sourceKind": "unitAbility",
    "idx": 2,
    "text": "The first time the bearer's unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer's unit.",
-   "status": "unread",
-   "reason": "unparsed:self-check: 2 condition openers but 1 conditions",
-   "partial": [
+   "status": "read",
+   "kind": "effect",
+   "effects": [
     {
      "table": "FX",
      "id": "a",
@@ -26743,6 +27282,32 @@
      "attack": "melee"
     }
    ],
+   "attack": "melee",
+   "side": "attack",
+   "reach": {
+    "type": "bearerUnit"
+   },
+   "conditions": [
+    {
+     "id": "firstTime",
+     "v": "the bearer's unit destroys an enemy unit in the fight phase while the bearer is within 6\" of one or more friendly HARVESTER units",
+     "table": "own"
+    },
+    {
+     "id": "onlyFor",
+     "v": {
+      "kw": {
+       "any": [
+        "TYRANIDS"
+       ]
+      },
+      "of": "model"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": "end of the battle",
+   "who": "Hive Tyrant",
    "gw": "found"
   },
   "army:healybois/norn-assimilator|Protean Purpose|0": {
@@ -29947,8 +30512,59 @@
    "sourceKind": "stratagem",
    "idx": 0,
    "text": "Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
-   "status": "unread",
-   "reason": "unparsed:each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a h",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "rrHit1",
+     "v": true,
+     "attack": "any"
+    },
+    {
+     "table": "FX",
+     "id": "rrWound1",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target",
+    "targetKw": {
+     "any": [
+      "IMPERIAL KNIGHTS"
+     ]
+    },
+    "targetQualifier": "that has not been selected to shoot or fight this phase"
+   },
+   "conditions": [
+    {
+     "id": "nearFriendly",
+     "v": {
+      "d": 9,
+      "other": true
+     },
+     "table": "DCOND",
+     "negated": true
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "shooting|fight",
+      "turn": "your|either"
+     },
+     "table": "own"
+    },
+    {
+     "id": "when",
+     "v": "Your Shooting phase or the Fight phase.",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the phase",
    "gw": "found"
   },
   "det:imperial-knights/freeblade-company|Full Tilt|0": {
@@ -33600,8 +34216,35 @@
    "idx": 3,
    "text": "Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
    "lead": "While a TYRANIDS unit from your army is within Synapse Range of your army:",
-   "status": "unread",
-   "reason": "unparsed:while a TYRANIDS unit from your army is within synapse range of your army, each time a model in that unit makes a mele",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "s",
+     "v": 1,
+     "attack": "melee"
+    }
+   ],
+   "attack": "melee",
+   "side": "attack",
+   "reach": {
+    "type": "army",
+    "kw": {
+     "any": [
+      "TYRANIDS"
+     ]
+    },
+    "unitsOrModels": "units"
+   },
+   "conditions": [
+    {
+     "id": "synapse",
+     "v": true,
+     "table": "own"
+    }
+   ],
+   "duration": null,
    "gw": "found"
   },
   "faction:tyranids|Shadow in the Warp|0": {
@@ -33899,9 +34542,9 @@
    "sourceKind": "enhancement",
    "idx": 2,
    "text": "The first time the bearer's unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer's unit.",
-   "status": "unread",
-   "reason": "unparsed:self-check: 2 condition openers but 1 conditions",
-   "partial": [
+   "status": "read",
+   "kind": "effect",
+   "effects": [
     {
      "table": "FX",
      "id": "a",
@@ -33909,6 +34552,31 @@
      "attack": "melee"
     }
    ],
+   "attack": "melee",
+   "side": "attack",
+   "reach": {
+    "type": "bearerUnit"
+   },
+   "conditions": [
+    {
+     "id": "firstTime",
+     "v": "the bearer's unit destroys an enemy unit in the fight phase while the bearer is within 6\" of one or more friendly HARVESTER units",
+     "table": "own"
+    },
+    {
+     "id": "onlyFor",
+     "v": {
+      "kw": {
+       "any": [
+        "TYRANIDS"
+       ]
+      },
+      "of": "model"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": "end of the battle",
    "gw": "found"
   },
   "det:tyranids/assimilation-swarm|Broodguard Impulse|0": {
@@ -34203,8 +34871,40 @@
    "sourceKind": "detachmentRule",
    "idx": 1,
    "text": "In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.",
-   "status": "unread",
-   "reason": "unparsed:while a TYRANIDS MONSTER unit from your army (excluding battle-shocked units) is at its starting strength, add 2 to th",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "ST",
+     "id": "ocAdd",
+     "v": 2
+    }
+   ],
+   "attack": null,
+   "side": "stat",
+   "reach": {
+    "type": "army",
+    "kw": {
+     "all": [
+      "TYRANIDS",
+      "MONSTER"
+     ]
+    },
+    "unitsOrModels": "units"
+   },
+   "conditions": [
+    {
+     "id": "atStarting",
+     "table": "STCOND",
+     "of": "that unit"
+    },
+    {
+     "id": "notShocked",
+     "table": "STCOND",
+     "of": "that unit"
+    }
+   ],
+   "duration": null,
    "gw": "found"
   },
   "det:tyranids/crusher-stampede|Ominous Presence|0": {
@@ -34545,8 +35245,40 @@
    "sourceKind": "stratagem",
    "idx": 0,
    "text": "That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll.",
-   "status": "unread",
-   "reason": "unparsed:that enemy unit must take a battle-shock test and, until the end of the phase, each time a model in that enemy unit make",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": -1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "enemyInWhen",
+    "enemy": true,
+    "when": "Fight phase, just after an enemy unit has selected its targets."
+   },
+   "conditions": [
+    {
+     "id": "targetIs",
+     "v": "your unit",
+     "table": "own"
+    },
+    {
+     "id": "when",
+     "v": "Fight phase, just after an enemy unit has selected its targets.",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the phase",
+   "alsoOutsideVocabulary": [
+    "that enemy unit must take a battle-shock test"
+   ],
+   "debuff": true,
    "gw": "found"
   },
   "det:tyranids/crusher-stampede|Savage Roar|1": {
@@ -34556,8 +35288,45 @@
    "sourceKind": "stratagem",
    "idx": 1,
    "text": "If that Battle-shock test was failed, subtract 1 from the Wound roll as well.",
-   "status": "unread",
-   "reason": "unparsed:subtract 1 from the wound roll as well",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "wound",
+     "v": -1
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "enemyInWhen",
+    "enemy": true,
+    "when": "Fight phase, just after an enemy unit has selected its targets."
+   },
+   "conditions": [
+    {
+     "id": "targetIs",
+     "v": "your unit",
+     "table": "own"
+    },
+    {
+     "id": "when",
+     "v": "Fight phase, just after an enemy unit has selected its targets.",
+     "table": "own"
+    },
+    {
+     "id": "test",
+     "v": {
+      "test": "battle-shock",
+      "passed": false
+     },
+     "table": "own"
+    }
+   ],
+   "duration": "end of the phase",
+   "continues": "previous attack sentence",
+   "debuff": true,
    "gw": "found"
   },
   "det:tyranids/crusher-stampede|Untrammelled Ferocity|0": {
@@ -35433,8 +36202,36 @@
    "sourceKind": "stratagem",
    "idx": 0,
    "text": "Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
-   "status": "unread",
-   "reason": "unparsed:each time a model in any of those selected units makes an attack, an unmodified hit roll of 5+ scores a critical hit",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "critHit",
+     "v": 5,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target",
+    "targetKw": {
+     "any": [
+      "TYRANIDS"
+     ]
+    },
+    "targetQualifier": "that are within synapse range of your army and are eligible to fight, or one other TYRANIDS unit from your army that is eligible to fight"
+   },
+   "conditions": [
+    {
+     "id": "when",
+     "v": "Fight phase.",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the phase",
    "gw": "found"
   },
   "det:tyranids/invasion-fleet|Death Frenzy|0": {
@@ -38628,8 +39425,35 @@
    "idx": 1,
    "text": "If the Protector Imperative is active for that unit, re-roll a Hit roll of 1.",
    "lead": "Each time a model in a SKITARII unit from your army makes an attack:",
-   "status": "unread",
-   "reason": "unparsed:each time a model in a SKITARII unit from your army makes an attack, re-roll a hit roll of 1",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "rrHit1",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "army",
+    "kw": {
+     "any": [
+      "SKITARII"
+     ]
+    },
+    "unitsOrModels": "units"
+   },
+   "conditions": [
+    {
+     "id": "abilityActive",
+     "v": "protector imperative",
+     "table": "own"
+    }
+   ],
+   "duration": null,
    "gw": "found"
   },
   "det:adeptus-mechanicus/eradication-cohort|Murderous Imperative|2": {
@@ -38640,8 +39464,35 @@
    "idx": 2,
    "text": "If the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1.",
    "lead": "Each time a model in a SKITARII unit from your army makes an attack:",
-   "status": "unread",
-   "reason": "unparsed:each time a model in a SKITARII unit from your army makes an attack, re-roll a wound roll of 1",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "rrWound1",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "army",
+    "kw": {
+     "any": [
+      "SKITARII"
+     ]
+    },
+    "unitsOrModels": "units"
+   },
+   "conditions": [
+    {
+     "id": "abilityActive",
+     "v": "conqueror imperative",
+     "table": "own"
+    }
+   ],
+   "duration": null,
    "gw": "found"
   },
   "det:adeptus-mechanicus/eradication-cohort|Omnicogitator|0": {
@@ -39378,8 +40229,41 @@
    "sourceKind": "stratagem",
    "idx": 0,
    "text": "Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack's Ballistic Skill or Weapon Skill characteristic; the Hit roll; the Wound roll.",
-   "status": "unread",
-   "reason": "unparsed:each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack's ball",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "ignoreHitMods",
+     "v": true,
+     "attack": "any"
+    },
+    {
+     "table": "FX",
+     "id": "ignoreWoundMods",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target",
+    "targetKw": {
+     "any": [
+      "EMPEROR'S CHILDREN"
+     ]
+    }
+   },
+   "conditions": [
+    {
+     "id": "when",
+     "v": "Command phase.",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the turn",
    "gw": "found"
   },
   "det:emperors-children/coterie-of-the-conceited|Embrace the Pain|0": {
@@ -42252,8 +43136,35 @@
    "sourceKind": "detachmentRule",
    "idx": 0,
    "text": "While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is at starting strength, that unit has +2 OC.",
-   "status": "unread",
-   "reason": "unparsed:while a friendly ADEPTUS CUSTODES DREADNOUGHT unit is at starting strength, that unit has +2 oc",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "ST",
+     "id": "ocAdd",
+     "v": 2
+    }
+   ],
+   "attack": null,
+   "side": "stat",
+   "reach": {
+    "type": "friendly",
+    "kw": {
+     "all": [
+      "ADEPTUS CUSTODES",
+      "DREADNOUGHT"
+     ]
+    },
+    "unitsOrModels": "units"
+   },
+   "conditions": [
+    {
+     "id": "atStarting",
+     "table": "STCOND",
+     "of": "that unit"
+    }
+   ],
+   "duration": null,
    "gw": "found"
   },
   "det:adeptus-custodes/might-of-the-moritoi|Moritoi Ancients|1": {
@@ -49638,8 +50549,48 @@
    "sourceKind": "stratagem",
    "idx": 1,
    "text": "In addition, until the end of the phase, each time such a weapon targets a unit that is Battle-shocked, you can re-roll the Wound roll.",
-   "status": "unread",
-   "reason": "unparsed:each time such a weapon targets a unit that is battle-shocked, you can re-roll the wound roll",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "rrWound",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target",
+    "targetKw": {
+     "any": [
+      "LEGIONES DAEMONICA"
+     ]
+    }
+   },
+   "conditions": [
+    {
+     "id": "targetBattleShocked",
+     "v": true,
+     "table": "own"
+    },
+    {
+     "id": "phase",
+     "v": {
+      "phase": "shooting|fight",
+      "turn": "your|either"
+     },
+     "table": "own"
+    },
+    {
+     "id": "when",
+     "v": "Your Shooting phase or the Fight phase.",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the phase",
    "gw": "found"
   },
   "det:chaos-daemons/daemonic-incursion|Denizens of the Warp|0": {
@@ -50055,8 +51006,38 @@
    "sourceKind": "stratagem",
    "idx": 0,
    "text": "Until the end of the phase, each time a model in one of those units makes an attack, add 1 to the Wound roll.",
-   "status": "unread",
-   "reason": "unparsed:each time a model in one of those units makes an attack, add 1 to the wound roll",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "wound",
+     "v": 1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target",
+    "targetKw": {
+     "all": [
+      "LEGIONES DAEMONICA",
+      "SLAANESH",
+      "MONSTER"
+     ]
+    },
+    "targetQualifier": "or up to two LEGIONES DAEMONICA SLAANESH units (excluding MONSTERS) from your army that have not been selected to fight this phase"
+   },
+   "conditions": [
+    {
+     "id": "when",
+     "v": "Fight phase.",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the phase",
    "gw": "found"
   },
   "det:chaos-daemons/legion-of-excess|Sensory Excruciation|0": {
@@ -51560,8 +52541,46 @@
    "sourceKind": "stratagem",
    "idx": 0,
    "text": "Until the end of the phase, weapons equipped by models in your selected units have the [IGNORES COVER] ability.",
-   "status": "unread",
-   "reason": "unparsed:weapons equipped by models in your selected units have the [IGNORES COVER] ability",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "ignoresCover",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target",
+    "plural": true,
+    "targetKw": {
+     "any": [
+      "SHADOW LEGION HERETIC ASTARTES"
+     ]
+    },
+    "targetQualifier": "and up to one SHADOW LEGION LEGIONES DAEMONICA unit from your army. you can only select units that arrived from reserves this turn",
+    "targetText": "Up to one SHADOW LEGION HERETIC ASTARTES unit from your army and up to one SHADOW LEGION LEGIONES DAEMONICA unit from your army. You can only select units that arrived from Reserves this turn."
+   },
+   "conditions": [
+    {
+     "id": "phase",
+     "v": {
+      "phase": "shooting",
+      "turn": "your"
+     },
+     "table": "own"
+    },
+    {
+     "id": "when",
+     "v": "Your Shooting phase.",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the phase",
    "gw": "found"
   },
   "det:chaos-daemons/shadow-legion|Shade Path|0": {
