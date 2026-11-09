@@ -38,7 +38,8 @@
          box, every "if / while / unless / (excluding …)" in it one of its conditions; then, under the profile, each BOXES snc (a
          characteristic no stat box counts) of its abilities, another unit's aura reaching it, its rules and its stratagems, "not counted"
      LO  a leader's box for its own model only (no weapon named), or its words not counted about that model alone, on the unit it leads:
-         its line says "<model> only:"
+         its line says "<model> only:"; every "<model> only:" drawn on any unit is on such a line (the reverse); a line drawn from such a box
+         and one for the unit fails (split it, never one mark for the whole line)
      LF  fixed cases: the wound-roll ignore-modifiers readings, the enemy-unit mark of a characteristic not counted, and whom one is for
          (its reach, an opening keyword, leading), an option's own list (its option and its rule's "While … it can use one of …"), and
          a stratagem's reach to the friendly models its words name as attackers
@@ -64,7 +65,7 @@ const X = require('./effects-extract');
 const T = require('./tables');
 const M = require('./effects-migrate');
 
-const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'statShown', 'defenceItems', 'defLines', 'sumMode', 'sumLinesOf', 'srcShort', 'enhRowOf', 'lineKey', 'PREGAME_RE', 'naReason', 'inertRule', 'faction', 'detachments', 'detRules', 'alreadyIn', 'alreadyInRule', 'allStratagems', 'canTarget', 'hasRule', 'unitDetRules', 'ruleRowOf', 'abilityKey', 'defLine']);
+const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'statShown', 'defenceItems', 'defLines', 'sumMode', 'sumLinesOf', 'srcShort', 'enhRowOf', 'lineKey', 'PREGAME_RE', 'naReason', 'inertRule', 'faction', 'detachments', 'detRules', 'alreadyIn', 'alreadyInRule', 'allStratagems', 'canTarget', 'hasRule', 'unitDetRules', 'ruleRowOf', 'abilityKey', 'defLine', 'lineItemsOf']);
 const D = dm.D, A = dm.app, fails = [], stats = {};
 // (the Overview as the app draws it: screenPregame, with the page's globals it reads at load stubbed)
 const PG = require('./damage-node')(['screenPregame', 'inArmy'], { page:true });
@@ -572,24 +573,47 @@ const gwToks = text => { const out = numToks(text), t = String(text).toLowerCase
     if(s.gist && (PHASE_LEAD.test(s.gist) || own(s.gist) || s.gist.includes('(' + s.name + ')'))) fail('LM', 'stratagem ' + s.name, 'its gist holds what the program writes (the phase, a CP cost, "Granted by" or its name): “' + s.gist.slice(0, 60) + '”');
   stats.placed = n; }
 // LO a leader's box for its own model only, no weapon of it named (BOXES scope models "model"), drawn on the sheet of the unit it leads:
-// its line says "<model> only:" after its "Granted by" (docs/summaries.md 46); worked out from the boxes and the unit's parts, the lines as drawn
-{ let n = 0; const strip = h => h.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
-  for(const a of D.armies) A.inArmy(a, () => { for(const u of a.units){ if(!u.leads) continue; const leaders = [u.name].concat((u.also || []).map(x => x.name));
-    for(const ab of u.abilities || []){ if(!ab.who || !leaders.includes(ab.who)) continue; const o = BX[M.KEY.ability(ab)] || {};
-      const mine = b => b && (b.scope || {}).models === 'model' && !(b.scope || {}).weapon;
-      for(const b of (o.d || []).filter(mine)) for(const x of A.defenceItems(u).filter(x => x.box === b && x.sum && !x.dup && !x.from)){ n++;
-        if(!strip(A.defLine(x, u)).includes(ab.who + ' only:')) fail('LO', a.id + '/' + u.id, ab.name + ': its When targeted line is for ' + ab.who + ' only and does not say “' + ab.who + ' only:”'); }
-      // (its words not counted, every sentence about this model alone, "The first time this model is destroyed" (Berzerker Frenzy): the
-      // same, under When targeted (dnc) and under the weapons (nc of its attacks))
-      const solo = q => /\bthis model\b/i.test(q) && !/\bthis unit\b|\bthat unit\b|\bleading\b|\bbearer’s unit\b|\bmodels? in\b|\bfriendly\b/i.test(q);
-      const dnc = (o.dnc || []).filter(e => !e.unconfirmed), nca = (o.nc || []).filter(e => e.atk && !e.unconfirmed);
-      if(dnc.length && dnc.every(e => solo(e.quote || ''))) for(const x of A.defenceItems(u).filter(x => x.key === M.KEY.ability(ab) && x.ncLine && x.sum && !x.dup && !x.from)){ n++;
-        if(!strip(A.defLine(x, u)).includes(ab.who + ' only:')) fail('LO', a.id + '/' + u.id, ab.name + ': its words not counted are about ' + ab.who + ' alone and its When targeted line does not say “' + ab.who + ' only:”'); }
-      if(nca.length && nca.every(e => solo(e.quote || ''))) for(const kind of ['ranged', 'melee']){ const ms = A.unitMods(u, kind).filter(m => m.ncLine && m.key === M.KEY.ability(ab) && A.sumMode(m)); if(!ms.length) continue; n++;
-        if(!strip(A.modLines(ms, u, false)).includes(ab.who + ' only:')) fail('LO', a.id + '/' + u.id + ' ' + kind, ab.name + ': its words not counted are about ' + ab.who + ' alone and its line does not say “' + ab.who + ' only:”'); }
-      for(const kind of ['ranged', 'melee']){ const ms = A.unitMods(u, kind).filter(m => m.box && mine(m.box) && m.key === M.KEY.ability(ab) && A.sumMode(m) && !A.rowMod(m, u)); if(!ms.length) continue; n++;
-        if(!strip(A.modLines(ms, u, false)).includes(ab.who + ' only:')) fail('LO', a.id + '/' + u.id + ' ' + kind, ab.name + ': its line is for ' + ab.who + ' only and does not say “' + ab.who + ' only:”'); } } } });
-  stats.modelOnly = n; }
+// its line says "<model> only:" after its "Granted by" (docs/summaries.md 46); and its words not counted, every sentence about this model
+// alone ("The first time this model is destroyed", Berzerker Frenzy: BOXES dnc under When targeted, nc of its attacks under the weapons).
+// Worked out here from the boxes and the unit's parts (LO's own rule, sel), the lines as drawn, each line by the items it is drawn from
+// (app.html lineItemsOf, a When targeted line's lineItems):
+// - a line all of whose items LO's rule selects says "<model> only:";
+// - (reverse) a line that says "<model> only:" anywhere, on any unit, is one all of whose items LO's rule selects for that model;
+// - (mixed) a line drawn from an item LO's rule selects and one it does not (a box for the unit) fails: split it (an option or a source
+//   of its own) or fail, never one mark for the whole line.
+{ let n = 0, marks = 0; const strip = h => h.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
+  const MARK = /<b class="mo">([^<]*?) only:<\/b>/;
+  const solo = q => /\bthis model\b/i.test(q) && !/\bthis unit\b|\bthat unit\b|\bleading\b|\bbearer’s unit\b|\bmodels? in\b|\bfriendly\b/i.test(q);
+  const mine = b => !!b && (b.scope || {}).models === 'model' && !(b.scope || {}).weapon;
+  for(const a of D.armies) A.inArmy(a, () => { for(const u of a.units){
+    const leaders = u.leads ? [u.name].concat((u.also || []).map(x => x.name)) : [];
+    const abOf = new Map((u.abilities || []).filter(ab => ab.who && leaders.includes(ab.who)).map(ab => [M.KEY.ability(ab), ab]));
+    // (LO's rule: the leader's model an item is for alone, or null: its box for its own model, or its words not counted on that side, every
+    // sentence of them about this model alone)
+    // (a When targeted item's from, a footnote's giver: another unit's)
+    const sel = (x, side) => { const ab = abOf.get(x.key); if(!ab || (side === 'def' ? x.from : x.giver)) return null; const o = BX[x.key] || {};
+      if(x.box) return mine(x.box) ? ab.who : null;
+      if(!x.ncLine) return null;
+      const es = side === 'def' ? (o.dnc || []).filter(e => !e.unconfirmed) : (o.nc || []).filter(e => e.atk && !e.unconfirmed);
+      return es.length && es.every(e => solo(e.quote || '')) ? ab.who : null; };
+    const judge = (where, name, items, html, side) => { const who = items.map(x => sel(x, side)), m = MARK.exec(html), all = who.length && who.every(w => w && w === who[0]);
+      if(m) marks++;
+      if(who.some(Boolean) && !all){ fail('LO', where, name + ': one line drawn from a box or words for ' + who.find(Boolean) + ' alone and from ' + who.filter(w => !w).length + ' for the unit: split it, never one “<model> only:” for the whole line'); return; }
+      if(all){ n++; if(!m || m[1] !== who[0]) fail('LO', where, name + ': its line is for ' + who[0] + ' only and does not say “' + who[0] + ' only:”: ' + strip(html).slice(0, 80)); }
+      else if(m) fail('LO', where, name + ': its line says “' + m[1] + ' only:” but LO’s rule selects none of it (no box or words of that leader for its own model alone): ' + strip(html).slice(0, 80)); };
+    // When targeted: each line as drawn (defLines), from its items (lineItems: itself and the boxes it stands for)
+    for(const x of A.defLines(A.defenceItems(u).filter(x => !x.dup))){ const h = A.defLine(x, u);
+      if(x.sum && !x.from) judge(a.id + '/' + u.id, x.name, x.lineItems || [x], h, 'def');
+      else if(MARK.test(h)){ marks++; fail('LO', a.id + '/' + u.id, x.name + ': its When targeted line says “' + MARK.exec(h)[1] + ' only:” but is no leader’s own summary line: ' + strip(h).slice(0, 80)); } }
+    // under the weapons: each source's lines (app.html modGroupLines: by lineKey; sumHtml: a line per option, lineItemsOf)
+    for(const kind of ['ranged', 'melee']){ const ms = A.unitMods(u, kind).filter(m => !A.rowMod(m, u)), gm = new Map();
+      for(const m of ms){ const k = A.sumMode(m) ? A.lineKey(m) : '\0' + gm.size; if(!gm.has(k)) gm.set(k, []); gm.get(k).push(m); }
+      for(const g of gm.values()){ const html = A.modLines(g, u, false);
+        if(!A.sumMode(g[0]) || g[0].strat){ if(MARK.test(html)){ marks++; fail('LO', a.id + '/' + u.id + ' ' + kind, g[0].from + ': its line says “' + MARK.exec(html)[1] + ' only:” but is no leader’s own summary line'); } continue; }
+        const ls = A.sumLinesOf(g), parts = html.split('<div class="mod">').slice(1);
+        if(parts.length !== ls.length){ fail('LO', a.id + '/' + u.id + ' ' + kind, g[0].from + ': ' + parts.length + ' lines drawn for ' + ls.length + ' lines of its summary'); continue; }
+        ls.forEach((l, i) => judge(a.id + '/' + u.id + ' ' + kind, g[0].from + (l.opt ? ' (' + l.opt + ')' : ''), A.lineItemsOf(g, l), parts[i], 'atk')); } } } });
+  stats.modelOnly = n; stats.modelMarks = marks; }
 // LG the lines as drawn (modLines): one line for each condition and source (a source drawn as its summary: one line), its source's name in it, no two sources on one line
 { let n = 0;
   for(const a of D.armies) for(const u of a.units) for(const kind of ['ranged', 'melee']){ if(!((kind === 'ranged' ? u.ranged : u.melee) || []).length) continue;
@@ -610,6 +634,6 @@ const gwToks = text => { const out = numToks(text), t = String(text).toLowerCase
 
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/lines.json'), JSON.stringify({ stats, fails }, null, 1));
-console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips, ' + stats.cpNotes + ' extra-CP chips and ' + stats.na + ' "does nothing here" chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each; ' + stats.silentSources + ' sources the lists use, every sentence of the numbers counted or listed not counted; ' + stats.fixed + ' fixed cases; ' + stats.summaries + ' counted boxes drawn as a summary, each summary with their numbers (LN); ' + stats.placed + ' placed lines, each with its summary, every summary used (LM); ' + stats.modelOnly + ' leader lines for its own model, each "<model> only:" (LO)');
+console.log('lines: ' + (fails.length ? fails.length + ' failure(s); ' : '') + stats.damaged + ' Damaged ranges, ' + stats.limits + ' once-per-battle chips, ' + stats.cpNotes + ' extra-CP chips and ' + stats.na + ' "does nothing here" chips as their words give them; ' + stats.statLines + ' lines under a profile from stat boxes; ' + stats.footnotes + ' footnotes (' + stats.rowValues + ' in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects\' and conditions\' labels, ' + stats.ncLines + ' "see the rule" lines; ' + stats.labels + ' catalogue labels with their values; ' + stats.covered + ' boxes with every condition of their words (' + stats.reachChecked + ' reach boxes and models scopes checked against GW’s phrase, ' + stats.reachUnchecked + ' unchecked, said “If (see the rule)”); ' + stats.bands + ' Damaged bands as their boxes; ' + stats.grouped + ' drawn lines, one source each; ' + stats.silentSources + ' sources the lists use, every sentence of the numbers counted or listed not counted; ' + stats.fixed + ' fixed cases; ' + stats.summaries + ' counted boxes drawn as a summary, each summary with their numbers (LN); ' + stats.placed + ' placed lines, each with its summary, every summary used (LM); ' + stats.modelOnly + ' leader lines for its own model, each "<model> only:", and every one of the ' + stats.modelMarks + ' "<model> only:" marks drawn on such a line, none on a line mixed with the unit\'s (LO)');
 for(const f of fails.slice(0, 60)) console.log('  FAIL ' + f);
 process.exit(fails.length ? 1 : 0);

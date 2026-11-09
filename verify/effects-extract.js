@@ -271,6 +271,9 @@ function unitsOf(src){
   }
   let lead = '', sub = '', subSec = '', grp = 0, secT = null, head = '', stop = false, pickLead = false, rowCtx = '', ctxAny = '';
   const optsBelow = src.type !== 'strat' && /\bselect one [a-z' ]+? listed below\b/.test(norm(String(src.text || '').split('\n')[0]));
+  // (options laid out as plain headings, a name on a line of its own then its sentence, "Swarming Instincts" (Hyper-adaptations): the
+  // lines under each are that option's, as a bold line's are; verify/derive.js plainHeads, the same headings its RULE_OPTIONS reads)
+  const plainH = new Set(src.type !== 'strat' ? Dv.plainHeads(src.text).map(h => h.name) : []);
   for(const { l, sec, ctx:ctx0 } of lines){
     if(sec !== secT){ secT = sec; head = ''; stop = false; lead = ''; sub = ''; subSec = ''; grp++; rowCtx = ''; }
     const raw = l.trim();
@@ -280,6 +283,7 @@ function unitsOf(src){
     // DOCTRINE": its lines are that option's, as a bold line's are)
     if(/^[A-Z][A-Z ’'-]{3,}$/.test(raw.replace(/\*\*/g, ''))){ if(!sec && optsBelow && !/^(?:KEYWORDS|RESTRICTIONS)$/.test(raw.replace(/\*\*/g, '').trim())){ head = raw.replace(/\*\*/g, '').trim(); lead = ''; sub = ''; grp++; continue; } if(!sec) stop = true; continue; }
     if(stop) continue;
+    if(!sec && plainH.has(Dv.norm(raw))){ head = raw; lead = ''; sub = ''; grp++; continue; }
     // a row laid out as a stratagem ("**WHEN:** … **TARGET:** … **EFFECT:** …"): its WHEN and TARGET are the context of its EFFECT
     const wt = /^\*\*(WHEN|TARGET):\*\*\s*(.*)$/.exec(raw);
     if(wt){ rowCtx += (rowCtx ? ' ' : '') + wt[1] + ': ' + wt[2]; continue; }

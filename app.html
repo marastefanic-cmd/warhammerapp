@@ -4680,17 +4680,25 @@ function sumLinesOf(items){
 const OWN_MODEL_ONLY = q => /\bthis model\b/i.test(q) && !/\bthis unit\b|\bthat unit\b|\bleading\b|\bbearer’s unit\b|\bmodels? in\b|\bfriendly\b/i.test(q);
 const ownModelNc = x => { if(!x.ncLine || x.box) return false; const o = BOXES_AGREED[x.key] || {}, es = x.kind ? (o.nc || []).filter(e => e.atk && !e.unconfirmed) : (o.dnc || []).filter(e => !e.unconfirmed);
   return es.length > 0 && es.every(e => OWN_MODEL_ONLY(e.quote || '')); };
-const modelOnly = (x, u) => { const sc = (x.box || {}).scope || {}, who = x.leader || '';
-  return who && ((sc.models === 'model' && !sc.weapon) || ownModelNc(x)) && charsOf(u).some(c => c.name === who) ? '<b class="mo">' + esc(who) + ' only:</b> ' : ''; };
+// (a line is marked only when every box and words not counted it is drawn from are its own model's: a line that mixes them with one for the
+// unit is never marked as a whole (verify/lines.js LO fails it); a source's lines per option are each marked by their own items, lineItemsOf)
+const ownModelItem = x => { const sc = (x.box || {}).scope || {}; return (sc.models === 'model' && !sc.weapon) || ownModelNc(x); };
+const modelOnly = (xs, u) => { xs = [].concat(xs); const who = (xs[0] || {}).leader || '';
+  return who && xs.every(x => x.leader === who && ownModelItem(x)) && charsOf(u).some(c => c.name === who) ? '<b class="mo">' + esc(who) + ' only:</b> ' : ''; };
+// (the items one of a source's lines is drawn from, sumLinesOf: those of its option; the line with no option, those with none; a weapon's
+// line, those of that weapon)
+const lineItemsOf = (items, l) => { const nm = x => x.kind ? x.from : x.name, wk = x => String(x).toLowerCase().replace(/[’']/g, "'");
+  if(l.wp) return items.filter(x => ((x.box || {}).scope || {}).weapon && wk(x.box.scope.weapon) === wk(l.opt));
+  return items.filter(x => { const o = x.box ? boxOpts(x.box, nm(x)) : x.opts || []; return l.opt ? o.includes(l.opt) : !o.length; }); };
 function sumHtml(items, u, hasHunter){
   const m = items[0], t = modTarget(m, u);
   const hunt = items.find(x => x.hunter) && hasHunter ? ' (the (+' + Object.values(items.find(x => x.hunter).hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '';
-  const by = m.giver ? grantedBy(m.src, m.giver, m.from) : m.leader ? grantedBy({ id:u.id }, m.leader, m.from) + modelOnly(m, u) : '';
+  const by = l => m.giver ? grantedBy(m.src, m.giver, m.from) : m.leader ? grantedBy({ id:u.id }, m.leader, m.from) + modelOnly(lineItemsOf(items, l), u) : '';
   // (a rule for one weapon: the weapon's name before it, docs/summaries.md 36; a weapon whose row shows the change too, its row's name)
   const wn = x => x.who || x.weapon || '';
   const wp = items.every(x => wn(x) && wn(x) === wn(m) && x.box && x.box.scope && x.box.scope.weapon) ? esc(wn(m)) + ': ' : '';
   const rn = riledNote(u, items);
-  return sumLinesOf(items).map((l, i) => '<div class="mod">' + by + (l.wp ? esc(l.wp) + ': ' : wp) + (l.text ? ncSum(t, l.text) : esc(FN_NC)) + (i ? '' : hunt) + ' <span class="from">(' + modFrom(m, u) + ')</span>' + rn + '</div>').join('');
+  return sumLinesOf(items).map((l, i) => '<div class="mod">' + by(l) + (l.wp ? esc(l.wp) + ': ' : wp) + (l.text ? ncSum(t, l.text) : esc(FN_NC)) + (i ? '' : hunt) + ' <span class="from">(' + modFrom(m, u) + ')</span>' + rn + '</div>').join('');
 }
 function ncHtml(m, u){
   const t = modTarget(m, u);
@@ -5113,13 +5121,15 @@ function defenceItems(u){
   for(const x of res){ x.blanket = x.a === 'rule' && !x.rl && !x.short && (menuRule(x.key) || res.every(y => y.key !== x.key || y.ncLine));
     x.sum = !!x.short && !x.rl;
     if(x.blanket){ const k = x.key + '\0b'; if(sums.has(k)) x.dup = true; sums.add(k); }
-    if(x.sum){ x.opts = boxOpts(x.box, x.name); const k = x.key + '\0' + (x.from || '') + '\0' + (x.opts.join('|') || '-'); if(sums.has(k)) x.dup = true; sums.add(k); } }
+    if(x.sum){ x.opts = boxOpts(x.box, x.name); const k = x.key + '\0' + (x.from || '') + '\0' + (x.opts.join('|') || '-'); if(sums.has(k)) x.dup = true; sums.add(k); x.lineK = k; } }
+  // (the items a summary line is drawn from: its own and those it stands for (dup), for its "<model> only:", modelOnly)
+  for(const x of res) if(x.sum && !x.dup) x.lineItems = res.filter(y => y.sum && y.lineK === x.lineK);
   // (a leader's ability on the unit it leads: "Granted by: <leader>", docs/summaries.md 24)
   for(const x of res) if(x.sum && !x.from && x.who && charsOf(u).some(c => c.name === x.who)) x.leader = x.who;
   // (as defLine draws it: a rule's name alone; a summary for its words; another unit's "Granted by")
   for(const x of res){ if(x.blanket){ x.t = x.name; continue; }
     const text = x.sum ? x.short : x.ncLine ? x.short || FN_NC : x.text;
-    if(x.sum){ x.t = x.from || x.leader ? 'Granted by: ' + (x.from || x.leader) + ' - ' + (!x.from && modelOnly(x, u) ? x.leader + ' only: ' : '') + text + ' (' + x.name + ')' : x.cp ? x.cp + 'CP ' + x.name + ': ' + stratLead((x.S || {}).s) + text : text + ' (' + x.name + ')'; continue; }
+    if(x.sum){ x.t = x.from || x.leader ? 'Granted by: ' + (x.from || x.leader) + ' - ' + (!x.from && modelOnly(x.lineItems || x, u) ? x.leader + ' only: ' : '') + text + ' (' + x.name + ')' : x.cp ? x.cp + 'CP ' + x.name + ': ' + stratLead((x.S || {}).s) + text : text + ' (' + x.name + ')'; continue; }
     x.t = (x.rl && !x.when && x.text === x.name) || (x.ncLine && x.a === 'rule' && !x.short) ? x.name : x.from ? ['Granted by: ' + x.from + ' -', x.when ? x.when + ':' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ')
       : x.ncLine ? [x.cp ? x.cp + 'CP' : '', text, '(' + x.name + ')'].filter(Boolean).join(' ') : [x.cp ? x.cp + 'CP' : '', x.name + ':', x.when ? x.when + ':' : '', text].filter(Boolean).join(' '); }
   return res;
@@ -5152,7 +5162,7 @@ function defLine(x, u){
   if(x.from) return who + grantedBy(x.a === 'unit' ? { id:x.v } : null, x.from, x.name) + (w && !x.sum ? '<span class="tw">' + w + ':</span> ' : '') + text + ' <span class="from">(' + linkTo(ra, rv, x.name) + ')</span>' + rn;
   // (a stratagem: "<cp>CP <name>: <summary> AI"; another source: "<summary> AI (<name>)")
   if(x.cp && (x.ncLine || x.sum)) return who + '<b class="cpb">' + esc(x.cp) + 'CP</b> <b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + stratLead((x.S || {}).s) + text + rn;
-  if(x.leader) return grantedBy({ id:u.id }, x.leader, x.name) + modelOnly(x, u) + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>' + rn;
+  if(x.leader) return grantedBy({ id:u.id }, x.leader, x.name) + modelOnly(x.lineItems || x, u) + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>' + rn;
   if(x.ncLine || x.sum) return who + text + ' <span class="from">(' + linkTo(x.a, x.v, x.name) + ')</span>' + rn;
   return who + (x.cp ? '<b class="cpb">' + esc(x.cp) + 'CP</b> ' : '') + '<b>' + linkTo(x.a, x.v, x.name) + ':</b> ' + (w ? '<span class="tw">' + w + ':</span> ' : '') + text;
 }

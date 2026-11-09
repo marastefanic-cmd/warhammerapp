@@ -1,0 +1,17 @@
+[
+ {
+  "army": "basic-bitch",
+  "kind": "rule-sumAtk",
+  "where": "Invasion Fleet rule · Hyper-adaptations",
+  "judgement": {
+   "sumAtk": "Swarming Instincts ⇒ If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]\nHyper-aggression ⇒ If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]\nHive Predators ⇒ If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION]"
+  },
+  "source": {
+   "rule": "Hyper-adaptations",
+   "text": "At the start of the first battle round, select one of the following Hyper-adaptations to be active for **TYRANIDS** units from your army until the end of the battle:\nSwarming Instincts\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets an **INFANTRY** or **SWARM** unit, that attack has the **[SUSTAINED HITS 1]** ability.\nHyper-aggression\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.\nHive Predators\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **CHARACTER** unit, on a Critical Hit, that attack has the **[PRECISION]** ability."
+  },
+  "key": "bb6c4b8e61df75cf",
+  "was": "If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION]",
+  "changed": true
+ }
+]
