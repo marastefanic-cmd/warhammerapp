@@ -1,9 +1,9 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "cc27248a74",
- "data": "2026-11-05.2",
- "date": "5 Nov 2026",
+ "build": "516599887f",
+ "data": "2026-11-09.1",
+ "date": "9 Nov 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
@@ -27,7 +27,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "743 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "742 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
@@ -181,5 +181,123 @@ window.WH_VERIFIED = {
    "what": "which boxes of BOXES (b, d, st) two independent readings of GW's words confirm, the two-reader rule (the owner's decision, 3 Nov 2026): written by verify/agree.js --write from BOXES, reader2's readings (verify/reader2/) and the reviewed verdicts (verify/sources/agree-verdicts.json); a box not confirmed is shown as GW's words, \"see the rule\", and never counted (effects.js agreed)",
    "cols": "boxes:derived"
   }
- }
+ },
+ "steps": [
+  {
+   "name": "data",
+   "ok": true
+  },
+  {
+   "name": "tables",
+   "ok": true
+  },
+  {
+   "name": "fingerprints",
+   "ok": true
+  },
+  {
+   "name": "readings",
+   "ok": true
+  },
+  {
+   "name": "evidence",
+   "ok": true
+  },
+  {
+   "name": "lines",
+   "ok": true
+  },
+  {
+   "name": "defence",
+   "ok": true
+  },
+  {
+   "name": "agree",
+   "ok": true
+  },
+  {
+   "name": "invariants",
+   "ok": true
+  },
+  {
+   "name": "derive",
+   "ok": true
+  },
+  {
+   "name": "choice",
+   "ok": true
+  },
+  {
+   "name": "bsdata",
+   "ok": true
+  },
+  {
+   "name": "dispositions",
+   "ok": true
+  },
+  {
+   "name": "bases",
+   "ok": true
+  },
+  {
+   "name": "catalog",
+   "ok": true
+  },
+  {
+   "name": "nr",
+   "ok": true
+  },
+  {
+   "name": "texts",
+   "ok": true
+  },
+  {
+   "name": "numbers",
+   "ok": true
+  },
+  {
+   "name": "keywords",
+   "ok": true
+  },
+  {
+   "name": "words",
+   "ok": true
+  },
+  {
+   "name": "calc",
+   "ok": true
+  },
+  {
+   "name": "import",
+   "ok": true
+  },
+  {
+   "name": "reimport",
+   "ok": true
+  },
+  {
+   "name": "derived",
+   "ok": true
+  },
+  {
+   "name": "screens",
+   "ok": true
+  },
+  {
+   "name": "small phone",
+   "ok": true
+  },
+  {
+   "name": "build-parity",
+   "ok": true
+  },
+  {
+   "name": "snapshots",
+   "ok": true
+  },
+  {
+   "name": "helpers",
+   "ok": true
+  }
+ ]
 };
