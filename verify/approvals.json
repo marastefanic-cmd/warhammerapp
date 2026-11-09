@@ -6035,6 +6035,12 @@
   "at": "2026-11-05",
   "why": "unchanged since round 1. Against GW: “WHEN: Your Shooting phase. TARGET: One SKITARII unit from your army that has not been selected to shoot this phase. EFFECT: Select the [SUSTAINED HITS 1] or [LETHAL HITS] ability. …”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
  },
+ "4207b9b5c88ead95": {
+  "verdict": "ok",
+  "by": "review:reader2-r5",
+  "at": "2026-11-09",
+  "why": "Summary \"After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it)\" matches GW's words and the now-counted box's effect label (LN). Lines step passes; render diff: the line changes in place on each healybois shooter, removed only on the Psychophage (its one weapon already has IGNORES COVER)."
+ },
  "4208391c8b797673": {
   "verdict": "ok",
   "by": "review:cooking",
