@@ -340,7 +340,7 @@ D6+3
 2
 PSYCHIC, TORRENT
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
-Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it) AI (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 Biovores
@@ -353,7 +353,7 @@ D3
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
-Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it) AI (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 Pyrovores
@@ -382,7 +382,7 @@ HARPOONED
 Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
-Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it) AI (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 Norn Emissary
@@ -414,7 +414,7 @@ MELTA 2, PSYCHIC
 Picked at start of round 1: re-roll Hit rolls and Wound rolls vs one enemy AI (Singular Purpose)
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
-Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it) AI (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 Psychophage
@@ -427,7 +427,6 @@ D6
 1
 IGNORES COVER, TORRENT
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
-Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 Tyrannofex
@@ -448,7 +447,7 @@ Stinger salvoes
 1
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
-Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it) AI (Burning Spray)
 STRATAGEMS · ASSIMILATION SWARM
 1CP Broodguard Impulse: in any phase, after a HARVESTER unit is destroyed: +1 to Wound rolls vs the enemy unit that destroyed it for the rest of the battle AI
 
@@ -1132,7 +1131,7 @@ Add a group
 of 5 destroyed
 4.3 wounds lost · wiped in 5% of games
 Nothing ticked: the datasheets as printed
-13 NOT COUNTED
+12 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1214,9 +1213,12 @@ if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
-NOT COUNTED IN THE DAMAGE TAB (1)
-Burning Spray
-“Until the end of the phase, that enemy unit cannot have the Benefit of Cover.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
+Burning Spray (Pyrovores (×2))
+Selected by it · The target is the enemy unit selected: [IGNORES COVER]
+if it applies
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
+0
+ALL ▾
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -1363,7 +1365,7 @@ of 5 destroyed
 8.3 wounds lost · wiped in 54% of games
 Charged this turn
 ×
-10 NOT COUNTED
+9 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1409,12 +1411,12 @@ said to hold
 no change: no rule here needs it
 0
 ARMY RULES
-
-None that change these numbers.
-
-NOT COUNTED IN THE DAMAGE TAB (1)
 Synapse
-“Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
+“If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
+if it applies
++23% wiped
++0.5
+MODELS
 UNIT RULES
 Swallow Whole
 The target: INFANTRY, MOUNTED or BEASTS: Each successful unmodified Wound roll is a Critical Wound · for Gaping maw
@@ -1610,7 +1612,7 @@ Shoot 2.14 · Fight 2.84 · the charge is taken to succeed
 
 Charged this turn
 ×
-26 NOT COUNTED
+24 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1689,9 +1691,12 @@ if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
-NOT COUNTED IN THE DAMAGE TAB (1)
-Burning Spray
-“Until the end of the phase, that enemy unit cannot have the Benefit of Cover.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
+Burning Spray (Pyrovores (×2))
+Selected by it · The target is the enemy unit selected: [IGNORES COVER]
+if it applies
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
+0
+ALL ▾
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -1757,12 +1762,13 @@ holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 ARMY RULES
-
-None that change these numbers.
-
-NOT COUNTED IN THE DAMAGE TAB (2)
 Synapse
-“Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
+“If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
+if it applies
+no change: S10 still wounds T4 on 2+; S6 still wounds T4 on 3+
+0
+ALL ▾
+NOT COUNTED IN THE DAMAGE TAB (1)
 Shadow in the Warp
 “If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
 UNIT RULES
@@ -2443,7 +2449,7 @@ D6+3
 PSYCHIC, TORRENT
 WHOLE UNIT
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
-Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it) AI (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -2708,7 +2714,7 @@ D3
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
-Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it) AI (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -2980,7 +2986,7 @@ Toxinjecter Harpoon
 D6+1
 HARPOONED
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
-Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it) AI (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -3133,7 +3139,7 @@ BLAST, PSYCHIC
 D6
 MELTA 2, PSYCHIC
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
-Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it) AI (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -3250,7 +3256,6 @@ D6
 1
 IGNORES COVER, TORRENT
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
-Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
 MELEE WEAPONS
 A
 WS
@@ -3361,7 +3366,7 @@ Stinger salvoes
 0
 1
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
-Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase AI (Burning Spray)
+Granted by: Pyrovores - After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it) AI (Burning Spray)
 MELEE WEAPONS
 A
 WS

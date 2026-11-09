@@ -1279,7 +1279,7 @@ of 5 destroyed
 8.1 wounds lost · wiped in 45% of games
 Charged this turn
 ×
-16 NOT COUNTED
+15 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1311,12 +1311,12 @@ said to hold
 no change: no rule here needs it
 0
 ARMY RULES
-
-None that change these numbers.
-
-NOT COUNTED IN THE DAMAGE TAB (3)
 Synapse
-“Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
+“If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
+if it applies
+no change: S10 still wounds T4 on 2+
+0
+NOT COUNTED IN THE DAMAGE TAB (2)
 Shadow in the Warp
 “If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
 Enraged Behemoths
@@ -1499,7 +1499,7 @@ Shoot 2.14 · Fight 2.63 · the charge is taken to succeed
 
 Charged this turn
 ×
-31 NOT COUNTED
+30 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1637,12 +1637,12 @@ holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 ARMY RULES
-
-None that change these numbers.
-
-NOT COUNTED IN THE DAMAGE TAB (3)
 Synapse
-“Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
+“If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
+if it applies
+no change: S10 still wounds T4 on 2+
+0
+NOT COUNTED IN THE DAMAGE TAB (2)
 Shadow in the Warp
 “If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
 Enraged Behemoths

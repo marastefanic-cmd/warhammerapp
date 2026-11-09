@@ -708,691 +708,1050 @@ Put it on your home screen: Safari → Share → Add to Home Screen.
 ######## home how the app works · ARMIES How the app works
 Where every line of this app comes from, the tables it is kept in, and what is checked before any change reaches your phone.
 
-1 · Where the data comes from
-Your New Recruit lists; BSData, the data New Recruit is built from; Games Workshop’s Core Rules, Faction Packs and FAQs, and Wahapedia where GW has no document yet. Where they disagree, GW wins; where GW misprints (a typo, a base size), the correction is written down with its reason.
-2 · How a list is built
-A program reads the list’s New Recruit export and writes it into the tables: each unit an entry that points at its datasheet, its stats, weapons, keywords, points and rules text copied from the sources. A list with only a PDF is typed in, and a program checks it against the PDF line by line.
-3 · The tables
-Everything the app shows is in 16 tables in one file, data.js, drawn below with their real row counts and columns. Each column is tagged: mechanical, AI summary or decided by hand.
-4 · What checks every release
-A second program compares every table with its sources again and renders every screen; if a single check fails, nothing is released. What it checks
-5 · How the app draws pages
-One page template reads the tables and draws every screen from them. Each release renders every screen of every list and compares its text with the last one accepted, so no screen changes unseen.
-THE TABLES
-16
-ARMIES
-26 lists · 225 entries
-FACTIONS
-13 rows
-army rules 29
-detachments 59
-↳ stratagems 253
-↳ enhancements 173
-faction
-DATASHEETS
-261 rows
-ds
-RULES
-67 rows
-rules
-RULE_ALIASES 71
-RULE_SRC 7
-CONCEPTS 20
-GRANTS 81
-RULE_OPTIONS 89
-CHECKLIST 512
-rule / key → a rule or an ability
-CORE_STRATAGEMS
-10 · used by every list
-BS_IDS
-13 lookups · import
+1
+The sources
+Games Workshop
+Core Rules, Faction Packs, errata and FAQs: the source of truth
+Wahapedia
+GW’s datasheets and faction pages: counts as GW, and GW’s own document wins where they differ
+BSData
+the data New Recruit is built from, pinned to one commit: ids, points, wargear options
+New Recruit
+your lists’ exports and PDFs: what each list chose
 
-How they link: an army’s unit entries name their DATASHEETS row (ds) and the army names its FACTIONS row; datasheets name their rules in RULES, which RULE_ALIASES and RULE_SRC point at; GRANTS, RULE_OPTIONS and CHECKLIST point at a rule in FACTIONS or an ability of a datasheet; CORE_STRATAGEMS serve every list, BS_IDS the list import; CONCEPTS holds the core terms, VERSION the data’s version.
+Where they disagree, GW wins; each difference is written down with GW’s words as evidence and checked again at every release.
 
-MECHANICAL copied by a program from GW, BSData, New Recruit or Wahapedia, or worked out from them by a program; the tag names the source.
+extracted by scripts
+2
+The tables
+data.js
 
-AI SUMMARY a one-line gist of a stratagem, or the short summary a datasheet shows of each rule with a line there (an ability, an enhancement, an army or detachment rule, a stratagem), written by AI and labelled AI, its rules as written a tap away. It carries a fingerprint of the text it sums up: a change in GW’s words flags it to be read again.
+Scripts extract only the data the app needs, straight into 16 tables in one file; a few columns are written by hand (ids, short names, aliases, notes). Each box is a table: tap it for its columns, coloured by where each comes from, and one real row.
 
-HAND a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.
+GW
+56
+Games Workshop’s documents
+Wahapedia
+11
+GW’s pages: counts as GW
+BSData
+51
+the data New Recruit is built from
+New Recruit
+89
+your lists
+Program
+156
+worked out by a script
+Hand
+13
+ids, short names, aliases, notes
+AI summary
+20
+the only AI layer
 
-Of the 396 columns of the tables: Mechanical 363 · AI summary 20 · Hand 13.
+396 columns in all (verify/columns.json; the gate fails on a column it does not list).
 
-ARMIES
-26 rows · 225 unit entries · one row per list
-
-UNITS[ ].DS→ the unit’s DATASHEETS row
-
-FACTION, DETACHMENTS→ FACTIONS and its detachments
-
-ONE ROW: ME SHOOTY YER’ BOOTY
-
-id
-shooty
-HAND
-name
-Me shooty yer’ booty
-NEW RECRUIT
-faction
-orks
-NEW RECRUIT
-points
-2000
-NEW RECRUIT
-pointsUsed
-2000
-NEW RECRUIT
-battleSize
-Strike Force
-NEW RECRUIT
-disposition
-Purge the Foe
-NEW RECRUIT
-detachments
-dread-mob · shoota-boyz · wreckas
-NEW RECRUIT
-source
-New Recruit, exported 17 Oct 2026
-NEW RECRUIT
-units
-10 entries
-NEW RECRUIT
-
-ONE OF ITS UNIT ENTRIES
-
-id
-wazdakka
-COMPUTED
-ds
-orks/wazdakka-gutsmek
-COMPUTED
-pts
-200
-NEW RECRUIT
-models
-1× Wazdakka Gutsmek
-NEW RECRUIT
-gear
-[Fixit’s Wrench, Grabba Dragga, Psyko-gatler, Speeding Bulk and Flaming Exhaust]
-NEW RECRUIT
-
-An entry holds what the list chose; everything else about the unit comes from its datasheet’s row.
-
-Every column and where it comes from
-108 columns, with 5 inner tables
-ARMIES 26 rows
-
-MECHANICAL name (New Recruit), faction (New Recruit), points (New Recruit), pointsUsed (New Recruit), battleSize (New Recruit), disposition (New Recruit), detachments (New Recruit), source (New Recruit), config (New Recruit), units (New Recruit)
-
-HAND id
-
-ARMIES.units 225 rows
-
-a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS
-
-MECHANICAL id (computed), ds (computed), pts (New Recruit), ptsNote (New Recruit), copies (New Recruit), models (New Recruit), gear (New Recruit), unplaced (New Recruit), enhancement (New Recruit), warlord (New Recruit), enhOn (New Recruit), warlordOn (New Recruit), ref (GW), upgrade (New Recruit), leads (New Recruit), support (New Recruit), also (New Recruit), role (New Recruit), name (New Recruit), rules (New Recruit), kw (New Recruit), kwNote (computed), kwOnly (Wahapedia), partialRules (Wahapedia), srcNote (computed), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (New Recruit), note (GW), why (computed)
-
-HAND short, over
-
-ARMIES.units.stats
-
-a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
-
-MECHANICAL name (New Recruit), from (BSData), printed (New Recruit), own (GW), M (BSData), T (BSData), Sv (BSData), W (BSData), Ld (BSData), OC (BSData), InSv (BSData), base (BSData), of (computed), why (computed)
-
-HAND over
-
-ARMIES.units.ranged
-
-a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
-
-MECHANICAL name (New Recruit), who (New Recruit), n (New Recruit), from (BSData), enh (New Recruit), range (BSData), A (BSData), BS (BSData), WS (BSData), S (BSData), AP (BSData), D (BSData), kw (BSData), of (computed), why (computed), group (computed)
-
-HAND over
-
-ARMIES.units.melee
-
-a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
-
-MECHANICAL name (New Recruit), who (New Recruit), n (New Recruit), from (BSData), enh (New Recruit), range (BSData), A (BSData), BS (BSData), WS (BSData), S (BSData), AP (BSData), D (BSData), kw (BSData), of (computed), why (computed), group (computed)
-
-HAND over
-
-ARMIES.units.abilities
-
-a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
-
-MECHANICAL name (New Recruit), who (New Recruit), of (computed), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), note (GW), na (computed), damaged (computed), why (computed), readOf (computed)
-
-HAND over
-
-DATASHEETS
-261 rows · one row per datasheet (faction + datasheet name): its facts, shared by every list that has it
-
-KEY“faction/name”, the id an entry’s ds names
-
-RULES→ by name: a core rule in RULES (through RULE_ALIASES) or an army rule in FACTIONS
-
-ONE ROW: ORKS/WAZDAKKA-GUTSMEK
-
-name
-Wazdakka Gutsmek
-NEW RECRUIT
-faction
-orks
-COMPUTED
-bsId
-2ab7-ab71-0af4-5d39
-BSDATA
-role
-Epic Hero
-NEW RECRUIT
-rules
-Deadly Demise D3 · Deep Strike · Lone Operative · Waaagh!
-NEW RECRUIT
-kw
-Mounted · Vehicle · Character · Epic Hero · Smoke · Speed Freeks · Wazdakka Gutsmek · Faction: Orks
-NEW RECRUIT
-stats
-1 row: Wazdakka Gutsmek
-NEW RECRUIT
-ranged
-2 rows: Grabba Dragga, Psyko-gatler
-NEW RECRUIT
-melee
-3 rows: Speeding Bulk and Flaming Exhaust, Fixit’s Wrench, Grabba Dragga
-NEW RECRUIT
-abilities
-4 rows: Turbo Engine, Shokk Attack Engine, Pulse Jet, Full Throttle
-WAHAPEDIA
-Every column and where it comes from
-76 columns, with 4 inner tables
-DATASHEETS 261 rows
-
-MECHANICAL name (New Recruit), faction (computed), bsId (BSData), role (New Recruit), rules (New Recruit), kw (New Recruit), kwOnly (Wahapedia), partialRules (Wahapedia), srcNote (computed), leaders (BSData), stats (New Recruit), ranged (New Recruit), melee (New Recruit), abilities (Wahapedia), points (GW), composition (BSData), options (BSData), aiStatus (computed)
-
-DATASHEETS.stats 286 rows
-
-a datasheet's model profiles
-
-MECHANICAL name (New Recruit), M (New Recruit), T (New Recruit), Sv (New Recruit), W (New Recruit), Ld (New Recruit), OC (New Recruit), InSv (New Recruit), base (New Recruit), baseWith (GW)
-
-DATASHEETS.ranged 422 rows
-
-a datasheet's ranged weapon profiles
-
-MECHANICAL name (New Recruit), range (New Recruit), A (New Recruit), BS (New Recruit), WS (New Recruit), S (New Recruit), AP (New Recruit), D (New Recruit), kw (New Recruit), group (BSData), fireAll (BSData), hunter (New Recruit), carrier (GW)
-
-DATASHEETS.melee 401 rows
-
-a datasheet's melee weapon profiles
-
-MECHANICAL name (New Recruit), range (New Recruit), A (New Recruit), BS (New Recruit), WS (New Recruit), S (New Recruit), AP (New Recruit), D (New Recruit), kw (New Recruit), group (BSData), fireAll (BSData), hunter (New Recruit), carrier (GW)
-
-DATASHEETS.abilities 629 rows
-
-a datasheet's abilities
-
-MECHANICAL name (New Recruit), who (New Recruit), text (Wahapedia), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), note (GW), na (computed), damaged (computed), readOf (computed), sumAtkOf (computed), sumDefOf (computed), sumStOf (computed), sumOvOf (computed), sumFoeOf (computed)
-
-AI SUMMARY sumAtk, sumDef, sumSt, sumOv, sumFoe
+RULES AND STRATAGEMS
 
 FACTIONS
-13 rows · one row per faction: its army rules, detachments and aliases
+13 rows · 105 columns
+
+one row per faction: its army rules, detachments and aliases
 
 KEYthe faction’s id, the faction an army names
 
 DETACHMENTS→ each with its rule, stratagems and enhancements, inside the row
 
+FACTIONS 13 rows
+name
+aliases
+armyRules
+detachments
+allies
+FACTIONS.armyRules 29 rows
+
+a faction's army rules
+
+name
+text
+table
+tag
+ph
+turn
+turns
+at
+needs
+coreTwin
+note
+tableAt
+missing
+readOf
+sumAtk
+sumAtkOf
+sumDef
+sumDefOf
+sumSt
+sumStOf
+sumOv
+sumOvOf
+sumFoe
+sumFoeOf
+FACTIONS.detachments 59 rows
+
+a faction's detachments
+
+name
+dispositions
+dp
+rule
+moreRules
+enhancements
+stratagems
+nr
+aiStatus
+FACTIONS.detachments.rule 59 rows
+
+a detachment's rule
+
+name
+text
+table
+tag
+ph
+turn
+turns
+at
+needs
+coreTwin
+note
+tableAt
+missing
+readOf
+sumAtk
+sumAtkOf
+sumDef
+sumDefOf
+sumSt
+sumStOf
+sumOv
+sumOvOf
+FACTIONS.detachments.moreRules 4 rows
+
+a detachment's further rule (moreRules), with the columns of its first
+
+name
+text
+table
+tag
+ph
+turn
+turns
+at
+needs
+coreTwin
+note
+tableAt
+missing
+readOf
+FACTIONS.detachments.stratagems 253 rows
+
+a detachment's stratagems
+
+id
+gist
+gistOf
+name
+cp
+phases
+turn
+turns
+when
+target
+effect
+restrictions
+needs
+note
+limit
+cpNote
+readOf
+FACTIONS.detachments.enhancements 173 rows
+
+a detachment's enhancements
+
+name
+pts
+text
+upgrade
+nr
+limit
+sumAtk
+sumAtkOf
+sumDef
+sumDefOf
+sumSt
+sumStOf
+sumOv
+sumOvOf
+
 ONE ROW: ORKS
 
 name
 Orks
-GW
 aliases
 [/^riled up/i, Waaagh!]
-HAND
 armyRules
 3 rows: Waaagh!, War Cry, Da Boss
-GW
 detachments
 6 detachments: Brute Bosses, Bully Boyz, Dread Mob, Runt Swarm, Shoota Boyz, Wreckas
-GW
 
 ONE OF ITS DETACHMENTS
 
 name
 Dread Mob
-GW
 dispositions
 Purge the Foe
-BSDATA
 dp
 1
-GW
 rule
 Try Dat Button! (+ 10 columns)
-GW
 enhancements
 2 rows: Cybork Boosta, Dreadherder
-GW
 stratagems
 3 rows: Crazed Rampage, Dread Power, Stomping Juggernaut
-GW
 
 ONE OF ITS STRATAGEMS
 
 id
 crazed-rampage
-COMPUTED
 gist
 when targeted: if this unit has not been selected to fight, a destroyed model stays on a 4+ until this unit …
-AI SUMMARY
 gistOf
 263b4efe
-COMPUTED
 name
 Crazed Rampage
-GW
 cp
 1
-GW
 phases
 fight
-COMPUTED
 turn
 either
-COMPUTED
 when
 Fight phase, when an enemy unit targets a friendly ORKS WALKER unit (excluding TITANIC units).
-GW
 target
 That ORKS WALKER unit.
-GW
 effect
 When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one …
-GW
 needs
 all: Walker; none: Titanic
-COMPUTED
 note
 Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on …
-GW
-Every column and where it comes from
-105 columns, with 6 inner tables
-FACTIONS 13 rows
-
-MECHANICAL name (GW), armyRules (GW), detachments (GW), allies (GW)
-
-HAND aliases
-
-FACTIONS.armyRules 29 rows
-
-a faction's army rules
-
-MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), needs (computed), coreTwin (computed), note (GW), tableAt (Wahapedia), readOf (computed), sumAtkOf (computed), sumDefOf (computed), sumStOf (computed), sumOvOf (computed), sumFoeOf (computed)
-
-AI SUMMARY sumAtk, sumDef, sumSt, sumOv, sumFoe
-
-HAND missing
-
-FACTIONS.detachments 59 rows
-
-a faction's detachments
-
-MECHANICAL name (GW), dispositions (BSData), dp (GW), rule (GW), moreRules (GW), enhancements (GW), stratagems (GW), nr (BSData), aiStatus (computed)
-
-FACTIONS.detachments.rule 59 rows
-
-a detachment's rule
-
-MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), needs (computed), coreTwin (computed), note (GW), tableAt (Wahapedia), readOf (computed), sumAtkOf (computed), sumDefOf (computed), sumStOf (computed), sumOvOf (computed)
-
-AI SUMMARY sumAtk, sumDef, sumSt, sumOv
-
-HAND missing
-
-FACTIONS.detachments.moreRules 4 rows
-
-a detachment's further rule (moreRules), with the columns of its first
-
-MECHANICAL name (GW), text (GW), table (GW), tag (New Recruit), ph (computed), turn (computed), turns (computed), at (computed), needs (computed), coreTwin (computed), note (GW), tableAt (Wahapedia), readOf (computed)
-
-HAND missing
-
-FACTIONS.detachments.stratagems 253 rows
-
-a detachment's stratagems
-
-MECHANICAL id (computed), gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), needs (computed), note (GW), limit (computed), cpNote (computed), readOf (computed)
-
-AI SUMMARY gist
-
-FACTIONS.detachments.enhancements 173 rows
-
-a detachment's enhancements
-
-MECHANICAL name (GW), pts (New Recruit), text (GW), upgrade (BSData), nr (New Recruit), limit (Wahapedia), sumAtkOf (computed), sumDefOf (computed), sumStOf (computed), sumOvOf (computed)
-
-AI SUMMARY sumAtk, sumDef, sumSt, sumOv
-
 CORE_STRATAGEMS
-10 rows · the core stratagems
+10 rows · 17 columns
+
+the core stratagems
 
 USED BYevery list
+
+CORE_STRATAGEMS 10 rows
+id
+gist
+gistOf
+name
+cp
+phases
+turn
+turns
+when
+target
+effect
+restrictions
+needs
+note
+limit
+cpNote
+readOf
 
 ONE ROW
 
 id
 command-re-roll
-HAND
 gist
 re-roll one Advance, Charge, Damage, Hazard, Hit, Save or Wound roll, or a roll for attacks (one dice; a …
-AI SUMMARY
 gistOf
 377ce33f
-COMPUTED
 name
 Command Re-roll
-GW
 cp
 1
-GW
 phases
 command · movement · shooting · charge · fight
-COMPUTED
 turn
 either
-COMPUTED
 when
 Any phase, just after you make one of the following rolls for a friendly unit or model: - Advance roll - …
-GW
 target
 That unit or model.
-GW
 effect
 You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll …
-GW
-Every column and where it comes from
-17 columns
-CORE_STRATAGEMS 10 rows
-
-MECHANICAL gistOf (computed), name (GW), cp (GW), phases (computed), turn (computed), turns (computed), when (GW), target (GW), effect (GW), restrictions (GW), needs (computed), note (GW), limit (computed), cpNote (computed), readOf (computed)
-
-AI SUMMARY gist
-
-HAND id
-
 RULES
-67 rows · core rules and weapon abilities: name → text (glossary)
+67 rows · 2 columns
+
+core rules and weapon abilities: name → text (glossary)
 
 KEYthe rule’s name
+
+RULES 67 rows
+name
+text
 
 ONE ROW
 
 name
 Deep Strike
-GW
 text
 Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be …
-GW
-Every column and where it comes from
-2 columns
-RULES 67 rows
-
-MECHANICAL name (GW), text (GW)
-
-RULE_ALIASES
-71 rows · which RULES entry a keyword or rule chip opens: [pattern, rule]
-
-RULE→ RULES
-
-ONE ROW
-
-pattern
-/^supa-hazardous/i
-HAND
-rule
-Supa-hazardous
-COMPUTED
-Every column and where it comes from
-2 columns
-RULE_ALIASES 71 rows
-
-MECHANICAL rule (computed)
-
-HAND pattern
-
 RULE_SRC
-7 rows · where a RULES entry comes from when it is not a core rule
+7 rows · 2 columns
+
+where a RULES entry comes from when it is not a core rule
 
 NAME→ RULES
+
+RULE_SRC 7 rows
+name
+source
 
 ONE ROW
 
 name
 Reverberating Summons
-COMPUTED
 source
 weapon ability of the Doomsday bell (Great Unclean One)
-COMPUTED
-Every column and where it comes from
-2 columns
-RULE_SRC 7 rows
+RULE_ALIASES
+71 rows · 2 columns
 
-MECHANICAL name (computed), source (computed)
+which RULES entry a keyword or rule chip opens: [pattern, rule]
 
+RULE→ RULES
+
+RULE_ALIASES 71 rows
+pattern
+rule
+
+ONE ROW
+
+pattern
+/^supa-hazardous/i
+rule
+Supa-hazardous
 CONCEPTS
-20 rows · core terms kept out of a unit's rule list
+20 rows · 1 column
+
+core terms kept out of a unit's rule list
+
+CONCEPTS 20 rows
+term
 
 ITS ROWS
 
 Hazard Roll · Mortal Wounds · Battle-shock · Engagement · Selected to Attack · Destroyed · Normal Move · Advance Move · Fall-back Move · Charge · Charge Move · Pile-in Move · Consolidation Move · Benefit of Cover · Strategic Reserves · Ingress Move · Surge Move · Scout Move · Starting Strength · Select Weapons
 
-Every column and where it comes from
-1 column
-CONCEPTS 20 rows
+UNITS AND LISTS
 
-MECHANICAL term (GW)
+DATASHEETS
+261 rows · 76 columns
 
-GRANTS
-81 rows · a rule or option giving units an ability or keyword
+one row per datasheet (faction + datasheet name): its facts, shared by every list that has it
 
-RULE→ an army rule (5) or detachment rule (32) in FACTIONS, or a unit’s ability (44) in a list (ARMIES → DATASHEETS)
+WRITTEN BYverify/tables.js --write, from the lists and the faction catalogues (verify/from-bsdata.js)
 
-ONE ROW
+KEY“faction/name”, the id an entry’s ds names
 
-rule
-Orks · Runt Swarm rule · Sneaky Little Gitz
-COMPUTED
-grants
-BATTLELINE
-COMPUTED
-type
-keyword or weapon ability
-COMPUTED
-to
-all: Gretchin
-COMPUTED
-while
-–
-COMPUTED
+RULES→ by name: a core rule in RULES (through RULE_ALIASES) or an army rule in FACTIONS
+
+DATASHEETS 261 rows
+name
+faction
+bsId
+role
+rules
+kw
+kwOnly
+partialRules
+srcNote
+leaders
+stats
+ranged
+melee
+abilities
+points
+composition
+options
+aiStatus
+DATASHEETS.stats 286 rows
+
+a datasheet's model profiles
+
+name
+M
+T
+Sv
+W
+Ld
+OC
+InSv
+base
+baseWith
+DATASHEETS.ranged 422 rows
+
+a datasheet's ranged weapon profiles
+
+name
+range
+A
+BS
+WS
+S
+AP
+D
+kw
+group
+fireAll
+hunter
+carrier
+DATASHEETS.melee 401 rows
+
+a datasheet's melee weapon profiles
+
+name
+range
+A
+BS
+WS
+S
+AP
+D
+kw
+group
+fireAll
+hunter
+carrier
+DATASHEETS.abilities 629 rows
+
+a datasheet's abilities
+
+name
+who
 text
-- Friendly GRETCHIN units have BATTLELINE.
-COMPUTED
-Every column and where it comes from
-7 columns
-GRANTS 81 rows
+tag
+ph
+turn
+turns
+at
+note
+na
+damaged
+readOf
+sumAtk
+sumAtkOf
+sumDef
+sumDefOf
+sumSt
+sumStOf
+sumOv
+sumOvOf
+sumFoe
+sumFoeOf
 
-MECHANICAL rule (computed), option (computed), grants (computed), type (computed), to (computed), while (computed), text (computed)
+ONE ROW: ORKS/WAZDAKKA-GUTSMEK
 
-RULE_OPTIONS
-89 rows · the options inside a rule or ability, each with the phases its words give
+name
+Wazdakka Gutsmek
+faction
+orks
+bsId
+2ab7-ab71-0af4-5d39
+role
+Epic Hero
+rules
+Deadly Demise D3 · Deep Strike · Lone Operative · Waaagh!
+kw
+Mounted · Vehicle · Character · Epic Hero · Smoke · Speed Freeks · Wazdakka Gutsmek · Faction: Orks
+stats
+1 row: Wazdakka Gutsmek
+ranged
+2 rows: Grabba Dragga, Psyko-gatler
+melee
+3 rows: Speeding Bulk and Flaming Exhaust, Fixit’s Wrench, Grabba Dragga
+abilities
+4 rows: Turbo Engine, Shokk Attack Engine, Pulse Jet, Full Throttle
+ARMIES
+26 rows · 225 unit entries · 108 columns
 
-RULE→ an army rule (37) or detachment rule (38) in FACTIONS, or a unit’s ability (14) in a list (ARMIES → DATASHEETS)
+one row per list
 
-ONE ROW
+WRITTEN BYverify/from-json.js from an export (builder.js for a catalogued faction), verify/import-nr.js from a PDF
 
-rule
-Orks · Dread Mob rule · Try Dat Button!
-COMPUTED
-option
-1–2
-COMPUTED
+UNITS[ ].DS→ the unit’s DATASHEETS row
+
+FACTION, DETACHMENTS→ FACTIONS and its detachments
+
+ARMIES 26 rows
+id
+name
+faction
+points
+pointsUsed
+battleSize
+disposition
+detachments
+source
+config
+units
+ARMIES.units 225 rows
+
+a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS
+
+id
+ds
+pts
+ptsNote
+copies
+models
+gear
+unplaced
+enhancement
+warlord
+enhOn
+warlordOn
+ref
+upgrade
+leads
+support
+also
+short
+role
+name
+rules
+kw
+kwNote
+kwOnly
+partialRules
+srcNote
+stats
+ranged
+melee
+abilities
+over
+note
+why
+ARMIES.units.stats
+
+a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
+
+name
+from
+printed
+own
+M
+T
+Sv
+W
+Ld
+OC
+InSv
+base
+over
+of
+why
+ARMIES.units.ranged
+
+a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
+
+name
+who
+n
+from
+enh
+range
+A
+BS
+WS
+S
+AP
+D
+kw
+over
+of
+why
+group
+ARMIES.units.melee
+
+a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
+
+name
+who
+n
+from
+enh
+range
+A
+BS
+WS
+S
+AP
+D
+kw
+over
+of
+why
+group
+ARMIES.units.abilities
+
+a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields
+
+name
+who
+over
+of
 text
-+1 A
-COMPUTED
-found
-table row, trigger: the rule's
-COMPUTED
-explicit
-false
-COMPUTED
-trigger
-ph: shooting, fight; turn: either; turns: shooting: your
-COMPUTED
-used
-–
-COMPUTED
-phases
-ph: shooting, fight; turn: either; turns: shooting: your
-COMPUTED
-Every column and where it comes from
-8 columns
-RULE_OPTIONS 89 rows
+tag
+ph
+turn
+turns
+at
+note
+na
+damaged
+why
+readOf
 
-MECHANICAL rule (computed), option (computed), text (computed), found (computed), explicit (computed), trigger (computed), used (computed), phases (computed)
+ONE ROW: ME SHOOTY YER’ BOOTY
 
-CHECKLIST
-512 rows · per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
+id
+shooty
+name
+Me shooty yer’ booty
+faction
+orks
+points
+2000
+pointsUsed
+2000
+battleSize
+Strike Force
+disposition
+Purge the Foe
+detachments
+dread-mob · shoota-boyz · wreckas
+source
+New Recruit, exported 17 Oct 2026
+units
+10 entries
 
-R|FACTION|NAME→ an army or detachment rule in FACTIONS (92)
+ONE OF ITS UNIT ENTRIES
 
-A|FINGERPRINT→ an ability, by a fingerprint of its name and words (420), in DATASHEETS
+id
+wazdakka
+ds
+orks/wazdakka-gutsmek
+pts
+200
+models
+1× Wazdakka Gutsmek
+gear
+[Fixit’s Wrench, Grabba Dragga, Psyko-gatler, Speeding Bulk and Flaming Exhaust]
 
-ONE ROW: TURBO ENGINE (WAZDAKKA GUTSMEK)
-
-key
-a|14mp5z1
-COMPUTED
-u
-movement:your,charge:your (the phases its effect is used in)
-COMPUTED
-a
-1 (listed when the unit is selected)
-COMPUTED
-
-t the phases it is triggered in · u the phases its effect is used in · s listed at a fixed moment of the turn · a listed when the unit is selected · at the moment it opens with · ae also at the end of the battle round · o its options, each with its own phases · g what it grants · f a rule it puts in force · pk a pick of options · oc its options cover its phases · x not placed (its words give no phase) · none no phase (before the battle, what a unit carries)
-
-BOXES
-448 rows · the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
-Every column and where it comes from
-49 columns, with 3 inner tables
-BOXES 448 rows
-
-MECHANICAL n (computed), b (computed), nc (computed), reach (computed), both (computed), embarked (computed), played (computed), riled (computed), d (computed), dnc (computed), dreach (computed), st (computed), snc (computed)
-
-BOXES.b
-
-one box of the Damage tab: what GW's sentence does, as the catalogue (effects.js) reads it
-
-MECHANICAL quote (GW), lead (GW), fx (computed), on (computed), kind (computed), scope (computed), reach (computed), mark (computed), notSelf (computed), lasts (computed), opt (computed), pick (computed), part (computed), limit (computed), tableRows (computed), pool (computed), excl (computed)
-
-BOXES.d
-
-one defence box: what GW's sentence does for a unit when it is attacked, as the catalogue (effects.js DF) reads it; the datasheet's "When targeted" line
-
-MECHANICAL quote (GW), lead (GW), df (computed), on (computed), kind (computed), scope (computed), reach (computed), mark (computed), notSelf (computed), foe (computed), opt (computed), pick (computed), term (computed), until (GW)
-
-BOXES.st
-
-one stat box: a characteristic of a unit’s models GW’s sentence changes, as the catalogue (effects.js ST) reads it; the line under the unit’s profile (“Not Battle-shocked: OC 7”)
-
-MECHANICAL quote (GW), st (computed), on (computed), reach (computed), scope (computed)
-
-AGREE
-1 row · which boxes of BOXES (b, d, st) two independent readings of GW's words confirm, the two-reader rule (the owner's decision, 3 Nov 2026): written by verify/agree.js --write from BOXES, reader2's readings (verify/reader2/) and the reviewed verdicts (verify/sources/agree-verdicts.json); a box not confirmed is shown as GW's words, "see the rule", and never counted (effects.js agreed)
-Every column and where it comes from
-1 column
-AGREE 1 row
-
-MECHANICAL boxes (computed)
-
-BUILD_INDEX
-5 rows · what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values over BSData’s): written by verify/build-index.js
-Every column and where it comes from
-5 columns
-BUILD_INDEX 5 rows
-
-MECHANICAL labels (computed), marks (computed), gw (computed), battleSizes (computed), upgrades (computed)
+An entry holds what the list chose; everything else about the unit comes from its datasheet’s row.
 
 BS_IDS
-13 lookups · the BSData ids the list import resolves an export by (verify/import-ids.js --write)
+13 lookups · 13 columns
+
+the BSData ids the list import resolves an export by (verify/import-ids.js --write)
+
+WRITTEN BYverify/import-ids.js --write
 
 USED BYthe list import, to find each unit and choice of a New Recruit export
+
+BS_IDS 13 rows
+factions
+roots
+battleSizes
+limits
+dispositions
+detachments
+config
+configKids
+info
+infoKids
+units
+names
+maxPerList
 
 ITS LOOKUPS
 
 factions
 13 ids
-BSDATA
 roots
 16 ids
-BSDATA
 battleSizes
 1 id
-BSDATA
 limits
 1 id
-BSDATA
 dispositions
 5 ids
-BSDATA
 detachments
 59 ids
-BSDATA
 config
 1 id
-BSDATA
 configKids
 2 ids
-BSDATA
 info
 4 ids
-BSDATA
 infoKids
 18 ids
-BSDATA
 units
 224 ids
-BSDATA
 names
 832 ids
-BSDATA
 maxPerList
 82 ids
-BSDATA
-Every column and where it comes from
-13 columns
-BS_IDS 13 rows
+BUILD_INDEX
+5 parts · 5 columns
 
-MECHANICAL factions (BSData), roots (BSData), battleSizes (BSData), limits (BSData), dispositions (BSData), detachments (BSData), config (BSData), configKids (BSData), info (BSData), infoKids (BSData), units (BSData), names (BSData), maxPerList (BSData)
+what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values over BSData’s): written by verify/build-index.js
+
+WRITTEN BYverify/build-index.js --write
+
+USED BYbuilder.js, the in-app build of an export
+
+BUILD_INDEX 5 rows
+labels
+marks
+gw
+battleSizes
+upgrades
+
+WORKED OUT FROM GW’S WORDS BY SCRIPTS
+
+BOXES
+448 rows · 49 columns
+
+the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
+
+WRITTEN BYverify/effects-migrate.js --write
+
+KEYa| an ability, r| a rule, s| a stratagem, c| a core rule, then a fingerprint of its name and words
+
+B, D, ST456 boxes: what a sentence of GW’s does to attacks (b), to attacks on the unit (d), to a characteristic (st)
+
+BOXES 448 rows
+n
+b
+nc
+reach
+both
+embarked
+played
+riled
+d
+dnc
+dreach
+st
+snc
+BOXES.b 311 rows
+
+one box of the Damage tab: what GW's sentence does, as the catalogue (effects.js) reads it
+
+quote
+lead
+fx
+on
+kind
+scope
+reach
+mark
+notSelf
+lasts
+opt
+pick
+part
+limit
+tableRows
+pool
+excl
+BOXES.d 139 rows
+
+one defence box: what GW's sentence does for a unit when it is attacked, as the catalogue (effects.js DF) reads it; the datasheet's "When targeted" line
+
+quote
+lead
+df
+on
+kind
+scope
+reach
+mark
+notSelf
+foe
+opt
+pick
+term
+until
+BOXES.st 6 rows
+
+one stat box: a characteristic of a unit’s models GW’s sentence changes, as the catalogue (effects.js ST) reads it; the line under the unit’s profile (“Not Battle-shocked: OC 7”)
+
+quote
+st
+on
+reach
+scope
+AGREE
+1 row · 1 column
+
+which boxes of BOXES (b, d, st) two independent readings of GW's words confirm, the two-reader rule (the owner's decision, 3 Nov 2026): written by verify/agree.js --write from BOXES, reader2's readings (verify/reader2/) and the reviewed verdicts (verify/sources/agree-verdicts.json); a box not confirmed is shown as GW's words, "see the rule", and never counted (effects.js agreed)
+
+WRITTEN BYverify/agree.js --write
+
+BOXES→ each box of BOXES: confirmed by both readers, by a reviewed verdict, a Core Rules box, or not counted
+
+AGREE 1 row
+boxes
+GRANTS
+81 rows · 7 columns
+
+a rule or option giving units an ability or keyword
+
+WRITTEN BYverify/tables.js --write, from verify/derive.js
+
+RULE→ an army rule (5) or detachment rule (32) in FACTIONS, or a unit’s ability (44) in a list (ARMIES → DATASHEETS)
+
+GRANTS 81 rows
+rule
+option
+grants
+type
+to
+while
+text
+
+ONE ROW
+
+rule
+Orks · Runt Swarm rule · Sneaky Little Gitz
+grants
+BATTLELINE
+type
+keyword or weapon ability
+to
+all: Gretchin
+while
+–
+text
+- Friendly GRETCHIN units have BATTLELINE.
+RULE_OPTIONS
+92 rows · 8 columns
+
+the options inside a rule or ability, each with the phases its words give
+
+WRITTEN BYverify/tables.js --write, from verify/derive.js
+
+RULE→ an army rule (37) or detachment rule (41) in FACTIONS, or a unit’s ability (14) in a list (ARMIES → DATASHEETS)
+
+RULE_OPTIONS 92 rows
+rule
+option
+text
+found
+explicit
+trigger
+used
+phases
+
+ONE ROW
+
+rule
+Orks · Dread Mob rule · Try Dat Button!
+option
+1–2
+text
++1 A
+found
+table row, trigger: the rule's
+explicit
+false
+trigger
+ph: shooting, fight; turn: either; turns: shooting: your
+used
+–
+phases
+ph: shooting, fight; turn: either; turns: shooting: your
+CHECKLIST
+512 rows · 13 columns
+
+per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
+
+WRITTEN BYverify/derive.js --write
+
+R|FACTION|NAME→ an army or detachment rule in FACTIONS (92)
+
+A|FINGERPRINT→ an ability, by a fingerprint of its name and words (420), in DATASHEETS
+
+CHECKLIST
+t
+u
+s
+a
+at
+ae
+o
+g
+f
+pk
+oc
+x
+none
+
+t the phases it is triggered in · u the phases its effect is used in · s listed at a fixed moment of the turn · a listed when the unit is selected · at the moment it opens with · ae also at the end of the battle round · o its options, each with its own phases · g what it grants · f a rule it puts in force · pk a pick of options · oc its options cover its phases · x not placed (its words give no phase) · none no phase (before the battle, what a unit carries)
+
+ONE ROW: TURBO ENGINE (WAZDAKKA GUTSMEK)
+
+key
+a|14mp5z1
+u
+movement:your,charge:your (the phases its effect is used in)
+a
+1 (listed when the unit is selected)
+
+THE DATA’S VERSION
 
 VERSION
-one value · the data’s version: one value, raised with every release
+one value
+
+the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-05.2
+2026-11-09.1
 
-WHY YOU CAN TRUST THE DATA
+a list from an export
+3
+One builder
+builder.js
+export
++
+tables
+→
+builder.js
+→
+ARMIES
 
-Games Workshop is the source of truth. Where New Recruit, BSData or Wahapedia say something else, the difference is written down with its reason, and every release checks it again.
+One file turns a New Recruit export into a list from the export and the tables alone. Your phone’s Import runs it, the gate runs it, and the built-in lists of these factions are made by the same call: each is built exactly as your phone would import it.
 
-What AI wrote is marked on the tables above: summaries. Each carries a fingerprint of the rule text it was written from, so a change in GW’s words stops the next release until it is read again. Every judgement the app adds, by AI or by hand, is signed off by an independent reviewer, and a changed rule voids its sign-off.
+3
+catalogued factions: Adeptus Custodes, Chaos Daemons and Tyranids
+6
+lists built from their export: Nidzillas, Lite Knights, The Exiled Legion, Tzeeeeentch, Healybois and Basic Bitch
 
-In the app, every summary written by AI carries a small AI label, and a tap on it opens the rule as written.
+The exceptions: Emperor’s Chosen and Dread Host (Adeptus Custodes) have no export, only New Recruit PDFs: they were written from the PDFs and are held by every other check, not by the builder.
 
-Nothing ships unless every check passes: the build refuses to run otherwise.
+The 18 lists of the other 10 factions each give the same data.js again, byte for byte, when re-imported from their export (verify/from-json.js, which keeps the datasheet rows and ids data.js already has); an import of one on your phone is made of units those lists already have.
+
+the rules’ boxes, read twice
+4
+Two readers
+verify/agree.js
+Reader 1
+the app’s: reads GW’s words sentence by sentence into BOXES (effects.js)
+Reader 2
+verify/reader2/: written apart, never uses the app’s reading code; the gate runs it in a sandbox that can read only its own files, GW’s documents and Wahapedia’s pages, and a copy of data.js cut down to the rules’ words and what places them (names, ids, factions, keywords, tags, which model has it, where a rule’s table sits)
+
+456 boxes from 448 rules, abilities and stratagems:
+
+375
+both readers agree
+25
+a reviewed verdict quoting GW
+6
+Core Rules boxes
+50
+not counted
+
+AGREE records the comparison. A box counts, in the Damage tab and on the sheets, only where both readers agree, or a reviewed verdict with GW’s quote shows the app right (the Core Rules boxes, which reader 2 does not read, count as GW’s Core Rules). Any other is shown as GW’s words, “see the rule”, and never counted.
+
+the one AI part
+5
+The only AI layer
+gist 182
+sumAtk 140
+sumDef 96
+sumSt 19
+sumOv 47
+sumFoe 11
+
+495 summaries in these columns are written by AI: a stratagem’s one-line gist, and the short line a unit’s sheet or the Overview shows of a rule in each place it applies. Everything else is copied, worked out by a script, or (a few ids, short names, aliases and notes) written by hand.
+
+Each carries the AI label, and a tap on it opens GW’s full text.
+Each sits next to a fingerprint of the GW words it was written from (gistOf, sumAtkOf, sumDefOf, sumStOf, sumOvOf, sumFoeOf): when GW’s words change, the gate fails until it is written again.
+The program decides which lines exist, where and on which units; the AI writes only the sentence.
+Every summary and gist a list shows is signed off by an independent reviewer.
+all of it, checked
+6
+The release gate
+verify/run.js
+
+Before any change reaches your phone, 29 checks compare every table with its sources again: 29 of 29 passed for this build. Nothing ships unless all pass: build.js refuses to build otherwise.
+
+Facts against GW, BSData and New Recruit
+9 of 9
+every unit fact equal to BSData and, for the 16 lists with one, your New Recruit PDF, every base GW’s base size guide’s, every faction catalogue complete, every program column held by its script
+data · tables · bsdata · dispositions · bases · catalog · nr · choice · derived
+Wording
+3 of 3
+every rules text the words of GW’s newest document (or Wahapedia’s), every ability word for word, every AI summary still on the words it was written from
+texts · words · fingerprints
+Numbers
+3 of 3
+every profile number GW’s datasheet’s, the damage calculator against hand-worked cases, the mechanical rules
+numbers · calc · invariants
+Keywords
+1 of 1
+every unit’s keywords its GW datasheets’, the list’s own only by a named rule
+keywords
+Both readers
+3 of 3
+every box made by script from GW’s words and standing on them, and counted only where the two-reader rule confirms it
+evidence · defence · agree
+Every sheet line complete
+3 of 3
+every line a sheet writes stands on GW’s words, every bonus a rule states has its line, every phase tag derived from the words
+lines · readings · derive
+The one builder
+3 of 3
+every export builds its list byte for byte, the import and a re-import give data.js
+import · reimport · build-parity
+Every screen at 390 and 320px
+2 of 2
+every screen and popup of every list renders, opens every link, finds every name, never scrolls sideways
+screens · small phone
+Snapshots
+1 of 1
+the text of every screen equals the accepted one: no screen changes unseen
+snapshots
+Sign-off
+1 of 1
+every judgement the app adds (summaries, gists, phase tags, notes) signed off by an independent reviewer; a changed rule voids it
+helpers
+published
+7
+The app
+app.html
+
+One page template reads the tables and places every line on every screen of every list: which units get a line and where (BOXES, GRANTS, RULE_OPTIONS), “Granted by”, the order and the labels. Every line is GW’s words, an AI summary labelled AI, or a fixed template over the tables, the same every time.
+
+The Rules questions chat (the ? in the top bar) is apart from this: it asks Claude live, and writes nothing into the tables.
 
 CHECKED (DATE OF THE CHECK)
 

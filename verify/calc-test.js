@@ -1062,10 +1062,12 @@ cases.push(['target groups: none added, the target as before (one row, the unit-
 const dmA = require('./damage-node')();
 const SKR = { army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{} };
 const ncOf = (s, name) => (dmA.calc(s).nc || []).find(x => x.name.replace(/^\d+CP /, '') === name);
-for(const name of ['Murderous Imperative', 'Unshackled Wrath']){
+for(const name of ['Unshackled Wrath']){
   cases.push(['two readers: ' + name + ' (falls back) is no box', () => +!dmA.calc(SKR).rules.some(x => x.m.from === name), 1, 0]);
   cases.push(['two readers: ' + name + ' is listed with GW’s words, not counted', () => (x => +(!!x && /^“/.test(x.text) && x.why === dmA.WH_EFFECTS.AGREE_WHY + ': not counted in the Damage tab'))(ncOf(SKR, name)), 1, 0]);
 }
+// Murderous Imperative fell back until reader2 round 5 (review result-reader2-r5.json); both readers now agree, so it is a box
+cases.push(['two readers: a box both readers now confirm (Murderous Imperative) is a box', () => +dmA.calc(SKR).rules.some(x => x.m.from === 'Murderous Imperative'), 1, 0]);
 cases.push(['two readers: a confirmed box (Doctrina Imperatives) is a box as before', () => +dmA.calc(SKR).rules.some(x => x.m.from === 'Doctrina Imperatives'), 1, 0]);
 cases.push(['two readers: the same unit’s boxes, every box counted, are more', () => +(dm.calc(SKR).rules.length > dmA.calc(SKR).rules.length), 1, 0]);
 // calc.js: a mod marked unconfirmed changes nothing (10 Grot Blastas at T3 W1 Sv 5+ FNP 6+, a +1 to hit marked unconfirmed: 1.39 as without it)
