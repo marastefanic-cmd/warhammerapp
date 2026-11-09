@@ -614,9 +614,21 @@ const app = [
   // the same fight as the turn's one step (play) gives what run gives
   ['the turn: one step is run', () => { const p1 = dm.plan({ army:'simple-but-effective', atk:'nazdreg-meganobz', typed:cp(BERZ), turn:{ me:{ charge:true, fight:true } } }), r1 = C.play(dm.app.dmIn(p1, 4000)), r0 = C.run(Object.assign({}, p1.beats[0].M.input, { sims:4000, seed:7 }));
     return +(p1.beats.length === 1 && r1.beats[0].killed === r0.killed); }, 1],
-  // nothing is disabled: a rule the rules rule out here (a Shooting phase stratagem in a fight) is the player's to count, named so
-  ['counted by you: Kustom Dakka in a fight', () => { const s = { army:'shooty', ph:'fight', atk:'mek-tankbustas', typed:{} }, r = box(s, 'Kustom Dakka'); s.on = { [r.k]:true }; const c = dm.calc(s), x = c.rules.find(y => y.k === r.k);
-    return +(r.state === 'out' && !r.on && /Shooting phase only/.test(r.why) && x.on && x.over && C.explain(c.input).groups.some(g => g.steps.some(t => /Kustom Dakka \(counted by you\)/.test(t.t)))); }, 1],
+  // a box only in the phases its WHEN gives (a stratagem's phases, turn, turns; a box's kind): a Shooting phase stratagem is not offered in
+  // a fight, and ticked there anyway (a saved tick) counts nothing; a Fight phase one likewise in the shooting
+  ['WHEN: Kustom Dakka (Shooting phase) not in a fight, even ticked', () => { const k = strat({ army:'shooty', ph:'shooting', atk:'mek-tankbustas', typed:{} }, 'Kustom Dakka').k;
+    const c = dm.calc({ army:'shooty', ph:'fight', atk:'mek-tankbustas', typed:{}, on:{ [k]:true } });
+    return +(!!k && !c.rules.some(r => r.k === k || r.m.from === 'Kustom Dakka') && !c.input.groups.some(g => g.mods.some(m => /Kustom Dakka/.test(m.from)))); }, 1],
+  ['WHEN: Hack and Slash (Fight phase) not in the shooting, even ticked', () => { const k = strat(LKs, 'Hack and Slash').k;
+    const c = dm.calc(Object.assign({}, LKs, { ph:'shooting', on:{ [k]:true } }));
+    return +(!!k && c.input.groups.length > 0 && !c.rules.some(r => r.k === k || r.m.from === 'Hack and Slash') && !c.input.groups.some(g => g.mods.some(m => /Hack and Slash/.test(m.from)))); }, 1],
+  // calc.js: a mod whose WHEN is for the other kind of attack (attacks) counts nothing: 10 Grot Blastas at T3 W1 Sv 5+ FNP 6+, a melee +1
+  // to hit and a 'none' +1 to wound in the shooting: as without them; the app passes it (Hack and Slash in a fight: attacks melee)
+  ['WHEN: calc.js never counts a mod for the other kind of attack', () => { const c = dm.calc({ army:'shooty', ph:'shooting', atk:'gretchin', typed:{ n:10, T:3, W:1, Sv:5, fnp:6 } });
+    const inp = JSON.parse(JSON.stringify(c.input)); inp.groups.forEach(g => { g.mods = (g.mods || []).concat({ from:'Melee only', hit:1, attacks:'melee' }, { from:'Never', wound:1, attacks:'none' }); });
+    return C.explain(inp).total.dmg; }, 10 * 3 / 6 * 3 / 6 * 4 / 6 * 5 / 6],
+  ['WHEN: the app marks a Fight phase stratagem’s mod melee', () => { const k = strat(LKs, 'Hack and Slash').k, c = dm.calc(Object.assign({}, LKs, { on:{ [k]:true } }));
+    return +c.input.groups.some(g => g.mods.some(m => m.from === 'Hack and Slash' && m.attacks === 'melee')); }, 1],
   // Murderous Imperative, a pick of two: Conqueror (re-roll wound rolls of 1). 7 galvanic rifles × 2 at T4 Sv 4+: 14 × 3/6 = 7 hits
   // × (3/6 + 1/6 × 3/6) × 3/6 fail = 2.04
   // (two boxes, as GW's two lines: "If the Protector Imperative is active …", "If the Conqueror Imperative is active …")
@@ -1072,6 +1084,22 @@ cases.push(['two readers: the same unit’s boxes, every box counted, are more',
 cases.push(['two readers: calc.js never counts an unconfirmed mod', () => { const c = dmA.calc({ army:'shooty', ph:'shooting', atk:'gretchin', typed:{ n:10, T:3, W:1, Sv:5, fnp:6 } });
   const inp = JSON.parse(JSON.stringify(c.input)); inp.groups.forEach(g => { g.mods = (g.mods || []).concat({ from:'Unconfirmed', hit:1, unconfirmed:true }); });
   return C.explain(inp).total.dmg; }, 10 * 3 / 6 * 3 / 6 * 4 / 6 * 5 / 6]);
+
+// ---- WHEN, every unit of every list (every box counted): a box offered in the shooting or the fight is one its WHEN gives there, read
+// here from the data on its own: the box's kind (melee, ranged, all) and, for a stratagem, its phases and turn (data.js phases, turn,
+// turns) unless its effect lasts the turn, round or battle; each mod the screen passes calc.js says the attacks its WHEN allows ----
+{ const when = [];
+  for(const a of dm.D.armies){ const ss = new Map(dm.app.inArmy(a, () => dm.app.allStratagems()).map(s => [s.id, s]));
+    for(const u of a.units) for(const ph of ['shooting', 'fight']){ const kind = ph === 'fight' ? 'melee' : 'ranged';
+      const c = dm.calc({ army:a.id, ph, atk:u.id, typed:{} }); if(!c || c.au.id !== u.id) continue;
+      for(const r of c.rules){ const b = r.m.box; if(!b) continue; const s = r.m.strat ? ss.get(r.m.strat) : null;
+        const lasting = ['turn', 'round', 'battle'].includes(b.lasts);
+        const bad = b.kind !== 'all' && b.kind !== kind ? 'kind ' + b.kind : s && !s.phases.includes(ph) && !lasting ? 'phases ' + s.phases.join('/') : s && ph === 'shooting' && s.phases.includes(ph) && ((s.turns || {})[ph] || s.turn) === 'opp' ? 'the other player’s turn' : '';
+        if(bad) when.push(a.id + '/' + u.id + ' ' + ph + ': ' + r.m.from + ' offered (' + bad + ')'); }
+      // every box ticked: each mod with a box says its attacks, never the other kind
+      const on = Object.fromEntries(c.rules.filter(r => r.state !== 'nc').map(r => [r.k, true])), c2 = dm.calc({ army:a.id, ph, atk:u.id, typed:{}, on });
+      for(const g of c2.input.groups) for(const m of g.mods) if(m.attacks && m.attacks !== kind) when.push(a.id + '/' + u.id + ' ' + ph + ': ' + m.from + ' passed for ' + m.attacks + ' attacks'); } }
+  cases.push(['WHEN: no box offered or passed outside the phases its WHEN gives, every list (' + when.slice(0, 3).join('; ') + ')', () => when.length, 0, 0]); }
 
 for(const t of twice) console.log('  ' + t);
 
