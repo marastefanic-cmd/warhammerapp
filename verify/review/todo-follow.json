@@ -7,7 +7,7 @@
    "rule": "A box is offered in a Damage-tab step only where its WHEN gives it: the box's kind (melee / ranged / all) and, for a stratagem, its phases / turn / turns unless its effect lasts the turn, round or battle (lasts). Not offered otherwise (no \"yours to count anyway\"); a saved tick of one counts nothing. Every mod passed to calc.js carries attacks (melee / ranged / none) and calc.js never counts it for the other kind.",
    "before": "a Fight-only stratagem in the Shooting step (and a Shooting one in the fight) was shown \"<phase> phase only · yours to count anyway\" and, ticked, applied to the other kind of weapons",
    "check": "verify/calc-test.js: WHEN cases (Kustom Dakka in a fight, Hack and Slash in the shooting, even ticked; calc.js attacks guard; the app marks the mod melee) and a sweep of every unit of every list in both steps against data.js phases / turn / turns and BOXES kind",
-   "damage": "default numbers unchanged (675 of 675 list/unit/mode results); 222 ticked-box results removed (the ticks no longer exist), every other ticked-box result unchanged"
+   "damage": "against wip: defaults unchanged but for the Skullmaster Both-mode change above (674 of 675 the same); 227 ticked-box results removed (the 222 of main and Adrenal Surge in the shooting, 5 basic-bitch units, no damage change before allocation there), every other ticked-box result unchanged"
   },
   "source": {
    "gw": "Hack and Slash, WHEN: Fight phase; Kustom Dakka, WHEN: Your Shooting phase (each stratagem's WHEN line)"
@@ -16,7 +16,7 @@
  },
  {
   "army": "6-bigs, 4-megas-and-a-destrier, navigator-sounds-op-ngl",
-  "kind": "reader1-box",
+  "kind": "agree-box",
   "where": "Strength from Exile · s|16ujjs9|b0",
   "judgement": {
    "before": {
@@ -39,7 +39,40 @@
     ]
    },
    "label": "No other friendly units within 9\" of it",
-   "counted": "0 on main (reader2 leaves it unread); A with wt-r2 merged (agree.js CEQ noFriendlyNear ≡ not:nearFriendly)"
+   "counted": "A (both readers agree since the merge of wip, release 2026-11-09.1: agree.js CEQ noFriendlyNear ≡ not:nearFriendly); fell back before",
+   "damage": {
+    "defaults": "unchanged",
+    "ticked": [
+     "6-bigs / knight-destrier / shooting / Strength from Exile: 9.7 → 13",
+     "6-bigs / knight-destrier / fight / Strength from Exile: 1.3 → 1.8",
+     "6-bigs / knight-errant / shooting / Strength from Exile: 16 → 21",
+     "6-bigs / knight-errant / fight / Strength from Exile: 13 → 18",
+     "6-bigs / knight-paladin / shooting / Strength from Exile: 13 → 17",
+     "6-bigs / knight-paladin / fight / Strength from Exile: 13 → 18",
+     "6-bigs / knight-warden / shooting / Strength from Exile: 18 → 24",
+     "6-bigs / knight-warden / fight / Strength from Exile: 13 → 18",
+     "4-megas-and-a-destrier / canis-rex / shooting / Strength from Exile: 13 → 18",
+     "4-megas-and-a-destrier / canis-rex / fight / Strength from Exile: 31 → 43",
+     "4-megas-and-a-destrier / cerastus-knight-atrapos / shooting / Strength from Exile: 11 → 16",
+     "4-megas-and-a-destrier / cerastus-knight-atrapos / fight / Strength from Exile: 7.8 → 11",
+     "4-megas-and-a-destrier / cerastus-knight-lancer / shooting / Strength from Exile: 2.7 → 3.6",
+     "4-megas-and-a-destrier / cerastus-knight-lancer / fight / Strength from Exile: 23 → 32",
+     "4-megas-and-a-destrier / knight-crusader / shooting / Strength from Exile: 24 → 33",
+     "4-megas-and-a-destrier / knight-crusader / fight / Strength from Exile: 1.7 → 2.3",
+     "4-megas-and-a-destrier / knight-destrier / shooting / Strength from Exile: 9.7 → 13",
+     "4-megas-and-a-destrier / knight-destrier / fight / Strength from Exile: 1.3 → 1.8",
+     "navigator-sounds-op-ngl / cerastus-knight-atrapos / shooting / Strength from Exile: 11 → 16",
+     "navigator-sounds-op-ngl / cerastus-knight-atrapos / fight / Strength from Exile: 7.8 → 11",
+     "navigator-sounds-op-ngl / knight-crusader / shooting / Strength from Exile: 24 → 33",
+     "navigator-sounds-op-ngl / knight-crusader / fight / Strength from Exile: 1.7 → 2.3",
+     "navigator-sounds-op-ngl / knight-defender / shooting / Strength from Exile: 14 → 18",
+     "navigator-sounds-op-ngl / knight-defender / fight / Strength from Exile: 1.7 → 2.3",
+     "navigator-sounds-op-ngl / knight-destrier / shooting / Strength from Exile: 9.7 → 13",
+     "navigator-sounds-op-ngl / knight-destrier / fight / Strength from Exile: 1.3 → 1.8",
+     "navigator-sounds-op-ngl / knight-errant / shooting / Strength from Exile: 16 → 21",
+     "navigator-sounds-op-ngl / knight-errant / fight / Strength from Exile: 13 → 18"
+    ]
+   }
   },
   "source": {
    "ability": "Strength from Exile",
@@ -49,7 +82,7 @@
  },
  {
   "army": "purge-goes-the-foe",
-  "kind": "reader1-box",
+  "kind": "agree-box",
   "where": "Vengeance for the Omnissiah · a|sctta1|b0",
   "judgement": {
    "before": {
@@ -72,7 +105,13 @@
     ]
    },
    "label": "A friendly ADEPTUS MECHANICUS VEHICLE model destroyed within 12\" of it",
-   "counted": "0 on main; A with wt-r2 merged (agree.js coverDestroyed)"
+   "counted": "A (both readers agree since the merge of wip: agree.js coverDestroyed); fell back before",
+   "damage": {
+    "defaults": "unchanged",
+    "ticked": [
+     "purge-goes-the-foe / tech-priest-enginseer / fight / Vengeance for the Omnissiah: 1.8 → 3.1"
+    ]
+   }
   },
   "source": {
    "ability": "Vengeance for the Omnissiah",
@@ -82,7 +121,7 @@
  },
  {
   "army": "the-exiled-legion",
-  "kind": "reader1-box",
+  "kind": "agree-box",
   "where": "Skullmaster’s Fury · a|19tcvxo|b0",
   "judgement": {
    "unchanged": {
@@ -110,7 +149,16 @@
     "lasts": "turn"
    },
    "why": "reader 1 already restricts it to the weapon (scope.weapon \"juggernaut's bladed horn\"; the Damage tab gives [DEVASTATING WOUNDS] to the Skullmaster's and the Bloodcrushers' bladed horns only); the class-B diff on wt-r2 was the comparator matching \"juggernaut's bladed horns\" (plural) against it",
-   "counted": "0 on main; A with wt-r2 merged (agree.js coverWeapon)"
+   "counted": "A (both readers agree since the merge of wip: agree.js coverWeapon); fell back before",
+   "damage": {
+    "defaults": [
+     "the-exiled-legion / skullmaster-bloodcrushers / Both: killed 4.3 → 4.5, wounds lost 8.7 → 9.0, wiped 60% → 68% (the fight after the turn's charge: the box is ticked by the fact \"Charged this turn\", the Skullmaster leading the Bloodcrushers)"
+    ],
+    "ticked": [
+     "the-exiled-legion / skullmaster-bloodcrushers / fight / Skullmaster’s Fury: 12 → 12",
+     "(Fight mode with no charge said: unticked, as before)"
+    ]
+   }
   },
   "source": {
    "ability": "Skullmaster’s Fury",
@@ -161,7 +209,7 @@
     "reader2 own friendlyDestroyed covered only by the app's friendlyDestroyed with the same keywords and distance of this model",
     "reader2 weapon (GW's words, plural) covered by the app's weapon scope (singular) or a q"
    ],
-   "effect": "none on main; with wt-r2 merged: s|16ujjs9, a|sctta1, a|19tcvxo class A (47 fall back instead of 50)"
+   "effect": "with wip merged (reader2 round 5): s|16ujjs9, a|sctta1, a|19tcvxo class A; agree --write: 456 boxes, 378 A, 25 V, 6 core, 47 fall back (was 50)"
   },
   "source": {
    "gw": "see the three boxes above"
