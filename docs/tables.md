@@ -197,7 +197,7 @@ meets; its own abilities (its enhancement's, its attached parts'), the core weap
 the other units of the list whose boxes reach it (an aura GW tags (Aura), a unit another unit selects, "each time a friendly X model makes
 an attack": "From other units in your list"); the stratagems whose TARGET it meets (`needs`, from TARGET by fixed rules). What a box does
 comes from GW's words: `verify/effects-extract.js` splits each source into sentences, list lines and options (a table's rows, "**Name:**",
-"Or:", "select one of the following") and finds each effect with the patterns of `effects.js` (the catalogue: each effect's id, label, the
+a name on a line of its own then its sentence (Hyper-adaptations' "Swarming Instincts"), "Or:", "select one of the following") and finds each effect with the patterns of `effects.js` (the catalogue: each effect's id, label, the
 calc.js mod it becomes, its values, its patterns), each condition likewise (a condition no catalogue entry reads is the box's label in
 GW's words), the weapons and models it names, and the friendly units it reaches (literal keywords). A source with nothing the script
 counts is listed in its group with GW's words, "not counted in the Damage tab". `node verify/effects-migrate.js --write` writes
