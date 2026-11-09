@@ -1,0 +1,917 @@
+[
+ {
+  "army": "basic-bitch",
+  "kind": "agree-box",
+  "where": "Adrenal Surge · s|14uecac|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "critHit",
+      5
+     ]
+    ],
+    "on": [],
+    "kind": "melee"
+   },
+   "reader2": [
+    {
+     "sentence": "det:tyranids/invasion-fleet|Adrenal Surge|0",
+     "effects": [
+      "critHit=5"
+     ],
+     "reach": "unit",
+     "conditions": [
+      "when"
+     ],
+     "duration": "end of the phase"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Adrenal Surge",
+   "gw": "Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+  },
+  "key": "s|14uecac|b0"
+ },
+ {
+  "army": "(no list uses it)",
+  "kind": "agree-box",
+  "where": "Archagonists · s|1qyj9u7|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "wound",
+      1
+     ]
+    ],
+    "on": [],
+    "kind": "melee"
+   },
+   "reader2": [
+    {
+     "sentence": "det:chaos-daemons/legion-of-excess|Archagonists|0",
+     "effects": [
+      "wound=1"
+     ],
+     "reach": "unit",
+     "conditions": [
+      "when"
+     ],
+     "duration": "end of the phase"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Archagonists",
+   "gw": "Until the end of the phase, each time a model in one of those units makes an attack, add 1 to the Wound roll."
+  },
+  "key": "s|1qyj9u7|b0"
+ },
+ {
+  "army": "healybois",
+  "kind": "agree-box",
+  "where": "Burning Spray · a|14ie9b1|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "ignoresCover",
+      true
+     ]
+    ],
+    "on": [
+     [
+      "targetSelected",
+      true
+     ]
+    ],
+    "kind": "ranged"
+   },
+   "reader2": [
+    {
+     "sentence": "ds:tyranids/pyrovores|Burning Spray|1",
+     "effects": [
+      "ignoresCover=true"
+     ],
+     "reach": "anyAttacker",
+     "conditions": [
+      "targetSelected",
+      "phase",
+      "timing",
+      "selected"
+     ],
+     "duration": "end of the phase"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Burning Spray",
+   "gw": "Until the end of the phase, that enemy unit cannot have the Benefit of Cover."
+  },
+  "key": "a|14ie9b1|b0"
+ },
+ {
+  "army": "the-exiled-legion",
+  "kind": "agree-box",
+  "where": "Damaged: 1-7 wounds remaining · a|611p4g|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "a",
+      2
+     ]
+    ],
+    "on": [
+     [
+      "q",
+      "While this model has 1-7 wounds remaining"
+     ]
+    ],
+    "kind": "all",
+    "scope": {
+     "weapon": "slaughter and carnage",
+     "models": "model"
+    }
+   },
+   "reader2": [
+    {
+     "sentence": "ds:chaos-daemons/skarbrand|Damaged: 1-7 wounds remaining|0",
+     "effects": [
+      "a=2"
+     ],
+     "reach": "self",
+     "conditions": [
+      "woundsRemaining",
+      "weapon"
+     ],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Damaged: 1-7 wounds remaining",
+   "gw": "While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage."
+  },
+  "key": "a|611p4g|b0"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "agree-box",
+  "where": "Dark Zealotry · a|1fpl6vr|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "wound",
+      1
+     ]
+    ],
+    "on": [
+     [
+      "leading",
+      true
+     ],
+     [
+      "q",
+      "contains a DARK APOSTLE model"
+     ]
+    ],
+    "kind": "melee"
+   },
+   "reader2": [
+    {
+     "sentence": "ds:chaos-space-marines/dark-apostle|Dark Zealotry|0",
+     "effects": [
+      "wound=1"
+     ],
+     "reach": "ledUnit",
+     "conditions": [
+      "leading",
+      "contains"
+     ],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Dark Zealotry",
+   "gw": "While this unit is leading a unit and contains a DARK APOSTLE model, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+  },
+  "key": "a|1fpl6vr|b0"
+ },
+ {
+  "army": "(no list uses it)",
+  "kind": "agree-box",
+  "where": "Draught of Terror · s|n3dvjc|b1",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "rrWound",
+      true
+     ]
+    ],
+    "on": [
+     [
+      "q",
+      "targets a unit that is Battle-shocked"
+     ]
+    ],
+    "kind": "all"
+   },
+   "reader2": [
+    {
+     "sentence": "det:chaos-daemons/daemonic-incursion|Draught of Terror|1",
+     "effects": [
+      "rrWound=true"
+     ],
+     "reach": "unit",
+     "conditions": [
+      "targetBattleShocked",
+      "phase",
+      "when"
+     ],
+     "duration": "end of the phase"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Draught of Terror",
+   "gw": "In addition, until the end of the phase, each time such a weapon targets a unit that is Battle-shocked, you can re-roll the Wound roll."
+  },
+  "key": "s|n3dvjc|b1"
+ },
+ {
+  "army": "(no list uses it)",
+  "kind": "agree-box",
+  "where": "Encroaching Darkness · s|frlvy6|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "ignoresCover",
+      true
+     ]
+    ],
+    "on": [],
+    "kind": "ranged"
+   },
+   "reader2": [
+    {
+     "sentence": "det:chaos-daemons/shadow-legion|Encroaching Darkness|0",
+     "effects": [
+      "ignoresCover=true"
+     ],
+     "reach": "unit",
+     "conditions": [
+      "phase",
+      "when"
+     ],
+     "duration": "end of the phase"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Encroaching Darkness",
+   "gw": "Until the end of the phase, weapons equipped by models in your selected units have the [IGNORES COVER] ability."
+  },
+  "key": "s|frlvy6|b0"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "agree-box",
+  "where": "Enraged Behemoths · r|tz5p0s|st0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "st": [
+     [
+      "ocAdd",
+      2
+     ]
+    ],
+    "on": [
+     [
+      "atStarting",
+      true
+     ],
+     [
+      "notShocked",
+      true
+     ]
+    ]
+   },
+   "reader2": [
+    {
+     "sentence": "det:tyranids/crusher-stampede|Enraged Behemoths|1",
+     "effects": [
+      "ocAdd=2"
+     ],
+     "reach": "army",
+     "conditions": [
+      "atStarting",
+      "notShocked"
+     ],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Enraged Behemoths",
+   "gw": "In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit."
+  },
+  "key": "r|tz5p0s|st0"
+ },
+ {
+  "army": "6-bigs,navigator-sounds-op-ngl",
+  "kind": "agree-box",
+  "where": "Errant’s Duty · a|1or5jd0|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "assault",
+      true
+     ]
+    ],
+    "on": [
+     [
+      "q",
+      "While a model is affected by this ability"
+     ],
+     [
+      "selected",
+      true
+     ]
+    ],
+    "kind": "ranged"
+   },
+   "reader2": [
+    {
+     "sentence": "ds:imperial-knights/knight-errant|Errant’s Duty|0",
+     "effects": [
+      "assault=true"
+     ],
+     "reach": "affectedModel",
+     "conditions": [
+      "affectedByThisAbility"
+     ],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Errant’s Duty",
+   "gw": "While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability."
+  },
+  "key": "a|1or5jd0|b0"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "agree-box",
+  "where": "Excessive Assault · a|6q6bvm|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "rrWound1",
+      true
+     ]
+    ],
+    "on": [],
+    "kind": "melee"
+   },
+   "reader2": [
+    {
+     "sentence": "ds:emperors-children/infractors|Excessive Assault|0",
+     "effects": [
+      "rrWound1=true"
+     ],
+     "reach": "unit",
+     "conditions": [],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Excessive Assault",
+   "gw": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1."
+  },
+  "key": "a|6q6bvm|b0"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "agree-box",
+  "where": "Excessive Assault · a|6q6bvm|b1",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "rrWound",
+      true
+     ]
+    ],
+    "on": [
+     [
+      "targetObjective",
+      true
+     ]
+    ],
+    "kind": "melee"
+   },
+   "reader2": [
+    {
+     "sentence": "ds:emperors-children/infractors|Excessive Assault|1",
+     "effects": [
+      "rrWound=true"
+     ],
+     "reach": "unit",
+     "conditions": [
+      "targetObjective"
+     ],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Excessive Assault",
+   "gw": "If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+  },
+  "key": "a|6q6bvm|b1"
+ },
+ {
+  "army": "fellhammer-siege-task-force",
+  "kind": "agree-box",
+  "where": "Master of Mechanisms · a|c1v9iq|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "hit",
+      1
+     ]
+    ],
+    "on": [
+     [
+      "aura",
+      3
+     ],
+     [
+      "selected",
+      true
+     ]
+    ],
+    "kind": "all",
+    "scope": {
+     "models": "one"
+    }
+   },
+   "reader2": [
+    {
+     "sentence": "ds:chaos-space-marines/warpsmith|Master of Mechanisms|1",
+     "effects": [
+      "hit=1"
+     ],
+     "reach": "selected",
+     "conditions": [
+      "phase",
+      "selected"
+     ],
+     "duration": "start of your next command phase"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Master of Mechanisms",
+   "gw": "That VEHICLE model regains up to D3 lost wounds and, until the start of your next Command phase, each time that VEHICLE makes an attack, add 1 to the Hit roll."
+  },
+  "key": "a|c1v9iq|b0"
+ },
+ {
+  "army": "lite-knights",
+  "kind": "agree-box",
+  "where": "Moritoi Ancients · r|zwb4f4|st0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "st": [
+     [
+      "ocAdd",
+      2
+     ]
+    ],
+    "on": [
+     [
+      "atStarting",
+      true
+     ]
+    ]
+   },
+   "reader2": [
+    {
+     "sentence": "det:adeptus-custodes/might-of-the-moritoi|Moritoi Ancients|0",
+     "effects": [
+      "ocAdd=2"
+     ],
+     "reach": "friendly",
+     "conditions": [
+      "atStarting"
+     ],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Moritoi Ancients",
+   "gw": "While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is at starting strength, that unit has +2 OC."
+  },
+  "key": "r|zwb4f4|st0"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "agree-box",
+  "where": "Murderous Imperative · r|87d9u3|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "rrHit1",
+      true
+     ]
+    ],
+    "on": [
+     [
+      "q",
+      "If the Protector Imperative is active for that unit"
+     ]
+    ],
+    "kind": "all"
+   },
+   "reader2": [
+    {
+     "sentence": "det:adeptus-mechanicus/eradication-cohort|Murderous Imperative|1",
+     "effects": [
+      "rrHit1=true"
+     ],
+     "reach": "army",
+     "conditions": [
+      "abilityActive"
+     ],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Murderous Imperative",
+   "gw": "If the Protector Imperative is active for that unit, re-roll a Hit roll of 1."
+  },
+  "key": "r|87d9u3|b0"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "agree-box",
+  "where": "Murderous Imperative · r|87d9u3|b1",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "rrWound1",
+      true
+     ]
+    ],
+    "on": [
+     [
+      "q",
+      "If the Conqueror Imperative is active for that unit"
+     ]
+    ],
+    "kind": "all"
+   },
+   "reader2": [
+    {
+     "sentence": "det:adeptus-mechanicus/eradication-cohort|Murderous Imperative|2",
+     "effects": [
+      "rrWound1=true"
+     ],
+     "reach": "army",
+     "conditions": [
+      "abilityActive"
+     ],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Murderous Imperative",
+   "gw": "If the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1."
+  },
+  "key": "r|87d9u3|b1"
+ },
+ {
+  "army": "healybois",
+  "kind": "agree-box",
+  "where": "Parasitic Biomorphology · a|uulhog|b1",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "a",
+      1
+     ]
+    ],
+    "on": [
+     [
+      "q",
+      "The first time the bearer's unit destroys an enemy unit in the Fight phase"
+     ],
+     [
+      "q",
+      "while the bearer is within 6\" of one or more friendly HARVESTER units"
+     ]
+    ],
+    "kind": "melee"
+   },
+   "reader2": [
+    {
+     "sentence": "army:healybois/hive-tyrant-tyrant-guard|Parasitic Biomorphology|2",
+     "effects": [
+      "a=1"
+     ],
+     "reach": "bearerUnit",
+     "conditions": [
+      "firstTime",
+      "onlyFor"
+     ],
+     "duration": "end of the battle"
+    },
+    {
+     "sentence": "det:tyranids/assimilation-swarm|Parasitic Biomorphology|2",
+     "effects": [
+      "a=1"
+     ],
+     "reach": "bearerUnit",
+     "conditions": [
+      "firstTime",
+      "onlyFor"
+     ],
+     "duration": "end of the battle"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Parasitic Biomorphology",
+   "gw": "The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit."
+  },
+  "key": "a|uulhog|b1"
+ },
+ {
+  "army": "u-w0t-m8",
+  "kind": "agree-box",
+  "where": "Phaeron of the Blades · a|1nwz1gg|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "s",
+      1
+     ]
+    ],
+    "on": [
+     [
+      "opt",
+      "Triarch Abilities: the one selected (at the start of the battle round)"
+     ],
+     [
+      "aura",
+      6
+     ]
+    ],
+    "kind": "melee"
+   },
+   "reader2": [
+    {
+     "sentence": "ds:necrons/the-silent-king|Phaeron of the Blades|0",
+     "effects": [
+      "s=1"
+     ],
+     "reach": "aura",
+     "conditions": [
+      "aura",
+      "opt",
+      "choice"
+     ],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Phaeron of the Blades",
+   "gw": "While a friendly NECRONS unit (excluding MONSTER units) is within 6\" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "a|1nwz1gg|b0"
+ },
+ {
+  "army": "basic-bitch",
+  "kind": "agree-box",
+  "where": "Psychological Saboteur · a|eongg6|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "wound",
+      1
+     ]
+    ],
+    "on": [
+     [
+      "targetSelected",
+      true
+     ],
+     [
+      "q",
+      "While an enemy unit is within 12\" of this model"
+     ],
+     [
+      "q",
+      "if that unit is Battle-shocked"
+     ]
+    ],
+    "kind": "all"
+   },
+   "reader2": [
+    {
+     "sentence": "ds:tyranids/neurolictor|Psychological Saboteur|2",
+     "effects": [
+      "wound=1"
+     ],
+     "reach": "enemyAura",
+     "conditions": [
+      "aura",
+      "battleShocked",
+      "targetSelected"
+     ],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Psychological Saboteur",
+   "gw": "Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll."
+  },
+  "key": "a|eongg6|b0"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "agree-box",
+  "where": "Super Runts · a|uc39pe|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "a",
+      1
+     ],
+     [
+      "skill",
+      1
+     ],
+     [
+      "s",
+      1
+     ]
+    ],
+    "on": [],
+    "kind": "all",
+    "scope": {
+     "weapon": "scavenged shivs"
+    }
+   },
+   "reader2": [
+    {
+     "sentence": "ds:orks/zodgrod-wortsnagga|Super Runts|1",
+     "effects": [
+      "a=1",
+      "skill=1",
+      "s=1"
+     ],
+     "reach": "unit",
+     "conditions": [
+      "weapon"
+     ],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Super Runts",
+   "gw": "This unit’s Scavenged Shivs weapons have +1 A, WS and S."
+  },
+  "key": "a|uc39pe|b0"
+ },
+ {
+  "army": "basic-bitch,healybois,nidzillas",
+  "kind": "agree-box",
+  "where": "Synapse · r|3wfu6n|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "s",
+      1
+     ]
+    ],
+    "on": [
+     [
+      "q",
+      "If your Army Faction is TYRANIDS"
+     ],
+     [
+      "q",
+      "While a TYRANIDS unit from your army is within Synapse Range of your army"
+     ]
+    ],
+    "kind": "melee"
+   },
+   "reader2": [
+    {
+     "sentence": "faction:tyranids|Synapse|3",
+     "effects": [
+      "s=1"
+     ],
+     "reach": "army",
+     "conditions": [
+      "synapse"
+     ],
+     "duration": null
+    }
+   ]
+  },
+  "source": {
+   "ability": "Synapse",
+   "gw": "Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "r|3wfu6n|b0"
+ },
+ {
+  "army": "defilers-and-friends",
+  "kind": "agree-box",
+  "where": "Unshakeable Opponents · s|7riwju|b0",
+  "judgement": {
+   "counted": "A (both readers agree; fell back on main)",
+   "app": {
+    "fx": [
+     [
+      "ignoreHitMods",
+      true
+     ],
+     [
+      "ignoreWoundMods",
+      true
+     ]
+    ],
+    "on": [],
+    "kind": "all"
+   },
+   "reader2": [
+    {
+     "sentence": "det:emperors-children/coterie-of-the-conceited|Unshakeable Opponents|0",
+     "effects": [
+      "ignoreHitMods=true",
+      "ignoreWoundMods=true"
+     ],
+     "reach": "unit",
+     "conditions": [
+      "when"
+     ],
+     "duration": "end of the turn"
+    }
+   ]
+  },
+  "source": {
+   "ability": "Unshakeable Opponents",
+   "gw": "Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the Hit roll; the Wound roll."
+  },
+  "key": "s|7riwju|b0"
+ }
+]

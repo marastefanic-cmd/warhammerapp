@@ -223,6 +223,13 @@ function subject0(s, ctx){
     }
     return R(reach, m[0].length);
   }
+  // round 5: "models in your selected units" (a stratagem whose TARGET is up to one X unit and up to one Y unit)
+  if((m = /^(?:models in )?your selected units\b/.exec(s)) && ctx.stratTarget){
+    const target = ctx.stratTarget, reach = { type:'unit', of:'stratagem target', plural:true };
+    for(const k of ['kw', 'excluding', 'qualifier']) if(target[k]) reach['target' + k.charAt(0).toUpperCase() + k.slice(1)] = target[k];
+    reach.targetText = target.text;
+    return R(reach, m[0].length);
+  }
   if((m = /^that model\b/.exec(s)) && ctx.refModel) return R(Object.assign({}, useRef(ctx, ctx.refModel)), m[0].length);
   if((m = new RegExp('^(?:models in |each model in |a model in |all models in )?(?:that|those) (?:(' + KX + ') )?(enemy )?(units?|models?)').exec(s))){
     // "LEGIO CYBERNETICA units from your army … unless that unit …": a plural subject is read distributively
@@ -236,6 +243,8 @@ function subject0(s, ctx){
   }
   if((m = /^(?:that model|it)\b/.exec(s)) && ctx.refModel) return R(Object.assign({}, useRef(ctx, ctx.refModel)), m[0].length);
   if((m = /^that (⟦[^⟧]+⟧)(?! (?:unit|model))/.exec(s)) && ctx.refLeaderKw === m[1]) return R(Object.assign({}, useRef(ctx, ctx.refModel)), m[0].length);
+  // round 5: "each time that VEHICLE makes an attack": the model selected before, when that keyword is one of its own
+  if((m = /^that (⟦[^⟧]+⟧)(?= makes\b)/.exec(s)) && ctx.refModel && JSON.stringify(ctx.refModel.kw || '').includes(m[1].slice(1, -1))) return R(Object.assign({}, useRef(ctx, ctx.refModel)), m[0].length);
   if((m = /^(?:models in |all models in )(?:it|them)\b/.exec(s)) && ctx.lastSubject) return R(Object.assign({}, ctx.lastSubject), m[0].length);
   if((m = /^this (⟦[^⟧]+⟧)(?! (?:unit|model))/.exec(s))) return R({ type:'self' }, m[0].length);
   if((m = /^it\b/.exec(s)) && ctx.lastSubject) return R(Object.assign({}, ctx.lastSubject), m[0].length);
@@ -284,6 +293,8 @@ function targetPhrase(s, r){
   if((m = /^an? (?:enemy )?unit with an? (?:t|toughness(?: characteristic)?) greater than (?:this|your) (?:unit's|model's) (?:t|toughness(?: characteristic)?)/.exec(s))){ cond(r, 'targetTGreater', true, 'own'); return m[0].length; }
   if((m = /^an? (?:enemy )?unit that (?:has|contains) no models with an? (?:t|toughness(?: characteristic)?) of (\d+)\+/.exec(s))){ cond(r, 'maxT', +m[1]); return m[0].length; }
   if((m = /^(?:its victim|your machine vengeance target|its quarry|that target|the marked unit)/.exec(s))){ cond(r, 'targetSelected'); return m[0].length; }
+  // round 5: an enemy's attack "that targets your unit" (Savage Roar): the target is the stratagem's (or this) unit
+  if((m = /^(your unit|this unit|this model)\b/.exec(s))){ cond(r, 'targetIs', m[1], 'own'); return m[0].length; }
   for(const [re, f] of T){ if((m = re.exec(s))){ f(); return m[0].length; } }
   return 0;
 }
@@ -313,6 +324,8 @@ function attackEffect10(s){
     [/^improve the ((?:strength|armour penetration|damage|attacks)(?:(?:, | and )(?:strength|armour penetration|damage|attacks))*) characteristics? of that (?:attack|weapon) by (\d)/,
       m => charList(m[1]).map(c => [c, +m[2]])],
     [/^you can ignore any or all modifiers to the hit roll and any or all modifiers to the (?:ballistic|weapon) skill characteristic of that (?:weapon|attack)/, () => [['ignoreHitMods', true]]],
+    // round 5: "… to the following: that attack's Ballistic Skill or Weapon Skill characteristic; the Hit roll; the Wound roll"
+    [/^you can ignore any or all modifiers to the following: that attack's ballistic skill or weapon skill characteristic; the hit roll; the wound roll/, () => [['ignoreHitMods', true], ['ignoreWoundMods', true]]],
     [/^you can ignore any or all modifiers to (?:that model's|the) (?:ballistic skill|weapon skill|ballistic skill or weapon skill) characteristics? and(?: any or all modifiers to)? the hit roll/, () => [['ignoreHitMods', true]]]
   ];
   for(const [re, f] of E){ if((m = re.exec(s))) return { len:m[0].length, fx:f(m) }; }
@@ -429,7 +442,7 @@ function prefix(s, r, ctx){
     // timings (triggers)
     [new RegExp('^(?:at the|at) (start|end) of (any phase|the battle round|the first battle round|each battle round|the battle|your turn|your opponent\'s turn|any turn|each turn|(?:the|your|your opponent\'s|each|any) (?:' + PHASES + ') phase)(?: step)?(?: of [^,]+)?,? '),
       m => cond(r, 'timing', m[1] + ' of ' + m[2], 'own')],
-    [/^(?:each time|when) (this model|this unit|the bearer|your unit) is selected to shoot or fight,? /, m => { cond(r, 'trigger', 'selected to shoot or fight', 'own'); ctx.triggerSubject = subjOf(m[1]); }],
+    [/^(?:each time|when) (this model|this unit|the bearer|your unit) is selected to shoot or fight,? /, m => { cond(r, 'trigger', 'selected to shoot or fight', 'own'); ctx.triggerSubject = subjOf(m[1]); ctx.lastSubject = subjOf(m[1]); }],
     [/^when (?:this unit|this model) is selected as the target of an attack,? /, () => cond(r, 'trigger', 'selected as the target of an attack', 'own')],
     [/^when (this unit|this model) is selected to fight or when an enemy unit targets (?:this unit|it|this model),? /, m => { cond(r, 'trigger', 'selected to fight, or targeted by an enemy unit', 'own'); ctx.triggerSubject = subjOf(m[1]); }],
     [/^while (this model|the bearer|this unit) is using the ([a-z' -]+?) ability,? /, m => { cond(r, 'usingAbility', m[2], 'own'); ctx.lastSubject = subjOf(m[1]); }],
@@ -478,9 +491,11 @@ function prefix(s, r, ctx){
     }],
     [/^for each one that does,? /, () => cond(r, 'used')],
     [/^while a unit is riled up,? /, () => { cond(r, 'riled'); setRef(ctx, 'ref', { type:'riledUnit', note:'a unit with this ability that is riled up' }, [{ id:'riled', table:'COND' }]); }],
-    [/^each time (this model|this unit|the bearer|the bearer's unit|this model's unit|a model in this unit|your unit) is selected to (shoot|fight|attack),? /, m => { cond(r, 'trigger', 'selected to ' + m[2], 'own'); ctx.triggerSubject = subjOf(m[1]); if(m[2] === 'shoot') ctx.whenKind = 'ranged'; if(m[2] === 'fight') ctx.whenKind = 'melee'; }],
-    [/^when (this model|this unit|the bearer|the bearer's unit|this model's unit|your unit) is selected to (shoot|fight|attack),? /, m => { cond(r, 'trigger', 'selected to ' + m[2], 'own'); ctx.triggerSubject = subjOf(m[1]); if(m[2] === 'shoot') ctx.whenKind = 'ranged'; if(m[2] === 'fight') ctx.whenKind = 'melee'; }],
+    [/^each time (this model|this unit|the bearer|the bearer's unit|this model's unit|a model in this unit|your unit) is selected to (shoot|fight|attack),? /, m => { cond(r, 'trigger', 'selected to ' + m[2], 'own'); ctx.triggerSubject = subjOf(m[1]); ctx.lastSubject = subjOf(m[1]); if(m[2] === 'shoot') ctx.whenKind = 'ranged'; if(m[2] === 'fight') ctx.whenKind = 'melee'; }],
+    [/^when (this model|this unit|the bearer|the bearer's unit|this model's unit|your unit) is selected to (shoot|fight|attack),? /, m => { cond(r, 'trigger', 'selected to ' + m[2], 'own'); ctx.triggerSubject = subjOf(m[1]); ctx.lastSubject = subjOf(m[1]); if(m[2] === 'shoot') ctx.whenKind = 'ranged'; if(m[2] === 'fight') ctx.whenKind = 'melee'; }],
     [/^(?:each time|when) (this model|this unit|the bearer|the bearer's unit|this model's unit|your unit) (?:makes|ends) a charge move,? /, m => { cond(r, 'charged'); ctx.lastSubject = m[1] === 'this model' ? { type:'self' } : m[1] === 'the bearer' ? { type:'bearer' } : { type:'unit' }; }],
+    // round 5: "each time that unit ends a Charge move" (the unit this model is leading)
+    [/^(?:each time|when) that unit (?:makes|ends) a charge move,? /, () => { if(!ctx.ref || ctx.ref.enemy) throw new Unread('unparsed:"that unit" refers to no unit named before'); cond(r, 'charged'); ctx.lastSubject = Object.assign({}, useRef(ctx, ctx.ref)); }],
     [/^the first time (this model|this unit|the bearer) is destroyed,? /, () => { cond(r, 'firstTime', 'destroyed', 'own'); ctx.onDeath = true; }],
     [/^the first time ([^,]+?), /, m => cond(r, 'firstTime', m[1], 'own')],
     // while/if conditions
@@ -557,6 +572,18 @@ function prefix(s, r, ctx){
     cond(r, 'aura', +m[4]);
     return m[0].length;
   }
+  // round 5: "while a TYRANIDS unit from your army is within Synapse Range of your army, …": those units, with the synapse condition
+  if((m = new RegExp('^while an? (' + KX + ') unit from your army is within (?:your army\'s )?synapse range(?: of your army)?,? ').exec(s))){
+    const reach = { type:'army', kw:kwExpr(m[1], { andIsOr:true }), unitsOrModels:'units' }, c = { id:'synapse', v:true, table:'own' };
+    setRef(ctx, 'ref', reach, [c]); r.reachFromAura = reach; r.conditions.push(Object.assign({}, c));
+    return m[0].length;
+  }
+  // round 5: "if it is a VEHICLE model, …" (of the model named before)
+  if((m = /^(?:if|while) (?:it|that model) is an? (⟦[^⟧]+⟧) model,? /.exec(s)) && (ctx.refModel || ctx.lastSubject)){ cond(r, 'selfKw', m[1].slice(1, -1)); return m[0].length; }
+  // round 5: "if a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model, …"
+  if((m = new RegExp('^if an? (friendly )?(' + KX + ') (model|unit) is destroyed within (\\d+)" of (this model|this unit|the bearer),? ').exec(s))){
+    cond(r, 'friendlyDestroyed', { kw:kwExpr(m[2], { andIsOr:true }), of:m[3], within:+m[4], near:m[5] }, 'own'); return m[0].length;
+  }
   if((m = /^if (this unit's|this model's|the bearer's|its) ([a-z' -]+?) weapon targets /.exec(s))){
     const n = targetPhrase(s.slice(m[0].length), r);
     if(n && /^, /.test(s.slice(m[0].length + n))){
@@ -566,6 +593,19 @@ function prefix(s, r, ctx){
     }
   }
   if((m = /^(?:while|if) this (?:model|unit) is within (\d+)" of (?:one or more )?enemy units?,? /.exec(s))){ cond(r, 'nearEnemy', +m[1], 'own'); return m[0].length; }
+  // round 5: "while this unit is leading a unit and contains a DARK APOSTLE model, …": both conditions; "that unit" is the led unit
+  if((m = /^while this unit is leading a unit and contains (?:one or more|an?) (⟦[^⟧]+⟧) models?,? /.exec(s))){
+    r.conditions.push({ id:'leading', table:'COND' }, { id:'contains', v:m[1].slice(1, -1), table:'own' });
+    setRef(ctx, 'ref', { type:'ledUnit' }, [{ id:'leading', table:'COND' }, { id:'contains', v:m[1].slice(1, -1), table:'own' }]); return m[0].length;
+  }
+  // round 5: "while a friendly ADEPTUS CUSTODES DREADNOUGHT unit is at starting strength, …" / "while a TYRANIDS MONSTER unit from your
+  // army (excluding Battle-shocked units) is at its Starting Strength, …": those units, each while at its Starting Strength
+  if((m = new RegExp('^while an? (friendly )?(' + KX + ') unit( from your army)?( \\(excluding battle-shocked units\\))? is at (?:its )?starting strength,? ').exec(s)) && (m[1] || m[3])){
+    const reach = { type:m[3] ? 'army' : 'friendly', kw:kwExpr(m[2], { andIsOr:true }), unitsOrModels:'units' };
+    const cs = [{ id:'atStarting', table:'STCOND', of:'that unit' }].concat(m[4] ? [{ id:'notShocked', table:'STCOND', of:'that unit' }] : []);
+    setRef(ctx, 'ref', reach, cs); r.reachFromAura = reach; r.conditions.push(...cs.map(c => Object.assign({}, c)));
+    return m[0].length;
+  }
   return 0;
 }
 
@@ -596,15 +636,36 @@ function core(s, r, ctx){
         reach = { type:/from your army/.test(km[0]) ? 'army' : 'friendly', kw:kwExpr(km[1], { andIsOr:true }), unitsOrModels:'models' }; t = t.slice(km[0].length - 1); len += km[0].length - 1;
       } else if((km = new RegExp('^(?:a |an )?(' + KX + ') model in this unit').exec(s.slice(11)))){
         reach = { type:'models', kw:kwExpr(km[1], { andIsOr:true }), of:'this unit' }; t = s.slice(11 + km[0].length); len = 11 + km[0].length;
+      } else if((km = new RegExp('^(?:any|one) of (?:those|these) (?:selected )?(?:(' + KX + ') )?units\\b').exec(t))){
+        // round 5: "a model in any of those selected units" / "one of those units": the units the stratagem's TARGET (or the
+        // last selection of friendly units) names; never an enemy selection
+        const ref = ctx.ref;
+        if(!ref || ref.enemy) throw new Unread('unparsed:"' + clean(km[0]) + '" refers to no friendly units named before');
+        if(km[1]){ const k = kwExpr(km[1], { andIsOr:true }), w = (k.any || k.all || []).join(' '); if(!JSON.stringify(ref).includes(w)) throw new Unread('unparsed:"' + clean(km[0]) + '" is not the units named before'); }
+        reach = Object.assign({}, useRef(ctx, ref)); t = t.slice(km[0].length); len += km[0].length;
+        // the TARGET line in full, as "your unit" carries it (its keywords, exclusions and qualifier: "… or up to two … units")
+        const tg = ctx.stratTarget;
+        if(reach.of === 'stratagem target' && tg){ for(const k of ['kw', 'excluding', 'qualifier']) if(tg[k]) reach['target' + k.charAt(0).toUpperCase() + k.slice(1)] = tg[k]; if(tg.unparsed) reach.targetText = tg.text; }
+      } else if((km = new RegExp('^an? (' + KX + ') unit from your army\\b').exec(t))){
+        // round 5: "each time a model in a SKITARII unit from your army makes an attack"
+        reach = { type:'army', kw:kwExpr(km[1], { andIsOr:true }), unitsOrModels:'units' }; t = t.slice(km[0].length); len += km[0].length;
       } else if((sub = subject(t, ctx))){ reach = sub.reach; t = t.slice(sub.len); len += sub.len; }
       else if((km = /^(?:a )?model in (?:any of )?those selected units/.exec(t)) && ctx.ref){ reach = Object.assign({}, ctx.ref); t = t.slice(km[0].length); len += km[0].length; }
-      let am;
+      let am, kind = null, targeted = false;
       if(reach && (am = /^ makes an? (?:(ranged|melee|psychic) )?attack(?: with (?:an? )?(psychic|ranged|melee) weapons?| with (?:its|this model's|the bearer's|an?|the) ([a-z' -]+?)(?= that|,))?/.exec(t))){
         t = t.slice(am[0].length); len += am[0].length;
-        let kind = kindOf(am[1] || am[2]);
+        kind = kindOf(am[1] || am[2]);
         if(am[3]) cond(r, 'weapon', am[3], 'own');
+      } else if(reach && /^ targets /.test(t)){
+        // round 5: "each time a model in this unit targets an enemy unit with a melee attack, …"
+        const nc = r.conditions.length, nu = (ctx.usedRefs || []).length;
+        const n = targetPhrase(t.slice(9), r), wm = n ? /^ with an? (ranged|melee|psychic) attack(?=, )/.exec(t.slice(9 + n)) : null;
+        if(!wm){ r.conditions.length = nc; if(ctx.usedRefs) ctx.usedRefs.length = nu; return 0; }
+        t = t.slice(9 + n + wm[0].length); len += 9 + n + wm[0].length; kind = kindOf(wm[1]); targeted = true;
+      }
+      if(kind !== null){
         let tm;
-        if((tm = /^ that targets /.exec(t))){
+        if(!targeted && (tm = /^ that targets /.exec(t))){
           const n = targetPhrase(t.slice(tm[0].length), r);
           if(!n) throw new Unread('unparsed:attack target "' + t.slice(tm[0].length, tm[0].length + 40) + '"');
           t = t.slice(tm[0].length + n); len += tm[0].length + n;
@@ -618,6 +679,9 @@ function core(s, r, ctx){
         if(!fxs) return 0;
         // a negative modifier on a friendly unit's own rolls is still an attack-side effect
         const enemy = reach.type === 'enemyAura' || reach.enemy;
+        // round 5: an enemy named first ("while an enemy unit is within 12" of this model, …") and a friendly attacker ("each time a
+        // friendly TYRANIDS model makes an attack that targets that unit"): the attacker is reach2, the effect is not the enemy's
+        if(r.reach && (r.reach.type === 'enemyAura' || r.reach.enemy) && !enemy) r.reach2 = reach;
         setReach(reach); setKind(kind); setSide('attack'); addFx('FX', fxs.fx, kind);
         if(enemy) r.debuff = true;
 
@@ -641,6 +705,18 @@ function core(s, r, ctx){
       }
       return 0;
     }
+  }
+  // ---- A5 (round 5). each time such a weapon targets T, <effects> (the weapons the sentence before named)
+  if((m = /^each time (?:such a|one of those|one of these) weapons? targets /.exec(s)) && ctx.lastWeapons){
+    let t = s.slice(m[0].length), len = m[0].length;
+    const n = targetPhrase(t, r); if(!n) throw new Unread('unparsed:attack target "' + t.slice(0, 40) + '"');
+    t = t.slice(n); len += n;
+    if(!/^, /.test(t)) return 0; t = t.slice(2); len += 2;
+    const fxs = effectList(t, attackEffect10); if(!fxs) return 0;
+    const lw = ctx.lastWeapons; if(lw.reach && lw.reach.selection) useRef(ctx, lw.reach);
+    if(lw.name) cond(r, 'weapon', lw.name, 'own');
+    setReach(lw.reach); setKind(lw.kind); setSide('attack'); addFx('FX', fxs.fx, lw.kind);
+    return len + fxs.len;
   }
   // ---- A3. each time an attack made with this model's <weapon> targets T, <effects>
   if((m = /^each time an attack (?:made )?with (?:this model's|its|the bearer's|an?) ([a-z' -]+?) targets /.exec(s))){
@@ -745,6 +821,20 @@ function core(s, r, ctx){
     ctx.lastWeapons = { reach:sub.reach, kind:kindOf(m[1]) };
     return len + fxs.len;
   }
+  // ---- D2 (round 5). <named weapon> equipped by <S> have [X] ("Juggernaut's bladed horns equipped by models in that unit have …")
+  if((m = /^((?:[a-z][a-z'-]* ){0,3}[a-z][a-z'-]*) equipped by /.exec(s)) && !/\b(?:weapons?|models?|units?|it|they)$/.test(m[1])){
+    let t = s.slice(m[0].length), len = m[0].length;
+    sub = subject(t, ctx);
+    if(sub){
+      t = t.slice(sub.len); len += sub.len;
+      const hm = /^ (?:have|has|gain|gains) /.exec(t);
+      const fxs = hm ? effectList(t.slice(hm[0].length), weaponHave) : null;
+      if(fxs && fxs.fx.length){
+        cond(r, 'weapon', m[1], 'own'); setReach(sub.reach); setKind('any'); setSide('attack'); addFx('FX', fxs.fx, 'any');
+        return len + hm[0].length + fxs.len;
+      }
+    }
+  }
   // ---- E. add/subtract/improve characteristics
   if((m = /^(add|subtract|increase) (\d+"?|d3) (?:to|from) (?:the )?((?:attacks|strength|armour penetration|damage|range|move|objective control|toughness|leadership|wounds|save)(?:(?:, | and )(?:attacks|strength|armour penetration|damage))*) characteristics? of /.exec(s))
      || (m = /^(improve|worsen) (?:the )?((?:strength|armour penetration|attacks|damage|ballistic skill|weapon skill|leadership|save)(?:(?:, | and )(?:strength|armour penetration|attacks|damage))*)(?: characteristics?)? of /.exec(s))){
@@ -769,7 +859,8 @@ function core(s, r, ctx){
       if(sp && (wm = /^ ?(?:(ranged|melee|psychic) )?weapons/.exec(t.slice(sp.len)))){
         reach = sp.reach; kind = kindOf(wm[1]); t = t.slice(sp.len + wm[0].length); len += sp.len + wm[0].length;
         ctx.lastWeapons = { reach, kind };
-      } else if(sp && (nm = /^ ([a-z][a-z' -]*?)(?= by |,| and |$)/.exec(t.slice(sp.len)))){
+      } else if(sp && ((nm = /^ ([a-z][a-z' -]*? and [a-z][a-z' -]*?)(?= by |,|$)/.exec(t.slice(sp.len))) || (nm = /^ ([a-z][a-z' -]*?)(?= by |,| and |$)/.exec(t.slice(sp.len))))
+                && !/^(?:(?:ranged|melee|psychic) )?(?:attacks|weapons)\b/.test(nm[1])){
         reach = sp.reach; cond(r, 'weapon', nm[1], 'own'); t = t.slice(sp.len + nm[0].length); len += sp.len + nm[0].length;
         ctx.lastWeapons = { reach, kind, name:nm[1] }; wm = nm;
       } else if((sub = subject(t, ctx))){ reach = sub.reach; t = t.slice(sub.len); len += sub.len; wm = null; }
@@ -811,7 +902,7 @@ function core(s, r, ctx){
   }
   {
     const sp = possessive(s, ctx); let nm;
-    if(sp && (nm = /^ ([a-z][a-z' -]*?)(?: weapons?)? (?:has|have|gains?) (?=(?:the )?⟪|\+\d)/.exec(s.slice(sp.len))) && !/^(?:ranged |melee |psychic )?(?:attacks|weapons)?$/.test(nm[1])){
+    if(sp && (nm = /^ ([a-z][a-z' -]*?)(?: weapons?)? (?:has|have|gains?) (?=(?:the )?⟪|\+\d|an? (?:attacks|ballistic skill) characteristic of)/.exec(s.slice(sp.len))) && !/^(?:ranged |melee |psychic )?(?:attacks|weapons)?$/.test(nm[1])){
       const fxs = effectList(s.slice(sp.len + nm[0].length), weaponHave); if(!fxs) return 0;
       cond(r, 'weapon', nm[1], 'own'); setReach(sp.reach); setKind('any'); setSide('attack'); addFx('FX', fxs.fx, 'any');
       return sp.len + nm[0].length + fxs.len;
@@ -916,6 +1007,8 @@ function innerCond(t, r){
     [/^if (?:it|that attack) is made with an? (pistol|⟪pistol⟫|psychic weapon|melee weapon|ranged weapon),? /, m => cond(r, 'attackWith', clean(m[1]), 'own')],
     [new RegExp('^if (?:that|the) target is (?:an? )?(' + KX + ')(?: (?:unit|model))?,? '), m => cond(r, 'targetKw', kwExpr(m[1], { andIsOr:true }))],
     [/^on a critical hit,? /, () => cond(r, 'onCritHit', true, 'own')],
+    // round 5: "if there are no other friendly units within 9\" of your unit": nearFriendly (other units, any keyword), negated
+    [/^if there are no other friendly units within (\d+)" of (?:your unit|this unit|this model),? /, m => r.conditions.push(negate({ id:'nearFriendly', v:{ d:+m[1], other:true }, table:'DCOND' }))],
     [/^if the psychic test result for this ritual was (\d+)\+,? /, m => cond(r, 'test', { test:'Psychic test', result:m[1] + '+', passed:true }, 'own')]
   ];
   for(const [re, f] of C){ if((m = re.exec(t))){ f(m); return m[0].length; } }
@@ -969,6 +1062,8 @@ function weaponHave(s){
   if((m = /^(?:the )?((?:⟪[^⟫]+⟫(?:,? and (?:the )?|, (?:the )?)?)+)(?: abilit(?:y|ies))?/.exec(s))) return { len:m[0].length, fx:bracketList(m[1]) };
   if((m = /^an? ballistic skill characteristic of (\d)\+/.exec(s))) return { len:m[0].length, fx:[['bsSet', +m[1]]] };
   if((m = /^an? attacks characteristic of (\d+)/.exec(s))) return { len:m[0].length, fx:[['aSet', +m[1]]] };
+  // round 5: "+1 A, WS and S": each characteristic +N (a +N to WS / BS is an improved skill, Core Rules)
+  if((m = /^\+(\d|d3) ((?:ap|a|s|d|ws|bs)(?:(?:, | and )(?:ap|a|s|d|ws|bs))+)\b/.exec(s))) return { len:m[0].length, fx:m[2].split(/, | and /).map(c => /^(?:ws|bs)$/.test(c) ? ['skill', num(m[1])] : [CHAR[c], num(m[1])]) };
   if((m = /^\+(\d|d3) (ap|a|s|d)\b/.exec(s))) return { len:m[0].length, fx:[[CHAR[m[2]], num(m[1])]] };
   if((m = /^\+(\d+)" range/.exec(s))) return { len:m[0].length, fx:[['range', +m[1]]] };
   return null;
@@ -1126,6 +1221,17 @@ const OUTSIDE = [
 const COMBAT = /hit roll|wound roll|damage roll|armour penetration|\bap\b|damage characteristic|invulnerable|\binsv\b|feel no pain|⟪|critical|attacks characteristic|strength characteristic|objective control|\boc\b|move characteristic|toughness|re-roll (?:the |a |one )?(?:hit|wound|damage)|stealth|benefit of cover|lone operative|to hit rolls|to wound rolls/;
 function outsideTopic(s, whole){ if(COMBAT.test(whole || s)) return null; for(const [re, t] of OUTSIDE) if(re.test(s)) return t; return null; }
 
+// round 5: clauses outside the vocabulary that open a sentence and are joined by "and" to a clause inside it
+function outsideLead(s){
+  const L = [
+    /^you can re-roll (?:advance|charge) rolls made for (?:that model|that unit|this model|this unit)/,
+    /^(?:that|this) (?:⟦[^⟧]+⟧ )?model regains up to (?:d3|\d+) lost wounds?/,
+    /^that enemy unit must take a battle-shock test/
+  ];
+  for(const re of L){ const m = re.exec(s); if(m){ const j = /^,? and,? /.exec(s.slice(m[0].length)); if(j && s.length > m[0].length + j[0].length) return { words:m[0], len:m[0].length + j[0].length }; } }
+  return null;
+}
+
 /* ------------------------------------------------------------------ reading one sentence ------------------------------ */
 
 function readSentence(text, ctx){
@@ -1159,7 +1265,7 @@ function readSentence(text, ctx){
     if(structural(rest, r, ctx)){ return clean(r); }
     if(r.reachFromAura) r.reach = r.reachFromAura;
     // remember the sentence's subject, so a later "it"/"its" has an antecedent even when this sentence goes unread
-    try { const sj = subject(rest, ctx); if(sj) ctx.lastSubject = sj.reach; } catch(e){ if(!(e instanceof Unread)) throw e; }
+    try { const sj = subject(rest, ctx); if(sj) ctx.lastSubject = sj.reach; else if((m0 = /^(?:when|each time) (this model|this unit|the bearer) /.exec(rest))) ctx.lastSubject = subjOf(m0[1]); } catch(e){ if(!(e instanceof Unread)) throw e; }
     // "Each time an enemy unit … targets this model, subtract 1 from the Hit roll …": the trigger names whose defence
     if(ctx.defTrigger && r.conditions.some(c => c.id === 'trigger')){
       const fx = defenceEffect10(rest);
@@ -1220,6 +1326,14 @@ function readSentence(text, ctx){
       }
     }
     for(let i = 0; i < 6; i++){
+      // round 5: a clause outside the vocabulary joined by "and" to one inside it ("you can re-roll Advance rolls made for that model
+      // and …", "that model regains up to D3 lost wounds and, …", "that enemy unit must take a Battle-shock test and, …"): the
+      // vocabulary clause is read, the other one is listed in alsoOutsideVocabulary
+      const ol = outsideLead(rest);
+      if(ol){
+        (r.alsoOutsideVocabulary = r.alsoOutsideVocabulary || []).push(clean(ol.words)); rest = rest.slice(ol.len);
+        let g = 0; for(;;){ const n2 = prefix(rest, r, ctx); if(!n2) break; rest = rest.slice(n2); if(++g > 10) break; }
+      }
       const before = r.effects.length; r._clauseReach = null;
       const n = core(rest, r, ctx);
       for(let j = before; j < r.effects.length; j++) r.effects[j]._reach = r._clauseReach || r.reach;
@@ -1295,9 +1409,12 @@ function selfCheck(r, ctx){
   if(/\bunless\b/.test(s) && !r.conditions.some(c => c.negated || /^not|Not/.test(c.id))) fail('"unless" is not read');
   if(/\beither\b/.test(s) && !r._eitherIsReach && !r.conditions.some(c => c.id === 'opt')) fail('"either" without an option');
   if(/⟫ or (?:the )?⟪|\bor (?:you can )?(?:re-roll|add|subtract|improve)\b/.test(s) && !r.effects.some(e => /^one(?:Either|Any)/.test(e.id)) && !r.conditions.some(c => c.id === 'opt')) fail('"or" between effects without an option');
-  if(/\b(?:not|cannot|no)\b/.test(s.replace(/feel no pain/g, '').replace(/has no models with/, '')) && !/not|no /.test(json.replace(/"(?:table|id)":"[a-z]+"/g, m => /not/i.test(m) ? m : ''))) fail('a negation is not in the reading');
+  const sNeg = r.effects.some(e => e.id === 'ignoresCover') ? s.replace(/cannot have the benefit of cover/g, '') : s;   // round 5: ignoresCover is that negation
+  if(/\b(?:not|cannot|no)\b/.test(sNeg.replace(/feel no pain/g, '').replace(/has no models with/, '')) && !r.conditions.some(c => c.negated) && !/not|no /.test(json.replace(/"(?:table|id)":"[a-z]+"/g, m => /not/i.test(m) ? m : ''))) fail('a negation is not in the reading');
   if(/\bonly\b/.test(s)) fail('"only" is not read');
-  const openers = (s.match(/\b(?:while|if|the first time|once per)\b/g) || []).length;
+  // round 5: a "while"/"if" inside a firstTime trigger's own words (kept verbatim in that condition) is not an opener of its own
+  let sOpen = s; for(const c of r.conditions) if(c.id === 'firstTime' && typeof c.v === 'string' && c.v.length > 8) sOpen = sOpen.replace(c.v, '');
+  const openers = (sOpen.match(/\b(?:while|if|the first time|once per)\b/g) || []).length;
   if(openers > r.conditions.length) fail(openers + ' condition openers but ' + r.conditions.length + ' conditions');
 }
 // output words without the reader's internal keyword / ability marks

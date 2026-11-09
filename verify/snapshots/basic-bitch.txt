@@ -61,11 +61,13 @@ nothing
 Nothing in this list.
 
 Shooting · Your turn
-1 active
+3 active
 
 ACTIVE NOW
 
-Hyper-adaptations · Invasion Fleet
+Swarming Instincts · option of Hyper-adaptations
+Hyper-aggression · option of Hyper-adaptations
+Hive Predators · option of Hyper-adaptations
 Shooting · Their turn
 1 once per battle
 
@@ -83,7 +85,7 @@ nothing
 Nothing in this list.
 
 Fight · Your turn
-1 to do · 1 active · 1 once per battle
+1 to do · 3 active · 1 once per battle
 
 TO DO NOW
 
@@ -91,13 +93,15 @@ Subterranean Hunter · The Red Terror
 
 ACTIVE NOW
 
-Hyper-adaptations · Invasion Fleet
+Swarming Instincts · option of Hyper-adaptations
+Hyper-aggression · option of Hyper-adaptations
+Hive Predators · option of Hyper-adaptations
 
 ONCE PER BATTLE
 
 Resilient Organism · Tyrannofex
 Fight · Their turn
-1 to do · 1 active · 1 once per battle
+1 to do · 3 active · 1 once per battle
 
 TO DO NOW
 
@@ -105,7 +109,9 @@ Subterranean Hunter · The Red Terror
 
 ACTIVE NOW
 
-Hyper-adaptations · Invasion Fleet
+Swarming Instincts · option of Hyper-adaptations
+Hyper-aggression · option of Hyper-adaptations
+Hive Predators · option of Hyper-adaptations
 
 ONCE PER BATTLE
 
@@ -337,7 +343,9 @@ D6+3
 -1
 2
 PSYCHIC, TORRENT
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Biovores
@@ -349,7 +357,9 @@ D3
 -1
 2
 BLAST, DEVASTATING WOUNDS, HEAVY, INDIRECT FIRE
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Maleceptor
@@ -361,7 +371,9 @@ D6+3
 -2
 3
 BLAST, PSYCHIC
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
@@ -374,7 +386,9 @@ D6
 -1
 1
 IGNORES COVER, TORRENT
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Tyrannofex
@@ -393,7 +407,9 @@ Stinger salvoes
 5
 0
 1
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
 Granted by: Hive Tyrant - Within 6" of the Hive Tyrant: ranged weapons gain [ASSAULT] and [LETHAL HITS] AI (Onslaught)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
@@ -414,11 +430,13 @@ Scything talons
 -2
 2
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Gaping maw: vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed AI (Swallow Whole)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 The Swarmlord
 Warlord
@@ -439,10 +457,12 @@ Scything talons and rending claws×6
 -1
 1
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Hive Tyrant
 + Tyrant Guard
@@ -469,10 +489,12 @@ Scything talons and rending claws×6
 -1
 1
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Tyranid Prime with Lash Whip
 + Hormagaunts
@@ -511,10 +533,12 @@ Hormagaunt talons×20
 1
 SUSTAINED HITS 1
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Biovores
 Chitin-barbed limbs
@@ -524,10 +548,12 @@ Chitin-barbed limbs
 0
 1
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Neurolictor
 ×2 units
@@ -539,10 +565,12 @@ Piercing claws and talons
 1
 PRECISION
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Von Ryan’s Leapers
 Leaper’s talons×3
@@ -552,10 +580,12 @@ Leaper’s talons×3
 -1
 1
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Maleceptor
 Massive scything talons
@@ -572,11 +602,13 @@ D6+1
 -1
 2
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Psychophage
 Talons and betentacled maw
@@ -587,11 +619,13 @@ Talons and betentacled maw
 2
 ANTI-PSYKER 4+, DEVASTATING WOUNDS
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 vs targets below Starting Strength: +1 to Hit rolls in melee; also +1 to Wound rolls if Below Half-strength AI (Feeding Frenzy)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 Tyrannofex
 Powerful limbs
@@ -601,11 +635,13 @@ Powerful limbs
 0
 2
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. (Damaged: 1-5 Wounds Remaining)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 
 ######## abilities · MELEE Abilities
@@ -1067,7 +1103,7 @@ Add a group
 of 5 destroyed
 4.3 wounds lost · wiped in 5% of games
 Nothing ticked: the datasheets as printed
-18 NOT COUNTED
+16 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1139,15 +1175,18 @@ Domination of the Hive Mind
 Guardian Organism
 “While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
+Psychological Saboteur (Neurolictor (×2))
+Aura · The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls
+if it applies
++5% wiped
++0.5
+MODELS
 Onslaught (Hive Tyrant)
 Aura · Within 6" of it: [ASSAULT], [LETHAL HITS]
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
-NOT COUNTED IN THE DAMAGE TAB (1)
-Psychological Saboteur
-“Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -1156,12 +1195,10 @@ if used
 +2% wiped
 +0.3
 MODELS
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
-NOT COUNTED IN THE DAMAGE TAB (11)
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Rapid Regeneration
 “WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. …” · not counted in the Damage tab
-2CP Adrenal Surge
-“Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Death Frenzy
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
 1CP Overrun
@@ -1302,7 +1339,7 @@ of 5 destroyed
 8.3 wounds lost · wiped in 54% of games
 Charged this turn
 ×
-16 NOT COUNTED
+13 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1348,12 +1385,13 @@ said to hold
 no change: no rule here needs it
 0
 ARMY RULES
-
-None that change these numbers.
-
-NOT COUNTED IN THE DAMAGE TAB (2)
 Synapse
-“Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
+“If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
+if it applies
++23% wiped
++0.5
+MODELS
+NOT COUNTED IN THE DAMAGE TAB (1)
 Hyper-adaptations
 “Each time a TYRANIDS model with this Hyper-adaptation makes an attack that targets an INFANTRY or SWARM unit, that attack has the [SUSTAINED HITS 1] ability.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 UNIT RULES
@@ -1367,17 +1405,21 @@ NOT COUNTED IN THE DAMAGE TAB (1)
 Subterranean Hunter
 “At the end of the Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
+Psychological Saboteur (Neurolictor (×2))
+Aura · The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls
+if it applies
++24% wiped
++0.5
+MODELS
 Bio-stimulus (Psychophage)
 Selected by it · The target is the enemy unit selected: +1 AP
 if it applies
 +24% wiped
 +0.5
 MODELS
-NOT COUNTED IN THE DAMAGE TAB (2)
+NOT COUNTED IN THE DAMAGE TAB (1)
 Domination of the Hive Mind
 “While a friendly TYRANIDS unit is within 9" of this model, that unit is within your army’s Synapse Range.” · it changes what another rule needs, not these numbers: not counted in the Damage tab
-Psychological Saboteur
-“Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -1386,15 +1428,17 @@ if used
 BEST · MOST MODELS+8% wiped
 +0.2
 MODELS
+2CP Adrenal Surge
+Critical Hit on 5+
+if used
+0
 1CP Epic Challenge
 [PRECISION] · CHARACTER models only
 if used
 0
-NOT COUNTED IN THE DAMAGE TAB (11)
+NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Rapid Regeneration
 “WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. …” · not counted in the Damage tab
-2CP Adrenal Surge
-“Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Death Frenzy
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
 1CP Overrun
@@ -1548,7 +1592,7 @@ Shoot 2.14 · Fight 2.84 · the charge is taken to succeed
 
 Charged this turn
 ×
-37 NOT COUNTED
+32 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1618,27 +1662,27 @@ Domination of the Hive Mind
 Guardian Organism
 “While a CHARACTER model is leading this unit, that CHARACTER has the Feel No Pain 5+ ability.” · not counted in the Damage tab
 FROM OTHER UNITS IN YOUR LIST
+Psychological Saboteur (Neurolictor (×2))
+Aura · The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls
+if it applies
+≈0
+MODELS
 Onslaught (Hive Tyrant)
 Aura · Within 6" of it: [ASSAULT], [LETHAL HITS]
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
-NOT COUNTED IN THE DAMAGE TAB (1)
-Psychological Saboteur
-“Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 STRATAGEMS
 with their CP
 1CP Command Re-roll
 Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 0
-NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
-NOT COUNTED IN THE DAMAGE TAB (11)
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Rapid Regeneration
 “WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. …” · not counted in the Damage tab
-2CP Adrenal Surge
-“Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Death Frenzy
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
 1CP Overrun
@@ -1700,12 +1744,13 @@ holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 ARMY RULES
-
-None that change these numbers.
-
-NOT COUNTED IN THE DAMAGE TAB (3)
 Synapse
-“Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
+“If your Army Faction is TYRANIDS” · “While a TYRANIDS unit from your army is within Synapse Range of your army”: +1 S
+if it applies
+no change: S10 still wounds T4 on 2+; S6 still wounds T4 on 3+
+0
+ALL ▾
+NOT COUNTED IN THE DAMAGE TAB (2)
 Shadow in the Warp
 “If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. …” · not counted in the Damage tab
 Hyper-adaptations
@@ -1729,9 +1774,11 @@ Selected by it · The target is the enemy unit selected: +1 AP
 if it applies
 ≈0
 MODELS
-NOT COUNTED IN THE DAMAGE TAB (1)
-Psychological Saboteur
-“Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
+Psychological Saboteur (Neurolictor (×2))
+Aura · The target is the enemy unit selected · “While an enemy unit is within 12" of this model” · “if that unit is Battle-shocked”: +1 to Wound rolls
+if it applies
+≈0
+MODELS
 STRATAGEMS
 with their CP
 1CP Command Re-roll
@@ -1739,15 +1786,17 @@ Re-roll one Hit, Wound or Damage roll (once in the phase)
 if used
 ≈0
 MODELS
+2CP Adrenal Surge
+Critical Hit on 5+
+if used
+0
 1CP Epic Challenge
 [PRECISION] · CHARACTER models only · for Bone Sabres
 if used
 0
-NOT COUNTED IN THE DAMAGE TAB (11)
+NOT COUNTED IN THE DAMAGE TAB (10)
 1CP Rapid Regeneration
 “WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. …” · not counted in the Damage tab
-2CP Adrenal Surge
-“Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
 1CP Death Frenzy
 “WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. …” · not counted in the Damage tab
 1CP Overrun
@@ -2221,11 +2270,13 @@ Scything talons
 -2
 2
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Gaping maw: vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed AI (Swallow Whole)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Swallow Whole
@@ -2305,7 +2356,9 @@ Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: 
 Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
 1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 ALL ATTACKS · WHOLE UNIT
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 RANGED WEAPONS
 Range
@@ -2348,7 +2401,7 @@ Scything talons and rending claws×6
 WHOLE UNIT
 In Synapse Range: +1 S in melee AI (Synapse)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Hive Commander
@@ -2481,10 +2534,12 @@ Scything talons and rending claws×6
 1
 WHOLE UNIT
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Will of the Hive Mind
@@ -2615,10 +2670,12 @@ Hormagaunt talons×20
 SUSTAINED HITS 1
 WHOLE UNIT
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Alpha Warrior
@@ -2699,7 +2756,9 @@ Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: 
 Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
 1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 ALL ATTACKS
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 RANGED WEAPONS
 Range
@@ -2731,7 +2790,7 @@ Chitin-barbed limbs
 1
 In Synapse Range: +1 S in melee AI (Synapse)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Seed Spore Mines
@@ -2807,10 +2866,12 @@ Piercing claws and talons
 1
 PRECISION
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Feeder Tendrils
@@ -2898,10 +2959,12 @@ Leaper’s talons×3
 -1
 1
 In Synapse Range: +1 S in melee AI (Synapse)
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Pouncing Leap
@@ -2965,7 +3028,9 @@ DAMAGED 1-5 W
 WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ([PSYCHIC] WEAPONS CAN IGNORE IT)
 ALL ATTACKS
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 RANGED WEAPONS
 Range
@@ -3004,7 +3069,7 @@ D6+1
 2
 In Synapse Range: +1 S in melee AI (Synapse)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Encephalic Diffusion
@@ -3065,7 +3130,9 @@ Granted by: Neurolictor - Battle-shocked enemies within 12" of the Neurolictor: 
 Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls; also −1 to Wound rolls if they are Below Half-strength AI (Encephalic Diffusion)
 1CP Rapid Regeneration: in your opponent’s Shooting phase or the Fight phase, Feel No Pain 6+ (5+ in Synapse Range) AI
 ALL ATTACKS
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 RANGED WEAPONS
 Range
@@ -3099,7 +3166,7 @@ ANTI-PSYKER 4+, DEVASTATING WOUNDS
 In Synapse Range: +1 S in melee AI (Synapse)
 +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
 vs targets below Starting Strength: +1 to Hit rolls in melee; also +1 to Wound rolls if Below Half-strength AI (Feeding Frenzy)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Bio-stimulus
@@ -3169,7 +3236,9 @@ Granted by: Maleceptor - Enemies within 6" of the Maleceptor: −1 to Hit rolls;
 DAMAGED 1-5 W
 WHILE THIS MODEL HAS 1-5 WOUNDS REMAINING, EACH TIME THIS MODEL MAKES AN ATTACK, SUBTRACT 1 FROM THE HIT ROLL.
 ALL ATTACKS
-If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
+If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1] AI (Hyper-adaptations)
+If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS] AI (Hyper-adaptations)
+If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION] AI (Hyper-adaptations)
 Granted by: Neurolictor - vs Battle-shocked enemies within 12" of the Neurolictor: +1 to Wound rolls AI (Psychological Saboteur)
 RANGED WEAPONS
 Range
@@ -3208,7 +3277,7 @@ Powerful limbs
 2
 In Synapse Range: +1 S in melee AI (Synapse)
 Granted by: Psychophage - +1 AP vs one of Psychophage's shooting targets (once per turn per enemy unit) AI (Bio-stimulus)
-STRATAGEMS · INVASION FLEET
+STRATAGEMS · INVASION FLEET · FIGHT PHASE
 2CP Adrenal Surge: in the Fight phase, 2 targets, Critical Hits on 5+ AI
 ABILITIES
 Resilient Organism

@@ -281,5 +281,117 @@ check('rapid fire is outside', say("This unit's Snazzgun weapons have [RAPID FIR
   assert.ok(!src('det:adeptus-mechanicus/cohort-cybernetica', 'Necromechanic')[2].conditions.some(c => c.id === 'oncePerBattle'));
 }
 
+/* ---- round 5: phrasings agree.js reported as falling back (each family: a GW sentence, verbatim) ---- */
+{
+  const { prepare } = require('./reader2.js');
+  const all = prepare(require('./sources.js').listSources());
+  const src = (owner, name) => { const x = all.find(x => x.owner === owner && x.name === name); assert.ok(x, owner + ' ' + name); return readSource(x); };
+  const strat = (when, target, effect) => readSource({ kind:'stratagem', name:'Test', when, target, text:effect });
+  // 1. each-time subjects. Adrenal Surge (Tyranids, Invasion Fleet): "Until the end of the phase, each time a model in any of those
+  //    selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit." (those selected units: the TARGET)
+  const as = strat('Fight phase.', 'Up to two **TYRANIDS** units from your army that are within Synapse Range of your army and are eligible to fight, or one other **TYRANIDS** unit from your army that is eligible to fight.',
+    'Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.')[0];
+  check('any of those selected units', as, { status:'read', fx:['critHit:5'], reach:{ type:'unit', of:'stratagem target' }, duration:'end of the phase' });
+  assert.ok(/or one other TYRANIDS unit/.test(as.reach.targetQualifier), 'the whole TARGET is kept');
+  // Archagonists (Legion of Excess): "… each time a model in one of those units makes an attack, add 1 to the Wound roll."
+  check('one of those units', src('det:chaos-daemons/legion-of-excess', 'Archagonists')[0], { status:'read', fx:['wound:1'], reach:{ type:'unit', of:'stratagem target' } });
+  // never an enemy selection
+  check('one of those units: not an enemy', readSource({ kind:'ability', name:'Test', text:'Select one enemy unit within 12" of this model. Each time a model in one of those units makes an attack, add 1 to the Wound roll.' })[1], { status:'unread' });
+  // Murderous Imperative (Eradication Cohort): "Each time a model in a SKITARII unit from your army makes an attack:" + "If the Protector
+  //    Imperative is active for that unit, re-roll a Hit roll of 1."
+  const mi = src('det:adeptus-mechanicus/eradication-cohort', 'Murderous Imperative');
+  check('a model in a X unit from your army', mi[1], { status:'read', fx:['rrHit1'], reach:{ type:'army', kw:{ any:['SKITARII'] } }, cond:['abilityActive:"protector imperative"'] });
+  check('a model in a X unit from your army (2)', mi[2], { status:'read', fx:['rrWound1'], cond:['abilityActive:"conqueror imperative"'] });
+  // Excessive Assault (Infractors): "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1.
+  //    If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+  const ea = readSource({ kind:'ability', name:'Test', text:'Each time a model in this unit targets an enemy unit with a melee attack, re-roll a **Wound roll** of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.' });
+  check('targets X with a melee attack', ea[0], { status:'read', fx:['rrWound1'], attack:'melee', reach:{ type:'unit' } });
+  check('targets X with a melee attack, instead', ea[1], { status:'read', fx:['rrWound'], attack:'melee', cond:['targetObjective'] });
+  assert.ok(ea[1].instead);
+  // Synapse (Tyranids): "While a TYRANIDS unit from your army is within Synapse Range of your army:" + "Each time a model in that unit makes
+  //    a melee attack, add 1 to the Strength characteristic of that attack."
+  check('within Synapse Range', src('faction:tyranids', 'Synapse')[3], { status:'read', fx:['s:1'], attack:'melee', reach:{ type:'army', kw:{ any:['TYRANIDS'] } }, cond:['synapse'] });
+  // 2. a clause outside the vocabulary joined by "and". Errant's Duty: "While a model is affected by this ability, you can re-roll Advance
+  //    rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability."
+  const ed = say('While a model is affected by this ability, you can re-roll **Advance rolls** made for that model and ranged weapons equipped by that model have the **[ASSAULT]** ability.');
+  check('outside and vocabulary', ed, { status:'read', fx:['assault'], attack:'ranged', reach:{ type:'affectedModel' } });
+  assert.deepStrictEqual(ed.alsoOutsideVocabulary, ['you can re-roll advance rolls made for that model']);
+  // Phaeron of the Blades: "… you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1
+  //    to the Strength characteristic of that attack."
+  check('outside and vocabulary (charge)', say('While a friendly **NECRONS** unit (excluding **MONSTER** units) is within 6" of this unit’s Szarekh model, you can re-roll **Charge rolls** made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.'),
+    { status:'read', fx:['s:1'], attack:'melee', reach:{ type:'aura', range:6, kw:{ any:['NECRONS'] }, excluding:['MONSTER'] }, cond:['aura:6'] });
+  // Omnissiah's Blessing: "That model regains up to D3 lost wounds and, if it is a VEHICLE model, until the start of your next Command
+  //    phase, that model has the Feel No Pain 5+ ability." (the FNP only for a VEHICLE)
+  const ob = src('ds:adeptus-mechanicus/tech-priest-enginseer', 'Omnissiah’s Blessing')[1];
+  check('regains wounds and, if VEHICLE, FNP', ob, { status:'read', fx:['fnp:5'], reach:{ type:'selected' }, duration:'start of your next command phase' });
+  assert.ok(ob.conditions.some(c => c.id === 'selfKw' && c.v === 'VEHICLE'));
+  // Master of Mechanisms: "That VEHICLE model regains up to D3 lost wounds and, until the start of your next Command phase, each time that
+  //    VEHICLE makes an attack, add 1 to the Hit roll."
+  check('regains wounds and +1 hit', src('ds:chaos-space-marines/warpsmith', 'Master of Mechanisms')[1], { status:'read', fx:['hit:1'], reach:{ type:'selected' }, duration:'start of your next command phase' });
+  // Savage Roar: "That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes
+  //    an attack that targets your unit, subtract 1 from the Hit roll." / "If that Battle-shock test was failed, subtract 1 from the Wound
+  //    roll as well."
+  const sr = src('det:tyranids/crusher-stampede', 'Savage Roar');
+  check('battle-shock test and -1 hit', sr[0], { status:'read', fx:['hit:-1'], debuff:true, duration:'end of the phase' });
+  check('if that test was failed, -1 wound as well', sr[1], { status:'read', fx:['wound:-1'], debuff:true });
+  assert.ok(sr[1].conditions.some(c => c.id === 'test' && c.v.passed === false));
+  // 3. named weapons. Super Runts: "This unit’s Scavenged Shivs weapons have +1 A, WS and S."
+  check('+1 A, WS and S', say('This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**.'), { status:'read', fx:['a:1', 'skill:1', 's:1'], cond:['weapon:"scavenged shivs"'] });
+  // Skarbrand: "While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage."
+  check('a weapon named X and Y', say('While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.'), { status:'read', fx:['a:2'], cond:['woundsRemaining:"1-7"', 'weapon:"slaughter and carnage"'] });
+  // Aetherstride: "Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability." (its: this model, set up by Deep Strike)
+  check('its named weapon', src('ds:thousand-sons/daemon-prince-of-tzeentch-with-wings', 'Aetherstride')[3], { status:'read', fx:['sus:D3'], reach:{ type:'self' }, duration:'end of the turn' });
+  // Daemonic Ordnance: "If it does, until the end of the phase, its ranged weapons have the [DEVASTATING WOUNDS] and [HAZARDOUS] abilities."
+  check('its ranged weapons', src('ds:chaos-space-marines/forgefiend', 'Daemonic Ordnance')[1], { status:'read', fx:['dev', 'hazardous'], attack:'ranged', reach:{ type:'self' } });
+  // Skullmaster's Fury: "While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, Juggernaut’s
+  //    bladed horns equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+  check('named weapon equipped by', say('While this model is leading a unit, each time that unit ends a **Charge move**, until the end of the turn, Juggernaut’s bladed horns equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability.'),
+    { status:'read', fx:['dev'], reach:{ type:'ledUnit' }, cond:['leading', 'charged', 'weapon:"juggernaut\'s bladed horns"'], duration:'end of the turn' });
+  // Vengeance for the Omnissiah: "If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12" of this model, until the end of the
+  //    battle, this model’s Omnissian axe has an Attacks characteristic of 6."
+  check('a named weapon set to A 6', say('If a friendly **ADEPTUS MECHANICUS VEHICLE** model is destroyed within 12" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.'),
+    { status:'read', fx:['aSet:6'], duration:'end of the battle', cond:['friendlyDestroyed:{"kw":{"all":["ADEPTUS MECHANICUS","VEHICLE"]},"of":"model","within":12,"near":"this model"}', 'weapon:"omnissian axe"'] });
+  // 4. the self-check. Burning Spray: "Until the end of the phase, that enemy unit cannot have the Benefit of Cover." (ignoresCover is it)
+  check('cannot have the Benefit of Cover', src('ds:tyranids/pyrovores', 'Burning Spray')[1], { status:'read', fx:['ignoresCover'], duration:'end of the phase' });
+  // Parasitic Biomorphology: "The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one
+  //    or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in
+  //    the bearer’s unit." (the "while" is the trigger's own words)
+  const pb = say('The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.');
+  check('a while inside the first time', pb, { status:'read', fx:['a:1'], attack:'melee', reach:{ type:'bearerUnit' }, duration:'end of the battle' });
+  assert.ok(/while the bearer is within 6/.test(pb.conditions.find(c => c.id === 'firstTime').v));
+  // a "while" outside the trigger still needs its condition
+  check('a while outside the first time', say('The first time this unit is destroyed, while the bearer is within 6" of a ruin, add 1 to the Hit roll.'), { status:'unread' });
+  // Psychological Saboteur: "Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll." (under
+  //    "While an enemy unit is within 12" of this model, if that unit is Battle-shocked:"): the attacker is the TYRANIDS model (reach2)
+  const ps = src('ds:tyranids/neurolictor', 'Psychological Saboteur')[2];
+  check('friendly attacker of an enemy aura', ps, { status:'read', fx:['wound:1'], reach:{ type:'enemyAura', range:12 } });
+  assert.deepStrictEqual(ps.reach2.kw, { any:['TYRANIDS'] });
+  // 5. unit states. Dark Zealotry: "While this unit is leading a unit and contains a DARK APOSTLE model, each time a model in that unit makes
+  //    a melee attack, add 1 to the Wound roll."
+  check('leading and contains', say('While this unit is leading a unit and contains a **DARK APOSTLE** model, each time a model in that unit makes a melee attack, add 1 to the **Wound roll**.'),
+    { status:'read', fx:['wound:1'], attack:'melee', reach:{ type:'ledUnit' }, cond:['leading', 'contains:"DARK APOSTLE"'] });
+  // Strength from Exile: "Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units
+  //    within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+  const se = say('Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1.');
+  check('no other friendly units within', se, { status:'read', fx:['rrHit1', 'rrWound1'] });
+  assert.ok(se.conditions.some(c => c.id === 'nearFriendly' && c.negated && c.v.d === 9 && c.v.other));
+  // Moritoi Ancients: "While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is at starting strength, that unit has +2 OC."
+  check('at starting strength', say('While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is at starting strength, that unit has +2 **OC**.'),
+    { status:'read', fx:['ocAdd:2'], reach:{ type:'friendly', kw:{ all:['ADEPTUS CUSTODES', 'DREADNOUGHT'] } }, cond:['atStarting'] });
+  // Enraged Behemoths: "In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting
+  //    Strength, add 2 to the Objective Control characteristic of models in that unit."
+  check('at its starting strength, excluding battle-shocked', src('det:tyranids/crusher-stampede', 'Enraged Behemoths')[1], { status:'read', fx:['ocAdd:2'], reach:{ type:'army' }, cond:['atStarting', 'notShocked'] });
+  // 6. referents. Encroaching Darkness: "Until the end of the phase, weapons equipped by models in your selected units have the [IGNORES
+  //    COVER] ability."
+  check('your selected units', src('det:chaos-daemons/shadow-legion', 'Encroaching Darkness')[0], { status:'read', fx:['ignoresCover'], reach:{ type:'unit', of:'stratagem target' } });
+  // Draught of Terror: "In addition, until the end of the phase, each time such a weapon targets a unit that is Battle-shocked, you can
+  //    re-roll the Wound roll."
+  check('such a weapon targets', src('det:chaos-daemons/daemonic-incursion', 'Draught of Terror')[1], { status:'read', fx:['rrWound'], cond:['targetBattleShocked', 'phase:{"phase":"shooting|fight","turn":"your|either"}', 'when:"Your Shooting phase or the Fight phase."'], duration:'end of the phase' });
+  // 7. Unshakeable Opponents: "Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all
+  //    modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the Hit roll; the Wound roll."
+  check('ignore modifiers to the following', say('Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the **Hit roll**; the **Wound roll**.'),
+    { status:'read', fx:['ignoreHitMods', 'ignoreWoundMods'], duration:'end of the turn' });
+}
+
 console.log(`${pass} passed, ${fail} failed`);
 if(fail) process.exitCode = 1;

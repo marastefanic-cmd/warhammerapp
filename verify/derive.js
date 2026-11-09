@@ -153,7 +153,7 @@ const LABEL_RULES = [
   { id:'label-named-weapons', why:'a weapon ability given to weapons the unit\'s datasheet names ("its hellforged weapons have the [DEVASTATING WOUNDS] ability", "its Dark Blessing has the [SUSTAINED HITS D3] ability"): the phase of those weapons, your Shooting phase for ranged ones, the Fight phase for melee ones (not "weapons have": both)' },
   { id:'label-setup-trigger', why:'a trigger that only sets up the battle ("At the start of the first battle round, select one unit … to be this model\'s victim": Methodical Destruction) with no duration in its words but "until the end of the battle": what it gives holds for the rest of the battle, so a ranged bonus of it is also used with Fire Overwatch, as an always-on one is (Core Rules 15.09: where the bonus still works in snap shooting, label-own-target-snap; the owner\'s rule, "show Overwatch too" wherever the bonus applies)' },
   { id:'label-those-attacks', why:'"Each time this model is selected to shoot or fight, you can re-roll one Hit roll … when resolving those attacks": the attacks of that activation, your Shooting phase and the Fight phase; not added for Fire Overwatch' },
-  { id:'label-options', why:'the options of a rule or ability: written in its own lines ("**Name:** effect", a bullet "**Name**" and its line) they are left out of its label (Canticles of the Omnissiah, Battle Protocols, Blood Tithe; not "**Additional Effect:**", which is no choice); set out as a table or under headings of their own, each row\'s phases are added (from its own WHEN, else the item\'s trigger: Martial Ka\'tah, Cabal of Sorcerers, Blessings of Khorne, Combat Doctrines), in both players\' turns when the item is triggered at the start of the battle round (Pledges to the Dark Prince), with Fire Overwatch for a row\'s ranged attacks when it lasts "until the start of your next Command phase" (Kindred Sorcery); not a table of abilities the units "gain" (Doctrina Imperatives, Harbingers of Dread: each unit\'s sheet has them). A detachment\'s KEYWORDS section is left out (army building)' },
+  { id:'label-options', why:'the options of a rule or ability: written in its own lines ("**Name:** effect", a bullet "**Name**" and its line) they are left out of its label (Canticles of the Omnissiah, Battle Protocols, Blood Tithe; not "**Additional Effect:**", which is no choice); set out as a table or under headings of their own, each row\'s phases are added (from its own WHEN, else the item\'s trigger: Martial Ka\'tah, Cabal of Sorcerers, Blessings of Khorne, Combat Doctrines), in both players\' turns when the item is triggered at the start of the battle round (Pledges to the Dark Prince), with Fire Overwatch for a row\'s ranged attacks when it lasts "until the start of your next Command phase" (Kindred Sorcery); not a table of abilities the units "gain" (Doctrina Imperatives, Harbingers of Dread: each unit\'s sheet has them); options under plain headings, a name on a line of its own then its sentence (Hyper-adaptations), are read in the rule\'s own words. A detachment\'s KEYWORDS section is left out (army building)' },
   { id:'label-assault', why:'[ASSAULT] given to ranged attacks or weapons: they shoot after an Advance move, your Movement phase too' },
   { id:'label-at-choice', why:'"At the start of your Command phase" is shown as the moment only for a rule with options chosen then (Martial Ka\'tah, Combat Doctrines)' },
   { id:'label-select-ability', why:'"select one Throttlerokkit Shokka Engine ability": the phases of the unit\'s abilities of that kind (whose name ends as it does: "… Engine")' },
@@ -422,7 +422,9 @@ function timing(text, ctx){
   let favoured = null;
   if(ctx && ctx.label && ctx.option){ const m = /^\*\*Favoured ka['’]tah: ([^*\n]+)\*\*[ \t]*\n\*\*Additional Effect:\*\*[^\n]*(?:\n- [^\n]*)*/im.exec(norm(text)), o = m && ctx.option(m[1].trim());
     if(o && o.trigger && o.trigger.ph){ favoured = { o, m:m[0] }; text = norm(text).replace(m[0], ''); } }
-  const full = text, opts = ctx && ctx.label ? optionsOf(rulesText(text), ctx.table).filter(o => !/^additional effects?$/i.test(o.name)) : [];
+  // (options under plain headings, "Swarming Instincts" then its sentence (Hyper-adaptations): their words are read as the rule's own, as
+  // before the program read them as options: label-options)
+  const full = text, opts = ctx && ctx.label ? optionsOf(rulesText(text), ctx.table).filter(o => !/^additional effects?$/i.test(o.name) && o.how !== PLAIN_HOW) : [];
   // (a label: a rule that gives units one ability in its words, "… have the following ability: **Seductive Gambit:** Each time this unit
   // ends a Charge move, …", is used as that ability: its words are no option to choose (label-granted-ability))
   const granted = ctx && ctx.label && opts.length === 1 && !(CARD_ABILITIES && CARD_ABILITIES.has(norm(opts[0].name).toLowerCase())) && !TABLE_LIKE.test(opts[0].how) && (pre => /\bha(?:ve|s) the following ability:$/i.test(pre) && !/[.\n]/.test(pre.replace(/:$/, '')))(plain(rulesText(text)).split(plain(opts[0].name))[0].trim());
@@ -921,6 +923,18 @@ function commentsNear(src, name){
   return out;
 }
 
+// a rule's options laid out as plain headings: a line of its own that is only a name ("Swarming Instincts", "Hyper-aggression": a capital,
+// up to five words, no bold, no punctuation but a hyphen or an apostrophe, not in capitals), then its sentence (lower case, ending "."),
+// at least two of them, the first under the line that leads them (ending ":", "select one of the following Hyper-adaptations …:")
+// (Hyper-adaptations; verify/effects-extract.js reads the same headings as the options of its boxes)
+const PLAIN_HOW = 'heading line "Name" and its line';
+const PLAIN_HEAD = /^([A-Z][A-Za-z’'-]*(?: [A-Za-z’'-]+){0,4})$/;
+function plainHeads(text){
+  const ls = rulesText(text).split('\n').map(l => l.trim()).filter(Boolean), out = [];
+  ls.forEach((l, i) => { const m = PLAIN_HEAD.exec(l), nx = ls[i + 1];
+    if(m && !/^[A-Z ’'-]+$/.test(l) && nx && !PLAIN_HEAD.test(nx) && /[a-z]/.test(nx) && /\.$/.test(nx)) out.push({ name:m[1], text:nx, at:i }); });
+  if(out.length < 2 || !(out[0].at > 0 && /:$/.test(ls[out[0].at - 1]))) return [];
+  return out.map(({ name, text }) => ({ name, text })); }
 // the options inside a rule or ability: its table's rows, "**Name:** effect" lines, a bullet "**Name**" and the line under it
 // (t: the text without its italic notes, rulesText)
 function optionsOf(t, table){
@@ -941,7 +955,8 @@ function optionsOf(t, table){
         if(m && nx && !re.test(nx.trim()) && !/^\s*- /.test(nx) && /[a-z]/.test(nx)) out.push({ name:m[1].trim(), text:nx, how }); });
       return out; };
     const bold = heads(/^\*\*([^*]{3,60})\*\*$/, 'heading "**Name**" and its line');
-    opts.push(...(bold.length ? bold : heads(/^([A-Z][A-Z’'-]+(?: [A-Z’'-]+)+)$/, 'heading in capitals and its line')));
+    const caps = bold.length ? [] : heads(/^([A-Z][A-Z’'-]+(?: [A-Z’'-]+)+)$/, 'heading in capitals and its line');
+    opts.push(...(bold.length ? bold : caps.length ? caps : plainHeads(t).map(h => ({ name:h.name, text:h.text, how:PLAIN_HOW }))));
   }
   // army-building limits ("**Incursion:** Up to 500 pts") are not options, and nor is a worked example ("**Example:** …", Martial Ka'tah)
   // or a designer's note ("**Designer’s Note:** When using fast dice rolling, …", Fates in Flux)
@@ -1850,6 +1865,6 @@ function ruleSrcOf(D, key){
   for(const u of units) for(const ab of u.abilities || []) if([...String(ab.text || '').matchAll(/\*\*([^*]+)\*\*/g)].some(m => al(m[1]) === key)) return 'term in ' + ab.name + ' (' + u.name + ')';
   return undefined;
 }
-module.exports = { ruleSrcOf, naOf, derive, ruleTables, readingsOf, vocab, tidyNeeds, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+module.exports = { plainHeads, ruleSrcOf, naOf, derive, ruleTables, readingsOf, vocab, tidyNeeds, READING_RULES, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
 // (the keyword-phrase readers, for verify/effects-extract.js: who a rule's sentence reaches, which targets it names)
 Object.assign(module.exports, { norm, plain, prepBold, parseRun, friendlyUnit, needsOf, tokens, excluded, RUN });

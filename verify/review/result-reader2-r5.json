@@ -1,0 +1,134 @@
+[
+ {
+  "key": "s|14uecac|b0",
+  "where": "Adrenal Surge · s|14uecac|b0",
+  "verdict": "ok",
+  "why": "GW (Wahapedia Invasion Fleet, = data.js): \"each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.\" reader2 reach = the stratagem TARGET in full (targetKw TYRANIDS, qualifier keeps \"… or one other TYRANIDS unit … eligible to fight\"); app box on [] (the strat's own target), melee (WHEN: Fight phase). Right: a TARGET choice, not a condition of the effect. Damage: hormagaunt talons [SUSTAINED HITS 1] 4+ ×60: 30+10=40 hits → 30+20=50 with crits on 5+; offered as \"not for this step\" in shooting (forcing it there applies it to ranged weapons, as every Fight-phase stratagem already does on main). Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "s|1qyj9u7|b0",
+  "where": "Archagonists · s|1qyj9u7|b0",
+  "verdict": "ok",
+  "why": "GW (Faction Pack Chaos Daemons / Wahapedia): \"each time a model in one of those units makes an attack, add 1 to the Wound roll.\" Both: +1 Wound for the TARGET units (reader2 keeps the MONSTER-or-two-non-MONSTERS line), Fight phase. No list uses it. Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "a|14ie9b1|b0",
+  "where": "Burning Spray · a|14ie9b1|b0",
+  "verdict": "ok",
+  "why": "GW: \"Until the end of the phase, that enemy unit cannot have the Benefit of Cover.\" Both: [IGNORES COVER] for attacks on the one enemy unit selected (hit by the Pyrovores), Shooting phase; app notSelf (the Pyrovores have already shot), reader2 anyAttacker. Shown for the other healybois shooters; dropped only on the Psychophage, whose one ranged weapon already has IGNORES COVER. Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "a|611p4g|b0",
+  "where": "Damaged: 1-7 wounds remaining · a|611p4g|b0",
+  "verdict": "ok",
+  "why": "GW (Faction Pack Chaos Daemons, Skarbrand): \"While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.\" Both: +2 A, the named weapon only, Skarbrand only, while 1-7 W. Checked: strike A8→+2, sweep A16→+2, Bellow of endless fury unchanged. Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "a|1fpl6vr|b0",
+  "where": "Dark Zealotry · a|1fpl6vr|b0",
+  "verdict": "ok",
+  "why": "GW (Dark Apostle): \"While this unit is leading a unit and contains a DARK APOSTLE model, each time a model in that unit makes a melee attack, add 1 to the Wound roll.\" Both: leading + contains DARK APOSTLE, the led unit, melee only. Fight tab only (fellhammer Dark Apostle unit). Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "s|n3dvjc|b1",
+  "where": "Draught of Terror · s|n3dvjc|b1",
+  "verdict": "ok",
+  "why": "GW (Daemonic Incursion): \"each time such a weapon targets a unit that is Battle-shocked, you can re-roll the Wound roll.\" Both: full Wound re-roll vs a Battle-shocked target, the TARGET unit's weapons, Shooting (yours) or Fight. No list uses it. Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "s|frlvy6|b0",
+  "where": "Encroaching Darkness · s|frlvy6|b0",
+  "verdict": "ok",
+  "why": "GW (Shadow Legion): \"weapons equipped by models in your selected units have the [IGNORES COVER] ability.\" Both: [IGNORES COVER] for the TARGET units, your Shooting phase. reader2 keeps the TARGET line (\"… arrived from Reserves this turn\"); the app box carries no reach (the strat's target, as for every stratagem). No list uses it. Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "r|tz5p0s|st0",
+  "where": "Enraged Behemoths · r|tz5p0s|st0",
+  "verdict": "ok",
+  "why": "GW (Wahapedia Crusher Stampede, = data.js): \"… while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.\" Both: ocAdd 2, TYRANIDS MONSTER units from your army, atStarting + notShocked. The rule's two attack boxes (below Starting Strength / Below Half-strength) still fall back. Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "a|1or5jd0|b0",
+  "where": "Errant’s Duty · a|1or5jd0|b0",
+  "verdict": "ok",
+  "why": "GW (Knight Errant): \"… you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability.\" Both: [ASSAULT] on the affected model's ranged weapons; the Advance re-roll is outside the vocabulary (reader2 lists it). Changes no number. Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "a|6q6bvm|b0",
+  "where": "Excessive Assault · a|6q6bvm|b0",
+  "verdict": "ok",
+  "why": "GW (Infractors): \"Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1.\" / \"If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.\" b0: rrWound1, melee, always; b1: full rrWound, melee, targetObjective. \"Instead\" holds: calc takes the best of rrWound \"1s\"/\"all\", so both ticked = re-roll all (checked: lord-exultant-infractors fight shows 1s, then all). Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "a|6q6bvm|b1",
+  "where": "Excessive Assault · a|6q6bvm|b1",
+  "verdict": "ok",
+  "why": "GW (Infractors): \"Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1.\" / \"If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.\" b0: rrWound1, melee, always; b1: full rrWound, melee, targetObjective. \"Instead\" holds: calc takes the best of rrWound \"1s\"/\"all\", so both ticked = re-roll all (checked: lord-exultant-infractors fight shows 1s, then all). Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "a|c1v9iq|b0",
+  "where": "Master of Mechanisms · a|c1v9iq|b0",
+  "verdict": "ok",
+  "why": "GW (Warpsmith): \"That VEHICLE model regains up to D3 lost wounds and, until the start of your next Command phase, each time that VEHICLE makes an attack, add 1 to the Hit roll.\" Both: +1 Hit, the one HERETIC ASTARTES VEHICLE model selected within 3\", until your next Command phase; regaining wounds outside the vocabulary. Offered to the fellhammer Predators, Vindicator, Forgefiend, Maulerfiend. Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "r|zwb4f4|st0",
+  "where": "Moritoi Ancients · r|zwb4f4|st0",
+  "verdict": "ok",
+  "why": "Wahapedia (Might of the Moritoi, the text data.js uses): \"While a friendly ADEPTUS CUSTODES DREADNOUGHT unit is at starting strength, that unit has +2 OC.\" Both: ocAdd 2, friendly AC DREADNOUGHT units, atStarting, no Battle-shock clause (none in the words). Right to that text. NOTE (not this change): GW's 30-09 Custodes Faction Pack prints a different Might of the Moritoi (rule March of the Honoured Dead: WALKER +2\" M, +1 Advance/Charge; ARMOURY); data.js keeps the codex version on purpose (its comment). Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "r|87d9u3|b0",
+  "where": "Murderous Imperative · r|87d9u3|b0",
+  "verdict": "ok",
+  "why": "GW (Wahapedia Eradication Cohort): \"Each time a model in a SKITARII unit from your army makes an attack: If the Protector Imperative is active for that unit, re-roll a Hit roll of 1. / If the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1.\" Both: SKITARII units from your army, each re-roll on its own Imperative. The Datasmith + Kastelan unit is reached through Martial Signatum Amplificator (gives SKITARII), correctly. Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "r|87d9u3|b1",
+  "where": "Murderous Imperative · r|87d9u3|b1",
+  "verdict": "ok",
+  "why": "GW (Wahapedia Eradication Cohort): \"Each time a model in a SKITARII unit from your army makes an attack: If the Protector Imperative is active for that unit, re-roll a Hit roll of 1. / If the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1.\" Both: SKITARII units from your army, each re-roll on its own Imperative. The Datasmith + Kastelan unit is reached through Martial Signatum Amplificator (gives SKITARII), correctly. Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "a|uulhog|b1",
+  "where": "Parasitic Biomorphology · a|uulhog|b1",
+  "verdict": "ok",
+  "why": "GW (Assimilation Swarm): \"The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.\" Both: +1 A, melee, the bearer's unit, after that trigger (the \"while\" is the trigger's), for the battle. No Faction Pack change (14-10 Tyranids). Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "a|1nwz1gg|b0",
+  "where": "Phaeron of the Blades · a|1nwz1gg|b0",
+  "verdict": "ok",
+  "why": "GW (The Silent King): \"While a friendly NECRONS unit (excluding MONSTER units) is within 6\" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.\" Both: +1 S melee, aura 6\" of Szarekh, NECRONS not MONSTER, only when picked as the Triarch ability. Units reached in u-w0t-m8 are all non-MONSTER (Spyders, Vault, Reanimator are VEHICLEs). Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "a|eongg6|b0",
+  "where": "Psychological Saboteur · a|eongg6|b0",
+  "verdict": "ok",
+  "why": "GW (Neurolictor): \"While an enemy unit is within 12\" of this model, if that unit is Battle-shocked: … Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.\" Attacker reach: any friendly TYRANIDS model (app reach Faction: Tyranids; reader2 reach2 friendly TYRANIDS models), against that enemy only, both ranged and melee. Checked: Red Terror scything talons S7 vs T4 10 hits: 6.667 → 8.333 wounds (3+ → 2+). Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "a|uc39pe|b0",
+  "where": "Super Runts · a|uc39pe|b0",
+  "verdict": "ok",
+  "why": "GW (Zodgrod Wortsnagga, Wahapedia): \"This unit’s Scavenged Shivs weapons have +1 A, WS and S.\" Both: +1 A, +1 skill, +1 S on Scavenged Shivs only. The list prints Shivs with Super Runts in (A2 WS4+ S3, from: Super Runts), so the box is \"already in its weapons’ profiles\" (nc) and never added twice; Da Grabzappa and Runtherd’s Toolz unchanged. Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "r|3wfu6n|b0",
+  "where": "Synapse · r|3wfu6n|b0",
+  "verdict": "ok",
+  "why": "GW (Tyranids Faction Pack 14-10 / Wahapedia): \"While a TYRANIDS unit from your army is within Synapse Range of your army: … Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.\" Both: +1 S melee for TYRANIDS units from your army, with the Synapse Range condition (app q, reader2 own synapse). Checked: Swarmlord bone sabres S9 vs T9 twin-linked: 6.667 hits → 5.000 wounds; S10: 5.926 (4+ → 3+ with re-roll). Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "s|7riwju|b0",
+  "where": "Unshakeable Opponents · s|7riwju|b0",
+  "verdict": "ok",
+  "why": "GW (Coterie of the Conceited, unchanged by the 30-09 pack): \"you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the Hit roll; the Wound roll.\" Both: ignoreHitMods (BS/WS and Hit roll) and ignoreWoundMods, the TARGET unit, until the end of the turn. calc ignores only the modifiers that make it worse (\"any or all\"). Independence: reader2's round-5 code is its own (anchored, context-driven clauses; no port of effects.js/effects-extract.js); agree --pairs: the 475 agreeing pairs unchanged, 22 pairs C→A (these 21 boxes), 8 C→B still fall back."
+ },
+ {
+  "key": "4207b9b5c88ead95",
+  "where": "healybois · Pyrovores · Burning Spray (sumAtk)",
+  "verdict": "ok",
+  "why": "Summary \"After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it)\" matches GW's words and the now-counted box's effect label (LN). Lines step passes; render diff: the line changes in place on each healybois shooter, removed only on the Psychophage (its one weapon already has IGNORES COVER)."
+ }
+]

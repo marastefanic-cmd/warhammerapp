@@ -45,7 +45,7 @@ holds the program's parts. LN: a summary of a counted box has that box's numbers
 the current fingerprint of the GW text it was written from. `verify/render.js` lines-placed: every placed line is drawn on its sheet;
 ai-summary: every AI-labelled text on a sheet is its source's column for that placement, word for word. LN also holds each number with its
 sign and kind ("+1 AP" is not "−1 AP", a "5+ invulnerable save" not a "5+ Feel No Pain") and fails a number in a summary or gist that its
-source's GW words do not have ("5+ invulnerable save (4+ vs ranged)"). LN compares a summary's numbers with their kinds to its GW words and boxes (an option's line to its option's, "+1 AP and +1 A" fails). LM takes the Overview's lines as screenPregame draws them. LO: a leader's own-model box on the unit it leads says "<model> only:". `verify/defence.js` DL: every other unit's defence box that reaches a unit, an enemy-attacks one on every unit, is a "Granted by" line of it.
+source's GW words do not have ("5+ invulnerable save (4+ vs ranged)"). LN compares a summary's numbers with their kinds to its GW words and boxes (an option's line to its option's, "+1 AP and +1 A" fails). LM takes the Overview's lines as screenPregame draws them. LO: a leader's own-model box on the unit it leads says "<model> only:"; every "<model> only:" drawn is on a line LO's rule selects (the reverse); a line drawn from an own-model box and one for the unit fails (split it, never one mark for the whole line: app.html marks a line only when every item it is drawn from is the model's, each option line by its own items). `verify/defence.js` DL: every other unit's defence box that reaches a unit, an enemy-attacks one on every unit, is a "Granted by" line of it.
 
 ---
 

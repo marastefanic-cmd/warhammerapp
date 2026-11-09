@@ -658,7 +658,6 @@ Scavenged Shivs×20
 3
 0
 1
-Granted by: Zodgrod Wortsnagga - This unit is riled up; Scavenged Shivs +1 A, WS and S AI (Super Runts)
 Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 Beastboss on Squigosaur
 Brutal But Kunnin’
@@ -3022,7 +3021,6 @@ Scavenged Shivs×20
 0
 1
 WHOLE UNIT
-Granted by: Zodgrod Wortsnagga - This unit is riled up; Scavenged Shivs +1 A, WS and S AI (Super Runts)
 Granted by: Ghazghkull Thraka - Within 6" of Ghazghkull Thraka: +1 to Hit rolls and +1 to Wound rolls in melee AI (Prophet of da Great Waaagh!)
 ABILITIES
 Super Runts

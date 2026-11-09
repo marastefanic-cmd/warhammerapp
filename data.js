@@ -20,7 +20,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-11-05.2';
+const VERSION = '2026-11-09.1';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text: the official Core Rules PDF (11th edition), BSData and the
@@ -893,7 +893,7 @@ const FACTIONS = {
       // Invasion Fleet: Wahapedia (the codex), first from the catalogue (verify/from-bsdata.js tyranids); gists AI-written for basic-bitch (see the report)
       'invasion-fleet': {
         name:'Invasion Fleet', dispositions:['Priority Assets','Take and Hold'], dp:3,
-        rule:{ name:'Hyper-adaptations', sumOv:'Picked at battle start, one of: Swarming Instincts; Hyper-aggression; Hive Predators', sumOvOf:'7cbca983', sumAtk:'If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]; if Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]; if Hive Predators, vs CHARACTER: Critical Hits get [PRECISION]', sumAtkOf:'7cbca983', at:'Start of the first battle round', ph:['command','movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, needs:{ all:['Faction: Tyranids'] }, text:'At the start of the first battle round, select one of the following Hyper-adaptations to be active for **TYRANIDS** units from your army until the end of the battle:\nSwarming Instincts\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets an **INFANTRY** or **SWARM** unit, that attack has the **[SUSTAINED HITS 1]** ability.\nHyper-aggression\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.\nHive Predators\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **CHARACTER** unit, on a Critical Hit, that attack has the **[PRECISION]** ability.' },
+        rule:{ name:'Hyper-adaptations', sumOv:'Picked at battle start, one of: Swarming Instincts; Hyper-aggression; Hive Predators', sumOvOf:'7cbca983', sumAtk:'Swarming Instincts ⇒ If Swarming Instincts, vs INFANTRY/SWARM: [SUSTAINED HITS 1]\nHyper-aggression ⇒ If Hyper-aggression, vs MONSTER/VEHICLE: [LETHAL HITS]\nHive Predators ⇒ If Hive Predators, vs CHARACTER: Critical Hits get [PRECISION]', sumAtkOf:'7cbca983', at:'Start of the first battle round', ph:['command','movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, needs:{ all:['Faction: Tyranids'] }, text:'At the start of the first battle round, select one of the following Hyper-adaptations to be active for **TYRANIDS** units from your army until the end of the battle:\nSwarming Instincts\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets an **INFANTRY** or **SWARM** unit, that attack has the **[SUSTAINED HITS 1]** ability.\nHyper-aggression\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.\nHive Predators\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **CHARACTER** unit, on a Critical Hit, that attack has the **[PRECISION]** ability.' },
         enhancements:[
           { name:'Alien Cunning', pts:30, text:'**TYRANIDS** model only. After both players have deployed their armies, select up to three **TYRANIDS** units from your army and redeploy them. When doing so, you can set those units up in **Strategic Reserves** if you wish, regardless of how many units are already in Strategic Reserves.' },
           { name:'Perfectly Adapted', pts:15, text:'**TYRANIDS** model only. Once per turn, you can re-roll one **Hit roll**, one **Wound roll**, one Damage roll, one **Advance roll**, one **Charge roll** or one saving throw made for the bearer.' },
@@ -6012,7 +6012,7 @@ const DATASHEETS = {
     { name:'Da Grabzappa', range:'Melee', A:'5', WS:'2+', S:'7', AP:'-2', D:'2', kw:[] }
   ],
   abilities:[
-    { name:'Super Runts', text:'- This unit is **riled up**.\n- This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**.', sumAtk:'This unit is riled up; Scavenged Shivs +1 A, WS and S', sumAtkOf:'b65d65b6', readOf:'b65d65b6' }
+    { name:'Super Runts', text:'- This unit is **riled up**.\n- This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**.', readOf:'b65d65b6' }
   ]
 },
 'orks/runtherd':{
@@ -6903,7 +6903,7 @@ const DATASHEETS = {
     { name:'Chitin-barbed limbs', range:'Melee', A:'2', WS:'4+', S:'5', AP:'0', D:'1', kw:[] }
   ],
   abilities:[
-    { name:'Burning Spray', ph:['shooting'], turn:'your', text:'In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the **Benefit of Cover**.', sumAtk:'After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase', sumAtkOf:'f362fd79' }
+    { name:'Burning Spray', ph:['shooting'], turn:'your', text:'In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the **Benefit of Cover**.', sumAtk:'After the Pyrovores shoot in your Shooting phase: one enemy unit they hit cannot have the Benefit of Cover this phase ([IGNORES COVER] vs it)', sumAtkOf:'f362fd79' }
   ],
   rules:['Deadly Demise 1','Synapse','Ignores Cover','Torrent','Twin-linked'],
   kw:['Infantry','Great Devourer','Harvester','Pyrovores','Faction: Tyranids'],
@@ -13592,7 +13592,7 @@ const CHECKLIST = {
   "r|tyranids|Enraged Behemoths":{"u":"shooting:your,fight:either"},
   "r|tyranids|Feed the Swarm":{"t":"command:your","s":1},
   "r|tyranids|Higher Imperatives":{"x":1,"o":[{"n":"Protean Purpose","t":"command:your","s":1}],"g":[{"name":"Protean Purpose","to":{"any":["Norn Emissary","Norn Assimilator"]}}]},
-  "r|tyranids|Hyper-adaptations":{"at":"Start of the first battle round","u":"shooting:your,fight:either","s":1},
+  "r|tyranids|Hyper-adaptations":{"at":"Start of the first battle round","s":1,"oc":{"u":"command:either,movement:either,shooting:either,charge:either,fight:either"},"o":[{"n":"Swarming Instincts","u":"shooting:your,fight:either"},{"n":"Hyper-aggression","u":"shooting:your,fight:either"},{"n":"Hive Predators","u":"shooting:your,fight:either"}]},
   "r|tyranids|Insurmountable Odds":{"t":"shooting:opp","u":"shooting:opp"},
   "r|tyranids|Leader-beasts":{"u":"shooting:opp,fight:either"},
   "r|tyranids|Mindhunger":{"u":"movement:your","g":[{"name":"Deep Strike","to":{"any":["Deathleaper","Lictor","Neurolictor"]}}]},
@@ -13936,7 +13936,7 @@ const BOXES = {
   "r|kssq2f":{"b":[{"quote":"Friendly **HAVOCS**/**OBLITERATORS** units’ ranged attacks have **[HEAVY]**.","fx":[["heavy",true]],"on":[],"kind":"ranged","reach":{"any":["Havocs","Obliterators"]},"mark":"friendly"}],"n":"Rain of Ruin"},
   "r|m46iaf":{"b":[{"quote":"Ranged weapons equipped by models in this unit have the **[HEAVY]** ability.\nImprove the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.","fx":[],"on":[],"kind":"ranged","pick":[{"name":"Protector Imperative","fx":[["heavy",true],["skill",1]],"quote":"Ranged weapons equipped by models in this unit have the **[HEAVY]** ability.\nImprove the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.","on":[]},{"name":"Conqueror Imperative","fx":[["assault",true]],"quote":"Ranged weapons equipped by models in this unit have the **[ASSAULT]** ability.","on":[],"part":{"on":[["battleline6",true]],"fx":[["ap",1]],"quote":"Each time a model in this unit makes an attack, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, improve the Armour Penetration characteristic of that attack by 1."}}],"lasts":"round","tableRows":true},{"quote":"Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.","fx":[],"on":[],"kind":"melee","pick":[{"name":"Conqueror Imperative","fx":[["skill",1]],"quote":"Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.","on":[],"part":{"on":[["battleline6",true]],"fx":[["ap",1]],"quote":"Each time a model in this unit makes an attack, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, improve the Armour Penetration characteristic of that attack by 1."}}],"lasts":"round","tableRows":true}],"d":[{"quote":"Each time a melee attack targets this unit, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, subtract 1 from the **Hit roll**.","df":[["hitMinus",1]],"on":[["opt","Protector Imperative"],["battleline6",true]],"kind":"melee","until":"until the end of the battle round","opt":"Protector Imperative"}],"n":"Doctrina Imperatives"},
   "r|p087qh":{"b":[{"quote":"Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.","fx":[],"on":[["oncePerBattle",true]],"kind":"all","pick":[{"name":"Imbued Manifestation","fx":[["range",6]],"quote":"Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.","on":[]},{"name":"Psychic Maelstrom","fx":[["wound",1]],"quote":"Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.","on":[]},{"name":"Wrath of the Immaterium","fx":[["dev",true]],"quote":"Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability.","on":[]}],"scope":{"wkw":"PSYCHIC"},"lasts":"round","reach":{"all":["Faction: Thousand Sons"]},"tableRows":true}],"n":"Kindred Sorcery"},
-  "r|qsee91":{"b":[{"quote":"Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets an **INFANTRY** or **SWARM** unit, that attack has the **[SUSTAINED HITS 1]** ability.","fx":[["sus","1"]],"on":[["targetKw",{"any":["Infantry","Swarm"]}]],"kind":"all"},{"quote":"Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.","fx":[["lethal",true]],"on":[["targetKw",{"any":["Monster","Vehicle"]}]],"kind":"all"},{"quote":"Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **CHARACTER** unit, on a Critical Hit, that attack has the **[PRECISION]** ability.","fx":[["precision",true]],"on":[["targetKw",{"any":["Character"]}]],"kind":"all"}],"n":"Hyper-adaptations"},
+  "r|qsee91":{"b":[{"quote":"Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets an **INFANTRY** or **SWARM** unit, that attack has the **[SUSTAINED HITS 1]** ability.","fx":[["sus","1"]],"on":[["opt","Swarming Instincts"],["targetKw",{"any":["Infantry","Swarm"]}]],"kind":"all","lasts":"battle","opt":"Swarming Instincts"},{"quote":"Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.","fx":[["lethal",true]],"on":[["opt","Hyper-aggression"],["targetKw",{"any":["Monster","Vehicle"]}]],"kind":"all","lasts":"battle","opt":"Hyper-aggression"},{"quote":"Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **CHARACTER** unit, on a Critical Hit, that attack has the **[PRECISION]** ability.","fx":[["precision",true]],"on":[["opt","Hive Predators"],["targetKw",{"any":["Character"]}]],"kind":"all","lasts":"battle","opt":"Hive Predators"}],"n":"Hyper-adaptations"},
   "r|skrxlw":{"b":[{"quote":"Friendly **LICTOR/NEUROLICTOR** units’ attacks that target a **CHARACTER** unit can re-roll **hit rolls** of 1.","fx":[["rrHit1",true]],"on":[["targetKw",{"any":["Character"]}]],"kind":"all","reach":{"any":["Lictor","Neurolictor"]},"mark":"friendly"}],"n":"Mindhunger"},
   "r|tz5p0s":{"b":[{"quote":"Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength","fx":[["hit",1]],"on":[["belowStarting",true]],"kind":"all","reach":{"all":["Faction: Tyranids","Monster"]},"mark":"friendly"},{"quote":"add 1 to the **Wound roll** as well if that model’s unit is **Below Half-strength**.","fx":[["wound",1]],"on":[["belowHalf",true]],"kind":"all","lead":"Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength","reach":{"all":["Faction: Tyranids","Monster"]},"mark":"friendly"}],"st":[{"quote":"In addition, while a **TYRANIDS MONSTER** unit from your army (excluding **Battle-shocked** units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.","st":[["ocAdd",2]],"on":[["atStarting",true],["notShocked",true]],"reach":{"all":["Faction: Tyranids","Monster"]}}],"n":"Enraged Behemoths"},
   "r|zd7pto":{"st":[{"quote":"Add 2\" to the Move characteristic of models in **LEGIO CYBERNETICA** units from your army.","st":[["mAdd",2]],"on":[],"reach":{"all":["Legio Cybernetica"]}},{"quote":"In addition, unless that unit is **Battle-shocked**, add 1 to the Objective Control characteristic of models in that unit.","st":[["ocAdd",1]],"on":[["notShocked",true]],"reach":{"all":["Legio Cybernetica"]}}],"n":"Cyber-psalm Programming"},
@@ -14095,7 +14095,7 @@ const AGREE = {
     "a|13ur237":{"b":["A"]},
     "a|1445rha":{"b":["A"]},
     "a|14a8muj":{"b":["A"]},
-    "a|14ie9b1":{"b":[0]},
+    "a|14ie9b1":{"b":["A"]},
     "a|14mezts":{"d":["A"]},
     "a|14o4o4w":{"d":["V"]},
     "a|14wxe1s":{"d":["A"]},
@@ -14132,7 +14132,7 @@ const AGREE = {
     "a|1ea364m":{"d":["A"]},
     "a|1ea3wae":{"b":["A"]},
     "a|1f7qtur":{"b":["A"]},
-    "a|1fpl6vr":{"b":[0]},
+    "a|1fpl6vr":{"b":["A"]},
     "a|1fses0j":{"d":["A"]},
     "a|1ft8d8u":{"b":["A"]},
     "a|1fuvhlz":{"d":["A"]},
@@ -14161,12 +14161,12 @@ const AGREE = {
     "a|1mnt0pm":{"b":["A"]},
     "a|1neh4ut":{"d":["A"]},
     "a|1nfdpzv":{"b":["A"]},
-    "a|1nwz1gg":{"b":[0]},
+    "a|1nwz1gg":{"b":["A"]},
     "a|1o03wkj":{"d":["A"]},
     "a|1o8wyag":{"b":["A"]},
     "a|1ogsbz3":{"d":["A"]},
     "a|1om4fn2":{"b":[0]},
-    "a|1or5jd0":{"b":[0]},
+    "a|1or5jd0":{"b":["A"]},
     "a|1p2eunh":{"b":["A"]},
     "a|1q897s2":{"b":["A","A"]},
     "a|1qqyaef":{"d":["A"]},
@@ -14207,11 +14207,11 @@ const AGREE = {
     "a|5pzucl":{"d":["A"]},
     "a|5tl14a":{"d":["A"]},
     "a|5wv1pt":{"b":["A"]},
-    "a|611p4g":{"b":[0]},
+    "a|611p4g":{"b":["A"]},
     "a|66uztc":{"b":["A"]},
     "a|6azpb6":{"b":["A"]},
     "a|6jybil":{"d":["A"]},
-    "a|6q6bvm":{"b":[0,0]},
+    "a|6q6bvm":{"b":["A","A"]},
     "a|6re8gu":{"b":["A"]},
     "a|6t51gd":{"b":["A","A"]},
     "a|6x88aj":{"b":["A"]},
@@ -14228,10 +14228,10 @@ const AGREE = {
     "a|bbjspp":{"d":[0]},
     "a|bbuec0":{"d":["A"]},
     "a|bwwxyk":{"d":["A","A"]},
-    "a|c1v9iq":{"b":[0]},
+    "a|c1v9iq":{"b":["A"]},
     "a|ccvp33":{"d":["A","V"]},
     "a|eiy2sc":{"b":["A"]},
-    "a|eongg6":{"b":[0],"d":["A"]},
+    "a|eongg6":{"b":["A"],"d":["A"]},
     "a|exlwqq":{"b":["A"]},
     "a|eyx1ad":{"b":["A"]},
     "a|ffwkh8":{"d":[0]},
@@ -14279,10 +14279,10 @@ const AGREE = {
     "a|t2h0v8":{"b":[0]},
     "a|troxwt":{"d":["A"]},
     "a|u5ddi":{"b":["A","A"],"d":["A"]},
-    "a|uc39pe":{"b":[0]},
+    "a|uc39pe":{"b":["A"]},
     "a|udum88":{"b":["A","A"]},
     "a|uj59ei":{"d":[0,0]},
-    "a|uulhog":{"b":["A",0]},
+    "a|uulhog":{"b":["A","A"]},
     "a|vaick5":{"b":["A"]},
     "a|vplgbc":{"b":["A"]},
     "a|vr3337":{"b":["A"]},
@@ -14337,8 +14337,8 @@ const AGREE = {
     "r|1xk95t6":{"b":["V"],"d":["A"]},
     "r|1xu8mjx":{"b":["A"]},
     "r|1ytrjo2":{"b":["V"]},
-    "r|3wfu6n":{"b":[0]},
-    "r|87d9u3":{"b":[0,0]},
+    "r|3wfu6n":{"b":["A"]},
+    "r|87d9u3":{"b":["A","A"]},
     "r|8hew8f":{"d":["A"]},
     "r|8of0i4":{"b":["A"]},
     "r|9qmi5c":{"b":["A"]},
@@ -14351,9 +14351,9 @@ const AGREE = {
     "r|p087qh":{"b":["A"]},
     "r|qsee91":{"b":[0,0,0]},
     "r|skrxlw":{"b":["A"]},
-    "r|tz5p0s":{"b":[0,0],"st":[0]},
+    "r|tz5p0s":{"b":[0,0],"st":["A"]},
     "r|zd7pto":{"st":["A","A"]},
-    "r|zwb4f4":{"b":["A","A"],"st":[0]},
+    "r|zwb4f4":{"b":["A","A"],"st":["A"]},
     "s|102r6gr":{"d":["A"]},
     "s|10o2d0b":{"b":["A"]},
     "s|10yq2wh":{"d":["A"]},
@@ -14363,7 +14363,7 @@ const AGREE = {
     "s|13fj8y7":{"b":["A"]},
     "s|14nly6u":{"b":["A"]},
     "s|14tb74k":{"d":["A"]},
-    "s|14uecac":{"b":[0]},
+    "s|14uecac":{"b":["A"]},
     "s|14urj8s":{"b":["A"]},
     "s|156tko2":{"b":["A"]},
     "s|16hieli":{"b":["A"]},
@@ -14395,7 +14395,7 @@ const AGREE = {
     "s|1pldl79":{"d":["A","A"]},
     "s|1q5p05i":{"d":["A"]},
     "s|1qb0bsl":{"d":["A"]},
-    "s|1qyj9u7":{"b":[0]},
+    "s|1qyj9u7":{"b":["A"]},
     "s|1rpf1ay":{"d":[0]},
     "s|1tiv6ct":{"b":["A"]},
     "s|1tktn6e":{"b":["A"]},
@@ -14415,7 +14415,7 @@ const AGREE = {
     "s|53dmpp":{"b":["A","A"]},
     "s|79v8ah":{"b":["A"]},
     "s|7lidaf":{"b":["A"]},
-    "s|7riwju":{"b":[0]},
+    "s|7riwju":{"b":["A"]},
     "s|8yzvo9":{"b":["A"]},
     "s|a1cq3z":{"b":["A"]},
     "s|a25rq":{"b":["A"]},
@@ -14429,7 +14429,7 @@ const AGREE = {
     "s|e0vd24":{"b":[0]},
     "s|f98o0a":{"b":["A"]},
     "s|firve9":{"b":[0]},
-    "s|frlvy6":{"b":[0]},
+    "s|frlvy6":{"b":["A"]},
     "s|g96k9a":{"b":["A"]},
     "s|i5n27v":{"b":["V"]},
     "s|i7qcx0":{"b":["A"]},
@@ -14441,7 +14441,7 @@ const AGREE = {
     "s|kjly9l":{"b":["A"]},
     "s|l63zre":{"b":["A"]},
     "s|mf87uj":{"d":["A"]},
-    "s|n3dvjc":{"b":["A",0]},
+    "s|n3dvjc":{"b":["A","A"]},
     "s|n6pyrf":{"d":["A"]},
     "s|n71bil":{"b":["A"]},
     "s|njnrog":{"b":["A","A"]},
@@ -14633,6 +14633,9 @@ const RULE_OPTIONS = [
   { rule:'Thousand Sons · Grand Coven rule · Kindred Sorcery', option:'Psychic Maelstrom', text:'Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.', found:'table row, trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:{ ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' } }, phases:{ ph:['command','shooting','fight'], turn:'your', turns:{ fight:'either' } } },
   { rule:'Thousand Sons · Grand Coven rule · Kindred Sorcery', option:'Wrath of the Immaterium', text:'Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability.', found:'table row, trigger: the rule\'s', explicit:false, trigger:{ ph:['command'], turn:'your' }, used:null, phases:{ ph:['command'], turn:'your' } },
   { rule:'Tyranids · Talons of the Norn Queen rule · Higher Imperatives', option:'Protean Purpose', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).', found:'"**Name:** effect"', explicit:true, trigger:{ ph:['command'], turn:'your' }, used:null, phases:{ ph:['command'], turn:'your' } },
+  { rule:'Tyranids · Invasion Fleet rule · Hyper-adaptations', option:'Swarming Instincts', text:'Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets an **INFANTRY** or **SWARM** unit, that attack has the **[SUSTAINED HITS 1]** ability.', found:'heading line "Name" and its line, trigger: the rule\'s', explicit:false, trigger:{ at:'Start of the first battle round', ph:['command'], turn:'either' }, used:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } }, phases:{ at:'Start of the first battle round', ph:['command','movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } } },
+  { rule:'Tyranids · Invasion Fleet rule · Hyper-adaptations', option:'Hyper-aggression', text:'Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.', found:'heading line "Name" and its line, trigger: the rule\'s', explicit:false, trigger:{ at:'Start of the first battle round', ph:['command'], turn:'either' }, used:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } }, phases:{ at:'Start of the first battle round', ph:['command','movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } } },
+  { rule:'Tyranids · Invasion Fleet rule · Hyper-adaptations', option:'Hive Predators', text:'Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **CHARACTER** unit, on a Critical Hit, that attack has the **[PRECISION]** ability.', found:'heading line "Name" and its line, trigger: the rule\'s', explicit:false, trigger:{ at:'Start of the first battle round', ph:['command'], turn:'either' }, used:{ ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } }, phases:{ at:'Start of the first battle round', ph:['command','movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' } } },
   { rule:'Tyranids · Synaptic Nexus rule · Synaptic Imperatives', option:'Synaptic Augmentation', text:'While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ at:'Start of the battle round', ph:['command'], turn:'either' }, used:{ ph:['shooting','fight'], turn:'either', turns:{ shooting:'opp' } }, phases:{ at:'Start of the battle round', ph:['command','shooting','fight'], turn:'either', turns:{ shooting:'opp' } } },
   { rule:'Tyranids · Synaptic Nexus rule · Synaptic Imperatives', option:'Surging Vitality', text:'While this unit is within Synapse Range of your army, add 1 to **Advance** and **Charge rolls** made for this unit.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ at:'Start of the battle round', ph:['command'], turn:'either' }, used:{ ph:['movement','charge'], turn:'either', turns:{ movement:'your' } }, phases:{ at:'Start of the battle round', ph:['command','movement','charge'], turn:'either', turns:{ movement:'your' } } },
   { rule:'Tyranids · Synaptic Nexus rule · Synaptic Imperatives', option:'Goaded to Slaughter', text:'While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the **Hit roll**.', found:'"**Name:** effect", trigger: the rule\'s', explicit:false, trigger:{ at:'Start of the battle round', ph:['command'], turn:'either' }, used:{ ph:['fight'], turn:'either' }, phases:{ at:'Start of the battle round', ph:['command','fight'], turn:'either' } },

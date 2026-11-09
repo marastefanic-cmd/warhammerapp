@@ -1360,7 +1360,7 @@ of 5 destroyed
 3.8 wounds lost · wiped in <1% of games
 Charged this turn
 ×
-12 NOT COUNTED
+11 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1414,9 +1414,12 @@ Aura · Triarch Abilities: the one selected (at the start of the battle round) �
 if it applies
 +0.7
 MODELS
-NOT COUNTED IN THE DAMAGE TAB (4)
-Phaeron of the Blades
-“While a friendly NECRONS unit (excluding MONSTER units) is within 6" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
+Phaeron of the Blades (The Silent King)
+Aura · Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of it: +1 S
+if it applies
+no change: S7 still wounds T4 on 3+
+0
+NOT COUNTED IN THE DAMAGE TAB (3)
 Relentless March
 “While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
 Nanoscarab Reanimation Beam
@@ -1573,7 +1576,7 @@ Shoot 1.73 · Fight 1.82 · the charge is taken to succeed
 
 Charged this turn
 ×
-23 NOT COUNTED
+22 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1742,9 +1745,12 @@ if it applies
 +19% wiped
 +0.6
 MODELS
-NOT COUNTED IN THE DAMAGE TAB (4)
-Phaeron of the Blades
-“While a friendly NECRONS unit (excluding MONSTER units) is within 6" of this unit’s Szarekh model, you can re-roll Charge rolls made for that unit and each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.” · not confirmed by a second reading of GW’s words: not counted in the Damage tab
+Phaeron of the Blades (The Silent King)
+Aura · Triarch Abilities: the one selected (at the start of the battle round) · Within 6" of it: +1 S
+if it applies
+no change: S7 still wounds T4 on 3+
+0
+NOT COUNTED IN THE DAMAGE TAB (3)
 Relentless March
 “While a friendly NECRONS unit is within 6" of this unit’s Szarekh model, add 2" to the Move characteristic of models in that unit.” · not counted in the Damage tab
 Nanoscarab Reanimation Beam
