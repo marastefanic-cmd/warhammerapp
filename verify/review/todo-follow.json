@@ -206,10 +206,11 @@
   "judgement": {
    "covers": [
     "app noFriendlyNear ≡ reader2 not:nearFriendly, equal values",
-    "reader2 own friendlyDestroyed covered only by the app's friendlyDestroyed with the same keywords and distance of this model",
-    "reader2 weapon (GW's words, plural) covered by the app's weapon scope (singular) or a q"
+    "reader2 own friendlyDestroyed covered only by the app's friendlyDestroyed with the same keywords (kw.all) and distance of this model, and only a model destroyed (of 'model') with no kw.any / kw.none",
+    "reader2 weapon (GW's words, plural) covered by the app's weapon scope (singular) or a q, as whole words only"
    ],
-   "effect": "with wip merged (reader2 round 5): s|16ujjs9, a|sctta1, a|19tcvxo class A; agree --write: 456 boxes, 378 A, 25 V, 6 core, 47 fall back (was 50)"
+   "effect": "unchanged by the revision: s|16ujjs9, a|sctta1, a|19tcvxo class A; agree --write: 456 boxes, 378 A, 25 V, 6 core, 47 fall back; data.js AGREE identical",
+   "revised": "after review (result-follow.json): coverDestroyed requires of === 'model' and no kw.any / kw.none; coverWeapon matches whole words. Check F near misses added: \"a unit destroyed\", kw.none (TITANIC), kw.any (WALKER), \"horns\" vs \"hornet sting\" (scope and q); each not covered now, each covered by the earlier covers (5 F failures with them)"
   },
   "source": {
    "gw": "see the three boxes above"
