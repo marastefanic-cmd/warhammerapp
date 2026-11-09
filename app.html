@@ -542,52 +542,108 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .verif > span{flex:1; min-width:0; white-space:normal}
 .vchk{margin:3px 0; font-size:14px; line-height:1.45}
 .vchk b{font-weight:600}
-/* How the app works: the steps, the tables' map, a card per table (one real row, every column tagged by where it comes from) */
+/* How the app works: one diagram, top to bottom (sources, tables, builder, two readers, the AI layer, the gate, the app); each table a box
+   with its columns, every column coloured by its source (verify/columns.json). The sources' colours: fixed hues apart from every scheme's
+   accent (the AI layer is the accent, as its label), darker on the light scheme */
+:root{--s-gw:#3cc4ae; --s-bs:#a98cff; --s-nr:#f27ab6; --s-de:#7c7c7c}
+:root.lt{--s-gw:#0b7c6d; --s-bs:#6a44c4; --s-nr:#bf2f78; --s-de:#8d8d8d}
+.s-gw, .s-wa{--h:var(--s-gw)} .s-bs{--h:var(--s-bs)} .s-nr{--h:var(--s-nr)} .s-de{--h:var(--s-de)} .s-ha{--h:var(--fg)} .s-ai{--h:var(--accent)} .s-x{--h:var(--muted)}
 .hwrow{margin-top:18px}
 .hwi, .hwp{font-size:14.5px; line-height:1.5; color:var(--fg2); margin-top:10px}
-.hwflow{list-style:none; margin:12px 0 0; padding:0; display:grid; gap:14px}
-.hwflow li{position:relative; display:grid; gap:2px; padding:8px 10px; border:1px solid var(--line); border-radius:6px; background:var(--surface); font-size:14px; line-height:1.4; color:var(--fg2)}
-.hwflow li + li::before{content:""; position:absolute; left:18px; top:-15px; height:14px; border-left:2px solid var(--muted)}
-.hwflow b{font:700 16px/1.15 var(--f-head); letter-spacing:.02em; color:var(--fg)}
-.hwflow .link{padding-bottom:0}
-.hwmap{margin:6px 0 0; padding:6px 4px; border:1px solid var(--line); border-radius:6px; background:var(--surface)}
-.hwmap svg{display:block; width:100%; height:auto}
-.hwmap rect{fill:var(--bg); stroke:var(--line); stroke-width:1.2}
-.hwmap .t{font:700 12.5px var(--f-head); letter-spacing:.03em; fill:var(--fg)}
-.hwmap .s{font:400 11px var(--f-body); letter-spacing:0; fill:var(--muted)}
-.hwmap .k{font:600 10.5px var(--f-body); fill:var(--accent)}
-.hwmap .ar{fill:none; stroke:var(--muted); stroke-width:1.4}
-.hwmap marker path{fill:var(--muted)}
-.hwleg{margin-top:8px}
-.ly{display:inline-block; font:700 10.5px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; border-radius:4px; padding:3px 5px 2px; white-space:nowrap; vertical-align:1px; color:var(--muted); box-shadow:inset 0 0 0 1px var(--line)}
-.ly.sum{color:var(--accent-ink); background:var(--accent); box-shadow:none}
-.ly.read{color:var(--accent); box-shadow:inset 0 0 0 1.5px var(--accent)}
-.ly.hand{color:var(--fg); background:var(--surface2); box-shadow:none}
-.xp.hwc{margin-top:6px; padding:0 10px; border:1px solid var(--line); border-radius:6px; background:var(--surface); scroll-margin-top:calc(var(--top) + 8px); min-width:0}
-.xp.hwc > summary{padding:5px 0; min-height:0}
-.xp.hwc > summary b{letter-spacing:.04em; overflow-wrap:anywhere}
-.xp.hwc > summary .xh > span{font-size:13px; line-height:1.35}
+.hwp b{color:var(--fg)}
+.hdia{margin-top:14px}
+.hdst{padding:10px 12px 12px; border:1px solid var(--line); border-radius:8px; background:var(--surface); scroll-margin-top:calc(var(--top) + 8px); min-width:0}
+.hdst.hdai{box-shadow:inset 0 0 0 1px var(--accent); border-color:var(--accent)}
+.hdh{display:flex; flex-wrap:wrap; align-items:center; gap:4px 10px}
+.hdh h2{margin:0; font:700 19px/1.15 var(--f-head); letter-spacing:.02em}
+.hdn{flex:none; display:grid; place-items:center; width:24px; height:24px; border-radius:50%; background:var(--fg); color:var(--bg); font:700 14px/1 var(--f-head)}
+.hdf{margin-left:auto; font:600 12px/1.2 ui-monospace, Menlo, monospace; color:var(--muted); overflow-wrap:anywhere}
+.hdst > .hwp:first-of-type{margin-top:8px}
+.hdar{position:relative; display:flex; align-items:center; min-height:40px; padding:6px 0 6px 40px; font-size:12.5px; line-height:1.3; color:var(--muted)}
+.hdar::before{content:""; position:absolute; left:23px; top:0; bottom:7px; border-left:2px solid var(--muted)}
+.hdar::after{content:""; position:absolute; left:18px; bottom:1px; border:6px solid transparent; border-top:8px solid var(--muted); border-bottom:0}
+/* sources */
+.hdsrcs{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; margin-top:10px}
+.hdsrc{display:grid; align-content:start; gap:3px; padding:8px 9px; border-radius:6px; background:color-mix(in srgb, var(--h) 13%, var(--bg)); box-shadow:inset 3px 0 0 var(--h); min-width:0}
+.hdsrc.s-wa{background:var(--bg); box-shadow:inset 3px 0 0 var(--h), inset 0 0 0 1px color-mix(in srgb, var(--h) 55%, transparent)}
+.hdsrc b{font:700 16px/1.1 var(--f-head); letter-spacing:.02em; overflow-wrap:anywhere}
+.hdsrc span{font-size:13px; line-height:1.35; color:var(--fg2); overflow-wrap:anywhere}
+/* a column: a chip in its source's colour (Wahapedia outlined: GW's colour, another site; Hand outlined; AI the accent) */
+.hdchips{display:flex; flex-wrap:wrap; gap:5px; margin-top:6px}
+.hwcol{display:inline-block; max-width:100%; font:600 12.5px/1.25 var(--f-body); padding:3px 6px 3px 8px; border-radius:4px; color:var(--fg); overflow-wrap:anywhere;
+  background:color-mix(in srgb, var(--h) 20%, var(--bg)); box-shadow:inset 3px 0 0 var(--h)}
+.hwcol.s-wa{background:var(--bg); box-shadow:inset 3px 0 0 var(--h), inset 0 0 0 1px color-mix(in srgb, var(--h) 60%, transparent)}
+.hwcol.s-ha{background:var(--bg); box-shadow:inset 0 0 0 1.5px var(--fg)}
+.hwcol.s-ai{background:var(--accent); color:var(--accent-ink); box-shadow:none}
+.hwcol small{font:700 12px var(--f-head); opacity:.8; margin-left:3px}
+.hdleg{display:grid; gap:5px; margin-top:10px}
+.hdli{display:grid; grid-template-columns:96px 30px minmax(0,1fr); align-items:baseline; gap:8px; font-size:13px; line-height:1.3; color:var(--fg2)}
+.hdli > .hwcol{justify-self:start}
+.hdli b{font:700 15px var(--f-head); color:var(--fg); text-align:right; font-variant-numeric:tabular-nums}
+@media (max-width:359px){ .hdli{grid-template-columns:88px 28px minmax(0,1fr); gap:6px} }
+/* the tables: a box each, two to a row; an open one takes the whole row */
+.hdgh{margin:14px 0 6px}
+.hdgrid{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px}
+.xp.hwc{margin:0; padding:0 9px; border:1px solid var(--line); border-radius:6px; background:var(--bg); scroll-margin-top:calc(var(--top) + 8px); min-width:0}
+.xp.hwc[open]{grid-column:1 / -1}
+.xp.hwc > summary{align-items:flex-start; padding:8px 0; min-height:44px; gap:6px}
+.xp.hwc > summary .chev{margin-top:2px}
+.xp.hwc > summary b{font-size:15.5px; letter-spacing:.03em; overflow-wrap:anywhere}
+.xp.hwc > summary .xh > span{font-size:12.5px; line-height:1.3}
 .hwcnt{font:600 13.5px var(--f-head); color:var(--fg2); font-variant-numeric:tabular-nums}
-.xp.hwc > .body{padding:0 0 4px}
-.hwidx{margin-top:8px}
-#sec-hw-trust{scroll-margin-top:calc(var(--top) + 8px)}
+.hdcn{color:var(--muted)}
+.hdcells{display:flex; flex-wrap:wrap; gap:2px; margin-top:6px}
+.hdcells i{width:7px; height:7px; border-radius:1.5px; background:var(--h)}
+.hdcells i.s-wa, .hdcells i.s-ha{background:none; box-shadow:inset 0 0 0 1.5px var(--h)}
+.xp.hwc > .body{padding:0 0 8px}
+.hdsw{display:inline-block; width:8px; height:8px; border-radius:2px; margin-right:5px; vertical-align:0; background:var(--h)}
+.hdsw.s-wa, .hdsw.s-ha{background:none; box-shadow:inset 0 0 0 1.5px var(--h)}
 .hww{font-size:13.5px; line-height:1.4; color:var(--fg2); margin-top:2px}
 .hwk{font-size:13.5px; line-height:1.5; margin-top:4px; overflow-wrap:anywhere}
-.hwk .link{padding-bottom:0}
+.hwk .link, .hwp .link{padding-bottom:0}
 .hwe{margin-top:10px}
 .hwx{margin-top:4px}
-.hwx .pgr{grid-template-columns:minmax(72px, 28%) minmax(0,1fr); padding:5px 0 4px}
+.hwx .pgr{grid-template-columns:minmax(72px, 30%) minmax(0,1fr); padding:5px 0 4px}
 .hwx .pgk{padding-top:0; text-transform:none; letter-spacing:.02em; font-size:13.5px; color:var(--fg); overflow-wrap:anywhere}
-.hwx .pgv{display:flex; align-items:baseline; gap:4px 8px; font-size:13.5px; line-height:1.4}
-.hwx .pgv > span:first-child{flex:1; min-width:0; overflow-wrap:anywhere}
-.hwx .pgv > .ly{flex:none}
+.hwx .pgv{font-size:13.5px; line-height:1.4; overflow-wrap:anywhere}
 .hws{color:var(--muted)}
-.hwc .xp{margin:8px -10px 0; padding:0 10px; border-bottom:0; border-top:1px solid var(--line)}
-.hwc .xp > .body{padding-bottom:8px}
 .hwl{font-size:13px; line-height:1.6; margin:5px 0 0; color:var(--fg2); overflow-wrap:anywhere}
+.hwct{margin-top:10px; padding-top:8px; border-top:1px solid var(--line)}
 .hwct > b{font:700 15px var(--f-head); letter-spacing:.03em; overflow-wrap:anywhere}
 .hwct .hwn{font:600 13px var(--f-head); color:var(--muted)}
-.hwct + .hwct{margin-top:10px; padding-top:8px; border-top:1px solid var(--line)}
+/* builder, readers: a little flow, the figures */
+.hdflow{display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; margin-top:10px; font-size:14px}
+.hdflow > b{font:700 16px var(--f-head); letter-spacing:.02em; padding:3px 8px; border-radius:4px; background:var(--surface2)}
+.hdflow .link{padding:0}
+.hdplus, .hdto{color:var(--muted); font-weight:700}
+.hdfigs{display:grid; grid-template-columns:repeat(auto-fill, minmax(130px, 1fr)); gap:6px; margin-top:10px}
+.hdfig{display:grid; align-content:start; gap:1px; padding:6px 8px; border-radius:6px; background:var(--bg); min-width:0}
+.hdfig > b{font:700 20px/1.1 var(--f-head); font-variant-numeric:tabular-nums}
+.hdfig > span{font-size:12.5px; line-height:1.35; color:var(--fg2); overflow-wrap:anywhere}
+.hdbar{display:flex; gap:2px; height:14px; margin-top:12px; border-radius:4px; overflow:hidden}
+.hdbar i{min-width:3px; background:var(--h)}
+.hdbl{display:grid; grid-template-columns:repeat(auto-fill, minmax(140px, 1fr)); gap:4px 10px; margin-top:8px; font-size:13px; line-height:1.3; color:var(--fg2)}
+.hdbl > span{display:flex; align-items:baseline; gap:6px; min-width:0}
+.hdbl i{flex:none; width:10px; height:10px; border-radius:2px; background:var(--h); align-self:center}
+.hdbl b{font:700 15px var(--f-head); color:var(--fg); font-variant-numeric:tabular-nums}
+.b-ok{--h:var(--ok)} .b-vd{--h:color-mix(in srgb, var(--ok) 55%, var(--bg))} .b-co{--h:var(--s-gw)} .b-no{--h:var(--muted)}
+.hdtwo{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; margin-top:10px}
+.hdtwo > div{display:grid; align-content:start; gap:3px; padding:8px 9px; border-radius:6px; background:var(--bg); min-width:0}
+.hdtwo b{font:700 16px/1.1 var(--f-head); letter-spacing:.02em}
+.hdtwo span{font-size:13px; line-height:1.35; color:var(--fg2); overflow-wrap:anywhere}
+.hdtwo .link{padding:0}
+.hdul{margin:8px 0 0; padding-left:18px; font-size:14px; line-height:1.45; color:var(--fg2)}
+.hdul li + li{margin-top:4px}
+/* the gate: a row per group of steps */
+.hdgate{margin-top:8px; border-top:1px solid var(--line)}
+.hdg{display:grid; gap:2px; padding:8px 0; border-bottom:1px solid var(--line); font-size:13.5px; line-height:1.4; color:var(--fg2)}
+.hdgt{display:flex; align-items:baseline; justify-content:space-between; gap:8px}
+.hdgt b{font:700 15.5px/1.2 var(--f-head); letter-spacing:.02em; color:var(--fg)}
+.hdok{flex:none; display:inline-flex; align-items:center; gap:3px; font:600 13.5px var(--f-head); color:var(--muted); font-variant-numeric:tabular-nums}
+.hdok.on{color:var(--ok)}
+.hdok .ic{width:15px; height:15px}
+.hdsn{font:12px/1.4 ui-monospace, Menlo, monospace; color:var(--muted); overflow-wrap:anywhere}
+@media (max-width:359px){ .hdsrcs, .hdtwo{grid-template-columns:minmax(0,1fr)} .hdst{padding:10px 10px 12px} }
 /* home: filters, random army */
 .hfs{display:flex; flex-wrap:wrap; gap:6px; margin:12px 0 2px}
 .hfc{display:inline-flex; align-items:center; gap:3px; min-height:36px; max-width:100%; padding:0 6px 0 11px; border-radius:18px; box-shadow:inset 0 0 0 1px var(--line); background:var(--surface);
@@ -1176,6 +1232,7 @@ function applyTheme(){
   for(const k of Object.values(THEME_VAR)) r.removeProperty(k);
   for(const [k, v] of Object.entries(t.v)) r.setProperty(THEME_VAR[k], v);
   r.colorScheme = t.light ? 'light' : '';
+  document.documentElement.classList.toggle('lt', !!t.light);   // (the light scheme: How the app works' source colours)
   const m = document.querySelector('meta[name="theme-color"]');
   if(m) m.setAttribute('content', t.v.bg || THEME_DEF.bg);   // the phone's status bar
 }
@@ -2009,39 +2066,64 @@ function showVerified(){
 }
 
 /* ---------- screen: how the app works (from the home screen) ----------
-   Where the data comes from, the tables of data.js drawn as cards (what one row is, its row count, its links, one real row,
-   every column and where it comes from), and what the gate checks. All of it is read when the screen is drawn: the counts and
-   rows from the tables (D), each table's columns and their sources from verify/columns.json as the gate that checked this
-   build wrote it into verified.js (VER.tables), the checks from verified.js. verify/render.js compares the screen with data.js. */
+   One diagram, top to bottom, of where every line of this app comes from and what holds it:
+     1 the sources; 2 the tables of data.js, each a box drawn with its columns, every column coloured by its source in
+     verify/columns.json (as the gate that checked this build wrote it into verified.js: VER.tables); 3 the one builder (builder.js);
+     4 the two readers of the boxes (BOXES, verify/reader2/, AGREE); 5 the only AI layer, the summary columns; 6 the release gate
+     (verify/run.js's steps in groups, passed as verified.js records them: VER.steps); 7 the app, one template over the tables.
+   Every number is read when the screen is drawn: rows from the tables (D), columns from VER.tables, steps from VER.steps.
+   verify/render.js (how-row, how-tables, how-diagram, how-gate, how-example, how-links) holds them to data.js, verify/columns.json,
+   verify/run.js and verify/sources/nr-json. */
 const HOW_TITLE = 'How the app works and why you should be able to trust the data';
-// the tables of data.js, in the order the screen draws them: name, key in D, what one row is (verify/columns.json says it for most)
-const HW_TABLES = [['ARMIES', 'armies'], ['DATASHEETS', 'datasheets'], ['FACTIONS', 'factions'], ['CORE_STRATAGEMS', 'coreStratagems'], ['RULES', 'rules'],
-  ['RULE_ALIASES', 'ruleAliases'], ['RULE_SRC', 'ruleSrc'], ['CONCEPTS', 'concepts'], ['GRANTS', 'grants'], ['RULE_OPTIONS', 'ruleOptions'],
-  ['CHECKLIST', 'checklist'], ['BOXES', 'boxes'], ['AGREE', 'agree'], ['BUILD_INDEX', 'buildIndex'], ['BS_IDS', 'bsIds'], ['VERSION', 'version']];
+// the tables of data.js, in the diagram's groups: [name, key in D]
+const HW_GROUPS = [
+  ['Rules and stratagems', [['FACTIONS', 'factions'], ['CORE_STRATAGEMS', 'coreStratagems'], ['RULES', 'rules'], ['RULE_SRC', 'ruleSrc'], ['RULE_ALIASES', 'ruleAliases'], ['CONCEPTS', 'concepts']]],
+  ['Units and lists', [['DATASHEETS', 'datasheets'], ['ARMIES', 'armies'], ['BS_IDS', 'bsIds'], ['BUILD_INDEX', 'buildIndex']]],
+  ['Worked out from GW’s words by scripts', [['BOXES', 'boxes'], ['AGREE', 'agree'], ['GRANTS', 'grants'], ['RULE_OPTIONS', 'ruleOptions'], ['CHECKLIST', 'checklist']]],
+  ['The data’s version', [['VERSION', 'version']]]];
+const HW_TABLES = HW_GROUPS.flatMap(g => g[1]);
+// what one row is, where verify/columns.json does not say it
 const HW_WHAT = { CHECKLIST:'per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js',
-  BUILD_INDEX:'what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values over BSData’s): written by verify/build-index.js',
   VERSION:'the data’s version: one value, raised with every release' };
+// the script that writes a table (each named in its file's own header or in the table's "what")
+const HW_BY = { ARMIES:'verify/from-json.js from an export (builder.js for a catalogued faction), verify/import-nr.js from a PDF', DATASHEETS:'verify/tables.js --write, from the lists and the faction catalogues (verify/from-bsdata.js)',
+  BS_IDS:'verify/import-ids.js --write', BOXES:'verify/effects-migrate.js --write', AGREE:'verify/agree.js --write', BUILD_INDEX:'verify/build-index.js --write',
+  GRANTS:'verify/tables.js --write, from verify/derive.js', RULE_OPTIONS:'verify/tables.js --write, from verify/derive.js', CHECKLIST:'verify/derive.js --write' };
 // CHECKLIST's columns (verify/derive.js writes them; verify/render.js fails on one this does not name)
 const HW_CK = { t:'the phases it is triggered in', u:'the phases its effect is used in', s:'listed at a fixed moment of the turn', a:'listed when the unit is selected',
   at:'the moment it opens with', ae:'also at the end of the battle round', o:'its options, each with its own phases', g:'what it grants', f:'a rule it puts in force',
   pk:'a pick of options', oc:'its options cover its phases', x:'not placed (its words give no phase)', none:'no phase (before the battle, what a unit carries)' };
-const HW_SRC = { gw:'GW', bsdata:'BSData', newrecruit:'New Recruit', wahapedia:'Wahapedia', derived:'computed' };
-const HW_LAYERS = [
-  ['mech', 'Mechanical', 'copied by a program from GW, BSData, New Recruit or Wahapedia, or worked out from them by a program; the tag names the source.'],
-  ['sum', 'AI summary', 'a one-line gist of a stratagem, or the short summary a datasheet shows of each rule with a line there (an ability, an enhancement, an army or detachment rule, a stratagem), written by AI and labelled AI, its rules as written a tap away. It carries a fingerprint of the text it sums up: a change in GW’s words flags it to be read again.'],
-  ['read', 'AI reading', 'the numbers and conditions behind the datasheets’ footnotes and the “When targeted” lines (not the Damage tab’s: its boxes are made by a program from GW’s words), read from GW’s words by AI (a few by a program): each carries a fingerprint of the words it was read from and is signed off by an independent reviewer.'],
-  ['hand', 'Hand', 'a decision about the rules written for this app, not copied from a source: when a rule is used (checked against what a program derives from its words) and which units it is for, notes, aliases; each signed off by an independent reviewer. Ids, short names and source labels are not decisions and are not signed.']];
-// a column's layer: its source in verify/columns.json (verify/tables.js fails unless ai-summary and ai-reading are exactly what it fingerprints)
-const hwLayer = (t, col, src) => ({ 'ai-summary':'sum', 'ai-reading':'read', hand:'hand' })[src] || 'mech';
+// the sources a column can have (verify/columns.json), each its colour: [source, class, name, what]
+const HW_SRC = [['gw', 's-gw', 'GW', 'Games Workshop’s documents'], ['wahapedia', 's-wa', 'Wahapedia', 'GW’s pages: counts as GW'], ['bsdata', 's-bs', 'BSData', 'the data New Recruit is built from'],
+  ['newrecruit', 's-nr', 'New Recruit', 'your lists'], ['derived', 's-de', 'Program', 'worked out by a script'], ['hand', 's-ha', 'Hand', 'ids, short names, aliases, notes'], ['ai-summary', 's-ai', 'AI summary', 'the only AI layer']];
+const hwSrc = s => HW_SRC.find(x => x[0] === s) || [s, 's-x', s, ''];
+// the lists of a catalogued faction written from New Recruit PDFs alone, with no export: builder.js never builds them
+// (verify/render.js how-diagram: exactly the catalogued lists with no file in verify/sources/nr-json)
+const HW_PDF_ONLY = ['emperors-chosen', 'dread-host'];
+// how many lists have a New Recruit PDF the gate step nr checks (verify/render.js how-diagram: the files of verify/sources/nr that are a list's)
+const HW_NR_PDFS = 16;
+// the release gate: verify/run.js's steps, in groups (verify/render.js how-gate: every step in exactly one group)
+const HW_GATE = [
+  ['Facts against GW, BSData and New Recruit', 'every unit fact equal to BSData and, for the ' + HW_NR_PDFS + ' lists with one, your New Recruit PDF, every base GW’s base size guide’s, every faction catalogue complete, every program column held by its script', ['data', 'tables', 'bsdata', 'dispositions', 'bases', 'catalog', 'nr', 'choice', 'derived']],
+  ['Wording', 'every rules text the words of GW’s newest document (or Wahapedia’s), every ability word for word, every AI summary still on the words it was written from', ['texts', 'words', 'fingerprints']],
+  ['Numbers', 'every profile number GW’s datasheet’s, the damage calculator against hand-worked cases, the mechanical rules', ['numbers', 'calc', 'invariants']],
+  ['Keywords', 'every unit’s keywords its GW datasheets’, the list’s own only by a named rule', ['keywords']],
+  ['Both readers', 'every box made by script from GW’s words and standing on them, and counted only where the two-reader rule confirms it', ['evidence', 'defence', 'agree']],
+  ['Every sheet line complete', 'every line a sheet writes stands on GW’s words, every bonus a rule states has its line, every phase tag derived from the words', ['lines', 'readings', 'derive']],
+  ['The one builder', 'every export builds its list byte for byte, the import and a re-import give data.js', ['import', 'reimport', 'build-parity']],
+  ['Every screen at 390 and 320px', 'every screen and popup of every list renders, opens every link, finds every name, never scrolls sideways', ['screens', 'small phone']],
+  ['Snapshots', 'the text of every screen equals the accepted one: no screen changes unseen', ['snapshots']],
+  ['Sign-off', 'every judgement the app adds (summaries, gists, phase tags, notes) signed off by an independent reviewer; a changed rule voids it', ['helpers']]];
 const hwCols = t => { const x = VER && VER.tables && VER.tables[t]; return x ? x.cols.split(' ').filter(Boolean).map(c => { const i = c.indexOf(':'); return [c.slice(0, i), c.slice(i + 1)]; }) : null; };
-const hwTag = (t, col, src) => { if(!src) return ''; const l = hwLayer(t, col, src);
-  return '<span class="ly ' + l + '">' + esc(l === 'mech' ? HW_SRC[src] || src : HW_LAYERS.find(x => x[0] === l)[1]) + '</span>'; };
+// a table and its inner tables (verify/columns.json's names: FACTIONS, FACTIONS.armyRules, …)
+const hwParts = t => VER && VER.tables ? [t].concat(Object.keys(VER.tables).filter(k => k.startsWith(t + '.'))).filter(k => VER.tables[k]) : [];
+const hwAllCols = t => t === 'CHECKLIST' ? Object.keys(HW_CK).filter(c => Object.values(D.checklist).some(e => hasOwn(e, c))).map(c => [c, 'derived']) : hwParts(t).flatMap(k => hwCols(k));
 const hwRows = k => { const v = D[k]; return Array.isArray(v) ? v.length : isObj(v) ? Object.keys(v).length : 1; };
 const hwN = (n, one, many) => n + ' ' + (n === 1 ? one : many);
-// the rows of an inner table, in all (null: rows the screen does not count, the list's own rows, a rule's readings)
+// the rows of an inner table, in all (null: rows the screen does not count, the list's own rows)
 function hwSubRows(t){
-  const p = t.split('.'), root = { ARMIES:D.armies, DATASHEETS:Object.values(D.datasheets), FACTIONS:Object.values(D.factions) }[p[0]];
-  if(!root || /\.readings$/.test(t) || (p[0] === 'ARMIES' && p.length > 2)) return null;
+  const p = t.split('.'), root = { ARMIES:D.armies, DATASHEETS:Object.values(D.datasheets), FACTIONS:Object.values(D.factions), BOXES:Object.values(D.boxes) }[p[0]];
+  if(!root || (p[0] === 'ARMIES' && p.length > 2)) return null;
   let xs = root;
   for(const k of p.slice(1)) xs = xs.flatMap(x => { const v = k === 'units' ? unitsAll(x) : x[k]; return v == null ? [] : Array.isArray(v) ? v : k === 'detachments' ? Object.values(v) : [v]; });
   return xs.length;
@@ -2057,29 +2139,27 @@ function hwVal(v){
   if(isObj(v) && typeof v.name === 'string') return v.name + (Object.keys(v).length > 1 ? ' (+ ' + hwN(Object.keys(v).length - 1, 'column', 'columns') + ')' : '');
   return hwFlat(v);
 }
-// one row as a small table: each column, its value and its layer
-const hwLine = (k, html, tag) => '<div class="pgr"><span class="pgk">' + esc(k) + '</span><span class="pgv"><span>' + html + '</span>' + (tag || '') + '</span></div>';
+// a column's chip (the colour of its source) and a table's cells (one per column, the summary of its box)
+const hwChip = (c, s) => '<span class="hwcol ' + hwSrc(s)[1] + '" data-src="' + esc(s) + '">' + esc(c) + '</span>';
+const hwCells = cols => cols.length ? '<span class="hdcells" aria-hidden="true">' + cols.map(([, s]) => '<i class="' + hwSrc(s)[1] + '"></i>').join('') + '</span>' : '';
+// one row as a small table: each column, its value and its source's colour
+const hwLine = (k, html, s) => '<div class="pgr"><span class="pgk">' + (s ? '<i class="hdsw ' + hwSrc(s)[1] + '" aria-hidden="true"></i>' : '') + esc(k) + '</span><span class="pgv"><span>' + html + '</span></span></div>';
 function hwRow(t, pairs){
   const src = new Map(hwCols(t) || []);
-  return '<div class="pg hwx">' + pairs.map(([k, v]) => hwLine(k, esc(hwCut(hwPlain(hwVal(v)))), hwTag(t, k, src.get(k)))).join('') + '</div>';
+  return '<div class="pg hwx">' + pairs.map(([k, v]) => hwLine(k, esc(hwCut(hwPlain(hwVal(v)))), src.get(k))).join('') + '</div>';
 }
 // a row's columns in the order verify/columns.json lists them, then any it does not
 const hwPairs = (t, o) => { const cols = (hwCols(t) || []).map(c => c[0]).filter(c => hasOwn(o, c)); return cols.concat(Object.keys(o).filter(k => !cols.includes(k))).map(k => [k, o[k]]); };
-// every column of a table and its inner tables, by layer
+// every column of a table and its inner tables, as chips in its source's colour
 function hwColumns(t){
-  const subs = VER && VER.tables ? Object.keys(VER.tables).filter(k => k.startsWith(t + '.')) : [];
   const block = k => { const cols = hwCols(k); if(!cols) return '';
     const n = k === t ? hwRows(HW_TABLES.find(x => x[0] === t)[1]) : hwSubRows(k);
-    return '<div class="hwct" data-t="' + esc(k) + '" data-cols="' + esc(cols.map(c => c[0] + ':' + c[1]).join(',')) + '"' + (n == null ? '' : ' data-n="' + n + '"') + '><b>' + esc(k) + '</b>' + (n == null ? '' : ' <span class="hwn">' + hwN(n, 'row', 'rows') + '</span>') +
-      (k === t ? '' : '<p class="hww">' + esc(VER.tables[k].what) + '</p>') +
-      HW_LAYERS.map(([l, name]) => { const these = cols.filter(([c, s]) => hwLayer(k, c, s) === l); if(!these.length) return '';
-        return '<p class="hwl" data-l="' + l + '" data-c="' + esc(these.map(c => c[0]).join(',')) + '"><span class="ly ' + l + '">' + name + '</span> ' + these.map(([c, s]) => esc(c) + (l === 'mech' ? ' <span class="hws">(' + esc(HW_SRC[s] || s) + ')</span>' : '')).join(', ') + '</p>'; }).join('') + '</div>'; };
-  const all = [t].concat(subs), n = all.reduce((x, k) => x + (hwCols(k) || []).length, 0);
-  if(!n) return '';
-  return '<details class="xp"><summary><span class="xh"><b>Every column and where it comes from</b><span>' + hwN(n, 'column', 'columns') + (subs.length ? ', with ' + hwN(subs.length, 'inner table', 'inner tables') : '') + '</span></span>' + chev + '</summary>' +
-    '<div class="body">' + all.map(block).join('') + '</div></details>';
+    return '<div class="hwct" data-t="' + esc(k) + '" data-cols="' + esc(cols.map(c => c[0] + ':' + c[1]).join(',')) + '"' + (n == null ? '' : ' data-n="' + n + '"') + '><b>' + esc(k) + '</b>' +
+      (n == null ? '' : ' <span class="hwn">' + hwN(n, 'row', 'rows') + '</span>') + (k === t ? '' : '<p class="hww">' + esc(VER.tables[k].what) + '</p>') +
+      '<div class="hdchips">' + cols.map(([c, s]) => hwChip(c, s)).join('') + '</div></div>'; };
+  return hwParts(t).map(block).join('');
 }
-// a link to another table's card
+// a link to another table's box
 const hwTo = t => '<button class="link" data-htab="' + t + '">' + t + '</button>';
 const hwKey = (k, html) => '<p class="hwk"><span class="il">' + esc(k) + '</span>' + html + '</p>';
 // the example: one list (the owner's first, else the first), its first unit with a datasheet of its own, that datasheet's id
@@ -2094,18 +2174,34 @@ function hwRuleLinks(rows){
   const n = k => rows.filter(x => hwRuleAt(x.rule) === k).length;
   return hwKey('rule', '→ an army rule (' + n('army') + ') or detachment rule (' + n('det') + ') in ' + hwTo('FACTIONS') + ', or a unit’s ability (' + n('ability') + ') in a list (' + hwTo('ARMIES') + ' → ' + hwTo('DATASHEETS') + ')');
 }
+// the boxes' counts: BOXES (rows: rules, abilities and stratagems; boxes: b, d, st) and AGREE (per box: "A" both readers agree, "V" a
+// reviewed verdict, "core" a Core Rules box, 0 not counted)
+function hwBoxCounts(){
+  const n = { sources:Object.keys(D.boxes).length, boxes:0, A:0, V:0, core:0, off:0 };
+  for(const o of Object.values(D.boxes)) for(const f of ['b', 'd', 'st']) n.boxes += (o[f] || []).length;
+  for(const o of Object.values((D.agree || {}).boxes || {})) for(const f of Object.keys(o)) for(const v of o[f]) n[v === 'A' || v === 'V' || v === 'core' ? v : 'off']++;
+  return n;
+}
+// the AI layer: every column verify/columns.json gives the source ai-summary, and how many texts each holds in the tables
+function hwAiCounts(){
+  const cols = VER && VER.tables ? [...new Set(Object.keys(VER.tables).flatMap(t => hwCols(t).filter(c => c[1] === 'ai-summary').map(c => c[0])))] : [];
+  const rows = Object.values(D.datasheets).flatMap(x => x.abilities || []).concat(D.coreStratagems, Object.values(D.factions).flatMap(f => (f.armyRules || []).concat(
+    Object.values(f.detachments).flatMap(d => [d.rule].concat(d.moreRules || [], d.stratagems || [], d.enhancements || []).filter(Boolean)))));
+  return cols.map(c => [c, rows.filter(r => isObj(r) && typeof r[c] === 'string' && r[c]).length]);
+}
 function hwCard(t, k){
   const X = hwExample(), a = X.a, u = X.u, f = D.factions[a.faction], rows = hwRows(k);
   const what = (VER && VER.tables && VER.tables[t] && VER.tables[t].what) || HW_WHAT[t] || '';
-  let body = '', count = hwN(rows, 'row', 'rows');
-  const ex = (label, html) => '<p class="lbl hwe">' + label + '</p>' + html;
+  let body = '', count = hwN(rows, 'row', 'rows'), exs = '';
+  // (an example row goes after the columns: ex keeps it aside, in order, and returns nothing to the keys' string)
+  const ex = (label, html) => { exs += '<p class="lbl hwe">' + label + '</p>' + html; return ''; };
   if(t === 'ARMIES'){
     const entries = D.armies.reduce((n, x) => n + unitsAll(x).length, 0);
     count += ' · ' + hwN(entries, 'unit entry', 'unit entries');
     body = hwKey('units[ ].ds', '→ the unit’s ' + hwTo('DATASHEETS') + ' row') + hwKey('faction, detachments', '→ ' + hwTo('FACTIONS') + ' and its detachments') +
       ex('One row: ' + esc(a.name), hwRow(t, hwPairs(t, a).filter(([c]) => c !== 'refs').map(([c, v]) => [c, c === 'units' ? hwN(unitsAll(a).length, 'entry', 'entries') : v]))) +
       ex('One of its unit entries', '<div data-hwentry="' + esc(a.id + '|' + u.id) + '">' + hwRow('ARMIES.units', [['id', u.id], ['ds', X.ds]].concat(['short', 'pts', 'enhancement', 'warlord', 'models', 'gear'].filter(c => u[c] != null).map(c => [c, u[c]]))) + '</div>') +
-      '<p class="note">An entry holds what the list chose; everything else about the unit comes from its datasheet’s row.</p>';
+      (exs += '<p class="note">An entry holds what the list chose; everything else about the unit comes from its datasheet’s row.</p>', '');
   }
   else if(t === 'DATASHEETS'){
     const ds = X.ds && D.datasheets[X.ds];
@@ -2131,75 +2227,93 @@ function hwCard(t, k){
     const keys = Object.keys(D.checklist), nA = keys.filter(x => x.startsWith('a|')).length, nR = keys.filter(x => x.startsWith('r|')).length;
     const ab = (u.abilities || []).find(x => D.checklist['a|' + ckHash(x.name + '\n' + x.text)]), kk = ab ? 'a|' + ckHash(ab.name + '\n' + ab.text) : keys[0], e = D.checklist[kk];
     body = hwKey('r|faction|name', '→ an army or detachment rule in ' + hwTo('FACTIONS') + ' (' + nR + ')') + hwKey('a|fingerprint', '→ an ability, by a fingerprint of its name and words (' + nA + '), in ' + hwTo('DATASHEETS')) +
-      ex('One row' + (ab ? ': ' + esc(ab.name) + ' (' + esc(u.name) + ')' : ''), '<div class="pg hwx">' + hwLine('key', esc(kk), '<span class="ly mech">computed</span>') +
-        Object.keys(e).map(c => hwLine(c, esc(hwCut(hwPlain(hwVal(e[c])))) + ' <span class="hws">(' + esc(HW_CK[c] || '') + ')</span>', '<span class="ly mech">computed</span>')).join('') + '</div>') +
+      ex('One row' + (ab ? ': ' + esc(ab.name) + ' (' + esc(u.name) + ')' : ''), '<div class="pg hwx">' + hwLine('key', esc(kk), 'derived') +
+        Object.keys(e).map(c => hwLine(c, esc(hwCut(hwPlain(hwVal(e[c])))) + ' <span class="hws">(' + esc(HW_CK[c] || '') + ')</span>', 'derived')).join('') + '</div>') +
+      '<div class="hwct"><b>CHECKLIST</b><div class="hdchips">' + hwAllCols(t).map(([c, s]) => hwChip(c, s)).join('') + '</div></div>' +
       '<p class="hwl">' + Object.keys(HW_CK).filter(c => keys.some(x => hasOwn(D.checklist[x], c))).map(c => '<b>' + esc(c) + '</b> ' + esc(HW_CK[c])).join(' · ') + '</p>';
   }
+  else if(t === 'BOXES'){ const n = hwBoxCounts();
+    body = hwKey('key', 'a| an ability, r| a rule, s| a stratagem, c| a core rule, then a fingerprint of its name and words') + hwKey('b, d, st', n.boxes + ' boxes: what a sentence of GW’s does to attacks (b), to attacks on the unit (d), to a characteristic (st)'); }
+  else if(t === 'AGREE') body = hwKey('boxes', '→ each box of ' + hwTo('BOXES') + ': confirmed by both readers, by a reviewed verdict, a Core Rules box, or not counted');
   else if(t === 'BS_IDS'){ count = hwN(rows, 'lookup', 'lookups');
     body = hwKey('used by', 'the list import, to find each unit and choice of a New Recruit export') +
       ex('Its lookups', hwRow(t, Object.keys(D.bsIds).map(c => [c, (v => Array.isArray(v) ? hwN(v.length, 'id', 'ids') : isObj(v) ? hwN(Object.keys(v).length, 'id', 'ids') : v)(D.bsIds[c])]))); }
+  else if(t === 'BUILD_INDEX'){ count = hwN(rows, 'part', 'parts'); body = hwKey('used by', 'builder.js, the in-app build of an export'); }
   else if(t === 'VERSION'){ count = 'one value'; body = ex('Its value', '<p class="hwk">' + esc(D.version) + '</p>'); }
-  return '<details class="xp hwc" id="sec-hw-' + t + '" data-table="' + t + '" data-rows="' + rows + '"><summary><span class="xh"><b>' + t + '</b><span><span class="hwcnt">' + count + '</span>' +
-    (what ? ' · ' + esc(what) : '') + '</span></span>' + chev + '</summary><div class="body">' + body + hwColumns(t) + '</div></details>';
+  const cols = hwAllCols(t);
+  return '<details class="xp hwc" id="sec-hw-' + t + '" data-table="' + t + '" data-rows="' + rows + '"><summary><span class="xh"><b>' + t.replace(/_/g, '_<wbr>') + '</b><span><span class="hwcnt">' + count + '</span>' +
+    (cols.length ? '<span class="hdcn"> · ' + hwN(cols.length, 'column', 'columns') + '</span>' : '') + '</span>' + hwCells(cols) + '</span>' + chev + '</summary><div class="body">' +
+    (what ? '<p class="hww">' + esc(what) + '</p>' : '') + (HW_BY[t] ? hwKey('written by', esc(HW_BY[t])) : '') + body + (t === 'CHECKLIST' ? '' : hwColumns(t)) + exs + '</div></details>';
 }
-// the map: the tables as boxes, their links as arrows (one row count each, from the tables)
-function hwMap(){
-  const n = t => hwRows((HW_TABLES.find(x => x[0] === t) || [, ''])[1]), dets = Object.values(D.factions).flatMap(f => Object.values(f.detachments));
-  const sum = (xs, k) => xs.reduce((x, d) => x + (d[k] || []).length, 0);
-  const box = (t, x, y, w, h, sub) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="4"/><text class="t" x="' + (x + 8) + '" y="' + (y + 17) + '">' + t + '</text>' +
-    (sub ? '<text class="s" x="' + (x + 8) + '" y="' + (y + 32) + '">' + esc(sub) + '</text>' : '');
-  const one = (t, x, y, w) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="28" rx="4"/><text class="t" x="' + (x + 8) + '" y="' + (y + 18) + '">' + t + ' <tspan class="s">' + n(t) + '</tspan></text>';
-  const ar = d => '<path class="ar" d="' + d + '" marker-end="url(#hwa)"/>';
-  const lab = (x, y, s, mid) => '<text class="k" x="' + x + '" y="' + y + '"' + (mid ? ' text-anchor="middle"' : '') + '>' + esc(s) + '</text>';
-  const entries = D.armies.reduce((x, a) => x + unitsAll(a).length, 0);
-  const counts = { lists:D.armies.length, entries, factions:n('FACTIONS'), armyRules:sum(Object.values(D.factions), 'armyRules'), detachments:dets.length, stratagems:sum(dets, 'stratagems'),
-    enhancements:sum(dets, 'enhancements'), datasheets:n('DATASHEETS'), rules:n('RULES'), aliases:n('RULE_ALIASES'), ruleSrc:n('RULE_SRC'), concepts:n('CONCEPTS'), grants:n('GRANTS'),
-    ruleOptions:n('RULE_OPTIONS'), checklist:n('CHECKLIST'), core:n('CORE_STRATAGEMS'), bsIds:n('BS_IDS') };
-  return '<figure class="hwmap" data-counts="' + esc(JSON.stringify(counts)) + '"><svg viewBox="0 0 320 366" aria-hidden="true">' +
-    '<defs><marker id="hwa" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L8 4L0 8z"/></marker></defs>' +
-    box('ARMIES', 8, 8, 128, 44, hwN(D.armies.length, 'list', 'lists') + ' · ' + entries + ' entries') +
-    box('FACTIONS', 184, 8, 128, 110, hwN(n('FACTIONS'), 'row', 'rows')) +
-    '<text class="s" x="192" y="60">army rules ' + sum(Object.values(D.factions), 'armyRules') + '</text><text class="s" x="192" y="76">detachments ' + dets.length + '</text>' +
-    '<text class="s" x="200" y="92">↳ stratagems ' + sum(dets, 'stratagems') + '</text><text class="s" x="200" y="108">↳ enhancements ' + sum(dets, 'enhancements') + '</text>' +
-    ar('M136 30H182') + lab(160, 25, 'faction', true) +
-    box('DATASHEETS', 8, 86, 128, 44, hwN(n('DATASHEETS'), 'row', 'rows')) + ar('M72 52V84') + lab(78, 72, 'ds') +
-    box('RULES', 8, 170, 128, 44, hwN(n('RULES'), 'row', 'rows')) + ar('M72 130V168') + lab(78, 153, 'rules') +
-    one('RULE_ALIASES', 184, 134, 128) + one('RULE_SRC', 184, 168, 128) + one('CONCEPTS', 184, 202, 128) +
-    ar('M184 148L138 184') + ar('M184 182L138 196') +
-    one('GRANTS', 8, 264, 96) + one('RULE_OPTIONS', 112, 264, 96) + one('CHECKLIST', 216, 264, 96) +
-    '<path class="ar" d="M56 264V250H264V264M160 250V264"/>' + ar('M56 250H3V108H6') + ar('M264 250H317V40H314') + lab(160, 244, 'rule / key → a rule or an ability', true) +
-    box('CORE_STRATAGEMS', 8, 314, 128, 44, n('CORE_STRATAGEMS') + ' · used by every list') + box('BS_IDS', 184, 314, 128, 44, n('BS_IDS') + ' lookups · import') +
-    '</svg></figure>' +
-    // the map as text (and each table a link to its card)
-    '<p class="hwk hwidx">How they link: an army’s unit entries name their ' + hwTo('DATASHEETS') + ' row (ds) and the army names its ' + hwTo('FACTIONS') + ' row; datasheets name their rules in ' +
-    hwTo('RULES') + ', which ' + hwTo('RULE_ALIASES') + ' and ' + hwTo('RULE_SRC') + ' point at; ' + hwTo('GRANTS') + ', ' + hwTo('RULE_OPTIONS') + ' and ' + hwTo('CHECKLIST') +
-    ' point at a rule in FACTIONS or an ability of a datasheet; ' + hwTo('CORE_STRATAGEMS') + ' serve every list, ' + hwTo('BS_IDS') + ' the list import; ' +
-    hwTo('CONCEPTS') + ' holds the core terms, ' + hwTo('VERSION') + ' the data’s version.</p>';
-}
+// one stage of the diagram: its number, its title, its file, its body; the arrow down to the next
+const hwStage = (n, id, title, file, body, cls) => '<section class="hdst' + (cls ? ' ' + cls : '') + '" id="sec-hw-' + id + '"><div class="hdh"><span class="hdn">' + n + '</span><h2>' + title + '</h2>' +
+  (file ? '<code class="hdf">' + esc(file) + '</code>' : '') + '</div>' + body + '</section>';
+const hwArrow = label => '<div class="hdar"><span>' + label + '</span></div>';
+// a bar of parts (each its count and colour), and its key
+const hwBar = segs => '<div class="hdbar" aria-hidden="true">' + segs.filter(x => x[0]).map(([n, , c]) => '<i class="' + c + '" style="flex-grow:' + n + '"></i>').join('') + '</div>' +
+  '<div class="hdbl">' + segs.map(([n, label, c, k]) => '<span><i class="' + c + '" aria-hidden="true"></i><b>' + hwF(k, n) + '</b> ' + esc(label) + '</span>').join('') + '</div>';
+// a figure the screen shows, marked with what it is (verify/render.js how-diagram holds each one's text to the sources)
+const hwF = (k, html) => '<span data-fig="' + k + '">' + html + '</span>';
+const hwFig = (n, label) => '<span class="hdfig"><b>' + n + '</b><span>' + label + '</span></span>';
 function screenHow(){
-  // the layers the tables have (verify/columns.json, as the gate that checked this build wrote it): the legend and the texts name only those
-  const all = VER && VER.tables ? Object.keys(VER.tables).flatMap(t => hwCols(t).map(([c, s]) => hwLayer(t, c, s))) : [];
-  const has = l => all.includes(l), layers = HW_LAYERS.filter(([l]) => has(l));
-  const words = list => list.length > 1 ? list.slice(0, -1).join(', ') + ' or ' + list[list.length - 1] : list.join('');
-  const aiKinds = [has('sum') ? 'summaries' : '', has('read') ? 'readings' : ''].filter(Boolean);
-  const steps = [
-    ['Where the data comes from', 'Your New Recruit lists; BSData, the data New Recruit is built from; Games Workshop’s Core Rules, Faction Packs and FAQs, and Wahapedia where GW has no document yet. Where they disagree, GW wins; where GW misprints (a typo, a base size), the correction is written down with its reason.'],
-    ['How a list is built', 'A program reads the list’s New Recruit export and writes it into the tables: each unit an entry that points at its datasheet, its stats, weapons, keywords, points and rules text copied from the sources. A list with only a PDF is typed in, and a program checks it against the PDF line by line.'],
-    ['The tables', 'Everything the app shows is in ' + HW_TABLES.length + ' tables in one file, data.js, drawn below with their real row counts' + (VER && VER.tables ? ' and columns. Each column is tagged: ' + words(layers.map(([l, name]) => l === 'mech' ? 'mechanical' : l === 'hand' ? 'decided by hand' : name)) + '.' : '. This copy carries no record of its check, so its columns are not shown.')],
-    ['What checks every release', 'A second program compares every table with its sources again and renders every screen; if a single check fails, nothing is released. <button class="link" data-htab="trust">What it checks</button>'],
-    ['How the app draws pages', 'One page template reads the tables and draws every screen from them. Each release renders every screen of every list and compares its text with the last one accepted, so no screen changes unseen.']];
-  const share = all.length ? '<p class="note">Of the ' + all.length + ' columns of the tables: ' + layers.map(([l, name]) => name + ' ' + all.filter(x => x === l).length).join(' · ') + '.</p>' : '';
+  const tabled = !!(VER && VER.tables);
+  // the columns of every table by source (verify/columns.json, as the gate that checked this build wrote it)
+  const all = tabled ? Object.keys(VER.tables).flatMap(t => hwCols(t)) : [], bySrc = s => all.filter(c => c[1] === s);
+  const srcs = HW_SRC.filter(([s]) => bySrc(s).length).concat([...new Set(all.map(c => c[1]))].filter(s => !HW_SRC.some(x => x[0] === s)).map(hwSrc));
+  const W = window.WH_BUILDER, cats = W ? W.catalogues(D) : [], fname = k => D.factions[k] ? D.factions[k].name : k, and = xs => xs.length > 1 ? xs.slice(0, -1).join(', ') + ' and ' + xs[xs.length - 1] : xs.join('');
+  const own = D.armies.filter(a => !a.imported), catLists = own.filter(a => cats.includes(a.faction)), pdfOnly = catLists.filter(a => HW_PDF_ONLY.includes(a.id)), built = catLists.filter(a => !HW_PDF_ONLY.includes(a.id));
+  const others = own.filter(a => !cats.includes(a.faction)), otherFac = [...new Set(others.map(a => a.faction))];
+  const bx = hwBoxCounts(), ai = hwAiCounts(), aiN = ai.reduce((t, [, n]) => t + n, 0);
+  const steps = VER && Array.isArray(VER.steps) ? VER.steps : null, stepOk = s => steps && steps.some(x => x.name === s && x.ok);
+  const nTables = HW_TABLES.length, bs = VER ? (VER.sources.find(x => /^BSData/.test(x.label)) || {}).detail : '', commit = ((bs || '').match(/commit ([0-9a-f]{6,})/) || [])[1];
+  const passed = steps ? steps.filter(x => x.ok).length : null;
+  const legend = '<div class="hdleg">' + srcs.map(([s, c, name, what]) => '<span class="hdli">' + hwChip(name, s) + '<b>' + hwF('src:' + s, bySrc(s).length) + '</b><span>' + esc(what) + '</span></span>').join('') + '</div>';
+  // 1 the sources
+  const src = (cls, name, what) => '<div class="hdsrc ' + cls + '"><b>' + name + '</b><span>' + what + '</span></div>';
+  const s1 = hwStage(1, 'sources', 'The sources', '', '<div class="hdsrcs">' +
+    src('s-gw', 'Games Workshop', 'Core Rules, Faction Packs, errata and FAQs: the source of truth') +
+    src('s-wa', 'Wahapedia', 'GW’s datasheets and faction pages: counts as GW, and GW’s own document wins where they differ') +
+    src('s-bs', 'BSData', 'the data New Recruit is built from, pinned to one commit' + (commit ? ' (' + esc(commit) + ')' : '') + ': ids, points, wargear options') +
+    src('s-nr', 'New Recruit', 'your lists’ exports and PDFs: what each list chose') + '</div>' +
+    '<p class="hwp">Where they disagree, GW wins; each difference is written down with GW’s words as evidence and checked again at every release.</p>');
+  // 2 the tables
+  const s2 = hwStage(2, 'tables', 'The tables', 'data.js', '<p class="hwp">Scripts extract only the data the app needs, straight into ' + hwF('tables', nTables) + ' tables in one file; a few columns are written by hand (ids, short names, aliases, notes). Each box is a table: tap it for its columns, coloured by where each comes from, and one real row.</p>' +
+    (tabled ? legend + '<p class="note">' + hwF('columns', all.length) + ' columns in all (verify/columns.json; the gate fails on a column it does not list).</p>' : '<p class="note">This copy carries no record of its check, so its columns are not shown.</p>') +
+    HW_GROUPS.map(([g, ts]) => '<p class="lbl hdgh">' + g + '</p><div class="hdgrid">' + ts.map(([t, k]) => hwCard(t, k)).join('') + '</div>').join(''));
+  // 3 the one builder
+  const names = xs => and(xs.map(a => esc(a.name)));
+  const s3 = hwStage(3, 'builder', 'One builder', 'builder.js', '<div class="hdflow"><span class="hwcol s-nr" data-src="newrecruit">export</span><span class="hdplus">+</span><span class="hwcol s-de" data-src="derived">tables</span><span class="hdto">→</span><b>builder.js</b><span class="hdto">→</span>' + hwTo('ARMIES') + '</div>' +
+    '<p class="hwp">One file turns a New Recruit export into a list from the export and the tables alone. Your phone’s Import runs it, the gate runs it, and the built-in lists of these factions are made by the same call: each is built exactly as your phone would import it.</p>' +
+    '<div class="hdfigs">' + hwFig(hwF('catalogued', cats.length), 'catalogued factions: ' + hwF('catalogued-names', and(cats.map(k => esc(fname(k)))))) + hwFig(hwF('built', built.length), 'lists built from their export: ' + hwF('built-names', names(built))) + '</div>' +
+    (pdfOnly.length ? '<p class="hwp"><b>The exceptions:</b> ' + hwF('pdf-only-names', names(pdfOnly)) + ' (' + and([...new Set(pdfOnly.map(a => esc(fname(a.faction))))]) + ') have no export, only New Recruit PDFs: they were written from the PDFs and are held by every other check, not by the builder.</p>' : '') +
+    (others.length ? '<p class="hwp">The ' + hwF('others', others.length) + (others.length === 1 ? ' list' : ' lists') + ' of the other ' + hwF('other-factions', otherFac.length) + (otherFac.length === 1 ? ' faction' : ' factions') +
+      ' each give the same data.js again, byte for byte, when re-imported from their export (verify/from-json.js, which keeps the datasheet rows and ids data.js already has); an import of one on your phone is made of units those lists already have.</p>' : ''));
+  // 4 the two readers
+  const s4 = hwStage(4, 'readers', 'Two readers', 'verify/agree.js', '<div class="hdtwo"><div><b>Reader 1</b><span>the app’s: reads GW’s words sentence by sentence into ' + hwTo('BOXES') + ' (effects.js)</span></div>' +
+    '<div><b>Reader 2</b><span>verify/reader2/: written apart, never uses the app’s reading code; the gate runs it in a sandbox that can read only its own files, GW’s documents and Wahapedia’s pages, and a copy of data.js cut down to the rules’ words and what places them (names, ids, factions, keywords, tags, which model has it, where a rule’s table sits)</span></div></div>' +
+    '<p class="hwp"><b>' + hwF('boxes', bx.boxes) + ' boxes</b> from ' + hwF('box-sources', bx.sources) + ' rules, abilities and stratagems:</p>' +
+    hwBar([[bx.A, 'both readers agree', 'b-ok', 'agree'], [bx.V, 'a reviewed verdict quoting GW', 'b-vd', 'verdict'], [bx.core, 'Core Rules boxes', 'b-co', 'core'], [bx.off, 'not counted', 'b-no', 'not-counted']]) +
+    '<p class="hwp">' + hwTo('AGREE') + ' records the comparison. A box counts, in the Damage tab and on the sheets, only where both readers agree, or a reviewed verdict with GW’s quote shows the app right (the Core Rules boxes, which reader 2 does not read, count as GW’s Core Rules). Any other is shown as GW’s words, “see the rule”, and never counted.</p>');
+  // 5 the only AI layer
+  const s5 = hwStage(5, 'ai', 'The only AI layer', '', '<div class="hdchips">' + ai.map(([c, n]) => hwChip(c, 'ai-summary').replace('</span>', ' <small>' + hwF('ai:' + c, n) + '</small></span>')).join('') + '</div>' +
+    '<p class="hwp">' + hwF('ai', aiN) + (aiN === 1 ? ' summary' : ' summaries') + ' in these columns are written by AI: a stratagem’s one-line gist, and the short line a unit’s sheet or the Overview shows of a rule in each place it applies. Everything else is copied, worked out by a script, or (a few ids, short names, aliases and notes) written by hand.</p>' +
+    '<ul class="hdul"><li>Each carries the AI label, and a tap on it opens GW’s full text.</li><li>Each sits next to a fingerprint of the GW words it was written from (' + ai.map(([c]) => esc(c) + 'Of').join(', ') + '): when GW’s words change, the gate fails until it is written again.</li>' +
+    '<li>The program decides which lines exist, where and on which units; the AI writes only the sentence.</li><li>Every summary and gist a list shows is signed off by an independent reviewer.</li></ul>', 'hdai');
+  // 6 the release gate
+  const gate = HW_GATE.map(([g, what, ss]) => { const ok = ss.filter(stepOk).length;
+    return '<div class="hdg" data-steps="' + esc(ss.join(',')) + '"><div class="hdgt"><b>' + g + '</b>' + (steps ? '<span class="hdok' + (ok === ss.length ? ' on' : '') + '">' + (ok === ss.length ? '<svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>' : '') + hwF('group:' + ss.join(','), ok + ' of ' + ss.length) + '</span>' : '<span class="hdok">' + hwN(ss.length, 'step', 'steps') + '</span>') + '</div>' +
+      '<span>' + esc(what).replace(/for the (\d+) lists/, (m, n) => 'for the ' + hwF('nr-pdfs', n) + ' lists') + '</span><span class="hdsn">' + ss.map(esc).join(' · ') + '</span></div>'; }).join('');
+  const nSteps = HW_GATE.reduce((t, g) => t + g[2].length, 0);
+  const s6 = hwStage(6, 'gate', 'The release gate', 'verify/run.js', '<p class="hwp">Before any change reaches your phone, ' + hwF('steps', nSteps) + ' checks compare every table with its sources again' +
+    (steps ? ': ' + hwF('passed', passed + ' of ' + steps.length) + ' passed for this build' : '') + '. Nothing ships unless all pass: build.js refuses to build otherwise.</p>' + '<div class="hdgate">' + gate + '</div>');
+  // 7 the app
+  const s7 = hwStage(7, 'app', 'The app', 'app.html', '<p class="hwp">One page template reads the tables and places every line on every screen of every list: which units get a line and where (' + hwTo('BOXES') + ', ' + hwTo('GRANTS') + ', ' + hwTo('RULE_OPTIONS') +
+    '), “Granted by”, the order and the labels. Every line is GW’s words, an AI summary labelled AI, or a fixed template over the tables, the same every time.</p>' +
+    '<p class="note">The Rules questions chat (the ? in the top bar) is apart from this: it asks Claude live, and writes nothing into the tables.</p>');
   return '<p class="hwi">Where every line of this app comes from, the tables it is kept in, and what is checked before any change reaches your phone.</p>' +
-    '<ol class="hwflow">' + steps.map(([h, t], i) => '<li><b>' + (i + 1) + ' · ' + h + '</b><span>' + t + '</span></li>').join('') + '</ol>' +
-    '<div class="sec-h"><h2>The tables</h2><span class="c">' + HW_TABLES.length + '</span></div>' + hwMap() +
-    (VER && VER.tables ? '<div class="hwleg">' + layers.map(([l, name, t]) => '<p class="vchk"><span class="ly ' + l + '">' + name + '</span> ' + esc(t) + '</p>').join('') + '</div>' : '') + share +
-    HW_TABLES.map(([t, k]) => hwCard(t, k)).join('') +
-    '<div class="sec-h" id="sec-hw-trust"><h2>Why you can trust the data</h2></div>' +
-    '<p class="hwp">Games Workshop is the source of truth. Where New Recruit, BSData or Wahapedia say something else, the difference is written down with its reason, and every release checks it again.</p>' +
-    (aiKinds.length ? '<p class="hwp">What AI wrote is marked on the tables above: ' + aiKinds.join(' and ') + '. Each carries a fingerprint of the rule text it was written from, so a change in GW’s words stops the next release until it is read again. Every judgement the app adds, by AI or by hand, is signed off by an independent reviewer, and a changed rule voids its sign-off.</p>' : '') +
-    (has('sum') ? '<p class="hwp">In the app, every summary written by AI carries a small AI label, and a tap on it opens the rule as written.</p>' : '') +
-    '<p class="hwp">Nothing ships unless every check passes: the build refuses to run otherwise.</p>' +
-    (VER ? '<p class="qh">Checked ' + esc(VER.date) + '</p>' + VER.checks.map(c => '<p class="vchk"><b>' + esc(c.label) + '</b> ' + esc(c.detail) + '</p>').join('') +
+    '<div class="hdia">' + s1 + hwArrow('extracted by scripts') + s2 + hwArrow('a list from an export') + s3 + hwArrow('the rules’ boxes, read twice') + s4 +
+      hwArrow('the one AI part') + s5 + hwArrow('all of it, checked') + s6 + hwArrow('published') + s7 + '</div>' +
+    (VER ? '<div class="sec-h"><h2>Checked ' + esc(VER.date) + '</h2></div>' + VER.checks.map(c => '<p class="vchk"><b>' + esc(c.label) + '</b> ' + esc(c.detail) + '</p>').join('') +
       '<details class="xp"><summary><span class="xh"><b>Sources</b><span>what it was compared with</span></span>' + chev + '</summary><div class="body">' + VER.sources.map(c => '<p class="vchk"><b>' + esc(c.label) + '</b> ' + esc(c.detail) + '</p>').join('') + '</div></details>'
       : '<p class="note">This copy carries no record of its check.</p>');
 }

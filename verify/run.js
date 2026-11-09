@@ -161,7 +161,9 @@ function writeVerified(ok){
     { label:'Wahapedia:', detail:'faction pages for ' + Object.values(D.factions).map(f => f.name).join(', ') + ' and the errata and FAQs they list' +
       (noPack.length ? ' (the only source for ' + noPack.join(', ') + ': no GW Faction Pack yet)' : '') + '.' }
   ];
-  const v = { ok, build:hash.slice(0, 10), data:D.version, date:new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }), checks, sources, tables:columnSources() };
+  // (steps: each step of this run and whether it passed, in order: the How screen's release gate counts them)
+  const v = { ok, build:hash.slice(0, 10), data:D.version, date:new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }), checks, sources, tables:columnSources(),
+    steps:Object.entries(steps).map(([name, x]) => ({ name, ok:x.ok })) };
   fs.writeFileSync(path.join(ROOT, 'verified.js'), '// written by verify/run.js: the last verification of this app.html + data.js\nwindow.WH_VERIFIED = ' + JSON.stringify(v, null, 1) + ';\n');
 }
 console.log(ok ? '\nVERIFIED: every check passes for this app.html + data.js' : '\nNOT VERIFIED: build.js will refuse to build');
