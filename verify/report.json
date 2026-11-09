@@ -1,6 +1,6 @@
 {
- "hash": "516599887f2efe1436912bef1b4bc945cf8e1b1c6ae1fba70932046125dbe2f7",
- "at": "2026-11-09T04:24:30.032Z",
+ "hash": "11708abd8a706d3580495e4c7adbf3f165838295fbc1ab0870490ed8d6cbcb18",
+ "at": "2026-11-09T06:30:36.700Z",
  "ok": true,
  "steps": {
   "data": {
@@ -25,7 +25,7 @@
   },
   "lines": {
    "ok": true,
-   "summary": "lines: 109 Damaged ranges, 2 once-per-battle chips, 2 extra-CP chips and 12 \"does nothing here\" chips as their words give them; 160 lines under a profile from stat boxes; 1477 footnotes (8 in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects' and conditions' labels, 243 \"see the rule\" lines; 130 catalogue labels with their values; 309 boxes with every condition of their words (69 reach boxes and models scopes checked against GW’s phrase, 0 unchecked, said “If (see the rule)”); 66 Damaged bands as their boxes; 1302 drawn lines, one source each; 685 sources the lists use, every sentence of the numbers counted or listed not counted; 18 fixed cases; 2403 counted boxes drawn as a summary, each summary with their numbers (LN); 2088 placed lines, each with its summary, every summary used (LM); 19 leader lines for its own model, each \"<model> only:\", and every one of the 19 \"<model> only:\" marks drawn on such a line, none on a line mixed with the unit's (LO)"
+   "summary": "lines: 109 Damaged ranges, 2 once-per-battle chips, 2 extra-CP chips and 12 \"does nothing here\" chips as their words give them; 160 lines under a profile from stat boxes; 1507 footnotes (9 in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects' and conditions' labels, 213 \"see the rule\" lines; 132 catalogue labels with their values; 309 boxes with every condition of their words (69 reach boxes and models scopes checked against GW’s phrase, 0 unchecked, said “If (see the rule)”); 66 Damaged bands as their boxes; 1301 drawn lines, one source each; 685 sources the lists use, every sentence of the numbers counted or listed not counted; 18 fixed cases; 2433 counted boxes drawn as a summary, each summary with their numbers (LN); 2088 placed lines, each with its summary, every summary used (LM); 19 leader lines for its own model, each \"<model> only:\", and every one of the 19 \"<model> only:\" marks drawn on such a line, none on a line mixed with the unit's (LO)"
   },
   "defence": {
    "ok": true,
@@ -33,7 +33,7 @@
   },
   "agree": {
    "ok": true,
-   "summary": "agree: 449 boxes compared (and 1 not Core Rules, outside it), 50 fall back (29 change a number), 25 confirmed by a verdict, 6 core"
+   "summary": "agree: 449 boxes compared (and 1 not Core Rules, outside it), 47 fall back (26 change a number), 25 confirmed by a verdict, 6 core"
   },
   "invariants": {
    "ok": true,
@@ -85,7 +85,7 @@
   },
   "calc": {
    "ok": true,
-   "summary": "calc: 407 of 407 hand-worked cases within margin"
+   "summary": "calc: 411 of 411 hand-worked cases within margin"
   },
   "import": {
    "ok": true,
