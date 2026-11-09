@@ -27,8 +27,9 @@
      R2  reader2 runs in a sandbox: its files and a copy of data.js with only the text fields, names and keywords it reads (strip), in a
          temp folder KODEX_APP names, under node's permission model: it can read that folder and GW's text, verify/.cache/gw and
          verify/.cache/waha (with waha/ds), nothing else (no BSData, no donors, no app code, no BOXES or AGREE, no verify/out); the
-         sandbox's flags are exactly those (SANDBOX_READ, sandboxArgs), and a probe run under them is refused every other path and
-         allowed those; there its tests pass (--test) and its readings are the stored ones (--check)
+         sandbox's flags are exactly those (SANDBOX_READ, sandboxArgs); a probe run under them is refused a fixed list of other paths
+         (BSData, donors, data.js, app.html, effects.js, verify/out, the app's reading code, verify/sources) and allowed those; reader2
+         ran through sandboxRun with exactly those flags, and agree.js starts no other process (sandboxCalls); there its tests pass (--test) and its readings are the stored ones (--check)
      R3  reader2's files are the reviewed ones (verify/sources/agree-pins.json, sha256; node verify/agree.js --pin after a review)
      T   data.js AGREE is the table the comparison computes now
      Q   every verdict's GW quotes are in GW's text (verify/.cache) and in the words of the pair's own rule (its WHEN / TARGET / EFFECT /
@@ -617,8 +618,26 @@ const SANDBOX_CACHE = ['gw', 'waha'];
 const SANDBOX_READ = box => [box.dir].concat(SANDBOX_CACHE.map(d => path.join(box.cache, d)));
 // node's flags for a script run in the sandbox: the permission model, a read grant per SANDBOX_READ path, nothing else
 const sandboxArgs = (box, script, args) => ['--permission'].concat(SANDBOX_READ(box).map(p => '--allow-fs-read=' + p), [script], args || []);
-const sandboxRun = (box, script, args) => spawnSync(process.execPath, sandboxArgs(box, script, args),
-  { cwd:path.dirname(script), env:Object.assign({}, process.env, { KODEX_APP:box.dir, KODEX_CACHE:box.cache }), encoding:'utf8' });
+// the only process agree.js starts (R2 checks it, sandboxCalls): each run is logged with the exact argv node got
+const SANDBOX_LOG = [];
+const sandboxRun = (box, script, args) => { const argv = sandboxArgs(box, script, args);
+  const r = spawnSync(process.execPath, argv, { cwd:path.dirname(script), env:Object.assign({}, process.env, { KODEX_APP:box.dir, KODEX_CACHE:box.cache }), encoding:'utf8' });
+  SANDBOX_LOG.push({ script, args:(args || []).slice(), argv:argv.slice(), status:r.status }); return r; };
+// R2: reader2 ran through sandboxRun, with exactly sandboxArgs' flags, once per argument it was run with; and statically, agree.js starts no
+// process but sandboxRun's (one spawnSync call, child_process required once, no spawn / fork / exec / execFile / execSync / execFileSync)
+function sandboxCalls(box, script, runs){
+  const fails = [];
+  for(const a of runs){ const got = SANDBOX_LOG.filter(x => x.script === script && x.args.length === 1 && x.args[0] === a), want = JSON.stringify(sandboxArgs(box, script, [a]));
+    if(got.length !== 1) fails.push('R2 reader2.js ' + a + ' ran ' + got.length + ' times through sandboxRun, not once: it did not run in the sandbox');
+    else if(JSON.stringify(got[0].argv) !== want) fails.push('R2 reader2.js ' + a + ' ran with ' + got[0].argv.join(' ') + ', not the sandbox\'s flags'); }
+  const src = fs.readFileSync(__filename, 'utf8'), calls = [...src.matchAll(/\bspawnSync\s*\(/g)];
+  if(calls.length !== 1 || !/const r = spawnSync\(process\.execPath, argv, /.test(src.slice(src.indexOf('const sandboxRun = '), src.indexOf('const sandboxRun = ') + 200)))
+    fails.push('R2 agree.js calls spawnSync ' + calls.length + ' times: only sandboxRun may start a process');
+  const req = src.match(/require\(\s*['"]child_process['"]\s*\)/g) || [];
+  if(req.length !== 1 || !/const \{ spawnSync \} = require\('child_process'\);/.test(src)) fails.push('R2 agree.js requires the process module otherwise than once for spawnSync: only sandboxRun may start a process');
+  const other = src.match(/(?<![.\w])(spawn|fork|exec|execFile|execSync|execFileSync)\s*\(/g); if(other) fails.push('R2 agree.js starts a process otherwise: ' + other.join(', '));
+  return fails;
+}
 // R2's own check of the sandbox: its flags grant reading SANDBOX_READ only (no other grant, no write, child process, worker, addon or
 // WASI flag), and a probe run under them is refused every other path (BSData, donors, the app's files, verify/out) and allowed its own
 function sandboxFails(box){
@@ -722,7 +741,7 @@ if(require.main === module){
   // R3: reader2's files are the reviewed ones (verify/sources/agree-pins.json, sha256): a change to it is reviewed, then pinned (--pin)
   const PINS = JSON.parse(fs.readFileSync(PINFILE, 'utf8')).files, have3 = pinsOf();
   for(const f of [...new Set(Object.keys(PINS).concat(Object.keys(have3)))].sort()) if(PINS[f] !== have3[f]) fails.push('R3 verify/reader2/' + f + (!have3[f] ? ' is gone' : !PINS[f] ? ' is not pinned' : ' is not the reviewed file') + ' (review it, then node verify/agree.js --pin)');
-  // R2: reader2 run in a sandbox: a copy of its files and of data.js's text fields, names and keywords only (strip) in a temp folder that
+  // R2: reader2 run in a sandbox (through sandboxRun only: sandboxCalls): a copy of its files and of data.js's text fields, names and keywords only (strip) in a temp folder that
   // KODEX_APP names, under node's permission model (it reads that folder and GW's text, verify/.cache/gw and waha, nothing else: no
   // BSData, no donors, no app code, no BOXES, no verify/out: sandboxFails holds it); its tests pass and its readings are the stored ones
   // (--check: deterministic)
@@ -733,6 +752,7 @@ if(require.main === module){
       const o = (r.stdout + r.stderr).trim();
       if(r.status !== 0) fails.push('R2 reader2.js ' + a + ' fails in its sandbox: ' + o.split('\n').filter(Boolean).slice(-3).join(' / ').slice(0, 300));
       else note.push('reader2 ' + a + ' (sandbox): ' + o.split('\n')[a === '--check' ? 0 : o.split('\n').length - 1].slice(0, 80)); }
+    sandboxCalls(box, path.join(box.dir, 'reader2', 'reader2.js'), ['--test', '--check']).forEach(f => fails.push(f));
   } finally { fs.rmSync(box.dir, { recursive:true, force:true }); }
   const { P, V, byBox, T } = compute(D);
   // T

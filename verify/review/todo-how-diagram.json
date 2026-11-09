@@ -184,12 +184,12 @@
   "kind": "how-diagram",
   "where": "4 readers · reader 2",
   "judgement": {
-   "text": "verify/reader2/ is written apart, never uses the app’s reading code; the gate runs it in a sandbox that can read only its own files, GW’s documents and Wahapedia’s pages, and a copy of data.js cut down to the rules’ words and what places them (names, ids, keywords, tags)"
+   "text": "verify/reader2/ is written apart, never uses the app’s reading code; the gate runs it in a sandbox that can read only its own files, GW’s documents and Wahapedia’s pages, and a copy of data.js cut down to the rules’ words and what places them (names, ids, factions, keywords, tags, which model has it, where a rule’s table sits)"
   },
   "source": {
-   "code": "verify/agree.js R1 (no require of the app’s reading code, no BOXES); R2: sandbox() (its folder: reader2’s files and strip(D): datasheets name/faction/kw, abilities name/tag/who/text, armies id/faction, units id/name/kw, rules name/tag/text/table/tableAt, enhancements name/text, stratagems name/when/target/restrictions/effect), SANDBOX_READ = that folder + verify/.cache/gw + verify/.cache/waha (with ds), sandboxArgs (--permission and those reads only), sandboxFails (the flags exactly those; a probe refused bsdata, donors, data.js, app.html, effects.js, verify/out, verify/effects-extract.js, verify/sources, and allowed its own); R3 (pinned files)"
+   "code": "verify/agree.js R1 (no require of the app’s reading code, no BOXES); R2: sandbox() (its folder: reader2’s files and strip(D): datasheet keys and name/faction/kw, abilities name/tag/who/text, armies id/faction, units id/name/kw, faction and detachment keys and names, rules name/tag/text/table/tableAt, enhancements name/text, stratagems name/when/target/restrictions/effect); SANDBOX_READ = that folder + verify/.cache/gw + verify/.cache/waha (with ds); sandboxArgs (--permission and those reads only); sandboxFails (the flags exactly those; a probe refused a fixed list of paths: .cache/bsdata, .cache/donors and donors/current.js, data.js, app.html, effects.js, verify/out, verify/effects-extract.js, verify/sources; and allowed its own data.js, gw, waha, waha/ds); sandboxCalls (reader2 --test and --check each ran once through sandboxRun, whose logged argv equals sandboxArgs; statically one spawnSync call, sandboxRun’s, one require of child_process, no other spawn/fork/exec); R3 (pinned files)"
   },
-  "key": "633ae2decc6709f9"
+  "key": "5022a0b61cbd40ac"
  },
  {
   "army": "code",
@@ -400,11 +400,11 @@
   "kind": "how-diagram",
   "where": "code",
   "judgement": {
-   "text": "verify/agree.js: reader2’s sandbox reads only its own folder, verify/.cache/gw and verify/.cache/waha; R2 fails on any other grant or any other readable path (sandboxFails)"
+   "text": "verify/agree.js: reader2’s sandbox reads only its own folder, verify/.cache/gw and verify/.cache/waha; R2 fails on any other grant or flag, on any path of a fixed list (BSData, donors, the app’s files, verify/out, the reading code, verify/sources) a probe in the sandbox can read (sandboxFails), and unless reader2 ran through sandboxRun with exactly the sandbox’s argv and agree.js starts no other process (sandboxCalls)"
   },
   "source": {
-   "code": "this branch’s diff of verify/agree.js; mutations shown failing: a donors grant, the whole cache; reader2 reading donors/current.js refused (ERR_ACCESS_DENIED); reader2 --test 97 passed and its readings byte-identical in the sandbox"
+   "code": "this branch’s diff of verify/agree.js; mutations shown failing: a donors grant, the whole cache (sandboxFails); reader2 reading donors/current.js refused (ERR_ACCESS_DENIED); reader2 run by a plain spawnSync with the whole cache, and by execFileSync with no sandbox (sandboxCalls: ran 0 times through sandboxRun, a second spawnSync / another child_process require); reader2 --test 97 passed and its readings byte-identical in the sandbox"
   },
-  "key": "b0278028c5c7eeda"
+  "key": "d674155bee33ae64"
  }
 ]
