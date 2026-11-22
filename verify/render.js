@@ -1064,13 +1064,34 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.click('#sheetIn [data-close]'); await page.waitForTimeout(300);
     const left = await page.evaluate(id => ({ sheet:$('#sheetHost').hidden, there:!!armyById(id), s:cur.s, kept:JSON.parse(localStorage.getItem('wh-imported') || '[]').length }), id);
     if(!left.sheet || !left.there || left.s !== 'army' || left.kept !== 1) fail('import-remove-menu', L, 'Keep it', JSON.stringify(left));
-    // Remove from the menu: home, the toast, and the list with everything this phone keeps for it gone (its export, per-battle ticks, Phase checklist boxes, star)
-    await page.evaluate(id => { localStorage.setItem('wh-used-' + id, '["x"]'); localStorage.setItem('wh-check-' + id, '["x"]'); setFav(id, true); setFav('6-bigs', true); }, id);
-    await page.waitForTimeout(400); await page.click('#armyMenu [data-imprmask]'); await page.waitForTimeout(450); await page.click('#sheetIn [data-imprmyes]'); await page.waitForTimeout(400);
-    const gone = await page.evaluate(id => ({ s:cur.s, sheet:$('#sheetHost').hidden, there:!!armyById(id), kept:localStorage.getItem('wh-imported'), n:WH_DATA.armies.length, favs:localStorage.getItem('wh-favs'),
-      toast:$('#toast').innerText, ticks:[localStorage.getItem('wh-used-' + id), localStorage.getItem('wh-check-' + id)], left:Object.keys(localStorage).filter(k => k.includes(id)) }), id);
-    if(gone.s !== 'home' || !gone.sheet || gone.there || gone.kept !== '[]' || gone.n !== armies.length || gone.ticks.some(x => x !== null) || gone.left.length || gone.favs !== '["6-bigs"]' || !/^Removed /.test(gone.toast)) fail('import-remove', L, 'Remove', JSON.stringify(gone));
-    await page.evaluate(() => localStorage.removeItem('wh-favs'));
+    // Remove, from the menu and from the Overview's foot: home, the toast, and the list with everything this phone keeps for it gone (its export,
+    // per-battle ticks, Phase checklist boxes, star); another list's ticks, boxes and star, and another kept export with its own, untouched
+    const OTHER = 'local-000000000000';
+    const removeVia = async (how, tap) => {
+      const other = await page.evaluate(([id, other]) => {
+        for(const k of [id, '6-bigs', other]){ localStorage.setItem('wh-used-' + k, '["u-' + k + '"]'); localStorage.setItem('wh-check-' + k, '["c-' + k + '"]'); }
+        setFav(id, true); setFav('6-bigs', true);
+        const kept = JSON.parse(localStorage.getItem('wh-imported') || '[]'), o = JSON.stringify(Object.assign({}, kept.find(x => x.id === id), { id:other }));
+        localStorage.setItem('wh-imported', JSON.stringify(kept.concat([JSON.parse(o)]))); return o; }, [id, OTHER]);
+      await tap();
+      const gone = await page.evaluate(([id, other]) => ({ s:cur.s, sheet:$('#sheetHost').hidden, there:!!armyById(id), kept:localStorage.getItem('wh-imported'), n:WH_DATA.armies.length, favs:localStorage.getItem('wh-favs'),
+        toast:$('#toast').innerText, left:Object.keys(localStorage).filter(k => k.includes(id)),
+        keys:['6-bigs', other].flatMap(k => [localStorage.getItem('wh-used-' + k), localStorage.getItem('wh-check-' + k)]) }), [id, OTHER]);
+      const want = ['6-bigs', OTHER].flatMap(k => ['["u-' + k + '"]', '["c-' + k + '"]']);
+      if(gone.s !== 'home' || !gone.sheet || gone.there || gone.n !== armies.length || gone.left.length || gone.favs !== '["6-bigs"]' || !/^Removed /.test(gone.toast))
+        fail('import-remove', L, how, JSON.stringify(Object.assign({}, gone, { kept:(gone.kept || '').slice(0, 80) })));
+      if(gone.kept !== '[' + other + ']') fail('import-remove', L, how, 'the other kept export is not all that is left: ' + JSON.stringify((JSON.parse(gone.kept || 'null') || []).map(x => x.id)));
+      if(JSON.stringify(gone.keys) !== JSON.stringify(want)) fail('import-remove', L, how, 'another list\'s ticks or boxes changed: ' + JSON.stringify(gone.keys));
+      await page.evaluate(other => { for(const k of ['6-bigs', other]){ localStorage.removeItem('wh-used-' + k); localStorage.removeItem('wh-check-' + k); } localStorage.removeItem('wh-favs'); localStorage.setItem('wh-imported', '[]'); }, OTHER);
+    };
+    await removeVia('Remove (menu)', async () => { await page.waitForTimeout(400); await page.click('#armyMenu [data-imprmask]'); await page.waitForTimeout(450); await page.click('#sheetIn [data-imprmyes]'); await page.waitForTimeout(400); });
+    // (imported again, the same export: the same id; then Remove from its Overview)
+    await page.evaluate(() => { hideSheet(); go({ s:'home' }); }); await page.waitForTimeout(400); await page.click('#view [data-import]'); await page.waitForTimeout(400);
+    await page.setInputFiles('#impFile', IMPORT_FILE); await page.waitForTimeout(600);
+    const again = await page.evaluate(() => cur.army);
+    if(again !== id) fail('import-remove', L, 'imported again', String(again));
+    await page.evaluate(id => { hideSheet(); go({ s:'pregame', army:id }); }, id);
+    await removeVia('Remove (Overview)', async () => { await page.waitForTimeout(400); await page.locator('[data-imprm]').scrollIntoViewIfNeeded(); await page.click('[data-imprm]'); await page.waitForTimeout(200); await page.click('[data-imprmyes]'); await page.waitForTimeout(400); });
     // a kept export that cannot be read: the app starts, lists it as out of date with its Remove
     await page.evaluate(() => localStorage.setItem('wh-imported', JSON.stringify([{ id:'import-broken', name:'Broken', date:'1 Jan 2026', json:{ roster:{ forces:[{ catalogueId:'x', selections:[null] }] } } }])));
     await page.reload(); await page.evaluate(() => document.fonts.ready);
