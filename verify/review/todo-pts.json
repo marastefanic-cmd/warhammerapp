@@ -1,0 +1,31 @@
+[
+ {
+  "army": "(imports of catalogued factions: Adeptus Custodes, Chaos Daemons, Tyranids)",
+  "kind": "gw-points-wargear",
+  "where": "builder.js wargearOf; build (GW's points: band + wargear + enhancement)",
+  "judgement": {
+   "rule": "A unit's GW points are its datasheet's band for that copy and size, plus each of GW's WARGEAR OPTIONS costs its selections take, plus its enhancement's. A selection takes the wargear row of its own name, or of each item of a bundle it names (split on '&', ',' or 'and'), each row once on a selection's path.",
+   "before": "only a selection of exactly the row's name counted: BSData's 'Paragon Blade & Praesidium Shield' / 'Pyrithite Spear & Praesidium shield' took no cost, so a Shield-Captain with a shield was priced 180 (205 by GW), 210 with a 30-pt enhancement (235 by GW), and the export's correct points were replaced with these and a note naming both",
+   "check": "verify/build-parity.js N: Shield-Captain with shield and Genalchemic Warding 235, without 205, two copies 235 + 225, an export pricing the shield 20 built at 235 with the note {export 230, gw 235}; every paid option of every catalogued datasheet priced by wargearOf at BSData's cost (fails on the old code: 5 checks)",
+   "lists": "no built-in list changes (P1: 6 built byte for byte; none has a Shield-Captain)"
+  },
+  "source": {
+   "gw": "Shield-Captain, YOUR 1ST UNIT COSTS 1 model 180; YOUR 2ND+ UNIT COSTS 1 model 200; WARGEAR OPTIONS per Praesidium Shield 25 (verify/sources/catalog/adeptus-custodes.json points); Shadowkeepers, Genalchemic Warding 30",
+   "bsdata": "Shield-Captain Wargear: Paragon Blade & Praesidium Shield (5267-88a7-c874-ba99) pts 25; Pyrithite Spear & Praesidium shield (661f-4fd-3300-5e9b) pts 25"
+  },
+  "key": "gw-points-wargear|wargearOf"
+ },
+ {
+  "army": "(imports of catalogued factions)",
+  "kind": "gw-points-note",
+  "where": "builder.js build (gwPoints); app.html Overview note",
+  "judgement": {
+   "rule": "unchanged: where an export's unit points differ from GW's, the list takes GW's and the Overview note names both ('<unit> <export> pts in the export, <gw> pts by GW'); pointsUsed is then the sum of GW's",
+   "check": "verify/build-parity.js N 'Shield-Captain whose export prices the shield at 20': gwPoints [{ unit: Shield-Captain, export: 230, gw: 235 }], pointsUsed 1645; the correct export (235) gets no note"
+  },
+  "source": {
+   "owner": "the earlier decision: import with GW's points and show a note naming both values"
+  },
+  "key": "gw-points-note|gwPoints"
+ }
+]
