@@ -293,7 +293,59 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       await take('popup import', `() => { hideSheet(); go({ s:'home' }); showImport(); }`);
       await take('popup import (not recognized)', `() => { hideSheet(); go({ s:'home' }); showImport(); return runImport(${JSON.stringify(JSON.stringify(IMPORT_BAD))}); }`); }
     // (the Phase checklist from Find, then back to Find: the screens after it are reached as before, their back buttons the same)
-    for(const s of ['army','checklist','pregame','units','ranged','melee','abilities','rules','bases']){ await screen(s); if(s === 'checklist') await page.evaluate(id => { hideSheet(); go({ s:'army', army:id }); }, a.id); }
+    for(const s of ['army','checklist','reserves','pregame','units','ranged','melee','abilities','rules','bases']){ await screen(s); if(s === 'checklist' || s === 'reserves') await page.evaluate(id => { hideSheet(); go({ s:'army', army:id }); }, a.id); }
+    // Strategic reserves (each check worked out here from data.js, apart from the app's own functions):
+    // - reserves-ds: every unit's Deep Strike marks are what its rules and GRANTS say: "own" when its Rules line (with the detachment rules it
+    //   gets) names Deep Strike and no model alone has it (partialRules), "part" when one model alone has it; a "grant:<rule>" for each GRANTS
+    //   row giving Deep Strike from an army rule of its faction or a detachment rule of the list (its words) whose keywords it has, or from
+    //   one of its usable abilities whose words the row quotes; nothing else
+    // - reserves-limit: the limit is the percentage GW's Strategic Reserves text (data.js RULES) states of the list's points limit, and the
+    //   screen quotes that sentence as data.js has it; a unit the text excludes (FORTIFICATIONS) has no box to tick
+    // - reserves-ticks: a box ticked is kept for the list (wh-res-<id>) and counted at the unit's points in the total, which stays pinned
+    //   (sticky) under the top bar; over the limit the total says so; Reset clears the boxes
+    { const bad = await page.evaluate(id => { const out = [], A = armyById(id); hideSheet(); go({ s:'reserves', army:id }); navAt = -1e9;
+        const F = WH_DATA.factions[A.faction], dets = A.detachments.map(d => F.detachments[d]).filter(Boolean), detR = d => d.rule ? [d.rule].concat(d.moreRules || []) : [];
+        const isDS = n => /^deep strike\b/i.test(String(n));
+        const kwOf = u => u.kw.map(k => k.toLowerCase()), kwm = (n, u) => !n || ((n.all || []).every(k => kwOf(u).includes(k.toLowerCase())) && (!n.any || n.any.some(k => kwOf(u).includes(k.toLowerCase())))
+          && !(n.none || []).some(k => kwOf(u).includes(k.toLowerCase())));
+        for(const u of A.units){
+          const rules = (u.rules || []).concat(dets.flatMap(detR).filter(r => r.needs && kwm(r.needs, u)).map(r => r.name)), part = Object.keys(u.partialRules || {}).some(isDS);
+          const want = [];
+          if(rules.some(isDS)) want.push(part ? 'part' : 'own');
+          for(const g of WH_DATA.grants || []){ if(g.grants !== 'Deep Strike' || g.type !== 'ability') continue;
+            const name = String(g.rule).split(' · ').pop(), fromRule = F.armyRules.concat(dets.flatMap(detR)).find(r => r.name === name && String(r.text).includes(g.text));
+            const viaRule = fromRule && String(g.rule).startsWith(F.name + ' ') && g.to && typeof g.to === 'object' && kwm(g.to, u);
+            const viaAb = u.abilities.some(ab => !ab.na && ab.name === name && String(ab.text).includes(g.text)) && (g.to === 'this unit / model' || (g.to && typeof g.to === 'object' && kwm(g.to, u)));
+            if(viaRule || viaAb) want.push('grant:' + name); }
+          const row = document.querySelector('#view [data-resu="' + CSS.escape(u.id) + '"]');
+          if(!row){ out.push(['reserves-ds', u.id, 'no row']); continue; }
+          const got = [...row.querySelectorAll('[data-resds]')].map(x => x.dataset.resds);
+          if(got.slice().sort().join('|') !== want.slice().sort().join('|')) out.push(['reserves-ds', u.id, 'shows [' + got.join(', ') + '], its rules and GRANTS say [' + want.join(', ') + ']']);
+          if(row.querySelectorAll('[data-rtick]').length !== (u.copies || 1)) out.push(['reserves-ticks', u.id, row.querySelectorAll('[data-rtick]').length + ' boxes for ' + (u.copies || 1) + ' units']);
+        }
+        const T = String(WH_DATA.rules['Strategic Reserves'] || '').replace(/\*\*/g, ''), pct = /cannot exceed (\d+)% of your points limit for your battle size/.exec(T);
+        const bar = document.querySelector('#view .resbar'), lim = pct ? Math.floor(A.points * pct[1] / 100) : null;
+        if(!bar || getComputedStyle(bar).position !== 'sticky') out.push(['reserves-ticks', id, 'no running total pinned under the top bar']);
+        else if(!pct || !bar.textContent.includes('0 / ' + lim + ' pts')) out.push(['reserves-limit', id, 'the total says “' + bar.textContent + '”, GW’s text gives ' + (pct ? pct[1] + '% of ' + A.points + ' = ' + lim : 'no limit')]);
+        const q = [...document.querySelectorAll('#view .pgv')].map(x => x.firstChild && x.firstChild.textContent).find(x => /cannot exceed/.test(x || ''));
+        if(!q || !T.includes(q.trim())) out.push(['reserves-limit', id, 'the limit quoted is not GW’s Strategic Reserves text: ' + q]);
+        const ex = /\(excluding ([A-Z][A-Z /]*[A-Z])\) to place in strategic reserves/.exec(T), exK = ex ? ex[1].split('/').map(k => k.trim().replace(/S$/, '').toLowerCase()) : [];
+        for(const u of A.units) if(exK.some(k => kwOf(u).includes(k)) && document.querySelector('#view [data-resu="' + CSS.escape(u.id) + '"] [data-rtick]:not([disabled])')) out.push(['reserves-limit', u.id, 'a ' + ex[1] + ' unit can be ticked']);
+        // ticking: the first unit that can be, kept and counted; then every one in turn until over the limit (if the list can be); Reset
+        const boxes = [...document.querySelectorAll('#view [data-rtick]:not([disabled])')], u0 = boxes[0] && A.units.find(u => u.id === boxes[0].dataset.rtick.split('#')[0]);
+        if(boxes.length){ boxes[0].click();
+          const kept = JSON.parse(localStorage.getItem('wh-res-' + id) || '[]').includes(boxes[0].dataset.rtick);
+          go({ s:'reserves', army:id }); navAt = -1e9;
+          const on = document.querySelector('#view [data-rtick="' + CSS.escape(boxes[0].dataset.rtick) + '"].on'), t1 = document.querySelector('#view .resbar').textContent;
+          if(!kept || !on || !t1.includes(u0.pts + (lim != null ? ' / ' + lim : '') + ' pts')) out.push(['reserves-ticks', id, JSON.stringify({ kept, on:!!on, total:t1 })]);
+          let sum = u0.pts; for(const b of [...document.querySelectorAll('#view [data-rtick]:not(.on):not([disabled])')]){ if(lim == null || sum > lim) break; b.click(); sum += A.units.find(u => u.id === b.dataset.rtick.split('#')[0]).pts; }
+          const t2 = document.querySelector('#view .resbar'), over = lim != null && sum > lim;
+          if(!t2.textContent.includes(sum + (lim != null ? ' / ' + lim : '') + ' pts') || over !== t2.classList.contains('over') || over !== /over the limit/.test(t2.textContent)) out.push(['reserves-ticks', id, 'ticked ' + sum + ' pts, the total says “' + t2.textContent + '”']);
+          document.querySelector('#view [data-rreset]').click();
+          if(document.querySelector('#view [data-rtick].on') || JSON.parse(localStorage.getItem('wh-res-' + id) || '[]').length) out.push(['reserves-ticks', id, 'Reset left boxes ticked']);
+          localStorage.removeItem('wh-res-' + id); $('#toast').classList.remove('show', 'act'); undoFn = null; }
+        go({ s:'bases', army:id }); return out; }, a.id);   // (back where the screens above ended: the screens after are reached as before)
+      for(const [c, w, d] of bad) fail(c, a.id, w, d); }
     // the damage calculator, at a target set by hand (a fresh one: 5 × T4 Sv 3+ W2): this list's first unit with ranged weapons
     // shooting (Shoot), its first unit with melee weapons fighting, charged (Fight), and its first unit with both shooting, charging
     // and fighting (Both); each taken once every effect is worked out (the list's order and every number settled: the background work
@@ -1029,7 +1081,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     const same = await page.evaluate(([id, orig]) => { const out = [], A = armyById(id); if(!A) return ['not there after a reload'];
       const txt = (s, a, x) => { hideSheet(); go(Object.assign({ s, army:a }, x || {})); document.querySelectorAll('#view details').forEach(d => d.open = true); return $('#view').innerText; };
       const drop = (t, imp) => imp ? t.replace(/New Recruit, imported [^\n]*/, '').replace(/\nON THIS PHONE[\s\S]*$/i, '') : t.replace(/New Recruit, exported [^\n]*/, '');
-      for(const s of ['army', 'pregame', 'checklist', 'units', 'strats', 'ranged', 'melee', 'abilities', 'rules', 'bases']) if(drop(txt(s, orig), false).trim() !== drop(txt(s, id), true).trim()) out.push(s + ' differs');
+      for(const s of ['army', 'pregame', 'checklist', 'reserves', 'units', 'strats', 'ranged', 'melee', 'abilities', 'rules', 'bases']) if(drop(txt(s, orig), false).trim() !== drop(txt(s, id), true).trim()) out.push(s + ' differs');
       for(const u of armyById(orig).units) if(txt('unit', orig, { unit:u.id }) !== txt('unit', id, { unit:u.id })) out.push('unit ' + u.id + ' differs');
       store.set('wh-home-sort', 'new'); hideSheet(); go({ s:'lists' });
       const first = (document.querySelector('#view .arow') || {}).dataset; if(!first || first.army !== id) out.push('not first in All lists by newest');
@@ -1047,10 +1099,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.click('[data-imprmno]'); await page.waitForTimeout(200);
     const kept = await page.evaluate(id => !!armyById(id) && !!document.querySelector('[data-imprm]'), id);
     if(!kept) fail('import-remove', L, 'Keep it', 'the list or its Remove is gone');
-    // (with a per-battle tick and a Phase checklist box kept for it: Remove clears both)
-    await page.evaluate(id => { localStorage.setItem('wh-used-' + id, '["x"]'); localStorage.setItem('wh-check-' + id, '["x"]'); }, id);
+    // (with a per-battle tick, a Phase checklist box and a Strategic reserves box kept for it: Remove clears them)
+    await page.evaluate(id => { localStorage.setItem('wh-used-' + id, '["x"]'); localStorage.setItem('wh-check-' + id, '["x"]'); localStorage.setItem('wh-res-' + id, '["x"]'); }, id);
     await page.click('[data-imprm]'); await page.waitForTimeout(200); await page.click('[data-imprmyes]'); await page.waitForTimeout(400);
-    const gone = await page.evaluate(id => ({ s:cur.s, there:!!armyById(id), kept:localStorage.getItem('wh-imported'), n:WH_DATA.armies.length, ticks:[localStorage.getItem('wh-used-' + id), localStorage.getItem('wh-check-' + id)] }), id);
+    const gone = await page.evaluate(id => ({ s:cur.s, there:!!armyById(id), kept:localStorage.getItem('wh-imported'), n:WH_DATA.armies.length, ticks:[localStorage.getItem('wh-used-' + id), localStorage.getItem('wh-check-' + id), localStorage.getItem('wh-res-' + id)] }), id);
     if(gone.s !== 'home' || gone.there || gone.kept !== '[]' || gone.n !== armies.length || gone.ticks.some(x => x !== null)) fail('import-remove', L, 'Remove', JSON.stringify(gone));
     // a kept export that cannot be read: the app starts, lists it as out of date with its Remove
     await page.evaluate(() => localStorage.setItem('wh-imported', JSON.stringify([{ id:'import-broken', name:'Broken', date:'1 Jan 2026', json:{ roster:{ forces:[{ catalogueId:'x', selections:[null] }] } } }])));
