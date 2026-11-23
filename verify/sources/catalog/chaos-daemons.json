@@ -1,10 +1,9 @@
 {
- "_about": "The Chaos - Chaos Daemons catalogue as verify/from-bsdata.js reads it from BSData (wh40k-11e at the pin) with GW’s datasheets over it (verify/from-json.js): every current datasheet (no Legends, no Crusade, no Crucible: verify/bs-catalog.js FILTER), one DATASHEETS row each. Written by `node verify/from-bsdata.js chaos-daemons --write`; verify/tables.js --write puts every row into DATASHEETS (a row a list has keeps the list’s signed-off facts, and gets the catalogue’s rows it lacks); the gate step catalog (verify/catalog.js) checks it is what the sources give. Do not edit.",
+ "_about": "A faction catalogue: every current datasheet (and detachment) of the faction as rows for data.js (docs/catalog.md). The rows are the committed source; verify/tables.js --write merges them into DATASHEETS and the gate step catalog (verify/catalog.js) holds every row to GW’s datasheets and faction page (Wahapedia). A new faction’s catalogue is written by verify/from-waha.js.",
  "faction": "chaos-daemons",
- "bsdata": {
-  "catalogue": "Chaos - Chaos Daemons",
-  "revision": 2,
-  "pin": "b4dc3f4"
+ "origin": {
+  "built": "before 22 Nov 2026, from New Recruit’s data (BSData wh40k-11e at b4dc3f4, catalogue Chaos - Chaos Daemons revision 2) with GW over it; BSData is no source any more and the file is not rebuilt from it",
+  "heldTo": "GW’s datasheets and faction page (Wahapedia), by the gate step catalog (verify/catalog.js)"
  },
  "counts": {
   "datasheets": 56,
@@ -15,7 +14,6 @@
   "chaos-daemons/belakor": {
    "name": "Be’lakor",
    "faction": "chaos-daemons",
-   "bsId": "2c37-2898-8350-ef45",
    "role": "Epic Hero",
    "stats": [
     {
@@ -192,7 +190,6 @@
   "chaos-daemons/epidemius": {
    "name": "Epidemius",
    "faction": "chaos-daemons",
-   "bsId": "5851-dc90-9afe-76a7",
    "role": "Epic Hero",
    "stats": [
     {
@@ -288,7 +285,6 @@
   "chaos-daemons/horticulous-slimux": {
    "name": "Horticulous Slimux",
    "faction": "chaos-daemons",
-   "bsId": "7151-238f-a6eb-2f94",
    "role": "Epic Hero",
    "stats": [
     {
@@ -404,7 +400,6 @@
   "chaos-daemons/kairos-fateweaver": {
    "name": "Kairos Fateweaver",
    "faction": "chaos-daemons",
-   "bsId": "6df5-f246-6bd-55b8",
    "role": "Epic Hero",
    "stats": [
     {
@@ -548,7 +543,6 @@
   "chaos-daemons/karanak": {
    "name": "Karanak",
    "faction": "chaos-daemons",
-   "bsId": "8436-cec1-e65a-d1a7",
    "role": "Epic Hero",
    "stats": [
     {
@@ -677,7 +671,6 @@
   "chaos-daemons/rotigus": {
    "name": "Rotigus",
    "faction": "chaos-daemons",
-   "bsId": "cff8-7388-a2c9-946c",
    "role": "Epic Hero",
    "stats": [
     {
@@ -823,7 +816,6 @@
   "chaos-daemons/shalaxi-helbane": {
    "name": "Shalaxi Helbane",
    "faction": "chaos-daemons",
-   "bsId": "c49d-5ebc-4ee4-689e",
    "role": "Epic Hero",
    "stats": [
     {
@@ -1003,7 +995,6 @@
   "chaos-daemons/skarbrand": {
    "name": "Skarbrand",
    "faction": "chaos-daemons",
-   "bsId": "7998-d0a-baa4-e8b3",
    "role": "Epic Hero",
    "stats": [
     {
@@ -1136,7 +1127,6 @@
   "chaos-daemons/skulltaker": {
    "name": "Skulltaker",
    "faction": "chaos-daemons",
-   "bsId": "8872-785a-1efa-7ca1",
    "role": "Epic Hero",
    "stats": [
     {
@@ -1234,7 +1224,6 @@
   "chaos-daemons/syllesske": {
    "name": "Syll’esske",
    "faction": "chaos-daemons",
-   "bsId": "27f6-d907-66f-ca28",
    "role": "Epic Hero",
    "stats": [
     {
@@ -1404,7 +1393,6 @@
   "chaos-daemons/the-blue-scribes": {
    "name": "The Blue Scribes",
    "faction": "chaos-daemons",
-   "bsId": "caf1-8818-9e65-7154",
    "role": "Epic Hero",
    "stats": [
     {
@@ -1498,7 +1486,6 @@
   "chaos-daemons/the-changeling": {
    "name": "The Changeling",
    "faction": "chaos-daemons",
-   "bsId": "ac75-c011-9a10-2c4a",
    "role": "Epic Hero",
    "stats": [
     {
@@ -1633,7 +1620,6 @@
   "chaos-daemons/the-masque-of-slaanesh": {
    "name": "The Masque of Slaanesh",
    "faction": "chaos-daemons",
-   "bsId": "1567-b99b-bd8f-d485",
    "role": "Epic Hero",
    "stats": [
     {
@@ -1727,7 +1713,6 @@
   "chaos-daemons/bloodmaster": {
    "name": "Bloodmaster",
    "faction": "chaos-daemons",
-   "bsId": "ccae-b5f1-8787-4c7d",
    "role": "Character",
    "stats": [
     {
@@ -1820,7 +1805,6 @@
   "chaos-daemons/bloodthirster": {
    "name": "Bloodthirster",
    "faction": "chaos-daemons",
-   "bsId": "a018-ca33-afd0-be83",
    "role": "Character",
    "stats": [
     {
@@ -2021,7 +2005,6 @@
   "chaos-daemons/changecaster": {
    "name": "Changecaster",
    "faction": "chaos-daemons",
-   "bsId": "8b7c-d709-90d4-298e",
    "role": "Character",
    "stats": [
     {
@@ -2156,7 +2139,6 @@
   "chaos-daemons/contorted-epitome": {
    "name": "Contorted Epitome",
    "faction": "chaos-daemons",
-   "bsId": "36df-8f40-8a6b-7d4c",
    "role": "Character",
    "stats": [
     {
@@ -2283,7 +2265,6 @@
   "chaos-daemons/daemon-prince-of-chaos": {
    "name": "Daemon Prince of Chaos",
    "faction": "chaos-daemons",
-   "bsId": "497d-e065-f5a5-5e80",
    "role": "Character",
    "stats": [
     {
@@ -2429,7 +2410,6 @@
   "chaos-daemons/daemon-prince-of-chaos-with-wings": {
    "name": "Daemon Prince of Chaos with wings",
    "faction": "chaos-daemons",
-   "bsId": "5800-3978-370d-b573",
    "role": "Character",
    "stats": [
     {
@@ -2571,7 +2551,6 @@
   "chaos-daemons/exalted-flamer": {
    "name": "Exalted Flamer",
    "faction": "chaos-daemons",
-   "bsId": "de54-5b38-8ca1-c39c",
    "role": "Character",
    "stats": [
     {
@@ -2710,7 +2689,6 @@
   "chaos-daemons/fateskimmer": {
    "name": "Fateskimmer",
    "faction": "chaos-daemons",
-   "bsId": "c199-b27c-7cc2-7935",
    "role": "Character",
    "stats": [
     {
@@ -2866,7 +2844,6 @@
   "chaos-daemons/fluxmaster": {
    "name": "Fluxmaster",
    "faction": "chaos-daemons",
-   "bsId": "eba5-8a7a-fc5b-d7ec",
    "role": "Character",
    "stats": [
     {
@@ -3002,7 +2979,6 @@
   "chaos-daemons/great-unclean-one": {
    "name": "Great Unclean One",
    "faction": "chaos-daemons",
-   "bsId": "d490-6c4d-e83b-b183",
    "role": "Character",
    "stats": [
     {
@@ -3214,7 +3190,6 @@
   "chaos-daemons/infernal-enrapturess": {
    "name": "Infernal Enrapturess",
    "faction": "chaos-daemons",
-   "bsId": "2cc5-ef65-c4b9-28c6",
    "role": "Character",
    "stats": [
     {
@@ -3346,7 +3321,6 @@
   "chaos-daemons/keeper-of-secrets": {
    "name": "Keeper of Secrets",
    "faction": "chaos-daemons",
-   "bsId": "a903-dd97-339d-6899",
    "role": "Character",
    "stats": [
     {
@@ -3552,7 +3526,6 @@
   "chaos-daemons/lord-of-change": {
    "name": "Lord of Change",
    "faction": "chaos-daemons",
-   "bsId": "3600-9f92-933-bf54",
    "role": "Character",
    "stats": [
     {
@@ -3733,7 +3706,6 @@
   "chaos-daemons/poxbringer": {
    "name": "Poxbringer",
    "faction": "chaos-daemons",
-   "bsId": "7b06-189d-b11e-c189",
    "role": "Character",
    "stats": [
     {
@@ -3842,7 +3814,6 @@
   "chaos-daemons/rendmaster-on-blood-throne": {
    "name": "Rendmaster on Blood Throne",
    "faction": "chaos-daemons",
-   "bsId": "d1cc-e17a-f1a1-4349",
    "role": "Character",
    "stats": [
     {
@@ -3958,7 +3929,6 @@
   "chaos-daemons/skullmaster": {
    "name": "Skullmaster",
    "faction": "chaos-daemons",
-   "bsId": "dd30-ba4c-34a4-e788",
    "role": "Character",
    "stats": [
     {
@@ -4071,7 +4041,6 @@
   "chaos-daemons/sloppity-bilepiper": {
    "name": "Sloppity Bilepiper",
    "faction": "chaos-daemons",
-   "bsId": "3da0-5db0-7531-33b6",
    "role": "Character",
    "stats": [
     {
@@ -4168,7 +4137,6 @@
   "chaos-daemons/spoilpox-scrivener": {
    "name": "Spoilpox Scrivener",
    "faction": "chaos-daemons",
-   "bsId": "e7cd-468b-37dd-d82f",
    "role": "Character",
    "stats": [
     {
@@ -4286,7 +4254,6 @@
   "chaos-daemons/tormentbringer": {
    "name": "Tormentbringer",
    "faction": "chaos-daemons",
-   "bsId": "673b-111b-6dcb-352",
    "role": "Character",
    "stats": [
     {
@@ -4441,7 +4408,6 @@
   "chaos-daemons/tranceweaver": {
    "name": "Tranceweaver",
    "faction": "chaos-daemons",
-   "bsId": "dba-34e3-46f2-56e0",
    "role": "Character",
    "stats": [
     {
@@ -4540,7 +4506,6 @@
   "chaos-daemons/bloodletters": {
    "name": "Bloodletters",
    "faction": "chaos-daemons",
-   "bsId": "4ecc-6aa5-da28-2c57",
    "role": "Battleline",
    "stats": [
     {
@@ -4659,7 +4624,6 @@
   "chaos-daemons/blue-horrors": {
    "name": "Blue Horrors",
    "faction": "chaos-daemons",
-   "bsId": "b795-b936-ad61-e407",
    "role": "Battleline",
    "stats": [
     {
@@ -4803,7 +4767,6 @@
   "chaos-daemons/daemonettes": {
    "name": "Daemonettes",
    "faction": "chaos-daemons",
-   "bsId": "41c2-d2e6-ae43-3beb",
    "role": "Battleline",
    "stats": [
     {
@@ -4926,7 +4889,6 @@
   "chaos-daemons/nurglings": {
    "name": "Nurglings",
    "faction": "chaos-daemons",
-   "bsId": "e403-3a9-279e-41b7",
    "role": "Battleline",
    "stats": [
     {
@@ -5017,7 +4979,6 @@
   "chaos-daemons/pink-horrors": {
    "name": "Pink Horrors",
    "faction": "chaos-daemons",
-   "bsId": "e7b8-aa40-6da7-778e",
    "role": "Battleline",
    "stats": [
     {
@@ -5212,7 +5173,6 @@
   "chaos-daemons/plaguebearers": {
    "name": "Plaguebearers",
    "faction": "chaos-daemons",
-   "bsId": "d1eb-b092-d944-e729",
    "role": "Battleline",
    "stats": [
     {
@@ -5334,7 +5294,6 @@
   "chaos-daemons/flamers": {
    "name": "Flamers",
    "faction": "chaos-daemons",
-   "bsId": "5f23-4d6-f2f9-5973",
    "role": "Infantry",
    "stats": [
     {
@@ -5465,7 +5424,6 @@
   "chaos-daemons/bloodcrushers": {
    "name": "Bloodcrushers",
    "faction": "chaos-daemons",
-   "bsId": "2f31-9132-b703-5fd8",
    "role": "Mounted",
    "stats": [
     {
@@ -5626,7 +5584,6 @@
   "chaos-daemons/burning-chariot": {
    "name": "Burning Chariot",
    "faction": "chaos-daemons",
-   "bsId": "f6eb-b62f-5baf-d96d",
    "role": "Mounted",
    "stats": [
     {
@@ -5771,7 +5728,6 @@
   "chaos-daemons/hellflayers": {
    "name": "Hellflayers",
    "faction": "chaos-daemons",
-   "bsId": "e8d-bf22-b29-d20e",
    "role": "Mounted",
    "stats": [
     {
@@ -5917,7 +5873,6 @@
   "chaos-daemons/plague-drones": {
    "name": "Plague Drones",
    "faction": "chaos-daemons",
-   "bsId": "d620-146a-41cd-f28f",
    "role": "Mounted",
    "stats": [
     {
@@ -6093,7 +6048,6 @@
   "chaos-daemons/seekers": {
    "name": "Seekers",
    "faction": "chaos-daemons",
-   "bsId": "112d-8078-777f-76a5",
    "role": "Mounted",
    "stats": [
     {
@@ -6255,7 +6209,6 @@
   "chaos-daemons/skull-cannon": {
    "name": "Skull Cannon",
    "faction": "chaos-daemons",
-   "bsId": "fd37-8a80-3da8-f262",
    "role": "Mounted",
    "stats": [
     {
@@ -6376,7 +6329,6 @@
   "chaos-daemons/beasts-of-nurgle": {
    "name": "Beasts of Nurgle",
    "faction": "chaos-daemons",
-   "bsId": "2de0-5897-f724-a592",
    "role": "Beast",
    "stats": [
     {
@@ -6467,7 +6419,6 @@
   "chaos-daemons/fiends": {
    "name": "Fiends",
    "faction": "chaos-daemons",
-   "bsId": "d1ee-8d05-4fae-1727",
    "role": "Beast",
    "stats": [
     {
@@ -6570,7 +6521,6 @@
   "chaos-daemons/flesh-hounds": {
    "name": "Flesh Hounds",
    "faction": "chaos-daemons",
-   "bsId": "fd31-64a2-b20f-f0bc",
    "role": "Beast",
    "stats": [
     {
@@ -6709,7 +6659,6 @@
   "chaos-daemons/screamers": {
    "name": "Screamers",
    "faction": "chaos-daemons",
-   "bsId": "550b-c5ab-5e27-f59b",
    "role": "Beast",
    "stats": [
     {
@@ -6800,7 +6749,6 @@
   "chaos-daemons/khorne-soul-grinder": {
    "name": "Khorne Soul Grinder",
    "faction": "chaos-daemons",
-   "bsId": "8e9f-aa9-17f5-e2d3",
    "role": "Vehicle",
    "stats": [
     {
@@ -6979,7 +6927,6 @@
   "chaos-daemons/nurgle-soul-grinder": {
    "name": "Nurgle Soul Grinder",
    "faction": "chaos-daemons",
-   "bsId": "137e-d9b8-e764-c7cd",
    "role": "Vehicle",
    "stats": [
     {
@@ -7160,7 +7107,6 @@
   "chaos-daemons/slaanesh-soul-grinder": {
    "name": "Slaanesh Soul Grinder",
    "faction": "chaos-daemons",
-   "bsId": "5df-73b6-d758-14fc",
    "role": "Vehicle",
    "stats": [
     {
@@ -7339,7 +7285,6 @@
   "chaos-daemons/tzeentch-soul-grinder": {
    "name": "Tzeentch Soul Grinder",
    "faction": "chaos-daemons",
-   "bsId": "e1b1-146f-6f77-3a15",
    "role": "Vehicle",
    "stats": [
     {
@@ -7516,7 +7461,6 @@
   "chaos-daemons/feculent-gnarlmaw": {
    "name": "Feculent Gnarlmaw",
    "faction": "chaos-daemons",
-   "bsId": "13f0-d2b5-6201-ba84",
    "role": "Fortification",
    "stats": [
     {
@@ -7585,7 +7529,6 @@
   "chaos-daemons/skull-altar": {
    "name": "Skull Altar",
    "faction": "chaos-daemons",
-   "bsId": "464a-b548-355f-2058",
    "role": "Fortification",
    "stats": [
     {
@@ -7655,28 +7598,24 @@
  "detachments": [
   {
    "name": "Daemonic Incursion",
-   "bsId": "a7cf-90fa-4093-6047",
    "rules": [
     "Warp Rifts"
    ]
   },
   {
    "name": "Legion of Excess",
-   "bsId": "24f0-3c89-41be-0675",
    "rules": [
     "Beguiling Aura"
    ]
   },
   {
    "name": "Scintillating Legion",
-   "bsId": "dec0-c9cb-c265-cae0",
    "rules": [
     "Fates in Flux"
    ]
   },
   {
    "name": "Blood Legion",
-   "bsId": "21b4-7a36-fec6-b7ea",
    "rules": [
     "Murdercall",
     "Bloodtainted"
@@ -7684,35 +7623,30 @@
   },
   {
    "name": "Plague Legion",
-   "bsId": "9ad0-91ee-ae18-b5aa",
    "rules": [
     "Melancholic Miasma"
    ]
   },
   {
    "name": "Shadow Legion",
-   "bsId": "5063-25bd-d22e-665b",
    "rules": [
     "First Prince of Chaos"
    ]
   },
   {
    "name": "Cavalcade of Chaos",
-   "bsId": "0dd1-86f6-d2a0-3aba",
    "rules": [
     "Unholy Avalanche"
    ]
   },
   {
    "name": "Lords of the Warp",
-   "bsId": "6d62-2c41-fb3f-7d00",
    "rules": [
     "Loci of Power"
    ]
   },
   {
    "name": "Warptide",
-   "bsId": "357d-d51b-f001-a33d",
    "rules": [
     "Shudderblink"
    ]

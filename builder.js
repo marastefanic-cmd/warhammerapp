@@ -60,32 +60,40 @@ function malformed(j){
 }
 
 // ---------------------------------------------------------------- the faction's catalogue in data.js
-// (a faction is catalogued when data.js has its whole catalogue: DATASHEETS rows with GW's points, verify/from-bsdata.js --write)
+// (a faction is catalogued when data.js has its whole catalogue: DATASHEETS rows with GW's points, verify/from-waha.js --write)
 const catalogued = (D, fac) => Object.values(D.datasheets || {}).some(r => r.faction === fac && r.points);
 const catalogues = D => uniq(Object.values(D.datasheets || {}).filter(r => r.points).map(r => r.faction)).sort();
 const factionName = (D, fac) => ((D.factions || {})[fac] || {}).name || fac;
 
 // ---------------------------------------------------------------- the list's top-level selections (as import.js reads them)
 function topLevel(j, D, err){
-  const B = D.bsIds || {}, T = {};
-  for(const k of Object.keys(B)) T[k] = Object.assign(Object.create(null), B[k]);
+  const B = D.nrIds || {}, T = {};
+  for(const k of ['factions', 'roots', 'battleSizes', 'limits', 'dispositions', 'detachments', 'config', 'configKids', 'info', 'infoKids', 'names'].concat(Object.keys(B))) T[k] = Object.assign(Object.create(null), B[k]);
+  // a selection is looked up by its id where a known export has shown that id (NR_IDS), else by its exact New Recruit name: the one
+  // thing of those tables with that name (none, or more than one meaning: not recognized, never guessed)
+  const idOf = (s, tabs) => { const id = lastId(s.entryId); if(tabs.some(t => T[t][id] !== undefined)) return id;
+    const hit = []; for(const t of tabs) for(const k of Object.keys(T[t])) if(T.names[k] === nn(s.name)) hit.push([k, t + '\u0000' + JSON.stringify(T[t][k])]);
+    return hit.length && hit.every(h => h[1] === hit[0][1]) ? hit[0][0] : id; };
+  const facByName = F => { const n = String(F.catalogueName || '').split(' - ').pop(), hit = Object.keys(D.factions || {}).filter(k => nn(D.factions[k].name).toLowerCase() === nn(n).toLowerCase()); return hit.length === 1 ? hit[0] : null; };
+  // (a Force Disposition by its name: one a detachment of data.js allows, GW's five)
+  const DISPS = []; for(const f of Object.values(D.factions || {})) for(const d of Object.values(f.detachments || {})) for(const x of d.dispositions || []) if(!DISPS.includes(x)) DISPS.push(x);
   const F = j.roster.forces[0], sels = F.selections || [];
-  const fac = T.factions[F.catalogueId] || null;
+  const fac = T.factions[F.catalogueId] || facByName(F);
   const top = sels.filter(s => s.type === 'upgrade');
   let battleSize = null, disposition = null; const dets = [], config = {}, seen = {};
   const KIND = { battleSize:'battle size', disposition:'disposition', detachment:'detachment' };
   const FAC = fac && D.factions[fac];
   for(const t of top){
-    const id = lastId(t.entryId), ks = kids(t);
+    const id = idOf(t, ['roots', 'info', 'config']), ks = kids(t);
     if(Number(t.number) !== 1){ err('selection ' + t.number + '× ' + nn(t.name) + ' not recognized'); continue; }
     if(T.info[id]){
-      for(const c of ks) if(!T.infoKids[lastId(c.entryId)] || kids(c).length || Number(c.number) !== 1) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');
+      for(const c of ks) if(!T.infoKids[idOf(c, ['infoKids'])] || kids(c).length || Number(c.number) !== 1) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');
       continue;
     }
     if(T.config[id]){
       const key = T.config[id];
       if(key in config){ err('selection ' + nn(t.name) + ' twice not recognized'); continue; }
-      const odd = ks.filter(c => T.configKids[lastId(c.entryId)] !== nn(c.name) || kids(c).length || Number(c.number) !== 1);
+      const odd = ks.filter(c => T.configKids[idOf(c, ['configKids'])] !== nn(c.name) || kids(c).length || Number(c.number) !== 1);
       for(const c of odd) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');
       if(!odd.length && ks.length) config[key] = ks.map(c => tn(c.name)).join(', ');
       continue;
@@ -95,11 +103,13 @@ function topLevel(j, D, err){
     if(seen[kind]){ err(KIND[kind] + ' selection ' + nn(t.name) + ' twice not recognized'); continue; }
     seen[kind] = true;
     for(const c of ks){
-      const cid = lastId(c.entryId), nm = nn(c.name), once = Number(c.number) === 1 && !kids(c).length;
+      const cid = idOf(c, [kind === 'battleSize' ? 'battleSizes' : kind === 'disposition' ? 'dispositions' : 'detachments']), nm = nn(c.name), once = Number(c.number) === 1 && !kids(c).length;
       if(kind === 'battleSize' && T.battleSizes[cid] && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }
-      if(kind === 'disposition' && T.dispositions[cid] === nm && once){ if(disposition) err('disposition ' + nm + ' not recognized (a list has one Force Disposition)'); else disposition = nm; continue; }
-      const d = kind === 'detachment' && T.detachments[cid], dk = d && d.split('/');
-      if(d && once && FAC && dk[0] === fac && FAC.detachments[dk[1]] && nn(FAC.detachments[dk[1]].name) === nm){ if(dets.includes(dk[1])) err('detachment ' + nm + ' twice not recognized'); else dets.push(dk[1]); continue; }
+      if(kind === 'disposition' && (T.dispositions[cid] === nm || (T.dispositions[cid] === undefined && DISPS.includes(nm))) && once){ if(disposition) err('disposition ' + nm + ' not recognized (a list has one Force Disposition)'); else disposition = nm; continue; }
+      // (a detachment no known export has shown: the one detachment of the faction with exactly that name, GW's or New Recruit's spelling of it)
+      const dn = kind === 'detachment' && FAC && !T.detachments[cid] ? Object.keys(FAC.detachments).filter(k => [FAC.detachments[k].name, FAC.detachments[k].nr].filter(Boolean).some(x => nn(x) === nm)) : [];
+      const d = kind === 'detachment' && (T.detachments[cid] || (dn.length === 1 ? fac + '/' + dn[0] : null)), dk = d && d.split('/');
+      if(d && once && FAC && dk[0] === fac && FAC.detachments[dk[1]] && [FAC.detachments[dk[1]].name, FAC.detachments[dk[1]].nr].filter(Boolean).some(x => nn(x) === nm)){ if(dets.includes(dk[1])) err('detachment ' + nm + ' twice not recognized'); else dets.push(dk[1]); continue; }
       err(KIND[kind] + ' ' + (Number(c.number) !== 1 ? c.number + '× ' : '') + nm + ' not recognized');
     }
   }
@@ -174,7 +184,12 @@ function Builder(D, fac, top, err){
   const dets = top.dets.map(d => F.detachments[d]);
   const enhRows = dets.flatMap(d => d.enhancements || []);
   const enhOf = n => { const b = nn(n).replace(/\s*\((?:Upgrade|Enhancement)\)$/i, ''); const hit = enhRows.filter(e => [e.name, e.nr].filter(Boolean).some(x => lc(x) === lc(n) || lc(x) === lc(b))); return hit.length === 1 ? hit[0] : null; };
-  const dsOf = s => { const id = lastId(s.entryId), hit = Object.keys(S).filter(k => S[k].faction === fac && S[k].bsId === id); return hit.length === 1 ? hit[0] : null; };
+  // a part's datasheet: the one a known export has shown its id for (NR_IDS datasheets), else the one datasheet of the faction with exactly
+  // its New Recruit name (case, apostrophes and spaces aside); none, or more than one: null (the unit is refused, named)
+  const IDS = (D.nrIds || {}).datasheets || {};
+  const dsOf = s => { const id = lastId(s.entryId), k0 = Object.prototype.hasOwnProperty.call(IDS, id) ? IDS[id] : null;
+    if(k0) return S[k0] && S[k0].faction === fac && lc(S[k0].name) === lc(s.name) ? k0 : null;
+    const hit = Object.keys(S).filter(k => S[k].faction === fac && lc(S[k].name) === lc(s.name)); return hit.length === 1 ? hit[0] : null; };
   return { S, F, dets, enhOf, dsOf };
 }
 
@@ -182,7 +197,7 @@ function buildUnit(B, g, err){
   const parts = g.chars.map(c => c.s).concat([g.body]);
   const named = parts.length > 1, where = parts.map(p => nn(p.name)).join(' + ');
   const keys = parts.map(p => B.dsOf(p));
-  keys.forEach((k, i) => { if(!k) err('unit ' + nn(parts[i].name) + ' not recognized (no datasheet of the ' + B.F.name + ' catalogue has its BSData id)'); });
+  keys.forEach((k, i) => { if(!k) err('unit ' + nn(parts[i].name) + ' not recognized (no datasheet of the ' + B.F.name + ' catalogue is exactly this: none a known export has shown under this id, and not exactly one of this name)'); });
   if(keys.some(k => !k)) return null;
   // (every name the list shows is GW's datasheet's: a part by its datasheet, a model by the datasheet's composition)
   const pName = p => B.S[keys[parts.indexOf(p)]].name;
@@ -228,7 +243,7 @@ function buildUnit(B, g, err){
     for(const l of lines){ models.push(l.n + '× ' + l.name + (l.wargear.length ? ' (' + l.wargear.join(', ') + ')' : '')); gear.push(l.weapons); }
   }
   u.models = models; if(unplaced.length) u.unplaced = unplaced; u.gear = gear;
-  // every other choice is one of its datasheet's options (BSData's, DATASHEETS options)
+  // every other choice is one of its datasheet's options (GW's WARGEAR OPTIONS as the faction catalogue holds them, DATASHEETS options)
   parts.forEach((p, i) => { const S = B.S[keys[i]], opts = new Set((S.options || []).flatMap(o => o.choices.map(c => lc(c.name))));
     const d = s => { for(const c of kids(s)){ if(c.type !== 'model' && !isEnh(c) && !isWarlord(c) && !isWeaponSel(c) && !opts.has(lc(c.name)) && S.options) err('option ' + nn(c.name) + ' on unit ' + where + ' not recognized (not an option of GW’s datasheet ' + S.name + ')'); d(c); } }; d(p); });
   legalWargear(B, parts, keys, where, err);
@@ -237,7 +252,7 @@ function buildUnit(B, g, err){
 }
 
 // ---------------------------------------------------------------- what GW's datasheet allows: its models and its wargear options
-// (DATASHEETS composition and options, BSData's as the faction catalogue has them; Core Rules 25.04: "Your army roster must follow all
+// (DATASHEETS composition and options, GW's UNIT COMPOSITION and WARGEAR OPTIONS as the faction catalogue has them; Core Rules 25.04: "Your army roster must follow all
 // restrictions placed on it by the rules and units being included in it")
 function legalWargear(B, parts, keys, where, err){
   const R = 'GW’s datasheet ';
@@ -527,7 +542,7 @@ function finish(B, army, u, units, out){
   // (a rule the export names is shown only if the tables name it: a datasheet's Rules line, the glossary, an army rule)
   const known = B.known || (B.known = (() => { const m = new Map(); for(const S of Object.values(B.D.datasheets)) for(const r of S.rules || []) if(!m.has(typo(r))) m.set(typo(r), r);
     for(const r of Object.keys(B.D.rules || {}).concat((B.F.armyRules || []).map(x => x.name))) if(!m.has(typo(r))) m.set(typo(r), r); return m; })());
-  // (one no table names, a BSData rule GW's datasheet does not print: not shown)
+  // (one no table names, a rule of New Recruit's GW's datasheet does not print: not shown)
   const ruleList0 = uniq(exRules).filter(r => known.has(typo(r))).map(r => known.get(typo(r)) === r || typo(known.get(typo(r))) === r ? r : known.get(typo(r))), ruleList = ruleList0;
   // (a weapon ability a mark adds, SUSTAINED HITS 1: its rule, Sustained Hits)
   const markRules = [...marks.values()].flatMap(m => Object.keys(m.from)).filter(k => /^[A-Z][A-Z -]+/.test(k) && k === k.toUpperCase()).map(k => ruleOfKw(B.D, k)).filter(Boolean);
@@ -559,7 +574,7 @@ function finish(B, army, u, units, out){
     kw = base.concat(fac);
   }
   const kwWhy = {};
-  // (an Allegiance ability names its gods in bold, "If this model has the **KHORNE** keyword": the one the export's unit has, BSData's
+  // (an Allegiance ability names its gods in bold, "If this model has the **KHORNE** keyword": the one the export's unit has, New Recruit's
   parts.forEach((p, i) => { const ab = (P[i].abilities || []).find(a => /Allegiance$/.test(a.name)); if(!ab) return;
     const gods = uniq((ab.text.match(/\*\*[A-Z][A-Z ]+\*\*(?= keyword| –)/g) || []).map(m => m.replace(/\*\*/g, '')));
     const has = []; dfs(p, s => { for(const c of s.categories || []) has.push(lc(c.name)); if(s !== p && /Allegiance/.test(s.group || '')) has.push(lc(s.name)); });
@@ -753,7 +768,7 @@ function ruleOfKw(D, k){
 }
 
 // ---------------------------------------------------------------- "+" marks: what a rule of the list does to a unit's values
-// The export's profiles carry the values New Recruit shows, BSData's modifiers applied: a value (or a weapon keyword) other than the
+// The export's profiles carry the values New Recruit shows, the list's rules applied: a value (or a weapon keyword) other than the
 const cellV = v => { const t = nn(v); return (t === '' || t === '-' || t === '–' || t === 'N/A' || t === 'undefined') ? '–' : t; };
 const STAT = { M:'M', T:'T', SV:'Sv', W:'W', LD:'Ld', OC:'OC', INSV:'InSv' };
 function splitList(s){ const out = []; let d = 0, cur = ''; for(const ch of String(s || '')){ if(ch === '(') d++; if(ch === ')') d--; if(ch === ',' && !d){ out.push(cur); cur = ''; } else cur += ch; } out.push(cur); return out.map(nn).filter(x => x && x !== 'undefined'); }
@@ -801,7 +816,7 @@ function marksOf(B, army, u, parts, P, rows, abil){
       const add = splitKw(c.Keywords).map(k => k.toUpperCase()).filter(k => !(x.row.kw || []).some(y => y.toUpperCase() === k));
       if(add.length) changed.kw = add;
     }
-    // (GW's value where BSData's differs, declared: the export's is BSData's own, no rule at work)
+    // (GW's value where New Recruit prints another, declared, BUILD_INDEX gw: the export's is New Recruit's own, no rule at work)
     const gw = (((B.D.buildIndex || {}).gw || {})[u._keys[x.part]]) || {};
     for(const f of Object.keys(changed)) if(f !== 'kw' && gw[kind + '|' + x.row.name + '|' + f] === changed[f]) delete changed[f];
     if(!Object.keys(changed).length) continue;

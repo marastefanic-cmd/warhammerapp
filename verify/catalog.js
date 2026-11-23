@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-/* verify/catalog.js: the gate step catalog. Every faction catalogue (verify/sources/catalog/<faction>.json, written by
-   verify/from-bsdata.js) is checked as a list is (docs/catalog.md):
-     filter     the explicit Legends / Crusade / Crucible filter of verify/bs-catalog.js, on fixed cases (a test of the filter)
-                and on the catalogue (what it leaves out, each with its rule)
-     complete   every current datasheet of the BSData catalogue at the pin (after the filter) is a catalogue row, none extra; every
-                detachment of its Detachment entry is a detachment of the faction in data.js (by GW's name or BSData's, nr), none
-                extra
-     fresh      the catalogue file is what verify/from-bsdata.js reads from the sources now (deterministic: the same file)
+/* verify/catalog.js: the gate step catalog. Every faction catalogue (verify/sources/catalog/<faction>.json: every current datasheet
+   and detachment of a faction, docs/catalog.md) is checked against GW's datasheets and faction page as Wahapedia transcribes them
+   (verify/.cache/waha) and against the lists. BSData is not used (the owner's decision, 22 Nov 2026):
+     filter     nothing of Warhammer Legends, Crusade or the Crucible anywhere in a catalogue row or detachment (the owner's standing rule)
+     complete   the catalogue's rows are exactly the faction page's datasheet index (verify/waha-catalog.js index): every datasheet of
+                the faction's own book that is not marked Warhammer Legends is a row, none extra (another faction's datasheet the page
+                lists, an ally's, is none); the faction's detachments in data.js are exactly the page's detachment headings, but for
+                the ones the catalogue file names as left out (another game mode's: Boarding Actions) each with its rule
      tables     every catalogue row is in DATASHEETS: a row no list has, exactly (aiStatus 'not-read'); a row a list has keeps the
                 lists' signed-off facts, and every difference from the catalogue row is one of the kinds below (else declared in
                 verify/deviations-catalog.json with its reason and evidence):
@@ -20,19 +20,24 @@
                   label    a tag the row has from verify/derive.js's reading of its words ("Once per turn, …"), GW printing none
      nr         the same, for every unit of every list of the faction (each part's rows, as nr.js checked them against the PDF):
                 each of its rows is a row of the catalogue with the same values, but for what a rule of the list changes (from)
-     bsdata     every value of every catalogue row equals BSData's own (the entry before any modifier), or the difference is
-                declared in verify/deviations-bsdata.json (army "catalog": GW's value over BSData's, with the datasheet as
-                evidence, as for a list); a declaration nothing matches fails
+     composition  a row's models are GW's UNIT COMPOSITION: each "N[-M] <model>" line of the datasheet page is the row's model of that
+                name with that minimum and maximum (a group's, where New Recruit counts a model line inside a group; several model
+                entries New Recruit keeps for one of GW's lines, "Termagant w/ shardlauncher", together allow GW's numbers)
+     options    a row's wargear choices are GW's: every choice is named in the page's UNIT COMPOSITION ("equipped with") or WARGEAR
+                OPTIONS, or is a weapon or ability row of the datasheet (which verify/numbers.js and verify/words.js hold to the page);
+                everything "equipped with" names is a choice or a row. The limits of a choice (its minimum and maximum) are New
+                Recruit's as the catalogue file recorded them, and builder.js holds an export to them; they are not read from GW's
+                sentences here
      texts      every ability's words are on the datasheet's Wahapedia page (GW's codex) or GW's Printed Product Updates / Faction
-                Pack for it; every detachment's rule, enhancement and stratagem words are checked by verify/texts.js as every
-                detachment of data.js is
+                Pack for it; the row's points are GW's costs on the page (each copy, each unit size, each "per <wargear> N");
+                every detachment's rule, enhancement and stratagem words are checked by verify/texts.js as every detachment is
      bases      by verify/bases.js (every DATASHEETS row's models, the catalogue's too)
-   node verify/catalog.js            the gate (verify/out/catalog.json)
-   node verify/catalog.js --fast     without fresh (which reads the whole catalogue again, about a minute) */
+   A difference of composition or options that is New Recruit's way of holding GW's datasheet is declared in
+   verify/deviations-catalog.json ({ datasheet, what, reason, evidence }); a declaration nothing matches fails.
+   node verify/catalog.js            the gate (verify/out/catalog.json) */
 'use strict';
 const fs = require('fs'), path = require('path');
 const ROOT = path.resolve(__dirname, '..');
-const BC = require('./bs-catalog');
 const NR = require('./nr');
 const { nm, cellV, textEq, splitItems } = NR;
 
@@ -47,52 +52,6 @@ const weaponShaped = p => p.typeName !== 'Unit' && ['Range', 'A', 'S', 'AP', 'D'
 const isWeaponProf = p => WEAPON.includes(p.typeName) || weaponShaped(p);
 const weaponKind = p => p.typeName === 'Ranged Weapons' || (!WEAPON.includes(p.typeName) && !/^melee$/i.test(((p.characteristics || []).find(c => c.name === 'Range') || {}).$text || '')) ? 'ranged' : 'melee';
 
-// ---------------------------------------------------------------- the filter, on fixed cases
-function filterTest() {
-  const fails = [];
-  const fake = (name, cats, extra) => Object.assign({ name, type: 'unit', categoryLinks: (cats || []).map((c, i) => ({ name: c, targetId: 'x' + i })), costs: [{ name: 'pts', typeId: '51b2-306e-1021-d207', value: 100 }] }, extra || {});
-  const C = { classify: null };
-  const cls = (e, l) => { for (const F of BC.FILTER) if (F.test(e, l, (e.categoryLinks || []).map(c => c.name).concat(((l || {}).categoryLinks || []).map(c => c.name)))) return F.kind; return 'datasheet'; };
-  const cases = [
-    [fake('Aleya [Legends]'), 'legends'], [fake('Old Thing', ['Legends']), 'legends'], [fake('Thing'), 'legends', { name: 'Thing [Legends]' }],
-    [fake('Order of Battle', [], { type: 'upgrade' }), 'crusade'], [fake('Crusade Relics'), 'crusade'], [fake('Hero', ['Crusade']), 'crusade'],
-    [fake('Hero', [], { costs: [{ name: 'Crusade Points', value: 1 }] }), 'crusade'], [fake('Weapon Modifications'), 'crusade'], [fake('Battle Honours'), 'crusade'],
-    [fake('Null Maiden [Crucible]'), 'crucible'], [fake('Exemplar', ['Crucible']), 'crucible'],
-    [fake('Custodian Guard Sodality', ['Infantry', 'Battleline']), 'datasheet'], [fake('Legendary Hero'), 'datasheet'], [fake('Crucible of Fire Squad'), 'datasheet']];
-  // (another game mode than matched play: BSData shows the entry only in a Boarding Actions or Crusade force; a modifier hiding it
-  // only in such a force, or one with an "or" of conditions, leaves it in)
-  const MF = BC.MODE_FORCES, had = MF.has('test-ba'); MF.set('test-ba', 'Boarding Actions');
-  const fm = (name, mods) => Object.assign(fake(name), { modifiers: mods });
-  cases.push([fm('Boarding Swarm', [{ field: 'hidden', type: 'set', value: true, conditions: [{ childId: 'test-ba', field: 'forces', scope: 'force', type: 'notInstanceOf', value: 1 }] }]), 'other-mode'],
-    [fm('Master of the Deathwing', [{ field: 'hidden', type: 'set', value: true, conditionGroups: [{ type: 'and', conditions: [{ childId: 'test-ba', field: 'forces', scope: 'roster', type: 'lessThan', value: 1 }] }] }]), 'other-mode'],
-    [fm('Tervigon', [{ field: 'hidden', type: 'set', value: true, conditions: [{ childId: 'test-ba', field: 'forces', scope: 'force', type: 'instanceOf', value: 1 }] }]), 'datasheet'],
-    [fm('A’rgath', [{ field: 'hidden', type: 'set', value: true, conditionGroups: [{ type: 'or', conditions: [{ childId: 'test-ba', field: 'forces', scope: 'roster', type: 'lessThan', value: 1 }, { childId: 'det', field: 'selections', scope: 'force', type: 'lessThan', value: 1 }] }] }]), 'datasheet']);
-  for (const [e, want, l] of cases) { const got = cls(e, l || null); if (got !== want) fails.push('filter: ' + e.name + (l ? ' (link ' + l.name + ')' : '') + ' is ' + got + ', want ' + want); }
-  // an option's hidden, with its modifiers (bs-catalog.js staticHidden)
-  const H = BC.staticHidden, hm = (v, conds) => ({ field: 'hidden', type: 'set', value: v, conditions: conds || [] });
-  const hcases = [[{ hidden: false }, false], [{ hidden: true }, true], [{ hidden: false, modifiers: [hm(true)] }, true], [{ hidden: true, modifiers: [hm(false)] }, false],
-    [{ hidden: true, modifiers: [hm(false, [{ scope: 'self', childId: 'x', type: 'atLeast', value: 1 }])] }, false],
-    [{ hidden: true, modifiers: [hm(false, [{ scope: 'force', childId: 'detachment', type: 'atLeast', value: 1 }])] }, true],
-    [{ hidden: false, modifiers: [hm(true, [{ scope: 'force', childId: 'detachment', type: 'atLeast', value: 1 }])] }, false],
-    [{ hidden: true, modifierGroups: [{ comment: 'Crusade modifiers', modifiers: [hm(false)] }] }, true]];
-  // (shown on the unit's own condition, but the condition is a list's choice: an enhancement taken on the unit)
-  hcases.push([{ hidden: true, modifiers: [hm(false, [{ scope: 'self', childId: 'enh-1', type: 'atLeast', value: 1 }])] }, true, id => id === 'enh-1']);
-  // (shown only when the list took a detachment: a detachment's ability on the unit, BSData's Shadow Legion / Legion of Excess profiles)
-  hcases.push([{ hidden: false, modifiers: [hm(true, [{ scope: 'roster', childId: 'det-1', type: 'lessThan', value: 1 }])] }, true]);
-  hcases.push([{ hidden: false, modifiers: [hm(true, [{ scope: 'force', childId: 'det-1', type: 'equalTo', value: 0 }])] }, true]);
-  // (one "and" group: the detachment absent and the force no Crusade Force, Disciples of Be'lakor; an "or" group stays shown)
-  { const MF = BC.MODE_FORCES, had = MF.has('test-cf'); MF.set('test-cf', 'Crusade Force');
-    hcases.push([{ hidden: false, modifiers: [{ field: 'hidden', type: 'set', value: true, conditionGroups: [{ type: 'and', conditions: [{ scope: 'roster', childId: 'det-1', type: 'lessThan', value: 1 }, { scope: 'force', childId: 'test-cf', type: 'notInstanceOf', value: 1 }] }] }] }, true]);
-    hcases.push([{ hidden: false, modifiers: [{ field: 'hidden', type: 'set', value: true, conditionGroups: [{ type: 'or', conditions: [{ scope: 'roster', childId: 'det-1', type: 'lessThan', value: 1 }, { scope: 'self', childId: 'x', type: 'atLeast', value: 1 }] }] }] }, false]);
-    hcases.forEach(([x, want, lc0], i) => { if (H(x, lc0) !== want) fails.push('filter: hidden case ' + (i + 1) + ' (' + JSON.stringify(x) + ') is ' + H(x, lc0) + ', want ' + want); });
-    if (!had) MF.delete('test-cf'); }
-  // inside a datasheet: BSData's Crusade group, Weapon Modifications, Crusade Relic Upgrades are no options
-  for (const n of ['Crusade', 'Weapon Modifications', 'Crusade Relic Upgrades', 'Battle Scars', 'Codex Crusade Relics']) if (!BC.CRUSADE.test(n)) fails.push('filter: the group ' + n + ' is not read as Crusade');
-  if (!had) MF.delete('test-ba');
-  return { cases: cases.length + hcases.length, fails };
-}
-
-// ---------------------------------------------------------------- points: GW's costs, and BSData's in the same shape
 // { costs:[{ from, to, models:[{ models, pts }] }], wargear:[{ name, pts }] }: per copy of the datasheet in the army (from the from-th
 // to the to-th, to null: and every one after), the price of each unit size GW lists ("4 models 45 · 5 models 50 · 9 models 80"), and
 // what GW's WARGEAR OPTIONS costs ("per Praesidium Shield 25")
@@ -113,161 +72,9 @@ function gwCosts(lines) {
   }
   return out.costs.length ? out : null;
 }
-// BSData's (verify/bs-catalog.js points: the price per model count, a later copy's increment; its options' costs), every unit size it
-// allows priced
-function bsCosts(pts, options) {
-  const [lo, hi] = pts.sizes || [1, 1], price = k => { let p = (pts.tiers[0] || {}).pts || 0; for (const t of pts.tiers) if (k >= t.models) p = t.pts; return p; };
-  const sizes = []; for (let k = lo; k <= hi; k++) sizes.push({ models: k, pts: price(k) });
-  const inc = (pts.other || []).find(o => o.type === 'increment' && /^each (earlier copy|copy after the first \d+)/.test(o.when)), rest = (pts.other || []).filter(o => o !== inc);
-  const n = inc ? (+(/after the first (\d+)/.exec(inc.when) || [, 1])[1]) : null;
-  const out = { costs: inc ? [{ from: 1, to: n, models: sizes }, { from: n + 1, to: null, models: sizes.map(x => ({ models: x.models, pts: x.pts + inc.value })) }] : [{ from: 1, to: null, models: sizes }] };
-  const wg = (options || []).flatMap(o => o.choices.filter(c => c.pts).map(c => ({ name: c.name, pts: c.pts })));
-  if (wg.length) out.wargear = wg;
-  if (rest.length) out.other = rest;
-  return out;
-}
-// the differences: each copy group, each unit size GW prices (and each one BSData allows that GW does not price), each wargear cost
-function costsDiff(gw, bs) {
-  const out = [], key = c => c.from + '-' + (c.to == null ? '' : c.to);
-  if (stable(gw.costs.map(key)) !== stable(bs.costs.map(key))) out.push('copies: GW ' + gw.costs.map(key).join(', ') + ', BSData ' + bs.costs.map(key).join(', '));
-  else gw.costs.forEach((g, i) => { const b = bs.costs[i], bm = new Map(b.models.map(x => [x.models, x.pts])), gm = new Map(g.models.map(x => [x.models, x.pts]));
-    for (const [k, v] of gm) if (bm.get(k) !== v) out.push('copy ' + key(g) + ', ' + k + ' models: GW ' + v + ', BSData ' + (bm.has(k) ? bm.get(k) : 'not a size'));
-    for (const [k, v] of bm) if (!gm.has(k)) out.push('copy ' + key(g) + ', ' + k + ' models: BSData ' + v + ', GW prices no unit of ' + k); });
-  for (const w of gw.wargear || []) { const b = (bs.wargear || []).filter(x => lc(x.name).includes(lc(w.name))); if (!b.length || b.some(x => x.pts !== w.pts)) out.push('wargear ' + w.name + ': GW ' + w.pts + ', BSData ' + (b.map(x => x.name + ' ' + x.pts).join(', ') || 'none')); }
-  for (const b of bs.wargear || []) if (!(gw.wargear || []).some(w => lc(b.name).includes(lc(w.name)))) out.push('wargear ' + b.name + ': BSData ' + b.pts + ', GW prints no cost for it');
-  if ((bs.other || []).length) out.push('BSData also: ' + bs.other.map(o => o.type + ' ' + o.value + ' when ' + o.when).join('; '));
-  return out;
-}
 const costsText = c => c.costs.map(g => (g.from === 1 && g.to == null ? 'any copy' : g.to == null ? g.from + '+' : g.from === g.to ? 'copy ' + g.from : g.from + '-' + g.to) + ': ' + g.models.map(x => x.models + ' ' + x.pts).join(' · ')).join('; ') + ((c.wargear || []).length ? '; wargear: ' + c.wargear.map(w => w.name + ' ' + w.pts).join(', ') : '');
 
-// ---------------------------------------------------------------- BSData's own reading of a datasheet (the entry, before any modifier)
-function bsReading(sel, C) {
-  const out = { stats: {}, ranged: {}, melee: {}, abilities: {}, kw: new Set(), rules: new Set() };
-  const walk = s => {
-    for (const p of s.profiles || []) {
-      if (p.typeName === 'Unit') {
-        const ch = Object.fromEntries(p.characteristics.map(c => [c.name, c.$text || ''])), sn = NR.nrStatName(p.name, []), n = typo(sn.name + (sn.parens.includes('ref. only') ? ' (ref. only)' : ''));
-        out.stats[n] = { M: cellV(ch.M), T: cellV(ch.T), Sv: cellV(ch.Sv), W: cellV(ch.W), Ld: cellV(ch.LD), OC: cellV(ch.OC), InSv: cellV(ch.InSv), base: cellV(ch.Base).replace(/(\d)x(\d)/g, '$1×$2') };
-      } else if (isWeaponProf(p)) {
-        const w = NR.nrWeapon({ name: p.name }, []), kind = weaponKind(p);
-        // (BSData's "Coruscating Blue flames (ref. only)" keeps its mark, as verify/from-json.js's row does)
-        if (/\(ref\. only\)/i.test(p.name) && !/\(ref\. only\)/i.test(w.name)) w.name += ' (ref. only)';
-        if (!w.group && /^\s*➤/.test(p.name) && (s.profiles || []).filter(isWeaponProf).length > 1) w.group = nm(s.name);
-        const ch = Object.fromEntries(p.characteristics.map(c => [c.name, c.$text || '']));
-        const key = typo(w.name) + (w.group ? ' (' + typo(w.group) + ')' : '');
-        out[kind][key] = { range: cellV(ch.Range), A: cellV(ch.A), [kind === 'ranged' ? 'BS' : 'WS']: cellV(ch.BS || ch.WS), S: cellV(ch.S), AP: cellV(ch.AP), D: cellV(ch.D), kw: splitItems(ch.Keywords || '').map(nm).filter(Boolean).map(x => x.replace(/^[^:]+/, y => y.toUpperCase())) };
-      } else if (p.typeName === 'Transport') {
-        // (BSData's Transport profile, named after the unit: the ability Transport, its characteristic's name the tag, as verify/from-json.js reads it)
-        out.abilities.Transport = { text: plainBS(p.characteristics.map(c => c.$text || '').join('\n')), tag: typo(nm(p.characteristics[0].name)), type: p.typeName };
-      } else {
-        const a = NR.nrAbility(p.name, []), n = typo(a.paren !== null && /\d\+\*?$/.test(a.paren) ? a.full : a.base);
-        let text = plainBS(p.characteristics.map(c => c.$text || '').join('\n')), tag = a.paren !== null && n === typo(a.base) ? a.paren : null;
-        // (a tag BSData prints at the start of the words, "(Once per battle, per unit) In your …": the ability's tag, as GW names it)
-        const t0 = /^\(([^)]+)\):?\s+([\s\S]*)$/.exec(text);
-        if (t0 && !tag) { tag = t0[1]; text = t0[2]; }
-        out.abilities[n] = { text, tag, type: p.typeName };
-      }
-    }
-    for (const r of s.rules || []) out.rules.add(typo(nm(r.name)));
-    if (!(s.profiles || []).some(isWeaponProf)) for (const c of s.categories || []) { const ce = C.get(c.entryId); if (!(ce && ce.hidden)) out.kw.add(nm(c.name)); }
-    for (const k of s.selections || []) walk(k);
-  };
-  walk(sel);
-  return out;
-}
-// every difference of a catalogue row from BSData's reading: { field, app, source }, as verify/bsdata.js names a list's
-function bsDiffs(row, bs, bsPts) {
-  const out = [], put = (field, app, source) => out.push({ field, app: app === undefined ? null : app, source: source === undefined ? null : source });
-  // (the points: GW's costs over BSData's, the difference as one value each)
-  if (bsPts && row.points && row.points.costs && costsDiff(row.points, bsPts).length) put('points', costsText(row.points), costsText(bsPts));
-  for (const r of row.stats || []) {
-    const b = bs.stats[r.name];
-    if (!b) { put('stats[' + r.name + ']', r.name, null); continue; }
-    for (const k of ['M', 'T', 'Sv', 'W', 'Ld', 'OC', 'InSv', 'base']) if (gwN(r[k]) !== gwN(b[k])) put('stats[' + r.name + '].' + k, r[k], b[k]);
-  }
-  for (const n of Object.keys(bs.stats)) if (!(row.stats || []).some(r => r.name === n)) put('stats[' + n + ']', null, n);
-  for (const kind of ['ranged', 'melee']) {
-    for (const r of row[kind] || []) {
-      const key = r.name + (r.group ? ' (' + r.group + ')' : ''), b = bs[kind][key];
-      if (!b) { put(kind + '[' + key + ']', key, null); continue; }
-      for (const k of ['range', 'A', 'BS', 'WS', 'S', 'AP', 'D']) if ((r[k] !== undefined || b[k] !== undefined) && gwN(r[k]) !== gwN(b[k])) put(kind + '[' + key + '].' + k, r[k], b[k]);
-      const ka = (r.kw || []).map(x => x.toUpperCase()).sort(), kb = (b.kw || []).map(x => x.toUpperCase()).sort();
-      if (stable(ka) !== stable(kb)) put(kind + '[' + key + '].kw', (r.kw || []).join(', '), (b.kw || []).join(', '));
-    }
-    for (const k of Object.keys(bs[kind])) if (!(row[kind] || []).some(r => r.name + (r.group ? ' (' + r.group + ')' : '') === k)) put(kind + '[' + k + ']', null, k);
-  }
-  const used = new Set();
-  for (const a of row.abilities || []) {
-    const n = Object.keys(bs.abilities).find(x => !used.has(x) && lc(x) === lc(a.name)) || Object.keys(bs.abilities).find(x => !used.has(x) && textEq(a.text || '', bs.abilities[x].text));
-    if (!n) { put('ability[' + a.name + ']', a.name, null); continue; }
-    used.add(n);
-    if (lc(n) !== lc(a.name)) put('ability[' + a.name + '].name', a.name, n);
-    if (!textEq(a.text || '', bs.abilities[n].text) && words(a.text) !== words(bs.abilities[n].text)) put('ability[' + a.name + '].text', a.text, bs.abilities[n].text);
-    const bt = bs.abilities[n].tag;
-    if ((a.tag || null) !== (bt || null) && !(a.tag && bt && a.tag.split(' · ').some(t => lc(t) === lc(bt)))) put('ability[' + a.name + '].tag', a.tag || null, bt || null);
-  }
-  for (const n of Object.keys(bs.abilities)) if (!used.has(n)) put('ability[' + n + ']', null, n);
-  const kw = new Set(row.kw || []);
-  for (const k of kw) if (![...bs.kw].some(x => lc(x) === lc(k))) put('kw', k, null);
-  for (const k of bs.kw) if (![...kw].some(x => lc(x) === lc(k))) put('kw', null, k);
-  const ru = row.rules || [];
-  for (const r of ru) if (![...bs.rules].some(x => lc(x) === lc(r))) put('rules', r, null);
-  for (const r of bs.rules) if (!ru.some(x => lc(x) === lc(r))) put('rules', null, r);
-  return out;
-}
-
-// ---------------------------------------------------------------- the declarations verify/from-bsdata.js --write writes
-// (each difference of a row from BSData, with GW's evidence from the reading: verify/from-json.js's comparisons with the datasheet)
-function declarations(root, faction, r) {
-  const { C, E } = r, out = [];
-  const pinS = 'BSData at the pin (' + C.cat.name + ' catalogue revision ' + C.cat.revision + ')';
-  const roots = new Map(C.roots().filter(x => x.kind === 'datasheet').map(x => [x.entry.id, x]));
-  for (const [id, row] of Object.entries(r.cat.datasheets)) {
-    const rt = roots.get(row.bsId), sel = C.selection(rt), bs = bsReading(sel, C), uid = id.split('/')[1];
-    const G = (E.gwRules || {})[uid] || { files: [] }, bsPts = bsCosts(C.points(rt), C.options(rt));
-    for (const d of bsDiffs(row, bs, bsPts)) {
-      let reason = null, evidence = null, m;
-      const gd = E.gwDevs.filter(x => x.unit === uid), jd = E.devs.filter(x => x.unit === uid);
-      const MN = ((f => fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : {})(path.join(root, 'verify/sources/hand', 'catalog-' + faction + '.json')).modelNames) || {};
-      const sm = /^stats\[(.*)\]$/.exec(d.field), typoOf = sm && (d.source ? MN[d.source] : Object.entries(MN).map(([k, v]) => Object.assign({ bs: k }, v)).find(v => v.gw === d.app));
-      // (a value the Faction Pack's Rules Updates gave the row, verify/from-bsdata.js applyPack)
-      const pk = (r.cat.packApplied || []).find(x => x.id === id && (x.field === d.field || (x.field === 'kw' && d.field === 'kw' && x.app === d.app)));
-      const hk = !pk && (r.cat.handApplied || []).find(x => x.id === id && x.field === d.field && (!['kw', 'rules'].includes(d.field) || (d.app != null ? x.app === d.app : x.was === d.source)));
-      if (hk) { reason = hk.why + '. GW wins (verify/sources/hand/catalog-' + faction + '.json texts).'; evidence = (hk.why.match(/verify\/\.cache\/\S+/) || ['the Faction Pack named in the reason'])[0] + '.'; }
-      else if (pk) { reason = 'GW’s Faction Pack, Rules Updates: "' + pk.title + '" — ' + pk.instr + (pk.field.endsWith('.text') ? '' : ' ' + pk.app) + '; ' + pinS + ' has ' + (d.source == null ? 'none' : JSON.stringify(d.source)) + '. GW wins.'; evidence = pk.where + '.'; }
-      else if (sm && typoOf && (typoOf.kind === 'typo')) { reason = typoOf.why + '. GW wins (as for every misprint; verify/sources/hand/catalog-' + faction + '.json modelNames).'; evidence = typoOf.evidence + '.'; }
-      else if (d.field === 'points') {
-        reason = 'GW’s datasheet costs (Wahapedia, YOUR … COSTS and WARGEAR OPTIONS): ' + d.app + '; ' + pinS + ': ' + d.source + ' (' + costsDiff(row.points, bsPts).join('; ') + '). GW wins.';
-        evidence = (G.files || [])[0] + ': ' + costsText(row.points) + '.';
-      } else if ((m = /^(stats|ranged|melee)\[(.*?)(?: \((.*)\))?\]\.(\w+)$/.exec(d.field))) {
-        const kind = m[1] === 'stats' ? (m[4] === 'base' ? 'base' : 'stats') : m[1];
-        // (a stat row two of whose profiles GW's datasheet prints once, "Bloodcrushers ×2": the row's name)
-        const g = gd.find(x => { const xr = String(x.row).replace(/ ×\d+$/, ''); return x.kind === kind && (xr === m[2] || xr === m[3] || (m[3] && xr === m[2] + ' (' + m[3] + ')') || xr === (m[3] ? m[3] + ' - ' + m[2] : m[2])) && x.field === m[4]; });
-        if (g) { reason = pinS + ' has ' + (d.source || 'none') + '; ' + (kind === 'base' ? 'GW’s base size guide (Event Companion), or Wahapedia’s datasheet where the guide has none,' : 'GW’s datasheet (the codex, as Wahapedia transcribes it)') + ' has ' + g.app + '. GW wins.'; evidence = g.file; }
-      } else if (d.field === 'kw') {
-        const g = gd.find(x => x.kind === 'kw' && ((d.app && x.app === d.app) || (!d.app && x.bsdata === d.source)));
-        if (g) { reason = d.app ? 'GW’s datasheet has the keyword ' + d.app.toUpperCase() + '; ' + pinS + ' does not. GW wins.' : pinS + ' gives the category ' + d.source + (g.det ? ', the ' + g.det + ' detachment’s keyword' : '') + '; GW’s datasheet does not print it. GW wins.'; evidence = 'verify/.cache/waha/ds/' + String(g.file).replace(/^verify\/\.cache\/waha\/ds\//, '') + ': KEYWORDS.'; }
-      } else if (d.field === 'rules') {
-        const j = jd.find(x => x.field === 'rules' && (d.app ? (x.app === d.app || x.name === d.app) : x.bsdata === d.source));
-        if (j) { reason = j.why + '. GW wins.'; evidence = j.file + ': CORE ABILITIES / ARMY RULES.'; }
-      } else if ((m = /^ability\[(.*)\](?:\.(\w+))?$/.exec(d.field))) {
-        const an = m[1], f = m[2];
-        for (const [sec, list] of [['Leader', G.leader], ['Support', G.support]]) if (an === sec && (list || []).length && (f === 'text' || (!f && d.app))) { reason = 'GW’s datasheet (its ' + sec.toUpperCase() + ' section) lets this model be attached to ' + list.join(', ') + '; ' + pinS + '’s ' + sec + ' ability ' + (d.source ? 'names them otherwise (the previous codex’s list, or its own names)' : 'is not a profile of the entry') + '. GW wins.'; evidence = (G.files || [])[0] + ': ' + sec.toUpperCase() + ' "This model can be attached to the following units: ' + list.join(', ') + '".'; }
-        const j = jd.find(x => (f === 'text' && x.field === 'ability.text' && lc(x.name) === lc(an)) || (f === 'tag' && x.field === 'ability.tag' && lc(x.name) === lc(an))
-          || (f === 'name' && x.field === 'ability' && lc(x.app || '') === lc(an)) || (!f && x.field === 'ability' && ((d.app && lc(x.app || '') === lc(d.app)) || (d.source && lc(x.bsdata || '') === lc(d.source)))));
-        if (!reason && j) { reason = (j.why || 'GW’s datasheet (Wahapedia, the codex) words it otherwise than BSData') + '. GW wins.'; evidence = j.file + (j.app && f === 'text' ? ': "' + nm(String(j.app).replace(/\*\*/g, '')).slice(0, 240) + '"' : '') + '.'; }
-        // (GW's tag where BSData prints another one at the start of the words: the datasheet's, its ability's name)
-        if (!reason && f === 'tag' && d.app) { reason = 'GW’s datasheet (Wahapedia, the codex) tags the ability (' + d.app + '); ' + pinS + ' has ' + (d.source ? '(' + d.source + ')' : 'none') + '. GW wins.'; evidence = (G.files || []).join(', ') + ': ABILITIES "' + an + ' (' + d.app + ')".'; }
-        // (GW's name for an ability BSData names otherwise: the name, found by the words)
-        if (!reason && f === 'name') { reason = 'GW’s name for the ability (Wahapedia’s datasheet); ' + pinS + ' names it ' + d.source + '. GW wins.'; evidence = (G.files || []).join(', ') + ': ABILITIES "' + an + '".'; }
-      }
-      if (reason) out.push({ army: 'catalog', unit: id, field: d.field, app: d.app, source: d.source, reason, evidence, by: 'verify/from-bsdata.js' });
-    }
-  }
-  return out;
-}
-
-// ---------------------------------------------------------------- a row against the catalogue's (tables, nr)
+// ---------------------------------------------------------------- a DATASHEETS row (or a list's unit) against its catalogue row
 const KINDS = ['stats', 'ranged', 'melee', 'abilities'];
 // a catalogue row's keywords as GW prints them (verify/gw-order.js: its page's KEYWORDS and FACTION KEYWORDS, its name keyword, its
 // Daemonic Allegiance god); null: no page
@@ -317,21 +124,18 @@ function rowDiffs(S, R, opts) {
 
 // ---------------------------------------------------------------- the gate
 function main() {
-  const fast = process.argv.includes('--fast');
-  const fails = [], notes = [], checked = { filter: 0, complete: 0, fresh: 0, tables: 0, nr: 0, bsdata: 0, texts: 0 };
+  const fails = [], notes = [], checked = { filter: 0, complete: 0, tables: 0, nr: 0, composition: 0, options: 0, texts: 0 };
   const fail = (step, msg) => fails.push(step + ': ' + msg);
-  const ft = filterTest(); checked.filter = ft.cases; ft.fails.forEach(x => fail('filter', x));
+  const WC = require('./waha-catalog')(ROOT), { sing } = WC;
   const dir = path.join(ROOT, 'verify/sources/catalog');
   const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort() : [];
   global.window = {}; delete require.cache[path.join(ROOT, 'data.js')]; require(path.join(ROOT, 'data.js')); const D = window.WH_DATA;
   // (the datasheets the lists name: ARMIES as data.js writes it, each unit entry's ds)
   const T = require('./tables'), RAW = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8')).A.value;
   const listed = new Set(RAW.flatMap(a => a.units.flatMap(u => [].concat(u.ds || []))));
-  const DEVB = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-bsdata.json'), 'utf8')).filter(x => x.army === 'catalog');
   const DEVCF = path.join(ROOT, 'verify/deviations-catalog.json'), DEVC = fs.existsSync(DEVCF) ? JSON.parse(fs.readFileSync(DEVCF, 'utf8')) : [];
-  const usedB = new Set(), usedC = new Set();
+  const usedC = new Set();
   const report = { factions: {} };
-  const haveCache = fs.existsSync(path.join(ROOT, 'verify/.cache/bsdata'));
   for (const f of files) {
     const cat = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')), faction = cat.faction, rep = report.factions[faction] = { datasheets: Object.keys(cat.datasheets).length, detachments: (cat.detachments || []).length, excluded: (cat.excluded || []).length, differences: [] };
     // the owner's standing rule (Legends, Crusade, Crucible: left out, ever): nothing of them anywhere in what the catalogue gives the
@@ -353,42 +157,66 @@ function main() {
       walk(cat.detachments || [], 'detachments'); walk(cat.detachmentRows || {}, 'detachmentRows');
       checked.filter += Object.keys(cat.datasheets).length;
       for (const b of bad) fail('filter', faction + ': Legends, Crusade or Crucible in the catalogue’s rows (left out, ever): ' + b); }
-    if (!haveCache) { notes.push(faction + ': no BSData clone (verify/.cache/bsdata): complete, fresh and bsdata not checked'); }
-    let C = null;
-    if (haveCache) {
-      C = BC.load(ROOT, cat.bsdata.catalogue, { factions: (JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8'))[faction] || {}).catalogFactions });
-      if (C.cat.revision !== cat.bsdata.revision) fail('fresh', faction + ': the catalogue file is of revision ' + cat.bsdata.revision + ', BSData at the pin has ' + C.cat.revision + ': node verify/from-bsdata.js ' + faction + ' --write');
-      // complete: datasheets
-      const roots = C.roots(), want = roots.filter(r => r.kind === 'datasheet');
-      for (const r of want) { checked.complete++; if (!Object.values(cat.datasheets).some(x => x.bsId === r.entry.id)) fail('complete', faction + ': BSData’s datasheet ' + r.name + ' (' + r.entry.id + ') is not in the catalogue'); }
-      for (const [id, x] of Object.entries(cat.datasheets)) { const r = roots.find(y => y.entry && y.entry.id === x.bsId); if (!r) fail('complete', faction + ': ' + id + ' is no root entry of the BSData catalogue'); else if (r.kind !== 'datasheet') fail('complete', faction + ': ' + id + ' is ' + r.kind + ' (' + r.why + '): left out by the filter'); }
-      // the filter, on the catalogue: what it leaves out is in the file, each with its rule
-      for (const r of roots.filter(r => r.kind !== 'datasheet')) if (!(cat.excluded || []).some(x => x.name === r.name && x.kind === r.kind)) fail('filter', faction + ': ' + r.name + ' is ' + r.kind + ' in BSData, not listed as left out in the catalogue file');
-      // complete: detachments (each a detachment of the faction in data.js, by GW's name or BSData's)
-      const F = D.factions[faction] || { detachments: {} }, dets = C.detachments().filter(d => d.kind === 'detachment');
-      const sq = s => lc(s).replace(/[^a-z0-9]/g, '');
-      for (const d of dets) { checked.complete++; if (!Object.values(F.detachments).some(x => lc(x.name) === lc(typo(d.name)) || (x.nr && lc(x.nr) === lc(typo(d.name))))) fail('complete', faction + ': BSData’s detachment ' + d.name + ' is not a detachment of ' + faction + ' in data.js'); }
-      for (const [k, x] of Object.entries(F.detachments)) if (!dets.some(d => lc(typo(d.name)) === lc(x.name) || (x.nr && lc(typo(d.name)) === lc(x.nr)))) fail('complete', faction + ': data.js’s detachment ' + x.name + ' (' + k + ') is no current detachment of the BSData catalogue');
-      for (const [k, x] of Object.entries(F.detachments)) if (x.aiStatus === 'not-read' && (x.stratagems || []).some(s => s.gist || s.mod)) fail('tables', faction + ': detachment ' + k + ' is marked aiStatus not-read but has AI-written columns: drop the mark once they are read');
-      // bsdata
-      const byId = new Map(want.map(r => [r.entry.id, r]));
-      for (const [id, row] of Object.entries(cat.datasheets)) {
-        const root = byId.get(row.bsId); if (!root) continue;
-        for (const d of bsDiffs(row, bsReading(C.selection(root), C), bsCosts(C.points(root), C.options(root)))) {
-          checked.bsdata++;
-          const dev = DEVB.find(x => x.unit === id && x.field === d.field && stable(x.app) === stable(d.app) && stable(x.source) === stable(d.source));
-          if (dev) { usedB.add(dev); if (!dev.reason || !dev.evidence) fail('bsdata', id + ' ' + d.field + ': its declaration has no reason or evidence'); }
-          else fail('bsdata', id + ' ' + d.field + ': the catalogue ' + JSON.stringify(d.app) + ', BSData ' + JSON.stringify(d.source) + ' (declare GW’s value in verify/deviations-bsdata.json, army "catalog", with its evidence)');
-        }
+    const WW0 = require('./waha-words')(ROOT, faction), FJ0 = WC.FJ[faction] || {}, F = D.factions[faction] || { name: faction, detachments: {} };
+    // complete: the faction page's datasheet index. A datasheet of the faction's own pages that Wahapedia marks with no other book
+    // than the faction's (its codex, its Faction Pack or app, Forge World among them) and not Warhammer Legends is a row
+    { const own = FJ0.wahaDs || FJ0.waha || faction, I = WC.index(faction);
+      const ours = x => x.pageFaction === own && !x.legends && (!x.source || lc(x.source).includes(lc(F.name)));
+      const want = I.filter(ours), rowPage = new Map(Object.entries(cat.datasheets).map(([id, r]) => [id, WW0.wahaAddress(r.name)]));
+      rep.index = { datasheets: I.length, current: want.length, legends: I.filter(x => x.legends).length, otherBooks: I.filter(x => !x.legends && !ours(x)).length };
+      for (const x of want) { checked.complete++; if (![...rowPage.values()].includes(x.page)) fail('complete', faction + ': ' + x.name + ' (Wahapedia ' + own + '/' + x.page + (x.source ? ', ' + x.source : '') + ') is a current datasheet of the faction page’s index and no catalogue row'); }
+      for (const [id, pg] of rowPage) if (!want.some(x => x.page === pg)) { const x = I.find(y => y.page === pg); fail('complete', faction + ': ' + id + ' is ' + (x ? (x.legends ? 'Warhammer Legends' : 'another book’s (' + x.source + ')') + ' in the faction page’s index: left out' : 'no datasheet of the faction page’s index (' + pg + ')')); }
+      // complete: detachments (each heading of the page a detachment of the faction in data.js, by GW's name; one the catalogue file
+      // names as left out, another game mode's, is none)
+      const out = new Set((cat.excluded || []).filter(x => /^detachment/.test(x.kind || '')).map(x => lc(typo(x.name))));
+      const dets = WC.detachments(faction).filter(d => !out.has(lc(d.name)));
+      for (const d of dets) { checked.complete++; if (!Object.values(F.detachments).some(x => lc(x.name) === lc(d.name) || (x.nr && lc(x.nr) === lc(d.name)))) fail('complete', faction + ': the faction page’s detachment ' + d.name + ' is not a detachment of ' + faction + ' in data.js'); }
+      for (const [k, x] of Object.entries(F.detachments)) if (!dets.some(d => lc(d.name) === lc(x.name))) fail('complete', faction + ': data.js’s detachment ' + x.name + ' (' + k + ') is no detachment heading of the faction page (or is one the catalogue leaves out)');
+      for (const [k, x] of Object.entries(F.detachments)) if (x.aiStatus === 'not-read' && (x.stratagems || []).some(s => s.gist || s.mod)) fail('tables', faction + ': detachment ' + k + ' is marked aiStatus not-read but has AI-written columns: drop the mark once they are read'); }
+    // composition and options: GW's UNIT COMPOSITION and WARGEAR OPTIONS (the datasheet page)
+    for (const [id, R] of Object.entries(cat.datasheets)) {
+      const P = WC.sheet(WW0, R.name, faction); if (!P) continue;   // (no page: texts, below, fails)
+      const declared = what => { const dv = DEVC.find(x => x.datasheet === id && x.what === what); if (dv) { usedC.add(dv); if (!dv.reason || !dv.evidence) fail('composition', id + ' · ' + what + ': its declaration has no reason or evidence'); } return !!dv; };
+      // composition
+      // (New Recruit's entry for one god's choice of a Daemonic Allegiance datasheet, "Khorne Soul Grinder": GW's model of the name without it)
+      const god = /^(Khorne|Tzeentch|Nurgle|Slaanesh) /.test(R.name) && !P.models.some(g => sing(g.model) === sing(R.name)) ? /^(?:khorne|tzeentch|nurgle|slaanesh) / : null;
+      const C = R.composition || [], base = m => { const b = sing(String(m).replace(/\s+w\/.*$/i, '')); return god ? b.replace(god, '') : b; };
+      for (const g of P.models) {
+        checked.composition++;
+        const exact = C.find(c => base(c.model) === sing(g.model));
+        const rng = c => c.groupMin !== undefined ? [c.groupMin, c.groupMax] : [c.min, c.max];
+        if (exact && C.filter(c => base(c.model) === sing(g.model)).length === 1) { const [a, b] = rng(exact); if (a === g.min && b === g.max) continue; }
+        // (New Recruit's model entries for one of GW's lines, "<model> w/ <weapon>": together they allow GW's numbers)
+        const vs = C.filter(c => base(c.model) === sing(g.model));
+        if (vs.length > 1 && vs.reduce((t, c) => t + c.min, 0) <= g.min && vs.reduce((t, c) => t + c.max, 0) >= g.max) { rep.differences.push({ id, kind: 'variants', what: 'composition ' + g.model }); continue; }
+        if (declared('composition ' + g.model)) continue;
+        fail('composition', id + ': GW’s UNIT COMPOSITION has "' + (g.min === g.max ? g.min : g.min + '-' + g.max) + ' ' + g.model + '" (' + P.file + '), the catalogue ' + JSON.stringify(vs.length ? vs : C));
       }
-      // fresh: the file is what the sources give now
-      if (!fast) {
-        const B = require('./from-bsdata'); B.forFaction(faction);
-        const now = B.build().cat; checked.fresh++;
-        if (stable(now) !== stable(cat)) {
-          const diff = Object.keys(Object.assign({}, now.datasheets, cat.datasheets)).filter(k => stable(now.datasheets[k]) !== stable(cat.datasheets[k]));
-          fail('fresh', faction + ': verify/sources/catalog/' + f + ' is not what verify/from-bsdata.js reads now' + (diff.length ? ' (' + diff.slice(0, 6).join(', ') + (diff.length > 6 ? ', …' : '') + ')' : ' (outside the rows)') + ': node verify/from-bsdata.js ' + faction + ' --write');
-        }
+      for (const c of C) if (!P.models.some(g => sing(g.model) === base(c.model)) && !declared('composition ' + c.model)) fail('composition', id + ': the catalogue’s model ' + c.model + ' is no line of GW’s UNIT COMPOSITION (' + P.file + ': ' + JSON.stringify(P.lines.composition.filter(l => /^- /.test(l))) + ')');
+      // options
+      // (names compared in the singular, apostrophes aside: New Recruit's "Attendant's hellblades" is GW's "attendants’ hellblades"; a name
+      // the catalogue file maps to GW's, weaponNames: "Tarsis buckler" is GW's "Tarsus Buckler")
+      const WN = cat.weaponNames || {}, gwn = x => { const k = Object.keys(WN).find(y => lc(y) === lc(x)); return k ? WN[k] : x; };
+      const sg = x => sing(gwn(x)).replace(/'/g, '');
+      const text = sg(P.lines.composition.concat(P.lines.options).join(' ; ')), rowNames = new Set();
+      // (a choice an ability of the datasheet names in bold capitals, the god of a Daemonic Allegiance: "**KHORNE**")
+      const bold = new Set((R.abilities || []).flatMap(a => [...String(a.text || '').matchAll(/\*\*([A-Z][A-Z’' -]+)\*\*/g)].map(m => sing(m[1]))));
+      for (const k of ['ranged', 'melee']) for (const r of R[k] || []) { rowNames.add(sg(r.name)); if (r.group) rowNames.add(sg(r.group)); }
+      for (const a of R.abilities || []) rowNames.add(sg(a.name));
+      const names = [...new Set((R.options || []).flatMap(o => o.choices.map(c => c.name)))];
+      for (const nm0 of names) {
+        checked.options++;
+        const parts = nm0.split(/\s*(?:&|,|\band\b)\s*/).filter(Boolean);
+        if (text.includes(sg(nm0)) || rowNames.has(sg(nm0)) || bold.has(sg(nm0)) || (parts.length > 1 && parts.every(x => text.includes(sg(x)) || rowNames.has(sg(x))))) continue;
+        if (declared('option ' + nm0)) continue;
+        fail('options', id + ': the choice ' + nm0 + ' is not named in GW’s UNIT COMPOSITION or WARGEAR OPTIONS (' + P.file + ') and is no weapon or ability row of the datasheet');
+      }
+      const have = new Set(names.flatMap(x => [x].concat(x.split(/\s*(?:&|,|\band\b)\s*/))).map(sg));
+      for (const l of P.equipped) for (const it of l.replace(/^.*?equipped with:\s*/i, '').replace(/\.$/, '').split(/\s*;\s*/).map(x => x.replace(/^\d+\s+/, '')).filter(x => x && !/^nothing$/i.test(x))) {
+        checked.options++;
+        if (have.has(sg(it)) || rowNames.has(sg(it)) || [...have].some(h => h.includes(sg(it))) || [...rowNames].some(h => h.startsWith(sg(it)))) continue;
+        if (declared('equipped ' + it)) continue;
+        fail('options', id + ': GW’s UNIT COMPOSITION equips ' + it + ' (' + P.file + '), which is no choice, weapon or ability of the catalogue row');
       }
     }
     // tables: every row in DATASHEETS
@@ -416,10 +244,10 @@ function main() {
       for (const [id, d] of Object.entries(cat.detachmentRows || {})) {
         checked.tables++;
         const have = F.detachments[id];
-        if (!have) { fail('tables', faction + ': the catalogue’s detachment ' + id + ' is not in data.js (node verify/from-bsdata.js ' + faction + ' --write)'); continue; }
+        if (!have) { fail('tables', faction + ': the catalogue’s detachment ' + id + ' is not in data.js (node verify/from-waha.js ' + faction + ' --write)'); continue; }
         const h = Object.assign({}, have); delete h.aiStatus;
         if (have.aiStatus !== 'not-read') fail('tables', faction + ': detachment ' + id + ' is the catalogue’s but has no aiStatus "not-read"');
-        if (stable(unlab(h)) !== stable(unlab(d))) fail('tables', faction + ': detachment ' + id + ' in data.js is not the catalogue’s (node verify/from-bsdata.js ' + faction + ' --write)');
+        if (stable(unlab(h)) !== stable(unlab(d))) fail('tables', faction + ': detachment ' + id + ' in data.js is not the catalogue’s (node verify/from-waha.js ' + faction + ' --write)');
       }
       for (const [id, d] of Object.entries(F.detachments)) if (d.aiStatus === 'not-read' && !(cat.detachmentRows || {})[id]) fail('tables', faction + ': detachment ' + id + ' is marked aiStatus not-read but is not the catalogue’s'); }
     for (const id of Object.keys(D.datasheets || {})) if (id.startsWith(faction + '/') && !cat.datasheets[id] && !listed.has(id)) fail('complete', id + ': a DATASHEETS row of ' + faction + ' that is neither a catalogue row nor any list’s');
@@ -456,19 +284,18 @@ function main() {
       for (const a of R.abilities || []) {
         checked.texts++;
         const w = a.name === 'Leader' ? words(a.text).replace(/^this model can be attached to the following units /, '') : words(a.text);
-        // (words the Faction Pack's Rules Updates gave it, verify/from-bsdata.js applyPack: verify/texts.js checks them against the pack)
+        // (words the Faction Pack's Rules Updates gave it when the catalogue was built, packApplied: verify/texts.js checks them against the pack)
         if ((cat.packApplied || []).concat(cat.handApplied || []).some(x => x.id === id && x.field === 'ability[' + a.name + '].text')) continue;
         if (!hay.includes(w)) fail('texts', id + ' · ' + a.name + ': its words are not on ' + pg.file + (pack ? ' nor in ' + pack.file : ''));
       }
     }
   }
-  for (const d of DEVB) if (!usedB.has(d)) fail('bsdata', 'verify/deviations-bsdata.json: nothing in the catalogues matches the declaration for ' + d.unit + ' ' + d.field);
   for (const d of DEVC) if (!usedC.has(d)) fail('tables', 'verify/deviations-catalog.json: nothing matches the declaration for ' + d.datasheet + ' · ' + d.what);
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive: true });
   fs.writeFileSync(path.join(ROOT, 'verify/out/catalog.json'), JSON.stringify({ checked, failures: fails, notes, report }, null, 1) + '\n');
   const sum = Object.entries(report.factions).map(([k, v]) => k + ' ' + v.datasheets + ' datasheets, ' + v.detachments + ' detachments, ' + v.excluded + ' left out').join('; ');
   if (fails.length) { console.log('FAIL catalog: ' + fails.length + ' failure(s) (' + sum + ')\n' + fails.slice(0, 60).map(x => ' - ' + x).join('\n')); process.exit(1); }
-  console.log('catalog: ' + (sum || 'no catalogues') + '; checked ' + JSON.stringify(checked) + '; ' + usedB.size + ' BSData deviations used' + (notes.length ? '; ' + notes.join('; ') : ''));
+  console.log('catalog: ' + (sum || 'no catalogues') + '; checked ' + JSON.stringify(checked) + '; ' + usedC.size + ' declared differences used' + (notes.length ? '; ' + notes.join('; ') : ''));
 }
-module.exports = { bsReading, bsDiffs, declarations, rowDiffs, filterTest, gwCosts, bsCosts, costsDiff, costsText };
+module.exports = { rowDiffs, gwCosts, costsText };
 if (require.main === module) main();

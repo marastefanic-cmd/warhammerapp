@@ -27,13 +27,16 @@
 //   invariants  verify/invariants.js: mechanical rules (phases, eligibility, cited numbers, counts)
 //   derive      verify/derive.js: phases, turn, needs and tags derived from the rules text by fixed rules; every label
 //               that agrees with data.js today must keep agreeing (verify/derive-agreed.json); differences are listed, not failed
-//   choice      verify/choice.js: every weapon with several profiles is "pick one" or "all fire" as BSData and Wahapedia mark it
-//   bsdata      verify/bsdata.js: every unit fact equals BSData, the data New Recruit is built from
+//   choice      verify/choice.js: every weapon with several profiles is "pick one" or "all fire" as New Recruit's exports and Wahapedia mark it
+//   marks       verify/marks.js: every "+" mark names a rule the unit has whose GW words name what it marks, on a value that is not the
+//               datasheet's own; no changed value is unmarked (it stands where the retired bsdata step held the marks to BSData's modifiers)
+//   dispositions  verify/dispositions.js: each detachment's Force Dispositions are the ones GW prints in its heading (Wahapedia's faction page)
 //   bases       verify/bases.js: every model's base is GW's, as GW's base size guide (Event Companion) prints it; a row the
 //               guide has under another name, or not at all, declared in verify/deviations-bases.json
-//   catalog     verify/catalog.js: every faction catalogue (verify/from-bsdata.js: every current datasheet and detachment of a faction)
-//               is complete (Legends, Crusade and Crucible left out by an explicit filter), what the sources give now, in DATASHEETS,
-//               equal to BSData or a declared GW value, its words on GW's datasheets, and agrees with every list's units
+//   catalog     verify/catalog.js: every faction catalogue (verify/sources/catalog: every current datasheet and detachment of a faction)
+//               is complete against Wahapedia's faction page (Legends left out), in DATASHEETS, its models, wargear and points GW's
+//               (the datasheet page's UNIT COMPOSITION, WARGEAR OPTIONS and unit costs), its words on GW's datasheets, and agrees with
+//               every list's units
 //   nr          verify/nr.js: everything the owner's New Recruit PDFs print is in the app, identically
 //   texts       verify/texts.js: every rules text equals GW's official documents (or Wahapedia)
 //   numbers     verify/numbers.js: every profile number shown (stats per model type, weapon Range A BS WS S AP D, the number in a weapon
@@ -94,10 +97,10 @@ step('agree', ['verify/agree.js']);   // the two-reader rule: a box counts only 
 step('invariants', ['verify/invariants.js']);
 step('derive', ['verify/derive.js']);
 step('choice', ['verify/choice.js']);
-step('bsdata', ['verify/bsdata.js']);
-step('dispositions', ['verify/dispositions.js']);   // each detachment's Force Dispositions against BSData
+step('marks', ['verify/marks.js']);   // every "+" mark: a rule the unit has, whose GW words name what it marks
+step('dispositions', ['verify/dispositions.js']);   // each detachment's Force Dispositions against its heading on Wahapedia's faction page
 step('bases', ['verify/bases.js']);   // every base size against GW's base size guide
-step('catalog', ['verify/catalog.js']);   // every faction catalogue (verify/sources/catalog) against BSData, GW's datasheets and the lists
+step('catalog', ['verify/catalog.js']);   // every faction catalogue (verify/sources/catalog) against GW's datasheets (Wahapedia) and the lists
 step('nr', ['verify/nr.js']);
 step('texts', ['verify/texts.js']);
 step('numbers', ['verify/numbers.js']);   // every profile number against GW's datasheet (Wahapedia), GW's documents on top
@@ -143,8 +146,8 @@ function writeVerified(ok){
   const screens = Object.values(render.checked || {}).reduce((t, c) => t + (c.screens || 0), 0);   // per layout
   const checks = [
     { label:'Your New Recruit lists:', detail:'every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (' + total(out('nr').checked) + ' facts).' },
-    { label:'BSData,', detail:'the data New Recruit is built from: every stat, weapon, keyword, ability and points value (' + total(out('bsdata').checked) + ' facts).' },
-    { label:'Granted values:', detail:'every keyword or value marked + is one a rule of your list changes in BSData, named as that rule, and matches the rules New Recruit prints beside the weapon (' + ((out('bsdata').checked || {}).grants || 0) + ' values).' },
+    { label:'Games Workshop’s datasheets,', detail:'as Wahapedia transcribes them: every stat and weapon number (' + total(out('numbers').counts) + ' numbers), every keyword and every ability text.' },
+    { label:'Granted values:', detail:'every keyword or value marked + is one New Recruit shows otherwise than GW’s datasheet, named as a rule your unit has whose GW wording names it (' + ((out('marks').checked || {}).marks || 0) + ' values).' },
     { label:'Games Workshop’s rules text:', detail:'every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (' + total(out('texts').checked) + ' texts).' },
     { label:'Rules logic:', detail:'each stratagem is offered in the phases its WHEN names and to the units its TARGET names; every number in a footnote is in the rule it cites.' },
     { label:'The app’s own notes:', detail:(help.approved || 0) + ' footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off.' },
@@ -155,8 +158,7 @@ function writeVerified(ok){
   const packs = new Set(Object.keys(D.factions).map(k => FJ[k] && FJ[k].pack && FJ[k].pack.file).filter(Boolean));
   const gw = fs.existsSync(path.join(ROOT, 'verify/.cache/gw')) ? fs.readdirSync(path.join(ROOT, 'verify/.cache/gw')).filter(f => f.endsWith('.pdf') && (!/faction_pack/.test(f) || packs.has(f))).map(f => f.replace(/^eng_(\d\d-\d\d_)?|-[a-z0-9]{10}-[a-z0-9]{10}\.pdf$/g, '').replace(/_/g, ' ')) : [];
   const sources = [
-    { label:'New Recruit:', detail:D.armies.map(a => a.name).join(', ') + ' (your PDF' + (D.armies.length > 1 ? 's' : '') + ').' },
-    { label:'BSData:', detail:'wh40k-11e, commit ' + (fs.readFileSync(path.join(ROOT, 'verify/fetch.sh'), 'utf8').match(/BSDATA_COMMIT=([0-9a-f]+)/) || [, '?'])[1] + '.' },
+    { label:'New Recruit:', detail:D.armies.map(a => a.name).join(', ') + ' (your exports and PDFs).' },
     { label:'Games Workshop:', detail:gw.join('; ') + '.' },
     { label:'Wahapedia:', detail:'faction pages for ' + Object.values(D.factions).map(f => f.name).join(', ') + ' and the errata and FAQs they list' +
       (noPack.length ? ' (the only source for ' + noPack.join(', ') + ': no GW Faction Pack yet)' : '') + '.' }

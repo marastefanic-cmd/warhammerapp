@@ -235,7 +235,10 @@ function wahaDatasheet(html, chapter) {
     else if (charNames) [...blk.split('class="dsInvulWrap"')[0].matchAll(/<div class="dsCharValue[^"]*">([\s\S]*?)<\/div>/g)].forEach((m, k) => { if (charNames[k]) p[charNames[k]] = txt(m[1]); });
     const nmM = /dsModelName[^>]*>([^<]*)</.exec(blk); if (nmM) p.name = txt(nmM[1]);
     const bM = /dsModelBase[^2][^>]*>([^<]*)</.exec(blk) || /dsModelBase"[^>]*>([^<]*)</.exec(blk); if (bM) p.base = txt(bM[1]).replace(/^\(⌀?|\)$/g, '').trim();
-    out.profiles.push(p);
+    // (one row for several models with the same values, "Aemelia Minervas, Dainal Komelius, Lucia Vestha" on Wahapedia's Wardens of
+    // Ultramar page since November 2026: a profile for each model it names)
+    const several = p.name && /, /.test(p.name) ? p.name.split(/,\s+/).filter(Boolean) : null;
+    if (several && several.length > 1) for (const n1 of several) out.profiles.push(Object.assign({}, p, { name: n1 })); else out.profiles.push(p);
   }
   // each invulnerable save box, with its footnote for the models it is for ("INSV* 5+ * Gaius Silva only", then "INSV* 4+ * Veteran
   // Sergeant Metaurus only"): a box without a footnote is every model's

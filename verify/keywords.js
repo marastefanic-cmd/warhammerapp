@@ -16,7 +16,7 @@ let units = 0, kws = 0;
 const dev = (a, u, k) => { const i = DEVS.findIndex(d => d.army === a && d.unit === u && d.kw === k); if(i >= 0) used.add(i); return i >= 0; };
 R.armies.forEach((a, ai) => a.units.forEach((u, ui) => {
   const e = R.A.value[ai].units[ui], own = Object.keys(((e.why || {}).kw) || {});
-  const parts = O.partsOf(u, a.faction), g = O.gwKeywords(u, parts, own, O.partCats(R.bsIds, a.id + '/' + u.id, parts));
+  const parts = O.partsOf(u, a.faction), g = O.gwKeywords(u, parts, own, O.partCats(R.nrIds, a.id + '/' + u.id, parts));
   if(!g){ if(!dev(a.id, u.id, 'page')) fails.push(a.id + '/' + u.id + ': no Wahapedia datasheet page for every part; declare it (kw "page")'); return; }
   units++; kws += u.kw.length;
   // (every datasheet has its name keyword: GW prints one on each; gw-order.js nameKeyword finds it on the page or in BSData)
@@ -33,7 +33,7 @@ let catalog = 0;
 for(const [id, s] of Object.entries(R.D.datasheets || {})){
   if(listedIds.has(id) || !Array.isArray(s.kw)) continue;
   const parts = [{ name:s.name, page:O.pageFor(s.faction, s.name) }]; parts.faction = s.faction;
-  const g = O.gwKeywords(s, parts, O.catalogOwn(s), [O.catalogCats(id, s.bsId)]);
+  const g = O.gwKeywords(s, parts, O.catalogOwn(s), [O.catalogCats(id)]);
   if(!g){ if(!dev('catalog', id, 'page')) fails.push('catalog ' + id + ': no Wahapedia datasheet page; declare it (army "catalog", kw "page")'); continue; }
   catalog++; units++; kws += s.kw.length;
   g.picks.forEach(x => { if(x && x.how === 'declared'){ const j = DEVS.findIndex(d => d.nameKeyword && d.datasheet === s.faction + '/' + s.name); if(j >= 0) used.add(j); } });

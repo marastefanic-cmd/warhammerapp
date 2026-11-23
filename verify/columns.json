@@ -1,5 +1,5 @@
 {
- "about": "Where every column of data.js gets its values. verify/tables.js (the gate) fails on a column of data.js that is not here. Sources: bsdata (BSData wh40k-11e), wahapedia, gw (Games Workshop's documents), newrecruit (the owner's New Recruit PDFs), derived (computed by a verify/ script), hand (written by hand, with the note saying how it is checked), ai-summary (an AI-written one-line summary; carries a fingerprint of the text it was written from, gistOf), ai-reading (the app's reading of a rule's words into numbers and lines, by AI or by verify/derive.js's fixed rules where readBy says so; fingerprinted, readOf or defOf). verify/tables.js fails unless the ai-reading columns are exactly the fingerprinted ones and the ai-summary columns exactly gist and the placement summaries sumAtk, sumDef, sumSt, sumFoe, sumOv.",
+ "about": "Where every column of data.js gets its values. verify/tables.js (the gate) fails on a column of data.js that is not here. Sources: wahapedia, gw (Games Workshop's documents), newrecruit (the owner's New Recruit exports and PDFs, verify/sources/nr-json and verify/sources/nr), derived (computed by a verify/ script), hand (written by hand, with the note saying how it is checked), ai-summary (an AI-written one-line summary; carries a fingerprint of the text it was written from, gistOf), ai-reading (the app's reading of a rule's words into numbers and lines, by AI or by verify/derive.js's fixed rules where readBy says so; fingerprinted, readOf or defOf). verify/tables.js fails unless the ai-reading columns are exactly the fingerprinted ones and the ai-summary columns exactly gist and the placement summaries sumAtk, sumDef, sumSt, sumFoe, sumOv.",
  "tables": {
   "RULES": {
    "what": "core rules and weapon abilities: name → text (glossary)",
@@ -277,8 +277,8 @@
      "note": "GW / Wahapedia (verify/texts.js)"
     },
     "dispositions": {
-     "source": "bsdata",
-     "note": "the Force Dispositions it allows, from BSData (verify/dispositions.js --write)"
+     "source": "wahapedia",
+     "note": "the Force Dispositions it allows, as GW prints them on the detachment: the icons in its heading on Wahapedia's faction page (verify/dispositions.js --write; the gate step dispositions)"
     },
     "dp": {
      "source": "gw",
@@ -301,12 +301,12 @@
      "note": "see FACTIONS.detachments.stratagems"
     },
     "nr": {
-     "source": "bsdata",
-     "note": "the detachment's name as BSData and New Recruit spell it, where it differs from GW's by more than case (BSData's Shadow Keepers for GW's Shadowkeepers); verify/from-json.js / verify/from-bsdata.js write it from the BSData entry the Wahapedia heading matches"
+     "source": "newrecruit",
+     "note": "the detachment's name as New Recruit spells it, where it differs from GW's by more than case (New Recruit's Shadow Keepers for GW's Shadowkeepers): as an export or the catalogue file has it; the import finds a detachment by either name"
     },
     "aiStatus": {
      "source": "derived",
-     "note": "'not-read': a detachment the faction catalogue import added (verify/from-bsdata.js) whose AI layers are not written yet: no stratagem gists, no readings (mod, parts, mods, aura, guard, …) and no When targeted lines; verify/catalog.js fails a mark on a detachment that has them, and the owner sees where the Damage tab does not count a rule yet (docs/catalog.md)"
+     "note": "'not-read': a detachment the faction catalogue import added (verify/from-waha.js; the first three by the retired verify/from-bsdata.js) whose AI layers are not written yet: no stratagem gists, no readings (mod, parts, mods, aura, guard, …) and no When targeted lines; verify/catalog.js fails a mark on a detachment that has them, and the owner sees where the Damage tab does not count a rule yet (docs/catalog.md)"
     }
    }
   },
@@ -583,15 +583,15 @@
     },
     "pts": {
      "source": "newrecruit",
-     "note": "points as New Recruit prints them (verify/nr.js), checked against BSData (verify/bsdata.js)"
+     "note": "points as New Recruit prints them (verify/nr.js)"
     },
     "text": {
      "source": "gw",
      "note": "word for word (verify/texts.js)"
     },
     "upgrade": {
-     "source": "bsdata",
-     "note": "an UPGRADE enhancement (taken by the bodyguard), as BSData has it"
+     "source": "wahapedia",
+     "note": "an UPGRADE enhancement (taken by the bodyguard): Wahapedia's faction page marks it “UPGRADE” beside its points (verify/from-json.js wahaDetachment; GW's Faction Pack heading, BUILD_INDEX upgrades)"
     },
     "nr": {
      "source": "newrecruit",
@@ -711,7 +711,7 @@
     },
     "pts": {
      "source": "newrecruit",
-     "note": "points of the whole attached unit (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+     "note": "points of the whole attached unit (verify/nr.js against the New Recruit export or PDF)"
     },
     "ptsNote": {
      "source": "newrecruit",
@@ -719,27 +719,27 @@
     },
     "copies": {
      "source": "newrecruit",
-     "note": "identical units taken (\"x3\") (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+     "note": "identical units taken (\"x3\") (verify/nr.js against the New Recruit export or PDF)"
     },
     "models": {
      "source": "newrecruit",
-     "note": "the \"Models\" lines (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+     "note": "the \"Models\" lines (verify/nr.js against the New Recruit export or PDF)"
     },
     "gear": {
      "source": "newrecruit",
-     "note": "per models line, the weapons it carries (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+     "note": "per models line, the weapons it carries (verify/nr.js against the New Recruit export or PDF)"
     },
     "unplaced": {
      "source": "newrecruit",
-     "note": "wargear on no models line (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+     "note": "wargear on no models line (verify/nr.js against the New Recruit export or PDF)"
     },
     "enhancement": {
      "source": "newrecruit",
-     "note": "the enhancement taken (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+     "note": "the enhancement taken (verify/nr.js against the New Recruit export or PDF)"
     },
     "warlord": {
      "source": "newrecruit",
-     "note": "the Warlord (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+     "note": "the Warlord (verify/nr.js against the New Recruit export or PDF)"
     },
     "enhOn": {
      "source": "newrecruit",
@@ -751,23 +751,23 @@
     },
     "ref": {
      "source": "gw",
-     "note": "a reference sheet: a unit or models a rule of the list adds to the battle (not in the army until then; no points, not counted): by (the unit, its id), rule (its ability, or the stratagem’s name), quote (GW’s words of that rule, verbatim: check.js and verify/texts.js refQuote find it in that ability or the stratagem’s EFFECT, by, rule and strat naming what the list has), of (models GW prints on that other reference sheet’s datasheet, with no datasheet or BSData entry of their own: the Brimstone Horrors; verify/bsdata.js does not build it), strat (a stratagem of the list adds it: by is then empty); from New Recruit’s reference entry (category Reference) or the hand file’s refs, each with its why (verify/from-json.js, verify/reimport.js)"
+     "note": "a reference sheet: a unit or models a rule of the list adds to the battle (not in the army until then; no points, not counted): by (the unit, its id), rule (its ability, or the stratagem’s name), quote (GW’s words of that rule, verbatim: check.js and verify/texts.js refQuote find it in that ability or the stratagem’s EFFECT, by, rule and strat naming what the list has), of (models GW prints on that other reference sheet’s datasheet, with no datasheet of their own: the Brimstone Horrors; verify/bsdata.js does not build it), strat (a stratagem of the list adds it: by is then empty); from New Recruit’s reference entry (category Reference) or the hand file’s refs, each with its why (verify/from-json.js, verify/reimport.js)"
     },
     "upgrade": {
      "source": "newrecruit",
-     "note": "an UPGRADE enhancement the bodyguard has (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+     "note": "an UPGRADE enhancement the bodyguard has (verify/nr.js against the New Recruit export or PDF)"
     },
     "leads": {
      "source": "newrecruit",
-     "note": "the unit it leads (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+     "note": "the unit it leads (verify/nr.js against the New Recruit export or PDF)"
     },
     "support": {
      "source": "newrecruit",
-     "note": "attached as Support (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+     "note": "attached as Support (verify/nr.js against the New Recruit export or PDF)"
     },
     "also": {
      "source": "newrecruit",
-     "note": "the other characters attached to the same bodyguard (verify/nr.js against the New Recruit PDF; verify/bsdata.js against BSData)"
+     "note": "the other characters attached to the same bodyguard (verify/nr.js against the New Recruit export or PDF)"
     },
     "short": {
      "source": "hand",
@@ -804,7 +804,7 @@
     },
     "srcNote": {
      "source": "derived",
-     "note": "where the sources disagree about the unit, by one fixed template: a model of the unit (BSData’s and New Recruit’s profile of it) that Wahapedia prints on a datasheet of its own (verify/gw-order.js srcNoteOf: { at, note:“Wahapedia: its own EPIC HERO datasheet; BSData and New Recruit: in this unit” }); verify/tables.js --write writes it, its step “tables” holds data.js to it",
+     "note": "where the sources disagree about the unit, by one fixed template: a model of the unit (New Recruit’s profile of it) that Wahapedia prints on a datasheet of its own (verify/gw-order.js srcNoteOf: { at, note:“Wahapedia: its own EPIC HERO datasheet; New Recruit: in this unit” }); verify/tables.js --write writes it, its step “tables” holds data.js to it",
      "unstored": "load: no value of it is stored in data.js; the lists' rows get it when data.js loads (resolveArmies, from the datasheet and the list), so no change of a stored value can prove it here"
     },
     "stats": {
@@ -846,48 +846,49 @@
      "note": "the model's name, with \"×N\" in an attached unit"
     },
     "from": {
-     "source": "bsdata",
-     "note": "values a rule of the list changed: BSData's modifiers (verify/write-grants.js), checked against New Recruit's \"(…)\" marks (verify/nr.js)"
+     "source": "derived",
+     "note": "which rule of the list changed a value: the value New Recruit's export shows is not GW's datasheet's, and the rule is the one New Recruit prints beside the profile or data.js BUILD_INDEX marks records for that value (verify/from-json.js ruleAtWork, verify/marks.js namesFor; builder.js for a catalogued faction). The gate step marks (verify/marks.js) holds every mark: a rule the unit has (M1) whose GW words name what it marks (M2), on a value that is not the datasheet's own (M3), no changed value unmarked (M4)",
+     "by": "verify/marks.js"
     },
     "printed": {
      "source": "newrecruit",
-     "note": "what New Recruit prints for a value shown with a rule applied BSData does not apply (verify/nr.js)"
+     "note": "what New Recruit prints for a value shown with a rule applied that New Recruit does not apply (verify/nr.js)"
     },
     "own": {
      "source": "gw",
      "note": "the datasheet's own value of a stat a rule of the list changed (from), where no list shows it unchanged: GW's datasheet (verify/from-json.js); written to the DATASHEETS row by verify/tables.js --write, not kept on the entry"
     },
     "M": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "T": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "Sv": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "W": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "Ld": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "OC": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "InSv": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "base": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "over": {
      "source": "hand",
@@ -922,44 +923,45 @@
      "note": "how many models carry it"
     },
     "from": {
-     "source": "bsdata",
-     "note": "values and keywords a rule of the list changed: BSData's modifiers, checked against New Recruit (verify/nr.js)"
+     "source": "derived",
+     "note": "which rule of the list changed a value: the value New Recruit's export shows is not GW's datasheet's, and the rule is the one New Recruit prints beside the profile or data.js BUILD_INDEX marks records for that value (verify/from-json.js ruleAtWork, verify/marks.js namesFor; builder.js for a catalogued faction). The gate step marks (verify/marks.js) holds every mark: a rule the unit has (M1) whose GW words name what it marks (M2), on a value that is not the datasheet's own (M3), no changed value unmarked (M4)",
+     "by": "verify/marks.js"
     },
     "enh": {
      "source": "newrecruit",
      "note": "a weapon from an enhancement"
     },
     "range": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "A": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "BS": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "WS": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "S": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "AP": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "D": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "kw": {
-     "source": "bsdata",
-     "note": "the keywords, with ones a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the keywords, with the ones a rule of the list gives (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "over": {
      "source": "hand",
@@ -999,44 +1001,45 @@
      "note": "how many models carry it"
     },
     "from": {
-     "source": "bsdata",
-     "note": "values and keywords a rule of the list changed: BSData's modifiers, checked against New Recruit (verify/nr.js)"
+     "source": "derived",
+     "note": "which rule of the list changed a value: the value New Recruit's export shows is not GW's datasheet's, and the rule is the one New Recruit prints beside the profile or data.js BUILD_INDEX marks records for that value (verify/from-json.js ruleAtWork, verify/marks.js namesFor; builder.js for a catalogued faction). The gate step marks (verify/marks.js) holds every mark: a rule the unit has (M1) whose GW words name what it marks (M2), on a value that is not the datasheet's own (M3), no changed value unmarked (M4)",
+     "by": "verify/marks.js"
     },
     "enh": {
      "source": "newrecruit",
      "note": "a weapon from an enhancement"
     },
     "range": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "A": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "BS": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "WS": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "S": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "AP": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "D": {
-     "source": "bsdata",
-     "note": "the value a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the value a rule of the list changed (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "kw": {
-     "source": "bsdata",
-     "note": "the keywords, with ones a rule of the list changed (from): BSData's modifiers, checked against New Recruit's marks"
+     "source": "newrecruit",
+     "note": "the keywords, with the ones a rule of the list gives (from): as New Recruit's export shows it (verify/nr.js); its base is GW's datasheet's (verify/numbers.js) and its rule is held by verify/marks.js"
     },
     "over": {
      "source": "hand",
@@ -1141,21 +1144,17 @@
      "note": "the faction of the list it is in",
      "by": "verify/tables.js"
     },
-    "bsId": {
-     "source": "bsdata",
-     "note": "its BSData entry id (BS_IDS, verify/import-ids.js); left out where the lists name two"
-    },
     "role": {
      "source": "newrecruit",
      "note": "the roster section (Epic Hero, Character, Battleline, …)"
     },
     "rules": {
      "source": "newrecruit",
-     "note": "the core-rule line (Rules) as New Recruit prints it (verify/nr.js; verify/bsdata.js)"
+     "note": "the core-rule line (Rules) as New Recruit prints it (verify/nr.js), GW's datasheet's CORE ABILITIES and ARMY RULES over it (verify/from-json.js, verify/gw-order.js)"
     },
     "kw": {
      "source": "newrecruit",
-     "note": "the keywords (\"Categories\"), checked against BSData (verify/bsdata.js)"
+     "note": "the keywords (\"Categories\"), GW's datasheets' (verify/keywords.js)"
     },
     "kwOnly": {
      "source": "wahapedia",
@@ -1167,11 +1166,11 @@
     },
     "srcNote": {
      "source": "derived",
-     "note": "where the sources disagree about the unit, by one fixed template: a model of the unit (BSData’s and New Recruit’s profile of it) that Wahapedia prints on a datasheet of its own (verify/gw-order.js srcNoteOf: { at, note:“Wahapedia: its own EPIC HERO datasheet; BSData and New Recruit: in this unit” }); verify/tables.js --write writes it, its step “tables” holds data.js to it"
+     "note": "where the sources disagree about the unit, by one fixed template: a model of the unit (New Recruit’s profile of it) that Wahapedia prints on a datasheet of its own (verify/gw-order.js srcNoteOf: { at, note:“Wahapedia: its own EPIC HERO datasheet; New Recruit: in this unit” }); verify/tables.js --write writes it, its step “tables” holds data.js to it"
     },
     "leaders": {
-     "source": "bsdata",
-     "note": "(none yet) the units its Leader ability can lead"
+     "source": "wahapedia",
+     "note": "(none yet) the units its Leader ability can lead: GW's LEADER section of the datasheet page"
     },
     "stats": {
      "source": "newrecruit",
@@ -1191,15 +1190,15 @@
     },
     "points": {
      "source": "gw",
-     "note": "the datasheet's costs as GW prints them (Wahapedia: YOUR UNIT COSTS / YOUR 1ST TO 2ND UNITS COST / … per copy of the datasheet, each unit size priced, WARGEAR OPTIONS): { costs:[{ from, to, models:[{ models, pts }] }], wargear }; BSData's in the same shape where GW prints none (verify/catalog.js gwCosts / bsCosts); every difference from BSData declared in verify/deviations-bsdata.json (army catalog, points); not copied onto a list's units (their pts are the list's)"
+     "note": "the datasheet's costs as GW prints them (Wahapedia: YOUR UNIT COSTS / YOUR 1ST TO 2ND UNITS COST / … per copy of the datasheet, each unit size priced, WARGEAR OPTIONS): { costs:[{ from, to, models:[{ models, pts }] }], wargear } (verify/catalog.js gwCosts: the gate step catalog fails a row whose points are not the page's); not copied onto a list's units (their pts are the list's)"
     },
     "composition": {
-     "source": "bsdata",
-     "note": "the models of the datasheet, each model entry with its min/max (and its group's), as BSData gives them (verify/bs-catalog.js composition); not copied onto units"
+     "source": "wahapedia",
+     "note": "the models of the datasheet, each with its minimum and maximum: GW's UNIT COMPOSITION on the datasheet page, held by the gate step catalog (verify/catalog.js composition; a new catalogue's by verify/from-waha.js). Where New Recruit keeps several model entries for one of GW's lines (\"Termagant w/ shardlauncher\") or counts a line inside a group, the catalogue file holds New Recruit's entries (recorded before 22 Nov 2026) and the step holds them to GW's numbers; not copied onto units"
     },
     "options": {
-     "source": "bsdata",
-     "note": "the wargear choices of the datasheet: per model (or the unit), each group of BSData with its min/max and its choices (verify/bs-catalog.js options); not copied onto units"
+     "source": "wahapedia",
+     "note": "the wargear choices of the datasheet, per model (or the unit): each choice is named in GW's UNIT COMPOSITION (“equipped with”) or WARGEAR OPTIONS on the datasheet page, or is a weapon or ability row of it, and everything GW equips is a choice or a row (the gate step catalog, verify/catalog.js options). The limits of a choice (min, max, its group) are New Recruit's as the catalogue file recorded them before 22 Nov 2026 (builder.js holds an export to them); they are not read from GW's sentences; not copied onto units"
     },
     "aiStatus": {
      "source": "derived",
@@ -1216,31 +1215,31 @@
     },
     "M": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "T": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "Sv": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "W": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "Ld": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "OC": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "InSv": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "base": {
      "source": "newrecruit",
@@ -1261,43 +1260,43 @@
     },
     "range": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "A": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "BS": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "WS": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "S": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "AP": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "D": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "kw": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "group": {
-     "source": "bsdata",
-     "note": "joins the profiles of one weapon: \"pick one\" (verify/choice.js: BSData and Wahapedia)"
+     "source": "wahapedia",
+     "note": "joins the profiles of one weapon, as GW's datasheet prints them (\"Weapon – profile\"): \"pick one\" (verify/choice.js: Wahapedia's pick-one marker and New Recruit's ➤)"
     },
     "fireAll": {
-     "source": "bsdata",
-     "note": "the profiles all fire (verify/choice.js: BSData and Wahapedia)"
+     "source": "wahapedia",
+     "note": "the profiles all fire (verify/choice.js: Wahapedia has no pick-one marker, New Recruit's export no ➤)"
     },
     "hunter": {
      "source": "newrecruit",
@@ -1318,43 +1317,43 @@
     },
     "range": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "A": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "BS": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "WS": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "S": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "AP": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "D": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "kw": {
      "source": "newrecruit",
-     "note": "as New Recruit prints it, checked against BSData (verify/bsdata.js, verify/nr.js)"
+     "note": "as New Recruit prints it, checked against New Recruit's export or PDF (verify/nr.js) and GW's datasheet (verify/numbers.js, verify/keywords.js)"
     },
     "group": {
-     "source": "bsdata",
-     "note": "joins the profiles of one weapon: \"pick one\" (verify/choice.js: BSData and Wahapedia)"
+     "source": "wahapedia",
+     "note": "joins the profiles of one weapon, as GW's datasheet prints them (\"Weapon – profile\"): \"pick one\" (verify/choice.js: Wahapedia's pick-one marker and New Recruit's ➤)"
     },
     "fireAll": {
-     "source": "bsdata",
-     "note": "the profiles all fire (verify/choice.js: BSData and Wahapedia)"
+     "source": "wahapedia",
+     "note": "the profiles all fire (verify/choice.js: Wahapedia has no pick-one marker, New Recruit's export no ➤)"
     },
     "hunter": {
      "source": "newrecruit",
@@ -1560,60 +1559,65 @@
     }
    }
   },
-  "BS_IDS": {
-   "what": "the BSData ids the list import resolves an export by (verify/import-ids.js --write)",
+  "NR_IDS": {
+   "what": "the ids of New Recruit's data that the owner's committed exports (verify/sources/nr-json) have shown, by which the list import looks a selection up first; one no export has shown is looked up by its exact New Recruit name (verify/import-ids.js --write)",
    "columns": {
     "factions": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "newrecruit",
+     "note": "the export's catalogue id: its list's faction (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
     },
     "roots": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "newrecruit",
+     "note": "a top-level selection's id: Battle Size, Force Disposition, Detachment (by its name in the export) (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
     },
     "battleSizes": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "newrecruit",
+     "note": "the battle size selected: the list's (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
     },
     "limits": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "newrecruit",
+     "note": "the points limit New Recruit names for the battle size, which must be GW's Core Rules' (25.03, BUILD_INDEX battleSizes) (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
     },
     "dispositions": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "newrecruit",
+     "note": "the Force Disposition selected: the list's (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
     },
     "detachments": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "newrecruit",
+     "note": "a detachment selected: the list's detachment of that name (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
     },
     "config": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "newrecruit",
+     "note": "a top-level selection that is a key of the list's config (Code Chivalric) (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
     },
     "configKids": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "newrecruit",
+     "note": "its choices (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
     },
     "info": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "newrecruit",
+     "note": "the other top-level selections (Show/Hide Options, rules references: no list content) (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
     },
     "infoKids": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "newrecruit",
+     "note": "their choices (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
     },
     "units": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "newrecruit",
+     "note": "each list unit as the signature of its parts' selections in the export (import.js signature) (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
+    },
+    "datasheets": {
+     "source": "newrecruit",
+     "note": "a part's root id: its datasheet (the list unit's ds), for builder.js (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
     },
     "names": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "newrecruit",
+     "note": "the name the export gives each id (an export's selection must carry the same name) (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)"
     },
     "maxPerList": {
-     "source": "bsdata",
-     "note": "verify/import-ids.js"
+     "source": "derived",
+     "note": "how many of an entry a list may take by GW's rules: an enhancement once (Core Rules 25.04), an Upgrade three times (Wahapedia's UPGRADE, GW's Faction Pack), an EPIC HERO once, a choice a detachment's rule limits (GW_LIMITS, its words in data.js) (verify/import-ids.js: the gate's import step fails when data.js is not what it writes)",
+     "by": "verify/import-ids.js"
     }
    }
   },
@@ -1968,7 +1972,7 @@
    }
   },
   "BUILD_INDEX": {
-   "what": "what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values over BSData’s): written by verify/build-index.js",
+   "what": "what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values where New Recruit prints another): written by verify/build-index.js",
    "columns": {
     "labels": {
      "source": "derived",
@@ -1977,12 +1981,12 @@
     },
     "marks": {
      "source": "derived",
-     "note": "for each rule, ability or enhancement a list's \"+\" mark names, the values it marks (BSData's modifiers): verify/build-index.js, held by build-parity (I)",
+     "note": "for each rule, ability or enhancement a list's \"+\" mark names, the values it marks: verify/build-index.js, held by build-parity (I)",
      "by": "verify/build-index.js"
     },
     "gw": {
      "source": "derived",
-     "note": "a catalogued datasheet's value where GW's datasheet is not BSData's (verify/deviations-bsdata.json, army \"catalog\"): verify/build-index.js, held by build-parity (I)",
+     "note": "a catalogued datasheet's value where New Recruit prints another than GW's datasheet, as the owner's exports and PDFs show it (verify/deviations-nr.json): verify/build-index.js, held by build-parity (I)",
      "by": "verify/build-index.js"
     },
     "battleSizes": {

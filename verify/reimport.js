@@ -3,8 +3,7 @@
 
    1. Each list with a New Recruit JSON export (verify/sources/nr-json/<list>.json), imported again by verify/from-json.js --write
       alone, in a copy of this folder (its files as git lists them, tracked and new, the source cache linked), gives data.js,
-      verify/deviations-bsdata.json, verify/deviations-nr.json, verify/sources/waha-datasheets.txt and verify/sources/bsdata-extract.json
-      byte for byte: a re-import changes nothing, so nothing in a list's data.js is a value only data.js holds, beyond what the import
+      verify/deviations-nr.json and verify/sources/waha-datasheets.txt byte for byte: a re-import changes nothing, so nothing in a list's data.js is a value only data.js holds, beyond what the import
       itself keeps from it (below).
    2. Every entry of every hand file (verify/sources/hand/*.json) carries its reason: a unit entry its why (or each of its columns its
       own: texts.<ability>.why, kw.why), the source line, a stratagem gist its by, a rule's and a fix's why, an id its why.
@@ -30,7 +29,7 @@
 const fs = require('fs'), path = require('path'), os = require('os');
 const { spawn, spawnSync } = require('child_process');
 const ROOT = path.resolve(__dirname, '..');
-const OUTPUTS = ['data.js', 'verify/deviations-bsdata.json', 'verify/deviations-nr.json', 'verify/sources/waha-datasheets.txt', 'verify/sources/bsdata-extract.json'];
+const OUTPUTS = ['data.js', 'verify/deviations-nr.json', 'verify/sources/waha-datasheets.txt'];
 const EXP = path.join(ROOT, 'verify/sources/nr-json');
 const want = process.argv.slice(2).filter(a => !a.startsWith('--'));
 const lists = fs.readdirSync(EXP).filter(f => f.endsWith('.json')).map(f => f.replace(/\.json$/, '')).filter(a => !want.length || want.includes(a)).sort();

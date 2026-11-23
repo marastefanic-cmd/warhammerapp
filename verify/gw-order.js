@@ -449,21 +449,26 @@ module.exports = function make(ROOT) {
   // (kwOnly; a page's "MODEL: KW") or a detachment's (Wahapedia's detachment-only keyword) the list has, an Allies marker. Spelled as the
   // unit has it, else as GW prints it in title case. null: a part with no page (as it is)
   const TC = k => k.toLowerCase().replace(/(^|[\s-])([a-z\u00e0-\u00ff])/g, (m, a, b) => a + b.toUpperCase());
-  // each BSData entry's own categories (verify/sources/bsdata-extract.json, by id), loaded on first use
-  let BSC = null;
-  const bsCats = id => { if (!BSC) { BSC = new Map(); try { const x = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/bsdata-extract.json'), 'utf8'));
-      const walk = o => { if (Array.isArray(o)) { o.forEach(walk); return; } if (!o || typeof o !== 'object') return; if (o.id && Array.isArray(o.categoryLinks)) BSC.set(o.id, o.categoryLinks.map(c => c.name)); for (const k in o) if (o[k] && typeof o[k] === 'object') walk(o[k]); };
-      walk(x.files); } catch (e) {} }
-    return BSC.get(id) || []; };
-  // the BSData categories of each part of a list's unit (by the roots data.js BS_IDS names for it), [] when unknown
-  const partCats = (bsIds, unitKey, parts) => { const sig = ((bsIds || {}).units || {})[unitKey];
-    return parts.map((p, i) => Array.isArray(sig) && sig.length === parts.length ? bsCats(sig[i].split('|')[0]) : []); };
-  // a datasheet's name keyword (GW prints one on every datasheet; Wahapedia's new-codex pages leave it out, so its spelling is BSData's)
-  //   1. exact: the page's keyword or BSData's category that is the whole name; else the name less its leading words that are the page's
+  // New Recruit's categories of each part of a list's unit, for its name keyword's spelling: the categories its export
+  // (verify/sources/nr-json/<list>.json) prints on the part's own selection (the root data.js NR_IDS names for it); [] when the list has
+  // no export, or the unit is not in it
+  const EXPC = new Map();
+  const exportCats = list => { if (!EXPC.has(list)) { const m = new Map();
+      try { const j = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/nr-json', list + '.json'), 'utf8'));
+        for (const s of j.roster.forces[0].selections || []) { const id = String(s.entryId || '').split('::').pop(); if (!m.has(id)) m.set(id, (s.categories || []).map(c => String(c.name).normalize('NFC').replace(/\s+/g, ' ').trim())); } } catch (e) {}
+      EXPC.set(list, m); }
+    return EXPC.get(list); };
+  const partCats = (nrIds, unitKey, parts) => { const sig = ((nrIds || {}).units || {})[unitKey], cats = exportCats(String(unitKey).split('/')[0]);
+    // (a unit no export has, the two lists made from New Recruit's PDFs: its datasheet's catalogue row's keywords, catalogCats)
+    const slugOf = x => String(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[’'`]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    return parts.map((p, i) => { const c = Array.isArray(sig) && sig.length === parts.length ? cats.get(sig[i].split('|')[0]) || [] : [];
+      return c.length ? c : parts.faction ? catalogCats(parts.faction + '/' + slugOf(p.name)) : []; }); };
+  // a datasheet's name keyword (GW prints one on every datasheet; Wahapedia's new-codex pages leave it out, so its spelling is New Recruit's)
+  //   1. exact: the page's keyword or New Recruit's category that is the whole name; else the name less its leading words that are the page's
   //      own keywords (CHAOS Rhino, KHORNE Berzerkers, CANOPTEK Spyders, WAR DOG Brigand) and less "of <a page keyword>" (Daemon Prince of
   //      SLAANESH with Wings): that, as a keyword ("Daemon Prince with Wings"), as "<it, singular> Squad" (Chaos Terminators: TERMINATOR
   //      SQUAD), or less a last word that is a page keyword (Scarab Occult TERMINATORS: SCARAB OCCULT)
-  //   2. head: the keyword the name's head (before of/on/in/with) ends with, else starts with, on the page or else in BSData. Not
+  //   2. head: the keyword the name's head (before of/on/in/with) ends with, else starts with, on the page or else among New Recruit's categories. Not
   //      GW's by itself: only as verify/deviations-keywords.json declares it for the datasheet (name, with its evidence); else none
   //      (how:'head', undeclared), and verify/keywords.js fails
   //   A pick the page prints for another reason (a keyword of other datasheets too: HORRORS, SORCERER) is never exact by a head match.
@@ -481,7 +486,7 @@ module.exports = function make(ROOT) {
   function nameKeyword(p, cats, faction) {
     const name = String(p.name).replace(/\s*\([^()]*\)\s*$/, ''), nm = n(name), uk = p.page.unitKeywords.map(k => k.replace(/\s*:\s*$/, ''));
     const pk = uk.concat(...Object.values(p.page.modelKeywords)).map(k => k.replace(/\s*:\s*$/, ''));
-    const bc = (cats || []).filter(c => !/^Faction: /.test(c)), all = pk.map(k => ({ k:TC(k), from:'page' })).concat(bc.map(c => ({ k:c, from:'bsdata' })));
+    const bc = (cats || []).filter(c => !/^Faction: /.test(c)), all = pk.map(k => ({ k:TC(k), from:'page' })).concat(bc.map(c => ({ k:c, from:'newrecruit' })));
     const same = (x, y) => n(x) === n(y), find = v => all.find(x => same(x.k, v)) || all.find(x => n(x.k) + 's' === n(v) || n(x.k) === n(v) + 's');
     // the whole name, then less its leading words that are the page's own keywords or a god's name (one, then more), each also less
     // "of <a page keyword or god>"; the first that is a keyword (as it is, "<singular> Squad", in the plural or singular, or less a
@@ -515,13 +520,13 @@ module.exports = function make(ROOT) {
       if (line === undefined || line !== uk.join('; ')) bad.push('its evidence does not quote the page\'s KEYWORDS line ("' + uk.join('; ') + '")');
       const where = head && head.from;
       if (where === 'page' && line !== undefined && !line.split('; ').some(k => same(k, dec.nameKeyword))) bad.push('the KEYWORDS line it quotes has no ' + dec.nameKeyword);
-      if (where === 'bsdata' && !(ev.includes('"' + dec.nameKeyword + '"') && bc.some(c => same(c, dec.nameKeyword)))) bad.push('its evidence does not quote BSData\'s category "' + dec.nameKeyword + '", or BSData has none');
+      if (where === 'newrecruit' && !(ev.includes('"' + dec.nameKeyword + '"') && bc.some(c => same(c, dec.nameKeyword)))) bad.push('its evidence does not quote New Recruit\'s category "' + dec.nameKeyword + '", or New Recruit has none');
       if (dec.from && where && dec.from !== where) bad.push('it says from ' + dec.from + ', the pick is from ' + where);
       return Object.assign({ kw:dec.nameKeyword, from:where || dec.from || '?', how:'declared' }, bad.length ? { bad:bad.join('; ') } : {});
     }
     return head ? { kw:head.k, from:head.from, how:'head', undeclared:true } : null;
   }
-  // cats: each part's BSData categories (partCats), for its name keyword; the result's .names: each part's name keyword, .missing: the
+  // cats: each part's New Recruit categories (partCats), for its name keyword; the result's .names: each part's name keyword, .missing: the
   // parts with none found
   function gwKeywords(u, parts, own, cats) {
     if (!Array.isArray(u.kw) || parts.some(p => !p.page)) return null;
@@ -594,16 +599,16 @@ module.exports = function make(ROOT) {
     for (const x of inst) if (kwN.has(n(x.give)) && !said.has(n(x.give))) { segs.push(x.give + ' comes from ' + x.ab.name + (x.ab.who || u.leads ? ' on the ' + (x.ab.who || parts[0].name) : '') + ' (“' + plainQ(x.sen) + '”)'); said.add(n(x.give)); }
     return segs.length ? segs.join('; ') + '.' : undefined;
   }
-  // ---- where the sources disagree about a unit (srcNote, under the model it is about), by one fixed template: a model of the unit (BSData's and
+  // ---- where the sources disagree about a unit (srcNote, under the model it is about), by one fixed template: a model of the unit (
   // New Recruit's profile of it, a stats row) that Wahapedia prints on a datasheet of its own, not on a page of the unit's parts (modelPages:
-  // Sir Hekhtur): { at:<that model>, note:"Wahapedia: its own <EPIC HERO >datasheet; BSData and New Recruit: in this unit" } ("EPIC HERO" where its
+  // Sir Hekhtur): { at:<that model>, note:"Wahapedia: its own <EPIC HERO >datasheet; New Recruit: in this unit" } ("EPIC HERO" where its
   // page's KEYWORDS line has it), one for each such model (a list where there are two or more). None else (verify/tables.js --write writes it; its step "tables" holds data.js to it)
   function srcNoteOf(u, faction) {
     const parts = partsOf(u, faction), pn = x => n(String(x).replace(/ ×\d+$/, '')), out = [];
     for (const m of [...new Set((u.stats || []).map(r => String(r.name).replace(/ ×\d+$/, '')))]) {
       if (parts.some(p => pn(p.name) === pn(m))) continue;
       const M = pageFor(faction, m); if (!M || parts.some(p => p.page && (p.page.file === M.file || (p.page.profiles || []).some(x => x.name && pn(x.name) === pn(m))))) continue;
-      out.push({ at:m, note:'Wahapedia: its own ' + ((M.unitKeywords || []).some(k => n(k) === n('EPIC HERO')) ? 'EPIC HERO ' : '') + 'datasheet; BSData and New Recruit: in this unit' });
+      out.push({ at:m, note:'Wahapedia: its own ' + ((M.unitKeywords || []).some(k => n(k) === n('EPIC HERO')) ? 'EPIC HERO ' : '') + 'datasheet; New Recruit: in this unit' });
     }
     // (every such model: one note, or a list of them)
     return out.length > 1 ? out : out[0];
@@ -617,13 +622,12 @@ module.exports = function make(ROOT) {
     }
   }
   // a faction catalogue's DATASHEETS row (verify/sources/catalog; no list has it, or only as a part of an attached unit): its keywords as
-  // GW prints them (gwKeywords, its BSData categories for the name keyword) and its keywords and Rules line in GW's order, in place
-  // a catalogue row's BSData categories: its entry's in bsdata-extract.json, else the keywords verify/from-bsdata.js read from BSData for
-  // it (verify/sources/catalog/<faction>.json)
-  let CATK = null;
-  const catalogCats = (id, bsId) => { const b = bsId ? bsCats(bsId) : []; if (b.length) return b;
+  // GW prints them (gwKeywords, its catalogue row's keywords for the name keyword) and its keywords and Rules line in GW's order, in place
+  // a catalogue row's New Recruit categories: the keywords its catalogue row holds (verify/sources/catalog/<faction>.json)
+  var CATK = null;
+  function catalogCats(id) {
     if (!CATK) { CATK = new Map(); try { const dir = path.join(ROOT, 'verify/sources/catalog'); for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json'))) for (const [k, r] of Object.entries(JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).datasheets || {})) CATK.set(k, r.kw || []); } catch (e) {} }
-    return CATK.get(id) || []; };
+    return CATK.get(id) || []; }
   // a catalogue row's own keyword: the god of the Daemonic Allegiance choice the BSData entry is ("Khorne Soul Grinder"), which an ability
   // of it names in bold (as tables.js unitWhy gives a list's unit)
   const catalogOwn = ds => { const g = /^(Khorne|Tzeentch|Nurgle|Slaanesh) /.exec(ds.name || '');
@@ -631,7 +635,7 @@ module.exports = function make(ROOT) {
   function catalogSheet(ds, id, abilities) {
     const parts = [{ name:ds.name, page:pageFor(ds.faction, ds.name) }]; parts.faction = ds.faction;
     if (!parts[0].page) return ds;
-    if (Array.isArray(ds.kw)) { const own = catalogOwn(Object.assign({ abilities }, ds)), kw = gwKeywords(ds, parts, own, [catalogCats(id, ds.bsId)]); if (kw) ds.kw = kw.slice(); orderKw(ds, parts, own, kw && kw.names); }
+    if (Array.isArray(ds.kw)) { const own = catalogOwn(Object.assign({ abilities }, ds)), kw = gwKeywords(ds, parts, own, [catalogCats(id)]); if (kw) ds.kw = kw.slice(); orderKw(ds, parts, own, kw && kw.names); }
     orderRules(ds, parts);
     return ds;
   }
@@ -641,7 +645,7 @@ module.exports = function make(ROOT) {
     orderWeapons(u, 'ranged', parts); orderWeapons(u, 'melee', parts); orderAbilities(u, parts); orderRules(u, parts); orderKw(u, parts, []);
     return u;
   }
-  return { modelPages, wordsPass, pageSpells, gwWords, gwWordsOf, declaredWords, DEVW, pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, bsCats, orderKw, gwKeywords, kwNoteOf, srcNoteOf, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
+  return { modelPages, wordsPass, pageSpells, gwWords, gwWordsOf, declaredWords, DEVW, pageWords, sectionsOf, pageAbility, abilityPage, leaderList, gwName, norm, packExclusionsOk, packSections, units, sheet, catalogSheet, catalogCats, catalogOwn, orderKw, gwKeywords, kwNoteOf, srcNoteOf, nameKeyword, partCats, partsOf, pageFor, noPage, kwBase, n, weaponIndex, abilityAt, names };
 };
 module.exports.wahaSectionsOf = wahaSectionsOf;
 module.exports.selectsFrom = selectsFrom;

@@ -1,6 +1,6 @@
 // Pick one, or fire them all? For every weapon the app shows as a group of profiles, the answer
 // must match the sources:
-// - BSData (what New Recruit prints): a profile you pick is named "➤ Weapon - profile"; separate
+// - New Recruit (the owner's exports, verify/sources/nr-json): a profile you pick is named "➤ Weapon - profile"; separate
 //   guns under one name have no ➤ (Nazdreg's "Kustom Blasta X - Skorcha", "- Gatler", "- Shoota")
 // - Wahapedia's datasheet marks pick-one profiles with its "select one of its profiles" arrow
 // The app says "all N fire" (fireAll on every profile) or "pick one profile". A melee group is always
@@ -10,8 +10,10 @@ const fs = require('fs'), path = require('path');
 const { ROOT, loadData, readJSON, writeJSON } = require('./lib');
 
 const D = loadData();
-const extract = fs.readFileSync(path.join(ROOT, 'verify/sources/bsdata-extract.json'), 'utf8');
-const bsNames = new Set([...extract.matchAll(/"name":\s*"([^"]+)"/g)].map(m => m[1]));
+// (the profile names New Recruit prints: every profile of the owner's exports, verify/sources/nr-json)
+const bsNames = new Set();
+{ const dir = path.join(ROOT, 'verify/sources/nr-json'), walk = s => { for(const p of s.profiles || []) bsNames.add(String(p.name)); (s.selections || []).forEach(walk); };
+  for(const f of fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()) JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).roster.forces.forEach(F => (F.selections || []).forEach(walk)); }
 const dsDir = path.join(process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(ROOT, 'verify/.cache'), 'waha/ds');   // verify/currency.js: the newest pages
 const rows = [];   // [text, pointy]
 if(fs.existsSync(dsDir)) for(const f of fs.readdirSync(dsDir).filter(f => f.endsWith('.html'))){
@@ -36,13 +38,13 @@ for(const a of D.armies) for(const u of a.units) for(const kind of ['ranged', 'm
   const where = a.id + ' · ' + u.name + ' · ' + w.group;
   const dev = deviations.findIndex(d => d.unit === u.id && d.group === w.group);
   const problem = app === 'mixed' ? 'some profiles say fireAll, some not'
-    : want && app !== want ? 'app says ' + app + ', sources say ' + want + ' (BSData ' + (bs || '?') + ', Wahapedia ' + (wp || '?') + ')'
-    : kind === 'ranged' && bs && wp && bs !== wp ? 'BSData says ' + bs + ', Wahapedia says ' + wp
+    : want && app !== want ? 'app says ' + app + ', sources say ' + want + ' (New Recruit ' + (bs || '?') + ', Wahapedia ' + (wp || '?') + ')'
+    : kind === 'ranged' && bs && wp && bs !== wp ? 'New Recruit says ' + bs + ', Wahapedia says ' + wp
     : !bs && !wp ? 'no source names this weapon\'s profiles' : '';
   if(problem){ if(dev >= 0) used.add(dev); else failures.push({ check:'weapon-choice', where, detail:problem }); }
 }
 deviations.forEach((d, i) => { if(!used.has(i)) failures.push({ check:'stale-deviation', where:d.unit + ' · ' + d.group, detail:'no longer needed' }); });
 writeJSON(process.env.VERIFY_OUT ? path.resolve(process.env.VERIFY_OUT, 'choice.json') : path.join(ROOT, 'verify/out/choice.json'), { checked, wahapediaPages:fs.existsSync(dsDir) ? fs.readdirSync(dsDir).length : 0, failures });
-console.log('choice: ' + checked + ' weapons with several profiles checked against BSData and Wahapedia, ' + failures.length + ' failures');
+console.log('choice: ' + checked + ' weapons with several profiles checked against New Recruit’s exports and Wahapedia, ' + failures.length + ' failures');
 failures.forEach(f => console.log('  ' + f.check + ' · ' + f.where + ' · ' + f.detail));
 process.exit(failures.length ? 1 : 0);

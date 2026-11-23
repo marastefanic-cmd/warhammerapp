@@ -125,7 +125,7 @@ const RESOLVER = `// Each unit entry of ARMIES names its datasheet (ds: an id of
 // datasheet does not have (an enhancement's ability) is the list's own. over: a datasheet fact this list has otherwise
 // than another list (verify/out/tables.md), kept per list until it is decided. why: the reason a value of the entry (or
 // its row) is not the datasheet's: the rule, Warlord, enhancement or wargear that gives it (the value is the list's). of: which datasheet of an attached unit a
-// row is from, when its who does not say. Hidden from the app: ds, over, of, a datasheet's faction and bsId, and the
+// row is from, when its who does not say. Hidden from the app: ds, over, of, a datasheet's faction, and the
 // fingerprints (gistOf, defOf) of AI-written columns.
 // The readings (mods: footnotes; aura: what the unit gives other units; guard: their "When targeted" help) are each on the row of
 // the rule they read, in this order: the army rules on the unit's Rules line, each datasheet of the unit, its enhancement (or
@@ -136,7 +136,7 @@ function resolveArmies(armies, sheets, order, factions, opts){
   opts = opts || {}; factions = factions || {};
   var ROWS = ['stats', 'ranged', 'melee', 'abilities'], READ = [];
   var FPK = ${JSON.stringify(FP_KEYS)}, RHIDE = ['${READ_FP}', '${READ_BY}', '${READ_WHY}'].filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
-  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(FPK, ${JSON.stringify(CAT_COLS)}).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
+  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction'].concat(FPK, ${JSON.stringify(CAT_COLS)}).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values
   function sorted(o, keys){ var out = {}, i, k; for(i = 0; i < keys.length; i++) if(keys[i] in o) out[keys[i]] = o[keys[i]]; for(k in o) if(!(k in out)) out[k] = o[k]; return out; }
@@ -230,7 +230,7 @@ function marked(src, m){ const i = src.indexOf(m[0]), j = src.indexOf(m[1]); ret
 function read(src){
   const A = constant(src, 'ARMIES');
   if(!A) throw new Error('data.js: no ARMIES');
-  const S = constant(src, 'DATASHEETS'), O = constant(src, 'TABLE_ORDER'), B = constant(src, 'BS_IDS');
+  const S = constant(src, 'DATASHEETS'), O = constant(src, 'TABLE_ORDER'), B = constant(src, 'NR_IDS');
   const sheets = S ? S.value : {}, order = O ? O.value : {};
   // resolve, and trace where each row came from (to put each comment of the datasheet table on every place it shows)
   const tr = new Map();   // "ai/ui/kind" -> [{ sid, j }] per row (per reading: { sid, j } of a datasheet's, { e } of the entry's own)
@@ -279,7 +279,7 @@ function read(src){
   // the rules in force and what they give units (GRANTS, as verify/derive.js reads them from the words): the reasons a list's unit
   // has a keyword its datasheet does not
   let G = null;
-  return { src, A, S, O, armies, comments:C, order, bsIds:B ? B.value : {}, factions:D.factions, D, get grants(){ return G || (G = require('./derive').ruleTables(D).grants); } };
+  return { src, A, S, O, armies, comments:C, order, nrIds:B ? B.value : {}, factions:D.factions, D, get grants(){ return G || (G = require('./derive').ruleTables(D).grants); } };
 }
 
 // ------------------------------------------------------------------------------------------------------------------
@@ -345,7 +345,7 @@ function ruleAbilityFails(D){
   return fails;
 }
 function build(R){
-  const armies = R.armies, bsIds = R.bsIds || {}, C = R.comments;
+  const armies = R.armies, nrIds = R.nrIds || {}, C = R.comments;
   const order = { unit:keyOrder(armies.flatMap(a => a.units.map(u => Object.keys(u).filter(k => k !== 'ds'))), R.order.unit) };
   for(const kind of ROWS) order[kind] = keyOrder(armies.flatMap(a => a.units.flatMap(u => (u[kind] || []).map(r => Object.keys(r)))), R.order[kind]);
   const sheets = new Map(), units = [], notes = [];
@@ -378,13 +378,10 @@ function build(R){
     if(u.ds) throw new Error(a.id + '/' + u.id + ': not resolved');
     const names = u.leads ? [u.name].concat((u.also || []).map(x => x.name), [u.leads]) : [u.name];
     const ids = names.map(n => a.faction + '/' + slug(n));
-    const sig = (bsIds.units || {})[a.id + '/' + u.id];
-    const roots = Array.isArray(sig) && sig.length === names.length ? sig.map(s => s.split('|')[0]) : null;
     names.forEach((n, i) => {
-      if(!sheets.has(ids[i])) sheets.set(ids[i], { id:ids[i], name:n, faction:a.faction, bs:new Map(), rows:Object.fromEntries(ROWS.map(k => [k, new Map()])), unitObs:[], all:[] });
+      if(!sheets.has(ids[i])) sheets.set(ids[i], { id:ids[i], name:n, faction:a.faction, rows:Object.fromEntries(ROWS.map(k => [k, new Map()])), unitObs:[], all:[] });
       const s = sheets.get(ids[i]);
       if(s.name !== n) throw new Error('two datasheets have the id ' + ids[i] + ': ' + s.name + ', ' + n);
-      if(roots){ if(!s.bs.has(roots[i])) s.bs.set(roots[i], []); s.bs.get(roots[i]).push(a.id + '/' + u.id); }
     });
     const U = { ai, ui, a, u, ids, names, multi:names.length > 1, rows:{}, forced:new Set() };
     units.push(U);
@@ -436,13 +433,6 @@ function build(R){
   const matchNeeds = (to, u) => { const has = k => (u.kw || []).some(x => lc(x) === lc(k));
     if(!to || typeof to !== 'object' || Object.keys(to).some(k => !['all', 'any', 'none'].includes(k))) return !to;
     return (to.all || []).every(has) && (!to.any || to.any.some(has)) && !(to.none || []).some(has); };
-  // each BSData entry's own categories (verify/sources/bsdata-extract.json, by id), before any modifier of a rule
-  let BSC = null; const BSR = new Map();   // (and its own rules: core abilities BSData links to it, "Deep Strike")
-  const bsCats = () => { if(BSC) return BSC; BSC = new Map();
-    try { const x = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources/bsdata-extract.json'), 'utf8'));
-      const walk = o => { if(Array.isArray(o)){ o.forEach(walk); return; } if(!o || typeof o !== 'object') return; if(o.id && Array.isArray(o.categoryLinks)) BSC.set(o.id, o.categoryLinks.map(c => c.name)); if(o.id && (o.infoLinks || o.rules)) BSR.set(o.id, [].concat(o.infoLinks || [], o.rules || []).map(c => c.name)); for(const k in o) if(o[k] && typeof o[k] === 'object') walk(o[k]); };
-      walk(x.files); } catch(e) {}
-    return BSC; };
   const ownAbilities = u => (u.abilities || []).filter(x => /\b(Enhancement|Upgrade)\b/.test(x.tag || ''));
   // always the list's: the Warlord keyword, a keyword a rule in force gives (GRANTS), a rule an enhancement or upgrade gives
   const unitWhy = U => {
@@ -450,10 +440,11 @@ function build(R){
     const put = (f, k, r) => { (why[f] = why[f] || {})[k] = r; };
     const kwOf = k => (u.kw || []).find(x => lc(x) === lc(k));
     if(u.warlord && kwOf('Warlord')) put('kw', kwOf('Warlord'), 'Warlord');
-    // (a keyword a rule gives that a datasheet of the unit already has, its own BSData category: no reason, it is the datasheet's;
+    // (a keyword a rule gives that a datasheet of the unit already has, GW's datasheet page prints it: no reason, it is the datasheet's;
     // the Forgefiend's DAEMON, which Soul Forge Boons also gives HERETIC ASTARTES VEHICLE units)
-    const nativeRule = r => U.ids.some(id => { const s = sheets.get(id); bsCats(); return s && [...s.bs.keys()].some(b => (BSR.get(b) || []).some(x => lc(x) === lc(r))); });
-    const native = k => U.ids.some(id => { const s = sheets.get(id); return s && [...s.bs.keys()].some(b => (bsCats().get(b) || []).some(x => lc(x) === lc(k))); });
+    const pages = GWO().partsOf(u, a.faction).map(p => p.page).filter(Boolean), nk = x => lc(String(x).replace(/\s*:\s*$/, ''));
+    const nativeRule = r => pages.some(P => [].concat(P.labels['CORE ABILITIES'] || [], P.labels['ARMY RULES'] || []).some(x => lc(x) === lc(r)));
+    const native = k => pages.some(P => [].concat(P.unitKeywords, ...Object.values(P.modelKeywords || {}), P.factionKeywords).some(x => nk(x) === lc(k)));
     const inForce = [F.name + ' army rule · '].concat(a.detachments.map(d => F.name + ' · ' + ((F.detachments || {})[d] || {}).name + ' rule · '));
     for(const g of R.grants || []){
       if(!/keyword/.test(g.type) || g.to === 'this unit / model' || !inForce.some(p => g.rule.startsWith(p)) || !matchNeeds(g.to, u)) continue;
@@ -496,13 +487,13 @@ function build(R){
   // gwKeywords; verify/keywords.js checks it)
   // (and the keywords note, kwNote, by its fixed templates over the pages and the reasons (verify/gw-order.js kwNoteOf): before the keywords,
   // whose own it names, and after them, of the keywords the unit has)
-  const kwNote = U => { const parts = GWO().partsOf(U.u, U.a.faction), k = GWO().kwNoteOf(U.u, U.a.faction, U.why, R.grants, GWO().partCats(bsIds, U.a.id + '/' + U.u.id, parts));
+  const kwNote = U => { const parts = GWO().partsOf(U.u, U.a.faction), k = GWO().kwNoteOf(U.u, U.a.faction, U.why, R.grants, GWO().partCats(nrIds, U.a.id + '/' + U.u.id, parts));
     if(k) U.u.kwNote = k; else delete U.u.kwNote; };
   for(const U of units) if(!U.u.ref) kwNote(U);
   // (and where the sources disagree about it, srcNote: a model Wahapedia prints on a datasheet of its own, verify/gw-order.js srcNoteOf)
   for(const U of units) if(!U.u.ref){ const sn = GWO().srcNoteOf(U.u, U.a.faction); if(sn) U.u.srcNote = sn; else delete U.u.srcNote; }
   for(const U of units){ const parts = GWO().partsOf(U.u, U.a.faction), own = Object.keys((U.why || {}).kw || {});
-    const kw = GWO().gwKeywords(U.u, parts, own, GWO().partCats(bsIds, U.a.id + '/' + U.u.id, parts)); if(kw) U.u.kw = kw.slice();
+    const kw = GWO().gwKeywords(U.u, parts, own, GWO().partCats(nrIds, U.a.id + '/' + U.u.id, parts)); if(kw) U.u.kw = kw.slice();
     GWO().orderKw(U.u, parts, own, kw && kw.names); }
   for(const U of units) if(!U.u.ref) kwNote(U);
   // the readings, each to the row it reads (readingTables); the list's own keep their reason
@@ -562,8 +553,6 @@ function build(R){
       }
     }
     s.ds = { name:s.name, faction:s.faction };
-    if(s.bs.size === 1) s.ds.bsId = [...s.bs.keys()][0];
-    else if(s.bs.size > 1) conflicts.push({ where:s.id, field:'bsId', values:[...s.bs.entries()].map(([v, l]) => ({ value:v, lists:l })) });
     s.uconf = new Set();
     for(const f of DS_UNIT.slice(1)){
       const args = [s.unitObs, U => strip(U, f), U => f in U.u, U => !(f === 'role' && U.why.role), s.id, f];
@@ -585,11 +574,10 @@ function build(R){
   for(const [id, c] of catalogRows()){
     let s = sheets.get(id);
     if(!s){
-      s = { id, name:c.name, faction:c.faction, bs:new Map(c.bsId ? [[c.bsId, []]] : []), rows:Object.fromEntries(ROWS.map(k => [k, new Map()])), unitObs:[], all:[], uconf:new Set(), catalog:'only' };
-      s.ds = { name:c.name, faction:c.faction }; if(c.bsId) s.ds.bsId = c.bsId;
+      s = { id, name:c.name, faction:c.faction, rows:Object.fromEntries(ROWS.map(k => [k, new Map()])), unitObs:[], all:[], uconf:new Set(), catalog:'only' };
+      s.ds = { name:c.name, faction:c.faction };
       sheets.set(id, s);
     } else s.catalog = 'shared';
-    if(c.bsId && !s.ds.bsId && s.bs.size <= 1) s.ds.bsId = c.bsId;
     // (a unit fact the catalogue fills on a row a list has: an attached unit's entry keeps its own, as before, catFilled)
     s.catFilled = new Set();
     for(const f of DS_UNIT.slice(1).concat(CAT_COLS)) if(c[f] !== undefined && !(f in s.ds) && !s.uconf.has(f)){ s.ds[f] = c[f]; if(s.catalog === 'shared') s.catFilled.add(f); }
@@ -755,7 +743,7 @@ function build(R){
     const d = Object.assign({}, s.ds);
     for(const kind of READ){ const rr = RT.rowRead('ds\0' + s.id, kind); if(rr.length) d[kind] = rr.map(y => y.o); }
     for(const kind of ROWS) if(s.rows[kind].size) d[kind] = [...s.rows[kind].values()].map(R => R.ds);
-    const o = { name:d.name, faction:d.faction }; if(d.bsId) o.bsId = d.bsId;
+    const o = { name:d.name, faction:d.faction };
     for(const k of order.unit.concat(ROWS)) if(k in d && !(k in o)) o[k] = d[k];
     for(const k of Object.keys(d)) if(!(k in o)) o[k] = d[k];
     table[s.id] = o;
@@ -1030,7 +1018,7 @@ function sheetsText(sheets, C){
   const ids = Object.keys(sheets);
   ids.forEach((id, i) => {
     W.line('', q(id) + ':{', [[id]]);
-    W.fields(sheets[id], [id], '  ', [['name', 'faction', 'bsId', 'role']]);
+    W.fields(sheets[id], [id], '  ', [['name', 'faction', 'role']]);
     W.lines.push('}' + (i < ids.length - 1 ? ',' : ''));
   });
   W.lines.push('};');
@@ -1248,7 +1236,7 @@ function columnsInData(src){
   (D.ruleOptions || []).forEach(r => add('RULE_OPTIONS', r)); (D.grants || []).forEach(r => add('GRANTS', r));
   // the Damage tab's boxes (verify/effects-migrate.js --write) and each box's columns
   for(const o of Object.values(D.boxes || {})){ add('BOXES', o); (o.b || []).forEach(b => add('BOXES.b', b)); (o.d || []).forEach(b => add('BOXES.d', b)); }
-  add('BS_IDS', D.bsIds);
+  add('NR_IDS', D.nrIds);
   // what builder.js reads on the phone beyond the other tables (verify/build-index.js --write): one object, its parts the columns
   add('BUILD_INDEX', D.buildIndex);
   // which boxes two readings confirm (verify/agree.js --write, the two-reader rule): one object, its part the column
@@ -1596,7 +1584,7 @@ function screenJudgements(D, opts){
   if(!SCREENS.every(n => fns.has(n))) out.push('app.html has no ' + SCREENS.filter(n => !fns.has(n)).join(', '));
   for(const [t, x] of Object.entries(reg)) for(const [c, v] of Object.entries(x.columns || {})){
     const how = cols[t + '.' + c]; if(!how) continue;
-    if(['gw', 'wahapedia', 'bsdata', 'newrecruit'].includes(v.source)) continue;
+    if(['gw', 'wahapedia', 'newrecruit'].includes(v.source)) continue;
     if(v.source === 'ai-summary' && (c === 'gist' || SUM_COLS.includes(c))) continue;
     if(v.source === 'derived'){ for(const d of v.declared || []) if(!d.at || !d.why || !d.evidence) out.push(t + '.' + c + ': a declared row without its at, why and evidence');
       // (and it names the script that derives or holds it (by, or its note), one the gate runs (a step of verify/run.js, or a file one
@@ -1625,7 +1613,7 @@ function layerOf(t, c){
   if(READ.includes(c) || (READ_KIND[t] && READ_COLS[READ_KIND[t]].includes(c))) return 'ai-reading';
   return null;
 }
-const SOURCES = ['bsdata', 'wahapedia', 'gw', 'newrecruit', 'derived', 'hand', 'ai-summary', 'ai-reading'];
+const SOURCES = ['wahapedia', 'gw', 'newrecruit', 'derived', 'hand', 'ai-summary', 'ai-reading'];
 
 // ------------------------------------------------------------------------------------------------------------------
 // the report: the datasheets and every fact two lists have differently

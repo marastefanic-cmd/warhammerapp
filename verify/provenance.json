@@ -107,7 +107,7 @@
    "id": "waha:thousand-sons",
    "label": "Wahapedia thousand-sons (text)",
    "file": "verify/.cache/waha/thousand-sons.txt",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "id": "waha:tyranids",
@@ -119,7 +119,7 @@
    "id": "waha:adeptus-mechanicus",
    "label": "Wahapedia adeptus-mechanicus (text)",
    "file": "verify/.cache/waha/adeptus-mechanicus.txt",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "id": "waha:emperors-children",
@@ -167,181 +167,181 @@
    "id": "wahafaq:wahahtml:orks",
    "label": "Wahapedia orks (its FAQ and errata)",
    "file": "verify/.cache/waha/orks.html",
-   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+   "sha256": "a71f309b5802c81fdafd97a960846466dbf7ab3e1841fdbf2edc6383b77be17c"
   },
   {
    "id": "wahahtml:orks",
    "label": "Wahapedia orks",
    "file": "verify/.cache/waha/orks.html",
-   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+   "sha256": "a71f309b5802c81fdafd97a960846466dbf7ab3e1841fdbf2edc6383b77be17c"
   },
   {
    "id": "wahafaq:wahahtml:imperial-knights",
    "label": "Wahapedia imperial-knights (its FAQ and errata)",
    "file": "verify/.cache/waha/imperial-knights.html",
-   "sha256": "cd6b75588341f28c2705a5ec7c2208e4319c6d0bf07a21a3886db0d6b595caa9"
+   "sha256": "172bbb778a124f52c64053d33063e22a01981d0e97acb64e586aba1e617f5a67"
   },
   {
    "id": "wahahtml:imperial-knights",
    "label": "Wahapedia imperial-knights",
    "file": "verify/.cache/waha/imperial-knights.html",
-   "sha256": "cd6b75588341f28c2705a5ec7c2208e4319c6d0bf07a21a3886db0d6b595caa9"
+   "sha256": "172bbb778a124f52c64053d33063e22a01981d0e97acb64e586aba1e617f5a67"
   },
   {
    "id": "wahafaq:wahahtml:world-eaters",
    "label": "Wahapedia world-eaters (its FAQ and errata)",
    "file": "verify/.cache/waha/world-eaters.html",
-   "sha256": "7609b464b76e1f11635f1ad45d560c796142a13567e11504e5a18c090ddae8a1"
+   "sha256": "9998b0f4d74012e7545ed81debbdcaa99964b41a6d544ba29297e56f10e8421c"
   },
   {
    "id": "wahahtml:world-eaters",
    "label": "Wahapedia world-eaters",
    "file": "verify/.cache/waha/world-eaters.html",
-   "sha256": "7609b464b76e1f11635f1ad45d560c796142a13567e11504e5a18c090ddae8a1"
+   "sha256": "9998b0f4d74012e7545ed81debbdcaa99964b41a6d544ba29297e56f10e8421c"
   },
   {
    "id": "wahafaq:wahahtml:thousand-sons",
    "label": "Wahapedia thousand-sons (its FAQ and errata)",
    "file": "verify/.cache/waha/thousand-sons.html",
-   "sha256": "97b1480448fd9cf67fb816a54cfb8aa7ccd8d45c8838867a1cba939a4ca7666b"
+   "sha256": "7ba2491e55a49346382d3149d718c543465f97325eb28b75469f2be7aec21b73"
   },
   {
    "id": "wahahtml:thousand-sons",
    "label": "Wahapedia thousand-sons",
    "file": "verify/.cache/waha/thousand-sons.html",
-   "sha256": "97b1480448fd9cf67fb816a54cfb8aa7ccd8d45c8838867a1cba939a4ca7666b"
+   "sha256": "7ba2491e55a49346382d3149d718c543465f97325eb28b75469f2be7aec21b73"
   },
   {
    "id": "wahafaq:wahahtml:tyranids",
    "label": "Wahapedia tyranids (its FAQ and errata)",
    "file": "verify/.cache/waha/tyranids.html",
-   "sha256": "d200e7bceb8b757e48a637008a989b1b690e3918596faf318f67264644244cf7"
+   "sha256": "4fc8eea2e296d9984274f54c1bef22d7a8a819fe5705f43d2a5a4000f03ca683"
   },
   {
    "id": "wahahtml:tyranids",
    "label": "Wahapedia tyranids",
    "file": "verify/.cache/waha/tyranids.html",
-   "sha256": "d200e7bceb8b757e48a637008a989b1b690e3918596faf318f67264644244cf7"
+   "sha256": "4fc8eea2e296d9984274f54c1bef22d7a8a819fe5705f43d2a5a4000f03ca683"
   },
   {
    "id": "wahafaq:wahahtml:adeptus-mechanicus",
    "label": "Wahapedia adeptus-mechanicus (its FAQ and errata)",
    "file": "verify/.cache/waha/adeptus-mechanicus.html",
-   "sha256": "72a35cd059776363def7febc4444afcd2e93bbce7c1e91ac4d8f06660123fd60"
+   "sha256": "e03f75024302b63c8274a5cf3ab6480e0968a70ba1c619b095238c2fd2254037"
   },
   {
    "id": "wahahtml:adeptus-mechanicus",
    "label": "Wahapedia adeptus-mechanicus",
    "file": "verify/.cache/waha/adeptus-mechanicus.html",
-   "sha256": "72a35cd059776363def7febc4444afcd2e93bbce7c1e91ac4d8f06660123fd60"
+   "sha256": "e03f75024302b63c8274a5cf3ab6480e0968a70ba1c619b095238c2fd2254037"
   },
   {
    "id": "wahafaq:wahahtml:emperors-children",
    "label": "Wahapedia emperors-children (its FAQ and errata)",
    "file": "verify/.cache/waha/emperors-children.html",
-   "sha256": "d51c66edf227f9ad1cfeced6f4e3350612211af52461531d224705de499a770b"
+   "sha256": "b95c2de8384c00e40d8f439952a07abd3c8bf7665c50d05ee1d418fb508c17e8"
   },
   {
    "id": "wahahtml:emperors-children",
    "label": "Wahapedia emperors-children",
    "file": "verify/.cache/waha/emperors-children.html",
-   "sha256": "d51c66edf227f9ad1cfeced6f4e3350612211af52461531d224705de499a770b"
+   "sha256": "b95c2de8384c00e40d8f439952a07abd3c8bf7665c50d05ee1d418fb508c17e8"
   },
   {
    "id": "wahafaq:wahahtml:chaos-knights",
    "label": "Wahapedia chaos-knights (its FAQ and errata)",
    "file": "verify/.cache/waha/chaos-knights.html",
-   "sha256": "fd1ab9e09637c57491d66c4d6ecbf284358a3d6ad73d5f9af0428acbdcd89a5e"
+   "sha256": "1a5699d7752c2a7e41dcdea3854f64b386fd6e0c5b1cc4ff2c9c1a98b9302ab9"
   },
   {
    "id": "wahahtml:chaos-knights",
    "label": "Wahapedia chaos-knights",
    "file": "verify/.cache/waha/chaos-knights.html",
-   "sha256": "fd1ab9e09637c57491d66c4d6ecbf284358a3d6ad73d5f9af0428acbdcd89a5e"
+   "sha256": "1a5699d7752c2a7e41dcdea3854f64b386fd6e0c5b1cc4ff2c9c1a98b9302ab9"
   },
   {
    "id": "wahafaq:wahahtml:adeptus-custodes",
    "label": "Wahapedia adeptus-custodes (its FAQ and errata)",
    "file": "verify/.cache/waha/adeptus-custodes.html",
-   "sha256": "87fc3c5c0b21e5246f0df8f0c20825ee2ae071661edf1b69b7e7cff437697fef"
+   "sha256": "6223560e3944a754fb7c9cd9975a4c45b43ef3accd5dd443f9919a2fa3394d77"
   },
   {
    "id": "wahahtml:adeptus-custodes",
    "label": "Wahapedia adeptus-custodes",
    "file": "verify/.cache/waha/adeptus-custodes.html",
-   "sha256": "87fc3c5c0b21e5246f0df8f0c20825ee2ae071661edf1b69b7e7cff437697fef"
+   "sha256": "6223560e3944a754fb7c9cd9975a4c45b43ef3accd5dd443f9919a2fa3394d77"
   },
   {
    "id": "wahafaq:wahahtml:ultramarines",
    "label": "Wahapedia ultramarines (its FAQ and errata)",
    "file": "verify/.cache/waha/ultramarines.html",
-   "sha256": "c1515725aa7a4d80f283242576935365a9da8d92d999536ccc300b3516b5fbd3"
+   "sha256": "7a7557b604176d97bb79124e7978c022b7fd6865288fe051b29e9657ec0d5213"
   },
   {
    "id": "wahahtml:ultramarines",
    "label": "Wahapedia ultramarines",
    "file": "verify/.cache/waha/ultramarines.html",
-   "sha256": "c1515725aa7a4d80f283242576935365a9da8d92d999536ccc300b3516b5fbd3"
+   "sha256": "7a7557b604176d97bb79124e7978c022b7fd6865288fe051b29e9657ec0d5213"
   },
   {
    "id": "wahafaq:wahahtml:chaos-daemons",
    "label": "Wahapedia chaos-daemons (its FAQ and errata)",
    "file": "verify/.cache/waha/chaos-daemons.html",
-   "sha256": "2ee4c3ea3543cfa74eb2edff1b308649b159e41b786d7fba451ee1e8cda451cf"
+   "sha256": "c3a8962551d53be906efbbe72e217a3028e42cc7fabced4af0a5857a440ccf8a"
   },
   {
    "id": "wahahtml:chaos-daemons",
    "label": "Wahapedia chaos-daemons",
    "file": "verify/.cache/waha/chaos-daemons.html",
-   "sha256": "2ee4c3ea3543cfa74eb2edff1b308649b159e41b786d7fba451ee1e8cda451cf"
+   "sha256": "c3a8962551d53be906efbbe72e217a3028e42cc7fabced4af0a5857a440ccf8a"
   },
   {
    "id": "wahafaq:wahahtml:chaos-space-marines",
    "label": "Wahapedia chaos-space-marines (its FAQ and errata)",
    "file": "verify/.cache/waha/chaos-space-marines.html",
-   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+   "sha256": "df970b7f6e1eaa6d01b52b93890f2d78755fb1cc84ba9f325bead8238596d3eb"
   },
   {
    "id": "wahahtml:chaos-space-marines",
    "label": "Wahapedia chaos-space-marines",
    "file": "verify/.cache/waha/chaos-space-marines.html",
-   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+   "sha256": "df970b7f6e1eaa6d01b52b93890f2d78755fb1cc84ba9f325bead8238596d3eb"
   },
   {
    "id": "wahafaq:wahahtml:necrons",
    "label": "Wahapedia necrons (its FAQ and errata)",
    "file": "verify/.cache/waha/necrons.html",
-   "sha256": "3781907ddd28ebe643406fe554eefa0cf042edf817e41063a81364923e648e11"
+   "sha256": "2dc8c077a70bbe952777d8f15038ff08ad1a49660c827837fd738d61f44a8371"
   },
   {
    "id": "wahahtml:necrons",
    "label": "Wahapedia necrons",
    "file": "verify/.cache/waha/necrons.html",
-   "sha256": "3781907ddd28ebe643406fe554eefa0cf042edf817e41063a81364923e648e11"
+   "sha256": "2dc8c077a70bbe952777d8f15038ff08ad1a49660c827837fd738d61f44a8371"
   },
   {
    "id": "wahafaq:wahahtml:core",
    "label": "Wahapedia core rules (its FAQ and errata)",
    "file": "verify/.cache/waha/core.html",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "id": "wahahtml:core",
    "label": "Wahapedia core rules",
    "file": "verify/.cache/waha/core.html",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "id": "wahafaq:wahahtml:imperial-agents",
    "label": "Wahapedia imperial-agents (its FAQ and errata)",
    "file": "verify/.cache/waha/imperial-agents.html",
-   "sha256": "582a156914cd1cbd1a90aa2573be80babde1d49ebc9d5e307ab6c1e17c21671b"
+   "sha256": "ac4064721dcca34e25598d1eef047533d38715e327bf1559801268e0f1c4d3e8"
   },
   {
    "id": "wahahtml:imperial-agents",
    "label": "Wahapedia imperial-agents",
    "file": "verify/.cache/waha/imperial-agents.html",
-   "sha256": "582a156914cd1cbd1a90aa2573be80babde1d49ebc9d5e307ab6c1e17c21671b"
+   "sha256": "ac4064721dcca34e25598d1eef047533d38715e327bf1559801268e0f1c4d3e8"
   },
   {
    "id": "packet",
@@ -353,145 +353,145 @@
    "id": "wahafaq:wahads:orks_Ghazghkull-Thraka",
    "label": "Wahapedia datasheet Ghazghkull-Thraka (its FAQ and errata)",
    "file": "verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html",
-   "sha256": "2f3a3d2d690058c526c7b7331b4c21a0b63ba5f94ee32317f11bc98f4d8520aa"
+   "sha256": "1ace9ac80ceda79ec00613aa273f1966b2fec007570ea7cc1c4c8f0cf675174f"
   },
   {
    "id": "wahads:orks_Ghazghkull-Thraka",
    "label": "Wahapedia datasheet Ghazghkull-Thraka",
    "file": "verify/.cache/waha/ds/orks_Ghazghkull-Thraka.html",
-   "sha256": "2f3a3d2d690058c526c7b7331b4c21a0b63ba5f94ee32317f11bc98f4d8520aa"
+   "sha256": "1ace9ac80ceda79ec00613aa273f1966b2fec007570ea7cc1c4c8f0cf675174f"
   },
   {
    "id": "wahafaq:wahads:tyranids_The-Swarmlord",
    "label": "Wahapedia datasheet The-Swarmlord (its FAQ and errata)",
    "file": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html",
-   "sha256": "b7952c4f9b46d19acbc53bde16a541c90c33367d1f459d42e99c8396b147fee9"
+   "sha256": "f22f6dc028746a79ca27febacdf8e482157dee83286cdffc94bdc8a6cc6b471a"
   },
   {
    "id": "wahads:tyranids_The-Swarmlord",
    "label": "Wahapedia datasheet The-Swarmlord",
    "file": "verify/.cache/waha/ds/tyranids_The-Swarmlord.html",
-   "sha256": "b7952c4f9b46d19acbc53bde16a541c90c33367d1f459d42e99c8396b147fee9"
+   "sha256": "f22f6dc028746a79ca27febacdf8e482157dee83286cdffc94bdc8a6cc6b471a"
   },
   {
    "id": "wahafaq:wahads:tyranids_Biovores",
    "label": "Wahapedia datasheet Biovores (its FAQ and errata)",
    "file": "verify/.cache/waha/ds/tyranids_Biovores.html",
-   "sha256": "edfb23d4a4677ef219bc407b5823d46430a3dd241a27cbac09cb0c59fb6a8ebb"
+   "sha256": "b4db3fb5fb0b82e8b05196d8593955ed6a2a7d75a8b72a57b84048a258caa0b4"
   },
   {
    "id": "wahads:tyranids_Biovores",
    "label": "Wahapedia datasheet Biovores",
    "file": "verify/.cache/waha/ds/tyranids_Biovores.html",
-   "sha256": "edfb23d4a4677ef219bc407b5823d46430a3dd241a27cbac09cb0c59fb6a8ebb"
+   "sha256": "b4db3fb5fb0b82e8b05196d8593955ed6a2a7d75a8b72a57b84048a258caa0b4"
   },
   {
    "id": "wahafaq:wahads:adeptus-mechanicus_Belisarius-Cawl",
    "label": "Wahapedia datasheet Belisarius-Cawl (its FAQ and errata)",
    "file": "verify/.cache/waha/ds/adeptus-mechanicus_Belisarius-Cawl.html",
-   "sha256": "69e7ff841ef9950e313fa5769323765f0f78cfe29b4e5dc2f8bbedcdcaefd63e"
+   "sha256": "3c67c351fbe6bc367f4877417df46e613bda3eade8178beb63a53fd0e6d75d3b"
   },
   {
    "id": "wahads:adeptus-mechanicus_Belisarius-Cawl",
    "label": "Wahapedia datasheet Belisarius-Cawl",
    "file": "verify/.cache/waha/ds/adeptus-mechanicus_Belisarius-Cawl.html",
-   "sha256": "69e7ff841ef9950e313fa5769323765f0f78cfe29b4e5dc2f8bbedcdcaefd63e"
+   "sha256": "3c67c351fbe6bc367f4877417df46e613bda3eade8178beb63a53fd0e6d75d3b"
   },
   {
    "id": "wahafaq:wahads:adeptus-mechanicus_Thulia-Ghuld",
    "label": "Wahapedia datasheet Thulia-Ghuld (its FAQ and errata)",
    "file": "verify/.cache/waha/ds/adeptus-mechanicus_Thulia-Ghuld.html",
-   "sha256": "d62d1402063399b5d3f771966d95b9170ae0f10330d752e77390e7658a16ff88"
+   "sha256": "161a39210e014d2ccfe879b0efbb70cc73accb5e69353b5c95cf046144374d53"
   },
   {
    "id": "wahads:adeptus-mechanicus_Thulia-Ghuld",
    "label": "Wahapedia datasheet Thulia-Ghuld",
    "file": "verify/.cache/waha/ds/adeptus-mechanicus_Thulia-Ghuld.html",
-   "sha256": "d62d1402063399b5d3f771966d95b9170ae0f10330d752e77390e7658a16ff88"
+   "sha256": "161a39210e014d2ccfe879b0efbb70cc73accb5e69353b5c95cf046144374d53"
   },
   {
    "id": "wahafaq:wahads:adeptus-custodes_Trajann-Valoris",
    "label": "Wahapedia datasheet Trajann-Valoris (its FAQ and errata)",
    "file": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html",
-   "sha256": "98201c144766b7aec46fa5816063b06ac04cae56c0d5d190c7a3b312caffe91a"
+   "sha256": "45e71e59926553e606023c72e0a8935f94e890274e5442560943a4f164392cda"
   },
   {
    "id": "wahads:adeptus-custodes_Trajann-Valoris",
    "label": "Wahapedia datasheet Trajann-Valoris",
    "file": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html",
-   "sha256": "98201c144766b7aec46fa5816063b06ac04cae56c0d5d190c7a3b312caffe91a"
+   "sha256": "45e71e59926553e606023c72e0a8935f94e890274e5442560943a4f164392cda"
   },
   {
    "id": "wahafaq:wahads:ultramarines_Roboute-Guilliman",
    "label": "Wahapedia datasheet Roboute-Guilliman (its FAQ and errata)",
    "file": "verify/.cache/waha/ds/ultramarines_Roboute-Guilliman.html",
-   "sha256": "446633518083122dd761b5b8a592d73257e4615e24814637c7172e3ca7344159"
+   "sha256": "91973ccf90a5581d6234ea7845058b1dad693f93bd6e3b7a2fa677a92c3322fa"
   },
   {
    "id": "wahads:ultramarines_Roboute-Guilliman",
    "label": "Wahapedia datasheet Roboute-Guilliman",
    "file": "verify/.cache/waha/ds/ultramarines_Roboute-Guilliman.html",
-   "sha256": "446633518083122dd761b5b8a592d73257e4615e24814637c7172e3ca7344159"
+   "sha256": "91973ccf90a5581d6234ea7845058b1dad693f93bd6e3b7a2fa677a92c3322fa"
   },
   {
    "id": "wahafaq:wahads:chaos-daemons_Pink-Horrors",
    "label": "Wahapedia datasheet Pink-Horrors (its FAQ and errata)",
    "file": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html",
-   "sha256": "8591132469f85503fb25901fb2ae63dd1371d73c119a8a688cc4c0b10d770925"
+   "sha256": "66921515015be0d24302e35f4891064e991c0492c26f87deab5a0ce4c830e42b"
   },
   {
    "id": "wahads:chaos-daemons_Pink-Horrors",
    "label": "Wahapedia datasheet Pink-Horrors",
    "file": "verify/.cache/waha/ds/chaos-daemons_Pink-Horrors.html",
-   "sha256": "8591132469f85503fb25901fb2ae63dd1371d73c119a8a688cc4c0b10d770925"
+   "sha256": "66921515015be0d24302e35f4891064e991c0492c26f87deab5a0ce4c830e42b"
   },
   {
    "id": "wahafaq:wahads:adeptus-custodes_Allarus-Custodians",
    "label": "Wahapedia datasheet Allarus-Custodians (its FAQ and errata)",
    "file": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html",
-   "sha256": "9da98a472be2742df0b74b244ea25b29eae5a235e65bed814e7b1f7f71352549"
+   "sha256": "a357876ad04fb46e6d89b48315c7ca6fece3bb26373b3c906bc2198abb5364ec"
   },
   {
    "id": "wahads:adeptus-custodes_Allarus-Custodians",
    "label": "Wahapedia datasheet Allarus-Custodians",
    "file": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html",
-   "sha256": "9da98a472be2742df0b74b244ea25b29eae5a235e65bed814e7b1f7f71352549"
+   "sha256": "a357876ad04fb46e6d89b48315c7ca6fece3bb26373b3c906bc2198abb5364ec"
   },
   {
    "id": "wahafaq:wahads:chaos-daemons_Fluxmaster",
    "label": "Wahapedia datasheet Fluxmaster (its FAQ and errata)",
    "file": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html",
-   "sha256": "dd5dffe0d10e4cdb5daf0bb0f4a78955ce256a113cdcdc7d5526605efb6bde5a"
+   "sha256": "908e5c9ab02aedd3a041198e7cc500d18ee09c280ee51fb3a5fad63fb6ea9f38"
   },
   {
    "id": "wahads:chaos-daemons_Fluxmaster",
    "label": "Wahapedia datasheet Fluxmaster",
    "file": "verify/.cache/waha/ds/chaos-daemons_Fluxmaster.html",
-   "sha256": "dd5dffe0d10e4cdb5daf0bb0f4a78955ce256a113cdcdc7d5526605efb6bde5a"
+   "sha256": "908e5c9ab02aedd3a041198e7cc500d18ee09c280ee51fb3a5fad63fb6ea9f38"
   },
   {
    "id": "wahafaq:wahads:chaos-daemons_Blue-Horrors",
    "label": "Wahapedia datasheet Blue-Horrors (its FAQ and errata)",
    "file": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html",
-   "sha256": "3045cec655906a7503919a514482efbf3fcfa3b670fda98ae8cd290a7db2f809"
+   "sha256": "c795f271b3371c22b2b400bed94991f0e1c4efbc600d4bb2f09c55eb46615496"
   },
   {
    "id": "wahads:chaos-daemons_Blue-Horrors",
    "label": "Wahapedia datasheet Blue-Horrors",
    "file": "verify/.cache/waha/ds/chaos-daemons_Blue-Horrors.html",
-   "sha256": "3045cec655906a7503919a514482efbf3fcfa3b670fda98ae8cd290a7db2f809"
+   "sha256": "c795f271b3371c22b2b400bed94991f0e1c4efbc600d4bb2f09c55eb46615496"
   },
   {
    "id": "wahafaq:wahads:tyranids_Tyrant-Guard",
    "label": "Wahapedia datasheet Tyrant-Guard (its FAQ and errata)",
    "file": "verify/.cache/waha/ds/tyranids_Tyrant-Guard.html",
-   "sha256": "aee0cda9a3eb64719f306bae4632e43df2eec600f0e8ea812c92f8c8ebf80939"
+   "sha256": "b058858f62c58e4d9337e383f953a9ce0feda5bf6c9277a579aefeb78e7280cf"
   },
   {
    "id": "wahads:tyranids_Tyrant-Guard",
    "label": "Wahapedia datasheet Tyrant-Guard",
    "file": "verify/.cache/waha/ds/tyranids_Tyrant-Guard.html",
-   "sha256": "aee0cda9a3eb64719f306bae4632e43df2eec600f0e8ea812c92f8c8ebf80939"
+   "sha256": "b058858f62c58e4d9337e383f953a9ce0feda5bf6c9277a579aefeb78e7280cf"
   }
  ],
  "texts": [
@@ -501,7 +501,7 @@
    "text": "**MAXIMUM DISTANCE:** Pulse roll + 18\"",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+   "sha256": "a71f309b5802c81fdafd97a960846466dbf7ab3e1841fdbf2edc6383b77be17c"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -509,7 +509,7 @@
    "text": "**ELIGIBLE IF:** As stated in the rule allowing this move type.",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+   "sha256": "a71f309b5802c81fdafd97a960846466dbf7ab3e1841fdbf2edc6383b77be17c"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -517,7 +517,7 @@
    "text": "**EFFECT:** Your unit moves as described in Moving (Core Rules, 03).",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+   "sha256": "a71f309b5802c81fdafd97a960846466dbf7ab3e1841fdbf2edc6383b77be17c"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -533,7 +533,7 @@
    "text": "- Make a **pulse roll** by rolling one D6.",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+   "sha256": "a71f309b5802c81fdafd97a960846466dbf7ab3e1841fdbf2edc6383b77be17c"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -549,7 +549,7 @@
    "text": "- Ignore all vertical distance for the purposes of how far your unit has moved.",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+   "sha256": "a71f309b5802c81fdafd97a960846466dbf7ab3e1841fdbf2edc6383b77be17c"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -557,7 +557,7 @@
    "text": "- Your unit can move through all types of model.",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+   "sha256": "a71f309b5802c81fdafd97a960846466dbf7ab3e1841fdbf2edc6383b77be17c"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -565,7 +565,7 @@
    "text": "- Your unit can move horizontally and vertically through all categories of terra",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+   "sha256": "a71f309b5802c81fdafd97a960846466dbf7ab3e1841fdbf2edc6383b77be17c"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -589,7 +589,7 @@
    "text": "- Until the end of the turn, your unit is not eligible to declare a charge or st",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+   "sha256": "a71f309b5802c81fdafd97a960846466dbf7ab3e1841fdbf2edc6383b77be17c"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -597,7 +597,7 @@
    "text": "- Until the start of your next turn, attacks that target your unit have -1 to hi",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+   "sha256": "a71f309b5802c81fdafd97a960846466dbf7ab3e1841fdbf2edc6383b77be17c"
   },
   {
    "item": "core / rule:Supa-hazardous / text",
@@ -605,7 +605,7 @@
    "text": "Each time a unit is **selected to shoot**, after that unit has resolved all of i",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Enhancements",
-   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
+   "sha256": "a71f309b5802c81fdafd97a960846466dbf7ab3e1841fdbf2edc6383b77be17c"
   },
   {
    "item": "core / rule:Assault / text",
@@ -773,7 +773,7 @@
    "text": "- Incursion: Up to 250 pts",
    "doc": "wahahtml:chaos-space-marines",
    "where": "Wahapedia chaos-space-marines § Cult of the Dark Gods",
-   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+   "sha256": "df970b7f6e1eaa6d01b52b93890f2d78755fb1cc84ba9f325bead8238596d3eb"
   },
   {
    "item": "core / rule:Daemonic Pact / text",
@@ -781,7 +781,7 @@
    "text": "- Strike Force: Up to 500 pts",
    "doc": "wahahtml:chaos-space-marines",
    "where": "Wahapedia chaos-space-marines § Cult of the Dark Gods",
-   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+   "sha256": "df970b7f6e1eaa6d01b52b93890f2d78755fb1cc84ba9f325bead8238596d3eb"
   },
   {
    "item": "core / rule:Daemonic Pact / text",
@@ -789,7 +789,7 @@
    "text": "- Onslaught: Up to 750 pts",
    "doc": "wahahtml:chaos-space-marines",
    "where": "Wahapedia chaos-space-marines § Cult of the Dark Gods",
-   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+   "sha256": "df970b7f6e1eaa6d01b52b93890f2d78755fb1cc84ba9f325bead8238596d3eb"
   },
   {
    "item": "core / rule:Daemonic Pact / text",
@@ -845,7 +845,7 @@
    "text": "If your Army Faction is **AGENTS OF THE IMPERIUM**, then in the Select Detachmen",
    "doc": "wahahtml:imperial-agents",
    "where": "Wahapedia imperial-agents § Assigned Agents",
-   "sha256": "582a156914cd1cbd1a90aa2573be80babde1d49ebc9d5e307ab6c1e17c21671b"
+   "sha256": "ac4064721dcca34e25598d1eef047533d38715e327bf1559801268e0f1c4d3e8"
   },
   {
    "item": "core / rule:Assigned Agents / text",
@@ -853,7 +853,7 @@
    "text": "If your Army Faction is not **AGENTS OF THE IMPERIUM**, but every model in your ",
    "doc": "wahahtml:imperial-agents",
    "where": "Wahapedia imperial-agents § Assigned Agents",
-   "sha256": "582a156914cd1cbd1a90aa2573be80babde1d49ebc9d5e307ab6c1e17c21671b"
+   "sha256": "ac4064721dcca34e25598d1eef047533d38715e327bf1559801268e0f1c4d3e8"
   },
   {
    "item": "core / rule:Assigned Agents / text",
@@ -861,7 +861,7 @@
    "text": "Note that you can include **AGENTS OF THE IMPERIUM DEDICATED TRANSPORT** units i",
    "doc": "wahahtml:imperial-agents",
    "where": "Wahapedia imperial-agents § Assigned Agents",
-   "sha256": "582a156914cd1cbd1a90aa2573be80babde1d49ebc9d5e307ab6c1e17c21671b"
+   "sha256": "ac4064721dcca34e25598d1eef047533d38715e327bf1559801268e0f1c4d3e8"
   },
   {
    "item": "core / rule:Hazardous / text",
@@ -949,7 +949,7 @@
    "text": "**24.28.01 Precision and Devastating Wounds (app):** **Mortal Wounds** inflicted",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 24.28.01 Precision and Devastating Wounds",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Rapid Fire / text",
@@ -1005,7 +1005,7 @@
    "text": "**04.01.03 Multiple Weapon Profiles (app):** In the Select Weapons step (04.01),",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 04.01.03 Multiple Weapon Profiles",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Hunter / text",
@@ -1013,7 +1013,7 @@
    "text": "Some of these profiles are known as **Hunter** profiles. **Hunter** profiles can",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 04.01.03 Multiple Weapon Profiles",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Hunter / text",
@@ -1021,7 +1021,7 @@
    "text": "Note that if a unit is equipped with more than one such weapon, a different prof",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 04.01.03 Multiple Weapon Profiles",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Deep Strike / text",
@@ -1045,7 +1045,7 @@
    "text": "*Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability a",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 24.28.01 Precision and Devastating Wounds",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Feel No Pain / text",
@@ -1109,7 +1109,7 @@
    "text": "**24.24.01 Attached units and Lone Operative (app):** If all models in an attach",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 24.24.01 Attached units and Lone Operative",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Lone Operative / text",
@@ -1117,7 +1117,7 @@
    "text": "If a unit has **Lone Operative**, but models in that unit have different range v",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 24.24.01 Attached units and Lone Operative",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Lone Operative / text",
@@ -1125,7 +1125,7 @@
    "text": "If an **attached** unit **below starting strength** only contains models with **",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 24.24.01 Attached units and Lone Operative",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Fights First / text",
@@ -1285,7 +1285,7 @@
    "text": "*Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not cr",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Stratagem Definitions 15.01.03",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Snap Shooting / text",
@@ -1517,7 +1517,7 @@
    "text": "**06.03.01 Hazardous Test (app):** The term ‘Hazardous test’ is the same as haza",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Hazardous Test 06.03.01",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Hazard Roll / text",
@@ -1525,7 +1525,7 @@
    "text": "*Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model ",
    "doc": "wahafaq:wahahtml:core",
    "where": "Wahapedia core rules § FAQ / Errata",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Hazard Roll / text",
@@ -1533,7 +1533,7 @@
    "text": "*Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model ",
    "doc": "wahafaq:wahahtml:core",
    "where": "Wahapedia core rules § FAQ / Errata",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Hazard Roll / text",
@@ -1541,7 +1541,7 @@
    "text": "*Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal ",
    "doc": "wahafaq:wahahtml:core",
    "where": "Wahapedia core rules § FAQ / Errata",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Hazard Roll / text",
@@ -1549,7 +1549,7 @@
    "text": "*Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal ",
    "doc": "wahafaq:wahahtml:core",
    "where": "Wahapedia core rules § FAQ / Errata",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Mortal Wounds / text",
@@ -1685,7 +1685,7 @@
    "text": "**01.07.02 Battle-shock Test (app):** The term Battle-shock test is the same as ",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 01.07.02 Battle-shock Test",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Battle-shock / text",
@@ -1749,7 +1749,7 @@
    "text": "*Wahapedia FAQ: Does my model or unit become engaged while moving through a enem",
    "doc": "wahafaq:wahahtml:core",
    "where": "Wahapedia core rules § FAQ / Errata",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Engagement / text",
@@ -1757,7 +1757,7 @@
    "text": "*Wahapedia FAQ: Does my model or unit become engaged while moving through a enem",
    "doc": "wahafaq:wahahtml:core",
    "where": "Wahapedia core rules § FAQ / Errata",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Selected to Attack / text",
@@ -1765,7 +1765,7 @@
    "text": "**04.01.05 Selected to Attack (app):** Some rules use the term **selected to att",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 04.01.05 Selected to Attack",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Destroyed / text",
@@ -1789,7 +1789,7 @@
    "text": "**05.04.05 Fight On Death (app):** Some rules enable models to attack after they",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 05.04.05 Fight On Death",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Destroyed / text",
@@ -1797,7 +1797,7 @@
    "text": "Those models will stay on the battlefield until their unit is **selected to atta",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 05.04.05 Fight On Death",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Normal Move / text",
@@ -1837,7 +1837,7 @@
    "text": "**09.05.01 More Than One Normal Move in a Phase (app):** A unit cannot make more",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 09.05.01 More Than One Normal Move in a Phase",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Advance Move / text",
@@ -1997,7 +1997,7 @@
    "text": "**Desperate Escape Test (app):** Some rules may reference the term ‘Desperate Es",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Desperate Escape 09.07.01",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Fall-back Move / text",
@@ -2005,7 +2005,7 @@
    "text": "Abilities that subtract from a unit’s Desperate Escape test instead subtract fro",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Desperate Escape 09.07.01",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Fall-back Move / text",
@@ -2013,7 +2013,7 @@
    "text": "If a **stratagem** or ability instructs a unit to make a Desperate Escape test, ",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Desperate Escape 09.07.01",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Fall-back Move / text",
@@ -2021,7 +2021,7 @@
    "text": "- Must use the **desperate escape** mode when it is selected to make a **fall-ba",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Desperate Escape 09.07.01",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Fall-back Move / text",
@@ -2029,7 +2029,7 @@
    "text": "- Must make one **hazard roll** for each model in that unit.",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Desperate Escape 09.07.01",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Fall-back Move / text",
@@ -2037,7 +2037,7 @@
    "text": "- Must make a **battle-shock roll**.",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Desperate Escape 09.07.01",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Charge / text",
@@ -2101,7 +2101,7 @@
    "text": "*Wahapedia FAQ: When a rule instructs you to perform a charge outside of the cha",
    "doc": "wahafaq:wahahtml:core",
    "where": "Wahapedia core rules § FAQ / Errata",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Charge / text",
@@ -2109,7 +2109,7 @@
    "text": "*Wahapedia FAQ: When a rule instructs you to perform a charge outside of the cha",
    "doc": "wahafaq:wahahtml:core",
    "where": "Wahapedia core rules § FAQ / Errata",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Charge Move / text",
@@ -2453,7 +2453,7 @@
    "text": "*Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Co",
    "doc": "Wahapedia core rules errata “12.08 - Consolidation Move, After Moving Section, Ongoing Consolidation”",
    "where": "Wahapedia core rules § Errata 12.08 - Consolidation Move, After Moving Section, Ongoing Consolidation",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Consolidation Move / text",
@@ -2461,7 +2461,7 @@
    "text": "*Wahapedia core rules (12.08, not in GW’s Core Rules PDF, 01-06): Your unit must",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 4. Consolidate 12.07",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Benefit of Cover / text",
@@ -2573,7 +2573,7 @@
    "text": "*Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply ",
    "doc": "wahafaq:wahahtml:core",
    "where": "Wahapedia core rules § FAQ / Errata",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Attached Units / text",
@@ -2581,7 +2581,7 @@
    "text": "*Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply ",
    "doc": "wahafaq:wahahtml:core",
    "where": "Wahapedia core rules § FAQ / Errata",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Strategic Reserves / text",
@@ -2605,7 +2605,7 @@
    "text": "**20.01.01 Reserves (app):** The term ‘Reserves’ is the same as strategic reserv",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 20.01.01 Reserves",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Strategic Reserves / text",
@@ -2725,7 +2725,7 @@
    "text": "**20.03.01 Set Up As Reinforcements (app):** If a rule mentions a unit being set",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 20.03.01 Set Up As Reinforcements",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Surge Move / text",
@@ -2981,7 +2981,7 @@
    "text": "**Some units cannot be at half-strength:** If a model’s W characteristic or a un",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 01.02.01 Starting Strength and Half-Strength",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1",
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a",
    "lessAuthoritative": true
   },
   {
@@ -3070,7 +3070,7 @@
    "text": "**04.01.03 Multiple Weapon Profiles (app):** In the Select Weapons step (04.01),",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 04.01.03 Multiple Weapon Profiles",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / rule:Indirect Fire / text",
@@ -4814,35 +4814,35 @@
    "field": "name",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/rule",
    "field": "text",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/enhancement:Lord of Forbidden Lore",
    "field": "pts",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/enhancement:Lord of Forbidden Lore",
    "field": "text",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/enhancement:Incandaeum",
    "field": "pts",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/enhancement:Incandaeum / text (Rules Updates)",
@@ -4856,7 +4856,7 @@
    "field": "pts",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/enhancement:Umbralefic Crystal / text (Rules Updates)",
@@ -4870,147 +4870,147 @@
    "field": "pts",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/enhancement:Eldritch Vortex of E’taph",
    "field": "text",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:psychic-dominion",
    "field": "when",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (PSYCHIC DOMINION)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:psychic-dominion",
    "field": "target",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (PSYCHIC DOMINION)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:psychic-dominion",
    "field": "effect",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (PSYCHIC DOMINION)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:destined-by-fate",
    "field": "when",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESTINED BY FATE)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:destined-by-fate",
    "field": "target",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESTINED BY FATE)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:destined-by-fate",
    "field": "effect",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESTINED BY FATE)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:egotistical-power",
    "field": "when",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (EGOTISTICAL POWER)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:egotistical-power",
    "field": "target",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (EGOTISTICAL POWER)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:egotistical-power",
    "field": "effect",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (EGOTISTICAL POWER)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:desecration-of-worlds",
    "field": "when",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESECRATION OF WORLDS)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:desecration-of-worlds",
    "field": "target",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESECRATION OF WORLDS)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:desecration-of-worlds",
    "field": "effect",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESECRATION OF WORLDS)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:arcane-focus",
    "field": "when",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (ARCANE FOCUS)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:arcane-focus",
    "field": "target",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (ARCANE FOCUS)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:arcane-focus",
    "field": "effect",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (ARCANE FOCUS)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:devastating-sorcery",
    "field": "when",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (DEVASTATING SORCERY)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:devastating-sorcery",
    "field": "target",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (DEVASTATING SORCERY)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:grand-coven/stratagem:devastating-sorcery",
    "field": "effect",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Grand Coven 3DP (DEVASTATING SORCERY)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:ritual-of-regeneration",
    "field": "name",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Ritual of Regeneration 1DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:ritual-of-regeneration/rule",
@@ -5024,7 +5024,7 @@
    "field": "pts",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Ritual of Regeneration 1DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:ritual-of-regeneration/enhancement:Eruption of Vitality",
@@ -5038,7 +5038,7 @@
    "field": "pts",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Ritual of Regeneration 1DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:ritual-of-regeneration/enhancement:Curse of Life",
@@ -5115,7 +5115,7 @@
    "field": "name",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/rule / text (Rules Updates)",
@@ -5129,42 +5129,42 @@
    "field": "text (KEYWORDS)",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Warpmeld Dagger",
    "field": "pts",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Warpmeld Dagger",
    "field": "text",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Diamond of Distortion",
    "field": "pts",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Diamond of Distortion",
    "field": "text",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Bray Lord",
    "field": "pts",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Bray Lord / text (Rules Updates)",
@@ -5178,140 +5178,140 @@
    "field": "pts",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/enhancement:Flowing Flesh",
    "field": "text",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:gift-of-change",
    "field": "when",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (GIFT OF CHANGE)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:gift-of-change",
    "field": "target",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (GIFT OF CHANGE)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:gift-of-change",
    "field": "effect",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (GIFT OF CHANGE)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:gift-of-change",
    "field": "restrictions",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (GIFT OF CHANGE)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:warped-vicissitude",
    "field": "when",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (WARPED VICISSITUDE)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:warped-vicissitude",
    "field": "target",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (WARPED VICISSITUDE)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:warped-vicissitude",
    "field": "effect",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (WARPED VICISSITUDE)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:deranged-ferocity",
    "field": "when",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (DERANGED FEROCITY)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:deranged-ferocity",
    "field": "target",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (DERANGED FEROCITY)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:deranged-ferocity",
    "field": "effect",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (DERANGED FEROCITY)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:blessed-transmutations",
    "field": "when",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (BLESSED TRANSMUTATIONS)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:blessed-transmutations",
    "field": "target",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (BLESSED TRANSMUTATIONS)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:blessed-transmutations",
    "field": "effect",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (BLESSED TRANSMUTATIONS)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:touched-by-tzeentch",
    "field": "when",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (TOUCHED BY TZEENTCH)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:touched-by-tzeentch",
    "field": "target",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (TOUCHED BY TZEENTCH)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:touched-by-tzeentch",
    "field": "effect",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (TOUCHED BY TZEENTCH)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:twisted-mirage",
    "field": "when",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (TWISTED MIRAGE)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:twisted-mirage",
    "field": "target",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Warpmeld Pact 2DP (TWISTED MIRAGE)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:twisted-mirage / effect (Rules Updates)",
@@ -7054,7 +7054,7 @@
    "field": "name",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/rule / text (Rules Updates)",
@@ -7068,189 +7068,189 @@
    "field": "pts",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Necromechanic",
    "field": "text",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Lord of Machines",
    "field": "pts",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Lord of Machines",
    "field": "text",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Emotionless Clarity",
    "field": "pts",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Emotionless Clarity",
    "field": "text",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Arch-negator",
    "field": "pts",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Arch-negator",
    "field": "text",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:motive-imperative",
    "field": "when",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MOTIVE IMPERATIVE)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:motive-imperative",
    "field": "target",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MOTIVE IMPERATIVE)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:motive-imperative",
    "field": "effect",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MOTIVE IMPERATIVE)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:auto-divinatory-targeting",
    "field": "when",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (AUTO-DIVINATORY TARGETING)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:auto-divinatory-targeting",
    "field": "target",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (AUTO-DIVINATORY TARGETING)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:auto-divinatory-targeting",
    "field": "effect",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (AUTO-DIVINATORY TARGETING)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:machine-spirit-resurgent",
    "field": "when",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MACHINE SPIRIT RESURGENT)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:machine-spirit-resurgent",
    "field": "target",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MACHINE SPIRIT RESURGENT)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:machine-spirit-resurgent",
    "field": "effect",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MACHINE SPIRIT RESURGENT)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:machine-superiority",
    "field": "when",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MACHINE SUPERIORITY)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:machine-superiority",
    "field": "target",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MACHINE SUPERIORITY)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:machine-superiority",
    "field": "effect",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MACHINE SUPERIORITY)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:transcendent-cogitation",
    "field": "when",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (TRANSCENDENT COGITATION)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:transcendent-cogitation",
    "field": "target",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (TRANSCENDENT COGITATION)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:transcendent-cogitation",
    "field": "effect",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (TRANSCENDENT COGITATION)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:benevolence-of-the-omnissiah",
    "field": "when",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (BENEVOLENCE OF THE OMNISSIAH)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:benevolence-of-the-omnissiah",
    "field": "target",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (BENEVOLENCE OF THE OMNISSIAH)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:benevolence-of-the-omnissiah",
    "field": "effect",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (BENEVOLENCE OF THE OMNISSIAH)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:eradication-cohort",
    "field": "name",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Eradication Cohort 2DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:eradication-cohort/rule",
@@ -7264,7 +7264,7 @@
    "field": "pts",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Eradication Cohort 2DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:eradication-cohort/enhancement:Omnicogitator",
@@ -7278,7 +7278,7 @@
    "field": "pts",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Eradication Cohort 2DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:eradication-cohort/enhancement:Martial Signatum Amplificator",
@@ -7292,7 +7292,7 @@
    "field": "pts",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Eradication Cohort 2DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:eradication-cohort/enhancement:Belicosa-class Capacitor Vanes",
@@ -7306,7 +7306,7 @@
    "field": "pts",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Eradication Cohort 2DP",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / detachment:eradication-cohort/enhancement:Omnissiah’s Fury",
@@ -12081,7 +12081,7 @@
    "text": "*Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s prin",
    "doc": "Wahapedia core rules errata “CP Generated by a Warlord”",
    "where": "Wahapedia core rules § Errata CP Generated by a Warlord",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "imperial-knights / armyRule:Code Chivalric",
@@ -12200,7 +12200,7 @@
    "field": "text",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Army Rules (Cabal of Sorcerers)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / armyRule:Cabal of Sorcerers / text (marked lines)",
@@ -12269,7 +12269,7 @@
    "field": "text",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Army Rules (Cabal of Sorcerers)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "thousand-sons / armyRule:Cabal of Sorcerers/row:Twist of Fate (Psychic) / text",
@@ -12290,7 +12290,7 @@
    "field": "text",
    "doc": "waha:thousand-sons",
    "where": "Wahapedia thousand-sons § Army Rules (Pact of Sorcery)",
-   "sha256": "8657c7f0dd6478d80e97d9d29ef2029ba3a7f243c381241d78d0a522359d4a6f"
+   "sha256": "6630820d7c040d24bb007fc03ad1c81304422c42965570fe14961db66c984dc5"
   },
   {
    "item": "tyranids / armyRule:Synapse",
@@ -12325,7 +12325,7 @@
    "field": "text",
    "doc": "waha:adeptus-mechanicus",
    "where": "Wahapedia adeptus-mechanicus § Army Rules (Doctrina Imperatives)",
-   "sha256": "630621461f70e2aef6f2560efd24452be2e540f8e62f879e464d234469162f83"
+   "sha256": "7b9922f9ab8dcf840789f5f5964fd2530b9233e69e1ac0466d6d23a166db233a"
   },
   {
    "item": "adeptus-mechanicus / armyRule:Doctrina Imperatives/row:Protector Imperative / text",
@@ -12582,7 +12582,7 @@
    "text": "*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets ",
    "doc": "wahafaq:wahahtml:chaos-space-marines",
    "where": "Wahapedia chaos-space-marines § FAQ / Errata",
-   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+   "sha256": "df970b7f6e1eaa6d01b52b93890f2d78755fb1cc84ba9f325bead8238596d3eb"
   },
   {
    "item": "chaos-space-marines / armyRule:Dark Pacts / text (marked lines)",
@@ -12590,7 +12590,7 @@
    "text": "*Wahapedia FAQ: Can I select a unit to shoot when there are no eligible targets ",
    "doc": "wahafaq:wahahtml:chaos-space-marines",
    "where": "Wahapedia chaos-space-marines § FAQ / Errata",
-   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+   "sha256": "df970b7f6e1eaa6d01b52b93890f2d78755fb1cc84ba9f325bead8238596d3eb"
   },
   {
    "item": "chaos-space-marines / armyRule:Dark Pacts / text (marked lines)",
@@ -12598,7 +12598,7 @@
    "text": "*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratag",
    "doc": "wahafaq:wahahtml:chaos-space-marines",
    "where": "Wahapedia chaos-space-marines § FAQ / Errata",
-   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+   "sha256": "df970b7f6e1eaa6d01b52b93890f2d78755fb1cc84ba9f325bead8238596d3eb"
   },
   {
    "item": "chaos-space-marines / armyRule:Dark Pacts / text (marked lines)",
@@ -12606,7 +12606,7 @@
    "text": "*Wahapedia FAQ: When I select a unit as the target of the Fire Overwatch Stratag",
    "doc": "wahafaq:wahahtml:chaos-space-marines",
    "where": "Wahapedia chaos-space-marines § FAQ / Errata",
-   "sha256": "3ef9a306a2cd15ea97c94a3fae2e20a61cb166bacda809768bfaeda2f75657ad"
+   "sha256": "df970b7f6e1eaa6d01b52b93890f2d78755fb1cc84ba9f325bead8238596d3eb"
   },
   {
    "item": "necrons / armyRule:Reanimation Protocols",
@@ -14812,7 +14812,7 @@
    "text": "Can I use the Insane Bravery stratagem on a battle-shocked unit?",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Secured Objectives 14.03",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / coreStratagem:insane-bravery",
@@ -14820,7 +14820,7 @@
    "text": "No, as a unit’s controlling player cannot target that unit with stratagems (01.0",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Secured Objectives 14.03",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / coreStratagem:explosives",
@@ -14828,7 +14828,7 @@
    "text": "The Grenade Stratagem is the same as the Explosives stratagem.",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Stratagem Definitions 15.01.03",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / coreStratagem:crushing-impact",
@@ -14836,7 +14836,7 @@
    "text": "The Tank Shock Stratagem is the same as the Crushing Impact stratagem.",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Stratagem Definitions 15.01.03",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / coreStratagem:heroic-intervention",
@@ -14844,7 +14844,7 @@
    "text": "If a stratagem contains a section that carries an additional CP cost (such as th",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Stratagem Definitions 15.01.03",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "core / coreStratagem:heroic-intervention",
@@ -14852,7 +14852,7 @@
    "text": "No, a stratagem that costs 1CP and is making use of an optional +1CP section has",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Stratagem Definitions 15.01.03",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "orks / detachment:dread-mob/stratagem:crazed-rampage",
@@ -14860,7 +14860,7 @@
    "text": "If my unit has the Deadly Demise ability and has an ability that allows it to Fi",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Charging and Fighting 23.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "orks / detachment:dread-mob/stratagem:crazed-rampage",
@@ -14868,7 +14868,7 @@
    "text": "Fight on Death rules are resolved before Deadly Demise abilities, meaning that y",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Charging and Fighting 23.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "orks / detachment:runt-swarm/stratagem:grot-shields",
@@ -14884,7 +14884,7 @@
    "text": "No.",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Using Keywords & Mixed Keywords in Units 02.05.01",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "imperial-knights / armyRule:Super-heavy Walker",
@@ -14900,7 +14900,7 @@
    "text": "After being the target of a ranged attack, can a Leader unit make a Blood Surge ",
    "doc": "wahahtml:world-eaters",
    "where": "Wahapedia world-eaters § World Eaters",
-   "sha256": "7609b464b76e1f11635f1ad45d560c796142a13567e11504e5a18c090ddae8a1"
+   "sha256": "9998b0f4d74012e7545ed81debbdcaa99964b41a6d544ba29297e56f10e8421c"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:berzerkers-wrath",
@@ -14908,7 +14908,7 @@
    "text": "No.",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Using Keywords & Mixed Keywords in Units 02.05.01",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "thousand-sons / detachment:warpmeld-pact/stratagem:touched-by-tzeentch",
@@ -15020,7 +15020,7 @@
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "catalog / tyranids/the-swarmlord / ability:Malign Presence",
@@ -15028,7 +15028,7 @@
    "text": "This ability takes precedence over the Lord of Deceit ability presented in the B",
    "doc": "wahads:tyranids_The-Swarmlord",
    "where": "Wahapedia datasheet The-Swarmlord § Tyranids – The Swarmlord",
-   "sha256": "b7952c4f9b46d19acbc53bde16a541c90c33367d1f459d42e99c8396b147fee9"
+   "sha256": "f22f6dc028746a79ca27febacdf8e482157dee83286cdffc94bdc8a6cc6b471a"
   },
   {
    "item": "catalog / tyranids/biovores / ability:Seed Spore Mines",
@@ -15068,7 +15068,7 @@
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "catalog / adeptus-mechanicus/thulia-ghuld / ability:Icon of War",
@@ -15092,7 +15092,7 @@
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "catalog / adeptus-custodes/trajann-valoris / ability:Supreme Commander",
@@ -15100,7 +15100,7 @@
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "catalog / ultramarines/roboute-guilliman / ability:Supreme Commander",
@@ -15108,7 +15108,7 @@
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "catalog / chaos-daemons/pink-horrors / ability:Split",
@@ -15220,7 +15220,7 @@
    "text": "This ability takes precedence over the Lord of Deceit ability presented in the B",
    "doc": "wahads:tyranids_The-Swarmlord",
    "where": "Wahapedia datasheet The-Swarmlord § Tyranids – The Swarmlord",
-   "sha256": "b7952c4f9b46d19acbc53bde16a541c90c33367d1f459d42e99c8396b147fee9"
+   "sha256": "f22f6dc028746a79ca27febacdf8e482157dee83286cdffc94bdc8a6cc6b471a"
   },
   {
    "item": "purge-goes-the-foe / belisarius-cawl / ability:Supreme Commander",
@@ -15228,7 +15228,7 @@
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "purge-goes-the-foe / thulia-ghuld / ability:Icon of War",
@@ -15252,7 +15252,7 @@
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "lite-knights / trajann-valoris-allarus-custodians / ability:Supreme Commander",
@@ -15260,7 +15260,7 @@
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "nerf-when / roboute-guilliman / ability:Supreme Commander",
@@ -15268,7 +15268,7 @@
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "emperors-chosen / trajann-valoris-allarus-custodians / ability:Supreme Commander",
@@ -15276,7 +15276,7 @@
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "dread-host / trajann-valoris-allarus-custodians / ability:Supreme Commander",
@@ -15284,7 +15284,7 @@
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "tzeeeeentch / fluxmaster-pink-horrors / ability:Split",
@@ -15396,7 +15396,7 @@
    "text": "This ability takes precedence over the Lord of Deceit ability presented in the B",
    "doc": "wahads:tyranids_The-Swarmlord",
    "where": "Wahapedia datasheet The-Swarmlord § Tyranids – The Swarmlord",
-   "sha256": "b7952c4f9b46d19acbc53bde16a541c90c33367d1f459d42e99c8396b147fee9"
+   "sha256": "f22f6dc028746a79ca27febacdf8e482157dee83286cdffc94bdc8a6cc6b471a"
   },
   {
    "item": "healybois / biovores / ability:Seed Spore Mines",
@@ -15436,7 +15436,7 @@
    "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
-   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+   "sha256": "ab85b7fb50fb59612e2af3fe627a0482471d4b81e7f98f92e22d4377b384696a"
   },
   {
    "item": "basic-bitch / the-swarmlord-tyrant-guard / ability:Malign Presence",
@@ -15444,7 +15444,7 @@
    "text": "This ability takes precedence over the Lord of Deceit ability presented in the B",
    "doc": "wahads:tyranids_The-Swarmlord",
    "where": "Wahapedia datasheet The-Swarmlord § Tyranids – The Swarmlord",
-   "sha256": "b7952c4f9b46d19acbc53bde16a541c90c33367d1f459d42e99c8396b147fee9"
+   "sha256": "f22f6dc028746a79ca27febacdf8e482157dee83286cdffc94bdc8a6cc6b471a"
   },
   {
    "item": "basic-bitch / biovores / ability:Seed Spore Mines",

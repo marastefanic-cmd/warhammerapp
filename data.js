@@ -1987,10 +1987,10 @@ const FACTIONS = {
                  n      how many models carry it
                  hunter the Hunter: MONSTER/VEHICLE profile; enh  weapon from an enhancement
      from        (on a weapon or stats row) values a rule of the list already changed, as
-                 { keyword or field: rule name | [names] }; written from BSData's modifiers
+                 { keyword or field: rule name | [names] }; written by verify/from-json.js (verify/marks.js holds each to GW's words of its rule)
                  by verify/bsdata.js and checked against them and New Recruit's "(…)" marks
      printed     (on a stats row) what New Recruit prints for a value the app shows with a rule applied that
-                 BSData does not apply ({ InSv:'5+*' }, before Sanctuary); checked by verify/nr.js
+                 New Recruit does not apply ({ InSv:'5+*' }, before Sanctuary); checked by verify/nr.js
      abilities   name, text, tag, who; ph/turn/turns = the phase it triggers in;
                  def = one-line summary for the datasheet's "When targeted" line
                  note = the app's note under it (an FAQ, a core rule it meets, a question the rules leave
@@ -2012,7 +2012,7 @@ const FACTIONS = {
      rules       core/faction rules that open a glossary entry
      srcNote     where the sources disagree about the unit: { at: a model's name (its models line) or 'kw' (the keywords), note }
      kwOnly      keywords in `kw` that only some models of the unit have, keyword → those models (Wahapedia's "KEYWORDS – ALL
-                 MODELS: … ASPIRING SORCERER ONLY: PSYKER", BSData's categories on one model): the datasheet lists them apart
+                 MODELS: … ASPIRING SORCERER ONLY: PSYKER", New Recruit's categories on one model): the datasheet lists them apart
      partialRules  rules in `rules` that only some models of the unit have, label → the model that has it
                  ({ 'Scouts 6"':'Slaughterbound' }): the unit cannot use a rule every model must have (24.09,
                  24.31), and the app names that model next to the rule
@@ -5728,7 +5728,7 @@ const ARMIES = [
 // ---- DATASHEETS: written by verify/tables.js --write (edit a datasheet here; --write keeps the table in shape) ----
 const DATASHEETS = {
 'orks/wazdakka-gutsmek':{
-  name:'Wazdakka Gutsmek', faction:'orks', bsId:'2ab7-ab71-0af4-5d39', role:'Epic Hero',
+  name:'Wazdakka Gutsmek', faction:'orks', role:'Epic Hero',
   stats:[
     { name:'Wazdakka Gutsmek', M:'14"', T:'8', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'120×92mm Oval' }
   ],
@@ -5751,7 +5751,7 @@ const DATASHEETS = {
   kw:['Mounted','Vehicle','Character','Epic Hero','Smoke','Speed Freeks','Wazdakka Gutsmek','Faction: Orks']
 },
 'orks/big-mek-dakkarig':{
-  name:'Big Mek Dakkarig', faction:'orks', bsId:'78a7-cf35-aa8d-c420', role:'Character',
+  name:'Big Mek Dakkarig', faction:'orks', role:'Character',
   stats:[
     { name:'Big Mek Dakkarig', M:'8"', T:'8', Sv:'3+', W:'11', Ld:'7+', OC:'3', InSv:'5+', base:'90mm' }
   ],
@@ -5770,7 +5770,7 @@ const DATASHEETS = {
   kw:['Vehicle','Big Mek','Character','Walker','Big Mek Dakkarig','Faction: Orks']
 },
 'orks/big-mek-in-mega-armour':{
-  name:'Big Mek in Mega Armour', faction:'orks', bsId:'95e9-6da3-5e75-2566', role:'Character',
+  name:'Big Mek in Mega Armour', faction:'orks', role:'Character',
   stats:[
     { name:'Big Mek in Mega Armour', M:'5"', T:'6', Sv:'2+', W:'5', Ld:'7+', OC:'1', InSv:'–', base:'40mm' }
   ],
@@ -5789,7 +5789,7 @@ const DATASHEETS = {
   kw:['Infantry','Big Mek','Character','Explosives','Mega Armour','Big Mek in Mega Armour','Faction: Orks']
 },
 'orks/warboss':{
-  name:'Warboss', faction:'orks', bsId:'2efc-c4b3-2ecc-5a37', role:'Character',
+  name:'Warboss', faction:'orks', role:'Character',
   stats:[
     { name:'Warboss', M:'6"', T:'6', Sv:'4+', W:'6', Ld:'6+', OC:'1', InSv:'5+', base:'50mm' }
   ],
@@ -5808,7 +5808,7 @@ const DATASHEETS = {
   kw:['Infantry','Character','Explosives','Warboss','Faction: Orks']
 },
 'orks/mek':{
-  name:'Mek', faction:'orks', bsId:'3b2-8c11-616a-1005',
+  name:'Mek', faction:'orks',
   stats:[
     { name:'Mek', M:'6"', T:'5', Sv:'5+', W:'4', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
   ],
@@ -5824,7 +5824,7 @@ const DATASHEETS = {
   ]
 },
 'orks/tankbustas':{
-  name:'Tankbustas', faction:'orks', bsId:'dadc-d370-ef10-853c',
+  name:'Tankbustas', faction:'orks',
   stats:[
     { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm' },
     { name:'Tankbusta', M:'6"', T:'5', Sv:'4+', W:'2', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
@@ -5844,7 +5844,7 @@ const DATASHEETS = {
   ]
 },
 'orks/flash-gitz':{
-  name:'Flash Gitz', faction:'orks', bsId:'1de9-b138-28a1-9c4b',
+  name:'Flash Gitz', faction:'orks',
   stats:[
     { name:'Flash Gitz', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm' }
   ],
@@ -5861,7 +5861,7 @@ const DATASHEETS = {
   ]
 },
 'orks/gretchin':{
-  name:'Gretchin', faction:'orks', bsId:'de8f-24f9-c543-92b7', role:'Infantry',
+  name:'Gretchin', faction:'orks', role:'Infantry',
   stats:[
     { name:'Gretchin', M:'6"', T:'2', Sv:'6+', W:'1', Ld:'8+', OC:'1', InSv:'–', base:'25mm' }
   ],
@@ -5879,7 +5879,7 @@ const DATASHEETS = {
   kw:['Infantry','Grots','Gretchin','Faction: Orks']
 },
 'orks/deffkoptas':{
-  name:'Deffkoptas', faction:'orks', bsId:'2d6e-aa3b-c28c-5ef0', role:'Mounted',
+  name:'Deffkoptas', faction:'orks', role:'Mounted',
   stats:[
     { name:'Deffkoptas', M:'12"', T:'6', Sv:'4+', W:'4', Ld:'7+', OC:'2', InSv:'6+', base:'75×42mm Oval' }
   ],
@@ -5900,7 +5900,7 @@ const DATASHEETS = {
   kw:['Mounted','Explosives','Fly','Speed Freeks','Deffkoptas','Faction: Orks']
 },
 'orks/killa-kans':{
-  name:'Killa Kans', faction:'orks', bsId:'8c36-c946-2e0f-f648', role:'Vehicle',
+  name:'Killa Kans', faction:'orks', role:'Vehicle',
   stats:[
     { name:'Killa Kan', M:'8"', T:'7', Sv:'3+', W:'5', Ld:'8+', OC:'2', InSv:'6+', base:'60mm' }
   ],
@@ -5919,7 +5919,7 @@ const DATASHEETS = {
   kw:['Vehicle','Grots','Walker','Killa Kans','Faction: Orks']
 },
 'orks/ghazghkull-thraka':{
-  name:'Ghazghkull Thraka', faction:'orks', bsId:'4ea0-6b70-c17c-bc00', role:'Epic Hero',
+  name:'Ghazghkull Thraka', faction:'orks', role:'Epic Hero',
   stats:[
     { name:'Ghazghkull Thraka', M:'8"', T:'10', Sv:'2+', W:'16', Ld:'6+', OC:'4', InSv:'4+', base:'80mm' }
   ],
@@ -5941,7 +5941,7 @@ const DATASHEETS = {
   kw:['Infantry','Character','Epic Hero','Explosives','Warboss','Ghazghkull Thraka','Faction: Orks']
 },
 'orks/mozrog-skragbad':{
-  name:'Mozrog Skragbad', faction:'orks', bsId:'b42b-ea0-38f1-6300', role:'Epic Hero',
+  name:'Mozrog Skragbad', faction:'orks', role:'Epic Hero',
   stats:[
     { name:'Mozrog Skragbad', M:'10"', T:'9', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'80mm' }
   ],
@@ -5962,7 +5962,7 @@ const DATASHEETS = {
   kw:['Monster','Beast Snagga','Character','Epic Hero','Mozrog Skragbad','Faction: Orks']
 },
 'orks/nazdreg':{
-  name:'Nazdreg', faction:'orks', bsId:'80c4-14b2-d02d-d289',
+  name:'Nazdreg', faction:'orks',
   stats:[
     { name:'Nazdreg', M:'5"', T:'7', Sv:'2+', W:'8', Ld:'6+', OC:'1', InSv:'5+', base:'60mm' }
   ],
@@ -5982,7 +5982,7 @@ const DATASHEETS = {
   ]
 },
 'orks/meganobz':{
-  name:'Meganobz', faction:'orks', bsId:'7067-34f4-5272-e05f',
+  name:'Meganobz', faction:'orks',
   stats:[
     { name:'Meganob', M:'5"', T:'6', Sv:'2+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm' }
   ],
@@ -6001,7 +6001,7 @@ const DATASHEETS = {
   ]
 },
 'orks/zodgrod-wortsnagga':{
-  name:'Zodgrod Wortsnagga', faction:'orks', bsId:'ce45-db08-3795-18a9',
+  name:'Zodgrod Wortsnagga', faction:'orks',
   stats:[
     { name:'Zodgrod Wortsnagga', M:'6"', T:'5', Sv:'5+', W:'5', Ld:'7+', OC:'1', InSv:'6+', base:'50mm' }
   ],
@@ -6016,7 +6016,7 @@ const DATASHEETS = {
   ]
 },
 'orks/runtherd':{
-  name:'Runtherd', faction:'orks', bsId:'f401-c74a-cca8-5de3',
+  name:'Runtherd', faction:'orks',
   stats:[
     { name:'Runtherd', M:'6"', T:'5', Sv:'5+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
   ],
@@ -6031,7 +6031,7 @@ const DATASHEETS = {
   ]
 },
 'orks/beastboss-on-squigosaur':{
-  name:'Beastboss on Squigosaur', faction:'orks', bsId:'a8b7-351-d911-a4d6', role:'Character',
+  name:'Beastboss on Squigosaur', faction:'orks', role:'Character',
   stats:[
     { name:'Beastboss on Squigosaur', M:'10"', T:'9', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'5+', base:'80mm' }
   ],
@@ -6053,7 +6053,7 @@ const DATASHEETS = {
   kw:['Monster','Beast Snagga','Character','Warboss','Beastboss on Squigosaur','Faction: Orks']
 },
 'orks/warboss-in-mega-armour':{
-  name:'Warboss in Mega Armour', faction:'orks', bsId:'494b-11ce-5af-5b50',
+  name:'Warboss in Mega Armour', faction:'orks',
   stats:[
     { name:'Warboss in Mega Armour', M:'5"', T:'7', Sv:'2+', W:'7', Ld:'6+', OC:'1', InSv:'5+', base:'50mm' }
   ],
@@ -6069,7 +6069,7 @@ const DATASHEETS = {
   ]
 },
 'world-eaters/kharn-the-betrayer':{
-  name:'Khârn the Betrayer', faction:'world-eaters', bsId:'3449-7dac-6ac8-5d51',
+  name:'Khârn the Betrayer', faction:'world-eaters',
   stats:[
     { name:'Khârn the Betrayer', M:'8"', T:'5', Sv:'3+', W:'5', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' }
   ],
@@ -6087,7 +6087,7 @@ const DATASHEETS = {
   ]
 },
 'world-eaters/khorne-berzerkers':{
-  name:'Khorne Berzerkers', faction:'world-eaters', bsId:'f909-00c7-8ba4-018a',
+  name:'Khorne Berzerkers', faction:'world-eaters',
   stats:[
     { name:'Khorne Berzerker', M:'8"', T:'5', Sv:'3+', W:'2', Ld:'6+', OC:'2', InSv:'–', base:'32mm' }
   ],
@@ -6107,7 +6107,7 @@ const DATASHEETS = {
   ]
 },
 'world-eaters/daemon-prince-of-khorne':{
-  name:'Daemon Prince of Khorne', faction:'world-eaters', bsId:'40c5-9ebd-6d42-2855', role:'Character',
+  name:'Daemon Prince of Khorne', faction:'world-eaters', role:'Character',
   stats:[
     { name:'Daemon Prince of Khorne', M:'10"', T:'10', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'60mm' }
   ],
@@ -6127,7 +6127,7 @@ const DATASHEETS = {
   kw:['Monster','Character','Chaos','Khorne','Daemon','Daemon Prince','Faction: World Eaters']
 },
 'world-eaters/lord-on-juggernaut':{
-  name:'Lord on Juggernaut', faction:'world-eaters', bsId:'ec72-f024-4283-0558', role:'Character',
+  name:'Lord on Juggernaut', faction:'world-eaters', role:'Character',
   stats:[
     { name:'Lord on Juggernaut', M:'10"', T:'6', Sv:'3+', W:'7', Ld:'6+', OC:'2', InSv:'4+', base:'90×52.5mm Oval' }
   ],
@@ -6147,7 +6147,7 @@ const DATASHEETS = {
   kw:['Mounted','Character','Chaos','Khorne','Lord on Juggernaut','Faction: World Eaters']
 },
 'world-eaters/slaughterbound':{
-  name:'Slaughterbound', faction:'world-eaters', bsId:'71c9-b10b-b55f-483e', role:'Character',
+  name:'Slaughterbound', faction:'world-eaters', role:'Character',
   stats:[
     { name:'Slaughterbound', M:'10"', T:'6', Sv:'3+', W:'6', Ld:'6+', OC:'1', InSv:'5+', base:'50mm' }
   ],
@@ -6163,7 +6163,7 @@ const DATASHEETS = {
   kw:['Infantry','Character','Chaos','Khorne','Daemon','Possessed','Slaughterbound','Faction: World Eaters']
 },
 'world-eaters/exalted-eightbound':{
-  name:'Exalted Eightbound', faction:'world-eaters', bsId:'9932-3d2b-1e47-d53b', role:'Infantry',
+  name:'Exalted Eightbound', faction:'world-eaters', role:'Infantry',
   stats:[
     { name:'Exalted Eightbound', M:'10"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
   ],
@@ -6177,7 +6177,7 @@ const DATASHEETS = {
   kw:['Infantry','Chaos','Khorne','Daemon','Possessed','Exalted Eightbound','Faction: World Eaters']
 },
 'world-eaters/chaos-rhino':{
-  name:'Chaos Rhino', faction:'world-eaters', bsId:'e849-ce40-ee43-7623', role:'Dedicated Transport',
+  name:'Chaos Rhino', faction:'world-eaters', role:'Dedicated Transport',
   stats:[
     { name:'Chaos Rhino', M:'12"', T:'9', Sv:'3+', W:'10', Ld:'6+', OC:'2', InSv:'–', base:'Hull' }
   ],
@@ -6195,7 +6195,7 @@ const DATASHEETS = {
   kw:['Vehicle','Transport','Frame','Dedicated Transport','Smoke','Chaos','Khorne','Rhino','Faction: World Eaters']
 },
 'world-eaters/eightbound':{
-  name:'Eightbound', faction:'world-eaters', bsId:'9435-1f44-7e5b-d510', role:'Infantry',
+  name:'Eightbound', faction:'world-eaters', role:'Infantry',
   stats:[
     { name:'Eightbound', M:'10"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
   ],
@@ -6209,7 +6209,7 @@ const DATASHEETS = {
   kw:['Infantry','Chaos','Khorne','Daemon','Possessed','Eightbound','Faction: World Eaters']
 },
 'world-eaters/jakhals':{
-  name:'Jakhals', faction:'world-eaters', bsId:'6f81-4538-a414-251e', role:'Infantry',
+  name:'Jakhals', faction:'world-eaters', role:'Infantry',
   stats:[
     { name:'Jakhal', M:'7"', T:'4', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'–', base:'28.5mm' },
     { name:'Dishonoured w/ paired manglers', M:'7"', T:'4', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'–', base:'40mm' }
@@ -6228,7 +6228,7 @@ const DATASHEETS = {
   kw:['Infantry','Grenades','Chaos','Khorne','Jakhals','Faction: World Eaters']
 },
 'world-eaters/forgefiend':{
-  name:'Forgefiend', faction:'world-eaters', bsId:'81e1-b212-69c1-308f', role:'Vehicle',
+  name:'Forgefiend', faction:'world-eaters', role:'Vehicle',
   stats:[
     { name:'Forgefiend', M:'10"', T:'10', Sv:'3+', W:'12', Ld:'6+', OC:'3', InSv:'5+', base:'120×92mm Oval' }
   ],
@@ -6247,7 +6247,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Chaos','Khorne','Daemon','Forgefiend','Faction: World Eaters']
 },
 'world-eaters/angron':{
-  name:'Angron', faction:'world-eaters', bsId:'f4b8-1179-de57-4d69', role:'Epic Hero',
+  name:'Angron', faction:'world-eaters', role:'Epic Hero',
   stats:[
     { name:'Angron', M:'14"', T:'11', Sv:'2+', W:'16', Ld:'5+', OC:'6', InSv:'4+', base:'100mm' }
   ],
@@ -6268,7 +6268,7 @@ const DATASHEETS = {
   kw:['Monster','Character','Fly','Epic Hero','Chaos','Khorne','Daemon','Primarch','Angron','Faction: World Eaters']
 },
 'world-eaters/goremongers':{
-  name:'Goremongers', faction:'world-eaters', bsId:'b399-9b66-e550-8050', role:'Infantry',
+  name:'Goremongers', faction:'world-eaters', role:'Infantry',
   stats:[
     { name:'Goremongers', M:'9"', T:'4', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
   ],
@@ -6286,7 +6286,7 @@ const DATASHEETS = {
   kw:['Infantry','Grenades','Chaos','Khorne','Goremongers','Faction: World Eaters']
 },
 'world-eaters/chaos-terminators':{
-  name:'Chaos Terminators', faction:'world-eaters', bsId:'45f6-8429-a1d9-2a51', role:'Infantry',
+  name:'Chaos Terminators', faction:'world-eaters', role:'Infantry',
   stats:[
     { name:'Chaos Terminators', M:'7"', T:'6', Sv:'2+', W:'3', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' }
   ],
@@ -6306,7 +6306,7 @@ const DATASHEETS = {
   kw:['Infantry','Chaos','Khorne','Terminator','Terminator Squad','Faction: World Eaters']
 },
 'world-eaters/skarbrand':{
-  name:'Skarbrand', faction:'world-eaters', bsId:'71d9-9dc2-2b9a-6db3', role:'Epic Hero',
+  name:'Skarbrand', faction:'world-eaters', role:'Epic Hero',
   stats:[
     { name:'Skarbrand', M:'10"', T:'11', Sv:'3+', W:'20', Ld:'6+', OC:'5', InSv:'4+', base:'100mm' }
   ],
@@ -6326,7 +6326,7 @@ const DATASHEETS = {
   kw:['Monster','Character','Epic Hero','Chaos','Khorne','Daemon','Summoned','Skarbrand','Faction: Blood Legions']
 },
 'world-eaters/bloodthirster':{
-  name:'Bloodthirster', faction:'world-eaters', bsId:'4ad2-bd20-6dfe-776b', role:'Character',
+  name:'Bloodthirster', faction:'world-eaters', role:'Character',
   stats:[
     { name:'Bloodthirster', M:'12"', T:'11', Sv:'3+', W:'18', Ld:'6+', OC:'5', InSv:'4+', base:'120×92mm Oval' }
   ],
@@ -6346,7 +6346,7 @@ const DATASHEETS = {
   kw:['Monster','Character','Fly','Chaos','Daemon','Khorne','Summoned','Bloodthirster','Faction: Blood Legions']
 },
 'world-eaters/master-of-executions':{
-  name:'Master of Executions', faction:'world-eaters', bsId:'1b56-682c-ac33-bc5f', role:'Character',
+  name:'Master of Executions', faction:'world-eaters', role:'Character',
   stats:[
     { name:'Master of Executions', M:'8"', T:'5', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'40mm', Sv:'3+' }
   ],
@@ -6364,7 +6364,7 @@ const DATASHEETS = {
   kw:['Infantry','Character','Chaos','Khorne','Master of Executions','Faction: World Eaters']
 },
 'world-eaters/flesh-hounds':{
-  name:'Flesh Hounds', faction:'world-eaters', bsId:'b657-1743-6e3a-0838', role:'Beast',
+  name:'Flesh Hounds', faction:'world-eaters', role:'Beast',
   stats:[
     { name:'Flesh Hounds', M:'12"', T:'4', Sv:'7+', W:'2', Ld:'7+', OC:'1', InSv:'5+', base:'60×35.5mm Oval' }
   ],
@@ -6382,7 +6382,7 @@ const DATASHEETS = {
   kw:['Beast','Chaos','Daemon','Khorne','Summoned','Flesh Hounds','Faction: Blood Legions']
 },
 'thousand-sons/magnus-the-red':{
-  name:'Magnus the Red', faction:'thousand-sons', bsId:'91dc-9aad-0505-52a8', role:'Epic Hero',
+  name:'Magnus the Red', faction:'thousand-sons', role:'Epic Hero',
   stats:[
     { name:'Magnus the Red', M:'14"', T:'11', Sv:'2+', W:'16', Ld:'5+', OC:'6', InSv:'4+', base:'100mm' }
   ],
@@ -6407,7 +6407,7 @@ const DATASHEETS = {
   kw:['Monster','Character','Epic Hero','Fly','Daemon','Primarch','Psyker','Chaos','Tzeentch','Magnus the Red','Faction: Thousand Sons']
 },
 'thousand-sons/daemon-prince-of-tzeentch-with-wings':{
-  name:'Daemon Prince of Tzeentch with wings', faction:'thousand-sons', bsId:'66f4-929e-1769-f277', role:'Character',
+  name:'Daemon Prince of Tzeentch with wings', faction:'thousand-sons', role:'Character',
   stats:[
     { name:'Daemon Prince of Tzeentch with wings', M:'13"', T:'9', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'60mm' }
   ],
@@ -6427,7 +6427,7 @@ const DATASHEETS = {
   kw:['Monster','Character','Daemon','Fly','Psyker','Chaos','Tzeentch','Daemon Prince','Faction: Thousand Sons']
 },
 'thousand-sons/exalted-sorcerer':{
-  name:'Exalted Sorcerer', faction:'thousand-sons', bsId:'c3a6-8fab-45f0-2d45',
+  name:'Exalted Sorcerer', faction:'thousand-sons',
   stats:[
     { name:'Exalted Sorcerer', M:'6"', T:'5', Sv:'3+', W:'5', Ld:'6+', OC:'1', InSv:'4+', base:'32mm' }
   ],
@@ -6445,7 +6445,7 @@ const DATASHEETS = {
   ]
 },
 'thousand-sons/rubric-marines':{
-  name:'Rubric Marines', faction:'thousand-sons', bsId:'5d3d-e13b-8b76-dad3',
+  name:'Rubric Marines', faction:'thousand-sons',
   stats:[
     { name:'Rubric Marine', M:'6"', T:'5', Sv:'3+', W:'2', Ld:'7+', OC:'2', base:'32mm', InSv:'5+' },
     { name:'Aspiring Sorcerer', M:'6"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'2', base:'32mm', InSv:'5+' }
@@ -6466,7 +6466,7 @@ const DATASHEETS = {
   ]
 },
 'thousand-sons/sorcerer-in-terminator-armour':{
-  name:'Sorcerer in Terminator Armour', faction:'thousand-sons', bsId:'c6d1-e73b-9d26-5d8b',
+  name:'Sorcerer in Terminator Armour', faction:'thousand-sons',
   stats:[
     { name:'Sorcerer in Terminator Armour', M:'5"', T:'6', Sv:'2+', W:'5', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' }
   ],
@@ -6483,7 +6483,7 @@ const DATASHEETS = {
   ]
 },
 'thousand-sons/scarab-occult-terminators':{
-  name:'Scarab Occult Terminators', faction:'thousand-sons', bsId:'b1cf-c5-5121-92a4',
+  name:'Scarab Occult Terminators', faction:'thousand-sons',
   stats:[
     { name:'Scarab Occult Sorcerer', M:'5"', T:'6', Sv:'2+', W:'4', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' },
     { name:'Scarab Occult Terminator', M:'5"', T:'6', Sv:'2+', W:'3', Ld:'7+', OC:'1', InSv:'4+', base:'40mm' }
@@ -6503,7 +6503,7 @@ const DATASHEETS = {
   ]
 },
 'thousand-sons/tzaangors':{
-  name:'Tzaangors', faction:'thousand-sons', bsId:'f5b9-50c8-5c60-d8ea', role:'Infantry',
+  name:'Tzaangors', faction:'thousand-sons', role:'Infantry',
   stats:[
     { name:'Tzaangors', M:'6"', T:'4', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'6+', base:'32mm' }
   ],
@@ -6519,7 +6519,7 @@ const DATASHEETS = {
   kw:['Infantry','Chaos','Tzeentch','Mutant','Tzaangors','Faction: Thousand Sons']
 },
 'thousand-sons/tzaangor-enlightened-with-fatecaster-greatbows':{
-  name:'Tzaangor Enlightened with Fatecaster greatbows', faction:'thousand-sons', bsId:'8b9f-917f-37c1-99c3', role:'Mounted',
+  name:'Tzaangor Enlightened with Fatecaster greatbows', faction:'thousand-sons', role:'Mounted',
   stats:[
     { name:'Tzaangor Enlightened with Fatecaster greatbows', M:'10"', T:'4', Sv:'5+', W:'2', Ld:'7+', OC:'2', InSv:'5+', base:'40mm' }
   ],
@@ -6536,7 +6536,7 @@ const DATASHEETS = {
   kw:['Mounted','Fly','Chaos','Tzeentch','Mutant','Tzaangor Enlightened','Tzaangor Enlightened with Fatecaster Greatbows','Faction: Thousand Sons']
 },
 'thousand-sons/defiler':{
-  name:'Defiler', faction:'thousand-sons', bsId:'f158-2979-c38b-65b5', role:'Vehicle',
+  name:'Defiler', faction:'thousand-sons', role:'Vehicle',
   stats:[
     { name:'Defiler', M:'12"', T:'11', Sv:'3+', W:'18', Ld:'6+', OC:'5', InSv:'5+', base:'160mm' }
   ],
@@ -6558,7 +6558,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Chaos','Tzeentch','Daemon','Defiler','Faction: Thousand Sons']
 },
 'thousand-sons/sekhetar-robots':{
-  name:'Sekhetar Robots', faction:'thousand-sons', bsId:'fe4b-b3a4-69b7-3088', role:'Vehicle',
+  name:'Sekhetar Robots', faction:'thousand-sons', role:'Vehicle',
   stats:[
     { name:'Sekhetar Robots', M:'8"', T:'6', Sv:'3+', W:'4', Ld:'7+', OC:'1', InSv:'5+', base:'40mm' }
   ],
@@ -6577,7 +6577,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Chaos','Tzeentch','Sekhetar Robots','Faction: Thousand Sons']
 },
 'thousand-sons/ahriman':{
-  name:'Ahriman', faction:'thousand-sons', bsId:'3bfa-bf00-b5ed-cc81',
+  name:'Ahriman', faction:'thousand-sons',
   stats:[
     { name:'Ahriman', M:'10"', T:'5', Sv:'3+', W:'6', Ld:'6+', OC:'2', InSv:'4+', base:'40mm' }
   ],
@@ -6594,7 +6594,7 @@ const DATASHEETS = {
   ]
 },
 'thousand-sons/exalted-sorcerer-on-disc-of-tzeentch':{
-  name:'Exalted Sorcerer on Disc of Tzeentch', faction:'thousand-sons', bsId:'1724-8c9c-c385-16c6',
+  name:'Exalted Sorcerer on Disc of Tzeentch', faction:'thousand-sons',
   stats:[
     { name:'Exalted Sorcerer on Disc of Tzeentch', M:'10"', T:'5', Sv:'3+', W:'6', Ld:'6+', OC:'2', InSv:'4+', base:'40mm' }
   ],
@@ -6612,7 +6612,7 @@ const DATASHEETS = {
   ]
 },
 'thousand-sons/tzaangor-shaman':{
-  name:'Tzaangor Shaman', faction:'thousand-sons', bsId:'c251-bd54-441-4799',
+  name:'Tzaangor Shaman', faction:'thousand-sons',
   stats:[
     { name:'Tzaangor Shaman', M:'10"', T:'4', Sv:'5+', W:'4', Ld:'7+', OC:'2', InSv:'5+', base:'40mm' }
   ],
@@ -6628,7 +6628,7 @@ const DATASHEETS = {
   ]
 },
 'thousand-sons/tzaangor-enlightened':{
-  name:'Tzaangor Enlightened', faction:'thousand-sons', bsId:'1703-3edd-5eb3-fcef',
+  name:'Tzaangor Enlightened', faction:'thousand-sons',
   stats:[
     { name:'Tzaangor Enlightened', M:'10"', T:'4', Sv:'5+', W:'2', Ld:'7+', OC:'2', InSv:'5+', base:'40mm' }
   ],
@@ -6640,7 +6640,7 @@ const DATASHEETS = {
   ]
 },
 'thousand-sons/chaos-spawn':{
-  name:'Chaos Spawn', faction:'thousand-sons', bsId:'60de-4c77-95e1-1337',
+  name:'Chaos Spawn', faction:'thousand-sons',
   stats:[
     { name:'Chaos Spawn', M:'8"', T:'5', Sv:'4+', W:'4', Ld:'7+', OC:'1', InSv:'5+', base:'50mm' }
   ],
@@ -6654,7 +6654,7 @@ const DATASHEETS = {
   kw:['Beast','Chaos','Tzeentch','Mutant','Chaos Spawn','Faction: Thousand Sons']
 },
 'tyranids/the-swarmlord':{
-  name:'The Swarmlord', faction:'tyranids', bsId:'13f7-1a3-eff-7393', role:'Epic Hero',
+  name:'The Swarmlord', faction:'tyranids', role:'Epic Hero',
   stats:[
     { name:'The Swarmlord', M:'8"', T:'10', Sv:'2+', W:'10', Ld:'7+', OC:'3', InSv:'4+', base:'60mm' }
   ],
@@ -6681,7 +6681,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/hive-tyrant':{
-  name:'Hive Tyrant', faction:'tyranids', bsId:'3e96-8098-3401-77af', role:'Character',
+  name:'Hive Tyrant', faction:'tyranids', role:'Character',
   stats:[
     { name:'Hive Tyrant', M:'8"', T:'10', Sv:'2+', W:'10', Ld:'7+', OC:'3', InSv:'4+', base:'60mm' }
   ],
@@ -6710,7 +6710,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/neurogaunts':{
-  name:'Neurogaunts', faction:'tyranids', bsId:'8ccc-3f27-7e4e-da81', role:'Infantry',
+  name:'Neurogaunts', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Neurogaunt Nodebeast', M:'6"', T:'3', Sv:'6+', W:'1', Ld:'8+', OC:'1', InSv:'–', base:'28.5mm' },
     { name:'Neurogaunt', M:'6"', T:'3', Sv:'6+', W:'1', Ld:'8+', OC:'1', InSv:'–', base:'25mm' }
@@ -6734,7 +6734,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/norn-assimilator':{
-  name:'Norn Assimilator', faction:'tyranids', bsId:'6a9b-8e2f-edac-fa2d', role:'Monster',
+  name:'Norn Assimilator', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Norn Assimilator', M:'10"', T:'11', Sv:'2+', W:'16', Ld:'7+', OC:'5', base:'100mm', InSv:'–' }
   ],
@@ -6761,7 +6761,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/norn-emissary':{
-  name:'Norn Emissary', faction:'tyranids', bsId:'5720-2873-8c2c-edc3', role:'Monster',
+  name:'Norn Emissary', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Norn Emissary', M:'10"', T:'11', Sv:'2+', W:'16', Ld:'7+', OC:'5', InSv:'4+', base:'100mm' }
   ],
@@ -6790,7 +6790,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/tyrannofex':{
-  name:'Tyrannofex', faction:'tyranids', bsId:'1705-379b-330d-36d4', role:'Monster',
+  name:'Tyrannofex', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Tyrannofex', M:'9"', T:'12', Sv:'2+', W:'16', Ld:'8+', OC:'5', InSv:'–', base:'120×92mm Oval' }
   ],
@@ -6822,7 +6822,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/the-red-terror':{
-  name:'The Red Terror', faction:'tyranids', bsId:'7173-1bd9-b60b-6555', role:'Epic Hero',
+  name:'The Red Terror', faction:'tyranids', role:'Epic Hero',
   stats:[
     { name:'The Red Terror', M:'10"', T:'8', Sv:'3+', W:'9', Ld:'8+', OC:'3', InSv:'–', base:'100mm' }
   ],
@@ -6845,7 +6845,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/tyrant-guard':{
-  name:'Tyrant Guard', faction:'tyranids', bsId:'1645-5407-92c8-1441', role:'Infantry',
+  name:'Tyrant Guard', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Tyrant Guard', M:'6"', T:'8', Sv:'3+', W:'4', Ld:'8+', OC:'1', InSv:'–', base:'50mm' }
   ],
@@ -6868,7 +6868,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/biovores':{
-  name:'Biovores', faction:'tyranids', bsId:'3f2c-85ec-d83c-4a2f', role:'Infantry',
+  name:'Biovores', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Biovore', M:'5"', T:'6', Sv:'3+', W:'5', Ld:'8+', OC:'1', InSv:'–', base:'80mm' }
   ],
@@ -6892,7 +6892,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/pyrovores':{
-  name:'Pyrovores', faction:'tyranids', bsId:'d2c6-bd0b-3205-3319', role:'Infantry',
+  name:'Pyrovores', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Pyrovores', M:'5"', T:'6', Sv:'3+', W:'5', Ld:'8+', OC:'1', InSv:'–', base:'80mm' }
   ],
@@ -6916,7 +6916,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/ripper-swarms':{
-  name:'Ripper Swarms', faction:'tyranids', bsId:'1de2-b57b-aa0a-1f0d', role:'Swarm',
+  name:'Ripper Swarms', faction:'tyranids', role:'Swarm',
   stats:[
     { name:'Ripper Swarm', M:'6"', T:'2', Sv:'6+', W:'4', Ld:'8+', OC:'0', InSv:'–', base:'40mm' }
   ],
@@ -6941,7 +6941,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/psychophage':{
-  name:'Psychophage', faction:'tyranids', bsId:'b6ac-f091-a018-dab2', role:'Monster',
+  name:'Psychophage', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Psychophage', M:'12"', T:'9', Sv:'3+', W:'10', Ld:'8+', OC:'3', InSv:'–', base:'120×92mm Oval' }
   ],
@@ -6966,7 +6966,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/spore-mines-biovore':{
-  name:'Spore Mines (Biovore)', faction:'tyranids', bsId:'80c2-aecc-5b59-7345',
+  name:'Spore Mines (Biovore)', faction:'tyranids',
   stats:[
     { name:'Spore Mine', M:'4"', T:'1', Sv:'7+', W:'1', Ld:'8+', OC:'0', InSv:'–', base:'25mm' }
   ],
@@ -6978,7 +6978,7 @@ const DATASHEETS = {
   kw:['Beast','Fly','Great Devourer','Spore Mines','Faction: Tyranids']
 },
 'tyranids/tyranid-prime-with-lash-whip':{
-  name:'Tyranid Prime with Lash Whip', faction:'tyranids', bsId:'31f9-9730-853c-6f13', role:'Character',
+  name:'Tyranid Prime with Lash Whip', faction:'tyranids', role:'Character',
   stats:[
     { name:'Tyranid Prime with Lash Whip', M:'10"', T:'5', Sv:'3+', W:'6', Ld:'7+', OC:'1', InSv:'–', base:'50mm' }
   ],
@@ -7003,7 +7003,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/hormagaunts':{
-  name:'Hormagaunts', faction:'tyranids', bsId:'f15b-9f9c-9bf0-8160', role:'Battleline',
+  name:'Hormagaunts', faction:'tyranids', role:'Battleline',
   stats:[
     { name:'Hormagaunts', M:'10"', T:'3', Sv:'5+', W:'1', Ld:'8+', OC:'2', InSv:'–', base:'28.5mm' }
   ],
@@ -7024,7 +7024,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/neurolictor':{
-  name:'Neurolictor', faction:'tyranids', bsId:'642f-9302-4fdc-ab68', role:'Infantry',
+  name:'Neurolictor', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Neurolictor', M:'8"', T:'5', Sv:'4+', W:'7', Ld:'7+', OC:'1', InSv:'4+', base:'50mm' }
   ],
@@ -7047,7 +7047,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/von-ryans-leapers':{
-  name:'Von Ryan’s Leapers', faction:'tyranids', bsId:'9bd8-ac8c-2d3b-79f6', role:'Infantry',
+  name:'Von Ryan’s Leapers', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Von Ryan’s Leaper', M:'10"', T:'5', Sv:'4+', W:'3', Ld:'8+', OC:'1', InSv:'6+', base:'40mm' }
   ],
@@ -7068,7 +7068,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/maleceptor':{
-  name:'Maleceptor', faction:'tyranids', bsId:'2c2d-a2f9-61a8-a6c6', role:'Monster',
+  name:'Maleceptor', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Maleceptor', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'7+', OC:'4', InSv:'4+', base:'120×92mm Oval' }
   ],
@@ -7094,7 +7094,7 @@ const DATASHEETS = {
   ]
 },
 'tyranids/old-one-eye':{
-  name:'Old One Eye', faction:'tyranids', bsId:'9184-9ab6-9238-f558', role:'Epic Hero',
+  name:'Old One Eye', faction:'tyranids', role:'Epic Hero',
   stats:[
     { name:'Old One Eye', M:'8"', T:'9', Sv:'2+', W:'9', Ld:'8+', OC:'3', InSv:'–', base:'105×70mm Oval' }
   ],
@@ -7119,7 +7119,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/deathleaper':{
-  name:'Deathleaper', faction:'tyranids', bsId:'bc36-92fe-ecc6-58b3', role:'Epic Hero',
+  name:'Deathleaper', faction:'tyranids', role:'Epic Hero',
   stats:[
     { name:'Deathleaper', M:'8"', T:'6', Sv:'3+', W:'7', Ld:'7+', OC:'1', InSv:'4+', base:'60mm' }
   ],
@@ -7143,7 +7143,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/winged-hive-tyrant':{
-  name:'Winged Hive Tyrant', faction:'tyranids', bsId:'fa68-fcb9-38c-cd0f', role:'Character',
+  name:'Winged Hive Tyrant', faction:'tyranids', role:'Character',
   stats:[
     { name:'Winged Hive Tyrant', M:'12"', T:'9', Sv:'2+', W:'10', Ld:'7+', OC:'3', InSv:'4+', base:'60mm' }
   ],
@@ -7173,7 +7173,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/tervigon':{
-  name:'Tervigon', faction:'tyranids', bsId:'cd6d-87b3-125a-f372', role:'Character',
+  name:'Tervigon', faction:'tyranids', role:'Character',
   stats:[
     { name:'Tervigon', M:'8"', T:'11', Sv:'2+', W:'16', Ld:'7+', OC:'5', InSv:'–', base:'120×92mm Oval' }
   ],
@@ -7203,7 +7203,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/broodlord':{
-  name:'Broodlord', faction:'tyranids', bsId:'b86a-b38a-380c-483d', role:'Character',
+  name:'Broodlord', faction:'tyranids', role:'Character',
   stats:[
     { name:'Broodlord', M:'8"', T:'5', Sv:'4+', W:'6', Ld:'7+', OC:'1', InSv:'4+', base:'75×42mm Oval' }
   ],
@@ -7227,7 +7227,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/winged-tyranid-prime':{
-  name:'Winged Tyranid Prime', faction:'tyranids', bsId:'507d-5ea4-6ef1-bf66', role:'Character',
+  name:'Winged Tyranid Prime', faction:'tyranids', role:'Character',
   stats:[
     { name:'Winged Tyranid Prime', M:'12"', T:'5', Sv:'4+', W:'6', Ld:'7+', OC:'1', InSv:'–', base:'50mm' }
   ],
@@ -7251,7 +7251,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/neurotyrant':{
-  name:'Neurotyrant', faction:'tyranids', bsId:'1ae1-ed96-5100-eda5', role:'Character',
+  name:'Neurotyrant', faction:'tyranids', role:'Character',
   stats:[
     { name:'Neurotyrant', M:'6"', T:'8', Sv:'4+', W:'9', Ld:'7+', OC:'3', InSv:'4+', base:'50mm' }
   ],
@@ -7279,7 +7279,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/parasite-of-mortrex':{
-  name:'Parasite of Mortrex', faction:'tyranids', bsId:'d213-efd8-a2b4-42d2', role:'Character',
+  name:'Parasite of Mortrex', faction:'tyranids', role:'Character',
   stats:[
     { name:'Parasite of Mortrex', M:'12"', T:'5', Sv:'4+', W:'5', Ld:'8+', OC:'1', InSv:'–', base:'40mm' }
   ],
@@ -7303,7 +7303,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/hyperadapted-raveners':{
-  name:'Hyperadapted Raveners', faction:'tyranids', bsId:'c10d-772e-a54f-a2b9', role:'Character',
+  name:'Hyperadapted Raveners', faction:'tyranids', role:'Character',
   stats:[
     { name:'Ravener Prime', M:'10"', T:'5', Sv:'4+', W:'6', Ld:'7+', OC:'1', InSv:'–', base:'40mm' },
     { name:'Ravener', M:'10"', T:'5', Sv:'4+', W:'3', Ld:'8+', OC:'1', InSv:'–', base:'40mm' }
@@ -7338,7 +7338,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/termagants':{
-  name:'Termagants', faction:'tyranids', bsId:'359c-db2c-681a-8d62', role:'Battleline',
+  name:'Termagants', faction:'tyranids', role:'Battleline',
   stats:[
     { name:'Termagants', M:'6"', T:'3', Sv:'5+', W:'1', Ld:'8+', OC:'2', InSv:'–', base:'28.5mm' }
   ],
@@ -7375,7 +7375,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/gargoyles':{
-  name:'Gargoyles', faction:'tyranids', bsId:'9ce8-7a63-15c3-0347', role:'Battleline',
+  name:'Gargoyles', faction:'tyranids', role:'Battleline',
   stats:[
     { name:'Gargoyles', M:'12"', T:'3', Sv:'6+', W:'1', Ld:'8+', OC:'2', InSv:'–', base:'Small Flying' }
   ],
@@ -7400,7 +7400,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/tyrannocyte':{
-  name:'Tyrannocyte', faction:'tyranids', bsId:'fada-677a-f6a4-cd12', role:'Dedicated Transport',
+  name:'Tyrannocyte', faction:'tyranids', role:'Dedicated Transport',
   stats:[
     { name:'Tyrannocyte', M:'8"', T:'9', Sv:'3+', W:'10', Ld:'8+', OC:'2', InSv:'–', base:'100mm' }
   ],
@@ -7426,7 +7426,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/tyranid-warriors-with-ranged-bio-weapons':{
-  name:'Tyranid Warriors with Ranged Bio-Weapons', faction:'tyranids', bsId:'a125-b6fb-2945-56a', role:'Infantry',
+  name:'Tyranid Warriors with Ranged Bio-Weapons', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Tyranid Prime', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'2', InSv:'–', base:'50mm' },
     { name:'Tyranid Warrior', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'2', InSv:'–', base:'50mm' }
@@ -7460,7 +7460,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/tyranid-warriors-with-melee-bio-weapons':{
-  name:'Tyranid Warriors with Melee Bio-Weapons', faction:'tyranids', bsId:'5815-871c-9260-287a', role:'Infantry',
+  name:'Tyranid Warriors with Melee Bio-Weapons', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Tyranid Prime', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'2', InSv:'–', base:'50mm' },
     { name:'Tyranid Warrior', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'2', InSv:'–', base:'50mm' }
@@ -7485,7 +7485,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/lictor':{
-  name:'Lictor', faction:'tyranids', bsId:'da44-72c9-7a27-48aa', role:'Infantry',
+  name:'Lictor', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Lictor', M:'8"', T:'6', Sv:'4+', W:'6', Ld:'7+', OC:'1', InSv:'–', base:'50mm' }
   ],
@@ -7508,7 +7508,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/venomthropes':{
-  name:'Venomthropes', faction:'tyranids', bsId:'b563-c6d3-d0e5-1b78', role:'Infantry',
+  name:'Venomthropes', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Venomthropes', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'8+', OC:'1', InSv:'–', base:'40mm' }
   ],
@@ -7530,7 +7530,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/zoanthropes':{
-  name:'Zoanthropes', faction:'tyranids', bsId:'b622-a22-a04f-6303', role:'Infantry',
+  name:'Zoanthropes', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Zoanthrope', M:'5"', T:'5', Sv:'5+', W:'3', Ld:'7+', OC:'1', InSv:'4+', base:'40mm' }
   ],
@@ -7559,7 +7559,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/hive-guard':{
-  name:'Hive Guard', faction:'tyranids', bsId:'ac7a-2560-c083-45b8', role:'Infantry',
+  name:'Hive Guard', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Hive Guard', M:'6"', T:'7', Sv:'3+', W:'4', Ld:'8+', OC:'1', InSv:'–', base:'50mm' }
   ],
@@ -7587,7 +7587,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/barbgaunts':{
-  name:'Barbgaunts', faction:'tyranids', bsId:'6de-ccee-11b4-be3e', role:'Infantry',
+  name:'Barbgaunts', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Barbgaunt', M:'6"', T:'4', Sv:'4+', W:'2', Ld:'8+', OC:'1', InSv:'–', base:'40mm' }
   ],
@@ -7612,7 +7612,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/genestealers':{
-  name:'Genestealers', faction:'tyranids', bsId:'853e-48b8-4cc5-3704', role:'Infantry',
+  name:'Genestealers', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Genestealers', M:'8"', T:'4', Sv:'5+', W:'2', Ld:'7+', OC:'1', InSv:'5+', base:'32mm' }
   ],
@@ -7634,7 +7634,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/raveners':{
-  name:'Raveners', faction:'tyranids', bsId:'3f5-f7d6-1ce8-e6b9', role:'Infantry',
+  name:'Raveners', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Raveners', M:'10"', T:'5', Sv:'4+', W:'3', Ld:'8+', OC:'1', InSv:'–', base:'40mm' }
   ],
@@ -7656,7 +7656,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/spore-mines':{
-  name:'Spore Mines', faction:'tyranids', bsId:'c590-436d-4fd-ef26', role:'Beast',
+  name:'Spore Mines', faction:'tyranids', role:'Beast',
   stats:[
     { name:'Spore Mine', M:'4"', T:'1', Sv:'7+', W:'1', Ld:'8+', OC:'0', InSv:'–', base:'25mm' }
   ],
@@ -7674,7 +7674,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/mucolid-spores':{
-  name:'Mucolid Spores', faction:'tyranids', bsId:'707a-9de8-f75b-41c5', role:'Beast',
+  name:'Mucolid Spores', faction:'tyranids', role:'Beast',
   stats:[
     { name:'Mucolid Spore', M:'4"', T:'4', Sv:'7+', W:'3', Ld:'8+', OC:'0', InSv:'–', base:'40mm' }
   ],
@@ -7692,7 +7692,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/toxicrene':{
-  name:'Toxicrene', faction:'tyranids', bsId:'30d0-521c-1d45-f57b', role:'Monster',
+  name:'Toxicrene', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Toxicrene', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'8+', OC:'4', InSv:'–', base:'120×92mm Oval' }
   ],
@@ -7718,7 +7718,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/haruspex':{
-  name:'Haruspex', faction:'tyranids', bsId:'6249-358f-27d7-ef60', role:'Monster',
+  name:'Haruspex', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Haruspex', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'8+', OC:'4', InSv:'–', base:'120×92mm Oval' }
   ],
@@ -7745,7 +7745,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/mawloc':{
-  name:'Mawloc', faction:'tyranids', bsId:'2bbb-d811-15f7-1a81', role:'Monster',
+  name:'Mawloc', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Mawloc', M:'10"', T:'10', Sv:'3+', W:'14', Ld:'8+', OC:'4', InSv:'–', base:'120×92mm Oval' }
   ],
@@ -7769,7 +7769,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/trygon':{
-  name:'Trygon', faction:'tyranids', bsId:'56db-d7c-b349-677f', role:'Monster',
+  name:'Trygon', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Trygon', M:'10"', T:'10', Sv:'3+', W:'14', Ld:'8+', OC:'4', InSv:'–', base:'120×92mm Oval' }
   ],
@@ -7795,7 +7795,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/exocrine':{
-  name:'Exocrine', faction:'tyranids', bsId:'bbfd-5b01-5bd3-a28b', role:'Monster',
+  name:'Exocrine', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Exocrine', M:'8"', T:'10', Sv:'3+', W:'14', Ld:'8+', OC:'4', InSv:'–', base:'120×92mm Oval' }
   ],
@@ -7821,7 +7821,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/carnifexes':{
-  name:'Carnifexes', faction:'tyranids', bsId:'9efd-5564-f0f5-21ea', role:'Monster',
+  name:'Carnifexes', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Carnifex', M:'8"', T:'9', Sv:'2+', W:'8', Ld:'8+', OC:'3', InSv:'–', base:'105×70mm Oval' }
   ],
@@ -7857,7 +7857,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/screamer-killer':{
-  name:'Screamer-killer', faction:'tyranids', bsId:'8e53-d4a-a69f-e71d', role:'Monster',
+  name:'Screamer-killer', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Screamer-killer', M:'8"', T:'9', Sv:'2+', W:'10', Ld:'8+', OC:'3', InSv:'–', base:'90mm' }
   ],
@@ -7882,7 +7882,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/harpy':{
-  name:'Harpy', faction:'tyranids', bsId:'c679-b06a-750b-e7f7', role:'Monster',
+  name:'Harpy', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Harpy', M:'–', T:'9', Sv:'3+', W:'12', Ld:'8+', OC:'–', InSv:'–', base:'120×92mm Oval' }
   ],
@@ -7911,7 +7911,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/hive-crone':{
-  name:'Hive Crone', faction:'tyranids', bsId:'93aa-dd13-de9d-402b', role:'Monster',
+  name:'Hive Crone', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Hive Crone', M:'–', T:'9', Sv:'3+', W:'12', Ld:'8+', OC:'–', InSv:'–', base:'120×92mm Oval' }
   ],
@@ -7940,7 +7940,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/sporocyst':{
-  name:'Sporocyst', faction:'tyranids', bsId:'2cdd-3bf1-55e0-7641', role:'Monster',
+  name:'Sporocyst', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Sporocyst', M:'–', T:'10', Sv:'3+', W:'10', Ld:'8+', OC:'0', InSv:'–', base:'Hull' }
   ],
@@ -7966,7 +7966,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/harridan':{
-  name:'Harridan', faction:'tyranids', bsId:'9b5c-3b5a-1f80-9a74', role:'Monster',
+  name:'Harridan', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Harridan', M:'14"', T:'10', Sv:'3+', W:'30', Ld:'8+', OC:'0', InSv:'–', base:'Unique' }
   ],
@@ -7993,7 +7993,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'tyranids/hierophant':{
-  name:'Hierophant', faction:'tyranids', bsId:'fbc0-3a2b-1d7d-23d9', role:'Monster',
+  name:'Hierophant', faction:'tyranids', role:'Monster',
   stats:[
     { name:'Hierophant', M:'12"', T:'14', Sv:'2+', W:'30', Ld:'8+', OC:'12', InSv:'5+', base:'Hull' }
   ],
@@ -8023,7 +8023,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'imperial-knights/knight-destrier':{
-  name:'Knight Destrier', faction:'imperial-knights', bsId:'10d8-d702-f556-5d3c', role:'Character',
+  name:'Knight Destrier', faction:'imperial-knights', role:'Character',
   stats:[
     { name:'Knight Destrier', M:'12"', T:'10', Sv:'3+', W:'18', Ld:'6+', OC:'8', InSv:'5+*', base:'150×95mm Oval' }
   ],
@@ -8046,7 +8046,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Titanic','Towering','Bellatus','Character','Imperium','Knight Destrier','Faction: Imperial Knights']
 },
 'imperial-knights/knight-errant':{
-  name:'Knight Errant', faction:'imperial-knights', bsId:'9efd-ec72-353f-4b23', role:'Character',
+  name:'Knight Errant', faction:'imperial-knights', role:'Character',
   stats:[
     { name:'Knight Errant', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval' }
   ],
@@ -8069,7 +8069,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Imperium','Knight Errant','Faction: Imperial Knights']
 },
 'imperial-knights/knight-paladin':{
-  name:'Knight Paladin', faction:'imperial-knights', bsId:'8441-8356-5e7c-69ee', role:'Character',
+  name:'Knight Paladin', faction:'imperial-knights', role:'Character',
   stats:[
     { name:'Knight Paladin', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval' }
   ],
@@ -8093,7 +8093,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Imperium','Knight Paladin','Faction: Imperial Knights']
 },
 'imperial-knights/knight-warden':{
-  name:'Knight Warden', faction:'imperial-knights', bsId:'c609-c87e-f9dd-5006', role:'Character',
+  name:'Knight Warden', faction:'imperial-knights', role:'Character',
   stats:[
     { name:'Knight Warden', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval' }
   ],
@@ -8117,7 +8117,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Imperium','Knight Warden','Faction: Imperial Knights']
 },
 'imperial-knights/canis-rex':{
-  name:'Canis Rex', faction:'imperial-knights', bsId:'55fb-9c91-1a4f-3037', role:'Epic Hero',
+  name:'Canis Rex', faction:'imperial-knights', role:'Epic Hero',
   stats:[
     { name:'Canis Rex', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval' },
     { name:'Sir Hekhtur', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'5+', OC:'1', InSv:'–', base:'25mm' }
@@ -8144,10 +8144,10 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Epic Hero','Imperium','Canis Rex','Infantry','Sir Hekhtur','Faction: Imperial Knights'],
   kwOnly:{ 'Canis Rex':'Canis Rex', Questoris:'Canis Rex', Titanic:'Canis Rex', Towering:'Canis Rex', Vehicle:'Canis Rex', Walker:'Canis Rex', Infantry:'Sir Hekhtur', 'Sir Hekhtur':'Sir Hekhtur' },
   partialRules:{ 'Lone Operative':'Sir Hekhtur' },
-  srcNote:{ at:'Sir Hekhtur', note:'Wahapedia: its own EPIC HERO datasheet; BSData and New Recruit: in this unit' }
+  srcNote:{ at:'Sir Hekhtur', note:'Wahapedia: its own EPIC HERO datasheet; New Recruit: in this unit' }
 },
 'imperial-knights/cerastus-knight-atrapos':{
-  name:'Cerastus Knight Atrapos', faction:'imperial-knights', bsId:'37a7-d156-1e4c-8fe1', role:'Character',
+  name:'Cerastus Knight Atrapos', faction:'imperial-knights', role:'Character',
   stats:[
     { name:'Cerastus Knight Atrapos', M:'12"', T:'11', Sv:'3+', W:'28', Ld:'6+', OC:'10', InSv:'5+', base:'170×109mm Oval' }
   ],
@@ -8170,7 +8170,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Character','Titanic','Towering','Imperium','Cerastus','Knight Atrapos','Faction: Imperial Knights']
 },
 'imperial-knights/cerastus-knight-lancer':{
-  name:'Cerastus Knight Lancer', faction:'imperial-knights', bsId:'9ee-e289-bc6c-d943', role:'Character',
+  name:'Cerastus Knight Lancer', faction:'imperial-knights', role:'Character',
   stats:[
     { name:'Cerastus Knight Lancer', M:'14"', T:'11', Sv:'3+', W:'28', Ld:'6+', OC:'10', InSv:'4+', base:'170×109mm Oval' }
   ],
@@ -8190,7 +8190,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Character','Titanic','Towering','Imperium','Cerastus','Knight Lancer','Faction: Imperial Knights']
 },
 'imperial-knights/knight-crusader':{
-  name:'Knight Crusader', faction:'imperial-knights', bsId:'1e27-a6de-3840-a050', role:'Character',
+  name:'Knight Crusader', faction:'imperial-knights', role:'Character',
   stats:[
     { name:'Knight Crusader', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval' }
   ],
@@ -8215,7 +8215,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Imperium','Knight Crusader','Faction: Imperial Knights']
 },
 'imperial-knights/knight-defender':{
-  name:'Knight Defender', faction:'imperial-knights', bsId:'f12b-ca2a-9c87-79bb', role:'Character',
+  name:'Knight Defender', faction:'imperial-knights', role:'Character',
   stats:[
     { name:'Knight Defender', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'4+*', base:'170×109mm Oval' }
   ],
@@ -8239,7 +8239,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Titanic','Towering','Questoris','Character','Imperium','Knight Defender','Faction: Imperial Knights']
 },
 'imperial-knights/navigator':{
-  name:'Navigator', faction:'imperial-knights', bsId:'55cf-8d86-affd-bc9b', role:'Allies: Imperial Agents',
+  name:'Navigator', faction:'imperial-knights', role:'Allies: Imperial Agents',
   stats:[
     { name:'Navigator', M:'6"', T:'3', Sv:'5+', W:'3', Ld:'7+', OC:'1', InSv:'4+', base:'32mm' }
   ],
@@ -8257,7 +8257,7 @@ const DATASHEETS = {
   kw:['Infantry','Character','Psyker','Imperium','Voidfarers','Navigator','Faction: Agents of the Imperium','Allies: Imperial Agents']
 },
 'adeptus-mechanicus/belisarius-cawl':{
-  name:'Belisarius Cawl', faction:'adeptus-mechanicus', bsId:'1f1e-2989-4762-cf88', role:'Epic Hero',
+  name:'Belisarius Cawl', faction:'adeptus-mechanicus', role:'Epic Hero',
   stats:[
     { name:'Belisarius Cawl', M:'8"', T:'8', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'105×70mm Oval' }
   ],
@@ -8279,7 +8279,7 @@ const DATASHEETS = {
   kw:['Monster','Character','Mobile','Epic Hero','Imperium','Tech-Priest','Cult Mechanicus','Belisarius Cawl','Faction: Adeptus Mechanicus']
 },
 'adeptus-mechanicus/thulia-ghuld':{
-  name:'Thulia Ghuld', faction:'adeptus-mechanicus', bsId:'7135-8430-eb02-ded4', role:'Epic Hero',
+  name:'Thulia Ghuld', faction:'adeptus-mechanicus', role:'Epic Hero',
   stats:[
     { name:'Thulia Ghuld', M:'8"', T:'8', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'80mm' }
   ],
@@ -8302,7 +8302,7 @@ const DATASHEETS = {
   kw:['Monster','Character','Mobile','Epic Hero','Imperium','Cult Mechanicus','Tech-Priest','Thulia Ghuld','Faction: Adeptus Mechanicus']
 },
 'adeptus-mechanicus/tech-priest-enginseer':{
-  name:'Tech-Priest Enginseer', faction:'adeptus-mechanicus', bsId:'c0e0-4d86-96d2-ec86', role:'Character',
+  name:'Tech-Priest Enginseer', faction:'adeptus-mechanicus', role:'Character',
   stats:[
     { name:'Tech-Priest Enginseer', M:'6"', T:'4', Sv:'3+', W:'3', Ld:'7+', OC:'1', InSv:'5+', base:'32mm' }
   ],
@@ -8322,7 +8322,7 @@ const DATASHEETS = {
   kw:['Imperium','Infantry','Character','Cult Mechanicus','Tech-Priest','Enginseer','Faction: Adeptus Mechanicus']
 },
 'adeptus-mechanicus/cybernetica-datasmith':{
-  name:'Cybernetica Datasmith', faction:'adeptus-mechanicus', bsId:'d59d-ef1-9ef8-4f44',
+  name:'Cybernetica Datasmith', faction:'adeptus-mechanicus',
   stats:[
     { name:'Cybernetica Datasmith', T:'4', Sv:'2+', W:'3', Ld:'7+', OC:'1', InSv:'5+', base:'32mm', M:'6"' }
   ],
@@ -8338,7 +8338,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-mechanicus/kastelan-robots':{
-  name:'Kastelan Robots', faction:'adeptus-mechanicus', bsId:'bd6c-8683-8bc4-962d',
+  name:'Kastelan Robots', faction:'adeptus-mechanicus',
   stats:[
     { name:'Kastelan Robot', T:'9', Sv:'2+', W:'7', Ld:'7+', OC:'2', InSv:'5+', base:'60mm', M:'6"' }
   ],
@@ -8354,7 +8354,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-mechanicus/skitarii-rangers':{
-  name:'Skitarii Rangers', faction:'adeptus-mechanicus', bsId:'de59-f65c-181a-8509', role:'Battleline',
+  name:'Skitarii Rangers', faction:'adeptus-mechanicus', role:'Battleline',
   stats:[
     { name:'Skitarii Rangers', M:'6"', T:'3', Sv:'4+', W:'1', Ld:'7+', OC:'2', InSv:'5+', base:'25mm', baseWith:{ 'Transuranic arquebus':'60×35.5mm Oval' } }
   ],
@@ -8377,7 +8377,7 @@ const DATASHEETS = {
   kw:['Infantry','Battleline','Imperium','Skitarii','Rangers','Faction: Adeptus Mechanicus']
 },
 'adeptus-mechanicus/ironstrider-ballistarii':{
-  name:'Ironstrider Ballistarii', faction:'adeptus-mechanicus', bsId:'7efb-de37-79c4-cccb', role:'Vehicle',
+  name:'Ironstrider Ballistarii', faction:'adeptus-mechanicus', role:'Vehicle',
   stats:[
     { name:'Ironstrider Ballistarii', M:'10"', T:'7', Sv:'3+', W:'7', Ld:'7+', OC:'2', InSv:'5+', base:'105×70mm Oval' }
   ],
@@ -8396,7 +8396,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Smoke','Imperium','Skitarii','Ironstrider Ballistarii','Faction: Adeptus Mechanicus']
 },
 'adeptus-mechanicus/onager-dunecrawler':{
-  name:'Onager Dunecrawler', faction:'adeptus-mechanicus', bsId:'ea05-4db7-9ee6-7a87', role:'Vehicle',
+  name:'Onager Dunecrawler', faction:'adeptus-mechanicus', role:'Vehicle',
   stats:[
     { name:'Onager Dunecrawler', M:'8"', T:'10', Sv:'2+', W:'11', Ld:'7+', OC:'3', InSv:'4+', base:'130mm' }
   ],
@@ -8417,7 +8417,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Imperium','Skitarii','Smoke','Onager Dunecrawler','Faction: Adeptus Mechanicus']
 },
 'adeptus-mechanicus/skorpius-disintegrator':{
-  name:'Skorpius Disintegrator', faction:'adeptus-mechanicus', bsId:'3fcc-b6a1-399b-1a29', role:'Vehicle',
+  name:'Skorpius Disintegrator', faction:'adeptus-mechanicus', role:'Vehicle',
   stats:[
     { name:'Skorpius Disintegrator', M:'10"', T:'10', Sv:'2+', W:'12', Ld:'7+', OC:'3', InSv:'–', base:'Hull' }
   ],
@@ -8438,7 +8438,7 @@ const DATASHEETS = {
   kw:['Vehicle','Imperium','Frame','Skitarii','Smoke','Skorpius Disintegrator','Faction: Adeptus Mechanicus']
 },
 'emperors-children/lucius-the-eternal':{
-  name:'Lucius the Eternal', faction:'emperors-children', bsId:'e390-b58b-db9-816',
+  name:'Lucius the Eternal', faction:'emperors-children',
   stats:[
     { name:'Lucius the Eternal', M:'8"', T:'6', Sv:'2+', W:'6', Ld:'6+', OC:'1', InSv:'4+', base:'50mm' }
   ],
@@ -8452,7 +8452,7 @@ const DATASHEETS = {
   ]
 },
 'emperors-children/flawless-blades':{
-  name:'Flawless Blades', faction:'emperors-children', bsId:'183e-f3bb-3ce6-7b55',
+  name:'Flawless Blades', faction:'emperors-children',
   stats:[
     { name:'Flawless Blades', M:'8"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
   ],
@@ -8467,7 +8467,7 @@ const DATASHEETS = {
   ]
 },
 'emperors-children/daemon-prince-of-slaanesh-with-wings':{
-  name:'Daemon Prince of Slaanesh with Wings', faction:'emperors-children', bsId:'e452-08be-33e6-3864', role:'Character',
+  name:'Daemon Prince of Slaanesh with Wings', faction:'emperors-children', role:'Character',
   stats:[
     { name:'Daemon Prince of Slaanesh with Wings', M:'14"', T:'9', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'60mm' }
   ],
@@ -8486,7 +8486,7 @@ const DATASHEETS = {
   kw:['Monster','Fly','Character','Chaos','Daemon','Slaanesh','Daemon Prince with Wings','Faction: Emperor\'s Children']
 },
 'emperors-children/sorcerer':{
-  name:'Sorcerer', faction:'emperors-children', bsId:'2cd1-13f5-d59d-cc7f', role:'Character',
+  name:'Sorcerer', faction:'emperors-children', role:'Character',
   stats:[
     { name:'Sorcerer', M:'7"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'40mm' }
   ],
@@ -8506,7 +8506,7 @@ const DATASHEETS = {
   kw:['Infantry','Character','Psyker','Grenades','Chaos','Slaanesh','Sorcerer','Faction: Emperor\'s Children']
 },
 'emperors-children/lord-exultant':{
-  name:'Lord Exultant', faction:'emperors-children', bsId:'7b4c-dfe0-6a0a-304a',
+  name:'Lord Exultant', faction:'emperors-children',
   stats:[
     { name:'Lord Exultant', M:'7"', T:'5', Sv:'3+', W:'5', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' }
   ],
@@ -8525,7 +8525,7 @@ const DATASHEETS = {
   ]
 },
 'emperors-children/infractors':{
-  name:'Infractors', faction:'emperors-children', bsId:'e456-0afc-9b42-226c',
+  name:'Infractors', faction:'emperors-children',
   stats:[
     { name:'Infractors', M:'7"', T:'5', Sv:'3+', W:'2', Ld:'6+', OC:'2', InSv:'–', base:'32mm' }
   ],
@@ -8544,7 +8544,7 @@ const DATASHEETS = {
   ]
 },
 'emperors-children/tormentors':{
-  name:'Tormentors', faction:'emperors-children', bsId:'4494-dd7d-69f7-306c', role:'Battleline',
+  name:'Tormentors', faction:'emperors-children', role:'Battleline',
   stats:[
     { name:'Tormentors', M:'7"', T:'5', Sv:'3+', W:'2', Ld:'6+', OC:'2', InSv:'–', base:'32mm' }
   ],
@@ -8566,7 +8566,7 @@ const DATASHEETS = {
   kw:['Infantry','Battleline','Grenades','Chaos','Slaanesh','Tormentors','Faction: Emperor\'s Children']
 },
 'emperors-children/chaos-rhino':{
-  name:'Chaos Rhino', faction:'emperors-children', bsId:'8ae1-aa47-e1d1-1b31', role:'Dedicated Transport',
+  name:'Chaos Rhino', faction:'emperors-children', role:'Dedicated Transport',
   stats:[
     { name:'Chaos Rhino', M:'12"', T:'9', Sv:'3+', W:'10', Ld:'6+', OC:'2', InSv:'–', base:'Hull' }
   ],
@@ -8584,7 +8584,7 @@ const DATASHEETS = {
   kw:['Vehicle','Transport','Frame','Dedicated Transport','Smoke','Chaos','Slaanesh','Rhino','Faction: Emperor\'s Children']
 },
 'emperors-children/defiler':{
-  name:'Defiler', faction:'emperors-children', bsId:'b541-3292-a5cc-dbeb', role:'Vehicle',
+  name:'Defiler', faction:'emperors-children', role:'Vehicle',
   stats:[
     { name:'Defiler', M:'12"', T:'11', Sv:'3+', W:'18', Ld:'6+', OC:'5', InSv:'5+', base:'160mm' }
   ],
@@ -8606,7 +8606,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Chaos','Slaanesh','Daemon','Defiler','Faction: Emperor\'s Children']
 },
 'emperors-children/maulerfiend':{
-  name:'Maulerfiend', faction:'emperors-children', bsId:'656c-8b78-8e59-0591', role:'Vehicle',
+  name:'Maulerfiend', faction:'emperors-children', role:'Vehicle',
   stats:[
     { name:'Maulerfiend', M:'10"', T:'10', Sv:'3+', W:'12', Ld:'6+', OC:'3', InSv:'5+', base:'120×92mm Oval' }
   ],
@@ -8624,7 +8624,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Chaos','Daemon','Slaanesh','Maulerfiend','Faction: Emperor\'s Children']
 },
 'chaos-knights/chaos-cerastus-knight-atrapos':{
-  name:'Chaos Cerastus Knight Atrapos', faction:'chaos-knights', bsId:'8b1d-9029-f9e1-42d9', role:'Character',
+  name:'Chaos Cerastus Knight Atrapos', faction:'chaos-knights', role:'Character',
   stats:[
     { name:'Chaos Cerastus Knight Atrapos', M:'12"', T:'11', Sv:'3+', W:'28', Ld:'6+', OC:'10', InSv:'5+', base:'170×109mm Oval' }
   ],
@@ -8647,7 +8647,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Character','Titanic','Towering','Chaos','Cerastus','Knight Atrapos','Faction: Chaos Knights']
 },
 'chaos-knights/chaos-cerastus-knight-lancer':{
-  name:'Chaos Cerastus Knight Lancer', faction:'chaos-knights', bsId:'4175-82c6-8e96-bef8', role:'Character',
+  name:'Chaos Cerastus Knight Lancer', faction:'chaos-knights', role:'Character',
   stats:[
     { name:'Chaos Cerastus Knight Lancer', M:'14"', T:'11', Sv:'3+', Ld:'6+', OC:'10', InSv:'4+', base:'170×109mm Oval', W:'28' }
   ],
@@ -8667,7 +8667,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Character','Titanic','Towering','Chaos','Cerastus','Knight Lancer','Faction: Chaos Knights']
 },
 'chaos-knights/knight-despoiler':{
-  name:'Knight Despoiler', faction:'chaos-knights', bsId:'0119-8c04-435e-c782', role:'Character',
+  name:'Knight Despoiler', faction:'chaos-knights', role:'Character',
   stats:[
     { name:'Knight Despoiler', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval' }
   ],
@@ -8690,7 +8690,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Titanic','Towering','Abhorrent','Character','Chaos','Knight Despoiler','Faction: Chaos Knights']
 },
 'chaos-knights/knight-ruinator':{
-  name:'Knight Ruinator', faction:'chaos-knights', bsId:'c0a2-eb65-6d34-5bc6', role:'Character',
+  name:'Knight Ruinator', faction:'chaos-knights', role:'Character',
   stats:[
     { name:'Knight Ruinator', M:'10"', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm Oval', T:'11' }
   ],
@@ -8712,7 +8712,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Titanic','Towering','Abhorrent','Character','Chaos','Knight Ruinator','Faction: Chaos Knights']
 },
 'chaos-knights/nurglings':{
-  name:'Nurglings', faction:'chaos-knights', bsId:'e403-3a9-279e-41b7', role:'Allies: Legiones Daemonica',
+  name:'Nurglings', faction:'chaos-knights', role:'Allies: Legiones Daemonica',
   stats:[
     { name:'Nurglings', M:'5"', T:'3', Sv:'7+', W:'4', Ld:'8+', OC:'0', InSv:'5+', base:'40mm' }
   ],
@@ -8726,7 +8726,7 @@ const DATASHEETS = {
   kw:['Swarm','Battleline','Chaos','Daemon','Nurgle','Nurglings','Faction: Legiones Daemonica','Allies: Legiones Daemonica']
 },
 'chaos-knights/war-dog-brigand':{
-  name:'War Dog Brigand', faction:'chaos-knights', bsId:'753d-4e02-eda3-4809',
+  name:'War Dog Brigand', faction:'chaos-knights',
   stats:[
     { name:'War Dog Brigand', M:'12"', T:'9', Sv:'3+', W:'14', Ld:'7+', OC:'6', InSv:'5+*', base:'100mm' }
   ],
@@ -8747,7 +8747,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Chaos','War Dog','Brigand','Faction: Chaos Knights']
 },
 'chaos-knights/war-dog-executioner':{
-  name:'War Dog Executioner', faction:'chaos-knights', bsId:'8df0-fc3c-8ced-ffce',
+  name:'War Dog Executioner', faction:'chaos-knights',
   stats:[
     { name:'War Dog Executioner', M:'12"', T:'9', Sv:'3+', W:'14', Ld:'7+', OC:'6', InSv:'5+*', base:'100mm' }
   ],
@@ -8767,7 +8767,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Chaos','War Dog','Executioner','Faction: Chaos Knights']
 },
 'chaos-knights/war-dog-karnivore':{
-  name:'War Dog Karnivore', faction:'chaos-knights', bsId:'e96b-ac98-7fd2-a155',
+  name:'War Dog Karnivore', faction:'chaos-knights',
   stats:[
     { name:'War Dog Karnivore', M:'14"', T:'9', Sv:'3+', W:'14', Ld:'7+', OC:'6', InSv:'5+*', base:'100mm' }
   ],
@@ -8787,7 +8787,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Chaos','War Dog','Karnivore','Faction: Chaos Knights']
 },
 'adeptus-custodes/trajann-valoris':{
-  name:'Trajann Valoris', faction:'adeptus-custodes', bsId:'7d7c-c212-47a3-38e4', role:'Epic Hero',
+  name:'Trajann Valoris', faction:'adeptus-custodes', role:'Epic Hero',
   stats:[
     { name:'Trajann Valoris', M:'8"', T:'7', Sv:'2+', W:'10', Ld:'5+', InSv:'4+', base:'40mm', OC:'2' }
   ],
@@ -8814,7 +8814,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/allarus-custodians':{
-  name:'Allarus Custodians', faction:'adeptus-custodes', bsId:'c8a6-a4c5-703e-b717', role:'Infantry',
+  name:'Allarus Custodians', faction:'adeptus-custodes', role:'Infantry',
   stats:[
     { name:'Allarus Custodian', M:'7"', T:'8', Sv:'2+', W:'6', Ld:'5+', InSv:'4+', base:'40mm', OC:'2' }
   ],
@@ -8844,7 +8844,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/prosecutor-squad':{
-  name:'Prosecutor Squad', faction:'adeptus-custodes', bsId:'3ec3-a4df-fdbf-5507', role:'Infantry',
+  name:'Prosecutor Squad', faction:'adeptus-custodes', role:'Infantry',
   stats:[
     { name:'Prosecutor', M:'7"', T:'3', Sv:'3+', W:'1', Ld:'6+', OC:'2', InSv:'–', base:'32mm' }
   ],
@@ -8868,7 +8868,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/witchseeker-squad':{
-  name:'Witchseeker Squad', faction:'adeptus-custodes', bsId:'503b-f7be-eeeb-9e31', role:'Infantry',
+  name:'Witchseeker Squad', faction:'adeptus-custodes', role:'Infantry',
   stats:[
     { name:'Witchseeker', M:'7"', T:'3', Sv:'3+', W:'1', Ld:'6+', OC:'1', InSv:'–', base:'32mm' }
   ],
@@ -8892,7 +8892,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/caladius-annihilator-grav-tank':{
-  name:'Caladius Annihilator Grav-tank', faction:'adeptus-custodes', bsId:'dbf0-5211-463c-40ec', role:'Vehicle',
+  name:'Caladius Annihilator Grav-tank', faction:'adeptus-custodes', role:'Vehicle',
   stats:[
     { name:'Caladius Annihilator Grav-tank', M:'10"', T:'11', Sv:'2+', W:'14', Ld:'5+', OC:'4', base:'170×109mm Oval', InSv:'5+' }
   ],
@@ -8919,7 +8919,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/contemptor-achillus-dreadnought':{
-  name:'Contemptor-Achillus Dreadnought', faction:'adeptus-custodes', bsId:'db3b-02cd-87a2-3b52', role:'Vehicle',
+  name:'Contemptor-Achillus Dreadnought', faction:'adeptus-custodes', role:'Vehicle',
   stats:[
     { name:'Contemptor-Achillus Dreadnought', M:'9"', T:'10', Sv:'2+', W:'12', Ld:'5+', OC:'3', InSv:'5+', base:'60mm' }
   ],
@@ -8947,7 +8947,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/contemptor-galatus-dreadnought':{
-  name:'Contemptor-Galatus Dreadnought', faction:'adeptus-custodes', bsId:'4988-d93e-5034-2b3c', role:'Vehicle',
+  name:'Contemptor-Galatus Dreadnought', faction:'adeptus-custodes', role:'Vehicle',
   stats:[
     { name:'Contemptor-Galatus Dreadnought', M:'9"', T:'10', Sv:'2+', W:'12', Ld:'5+', OC:'3', InSv:'4+', base:'60mm' }
   ],
@@ -8971,7 +8971,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/telemon-heavy-dreadnought':{
-  name:'Telemon Heavy Dreadnought', faction:'adeptus-custodes', bsId:'e7d8-1c73-7d03-8b62', role:'Vehicle',
+  name:'Telemon Heavy Dreadnought', faction:'adeptus-custodes', role:'Vehicle',
   stats:[
     { name:'Telemon Heavy Dreadnought', M:'10"', T:'11', Sv:'2+', W:'14', Ld:'5+', OC:'4', InSv:'4+', base:'100mm' }
   ],
@@ -9001,7 +9001,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/shield-captain':{
-  name:'Shield-Captain', faction:'adeptus-custodes', bsId:'b61c-b815-65c0-b1cc', role:'Character',
+  name:'Shield-Captain', faction:'adeptus-custodes', role:'Character',
   stats:[
     // OC: GW's datasheets give the Shield-Captain OC 2 and the Sentinel Guard OC 3; New Recruit prints 3 and 4, Vexilla's +1 OC ("This
     // unit has +1 OC", on one Sentinel Guard of the attached unit)
@@ -9038,7 +9038,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/sentinel-guard-sodality':{
-  name:'Sentinel Guard Sodality', faction:'adeptus-custodes', bsId:'df80-bbdc-bd0a-3428', role:'Battleline',
+  name:'Sentinel Guard Sodality', faction:'adeptus-custodes', role:'Battleline',
   stats:[
     { name:'Sentinel Guard', M:'8"', T:'7', Sv:'2+', W:'5', Ld:'5+', InSv:'4+', base:'40mm', OC:'3' }
   ],
@@ -9065,7 +9065,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/custodian-guard-sodality':{
-  name:'Custodian Guard Sodality', faction:'adeptus-custodes', bsId:'91b3-2e1c-e642-d213', role:'Battleline',
+  name:'Custodian Guard Sodality', faction:'adeptus-custodes', role:'Battleline',
   stats:[
     { name:'Custodian Guard', M:'8"', T:'7', Sv:'2+', W:'5', Ld:'5+', InSv:'4+', base:'40mm', OC:'3' }
   ],
@@ -9091,7 +9091,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/custodian-wardens':{
-  name:'Custodian Wardens', faction:'adeptus-custodes', bsId:'9610-b148-8433-93b8', role:'Infantry',
+  name:'Custodian Wardens', faction:'adeptus-custodes', role:'Infantry',
   stats:[
     { name:'Custodian Warden', M:'8"', T:'7', Sv:'2+', W:'6', Ld:'5+', InSv:'4+', base:'40mm', OC:'2' }
   ],
@@ -9119,7 +9119,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/vertus-praetors':{
-  name:'Vertus Praetors', faction:'adeptus-custodes', bsId:'918b-c9ed-7af7-74df', role:'Mounted',
+  name:'Vertus Praetors', faction:'adeptus-custodes', role:'Mounted',
   stats:[
     { name:'Vertus Praetors', M:'12"', T:'8', Sv:'2+', W:'7', Ld:'5+', OC:'2', InSv:'4+', base:'75×42mm Oval' }
   ],
@@ -9146,7 +9146,7 @@ const DATASHEETS = {
   ]
 },
 'adeptus-custodes/blade-champion':{
-  name:'Blade Champion', faction:'adeptus-custodes', bsId:'48b7-e713-d5b1-f11c', role:'Character',
+  name:'Blade Champion', faction:'adeptus-custodes', role:'Character',
   stats:[
     { name:'Blade Champion', M:'8"', T:'7', Sv:'2+', W:'7', Ld:'5+', OC:'2', InSv:'4+', base:'40mm' }
   ],
@@ -9172,7 +9172,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/knight-centura':{
-  name:'Knight-Centura', faction:'adeptus-custodes', bsId:'7099-71b-56e8-7191', role:'Character',
+  name:'Knight-Centura', faction:'adeptus-custodes', role:'Character',
   stats:[
     { name:'Knight-Centura', M:'7"', T:'3', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'5+', base:'32mm' }
   ],
@@ -9201,7 +9201,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/shield-captain-in-allarus-terminator-armour':{
-  name:'Shield-Captain in Allarus Terminator Armour', faction:'adeptus-custodes', bsId:'6319-eeba-b717-bd86', role:'Character',
+  name:'Shield-Captain in Allarus Terminator Armour', faction:'adeptus-custodes', role:'Character',
   stats:[
     { name:'Shield-Captain in Allarus Terminator Armour', M:'7"', T:'8', Sv:'2+', W:'9', Ld:'5+', OC:'2', InSv:'4+', base:'40mm' }
   ],
@@ -9232,7 +9232,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/shield-captain-on-dawneagle-jetbike':{
-  name:'Shield-Captain on Dawneagle Jetbike', faction:'adeptus-custodes', bsId:'58fa-4a25-a5af-1144', role:'Character',
+  name:'Shield-Captain on Dawneagle Jetbike', faction:'adeptus-custodes', role:'Character',
   stats:[
     { name:'Shield-Captain on Dawneagle Jetbike', M:'12"', T:'8', Sv:'2+', W:'10', Ld:'5+', OC:'2', InSv:'4+', base:'75×42mm Oval' }
   ],
@@ -9261,7 +9261,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/anathema-psykana-rhino':{
-  name:'Anathema Psykana Rhino', faction:'adeptus-custodes', bsId:'d7cb-7d30-715b-50d2', role:'Dedicated Transport',
+  name:'Anathema Psykana Rhino', faction:'adeptus-custodes', role:'Dedicated Transport',
   stats:[
     { name:'Anathema Psykana Rhino', M:'12"', T:'9', Sv:'3+', W:'10', Ld:'6+', OC:'2', InSv:'–', base:'Hull' }
   ],
@@ -9288,7 +9288,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/vigilator-squad':{
-  name:'Vigilator Squad', faction:'adeptus-custodes', bsId:'dd2d-568a-9c56-1b6e', role:'Infantry',
+  name:'Vigilator Squad', faction:'adeptus-custodes', role:'Infantry',
   stats:[
     { name:'Vigilator', M:'7"', T:'3', Sv:'3+', W:'1', Ld:'6+', OC:'1', InSv:'–', base:'32mm' }
   ],
@@ -9310,7 +9310,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/venatari-with-kinetic-destroyers':{
-  name:'Venatari with Kinetic Destroyers', faction:'adeptus-custodes', bsId:'201e-e502-a8d1-3974', role:'Infantry',
+  name:'Venatari with Kinetic Destroyers', faction:'adeptus-custodes', role:'Infantry',
   stats:[
     { name:'Venatari', M:'12"', T:'7', Sv:'2+', W:'5', Ld:'5+', OC:'2', InSv:'4+', base:'40mm' }
   ],
@@ -9337,7 +9337,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/aquilon-terminators-with-solarite-power-gauntlets':{
-  name:'Aquilon Terminators with Solarite Power Gauntlets', faction:'adeptus-custodes', bsId:'9d57-6156-aebd-73e9', role:'Infantry',
+  name:'Aquilon Terminators with Solarite Power Gauntlets', faction:'adeptus-custodes', role:'Infantry',
   stats:[
     { name:'Aquilon Terminator', M:'7"', T:'8', Sv:'2+', W:'6', Ld:'5+', OC:'2', InSv:'4+', base:'50mm' }
   ],
@@ -9362,7 +9362,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/aquilon-terminators-with-solarite-power-talons':{
-  name:'Aquilon Terminators with Solarite Power Talons', faction:'adeptus-custodes', bsId:'67a7-0ebe-3c5f-c0f9', role:'Infantry',
+  name:'Aquilon Terminators with Solarite Power Talons', faction:'adeptus-custodes', role:'Infantry',
   stats:[
     { name:'Aquilon Terminator', M:'7"', T:'8', Sv:'2+', W:'6', Ld:'5+', OC:'2', InSv:'4+', base:'50mm' }
   ],
@@ -9389,7 +9389,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/venatari-with-verutum-lances':{
-  name:'Venatari with Verutum Lances', faction:'adeptus-custodes', bsId:'5ebc-7aca-d7c4-1c4d', role:'Infantry',
+  name:'Venatari with Verutum Lances', faction:'adeptus-custodes', role:'Infantry',
   stats:[
     { name:'Venatari', M:'12"', T:'7', Sv:'2+', W:'5', Ld:'5+', OC:'2', InSv:'4+', base:'40mm' }
   ],
@@ -9416,7 +9416,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/gyrfalcon-jetbike-sodality':{
-  name:'Gyrfalcon Jetbike Sodality', faction:'adeptus-custodes', bsId:'00ab-41c4-cf52-4ad2', role:'Mounted',
+  name:'Gyrfalcon Jetbike Sodality', faction:'adeptus-custodes', role:'Mounted',
   stats:[
     { name:'Gyrfalcon Jetbike', M:'12"', T:'8', Sv:'2+', W:'9', Ld:'5+', OC:'2', InSv:'4+', base:'75×42mm Oval' }
   ],
@@ -9445,7 +9445,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/pallas-grav-attack':{
-  name:'Pallas Grav-attack', faction:'adeptus-custodes', bsId:'06df-2fb2-8dfa-2fce', role:'Vehicle',
+  name:'Pallas Grav-attack', faction:'adeptus-custodes', role:'Vehicle',
   stats:[
     { name:'Pallas Grav-attack', M:'12"', T:'9', Sv:'2+', W:'10', Ld:'5+', OC:'2', InSv:'5+', base:'105×70mm Oval' }
   ],
@@ -9472,7 +9472,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/caladius-grav-tank':{
-  name:'Caladius Grav-tank', faction:'adeptus-custodes', bsId:'3ee2-62a9-af84-1a90', role:'Vehicle',
+  name:'Caladius Grav-tank', faction:'adeptus-custodes', role:'Vehicle',
   stats:[
     { name:'Caladius Grav-tank', M:'10"', T:'11', Sv:'2+', W:'14', Ld:'5+', OC:'4', InSv:'5+', base:'170×109mm Oval' }
   ],
@@ -9500,7 +9500,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/coronus-grav-carrier':{
-  name:'Coronus Grav-carrier', faction:'adeptus-custodes', bsId:'f35e-ef9c-9ef4-77e1', role:'Vehicle',
+  name:'Coronus Grav-carrier', faction:'adeptus-custodes', role:'Vehicle',
   stats:[
     { name:'Coronus Grav-carrier', M:'12"', T:'12', Sv:'2+', W:'16', Ld:'5+', OC:'5', InSv:'5+', base:'170×109mm Oval' }
   ],
@@ -9530,7 +9530,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/ares-gunship':{
-  name:'Ares Gunship', faction:'adeptus-custodes', bsId:'9335-74d9-ad68-3ff7', role:'Vehicle',
+  name:'Ares Gunship', faction:'adeptus-custodes', role:'Vehicle',
   stats:[
     { name:'Ares Gunship', M:'–', T:'12', Sv:'2+', W:'22', Ld:'6+', OC:'–', InSv:'5+', base:'160mm' }
   ],
@@ -9556,7 +9556,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'adeptus-custodes/orion-assault-dropship':{
-  name:'Orion Assault Dropship', faction:'adeptus-custodes', bsId:'9c1a-7efd-ed36-440e', role:'Vehicle',
+  name:'Orion Assault Dropship', faction:'adeptus-custodes', role:'Vehicle',
   stats:[
     { name:'Orion Assault Dropship', M:'14"', T:'12', Sv:'2+', W:'22', Ld:'6+', OC:'0', InSv:'5+', base:'160mm' }
   ],
@@ -9584,7 +9584,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'ultramarines/roboute-guilliman':{
-  name:'Roboute Guilliman', faction:'ultramarines', bsId:'4aea-b1cc-6c69-1c44', role:'Epic Hero',
+  name:'Roboute Guilliman', faction:'ultramarines', role:'Epic Hero',
   stats:[
     { name:'Roboute Guilliman', M:'8"', T:'10', Sv:'2+', W:'16', Ld:'5+', OC:'4', InSv:'4+', base:'60mm' }
   ],
@@ -9606,7 +9606,7 @@ const DATASHEETS = {
   kw:['Monster','Character','Epic Hero','Imperium','Mobile','Primarch','Roboute Guilliman','Faction: Adeptus Astartes','Faction: Ultramarines']
 },
 'ultramarines/marneus-calgar':{
-  name:'Marneus Calgar', faction:'ultramarines', bsId:'a136-76f7-34d1-8035',
+  name:'Marneus Calgar', faction:'ultramarines',
   stats:[
     { name:'Marneus Calgar', M:'6"', T:'6', Sv:'2+', W:'6', Ld:'6+', OC:'1', InSv:'4+', base:'50mm' }
   ],
@@ -9624,7 +9624,7 @@ const DATASHEETS = {
   ]
 },
 'ultramarines/wardens-of-ultramar':{
-  name:'Wardens of Ultramar', faction:'ultramarines', bsId:'b793-b77e-9e49-d397',
+  name:'Wardens of Ultramar', faction:'ultramarines',
   stats:[
     { name:'Aemelia Minervas', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'28.5mm' },
     { name:'Ancient Gadriel', M:'6"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'2', InSv:'–', base:'40mm' },
@@ -9653,7 +9653,7 @@ const DATASHEETS = {
   ]
 },
 'ultramarines/bladeguard-veteran-squad':{
-  name:'Bladeguard Veteran Squad', faction:'ultramarines', bsId:'7044-bf1-f949-c32d',
+  name:'Bladeguard Veteran Squad', faction:'ultramarines',
   stats:[
     { name:'Bladeguard Veteran Sergeant', M:'6"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' },
     { name:'Bladeguard Veteran', M:'6"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' }
@@ -9670,7 +9670,7 @@ const DATASHEETS = {
   ]
 },
 'ultramarines/librarian-in-phobos-armour':{
-  name:'Librarian in Phobos Armour', faction:'ultramarines', bsId:'137c-2add-1a51-ee96', role:'Character',
+  name:'Librarian in Phobos Armour', faction:'ultramarines', role:'Character',
   stats:[
     { name:'Librarian in Phobos Armor', M:'8"', T:'4', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'40mm' }
   ],
@@ -9692,7 +9692,7 @@ const DATASHEETS = {
   kw:['Infantry','Character','Explosives','Imperium','Phobos','Psyker','Librarian','Faction: Adeptus Astartes']
 },
 'ultramarines/heavy-intercessor-squad':{
-  name:'Heavy Intercessor Squad', faction:'ultramarines', bsId:'7324-e591-939b-b675', role:'Battleline',
+  name:'Heavy Intercessor Squad', faction:'ultramarines', role:'Battleline',
   stats:[
     { name:'Heavy Intercessor Sergeant', M:'5"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'2', InSv:'–', base:'40mm' },
     { name:'Heavy intercessor Squad', M:'5"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'2', InSv:'–', base:'40mm' }
@@ -9712,7 +9712,7 @@ const DATASHEETS = {
   kw:['Infantry','Battleline','Explosives','Gravis','Imperium','Heavy Intercessor Squad','Faction: Adeptus Astartes']
 },
 'ultramarines/impulsor':{
-  name:'Impulsor', faction:'ultramarines', bsId:'bfb1-7512-e1a3-9fa2', role:'Dedicated Transport',
+  name:'Impulsor', faction:'ultramarines', role:'Dedicated Transport',
   stats:[
     { name:'Impulsor', M:'12"', T:'9', Sv:'3+', W:'11', Ld:'6+', OC:'2', base:'100mm', InSv:'–' }
   ],
@@ -9732,7 +9732,7 @@ const DATASHEETS = {
   kw:['Vehicle','Dedicated Transport','Frame','Imperium','Transport','Impulsor','Faction: Adeptus Astartes']
 },
 'ultramarines/eradicator-squad-with-melta-rifles':{
-  name:'Eradicator Squad with Melta Rifles', faction:'ultramarines', bsId:'c570-c6ba-c9dc-5a44', role:'Infantry',
+  name:'Eradicator Squad with Melta Rifles', faction:'ultramarines', role:'Infantry',
   stats:[
     { name:'Eradicator Squad', M:'5"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'40mm' },
     { name:'Eradicator Sergeant', M:'5"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'40mm' }
@@ -9754,7 +9754,7 @@ const DATASHEETS = {
   kw:['Infantry','Explosives','Gravis','Imperium','Eradicator Squad with Melta Rifles','Faction: Adeptus Astartes']
 },
 'ultramarines/reiver-squad':{
-  name:'Reiver Squad', faction:'ultramarines', bsId:'a7ae-e495-683b-7c90', role:'Infantry',
+  name:'Reiver Squad', faction:'ultramarines', role:'Infantry',
   stats:[
     { name:'Reiver Sergeant', M:'8"', T:'4', Sv:'3+', W:'2', Ld:'6+', OC:'1', InSv:'–', base:'32mm' },
     { name:'Reiver Squad', M:'8"', T:'4', Sv:'3+', W:'2', Ld:'6+', OC:'1', InSv:'–', base:'32mm' }
@@ -9774,7 +9774,7 @@ const DATASHEETS = {
   kw:['Infantry','Explosives','Imperium','Phobos','Smoke','Reiver Squad','Faction: Adeptus Astartes']
 },
 'ultramarines/deathwatch-terminator-squad':{
-  name:'Deathwatch Terminator Squad', faction:'ultramarines', bsId:'390e-706b-a059-378b', role:'Allies: Deathwatch',
+  name:'Deathwatch Terminator Squad', faction:'ultramarines', role:'Allies: Deathwatch',
   stats:[
     { name:'Deathwatch Terminator Sergeant', M:'5"', T:'6', Sv:'2+', Ld:'6+', OC:'1', InSv:'4+', base:'40mm', W:'3' },
     { name:'Deathwatch Terminator', M:'5"', T:'6', Sv:'2+', Ld:'6+', OC:'1', InSv:'4+', base:'40mm', W:'3' }
@@ -9797,7 +9797,7 @@ const DATASHEETS = {
   kw:['Infantry','Kill Team','Terminator','Imperium','Deathwatch Terminator Squad','Faction: Adeptus Astartes','Faction: Deathwatch','Allies: Deathwatch']
 },
 'chaos-daemons/skarbrand':{
-  name:'Skarbrand', faction:'chaos-daemons', bsId:'7998-d0a-baa4-e8b3', role:'Epic Hero',
+  name:'Skarbrand', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'Skarbrand', M:'10"', T:'11', Sv:'3+', W:'20', Ld:'6+', OC:'5', InSv:'4+', base:'100mm' }
   ],
@@ -9825,7 +9825,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/karanak':{
-  name:'Karanak', faction:'chaos-daemons', bsId:'8436-cec1-e65a-d1a7', role:'Epic Hero',
+  name:'Karanak', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'Karanak', M:'12"', T:'4', Sv:'7+', W:'5', Ld:'7+', OC:'3', InSv:'4+', base:'75×42mm Oval' }
   ],
@@ -9852,7 +9852,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/flesh-hounds':{
-  name:'Flesh Hounds', faction:'chaos-daemons', bsId:'fd31-64a2-b20f-f0bc', role:'Beast',
+  name:'Flesh Hounds', faction:'chaos-daemons', role:'Beast',
   stats:[
     { name:'Flesh Hounds', M:'12"', T:'4', Sv:'7+', W:'2', Ld:'7+', OC:'1', InSv:'5+', base:'60×35.5mm Oval' }
   ],
@@ -9879,7 +9879,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/skulltaker':{
-  name:'Skulltaker', faction:'chaos-daemons', bsId:'8872-785a-1efa-7ca1', role:'Epic Hero',
+  name:'Skulltaker', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'Skulltaker', M:'8"', T:'4', Sv:'4+', W:'5', OC:'1', InSv:'4+', base:'40mm', Ld:'7+' }
   ],
@@ -9902,7 +9902,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/bloodletters':{
-  name:'Bloodletters', faction:'chaos-daemons', bsId:'4ecc-6aa5-da28-2c57', role:'Battleline',
+  name:'Bloodletters', faction:'chaos-daemons', role:'Battleline',
   stats:[
     { name:'Bloodletters', M:'8"', T:'4', Sv:'7+', W:'1', OC:'2', InSv:'5+', base:'32mm', Ld:'7+' }
   ],
@@ -9928,7 +9928,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/bloodthirster':{
-  name:'Bloodthirster', faction:'chaos-daemons', bsId:'a018-ca33-afd0-be83', role:'Character',
+  name:'Bloodthirster', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Bloodthirster', M:'12"', T:'11', Sv:'3+', W:'18', Ld:'6+', OC:'5', InSv:'4+', base:'120×92mm Oval' }
   ],
@@ -9961,7 +9961,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/daemon-prince-of-chaos':{
-  name:'Daemon Prince of Chaos', faction:'chaos-daemons', bsId:'497d-e065-f5a5-5e80', role:'Character',
+  name:'Daemon Prince of Chaos', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Daemon Prince of Chaos', M:'8"', T:'10', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'60mm' }
   ],
@@ -9990,7 +9990,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/rendmaster-on-blood-throne':{
-  name:'Rendmaster on Blood Throne', faction:'chaos-daemons', bsId:'d1cc-e17a-f1a1-4349', role:'Character',
+  name:'Rendmaster on Blood Throne', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Rendmaster on Blood Throne', M:'8"', T:'9', Sv:'4+', W:'9', Ld:'7+', OC:'3', InSv:'4+', base:'120×92mm Oval' }
   ],
@@ -10013,7 +10013,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/bloodmaster':{
-  name:'Bloodmaster', faction:'chaos-daemons', bsId:'ccae-b5f1-8787-4c7d', role:'Character',
+  name:'Bloodmaster', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Bloodmaster', M:'8"', T:'4', Sv:'5+', W:'4', OC:'1', InSv:'4+', base:'40mm', Ld:'7+' }
   ],
@@ -10036,7 +10036,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/skullmaster':{
-  name:'Skullmaster', faction:'chaos-daemons', bsId:'dd30-ba4c-34a4-e788', role:'Character',
+  name:'Skullmaster', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Skullmaster', M:'10"', T:'7', Sv:'3+', W:'6', OC:'2', InSv:'4+', base:'90×52.5mm Oval', Ld:'7+' }
   ],
@@ -10060,7 +10060,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/bloodcrushers':{
-  name:'Bloodcrushers', faction:'chaos-daemons', bsId:'2f31-9132-b703-5fd8', role:'Mounted',
+  name:'Bloodcrushers', faction:'chaos-daemons', role:'Mounted',
   stats:[
     { name:'Bloodcrushers', M:'10"', T:'7', Sv:'3+', W:'4', OC:'2', InSv:'5+', base:'90×52.5mm Oval', Ld:'7+' }
   ],
@@ -10087,7 +10087,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/beasts-of-nurgle':{
-  name:'Beasts of Nurgle', faction:'chaos-daemons', bsId:'2de0-5897-f724-a592', role:'Beast',
+  name:'Beasts of Nurgle', faction:'chaos-daemons', role:'Beast',
   stats:[
     { name:'Beast of Nurgle', M:'6"', T:'9', Sv:'6+', W:'7', Ld:'7+', OC:'3', InSv:'5+', base:'60mm' }
   ],
@@ -10108,7 +10108,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/kairos-fateweaver':{
-  name:'Kairos Fateweaver', faction:'chaos-daemons', bsId:'6df5-f246-6bd-55b8', role:'Epic Hero',
+  name:'Kairos Fateweaver', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'Kairos Fateweaver', M:'12"', T:'10', Sv:'6+', W:'20', Ld:'6+', OC:'5', InSv:'4+', base:'100mm' }
   ],
@@ -10136,7 +10136,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/the-blue-scribes':{
-  name:'The Blue Scribes', faction:'chaos-daemons', bsId:'caf1-8818-9e65-7154', role:'Epic Hero',
+  name:'The Blue Scribes', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'The Blue Scribes', M:'12"', T:'4', Sv:'6+', W:'6', Ld:'8+', OC:'2', InSv:'4+', base:'Large Flying' }
   ],
@@ -10158,7 +10158,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/the-changeling':{
-  name:'The Changeling', faction:'chaos-daemons', bsId:'ac75-c011-9a10-2c4a', role:'Epic Hero',
+  name:'The Changeling', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'The Changeling', M:'6"', T:'3', Sv:'7+', W:'5', Ld:'7+', OC:'1', InSv:'4+', base:'40mm' }
   ],
@@ -10184,7 +10184,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/daemon-prince-of-chaos-with-wings':{
-  name:'Daemon Prince of Chaos with wings', faction:'chaos-daemons', bsId:'5800-3978-370d-b573', role:'Character',
+  name:'Daemon Prince of Chaos with wings', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Daemon Prince of Chaos with wings', M:'12"', T:'9', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'60mm' }
   ],
@@ -10212,7 +10212,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/lord-of-change':{
-  name:'Lord of Change', faction:'chaos-daemons', bsId:'3600-9f92-933-bf54', role:'Character',
+  name:'Lord of Change', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Lord of Change', M:'12"', T:'10', Sv:'6+', W:'18', Ld:'6+', OC:'5', InSv:'4+', base:'100mm' }
   ],
@@ -10242,7 +10242,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/fluxmaster':{
-  name:'Fluxmaster', faction:'chaos-daemons', bsId:'eba5-8a7a-fc5b-d7ec', role:'Character',
+  name:'Fluxmaster', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Fluxmaster', M:'12"', T:'4', Sv:'6+', W:'4', Ld:'7+', OC:'1', InSv:'4+', base:'Large Flying' }
   ],
@@ -10269,7 +10269,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/pink-horrors':{
-  name:'Pink Horrors', faction:'chaos-daemons', bsId:'e7b8-aa40-6da7-778e', role:'Battleline',
+  name:'Pink Horrors', faction:'chaos-daemons', role:'Battleline',
   stats:[
     { name:'Blue/Brimstone Horror (ref. only)', M:'6"', T:'3', Sv:'7+', W:'1', Ld:'8+', OC:'1', InSv:'4+', base:'25mm' },
     { name:'Pink Horror', M:'6"', T:'3', Sv:'7+', W:'1', Ld:'7+', OC:'2', InSv:'4+', base:'32mm' }
@@ -10303,7 +10303,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/flamers':{
-  name:'Flamers', faction:'chaos-daemons', bsId:'5f23-4d6-f2f9-5973', role:'Infantry',
+  name:'Flamers', faction:'chaos-daemons', role:'Infantry',
   stats:[
     { name:'Flamers', M:'9"', T:'4', Sv:'7+', W:'3', Ld:'7+', OC:'1', InSv:'4+', base:'32mm' }
   ],
@@ -10329,7 +10329,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/tzeentch-soul-grinder':{
-  name:'Tzeentch Soul Grinder', faction:'chaos-daemons', bsId:'e1b1-146f-6f77-3a15', role:'Vehicle',
+  name:'Tzeentch Soul Grinder', faction:'chaos-daemons', role:'Vehicle',
   stats:[
     { name:'Soul Grinder', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'7+', OC:'5', InSv:'4+', base:'160mm' }
   ],
@@ -10359,7 +10359,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-daemons/blue-horrors':{
-  name:'Blue Horrors', faction:'chaos-daemons', bsId:'b795-b936-ad61-e407', role:'Battleline',
+  name:'Blue Horrors', faction:'chaos-daemons', role:'Battleline',
   stats:[
     { name:'Blue Horror', M:'6"', T:'3', Sv:'7+', W:'1', Ld:'8+', OC:'1', InSv:'4+', base:'25mm' }
   ],
@@ -10405,7 +10405,7 @@ const DATASHEETS = {
   kw:['Battleline','Brimstone','Chaos','Daemon','Faction: Legiones Daemonica','Horrors','Infantry','Tzeentch']
 },
 'chaos-daemons/belakor':{
-  name:'Be’lakor', faction:'chaos-daemons', bsId:'2c37-2898-8350-ef45', role:'Epic Hero',
+  name:'Be’lakor', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'Be’lakor', M:'12"', T:'11', Sv:'3+', W:'20', Ld:'6+', OC:'5', InSv:'4+', base:'100mm' }
   ],
@@ -10438,7 +10438,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/epidemius':{
-  name:'Epidemius', faction:'chaos-daemons', bsId:'5851-dc90-9afe-76a7', role:'Epic Hero',
+  name:'Epidemius', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'Epidemius', M:'5"', T:'5', Sv:'6+', W:'8', Ld:'7+', OC:'2', InSv:'5+', base:'60mm' }
   ],
@@ -10462,7 +10462,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/horticulous-slimux':{
-  name:'Horticulous Slimux', faction:'chaos-daemons', bsId:'7151-238f-a6eb-2f94', role:'Epic Hero',
+  name:'Horticulous Slimux', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'Horticulous Slimux', M:'6"', T:'10', Sv:'3+', W:'10', Ld:'7+', OC:'2', InSv:'4+', base:'105×70mm Oval' }
   ],
@@ -10487,7 +10487,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/rotigus':{
-  name:'Rotigus', faction:'chaos-daemons', bsId:'cff8-7388-a2c9-946c', role:'Epic Hero',
+  name:'Rotigus', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'Rotigus', M:'7"', T:'12', Sv:'5+', W:'22', Ld:'6+', OC:'5', InSv:'4+', base:'130mm' }
   ],
@@ -10516,7 +10516,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/shalaxi-helbane':{
-  name:'Shalaxi Helbane', faction:'chaos-daemons', bsId:'c49d-5ebc-4ee4-689e', role:'Epic Hero',
+  name:'Shalaxi Helbane', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'Shalaxi Helbane', M:'14"', T:'10', Sv:'3+', W:'20', Ld:'6+', OC:'5', InSv:'4+', base:'100mm' }
   ],
@@ -10547,7 +10547,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/syllesske':{
-  name:'Syll’esske', faction:'chaos-daemons', bsId:'27f6-d907-66f-ca28', role:'Epic Hero',
+  name:'Syll’esske', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'Syll’esske', M:'9"', T:'6', Sv:'6+', W:'9', Ld:'6+', OC:'2', InSv:'4+', base:'50mm' }
   ],
@@ -10577,7 +10577,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/the-masque-of-slaanesh':{
-  name:'The Masque of Slaanesh', faction:'chaos-daemons', bsId:'1567-b99b-bd8f-d485', role:'Epic Hero',
+  name:'The Masque of Slaanesh', faction:'chaos-daemons', role:'Epic Hero',
   stats:[
     { name:'The Masque of Slaanesh', M:'9"', T:'3', Sv:'7+', W:'4', Ld:'7+', OC:'1', InSv:'4+', base:'32mm' }
   ],
@@ -10600,7 +10600,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/changecaster':{
-  name:'Changecaster', faction:'chaos-daemons', bsId:'8b7c-d709-90d4-298e', role:'Character',
+  name:'Changecaster', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Changecaster', M:'6"', T:'3', Sv:'6+', W:'3', Ld:'7+', OC:'1', InSv:'4+', base:'32mm' }
   ],
@@ -10628,7 +10628,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/contorted-epitome':{
-  name:'Contorted Epitome', faction:'chaos-daemons', bsId:'36df-8f40-8a6b-7d4c', role:'Character',
+  name:'Contorted Epitome', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Contorted Epitome', M:'9"', T:'6', Sv:'5+', W:'8', Ld:'7+', OC:'2', InSv:'4+', base:'75×42mm Oval' }
   ],
@@ -10653,7 +10653,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/exalted-flamer':{
-  name:'Exalted Flamer', faction:'chaos-daemons', bsId:'de54-5b38-8ca1-c39c', role:'Character',
+  name:'Exalted Flamer', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Exalted Flamer', M:'9"', T:'4', Sv:'7+', W:'6', Ld:'7+', OC:'1', InSv:'4+', base:'75×42mm Oval' }
   ],
@@ -10682,7 +10682,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/fateskimmer':{
-  name:'Fateskimmer', faction:'chaos-daemons', bsId:'c199-b27c-7cc2-7935', role:'Character',
+  name:'Fateskimmer', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Fateskimmer', M:'12"', T:'7', Sv:'6+', W:'9', Ld:'7+', OC:'3', InSv:'4+', base:'120×92mm Oval' }
   ],
@@ -10711,7 +10711,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/great-unclean-one':{
-  name:'Great Unclean One', faction:'chaos-daemons', bsId:'d490-6c4d-e83b-b183', role:'Character',
+  name:'Great Unclean One', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Great Unclean One', M:'7"', T:'12', Sv:'5+', W:'20', Ld:'6+', OC:'5', InSv:'4+', base:'130mm' }
   ],
@@ -10745,7 +10745,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/infernal-enrapturess':{
-  name:'Infernal Enrapturess', faction:'chaos-daemons', bsId:'2cc5-ef65-c4b9-28c6', role:'Character',
+  name:'Infernal Enrapturess', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Infernal Enrapturess', M:'9"', T:'3', Sv:'7+', W:'3', Ld:'7+', OC:'1', InSv:'5+', base:'60×35.5mm Oval' }
   ],
@@ -10773,7 +10773,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/keeper-of-secrets':{
-  name:'Keeper of Secrets', faction:'chaos-daemons', bsId:'a903-dd97-339d-6899', role:'Character',
+  name:'Keeper of Secrets', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Keeper of Secrets', M:'14"', T:'10', Sv:'5+', W:'18', Ld:'6+', OC:'5', InSv:'4+', base:'100mm' }
   ],
@@ -10806,7 +10806,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/poxbringer':{
-  name:'Poxbringer', faction:'chaos-daemons', bsId:'7b06-189d-b11e-c189', role:'Character',
+  name:'Poxbringer', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Poxbringer', M:'5"', T:'5', Sv:'7+', W:'5', Ld:'7+', OC:'1', InSv:'5+', base:'32mm' }
   ],
@@ -10830,7 +10830,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/sloppity-bilepiper':{
-  name:'Sloppity Bilepiper', faction:'chaos-daemons', bsId:'3da0-5db0-7531-33b6', role:'Character',
+  name:'Sloppity Bilepiper', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Sloppity Bilepiper', M:'5"', T:'5', Sv:'7+', W:'5', Ld:'7+', OC:'1', InSv:'5+', base:'32mm' }
   ],
@@ -10854,7 +10854,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/spoilpox-scrivener':{
-  name:'Spoilpox Scrivener', faction:'chaos-daemons', bsId:'e7cd-468b-37dd-d82f', role:'Character',
+  name:'Spoilpox Scrivener', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Spoilpox Scrivener', M:'5"', T:'5', Sv:'7+', W:'5', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
   ],
@@ -10881,7 +10881,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/tormentbringer':{
-  name:'Tormentbringer', faction:'chaos-daemons', bsId:'673b-111b-6dcb-352', role:'Character',
+  name:'Tormentbringer', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Tormentbringer', M:'14"', T:'6', Sv:'5+', W:'12', Ld:'7+', OC:'3', InSv:'4+', base:'120×92mm Oval' }
   ],
@@ -10898,7 +10898,7 @@ const DATASHEETS = {
     { name:'Hysterical Frenzy', text:'Each time a model in this model’s unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.' },
     { name:'Leader', text:'This model can be attached to the following units: HELLFLAYERS' }
   ],
-  rules:['Deep Strike','The Shadow of Chaos','Leader','Anti','Assault','Pistol','Extra Attacks','Lethal Hits','Devastating Wounds'],
+  rules:['Deep Strike','Leader','The Shadow of Chaos','Anti','Assault','Pistol','Extra Attacks','Lethal Hits','Devastating Wounds'],
   kw:['Mounted','Character','Psyker','Chaos','Daemon','Slaanesh','Tormentbringer','Faction: Legiones Daemonica'],
   points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:135 }] }] },
   composition:[
@@ -10910,7 +10910,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/tranceweaver':{
-  name:'Tranceweaver', faction:'chaos-daemons', bsId:'dba-34e3-46f2-56e0', role:'Character',
+  name:'Tranceweaver', faction:'chaos-daemons', role:'Character',
   stats:[
     { name:'Tranceweaver', M:'9"', T:'3', Sv:'7+', W:'3', Ld:'7+', OC:'1', InSv:'5+', base:'32mm' }
   ],
@@ -10934,7 +10934,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/daemonettes':{
-  name:'Daemonettes', faction:'chaos-daemons', bsId:'41c2-d2e6-ae43-3beb', role:'Battleline',
+  name:'Daemonettes', faction:'chaos-daemons', role:'Battleline',
   stats:[
     { name:'Daemonettes', M:'9"', T:'3', Sv:'7+', W:'1', Ld:'7+', OC:'2', InSv:'5+', base:'25mm' }
   ],
@@ -10961,7 +10961,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/nurglings':{
-  name:'Nurglings', faction:'chaos-daemons', bsId:'e403-3a9-279e-41b7', role:'Battleline',
+  name:'Nurglings', faction:'chaos-daemons', role:'Battleline',
   stats:[
     { name:'Nurglings', M:'5"', T:'3', Sv:'7+', W:'4', Ld:'8+', OC:'0', InSv:'5+', base:'40mm' }
   ],
@@ -10983,7 +10983,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/plaguebearers':{
-  name:'Plaguebearers', faction:'chaos-daemons', bsId:'d1eb-b092-d944-e729', role:'Battleline',
+  name:'Plaguebearers', faction:'chaos-daemons', role:'Battleline',
   stats:[
     { name:'Plaguebearers', M:'5"', T:'5', Sv:'7+', W:'2', Ld:'7+', OC:'2', InSv:'5+', base:'32mm' }
   ],
@@ -11010,7 +11010,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/burning-chariot':{
-  name:'Burning Chariot', faction:'chaos-daemons', bsId:'f6eb-b62f-5baf-d96d', role:'Mounted',
+  name:'Burning Chariot', faction:'chaos-daemons', role:'Mounted',
   stats:[
     { name:'Burning Chariot', M:'12"', T:'8', Sv:'7+', W:'9', Ld:'7+', OC:'3', InSv:'4+', base:'120×92mm Oval' }
   ],
@@ -11037,7 +11037,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/hellflayers':{
-  name:'Hellflayers', faction:'chaos-daemons', bsId:'e8d-bf22-b29-d20e', role:'Mounted',
+  name:'Hellflayers', faction:'chaos-daemons', role:'Mounted',
   stats:[
     { name:'Hellflayer', M:'14"', T:'6', Sv:'5+', W:'7', Ld:'7+', OC:'3', InSv:'5+', base:'120×92mm Oval' }
   ],
@@ -11064,7 +11064,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/plague-drones':{
-  name:'Plague Drones', faction:'chaos-daemons', bsId:'d620-146a-41cd-f28f', role:'Mounted',
+  name:'Plague Drones', faction:'chaos-daemons', role:'Mounted',
   stats:[
     { name:'Plague Drones', M:'10"', T:'8', Sv:'6+', W:'5', Ld:'7+', OC:'2', InSv:'5+', base:'Large Flying' }
   ],
@@ -11095,7 +11095,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/seekers':{
-  name:'Seekers', faction:'chaos-daemons', bsId:'112d-8078-777f-76a5', role:'Mounted',
+  name:'Seekers', faction:'chaos-daemons', role:'Mounted',
   stats:[
     { name:'Seeker', M:'14"', T:'4', Sv:'7+', W:'2', Ld:'7+', OC:'1', InSv:'5+', base:'60×35.5mm Oval' },
     { name:'Heartseeker', M:'14"', T:'4', Sv:'7+', W:'2', Ld:'7+', OC:'1', InSv:'5+', base:'60×35.5mm Oval' }
@@ -11124,7 +11124,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/skull-cannon':{
-  name:'Skull Cannon', faction:'chaos-daemons', bsId:'fd37-8a80-3da8-f262', role:'Mounted',
+  name:'Skull Cannon', faction:'chaos-daemons', role:'Mounted',
   stats:[
     { name:'Skull Cannon', M:'8"', T:'9', Sv:'4+', W:'9', Ld:'7+', OC:'3', InSv:'4+', base:'120×92mm Oval' }
   ],
@@ -11150,7 +11150,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/fiends':{
-  name:'Fiends', faction:'chaos-daemons', bsId:'d1ee-8d05-4fae-1727', role:'Beast',
+  name:'Fiends', faction:'chaos-daemons', role:'Beast',
   stats:[
     { name:'Fiends', M:'12"', T:'5', Sv:'7+', W:'4', Ld:'7+', OC:'2', InSv:'5+', base:'75×42mm Oval' }
   ],
@@ -11172,7 +11172,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/screamers':{
-  name:'Screamers', faction:'chaos-daemons', bsId:'550b-c5ab-5e27-f59b', role:'Beast',
+  name:'Screamers', faction:'chaos-daemons', role:'Beast',
   stats:[
     { name:'Screamer', M:'14"', T:'4', Sv:'6+', W:'3', Ld:'7+', OC:'1', InSv:'4+', base:'Small Flying' }
   ],
@@ -11194,7 +11194,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/khorne-soul-grinder':{
-  name:'Khorne Soul Grinder', faction:'chaos-daemons', bsId:'8e9f-aa9-17f5-e2d3', role:'Vehicle',
+  name:'Khorne Soul Grinder', faction:'chaos-daemons', role:'Vehicle',
   stats:[
     { name:'Soul Grinder', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'7+', OC:'5', InSv:'4+', base:'160mm' }
   ],
@@ -11225,7 +11225,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/nurgle-soul-grinder':{
-  name:'Nurgle Soul Grinder', faction:'chaos-daemons', bsId:'137e-d9b8-e764-c7cd', role:'Vehicle',
+  name:'Nurgle Soul Grinder', faction:'chaos-daemons', role:'Vehicle',
   stats:[
     { name:'Soul Grinder', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'7+', OC:'5', InSv:'4+', base:'160mm' }
   ],
@@ -11256,7 +11256,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/slaanesh-soul-grinder':{
-  name:'Slaanesh Soul Grinder', faction:'chaos-daemons', bsId:'5df-73b6-d758-14fc', role:'Vehicle',
+  name:'Slaanesh Soul Grinder', faction:'chaos-daemons', role:'Vehicle',
   stats:[
     { name:'Soul Grinder', M:'8"', T:'11', Sv:'3+', W:'14', Ld:'7+', OC:'5', InSv:'4+', base:'160mm' }
   ],
@@ -11287,7 +11287,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/feculent-gnarlmaw':{
-  name:'Feculent Gnarlmaw', faction:'chaos-daemons', bsId:'13f0-d2b5-6201-ba84', role:'Fortification',
+  name:'Feculent Gnarlmaw', faction:'chaos-daemons', role:'Fortification',
   stats:[
     { name:'Feculent Gnarlmaw', M:'–', T:'9', Sv:'4+', W:'9', Ld:'7+', OC:'0', InSv:'–', base:'Hull' }
   ],
@@ -11306,7 +11306,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-daemons/skull-altar':{
-  name:'Skull Altar', faction:'chaos-daemons', bsId:'464a-b548-355f-2058', role:'Fortification',
+  name:'Skull Altar', faction:'chaos-daemons', role:'Fortification',
   stats:[
     { name:'Skull Altar', M:'–', T:'12', Sv:'3+', W:'10', Ld:'7+', OC:'0', InSv:'–', base:'Hull' }
   ],
@@ -11325,7 +11325,7 @@ const DATASHEETS = {
   aiStatus:'not-read'
 },
 'chaos-space-marines/vashtorr-the-arkifane':{
-  name:'Vashtorr the Arkifane', faction:'chaos-space-marines', bsId:'dcc0-b70c-9779-e6c9', role:'Epic Hero',
+  name:'Vashtorr the Arkifane', faction:'chaos-space-marines', role:'Epic Hero',
   stats:[
     { name:'Vashtorr the Arkifane', M:'12"', T:'10', Sv:'2+', W:'14', Ld:'6+', OC:'3', InSv:'4+', base:'80mm' }
   ],
@@ -11346,7 +11346,7 @@ const DATASHEETS = {
   kw:['Monster','Character','Epic Hero','Fly','Chaos','Daemon','Vashtorr the Arkifane','Faction: Heretic Astartes']
 },
 'chaos-space-marines/lord-discordant-on-helstalker':{
-  name:'Lord Discordant on Helstalker', faction:'chaos-space-marines', bsId:'46e1-2159-7c26-9105', role:'Character',
+  name:'Lord Discordant on Helstalker', faction:'chaos-space-marines', role:'Character',
   stats:[
     { name:'Lord Discordant on Helstalker', M:'14"', T:'9', Sv:'2+', W:'10', Ld:'6+', OC:'4', InSv:'4+', base:'120×92mm Oval' }
   ],
@@ -11367,7 +11367,7 @@ const DATASHEETS = {
   kw:['Mounted','Character','Chaos','Daemon','Lord Discordant','Faction: Heretic Astartes']
 },
 'chaos-space-marines/warpsmith':{
-  name:'Warpsmith', faction:'chaos-space-marines', bsId:'440-a22a-eac1-b107', role:'Character',
+  name:'Warpsmith', faction:'chaos-space-marines', role:'Character',
   stats:[
     { name:'Warpsmith', M:'6"', T:'5', Sv:'2+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'60×35.5mm Oval' }
   ],
@@ -11389,7 +11389,7 @@ const DATASHEETS = {
   kw:['Infantry','Character','Grenades','Chaos','Warpsmith','Faction: Heretic Astartes']
 },
 'chaos-space-marines/dark-apostle':{
-  name:'Dark Apostle', faction:'chaos-space-marines', bsId:'d2b8-454a-d061-b592',
+  name:'Dark Apostle', faction:'chaos-space-marines',
   stats:[
     { name:'Dark Apostle', M:'6"', T:'5', Sv:'3+', W:'4', Ld:'5+', OC:'1', InSv:'4+', base:'40mm' }
   ],
@@ -11407,7 +11407,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-space-marines/master-of-executions':{
-  name:'Master of Executions', faction:'chaos-space-marines', bsId:'da34-7071-8658-a453',
+  name:'Master of Executions', faction:'chaos-space-marines',
   stats:[
     { name:'Master of Executions', M:'6"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'1', base:'40mm', InSv:'–' }
   ],
@@ -11423,7 +11423,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-space-marines/nemesis-claw':{
-  name:'Nemesis Claw', faction:'chaos-space-marines', bsId:'f666-1f5d-0c20-06c1',
+  name:'Nemesis Claw', faction:'chaos-space-marines',
   stats:[
     { name:'Dark Disciple', M:'6"', T:'5', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'4+', base:'25mm' },
     { name:'Nemesis Claw', M:'6"', T:'5', Sv:'3+', W:'2', Ld:'6+', OC:'1', base:'32mm', InSv:'–' }
@@ -11448,7 +11448,7 @@ const DATASHEETS = {
   ]
 },
 'chaos-space-marines/cultist-mob':{
-  name:'Cultist Mob', faction:'chaos-space-marines', bsId:'1267-78f1-7774-859', role:'Battleline',
+  name:'Cultist Mob', faction:'chaos-space-marines', role:'Battleline',
   stats:[
     { name:'Cultist Mob', M:'6"', T:'3', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'–', base:'25mm' },
     { name:'Cultist Champion', M:'6"', T:'3', Sv:'6+', W:'1', Ld:'7+', OC:'1', InSv:'–', base:'25mm' }
@@ -11467,7 +11467,7 @@ const DATASHEETS = {
   kw:['Infantry','Battleline','Grenades','Chaos','Damned','Cultist Mob','Faction: Heretic Astartes']
 },
 'chaos-space-marines/havocs':{
-  name:'Havocs', faction:'chaos-space-marines', bsId:'946c-d784-c8be-f21', role:'Infantry',
+  name:'Havocs', faction:'chaos-space-marines', role:'Infantry',
   stats:[
     { name:'Havoc Champion', M:'5"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'40mm' },
     { name:'Havocs', M:'5"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'–', base:'40mm' }
@@ -11488,7 +11488,7 @@ const DATASHEETS = {
   kw:['Infantry','Chaos','Havocs','Faction: Heretic Astartes']
 },
 'chaos-space-marines/obliterators':{
-  name:'Obliterators', faction:'chaos-space-marines', bsId:'2311-fa63-364-22a3', role:'Infantry',
+  name:'Obliterators', faction:'chaos-space-marines', role:'Infantry',
   stats:[
     { name:'Obliterators', M:'4"', T:'7', Sv:'2+', W:'5', Ld:'6+', OC:'2', InSv:'5+', base:'50mm' }
   ],
@@ -11507,7 +11507,7 @@ const DATASHEETS = {
   kw:['Infantry','Chaos','Daemon','Obliterators','Faction: Heretic Astartes']
 },
 'chaos-space-marines/chaos-predator-annihilator':{
-  name:'Chaos Predator Annihilator', faction:'chaos-space-marines', bsId:'279e-62d4-bff1-141', role:'Vehicle',
+  name:'Chaos Predator Annihilator', faction:'chaos-space-marines', role:'Vehicle',
   stats:[
     { name:'Chaos Predator Annihilator', M:'10"', T:'10', Sv:'3+', W:'11', Ld:'6+', OC:'3', base:'Hull', InSv:'–' }
   ],
@@ -11528,7 +11528,7 @@ const DATASHEETS = {
   kw:['Vehicle','Frame','Smoke','Chaos','Predator Annihilator','Faction: Heretic Astartes']
 },
 'chaos-space-marines/chaos-predator-destructor':{
-  name:'Chaos Predator Destructor', faction:'chaos-space-marines', bsId:'3dfb-3b2a-94b-2fbe', role:'Vehicle',
+  name:'Chaos Predator Destructor', faction:'chaos-space-marines', role:'Vehicle',
   stats:[
     { name:'Chaos Predator Destructor', M:'10"', T:'10', Sv:'3+', W:'11', Ld:'6+', OC:'3', base:'Hull', InSv:'–' }
   ],
@@ -11549,7 +11549,7 @@ const DATASHEETS = {
   kw:['Vehicle','Frame','Smoke','Chaos','Predator Destructor','Faction: Heretic Astartes']
 },
 'chaos-space-marines/chaos-vindicator':{
-  name:'Chaos Vindicator', faction:'chaos-space-marines', bsId:'e687-6d7a-bb28-dcaa', role:'Vehicle',
+  name:'Chaos Vindicator', faction:'chaos-space-marines', role:'Vehicle',
   stats:[
     { name:'Chaos Vindicator', M:'9"', T:'11', Sv:'2+', W:'11', Ld:'6+', OC:'3', base:'Hull', InSv:'–' }
   ],
@@ -11569,7 +11569,7 @@ const DATASHEETS = {
   kw:['Vehicle','Frame','Smoke','Chaos','Vindicator','Faction: Heretic Astartes']
 },
 'chaos-space-marines/forgefiend':{
-  name:'Forgefiend', faction:'chaos-space-marines', bsId:'45b-19f6-38d2-703f', role:'Vehicle',
+  name:'Forgefiend', faction:'chaos-space-marines', role:'Vehicle',
   stats:[
     { name:'Forgefiend', M:'8"', T:'10', Sv:'3+', W:'12', Ld:'6+', OC:'3', InSv:'5+', base:'120×92mm Oval' }
   ],
@@ -11587,7 +11587,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Chaos','Daemon','Forgefiend','Faction: Heretic Astartes']
 },
 'chaos-space-marines/maulerfiend':{
-  name:'Maulerfiend', faction:'chaos-space-marines', bsId:'d37d-7e8f-341b-c67c', role:'Vehicle',
+  name:'Maulerfiend', faction:'chaos-space-marines', role:'Vehicle',
   stats:[
     { name:'Maulerfiend', M:'10"', T:'10', Sv:'3+', W:'12', Ld:'6+', OC:'3', InSv:'5+', base:'120×92mm Oval' }
   ],
@@ -11603,7 +11603,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Chaos','Daemon','Maulerfiend','Faction: Heretic Astartes']
 },
 'necrons/imotekh-the-stormlord':{
-  name:'Imotekh the Stormlord', faction:'necrons', bsId:'49fd-a80d-8cc0-c76b', role:'Epic Hero',
+  name:'Imotekh the Stormlord', faction:'necrons', role:'Epic Hero',
   stats:[
     { name:'Imotekh the Stormlord', M:'5"', T:'5', Sv:'2+', W:'6', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' }
   ],
@@ -11622,7 +11622,7 @@ const DATASHEETS = {
   kw:['Infantry','Character','Epic Hero','Noble','Imotekh the Stormlord','Faction: Necrons']
 },
 'necrons/the-silent-king':{
-  name:'The Silent King', faction:'necrons', bsId:'7422-7fbf-8694-364c', role:'Epic Hero',
+  name:'The Silent King', faction:'necrons', role:'Epic Hero',
   stats:[
     { name:'Szarekh', M:'8"', T:'10', Sv:'2+', W:'16', Ld:'6+', OC:'6', InSv:'4+', base:'100mm' },
     { name:'Triarchal Menhir', M:'8"', T:'10', Sv:'2+', W:'5', Ld:'6+', OC:'1', InSv:'4+', base:'50mm' }
@@ -11651,7 +11651,7 @@ const DATASHEETS = {
   kwOnly:{ Character:'Szarekh', 'The Silent King':'Szarekh' }
 },
 'necrons/royal-warden':{
-  name:'Royal Warden', faction:'necrons', bsId:'379b-d6a0-cd05-ef89', role:'Character',
+  name:'Royal Warden', faction:'necrons', role:'Character',
   stats:[
     { name:'Royal Warden', M:'5"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'32mm' }
   ],
@@ -11669,7 +11669,7 @@ const DATASHEETS = {
   kw:['Infantry','Character','Royal Warden','Faction: Necrons']
 },
 'necrons/technomancer':{
-  name:'Technomancer', faction:'necrons', bsId:'852a-ba39-e93f-6b62',
+  name:'Technomancer', faction:'necrons',
   stats:[
     { name:'Technomancer', M:'10"', T:'4', Sv:'4+', W:'4', Ld:'6+', OC:'1', InSv:'–', base:'50mm' }
   ],
@@ -11685,7 +11685,7 @@ const DATASHEETS = {
   ]
 },
 'necrons/immortals':{
-  name:'Immortals', faction:'necrons', bsId:'f81-b23c-e183-39d7',
+  name:'Immortals', faction:'necrons',
   stats:[
     { name:'Immortals', M:'5"', T:'5', Sv:'3+', W:'1', Ld:'7+', OC:'2', InSv:'–', base:'32mm' }
   ],
@@ -11700,7 +11700,7 @@ const DATASHEETS = {
   ]
 },
 'necrons/flayed-ones':{
-  name:'Flayed Ones', faction:'necrons', bsId:'c219-a708-f5b0-f0e7', role:'Infantry',
+  name:'Flayed Ones', faction:'necrons', role:'Infantry',
   stats:[
     { name:'Flayed Ones', M:'5"', T:'4', Sv:'4+', W:'1', Ld:'7+', OC:'1', InSv:'–', base:'28.5mm' }
   ],
@@ -11714,7 +11714,7 @@ const DATASHEETS = {
   kw:['Infantry','Flayed Ones','Faction: Necrons']
 },
 'necrons/ophydian-destroyers':{
-  name:'Ophydian Destroyers', faction:'necrons', bsId:'c6db-9736-4d53-3ef6', role:'Infantry',
+  name:'Ophydian Destroyers', faction:'necrons', role:'Infantry',
   stats:[
     { name:'Ophydian Destroyers', M:'10"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'2', InSv:'–', base:'50mm' }
   ],
@@ -11728,7 +11728,7 @@ const DATASHEETS = {
   kw:['Infantry','Destroyer Cult','Ophydian Destroyers','Faction: Necrons']
 },
 'necrons/canoptek-scarab-swarms':{
-  name:'Canoptek Scarab Swarms', faction:'necrons', bsId:'259b-a8e3-928f-1d0c', role:'Swarm',
+  name:'Canoptek Scarab Swarms', faction:'necrons', role:'Swarm',
   stats:[
     { name:'Canoptek Scarab Swarms', M:'10"', T:'2', Sv:'6+', W:'4', Ld:'8+', OC:'0', InSv:'–', base:'40mm' }
   ],
@@ -11743,7 +11743,7 @@ const DATASHEETS = {
   kw:['Swarm','Fly','Canoptek','Scarab Swarms','Faction: Necrons']
 },
 'necrons/canoptek-reanimator':{
-  name:'Canoptek Reanimator', faction:'necrons', bsId:'7c45-2aab-7526-febe', role:'Vehicle',
+  name:'Canoptek Reanimator', faction:'necrons', role:'Vehicle',
   stats:[
     { name:'Canoptek Reanimator', M:'8"', T:'6', Sv:'3+', W:'6', Ld:'8+', OC:'3', InSv:'–', base:'60mm' }
   ],
@@ -11760,7 +11760,7 @@ const DATASHEETS = {
   kw:['Vehicle','Walker','Canoptek','Reanimator','Faction: Necrons']
 },
 'necrons/canoptek-spyders':{
-  name:'Canoptek Spyders', faction:'necrons', bsId:'cae9-5277-87f4-54b8', role:'Vehicle',
+  name:'Canoptek Spyders', faction:'necrons', role:'Vehicle',
   stats:[
     { name:'Canoptek Spyder', M:'5"', T:'7', Sv:'3+', W:'6', Ld:'8+', OC:'2', InSv:'–', base:'60mm' }
   ],
@@ -11779,7 +11779,7 @@ const DATASHEETS = {
   kw:['Vehicle','Fly','Canoptek','Spyders','Faction: Necrons']
 },
 'necrons/tesseract-vault':{
-  name:'Tesseract Vault', faction:'necrons', bsId:'5451-67b5-a66c-71d2', role:'Vehicle',
+  name:'Tesseract Vault', faction:'necrons', role:'Vehicle',
   stats:[
     { name:'Tesseract Vault', T:'12', Sv:'2+', W:'24', Ld:'7+', OC:'8', InSv:'4+', base:'120×92mm Oval', M:'8"' }
   ],
@@ -11805,8 +11805,8 @@ const DATASHEETS = {
 // core terms (not abilities): kept out of a unit's rule list and the glossary of rules units have
 const CONCEPTS = ['Hazard Roll','Mortal Wounds','Battle-shock','Engagement','Selected to Attack','Destroyed','Normal Move','Advance Move','Fall-back Move','Charge','Charge Move','Pile-in Move','Consolidation Move','Benefit of Cover','Strategic Reserves','Ingress Move','Surge Move','Scout Move','Starting Strength','Select Weapons'];
 
-// ---- BS_IDS: written by verify/import-ids.js from BSData (do not edit) ----
-const BS_IDS = {
+// ---- NR_IDS: written by verify/import-ids.js from the New Recruit exports in verify/sources/nr-json (do not edit) ----
+const NR_IDS = {
   factions:{
     "03fe-a162-4c02-f07b":"emperors-children",
     "1069-10ff-3ba9-873b":"thousand-sons",
@@ -11823,7 +11823,6 @@ const BS_IDS = {
     "df9a-59b2-f464-59ad":"world-eaters"
   },
   roots:{
-    "1162-9cd5-d6b0-1663":"detachment",
     "2f69-9148-45b4-86a8":"disposition",
     "3b0d-dccf-8661-be1c":"detachment",
     "5218-339c-eb34-9ac0":"detachment",
@@ -11848,7 +11847,6 @@ const BS_IDS = {
   },
   dispositions:{
     "081d-bc07-5d4e-ab22":"Priority Assets",
-    "31ed-50f0-6571-c4c1":"Disruption",
     "3b81-de3e-f72c-b208":"Reconnaissance",
     "7da4-f0a6-65ec-da48":"Purge the Foe",
     "a271-bfab-1b97-c55d":"Take and Hold"
@@ -11859,59 +11857,38 @@ const BS_IDS = {
     "0dd1-86f6-d2a0-3aba":"chaos-daemons/cavalcade-of-chaos",
     "1558-660f-466b-a087":"world-eaters/khorne-daemonkin",
     "163f-63bd-f2e1-5e7":"necrons/obeisance-phalanx",
-    "16ff-a068-4c31-285a":"tyranids/synaptic-nexus",
     "1bb5-5aba-6c8f-7afc":"adeptus-custodes/might-of-the-moritoi",
     "1c7e-56bc-3196-b5cd":"adeptus-custodes/emperors-chosen",
     "1dc3-0d2d-7cb8-b84b":"ultramarines/terminator-storm-force",
     "21b4-7a36-fec6-b7ea":"chaos-daemons/blood-legion",
-    "24f0-3c89-41be-0675":"chaos-daemons/legion-of-excess",
     "3490-ec82-70b3-c5cf":"world-eaters/berzerker-warband",
     "357d-d51b-f001-a33d":"chaos-daemons/warptide",
-    "385f-36b3-f98d-9735":"adeptus-custodes/dread-host",
-    "3b75-a700-050c-06f5":"adeptus-custodes/lions-of-the-emperor",
     "4b17-a73a-7a0a-a265":"orks/bully-boyz",
     "4b8b-16b7-091d-7b6f":"thousand-sons/ritual-of-regeneration",
-    "4cd9-313f-cd9b-c85a":"tyranids/unending-swarm",
     "4e8e-50db-0d32-423c":"imperial-knights/freeblade-company",
-    "5063-25bd-d22e-665b":"chaos-daemons/shadow-legion",
     "549e-86b2-b786-c802":"ultramarines/assault-brethren",
     "5be7-3aa8-5d64-cbaf":"thousand-sons/warpmeld-pact",
     "5d30-981f-43b8-81be":"chaos-knights/hunting-warpack",
     "5eb6-4ed2-6aca-c7f1":"ultramarines/deathwatch-support",
     "5f38-038e-a1e9-a457":"chaos-space-marines/cult-of-the-arkifane",
-    "63e2-12d3-9e87-8d43":"adeptus-custodes/guardians-of-the-throne",
     "6cb5-45cf-c626-fa86":"chaos-knights/houndpack-lance",
     "6d06-9e26-0d3c-5317":"adeptus-mechanicus/eradication-cohort",
-    "6d62-2c41-fb3f-7d00":"chaos-daemons/lords-of-the-warp",
     "70d9-0c7a-6b46-65fa":"world-eaters/vessels-of-wrath",
-    "731f-1524-da02-945b":"tyranids/subterranean-assault",
-    "7416-b7cc-fdbf-5bf0":"tyranids/warrior-bioform-onslaught",
     "7b06-be3a-9754-1bd4":"orks/runt-swarm",
     "7e16-552d-f3a9-035f":"necrons/the-phaerons-armoury",
     "807c-9732-5465-5ca5":"orks/dread-mob",
     "812b-f056-ec50-2c3c":"chaos-knights/infernal-lance",
     "850e-bee1-4845-820d":"tyranids/crusher-stampede",
     "8d8b-a030-83d5-f4e6":"tyranids/talons-of-the-norn-queen",
-    "8d91-29a0-9690-b603":"adeptus-custodes/emissaries-imperatus",
     "9aba-cb08-cd38-9e01":"thousand-sons/grand-coven",
-    "9ad0-91ee-ae18-b5aa":"chaos-daemons/plague-legion",
     "9db8-cf55-983f-9671":"emperors-children/coterie-of-the-conceited",
-    "a36b-bb22-1a15-2a48":"adeptus-custodes/auric-champions",
-    "a7cf-90fa-4093-6047":"chaos-daemons/daemonic-incursion",
-    "b1d2-7b13-3831-7915":"adeptus-custodes/shadowkeepers",
     "bba-65f6-a4d1-66ae":"tyranids/assimilation-swarm",
     "c2fe-bf23-bf24-aa43":"tyranids/invasion-fleet",
     "c6ca-bde2-8304-c97c":"chaos-space-marines/devotees-of-destruction",
     "ccb7-6823-6a97-7c19":"adeptus-custodes/grav-assault-force",
-    "cd6a-aae4-acca-d3ac":"adeptus-custodes/solar-watch",
-    "cf1b-eb18-c465-27a5":"tyranids/ambush-predators",
-    "d3ee-47e1-4540-dfe5":"adeptus-custodes/null-maiden-vigil",
-    "dbe4-0a6f-4eb5-5f06":"adeptus-custodes/honoured-companions",
     "dec0-c9cb-c265-cae0":"chaos-daemons/scintillating-legion",
     "f67d-6f59-21b8-e1f9":"adeptus-mechanicus/cohort-cybernetica",
-    "f773-f91c-2999-c7e1":"tyranids/vanguard-onslaught",
     "f782-e3f1-c132-fe52":"orks/wreckas",
-    "f82a-5355-0598-8fb8":"adeptus-custodes/aquilan-shield",
     "fca1-ecdf-4e4a-df41":"orks/shoota-boyz"
   },
   config:{
@@ -11928,24 +11905,15 @@ const BS_IDS = {
     "e8ef-836a-a9d1-901d":"Show/Hide Options"
   },
   infoKids:{
-    "1248-8642-b42f-1dca":"Show Tzeentch Daemons",
-    "2973-ea51-7f8d-5403":"Show Unaligned Forces",
-    "41bc-337c-cae2-eb21":"Show Pariah Nexus content",
-    "5700-66f7-a020-7386":"Show Armageddon content",
-    "57cc-822a-1d43-be52":"Show Crucible Characters",
-    "9869-d845-89a6-6273":"Show Killzone Upgrade: Shadowvaults content",
-    "9ed-cbf4-bfe5-90bf":"Show Legends",
-    "aeb4-96de-7401-eaa3":"Show Chaos Knights",
-    "c00c-b9d6-e0f7-4c37":"Show White Dwarf content",
-    "c566-c14f-c589-5375":"Show Tyrannic War content",
-    "c9b3-8039-f1e9-c975":"Show Nachmund Gauntlet content",
-    "d3ff-16f0-dad2-c03c":"Show Slaanesh Daemons",
-    "e08b-2448-5606-fefb":"Show Imperial Agents",
-    "e82c-6f8c-2b97-a287":"Show Imperial Knights",
-    "e916-2cf4-a49d-b8c4":"Show Unaligned Fortifications",
-    "f26b-79db-80e0-3a3b":"Show Titans",
-    "f486-5e38-994c-15ec":"Show Nurgle Daemons",
-    "f5f9-1339-84bb-ae85":"Show Khorne Daemons"
+    "1248-8642-b42f-1dca":"Tzeentch Daemons are visible",
+    "2973-ea51-7f8d-5403":"Unaligned Forces are visible",
+    "57cc-822a-1d43-be52":"Crucible Characters are visible",
+    "9ed-cbf4-bfe5-90bf":"Legends are visible",
+    "e08b-2448-5606-fefb":"Imperial Agents are visible",
+    "e916-2cf4-a49d-b8c4":"Unaligned Fortifications are visible",
+    "f26b-79db-80e0-3a3b":"Titans are visible",
+    "f486-5e38-994c-15ec":"Nurgle Daemons are visible",
+    "f5f9-1339-84bb-ae85":"Khorne Daemons are visible"
   },
   units:{
     "4-megas-and-a-destrier/canis-rex":["55fb-9c91-1a4f-3037|1×84c0-f59d-901a-e94f,1×84c0-f59d-901a-e94f/43a9-66c5-ec02-baa9,1×84c0-f59d-901a-e94f/70b4-8523-6b7c-1b0a,1×84c0-f59d-901a-e94f/f1aa-b2e0-2fa8-4c39,1×a41b-81a0-ca89-75c1,1×a41b-81a0-ca89-75c1/b74a-d992-b5eb-23ff,1×a41b-81a0-ca89-75c1/e8b4-ffab-1b5c-d2a0"],
@@ -11986,22 +11954,6 @@ const BS_IDS = {
     "defilers-and-friends/maulerfiend":["656c-8b78-8e59-0591|1×167f-5eee-fb7b-a9a9,1×9ef8-1cb6-2f19-cc1b,2×9ef8-1cb6-2f19-cc1b/bd33-fe8e-fe90-2bb7"],
     "defilers-and-friends/sorcerer":["2cd1-13f5-d59d-cc7f|1×3469-166f-44f3-51b8,1×76d8-2228-b6cb-2d36,1×f2f1-616b-c202-a071"],
     "defilers-and-friends/tormentors":["4494-dd7d-69f7-306c|1×2a06-5c5b-c129-27d7,1×2a06-5c5b-c129-27d7/e13a-503d-72dc-f4ed,1×2a06-5c5b-c129-27d7/ea86-f483-33bb-182b,1×c1d2-2cf5-b6bd-17fc,1×c6a8-0dbc-ab1b-38b5,1×c6a8-0dbc-ab1b-38b5/ab80-e71b-5a84-2852,1×c6a8-0dbc-ab1b-38b5/b717-8754-263b-3a20,3×d813-7c6b-1dfe-e99a,3×d813-7c6b-1dfe-e99a/8ff6-03ed-5125-9b6d,3×d813-7c6b-1dfe-e99a/ab80-e71b-5a84-2852"],
-    "dread-host/allarus-custodians":["c8a6-a4c5-703e-b717|1×59ef-1bf3-f681-c8ae,2×fab4-d437-6e07-eb33,2×fab4-d437-6e07-eb33/4863-f443-2b45-e18b,2×fab4-d437-6e07-eb33/ab4a-1a4f-5898-70db"],
-    "dread-host/caladius-annihilator-grav-tank":["dbf0-5211-463c-40ec|1×62a1-1fa7-70b7-614d,1×d9ca-c6b0-ba9c-b6c8,1×dca3-638e-52a2-b1b8"],
-    "dread-host/custodian-guard-sodality":["91b3-2e1c-e642-d213|3×01c4-5ae9-0cf0-5fb3,3×01c4-5ae9-0cf0-5fb3/e7d7-e613-0029-4d08,1×59ef-1bf3-f681-c8ae"],
-    "dread-host/custodian-wardens":["9610-b148-8433-93b8|2×4a80-c791-9d9f-30c6,2×4a80-c791-9d9f-30c6/94b3-ef7f-f71f-c86e,1×59ef-1bf3-f681-c8ae"],
-    "dread-host/prosecutor-squad":["3ec3-a4df-fdbf-5507|4×6814-ce42-4b23-72a9,4×6814-ce42-4b23-72a9/3d5c-4127-b923-d579,4×6814-ce42-4b23-72a9/77b6-41ee-7952-e94d"],
-    "dread-host/shield-captain-sentinel-guard-sodality":["b61c-b815-65c0-b1cc|1×5267-88a7-c874-ba99","df80-bbdc-bd0a-3428|3×0697-d230-d5e6-675c,3×0697-d230-d5e6-675c/beb2-89f6-847c-52bf,3×0697-d230-d5e6-675c/dcfe-758c-4a16-1c85,1×59ef-1bf3-f681-c8ae"],
-    "dread-host/trajann-valoris-allarus-custodians":["7d7c-c212-47a3-38e4|1×0574-f558-2957-584f,1×5622-c756-d3e8-85ae,1×b330-bad6-ea21-ecb","c8a6-a4c5-703e-b717|1×59ef-1bf3-f681-c8ae,3×fab4-d437-6e07-eb33,3×fab4-d437-6e07-eb33/4863-f443-2b45-e18b,3×fab4-d437-6e07-eb33/94b3-ef7f-f71f-c86e"],
-    "dread-host/witchseeker-squad":["503b-f7be-eeeb-9e31|5×9fdd-e31a-5f28-85ea,5×9fdd-e31a-5f28-85ea/77b6-41ee-7952-e94d,5×9fdd-e31a-5f28-85ea/f12b-b113-de8a-4f1e"],
-    "emperors-chosen/caladius-annihilator-grav-tank":["dbf0-5211-463c-40ec|1×62a1-1fa7-70b7-614d,1×d9ca-c6b0-ba9c-b6c8,1×dca3-638e-52a2-b1b8"],
-    "emperors-chosen/custodian-guard-sodality":["91b3-2e1c-e642-d213|3×01c4-5ae9-0cf0-5fb3,3×01c4-5ae9-0cf0-5fb3/e7d7-e613-0029-4d08,1×59ef-1bf3-f681-c8ae"],
-    "emperors-chosen/custodian-wardens":["9610-b148-8433-93b8|2×4a80-c791-9d9f-30c6,2×4a80-c791-9d9f-30c6/ab4a-1a4f-5898-70db,1×59ef-1bf3-f681-c8ae"],
-    "emperors-chosen/prosecutor-squad":["3ec3-a4df-fdbf-5507|5×6814-ce42-4b23-72a9,5×6814-ce42-4b23-72a9/3d5c-4127-b923-d579,5×6814-ce42-4b23-72a9/77b6-41ee-7952-e94d"],
-    "emperors-chosen/shield-captain-sentinel-guard-sodality":["b61c-b815-65c0-b1cc|1×5267-88a7-c874-ba99","df80-bbdc-bd0a-3428|3×0697-d230-d5e6-675c,3×0697-d230-d5e6-675c/beb2-89f6-847c-52bf,3×0697-d230-d5e6-675c/dcfe-758c-4a16-1c85,1×59ef-1bf3-f681-c8ae"],
-    "emperors-chosen/trajann-valoris-allarus-custodians":["7d7c-c212-47a3-38e4|1×0574-f558-2957-584f,1×5622-c756-d3e8-85ae,1×b330-bad6-ea21-ecb","c8a6-a4c5-703e-b717|1×59ef-1bf3-f681-c8ae,3×fab4-d437-6e07-eb33,3×fab4-d437-6e07-eb33/4863-f443-2b45-e18b,3×fab4-d437-6e07-eb33/94b3-ef7f-f71f-c86e"],
-    "emperors-chosen/vertus-praetors":["918b-c9ed-7af7-74df|2×5bd5-bca3-6228-ef17,2×5bd5-bca3-6228-ef17/1576-174e-e5d6-82ea,2×5bd5-bca3-6228-ef17/5d80-129-8ba7-4730"],
-    "emperors-chosen/witchseeker-squad":["503b-f7be-eeeb-9e31|5×9fdd-e31a-5f28-85ea,5×9fdd-e31a-5f28-85ea/77b6-41ee-7952-e94d,5×9fdd-e31a-5f28-85ea/f12b-b113-de8a-4f1e"],
     "fellhammer-siege-task-force/chaos-predator-annihilator":["279e-62d4-bff1-141|1×1e2b-bdd2-116e-1f83,1×4bfd-ad0f-5e78-ccf9,1×aaaa-9466-3887-3cdd,1×c627-5d3-1420-c7f1,1×d24a-9b6a-e48b-2fcb,2×d24a-9b6a-e48b-2fcb/7c36-bbb0-278-5c42"],
     "fellhammer-siege-task-force/chaos-predator-destructor":["3dfb-3b2a-94b-2fbe|1×18ee-2abf-8522-1b75,2×18ee-2abf-8522-1b75/5474-b6fb-2b8c-ec67,1×4bfd-ad0f-5e78-ccf9,1×aaaa-9466-3887-3cdd,1×b08d-6108-969a-9a95,1×c627-5d3-1420-c7f1"],
     "fellhammer-siege-task-force/chaos-vindicator":["e687-6d7a-bb28-dcaa|1×4bfd-ad0f-5e78-ccf9,1×7f72-9cd7-e0a6-39fa,1×aaaa-9466-3887-3cdd,1×c627-5d3-1420-c7f1"],
@@ -12041,7 +11993,6 @@ const BS_IDS = {
     "lite-knights/witchseeker-squad":["503b-f7be-eeeb-9e31|4×9fdd-e31a-5f28-85ea,4×9fdd-e31a-5f28-85ea/77b6-41ee-7952-e94d,4×9fdd-e31a-5f28-85ea/f12b-b113-de8a-4f1e"],
     "lite-knights/witchseeker-squad-2":["503b-f7be-eeeb-9e31|5×9fdd-e31a-5f28-85ea,5×9fdd-e31a-5f28-85ea/77b6-41ee-7952-e94d,5×9fdd-e31a-5f28-85ea/f12b-b113-de8a-4f1e"],
     "mucho-mutantes/ahriman-tzaangor-enlightened-with-fatecaster-greatbows":["3bfa-bf00-b5ed-cc81|1×570a-6d55-51ee-9fc7,1×93c8-9c05-8892-b481,1×c70d-46dc-32da-b1a4","8b9f-917f-37c1-99c3|5×414e-b8ff-7132-48c7,5×414e-b8ff-7132-48c7/23a5-d6be-b617-1565,5×414e-b8ff-7132-48c7/8097-77df-1ed5-1e1a,1×6cc8-d237-eec9-d038,1×6cc8-d237-eec9-d038/23a5-d6be-b617-1565,1×6cc8-d237-eec9-d038/8097-77df-1ed5-1e1a"],
-    "mucho-mutantes/chaos-spawn":["60de-4c77-95e1-1337|1×7502-b778-b920-3f68,1×7502-b778-b920-3f68/9c5c-1cac-6b3f-7a01"],
     "mucho-mutantes/daemon-prince-of-tzeentch-with-wings":["66f4-929e-1769-f277|1×2313-45a2-28ff-c81a,1×7205-f4fe-f064-0edf,1×ca9c-de3c-61e1-31"],
     "mucho-mutantes/exalted-sorcerer-on-disc-of-tzeentch-tzaangor-enlightened-with-fatecaster-greatbows":["1724-8c9c-c385-16c6|1×6633-5a38-bd55-b080,1×74f5-4553-6d71-b44c,1×aac1-5b0f-4802-1628,1×c70d-46dc-32da-b1a4","8b9f-917f-37c1-99c3|5×414e-b8ff-7132-48c7,5×414e-b8ff-7132-48c7/23a5-d6be-b617-1565,5×414e-b8ff-7132-48c7/8097-77df-1ed5-1e1a,1×6cc8-d237-eec9-d038,1×6cc8-d237-eec9-d038/23a5-d6be-b617-1565,1×6cc8-d237-eec9-d038/8097-77df-1ed5-1e1a"],
     "mucho-mutantes/magnus-the-red":["91dc-9aad-0505-52a8|1×9916-8701-bbbd-780e,1×a021-c1a0-c35c-f10f,1×b114-2c55-f1b6-6f98,1×d379-7bdd-e3f9-9183"],
@@ -12145,7 +12096,6 @@ const BS_IDS = {
     "the-exiled-legion/skarbrand":["7998-d0a-baa4-e8b3|1×13f1-2794-34e7-4bd6,1×573b-877e-5437-c3be,1×d231-290d-7de8-bc49"],
     "the-exiled-legion/skullmaster-bloodcrushers":["dd30-ba4c-34a4-e788|1×2eac-78bf-beb7-bfea,1×4848-c7ef-a65f-d15c,1×87ae-e092-2e5d-16a6","2f31-9132-b703-5fd8|1×47bc-4cb8-5ff6-e208,2×8876-fc4f-a6a0-5df,2×8876-fc4f-a6a0-5df/4848-c7ef-a65f-d15c,2×8876-fc4f-a6a0-5df/e4f0-79-126a-ac41,1×b87a-5121-1c03-894f,1×b87a-5121-1c03-894f/4848-c7ef-a65f-d15c,1×b87a-5121-1c03-894f/e4f0-79-126a-ac41,1×bc2f-662f-58e7-5fef"],
     "the-exiled-legion/skulltaker-bloodletters":["8872-785a-1efa-7ca1|1×fcdc-51d3-89ab-f5b6","4ecc-6aa5-da28-2c57|1×47bc-4cb8-5ff6-e208,1×65ae-c95a-cd9e-f0b0,1×a30d-a7e8-b7d1-a55c,1×a30d-a7e8-b7d1-a55c/e4f0-79-126a-ac41,1×bc2f-662f-58e7-5fef,9×f20e-ff73-5f0c-9970,9×f20e-ff73-5f0c-9970/e4f0-79-126a-ac41"],
-    "tzeeeeentch/blue-horrors":["b795-b936-ad61-e407|1×b506-5bce-64c6-51b0,1×b506-5bce-64c6-51b0/82df-455-2fe4-57ea,1×b506-5bce-64c6-51b0/8427-8fbe-c12f-a0a4"],
     "tzeeeeentch/daemon-prince-of-chaos-with-wings":["5800-3978-370d-b573|1×347c-42b8-a58c-176c,1×4dda-d9d2-153f-f294,1×9383-3f2f-50cd-1e7a,1×b4ce-a5bf-52e7-884c"],
     "tzeeeeentch/flamers":["5f23-4d6-f2f9-5973|2×9280-14a0-f54-ebfb,2×9280-14a0-f54-ebfb/1c7f-c635-a77f-9204,2×9280-14a0-f54-ebfb/bebc-8637-c456-1c0f,1×9b72-9f8a-9554-43d4,1×9b72-9f8a-9554-43d4/7472-d1a5-5fbe-4052,1×9b72-9f8a-9554-43d4/fec2-85a0-1492-9c0e"],
     "tzeeeeentch/fluxmaster-pink-horrors":["eba5-8a7a-fc5b-d7ec|1×2024-6ff7-2d17-938d,1×8a1b-35-5c24-d81c,1×d6e9-169c-3b2a-ee09","e7b8-aa40-6da7-778e|10×c34d-3170-c314-148e,10×c34d-3170-c314-148e/5afb-65ea-e6fc-f8e8,10×c34d-3170-c314-148e/b99-af3a-9728-26ad"],
@@ -12173,25 +12123,197 @@ const BS_IDS = {
     "woof-woof/war-dog-karnivore":["e96b-ac98-7fd2-a155|1×2a1d-e15f-408e-7660,1×dfe8-cea0-8d16-db95,1×efec-643e-117d-a977"],
     "woof-woof/war-dog-karnivore-panoply-of-the-cursed-knights":["e96b-ac98-7fd2-a155|1×2a1d-e15f-408e-7660,1×b02a-a6e2-3eb4-4872,1×dfe8-cea0-8d16-db95,1×efec-643e-117d-a977,1×fb26-6d89-aa65-fb7e"]
   },
+  datasheets:{
+    "0119-8c04-435e-c782":"chaos-knights/knight-despoiler",
+    "10d8-d702-f556-5d3c":"imperial-knights/knight-destrier",
+    "1267-78f1-7774-859":"chaos-space-marines/cultist-mob",
+    "137c-2add-1a51-ee96":"ultramarines/librarian-in-phobos-armour",
+    "13f7-1a3-eff-7393":"tyranids/the-swarmlord",
+    "1645-5407-92c8-1441":"tyranids/tyrant-guard",
+    "1703-3edd-5eb3-fcef":"thousand-sons/tzaangor-enlightened",
+    "1705-379b-330d-36d4":"tyranids/tyrannofex",
+    "1724-8c9c-c385-16c6":"thousand-sons/exalted-sorcerer-on-disc-of-tzeentch",
+    "183e-f3bb-3ce6-7b55":"emperors-children/flawless-blades",
+    "1b56-682c-ac33-bc5f":"world-eaters/master-of-executions",
+    "1de2-b57b-aa0a-1f0d":"tyranids/ripper-swarms",
+    "1de9-b138-28a1-9c4b":"orks/flash-gitz",
+    "1e27-a6de-3840-a050":"imperial-knights/knight-crusader",
+    "1f1e-2989-4762-cf88":"adeptus-mechanicus/belisarius-cawl",
+    "2311-fa63-364-22a3":"chaos-space-marines/obliterators",
+    "259b-a8e3-928f-1d0c":"necrons/canoptek-scarab-swarms",
+    "279e-62d4-bff1-141":"chaos-space-marines/chaos-predator-annihilator",
+    "2ab7-ab71-0af4-5d39":"orks/wazdakka-gutsmek",
+    "2c2d-a2f9-61a8-a6c6":"tyranids/maleceptor",
+    "2cd1-13f5-d59d-cc7f":"emperors-children/sorcerer",
+    "2d6e-aa3b-c28c-5ef0":"orks/deffkoptas",
+    "2de0-5897-f724-a592":"chaos-daemons/beasts-of-nurgle",
+    "2efc-c4b3-2ecc-5a37":"orks/warboss",
+    "2f31-9132-b703-5fd8":"chaos-daemons/bloodcrushers",
+    "31f9-9730-853c-6f13":"tyranids/tyranid-prime-with-lash-whip",
+    "3449-7dac-6ac8-5d51":"world-eaters/kharn-the-betrayer",
+    "3600-9f92-933-bf54":"chaos-daemons/lord-of-change",
+    "379b-d6a0-cd05-ef89":"necrons/royal-warden",
+    "37a7-d156-1e4c-8fe1":"imperial-knights/cerastus-knight-atrapos",
+    "390e-706b-a059-378b":"ultramarines/deathwatch-terminator-squad",
+    "3b2-8c11-616a-1005":"orks/mek",
+    "3bfa-bf00-b5ed-cc81":"thousand-sons/ahriman",
+    "3dfb-3b2a-94b-2fbe":"chaos-space-marines/chaos-predator-destructor",
+    "3e96-8098-3401-77af":"tyranids/hive-tyrant",
+    "3ec3-a4df-fdbf-5507":"adeptus-custodes/prosecutor-squad",
+    "3f2c-85ec-d83c-4a2f":"tyranids/biovores",
+    "3fcc-b6a1-399b-1a29":"adeptus-mechanicus/skorpius-disintegrator",
+    "40c5-9ebd-6d42-2855":"world-eaters/daemon-prince-of-khorne",
+    "4175-82c6-8e96-bef8":"chaos-knights/chaos-cerastus-knight-lancer",
+    "440-a22a-eac1-b107":"chaos-space-marines/warpsmith",
+    "4494-dd7d-69f7-306c":"emperors-children/tormentors",
+    "45b-19f6-38d2-703f":"chaos-space-marines/forgefiend",
+    "45f6-8429-a1d9-2a51":"world-eaters/chaos-terminators",
+    "46e1-2159-7c26-9105":"chaos-space-marines/lord-discordant-on-helstalker",
+    "494b-11ce-5af-5b50":"orks/warboss-in-mega-armour",
+    "497d-e065-f5a5-5e80":"chaos-daemons/daemon-prince-of-chaos",
+    "4988-d93e-5034-2b3c":"adeptus-custodes/contemptor-galatus-dreadnought",
+    "49fd-a80d-8cc0-c76b":"necrons/imotekh-the-stormlord",
+    "4ad2-bd20-6dfe-776b":"world-eaters/bloodthirster",
+    "4aea-b1cc-6c69-1c44":"ultramarines/roboute-guilliman",
+    "4ea0-6b70-c17c-bc00":"orks/ghazghkull-thraka",
+    "4ecc-6aa5-da28-2c57":"chaos-daemons/bloodletters",
+    "503b-f7be-eeeb-9e31":"adeptus-custodes/witchseeker-squad",
+    "5451-67b5-a66c-71d2":"necrons/tesseract-vault",
+    "55cf-8d86-affd-bc9b":"imperial-knights/navigator",
+    "55fb-9c91-1a4f-3037":"imperial-knights/canis-rex",
+    "5720-2873-8c2c-edc3":"tyranids/norn-emissary",
+    "5800-3978-370d-b573":"chaos-daemons/daemon-prince-of-chaos-with-wings",
+    "5d3d-e13b-8b76-dad3":"thousand-sons/rubric-marines",
+    "5f23-4d6-f2f9-5973":"chaos-daemons/flamers",
+    "642f-9302-4fdc-ab68":"tyranids/neurolictor",
+    "656c-8b78-8e59-0591":"emperors-children/maulerfiend",
+    "66f4-929e-1769-f277":"thousand-sons/daemon-prince-of-tzeentch-with-wings",
+    "6a9b-8e2f-edac-fa2d":"tyranids/norn-assimilator",
+    "6df5-f246-6bd-55b8":"chaos-daemons/kairos-fateweaver",
+    "6f81-4538-a414-251e":"world-eaters/jakhals",
+    "7044-bf1-f949-c32d":"ultramarines/bladeguard-veteran-squad",
+    "7067-34f4-5272-e05f":"orks/meganobz",
+    "7135-8430-eb02-ded4":"adeptus-mechanicus/thulia-ghuld",
+    "7173-1bd9-b60b-6555":"tyranids/the-red-terror",
+    "71c9-b10b-b55f-483e":"world-eaters/slaughterbound",
+    "71d9-9dc2-2b9a-6db3":"world-eaters/skarbrand",
+    "7324-e591-939b-b675":"ultramarines/heavy-intercessor-squad",
+    "7422-7fbf-8694-364c":"necrons/the-silent-king",
+    "753d-4e02-eda3-4809":"chaos-knights/war-dog-brigand",
+    "78a7-cf35-aa8d-c420":"orks/big-mek-dakkarig",
+    "7998-d0a-baa4-e8b3":"chaos-daemons/skarbrand",
+    "7b4c-dfe0-6a0a-304a":"emperors-children/lord-exultant",
+    "7c45-2aab-7526-febe":"necrons/canoptek-reanimator",
+    "7d7c-c212-47a3-38e4":"adeptus-custodes/trajann-valoris",
+    "7efb-de37-79c4-cccb":"adeptus-mechanicus/ironstrider-ballistarii",
+    "80c2-aecc-5b59-7345":"tyranids/spore-mines-biovore",
+    "80c4-14b2-d02d-d289":"orks/nazdreg",
+    "81e1-b212-69c1-308f":"world-eaters/forgefiend",
+    "8436-cec1-e65a-d1a7":"chaos-daemons/karanak",
+    "8441-8356-5e7c-69ee":"imperial-knights/knight-paladin",
+    "852a-ba39-e93f-6b62":"necrons/technomancer",
+    "8872-785a-1efa-7ca1":"chaos-daemons/skulltaker",
+    "8ae1-aa47-e1d1-1b31":"emperors-children/chaos-rhino",
+    "8b1d-9029-f9e1-42d9":"chaos-knights/chaos-cerastus-knight-atrapos",
+    "8b9f-917f-37c1-99c3":"thousand-sons/tzaangor-enlightened-with-fatecaster-greatbows",
+    "8c36-c946-2e0f-f648":"orks/killa-kans",
+    "8ccc-3f27-7e4e-da81":"tyranids/neurogaunts",
+    "8df0-fc3c-8ced-ffce":"chaos-knights/war-dog-executioner",
+    "91dc-9aad-0505-52a8":"thousand-sons/magnus-the-red",
+    "9435-1f44-7e5b-d510":"world-eaters/eightbound",
+    "946c-d784-c8be-f21":"chaos-space-marines/havocs",
+    "95e9-6da3-5e75-2566":"orks/big-mek-in-mega-armour",
+    "9932-3d2b-1e47-d53b":"world-eaters/exalted-eightbound",
+    "9bd8-ac8c-2d3b-79f6":"tyranids/von-ryans-leapers",
+    "9ee-e289-bc6c-d943":"imperial-knights/cerastus-knight-lancer",
+    "9efd-ec72-353f-4b23":"imperial-knights/knight-errant",
+    "a018-ca33-afd0-be83":"chaos-daemons/bloodthirster",
+    "a136-76f7-34d1-8035":"ultramarines/marneus-calgar",
+    "a7ae-e495-683b-7c90":"ultramarines/reiver-squad",
+    "a8b7-351-d911-a4d6":"orks/beastboss-on-squigosaur",
+    "ac75-c011-9a10-2c4a":"chaos-daemons/the-changeling",
+    "b1cf-c5-5121-92a4":"thousand-sons/scarab-occult-terminators",
+    "b399-9b66-e550-8050":"world-eaters/goremongers",
+    "b42b-ea0-38f1-6300":"orks/mozrog-skragbad",
+    "b541-3292-a5cc-dbeb":"emperors-children/defiler",
+    "b657-1743-6e3a-0838":"world-eaters/flesh-hounds",
+    "b6ac-f091-a018-dab2":"tyranids/psychophage",
+    "b793-b77e-9e49-d397":"ultramarines/wardens-of-ultramar",
+    "bd6c-8683-8bc4-962d":"adeptus-mechanicus/kastelan-robots",
+    "bfb1-7512-e1a3-9fa2":"ultramarines/impulsor",
+    "c0a2-eb65-6d34-5bc6":"chaos-knights/knight-ruinator",
+    "c0e0-4d86-96d2-ec86":"adeptus-mechanicus/tech-priest-enginseer",
+    "c219-a708-f5b0-f0e7":"necrons/flayed-ones",
+    "c251-bd54-441-4799":"thousand-sons/tzaangor-shaman",
+    "c3a6-8fab-45f0-2d45":"thousand-sons/exalted-sorcerer",
+    "c570-c6ba-c9dc-5a44":"ultramarines/eradicator-squad-with-melta-rifles",
+    "c609-c87e-f9dd-5006":"imperial-knights/knight-warden",
+    "c6d1-e73b-9d26-5d8b":"thousand-sons/sorcerer-in-terminator-armour",
+    "c6db-9736-4d53-3ef6":"necrons/ophydian-destroyers",
+    "c8a6-a4c5-703e-b717":"adeptus-custodes/allarus-custodians",
+    "cae9-5277-87f4-54b8":"necrons/canoptek-spyders",
+    "caf1-8818-9e65-7154":"chaos-daemons/the-blue-scribes",
+    "ccae-b5f1-8787-4c7d":"chaos-daemons/bloodmaster",
+    "ce45-db08-3795-18a9":"orks/zodgrod-wortsnagga",
+    "d1cc-e17a-f1a1-4349":"chaos-daemons/rendmaster-on-blood-throne",
+    "d2b8-454a-d061-b592":"chaos-space-marines/dark-apostle",
+    "d2c6-bd0b-3205-3319":"tyranids/pyrovores",
+    "d37d-7e8f-341b-c67c":"chaos-space-marines/maulerfiend",
+    "d59d-ef1-9ef8-4f44":"adeptus-mechanicus/cybernetica-datasmith",
+    "da34-7071-8658-a453":"chaos-space-marines/master-of-executions",
+    "dadc-d370-ef10-853c":"orks/tankbustas",
+    "db3b-02cd-87a2-3b52":"adeptus-custodes/contemptor-achillus-dreadnought",
+    "dbf0-5211-463c-40ec":"adeptus-custodes/caladius-annihilator-grav-tank",
+    "dcc0-b70c-9779-e6c9":"chaos-space-marines/vashtorr-the-arkifane",
+    "dd30-ba4c-34a4-e788":"chaos-daemons/skullmaster",
+    "de59-f65c-181a-8509":"adeptus-mechanicus/skitarii-rangers",
+    "de8f-24f9-c543-92b7":"orks/gretchin",
+    "e1b1-146f-6f77-3a15":"chaos-daemons/tzeentch-soul-grinder",
+    "e390-b58b-db9-816":"emperors-children/lucius-the-eternal",
+    "e403-3a9-279e-41b7":"chaos-knights/nurglings",
+    "e452-08be-33e6-3864":"emperors-children/daemon-prince-of-slaanesh-with-wings",
+    "e456-0afc-9b42-226c":"emperors-children/infractors",
+    "e687-6d7a-bb28-dcaa":"chaos-space-marines/chaos-vindicator",
+    "e7b8-aa40-6da7-778e":"chaos-daemons/pink-horrors",
+    "e7d8-1c73-7d03-8b62":"adeptus-custodes/telemon-heavy-dreadnought",
+    "e849-ce40-ee43-7623":"world-eaters/chaos-rhino",
+    "e96b-ac98-7fd2-a155":"chaos-knights/war-dog-karnivore",
+    "ea05-4db7-9ee6-7a87":"adeptus-mechanicus/onager-dunecrawler",
+    "eba5-8a7a-fc5b-d7ec":"chaos-daemons/fluxmaster",
+    "ec72-f024-4283-0558":"world-eaters/lord-on-juggernaut",
+    "f12b-ca2a-9c87-79bb":"imperial-knights/knight-defender",
+    "f158-2979-c38b-65b5":"thousand-sons/defiler",
+    "f15b-9f9c-9bf0-8160":"tyranids/hormagaunts",
+    "f401-c74a-cca8-5de3":"orks/runtherd",
+    "f4b8-1179-de57-4d69":"world-eaters/angron",
+    "f5b9-50c8-5c60-d8ea":"thousand-sons/tzaangors",
+    "f666-1f5d-0c20-06c1":"chaos-space-marines/nemesis-claw",
+    "f81-b23c-e183-39d7":"necrons/immortals",
+    "f909-00c7-8ba4-018a":"world-eaters/khorne-berzerkers",
+    "fd31-64a2-b20f-f0bc":"chaos-daemons/flesh-hounds",
+    "fe4b-b3a4-69b7-3088":"thousand-sons/sekhetar-robots"
+  },
   names:{
     "005c-b2d1-4432-415a":"Ruinspear rocket pod",
     "0119-8c04-435e-c782":"Knight Despoiler",
     "0157-e958-1a91-3024":"Ancient Gadriel",
-    "01c4-5ae9-0cf0-5fb3":"Custodian Guard",
     "02c9-ea19-b105-af58":"Combi-bolter",
     "0567-0f45-90e8-d3f4":"Flawless Blade",
     "0574-f558-2957-584f":"Warlord",
     "0580-79ca-da98-77c3":"Warlord",
     "0620-25eb-4da2-5dae":"Jakhal",
     "062f-464f-9cfe-5dce":"Close combat weapon",
-    "0697-d230-d5e6-675c":"Sentinel Guard",
     "07b7-836e-524b-7227":"Gork's Klaw",
+    "081d-bc07-5d4e-ab22":"Priority Assets",
     "0955-1e48-ac34-156f":"Moonchewa",
+    "0985-28ae-cf24-2fba":"Butchers of Khorne",
+    "09b2-b286-7608-d613":"Brute Bosses",
     "0b63-2988-ec78-7913":"Daemonbreath spear",
     "0bb3-01f1-8be5-f285":"Ceramite Fists",
     "0cb2-1f91-0fc0-c69e":"Scalding Roar",
     "0d87-7d7c-2a4a-7a09":"Excruciator cannon",
     "0dc4-725f-e51b-77f7":"Heavy warpflamer",
+    "0dd1-86f6-d2a0-3aba":"Cavalcade of Chaos",
     "109a-db29-c4a5-f826":"Thump Gun",
     "10d8-d702-f556-5d3c":"Knight Destrier",
     "10f6-ffca-ae38-250e":"Paired accursed weapons",
@@ -12201,6 +12323,7 @@ const BS_IDS = {
     "116c-7dd8-92e5-f085":"Mark of the Soul Forges",
     "1187-f3db-ea97-bada":"Reaper chainsword",
     "1189-dcd8-e3ed-7837":"Spiculus bolt launcher",
+    "1248-8642-b42f-1dca":"Tzeentch Daemons are visible",
     "1267-78f1-7774-859":"Cultist Mob",
     "131b-ff57-84bb-e87a":"Monstrous Nemesis",
     "137c-2add-1a51-ee96":"Librarian in Phobos Armour",
@@ -12209,7 +12332,8 @@ const BS_IDS = {
     "13f7-1a3-eff-7393":"The Swarmlord",
     "140d-7163-8a11-81c5":"Grot Blasta",
     "14a5-4b2-415a-c1d":"Plasma pistol",
-    "1576-174e-e5d6-82ea":"Salvo launcher",
+    "1558-660f-466b-a087":"Khorne Daemonkin",
+    "163f-63bd-f2e1-5e7":"Obeisance Phalanx",
     "1645-5407-92c8-1441":"Tyrant Guard",
     "1673-a61f-d5a2-b17c":"Bladed horn",
     "167f-5eee-fb7b-a9a9":"Maulerfiend fists",
@@ -12230,14 +12354,17 @@ const BS_IDS = {
     "1a98-844f-f54b-f76c":"Baleful Devolution",
     "1aed-a297-70d2-78b4":"Cognis heavy stubber",
     "1b56-682c-ac33-bc5f":"Master of Executions",
+    "1bb5-5aba-6c8f-7afc":"Might of the Moritoi",
     "1bfa-d221-8708-c144":"Close combat weapon",
     "1c66-4903-10ca-2a27":"Ironhail Heavy Stubber",
+    "1c7e-56bc-3196-b5cd":"Emperor's Chosen",
     "1c7f-c635-a77f-9204":"Flamer mouths",
     "1d0f-10bb-2fcb-2277":"Scything talons",
     "1d21-9b32-c427-398e":"Kustom Mega-slugga",
     "1d6b-5a43-7bc9-18af":"Bellow of endless fury",
     "1d74-d498-28a1-244e":"Infernal Flames",
     "1db9-89c3-c7cb-2041":"Obliterator",
+    "1dc3-0d2d-7cb8-b84b":"Terminator Storm Force",
     "1de2-b57b-aa0a-1f0d":"Ripper Swarms",
     "1de9-b138-28a1-9c4b":"Flash Gitz",
     "1e16-0387-abcf-0e9a":"Phoenix power spear",
@@ -12254,6 +12381,7 @@ const BS_IDS = {
     "20cf-5b7c-71d2-451d":"Kastelan Robot",
     "217a-9e22-3821-27e9":"Chainblades",
     "217d-4d10-bad0-1d6e":"Supa-snazz Dakka",
+    "21b4-7a36-fec6-b7ea":"Blood Legion",
     "22b3-9c84-0982-8627":"Skitarii Ranger w/ transuranic arquebus",
     "2307-58f3-bfa0-52a1":"Chainblades",
     "2311-fa63-364-22a3":"Obliterators",
@@ -12276,6 +12404,7 @@ const BS_IDS = {
     "27b4-53af-ee1b-688a":"Fleshmetal Fusion",
     "288c-1cbc-8340-9c0a":"Titanic feet",
     "296c-f462-677f-0c95":"Brass Collar of Bloody Vengeance",
+    "2973-ea51-7f8d-5403":"Unaligned Forces are visible",
     "2a06-5c5b-c129-27d7":"Obsessionist",
     "2a1d-e15f-408e-7660":"Slaughterclaw",
     "2ab7-ab71-0af4-5d39":"Wazdakka Gutsmek",
@@ -12307,6 +12436,7 @@ const BS_IDS = {
     "2f31-9132-b703-5fd8":"Bloodcrushers",
     "2f57-9703-18b2-6390":"Cybinfernal Font",
     "2f59-b41c-83be-4efe":"Arc scourge",
+    "2f69-9148-45b4-86a8":"Force Disposition",
     "2fec-7b95-a5df-f688":"Gutrippa",
     "307d-0ce0-fcf0-9100":"Dishonoured w/ paired manglers",
     "31f9-9730-853c-6f13":"Tyranid Prime with Lash Whip",
@@ -12316,11 +12446,15 @@ const BS_IDS = {
     "3449-7dac-6ac8-5d51":"Khârn the Betrayer",
     "3469-166f-44f3-51b8":"Bolt pistol",
     "347c-42b8-a58c-176c":"Infernal cannon",
+    "3490-ec82-70b3-c5cf":"Berzerker Warband",
     "34b5-f449-28f6-b365":"Heavy reaper autocannon",
+    "357d-d51b-f001-a33d":"Warptide",
+    "35d6-ec47-0b46-bce5":"Deed",
     "35da-aa05-fc7f-9b1d":"Mysterious Guardian",
     "3600-9f92-933-bf54":"Lord of Change",
     "3667-92c8-a7e5-1ccd":"Vashtorr's hammer",
     "3697-d01c-ebcd-835d":"Tankbusta w/ Two Busta Rokkit Launchas",
+    "36a1-1871-451c-0405":"Quality",
     "36a9-7135-9deb-5f95":"Warpclaw",
     "36dc-bea0-75e7-f76a":"Heavy Bolt Rifle",
     "379b-d6a0-cd05-ef89":"Royal Warden",
@@ -12335,7 +12469,9 @@ const BS_IDS = {
     "3a22-1796-8a64-6d3b":"Goremonger w/ chainblade",
     "3a9a-05a5-41e6-7e70":"Ceramite Fists",
     "3add-49b6-5cd3-586f":"Bolt pistol",
+    "3b0d-dccf-8661-be1c":"Detachment",
     "3b2-8c11-616a-1005":"Mek",
+    "3b81-de3e-f72c-b208":"Reconnaissance",
     "3b8f-1cb7-3c6e-4455":"Heavy Bolt Pistol",
     "3bee-8c85-68f7-e54b":"Warlord",
     "3bfa-bf00-b5ed-cc81":"Ahriman",
@@ -12396,13 +12532,14 @@ const BS_IDS = {
     "4988-d93e-5034-2b3c":"Contemptor-Galatus Dreadnought",
     "49fd-a80d-8cc0-c76b":"Imotekh the Stormlord",
     "49fe-eee5-a977-311":"Staff of light",
-    "4a80-c791-9d9f-30c6":"Custodian Warden",
     "4aa5-24c5-89bc-7023":"Scarab Occult Sorcerer",
     "4aaa-f353-5fa5-fd92":"Smite",
     "4ad2-bd20-6dfe-776b":"Bloodthirster",
     "4aea-b1cc-6c69-1c44":"Roboute Guilliman",
+    "4b17-a73a-7a0a-a265":"Bully Boyz",
     "4b2a-4860-aed5-56b6":"Forgefiend claws",
     "4b4d-ba83-4eba-ba61":"Veteran Sergeant Metaurus",
+    "4b8b-16b7-091d-7b6f":"Ritual of Regeneration",
     "4b96-d104-c37f-f697":"Massive scything talons",
     "4ba8-dbf3-05f9-f868":"Sekhetar Robot w/ pyreflux meltagun",
     "4bfd-ad0f-5e78-ccf9":"Havoc launcher",
@@ -12411,6 +12548,7 @@ const BS_IDS = {
     "4dcd-5d7f-65c2-245b":"Squigosaur's jaws",
     "4dda-d9d2-153f-f294":"Hellforged weapons",
     "4dec-6404-8188-646a":"Reanimator's claws",
+    "4e8e-50db-0d32-423c":"Freeblade Company",
     "4ea0-6b70-c17c-bc00":"Ghazghkull Thraka",
     "4eac-1303-a0d6-2827":"Legionary w/ paired accursed weapons",
     "4ecc-6aa5-da28-2c57":"Bloodletters",
@@ -12423,18 +12561,21 @@ const BS_IDS = {
     "5069-49f-6f54-5039":"Reivers",
     "50f3-6a18-bc71-2a59":"Toxinjecter harpoon",
     "5103-4dd1-a06a-fff":"Autopistol",
-    "5267-88a7-c874-ba99":"Paragon Blade & Praesidium Shield",
+    "5218-339c-eb34-9ac0":"Detachment",
     "5390-4445-c0f4-654b":"Legionary w/ voice eater",
     "5447-603b-27a0-7240":"Psyko-gatler",
     "5451-67b5-a66c-71d2":"Tesseract Vault",
     "545a-eead-e216-5939":"Cerastus shock lance",
     "5474-b6fb-2b8c-ec67":"Heavy bolter",
+    "549e-86b2-b786-c802":"Assault Brethren",
     "54ca-fec8-f0c6-2c77":"Ectoplasma cannon and claws",
     "5514-3810-cf3e-3b23":"Memento Moritoi",
     "5541-daf-9f4a-ce3d":"Bolt pistol",
+    "5558-f47e-9f45-3fca":"Blessings of Khorne Reference",
     "55cf-8d86-affd-bc9b":"Navigator",
     "55fb-9c91-1a4f-3037":"Canis Rex",
     "5622-c756-d3e8-85ae":"Watcher's Axe",
+    "564e-fbc6-5266-3ea4":"Battle Size",
     "56f9-bb79-7be0-dbf2":"Psychoclastic torrent",
     "570a-6d55-51ee-9fc7":"Transmogrifying Blast",
     "570d-1bd7-4179-ad0e":"Sharp quills",
@@ -12442,31 +12583,34 @@ const BS_IDS = {
     "573b-877e-5437-c3be":"Bellow of endless fury",
     "5762-3c1f-658e-368":"Melta tendril",
     "579e-7f68-433b-7072":"Staff of the Destroyer",
+    "57cc-822a-1d43-be52":"Crucible Characters are visible",
     "5800-3978-370d-b573":"Daemon Prince of Chaos with wings",
     "58f8-dd4e-bb8f-f357":"Cerastus shock lance",
     "59a4-4504-cb52-93b1":"Monstrous scything talons",
     "59ef-1bf3-f681-c8ae":"Vexilla",
     "5a2-c6a5-9b4b-605f":"Chainfist",
+    "5a84-ea91-b707-1656":"Detachment",
     "5afb-65ea-e6fc-f8e8":"Pink claws",
     "5b35-b4f7-dffe-e4bb":"Gore-drenched fangs",
     "5b76-3e1c-8801-1e4b":"Archslaughterer",
     "5b9-7d59-48fd-b485":"Tzaangor w/ Tzaangor blades",
-    "5bd5-bca3-6228-ef17":"Vertus Praetor",
+    "5be7-3aa8-5d64-cbaf":"Warpmeld Pact",
     "5be8-d319-e2a9-8409":"Twin cognis autocannon",
     "5c15-6ac1-0115-9df8":"Inescapable Eye",
     "5cd1-cb47-fd8f-5704":"Scavenged Shivs",
     "5d06-5a71-fde7-a641":"Force weapon",
+    "5d30-981f-43b8-81be":"Hunting Warpack",
     "5d3d-e13b-8b76-dad3":"Rubric Marines",
-    "5d80-129-8ba7-4730":"Interceptor lance",
     "5e02-c4ce-b7e6-d59":"Stinger salvoes",
     "5e8b-2f7f-6ef5-42e3":"Alpha combat weapon",
+    "5eb6-4ed2-6aca-c7f1":"Deathwatch Support",
     "5f0c-f31c-26ba-4f2a":"Armoured limbs",
     "5f1f-f3bb-d6dd-6714":"Heavy weapon",
     "5f23-4d6-f2f9-5973":"Flamers",
+    "5f38-038e-a1e9-a457":"Cult of the Arkifane",
     "5f80-3d00-6e4d-cfaf":"Heavy Intercessor Sergeant",
     "6084-9fb5-76d2-8487":"Beastchoppa",
     "60c9-9f30-7dc8-2b63":"Malefic Curse",
-    "60de-4c77-95e1-1337":"Chaos Spawn",
     "60e7-ac95-974c-fd76":"Piercing claws and talons",
     "6105-a18c-fcd1-a9da":"Axe of dismemberment",
     "6155-c404-a228-cb72":"Bolt Rifle",
@@ -12480,6 +12624,7 @@ const BS_IDS = {
     "642f-9302-4fdc-ab68":"Neurolictor",
     "6445-6811-f628-9750":"Adrathic Desolator",
     "646c-5f7f-cd1c-d5c9":"Questoris heavy stubber",
+    "6470-c44a-45f4-3313":"Detachment",
     "6483-eb5-46a4-ff63":"Galvanic rifle",
     "649f-d2b6-c43b-f9be":"Crushing fists",
     "656c-8b78-8e59-0591":"Maulerfiend",
@@ -12507,8 +12652,10 @@ const BS_IDS = {
     "6ab9-df1b-b1fb-8d20":"Duelling sabre",
     "6bdb-2665-95ec-fcde":"Phosphor blaster",
     "6c87-24f8-cd1c-c3c8":"Immortal",
+    "6cb5-45cf-c626-fa86":"Houndpack Lance",
     "6cc8-d237-eec9-d038":"Aviarch",
     "6cd8-62e0-c6e4-74b3":"Visionary",
+    "6d06-9e26-0d3c-5317":"Eradication Cohort",
     "6d28-ca9d-79a5-063a":"Disciple of Khorne",
     "6d7d-2763-378d-54de":"Infernal Gateway",
     "6dc0-a9d5-a111-daf2":"Power Weapon",
@@ -12522,6 +12669,7 @@ const BS_IDS = {
     "7044-bf1-f949-c32d":"Bladeguard Veteran Squad",
     "7067-34f4-5272-e05f":"Meganobz",
     "70b4-8523-6b7c-1b0a":"Freedom's Hand",
+    "70d9-0c7a-6b46-65fa":"Vessels of Wrath",
     "7135-8430-eb02-ded4":"Thulia Ghuld",
     "7142-4c07-8072-8474":"Big Shoota",
     "7173-1bd9-b60b-6555":"The Red Terror",
@@ -12541,12 +12689,12 @@ const BS_IDS = {
     "731f-2f2-7ca0-23ed":"Meganob w/ Twin Killsaw",
     "7324-e591-939b-b675":"Heavy Intercessor Squad",
     "7361-7d8a-dbfc-b6e8":"Prosperine khopesh",
+    "73c2-d0ed-3c7e-7e17":"Detachment",
     "73e9-498e-2d97-e18":"Atrapos lascutter",
     "7422-7fbf-8694-364c":"The Silent King",
     "7472-d1a5-5fbe-4052":"Flickering Flames",
     "74ce-a593-af24-5ef7":"Aemelia Minervas",
     "74f5-4553-6d71-b44c":"Force weapon",
-    "7502-b778-b920-3f68":"Chaos Spawn",
     "753d-4e02-eda3-4809":"War Dog Brigand",
     "7546-5742-581c-9e8b":"Graviton singularity cannon",
     "75ce-5ce7-0a6e-a876":"Blade of Endless Bloodshed",
@@ -12567,7 +12715,9 @@ const BS_IDS = {
     "7945-a359-64b8-4bda":"Gore Hound",
     "7998-d0a-baa4-e8b3":"Skarbrand",
     "7a17-4fb0-c0f5-e22":"Bone Sabres",
+    "7a3e-cedf-9f08-fcac":"Martial Ka'tah Reference",
     "7acc-f148-1490-419d":"Monomolecular Combat Knife",
+    "7b06-be3a-9754-1bd4":"Runt Swarm",
     "7b41-35aa-3265-14d7":"Augury Uplink",
     "7b4c-dfe0-6a0a-304a":"Lord Exultant",
     "7b4e-03d3-6b3f-6c48":"Divining spear",
@@ -12576,7 +12726,9 @@ const BS_IDS = {
     "7d0f-67d3-25b-f6fe":"Kaptin",
     "7d49-39ac-d17e-63bf":"Rokkit Launcha",
     "7d7c-c212-47a3-38e4":"Trajann Valoris",
+    "7da4-f0a6-65ec-da48":"Purge the Foe",
     "7dfc-efc5-a31c-a724":"Da Grabzappa",
+    "7e16-552d-f3a9-035f":"The Phaeron's Armoury",
     "7e20-6261-2ed0-b1f":"Ophydian Destroyer",
     "7e50-4dc-fae1-c2d4":"Laspistol",
     "7e60-1733-57d1-71f3":"Eightbound",
@@ -12587,36 +12739,41 @@ const BS_IDS = {
     "7f70-709e-68c5-64be":"Attendant's hellblades",
     "7f72-9cd7-e0a6-39fa":"Demolisher cannon",
     "806e-b30b-3bcd-71c3":"Infernal Puppeteer",
+    "807c-9732-5465-5ca5":"Dread Mob",
     "8097-77df-1ed5-1e1a":"Fatecaster greatbow",
     "80c2-aecc-5b59-7345":"Spore Mines (Biovore)",
     "80c4-14b2-d02d-d289":"Nazdreg",
     "811f-e844-83ab-78a4":"Rokkit Pistol",
     "8124-9c22-8028-433c":"Psychic overload",
+    "812b-f056-ec50-2c3c":"Infernal Lance",
     "819a-63a5-f90c-7794":"Great axe of Khorne",
     "81b-e6a8-24bb-1f63":"Flayer claws",
     "81d1-50cc-2825-7475":"Chainblade",
     "81e1-b212-69c1-308f":"Forgefiend",
     "81fb-325e-49fd-9a6f":"Servo arm",
     "82ba-6095-1f1f-202d":"Close combat weapon",
+    "82cb-ba1-1aae-3b1d":"Detachment",
     "82cc-4b0b-8e55-bf48":"Tellyport Blasta",
-    "82df-455-2fe4-57ea":"Blue claws",
+    "82f1-b597-7b06-8ba2":"Detachment",
     "8309-f4fd-e530-94ec":"Force-orb cane",
     "8331-d762-2987-76a":"Cultist w/ autopistol and brutal assault weapon",
     "836c-fa5c-db9d-7566":"Storm Bolters",
     "83a1-feb8-d495-aa28":"Heavy Bolt Pistol",
-    "8427-8fbe-c12f-a0a4":"Coruscating Blue flames",
     "8436-cec1-e65a-d1a7":"Karanak",
     "8440-a7a8-b859-2ac3":"Bolt of Change",
     "8441-8356-5e7c-69ee":"Knight Paladin",
     "8484-4b54-f9e6-844b":"Hellfire breath",
     "8488-2efe-825f-a403":"Neurogaunt Nodebeast",
     "84c0-f59d-901a-e94f":"Canis Rex",
+    "84c8-b821-877d-72e6":"Detachment",
+    "850e-bee1-4845-820d":"Crusher Stampede",
     "8519-75f2-2df8-8610":"Neo-volkite Pistol",
     "852a-ba39-e93f-6b62":"Technomancer",
     "8555-148a-0e35-4749":"Adrathic Desolator, 1 Fist and 1 Projectors",
     "86c9-46db-4de-4a5d":"Thermal cannon",
     "8719-8732-d0be-c527":"Exalted Eightbound",
     "87ae-e092-2e5d-16a6":"Brazenmaw",
+    "87f0-0a14-9b6b-f367":"Rituals reference",
     "882-910a-c7c4-13b2":"Transuranic arquebus",
     "8872-785a-1efa-7ca1":"Skulltaker",
     "8876-fc4f-a6a0-5df":"Bloodcrusher",
@@ -12640,6 +12797,7 @@ const BS_IDS = {
     "8d0b-296c-5515-4267":"Slaughterthirst (Aura)",
     "8d6d-60ec-5730-767c":"Rending claw",
     "8d7-b5ed-f870-e86e":"Plasma Cannon",
+    "8d8b-a030-83d5-f4e6":"Talons of the Norn Queen",
     "8dc7-bea2-997b-a1c9":"Dual Caestus Fists",
     "8df0-fc3c-8ced-ffce":"War Dog Executioner",
     "8e0b-d72a-535a-996b":"Hormagaunts",
@@ -12655,8 +12813,6 @@ const BS_IDS = {
     "9147-8824-3c93-86ed":"Inferno combi-bolter",
     "914d-7966-28d3-85fd":"Jericho-class conversion resonator",
     "917e-24b-cc26-7a90":"Staff of Stars",
-    "918b-c9ed-7af7-74df":"Vertus Praetors",
-    "91b3-2e1c-e642-d213":"Custodian Guard Sodality",
     "91dc-9aad-0505-52a8":"Magnus the Red",
     "9280-14a0-f54-ebfb":"Flamer",
     "9383-3f2f-50cd-1e7a":"Tzeentch",
@@ -12666,9 +12822,9 @@ const BS_IDS = {
     "9435-1f44-7e5b-d510":"Eightbound",
     "946c-d784-c8be-f21":"Havocs",
     "94b3-ef7f-f71f-c86e":"Castellan Axe",
+    "9508-a2b1-713f-cf7b":"Code Chivalric",
     "952c-7df4-87e1-6303":"Accursed crozius",
     "95e9-6da3-5e75-2566":"Big Mek in Mega Armour",
-    "9610-b148-8433-93b8":"Custodian Wardens",
     "9707-82cf-9501-fb43":"Gitstikka",
     "9754-481c-c292-a1f9":"Warlord",
     "9785-ca88-1ecd-2d55":"Parasitic Biomorphology",
@@ -12676,18 +12832,20 @@ const BS_IDS = {
     "9916-8701-bbbd-780e":"Blade of Magnus",
     "9932-3d2b-1e47-d53b":"Exalted Eightbound",
     "996-bd56-400b-a51e":"Divining spear Enlightened",
+    "9aba-cb08-cd38-9e01":"Grand Coven",
     "9ad3-083a-577b-56b0":"Hellforged weapons",
     "9b72-9f8a-9554-43d4":"Pyrocaster",
     "9bd8-ac8c-2d3b-79f6":"Von Ryan's Leapers",
     "9c0-44a0-4bf3-5e14":"Leaper's talons",
-    "9c5c-1cac-6b3f-7a01":"Hideous Mutations",
     "9c89-2141-493-1a45":"Impaler chainglaive",
     "9cc3-1188-9678-0ee1":"Combi-bolter",
     "9cea-2e7-8711-11bf":"Hellfyre missile rack",
     "9d6f-4785-aaf0-5076":"Paired accursed weapons",
+    "9db8-cf55-983f-9671":"Coterie of the Conceited",
     "9e5d-6700-e6d9-5719":"Forge weapon",
     "9e94-b7d4-ec7f-9163":"Terrorpulse missiles",
     "9ec7-baa9-ba0c-6a7":"Soulreaper cannon",
+    "9ed-cbf4-bfe5-90bf":"Legends are visible",
     "9edf-e542-77fa-e4c2":"Talons and betentacled maw",
     "9ee-e289-bc6c-d943":"Cerastus Knight Lancer",
     "9ef8-1cb6-2f19-cc1b":"2 magma cutters",
@@ -12706,6 +12864,7 @@ const BS_IDS = {
     "a1b4-80b4-e85e-96ec":"Power fist",
     "a1e-5683-1daf-e7aa":"Ectoplasma cannon",
     "a21c-f1bf-d56e-580b":"Brutal assault weapon",
+    "a271-bfab-1b97-c55d":"Take and Hold",
     "a287-990-9f34-9836":"Warblade",
     "a289-aacb-7152-e243":"Astral Blast",
     "a30-4bad-cef5-5e55":"Synaptic Pulse",
@@ -12717,6 +12876,7 @@ const BS_IDS = {
     "a3b4-f330-4ed9-8314":"Khornate eviscerator",
     "a3ca-8ea1-d6de-8df2":"Arc rifle",
     "a41b-81a0-ca89-75c1":"Sir Hekhtur",
+    "a435-b94a-eb7b-7c0c":"Detachment",
     "a453-2220-cdf7-ef10":"Aspiring Sorcerer",
     "a484-6a41-3648-bce1":"Tzaangor blades",
     "a570-1807-bd56-a2ac":"Annihilator beam",
@@ -12724,6 +12884,7 @@ const BS_IDS = {
     "a5fb-aa4d-100f-e1bb":"Bolt Carbine",
     "a61b-434-6817-679a":"Herd banner",
     "a661-6877-04db-c7e0":"Hormagaunt talons",
+    "a6ad-d379-46ee-2c24":"Detachment",
     "a797-f585-4ad5-d786":"Two particle beamers",
     "a7ae-e495-683b-7c90":"Reiver Squad",
     "a7ee-9112-4e83-bc2":"Scarab Occult Terminator",
@@ -12737,7 +12898,6 @@ const BS_IDS = {
     "aa3c-6662-6bf0-6a7e":"Runtherd's Toolz",
     "aaaa-9466-3887-3cdd":"Armoured tracks",
     "aac1-5b0f-4802-1628":"Arcane Fire",
-    "ab4a-1a4f-5898-70db":"Guardian Spear",
     "ab61-e814-8c4d-1cb":"Eradicator",
     "ab80-e71b-5a84-2852":"Close combat weapon",
     "ab93-64bd-1c95-c6a7":"Plasma caliver",
@@ -12767,13 +12927,11 @@ const BS_IDS = {
     "b472-94bc-9482-44b6":"Skitarii Ranger w/ plasma caliver",
     "b4ca-3419-c219-f429":"Darkflame lance",
     "b4ce-a5bf-52e7-884c":"Neverblade",
-    "b506-5bce-64c6-51b0":"Blue Horror",
     "b53-3d5b-356b-6b0a":"Flesh Hound",
     "b541-3292-a5cc-dbeb":"Defiler",
     "b568-8a23-be6f-a14d":"Khorne Berzerker",
     "b59f-e25b-6248-8f90":"Obsessionist",
     "b5b2-5c6-e593-69a7":"Hand of Dominion",
-    "b61c-b815-65c0-b1cc":"Shield-Captain",
     "b657-1743-6e3a-0838":"Flesh Hounds",
     "b681-8092-2465-7ba0":"Furious Assault (Upgrade)",
     "b6ac-f091-a018-dab2":"Psychophage",
@@ -12781,19 +12939,20 @@ const BS_IDS = {
     "b74a-d992-b5eb-23ff":"Close combat weapon",
     "b77f-43c5-91b6-7da7":"Shearing claws",
     "b793-b77e-9e49-d397":"Wardens of Ultramar",
-    "b795-b936-ad61-e407":"Blue Horrors",
     "b7a3-bfbd-1464-141d":"Omnispex",
     "b83b-3b6-9aa7-5b3b":"Iron claw",
     "b87a-5121-1c03-894f":"Bloodhunter",
     "b93c-a0a7-1c46-66c4":"Skitarii Ranger w/ arc rifle",
     "b99-af3a-9728-26ad":"Coruscating Pink flames",
+    "bac9-a18e-5a8a-48d1":"Detachment",
+    "baf8-997f-e323-a090":"Strike Force (2000 Point limit)",
     "bb5a-5eb3-1bd4-e813":"Feeder mandibles",
+    "bba-65f6-a4d1-66ae":"Assimilation Swarm",
     "bc1-73c2-c18-8687":"Heavy Intercessor w/Heavy Bolter",
     "bc2f-662f-58e7-5fef":"Daemonic Icon",
     "bd01-88b9-7d60-b49a":"Excruciator cannon",
     "bd33-fe8e-fe90-2bb7":"Magma cutter",
     "bd6c-8683-8bc4-962d":"Kastelan Robots",
-    "beb2-89f6-847c-52bf":"Sentinel blade",
     "bebc-8637-c456-1c0f":"Flickering Flames",
     "bf18-cd0a-a37f-b62b":"Gloom prism",
     "bfb1-7512-e1a3-9fa2":"Impulsor",
@@ -12811,6 +12970,7 @@ const BS_IDS = {
     "c26c-fe9c-e557-e706":"Grabba Dragga",
     "c282-992e-9d74-f62a":"Maulerfiend fists",
     "c297-6f9c-b046-f2ad":"Astartes chainsword",
+    "c2fe-bf23-bf24-aa43":"Invasion Fleet",
     "c34d-3170-c314-148e":"Pink Horror",
     "c3a6-8fab-45f0-2d45":"Exalted Sorcerer",
     "c41d-61c0-3e59-01b5":"Bolt pistol",
@@ -12820,6 +12980,7 @@ const BS_IDS = {
     "c627-5d3-1420-c7f1":"Combi-bolter",
     "c62a-bc9c-37fb-2b36":"Titanic feet",
     "c6a8-0dbc-ab1b-38b5":"Tormentor w/ meltagun",
+    "c6ca-bde2-8304-c97c":"Devotees of Destruction",
     "c6d1-e73b-9d26-5d8b":"Sorcerer in Terminator Armour",
     "c6db-9736-4d53-3ef6":"Ophydian Destroyers",
     "c6e4-e5a5-d4be-d07c":"Mek's Toolz",
@@ -12827,6 +12988,7 @@ const BS_IDS = {
     "c799-77ce-c706-3079":"Blasphemous Engine",
     "c7a7-3164-12bc-3462":"Warlord",
     "c7e3-601f-3442-250b":"Collar of Khorne",
+    "c82f-1b42-946-9c9a":"Detachment",
     "c84c-683a-79be-1620":"Flowing Flesh",
     "c88c-d4a0-4ec4-625c":"Melta rifle",
     "c8a6-a4c5-703e-b717":"Allarus Custodians",
@@ -12845,6 +13007,7 @@ const BS_IDS = {
     "cc5a-e1bc-3dd8-f367":"Bringer of Justice",
     "cc7c-74ca-3bb6-926f":"Gauss blaster",
     "ccae-b5f1-8787-4c7d":"Bloodmaster",
+    "ccb7-6823-6a97-7c19":"Grav-Assault Force",
     "cd60-e6ca-4de4-bf07":"Blade of the Laer",
     "cdad-e2e0-9db3-93fc":"Meganob w/ Kombi-weapon and Power Klaw",
     "cdd4-c8f7-bc72-9af0":"Nob",
@@ -12901,24 +13064,25 @@ const BS_IDS = {
     "dc95-31f-eded-9d6b":"Staff of Tzeentch",
     "dca3-638e-52a2-b1b8":"Armoured hull",
     "dcc0-b70c-9779-e6c9":"Vashtorr the Arkifane",
-    "dcfe-758c-4a16-1c85":"Praesidium Shield",
     "dd30-ba4c-34a4-e788":"Skullmaster",
     "dd57-9c1f-d425-6711":"Biovore",
     "dd8d-1bc7-029f-3674":"Gore-drenched fangs",
     "de59-f65c-181a-8509":"Skitarii Rangers",
     "de8f-24f9-c543-92b7":"Gretchin",
     "deb4-6018-b8cf-1d66":"Heavy Intercessors",
+    "dec0-c9cb-c265-cae0":"Scintillating Legion",
     "ded1-4542-58af-41c1":"Triarchal Menhir",
     "df62-ee85-5169-327e":"Armoured bulk",
-    "df80-bbdc-bd0a-3428":"Sentinel Guard Sodality",
     "dfb9-6a5b-f638-73d9":"'Uge Choppa",
     "dfe8-cea0-8d16-db95":"Diabolus heavy stubber",
     "dffe-86b3-59a8-fd3d":"Cultist Champion",
     "e02b-6f8f-cbee-fa79":"Vashtorr's claw",
+    "e08b-2448-5606-fefb":"Imperial Agents are visible",
     "e0c6-58cd-a822-8b84":"Kustom Mega-blasta",
     "e135-2748-1287-ec58":"Gauntlet of Fire",
     "e13a-503d-72dc-f4ed":"Plasma pistol",
     "e1b1-146f-6f77-3a15":"Tzeentch Soul Grinder",
+    "e296-4a38-d9a5-289c":"Detachment",
     "e390-b58b-db9-816":"Lucius the Eternal",
     "e403-3a9-279e-41b7":"Nurglings",
     "e439-47c1-afed-50c4":"Von Ryan's Leaper",
@@ -12930,11 +13094,12 @@ const BS_IDS = {
     "e584-f803-7858-05bc":"Hunter's Eye",
     "e687-6d7a-bb28-dcaa":"Chaos Vindicator",
     "e7b8-aa40-6da7-778e":"Pink Horrors",
-    "e7d7-e613-0029-4d08":"Guardian Spear",
     "e7d8-1c73-7d03-8b62":"Telemon Heavy Dreadnought",
     "e806-3c87-d3d5-e71d":"Flamer tendril",
     "e849-ce40-ee43-7623":"Chaos Rhino",
     "e8b4-ffab-1b5c-d2a0":"Hekhtur's pistol",
+    "e8ef-836a-a9d1-901d":"Show/Hide Options",
+    "e916-2cf4-a49d-b8c4":"Unaligned Fortifications are visible",
     "e92-e1d4-babd-22b2":"Inferno combi-bolter",
     "e96b-ac98-7fd2-a155":"War Dog Karnivore",
     "ea05-4db7-9ee6-7a87":"Onager Dunecrawler",
@@ -12972,9 +13137,11 @@ const BS_IDS = {
     "f209-cd62-f531-edc0":"Omnissian axe",
     "f20c-0563-3e0a-e0c8":"Plasma pistol",
     "f20e-ff73-5f0c-9970":"Bloodletter",
+    "f26b-79db-80e0-3a3b":"Titans are visible",
     "f2f1-616b-c202-a071":"Agonising Energies",
     "f3f0-a73b-d062-9dc6":"Cybork Boosta",
     "f401-c74a-cca8-5de3":"Runtherd",
+    "f486-5e38-994c-15ec":"Nurgle Daemons are visible",
     "f4a1-7f17-ec57-6c69":"Heavy darkflamer",
     "f4ab-3e53-32df-d47a":"C'tan Powers",
     "f4b8-1179-de57-4d69":"Angron",
@@ -12983,14 +13150,17 @@ const BS_IDS = {
     "f57d-be6e-77e4-bfe3":"Atrapos lascutter",
     "f5b9-50c8-5c60-d8ea":"Tzaangors",
     "f5e3-ad89-8888-4bd4":"Chitinous claws and teeth",
+    "f5f9-1339-84bb-ae85":"Khorne Daemons are visible",
     "f606-38ce-2ada-4fbd":"Snazzgun",
     "f60b-c058-268e-5e87":"Blood Herald",
     "f64-8faa-ac54-73ff":"Acid spray",
     "f65e-dc30-e7c0-7e47":"Power Klaw",
     "f666-1f5d-0c20-06c1":"Nemesis Claw",
+    "f67d-6f59-21b8-e1f9":"Cohort Cybernetica",
     "f6b2-238a-4613-a59f":"Malefic Curse",
     "f70d-d0cb-5cb8-3be9":"Autopistol",
     "f76c-0f51-ad33-c118":"Armoured tracks",
+    "f782-e3f1-c132-fe52":"Wreckas",
     "f81-b23c-e183-39d7":"Immortals",
     "f831-6dfb-6b1b-8112":"Thunder Hammer & Storm Shield",
     "f88c-344d-d603-5622":"Dark Disciple",
@@ -13000,6 +13170,7 @@ const BS_IDS = {
     "fb26-6d89-aa65-fb7e":"Panoply of the Cursed Knights",
     "fbad-4487-a8bc-9ef0":"Collar of Khorne",
     "fc2d-063a-a9fa-968f":"Frag bombard",
+    "fca1-ecdf-4e4a-df41":"Shoota Boyz",
     "fcdc-51d3-89ab-f5b6":"The Slayer Sword",
     "fd31-64a2-b20f-f0bc":"Flesh Hounds",
     "fe4b-b3a4-69b7-3088":"Sekhetar Robots",
@@ -13032,6 +13203,7 @@ const BS_IDS = {
     "42e1-e706-eb89-6cb6":1,
     "44f2-27ca-fad5-70ad":1,
     "4676-0c32-b62c-debd":1,
+    "49fd-a80d-8cc0-c76b":1,
     "4aea-b1cc-6c69-1c44":1,
     "4ea0-6b70-c17c-bc00":1,
     "4ff3-7dce-5a52-94e9":1,
@@ -13048,12 +13220,12 @@ const BS_IDS = {
     "7173-1bd9-b60b-6555":1,
     "71d9-9dc2-2b9a-6db3":1,
     "7213-a7b3-4c8e-96bc":1,
+    "7422-7fbf-8694-364c":1,
     "75ce-5ce7-0a6e-a876":1,
     "7998-d0a-baa4-e8b3":1,
     "7b41-35aa-3265-14d7":1,
     "7d7c-c212-47a3-38e4":1,
     "806e-b30b-3bcd-71c3":1,
-    "80c2-aecc-5b59-7345":1,
     "80c4-14b2-d02d-d289":1,
     "8436-cec1-e65a-d1a7":1,
     "87ae-e092-2e5d-16a6":1,
@@ -13092,7 +13264,7 @@ const BS_IDS = {
     "fb26-6d89-aa65-fb7e":1
   }
 };
-// ---- end of BS_IDS ----
+// ---- end of NR_IDS ----
 
 // ---- CHECKLIST: written by verify/derive.js --write from the rules text (do not edit) ----
 // The Phase checklist: per army or detachment rule (r|faction|name) and ability (a|hash of its name and text), as the rule
@@ -14578,16 +14750,8 @@ const BUILD_INDEX = {
     "Vexilla":{"OC":{"add":1}}
   },
   gw:{
-    "adeptus-custodes/ares-gunship":{"ranged|Arachnus magna-blaze cannon|AP":"-4"},
-    "adeptus-custodes/blade-champion":{"melee|Hurricanis (Vaultswords)|AP":"-1"},
-    "adeptus-custodes/coronus-grav-carrier":{"melee|Armoured hull|A":"4","melee|Armoured hull|S":"6"},
-    "adeptus-custodes/knight-centura":{"melee|Gun Stock|WS":"3+"},
-    "adeptus-custodes/pallas-grav-attack":{"melee|Armoured hull|A":"4"},
     "adeptus-custodes/prosecutor-squad":{"melee|Gun Stock|A":"3"},
-    "adeptus-custodes/venatari-with-kinetic-destroyers":{"stats|Venatari|Ld":"6+"},
-    "adeptus-custodes/venatari-with-verutum-lances":{"stats|Venatari|Ld":"6+"},
-    "adeptus-custodes/witchseeker-squad":{"melee|Gun Stock|A":"3"},
-    "tyranids/sporocyst":{"ranged|Sporocyst bio-weapon|kw":"HIVE DEFENCES"}
+    "adeptus-custodes/witchseeker-squad":{"melee|Gun Stock|A":"3"}
   },
   battleSizes:{
     "Incursion":{"points":1000,"dp":2,"enhancements":2,"units":2},
@@ -14800,7 +14964,7 @@ const TABLE_ORDER = {
 // datasheet does not have (an enhancement's ability) is the list's own. over: a datasheet fact this list has otherwise
 // than another list (verify/out/tables.md), kept per list until it is decided. why: the reason a value of the entry (or
 // its row) is not the datasheet's: the rule, Warlord, enhancement or wargear that gives it (the value is the list's). of: which datasheet of an attached unit a
-// row is from, when its who does not say. Hidden from the app: ds, over, of, a datasheet's faction and bsId, and the
+// row is from, when its who does not say. Hidden from the app: ds, over, of, a datasheet's faction, and the
 // fingerprints (gistOf, defOf) of AI-written columns.
 // The readings (mods: footnotes; aura: what the unit gives other units; guard: their "When targeted" help) are each on the row of
 // the rule they read, in this order: the army rules on the unit's Rules line, each datasheet of the unit, its enhancement (or
@@ -14811,7 +14975,7 @@ function resolveArmies(armies, sheets, order, factions, opts){
   opts = opts || {}; factions = factions || {};
   var ROWS = ['stats', 'ranged', 'melee', 'abilities'], READ = [];
   var FPK = ["gistOf","sumAtkOf","sumDefOf","sumStOf","sumFoeOf","sumOvOf","readOf","readBy","listWhy"], RHIDE = ['readOf', 'readBy', 'listWhy'].filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
-  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction', 'bsId'].concat(FPK, ["points","composition","options","aiStatus"]).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
+  var HIDE = ['ds', 'over', 'of', 'why', 'own', 'faction'].concat(FPK, ["points","composition","options","aiStatus"]).filter(function(k){ return (opts.keep || []).indexOf(k) < 0; });
   function put(o, x){ for(var k in x) if(HIDE.indexOf(k) < 0){ if(x[k] === null) delete o[k]; else o[k] = x[k]; } return o; }
   function copy(x){ return JSON.parse(JSON.stringify(x)); }   // each unit its own copy of a datasheet's values
   function sorted(o, keys){ var out = {}, i, k; for(i = 0; i < keys.length; i++) if(keys[i] in o) out[keys[i]] = o[keys[i]]; for(k in o) if(!(k in out)) out[k] = o[k]; return out; }
@@ -14876,5 +15040,5 @@ function resolveArmies(armies, sheets, order, factions, opts){
 }
 // ---- end of resolveArmies ----
 
-return { version:VERSION, concepts:CONCEPTS, rules:RULES, ruleSrc:RULE_SRC, ruleAliases:RULE_ALIASES, coreStratagems:CORE_STRATAGEMS, factions:FACTIONS, armies:resolveArmies(ARMIES, DATASHEETS, TABLE_ORDER, FACTIONS), bsIds:BS_IDS, checklist:CHECKLIST, boxes:BOXES, agree:AGREE, buildIndex:BUILD_INDEX, resolve:function(a){ return resolveArmies([a], DATASHEETS, TABLE_ORDER, FACTIONS)[0]; }, datasheets:DATASHEETS, ruleOptions:RULE_OPTIONS, grants:GRANTS };
+return { version:VERSION, concepts:CONCEPTS, rules:RULES, ruleSrc:RULE_SRC, ruleAliases:RULE_ALIASES, coreStratagems:CORE_STRATAGEMS, factions:FACTIONS, armies:resolveArmies(ARMIES, DATASHEETS, TABLE_ORDER, FACTIONS), nrIds:NR_IDS, checklist:CHECKLIST, boxes:BOXES, agree:AGREE, buildIndex:BUILD_INDEX, resolve:function(a){ return resolveArmies([a], DATASHEETS, TABLE_ORDER, FACTIONS)[0]; }, datasheets:DATASHEETS, ruleOptions:RULE_OPTIONS, grants:GRANTS };
 })();
