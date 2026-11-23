@@ -5119,7 +5119,7 @@ const ARMIES = [
   id:'healybois', name:'Healybois', faction:'tyranids', points:2000, pointsUsed:2000,
   battleSize:'Strike Force', disposition:'Take and Hold',
   detachments:['assimilation-swarm','talons-of-the-norn-queen'],
-  source:'New Recruit, exported 31 Oct 2026 (JSON)',
+  source:'New Recruit, exported 23 Nov 2026 (JSON)',
   units:[
     {
       id:'the-swarmlord-tyrant-guard', ds:['tyranids/the-swarmlord','tyranids/tyrant-guard'], pts:380, ptsNote:'210 + Tyrant Guard 170', warlord:true,
