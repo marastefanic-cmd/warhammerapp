@@ -3808,7 +3808,7 @@ Lord Exultant · datasheet ability
 
 While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 LETHAL HITS Core rule
 

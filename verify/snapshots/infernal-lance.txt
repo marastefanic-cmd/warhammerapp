@@ -3384,7 +3384,7 @@ Enhancement
 
 CHAOS KNIGHTS model only. The bearer’s ranged weapons have the [ASSAULT] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 ASSAULT Core rule
 
@@ -3399,7 +3399,7 @@ Enhancement
 
 CHAOS KNIGHTS model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal wounds.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Fleshmetal Fusion","knight-ruinator-fleshmetal-fusion","T 12",null] · INFERNAL LANCE Infernal Lance
 T 12 · GRANTED BY
@@ -3410,7 +3410,7 @@ Enhancement
 
 CHAOS KNIGHTS model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Knight Diabolus","chaos-cerastus-knight-atrapos","WS 2+",null] · INFERNAL LANCE Infernal Lance
 WS 2+ · GRANTED BY
@@ -3421,7 +3421,7 @@ Enhancement
 
 CHAOS KNIGHTS model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the [LANCE] ability.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:ANTI-MONSTER 2+ · INFERNAL LANCE Infernal Lance
 CORE RULE

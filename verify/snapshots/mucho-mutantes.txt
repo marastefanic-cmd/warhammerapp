@@ -4075,7 +4075,7 @@ Tzaangor Shaman · Enhancement
 
 TZAANGOR SHAMAN model only. The bearer has the Feel No Pain 4+ ability and a Wounds characteristic of 5.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:Advance roll · MUCHO MUTANTES Mucho Mutantes
 CORE RULE

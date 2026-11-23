@@ -3283,7 +3283,7 @@ Enhancement
 
 NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 ANTI-CHARACTER 2+ Core rule
 
@@ -3300,7 +3300,7 @@ Enhancement
 
 NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Synaptoprescience","norn-assimilator-synaptoprescience-2","INV 4+",null] · NIDZILLAS Nidzillas
 INV 4+ · GRANTED BY
@@ -3311,7 +3311,7 @@ Enhancement
 
 NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:Advance · NIDZILLAS Nidzillas
 CORE RULE

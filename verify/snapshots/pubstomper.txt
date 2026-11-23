@@ -3907,7 +3907,7 @@ Exalted Sorcerer · Psychic
 
 While this model is leading a unit, models in that unit have a 4+ invulnerable save.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Eldritch Vortex of E’taph","daemon-prince-of-tzeentch-with-wings","D 2",null] · PUBSTOMPER Pubstomper
 D 2 · GRANTED BY
@@ -3918,7 +3918,7 @@ Enhancement
 
 THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Eldritch Vortex of E’taph","daemon-prince-of-tzeentch-with-wings","D 4",null] · PUBSTOMPER Pubstomper
 D 4 · GRANTED BY
@@ -3929,7 +3929,7 @@ Enhancement
 
 THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Eldritch Vortex of E’taph","daemon-prince-of-tzeentch-with-wings","S 5",null] · PUBSTOMPER Pubstomper
 S 5 · GRANTED BY
@@ -3940,7 +3940,7 @@ Enhancement
 
 THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Eldritch Vortex of E’taph","daemon-prince-of-tzeentch-with-wings","S 7",null] · PUBSTOMPER Pubstomper
 S 7 · GRANTED BY
@@ -3951,7 +3951,7 @@ Enhancement
 
 THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Eldritch Vortex of E’taph","daemon-prince-of-tzeentch-with-wings","S 9",null] · PUBSTOMPER Pubstomper
 S 9 · GRANTED BY
@@ -3962,7 +3962,7 @@ Enhancement
 
 THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Empyric Guidance","sorcerer-in-terminator-armour-scarab-occult-terminators","LETHAL HITS","LETHAL HITS"] · PUBSTOMPER Pubstomper
 LETHAL HITS · GRANTED BY
@@ -3973,7 +3973,7 @@ Sorcerer in Terminator Armour · Psychic
 
 While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 LETHAL HITS Core rule
 
@@ -3990,7 +3990,7 @@ Rubric Marines · datasheet ability
 
 Ranged weapons equipped by models in the bearer’s unit (excluding CHARACTERS) have the [IGNORES COVER] ability.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 IGNORES COVER Core rule
 

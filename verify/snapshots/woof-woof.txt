@@ -3151,7 +3151,7 @@ Upgrade
 
 EXECUTIONER unit only. This unit’s ranged attacks have [IGNORES COVER].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 IGNORES COVER Core rule
 

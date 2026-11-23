@@ -4198,7 +4198,7 @@ Lord on Juggernaut · datasheet ability
 
 While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Berzerker Glaive","daemon-prince-of-khorne-berzerker-glaive","D 2",null] · PRINCES Princes
 D 2 · GRANTED BY
@@ -4209,7 +4209,7 @@ Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Berzerker Glaive","daemon-prince-of-khorne-berzerker-glaive","D 4",null] · PRINCES Princes
 D 4 · GRANTED BY
@@ -4220,7 +4220,7 @@ Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Berzerker Glaive|Relentless Rage","daemon-prince-of-khorne-berzerker-glaive","A 10",null] · PRINCES Princes
 A 10 · GRANTED BY
@@ -4239,7 +4239,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Berzerker Glaive|Relentless Rage","daemon-prince-of-khorne-berzerker-glaive","A 18",null] · PRINCES Princes
 A 18 · GRANTED BY
@@ -4258,7 +4258,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","chaos-rhino","A 7",null] · PRINCES Princes
 A 7 · GRANTED BY
@@ -4269,7 +4269,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","daemon-prince-of-khorne-helm-of-brazen-ire","A 17",null] · PRINCES Princes
 A 17 · GRANTED BY
@@ -4280,7 +4280,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","daemon-prince-of-khorne-helm-of-brazen-ire","A 9",null] · PRINCES Princes
 A 9 · GRANTED BY
@@ -4291,7 +4291,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","eightbound","A 6",null] · PRINCES Princes
 A 6 · GRANTED BY
@@ -4302,7 +4302,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","forgefiend","A 7",null] · PRINCES Princes
 A 7 · GRANTED BY
@@ -4313,7 +4313,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","jakhals","A 4",null] · PRINCES Princes
 A 4 · GRANTED BY
@@ -4324,7 +4324,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","jakhals","A 5",null] · PRINCES Princes
 A 5 · GRANTED BY
@@ -4335,7 +4335,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 4",null] · PRINCES Princes
 A 4 · GRANTED BY
@@ -4346,7 +4346,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 5",null] · PRINCES Princes
 A 5 · GRANTED BY
@@ -4357,7 +4357,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 9",null] · PRINCES Princes
 A 9 · GRANTED BY
@@ -4368,7 +4368,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","lord-on-juggernaut-khorne-berzerkers","A 4",null] · PRINCES Princes
 A 4 · GRANTED BY
@@ -4379,7 +4379,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","lord-on-juggernaut-khorne-berzerkers","A 5",null] · PRINCES Princes
 A 5 · GRANTED BY
@@ -4390,7 +4390,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","lord-on-juggernaut-khorne-berzerkers","A 8",null] · PRINCES Princes
 A 8 · GRANTED BY
@@ -4401,7 +4401,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","slaughterbound-exalted-eightbound","A 5",null] · PRINCES Princes
 A 5 · GRANTED BY
@@ -4412,7 +4412,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","slaughterbound-exalted-eightbound","A 7",null] · PRINCES Princes
 A 7 · GRANTED BY
@@ -4423,7 +4423,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:ANTI-MONSTER 3+ · PRINCES Princes
 CORE RULE

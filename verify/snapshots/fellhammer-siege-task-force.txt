@@ -4614,7 +4614,7 @@ Devotees of Destruction detachment rule
 
 Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 HEAVY Core rule
 
@@ -4633,7 +4633,7 @@ Devotees of Destruction detachment rule
 
 Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 HEAVY Core rule
 
@@ -4656,7 +4656,7 @@ HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from y
 
 SOUL FORGE units from your army have a 5+ invulnerable save.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Soul Forge Boons","chaos-predator-destructor","INV 5+",null] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
 INV 5+ · GRANTED BY
@@ -4671,7 +4671,7 @@ HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from y
 
 SOUL FORGE units from your army have a 5+ invulnerable save.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Soul Forge Boons","chaos-vindicator","INV 5+",null] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
 INV 5+ · GRANTED BY
@@ -4686,7 +4686,7 @@ HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from y
 
 SOUL FORGE units from your army have a 5+ invulnerable save.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Soul Forge Boons","dark-apostle-master-of-executions-nemesis-claw","INV 5+",null] · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
 INV 5+ · GRANTED BY
@@ -4701,7 +4701,7 @@ HERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from y
 
 SOUL FORGE units from your army have a 5+ invulnerable save.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:ANTI-VEHICLE 2+ · FELLHAMMER SIEGE TASK FORCE Fellhammer Siege Task Force
 CORE RULE

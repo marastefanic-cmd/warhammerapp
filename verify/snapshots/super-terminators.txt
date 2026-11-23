@@ -3199,7 +3199,7 @@ Upgrade
 
 TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Gore-stained Veterans","chaos-terminators","WS 3+",null] · SUPER TERMINATORS Super Terminators
 WS 3+ · GRANTED BY
@@ -3210,7 +3210,7 @@ Upgrade
 
 TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Gore-stained Veterans","chaos-terminators-2","WS 2+",null] · SUPER TERMINATORS Super Terminators
 WS 2+ · GRANTED BY
@@ -3221,7 +3221,7 @@ Upgrade
 
 TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Gore-stained Veterans","chaos-terminators-2","WS 3+",null] · SUPER TERMINATORS Super Terminators
 WS 3+ · GRANTED BY
@@ -3232,7 +3232,7 @@ Upgrade
 
 TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","angron","A 17",null] · SUPER TERMINATORS Super Terminators
 A 17 · GRANTED BY
@@ -3243,7 +3243,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","angron","A 9",null] · SUPER TERMINATORS Super Terminators
 A 9 · GRANTED BY
@@ -3254,7 +3254,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","chaos-terminators","A 4",null] · SUPER TERMINATORS Super Terminators
 A 4 · GRANTED BY
@@ -3265,7 +3265,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","chaos-terminators","A 6",null] · SUPER TERMINATORS Super Terminators
 A 6 · GRANTED BY
@@ -3276,7 +3276,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","chaos-terminators-2","A 4",null] · SUPER TERMINATORS Super Terminators
 A 4 · GRANTED BY
@@ -3287,7 +3287,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","chaos-terminators-2","A 6",null] · SUPER TERMINATORS Super Terminators
 A 6 · GRANTED BY
@@ -3298,7 +3298,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","eightbound","A 6",null] · SUPER TERMINATORS Super Terminators
 A 6 · GRANTED BY
@@ -3309,7 +3309,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","forgefiend","A 7",null] · SUPER TERMINATORS Super Terminators
 A 7 · GRANTED BY
@@ -3320,7 +3320,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","goremongers","A 3",null] · SUPER TERMINATORS Super Terminators
 A 3 · GRANTED BY
@@ -3331,7 +3331,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","goremongers","A 4",null] · SUPER TERMINATORS Super Terminators
 A 4 · GRANTED BY
@@ -3342,7 +3342,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","jakhals","A 4",null] · SUPER TERMINATORS Super Terminators
 A 4 · GRANTED BY
@@ -3353,7 +3353,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","jakhals","A 5",null] · SUPER TERMINATORS Super Terminators
 A 5 · GRANTED BY
@@ -3364,7 +3364,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:ANTI-VEHICLE 3+ · SUPER TERMINATORS Super Terminators
 CORE RULE

@@ -3602,7 +3602,7 @@ datasheet ability
 This unit has +1 OC.
 This unit can ignore modifiers to this unit’s Ld.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Vexilla","custodian-wardens","OC 3",null] · EMPEROR’S CHOSEN Emperor’s Chosen
 OC 3 · GRANTED BY
@@ -3614,7 +3614,7 @@ datasheet ability
 This unit has +1 OC.
 This unit can ignore modifiers to this unit’s Ld.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Vexilla","shield-captain-sentinel-guard-sodality","OC 3",null] · EMPEROR’S CHOSEN Emperor’s Chosen
 OC 3 · GRANTED BY
@@ -3626,7 +3626,7 @@ Sentinel Guard Sodality · datasheet ability
 This unit has +1 OC.
 This unit can ignore modifiers to this unit’s Ld.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Vexilla","shield-captain-sentinel-guard-sodality","OC 4",null] · EMPEROR’S CHOSEN Emperor’s Chosen
 OC 4 · GRANTED BY
@@ -3638,7 +3638,7 @@ Sentinel Guard Sodality · datasheet ability
 This unit has +1 OC.
 This unit can ignore modifiers to this unit’s Ld.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Vexilla","trajann-valoris-allarus-custodians","OC 3",null] · EMPEROR’S CHOSEN Emperor’s Chosen
 OC 3 · GRANTED BY
@@ -3650,7 +3650,7 @@ Allarus Custodians · datasheet ability
 This unit has +1 OC.
 This unit can ignore modifiers to this unit’s Ld.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:ANATHEMA PSYKANA · EMPEROR’S CHOSEN Emperor’s Chosen
 ADEPTUS CUSTODES ARMY RULE
