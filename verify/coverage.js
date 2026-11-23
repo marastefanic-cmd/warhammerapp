@@ -104,6 +104,7 @@ function gaps(b, src, side, others, ctx){
     parts.forEach((x, i) => { const ids = (side === 'defence' ? X.findDf(n(x)).df : X.findFx(n(x)).fx).map(([id]) => id); if(ids.some(id => mine0.includes(id))) last = i; });
     if(last >= 0 && qAt >= 0){ for(let i = 0; i <= last; i++) pos += parts[i].length; endAt = qAt + pos; } }
   const quotedHas = re => S.q.some(q => re.test(q));
+  const insteadOwn = !!lead && /\binstead\.?$/i.test(n(b.quote)) && /^(?:if|while|unless)\b/i.test(n(b.quote));
   const covers = (ph, at) => { const pn = n(ph), win = n(pcw.slice(at, at + ph.length + 80));
     return S.on.some(([id]) => C[id] && C[id].pats.some(re => { if(re.test(pn)) return true; const r = re.exec(win); return !!r && r.index < pn.length; }))
       || S.q.some(q => q.includes(pn.slice(0, 25)) || pn.includes(q.slice(0, 25))); };
@@ -173,6 +174,9 @@ function gaps(b, src, side, others, ctx){
   for(const P of PHRASES){ if(P.side && P.side !== side) continue;
     for(const m of pcw.matchAll(P.re)){ const ph = m[0].trim(), pn = n(ph), after = pcw.slice(m.index + m[0].length);
       if(m.index >= endAt) continue;
+      // (a sentence that does something else "instead" under a condition of its own: the conditions of the sentence it continues are that
+      // sentence's, not its own, Daemonic Strength's EXALTED EIGHTBOUND sentence after its EIGHTBOUND one)
+      if(P.what === 'clause' && insteadOwn && m.index < pc(lead).length) continue;
       if(P.what === 'clause'){
         // (not a condition of the effect, as GW's grammar says: "if any of the following apply" (its list is the box's condition: objective,
         // anyOf), a cost ("if that test is failed, that unit suffers …"), a definition ("… is said to be within Synapse Range"), a word the

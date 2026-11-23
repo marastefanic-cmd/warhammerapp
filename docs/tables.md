@@ -277,7 +277,7 @@ naming both, as for points; any other value no rule explains is refused, named.
 A faction catalogue (`verify/sources/catalog/<faction>.json`, docs/catalog.md) holds every current datasheet and detachment of a faction,
 held to GW's pages by the gate step `catalog`; a new faction's is written by `verify/from-waha.js` from Wahapedia's pages. `--write` here merges the catalogue rows
 (`verify/sources/catalog/<faction>.json`) into DATASHEETS: a row a list has keeps its lists' facts and gets only what it lacks; a row
-no list has is the catalogue's, `aiStatus:'not-read'` (no readings or AI-written lines yet). `points`, `composition`, `options` and
+no list has is the catalogue's, `aiStatus:'not-read'` (no readings or AI-written lines yet), unless its catalogue is read (`aiRead`: its summaries from the hand file, its lines checked through verify/catalog-armies.js, docs/catalog.md). `points`, `composition`, `options` and
 `aiStatus` are not copied onto a list's units.
 
 ## AI-written columns
@@ -349,7 +349,7 @@ what `verify/derive.js` derives from the words; each unit gets them in the resol
 An export imported on the phone gets the outcome the same export would get here: `builder.js` (browser and Node, no `fs`, no `require`)
 turns a New Recruit export into the list's `ARMIES` entry from the export and `data.js` alone, `WH_BUILDER.build(export, WH_DATA, { id, date })`,
 and the app joins it with `DATASHEETS` as it joins its own lists (`WH_DATA.resolve`). It builds only a faction with a full catalogue
-(Custodes, Tyranids, Chaos Daemons today: `DATASHEETS` rows with GW's `points`); a list of another faction is copied from the app's own
+(Custodes, Tyranids, Chaos Daemons, World Eaters today: `DATASHEETS` rows with GW's `points`); a list of another faction is copied from the app's own
 lists' units by `import.js` as before, and the list says so. What it reads:
 
 | From | What |
@@ -375,8 +375,7 @@ every list imported on the phone shows every screen as the built-in one at 390 a
 list in .json, .ros, .rosz, text B and text C gives one list, and changed exports are refused with exact messages. What the hand files hold
 has no effect on a build; a list whose built-in entry needs a hand file (an id, a `short`, a note) would differ, and P1 says so.
 
-**One builder.** A built-in list of a catalogued faction that has a New Recruit JSON export (6 lists today: Basic Bitch, Healybois, Lite
-Knights, Nidzillas, The Exiled Legion, Tzeeeeentch) is made by the same code as a phone import; the two catalogued lists made from New
+**One builder.** A built-in list of a catalogued faction that has a New Recruit JSON export (10 lists today: Basic Bitch, Big demons baby, Healybois, Lite Knights, Nidzillas, Princes, Standard, Super Terminators, The Exiled Legion, Tzeeeeentch) is made by the same code as a phone import; the two catalogued lists made from New
 Recruit PDFs alone, with no export (Emperor's Chosen and Dread Host, Adeptus Custodes), are not (see the known limits). `verify/from-json.js --write` ends
 by calling `WH_BUILDER.build` on the export with the `data.js` it has just written (after `verify/build-index.js --write`, so its "+" marks
 are in `BUILD_INDEX`), and the list's `ARMIES` entry is builder.js's, with from-json's source line (the day the export was committed, or the
@@ -384,7 +383,7 @@ hand file's `source`). What stays from-json's is the Node-only part: Wahapedia's
 documents (the datasheet facts `verify/tables.js --write` puts on `DATASHEETS`, the faction rows, the deviation files), and the hand file.
 Its own reading of the list's entry is kept as a check: where it is not builder.js's, the entry is builder.js's, the difference is listed
 and the run fails; `verify/reimport.js` (4) fails a catalogued list not built so, or built otherwise than from-json reads it. A list of a
-faction with no catalogue (18 of the 24 exports today) keeps from-json's reading until the faction's catalogue lands; the phone copies it.
+faction with no catalogue (14 of the 24 exports today) keeps from-json's reading until the faction's catalogue lands; the phone copies it.
 
 What from-json does that builder.js does not, and where each goes:
 
@@ -394,7 +393,7 @@ What from-json does that builder.js does not, and where each goes:
 | hand `units.<id>.why`, `gists.<id>.by`, `refs[].why`, `ids.<id>` | reasons, recorded for the reviewer: nothing shown (an id is the list's; a catalogued list's ids are builder.js's, none is in a hand file) |
 | hand `units.<id>.texts`, `units.<id>.notes`, `refs` (a reference sheet with no export entry, and one of models on another's datasheet) | datasheet facts, on the `DATASHEETS` rows builder.js reads (texts also in `verify/deviations-words.json`, Chaos Daemons' in the catalogue hand file): a phone import of any list with the datasheet has them; builder.js finds the reference sheets by GW's words (`sheetRefs`) |
 | hand `gists` (`gist`, `gistOf`, `note`), `armyRules` FAQs, `fixes` | `FACTIONS` rows, shared by every list of the faction (app and phone alike) |
-| a models line split by GW's WARGEAR OPTIONS ("1 model can be equipped with 1 …", Wahapedia's page), a stats row without its ×N where the list has a New Recruit PDF (`verify/sources/nr`) | none in a catalogued list's entry today; builder.js does neither (the export's association, else unplaced; always ×N), so a catalogued list needing one fails from-json's check |
+| a models line split by GW's WARGEAR OPTIONS ("1 model can be equipped with 1 …", Wahapedia's page), a stats row without its ×N where the list has a New Recruit PDF (`verify/sources/nr`) | for a catalogued list from-json reads as builder.js does: every stats row with its ×N (the four World Eaters lists, first made from PDFs, show "Eightbound ×3"; `verify/deviations-nr.json` records each row the PDF prints without it), its ids builder.js's ("kharn-the-betrayer-…"); no models line split by WARGEAR OPTIONS in a catalogued list's entry today |
 | "+" marks: the export's value against GW's datasheet, the rule New Recruit prints beside the profile or `BUILD_INDEX.marks` records (`verify/marks.js` namesFor, `write-grants.js`); for a catalogued list, builder.js's marks | builder.js names a mark's rule from `BOXES` (agreed), else `BUILD_INDEX.marks`, which `verify/build-index.js` learns from the built-in lists' marks; the gate step `marks` holds every mark to GW's words of its rule |
 
 **An ability a rule gives is the list's, never the datasheet's.** The owner's rule (4 Nov 2026): every ability a rule gives a unit is a
@@ -490,9 +489,16 @@ Known limits (accepted: each refuses rather than shows anything wrong, or no cur
 - A few datasheet facts have a list's hand file as their source: the hand texts and notes on `DATASHEETS` rows, and the Brimstone Horrors
   row (no datasheet page of its own), made from Tzeeeeentch's hand `refs`. The phone has them while those rows are in `DATASHEETS`. Moving them into
   the catalogue hand files needs `notes` and `refs` in `verify/from-waha.js`.
-- from-json splits a models line by GW's WARGEAR OPTIONS and names a stats row without its ×N where the list has a New Recruit PDF;
-  builder.js does neither. No catalogued list needs either today; one that does fails from-json's check.
-- The 18 lists of factions with no catalogue keep from-json's reading (and the phone's strict copy) until their catalogue lands.
+- from-json splits a models line by GW's WARGEAR OPTIONS where the list's faction has no catalogue; builder.js does not (the export's
+  association, else unplaced). No catalogued list needs it today; one that does fails from-json's check.
+- A catalogue written by `verify/from-waha.js` (World Eaters) names a datasheet, model, weapon and ability as a list of the faction does
+  where one has it (New Recruit's names), else as GW's page prints it. A datasheet no list has gets GW's names: an export of it that New
+  Recruit names otherwise (a model "Chaos Heldrake" or "Heldrake", a variant model "Bloodletter w/ …") is refused, naming what it does not
+  know, until the catalogue learns New Recruit's name from an export of the owner's.
+- A WARGEAR OPTIONS sentence `verify/waha-loadout.js` cannot read (World Eaters: the Helbrute's "For each Helbrute fist this model is
+  equipped with, it can be equipped with one of the following: …") is listed in the row's loadout as unread: builder.js takes that
+  datasheet only with GW's default wargear and refuses any other loadout, naming the unit and the sentence.
+- The 14 lists of factions with no catalogue keep from-json's reading (and the phone's strict copy) until their catalogue lands.
 - Emperor's Chosen and Dread Host (Adeptus Custodes, a catalogued faction) were written from their New Recruit PDFs
   (`verify/sources/nr/*.txt`) and have no export: builder.js never builds them, and neither `verify/reimport.js` nor build-parity P1
   holds them to what builder.js would give an export of the same list. The owner keeps them and has no export for them. What holds them

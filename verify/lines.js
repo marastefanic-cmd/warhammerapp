@@ -67,8 +67,11 @@ const M = require('./effects-migrate');
 
 const dm = require('./damage-node')(['unitMods', 'shownMods', 'fnLine', 'dmgBand', 'modLines', 'rowMod', 'statLines', 'statShown', 'defenceItems', 'defLines', 'sumMode', 'sumLinesOf', 'srcShort', 'enhRowOf', 'lineKey', 'PREGAME_RE', 'naReason', 'inertRule', 'faction', 'detachments', 'detRules', 'alreadyIn', 'alreadyInRule', 'allStratagems', 'canTarget', 'hasRule', 'unitDetRules', 'ruleRowOf', 'abilityKey', 'defLine', 'lineItemsOf']);
 const D = dm.D, A = dm.app, fails = [], stats = {};
+// (the lists a phone import of a faction whose catalogue is read can place, verify/catalog-armies.js: held as the owner's lists are)
+require('./catalog-armies').add(D);
 // (the Overview as the app draws it: screenPregame, with the page's globals it reads at load stubbed)
 const PG = require('./damage-node')(['screenPregame', 'inArmy'], { page:true });
+require('./catalog-armies').add(PG.D);
 // the boxes as the screens count them (the two-reader rule: data.js AGREE, effects.js agreed): the footnotes, the lines under a profile and
 // the Damaged bands are these; the boxes' own checks (their schema, their words) are of data.js BOXES itself
 const BX = E.agreed(D.boxes, D.agree);

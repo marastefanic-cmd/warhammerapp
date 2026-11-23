@@ -2422,7 +2422,7 @@ W
 LD
 OC
 InSv
-Chaos Terminators
+Chaos Terminators×10
 40mm
 7"
 6
@@ -2561,7 +2561,7 @@ W
 LD
 OC
 InSv
-Chaos Terminators
+Chaos Terminators×10
 40mm
 7"
 6
@@ -2692,7 +2692,7 @@ W
 LD
 OC
 InSv
-Eightbound
+Eightbound×3
 40mm
 10"
 6
@@ -2771,7 +2771,7 @@ W
 LD
 OC
 InSv
-Goremongers
+Goremongers×8
 32mm
 9"
 4
@@ -2877,7 +2877,7 @@ W
 LD
 OC
 InSv
-Jakhal
+Jakhal×9
 28.5mm
 7"
 4

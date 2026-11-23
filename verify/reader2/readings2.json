@@ -1,17 +1,17 @@
 {
  "reader": "reader2",
  "counts": {
-  "sources": 1302,
-  "sentences": 2539,
-  "read": 1322,
-  "readWithEffects": 675,
-  "readNoEffect": 647,
-  "unread": 1217,
-  "unreadOutside": 964,
-  "unreadUnparsed": 253,
-  "gwFound": 2403,
-  "gwNotFound": 48,
-  "gwShort": 88
+  "sources": 1378,
+  "sentences": 2676,
+  "read": 1368,
+  "readWithEffects": 692,
+  "readNoEffect": 676,
+  "unread": 1308,
+  "unreadOutside": 1021,
+  "unreadUnparsed": 287,
+  "gwFound": 2535,
+  "gwNotFound": 50,
+  "gwShort": 91
  },
  "readings": {
   "ds:orks/wazdakka-gutsmek|Turbo Engine|0": {
@@ -1945,6 +1945,23 @@
    "reason": "outside-vocabulary:movement / deployment",
    "gw": "found"
   },
+  "ds:world-eaters/kharn-the-betrayer|Leader|0": {
+   "owner": "ds:world-eaters/kharn-the-betrayer",
+   "ownerName": "Khârn the Betrayer",
+   "source": "Leader",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "This model can be attached to the following units: KHORNE BERZERKERS",
+   "status": "read",
+   "kind": "leader",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "gw": "not-found"
+  },
   "ds:world-eaters/khorne-berzerkers|Blood Surge|0": {
    "owner": "ds:world-eaters/khorne-berzerkers",
    "ownerName": "Khorne Berzerkers",
@@ -2159,6 +2176,23 @@
    "reason": "outside-vocabulary:engagement / detection",
    "gw": "found"
   },
+  "ds:world-eaters/lord-on-juggernaut|Leader|0": {
+   "owner": "ds:world-eaters/lord-on-juggernaut",
+   "ownerName": "Lord on Juggernaut",
+   "source": "Leader",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "This model can be attached to the following units: EIGHTBOUND, EXALTED EIGHTBOUND, KHORNE BERZERKERS",
+   "status": "read",
+   "kind": "leader",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "gw": "found"
+  },
   "ds:world-eaters/slaughterbound|Lord of the Eightbound|0": {
    "owner": "ds:world-eaters/slaughterbound",
    "ownerName": "Slaughterbound",
@@ -2247,6 +2281,23 @@
     }
    ],
    "duration": "end of the phase",
+   "gw": "found"
+  },
+  "ds:world-eaters/slaughterbound|Leader|0": {
+   "owner": "ds:world-eaters/slaughterbound",
+   "ownerName": "Slaughterbound",
+   "source": "Leader",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "This model can be attached to the following units: EIGHTBOUND, EXALTED EIGHTBOUND",
+   "status": "read",
+   "kind": "leader",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
    "gw": "found"
   },
   "ds:world-eaters/exalted-eightbound|Rend and Tear|0": {
@@ -2434,6 +2485,28 @@
    "text": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.",
    "status": "unread",
    "reason": "outside-vocabulary:objectives",
+   "gw": "found"
+  },
+  "ds:world-eaters/jakhals|Icon of Khorne|0": {
+   "owner": "ds:world-eaters/jakhals",
+   "ownerName": "Jakhals",
+   "source": "Icon of Khorne",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "If the bearer's unit contains one or more Icons of Khorne, each time the bearer's unit destroys an enemy unit, you gain 1 Bloodshed point.",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction resources",
+   "gw": "found"
+  },
+  "ds:world-eaters/jakhals|Icon of Khorne|1": {
+   "owner": "ds:world-eaters/jakhals",
+   "ownerName": "Jakhals",
+   "source": "Icon of Khorne",
+   "sourceKind": "ability",
+   "idx": 1,
+   "text": "Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
    "gw": "found"
   },
   "ds:world-eaters/forgefiend|Furious Onslaught|0": {
@@ -3088,6 +3161,23 @@
    "reason": "outside-vocabulary:command points",
    "gw": "found"
   },
+  "ds:world-eaters/master-of-executions|Leader|0": {
+   "owner": "ds:world-eaters/master-of-executions",
+   "ownerName": "Master of Executions",
+   "source": "Leader",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "This model can be attached to the following units: KHORNE BERZERKERS",
+   "status": "read",
+   "kind": "leader",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "gw": "not-found"
+  },
   "ds:world-eaters/flesh-hounds|Hunters from the Warp|0": {
    "owner": "ds:world-eaters/flesh-hounds",
    "ownerName": "Flesh Hounds",
@@ -3121,6 +3211,774 @@
     "type": "bearer"
    },
    "conditions": [],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:world-eaters/lord-invocatus|Fire Riders|0": {
+   "owner": "ds:world-eaters/lord-invocatus",
+   "ownerName": "Lord Invocatus",
+   "source": "Fire Riders",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "While this model is leading a unit, models in that unit have the Deep Strike ability and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through models and terrain features.",
+   "status": "unread",
+   "reason": "outside-vocabulary:ability deep strike",
+   "gw": "found"
+  },
+  "ds:world-eaters/lord-invocatus|Fire Riders|1": {
+   "owner": "ds:world-eaters/lord-invocatus",
+   "ownerName": "Lord Invocatus",
+   "source": "Fire Riders",
+   "sourceKind": "ability",
+   "idx": 1,
+   "text": "When making a Normal, Advance or Fall Back move, models in that unit can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them and any Desperate Escape test is automatically passed.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / charge eligibility",
+   "gw": "found"
+  },
+  "ds:world-eaters/lord-invocatus|Bloody Stampede|0": {
+   "owner": "ds:world-eaters/lord-invocatus",
+   "ownerName": "Lord Invocatus",
+   "source": "Bloody Stampede",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Each time this model's unit ends a Charge move, select one enemy unit within Engagement Range of this model, then roll one D6: on a 2-3, that enemy unit suffers 1 mortal wound; on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
+   "status": "unread",
+   "reason": "outside-vocabulary:mortal wounds",
+   "gw": "found"
+  },
+  "ds:world-eaters/lord-invocatus|Leader|0": {
+   "owner": "ds:world-eaters/lord-invocatus",
+   "ownerName": "Lord Invocatus",
+   "source": "Leader",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "This model can be attached to the following units: EIGHTBOUND, EXALTED EIGHTBOUND, KHORNE BERZERKERS",
+   "status": "read",
+   "kind": "leader",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:world-eaters/daemon-prince-of-khorne-with-wings|Bloodied Terror|0": {
+   "owner": "ds:world-eaters/daemon-prince-of-khorne-with-wings",
+   "ownerName": "Daemon Prince of Khorne with Wings",
+   "source": "Bloodied Terror",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "At the start of the Fight phase, each enemy unit within Engagement Range of this model must take a Battle-shock test, subtracting 1 from that test if that enemy unit is Below Half-strength.",
+   "status": "unread",
+   "reason": "outside-vocabulary:battle-shock / leadership",
+   "gw": "found"
+  },
+  "ds:world-eaters/daemon-prince-of-khorne-with-wings|Swooping Predator|0": {
+   "owner": "ds:world-eaters/daemon-prince-of-khorne-with-wings",
+   "ownerName": "Daemon Prince of Khorne with Wings",
+   "source": "Swooping Predator",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Each time this model ends a Normal move, you can select one enemy unit that it moved over during that move and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+   "status": "unread",
+   "reason": "outside-vocabulary:mortal wounds",
+   "gw": "found"
+  },
+  "ds:world-eaters/bloodletters|Bane of Cowards|0": {
+   "owner": "ds:world-eaters/bloodletters",
+   "ownerName": "Bloodletters",
+   "source": "Bane of Cowards",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / charge eligibility",
+   "gw": "found"
+  },
+  "ds:world-eaters/bloodletters|Bane of Cowards|1": {
+   "owner": "ds:world-eaters/bloodletters",
+   "ownerName": "Bloodletters",
+   "source": "Bane of Cowards",
+   "sourceKind": "ability",
+   "idx": 1,
+   "text": "When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.",
+   "status": "unread",
+   "reason": "outside-vocabulary:battle-shock / leadership",
+   "gw": "found"
+  },
+  "ds:world-eaters/bloodletters|Daemonic Icon|0": {
+   "owner": "ds:world-eaters/bloodletters",
+   "ownerName": "Bloodletters",
+   "source": "Daemonic Icon",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "SET",
+     "id": "Ld",
+     "v": "6+"
+    }
+   ],
+   "attack": null,
+   "side": "stat",
+   "reach": {
+    "type": "bearerUnit"
+   },
+   "conditions": [],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:world-eaters/bloodletters|Instrument of Chaos|0": {
+   "owner": "ds:world-eaters/bloodletters",
+   "ownerName": "Bloodletters",
+   "source": "Instrument of Chaos",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Add 1 to Charge rolls made for the bearer's unit.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / charge eligibility",
+   "gw": "found"
+  },
+  "ds:world-eaters/bloodcrushers|Brass Stampede|0": {
+   "owner": "ds:world-eaters/bloodcrushers",
+   "ownerName": "Bloodcrushers",
+   "source": "Brass Stampede",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of this unit and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers D3 mortal wounds.",
+   "status": "unread",
+   "reason": "outside-vocabulary:mortal wounds",
+   "gw": "found"
+  },
+  "ds:world-eaters/bloodcrushers|Daemonic Icon|0": {
+   "owner": "ds:world-eaters/bloodcrushers",
+   "ownerName": "Bloodcrushers",
+   "source": "Daemonic Icon",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "SET",
+     "id": "Ld",
+     "v": "6+"
+    }
+   ],
+   "attack": null,
+   "side": "stat",
+   "reach": {
+    "type": "bearerUnit"
+   },
+   "conditions": [],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:world-eaters/bloodcrushers|Instrument of Chaos|0": {
+   "owner": "ds:world-eaters/bloodcrushers",
+   "ownerName": "Bloodcrushers",
+   "source": "Instrument of Chaos",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Add 1 to Charge rolls made for the bearer's unit.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / charge eligibility",
+   "gw": "found"
+  },
+  "ds:world-eaters/chaos-spawn|To Slake its Rage|0": {
+   "owner": "ds:world-eaters/chaos-spawn",
+   "ownerName": "Chaos Spawn",
+   "source": "To Slake its Rage",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "This unit is eligible to declare a charge in a turn in which it Advanced.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / charge eligibility",
+   "gw": "found"
+  },
+  "ds:world-eaters/chaos-land-raider|Assault Ramp|0": {
+   "owner": "ds:world-eaters/chaos-land-raider",
+   "ownerName": "Chaos Land Raider",
+   "source": "Assault Ramp",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Each time a unit disembarks from this model after it has made a Normal move, that unit makes an assault disembark move (Core Rules, 18.06) for that disembarkation.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "ds:world-eaters/chaos-land-raider|Transport|0": {
+   "owner": "ds:world-eaters/chaos-land-raider",
+   "ownerName": "Chaos Land Raider",
+   "source": "Transport",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "This model has a transport capacity of 14 WORLD EATERS INFANTRY models.",
+   "status": "unread",
+   "reason": "outside-vocabulary:transports",
+   "gw": "found"
+  },
+  "ds:world-eaters/chaos-land-raider|Transport|1": {
+   "owner": "ds:world-eaters/chaos-land-raider",
+   "ownerName": "Chaos Land Raider",
+   "source": "Transport",
+   "sourceKind": "ability",
+   "idx": 1,
+   "text": "Each POSSESSED and TERMINATOR model takes up the space of 2 models.",
+   "status": "unread",
+   "reason": "unparsed:each POSSESSED and TERMINATOR model takes up the space of 2 models",
+   "gw": "found"
+  },
+  "ds:world-eaters/chaos-land-raider|Damaged: 1-5 wounds remaining|0": {
+   "owner": "ds:world-eaters/chaos-land-raider",
+   "ownerName": "Chaos Land Raider",
+   "source": "Damaged: 1-5 wounds remaining",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": -1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "woundsRemaining",
+     "v": "1-5",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:world-eaters/khorne-lord-of-skulls|Idol of Blessed Blood|0": {
+   "owner": "ds:world-eaters/khorne-lord-of-skulls",
+   "ownerName": "Khorne Lord of Skulls",
+   "source": "Idol of Blessed Blood",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "At the start of the battle round, if this model is on the battlefield, when you make a Blessings of Khorne roll, roll one additional D6.",
+   "status": "unread",
+   "reason": "outside-vocabulary:faction mechanic",
+   "gw": "found"
+  },
+  "ds:world-eaters/khorne-lord-of-skulls|Super-heavy War Engine|0": {
+   "owner": "ds:world-eaters/khorne-lord-of-skulls",
+   "ownerName": "Khorne Lord of Skulls",
+   "source": "Super-heavy War Engine",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Each time this model makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4\" or less in height.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / charge eligibility",
+   "gw": "found"
+  },
+  "ds:world-eaters/khorne-lord-of-skulls|Super-heavy War Engine|1": {
+   "owner": "ds:world-eaters/khorne-lord-of-skulls",
+   "ownerName": "Khorne Lord of Skulls",
+   "source": "Super-heavy War Engine",
+   "sourceKind": "ability",
+   "idx": 1,
+   "text": "When doing so it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "ds:world-eaters/khorne-lord-of-skulls|Super-heavy War Engine|2": {
+   "owner": "ds:world-eaters/khorne-lord-of-skulls",
+   "ownerName": "Khorne Lord of Skulls",
+   "source": "Super-heavy War Engine",
+   "sourceKind": "ability",
+   "idx": 2,
+   "text": "It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a roll of 1, this model is Battle-shocked.",
+   "status": "unread",
+   "reason": "outside-vocabulary:battle-shock / leadership",
+   "gw": "found"
+  },
+  "ds:world-eaters/khorne-lord-of-skulls|Damaged: 1-8 wounds remaining|0": {
+   "owner": "ds:world-eaters/khorne-lord-of-skulls",
+   "ownerName": "Khorne Lord of Skulls",
+   "source": "Damaged: 1-8 wounds remaining",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "While this model has 1-8 wounds remaining, subtract 4 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "ST",
+     "id": "ocMinus",
+     "v": 4
+    },
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": -1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "mixed",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "woundsRemaining",
+     "v": "1-8",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:world-eaters/chaos-predator-annihilator|Blood-hungry Annihilator|0": {
+   "owner": "ds:world-eaters/chaos-predator-annihilator",
+   "ownerName": "Chaos Predator Annihilator",
+   "source": "Blood-hungry Annihilator",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Each time this model makes a ranged attack that targets the closest eligible MONSTER or VEHICLE target within 18\", you can re-roll the Wound roll and you can re-roll the Damage roll.",
+   "status": "unread",
+   "reason": "unparsed:attack target \"the closest eligible MONSTER or VEHIC\"",
+   "gw": "found"
+  },
+  "ds:world-eaters/chaos-predator-annihilator|Damaged: 1-4 wounds remaining|0": {
+   "owner": "ds:world-eaters/chaos-predator-annihilator",
+   "ownerName": "Chaos Predator Annihilator",
+   "source": "Damaged: 1-4 wounds remaining",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": -1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "woundsRemaining",
+     "v": "1-4",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:world-eaters/chaos-predator-destructor|Punishing Suppression|0": {
+   "owner": "ds:world-eaters/chaos-predator-destructor",
+   "ownerName": "Chaos Predator Destructor",
+   "source": "Punishing Suppression",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks (excluding MONSTERS and VEHICLES).",
+   "status": "read",
+   "kind": "select",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": {
+    "type": "selectedEnemy",
+    "unitsOrModels": "units",
+    "count": "one",
+    "qualifiers": [
+     "hit by one or more of those attacks"
+    ],
+    "excluding": [
+     "MONSTER",
+     "VEHICLE"
+    ],
+    "enemy": true,
+    "selection": true
+   },
+   "conditions": [
+    {
+     "id": "phase",
+     "v": {
+      "phase": "shooting",
+      "turn": "your"
+     },
+     "table": "own"
+    },
+    {
+     "id": "timing",
+     "v": "after shot",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:world-eaters/chaos-predator-destructor|Punishing Suppression|1": {
+   "owner": "ds:world-eaters/chaos-predator-destructor",
+   "ownerName": "Chaos Predator Destructor",
+   "source": "Punishing Suppression",
+   "sourceKind": "ability",
+   "idx": 1,
+   "text": "Until the start of your next turn, that enemy unit is suppressed.",
+   "status": "unread",
+   "reason": "unparsed:that enemy unit is suppressed",
+   "gw": "found"
+  },
+  "ds:world-eaters/chaos-predator-destructor|Punishing Suppression|2": {
+   "owner": "ds:world-eaters/chaos-predator-destructor",
+   "ownerName": "Chaos Predator Destructor",
+   "source": "Punishing Suppression",
+   "sourceKind": "ability",
+   "idx": 2,
+   "text": "While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+   "status": "unread",
+   "reason": "unparsed:while a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the hit roll",
+   "gw": "found"
+  },
+  "ds:world-eaters/chaos-predator-destructor|Damaged: 1-4 wounds remaining|0": {
+   "owner": "ds:world-eaters/chaos-predator-destructor",
+   "ownerName": "Chaos Predator Destructor",
+   "source": "Damaged: 1-4 wounds remaining",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": -1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "woundsRemaining",
+     "v": "1-4",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:world-eaters/heldrake|Airborne Predator|0": {
+   "owner": "ds:world-eaters/heldrake",
+   "ownerName": "Heldrake",
+   "source": "Airborne Predator",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Each time this model makes an attack that targets a unit that can FLY, add 1 to the Hit roll.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": 1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "targetKw",
+     "v": {
+      "any": [
+       "FLY"
+      ]
+     },
+     "table": "COND"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:world-eaters/heldrake|Damaged: 1-4 wounds remaining|0": {
+   "owner": "ds:world-eaters/heldrake",
+   "ownerName": "Heldrake",
+   "source": "Damaged: 1-4 wounds remaining",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": -1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "woundsRemaining",
+     "v": "1-4",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:world-eaters/defiler|Scuttling Walker|0": {
+   "owner": "ds:world-eaters/defiler",
+   "ownerName": "Defiler",
+   "source": "Scuttling Walker",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / charge eligibility",
+   "gw": "found"
+  },
+  "ds:world-eaters/defiler|Scuttling Walker|1": {
+   "owner": "ds:world-eaters/defiler",
+   "ownerName": "Defiler",
+   "source": "Scuttling Walker",
+   "sourceKind": "ability",
+   "idx": 1,
+   "text": "When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "ds:world-eaters/defiler|Unleash Wrath|0": {
+   "owner": "ds:world-eaters/defiler",
+   "ownerName": "Defiler",
+   "source": "Unleash Wrath",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "At the end of your opponent's Movement phase, you can select one enemy unit that was set up on the battlefield within 12\" of this model; this model can then either:",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "ds:world-eaters/defiler|Unleash Wrath|1": {
+   "owner": "ds:world-eaters/defiler",
+   "ownerName": "Defiler",
+   "source": "Unleash Wrath",
+   "sourceKind": "ability",
+   "idx": 1,
+   "text": "Shoot at that unit, but only if it is an eligible target.",
+   "lead": "At the end of your opponent's Movement phase, you can select one enemy unit that was set up on the battlefield within 12\" of this model; this model can then either:",
+   "status": "unread",
+   "reason": "unparsed:shoot at that unit, but only if it is an eligible target",
+   "gw": "found"
+  },
+  "ds:world-eaters/defiler|Unleash Wrath|2": {
+   "owner": "ds:world-eaters/defiler",
+   "ownerName": "Defiler",
+   "source": "Unleash Wrath",
+   "sourceKind": "ability",
+   "idx": 2,
+   "text": "Declare a charge.",
+   "lead": "At the end of your opponent's Movement phase, you can select one enemy unit that was set up on the battlefield within 12\" of this model; this model can then either:",
+   "status": "unread",
+   "reason": "unparsed:declare a charge",
+   "gw": "found"
+  },
+  "ds:world-eaters/defiler|Unleash Wrath|3": {
+   "owner": "ds:world-eaters/defiler",
+   "ownerName": "Defiler",
+   "source": "Unleash Wrath",
+   "sourceKind": "ability",
+   "idx": 3,
+   "text": "This unit must end that charge move engaged with the enemy unit you selected (note that even if this charge is successful, this unit does not receive any Charge bonus this turn).",
+   "lead": "At the end of your opponent's Movement phase, you can select one enemy unit that was set up on the battlefield within 12\" of this model; this model can then either:",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "ds:world-eaters/defiler|Damaged: 1-6 wounds remaining|0": {
+   "owner": "ds:world-eaters/defiler",
+   "ownerName": "Defiler",
+   "source": "Damaged: 1-6 wounds remaining",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": -1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "woundsRemaining",
+     "v": "1-6",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "ds:world-eaters/helbrute|Devoted to Destruction|0": {
+   "owner": "ds:world-eaters/helbrute",
+   "ownerName": "Helbrute",
+   "source": "Devoted to Destruction",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "If this model is equipped with two melee weapons in addition to its close combat weapon, add 2 to the Attacks characteristic of those two weapons.",
+   "status": "unread",
+   "reason": "unparsed:add 2 to the attacks characteristic of those two weapons",
+   "gw": "found"
+  },
+  "ds:world-eaters/helbrute|Frenzy|0": {
+   "owner": "ds:world-eaters/helbrute",
+   "ownerName": "Helbrute",
+   "source": "Frenzy",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "In the Fight phase, when an enemy unit targets this unit, after that unit has resolved its attacks, you can use this ability.",
+   "status": "unread",
+   "reason": "unparsed:when an enemy unit targets this unit, after that unit has resolved its attacks, you can use this ability",
+   "gw": "found"
+  },
+  "ds:world-eaters/helbrute|Frenzy|1": {
+   "owner": "ds:world-eaters/helbrute",
+   "ownerName": "Helbrute",
+   "source": "Frenzy",
+   "sourceKind": "ability",
+   "idx": 1,
+   "text": "If you do, this unit is eligible to fight (even if it has already fought this phase) and must be selected to fight next.",
+   "status": "unread",
+   "reason": "outside-vocabulary:fight sequencing",
+   "gw": "found"
+  },
+  "ds:world-eaters/maulerfiend|The Scent of Blood|0": {
+   "owner": "ds:world-eaters/maulerfiend",
+   "ownerName": "Maulerfiend",
+   "source": "The Scent of Blood",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "In the Charge phase, when this unit declares a charge:",
+   "status": "read",
+   "kind": "leadIn",
+   "readThrough": "its bullets",
+   "effects": [],
+   "conditions": [],
+   "gw": "found"
+  },
+  "ds:world-eaters/maulerfiend|The Scent of Blood|1": {
+   "owner": "ds:world-eaters/maulerfiend",
+   "ownerName": "Maulerfiend",
+   "source": "The Scent of Blood",
+   "sourceKind": "ability",
+   "idx": 1,
+   "text": "If an enemy unit below starting strength is within 9\" of this unit, this unit has +1 to charge rolls.",
+   "lead": "In the Charge phase, when this unit declares a charge:",
+   "alt": "option 1 of 2",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / charge eligibility",
+   "gw": "found"
+  },
+  "ds:world-eaters/maulerfiend|The Scent of Blood|2": {
+   "owner": "ds:world-eaters/maulerfiend",
+   "ownerName": "Maulerfiend",
+   "source": "The Scent of Blood",
+   "sourceKind": "ability",
+   "idx": 2,
+   "text": "If an enemy unit below half strength is within 9\" of this unit, this unit has +2 to charge rolls.",
+   "lead": "In the Charge phase, when this unit declares a charge:",
+   "alt": "option 2 of 2",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / charge eligibility",
+   "gw": "found"
+  },
+  "ds:world-eaters/maulerfiend|Savage Exaltation|0": {
+   "owner": "ds:world-eaters/maulerfiend",
+   "ownerName": "Maulerfiend",
+   "source": "Savage Exaltation",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "Each time this model makes a melee attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll and, if that attack targets an enemy unit that is Below Half-strength, add 1 to the Wound roll as well.",
+   "status": "unread",
+   "reason": "unparsed:and, if that attack targets an enemy unit that is below half-strength, add 1 to the wound roll as well",
+   "partial": [
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": 1,
+     "attack": "melee"
+    }
+   ],
+   "gw": "found"
+  },
+  "ds:world-eaters/maulerfiend|Damaged: 1-4 wounds remaining|0": {
+   "owner": "ds:world-eaters/maulerfiend",
+   "ownerName": "Maulerfiend",
+   "source": "Damaged: 1-4 wounds remaining",
+   "sourceKind": "ability",
+   "idx": 0,
+   "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "hit",
+     "v": -1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "self"
+   },
+   "conditions": [
+    {
+     "id": "woundsRemaining",
+     "v": "1-4",
+     "table": "own"
+    }
+   ],
    "duration": null,
    "gw": "found"
   },
@@ -32859,6 +33717,1482 @@
    "reason": "outside-vocabulary:battle-shock / leadership",
    "gw": "found"
   },
+  "det:world-eaters/cult-of-blood|Idols of Khorne|0": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Idols of Khorne",
+   "sourceKind": "detachmentRule",
+   "idx": 0,
+   "text": "At the start of your Command phase, you can select one of the Idols of Khorne abilities listed below.",
+   "status": "read",
+   "kind": "optionPick",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "timing",
+     "v": "start of your command phase",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "optionSection": "idols of khorne abilities",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Idols of Khorne|1": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Idols of Khorne",
+   "sourceKind": "detachmentRule",
+   "idx": 1,
+   "text": "Until the start of your next Command phase, that ability is active and its effects apply to all WORLD EATERS TITANIC and WORLD EATERS MONSTER units from your army.",
+   "status": "unread",
+   "reason": "unparsed:that ability is active and its effects apply to all WORLD EATERS TITANIC and WORLD EATERS MONSTER units from your ar",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Idols of Khorne|2": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Idols of Khorne",
+   "sourceKind": "detachmentRule",
+   "idx": 2,
+   "text": "You can only select each Idols of Khorne ability once per battle.",
+   "status": "unread",
+   "reason": "unparsed:you can only select each idols of khorne ability once per battle",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Idols of Khorne|3": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Idols of Khorne",
+   "sourceKind": "detachmentRule",
+   "idx": 3,
+   "text": "Idol of Infinite Rage (Aura)",
+   "section": "Idol of Infinite Rage (Aura)",
+   "status": "read",
+   "kind": "heading",
+   "effects": [],
+   "conditions": [],
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Idols of Khorne|4": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Idols of Khorne",
+   "sourceKind": "detachmentRule",
+   "idx": 4,
+   "text": "While a friendly JAKHALS or GOREMONGERS unit is within 6\" of this model (or within 9\" if this model is TITANIC), each time a model in that unit makes an attack, add 1 to the Hit roll and add 1 to the Wound roll.",
+   "section": "Idol of Infinite Rage (Aura)",
+   "status": "unread",
+   "reason": "unparsed:(or within 9\" if this model is TITANIC), each time a model in that unit makes an attack, add 1 to the hit roll and add",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Idols of Khorne|5": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Idols of Khorne",
+   "sourceKind": "detachmentRule",
+   "idx": 5,
+   "text": "Idol of Burning Wrath (Aura)",
+   "section": "Idol of Burning Wrath (Aura)",
+   "status": "read",
+   "kind": "heading",
+   "effects": [],
+   "conditions": [],
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Idols of Khorne|6": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Idols of Khorne",
+   "sourceKind": "detachmentRule",
+   "idx": 6,
+   "text": "While a friendly JAKHALS or GOREMONGERS unit is within 6\" of this model (or within 9\" if this model is TITANIC), add 1\" to the Move characteristic of models in that unit and add 1 to Advance and Charge rolls made for that unit.",
+   "section": "Idol of Burning Wrath (Aura)",
+   "status": "unread",
+   "reason": "unparsed:(or within 9\" if this model is TITANIC), add 1\" to the move characteristic of models in that unit and add 1 to advance",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Idols of Khorne|7": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Idols of Khorne",
+   "sourceKind": "detachmentRule",
+   "idx": 7,
+   "text": "Idol of Blessed Blood (Aura)",
+   "section": "Idol of Blessed Blood (Aura)",
+   "status": "read",
+   "kind": "heading",
+   "effects": [],
+   "conditions": [],
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Idols of Khorne|8": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Idols of Khorne",
+   "sourceKind": "detachmentRule",
+   "idx": 8,
+   "text": "While a friendly JAKHALS or GOREMONGERS unit is within 6\" of this model (or within 9\" if this model is TITANIC), models in that unit have a 4+ invulnerable save.",
+   "section": "Idol of Blessed Blood (Aura)",
+   "status": "unread",
+   "reason": "unparsed:(or within 9\" if this model is TITANIC), models in that unit have a 4+ invulnerable save",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Idols of Khorne|9": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Idols of Khorne",
+   "sourceKind": "detachmentRule",
+   "idx": 9,
+   "text": "KEYWORDS",
+   "section": "KEYWORDS",
+   "status": "read",
+   "kind": "heading",
+   "effects": [],
+   "conditions": [],
+   "gw": "short"
+  },
+  "det:world-eaters/cult-of-blood|Idols of Khorne|10": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Idols of Khorne",
+   "sourceKind": "detachmentRule",
+   "idx": 10,
+   "text": "JAKHALS and GOREMONGERS units from your army have the BATTLELINE keyword.",
+   "section": "KEYWORDS",
+   "status": "unread",
+   "reason": "outside-vocabulary:keyword",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Chosen of the Blood God|0": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Chosen of the Blood God",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "WORLD EATERS MONSTER model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "all": [
+      "WORLD EATERS",
+      "MONSTER"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Chosen of the Blood God|1": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Chosen of the Blood God",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "Add 3\" to the range of the bearers Aura abilities.",
+   "status": "unread",
+   "reason": "unparsed:add 3\" to the range of the bearers aura abilities",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Butcher Lord|0": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Butcher Lord",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "WORLD EATERS INFANTRY model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "all": [
+      "WORLD EATERS",
+      "INFANTRY"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Butcher Lord|1": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Butcher Lord",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "The bearer has the Infiltrators ability.",
+   "status": "unread",
+   "reason": "outside-vocabulary:ability infiltrators",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Brazen Form|0": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Brazen Form",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "WORLD EATERS MONSTER model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "all": [
+      "WORLD EATERS",
+      "MONSTER"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Brazen Form|1": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Brazen Form",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "Add 1 to the bearer's Toughness characteristic and the bearer has the Feel No Pain 5+ ability.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "t",
+     "v": 1
+    },
+    {
+     "table": "DF",
+     "id": "fnp",
+     "v": 5
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "bearer"
+   },
+   "conditions": [
+    {
+     "id": "onlyFor",
+     "v": {
+      "kw": {
+       "all": [
+        "WORLD EATERS",
+        "MONSTER"
+       ]
+      },
+      "of": "model"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Strategic Slaughter|0": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Strategic Slaughter",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "WORLD EATERS model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "any": [
+      "WORLD EATERS"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Strategic Slaughter|1": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Strategic Slaughter",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "After both players have deployed their armies, select up to three JAKHALS and/or GOREMONGERS units from your army and redeploy them.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Strategic Slaughter|2": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Strategic Slaughter",
+   "sourceKind": "enhancement",
+   "idx": 2,
+   "text": "When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Bloody Vengeance|0": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Bloody Vengeance",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Until the end of the battle, each time a model in a JAKHALS or GOREMONGERS unit from your army makes an attack that targets the enemy unit that just destroyed your unit, you can re-roll the Hit roll.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "rrHit",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "army",
+    "kw": {
+     "any": [
+      "JAKHALS",
+      "GOREMONGERS"
+     ]
+    },
+    "unitsOrModels": "units"
+   },
+   "conditions": [
+    {
+     "id": "targetDestroyedYourUnit",
+     "v": true,
+     "table": "own"
+    },
+    {
+     "id": "when",
+     "v": "Any phase.",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the battle",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Drawn to the Slaughter|0": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Drawn to the Slaughter",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|In the Shadow of Brass Idols|0": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "In the Shadow of Brass Idols",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Until the end of the phase, models in your unit have the Feel No Pain 6+ ability.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "fnp",
+     "v": 6
+    }
+   ],
+   "attack": null,
+   "side": "defence",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target",
+    "targetKw": {
+     "any": [
+      "JAKHALS",
+      "GOREMONGERS"
+     ]
+    },
+    "targetQualifier": "that was selected as the target as one or more of the attacking unit's attacks"
+   },
+   "conditions": [
+    {
+     "id": "phase",
+     "v": {
+      "phase": "shooting|fight",
+      "turn": "opp|either"
+     },
+     "table": "own"
+    },
+    {
+     "id": "when",
+     "v": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the phase",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|In the Shadow of Brass Idols|1": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "In the Shadow of Brass Idols",
+   "sourceKind": "stratagem",
+   "idx": 1,
+   "text": "If your unit is within 6\" of one or more friendly WORLD EATERS MONSTER units, or within 9\" of one or more friendly WORLD EATERS TITANIC units, your unit has the Feel No Pain 5+ ability instead.",
+   "status": "unread",
+   "reason": "unparsed:or within 9\" of one or more friendly WORLD EATERS TITANIC units, your unit has the feel no pain 5+ ability instead",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Bloodthirsty Horde|0": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Bloodthirsty Horde",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Until the end of the phase, each time your unit is selected to fight, when determining which models in it are eligible to fight, any models in your unit that are within 3\" of one or more enemy models are eligible to fight.",
+   "status": "unread",
+   "reason": "outside-vocabulary:fight sequencing",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Bloodthirsty Horde|1": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Bloodthirsty Horde",
+   "sourceKind": "stratagem",
+   "idx": 1,
+   "text": "When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within Engagement Range of their unit.",
+   "status": "unread",
+   "reason": "outside-vocabulary:engagement / detection",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Fail Not the Blood God|0": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Fail Not the Blood God",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Until the end of the phase, each time a model in your unit makes an attack, re-roll a Hit roll of 1.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "rrHit1",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target",
+    "targetKw": {
+     "any": [
+      "JAKHALS",
+      "GOREMONGERS"
+     ]
+    }
+   },
+   "conditions": [
+    {
+     "id": "when",
+     "v": "Fight phase.",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the phase",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Fail Not the Blood God|1": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Fail Not the Blood God",
+   "sourceKind": "stratagem",
+   "idx": 1,
+   "text": "If that model's unit is within 6\" of one or more friendly WORLD EATERS MONSTER units, or within 9\" of one or more friendly WORLD EATERS TITANIC units, you can re-roll the Hit roll instead.",
+   "status": "unread",
+   "reason": "unparsed:if that model's unit is within 6\" of one or more friendly WORLD EATERS MONSTER units, or within 9\" of one or more frie",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Brazen Idol|0": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Brazen Idol",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Select the Idol of Infinite Rage, Idol of Burning Wrath or Idol of Blessed Blood.",
+   "status": "unread",
+   "reason": "unparsed:select the idol of infinite rage, idol of burning wrath or idol of blessed blood",
+   "gw": "found"
+  },
+  "det:world-eaters/cult-of-blood|Brazen Idol|1": {
+   "owner": "det:world-eaters/cult-of-blood",
+   "ownerName": "Cult of Blood",
+   "source": "Brazen Idol",
+   "sourceKind": "stratagem",
+   "idx": 1,
+   "text": "Until the start of your next Command phase, that Idols of Khorne ability is active for your unit instead of any other Idols of Khorne ability that is active for your army, even if you have already selected that ability this battle.",
+   "status": "unread",
+   "reason": "unparsed:that idols of khorne ability is active for your unit instead of any other idols of khorne ability that is active for you",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Brazen Fury|0": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Brazen Fury",
+   "sourceKind": "detachmentRule",
+   "idx": 0,
+   "text": "WORLD EATERS POSSESSED units from your army have the following ability:",
+   "status": "unread",
+   "reason": "unparsed:WORLD EATERS POSSESSED units from your army have the following ability",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Brazen Fury|1": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Brazen Fury",
+   "sourceKind": "detachmentRule",
+   "idx": 1,
+   "text": "In your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6\".",
+   "sub": "Brazen Fury",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Brazen Fury|2": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Brazen Fury",
+   "sourceKind": "detachmentRule",
+   "idx": 2,
+   "text": "That surge move is a Brazen Fury move.",
+   "sub": "Brazen Fury",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Malicious Vigour|0": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Malicious Vigour",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "SLAUGHTERBOUND model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "any": [
+      "SLAUGHTERBOUND"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Malicious Vigour|1": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Malicious Vigour",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "Each time the bearer's unit makes a Brazen Fury move, it is treated as having rolled a 6 for the distance the unit can be moved.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Killing Clarity|0": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Killing Clarity",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "WORLD EATERS DAEMON model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "all": [
+      "WORLD EATERS",
+      "DAEMON"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Killing Clarity|1": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Killing Clarity",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "Each time the bearer's unit destroys an enemy unit, roll one D6: on a 4+, you gain 1CP.",
+   "status": "unread",
+   "reason": "outside-vocabulary:command points",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Frenzied Focus|0": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Frenzied Focus",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "WORLD EATERS DAEMON model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "all": [
+      "WORLD EATERS",
+      "DAEMON"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Frenzied Focus|1": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Frenzied Focus",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "Each time a model in the bearer's unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+, instead of only a 6.",
+   "status": "unread",
+   "reason": "unparsed:instead of only a 6",
+   "partial": [
+    {
+     "table": "FX",
+     "id": "critHit",
+     "v": 5,
+     "attack": "any"
+    }
+   ],
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Violent Demise|0": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Violent Demise",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "WORLD EATERS DAEMON model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "all": [
+      "WORLD EATERS",
+      "DAEMON"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Violent Demise|1": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Violent Demise",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "The bearer's Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6.",
+   "status": "unread",
+   "reason": "outside-vocabulary:mortal wounds",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Violent Demise|2": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Violent Demise",
+   "sourceKind": "enhancement",
+   "idx": 2,
+   "text": "In addition, the bearer has the Deadly Demise D3+1 ability, instead of the Deadly Demise D3 ability.",
+   "status": "unread",
+   "reason": "outside-vocabulary:ability deadly demise",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Daemonic Resistance|0": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Daemonic Resistance",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Wound roll.",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "DF",
+     "id": "woundMinus",
+     "v": 1,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "defence",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target",
+    "targetKw": {
+     "all": [
+      "WORLD EATERS",
+      "POSSESSED"
+     ]
+    },
+    "targetQualifier": "that was selected as the target of one or more of the attacking unit's attacks"
+   },
+   "conditions": [
+    {
+     "id": "phase",
+     "v": {
+      "phase": "shooting|fight",
+      "turn": "opp|either"
+     },
+     "table": "own"
+    },
+    {
+     "id": "when",
+     "v": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+     "table": "own"
+    }
+   ],
+   "duration": "end of the phase",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Daemonic Strength|0": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Daemonic Strength",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Until the end of the phase, each time an attack made by a model in your unit is allocated to an enemy model, if your unit has the EIGHTBOUND keyword and that enemy model is not a MONSTER or VEHICLE, add 1 to the Damage characteristic of that attack.",
+   "status": "unread",
+   "reason": "unparsed:each time an attack made by a model in your unit is allocated to an enemy model, if your unit has the EIGHTBOUND keywo",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Daemonic Strength|1": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Daemonic Strength",
+   "sourceKind": "stratagem",
+   "idx": 1,
+   "text": "If your unit has the EXALTED EIGHTBOUND keyword and that enemy model is a MONSTER or VEHICLE, add 1 to the Damage characteristic of that attack instead.",
+   "status": "unread",
+   "reason": "unparsed:and that enemy model is a MONSTER or VEHICLE, add 1 to the damage characteristic of that attack instead",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Immortal Fury|0": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Immortal Fury",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play.",
+   "status": "unread",
+   "reason": "outside-vocabulary:on destruction",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Immortal Fury|1": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Immortal Fury",
+   "sourceKind": "stratagem",
+   "idx": 1,
+   "text": "The destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
+   "status": "unread",
+   "reason": "outside-vocabulary:on destruction",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Rapid Manifestation|0": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Rapid Manifestation",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Warp Stalkers|0": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Warp Stalkers",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Until the end of the phase, each time a model in your unit makes a Normal, Advance, Fall Back or Charge move, it can move through enemy models (excluding MONSTERS and VEHICLES).",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / charge eligibility",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Warp Stalkers|1": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Warp Stalkers",
+   "sourceKind": "stratagem",
+   "idx": 1,
+   "text": "When doing so, it can move within Engagement Range of such models but, unless that move was a Charge move, it cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/possessed-slaughterbound|Horrifying Violence|0": {
+   "owner": "det:world-eaters/possessed-slaughterbound",
+   "ownerName": "Possessed Slaughterbound",
+   "source": "Horrifying Violence",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Each enemy unit within Engagement Range of your unit must take a Battle-shock test, subtracting 1 from that test.",
+   "status": "unread",
+   "reason": "outside-vocabulary:battle-shock / leadership",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Rush to the Fray|0": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Rush to the Fray",
+   "sourceKind": "detachmentRule",
+   "idx": 0,
+   "text": "Each time a WORLD EATERS unit from your army disembarks from a TRANSPORT, until the end of the turn, add 1 to Charge rolls made for that unit and that unit's melee weapons have the [lance] ability.",
+   "status": "unread",
+   "reason": "unparsed:each time a WORLD EATERS unit from your army disembarks from a TRANSPORT, until the end of the turn, add 1 to charge",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Murderous Onslaught|0": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Murderous Onslaught",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "WORLD EATERS model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "any": [
+      "WORLD EATERS"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Murderous Onslaught|1": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Murderous Onslaught",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "If the bearer's unit disembarked from a TRANSPORT this turn, until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer's unit.",
+   "status": "unread",
+   "reason": "outside-vocabulary:stratagems",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Aggressive Deployment|0": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Aggressive Deployment",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "WORLD EATERS model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "any": [
+      "WORLD EATERS"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Aggressive Deployment|1": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Aggressive Deployment",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "In the Declare Battle Formations step, if the bearer starts the battle embarked within a DEDICATED TRANSPORT, that DEDICATED TRANSPORT has the Scouts 9\" ability.",
+   "status": "unread",
+   "reason": "outside-vocabulary:transports",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Unleash Hell|0": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Unleash Hell",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "WORLD EATERS model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "any": [
+      "WORLD EATERS"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Unleash Hell|1": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Unleash Hell",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "At the start of your Shooting phase, you can select one VEHICLE model within 6\" of the bearer or, if the bearer is embarked within a TRANSPORT, you can select that TRANSPORT model.",
+   "status": "unread",
+   "reason": "outside-vocabulary:transports",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Unleash Hell|2": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Unleash Hell",
+   "sourceKind": "enhancement",
+   "idx": 2,
+   "text": "Until the end of the phase, after the selected model has shot, select one enemy unit hit by one or more of those attacks.",
+   "status": "unread",
+   "reason": "unparsed:after the selected model has shot, select one enemy unit hit by one or more of those attacks",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Unleash Hell|3": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Unleash Hell",
+   "sourceKind": "enhancement",
+   "idx": 3,
+   "text": "Until the start of your next turn, that enemy unit is suppressed.",
+   "status": "unread",
+   "reason": "unparsed:\"that enemy unit\" refers to a unit no earlier sentence selected",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Unleash Hell|4": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Unleash Hell",
+   "sourceKind": "enhancement",
+   "idx": 4,
+   "text": "While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+   "status": "unread",
+   "reason": "unparsed:while a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the hit roll",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Infernal Infusion|0": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Infernal Infusion",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "WORLD EATERS model only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "any": [
+      "WORLD EATERS"
+     ]
+    },
+    "of": "model"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Infernal Infusion|1": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Infernal Infusion",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "Once per battle, at the start of the Fight phase, the bearer can use this Enhancement.",
+   "status": "read",
+   "kind": "activation",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [
+    {
+     "id": "oncePerBattle",
+     "table": "COND"
+    },
+    {
+     "id": "timing",
+     "v": "start of the fight phase",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Infernal Infusion|2": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Infernal Infusion",
+   "sourceKind": "enhancement",
+   "idx": 2,
+   "text": "If it does, until the end of the phase, the bearer's unit has the Fights First ability.",
+   "status": "unread",
+   "reason": "outside-vocabulary:ability fights first",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Endless Pursuit of Violence|0": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Endless Pursuit of Violence",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "If your WORLD EATERS INFANTRY unit is wholly within 6\" of that TRANSPORT, it can embark within it.",
+   "status": "unread",
+   "reason": "outside-vocabulary:transports",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Smash Through|0": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Smash Through",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Until the end of the phase, each time your unit makes a Normal or Advance move, it can move horizontally through terrain features.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Aggressive Disembarkation|0": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Aggressive Disembarkation",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "One WORLD EATERS unit embarked within your RHINO can disembark.",
+   "status": "unread",
+   "reason": "outside-vocabulary:transports",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Aggressive Disembarkation|1": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Aggressive Disembarkation",
+   "sourceKind": "stratagem",
+   "idx": 1,
+   "text": "When doing so, models in that unit can be set up anywhere on the battlefield wholly within 6\" of your RHINO and can be set up within Engagement Range of one or more enemy units.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Full-Throttle Assault|0": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Full-Throttle Assault",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Until the end of the phase, each time a WORLD EATERS unit disembarks from that model after it has made a Normal move, that unit makes an assault disembark move (Core Rules, 18.06) for that disembarkation.",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Unrelenting Advance|0": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Unrelenting Advance",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Your model can make a Normal move of up to 6\".",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/goretrack-onslaught|Fury Unleashed|0": {
+   "owner": "det:world-eaters/goretrack-onslaught",
+   "ownerName": "Goretrack Onslaught",
+   "source": "Fury Unleashed",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "One KHORNE BERZERKERS unit embarked within your model can make a disembark move and then make a surge move of up to D6+2\".",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Rampaging Terrors|0": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Rampaging Terrors",
+   "sourceKind": "detachmentRule",
+   "idx": 0,
+   "text": "Friendly DAEMON VEHICLE units have the following ability:",
+   "status": "unread",
+   "reason": "unparsed:friendly DAEMON VEHICLE units have the following ability",
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Rampaging Terrors|1": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Rampaging Terrors",
+   "sourceKind": "detachmentRule",
+   "idx": 1,
+   "text": "At the start of the Fight phase, you can select one enemy unit engaged with this unit.",
+   "sub": "Terror of Khorne",
+   "status": "read",
+   "kind": "select",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": {
+    "type": "selectedEnemy",
+    "unitsOrModels": "units",
+    "count": "one",
+    "qualifiers": [
+     "engaged with this unit"
+    ],
+    "enemy": true,
+    "selection": true
+   },
+   "conditions": [
+    {
+     "id": "timing",
+     "v": "start of the fight phase",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Rampaging Terrors|2": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Rampaging Terrors",
+   "sourceKind": "detachmentRule",
+   "idx": 2,
+   "text": "That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+   "sub": "Terror of Khorne",
+   "status": "unread",
+   "reason": "outside-vocabulary:battle-shock / leadership",
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Rampaging Terrors|3": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Rampaging Terrors",
+   "sourceKind": "detachmentRule",
+   "idx": 3,
+   "text": "You cannot select the same enemy unit for this effect more than once per phase.",
+   "sub": "Terror of Khorne",
+   "status": "unread",
+   "reason": "unparsed:you cannot select the same enemy unit for this effect more than once per phase",
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Rampaging Terrors|4": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Rampaging Terrors",
+   "sourceKind": "detachmentRule",
+   "idx": 4,
+   "text": "This detachment has the tag and cannot be taken with another ONSLAUGHT detachment.",
+   "status": "unread",
+   "reason": "unparsed:this detachment has the tag and cannot be taken with another ONSLAUGHT detachment",
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Talons of Butchery|0": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Talons of Butchery",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "MAULERFIEND unit only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "any": [
+      "MAULERFIEND"
+     ]
+    },
+    "of": "unit"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Talons of Butchery|1": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Talons of Butchery",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "This unit's Maulerfiend Fists have [CLEAVE 2].",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "cleave",
+     "v": 2,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit"
+   },
+   "conditions": [
+    {
+     "id": "weapon",
+     "v": "maulerfiend fists",
+     "table": "own"
+    },
+    {
+     "id": "onlyFor",
+     "v": {
+      "kw": {
+       "any": [
+        "MAULERFIEND"
+       ]
+      },
+      "of": "unit"
+     },
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Murder-Forged Entity|0": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Murder-Forged Entity",
+   "sourceKind": "enhancement",
+   "idx": 0,
+   "text": "WORLD EATERS VEHICLE unit only.",
+   "status": "read",
+   "kind": "restriction",
+   "effects": [],
+   "attack": null,
+   "side": null,
+   "reach": null,
+   "conditions": [],
+   "duration": null,
+   "only": {
+    "kw": {
+     "all": [
+      "WORLD EATERS",
+      "VEHICLE"
+     ]
+    },
+    "of": "unit"
+   },
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Murder-Forged Entity|1": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Murder-Forged Entity",
+   "sourceKind": "enhancement",
+   "idx": 1,
+   "text": "This unit has DAEMON.",
+   "status": "unread",
+   "reason": "unparsed:this unit has DAEMON",
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Apoplectic Clarity|0": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Apoplectic Clarity",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Your unit's attacks can ignore modifiers to:",
+   "status": "read",
+   "kind": "leadIn",
+   "readThrough": "its bullets",
+   "effects": [],
+   "conditions": [],
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Apoplectic Clarity|1": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Apoplectic Clarity",
+   "sourceKind": "stratagem",
+   "idx": 1,
+   "text": "BS.",
+   "lead": "Your unit's attacks can ignore modifiers to:",
+   "status": "unread",
+   "reason": "unparsed:your unit's attacks can ignore modifiers to bs",
+   "gw": "short"
+  },
+  "det:world-eaters/brazen-engines|Apoplectic Clarity|2": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Apoplectic Clarity",
+   "sourceKind": "stratagem",
+   "idx": 2,
+   "text": "WS.",
+   "lead": "Your unit's attacks can ignore modifiers to:",
+   "status": "unread",
+   "reason": "unparsed:your unit's attacks can ignore modifiers to ws",
+   "gw": "short"
+  },
+  "det:world-eaters/brazen-engines|Apoplectic Clarity|3": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Apoplectic Clarity",
+   "sourceKind": "stratagem",
+   "idx": 3,
+   "text": "Hit rolls and wound rolls.",
+   "lead": "Your unit's attacks can ignore modifiers to:",
+   "status": "read",
+   "kind": "effect",
+   "effects": [
+    {
+     "table": "FX",
+     "id": "ignoreHitRollMods",
+     "v": true,
+     "attack": "any"
+    },
+    {
+     "table": "FX",
+     "id": "ignoreWoundMods",
+     "v": true,
+     "attack": "any"
+    }
+   ],
+   "attack": "any",
+   "side": "attack",
+   "reach": {
+    "type": "unit",
+    "of": "stratagem target",
+    "targetKw": {
+     "all": [
+      "DAEMON",
+      "VEHICLE"
+     ]
+    }
+   },
+   "conditions": [
+    {
+     "id": "phase",
+     "v": {
+      "phase": "shooting|fight",
+      "turn": "your|either"
+     },
+     "table": "own"
+    },
+    {
+     "id": "when",
+     "v": "Your Shooting phase or the Fight phase, when a friendly DAEMON VEHICLE unit is selected to attack.",
+     "table": "own"
+    }
+   ],
+   "duration": null,
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Trail of Destruction|0": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Trail of Destruction",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Your unit has MOBILE.",
+   "status": "unread",
+   "reason": "unparsed:your unit has MOBILE",
+   "gw": "found"
+  },
+  "det:world-eaters/brazen-engines|Goaded to Fury|0": {
+   "owner": "det:world-eaters/brazen-engines",
+   "ownerName": "Brazen Engines",
+   "source": "Goaded to Fury",
+   "sourceKind": "stratagem",
+   "idx": 0,
+   "text": "Your unit can make a surge move of up to D6\".",
+   "status": "unread",
+   "reason": "outside-vocabulary:movement / deployment",
+   "gw": "found"
+  },
   "faction:thousand-sons|Cabal of Sorcerers|0": {
    "owner": "faction:thousand-sons",
    "ownerName": "Thousand Sons",
@@ -50728,18 +53062,6 @@
    "text": "Your unit must make an ingress move in your next Movement phase (including in your first turn).",
    "status": "unread",
    "reason": "outside-vocabulary:movement / deployment",
-   "gw": "found"
-  },
-  "det:chaos-daemons/daemonic-incursion|The Realm of Chaos|2": {
-   "owner": "det:chaos-daemons/daemonic-incursion",
-   "ownerName": "Daemonic Incursion",
-   "source": "The Realm of Chaos",
-   "sourceKind": "stratagem",
-   "idx": 2,
-   "text": "You cannot target units that are within Engagement Range of one or more enemy units with this Stratagem.",
-   "sub": "RESTRICTION",
-   "status": "unread",
-   "reason": "outside-vocabulary:stratagems",
    "gw": "found"
   },
   "det:chaos-daemons/daemonic-incursion|Daemonic Invulnerability|0": {

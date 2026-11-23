@@ -57,6 +57,12 @@ list to it.
 The owner's New Recruit JSON exports, one per list. They are the only source of New Recruit's ids: verify/import-ids.js writes
 data.js NR_IDS from them, and the in-app import looks a selection up by an id they have shown, else by its exact New Recruit name.
 
+## import-madeup/
+Made-up New Recruit-shaped exports of a catalogued faction (not the owner's lists): units, enhancements and detachments no list has,
+their ids made up so the import finds them by exact name. verify/import-test.js (section 6) builds them as the phone does and holds
+what they must give: Murder-Forged Entity's DAEMON, Gateways to Glory's MOBILE, the Defiler's excruciator cannons swap (the full swap
+built, a half swap refused), a detachment named by Wahapedia's heading (Possessed Slaughterband).
+
 ## catalog/
 The faction catalogues (docs/catalog.md): the committed rows of every current datasheet of a catalogued faction. The gate step
 catalog holds them to Wahapedia's faction page and datasheet pages.

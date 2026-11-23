@@ -38,7 +38,14 @@ module.exports = ROOT => {
     const sec = head => { const a = L.indexOf(head), o = []; if(a < 0) return o;
       for(let k = a + 1; k < L.length && !/^[A-Z][A-Z’' ]{3,}$/.test(L[k]) && !/^YOUR /.test(L[k]) && !/^KEYWORDS/.test(L[k]); k++) o.push(L[k]); return o; };
     const C = sec('UNIT COMPOSITION'), W = sec('WARGEAR OPTIONS');
-    const models = C.map(l => /^- (\d+)(?:-(\d+))? (.+?)(?: models?)?(?:\s+[–-]\s+EPIC HERO)?$/.exec(l)).filter(Boolean).map(m => ({ model:m[3].replace(/\s+[–-]\s+EPIC HERO$/, ''), min:+m[1], max:+(m[2] || m[1]) }));
+    // (a line of several models, "- 1 Jakhal Pack Leader, 1 Dishonoured and 8 Jakhals", and its alternatives after "or:": each model, its
+    // numbers from the fewest to the most the alternatives give, 0 where an alternative has none)
+    const alts = [[]];
+    for (const l of C) { if (/^or:?$/i.test(l)) { alts.push([]); continue; } const m = /^- (.+)$/.exec(l); if (!m) continue;
+      for (const seg of m[1].split(/,\s*|\s+and\s+(?=\d)/)) { const x = /^(\d+)(?:-(\d+))? (.+?)(?: models?)?(?:\s+[–-]\s+EPIC HERO)?$/.exec(seg.trim()); if (x) alts[alts.length - 1].push({ model:x[3].replace(/\s+[–-]\s+EPIC HERO$/, ''), min:+x[1], max:+(x[2] || x[1]) }); } }
+    const models = [];
+    for (const a of alts) for (const x of a) { const c = models.find(y => sing(y.model) === sing(x.model)); if (c) { c.min = Math.min(c.min, x.min); c.max = Math.max(c.max, x.max); } else models.push(Object.assign({}, x)); }
+    if (alts.length > 1) for (const c of models) if (alts.some(a => !a.some(x => sing(x.model) === sing(c.model)))) c.min = 0;
     return { file:pg.file, models, equipped:C.filter(l => /equipped with:/i.test(l)), options:W, lines:{ composition:C, options:W } };
   }
   return { index, detachments, sheet, n, sing, FJ };

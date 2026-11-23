@@ -12,33 +12,6 @@
   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 3113, 3144 (KEYWORDS: Vehicle, Walker, Chaos, Daemon, Soul Grinder), 3128 (Daemonic Allegiance); BSData Chaos - Chaos Daemons Library, Tzeentch Soul Grinder categories; data.js DATASHEETS chaos-daemons/tzeentch-soul-grinder."
  },
  {
-  "datasheet": "chaos-daemons/skarbrand",
-  "what": "abilities Rage Embodied text",
-  "reason": "The list is a World Eaters army: its row is the World Eaters codex's Skarbrand datasheet (faction world-eaters), whose aura names BLOOD LEGIONS units; the catalogue row is the Chaos Daemons datasheet, whose aura names KHORNE LEGIONES DAEMONICA units. Both are GW's words, each for its own army; the list's row is kept.",
-  "evidence": "verify/.cache/waha/ds/world-eaters_Skarbrand.html: \"While a friendly BLOOD LEGIONS unit is within 6\\\" of this model\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 462-465: \"While a friendly Khorne Legiones Daemonica unit is within 6\\\" of this model\"; verify/sources/nr/big-demons-baby.txt (Skarbrand, Abilities).",
-  "lists": [
-   "big-demons-baby"
-  ]
- },
- {
-  "datasheet": "chaos-daemons/skarbrand",
-  "what": "abilities Damaged: 1-7 wounds remaining text",
-  "reason": "The list is a World Eaters army: its row is the World Eaters codex’s Skarbrand datasheet (faction world-eaters), whose Damaged line adds 2 to the Attacks of \"this model’s melee weapons\" (the list’s words are that page’s: verify/words.js); the catalogue row is the Chaos Daemons datasheet, which names its one melee weapon, \"Slaughter and Carnage\". Both are GW’s words, each for its own army (the same weapon); the list’s row is kept.",
-  "evidence": "verify/.cache/waha/ds/world-eaters_Skarbrand.html DAMAGED: 1-7 WOUNDS REMAINING: \"While this model has 1-7 wounds remaining, add 2 to the Attacks characteristic of this model’s melee weapons.\"; verify/.cache/waha/ds/chaos-daemons_Skarbrand.html and verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 462-466: \"… add 2 to the Attacks characteristic of this model’s Slaughter and Carnage.\"",
-  "lists": [
-   "big-demons-baby"
-  ]
- },
- {
-  "datasheet": "chaos-daemons/bloodthirster",
-  "what": "abilities Daemon Lord of Khorne text",
-  "reason": "The list is a World Eaters army: its row is the World Eaters codex's Bloodthirster datasheet (faction world-eaters), whose aura names BLOOD LEGIONS units; the catalogue row is the Chaos Daemons datasheet, whose aura names KHORNE LEGIONES DAEMONICA units. Both are GW's words, each for its own army; the list's row is kept.",
-  "evidence": "verify/.cache/waha/ds/world-eaters_Bloodthirster.html: \"While a friendly BLOOD LEGIONS unit is within 6\\\" of this model\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_chaos_daemons-e67vyzvv3x-mownb49uc3.txt lines 515-518: \"While a friendly Khorne Legiones Daemonica unit is within 6\\\" of this model\"; verify/sources/nr/big-demons-baby.txt (Bloodthirster, Abilities).",
-  "lists": [
-   "big-demons-baby"
-  ]
- },
- {
   "datasheet": "adeptus-custodes/gyrfalcon-jetbike-sodality",
   "what": "composition Gyrfalcon Jetbiker",
   "reason": "New Recruit names the model Gyrfalcon Jetbike; GW’s UNIT COMPOSITION names it Gyrfalcon Jetbiker (the same two models). Model names follow New Recruit (the catalogue file’s modelNames: kept).",
@@ -100,5 +73,75 @@
   "reason": "New Recruit’s name for one of GW’s four loadouts of the Telemon’s arms (\"Fist\" for Caestus Fist, \"Projectors\" for Twin Neutronium Cascade Projectors); the weapons themselves are rows of the datasheet.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Telemon-Heavy-Dreadnought.html: \"This model is equipped with: 1 Dual Caestus Fists; 1 Spiculus Bolt Launcher; 2 Twin Neutronium Cascade Projectors.\"; WARGEAR OPTIONS \"This model’s Dual Caestus Fists and 2 Twin Neutronium Cascade Projectors can be replaced with one of the following: 1 Adrathic Desolator, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors; 1 Arachnus Storm Cannon, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors; 1 Caestus Fist, 1 Iliastus Accelerator Culverin and 1 Twin Neutronium Cascade Projectors\".",
   "by": "wt-nobs (to review: verify/review/todo-nobs.json)"
+ },
+ {
+  "datasheet": "world-eaters/angron",
+  "what": "abilities The Blood God’s Favour: not in the catalogue",
+  "reason": "New Recruit holds Angron’s WRATHFUL PRESENCE box as its three abilities, one to pick (who “Wrathful Presence: pick one”), as every World Eaters list with Angron has them (their readings and summaries are on these rows); the catalogue row reads the page’s box as GW prints it, one ability. The same words; the lists’ rows are kept.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Angron.html: the box WRATHFUL PRESENCE with its three named abilities (The Blood God’s Favour, Overwhelming Wrath, Driven by Ultimate Rage); verify/sources/nr-json/standard.json (Angron: the three as abilities of their own, “Wrathful Presence: pick one”).",
+  "by": "wt-we (to review: verify/review/todo-we-catalog.json)"
+ },
+ {
+  "datasheet": "world-eaters/angron",
+  "what": "abilities Overwhelming Wrath: not in the catalogue",
+  "reason": "New Recruit holds Angron’s WRATHFUL PRESENCE box as its three abilities, one to pick (who “Wrathful Presence: pick one”), as every World Eaters list with Angron has them (their readings and summaries are on these rows); the catalogue row reads the page’s box as GW prints it, one ability. The same words; the lists’ rows are kept.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Angron.html: the box WRATHFUL PRESENCE with its three named abilities (The Blood God’s Favour, Overwhelming Wrath, Driven by Ultimate Rage); verify/sources/nr-json/standard.json (Angron: the three as abilities of their own, “Wrathful Presence: pick one”).",
+  "by": "wt-we (to review: verify/review/todo-we-catalog.json)"
+ },
+ {
+  "datasheet": "world-eaters/angron",
+  "what": "abilities Driven by Ultimate Rage: not in the catalogue",
+  "reason": "New Recruit holds Angron’s WRATHFUL PRESENCE box as its three abilities, one to pick (who “Wrathful Presence: pick one”), as every World Eaters list with Angron has them (their readings and summaries are on these rows); the catalogue row reads the page’s box as GW prints it, one ability. The same words; the lists’ rows are kept.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Angron.html: the box WRATHFUL PRESENCE with its three named abilities (The Blood God’s Favour, Overwhelming Wrath, Driven by Ultimate Rage); verify/sources/nr-json/standard.json (Angron: the three as abilities of their own, “Wrathful Presence: pick one”).",
+  "by": "wt-we (to review: verify/review/todo-we-catalog.json)"
+ },
+ {
+  "datasheet": "world-eaters/jakhals",
+  "what": "stats Dishonoured w/ paired manglers: not in the catalogue",
+  "reason": "New Recruit gives the Dishonoured model a profile row of its own, with the same values as GW’s one profile for the unit; the lists’ rows keep it, the catalogue row has GW’s one profile.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Jakhals.html: one profile for the unit (M 7\" T 4 Sv 6+ W 1 Ld 7+ OC 1); verify/sources/nr-json/princes.json (Jakhals: a Dishonoured w/ paired manglers model entry with a profile of its own, the same values).",
+  "by": "wt-we (to review: verify/review/todo-we-catalog.json)"
+ },
+ {
+  "datasheet": "world-eaters/lord-on-juggernaut",
+  "what": "composition World Eaters Lord on Juggernaut",
+  "reason": "New Recruit names the model Lord on Juggernaut (the owner’s exports: princes, standard, big-demons-baby); GW’s UNIT COMPOSITION names it World Eaters Lord on Juggernaut (the same one model). Model names follow New Recruit.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Lord-on-Juggernaut.html: UNIT COMPOSITION \"1 World Eaters Lord on Juggernaut\"; verify/sources/nr-json/princes.json: model selection \"Lord on Juggernaut\".",
+  "by": "wt-we (to review: verify/review/todo-we-catalog.json)"
+ },
+ {
+  "datasheet": "world-eaters/lord-on-juggernaut",
+  "what": "composition Lord on Juggernaut",
+  "reason": "As composition World Eaters Lord on Juggernaut: New Recruit’s name of GW’s one model.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Lord-on-Juggernaut.html: UNIT COMPOSITION \"1 World Eaters Lord on Juggernaut\"; verify/sources/nr-json/princes.json: model selection \"Lord on Juggernaut\".",
+  "by": "wt-we (to review: verify/review/todo-we-catalog.json)"
+ },
+ {
+  "datasheet": "world-eaters/chaos-terminators",
+  "what": "composition Combi-bolter, chainfist",
+  "reason": "New Recruit holds GW’s line “4-9 Chaos Terminators” as model entries named by their wargear (Combi-bolter, chainfist; Combi-bolter, power fist; Paired accursed weapons; Heavy weapon), in its group “4 - 9 Terminators”; the catalogue keeps them in GW’s line’s group, with GW’s numbers (4-9 together), and builder.js holds their weapons to GW’s WARGEAR OPTIONS (loadout).",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Chaos-Terminators.html: UNIT COMPOSITION \"- 1 Terminator Champion\", \"- 4-9 Chaos Terminators\"; verify/sources/nr-json/super-terminators.json: Chaos Terminators model entries \"Combi-bolter, chainfist\", \"Combi-bolter, power fist\", \"Paired accursed weapons\", \"Heavy weapon\" (group \"4 - 9 Terminators\").",
+  "by": "wt-we (to review: verify/review/todo-we-catalog.json)"
+ },
+ {
+  "datasheet": "world-eaters/chaos-terminators",
+  "what": "composition Combi-bolter, power fist",
+  "reason": "New Recruit holds GW’s line “4-9 Chaos Terminators” as model entries named by their wargear (Combi-bolter, chainfist; Combi-bolter, power fist; Paired accursed weapons; Heavy weapon), in its group “4 - 9 Terminators”; the catalogue keeps them in GW’s line’s group, with GW’s numbers (4-9 together), and builder.js holds their weapons to GW’s WARGEAR OPTIONS (loadout).",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Chaos-Terminators.html: UNIT COMPOSITION \"- 1 Terminator Champion\", \"- 4-9 Chaos Terminators\"; verify/sources/nr-json/super-terminators.json: Chaos Terminators model entries \"Combi-bolter, chainfist\", \"Combi-bolter, power fist\", \"Paired accursed weapons\", \"Heavy weapon\" (group \"4 - 9 Terminators\").",
+  "by": "wt-we (to review: verify/review/todo-we-catalog.json)"
+ },
+ {
+  "datasheet": "world-eaters/chaos-terminators",
+  "what": "composition Paired accursed weapons",
+  "reason": "New Recruit holds GW’s line “4-9 Chaos Terminators” as model entries named by their wargear (Combi-bolter, chainfist; Combi-bolter, power fist; Paired accursed weapons; Heavy weapon), in its group “4 - 9 Terminators”; the catalogue keeps them in GW’s line’s group, with GW’s numbers (4-9 together), and builder.js holds their weapons to GW’s WARGEAR OPTIONS (loadout).",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Chaos-Terminators.html: UNIT COMPOSITION \"- 1 Terminator Champion\", \"- 4-9 Chaos Terminators\"; verify/sources/nr-json/super-terminators.json: Chaos Terminators model entries \"Combi-bolter, chainfist\", \"Combi-bolter, power fist\", \"Paired accursed weapons\", \"Heavy weapon\" (group \"4 - 9 Terminators\").",
+  "by": "wt-we (to review: verify/review/todo-we-catalog.json)"
+ },
+ {
+  "datasheet": "world-eaters/chaos-terminators",
+  "what": "composition Heavy weapon",
+  "reason": "New Recruit holds GW’s line “4-9 Chaos Terminators” as model entries named by their wargear (Combi-bolter, chainfist; Combi-bolter, power fist; Paired accursed weapons; Heavy weapon), in its group “4 - 9 Terminators”; the catalogue keeps them in GW’s line’s group, with GW’s numbers (4-9 together), and builder.js holds their weapons to GW’s WARGEAR OPTIONS (loadout).",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Chaos-Terminators.html: UNIT COMPOSITION \"- 1 Terminator Champion\", \"- 4-9 Chaos Terminators\"; verify/sources/nr-json/super-terminators.json: Chaos Terminators model entries \"Combi-bolter, chainfist\", \"Combi-bolter, power fist\", \"Paired accursed weapons\", \"Heavy weapon\" (group \"4 - 9 Terminators\").",
+  "by": "wt-we (to review: verify/review/todo-we-catalog.json)"
  }
 ]

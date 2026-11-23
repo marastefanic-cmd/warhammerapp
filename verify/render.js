@@ -302,7 +302,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     //   giving it to units with the keywords its sentence names ("Friendly DEATHLEAPER/LICTOR/NEUROLICTOR units have Deep Strike");
     //   "may:<ability>" for a selection on any unit of the list ("select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep
     //   Strike."), on every unit with those keywords; an "If this model is attached to a <KW> unit during the Declare Battle Formations
-    //   step" sentence only on an attached unit with those keywords; another "If" sentence: "cond:<ability>"; none from an ability whose
+    //   step" sentence only on an attached unit with those keywords; another "If" or "While" sentence: "cond:<ability>"; none from an ability whose
     //   words open with a moment of the battle (a phase, the start or end of a turn: Umbralefic Crystal, Mysterious Guardian)
     // - reserves-limit: the limit is the percentage GW's Strategic Reserves text (data.js RULES) states of the list's points limit, also
     //   at 1000 and 3000 pts (500, 1500); the screen quotes that sentence as data.js has it; a unit the text excludes (FORTIFICATIONS: a
@@ -343,7 +343,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
               if(sel) for(const u of A.units) if(anyOf(sel[1], u)) want.get(u).add('may:' + ab.name);
               return; }
             if(!/\b(?:this unit|this model|the bearer)\b/i.test(subj)) return;
-            const u = x, cond = /^If (.+?), /.exec(s);
+            const u = x, cond = /^(?:If|While) (.+?), /.exec(s);   // ("While this model is leading a unit, models in that unit have the Deep Strike ability": Fire Riders, a condition as an "If")
             if(cond){ const at = /^this model is attached to an? (.+?) unit during the Declare Battle Formations step$/.exec(cond[1]);
               if(!at){ want.get(u).add('cond:' + ab.name); return; }
               if(!u.leads || !covers(at[1], u)) return; }
@@ -950,7 +950,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     for(const [L0, st0, label] of [
       ['shooty', { atk:'dakkarig-boosta' }, 'Try Dat Button!'],
       ['shooty', { atk:'mek-flashgitz' }, 'profiles, models left'],
-      ['princes', { atk:'kh-rn-the-betrayer-khorne-berzerkers', turn:{ me:{ mode:'fight', fight:true, charge:true, fc:true } } }, 'Blessings'],
+      ['princes', { atk:'kharn-the-betrayer-khorne-berzerkers', turn:{ me:{ mode:'fight', fight:true, charge:true, fc:true } } }, 'Blessings'],
       ['purge-goes-the-foe', { atk:'skitarii-rangers', typed:{ n:10, T:4, W:1, Sv:4, InSv:0, fnp:0 } }, 'Doctrina'],
       ['shooty', { atk:'mek-flashgitz', turn:{ me:{ mode:'both', shoot:true, fight:true, charge:true } } }, 'Both']]){
       if(!armies.some(x => x.id === L0) || !await page.evaluate(([L0, u]) => !!armyById(L0).units.find(x => x.id === u), [L0, st0.atk])){ fail('damage-lines', L0, label, 'the unit is not in the data'); continue; }

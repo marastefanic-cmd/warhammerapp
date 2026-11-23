@@ -14,6 +14,11 @@ verify/sources/catalog/<faction>.json   the catalogue rows (committed): one DATA
 data.js DATASHEETS                       every catalogue row (merged with the lists' rows, below); FACTIONS: its detachments
 ```
 
+**World Eaters** (23 Nov 2026) is the first catalogue written by `verify/from-waha.js`: 30 datasheets (the six the faction page marks
+Warhammer Legends left out: Chaos Thunderhawk, Hell Blade, Hell Talon, Greater Brass Scorpion, Kytan Ravager, Blood Slaughterer; and the
+other factions' pages its index links, Karanak among them), the BLOOD LEGIONS units among them (`catalogFactions`: World Eaters, Blood
+Legions; Pact of Blood makes them part of a World Eaters army), and 8 detachments (Boarding Actions has none of its own).
+
 **Three catalogues were built before 22 Nov 2026** (Adeptus Custodes, Tyranids, Chaos Daemons), by the retired
 `verify/from-bsdata.js`, from New Recruit's data with GW over it. Their committed rows are now the source of record: the file's
 `origin` says so, they are not rebuilt, and the gate step `catalog` holds every row to GW's pages (below).
@@ -26,13 +31,21 @@ data.js DATASHEETS                       every catalogue row (merged with the li
   is read (`verify/from-json.js --emit`), GW's Faction Pack updates over it;
 - names: New Recruit's where a list of the faction already has the datasheet (its DATASHEETS row's unit, model and weapon names), else
   GW's as the page prints them. An import then finds a datasheet by an id a known export has shown, else by its exact name;
+- its models and wargear (`verify/waha-loadout.js`): `composition` (GW's lines; a line New Recruit's exports hold as several model
+  entries, "Khorne Berzerker w/ eviscerator and plasma pistol", a group of them with GW's numbers), `options` (every item GW names, the
+  names builder.js recognises) and `loadout` (each line's default weapons, and the swaps and additions of WARGEAR OPTIONS with their limits:
+  each model, n per unit, n for every N models; a footnote's caps and exclusions), which builder.js holds an export to (legalLoadout);
 - a WARGEAR OPTIONS sentence the reader cannot express is recorded as unread, and builder.js refuses a loadout that needs it, with
-  the unit named;
+  the unit named (World Eaters: the Helbrute's "For each Helbrute fist …" sentence);
+- GW's Faction Pack over Wahapedia: its Rules Updates on the datasheets and on the detachments the catalogue adds; a detachment GW's
+  documents name otherwise than Wahapedia's heading takes GW's name, Wahapedia's kept as its `waha` (Possessed Slaughterbound, World
+  Eaters Faction Pack 1.3, for Wahapedia's Possessed Slaughterband); the hand file `verify/sources/hand/catalog-<faction>.json` for what
+  the pack prints otherwise than Wahapedia (detachmentNames, detachmentTexts, texts, rows), each with its reason;
 - detachments: the faction page's headings, each with its Detachment Points, Force Dispositions, rule, enhancements and stratagems.
 
 **Merging with the lists.** `verify/tables.js --write` builds DATASHEETS from the lists, as before, then adds every catalogue
 row (`catalogRows()`):
-- a row no list has is the catalogue's, marked `aiStatus:'not-read'`;
+- a row no list has is the catalogue's, marked `aiStatus:'not-read'`, unless its catalogue is read (`aiRead`, below);
 - a row a list has keeps every fact its lists decide (signed off), and gets from the catalogue only what it lacks: a fact no list
   shows as the datasheet's, the weapons and abilities no list took (after its own rows), and the catalogue's columns;
 - `points`, `composition`, `options` and `aiStatus` stay on DATASHEETS (the resolver does not copy them onto a list's units).
@@ -77,6 +90,19 @@ catalogue added, carry `aiStatus:'not-read'`: the Damage tab does not count thei
 fails a mark on a row that has readings, and a catalogue row without the mark that no list has). Adding them, per datasheet or
 detachment: write the readings (verify/derive.js gives the derivable ones: Damaged, riled-up, charge bonuses), `node
 verify/tables.js --stamp` for the fingerprints, the reviewer's sign-off (`verify/review/`), then drop the mark.
+
+**A read catalogue (`aiRead`).** A faction whose import must give a complete sheet for every unit and detachment it can place
+(World Eaters) has its AI layers written for the whole catalogue: the hand file sets `aiRead: true` and holds, under `ai`, each
+summary column (`sumAtk`, `sumDef`, `sumSt`, `sumFoe`, `sumOv`, a stratagem's `gist`) of a catalogue row's ability (`ai.datasheets
+["<id>"]["<ability>"]`) and of a new detachment's rule, enhancement and stratagem (`ai.detachments["<id>"].rules|enhancements|
+stratagems["<name>"]`), each with its fingerprint (`sumAtkOf`, …, of the GW text it was written from, as verify/tables.js computes
+it); verify/from-waha.js writes them onto the rows and sets the catalogue's `aiRead`, and no row or detachment of it carries
+`aiStatus`. Its readings are reader 1's (verify/effects-extract.js through effects-migrate) and reader 2's, agreed (agree.js), as for
+the lists: verify/catalog-armies.js builds, for each detachment of the faction, one list the gate checks like the owner's (every
+datasheet once with GW's default wargear, the abilities the detachment's rules give it as builder.js gives an import, each
+enhancement on a CHARACTER its words allow). effects-migrate reads their sources into BOXES and verify/lines.js holds their placed
+lines to their summaries and labels (LM, LN, L0), so an imported unit's sheet has its Damaged bands, every line and its summary.
+These lists are no part of the app's ARMIES. verify/catalog.js fails an `aiStatus` on a read catalogue's row or detachment.
 
 ## The gate
 

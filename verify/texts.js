@@ -549,7 +549,9 @@ function docLines(d, p0 = 0, p1 = d.pages.length - 1) {
 // since the normalisation drops the markers
 const struckOf = t => [...String(t || '').matchAll(/~~(.+?)~~/g)].map(m => norm(m[1].replace(/\*\*/g, '')));
 const sameStruck = (appText, lines) => struckOf(appText).join('|') === lines.flatMap(l => l.struck || []).join('|');
-const LABEL = /^(WHEN|TARGET|EFFECT|RESTRICTIONS):\s*(.*)$/;
+// (Wahapedia's "RESTRICTION:", one restriction, is the RESTRICTIONS field: Fury Unleashed)
+const LABEL = /^(WHEN|TARGET|EFFECT|RESTRICTIONS?):\s*(.*)$/;
+const labelKey = k => k.toLowerCase().replace(/^restriction$/, 'restrictions');
 const isCaps = t => t.length >= 10 && / /.test(t) && !/[a-z]/.test(t) && /[A-Z]{3}/.test(t);
 // Stratagem blocks: header (name, cp), then flavour text, then WHEN/TARGET/EFFECT/RESTRICTIONS fields.
 // headerAt(lines, i) -> { name, cp } when line i starts a stratagem (or { stop: true } for a non-stratagem heading)
@@ -562,7 +564,7 @@ function parseStrats(lines, headerAt, stopAt) {
     if (h) { cur = h.stop ? null : { name: h.name, cp: h.cp, num: h.num, fields: {}, at: lines[i] }; if (cur) out.push(cur); field = null; i += h.skip || 0; continue; }
     if (!cur) continue;
     const m = LABEL.exec(t);
-    if (m) { field = m[1].toLowerCase(); cur.fields[field] = [m[2]]; cur.struck = cur.struck || {}; cur.struck[field] = [].concat(lines[i].struck || []); continue; }
+    if (m) { field = labelKey(m[1]); cur.fields[field] = [m[2]]; cur.struck = cur.struck || {}; cur.struck[field] = [].concat(lines[i].struck || []); continue; }
     if (stopAt(t, lines, i)) { cur = null; field = null; continue; }
     if (field) { cur.fields[field].push(t); cur.struck[field].push(...(lines[i].struck || [])); }
   }
@@ -824,7 +826,7 @@ function packUpdates(fk) {
     e.newText = txt;
     e.where = d.label + ' ' + d.pages[e.at.page].where + ', Rules Updates: ' + (e.section || '') + ' / ' + e.title;
     const parts = {}; let k = null;
-    for (const line of txt.split('\n')) { const m = LABEL.exec(line.trim()); if (m) { k = m[1].toLowerCase(); parts[k] = [m[2]]; } else if (k) parts[k].push(line); }
+    for (const line of txt.split('\n')) { const m = LABEL.exec(line.trim()); if (m) { k = labelKey(m[1]); parts[k] = [m[2]]; } else if (k) parts[k].push(line); }
     e.fields = parts;
   }
   return out;
@@ -854,7 +856,9 @@ const armiesPlus = fk => armiesOf(fk).concat(CATALOG.filter(a => a.faction === f
 const armyIdsOf = fk => fk;   // faction rules are reported under the faction, so adding a list of it changes no report line
 const usedDetachments = fk => [...new Set(armiesOf(fk).flatMap(a => a.detachments))];
 // (the detachments whose words are checked: the lists', and every one a faction catalogue added, verify/from-bsdata.js)
-const checkedDetachments = fk => [...new Set(usedDetachments(fk).concat(Object.keys((D.factions[fk] || {}).detachments || {}).filter(k => D.factions[fk].detachments[k].aiStatus === 'not-read')))];
+const checkedDetachments = fk => [...new Set(usedDetachments(fk).concat(Object.keys((D.factions[fk] || {}).detachments || {}).filter(k => D.factions[fk].detachments[k].aiStatus === 'not-read' || READ_CATALOGS.includes(fk))))];
+// (a read catalogue's detachments, aiRead: every one an import can place, docs/catalog.md)
+const READ_CATALOGS = require('./catalog-armies').readFactions();
 const UPD = {}; for (const fk of FACTIONS) UPD[fk] = packUpdates(fk);
 // --updates <faction>: the Faction Pack's Rules Updates as read here, as JSON (verify/from-bsdata.js applies the datasheet ones to a
 // faction catalogue's rows; this file then checks them as for a list)
@@ -866,7 +870,8 @@ if (process.argv.includes('--updates')) {
 const usedUpdates = new Set();
 // Rules Updates titles that misname the ability they change: the World Eaters pack's "Chaos Terminators, Blood Fury Ability"
 // changes the datasheet's Bloody Fury (Wahapedia, BSData and New Recruit name it so; the new text is that ability's)
-const TITLE_TYPOS = { 'chaos terminators, blood fury ability': 'chaos terminators, bloody fury ability' };
+// (and the Maulerfiend's "Scent Of Blood Ability", the datasheet's The Scent of Blood, as Wahapedia names it)
+const TITLE_TYPOS = { 'chaos terminators, blood fury ability': 'chaos terminators, bloody fury ability', 'maulerfiend, scent of blood ability': 'maulerfiend, the scent of blood ability' };
 // (an ARMY RULES title naming the rule with its kind, the Necrons pack's "Reanimation Protocols Army Rule": the rule's name)
 const titleN = e => { const t = norm(e.title).replace(/['"]/g, '').replace(/ army rule$/, ''); return TITLE_TYPOS[t] || t; };
 // a datasheet name in a Rules Updates title: at its start or after a separator, not the end of a longer name
@@ -932,7 +937,7 @@ for (const fk of FACTIONS) {
     const det = F.detachments[detId];
     const U = 'detachment:' + detId;
     if (!det) { fail('detachment', army, U, 'missing', '', 'an army uses detachment ' + detId + ' but D.factions.' + fk + ' has no such detachment', ''); continue; }
-    const W = wahaDetachment(fk, det.name);
+    const W = wahaDetachment(fk, det.waha || det.name);   // (waha: Wahapedia's heading where GW's documents name it otherwise)
     const P = packDetachment(fk, det.name);
     if (P && P.error) fail('detachment', army, U, 'source', det.name, P.error, P.d.label);
     let pack = P && !P.error ? P : null;
@@ -971,7 +976,10 @@ for (const fk of FACTIONS) {
       if (k < 0) return null; const out = [L[k].replace(/^-\s+/, '').replace(/^\*\*[^*]+:\*\*\s*|^[^:]+:\s*/, '')];
       for (let j = k + 1; j < L.length && /^-\s+(?!\*\*)/.test(L[j]); j++) out.push(L[j]); return out.join('\n'); };
     const ruleNamed = ruleUpd && /^Change (.+) to:$/.exec(ruleUpd.instr);
+    // ("Change to:" on a rule that gives an ability of its own name, "**Brazen Fury:** …": that ability's words, Possessed Slaughterbound)
+    const selfPart = ruleUpd && /^Change to:$/.test(ruleUpd.instr) && R.name ? partOf(R.text, R.name) : null;
     if (ruleNamed && partOf(R.text, ruleNamed[1]) != null) checkUpdate('detachment', army, UR, 'text, ' + ruleNamed[1] + ' (Rules Updates)', partOf(R.text, ruleNamed[1]), ruleUpd);
+    else if (selfPart != null) checkUpdate('detachment', army, UR, 'text, ' + R.name + ' (Rules Updates)', selfPart, ruleUpd);
     else if (ruleUpd) {
       // a Rules Update of the rule changes its text, not the KEYWORDS section after it (Warpmeld Pact): that part is checked against
       // Wahapedia's KEYWORDS lines
@@ -1091,6 +1099,10 @@ for (const fk of FACTIONS) {
       if (pack && ws) for (const f of FIELDS) if ((ss.fields[f] || ws.fields[f]) && joinNorm(ss.fields[f] || []) !== joinNorm(ws.fields[f] || []))
         info.push({ army, unit: I, field: f, note: 'the Faction Pack and Wahapedia differ; the app is checked against the pack', pack: joinNorm(ss.fields[f] || []), wahapedia: joinNorm(ws.fields[f] || []) });
       const su = upd.filter(x => titleN(x).startsWith(nameN(st.name + ' stratagem')));
+      // "Change 3" to 6"." titled by the stratagem alone, no section (Rapid Manifestation): the field that has the new value
+      for (const x of su.filter(x => !Object.keys(x.fields).length && !/ sections?$/i.test(String(x.title).trim()) && /^(?:[▪■]\s*)?Change (\S+) to (\S+?)\.?$/.test(x.instr))) {
+        const to = norm(/^(?:[▪■]\s*)?Change (\S+) to (\S+?)\.?$/.exec(x.instr)[2]), f = FIELDS.find(k => st[k] && normField(st[k]).includes(to)) || 'effect';
+        checkChangeValue('detachment', army, I, f + ' (Rules Updates)', st[f] || '', x); }
       for (const f of FIELDS) {
         if (st[f] == null && !ss.fields[f]) continue;
         count('detachment');
@@ -1370,6 +1382,8 @@ for (const a of D.armies.concat(CATALOG)) {
       const I = u.id, F = 'ability:' + ab.name + (ab.who ? ' (' + ab.who + ')' : '');
       // a new text that opens with the ability's own name and tag ("Warp Rift Firepower (Once per battle, per unit): In your …"): its text
       if (part == null && /^Change to:/.test(e.instr)) { const m = /^([^:(]+?)(?:\s*\(([^)]*)\))?:\s*([\s\S]*)$/.exec(e.newText); if (m && nameN(m[1]) === an && (!m[2] || norm(m[2]) === norm(ab.tag || ''))) part = m[3]; }
+      // (a new text that opens with the ability's tag alone, "(Once per turn, per unit) In the Fight phase, …": the Helbrute's Frenzy)
+      if (part == null && /^Change to:/.test(e.instr) && ab.tag) { const m = /^\(([^)]*)\)\s*([\s\S]*)$/.exec(String(e.newText).trim()); if (m && norm(m[1]) === norm(ab.tag)) part = m[2]; }
       if (/^Change to:|^Add new ability:/.test(e.instr)) checkUpdate('packUpdate', a.id, I, F, ab.text, e, part);
       else if (!checkChangeValue('packUpdate', a.id, I, F, ab.text, e)) fail('packUpdate', a.id, I, F, ab.text, 'Rules Updates entry not checked mechanically: ' + e.instr, e.where);
     }

@@ -1,0 +1,716 @@
+[
+ {
+  "kind": "summaries",
+  "where": "World Eaters catalogue: every summary and gist an import can place (verify/sources/hand/catalog-world-eaters.json ai; data.js FACTIONS for the four existing detachments)",
+  "judgement": {
+   "check": "The catalogue is read (aiRead): verify/catalog-armies.js places, for each of the 8 detachments, every World Eaters datasheet once and each enhancement on a bearer its words allow, and verify/lines.js holds every placed line to its summary (LM), its numbers (LN) and its labels (L0). New AI text, per docs/summaries.md, each to be checked against its GW words below. Idols of Khorne: its sumDef is one plain line (\"If Idol of Blessed Blood is active, …\"), not an \"<option> ⇒\" line: the program places the When targeted line with no option (its defence box carries opt, but the When targeted line takes options only from RULE_OPTIONS); its sumSt plain too (the stat box now carries its option, on: opt, and the plain line is what lines.js places for it).",
+   "datasheets": {
+    "world-eaters/bloodletters · Daemonic Icon": {
+     "summary": {
+      "sumSt": "Ld 6+"
+     },
+     "gw": "Models in the bearer’s unit have a Leadership characteristic of 6+."
+    },
+    "world-eaters/bloodcrushers · Daemonic Icon": {
+     "summary": {
+      "sumSt": "Ld 6+"
+     },
+     "gw": "Models in the bearer’s unit have a Leadership characteristic of 6+."
+    },
+    "world-eaters/khorne-lord-of-skulls · Idol of Blessed Blood": {
+     "summary": {
+      "sumOv": "At the start of each battle round, if the Khorne Lord of Skulls is on the battlefield: roll one additional D6 for the Blessings of Khorne roll"
+     },
+     "gw": "At the start of the battle round, if this model is on the battlefield, when you make a **Blessings of Khorne roll**, roll one additional D6."
+    },
+    "world-eaters/chaos-predator-annihilator · Blood-hungry Annihilator": {
+     "summary": {
+      "sumAtk": "vs the closest eligible MONSTER or VEHICLE target within 18\", ranged: re-roll Wound rolls and Damage rolls"
+     },
+     "gw": "Each time this model makes a ranged attack that targets the closest eligible **MONSTER** or **VEHICLE** target within 18\", you can re-roll the **Wound roll** and you can re-roll the Damage roll."
+    },
+    "world-eaters/chaos-predator-destructor · Punishing Suppression": {
+     "summary": {
+      "sumDef": "If the attacker is suppressed (one non-MONSTER/VEHICLE enemy unit picked after the Chaos Predator Destructor hit it in your Shooting phase): −1 to Hit rolls"
+     },
+     "gw": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks (excluding **MONSTERS** and **VEHICLES**). Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**."
+    },
+    "world-eaters/heldrake · Airborne Predator": {
+     "summary": {
+      "sumAtk": "vs units that can FLY: +1 to Hit rolls"
+     },
+     "gw": "Each time this model makes an attack that targets a unit that can **FLY**, add 1 to the **Hit roll**."
+    },
+    "world-eaters/helbrute · Frenzy": {
+     "summary": {
+      "sumDef": "Once per turn, after an enemy unit fights this unit, if it uses this ability: this unit fights next, even if it has already fought"
+     },
+     "gw": "In the Fight phase, when an enemy unit targets this unit, after that unit has resolved its attacks, you can use this ability. If you do, this unit is **eligible to fight** (even if it has already fought this phase) and must be **selected to fight** next."
+    },
+    "world-eaters/maulerfiend · Savage Exaltation": {
+     "summary": {
+      "sumAtk": "In melee, vs enemy units below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if they are Below Half-strength"
+     },
+     "gw": "Each time this model makes a melee attack that targets an enemy unit that is below its Starting Strength, add 1 to the **Hit roll** and, if that attack targets an enemy unit that is **Below Half-strength**, add 1 to the **Wound roll** as well."
+    }
+   },
+   "detachments": {
+    "cult-of-blood · Idols of Khorne": {
+     "summary": {
+      "sumAtk": "Idol of Infinite Rage (Aura) ⇒ If Idol of Infinite Rage is active, within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC unit: +1 to Hit rolls and +1 to Wound rolls",
+      "sumDef": "If Idol of Blessed Blood is active, within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC unit: 4+ invulnerable save",
+      "sumSt": "If Idol of Burning Wrath is active, within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC unit: +1\" Move; +1 to Advance and Charge rolls",
+      "sumOv": "In your Command phase, pick one Idols of Khorne ability for WORLD EATERS MONSTER and TITANIC units until your next Command phase, each once per battle: Idol of Infinite Rage, Idol of Burning Wrath or Idol of Blessed Blood"
+     },
+     "gw": "At the start of your Command phase, you can select one of the Idols of Khorne abilities listed below. Until the start of your next Command phase, that ability is active and its effects apply to all **WORLD EATERS TITANIC** and **WORLD EATERS MONSTER** units from your army. You can only select each Idols of Khorne ability once per battle.\n**Idol of Infinite Rage (Aura)**\nWhile a friendly **JAKHALS** or **GOREMONGERS** unit is within 6\" of this model (or within 9\" if this model is **TITANIC**), each time a model in that unit makes an attack, add 1 to the **Hit roll** and add 1 to the **Wound roll**.\n**Idol of Burning Wrath (Aura)**\nWhile a friendly **JAKHALS** or **GOREMONGERS** unit is within 6\" of this model (or within 9\" if this model is **TITANIC**), add 1\" to the Move characteristic of models in that unit and add 1 to **Advance** and **Charge rolls** made for that unit.\n**Idol of Blessed Blood (Aura)**\nWhile a friendly **JAKHALS** or **GOREMONGERS** unit is within 6\" of this model (or within 9\" if this model is **TITANIC**), models in that unit have a 4+ invulnerable save.\nKEYWORDS\n**JAKHALS** and **GOREMONGERS** units from your army have the **BATTLELINE** keyword."
+    },
+    "cult-of-blood · Butcher Lord": {
+     "summary": {
+      "sumOv": "The bearer has the Infiltrators ability"
+     },
+     "gw": "**WORLD EATERS INFANTRY** model only. The bearer has the Infiltrators ability."
+    },
+    "cult-of-blood · Brazen Form": {
+     "summary": {
+      "sumDef": "+1 T; Feel No Pain 5+"
+     },
+     "gw": "**WORLD EATERS MONSTER** model only. Add 1 to the bearer’s Toughness characteristic and the bearer has the **Feel No Pain 5+** ability."
+    },
+    "cult-of-blood · Strategic Slaughter": {
+     "summary": {
+      "sumOv": "After deployment: redeploy up to three JAKHALS and/or GOREMONGERS units, Strategic Reserves allowed whatever their number"
+     },
+     "gw": "**WORLD EATERS** model only. After both players have deployed their armies, select up to three **JAKHALS** and/or **GOREMONGERS** units from your army and redeploy them. When doing so, you can set those units up in **Strategic Reserves**, regardless of how many units are already in Strategic Reserves."
+    },
+    "cult-of-blood · Bloody Vengeance": {
+     "summary": {
+      "gist": "when a WORLD EATERS MONSTER or TITANIC unit is destroyed by an enemy unit: JAKHALS and GOREMONGERS can re-roll Hit rolls vs that enemy unit"
+     },
+     "gw": {
+      "when": "Any phase.",
+      "target": "One **WORLD EATERS MONSTER** or **WORLD EATERS TITANIC** unit from your army that was just destroyed by an enemy unit. You can use this Stratagem on that unit even though it was just destroyed.",
+      "effect": "Until the end of the battle, each time a model in a **JAKHALS** or **GOREMONGERS** unit from your army makes an attack that targets the enemy unit that just destroyed your unit, you can re-roll the **Hit roll**."
+     }
+    },
+    "cult-of-blood · Drawn to the Slaughter": {
+     "summary": {
+      "gist": "once per battle, when a JAKHALS unit is destroyed: an identical unit at Starting Strength goes into Strategic Reserves (not CHARACTER units of Attached units)"
+     },
+     "gw": {
+      "when": "Any phase.",
+      "target": "One **JAKHALS** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.",
+      "effect": "Add a new unit to your army identical to your destroyed unit, in **Strategic Reserves**, at its Starting Strength.",
+      "restrictions": "This Stratagem cannot be used to return destroyed **CHARACTER** units to Attached units. You can only use this Stratagem once per battle."
+     }
+    },
+    "cult-of-blood · In the Shadow of Brass Idols": {
+     "summary": {
+      "gist": "JAKHALS or GOREMONGERS, when targeted: Feel No Pain 6+ (5+ within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC)"
+     },
+     "gw": {
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "target": "One **JAKHALS** or **GOREMONGERS** unit from your army that was selected as the target as one or more of the attacking unit’s attacks.",
+      "effect": "Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability. If your unit is within 6\" of one or more friendly **WORLD EATERS MONSTER** units, or within 9\" of one or more friendly **WORLD EATERS TITANIC** units, your unit has the **Feel No Pain 5+** ability instead."
+     }
+    },
+    "cult-of-blood · Bloodthirsty Horde": {
+     "summary": {
+      "gist": "JAKHALS or GOREMONGERS models within 3\" of enemy models can fight, attacking an enemy unit within 3\" of them and in Engagement Range of their unit"
+     },
+     "gw": {
+      "when": "Fight phase.",
+      "target": "One **JAKHALS** or **GOREMONGERS** unit from your army that has not been selected to fight this phase and is within **Engagement Range** of one or more enemy units.",
+      "effect": "Until the end of the phase, each time your unit is selected to fight, when determining which models in it are eligible to fight, any models in your unit that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within Engagement Range of their unit."
+     }
+    },
+    "cult-of-blood · Fail Not the Blood God": {
+     "summary": {
+      "gist": "JAKHALS or GOREMONGERS: re-roll Hit rolls of 1 (all Hit rolls within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC)"
+     },
+     "gw": {
+      "when": "Fight phase.",
+      "target": "One **JAKHALS** or **GOREMONGERS** unit from your army.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack, re-roll a **Hit roll** of 1. If that model’s unit is within 6\" of one or more friendly **WORLD EATERS MONSTER** units, or within 9\" of one or more friendly **WORLD EATERS TITANIC** units, you can re-roll the Hit roll instead."
+     }
+    },
+    "cult-of-blood · Brazen Idol": {
+     "summary": {
+      "gist": "once per battle: a WORLD EATERS MONSTER or TITANIC unit has the Idol of Infinite Rage, Burning Wrath or Blessed Blood instead of the army’s, even one already used"
+     },
+     "gw": {
+      "when": "Your Command phase.",
+      "target": "One **WORLD EATERS MONSTER** or **WORLD EATERS TITANIC** unit from your army.",
+      "effect": "Select the Idol of Infinite Rage, Idol of Burning Wrath or Idol of Blessed Blood. Until the start of your next Command phase, that Idols of Khorne ability is active for your unit instead of any other Idols of Khorne ability that is active for your army, even if you have already selected that ability this battle.",
+      "restrictions": "You can only use this Stratagem once per battle."
+     }
+    },
+    "possessed-slaughterbound · Frenzied Focus": {
+     "summary": {
+      "sumAtk": "Critical Hits on 5+"
+     },
+     "gw": "**WORLD EATERS DAEMON** model only. Each time a model in the bearer’s unit makes an attack, a Critical Hit is scored on an unmodified **Hit roll** of 5+, instead of only a 6."
+    },
+    "possessed-slaughterbound · Daemonic Resistance": {
+     "summary": {
+      "gist": "WORLD EATERS POSSESSED, when targeted: −1 to Wound rolls for attacks on this unit"
+     },
+     "gw": {
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "target": "One **WORLD EATERS POSSESSED** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the **Wound roll**."
+     }
+    },
+    "possessed-slaughterbound · Daemonic Strength": {
+     "summary": {
+      "gist": "WORLD EATERS POSSESSED: +1 Damage vs models not MONSTER/VEHICLE if EIGHTBOUND, vs MONSTER/VEHICLE models if EXALTED EIGHTBOUND"
+     },
+     "gw": {
+      "when": "Fight phase.",
+      "target": "One **WORLD EATERS POSSESSED** unit from your army that has not been selected to fight this phase.",
+      "effect": "Until the end of the phase, each time an attack made by a model in your unit is allocated to an enemy model, if your unit has the **EIGHTBOUND** keyword and that enemy model is not a **MONSTER** or **VEHICLE**, add 1 to the Damage characteristic of that attack. If your unit has the **EXALTED EIGHTBOUND** keyword and that enemy model is a **MONSTER** or **VEHICLE**, add 1 to the Damage characteristic of that attack instead."
+     }
+    },
+    "possessed-slaughterbound · Immortal Fury": {
+     "summary": {
+      "gist": "WORLD EATERS POSSESSED, when targeted: models destroyed before they have fought fight after the attacking unit, then are removed"
+     },
+     "gw": {
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "target": "One **WORLD EATERS POSSESSED** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+     }
+    },
+    "possessed-slaughterbound · Rapid Manifestation": {
+     "summary": {
+      "gist": "an EXALTED EIGHTBOUND unit arriving by Deep Strike can be set up more than 6\" horizontally from all enemy units; it cannot charge this turn"
+     },
+     "gw": {
+      "when": "Your Movement phase.",
+      "target": "One **EXALTED EIGHTBOUND** unit from your army that is arriving using the **Deep Strike** ability this phase.",
+      "effect": "Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.",
+      "restrictions": "A unit targeted with this Stratagem is not eligible to declare a charge in the same turn."
+     }
+    },
+    "possessed-slaughterbound · Warp Stalkers": {
+     "summary": {
+      "gist": "a WORLD EATERS POSSESSED unit moves through enemy models (not MONSTERS/VEHICLES) and ends only a Charge move within Engagement Range of them; Desperate Escape tests are passed automatically"
+     },
+     "gw": {
+      "when": "Your Movement phase or your Charge phase.",
+      "target": "One **WORLD EATERS POSSESSED** unit from your army that has not been selected to move or declare a charge this phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes a **Normal**, **Advance**, Fall Back or **Charge move**, it can move through enemy models (excluding **MONSTERS** and **VEHICLES**). When doing so, it can move within **Engagement Range** of such models but, unless that move was a Charge move, it cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+     }
+    },
+    "possessed-slaughterbound · Horrifying Violence": {
+     "summary": {
+      "gist": "each enemy unit in Engagement Range of a WORLD EATERS POSSESSED unit takes a Battle-shock test, subtracting 1"
+     },
+     "gw": {
+      "when": "Your opponent’s Command phase.",
+      "target": "One **WORLD EATERS POSSESSED** unit from your army.",
+      "effect": "Each enemy unit within **Engagement Range** of your unit must take a **Battle-shock test**, subtracting 1 from that test."
+     }
+    },
+    "goretrack-onslaught · Rush to the Fray": {
+     "summary": {
+      "sumAtk": "If this unit disembarked from a TRANSPORT this turn: melee [LANCE]"
+     },
+     "gw": "Each time a **WORLD EATERS** unit from your army disembarks from a **TRANSPORT**, until the end of the turn, add 1 to **Charge rolls** made for that unit and that unit’s melee weapons have the **[lance]** ability."
+    },
+    "goretrack-onslaught · Aggressive Deployment": {
+     "summary": {
+      "sumOv": "If the bearer starts the battle embarked within a DEDICATED TRANSPORT: that DEDICATED TRANSPORT has Scouts 9\""
+     },
+     "gw": "**WORLD EATERS** model only. In the Declare Battle Formations step, if the bearer starts the battle embarked within a **DEDICATED TRANSPORT**, that **DEDICATED TRANSPORT** has the **Scouts 9\"** ability."
+    },
+    "goretrack-onslaught · Unleash Hell": {
+     "summary": {
+      "sumDef": "If the attacker is suppressed (one enemy unit picked after a VEHICLE within 6\" of the bearer, or the bearer’s TRANSPORT, selected at the start of your Shooting phase, hit it): −1 to Hit rolls"
+     },
+     "gw": "**WORLD EATERS** model only. At the start of your Shooting phase, you can select one **VEHICLE** model within 6\" of the bearer or, if the bearer is embarked within a **TRANSPORT**, you can select that **TRANSPORT** model. Until the end of the phase, after the selected model has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**."
+    },
+    "goretrack-onslaught · Infernal Infusion": {
+     "summary": {
+      "sumOv": "Once per battle, at the start of the Fight phase, if used: the bearer’s unit has Fights First"
+     },
+     "gw": "**WORLD EATERS** model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer’s unit has the **Fights First** ability."
+    },
+    "goretrack-onslaught · Endless Pursuit of Violence": {
+     "summary": {
+      "gist": "a WORLD EATERS INFANTRY unit wholly within 6\" of a friendly TRANSPORT it can embark within embarks in it"
+     },
+     "gw": {
+      "when": "End of the Fight phase.",
+      "target": "One **WORLD EATERS INFANTRY** unit from your army and one friendly **TRANSPORT** that it is able to embark within.",
+      "effect": "If your **WORLD EATERS INFANTRY** unit is wholly within 6\" of that **TRANSPORT**, it can embark within it."
+     }
+    },
+    "goretrack-onslaught · Smash Through": {
+     "summary": {
+      "gist": "a WORLD EATERS VEHICLE moves horizontally through terrain features on Normal and Advance moves"
+     },
+     "gw": {
+      "when": "Your Movement phase.",
+      "target": "One **WORLD EATERS VEHICLE** model from your army that has not been selected to move this phase.",
+      "effect": "Until the end of the phase, each time your unit makes a **Normal** or **Advance move**, it can move horizontally through **terrain features**."
+     }
+    },
+    "goretrack-onslaught · Aggressive Disembarkation": {
+     "summary": {
+      "gist": "one WORLD EATERS unit disembarks from a WORLD EATERS RHINO, set up wholly within 6\" of it, within Engagement Range allowed"
+     },
+     "gw": {
+      "when": "Your Movement phase.",
+      "target": "One **WORLD EATERS RHINO** model from your army that has not been selected to move this phase.",
+      "effect": "One **WORLD EATERS** unit embarked within your **RHINO** can disembark. When doing so, models in that unit can be set up anywhere on the battlefield wholly within 6\" of your **RHINO** and can be set up within **Engagement Range** of one or more enemy units."
+     }
+    },
+    "goretrack-onslaught · Full-Throttle Assault": {
+     "summary": {
+      "gist": "a WORLD EATERS unit disembarking from this WORLD EATERS RHINO after its Normal move makes an assault disembark move"
+     },
+     "gw": {
+      "when": "Your Movement phase.",
+      "target": "One **WORLD EATERS RHINO** model from your army that has not been selected to move this phase.",
+      "effect": "Until the end of the phase, each time a **WORLD EATERS** unit disembarks from that model after it has made a **Normal move**, that unit makes an **assault disembark move** (Core Rules, 18.06) for that disembarkation."
+     }
+    },
+    "goretrack-onslaught · Unrelenting Advance": {
+     "summary": {
+      "gist": "a WORLD EATERS VEHICLE hit by an enemy unit’s attacks makes a Normal move of up to 6\" (not with Fury Unleashed in the same phase)"
+     },
+     "gw": {
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+      "target": "One **WORLD EATERS VEHICLE** model from your army that was hit by one or more of the attacking unit’s attacks.",
+      "effect": "Your model can make a **Normal move** of up to 6\".",
+      "restrictions": "A unit cannot be targeted by this Stratagem and the Fury Unleashed Stratagem in the same phase."
+     }
+    },
+    "goretrack-onslaught · Fury Unleashed": {
+     "summary": {
+      "gist": "a KHORNE BERZERKERS unit embarked within a WORLD EATERS RHINO that was hit makes a disembark move, then a surge move of up to D6+2\" (not with Unrelenting Advance in the same phase)"
+     },
+     "gw": {
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+      "target": "One **WORLD EATERS RHINO** model from your army that has one or more wounds remaining and was hit by one or more of the attacking unit’s attacks.",
+      "effect": "One **KHORNE BERZERKERS** unit embarked within your model can make a **disembark move** and then make a **surge move** of up to D6+2\".",
+      "restrictions": "A unit cannot be targeted by this Stratagem and the Unrelenting Advance Stratagem in the same phase."
+     }
+    },
+    "brazen-engines · Talons of Butchery": {
+     "summary": {
+      "sumAtk": "[CLEAVE 2]"
+     },
+     "gw": "**MAULERFIEND** unit only. This unit’s **Maulerfiend Fists** have **[CLEAVE 2]**."
+    },
+    "brazen-engines · Apoplectic Clarity": {
+     "summary": {
+      "gist": "a DAEMON VEHICLE’s attacks ignore modifiers to BS, WS, Hit rolls and Wound rolls"
+     },
+     "gw": {
+      "when": "Your Shooting phase or the Fight phase, when a friendly **DAEMON VEHICLE** unit is **selected to attack**.",
+      "target": "That **DAEMON VEHICLE** unit.",
+      "effect": "Your unit’s attacks can ignore modifiers to:\n- **BS**.\n- **WS**.\n- **Hit rolls** and **wound rolls**."
+     }
+    },
+    "brazen-engines · Trail of Destruction": {
+     "summary": {
+      "gist": "a DAEMON VEHICLE has MOBILE"
+     },
+     "gw": {
+      "when": "Your Movement phase, when a friendly **DAEMON VEHICLE** unit is **selected to move**.",
+      "target": "That **DAEMON VEHICLE** unit.",
+      "effect": "Your unit has **MOBILE**."
+     }
+    },
+    "brazen-engines · Goaded to Fury": {
+     "summary": {
+      "gist": "an unengaged DAEMON VEHICLE (not TITANIC) that an enemy unit shot makes a surge move of up to D6\""
+     },
+     "gw": {
+      "when": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly **unengaged DAEMON VEHICLE** unit (excluding **TITANIC** units) has shot.",
+      "target": "That **DAEMON VEHICLE** unit.",
+      "effect": "Your unit can make a **surge move** of up to D6\"."
+     }
+    }
+   },
+   "existingDetachments": {
+    "berzerker-warband · Relentless Rage": {
+     "sumAtk": "+1 A in melee"
+    },
+    "berzerker-warband · Berzerker Glaive": {
+     "sumAtk": "+1 A and +1 D in melee (not Extra Attacks weapons)"
+    },
+    "khorne-daemonkin · Blood-forged Armour": {
+     "sumDef": "Sv 2+"
+    },
+    "khorne-daemonkin · Blade of Endless Bloodshed": {
+     "sumAtk": "+1 A, +1 S and +1 D in melee"
+    },
+    "butchers-of-khorne · Sanctified in Slaughter": {
+     "sumSt": "+1 OC"
+    }
+   },
+   "round2": "Review 033ed75: Idols of Khorne sumAtk/sumDef/sumSt (\"within 6\\\" of a WORLD EATERS MONSTER or 9\\\" of a WORLD EATERS TITANIC unit\", the Khorne Lord of Skulls is TITANIC, not MONSTER), Punishing Suppression and Unleash Hell sumDef (the one enemy unit picked) are the reviewer's texts."
+  },
+  "source": {
+   "gate": "verify/lines.js LM/LN/L0 (lines step), verify/tables.js --fingerprints",
+   "gw": "verify/sources/catalog/world-eaters.json (Wahapedia and the Faction Pack)"
+  }
+ },
+ {
+  "kind": "catalog-faction",
+  "where": "verify/sources/factions.json world-eaters catalogFactions",
+  "judgement": {
+   "catalogFactions": [
+    "World Eaters",
+    "Blood Legions"
+   ],
+   "why": "BLOOD LEGIONS units (Bloodletters, Bloodcrushers, Flesh Hounds, Skarbrand, Bloodthirster) are on the World Eaters faction page and in a World Eaters army: Pact of Blood says only that BLOOD LEGIONS cannot be the Army Faction; the Faction Pack's Khorne Daemonkin FAQ names Bloodcrushers and Flesh Hounds in a World Eaters list. The coordinator's decision (a)."
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/world-eaters.html (Army Rules: \"Pact of Blood: When mustering your army, unless specifically stated otherwise, you cannot select BLOOD LEGIONS as your Army Faction.\")",
+   "pack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt (FAQ: \"if I attach a Lord on Juggernaut with the Disciple of Khorne Enhancement to a unit of Bloodcrushers or Flesh Hounds …\")"
+  }
+ },
+ {
+  "kind": "catalog-left-out",
+  "where": "World Eaters catalogue excluded",
+  "judgement": {
+   "legends": [
+    "Chaos Thunderhawk",
+    "Hell Blade",
+    "Hell Talon",
+    "Greater Brass Scorpion",
+    "Kytan Ravager",
+    "Blood Slaughterer"
+   ],
+   "other faction": "Karanak (chaos-daemons page) and the other factions' datasheets the index links",
+   "boarding actions": "the page's Boarding Actions section has no World Eaters detachment of its own",
+   "why": "the owner's standing rule (official 2000-pt matched play); Wahapedia marks the six Warhammer Legends; the coordinator's decision."
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/world-eaters.html index (verify/waha-catalog.js index: \"(Warhammer Legends)\" marks)"
+  }
+ },
+ {
+  "kind": "detachment-name",
+  "where": "FACTIONS world-eaters possessed-slaughterbound",
+  "judgement": {
+   "name": "Possessed Slaughterbound",
+   "waha": "Possessed Slaughterband",
+   "why": "GW's Faction Pack names the detachment POSSESSED SLAUGHTERBOUND; Wahapedia's heading says Slaughterband. GW is the source of truth: GW's name, Wahapedia's kept to find its section. The coordinator's decision; a deviation from Wahapedia."
+  },
+  "source": {
+   "pack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt Rules Updates: \"POSSESSED SLAUGHTERBOUND DETACHMENT\"",
+   "wahapedia": "verify/.cache/waha/world-eaters.html heading \"Possessed Slaughterband 2DP\"",
+   "hand": "verify/sources/hand/catalog-world-eaters.json detachmentNames"
+  }
+ },
+ {
+  "kind": "pack-update",
+  "where": "FACTIONS world-eaters cult-of-blood · Butcher Lord",
+  "judgement": {
+   "text": "**WORLD EATERS INFANTRY** model only. The bearer has the Infiltrators ability.",
+   "why": "the Faction Pack's Rules Update (\"Change to:\") over Wahapedia's text, which carried a stray \"LEADER: GOREMONGERS, JAKHALS\" line before it"
+  },
+  "source": {
+   "pack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt Rules Updates: CULT OF BLOOD DETACHMENT / Butcher Lord Enhancement: \"WORLD EATERS INFANTRY model only. The bearer has the Infiltrators ability.\""
+  }
+ },
+ {
+  "kind": "pack-text",
+  "where": "FACTIONS world-eaters brazen-engines · Murder-Forged Entity",
+  "judgement": {
+   "text": "**WORLD EATERS VEHICLE** unit only. This unit has **DAEMON**.",
+   "why": "the pack prints the detachment in full with the full stop Wahapedia's page lacks"
+  },
+  "source": {
+   "pack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt p2: \"WORLD EATERS VEHICLE unit only. This unit has DAEMON.\"",
+   "hand": "verify/sources/hand/catalog-world-eaters.json detachmentTexts"
+  }
+ },
+ {
+  "kind": "parse",
+  "where": "FACTIONS world-eaters goretrack-onslaught · Fury Unleashed; chaos-daemons daemonic-incursion · The Realm of Chaos",
+  "judgement": {
+   "restrictions": "Wahapedia's \"RESTRICTION:\" (singular) is the RESTRICTIONS field, not part of the EFFECT (verify/from-json.js, verify/texts.js); The Realm of Chaos moved in its catalogue file and data.js"
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/world-eaters.html (FURY UNLEASHED: \"**RESTRICTION:** A unit cannot be targeted by this Stratagem and the Unrelenting Advance Stratagem in the same phase.\"); verify/.cache/waha/chaos-daemons.html (THE REALM OF CHAOS)"
+  }
+ },
+ {
+  "kind": "pack-title",
+  "where": "verify/texts.js TITLE_TYPOS",
+  "judgement": {
+   "map": "\"Maulerfiend, Scent Of Blood Ability\" is the Maulerfiend's The Scent of Blood",
+   "why": "the pack's update title drops \"The\"; the new text is that ability's (as the Blood Fury / Bloody Fury precedent)"
+  },
+  "source": {
+   "pack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt Rules Updates: \"Maulerfiend, Scent Of Blood Ability\"",
+   "wahapedia": "verify/.cache/waha/ds/world-eaters_Maulerfiend.html: \"The Scent of Blood\""
+  }
+ },
+ {
+  "kind": "pack-update",
+  "where": "DATASHEETS world-eaters/helbrute · Frenzy",
+  "judgement": {
+   "tag": "Once per turn, per unit",
+   "why": "the pack's new text opens with \"(Once per turn, per unit)\": the ability's tag, its words the rest (verify/from-waha.js, verify/texts.js)"
+  },
+  "source": {
+   "pack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt Rules Updates: \"Helbrute, Frenzy Ability\""
+  }
+ },
+ {
+  "kind": "model-names",
+  "where": "World Eaters catalogue composition names",
+  "judgement": {
+   "Lord on Juggernaut": "New Recruit's name (the owner's exports) for GW's \"World Eaters Lord on Juggernaut\" (declared, deviations-catalog.json)",
+   "Heldrake": "GW's \"Chaos Heldrake\" (no export shows New Recruit's)",
+   "plural lines": "one model of a GW line of several is named in the singular (Bloodletter, Bloodcrusher, Flesh Hound, Goremonger, Chaos Terminator, Jakhal), or by New Recruit's name where an export shows it (Khorne Berzerker; variants \"Khorne Berzerker w/ eviscerator and plasma pistol\", \"Dishonoured w/ paired manglers\", the Chaos Terminators' entries named by wargear)",
+   "why": "decision 3: GW's names where no list has the datasheet; to review whether the singular is right where GW prints only the plural"
+  },
+  "source": {
+   "wahapedia": "each datasheet page's UNIT COMPOSITION; verify/sources/nr-json (princes, standard, super-terminators, big-demons-baby)"
+  }
+ },
+ {
+  "kind": "declared",
+  "where": "verify/deviations-catalog.json world-eaters",
+  "judgement": {
+   "angron": "Wrathful Presence held as its three abilities (\"Wrathful Presence: pick one\"), as the lists have them",
+   "jakhals": "the Dishonoured w/ paired manglers profile row New Recruit gives, the same values as GW's one profile",
+   "chaos-terminators": "New Recruit's model entries named by wargear in GW's 4-9 line",
+   "lord-on-juggernaut": "New Recruit's model name"
+  },
+  "source": {
+   "file": "verify/deviations-catalog.json (each with GW's evidence)"
+  }
+ },
+ {
+  "kind": "declared",
+  "where": "verify/deviations-keywords.json world-eaters/Daemon Prince of Khorne with Wings",
+  "judgement": {
+   "nameKeyword": "Daemon Prince",
+   "why": "a head match the page prints"
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/ds/world-eaters_Daemon-Prince-of-Khorne-with-Wings.html KEYWORDS \"MONSTER; CHARACTER; FLY; CHAOS; KHORNE; DAEMON; DAEMON PRINCE\""
+  }
+ },
+ {
+  "kind": "declared",
+  "where": "verify/deviations-nr.json stats (rows)",
+  "judgement": {
+   "rows": "every stats row of the four World Eaters lists that New Recruit's PDF prints without its ×N, as builder.js writes it (Eightbound ×3, Exalted Eightbound ×3, Goremongers ×8, Jakhal ×9, Chaos Terminators ×10, Flesh Hounds ×5)",
+   "why": "the lists are builder.js's now (the one builder)"
+  },
+  "source": {
+   "pdf": "verify/sources/nr/{princes,standard,super-terminators,big-demons-baby}.txt"
+  }
+ },
+ {
+  "kind": "wargear",
+  "where": "verify/waha-loadout.js on World Eaters",
+  "judgement": {
+   "unread": [
+    "Helbrute: For each Helbrute fist this model is equipped with, it can be equipped with one of the following: 1 combi-bolter; 1 heavy flamer"
+   ],
+   "read as": {
+    "Chaos Rhino": "\"This model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher\": an addition or a swap, one havoc launcher a model",
+    "Defiler": "\"(a model cannot be equipped with more than one electroscourge)\": a cap of 1",
+    "Khorne Berzerkers": "the Champion's swap 1 per unit; \"For every 5 models in this unit, 1 Khorne Berzerker's …\" n per 5 models of the unit; \"1 model can be equipped with 1 icon of Khorne\" 1 per unit",
+    "Chaos Terminators": "\"up to 3 models can each …\" 3 per 5; \"1 model's combi-bolter and accursed weapon …\" a swap of both"
+   },
+   "why": "decision 2: what the reader cannot express is unread, and builder.js refuses any loadout but GW's default on that datasheet"
+  },
+  "source": {
+   "wahapedia": "each datasheet page's WARGEAR OPTIONS"
+  }
+ },
+ {
+  "kind": "builder",
+  "where": "builder.js: what an export may carry",
+  "judgement": {
+   "legalLoadout": "a datasheet with a loadout (a catalogue from verify/from-waha.js) is held to GW's WARGEAR OPTIONS (each model line's default with swaps and additions within their limits), not to options' limits; a bundle or group selection of New Recruit's is no option of its own there",
+   "checked": "the four World Eaters exports build; refused: Khorne Berzerkers with 3 eviscerators in 10 models, a Defiler with 2 electroscourges, a Helbrute off its default"
+  },
+  "source": {
+   "code": "builder.js legalLoadout, legalWargear"
+  }
+ },
+ {
+  "kind": "builder",
+  "where": "builder.js: \"+\" marks",
+  "judgement": {
+   "several rules": "several rules that each add to a value, every one at work on the row: the value is GW's with all of them, named as the list's row names them (Berzerker Glaive and Relentless Rage on the Daemon Prince's A; Lacerator and daemonic claw)",
+   "skill": "+1 WS or BS improves the skill (4+ to 3+): Gore-stained Veterans; verify/build-index.js and verify/marks.js learn and check it so (Infernal Lance's Knight Diabolus re-imports as before)"
+  },
+  "source": {
+   "code": "builder.js marksOf, verify/build-index.js, verify/marks.js"
+  }
+ },
+ {
+  "kind": "builder",
+  "where": "builder.js: what a rule gives a unit",
+  "judgement": {
+   "enhancement limit": "an enhancement's \"(Once per battle, per army)\" is its tag (Archslaughterer)",
+   "faction keyword": "Disciple of Khorne's BLOOD LEGIONS in the place of WORLD EATERS on its bearer, and the kwNote that says so; its Deep Strike the bearer's alone (partialRules)",
+   "given core ability": "Lord of the Eightbound's Deep Strike and Scouts 6\" on the Slaughterbound attached to Exalted Eightbound (POSSESSED)",
+   "rules order": "GW's order (each part's CORE ABILITIES, then ARMY RULES, then weapons' and others) where every part is a catalogue row from GW's pages",
+   "na": "verify/derive.js naOf's three patterns ported (\"Not leading a unit in this list\" …)"
+  },
+  "source": {
+   "code": "builder.js finish, naOf",
+   "lists": "princes, standard, super-terminators, big-demons-baby (P1 byte for byte)"
+  }
+ },
+ {
+  "kind": "list-change",
+  "where": "the four World Eaters lists (data.js) against main",
+  "judgement": {
+   "short": "the hand files' short \"Daemon Prince\" dropped: the screens name the Daemon Prince of Khorne by GW's datasheet name (builder.js writes no short)",
+   "ids": "Khârn's units are kharn-the-betrayer-khorne-berzerkers (builder.js's id; was kh-rn-the-betrayer-…); verify/render.js and verify/calc-test.js follow",
+   "stats": "rows with their ×N (Eightbound ×3 …)",
+   "explicit rows": "Chaos Rhino's, Jakhals' and Bloodthirster's entries name their rows (the catalogue gave their datasheets weapons and abilities no list took); what the screens show is the same",
+   "damage": "verify/damage-node.js: every unit of every list against four targets, no box and every box ticked: 1800 of 1800 the same as main"
+  },
+  "source": {
+   "gate": "build-parity P1, reimport"
+  }
+ },
+ {
+  "kind": "reader",
+  "where": "verify/effects-extract.js, verify/coverage.js",
+  "judgement": {
+   "alt clause": "an if-clause with its \", or within N\"\" alternative is read whole (Fail Not the Blood God, In the Shadow of Brass Idols)",
+   "instead": "a sentence that does something else \"instead\" under its own condition is not held to the sentence before it's conditions (Daemonic Strength)",
+   "effect": "only those three new boxes change; no box any list counts"
+  },
+  "source": {
+   "gate": "verify/lines.js LC, effects-migrate"
+  }
+ },
+ {
+  "kind": "gate",
+  "where": "verify/catalog.js nr",
+  "judgement": {
+   "check": "a list unit is compared with the catalogue row of its own datasheet (its DATASHEETS key), not any row of the same name: Thousand Sons' Defiler and Maulerfiend, and Big demons baby's World Eaters Skarbrand and Bloodthirster, are not compared with another faction's row; the three declarations of that comparison are gone"
+  },
+  "source": {
+   "code": "verify/catalog.js"
+  }
+ },
+ {
+  "kind": "core-rule",
+  "where": "data.js RULES Hover (Heldrake)",
+  "judgement": {
+   "text": "Each time this unit **takes to the skies** (21.03), do not subtract 2\" from the **maximum distance**.",
+   "why": "the Heldrake page names Hover under CORE ABILITIES; RULES had no entry, so its chip opened nothing. GW Core Rules text as the other core rules are held, checked by verify/texts.js against verify/.cache/gw"
+  },
+  "source": {
+   "gw": "verify/.cache/gw Core Rules, Hover"
+  }
+ },
+ {
+  "kind": "known-limit",
+  "where": "Forgefiend claws (catalogue row) vs the lists' row",
+  "judgement": {
+   "finding": "the list row keeps its signed-off values; the catalogue reads Wahapedia's Forgefiend claws (A 6) and jaws (A 8) as two weapons"
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/ds/world-eaters_Forgefiend.html"
+  }
+ },
+ {
+  "kind": "import-sheet",
+  "where": "an imported World Eaters unit no list has (the friend's import): its sheet",
+  "judgement": {
+   "finding": "On the phone (the export imported through localStorage, the shipped index.html) a catalogue-only unit showed no Damaged band and no line for its abilities or its detachment's rules: missing, not wrong. Its catalogue row carried no damaged range on its Damaged ability, and the catalogue was not read (aiStatus not-read: no BOXES for its sources, no summaries), so render.js all-attacks-block failed 6 Damaged lines on the made-up list.",
+   "fix": "verify/from-waha.js writes damaged (\"1-6\") on a Damaged ability, so the band is GW's text as written; the catalogue is read (aiRead, docs/catalog.md): verify/catalog-armies.js places every datasheet and enhancement under each of the 8 detachments, effects-migrate reads their sources into BOXES (reader 1), reader2 regenerated, agree --write, and lines.js holds each placed line to its summary (item 0).",
+   "reader1": {
+    "stateEnemy": "\"Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.\" is read as a defence box (the enemy unit's attacks, foe): Punishing Suppression, Unleash Hell",
+    "closest eligible": "\"that targets the closest eligible MONSTER or VEHICLE target within 18\"\" is a condition on the target (Blood-hungry Annihilator)"
+   },
+   "effect": "no box any of the owner's lists counts changes; the Damage numbers are unchanged (compared with main)"
+  },
+  "source": {
+   "gate": "verify/lines.js, verify/render.js on the made-up export, we-work phone emulation"
+  }
+ },
+ {
+  "kind": "wargear",
+  "where": "verify/waha-loadout.js fromOf (review 033ed75)",
+  "judgement": {
+   "rule": "an item named in the plural with no count (\"This model’s excruciator cannons can be replaced with 2 magma cutters\") replaces every one the swap model's default has, its count from that default; a counted or singular item as named",
+   "changed": "of the four catalogues (World Eaters, Tyranids, Adeptus Custodes, Chaos Daemons, every datasheet's loadout compared before and after), only world-eaters/defiler: from [\"Excruciator cannon\"] to [\"Excruciator cannon\",\"Excruciator cannon\"]",
+   "tests": "verify/import-test.js 6: the full swap built, the half swap (1 excruciator cannon and 2 magma cutters) refused"
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/ds/world-eaters_Defiler.html WARGEAR OPTIONS"
+  }
+ },
+ {
+  "kind": "builder",
+  "where": "builder.js enhKeywords (review 033ed75)",
+  "judgement": {
+   "rule": "an enhancement or upgrade whose words (after its \"… only.\" restriction) say \"This unit has **KW**.\" or \"This model has:\" with \"- **KW**.\" lines gives the unit that keyword, before its Faction keywords, with a kwNote \"<KW> comes from <enhancement> (“<its words>”)\" and why.kw; the abilities rules give by keyword (ruleAbilitiesOf) and verify/catalog-armies.js see it",
+   "cases": {
+    "Murder-Forged Entity": "Chaos Land Raider: Daemon, so Rampaging Terrors' Terror of Khorne and the DAEMON VEHICLE stratagems",
+    "Gateways to Glory": "Daemon Prince of Khorne: Mobile"
+   },
+   "tests": "verify/import-test.js 6 (verify/sources/import-madeup)"
+  },
+  "source": {
+   "gw": "FACTIONS world-eaters brazen-engines · Murder-Forged Entity; vessels-of-wrath · Gateways to Glory"
+  }
+ },
+ {
+  "kind": "import",
+  "where": "builder.js and import.js: a detachment by name (review 033ed75)",
+  "judgement": {
+   "rule": "a detachment no known export has shown is found by GW's name, New Recruit's (nr) or Wahapedia's heading (waha) where GW's documents renamed it",
+   "why": "New Recruit's data named the detachment Possessed Slaughterband (the committed record verify/sources/bsdata-extract.json, entry dda8-a874-feac-1f81, and its enhancements' comments), Wahapedia's heading too; GW's Faction Pack 1.3 Possessed Slaughterbound",
+   "tests": "verify/import-test.js 6: an export naming Possessed Slaughterband builds with possessed-slaughterbound"
+  },
+  "source": {
+   "record": "verify/sources/bsdata-extract.json (retired, read only)"
+  }
+ },
+ {
+  "kind": "reader",
+  "where": "verify/effects-extract.js (review 033ed75)",
+  "judgement": {
+   "each time trigger": "\"Each time <X> …, until the end of the turn/phase, …\" (not an attack's \"each time a model makes an attack\"): its trigger is a condition (q): Rush to the Fray r|1deasll now on:[[q, \"Each time a WORLD EATERS unit from your army disembarks from a TRANSPORT\"]]",
+   "stat option": "a stat box under an option's heading carries it (on: opt), as attack and defence boxes do: Idols of Khorne's Idol of Burning Wrath",
+   "effect": "only these two boxes change (BOXES compared before and after); AGREE still holds both back (fall back), as before",
+   "charge": "Rush to the Fray's and Burning Wrath's \"+1 to Charge rolls\" are no box of either reader (no stat id for Charge rolls): the sheet has GW's full text in its Abilities section and the Burning Wrath summary says it; Rush to the Fray's line under the weapons is its [LANCE] (rule 13)"
+  },
+  "source": {
+   "gate": "verify/lines.js, effects-migrate, agree"
+  }
+ },
+ {
+  "kind": "gate",
+  "where": "verify/helpers.js items() (review 033ed75)",
+  "judgement": {
+   "rule": "a read catalogue's summaries are judgements too: each catalogue-only datasheet ability's sumAtk/sumDef/sumSt/sumFoe/sumOv and each enhancement's of a detachment no list uses, so they need approval and re-open when changed"
+  },
+  "source": {
+   "gate": "verify/helpers.js"
+  }
+ },
+ {
+  "kind": "gate",
+  "where": "verify/render.js reserves-ds (after main 2026-11-23.2)",
+  "judgement": {
+   "rule": "an ability sentence that gives Deep Strike under a \"While …,\" clause is conditional, as one under \"If …,\": cond:<ability>",
+   "case": "Lord Invocatus, Fire Riders (\"While this model is leading a unit, models in that unit have the Deep Strike ability\") on the made-up export: the app showed cond:Fire Riders (GRANTS while, resWhile null), the check wanted grant:Fire Riders; no owner list has such a sentence"
+  },
+  "source": {
+   "gate": "verify/render.js on the made-up export: 0 failures"
+  }
+ }
+]

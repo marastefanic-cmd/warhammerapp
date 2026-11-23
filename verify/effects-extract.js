@@ -48,8 +48,12 @@ const defenceLead = u => { if(!u.bullet || !/:\s*$/.test(String(u.lead || ''))) 
 // that enemy unit ("While an enemy unit is within 12" of this model, if that unit is Battle-shocked:" then "- Each time a model in that unit
 // makes an attack, subtract 1 from the Hit roll.", Psychological Saboteur): the defence side, an enemy unit's attacks made worse (foe); a
 // bullet about friendly units' attacks that target it ("Each time a friendly TYRANIDS model makes an attack that targets that unit") is not
-const enemyLeadThat = (u, n) => !!u.bullet && /^while an enemy unit\b/.test(norm(u.lead || '')) && !/\bfriendly\b/.test(norm(u.lead || ''))
-  && /\b(?:a model|models) in that unit\b/.test(n) && !/\bfriendly\b|\btargets? that (?:enemy )?unit\b/.test(n);
+const enemyLeadThat = (u, n) => (!!u.bullet && /^while an enemy unit\b/.test(norm(u.lead || '')) && !/\bfriendly\b/.test(norm(u.lead || ''))
+  && /\b(?:a model|models) in that unit\b/.test(n) && !/\bfriendly\b|\btargets? that (?:enemy )?unit\b/.test(n)) || stateEnemy(u, n);
+// ("Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an
+// attack, subtract 1 from the Hit roll.": the state the sentence before gives an enemy unit, so "that unit" is that enemy unit)
+const stateEnemy = (u, n) => { const m = /^while a unit is ([a-z-]+),/.exec(n); return !!m && /\b(?:a model|models) in that unit\b/.test(n) && !/\bfriendly\b/.test(n)
+  && new RegExp('\\bthat enemy unit is ' + m[1] + '\\b').test(norm((u.lead || '') + ' ' + (u.prevS || ''))); };
 // a sentence that picks one of several ("select one of the following", "select either the X or Y ability")
 const PICK_LEAD = /\b(?:select|choose) one of the (?:following|abilities listed below|doctrina imperatives below)\b|\bcan have:$|\bselect one of the following\b/;
 // how long it lasts (the Damage tab carries a tick from the shooting into the fight)
@@ -143,8 +147,13 @@ function condsOf(V, sOrig, leadOrig, opts){
   // (the defence side: GW's struck words are not its words, "(excluding ~~MONSTER~~/VEHICLE units)", and a clause keeps its brackets)
   const pc = opts && opts.def ? plainCase(((leadOrig ? leadOrig + ' ' : '') + sOrig).replace(/~~[^~]*~~\/?/g, '')) : plainCase((leadOrig ? leadOrig + ' ' : '') + sOrig);
   // (a clause keeps its brackets: "While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)")
-  for(const m of pc.matchAll(/\b(?:(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;]+|[Tt]he first time (?:(?! while\b)[^,.:;()])+)/g)){
-    const cl = m[0], cn = norm(cl);
+  // (and the trigger of an effect that lasts to the end of the turn or phase: "Each time a WORLD EATERS unit from your army disembarks from
+  // a TRANSPORT, until the end of the turn, …", Rush to the Fray: not every attack's, only after that)
+  for(const m of pc.matchAll(/\b(?:(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;]+|[Tt]he first time (?:(?! while\b)[^,.:;()])+|[Ee]ach time (?:(?!\bmakes? an? (?:\w+ )?attack\b)[^,.:;()])+(?=, until the end of the (?:turn|phase)\b))/g)){
+    // (a clause with an alternative after a comma is read whole: "If that model's unit is within 6" of … MONSTER units, or within 9" of
+    // … TITANIC units", Fail Not the Blood God)
+    const alt = /^, or within [^,.:;]+/.exec(pc.slice(m.index + m[0].length));
+    const cl = m[0] + (alt ? alt[0] : ''), cn = norm(cl);
     if(/^if (?:you|it|they) do(?:es)?\b|^if any of the following apply\b/.test(cn)) continue;
     // (an "if" whose consequence is a cost, not this effect: "if that test is failed, that unit suffers D3 mortal wounds")
     if(/^,?\s*(?:that unit|this unit|your unit|it|that model|this model) suffers\b/i.test(pc.slice(m.index + cl.length))) continue;
@@ -166,6 +175,8 @@ function condsOf(V, sOrig, leadOrig, opts){
   // greater than this unit's T", "that targets the closest enemy unit"), what it can target ("they can only target units within range
   // of the selected objective marker"), the weapons ("with weapons selected for the Firing Deck ability")
   const QP = [/\bthat targets? (?:a|an|an enemy) unit (?:with|within) [^,.;:]+?(?= (?:have|has|can|gains?)\b|[,.;:]|$)/g, /\bthat targets? the closest enemy unit\b/g,
+    // (the closest of some keywords: "that targets the closest eligible MONSTER or VEHICLE target within 18"", Blood-hungry Annihilator)
+    /\bthat targets? the closest eligible (?:[A-Z]+(?: or |\/))*[A-Z]+ target(?: within \d+")?/g,
     /(?<=\bbut )(?:they|it) can only target [^,.;:]+/g, /\bthat targets? the enemy unit that [^,.;:]+/g, /\bcontains (?:a|one or more) [A-Z][A-Za-z' ]+? models?\b/g, /\bmodels in (?:those|that|your|this) [A-Za-z ]+? units? can only target [^,.;:]+/g, /\bwith weapons selected for the [^,.;:]+? ability\b/g,
     // the target's status, which no condition above reads: "that target a hidden unit", "targets a unit that is Battle-shocked"
     /\bthat targets? an? (?!enemy\b|unit\b)(?:[a-z][a-z-]* )+?unit(?: containing one or more models on [a-z ]+?(?=,|$))?/g, /\btargets? (?:a|an|an enemy) unit that is (?!below\b|not below\b)[^,.;:]+/g,
@@ -618,11 +629,15 @@ const sentencesOf = text => { const out = []; for(const l of String(text || '').
 function statOf(src, us, V){
   if(src.type !== 'rule') return [];
   const out = [];
+  // (a sentence under an option's heading is that option's, as an attack or defence box is: "**Idol of Burning Wrath (Aura)**" then
+  // "While a friendly … add 1" to the Move characteristic …", Idols of Khorne; unitsOf gives each sentence its option)
+  const secOf = new Map(unitsOf(src).filter(x => x.sec).map(x => [x.s, x.sec]));
   for(const u of sentencesOf(src.text)){
     const n = norm(u.s), st = [];
     for(const [id, f] of Object.entries(E.ST)) for(const re of f.pats){ const m = re.exec(n); if(m) st.push([id, +m[1]]); }
     if(!st.length) continue;
     const box = { quote:u.s, st, on:condsOf(V, u.s, '', { stat:true, inherit:true }) };
+    const sec = secOf.get(u.s); if(sec) box.on.unshift(['opt', sec]);
     const r = reachOf(V, u.s) || (u.prevS ? reachOf(V, u.prevS) : null);
     if(r) box.reach = r;
     const mk = ST_SCOPE.exec(u.s); if(mk) box.scope = { models:mk[1].trim() };

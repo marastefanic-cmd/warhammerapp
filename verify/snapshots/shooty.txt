@@ -730,7 +730,7 @@ GW
 56
 Games Workshop’s documents
 Wahapedia
-20
+22
 GW’s pages: counts as GW
 New Recruit
 127
@@ -745,12 +745,12 @@ AI summary
 20
 the only AI layer
 
-397 columns in all (verify/columns.json; the gate fails on a column it does not list).
+399 columns in all (verify/columns.json; the gate fails on a column it does not list).
 
 RULES AND STRATAGEMS
 
 FACTIONS
-13 rows · 105 columns
+13 rows · 106 columns
 
 one row per faction: its army rules, detachments and aliases
 
@@ -792,7 +792,7 @@ sumOv
 sumOvOf
 sumFoe
 sumFoeOf
-FACTIONS.detachments 59 rows
+FACTIONS.detachments 63 rows
 
 a faction's detachments
 
@@ -804,8 +804,9 @@ moreRules
 enhancements
 stratagems
 nr
+waha
 aiStatus
-FACTIONS.detachments.rule 59 rows
+FACTIONS.detachments.rule 63 rows
 
 a detachment's rule
 
@@ -849,7 +850,7 @@ note
 tableAt
 missing
 readOf
-FACTIONS.detachments.stratagems 253 rows
+FACTIONS.detachments.stratagems 274 rows
 
 a detachment's stratagems
 
@@ -870,7 +871,7 @@ note
 limit
 cpNote
 readOf
-FACTIONS.detachments.enhancements 173 rows
+FACTIONS.detachments.enhancements 187 rows
 
 a detachment's enhancements
 
@@ -990,13 +991,13 @@ That unit or model.
 effect
 You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll …
 RULES
-67 rows · 2 columns
+68 rows · 2 columns
 
 core rules and weapon abilities: name → text (glossary)
 
 KEYthe rule’s name
 
-RULES 67 rows
+RULES 68 rows
 name
 text
 
@@ -1055,7 +1056,7 @@ Hazard Roll · Mortal Wounds · Battle-shock · Engagement · Selected to Attack
 UNITS AND LISTS
 
 DATASHEETS
-261 rows · 75 columns
+274 rows · 76 columns
 
 one row per datasheet (faction + datasheet name): its facts, shared by every list that has it
 
@@ -1065,7 +1066,7 @@ KEY“faction/name”, the id an entry’s ds names
 
 RULES→ by name: a core rule in RULES (through RULE_ALIASES) or an army rule in FACTIONS
 
-DATASHEETS 261 rows
+DATASHEETS 274 rows
 name
 faction
 role
@@ -1082,8 +1083,9 @@ abilities
 points
 composition
 options
+loadout
 aiStatus
-DATASHEETS.stats 286 rows
+DATASHEETS.stats 299 rows
 
 a datasheet's model profiles
 
@@ -1097,7 +1099,7 @@ OC
 InSv
 base
 baseWith
-DATASHEETS.ranged 422 rows
+DATASHEETS.ranged 474 rows
 
 a datasheet's ranged weapon profiles
 
@@ -1114,7 +1116,7 @@ group
 fireAll
 hunter
 carrier
-DATASHEETS.melee 401 rows
+DATASHEETS.melee 430 rows
 
 a datasheet's melee weapon profiles
 
@@ -1131,7 +1133,7 @@ group
 fireAll
 hunter
 carrier
-DATASHEETS.abilities 629 rows
+DATASHEETS.abilities 666 rows
 
 a datasheet's abilities
 
@@ -1431,7 +1433,7 @@ upgrades
 WORKED OUT FROM GW’S WORDS BY SCRIPTS
 
 BOXES
-448 rows · 49 columns
+469 rows · 49 columns
 
 the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
 
@@ -1439,9 +1441,9 @@ WRITTEN BYverify/effects-migrate.js --write
 
 KEYa| an ability, r| a rule, s| a stratagem, c| a core rule, then a fingerprint of its name and words
 
-B, D, ST456 boxes: what a sentence of GW’s does to attacks (b), to attacks on the unit (d), to a characteristic (st)
+B, D, ST477 boxes: what a sentence of GW’s does to attacks (b), to attacks on the unit (d), to a characteristic (st)
 
-BOXES 448 rows
+BOXES 469 rows
 n
 b
 nc
@@ -1455,7 +1457,7 @@ dnc
 dreach
 st
 snc
-BOXES.b 311 rows
+BOXES.b 324 rows
 
 one box of the Damage tab: what GW's sentence does, as the catalogue (effects.js) reads it
 
@@ -1476,7 +1478,7 @@ limit
 tableRows
 pool
 excl
-BOXES.d 139 rows
+BOXES.d 146 rows
 
 one defence box: what GW's sentence does for a unit when it is attacked, as the catalogue (effects.js DF) reads it; the datasheet's "When targeted" line
 
@@ -1494,7 +1496,7 @@ opt
 pick
 term
 until
-BOXES.st 6 rows
+BOXES.st 7 rows
 
 one stat box: a characteristic of a unit’s models GW’s sentence changes, as the catalogue (effects.js ST) reads it; the line under the unit’s profile (“Not Battle-shocked: OC 7”)
 
@@ -1515,15 +1517,15 @@ BOXES→ each box of BOXES: confirmed by both readers, by a reviewed verdict, a 
 AGREE 1 row
 boxes
 GRANTS
-81 rows · 8 columns
+84 rows · 8 columns
 
 a rule or option giving units an ability or keyword
 
 WRITTEN BYverify/tables.js --write, from verify/derive.js
 
-RULE→ an army rule (5) or detachment rule (32) in FACTIONS, or a unit’s ability (44) in a list (ARMIES → DATASHEETS)
+RULE→ an army rule (5) or detachment rule (35) in FACTIONS, or a unit’s ability (44) in a list (ARMIES → DATASHEETS)
 
-GRANTS 81 rows
+GRANTS 84 rows
 rule
 option
 grants
@@ -1548,15 +1550,15 @@ while
 text
 - Friendly GRETCHIN units have BATTLELINE.
 RULE_OPTIONS
-92 rows · 8 columns
+97 rows · 8 columns
 
 the options inside a rule or ability, each with the phases its words give
 
 WRITTEN BYverify/tables.js --write, from verify/derive.js
 
-RULE→ an army rule (37) or detachment rule (41) in FACTIONS, or a unit’s ability (14) in a list (ARMIES → DATASHEETS)
+RULE→ an army rule (37) or detachment rule (46) in FACTIONS, or a unit’s ability (14) in a list (ARMIES → DATASHEETS)
 
-RULE_OPTIONS 92 rows
+RULE_OPTIONS 97 rows
 rule
 option
 text
@@ -1585,13 +1587,13 @@ used
 phases
 ph: shooting, fight; turn: either; turns: shooting: your
 CHECKLIST
-512 rows · 13 columns
+516 rows · 13 columns
 
 per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
 
 WRITTEN BYverify/derive.js --write
 
-R|FACTION|NAME→ an army or detachment rule in FACTIONS (92)
+R|FACTION|NAME→ an army or detachment rule in FACTIONS (96)
 
 A|FINGERPRINT→ an ability, by a fingerprint of its name and words (420), in DATASHEETS
 
@@ -1630,7 +1632,7 @@ the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-23.2
+2026-11-23.3
 
 a list from an export
 3
@@ -1646,14 +1648,14 @@ ARMIES
 
 One file turns a New Recruit export into a list from the export and the tables alone. Your phone’s Import runs it, the gate runs it, and the built-in lists of these factions are made by the same call: each is built exactly as your phone would import it.
 
-3
-catalogued factions: Adeptus Custodes, Chaos Daemons and Tyranids
-6
-lists built from their export: Nidzillas, Lite Knights, The Exiled Legion, Tzeeeeentch, Healybois and Basic Bitch
+4
+catalogued factions: Adeptus Custodes, Chaos Daemons, Tyranids and World Eaters
+10
+lists built from their export: Princes, Standard, Nidzillas, Super Terminators, Big demons baby, Lite Knights, The Exiled Legion, Tzeeeeentch, Healybois and Basic Bitch
 
 The exceptions: Emperor’s Chosen and Dread Host (Adeptus Custodes) have no export, only New Recruit PDFs: they were written from the PDFs and are held by every other check, not by the builder.
 
-The 18 lists of the other 10 factions each give the same data.js again, byte for byte, when re-imported from their export (verify/from-json.js, which keeps the datasheet rows and ids data.js already has); an import of one on your phone is made of units those lists already have.
+The 14 lists of the other 9 factions each give the same data.js again, byte for byte, when re-imported from their export (verify/from-json.js, which keeps the datasheet rows and ids data.js already has); an import of one on your phone is made of units those lists already have.
 
 the rules’ boxes, read twice
 4
@@ -1664,15 +1666,15 @@ the app’s: reads GW’s words sentence by sentence into BOXES (effects.js)
 Reader 2
 verify/reader2/: written apart, never uses the app’s reading code; the gate runs it in a sandbox that can read only its own files, GW’s documents and Wahapedia’s pages, and a copy of data.js cut down to the rules’ words and what places them (names, ids, factions, keywords, tags, which model has it, where a rule’s table sits)
 
-456 boxes from 448 rules, abilities and stratagems:
+477 boxes from 469 rules, abilities and stratagems:
 
-378
+385
 both readers agree
 25
 a reviewed verdict quoting GW
 6
 Core Rules boxes
-47
+61
 not counted
 
 AGREE records the comparison. A box counts, in the Damage tab and on the sheets, only where both readers agree, or a reviewed verdict with GW’s quote shows the app right (the Core Rules boxes, which reader 2 does not read, count as GW’s Core Rules). Any other is shown as GW’s words, “see the rule”, and never counted.
@@ -1680,14 +1682,14 @@ AGREE records the comparison. A box counts, in the Damage tab and on the sheets,
 the one AI part
 5
 The only AI layer
-gist 182
-sumAtk 140
-sumDef 96
-sumSt 19
-sumOv 47
+gist 203
+sumAtk 150
+sumDef 102
+sumSt 23
+sumOv 53
 sumFoe 11
 
-495 summaries in these columns are written by AI: a stratagem’s one-line gist, and the short line a unit’s sheet or the Overview shows of a rule in each place it applies. Everything else is copied, worked out by a script, or (a few ids, short names, aliases and notes) written by hand.
+542 summaries in these columns are written by AI: a stratagem’s one-line gist, and the short line a unit’s sheet or the Overview shows of a rule in each place it applies. Everything else is copied, worked out by a script, or (a few ids, short names, aliases and notes) written by hand.
 
 Each carries the AI label, and a tap on it opens GW’s full text.
 Each sits next to a fingerprint of the GW words it was written from (gistOf, sumAtkOf, sumDefOf, sumStOf, sumOvOf, sumFoeOf): when GW’s words change, the gate fails until it is written again.

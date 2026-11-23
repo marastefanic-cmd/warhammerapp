@@ -1,0 +1,434 @@
+[
+ {
+  "key": "d14c16d9b2f0a461",
+  "where": "rule-sumAtk · Berzerker Warband rule · Relentless Rage",
+  "verdict": "ok",
+  "why": "GW pack update \"Friendly WORLD EATERS units’ melee attacks have +1 A.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 247-250)."
+ },
+ {
+  "key": "070878689e1428bc",
+  "where": "enhancement-sumAtk · Berzerker Warband · Berzerker Glaive",
+  "verdict": "ok",
+  "why": "GW \"Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons)\"."
+ },
+ {
+  "key": "b1460c8daad757cf",
+  "where": "enhancement-sumSt · Butchers of Khorne · Sanctified in Slaughter",
+  "verdict": "ok",
+  "why": "GW (pack p3) \"TERMINATOR SQUAD unit only. This unit has +1 OC.\""
+ },
+ {
+  "key": "0609ff0809ce7176",
+  "where": "enhancement-sumDef · Khorne Daemonkin · Blood-forged Armour",
+  "verdict": "ok",
+  "why": "GW \"The bearer has a Save characteristic of 2+.\" (its Blood Tithe point is no defence part, rule 13)."
+ },
+ {
+  "key": "1cea7858daefb946",
+  "where": "enhancement-sumAtk · Khorne Daemonkin · Blade of Endless Bloodshed",
+  "verdict": "ok",
+  "why": "GW \"Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons.\""
+ },
+ {
+  "key": "b30ec7544ef0bd81",
+  "where": "ability-sumSt · catalog · world-eaters/bloodcrushers · Daemonic Icon",
+  "verdict": "ok",
+  "why": "As Bloodletters: GW \"Models in the bearer’s unit have a Leadership characteristic of 6+.\""
+ },
+ {
+  "key": "1ff9dbb59adfcca7",
+  "where": "ability-sumOv · catalog · world-eaters/khorne-lord-of-skulls · Idol of Blessed Blood",
+  "verdict": "ok",
+  "why": "GW \"At the start of the battle round, if this model is on the battlefield, when you make a Blessings of Khorne roll, roll one additional D6.\" Condition first, nothing added."
+ },
+ {
+  "key": "595d89612ebb1534",
+  "where": "ability-sumAtk · catalog · world-eaters/chaos-predator-annihilator · Blood-hungry Annihilator",
+  "verdict": "ok",
+  "why": "GW \"…ranged attack that targets the closest eligible MONSTER or VEHICLE target within 18\\\", you can re-roll the Wound roll and you can re-roll the Damage roll.\" Conditions first, rule 23 wording."
+ },
+ {
+  "key": "9adc283c7211b360",
+  "where": "ability-sumDef · catalog · world-eaters/chaos-predator-destructor · Punishing Suppression",
+  "verdict": "ok",
+  "why": "Round 2: my fix applied verbatim. GW \"select one enemy unit hit by one or more of those attacks (excluding MONSTERS and VEHICLES) … that enemy unit is suppressed\": one unit, picked, now said."
+ },
+ {
+  "key": "99ee231eb8ca53b6",
+  "where": "ability-sumAtk · catalog · world-eaters/heldrake · Airborne Predator",
+  "verdict": "ok",
+  "why": "GW \"Each time this model makes an attack that targets a unit that can FLY, add 1 to the Hit roll.\""
+ },
+ {
+  "key": "5be2bc0f7fcf0192",
+  "where": "ability-sumDef · catalog · world-eaters/helbrute · Frenzy",
+  "verdict": "ok",
+  "why": "GW (Faction Pack 1.3 Rules Updates, verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 350-355): \"(Once per turn, per unit) In the Fight phase, when an enemy unit targets this unit, after that unit has resolved its attacks, you can use this ability. If you do, this unit is eligible to fight (even if it has already fought this phase) and must be selected to fight next.\" Limit kept, rule 42 \"if it uses this ability\"."
+ },
+ {
+  "key": "d47d8a5d57bb1053",
+  "where": "ability-sumAtk · catalog · world-eaters/maulerfiend · Savage Exaltation",
+  "verdict": "ok",
+  "why": "GW \"…melee attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll and, if … Below Half-strength, add 1 to the Wound roll as well.\" Both conditions kept, Encephalic Diffusion form."
+ },
+ {
+  "key": "57dc49baf6d1a715",
+  "where": "rule-sumAtk · World Eaters · Cult of Blood rule · Idols of Khorne",
+  "verdict": "ok",
+  "why": "Round 2: my fix applied verbatim. GW \"within 6\\\" of this model (or within 9\\\" if this model is TITANIC)\", the ability on WORLD EATERS TITANIC and MONSTER units: the TITANIC VEHICLE Lord of Skulls now counts."
+ },
+ {
+  "key": "d87dd04b06545186",
+  "where": "rule-sumDef · World Eaters · Cult of Blood rule · Idols of Khorne",
+  "verdict": "ok",
+  "why": "Round 2: my fix applied verbatim (as its sumAtk)."
+ },
+ {
+  "key": "7bf63068ce758e1a",
+  "where": "rule-sumSt · World Eaters · Cult of Blood rule · Idols of Khorne",
+  "verdict": "ok",
+  "why": "Round 2: my fix applied verbatim (as its sumAtk); its stat box r|mvn58j st now carries opt Idol of Burning Wrath (Aura)."
+ },
+ {
+  "key": "af8de1fac2a962f9",
+  "where": "rule-sumOv · World Eaters · Cult of Blood rule · Idols of Khorne",
+  "verdict": "ok",
+  "why": "GW \"At the start of your Command phase, you can select one … active and its effects apply to all WORLD EATERS TITANIC and WORLD EATERS MONSTER units … only select each … once per battle.\" Faithful."
+ },
+ {
+  "key": "cdf12fbe794ca49d",
+  "where": "strat-gist · World Eaters · Cult of Blood · Bloody Vengeance",
+  "verdict": "ok",
+  "why": "GW TARGET a WORLD EATERS MONSTER/TITANIC unit just destroyed by an enemy unit; EFFECT JAKHALS or GOREMONGERS attacks that target that enemy unit can re-roll the Hit roll. Duration dropped per rule 6."
+ },
+ {
+  "key": "395921f289c1b3c4",
+  "where": "strat-gist · World Eaters · Cult of Blood · Drawn to the Slaughter",
+  "verdict": "ok",
+  "why": "GW: a just-destroyed JAKHALS unit; a new identical unit in Strategic Reserves at Starting Strength; RESTRICTIONS no CHARACTER units returned to Attached units, once per battle. Both restrictions kept."
+ },
+ {
+  "key": "fdd001b9ddc5f9a6",
+  "where": "strat-gist · World Eaters · Cult of Blood · In the Shadow of Brass Idols",
+  "verdict": "ok",
+  "why": "GW \"Feel No Pain 6+ … within 6\\\" of one or more friendly WORLD EATERS MONSTER units, or within 9\\\" of … WORLD EATERS TITANIC units … Feel No Pain 5+ instead.\" Both alternatives right."
+ },
+ {
+  "key": "a146c8c044f66a1c",
+  "where": "strat-gist · World Eaters · Cult of Blood · Bloodthirsty Horde",
+  "verdict": "ok",
+  "why": "GW: models within 3\" of enemy models are eligible to fight and can target one of those units within 3\" of them and within Engagement Range of their unit."
+ },
+ {
+  "key": "379da6359a022f75",
+  "where": "strat-gist · World Eaters · Cult of Blood · Fail Not the Blood God",
+  "verdict": "ok",
+  "why": "GW \"re-roll a Hit roll of 1. If … within 6\\\" of … WORLD EATERS MONSTER units, or within 9\\\" of … WORLD EATERS TITANIC units, you can re-roll the Hit roll instead.\" Rule 8 form."
+ },
+ {
+  "key": "ac26769863a5a7f3",
+  "where": "strat-gist · World Eaters · Cult of Blood · Brazen Idol",
+  "verdict": "ok",
+  "why": "GW EFFECT: the selected Idol is active for your unit instead of any other active for your army, even if already selected; once per battle (precedent gist \"once per battle: …\")."
+ },
+ {
+  "key": "e9a192504bf98dac",
+  "where": "enhancement-sumOv · Cult of Blood · Butcher Lord",
+  "verdict": "ok",
+  "why": "GW pack update \"WORLD EATERS INFANTRY model only. The bearer has the Infiltrators ability.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 260-265)."
+ },
+ {
+  "key": "f631d01f29d8e1b5",
+  "where": "enhancement-sumDef · Cult of Blood · Brazen Form",
+  "verdict": "ok",
+  "why": "GW \"Add 1 to the bearer’s Toughness characteristic and the bearer has the Feel No Pain 5+ ability.\""
+ },
+ {
+  "key": "5fa133e28b2645c1",
+  "where": "enhancement-sumOv · Cult of Blood · Strategic Slaughter",
+  "verdict": "ok",
+  "why": "GW \"After both players have deployed … select up to three JAKHALS and/or GOREMONGERS units … redeploy them … Strategic Reserves, regardless of how many units are already in Strategic Reserves.\" \"up to\" kept (rule 47)."
+ },
+ {
+  "key": "0ed2488ca96a7c02",
+  "where": "strat-gist · World Eaters · Possessed Slaughterbound · Daemonic Resistance",
+  "verdict": "ok",
+  "why": "GW \"each time an attack targets your unit, subtract 1 from the Wound roll\" (rule 30 form \"attacks on this unit\")."
+ },
+ {
+  "key": "4ec045572a8aa0e1",
+  "where": "strat-gist · World Eaters · Possessed Slaughterbound · Daemonic Strength",
+  "verdict": "ok",
+  "why": "GW: +1 Damage if EIGHTBOUND and the enemy model is not MONSTER/VEHICLE; if EXALTED EIGHTBOUND and it is a MONSTER or VEHICLE \"instead\". Both cases right."
+ },
+ {
+  "key": "be58aeefbb1b3dad",
+  "where": "strat-gist · World Eaters · Possessed Slaughterbound · Immortal Fury",
+  "verdict": "ok",
+  "why": "GW: a model destroyed before it has fought is not removed, fights after the attacking unit, then is removed."
+ },
+ {
+  "key": "5a97d0cfd897af80",
+  "where": "strat-gist · World Eaters · Possessed Slaughterbound · Rapid Manifestation",
+  "verdict": "ok",
+  "why": "GW with the pack's \"Change 3\\\" to 6\\\"\": set up more than 6\" horizontally away from all enemy units; not eligible to charge that turn."
+ },
+ {
+  "key": "30edcf31451714d5",
+  "where": "strat-gist · World Eaters · Possessed Slaughterbound · Warp Stalkers",
+  "verdict": "ok",
+  "why": "GW pack text: Normal, Advance, Fall Back or Charge moves through enemy models (excluding MONSTERS and VEHICLES); only a Charge move may end within Engagement Range; Desperate Escape tests automatically passed."
+ },
+ {
+  "key": "dda6fbb0ac8752cb",
+  "where": "strat-gist · World Eaters · Possessed Slaughterbound · Horrifying Violence",
+  "verdict": "ok",
+  "why": "GW \"Each enemy unit within Engagement Range of your unit must take a Battle-shock test, subtracting 1\"."
+ },
+ {
+  "key": "3c6dd967ad93f6d0",
+  "where": "enhancement-sumAtk · Possessed Slaughterbound · Frenzied Focus",
+  "verdict": "ok",
+  "why": "GW \"a Critical Hit is scored on an unmodified Hit roll of 5+\": crit wording."
+ },
+ {
+  "key": "ad791eaac8152e3d",
+  "where": "rule-sumAtk · World Eaters · Goretrack Onslaught rule · Rush to the Fray",
+  "verdict": "ok",
+  "why": "GW \"Each time a WORLD EATERS unit … disembarks from a TRANSPORT, until the end of the turn, add 1 to Charge rolls … and that unit’s melee weapons have the [lance] ability.\" The attack part is right. Note (not this text's fault): its +1 to Charge rolls has no line anywhere (no st/snc box), and its b box r|1deasll carries no condition (on: []); AGREE 0 keeps it out of the Damage tab. See the reader finding."
+ },
+ {
+  "key": "4cbf2e053d5c079e",
+  "where": "strat-gist · World Eaters · Goretrack Onslaught · Endless Pursuit of Violence",
+  "verdict": "ok",
+  "why": "GW \"If your WORLD EATERS INFANTRY unit is wholly within 6\\\" of that TRANSPORT, it can embark within it.\""
+ },
+ {
+  "key": "dda27ae53ba197a7",
+  "where": "strat-gist · World Eaters · Goretrack Onslaught · Smash Through",
+  "verdict": "ok",
+  "why": "GW \"each time your unit makes a Normal or Advance move, it can move horizontally through terrain features.\""
+ },
+ {
+  "key": "5b721440947bd96b",
+  "where": "strat-gist · World Eaters · Goretrack Onslaught · Aggressive Disembarkation",
+  "verdict": "ok",
+  "why": "GW: one WORLD EATERS unit embarked in the RHINO disembarks wholly within 6\" of it, and can be set up within Engagement Range."
+ },
+ {
+  "key": "1aa44acc1c394ff6",
+  "where": "strat-gist · World Eaters · Goretrack Onslaught · Full-Throttle Assault",
+  "verdict": "ok",
+  "why": "GW: a WORLD EATERS unit disembarking after the RHINO made a Normal move makes an assault disembark move."
+ },
+ {
+  "key": "93693b6a0324ab4b",
+  "where": "strat-gist · World Eaters · Goretrack Onslaught · Unrelenting Advance",
+  "verdict": "ok",
+  "why": "GW: a WORLD EATERS VEHICLE hit by the attacking unit can make a Normal move of up to 6\"; not with Fury Unleashed in the same phase."
+ },
+ {
+  "key": "50580e2023da65f0",
+  "where": "strat-gist · World Eaters · Goretrack Onslaught · Fury Unleashed",
+  "verdict": "ok",
+  "why": "GW pack update (verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 267-274): \"One KHORNE BERZERKERS unit embarked within your model can make a disembark move and then make a surge move of up to D6+2\\\".\"; restriction kept."
+ },
+ {
+  "key": "23f7ad700656f2a3",
+  "where": "enhancement-sumOv · Goretrack Onslaught · Aggressive Deployment",
+  "verdict": "ok",
+  "why": "GW \"if the bearer starts the battle embarked within a DEDICATED TRANSPORT, that DEDICATED TRANSPORT has the Scouts 9\\\" ability.\""
+ },
+ {
+  "key": "332416450f7a472e",
+  "where": "enhancement-sumDef · Goretrack Onslaught · Unleash Hell",
+  "verdict": "ok",
+  "why": "Round 2: my fix applied verbatim. GW: one VEHICLE within 6\" of the bearer, or its TRANSPORT, selected at the start of your Shooting phase; one enemy unit it hit selected; both picks now said."
+ },
+ {
+  "key": "b77978df7ab12b39",
+  "where": "enhancement-sumOv · Goretrack Onslaught · Infernal Infusion",
+  "verdict": "ok",
+  "why": "GW \"Once per battle, at the start of the Fight phase … the bearer’s unit has the Fights First ability.\" Rule 49 form."
+ },
+ {
+  "key": "bcfef5bdad5e7924",
+  "where": "strat-gist · World Eaters · Brazen Engines · Apoplectic Clarity",
+  "verdict": "ok",
+  "why": "GW (pack p2) \"Your unit’s attacks can ignore modifiers to: BS. WS. Hit rolls and wound rolls.\""
+ },
+ {
+  "key": "9e5835decfcd0c1e",
+  "where": "strat-gist · World Eaters · Brazen Engines · Trail of Destruction",
+  "verdict": "ok",
+  "why": "GW (pack p2) \"Your unit has MOBILE.\""
+ },
+ {
+  "key": "3106858517aaa5b2",
+  "where": "strat-gist · World Eaters · Brazen Engines · Goaded to Fury",
+  "verdict": "ok",
+  "why": "GW (pack p2): an unengaged DAEMON VEHICLE (excluding TITANIC) that an enemy unit targeted; surge move of up to D6\"."
+ },
+ {
+  "key": "97ce85d12f781aa7",
+  "where": "enhancement-sumAtk · Brazen Engines · Talons of Butchery",
+  "verdict": "ok",
+  "why": "GW (pack p2) \"This unit’s Maulerfiend Fists have [CLEAVE 2].\"; the program prefixes the weapon (scope weapon in its box)."
+ },
+ {
+  "key": "da3d91fc404386e0",
+  "where": "code · resolveRoster",
+  "verdict": "ok",
+  "why": "Round 2: import.js resolveRoster also matches a detachment by its waha name (Possessed Slaughterband), only where no known id resolves it and exactly one detachment of the faction has that name: the same rule as name/nr, and the same change in builder.js topLevel."
+ },
+ {
+  "key": "76b153af28a780f4",
+  "where": "code · statOf",
+  "verdict": "ok",
+  "why": "Round 2: statOf puts a sentence's option heading (unitsOf sec) first in its conditions, as attack and defence boxes do. Across all BOXES only r|mvn58j st changes (diffed data.js 033ed75..HEAD: the only other BOXES lines changed come from main's GRANTS)."
+ },
+ {
+  "key": "59439caf7d4948a6",
+  "where": "code · resolveArmies",
+  "verdict": "ok",
+  "why": "Only change against main 1eb4290: \"loadout\" added to the catalogue columns hidden from resolved units (HIDE), beside points, composition, options, aiStatus. Right: loadout is a DATASHEETS column for builder.js only."
+ },
+ {
+  "key": "we-catalog|catalog-faction",
+  "where": "catalog-faction · factions.json world-eaters catalogFactions",
+  "verdict": "ok",
+  "why": "Pact of Blood only bars BLOOD LEGIONS as Army Faction; the pack FAQ names Bloodcrushers/Flesh Hounds in a World Eaters army."
+ },
+ {
+  "key": "we-catalog|catalog-left-out",
+  "where": "catalog-left-out · World Eaters catalogue excluded",
+  "verdict": "ok",
+  "why": "The six are marked Warhammer Legends on Wahapedia; the others are other factions' pages. Matched play only."
+ },
+ {
+  "key": "we-catalog|detachment-name",
+  "where": "detachment-name · possessed-slaughterbound",
+  "verdict": "ok",
+  "why": "GW's pack heading POSSESSED SLAUGHTERBOUND over Wahapedia's; round 2: an export naming Possessed Slaughterband now resolves through waha (builder.js, import.js)."
+ },
+ {
+  "key": "we-catalog|pack-update|Butcher Lord",
+  "where": "pack-update · cult-of-blood · Butcher Lord",
+  "verdict": "ok",
+  "why": "Pack \"Change to:\" text applied verbatim (verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 260-265)."
+ },
+ {
+  "key": "we-catalog|pack-text|Murder-Forged Entity",
+  "where": "pack-text · brazen-engines · Murder-Forged Entity",
+  "verdict": "ok",
+  "why": "Pack p2 prints the full stop. (Its effect, DAEMON, is not given by builder.js: see the builder \"what a rule gives\" finding.)"
+ },
+ {
+  "key": "we-catalog|parse",
+  "where": "parse · RESTRICTION: as RESTRICTIONS",
+  "verdict": "ok",
+  "why": "Wahapedia's singular label is the same field; texts.js checks it against the pack."
+ },
+ {
+  "key": "we-catalog|pack-title",
+  "where": "pack-title · TITLE_TYPOS Scent Of Blood",
+  "verdict": "ok",
+  "why": "The pack's new text is the Maulerfiend's The Scent of Blood; same precedent as Blood/Bloody Fury."
+ },
+ {
+  "key": "we-catalog|pack-update|Helbrute Frenzy",
+  "where": "pack-update · helbrute · Frenzy tag",
+  "verdict": "ok",
+  "why": "The pack text opens \"(Once per turn, per unit)\"; held as the tag, the rest the words."
+ },
+ {
+  "key": "we-catalog|model-names",
+  "where": "model-names · composition names",
+  "verdict": "ok",
+  "why": "Singulars and GW names where no export shows New Recruit's; a name the catalogue does not know is refused, named (docs/tables.md known limits). Not silent."
+ },
+ {
+  "key": "we-catalog|declared|deviations-catalog",
+  "where": "declared · deviations-catalog.json world-eaters",
+  "verdict": "ok",
+  "why": "Angron's three Wrathful Presence abilities, the Dishonoured profile row (same values as GW's one profile), the Terminators' NR model entries and Lord on Juggernaut are New Recruit's holdings of GW's same facts; each declaration has evidence."
+ },
+ {
+  "key": "we-catalog|declared|deviations-keywords",
+  "where": "declared · Daemon Prince of Khorne with Wings name keyword",
+  "verdict": "ok",
+  "why": "Wahapedia KEYWORDS \"… DAEMON PRINCE\"; the head match is what the page prints."
+ },
+ {
+  "key": "we-catalog|declared|deviations-nr",
+  "where": "declared · deviations-nr.json stats rows ×N",
+  "verdict": "ok",
+  "why": "The PDFs print rows without ×N; builder.js always writes ×N; display only."
+ },
+ {
+  "key": "we-catalog|wargear",
+  "where": "wargear · verify/waha-loadout.js on World Eaters",
+  "verdict": "ok",
+  "why": "Round 2 (39b1109): waha-loadout.js fromOf reads a plural item with no count as every one the line's default has. Defiler swap now from [\"Excruciator cannon\",\"Excruciator cannon\"]. from-waha.js rerun reproduces the committed catalogue byte for byte; the other three catalogues hold no loadout. My made-up exports: the full magma-cutter swap builds, the half swap (1 excruciator + 2 magma cutters) is refused naming the Defiler; import-test has both. Rest as round 1."
+ },
+ {
+  "key": "we-catalog|builder|legalLoadout",
+  "where": "builder · builder.js: what an export may carry",
+  "verdict": "ok",
+  "why": "Round 2: with the reader fixed, legalLoadout gives GW's answer on both Defiler cases (above)."
+ },
+ {
+  "key": "we-catalog|builder|marks",
+  "where": "builder · builder.js \"+\" marks",
+  "verdict": "ok",
+  "why": "Several additive rules summed only when every one adds and the total equals the export; skill counts down (4+ → 3+ for +1 WS). marks step passes; Knight Diabolus re-imports."
+ },
+ {
+  "key": "we-catalog|builder|rule-gives",
+  "where": "builder · builder.js: what a rule gives a unit",
+  "verdict": "ok",
+  "why": "Round 2: builder.js enhKeywords: \"This unit/model has **KW**.\" and a \"This model has:\" list of bold capitals give the keyword, placed before the Faction keywords, with a kwNote naming the enhancement and its words; the granted rules (ruleAbilitiesOf) see it; catalog-armies.js does the same. My Brazen Engines export: the Land Raider with Murder-Forged Entity has Daemon, kwNote, Terror of Khorne; phone-e shows Apoplectic Clarity, Trail of Destruction, Goaded to Fury. Misfire scan over all 187 enhancements of data.js: it reads exactly Murder-Forged Entity (Daemon) and Gateways to Glory (Mobile); none of \"+1 OC\", \"+2\\\" M\", \"4+ InSv\", \"Feel No Pain 5+\", \"**Stealth**\", \"the following weapon\", a \"While …:\" bullet or an ability (\"has the Deep Strike ability\") matches (they are not bold all-capital words right after \"has\"). It is read only from enhancements and upgrades, not abilities."
+ },
+ {
+  "key": "we-catalog|list-change",
+  "where": "list-change · the four World Eaters lists",
+  "verdict": "ok",
+  "why": "Renames/ids/×N only; damage-node 1800 of 1800 same as main per the builder; build-parity P1 and reimport in my gate run (see report)."
+ },
+ {
+  "key": "we-catalog|reader",
+  "where": "reader · effects-extract.js, coverage.js",
+  "verdict": "ok",
+  "why": "Round 2: condsOf reads \"Each time …, until the end of the turn/phase\" (not an attack's \"each time … makes an attack\") as a condition: Rush to the Fray r|1deasll now has it. With statOf's option, only those two boxes changed across BOXES (diffed). Still not shown anywhere: Rush to the Fray's +1 to Charge rolls (no stat or snc box) — missing, not wrong."
+ },
+ {
+  "key": "we-catalog|gate|catalog-nr",
+  "where": "gate · verify/catalog.js nr by DATASHEETS key",
+  "verdict": "ok",
+  "why": "Comparing a list unit with the row of its own ds is right; the three declarations it replaced were for a wrong comparison."
+ },
+ {
+  "key": "we-catalog|core-rule|Hover",
+  "where": "core-rule · RULES Hover",
+  "verdict": "ok",
+  "why": "Core Rules 24.17 (verify/.cache/gw core rules txt lines 3784-3793) \"Each time this unit takes to the skies (21.03), do not subtract 2\\\" from the maximum distance.\" Exact. The Heldrake row has the pack's M 12\", OC 0 and no AIRCRAFT."
+ },
+ {
+  "key": "we-catalog|known-limit|Forgefiend",
+  "where": "known-limit · Forgefiend claws",
+  "verdict": "ok",
+  "why": "The list row and the catalogue have the same Wahapedia values (claws A6 S6 AP0 D1, jaws A8 S7 AP-1 D2); only key order differs."
+ },
+ {
+  "key": "we-catalog|import-sheet",
+  "where": "import-sheet · an imported World Eaters unit's sheet",
+  "verdict": "ok",
+  "why": "Damaged ranges written, the catalogue read through catalog-armies; the stateEnemy and closest-eligible readings are right. Round 2: helpers items() now covers a read catalogue's datasheet ability summaries and its detachments' enhancement summaries (49 waiting, each reviewed here)."
+ },
+ {
+  "key": "we-catalog|gate|render-reserves-ds",
+  "where": "gate · verify/render.js reserves-ds (4af95d4)",
+  "verdict": "ok",
+  "why": "\"While this model is leading a unit, models in that unit have the Deep Strike ability\" (Fire Riders) is conditional exactly as an \"If …,\" sentence: the check now expects cond:<ability>, as the app shows it. No owner list has such a sentence; 0 render failures in my gate."
+ }
+]

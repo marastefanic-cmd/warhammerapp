@@ -66,7 +66,9 @@ const weaponRowOf = (P, kind, r, id, rowName) => {
 
 // the DATASHEETS rows no list has (a faction catalogue's, verify/sources/catalog: aiStatus 'not-read'): each as a unit of its own, checked
 // the same way
-const CATALOG = Object.values(Object.entries(D.datasheets).filter(([id, s]) => s.aiStatus === 'not-read')
+// (and a read catalogue's, aiRead, whose rows carry no mark: every row of it no list has)
+const READ_CAT = require('./catalog-armies').readFactions(), LISTED = new Set(require('./tables').read(require('fs').readFileSync(require('path').join(__dirname, '../data.js'), 'utf8')).A.value.flatMap(a => a.units.flatMap(u => [].concat(u.ds || []))));
+const CATALOG = Object.values(Object.entries(D.datasheets).filter(([id, s]) => s.aiStatus === 'not-read' || (READ_CAT.includes(s.faction) && !LISTED.has(id)))
   .reduce((m, [id, s]) => { (m[s.faction] = m[s.faction] || { id:'catalog:' + s.faction, faction:s.faction, units:[] }).units.push(Object.assign({ id }, s)); return m; }, {}));
 for(const a of D.armies.concat(CATALOG)) for(const u of [...a.units, ...(a.refs || [])]){
   const parts = O.partsOf(u, a.faction), ids = [].concat(D.armies.length && u.ds || []);

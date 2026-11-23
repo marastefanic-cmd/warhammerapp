@@ -134,6 +134,7 @@ function main() {
   // (the datasheets the lists name: ARMIES as data.js writes it, each unit entry's ds)
   const T = require('./tables'), RAW = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8')).A.value;
   const listed = new Set(RAW.flatMap(a => a.units.flatMap(u => [].concat(u.ds || []))));
+  const rawDs = new Map(RAW.flatMap(a => a.units.map(u => [a.id + '|' + u.id, [].concat(u.ds || [])])));
   const DEVCF = path.join(ROOT, 'verify/deviations-catalog.json'), DEVC = fs.existsSync(DEVCF) ? JSON.parse(fs.readFileSync(DEVCF, 'utf8')) : [];
   const usedC = new Set();
   const report = { factions: {} };
@@ -171,8 +172,8 @@ function main() {
       // names as left out, another game mode's, is none)
       const out = new Set((cat.excluded || []).filter(x => /^detachment/.test(x.kind || '')).map(x => lc(typo(x.name))));
       const dets = WC.detachments(faction).filter(d => !out.has(lc(d.name)));
-      for (const d of dets) { checked.complete++; if (!Object.values(F.detachments).some(x => lc(x.name) === lc(d.name) || (x.nr && lc(x.nr) === lc(d.name)))) fail('complete', faction + ': the faction page’s detachment ' + d.name + ' is not a detachment of ' + faction + ' in data.js'); }
-      for (const [k, x] of Object.entries(F.detachments)) if (!dets.some(d => lc(d.name) === lc(x.name))) fail('complete', faction + ': data.js’s detachment ' + x.name + ' (' + k + ') is no detachment heading of the faction page (or is one the catalogue leaves out)');
+      for (const d of dets) { checked.complete++; if (!Object.values(F.detachments).some(x => lc(x.name) === lc(d.name) || (x.nr && lc(x.nr) === lc(d.name)) || (x.waha && lc(x.waha) === lc(d.name)))) fail('complete', faction + ': the faction page’s detachment ' + d.name + ' is not a detachment of ' + faction + ' in data.js'); }
+      for (const [k, x] of Object.entries(F.detachments)) if (!dets.some(d => lc(d.name) === lc(x.name) || (x.waha && lc(d.name) === lc(x.waha)))) fail('complete', faction + ': data.js’s detachment ' + x.name + ' (' + k + ') is no detachment heading of the faction page (or is one the catalogue leaves out)');
       for (const [k, x] of Object.entries(F.detachments)) if (x.aiStatus === 'not-read' && (x.stratagems || []).some(s => s.gist || s.mod)) fail('tables', faction + ': detachment ' + k + ' is marked aiStatus not-read but has AI-written columns: drop the mark once they are read'); }
     // composition and options: GW's UNIT COMPOSITION and WARGEAR OPTIONS (the datasheet page)
     for (const [id, R] of Object.entries(cat.datasheets)) {
@@ -233,7 +234,7 @@ function main() {
       if (!S) { fail('tables', id + ': the catalogue row is not in DATASHEETS (node verify/tables.js --write)'); continue; }
       const inList = listed.has(id);
       // (the catalogue's own columns: DATASHEETS has them as the catalogue does, a list's row too)
-      for (const f of ['points', 'composition', 'options']) if (stable(S[f]) !== stable(R[f])) fail('tables', id + ' · ' + f + ': DATASHEETS ' + JSON.stringify(S[f]) + ', the catalogue ' + JSON.stringify(R[f]) + ' (node verify/tables.js --write)');
+      for (const f of ['points', 'composition', 'options', 'loadout']) if (stable(S[f]) !== stable(R[f])) fail('tables', id + ' · ' + f + ': DATASHEETS ' + JSON.stringify(S[f]) + ', the catalogue ' + JSON.stringify(R[f]) + ' (node verify/tables.js --write)');
       for (const d of rowDiffs(S, R)) {
         if (d.kind === 'fill' && !inList) { fail('tables', id + ' · ' + d.what + ': DATASHEETS lacks the catalogue’s value'); continue; }
         rep.differences.push({ id, kind: d.kind, what: d.what });
@@ -242,7 +243,9 @@ function main() {
         if (dev) { usedC.add(dev); if (!dev.reason || !dev.evidence) fail('tables', id + ' · ' + d.what + ': its declaration has no reason or evidence'); continue; }
         fail('tables', id + ' · ' + d.what + ': DATASHEETS ' + JSON.stringify(d.data) + ', the catalogue ' + JSON.stringify(d.cat) + ' (settle it at the source, or declare it in verify/deviations-catalog.json)');
       }
-      if (!inList && S.aiStatus !== 'not-read') fail('tables', id + ': no list has it and it has no aiStatus "not-read"');
+      // (a catalogue whose AI layers are written, aiRead: its rows carry no mark; verify/catalog-armies.js places them for the gate)
+      if (!inList && !cat.aiRead && S.aiStatus !== 'not-read') fail('tables', id + ': no list has it and it has no aiStatus "not-read"');
+      if (cat.aiRead && S.aiStatus !== undefined) fail('tables', id + ': its catalogue is read (aiRead) but the row is marked aiStatus ' + JSON.stringify(S.aiStatus));
       // (its When targeted lines are its defence boxes, BOXES d, made by script: no reading to be marked)
     }
     // the detachments the catalogue adds: in FACTIONS as the catalogue has them, but for verify/derive.js's labels
@@ -253,7 +256,8 @@ function main() {
         const have = F.detachments[id];
         if (!have) { fail('tables', faction + ': the catalogue’s detachment ' + id + ' is not in data.js (node verify/from-waha.js ' + faction + ' --write)'); continue; }
         const h = Object.assign({}, have); delete h.aiStatus;
-        if (have.aiStatus !== 'not-read') fail('tables', faction + ': detachment ' + id + ' is the catalogue’s but has no aiStatus "not-read"');
+        if (!cat.aiRead && have.aiStatus !== 'not-read') fail('tables', faction + ': detachment ' + id + ' is the catalogue’s but has no aiStatus "not-read"');
+        if (cat.aiRead && have.aiStatus !== undefined) fail('tables', faction + ': detachment ' + id + ' is of a read catalogue (aiRead) but is marked aiStatus ' + JSON.stringify(have.aiStatus));
         if (stable(unlab(h)) !== stable(unlab(d))) fail('tables', faction + ': detachment ' + id + ' in data.js is not the catalogue’s (node verify/from-waha.js ' + faction + ' --write)');
       }
       for (const [id, d] of Object.entries(F.detachments)) if (d.aiStatus === 'not-read' && !(cat.detachmentRows || {})[id]) fail('tables', faction + ': detachment ' + id + ' is marked aiStatus not-read but is not the catalogue’s'); }
@@ -265,6 +269,8 @@ function main() {
       for (const n of names) {
         const id = faction + '/' + n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'`]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         const R = cat.datasheets[id]; if (!R) continue;
+        // (a unit of another datasheet of the same name, another faction's: Thousand Sons' Defiler is no World Eaters row)
+        { const ds = rawDs.get(a.id + '|' + u.id); if (ds && !ds.includes(id)) continue; }
         const multi = names.length > 1, mine = k => (u[k] || []).filter(r => !multi || r.who === n || (k === 'stats' && String(r.name).replace(/ ×\d+$/, '') in Object.fromEntries((R.stats || []).map(x => [x.name, 1]))));
         const S = { name: n, stats: mine('stats'), ranged: mine('ranged'), melee: mine('melee'), abilities: mine('abilities') };
         checked.nr += ['stats', 'ranged', 'melee', 'abilities'].reduce((t, k) => t + S[k].length, 0);   // (rows compared)

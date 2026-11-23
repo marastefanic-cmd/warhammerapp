@@ -157,10 +157,11 @@ function resolveRoster(j, D, opt){
       const once = Number(c.number) === 1 && !(c.selections || []).length;
       if(kind === 'battleSize' && T.battleSizes[cid] && T.names[cid] === nm && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }
       if(kind === 'disposition' && (T.dispositions[cid] === nm || (T.dispositions[cid] === undefined && DISPS.includes(nm))) && once){ if(disposition) err('disposition ' + nm + ' not recognized (a list has one Force Disposition)'); else disposition = nm; continue; }
-      // (a detachment no known export has shown: the one detachment of the faction with exactly that name, GW's or New Recruit's spelling of it)
-      const dn = kind === 'detachment' && !T.detachments[cid] ? Object.keys(FAC.detachments).filter(k => [FAC.detachments[k].name, FAC.detachments[k].nr].filter(Boolean).some(x => nn(x) === nm)) : [];
+      // (a detachment no known export has shown: the one detachment of the faction with exactly that name, GW's or New Recruit's spelling of it,
+      // or Wahapedia's heading where GW's documents renamed it (Possessed Slaughterband, the name New Recruit's data had for Possessed Slaughterbound))
+      const dn = kind === 'detachment' && !T.detachments[cid] ? Object.keys(FAC.detachments).filter(k => [FAC.detachments[k].name, FAC.detachments[k].nr, FAC.detachments[k].waha].filter(Boolean).some(x => nn(x) === nm)) : [];
       const d = kind === 'detachment' && (T.detachments[cid] || (dn.length === 1 ? fac + '/' + dn[0] : null)), dk = d && d.split('/');
-      if(d && once && dk[0] === fac && FAC.detachments[dk[1]] && [FAC.detachments[dk[1]].name, FAC.detachments[dk[1]].nr].filter(Boolean).some(x => nn(x) === nm)){ if(dets.includes(dk[1])) err('detachment ' + nm + ' twice not recognized'); else dets.push(dk[1]); continue; }
+      if(d && once && dk[0] === fac && FAC.detachments[dk[1]] && [FAC.detachments[dk[1]].name, FAC.detachments[dk[1]].nr, FAC.detachments[dk[1]].waha].filter(Boolean).some(x => nn(x) === nm)){ if(dets.includes(dk[1])) err('detachment ' + nm + ' twice not recognized'); else dets.push(dk[1]); continue; }
       err(KIND[kind] + ' ' + (Number(c.number) !== 1 ? c.number + '× ' : '') + nm + ' not recognized');
     }
   }

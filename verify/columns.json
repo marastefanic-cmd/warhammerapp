@@ -304,6 +304,10 @@
      "source": "newrecruit",
      "note": "the detachment's name as New Recruit spells it, where it differs from GW's by more than case (New Recruit's Shadow Keepers for GW's Shadowkeepers): as an export or the catalogue file has it; the import finds a detachment by either name"
     },
+    "waha": {
+     "source": "wahapedia",
+     "note": "the detachment's heading on Wahapedia's faction page, where GW's documents name it otherwise (Possessed Slaughterband for GW's Possessed Slaughterbound, World Eaters Faction Pack 1.3): the name GW's is the detachment's, this one finds its section (verify/texts.js, verify/dispositions.js, verify/catalog.js); the hand file catalog-<faction>.json detachmentNames gives it, with its reason"
+    },
     "aiStatus": {
      "source": "derived",
      "note": "'not-read': a detachment the faction catalogue import added (verify/from-waha.js; the first three by the retired verify/from-bsdata.js) whose AI layers are not written yet: no stratagem gists, no readings (mod, parts, mods, aura, guard, …) and no When targeted lines; verify/catalog.js fails a mark on a detachment that has them, and the owner sees where the Damage tab does not count a rule yet (docs/catalog.md)"
@@ -1199,6 +1203,10 @@
     "options": {
      "source": "wahapedia",
      "note": "the wargear choices of the datasheet, per model (or the unit): each choice is named in GW's UNIT COMPOSITION (“equipped with”) or WARGEAR OPTIONS on the datasheet page, or is a weapon or ability row of it, and everything GW equips is a choice or a row (the gate step catalog, verify/catalog.js options). The limits of a choice (min, max, its group) are New Recruit's as the catalogue file recorded them before 22 Nov 2026 (builder.js holds an export to them); they are not read from GW's sentences; not copied onto units"
+    },
+    "loadout": {
+     "source": "wahapedia",
+     "note": "what GW's datasheet allows its models to carry, read from its words by verify/waha-loadout.js (a catalogue written by verify/from-waha.js): each model line's default weapons (“equipped with”), the swaps and additions of WARGEAR OPTIONS with their limits (each model, n per unit, n for every N models), caps and exclusions of a footnote, and every sentence it cannot read (unread: builder.js refuses a loadout other than GW's default on that datasheet, naming the unit). builder.js holds an export to it in the place of the options' limits; not copied onto units"
     },
     "aiStatus": {
      "source": "derived",

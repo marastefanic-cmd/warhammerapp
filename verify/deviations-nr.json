@@ -68,7 +68,7 @@
  },
  {
   "army": "princes",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "abilities[Icon of Khorne | Khorne Berzerkers].text",
   "app": "If the bearer's unit contains one or more Icons of Khorne, each time the bearer's unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
   "source": "If the bearer's unit contains 1 or more Icons of Khorne, each time the bearer's unit destroys an enemy unit, you gain one Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
@@ -138,7 +138,7 @@
  },
  {
   "army": "standard",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "abilities[Icon of Khorne | Khorne Berzerkers].text",
   "app": "If the bearer's unit contains one or more Icons of Khorne, each time the bearer's unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
   "source": "If the bearer's unit contains 1 or more Icons of Khorne, each time the bearer's unit destroys an enemy unit, you gain one Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
@@ -2264,7 +2264,7 @@
  },
  {
   "army": "princes",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "models",
   "app": [
    "1x Khârn the Betrayer",
@@ -2284,7 +2284,7 @@
  },
  {
   "army": "princes",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "gear[1x Khorne Berzerker Champion]",
   "app": null,
   "source": [
@@ -2297,7 +2297,7 @@
  },
  {
   "army": "princes",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
   "app": [
    "Chainblade",
@@ -2393,7 +2393,7 @@
  },
  {
   "army": "standard",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "models",
   "app": [
    "1x Khârn the Betrayer",
@@ -2413,7 +2413,7 @@
  },
  {
   "army": "standard",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "gear[1x Khorne Berzerker Champion]",
   "app": null,
   "source": [
@@ -2426,7 +2426,7 @@
  },
  {
   "army": "standard",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
   "app": [
    "Chainblade",
@@ -2456,5 +2456,241 @@
   "reason": "GW’s datasheet prints the ability Supreme Commander (a box of its own); New Recruit’s PDF of the list (verify/sources/nr/super-terminators.txt) does not. GW wins.",
   "evidence": "verify/.cache/waha/ds/world-eaters_Angron.html: \"Supreme Commander\".",
   "by": "verify/from-json.js"
+ },
+ {
+  "army": "princes",
+  "unit": "slaughterbound-exalted-eightbound",
+  "field": "stats (rows)",
+  "app": [
+   "Slaughterbound",
+   "Exalted Eightbound x3"
+  ],
+  "source": [
+   "Slaughterbound",
+   "Exalted Eightbound"
+  ],
+  "where": "verify/sources/nr/princes.txt p4",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/princes.txt p4: the row [\"Slaughterbound\", \"Exalted Eightbound\"]; the list’s models lines in data.js: [\"1× Slaughterbound\", \"1× Exalted Eightbound Champion\", \"2× Exalted Eightbound\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "princes",
+  "unit": "eightbound",
+  "field": "stats (rows)",
+  "app": [
+   "Eightbound x3"
+  ],
+  "source": [
+   "Eightbound"
+  ],
+  "where": "verify/sources/nr/princes.txt p7",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/princes.txt p7: the row [\"Eightbound\"]; the list’s models lines in data.js: [\"1× Eightbound Champion\", \"2× Eightbound\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "princes",
+  "unit": "jakhals",
+  "field": "stats (rows)",
+  "app": [
+   "Jakhal x9",
+   "Dishonoured w/ paired manglers"
+  ],
+  "source": [
+   "Jakhal",
+   "Dishonoured w/ paired manglers"
+  ],
+  "where": "verify/sources/nr/princes.txt p8",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/princes.txt p8: the row [\"Jakhal\", \"Dishonoured w/ paired manglers\"]; the list’s models lines in data.js: [\"1× Jakhal Pack Leader\", \"1× Dishonoured w/ paired manglers\", \"8× Jakhal\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "standard",
+  "unit": "slaughterbound-exalted-eightbound",
+  "field": "stats (rows)",
+  "app": [
+   "Slaughterbound",
+   "Exalted Eightbound x3"
+  ],
+  "source": [
+   "Slaughterbound",
+   "Exalted Eightbound"
+  ],
+  "where": "verify/sources/nr/standard.txt p3",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/standard.txt p3: the row [\"Slaughterbound\", \"Exalted Eightbound\"]; the list’s models lines in data.js: [\"1× Slaughterbound\", \"1× Exalted Eightbound Champion\", \"2× Exalted Eightbound\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "standard",
+  "unit": "eightbound",
+  "field": "stats (rows)",
+  "app": [
+   "Eightbound x3"
+  ],
+  "source": [
+   "Eightbound"
+  ],
+  "where": "verify/sources/nr/standard.txt p7",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/standard.txt p7: the row [\"Eightbound\"]; the list’s models lines in data.js: [\"1× Eightbound Champion\", \"2× Eightbound\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "standard",
+  "unit": "exalted-eightbound",
+  "field": "stats (rows)",
+  "app": [
+   "Exalted Eightbound x3"
+  ],
+  "source": [
+   "Exalted Eightbound"
+  ],
+  "where": "verify/sources/nr/standard.txt p8",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/standard.txt p8: the row [\"Exalted Eightbound\"]; the list’s models lines in data.js: [\"1× Exalted Eightbound Champion\", \"2× Exalted Eightbound\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "standard",
+  "unit": "goremongers",
+  "field": "stats (rows)",
+  "app": [
+   "Goremongers x8"
+  ],
+  "source": [
+   "Goremongers"
+  ],
+  "where": "verify/sources/nr/standard.txt p9",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/standard.txt p9: the row [\"Goremongers\"]; the list’s models lines in data.js: [\"1× Blood Herald\", \"7× Goremonger w/ chainblade\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "standard",
+  "unit": "jakhals",
+  "field": "stats (rows)",
+  "app": [
+   "Jakhal x9",
+   "Dishonoured w/ paired manglers"
+  ],
+  "source": [
+   "Jakhal",
+   "Dishonoured w/ paired manglers"
+  ],
+  "where": "verify/sources/nr/standard.txt p10",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/standard.txt p10: the row [\"Jakhal\", \"Dishonoured w/ paired manglers\"]; the list’s models lines in data.js: [\"1× Jakhal Pack Leader\", \"1× Dishonoured w/ paired manglers\", \"8× Jakhal\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "super-terminators",
+  "unit": "chaos-terminators",
+  "field": "stats (rows)",
+  "app": [
+   "Chaos Terminators x10"
+  ],
+  "source": [
+   "Chaos Terminators"
+  ],
+  "where": "verify/sources/nr/super-terminators.txt p3",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/super-terminators.txt p3: the row [\"Chaos Terminators\"]; the list’s models lines in data.js: [\"1× Terminator Champion\", \"2× Combi-bolter, chainfist\", \"4× Combi-bolter, power fist\", \"1× Paired accursed weapons\", \"2× Heavy weapon\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "super-terminators",
+  "unit": "chaos-terminators-2",
+  "field": "stats (rows)",
+  "app": [
+   "Chaos Terminators x10"
+  ],
+  "source": [
+   "Chaos Terminators"
+  ],
+  "where": "verify/sources/nr/super-terminators.txt p4",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/super-terminators.txt p4: the row [\"Chaos Terminators\"]; the list’s models lines in data.js: [\"1× Terminator Champion\", \"2× Combi-bolter, chainfist\", \"4× Combi-bolter, power fist\", \"1× Paired accursed weapons\", \"2× Heavy weapon\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "super-terminators",
+  "unit": "eightbound",
+  "field": "stats (rows)",
+  "app": [
+   "Eightbound x3"
+  ],
+  "source": [
+   "Eightbound"
+  ],
+  "where": "verify/sources/nr/super-terminators.txt p5",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/super-terminators.txt p5: the row [\"Eightbound\"]; the list’s models lines in data.js: [\"1× Eightbound Champion\", \"2× Eightbound\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "super-terminators",
+  "unit": "goremongers",
+  "field": "stats (rows)",
+  "app": [
+   "Goremongers x8"
+  ],
+  "source": [
+   "Goremongers"
+  ],
+  "where": "verify/sources/nr/super-terminators.txt p6",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/super-terminators.txt p6: the row [\"Goremongers\"]; the list’s models lines in data.js: [\"1× Blood Herald\", \"7× Goremonger w/ chainblade\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "super-terminators",
+  "unit": "jakhals",
+  "field": "stats (rows)",
+  "app": [
+   "Jakhal x9",
+   "Dishonoured w/ paired manglers"
+  ],
+  "source": [
+   "Jakhal",
+   "Dishonoured w/ paired manglers"
+  ],
+  "where": "verify/sources/nr/super-terminators.txt p7",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/super-terminators.txt p7: the row [\"Jakhal\", \"Dishonoured w/ paired manglers\"]; the list’s models lines in data.js: [\"1× Jakhal Pack Leader\", \"1× Dishonoured w/ paired manglers\", \"8× Jakhal\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "goremongers",
+  "field": "stats (rows)",
+  "app": [
+   "Goremongers x8"
+  ],
+  "source": [
+   "Goremongers"
+  ],
+  "where": "verify/sources/nr/big-demons-baby.txt p8",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/big-demons-baby.txt p8: the row [\"Goremongers\"]; the list’s models lines in data.js: [\"1× Blood Herald\", \"7× Goremonger w/ chainblade\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "jakhals",
+  "field": "stats (rows)",
+  "app": [
+   "Jakhal x9",
+   "Dishonoured w/ paired manglers"
+  ],
+  "source": [
+   "Jakhal",
+   "Dishonoured w/ paired manglers"
+  ],
+  "where": "verify/sources/nr/big-demons-baby.txt p9",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/big-demons-baby.txt p9: the row [\"Jakhal\", \"Dishonoured w/ paired manglers\"]; the list’s models lines in data.js: [\"1× Jakhal Pack Leader\", \"1× Dishonoured w/ paired manglers\", \"8× Jakhal\"]; builder.js finish (stats: name ×N where N > 1)."
+ },
+ {
+  "army": "big-demons-baby",
+  "unit": "flesh-hounds",
+  "field": "stats (rows)",
+  "app": [
+   "Flesh Hounds x5"
+  ],
+  "source": [
+   "Flesh Hounds"
+  ],
+  "where": "verify/sources/nr/big-demons-baby.txt p10",
+  "reason": "The list is now builder.js’s (World Eaters has a faction catalogue: the one builder, docs/tables.md), which writes every stats row with the number of models that have the profile (×N), as the phone’s import does; New Recruit’s PDF prints this row without its count. The app’s count is the list’s models (its models lines).",
+  "evidence": "verify/sources/nr/big-demons-baby.txt p10: the row [\"Flesh Hounds\"]; the list’s models lines in data.js: [\"1× Gore Hound (Collar of Khorne)\", \"4× Flesh Hound (Collar of Khorne)\"]; builder.js finish (stats: name ×N where N > 1)."
  }
 ]
