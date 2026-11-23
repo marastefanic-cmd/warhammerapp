@@ -736,7 +736,7 @@ New Recruit
 127
 your lists
 Program
-160
+161
 worked out by a script
 Hand
 13
@@ -745,7 +745,7 @@ AI summary
 20
 the only AI layer
 
-396 columns in all (verify/columns.json; the gate fails on a column it does not list).
+397 columns in all (verify/columns.json; the gate fails on a column it does not list).
 
 RULES AND STRATAGEMS
 
@@ -1515,7 +1515,7 @@ BOXES→ each box of BOXES: confirmed by both readers, by a reviewed verdict, a 
 AGREE 1 row
 boxes
 GRANTS
-81 rows · 7 columns
+81 rows · 8 columns
 
 a rule or option giving units an ability or keyword
 
@@ -1529,6 +1529,7 @@ option
 grants
 type
 to
+pick
 while
 text
 
@@ -1629,7 +1630,7 @@ the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-23.1
+2026-11-23.2
 
 a list from an export
 3
@@ -1798,6 +1799,7 @@ Dispositions: Priority Assets · Purge the Foe (chosen)
 
 Overview
 Phase checklist
+Strategic reserves
 Bases & proxies
 69
 Units
@@ -1897,6 +1899,38 @@ TO DO NOW
 Aerial Manoover · Deffkoptas
 
 Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
+
+######## reserves · ME SHOOTY YER’ BOOTY Strategic reserves
+IN RESERVES
+0 / 1000 pts
+0 units · 1000 pts left
+STRATEGIC RESERVES
+RESET
+WHEN
+Before the battle, in the Declare Battle Formations step
+LIMIT
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size. (Strategic Reserves, 2000 pts · Strike Force)
+YOUR UNITS
+13
+Wazdakka Gutsmek 200 pts
+Deep Strike
+Big Mek Dakkarig 190 pts
+Big Mek Dakkarig 170 pts
+Big Mek in Mega Armour 115 pts
+Warboss 100 pts
+1
+2
+Mek + Tankbustas 215 pts each, ×2
+Mek + Flash Gitz 300 pts
+1
+2
+3
+Gretchin 45 pts each, ×3
+Deffkoptas 85 pts
+Deep Strike
+Killa Kans 275 pts
+
+Tick the units you place in strategic reserves; the total counts each ticked unit’s points as the list prints them. Deep Strike: on the unit’s Rules line (every model; “only” where one model alone has it), or given by the rule or ability named, in its words; “can be given”: the ability gives it to one unit you select; “if”: its condition is for you to check. What units are given during the battle, as they go back into reserves, is not listed. Each name opens its rule. The boxes are kept for this list on this phone; Reset clears them.
 
 ######## pregame · ME SHOOTY YER’ BOOTY Overview
 YOUR LIST
@@ -6704,6 +6738,31 @@ Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to 
 
 04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
 
+Ask about this rule
+
+######## popup rule:Strategic Reserves · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
 Ask about this rule
 
 ######## popup rule:Support · ME SHOOTY YER’ BOOTY Me shooty yer’ booty

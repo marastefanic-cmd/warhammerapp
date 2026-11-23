@@ -7,6 +7,7 @@ Dispositions: Disruption (chosen) · Priority Assets · Take and Hold
 
 Overview
 Phase checklist
+Strategic reserves
 Bases & proxies
 26
 Units
@@ -120,6 +121,35 @@ ONCE PER BATTLE
 Moment Shackle · Trajann Valoris per army
 
 Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
+
+######## reserves · EMPEROR’S CHOSEN Strategic reserves
+IN RESERVES
+0 / 1000 pts
+0 units · 1000 pts left
+STRATEGIC RESERVES
+RESET
+WHEN
+Before the battle, in the Declare Battle Formations step
+LIMIT
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size. (Strategic Reserves, 2000 pts · Strike Force)
+YOUR UNITS
+8
+Trajann Valoris + Allarus Custodians 535 pts
+Deep Strike
+Shield-Captain + Sentinel Guard Sodality 445 pts
+Deep Strike
+Custodian Guard Sodality 240 pts
+Deep Strike
+Custodian Wardens 200 pts
+Deep Strike
+Prosecutor Squad 50 pts
+Witchseeker Squad 60 pts
+Vertus Praetors 220 pts
+Deep Strike
+Caladius Annihilator Grav-tank 250 pts
+Deep Strike
+
+Tick the units you place in strategic reserves; the total counts each ticked unit’s points as the list prints them. Deep Strike: on the unit’s Rules line (every model; “only” where one model alone has it), or given by the rule or ability named, in its words; “can be given”: the ability gives it to one unit you select; “if”: its condition is for you to check. What units are given during the battle, as they go back into reserves, is not listed. Each name opens its rule. The boxes are kept for this list on this phone; Reset clears them.
 
 ######## pregame · EMPEROR’S CHOSEN Overview
 YOUR LIST
@@ -4305,6 +4335,31 @@ AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
 
 IN THIS ARMYWitchseeker Squad
 
+Ask about this rule
+
+######## popup rule:Strategic Reserves · EMPEROR’S CHOSEN Emperor’s Chosen
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
 Ask about this rule
 
 ######## popup rule:TORRENT · EMPEROR’S CHOSEN Emperor’s Chosen
