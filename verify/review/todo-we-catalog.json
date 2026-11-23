@@ -701,5 +701,16 @@
   "source": {
    "gate": "verify/helpers.js"
   }
+ },
+ {
+  "kind": "gate",
+  "where": "verify/render.js reserves-ds (after main 2026-11-23.2)",
+  "judgement": {
+   "rule": "an ability sentence that gives Deep Strike under a \"While …,\" clause is conditional, as one under \"If …,\": cond:<ability>",
+   "case": "Lord Invocatus, Fire Riders (\"While this model is leading a unit, models in that unit have the Deep Strike ability\") on the made-up export: the app showed cond:Fire Riders (GRANTS while, resWhile null), the check wanted grant:Fire Riders; no owner list has such a sentence"
+  },
+  "source": {
+   "gate": "verify/render.js on the made-up export: 0 failures"
+  }
  }
 ]
