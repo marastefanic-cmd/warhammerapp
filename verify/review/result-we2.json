@@ -1,0 +1,95 @@
+[
+ {
+  "key": "690cbea3abc8f1eb",
+  "where": "rule-sumSt · World Eaters army rule · Blessings of Khorne",
+  "verdict": "ok",
+  "why": "GW Faction Pack 1.3 update, Blessings of Khorne, Unbridled Bloodlust: \"This unit has +1 to charge rolls.\" Its stat box carries opt Unbridled Bloodlust (its table row). Rule 18 form \"If … is active\"."
+ },
+ {
+  "key": "0aef2dc63913b9b1",
+  "where": "enhancement-sumSt · Berzerker Warband · Battle-lust",
+  "verdict": "ok",
+  "why": "GW: \"You can re-roll Charge rolls made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.\" Both parts are GW's (rule 7). The re-roll is not read as a roll change: its box is the second sentence only (snc Charge)."
+ },
+ {
+  "key": "5cb68c13c25d304e",
+  "where": "rule-sumSt · Terminator Storm Force rule · Death Blow",
+  "verdict": "ok",
+  "why": "GW \"Friendly ADEPTUS ASTARTES TERMINATOR units have +1 to charge rolls.\"; the box reaches Faction: Adeptus Astartes + Terminator, which places the line."
+ },
+ {
+  "key": "79d275416ea54522",
+  "where": "ability-sumSt · world-eaters/bloodcrushers · Instrument of Chaos",
+  "verdict": "ok",
+  "why": "GW \"Add 1 to Charge rolls made for the bearer’s unit.\""
+ },
+ {
+  "key": "1abeb2777f3867b0",
+  "where": "enhancement-sumSt · Blood Legion · Brazenmaw",
+  "verdict": "ok",
+  "why": "GW \"Add 2 to Charge rolls made for the bearer’s unit.\""
+ },
+ {
+  "key": "80ec1b78ef8ec3e6",
+  "where": "ability-sumSt · simple-but-effective · Beastboss on Squigosaur · Thundering Stampede",
+  "verdict": "ok",
+  "why": "GW \"Friendly BEAST SNAGGA units within 6\\\" of this unit have +1 to charge rolls.\" Conditions (keyword, range) before the effect, the giver named (rule 45)."
+ },
+ {
+  "key": "4b979c084b9c69de",
+  "where": "ability-sumSt · world-eaters/maulerfiend · The Scent of Blood",
+  "verdict": "ok",
+  "why": "GW pack update: \"In the Charge phase, when this unit declares a charge: If an enemy unit below starting strength is within 9\\\" of this unit, this unit has +1 to charge rolls. Or: If an enemy unit below half strength is within 9\\\" …, +2\". Faithful; \"it\" is the enemy unit."
+ },
+ {
+  "key": "c7776e8e4cbbd0d2",
+  "where": "rule-sumSt · World Eaters · Goretrack Onslaught rule · Rush to the Fray",
+  "verdict": "ok",
+  "why": "GW \"Each time a WORLD EATERS unit … disembarks from a TRANSPORT, until the end of the turn, add 1 to Charge rolls made for that unit …\". Its stat box has the disembark condition and reach World Eaters. Closes my round-1 note."
+ },
+ {
+  "key": "4ed5432b5d9d3628",
+  "where": "code · statOf",
+  "verdict": "ok",
+  "why": "Table rows read as option sentences (Blessings of Khorne) and a bullet's \"**Name:**\" as its option (Surging Vitality). Per the builder's BOXES diff only the 4 named stat boxes are new; LS now accepts a table row's sentence as the quote. Re-rolls are not read: the chargeAdd/advanceAdd patterns need \"add N\"/\"has +N\"."
+ },
+ {
+  "key": "we2|charge-rolls",
+  "where": "lines · effects.js advanceAdd/chargeAdd, statNc",
+  "verdict": "ok",
+  "why": "Patterns need a number added or subtracted, so no re-roll is read as a roll change (Battle-lust's re-roll, Bloody Fury and the others listed have no box). The foe test now leaves \"this unit has +1\" (The Scent of Blood) as its own. The 4 new stat boxes fall back (reader2 does not read Charge): AGREE 61→65, nothing counted, each drawn from its words with its summary. Non-blocking: The Scent of Blood's snc quotes only its +1 sentence, and the \"Or: … +2\" sentence has no snc entry. The line's summary says both."
+ },
+ {
+  "key": "we2|loadout-reader",
+  "where": "loadout-reader · verify/waha-loadout.js",
+  "verdict": "ok",
+  "why": "\"For each X this model is equipped with\" is read as an addition per X, counted after swaps (swaps come before adds in acts). A name-alone alternative is read as one of it. A swap of \"X and Y\" counts gear of the swap's model. \"later\" holds Split models. A choice with nothing read is unread, never empty. I reran from-waha.js for world-eaters and chaos-daemons in a scratch copy: no WARGEAR OPTIONS left unread."
+ },
+ {
+  "key": "we2|loadout-builder",
+  "where": "builder · builder.js legalLoadout per and whyBad",
+  "verdict": "ok",
+  "why": "My own Helbrute cases beyond the builder's 8:\n- 3 combi-bolters on 2 fists: refused, \"3 for 2 fists\"\n- fist + multi-melta + combi-bolter with no CCW: refused\n- power scourge + multi-melta + heavy flamer: refused, \"0 fists\"\n- fist + multi-melta + combi-bolter + heavy flamer: refused, \"2 for 1\"\n- hammer + power scourge: refused\n- two CCWs: refused\n- missile launcher + 2 fists: refused\n- two multi-meltas: refused\n- fist + CCW + combi-bolter (missing ranged): refused\n- hammer + fist + combi-bolter: built (legal: hammer for the missile launcher, fist for the multi-melta, one addition)\n- fist + fist + 2 heavy flamers: built (legal)"
+ },
+ {
+  "key": "we2|import-tests",
+  "where": "tests · import-test.js 6, import-madeup",
+  "verdict": "ok",
+  "why": "17 legal Helbrute loadouts build at 120 pts; 8 illegal ones are refused with reasons; the Cult of Blood Helbrute (round-1 made-up-c) now builds; Daemonic Icon Ld 5+ and Gore-stained Veterans WS 1+ are refused. See the export-values item for the coverage these tests do not give."
+ },
+ {
+  "key": "we2|export-values",
+  "where": "builder · builder.js marksOf couldTouch",
+  "verdict": "fix",
+  "why": "couldTouch is meant to mean \"no rule reaching the unit could change it\", but it misses rules that do.\n\n1. Failure case (made up, built with builder.js): the Chaos Daemons catalogue's Keeper of Secrets added to the Tzeeeeentch export (in place of a Lord of Change), every melee AP one better than GW's. It BUILDS with GW's -2 and the note \"Ritual knife, Snapping claws, Witstealer sword AP -3 in the export, -2 by GW\". But GW's Daemon Lord of Slaanesh (Aura) says \"While a friendly SLAANESH LEGIONES DAEMONICA unit is within 6\\\" of this model, improve the Armour Penetration of melee weapons in that unit by 1\", and Core Rules 22.01 says \"While a model with an aura ability is on the battlefield, it is always within range of its own aura ability\". So the export's -3 is GW's value with a rule of the unit, and the app shows -2. That is silently wrong: the sheet has no mark, and the Overview note says GW's value is -2. Main refused this.\n\nWhy it is missed:\n- (a) FIELD_WORDS needs \"<stat> … characteristic\" or an abbreviation with a value. It misses \"improve the Armour Penetration of\", \"N+ InSv\" (Synaptoprescience, Leader-beasts, Moment Shackle, Eagle's Eye word it so), \"+6\\\" R\" and spelled \"+1 Strength\".\n- (b) The raw-box path still filters boxes through onOk, so a box with a condition the list does not settle (target keyword, aura, quoted clause) never counts as \"could change\". Contrary to its comment (\"counted or not\"), only words then guard it.\n- (c) The three Chaos Daemons, Custodes and Tyranids catalogues are not read, so their catalogue-only datasheets and unused detachments have no box at all: words are the only guard there.\n\n2. Coverage: the three flipped build-parity tests (Tyrannofex T14, Hurricanis AP-4, Gun Stock WS4+) used to prove \"an unexplained value is refused\". Nothing replaces them with a test of the words path (a rule with no box whose words name the field) or of an aura on its own unit.\n\n3. Visibility: the value appears only once, as a note at the foot of the Overview (\"On this phone\"). The unit sheet shows GW's value with no mark (phone-murderband.txt: Lord Invocatus's sheet shows 4+, nothing more). Neither says a rule could be the cause.\n\n4. Lord Invocatus Bolt pistol: Wahapedia prints BS 4+ (ds/world-eaters_Lord-Invocatus.html), New Recruit 2+. The pack has no update to that weapon's BS. A 4+ BS on a character whose melee is 2+ is unusual. Before the note tells the friend \"4+ by GW\", confirm GW's own figure (Codex or GW app). This branch cannot check it.",
+  "fix": {
+   "fix": "Required:\n- builder.js couldTouch: count every raw box that changes the field whatever its conditions (no onOk on the could-change path).\n- Widen FIELD_WORDS: \"improve/worsen the <stat> of\", \"N+ InSv\", \"+N\\\" R\", spelled \"+N Strength/Attacks/Toughness/Damage\", \"Range\".\n- Treat an aura of the unit itself as reaching it (Core Rules 22.01).\n- Add import-test cases that must refuse: Keeper of Secrets AP-3 (aura on its own unit), and a not-read catalogue enhancement worded \"N+ InSv\".\n- Show the taken value on the unit's row too (a mark such as \"GW’s 4+; the export: 2+\"), not only at the Overview's foot.\n\nOwner: confirm GW's BS for Lord Invocatus's Bolt pistol."
+  }
+ },
+ {
+  "key": "we2|friend-murderband",
+  "where": "tests · the friend's Murderband export",
+  "verdict": "ok",
+  "why": "It builds at 2000 pts, 7 units:\n- Relentless Rage +1 A on Coward’s Bane (8), Bladed horn (5), Chainblades (Jakhals 4, Exalted 5) and Paired manglers.\n- Gore-stained Veterans +1 WS: Chainfist 3+.\n- No other value differs; I swept every A/S/AP/D/BS/WS/T/W/M/OC/Sv of the export by one step and found no further hidden rule.\n- The one note is Lord Invocatus Bolt pistol BS (see export-values point 4 on whether GW's is really 4+)."
+ }
+]
