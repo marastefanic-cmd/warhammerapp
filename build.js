@@ -3,7 +3,7 @@
 // as-is as the Claude artifact. Run after every change: node build.js
 //  - first runs check.js over data.js and stops if anything is inconsistent
 //  - then refuses to build unless verify/report.json says this exact app.html + data.js passed
-//    every verification (node verify/run.js: BSData, the New Recruit PDFs, GW's rules text,
+//    every verification (node verify/run.js: the New Recruit exports and PDFs, GW's datasheets and rules text,
 //    mechanical rules, every screen, and the sign-off of every judgement the app adds)
 //  - index.html: app.html wrapped in a full page, plus the home-screen tags
 //  - a build stamp (hash of app.html + data.js) in index.html, version.json and sw.js,

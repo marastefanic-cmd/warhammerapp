@@ -1,0 +1,78 @@
+{
+ "_about": "Values New Recruit prints otherwise than GW's datasheet, for catalogued datasheets no committed export or PDF of the owner's shows (those it does show are in verify/deviations-nr.json). An import that shows New Recruit's value here is built with GW's value and a note naming both (the owner's standing decision, as for points); any other unexplained value is refused. gw: GW's value, which must be the DATASHEETS row's (verify/build-index.js fails otherwise; verify/numbers.js holds the row to the Wahapedia datasheet page). nr: New Recruit's value, recorded before 22 Nov 2026 from New Recruit's data (once verify/deviations-bsdata.json, army catalog); it cannot be re-checked until an export of the owner's shows the datasheet, and an entry whose nr an export contradicts should be corrected from that export.",
+ "values": [
+  {
+   "datasheet": "adeptus-custodes/blade-champion",
+   "kind": "melee",
+   "row": "Hurricanis",
+   "field": "AP",
+   "gw": "-2",
+   "nr": "-1",
+   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Blade-Champion.html: MELEE WEAPONS Vaultswords – Hurricanis AP -2",
+   "group": "Vaultswords"
+  },
+  {
+   "datasheet": "adeptus-custodes/knight-centura",
+   "kind": "melee",
+   "row": "Gun Stock",
+   "field": "WS",
+   "gw": "2+",
+   "nr": "3+",
+   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Knight-Centura.html: MELEE WEAPONS Gun Stock WS 2+"
+  },
+  {
+   "datasheet": "adeptus-custodes/venatari-with-kinetic-destroyers",
+   "kind": "stats",
+   "row": "Venatari",
+   "field": "Ld",
+   "gw": "5+",
+   "nr": "6+",
+   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Venatari-with-Kinetic-Destroyers.html: profile Venatari Ld 5+"
+  },
+  {
+   "datasheet": "adeptus-custodes/venatari-with-verutum-lances",
+   "kind": "stats",
+   "row": "Venatari",
+   "field": "Ld",
+   "gw": "5+",
+   "nr": "6+",
+   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Venatari-with-Verutum-Lances.html: profile Venatari Ld 5+"
+  },
+  {
+   "datasheet": "adeptus-custodes/pallas-grav-attack",
+   "kind": "melee",
+   "row": "Armoured hull",
+   "field": "A",
+   "gw": "3",
+   "nr": "4",
+   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Pallas-Grav-Attack.html: MELEE WEAPONS Armoured hull A 3"
+  },
+  {
+   "datasheet": "adeptus-custodes/coronus-grav-carrier",
+   "kind": "melee",
+   "row": "Armoured hull",
+   "field": "A",
+   "gw": "6",
+   "nr": "4",
+   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Coronus-Grav-Carrier.html: MELEE WEAPONS Armoured hull A 6"
+  },
+  {
+   "datasheet": "adeptus-custodes/coronus-grav-carrier",
+   "kind": "melee",
+   "row": "Armoured hull",
+   "field": "S",
+   "gw": "8",
+   "nr": "6",
+   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Coronus-Grav-Carrier.html: MELEE WEAPONS Armoured hull S 8"
+  },
+  {
+   "datasheet": "adeptus-custodes/ares-gunship",
+   "kind": "ranged",
+   "row": "Arachnus magna-blaze cannon",
+   "field": "AP",
+   "gw": "-3",
+   "nr": "-4",
+   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Ares-Gunship.html: RANGED WEAPONS Arachnus magna-blaze cannon AP -3"
+  }
+ ]
+}

@@ -79,7 +79,7 @@ DEVS.forEach((d, i) => {
   }
   if(!used.has(i)) fails.push({ stale:true, page:d.page, ability:d.ability, why:tag + ': nothing matches it' });
 });
-writeJSON(path.join(ROOT, 'verify/out/words.json'), { counts, sheets, units, declared:used.size, pending, fails });
+writeJSON(path.join((process.env.VERIFY_OUT ? path.resolve(process.env.VERIFY_OUT) : path.join(ROOT, 'verify/out')), 'words.json'), { counts, sheets, units, declared:used.size, pending, fails });
 console.log('words: ' + (fails.length ? fails.length + ' failure(s); ' : '') + counts.texts + ' ability texts of ' + sheets + ' datasheets and ' + units + ' list units checked against their Wahapedia datasheet pages: ' + counts.equal + ' equal (' + counts.leaders + ' Leader lines as unit lists); ' + used.size + ' declared differences (verify/deviations-words.json)' + (pending.length ? '; ' + pending.length + ' PENDING (declared, not decided): ' + pending.map(x => x.page + ' ' + x.ability).join(', ') : ''));
 for(const f of fails) console.log('  FAIL ' + (f.stale ? 'stale ' : '') + (f.why ? f.why : f.page + ' · ' + f.ability + ' (' + f.where + ')\n       app:  ' + N(f.app) + '\n       page: ' + N(f.waha)));
 for(const x of pending) console.log('  PENDING ' + x.page + ' · ' + x.ability + ': ' + x.pending);

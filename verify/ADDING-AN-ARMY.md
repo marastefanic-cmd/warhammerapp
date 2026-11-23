@@ -31,15 +31,13 @@ node verify/from-json.js verify/sources/nr-json/<id>.json <id> --write     # wit
 node verify/from-json.js verify/sources/nr-json/<id>.json <id> --compare   # a list data.js has: what the reading differs in
 ```
 
-Every unit from the export's selections (found by BSData id, each profile looked up in BSData at the pin, a unit from another
-faction's catalogue too: the Deathwatch's), checked against Wahapedia's datasheet (the codex; for a Space Marines Chapter, the
-Chapter's view of the page, `wahaChapter` in `verify/sources/factions.json`): where BSData differs, GW's value is written and declared
+Every unit from the export's selections (read from the export itself, New Recruit's print of the list), checked against Wahapedia's datasheet (the codex; for a Space Marines Chapter, the
+Chapter's view of the page, `wahaChapter` in `verify/sources/factions.json`): where New Recruit prints another value and no rule of the list explains it, GW's value is written and declared (`verify/deviations-nr.json`); where a rule does, the value is its "+" mark (`verify/marks.js`)
 in `verify/deviations-*.json` with the datasheet as evidence; base sizes come from GW's base size guide (`verify/base-guide.js`,
 the Event Companion; the sections `baseGuide` names, a row for some models of a unit too), Wahapedia's only where the guide has
 none (the gate's `bases` step, `verify/bases.js`, checks every base against the guide; a unit the guide names
-otherwise or lacks is declared in `verify/deviations-bases.json`). A missing faction or detachment comes from the Wahapedia faction page (a detachment's Force Dispositions from BSData, else
-from the page, declared), a missing core ability from Wahapedia's core rules, labels from `verify/derive.js`; then the "+" marks,
-`BS_IDS`, the BSData extract and `verify/tables.js --write` (the list as references to its datasheets). What it cannot fill (a
+otherwise or lacks is declared in `verify/deviations-bases.json`). A missing faction or detachment comes from the Wahapedia faction page (a detachment's Force Dispositions from its heading on that page), a missing core ability from Wahapedia's core rules, labels from `verify/derive.js`; then the "+" marks,
+`NR_IDS` and `verify/tables.js --write` (the list as references to its datasheets). What it cannot fill (a
 stratagem's gist) is read from `verify/sources/hand/<id>.json`, marked by whom; everything else it lists in
 `verify/out/from-json-<id>.md`. A list without a PDF is checked by `verify/nr.js` against its export (base sizes).
 
@@ -60,7 +58,7 @@ existing faction in `data.js` (e.g. `tyranids`):
 
 - `armyRules`: `{ name, text, tag?, ph?, turn?, at?, remind? }`
 - a detachment `'<id>': { name, dp, rule:{ name, text, needs? }, enhancements:[{ name, pts, text, upgrade? }], stratagems:[…] }`
-  (`nr`: an enhancement's name as New Recruit and BSData spell it, where it differs from GW's: "Incandeum" for "Incandaeum")
+  (`nr`: an enhancement's name as New Recruit spells it, where it differs from GW's: "Incandeum" for "Incandaeum")
 - a stratagem `{ id, gist, name, cp, phases, turn, needs, when, target, effect, mod?, def?, note? }`
   - `when` / `target` / `effect`: the printed words, with the markup the app uses (`**bold**` for keywords
     and rules terms as Wahapedia bolds them, `- ` bullets)
@@ -101,7 +99,7 @@ When a rule could be read two ways, show it as printed and mark it; never pick o
 ## 4. When a check fails
 
 `node verify/run.js` runs every check. A failure is either a mistake to fix (in `data.js`, or in a
-parser in `verify/` when the PDF or BSData is read wrongly) or a real difference between sources, which
+parser in `verify/` when the PDF or export is read wrongly) or a real difference between sources, which
 is declared in `verify/deviations-<check>.json` with the exact failure fields plus `reason` and `evidence`
 (file, line, the words). A declared deviation nothing matches any more fails too.
 

@@ -33,9 +33,10 @@ by the owner's newer one of 26 Oct 2026 (Defilers_and_friends_2.json: Lucius the
 Rhino in place of Fulgrim and one Daemon Prince); git history keeps the older one.
 
 ## Downloaded into verify/.cache (not committed), see verify/fetch.sh
-- BSData wh40k-11e at a pinned commit (the data New Recruit is built from)
-- Games Workshop's official PDFs: Core Rules, Universal Rules Updates, Faction Packs
-- Wahapedia faction pages (their sha256 is recorded; a change means a rules update to review)
+- Games Workshop's official PDFs: Core Rules, Universal Rules Updates, Faction Packs, the Event Companion (base sizes)
+- Wahapedia faction pages (the sha256 of each page's text is recorded in verify/provenance.json; a change means a rules update to review) and the datasheet pages of waha-datasheets.txt
+
+BSData (wh40k-11e) is not a source: the owner's decision of 22 Nov 2026. Nothing is fetched from it or from a copy of it.
 
 ## Are these still the newest? verify/currency.js (run by hand)
 It compares today's sources with what the last verification used and writes verify/out/currency.md;
@@ -43,7 +44,6 @@ it never changes the app.
 - gw-downloads.json: GW's Warhammer 40,000 downloads list (English) at the last verification
 - waha-baseline/: the text of the Wahapedia faction and core rules pages at the last verification
   (made by waha-extract.py), so new errata and FAQ boxes show as a diff
-- BSData: the commit pinned in fetch.sh
 
 After the app is updated to new sources and `node verify/run.js` passes, `node verify/currency.js
 --accept` makes today's sources the baseline.
@@ -52,3 +52,15 @@ After the app is updated to new sources and `node verify/run.js` passes, `node v
 The Wahapedia datasheet pages fetch.sh downloads (`<faction> <Page-Name>`): verify/choice.js reads
 their pick-one markers and verify/import-nr.js their wording. The importer adds the units of a new
 list to it.
+
+## nr-json/
+The owner's New Recruit JSON exports, one per list. They are the only source of New Recruit's ids: verify/import-ids.js writes
+data.js NR_IDS from them, and the in-app import looks a selection up by an id they have shown, else by its exact New Recruit name.
+
+## catalog/
+The faction catalogues (docs/catalog.md): the committed rows of every current datasheet of a catalogued faction. The gate step
+catalog holds them to Wahapedia's faction page and datasheet pages.
+
+## bsdata-extract.json (retired)
+What verify/bsdata.js once read of BSData at commit b4dc3f4. No script reads it any more. It is kept until the owner decides to
+delete it (verify/review/todo-nobs.json, extract).

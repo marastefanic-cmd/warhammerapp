@@ -1,0 +1,246 @@
+[
+ {
+  "army": "(all lists)",
+  "kind": "ids",
+  "where": "data.js NR_IDS; verify/import-ids.js; import.js resolveRoster; builder.js topLevel, dsOf",
+  "judgement": {
+   "rule": "New Recruit's ids are a lookup learned only from the committed exports (verify/sources/nr-json, 24 lists). A selection whose id no export has shown is looked up by its exact New Recruit name: the faction (the last part of the export's catalogue name), a battle size, a detachment (GW's name or New Recruit's spelling nr), a Force Disposition (one some detachment of data.js allows), a catalogued faction's datasheet (exactly one DATASHEETS row of the faction with that name, case, apostrophes and spaces aside). No match, or more than one: refused with the unit or option named. A known id under another name is not that thing. Units of a faction with no catalogue are still copied by their signature of ids, so only units a committed export holds import there.",
+   "before": "BS_IDS, read from BSData at b4dc3f4: every id of every detachment, Show option and datasheet of a faction, whether an export had shown it or not; DATASHEETS bsId.",
+   "check": "verify/import-test.js: NR_IDS is what import-ids writes; all 24 exports import identically; section 5 (every top-level id unknown, exact names: the same list; an unknown id with a wrong name refused, named; a known id under another name refused). verify/build-parity.js: a unit under an unknown id and its exact name builds, renamed it is refused. maxPerList is now derived from GW's rules (enhancement 1, Upgrade 3, EPIC HERO 1, Houndpack Lance Character 3 by the detachment rule's quoted words) instead of BSData's constraints: 82 entries before, 83 now (one id gone, two new): to compare. After review (round 2): a known id under another name is refused for every top-level selection too: any top-level parent whose id a known export has shown must carry that export's name (Battle Size, Detachment, Force Disposition, Show/Hide Options, Code Chivalric), the battle size child likewise, an info choice likewise; the faction is found by the export's catalogue name, and a catalogue id a known export has shown must be that faction's. import-test section 5: the Strike Force id named Incursion (1000 Point limit), the Imperial Knights catalogue id with the name Xenos - Necrons, Code Chivalric X, Show/Hide Options X, each refused. A text export's battle size is written under New Recruit's name for it."
+  },
+  "source": {
+   "owner": "decision 2: make your own ids or catalogue Wahapedia's; resolve by an id learned from a known export, else by exact New Recruit name; refuse on no match or more than one"
+  },
+  "key": "nobs|ids"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "id-choice",
+  "where": "docs/tables.md (The tables; Sources, and BSData)",
+  "judgement": {
+   "rule": "The app's own identifier of a datasheet stays its existing key faction/datasheet-name. Wahapedia's page address is catalogued beside it (verify/sources/waha-datasheets.txt) and is not the key.",
+   "before": "the same key, with BSData's entry id beside it (bsId)",
+   "check": "reasons: the key already identifies every DATASHEETS row, the list's own rows and the Brimstone Horrors (no page) included; it is derived from the name by one rule; Wahapedia's addresses are case-sensitive, numbered where two pages share a name (Wardens-of-Ultramar-1), shared by several rows (the four Soul Grinders) and filed under another faction for the Ultramarines (space-marines)."
+  },
+  "source": {},
+  "key": "nobs|id-choice"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "marks",
+  "where": "verify/from-json.js ruleAtWork, markSources, builtMarks; verify/marks.js namesFor",
+  "judgement": {
+   "rule": "A value the export shows otherwise than GW's datasheet is a rule at work when a rule the unit has is recorded in BUILD_INDEX marks (or the hand file's marks) as changing that value; else it is New Recruit printing another value than GW, and GW's is written. The rules named: those New Recruit prints in brackets beside the profile that the index records for the value, plus any army or detachment rule the index records for a characteristic (Relentless Rage on a weapon New Recruit prints only '(Berzerker Glaive)' beside); with no bracket, the unit's rules the index records, by part (a character's ability reaches the bodyguard's rows; a bodyguard's a character's only where its words reach the unit) and by arithmetic where several fit. For a catalogued faction the marks are builder.js's. A bracket naming no rule, ability or selection of the export or faction is part of the weapon's name.",
+   "before": "verify/bsdata.js evaluated BSData's modifiers on a roster rebuilt from BSData and named each changed value's rule; BSData's own profile value told a rule from a BSData/GW difference.",
+   "check": "verify/reimport.js: all 24 exports re-import to data.js byte for byte (all 257 marks reproduced) with no BSData. Known limit: BUILD_INDEX marks is learned from the lists' own marks, so a new rule's mark is listed for a person (hand file marks) the first time."
+  },
+  "source": {},
+  "key": "nobs|marks-namer"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "marks",
+  "where": "verify/marks.js (gate step marks, in the place of bsdata)",
+  "judgement": {
+   "rule": "M1 the mark names an ability of the unit, an army rule, a rule of a detachment of the list or the unit's enhancement; M2 GW's words of that rule name what is marked: a weapon keyword in brackets, a characteristic by its name or by its abbreviation beside a number; M3 the datasheet's own value is another; M4 every value or keyword list a list's row holds of its own is marked or has its reason (why, over).",
+   "before": "bsdata step: every mark equal to BSData's modifier evaluation, both ways; the marked value equal to BSData's after the rules.",
+   "check": "passes on the 257 marks of the 26 lists; verify/derived-proof.js: a changed from value fails marks. What it does not check that bsdata did: the size of the change (a +2 against GW's words); verify/nr.js holds the value shown to the export, verify/numbers.js its base to GW's page. After review (round 2): M3 now compares each marked characteristic or keyword with the DATASHEETS row of the entry's datasheet (same kind, name and group): 254 compared. The reviewer's mutation, shooty/dakkarig-boosta M 8\" with from M Cybork Boosta, fails: 'M3 … M: marked Cybork Boosta, but 8\" is the datasheet's own value'. The mutation is not in verify/derived-proof.js (it changes from values, not row values)."
+  },
+  "source": {},
+  "key": "nobs|marks-gate"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "hand-list",
+  "where": "verify/from-json.js NOT_KEYWORDS",
+  "judgement": {
+   "rule": "18 categories of New Recruit's exports are its own bookkeeping and no keyword: Leader, Support, Configuration, Uncategorised, Unit Champion, Heretic Astartes Vehicle, Knight Character, Non-Monster Character, Voidfarer Character, Assigned Agents - Character, and <God> Battleline / <God> non-Battleline for the four gods.",
+   "before": "BSData's hidden flag on the category entry",
+   "check": "reimport byte for byte; a category missing from the list would show as a changed data.js. A new such category in a future export would become a keyword New Recruit prints that GW's page lacks, which verify/keywords.js then fails."
+  },
+  "source": {},
+  "key": "nobs|not-keywords"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "reference-sheets",
+  "where": "verify/from-json.js KEPT_REFS",
+  "judgement": {
+   "rule": "A reference sheet no export holds (hand refs with entry, and one made of it: Mucho Mutantes' Chaos Spawn; Tzeeeeentch's Blue Horrors and Brimstone Horrors) is kept as data.js has it on a re-import, its entry carried over unchanged. A new one is written from GW's datasheet as a catalogue row.",
+   "before": "built on every re-import from BSData's root entry of that name",
+   "check": "these three are no longer re-derived by reimport; their rows are held by numbers, keywords, words and bases against GW's pages as every row."
+  },
+  "source": {},
+  "key": "nobs|kept-refs"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "source",
+  "where": "verify/dispositions.js",
+  "judgement": {
+   "rule": "A detachment's Force Dispositions are the icons in its heading on Wahapedia's faction page, read from the faction's own page.",
+   "before": "BSData's category links on the detachment entry; one declared deviation (Deathwatch Support)",
+   "check": "all 59 detachments of data.js equal the pages with no change and no deviation."
+  },
+  "source": {},
+  "key": "nobs|dispositions"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "source",
+  "where": "verify/choice.js",
+  "judgement": {
+   "rule": "pick one / all fire: Wahapedia's pick-one marker and the ➤ of the profile names in the committed exports.",
+   "before": "the ➤ of BSData's profile names in the extract",
+   "check": "69 weapon groups, 0 failures"
+  },
+  "source": {},
+  "key": "nobs|choice"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "source",
+  "where": "verify/gw-order.js partCats, catalogCats; verify/tables.js unitWhy",
+  "judgement": {
+   "rule": "The spelling of a datasheet's name keyword comes from the categories its export prints on the unit (a catalogue row's kw for a unit no export has); whether a keyword or rule is the datasheet's own, from GW's datasheet page (KEYWORDS, FACTION KEYWORDS, CORE ABILITIES, ARMY RULES).",
+   "before": "BSData's own categories and rules of the entry (the extract)",
+   "check": "verify/tables.js --write gives the same data.js; verify/keywords.js passes. verify/deviations-keywords.json: the Librarian in Phobos Armour declaration now quotes the export (from newrecruit)."
+  },
+  "source": {},
+  "key": "nobs|keyword-sources"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "catalog",
+  "where": "verify/catalog.js; verify/waha-catalog.js; verify/deviations-catalog.json (9 new entries, by wt-nobs)",
+  "judgement": {
+   "rule": "The three catalogues' committed rows are the source of record (origin in each file). complete: the rows are exactly the current datasheets of the faction's own book in Wahapedia's index (not marked Warhammer Legends, not another faction's book). composition: GW's UNIT COMPOSITION line for line (a god's entry of a Daemonic Allegiance datasheet, 'the', '– EPIC HERO' aside; New Recruit's several model entries for one line together allowing GW's numbers). options: every choice named by GW's 'equipped with' or WARGEAR OPTIONS, or a weapon or ability row, or a keyword an ability names in bold; everything GW equips a choice or a row. Declared: Gyrfalcon Jetbike(r) (2), Fiends / Blissbringer (2), the Telemon's four loadout bundles, Totemic Presence upgrade.",
+   "before": "complete, fresh and bsdata against the BSData clone (the rows regenerated from BSData and compared)",
+   "check": "to review: the nine declarations; the rule that another book's datasheet is not the faction's (Chaos Daemons: 21 Heretic Astartes pages). After review (round 2): model entries counted in a group must have the group's minimum and maximum equal to GW's line exactly, and no entry may allow more models than the line; without a group their minimums and maximums add up to at most and at least GW's and no entry exceeds the line. Termagants with groupMax 25 and model max 25, and with groupMax 30 alone, both fail composition; the unchanged catalogues pass."
+  },
+  "source": {},
+  "key": "nobs|catalog"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "lost-check",
+  "where": "DATASHEETS options (137 rows)",
+  "judgement": {
+   "rule": "The limits of a wargear choice (min, max, its group's) on the three older catalogues are New Recruit's as recorded from BSData before 22 Nov 2026. They are held to GW's page by name only; no script reads them out of GW's WARGEAR OPTIONS sentences.",
+   "before": "the same values, regenerated from BSData at every gate (fresh); they were never checked against GW's sentences either",
+   "check": "No check against GW is lost, but the values can no longer be re-derived from anything the app uses. Owner's choice: keep them as recorded, or have them rebuilt from Wahapedia by verify/from-waha.js once its WARGEAR OPTIONS reader exists. After review (round 2): (1) new gate step points (verify/points.js): the points of all 308 unit parts of the 26 lists (each copy, an attached unit's parts by its ptsNote), less their enhancements, are GW's costs on the datasheet page for that copy and unit size, with 27 'per <item>' wargear costs; no declaration needed. Judgements in it, to review: a models line belongs to the part whose datasheet has a profile or composition line of its model's name, else to the bodyguard; a datasheet GW prices at one size only takes that price whatever the models lines count (Canis Rex with Sir Hekhtur); an allied unit takes the page's 'Assigned Agent' price where GW prints both (the Navigator, 60 on its own, 75 as an Assigned Agent); wargear names compare in the singular (New Recruit's Twin Killsaw, GW's 'per Twin Killsaws 5'); an item named both in a models line's brackets and among its weapons is one item. wt-pts's builder.js wargearOf matches exact names and bundles: when it merges, give it the singular rule too, or a Meganobz import would be priced without its Twin Killsaws (Orks have no catalogue today). (2) verify/currency.js now also runs numbers, keywords, words, catalog and points on the fresh pages (VERIFY_CACHE is honoured by the shared page readers; VERIFY_OUT by those steps). (3) the copied lists' legality stays a stated limit (docs/tables.md)."
+  },
+  "source": {},
+  "key": "nobs|catalog-gap"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "data-change",
+  "where": "data.js BUILD_INDEX gw; verify/build-index.js; verify/sources/nr-values.json; builder.js marksOf (gwValues), import.js make, app.html Overview note",
+  "judgement": {
+   "rule": "A value New Recruit prints otherwise than GW's datasheet is no rule at work: the import builds with GW's value and its Overview has a note naming both ('Values: GW’s are used where the export’s differ: Blade Champion, Hurricanis AP -1 in the export, -2 by GW'), as for points (the owner's standing decision). Known from two places: what an export or PDF of the owner's shows (verify/deviations-nr.json: Prosecutor and Witchseeker Squad, Gun Stock A 3), and verify/sources/nr-values.json for seven datasheets no export shows (Blade Champion Hurricanis AP -1; Knight-Centura Gun Stock WS 3+; both Venatari Ld 6+; Pallas Armoured hull A 4; Coronus Armoured hull A 4 and S 6; Ares Gunship Arachnus magna-blaze cannon AP -4). Any other value no rule explains is still refused, named.",
+   "before": "the same eight numeric values and the two Gun Stock ones, written from BSData into verify/deviations-bsdata.json; built silently with GW's value, no note. The Blade Champion's entry was keyed 'Hurricanis (Vaultswords)', which builder.js never looked up (it looks a profile up by its own name), so that import was refused on main too. The Sporocyst's keyword entry (HIVE DEFENCES) was never read by builder.js (keywords are not looked up there) and is not restored.",
+   "check": "verify/build-index.js fails unless GW's value in nr-values.json is the DATASHEETS row's (verify/numbers.js holds the row to Wahapedia's page). New Recruit's value there (nr) is the one thing recorded from BSData that the app still holds: seven datasheets, eight numbers; it cannot be re-checked until an export shows the datasheet. verify/build-parity.js N: Lite Knights with a Blade Champion and a Knight-Centura showing New Recruit's values builds with GW's (AP -2, WS 2+), no '+' mark, the note naming both; with GW's values no note; with another value (AP -4) refused, named; the phone's import carries the note (army.gwValues). The test's export is made here (the Gun Stock profile inside the gun's selection): no real export of either unit is committed, so the shape of New Recruit's own export of them is assumed. After review (round 2): a weapon profile on the part's own selection or on a model selection itself is refused, the weapon named ('weapon Gun Stock on unit … not placed'), never dropped. build-parity N, the Knight-Centura's Gun Stock in five layouts: in the gun's selection WS 3+ built with GW's 2+; WS 4+ refused, named; on the model's own selection refused, named (with any value); a selection of its own refused, named; as a ➤ profile of the gun built with the row or refused, named; not in the export at all: built, the unit then shows what the export selected (the datasheet's options do not make Gun Stock a choice, so nothing requires it; with no melee weapon selected the unit's screen lists its datasheet's melee rows)."
+  },
+  "source": {},
+  "key": "nobs|build-index-gw"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "rules-update",
+  "where": "data.js DATASHEETS chaos-daemons/tormentbringer rules",
+  "judgement": {
+   "rule": "Wahapedia's Tormentbringer page now prints Leader among CORE ABILITIES ('Deep Strike, Leader'); the Rules line order follows the page: Deep Strike, Leader, The Shadow of Chaos (was Deep Strike, The Shadow of Chaos, Leader).",
+   "before": "the page of 9 Nov printed CORE ABILITIES Deep Strike only",
+   "check": "verify/tables.js fails on main with today's page; the only data.js rule change from the pages. No list has the datasheet."
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/ds/chaos-daemons_Tormentbringer.html: CORE ABILITIES Deep Strike, Leader"
+  },
+  "key": "nobs|waha-tormentbringer"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "page-layout",
+  "where": "verify/waha-words.js (profiles)",
+  "judgement": {
+   "rule": "Wahapedia's Wardens of Ultramar page now prints one profile row for 'Aemelia Minervas, Dainal Komelius, Lucia Vestha' (M 6\" T 3 Sv 4+ W 3 Ld 6+ OC 1); the reader makes a profile for each name. The values are the app's.",
+   "before": "one row per model",
+   "check": "verify/numbers.js fails on main with today's page (9 failures, the three models read against the Bladeguard profile) and passes with the reader's change. A datasheet whose model name itself has ', ' would be split: none today."
+  },
+  "source": {},
+  "key": "nobs|waha-wardens"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "rules-update",
+  "where": "verify/provenance.json (waha:thousand-sons, waha:adeptus-mechanicus)",
+  "judgement": {
+   "rule": "The text of Wahapedia's Thousand Sons and Adeptus Mechanicus faction pages differs from the fingerprints of 9 Nov. Every text the app holds from them is still there word for word (verify/texts.js: 0 failures in 6074 facts), so the change is in parts the app does not hold. The old text was not kept (verify/sources/waha-baseline has only core and orks), so what changed cannot be shown.",
+   "before": "sha256 8657c7f0… (thousand-sons.txt), 63062146… (adeptus-mechanicus.txt)",
+   "check": "now 6630820d…, 7b9922f9…. All 14 GW PDFs are byte-identical to their recorded sha256. To decide: commit every faction page's text as a baseline (verify/currency.js --accept after the gate) so the next change shows as a diff."
+  },
+  "source": {},
+  "key": "nobs|waha-text-changes"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "data-change",
+  "where": "data.js canis-rex srcNote; verify/gw-order.js srcNoteOf",
+  "judgement": {
+   "rule": "The note under Sir Hekhtur reads 'Wahapedia: its own EPIC HERO datasheet; New Recruit: in this unit'.",
+   "before": "'…; BSData and New Recruit: in this unit'",
+   "check": "shown on the Canis Rex screens: their snapshots change."
+  },
+  "source": {},
+  "key": "nobs|srcnote"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "sign-off",
+  "where": "import.js, builder.js, verify/gw-order.js (verify/helpers.js: the judgements to check, verify/out/helpers-todo.json)",
+  "judgement": {
+   "rule": "The helper functions whose code changed need a reviewer's sign-off again: the import's top-level reading and name lookup (resolveRoster, textToExport, make, builder.js topLevel / Builder), srcNoteOf.",
+   "before": "742 of 742 approved",
+   "check": "the gate step helpers fails until they are signed off (verify/out/helpers-todo.json)."
+  },
+  "source": {},
+  "key": "nobs|helpers"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "recommendation",
+  "where": "verify/sources/bsdata-extract.json (7.4 MB); verify/sources/catalog/*.json",
+  "judgement": {
+   "rule": "No script reads the extract any more: recommend deleting it (git rm) in a commit of the owner's. The catalogue files stay: they are the tables' source for 137 datasheets; their bsId fields are gone, their excluded lists and option limits are what was recorded from BSData. History keeps the extract, BS_IDS, bsId and deviations-bsdata.json in every earlier commit of the public repository; removing them there means rewriting history, which is the owner's decision and was not done.",
+   "before": "the extract committed and re-written by every re-import",
+   "check": "verify/bsdata.js, verify/map-bsdata.json and verify/deviations-bsdata.json are removed on this branch; verify/bs-catalog.js, verify/from-bsdata.js and verify/catalog-write.js remain only as the model for verify/from-waha.js (the World Eaters builder) and cannot run."
+  },
+  "source": {},
+  "key": "nobs|extract"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "other-branch",
+  "where": "wt-pts: verify/build-parity.js N (paid wargear), builder.js wargearOf",
+  "judgement": {
+   "rule": "To do on wt-pts when it is rebased onto this branch (three things). (1) Its build-parity N check 'every paid option of every catalogued datasheet priced by wargearOf at BSData's cost' compares against the pts of the option choices, which are New Recruit's as recorded from BSData: change it to GW's rows, DATASHEETS points.wargear ('per Praesidium Shield 25'), which verify/catalog.js texts already holds to the Wahapedia page: every points.wargear row must be taken by at least one choice through wargearOf, and no choice may take a row whose item it does not name. (2) Its test export builds selections with entryId 'x::' + S.bsId: bsId no longer exists; any id no export has shown works, the datasheet is then found by its exact name. (3) It writes New Recruit's ids for Shadowkeepers (b1d2-7b13-3831-7915) and Priority Assets (081d-bc07-5d4e-ab22): no committed export shows them, so they resolve by name; the ids can stay or go. Its builder.js change (wargearOf, the points sum) touches build(), not marksOf: no conflict expected with this branch's gwValues lines, but both edit the return of build().",
+   "before": "",
+   "check": "to do on wt-pts when it is rebased."
+  },
+  "source": {},
+  "key": "nobs|wt-pts"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "tool",
+  "where": "verify/import-nr.js, verify/add-army.js, verify/currency.js",
+  "judgement": {
+   "rule": "A list imported from a PDF no longer gets its marks from BSData; the gate step marks lists a changed value with no rule named. verify/currency.js no longer looks at BSData. verify/from-waha.js (a new faction's catalogue from Wahapedia) is being written by the World Eaters builder on top of this branch.",
+   "before": "",
+   "check": "not part of the gate."
+  },
+  "source": {},
+  "key": "nobs|pdf-import"
+ }
+]

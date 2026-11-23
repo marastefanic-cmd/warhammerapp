@@ -7667,6 +7667,12 @@
   "at": "2026-10-23",
   "why": "“This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls”: kind melee, no weapon (every melee weapon of the attached unit, Trajann’s included, 19.04), the target condition kept as the when and left as a tick (no always), as the Damage tab’s target is set by hand."
  },
+ "555c7f74407a6ba0": {
+  "verdict": "ok",
+  "by": "review:nobs",
+  "at": "2026-11-23",
+  "why": "Code unchanged: config values that only name an army rule table's parts are left out of the Overview."
+ },
  "55785953e5779853": {
   "verdict": "ok",
   "by": "review:catalog-chaos-daemons",
@@ -8488,6 +8494,12 @@
   "by": "review:ui-a",
   "at": "2026-11-05",
   "why": "Changed (was: +1 to Hit rolls vs targets not Below Half-strength): checked against GW and the rules 44–48 sweep; reads correctly in context in a render of 5d8657e. Now: sumAtk: vs targets not Below Half-strength: +1 to Hit rolls"
+ },
+ "5f78619064e3e457": {
+  "verdict": "ok",
+  "by": "review:nobs",
+  "at": "2026-11-23",
+  "why": "id first, else exact name; a known id under another name refused for top-level parents, battle size and info choices; the faction by catalogue name with a known id required to agree; my cases all refused/accepted as they should; import-test 178 pass."
  },
  "5f903228ac043ab7": {
   "verdict": "ok",
@@ -16865,6 +16877,12 @@
   "at": "2026-11-05",
   "why": "unchanged since round 1. Against GW: “WHEN: Fight phase, just after a friendly CHARACTER unit is selected to fight. TARGET: That CHARACTER unit. EFFECT: Select one CHARACTER model in your unit. Until the end of the pha…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
  },
+ "c0d6ab81d48033c6": {
+  "verdict": "ok",
+  "by": "review:nobs",
+  "at": "2026-11-23",
+  "why": "Code unchanged; comment no longer cites BSData."
+ },
  "c0e4acb468dcd793": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -18557,6 +18575,12 @@
   "at": "2026-10-16",
   "why": "\"WHEN: Any phase.\""
  },
+ "d51e7d53cfdd0a8f": {
+  "verdict": "ok",
+  "by": "review:nobs",
+  "at": "2026-11-23",
+  "why": "The note now says \"New Recruit prints/lists\"; logic unchanged; escaped."
+ },
  "d52263d0379e92e0": {
   "verdict": "ok",
   "by": "review:ui-a",
@@ -19355,6 +19379,12 @@
   "at": "2026-10-28",
   "why": "As unitMods: stratagem defences now on reference pages (Brimstone page shows Flickering Reality)."
  },
+ "de4824f90299a26e": {
+  "verdict": "ok",
+  "by": "review:nobs",
+  "at": "2026-11-23",
+  "why": "bsId removed from HIDE (the column is gone); the rest identical."
+ },
  "de5ed27db3726ca0": {
   "verdict": "ok",
   "by": "review:custodes-units",
@@ -19708,6 +19738,12 @@
   "by": "review:order-2",
   "at": "2026-10-30",
   "why": "Identical judgement to the approved one on main (main 2399c6e key a018cf37a026418f); re-keyed by the reordered unit. Checked by script."
+ },
+ "e2c5c94fcc6401a5": {
+  "verdict": "ok",
+  "by": "review:nobs",
+  "at": "2026-11-23",
+  "why": "Only the note template's text (\"New Recruit: in this unit\")."
  },
  "e2dc7aa87a0217c5": {
   "verdict": "ok",
@@ -21419,6 +21455,12 @@
   "at": "2026-11-05",
   "why": "unchanged since round 1. Against GW: “While this unit is within 3\" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
  },
+ "f826db6bfb336a11": {
+  "verdict": "ok",
+  "by": "review:nobs",
+  "at": "2026-11-23",
+  "why": "Comment only (\"as New Recruit prints it\"); code unchanged."
+ },
  "f8332102adfab30a": {
   "verdict": "ok",
   "by": "review:ui-b",
@@ -21562,6 +21604,12 @@
   "by": "review:ui-b",
   "at": "2026-11-05",
   "why": "unchanged since round 1. Against GW: “WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One TYRANIDS unit from your army that was selected as the target…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
+ },
+ "f9e4723da83a0431": {
+  "verdict": "ok",
+  "by": "review:nobs",
+  "at": "2026-11-23",
+  "why": "Adds the gwValues note: each field escaped, shown only when present; text names both values."
  },
  "f9eab25031ce4bb7": {
   "verdict": "ok",

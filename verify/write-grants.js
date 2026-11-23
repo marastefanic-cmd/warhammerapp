@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-/* verify/write-grants.js: write the `from` marks that verify/bsdata.js derived from BSData's
-   modifiers (verify/out/bsdata.json "grants") into data.js, on weapon and stats rows that have
-   none yet. For a new list: node verify/bsdata.js; node verify/write-grants.js; then
-   node verify/bsdata.js and node verify/nr.js must pass (both check the marks).
-   Usage: node verify/write-grants.js [repo dir]
+/* verify/write-grants.js: write the `from` marks verify/from-json.js found (the values New Recruit's export shows otherwise than
+   GW's datasheet by a rule of the list, verify/out/marks-<list>.json "grants": { army, unit, kind, idx, key, names }) into data.js,
+   on weapon and stats rows that have none yet. The gate's marks step (verify/marks.js) and verify/nr.js then check the marks.
+   Usage: node verify/write-grants.js [repo dir] [grants file]
    data.js in table form (DATASHEETS) is written in the old form first (every unit in full, verify/tables.js), the marks
    go on its rows there, and verify/tables.js puts it back in table form (a mark is the list's own: on the list's row). */
 const fs = require('fs'), path = require('path');
@@ -12,7 +11,7 @@ const dir = path.resolve(process.argv[2] || path.join(__dirname, '..'));
 const file = path.join(dir, 'data.js');
 const src0 = fs.readFileSync(file, 'utf8'), tabled = /\nconst DATASHEETS = /.test(src0);
 const lines = (tabled ? T.oldForm(src0) : src0).split('\n');
-const grants = require(path.join(dir, 'verify/out/bsdata.json')).grants;
+const grants = require(path.resolve(process.argv[3] || path.join(dir, 'verify/out/marks.json'))).grants;
 global.window = {}; require(file); const D = window.WH_DATA;
 const q = s => "'" + String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'") + "'";
 // group by row
@@ -38,7 +37,7 @@ for (const [k, gs] of rows) {
   const u = D.armies.find(x => x.id === aid).units.find(x => x.id === uid);
   const obj = u[kind][Number(idx)];
   if (!line.includes("name:" + q(obj.name).replace(/\\'/g, "\\'"))) throw new Error('line ' + (li + 1) + ' is not ' + obj.name + ': ' + line);
-  if (/\bfrom:\{/.test(line)) { kept++; continue; }   // bsdata.js compares existing marks
+  if (/\bfrom:\{/.test(line)) { kept++; continue; }   // (verify/marks.js checks existing marks)
   const order = kind === 'stats' ? ['M','T','Sv','W','Ld','OC','InSv','base'] : [...(obj.kw || []), 'range','A','BS','WS','S','AP','D'];
   gs.sort((x, y) => order.indexOf(x.key) - order.indexOf(y.key));
   const lit = 'from:{ ' + gs.map(g => q(g.key) + ':' + (g.names.length === 1 ? q(g.names[0]) : '[' + g.names.map(q).join(',') + ']')).join(', ') + ' }';
@@ -47,4 +46,4 @@ for (const [k, gs] of rows) {
   done++;
 }
 fs.writeFileSync(file, tabled ? T.tableForm(lines.join('\n')).text : lines.join('\n'));
-console.log('marked ' + done + ' rows (' + kept + ' already marked); BSData changes ' + grants.length + ' values');
+console.log('marked ' + done + ' rows (' + kept + ' already marked); rules of the list change ' + grants.length + ' values');

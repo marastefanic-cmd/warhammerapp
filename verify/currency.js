@@ -9,9 +9,7 @@
 //      and removed documents. The ones that can touch these armies (their factions' packs, core rules, rules
 //      updates, event companion, balance and points documents; never Legends) are downloaded to
 //      verify/.cache-latest/gw as PDF and text, to read.
-//   2. BSData (what New Recruit is built from): the newest commit against the one fetch.sh pins. If newer,
-//      verify/bsdata.js runs against it: every failure is a fact of these lists (points, stats, weapons,
-//      abilities, keywords) that the newest BSData has differently.
+//   2. (BSData was checked here until 22 Nov 2026; it is no source any more and nothing is fetched from it.)
 //   3. Wahapedia: the faction pages, the core rules page and the units' datasheet pages, fetched again.
 //      Their text against verify/sources/waha-baseline/ (so new errata and FAQ boxes show as a diff), then
 //      verify/texts.js and verify/choice.js against the new pages.
@@ -86,35 +84,7 @@ else {
   if(accept) writeJSON(BASE_GW, gw);
 }
 
-/* ---------- 2. BSData ---------- */
-md.push('## BSData', '');
-const PIN = (fs.readFileSync(path.join(V, 'fetch.sh'), 'utf8').match(/BSDATA_COMMIT=([0-9a-f]+)/) || [])[1];
-const head = (run('git', ['ls-remote', 'https://github.com/BSData/wh40k-11e', 'HEAD']).stdout || '').split(/\s/)[0];
-if(!head) problems.push('BSData’s newest commit could not be read (github.com/BSData/wh40k-11e)');
-else if(head.startsWith(PIN)) md.push('No change: the newest commit is the pinned one (' + PIN + ').', '');
-else {
-  const dir = path.join(LATEST, 'bsdata');
-  if(!fs.existsSync(dir)) run('git', ['clone', '-q', 'https://github.com/BSData/wh40k-11e', dir]);
-  run('git', ['-C', dir, 'fetch', '-q', 'origin']);
-  run('git', ['-C', dir, 'checkout', '-q', head]);
-  const log = run('git', ['-C', dir, 'log', '--format=%h %ad %s', '--date=short', PIN + '..' + head]).stdout.trim();
-  const stat = run('git', ['-C', dir, 'diff', '--stat=120', PIN, head]).stdout.trim();
-  const r = run(process.execPath, [path.join(V, 'bsdata.js'), '--bsdata', dir, '--out', path.join(LATEST, 'out/bsdata.json')], { cwd:ROOT });
-  const res = readJSON(path.join(LATEST, 'out/bsdata.json'), null);
-  const fails = res ? (res.failures || []).filter(f => !['bsdata.commit', 'bsdata.extract'].includes(f.field)) : null;   // the pin itself differs, by definition
-  md.push('Newer than the pinned ' + PIN + ': ' + head.slice(0, 7) + '.', '', '```', log, '', stat, '```', '');
-  if(!fails){ problems.push('verify/bsdata.js could not run against BSData ' + head.slice(0, 7) + ': ' + (r.stderr || r.stdout).trim().split('\n').slice(-3).join(' ')); }
-  else if(!fails.length) md.push('verify/bsdata.js against ' + head.slice(0, 7) + ': **no differences for these lists** (the changes are to other factions or files the lists don’t use). Re-pinning fetch.sh to ' + head.slice(0, 7) + ' is safe.', '');
-  else {
-    md.push('verify/bsdata.js against ' + head.slice(0, 7) + ': **' + fails.length + ' facts of these lists differ:**', '');
-    for(const f of fails.slice(0, 80)) md.push('- ' + [f.army, f.unit, f.field].filter(Boolean).join(' · ') + ': app `' + JSON.stringify(f.app) + '`, BSData `' + JSON.stringify(f.source) + '`' + (f.where ? ' (' + f.where + ')' : ''));
-    if(fails.length > 80) md.push('- … ' + (fails.length - 80) + ' more in verify/.cache-latest/out/bsdata.json');
-    md.push('');
-    changes.push({ source:'bsdata', kind:'facts', relevant:true, count:fails.length });
-  }
-  if(!fails || fails.length) changes.push({ source:'bsdata', kind:'commit', relevant:false, head });
-}
-
+/* ---------- 2. BSData: not a source any more (the owner's decision, 22 Nov 2026): nothing is fetched from it ---------- */
 /* ---------- 3. Wahapedia ---------- */
 md.push('## Wahapedia', '');
 // waha-extract.py needs BeautifulSoup (a fresh container may not have it)
@@ -163,7 +133,7 @@ for(const [p] of pages){
 }
 md.push('');
 if(accept && wahaOk){ fs.mkdirSync(BASE_WAHA, { recursive:true }); for(const [p] of pages) if(fs.existsSync(path.join(wdir, p + '.txt'))) fs.copyFileSync(path.join(wdir, p + '.txt'), path.join(BASE_WAHA, p + '.txt')); }
-// the app's rules texts and weapon choices against the new pages
+// the app's rules texts and weapon choices against the new pages (VERIFY_CACHE: every page reader of verify/ reads today's pages there)
 const env = Object.assign({}, process.env, { VERIFY_CACHE:LATEST, VERIFY_OUT:path.join(LATEST, 'out') });
 fs.mkdirSync(path.join(LATEST, 'out'), { recursive:true });
 const t = run(process.execPath, [path.join(V, 'texts.js'), '--quiet', '--out', path.join(LATEST, 'out/texts.json'), '--provenance', path.join(LATEST, 'out/provenance.json')], { cwd:ROOT, env });
@@ -183,6 +153,17 @@ else if(cr.failures.length){
   md.push('verify/choice.js against the new datasheet pages: **' + cr.failures.length + ' weapons changed between pick-one and fire-all:**', '', ...cr.failures.map(f => '- ' + f.where + ': ' + f.detail), '');
   changes.push({ source:'wahapedia', kind:'choice', relevant:true, count:cr.failures.length });
 } else md.push('verify/choice.js against the new datasheet pages: every pick-one / fire-all still matches.', '');
+
+// every datasheet fact the app shows, against the new datasheet pages: profile numbers, keywords, ability words, the faction catalogues
+// (index, UNIT COMPOSITION, WARGEAR OPTIONS, costs) and every list unit's points
+for(const [st, what] of [['numbers', 'profile numbers'], ['keywords', 'keywords'], ['words', 'ability texts'], ['catalog', 'faction catalogue rows'], ['points', 'list units’ points']]){
+  const r = run(process.execPath, [path.join(V, st + '.js')], { cwd:ROOT, env }), out = ((r.stdout || '') + (r.stderr || '')).trim().split('\n');
+  if(r.status === 0) md.push('verify/' + st + '.js against the new datasheet pages: every one of the ' + what + ' still matches.', '');
+  else if(/^FAIL |failure\(s\)/.test(out[0] || '')){
+    md.push('verify/' + st + '.js against the new datasheet pages: **the ' + what + ' no longer match:**', '', ...out.slice(0, 40).map(l => '- ' + l.replace(/^\s*-?\s*/, '')), '');
+    changes.push({ source:'wahapedia', kind:st, relevant:true, count:out.length - 1 });
+  } else problems.push('verify/' + st + '.js could not run against the new pages: ' + out.slice(-2).join(' '));
+}
 
 /* ---------- report ---------- */
 const relevantChanges = changes.filter(x => x.relevant);

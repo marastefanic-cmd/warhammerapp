@@ -2,8 +2,8 @@
 // with GW's own documents on top (a Faction Pack's errata, a newer codex): a stat of each model type (M T Sv W Ld OC InSv), a weapon's
 // Range A BS|WS S AP D, and the number in a weapon keyword ("RAPID FIRE 2", "ANTI-INFANTRY 4+", "MELTA 2").
 //   A value a rule of the list changed (its row's from names the rule: a granted value) is compared by its base: the datasheet's own
-//   value, else BSData's value before the rules (verify/out/bsdata.json grants, from verify/bsdata.js), against GW's; and the value shown
-//   must be BSData's after the rules. A granted value with no base found fails. A keyword a rule gives must have its number in that rule's
+//   value (the DATASHEETS row's, or the row's own where no list shows it unchanged), against GW's; the value shown is New Recruit's
+//   export's (verify/nr.js) and its rule is held by verify/marks.js. A granted value with no base found fails. A keyword a rule gives must have its number in that rule's
 //   words. A numbered keyword the page has not, that no rule gives, is a difference like any other. Every other difference fails, unless verify/deviations-numbers.json declares it with GW's
 //   evidence ({ ds, kind, row, field, app, waha, reason, evidence }; status 'pending': noted on every run, not passed in silence). A row
 //   the page has none of (a model or weapon Wahapedia's datasheet does not print: Sir Hekhtur's) is listed as unchecked; one that is not
@@ -19,9 +19,6 @@ const DEVS = readJSON(path.join(ROOT, 'verify/deviations-numbers.json'), []);
 const nv = v => String(v == null ? '' : v).replace(/[−–—‐‑]/g, '-').replace(/["”″\s*]/g, '').toLowerCase().replace(/^n\/a$/, '-').replace(/^-$/, '-');
 const STATS = [['M', 'M'], ['T', 'T'], ['Sv', 'SV'], ['W', 'W'], ['Ld', 'LD'], ['OC', 'OC'], ['InSv', 'INSV']];
 const n = O.n;
-// a granted value's base: BSData's value before the rules of the list change it (verify/bsdata.js, verify/out/bsdata.json grants), which is then
-// compared with GW's datasheet as every other value; the value shown must be BSData's after the rules
-const GR = new Map(((readJSON(path.join(ROOT, 'verify/out/bsdata.json'), {}) || {}).grants || []).map(g => [[g.army, g.unit, g.kind, g.idx, g.key].join('|'), g]));
 // the words of a rule the list has, by its name: the unit's abilities, the faction's army and detachment rules, enhancements, stratagems
 const ruleText = (a, u, name) => { const F = D.factions[a.faction] || {}, ds = Object.values(F.detachments || {});
   const all = [].concat(u.abilities || [], F.armyRules || [], ds.flatMap(d => [d.rule].concat(d.moreRules || [], d.enhancements || [], d.stratagems || [])).filter(Boolean));
@@ -77,11 +74,9 @@ for(const a of D.armies.concat(CATALOG)) for(const u of [...a.units, ...(a.refs 
   // the datasheet's own value of a field a rule of the list changed (from): the DATASHEETS row's
   const sheetIdOf = i => a.faction + '/' + String(parts[i].name).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'`]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const own = (i, kind, r, f) => { const s = D.datasheets[sheetIdOf(i)]; const row = s && (s[kind] || []).find(x => x.name === String(r.name).replace(/ ×\d+$/, '') && (x.group || null) === (r.group || null)); return row ? row[f] : undefined; };
-  // a granted value's base (the datasheet's own, else BSData's before the rules); none: a failure, never a silent pass
+  // a granted value's base (the datasheet's own: the DATASHEETS row's, else the row's own); none: a failure, never a silent pass
   const base = (a0, u0, kind, r, f, dsv, id, row) => {
-    const g = GR.get([a.id, u.id, kind, (u[kind] || []).indexOf(r), f].join('|'));
-    if(g && g.after !== undefined && nv(g.after) !== nv(r[f])) differ({ ds:id, kind, row, field:f, app:r[f], waha:'(BSData with the rules: ' + g.after + ')', file:'' });
-    const b = dsv !== undefined ? dsv : g && g.before;
+    const b = dsv !== undefined ? dsv : r.own && r.own[f] !== undefined ? r.own[f] : undefined;
     if(b === undefined) differ({ ds:id, kind, row, field:f, app:r[f], waha:'(granted by ' + [].concat(r.from[f]).join(', ') + ': no base value found)', file:'' });
     return b;
   };
@@ -161,7 +156,7 @@ DEVS.forEach((d, i) => {
 for(const x of unchecked){ const i = DEVS.findIndex(d => d.ds === x.ds && d.kind === x.kind && d.row === x.row && d.field === 'page'); if(i >= 0) used.add(i); else fails.push(Object.assign({ field:'page', app:'(shown)', waha:'(none)' }, x)); }
 DEVS.forEach((d, i) => { if(!used.has(i)) fails.push({ stale:true, ds:d.ds, kind:d.kind, row:d.row, field:d.field, app:d.app, waha:d.waha, why:'verify/deviations-numbers.json #' + i + ': nothing matches it' });
   else if(!d.reason || !d.evidence) fails.push({ ds:d.ds, kind:d.kind, row:d.row, field:d.field, why:'verify/deviations-numbers.json #' + i + ': no reason or evidence' }); });
-writeJSON(path.join(ROOT, 'verify/out/numbers.json'), { counts, declared:used.size, pending:notes, unchecked, fails });
+writeJSON(path.join((process.env.VERIFY_OUT ? path.resolve(process.env.VERIFY_OUT) : path.join(ROOT, 'verify/out')), 'numbers.json'), { counts, declared:used.size, pending:notes, unchecked, fails });
 console.log('numbers: ' + (fails.length ? fails.length + ' failure(s); ' : '') + '(' + CATALOG.reduce((n, a) => n + a.units.length, 0) + ' catalogue rows with the lists\' units) ' + counts.stats + ' stats, ' + counts.weapons + ' weapon numbers and ' + counts.keywords + ' keyword numbers checked against the Wahapedia datasheets (' + counts.granted + ' granted values compared as the datasheet has them); ' + used.size + ' declared deviations used' + (notes.length ? '; ' + notes.length + ' PENDING (declared, not decided): ' + notes.map(x => x.ds + ' ' + x.row + ' ' + x.field).join(', ') : ''));
 for(const f of fails) console.log('  FAIL ' + (f.stale ? 'stale ' : '') + f.ds + ' · ' + f.kind + ' · ' + f.row + ' · ' + f.field + ': app ' + JSON.stringify(f.app) + ', Wahapedia ' + JSON.stringify(f.waha) + (f.why ? ' (' + f.why + ')' : f.file ? ' (' + f.file + ')' : ''));
 for(const x of notes) console.log('  PENDING ' + x.ds + ' · ' + x.row + ' · ' + x.field + ': ' + x.pending);

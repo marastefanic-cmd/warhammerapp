@@ -1,10 +1,9 @@
 {
- "_about": "The Imperium - Adeptus Custodes catalogue as verify/from-bsdata.js reads it from BSData (wh40k-11e at the pin) with GW’s datasheets over it (verify/from-json.js): every current datasheet (no Legends, no Crusade, no Crucible: verify/bs-catalog.js FILTER), one DATASHEETS row each. Written by `node verify/from-bsdata.js adeptus-custodes --write`; verify/tables.js --write puts every row into DATASHEETS (a row a list has keeps the list’s signed-off facts, and gets the catalogue’s rows it lacks); the gate step catalog (verify/catalog.js) checks it is what the sources give. Do not edit.",
+ "_about": "A faction catalogue: every current datasheet (and detachment) of the faction as rows for data.js (docs/catalog.md). The rows are the committed source; verify/tables.js --write merges them into DATASHEETS and the gate step catalog (verify/catalog.js) holds every row to GW’s datasheets and faction page (Wahapedia). A new faction’s catalogue is written by verify/from-waha.js.",
  "faction": "adeptus-custodes",
- "bsdata": {
-  "catalogue": "Imperium - Adeptus Custodes",
-  "revision": 25,
-  "pin": "b4dc3f4"
+ "origin": {
+  "built": "before 22 Nov 2026, from New Recruit’s data (BSData wh40k-11e at b4dc3f4, catalogue Imperium - Adeptus Custodes revision 25) with GW over it; BSData is no source any more and the file is not rebuilt from it",
+  "heldTo": "GW’s datasheets and faction page (Wahapedia), by the gate step catalog (verify/catalog.js)"
  },
  "counts": {
   "datasheets": 29,
@@ -15,7 +14,6 @@
   "adeptus-custodes/trajann-valoris": {
    "name": "Trajann Valoris",
    "faction": "adeptus-custodes",
-   "bsId": "7d7c-c212-47a3-38e4",
    "role": "Epic Hero",
    "stats": [
     {
@@ -141,7 +139,6 @@
   "adeptus-custodes/blade-champion": {
    "name": "Blade Champion",
    "faction": "adeptus-custodes",
-   "bsId": "48b7-e713-d5b1-f11c",
    "role": "Character",
    "stats": [
     {
@@ -278,7 +275,6 @@
   "adeptus-custodes/knight-centura": {
    "name": "Knight-Centura",
    "faction": "adeptus-custodes",
-   "bsId": "7099-71b-56e8-7191",
    "role": "Character",
    "stats": [
     {
@@ -430,7 +426,6 @@
   "adeptus-custodes/shield-captain": {
    "name": "Shield-Captain",
    "faction": "adeptus-custodes",
-   "bsId": "b61c-b815-65c0-b1cc",
    "role": "Character",
    "stats": [
     {
@@ -639,7 +634,6 @@
   "adeptus-custodes/shield-captain-in-allarus-terminator-armour": {
    "name": "Shield-Captain in Allarus Terminator Armour",
    "faction": "adeptus-custodes",
-   "bsId": "6319-eeba-b717-bd86",
    "role": "Character",
    "stats": [
     {
@@ -817,7 +811,6 @@
   "adeptus-custodes/shield-captain-on-dawneagle-jetbike": {
    "name": "Shield-Captain on Dawneagle Jetbike",
    "faction": "adeptus-custodes",
-   "bsId": "58fa-4a25-a5af-1144",
    "role": "Character",
    "stats": [
     {
@@ -968,7 +961,6 @@
   "adeptus-custodes/custodian-guard-sodality": {
    "name": "Custodian Guard Sodality",
    "faction": "adeptus-custodes",
-   "bsId": "91b3-2e1c-e642-d213",
    "role": "Battleline",
    "stats": [
     {
@@ -1092,7 +1084,6 @@
   "adeptus-custodes/sentinel-guard-sodality": {
    "name": "Sentinel Guard Sodality",
    "faction": "adeptus-custodes",
-   "bsId": "df80-bbdc-bd0a-3428",
    "role": "Battleline",
    "stats": [
     {
@@ -1225,7 +1216,6 @@
   "adeptus-custodes/anathema-psykana-rhino": {
    "name": "Anathema Psykana Rhino",
    "faction": "adeptus-custodes",
-   "bsId": "d7cb-7d30-715b-50d2",
    "role": "Dedicated Transport",
    "stats": [
     {
@@ -1364,7 +1354,6 @@
   "adeptus-custodes/allarus-custodians": {
    "name": "Allarus Custodians",
    "faction": "adeptus-custodes",
-   "bsId": "c8a6-a4c5-703e-b717",
    "role": "Infantry",
    "stats": [
     {
@@ -1546,7 +1535,6 @@
   "adeptus-custodes/custodian-wardens": {
    "name": "Custodian Wardens",
    "faction": "adeptus-custodes",
-   "bsId": "9610-b148-8433-93b8",
    "role": "Infantry",
    "stats": [
     {
@@ -1704,7 +1692,6 @@
   "adeptus-custodes/prosecutor-squad": {
    "name": "Prosecutor Squad",
    "faction": "adeptus-custodes",
-   "bsId": "3ec3-a4df-fdbf-5507",
    "role": "Infantry",
    "stats": [
     {
@@ -1821,7 +1808,6 @@
   "adeptus-custodes/vigilator-squad": {
    "name": "Vigilator Squad",
    "faction": "adeptus-custodes",
-   "bsId": "dd2d-568a-9c56-1b6e",
    "role": "Infantry",
    "stats": [
     {
@@ -1919,7 +1905,6 @@
   "adeptus-custodes/witchseeker-squad": {
    "name": "Witchseeker Squad",
    "faction": "adeptus-custodes",
-   "bsId": "503b-f7be-eeeb-9e31",
    "role": "Infantry",
    "stats": [
     {
@@ -2039,7 +2024,6 @@
   "adeptus-custodes/venatari-with-kinetic-destroyers": {
    "name": "Venatari with Kinetic Destroyers",
    "faction": "adeptus-custodes",
-   "bsId": "201e-e502-a8d1-3974",
    "role": "Infantry",
    "stats": [
     {
@@ -2169,7 +2153,6 @@
   "adeptus-custodes/aquilon-terminators-with-solarite-power-gauntlets": {
    "name": "Aquilon Terminators with Solarite Power Gauntlets",
    "faction": "adeptus-custodes",
-   "bsId": "9d57-6156-aebd-73e9",
    "role": "Infantry",
    "stats": [
     {
@@ -2279,7 +2262,6 @@
   "adeptus-custodes/aquilon-terminators-with-solarite-power-talons": {
    "name": "Aquilon Terminators with Solarite Power Talons",
    "faction": "adeptus-custodes",
-   "bsId": "67a7-0ebe-3c5f-c0f9",
    "role": "Infantry",
    "stats": [
     {
@@ -2419,7 +2401,6 @@
   "adeptus-custodes/venatari-with-verutum-lances": {
    "name": "Venatari with Verutum Lances",
    "faction": "adeptus-custodes",
-   "bsId": "5ebc-7aca-d7c4-1c4d",
    "role": "Infantry",
    "stats": [
     {
@@ -2544,7 +2525,6 @@
   "adeptus-custodes/vertus-praetors": {
    "name": "Vertus Praetors",
    "faction": "adeptus-custodes",
-   "bsId": "918b-c9ed-7af7-74df",
    "role": "Mounted",
    "stats": [
     {
@@ -2692,7 +2672,6 @@
   "adeptus-custodes/gyrfalcon-jetbike-sodality": {
    "name": "Gyrfalcon Jetbike Sodality",
    "faction": "adeptus-custodes",
-   "bsId": "00ab-41c4-cf52-4ad2",
    "role": "Mounted",
    "stats": [
     {
@@ -2860,7 +2839,6 @@
   "adeptus-custodes/contemptor-galatus-dreadnought": {
    "name": "Contemptor-Galatus Dreadnought",
    "faction": "adeptus-custodes",
-   "bsId": "4988-d93e-5034-2b3c",
    "role": "Vehicle",
    "stats": [
     {
@@ -2978,7 +2956,6 @@
   "adeptus-custodes/contemptor-achillus-dreadnought": {
    "name": "Contemptor-Achillus Dreadnought",
    "faction": "adeptus-custodes",
-   "bsId": "db3b-02cd-87a2-3b52",
    "role": "Vehicle",
    "stats": [
     {
@@ -3149,7 +3126,6 @@
   "adeptus-custodes/pallas-grav-attack": {
    "name": "Pallas Grav-attack",
    "faction": "adeptus-custodes",
-   "bsId": "06df-2fb2-8dfa-2fce",
    "role": "Vehicle",
    "stats": [
     {
@@ -3278,7 +3254,6 @@
   "adeptus-custodes/caladius-grav-tank": {
    "name": "Caladius Grav-tank",
    "faction": "adeptus-custodes",
-   "bsId": "3ee2-62a9-af84-1a90",
    "role": "Vehicle",
    "stats": [
     {
@@ -3442,7 +3417,6 @@
   "adeptus-custodes/telemon-heavy-dreadnought": {
    "name": "Telemon Heavy Dreadnought",
    "faction": "adeptus-custodes",
-   "bsId": "e7d8-1c73-7d03-8b62",
    "role": "Vehicle",
    "stats": [
     {
@@ -3639,7 +3613,6 @@
   "adeptus-custodes/coronus-grav-carrier": {
    "name": "Coronus Grav-carrier",
    "faction": "adeptus-custodes",
-   "bsId": "f35e-ef9c-9ef4-77e1",
    "role": "Vehicle",
    "stats": [
     {
@@ -3811,7 +3784,6 @@
   "adeptus-custodes/ares-gunship": {
    "name": "Ares Gunship",
    "faction": "adeptus-custodes",
-   "bsId": "9335-74d9-ad68-3ff7",
    "role": "Vehicle",
    "stats": [
     {
@@ -3938,7 +3910,6 @@
   "adeptus-custodes/orion-assault-dropship": {
    "name": "Orion Assault Dropship",
    "faction": "adeptus-custodes",
-   "bsId": "9c1a-7efd-ed36-440e",
    "role": "Vehicle",
    "stats": [
     {
@@ -4093,7 +4064,6 @@
   "adeptus-custodes/caladius-annihilator-grav-tank": {
    "name": "Caladius Annihilator Grav-tank",
    "faction": "adeptus-custodes",
-   "bsId": "dbf0-5211-463c-40ec",
    "role": "Vehicle",
    "stats": [
     {
@@ -4257,91 +4227,78 @@
  "detachments": [
   {
    "name": "Null Maiden Vigil",
-   "bsId": "d3ee-47e1-4540-dfe5",
    "rules": [
     "Silent Sisterhood"
    ]
   },
   {
    "name": "Auric Champions",
-   "bsId": "a36b-bb22-1a15-2a48",
    "rules": [
     "Assemblage of Might"
    ]
   },
   {
    "name": "Lions of the Emperor",
-   "bsId": "3b75-a700-050c-06f5",
    "rules": [
     "On Gilded Wings"
    ]
   },
   {
    "name": "Might of the Moritoi",
-   "bsId": "1bb5-5aba-6c8f-7afc",
    "rules": [
     "Moritoi Ancients"
    ]
   },
   {
    "name": "Guardians of the Throne",
-   "bsId": "63e2-12d3-9e87-8d43",
    "rules": [
     "Martial Mastery"
    ]
   },
   {
    "name": "Honoured Companions",
-   "bsId": "dbe4-0a6f-4eb5-5f06",
    "rules": [
     "Companion’s Watch"
    ]
   },
   {
    "name": "Grav-Assault Force",
-   "bsId": "ccb7-6823-6a97-7c19",
    "rules": [
     "Flare Shields"
    ]
   },
   {
    "name": "Aquilan Shield",
-   "bsId": "f82a-5355-0598-8fb8",
    "rules": [
     "Gilded Guardians"
    ]
   },
   {
    "name": "Dread Host",
-   "bsId": "385f-36b3-f98d-9735",
    "rules": [
     "Instruments of the Emperor’s Wrath"
    ]
   },
   {
    "name": "Emissaries Imperatus",
-   "bsId": "8d91-29a0-9690-b603",
    "rules": [
     "Heralds of the Throne"
    ]
   },
   {
    "name": "Emperor’s Chosen",
-   "bsId": "1c7e-56bc-3196-b5cd",
    "rules": [
     "Magna Imperator"
    ]
   },
   {
    "name": "Shadow Keepers",
-   "bsId": "b1d2-7b13-3831-7915",
    "rules": [
     "Wardens of the Dark Cells"
    ]
   },
   {
    "name": "Solar Watch",
-   "bsId": "cd6a-aae4-acca-d3ac",
    "rules": [
     "Talon Sortie"
    ]

@@ -5,11 +5,12 @@
      labels  an enhancement's phase labels (ph, turn, turns, at), as verify/derive.js reads its words (timing, asLabel): the labels a list's
              enhancement row gets, for every enhancement of a catalogued faction
      marks   for each rule, ability or enhancement that a list's "+" mark names (from), the values it marks (a characteristic, a weapon
-             keyword): which rule of the list changed a value the export shows (BSData's modifiers; verify/bsdata.js checks every mark)
+             keyword): which rule of the list changed a value the export shows (verify/marks.js holds every mark to GW's words of its rule)
      battleSizes  GW's battle sizes (Core Rules 25.03, as rules/core-rules.md has them): points, Detachment Points, enhancement and unit limits
-     upgrades     an enhancement GW's Faction Pack heads "<NAME> UPGRADE" (verify/.cache/gw) that its row (BSData's upgrade) does not mark
-     gw      a catalogued datasheet's value where GW's datasheet is not BSData's (verify/deviations-bsdata.json, army "catalog"):
-             { "<datasheet>": { "<kind>|<row>|<field>": "<BSData's value>" } }, so the export's BSData value is no rule at work
+     upgrades     an enhancement GW's Faction Pack heads "<NAME> UPGRADE" (verify/.cache/gw) that its row (Wahapedia's UPGRADE) does not mark
+     gw      a catalogued datasheet's value where New Recruit prints another than GW's datasheet, as the owner's exports and PDFs show it
+             (verify/deviations-nr.json), or as verify/sources/nr-values.json records it for a datasheet none shows: { "<datasheet>": { "<kind>|<row>|<field>": "<New Recruit's value>" } }, so that value in an export is
+             no rule at work
 
      node verify/build-index.js           check: data.js holds exactly what this writes (the gate's build-parity step runs it)
      node verify/build-index.js --write   write it into data.js */
@@ -58,7 +59,7 @@ function index(D, RAW){
   const t = core.slice(core.indexOf('#### Select Battle Size 25.03'), core.indexOf('#### Fill Your Army Roster 25.04'));
   for(const m of t.matchAll(/^\*\*([A-Z ]+)\*\* \| (\d+) \| (\d+) \| (\d+) \| (\d+)\s*$/gm)) bsz[m[1].toLowerCase().replace(/\b\w/g, c => c.toUpperCase())] = { points:+m[2], dp:+m[3], enhancements:+m[4], units:+m[5] };
   if(!Object.keys(bsz).length) throw new Error('rules/core-rules.md: the 25.03 battle size table was not found');
-  // an enhancement GW's Faction Pack marks UPGRADE that the row (BSData's upgrade) does not
+  // an enhancement GW's Faction Pack marks UPGRADE that the row (Wahapedia's UPGRADE mark) does not
   const gwTxt = fs.readdirSync(path.join(ROOT, 'verify/.cache/gw')).filter(f => f.endsWith('.txt')).sort().map(f => fs.readFileSync(path.join(ROOT, 'verify/.cache/gw', f), 'utf8')).join('\n');
   const upgrades = [];
   for(const f of cat) for(const d of Object.values(D.factions[f].detachments)) for(const e of d.enhancements || []){
@@ -66,12 +67,27 @@ function index(D, RAW){
     if(!e.upgrade && new RegExp('^\\s*' + U + '\\s+UPGRADE\\b', 'm').test(gwTxt) && !upgrades.includes(e.name)) upgrades.push(e.name);
   }
   upgrades.sort();
+  // a catalogued datasheet's value where New Recruit prints another than GW's datasheet, as a committed export or PDF of the owner's
+  // shows it (verify/deviations-nr.json: app GW's value, source New Recruit's; verify/nr.js uses every one), so that value in an export
+  // is New Recruit's own and no rule at work
   const gw = {};
-  const dev = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-bsdata.json'), 'utf8'));
+  const dev = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-nr.json'), 'utf8'));
   for(const x of dev){
-    const m = /^(stats|ranged|melee)\[(.+)\]\.(\w+)$/.exec(x.field || '');
-    if(x.army !== 'catalog' || !m || m[3] === 'base' || x.source == null || !D.datasheets[x.unit]) continue;
-    (gw[x.unit] = gw[x.unit] || {})[m[1] + '|' + m[2] + '|' + m[3]] = String(x.source);
+    const m = /^(stats|ranged|melee)\[(.+)\]\.(M|T|Sv|W|Ld|OC|InSv|range|A|BS|WS|S|AP|D)$/.exec(x.field || '');
+    const a = m && RAW.ARMIES.find(y => y.id === x.army), u = a && cat.includes(a.faction) && a.units.find(y => y.id === x.unit);
+    if(!u || x.source == null || typeof x.source !== 'string' || typeof x.app !== 'string') continue;
+    // (the datasheet of the unit whose row of that name has GW's value)
+    const keys = [].concat(u.ds || []).filter(k => D.datasheets[k] && (D.datasheets[k][m[1]] || []).some(r => r.name === m[2] && String(r[m[3]]) === x.app));
+    if(keys.length !== 1) continue;
+    (gw[keys[0]] = gw[keys[0]] || {})[m[1] + '|' + m[2] + '|' + m[3]] = String(x.source);
+  }
+  // (and for a catalogued datasheet no export or PDF shows: verify/sources/nr-values.json, each with GW's value, which must be the row's)
+  for(const x of JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/nr-values.json'), 'utf8')).values){
+    const S = D.datasheets[x.datasheet], row = S && (S[x.kind] || []).find(r => r.name === x.row && (x.group === undefined || r.group === x.group));
+    if(!row || String(row[x.field]) !== String(x.gw)) throw new Error('verify/sources/nr-values.json: ' + x.datasheet + ' ' + x.kind + ' ' + x.row + ' ' + x.field + ': GW’s value there is ' + x.gw + ', the DATASHEETS row has ' + (row ? row[x.field] : 'no such row'));
+    const k = x.kind + '|' + x.row + '|' + x.field;
+    if(gw[x.datasheet] && gw[x.datasheet][k] !== undefined && gw[x.datasheet][k] !== String(x.nr)) throw new Error('verify/sources/nr-values.json: ' + x.datasheet + ' ' + k + ' is ' + x.nr + ', an export or PDF shows ' + gw[x.datasheet][k]);
+    (gw[x.datasheet] = gw[x.datasheet] || {})[k] = String(x.nr);
   }
   const sortObj = o => Object.fromEntries(Object.keys(o).sort().map(k => [k, o[k]]));
   for(const k of Object.keys(gw)) gw[k] = sortObj(gw[k]);

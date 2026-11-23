@@ -1,0 +1,170 @@
+[
+ {
+  "key": "nobs|ids",
+  "verdict": "ok",
+  "why": "Round 1: fix. Round 2 (6f79fde): fixed. My cases: Strike Force id named \"Strike Force\"/\"Incursion\" → refused, named; known catalogueId with catalogueName Adeptus Custodes → refused; \"Code Chivalric X\", \"Show/Hide Options X\", \"Deed X\" → refused; all earlier unit/enhancement/detachment/ambiguity cases unchanged (unknown id + exact name builds; renamed, known id under another name, two matching rows refused). import-test 178 checks pass (section 5 has the new cases). (round 1: NR_IDS = import-ids output (import step passes; 24/24 identical). maxPerList 82→83 is right by GW: Imotekh the Stormlord and The Silent King added as EPIC HERO (1 per army, Core Rules), Spore Mines (Biovore) (no EPIC HERO, a reference unit) dropped. My own cases (verify at 6b1c098, I.make/I.resolve): catalogued unit unknown id + exact name → built; renamed (Pyrovore) → refused, named; case only (pyrovores) → built (the stated \"case aside\"); known Pyrovores id named Biovores or \"Pyrovores X\" → refused; a name matching two DATASHEETS rows (synthetic) → refused; enhancement unknown id exact name → built, renamed → refused; copied faction: unknown id → refused, named. BUT the rule \"a known id under another name is not that thing\" does not hold for every top-level selection: a Strike Force id named \"Incursion (1000 Point limit)\" imports as Strike Force (6-bigs via resolve, healybois via builder); a known catalogueId with catalogueName \"Xenos - Necrons\" imports as Imperial Knights / Tyranids; a known info/config parent renamed (\"Code Chivalric X\", \"Show/Hide Options X\") imports. (Same on main for the battle size.) Fix: import.js resolveRoster (and textToExport where it applies) and builder.js topLevel: when the id is known, require the name too — T.names[id] === nn(name) for the battle size child, the info and config parents; the faction only when catalogueName's last part equals D.factions[fac].name (case aside); else refuse, named. Add these three cases to import-test section 5.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|id-choice",
+  "verdict": "ok",
+  "why": "Round 2: unchanged, ok. (round 1: Keeping faction/datasheet-name as the key is right for the reasons given (Wardens-of-Ultramar-1, shared Soul Grinder page, Ultramarines under space-marines, Brimstone Horrors without a page); the page address sits beside it in waha-datasheets.txt.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|marks-namer",
+  "verdict": "ok",
+  "why": "Round 2: from-json.js header now describes NR_IDS/name lookup and GW comparison; reimport 24/24 byte for byte in the gate. (round 1: reimport passes in my gate run on 6b1c098: all 24 exports byte for byte, so the 257 marks are reproduced without BSData. Note (doc only): verify/from-json.js header lines 5-15 still say units are looked up in the BSData clone at the pin and that bsdata.js rebuilds them; rewrite to NR_IDS/name lookup.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|marks-gate",
+  "verdict": "ok",
+  "why": "Round 1: fix. Round 2: M3 now runs (254 compared). Mutations: Big Mek Dakkarig M 8\" (datasheet's own) marked Cybork Boosta → M3 fails; Warpflamer marked [IGNORES COVER] by Icon of Flame where the DATASHEETS row has it → M3 fails; M1/M2/M4 still fail as before. Note: 71 DATASHEETS weapon rows carry no kw (the list holds the full list), so a keyword mark on those is not decidable by M3; nr/reimport hold them. Size of a change still unchecked (admitted). (round 1: Mutations in a clone: mark naming a rule whose words do not name M (Even More Dakka) → M2 fails; unknown rule → M1 fails; value changed with no mark → M4 fails. But M3 never runs: it reads r.own, which loadData never carries (tables.js HIDE drops own) and which tables.js line 193 only writes where ds[f] !== r[f], so String(r.own[f]) === String(r[f]) can never hold. Mutation shooty/dakkarig-boosta M:\"8\\\"\" (the datasheet's own) with from:{M:\"Cybork Boosta\"} passes marks, tables and numbers; only nr catches it (the PDF shows 10\"). nr or reimport holds every list's shown value, so nothing wrong reaches the screen today, but the step's PASS line and the How/verified text claim M3. Fix: in verify/marks.js M3, look the row up in D.datasheets of the unit's ds (RAW ru.ds; the row of the same kind, name and group) and fail when a marked characteristic equals the datasheet row's value, or a marked keyword is already in the datasheet row's kw; add that mutation to derived-proof. Size of a change (+2 vs 12\") is not checked against GW (as admitted); the shown value is held to New Recruit's export by nr/reimport, as bsdata held it to BSData's modifiers.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|not-keywords",
+  "verdict": "ok",
+  "why": "Round 2: unchanged, ok. (round 1: reimport byte for byte; a new bookkeeping category would surface as a keyword keywords.js fails.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|kept-refs",
+  "verdict": "ok",
+  "why": "Round 2: unchanged, ok. (round 1: Admitted limit; the three rows stay held by numbers, keywords, words and bases (all pass).)",
+  "round": 2
+ },
+ {
+  "key": "nobs|dispositions",
+  "verdict": "ok",
+  "why": "Round 2: gate passes (59). (round 1: Gate on 6b1c098: 59 detachments equal their Wahapedia headings, no deviation.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|choice",
+  "verdict": "ok",
+  "why": "Round 2: gate passes (69, 0 failures). (round 1: Gate: 69 weapon groups, 0 failures.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|keyword-sources",
+  "verdict": "ok",
+  "why": "Round 2: tables and keywords pass. (round 1: tables and keywords pass on 6b1c098; partCats now reads the export's categories, with the catalogue row for the two PDF-only lists.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|catalog",
+  "verdict": "ok",
+  "why": "Round 1: fix. Round 2: fixed. Mutations after tables --write: Termagants group 10-25 → fails; groupMax 30 alone → fails; a variant max 21 (> line 20) → fails; groupMin 5 → fails; Harpy max 2, Harpy pts 190, Praesidium Shield 30, wrong option name, dropped datasheet fail as in round 1. Gate catalog passes. (round 1: Mutations (catalogue file changed, tables.js --write, catalog.js): Harpy points 185→190 fails (texts · points); Shield-Captain per Praesidium Shield 25→30 fails; an option renamed (Twin heavy barbed strangler) fails options; Harpy composition max 1→2 fails; Harpy dropped fails complete. BUT a too-wide grouped composition passes: Termagants group 10-20 → groupMax 25 (and model max 25), or groupMax 30 alone, passes catalog. catalog.js composition takes the variants path (several \"<model> w/ …\" entries) with sum(min) <= g.min && sum(max) >= g.max and never compares groupMin/groupMax with GW's line, so raising any maximum can never fail; builder.js would then accept 25 Termagants. Fix: in the composition loop, for entries with a group require [groupMin, groupMax] to equal [g.min, g.max] exactly, and in the variants path require every variant's max <= g.max (sum(max) >= g.max stays). The nine declarations: checked by hand against the cached pages (Gyrfalcon Jetbiker 2 = row 2/2; Fiends 1 Blissbringer + 2-5 = row 3-6; Telemon's four loadouts; Totemic Presence) — right. The other-book rule is right: the 21 Chaos Daemons index entries marked \"App. Chaos Space Marines\" are CSM datasheets (Chaos Lord, Legionaries, Havocs …).)",
+  "round": 2
+ },
+ {
+  "key": "nobs|catalog-gap",
+  "verdict": "ok",
+  "why": "Round 1: fix. Round 2: points step added and in the gate (308 parts in 26 lists, 27 per-item wargear costs, 0 declared). Mutations: Wazdakka 200→205 fails; Navigator 75→60 fails (the Navigator page prints \"AGENTS OF THE IMPERIUM Detachment 60 / Assigned Agent 75\"; in an Imperial Knights list it is an Assigned Agent, so 75 is right); the 2nd Defiler at the 1st copy's 330 fails (escalation); Twin Killsaws removed from the Meganobz' gear fails. Judgements: singular names map only \"Twin Killsaw\"→\"Twin Killsaws\" and the bundle \"Paragon Blade & Praesidium Shield\"→Praesidium Shield — right. Model-line part assignment falls back to the bodyguard, which can only produce a failure, not a silent pass. Single-size pricing (needed for Canis Rex + Sir Hekhtur): a unit of a one-size datasheet with a wrong model count (Wazdakka as 2×) passes points; the model count is held to the export/PDF by nr/reimport, so nothing shown is wrong — residual, low; could be narrowed to n not above the datasheet's UNIT COMPOSITION maximum plus models of other datasheets. currency.js now runs numbers, keywords, words, catalog and points with VERIFY_CACHE; every Wahapedia reader they use (waha-words, gw-order, waha-catalog) honours it. README and docs/tables.md now say so and state the copied lists' legality limit. Wargear choice limits still by name only (owner's choice, documented). (round 1: Confirmed: Termagant w/ Shardlauncher max 2→5 passes catalog (limits by name only, as stated). Further lost checks found with bsdata gone, both about what the app shows: (1) POINTS of list units are held to no GW source. bsdata held each unit's pts (per copy, escalation, wargear, enhancement, ptsNote) to BSData, and currency.js flagged a newer BSData; now nr/reimport hold them only to the owner's PDF/export and catalog.js only checks catalogue rows. My one-off comparison of 217 list-unit copies with the Wahapedia datasheet costs (gwCosts, copy index, model count, per-item wargear) finds every one equal today (3 apparent differences are my script's wargear parsing), so nothing is wrong now, but a GW points change would go unnoticed. Fix: a gate check (e.g. in numbers.js or a new step) that each list unit's pts minus its enhancement equals gwCosts of its datasheet page for its copy index and model count plus GW's \"per <item> N\" rows, ptsNote parts the same; run it from currency.js too. (2) currency.js now re-runs only texts.js and choice.js on the fresh pages; stat, keyword, ability-word and cost changes on datasheet pages are seen only when the cache is refreshed and the gate runs. Fix: run numbers.js, keywords.js, words.js, catalog.js and the points check in currency.js step 3. (3) Composition and wargear legality of the 18 copied lists' units is checked by nothing against GW (low: only units with a known signature import). Docs: README \"Units, weapons, abilities, points: … checked against GW's datasheets\" is not true for points until (1) exists.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|build-index-gw",
+  "verdict": "ok",
+  "why": "Round 1: fix. Round 2: fixed. Knight-Centura layouts: Gun Stock in the gun's selection with New Recruit's 3+ → built with GW's 2+ and the note; 2+ → no note; 4+ → refused; on the model's own selection (any WS) → refused, \"weapon Gun Stock … not placed\"; as its own selection → refused; ➤-prefixed names → refused; no Gun Stock at all → imported without it (what the export holds; nothing guessed). build-parity 255 checks pass. (round 1: The eight GW values are the DATASHEETS rows' (build-index throws otherwise; numbers holds the rows); BUILD_INDEX.gw equals main's entries but for the Blade Champion key (now the profile's own name, as builder.js looks it up) and Sporocyst (dropped). build-parity N 4 tests pass in my gate run (248 checks). The note is shown and escaped. The assumption to check fails unsafely: with a constructed Knight-Centura export, Gun Stock inside the boltgun selection → built with WS 2+ and the note; WS 4+ → refused, named; Gun Stock as its own selection → refused, named; but Gun Stock as a profile on the model selection itself → imported OK with no Gun Stock row at all and any WS (4+) silently ignored; no Gun Stock anywhere → imported without it. builder.js buildUnit reads a unit's weapon profiles only from child selections (walk(p)) and, on the unit itself, only \"(ref. only)\" ones, so a weapon profile on a model selection is dropped without a word. Fix: in builder.js where rows are collected, place a weapon profile carried by a model or unit selection itself like a child's, or refuse it, named (\"weapon Gun Stock on unit Knight-Centura not placed\"); add the on-model case to build-parity N.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|waha-tormentbringer",
+  "verdict": "ok",
+  "why": "Round 2: unchanged, ok. (round 1: Fetched the page again today (wahapedia.ru …/chaos-daemons/Tormentbringer): byte-identical to the cache; CORE ABILITIES \"Deep Strike, Leader\", ARMY RULES The Shadow of Chaos, so the order Deep Strike, Leader, The Shadow of Chaos is the page's.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|waha-wardens",
+  "verdict": "ok",
+  "why": "Round 2: unchanged, ok. waha-words.js trim change: I ran the old (6b1c098) and new markup over all 278 cached datasheet pages, whole page and five sub-ranges each: identical output (same sha256). (round 1: Fetched …/space-marines/Wardens-of-Ultramar-1 today: byte-identical to the cache. The shared row \"Aemelia Minervas, Dainal Komelius, Lucia Vestha\" reads M 6\" T 3 Sv 4+ W 3 Ld 6+ OC 1, the app's values for all three; the Komelius/Kornelius deviation (deviations-numbers.json) still applies after the split. numbers passes.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|waha-text-changes",
+  "verdict": "ok",
+  "why": "Round 2: texts, numbers, keywords, words pass. (round 1: On 6b1c098 texts (0 failures in 6074), numbers, keywords and words all pass, so nothing the app shows from the Thousand Sons and AdMech pages changed. Agree: commit every faction page text as a baseline after the gate so the next change is a diff.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|srcnote",
+  "verdict": "ok",
+  "why": "Round 2: ok; Damage harness on 6f79fde vs main: 900 cases, only the 4 Canis Rex note lines differ. (round 1: Only the note text; the Canis Rex snapshot lines and the Damage harness output differ by exactly that string.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|helpers",
+  "verdict": "ok",
+  "why": "Round 1: fix. Round 2: 8 helper items (keys below in this file); resolveRoster (now 5f78619064e3e457) fixed: a known top-level, battle-size or info id must carry its name; the faction is the catalogue name's and a known catalogue id must agree. All 8 ok. (round 1: 8 to check on 6b1c098 (not 7: importedFoot came with the fix commit). ok: onceTag (comment only), showGrant (note text: \"New Recruit prints/lists\"), ruleParts (code unchanged), signature (code unchanged, comment), importedFoot (the gwValues note, every field escaped, shown only when present), srcNoteOf (note text), resolveArmies (bsId gone from HIDE; inlined constants). fix: resolveRoster — accepts a known battle size, faction or info/config parent id under another name (see nobs|ids for the exact change).)",
+  "round": 2
+ },
+ {
+  "key": "nobs|extract",
+  "verdict": "ok",
+  "why": "Round 2: unchanged, ok. (round 1: No script reads bsdata-extract.json (grep); bs-catalog.js / from-bsdata.js / catalog-write.js are not run by the gate or fetch.sh and would only read a local .cache/bsdata that fetch.sh no longer makes. The deletion and any history rewrite are the owner's.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|wt-pts",
+  "verdict": "ok",
+  "why": "Round 2: ok. (round 1: A note for the other branch; nothing to do here.)",
+  "round": 2
+ },
+ {
+  "key": "nobs|pdf-import",
+  "verdict": "ok",
+  "why": "Round 2: ok. (round 1: fetch.sh and currency.js fetch nothing from BSData (no clone, ls-remote or URL left in any script the gate, fetch.sh or currency.js runs); a PDF import with an unexplained value fails marks M4.)",
+  "round": 2
+ },
+ {
+  "key": "f826db6bfb336a11",
+  "where": "onceTag",
+  "verdict": "ok",
+  "why": "Comment only (\"as New Recruit prints it\"); code unchanged."
+ },
+ {
+  "key": "d51e7d53cfdd0a8f",
+  "where": "showGrant",
+  "verdict": "ok",
+  "why": "The note now says \"New Recruit prints/lists\"; logic unchanged; escaped."
+ },
+ {
+  "key": "555c7f74407a6ba0",
+  "where": "ruleParts",
+  "verdict": "ok",
+  "why": "Code unchanged: config values that only name an army rule table's parts are left out of the Overview."
+ },
+ {
+  "key": "5f78619064e3e457",
+  "where": "resolveRoster",
+  "verdict": "ok",
+  "why": "id first, else exact name; a known id under another name refused for top-level parents, battle size and info choices; the faction by catalogue name with a known id required to agree; my cases all refused/accepted as they should; import-test 178 pass."
+ },
+ {
+  "key": "c0d6ab81d48033c6",
+  "where": "signature",
+  "verdict": "ok",
+  "why": "Code unchanged; comment no longer cites BSData."
+ },
+ {
+  "key": "f9e4723da83a0431",
+  "where": "importedFoot",
+  "verdict": "ok",
+  "why": "Adds the gwValues note: each field escaped, shown only when present; text names both values."
+ },
+ {
+  "key": "e2c5c94fcc6401a5",
+  "where": "srcNoteOf",
+  "verdict": "ok",
+  "why": "Only the note template's text (\"New Recruit: in this unit\")."
+ },
+ {
+  "key": "de4824f90299a26e",
+  "where": "resolveArmies",
+  "verdict": "ok",
+  "why": "bsId removed from HIDE (the column is gone); the rest identical."
+ }
+]

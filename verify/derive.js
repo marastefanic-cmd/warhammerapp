@@ -1760,10 +1760,10 @@ if(require.main === module){
     const i = src.indexOf(CK_START), j = src.indexOf(CK_END), have = i >= 0 && j > i ? src.slice(i, j + CK_END.length) : null;
     if(process.argv.includes('--write')){
       let out = have ? src.slice(0, i) + want + src.slice(j + CK_END.length) : null;
-      // (after BS_IDS, where verify/tables.js --write keeps it: among the parts of data.js outside its tables)
-      if(!out){ const bs = src.indexOf('// ---- end of BS_IDS ----'), at = bs >= 0 ? src.indexOf('\n', bs) + 1 : src.indexOf('\nreturn { version:VERSION') + 1;
+      // (after NR_IDS, where verify/tables.js --write keeps it: among the parts of data.js outside its tables)
+      if(!out){ const bs = src.indexOf('// ---- end of NR_IDS ----'), at = bs >= 0 ? src.indexOf('\n', bs) + 1 : src.indexOf('\nreturn { version:VERSION') + 1;
         if(at <= 0) throw new Error('data.js: return line not found'); out = src.slice(0, at) + '\n' + want + '\n' + src.slice(at); }
-      if(!/checklist:CHECKLIST/.test(out)) out = /bsIds:BS_IDS/.test(out) ? out.replace(/bsIds:BS_IDS/, 'bsIds:BS_IDS, checklist:CHECKLIST') : out.replace(/ \};\n\}\)\(\);/, ', checklist:CHECKLIST };\n})();');
+      if(!/checklist:CHECKLIST/.test(out)) out = /nrIds:NR_IDS/.test(out) ? out.replace(/nrIds:NR_IDS/, 'nrIds:NR_IDS, checklist:CHECKLIST') : out.replace(/ \};\n\}\)\(\);/, ', checklist:CHECKLIST };\n})();');
       fs.writeFileSync(file, out);
       console.log('derive: wrote CHECKLIST into data.js (' + Object.keys(items.checklist).length + ' entries)');
     } else if(have !== want){ ckStale = true; console.log('derive: data.js CHECKLIST ' + (have ? 'differs from' : 'is missing;') + ' what the rules text gives. Run: node verify/derive.js --write'); }

@@ -545,9 +545,9 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 /* How the app works: one diagram, top to bottom (sources, tables, builder, two readers, the AI layer, the gate, the app); each table a box
    with its columns, every column coloured by its source (verify/columns.json). The sources' colours: fixed hues apart from every scheme's
    accent (the AI layer is the accent, as its label), darker on the light scheme */
-:root{--s-gw:#3cc4ae; --s-bs:#a98cff; --s-nr:#f27ab6; --s-de:#7c7c7c}
-:root.lt{--s-gw:#0b7c6d; --s-bs:#6a44c4; --s-nr:#bf2f78; --s-de:#8d8d8d}
-.s-gw, .s-wa{--h:var(--s-gw)} .s-bs{--h:var(--s-bs)} .s-nr{--h:var(--s-nr)} .s-de{--h:var(--s-de)} .s-ha{--h:var(--fg)} .s-ai{--h:var(--accent)} .s-x{--h:var(--muted)}
+:root{--s-gw:#3cc4ae; --s-nr:#f27ab6; --s-de:#7c7c7c}
+:root.lt{--s-gw:#0b7c6d; --s-nr:#bf2f78; --s-de:#8d8d8d}
+.s-gw, .s-wa{--h:var(--s-gw)} .s-nr{--h:var(--s-nr)} .s-de{--h:var(--s-de)} .s-ha{--h:var(--fg)} .s-ai{--h:var(--accent)} .s-x{--h:var(--muted)}
 .hwrow{margin-top:18px}
 .hwi, .hwp{font-size:14.5px; line-height:1.5; color:var(--fg2); margin-top:10px}
 .hwp b{color:var(--fg)}
@@ -1274,7 +1274,7 @@ const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strat
 const BACK_TITLE = { pregame:'Overview', checklist:'Checklist', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
 const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
-// a value or keyword that a rule of the list changes (w.from / s.from, derived from BSData and checked
+// a value or keyword that a rule of the list changes (w.from / s.from, the value New Recruit shows against GW's datasheet, checked
 // against New Recruit's "(…)" marks): accent colour and "+"; tapping it says which rule
 const grantAttr = (names, u, what) => ' role="button" tabindex="0" data-grant="' + esc([].concat(names).join('|')) + '" data-gu="' + esc(u.id) + '" data-what="' + esc(what) + '"';
 const wideGrant = (names, u) => [].concat(names).every(n => !u.abilities.some(a => a.name === n));
@@ -1829,8 +1829,8 @@ function measure(){
   r.setProperty('--bb', ($('#bbar').hidden ? 0 : $('#bbar').offsetHeight) + 'px');
 }
 
-// every Force Disposition a list can lock: those its detachments allow (data.js, checked against BSData by verify/dispositions.js),
-// in BSData's order; the one New Recruit printed for the list (a.disposition) is the chosen one
+// every Force Disposition a list can lock: those its detachments allow (data.js, checked against GW's detachment headings by verify/dispositions.js),
+// in data.js's order; the one New Recruit printed for the list (a.disposition) is the chosen one
 const DISP_ORDER = ['Disruption', 'Priority Assets', 'Purge the Foe', 'Take and Hold', 'Reconnaissance'];
 const dispsOf = a => { const all = new Set(detachmentsOf(a).flatMap(d => d.dispositions || [])); if(a.disposition) all.add(a.disposition);
   return DISP_ORDER.filter(x => all.has(x)).concat([...all].filter(x => !DISP_ORDER.includes(x))); };
@@ -2011,6 +2011,7 @@ const importedFoot = a => { const x = importedKept().find(y => y.id === a.id);
     (a.built ? 'Built from its export and the app’s ' + esc(factionOf(a).name) + ' tables, as the app’s own lists are. ' : 'Copied from units the app’s own lists have: ' + esc(factionOf(a).name) + ' has no full catalogue in the app yet. ') +
     (x ? 'Kept on this phone only.' : 'This phone could not keep it: it is gone when the app next starts.') + '</p>' +
     ((a.gwPoints || []).length ? '<p class="note">Points: GW’s are used where the export’s differ: ' + a.gwPoints.map(g => esc(g.unit) + ' ' + g.export + ' pts in the export, ' + g.gw + ' pts by GW').join('; ') + '.</p>' : '') +
+    ((a.gwValues || []).length ? '<p class="note">Values: GW’s are used where the export’s differ: ' + a.gwValues.map(g => esc(g.unit) + ', ' + esc(g.row) + ' ' + esc(g.field) + ' ' + esc(g.export) + ' in the export, ' + esc(g.gw) + ' by GW').join('; ') + '.</p>' : '') +
     '<div class="imprm" id="impRm">' + impRmBtn(a.id) + '</div>'; };
 const impRmBtn = id => '<button class="btn2" data-imprm="' + esc(id) + '">Remove this list</button>';
 function askRemove(id){
@@ -2055,7 +2056,7 @@ function screenSettings(){
 const VER = (W => W && W.ok && (BUILD ? W.build === BUILD : W.data === D.version) ? W : null)(window.WH_VERIFIED);
 function verifiedLine(){
   if(!VER) return '';
-  return '<button class="verif" data-verified><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>Checked ' + esc(VER.date) + '</b> against your New Recruit lists, BSData and GW’s rules</span>' + arrow + '</button>';
+  return '<button class="verif" data-verified><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>Checked ' + esc(VER.date) + '</b> against your New Recruit lists and GW’s rules</span>' + arrow + '</button>';
 }
 function showVerified(){
   if(!VER) return;
@@ -2078,7 +2079,7 @@ const HOW_TITLE = 'How the app works and why you should be able to trust the dat
 // the tables of data.js, in the diagram's groups: [name, key in D]
 const HW_GROUPS = [
   ['Rules and stratagems', [['FACTIONS', 'factions'], ['CORE_STRATAGEMS', 'coreStratagems'], ['RULES', 'rules'], ['RULE_SRC', 'ruleSrc'], ['RULE_ALIASES', 'ruleAliases'], ['CONCEPTS', 'concepts']]],
-  ['Units and lists', [['DATASHEETS', 'datasheets'], ['ARMIES', 'armies'], ['BS_IDS', 'bsIds'], ['BUILD_INDEX', 'buildIndex']]],
+  ['Units and lists', [['DATASHEETS', 'datasheets'], ['ARMIES', 'armies'], ['NR_IDS', 'nrIds'], ['BUILD_INDEX', 'buildIndex']]],
   ['Worked out from GW’s words by scripts', [['BOXES', 'boxes'], ['AGREE', 'agree'], ['GRANTS', 'grants'], ['RULE_OPTIONS', 'ruleOptions'], ['CHECKLIST', 'checklist']]],
   ['The data’s version', [['VERSION', 'version']]]];
 const HW_TABLES = HW_GROUPS.flatMap(g => g[1]);
@@ -2086,15 +2087,15 @@ const HW_TABLES = HW_GROUPS.flatMap(g => g[1]);
 const HW_WHAT = { CHECKLIST:'per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js',
   VERSION:'the data’s version: one value, raised with every release' };
 // the script that writes a table (each named in its file's own header or in the table's "what")
-const HW_BY = { ARMIES:'verify/from-json.js from an export (builder.js for a catalogued faction), verify/import-nr.js from a PDF', DATASHEETS:'verify/tables.js --write, from the lists and the faction catalogues (verify/from-bsdata.js)',
-  BS_IDS:'verify/import-ids.js --write', BOXES:'verify/effects-migrate.js --write', AGREE:'verify/agree.js --write', BUILD_INDEX:'verify/build-index.js --write',
+const HW_BY = { ARMIES:'verify/from-json.js from an export (builder.js for a catalogued faction), verify/import-nr.js from a PDF', DATASHEETS:'verify/tables.js --write, from the lists and the faction catalogues (verify/sources/catalog)',
+  NR_IDS:'verify/import-ids.js --write, from your New Recruit exports', BOXES:'verify/effects-migrate.js --write', AGREE:'verify/agree.js --write', BUILD_INDEX:'verify/build-index.js --write',
   GRANTS:'verify/tables.js --write, from verify/derive.js', RULE_OPTIONS:'verify/tables.js --write, from verify/derive.js', CHECKLIST:'verify/derive.js --write' };
 // CHECKLIST's columns (verify/derive.js writes them; verify/render.js fails on one this does not name)
 const HW_CK = { t:'the phases it is triggered in', u:'the phases its effect is used in', s:'listed at a fixed moment of the turn', a:'listed when the unit is selected',
   at:'the moment it opens with', ae:'also at the end of the battle round', o:'its options, each with its own phases', g:'what it grants', f:'a rule it puts in force',
   pk:'a pick of options', oc:'its options cover its phases', x:'not placed (its words give no phase)', none:'no phase (before the battle, what a unit carries)' };
 // the sources a column can have (verify/columns.json), each its colour: [source, class, name, what]
-const HW_SRC = [['gw', 's-gw', 'GW', 'Games Workshop’s documents'], ['wahapedia', 's-wa', 'Wahapedia', 'GW’s pages: counts as GW'], ['bsdata', 's-bs', 'BSData', 'the data New Recruit is built from'],
+const HW_SRC = [['gw', 's-gw', 'GW', 'Games Workshop’s documents'], ['wahapedia', 's-wa', 'Wahapedia', 'GW’s pages: counts as GW'],
   ['newrecruit', 's-nr', 'New Recruit', 'your lists'], ['derived', 's-de', 'Program', 'worked out by a script'], ['hand', 's-ha', 'Hand', 'ids, short names, aliases, notes'], ['ai-summary', 's-ai', 'AI summary', 'the only AI layer']];
 const hwSrc = s => HW_SRC.find(x => x[0] === s) || [s, 's-x', s, ''];
 // the lists of a catalogued faction written from New Recruit PDFs alone, with no export: builder.js never builds them
@@ -2104,9 +2105,9 @@ const HW_PDF_ONLY = ['emperors-chosen', 'dread-host'];
 const HW_NR_PDFS = 16;
 // the release gate: verify/run.js's steps, in groups (verify/render.js how-gate: every step in exactly one group)
 const HW_GATE = [
-  ['Facts against GW, BSData and New Recruit', 'every unit fact equal to BSData and, for the ' + HW_NR_PDFS + ' lists with one, your New Recruit PDF, every base GW’s base size guide’s, every faction catalogue complete, every program column held by its script', ['data', 'tables', 'bsdata', 'dispositions', 'bases', 'catalog', 'nr', 'choice', 'derived']],
+  ['Facts against GW and New Recruit', 'every unit fact equal to your New Recruit export and, for the ' + HW_NR_PDFS + ' lists with one, your New Recruit PDF, every value a rule changes named as a rule whose GW words say so, every Force Disposition and base GW’s, every faction catalogue complete against GW’s pages, every program column held by its script', ['data', 'tables', 'marks', 'dispositions', 'bases', 'catalog', 'nr', 'choice', 'derived']],
   ['Wording', 'every rules text the words of GW’s newest document (or Wahapedia’s), every ability word for word, every AI summary still on the words it was written from', ['texts', 'words', 'fingerprints']],
-  ['Numbers', 'every profile number GW’s datasheet’s, the damage calculator against hand-worked cases, the mechanical rules', ['numbers', 'calc', 'invariants']],
+  ['Numbers', 'every profile number and every unit’s points GW’s datasheet’s, the damage calculator against hand-worked cases, the mechanical rules', ['numbers', 'points', 'calc', 'invariants']],
   ['Keywords', 'every unit’s keywords its GW datasheets’, the list’s own only by a named rule', ['keywords']],
   ['Both readers', 'every box made by script from GW’s words and standing on them, and counted only where the two-reader rule confirms it', ['evidence', 'defence', 'agree']],
   ['Every sheet line complete', 'every line a sheet writes stands on GW’s words, every bonus a rule states has its line, every phase tag derived from the words', ['lines', 'readings', 'derive']],
@@ -2235,9 +2236,9 @@ function hwCard(t, k){
   else if(t === 'BOXES'){ const n = hwBoxCounts();
     body = hwKey('key', 'a| an ability, r| a rule, s| a stratagem, c| a core rule, then a fingerprint of its name and words') + hwKey('b, d, st', n.boxes + ' boxes: what a sentence of GW’s does to attacks (b), to attacks on the unit (d), to a characteristic (st)'); }
   else if(t === 'AGREE') body = hwKey('boxes', '→ each box of ' + hwTo('BOXES') + ': confirmed by both readers, by a reviewed verdict, a Core Rules box, or not counted');
-  else if(t === 'BS_IDS'){ count = hwN(rows, 'lookup', 'lookups');
+  else if(t === 'NR_IDS'){ count = hwN(rows, 'lookup', 'lookups');
     body = hwKey('used by', 'the list import, to find each unit and choice of a New Recruit export') +
-      ex('Its lookups', hwRow(t, Object.keys(D.bsIds).map(c => [c, (v => Array.isArray(v) ? hwN(v.length, 'id', 'ids') : isObj(v) ? hwN(Object.keys(v).length, 'id', 'ids') : v)(D.bsIds[c])]))); }
+      ex('Its lookups', hwRow(t, Object.keys(D.nrIds).map(c => [c, (v => Array.isArray(v) ? hwN(v.length, 'id', 'ids') : isObj(v) ? hwN(Object.keys(v).length, 'id', 'ids') : v)(D.nrIds[c])]))); }
   else if(t === 'BUILD_INDEX'){ count = hwN(rows, 'part', 'parts'); body = hwKey('used by', 'builder.js, the in-app build of an export'); }
   else if(t === 'VERSION'){ count = 'one value'; body = ex('Its value', '<p class="hwk">' + esc(D.version) + '</p>'); }
   const cols = hwAllCols(t);
@@ -2265,7 +2266,7 @@ function screenHow(){
   const others = own.filter(a => !cats.includes(a.faction)), otherFac = [...new Set(others.map(a => a.faction))];
   const bx = hwBoxCounts(), ai = hwAiCounts(), aiN = ai.reduce((t, [, n]) => t + n, 0);
   const steps = VER && Array.isArray(VER.steps) ? VER.steps : null, stepOk = s => steps && steps.some(x => x.name === s && x.ok);
-  const nTables = HW_TABLES.length, bs = VER ? (VER.sources.find(x => /^BSData/.test(x.label)) || {}).detail : '', commit = ((bs || '').match(/commit ([0-9a-f]{6,})/) || [])[1];
+  const nTables = HW_TABLES.length;
   const passed = steps ? steps.filter(x => x.ok).length : null;
   const legend = '<div class="hdleg">' + srcs.map(([s, c, name, what]) => '<span class="hdli">' + hwChip(name, s) + '<b>' + hwF('src:' + s, bySrc(s).length) + '</b><span>' + esc(what) + '</span></span>').join('') + '</div>';
   // 1 the sources
@@ -2273,8 +2274,7 @@ function screenHow(){
   const s1 = hwStage(1, 'sources', 'The sources', '', '<div class="hdsrcs">' +
     src('s-gw', 'Games Workshop', 'Core Rules, Faction Packs, errata and FAQs: the source of truth') +
     src('s-wa', 'Wahapedia', 'GW’s datasheets and faction pages: counts as GW, and GW’s own document wins where they differ') +
-    src('s-bs', 'BSData', 'the data New Recruit is built from, pinned to one commit' + (commit ? ' (' + esc(commit) + ')' : '') + ': ids, points, wargear options') +
-    src('s-nr', 'New Recruit', 'your lists’ exports and PDFs: what each list chose') + '</div>' +
+    src('s-nr', 'New Recruit', 'your lists’ exports and PDFs: what each list chose, and the names and ids an import is looked up by') + '</div>' +
     '<p class="hwp">Where they disagree, GW wins; each difference is written down with GW’s words as evidence and checked again at every release.</p>');
   // 2 the tables
   const s2 = hwStage(2, 'tables', 'The tables', 'data.js', '<p class="hwp">Scripts extract only the data the app needs, straight into ' + hwF('tables', nTables) + ' tables in one file; a few columns are written by hand (ids, short names, aliases, notes). Each box is a table: tap it for its columns, coloured by where each comes from, and one real row.</p>' +
@@ -4244,7 +4244,7 @@ async function askFiles(){
 async function askSystem(a){
   await askFiles();
   const intro = 'You answer Warhammer 40,000 rules questions at the gaming table for players using Kunnin’ Kodex, a phone reference for their army lists. The game is 11th edition, matched play.\n' +
-    'Use the rules given here: the Core Rules with their errata and FAQs, and the lists’ rules in their official wording, checked against Games Workshop’s documents, Wahapedia and BSData (the data New Recruit uses). They win over anything you remember: earlier editions differ (for example, in 11th edition the benefit of cover worsens the attack’s BS by 1 instead of improving the save). Cite Core Rules sections by their numbers (e.g. 05.04).\n' +
+    'Use the rules given here: the Core Rules with their errata and FAQs, and the lists’ rules in their official wording, checked against Games Workshop’s documents and Wahapedia. They win over anything you remember: earlier editions differ (for example, in 11th edition the benefit of cover worsens the attack’s BS by 1 instead of improving the save). Cite Core Rules sections by their numbers (e.g. 05.04).\n' +
     'A value marked “already includes <rule>” already contains that rule’s bonus: never add it again.\n' +
     'If these rules do not settle a question, say so plainly and say what to look up; never invent a rule or a number. If a rule can be read two ways, give both readings.\n' +
     'A question may come with the units, stratagems, abilities or rules it is about, in full as the app shows them: answer about those. The app cannot see the table (positions, what was used this turn): when it matters, say what the answer depends on.\n' +
@@ -5100,7 +5100,7 @@ function shortWhen(x){
 // (from the tag, a "(Once per …)" in the text, or a text that starts "Once per …,")
 const onceTag = ab => {
   const t = ab.text || '', army = /\bone (model|unit) from your army with this ability\b/i.test(t);
-  // as BSData prints it; ", per army" as below when the tag does not say per what ("Once per battle round": Direct the Slaughter)
+  // as New Recruit prints it; ", per army" as below when the tag does not say per what ("Once per battle round": Direct the Slaughter)
   if(/^(once|twice) per /i.test(ab.tag || '')){ const tg = ab.tag.replace(/ · .*$/, ''); return tg + (army && !/\bper (army|unit)\b/i.test(tg) ? ', per army' : ''); }
   // an enhancement's text starts with its restriction ("**TECH-PRIEST** model only. Once per battle round, …")
   const t1 = t.replace(/^\*\*[^*]+\*\* model only( \([^)]*\))?\. /i, '');
@@ -6094,7 +6094,7 @@ function showGrant(names, unitId, what, kw){
   const own = r ? '<div class="gown"><p class="gh"><b>' + esc(r.name) + '</b> <span class="tg m">' + esc(r.src) + '</span></p>' + rt(r.text) + (r.table ? ttable(r.table) : '') + '</div>' : '';
   // a stat New Recruit prints without the rule applied (data.js printed: the Knight Destrier's 5+* InSv, before Sanctuary)
   const sk = { M:'M', T:'T', SV:'Sv', W:'W', LD:'Ld', OC:'OC', INV:'InSv' }[String(what).split(' ')[0]], pr = !kw && u && sk ? (u.stats.find(x => x.printed && x.printed[sk] && [].concat((x.from || {})[sk] || []).some(n => names.includes(n))) || {}).printed : null;
-  openSheet(esc(what) + ' · granted by', gs.map(g => g.name).join(' + '), src + '<p class="note">' + (pr ? 'Already in the value shown; New Recruit and BSData print ' + esc(pr[sk]) + ' here.' : (kw ? 'Already in the keywords shown' : 'Already in the value shown') + ' (as New Recruit and BSData list ' + (kw ? 'them' : 'it') + ').') + '</p>' + own);
+  openSheet(esc(what) + ' · granted by', gs.map(g => g.name).join(' + '), src + '<p class="note">' + (pr ? 'Already in the value shown; New Recruit prints ' + esc(pr[sk]) + ' here.' : (kw ? 'Already in the keywords shown' : 'Already in the value shown') + ' (as New Recruit lists ' + (kw ? 'them' : 'it') + ').') + '</p>' + own);
 }
 function showStrat(id){
   const s = allStratagems().find(x => x.id === id);

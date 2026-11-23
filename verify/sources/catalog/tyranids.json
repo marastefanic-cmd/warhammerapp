@@ -1,10 +1,9 @@
 {
- "_about": "The Xenos - Tyranids catalogue as verify/from-bsdata.js reads it from BSData (wh40k-11e at the pin) with GW’s datasheets over it (verify/from-json.js): every current datasheet (no Legends, no Crusade, no Crucible: verify/bs-catalog.js FILTER), one DATASHEETS row each. Written by `node verify/from-bsdata.js tyranids --write`; verify/tables.js --write puts every row into DATASHEETS (a row a list has keeps the list’s signed-off facts, and gets the catalogue’s rows it lacks); the gate step catalog (verify/catalog.js) checks it is what the sources give. Do not edit.",
+ "_about": "A faction catalogue: every current datasheet (and detachment) of the faction as rows for data.js (docs/catalog.md). The rows are the committed source; verify/tables.js --write merges them into DATASHEETS and the gate step catalog (verify/catalog.js) holds every row to GW’s datasheets and faction page (Wahapedia). A new faction’s catalogue is written by verify/from-waha.js.",
  "faction": "tyranids",
- "bsdata": {
-  "catalogue": "Xenos - Tyranids",
-  "revision": 3,
-  "pin": "b4dc3f4"
+ "origin": {
+  "built": "before 22 Nov 2026, from New Recruit’s data (BSData wh40k-11e at b4dc3f4, catalogue Xenos - Tyranids revision 3) with GW over it; BSData is no source any more and the file is not rebuilt from it",
+  "heldTo": "GW’s datasheets and faction page (Wahapedia), by the gate step catalog (verify/catalog.js)"
  },
  "counts": {
   "datasheets": 52,
@@ -15,7 +14,6 @@
   "tyranids/the-swarmlord": {
    "name": "The Swarmlord",
    "faction": "tyranids",
-   "bsId": "13f7-1a3-eff-7393",
    "role": "Epic Hero",
    "stats": [
     {
@@ -141,7 +139,6 @@
   "tyranids/old-one-eye": {
    "name": "Old One Eye",
    "faction": "tyranids",
-   "bsId": "9184-9ab6-9238-f558",
    "role": "Epic Hero",
    "stats": [
     {
@@ -244,7 +241,6 @@
   "tyranids/deathleaper": {
    "name": "Deathleaper",
    "faction": "tyranids",
-   "bsId": "bc36-92fe-ecc6-58b3",
    "role": "Epic Hero",
    "stats": [
     {
@@ -342,7 +338,6 @@
   "tyranids/the-red-terror": {
    "name": "The Red Terror",
    "faction": "tyranids",
-   "bsId": "7173-1bd9-b60b-6555",
    "role": "Epic Hero",
    "stats": [
     {
@@ -454,7 +449,6 @@
   "tyranids/winged-hive-tyrant": {
    "name": "Winged Hive Tyrant",
    "faction": "tyranids",
-   "bsId": "fa68-fcb9-38c-cd0f",
    "role": "Character",
    "stats": [
     {
@@ -625,7 +619,6 @@
   "tyranids/hive-tyrant": {
    "name": "Hive Tyrant",
    "faction": "tyranids",
-   "bsId": "3e96-8098-3401-77af",
    "role": "Character",
    "stats": [
     {
@@ -796,7 +789,6 @@
   "tyranids/tervigon": {
    "name": "Tervigon",
    "faction": "tyranids",
-   "bsId": "cd6d-87b3-125a-f372",
    "role": "Character",
    "stats": [
     {
@@ -940,7 +932,6 @@
   "tyranids/broodlord": {
    "name": "Broodlord",
    "faction": "tyranids",
-   "bsId": "b86a-b38a-380c-483d",
    "role": "Character",
    "stats": [
     {
@@ -1041,7 +1032,6 @@
   "tyranids/winged-tyranid-prime": {
    "name": "Winged Tyranid Prime",
    "faction": "tyranids",
-   "bsId": "507d-5ea4-6ef1-bf66",
    "role": "Character",
    "stats": [
     {
@@ -1136,7 +1126,6 @@
   "tyranids/neurotyrant": {
    "name": "Neurotyrant",
    "faction": "tyranids",
-   "bsId": "1ae1-ed96-5100-eda5",
    "role": "Character",
    "stats": [
     {
@@ -1260,7 +1249,6 @@
   "tyranids/parasite-of-mortrex": {
    "name": "Parasite of Mortrex",
    "faction": "tyranids",
-   "bsId": "d213-efd8-a2b4-42d2",
    "role": "Character",
    "stats": [
     {
@@ -1372,7 +1360,6 @@
   "tyranids/hyperadapted-raveners": {
    "name": "Hyperadapted Raveners",
    "faction": "tyranids",
-   "bsId": "c10d-772e-a54f-a2b9",
    "role": "Character",
    "stats": [
     {
@@ -1571,7 +1558,6 @@
   "tyranids/tyranid-prime-with-lash-whip": {
    "name": "Tyranid Prime with Lash Whip",
    "faction": "tyranids",
-   "bsId": "31f9-9730-853c-6f13",
    "role": "Character",
    "stats": [
     {
@@ -1696,7 +1682,6 @@
   "tyranids/termagants": {
    "name": "Termagants",
    "faction": "tyranids",
-   "bsId": "359c-db2c-681a-8d62",
    "role": "Battleline",
    "stats": [
     {
@@ -1957,7 +1942,6 @@
   "tyranids/hormagaunts": {
    "name": "Hormagaunts",
    "faction": "tyranids",
-   "bsId": "f15b-9f9c-9bf0-8160",
    "role": "Battleline",
    "stats": [
     {
@@ -2043,7 +2027,6 @@
   "tyranids/gargoyles": {
    "name": "Gargoyles",
    "faction": "tyranids",
-   "bsId": "9ce8-7a63-15c3-0347",
    "role": "Battleline",
    "stats": [
     {
@@ -2152,7 +2135,6 @@
   "tyranids/tyrannocyte": {
    "name": "Tyrannocyte",
    "faction": "tyranids",
-   "bsId": "fada-677a-f6a4-cd12",
    "role": "Dedicated Transport",
    "stats": [
     {
@@ -2271,7 +2253,6 @@
   "tyranids/tyranid-warriors-with-ranged-bio-weapons": {
    "name": "Tyranid Warriors with Ranged Bio-Weapons",
    "faction": "tyranids",
-   "bsId": "a125-b6fb-2945-56a",
    "role": "Infantry",
    "stats": [
     {
@@ -2504,7 +2485,6 @@
   "tyranids/tyranid-warriors-with-melee-bio-weapons": {
    "name": "Tyranid Warriors with Melee Bio-Weapons",
    "faction": "tyranids",
-   "bsId": "5815-871c-9260-287a",
    "role": "Infantry",
    "stats": [
     {
@@ -2622,7 +2602,6 @@
   "tyranids/tyrant-guard": {
    "name": "Tyrant Guard",
    "faction": "tyranids",
-   "bsId": "1645-5407-92c8-1441",
    "role": "Infantry",
    "stats": [
     {
@@ -2736,7 +2715,6 @@
   "tyranids/lictor": {
    "name": "Lictor",
    "faction": "tyranids",
-   "bsId": "da44-72c9-7a27-48aa",
    "role": "Infantry",
    "stats": [
     {
@@ -2828,7 +2806,6 @@
   "tyranids/pyrovores": {
    "name": "Pyrovores",
    "faction": "tyranids",
-   "bsId": "d2c6-bd0b-3205-3319",
    "role": "Infantry",
    "stats": [
     {
@@ -2960,7 +2937,6 @@
   "tyranids/venomthropes": {
    "name": "Venomthropes",
    "faction": "tyranids",
-   "bsId": "b563-c6d3-d0e5-1b78",
    "role": "Infantry",
    "stats": [
     {
@@ -3050,7 +3026,6 @@
   "tyranids/von-ryans-leapers": {
    "name": "Von Ryan’s Leapers",
    "faction": "tyranids",
-   "bsId": "9bd8-ac8c-2d3b-79f6",
    "role": "Infantry",
    "stats": [
     {
@@ -3138,7 +3113,6 @@
   "tyranids/neurogaunts": {
    "name": "Neurogaunts",
    "faction": "tyranids",
-   "bsId": "8ccc-3f27-7e4e-da81",
    "role": "Infantry",
    "stats": [
     {
@@ -3263,7 +3237,6 @@
   "tyranids/zoanthropes": {
    "name": "Zoanthropes",
    "faction": "tyranids",
-   "bsId": "b622-a22-a04f-6303",
    "role": "Infantry",
    "stats": [
     {
@@ -3416,7 +3389,6 @@
   "tyranids/biovores": {
    "name": "Biovores",
    "faction": "tyranids",
-   "bsId": "3f2c-85ec-d83c-4a2f",
    "role": "Infantry",
    "stats": [
     {
@@ -3531,7 +3503,6 @@
   "tyranids/hive-guard": {
    "name": "Hive Guard",
    "faction": "tyranids",
-   "bsId": "ac7a-2560-c083-45b8",
    "role": "Infantry",
    "stats": [
     {
@@ -3689,7 +3660,6 @@
   "tyranids/barbgaunts": {
    "name": "Barbgaunts",
    "faction": "tyranids",
-   "bsId": "6de-ccee-11b4-be3e",
    "role": "Infantry",
    "stats": [
     {
@@ -3795,7 +3765,6 @@
   "tyranids/genestealers": {
    "name": "Genestealers",
    "faction": "tyranids",
-   "bsId": "853e-48b8-4cc5-3704",
    "role": "Infantry",
    "stats": [
     {
@@ -3896,7 +3865,6 @@
   "tyranids/raveners": {
    "name": "Raveners",
    "faction": "tyranids",
-   "bsId": "3f5-f7d6-1ce8-e6b9",
    "role": "Infantry",
    "stats": [
     {
@@ -3992,7 +3960,6 @@
   "tyranids/neurolictor": {
    "name": "Neurolictor",
    "faction": "tyranids",
-   "bsId": "642f-9302-4fdc-ab68",
    "role": "Infantry",
    "stats": [
     {
@@ -4100,7 +4067,6 @@
   "tyranids/spore-mines": {
    "name": "Spore Mines",
    "faction": "tyranids",
-   "bsId": "c590-436d-4fd-ef26",
    "role": "Beast",
    "stats": [
     {
@@ -4166,7 +4132,6 @@
   "tyranids/mucolid-spores": {
    "name": "Mucolid Spores",
    "faction": "tyranids",
-   "bsId": "707a-9de8-f75b-41c5",
    "role": "Beast",
    "stats": [
     {
@@ -4232,7 +4197,6 @@
   "tyranids/ripper-swarms": {
    "name": "Ripper Swarms",
    "faction": "tyranids",
-   "bsId": "1de2-b57b-aa0a-1f0d",
    "role": "Swarm",
    "stats": [
     {
@@ -4351,7 +4315,6 @@
   "tyranids/toxicrene": {
    "name": "Toxicrene",
    "faction": "tyranids",
-   "bsId": "30d0-521c-1d45-f57b",
    "role": "Monster",
    "stats": [
     {
@@ -4455,7 +4418,6 @@
   "tyranids/maleceptor": {
    "name": "Maleceptor",
    "faction": "tyranids",
-   "bsId": "2c2d-a2f9-61a8-a6c6",
    "role": "Monster",
    "stats": [
     {
@@ -4588,7 +4550,6 @@
   "tyranids/haruspex": {
    "name": "Haruspex",
    "faction": "tyranids",
-   "bsId": "6249-358f-27d7-ef60",
    "role": "Monster",
    "stats": [
     {
@@ -4722,7 +4683,6 @@
   "tyranids/mawloc": {
    "name": "Mawloc",
    "faction": "tyranids",
-   "bsId": "2bbb-d811-15f7-1a81",
    "role": "Monster",
    "stats": [
     {
@@ -4831,7 +4791,6 @@
   "tyranids/trygon": {
    "name": "Trygon",
    "faction": "tyranids",
-   "bsId": "56db-d7c-b349-677f",
    "role": "Monster",
    "stats": [
     {
@@ -4938,7 +4897,6 @@
   "tyranids/exocrine": {
    "name": "Exocrine",
    "faction": "tyranids",
-   "bsId": "bbfd-5b01-5bd3-a28b",
    "role": "Monster",
    "stats": [
     {
@@ -5055,7 +5013,6 @@
   "tyranids/carnifexes": {
    "name": "Carnifexes",
    "faction": "tyranids",
-   "bsId": "9efd-5564-f0f5-21ea",
    "role": "Monster",
    "stats": [
     {
@@ -5308,7 +5265,6 @@
   "tyranids/screamer-killer": {
    "name": "Screamer-killer",
    "faction": "tyranids",
-   "bsId": "8e53-d4a-a69f-e71d",
    "role": "Monster",
    "stats": [
     {
@@ -5421,7 +5377,6 @@
   "tyranids/tyrannofex": {
    "name": "Tyrannofex",
    "faction": "tyranids",
-   "bsId": "1705-379b-330d-36d4",
    "role": "Monster",
    "stats": [
     {
@@ -5604,7 +5559,6 @@
   "tyranids/harpy": {
    "name": "Harpy",
    "faction": "tyranids",
-   "bsId": "c679-b06a-750b-e7f7",
    "role": "Monster",
    "stats": [
     {
@@ -5751,7 +5705,6 @@
   "tyranids/hive-crone": {
    "name": "Hive Crone",
    "faction": "tyranids",
-   "bsId": "93aa-dd13-de9d-402b",
    "role": "Monster",
    "stats": [
     {
@@ -5913,7 +5866,6 @@
   "tyranids/sporocyst": {
    "name": "Sporocyst",
    "faction": "tyranids",
-   "bsId": "2cdd-3bf1-55e0-7641",
    "role": "Monster",
    "stats": [
     {
@@ -6015,7 +5967,6 @@
   "tyranids/psychophage": {
    "name": "Psychophage",
    "faction": "tyranids",
-   "bsId": "b6ac-f091-a018-dab2",
    "role": "Monster",
    "stats": [
     {
@@ -6128,7 +6079,6 @@
   "tyranids/harridan": {
    "name": "Harridan",
    "faction": "tyranids",
-   "bsId": "9b5c-3b5a-1f80-9a74",
    "role": "Monster",
    "stats": [
     {
@@ -6252,7 +6202,6 @@
   "tyranids/hierophant": {
    "name": "Hierophant",
    "faction": "tyranids",
-   "bsId": "fbc0-3a2b-1d7d-23d9",
    "role": "Monster",
    "stats": [
     {
@@ -6418,7 +6367,6 @@
   "tyranids/norn-emissary": {
    "name": "Norn Emissary",
    "faction": "tyranids",
-   "bsId": "5720-2873-8c2c-edc3",
    "role": "Monster",
    "stats": [
     {
@@ -6590,7 +6538,6 @@
   "tyranids/norn-assimilator": {
    "name": "Norn Assimilator",
    "faction": "tyranids",
-   "bsId": "6a9b-8e2f-edac-fa2d",
    "role": "Monster",
    "stats": [
     {
@@ -6726,7 +6673,6 @@
  "detachments": [
   {
    "name": "Invasion Fleet",
-   "bsId": "c2fe-bf23-bf24-aa43",
    "rules": [
     "Hyper Adaptions",
     "Sustained Hits",
@@ -6736,35 +6682,30 @@
   },
   {
    "name": "Assimilation Swarm",
-   "bsId": "bba-65f6-a4d1-66ae",
    "rules": [
     "Feed the Swarm"
    ]
   },
   {
    "name": "Crusher Stampede",
-   "bsId": "850e-bee1-4845-820d",
    "rules": [
     "Enraged Behemoths"
    ]
   },
   {
    "name": "Synaptic Nexus",
-   "bsId": "16ff-a068-4c31-285a",
    "rules": [
     "Synaptic Imperitives"
    ]
   },
   {
    "name": "Unending Swarm",
-   "bsId": "4cd9-313f-cd9b-c85a",
    "rules": [
     "Insurmountable Odds"
    ]
   },
   {
    "name": "Vanguard Onslaught",
-   "bsId": "f773-f91c-2999-c7e1",
    "rules": [
     "Vanguard Prime",
     "Questing Tendrils"
@@ -6772,14 +6713,12 @@
   },
   {
    "name": "Warrior Bioform Onslaught",
-   "bsId": "7416-b7cc-fdbf-5bf0",
    "rules": [
     "Leader-beasts"
    ]
   },
   {
    "name": "Subterranean Assault",
-   "bsId": "731f-1524-da02-945b",
    "rules": [
     "Keywords",
     "Surprise Assault"
@@ -6787,7 +6726,6 @@
   },
   {
    "name": "Ambush Predators",
-   "bsId": "cf1b-eb18-c465-27a5",
    "rules": [
     "Mindhunger",
     "Deep Strike"
@@ -6795,7 +6733,6 @@
   },
   {
    "name": "Talons of the Norn Queen",
-   "bsId": "8d8b-a030-83d5-f4e6",
    "rules": [
     "Higher Imperatives"
    ]

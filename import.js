@@ -1,17 +1,19 @@
 /* import.js: a list from New Recruit's JSON export (a BattleScribe roster), made only of what data.js already has.
    The app (app.html) and the gate (verify/import-test.js) run this same file.
 
-   Every selection of the export names its BSData entry (the last id of its entryId). data.js's BS_IDS table
-   (written from BSData by verify/import-ids.js, checked by the gate) holds the ids of everything the app's lists
-   have: factions, detachments, Force Dispositions, battle sizes, and each unit of each list as a signature of
-   its parts (leader, other characters, bodyguard) with every models line, wargear option, enhancement and the
-   Warlord. The export resolves only when
+   Every selection of the export carries an id of New Recruit's data (the last id of its entryId). data.js's NR_IDS table (written by
+   verify/import-ids.js from the owner's committed exports, verify/sources/nr-json, and nothing else; checked by the gate) holds the
+   ids those exports have shown: factions, detachments, Force Dispositions, battle sizes, and each unit of each list as a signature of
+   its parts (leader, other characters, bodyguard) with every models line, wargear option, enhancement and the Warlord. A selection
+   whose id no known export has shown is looked up by its exact New Recruit name (the faction, a detachment, a Force Disposition, a
+   battle size; a datasheet of a catalogued faction, builder.js): the one thing with that name, else it is refused, named. The export
+   resolves only when
      - its faction, battle size, detachments and disposition are ones data.js has (the disposition one its
        detachments allow), and every other top-level selection is a known one (Show/Hide Options, references);
      - every unit, with the characters attached to it (New Recruit's Leading/Supporting), has exactly the
        signature of a unit of a list in data.js with the same faction, detachments and config (a rule of the
        list can change a unit's values, so a unit is only taken from a list with the same ones), with the same
-       BSData names and the same points;
+       New Recruit names and the same points;
    and then the list is those units, copied as data.js has them. Otherwise nothing is imported and every item
    that does not resolve is listed. No partial import, no guessing, no fuzzy matching.
 
@@ -32,7 +34,7 @@ const and = a => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and '
 
 // one part's signature: every selection below it as a path of entry ids from the part, with its count (every models line,
 // wargear item and option, a bundle of weapons too; the same path twice adds up). An option that holds models ("8 chainblades":
-// New Recruit counts it once, BSData's roster once per model) counts once per selection: its models carry the count, and resolve
+// New Recruit counts it once per selection) counts once per selection: its models carry the count, and resolve
 // refuses such an option taken more than once
 function signature(rootId, kids){
   const m = new Map();
@@ -97,14 +99,24 @@ function resolve(input, D, opt){
 function resolveRoster(j, D, opt){
   const errors = [], err = m => { if(!errors.includes(m)) errors.push(m); };
   const fail = () => ({ ok:false, errors });
-  if(!D.bsIds){ err('this version of the app cannot import lists'); return fail(); }
+  if(!D.nrIds){ err('this version of the app cannot import lists'); return fail(); }
   // the tables without a prototype: an export's id such as "constructor" or "toString" is no key of them
-  const T = {}; for(const k of Object.keys(D.bsIds)) T[k] = Object.assign(Object.create(null), D.bsIds[k]);
+  const T = {}; for(const k of Object.keys(D.nrIds)) T[k] = Object.assign(Object.create(null), D.nrIds[k]);
+  // a selection is looked up by its id where a known export has shown that id (NR_IDS), else by its exact New Recruit name: the one
+  // thing of those tables with that name (none, or more than one meaning: not recognized, never guessed)
+  const idOf = (s, tabs) => { const id = lastId(s.entryId); if(tabs.some(t => T[t][id] !== undefined)) return id;
+    const hit = []; for(const t of tabs) for(const k of Object.keys(T[t])) if(T.names[k] === nn(s.name)) hit.push([k, t + '\u0000' + JSON.stringify(T[t][k])]);
+    return hit.length && hit.every(h => h[1] === hit[0][1]) ? hit[0][0] : id; };
+  const facByName = F => { const n = String(F.catalogueName || '').split(' - ').pop(), hit = Object.keys(D.factions || {}).filter(k => nn(D.factions[k].name).toLowerCase() === nn(n).toLowerCase()); return hit.length === 1 ? hit[0] : null; };
+  // (a Force Disposition by its name: one a detachment of data.js allows, GW's five)
+  const DISPS = []; for(const f of Object.values(D.factions || {})) for(const d of Object.values(f.detachments || {})) for(const x of d.dispositions || []) if(!DISPS.includes(x)) DISPS.push(x);
   const R = j.roster;
   if(R.forces.length !== 1 || (R.forces[0].forces || []).length){ err('a list with ' + R.forces.length + ' forces not recognized (the app takes one Army Roster)'); return fail(); }
   const F = R.forces[0];
   const sels = F.selections || [];
-  const fac = T.factions[F.catalogueId];
+  // (the faction by the export's catalogue name; a catalogue id a known export has shown must be that faction's: an id never stands in
+  // for a name)
+  const facN = facByName(F), fac = facN && (!T.factions[F.catalogueId] || T.factions[F.catalogueId] === facN) ? facN : null;
   const top = sels.filter(s => s.type === 'upgrade'), roots = sels.filter(s => s.type !== 'upgrade');
   if(!fac){
     // nothing of an unknown faction can resolve: name it, and what adding it would take
@@ -120,16 +132,18 @@ function resolveRoster(j, D, opt){
   let battleSize = null, disposition = null; const dets = [], config = {}, seen = {};
   const KIND = { battleSize:'battle size', disposition:'disposition', detachment:'detachment' };
   for(const t of top){
-    const id = lastId(t.entryId), kids = t.selections || [];
+    const id = idOf(t, ['roots', 'info', 'config']), kids = t.selections || [];
     if(Number(t.number) !== 1){ err('selection ' + t.number + '× ' + nn(t.name) + ' not recognized'); continue; }
+    // (a known id under another name is not that selection)
+    if(T.names[id] !== undefined && T.names[id] !== nn(t.name)){ err('selection ' + nn(t.name) + ' not recognized'); continue; }
     if(T.info[id]){
-      for(const c of kids) if(!T.infoKids[lastId(c.entryId)] || (c.selections || []).length || Number(c.number) !== 1) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');
+      for(const c of kids) if(T.infoKids[idOf(c, ['infoKids'])] !== nn(c.name) || (c.selections || []).length || Number(c.number) !== 1) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');
       continue;
     }
     if(T.config[id]){
       const key = T.config[id];
       if(key in config){ err('selection ' + nn(t.name) + ' twice not recognized'); continue; }
-      const odd = kids.filter(c => T.configKids[lastId(c.entryId)] !== nn(c.name) || (c.selections || []).length || Number(c.number) !== 1);
+      const odd = kids.filter(c => T.configKids[idOf(c, ['configKids'])] !== nn(c.name) || (c.selections || []).length || Number(c.number) !== 1);
       for(const c of odd) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');
       if(!odd.length && kids.length) config[key] = kids.map(c => typo(nn(c.name))).join(', ');
       continue;
@@ -139,18 +153,20 @@ function resolveRoster(j, D, opt){
     if(seen[kind]){ err(KIND[kind] + ' selection ' + nn(t.name) + ' twice not recognized'); continue; }
     seen[kind] = true;
     for(const c of kids){
-      const cid = lastId(c.entryId), nm = nn(c.name);
+      const cid = idOf(c, [kind === 'battleSize' ? 'battleSizes' : kind === 'disposition' ? 'dispositions' : 'detachments']), nm = nn(c.name);
       const once = Number(c.number) === 1 && !(c.selections || []).length;
-      if(kind === 'battleSize' && T.battleSizes[cid] && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }
-      if(kind === 'disposition' && T.dispositions[cid] === nm && once){ if(disposition) err('disposition ' + nm + ' not recognized (a list has one Force Disposition)'); else disposition = nm; continue; }
-      const d = kind === 'detachment' && T.detachments[cid], dk = d && d.split('/');
-      if(d && once && dk[0] === fac && FAC.detachments[dk[1]] && nn(FAC.detachments[dk[1]].name) === nm){ if(dets.includes(dk[1])) err('detachment ' + nm + ' twice not recognized'); else dets.push(dk[1]); continue; }
+      if(kind === 'battleSize' && T.battleSizes[cid] && T.names[cid] === nm && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }
+      if(kind === 'disposition' && (T.dispositions[cid] === nm || (T.dispositions[cid] === undefined && DISPS.includes(nm))) && once){ if(disposition) err('disposition ' + nm + ' not recognized (a list has one Force Disposition)'); else disposition = nm; continue; }
+      // (a detachment no known export has shown: the one detachment of the faction with exactly that name, GW's or New Recruit's spelling of it)
+      const dn = kind === 'detachment' && !T.detachments[cid] ? Object.keys(FAC.detachments).filter(k => [FAC.detachments[k].name, FAC.detachments[k].nr].filter(Boolean).some(x => nn(x) === nm)) : [];
+      const d = kind === 'detachment' && (T.detachments[cid] || (dn.length === 1 ? fac + '/' + dn[0] : null)), dk = d && d.split('/');
+      if(d && once && dk[0] === fac && FAC.detachments[dk[1]] && [FAC.detachments[dk[1]].name, FAC.detachments[dk[1]].nr].filter(Boolean).some(x => nn(x) === nm)){ if(dets.includes(dk[1])) err('detachment ' + nm + ' twice not recognized'); else dets.push(dk[1]); continue; }
       err(KIND[kind] + ' ' + (Number(c.number) !== 1 ? c.number + '× ' : '') + nm + ' not recognized');
     }
   }
   if(!battleSize && !errors.some(e => /^battle size/.test(e))) err('battle size not recognized (the export names none)');
   if(!dets.length && !errors.some(e => /^detachment/.test(e))) err('detachment not recognized (the export names none)');
-  // the points limit is the battle size's (BSData), not the export's word for it (an export can name none: no costLimits)
+  // the points limit is the battle size's (GW's Core Rules 25.03), not the export's word for it (an export can name none: no costLimits)
   const limit = pts(R.costLimits), total = pts(R.costs);
   if(battleSize && (R.costLimits || []).length && limit !== T.limits[battleSize]) err('points limit ' + limit + ' not recognized: ' + battleSize + ' is ' + T.limits[battleSize] + ' pts');
   if(battleSize && total > T.limits[battleSize]) err('points total ' + total + ' not recognized: over the ' + battleSize + ' limit of ' + T.limits[battleSize] + ' pts');
@@ -191,7 +207,7 @@ function resolveRoster(j, D, opt){
 
   const label = g => g.parts.map(p => nn(p.name)).join(' + ');
   const costOf = s => pts(s.costs) + (s.selections || []).reduce((t, c) => t + costOf(c), 0);
-  // the names an export's selections carry must be BSData's (an entry renamed in the export is not that entry)
+  // the names an export's selections carry must be New Recruit's (an entry renamed in the export is not that entry)
   const namesOk = (s, unit) => {
     let ok = true;
     const walk = (x, isRoot) => {
@@ -267,17 +283,17 @@ function resolveRoster(j, D, opt){
     used.set(pick.u, (used.get(pick.u) || 0) + 1);
     picks.push(Object.assign({}, pick));
   });
-  // the list as a whole: at most one Warlord, and each entry no more often than BSData allows per list (an enhancement once, an
+  // the list as a whole: at most one Warlord, and each entry no more often than GW's rules allow per list (NR_IDS maxPerList) (an enhancement once, an
   // Epic Hero once); a unit the app has may be taken more often than a list of the app takes it, as long as these hold
   if(!errors.length){
     const wl = picks.filter(x => x.u.warlord);
     // (none only as a list of the app has none: the owner's 4 megas and a destrier, as New Recruit printed it)
     if(wl.length > 1 || (!wl.length && !pool.some(a => !a.units.some(u => u.warlord)))) err('warlord not recognized: ' + (wl.length ? wl.length + ' units are the Warlord (' + and(wl.map(x => x.u.name)) + ')' : 'no unit is the Warlord'));
-    // how many of each entry the list takes, against BSData's max per list (an enhancement once, an Epic Hero once)
+    // how many of each entry the list takes, against GW's limit per list (an enhancement once, an Epic Hero once)
     const n = new Map(), walk = (x, isRoot) => { const id = lastId(x.entryId); n.set(id, { x, n:((n.get(id) || {}).n || 0) + Number(x.number), isRoot }); for(const c of x.selections || []) walk(c, false); };
     roots.forEach(r => walk(r, true));
     for(const [id, { x, n:k, isRoot }] of n) if(T.maxPerList[id] !== undefined && k > T.maxPerList[id])
-      err((isRoot ? 'unit ' : /^Enhancements/.test(x.group || '') ? 'enhancement ' : 'option ') + nn(x.name) + ' ×' + k + ' not recognized (BSData allows ' + T.maxPerList[id] + ' per list)');
+      err((isRoot ? 'unit ' : /^Enhancements/.test(x.group || '') ? 'enhancement ' : 'option ') + nn(x.name) + ' ×' + k + ' not recognized (GW’s rules allow ' + T.maxPerList[id] + ' per list)');
   }
   if(!errors.length){
     const sum = picks.reduce((t, x) => t + x.u.pts, 0);
@@ -326,7 +342,7 @@ function resolveRoster(j, D, opt){
 
 /* ---------------- the input formats ----------------
    WH_IMPORT.parse(input, WH_DATA) → Promise of { ok:true, format, json } | { ok:false, errors }: a .json, .ros or .rosz export (text or
-   bytes), or New Recruit's text formats B ("+++ …") and C ("## Category …"), each read into the export's shape. A text names no BSData ids:
+   bytes), or New Recruit's text formats B ("+++ …") and C ("## Category …"), each read into the export's shape. A text names no ids:
    each name is looked up exactly (case, apostrophes and spaces aside) and a line that is not exactly one thing refuses the whole import,
    naming the line. Format A is refused ("format not supported"). No fuzzy matching, no guessing. */
 // (names as builder.js compares them)
@@ -454,7 +470,7 @@ function readTextC(t, err){
 
 // a text's list as the export: each name looked up exactly (case, apostrophes and spaces aside) in data.js; a unit is one of the app's
 function textToExport(T0, D, err){
-  const B = D.bsIds || {}, own = o => Object.assign(Object.create(null), o || {});
+  const B = D.nrIds || {}, own = o => Object.assign(Object.create(null), o || {});
   const T = {}; for(const k of Object.keys(B)) T[k] = own(B[k]);
   const ids = (tab, f) => Object.keys(T[tab]).filter(k => f(T[tab][k], k)).sort();
   // the faction: the last part of New Recruit's catalogue name ("Xenos - Orks"), the name of exactly one faction of data.js
@@ -511,7 +527,7 @@ function textToExport(T0, D, err){
   };
   const sel = [], out = { roster:{ name:T0.name || '', costs:[{ name:'pts', value:T0.total || 0 }], costLimits:T.limits[T.battleSizes[bs]] ? [{ name:'pts', value:T.limits[T.battleSizes[bs]] }] : [], forces:[{ catalogueId:cat, catalogueName:T0.faction, selections:sel }] } };
   let uid = 0;
-  sel.push({ id:'b', name:'Battle Size', entryId:rootOf('battleSize'), number:1, type:'upgrade', selections:[{ id:'b1', name:T.battleSizes[bs], entryId:bs, number:1, type:'upgrade' }] });
+  sel.push({ id:'b', name:'Battle Size', entryId:rootOf('battleSize'), number:1, type:'upgrade', selections:[{ id:'b1', name:T.names[bs] || T.battleSizes[bs], entryId:bs, number:1, type:'upgrade' }] });
   sel.push({ id:'d', name:'Detachment', entryId:rootOf('detachment'), number:1, type:'upgrade', selections:dets.map((id, i) => ({ id:'d' + i, name:F.detachments[T.detachments[id].split('/')[1]].name, entryId:id, number:1, type:'upgrade' })) });
   sel.push({ id:'f', name:'Force Disposition', entryId:rootOf('disposition'), number:1, type:'upgrade', selections:[{ id:'f1', name:T.dispositions[disp], entryId:disp, number:1, type:'upgrade' }] });
   for(const g of groups){
@@ -597,7 +613,8 @@ function make(kept, D, opt){
   if(bad) return { ok:false, errors:['not a New Recruit export (' + bad + ')'] };
   // (the list's name the player gave in the import box, opt.name: a text in format B names none)
   if(opt && typeof opt.name === 'string' && opt.name.trim()) j = Object.assign({}, j, { roster:Object.assign({}, j.roster, { name:opt.name.trim() }) });
-  const fac = ((D.bsIds || {}).factions || {})[(j.roster.forces[0] || {}).catalogueId];
+  const facN = (n => { const hit = Object.keys(D.factions || {}).filter(k => nn(D.factions[k].name).toLowerCase() === nn(n).toLowerCase()); return hit.length === 1 ? hit[0] : null; })(String((j.roster.forces[0] || {}).catalogueName || '').split(' - ').pop());
+  const facI = ((D.nrIds || {}).factions || {})[(j.roster.forces[0] || {}).catalogueId], fac = facN && (!facI || facI === facN) ? facN : null;
   if(fac && WB().catalogued(D, fac)){
     // (a list kept by an earlier version, whose kept export has no profiles: not built from half of it)
     const prof = s => (s.profiles || []).length || (s.selections || []).some(prof);
@@ -605,6 +622,8 @@ function make(kept, D, opt){
     const r = WB().build(j, D, opt);
     if(!r.ok) return r;
     const army = D.resolve(r.army); army.imported = true; army.built = true;
+    // (the values the export shows that are New Recruit's own where GW's datasheet has another: the list has GW's, and its Overview says so)
+    const gv = (r.notes || []).flatMap(n => n.gwValues || []); if(gv.length) army.gwValues = gv;
     return { ok:true, army, entry:r.army };
   }
   const r = resolve(j, D, opt);

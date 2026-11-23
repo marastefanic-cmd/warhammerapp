@@ -17,7 +17,7 @@ function make(ROOT, factionId) {
   let wahaLinks = null;
   function wahaAddress(n) {
     if (!wahaLinks) {
-      const f = path.join(ROOT, 'verify/.cache/waha', factionId + '.html');
+      const f = path.join((process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(ROOT, 'verify/.cache')), 'waha', factionId + '.html');
       const html = fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : '';
       wahaLinks = [...new Set([...html.matchAll(/href="\/wh40k11ed\/factions\/[^/"]+\/([^"#/?]+)"/g)].map(m => m[1]))];
     }
@@ -86,7 +86,8 @@ function make(ROOT, factionId) {
     const set = (b2, i2) => { if (I && !i2) { out += '*'; I = false; } if (B !== b2) { out += '**'; B = b2; } if (!I && i2) { out += '*'; I = true; } };
     for (let k = k0; k <= k1; k++) {
       const t = tokens[k];
-      if (t.t === undefined) { set(false, false); out = out.replace(/ +$/, ''); if (t.li) out += '\n- '; else if (!/\n$/.test(out) && !/\n- $/.test(out)) out += '\n'; continue; }
+      if (t.t === undefined) { set(false, false); { let e = out.length; while (e && out[e - 1] === ' ') e--; if (e < out.length) out = out.slice(0, e); }   // (the trailing spaces, without a search of all the text so far)
+        if (t.li) out += '\n- '; else if (!out.endsWith('\n') && !out.endsWith('\n- ')) out += '\n'; continue; }
       let x = t.t.slice(k === k0 ? j0 : 0, k === k1 ? j1 + 1 : undefined);
       if (/\n(- )?$/.test(out) || out === '') x = x.replace(/^ +/, '');
       if (!x) continue;
@@ -102,7 +103,7 @@ function make(ROOT, factionId) {
   }
   const wahaCache = new Map();
   function wahaPage(unitName, fac = factionId) {
-    const dir = path.join(ROOT, 'verify/.cache/waha/ds');
+    const dir = path.join((process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(ROOT, 'verify/.cache')), 'waha/ds');
     const want = (fac + '_' + wahaAddress(unitName)).toLowerCase();
     if (wahaCache.has(want)) return wahaCache.get(want);
     const f = fs.existsSync(dir) && fs.readdirSync(dir).find(x => x.toLowerCase() === want + '.html');
@@ -235,7 +236,10 @@ function wahaDatasheet(html, chapter) {
     else if (charNames) [...blk.split('class="dsInvulWrap"')[0].matchAll(/<div class="dsCharValue[^"]*">([\s\S]*?)<\/div>/g)].forEach((m, k) => { if (charNames[k]) p[charNames[k]] = txt(m[1]); });
     const nmM = /dsModelName[^>]*>([^<]*)</.exec(blk); if (nmM) p.name = txt(nmM[1]);
     const bM = /dsModelBase[^2][^>]*>([^<]*)</.exec(blk) || /dsModelBase"[^>]*>([^<]*)</.exec(blk); if (bM) p.base = txt(bM[1]).replace(/^\(⌀?|\)$/g, '').trim();
-    out.profiles.push(p);
+    // (one row for several models with the same values, "Aemelia Minervas, Dainal Komelius, Lucia Vestha" on Wahapedia's Wardens of
+    // Ultramar page since November 2026: a profile for each model it names)
+    const several = p.name && /, /.test(p.name) ? p.name.split(/,\s+/).filter(Boolean) : null;
+    if (several && several.length > 1) for (const n1 of several) out.profiles.push(Object.assign({}, p, { name: n1 })); else out.profiles.push(p);
   }
   // each invulnerable save box, with its footnote for the models it is for ("INSV* 5+ * Gaius Silva only", then "INSV* 4+ * Veteran
   // Sergeant Metaurus only"): a box without a footnote is every model's

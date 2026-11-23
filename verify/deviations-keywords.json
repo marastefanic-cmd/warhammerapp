@@ -9,9 +9,9 @@
  {
   "datasheet": "ultramarines/Librarian in Phobos Armour",
   "nameKeyword": "Librarian",
-  "from": "bsdata",
-  "reason": "A head match (the name's head LIBRARIAN, before \"in Phobos Armour\"), accepted: Wahapedia's new-codex page leaves name keywords out; BSData gives the unit the category Librarian.",
-  "evidence": "verify/sources/bsdata-extract.json (Librarian in Phobos Armour, categories: \"Librarian\"); verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: KEYWORDS \"INFANTRY; CHARACTER; EXPLOSIVES; IMPERIUM; PHOBOS; PSYKER\"."
+  "from": "newrecruit",
+  "reason": "A head match (the name's head LIBRARIAN, before \"in Phobos Armour\"), accepted: Wahapedia's new-codex page leaves name keywords out; New Recruit's export gives the unit the category Librarian.",
+  "evidence": "verify/sources/nr-json/nerf-when.json (Librarian in Phobos Armour, categories: \"Librarian\"); verify/.cache/waha/ds/ultramarines_Librarian-In-Phobos-Armour.html: KEYWORDS \"INFANTRY; CHARACTER; EXPLOSIVES; IMPERIUM; PHOBOS; PSYKER\"."
  },
  {
   "datasheet": "chaos-space-marines/Lord Discordant on Helstalker",

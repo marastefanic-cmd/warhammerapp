@@ -20,8 +20,8 @@
    When the army is already in data.js the import keeps those hand-written parts for every unit
    and ability that is unchanged (same unit, same ability words), and its unit ids.
 
-   With --write it then writes the "+" marks (verify/bsdata.js, verify/write-grants.js), and the gate checks
-   everything as for a hand-made list: node verify/run.js (NR, BSData, GW texts, screens, sign-off)
+   With --write the gate then checks
+   everything as for a hand-made list: node verify/run.js (NR, GW's datasheets and texts, the "+" marks, screens, sign-off)
 
    Usage: node verify/import-nr.js <nr.txt> <armyId> [--fresh] [--write] [--data data.js] [--out file] [--reuse old-data.js]
      --fresh   ignore the army's current data.js entry (keeps nothing; used to prove the importer)
@@ -259,7 +259,7 @@ for (const nu of nrUnits) {
     oldPool.splice(oldPool.indexOf(prev), 1);
     u.id = prev.id;
     if (prev.short) u.short = prev.short;
-    // the "+" marks of rows that are unchanged (write-grants.js writes the others; bsdata.js checks all)
+    // the "+" marks of rows that are unchanged (verify/marks.js checks all)
     const bare = o => JSON.stringify(Object.assign({}, o, { from: undefined }));
     for (const k of ['stats', 'ranged', 'melee']) for (const row of u[k]) { const pr = (prev[k] || []).find(x => bare(x) === bare(row)); if (pr && pr.from) row.from = pr.from; }
     for (const ab of u.abilities) {
@@ -373,7 +373,7 @@ const report = ['# Import of ' + army.name + ' (' + armyId + ')', '', 'From ' + 
   '## Still to write (' + todo.length + ')', '', 'Each is then checked by the gate (verify/run.js): phase tags, footnotes and gists are signed off in verify/helpers.js.', '',
   ...todo.map(t => '- ' + (t.unit ? '**' + t.unit + '**: ' : '') + t.what), '',
   ...(reused.length ? ['## Reused from other lists (' + reused.length + ')', '', 'Same datasheet, same words: their signed-off phase tags, footnotes and auras.', '', ...reused.map(r => '- ' + r), ''] : []),
-  '## Then', '', '`node verify/run.js` until it passes (with --write the "+" marks from BSData are already written).', ''].join('\n');
+  '## Then', '', '`node verify/run.js` until it passes (the gate step marks lists a changed value with no rule named).', ''].join('\n');
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/import-' + armyId + '.md'), report);
 if (flag('--write')) {
@@ -383,12 +383,11 @@ if (flag('--write')) {
   else { const at = d.indexOf('const ARMIES = [\n'), end = at < 0 ? -1 : d.indexOf('\n];', at); if (end < 0) throw new Error('no ARMIES in data.js'); d = d.slice(0, end + 1) + src + d.slice(end + 1); }   // a new army goes last
   fs.writeFileSync(dataFile, d);
   console.log('wrote ' + armyId + ' into ' + path.relative(process.cwd(), dataFile) + ': ' + units.length + ' units; ' + todo.length + ' things to write (verify/out/import-' + armyId + '.md)');
-  // the "+" marks: BSData's modifiers on the new rows (bsdata.js lists them, write-grants.js writes them)
+  // the "+" marks: the rules New Recruit's PDF prints beside the changed values
   if (path.resolve(dataFile) === path.join(ROOT, 'data.js')) {
     const { spawnSync } = require('child_process');
-    spawnSync(process.execPath, [path.join(ROOT, 'verify/bsdata.js')], { cwd: ROOT, encoding: 'utf8' });
-    const g = spawnSync(process.execPath, [path.join(ROOT, 'verify/write-grants.js')], { cwd: ROOT, encoding: 'utf8' });
-    console.log((g.stdout || g.stderr).trim());
+    // (a PDF prints the rule beside a changed value, "(Flare Shields)", which this import keeps as the row's mark; a changed value with
+    // no mark is listed by the gate step marks, verify/marks.js M4, to be named from GW's words)
     // the list was written in full (the old form): its units become references to their datasheets (DATASHEETS)
     const t = spawnSync(process.execPath, [path.join(ROOT, 'verify/tables.js'), '--write'], { cwd: ROOT, encoding: 'utf8' });
     console.log((t.stdout || t.stderr).trim());

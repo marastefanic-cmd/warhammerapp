@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* verify/import-test.js: the in-app list import (import.js, the same file the app runs) against the lists in data.js.
-   1. data.js's BS_IDS table is exactly what verify/import-ids.js writes from BSData now.
+   1. data.js's NR_IDS table is exactly what verify/import-ids.js writes from the New Recruit exports now.
    2. Every New Recruit JSON export in verify/sources/nr-json/ whose list name is a list in data.js imports to exactly
       that list, field for field (units, points, models, weapons, abilities, keywords, leads, warlord,
       enhancements, detachments, disposition), except the differences listed in INTENDED; the export kept on the
@@ -49,7 +49,7 @@ const report = [];
 /* 1. the table */
 {
   const r = require('child_process').spawnSync(process.execPath, [path.join(__dirname, 'import-ids.js')], { encoding:'utf8' });
-  ok(r.status === 0, 'BS_IDS: ' + (r.stdout + r.stderr).trim());
+  ok(r.status === 0, 'NR_IDS: ' + (r.stdout + r.stderr).trim());
 }
 
 /* 2. every export */
@@ -103,15 +103,15 @@ const add = (j, s, id) => { const c = Object.assign(clone(s), { id }); if(!c.kee
 const L = id => byArmy[id];
 const PL = 'points total 2375 not recognized: over the Strike Force limit of 2000 pts';
 if(L('lite-knights'))
-  neg('a faction the app does not have', 'lite-knights', j => { const F = j.roster.forces[0]; F.catalogueId = '0000-aaaa-bbbb-cccc'; F.catalogueName = 'Imperium - Adeptus Astartes - Ultramarines'; },
-    ['faction Ultramarines not recognized', "detachment Emperor's Chosen not recognized", 'detachment Grav-Assault Force not recognized', 'detachment Might of the Moritoi not recognized',
+  neg('a faction the app does not have', 'lite-knights', j => { const F = j.roster.forces[0]; F.catalogueId = '0000-aaaa-bbbb-cccc'; F.catalogueName = 'Imperium - Astra Militarum'; },
+    ['faction Astra Militarum not recognized', "detachment Emperor's Chosen not recognized", 'detachment Grav-Assault Force not recognized', 'detachment Might of the Moritoi not recognized',
      'unit Trajann Valoris not recognized', 'unit Allarus Custodians not recognized', 'unit Prosecutor Squad not recognized', 'unit Witchseeker Squad not recognized',
      'unit Caladius Annihilator Grav-tank not recognized', 'unit Contemptor-Achillus Dreadnought not recognized', 'unit Contemptor-Galatus Dreadnought not recognized', 'unit Telemon Heavy Dreadnought not recognized']);
 if(L('6-bigs')){
   neg('a unit renamed', '6-bigs', j => { byName(j, 'Knight Errant').name = 'Knight Errant Mk II'; }, ['unit Knight Errant Mk II not recognized']);
   neg('a unit of another datasheet id', '6-bigs', j => { const s = byName(j, 'Knight Errant'); s.entryId = s.entryId.replace(/[^:]+$/, '0000-0000-0000-0000'); }, ['unit Knight Errant not recognized']);
   neg('a detachment changed', '6-bigs', j => { const d = tops(j).find(s => s.name === 'Detachment').selections[0]; d.name = 'Questor Forgepact'; d.entryId = d.entryId.replace(/[^:]+$/, '1111-2222-3333-4444'); }, ['detachment Questor Forgepact not recognized']);
-  neg('a detachment of another faction', '6-bigs', j => { const d = tops(j).find(s => s.name === 'Detachment').selections[0]; const id = Object.keys(D.bsIds.detachments).find(k => D.bsIds.detachments[k] === 'orks/war-horde'); d.name = 'War Horde'; d.entryId = d.entryId.replace(/[^:]+$/, id); }, ['detachment War Horde not recognized']);
+  neg('a detachment of another faction', '6-bigs', j => { const d = tops(j).find(s => s.name === 'Detachment').selections[0]; const id = Object.keys(D.nrIds.detachments).find(k => D.nrIds.detachments[k] === 'orks/war-horde'); d.name = 'War Horde'; d.entryId = d.entryId.replace(/[^:]+$/, id); }, ['detachment War Horde not recognized']);
   neg('a detachment listed twice', '6-bigs', j => { const d = tops(j).find(s => s.name === 'Detachment'); d.selections.push(clone(d.selections[0])); }, ['detachment Freeblade Company twice not recognized']);
   neg('two Detachment selections', '6-bigs', j => { sels(j).unshift(clone(tops(j).find(s => s.name === 'Detachment'))); }, ['detachment selection Detachment twice not recognized']);
   neg('an unknown enhancement', '6-bigs', j => { byName(j, 'Knight Warden').selections.push({ id:'x1', name:'Mythic Hero', entryId:'e9f3-6605-87c9-89c6::9999-aaaa-bbbb-cccc', number:1, type:'upgrade', group:'Enhancements::Freeblade Company Enhancements', costs:[{ name:'pts', value:0 }] }); },
@@ -133,14 +133,15 @@ if(L('6-bigs')){
   neg('over the points limit', '6-bigs', j => { add(j, byName(L('6-bigs'), 'Knight Paladin'), 'p3'); }, [PL]);
   // an export that names no points limit (no costLimits, as fellhammer-siege-task-force's): the battle size's limit still holds
   neg('over the points limit, no costLimits in the export', '6-bigs', j => { delete j.roster.costLimits; add(j, byName(L('6-bigs'), 'Knight Paladin'), 'p3'); }, [PL]);
-  neg('two battle sizes', '6-bigs', j => { const b = tops(j).find(s => s.name === 'Battle Size'); b.selections.push(Object.assign(clone(b.selections[0]), { name:'Incursion (1000 Point limit)' })); },
-    ['battle size Incursion (1000 Point limit) not recognized (a list has one battle size)']);
+  neg('two battle sizes', '6-bigs', j => { const b = tops(j).find(s => s.name === 'Battle Size'); b.selections.push(clone(b.selections[0])); },
+    ['battle size Strike Force (2000 Point limit) not recognized (a list has one battle size)']);
   neg('an unknown battle size', '6-bigs', j => { const b = tops(j).find(s => s.name === 'Battle Size').selections[0]; b.name = 'Apocalypse'; b.entryId = b.entryId.replace(/[^:]+$/, 'aaaa-0000-0000-0000'); },
     ['battle size Apocalypse not recognized']);
   neg('a disposition the detachment does not allow', '6-bigs', j => { const d = tops(j).find(s => s.name === 'Force Disposition').selections[0]; const fc = D.factions['imperial-knights'].detachments['freeblade-company'].dispositions;
-    const other = Object.entries(D.bsIds.dispositions).find(([, n]) => !fc.includes(n)); d.name = other[1]; d.entryId = d.entryId.replace(/[^:]+$/, other[0]); },
+    // (Disruption: a disposition no known export has shown, found by its name)
+    const other = ['dddd-0000-0000-0001', 'Disruption']; if(fc.includes(other[1])) throw new Error('Freeblade Company allows Disruption: the test tests nothing'); d.name = other[1]; d.entryId = d.entryId.replace(/[^:]+$/, other[0]); },
     ['disposition Disruption not recognized for Freeblade Company']);
-  neg('two dispositions (one not allowed)', '6-bigs', j => { const d = tops(j).find(s => s.name === 'Force Disposition'); const dis = Object.entries(D.bsIds.dispositions).find(([, n]) => n === 'Disruption');
+  neg('two dispositions (one not allowed)', '6-bigs', j => { const d = tops(j).find(s => s.name === 'Force Disposition'); const dis = Object.entries(D.nrIds.dispositions).find(([, n]) => n === 'Disruption') || ['dddd-0000-0000-0001'];
     d.selections.unshift({ id:'x5', name:'Disruption', entryId:dis[0], type:'upgrade', number:1, group:'Force Disposition' }); },
     ['disposition Purge the Foe not recognized (a list has one Force Disposition)', 'disposition Disruption not recognized for Freeblade Company']);
   neg('Code Chivalric left out', '6-bigs', j => { const r = j.roster.forces[0]; r.selections = r.selections.filter(s => s.name !== 'Code Chivalric'); },
@@ -151,7 +152,7 @@ if(L('6-bigs')){
   neg('an unknown top-level selection', '6-bigs', j => { sels(j).unshift({ id:'x3', name:'Crusade Force', entryId:'abcd-abcd-abcd-abcd', number:1, type:'upgrade', selections:[{ id:'x4', name:'Yes', entryId:'abcd-abcd-abcd-abce', number:1, type:'upgrade' }] }); }, ['selection Crusade Force not recognized']);
   neg('two forces', '6-bigs', j => { j.roster.forces.push(clone(j.roster.forces[0])); }, ['a list with 2 forces not recognized (the app takes one Army Roster)']);
   neg('not JSON', '6-bigs', () => '{ this is not json', ['not a New Recruit JSON export (the text is not JSON)']);
-  const cat = Object.keys(D.bsIds.factions)[0];
+  const cat = Object.keys(D.nrIds.factions)[0];
   neg('a null selection', '6-bigs', () => ({ roster:{ forces:[{ catalogueId:cat, selections:[null] }] } }), ['not a New Recruit JSON export (a selection is malformed)']);
   neg('selections a string', '6-bigs', () => ({ roster:{ forces:[{ catalogueId:cat, selections:'abc' }] } }), ['not a New Recruit JSON export (the force has no selections)']);
   neg('a name that is no text', '6-bigs', () => ({ roster:{ forces:[{ catalogueId:'x', selections:[{ type:'model', name:{}, entryId:'a', number:1 }] }] } }), ['not a New Recruit JSON export (a selection is malformed)']);
@@ -178,13 +179,13 @@ if(L('princes') && L('standard')){
     null);
   neg('no Warlord (the Daemon Prince that is taken out)', 'princes', j => { drop(j, 'Daemon Prince of Khorne'); }, ['warlord not recognized: no unit is the Warlord']);
   neg('an enhancement on two characters', 'standard', j => { drop(j, 'Forgefiend'); drop(j, 'Forgefiend'); add(j, byName(L('princes'), 'Daemon Prince of Khorne', 1), 'g2'); },
-    ['enhancement Berzerker Glaive ×2 not recognized (BSData allows 1 per list)']);
+    ['enhancement Berzerker Glaive ×2 not recognized (GW’s rules allow 1 per list)']);
   neg('a second Warlord from another list', 'standard', j => { drop(j, 'Forgefiend'); drop(j, 'Forgefiend'); add(j, byName(L('princes'), 'Daemon Prince of Khorne', 0), 'w3'); },
     ['warlord not recognized: 2 units are the Warlord (Angron and Daemon Prince of Khorne)']);
 }
 if(L('purge-goes-the-foe'))
   neg('an Epic Hero twice', 'purge-goes-the-foe', j => { drop(j, 'Skorpius Disintegrator'); drop(j, 'Skorpius Disintegrator'); add(j, byName(L('purge-goes-the-foe'), 'Thulia Ghuld'), 't2'); },
-    ['unit Thulia Ghuld ×2 not recognized (BSData allows 1 per list)']);
+    ['unit Thulia Ghuld ×2 not recognized (GW’s rules allow 1 per list)']);
 
 for(const n of NEGATIVE){
   const j = clone(byArmy[n.from]);
@@ -213,6 +214,41 @@ if(L('6-bigs') && L('4-megas-and-a-destrier')){
   const h = clone(L('6-bigs')); h.roster.name = '<img src=x onerror=alert(1)>';
   const r3 = run(h);
   ok(r3.ok && r3.army.name === '<img src=x onerror=alert(1)>' && r3.army.id === 'import-img-src-x-onerror-alert-1', 'a name that is markup: ' + JSON.stringify(r3.ok ? [r3.army.name, r3.army.id] : r3.errors));
+}
+
+/* 5. ids and names: a selection whose id no known export has shown is found by its exact New Recruit name, or refused, named */
+if(L('6-bigs')){
+  const UNK = k => 'ffff-0000-0000-' + String(k).padStart(4, '0');
+  const reId = (s, k) => { s.entryId = s.entryId.replace(/[^:]+$/, UNK(k)); };
+  // every top-level selection and its choice under ids the app has never seen, their names kept: the same list
+  const j = clone(L('6-bigs')); let k = 0;
+  for(const t of tops(j)){ reId(t, ++k); for(const c of t.selections || []) reId(c, ++k); }
+  j.roster.forces[0].catalogueId = UNK(999);
+  const r = run(j), base = run(clone(L('6-bigs')));
+  ok(r.ok && base.ok && JSON.stringify(r.army) === JSON.stringify(base.army), 'unknown ids, exact names: the faction, battle size, detachment, disposition and options by name give the same list: ' + JSON.stringify(r.ok ? 'imported' : r.errors));
+  report.push('accepted: 6 bigs with every top-level id unknown, by exact name → ' + (r.ok ? 'the same list' : r.errors.join('; ')));
+  // an unknown id and a name that is nothing of the app's: refused, named
+  const j2 = clone(L('6-bigs')), d2 = tops(j2).find(s => s.name === 'Detachment').selections[0]; reId(d2, 1); d2.name = 'Freeblade Compani';
+  const r2 = run(j2);
+  ok(!r2.ok && JSON.stringify(r2.errors) === JSON.stringify(['detachment Freeblade Compani not recognized']), 'unknown id, a name that is no detachment: ' + JSON.stringify(r2.ok ? 'imported' : r2.errors));
+  report.push('negative: an unknown id with a name that is no detachment → ' + (r2.ok ? 'IMPORTED' : r2.errors.join('; ')));
+  // a known id under another name is not that thing (an id never stands in for a name)
+  const j3 = clone(L('6-bigs')), d3 = tops(j3).find(s => s.name === 'Force Disposition').selections[0]; d3.name = 'Take and Hold';
+  const r3 = run(j3);
+  ok(!r3.ok, 'a known id under another name: ' + JSON.stringify(r3.ok ? 'imported' : r3.errors));
+  report.push('negative: a known disposition id under another name → ' + (r3.ok ? 'IMPORTED' : r3.errors.join('; ')));
+  // a known id under another name, for every top-level thing (the reviewer's cases): a battle size, the faction, a config and an info parent
+  const ren = (what, f, want) => { const j5 = clone(L('6-bigs')); f(j5); const r5 = run(j5);
+    ok(!r5.ok && (!want || JSON.stringify(r5.errors) === JSON.stringify(want)), 'a known id under another name (' + what + '): ' + JSON.stringify(r5.ok ? 'imported' : r5.errors) + (want ? ', want ' + JSON.stringify(want) : ''));
+    report.push('negative: a known id under another name (' + what + ') → ' + (r5.ok ? 'IMPORTED' : r5.errors.join('; '))); };
+  ren('the Strike Force id named Incursion (1000 Point limit)', j5 => { tops(j5).find(s => s.name === 'Battle Size').selections[0].name = 'Incursion (1000 Point limit)'; }, ['battle size Incursion (1000 Point limit) not recognized']);
+  ren('the catalogue id with the name Xenos - Necrons', j5 => { j5.roster.forces[0].catalogueName = 'Xenos - Necrons'; }, null);
+  ren('Code Chivalric X', j5 => { tops(j5).find(s => s.name === 'Code Chivalric').name = 'Code Chivalric X'; }, null);
+  ren('Show/Hide Options X', j5 => { tops(j5).find(s => s.name === 'Show/Hide Options').name = 'Show/Hide Options X'; }, null);
+  // a unit under an id no export has shown (a faction with no catalogue: its units are copied by their ids' signature): refused, named
+  const j4 = clone(L('6-bigs')); reId(byName(j4, 'Knight Errant'), 7);
+  const r4 = run(j4);
+  ok(!r4.ok && r4.errors.includes('unit Knight Errant not recognized'), 'a unit under an unknown id: ' + JSON.stringify(r4.ok ? 'imported' : r4.errors));
 }
 
 const outF = path.join(ROOT, 'verify/out/import.json');

@@ -6,7 +6,7 @@
                                                             files only their entries (in a worktree: the gate
                                                             then checks just them)
    node verify/army-blocks.js merge <worktree> <id>         from <worktree>: that list's block of data.js, and
-                                                            its entries in the deviations files, map-bsdata.json
+                                                            its entries in the deviations files
                                                             and waha-datasheets.txt; prints what else differs
                                                             there (code, glossary, factions) to bring by hand
 
@@ -61,7 +61,7 @@ if (cmd === 'list') {
   console.log('data.js keeps ' + [...keep].join(', ') + '; dropped ' + drop.map(b => b.id).join(', '));
   // the dropped lists' declared deviations go too (they would fail as stale here; merge brings back only the kept list's)
   const gone = new Set(drop.map(b => b.id));
-  for (const f of ['deviations-nr.json', 'deviations-bsdata.json', 'deviations-texts.json']) {
+  for (const f of ['deviations-nr.json', 'deviations-texts.json']) {
     const A = path.join(ROOT, 'verify', f);
     if (!fs.existsSync(A)) continue;
     const a = JSON.parse(read(A)), k = a.filter(x => !gone.has(x.army));
@@ -81,7 +81,7 @@ if (cmd === 'list') {
   writeData(dataFile(ROOT), mine.L.join('\n'));
   console.log('data.js: ' + id + ' from ' + wt + ' (' + block.length + ' lines)');
   // 2. its deviations (army = the list; for the text check also its faction, reported under the faction)
-  for (const f of ['deviations-nr.json', 'deviations-bsdata.json', 'deviations-texts.json']) {
+  for (const f of ['deviations-nr.json', 'deviations-texts.json']) {
     const A = path.join(ROOT, 'verify', f), B = path.join(wt, 'verify', f);
     if (!fs.existsSync(B)) continue;
     const a = JSON.parse(read(A)), b = JSON.parse(read(B));
@@ -93,12 +93,6 @@ if (cmd === 'list') {
     const other = b.filter(x => x.army !== id && !has.has(JSON.stringify(x)));
     if (other.length) console.log(f + ': ' + other.length + ' new entries for other lists or factions (bring by hand): ' + other.map(x => x.army + '/' + x.unit).join(', '));
   }
-  // 3. map-bsdata units of the list
-  { const A = path.join(ROOT, 'verify/map-bsdata.json'), B = path.join(wt, 'verify/map-bsdata.json');
-    const a = JSON.parse(read(A)), b = JSON.parse(read(B)); let n = 0;
-    for (const [k, v] of Object.entries(b.units || {})) if (k.startsWith(id + '/') && JSON.stringify(a.units[k]) !== JSON.stringify(v)) { a.units[k] = v; n++; }
-    for (const k of Object.keys(a.units || {})) if (k.startsWith(id + '/') && !(b.units || {})[k]) { delete a.units[k]; n++; }
-    if (n) { fs.writeFileSync(A, JSON.stringify(a, null, 1) + '\n'); console.log('map-bsdata.json: ' + n + ' unit entries of ' + id); } }
   // 4. Wahapedia datasheet pages
   { const A = path.join(ROOT, 'verify/sources/waha-datasheets.txt'), B = path.join(wt, 'verify/sources/waha-datasheets.txt');
     const a = read(A).split('\n').filter(Boolean), add = read(B).split('\n').filter(l => l && !a.includes(l));
@@ -108,7 +102,7 @@ if (cmd === 'list') {
   try { base = execFileSync('git', ['-C', wt, 'merge-base', 'HEAD', execFileSync('git', ['-C', ROOT, 'rev-parse', 'HEAD'], { encoding: 'utf8' }).trim()], { encoding: 'utf8' }).trim(); } catch (e) {}
   if (base) {
     const changed = execFileSync('git', ['-C', wt, 'diff', '--name-only', base], { encoding: 'utf8' }).split('\n').filter(Boolean)
-      .filter(f => !/^verify\/(out|review)\/|^verify\/(deviations-(nr|bsdata|texts)|map-bsdata|approvals|provenance|report)\.json$|^verify\/snapshots\/|^verify\/sources\/(bsdata-extract\.json|waha-datasheets\.txt)$|^(index\.html|sw\.js|verified\.js|version\.json)$/.test(f));
+      .filter(f => !/^verify\/(out|review)\/|^verify\/(deviations-(nr|texts)|approvals|provenance|report)\.json$|^verify\/snapshots\/|^verify\/sources\/waha-datasheets\.txt$|^(index\.html|sw\.js|verified\.js|version\.json)$/.test(f));
     const dj = changed.includes('data.js') ? execFileSync('git', ['-C', wt, 'diff', base, '--', 'data.js'], { encoding: 'utf8' }) : '';
     const outside = dj && (() => { const t = blocks(read(dataFile(wt))); const own = new Set(); t.out.forEach(b => { for (let i = b.start; i <= b.end; i++) own.add(i + 1); });
       // the tables verify/tables.js writes from the lists (DATASHEETS, RULE_OPTIONS, GRANTS, the resolver) are the lists' too

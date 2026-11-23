@@ -37,5 +37,68 @@
   "lists": [
    "big-demons-baby"
   ]
+ },
+ {
+  "datasheet": "adeptus-custodes/gyrfalcon-jetbike-sodality",
+  "what": "composition Gyrfalcon Jetbiker",
+  "reason": "New Recruit names the model Gyrfalcon Jetbike; GW’s UNIT COMPOSITION names it Gyrfalcon Jetbiker (the same two models). Model names follow New Recruit (the catalogue file’s modelNames: kept).",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Gyrfalcon-Jetbike-Sodality.html: UNIT COMPOSITION \"2 Gyrfalcon Jetbiker models\".",
+  "by": "wt-nobs (to review: verify/review/todo-nobs.json)"
+ },
+ {
+  "datasheet": "adeptus-custodes/gyrfalcon-jetbike-sodality",
+  "what": "composition Gyrfalcon Jetbike",
+  "reason": "The same: New Recruit’s name of GW’s Gyrfalcon Jetbiker.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Gyrfalcon-Jetbike-Sodality.html: UNIT COMPOSITION \"2 Gyrfalcon Jetbiker models\".",
+  "by": "wt-nobs (to review: verify/review/todo-nobs.json)"
+ },
+ {
+  "datasheet": "chaos-daemons/fiends",
+  "what": "composition Blissbringer",
+  "reason": "New Recruit holds the unit as 3-6 Fiends, one of them the Blissbringer; GW’s UNIT COMPOSITION prints 1 Blissbringer and 2-5 Fiends (the same 3-6 models). The row has the Blissbringer’s profile.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fiends.html: UNIT COMPOSITION \"1 Blissbringer\", \"2-5 Fiends\".",
+  "by": "wt-nobs (to review: verify/review/todo-nobs.json)"
+ },
+ {
+  "datasheet": "chaos-daemons/fiends",
+  "what": "composition Fiends",
+  "reason": "The same: New Recruit’s 3-6 Fiends are GW’s 1 Blissbringer and 2-5 Fiends.",
+  "evidence": "verify/.cache/waha/ds/chaos-daemons_Fiends.html: UNIT COMPOSITION \"1 Blissbringer\", \"2-5 Fiends\".",
+  "by": "wt-nobs (to review: verify/review/todo-nobs.json)"
+ },
+ {
+  "datasheet": "tyranids/carnifexes",
+  "what": "option Totemic Presence upgrade",
+  "reason": "New Recruit’s entry for the Old One Eye’s Totemic Presence on a Carnifex unit he leads; no wargear of GW’s datasheet (its WARGEAR OPTIONS do not name it) and no row of the app. A choice New Recruit offers; it changes nothing the app shows.",
+  "evidence": "verify/.cache/waha/ds/tyranids_Carnifexes.html: WARGEAR OPTIONS (no Totemic Presence).",
+  "by": "wt-nobs (to review: verify/review/todo-nobs.json)"
+ },
+ {
+  "datasheet": "adeptus-custodes/telemon-heavy-dreadnought",
+  "what": "option Dual Fists and 2 Projectors",
+  "reason": "New Recruit’s name for one of GW’s four loadouts of the Telemon’s arms (\"Fist\" for Caestus Fist, \"Projectors\" for Twin Neutronium Cascade Projectors); the weapons themselves are rows of the datasheet.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Telemon-Heavy-Dreadnought.html: \"This model is equipped with: 1 Dual Caestus Fists; 1 Spiculus Bolt Launcher; 2 Twin Neutronium Cascade Projectors.\"; WARGEAR OPTIONS \"This model’s Dual Caestus Fists and 2 Twin Neutronium Cascade Projectors can be replaced with one of the following: 1 Adrathic Desolator, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors; 1 Arachnus Storm Cannon, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors; 1 Caestus Fist, 1 Iliastus Accelerator Culverin and 1 Twin Neutronium Cascade Projectors\".",
+  "by": "wt-nobs (to review: verify/review/todo-nobs.json)"
+ },
+ {
+  "datasheet": "adeptus-custodes/telemon-heavy-dreadnought",
+  "what": "option Adrathic Desolator, 1 Fist and 1 Projectors",
+  "reason": "New Recruit’s name for one of GW’s four loadouts of the Telemon’s arms (\"Fist\" for Caestus Fist, \"Projectors\" for Twin Neutronium Cascade Projectors); the weapons themselves are rows of the datasheet.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Telemon-Heavy-Dreadnought.html: \"This model is equipped with: 1 Dual Caestus Fists; 1 Spiculus Bolt Launcher; 2 Twin Neutronium Cascade Projectors.\"; WARGEAR OPTIONS \"This model’s Dual Caestus Fists and 2 Twin Neutronium Cascade Projectors can be replaced with one of the following: 1 Adrathic Desolator, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors; 1 Arachnus Storm Cannon, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors; 1 Caestus Fist, 1 Iliastus Accelerator Culverin and 1 Twin Neutronium Cascade Projectors\".",
+  "by": "wt-nobs (to review: verify/review/todo-nobs.json)"
+ },
+ {
+  "datasheet": "adeptus-custodes/telemon-heavy-dreadnought",
+  "what": "option Arachnus Storm Cannon, 1 Fist and 1 Projectors",
+  "reason": "New Recruit’s name for one of GW’s four loadouts of the Telemon’s arms (\"Fist\" for Caestus Fist, \"Projectors\" for Twin Neutronium Cascade Projectors); the weapons themselves are rows of the datasheet.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Telemon-Heavy-Dreadnought.html: \"This model is equipped with: 1 Dual Caestus Fists; 1 Spiculus Bolt Launcher; 2 Twin Neutronium Cascade Projectors.\"; WARGEAR OPTIONS \"This model’s Dual Caestus Fists and 2 Twin Neutronium Cascade Projectors can be replaced with one of the following: 1 Adrathic Desolator, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors; 1 Arachnus Storm Cannon, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors; 1 Caestus Fist, 1 Iliastus Accelerator Culverin and 1 Twin Neutronium Cascade Projectors\".",
+  "by": "wt-nobs (to review: verify/review/todo-nobs.json)"
+ },
+ {
+  "datasheet": "adeptus-custodes/telemon-heavy-dreadnought",
+  "what": "option Iliastus Accelerator Culverin, 1 Fist and 1 Projectors",
+  "reason": "New Recruit’s name for one of GW’s four loadouts of the Telemon’s arms (\"Fist\" for Caestus Fist, \"Projectors\" for Twin Neutronium Cascade Projectors); the weapons themselves are rows of the datasheet.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Telemon-Heavy-Dreadnought.html: \"This model is equipped with: 1 Dual Caestus Fists; 1 Spiculus Bolt Launcher; 2 Twin Neutronium Cascade Projectors.\"; WARGEAR OPTIONS \"This model’s Dual Caestus Fists and 2 Twin Neutronium Cascade Projectors can be replaced with one of the following: 1 Adrathic Desolator, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors; 1 Arachnus Storm Cannon, 1 Caestus Fist and 1 Twin Neutronium Cascade Projectors; 1 Caestus Fist, 1 Iliastus Accelerator Culverin and 1 Twin Neutronium Cascade Projectors\".",
+  "by": "wt-nobs (to review: verify/review/todo-nobs.json)"
  }
 ]
