@@ -133,6 +133,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .resbar.over .respts, .resbar.over .resn b{color:var(--dm-bad)}
 .resl .tl{padding:7px 0 6px; border-bottom:1px solid var(--line)}
 .resl .tl > .ticks{min-width:0}
+.resl .tick{position:relative} .resl .tick::after{content:""; position:absolute; inset:-7px}   /* a 44px tap area round the 30px box */
+.res .sec-h .textbtn{min-height:44px; min-width:44px}
 .resm{display:block; margin-top:3px; font-size:13px; line-height:1.45}
 .resm > span{display:block; margin-top:2px}
 .resm .tg{white-space:normal}
@@ -6001,25 +6003,58 @@ function resRule(){
   const lim = /(Unless otherwise stated, the combined points value of all of your strategic reserves units [^.]*?cannot exceed (\d+)% of your points limit for your battle size\.)/.exec(t);
   return { when:when ? when[1] : null, excl:ex ? ex[1].split('/').map(k => k.trim().replace(/S$/, '')) : [], quote:lim ? lim[1] : null, pct:lim ? +lim[2] : null };
 }
-// the GRANTS rows that give a unit a rule (Deep Strike): an army rule of its faction, a detachment rule of the list, to the units its
-// keywords name; or an ability of the unit whose words the row quotes (an enhancement too), to that unit. By the rule's and the
-// ability's words, not the list's id, so an imported list's copy of a unit finds them as well
+// the GRANTS rows that give a unit of this list a rule (Deep Strike) when units are placed in strategic reserves, each with how:
+//   'unit'  an army rule of its faction or a detachment rule of the list, to the units its keywords name (Mindhunger); or the unit's own
+//           ability (an enhancement too) whose words the row quotes, given to "this unit" (Nazdreg's Know-wotz)
+//   'model' the unit's own ability given to "this model" / "the bearer" (Disciple of Khorne, Lord of the Eightbound): that model only
+//   'may'   a selection (pick 'one': "select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep Strike."): the ability on any unit
+//           of the list (the giver), to every unit its keywords allow, the giver's own unit too
+// Not a grant triggered in the battle (its CHECKLIST entry has a trigger, t or at: Umbralefic Crystal "In your Command phase",
+// Mysterious Guardian "At the end of your opponent's turn": repositioning, 20.02). By the rule's and the ability's words, not the
+// list's id, so an imported list's copy of a unit finds them as well
 const resRuleName = g => String(g.rule).split(' · ').pop();
+const resInBattle = ab => { const e = (D.checklist || {})['a|' + ckHash(ab.name + '\n' + ab.text)] || {}; return !!(e.t || e.at); };
 function resGrants(u, name){
-  const A = army(), f = factionOf(A), dets = detachmentsOf(A);
-  return (D.grants || []).filter(g => {
-    if(g.grants !== name || g.type !== 'ability') return false;
-    const p = String(g.rule).split(' · '), rn = p[p.length - 1];
-    if(p.length === 2) return p[0] === f.name + ' army rule' && f.armyRules.some(r => r.name === rn) && isObj(g.to) && matches(g.to, u);
-    if(/ rule$/.test(p[1])) return p[0] === f.name && dets.some(d => d.name + ' rule' === p[1] && detRules(d).some(r => r.name === rn)) && isObj(g.to) && matches(g.to, u);
-    return u.abilities.some(ab => ab.name === rn && !naReason(ab) && String(ab.text).includes(g.text)) && (g.to === 'this unit / model' || (isObj(g.to) && matches(g.to, u)));
-  });
+  const A = army(), f = factionOf(A), dets = detachmentsOf(A), out = [];
+  for(const g of D.grants || []){
+    if(g.grants !== name || g.type !== 'ability') continue;
+    const p = String(g.rule).split(' · '), rn = p[p.length - 1], has = x => x.abilities.find(ab => ab.name === rn && !naReason(ab) && String(ab.text).includes(g.text) && !resInBattle(ab));
+    if(p.length === 2){ if(p[0] === f.name + ' army rule' && f.armyRules.some(r => r.name === rn) && isObj(g.to) && matches(g.to, u)) out.push({ g, how:'unit', src:rn }); continue; }
+    if(/ rule$/.test(p[1])){ if(p[0] === f.name && dets.some(d => d.name + ' rule' === p[1] && detRules(d).some(r => r.name === rn)) && isObj(g.to) && matches(g.to, u)) out.push({ g, how:'unit', src:rn }); continue; }
+    if(g.pick === 'one'){ const giver = A.units.find(has); if(giver && isObj(g.to) && matches(g.to, u)) out.push({ g, how:'may', src:rn, ab:has(giver), giver:has(giver).who || giver.short || giver.name }); continue; }
+    const ab = has(u); if(!ab || !(g.to === 'this unit / model' || (isObj(g.to) && matches(g.to, u)))) continue;
+    out.push({ g, how:/\b(?:this|the bearer['’]?s?) unit\b/i.test(g.text) ? 'unit' : 'model', src:rn, ab, who:ab.who || u.short || u.name });
+  }
+  return out;
 }
-// a unit's Deep Strike: own (its Rules line, every model: 24.09 "if every model in this unit has this ability"), part (one model only:
-// which), and the grants that give it
+// a grant's condition (while) against the list: "If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle
+// Formations step": true when the unit is an attached unit whose keywords make up those words, false when it is not, or is one without
+// them; a moment of the selection ("In the Declare Battle Formations step") is no condition; any other: null (shown as conditional)
+function resWhile(g, u){
+  const w = String(g.while || '').split('; ').filter(x => x && !/^In the Declare Battle Formations step$/i.test(x));
+  if(!w.length) return true;
+  if(w.length > 1) return null;
+  const m = /^If this model is attached to an? ([A-Z][A-Z’' -]*[A-Z]) unit during the Declare Battle Formations step$/.exec(w[0]);
+  if(!m) return null;
+  if(!u.leads) return false;
+  const kws = u.kw.map(k => k.replace(/^Faction: /, '').toUpperCase()), words = m[1].split(' ');
+  for(let i = 0; i < words.length;){ let j = words.length; while(j > i && !kws.includes(words.slice(i, j).join(' '))) j--; if(j === i) return false; i = j; }
+  return true;
+}
+// a unit's Deep Strike (24.09: "if every model in this unit has this ability"): own (its Rules line, every model), part (the models that
+// alone have it: partialRules, or a grant to "this model" on a unit of more than one model), grants for the whole unit, may (a selection
+// that can give it), cond (a grant whose condition the list does not settle); a grant whose condition the list shows false: none
 function resDeepStrike(u){
-  const has = unitRules(u).some(r => ruleKey(r) === 'Deep Strike'), part = Object.keys(u.partialRules || {}).find(r => ruleKey(r) === 'Deep Strike');
-  return { own:has && !part, part:has && part ? partialWho(u, part) : '', grants:resGrants(u, 'Deep Strike') };
+  const has = unitRules(u).some(r => ruleKey(r) === 'Deep Strike'), pk = Object.keys(u.partialRules || {}).find(r => ruleKey(r) === 'Deep Strike');
+  const own = has && !pk, part = has && pk ? [partialWho(u, pk)] : [], grants = [], may = [], cond = [];
+  for(const x of resGrants(u, 'Deep Strike')){
+    if(x.how === 'may'){ may.push(x); continue; }
+    const w = resWhile(x.g, u); if(w === false) continue;
+    if(w === null){ cond.push(x); continue; }
+    if(x.how === 'model' && modelCount(u) > 1){ if(!own && !part.includes(x.who)) part.push(x.who); continue; }
+    grants.push(x);
+  }
+  return { own, part, grants, may, cond };
 }
 const resKey = () => 'wh-res-' + (cur.army || '');
 const resDone = () => new Set(Array.isArray(store.get(resKey())) ? store.get(resKey()) : []);
@@ -6045,11 +6080,13 @@ function screenReserves(){
   const rows = A.units.map(u => {
     const ex = R.excl.find(k => hasKw(u, k)), ds = resDeepStrike(u), ks = resBoxes(u), c = ks.length;
     const marks = [];
-    if(ds.own) marks.push('<span class="tg resds" data-resds="own">' + linkTo('rule', 'Deep Strike', 'Deep Strike') + '</span>');
-    if(ds.part) marks.push('<span class="tg m resds" data-resds="part">' + linkTo('rule', 'Deep Strike', 'Deep Strike') + ': ' + esc(ds.part) + ' only</span>');
-    for(const g of ds.grants){ const rn = resRuleName(g), ab = u.abilities.find(x => x.name === rn && String(x.text).includes(g.text));
-      marks.push('<span class="tg resds" data-resds="grant:' + esc(rn) + '">' + linkTo('rule', 'Deep Strike', 'Deep Strike') + ' · ' + (ab ? linkTo('ability', abilityKey(ab), rn) : linkTo('rule', rn, rn)) + '</span>' +
-        ' <span class="from">“' + esc(String(g.text).replace(/^- /, '').replace(/\*\*/g, '')) + '”</span>'); }
+    const DS = linkTo('rule', 'Deep Strike', 'Deep Strike'), q = g => ' <span class="from">“' + esc(String(g.text).replace(/^- /, '').replace(/\*\*/g, '')) + '”</span>';
+    const srcLink = x => x.ab ? linkTo('ability', abilityKey(x.ab), x.src) : linkTo('rule', x.src, x.src);
+    if(ds.own) marks.push('<span class="tg resds" data-resds="own">' + DS + '</span>');
+    for(const m of ds.part) marks.push('<span class="tg m resds" data-resds="part:' + esc(m) + '">' + DS + ': ' + esc(m) + ' only</span>');
+    for(const x of ds.grants) marks.push('<span class="tg resds" data-resds="grant:' + esc(x.src) + '">' + DS + ' · ' + srcLink(x) + '</span>' + q(x.g));
+    for(const x of ds.may) marks.push('<span class="tg m resds" data-resds="may:' + esc(x.src) + '">can be given ' + DS + ' · ' + srcLink(x) + ' (' + esc(x.giver) + ')</span>' + q(x.g));
+    for(const x of ds.cond) marks.push('<span class="tg m resds" data-resds="cond:' + esc(x.src) + '">' + DS + ' if: ' + srcLink(x) + '</span>' + q(x.g));
     if(ex) marks.push('<span class="tg m">' + linkTo('rule', 'Strategic Reserves', ex.toUpperCase() + ': excluded') + '</span>');
     return '<div class="tl resu" data-resu="' + esc(u.id) + '"><span class="ticks">' + ks.map((k, i) => (c > 1 ? '<i>' + (i + 1) + '</i>' : '') + box(k, c > 1 ? 'Unit ' + (i + 1) : '', unitLabel(u), !!ex)).join('') + '</span>' +
       '<span>' + linkTo('unit', u.id, unitLabel(u)) + ' <span class="from">' + u.pts + ' pts' + (c > 1 ? ' each, ×' + c : '') + '</span>' + (marks.length ? '<span class="resm">' + marks.map(m => '<span>' + m + '</span>').join('') + '</span>' : '') + '</span></div>';
@@ -6059,7 +6096,7 @@ function screenReserves(){
     '<div class="pgr"><span class="pgk">Limit</span><span class="pgv">' + (R.quote ? esc(R.quote) + ' <span class="from">(' + linkTo('rule', 'Strategic Reserves', 'Strategic Reserves') + ', ' + esc(A.points + ' pts · ' + A.battleSize) + ')</span>'
       : linkTo('rule', 'Strategic Reserves', 'Strategic Reserves')) + '</span></div></div>' +
     '<div class="sec-h"><h2>Your units</h2><span class="c">' + A.units.reduce((t, u) => t + (u.copies || 1), 0) + '</span></div><div class="resl">' + rows + '</div>' +
-    '<p class="note">Tick the units you place in strategic reserves; the total counts each ticked unit’s points as the list prints them. Deep Strike: on the unit’s Rules line (every model), or given by the rule or ability named, in its words. Each name opens its rule. The boxes are kept for this list on this phone; Reset clears them.</p></div>';
+    '<p class="note">Tick the units you place in strategic reserves; the total counts each ticked unit’s points as the list prints them. Deep Strike: on the unit’s Rules line (every model; “only” where one model alone has it), or given by the rule or ability named, in its words; “can be given”: the ability gives it to one unit you select; “if”: its condition is for you to check. What units are given during the battle, as they go back into reserves, is not listed. Each name opens its rule. The boxes are kept for this list on this phone; Reset clears them.</p></div>';
 }
 
 /* ---------- render ---------- */

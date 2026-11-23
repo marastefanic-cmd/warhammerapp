@@ -1502,7 +1502,8 @@ function ruleTables(D){
       if(row) grants.push({ rule:s.where, grants:String(row[0]).split(' · ')[0], type:'ability', to:'units from your army with this ability', while:cond ? 'If your Army Faction is ' + cond[2] : null, text:act[0] + '.' }); }
   }
   function grantRows(rule, option, text, whileOpt, headed){
-    for(const sent of sentences(norm(text))){
+    const SS = sentences(norm(text));
+    for(let si = 0; si < SS.length; si++){ const sent = SS[si];
       let m, name;
       for(const x of sent.matchAll(GRANT_RE)){
         const n = (x[3] || x[4] || (x[2] ? ((/\*\*([^*]+?):?\*\*:?/.exec(norm(text).slice(norm(text).indexOf(sent) + sent.length)) || [])[1] || 'the following ability') : '')).replace(/:$/, '').trim();
@@ -1523,11 +1524,28 @@ function ruleTables(D){
       // (the clause just before the verb names who has it: "while the bearer is within 6" of one or more friendly HARVESTER units,
       // models in the bearer's unit have the Fights First ability" gives it to the bearer's unit, not to the HARVESTER units)
       const own = /\b(?:this|the bearer'?s?|that) (?:unit|model)\b|\bthe bearer\b|\bthis model\b/i, last = before.split(/,\s*/).pop();
-      const to = own.test(before) && (!(subj && subj.run) || (/\b(?:this|the bearer'?s?) (?:unit|model)\b/i.test(last) && !(friendlyUnit(V, last + ' ', { any:true }) || {}).run)) ? 'this unit / model' : subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
+      let to = own.test(before) && (!(subj && subj.run) || (/\b(?:this|the bearer'?s?) (?:unit|model)\b/i.test(last) && !(friendlyUnit(V, last + ' ', { any:true }) || {}).run)) ? 'this unit / model' : subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
+      // ("that unit / model" is the bearer's own only when the sentence names the bearer before it, "While this model is leading a unit, …
+      // that unit": Warped Interference. Else its antecedent is a selection in an earlier sentence of the words, "In the Declare Battle
+      // Formations step, you can select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep Strike." (Thunderhawk Insertion): to
+      // that selection's units (and "if it is a VEHICLE model": that keyword too), pick 'one' (one unit chosen), while the moment it is
+      // chosen at, the text both sentences. No selection read: to unread, the gate fails (verify/tables.js), never the bearer's own)
+      let pick = null, selText = null, moment = null;
+      const that = /\bthat (?:unit|model)\b/i.exec(before);
+      if(to === 'this unit / model' && that && !/\b(?:this|the bearer'?s?) (?:unit|model)\b|\bthe bearer\b/i.test(before.slice(0, that.index))){
+        const sel = SS.slice(0, si).reverse().map(x => [x, /\bselect (?:one|up to one) friendly (.+?)$/i.exec(x)]).find(([, mm]) => mm);
+        const fu = sel && friendlyUnit(V, sel[1][0].replace(/^select (?:one|up to one) /i, '') + ' ', { any:true });
+        if(fu && fu.run){
+          to = tidyNeeds(needsOf(V, fu, rs)); pick = 'one'; selText = sel[0];
+          const itIs = /\bif it is an? \*\*([^*]+)\*\* (?:model|unit)\b/i.exec(before), fi = itIs && friendlyUnit(V, '**' + itIs[1] + '** units ', { any:true });
+          if(fi && fi.run){ const n2 = tidyNeeds(needsOf(V, fi, rs)); to = tidyNeeds(Object.assign({}, to, { all:[...new Set((to.all || []).concat(n2.all || []))] })); }
+          moment = (/^((?:in|at the (?:start|end) of) [^,]+), (?:you can )?select\b/i.exec(plain(sel[0])) || [])[1] || null;
+        } else to = { unread:that[0] };
+      }
       // (the condition opens the sentence, or follows the moment it is checked at: Duellist’s Hubris, "At the start of the Fight phase; if
       // this model is not leading a unit, …", or "In addition, ": Instinctive Defence)
       const cond = (/^(?:at the (?:start|end) of [^,;]+[,;] |in addition, )?((?:while|if|when|until) [^,]+)/i.exec(plain(sent)) || [])[1];
-      const wh = [whileOpt, cond].filter(Boolean).join('; ') || null;
+      const wh = [whileOpt, moment, cond].filter(Boolean).join('; ') || null;
       // a Feel No Pain the sentence gives only "against …" keeps its condition ("Feel No Pain 3+ against Psychic Attacks and mortal wounds")
       const against = /^feel no pain\b/i.test(name) ? /^\s*(?:ability\s+)?(against [^.;]+?)\s*(?:\.|;|$)/i.exec(plain(sent.slice(m.index + m[0].length))) : null;
       const grantName = name.replace(/ ability$/i, '') + (against ? ' ' + against[1].replace(/\*\*/g, '') : '');
@@ -1535,7 +1553,7 @@ function ruleTables(D){
       const andKw = /^\s*and \*\*([^*]+)\*\*\s+keywords\b/i.exec(norm(sent).slice(m.index + m[0].length));
       for(const gn of [grantName].concat(andKw ? [andKw[1].trim()] : [])){
         const type = isUpperWord(gn.replace(/[^A-Za-z]/g, '')) ? 'keyword or weapon ability' : 'ability';
-        const g = Object.assign({ rule }, option !== undefined ? { option } : {}, { grants:gn, type, to, while:wh, text:sent });
+        const g = Object.assign({ rule }, option !== undefined ? { option } : {}, { grants:gn, type, to }, pick ? { pick } : {}, { while:wh, text:selText ? selText + ' ' + sent : sent });
         grants.push(g); grantSink(g);   // (the checklist: an ability it gives to units by keyword, Might of Khorne's Blessings of Khorne)
       }
     }

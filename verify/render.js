@@ -294,53 +294,106 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       await take('popup import (not recognized)', `() => { hideSheet(); go({ s:'home' }); showImport(); return runImport(${JSON.stringify(JSON.stringify(IMPORT_BAD))}); }`); }
     // (the Phase checklist from Find, then back to Find: the screens after it are reached as before, their back buttons the same)
     for(const s of ['army','checklist','reserves','pregame','units','ranged','melee','abilities','rules','bases']){ await screen(s); if(s === 'checklist' || s === 'reserves') await page.evaluate(id => { hideSheet(); go({ s:'army', army:id }); }, a.id); }
-    // Strategic reserves (each check worked out here from data.js, apart from the app's own functions):
-    // - reserves-ds: every unit's Deep Strike marks are what its rules and GRANTS say: "own" when its Rules line (with the detachment rules it
-    //   gets) names Deep Strike and no model alone has it (partialRules), "part" when one model alone has it; a "grant:<rule>" for each GRANTS
-    //   row giving Deep Strike from an army rule of its faction or a detachment rule of the list (its words) whose keywords it has, or from
-    //   one of its usable abilities whose words the row quotes; nothing else
-    // - reserves-limit: the limit is the percentage GW's Strategic Reserves text (data.js RULES) states of the list's points limit, and the
-    //   screen quotes that sentence as data.js has it; a unit the text excludes (FORTIFICATIONS) has no box to tick
+    // Strategic reserves, each check worked out here from GW's words and the units' keywords, apart from the app's code and from GRANTS:
+    // - reserves-ds: every unit's Deep Strike marks are what GW's words give (24.09, every model): "own" when its Rules line (with the
+    //   detachment rules it gets) names Deep Strike and no model alone has it (partialRules); "part:<model>" for a model alone, and for an
+    //   ability of the unit giving it to "this model" / "the bearer" on a unit of more than one model; "grant:<ability>" for one giving it
+    //   to "this unit" (or "this model" of a one-model unit); "grant:<rule>" for an army rule of its faction or a detachment rule of the list
+    //   giving it to units with the keywords its sentence names ("Friendly DEATHLEAPER/LICTOR/NEUROLICTOR units have Deep Strike");
+    //   "may:<ability>" for a selection on any unit of the list ("select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep
+    //   Strike."), on every unit with those keywords; an "If this model is attached to a <KW> unit during the Declare Battle Formations
+    //   step" sentence only on an attached unit with those keywords; another "If" sentence: "cond:<ability>"; none from an ability whose
+    //   words open with a moment of the battle (a phase, the start or end of a turn: Umbralefic Crystal, Mysterious Guardian)
+    // - reserves-limit: the limit is the percentage GW's Strategic Reserves text (data.js RULES) states of the list's points limit, also
+    //   at 1000 and 3000 pts (500, 1500); the screen quotes that sentence as data.js has it; a unit the text excludes (FORTIFICATIONS: a
+    //   unit given that keyword in the page) has no box to tick
     // - reserves-ticks: a box ticked is kept for the list (wh-res-<id>) and counted at the unit's points in the total, which stays pinned
-    //   (sticky) under the top bar; over the limit the total says so; Reset clears the boxes
+    //   (sticky) under the top bar; both copies of a ×N unit count twice its points; over the limit the total says so; Reset clears them;
+    //   every box has a 44px tap area, Reset too
     { const bad = await page.evaluate(id => { const out = [], A = armyById(id); hideSheet(); go({ s:'reserves', army:id }); navAt = -1e9;
         const F = WH_DATA.factions[A.faction], dets = A.detachments.map(d => F.detachments[d]).filter(Boolean), detR = d => d.rule ? [d.rule].concat(d.moreRules || []) : [];
         const isDS = n => /^deep strike\b/i.test(String(n));
         const kwOf = u => u.kw.map(k => k.toLowerCase()), kwm = (n, u) => !n || ((n.all || []).every(k => kwOf(u).includes(k.toLowerCase())) && (!n.any || n.any.some(k => kwOf(u).includes(k.toLowerCase())))
           && !(n.none || []).some(k => kwOf(u).includes(k.toLowerCase())));
+        const plainT = t => String(t || '').replace(/\*\*/g, '').replace(/[’]/g, "'");
+        const sents = t => plainT(t).split(/\n+|(?<=[.!?])\s+(?=[A-Z(-])/).map(x => x.replace(/^-\s*/, '').trim()).filter(Boolean);
+        const covers = (ph, u) => { const K = u.kw.map(k => k.replace(/^Faction: /, '').toUpperCase()), ws = ph.toUpperCase().trim().split(/\s+/);
+          for(let i = 0; i < ws.length;){ let j = ws.length; while(j > i && !K.includes(ws.slice(i, j).join(' '))) j--; if(j === i) return false; i = j; } return true; };
+        const anyOf = (alts, u) => alts.split('/').some(p => covers(p, u));
+        const GIVE = /^(.*?)\b(?:has|have|gains?)(?: the)? Deep Strike\b/i;
+        const BATTLE = /^(?:\([^)]*\)\s*)?(?:in your(?: opponent's)? (?:command|movement|shooting|charge|fight) phase|at the (?:start|end) of (?:your|your opponent's|the|each) (?:turn|(?:command|movement|shooting|charge|fight) phase|battle round))\b/i;
+        const models = u => u.models.reduce((t, m) => t + (parseInt(m, 10) || 1), 0);
+        const want = new Map(A.units.map(u => [u, new Set()]));
         for(const u of A.units){
-          const rules = (u.rules || []).concat(dets.flatMap(detR).filter(r => r.needs && kwm(r.needs, u)).map(r => r.name)), part = Object.keys(u.partialRules || {}).some(isDS);
-          const want = [];
-          if(rules.some(isDS)) want.push(part ? 'part' : 'own');
-          for(const g of WH_DATA.grants || []){ if(g.grants !== 'Deep Strike' || g.type !== 'ability') continue;
-            const name = String(g.rule).split(' · ').pop(), fromRule = F.armyRules.concat(dets.flatMap(detR)).find(r => r.name === name && String(r.text).includes(g.text));
-            const viaRule = fromRule && String(g.rule).startsWith(F.name + ' ') && g.to && typeof g.to === 'object' && kwm(g.to, u);
-            const viaAb = u.abilities.some(ab => !ab.na && ab.name === name && String(ab.text).includes(g.text)) && (g.to === 'this unit / model' || (g.to && typeof g.to === 'object' && kwm(g.to, u)));
-            if(viaRule || viaAb) want.push('grant:' + name); }
+          const rules = (u.rules || []).concat(dets.flatMap(detR).filter(r => r.needs && kwm(r.needs, u)).map(r => r.name)), pk = Object.keys(u.partialRules || {}).find(isDS);
+          if(rules.some(isDS)) want.get(u).add(pk ? 'part:' + (u.partialRules[pk]) : 'own');
+        }
+        const own = u => want.get(u).has('own');
+        // the army and detachment rules: to the units their sentence's keywords name
+        for(const r of F.armyRules.concat(dets.flatMap(detR))) for(const s of sents(r.text)){ const m = GIVE.exec(s); if(!m) continue;
+          const kw = /([A-Z][A-Z' ]*[A-Z](?:\/[A-Z][A-Z' ]*[A-Z])*)/.exec(m[1]); if(!kw) continue;
+          for(const u of A.units) if(anyOf(kw[1], u)) want.get(u).add('grant:' + r.name); }
+        // the abilities of the list's units (usable ones)
+        for(const x of A.units) for(const ab of x.abilities){ if(ab.na) continue;
+          const ss = sents(ab.text), body = ss.filter(t => !/ model only\.$/.test(t));
+          if(body.length && BATTLE.test(body[0])) continue;
+          ss.forEach((s, i) => { const m = GIVE.exec(s); if(!m) return; const subj = m[1];
+            if(/^that (?:unit|model)\b/i.test(subj.trim())){
+              const sel = ss.slice(0, i).reverse().map(t => /\bselect (?:one|up to one) friendly (.+?) (?:unit|model)\b/i.exec(t)).find(Boolean);
+              if(sel) for(const u of A.units) if(anyOf(sel[1], u)) want.get(u).add('may:' + ab.name);
+              return; }
+            if(!/\b(?:this unit|this model|the bearer)\b/i.test(subj)) return;
+            const u = x, cond = /^If (.+?), /.exec(s);
+            if(cond){ const at = /^this model is attached to an? (.+?) unit during the Declare Battle Formations step$/.exec(cond[1]);
+              if(!at){ want.get(u).add('cond:' + ab.name); return; }
+              if(!u.leads || !covers(at[1], u)) return; }
+            if(/\bthis unit\b/i.test(subj) || models(u) === 1) want.get(u).add('grant:' + ab.name);
+            else if(!own(u)) want.get(u).add('part:' + (ab.who || u.short || u.name)); }); }
+        for(const u of A.units){
           const row = document.querySelector('#view [data-resu="' + CSS.escape(u.id) + '"]');
           if(!row){ out.push(['reserves-ds', u.id, 'no row']); continue; }
-          const got = [...row.querySelectorAll('[data-resds]')].map(x => x.dataset.resds);
-          if(got.slice().sort().join('|') !== want.slice().sort().join('|')) out.push(['reserves-ds', u.id, 'shows [' + got.join(', ') + '], its rules and GRANTS say [' + want.join(', ') + ']']);
+          const got = [...new Set([...row.querySelectorAll('[data-resds]')].map(x => x.dataset.resds))].sort(), w = [...want.get(u)].sort();
+          if([...row.querySelectorAll('[data-resds]')].length !== got.length) out.push(['reserves-ds', u.id, 'a mark shown twice']);
+          if(got.join('|') !== w.join('|')) out.push(['reserves-ds', u.id, 'shows [' + got.join(', ') + '], GW’s words give [' + w.join(', ') + ']']);
           if(row.querySelectorAll('[data-rtick]').length !== (u.copies || 1)) out.push(['reserves-ticks', u.id, row.querySelectorAll('[data-rtick]').length + ' boxes for ' + (u.copies || 1) + ' units']);
         }
+        // the tap areas: every box and Reset at least 44px
+        { const hit = el => { const r = el.getBoundingClientRect(), a = getComputedStyle(el, '::after'), i = a.content !== 'none' ? -parseFloat(a.top) || 0 : 0; return Math.min(r.width, r.height) + 2 * i; };
+          const small = [...document.querySelectorAll('#view .resl [data-rtick], #view [data-rreset]')].filter(el => hit(el) < 44 - 0.5);
+          if(small.length) out.push(['reserves-ticks', id, small.length + ' tap targets under 44px (' + small[0].outerHTML.slice(0, 60) + ')']); }
         const T = String(WH_DATA.rules['Strategic Reserves'] || '').replace(/\*\*/g, ''), pct = /cannot exceed (\d+)% of your points limit for your battle size/.exec(T);
-        const bar = document.querySelector('#view .resbar'), lim = pct ? Math.floor(A.points * pct[1] / 100) : null;
-        if(!bar || getComputedStyle(bar).position !== 'sticky') out.push(['reserves-ticks', id, 'no running total pinned under the top bar']);
-        else if(!pct || !bar.textContent.includes('0 / ' + lim + ' pts')) out.push(['reserves-limit', id, 'the total says “' + bar.textContent + '”, GW’s text gives ' + (pct ? pct[1] + '% of ' + A.points + ' = ' + lim : 'no limit')]);
+        const bar = () => document.querySelector('#view .resbar'), lim = pct ? Math.floor(A.points * pct[1] / 100) : null;
+        if(!bar() || getComputedStyle(bar()).position !== 'sticky') out.push(['reserves-ticks', id, 'no running total pinned under the top bar']);
+        else if(!pct || !bar().textContent.includes('0 / ' + lim + ' pts')) out.push(['reserves-limit', id, 'the total says “' + bar().textContent + '”, GW’s text gives ' + (pct ? pct[1] + '% of ' + A.points + ' = ' + lim : 'no limit')]);
+        // other battle sizes: the list's points limit set to 1000 and 3000 in the page
+        if(pct) for(const P of [1000, 3000]){ const was = A.points; A.points = P; go({ s:'reserves', army:id }); navAt = -1e9; const t = bar().textContent; A.points = was;
+          if(!t.includes('0 / ' + Math.floor(P * pct[1] / 100) + ' pts')) out.push(['reserves-limit', id, 'at ' + P + ' pts the total says “' + t + '”, GW’s text gives ' + Math.floor(P * pct[1] / 100)]); }
+        go({ s:'reserves', army:id }); navAt = -1e9;
         const q = [...document.querySelectorAll('#view .pgv')].map(x => x.firstChild && x.firstChild.textContent).find(x => /cannot exceed/.test(x || ''));
         if(!q || !T.includes(q.trim())) out.push(['reserves-limit', id, 'the limit quoted is not GW’s Strategic Reserves text: ' + q]);
-        const ex = /\(excluding ([A-Z][A-Z /]*[A-Z])\) to place in strategic reserves/.exec(T), exK = ex ? ex[1].split('/').map(k => k.trim().replace(/S$/, '').toLowerCase()) : [];
-        for(const u of A.units) if(exK.some(k => kwOf(u).includes(k)) && document.querySelector('#view [data-resu="' + CSS.escape(u.id) + '"] [data-rtick]:not([disabled])')) out.push(['reserves-limit', u.id, 'a ' + ex[1] + ' unit can be ticked']);
-        // ticking: the first unit that can be, kept and counted; then every one in turn until over the limit (if the list can be); Reset
-        const boxes = [...document.querySelectorAll('#view [data-rtick]:not([disabled])')], u0 = boxes[0] && A.units.find(u => u.id === boxes[0].dataset.rtick.split('#')[0]);
+        // the units GW's text excludes: the first unit given that keyword in the page has no box to tick
+        const ex = /\(excluding ([A-Z][A-Z /]*[A-Z])\) to place in strategic reserves/.exec(T);
+        if(ex){ const k = ex[1].split('/')[0].trim().replace(/S$/, ''), u = A.units[0], kw = k.charAt(0) + k.slice(1).toLowerCase(); u.kw.push(kw); go({ s:'reserves', army:id }); navAt = -1e9;
+          const open = document.querySelectorAll('#view [data-resu="' + CSS.escape(u.id) + '"] [data-rtick]:not([disabled])').length; u.kw.pop();
+          if(open) out.push(['reserves-limit', u.id, 'a ' + ex[1] + ' unit (given ' + kw + ' in the page) can be ticked']);
+          go({ s:'reserves', army:id }); navAt = -1e9; }
+        // ticking: the first unit that can be, kept and counted; both copies of the first ×N unit, twice its points; then every one in
+        // turn until over the limit (if the list can be); Reset
+        const boxes = [...document.querySelectorAll('#view [data-rtick]:not([disabled])')], unitOf = b => A.units.find(u => u.id === b.dataset.rtick.split('#')[0]), u0 = boxes[0] && unitOf(boxes[0]);
+        const sayTotal = n => n + (lim != null ? ' / ' + lim : '') + ' pts';
         if(boxes.length){ boxes[0].click();
           const kept = JSON.parse(localStorage.getItem('wh-res-' + id) || '[]').includes(boxes[0].dataset.rtick);
           go({ s:'reserves', army:id }); navAt = -1e9;
-          const on = document.querySelector('#view [data-rtick="' + CSS.escape(boxes[0].dataset.rtick) + '"].on'), t1 = document.querySelector('#view .resbar').textContent;
-          if(!kept || !on || !t1.includes(u0.pts + (lim != null ? ' / ' + lim : '') + ' pts')) out.push(['reserves-ticks', id, JSON.stringify({ kept, on:!!on, total:t1 })]);
-          let sum = u0.pts; for(const b of [...document.querySelectorAll('#view [data-rtick]:not(.on):not([disabled])')]){ if(lim == null || sum > lim) break; b.click(); sum += A.units.find(u => u.id === b.dataset.rtick.split('#')[0]).pts; }
-          const t2 = document.querySelector('#view .resbar'), over = lim != null && sum > lim;
-          if(!t2.textContent.includes(sum + (lim != null ? ' / ' + lim : '') + ' pts') || over !== t2.classList.contains('over') || over !== /over the limit/.test(t2.textContent)) out.push(['reserves-ticks', id, 'ticked ' + sum + ' pts, the total says “' + t2.textContent + '”']);
+          const on = document.querySelector('#view [data-rtick="' + CSS.escape(boxes[0].dataset.rtick) + '"].on'), t1 = bar().textContent;
+          if(!kept || !on || !t1.includes(sayTotal(u0.pts))) out.push(['reserves-ticks', id, JSON.stringify({ kept, on:!!on, total:t1 })]);
+          document.querySelector('#view [data-rreset]').click();
+          const xn = A.units.find(u => (u.copies || 1) > 1 && document.querySelector('#view [data-rtick="' + CSS.escape(u.id + '#0') + '"]:not([disabled])'));
+          if(xn){ for(let i = 0; i < xn.copies; i++) document.querySelector('#view [data-rtick="' + CSS.escape(xn.id + '#' + i) + '"]').click();
+            if(!bar().textContent.includes(sayTotal(xn.pts * xn.copies))) out.push(['reserves-ticks', xn.id, 'all ' + xn.copies + ' copies ticked (' + xn.pts * xn.copies + ' pts), the total says “' + bar().textContent + '”']);
+            document.querySelector('#view [data-rreset]').click(); }
+          let sum = 0; for(const b of [...document.querySelectorAll('#view [data-rtick]:not(.on):not([disabled])')]){ if(lim == null || sum > lim) break; b.click(); sum += unitOf(b).pts; }
+          const t2 = bar(), over = lim != null && sum > lim;
+          if(!t2.textContent.includes(sayTotal(sum)) || over !== t2.classList.contains('over') || over !== /over the limit/.test(t2.textContent)) out.push(['reserves-ticks', id, 'ticked ' + sum + ' pts, the total says “' + t2.textContent + '”']);
           document.querySelector('#view [data-rreset]').click();
           if(document.querySelector('#view [data-rtick].on') || JSON.parse(localStorage.getItem('wh-res-' + id) || '[]').length) out.push(['reserves-ticks', id, 'Reset left boxes ticked']);
           localStorage.removeItem('wh-res-' + id); $('#toast').classList.remove('show', 'act'); undoFn = null; }
