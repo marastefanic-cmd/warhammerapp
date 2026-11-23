@@ -1,5 +1,9 @@
 {
  "_about": "What verify/from-json.js cannot fill mechanically for healybois, written by hand and read by it on every run (from-json.js --write gives the same data.js again). gists: a stratagem's one-line summary (the app's own words: its EFFECT shortened, its WHEN/TARGET condition kept, nothing added); def: its When targeted line; both AI-written (Claude, 27 Oct 2026) with the fingerprint (gistOf, defOf) of the text they were written from, so a changed source text fails the gate's fingerprints step. mod: a stratagem's weapon footnote (hand). note: GW's FAQ on it from the Faction Pack. spellings: an enhancement New Recruit and BSData spell otherwise than GW. units: per unit entry, its abilities' When targeted lines (def, AI-written, with defOf), GW's FAQs on its abilities (notes), and why (the reasons for what the list shows). readings: the readings of the list's rows (only what GW tags (Aura) is an aura, Core Rules 22.01). Each is a judgement verify/helpers.js lists for sign-off.",
+ "source": {
+  "text": "New Recruit, exported 22 Nov 2026 (JSON)",
+  "why": "the day the owner exported this list from New Recruit and sent it (the upload of Healybois_-_2000pts.json is stamped 2026-11-22 22:40 UTC); the JSON export carries no date, and the commit that added it to verify/sources/nr-json (23 Nov 2026) is only the day it was committed"
+ },
  "gists": {
   "assimilation-swarm/broodguard-impulse": {
    "by": "AI (Claude)",

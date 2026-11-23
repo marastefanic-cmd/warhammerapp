@@ -352,5 +352,20 @@
    ]
   },
   "key": "e43273b12d7f33b9"
+ },
+ {
+  "army": "healybois",
+  "kind": "list-source",
+  "where": "healybois · source line",
+  "judgement": {
+   "source": "New Recruit, exported 22 Nov 2026 (JSON)",
+   "from": "verify/sources/hand/healybois.json source (from-json.js and reimport.js both read it; it overrides the commit date)"
+  },
+  "source": {
+   "why": "the day the owner exported this list from New Recruit and sent it (the upload of Healybois_-_2000pts.json is stamped 2026-11-22 22:40 UTC); the JSON export carries no date, and the commit that added it to verify/sources/nr-json (23 Nov 2026) is only the day it was committed",
+   "evidence": "the owner’s upload Healybois_-_2000pts.json, file time 2026-11-22 22:40:02 UTC; the export has no date field (only generatedBy); git log of verify/sources/nr-json/healybois.json: committed 23 Nov 2026 (8cba527)",
+   "replaces": "New Recruit, exported 23 Nov 2026 (JSON) (the commit date, 1878050)"
+  },
+  "key": "82ad905df4f8ba60"
  }
 ]
