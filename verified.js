@@ -1,25 +1,25 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "164d36a8f5",
- "data": "2026-11-23.3",
+ "build": "a85fc35839",
+ "data": "2026-11-23.4",
  "date": "23 Nov 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
-   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (11285 facts)."
+   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (11284 facts)."
   },
   {
    "label": "Games Workshop’s datasheets,",
-   "detail": "as Wahapedia transcribes them: every stat and weapon number (9919 numbers), every keyword and every ability text."
+   "detail": "as Wahapedia transcribes them: every stat and weapon number (9900 numbers), every keyword and every ability text."
   },
   {
    "label": "Granted values:",
-   "detail": "every keyword or value marked + is one New Recruit shows otherwise than GW’s datasheet, named as a rule your unit has whose GW wording names it (257 values)."
+   "detail": "every keyword or value marked + is one New Recruit shows otherwise than GW’s datasheet, named as a rule your unit has whose GW wording names it (258 values)."
   },
   {
    "label": "Games Workshop’s rules text:",
-   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (6299 texts)."
+   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (6296 texts)."
   },
   {
    "label": "Rules logic:",
@@ -31,7 +31,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Every screen:",
-   "detail": "3386 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "3383 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
