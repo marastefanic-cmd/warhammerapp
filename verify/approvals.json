@@ -557,6 +557,12 @@
   "at": "2026-10-22",
   "why": "TARGET “One friendly unengaged unit within 12\" of one or more enemy units” = “Your unengaged unit within 12\" of an enemy unit” (the VEHICLE-only-if-CHARACTER/WALKER limit is the users column); EFFECT “Resolve a charge with your unit … you must select one of the following modes: Leap to Defend … Into the Fray (+1CP)” = “resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…”, the “…” leaving what each mode does to the text, as in the signed-off gist. “End of their Charge” is the row’s tag."
  },
+ "0609ff0809ce7176": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"The bearer has a Save characteristic of 2+.\" (its Blood Tithe point is no defence part, rule 13)."
+ },
  "060aa85314bc34e3": {
   "verdict": "ok",
   "by": "review:catalog-custodes",
@@ -676,6 +682,12 @@
   "by": "review:words",
   "at": "2026-10-31",
   "why": "infernal-lance has no WAR DOG unit (list checked): the aura reaches no one. Unchanged."
+ },
+ "070878689e1428bc": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons)\"."
  },
  "07146dcc83a16530": {
   "verdict": "ok",
@@ -1444,6 +1456,12 @@
   "by": "review:fellhammer-rules",
   "at": "2026-10-24",
   "why": "Soul Forge Boons (GW Faction Pack p7 = Wahapedia = data.js): three always-on sentences. Two give keywords (DAEMON; SOUL FORGE) and one a 5+ invulnerable save. None names a phase or a moment. Sentence 1: HERETIC ASTARTES VEHICLE. Sentence 2: HERETIC ASTARTES VEHICLE, LORD DISCORDANT, VASHTORR THE ARKIFANE. Sentence 3: SOUL FORGE. The union is {all:[Faction: Heretic Astartes], any:[Vehicle, Lord Discordant, Vashtorr the Arkifane, Soul Forge]}, exactly as required. “Faction: Heretic Astartes” on Lord Discordant, Vashtorr and SOUL FORGE units is a narrowing the text does not state. In this faction they are all HERETIC ASTARTES, and “from your army” in a CSM army makes it hold. I re-ran derive on the branch data with main’s and the branch’s derive.js: only this item’s derived needs change. With main’s data the two derive.js give identical output (1291 items)."
+ },
+ "0ed2488ca96a7c02": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"each time an attack targets your unit, subtract 1 from the Wound roll\" (rule 30 form \"attacks on this unit\")."
  },
  "0ed2a033795026c9": {
   "verdict": "ok",
@@ -2411,6 +2429,12 @@
   "at": "2026-10-29",
   "why": "Read against GW’s words (Wahapedia faction page, the codex): {ph:[movement]} follows the WHEN/TARGET/rule text as derive.js reads it (Solar Watch rule · Talon Sortie)."
  },
+ "1aa44acc1c394ff6": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW: a WORLD EATERS unit disembarking after the RHINO made a Normal move makes an assault disembark move."
+ },
  "1aa4baf42f082502": {
   "verdict": "ok",
   "by": "review:checklist-3",
@@ -2620,6 +2644,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "\"Attacks that target this unit have -1 AP.\" Unconditional, so defAlways is right; the Meganobz’ ability covers the attached unit with the Big Mek (19.04)."
+ },
+ "1cea7858daefb946": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons.\""
  },
  "1d02c60a4aa1d1a2": {
   "verdict": "ok",
@@ -2902,6 +2932,12 @@
   "by": "review:exiled-rules",
   "at": "2026-10-24",
   "why": "Faithful and complete."
+ },
+ "1ff9dbb59adfcca7": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"At the start of the battle round, if this model is on the battlefield, when you make a Blessings of Khorne roll, roll one additional D6.\" Condition first, nothing added."
  },
  "20071c680707adaf": {
   "verdict": "ok",
@@ -3298,6 +3334,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "“at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two”: the start of the battle round is filed under Command with at:'Start of the battle round' shown, the settled convention (Da Boss, Doctrina Imperatives, Wrathful Presence). Dismay is “In the Battle-shock step of your opponent’s Command phase”, also Command. Doom (“Each time this model makes an attack”) names no phase, which is how Doctrina Imperatives was left at Command only (Pledges to the Dark Prince went the other way and lists Shooting/Fight); Doom's numbers are the Damage tab's calcMods tick."
+ },
+ "23f7ad700656f2a3": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"if the bearer starts the battle embarked within a DEDICATED TRANSPORT, that DEDICATED TRANSPORT has the Scouts 9\\\" ability.\""
  },
  "2402e31cc4067ab7": {
   "verdict": "ok",
@@ -4355,6 +4397,12 @@
   "at": "2026-10-23",
   "why": "“Your opponent’s Shooting phase”: shooting opp; fight either."
  },
+ "30edcf31451714d5": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW pack text: Normal, Advance, Fall Back or Charge moves through enemy models (excluding MONSTERS and VEHICLES); only a Charge move may end within Engagement Range; Desperate Escape tests automatically passed."
+ },
  "30f10384bb5f6a68": {
   "verdict": "ok",
   "by": "review:r11-misc",
@@ -4366,6 +4414,12 @@
   "by": "review:howto-3",
   "at": "2026-10-29",
   "why": "{\"limit\":\"Once per battle\"}: the same key and judgement as result-howto-2. RESTRICTIONS \"You cannot use this stratagem more than once per battle.\""
+ },
+ "3106858517aaa5b2": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW (pack p2): an unengaged DAEMON VEHICLE (excluding TITANIC) that an enemy unit targeted; surge move of up to D6\"."
  },
  "3106d9f62e85d781": {
   "verdict": "ok",
@@ -4588,6 +4642,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "Covers the trigger (an enemy unit ends a move within 8\"), the unengaged condition and the effect (normal move of up to D3+3\"). Nothing added."
+ },
+ "332416450f7a472e": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "Round 2: my fix applied verbatim. GW: one VEHICLE within 6\" of the bearer, or its TRANSPORT, selected at the start of your Shooting phase; one enemy unit it hit selected; both picks now said."
  },
  "334ae6a5ff412542": {
   "verdict": "ok",
@@ -4991,6 +5051,12 @@
   "at": "2026-10-28",
   "why": "GW (orks_Warboss-In-Mega-Armour.html): \"When this unit ends a charge move …\". Charge moves are made in your Charge phase and, via Heroic Intervention (\"End of your opponent’s Charge phase … Resolve a charge with your unit\", core.txt l.850-855), in theirs: Charge · Either turn is right. Unit-activation trigger, so not in the checklist — correct."
  },
+ "379da6359a022f75": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"re-roll a Hit roll of 1. If … within 6\\\" of … WORLD EATERS MONSTER units, or within 9\\\" of … WORLD EATERS TITANIC units, you can re-roll the Hit roll instead.\" Rule 8 form."
+ },
  "379fe01808b72849": {
   "verdict": "ok",
   "by": "review:exiled-units",
@@ -5146,6 +5212,12 @@
   "by": "review:necrons",
   "at": "2026-10-28",
   "why": "Quotes GW: Szarekh 1-6 wounds: halve A of that model's weapons; each time this unit makes an attack -1 to the Hit roll."
+ },
+ "395921f289c1b3c4": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW: a just-destroyed JAKHALS unit; a new identical unit in Strategic Reserves at Starting Strength; RESTRICTIONS no CHARACTER units returned to Attached units, once per battle. Both restrictions kept."
  },
  "395cc43d9ac7c845": {
   "verdict": "ok",
@@ -5446,6 +5518,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "Your Command phase."
+ },
+ "3c6dd967ad93f6d0": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"a Critical Hit is scored on an unmodified Hit roll of 5+\": crit wording."
  },
  "3c7efae47842a2df": {
   "verdict": "ok",
@@ -6947,6 +7025,12 @@
   "at": "2026-11-05",
   "why": "changed (was: \"THOUSAND SONS PSYKER: +9\\\" range for Psychic weapons; re-roll Hit and Wound rolls with them\"). Against GW: “WHEN: Your Shooting phase. TARGET: One THOUSAND SONS PSYKER unit from your army that has not been selected to shoot this phase. EFFECT: Until the end of the phase, add 9\" to the Ra…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
  },
+ "4cbf2e053d5c079e": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"If your WORLD EATERS INFANTRY unit is wholly within 6\\\" of that TRANSPORT, it can embark within it.\""
+ },
  "4cc014feef49f6f0": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -7133,6 +7217,12 @@
   "at": "2026-10-28",
   "why": "GW says \"Command phase\", not \"your Command phase\": either player's. Right."
  },
+ "4ec045572a8aa0e1": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW: +1 Damage if EIGHTBOUND and the enemy model is not MONSTER/VEHICLE; if EXALTED EIGHTBOUND and it is a MONSTER or VEHICLE \"instead\". Both cases right."
+ },
  "4ed5ba4e60443c26": {
   "verdict": "ok",
   "by": "review:r20-damage",
@@ -7234,6 +7324,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“TARGET: One friendly FLASH GITZ/TANKBUSTAS unit hit by those attacks.”: either keyword, copied."
+ },
+ "50580e2023da65f0": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW pack update (verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 267-274): \"One KHORNE BERZERKERS unit embarked within your model can make a disembark move and then make a surge move of up to D6+2\\\".\"; restriction kept."
  },
  "507b2e58dc999588": {
   "verdict": "ok",
@@ -7913,6 +8009,12 @@
   "at": "2026-11-05",
   "why": "unchanged since round 1. Against GW: “WHEN: Start of the Fight phase. TARGET: One EMPEROR’S CHILDREN INFANTRY unit from your army. EFFECT: Until the end of the phase, each time an enemy model within Engagement Range of…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
  },
+ "57dc49baf6d1a715": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "Round 2: my fix applied verbatim. GW \"within 6\\\" of this model (or within 9\\\" if this model is TITANIC)\", the ability on WORLD EATERS TITANIC and MONSTER units: the TITANIC VEHICLE Lord of Skulls now counts."
+ },
  "57ee9a6f13459d2c": {
   "verdict": "ok",
   "by": "review:effects-helpers",
@@ -8069,6 +8171,12 @@
   "at": "2026-10-28",
   "why": "Either turn (Fight)."
  },
+ "59439caf7d4948a6": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "Only change against main 1eb4290: \"loadout\" added to the catalogue columns hidden from resolved units (HIDE), beside points, composition, options, aiStatus. Right: loadout is a DATASHEETS column for builder.js only."
+ },
  "5956ecc50db47459": {
   "verdict": "ok",
   "by": "review:necrons-2",
@@ -8080,6 +8188,12 @@
   "by": "review:necrons-2",
   "at": "2026-10-28",
   "why": "\"Each time a model in this unit makes an attack\": the derived convention (Fire Overwatch in their Movement phase, your Shooting phase, either Fight phase), as on the other \"makes an attack\" abilities."
+ },
+ "595d89612ebb1534": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"…ranged attack that targets the closest eligible MONSTER or VEHICLE target within 18\\\", you can re-roll the Wound roll and you can re-roll the Damage roll.\" Conditions first, rule 23 wording."
  },
  "59655017dedd66aa": {
   "verdict": "ok",
@@ -8183,6 +8297,12 @@
   "at": "2026-10-24",
   "why": "Balefire Boon (1CP; GW p8 = Wahapedia = data.js): WHEN “Your Shooting phase or the Fight phase.”; TARGET “One SOUL FORGE unit from your army that has not been selected to shoot or fight this phase.”; EFFECT “Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.” “Your Shooting phase or the Fight phase” gives turn either, with Shooting overridden to your (like Strength from Exile and Armed to da Teef)."
  },
+ "5a97d0cfd897af80": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW with the pack's \"Change 3\\\" to 6\\\"\": set up more than 6\" horizontally away from all enemy units; not eligible to charge that turn."
+ },
  "5a9c79354f0565e6": {
   "verdict": "ok",
   "by": "review:ui-b",
@@ -8231,11 +8351,23 @@
   "at": "2026-11-05",
   "why": "unchanged since round 1. Against GW: “WHEN: Your Shooting phase. TARGET: One CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase. EFFECT: Until the end of the phase, ranged weapons equipped…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
  },
+ "5b721440947bd96b": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW: one WORLD EATERS unit embarked in the RHINO disembarks wholly within 6\" of it, and can be set up within Engagement Range."
+ },
  "5baa70a504b14fab": {
   "verdict": "ok",
   "by": "review:order",
   "at": "2026-10-30",
   "why": "Same content as the judgement approved on main (key 9e5577b93d8cb30e, review:r9-knights) with its lists compared as sets: only the order of rows/keywords changed, to GW datasheet order. data.js 2399c6e..HEAD compared as sets per unit: no number, name or keyword set changed here."
+ },
+ "5be2bc0f7fcf0192": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW (Faction Pack 1.3 Rules Updates, verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 350-355): \"(Once per turn, per unit) In the Fight phase, when an enemy unit targets this unit, after that unit has resolved its attacks, you can use this ability. If you do, this unit is eligible to fight (even if it has already fought this phase) and must be selected to fight next.\" Limit kept, rule 42 \"if it uses this ability\"."
  },
  "5be5900a47eb6565": {
   "verdict": "ok",
@@ -8542,6 +8674,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "“the Fight phase”: either turn."
+ },
+ "5fa133e28b2645c1": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"After both players have deployed … select up to three JAKHALS and/or GOREMONGERS units … redeploy them … Strategic Reserves, regardless of how many units are already in Strategic Reserves.\" \"up to\" kept (rule 47)."
  },
  "5fc14251069843f4": {
   "verdict": "ok",
@@ -10385,6 +10523,12 @@
   "at": "2026-10-23",
   "why": "Readied “At the start of your Command phase”; ka’tah WHENs: Conservai “Your Command phase”, Calistus “Your Movement phase”, Salvus “Your Shooting phase”, Dacatarai/Kaptaris “Start of the Fight phase”, Rendax “Fight phase”. No ka’tah is in the Charge phase, so command, movement, shooting, fight."
  },
+ "76b153af28a780f4": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "Round 2: statOf puts a sentence's option heading (unitsOf sec) first in its conditions, as attack and defence boxes do. Across all BOXES only r|mvn58j st changes (diffed data.js 033ed75..HEAD: the only other BOXES lines changed come from main's GRANTS)."
+ },
  "76b64929ee0eb472": {
   "verdict": "ok",
   "by": "review:effects-helpers",
@@ -10888,6 +11032,12 @@
   "by": "review:ui-b",
   "at": "2026-11-05",
   "why": "changed (was: \"A WORLD EATERS CHARACTER (not EPIC HERO) suffers a mortal wound: Feel No Pain 4+ vs mortal wounds\"). Against GW: “WHEN: Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound. TARGET: That WORLD EATERS CHARACTER unit. EFFECT: Your unit has Fee…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
+ },
+ "7bf63068ce758e1a": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "Round 2: my fix applied verbatim (as its sumAtk); its stat box r|mvn58j st now carries opt Idol of Burning Wrath (Aura)."
  },
  "7c00106c3da079a2": {
   "verdict": "ok",
@@ -12899,6 +13049,12 @@
   "at": "2026-10-23",
   "why": "\"WHEN: Any phase\": every phase, as Blood Offering."
  },
+ "93693b6a0324ab4b": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW: a WORLD EATERS VEHICLE hit by the attacking unit can make a Normal move of up to 6\"; not with Fury Unleashed in the same phase."
+ },
  "93738af1e4eaf618": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -13259,6 +13415,12 @@
   "at": "2026-10-24",
   "why": "\"At the start of any phase\" and the battle-shock effects apply in both players' turns: either. The FAQ line does not change this."
  },
+ "97ce85d12f781aa7": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW (pack p2) \"This unit’s Maulerfiend Fists have [CLEAVE 2].\"; the program prefixes the weapon (scope weapon in its box)."
+ },
  "97d4143741e1881a": {
   "verdict": "ok",
   "by": "review:defilers3",
@@ -13481,6 +13643,12 @@
   "at": "2026-11-05",
   "why": "unchanged since round 1. Against GW: “While this unit is within 3\" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
  },
+ "99ee231eb8ca53b6": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"Each time this model makes an attack that targets a unit that can FLY, add 1 to the Hit roll.\""
+ },
  "99fab64f76aa805c": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -13594,6 +13762,12 @@
   "by": "review:checklist-4",
   "at": "2026-10-24",
   "why": "Checked against Code Chivalric's table (data.js, the same on Wahapedia imperial-knights). Deed 1–2, 'completed at the end of a turn', gives End of your turn and End of your opponent’s turn. Deed 3–4, 'at the end of your opponent’s turn', gives End of your opponent’s turn. Deed 5–6, 'at the end of the battle round', gives End of the battle round. The alternation backtracks correctly from 'your' to 'your opponent’s'. 'until the end of …' is stripped, and phase ends do not match. Code Chivalric's options are the only ones in data.js with ends (scanned). The rule shows once in each of the three sections, To do now, in 6-bigs and 4-megas-and-a-destrier, and its Qualities are not listed (the owner: one line)."
+ },
+ "9adc283c7211b360": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "Round 2: my fix applied verbatim. GW \"select one enemy unit hit by one or more of those attacks (excluding MONSTERS and VEHICLES) … that enemy unit is suppressed\": one unit, picked, now said."
  },
  "9add50d70b6b2bc5": {
   "verdict": "ok",
@@ -13991,6 +14165,12 @@
   "at": "2026-10-21",
   "why": "NR: \"1x Knight Crusader  Hunter's Eye, Avenger gatling cannon, Heavy flamer, Titanic feet, Stormspear rocket pod, Meltagun, Rapid-fire battlecannon and Questoris heavy stubber\". All 7 weapons are on the one model line."
  },
+ "9e5835decfcd0c1e": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW (pack p2) \"Your unit has MOBILE.\""
+ },
  "9e61745367a20834": {
   "verdict": "ok",
   "by": "review:ui-b",
@@ -14260,6 +14440,12 @@
   "by": "review:ui-b",
   "at": "2026-11-05",
   "why": "unchanged since round 1. Against GW: “WHEN: Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the turn, your unit is el…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
+ },
+ "a146c8c044f66a1c": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW: models within 3\" of enemy models are eligible to fight and can target one of those units within 3\" of them and within Engagement Range of their unit."
  },
  "a15d82efd26faf53": {
   "verdict": "ok",
@@ -15155,6 +15341,12 @@
   "at": "2026-10-27",
   "why": "Neverblade's effects are on melee weapons and melee attacks (\"melee weapons equipped by the bearer … each time the bearer makes a melee attack, add 1 to the Hit roll\", FP 1.2 l.3576): the Fight phase, either turn."
  },
+ "ac26769863a5a7f3": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW EFFECT: the selected Idol is active for your unit instead of any other active for your army, even if already selected; once per battle (precedent gist \"once per battle: …\")."
+ },
  "ac29be93a958f89b": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -15244,6 +15436,12 @@
   "by": "review:literal (its fix, applied as written)",
   "at": "2026-10-17",
   "why": "24.07 (RULES['Close-quarters']): “When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: One or more of its [CLOSE-QUARTERS] weapons. One or more of its other ranged weapons.” 10.06 Close-quarters shooting: “Non-MONSTER/Non-VEHICLE Models: You can only select [CLOSE-QUARTERS] weapons to make attacks with”. The sentence ‘Can shoot with A or B, not both (Close-quarters)’ drops 24.07’s condition “When using another shooting type”, so it still offers B in close-quarters shooting, where B can’t be selected. This was point (3) of the earlier audit. The rewrite fixed the ‘all’ wording but not this. Everything else matches: “You can select one or more ranged weapons that model has” (‘can shoot with one or both / one or more of these’), the MONSTER/VEHICLE exclusion, “You must select one melee weapon”, and 24.11 “All of that model’s [EXTRA ATTACKS] weapons. One of that model’s other melee weapons, if possible.” Latent, no change needed today: `big` tests the unit’s keywords, but 24.07 says “each model … (excluding MONSTER/VEHICLE models)” and 19.03 says “models in an attached unit do not gain the keywords of other models”. No attached unit in the five lists mixes MONSTER/VEHICLE and other models, and the data has no per-model keywords."
+ },
+ "ad791eaac8152e3d": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"Each time a WORLD EATERS unit … disembarks from a TRANSPORT, until the end of the turn, add 1 to Charge rolls … and that unit’s melee weapons have the [lance] ability.\" The attack part is right. Note (not this text's fault): its +1 to Charge rolls has no line anywhere (no st/snc box), and its b box r|1deasll carries no condition (on: []); AGREE 0 keeps it out of the Damage tab. See the reader finding."
  },
  "ad7e53340b17af7c": {
   "verdict": "ok",
@@ -15497,6 +15695,12 @@
   "at": "2026-11-05",
   "why": "changed (was: \"If this unit charged this turn: melee weapons gain [DEVASTATING WOUNDS]\"). Against GW: “Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
  },
+ "af8de1fac2a962f9": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"At the start of your Command phase, you can select one … active and its effects apply to all WORLD EATERS TITANIC and WORLD EATERS MONSTER units … only select each … once per battle.\" Faithful."
+ },
  "afa25b759c672600": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -15653,6 +15857,12 @@
   "at": "2026-11-05",
   "why": "changed (was: \"Fight phase, if this model is destroyed before it has fought: on a 2+ it stays until this unit has fought\"). Against GW: “In the Fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6: - On a 2+, do not remove this model from the battlefield. Whe…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
  },
+ "b1460c8daad757cf": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW (pack p3) \"TERMINATOR SQUAD unit only. This unit has +1 OC.\""
+ },
  "b14a406f06957ff8": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -15754,6 +15964,12 @@
   "by": "review:ui-b",
   "at": "2026-11-05",
   "why": "unchanged since round 1. Against GW: “WHEN: Your Shooting phase when a KILL TEAM unit is selected to shoot. TARGET: That KILL TEAM unit. EFFECT: Your unit’s ranged attacks have: - Have +6\" R. - Have +1 S.…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
+ },
+ "b30ec7544ef0bd81": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "As Bloodletters: GW \"Models in the bearer’s unit have a Leadership characteristic of 6+.\""
  },
  "b311defc10401675": {
   "verdict": "ok",
@@ -16096,6 +16312,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "Wahapedia Runt Swarm FAQ: \"Q:When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’? A: No.\" The note quotes it exactly."
+ },
+ "b77978df7ab12b39": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"Once per battle, at the start of the Fight phase … the bearer’s unit has the Fights First ability.\" Rule 49 form."
  },
  "b79ada5a178bfa2e": {
   "verdict": "ok",
@@ -16595,6 +16817,12 @@
   "at": "2026-10-28",
   "why": "Wahapedia ds/necrons_Immortals.html ability. Under Core 19.04 a bodyguard ability applies to every model of the attached unit, the Technomancer included, and the app shows it under ALL ATTACKS · WHOLE UNIT."
  },
+ "bcfef5bdad5e7924": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW (pack p2) \"Your unit’s attacks can ignore modifiers to: BS. WS. Hit rolls and wound rolls.\""
+ },
  "bd098545a20734cb": {
   "verdict": "ok",
   "by": "review:custodes-rules",
@@ -16738,6 +16966,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "\"the Fight phase\" has no turn, so the stratagem as a whole is either turn; the Shooting phase is limited by turns."
+ },
+ "be58aeefbb1b3dad": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW: a model destroyed before it has fought is not removed, fights after the attacking unit, then is removed."
  },
  "be6c1c7a90b29a05": {
   "verdict": "ok",
@@ -18011,6 +18245,12 @@
   "at": "2026-10-30",
   "why": "unitMods: identical to the approved main version (key e12a1305f3a3b8dd) except that helpedBy(u) is no longer concatenated: the help column (an AI reading attaching Daemonic Fury / Honoured Interred to non-TARGET units) is removed. GW TARGETs checked in verify/.cache/waha: Daemonic Fury \"One BLOOD LEGIONS unit from your army\", Honoured Interred \"One friendly ADEPTUS CUSTODES DREADNOUGHT unit\"; none of the 7 units losing the line has those keywords. Stratagem mods still come only from canTarget (needs from TARGET)."
  },
+ "cdf12fbe794ca49d": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW TARGET a WORLD EATERS MONSTER/TITANIC unit just destroyed by an enemy unit; EFFECT JAKHALS or GOREMONGERS attacks that target that enemy unit can re-roll the Hit roll. Duration dropped per rule 6."
+ },
  "ce03f87fc6df3592": {
   "verdict": "ok",
   "by": "review:order",
@@ -18292,6 +18532,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "“In your Movement phase … Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability. Until the end of the turn, it is not eligible to declare a charge.” Dark Blessing is this model’s 24\" ranged weapon in the list, so the effects reach your Movement, Shooting and Charge phases."
+ },
+ "d14c16d9b2f0a461": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW pack update \"Friendly WORLD EATERS units’ melee attacks have +1 A.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 247-250)."
  },
  "d152026503d38f74": {
   "verdict": "ok",
@@ -18598,6 +18844,12 @@
   "by": "review:order",
   "at": "2026-10-30",
   "why": "na reason identical to the approved main judgement (key bf7d4ba433a820cb, review:r23-army); the only difference is the order of keywords inside the armyUnits strings (now GW order), same keyword sets."
+ },
+ "d47d8a5d57bb1053": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"…melee attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll and, if … Below Half-strength, add 1 to the Wound roll as well.\" Both conditions kept, Encephalic Diffusion form."
  },
  "d49670069f12677d": {
   "verdict": "ok",
@@ -18995,6 +19247,12 @@
   "at": "2026-10-21",
   "why": "New Recruit: \"1x Angron: Samni’arius and Spinegrinder, Warlord\", with the two profiles \"Samni’arius and Spinegrinder - strike\" and \"- sweep\". Both rows belong to the one weapon. Their A values 9/17 are Wahapedia’s 8/16 plus Relentless Rage, and the from:{A} marks say so."
  },
+ "d87dd04b06545186": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "Round 2: my fix applied verbatim (as its sumAtk)."
+ },
  "d87f99cf42f9b664": {
   "verdict": "ok",
   "by": "review:r19b-fixes",
@@ -19120,6 +19378,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ "da3d91fc404386e0": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "Round 2: import.js resolveRoster also matches a detachment by its waha name (Possessed Slaughterband), only where no known id resolves it and exactly one detachment of the faction has that name: the same rule as name/nr, and the same change in builder.js topLevel."
  },
  "da752cdf7c44dd70": {
   "verdict": "ok",
@@ -19396,6 +19660,18 @@
   "by": "review:order-2",
   "at": "2026-10-30",
   "why": "Identical judgement to the approved one on main (main 2399c6e key bf473018d2a96268); re-keyed by the reordered unit. Checked by script."
+ },
+ "dda27ae53ba197a7": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"each time your unit makes a Normal or Advance move, it can move horizontally through terrain features.\""
+ },
+ "dda6fbb0ac8752cb": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"Each enemy unit within Engagement Range of your unit must take a Battle-shock test, subtracting 1\"."
  },
  "ddaa69f573933574": {
   "verdict": "ok",
@@ -20435,6 +20711,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army...\". The Warden has no Blast weapon but can still use the no-hit-penalty half."
  },
+ "e9a192504bf98dac": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW pack update \"WORLD EATERS INFANTRY model only. The bearer has the Infiltrators ability.\" (verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 260-265)."
+ },
  "e9aa83e97e46e4bc": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -21431,6 +21713,12 @@
   "at": "2026-11-05",
   "why": "Owner-approved text restored. Note: “heals … per model killed” conflicts with rule 47 (“regains up to D3 lost wounds”) and rule 50 (“is destroyed”), but the owner’s approved wording takes precedence. Was: \"vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; each such model destroyed: regains up to D3+2 lost wounds\". GW’s numbers, keywords and conditions are kept; rules 44–51 hold."
  },
+ "f631d01f29d8e1b5": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"Add 1 to the bearer’s Toughness characteristic and the bearer has the Feel No Pain 5+ ability.\""
+ },
  "f64b2a514f47fe32": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -22036,6 +22324,12 @@
   "by": "review:custodes-rules",
   "at": "2026-10-24",
   "why": "'Your Movement phase': your. verify/derive.js derives the same label from the text (identical in verify/out/derive.json)."
+ },
+ "fdd001b9ddc5f9a6": {
+  "verdict": "ok",
+  "by": "review:we-catalog",
+  "at": "2026-11-23",
+  "why": "GW \"Feel No Pain 6+ … within 6\\\" of one or more friendly WORLD EATERS MONSTER units, or within 9\\\" of … WORLD EATERS TITANIC units … Feel No Pain 5+ instead.\" Both alternatives right."
  },
  "fddfbbd452fa700f": {
   "verdict": "ok",
