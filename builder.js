@@ -78,7 +78,8 @@ function topLevel(j, D, err){
   // (a Force Disposition by its name: one a detachment of data.js allows, GW's five)
   const DISPS = []; for(const f of Object.values(D.factions || {})) for(const d of Object.values(f.detachments || {})) for(const x of d.dispositions || []) if(!DISPS.includes(x)) DISPS.push(x);
   const F = j.roster.forces[0], sels = F.selections || [];
-  const fac = T.factions[F.catalogueId] || facByName(F);
+  // (the faction by the export's catalogue name; a catalogue id a known export has shown must be that faction's)
+  const facN = facByName(F), fac = facN && (!T.factions[F.catalogueId] || T.factions[F.catalogueId] === facN) ? facN : null;
   const top = sels.filter(s => s.type === 'upgrade');
   let battleSize = null, disposition = null; const dets = [], config = {}, seen = {};
   const KIND = { battleSize:'battle size', disposition:'disposition', detachment:'detachment' };
@@ -86,8 +87,10 @@ function topLevel(j, D, err){
   for(const t of top){
     const id = idOf(t, ['roots', 'info', 'config']), ks = kids(t);
     if(Number(t.number) !== 1){ err('selection ' + t.number + '× ' + nn(t.name) + ' not recognized'); continue; }
+    // (a known id under another name is not that selection)
+    if(T.names[id] !== undefined && T.names[id] !== nn(t.name)){ err('selection ' + nn(t.name) + ' not recognized'); continue; }
     if(T.info[id]){
-      for(const c of ks) if(!T.infoKids[idOf(c, ['infoKids'])] || kids(c).length || Number(c.number) !== 1) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');
+      for(const c of ks) if(T.infoKids[idOf(c, ['infoKids'])] !== nn(c.name) || kids(c).length || Number(c.number) !== 1) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');
       continue;
     }
     if(T.config[id]){
@@ -104,7 +107,7 @@ function topLevel(j, D, err){
     seen[kind] = true;
     for(const c of ks){
       const cid = idOf(c, [kind === 'battleSize' ? 'battleSizes' : kind === 'disposition' ? 'dispositions' : 'detachments']), nm = nn(c.name), once = Number(c.number) === 1 && !kids(c).length;
-      if(kind === 'battleSize' && T.battleSizes[cid] && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }
+      if(kind === 'battleSize' && T.battleSizes[cid] && T.names[cid] === nm && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }
       if(kind === 'disposition' && (T.dispositions[cid] === nm || (T.dispositions[cid] === undefined && DISPS.includes(nm))) && once){ if(disposition) err('disposition ' + nm + ' not recognized (a list has one Force Disposition)'); else disposition = nm; continue; }
       // (a detachment no known export has shown: the one detachment of the faction with exactly that name, GW's or New Recruit's spelling of it)
       const dn = kind === 'detachment' && FAC && !T.detachments[cid] ? Object.keys(FAC.detachments).filter(k => [FAC.detachments[k].name, FAC.detachments[k].nr].filter(Boolean).some(x => nn(x) === nm)) : [];
@@ -472,6 +475,11 @@ function finish(B, army, u, units, out){
       const kind = weaponKind(prof), hit = rowBy(P[i][kind], nn(prof.name), null);
       if(hit.length === 1){ const j = P[i][kind].indexOf(hit[0]); seen.set(kind + '|' + j, { kind, j, row:hit[0], n:0, part:i, ref:true }); }
     }
+    // (a weapon profile on the part's own selection or on a model selection itself, not on a weapon's: New Recruit carries a weapon on
+    // its own selection, so this is not placed on a models line; never left out in silence: refused, the weapon named)
+    { const own = s0 => { for(const prof of weaponProfiles(s0)) if(!/\(ref\. only\)/i.test(prof.name)) B.err('weapon ' + nn(prof.name) + ' on unit ' + parts.map(x => nn(x.name)).join(' + ') + ' not placed: its profile is on the selection of ' + nn(s0.name) + ' itself, not on a weapon’s selection (not imported)');
+        for(const c of kids(s0)) if(c.type === 'model') own(c); else { const d = x => { for(const y of kids(x)){ if(y.type === 'model') own(y); else d(y); } }; d(c); } };
+      own(p); }
     walk(p);
     for(const kind of ['ranged', 'melee']) [...seen.values()].filter(x => x.kind === kind).sort((a, b) => a.j - b.j).forEach(x => rows[kind].push(x));
   });

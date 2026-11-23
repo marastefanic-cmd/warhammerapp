@@ -711,11 +711,11 @@
     },
     "pts": {
      "source": "newrecruit",
-     "note": "points of the whole attached unit (verify/nr.js against the New Recruit export or PDF)"
+     "note": "points of the whole attached unit (verify/nr.js against the New Recruit export or PDF); GW’s costs on the datasheet page for that copy and unit size, with its “per <item>” wargear costs, less the enhancement (verify/points.js, the gate step points)"
     },
     "ptsNote": {
      "source": "newrecruit",
-     "note": "how the points add up, from the New Recruit PDF"
+     "note": "how the points add up, from the New Recruit PDF; GW’s costs on the datasheet page for that copy and unit size, with its “per <item>” wargear costs, less the enhancement (verify/points.js, the gate step points)"
     },
     "copies": {
      "source": "newrecruit",

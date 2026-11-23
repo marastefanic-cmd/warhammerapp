@@ -133,7 +133,7 @@ for(const [p] of pages){
 }
 md.push('');
 if(accept && wahaOk){ fs.mkdirSync(BASE_WAHA, { recursive:true }); for(const [p] of pages) if(fs.existsSync(path.join(wdir, p + '.txt'))) fs.copyFileSync(path.join(wdir, p + '.txt'), path.join(BASE_WAHA, p + '.txt')); }
-// the app's rules texts and weapon choices against the new pages
+// the app's rules texts and weapon choices against the new pages (VERIFY_CACHE: every page reader of verify/ reads today's pages there)
 const env = Object.assign({}, process.env, { VERIFY_CACHE:LATEST, VERIFY_OUT:path.join(LATEST, 'out') });
 fs.mkdirSync(path.join(LATEST, 'out'), { recursive:true });
 const t = run(process.execPath, [path.join(V, 'texts.js'), '--quiet', '--out', path.join(LATEST, 'out/texts.json'), '--provenance', path.join(LATEST, 'out/provenance.json')], { cwd:ROOT, env });
@@ -153,6 +153,17 @@ else if(cr.failures.length){
   md.push('verify/choice.js against the new datasheet pages: **' + cr.failures.length + ' weapons changed between pick-one and fire-all:**', '', ...cr.failures.map(f => '- ' + f.where + ': ' + f.detail), '');
   changes.push({ source:'wahapedia', kind:'choice', relevant:true, count:cr.failures.length });
 } else md.push('verify/choice.js against the new datasheet pages: every pick-one / fire-all still matches.', '');
+
+// every datasheet fact the app shows, against the new datasheet pages: profile numbers, keywords, ability words, the faction catalogues
+// (index, UNIT COMPOSITION, WARGEAR OPTIONS, costs) and every list unit's points
+for(const [st, what] of [['numbers', 'profile numbers'], ['keywords', 'keywords'], ['words', 'ability texts'], ['catalog', 'faction catalogue rows'], ['points', 'list units’ points']]){
+  const r = run(process.execPath, [path.join(V, st + '.js')], { cwd:ROOT, env }), out = ((r.stdout || '') + (r.stderr || '')).trim().split('\n');
+  if(r.status === 0) md.push('verify/' + st + '.js against the new datasheet pages: every one of the ' + what + ' still matches.', '');
+  else if(/^FAIL |failure\(s\)/.test(out[0] || '')){
+    md.push('verify/' + st + '.js against the new datasheet pages: **the ' + what + ' no longer match:**', '', ...out.slice(0, 40).map(l => '- ' + l.replace(/^\s*-?\s*/, '')), '');
+    changes.push({ source:'wahapedia', kind:st, relevant:true, count:out.length - 1 });
+  } else problems.push('verify/' + st + '.js could not run against the new pages: ' + out.slice(-2).join(' '));
+}
 
 /* ---------- report ---------- */
 const relevantChanges = changes.filter(x => x.relevant);

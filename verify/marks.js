@@ -8,8 +8,9 @@
          what it marks: a weapon keyword in brackets ("[SUSTAINED HITS 1]"), a characteristic by GW's abbreviation or its name ("+1 A",
          "4+ InSv", "Attacks"); a number it adds is in the words (verify/numbers.js holds a keyword's number, verify/invariants.js a
          footnote's);
-     M3  stands on a value that differs from the datasheet's own (the DATASHEETS row's value, which verify/numbers.js holds to GW's
-         datasheet page; the value shown, to New Recruit's export, verify/nr.js): a mark on an unchanged value fails;
+     M3  stands on a value that differs from the datasheet's own: the DATASHEETS row of the entry's datasheet with that name (which
+         verify/numbers.js holds to GW's datasheet page; the value shown, to New Recruit's export, verify/nr.js) has another value, and
+         does not have a marked keyword: a mark on an unchanged value fails;
      M4  and the other way round: a value or weapon keyword of a list's row that is not its datasheet row's has a mark.
    Also the namer verify/from-json.js uses for a list of a faction with no catalogue (namesFor): which rules of the list explain a value
    the export shows otherwise than GW's datasheet, by data.js BUILD_INDEX marks (what each rule changes, learned from the lists' marks and
@@ -81,7 +82,7 @@ module.exports = { sourcesOf, says, namesFor, CH, isChar };
 if(require.main !== module) return;
 
 const { loadData, writeJSON } = require('./lib');
-const D = loadData(), fails = [], counts = { marks:0, rows:0, own:0 };
+const D = loadData(), fails = [], counts = { marks:0, rows:0, own:0, m3:0 };
 const kwU = k => String(k).toUpperCase();
 // (the lists as data.js stores them, ARMIES: a unit entry's row holds only what is the list's own, beside its datasheet row)
 const RAW = (() => { const w = {}; new Function('window', fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8').replace(/\nreturn \{ version:VERSION,/, '\nreturn { RAW:{ ARMIES }, version:VERSION,'))(w); return w.WH_DATA.RAW.ARMIES; })();
@@ -96,8 +97,6 @@ for(const a of D.armies) for(const u of a.units){
       if(!src){ fails.push('M1 ' + row + ' ' + f + ': marked ' + n + ', which is no ability of the unit, army rule, detachment rule or enhancement of the list'); continue; }
       if(!says(src.text, f)) fails.push('M2 ' + row + ' ' + f + ': GW’s words of ' + n + ' do not name ' + (isChar(f) ? 'the characteristic ' + f : 'the weapon keyword [' + f + ']'));
     }
-    // M3: the datasheet's own value of a marked characteristic (the row's own, written where no list shows it unchanged) is another
-    for(const f of Object.keys(r.from || {})) if(isChar(f) && r.own && f in r.own && String(r.own[f]) === String(r[f])) fails.push('M3 ' + row + ' ' + f + ': marked, but ' + r[f] + ' is the datasheet’s own value');
   }
   // M4: what the list's entry holds of its own on a row that names a datasheet row (a value, its keywords) is marked, or has its reason
   // (why, over: verify/tables.js)
@@ -107,10 +106,18 @@ for(const a of D.armies) for(const u of a.units){
     const full = kind === 'stats' ? ['M', 'T', 'Sv', 'W', 'Ld', 'OC'].every(f => f in r) : ['range', 'A', 'S', 'AP', 'D'].every(f => f in r);
     if(full) continue;   // (a row in full: the list's own row, the datasheet has none of it)
     const row = where + ' · ' + kind + ' · ' + (r.group ? r.group + ' - ' : '') + r.name, why = Object.assign({}, r.why, r.over), from = r.from || {};
+    // M3: a marked value is not the datasheet's own: the DATASHEETS row of the entry's datasheet (its part's, by the row's who) with
+    // that name and group has another value, and does not have a marked keyword
+    { const nm = kind === 'stats' ? String(r.name).replace(/ ×\d+$/, '') : r.name, keys = [].concat(ru.ds), sheets = keys.map(k => D.datasheets[k]).filter(Boolean);
+      const mine = sheets.filter(s0 => keys.length === 1 || !r.who || s0.name === r.who || kind === 'stats');
+      const base = mine.flatMap(s0 => (s0[kind] || []).filter(x => x.name === nm && (r.group === undefined || (x.group || null) === (r.group || null))));
+      for(const f of Object.keys(from)){ counts.m3++;
+        if(isChar(f)){ if(f in r && base.length && base.every(b => f in b && String(b[f]) === String(r[f]))) fails.push('M3 ' + row + ' ' + f + ': marked ' + [].concat(from[f]).join(', ') + ', but ' + r[f] + ' is the datasheet’s own value'); }
+        else if(base.length && base.every(b => (b.kw || []).some(k => kwU(k) === kwU(f)))) fails.push('M3 ' + row + ' [' + f + ']: marked ' + [].concat(from[f]).join(', ') + ', but the datasheet’s row has the keyword'); } }
     for(const f of Object.keys(CH)) if(f in r){ counts.own++; if(!(f in from) && !(f in why)) fails.push('M4 ' + row + ' ' + f + ': ' + r[f] + ' is the list’s own value, and no rule is marked'); }
     if('kw' in r){ counts.own++; if(!Object.keys(from).some(f => !isChar(f)) && !('kw' in why)) fails.push('M4 ' + row + ' keywords: the list’s own, and no rule is marked'); }
   }
 }
 writeJSON(path.join(ROOT, 'verify/out/marks.json'), { checked:counts, failures:fails });
 if(fails.length){ console.log('FAIL marks: ' + fails.length + ' problem(s)\n' + fails.map(x => ' - ' + x).join('\n')); process.exit(1); }
-console.log('marks: ' + counts.marks + ' "+" marks on ' + counts.rows + ' rows of the lists each name a rule the unit has (M1) whose GW words name what it marks (M2), on a value that is not the datasheet’s own (M3); the ' + counts.own + ' values and keyword lists a list’s row holds of its own are each marked or have their reason (M4)');
+console.log('marks: ' + counts.marks + ' "+" marks on ' + counts.rows + ' rows of the lists each name a rule the unit has (M1) whose GW words name what it marks (M2), on a value that is not its DATASHEETS row’s own (M3, ' + counts.m3 + ' compared); the ' + counts.own + ' values and keyword lists a list’s row holds of its own are each marked or have their reason (M4)');

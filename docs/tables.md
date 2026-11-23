@@ -263,9 +263,11 @@ fetched or re-hosted any more. What stood on it, and what it stands on now:
 | Force Dispositions | the icons in the detachment's heading on Wahapedia's faction page (`verify/dispositions.js`) |
 | pick one / all fire | Wahapedia's pick-one marker and New Recruit's ➤ (`verify/choice.js`) |
 | a catalogue's datasheet list, models, wargear, points | Wahapedia's faction page index and each datasheet page's UNIT COMPOSITION, WARGEAR OPTIONS and costs (`verify/catalog.js`, `verify/waha-catalog.js`) |
-| the gate step `bsdata` (every unit fact a third time) | `nr` (the export or PDF), `numbers`, `keywords`, `words`, `bases` (GW's datasheet), `marks` |
+| the gate step `bsdata` (every unit fact a third time) | `nr` (the export or PDF), `numbers`, `keywords`, `words`, `bases` (GW's datasheet), `marks`, and `points` (every list unit's points, less its enhancement, GW's costs on its datasheet page for that copy and unit size, with GW's "per <item>" wargear costs) |
 
-Known limits: the limits of a wargear choice (its minimum and maximum) on the three catalogues built before that day are New Recruit's
+Known limits: the models and wargear of a unit of the 18 lists of factions with no catalogue are held to New Recruit's export only (no
+script holds their legality to GW's UNIT COMPOSITION and WARGEAR OPTIONS; the phone imports only units a committed export holds); the
+limits of a wargear choice (its minimum and maximum) on the three catalogues built before that day are New Recruit's
 as recorded then, held to GW's page by name only; a value New Recruit prints otherwise than GW's datasheet (`BUILD_INDEX.gw`: what an export or PDF of the owner's shows,
 `verify/deviations-nr.json`, and seven datasheets recorded in `verify/sources/nr-values.json`) is built with GW's value and a note
 naming both, as for points; any other value no rule explains is refused, named.

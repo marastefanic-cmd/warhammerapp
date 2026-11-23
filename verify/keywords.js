@@ -44,7 +44,7 @@ for(const [id, s] of Object.entries(R.D.datasheets || {})){
 // a declared pack section exclusion (packExclude): its pack is cached and its CONTENTS name the section
 for(const x of O.packExclusionsOk()){ const i = DEVS.findIndex(d => JSON.stringify(d) === JSON.stringify(x.d)); if(x.ok) used.add(i); else fails.push('verify/deviations-keywords.json #' + i + ': the pack ' + x.d.pack + ' has no section ' + x.d.section + ' (it has: ' + x.sections.join(', ') + ')'); }
 DEVS.forEach((d, i) => { if(!used.has(i)) fails.push('verify/deviations-keywords.json #' + i + ' (' + d.army + '/' + d.unit + ' ' + d.kw + '): nothing matches it'); else if(!d.reason || !d.evidence) fails.push('verify/deviations-keywords.json #' + i + ': no reason or evidence'); });
-writeJSON(path.join(ROOT, 'verify/out/keywords.json'), { units, keywords:kws, declared:used.size, fails });
+writeJSON(path.join((process.env.VERIFY_OUT ? path.resolve(process.env.VERIFY_OUT) : path.join(ROOT, 'verify/out')), 'keywords.json'), { units, keywords:kws, declared:used.size, fails });
 // KO, PR: the keywords and the rules only some models of a unit have (kwOnly: { keyword: "Model and Model" }, partialRules: { rule: "Model" }),
 // each entry standing on GW's pages (or BSData): every model it names has it, and some model of the unit does not. A model has a keyword
 // where its part's page prints it on the KEYWORDS line, a page of the unit prints it for that model ("ASPIRING SORCERER: PSYKER", the model's

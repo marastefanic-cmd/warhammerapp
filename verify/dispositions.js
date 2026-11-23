@@ -19,7 +19,7 @@ const txt = s => String(s).replace(/<[^>]+>/g, '').replace(/&rsquo;|&#8217;|&apo
 // { 'detachment name (lower case)': [dispositions] }, and byFaction { faction: { detachment name: [...] } }; a name two factions' pages
 // give different dispositions is in `clash` (the check fails on one data.js has)
 function byDetachment(){
-  const out = {}, byFaction = {}, byName = {}, clash = new Set(), dir = path.join(ROOT, 'verify/.cache/waha');
+  const out = {}, byFaction = {}, byName = {}, clash = new Set(), dir = path.join((process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(ROOT, 'verify/.cache')), 'waha');
   const FJ = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8'));
   for(const fac of Object.keys(FJ).filter(k => k[0] !== '_')){
     let html; try { html = fs.readFileSync(path.join(dir, fac + '.html'), 'utf8'); } catch(e){ continue; }

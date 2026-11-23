@@ -114,7 +114,9 @@ function resolveRoster(j, D, opt){
   if(R.forces.length !== 1 || (R.forces[0].forces || []).length){ err('a list with ' + R.forces.length + ' forces not recognized (the app takes one Army Roster)'); return fail(); }
   const F = R.forces[0];
   const sels = F.selections || [];
-  const fac = T.factions[F.catalogueId] || facByName(F);
+  // (the faction by the export's catalogue name; a catalogue id a known export has shown must be that faction's: an id never stands in
+  // for a name)
+  const facN = facByName(F), fac = facN && (!T.factions[F.catalogueId] || T.factions[F.catalogueId] === facN) ? facN : null;
   const top = sels.filter(s => s.type === 'upgrade'), roots = sels.filter(s => s.type !== 'upgrade');
   if(!fac){
     // nothing of an unknown faction can resolve: name it, and what adding it would take
@@ -132,8 +134,10 @@ function resolveRoster(j, D, opt){
   for(const t of top){
     const id = idOf(t, ['roots', 'info', 'config']), kids = t.selections || [];
     if(Number(t.number) !== 1){ err('selection ' + t.number + '× ' + nn(t.name) + ' not recognized'); continue; }
+    // (a known id under another name is not that selection)
+    if(T.names[id] !== undefined && T.names[id] !== nn(t.name)){ err('selection ' + nn(t.name) + ' not recognized'); continue; }
     if(T.info[id]){
-      for(const c of kids) if(!T.infoKids[idOf(c, ['infoKids'])] || (c.selections || []).length || Number(c.number) !== 1) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');
+      for(const c of kids) if(T.infoKids[idOf(c, ['infoKids'])] !== nn(c.name) || (c.selections || []).length || Number(c.number) !== 1) err('selection ' + nn(c.name) + ' in ' + nn(t.name) + ' not recognized');
       continue;
     }
     if(T.config[id]){
@@ -151,7 +155,7 @@ function resolveRoster(j, D, opt){
     for(const c of kids){
       const cid = idOf(c, [kind === 'battleSize' ? 'battleSizes' : kind === 'disposition' ? 'dispositions' : 'detachments']), nm = nn(c.name);
       const once = Number(c.number) === 1 && !(c.selections || []).length;
-      if(kind === 'battleSize' && T.battleSizes[cid] && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }
+      if(kind === 'battleSize' && T.battleSizes[cid] && T.names[cid] === nm && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }
       if(kind === 'disposition' && (T.dispositions[cid] === nm || (T.dispositions[cid] === undefined && DISPS.includes(nm))) && once){ if(disposition) err('disposition ' + nm + ' not recognized (a list has one Force Disposition)'); else disposition = nm; continue; }
       // (a detachment no known export has shown: the one detachment of the faction with exactly that name, GW's or New Recruit's spelling of it)
       const dn = kind === 'detachment' && !T.detachments[cid] ? Object.keys(FAC.detachments).filter(k => [FAC.detachments[k].name, FAC.detachments[k].nr].filter(Boolean).some(x => nn(x) === nm)) : [];
@@ -523,7 +527,7 @@ function textToExport(T0, D, err){
   };
   const sel = [], out = { roster:{ name:T0.name || '', costs:[{ name:'pts', value:T0.total || 0 }], costLimits:T.limits[T.battleSizes[bs]] ? [{ name:'pts', value:T.limits[T.battleSizes[bs]] }] : [], forces:[{ catalogueId:cat, catalogueName:T0.faction, selections:sel }] } };
   let uid = 0;
-  sel.push({ id:'b', name:'Battle Size', entryId:rootOf('battleSize'), number:1, type:'upgrade', selections:[{ id:'b1', name:T.battleSizes[bs], entryId:bs, number:1, type:'upgrade' }] });
+  sel.push({ id:'b', name:'Battle Size', entryId:rootOf('battleSize'), number:1, type:'upgrade', selections:[{ id:'b1', name:T.names[bs] || T.battleSizes[bs], entryId:bs, number:1, type:'upgrade' }] });
   sel.push({ id:'d', name:'Detachment', entryId:rootOf('detachment'), number:1, type:'upgrade', selections:dets.map((id, i) => ({ id:'d' + i, name:F.detachments[T.detachments[id].split('/')[1]].name, entryId:id, number:1, type:'upgrade' })) });
   sel.push({ id:'f', name:'Force Disposition', entryId:rootOf('disposition'), number:1, type:'upgrade', selections:[{ id:'f1', name:T.dispositions[disp], entryId:disp, number:1, type:'upgrade' }] });
   for(const g of groups){
@@ -609,7 +613,8 @@ function make(kept, D, opt){
   if(bad) return { ok:false, errors:['not a New Recruit export (' + bad + ')'] };
   // (the list's name the player gave in the import box, opt.name: a text in format B names none)
   if(opt && typeof opt.name === 'string' && opt.name.trim()) j = Object.assign({}, j, { roster:Object.assign({}, j.roster, { name:opt.name.trim() }) });
-  const fac = ((D.nrIds || {}).factions || {})[(j.roster.forces[0] || {}).catalogueId] || (n => { const hit = Object.keys(D.factions || {}).filter(k => nn(D.factions[k].name).toLowerCase() === nn(n).toLowerCase()); return hit.length === 1 ? hit[0] : null; })(String((j.roster.forces[0] || {}).catalogueName || '').split(' - ').pop());
+  const facN = (n => { const hit = Object.keys(D.factions || {}).filter(k => nn(D.factions[k].name).toLowerCase() === nn(n).toLowerCase()); return hit.length === 1 ? hit[0] : null; })(String((j.roster.forces[0] || {}).catalogueName || '').split(' - ').pop());
+  const facI = ((D.nrIds || {}).factions || {})[(j.roster.forces[0] || {}).catalogueId], fac = facN && (!facI || facI === facN) ? facN : null;
   if(fac && WB().catalogued(D, fac)){
     // (a list kept by an earlier version, whose kept export has no profiles: not built from half of it)
     const prof = s => (s.profiles || []).length || (s.selections || []).some(prof);

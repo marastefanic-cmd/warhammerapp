@@ -1,26 +1,28 @@
 #!/usr/bin/env node
-/* verify/from-json.js: a New Recruit JSON export (a BattleScribe roster whose entryIds are BSData ids) -> the list in data.js,
-   with no transcription by hand. What it writes, and where each part comes from:
+/* verify/from-json.js: a New Recruit JSON export (the owner's, verify/sources/nr-json) -> the list in data.js, with no transcription
+   by hand. BSData is not read (the owner's decision, 22 Nov 2026). What it writes, and where each part comes from:
 
      the list        name, points, battle size, Force Disposition, detachments: the export's top-level selections
-     each unit       found by its BSData id (the last id of each entryId; every profile and rule it carries is looked up by
-                     its own id in the BSData clone at the repo's pin, verify/.cache/bsdata, and must be there under the same
-                     name): name, role (the datasheet's primary category), points, copies, leader / support and the points of
-                     each part, enhancement / upgrade / Warlord, models lines with their wargear, the weapons each line
-                     carries, stat rows, weapon rows (group, profile, who carries it, ×N), abilities (name, tag, who),
-                     Rules line, keywords: the export's selections and profiles, which are BSData's (verify/bsdata.js then
-                     rebuilds every unit from BSData itself, modifiers included, and compares)
+     each unit       read from the export's own selections and profiles, New Recruit's print of the list: name, role (its primary
+                     category), points, copies, leader / support and the points of each part, enhancement / upgrade / Warlord, models
+                     lines with their wargear, the weapons each line carries, stat rows, weapon rows (group, profile, who carries it,
+                     ×N), abilities (name, tag, who), Rules line, keywords. Every value is then compared with GW's datasheet
+                     (Wahapedia's page): where they differ, a rule of the list is at work (its "+" mark) or New Recruit prints
+                     another value than GW (GW's is written, and declared, verify/deviations-nr.json). Its DATASHEETS row is found by
+                     an id a known export has shown (data.js NR_IDS datasheets), else by its exact New Recruit name
      wording         each ability's text with its markup from the cached Wahapedia datasheet (verify/waha-words.js), found
-                     by BSData's words; where BSData's words differ from Wahapedia's (which transcribes GW's codex), the
+                     by New Recruit's words; where they differ from Wahapedia's (which transcribes GW's codex), the
                      datasheet's text by the ability's name, GW's words winning: listed as a deviation to declare (the page
                      read by the shared page reader, verify/gw-order.js; verify/tables.js --write, which it ends with, gives
                      every ability the page's words, gwWords, as verify/words.js checks)
      faction rows    a faction or detachment data.js lacks: army rules (the ones the units name), detachment rule,
                      enhancements and stratagems from the Wahapedia faction page (verify/.cache/waha/<faction>.txt, the
-                     codex as Wahapedia transcribes it); Force Dispositions from BSData (verify/dispositions.js)
+                     codex as Wahapedia transcribes it); Force Dispositions from the detachment's heading there (verify/dispositions.js)
      labels          phases, turn, needs, tags: verify/derive.js's fixed rules, on the words just written (never by hand);
                      where derive.js cannot derive one, or its reading is not the signed-off one (verify/derive-unread.json), the label is left out and listed
-     "+" marks       verify/bsdata.js + verify/write-grants.js (BSData's modifiers), as for every list
+     "+" marks       the rule New Recruit prints beside the profile, or data.js BUILD_INDEX marks records for that value
+                     (verify/marks.js namesFor; builder.js's marks for a catalogued faction), written by verify/write-grants.js;
+                     the gate step marks holds each to GW's words of the rule
      the list        of a catalogued faction (data.js has its whole catalogue): the entry builder.js builds from the export and the
                      tables, as the phone's import does (WH_BUILDER.build; one builder, docs/catalog.md), this file's source line on it;
                      this file's own reading of the list is then a check, and the run fails where the two differ. Of another faction:

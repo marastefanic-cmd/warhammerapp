@@ -15,7 +15,7 @@ const sing = s => n(s).split(' ').map(w => w.replace(/ies$/, 'y').replace(/(?<=[
 
 module.exports = ROOT => {
   const FJ = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8'));
-  const html = faction => fs.readFileSync(path.join(ROOT, 'verify/.cache/waha', faction + '.html'), 'utf8');
+  const html = faction => fs.readFileSync(path.join((process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(ROOT, 'verify/.cache')), 'waha', faction + '.html'), 'utf8');
   function index(faction){
     const h = html(faction), out = [], seen = new Set();
     for(const m of h.matchAll(/((?:<img class="tooltip logo2" title="([^"]*)"[^>]*>)?)<a href="\/wh40k11ed\/factions\/([^\/"]+)\/([^"#\/?]+)" class="cnClr">([^<]*)<\/a>/g)){

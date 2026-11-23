@@ -99,7 +99,8 @@ foreground), so it never needs reinstalling.
 ## Where the text comes from
 
 - Units, weapons, abilities, points: the New Recruit export or PDF, checked against GW's datasheets as
-  Wahapedia transcribes them. BSData (the community data New Recruit is built from) was a third source
+  Wahapedia transcribes them (profile numbers: `verify/numbers.js`; keywords: `verify/keywords.js`; ability words:
+  `verify/words.js`; points, per copy and unit size with GW's wargear costs: `verify/points.js`). BSData (the community data New Recruit is built from) was a third source
   until 22 Nov 2026; the app no longer reads it (docs/tables.md, Sources).
 - Base sizes: as the New Recruit PDF prints them (the owner's rule, 18 Oct 2026), also where GW's
   base size guide lists another size for a model.

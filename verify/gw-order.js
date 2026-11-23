@@ -158,7 +158,7 @@ function wahaSectionsOf(page, WW, opts) {
 const selectsFrom = (text, box) => { const t = String(text).replace(/\*\*/g, ''), b = box.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   return new RegExp('select one of the abilities in the ' + b + ' section', 'i').test(t) || (/ abilities$/i.test(box) && new RegExp('select one ' + b.replace(/ abilities$/i, '') + ' ability\\b', 'i').test(t)); };
 module.exports = function make(ROOT) {
-  const DIR = path.join(ROOT, 'verify/.cache/waha/ds');
+  const DIR = path.join((process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(ROOT, 'verify/.cache')), 'waha/ds');
   const FJ = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8')); } catch (e) { return {}; } })();
   const files = fs.existsSync(DIR) ? fs.readdirSync(DIR) : [];
   const lower = new Map(files.map(f => [f.toLowerCase(), f]));
@@ -477,7 +477,7 @@ module.exports = function make(ROOT) {
   function keywordIndex(fac) {
     if (IDX.has(fac)) return IDX.get(fac);
     let out = {};
-    try { const t = fs.readFileSync(path.join(ROOT, 'verify/.cache/waha', fac + '.html'), 'utf8').replace(/<[^>]+>/g, ' ').replace(/&rsquo;/g, "'").replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
+    try { const t = fs.readFileSync(path.join((process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(ROOT, 'verify/.cache')), 'waha', fac + '.html'), 'utf8').replace(/<[^>]+>/g, ' ').replace(/&rsquo;/g, "'").replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
       const m = /((?:[A-Z][A-Z’'\- ]+ \(\d+\); )+[A-Z][A-Z’'\- ]+ \(\d+\)) The keywords presented/.exec(t);
       if (m) out = Object.fromEntries(m[1].split('; ').map(x => { const q = /^(.*) \((\d+)\)$/.exec(x.trim()); return [q[1].trim().replace(/’/g, "'"), +q[2]]; })); } catch (e) {}
     IDX.set(fac, out); return out;

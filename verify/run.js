@@ -28,9 +28,11 @@
 //   derive      verify/derive.js: phases, turn, needs and tags derived from the rules text by fixed rules; every label
 //               that agrees with data.js today must keep agreeing (verify/derive-agreed.json); differences are listed, not failed
 //   choice      verify/choice.js: every weapon with several profiles is "pick one" or "all fire" as New Recruit's exports and Wahapedia mark it
-//   marks       verify/marks.js: every "+" mark names a rule the unit has whose GW words name what it marks, on a value that is not the
-//               datasheet's own; no changed value is unmarked (it stands where the retired bsdata step held the marks to BSData's modifiers)
+//   marks       verify/marks.js: every "+" mark names a rule the unit has whose GW words name what it marks, on a value that is not its
+//               DATASHEETS row's own; no changed value is unmarked (it stands where the retired bsdata step held the marks to BSData's modifiers)
 //   dispositions  verify/dispositions.js: each detachment's Force Dispositions are the ones GW prints in its heading (Wahapedia's faction page)
+//   points      verify/points.js: every list unit's points (each part, each copy), less its enhancement, are GW's costs on its datasheet
+//               page (Wahapedia) for that copy and unit size, with GW's "per <item>" wargear costs
 //   bases       verify/bases.js: every model's base is GW's, as GW's base size guide (Event Companion) prints it; a row the
 //               guide has under another name, or not at all, declared in verify/deviations-bases.json
 //   catalog     verify/catalog.js: every faction catalogue (verify/sources/catalog: every current datasheet and detachment of a faction)
@@ -99,6 +101,7 @@ step('derive', ['verify/derive.js']);
 step('choice', ['verify/choice.js']);
 step('marks', ['verify/marks.js']);   // every "+" mark: a rule the unit has, whose GW words name what it marks
 step('dispositions', ['verify/dispositions.js']);   // each detachment's Force Dispositions against its heading on Wahapedia's faction page
+step('points', ['verify/points.js']);   // every list unit's points against GW's costs on its datasheet page
 step('bases', ['verify/bases.js']);   // every base size against GW's base size guide
 step('catalog', ['verify/catalog.js']);   // every faction catalogue (verify/sources/catalog) against GW's datasheets (Wahapedia) and the lists
 step('nr', ['verify/nr.js']);

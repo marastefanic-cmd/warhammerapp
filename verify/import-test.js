@@ -133,8 +133,8 @@ if(L('6-bigs')){
   neg('over the points limit', '6-bigs', j => { add(j, byName(L('6-bigs'), 'Knight Paladin'), 'p3'); }, [PL]);
   // an export that names no points limit (no costLimits, as fellhammer-siege-task-force's): the battle size's limit still holds
   neg('over the points limit, no costLimits in the export', '6-bigs', j => { delete j.roster.costLimits; add(j, byName(L('6-bigs'), 'Knight Paladin'), 'p3'); }, [PL]);
-  neg('two battle sizes', '6-bigs', j => { const b = tops(j).find(s => s.name === 'Battle Size'); b.selections.push(Object.assign(clone(b.selections[0]), { name:'Incursion (1000 Point limit)' })); },
-    ['battle size Incursion (1000 Point limit) not recognized (a list has one battle size)']);
+  neg('two battle sizes', '6-bigs', j => { const b = tops(j).find(s => s.name === 'Battle Size'); b.selections.push(clone(b.selections[0])); },
+    ['battle size Strike Force (2000 Point limit) not recognized (a list has one battle size)']);
   neg('an unknown battle size', '6-bigs', j => { const b = tops(j).find(s => s.name === 'Battle Size').selections[0]; b.name = 'Apocalypse'; b.entryId = b.entryId.replace(/[^:]+$/, 'aaaa-0000-0000-0000'); },
     ['battle size Apocalypse not recognized']);
   neg('a disposition the detachment does not allow', '6-bigs', j => { const d = tops(j).find(s => s.name === 'Force Disposition').selections[0]; const fc = D.factions['imperial-knights'].detachments['freeblade-company'].dispositions;
@@ -237,6 +237,14 @@ if(L('6-bigs')){
   const r3 = run(j3);
   ok(!r3.ok, 'a known id under another name: ' + JSON.stringify(r3.ok ? 'imported' : r3.errors));
   report.push('negative: a known disposition id under another name → ' + (r3.ok ? 'IMPORTED' : r3.errors.join('; ')));
+  // a known id under another name, for every top-level thing (the reviewer's cases): a battle size, the faction, a config and an info parent
+  const ren = (what, f, want) => { const j5 = clone(L('6-bigs')); f(j5); const r5 = run(j5);
+    ok(!r5.ok && (!want || JSON.stringify(r5.errors) === JSON.stringify(want)), 'a known id under another name (' + what + '): ' + JSON.stringify(r5.ok ? 'imported' : r5.errors) + (want ? ', want ' + JSON.stringify(want) : ''));
+    report.push('negative: a known id under another name (' + what + ') → ' + (r5.ok ? 'IMPORTED' : r5.errors.join('; '))); };
+  ren('the Strike Force id named Incursion (1000 Point limit)', j5 => { tops(j5).find(s => s.name === 'Battle Size').selections[0].name = 'Incursion (1000 Point limit)'; }, ['battle size Incursion (1000 Point limit) not recognized']);
+  ren('the catalogue id with the name Xenos - Necrons', j5 => { j5.roster.forces[0].catalogueName = 'Xenos - Necrons'; }, null);
+  ren('Code Chivalric X', j5 => { tops(j5).find(s => s.name === 'Code Chivalric').name = 'Code Chivalric X'; }, null);
+  ren('Show/Hide Options X', j5 => { tops(j5).find(s => s.name === 'Show/Hide Options').name = 'Show/Hide Options X'; }, null);
   // a unit under an id no export has shown (a faction with no catalogue: its units are copied by their ids' signature): refused, named
   const j4 = clone(L('6-bigs')); reId(byName(j4, 'Knight Errant'), 7);
   const r4 = run(j4);

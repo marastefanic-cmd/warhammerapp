@@ -22,7 +22,8 @@
                 each of its rows is a row of the catalogue with the same values, but for what a rule of the list changes (from)
      composition  a row's models are GW's UNIT COMPOSITION: each "N[-M] <model>" line of the datasheet page is the row's model of that
                 name with that minimum and maximum (a group's, where New Recruit counts a model line inside a group; several model
-                entries New Recruit keeps for one of GW's lines, "Termagant w/ shardlauncher", together allow GW's numbers)
+                entries New Recruit keeps for one of GW's lines, "Termagant w/ shardlauncher": their group's minimum and maximum GW's
+                exactly, no entry allowing more models than the line)
      options    a row's wargear choices are GW's: every choice is named in the page's UNIT COMPOSITION ("equipped with") or WARGEAR
                 OPTIONS, or is a weapon or ability row of the datasheet (which verify/numbers.js and verify/words.js hold to the page);
                 everything "equipped with" names is a choice or a row. The limits of a choice (its minimum and maximum) are New
@@ -189,7 +190,12 @@ function main() {
         if (exact && C.filter(c => base(c.model) === the(g.model)).length === 1) { const [a, b] = rng(exact); if (a === g.min && b === g.max) continue; }
         // (New Recruit's model entries for one of GW's lines, "<model> w/ <weapon>": together they allow GW's numbers)
         const vs = C.filter(c => base(c.model) === the(g.model));
-        if (vs.length > 1 && vs.reduce((t, c) => t + c.min, 0) <= g.min && vs.reduce((t, c) => t + c.max, 0) >= g.max) { rep.differences.push({ id, kind: 'variants', what: 'composition ' + g.model }); continue; }
+        // (no wider than GW's: where the entries are counted in a group, the group's minimum and maximum are GW's line's exactly; no one
+        // entry allows more models than the line; without a group the entries' minimums and maximums add up to at most and at least GW's)
+        const grouped = vs.filter(c => c.groupMin !== undefined), inGroup = grouped.length === vs.length && new Set(vs.map(c => c.group)).size === 1;
+        const fits = vs.length > 1 && vs.every(c => c.max != null && c.max <= g.max) && (inGroup ? vs[0].groupMin === g.min && vs[0].groupMax === g.max
+          : !grouped.length && vs.reduce((t, c) => t + c.min, 0) <= g.min && vs.reduce((t, c) => t + c.max, 0) >= g.max);
+        if (fits) { rep.differences.push({ id, kind: 'variants', what: 'composition ' + g.model }); continue; }
         if (declared('composition ' + g.model)) continue;
         fail('composition', id + ': GW’s UNIT COMPOSITION has "' + (g.min === g.max ? g.min : g.min + '-' + g.max) + ' ' + g.model + '" (' + P.file + '), the catalogue ' + JSON.stringify(vs.length ? vs : C));
       }
@@ -293,7 +299,7 @@ function main() {
   }
   for (const d of DEVC) if (!usedC.has(d)) fail('tables', 'verify/deviations-catalog.json: nothing matches the declaration for ' + d.datasheet + ' · ' + d.what);
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive: true });
-  fs.writeFileSync(path.join(ROOT, 'verify/out/catalog.json'), JSON.stringify({ checked, failures: fails, notes, report }, null, 1) + '\n');
+  fs.writeFileSync(path.join((process.env.VERIFY_OUT ? path.resolve(process.env.VERIFY_OUT) : path.join(ROOT, 'verify/out')), 'catalog.json'), JSON.stringify({ checked, failures: fails, notes, report }, null, 1) + '\n');
   const sum = Object.entries(report.factions).map(([k, v]) => k + ' ' + v.datasheets + ' datasheets, ' + v.detachments + ' detachments, ' + v.excluded + ' left out').join('; ');
   if (fails.length) { console.log('FAIL catalog: ' + fails.length + ' failure(s) (' + sum + ')\n' + fails.slice(0, 60).map(x => ' - ' + x).join('\n')); process.exit(1); }
   console.log('catalog: ' + (sum || 'no catalogues') + '; checked ' + JSON.stringify(checked) + '; ' + usedC.size + ' declared differences used' + (notes.length ? '; ' + notes.join('; ') : ''));

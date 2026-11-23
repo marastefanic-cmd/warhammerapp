@@ -215,7 +215,7 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
         const tot = x => (x.costs || []).filter(c => c.name === 'pts').reduce((t, c) => t + c.value, 0) + (x.selections || []).reduce((t, c) => t + tot(c), 0);
         j.roster.costs[0].value = s.reduce((t, x) => t + tot(x), 0); };
       const rowsOf = r => { const A = D.resolve(r.army), bc = A.units.find(u => u.name === 'Blade Champion'), kc = A.units.find(u => u.name === 'Knight-Centura');
-        return { ap:bc && (bc.melee.find(w => w.name === 'Hurricanis') || {}).AP, apFrom:bc && (bc.melee.find(w => w.name === 'Hurricanis') || {}).from, ws:kc && (kc.melee.find(w => w.name === 'Gun Stock') || {}).WS, wsFrom:kc && (kc.melee.find(w => w.name === 'Gun Stock') || {}).from }; };
+        return { ap:bc && (bc.melee.find(w => w.name === 'Hurricanis') || {}).AP, apFrom:bc && (bc.melee.find(w => w.name === 'Hurricanis') || {}).from, ws:kc && (kc.melee.find(w => w.name === 'Gun Stock' && w.who === 'Knight-Centura') || {}).WS, wsFrom:kc && (kc.melee.find(w => w.name === 'Gun Stock' && w.who === 'Knight-Centura') || {}).from }; };
       const want = [{ unit:'Blade Champion', row:'Hurricanis', field:'AP', export:'-1', gw:'-2' }, { unit:'Knight-Centura', row:'Gun Stock', field:'WS', export:'3+', gw:'2+' }];
       const sortN = l => JSON.stringify(l.map(x => JSON.stringify(x)).sort()), sameNotes = n => sortN(n.filter(x => x.unit === 'Blade Champion' || x.unit === 'Knight-Centura')) === sortN(want);
       neg('Blade Champion and Knight-Centura with New Recruit’s values: built with GW’s, a note naming both', 'lite-knights', withTwo({ ap:'-1', ws:'3+' }), null, r => {
@@ -223,6 +223,33 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
         return v.ap === '-2' && v.ws === '2+' && !v.apFrom && !v.wsFrom && sameNotes(n); });
       neg('the same with GW’s values in the export: built, no note for them', 'lite-knights', withTwo({ ap:'-2', ws:'2+' }), null, r => r.ok && rowsOf(r).ap === '-2' && rowsOf(r).ws === '2+' && !(r.notes || []).flatMap(x => x.gwValues || []).some(x => x.unit === 'Blade Champion' || x.unit === 'Knight-Centura'));
       neg('a Blade Champion value that is neither GW’s nor New Recruit’s: refused, named', 'lite-knights', withTwo({ ap:'-4', ws:'2+' }), null, r => !r.ok && r.errors.some(e => /Blade Champion: Hurricanis AP is changed by a rule the app cannot name: not imported/.test(e)));
+      // where New Recruit could carry the Knight-Centura's Gun Stock (no export of the unit is committed): each layout is built with the
+      // row, or refused with the weapon named; a profile is never dropped in silence
+      { const KC = D.datasheets['adeptus-custodes/knight-centura'], gun = KC.ranged.find(r => r.name === 'Master-crafted boltgun'), gs = KC.melee.find(r => r.name === 'Gun Stock');
+        const G = (profiles, more) => [{ id:'g2', name:'Master-crafted boltgun', entryId:'x::w2', number:1, type:'upgrade', group:'Wargear', profiles }].concat(more || []);
+        const LAY = {
+          'in the gun’s selection':ws => ({ sel:G([wp(gun, 'ranged', 'Master-crafted boltgun'), wp(gs, 'melee', 'Gun Stock', { WS:ws })]) }),
+          'on the model’s own selection':ws => ({ sel:G([wp(gun, 'ranged', 'Master-crafted boltgun')]), own:[wp(gs, 'melee', 'Gun Stock', { WS:ws })] }),
+          'a selection of its own':ws => ({ sel:G([wp(gun, 'ranged', 'Master-crafted boltgun')], [{ id:'g3', name:'Gun Stock', entryId:'x::w3', number:1, type:'upgrade', group:'Wargear', profiles:[wp(gs, 'melee', 'Gun Stock', { WS:ws })] }]) }),
+          'not in the export':() => ({ sel:G([wp(gun, 'ranged', 'Master-crafted boltgun')]) }),
+          'as profiles of the gun (➤)':ws => ({ sel:G([wp(gun, 'ranged', '➤ Master-crafted boltgun - Shooting'), wp(gs, 'melee', '➤ Master-crafted boltgun - Gun Stock', { WS:ws })]) }) };
+        const centura = (lay, ws) => j => { const s = sels(j); s.splice(s.indexOf(s.filter(x => x.name === 'Telemon Heavy Dreadnought')[1]), 1);
+          const L0 = LAY[lay](ws), m = model('adeptus-custodes/knight-centura', 2, () => L0.sel); m.profiles = m.profiles.concat(L0.own || []);
+          s.push(Object.assign(m, { associations:[{ type:'outgoing', to:s.find(x => x.name === 'Witchseeker Squad').id, name:'Supporting', action:'group' }] }));
+          const tot = x => (x.costs || []).filter(c => c.name === 'pts').reduce((t, c) => t + c.value, 0) + (x.selections || []).reduce((t, c) => t + tot(c), 0);
+          j.roster.costs[0].value = s.reduce((t, x) => t + tot(x), 0); };
+        const stock = r => { const kc = r.ok && D.resolve(r.army).units.find(u => u.name === 'Knight-Centura'), w = kc && (kc.melee || []).find(x => x.name === 'Gun Stock' && x.who === 'Knight-Centura'); return w ? w.WS : null; };   // (the Knight-Centura's own, not the Witchseekers')
+        const refusedNamed = r => !r.ok && r.errors.some(e => /Gun Stock/.test(e) && /Knight-Centura/.test(e));
+        neg('Gun Stock in the gun’s selection, WS 3+: built with GW’s 2+', 'lite-knights', centura('in the gun’s selection', '3+'), null, r => r.ok && stock(r) === '2+');
+        neg('Gun Stock in the gun’s selection, WS 4+ (no known value): refused, named', 'lite-knights', centura('in the gun’s selection', '4+'), null, refusedNamed);
+        neg('Gun Stock on the model’s own selection: refused, named', 'lite-knights', centura('on the model’s own selection', '3+'), null, refusedNamed);
+        neg('Gun Stock on the model’s own selection with any value: refused, named', 'lite-knights', centura('on the model’s own selection', '4+'), null, refusedNamed);
+        neg('Gun Stock as a selection of its own: refused, named', 'lite-knights', centura('a selection of its own', '3+'), null, refusedNamed);
+        neg('Gun Stock as a ➤ profile of the gun: built with the row, or refused, named', 'lite-knights', centura('as profiles of the gun (➤)', '3+'), null, r => (r.ok && stock(r) === '2+') || (!r.ok && r.errors.some(e => /Master-crafted boltgun/.test(e) && /Knight-Centura/.test(e))));
+        // (an export that selects no Gun Stock shows none: the list says what the export selected; the datasheet's options do not make it a
+        // choice, so nothing requires it)
+        neg('no Gun Stock in the export: built, without the row', 'lite-knights', centura('not in the export'), null, r => r.ok && stock(r) === null);
+      }
       // (and through the import, as the phone makes the list: the note is on the list, for its Overview)
       { const j = clone(exp('lite-knights')); withTwo({ ap:'-1', ws:'3+' })(j); const r = I.make(I.slim(j), D, { id:'gv', date:'x' });
         ok(r.ok && sameNotes(r.army.gwValues || []), 'N "the import of that list carries the note (gwValues)": ' + JSON.stringify(r.ok ? r.army.gwValues || 'no note' : r.errors)); }
