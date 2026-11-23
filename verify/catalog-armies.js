@@ -34,20 +34,23 @@ function armies(D) {
     const keys = Object.keys(D.datasheets || {}).filter(k => D.datasheets[k].faction === fk && D.datasheets[k].points).sort();
     for (const [dk, det] of Object.entries(F.detachments || {})) {
       const RA = B.ruleAbilities(D.grants, D.ruleOptions, F, [det], D);
-      const unit = (k, extra) => { const S = D.datasheets[k], own = (S.abilities || []).filter(a => !/^(Leader|Support)$/.test(a.name));
-        const granted = B.ruleAbilitiesOf(RA, S.kw || [], own, S.rules || []).map(x => x.row);
+      const unit = (k, extra, enh) => { const S = D.datasheets[k], own = (S.abilities || []).filter(a => !/^(Leader|Support)$/.test(a.name));
+        // (with the keywords its enhancement gives it, as builder.js gives an import: Murder-Forged Entity's DAEMON)
+        const ek = enh ? B.enhKeywords(enh).map(x => x.k) : [];
+        const granted = B.ruleAbilitiesOf(RA, (S.kw || []).concat(ek), own, S.rules || []).map(x => x.row);
         const models = (S.composition || []).filter(c => c.min > 0 || (c.groupMin && c === (S.composition || []).find(x => x.group === c.group))).map(c => (c.min || c.groupMin) + '× ' + c.model);
         // (why an ability does nothing here, as builder.js's na gives it an import: alone, leading no unit, with GW's default wargear)
         const wn = [].concat(S.ranged || [], S.melee || []).flatMap(w => [w.name, w.group]).filter(Boolean).map(x => String(x).toLowerCase());
         const allKw = keys.flatMap(k2 => D.datasheets[k2].kw || []);
         const abs = own.map(a => { const o = { name:a.name }, na = B.naOf(a.text, false, wn, allKw); if(na) o.na = na; return o; });
-        return Object.assign({ id:slug(S.name), ds:k, pts:0, models:models.length ? models : ['1× ' + S.name], gear:[], abilities:abs.concat(granted) }, extra || {}); };
+        return Object.assign({ id:slug(S.name), ds:k, pts:0, models:models.length ? models : ['1× ' + S.name], gear:[], abilities:abs.concat(granted) },
+          ek.length ? { kw:(S.kw || []).filter(x => !/^Faction: /.test(x)).concat(ek.filter(x => !(S.kw || []).includes(x)), (S.kw || []).filter(x => /^Faction: /.test(x))) } : {}, extra || {}); };
       const units = keys.map(k => unit(k));
       // each enhancement on the first CHARACTER (not EPIC HERO) its words allow
       for (const e of det.enhancements || []) {
         const k = keys.find(k0 => { const kw = D.datasheets[k0].kw || []; return kw.includes('Character') && !kw.includes('Epic Hero') && allows(e, kw); }) || keys.find(k0 => allows(e, D.datasheets[k0].kw || []));
         if (!k) continue;
-        const u = unit(k, { id:slug(D.datasheets[k].name) + '-' + slug(e.name) });
+        const u = unit(k, { id:slug(D.datasheets[k].name) + '-' + slug(e.name) }, e);
         if (e.upgrade) u.upgrade = e.name; else u.enhancement = e.name;
         u.abilities = u.abilities.concat({ name:e.name, tag:(e.upgrade ? 'Upgrade' : 'Enhancement'), text:e.text });
         units.push(u);

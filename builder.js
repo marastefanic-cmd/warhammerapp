@@ -109,10 +109,11 @@ function topLevel(j, D, err){
       const cid = idOf(c, [kind === 'battleSize' ? 'battleSizes' : kind === 'disposition' ? 'dispositions' : 'detachments']), nm = nn(c.name), once = Number(c.number) === 1 && !kids(c).length;
       if(kind === 'battleSize' && T.battleSizes[cid] && T.names[cid] === nm && once){ if(battleSize) err('battle size ' + nm + ' not recognized (a list has one battle size)'); else battleSize = T.battleSizes[cid]; continue; }
       if(kind === 'disposition' && (T.dispositions[cid] === nm || (T.dispositions[cid] === undefined && DISPS.includes(nm))) && once){ if(disposition) err('disposition ' + nm + ' not recognized (a list has one Force Disposition)'); else disposition = nm; continue; }
-      // (a detachment no known export has shown: the one detachment of the faction with exactly that name, GW's or New Recruit's spelling of it)
-      const dn = kind === 'detachment' && FAC && !T.detachments[cid] ? Object.keys(FAC.detachments).filter(k => [FAC.detachments[k].name, FAC.detachments[k].nr].filter(Boolean).some(x => nn(x) === nm)) : [];
+      // (a detachment no known export has shown: the one detachment of the faction with exactly that name, GW's or New Recruit's spelling of it, or
+      // Wahapedia's heading where GW's documents renamed it: Possessed Slaughterband, the name New Recruit's data had for Possessed Slaughterbound)
+      const dn = kind === 'detachment' && FAC && !T.detachments[cid] ? Object.keys(FAC.detachments).filter(k => [FAC.detachments[k].name, FAC.detachments[k].nr, FAC.detachments[k].waha].filter(Boolean).some(x => nn(x) === nm)) : [];
       const d = kind === 'detachment' && (T.detachments[cid] || (dn.length === 1 ? fac + '/' + dn[0] : null)), dk = d && d.split('/');
-      if(d && once && FAC && dk[0] === fac && FAC.detachments[dk[1]] && [FAC.detachments[dk[1]].name, FAC.detachments[dk[1]].nr].filter(Boolean).some(x => nn(x) === nm)){ if(dets.includes(dk[1])) err('detachment ' + nm + ' twice not recognized'); else dets.push(dk[1]); continue; }
+      if(d && once && FAC && dk[0] === fac && FAC.detachments[dk[1]] && [FAC.detachments[dk[1]].name, FAC.detachments[dk[1]].nr, FAC.detachments[dk[1]].waha].filter(Boolean).some(x => nn(x) === nm)){ if(dets.includes(dk[1])) err('detachment ' + nm + ' twice not recognized'); else dets.push(dk[1]); continue; }
       err(KIND[kind] + ' ' + (Number(c.number) !== 1 ? c.number + '× ' : '') + nm + ' not recognized');
     }
   }
@@ -597,8 +598,10 @@ function finish(B, army, u, units, out){
     }
     // (an ability a rule of the list gives it: its own row, marked with the rule, wherever the rule is in force and the part has its
     // keywords, whatever the export prints; ruleAbilities)
-    for(const g of ruleAbilitiesOf(B.RA, P[i].kw, P[i].abilities, P[i].rules)) abil.push({ granted:g, part:i });
-    for(const f of ruleAbilityErrorsOf(B.RA, P[i].kw, P[i].rules)) B.err('unit ' + parts.map(x => nn(x.name)).join(' + ') + ' not imported: ' + f.error);
+    // (with the keywords its enhancement or upgrade gives it: Murder-Forged Entity's DAEMON, so Rampaging Terrors' Terror of Khorne)
+    const kwI = (P[i].kw || []).concat((u._enh || []).filter(x => (x.e.upgrade ? parts.length - 1 : x.i) === i).flatMap(x => enhKeywords(x.e).map(y => y.k)));
+    for(const g of ruleAbilitiesOf(B.RA, kwI, P[i].abilities, P[i].rules)) abil.push({ granted:g, part:i });
+    for(const f of ruleAbilityErrorsOf(B.RA, kwI, P[i].rules)) B.err('unit ' + parts.map(x => nn(x.name)).join(' + ') + ' not imported: ' + f.error);
     for(const x of u._enh || []) if((x.e.upgrade ? parts.length - 1 : x.i) === i) abil.push({ enh:x.e, part:i });
   });
   // the "+" marks: values a rule of the list changes
@@ -699,6 +702,14 @@ function finish(B, army, u, units, out){
     kw = base.concat(fac);
   } else if(facSwap.length) kw = Pkw[0];
   const kwWhy = {};
+  // (a keyword an enhancement or upgrade gives its unit or model, as its words say: "This unit has **DAEMON**." (Murder-Forged Entity),
+  // "This model has:\n- **MOBILE**.\n- +1 to …" (Gateways to Glory): the keyword on the unit, before its Faction keywords, and a note
+  // naming the enhancement, so stratagems' and rules' keywords see it)
+  const enhKw = [];
+  for(const x of u._enh || []) for(const { k, text } of enhKeywords(x.e)){
+    if(kw.some(z => lc(z) === lc(k))) continue;
+    const at = kw.findIndex(isFac); kw.splice(at < 0 ? kw.length : at, 0, k); kwWhy[k] = x.e.name + ': ' + k;
+    enhKw.push(k + ' comes from ' + x.e.name + ' (“' + text + '”)'); }
   // (an Allegiance ability names its gods in bold, "If this model has the **KHORNE** keyword": the one the export's unit has, New Recruit's
   parts.forEach((p, i) => { const ab = (P[i].abilities || []).find(a => /Allegiance$/.test(a.name)); if(!ab) return;
     const gods = uniq((ab.text.match(/\*\*[A-Z][A-Z ]+\*\*(?= keyword| –)/g) || []).map(m => m.replace(/\*\*/g, '')));
@@ -707,12 +718,14 @@ function finish(B, army, u, units, out){
   if(u.warlord){ kw.push('Warlord'); kwWhy.Warlord = 'Warlord'; }
   if(multi){ if(JSON.stringify(kw) !== JSON.stringify(P[0].kw || null) || catFilled(B, keys[0], 'kw')) e.kw = kw; if(Object.keys(kwWhy).length) why.kw = kwWhy; }
   else if(Object.keys(kwWhy).length){ e.kw = kw; why.kw = kwWhy; }
+  if(!multi && enhKw.length){ e.kwNote = enhKw.join('; ') + '.'; why.kwNote = enhKw.join('; '); }
   if(multi){
     const ko = {}; P.forEach(p => Object.assign(ko, p.kwOnly || {}));
     const extra = added.filter(k => !(k in ko)).sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
     const body = P[P.length - 1].name;
     const swNote = facSwap.map(f => f.to + ' comes from ' + f.by + ' on the ' + P[f.i].name + ' (“' + f.text + '”)');
-    if(extra.length){ e.kwNote = extra.join(', ') + (extra.length > 1 ? ' come' : ' comes') + ' from the ' + (parts.length > 2 ? 'combined unit' : (u.support ? 'supported ' : 'led ') + body) + swNote.map(x => '; ' + x).join('') + '.'; why.kwNote = (u.support ? 'supports ' : 'leads ') + body; }
+    if(extra.length){ e.kwNote = extra.join(', ') + (extra.length > 1 ? ' come' : ' comes') + ' from the ' + (parts.length > 2 ? 'combined unit' : (u.support ? 'supported ' : 'led ') + body) + swNote.concat(enhKw).map(x => '; ' + x).join('') + '.'; why.kwNote = (u.support ? 'supports ' : 'leads ') + body; }
+    else if(enhKw.length){ e.kwNote = enhKw.join('; ') + '.'; why.kwNote = enhKw.join('; '); }
     if(Object.keys(ko).length && JSON.stringify(ko) !== JSON.stringify(P[0].kwOnly || null)) e.kwOnly = ko;
     // rules only some of its models have: a datasheet ability (not a weapon's, nor an army rule, nor Leader / Support) one part has
     const armyRules = new Set(((B.F.armyRules) || []).map(r => lc(r.name)));
@@ -886,6 +899,14 @@ function coreText(core, F, name){
 // a unit part's keywords with those the rules in force give it (RA.kw: Shadow Legion's SHADOW LEGION)
 const keywordsOf = (RA, kw) => { let k = (kw || []).slice(); for(let i = 0; i < 2; i++) for(const x of RA.kw || []) if(!k.some(y => lc(y) === lc(x.kw)) && meetsTo(x.to, k)) k.push(x.kw); return k; };
 // a unit part's rows of them: those whose keywords (and Rules line) it has and its datasheet does not already have
+// the keywords an enhancement or upgrade gives its unit or model, as its words say (after its "… only." restriction): "This unit has
+// **DAEMON**." (Murder-Forged Entity), "This model has:\n- **MOBILE**.\n- +1 to …" (Gateways to Glory): [{ k (as DATASHEETS spells
+// keywords), text (its words, plain) }]
+const enhKeywords = e => { const t = String((e || {}).text || '').replace(/^[^.]*\bonly\.\s*/, ''), ks = [];
+  for(const m of t.matchAll(/\bThis (?:unit|model) has \*\*([A-Z][A-Z’' -]+)\*\*\./g)) ks.push(m[1]);
+  const bl = /\bThis (?:unit|model) has:\s*\n((?:- .*(?:\n|$))+)/.exec(t);
+  if(bl) for(const l of bl[1].split('\n')){ const m = /^- \*\*([A-Z][A-Z’' -]+)\*\*\.?$/.exec(l.trim()); if(m) ks.push(m[1]); }
+  return ks.map(k0 => ({ k:k0.toLowerCase().replace(/(^|[\s-])([a-z])/g, (z, a, c) => a + c.toUpperCase()), text:t.replace(/\*\*/g, '').replace(/\s*\n\s*/g, ' ') })); };
 const ruleAbilitiesOf = (RA, kw, own, rules) => { const k = keywordsOf(RA, kw); return RA.rows.filter(x => meetsTo(x.to, k, rules) && !(own || []).some(a => a.name === x.name)); };
 // the errors of the rules in force that reach a unit part (its words not found: the list is refused)
 const ruleAbilityErrorsOf = (RA, kw, rules) => { const k = keywordsOf(RA, kw); return RA.errors.filter(e => e.to.unread || meetsTo(e.to, k, rules)); };
@@ -982,7 +1003,7 @@ function marksOf(B, army, u, parts, P, rows, abil){
 }
 const where = parts => 'unit ' + parts.map(p => nn(p.name)).join(' + ');
 
-const api = { build, naOf, ruleAbilities, ruleAbilitiesOf, ruleAbilityErrorsOf, keywordsOf, ruleOfRow, coreText, meetsTo, WITH_RULE, catalogued, catalogues, malformed, nn, lc, typo, slug, uniq, and, splitList, lastId };
+const api = { build, naOf, enhKeywords, ruleAbilities, ruleAbilitiesOf, ruleAbilityErrorsOf, keywordsOf, ruleOfRow, coreText, meetsTo, WITH_RULE, catalogued, catalogues, malformed, nn, lc, typo, slug, uniq, and, splitList, lastId };
 root.WH_BUILDER = api;
 if(typeof module !== 'undefined' && module.exports) module.exports = api;
 })(typeof window !== 'undefined' ? window : globalThis);

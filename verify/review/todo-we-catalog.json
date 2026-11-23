@@ -3,7 +3,7 @@
   "kind": "summaries",
   "where": "World Eaters catalogue: every summary and gist an import can place (verify/sources/hand/catalog-world-eaters.json ai; data.js FACTIONS for the four existing detachments)",
   "judgement": {
-   "check": "The catalogue is read (aiRead): verify/catalog-armies.js places, for each of the 8 detachments, every World Eaters datasheet once and each enhancement on a bearer its words allow, and verify/lines.js holds every placed line to its summary (LM), its numbers (LN) and its labels (L0). New AI text, per docs/summaries.md, each to be checked against its GW words below. Idols of Khorne: its sumDef is one plain line (\"If Idol of Blessed Blood is active, …\"), not an \"<option> ⇒\" line: the program places the When targeted line with no option (its defence box carries opt, but the When targeted line takes options only from RULE_OPTIONS); its sumSt plain too, since reader 1 reads the Burning Wrath stat box without its option (on: aura only).",
+   "check": "The catalogue is read (aiRead): verify/catalog-armies.js places, for each of the 8 detachments, every World Eaters datasheet once and each enhancement on a bearer its words allow, and verify/lines.js holds every placed line to its summary (LM), its numbers (LN) and its labels (L0). New AI text, per docs/summaries.md, each to be checked against its GW words below. Idols of Khorne: its sumDef is one plain line (\"If Idol of Blessed Blood is active, …\"), not an \"<option> ⇒\" line: the program places the When targeted line with no option (its defence box carries opt, but the When targeted line takes options only from RULE_OPTIONS); its sumSt plain too (the stat box now carries its option, on: opt, and the plain line is what lines.js places for it).",
    "datasheets": {
     "world-eaters/bloodletters · Daemonic Icon": {
      "summary": {
@@ -31,7 +31,7 @@
     },
     "world-eaters/chaos-predator-destructor · Punishing Suppression": {
      "summary": {
-      "sumDef": "If the attacker is suppressed (a non-MONSTER/VEHICLE enemy unit the Chaos Predator Destructor hit in your Shooting phase): −1 to Hit rolls"
+      "sumDef": "If the attacker is suppressed (one non-MONSTER/VEHICLE enemy unit picked after the Chaos Predator Destructor hit it in your Shooting phase): −1 to Hit rolls"
      },
      "gw": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks (excluding **MONSTERS** and **VEHICLES**). Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**."
     },
@@ -57,9 +57,9 @@
    "detachments": {
     "cult-of-blood · Idols of Khorne": {
      "summary": {
-      "sumAtk": "Idol of Infinite Rage (Aura) ⇒ If Idol of Infinite Rage is active, within 6\" of a WORLD EATERS MONSTER (9\" if TITANIC): +1 to Hit rolls and +1 to Wound rolls",
-      "sumDef": "If Idol of Blessed Blood is active, within 6\" of a WORLD EATERS MONSTER (9\" if TITANIC): 4+ invulnerable save",
-      "sumSt": "If Idol of Burning Wrath is active, within 6\" of a WORLD EATERS MONSTER (9\" if TITANIC): +1\" Move; +1 to Advance and Charge rolls",
+      "sumAtk": "Idol of Infinite Rage (Aura) ⇒ If Idol of Infinite Rage is active, within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC unit: +1 to Hit rolls and +1 to Wound rolls",
+      "sumDef": "If Idol of Blessed Blood is active, within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC unit: 4+ invulnerable save",
+      "sumSt": "If Idol of Burning Wrath is active, within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC unit: +1\" Move; +1 to Advance and Charge rolls",
       "sumOv": "In your Command phase, pick one Idols of Khorne ability for WORLD EATERS MONSTER and TITANIC units until your next Command phase, each once per battle: Idol of Infinite Rage, Idol of Burning Wrath or Idol of Blessed Blood"
      },
      "gw": "At the start of your Command phase, you can select one of the Idols of Khorne abilities listed below. Until the start of your next Command phase, that ability is active and its effects apply to all **WORLD EATERS TITANIC** and **WORLD EATERS MONSTER** units from your army. You can only select each Idols of Khorne ability once per battle.\n**Idol of Infinite Rage (Aura)**\nWhile a friendly **JAKHALS** or **GOREMONGERS** unit is within 6\" of this model (or within 9\" if this model is **TITANIC**), each time a model in that unit makes an attack, add 1 to the **Hit roll** and add 1 to the **Wound roll**.\n**Idol of Burning Wrath (Aura)**\nWhile a friendly **JAKHALS** or **GOREMONGERS** unit is within 6\" of this model (or within 9\" if this model is **TITANIC**), add 1\" to the Move characteristic of models in that unit and add 1 to **Advance** and **Charge rolls** made for that unit.\n**Idol of Blessed Blood (Aura)**\nWhile a friendly **JAKHALS** or **GOREMONGERS** unit is within 6\" of this model (or within 9\" if this model is **TITANIC**), models in that unit have a 4+ invulnerable save.\nKEYWORDS\n**JAKHALS** and **GOREMONGERS** units from your army have the **BATTLELINE** keyword."
@@ -225,7 +225,7 @@
     },
     "goretrack-onslaught · Unleash Hell": {
      "summary": {
-      "sumDef": "If the attacker is suppressed (an enemy unit hit in your Shooting phase by a VEHICLE within 6\" of the bearer, or by the bearer’s TRANSPORT): −1 to Hit rolls"
+      "sumDef": "If the attacker is suppressed (one enemy unit picked after a VEHICLE within 6\" of the bearer, or the bearer’s TRANSPORT, selected at the start of your Shooting phase, hit it): −1 to Hit rolls"
      },
      "gw": "**WORLD EATERS** model only. At the start of your Shooting phase, you can select one **VEHICLE** model within 6\" of the bearer or, if the bearer is embarked within a **TRANSPORT**, you can select that **TRANSPORT** model. Until the end of the phase, after the selected model has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**."
     },
@@ -350,7 +350,8 @@
     "butchers-of-khorne · Sanctified in Slaughter": {
      "sumSt": "+1 OC"
     }
-   }
+   },
+   "round2": "Review 033ed75: Idols of Khorne sumAtk/sumDef/sumSt (\"within 6\\\" of a WORLD EATERS MONSTER or 9\\\" of a WORLD EATERS TITANIC unit\", the Khorne Lord of Skulls is TITANIC, not MONSTER), Punishing Suppression and Unleash Hell sumDef (the one enemy unit picked) are the reviewer's texts."
   },
   "source": {
    "gate": "verify/lines.js LM/LN/L0 (lines step), verify/tables.js --fingerprints",
@@ -637,6 +638,68 @@
   },
   "source": {
    "gate": "verify/lines.js, verify/render.js on the made-up export, we-work phone emulation"
+  }
+ },
+ {
+  "kind": "wargear",
+  "where": "verify/waha-loadout.js fromOf (review 033ed75)",
+  "judgement": {
+   "rule": "an item named in the plural with no count (\"This model’s excruciator cannons can be replaced with 2 magma cutters\") replaces every one the swap model's default has, its count from that default; a counted or singular item as named",
+   "changed": "of the four catalogues (World Eaters, Tyranids, Adeptus Custodes, Chaos Daemons, every datasheet's loadout compared before and after), only world-eaters/defiler: from [\"Excruciator cannon\"] to [\"Excruciator cannon\",\"Excruciator cannon\"]",
+   "tests": "verify/import-test.js 6: the full swap built, the half swap (1 excruciator cannon and 2 magma cutters) refused"
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/ds/world-eaters_Defiler.html WARGEAR OPTIONS"
+  }
+ },
+ {
+  "kind": "builder",
+  "where": "builder.js enhKeywords (review 033ed75)",
+  "judgement": {
+   "rule": "an enhancement or upgrade whose words (after its \"… only.\" restriction) say \"This unit has **KW**.\" or \"This model has:\" with \"- **KW**.\" lines gives the unit that keyword, before its Faction keywords, with a kwNote \"<KW> comes from <enhancement> (“<its words>”)\" and why.kw; the abilities rules give by keyword (ruleAbilitiesOf) and verify/catalog-armies.js see it",
+   "cases": {
+    "Murder-Forged Entity": "Chaos Land Raider: Daemon, so Rampaging Terrors' Terror of Khorne and the DAEMON VEHICLE stratagems",
+    "Gateways to Glory": "Daemon Prince of Khorne: Mobile"
+   },
+   "tests": "verify/import-test.js 6 (verify/sources/import-madeup)"
+  },
+  "source": {
+   "gw": "FACTIONS world-eaters brazen-engines · Murder-Forged Entity; vessels-of-wrath · Gateways to Glory"
+  }
+ },
+ {
+  "kind": "import",
+  "where": "builder.js and import.js: a detachment by name (review 033ed75)",
+  "judgement": {
+   "rule": "a detachment no known export has shown is found by GW's name, New Recruit's (nr) or Wahapedia's heading (waha) where GW's documents renamed it",
+   "why": "New Recruit's data named the detachment Possessed Slaughterband (the committed record verify/sources/bsdata-extract.json, entry dda8-a874-feac-1f81, and its enhancements' comments), Wahapedia's heading too; GW's Faction Pack 1.3 Possessed Slaughterbound",
+   "tests": "verify/import-test.js 6: an export naming Possessed Slaughterband builds with possessed-slaughterbound"
+  },
+  "source": {
+   "record": "verify/sources/bsdata-extract.json (retired, read only)"
+  }
+ },
+ {
+  "kind": "reader",
+  "where": "verify/effects-extract.js (review 033ed75)",
+  "judgement": {
+   "each time trigger": "\"Each time <X> …, until the end of the turn/phase, …\" (not an attack's \"each time a model makes an attack\"): its trigger is a condition (q): Rush to the Fray r|1deasll now on:[[q, \"Each time a WORLD EATERS unit from your army disembarks from a TRANSPORT\"]]",
+   "stat option": "a stat box under an option's heading carries it (on: opt), as attack and defence boxes do: Idols of Khorne's Idol of Burning Wrath",
+   "effect": "only these two boxes change (BOXES compared before and after); AGREE still holds both back (fall back), as before",
+   "charge": "Rush to the Fray's and Burning Wrath's \"+1 to Charge rolls\" are no box of either reader (no stat id for Charge rolls): the sheet has GW's full text in its Abilities section and the Burning Wrath summary says it; Rush to the Fray's line under the weapons is its [LANCE] (rule 13)"
+  },
+  "source": {
+   "gate": "verify/lines.js, effects-migrate, agree"
+  }
+ },
+ {
+  "kind": "gate",
+  "where": "verify/helpers.js items() (review 033ed75)",
+  "judgement": {
+   "rule": "a read catalogue's summaries are judgements too: each catalogue-only datasheet ability's sumAtk/sumDef/sumSt/sumFoe/sumOv and each enhancement's of a detachment no list uses, so they need approval and re-open when changed"
+  },
+  "source": {
+   "gate": "verify/helpers.js"
   }
  }
 ]

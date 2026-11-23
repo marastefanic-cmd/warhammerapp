@@ -99,20 +99,26 @@ module.exports = function read(sheet, rows, opts) {
     const flat = (it, n) => it.flatMap(x => Array(x.n * (n || 1)).fill(x.name));
     const push = (arr, o) => { arr.push(o); };
     // (what is replaced: "combi-bolter and accursed weapon" two items where each is one)
-    const fromOf = f => { f = f.replace(/^(?:their|its) /, ''); const ps = f.split(/\s+and\s+/); return flat(ps.length > 1 && ps.map(itemName).every(p => weaponNames.includes(p)) ? ps.flatMap(items) : items(f)); };
+    // (an item named in the plural with no count, "This model’s excruciator cannons can be replaced with 2 magma cutters": every one the
+    // default of the swap's model has, its count from that default; "their chainblade", or "1 combi-bolter", as named)
+    const defCount = (name, who) => { const ls = who && who !== 'model' ? lineFor(who) : lines; return Math.max(0, ...ls.map(l => l.default.concat(l.wargear).filter(x => x === name).length)); };
+    const plural = raw => !/^(?:\d+|one|two|three|four|five)\s/i.test(raw.trim()) && n0(raw) !== sing(raw);
+    const fromOf = (f, who) => { f = f.replace(/^(?:their|its) /, ''); const ps = f.split(/\s+and\s+/);
+      const its = ps.length > 1 && ps.map(itemName).every(p => weaponNames.includes(p)) ? ps.flatMap(p => items(p).map(x => Object.assign(x, { raw:p }))) : items(f).map(x => Object.assign(x, { raw:f }));
+      return flat(its.map(x => plural(x.raw) && defCount(x.name, who) > x.n ? { n: defCount(x.name, who), name: x.name } : x)); };
     try {
-      if ((m = /^(?:This model’s|The (.+?)’s) (.+?) can be replaced with (.+)$/.exec(t))) { push(swaps, { who: m[1] || (one ? lines[0].model : 'model'), from: fromOf(m[2]), to: toOf(m[3], s.alts).map(a => flat(a)), limit: { kind: m[1] ? 'unit' : 'each', n: 1 }, text: t }); continue; }
-      if ((m = /^For every (\d+) models in this unit, (\d+) (.+?)’s (.+?) can be replaced with (.+)$/.exec(t))) { push(swaps, { who: m[3] === 'model' ? 'model' : who1(m[3]), from: fromOf(m[4]), to: toOf(m[5], s.alts).map(a => flat(a)), limit: { kind: 'per', every: +m[1], n: +m[2] }, text: t }); continue; }
-      if ((m = /^For every (\d+) models in this unit, up to (\d+) models can each have their (.+?) replaced with (.+)$/.exec(t))) { push(swaps, { who: 'model', from: fromOf(m[3]), to: toOf(m[4], s.alts).map(a => flat(a)), limit: { kind: 'per', every: +m[1], n: +m[2] }, text: t }); continue; }
+      if ((m = /^(?:This model’s|The (.+?)’s) (.+?) can be replaced with (.+)$/.exec(t))) { push(swaps, { who: m[1] || (one ? lines[0].model : 'model'), from: fromOf(m[2], m[1] || (one ? lines[0].model : 'model')), to: toOf(m[3], s.alts).map(a => flat(a)), limit: { kind: m[1] ? 'unit' : 'each', n: 1 }, text: t }); continue; }
+      if ((m = /^For every (\d+) models in this unit, (\d+) (.+?)’s (.+?) can be replaced with (.+)$/.exec(t))) { push(swaps, { who: m[3] === 'model' ? 'model' : who1(m[3]), from: fromOf(m[4], m[3] === 'model' ? 'model' : who1(m[3])), to: toOf(m[5], s.alts).map(a => flat(a)), limit: { kind: 'per', every: +m[1], n: +m[2] }, text: t }); continue; }
+      if ((m = /^For every (\d+) models in this unit, up to (\d+) models can each have their (.+?) replaced with (.+)$/.exec(t))) { push(swaps, { who: 'model', from: fromOf(m[3], 'model'), to: toOf(m[4], s.alts).map(a => flat(a)), limit: { kind: 'per', every: +m[1], n: +m[2] }, text: t }); continue; }
       if ((m = /^(?:Any number of (?:(.+?) )?models|All models in this unit) can each be equipped with (.+)$/.exec(t))) { push(adds, { who: m[1] || 'model', not: [], to: toOf(m[2], s.alts).map(a => flat(a)), limit: { kind: 'each' }, text: t }); continue; }
-      if ((m = /^(?:Any number of (?:(.+?) )?models|All models in this unit) can each have their (.+?) replaced with (.+)$/.exec(t))) { push(swaps, { who: m[1] || 'model', from: fromOf(m[2]), to: toOf(m[3], s.alts).map(a => flat(a)), limit: { kind: 'each' }, text: t }); continue; }
-      if ((m = /^(\d+) (.+?)’s (.+?) can be replaced with (.+)$/.exec(t))) { push(swaps, { who: m[2] === 'model' ? 'model' : m[2], from: fromOf(m[3]), to: toOf(m[4], s.alts).map(a => flat(a)), limit: { kind: 'unit', n: +m[1] }, text: t }); continue; }
+      if ((m = /^(?:Any number of (?:(.+?) )?models|All models in this unit) can each have their (.+?) replaced with (.+)$/.exec(t))) { push(swaps, { who: m[1] || 'model', from: fromOf(m[2], m[1] || 'model'), to: toOf(m[3], s.alts).map(a => flat(a)), limit: { kind: 'each' }, text: t }); continue; }
+      if ((m = /^(\d+) (.+?)’s (.+?) can be replaced with (.+)$/.exec(t))) { push(swaps, { who: m[2] === 'model' ? 'model' : m[2], from: fromOf(m[3], m[2] === 'model' ? 'model' : m[2]), to: toOf(m[4], s.alts).map(a => flat(a)), limit: { kind: 'unit', n: +m[1] }, text: t }); continue; }
       if ((m = /^For every (\d+) models in this unit, (\d+) (.+?) can be equipped with (.+)$/.exec(t))) { push(adds, { who: m[3] === 'model' ? 'model' : m[3], not: [], to: toOf(m[4], s.alts).map(a => flat(a)), limit: { kind: 'per', every: +m[1], n: +m[2] }, text: t }); continue; }
       if ((m = /^(\d+) (.+?)(?: that is not equipped with (?:an?|1) (.+?))? can be equipped with (.+)$/.exec(t)) && !/ or can /.test(t)) { push(adds, { who: m[2] === 'model' ? 'model' : m[2], not: m[3] ? [itemName(m[3])] : [], to: toOf(m[4], s.alts).map(a => flat(a)), limit: { kind: 'unit', n: +m[1] }, text: t }); continue; }
       // ("This model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher.": the add or the swap, one of
       // that item a model)
       if ((m = /^This model can be equipped with 1 (.+?) or can replace (1 .+?) with 1 (.+?)\.?$/.exec(t)) && itemName(m[1]) === itemName(m[3])) { const w = one ? lines[0].model : 'model';
-        push(adds, { who: w, not: [], to: [[itemName(m[1])]], limit: { kind: 'each' }, text: t }); push(swaps, { who: w, from: fromOf(m[2]), to: [[itemName(m[3])]], limit: { kind: 'each' }, text: t }); caps[itemName(m[1])] = 1; continue; }
+        push(adds, { who: w, not: [], to: [[itemName(m[1])]], limit: { kind: 'each' }, text: t }); push(swaps, { who: w, from: fromOf(m[2], w), to: [[itemName(m[3])]], limit: { kind: 'each' }, text: t }); caps[itemName(m[1])] = 1; continue; }
       if ((m = /^This model can be equipped with (.+)$/.exec(t)) && !/ or can /.test(t)) { push(adds, { who: one ? lines[0].model : 'model', not: [], to: toOf(m[1], s.alts).map(a => flat(a)), limit: { kind: 'each' }, text: t }); continue; }
     } catch (e) {}
     unread.push(t + (s.alts.length ? ' ' + s.alts.join('; ') : ''));

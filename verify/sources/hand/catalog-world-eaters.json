@@ -46,7 +46,7 @@
    },
    "world-eaters/chaos-predator-destructor": {
     "Punishing Suppression": {
-     "sumDef": "If the attacker is suppressed (a non-MONSTER/VEHICLE enemy unit the Chaos Predator Destructor hit in your Shooting phase): −1 to Hit rolls",
+     "sumDef": "If the attacker is suppressed (one non-MONSTER/VEHICLE enemy unit picked after the Chaos Predator Destructor hit it in your Shooting phase): −1 to Hit rolls",
      "sumDefOf": "f611baed"
     }
    },
@@ -73,11 +73,11 @@
    "cult-of-blood": {
     "rules": {
      "Idols of Khorne": {
-      "sumAtk": "Idol of Infinite Rage (Aura) ⇒ If Idol of Infinite Rage is active, within 6\" of a WORLD EATERS MONSTER (9\" if TITANIC): +1 to Hit rolls and +1 to Wound rolls",
+      "sumAtk": "Idol of Infinite Rage (Aura) ⇒ If Idol of Infinite Rage is active, within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC unit: +1 to Hit rolls and +1 to Wound rolls",
       "sumAtkOf": "c074c786",
-      "sumDef": "If Idol of Blessed Blood is active, within 6\" of a WORLD EATERS MONSTER (9\" if TITANIC): 4+ invulnerable save",
+      "sumDef": "If Idol of Blessed Blood is active, within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC unit: 4+ invulnerable save",
       "sumDefOf": "c074c786",
-      "sumSt": "If Idol of Burning Wrath is active, within 6\" of a WORLD EATERS MONSTER (9\" if TITANIC): +1\" Move; +1 to Advance and Charge rolls",
+      "sumSt": "If Idol of Burning Wrath is active, within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC unit: +1\" Move; +1 to Advance and Charge rolls",
       "sumStOf": "c074c786",
       "sumOv": "In your Command phase, pick one Idols of Khorne ability for WORLD EATERS MONSTER and TITANIC units until your next Command phase, each once per battle: Idol of Infinite Rage, Idol of Burning Wrath or Idol of Blessed Blood",
       "sumOvOf": "c074c786"
@@ -171,7 +171,7 @@
       "sumOvOf": "be4c44ea"
      },
      "Unleash Hell": {
-      "sumDef": "If the attacker is suppressed (an enemy unit hit in your Shooting phase by a VEHICLE within 6\" of the bearer, or by the bearer’s TRANSPORT): −1 to Hit rolls",
+      "sumDef": "If the attacker is suppressed (one enemy unit picked after a VEHICLE within 6\" of the bearer, or the bearer’s TRANSPORT, selected at the start of your Shooting phase, hit it): −1 to Hit rolls",
       "sumDefOf": "f227a1cd"
      },
      "Infernal Infusion": {

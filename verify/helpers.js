@@ -115,6 +115,8 @@ function items(D, appSource){
       for(const ab of S.abilities || []){
         const src = { ability:ab.name, text:ab.text };
         if(ab.ph || ab.turn || ab.at) add('catalog', 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns }, src);
+        // (a read catalogue's summaries, aiRead: what an import of the unit shows, as a list unit's ability-sumAtk …)
+        for(const c of ['sumAtk', 'sumDef', 'sumSt', 'sumFoe', 'sumOv']) if(ab[c]) add('catalog', 'ability-' + c, w + ' · ' + ab.name, { [c]:ab[c] }, src);
         // (note, na, damaged: GW's words under a label, derived; kwOnly, srcNote, partialRules: KO / PR, srcNoteOf: no judgement)
       }
     }
@@ -124,6 +126,8 @@ function items(D, appSource){
       for(const r of detRules_(d)) for(const k of RULE_KEYS) if(r[k] !== undefined) add('catalog', 'rule-' + k, f.name + ' · ' + d.name + ' rule · ' + r.name, { [k]:r[k] }, { rule:r.name, text:r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : '') });
       for(const st of d.stratagems || []) for(const k of STRAT_KEYS)
         if(st[k] !== undefined) add('catalog', 'strat-' + k, f.name + ' · ' + d.name + ' · ' + st.name, { [k]:st[k] }, { stratagem:st.name, text:stratText(st) });
+      // (its enhancements' summaries, as a list's detachment's)
+      for(const e of d.enhancements || []) for(const c of ['sumAtk', 'sumDef', 'sumSt', 'sumFoe', 'sumOv']) if(e[c]) add('catalog', 'enhancement-' + c, d.name + ' · ' + e.name, { [c]:e[c] }, { enhancement:e.name, text:e.text });
     }
   }
   for(const s of D.coreStratagems) for(const k of STRAT_KEYS)

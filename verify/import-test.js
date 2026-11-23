@@ -251,6 +251,44 @@ if(L('6-bigs')){
   ok(!r4.ok && r4.errors.includes('unit Knight Errant not recognized'), 'a unit under an unknown id: ' + JSON.stringify(r4.ok ? 'imported' : r4.errors));
 }
 
+/* 6. made-up exports of a catalogued faction (verify/sources/import-madeup: units and detachments no list of the owner's has, their ids
+   made up, found by exact name), built as the phone builds them (import.js make, builder.js) */
+{ const MD = path.join(ROOT, 'verify/sources/import-madeup'), mk = j => I.make(I.slim(j), D, { id:'local-test', date:DATE });
+  const M = f => JSON.parse(fs.readFileSync(path.join(MD, f), 'utf8'));
+  if(fs.existsSync(path.join(MD, 'brazen-engines.json'))){
+    // Brazen Engines: a Chaos Land Raider with Murder-Forged Entity ("This unit has DAEMON."): the keyword and its note, so Rampaging Terrors'
+    // Terror of Khorne and the DAEMON VEHICLE stratagems are its; a Defiler with both excruciator cannons replaced with 2 magma cutters
+    // (GW: "This model’s excruciator cannons can be replaced with 2 magma cutters.", every one the default has)
+    const r = mk(M('brazen-engines.json')), lr = r.ok && r.army.units.find(u => u.id === 'chaos-land-raider'), df = r.ok && r.army.units.find(u => u.id === 'defiler');
+    ok(r.ok && lr && lr.kw.includes('Daemon') && /^Daemon comes from Murder-Forged Entity /.test(lr.kwNote || '') && lr.abilities.some(a => a.name === 'Terror of Khorne'),
+      'made up: Murder-Forged Entity gives DAEMON (and Terror of Khorne): ' + JSON.stringify(r.ok ? lr && [lr.kw, lr.kwNote, lr.abilities.map(a => a.name)] : r.errors));
+    ok(r.ok && df && JSON.stringify(df.gear) === JSON.stringify([['Hades battle cannon', 'Magma cutters', 'Magma cutters', 'Heavy missile launcher', 'Heavy baleflamer', 'Shearing claws']]),
+      'made up: a Defiler with both excruciator cannons replaced: ' + JSON.stringify(r.ok ? df && df.gear : r.errors));
+    report.push('accepted (made up): Brazen Engines, Land Raider with Murder-Forged Entity, Defiler with 2 magma cutters → ' + (r.ok ? r.army.units.map(u => u.id).join(', ') : r.errors.join('; ')));
+    // the same export naming the detachment Possessed Slaughterband (Wahapedia's heading, New Recruit's data's name; GW's Possessed
+    // Slaughterbound), without the Brazen Engines upgrade
+    const j2 = clone(M('brazen-engines.json')), top = n => j2.roster.forces[0].selections.find(x => x.name === n);
+    top('Detachment').selections[0].name = 'Possessed Slaughterband'; top('Force Disposition').selections[0].name = 'Purge the Foe';
+    const lr2 = j2.roster.forces[0].selections.find(x => x.name === 'Chaos Land Raider'); lr2.selections = lr2.selections.filter(c => c.name !== 'Murder-Forged Entity');
+    const r2 = mk(j2);
+    ok(r2.ok && JSON.stringify(r2.army.detachments) === JSON.stringify(['possessed-slaughterbound']), 'made up: Possessed Slaughterband is Possessed Slaughterbound: ' + JSON.stringify(r2.ok ? r2.army.detachments : r2.errors));
+    report.push('accepted (made up): the detachment named Possessed Slaughterband → ' + (r2.ok ? r2.army.detachments.join(', ') : r2.errors.join('; ')));
+  }
+  if(fs.existsSync(path.join(MD, 'vessels-gateways.json'))){
+    // Vessels of Wrath: a Daemon Prince of Khorne with Gateways to Glory ("This model has: - MOBILE. - +1 to charge rolls."): MOBILE and its note
+    const r = mk(M('vessels-gateways.json')), dp = r.ok && r.army.units.find(u => u.id === 'daemon-prince-of-khorne');
+    ok(r.ok && dp && dp.kw.includes('Mobile') && /^Mobile comes from Gateways to Glory /.test(dp.kwNote || ''), 'made up: Gateways to Glory gives MOBILE: ' + JSON.stringify(r.ok ? dp && [dp.kw, dp.kwNote] : r.errors));
+    report.push('accepted (made up): Vessels of Wrath, Daemon Prince of Khorne with Gateways to Glory → ' + (r.ok ? dp.kw.join(', ') : r.errors.join('; ')));
+  }
+  if(fs.existsSync(path.join(MD, 'brazen-engines-half-swap.json'))){
+    // one excruciator cannon kept and 2 magma cutters taken: not what GW's datasheet allows
+    const r = mk(M('brazen-engines-half-swap.json'));
+    const want = ['unit Defiler not imported: Defiler with Hades battle cannon, Excruciator cannon, Magma cutters, Magma cutters, Heavy missile launcher, Heavy baleflamer and Shearing claws is not what GW’s datasheet Defiler allows (its UNIT COMPOSITION and WARGEAR OPTIONS)'];
+    ok(!r.ok && JSON.stringify(r.errors) === JSON.stringify(want), 'made up: a Defiler with one excruciator cannon and 2 magma cutters refused: ' + JSON.stringify(r.ok ? 'imported' : r.errors));
+    report.push('negative (made up): a Defiler with one excruciator cannon and 2 magma cutters → ' + (r.ok ? 'IMPORTED' : r.errors.join('; ')));
+  }
+}
+
 const outF = path.join(ROOT, 'verify/out/import.json');
 fs.mkdirSync(path.dirname(outF), { recursive:true });
 fs.writeFileSync(outF, JSON.stringify({ check:'import', checks, fails, report }, null, 1) + '\n');

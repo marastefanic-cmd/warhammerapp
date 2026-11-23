@@ -4855,7 +4855,7 @@
     {
      "name": "Punishing Suppression",
      "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks (excluding **MONSTERS** and **VEHICLES**). Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**.",
-     "sumDef": "If the attacker is suppressed (a non-MONSTER/VEHICLE enemy unit the Chaos Predator Destructor hit in your Shooting phase): −1 to Hit rolls",
+     "sumDef": "If the attacker is suppressed (one non-MONSTER/VEHICLE enemy unit picked after the Chaos Predator Destructor hit it in your Shooting phase): −1 to Hit rolls",
      "sumDefOf": "f611baed"
     },
     {
@@ -5501,6 +5501,7 @@
        "Defiler"
       ],
       "from": [
+       "Excruciator cannon",
        "Excruciator cannon"
       ],
       "to": [
@@ -6366,11 +6367,11 @@
    "rule": {
     "name": "Idols of Khorne",
     "text": "At the start of your Command phase, you can select one of the Idols of Khorne abilities listed below. Until the start of your next Command phase, that ability is active and its effects apply to all **WORLD EATERS TITANIC** and **WORLD EATERS MONSTER** units from your army. You can only select each Idols of Khorne ability once per battle.\n**Idol of Infinite Rage (Aura)**\nWhile a friendly **JAKHALS** or **GOREMONGERS** unit is within 6\" of this model (or within 9\" if this model is **TITANIC**), each time a model in that unit makes an attack, add 1 to the **Hit roll** and add 1 to the **Wound roll**.\n**Idol of Burning Wrath (Aura)**\nWhile a friendly **JAKHALS** or **GOREMONGERS** unit is within 6\" of this model (or within 9\" if this model is **TITANIC**), add 1\" to the Move characteristic of models in that unit and add 1 to **Advance** and **Charge rolls** made for that unit.\n**Idol of Blessed Blood (Aura)**\nWhile a friendly **JAKHALS** or **GOREMONGERS** unit is within 6\" of this model (or within 9\" if this model is **TITANIC**), models in that unit have a 4+ invulnerable save.\nKEYWORDS\n**JAKHALS** and **GOREMONGERS** units from your army have the **BATTLELINE** keyword.",
-    "sumAtk": "Idol of Infinite Rage (Aura) ⇒ If Idol of Infinite Rage is active, within 6\" of a WORLD EATERS MONSTER (9\" if TITANIC): +1 to Hit rolls and +1 to Wound rolls",
+    "sumAtk": "Idol of Infinite Rage (Aura) ⇒ If Idol of Infinite Rage is active, within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC unit: +1 to Hit rolls and +1 to Wound rolls",
     "sumAtkOf": "c074c786",
-    "sumDef": "If Idol of Blessed Blood is active, within 6\" of a WORLD EATERS MONSTER (9\" if TITANIC): 4+ invulnerable save",
+    "sumDef": "If Idol of Blessed Blood is active, within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC unit: 4+ invulnerable save",
     "sumDefOf": "c074c786",
-    "sumSt": "If Idol of Burning Wrath is active, within 6\" of a WORLD EATERS MONSTER (9\" if TITANIC): +1\" Move; +1 to Advance and Charge rolls",
+    "sumSt": "If Idol of Burning Wrath is active, within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC unit: +1\" Move; +1 to Advance and Charge rolls",
     "sumStOf": "c074c786",
     "sumOv": "In your Command phase, pick one Idols of Khorne ability for WORLD EATERS MONSTER and TITANIC units until your next Command phase, each once per battle: Idol of Infinite Rage, Idol of Burning Wrath or Idol of Blessed Blood",
     "sumOvOf": "c074c786"
@@ -6596,7 +6597,7 @@
      "name": "Unleash Hell",
      "pts": 10,
      "text": "**WORLD EATERS** model only. At the start of your Shooting phase, you can select one **VEHICLE** model within 6\" of the bearer or, if the bearer is embarked within a **TRANSPORT**, you can select that **TRANSPORT** model. Until the end of the phase, after the selected model has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**.",
-     "sumDef": "If the attacker is suppressed (an enemy unit hit in your Shooting phase by a VEHICLE within 6\" of the bearer, or by the bearer’s TRANSPORT): −1 to Hit rolls",
+     "sumDef": "If the attacker is suppressed (one enemy unit picked after a VEHICLE within 6\" of the bearer, or the bearer’s TRANSPORT, selected at the start of your Shooting phase, hit it): −1 to Hit rolls",
      "sumDefOf": "f227a1cd"
     },
     {

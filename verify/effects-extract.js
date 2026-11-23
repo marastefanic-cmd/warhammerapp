@@ -147,7 +147,9 @@ function condsOf(V, sOrig, leadOrig, opts){
   // (the defence side: GW's struck words are not its words, "(excluding ~~MONSTER~~/VEHICLE units)", and a clause keeps its brackets)
   const pc = opts && opts.def ? plainCase(((leadOrig ? leadOrig + ' ' : '') + sOrig).replace(/~~[^~]*~~\/?/g, '')) : plainCase((leadOrig ? leadOrig + ' ' : '') + sOrig);
   // (a clause keeps its brackets: "While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)")
-  for(const m of pc.matchAll(/\b(?:(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;]+|[Tt]he first time (?:(?! while\b)[^,.:;()])+)/g)){
+  // (and the trigger of an effect that lasts to the end of the turn or phase: "Each time a WORLD EATERS unit from your army disembarks from
+  // a TRANSPORT, until the end of the turn, …", Rush to the Fray: not every attack's, only after that)
+  for(const m of pc.matchAll(/\b(?:(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;]+|[Tt]he first time (?:(?! while\b)[^,.:;()])+|[Ee]ach time (?:(?!\bmakes? an? (?:\w+ )?attack\b)[^,.:;()])+(?=, until the end of the (?:turn|phase)\b))/g)){
     // (a clause with an alternative after a comma is read whole: "If that model's unit is within 6" of … MONSTER units, or within 9" of
     // … TITANIC units", Fail Not the Blood God)
     const alt = /^, or within [^,.:;]+/.exec(pc.slice(m.index + m[0].length));
@@ -627,11 +629,15 @@ const sentencesOf = text => { const out = []; for(const l of String(text || '').
 function statOf(src, us, V){
   if(src.type !== 'rule') return [];
   const out = [];
+  // (a sentence under an option's heading is that option's, as an attack or defence box is: "**Idol of Burning Wrath (Aura)**" then
+  // "While a friendly … add 1" to the Move characteristic …", Idols of Khorne; unitsOf gives each sentence its option)
+  const secOf = new Map(unitsOf(src).filter(x => x.sec).map(x => [x.s, x.sec]));
   for(const u of sentencesOf(src.text)){
     const n = norm(u.s), st = [];
     for(const [id, f] of Object.entries(E.ST)) for(const re of f.pats){ const m = re.exec(n); if(m) st.push([id, +m[1]]); }
     if(!st.length) continue;
     const box = { quote:u.s, st, on:condsOf(V, u.s, '', { stat:true, inherit:true }) };
+    const sec = secOf.get(u.s); if(sec) box.on.unshift(['opt', sec]);
     const r = reachOf(V, u.s) || (u.prevS ? reachOf(V, u.prevS) : null);
     if(r) box.reach = r;
     const mk = ST_SCOPE.exec(u.s); if(mk) box.scope = { models:mk[1].trim() };
