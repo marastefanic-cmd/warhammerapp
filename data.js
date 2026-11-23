@@ -5122,11 +5122,6 @@ const ARMIES = [
   source:'New Recruit, exported 31 Oct 2026 (JSON)',
   units:[
     {
-      id:'the-red-terror', ds:'tyranids/the-red-terror', pts:120,
-      models:['1× The Red Terror'],
-      gear:[['Gaping maw','Scything talons']]
-    },
-    {
       id:'the-swarmlord-tyrant-guard', ds:['tyranids/the-swarmlord','tyranids/tyrant-guard'], pts:380, ptsNote:'210 + Tyrant Guard 170', warlord:true,
       leads:'Tyrant Guard',
       models:['1× The Swarmlord','6× Tyrant Guard'],
@@ -5157,7 +5152,7 @@ const ARMIES = [
       id:'hive-tyrant-tyrant-guard', ds:['tyranids/hive-tyrant','tyranids/tyrant-guard'], pts:390, ptsNote:'220 + Tyrant Guard 170', enhancement:'Parasitic Biomorphology',
       leads:'Tyrant Guard',
       models:['1× Hive Tyrant','6× Tyrant Guard'],
-      gear:[['Monstrous bonesword and lash whip','Monstrous scything talons'],['Scything talons and rending claws']],
+      gear:[['Monstrous bonesword and lash whip','Monstrous scything talons'],['Bone cleaver, lash whip and rending claws']],
       stats:[
         { name:'Hive Tyrant' },
         { name:'Tyrant Guard ×6' }
@@ -5165,7 +5160,7 @@ const ARMIES = [
       melee:[
         { name:'Monstrous bonesword and lash whip', who:'Hive Tyrant', S:'10', from:{ S:'Parasitic Biomorphology' } },
         { name:'Monstrous scything talons', who:'Hive Tyrant', S:'8', from:{ S:'Parasitic Biomorphology' } },
-        { name:'Scything talons and rending claws', who:'Tyrant Guard', n:6, S:'6', from:{ S:'Parasitic Biomorphology' } }
+        { name:'Bone cleaver, lash whip and rending claws', who:'Tyrant Guard', n:6, S:'6', from:{ S:'Parasitic Biomorphology' } }
       ],
       abilities:[
         { name:'Will of the Hive Mind', who:'Hive Tyrant' },
@@ -5204,7 +5199,22 @@ const ARMIES = [
       ranged:null
     },
     {
-      id:'norn-assimilator', ds:'tyranids/norn-assimilator', pts:280, enhancement:'Synaptoprescience',
+      id:'norn-assimilator-synaptoprescience', ds:'tyranids/norn-assimilator', pts:280, enhancement:'Synaptoprescience',
+      models:['1× Norn Assimilator'],
+      gear:[['Monstrous scything talons','Toxinjecter Harpoon']],
+      stats:[
+        { name:'Norn Assimilator', InSv:'4+', from:{ InSv:'Synaptoprescience' } }
+      ],
+      abilities:[
+        { name:'Singular Purpose' },
+        { name:'Harpoon Barbs' },
+        { name:'Damaged: 1-5 Wounds Remaining' },
+        { name:'Protean Purpose', tag:'Higher Imperatives · Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
+        { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
+      ]
+    },
+    {
+      id:'norn-assimilator-synaptoprescience-2', ds:'tyranids/norn-assimilator', pts:300, enhancement:'Synaptoprescience',
       models:['1× Norn Assimilator'],
       gear:[['Monstrous scything talons','Toxinjecter Harpoon']],
       stats:[
@@ -5233,15 +5243,6 @@ const ARMIES = [
       id:'psychophage', ds:'tyranids/psychophage', pts:110,
       models:['1× Psychophage'],
       gear:[['Psychoclastic torrent','Talons and betentacled maw']]
-    },
-    {
-      id:'tyrannofex', ds:'tyranids/tyrannofex', pts:180,
-      models:['1× Tyrannofex'],
-      gear:[['Powerful limbs','Stinger salvoes','Acid spray']],
-      ranged:[
-        { name:'Acid spray' },
-        { name:'Stinger salvoes' }
-      ]
     },
     {
       id:'spore-mines-biovore', ds:'tyranids/spore-mines-biovore', role:'Reference', pts:0,
@@ -6821,36 +6822,13 @@ const DATASHEETS = {
     { on:'Tyrannofex', choices:[{ name:'Rupture cannon', pts:20 },{ name:'Fleshborer hive' },{ name:'Acid spray' }], group:'Fleshborer Hive', min:1, max:1 }
   ]
 },
-'tyranids/the-red-terror':{
-  name:'The Red Terror', faction:'tyranids', role:'Epic Hero',
-  stats:[
-    { name:'The Red Terror', M:'10"', T:'8', Sv:'3+', W:'9', Ld:'8+', OC:'3', InSv:'–', base:'100mm' }
-  ],
-  melee:[
-    { name:'Gaping maw', range:'Melee', A:'1', WS:'2+', S:'5', AP:'–', D:'D3+2', kw:['EXTRA ATTACKS','DEVASTATING WOUNDS','PRECISION'] },
-    { name:'Scything talons', range:'Melee', A:'12', WS:'2+', S:'7', AP:'-2', D:'2', kw:[] }
-  ],
-  abilities:[
-    { name:'Swallow Whole', text:'Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound. Each time an **INFANTRY**, **MOUNTED** or **BEASTS** model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds.', sumAtk:'vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed', sumAtkOf:'975667a2' },
-    { name:'Subterranean Hunter', ph:['fight'], turn:'either', text:'At the end of the Fight phase, if this unit is not within **Engagement Range** of one or more enemy units, you can remove it from the battlefield and place it into **Strategic Reserves**.' }
-  ],
-  rules:['Deep Strike','Synapse','Extra Attacks','Precision','Devastating Wounds'],
-  kw:['Character','Mobile','Epic Hero','Great Devourer','Monster','Burrower','Vanguard Invader','The Red Terror','Faction: Tyranids'],
-  points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:120 }] }] },
-  composition:[
-    { model:'The Red Terror', min:1, max:1 }
-  ],
-  options:[
-    { on:'The Red Terror', choices:[{ name:'Gaping maw', min:1, max:1 },{ name:'Scything talons', min:1, max:1 }], group:'Wargear' }
-  ]
-},
 'tyranids/tyrant-guard':{
   name:'Tyrant Guard', faction:'tyranids', role:'Infantry',
   stats:[
     { name:'Tyrant Guard', M:'6"', T:'8', Sv:'3+', W:'4', Ld:'8+', OC:'1', InSv:'–', base:'50mm' }
   ],
   melee:[
-    { name:'Bone cleaver, lash whip and rending claws', range:'Melee', A:'3', WS:'3+', S:'5', AP:'-1', D:'2', kw:[] },
+    { name:'Bone cleaver, lash whip and rending claws', range:'Melee', A:'3', WS:'3+', AP:'-1', D:'2', kw:[], S:'5' },
     { name:'Crushing claws and rending claws', range:'Melee', A:'2', WS:'4+', S:'8', AP:'-2', D:'2', kw:['TWIN-LINKED'] },
     { name:'Scything talons and rending claws', range:'Melee', A:'5', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] }
   ],
@@ -6976,6 +6954,29 @@ const DATASHEETS = {
   ],
   rules:['Deep Strike','Synapse'],
   kw:['Beast','Fly','Great Devourer','Spore Mines','Faction: Tyranids']
+},
+'tyranids/the-red-terror':{
+  name:'The Red Terror', faction:'tyranids', role:'Epic Hero',
+  stats:[
+    { name:'The Red Terror', M:'10"', T:'8', Sv:'3+', W:'9', Ld:'8+', OC:'3', InSv:'–', base:'100mm' }
+  ],
+  melee:[
+    { name:'Gaping maw', range:'Melee', A:'1', WS:'2+', S:'5', AP:'–', D:'D3+2', kw:['EXTRA ATTACKS','DEVASTATING WOUNDS','PRECISION'] },
+    { name:'Scything talons', range:'Melee', A:'12', WS:'2+', S:'7', AP:'-2', D:'2', kw:[] }
+  ],
+  abilities:[
+    { name:'Swallow Whole', text:'Each time an attack with this model’s gaping maw targets an **INFANTRY**, **MOUNTED** or **BEASTS** unit, each successful unmodified **Wound roll** is a Critical Wound. Each time an **INFANTRY**, **MOUNTED** or **BEASTS** model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds.', sumAtk:'vs INFANTRY/MOUNTED/BEASTS: successful unmodified Wound rolls are Critical Wounds; heals D3+2 per model killed', sumAtkOf:'975667a2' },
+    { name:'Subterranean Hunter', ph:['fight'], turn:'either', text:'At the end of the Fight phase, if this unit is not within **Engagement Range** of one or more enemy units, you can remove it from the battlefield and place it into **Strategic Reserves**.' }
+  ],
+  rules:['Deep Strike','Synapse','Extra Attacks','Precision','Devastating Wounds'],
+  kw:['Character','Mobile','Epic Hero','Great Devourer','Monster','Burrower','Vanguard Invader','The Red Terror','Faction: Tyranids'],
+  points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:120 }] }] },
+  composition:[
+    { model:'The Red Terror', min:1, max:1 }
+  ],
+  options:[
+    { on:'The Red Terror', choices:[{ name:'Gaping maw', min:1, max:1 },{ name:'Scything talons', min:1, max:1 }], group:'Wargear' }
+  ]
 },
 'tyranids/tyranid-prime-with-lash-whip':{
   name:'Tyranid Prime with Lash Whip', faction:'tyranids', role:'Character',
@@ -11967,16 +11968,15 @@ const NR_IDS = {
     "fellhammer-siege-task-force/vashtorr-the-arkifane":["dcc0-b70c-9779-e6c9|1×1a34-f1cc-ec01-ca32,1×3667-92c8-a7e5-1ccd,1×e02b-6f8f-cbee-fa79"],
     "fellhammer-siege-task-force/warpsmith":["440-a22a-eac1-b107|1×244-694c-22c-74fb,1×5762-3c1f-658e-368,1×9e5d-6700-e6d9-5719,1×d0ac-5a84-221a-3dd7,1×e806-3c87-d3d5-e71d"],
     "healybois/biovores":["3f2c-85ec-d83c-4a2f|1×dd57-9c1f-d425-6711,1×dd57-9c1f-d425-6711/1fff-0a90-a8dd-28b5,1×dd57-9c1f-d425-6711/2d4b-61bd-f1f3-c32b"],
-    "healybois/hive-tyrant-tyrant-guard":["3e96-8098-3401-77af|1×9785-ca88-1ecd-2d55,1×d0cf-a582-5166-fbba,1×effb-d65d-a1b1-51d6","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/72c5-1443-529a-59ad"],
-    "healybois/norn-assimilator":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
+    "healybois/hive-tyrant-tyrant-guard":["3e96-8098-3401-77af|1×9785-ca88-1ecd-2d55,1×d0cf-a582-5166-fbba,1×effb-d65d-a1b1-51d6","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/a6ee-80cb-5346-3c2a"],
+    "healybois/norn-assimilator-synaptoprescience":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
+    "healybois/norn-assimilator-synaptoprescience-2":["6a9b-8e2f-edac-fa2d|1×50f3-6a18-bc71-2a59,1×59a4-4504-cb52-93b1,1×d40a-c9a6-74d5-288d"],
     "healybois/norn-emissary":["5720-2873-8c2c-edc3|1×c102-d98b-dc50-5b53,1×d7b3-df20-933-63b7,1×dc69-1094-613-6daf"],
     "healybois/psychophage":["b6ac-f091-a018-dab2|1×56f9-bb79-7be0-dbf2,1×9edf-e542-77fa-e4c2"],
     "healybois/pyrovores":["d2c6-bd0b-3205-3319|3×c543-2551-1f2a-bcec,3×c543-2551-1f2a-bcec/1fff-0a90-a8dd-28b5,3×c543-2551-1f2a-bcec/68e6-6c48-4d98-7faa"],
     "healybois/ripper-swarms":["1de2-b57b-aa0a-1f0d|1×7242-c911-e611-551e,1×7242-c911-e611-551e/f5e3-ad89-8888-4bd4"],
     "healybois/spore-mines-biovore":["80c2-aecc-5b59-7345|1×1a43-6f35-30bd-ec50"],
-    "healybois/the-red-terror":["7173-1bd9-b60b-6555|1×7190-e583-dade-fdb6,1×8f4b-dfff-77d2-b215"],
     "healybois/the-swarmlord-tyrant-guard":["13f7-1a3-eff-7393|1×7a17-4fb0-c0f5-e22,1×a30-4bad-cef5-5e55,1×ceab-62d9-31bf-7c61","1645-5407-92c8-1441|6×a827-afc9-ca29-b723,6×a827-afc9-ca29-b723/72c5-1443-529a-59ad"],
-    "healybois/tyrannofex":["1705-379b-330d-36d4|1×5e02-c4ce-b7e6-d59,1×a87e-4f8-a6f7-15de,1×f64-8faa-ac54-73ff"],
     "infernal-lance/chaos-cerastus-knight-atrapos":["8b1d-9029-f9e1-42d9|1×4676-0c32-b62c-debd,1×7546-5742-581c-9e8b,1×f57d-be6e-77e4-bfe3"],
     "infernal-lance/chaos-cerastus-knight-lancer":["4175-82c6-8e96-bef8|1×545a-eead-e216-5939,1×c799-77ce-c706-3079"],
     "infernal-lance/knight-despoiler":["0119-8c04-435e-c782|1×005c-b2d1-4432-415a,1×3bee-8c85-68f7-e54b,1×3f41-4b71-a07b-506a,1×4268-2d76-f972-d7f5,1×4268-2d76-f972-d7f5/89c4-132e-6ad6-2a08,1×4268-2d76-f972-d7f5/f4a1-7f17-ec57-6c69,1×48a2-a603-9607-4df8,1×48a2-a603-9607-4df8/89c4-132e-6ad6-2a08,1×48a2-a603-9607-4df8/f4a1-7f17-ec57-6c69,1×4ff3-7dce-5a52-94e9,1×dfe8-cea0-8d16-db95"],
@@ -12885,6 +12885,7 @@ const NR_IDS = {
     "a61b-434-6817-679a":"Herd banner",
     "a661-6877-04db-c7e0":"Hormagaunt talons",
     "a6ad-d379-46ee-2c24":"Detachment",
+    "a6ee-80cb-5346-3c2a":"Bone cleaver, lash whip and rending claws",
     "a797-f585-4ad5-d786":"Two particle beamers",
     "a7ae-e495-683b-7c90":"Reiver Squad",
     "a7ee-9112-4e83-bc2":"Scarab Occult Terminator",
