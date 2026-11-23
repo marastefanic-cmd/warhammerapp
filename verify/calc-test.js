@@ -456,7 +456,7 @@ const strat = (s, from) => box(s, from, x => !!x.m.strat);
 // a weapon's profile picked by its name (the rows are in GW's datasheet order: no case leans on which profile comes first)
 const pickBy = (army, atk, kind, group, name, who) => { const u = dm.D.armies.find(a => a.id === army).units.find(x => x.id === atk), ps = u[kind].filter(w => w.group === group && (w.who || '') === (who || ''));
   return { [kind + ':' + group + '|' + (who || '')]:ps.findIndex(w => w.name === name) }; };
-const LKs = { army:'princes', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{} }, LK = box(LKs, 'Legendary Killer').k;
+const LKs = { army:'princes', ph:'fight', atk:'kharn-the-betrayer-khorne-berzerkers', typed:{} }, LK = box(LKs, 'Legendary Killer').k;
 const DAKKA = box({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{} }, 'Dakka! Dakka! Dakka!', x => !!x.e.range).k;
 const cp = x => JSON.parse(JSON.stringify(x));   // (the state is the one passed: each case its own copy)
 // targets set by hand as the old matchups' units were: a Knight Paladin (T11, Sv 3+, 5+ InSv against ranged attacks, Feel No Pain 6+,
@@ -584,7 +584,7 @@ const app = [
   ['Kindred Sorcery: a pick, not greyed as range-only', () => +(box({ army:'pubstomper', ph:'fight', atk:'daemon-prince-of-tzeentch-with-wings', typed:{} }, 'Kindred Sorcery').state === 'choice'), 1],
   // after the unit is destroyed, a later weapon's attacks are lost: Khârn + Berzerkers fight 10 models set as Gretchin (T2, Sv 6+, W1):
   // the eviscerators (last) find the unit already gone in nearly every game, and their row says so
-  ['the unit gone before a weapon: shown', () => (c => C.run(c.input).groups.slice(-1)[0].gone)(dm.calc({ army:'princes', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{ n:10, T:2, W:1, Sv:6 } })), 1],
+  ['the unit gone before a weapon: shown', () => (c => C.run(c.input).groups.slice(-1)[0].gone)(dm.calc({ army:'princes', ph:'fight', atk:'kharn-the-betrayer-khorne-berzerkers', typed:{ n:10, T:2, W:1, Sv:6 } })), 1],
   // half range as a band: the Knight Paladin's rapid-fire battle cannon and its stubbers have different half ranges; within 18"
   // only the weapons whose half range is 18" or more get [RAPID FIRE]
   ['half range band from the screen', () => dm.calc({ army:'6-bigs', ph:'shooting', atk:'knight-paladin', typed:{}, val:{ half:18 } }).ctx.halfWithin, 18],
@@ -599,9 +599,9 @@ const app = [
   ['range rule unticked: the Cutta at 7.5" gets neither', () => (c => C.explain(c.input).groups[1].dmg)(dm.calc({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, val:{ half:7.5 } })), 10 * 3 / 6 * 5 / 6 * 5 / 6 * 4],
   ['range rule: named in the working', () => +C.explain(dm.calc({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, on:{ [DAKKA]:true }, val:{ half:7.5 } }).input).groups[1].steps[0].t.includes('within half range (7.5" (range 12" +3" Dakka! Dakka! Dakka! = 15")'), 1],
   // ---- W1 models: destroyed and wounds lost are the same number (Khârn + Berzerkers shoot 10 models set as Tzaangors) ----
-  ['W1 target: destroyed = wounds lost', () => (c => { const r = C.run(c.input), x = C.explain(c.input, r.orderIdx), v = dm.app.dmShown(c, r, x); return +(C.fmt(v.killed) === C.fmt(v.lost)); })(dm.calc({ army:'princes', ph:'shooting', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{ n:10, T:4, W:1, Sv:6, InSv:6 } })), 1],
+  ['W1 target: destroyed = wounds lost', () => (c => { const r = C.run(c.input), x = C.explain(c.input, r.orderIdx), v = dm.app.dmShown(c, r, x); return +(C.fmt(v.killed) === C.fmt(v.lost)); })(dm.calc({ army:'princes', ph:'shooting', atk:'kharn-the-betrayer-khorne-berzerkers', typed:{ n:10, T:4, W:1, Sv:6, InSv:6 } })), 1],
   // ---- the working names a bonus the printed value already includes (New Recruit): Gorechild's A includes Relentless Rage ----
-  ['the working names included bonuses', () => +/^Attacks: \d+ \(includes Relentless Rage\)/.test(C.explain(dm.calc({ army:'princes', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{ n:10, T:4, W:1, Sv:6, InSv:6 } }).input).groups.flatMap(g => g.steps.map(x => x.t)).find(t => /includes Relentless Rage/.test(t)) || ''), 1],
+  ['the working names included bonuses', () => +/^Attacks: \d+ \(includes Relentless Rage\)/.test(C.explain(dm.calc({ army:'princes', ph:'fight', atk:'kharn-the-betrayer-khorne-berzerkers', typed:{ n:10, T:4, W:1, Sv:6, InSv:6 } }).input).groups.flatMap(g => g.steps.map(x => x.t)).find(t => /includes Relentless Rage/.test(t)) || ''), 1],
   ['the working names included keywords', () => +C.explain(dm.calc({ army:'pubstomper', ph:'shooting', atk:'sorcerer-in-terminator-armour-scarab-occult-terminators', typed:{ n:10, T:4, W:1, Sv:3 } }).input).groups.flatMap(g => g.steps.map(x => x.t)).some(t => t.includes('[LETHAL HITS]: these wound automatically (you can choose, 24.23; from Empyric Guidance)')), 1],
   // ---- the situation reaches every rule with that condition ----
   // "This unit or the target within range of an objective" ticks Finderz Keeperz (+1 AP) and Wreckin' and Lootin' (re-roll hit rolls
@@ -823,10 +823,10 @@ cases.push(['the pair on an objective: one fact for both units', () => { const s
   const p = dm.plan(s), st = dm.app.dmState(), f = dm.app.dmLevers(st, dm.app.dmPlan(st)).filter(l => l.fact === 'objective');
   return +(f.length === 1 && f[0].unitWho === 'pair' && f[0].on && ['Finderz Keeperz', 'Wreckin’ and Lootin’'].every(n => p.beats[0].M.rules.find(r => r.m.from === n).on)); }, 1]);
 // Khârn's Legendary Killer (while he leads the unit): a box, unticked like every box (the owner's decision, 29 Oct 2026), its condition said
-cases.push(['Legendary Killer: a box, unticked, “While leading a unit”', () => (r => +(!!r && !r.on && r.state === 'choice' && /While leading a unit/.test(r.label)))(dm.calc({ army:'princes', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{} }).rules.find(r => r.k === LK)), 1]);
+cases.push(['Legendary Killer: a box, unticked, “While leading a unit”', () => (r => +(!!r && !r.on && r.state === 'choice' && /While leading a unit/.test(r.label)))(dm.calc({ army:'princes', ph:'fight', atk:'kharn-the-betrayer-khorne-berzerkers', typed:{} }).rules.find(r => r.k === LK)), 1]);
 // a step added after it moves nothing: Khârn's Shoot is the same with the fight after it
 const same = (x, y) => +(JSON.stringify(x) === JSON.stringify(y));
-const KHF = turn => turnOf({ army:'princes', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{ n:5, T:6, W:3, Sv:2 }, turn:{ me:turn } });
+const KHF = turn => turnOf({ army:'princes', atk:'kharn-the-betrayer-khorne-berzerkers', typed:{ n:5, T:6, W:3, Sv:2 }, turn:{ me:turn } });
 cases.push(['the turn: Khârn’s Shoot, the fight added after it', () => same(KHF({ shoot:true }).r.beats[0], KHF({ shoot:true, charge:true, fight:true }).r.beats[0]), 1]);
 // every unit of every list at a target set as one unit of each other list: the shooting alone and with the fight after it give the same
 // numbers for the shooting (node verify/calc-test.js --later-all: every unit of every other list)
@@ -871,7 +871,7 @@ cases.push(['Unshackled Wrath, all three: more destroyed, its hazard not counted
 // Fury on a BLOOD LEGIONS unit selects a WORLD EATERS unit: Angron's [LANCE]; Honoured Interred's aura on a DREADNOUGHT: Trajann's re-roll)
 cases.push(['from other units: Daemonic Fury for Angron, selected, [LANCE]', () => (r => +(r.m.grp === 'other' && r.m.mark === 'selected' && r.e.lance === true))(box({ army:'big-demons-baby', ph:'fight', atk:'angron', typed:{} }, 'Daemonic Fury', x => !!x.e.lance)), 1]);
 cases.push(['from other units: Honoured Interred for Trajann, an aura, re-roll hit rolls of 1', () => (r => +(r.m.grp === 'other' && r.m.mark === 'aura' && r.e.rrHit === '1s'))(box({ army:'lite-knights', ph:'fight', atk:'trajann-valoris-allarus-custodians', typed:{} }, 'Honoured Interred')), 1]);
-cases.push(['a rule the list printed into the weapons is not counted again (Relentless Rage, +1 A on the profile)', () => +dm.calc({ army:'princes', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{} }).nc.some(x => x.name === 'Relentless Rage' && /already in its weapons/.test(x.why)), 1]);
+cases.push(['a rule the list printed into the weapons is not counted again (Relentless Rage, +1 A on the profile)', () => +dm.calc({ army:'princes', ph:'fight', atk:'kharn-the-betrayer-khorne-berzerkers', typed:{} }).nc.some(x => x.name === 'Relentless Rage' && /already in its weapons/.test(x.why)), 1]);
 // Doctrina Imperatives' both at once, GW's words (Thulia Ghuld's Icon of War, The Fires of Mars: "the Conqueror Imperative and Protector
 // Imperative are both active for that unit"): a pill for the SKITARII or THULIA GHULD units it selects, both rows' effects together
 const DOCB = memo(() => box({ army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{} }, 'Doctrina Imperatives'));
@@ -935,13 +935,13 @@ cases.push(['Doctrina Imperatives: Auto-divinatory Targeting and Protector: BS 2
 cases.push(['Murderous Imperative: two boxes, as its two lines, each saying its Imperative', () => { const ms = dm.calc(cp(SR)).rules.filter(r => r.m.from === 'Murderous Imperative');
   return +(ms.length === 2 && ms.some(m => m.e.rrHit === '1s' && /Protector Imperative is active/.test(m.label)) && ms.some(m => m.e.rrWound === '1s' && /Conqueror Imperative is active/.test(m.label)) && ms.every(m => !m.on)); }, 1]);
 // the Blessings of Khorne: each its own tick; two at once, a third counted by you; Decapitating Strikes (vs INFANTRY) a box like any other
-const KB = { army:'princes', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{}, ph:'fight' };
+const KB = { army:'princes', atk:'kharn-the-betrayer-khorne-berzerkers', typed:{}, ph:'fight' };
 const bless = s => dm.calc(cp(s)).rules.filter(r => r.m.limit);   // (each a row of the Blessings of Khorne, "activate up to two")
 cases.push(['Blessings of Khorne: three ticked, the third counted by you', () => { const on = {}; for(const r of bless(KB)) on[r.k] = true; const c = dm.calc(Object.assign(cp(KB), { on }));
   return c.rules.filter(r => r.m.limit && r.over).length * 10 + c.rules.filter(r => r.m.limit && r.on && !r.over).length; }, 12, 0]);
 cases.push(['Blessings of Khorne: Decapitating Strikes is a box (the target’s keywords)', () => +(dm.calc(cp(KB)).rules.find(r => /^Decapitating Strikes/.test(r.label)).state === 'choice'), 1]);
 // Total Carnage (its models destroyed before they fought, fighting back) is not played: not offered in a fight
-cases.push(['Total Carnage: not offered in a fight', () => +!dm.plan({ army:'princes', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{}, turn:{ me:MT('fight') } }).beats[0].M.rules.some(r => r.m.onDeath), 1]);
+cases.push(['Total Carnage: not offered in a fight', () => +!dm.plan({ army:'princes', atk:'kharn-the-betrayer-khorne-berzerkers', typed:{}, turn:{ me:MT('fight') } }).beats[0].M.rules.some(r => r.m.onDeath), 1]);
 // Fire Overwatch for a TITANIC unit: ruled out (15.08), the player's to count anyway; [TORRENT] in snap shooting: no reading to pick
 cases.push(['Fire Overwatch: ruled out for a TITANIC unit (15.08)', () => +/15\.08/.test((dm.calc({ army:'4-megas-and-a-destrier', atk:'canis-rex', typed:{}, ph:'shooting', on:{ 'c:snap':true } }).sit.find(x => x.k === 'c:snap') || {}).ruled || ''), 1]);
 const NZ = { army:'simple-but-effective', atk:'nazdreg-meganobz', typed:{}, ph:'shooting', on:{ 'c:snap':true } };
@@ -961,7 +961,7 @@ cases.push(['Destiny’s Ruin: for a THOUSAND SONS unit, 10+ re-rolls every hit 
   return +(!!r && dm.calc(Object.assign(cp(s), { on:{ [r.k]:true } })).R.groups.every(g => g.out || g.rrHit === 'all')); }, 1]);
 // Both: the charge taken as made ("Charged this turn" ticked for the fight, said why); unticked, the fight with no charge move; with
 // close-quarters shooting no charge (it is engaged: 10.06)
-const KT = (turn, ch) => dm.plan({ army:'princes', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{ n:5, T:6, W:3, Sv:2 }, turn:{ me:turn }, ch:ch || {} });
+const KT = (turn, ch) => dm.plan({ army:'princes', atk:'kharn-the-betrayer-khorne-berzerkers', typed:{ n:5, T:6, W:3, Sv:2 }, turn:{ me:turn }, ch:ch || {} });
 const MC = p => p.beats[p.beats.length - 1].M.rules.find(r => r.m.from === 'Murderous Charge').on;
 cases.push(['Both: the fight charged (Murderous Charge ticked for you), said why', () => { const p = KT(MT('both')), L = dm.app.dmLevers(dm.app.dmState(), p).find(l => l.id === 'f:mine:charged');
   return +(MC(p) && !!L && L.on && /Both takes the charge as made/.test(L.why) && L.bi === 1); }, 1]);

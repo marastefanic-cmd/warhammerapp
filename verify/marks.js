@@ -45,8 +45,11 @@ const says = (text, f) => { const plain = String(text).replace(/\*\*/g, '');
 // the part it is on (an enhancement or ability of one part of an attached unit does not change another part's row, unless its words
 // reach the unit: "this unit", "bearer's unit"); for a number, the ones whose effects give the value shown from GW's
 //   → { names:[…] } | { none:true } | { unsure:[…candidates] }
-const num = v => { const m = /^(-?\d+)("?)$/.exec(String(v).replace(/[−–]/g, '-')); return m ? { n:+m[1], u:m[2] } : null; };
+const num0 = v => { const m = /^(-?\d+)("?)$/.exec(String(v).replace(/[−–]/g, '-')); return m ? { n:+m[1], u:m[2] } : null; };
 function namesFor(S, idx, o){   // o: { field, gw, shown, part (the row's part name), parts (the unit's part names), printed }
+  // (a skill, WS or BS, "+1 WS" makes 4+ a 3+: its number counts down, as verify/build-index.js records it)
+  const sk = (o.field === 'WS' || o.field === 'BS') && /^\d\+$/.test(String(o.gw)) && /^\d\+$/.test(String(o.shown));
+  const num = v => { const x = num0(String(v).replace(/\+$/, sk ? '' : '+')); return x && sk ? { n:-x.n, u:'' } : num0(v); };
   const key = isChar(o.field) ? o.field : o.field.toUpperCase();
   // (an ability reaches a row of its own part; a leader's or other character's ability also the rows of the unit it leads, the
   // bodyguard's, as GW words them: "while this model is leading a unit, models in that unit …"; a bodyguard's a character's row only

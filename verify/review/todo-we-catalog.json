@@ -1,0 +1,277 @@
+[
+ {
+  "kind": "summaries",
+  "where": "World Eaters catalogue (no new summary)",
+  "judgement": {
+   "check": "No new AI summary or stratagem gist was written: verify/lines.js LM finds every line the lists place with its summary and every summary used (2088 placed lines) after the four World Eaters lists moved to builder.js. The four new detachments (Cult of Blood, Possessed Slaughterbound, Goretrack Onslaught, Brazen Engines) and the 13 datasheets no list has are not read yet (aiStatus not-read: no gists, readings or summaries), as the earlier catalogues' were."
+  },
+  "source": {
+   "gate": "verify/lines.js LM (lines step)"
+  }
+ },
+ {
+  "kind": "catalog-faction",
+  "where": "verify/sources/factions.json world-eaters catalogFactions",
+  "judgement": {
+   "catalogFactions": [
+    "World Eaters",
+    "Blood Legions"
+   ],
+   "why": "BLOOD LEGIONS units (Bloodletters, Bloodcrushers, Flesh Hounds, Skarbrand, Bloodthirster) are on the World Eaters faction page and in a World Eaters army: Pact of Blood says only that BLOOD LEGIONS cannot be the Army Faction; the Faction Pack's Khorne Daemonkin FAQ names Bloodcrushers and Flesh Hounds in a World Eaters list. The coordinator's decision (a)."
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/world-eaters.html (Army Rules: \"Pact of Blood: When mustering your army, unless specifically stated otherwise, you cannot select BLOOD LEGIONS as your Army Faction.\")",
+   "pack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt (FAQ: \"if I attach a Lord on Juggernaut with the Disciple of Khorne Enhancement to a unit of Bloodcrushers or Flesh Hounds …\")"
+  }
+ },
+ {
+  "kind": "catalog-left-out",
+  "where": "World Eaters catalogue excluded",
+  "judgement": {
+   "legends": [
+    "Chaos Thunderhawk",
+    "Hell Blade",
+    "Hell Talon",
+    "Greater Brass Scorpion",
+    "Kytan Ravager",
+    "Blood Slaughterer"
+   ],
+   "other faction": "Karanak (chaos-daemons page) and the other factions' datasheets the index links",
+   "boarding actions": "the page's Boarding Actions section has no World Eaters detachment of its own",
+   "why": "the owner's standing rule (official 2000-pt matched play); Wahapedia marks the six Warhammer Legends; the coordinator's decision."
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/world-eaters.html index (verify/waha-catalog.js index: \"(Warhammer Legends)\" marks)"
+  }
+ },
+ {
+  "kind": "detachment-name",
+  "where": "FACTIONS world-eaters possessed-slaughterbound",
+  "judgement": {
+   "name": "Possessed Slaughterbound",
+   "waha": "Possessed Slaughterband",
+   "why": "GW's Faction Pack names the detachment POSSESSED SLAUGHTERBOUND; Wahapedia's heading says Slaughterband. GW is the source of truth: GW's name, Wahapedia's kept to find its section. The coordinator's decision; a deviation from Wahapedia."
+  },
+  "source": {
+   "pack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt Rules Updates: \"POSSESSED SLAUGHTERBOUND DETACHMENT\"",
+   "wahapedia": "verify/.cache/waha/world-eaters.html heading \"Possessed Slaughterband 2DP\"",
+   "hand": "verify/sources/hand/catalog-world-eaters.json detachmentNames"
+  }
+ },
+ {
+  "kind": "pack-update",
+  "where": "FACTIONS world-eaters cult-of-blood · Butcher Lord",
+  "judgement": {
+   "text": "**WORLD EATERS INFANTRY** model only. The bearer has the Infiltrators ability.",
+   "why": "the Faction Pack's Rules Update (\"Change to:\") over Wahapedia's text, which carried a stray \"LEADER: GOREMONGERS, JAKHALS\" line before it"
+  },
+  "source": {
+   "pack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt Rules Updates: CULT OF BLOOD DETACHMENT / Butcher Lord Enhancement: \"WORLD EATERS INFANTRY model only. The bearer has the Infiltrators ability.\""
+  }
+ },
+ {
+  "kind": "pack-text",
+  "where": "FACTIONS world-eaters brazen-engines · Murder-Forged Entity",
+  "judgement": {
+   "text": "**WORLD EATERS VEHICLE** unit only. This unit has **DAEMON**.",
+   "why": "the pack prints the detachment in full with the full stop Wahapedia's page lacks"
+  },
+  "source": {
+   "pack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt p2: \"WORLD EATERS VEHICLE unit only. This unit has DAEMON.\"",
+   "hand": "verify/sources/hand/catalog-world-eaters.json detachmentTexts"
+  }
+ },
+ {
+  "kind": "parse",
+  "where": "FACTIONS world-eaters goretrack-onslaught · Fury Unleashed; chaos-daemons daemonic-incursion · The Realm of Chaos",
+  "judgement": {
+   "restrictions": "Wahapedia's \"RESTRICTION:\" (singular) is the RESTRICTIONS field, not part of the EFFECT (verify/from-json.js, verify/texts.js); The Realm of Chaos moved in its catalogue file and data.js"
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/world-eaters.html (FURY UNLEASHED: \"**RESTRICTION:** A unit cannot be targeted by this Stratagem and the Unrelenting Advance Stratagem in the same phase.\"); verify/.cache/waha/chaos-daemons.html (THE REALM OF CHAOS)"
+  }
+ },
+ {
+  "kind": "pack-title",
+  "where": "verify/texts.js TITLE_TYPOS",
+  "judgement": {
+   "map": "\"Maulerfiend, Scent Of Blood Ability\" is the Maulerfiend's The Scent of Blood",
+   "why": "the pack's update title drops \"The\"; the new text is that ability's (as the Blood Fury / Bloody Fury precedent)"
+  },
+  "source": {
+   "pack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt Rules Updates: \"Maulerfiend, Scent Of Blood Ability\"",
+   "wahapedia": "verify/.cache/waha/ds/world-eaters_Maulerfiend.html: \"The Scent of Blood\""
+  }
+ },
+ {
+  "kind": "pack-update",
+  "where": "DATASHEETS world-eaters/helbrute · Frenzy",
+  "judgement": {
+   "tag": "Once per turn, per unit",
+   "why": "the pack's new text opens with \"(Once per turn, per unit)\": the ability's tag, its words the rest (verify/from-waha.js, verify/texts.js)"
+  },
+  "source": {
+   "pack": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt Rules Updates: \"Helbrute, Frenzy Ability\""
+  }
+ },
+ {
+  "kind": "model-names",
+  "where": "World Eaters catalogue composition names",
+  "judgement": {
+   "Lord on Juggernaut": "New Recruit's name (the owner's exports) for GW's \"World Eaters Lord on Juggernaut\" (declared, deviations-catalog.json)",
+   "Heldrake": "GW's \"Chaos Heldrake\" (no export shows New Recruit's)",
+   "plural lines": "one model of a GW line of several is named in the singular (Bloodletter, Bloodcrusher, Flesh Hound, Goremonger, Chaos Terminator, Jakhal), or by New Recruit's name where an export shows it (Khorne Berzerker; variants \"Khorne Berzerker w/ eviscerator and plasma pistol\", \"Dishonoured w/ paired manglers\", the Chaos Terminators' entries named by wargear)",
+   "why": "decision 3: GW's names where no list has the datasheet; to review whether the singular is right where GW prints only the plural"
+  },
+  "source": {
+   "wahapedia": "each datasheet page's UNIT COMPOSITION; verify/sources/nr-json (princes, standard, super-terminators, big-demons-baby)"
+  }
+ },
+ {
+  "kind": "declared",
+  "where": "verify/deviations-catalog.json world-eaters",
+  "judgement": {
+   "angron": "Wrathful Presence held as its three abilities (\"Wrathful Presence: pick one\"), as the lists have them",
+   "jakhals": "the Dishonoured w/ paired manglers profile row New Recruit gives, the same values as GW's one profile",
+   "chaos-terminators": "New Recruit's model entries named by wargear in GW's 4-9 line",
+   "lord-on-juggernaut": "New Recruit's model name"
+  },
+  "source": {
+   "file": "verify/deviations-catalog.json (each with GW's evidence)"
+  }
+ },
+ {
+  "kind": "declared",
+  "where": "verify/deviations-keywords.json world-eaters/Daemon Prince of Khorne with Wings",
+  "judgement": {
+   "nameKeyword": "Daemon Prince",
+   "why": "a head match the page prints"
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/ds/world-eaters_Daemon-Prince-of-Khorne-with-Wings.html KEYWORDS \"MONSTER; CHARACTER; FLY; CHAOS; KHORNE; DAEMON; DAEMON PRINCE\""
+  }
+ },
+ {
+  "kind": "declared",
+  "where": "verify/deviations-nr.json stats (rows)",
+  "judgement": {
+   "rows": "every stats row of the four World Eaters lists that New Recruit's PDF prints without its ×N, as builder.js writes it (Eightbound ×3, Exalted Eightbound ×3, Goremongers ×8, Jakhal ×9, Chaos Terminators ×10, Flesh Hounds ×5)",
+   "why": "the lists are builder.js's now (the one builder)"
+  },
+  "source": {
+   "pdf": "verify/sources/nr/{princes,standard,super-terminators,big-demons-baby}.txt"
+  }
+ },
+ {
+  "kind": "wargear",
+  "where": "verify/waha-loadout.js on World Eaters",
+  "judgement": {
+   "unread": [
+    "Helbrute: For each Helbrute fist this model is equipped with, it can be equipped with one of the following: 1 combi-bolter; 1 heavy flamer"
+   ],
+   "read as": {
+    "Chaos Rhino": "\"This model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher\": an addition or a swap, one havoc launcher a model",
+    "Defiler": "\"(a model cannot be equipped with more than one electroscourge)\": a cap of 1",
+    "Khorne Berzerkers": "the Champion's swap 1 per unit; \"For every 5 models in this unit, 1 Khorne Berzerker's …\" n per 5 models of the unit; \"1 model can be equipped with 1 icon of Khorne\" 1 per unit",
+    "Chaos Terminators": "\"up to 3 models can each …\" 3 per 5; \"1 model's combi-bolter and accursed weapon …\" a swap of both"
+   },
+   "why": "decision 2: what the reader cannot express is unread, and builder.js refuses any loadout but GW's default on that datasheet"
+  },
+  "source": {
+   "wahapedia": "each datasheet page's WARGEAR OPTIONS"
+  }
+ },
+ {
+  "kind": "builder",
+  "where": "builder.js: what an export may carry",
+  "judgement": {
+   "legalLoadout": "a datasheet with a loadout (a catalogue from verify/from-waha.js) is held to GW's WARGEAR OPTIONS (each model line's default with swaps and additions within their limits), not to options' limits; a bundle or group selection of New Recruit's is no option of its own there",
+   "checked": "the four World Eaters exports build; refused: Khorne Berzerkers with 3 eviscerators in 10 models, a Defiler with 2 electroscourges, a Helbrute off its default"
+  },
+  "source": {
+   "code": "builder.js legalLoadout, legalWargear"
+  }
+ },
+ {
+  "kind": "builder",
+  "where": "builder.js: \"+\" marks",
+  "judgement": {
+   "several rules": "several rules that each add to a value, every one at work on the row: the value is GW's with all of them, named as the list's row names them (Berzerker Glaive and Relentless Rage on the Daemon Prince's A; Lacerator and daemonic claw)",
+   "skill": "+1 WS or BS improves the skill (4+ to 3+): Gore-stained Veterans; verify/build-index.js and verify/marks.js learn and check it so (Infernal Lance's Knight Diabolus re-imports as before)"
+  },
+  "source": {
+   "code": "builder.js marksOf, verify/build-index.js, verify/marks.js"
+  }
+ },
+ {
+  "kind": "builder",
+  "where": "builder.js: what a rule gives a unit",
+  "judgement": {
+   "enhancement limit": "an enhancement's \"(Once per battle, per army)\" is its tag (Archslaughterer)",
+   "faction keyword": "Disciple of Khorne's BLOOD LEGIONS in the place of WORLD EATERS on its bearer, and the kwNote that says so; its Deep Strike the bearer's alone (partialRules)",
+   "given core ability": "Lord of the Eightbound's Deep Strike and Scouts 6\" on the Slaughterbound attached to Exalted Eightbound (POSSESSED)",
+   "rules order": "GW's order (each part's CORE ABILITIES, then ARMY RULES, then weapons' and others) where every part is a catalogue row from GW's pages",
+   "na": "verify/derive.js naOf's three patterns ported (\"Not leading a unit in this list\" …)"
+  },
+  "source": {
+   "code": "builder.js finish, naOf",
+   "lists": "princes, standard, super-terminators, big-demons-baby (P1 byte for byte)"
+  }
+ },
+ {
+  "kind": "list-change",
+  "where": "the four World Eaters lists (data.js) against main",
+  "judgement": {
+   "short": "the hand files' short \"Daemon Prince\" dropped: the screens name the Daemon Prince of Khorne by GW's datasheet name (builder.js writes no short)",
+   "ids": "Khârn's units are kharn-the-betrayer-khorne-berzerkers (builder.js's id; was kh-rn-the-betrayer-…); verify/render.js and verify/calc-test.js follow",
+   "stats": "rows with their ×N (Eightbound ×3 …)",
+   "explicit rows": "Chaos Rhino's, Jakhals' and Bloodthirster's entries name their rows (the catalogue gave their datasheets weapons and abilities no list took); what the screens show is the same",
+   "damage": "verify/damage-node.js: every unit of every list against four targets, no box and every box ticked: 1800 of 1800 the same as main"
+  },
+  "source": {
+   "gate": "build-parity P1, reimport"
+  }
+ },
+ {
+  "kind": "reader",
+  "where": "verify/effects-extract.js, verify/coverage.js",
+  "judgement": {
+   "alt clause": "an if-clause with its \", or within N\"\" alternative is read whole (Fail Not the Blood God, In the Shadow of Brass Idols)",
+   "instead": "a sentence that does something else \"instead\" under its own condition is not held to the sentence before it's conditions (Daemonic Strength)",
+   "effect": "only those three new boxes change; no box any list counts"
+  },
+  "source": {
+   "gate": "verify/lines.js LC, effects-migrate"
+  }
+ },
+ {
+  "kind": "gate",
+  "where": "verify/catalog.js nr",
+  "judgement": {
+   "check": "a list unit is compared with the catalogue row of its own datasheet (its DATASHEETS key), not any row of the same name: Thousand Sons' Defiler and Maulerfiend, and Big demons baby's World Eaters Skarbrand and Bloodthirster, are not compared with another faction's row; the three declarations of that comparison are gone"
+  },
+  "source": {
+   "code": "verify/catalog.js"
+  }
+ },
+ {
+  "kind": "known-limit",
+  "where": "Heldrake (no list has it)",
+  "judgement": {
+   "finding": "its page's CORE ABILITIES name Hover, which data.js RULES has no entry for: a list with a Heldrake shows a Hover chip that opens nothing (verify/render.js link-resolves on a made-up list)"
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/ds/world-eaters_Heldrake.html"
+  }
+ },
+ {
+  "kind": "known-limit",
+  "where": "Forgefiend claws (catalogue row) vs the lists' row",
+  "judgement": {
+   "finding": "the list row keeps its signed-off values; the catalogue reads Wahapedia's Forgefiend claws (A 6) and jaws (A 8) as two weapons"
+  },
+  "source": {
+   "wahapedia": "verify/.cache/waha/ds/world-eaters_Forgefiend.html"
+  }
+ }
+]

@@ -14,6 +14,11 @@ verify/sources/catalog/<faction>.json   the catalogue rows (committed): one DATA
 data.js DATASHEETS                       every catalogue row (merged with the lists' rows, below); FACTIONS: its detachments
 ```
 
+**World Eaters** (23 Nov 2026) is the first catalogue written by `verify/from-waha.js`: 30 datasheets (the six the faction page marks
+Warhammer Legends left out: Chaos Thunderhawk, Hell Blade, Hell Talon, Greater Brass Scorpion, Kytan Ravager, Blood Slaughterer; and the
+other factions' pages its index links, Karanak among them), the BLOOD LEGIONS units among them (`catalogFactions`: World Eaters, Blood
+Legions; Pact of Blood makes them part of a World Eaters army), and 8 detachments (Boarding Actions has none of its own).
+
 **Three catalogues were built before 22 Nov 2026** (Adeptus Custodes, Tyranids, Chaos Daemons), by the retired
 `verify/from-bsdata.js`, from New Recruit's data with GW over it. Their committed rows are now the source of record: the file's
 `origin` says so, they are not rebuilt, and the gate step `catalog` holds every row to GW's pages (below).
@@ -26,8 +31,16 @@ data.js DATASHEETS                       every catalogue row (merged with the li
   is read (`verify/from-json.js --emit`), GW's Faction Pack updates over it;
 - names: New Recruit's where a list of the faction already has the datasheet (its DATASHEETS row's unit, model and weapon names), else
   GW's as the page prints them. An import then finds a datasheet by an id a known export has shown, else by its exact name;
+- its models and wargear (`verify/waha-loadout.js`): `composition` (GW's lines; a line New Recruit's exports hold as several model
+  entries, "Khorne Berzerker w/ eviscerator and plasma pistol", a group of them with GW's numbers), `options` (every item GW names, the
+  names builder.js recognises) and `loadout` (each line's default weapons, and the swaps and additions of WARGEAR OPTIONS with their limits:
+  each model, n per unit, n for every N models; a footnote's caps and exclusions), which builder.js holds an export to (legalLoadout);
 - a WARGEAR OPTIONS sentence the reader cannot express is recorded as unread, and builder.js refuses a loadout that needs it, with
-  the unit named;
+  the unit named (World Eaters: the Helbrute's "For each Helbrute fist …" sentence);
+- GW's Faction Pack over Wahapedia: its Rules Updates on the datasheets and on the detachments the catalogue adds; a detachment GW's
+  documents name otherwise than Wahapedia's heading takes GW's name, Wahapedia's kept as its `waha` (Possessed Slaughterbound, World
+  Eaters Faction Pack 1.3, for Wahapedia's Possessed Slaughterband); the hand file `verify/sources/hand/catalog-<faction>.json` for what
+  the pack prints otherwise than Wahapedia (detachmentNames, detachmentTexts, texts, rows), each with its reason;
 - detachments: the faction page's headings, each with its Detachment Points, Force Dispositions, rule, enhancements and stratagems.
 
 **Merging with the lists.** `verify/tables.js --write` builds DATASHEETS from the lists, as before, then adds every catalogue

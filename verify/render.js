@@ -845,7 +845,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     for(const [L0, st0, label] of [
       ['shooty', { atk:'dakkarig-boosta' }, 'Try Dat Button!'],
       ['shooty', { atk:'mek-flashgitz' }, 'profiles, models left'],
-      ['princes', { atk:'kh-rn-the-betrayer-khorne-berzerkers', turn:{ me:{ mode:'fight', fight:true, charge:true, fc:true } } }, 'Blessings'],
+      ['princes', { atk:'kharn-the-betrayer-khorne-berzerkers', turn:{ me:{ mode:'fight', fight:true, charge:true, fc:true } } }, 'Blessings'],
       ['purge-goes-the-foe', { atk:'skitarii-rangers', typed:{ n:10, T:4, W:1, Sv:4, InSv:0, fnp:0 } }, 'Doctrina'],
       ['shooty', { atk:'mek-flashgitz', turn:{ me:{ mode:'both', shoot:true, fight:true, charge:true } } }, 'Both']]){
       if(!armies.some(x => x.id === L0) || !await page.evaluate(([L0, u]) => !!armyById(L0).units.find(x => x.id === u), [L0, st0.atk])){ fail('damage-lines', L0, label, 'the unit is not in the data'); continue; }
