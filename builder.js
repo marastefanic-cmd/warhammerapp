@@ -1050,10 +1050,11 @@ function marksOf(B, army, u, parts, P, rows, abil){
     // (GW's value where New Recruit prints another, declared, BUILD_INDEX gw: the export's is New Recruit's own, no rule at work)
     const gw = (((B.D.buildIndex || {}).gw || {})[u._keys[x.part]]) || {};
     // (the list has GW's value, and says so, naming both: B.gwValues, the build's notes)
-    // (and on the row itself, gwx: the export's value where the row has GW's, marked "‡" on the unit's screen)
+    // (a value declared New Recruit's, BUILD_INDEX gw, reviewed for the owner's lists: the note only. One the export's own data by couldTouch
+    // below is marked on the row itself too, gwx: the export's value where the row has GW's, "‡" on the unit's screen)
     const gwx = {};
-    for(const f of Object.keys(changed)) if(f !== 'kw' && gw[kind + '|' + x.row.name + '|' + f] === changed[f]){ (B.gwValues = B.gwValues || []).push({ unit:nn(parts[x.part].name), row:x.row.name, field:f, export:changed[f], gw:x.row[f] }); gwx[f] = changed[f]; delete changed[f]; }
-    if(!Object.keys(changed).length){ if(Object.keys(gwx).length) out.set(x, { set:{}, from:{}, gwx }); continue; }
+    for(const f of Object.keys(changed)) if(f !== 'kw' && gw[kind + '|' + x.row.name + '|' + f] === changed[f]){ (B.gwValues = B.gwValues || []).push({ unit:nn(parts[x.part].name), row:x.row.name, field:f, export:changed[f], gw:x.row[f] }); delete changed[f]; }
+    if(!Object.keys(changed).length) continue;
     const set = {}, from = {}, label = (f, how) => where(parts) + ': ' + x.row.name + ' ' + (how === 'kw' ? '[' + f + ']' : f);
     const fields = Object.keys(changed).filter(f => f !== 'kw').map(f => [f, f]).concat((changed.kw || []).map(k => [k, 'kw']));
     for(const [f, how] of fields){
