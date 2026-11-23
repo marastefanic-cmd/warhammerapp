@@ -24,6 +24,15 @@ const ptsOf = s => ((s && s.costs) || []).filter(c => c.name === 'pts').reduce((
 const kids = s => (s && s.selections) || [];
 const costOf = s => ptsOf(s) + kids(s).reduce((t, c) => t + costOf(c), 0);
 const uniq = a => a.filter((x, i) => a.indexOf(x) === i);
+// the rows of GW's WARGEAR OPTIONS costs (DATASHEETS points.wargear, "per Praesidium Shield 25") a selection of this name takes: the row
+// of its name, or of each item of a bundle it names (New Recruit's one option "Paragon Blade & Praesidium Shield" is GW's Praesidium
+// Shield), names compared in the singular (New Recruit's "Twin Killsaw", GW's "per Twin Killsaws 5"). The one matcher: the gate step
+// points (verify/points.js) prices a list's wargear with this same function.
+const sing = s => String(s).toLowerCase().replace(/[’‘']/g, "'").replace(/[^a-z0-9']+/g, ' ').trim().split(' ').map(w => w.replace(/ies$/, 'y').replace(/(?<=[a-z])xes$/, 'x').replace(/(?<!s)s$/, '')).join(' ');
+const wargearOf = (P, name) => { const rows = (P && P.wargear) || [], n = sing(name), hit = rows.filter(w => sing(w.name) === n);
+  if(hit.length) return hit;
+  const parts = lc(name).split(/\s*(?:&|,|\band\b)\s*/).filter(Boolean).map(sing);
+  return parts.length > 1 ? rows.filter(w => parts.includes(sing(w.name))) : []; };
 const slug = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'`]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const and = a => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
 const ROLES = ['Epic Hero', 'Character', 'Battleline', 'Dedicated Transport', 'Infantry', 'Mounted', 'Beast', 'Swarm', 'Vehicle', 'Monster', 'Fortification'];
@@ -492,7 +501,9 @@ function build(j, D, opt){
       const k = seenDs[u._keys[i]] = (seenDs[u._keys[i]] || 0) + 1, n = p.type === 'model' ? 1 : modelsOf(p).reduce((t, m) => t + (Number(m.number) || 1), 0);
       const band = (P.costs || []).find(c => k >= c.from && (c.to == null || k <= c.to)), m = band && band.models.find(x => x.models === n);
       if(!m){ err('unit ' + nn(p.name) + ' not imported: ' + n + ' models is no size GW’s points give (' + and(uniq((P.costs || []).flatMap(c => c.models.map(x => x.models)))) + ')'); ok = false; return 0; }
-      let t = m.pts; const d = s => { for(const c of kids(s)){ const w = (P.wargear || []).find(x => lc(x.name) === lc(c.name)); if(w) t += w.pts * (Number(c.number) || 1); if(isEnh(c)){ const e = B.enhOf(c.name); if(e) t += Number(e.pts) || 0; } d(c); } }; d(p);
+      // (each wargear row once on a selection's path: a bundle and an item of it inside are one item)
+      let t = m.pts; const d = (s, had) => { for(const c of kids(s)){ const w = wargearOf(P, c.name).filter(x => !had.includes(x)); for(const x of w) t += x.pts * (Number(c.number) || 1);
+        if(isEnh(c)){ const e = B.enhOf(c.name); if(e) t += Number(e.pts) || 0; } d(c, had.concat(w)); } }; d(p, []);
       return t;
     });
     gw = per.reduce((t, x) => t + x, 0);
@@ -1003,7 +1014,7 @@ function marksOf(B, army, u, parts, P, rows, abil){
 }
 const where = parts => 'unit ' + parts.map(p => nn(p.name)).join(' + ');
 
-const api = { build, naOf, enhKeywords, ruleAbilities, ruleAbilitiesOf, ruleAbilityErrorsOf, keywordsOf, ruleOfRow, coreText, meetsTo, WITH_RULE, catalogued, catalogues, malformed, nn, lc, typo, slug, uniq, and, splitList, lastId };
+const api = { build, naOf, enhKeywords, wargearOf, sing, ruleAbilities, ruleAbilitiesOf, ruleAbilityErrorsOf, keywordsOf, ruleOfRow, coreText, meetsTo, WITH_RULE, catalogued, catalogues, malformed, nn, lc, typo, slug, uniq, and, splitList, lastId };
 root.WH_BUILDER = api;
 if(typeof module !== 'undefined' && module.exports) module.exports = api;
 })(typeof window !== 'undefined' ? window : globalThis);

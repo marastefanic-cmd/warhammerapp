@@ -11,7 +11,7 @@ Each list opens on Find, and each tab remembers where it was, per list.
 Tabs: **Find** (search; Overview: warlord, enhancements, detachments, the army rules, units that can
 Deep Strike, uses per battle, Bases & proxies; Phase checklist: the list's triggered rules, their options and abilities phase by phase (each folded),
 your turn and your opponent's, to do, active and once per battle, as `verify/derive.js` reads them from the rules text, with tick boxes
-and Reset; the Ranged, Melee and Abilities overviews) · **Units** (the
+and Reset; Strategic reserves: a tick box per unit, its Deep Strike (its Rules line, or the rule or ability that gives it: `GRANTS`) and the running total, pinned, against the limit GW's Strategic Reserves text states (50% of the points limit: 1000 pts at Strike Force), kept per list with Reset; the Ranged, Melee and Abilities overviews) · **Units** (the
 roster, stats on each unit's line; one datasheet per unit, laid out like New Recruit's: models, stats with
 bases, weapons, abilities, rules, stratagems, keywords) · **Stratagems** (every stratagem of the list's
 detachments and the core ones, each with a one-line gist, its timing and which of your units can use it) ·

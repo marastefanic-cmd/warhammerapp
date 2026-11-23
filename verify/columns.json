@@ -1552,7 +1552,12 @@
     },
     "to": {
      "source": "derived",
-     "note": "which units (needs), or this unit / model",
+     "note": "which units (needs), or this unit / model (the bearer's own: named in the sentence itself); a selection's units (\"select one friendly <KW> unit\" in an earlier sentence), or unread (the gate fails)",
+     "by": "verify/derive.js"
+    },
+    "pick": {
+     "source": "derived",
+     "note": "one: the words give it to one unit or model the player selects among to (\"select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep Strike.\"), not to each of them",
      "by": "verify/derive.js"
     },
     "while": {

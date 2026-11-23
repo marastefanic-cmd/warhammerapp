@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "28091f6846",
- "data": "2026-11-23.1",
+ "build": "7dc1f79419",
+ "data": "2026-11-23.2",
  "date": "23 Nov 2026",
  "checks": [
   {
@@ -27,11 +27,11 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "742 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "754 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "3345 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "3386 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
@@ -147,7 +147,7 @@ window.WH_VERIFIED = {
   },
   "GRANTS": {
    "what": "a rule or option giving units an ability or keyword",
-   "cols": "rule:derived option:derived grants:derived type:derived to:derived while:derived text:derived"
+   "cols": "rule:derived option:derived grants:derived type:derived to:derived pick:derived while:derived text:derived"
   },
   "NR_IDS": {
    "what": "the ids of New Recruit's data that the owner's committed exports (verify/sources/nr-json) have shown, by which the list import looks a selection up first; one no export has shown is looked up by its exact New Recruit name (verify/import-ids.js --write)",
