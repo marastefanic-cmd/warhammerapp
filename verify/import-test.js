@@ -341,6 +341,21 @@ if(L('6-bigs')){
       report.push('negative: super terminators’ Chainfist at WS 1+ (Gore-stained Veterans gives 3+) → ' + (r.ok ? 'IMPORTED' : r.errors.join('; ')));
     }
   }
+  // the friend's export (verify/sources/import-friend/murderband.json, New Recruit's, not a list of the owner's): built as the phone builds
+  // it, every value GW's with the list's rules (Relentless Rage's +1 A on the melee weapons, Gore-stained Veterans' +1 WS on the Chaos
+  // Terminators), and the one value New Recruit prints otherwise than GW and no rule of the list could give, Lord Invocatus's Bolt pistol
+  // at BS 2+ (GW's 4+), in the note
+  { const FD = path.join(ROOT, 'verify/sources/import-friend', 'murderband.json');
+    if(fs.existsSync(FD)){
+      const r = mk(JSON.parse(fs.readFileSync(FD, 'utf8'))), U = id => r.ok && r.army.units.find(u => u.id === id), W = (id, n) => { const u = U(id); return u && (u.ranged || []).concat(u.melee || []).find(w => w.name === n); };
+      const inv = U('lord-invocatus'), cb = W('lord-invocatus', 'Coward’s Bane'), bh = W('lord-invocatus', 'Bladed horn'), cf = W('chaos-terminators', 'Chainfist'), jc = W('jakhals', 'Chainblades'), ec = W('slaughterbound-exalted-eightbound', 'Chainblades');
+      ok(r.ok && r.army.built && r.army.pointsUsed === 2000 && JSON.stringify(r.army.gwValues) === JSON.stringify([{ unit:'Lord Invocatus', row:'Bolt pistol', field:'BS', export:'2+', gw:'4+' }])
+        && W('lord-invocatus', 'Bolt pistol').BS === '4+' && cb.A === '8' && cb.from.A === 'Relentless Rage' && bh.A === '5' && bh.from.A === 'Relentless Rage' && cf.WS === '3+' && cf.from.WS === 'Gore-stained Veterans'
+        && jc.A === '4' && jc.S === '3' && ec.A === '5' && ec.S === '8',
+        'the friend’s Murderband: built at 2000 pts, GW’s values with its rules, Bolt pistol BS noted: ' + JSON.stringify(r.ok ? [r.army.pointsUsed, r.army.gwValues, inv && inv.ranged, cb, bh] : r.errors));
+      report.push('accepted (the friend’s export): Murderband → ' + (r.ok ? r.army.units.length + ' units, ' + r.army.pointsUsed + ' pts, noted: ' + (r.army.gwValues || []).map(g => g.unit + ' ' + g.row + ' ' + g.field + ' ' + g.export + ' (GW ' + g.gw + ')').join('; ') : r.errors.join('; ')));
+    }
+  }
   // the earlier made-up Cult of Blood list whose Helbrute swaps its multi-melta for a twin lascannon: refused while the Helbrute's options
   // were not read, built now; the same list with a Helbrute hammer for its multi-melta (the missile launcher's choice): refused, named
   if(fs.existsSync(path.join(MD, 'cult-of-blood-helbrute.json'))){

@@ -67,6 +67,11 @@ illegal ones refused with their reason); cult-of-blood-helbrute.json a Cult of B
 twin lascannon (built), and the list the value cases change (Lord Invocatus's Bolt pistol at BS 2+: GW's value and the note; a Daemonic
 Icon's Ld given otherwise: refused).
 
+## import-friend/
+A friend's New Recruit export (Murderband, World Eaters), as their phone imported it: not a list of the owner's, so not in data.js
+ARMIES. verify/import-test.js (section 6) builds it as the phone does and holds every value to GW's datasheet with the list's rules,
+and the one value New Recruit prints otherwise (Lord Invocatus's Bolt pistol at BS 2+, GW's 4+) to GW's, said in the list's note.
+
 ## catalog/
 The faction catalogues (docs/catalog.md): the committed rows of every current datasheet of a catalogued faction. The gate step
 catalog holds them to Wahapedia's faction page and datasheet pages.

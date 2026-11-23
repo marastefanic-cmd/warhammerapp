@@ -254,5 +254,23 @@
   "source": {
    "scan": "every army rule, detachment rule, enhancement, stratagem and datasheet ability of data.js, scratchpad we2-work/charge-scan.txt; BOXES before and after, we2-work/charge-boxes.txt"
   }
+ },
+ {
+  "key": "we2|friend-murderband",
+  "kind": "tests",
+  "where": "verify/sources/import-friend/murderband.json, verify/import-test.js 6",
+  "judgement": {
+   "result": "built at 2000 pts (Berzerker Warband + Butchers of Khorne, Purge the Foe), 7 units; one note: Lord Invocatus, Bolt pistol BS 2+ in the export, 4+ by GW",
+   "differences": {
+    "Lord Invocatus Bolt pistol BS 2+ (GW 4+)": "New Recruit’s data: no rule of the list names Ballistic Skill or the Bolt pistol (Invocatus leads no unit in it; Berzerker Warband and Butchers of Khorne change A and WS of melee attacks only): GW’s 4+ and the note",
+    "Coward’s Bane A 8 (GW 7), Bladed horn A 5 (GW 4)": "Relentless Rage (Berzerker Warband: “Friendly WORLD EATERS units’ melee attacks have +1 A”): the + mark, no note",
+    "Chaos Terminators": "a World Eaters datasheet of the catalogue (world-eaters/chaos-terminators, GW’s World Eaters datasheet, T6 by the Faction Pack); both units with Gore-stained Veterans: melee WS one better (Chainfist 3+, Power fist and Paired accursed weapons 2+) and +1 A from Relentless Rage",
+    "Chainblades with two profiles": "two datasheets’ weapons of one name: the Jakhals’ Chainblades (GW A3 WS4+ S3, A4 with Relentless Rage) and the Exalted Eightbound’s (GW A4 WS3+ S8 AP-3 D2, A5 with Relentless Rage)",
+    "Dishonoured w/ paired manglers": "New Recruit’s model of the Jakhals’ Dishonoured line (the catalogue’s names for it), Paired manglers A 5 = GW 4 + Relentless Rage"
+   }
+  },
+  "source": {
+   "export": "the friend’s New Recruit export, 23 Nov 2026"
+  }
  }
 ]
