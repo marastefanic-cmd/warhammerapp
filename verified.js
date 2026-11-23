@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "7dc1f79419",
- "data": "2026-11-23.2",
+ "build": "164d36a8f5",
+ "data": "2026-11-23.3",
  "date": "23 Nov 2026",
  "checks": [
   {
@@ -11,7 +11,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Games Workshop’s datasheets,",
-   "detail": "as Wahapedia transcribes them: every stat and weapon number (9370 numbers), every keyword and every ability text."
+   "detail": "as Wahapedia transcribes them: every stat and weapon number (9919 numbers), every keyword and every ability text."
   },
   {
    "label": "Granted values:",
@@ -19,7 +19,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Games Workshop’s rules text:",
-   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (6074 texts)."
+   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (6299 texts)."
   },
   {
    "label": "Rules logic:",
@@ -27,7 +27,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "754 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "800 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
@@ -79,7 +79,7 @@ window.WH_VERIFIED = {
   },
   "FACTIONS.detachments": {
    "what": "a faction's detachments",
-   "cols": "name:gw dispositions:wahapedia dp:gw rule:gw moreRules:gw enhancements:gw stratagems:gw nr:newrecruit aiStatus:derived"
+   "cols": "name:gw dispositions:wahapedia dp:gw rule:gw moreRules:gw enhancements:gw stratagems:gw nr:newrecruit waha:wahapedia aiStatus:derived"
   },
   "FACTIONS.detachments.rule": {
    "what": "a detachment's rule",
@@ -123,7 +123,7 @@ window.WH_VERIFIED = {
   },
   "DATASHEETS": {
    "what": "one row per datasheet (faction + datasheet name): its facts, shared by every list that has it",
-   "cols": "name:newrecruit faction:derived role:newrecruit rules:newrecruit kw:newrecruit kwOnly:wahapedia partialRules:wahapedia srcNote:derived leaders:wahapedia stats:newrecruit ranged:newrecruit melee:newrecruit abilities:wahapedia points:gw composition:wahapedia options:wahapedia aiStatus:derived"
+   "cols": "name:newrecruit faction:derived role:newrecruit rules:newrecruit kw:newrecruit kwOnly:wahapedia partialRules:wahapedia srcNote:derived leaders:wahapedia stats:newrecruit ranged:newrecruit melee:newrecruit abilities:wahapedia points:gw composition:wahapedia options:wahapedia loadout:wahapedia aiStatus:derived"
   },
   "DATASHEETS.stats": {
    "what": "a datasheet's model profiles",
