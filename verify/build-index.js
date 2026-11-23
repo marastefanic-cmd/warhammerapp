@@ -49,7 +49,8 @@ function index(D, RAW){
   for(const a of RAW.ARMIES) for(const u of a.units) for(const k of ['stats', 'ranged', 'melee']) for(const r of u[k] || []) for(const [f, by] of Object.entries(r.from || {})){
     const isKw = !/^(M|T|Sv|W|Ld|OC|InSv|range|A|BS|WS|S|AP|D)$/.test(f), base = rowOf(u, k, r);
     let op = 'kw';
-    if(!isKw){ if(!base || !(f in r)) op = null; else { const x = num(base[f]), y = num(r[f]); op = x && y && x.u === y.u ? { add:y.n - x.n } : { set:r[f] }; } }
+    if(!isKw){ if(!base || !(f in r)) op = null; else { const x = num(base[f]), y = num(r[f]); const sk = (f === 'WS' || f === 'BS') && [base[f], r[f]].every(v => /^\d\+$/.test(String(v)));
+      op = sk ? { add:parseInt(base[f], 10) - parseInt(r[f], 10) } : x && y && x.u === y.u ? { add:y.n - x.n } : { set:r[f] }; } }
     for(const s0 of [].concat(by)){ const m = marks[s0] = marks[s0] || {}, key = isKw ? f.toUpperCase() : f;
       m[key] = !(key in m) || JSON.stringify(m[key]) === JSON.stringify(op) ? op : null; }
   }

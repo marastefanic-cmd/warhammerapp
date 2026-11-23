@@ -1,4 +1,4 @@
-/* verify/catalog-write.js: what `node verify/from-bsdata.js <faction> --write` writes (docs/catalog.md)
+/* verify/catalog-write.js: what `node verify/from-waha.js <faction> --write` writes (and the retired verify/from-bsdata.js wrote) (docs/catalog.md)
      verify/sources/catalog/<faction>.json   the catalogue rows (DATASHEETS rows, one per current datasheet) and what was left out
      data.js FACTIONS                        each detachment data.js lacks: its rule(s), enhancements and stratagems in GW's words
                                              (Wahapedia, the codex), Force Dispositions from BSData, the labels verify/derive.js
@@ -36,7 +36,7 @@ module.exports = function write(ROOT, faction, r, SRC) {
     const I = '    ';
     const block = (id, d) => {
       let s = I + '  // ' + d.name + ': Wahapedia (the codex), from the catalogue (verify/from-bsdata.js ' + faction + '); no gists, readings or When targeted lines yet (aiStatus)\n';
-      s += I + "  '" + id + "': {\n" + I + '    name:' + lit(d.name) + (d.nr ? ', nr:' + lit(d.nr) : '') + ', dispositions:' + lit(d.dispositions || []) + ', dp:' + d.dp + ", aiStatus:'not-read',\n";
+      s += I + "  '" + id + "': {\n" + I + '    name:' + lit(d.name) + (d.waha ? ', waha:' + lit(d.waha) : '') + (d.nr ? ', nr:' + lit(d.nr) : '') + ', dispositions:' + lit(d.dispositions || []) + ', dp:' + d.dp + ", aiStatus:'not-read',\n";
       s += I + '    rule:' + lit(d.rule) + ',\n';
       if (d.moreRules) s += I + '    moreRules:[\n' + d.moreRules.map(x => I + '      ' + lit(x)).join(',\n') + '\n' + I + '    ],\n';
       s += I + '    enhancements:[\n' + d.enhancements.map(e => I + '      ' + lit(e)).join(',\n') + '\n' + I + '    ],\n';
@@ -95,8 +95,10 @@ module.exports = function write(ROOT, faction, r, SRC) {
     fs.writeFileSync(DATA, d);
   }
   // 3. the deviations (each difference of a catalogue row from BSData at the pin, with GW's evidence)
+  // (no BSData since 22 Nov 2026: a catalogue from verify/from-waha.js has no GW-over-BSData declarations to write)
   const CAT = require('./catalog');
   const DEVF = path.join(ROOT, 'verify/deviations-bsdata.json');
+  if (CAT.declarations) {
   const ours = x => x.army === 'catalog' && String(x.unit).startsWith(faction + '/');
   const devList = JSON.parse(fs.readFileSync(DEVF, 'utf8')).filter(x => !ours(x));
   devList.push(...CAT.declarations(ROOT, faction, r));
@@ -106,9 +108,10 @@ module.exports = function write(ROOT, faction, r, SRC) {
   const sorted = devList.map((x, i) => [x, i]).sort((a, b) => (facOf(a[0]) === facOf(b[0]) ? a[1] - b[1] : facOf(a[0]) < facOf(b[0]) ? -1 : 1)).map(([x]) => x);
   devList.length = 0; devList.push(...sorted);
   fs.writeFileSync(DEVF, JSON.stringify(devList, null, 1) + '\n');
+  }
   // 4. the tables: every catalogue row into DATASHEETS (and once more through the old form, as verify/from-json.js does)
   const t = node(['verify/tables.js', '--write']);
   if (t.status !== 0) { console.error(t.stdout + t.stderr); process.exit(1); }
   for (const a of ['--expand', '--write']) node(['verify/tables.js', a]);
-  console.log('wrote ' + path.relative(ROOT, SRC) + ', ' + dets.length + ' detachments into data.js, ' + devList.filter(ours).length + ' catalogue deviations; ' + (t.stdout || '').trim().split('\n')[0]);
+  console.log('wrote ' + path.relative(ROOT, SRC) + ', ' + dets.length + ' detachments into data.js; ' + (t.stdout || '').trim().split('\n')[0]);
 };

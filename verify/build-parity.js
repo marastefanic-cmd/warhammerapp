@@ -122,7 +122,7 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
   neg('a known unit id under another name', 'nidzillas', j => { unit(j, 'Tyrannofex').name = 'Tyrannofex Mk II'; }, ['unit Tyrannofex Mk II not recognized (no datasheet of the Tyranids catalogue is exactly this: none a known export has shown under this id, and not exactly one of this name)']);
   neg('faction not catalogued', 'nidzillas', j => { const F = j.roster.forces[0], o = clone(exp('shooty')).roster.forces[0]; F.catalogueId = o.catalogueId; F.catalogueName = o.catalogueName; },
     null, r => !r.ok && r.errors.some(e => /^faction Orks not catalogued/.test(e)));
-  neg('faction not catalogued (an Orks export)', 'shooty', j => j, ['faction Orks not catalogued: imports are built from a full faction catalogue, and Orks has none yet (catalogued: Adeptus Custodes, Chaos Daemons and Tyranids)']);
+  neg('faction not catalogued (an Orks export)', 'shooty', j => j, ['faction Orks not catalogued: imports are built from a full faction catalogue, and Orks has none yet (catalogued: Adeptus Custodes, Chaos Daemons, Tyranids and World Eaters)']);
   neg('unknown option', 'healybois', j => { unit(j, 'Pyrovores').selections[0].selections.push({ id:'x1', name:'Bio-plasma', entryId:'aaaa-bbbb-cccc-dddd', number:1, type:'upgrade' }); },
     ['option Bio-plasma on unit Pyrovores not recognized (not an option of GW’s datasheet Pyrovores)']);
   neg('unknown weapon', 'healybois', j => { const w = unit(j, 'Pyrovores').selections[0].selections.find(s => (s.profiles || []).length); w.profiles[0].name = w.profiles[0].name + ' Mk II'; },

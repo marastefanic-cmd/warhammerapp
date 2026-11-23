@@ -47,7 +47,7 @@ global.window = {}; require(file); const D = window.WH_DATA;
 const fails = [];
 let n = 0;
 // a detachment's dispositions: its own faction's page's (by GW's name, else New Recruit's spelling of it, nr)
-const pageOf = (fid, d) => { const F = BD.byFaction[fid] || {}; return F[key(d.name)] || (d.nr ? F[key(d.nr)] : undefined); };
+const pageOf = (fid, d) => { const F = BD.byFaction[fid] || {}; return F[key(d.name)] || (d.nr ? F[key(d.nr)] : undefined) || (d.waha ? F[key(d.waha)] : undefined); };   // (waha: Wahapedia's heading where GW's documents name the detachment otherwise)
 for(const [fid, f] of Object.entries(D.factions)) for(const [did, d] of Object.entries(f.detachments || {})){
   n++;
   const want = pageOf(fid, d);

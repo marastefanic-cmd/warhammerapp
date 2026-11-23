@@ -248,7 +248,7 @@ function buildUnit(B, g, err){
   u.models = models; if(unplaced.length) u.unplaced = unplaced; u.gear = gear;
   // every other choice is one of its datasheet's options (GW's WARGEAR OPTIONS as the faction catalogue holds them, DATASHEETS options)
   parts.forEach((p, i) => { const S = B.S[keys[i]], opts = new Set((S.options || []).flatMap(o => o.choices.map(c => lc(c.name))));
-    const d = s => { for(const c of kids(s)){ if(c.type !== 'model' && !isEnh(c) && !isWarlord(c) && !isWeaponSel(c) && !opts.has(lc(c.name)) && S.options) err('option ' + nn(c.name) + ' on unit ' + where + ' not recognized (not an option of GW’s datasheet ' + S.name + ')'); d(c); } }; d(p); });
+    const d = s => { for(const c of kids(s)){ if(c.type !== 'model' && !isEnh(c) && !isWarlord(c) && !isWeaponSel(c) && !opts.has(lc(c.name)) && S.options && !(S.loadout && kids(c).length)) err('option ' + nn(c.name) + ' on unit ' + where + ' not recognized (not an option of GW’s datasheet ' + S.name + ')'); d(c); } }; d(p); });
   legalWargear(B, parts, keys, where, err);
   u._parts = parts; u._keys = keys; u._at = g.at;
   return u;
@@ -269,6 +269,8 @@ function legalWargear(B, parts, keys, where, err){
       if(n < c.min || (max != null && n > max)) err('unit ' + where + ' not imported: ' + n + ' ' + c.model + (n === 1 ? '' : ' models') + ' (' + R + S.name + ': ' + c.min + (max !== c.min ? '–' + max : '') + ')'); }
     for(const gname of uniq(comp.filter(c => c.groupMin != null).map(c => c.group))){ const g = comp.filter(c => c.group === gname), n = g.reduce((t, c) => t + (cnt[c.model] || 0), 0), c0 = g[0];
       if(n < c0.groupMin || n > c0.groupMax) err('unit ' + where + ' not imported: ' + n + ' models of ' + gname + ' (' + R + S.name + ': ' + c0.groupMin + '–' + c0.groupMax + ')'); }
+    // a datasheet whose catalogue holds GW's own WARGEAR OPTIONS (loadout, verify/from-waha.js): held to them, not to options' limits
+    if(S.loadout){ legalLoadout(S, p, where, err); return; }
     // wargear: on each model (per model, the same for every model of a line) and on the unit, each choice and each group within its limits
     const lastSeg = g => String(g || '').split('::').pop();
     const optFor = (on, sel) => { const c = opts.filter(o => (lc(o.on) === lc(on)) && o.choices.some(x => lc(x.name) === lc(sel.name)));
@@ -293,6 +295,72 @@ function legalWargear(B, parts, keys, where, err){
     for(const m of ms){ const c = comp.find(x => lc(x.model) === lc(m.name)) || (m === p && comp.length === 1 ? comp[0] : null); if(c) check(c.model, m, m === p ? 1 : Number(m.number) || 1, (m === p ? '' : (Number(m.number) || 1) + '× ') + c.model); }
     if(p.type !== 'model') check('unit', p, 1, S.name);
   });
+}
+
+// a part's wargear against GW's WARGEAR OPTIONS as the catalogue reads them (DATASHEETS loadout, verify/waha-loadout.js): each model line's
+// weapons and wargear are its default with some of the swaps and additions GW allows it, each at most once per model, and each swap or
+// addition within its limit across the unit (each model; n per unit; n for every N models of the unit); a footnote's caps and exclusions
+// hold per model. A datasheet with a sentence the catalogue could not read takes only GW's default loadout (never a guess).
+function legalLoadout(S, p, where, err){
+  const L = S.loadout, R = 'GW’s datasheet ' + S.name, lines = L.lines || [], acts = (L.swaps || []).map(x => Object.assign({ kind:'swap' }, x)).concat((L.adds || []).map(x => Object.assign({ kind:'add', from:[] }, x)));
+  const ms = modelsOf(p), size = ms.reduce((t, m) => t + (m === p ? 1 : Number(m.number) || 1), 0);
+  const cnt = xs => { const o = {}; for(const x of xs) o[lc(x)] = (o[lc(x)] || 0) + 1; return o; };
+  const same = (a, b) => { const x = cnt(a), y = cnt(b), k = uniq(Object.keys(x).concat(Object.keys(y))); return k.every(z => (x[z] || 0) === (y[z] || 0)); };
+  // a model's weapons and wargear as the export holds them (each as often as one model carries it; an enhancement's are the enhancement's)
+  const carried = (m, n) => { const out = []; const walk = s => { for(const c of kids(s)){
+      if(c.type === 'model' || isWarlord(c) || isEnh(c)) continue;
+      const k = Math.round((Number(c.number) || 0) / n);
+      if(isWeaponSel(c)){ const names = uniq(weaponProfiles(c).map(pr => { const r = rowOfProf(S, pr, c); return r ? r.row.group || r.row.name : nn(pr.name); })); for(const w of names) for(let j = 0; j < k; j++) out.push(w); }
+      else if(kids(c).length) walk(c);
+      else { const ch = choiceOf(S, c.name); for(let j = 0; j < k; j++) out.push(ch ? ch.name : nn(c.name)); } } };
+    walk(m); return out; };
+  const lineOf = m => lines.find(l => (l.names || [l.model]).some(x => lc(x) === lc(m.name))) || (m === p && lines.length === 1 ? lines[0] : null);
+  const limit = a => a.limit.kind === 'each' ? Infinity : a.limit.kind === 'unit' ? a.limit.n : a.limit.n * Math.floor(size / a.limit.every);
+  const ignore = l => (l.wargear || []).map(lc);
+  // every way one model of a line can carry what it carries: [{ uses:[act index…] }]
+  const ways = (l, have) => {
+    const mine = acts.map((a, i) => [a, i]).filter(([a]) => (a.lines || []).includes(l.model)), out = [];
+    const target = have.filter(x => !ignore(l).includes(lc(x)));
+    const go = (k, cur, uses) => {
+      if(k === mine.length){ if(same(cur, target) && Object.entries(L.caps || {}).every(([it, n]) => (cnt(cur)[lc(it)] || 0) <= n) && !(L.excl || []).some(([x, y]) => cur.some(z => lc(z) === lc(x)) && cur.some(z => lc(z) === lc(y)))) out.push(uses); return; }
+      go(k + 1, cur, uses);
+      const [a, i] = mine[k];
+      for(const to of a.to){
+        if(a.kind === 'add' && (a.not || []).some(x => cur.some(z => lc(z) === lc(x)))) continue;
+        const left = cur.slice(); let ok = true;
+        for(const f of a.from){ const j = left.findIndex(z => lc(z) === lc(f)); if(j < 0){ ok = false; break; } left.splice(j, 1); }
+        if(ok) go(k + 1, left.concat(to), uses.concat(i));
+      }
+    };
+    go(0, l.default.slice(), []);
+    return out;
+  };
+  const groups = [], unitItems = [];
+  for(const m of ms){
+    const l = lineOf(m); if(!l) continue;   // (a model GW's composition does not have: refused by its composition check)
+    const n = m === p ? 1 : Number(m.number) || 1, have = carried(m, n);
+    groups.push({ m, l, n, have, ways:ways(l, have) });
+  }
+  // wargear on the unit itself (New Recruit's icon on the unit): an addition one model of the unit takes
+  if(p.type !== 'model') for(const c of kids(p)) if(c.type !== 'model' && !isEnh(c) && !isWarlord(c) && !kids(c).length && !isWeaponSel(c)){ const ch = choiceOf(S, c.name); for(let j = 0; j < (Number(c.number) || 1); j++) unitItems.push(ch ? ch.name : nn(c.name)); }
+  const desc = g => (g.n > 1 ? g.n + '× ' : '') + nn(g.m.name) + ' with ' + (g.have.length ? and(g.have) : 'nothing');
+  const dflt = groups.every(g => same(g.have.filter(x => !ignore(g.l).includes(lc(x))), g.l.default)) && !unitItems.length;
+  if((L.unread || []).length && !dflt){ err('unit ' + where + ' not imported: its wargear (' + groups.filter(g => !same(g.have.filter(x => !ignore(g.l).includes(lc(x))), g.l.default)).map(desc).concat(unitItems).join('; ') + ') is not ' + R + '’s default, and the app cannot read its WARGEAR OPTIONS yet (“' + L.unread.join('” “') + '”)'); return; }
+  const bad = groups.filter(g => !g.ways.length);
+  if(bad.length){ err('unit ' + where + ' not imported: ' + and(bad.map(desc)) + ' is not what ' + R + ' allows (its UNIT COMPOSITION and WARGEAR OPTIONS)'); return; }
+  // the unit's items: each one addition's (to a model that can take it)
+  const unitWays = unitItems.map(it => acts.map((a, i) => [a, i]).filter(([a]) => a.kind === 'add' && a.to.some(t => t.length === 1 && lc(t[0]) === lc(it))).map(([, i]) => i));
+  if(unitWays.some(w => !w.length)){ err('unit ' + where + ' not imported: ' + and(unitItems.filter((x, k) => !unitWays[k].length)) + ' on the unit is not what ' + R + ' allows'); return; }
+  // one way per line, within every limit across the unit
+  const used = acts.map(() => 0);
+  const fit = k => {
+    if(k === groups.length + unitWays.length) return true;
+    const opts = k < groups.length ? groups[k].ways : unitWays[k - groups.length].map(i => [i]), n = k < groups.length ? groups[k].n : 1;
+    for(const w of opts){ if(w.some(i => used[i] + n * w.filter(j => j === i).length > limit(acts[i]))) continue;
+      w.forEach(i => used[i] += n); if(fit(k + 1)) return true; w.forEach(i => used[i] -= n); }
+    return false;
+  };
+  if(!fit(0)) err('unit ' + where + ' not imported: its wargear (' + groups.map(desc).concat(unitItems).join('; ') + ') is more than ' + R + ' allows a unit of ' + size + ' models (' + acts.filter(a => a.limit.kind !== 'each').map(a => '“' + a.text + '”').join(' ') + ')');
 }
 
 // ---------------------------------------------------------------- the roster as GW's rules allow it (Core Rules 19.01, 25.03, 25.04)
@@ -535,7 +603,9 @@ function finish(B, army, u, units, out){
       if(x.row){ const o = { name:x.row.name }; if(multi) o.who = who(x.part); return o; }
       if(x.granted){ const o = Object.assign({}, x.granted.row); if(multi) o.who = who(x.part); return sorted(o, ORDER.abilities); }
       const o = { name:x.enh.name }; if(multi) o.who = who(x.part);
-      o.tag = (x.enh.upgrade ? 'Upgrade' : 'Enhancement') + (/\(Aura\)$/.test(x.enh.name) ? ' · Aura' : '');
+      // (and the limit GW's words print in brackets, "(Once per battle, per army)": Archslaughterer)
+      const lim = /\((Once per (?:battle|battle round|turn|phase)[^)]*)\)/.exec(String(x.enh.text || ''));
+      o.tag = (x.enh.upgrade ? 'Upgrade' : 'Enhancement') + (/\(Aura\)$/.test(x.enh.name) ? ' · Aura' : '') + (lim ? ' · ' + lim[1] : '');
       const lab = ((B.D.buildIndex || {}).labels || {})[x.enh.name]; if(lab) Object.assign(o, lab);
       o.text = x.enh.text;
       return sorted(o, ORDER.abilities);
@@ -556,6 +626,11 @@ function finish(B, army, u, units, out){
   const ruleList0 = uniq(exRules).filter(r => known.has(typo(r))).map(r => known.get(typo(r)) === r || typo(known.get(typo(r))) === r ? r : known.get(typo(r))), ruleList = ruleList0;
   // (a weapon ability a mark adds, SUSTAINED HITS 1: its rule, Sustained Hits)
   const markRules = [...marks.values()].flatMap(m => Object.keys(m.from)).filter(k => /^[A-Z][A-Z -]+/.test(k) && k === k.toUpperCase()).map(k => ruleOfKw(B.D, k)).filter(Boolean);
+  // (a core ability a part's own ability gives that part's model, where the unit meets its condition: the Slaughterbound's Lord of the
+  // Eightbound, "If this model is attached to a WORLD EATERS POSSESSED unit …, this model has the Deep Strike and Scouts 6" abilities")
+  const kwAll = P.flatMap(p => p.kw || []), esc = x => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const givenAt = (i, r) => multi && (P[i].abilities || []).some(a => { const t = String(a.text || '').replace(/\*\*/g, ''), re = new RegExp('\\bthis model has the\\b[^.]*\\b' + esc(r) + '(?=[\\s.,*]|$)', 'i');
+    if(!t.split(/(?<=\.)\s+/).some(x => re.test(x) && !/\bagainst\b/i.test(x))) return false; const m = /\battached to an? ([^.,]*?) unit\b/i.exec(t); return !m || kwAll.some(k => lc(k) === lc(m[1].split(/\s+/).pop())); });
   let rules;
   if(!multi){
     const ds = P[0].rules || [], spelt = r => ds.find(x => typo(x) === typo(r)) || r;
@@ -567,22 +642,38 @@ function finish(B, army, u, units, out){
   } else {
     // (an attached unit: its parts' rules as the export lists them, its leader's datasheet rules in GW's order)
     const order0 = P[0].rules || [], own0 = new Set(); dfs(parts[0], s => { if(s.type === 'unit' || s.type === 'model') for(const r of s.rules || []) own0.add(tn(r.name)); });
-    const gwHas = r => P.some(p => (p.rules || []).some(x => typo(x) === typo(r))) || markRules.some(x => typo(x) === typo(r)) || exWhy[r];
+    // (and a core ability one of its parts' own abilities gives that part's model: givenAt, above)
+    const givenBy = r => P.some((p, i) => givenAt(i, r));
+    const gwHas = r => P.some(p => (p.rules || []).some(x => typo(x) === typo(r))) || markRules.some(x => typo(x) === typo(r)) || exWhy[r] || givenBy(r);
     const ruleList = ruleList0.filter(gwHas);
     const page = r => own0.has(r) && order0.some(x => typo(x) === r);
-    rules = ruleList.filter(page).sort((a, b) => order0.findIndex(x => typo(x) === a) - order0.findIndex(x => typo(x) === b)).concat(ruleList.filter(r => !page(r)));
+    // (GW's order, as verify/gw-order.js gives it from the pages, where every part is a catalogue row read from GW's pages (loadout): each
+    // part's CORE ABILITIES in turn, then the ARMY RULES, then the rules no page of theirs names, as the export has them)
+    if(P.every(p => p.loadout)){ const army = new Set(((B.F.armyRules) || []).map(r => lc(r.name))), at = r => { for(let i = 0; i < P.length; i++){ const j = (P[i].rules || []).findIndex(x => typo(x) === typo(r)); if(j >= 0) return i * 1000 + j; } return -1; };
+      const wk = P.flatMap(p => (p.ranged || []).concat(p.melee || []).flatMap(w => w.kw || [])).map(k => lc(k)), isW = r => wk.some(k => k === lc(r) || k.startsWith(lc(r) + ' ') || k.startsWith(lc(r) + ':') || k.startsWith(lc(r) + '-'));
+      const grp = r => isW(r) ? 2 : at(r) >= 0 && !army.has(lc(r)) ? 0 : army.has(lc(r)) ? 1 : 2;
+      rules = ruleList.map((r, k) => [r, k]).sort((a, b) => grp(a[0]) - grp(b[0]) || (grp(a[0]) === 0 ? at(a[0]) - at(b[0]) : a[1] - b[1])).map(x => x[0]); }
+    else rules = ruleList.filter(page).sort((a, b) => order0.findIndex(x => typo(x) === a) - order0.findIndex(x => typo(x) === b)).concat(ruleList.filter(r => !page(r)));
     rules = rules.map(r => order0.find(x => typo(x) === r) || r);
     for(const p of P) for(const r of p.rules || []) if(!rules.some(x => typo(x) === typo(r))) rules.push(r);
     if(JSON.stringify(rules) !== JSON.stringify(P[0].rules || null) || catFilled(B, keys[0], 'rules')) e.rules = rules;
   }
   // keywords: the datasheets' (an attached unit's: the leader's, then what its other parts add, its Faction keywords last), the Warlord,
   const isFac = k => /^Faction: /.test(k);
-  let kw = (P[0].kw || []).slice(), added = [];
+  // (an enhancement's Faction keyword in the place of its bearer's, as its words say: Disciple of Khorne's "it has the BLOOD LEGIONS
+  // Faction keyword instead of the WORLD EATERS Faction keyword")
+  const facSwap = [];
+  for(const x of u._enh || []){ const m = /it has the \*\*([A-Z][A-Z’' -]+)\*\* Faction keyword instead of the \*\*([A-Z][A-Z’' -]+)\*\* Faction keyword/.exec(String(x.e.text || ''));
+    if(m){ const tc = t => 'Faction: ' + t.toLowerCase().replace(/(^|\s)([a-z])/g, (z, a, c) => a + c.toUpperCase()); facSwap.push({ i:x.i, to:tc(m[1]), from:tc(m[2]), by:x.e.name, text:String(x.e.text).replace(/^[^.]*\bonly\.\s*/, '').replace(/\*\*/g, '') }); } }
+  const Pkw = P.map((p, i) => { let k = (p.kw || []).slice(); for(const f of facSwap.filter(y => y.i === i)) k = k.filter(z => z !== f.from).concat(f.to); return k; });
+  let kw = Pkw[0].slice(), added = [];
   if(multi){
-    const base = kw.filter(k => !isFac(k)), fac = kw.filter(isFac);
-    for(const p of P.slice(1)) for(const k of p.kw || []) if(!base.includes(k) && !fac.includes(k)){ if(isFac(k)) fac.push(k); else { base.push(k); added.push(k); } }
+    const base = kw.filter(k => !isFac(k)), fac = kw.filter(isFac), own = new Set(kw);
+    for(const p of Pkw.slice(1)) for(const k of p) if(!base.includes(k) && !fac.includes(k)){ if(isFac(k)) fac.push(k); else base.push(k); if(!own.has(k) && (!isFac(k) || facSwap.length)) added.push(k); }
+    // (an enhancement's Faction keyword last, after those of the unit)
+    const sw = facSwap.map(f => f.to); fac.sort((a, b) => (sw.includes(a) ? 1 : 0) - (sw.includes(b) ? 1 : 0));
     kw = base.concat(fac);
-  }
+  } else if(facSwap.length) kw = Pkw[0];
   const kwWhy = {};
   // (an Allegiance ability names its gods in bold, "If this model has the **KHORNE** keyword": the one the export's unit has, New Recruit's
   parts.forEach((p, i) => { const ab = (P[i].abilities || []).find(a => /Allegiance$/.test(a.name)); if(!ab) return;
@@ -596,17 +687,21 @@ function finish(B, army, u, units, out){
     const ko = {}; P.forEach(p => Object.assign(ko, p.kwOnly || {}));
     const extra = added.filter(k => !(k in ko)).sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
     const body = P[P.length - 1].name;
-    if(extra.length){ e.kwNote = extra.join(', ') + (extra.length > 1 ? ' come' : ' comes') + ' from the ' + (parts.length > 2 ? 'combined unit' : (u.support ? 'supported ' : 'led ') + body) + '.'; why.kwNote = (u.support ? 'supports ' : 'leads ') + body; }
+    const swNote = facSwap.map(f => f.to + ' comes from ' + f.by + ' on the ' + P[f.i].name + ' (“' + f.text + '”)');
+    if(extra.length){ e.kwNote = extra.join(', ') + (extra.length > 1 ? ' come' : ' comes') + ' from the ' + (parts.length > 2 ? 'combined unit' : (u.support ? 'supported ' : 'led ') + body) + swNote.map(x => '; ' + x).join('') + '.'; why.kwNote = (u.support ? 'supports ' : 'leads ') + body; }
     if(Object.keys(ko).length && JSON.stringify(ko) !== JSON.stringify(P[0].kwOnly || null)) e.kwOnly = ko;
     // rules only some of its models have: a datasheet ability (not a weapon's, nor an army rule, nor Leader / Support) one part has
     const armyRules = new Set(((B.F.armyRules) || []).map(r => lc(r.name)));
     const wkw = i => (P[i].ranged || []).concat(P[i].melee || []).flatMap(r => r.kw || []).map(k => k.toUpperCase());
     const pr = {};
-    for(const r of uniq(P.flatMap(p => p.rules || []))){
+    for(const r of uniq(P.flatMap(p => p.rules || []).concat(rules.filter(x => P.some((p, i) => givenAt(i, x)))))){
       if(/^(Leader|Support)$/.test(r) || armyRules.has(lc(r))) continue;
-      const has = P.map((p, i) => (p.rules || []).includes(r) && !wkw(i).some(k => k.startsWith(r.toUpperCase())));
+      const has = P.map((p, i) => ((p.rules || []).includes(r) || givenAt(i, r)) && !wkw(i).some(k => k.startsWith(r.toUpperCase())));
       if(has.some(Boolean) && !has.every(Boolean) && !P.some((p, i) => !has[i] && (p.rules || []).some(x => typo(x) === typo(r)))) pr[r] = P.filter((p, i) => has[i]).map(p => p.name).join(' and ');
     }
+    // (a core ability an enhancement gives its bearer, "The bearer has the Deep Strike ability": that part's alone)
+    for(const x of u._enh || []){ const m = /The bearer has the (?:\*\*)?([A-Z][A-Za-z -]+?)(?:\*\*)? ability/.exec(String(x.e.text || '')); if(!m || pr[m[1]]) continue;
+      if(!P.some(p => (p.rules || []).some(r => typo(r) === typo(m[1]))) && rules.some(r => typo(r) === typo(m[1]))) pr[m[1]] = P[x.i].name; }
     if(Object.keys(pr).length) e.partialRules = pr;
     why.ptsNote = 'the points of its parts as the list has them (' + P.map(p => p.name).join(' + ') + ')';
     if(catFilled(B, keys[0], 'role')) e.role = P[0].role;
@@ -811,10 +906,12 @@ function marksOf(B, army, u, parts, P, rows, abil){
       if(FXF[f[0]] === field) ops.push({ add:f[0] === 'ap' ? -f[1] : +f[1] }); else if(fxKw(f[0], f[1]) === field) ops.push('kw'); }
     return ops.length ? ops : null;
   };
-  const apply = (base, op) => {
+  // (+1 WS or BS improves the skill: "+1 WS" makes 4+ a 3+, as a "+" mark records it, verify/build-index.js)
+  const apply = (base, op, f) => {
     if(op === 'kw') return true;
     if(op.set !== undefined) return op.set;
     if(op.ranged !== undefined) return (base === '–' ? '' : base + ', ') + op.ranged + '+*';
+    const sk = (f === 'WS' || f === 'BS') && /^(\d)\+$/.exec(String(base)); if(sk) return (+sk[1] - op.add) + '+';
     const m = /^(-?\d+)("?)$/.exec(String(base)); return m ? (+m[1] + op.add) + m[2] : null;
   };
   for(const kind of ['stats', 'ranged', 'melee']) for(const x of rows[kind]){
@@ -838,17 +935,20 @@ function marksOf(B, army, u, parts, P, rows, abil){
       let by = src.map(s => ({ s, ops:opOf(s, kind, f, x) })).filter(y => y.ops);
       if(!by.length) by = src.filter(s => idx[s.name] && f in idx[s.name]).map(s => ({ s, ops:[idx[s.name][f]] }));
       const names = uniq(by.map(y => y.s.name));
-      if(names.length !== 1){ B.err(label(f, how) + ' is changed by ' + (names.length ? 'more than one rule of the list (' + and(names) + ')' : 'a rule the app cannot name') + ': not imported'); continue; }
-      const ops = by.filter(y => y.s.name === names[0]).flatMap(y => y.ops);
+      // (several rules of the list that each add to the value, every one of them at work on the row: the value is GW's with all of them,
+      // as the list's row names them, Berzerker Glaive and Relentless Rage on a Daemon Prince's A; else the list is refused)
+      const allAdd = names.length > 1 && how !== 'kw' && by.every(y => y.ops.every(o => o && o.add !== undefined));
+      if(names.length !== 1 && !(allAdd && apply(x.row[f], { add:by.flatMap(y => y.ops).reduce((t, o) => t + o.add, 0) }, f) === changed[f])){ B.err(label(f, how) + ' is changed by ' + (names.length ? 'more than one rule of the list (' + and(names) + ')' : 'a rule the app cannot name') + ': not imported'); continue; }
+      const ops = by.filter(y => names.length > 1 || y.s.name === names[0]).flatMap(y => y.ops);
       let want = null;
       if(ops.every(o => o === 'kw')) want = true;
-      else if(ops.length === 1 && ops[0]) want = apply(x.row[f], ops[0]);
-      else if(ops.every(o => o && o.add !== undefined)) want = apply(x.row[f], { add:ops.reduce((t, o) => t + o.add, 0) });
-      if(want === null){ B.err(label(f, how) + ': the app cannot work out what ' + names[0] + ' makes it: not imported'); continue; }
-      if(how !== 'kw' && want !== changed[f]){ B.err(label(f, how) + ' is ' + changed[f] + ' in the export; GW’s ' + x.row[f] + ' with ' + names[0] + ' is ' + want + ': not imported'); continue; }
+      else if(ops.length === 1 && ops[0]) want = apply(x.row[f], ops[0], f);
+      else if(ops.every(o => o && o.add !== undefined)) want = apply(x.row[f], { add:ops.reduce((t, o) => t + o.add, 0) }, f);
+      if(want === null){ B.err(label(f, how) + ': the app cannot work out what ' + and(names) + ' makes it: not imported'); continue; }
+      if(how !== 'kw' && want !== changed[f]){ B.err(label(f, how) + ' is ' + changed[f] + ' in the export; GW’s ' + x.row[f] + ' with ' + and(names) + ' is ' + want + ': not imported'); continue; }
       if(how === 'kw'){ set.kw = (set.kw || (x.row.kw || []).slice()); set.kw.push(f); }
       else set[f] = want;
-      from[f] = names[0];
+      from[f] = names.length > 1 ? names : names[0];
     }
     const fk = Object.keys(from), from2 = {};
     fk.filter(k => !ORDER[kind].includes(k)).concat(ORDER[kind].filter(k => fk.includes(k))).forEach(k => { from2[k] = from[k]; });

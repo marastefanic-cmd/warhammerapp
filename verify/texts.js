@@ -932,7 +932,7 @@ for (const fk of FACTIONS) {
     const det = F.detachments[detId];
     const U = 'detachment:' + detId;
     if (!det) { fail('detachment', army, U, 'missing', '', 'an army uses detachment ' + detId + ' but D.factions.' + fk + ' has no such detachment', ''); continue; }
-    const W = wahaDetachment(fk, det.name);
+    const W = wahaDetachment(fk, det.waha || det.name);   // (waha: Wahapedia's heading where GW's documents name it otherwise)
     const P = packDetachment(fk, det.name);
     if (P && P.error) fail('detachment', army, U, 'source', det.name, P.error, P.d.label);
     let pack = P && !P.error ? P : null;

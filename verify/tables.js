@@ -37,9 +37,10 @@ const ROWS = ['stats', 'ranged', 'melee', 'abilities'];
 const DS_UNIT = ['name', 'role', 'rules', 'kw', 'kwOnly', 'partialRules', 'srcNote'];
 const STAT_FIELDS = ['M', 'T', 'Sv', 'W', 'Ld', 'OC', 'InSv', 'base'];
 // a faction catalogue's columns (verify/from-bsdata.js, docs/catalog.md): on DATASHEETS, not copied onto a list's units
-// (points per model count, composition and wargear choices as BSData gives them; aiStatus: 'not-read' on a row no list has, whose
-// AI layers, readings and When targeted lines, are not written yet)
-const CAT_COLS = ['points', 'composition', 'options', 'aiStatus'];
+// (GW's points per model count, composition and wargear choices; loadout: GW's WARGEAR OPTIONS as verify/waha-loadout.js reads them, a
+// catalogue from verify/from-waha.js; aiStatus: 'not-read' on a row no list has, whose AI layers, readings and When targeted lines, are
+// not written yet)
+const CAT_COLS = ['points', 'composition', 'options', 'loadout', 'aiStatus'];
 // the catalogue rows (verify/sources/catalog/<faction>.json, written by verify/from-bsdata.js --write), by DATASHEETS id
 function catalogRows(){
   const dir = path.join(ROOT, 'verify/sources/catalog'), out = new Map();

@@ -171,8 +171,8 @@ function main() {
       // names as left out, another game mode's, is none)
       const out = new Set((cat.excluded || []).filter(x => /^detachment/.test(x.kind || '')).map(x => lc(typo(x.name))));
       const dets = WC.detachments(faction).filter(d => !out.has(lc(d.name)));
-      for (const d of dets) { checked.complete++; if (!Object.values(F.detachments).some(x => lc(x.name) === lc(d.name) || (x.nr && lc(x.nr) === lc(d.name)))) fail('complete', faction + ': the faction page’s detachment ' + d.name + ' is not a detachment of ' + faction + ' in data.js'); }
-      for (const [k, x] of Object.entries(F.detachments)) if (!dets.some(d => lc(d.name) === lc(x.name))) fail('complete', faction + ': data.js’s detachment ' + x.name + ' (' + k + ') is no detachment heading of the faction page (or is one the catalogue leaves out)');
+      for (const d of dets) { checked.complete++; if (!Object.values(F.detachments).some(x => lc(x.name) === lc(d.name) || (x.nr && lc(x.nr) === lc(d.name)) || (x.waha && lc(x.waha) === lc(d.name)))) fail('complete', faction + ': the faction page’s detachment ' + d.name + ' is not a detachment of ' + faction + ' in data.js'); }
+      for (const [k, x] of Object.entries(F.detachments)) if (!dets.some(d => lc(d.name) === lc(x.name) || (x.waha && lc(d.name) === lc(x.waha)))) fail('complete', faction + ': data.js’s detachment ' + x.name + ' (' + k + ') is no detachment heading of the faction page (or is one the catalogue leaves out)');
       for (const [k, x] of Object.entries(F.detachments)) if (x.aiStatus === 'not-read' && (x.stratagems || []).some(s => s.gist || s.mod)) fail('tables', faction + ': detachment ' + k + ' is marked aiStatus not-read but has AI-written columns: drop the mark once they are read'); }
     // composition and options: GW's UNIT COMPOSITION and WARGEAR OPTIONS (the datasheet page)
     for (const [id, R] of Object.entries(cat.datasheets)) {
@@ -233,7 +233,7 @@ function main() {
       if (!S) { fail('tables', id + ': the catalogue row is not in DATASHEETS (node verify/tables.js --write)'); continue; }
       const inList = listed.has(id);
       // (the catalogue's own columns: DATASHEETS has them as the catalogue does, a list's row too)
-      for (const f of ['points', 'composition', 'options']) if (stable(S[f]) !== stable(R[f])) fail('tables', id + ' · ' + f + ': DATASHEETS ' + JSON.stringify(S[f]) + ', the catalogue ' + JSON.stringify(R[f]) + ' (node verify/tables.js --write)');
+      for (const f of ['points', 'composition', 'options', 'loadout']) if (stable(S[f]) !== stable(R[f])) fail('tables', id + ' · ' + f + ': DATASHEETS ' + JSON.stringify(S[f]) + ', the catalogue ' + JSON.stringify(R[f]) + ' (node verify/tables.js --write)');
       for (const d of rowDiffs(S, R)) {
         if (d.kind === 'fill' && !inList) { fail('tables', id + ' · ' + d.what + ': DATASHEETS lacks the catalogue’s value'); continue; }
         rep.differences.push({ id, kind: d.kind, what: d.what });
