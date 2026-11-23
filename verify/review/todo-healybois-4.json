@@ -316,14 +316,17 @@
  {
   "army": "healybois",
   "kind": "code",
-  "where": "verify/build-parity.js N (line 279)",
+  "where": "verify/build-parity.js N (healybois-4)",
   "judgement": {
-   "change": "healybois built with Talons of the Norn Queen: its Norns with Protean Purpose are now [Norn Assimilator, Norn Assimilator, Norn Emissary] (two Assimilators in the healybois-4 export)"
+   "changes": [
+    "N with Talons of the Norn Queen, and the two Protean Purpose profile negatives: the Norns with Protean Purpose are now [Norn Assimilator, Norn Assimilator, Norn Emissary] (two Assimilators in the healybois-4 export)",
+    "the four Tyrannofex wargear/value negatives (two of a one-of group, a required choice missing, a choice over its limit, a value no rule of the list changes) now change basic-bitch’s export (the same Tyrannofex: Powerful limbs, Stinger salvoes, Acid spray), as healybois has no Tyrannofex; their expected messages are unchanged"
+   ]
   },
   "source": {
    "file": "verify/build-parity.js"
   },
-  "key": "9157ebda57527e29"
+  "key": "160dc5aca617f37e"
  },
  {
   "army": "healybois",

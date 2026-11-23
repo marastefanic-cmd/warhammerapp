@@ -153,11 +153,11 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
     const resetS = j => { const ht = unit(j, 'Hive Tyrant'); for(const w of ht.selections.filter(s => /Monstrous/.test(s.name))){ const r = D.datasheets['tyranids/hive-tyrant'].melee.find(x => lc(x.name) === lc(w.name)); prof(w, 'S').$text = r.S; }
       for(const tg of sels(j).filter(s => s.name === 'Tyrant Guard')) for(const w of tg.selections[0].selections) prof(w, 'S').$text = '5'; };
     const lc = x => String(x).toLowerCase();
-    neg('wargear: two of a one-of group', 'healybois', j => { unit(j, 'Tyrannofex').selections.push(wsel('tyrannofex', 'Rupture cannon', 'ranged')); },
+    neg('wargear: two of a one-of group', 'basic-bitch', j => { unit(j, 'Tyrannofex').selections.push(wsel('tyrannofex', 'Rupture cannon', 'ranged')); },
       ['unit Tyrannofex not imported: Tyrannofex has 2 of Rupture cannon, Fleshborer hive and Acid spray each (GW’s datasheet Tyrannofex, Fleshborer Hive: 1)']);
-    neg('wargear: a required choice missing', 'healybois', j => { const t = unit(j, 'Tyrannofex'); t.selections = t.selections.filter(s => s.name !== 'Acid spray'); },
+    neg('wargear: a required choice missing', 'basic-bitch', j => { const t = unit(j, 'Tyrannofex'); t.selections = t.selections.filter(s => s.name !== 'Acid spray'); },
       ['unit Tyrannofex not imported: Tyrannofex has 0 of Rupture cannon, Fleshborer hive and Acid spray each (GW’s datasheet Tyrannofex, Fleshborer Hive: 1)']);
-    neg('wargear: a choice over its limit', 'healybois', j => { unit(j, 'Tyrannofex').selections.find(s => s.name === 'Stinger salvoes').number = 2; },
+    neg('wargear: a choice over its limit', 'basic-bitch', j => { unit(j, 'Tyrannofex').selections.find(s => s.name === 'Stinger salvoes').number = 2; },
       ['unit Tyrannofex not imported: Tyrannofex has 2 Stinger salvoes each (GW’s datasheet Tyrannofex: 1)']);
     neg('wargear: models of one line equipped otherwise', 'healybois', j => { unit(j, 'Pyrovores').selections[0].selections.find(s => s.name === 'Flamespurt').number = 1; },
       ['option 1× Flamespurt on 3× Pyrovore not imported: 3 models, each equipped alike (GW’s datasheet Pyrovores)', 'unit Pyrovores not imported: 3× Pyrovore has 0 Flamespurt each (GW’s datasheet Pyrovores: 1)']);
@@ -171,7 +171,7 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
       ['unit Hive Tyrant + Tyrant Guard: Monstrous bonesword and lash whip S is 3 in the export; GW’s 9 with Parasitic Biomorphology is 10: not imported']);
     neg('a rule’s invulnerable save: better than it gives', 'healybois', j => { unit(j, 'Norn Assimilator').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'InSv').$text = '2+'; },
       ['unit Norn Assimilator: Norn Assimilator InSv is 2+ in the export; GW’s – with Synaptoprescience is 4+: not imported']);
-    neg('a value no rule of the list changes', 'healybois', j => { unit(j, 'Tyrannofex').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'T').$text = '14'; },
+    neg('a value no rule of the list changes', 'basic-bitch', j => { unit(j, 'Tyrannofex').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'T').$text = '14'; },
       ['unit Tyrannofex: Tyrannofex T is changed by a rule the app cannot name: not imported']);
     neg('enhancement on a non-CHARACTER', 'healybois', j => { const e = takeEnh(j, 'Hive Tyrant'); resetS(j); unit(j, 'Pyrovores').selections.unshift(e); },
       ['enhancement Parasitic Biomorphology on Pyrovores not imported: only CHARACTER units can be given enhancements (Core Rules 25.04, Select Enhancements)']);
@@ -287,11 +287,11 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
     const walkP = (s, f) => { f(s); for(const c of s.selections || []) walkP(c, f); for(const c of s.forces || []) walkP(c, f); };
     const PP = 'Higher Imperatives · Once per battle, per unit';
     const ppTag = r => r.ok ? D.resolve(r.army).units.filter(u => u.abilities.some(a => a.name === 'Protean Purpose')).map(u => u.name + ':' + u.abilities.find(a => a.name === 'Protean Purpose').tag).sort() : r.errors;
-    neg('an export without the Protean Purpose profile: both Norns still have it', 'healybois', j => { walkP(j.roster, x => { if(x.profiles) x.profiles = x.profiles.filter(p => p.name !== 'Protean Purpose'); }); },
-      null, r => JSON.stringify(ppTag(r)) === JSON.stringify(['Norn Assimilator:' + PP, 'Norn Emissary:' + PP]));
+    neg('an export without the Protean Purpose profile: its Norns still have it', 'healybois', j => { walkP(j.roster, x => { if(x.profiles) x.profiles = x.profiles.filter(p => p.name !== 'Protean Purpose'); }); },
+      null, r => JSON.stringify(ppTag(r)) === JSON.stringify(['Norn Assimilator:' + PP, 'Norn Assimilator:' + PP, 'Norn Emissary:' + PP]));
     neg('the Protean Purpose profile on a unit without the keyword (The Swarmlord): no row', 'healybois', j => { let pr; walkP(j.roster, x => { for(const p of x.profiles || []) if(p.name === 'Protean Purpose' && !pr) pr = p; });
         const sl = unit(j, 'The Swarmlord'); sl.profiles = (sl.profiles || []).concat([pr]); },
-      null, r => JSON.stringify(ppTag(r)) === JSON.stringify(['Norn Assimilator:' + PP, 'Norn Emissary:' + PP]));
+      null, r => JSON.stringify(ppTag(r)) === JSON.stringify(['Norn Assimilator:' + PP, 'Norn Assimilator:' + PP, 'Norn Emissary:' + PP]));
     // Daughters of the Abyss: Psychic Null (Aura) on Lite Knights' ANATHEMA PSYKANA units only, whatever the export prints
     const pn = r => r.ok ? D.resolve(r.army).units.filter(u => u.abilities.some(a => a.name === 'Psychic Null (Aura)' && a.tag === 'Daughters of the Abyss · Aura')).map(u => u.name).sort() : r.errors;
     const PN = ['Prosecutor Squad', 'Witchseeker Squad', 'Witchseeker Squad'];
