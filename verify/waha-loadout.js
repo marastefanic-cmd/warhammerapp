@@ -10,12 +10,19 @@
      loadout      what GW allows, read from its sentences: { lines:[{ model, names, default }], swaps:[…], adds:[…], caps:{…}, unread:[…] }
                     lines    each model line: its model, the model names an export may use for it, the weapons every such model carries
                     swaps    "<who>’s X can be replaced with Y" in its forms: { who, from:[items], to:[[items], …], limit }
-                    adds     "<who> can be equipped with Y": { who, to:[[items], …], not:[items], limit }
+                    adds     "<who> can be equipped with Y": { who, to:[[items], …], not:[items], limit }; "For each X this model is
+                             equipped with, it can be equipped with Y": per:X, taken once for each X the model has after its swaps
+                             (Helbrute)
                     limit    { kind:'each' } (every model may), { kind:'unit', n } (n models of the unit), { kind:'per', every, n }
                              (n for every <every> models in the unit)
                     caps     { <item>: n }: "(a model cannot be equipped with more than one X)"
                     unread   every sentence this reader cannot express: builder.js refuses a loadout other than GW's default on that
                              datasheet, naming the unit (never a guess)
+                    later    "Every X added to this unit using the <ability> ability is equipped with: …": models the unit gains in the
+                             battle (Split), none of its composition, so none an export has
+   An alternative of "one of the following:" is a "- 1 X" line or a name alone ("- Castellan Axe", one of it); a swap or addition whose
+   alternatives were not read is unread, never an empty choice. A swap of "X and Y" takes each where each is a weapon of the datasheet or
+   wargear of the swap's model ("Pyrithite Spear and Praesidium Shield"); "X" in the plural with no count, every one the default has.
    An item is a weapon row's name (its group's, for a weapon of several profiles) where the datasheet has that weapon, else the wargear's
    name as GW prints it. No BSData (the owner's decision, 22 Nov 2026). */
 'use strict';
@@ -60,8 +67,12 @@ module.exports = function read(sheet, rows, opts) {
   const one = lines.length === 1;
   // ---- "equipped with": "Every model is equipped with: …", "This model is equipped with: …", "The Gore Hound is equipped with: …",
   // "The Jakhal Pack Leader and every Jakhal is equipped with: …", "Every Flesh Hound is equipped with: …"
+  const later = [];
   for (const e of sheet.equipped) {
     const m = /^(.*?) (?:is|are) equipped with:\s*(.+)$/i.exec(e); if (!m) { unread.push(e); continue; }
+    // (models the unit gains during the battle, "Every Brimstone Horror added to this unit using the Split ability is equipped with: …":
+    // no model of its UNIT COMPOSITION, so none an export has; kept as later, not unread)
+    if (/\badded to this unit using the .+? ability$/i.test(m[1])) { later.push(e); continue; }
     const subj = m[1].replace(/^The /, '');
     let to = /^(Every model|This model|Each model)$/i.test(subj) ? lines : subj.split(/\s+and\s+/).flatMap(s => lineFor(s.replace(/^(every|each|the)\s+/i, '')));
     if (!to.length) { unread.push(e); continue; }
@@ -72,7 +83,9 @@ module.exports = function read(sheet, rows, opts) {
   for (const l0 of sheet.options) {
     const l = l0.replace(/^- /, '').trim();
     if (/^none\.?$/i.test(l)) continue;
-    if (/^\d+ /.test(l) && sents.length && /following:$/.test(sents[sents.length - 1].t)) { sents[sents.length - 1].alts.push(l); continue; }
+    // (an alternative of the sentence before, "one of the following:": "1 plasma cannon", or a name alone, "Castellan Axe" (one of it): a
+    // line that is no sentence of its own, no "can" in it and no full stop)
+    if (sents.length && /following:$/.test(sents[sents.length - 1].t) && (/^\d+ /.test(l) || (!/\bcan\b/.test(l) && !/\.$/.test(l)))) { sents[sents.length - 1].alts.push(/^\d+ /.test(l) ? l : '1 ' + l); continue; }
     sents.push({ t: l, alts: [] });
   }
   const swaps = [], adds = [], caps = {};
@@ -104,7 +117,9 @@ module.exports = function read(sheet, rows, opts) {
     const defCount = (name, who) => { const ls = who && who !== 'model' ? lineFor(who) : lines; return Math.max(0, ...ls.map(l => l.default.concat(l.wargear).filter(x => x === name).length)); };
     const plural = raw => !/^(?:\d+|one|two|three|four|five)\s/i.test(raw.trim()) && n0(raw) !== sing(raw);
     const fromOf = (f, who) => { f = f.replace(/^(?:their|its) /, ''); const ps = f.split(/\s+and\s+/);
-      const its = ps.length > 1 && ps.map(itemName).every(p => weaponNames.includes(p)) ? ps.flatMap(p => items(p).map(x => Object.assign(x, { raw:p }))) : items(f).map(x => Object.assign(x, { raw:f }));
+      // (each part a weapon of the datasheet, or wargear the swap's model has: "Pyrithite Spear and Praesidium Shield")
+      const gearOf = w => (w && w !== 'model' ? lineFor(w) : lines).flatMap(l => l.wargear.concat(l.default));
+      const its = ps.length > 1 && ps.map(itemName).every(p => weaponNames.includes(p) || gearOf(who).includes(p)) ? ps.flatMap(p => items(p).map(x => Object.assign(x, { raw:p }))) : items(f).map(x => Object.assign(x, { raw:f }));
       return flat(its.map(x => plural(x.raw) && defCount(x.name, who) > x.n ? { n: defCount(x.name, who), name: x.name } : x)); };
     try {
       if ((m = /^(?:This model’s|The (.+?)’s) (.+?) can be replaced with (.+)$/.exec(t))) { push(swaps, { who: m[1] || (one ? lines[0].model : 'model'), from: fromOf(m[2], m[1] || (one ? lines[0].model : 'model')), to: toOf(m[3], s.alts).map(a => flat(a)), limit: { kind: m[1] ? 'unit' : 'each', n: 1 }, text: t }); continue; }
@@ -119,22 +134,28 @@ module.exports = function read(sheet, rows, opts) {
       // that item a model)
       if ((m = /^This model can be equipped with 1 (.+?) or can replace (1 .+?) with 1 (.+?)\.?$/.exec(t)) && itemName(m[1]) === itemName(m[3])) { const w = one ? lines[0].model : 'model';
         push(adds, { who: w, not: [], to: [[itemName(m[1])]], limit: { kind: 'each' }, text: t }); push(swaps, { who: w, from: fromOf(m[2], w), to: [[itemName(m[3])]], limit: { kind: 'each' }, text: t }); caps[itemName(m[1])] = 1; continue; }
+      // ("For each Helbrute fist this model is equipped with, it can be equipped with one of the following: 1 combi-bolter; 1 heavy flamer":
+      // an addition taken once for each of that item the model has, after its swaps: per)
+      if ((m = /^For each (.+?) this model is equipped with, it can be equipped with (.+)$/.exec(t))) { push(adds, { who: one ? lines[0].model : 'model', not: [], to: toOf(m[2], s.alts).map(a => flat(a)), limit: { kind: 'each' }, per: itemName(m[1]), text: t }); continue; }
       if ((m = /^This model can be equipped with (.+)$/.exec(t)) && !/ or can /.test(t)) { push(adds, { who: one ? lines[0].model : 'model', not: [], to: toOf(m[1], s.alts).map(a => flat(a)), limit: { kind: 'each' }, text: t }); continue; }
     } catch (e) {}
     unread.push(t + (s.alts.length ? ' ' + s.alts.join('; ') : ''));
   }
   // a swap's or add's model: a line of the datasheet (by GW's name, in the singular), or any model ("model")
   for (const x of swaps.concat(adds)) {
+    // (a choice with nothing to choose, its alternatives not read: unread, never an empty swap)
+    if (!x.to.length || x.to.some(t => !t.length)) { unread.push(x.text); x.bad = true; continue; }
     if (x.who === 'model') { x.lines = lines.map(l => l.model); continue; }
     const ls = lineFor(x.who); if (!ls.length) { unread.push(x.text); x.bad = true; continue; }
     x.lines = ls.map(l => l.model);
   }
   const ok = x => !x.bad;
-  const clean = x => { const o = { lines: x.lines, from: x.from, to: x.to, limit: x.limit, text: x.text }; if (!x.from) delete o.from; if (x.not && x.not.length) o.not = x.not; return o; };
+  const clean = x => { const o = { lines: x.lines, from: x.from, to: x.to, limit: x.limit, text: x.text }; if (!x.from) delete o.from; if (x.not && x.not.length) o.not = x.not; if (x.per) o.per = x.per; return o; };
   const loadout = { lines: lines.map(l => Object.assign({ model: l.model, names: l.names, default: l.default }, l.wargear.length ? { wargear: l.wargear } : {})), swaps: swaps.filter(ok).map(clean), adds: adds.filter(ok).map(clean) };
   if (Object.keys(caps).length) loadout.caps = caps;
   if (excl.length) loadout.excl = excl;
   if (unread.length) loadout.unread = unread;
+  if (later.length) loadout.later = later;
   // ---- the composition builder.js checks: GW's lines, a line New Recruit holds as several entries a group of them
   const composition = [];
   for (const c of comp) {

@@ -335,10 +335,17 @@ function legalLoadout(S, p, where, err){
       if(k === mine.length){ if(same(cur, target) && Object.entries(L.caps || {}).every(([it, n]) => (cnt(cur)[lc(it)] || 0) <= n) && !(L.excl || []).some(([x, y]) => cur.some(z => lc(z) === lc(x)) && cur.some(z => lc(z) === lc(y)))) out.push(uses); return; }
       go(k + 1, cur, uses);
       const [a, i] = mine[k];
+      // (an addition taken once for each of an item the model has after its swaps, "For each Helbrute fist this model is equipped with, it can
+      // be equipped with one of the following": 1 to that many, each one of its choices, in any mix)
+      if(a.per){ const most = cur.filter(z => lc(z) === lc(a.per)).length;
+        const pick = (r, from, acc) => { if(acc.length && !(a.not || []).some(x => cur.some(z => lc(z) === lc(x)))) go(k + 1, cur.concat(...acc), uses.concat(acc.map(() => i)));
+          if(r === 0) return; for(let t = from; t < a.to.length; t++) pick(r - 1, t, acc.concat([a.to[t]])); };
+        pick(most, 0, []); return; }
       for(const to of a.to){
         if(a.kind === 'add' && (a.not || []).some(x => cur.some(z => lc(z) === lc(x)))) continue;
         const left = cur.slice(); let ok = true;
-        for(const f of a.from){ const j = left.findIndex(z => lc(z) === lc(f)); if(j < 0){ ok = false; break; } left.splice(j, 1); }
+        // (a piece of wargear the swap gives up, "Pyrithite Spear and Praesidium Shield": not among the weapons matched, ignore)
+        for(const f of a.from){ if(ignore(l).includes(lc(f))) continue; const j = left.findIndex(z => lc(z) === lc(f)); if(j < 0){ ok = false; break; } left.splice(j, 1); }
         if(ok) go(k + 1, left.concat(to), uses.concat(i));
       }
     };
@@ -357,7 +364,14 @@ function legalLoadout(S, p, where, err){
   const dflt = groups.every(g => same(g.have.filter(x => !ignore(g.l).includes(lc(x))), g.l.default)) && !unitItems.length;
   if((L.unread || []).length && !dflt){ err('unit ' + where + ' not imported: its wargear (' + groups.filter(g => !same(g.have.filter(x => !ignore(g.l).includes(lc(x))), g.l.default)).map(desc).concat(unitItems).join('; ') + ') is not ' + R + '’s default, and the app cannot read its WARGEAR OPTIONS yet (“' + L.unread.join('” “') + '”)'); return; }
   const bad = groups.filter(g => !g.ways.length);
-  if(bad.length){ err('unit ' + where + ' not imported: ' + and(bad.map(desc)) + ' is not what ' + R + ' allows (its UNIT COMPOSITION and WARGEAR OPTIONS)'); return; }
+  // (why, as far as the options' words tell: an item no option of its model gives; more of an addition per item than the model has of that
+  // item ("For each Helbrute fist …"); else no mix of its options gives all of it at once)
+  const whyBad = g => { const mine = acts.filter(a => (a.lines || []).includes(g.l.model)), can = new Set(g.l.default.concat(g.l.wargear || [], ...mine.flatMap(a => a.to)).map(lc));
+    const no = uniq(g.have.filter(x => !can.has(lc(x)))); if(no.length) return and(no) + (no.length > 1 ? ' are' : ' is') + ' no choice its WARGEAR OPTIONS give it';
+    for(const a of mine.filter(a => a.per)){ const k = g.have.filter(x => a.to.some(t => t.some(y => lc(y) === lc(x)))).length, n = g.have.filter(x => lc(x) === lc(a.per)).length;
+      if(k > n) return k + ' of ' + uniq(a.to.flat()).map(x => x.toLowerCase()).join(' or ') + ' for ' + n + ' ' + a.per + (n === 1 ? '' : 's') + ' (“' + a.text.replace(/:$/, '') + '”)'; }
+    return 'no mix of its WARGEAR OPTIONS gives all of it at once'; };
+  if(bad.length){ err('unit ' + where + ' not imported: ' + and(bad.map(desc)) + ' is not what ' + R + ' allows (its UNIT COMPOSITION and WARGEAR OPTIONS: ' + bad.map(whyBad).join('; ') + ')'); return; }
   // the unit's items: each one addition's (to a model that can take it)
   const unitWays = unitItems.map(it => acts.map((a, i) => [a, i]).filter(([a]) => a.kind === 'add' && a.to.some(t => t.length === 1 && lc(t[0]) === lc(it))).map(([, i]) => i));
   if(unitWays.some(w => !w.length)){ err('unit ' + where + ' not imported: ' + and(unitItems.filter((x, k) => !unitWays[k].length)) + ' on the unit is not what ' + R + ' allows'); return; }
@@ -942,9 +956,10 @@ function marksOf(B, army, u, parts, P, rows, abil){
   const E = root.WH_EFFECTS, out = new Map(), boxes = E && E.agreed ? E.agreed(B.D.boxes || {}, B.D.agree) : {}, idx = ((B.D.buildIndex || {}).marks) || {};
   // the rules that reach the unit, with their boxes
   const src = [];
-  for(const x of abil){ const a = x.enh || x.row || x.granted.row; src.push({ name:a.name, part:x.enh && x.enh.upgrade ? undefined : x.part, box:boxes['a|' + ckHash(a.name + '\n' + a.text)] }); }
-  for(const d of B.dets) for(const r of [d.rule].concat(d.moreRules || [])) if(r) src.push({ name:r.name, box:boxes['r|' + ckHash(r.name + '\n' + ruleText(r))] });
-  for(const r of B.F.armyRules || []) src.push({ name:r.name, box:boxes['r|' + ckHash(r.name + '\n' + ruleText(r))] });
+  const raw = B.D.boxes || {};
+  for(const x of abil){ const a = x.enh || x.row || x.granted.row, k = 'a|' + ckHash(a.name + '\n' + a.text); src.push({ name:a.name, part:x.enh && x.enh.upgrade ? undefined : x.part, box:boxes[k], raw:raw[k], text:a.text }); }
+  for(const d of B.dets) for(const r of [d.rule].concat(d.moreRules || [])) if(r){ const k = 'r|' + ckHash(r.name + '\n' + ruleText(r)); src.push({ name:r.name, box:boxes[k], raw:raw[k], text:ruleText(r) }); }
+  for(const r of B.F.armyRules || []){ const k = 'r|' + ckHash(r.name + '\n' + ruleText(r)); src.push({ name:r.name, box:boxes[k], raw:raw[k], text:ruleText(r) }); }
   const fxKw = (id, p) => { const f = E && E.FX[id]; if(!f) return null; const l = f.label(p); return /^\[.*\]$/.test(l) ? l.slice(1, -1).toUpperCase() : null; };
   // a box at work on the row: no condition but what the list itself settles (its keywords, an attached leader), its weapon, its model
   const kwOf = i => (P[i].kw || []).concat(parts.length > 1 ? P.flatMap(p => p.kw || []) : []).concat(kidsKw);
@@ -953,15 +968,30 @@ function marksOf(B, army, u, parts, P, rows, abil){
   const scoped = (bx, s, x) => { const sc = bx.scope || {}; if(sc.weapon && lc(sc.weapon) !== lc(x.row.group || x.row.name)) return false; if(sc.models === 'model' && s.part !== undefined && s.part !== x.part) return false; return true; };
   // what a source does to a row's field: its boxes' effect ({ add }, { set }, 'kw'), else the effect BUILD_INDEX.marks records for it
   const ST = { mAdd:['M', 1], ocAdd:['OC', 1], ldAdd:['Ld', 1], tAdd:['T', 1], wAdd:['W', 1] };
-  const opOf = (s, kind, field, x) => {
-    const b = s.box || {}, ops = [];
+  const opOf = (s, kind, field, x, rawBox) => {
+    const b = (rawBox ? s.raw : s.box) || {}, ops = [];
     if(kind === 'stats'){
       for(const y of b.d || []) if(onOk(y.on, s, x)) for(const f of y.df || []) if(field === 'InSv' && f[0] === 'inv') ops.push({ set:f[1] + '+' }); else if(field === 'InSv' && f[0] === 'invRanged') ops.push({ ranged:f[1] });
       for(const y of b.st || []) if(onOk(y.on, s, x)) for(const f of y.st || []) if(ST[f[0]] && ST[f[0]][0] === field) ops.push({ add:+f[1] });
     } else for(const y of b.b || []) if((y.kind === 'all' || y.kind === kind) && onOk(y.on, s, x) && scoped(y, s, x)) for(const f of y.fx || []){
       if(FXF[f[0]] === field) ops.push({ add:f[0] === 'ap' ? -f[1] : +f[1] }); else if(fxKw(f[0], f[1]) === field) ops.push('kw'); }
+    // (a box as reader 1 read it, AGREE or not: what it was read to do is still something a rule of the list could do, unconfirmed)
+    if(rawBox) for(const y of (b.b || []).concat(b.d || [], b.st || [])) if(y.unconfirmed) for(const f of [].concat(y.unconfirmed.fx || [], y.unconfirmed.df || [], y.unconfirmed.st || [])) if(FXF[f[0]] === field || fxKw(f[0], f[1]) === field) ops.push('kw');
     return ops.length ? ops : null;
   };
+  // (could a rule of the list change this field of this row at all: a box of it as reader 1 read it, counted or not, that changes the field;
+  // its index entry; or its words naming the characteristic, the weapon keyword or the weapon. If none could, a value of the export's other
+  // than GW's is the export's own data (New Recruit's, as BUILD_INDEX gw declares for the owner's lists): the list takes GW's and says so)
+  // (a characteristic named in a sentence that speaks of characteristics, "Add 1 to the Attacks, Strength and Damage characteristics", or by
+  // its abbreviation with a value, "+1 WS", "have +1 A")
+  const CH = n => new RegExp('\\b' + n + '\\b[^.]{0,60}\\bcharacteristics?\\b');
+  const FIELD_WORDS = { M:[CH('move'), /[+-]\d+" m\b/], T:[CH('toughness'), /[+-]\d+ t\b/], Sv:[CH('save'), /\bsv\b/], W:[CH('wounds'), /[+-]\d+ w\b/], Ld:[CH('leadership'), /\bld\b/],
+    OC:[CH('objective control'), /\boc\b/], InSv:[/\binvulnerable save\b/], range:[CH('range'), /" to the range\b/], A:[CH('attacks'), /[+-]\d+ a\b/], BS:[CH('ballistic skill'), /\bbs\b/],
+    WS:[CH('weapon skill'), /\bws\b/], S:[CH('strength'), /[+-]\d+ s\b/], AP:[CH('armour penetration'), /\bap\b/], D:[CH('damage'), /[+-]\d+ d\b/] };
+  const couldTouch = (kind, field, how, x) => src.some(s => {
+    if(opOf(s, kind, field, x, true) || (idx[s.name] && field in idx[s.name])) return true;
+    const t = String(s.text || '').replace(/\*\*|~~/g, '').replace(/[’‘]/g, "'").toLowerCase();
+    return (FIELD_WORDS[field] || []).some(re => re.test(t)) || (kind !== 'stats' && [x.row.name, x.row.group].filter(Boolean).some(n => t.includes(String(n).toLowerCase()))); });
   // (+1 WS or BS improves the skill: "+1 WS" makes 4+ a 3+, as a "+" mark records it, verify/build-index.js)
   const apply = (base, op, f) => {
     if(op === 'kw') return true;
@@ -990,6 +1020,9 @@ function marksOf(B, army, u, parts, P, rows, abil){
       // the one rule of the list that changes it (its boxes; else the index), and the value it gives: GW's value with that change
       let by = src.map(s => ({ s, ops:opOf(s, kind, f, x) })).filter(y => y.ops);
       if(!by.length) by = src.filter(s => idx[s.name] && f in idx[s.name]).map(s => ({ s, ops:[idx[s.name][f]] }));
+      // (no rule of the list could change it: the export's own value, GW's taken and said, as BUILD_INDEX gw's)
+      // (a value only: a weapon keyword the export adds stays refused, whatever gives it)
+      if(!by.length && how !== 'kw' && !couldTouch(kind, f, how, x)){ (B.gwValues = B.gwValues || []).push({ unit:nn(parts[x.part].name), row:x.row.name, field:f, export:changed[f], gw:x.row[f] }); continue; }
       const names = uniq(by.map(y => y.s.name));
       // (several rules of the list that each add to the value, every one of them at work on the row: the value is GW's with all of them,
       // as the list's row names them, Berzerker Glaive and Relentless Rage on a Daemon Prince's A; else the list is refused)

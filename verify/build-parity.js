@@ -239,8 +239,10 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
       ['unit Hive Tyrant + Tyrant Guard: Monstrous bonesword and lash whip S is 3 in the export; GW’s 9 with Parasitic Biomorphology is 10: not imported']);
     neg('a rule’s invulnerable save: better than it gives', 'healybois', j => { unit(j, 'Norn Assimilator').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'InSv').$text = '2+'; },
       ['unit Norn Assimilator: Norn Assimilator InSv is 2+ in the export; GW’s – with Synaptoprescience is 4+: not imported']);
-    neg('a value no rule of the list changes', 'basic-bitch', j => { unit(j, 'Tyrannofex').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'T').$text = '14'; },
-      ['unit Tyrannofex: Tyrannofex T is changed by a rule the app cannot name: not imported']);
+    // (a value no rule of the list could change, no box, index entry or words of one naming Toughness: the export's own data, GW's value
+    // built and said, as BUILD_INDEX gw's for the owner's lists; builder.js couldTouch)
+    neg('a value no rule of the list could change: GW’s, noted', 'basic-bitch', j => { unit(j, 'Tyrannofex').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'T').$text = '14'; },
+      null, r => r.ok && JSON.stringify(r.notes) === JSON.stringify([{ gwValues:[{ unit:'Tyrannofex', row:'Tyrannofex', field:'T', export:'14', gw:'12' }] }]) && !(r.army.units.find(u => u.id === 'tyrannofex').stats || []).some(s => s.T === '14'));
     neg('enhancement on a non-CHARACTER', 'healybois', j => { const e = takeEnh(j, 'Hive Tyrant'); resetS(j); unit(j, 'Pyrovores').selections.unshift(e); },
       ['enhancement Parasitic Biomorphology on Pyrovores not imported: only CHARACTER units can be given enhancements (Core Rules 25.04, Select Enhancements)']);
     neg('enhancement on an EPIC HERO', 'healybois', j => { const e = takeEnh(j, 'Hive Tyrant'); resetS(j); unit(j, 'The Swarmlord').selections.unshift(e); },

@@ -114,6 +114,12 @@ its conditions, COND and STCOND, the friendly units it names), made by `verify/e
 "{conditions}: {the characteristic with the effect, or the effect}" (a one-model unit's Starting Strength in its wounds; GW's quoted words
 alone: "If (see the rule)"; not one the list printed into the value, its `from` mark). The gate step `lines` (LS) holds them to the words and
 the words to them. A rule's `statNote` and `parts` are gone.
+A unit's Advance and Charge rolls are lines of the same kind (no characteristic of its profile, the line under it all the same):
+`effects.js` ST `advanceAdd` and `chargeAdd` ("+1 to Charge rolls"), read from "add N to (Advance and) Charge rolls made for that/this
+unit", "this unit has +N to charge rolls" and "Friendly X units have +N to charge rolls" in an army or detachment rule (an option's under
+its heading or table row: Idol of Burning Wrath, Unbridled Bloodlust, Surging Vitality); the words of any other source that change them
+(an ability's, an enhancement's, a stratagem's, an enemy unit's: Instrument of Chaos, Brazenmaw, Binding Tendrils) are its `snc`
+("Charge"/"Advance"), as a characteristic's are. A re-roll of them is no change of the roll and no line.
 
 ## The screens' lines
 
@@ -357,7 +363,7 @@ lists' units by `import.js` as before, and the list says so. What it reads:
 | the export | the units and who leads whom, models lines and their gear, the weapons and models (each to its `DATASHEETS` row by name), the enhancement, the Warlord, the points, the values its profiles show |
 | `DATASHEETS` | the rows, a wargear ability only with its wargear (`options`), a Leader / Support ability (whom it may join; not a row of the unit), GW's `points` (a unit's: its band for that copy and size, each "per <item> N" wargear cost a selection takes, by its name or an item of a bundle it names, in the singular: `wargearOf`, the one matcher the gate step `points` uses too, and its enhancement's) |
 | `FACTIONS` | detachments, enhancements (name, text, pts, `limit`, `upgrade`), army and detachment rules |
-| `BOXES`, `BUILD_INDEX` | a "+" mark: a value the export shows otherwise than the row is a rule of the list at work; its source is the one rule reaching the unit whose boxes give that effect, else the one `BUILD_INDEX.marks` names for it; a value `BUILD_INDEX.gw` says is New Recruit's own where GW's datasheet differs (as an export or PDF of the owner's shows it, `verify/deviations-nr.json`) is no rule at work. A change no rule explains, or two explain, refuses the import |
+| `BOXES`, `BUILD_INDEX` | a "+" mark: a value the export shows otherwise than the row is a rule of the list at work; its source is the one rule reaching the unit whose boxes give that effect, else the one `BUILD_INDEX.marks` names for it; a value `BUILD_INDEX.gw` says is New Recruit's own where GW's datasheet differs (as an export or PDF of the owner's shows it, `verify/deviations-nr.json`) is no rule at work. A change two rules explain, or one the rules that reach it could make but the app cannot work out, refuses the import; a value no rule of the list could change at all (no box of it, counted or not, no `BUILD_INDEX.marks` entry, no words of it naming that characteristic or that weapon: builder.js `couldTouch`) is the export's own data, GW's value built and said in the list's note, as a `BUILD_INDEX.gw` one (a weapon keyword the export adds stays refused) |
 | `NR_IDS` | the faction, battle size, detachments and disposition (as `import.js` reads them: by an id a known export has shown, else by exact name), and a part's datasheet (`datasheets`, else the one row of its exact New Recruit name) |
 
 Nothing the list shows is the export's: a part's name is its datasheet's, a model's its datasheet's composition's, a weapon's its row's, a

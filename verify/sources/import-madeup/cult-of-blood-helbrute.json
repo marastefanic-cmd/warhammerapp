@@ -1,0 +1,3426 @@
+{
+ "roster": {
+  "costs": [
+   {
+    "name": "pts",
+    "typeId": "51b2-306e-1021-d207",
+    "value": 1940
+   }
+  ],
+  "costLimits": [
+   {
+    "name": "pts",
+    "typeId": "51b2-306e-1021-d207",
+    "value": 2000
+   }
+  ],
+  "forces": [
+   {
+    "selections": [
+     {
+      "selections": [
+       {
+        "id": "aervoi8",
+        "name": "Strike Force (2000 Point limit)",
+        "entryId": "7380-3e40-6ed6-b7cc::baf8-997f-e323-a090",
+        "entryGroupId": "7380-3e40-6ed6-b7cc::b960-4789-a3a6-59cb",
+        "number": 1,
+        "type": "upgrade",
+        "from": "group",
+        "group": "Battle Size"
+       }
+      ],
+      "categories": [
+       {
+        "id": "4ac9-fd30-1e3d-b249",
+        "entryId": "4ac9-fd30-1e3d-b249",
+        "name": "Configuration",
+        "primary": true
+       }
+      ],
+      "id": "ae4rpe",
+      "name": "Battle Size",
+      "entryId": "7380-3e40-6ed6-b7cc::564e-fbc6-5266-3ea4",
+      "number": 1,
+      "type": "upgrade",
+      "from": "entry"
+     },
+     {
+      "profiles": [
+       {
+        "characteristics": [
+         {
+          "$text": "Double 1+",
+          "name": "Roll",
+          "typeId": "f99e-3b0d-b8fa-71b6"
+         },
+         {
+          "$text": "This unit has +1 to charge rolls.",
+          "name": "Effect",
+          "typeId": "fcc3-ca7a-d697-7098"
+         }
+        ],
+        "id": "51f5-e7af-9e0f-b904",
+        "name": "1. Unbridled Bloodlust",
+        "hidden": false,
+        "typeId": "d07f-b12b-1c73-fa2c",
+        "typeName": "Blessings of Khorne",
+        "from": "entry"
+       },
+       {
+        "characteristics": [
+         {
+          "$text": "Double 2+",
+          "name": "Roll",
+          "typeId": "f99e-3b0d-b8fa-71b6"
+         },
+         {
+          "$text": "Each time a model in this unit makes a Pile-In or Consolidation move, it can move up to 6\" instead of up to 3\".",
+          "name": "Effect",
+          "typeId": "fcc3-ca7a-d697-7098"
+         }
+        ],
+        "id": "4ba4-2d3a-a3b2-2a0c",
+        "name": "2. Rage-fuelled Invigoration",
+        "hidden": false,
+        "typeId": "d07f-b12b-1c73-fa2c",
+        "typeName": "Blessings of Khorne",
+        "from": "entry"
+       },
+       {
+        "characteristics": [
+         {
+          "$text": "Double 3+",
+          "name": "Roll",
+          "typeId": "f99e-3b0d-b8fa-71b6"
+         },
+         {
+          "$text": "Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+          "name": "Effect",
+          "typeId": "fcc3-ca7a-d697-7098"
+         }
+        ],
+        "id": "a2db-113d-0cc8-8d7d",
+        "name": "3. Total Carnage",
+        "hidden": false,
+        "typeId": "d07f-b12b-1c73-fa2c",
+        "typeName": "Blessings of Khorne",
+        "from": "entry"
+       },
+       {
+        "characteristics": [
+         {
+          "$text": "Double 4+ or Triple 1+",
+          "name": "Roll",
+          "typeId": "f99e-3b0d-b8fa-71b6"
+         },
+         {
+          "$text": "Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
+          "name": "Effect",
+          "typeId": "fcc3-ca7a-d697-7098"
+         }
+        ],
+        "id": "35da-066e-5d34-b312",
+        "name": "4. Martial Excellence",
+        "hidden": false,
+        "typeId": "d07f-b12b-1c73-fa2c",
+        "typeName": "Blessings of Khorne",
+        "from": "entry"
+       },
+       {
+        "characteristics": [
+         {
+          "$text": "Double 5+ or Triple 2+",
+          "name": "Roll",
+          "typeId": "f99e-3b0d-b8fa-71b6"
+         },
+         {
+          "$text": "Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.",
+          "name": "Effect",
+          "typeId": "fcc3-ca7a-d697-7098"
+         }
+        ],
+        "id": "fbfe-9079-46e0-0cbf",
+        "name": "5. Warp Blades",
+        "hidden": false,
+        "typeId": "d07f-b12b-1c73-fa2c",
+        "typeName": "Blessings of Khorne",
+        "from": "entry"
+       },
+       {
+        "characteristics": [
+         {
+          "$text": "Double 6+ or Triple 3+",
+          "name": "Roll",
+          "typeId": "f99e-3b0d-b8fa-71b6"
+         },
+         {
+          "$text": "Each time a model in this unit makes a melee attack that targets an ^^**Infantry^^** unit, that attack has the [DEVASTATING WOUNDS] ability.",
+          "name": "Effect",
+          "typeId": "fcc3-ca7a-d697-7098"
+         }
+        ],
+        "id": "3444-f024-bee5-e731",
+        "name": "6. Decapitating Strikes",
+        "hidden": false,
+        "typeId": "d07f-b12b-1c73-fa2c",
+        "typeName": "Blessings of Khorne",
+        "from": "entry"
+       }
+      ],
+      "categories": [
+       {
+        "id": "4ac9-fd30-1e3d-b249",
+        "entryId": "4ac9-fd30-1e3d-b249",
+        "name": "Configuration",
+        "primary": true
+       }
+      ],
+      "id": "afse7nz",
+      "name": "Blessings of Khorne Reference",
+      "entryId": "8d4f-a4cb-ec1c-7f95::5558-f47e-9f45-3fca",
+      "number": 1,
+      "type": "upgrade",
+      "from": "entry"
+     },
+     {
+      "selections": [
+       {
+        "id": "mu1",
+        "name": "Cult of Blood",
+        "entryId": "madeup::detachment-1",
+        "type": "upgrade",
+        "number": 1,
+        "group": "Detachment",
+        "from": "group"
+       }
+      ],
+      "categories": [
+       {
+        "id": "4ac9-fd30-1e3d-b249",
+        "entryId": "4ac9-fd30-1e3d-b249",
+        "name": "Configuration",
+        "primary": true
+       }
+      ],
+      "id": "acwn6c",
+      "name": "Detachment",
+      "entryId": "d325-e694-6930-accb::84c8-b821-877d-72e6",
+      "number": 1,
+      "type": "upgrade",
+      "from": "entry"
+     },
+     {
+      "selections": [
+       {
+        "id": "abjh84",
+        "name": "Priority Assets",
+        "entryId": "madeup::fd",
+        "entryGroupId": "8bc8-6bfe-78bd-2480::9c70-af87-0c32-afcf::eece-6d68-6710-7a7f",
+        "number": 1,
+        "type": "upgrade",
+        "from": "group",
+        "group": "Force Disposition"
+       }
+      ],
+      "categories": [
+       {
+        "id": "4ac9-fd30-1e3d-b249",
+        "entryId": "4ac9-fd30-1e3d-b249",
+        "name": "Configuration",
+        "primary": true
+       }
+      ],
+      "id": "aazuor",
+      "name": "Force Disposition",
+      "entryId": "8bc8-6bfe-78bd-2480::2f69-9148-45b4-86a8",
+      "number": 1,
+      "type": "upgrade",
+      "from": "entry"
+     },
+     {
+      "selections": [
+       {
+        "id": "kpd0c4",
+        "name": "Unaligned Forces are visible",
+        "entryId": "8dab-22ac-6ba-1175::985-e753-2e94-859::2973-ea51-7f8d-5403",
+        "number": 1,
+        "type": "upgrade",
+        "from": "entry"
+       },
+       {
+        "id": "kpwz3spl",
+        "name": "Unaligned Fortifications are visible",
+        "entryId": "8dab-22ac-6ba-1175::4d37-22c-a45c-64f8::e916-2cf4-a49d-b8c4",
+        "number": 1,
+        "type": "upgrade",
+        "from": "entry"
+       }
+      ],
+      "categories": [
+       {
+        "id": "4ac9-fd30-1e3d-b249",
+        "entryId": "4ac9-fd30-1e3d-b249",
+        "name": "Configuration",
+        "primary": true
+       }
+      ],
+      "id": "agjgoe",
+      "name": "Show/Hide Options",
+      "entryId": "8dab-22ac-6ba-1175::e8ef-836a-a9d1-901d",
+      "number": 1,
+      "type": "upgrade",
+      "from": "entry"
+     },
+     {
+      "id": "mu2",
+      "name": "Daemon Prince of Khorne with Wings",
+      "entryId": "madeup::Daemon Prince of Khorne with Wings",
+      "type": "model",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Monster",
+        "primary": false
+       },
+       {
+        "name": "Character",
+        "primary": true
+       },
+       {
+        "name": "Fly",
+        "primary": false
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Daemon",
+        "primary": false
+       },
+       {
+        "name": "Daemon Prince",
+        "primary": false
+       },
+       {
+        "name": "Faction: World Eaters",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w140",
+        "name": "Deadly Demise D3"
+       },
+       {
+        "id": "w141",
+        "name": "Deep Strike"
+       },
+       {
+        "id": "w142",
+        "name": "Blessings of Khorne"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w131",
+        "name": "Daemon Prince of Khorne with Wings",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "14\""
+         },
+         {
+          "name": "T",
+          "$text": "9"
+         },
+         {
+          "name": "Sv",
+          "$text": "2+"
+         },
+         {
+          "name": "W",
+          "$text": "10"
+         },
+         {
+          "name": "LD",
+          "$text": "6+"
+         },
+         {
+          "name": "OC",
+          "$text": "3"
+         },
+         {
+          "name": "InSv",
+          "$text": "4+"
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w138",
+        "name": "Bloodied Terror",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "At the start of the Fight phase, each enemy unit within Engagement Range of this model must take a Battle-shock test, subtracting 1 from that test if that enemy unit is Below Half-strength."
+         }
+        ]
+       },
+       {
+        "id": "w139",
+        "name": "Swooping Predator",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "Each time this model ends a Normal move, you can select one enemy unit that it moved over during that move and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 195
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu3",
+        "name": "Infernal cannon",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w133",
+          "name": "Infernal cannon",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "24\""
+           },
+           {
+            "name": "A",
+            "$text": "3"
+           },
+           {
+            "name": "BS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "5"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "2"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 1"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w134",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Infernal cannon"
+       },
+       {
+        "id": "mu4",
+        "name": "Hellforged weapons",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w136",
+          "name": "➤ Hellforged weapons - strike",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "8"
+           },
+           {
+            "name": "WS",
+            "$text": "2+"
+           },
+           {
+            "name": "S",
+            "$text": "8"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "3"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         },
+         {
+          "id": "w137",
+          "name": "➤ Hellforged weapons - sweep",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "16"
+           },
+           {
+            "name": "WS",
+            "$text": "2+"
+           },
+           {
+            "name": "S",
+            "$text": "6"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         }
+        ],
+        "entryId": "madeup::Hellforged weapons"
+       },
+       {
+        "id": "mu5",
+        "name": "Brazen Form",
+        "entryId": "madeup::Brazen Form",
+        "type": "upgrade",
+        "number": 1,
+        "group": "Enhancements",
+        "from": "group"
+       },
+       {
+        "id": "mu6",
+        "name": "Warlord",
+        "entryId": "9537-27cc-2058-3ccc::e761-56b7-0133-cb24::9754-481c-c292-a1f9",
+        "type": "upgrade",
+        "number": 1,
+        "from": "entry"
+       }
+      ]
+     },
+     {
+      "id": "mu7",
+      "name": "Lord Invocatus",
+      "entryId": "madeup::Lord Invocatus",
+      "type": "model",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Mounted",
+        "primary": false
+       },
+       {
+        "name": "Character",
+        "primary": false
+       },
+       {
+        "name": "Epic Hero",
+        "primary": true
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Lord Invocatus",
+        "primary": false
+       },
+       {
+        "name": "Faction: World Eaters",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w90",
+        "name": "Leader"
+       },
+       {
+        "id": "w91",
+        "name": "Deep Strike"
+       },
+       {
+        "id": "w92",
+        "name": "Scouts 6\""
+       },
+       {
+        "id": "w93",
+        "name": "Blessings of Khorne"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w77",
+        "name": "Lord Invocatus",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "10\""
+         },
+         {
+          "name": "T",
+          "$text": "6"
+         },
+         {
+          "name": "Sv",
+          "$text": "3+"
+         },
+         {
+          "name": "W",
+          "$text": "8"
+         },
+         {
+          "name": "LD",
+          "$text": "6+"
+         },
+         {
+          "name": "OC",
+          "$text": "2"
+         },
+         {
+          "name": "InSv",
+          "$text": "4+"
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w88",
+        "name": "Fire Riders",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "While this model is leading a unit, models in that unit have the Deep Strike ability and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through models and terrain features. When making a Normal, Advance or Fall Back move, models in that unit can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them and any Desperate Escape test is automatically passed."
+         }
+        ]
+       },
+       {
+        "id": "w89",
+        "name": "Bloody Stampede",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "Each time this model’s unit ends a Charge move, select one enemy unit within Engagement Range of this model, then roll one D6: on a 2-3, that enemy unit suffers 1 mortal wound; on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 100
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu8",
+        "name": "Bolt pistol",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w79",
+          "name": "Bolt pistol",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "12\""
+           },
+           {
+            "name": "A",
+            "$text": "1"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "5"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": "pistol"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w80",
+          "name": "Pistol"
+         }
+        ],
+        "entryId": "madeup::Bolt pistol"
+       },
+       {
+        "id": "mu9",
+        "name": "Coward’s Bane",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w82",
+          "name": "Coward’s Bane",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "7"
+           },
+           {
+            "name": "WS",
+            "$text": "2+"
+           },
+           {
+            "name": "S",
+            "$text": "6"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "2"
+           },
+           {
+            "name": "Keywords",
+            "$text": "devastating wounds"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w83",
+          "name": "Devastating Wounds"
+         }
+        ],
+        "entryId": "madeup::Coward’s Bane"
+       },
+       {
+        "id": "mu10",
+        "name": "Bladed horn",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w85",
+          "name": "Bladed horn",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "4"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "6"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "2"
+           },
+           {
+            "name": "Keywords",
+            "$text": "extra attacks, lance"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w86",
+          "name": "Extra Attacks"
+         },
+         {
+          "id": "w87",
+          "name": "Lance"
+         }
+        ],
+        "entryId": "madeup::Bladed horn"
+       }
+      ]
+     },
+     {
+      "id": "mu11",
+      "name": "Bloodletters",
+      "entryId": "madeup::Bloodletters",
+      "type": "unit",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Infantry",
+        "primary": false
+       },
+       {
+        "name": "Battleline",
+        "primary": true
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Daemon",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Summoned",
+        "primary": false
+       },
+       {
+        "name": "Bloodletters",
+        "primary": false
+       },
+       {
+        "name": "Faction: Blood Legions",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w207",
+        "name": "Deep Strike"
+       },
+       {
+        "id": "w208",
+        "name": "Pact of Blood"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w199",
+        "name": "Bloodletters",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "8\""
+         },
+         {
+          "name": "T",
+          "$text": "4"
+         },
+         {
+          "name": "Sv",
+          "$text": "7+"
+         },
+         {
+          "name": "W",
+          "$text": "1"
+         },
+         {
+          "name": "LD",
+          "$text": "7+"
+         },
+         {
+          "name": "OC",
+          "$text": "1"
+         },
+         {
+          "name": "InSv",
+          "$text": "5+"
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w202",
+        "name": "Bane of Cowards",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 90
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu12",
+        "name": "Bloodreaper",
+        "entryId": "madeup::Bloodreaper",
+        "type": "model",
+        "number": 1,
+        "from": "entry",
+        "selections": [
+         {
+          "id": "mu13",
+          "name": "Hellblade",
+          "type": "upgrade",
+          "number": 1,
+          "profiles": [
+           {
+            "id": "w201",
+            "name": "Hellblade",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+             {
+              "name": "Range",
+              "$text": "Melee"
+             },
+             {
+              "name": "A",
+              "$text": "2"
+             },
+             {
+              "name": "WS",
+              "$text": "3+"
+             },
+             {
+              "name": "S",
+              "$text": "5"
+             },
+             {
+              "name": "AP",
+              "$text": "-2"
+             },
+             {
+              "name": "D",
+              "$text": "2"
+             },
+             {
+              "name": "Keywords",
+              "$text": ""
+             }
+            ]
+           }
+          ],
+          "entryId": "madeup::Hellblade"
+         }
+        ]
+       },
+       {
+        "id": "mu14",
+        "name": "Bloodletter",
+        "entryId": "madeup::Bloodletter",
+        "type": "model",
+        "number": 9,
+        "from": "entry",
+        "selections": [
+         {
+          "id": "mu15",
+          "name": "Hellblade",
+          "type": "upgrade",
+          "number": 9,
+          "profiles": [
+           {
+            "id": "w201",
+            "name": "Hellblade",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+             {
+              "name": "Range",
+              "$text": "Melee"
+             },
+             {
+              "name": "A",
+              "$text": "2"
+             },
+             {
+              "name": "WS",
+              "$text": "3+"
+             },
+             {
+              "name": "S",
+              "$text": "5"
+             },
+             {
+              "name": "AP",
+              "$text": "-2"
+             },
+             {
+              "name": "D",
+              "$text": "2"
+             },
+             {
+              "name": "Keywords",
+              "$text": ""
+             }
+            ]
+           }
+          ],
+          "entryId": "madeup::Hellblade"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "mu16",
+      "name": "Bloodcrushers",
+      "entryId": "madeup::Bloodcrushers",
+      "type": "unit",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Mounted",
+        "primary": true
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Daemon",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Summoned",
+        "primary": false
+       },
+       {
+        "name": "Bloodcrushers",
+        "primary": false
+       },
+       {
+        "name": "Faction: Blood Legions",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w239",
+        "name": "Deep Strike"
+       },
+       {
+        "id": "w240",
+        "name": "Pact of Blood"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w227",
+        "name": "Bloodcrushers",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "10\""
+         },
+         {
+          "name": "T",
+          "$text": "7"
+         },
+         {
+          "name": "Sv",
+          "$text": "3+"
+         },
+         {
+          "name": "W",
+          "$text": "4"
+         },
+         {
+          "name": "LD",
+          "$text": "7+"
+         },
+         {
+          "name": "OC",
+          "$text": "2"
+         },
+         {
+          "name": "InSv",
+          "$text": "5+"
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w234",
+        "name": "Brass Stampede",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of this unit and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers D3 mortal wounds."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 95
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu17",
+        "name": "Bloodhunter",
+        "entryId": "madeup::Bloodhunter",
+        "type": "model",
+        "number": 1,
+        "from": "entry",
+        "selections": [
+         {
+          "id": "mu18",
+          "name": "Hellblade",
+          "type": "upgrade",
+          "number": 1,
+          "profiles": [
+           {
+            "id": "w229",
+            "name": "Hellblade",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+             {
+              "name": "Range",
+              "$text": "Melee"
+             },
+             {
+              "name": "A",
+              "$text": "2"
+             },
+             {
+              "name": "WS",
+              "$text": "3+"
+             },
+             {
+              "name": "S",
+              "$text": "5"
+             },
+             {
+              "name": "AP",
+              "$text": "-2"
+             },
+             {
+              "name": "D",
+              "$text": "2"
+             },
+             {
+              "name": "Keywords",
+              "$text": ""
+             }
+            ]
+           }
+          ],
+          "entryId": "madeup::Hellblade"
+         }
+        ]
+       },
+       {
+        "id": "mu19",
+        "name": "Bloodcrusher",
+        "entryId": "madeup::Bloodcrusher",
+        "type": "model",
+        "number": 2,
+        "from": "entry",
+        "selections": [
+         {
+          "id": "mu20",
+          "name": "Hellblade",
+          "type": "upgrade",
+          "number": 2,
+          "profiles": [
+           {
+            "id": "w229",
+            "name": "Hellblade",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+             {
+              "name": "Range",
+              "$text": "Melee"
+             },
+             {
+              "name": "A",
+              "$text": "2"
+             },
+             {
+              "name": "WS",
+              "$text": "3+"
+             },
+             {
+              "name": "S",
+              "$text": "5"
+             },
+             {
+              "name": "AP",
+              "$text": "-2"
+             },
+             {
+              "name": "D",
+              "$text": "2"
+             },
+             {
+              "name": "Keywords",
+              "$text": ""
+             }
+            ]
+           }
+          ],
+          "entryId": "madeup::Hellblade"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "mu21",
+      "name": "Chaos Spawn",
+      "entryId": "madeup::Chaos Spawn",
+      "type": "unit",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Beast",
+        "primary": true
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Spawn",
+        "primary": false
+       },
+       {
+        "name": "Faction: World Eaters",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w269",
+        "name": "Feel No Pain 5+"
+       },
+       {
+        "id": "w270",
+        "name": "Scouts 8\""
+       },
+       {
+        "id": "w271",
+        "name": "Blessings of Khorne"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w265",
+        "name": "Chaos Spawn",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "10\""
+         },
+         {
+          "name": "T",
+          "$text": "5"
+         },
+         {
+          "name": "Sv",
+          "$text": "4+"
+         },
+         {
+          "name": "W",
+          "$text": "4"
+         },
+         {
+          "name": "LD",
+          "$text": "7+"
+         },
+         {
+          "name": "OC",
+          "$text": "1"
+         },
+         {
+          "name": "InSv",
+          "$text": ""
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w268",
+        "name": "To Slake its Rage",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "This unit is eligible to declare a charge in a turn in which it Advanced."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 95
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu22",
+        "name": "Chaos Spawn",
+        "entryId": "madeup::Chaos Spawn",
+        "type": "model",
+        "number": 2,
+        "from": "entry",
+        "selections": [
+         {
+          "id": "mu23",
+          "name": "Hideous mutations",
+          "type": "upgrade",
+          "number": 2,
+          "profiles": [
+           {
+            "id": "w267",
+            "name": "Hideous mutations",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+             {
+              "name": "Range",
+              "$text": "Melee"
+             },
+             {
+              "name": "A",
+              "$text": "D6+4"
+             },
+             {
+              "name": "WS",
+              "$text": "4+"
+             },
+             {
+              "name": "S",
+              "$text": "5"
+             },
+             {
+              "name": "AP",
+              "$text": "-1"
+             },
+             {
+              "name": "D",
+              "$text": "2"
+             },
+             {
+              "name": "Keywords",
+              "$text": ""
+             }
+            ]
+           }
+          ],
+          "entryId": "madeup::Hideous mutations"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "mu24",
+      "name": "Defiler",
+      "entryId": "madeup::Defiler",
+      "type": "model",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Vehicle",
+        "primary": true
+       },
+       {
+        "name": "Walker",
+        "primary": false
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Daemon",
+        "primary": false
+       },
+       {
+        "name": "Defiler",
+        "primary": false
+       },
+       {
+        "name": "Faction: World Eaters",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w513",
+        "name": "Deadly Demise D6"
+       },
+       {
+        "id": "w514",
+        "name": "Blessings of Khorne"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w470",
+        "name": "Defiler",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "14\""
+         },
+         {
+          "name": "T",
+          "$text": "11"
+         },
+         {
+          "name": "Sv",
+          "$text": "3+"
+         },
+         {
+          "name": "W",
+          "$text": "18"
+         },
+         {
+          "name": "LD",
+          "$text": "6+"
+         },
+         {
+          "name": "OC",
+          "$text": "5"
+         },
+         {
+          "name": "InSv",
+          "$text": "5+"
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w510",
+        "name": "Scuttling Walker",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+         }
+        ]
+       },
+       {
+        "id": "w511",
+        "name": "Unleash Wrath",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "At the end of your opponent’s Movement phase, you can select one enemy unit that was set up on the battlefield within 12\" of this model; this model can then either:\n- Shoot at that unit, but only if it is an eligible target.\n- Declare a charge. This unit must end that charge move engaged with the enemy unit you selected (note that even if this charge is successful, this unit does not receive any Charge bonus this turn)."
+         }
+        ]
+       },
+       {
+        "id": "w512",
+        "name": "Damaged: 1-6 wounds remaining",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 270
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu25",
+        "name": "Ectoplasma destructor",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w472",
+          "name": "Ectoplasma destructor",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "36\""
+           },
+           {
+            "name": "A",
+            "$text": "D6"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "12"
+           },
+           {
+            "name": "AP",
+            "$text": "-3"
+           },
+           {
+            "name": "D",
+            "$text": "3"
+           },
+           {
+            "name": "Keywords",
+            "$text": "blast, rapid fire 2"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w473",
+          "name": "Blast"
+         },
+         {
+          "id": "w474",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Ectoplasma destructor"
+       },
+       {
+        "id": "mu26",
+        "name": "Excruciator cannon",
+        "type": "upgrade",
+        "number": 2,
+        "profiles": [
+         {
+          "id": "w476",
+          "name": "Excruciator cannon",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "36\""
+           },
+           {
+            "name": "A",
+            "$text": "6"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "6"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "2"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 3"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w477",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Excruciator cannon"
+       },
+       {
+        "id": "mu27",
+        "name": "Heavy missile launcher",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w490",
+          "name": "➤ Heavy missile launcher - krak",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "48\""
+           },
+           {
+            "name": "A",
+            "$text": "2"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "10"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "D6+1"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 1"
+           }
+          ]
+         },
+         {
+          "id": "w492",
+          "name": "➤ Heavy missile launcher - frag",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "48\""
+           },
+           {
+            "name": "A",
+            "$text": "2D6"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "5"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": "blast, rapid fire 3"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w491",
+          "name": "Rapid Fire"
+         },
+         {
+          "id": "w493",
+          "name": "Blast"
+         }
+        ],
+        "entryId": "madeup::Heavy missile launcher"
+       },
+       {
+        "id": "mu28",
+        "name": "Electroscourge",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w504",
+          "name": "Electroscourge",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "7"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "12"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "2"
+           },
+           {
+            "name": "Keywords",
+            "$text": "extra attacks, sustained hits 2"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w505",
+          "name": "Extra Attacks"
+         },
+         {
+          "id": "w506",
+          "name": "Sustained Hits"
+         }
+        ],
+        "entryId": "madeup::Electroscourge"
+       },
+       {
+        "id": "mu29",
+        "name": "Shearing claws",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w508",
+          "name": "➤ Shearing claws - strike",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "6"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "16"
+           },
+           {
+            "name": "AP",
+            "$text": "-3"
+           },
+           {
+            "name": "D",
+            "$text": "D6+1"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         },
+         {
+          "id": "w509",
+          "name": "➤ Shearing claws - sweep",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "12"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "6"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         }
+        ],
+        "entryId": "madeup::Shearing claws"
+       }
+      ]
+     },
+     {
+      "id": "mu30",
+      "name": "Maulerfiend",
+      "entryId": "madeup::Maulerfiend",
+      "type": "model",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Vehicle",
+        "primary": true
+       },
+       {
+        "name": "Walker",
+        "primary": false
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Daemon",
+        "primary": false
+       },
+       {
+        "name": "Maulerfiend",
+        "primary": false
+       },
+       {
+        "name": "Faction: World Eaters",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w594",
+        "name": "Deadly Demise D3"
+       },
+       {
+        "id": "w595",
+        "name": "Blessings of Khorne"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w581",
+        "name": "Maulerfiend",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "12\""
+         },
+         {
+          "name": "T",
+          "$text": "10"
+         },
+         {
+          "name": "Sv",
+          "$text": "3+"
+         },
+         {
+          "name": "W",
+          "$text": "12"
+         },
+         {
+          "name": "LD",
+          "$text": "6+"
+         },
+         {
+          "name": "OC",
+          "$text": "3"
+         },
+         {
+          "name": "InSv",
+          "$text": "5+"
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w591",
+        "name": "The Scent of Blood",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "In the Charge phase, when this unit declares a charge:\n- If an enemy unit below starting strength is within 9\" of this unit, this unit has +1 to charge rolls.\n- Or: If an enemy unit below half strength is within 9\" of this unit, this unit has +2 to charge rolls."
+         }
+        ]
+       },
+       {
+        "id": "w592",
+        "name": "Savage Exaltation",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "Each time this model makes a melee attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll and, if that attack targets an enemy unit that is Below Half-strength, add 1 to the Wound roll as well."
+         }
+        ]
+       },
+       {
+        "id": "w593",
+        "name": "Damaged: 1-4 wounds remaining",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 140
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu31",
+        "name": "Magma cutter",
+        "type": "upgrade",
+        "number": 2,
+        "profiles": [
+         {
+          "id": "w583",
+          "name": "Magma cutter",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "6\""
+           },
+           {
+            "name": "A",
+            "$text": "2"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "9"
+           },
+           {
+            "name": "AP",
+            "$text": "-4"
+           },
+           {
+            "name": "D",
+            "$text": "D6"
+           },
+           {
+            "name": "Keywords",
+            "$text": "melta 2, rapid fire 1"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w584",
+          "name": "Melta"
+         },
+         {
+          "id": "w585",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Magma cutter"
+       },
+       {
+        "id": "mu32",
+        "name": "Maulerfiend fists",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w590",
+          "name": "Maulerfiend fists",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "8"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "14"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "D6+1"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         }
+        ],
+        "entryId": "madeup::Maulerfiend fists"
+       }
+      ]
+     },
+     {
+      "id": "mu33",
+      "name": "Khorne Lord of Skulls",
+      "entryId": "madeup::Khorne Lord of Skulls",
+      "type": "model",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Vehicle",
+        "primary": true
+       },
+       {
+        "name": "Frame",
+        "primary": false
+       },
+       {
+        "name": "Titanic",
+        "primary": false
+       },
+       {
+        "name": "Towering",
+        "primary": false
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Daemon",
+        "primary": false
+       },
+       {
+        "name": "Lord of Skulls",
+        "primary": false
+       },
+       {
+        "name": "Faction: World Eaters",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w392",
+        "name": "Deadly Demise D6+2"
+       },
+       {
+        "id": "w393",
+        "name": "Blessings of Khorne"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w366",
+        "name": "Khorne Lord of Skulls",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "12\""
+         },
+         {
+          "name": "T",
+          "$text": "13"
+         },
+         {
+          "name": "Sv",
+          "$text": "3+"
+         },
+         {
+          "name": "W",
+          "$text": "24"
+         },
+         {
+          "name": "LD",
+          "$text": "6+"
+         },
+         {
+          "name": "OC",
+          "$text": "8"
+         },
+         {
+          "name": "InSv",
+          "$text": "5+"
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w389",
+        "name": "Idol of Blessed Blood",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "At the start of the battle round, if this model is on the battlefield, when you make a Blessings of Khorne roll, roll one additional D6."
+         }
+        ]
+       },
+       {
+        "id": "w390",
+        "name": "Super-heavy War Engine",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "Each time this model makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4\" or less in height. When doing so it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them. It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a roll of 1, this model is Battle-shocked."
+         }
+        ]
+       },
+       {
+        "id": "w391",
+        "name": "Damaged: 1-8 wounds remaining",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 505
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu34",
+        "name": "Gorestorm cannon",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w372",
+          "name": "Gorestorm cannon",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "24\""
+           },
+           {
+            "name": "A",
+            "$text": "D6+3"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "10"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "3"
+           },
+           {
+            "name": "Keywords",
+            "$text": "blast, rapid fire 3"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w373",
+          "name": "Blast"
+         },
+         {
+          "id": "w374",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Gorestorm cannon"
+       },
+       {
+        "id": "mu35",
+        "name": "Hades gatling cannon",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w376",
+          "name": "Hades gatling cannon",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "48\""
+           },
+           {
+            "name": "A",
+            "$text": "12"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "8"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "2"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 6, sustained hits 1"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w377",
+          "name": "Rapid Fire"
+         },
+         {
+          "id": "w378",
+          "name": "Sustained Hits"
+         }
+        ],
+        "entryId": "madeup::Hades gatling cannon"
+       },
+       {
+        "id": "mu36",
+        "name": "Great cleaver of Khorne",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w387",
+          "name": "➤ Great cleaver of Khorne - strike",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "6"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "16"
+           },
+           {
+            "name": "AP",
+            "$text": "-4"
+           },
+           {
+            "name": "D",
+            "$text": "8"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         },
+         {
+          "id": "w388",
+          "name": "➤ Great cleaver of Khorne - sweep",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "18"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "8"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "2"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         }
+        ],
+        "entryId": "madeup::Great cleaver of Khorne"
+       }
+      ]
+     },
+     {
+      "id": "mu37",
+      "name": "Chaos Predator Destructor",
+      "entryId": "madeup::Chaos Predator Destructor",
+      "type": "model",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Vehicle",
+        "primary": true
+       },
+       {
+        "name": "Frame",
+        "primary": false
+       },
+       {
+        "name": "Smoke",
+        "primary": false
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Predator Destructor",
+        "primary": false
+       },
+       {
+        "name": "Faction: World Eaters",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w449",
+        "name": "Deadly Demise D3"
+       },
+       {
+        "id": "w450",
+        "name": "Blessings of Khorne"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w424",
+        "name": "Chaos Predator Destructor",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "10\""
+         },
+         {
+          "name": "T",
+          "$text": "10"
+         },
+         {
+          "name": "Sv",
+          "$text": "3+"
+         },
+         {
+          "name": "W",
+          "$text": "11"
+         },
+         {
+          "name": "LD",
+          "$text": "6+"
+         },
+         {
+          "name": "OC",
+          "$text": "3"
+         },
+         {
+          "name": "InSv",
+          "$text": ""
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w447",
+        "name": "Punishing Suppression",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks (excluding MONSTERS and VEHICLES). Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+         }
+        ]
+       },
+       {
+        "id": "w448",
+        "name": "Damaged: 1-4 wounds remaining",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 130
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu38",
+        "name": "Predator autocannon",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w443",
+          "name": "Predator autocannon",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "48\""
+           },
+           {
+            "name": "A",
+            "$text": "4"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "9"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "3"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 6"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w444",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Predator autocannon"
+       },
+       {
+        "id": "mu39",
+        "name": "Armoured tracks",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w446",
+          "name": "Armoured tracks",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "6"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "6"
+           },
+           {
+            "name": "AP",
+            "$text": "0"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         }
+        ],
+        "entryId": "madeup::Armoured tracks"
+       }
+      ]
+     },
+     {
+      "id": "mu40",
+      "name": "Chaos Land Raider",
+      "entryId": "madeup::Chaos Land Raider",
+      "type": "model",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Vehicle",
+        "primary": true
+       },
+       {
+        "name": "Transport",
+        "primary": false
+       },
+       {
+        "name": "Frame",
+        "primary": false
+       },
+       {
+        "name": "Smoke",
+        "primary": false
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Land Raider",
+        "primary": false
+       },
+       {
+        "name": "Faction: World Eaters",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w46",
+        "name": "Deadly Demise D6"
+       },
+       {
+        "id": "w47",
+        "name": "Blessings of Khorne"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w21",
+        "name": "Chaos Land Raider",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "10\""
+         },
+         {
+          "name": "T",
+          "$text": "12"
+         },
+         {
+          "name": "Sv",
+          "$text": "2+"
+         },
+         {
+          "name": "W",
+          "$text": "16"
+         },
+         {
+          "name": "LD",
+          "$text": "6+"
+         },
+         {
+          "name": "OC",
+          "$text": "5"
+         },
+         {
+          "name": "InSv",
+          "$text": ""
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w43",
+        "name": "Assault Ramp",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "Each time a unit disembarks from this model after it has made a Normal move, that unit makes an assault disembark move (Core Rules, 18.06) for that disembarkation."
+         }
+        ]
+       },
+       {
+        "id": "w44",
+        "name": "Chaos Land Raider",
+        "typeName": "Transport",
+        "characteristics": [
+         {
+          "name": "Capacity",
+          "$text": "This model has a transport capacity of 14 WORLD EATERS INFANTRY models. Each POSSESSED and TERMINATOR model takes up the space of 2 models."
+         }
+        ]
+       },
+       {
+        "id": "w45",
+        "name": "Damaged: 1-5 wounds remaining",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 200
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu41",
+        "name": "Soulshatter lascannon",
+        "type": "upgrade",
+        "number": 2,
+        "profiles": [
+         {
+          "id": "w34",
+          "name": "Soulshatter lascannon",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "48\""
+           },
+           {
+            "name": "A",
+            "$text": "2"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "12"
+           },
+           {
+            "name": "AP",
+            "$text": "-3"
+           },
+           {
+            "name": "D",
+            "$text": "D6+1"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 2"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w35",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Soulshatter lascannon"
+       },
+       {
+        "id": "mu42",
+        "name": "Twin heavy bolter",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w37",
+          "name": "Twin heavy bolter",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "36\""
+           },
+           {
+            "name": "A",
+            "$text": "3"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "5"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "2"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 2, sustained hits 1, twin-linked"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w38",
+          "name": "Rapid Fire"
+         },
+         {
+          "id": "w39",
+          "name": "Sustained Hits"
+         },
+         {
+          "id": "w40",
+          "name": "Twin-linked"
+         }
+        ],
+        "entryId": "madeup::Twin heavy bolter"
+       },
+       {
+        "id": "mu43",
+        "name": "Armoured tracks",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w42",
+          "name": "Armoured tracks",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "9"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "8"
+           },
+           {
+            "name": "AP",
+            "$text": "0"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         }
+        ],
+        "entryId": "madeup::Armoured tracks"
+       }
+      ]
+     },
+     {
+      "id": "mu44",
+      "name": "Helbrute",
+      "entryId": "madeup::Helbrute",
+      "type": "model",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Vehicle",
+        "primary": true
+       },
+       {
+        "name": "Walker",
+        "primary": false
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Helbrute",
+        "primary": false
+       },
+       {
+        "name": "Faction: World Eaters",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w578",
+        "name": "Deadly Demise 1"
+       },
+       {
+        "id": "w579",
+        "name": "Blessings of Khorne"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w533",
+        "name": "Helbrute",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "9\""
+         },
+         {
+          "name": "T",
+          "$text": "9"
+         },
+         {
+          "name": "Sv",
+          "$text": "2+"
+         },
+         {
+          "name": "W",
+          "$text": "8"
+         },
+         {
+          "name": "LD",
+          "$text": "6+"
+         },
+         {
+          "name": "OC",
+          "$text": "3"
+         },
+         {
+          "name": "InSv",
+          "$text": ""
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w576",
+        "name": "Devoted to Destruction",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "If this model is equipped with two melee weapons in addition to its close combat weapon, add 2 to the Attacks characteristic of those two weapons."
+         }
+        ]
+       },
+       {
+        "id": "w577",
+        "name": "Frenzy (Once per turn, per unit)",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "In the Fight phase, when an enemy unit targets this unit, after that unit has resolved its attacks, you can use this ability. If you do, this unit is eligible to fight (even if it has already fought this phase) and must be selected to fight next."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 120
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu45",
+        "name": "Missile launcher",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w547",
+          "name": "➤ Missile launcher - frag",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "48\""
+           },
+           {
+            "name": "A",
+            "$text": "D6"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "4"
+           },
+           {
+            "name": "AP",
+            "$text": "0"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": "blast, rapid fire 3"
+           }
+          ]
+         },
+         {
+          "id": "w550",
+          "name": "➤ Missile launcher - krak",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "48\""
+           },
+           {
+            "name": "A",
+            "$text": "1"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "9"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "D6"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 1"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w548",
+          "name": "Blast"
+         },
+         {
+          "id": "w549",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Missile launcher"
+       },
+       {
+        "id": "mu46",
+        "name": "Twin lascannon",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w565",
+          "name": "Twin lascannon",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "48\""
+           },
+           {
+            "name": "A",
+            "$text": "1"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "12"
+           },
+           {
+            "name": "AP",
+            "$text": "-3"
+           },
+           {
+            "name": "D",
+            "$text": "D6+1"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 1, twin-linked"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w566",
+          "name": "Rapid Fire"
+         },
+         {
+          "id": "w567",
+          "name": "Twin-linked"
+         }
+        ],
+        "entryId": "madeup::Twin lascannon"
+       },
+       {
+        "id": "mu47",
+        "name": "Close combat weapon",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w569",
+          "name": "Close combat weapon",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "6"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "6"
+           },
+           {
+            "name": "AP",
+            "$text": "0"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         }
+        ],
+        "entryId": "madeup::Close combat weapon"
+       }
+      ]
+     }
+    ],
+    "categories": [
+     {
+      "name": "Uncategorized",
+      "id": "lk7mcyk",
+      "primary": false,
+      "entryId": "(No Category)"
+     },
+     {
+      "name": "Configuration",
+      "id": "8l86wb",
+      "primary": false,
+      "entryId": "4ac9-fd30-1e3d-b249"
+     },
+     {
+      "name": "Epic Hero",
+      "id": "97mkqzf",
+      "primary": false,
+      "entryId": "4f3a-f0f7-6647-348d"
+     },
+     {
+      "name": "Character",
+      "id": "976aegk",
+      "primary": false,
+      "entryId": "9cfd-1c32-585f-7d5c"
+     },
+     {
+      "name": "Battleline",
+      "id": "97g95gg",
+      "primary": false,
+      "entryId": "e338-111e-d0c6-b687"
+     },
+     {
+      "name": "Infantry",
+      "id": "97b03m",
+      "primary": false,
+      "entryId": "cf47-a0d7-7207-29dc"
+     },
+     {
+      "name": "Swarm",
+      "id": "lkk2x9v",
+      "primary": false,
+      "entryId": "b00b-5bae-444f-964e"
+     },
+     {
+      "name": "Mounted",
+      "id": "lkbm86n",
+      "primary": false,
+      "entryId": "14a0-40c9-2748-ae6e"
+     },
+     {
+      "name": "Beast",
+      "id": "lk07l1g",
+      "primary": false,
+      "entryId": "4c3e-9310-a516-3590"
+     },
+     {
+      "name": "Monster",
+      "id": "lltzhr",
+      "primary": false,
+      "entryId": "9693-cf84-fe69-37a9"
+     },
+     {
+      "name": "Vehicle",
+      "id": "pzzvy5",
+      "primary": false,
+      "entryId": "dbd4-63-af05-998"
+     },
+     {
+      "name": "Drone",
+      "id": "llnp66",
+      "primary": false,
+      "entryId": "2471-e2e0-3f55-d6cb"
+     },
+     {
+      "name": "Dedicated Transport",
+      "id": "bukeybc",
+      "primary": false,
+      "entryId": "ba07-411c-2832-1f79"
+     },
+     {
+      "name": "Fortification",
+      "id": "ll0o38b",
+      "primary": false,
+      "entryId": "19d7-9c74-2140-5851"
+     },
+     {
+      "name": "Unit",
+      "id": "llmjljc",
+      "primary": false,
+      "entryId": "1160-70ae-a862-b1a8"
+     },
+     {
+      "name": "Allies: Astra Militarum",
+      "id": "ll8u1fb",
+      "primary": false,
+      "entryId": "8247-35f6-ec2a-7caa"
+     },
+     {
+      "name": "Allies: Chaos Knights",
+      "id": "llrtxea",
+      "primary": false,
+      "entryId": "8dd6-af11-abd3-55f1"
+     },
+     {
+      "name": "Allies: Heretic Astartes",
+      "id": "lmc4m0o",
+      "primary": false,
+      "entryId": "92e6-f82e-0a48-2276"
+     },
+     {
+      "name": "Allies: Imperial Agents",
+      "id": "lmuhaht",
+      "primary": false,
+      "entryId": "742f-5727-1bc9-6da5"
+     },
+     {
+      "name": "Allies: Imperial Knights",
+      "id": "lmhv418",
+      "primary": false,
+      "entryId": "5e03-9044-273d-e818"
+     },
+     {
+      "name": "Allies: Legiones Daemonica",
+      "id": "lm9v0lg",
+      "primary": false,
+      "entryId": "e1ea-71b9-f0ef-d788"
+     },
+     {
+      "name": "Allies: Titanicus Traitoris",
+      "id": "lmjdjv7",
+      "primary": false,
+      "entryId": "24fa-8caf-cd68-31fb"
+     },
+     {
+      "name": "Allies: Unaligned Forces",
+      "id": "lmchoe7",
+      "primary": false,
+      "entryId": "07d9-ab1c-cf28-0939"
+     },
+     {
+      "name": "Reference",
+      "id": "lmx073",
+      "primary": false,
+      "entryId": "eef1-be80-500a-edfc"
+     },
+     {
+      "name": "Allies: Adeptus Titanicus",
+      "id": "lmmce3",
+      "primary": false,
+      "entryId": "9988-6b5e-660e-d973"
+     },
+     {
+      "name": "Allies: Deathwatch",
+      "id": "lm4iet",
+      "primary": false,
+      "entryId": "8886-848f-a0f9-1e19"
+     },
+     {
+      "name": "Illegal Units",
+      "id": "lmopox",
+      "primary": false,
+      "entryId": "(Illegal Units)"
+     }
+    ],
+    "id": "8k7yfb9",
+    "name": "Army Roster",
+    "entryId": "bb9d-299a-ed60-2d8a",
+    "catalogueId": "df9a-59b2-f464-59ad",
+    "catalogueRevision": 15,
+    "catalogueName": "Chaos - World Eaters"
+   }
+  ],
+  "id": "8dfg9ue",
+  "name": "Made up C",
+  "battleScribeVersion": 2.03,
+  "generatedBy": "https://newrecruit.eu",
+  "gameSystemId": "sys-352e-adc2-7639-d610",
+  "gameSystemName": "Warhammer 40,000 11th Edition",
+  "gameSystemRevision": 18,
+  "xmlns": "http://www.battlescribe.net/schema/rosterSchema"
+ }
+}

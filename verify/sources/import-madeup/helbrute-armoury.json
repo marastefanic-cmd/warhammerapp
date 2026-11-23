@@ -1,0 +1,1485 @@
+{
+ "roster": {
+  "costs": [
+   {
+    "name": "pts",
+    "typeId": "51b2-306e-1021-d207",
+    "value": 290
+   }
+  ],
+  "costLimits": [
+   {
+    "name": "pts",
+    "typeId": "51b2-306e-1021-d207",
+    "value": 2000
+   }
+  ],
+  "forces": [
+   {
+    "selections": [
+     {
+      "selections": [
+       {
+        "id": "aervoi8",
+        "name": "Strike Force (2000 Point limit)",
+        "entryId": "7380-3e40-6ed6-b7cc::baf8-997f-e323-a090",
+        "entryGroupId": "7380-3e40-6ed6-b7cc::b960-4789-a3a6-59cb",
+        "number": 1,
+        "type": "upgrade",
+        "from": "group",
+        "group": "Battle Size"
+       }
+      ],
+      "categories": [
+       {
+        "id": "4ac9-fd30-1e3d-b249",
+        "entryId": "4ac9-fd30-1e3d-b249",
+        "name": "Configuration",
+        "primary": true
+       }
+      ],
+      "id": "ae4rpe",
+      "name": "Battle Size",
+      "entryId": "7380-3e40-6ed6-b7cc::564e-fbc6-5266-3ea4",
+      "number": 1,
+      "type": "upgrade",
+      "from": "entry"
+     },
+     {
+      "profiles": [
+       {
+        "characteristics": [
+         {
+          "$text": "Double 1+",
+          "name": "Roll",
+          "typeId": "f99e-3b0d-b8fa-71b6"
+         },
+         {
+          "$text": "This unit has +1 to charge rolls.",
+          "name": "Effect",
+          "typeId": "fcc3-ca7a-d697-7098"
+         }
+        ],
+        "id": "51f5-e7af-9e0f-b904",
+        "name": "1. Unbridled Bloodlust",
+        "hidden": false,
+        "typeId": "d07f-b12b-1c73-fa2c",
+        "typeName": "Blessings of Khorne",
+        "from": "entry"
+       },
+       {
+        "characteristics": [
+         {
+          "$text": "Double 2+",
+          "name": "Roll",
+          "typeId": "f99e-3b0d-b8fa-71b6"
+         },
+         {
+          "$text": "Each time a model in this unit makes a Pile-In or Consolidation move, it can move up to 6\" instead of up to 3\".",
+          "name": "Effect",
+          "typeId": "fcc3-ca7a-d697-7098"
+         }
+        ],
+        "id": "4ba4-2d3a-a3b2-2a0c",
+        "name": "2. Rage-fuelled Invigoration",
+        "hidden": false,
+        "typeId": "d07f-b12b-1c73-fa2c",
+        "typeName": "Blessings of Khorne",
+        "from": "entry"
+       },
+       {
+        "characteristics": [
+         {
+          "$text": "Double 3+",
+          "name": "Roll",
+          "typeId": "f99e-3b0d-b8fa-71b6"
+         },
+         {
+          "$text": "Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+          "name": "Effect",
+          "typeId": "fcc3-ca7a-d697-7098"
+         }
+        ],
+        "id": "a2db-113d-0cc8-8d7d",
+        "name": "3. Total Carnage",
+        "hidden": false,
+        "typeId": "d07f-b12b-1c73-fa2c",
+        "typeName": "Blessings of Khorne",
+        "from": "entry"
+       },
+       {
+        "characteristics": [
+         {
+          "$text": "Double 4+ or Triple 1+",
+          "name": "Roll",
+          "typeId": "f99e-3b0d-b8fa-71b6"
+         },
+         {
+          "$text": "Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
+          "name": "Effect",
+          "typeId": "fcc3-ca7a-d697-7098"
+         }
+        ],
+        "id": "35da-066e-5d34-b312",
+        "name": "4. Martial Excellence",
+        "hidden": false,
+        "typeId": "d07f-b12b-1c73-fa2c",
+        "typeName": "Blessings of Khorne",
+        "from": "entry"
+       },
+       {
+        "characteristics": [
+         {
+          "$text": "Double 5+ or Triple 2+",
+          "name": "Roll",
+          "typeId": "f99e-3b0d-b8fa-71b6"
+         },
+         {
+          "$text": "Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.",
+          "name": "Effect",
+          "typeId": "fcc3-ca7a-d697-7098"
+         }
+        ],
+        "id": "fbfe-9079-46e0-0cbf",
+        "name": "5. Warp Blades",
+        "hidden": false,
+        "typeId": "d07f-b12b-1c73-fa2c",
+        "typeName": "Blessings of Khorne",
+        "from": "entry"
+       },
+       {
+        "characteristics": [
+         {
+          "$text": "Double 6+ or Triple 3+",
+          "name": "Roll",
+          "typeId": "f99e-3b0d-b8fa-71b6"
+         },
+         {
+          "$text": "Each time a model in this unit makes a melee attack that targets an ^^**Infantry^^** unit, that attack has the [DEVASTATING WOUNDS] ability.",
+          "name": "Effect",
+          "typeId": "fcc3-ca7a-d697-7098"
+         }
+        ],
+        "id": "3444-f024-bee5-e731",
+        "name": "6. Decapitating Strikes",
+        "hidden": false,
+        "typeId": "d07f-b12b-1c73-fa2c",
+        "typeName": "Blessings of Khorne",
+        "from": "entry"
+       }
+      ],
+      "categories": [
+       {
+        "id": "4ac9-fd30-1e3d-b249",
+        "entryId": "4ac9-fd30-1e3d-b249",
+        "name": "Configuration",
+        "primary": true
+       }
+      ],
+      "id": "afse7nz",
+      "name": "Blessings of Khorne Reference",
+      "entryId": "8d4f-a4cb-ec1c-7f95::5558-f47e-9f45-3fca",
+      "number": 1,
+      "type": "upgrade",
+      "from": "entry"
+     },
+     {
+      "selections": [
+       {
+        "id": "mu1",
+        "name": "Berzerker Warband",
+        "entryId": "madeup::detachment-1",
+        "type": "upgrade",
+        "number": 1,
+        "group": "Detachment",
+        "from": "group"
+       }
+      ],
+      "categories": [
+       {
+        "id": "4ac9-fd30-1e3d-b249",
+        "entryId": "4ac9-fd30-1e3d-b249",
+        "name": "Configuration",
+        "primary": true
+       }
+      ],
+      "id": "acwn6c",
+      "name": "Detachment",
+      "entryId": "d325-e694-6930-accb::84c8-b821-877d-72e6",
+      "number": 1,
+      "type": "upgrade",
+      "from": "entry"
+     },
+     {
+      "selections": [
+       {
+        "id": "abjh84",
+        "name": "Purge the Foe",
+        "entryId": "madeup::fd",
+        "entryGroupId": "8bc8-6bfe-78bd-2480::9c70-af87-0c32-afcf::eece-6d68-6710-7a7f",
+        "number": 1,
+        "type": "upgrade",
+        "from": "group",
+        "group": "Force Disposition"
+       }
+      ],
+      "categories": [
+       {
+        "id": "4ac9-fd30-1e3d-b249",
+        "entryId": "4ac9-fd30-1e3d-b249",
+        "name": "Configuration",
+        "primary": true
+       }
+      ],
+      "id": "aazuor",
+      "name": "Force Disposition",
+      "entryId": "8bc8-6bfe-78bd-2480::2f69-9148-45b4-86a8",
+      "number": 1,
+      "type": "upgrade",
+      "from": "entry"
+     },
+     {
+      "selections": [
+       {
+        "id": "kpd0c4",
+        "name": "Unaligned Forces are visible",
+        "entryId": "8dab-22ac-6ba-1175::985-e753-2e94-859::2973-ea51-7f8d-5403",
+        "number": 1,
+        "type": "upgrade",
+        "from": "entry"
+       },
+       {
+        "id": "kpwz3spl",
+        "name": "Unaligned Fortifications are visible",
+        "entryId": "8dab-22ac-6ba-1175::4d37-22c-a45c-64f8::e916-2cf4-a49d-b8c4",
+        "number": 1,
+        "type": "upgrade",
+        "from": "entry"
+       }
+      ],
+      "categories": [
+       {
+        "id": "4ac9-fd30-1e3d-b249",
+        "entryId": "4ac9-fd30-1e3d-b249",
+        "name": "Configuration",
+        "primary": true
+       }
+      ],
+      "id": "agjgoe",
+      "name": "Show/Hide Options",
+      "entryId": "8dab-22ac-6ba-1175::e8ef-836a-a9d1-901d",
+      "number": 1,
+      "type": "upgrade",
+      "from": "entry"
+     },
+     {
+      "id": "mu2",
+      "name": "Daemon Prince of Khorne with Wings",
+      "entryId": "madeup::Daemon Prince of Khorne with Wings",
+      "type": "model",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Monster",
+        "primary": false
+       },
+       {
+        "name": "Character",
+        "primary": true
+       },
+       {
+        "name": "Fly",
+        "primary": false
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Daemon",
+        "primary": false
+       },
+       {
+        "name": "Daemon Prince",
+        "primary": false
+       },
+       {
+        "name": "Faction: World Eaters",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w140",
+        "name": "Deadly Demise D3"
+       },
+       {
+        "id": "w141",
+        "name": "Deep Strike"
+       },
+       {
+        "id": "w142",
+        "name": "Blessings of Khorne"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w131",
+        "name": "Daemon Prince of Khorne with Wings",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "14\""
+         },
+         {
+          "name": "T",
+          "$text": "9"
+         },
+         {
+          "name": "Sv",
+          "$text": "2+"
+         },
+         {
+          "name": "W",
+          "$text": "10"
+         },
+         {
+          "name": "LD",
+          "$text": "6+"
+         },
+         {
+          "name": "OC",
+          "$text": "3"
+         },
+         {
+          "name": "InSv",
+          "$text": "4+"
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w138",
+        "name": "Bloodied Terror",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "At the start of the Fight phase, each enemy unit within Engagement Range of this model must take a Battle-shock test, subtracting 1 from that test if that enemy unit is Below Half-strength."
+         }
+        ]
+       },
+       {
+        "id": "w139",
+        "name": "Swooping Predator",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "Each time this model ends a Normal move, you can select one enemy unit that it moved over during that move and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 170
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu3",
+        "name": "Infernal cannon",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w133",
+          "name": "Infernal cannon",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "24\""
+           },
+           {
+            "name": "A",
+            "$text": "3"
+           },
+           {
+            "name": "BS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "5"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "2"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 1"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w134",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Infernal cannon"
+       },
+       {
+        "id": "mu4",
+        "name": "Hellforged weapons",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w136",
+          "name": "➤ Hellforged weapons - strike",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "8"
+           },
+           {
+            "name": "WS",
+            "$text": "2+"
+           },
+           {
+            "name": "S",
+            "$text": "8"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "3"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         },
+         {
+          "id": "w137",
+          "name": "➤ Hellforged weapons - sweep",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "16"
+           },
+           {
+            "name": "WS",
+            "$text": "2+"
+           },
+           {
+            "name": "S",
+            "$text": "6"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         }
+        ],
+        "entryId": "madeup::Hellforged weapons"
+       },
+       {
+        "id": "mu5",
+        "name": "Warlord",
+        "entryId": "9537-27cc-2058-3ccc::e761-56b7-0133-cb24::9754-481c-c292-a1f9",
+        "type": "upgrade",
+        "number": 1,
+        "from": "entry"
+       }
+      ]
+     },
+     {
+      "id": "mu6",
+      "name": "Helbrute",
+      "entryId": "madeup::Helbrute",
+      "type": "model",
+      "number": 1,
+      "from": "entry",
+      "categories": [
+       {
+        "name": "Vehicle",
+        "primary": true
+       },
+       {
+        "name": "Walker",
+        "primary": false
+       },
+       {
+        "name": "Chaos",
+        "primary": false
+       },
+       {
+        "name": "Khorne",
+        "primary": false
+       },
+       {
+        "name": "Helbrute",
+        "primary": false
+       },
+       {
+        "name": "Faction: World Eaters",
+        "primary": false
+       }
+      ],
+      "rules": [
+       {
+        "id": "w578",
+        "name": "Deadly Demise 1"
+       },
+       {
+        "id": "w579",
+        "name": "Blessings of Khorne"
+       }
+      ],
+      "profiles": [
+       {
+        "id": "w533",
+        "name": "Helbrute",
+        "typeName": "Unit",
+        "characteristics": [
+         {
+          "name": "M",
+          "$text": "9\""
+         },
+         {
+          "name": "T",
+          "$text": "9"
+         },
+         {
+          "name": "Sv",
+          "$text": "2+"
+         },
+         {
+          "name": "W",
+          "$text": "8"
+         },
+         {
+          "name": "LD",
+          "$text": "6+"
+         },
+         {
+          "name": "OC",
+          "$text": "3"
+         },
+         {
+          "name": "InSv",
+          "$text": ""
+         },
+         {
+          "name": "Base",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "w576",
+        "name": "Devoted to Destruction",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "If this model is equipped with two melee weapons in addition to its close combat weapon, add 2 to the Attacks characteristic of those two weapons."
+         }
+        ]
+       },
+       {
+        "id": "w577",
+        "name": "Frenzy (Once per turn, per unit)",
+        "typeName": "Abilities",
+        "characteristics": [
+         {
+          "name": "Description",
+          "$text": "In the Fight phase, when an enemy unit targets this unit, after that unit has resolved its attacks, you can use this ability. If you do, this unit is eligible to fight (even if it has already fought this phase) and must be selected to fight next."
+         }
+        ]
+       }
+      ],
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "51b2-306e-1021-d207",
+        "value": 120
+       }
+      ],
+      "selections": [
+       {
+        "id": "mu7",
+        "name": "Missile launcher",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w547",
+          "name": "➤ Missile launcher - frag",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "48\""
+           },
+           {
+            "name": "A",
+            "$text": "D6"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "4"
+           },
+           {
+            "name": "AP",
+            "$text": "0"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": "blast, rapid fire 3"
+           }
+          ]
+         },
+         {
+          "id": "w550",
+          "name": "➤ Missile launcher - krak",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "48\""
+           },
+           {
+            "name": "A",
+            "$text": "1"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "9"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "D6"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 1"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w548",
+          "name": "Blast"
+         },
+         {
+          "id": "w549",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Missile launcher"
+       },
+       {
+        "id": "mu8",
+        "name": "Multi-melta",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w552",
+          "name": "Multi-melta",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "18\""
+           },
+           {
+            "name": "A",
+            "$text": "2"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "9"
+           },
+           {
+            "name": "AP",
+            "$text": "-4"
+           },
+           {
+            "name": "D",
+            "$text": "D6"
+           },
+           {
+            "name": "Keywords",
+            "$text": "melta 2, rapid fire 1"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w553",
+          "name": "Melta"
+         },
+         {
+          "id": "w554",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Multi-melta"
+       },
+       {
+        "id": "mu9",
+        "name": "Close combat weapon",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w569",
+          "name": "Close combat weapon",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "6"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "6"
+           },
+           {
+            "name": "AP",
+            "$text": "0"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         }
+        ],
+        "entryId": "madeup::Close combat weapon"
+       },
+       {
+        "id": "mu10",
+        "name": "Plasma cannon",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w542",
+          "name": "Plasma cannon",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "36\""
+           },
+           {
+            "name": "A",
+            "$text": "D3"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "8"
+           },
+           {
+            "name": "AP",
+            "$text": "-3"
+           },
+           {
+            "name": "D",
+            "$text": "3"
+           },
+           {
+            "name": "Keywords",
+            "$text": "blast, hazardous, rapid fire D3"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w543",
+          "name": "Blast"
+         },
+         {
+          "id": "w544",
+          "name": "Hazardous"
+         },
+         {
+          "id": "w545",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Plasma cannon"
+       },
+       {
+        "id": "mu11",
+        "name": "Twin autocannon",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w556",
+          "name": "Twin autocannon",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "48\""
+           },
+           {
+            "name": "A",
+            "$text": "2"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "9"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "3"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 2, twin-linked"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w557",
+          "name": "Rapid Fire"
+         },
+         {
+          "id": "w558",
+          "name": "Twin-linked"
+         }
+        ],
+        "entryId": "madeup::Twin autocannon"
+       },
+       {
+        "id": "mu12",
+        "name": "Twin heavy bolter",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w560",
+          "name": "Twin heavy bolter",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "36\""
+           },
+           {
+            "name": "A",
+            "$text": "3"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "5"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "2"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 2, sustained hits 1, twin-linked"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w561",
+          "name": "Rapid Fire"
+         },
+         {
+          "id": "w562",
+          "name": "Sustained Hits"
+         },
+         {
+          "id": "w563",
+          "name": "Twin-linked"
+         }
+        ],
+        "entryId": "madeup::Twin heavy bolter"
+       },
+       {
+        "id": "mu13",
+        "name": "Twin lascannon",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w565",
+          "name": "Twin lascannon",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "48\""
+           },
+           {
+            "name": "A",
+            "$text": "1"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "12"
+           },
+           {
+            "name": "AP",
+            "$text": "-3"
+           },
+           {
+            "name": "D",
+            "$text": "D6+1"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 1, twin-linked"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w566",
+          "name": "Rapid Fire"
+         },
+         {
+          "id": "w567",
+          "name": "Twin-linked"
+         }
+        ],
+        "entryId": "madeup::Twin lascannon"
+       },
+       {
+        "id": "mu14",
+        "name": "Helbrute fist",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w571",
+          "name": "Helbrute fist",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "6"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "12"
+           },
+           {
+            "name": "AP",
+            "$text": "-2"
+           },
+           {
+            "name": "D",
+            "$text": "3"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         }
+        ],
+        "entryId": "madeup::Helbrute fist"
+       },
+       {
+        "id": "mu15",
+        "name": "Helbrute hammer",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w573",
+          "name": "Helbrute hammer",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "6"
+           },
+           {
+            "name": "WS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "14"
+           },
+           {
+            "name": "AP",
+            "$text": "-3"
+           },
+           {
+            "name": "D",
+            "$text": "D6+1"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         }
+        ],
+        "entryId": "madeup::Helbrute hammer"
+       },
+       {
+        "id": "mu16",
+        "name": "Power scourge",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w575",
+          "name": "Power scourge",
+          "typeName": "Melee Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "Melee"
+           },
+           {
+            "name": "A",
+            "$text": "10"
+           },
+           {
+            "name": "WS",
+            "$text": "3+"
+           },
+           {
+            "name": "S",
+            "$text": "7"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "2"
+           },
+           {
+            "name": "Keywords",
+            "$text": ""
+           }
+          ]
+         }
+        ],
+        "entryId": "madeup::Power scourge"
+       },
+       {
+        "id": "mu17",
+        "name": "Combi-bolter",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w535",
+          "name": "Combi-bolter",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "24\""
+           },
+           {
+            "name": "A",
+            "$text": "2"
+           },
+           {
+            "name": "BS",
+            "$text": "4+"
+           },
+           {
+            "name": "S",
+            "$text": "5"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": "rapid fire 4"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w536",
+          "name": "Rapid Fire"
+         }
+        ],
+        "entryId": "madeup::Combi-bolter"
+       },
+       {
+        "id": "mu18",
+        "name": "Heavy flamer",
+        "type": "upgrade",
+        "number": 1,
+        "profiles": [
+         {
+          "id": "w538",
+          "name": "Heavy flamer",
+          "typeName": "Ranged Weapons",
+          "characteristics": [
+           {
+            "name": "Range",
+            "$text": "12\""
+           },
+           {
+            "name": "A",
+            "$text": "D6"
+           },
+           {
+            "name": "BS",
+            "$text": "N/A"
+           },
+           {
+            "name": "S",
+            "$text": "5"
+           },
+           {
+            "name": "AP",
+            "$text": "-1"
+           },
+           {
+            "name": "D",
+            "$text": "1"
+           },
+           {
+            "name": "Keywords",
+            "$text": "ignores cover, torrent"
+           }
+          ]
+         }
+        ],
+        "rules": [
+         {
+          "id": "w539",
+          "name": "Ignores Cover"
+         },
+         {
+          "id": "w540",
+          "name": "Torrent"
+         }
+        ],
+        "entryId": "madeup::Heavy flamer"
+       }
+      ]
+     }
+    ],
+    "categories": [
+     {
+      "name": "Uncategorized",
+      "id": "lk7mcyk",
+      "primary": false,
+      "entryId": "(No Category)"
+     },
+     {
+      "name": "Configuration",
+      "id": "8l86wb",
+      "primary": false,
+      "entryId": "4ac9-fd30-1e3d-b249"
+     },
+     {
+      "name": "Epic Hero",
+      "id": "97mkqzf",
+      "primary": false,
+      "entryId": "4f3a-f0f7-6647-348d"
+     },
+     {
+      "name": "Character",
+      "id": "976aegk",
+      "primary": false,
+      "entryId": "9cfd-1c32-585f-7d5c"
+     },
+     {
+      "name": "Battleline",
+      "id": "97g95gg",
+      "primary": false,
+      "entryId": "e338-111e-d0c6-b687"
+     },
+     {
+      "name": "Infantry",
+      "id": "97b03m",
+      "primary": false,
+      "entryId": "cf47-a0d7-7207-29dc"
+     },
+     {
+      "name": "Swarm",
+      "id": "lkk2x9v",
+      "primary": false,
+      "entryId": "b00b-5bae-444f-964e"
+     },
+     {
+      "name": "Mounted",
+      "id": "lkbm86n",
+      "primary": false,
+      "entryId": "14a0-40c9-2748-ae6e"
+     },
+     {
+      "name": "Beast",
+      "id": "lk07l1g",
+      "primary": false,
+      "entryId": "4c3e-9310-a516-3590"
+     },
+     {
+      "name": "Monster",
+      "id": "lltzhr",
+      "primary": false,
+      "entryId": "9693-cf84-fe69-37a9"
+     },
+     {
+      "name": "Vehicle",
+      "id": "pzzvy5",
+      "primary": false,
+      "entryId": "dbd4-63-af05-998"
+     },
+     {
+      "name": "Drone",
+      "id": "llnp66",
+      "primary": false,
+      "entryId": "2471-e2e0-3f55-d6cb"
+     },
+     {
+      "name": "Dedicated Transport",
+      "id": "bukeybc",
+      "primary": false,
+      "entryId": "ba07-411c-2832-1f79"
+     },
+     {
+      "name": "Fortification",
+      "id": "ll0o38b",
+      "primary": false,
+      "entryId": "19d7-9c74-2140-5851"
+     },
+     {
+      "name": "Unit",
+      "id": "llmjljc",
+      "primary": false,
+      "entryId": "1160-70ae-a862-b1a8"
+     },
+     {
+      "name": "Allies: Astra Militarum",
+      "id": "ll8u1fb",
+      "primary": false,
+      "entryId": "8247-35f6-ec2a-7caa"
+     },
+     {
+      "name": "Allies: Chaos Knights",
+      "id": "llrtxea",
+      "primary": false,
+      "entryId": "8dd6-af11-abd3-55f1"
+     },
+     {
+      "name": "Allies: Heretic Astartes",
+      "id": "lmc4m0o",
+      "primary": false,
+      "entryId": "92e6-f82e-0a48-2276"
+     },
+     {
+      "name": "Allies: Imperial Agents",
+      "id": "lmuhaht",
+      "primary": false,
+      "entryId": "742f-5727-1bc9-6da5"
+     },
+     {
+      "name": "Allies: Imperial Knights",
+      "id": "lmhv418",
+      "primary": false,
+      "entryId": "5e03-9044-273d-e818"
+     },
+     {
+      "name": "Allies: Legiones Daemonica",
+      "id": "lm9v0lg",
+      "primary": false,
+      "entryId": "e1ea-71b9-f0ef-d788"
+     },
+     {
+      "name": "Allies: Titanicus Traitoris",
+      "id": "lmjdjv7",
+      "primary": false,
+      "entryId": "24fa-8caf-cd68-31fb"
+     },
+     {
+      "name": "Allies: Unaligned Forces",
+      "id": "lmchoe7",
+      "primary": false,
+      "entryId": "07d9-ab1c-cf28-0939"
+     },
+     {
+      "name": "Reference",
+      "id": "lmx073",
+      "primary": false,
+      "entryId": "eef1-be80-500a-edfc"
+     },
+     {
+      "name": "Allies: Adeptus Titanicus",
+      "id": "lmmce3",
+      "primary": false,
+      "entryId": "9988-6b5e-660e-d973"
+     },
+     {
+      "name": "Allies: Deathwatch",
+      "id": "lm4iet",
+      "primary": false,
+      "entryId": "8886-848f-a0f9-1e19"
+     },
+     {
+      "name": "Illegal Units",
+      "id": "lmopox",
+      "primary": false,
+      "entryId": "(Illegal Units)"
+     }
+    ],
+    "id": "8k7yfb9",
+    "name": "Army Roster",
+    "entryId": "bb9d-299a-ed60-2d8a",
+    "catalogueId": "df9a-59b2-f464-59ad",
+    "catalogueRevision": 15,
+    "catalogueName": "Chaos - World Eaters"
+   }
+  ],
+  "id": "8dfg9ue",
+  "name": "Helbrute armoury (made up)",
+  "battleScribeVersion": 2.03,
+  "generatedBy": "https://newrecruit.eu",
+  "gameSystemId": "sys-352e-adc2-7639-d610",
+  "gameSystemName": "Warhammer 40,000 11th Edition",
+  "gameSystemRevision": 18,
+  "xmlns": "http://www.battlescribe.net/schema/rosterSchema"
+ }
+}

@@ -1500,7 +1500,9 @@
     },
     {
      "name": "Instrument of Chaos",
-     "text": "Add 1 to **Charge rolls** made for the bearer’s unit."
+     "text": "Add 1 to **Charge rolls** made for the bearer’s unit.",
+     "sumSt": "+1 to Charge rolls",
+     "sumStOf": "bd932f63"
     }
    ],
    "rules": [
@@ -3568,7 +3570,9 @@
     },
     {
      "name": "Instrument of Chaos",
-     "text": "Add 1 to **Charge rolls** made for the bearer’s unit."
+     "text": "Add 1 to **Charge rolls** made for the bearer’s unit.",
+     "sumSt": "+1 to Charge rolls",
+     "sumStOf": "bd932f63"
     }
    ],
    "rules": [
@@ -6044,6 +6048,12 @@
       },
       {
        "name": "Power scourge"
+      },
+      {
+       "name": "Combi-bolter"
+      },
+      {
+       "name": "Heavy flamer"
       }
      ]
     }
@@ -6118,9 +6128,25 @@
       "text": "This model’s missile launcher can be replaced with one of the following:"
      }
     ],
-    "adds": [],
-    "unread": [
-     "For each Helbrute fist this model is equipped with, it can be equipped with one of the following: 1 combi-bolter; 1 heavy flamer"
+    "adds": [
+     {
+      "lines": [
+       "Helbrute"
+      ],
+      "to": [
+       [
+        "Combi-bolter"
+       ],
+       [
+        "Heavy flamer"
+       ]
+      ],
+      "limit": {
+       "kind": "each"
+      },
+      "text": "For each Helbrute fist this model is equipped with, it can be equipped with one of the following:",
+      "per": "Helbrute fist"
+     }
     ]
    }
   },
@@ -6183,7 +6209,9 @@
    "abilities": [
     {
      "name": "The Scent of Blood",
-     "text": "In the Charge phase, when this unit **declares a charge**:\n- If an enemy unit **below starting strength** is within 9\" of this unit, this unit has +1 to **charge rolls**.\n- Or: If an enemy unit **below half strength** is within 9\" of this unit, this unit has +2 to **charge rolls**."
+     "text": "In the Charge phase, when this unit **declares a charge**:\n- If an enemy unit **below starting strength** is within 9\" of this unit, this unit has +1 to **charge rolls**.\n- Or: If an enemy unit **below half strength** is within 9\" of this unit, this unit has +2 to **charge rolls**.",
+     "sumSt": "When this unit declares a charge, if an enemy unit below Starting Strength is within 9\": +1 to Charge rolls (+2 if it is Below Half-strength)",
+     "sumStOf": "f3ff284e"
     },
     {
      "name": "Savage Exaltation",
@@ -6578,7 +6606,9 @@
     "name": "Rush to the Fray",
     "text": "Each time a **WORLD EATERS** unit from your army disembarks from a **TRANSPORT**, until the end of the turn, add 1 to **Charge rolls** made for that unit and that unit’s melee weapons have the **[lance]** ability.",
     "sumAtk": "If this unit disembarked from a TRANSPORT this turn: melee [LANCE]",
-    "sumAtkOf": "0a183cf8"
+    "sumAtkOf": "0a183cf8",
+    "sumSt": "If this unit disembarked from a TRANSPORT this turn: +1 to Charge rolls",
+    "sumStOf": "0a183cf8"
    },
    "enhancements": [
     {
@@ -7081,13 +7111,6 @@
   }
  ],
  "modelNames": [],
- "unread": [
-  {
-   "id": "world-eaters/helbrute",
-   "sentences": [
-    "For each Helbrute fist this model is equipped with, it can be equipped with one of the following: 1 combi-bolter; 1 heavy flamer"
-   ]
-  }
- ],
+ "unread": [],
  "aiRead": true
 }

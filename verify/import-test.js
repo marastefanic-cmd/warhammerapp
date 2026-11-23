@@ -253,7 +253,9 @@ if(L('6-bigs')){
 
 /* 6. made-up exports of a catalogued faction (verify/sources/import-madeup: units and detachments no list of the owner's has, their ids
    made up, found by exact name), built as the phone builds them (import.js make, builder.js) */
-{ const MD = path.join(ROOT, 'verify/sources/import-madeup'), mk = j => I.make(I.slim(j), D, { id:'local-test', date:DATE });
+{ // (the boxes as the phone counts them: effects.js where builder.js reads it, the page's window here, verify/lib loadData's)
+  const EF = require(path.join(ROOT, 'effects.js')); globalThis.WH_EFFECTS = EF; if(global.window) global.window.WH_EFFECTS = EF;
+  const MD = path.join(ROOT, 'verify/sources/import-madeup'), mk = j => I.make(I.slim(j), D, { id:'local-test', date:DATE });
   const M = f => JSON.parse(fs.readFileSync(path.join(MD, f), 'utf8'));
   if(fs.existsSync(path.join(MD, 'brazen-engines.json'))){
     // Brazen Engines: a Chaos Land Raider with Murder-Forged Entity ("This unit has DAEMON."): the keyword and its note, so Rampaging Terrors'
@@ -283,9 +285,75 @@ if(L('6-bigs')){
   if(fs.existsSync(path.join(MD, 'brazen-engines-half-swap.json'))){
     // one excruciator cannon kept and 2 magma cutters taken: not what GW's datasheet allows
     const r = mk(M('brazen-engines-half-swap.json'));
-    const want = ['unit Defiler not imported: Defiler with Hades battle cannon, Excruciator cannon, Magma cutters, Magma cutters, Heavy missile launcher, Heavy baleflamer and Shearing claws is not what GW’s datasheet Defiler allows (its UNIT COMPOSITION and WARGEAR OPTIONS)'];
+    const want = ['unit Defiler not imported: Defiler with Hades battle cannon, Excruciator cannon, Magma cutters, Magma cutters, Heavy missile launcher, Heavy baleflamer and Shearing claws is not what GW’s datasheet Defiler allows (its UNIT COMPOSITION and WARGEAR OPTIONS: no mix of its WARGEAR OPTIONS gives all of it at once)'];
     ok(!r.ok && JSON.stringify(r.errors) === JSON.stringify(want), 'made up: a Defiler with one excruciator cannon and 2 magma cutters refused: ' + JSON.stringify(r.ok ? 'imported' : r.errors));
     report.push('negative (made up): a Defiler with one excruciator cannon and 2 magma cutters → ' + (r.ok ? 'IMPORTED' : r.errors.join('; ')));
+  }
+  // the Helbrute's WARGEAR OPTIONS (GW): "This model’s multi-melta can be replaced with one of the following: 1 plasma cannon; 1 twin
+  // autocannon; 1 twin heavy bolter; 1 twin lascannon; 1 Helbrute fist", "This model’s missile launcher can be replaced with one of the
+  // following: 1 Helbrute fist; 1 Helbrute hammer; 1 power scourge", "For each Helbrute fist this model is equipped with, it can be equipped
+  // with one of the following: 1 combi-bolter; 1 heavy flamer". Each loadout is the armoury export's Helbrute with those weapons only (each
+  // weapon's selection as New Recruit holds it); every option and their mixes build at GW's 120 pts, the others are refused, named
+  if(fs.existsSync(path.join(MD, 'helbrute-armoury.json'))){
+    const A = M('helbrute-armoury.json'), lib = A.roster.forces[0].selections.find(x => x.name === 'Helbrute').selections;
+    const helb = gear => { const j = clone(A), h = j.roster.forces[0].selections.find(x => x.name === 'Helbrute'), c = {}; for(const g of gear) c[g] = (c[g] || 0) + 1;
+      h.selections = Object.entries(c).map(([g, n]) => Object.assign(clone(lib.find(x => x.name === g)), { number:n })); return mk(j); };
+    const ML = 'Missile launcher', MM = 'Multi-melta', CCW = 'Close combat weapon', F = 'Helbrute fist', CB = 'Combi-bolter', HF = 'Heavy flamer';
+    const legal = [[ML, MM, CCW], [ML, 'Plasma cannon', CCW], [ML, 'Twin autocannon', CCW], [ML, 'Twin heavy bolter', CCW], [ML, 'Twin lascannon', CCW], [ML, F, CCW],
+      [F, MM, CCW], ['Helbrute hammer', MM, CCW], ['Power scourge', MM, CCW], [ML, F, CCW, CB], [F, MM, CCW, HF], [F, F, CCW, CB, HF], [F, F, CCW, CB, CB], [F, F, CCW, HF], [F, F, CCW],
+      ['Helbrute hammer', 'Twin lascannon', CCW], ['Power scourge', F, CCW, HF]];
+    for(const g of legal){ const r = helb(g), h = r.ok && r.army.units.find(u => u.id === 'helbrute');
+      ok(r.ok && h && h.pts === 120 && JSON.stringify(h.gear) === JSON.stringify([g]), 'made up: a Helbrute with ' + g.join(', ') + ' builds at 120 pts: ' + JSON.stringify(r.ok ? h && [h.pts, h.gear] : r.errors)); }
+    report.push('accepted (made up): ' + legal.length + ' Helbrute loadouts, every option and their mixes, each at 120 pts');
+    const PER = ' (“For each Helbrute fist this model is equipped with, it can be equipped with one of the following”)', MIX = 'no mix of its WARGEAR OPTIONS gives all of it at once';
+    const illegal = [[[ML, MM, CCW, CB], '1 of combi-bolter or heavy flamer for 0 Helbrute fists' + PER], [[ML, F, CCW, CB, HF], '2 of combi-bolter or heavy flamer for 1 Helbrute fist' + PER],
+      [[F, F, CCW, CB, CB, HF], '3 of combi-bolter or heavy flamer for 2 Helbrute fists' + PER], [[ML, 'Helbrute hammer', CCW], MIX], [['Twin lascannon', MM, CCW], MIX],
+      [[ML, MM, 'Twin lascannon', CCW], MIX], [[ML, MM], MIX], [['Twin lascannon', 'Twin lascannon', CCW], MIX]];
+    for(const [g, why] of illegal){ const r = helb(g), want = ['unit Helbrute not imported: Helbrute with ' + (g.length < 2 ? g.join('') : g.slice(0, -1).join(', ') + ' and ' + g[g.length - 1]) + ' is not what GW’s datasheet Helbrute allows (its UNIT COMPOSITION and WARGEAR OPTIONS: ' + why + ')'];
+      ok(!r.ok && JSON.stringify(r.errors) === JSON.stringify(want), 'made up: a Helbrute with ' + g.join(', ') + ' refused: ' + JSON.stringify(r.ok ? 'imported' : r.errors) + ', want ' + JSON.stringify(want));
+      report.push('negative (made up): a Helbrute with ' + g.join(', ') + ' → ' + (r.ok ? 'IMPORTED' : r.errors.join('; '))); }
+  }
+  // a value of the export's other than GW's that no rule of the list could change (no box of it, counted or not, no index entry, no words
+  // naming the characteristic or the weapon): the export's own data (New Recruit's), GW's value built and said in the list's note. Lord
+  // Invocatus's Bolt pistol at BS 2+ (GW: 4+), the friend's report
+  { const prof = (sel, n, v) => { (function f(x){ for(const p0 of x.profiles || []) for(const c of p0.characteristics || []) if(c.name === n) c.$text = v; for(const y of x.selections || []) f(y); })(sel); };
+    const top = (j, n) => j.roster.forces[0].selections.find(x => x.name === n), sub = (sel, re) => { let w = null; (function f(xs){ for(const x of xs || []){ if(!w && re.test(x.name)) w = x; f(x.selections); } })([sel]); return w; };
+    if(fs.existsSync(path.join(MD, 'cult-of-blood-helbrute.json'))){
+      const j = M('cult-of-blood-helbrute.json'); prof(sub(top(j, 'Lord Invocatus'), /^Bolt pistol$/), 'BS', '2+');
+      const r = mk(j), u = r.ok && r.army.units.find(x => x.id === 'lord-invocatus'), bp = u && u.ranged.find(w => w.name === 'Bolt pistol');
+      ok(r.ok && bp && bp.BS === '4+' && JSON.stringify(r.army.gwValues) === JSON.stringify([{ unit:'Lord Invocatus', row:'Bolt pistol', field:'BS', export:'2+', gw:'4+' }]),
+        'made up: Lord Invocatus’s Bolt pistol at BS 2+ builds with GW’s 4+ and the note: ' + JSON.stringify(r.ok ? [bp, r.army.gwValues] : r.errors));
+      report.push('accepted (made up): Lord Invocatus’s Bolt pistol at BS 2+ in the export → ' + (r.ok ? 'GW’s ' + (bp || {}).BS + ', noted' : r.errors.join('; ')));
+      // a rule of the unit that sets the value (Daemonic Icon: "a Leadership characteristic of 6+") and a value it does not give: refused
+      const j2 = M('cult-of-blood-helbrute.json'), bl = top(j2, 'Bloodletters');
+      bl.selections.push({ id:'icon1', name:'Daemonic Icon', entryId:'madeup::Daemonic Icon', type:'upgrade', number:1, from:'entry', profiles:[{ name:'Daemonic Icon', typeName:'Abilities', characteristics:[{ name:'Description', $text:'Models in the bearer’s unit have a Leadership characteristic of 6+.' }] }] });
+      prof(bl, 'LD', '5+');
+      const r2 = mk(j2), want2 = ['unit Bloodletters: Bloodletters Ld is 5+ in the export; GW’s 7+ with Daemonic Icon is 6+: not imported'];
+      ok(!r2.ok && JSON.stringify(r2.errors) === JSON.stringify(want2), 'made up: Bloodletters with a Daemonic Icon at Ld 5+ refused: ' + JSON.stringify(r2.ok ? 'imported' : r2.errors));
+      report.push('negative (made up): Bloodletters with a Daemonic Icon at Ld 5+ → ' + (r2.ok ? 'IMPORTED' : r2.errors.join('; ')));
+    }
+    // an upgrade on the unit that changes the field (Gore-stained Veterans: "This unit’s melee attacks have +1 WS") and a value it does not
+    // give: refused, never GW's value in its place
+    if(L('super-terminators')){
+      const j = clone(L('super-terminators')); prof(sub(top(j, 'Chaos Terminators'), /Chainfist/), 'WS', '1+');
+      const r = mk(j), want = ['unit Chaos Terminators: Chainfist WS is 1+ in the export; GW’s 4+ with Gore-stained Veterans is 3+: not imported'];
+      ok(!r.ok && JSON.stringify(r.errors) === JSON.stringify(want), 'Chaos Terminators with Gore-stained Veterans, a Chainfist at WS 1+, refused: ' + JSON.stringify(r.ok ? 'imported' : r.errors));
+      report.push('negative: super terminators’ Chainfist at WS 1+ (Gore-stained Veterans gives 3+) → ' + (r.ok ? 'IMPORTED' : r.errors.join('; ')));
+    }
+  }
+  // the earlier made-up Cult of Blood list whose Helbrute swaps its multi-melta for a twin lascannon: refused while the Helbrute's options
+  // were not read, built now; the same list with a Helbrute hammer for its multi-melta (the missile launcher's choice): refused, named
+  if(fs.existsSync(path.join(MD, 'cult-of-blood-helbrute.json'))){
+    const r = mk(M('cult-of-blood-helbrute.json')), h = r.ok && r.army.units.find(u => u.id === 'helbrute');
+    ok(r.ok && h && JSON.stringify(h.gear) === JSON.stringify([['Missile launcher', 'Twin lascannon', 'Close combat weapon']]), 'made up: Cult of Blood with a twin lascannon Helbrute builds: ' + JSON.stringify(r.ok ? h && h.gear : r.errors));
+    report.push('accepted (made up): Cult of Blood, a Helbrute with its multi-melta swapped for a twin lascannon → ' + (r.ok ? r.army.units.length + ' units, ' + r.army.pointsUsed + ' pts' : r.errors.join('; ')));
+    if(fs.existsSync(path.join(MD, 'helbrute-armoury.json'))){
+      const j = M('cult-of-blood-helbrute.json'), h2 = j.roster.forces[0].selections.find(x => x.name === 'Helbrute'), lib = M('helbrute-armoury.json').roster.forces[0].selections.find(x => x.name === 'Helbrute').selections;
+      h2.selections = h2.selections.map(c => c.name === 'Twin lascannon' ? Object.assign(clone(lib.find(x => x.name === 'Helbrute hammer')), { number:1 }) : c);
+      const r2 = mk(j), want = ['unit Helbrute not imported: Helbrute with Missile launcher, Helbrute hammer and Close combat weapon is not what GW’s datasheet Helbrute allows (its UNIT COMPOSITION and WARGEAR OPTIONS: no mix of its WARGEAR OPTIONS gives all of it at once)'];
+      ok(!r2.ok && JSON.stringify(r2.errors) === JSON.stringify(want), 'made up: Cult of Blood with a Helbrute hammer for the multi-melta refused: ' + JSON.stringify(r2.ok ? 'imported' : r2.errors));
+      report.push('negative (made up): Cult of Blood, a Helbrute hammer for the Helbrute’s multi-melta → ' + (r2.ok ? 'IMPORTED' : r2.errors.join('; ')));
+    }
   }
 }
 

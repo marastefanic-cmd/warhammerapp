@@ -229,7 +229,12 @@ const dfLabel = df => (df || []).map(([id, p]) => DF[id] ? DF[id].label(p) : id)
 const ST = {
   ocAdd:{ label:p => '+' + p + ' OC', stat:'OC', name:'objective control', add:p => +p, dom:[1, 2, 3], pats:[/\badd (\d) to the objective control characteristic of (?:[a-z' -]+ )?models in (?:that|this|your|each) unit\b/, /\bthat unit has \+(\d) oc\b/] },
   ocMinus:{ label:p => '−' + p + ' OC', stat:'OC', name:'objective control', add:p => -p, dom:[1, 2, 3, 4], pats:[/\bsubtract (\d) from the objective control characteristic of (?:[a-z' -]+ )?models in (?:that|this|your|each) unit\b/] },
-  mAdd:{ label:p => '+' + p + '" M', stat:'M', name:'move', add:p => +p, inch:true, dom:[1, 2, 3, 6], pats:[/\badd (\d)" to the move characteristic of models in (?:[a-z' -]+ )?units?\b/, /\bfriendly [a-z' -]+ units (?:from your army )?have \+(\d)" m\b/, /\bthat unit has \+(\d)" m\b/] }
+  mAdd:{ label:p => '+' + p + '" M', stat:'M', name:'move', add:p => +p, inch:true, dom:[1, 2, 3, 6], pats:[/\badd (\d)" to the move characteristic of models in (?:[a-z' -]+ )?units?\b/, /\bfriendly [a-z' -]+ units (?:from your army )?have \+(\d)" m\b/, /\bthat unit has \+(\d)" m\b/] },
+  // (a unit's Advance and Charge rolls: no characteristic of its profile, the line under it all the same, GW's words: "add 1 to Charge rolls
+  // made for that unit" (Rush to the Fray), "add 1 to Advance and Charge rolls made for that unit" (Idol of Burning Wrath), "This unit has +1
+  // to charge rolls" (Unbridled Bloodlust))
+  advanceAdd:{ label:p => '+' + p + ' to Advance rolls', stat:'Advance', name:'advance roll', add:p => +p, dom:[1, 2], pats:[/\badd (\d) to advance(?: and charge)? rolls made for (?:that|this) unit\b/, /\b(?:this|that) unit has \+(\d) to advance(?: and charge)? rolls\b/] },
+  chargeAdd:{ label:p => '+' + p + ' to Charge rolls', stat:'Charge', name:'charge roll', add:p => +p, dom:[1, 2], pats:[/\badd (\d) to (?:advance and )?charge rolls made for (?:that|this) unit\b/, /\b(?:this|that) unit has \+(\d) to (?:advance and )?charge rolls\b/, /\bfriendly [a-z' -]+ units (?:from your army )?have \+(\d) to (?:advance and )?charge rolls\b/] }
 };
 // the conditions only a stat box reads (with COND's): "is at its Starting Strength", "(excluding Battle-shocked units)", "unless that unit is
 // Battle-shocked", "while such a unit is not Battle-shocked"

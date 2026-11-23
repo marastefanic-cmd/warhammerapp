@@ -36,7 +36,9 @@ Legions; Pact of Blood makes them part of a World Eaters army), and 8 detachment
   names builder.js recognises) and `loadout` (each line's default weapons, and the swaps and additions of WARGEAR OPTIONS with their limits:
   each model, n per unit, n for every N models; a footnote's caps and exclusions), which builder.js holds an export to (legalLoadout);
 - a WARGEAR OPTIONS sentence the reader cannot express is recorded as unread, and builder.js refuses a loadout that needs it, with
-  the unit named (World Eaters: the Helbrute's "For each Helbrute fist …" sentence);
+  the unit named (none on the four catalogues now: the Helbrute's "For each Helbrute fist this model is equipped with, it can be
+  equipped with one of the following" is read as an addition per item, `per`, verify/waha-loadout.js); a refused loadout says why: an
+  item no option gives, more of a per-item addition than the model has of the item, else no mix of its options;
 - GW's Faction Pack over Wahapedia: its Rules Updates on the datasheets and on the detachments the catalogue adds; a detachment GW's
   documents name otherwise than Wahapedia's heading takes GW's name, Wahapedia's kept as its `waha` (Possessed Slaughterbound, World
   Eaters Faction Pack 1.3, for Wahapedia's Possessed Slaughterband); the hand file `verify/sources/hand/catalog-<faction>.json` for what

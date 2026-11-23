@@ -24,12 +24,20 @@
     "Daemonic Icon": {
      "sumSt": "Ld 6+",
      "sumStOf": "4212a82b"
+    },
+    "Instrument of Chaos": {
+     "sumSt": "+1 to Charge rolls",
+     "sumStOf": "bd932f63"
     }
    },
    "world-eaters/bloodcrushers": {
     "Daemonic Icon": {
      "sumSt": "Ld 6+",
      "sumStOf": "4212a82b"
+    },
+    "Instrument of Chaos": {
+     "sumSt": "+1 to Charge rolls",
+     "sumStOf": "bd932f63"
     }
    },
    "world-eaters/khorne-lord-of-skulls": {
@@ -66,6 +74,10 @@
     "Savage Exaltation": {
      "sumAtk": "In melee, vs enemy units below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if they are Below Half-strength",
      "sumAtkOf": "744f9238"
+    },
+    "The Scent of Blood": {
+     "sumSt": "When this unit declares a charge, if an enemy unit below Starting Strength is within 9\": +1 to Charge rolls (+2 if it is Below Half-strength)",
+     "sumStOf": "f3ff284e"
     }
    }
   },
@@ -162,7 +174,9 @@
     "rules": {
      "Rush to the Fray": {
       "sumAtk": "If this unit disembarked from a TRANSPORT this turn: melee [LANCE]",
-      "sumAtkOf": "0a183cf8"
+      "sumAtkOf": "0a183cf8",
+      "sumSt": "If this unit disembarked from a TRANSPORT this turn: +1 to Charge rolls",
+      "sumStOf": "0a183cf8"
      }
     },
     "enhancements": {

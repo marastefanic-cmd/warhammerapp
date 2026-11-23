@@ -576,7 +576,7 @@ function unread(src, lists){
 // unit screen's lines under a profile count only an army or detachment rule's stat boxes (statOf); these are listed there "not counted here:
 // see the rule" (snc: { quote, stat (M, OC, T, Sv, W, Ld), why }), never silent. T and Sv a defence box reads (DF t, svSet, svPlus) are
 // counted on the defence side.
-const STAT_OF = { move:'M', m:'M', 'objective control':'OC', oc:'OC', toughness:'T', t:'T', save:'Sv', sv:'Sv', wounds:'W', w:'W', leadership:'Ld', ld:'Ld' };
+const STAT_OF = { move:'M', m:'M', 'objective control':'OC', oc:'OC', toughness:'T', t:'T', save:'Sv', sv:'Sv', wounds:'W', w:'W', leadership:'Ld', ld:'Ld', advance:'Advance', charge:'Charge' };
 const ST_NAMES = 'move|objective control|toughness|save|wounds|leadership';
 // (a change of it: add or subtract, improve or worsen, halve, ignore modifiers to it, "+1 OC", "has a Move characteristic of 10"", "the
 // Objective Control characteristic of models in this unit is 1"; not a comparison, "a Toughness characteristic of 5 or less")
@@ -587,7 +587,10 @@ const STAT_RE = new RegExp('\\b(?:add|subtract) (?:\\d+|d3)"? (?:to|from) (?:the
   + '|\\bignore any or all modifiers to (?:its |this model\'s |the )?(' + ST_NAMES + ') characteristic\\b'
   + '|\\bthe (' + ST_NAMES + ') characteristic of [^.;]*? is \\d'
   // (a second characteristic the same verb changes: "Improve this model's Objective Control characteristic by 2 and its Leadership characteristic by 1")
-  + '|\\band (?:its|this model\'s|that model\'s|their) (' + ST_NAMES + ') characteristics? by \\d', 'g');
+  + '|\\band (?:its|this model\'s|that model\'s|their) (' + ST_NAMES + ') characteristics? by \\d'
+  // (its Advance and Charge rolls, effects.js ST advanceAdd and chargeAdd: "add 1 to Charge rolls made for the bearer's unit", "subtract 2
+  // from Advance and Charge rolls made for it", "This unit has +1 to charge rolls"; not a re-roll)
+  + '|\\b(?:add|subtract) (?:\\d+|d3) (?:to|from) (advance and charge|advance|charge) rolls\\b|\\b(?:has|have) [+-]\\d+ to (advance and charge|advance|charge) rolls\\b', 'g');
 const statWords = n => [...new Set([...String(n).matchAll(STAT_RE)].flatMap(m => { const w = m.slice(1).find(Boolean) || ''; return w.split(/,? and |, /).map(x => STAT_OF[x.trim()]).filter(Boolean); }))];
 function statNc(src, st, d, b, V){
   const out = [];
@@ -600,7 +603,9 @@ function statNc(src, st, d, b, V){
       // (its own OC in a Damaged band, the attack side's FX oc)
       && !(k === 'OC' && (b || []).some(x => mine(x, n) && (x.fx || []).some(([id]) => id === 'oc'))));
     // (an enemy's characteristic: "that enemy model has -1 OC", "While a unit is wracked with agonies, subtract 2" from its Move": foe)
-    const foe = /\benemy (?:models?|units?)\b|^while a unit is\b/.test(n);
+    // (not where the change is this unit's own: "If an enemy unit below starting strength is within 9" of this unit, this unit has +1 to
+    // charge rolls", The Scent of Blood)
+    const foe = /\benemy (?:models?|units?)\b|^while a unit is\b/.test(n) && !/\b(?:this|your) unit has [+-]\d|\bmade for (?:this|your|the bearer's) unit\b/.test(n);
     // (whom it is for, as a stat box's: the friendly units its words name, in the sentence or the one before it (reach: "improve that WAR DOG
     // model's Leadership", Dread Dominion), and a keyword of the unit its words need (on: selfKw, "If this model has the SLAANESH keyword"))
     const reach = foe || !V ? null : reachOf(V, u.s) || (u.prevS ? reachOf(V, u.prevS) : null);
@@ -608,7 +613,7 @@ function statNc(src, st, d, b, V){
     // (and "While this model is leading a unit": leading, a fact of the list, the unit leads one)
     const on = (V && /^if this (?:model|unit) has the\b/.test(n.replace(/^[^:"]{1,40}:\s+/, '')) ? condsOf(V, u.s, '', { stat:true, inherit:true }).filter(([id]) => id === 'selfKw') : [])
       .concat(COND.leading.pats.some(re => re.test(n)) ? [['leading', true]] : []);
-    for(const k of left) if(!out.some(x => x.quote === u.s && x.stat === k)) out.push(Object.assign({ quote:u.s, stat:k, why:'it changes ' + (foe ? 'an enemy unit\'s ' : '') + k + ', which the lines under a profile count only from army and detachment rules' },
+    for(const k of left) if(!out.some(x => x.quote === u.s && x.stat === k)) out.push(Object.assign({ quote:u.s, stat:k, why:'it changes ' + (foe ? 'an enemy unit\'s ' : '') + (['Advance', 'Charge'].includes(k) ? k + ' rolls' : k) + ', which the lines under a profile count only from army and detachment rules' },
       foe ? { foe:true } : {}, reach && Object.keys(reach).length ? { reach } : {}, on.length ? { on } : {})); }
   return out;
 }
@@ -632,12 +637,15 @@ function statOf(src, us, V){
   // (a sentence under an option's heading is that option's, as an attack or defence box is: "**Idol of Burning Wrath (Aura)**" then
   // "While a friendly … add 1" to the Move characteristic …", Idols of Khorne; unitsOf gives each sentence its option)
   const secOf = new Map(unitsOf(src).filter(x => x.sec).map(x => [x.s, x.sec]));
-  for(const u of sentencesOf(src.text)){
+  // (and its table's rows, each its option: Blessings of Khorne's "Unbridled Bloodlust · double 1+: This unit has +1 to charge rolls.")
+  const rowS = (src.table || []).flatMap(r => sentencesOf(r.slice(1).join('\n')).map(u => Object.assign(u, { sec:r[0] })));
+  for(const u of sentencesOf(src.text).concat(rowS)){
     const n = norm(u.s), st = [];
     for(const [id, f] of Object.entries(E.ST)) for(const re of f.pats){ const m = re.exec(n); if(m) st.push([id, +m[1]]); }
     if(!st.length) continue;
     const box = { quote:u.s, st, on:condsOf(V, u.s, '', { stat:true, inherit:true }) };
-    const sec = secOf.get(u.s); if(sec) box.on.unshift(['opt', sec]);
+    // (a bullet's "**Surging Vitality:** …" names its option too, as the attack and defence boxes take it)
+    const sec = u.sec || secOf.get(u.s) || (/^\*\*([^*]+?):\*\*\s/.exec(u.s) || [])[1]; if(sec) box.on.unshift(['opt', sec]);
     const r = reachOf(V, u.s) || (u.prevS ? reachOf(V, u.prevS) : null);
     if(r) box.reach = r;
     const mk = ST_SCOPE.exec(u.s); if(mk) box.scope = { models:mk[1].trim() };

@@ -380,7 +380,8 @@ stats.footnotes = nLines; stats.rowValues = nRows; stats.ncLines = nNc;
     const bad = Object.keys(b).filter(k => !ST_KEYS.has(k)).concat(Object.keys(b.scope || {}).filter(k => k !== 'models'));
     if(bad.length) fail('LS', where, 'stat box fields no script writes: ' + bad.join(', '));
     if(!r) fail('LS', where, 'a stat box of no army or detachment rule');
-    else if(!X.sentencesOf(r.text).some(x => x.s === b.quote)) fail('LS', where, 'its quote is not a sentence of its rule: “' + String(b.quote).slice(0, 70) + '”');
+    // (a sentence of its text or of a row of its table, each row's words after its name: Blessings of Khorne's Unbridled Bloodlust)
+    else if(!X.sentencesOf(r.text).concat(...(r.table || []).map(t => X.sentencesOf(t.slice(1).join('\n')))).some(x => x.s === b.quote)) fail('LS', where, 'its quote is not a sentence of its rule: “' + String(b.quote).slice(0, 70) + '”');
     for(const [id, p] of b.st || []){ const f = E.ST[id]; if(!f || !f.dom.includes(p)) fail('LS', where, 'stat effect ' + id + ' ' + JSON.stringify(p) + ' not in effects.js ST or its domain');
       else if(!f.pats.some(re => { const m = re.exec(E.norm(b.quote)); return m && +m[1] === p; })) fail('LS', where, 'stat effect ' + id + ' ' + p + ' is not in its quote'); }
     for(const [id] of b.on || []) if(!E.STCOND[id] && !E.COND[id]) fail('LS', where, 'condition ' + id + ' not in effects.js COND or STCOND'); }

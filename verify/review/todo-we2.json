@@ -1,0 +1,258 @@
+[
+ {
+  "army": "big-demons-baby",
+  "kind": "rule-sumSt",
+  "where": "world-eaters army rule · Blessings of Khorne",
+  "judgement": {
+   "sumSt": "If Unbridled Bloodlust is active: +1 to Charge rolls"
+  },
+  "source": {
+   "rule": "Blessings of Khorne",
+   "text": "If your Army Faction is **WORLD EATERS**, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\n*Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.*\n*First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.*\n*They then use the two 2s to activate Unbridled Bloodlust.*\n*Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.*\nUnbridled Bloodlust · double 1+: This unit has +1 to **charge rolls**.\nRage-fuelled Invigoration · double 2+: Each time a model in this unit makes a Pile-in or **Consolidation move**, it can move up to 6\" instead of up to 3\".\nTotal Carnage · double 3+: Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.\nMartial Excellence · double 4+ or triple 1+: Melee weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability.\nWarp Blades · double 5+ or triple 2+: Melee weapons equipped by models in this unit have the **[LETHAL HITS]** ability.\nDecapitating Strikes · double 6 or triple 3+: Each time a model in this unit makes a melee attack that targets an **INFANTRY** unit, that attack has the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "690cbea3abc8f1eb"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "enhancement-sumSt",
+  "where": "Berzerker Warband · Battle-lust",
+  "judgement": {
+   "sumSt": "Re-roll Charge rolls; if Unbridled Bloodlust is active: +1 to Charge rolls"
+  },
+  "source": {
+   "enhancement": "Battle-lust",
+   "text": "**WORLD EATERS** model only. You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit."
+  },
+  "key": "0aef2dc63913b9b1"
+ },
+ {
+  "army": "nerf-when",
+  "kind": "rule-sumSt",
+  "where": "Terminator Storm Force rule · Death Blow",
+  "judgement": {
+   "sumSt": "+1 to Charge rolls"
+  },
+  "source": {
+   "rule": "Death Blow",
+   "text": "Friendly **ADEPTUS ASTARTES TERMINATOR** units have +1 to **charge rolls**."
+  },
+  "key": "5cb68c13c25d304e"
+ },
+ {
+  "army": "catalog",
+  "kind": "ability-sumSt",
+  "where": "catalog · world-eaters/bloodcrushers · Instrument of Chaos",
+  "judgement": {
+   "sumSt": "+1 to Charge rolls"
+  },
+  "source": {
+   "ability": "Instrument of Chaos",
+   "text": "Add 1 to **Charge rolls** made for the bearer’s unit."
+  },
+  "key": "79d275416ea54522"
+ },
+ {
+  "army": "the-exiled-legion",
+  "kind": "enhancement-sumSt",
+  "where": "Blood Legion · Brazenmaw",
+  "judgement": {
+   "sumSt": "+2 to Charge rolls"
+  },
+  "source": {
+   "enhancement": "Brazenmaw",
+   "text": "**LEGIONES DAEMONICA KHORNE** model only. Add 2 to **Charge rolls** made for the bearer’s unit."
+  },
+  "key": "1abeb2777f3867b0"
+ },
+ {
+  "army": "simple-but-effective",
+  "kind": "ability-sumSt",
+  "where": "simple-but-effective · Beastboss on Squigosaur · Thundering Stampede",
+  "judgement": {
+   "sumSt": "BEAST SNAGGA units within 6\" of the Beastboss on Squigosaur: +1 to Charge rolls"
+  },
+  "source": {
+   "ability": "Thundering Stampede",
+   "text": "Friendly **BEAST SNAGGA** units within 6\" of this unit have +1 to **charge rolls**."
+  },
+  "key": "80ec1b78ef8ec3e6"
+ },
+ {
+  "army": "catalog",
+  "kind": "ability-sumSt",
+  "where": "catalog · world-eaters/maulerfiend · The Scent of Blood",
+  "judgement": {
+   "sumSt": "When this unit declares a charge, if an enemy unit below Starting Strength is within 9\": +1 to Charge rolls (+2 if it is Below Half-strength)"
+  },
+  "source": {
+   "ability": "The Scent of Blood",
+   "text": "In the Charge phase, when this unit **declares a charge**:\n- If an enemy unit **below starting strength** is within 9\" of this unit, this unit has +1 to **charge rolls**.\n- Or: If an enemy unit **below half strength** is within 9\" of this unit, this unit has +2 to **charge rolls**."
+  },
+  "key": "4b979c084b9c69de"
+ },
+ {
+  "army": "catalog",
+  "kind": "rule-sumSt",
+  "where": "World Eaters · Goretrack Onslaught rule · Rush to the Fray",
+  "judgement": {
+   "sumSt": "If this unit disembarked from a TRANSPORT this turn: +1 to Charge rolls"
+  },
+  "source": {
+   "rule": "Rush to the Fray",
+   "text": "Each time a **WORLD EATERS** unit from your army disembarks from a **TRANSPORT**, until the end of the turn, add 1 to **Charge rolls** made for that unit and that unit’s melee weapons have the **[lance]** ability."
+  },
+  "key": "c7776e8e4cbbd0d2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "statOf",
+  "judgement": {
+   "code": "function statOf(src, us, V){\n  if(src.type !== 'rule') return [];\n  const out = [];\n  // (a sentence under an option's heading is that option's, as an attack or defence box is: \"**Idol of Burning Wrath (Aura)**\" then\n  // \"While a friendly … add 1\" to the Move characteristic …\", Idols of Khorne; unitsOf gives each sentence its option)\n  const secOf = new Map(unitsOf(src).filter(x => x.sec).map(x => [x.s, x.sec]));\n  // (and its table's rows, each its option: Blessings of Khorne's \"Unbridled Bloodlust · double 1+: This unit has +1 to charge rolls.\")\n  const rowS = (src.table || []).flatMap(r => sentencesOf(r.slice(1).join('\\n')).map(u => Object.assign(u, { sec:r[0] })));\n  for(const u of sentencesOf(src.text).concat(rowS)){\n    const n = norm(u.s), st = [];\n    for(const [id, f] of Object.entries(E.ST)) for(const re of f.pats){ const m = re.exec(n); if(m) st.push([id, +m[1]]); }\n    if(!st.length) continue;\n    const box = { quote:u.s, st, on:condsOf(V, u.s, '', { stat:true, inherit:true }) };\n    // (a bullet's \"**Surging Vitality:** …\" names its option too, as the attack and defence boxes take it)\n    const sec = u.sec || secOf.get(u.s) || (/^\\*\\*([^*]+?):\\*\\*\\s/.exec(u.s) || [])[1]; if(sec) box.on.unshift(['opt', sec]);\n    const r = reachOf(V, u.s) || (u.prevS ? reachOf(V, u.prevS) : null);\n    if(r) box.reach = r;\n    const mk = ST_SCOPE.exec(u.s); if(mk) box.scope = { models:mk[1].trim() };\n    out.push(box);\n  }\n  return out;\n}"
+  },
+  "source": {
+   "implements": "verify/effects-extract.js: a rule's stat boxes: every sentence of its text (a heading's too) where effects.js ST finds an effect, its conditions (COND, STCOND, GW's words of any other \"if / while / unless\"), the friendly units it or the sentence before names (reach), a keyword's models (scope)"
+  },
+  "key": "4ed5432b5d9d3628"
+ },
+ {
+  "key": "we2|loadout-reader",
+  "kind": "loadout-reader",
+  "where": "verify/waha-loadout.js (every datasheet of the four catalogues, from-waha without --write)",
+  "judgement": {
+   "rules": [
+    "\"For each X this model is equipped with, it can be equipped with Y\": an addition per X, per:X, taken once for each X the model has after its swaps (Helbrute)",
+    "an alternative of \"one of the following:\" may be a name alone (\"- Castellan Axe\"), one of it",
+    "a swap of \"X and Y\" takes each where each is a weapon or wargear of the swap’s model (\"Pyrithite Spear and Praesidium Shield\"); builder.js does not look for wargear among the weapons it matches",
+    "\"Every X added to this unit using the <ability> ability is equipped with: …\": later, models gained in the battle, none an export has (Split)",
+    "a swap or addition whose alternatives were not read is unread, never an empty choice"
+   ],
+   "unreadBefore": [
+    "world-eaters/helbrute  ::  For each Helbrute fist this model is equipped with, it can be equipped with one of the following: 1 combi-bolter; 1 heavy flamer",
+    "adeptus-custodes/shield-captain  ::  Castellan Axe",
+    "adeptus-custodes/shield-captain  ::  Guardian Spear",
+    "chaos-daemons/keeper-of-secrets  ::  Living whip",
+    "chaos-daemons/keeper-of-secrets  ::  Ritual knife",
+    "chaos-daemons/keeper-of-secrets  ::  Shining aegis",
+    "chaos-daemons/blue-horrors  ::  Every Brimstone Horror added to this unit using the Split ability is equipped with: Coruscating Yellow Flames; yellow claws.",
+    "chaos-daemons/pink-horrors  ::  Every Blue Horror added to this unit using the Split ability is equipped with: Coruscating Blue Flames; blue claws.",
+    "chaos-daemons/pink-horrors  ::  Every Brimstone Horror added to this unit using the Split ability is equipped with: Coruscating Yellow Flames; yellow claws."
+   ],
+   "unreadAfter": [],
+   "changed": {
+    "world-eaters/helbrute": "the \"For each Helbrute fist\" sentence read: adds [{ to:[[Combi-bolter],[Heavy flamer]], per:Helbrute fist }]; unread none (the only change on the committed catalogues)",
+    "adeptus-custodes/shield-captain": "its second swap read: from [Pyrithite Spear, Praesidium Shield] to [[Castellan Axe],[Guardian Spear]] (was from [\"Pyrithite Spear and Praesidium Shield\"] to [], an empty choice); from-waha only: the committed Custodes catalogue has no loadout column",
+    "chaos-daemons/keeper-of-secrets": "its addition read: to [[Living whip],[Ritual knife],[Shining aegis]] (was to [], an empty choice); from-waha only",
+    "chaos-daemons/pink-horrors, chaos-daemons/blue-horrors": "the Split sentences are later, not unread; from-waha only"
+   }
+  },
+  "source": {
+   "files": "scratchpad we2-work/before, we2-work/after (each datasheet’s loadout), loadout-changes.txt"
+  }
+ },
+ {
+  "key": "we2|loadout-builder",
+  "kind": "builder",
+  "where": "builder.js legalLoadout",
+  "judgement": {
+   "per": "an addition with per is taken 0 to n times, n the model’s count of that item after its swaps, each time one of its choices, in any mix (two fists: combi-bolter and heavy flamer, or two of one)",
+   "why": "a refused loadout says why: an item no option of its model gives (\"X is no choice its WARGEAR OPTIONS give it\"); more of a per-item addition than the model has of the item (\"2 of combi-bolter or heavy flamer for 1 Helbrute fist (“For each …”)\"); else \"no mix of its WARGEAR OPTIONS gives all of it at once\"",
+   "points": "the Helbrute is 120 pts in every loadout (GW: no wargear costs)"
+  },
+  "source": {
+   "gw": "verify/.cache/waha/ds/world-eaters_Helbrute.html WARGEAR OPTIONS"
+  }
+ },
+ {
+  "key": "we2|import-tests",
+  "kind": "tests",
+  "where": "verify/import-test.js 6, verify/sources/import-madeup",
+  "judgement": {
+   "helbruteLegal": [
+    "ML, MM, CCW",
+    "ML, plasma cannon, CCW",
+    "ML, twin autocannon, CCW",
+    "ML, twin heavy bolter, CCW",
+    "ML, twin lascannon, CCW",
+    "ML, fist, CCW",
+    "fist, MM, CCW",
+    "hammer, MM, CCW",
+    "power scourge, MM, CCW",
+    "ML, fist, CCW, combi-bolter",
+    "fist, MM, CCW, heavy flamer",
+    "fist, fist, CCW, combi-bolter, heavy flamer",
+    "fist, fist, CCW, 2 combi-bolters",
+    "fist, fist, CCW, heavy flamer",
+    "fist, fist, CCW",
+    "hammer, twin lascannon, CCW",
+    "power scourge, fist, CCW, heavy flamer"
+   ],
+   "helbruteRefused": [
+    "ML, MM, CCW, combi-bolter (1 for 0 fists)",
+    "ML, fist, CCW, combi-bolter, heavy flamer (2 for 1 fist)",
+    "fist, fist, CCW, 2 combi-bolters, heavy flamer (3 for 2 fists)",
+    "ML, hammer, CCW (a hammer for the multi-melta: the missile launcher’s list)",
+    "twin lascannon, MM, CCW (the missile launcher swapped for the multi-melta’s choice)",
+    "ML, MM, twin lascannon, CCW (an extra weapon)",
+    "ML, MM (the close combat weapon dropped)",
+    "2 twin lascannons, CCW"
+   ],
+   "madeUpC": "the Cult of Blood list with a twin lascannon Helbrute builds (was refused: unread options); the same with a Helbrute hammer for its multi-melta: refused, named",
+   "values": [
+    "Lord Invocatus’s Bolt pistol at BS 2+: builds with GW’s 4+ and the note",
+    "Bloodletters with a Daemonic Icon at Ld 5+: refused (the icon gives 6+)",
+    "super terminators’ Chainfist at WS 1+: refused (Gore-stained Veterans gives 3+)"
+   ]
+  },
+  "source": {
+   "gate": "import (213 checks, 0 failures)"
+  }
+ },
+ {
+  "key": "we2|export-values",
+  "kind": "builder",
+  "where": "builder.js marksOf couldTouch (the friend’s Lord Invocatus report)",
+  "judgement": {
+   "rule": "a value of the export other than GW’s that no rule reaching the unit could change (no box of it as reader 1 read it, counted or not, no BUILD_INDEX.marks entry, no words of it naming that characteristic, \"… Ballistic Skill … characteristic\" or \"+1 BS\", or that weapon) is the export’s own data: GW’s value is built and said in the list’s note (\"Values: GW’s are used where the export’s differ\"), as BUILD_INDEX.gw does for the owner’s lists; a rule that could change it and does not give that value: refused, as before; a weapon keyword the export adds: refused, as before",
+   "why": "New Recruit’s data can lag GW (the World Eaters Faction Pack 1.3 changed the Bolt pistol to S5 AP-1 for Khorne Berzerkers, Lord Invocatus and Master of Executions, the Combi-bolter of the vehicles, Terminators and Helbrute, Chainblades, T6 Chaos Terminators, T5 Khârn, Berzerkers and Master of Executions, the Heldrake M12 OC0 and no AIRCRAFT): each of those, printed as before the pack, now builds with GW’s and the note (checked: Invocatus’s Bolt pistol S4 AP0, Chaos Terminators T5); no export of the friend’s is here, so the BS 2+ is their report, made up as such",
+   "flipped": "build-parity N \"a value no rule of the list changes\" (basic-bitch, Tyrannofex T 14): built with GW’s 12 and the note now; it was the only refusal test of an unnamed value and no rule of that list names Toughness",
+   "kept": "build-parity N: a rule’s value more or less than it gives (Parasitic Biomorphology), a rule’s invulnerable save (Synaptoprescience), the Blade Champion’s AP, still refused; import-test 6: Daemonic Icon and Gore-stained Veterans cases"
+  },
+  "source": {
+   "gw": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt (CHANGES)"
+  }
+ },
+ {
+  "key": "we2|charge-rolls",
+  "kind": "lines",
+  "where": "effects.js ST advanceAdd and chargeAdd; verify/effects-extract.js statOf, statNc; verify/lines.js LS",
+  "judgement": {
+   "home": "a unit’s Advance and Charge rolls are lines under its profile, as a characteristic’s (no other column or line kind for them existed): an army or detachment rule’s words \"add N to (Advance and) Charge rolls made for that/this unit\", \"this unit has +N to charge rolls\", \"Friendly X units have +N to charge rolls\" are stat boxes (BOXES st, its conditions and the units it names); any other source’s words that change them are its snc (\"Charge\", \"Advance\"), as a characteristic’s are. reader2 does not read them: the stat boxes fall back (AGREE), each drawn from its words with its summary",
+   "statBoxes": {
+    "Rush to the Fray": "chargeAdd 1; on q \"Each time a WORLD EATERS unit from your army disembarks from a TRANSPORT\"; reach WORLD EATERS",
+    "Idols of Khorne": "mAdd 1, advanceAdd 1, chargeAdd 1; opt Idol of Burning Wrath (Aura), aura 6; reach JAKHALS/GOREMONGERS",
+    "Blessings of Khorne": "chargeAdd 1; opt Unbridled Bloodlust (its table row, read now)",
+    "Synaptic Imperatives": "advanceAdd 1, chargeAdd 1; opt Surging Vitality (its bullet’s name), q within Synapse Range",
+    "Death Blow (Terminator Storm Force)": "chargeAdd 1; reach ADEPTUS ASTARTES TERMINATOR"
+   },
+   "snc": {
+    "Instrument of Chaos": "Charge",
+    "Brazenmaw": "Charge",
+    "Battle-lust": "Charge (its re-roll no line)",
+    "The Scent of Blood": "Charge, its own (not an enemy’s: \"this unit has +1\")",
+    "Thundering Stampede": "Charge, an aura on BEAST SNAGGA units",
+    "Code Chivalric (Quality 3–4)": "Advance, Charge (\"made for this model\", as its Move)",
+    "Motive Imperative": "Advance, Charge",
+    "Fury of the Emperor": "Charge",
+    "Harpooned": "Charge",
+    "Binding Tendrils, Wracking Agonies, Unleash Balefire, Gravimetric Grenade, Shade Path": "Charge, an enemy unit’s (foe)"
+   },
+   "notInLists": "Flames of Change (Exalted Flamer) and Disruption Bombardment (Barbgaunts) give an enemy’s Advance and Charge too: no list or catalogue army places them, so no box yet",
+   "notPicked": "re-rolls of Advance or Charge rolls are no change of the roll: Waaagh!, Battle-lust’s first sentence, Swarming Assault, Combat Deployment, Instruments of the Emperor’s Wrath, Avatar of Perfection, Bloody Fury, Forwards, For Blood!, Brayhorn, Errant’s Duty, Karnivore, Swift Onslaught, Seeker’s Instincts, Terminatus Assault, Pack Leader, Beast Handler, No Prey Can Evade, Jolly Gutpipes, Unholy Speed, Phaeron of the Blades, Command Re-roll",
+   "damage": "the Damage tab of every unit of every list unchanged (main cdd71d7 against this branch)"
+  },
+  "source": {
+   "scan": "every army rule, detachment rule, enhancement, stratagem and datasheet ability of data.js, scratchpad we2-work/charge-scan.txt; BOXES before and after, we2-work/charge-boxes.txt"
+  }
+ }
+]

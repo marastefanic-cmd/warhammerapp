@@ -61,7 +61,11 @@ data.js NR_IDS from them, and the in-app import looks a selection up by an id th
 Made-up New Recruit-shaped exports of a catalogued faction (not the owner's lists): units, enhancements and detachments no list has,
 their ids made up so the import finds them by exact name. verify/import-test.js (section 6) builds them as the phone does and holds
 what they must give: Murder-Forged Entity's DAEMON, Gateways to Glory's MOBILE, the Defiler's excruciator cannons swap (the full swap
-built, a half swap refused), a detachment named by Wahapedia's heading (Possessed Slaughterband).
+built, a half swap refused), a detachment named by Wahapedia's heading (Possessed Slaughterband). helbrute-armoury.json is a
+Helbrute carrying every weapon its WARGEAR OPTIONS name, a library the test takes each loadout from (every option and mix built, the
+illegal ones refused with their reason); cult-of-blood-helbrute.json a Cult of Blood list with a Helbrute's multi-melta swapped for a
+twin lascannon (built), and the list the value cases change (Lord Invocatus's Bolt pistol at BS 2+: GW's value and the note; a Daemonic
+Icon's Ld given otherwise: refused).
 
 ## catalog/
 The faction catalogues (docs/catalog.md): the committed rows of every current datasheet of a catalogued faction. The gate step
