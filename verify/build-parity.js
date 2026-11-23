@@ -432,7 +432,7 @@ async function p2(){
       const res = await page.evaluate(([id, orig]) => {
         const out = [], A = armyById(id); if(!A) return ['not made at start: ' + JSON.stringify((importStale.find(x => x.id === id) || {}).errors)];
         const txt = (s, a, x) => { hideSheet(); go(Object.assign({ s, army:a }, x || {})); document.querySelectorAll('#view details').forEach(d => d.open = true); return $('#view').innerText; };
-        const drop = (t, imp) => imp ? t.replace(/New Recruit, imported [^\n]*/, '').replace(/\nON THIS PHONE[\s\S]*$/i, '') : t.replace(/New Recruit, exported [^\n]*/, '');
+        const drop = (t, imp) => imp ? t.replace(/New Recruit, imported [^\n]*/, '').replace(/\nON THIS PHONE[\s\S]*$/i, '').replace(/\nRemove this list(?=\n)/, '') : t.replace(/New Recruit, exported [^\n]*/, '');
         let n = 0;
         for(const s of ['army', 'pregame', 'checklist', 'units', 'strats', 'ranged', 'melee', 'abilities', 'rules', 'bases', 'damage']){ n++; if(drop(txt(s, orig), false).trim() !== drop(txt(s, id), true).trim()) out.push(s + ' differs'); }
         for(const u of armyById(orig).units.concat(armyById(orig).refs || [])){ n++; if(txt('unit', orig, { unit:u.id }) !== txt('unit', id, { unit:u.id })) out.push('unit ' + u.id + ' differs'); }

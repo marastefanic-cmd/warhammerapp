@@ -1,0 +1,33 @@
+[
+ {
+  "key": "14eedbfe259c05b1",
+  "where": "rmAsk",
+  "verdict": "ok",
+  "why": "Same text and buttons as the Overview confirm had before (moved verbatim out of askRemove); the name comes from the made list or else the kept export; id and name escaped. Keep it is the caller's attribute: data-imprmno on the Overview/out-of-date popup (puts the button back), data-close in the menu popup (closes it). Checked in a browser: Keep it, Escape and a tap on the backdrop leave localStorage byte for byte as it was; Remove clears only that list's keys."
+ },
+ {
+  "key": "b4425581e28ce2d0",
+  "where": "askRemove",
+  "verdict": "ok",
+  "why": "Behaviour unchanged from main apart from using rmAsk; render.js import-remove still checks both buttons in sight above the tab bar and Keep it restoring the button. Minor: the Overview's Remove button is no longer driven to the end by any test (the old Remove-from-Overview step became the menu one). Both end in the same removeImported, so not blocking."
+ },
+ {
+  "key": "7cbb73b08a6de77f",
+  "where": "showRemove",
+  "verdict": "ok",
+  "why": "Popup titled Remove this list, kicker Local list, Keep it focused (checked: document.activeElement is the Keep it button). At 390 and 320, gunmetal and paper themes: Remove 48px and Keep it 44px tall, full sheet width, no element wider than the sheet, no horizontal scroll. Keep it closes it and the list stays; Remove goes home with the toast Removed <name>."
+ },
+ {
+  "key": "remove-menu|screenArmy",
+  "where": "app.html screenArmy (the menu row) · the tap handler (data-imprmask) · verify/render.js import block · verify/render.js and verify/build-parity.js P2 drop()",
+  "verdict": "fix",
+  "why": "The app code is right: the row is shown only when a.imported (0 rows over every built-in list), last after Settings, 48px at 390/320, light and dark. Removal checked with three kept imports whose ids are prefixes of each other (local-aaaaaaaaaaa, local-aaaaaaaaaaaa, local-aaaaaaaaaaaab) plus 6-bigs, each with ticks, checklist and star: removing the middle one changed only wh-imported (its entry only), its wh-used-/wh-check- keys and its id in wh-favs. The drop() change removes only the first \\nRemove this list\\n line of the imported text: an extra row with another label (Share this list) fails import-same and P2 (army differs for every list), two Remove rows and a row on built-in lists fail too. render.js 6-bigs at 390 passes; at 320 the only failure is damage-mode · shooty · both (3849 -> 3866), which main 769cc30 gives identically. build-parity passes (P2 48 of 48). Mutations caught: row on every list, star kept, wh-check- kept, extra row, two rows, row first, Keep it removing (crash). NOT caught: (1) removeKept wiping every list's wh-used-/wh-check- keys; (2) removeKept clearing every kept import (store.set(IMPORT_KEY, [])). The test has only one import and no other list's ticks. Fix in verify/render.js import-remove: before the menu Remove, also set localStorage wh-used-6-bigs and wh-check-6-bigs, and add a second entry to wh-imported (e.g. a copy of the kept one with id 'local-000000000000'); afterwards require those two keys unchanged and wh-imported to be exactly that one other entry, instead of kept === '[]'."
+ },
+ {
+  "key": "remove-menu|screenArmy",
+  "where": "app.html screenArmy (the menu row) · the tap handler (data-imprmask) · verify/render.js import block · verify/render.js and verify/build-parity.js P2 drop()",
+  "verdict": "ok",
+  "round": 2,
+  "why": "Round 2 (3b8f335, render.js only; app.html unchanged so the code keys are the same). Removal is now checked through the menu and through the Overview foot, with a second kept export (local-000000000000) and wh-used-/wh-check- keys for 6-bigs and it, and the exact state afterwards. Built index.html with VERIFY_BUILDING=1 in scratch copies. My mutations of removeKept/removeImported now each fail twice (menu and Overview): wiping every list's wh-used-/wh-check- keys, clearing every kept export, keeping the star, keeping wh-used-, keeping wh-check-, clearing every star. Unmutated: check.js passes; render.js 6-bigs at 390 has 0 failures; at 320 only damage-mode · shooty · both (3849 -> 3866), the same as main 769cc30; build-parity passes (P2 48 of 48). Round-1 findings on the row, the popup, cancel and layout still hold, since app.html did not change."
+ }
+]

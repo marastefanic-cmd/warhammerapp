@@ -996,7 +996,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   }
   // ---- the list import: the sheet (a file picker for .json, a paste box, Import) fits the phone; the export chosen as a file opens
   // as a list exactly like the app's own (every screen's text the same but its source line and its Remove), kept over a reload;
-  // a refused one lists every item import.js names, one per line, and adds nothing; Remove asks on the page, then the list is gone ----
+  // a refused one lists every item import.js names, one per line, and adds nothing; Remove asks on the page (Overview) or in a popup
+  // (its menu's last row, a local list's only), then the list and what the phone keeps for it are gone ----
   {
     const L = 'import';
     await page.evaluate(() => { localStorage.clear(); sessionStorage.clear(); }); await page.reload(); await page.evaluate(() => document.fonts.ready);
@@ -1028,7 +1029,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.reload(); await page.evaluate(() => document.fonts.ready);
     const same = await page.evaluate(([id, orig]) => { const out = [], A = armyById(id); if(!A) return ['not there after a reload'];
       const txt = (s, a, x) => { hideSheet(); go(Object.assign({ s, army:a }, x || {})); document.querySelectorAll('#view details').forEach(d => d.open = true); return $('#view').innerText; };
-      const drop = (t, imp) => imp ? t.replace(/New Recruit, imported [^\n]*/, '').replace(/\nON THIS PHONE[\s\S]*$/i, '') : t.replace(/New Recruit, exported [^\n]*/, '');
+      const drop = (t, imp) => imp ? t.replace(/New Recruit, imported [^\n]*/, '').replace(/\nON THIS PHONE[\s\S]*$/i, '').replace(/\nRemove this list(?=\n)/, '') : t.replace(/New Recruit, exported [^\n]*/, '');
       for(const s of ['army', 'pregame', 'checklist', 'units', 'strats', 'ranged', 'melee', 'abilities', 'rules', 'bases']) if(drop(txt(s, orig), false).trim() !== drop(txt(s, id), true).trim()) out.push(s + ' differs');
       for(const u of armyById(orig).units) if(txt('unit', orig, { unit:u.id }) !== txt('unit', id, { unit:u.id })) out.push('unit ' + u.id + ' differs');
       store.set('wh-home-sort', 'new'); hideSheet(); go({ s:'lists' });
@@ -1047,11 +1048,50 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.click('[data-imprmno]'); await page.waitForTimeout(200);
     const kept = await page.evaluate(id => !!armyById(id) && !!document.querySelector('[data-imprm]'), id);
     if(!kept) fail('import-remove', L, 'Keep it', 'the list or its Remove is gone');
-    // (with a per-battle tick and a Phase checklist box kept for it: Remove clears both)
-    await page.evaluate(id => { localStorage.setItem('wh-used-' + id, '["x"]'); localStorage.setItem('wh-check-' + id, '["x"]'); }, id);
-    await page.click('[data-imprm]'); await page.waitForTimeout(200); await page.click('[data-imprmyes]'); await page.waitForTimeout(400);
-    const gone = await page.evaluate(id => ({ s:cur.s, there:!!armyById(id), kept:localStorage.getItem('wh-imported'), n:WH_DATA.armies.length, ticks:[localStorage.getItem('wh-used-' + id), localStorage.getItem('wh-check-' + id)] }), id);
-    if(gone.s !== 'home' || gone.there || gone.kept !== '[]' || gone.n !== armies.length || gone.ticks.some(x => x !== null)) fail('import-remove', L, 'Remove', JSON.stringify(gone));
+    // the list's menu: a local list's ends with Remove this list (after every other row); a built-in list's has none
+    const menu = await page.evaluate(([id, orig]) => { const rows = a => { hideSheet(); go({ s:'army', army:a });
+        return [...document.querySelectorAll('#armyMenu .row')].map(r => (r.dataset.imprmask ? 'rm:' + r.dataset.imprmask + ':' : '') + r.innerText.split('\n')[0].trim()); };
+      const built = rows(orig), local = rows(id); return { local, built }; }, [id, '6-bigs']);
+    if(menu.local[menu.local.length - 1] !== 'rm:' + id + ':Remove this list' || menu.local.filter(x => /Remove/.test(x)).length !== 1) fail('import-remove-menu', L, 'local list menu', JSON.stringify(menu.local));
+    if(menu.built.some(x => /Remove|^rm:/.test(x)) || menu.built.length !== menu.local.length - 1) fail('import-remove-menu', L, 'built-in list menu', JSON.stringify(menu.built));
+    // its tap: a popup naming the list, "You can import it again", Remove and Keep it in sight; Keep it closes it and leaves the list
+    await page.waitForTimeout(400); await page.locator('#armyMenu [data-imprmask]').scrollIntoViewIfNeeded(); await page.click('#armyMenu [data-imprmask]'); await page.waitForTimeout(450);
+    const pop = await page.evaluate(id => { const r = $('#sheet').getBoundingClientRect(), t = $('#sheetIn').innerText, A = armyById(id);
+      return { open:!$('#sheetHost').hidden, name:t.includes('Remove ' + A.name + ' from this phone?'), again:/You can import it again\./.test(t), title:$('#sheetTitle').textContent,
+        btns:['[data-imprmyes]', '[data-close]'].map(q => { const e = $('#sheetIn ' + q); if(!e) return q + ' missing'; const b = e.getBoundingClientRect(); return b.top >= r.top && b.bottom <= innerHeight + 0.5 && b.right <= r.right + 0.5 && b.left >= r.left - 0.5 ? '' : q + ' not in sight'; }).filter(Boolean),
+        wide:document.documentElement.scrollWidth > innerWidth }; }, id);
+    if(!pop.open || !pop.name || !pop.again || pop.title !== 'Remove this list' || pop.btns.length || pop.wide) fail('import-remove-menu', L, 'the popup', JSON.stringify(pop));
+    await page.click('#sheetIn [data-close]'); await page.waitForTimeout(300);
+    const left = await page.evaluate(id => ({ sheet:$('#sheetHost').hidden, there:!!armyById(id), s:cur.s, kept:JSON.parse(localStorage.getItem('wh-imported') || '[]').length }), id);
+    if(!left.sheet || !left.there || left.s !== 'army' || left.kept !== 1) fail('import-remove-menu', L, 'Keep it', JSON.stringify(left));
+    // Remove, from the menu and from the Overview's foot: home, the toast, and the list with everything this phone keeps for it gone (its export,
+    // per-battle ticks, Phase checklist boxes, star); another list's ticks, boxes and star, and another kept export with its own, untouched
+    const OTHER = 'local-000000000000';
+    const removeVia = async (how, tap) => {
+      const other = await page.evaluate(([id, other]) => {
+        for(const k of [id, '6-bigs', other]){ localStorage.setItem('wh-used-' + k, '["u-' + k + '"]'); localStorage.setItem('wh-check-' + k, '["c-' + k + '"]'); }
+        setFav(id, true); setFav('6-bigs', true);
+        const kept = JSON.parse(localStorage.getItem('wh-imported') || '[]'), o = JSON.stringify(Object.assign({}, kept.find(x => x.id === id), { id:other }));
+        localStorage.setItem('wh-imported', JSON.stringify(kept.concat([JSON.parse(o)]))); return o; }, [id, OTHER]);
+      await tap();
+      const gone = await page.evaluate(([id, other]) => ({ s:cur.s, sheet:$('#sheetHost').hidden, there:!!armyById(id), kept:localStorage.getItem('wh-imported'), n:WH_DATA.armies.length, favs:localStorage.getItem('wh-favs'),
+        toast:$('#toast').innerText, left:Object.keys(localStorage).filter(k => k.includes(id)),
+        keys:['6-bigs', other].flatMap(k => [localStorage.getItem('wh-used-' + k), localStorage.getItem('wh-check-' + k)]) }), [id, OTHER]);
+      const want = ['6-bigs', OTHER].flatMap(k => ['["u-' + k + '"]', '["c-' + k + '"]']);
+      if(gone.s !== 'home' || !gone.sheet || gone.there || gone.n !== armies.length || gone.left.length || gone.favs !== '["6-bigs"]' || !/^Removed /.test(gone.toast))
+        fail('import-remove', L, how, JSON.stringify(Object.assign({}, gone, { kept:(gone.kept || '').slice(0, 80) })));
+      if(gone.kept !== '[' + other + ']') fail('import-remove', L, how, 'the other kept export is not all that is left: ' + JSON.stringify((JSON.parse(gone.kept || 'null') || []).map(x => x.id)));
+      if(JSON.stringify(gone.keys) !== JSON.stringify(want)) fail('import-remove', L, how, 'another list\'s ticks or boxes changed: ' + JSON.stringify(gone.keys));
+      await page.evaluate(other => { for(const k of ['6-bigs', other]){ localStorage.removeItem('wh-used-' + k); localStorage.removeItem('wh-check-' + k); } localStorage.removeItem('wh-favs'); localStorage.setItem('wh-imported', '[]'); }, OTHER);
+    };
+    await removeVia('Remove (menu)', async () => { await page.waitForTimeout(400); await page.click('#armyMenu [data-imprmask]'); await page.waitForTimeout(450); await page.click('#sheetIn [data-imprmyes]'); await page.waitForTimeout(400); });
+    // (imported again, the same export: the same id; then Remove from its Overview)
+    await page.evaluate(() => { hideSheet(); go({ s:'home' }); }); await page.waitForTimeout(400); await page.click('#view [data-import]'); await page.waitForTimeout(400);
+    await page.setInputFiles('#impFile', IMPORT_FILE); await page.waitForTimeout(600);
+    const again = await page.evaluate(() => cur.army);
+    if(again !== id) fail('import-remove', L, 'imported again', String(again));
+    await page.evaluate(id => { hideSheet(); go({ s:'pregame', army:id }); }, id);
+    await removeVia('Remove (Overview)', async () => { await page.waitForTimeout(400); await page.locator('[data-imprm]').scrollIntoViewIfNeeded(); await page.click('[data-imprm]'); await page.waitForTimeout(200); await page.click('[data-imprmyes]'); await page.waitForTimeout(400); });
     // a kept export that cannot be read: the app starts, lists it as out of date with its Remove
     await page.evaluate(() => localStorage.setItem('wh-imported', JSON.stringify([{ id:'import-broken', name:'Broken', date:'1 Jan 2026', json:{ roster:{ forces:[{ catalogueId:'x', selections:[null] }] } } }])));
     await page.reload(); await page.evaluate(() => document.fonts.ready);
