@@ -1,0 +1,137 @@
+[
+ {
+  "key": "49e93bd55c6f1215",
+  "where": "removeKept",
+  "verdict": "ok",
+  "why": "removeKept is the reviewed code word for word. It removes wh-res-<id> alongside wh-used-/wh-check-, and Remove (removeImported) and Update with a new id (runImport: removeKept(impReplace)) both go through it. render.js import-remove seeds wh-res-<id> and checks that it is gone after Remove; mutation M12 (the removeItem dropped) is caught by import-remove. An Update with the same id keeps the boxes, as it keeps the checklist's. Nit outside this item: CODE_RULES.removeImported in verify/helpers.js still lists only the per-battle ticks and Phase checklist boxes; it should mention the Strategic reserves boxes too."
+ },
+ {
+  "key": "234dadc5a18c2c8e",
+  "where": "resRule",
+  "verdict": "ok",
+  "why": "Everything is read from data.js RULES['Strategic Reserves'] (20.01, GW Core Rules): when = 'Before the battle, in the Declare Battle Formations step', excl = ['FORTIFICATION'], quote = GW's limit sentence word for word, pct = 50. Nothing is hardcoded, and null is returned where the words are missing. In the page I checked the limit for other battle sizes: points 1000 gives 0 / 500, 3000 gives 0 / 1500, and 2000 gives 1000, because A.points is the battle size's points limit (built-in lists: 2000, the-exiled-legion totals 1995 but its limit is still 2000; imported lists: costLimits, or else T.limits[battleSize]). No list has a FORTIFICATION. In the page I gave a unit the Fortification keyword: its box was disabled, the row was marked 'FORTIFICATION: excluded', and a stale tick on it was not counted. 20.02 (repositioned units) is rightly not part of this screen."
+ },
+ {
+  "key": "41809460bfd4ce8f",
+  "where": "resGrants",
+  "verdict": "fix",
+  "why": "Wrong marks against GW on 4 lists. nerf-when: Thunderhawk Insertion is marked on Calgar's unit as Deep Strike, but GW's words select one other GRAVIS/PHOBOS/TACTICUS unit, and Heavy Intercessors, Eradicators and Reivers get no mark. standard: Lord of the Eightbound is marked on the unattached Slaughterbound, whose condition is not met. pubstomper and navigator-sounds-op-ngl: Umbralefic Crystal and Mysterious Guardian are once-per-battle in-battle repositioning, not Deep Strike when units are placed in reserves. big-demons-baby: Disciple of Khorne is shown as a whole-unit mark beside \"Lord on Juggernaut only\". The Thunderhawk error comes from the GRANTS reading (derive.js). The others come from resGrants ignoring while, timing and model scope.",
+  "fix": "GRANTS fix in verify/derive.js grantRows (around line 1524). The `own` regex /\\b(?:this|the bearer'?s?|that) (?:unit|model)\\b|.../ counts \"that unit\" / \"that model\" as the bearer's own unit, so \"In the Declare Battle Formations step, you can select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep Strike.\" becomes to:\"this unit / model\". Make the fix general: \"that unit/model\" counts as own only when its antecedent in the same sentence is the bearer's own unit (\"While this model is leading a unit, ... that unit\": Warped Interference and Rites of Reanimation, both read correctly now). When the antecedent is a selection in an earlier sentence of the same text (\"select one friendly <KW> unit/model ...\"), the row's to is that selection's keywords (Thunderhawk Insertion: {any:['Gravis','Phobos','Tacticus']}), with a new column saying the grant goes to one chosen unit (e.g. pick:'one'), and the moment in while (\"In the Declare Battle Formations step\"). The text column then quotes both sentences. When the antecedent cannot be read, to stays null (unread, so the gate fails), never \"this unit / model\". This fixes two rows now: Thunderhawk Insertion (Deep Strike, nerf-when) and Omnissiah's Blessing (Feel No Pain 5+, purge-goes-the-foe: \"select one friendly ADEPTUS MECHANICUS model within 3\\\" of this model. ... that model has the Feel No Pain 5+ ability\", now given to the Enginseer himself). The scan of all 8 Deep Strike rows: Mindhunger (keywords, right) and First Prince of Chaos (keywords, right: Shadow Legion HERETIC ASTARTES are also UNDIVIDED through Thralls of the First Prince; no list uses it) are fine. Thunderhawk Insertion is misread (as above). Lord of the Eightbound, Disciple of Khorne, Umbralefic Crystal, Mysterious Guardian and Nazdreg's Know-wotz are read as rows correctly, but the screen uses them wrongly (see the app fix). || App fix in resGrants/resDeepStrike, as one rule: a Deep Strike mark only for a grant in force when units are placed in strategic reserves, for the whole unit. (a) Selected-unit grants (pick:'one', from the GRANTS fix): the source ability is looked for on any unit of the list (A.units.some(x => x.abilities.some(ab => ab.name === rn && !naReason(ab) && text matches))), not on u, and the mark shows on every unit matching to as \"can be given Deep Strike: Thunderhawk Insertion (Marneus Calgar), one GRAVIS/PHOBOS/TACTICUS unit\", quoting both of GW's sentences. On nerf-when that is Heavy Intercessor Squad, Eradicator Squad (×2), Reiver Squad (×2), Librarian in Phobos Armour (already has it on its own) and Calgar + Bladeguard Veteran Squad: his unit does qualify, because the Bladeguard are TACTICUS, an attached unit has its models' keywords, and \"friendly\" does not exclude his own unit. It does not show on Guilliman, the Impulsors or the Deathwatch Terminators. Today the plain mark shows only on Calgar's unit, as if it had Deep Strike. (b) Honour while: Lord of the Eightbound (\"If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step\") shows a mark on the lone Slaughterbound in `standard`, which is attached to nothing, so the mark is wrong. Evaluate an \"attached to <KW>\" condition against the list (the attached unit's keywords), or else show the grant as conditional (\"if ...\"), never as a plain mark. (c) Timing: Umbralefic Crystal (pubstomper: \"(Once per battle, per army) In your Command phase ...\") and Mysterious Guardian (navigator: \"At the end of your opponent's turn ...\") are in-battle repositioning (20.02) and give nothing at Declare Battle Formations, so they must not be marks here. The ability's ph (command/movement and movement/fight) or its trigger in CHECKLIST shows this mechanically. Both units already have Deep Strike on their own. (d) Model-only grants (\"this model\", \"the bearer\": Disciple of Khorne, Lord of the Eightbound) on a unit of more than one model are \"Deep Strike: <model> only\" (24.09: every model), the same as partialRules, and are not marks for the whole unit. Today big-demons-baby's Lord on Juggernaut + Khorne Berzerkers shows both \"Deep Strike: Lord on Juggernaut only\" and \"Deep Strike · Disciple of Khorne\", which contradict each other. Nazdreg's Know-wotz (\"This unit has Deep Strike\", Nazdreg leading Meganobz) and Mindhunger stay as they are."
+ },
+ {
+  "key": "dd45b5563d79a9f3",
+  "where": "resDeepStrike",
+  "verdict": "fix",
+  "why": "own and part are right: they are unitRules plus partialRules, the same as the Overview, and every own/part mark on the 26 lists agrees with the units' Rules lines. But \"plus every GRANTS row\" adds model-only, conditional and in-battle grants as marks for the whole unit (see resGrants).",
+  "fix": "Grants go through the same 24.09 test as the Rules line. A grant to a model (\"this model\", \"the bearer\", or one model's ability on an attached unit) adds to part (that model only); a while that is false for the list adds nothing; a while that cannot be decided shows as conditional; a grant triggered in battle adds nothing. A selected-unit grant shows as \"can be given\". So grants returns {own, part, may, cond} kinds, each rendered differently. "
+ },
+ {
+  "key": "d30a137dcd147869",
+  "where": "resBoxes",
+  "verdict": "ok",
+  "why": "One box per copy, with keys u.id or u.id#i. Every list has u.copies boxes per row (reserves-ticks); mutation M7 (length:1) is caught on nerf-when's four ×2 units. The aria-labels are \"<unit>, Unit n in strategic reserves\"."
+ },
+ {
+  "key": "928e61fbcda62750",
+  "where": "resTotal",
+  "verdict": "ok",
+  "why": "Counts u.pts once per ticked box. u.pts is per copy and is the whole attached unit as the list prints it: on every list, the sum of pts × copies equals the list's total, e.g. Calgar + Wardens + Bladeguard 485. Excluded units are never counted (tested in the page with a stale tick on a unit made FORTIFICATION). The limit is floor(A.points × GW's pct / 100), where A.points is the battle size's limit: 500, 1000 and 1500 at 1000, 2000 and 3000 pts. Test gaps in render.js (not in this code): mutation M3 (a ×N unit counted once when both copies are ticked) is NOT caught, because reserves-ticks ticks in list order and goes over the limit before it reaches a second copy. Mutation M4 (limit hardcoded to 1000) is NOT caught, because every list is 2000 pts. Add to reserves-ticks: tick both copies of a ×N unit and expect 2 × pts; and set a list's points to 1000 or 3000 in the page and expect 500 or 1500. M10 (an excluded unit's box enabled) is also never exercised, because no list has a FORTIFICATION: add a unit's Fortification keyword in the page as I did."
+ },
+ {
+  "key": "cd3e70e541e05775",
+  "where": "resBar",
+  "verdict": "ok",
+  "why": "It shows \"<pts> / <limit> pts\", the units ticked, and the points left or \"<n> pts over the limit\". .over turns it the bad-news colour: rgb(255,107,107) on #161616 in dark, rgb(198,40,40) on #f2f2ef in light, both readable. It is sticky at top:var(--top): measured at 390 and 320, light and dark, scrolled 900px, its top is 53 = the top bar's bottom, with no horizontal overflow (scrollWidth equals the viewport). It is replaced on every tick (role=status, aria-live). Mutations M6 (over flag) and M11 (not sticky) are caught."
+ },
+ {
+  "key": "f15da7036622a291",
+  "where": "screenReserves",
+  "verdict": "fix",
+  "why": "The layout is right at 390 and 320, light and dark: the total is pinned and readable, nothing overflows, long marks and quotes wrap, and render reports 0 failures at both widths. The When/Limit quote is GW's (M13 caught), and Reset with Undo works (M8 caught), as does keeping per list (M9 caught). Two faults. (1) Tap targets: each box is 30×30 px (Reset 33×40), well under about 44 px; copy boxes are 18-19 px apart. (2) The grant marks follow resGrants's faults. A selected-unit grant quotes only \"That unit has Deep Strike.\", out of context.",
+  "fix": "(1) Give the reserves boxes a 44 px hit area without changing the drawn box, e.g. `.resl .tick{position:relative} .resl .tick::after{content:\"\"; position:absolute; inset:-7px}` (7 px each side fits inside the 18 px gap between copies), or simply 44×44 boxes in .resl; and give Reset min-width:44px; min-height:44px. (2) Render the mark kinds from resDeepStrike's fix: \"can be given Deep Strike · <ability> (<source unit>)\" with the whole selection sentence quoted; \"<model> only\" for model grants; a conditional grant with its condition, or nothing when the list shows it false; no in-battle grants."
+ },
+ {
+  "key": "49e93bd55c6f1215",
+  "where": "removeKept",
+  "verdict": "ok",
+  "round": 2,
+  "why": "Unchanged since round 1 (ok). Render import-remove passes with Remove clearing wh-res-<id>; mutation M12 is caught."
+ },
+ {
+  "key": "234dadc5a18c2c8e",
+  "where": "resRule",
+  "verdict": "ok",
+  "round": 2,
+  "why": "Unchanged since round 1 (ok). The new reserves-limit checks pass: 1000 and 3000 pts give 500 and 1500, and a unit given Fortification has its box disabled. Mutation A7 (limit hardcoded to 1000) is now caught on 4 lists, and A8 (excluded unit tickable) is caught on 4 lists."
+ },
+ {
+  "key": "e382f2d75e9b95cf",
+  "where": "resGrants",
+  "verdict": "ok",
+  "round": 2,
+  "why": "Army and detachment rules go to units by keyword (unit). An ability on the unit itself, matched by name and words, is unit or model by its wording (\"this unit\" / \"the bearer's unit\" against \"this model\" / \"the bearer\"). A pick:'one' row looks for the giver anywhere in the list and is marked on every unit its to allows (may). Grants triggered in battle (resInBattle) are dropped. On all 26 lists the marks now differ from round 1 only in this way: nerf-when has \"can be given Deep Strike · Thunderhawk Insertion (Marneus Calgar)\", quoting both sentences, on Calgar + Bladeguard, the Librarian in Phobos Armour, the Heavy Intercessors, the Eradicators and the Reivers, and nothing on Guilliman, the Impulsors or the Deathwatch Terminators. Umbralefic Crystal and Mysterious Guardian are gone. The lone Slaughterbound's mark is gone. The Disciple of Khorne whole-unit mark is gone. This all matches GW. Mutations caught by reserves-ds: A1 (in-battle filter off: pubstomper), A3 (model read as unit: standard, big-demons-baby), A4 (pick ignored: nerf-when ×5), A5 (giver only the unit itself: nerf-when ×4)."
+ },
+ {
+  "key": "ff0c75c29d54473f",
+  "where": "resInBattle",
+  "verdict": "ok",
+  "round": 2,
+  "why": "It reads the ability's CHECKLIST entry (verify/derive.js) by the same key as the checklist, 'a|' + ckHash(name + text), and treats t or at as given in the battle. Umbralefic Crystal (t command) and Mysterious Guardian (at) are dropped. Thunderhawk Insertion (u only) and Disciple of Khorne and Lord of the Eightbound (no trigger) are kept. Mutation A1 is caught. Everything comes from tables, with nothing typed by hand."
+ },
+ {
+  "key": "9261d6c8d7496cf6",
+  "where": "resWhile",
+  "verdict": "ok",
+  "round": 2,
+  "why": "Only the selection's moment (no condition) gives true. For \"If this model is attached to a <KW> unit during the Declare Battle Formations step\", an unattached unit gives false (standard's lone Slaughterbound: no mark), and an attached unit whose keywords make up <KW> gives true. Anything else gives null, shown as \"Deep Strike if:\" with GW's words. Mutations A2 (always true) and A11 (attached gives null) are caught on standard. Note, not a fault on any list: the keyword test uses the whole attached unit's keywords, so the leader's own WORLD EATERS/POSSESSED count too. GW's Leader lists let a Slaughterbound lead only Eightbound and Exalted Eightbound, which are both WORLD EATERS POSSESSED, so no list can be shown wrongly. Testing the bodyguard's keywords would be the stricter reading if another such ability appears."
+ },
+ {
+  "key": "ee744cd881b31521",
+  "where": "resDeepStrike",
+  "verdict": "ok",
+  "round": 2,
+  "why": "own and part come from unitRules and partialRules as before. A model grant on a unit of more than one model adds its model to part (none when own, no duplicates). A condition that is false gives nothing, null gives cond, and pick gives may. This matches 24.09. big-demons-baby now shows only \"Deep Strike: Lord on Juggernaut only\". The Slaughterbound + Exalted Eightbound unit shows only own. Mutations A2, A3 and A11 are caught. A12 (a model grant not added to part) is not caught, because on every list partialRules already holds that model or the unit has its own Deep Strike, so nothing visible changes. It is harmless today."
+ },
+ {
+  "key": "d30a137dcd147869",
+  "where": "resBoxes",
+  "verdict": "ok",
+  "round": 2,
+  "why": "Unchanged (ok in round 1)."
+ },
+ {
+  "key": "928e61fbcda62750",
+  "where": "resTotal",
+  "verdict": "ok",
+  "round": 2,
+  "why": "Unchanged code (ok in round 1). The round-1 test gaps are closed. Mutation A6 (a ×N unit counted once) is now caught on standard, big-demons-baby and nerf-when by the both-copies tick. A7 (hardcoded limit) is caught by the 1000/3000 checks."
+ },
+ {
+  "key": "cd3e70e541e05775",
+  "where": "resBar",
+  "verdict": "ok",
+  "round": 2,
+  "why": "Unchanged (ok in round 1). It is still pinned at the top bar's bottom at 390 and 320, light and dark."
+ },
+ {
+  "key": "b17d85cc5473023a",
+  "where": "screenReserves",
+  "verdict": "ok",
+  "round": 2,
+  "why": "The marks render as own / \"<model> only\" / \"Deep Strike · <source>\" / \"can be given Deep Strike · <ability> (<giver>)\" / \"Deep Strike if:\", each grant with GW's words. A selection quotes both sentences, and the note explains \"can be given\" and \"if\". The tick boxes now have a 44px tap area. Hit-testing 6px outside the drawn 30px box (left, right, top, bottom) lands on the same button at 320, and copies do not overlap: the 18 px gap is more than 2 × 7 px. Reset measures 44×44. At 390 and 320, light (paper) and dark: no horizontal overflow, the total pinned under the top bar, and the over-limit red readable. Mutations A9 (tap area removed) and A10 (Reset small) are caught on 4 lists."
+ },
+ {
+  "key": "4a334dbf30532402",
+  "where": "removeImported",
+  "verdict": "ok",
+  "round": 2,
+  "why": "The code is unchanged (it calls removeKept, which clears wh-res-<id>). The CODE_RULES text now names the Strategic reserves boxes, which closes the round-1 nit."
+ },
+ {
+  "key": "(derive.js grantRows, not a code item)",
+  "where": "verify/derive.js grantRows",
+  "verdict": "ok",
+  "round": 2,
+  "why": "git diff 81a203b..3e25a19 -- verify/derive.js. \"that unit/model\" with no bearer named before it in the sentence takes its antecedent from the latest earlier \"select (one|up to one) friendly <KW> unit/model\" sentence. It gives to = those keywords (plus \"if it is a <KW> model\"), pick:'one', the moment in while, and both sentences as text. When no selection is read, to = {unread}, which tables.js fails. Only 2 GRANTS rows changed (Thunderhawk Insertion and Omnissiah's Blessing), plus their CHECKLIST g. I scanned every ability, rule and enhancement in data.js with \"select … that/those/the selected unit/model … has/have/gain\". Besides Thunderhawk Insertion and Omnissiah's Blessing (now right), Naturalised Camouflage has no GRANTS row (nothing read, not misread), Surprise Assault CHARACTER and Marked Prey CHARACTER are to:null (unread, unchanged), Canticles/Shroudpsalm is right (antecedent in the same sentence), and Treason of Tzeentch and Purity of Execution select enemy units with no grant. No misread remains. Mutations, each regenerating data.js with tables.js --write in a scratch copy: D1 (branch off) puts both rows back to \"this unit / model\". D3 (pick dropped) and D4 (\"if it is a VEHICLE\" dropped) change the rows. All three would fail tables.js's table-form check, but that check is masked today by its 2 pre-existing failures, which stop at the first difference. D2 (selection not read) gives to unread, and the new tables.js check fails on both rows. D5 (bearer guard removed) makes Warped Interference and Rites of Reanimation unread, and the gate fails. Omnissiah's Blessing's \"within 3\\\" of this model\" and \"until the start of your next Command phase\" are kept only in the quoted text, which is acceptable because no screen uses that row for Deep Strike. derive.js exits 0 (1070 agreed labels hold; the 1 differing label is Fluxmaster Altered Reality's tag, which is unrelated and unchanged). lines passes. tables shows the same 2 pre-existing failures as main (data.js line 10901 rules order \"The Shadow of Chaos\"/\"Leader\", and expand-then-write), not from this branch."
+ }
+]

@@ -1,0 +1,141 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "removeKept",
+  "judgement": {
+   "code": "function removeKept(id){\n  store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id));\n  const i = D.armies.findIndex(y => y.id === id && y.imported); if(i >= 0) D.armies.splice(i, 1);\n  const j = importStale.findIndex(y => y.id === id); if(j >= 0) importStale.splice(j, 1);\n  try { localStorage.removeItem('wh-used-' + id); localStorage.removeItem('wh-check-' + id); localStorage.removeItem('wh-res-' + id); } catch(e){}\n  if(favIds().includes(id)) setFav(id, false);\n}"
+  },
+  "source": {
+   "implements": "what Remove and Update take off the phone for one kept list: the kept export, the list, its out-of-date row, its per-battle ticks (wh-used-<id>), its Phase checklist boxes (wh-check-<id>), its Strategic reserves boxes (wh-res-<id>) and its star"
+  },
+  "key": "49e93bd55c6f1215"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "resRule",
+  "judgement": {
+   "code": "function resRule(){\n  const t = String(D.rules['Strategic Reserves'] || '').replace(/\\*\\*/g, '');\n  const when = /^(Before the battle, in the [A-Z][A-Za-z ]+? step)\\b/.exec(t);\n  const ex = /\\bselect one or more friendly units \\(excluding ([A-Z][A-Z /]*[A-Z])\\) to place in strategic reserves\\b/.exec(t);\n  const lim = /(Unless otherwise stated, the combined points value of all of your strategic reserves units [^.]*?cannot exceed (\\d+)% of your points limit for your battle size\\.)/.exec(t);\n  return { when:when ? when[1] : null, excl:ex ? ex[1].split('/').map(k => k.trim().replace(/S$/, '')) : [], quote:lim ? lim[1] : null, pct:lim ? +lim[2] : null };\n}"
+  },
+  "source": {
+   "implements": "20.01 Placing Units in Strategic Reserves, read from data.js RULES: the step (\"Before the battle, in the Declare Battle Formations step\"), the units excluded (\"(excluding **FORTIFICATIONS**)\": the keyword, singular), the limit sentence and its percentage (\"cannot exceed 50% of your points limit for your battle size\"); none of them typed by hand, null where the words say none"
+  },
+  "key": "234dadc5a18c2c8e",
+  "note": "Unchanged (ok in result-reserves.json). The limit is GW Core Rules 20.01 (PDF p68, verify/texts.js) as data.js RULES has it: 50% of the points limit, 1000 pts at Strike Force; no unit-count limit in GW's text."
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "resGrants",
+  "judgement": {
+   "code": "function resGrants(u, name){\n  const A = army(), f = factionOf(A), dets = detachmentsOf(A), out = [];\n  for(const g of D.grants || []){\n    if(g.grants !== name || g.type !== 'ability') continue;\n    const p = String(g.rule).split(' · '), rn = p[p.length - 1], has = x => x.abilities.find(ab => ab.name === rn && !naReason(ab) && String(ab.text).includes(g.text) && !resInBattle(ab));\n    if(p.length === 2){ if(p[0] === f.name + ' army rule' && f.armyRules.some(r => r.name === rn) && isObj(g.to) && matches(g.to, u)) out.push({ g, how:'unit', src:rn }); continue; }\n    if(/ rule$/.test(p[1])){ if(p[0] === f.name && dets.some(d => d.name + ' rule' === p[1] && detRules(d).some(r => r.name === rn)) && isObj(g.to) && matches(g.to, u)) out.push({ g, how:'unit', src:rn }); continue; }\n    if(g.pick === 'one'){ const giver = A.units.find(has); if(giver && isObj(g.to) && matches(g.to, u)) out.push({ g, how:'may', src:rn, ab:has(giver), giver:has(giver).who || giver.short || giver.name }); continue; }\n    const ab = has(u); if(!ab || !(g.to === 'this unit / model' || (isObj(g.to) && matches(g.to, u)))) continue;\n    out.push({ g, how:/\\b(?:this|the bearer['’]?s?) unit\\b/i.test(g.text) ? 'unit' : 'model', src:rn, ab, who:ab.who || u.short || u.name });\n  }\n  return out;\n}"
+  },
+  "source": {
+   "implements": "GRANTS rows that give a unit of the list a rule (Deep Strike) when units are placed in strategic reserves: an army rule of its faction or a detachment rule of the list (the row's rule name) to units whose keywords its to names (unit); the unit's own usable ability (an enhancement too) whose words contain the row's text, to \"this unit\" (unit) or \"this model\" / \"the bearer\" (model, with its who); a pick 'one' row (a selection, \"select one friendly <KW> unit. That unit has …\"): the ability on any unit of the list, to every unit its to allows, the giver's own too (may); none whose ability's CHECKLIST entry has a trigger (t or at): given in the battle (20.02 repositioning). By words, not list id, so an imported list finds them"
+  },
+  "key": "e382f2d75e9b95cf",
+  "note": "Fix of result-reserves.json: a selection (GRANTS pick one, verify/derive.js grantRows) shows on every unit its keywords allow, the giver's own too (nerf-when: Calgar + Bladeguard, Librarian in Phobos Armour, Heavy Intercessors, Eradicators, Reivers); grants given in the battle (CHECKLIST t or at: Umbralefic Crystal, Mysterious Guardian) are dropped; a grant to this model / the bearer is a model grant."
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "resInBattle",
+  "judgement": {
+   "code": "const resInBattle = ab => { const e = (D.checklist || {})['a|' + ckHash(ab.name + '\\n' + ab.text)] || {}; return !!(e.t || e.at); };"
+  },
+  "source": {
+   "implements": "a grant given in the battle, not when units are placed in strategic reserves: its ability's CHECKLIST entry (verify/derive.js) has a trigger, t (a phase: Umbralefic Crystal, In your Command phase) or at (a moment: Mysterious Guardian, At the end of your opponent's turn)"
+  },
+  "key": "ff0c75c29d54473f",
+  "note": "New: in-battle grants by the ability's CHECKLIST trigger (t: Umbralefic Crystal command:your; at: Mysterious Guardian End of your opponent's turn). Thunderhawk Insertion, Lord of the Eightbound, Disciple of Khorne, Nazdreg's Know-wotz have none (u only)."
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "resWhile",
+  "judgement": {
+   "code": "function resWhile(g, u){\n  const w = String(g.while || '').split('; ').filter(x => x && !/^In the Declare Battle Formations step$/i.test(x));\n  if(!w.length) return true;\n  if(w.length > 1) return null;\n  const m = /^If this model is attached to an? ([A-Z][A-Z’' -]*[A-Z]) unit during the Declare Battle Formations step$/.exec(w[0]);\n  if(!m) return null;\n  if(!u.leads) return false;\n  const kws = u.kw.map(k => k.replace(/^Faction: /, '').toUpperCase()), words = m[1].split(' ');\n  for(let i = 0; i < words.length;){ let j = words.length; while(j > i && !kws.includes(words.slice(i, j).join(' '))) j--; if(j === i) return false; i = j; }\n  return true;\n}"
+  },
+  "source": {
+   "implements": "a grant's condition against the list: none, or only the selection's moment (In the Declare Battle Formations step): true; \"If this model is attached to a <KW> unit during the Declare Battle Formations step\": true when the unit is attached (leads) and its keywords make up <KW>, else false; any other condition: null (shown as conditional, with GW's words)"
+  },
+  "key": "9261d6c8d7496cf6",
+  "note": "New: Lord of the Eightbound on the unattached Slaughterbound (standard) is false, so no mark; attached units (princes, standard) already have Deep Strike on their Rules line."
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "resDeepStrike",
+  "judgement": {
+   "code": "function resDeepStrike(u){\n  const has = unitRules(u).some(r => ruleKey(r) === 'Deep Strike'), pk = Object.keys(u.partialRules || {}).find(r => ruleKey(r) === 'Deep Strike');\n  const own = has && !pk, part = has && pk ? [partialWho(u, pk)] : [], grants = [], may = [], cond = [];\n  for(const x of resGrants(u, 'Deep Strike')){\n    if(x.how === 'may'){ may.push(x); continue; }\n    const w = resWhile(x.g, u); if(w === false) continue;\n    if(w === null){ cond.push(x); continue; }\n    if(x.how === 'model' && modelCount(u) > 1){ if(!own && !part.includes(x.who)) part.push(x.who); continue; }\n    grants.push(x);\n  }\n  return { own, part, grants, may, cond };\n}"
+  },
+  "source": {
+   "implements": "24.09 Deep Strike (\"if every model in this unit has this ability\"): own when the Rules line (unitRules) has it and no model alone has it (partialRules); part: that model, and a model grant (resGrants model) on a unit of more than one model, its model once (none when own); grants: whole-unit grants whose condition holds (resWhile true); may: selection grants; cond: grants whose condition the list does not settle; none for a condition the list shows false"
+  },
+  "key": "ee744cd881b31521",
+  "note": "Fix: Disciple of Khorne is now only \"Deep Strike: Lord on Juggernaut only\" (the model grant merges into part); conditional grants show as \"Deep Strike if:\"; none in the lists today."
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "resBoxes",
+  "judgement": {
+   "code": "const resBoxes = u => Array.from({ length:u.copies || 1 }, (_, i) => u.id + ((u.copies || 1) > 1 ? '#' + i : ''));"
+  },
+  "source": {
+   "implements": "one reserves box per unit, one per copy of a ×N unit (u.id, u.id#i)"
+  },
+  "key": "d30a137dcd147869"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "resTotal",
+  "judgement": {
+   "code": "function resTotal(){\n  const A = army(), R = resRule(), done = resDone();\n  const units = A.units.filter(u => !R.excl.some(k => hasKw(u, k)));\n  const n = units.reduce((t, u) => t + resBoxes(u).filter(k => done.has(k)).length, 0);\n  const pts = units.reduce((t, u) => t + resBoxes(u).filter(k => done.has(k)).length * (u.pts || 0), 0);\n  return { n, pts, limit:R.pct != null && A.points ? Math.floor(A.points * R.pct / 100) : null };\n}"
+  },
+  "source": {
+   "implements": "the running total: each ticked box counts its unit's points (u.pts, as the list prints them; an attached unit's whole), excluded units (resRule excl) never; the limit is floor(the list's points limit × GW's percentage / 100): 1000 pts at Strike Force 2000"
+  },
+  "key": "928e61fbcda62750"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "resBar",
+  "judgement": {
+   "code": "function resBar(){\n  const T = resTotal(), over = T.limit != null && T.pts > T.limit;\n  return '<div class=\"resbar' + (over ? ' over' : '') + '\" role=\"status\" aria-live=\"polite\"><span class=\"lbl\">In reserves</span><b class=\"respts\">' + T.pts + (T.limit != null ? ' / ' + T.limit : '') + ' pts</b>' +\n    '<span class=\"resn\">' + T.n + (T.n === 1 ? ' unit' : ' units') + (T.limit == null ? '' : over ? ' · <b>' + (T.pts - T.limit) + ' pts over the limit</b>' : ' · ' + (T.limit - T.pts) + ' pts left') + '</span></div>';\n}"
+  },
+  "source": {
+   "implements": "the total pinned under the top bar: points in reserves / the limit, the units ticked, and the points left or, over the limit, how far over (in the bad-news colour)"
+  },
+  "key": "cd3e70e541e05775"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "screenReserves",
+  "judgement": {
+   "code": "function screenReserves(){\n  const A = army(), R = resRule(), done = resDone();\n  const box = (k, label, what, off) => '<button class=\"tick' + (done.has(k) ? ' on' : '') + '\" data-rtick=\"' + esc(k) + '\" aria-pressed=\"' + done.has(k) + '\"' + (off ? ' disabled' : '') +\n    ' aria-label=\"' + esc(what + (label ? ', ' + label : '') + ' in strategic reserves') + '\">' + (done.has(k) ? '✓' : '') + '</button>';\n  const rows = A.units.map(u => {\n    const ex = R.excl.find(k => hasKw(u, k)), ds = resDeepStrike(u), ks = resBoxes(u), c = ks.length;\n    const marks = [];\n    const DS = linkTo('rule', 'Deep Strike', 'Deep Strike'), q = g => ' <span class=\"from\">“' + esc(String(g.text).replace(/^- /, '').replace(/\\*\\*/g, '')) + '”</span>';\n    const srcLink = x => x.ab ? linkTo('ability', abilityKey(x.ab), x.src) : linkTo('rule', x.src, x.src);\n    if(ds.own) marks.push('<span class=\"tg resds\" data-resds=\"own\">' + DS + '</span>');\n    for(const m of ds.part) marks.push('<span class=\"tg m resds\" data-resds=\"part:' + esc(m) + '\">' + DS + ': ' + esc(m) + ' only</span>');\n    for(const x of ds.grants) marks.push('<span class=\"tg resds\" data-resds=\"grant:' + esc(x.src) + '\">' + DS + ' · ' + srcLink(x) + '</span>' + q(x.g));\n    for(const x of ds.may) marks.push('<span class=\"tg m resds\" data-resds=\"may:' + esc(x.src) + '\">can be given ' + DS + ' · ' + srcLink(x) + ' (' + esc(x.giver) + ')</span>' + q(x.g));\n    for(const x of ds.cond) marks.push('<span class=\"tg m resds\" data-resds=\"cond:' + esc(x.src) + '\">' + DS + ' if: ' + srcLink(x) + '</span>' + q(x.g));\n    if(ex) marks.push('<span class=\"tg m\">' + linkTo('rule', 'Strategic Reserves', ex.toUpperCase() + ': excluded') + '</span>');\n    return '<div class=\"tl resu\" data-resu=\"' + esc(u.id) + '\"><span class=\"ticks\">' + ks.map((k, i) => (c > 1 ? '<i>' + (i + 1) + '</i>' : '') + box(k, c > 1 ? 'Unit ' + (i + 1) : '', unitLabel(u), !!ex)).join('') + '</span>' +\n      '<span>' + linkTo('unit', u.id, unitLabel(u)) + ' <span class=\"from\">' + u.pts + ' pts' + (c > 1 ? ' each, ×' + c : '') + '</span>' + (marks.length ? '<span class=\"resm\">' + marks.map(m => '<span>' + m + '</span>').join('') + '</span>' : '') + '</span></div>';\n  }).join('');\n  return '<div class=\"res\">' + resBar() + '<div class=\"sec-h\"><h2>Strategic reserves</h2><button class=\"textbtn\" data-rreset>Reset</button></div>' +\n    '<div class=\"pg\">' + (R.when ? '<div class=\"pgr\"><span class=\"pgk\">When</span><span class=\"pgv\">' + esc(R.when) + '</span></div>' : '') +\n    '<div class=\"pgr\"><span class=\"pgk\">Limit</span><span class=\"pgv\">' + (R.quote ? esc(R.quote) + ' <span class=\"from\">(' + linkTo('rule', 'Strategic Reserves', 'Strategic Reserves') + ', ' + esc(A.points + ' pts · ' + A.battleSize) + ')</span>'\n      : linkTo('rule', 'Strategic Reserves', 'Strategic Reserves')) + '</span></div></div>' +\n    '<div class=\"sec-h\"><h2>Your units</h2><span class=\"c\">' + A.units.reduce((t, u) => t + (u.copies || 1), 0) + '</span></div><div class=\"resl\">' + rows + '</div>' +\n    '<p class=\"note\">Tick the units you place in strategic reserves; the total counts each ticked unit’s points as the list prints them. Deep Strike: on the unit’s Rules line (every model; “only” where one model alone has it), or given by the rule or ability named, in its words; “can be given”: the ability gives it to one unit you select; “if”: its condition is for you to check. What units are given during the battle, as they go back into reserves, is not listed. Each name opens its rule. The boxes are kept for this list on this phone; Reset clears them.</p></div>';\n}"
+  },
+  "source": {
+   "implements": "Strategic reserves: the pinned total (resBar), the step and GW's limit sentence quoted with a link to the rule, every unit of the list in list order with a box per copy (a 44px tap area; excluded units: box disabled, marked \"<KEYWORD>: excluded\" linking the rule), its points, and its Deep Strike marks (resDeepStrike): \"Deep Strike\" (own), \"Deep Strike: <model> only\" (part), \"Deep Strike · <rule or ability>\" (a whole-unit grant), \"can be given Deep Strike · <ability> (<giver>)\" (may), \"Deep Strike if: <rule or ability>\" (cond), each grant with the row's words quoted (both sentences of a selection); boxes kept per list (wh-res-<id>), Reset (44px) clears them (with Undo)"
+  },
+  "key": "b17d85cc5473023a",
+  "note": "Fix: tap areas 44px (::after inset -7px on the 30px box; Reset min 44px); the mark kinds; the selection quoted with both sentences."
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "removeImported",
+  "judgement": {
+   "code": "function removeImported(id){\n  const a = armyById(id), x = importedKept().find(y => y.id === id), name = (a || x || {}).name || 'the list';\n  removeKept(id);\n  ONLY = D.armies.length === 1 ? D.armies[0] : null;\n  hideSheet(); go({ s:'home' }, 'replace');\n  toast('Removed ' + name);\n}"
+  },
+  "source": {
+   "implements": "Remove: the list leaves the phone (the kept export, the list, its per-battle ticks, its Phase checklist boxes and its Strategic reserves boxes), the app goes to the home screen"
+  },
+  "key": "4a334dbf30532402",
+  "note": "Nit: its description now names the Strategic reserves boxes (code unchanged)."
+ }
+]
