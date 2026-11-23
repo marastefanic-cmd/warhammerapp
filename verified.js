@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "a85fc35839",
- "data": "2026-11-23.4",
+ "build": "83a5acb5d6",
+ "data": "2026-11-23.5",
  "date": "23 Nov 2026",
  "checks": [
   {
@@ -27,11 +27,11 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "800 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "808 footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "3383 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "3387 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
@@ -155,7 +155,7 @@ window.WH_VERIFIED = {
   },
   "BOXES": {
    "what": "the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give",
-   "cols": "n:derived b:derived nc:derived reach:derived both:derived embarked:derived played:derived riled:derived d:derived dnc:derived dreach:derived st:derived snc:derived"
+   "cols": "n:derived b:derived nc:derived reach:derived both:derived embarked:derived played:derived riled:derived d:derived dnc:derived dreach:derived st:derived snc:derived ox:derived"
   },
   "BOXES.b": {
    "what": "one box of the Damage tab: what GW's sentence does, as the catalogue (effects.js) reads it",
@@ -175,7 +175,7 @@ window.WH_VERIFIED = {
   },
   "AGREE": {
    "what": "which boxes of BOXES (b, d, st) two independent readings of GW's words confirm, the two-reader rule (the owner's decision, 3 Nov 2026): written by verify/agree.js --write from BOXES, reader2's readings (verify/reader2/) and the reviewed verdicts (verify/sources/agree-verdicts.json); a box not confirmed is shown as GW's words, \"see the rule\", and never counted (effects.js agreed)",
-   "cols": "boxes:derived"
+   "cols": "boxes:derived nv:derived"
   }
  },
  "steps": [

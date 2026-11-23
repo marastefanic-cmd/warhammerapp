@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = 'a85fc35839';</script>
+<script>window.WH_BUILD = '83a5acb5d6';</script>
 </head>
 <body>
 <style>
@@ -369,6 +369,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .kwl .gk, .gv{color:var(--accent); text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:2px; cursor:pointer}
 .kwl .gk{white-space:nowrap; padding:1px 0 13px}
 .gv{font:inherit; white-space:nowrap; position:relative}
+/* GW's value where an import's export printed another (a row's gwx): "4+ ‡", the export's value in the line under the profile */
+.gwx{font-size:.75em; margin-left:1px; color:var(--muted)}
 .gv::after{position:absolute; top:-3px; right:-7px}
 .kwl .gk.w, .gv.w{color:inherit}
 .kwl .gk::after, .gv::after{content:'+'; font:700 9px/1 var(--f-head); vertical-align:super; margin-left:1px; text-decoration:none; display:inline-block}
@@ -1187,12 +1189,12 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=a85fc35839"></script>
-<script src="data.js?v=a85fc35839"></script>
-<script src="calc.js?v=a85fc35839"></script>
-<script src="effects.js?v=a85fc35839"></script>
-<script src="builder.js?v=a85fc35839"></script>
-<script src="import.js?v=a85fc35839"></script>
+<script src="verified.js?v=83a5acb5d6"></script>
+<script src="data.js?v=83a5acb5d6"></script>
+<script src="calc.js?v=83a5acb5d6"></script>
+<script src="effects.js?v=83a5acb5d6"></script>
+<script src="builder.js?v=83a5acb5d6"></script>
+<script src="import.js?v=83a5acb5d6"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1307,7 +1309,11 @@ const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' 
 // against New Recruit's "(…)" marks): accent colour and "+"; tapping it says which rule
 const grantAttr = (names, u, what) => ' role="button" tabindex="0" data-grant="' + esc([].concat(names).join('|')) + '" data-gu="' + esc(u.id) + '" data-what="' + esc(what) + '"';
 const wideGrant = (names, u) => [].concat(names).every(n => !u.abilities.some(a => a.name === n));
-const granted = (x, k, u, html, what) => x.from && x.from[k] ? '<b class="gv' + (wideGrant(x.from[k], u) ? ' w' : '') + '"' + grantAttr(x.from[k], u, what) + '>' + html + '</b>' : html;
+const granted = (x, k, u, html, what) => (x.from && x.from[k] ? '<b class="gv' + (wideGrant(x.from[k], u) ? ' w' : '') + '"' + grantAttr(x.from[k], u, what) + '>' + html + '</b>' : html) + gwxMark(x, k);
+// (an imported list's value where GW's is used and the export printed another, x.gwx (builder.js): "‡" by the value, and the line under
+// the unit's profile that names both)
+const gwxMark = (x, k) => x.gwx && x.gwx[k] !== undefined ? '<sup class="gwx" aria-label="the export printed ' + esc(x.gwx[k]) + '">‡</sup>' : '';
+const gwxLines = u => [...(u.stats || []), ...(u.ranged || []), ...(u.melee || [])].flatMap(x => Object.entries(x.gwx || {}).map(([k, v]) => esc(x.name) + ' ' + esc(KEY_LABEL[k] || k) + ': export ' + esc(v) + '; GW ' + esc(x[k])));
 const hasGrants = u => [...(u.ranged || []), ...(u.melee || []), ...u.stats].some(x => x.from && Object.keys(x.from).length);
 const chev = '<svg class="chev" aria-hidden="true"><use href="#i-down"/></svg>';
 const arrow = '<svg class="go" aria-hidden="true"><use href="#i-down"/></svg>';
@@ -5451,6 +5457,7 @@ function screenUnit(){
     '<div class="dnt">' +
     // (a characteristic of its models a rule of the list changes: statLines)
     statShown(u).map(x => statHtml(x, u)).join('') + foeOwn.map(x => foeLine(x, u)).join('') +
+    (gwxLines(u).length ? '<p class="dsl gwxn">‡ GW’s values, the export printed others: ' + gwxLines(u).join('; ') + '</p>' : '') +
     // (a fold, closed until opened and kept open for the session, as the Overview's army rules: its count on its line, a line each)
     (defShown.length ? '<details class="def tgt" data-tgfold="' + esc(tgKey) + '"' + (openStrats.has(tgKey) ? ' open' : '') + '><summary><span class="il">When targeted</span><span class="x">' + defShown.length + '</span>' + chev + '</summary>' +
       '<div class="tgls">' + defShown.map(x => '<div class="tgl">' + defLine(x, u) + '</div>').join('') + '</div></details>' : '') +
