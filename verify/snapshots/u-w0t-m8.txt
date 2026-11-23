@@ -3693,7 +3693,7 @@ Friendly NECRONS TITANIC FLY units have +6" M.
 
 This detachment has the HYPERCRYPT tag and cannot be taken with another HYPERCRYPT detachment.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Empowered Engines","tesseract-vault-2","M 14\"",null] · U W0T M8? U w0t m8?
 M 14" · GRANTED BY
@@ -3706,7 +3706,7 @@ Friendly NECRONS TITANIC FLY units have +6" M.
 
 This detachment has the HYPERCRYPT tag and cannot be taken with another HYPERCRYPT detachment.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:ANTI-CHARACTER 4+ · U W0T M8? U w0t m8?
 CORE RULE

@@ -4150,7 +4150,7 @@ Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this mod
 
 Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Neverblade","daemon-prince-of-chaos-with-wings","A 15",null] · TZEEEEENTCH Tzeeeeentch
 A 15 · GRANTED BY
@@ -4161,7 +4161,7 @@ Enhancement
 
 LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Neverblade","daemon-prince-of-chaos-with-wings","A 7",null] · TZEEEEENTCH Tzeeeeentch
 A 7 · GRANTED BY
@@ -4172,7 +4172,7 @@ Enhancement
 
 LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Neverblade","daemon-prince-of-chaos-with-wings","AP -1",null] · TZEEEEENTCH Tzeeeeentch
 AP -1 · GRANTED BY
@@ -4183,7 +4183,7 @@ Enhancement
 
 LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Neverblade","daemon-prince-of-chaos-with-wings","AP -3",null] · TZEEEEENTCH Tzeeeeentch
 AP -3 · GRANTED BY
@@ -4194,7 +4194,7 @@ Enhancement
 
 LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Neverblade","daemon-prince-of-chaos-with-wings","S 10",null] · TZEEEEENTCH Tzeeeeentch
 S 10 · GRANTED BY
@@ -4205,7 +4205,7 @@ Enhancement
 
 LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Neverblade","daemon-prince-of-chaos-with-wings","S 8",null] · TZEEEEENTCH Tzeeeeentch
 S 8 · GRANTED BY
@@ -4216,7 +4216,7 @@ Enhancement
 
 LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:ANTI-PSYKER 2+ · TZEEEEENTCH Tzeeeeentch
 CORE RULE

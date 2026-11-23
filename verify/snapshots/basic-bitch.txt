@@ -3535,7 +3535,7 @@ Tyranid Prime with Lash Whip · datasheet ability
 
 Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 SUSTAINED HITS 1 Core rule
 

@@ -2353,7 +2353,7 @@ Options
 Freedom’s Hand, Las-impulsor, Questoris multi-laser
 1× Sir Hekhtur
 Close combat weapon, Hekhtur’s pistol
-Wahapedia: its own EPIC HERO datasheet; BSData and New Recruit: in this unit
+Wahapedia: its own EPIC HERO datasheet; New Recruit: in this unit
 Unit
 M
 T
@@ -3287,7 +3287,7 @@ Enhancement
 
 IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Bringer of Justice","cerastus-knight-atrapos","A 8",null] · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 A 8 · GRANTED BY
@@ -3298,7 +3298,7 @@ Enhancement
 
 IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Hunter’s Eye","knight-crusader","IGNORES COVER","IGNORES COVER"] · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 IGNORES COVER · GRANTED BY
@@ -3309,7 +3309,7 @@ Enhancement
 
 IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 IGNORES COVER Core rule
 
@@ -3324,7 +3324,7 @@ Enhancement
 
 IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.
 
-Already in the value shown; New Recruit and BSData print 5+* here.
+Already in the value shown; New Recruit prints 5+* here.
 
 ######## popup rule:ASSAULT · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE

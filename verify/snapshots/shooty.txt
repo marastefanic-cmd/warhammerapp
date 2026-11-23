@@ -56,7 +56,7 @@ All lists
 Import a list from New Recruit
 Its export: .json, .ros, .rosz or text
 How the app works and why you should be able to trust the data
-Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
+Checked (date of the check) against your New Recruit lists and GW’s rules
 
 Put it on your home screen: Safari → Share → Add to Home Screen.
 
@@ -701,7 +701,7 @@ All lists
 Import a list from New Recruit
 Its export: .json, .ros, .rosz or text
 How the app works and why you should be able to trust the data
-Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
+Checked (date of the check) against your New Recruit lists and GW’s rules
 
 Put it on your home screen: Safari → Share → Add to Home Screen.
 
@@ -714,10 +714,8 @@ Games Workshop
 Core Rules, Faction Packs, errata and FAQs: the source of truth
 Wahapedia
 GW’s datasheets and faction pages: counts as GW, and GW’s own document wins where they differ
-BSData
-the data New Recruit is built from, pinned to one commit: ids, points, wargear options
 New Recruit
-your lists’ exports and PDFs: what each list chose
+your lists’ exports and PDFs: what each list chose, and the names and ids an import is looked up by
 
 Where they disagree, GW wins; each difference is written down with GW’s words as evidence and checked again at every release.
 
@@ -732,16 +730,13 @@ GW
 56
 Games Workshop’s documents
 Wahapedia
-11
+20
 GW’s pages: counts as GW
-BSData
-51
-the data New Recruit is built from
 New Recruit
-89
+127
 your lists
 Program
-156
+160
 worked out by a script
 Hand
 13
@@ -1060,11 +1055,11 @@ Hazard Roll · Mortal Wounds · Battle-shock · Engagement · Selected to Attack
 UNITS AND LISTS
 
 DATASHEETS
-261 rows · 76 columns
+261 rows · 75 columns
 
 one row per datasheet (faction + datasheet name): its facts, shared by every list that has it
 
-WRITTEN BYverify/tables.js --write, from the lists and the faction catalogues (verify/from-bsdata.js)
+WRITTEN BYverify/tables.js --write, from the lists and the faction catalogues (verify/sources/catalog)
 
 KEY“faction/name”, the id an entry’s ds names
 
@@ -1073,7 +1068,6 @@ RULES→ by name: a core rule in RULES (through RULE_ALIASES) or an army rule in
 DATASHEETS 261 rows
 name
 faction
-bsId
 role
 rules
 kw
@@ -1170,8 +1164,6 @@ name
 Wazdakka Gutsmek
 faction
 orks
-bsId
-2ab7-ab71-0af4-5d39
 role
 Epic Hero
 rules
@@ -1365,16 +1357,16 @@ gear
 
 An entry holds what the list chose; everything else about the unit comes from its datasheet’s row.
 
-BS_IDS
-13 lookups · 13 columns
+NR_IDS
+14 lookups · 14 columns
 
-the BSData ids the list import resolves an export by (verify/import-ids.js --write)
+the ids of New Recruit's data that the owner's committed exports (verify/sources/nr-json) have shown, by which the list import looks a selection up first; one no export has shown is looked up by its exact New Recruit name (verify/import-ids.js --write)
 
-WRITTEN BYverify/import-ids.js --write
+WRITTEN BYverify/import-ids.js --write, from your New Recruit exports
 
 USED BYthe list import, to find each unit and choice of a New Recruit export
 
-BS_IDS 13 rows
+NR_IDS 14 rows
 factions
 roots
 battleSizes
@@ -1386,6 +1378,7 @@ configKids
 info
 infoKids
 units
+datasheets
 names
 maxPerList
 
@@ -1394,15 +1387,15 @@ ITS LOOKUPS
 factions
 13 ids
 roots
-16 ids
+15 ids
 battleSizes
 1 id
 limits
 1 id
 dispositions
-5 ids
+4 ids
 detachments
-59 ids
+38 ids
 config
 1 id
 configKids
@@ -1410,17 +1403,19 @@ configKids
 info
 4 ids
 infoKids
-18 ids
+9 ids
 units
-224 ids
+206 ids
+datasheets
+168 ids
 names
-832 ids
+883 ids
 maxPerList
-82 ids
+83 ids
 BUILD_INDEX
 5 parts · 5 columns
 
-what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values over BSData’s): written by verify/build-index.js
+what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values where New Recruit prints another): written by verify/build-index.js
 
 WRITTEN BYverify/build-index.js --write
 
@@ -1634,7 +1629,7 @@ the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-09.2
+2026-11-23.1
 
 a list from an export
 3
@@ -1702,20 +1697,20 @@ all of it, checked
 The release gate
 verify/run.js
 
-Before any change reaches your phone, 29 checks compare every table with its sources again: 29 of 29 passed for this build. Nothing ships unless all pass: build.js refuses to build otherwise.
+Before any change reaches your phone, 30 checks compare every table with its sources again: 30 of 30 passed for this build. Nothing ships unless all pass: build.js refuses to build otherwise.
 
-Facts against GW, BSData and New Recruit
+Facts against GW and New Recruit
 9 of 9
-every unit fact equal to BSData and, for the 16 lists with one, your New Recruit PDF, every base GW’s base size guide’s, every faction catalogue complete, every program column held by its script
-data · tables · bsdata · dispositions · bases · catalog · nr · choice · derived
+every unit fact equal to your New Recruit export and, for the 16 lists with one, your New Recruit PDF, every value a rule changes named as a rule whose GW words say so, every Force Disposition and base GW’s, every faction catalogue complete against GW’s pages, every program column held by its script
+data · tables · marks · dispositions · bases · catalog · nr · choice · derived
 Wording
 3 of 3
 every rules text the words of GW’s newest document (or Wahapedia’s), every ability word for word, every AI summary still on the words it was written from
 texts · words · fingerprints
 Numbers
-3 of 3
-every profile number GW’s datasheet’s, the damage calculator against hand-worked cases, the mechanical rules
-numbers · calc · invariants
+4 of 4
+every profile number and every unit’s points GW’s datasheet’s, the damage calculator against hand-worked cases, the mechanical rules
+numbers · points · calc · invariants
 Keywords
 1 of 1
 every unit’s keywords its GW datasheets’, the list’s own only by a named rule
@@ -6006,7 +6001,7 @@ Enhancement
 
 BIG MEK/MEK model only. This model has +2" M.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Dakka! Dakka! Dakka!","bigmek-mega","ASSAULT","ASSAULT"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ASSAULT · GRANTED BY
@@ -6020,7 +6015,7 @@ Friendly ORKS INFANTRY units’ ranged attacks have:
 [ASSAULT].
 While this unit is riled up, +3" R.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 ASSAULT Core rule
 
@@ -6038,7 +6033,7 @@ Friendly ORKS INFANTRY units’ ranged attacks have:
 [ASSAULT].
 While this unit is riled up, +3" R.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 ASSAULT Core rule
 
@@ -6056,7 +6051,7 @@ Friendly ORKS INFANTRY units’ ranged attacks have:
 [ASSAULT].
 While this unit is riled up, +3" R.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 ASSAULT Core rule
 
@@ -6074,7 +6069,7 @@ Friendly ORKS INFANTRY units’ ranged attacks have:
 [ASSAULT].
 While this unit is riled up, +3" R.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 ASSAULT Core rule
 
@@ -6092,7 +6087,7 @@ Friendly ORKS INFANTRY units’ ranged attacks have:
 [ASSAULT].
 While this unit is riled up, +3" R.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 ASSAULT Core rule
 
@@ -6109,7 +6104,7 @@ This unit’s ranged attacks have [IGNORES COVER].
 
 Not the 1CP Kustom Dakka stratagem, which has the same name.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 IGNORES COVER Core rule
 
@@ -6126,7 +6121,7 @@ This unit’s ranged attacks have [IGNORES COVER].
 
 Not the 1CP Kustom Dakka stratagem, which has the same name.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 IGNORES COVER Core rule
 
@@ -6144,7 +6139,7 @@ This unit’s ranged attacks have:
 [IGNORES COVER].
 If this unit is riled up, [SUSTAINED HITS 1].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 IGNORES COVER Core rule
 
@@ -6163,7 +6158,7 @@ ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged atta
 [DEVASTATING WOUNDS].
 [SUPA-HAZARDOUS].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 ANTI-INFANTRY 4+ Core rule
 
@@ -6184,7 +6179,7 @@ ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged atta
 [DEVASTATING WOUNDS].
 [SUPA-HAZARDOUS].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 DEVASTATING WOUNDS Core rule
 
@@ -6205,7 +6200,7 @@ ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged atta
 [DEVASTATING WOUNDS].
 [SUPA-HAZARDOUS].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 SUPA-HAZARDOUS Shoota Boyz enhancement Supa-glowy Fing
 
@@ -6220,7 +6215,7 @@ Flash Gitz · Upgrade
 
 FLASH GITZ unit only. This unit’s Snazzgun weapons have [RAPID FIRE 1].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 RAPID FIRE 1 Core rule
 

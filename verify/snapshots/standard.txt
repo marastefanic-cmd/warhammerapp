@@ -4245,7 +4245,7 @@ Slaughterbound · Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Berzerker Glaive|Relentless Rage","slaughterbound-exalted-eightbound","A 8",null] · STANDARD Standard
 A 8 · GRANTED BY
@@ -4264,7 +4264,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","angron","A 17",null] · STANDARD Standard
 A 17 · GRANTED BY
@@ -4275,7 +4275,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","angron","A 9",null] · STANDARD Standard
 A 9 · GRANTED BY
@@ -4286,7 +4286,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","chaos-rhino","A 7",null] · STANDARD Standard
 A 7 · GRANTED BY
@@ -4297,7 +4297,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","eightbound","A 6",null] · STANDARD Standard
 A 6 · GRANTED BY
@@ -4308,7 +4308,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","exalted-eightbound","A 5",null] · STANDARD Standard
 A 5 · GRANTED BY
@@ -4319,7 +4319,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","forgefiend","A 7",null] · STANDARD Standard
 A 7 · GRANTED BY
@@ -4330,7 +4330,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","goremongers","A 3",null] · STANDARD Standard
 A 3 · GRANTED BY
@@ -4341,7 +4341,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","goremongers","A 4",null] · STANDARD Standard
 A 4 · GRANTED BY
@@ -4352,7 +4352,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","jakhals","A 4",null] · STANDARD Standard
 A 4 · GRANTED BY
@@ -4363,7 +4363,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","jakhals","A 5",null] · STANDARD Standard
 A 5 · GRANTED BY
@@ -4374,7 +4374,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 4",null] · STANDARD Standard
 A 4 · GRANTED BY
@@ -4385,7 +4385,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 5",null] · STANDARD Standard
 A 5 · GRANTED BY
@@ -4396,7 +4396,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 9",null] · STANDARD Standard
 A 9 · GRANTED BY
@@ -4407,7 +4407,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","lord-on-juggernaut","A 5",null] · STANDARD Standard
 A 5 · GRANTED BY
@@ -4418,7 +4418,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","lord-on-juggernaut","A 8",null] · STANDARD Standard
 A 8 · GRANTED BY
@@ -4429,7 +4429,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","slaughterbound","A 7",null] · STANDARD Standard
 A 7 · GRANTED BY
@@ -4440,7 +4440,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Relentless Rage","slaughterbound-exalted-eightbound","A 5",null] · STANDARD Standard
 A 5 · GRANTED BY
@@ -4451,7 +4451,7 @@ Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:ANTI-MONSTER 3+ · STANDARD Standard
 CORE RULE

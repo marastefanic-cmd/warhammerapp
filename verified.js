@@ -1,21 +1,21 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "11708abd8a",
- "data": "2026-11-09.2",
- "date": "9 Nov 2026",
+ "build": "28091f6846",
+ "data": "2026-11-23.1",
+ "date": "23 Nov 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
    "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (11285 facts)."
   },
   {
-   "label": "BSData,",
-   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (17093 facts)."
+   "label": "Games Workshop’s datasheets,",
+   "detail": "as Wahapedia transcribes them: every stat and weapon number (9370 numbers), every keyword and every ability text."
   },
   {
    "label": "Granted values:",
-   "detail": "every keyword or value marked + is one a rule of your list changes in BSData, named as that rule, and matches the rules New Recruit prints beside the weapon (254 values)."
+   "detail": "every keyword or value marked + is one New Recruit shows otherwise than GW’s datasheet, named as a rule your unit has whose GW wording names it (257 values)."
   },
   {
    "label": "Games Workshop’s rules text:",
@@ -37,11 +37,7 @@ window.WH_VERIFIED = {
  "sources": [
   {
    "label": "New Recruit:",
-   "detail": "Me shooty yer’ booty, Princes, Standard, Pubstomper, Nidzillas, 6 bigs, 4 megas and a destrier, Super Terminators, Purge goes the Foe, Defilers and friends, Infernal Lance, Woof Woof, Big demons baby, Mucho Mutantes, Lite Knights, Nerf when, The Exiled Legion, Fellhammer Siege Task Force, Emperor’s Chosen, Dread Host, Navigator sounds op ngl, Tzeeeeentch, Healybois, U w0t m8?, Simple but effective, Basic Bitch (your PDFs)."
-  },
-  {
-   "label": "BSData:",
-   "detail": "wh40k-11e, commit b4dc3f4."
+   "detail": "Me shooty yer’ booty, Princes, Standard, Pubstomper, Nidzillas, 6 bigs, 4 megas and a destrier, Super Terminators, Purge goes the Foe, Defilers and friends, Infernal Lance, Woof Woof, Big demons baby, Mucho Mutantes, Lite Knights, Nerf when, The Exiled Legion, Fellhammer Siege Task Force, Emperor’s Chosen, Dread Host, Navigator sounds op ngl, Tzeeeeentch, Healybois, U w0t m8?, Simple but effective, Basic Bitch (your exports and PDFs)."
   },
   {
    "label": "Games Workshop:",
@@ -83,7 +79,7 @@ window.WH_VERIFIED = {
   },
   "FACTIONS.detachments": {
    "what": "a faction's detachments",
-   "cols": "name:gw dispositions:bsdata dp:gw rule:gw moreRules:gw enhancements:gw stratagems:gw nr:bsdata aiStatus:derived"
+   "cols": "name:gw dispositions:wahapedia dp:gw rule:gw moreRules:gw enhancements:gw stratagems:gw nr:newrecruit aiStatus:derived"
   },
   "FACTIONS.detachments.rule": {
    "what": "a detachment's rule",
@@ -99,7 +95,7 @@ window.WH_VERIFIED = {
   },
   "FACTIONS.detachments.enhancements": {
    "what": "a detachment's enhancements",
-   "cols": "name:gw pts:newrecruit text:gw upgrade:bsdata nr:newrecruit limit:wahapedia sumAtk:ai-summary sumAtkOf:derived sumDef:ai-summary sumDefOf:derived sumSt:ai-summary sumStOf:derived sumOv:ai-summary sumOvOf:derived"
+   "cols": "name:gw pts:newrecruit text:gw upgrade:wahapedia nr:newrecruit limit:wahapedia sumAtk:ai-summary sumAtkOf:derived sumDef:ai-summary sumDefOf:derived sumSt:ai-summary sumStOf:derived sumOv:ai-summary sumOvOf:derived"
   },
   "ARMIES": {
    "what": "one row per list",
@@ -111,15 +107,15 @@ window.WH_VERIFIED = {
   },
   "ARMIES.units.stats": {
    "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
-   "cols": "name:newrecruit from:bsdata printed:newrecruit own:gw M:bsdata T:bsdata Sv:bsdata W:bsdata Ld:bsdata OC:bsdata InSv:bsdata base:bsdata over:hand of:derived why:derived"
+   "cols": "name:newrecruit from:derived printed:newrecruit own:gw M:newrecruit T:newrecruit Sv:newrecruit W:newrecruit Ld:newrecruit OC:newrecruit InSv:newrecruit base:newrecruit over:hand of:derived why:derived"
   },
   "ARMIES.units.ranged": {
    "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
-   "cols": "name:newrecruit who:newrecruit n:newrecruit from:bsdata enh:newrecruit range:bsdata A:bsdata BS:bsdata WS:bsdata S:bsdata AP:bsdata D:bsdata kw:bsdata over:hand of:derived why:derived group:derived"
+   "cols": "name:newrecruit who:newrecruit n:newrecruit from:derived enh:newrecruit range:newrecruit A:newrecruit BS:newrecruit WS:newrecruit S:newrecruit AP:newrecruit D:newrecruit kw:newrecruit over:hand of:derived why:derived group:derived"
   },
   "ARMIES.units.melee": {
    "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
-   "cols": "name:newrecruit who:newrecruit n:newrecruit from:bsdata enh:newrecruit range:bsdata A:bsdata BS:bsdata WS:bsdata S:bsdata AP:bsdata D:bsdata kw:bsdata over:hand of:derived why:derived group:derived"
+   "cols": "name:newrecruit who:newrecruit n:newrecruit from:derived enh:newrecruit range:newrecruit A:newrecruit BS:newrecruit WS:newrecruit S:newrecruit AP:newrecruit D:newrecruit kw:newrecruit over:hand of:derived why:derived group:derived"
   },
   "ARMIES.units.abilities": {
    "what": "a row naming its datasheet row by name (a stats row by its model's name, \"×N\" its count in the attached unit), with only the list's own fields",
@@ -127,7 +123,7 @@ window.WH_VERIFIED = {
   },
   "DATASHEETS": {
    "what": "one row per datasheet (faction + datasheet name): its facts, shared by every list that has it",
-   "cols": "name:newrecruit faction:derived bsId:bsdata role:newrecruit rules:newrecruit kw:newrecruit kwOnly:wahapedia partialRules:wahapedia srcNote:derived leaders:bsdata stats:newrecruit ranged:newrecruit melee:newrecruit abilities:wahapedia points:gw composition:bsdata options:bsdata aiStatus:derived"
+   "cols": "name:newrecruit faction:derived role:newrecruit rules:newrecruit kw:newrecruit kwOnly:wahapedia partialRules:wahapedia srcNote:derived leaders:wahapedia stats:newrecruit ranged:newrecruit melee:newrecruit abilities:wahapedia points:gw composition:wahapedia options:wahapedia aiStatus:derived"
   },
   "DATASHEETS.stats": {
    "what": "a datasheet's model profiles",
@@ -135,11 +131,11 @@ window.WH_VERIFIED = {
   },
   "DATASHEETS.ranged": {
    "what": "a datasheet's ranged weapon profiles",
-   "cols": "name:newrecruit range:newrecruit A:newrecruit BS:newrecruit WS:newrecruit S:newrecruit AP:newrecruit D:newrecruit kw:newrecruit group:bsdata fireAll:bsdata hunter:newrecruit carrier:gw"
+   "cols": "name:newrecruit range:newrecruit A:newrecruit BS:newrecruit WS:newrecruit S:newrecruit AP:newrecruit D:newrecruit kw:newrecruit group:wahapedia fireAll:wahapedia hunter:newrecruit carrier:gw"
   },
   "DATASHEETS.melee": {
    "what": "a datasheet's melee weapon profiles",
-   "cols": "name:newrecruit range:newrecruit A:newrecruit BS:newrecruit WS:newrecruit S:newrecruit AP:newrecruit D:newrecruit kw:newrecruit group:bsdata fireAll:bsdata hunter:newrecruit carrier:gw"
+   "cols": "name:newrecruit range:newrecruit A:newrecruit BS:newrecruit WS:newrecruit S:newrecruit AP:newrecruit D:newrecruit kw:newrecruit group:wahapedia fireAll:wahapedia hunter:newrecruit carrier:gw"
   },
   "DATASHEETS.abilities": {
    "what": "a datasheet's abilities",
@@ -153,9 +149,9 @@ window.WH_VERIFIED = {
    "what": "a rule or option giving units an ability or keyword",
    "cols": "rule:derived option:derived grants:derived type:derived to:derived while:derived text:derived"
   },
-  "BS_IDS": {
-   "what": "the BSData ids the list import resolves an export by (verify/import-ids.js --write)",
-   "cols": "factions:bsdata roots:bsdata battleSizes:bsdata limits:bsdata dispositions:bsdata detachments:bsdata config:bsdata configKids:bsdata info:bsdata infoKids:bsdata units:bsdata names:bsdata maxPerList:bsdata"
+  "NR_IDS": {
+   "what": "the ids of New Recruit's data that the owner's committed exports (verify/sources/nr-json) have shown, by which the list import looks a selection up first; one no export has shown is looked up by its exact New Recruit name (verify/import-ids.js --write)",
+   "cols": "factions:newrecruit roots:newrecruit battleSizes:newrecruit limits:newrecruit dispositions:newrecruit detachments:newrecruit config:newrecruit configKids:newrecruit info:newrecruit infoKids:newrecruit units:newrecruit datasheets:newrecruit names:newrecruit maxPerList:derived"
   },
   "BOXES": {
    "what": "the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give",
@@ -174,7 +170,7 @@ window.WH_VERIFIED = {
    "cols": "quote:gw st:derived on:derived reach:derived scope:derived"
   },
   "BUILD_INDEX": {
-   "what": "what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values over BSData’s): written by verify/build-index.js",
+   "what": "what the in-app import builds a list with beyond the other tables (enhancement labels, the values a marked rule changes, GW’s values where New Recruit prints another): written by verify/build-index.js",
    "cols": "labels:derived marks:derived gw:derived battleSizes:derived upgrades:derived"
   },
   "AGREE": {
@@ -228,11 +224,15 @@ window.WH_VERIFIED = {
    "ok": true
   },
   {
-   "name": "bsdata",
+   "name": "marks",
    "ok": true
   },
   {
    "name": "dispositions",
+   "ok": true
+  },
+  {
+   "name": "points",
    "ok": true
   },
   {

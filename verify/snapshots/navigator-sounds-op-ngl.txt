@@ -3492,7 +3492,7 @@ Enhancement
 
 IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Bringer of Justice","cerastus-knight-atrapos","A 8",null] · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
 A 8 · GRANTED BY
@@ -3503,7 +3503,7 @@ Enhancement
 
 IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Hunter’s Eye","knight-crusader","IGNORES COVER","IGNORES COVER"] · NAVIGATOR SOUNDS OP NGL Navigator sounds op ngl
 IGNORES COVER · GRANTED BY
@@ -3514,7 +3514,7 @@ Enhancement
 
 IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 IGNORES COVER Core rule
 

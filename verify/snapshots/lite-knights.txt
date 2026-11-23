@@ -3700,7 +3700,7 @@ Grav-Assault Force detachment rule
 
 Friendly GRAV-ASSAULT units have 4+ InSv against ranged attacks.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Memento Moritoi","contemptor-galatus-dreadnought","A 9",null] · LITE KNIGHTS Lite Knights
 A 9 · GRANTED BY
@@ -3711,7 +3711,7 @@ Upgrade
 
 ADEPTUS CUSTODES DREADNOUGHT model only. This model’s melee attacks have +1 A, S and D.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Memento Moritoi","contemptor-galatus-dreadnought","D 4",null] · LITE KNIGHTS Lite Knights
 D 4 · GRANTED BY
@@ -3722,7 +3722,7 @@ Upgrade
 
 ADEPTUS CUSTODES DREADNOUGHT model only. This model’s melee attacks have +1 A, S and D.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Memento Moritoi","contemptor-galatus-dreadnought","S 11",null] · LITE KNIGHTS Lite Knights
 S 11 · GRANTED BY
@@ -3733,7 +3733,7 @@ Upgrade
 
 ADEPTUS CUSTODES DREADNOUGHT model only. This model’s melee attacks have +1 A, S and D.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Vexilla","trajann-valoris-allarus-custodians","OC 3",null] · LITE KNIGHTS Lite Knights
 OC 3 · GRANTED BY
@@ -3745,7 +3745,7 @@ Allarus Custodians · datasheet ability
 This unit has +1 OC.
 This unit can ignore modifiers to this unit’s Ld.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:ANATHEMA PSYKANA · LITE KNIGHTS Lite Knights
 ADEPTUS CUSTODES ARMY RULE

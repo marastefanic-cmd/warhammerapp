@@ -3853,7 +3853,7 @@ Bloodletters · Upgrade
 
 LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Bane-Forged Weapons","bloodmaster-bloodletters","S 7",null] · THE EXILED LEGION The Exiled Legion
 S 7 · GRANTED BY
@@ -3864,7 +3864,7 @@ Bloodletters · Upgrade
 
 LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Bane-Forged Weapons","skulltaker-bloodletters","S 6",null] · THE EXILED LEGION The Exiled Legion
 S 6 · GRANTED BY
@@ -3875,7 +3875,7 @@ Bloodletters · Upgrade
 
 LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Bane-Forged Weapons","skulltaker-bloodletters","S 7",null] · THE EXILED LEGION The Exiled Legion
 S 7 · GRANTED BY
@@ -3886,7 +3886,7 @@ Bloodletters · Upgrade
 
 LEGIONES DAEMONICA BATTLELINE unit only. This unit’s attacks have +1 S.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Daemonic Allegiance","daemon-prince-of-chaos","S 10",null] · THE EXILED LEGION The Exiled Legion
 S 10 · GRANTED BY
@@ -3903,7 +3903,7 @@ Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this mod
 
 Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Daemonic Allegiance","daemon-prince-of-chaos","S 8",null] · THE EXILED LEGION The Exiled Legion
 S 8 · GRANTED BY
@@ -3920,7 +3920,7 @@ Daemon Prince of Nurgle: If this model has the NURGLE keyword, add 1 to this mod
 
 Daemon Prince of Slaanesh: If this model has the SLAANESH keyword, add 2" to this model’s Move characteristic.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Daemonic Icon","bloodmaster-bloodletters","LD 6+",null] · THE EXILED LEGION The Exiled Legion
 LD 6+ · GRANTED BY
@@ -3931,7 +3931,7 @@ Bloodletters · datasheet ability
 
 Models in the bearer’s unit have a Leadership characteristic of 6+.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Daemonic Icon","skullmaster-bloodcrushers","LD 6+",null] · THE EXILED LEGION The Exiled Legion
 LD 6+ · GRANTED BY
@@ -3942,7 +3942,7 @@ Bloodcrushers · datasheet ability
 
 Models in the bearer’s unit have a Leadership characteristic of 6+.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Daemonic Icon","skulltaker-bloodletters","LD 6+",null] · THE EXILED LEGION The Exiled Legion
 LD 6+ · GRANTED BY
@@ -3953,7 +3953,7 @@ Bloodletters · datasheet ability
 
 Models in the bearer’s unit have a Leadership characteristic of 6+.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Lord of Decapitations","skulltaker-bloodletters","DEVASTATING WOUNDS","DEVASTATING WOUNDS"] · THE EXILED LEGION The Exiled Legion
 DEVASTATING WOUNDS · GRANTED BY
@@ -3964,7 +3964,7 @@ Skulltaker · datasheet ability
 
 While this model is leading a unit, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 DEVASTATING WOUNDS Core rule
 

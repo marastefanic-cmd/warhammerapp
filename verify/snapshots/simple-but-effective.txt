@@ -4033,7 +4033,7 @@ Enhancement
 
 WARBOSS model only. This model’s melee attacks have +1 D.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Brutal But Kunnin’","beastboss-on-squigosaur","D 4",null] · SIMPLE BUT EFFECTIVE Simple but effective
 D 4 · GRANTED BY
@@ -4044,7 +4044,7 @@ Enhancement
 
 WARBOSS model only. This model’s melee attacks have +1 D.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Brutal But Kunnin’","beastboss-on-squigosaur","D D6+1",null] · SIMPLE BUT EFFECTIVE Simple but effective
 D D6+1 · GRANTED BY
@@ -4055,7 +4055,7 @@ Enhancement
 
 WARBOSS model only. This model’s melee attacks have +1 D.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Displays of Savagery","nazdreg-meganobz","SUSTAINED HITS 1","SUSTAINED HITS 1"] · SIMPLE BUT EFFECTIVE Simple but effective
 SUSTAINED HITS 1 · GRANTED BY
@@ -4066,7 +4066,7 @@ Bully Boyz detachment rule
 
 Friendly MEGANOBZ/NOBZ units’ melee attacks have [SUSTAINED HITS 1].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 SUSTAINED HITS 1 Core rule
 
@@ -4081,7 +4081,7 @@ Bully Boyz detachment rule
 
 Friendly MEGANOBZ/NOBZ units’ melee attacks have [SUSTAINED HITS 1].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 SUSTAINED HITS 1 Core rule
 
@@ -4097,7 +4097,7 @@ Nazdreg · datasheet ability
 This unit has Deep Strike.
 This unit’s ranged attacks have [IGNORES COVER].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 IGNORES COVER Core rule
 
@@ -4113,7 +4113,7 @@ Zodgrod Wortsnagga · datasheet ability
 This unit is riled up.
 This unit’s Scavenged Shivs weapons have +1 A, WS and S.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Super Runts","zodgrod-wortsnagga-runtherd-gretchin","S 3",null] · SIMPLE BUT EFFECTIVE Simple but effective
 S 3 · GRANTED BY
@@ -4125,7 +4125,7 @@ Zodgrod Wortsnagga · datasheet ability
 This unit is riled up.
 This unit’s Scavenged Shivs weapons have +1 A, WS and S.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Super Runts","zodgrod-wortsnagga-runtherd-gretchin","WS 4+",null] · SIMPLE BUT EFFECTIVE Simple but effective
 WS 4+ · GRANTED BY
@@ -4137,7 +4137,7 @@ Zodgrod Wortsnagga · datasheet ability
 This unit is riled up.
 This unit’s Scavenged Shivs weapons have +1 A, WS and S.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:ANTI-MONSTER/VEHICLE 3+ · SIMPLE BUT EFFECTIVE Simple but effective
 CORE RULE

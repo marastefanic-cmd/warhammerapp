@@ -3851,7 +3851,7 @@ Lord on Juggernaut · datasheet ability
 
 While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Blade of Endless Bloodshed","daemon-prince-of-khorne","A 17",null] · BIG DEMONS BABY Big demons baby
 A 17 · GRANTED BY
@@ -3862,7 +3862,7 @@ Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Blade of Endless Bloodshed","daemon-prince-of-khorne","A 9",null] · BIG DEMONS BABY Big demons baby
 A 9 · GRANTED BY
@@ -3873,7 +3873,7 @@ Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Blade of Endless Bloodshed","daemon-prince-of-khorne","D 2",null] · BIG DEMONS BABY Big demons baby
 D 2 · GRANTED BY
@@ -3884,7 +3884,7 @@ Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Blade of Endless Bloodshed","daemon-prince-of-khorne","D 4",null] · BIG DEMONS BABY Big demons baby
 D 4 · GRANTED BY
@@ -3895,7 +3895,7 @@ Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Blade of Endless Bloodshed","daemon-prince-of-khorne","S 7",null] · BIG DEMONS BABY Big demons baby
 S 7 · GRANTED BY
@@ -3906,7 +3906,7 @@ Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Blade of Endless Bloodshed","daemon-prince-of-khorne","S 9",null] · BIG DEMONS BABY Big demons baby
 S 9 · GRANTED BY
@@ -3917,7 +3917,7 @@ Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Blood-forged Armour","master-of-executions","SV 2+",null] · BIG DEMONS BABY Big demons baby
 SV 2+ · GRANTED BY
@@ -3928,7 +3928,7 @@ Enhancement
 
 BLOOD LEGIONS or WORLD EATERS model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:Advance roll · BIG DEMONS BABY Big demons baby
 CORE RULE

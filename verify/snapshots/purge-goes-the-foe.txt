@@ -4042,7 +4042,7 @@ Cohort Cybernetica detachment rule
 
 Add 2" to the Move characteristic of models in LEGIO CYBERNETICA units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Omnispex","skitarii-rangers","IGNORES COVER","IGNORES COVER"] · PURGE GOES THE FOE Purge goes the Foe
 IGNORES COVER · GRANTED BY
@@ -4053,7 +4053,7 @@ datasheet ability
 
 Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 IGNORES COVER Core rule
 

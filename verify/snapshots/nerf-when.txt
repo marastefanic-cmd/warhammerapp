@@ -4293,7 +4293,7 @@ Bladeguard Veteran Squad · Upgrade
 
 ADEPTUS ASTARTES INFANTRY unit only. This unit’s melee attacks have [Sustained Hits 1: non-Monster/Vehicle].
 
-Already in the keywords shown (as New Recruit and BSData list them).
+Already in the keywords shown (as New Recruit lists them).
 
 SUSTAINED HITS 1: non-Monster/Vehicle Core rule
 
@@ -4308,7 +4308,7 @@ datasheet ability
 
 This unit has 5+ InSv.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup grant:["Storm Shield","deathwatch-terminator-squad","W 4",null] · NERF WHEN Nerf when
 W 4 · GRANTED BY
@@ -4319,7 +4319,7 @@ datasheet ability
 
 This model has +1 W.
 
-Already in the value shown (as New Recruit and BSData list it).
+Already in the value shown (as New Recruit lists it).
 
 ######## popup rule:ASSAULT · NERF WHEN Nerf when
 CORE RULE
