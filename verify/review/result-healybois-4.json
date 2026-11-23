@@ -1,0 +1,122 @@
+[
+ {
+  "key": "aa28911a6a85539b",
+  "where": "healybois · Hive Tyrant · Will of the Hive Mind",
+  "verdict": "ok",
+  "why": "Carried over: the key is unchanged and is in verify/approvals.json (unchanged on this branch). The same key means the same judgement and source text. Its unit is in the 22 Nov export (the Norn Assimilator twice, both with the same abilities; the Hive Tyrant + Tyrant Guard). The gate step helpers passes: 754 judgements, 754 approved, 0 to check."
+ },
+ {
+  "key": "fb72e7866950640e",
+  "where": "healybois · Hive Tyrant · Onslaught",
+  "verdict": "ok",
+  "why": "Carried over: the key is unchanged and is in verify/approvals.json (unchanged on this branch). The same key means the same judgement and source text. Its unit is in the 22 Nov export (the Norn Assimilator twice, both with the same abilities; the Hive Tyrant + Tyrant Guard). The gate step helpers passes: 754 judgements, 754 approved, 0 to check."
+ },
+ {
+  "key": "072a6e063b9aa7d4",
+  "where": "healybois · Hive Tyrant · Onslaught",
+  "verdict": "ok",
+  "why": "Carried over: the key is unchanged and is in verify/approvals.json (unchanged on this branch). The same key means the same judgement and source text. Its unit is in the 22 Nov export (the Norn Assimilator twice, both with the same abilities; the Hive Tyrant + Tyrant Guard). The gate step helpers passes: 754 judgements, 754 approved, 0 to check."
+ },
+ {
+  "key": "91eb115a67f5a50e",
+  "where": "healybois · Hive Tyrant · Parasitic Biomorphology",
+  "verdict": "ok",
+  "why": "Carried over: the key is unchanged and is in verify/approvals.json (unchanged on this branch). The same key means the same judgement and source text. Its unit is in the 22 Nov export (the Norn Assimilator twice, both with the same abilities; the Hive Tyrant + Tyrant Guard). The gate step helpers passes: 754 judgements, 754 approved, 0 to check."
+ },
+ {
+  "key": "97e585ff613e5f98",
+  "where": "healybois · Hive Tyrant · Guardian Organism",
+  "verdict": "ok",
+  "why": "Carried over: the key is unchanged and is in verify/approvals.json (unchanged on this branch). The same key means the same judgement and source text. Its unit is in the 22 Nov export (the Norn Assimilator twice, both with the same abilities; the Hive Tyrant + Tyrant Guard). The gate step helpers passes: 754 judgements, 754 approved, 0 to check."
+ },
+ {
+  "key": "4053d2dd9eb771cf",
+  "where": "healybois · Norn Assimilator · Singular Purpose",
+  "verdict": "ok",
+  "why": "Carried over: the key is unchanged and is in verify/approvals.json (unchanged on this branch). The same key means the same judgement and source text. Its unit is in the 22 Nov export (the Norn Assimilator twice, both with the same abilities; the Hive Tyrant + Tyrant Guard). The gate step helpers passes: 754 judgements, 754 approved, 0 to check."
+ },
+ {
+  "key": "cd112b0489b13a52",
+  "where": "healybois · Norn Assimilator · Singular Purpose",
+  "verdict": "ok",
+  "why": "Carried over: the key is unchanged and is in verify/approvals.json (unchanged on this branch). The same key means the same judgement and source text. Its unit is in the 22 Nov export (the Norn Assimilator twice, both with the same abilities; the Hive Tyrant + Tyrant Guard). The gate step helpers passes: 754 judgements, 754 approved, 0 to check."
+ },
+ {
+  "key": "a0ac5edb1bfbf767",
+  "where": "healybois · Norn Assimilator · Singular Purpose",
+  "verdict": "ok",
+  "why": "Carried over: the key is unchanged and is in verify/approvals.json (unchanged on this branch). The same key means the same judgement and source text. Its unit is in the 22 Nov export (the Norn Assimilator twice, both with the same abilities; the Hive Tyrant + Tyrant Guard). The gate step helpers passes: 754 judgements, 754 approved, 0 to check."
+ },
+ {
+  "key": "b3260020caae3baa",
+  "where": "healybois · Norn Assimilator · Singular Purpose",
+  "verdict": "ok",
+  "why": "Carried over: the key is unchanged and is in verify/approvals.json (unchanged on this branch). The same key means the same judgement and source text. Its unit is in the 22 Nov export (the Norn Assimilator twice, both with the same abilities; the Hive Tyrant + Tyrant Guard). The gate step helpers passes: 754 judgements, 754 approved, 0 to check."
+ },
+ {
+  "key": "0644cc8affb188cd",
+  "where": "healybois · Norn Assimilator · Harpoon Barbs",
+  "verdict": "ok",
+  "why": "Carried over: the key is unchanged and is in verify/approvals.json (unchanged on this branch). The same key means the same judgement and source text. Its unit is in the 22 Nov export (the Norn Assimilator twice, both with the same abilities; the Hive Tyrant + Tyrant Guard). The gate step helpers passes: 754 judgements, 754 approved, 0 to check."
+ },
+ {
+  "key": "476544f109997d65",
+  "where": "healybois · Norn Assimilator · Protean Purpose",
+  "verdict": "ok",
+  "why": "Carried over: the key is unchanged and is in verify/approvals.json (unchanged on this branch). The same key means the same judgement and source text. Its unit is in the 22 Nov export (the Norn Assimilator twice, both with the same abilities; the Hive Tyrant + Tyrant Guard). The gate step helpers passes: 754 judgements, 754 approved, 0 to check."
+ },
+ {
+  "key": "425ddf6d01b3a8a2",
+  "where": "healybois · Norn Assimilator · Synaptoprescience",
+  "verdict": "ok",
+  "why": "Carried over: the key is unchanged and is in verify/approvals.json (unchanged on this branch). The same key means the same judgement and source text. Its unit is in the 22 Nov export (the Norn Assimilator twice, both with the same abilities; the Hive Tyrant + Tyrant Guard). The gate step helpers passes: 754 judgements, 754 approved, 0 to check."
+ },
+ {
+  "key": "81d035899e995865",
+  "where": "points (healybois-4 export)",
+  "verdict": "ok",
+  "why": "Checked against the export (verify/sources/nr-json/healybois.json, byte-identical to the owner upload d8ed0bb5, sha256 dabda48e…): Swarmlord 210 + TG 170 = 380; Hive Tyrant 195 + Parasitic Biomorphology 25 + TG 170 = 390; Biovores 60; Pyrovores 100 ×2; Ripper Swarms 30; Norn Assimilator 250 + Synaptoprescience 30 = 280; Norn Assimilator 270 + 30 = 300; Norn Emissary 250; Psychophage 110; Spore Mines 0. Total 2000, which is the roster cost; 10 units after the two attachments. GW (Wahapedia tyranids_Norn-Assimilator: \"YOUR 1ST UNIT COSTS 1 model 250 / YOUR 2ND+ UNIT COSTS 1 model 270\"; Tyrant Guard \"6 models 170\", no per-item costs, so the bone cleaver is free; Hive Tyrant \"1 model 195\"; tyranids.txt \"Synaptoprescience UPGRADE 30 pts\"). The citation is correct. Wahapedia core.txt 25.04 Fill Your Army Roster, Select Enhancements: \"Upgrades: Some enhancements are tagged with ’Upgrade’. Unlike other enhancements: … You can include up to three of the same Upgrade in your army (the second and third instances of the same Upgrade do not count towards the total number of enhancements in your army, but you must still spend the stated points cost each time).\" There are 2 enhancements against a limit of 3, and DP 2 + 1 = 3. The removed values are right too (old export: The Red Terror 120; Tyrannofex 170 + Acid spray 10, GW 1st-2nd 170). The gate step points passes. Nidzillas already holds the same 280/300 pair."
+ },
+ {
+  "key": "ce0f572a99a35c4c",
+  "where": "healybois · Hive Tyrant + Tyrant Guard",
+  "verdict": "ok",
+  "why": "Export: 6× Tyrant Guard, each with \"Bone cleaver, lash whip and rending claws\" (NR id a6ee-80cb-5346-3c2a), profile \"(Parasitic Biomorphology)\" Melee A3 WS3+ S6 AP-1 D2. GW (Wahapedia tyranids_Tyrant-Guard): \"Bone cleaver, lash whip and rending claws Melee 3 3+ 5 -1 2\", no keywords. The option is \"Any number of models can each have their scything talons and rending claws replaced with one of the following: 1 bone cleaver, lash whip and rending claws\", so all 6 is legal. Parasitic Biomorphology: \"Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit.\" The Tyrant Guard are in the bearer’s unit (the Hive Tyrant leads them), so S5→6 is right and marked from Parasitic Biomorphology. The Swarmlord’s Tyrant Guard (no enhancement) still show S5 Scything talons and rending claws. Synapse’s +1 S is not baked in (it is conditional). Snapshot: the overview and unit screen show 3 / 3+ / 6 / -1 / 2, and the base line reads \"standard Bone cleaver, lash whip and rending claws\". The gate steps numbers, marks and nr pass."
+ },
+ {
+  "key": "dfe2646dcdd3978e",
+  "where": "healybois · Norn Assimilator (norn-assimilator-synaptoprescience)",
+  "verdict": "ok",
+  "why": "Export unit 1: Norn Assimilator 250 + Synaptoprescience 30, with Monstrous scything talons and Toxinjecter harpoon (profile name \"Toxinjecter Harpoon\", New Recruit’s spelling as before). GW: the Norn Assimilator \"is equipped with: toxinjector harpoon; monstrous scything talons\". Synaptoprescience: \"NORN ASSIMILATOR unit only. This unit has 4+ InSv.\" InSv 4+ is marked from Synaptoprescience. Points 280 (1st unit)."
+ },
+ {
+  "key": "435e3ef1df29876b",
+  "where": "healybois · Norn Assimilator (norn-assimilator-synaptoprescience-2)",
+  "verdict": "ok",
+  "why": "Export unit 2: Norn Assimilator 270 + Synaptoprescience 30 = 300, the same wargear. GW: 2nd+ unit 270. Taking Synaptoprescience a second time is legal (Core Rules 25.04 Upgrades, quoted under the points item). InSv 4+ is marked. The app keeps the two apart as \"(1 of 2)\" and \"(2 of 2)\" in every place that lists units (the enhancement list, APPLIES TO, USED BY, bases, unit navigation). The second one has its own unit screen at 300 pts, the same as the first except the points."
+ },
+ {
+  "key": "160dc5aca617f37e",
+  "where": "verify/build-parity.js N (healybois-4)",
+  "verdict": "ok",
+  "why": "verify/build-parity.js: the three Tyrannofex wargear negatives and the T-value negative now run on basic-bitch’s export. Its Tyrannofex has the same loadout (Powerful limbs, Stinger salvoes, Acid spray; 170 pts) and basic-bitch has no rule that changes T. The expected messages are unchanged and still met (build-parity: 263 checks, 0 failures). The healybois negatives that use the first Norn Assimilator (InSv 2+) still find one. The Protean Purpose expectations list [Norn Assimilator, Norn Assimilator, Norn Emissary], which matches the export."
+ },
+ {
+  "key": "e43273b12d7f33b9",
+  "where": "healybois-4: removed and regenerated entries",
+  "verdict": "ok",
+  "why": "Nothing is left dangling. git grep finds no healybois reference to The Red Terror or the Tyrannofex outside snapshots and reviews: they are gone from the hand file, derive-agreed (3 Tyrannofex items), deviations-nr (the base), provenance (2 Red Terror items) and NR_IDS (healybois/the-red-terror, healybois/tyrannofex). The shared DATASHEETS rows tyranids/the-red-terror and tyranids/tyrannofex stay, because basic-bitch and nidzillas still use them (the Red Terror row only moved in data.js). readings2.json changes only the position of the Red Terror readings and the Norn owners. The reimport step re-creates data.js, deviations-nr and waha-datasheets byte for byte. Nit, no fix needed: DATASHEETS tyranids/tyrant-guard now has S after kw in the Bone cleaver row. It is the same value, the app renders columns in a fixed order, and tables/reimport accept it."
+ },
+ {
+  "key": "healybois-4|source-date",
+  "where": "healybois · source line (data.js ARMIES healybois.source)",
+  "verdict": "note",
+  "why": "The app says \"New Recruit, exported 23 Nov 2026 (JSON)\". The owner says the export is from 22 Nov, and the upload is stamped 2026-11-22 22:40. The JSON carries no date, so verify/from-json.js uses the day the export file was committed (8cba527, 2026-11-23). That is the project-wide rule (healybois’s old 31 Oct came the same way), not this branch’s error, but the line names a day that is not the export day. If the owner wants the true day, the hand file’s source can say 22 Nov. The date also decides the NEWEST FIRST order in the list picker: Healybois now sorts above Basic Bitch in the shooty snapshot, and would on 22 Nov too."
+ },
+ {
+  "key": "healybois-4|gate",
+  "where": "node verify/run.js (wt-hb at f377edd, VERIFY_JOBS=2)",
+  "verdict": "ok",
+  "why": "Every step passes except snapshots: healybois.txt and shooty.txt changed. healybois: The Red Terror and the Tyrannofex are gone from every screen (overview, checklist, strategic reserves 11→10 units, bases 2→1 120×92 oval, stratagem USED BY lists, rule IN THIS ARMY lists, popups). The second Norn Assimilator (300 pts, 1 of 2 / 2 of 2) is added everywhere. The Hive Tyrant’s Tyrant Guard show Bone cleaver 3/3+/6/-1/2. The Damage tab’s default unit becomes The Swarmlord + Tyrant Guard because the first unit (The Red Terror) is gone. The source line changes to 23 Nov. shooty: the list picker’s NEWEST FIRST order swaps Healybois and Basic Bitch (the new source date), and the tables overview counts 225→224 unit entries, 206→205 unit ids, 883→884 names (the bone cleaver id). There is no ARMIES/TZEEEEENTCH heading oddity in the full gate’s snapshots. helpers: 754 approved, 0 to check."
+ }
+]
