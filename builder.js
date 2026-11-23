@@ -25,11 +25,14 @@ const kids = s => (s && s.selections) || [];
 const costOf = s => ptsOf(s) + kids(s).reduce((t, c) => t + costOf(c), 0);
 const uniq = a => a.filter((x, i) => a.indexOf(x) === i);
 // the rows of GW's WARGEAR OPTIONS costs (DATASHEETS points.wargear, "per Praesidium Shield 25") a selection of this name takes: the row
-// of its name, or of each item of a bundle it names (BSData's one option "Paragon Blade & Praesidium Shield" is GW's Praesidium Shield)
-const wargearOf = (P, name) => { const rows = (P && P.wargear) || [], n = lc(name), hit = rows.filter(w => lc(w.name) === n);
+// of its name, or of each item of a bundle it names (New Recruit's one option "Paragon Blade & Praesidium Shield" is GW's Praesidium
+// Shield), names compared in the singular (New Recruit's "Twin Killsaw", GW's "per Twin Killsaws 5"). The one matcher: the gate step
+// points (verify/points.js) prices a list's wargear with this same function.
+const sing = s => String(s).toLowerCase().replace(/[’‘']/g, "'").replace(/[^a-z0-9']+/g, ' ').trim().split(' ').map(w => w.replace(/ies$/, 'y').replace(/(?<=[a-z])xes$/, 'x').replace(/(?<!s)s$/, '')).join(' ');
+const wargearOf = (P, name) => { const rows = (P && P.wargear) || [], n = sing(name), hit = rows.filter(w => sing(w.name) === n);
   if(hit.length) return hit;
-  const parts = n.split(/\s*(?:&|,|\band\b)\s*/).filter(Boolean);
-  return parts.length > 1 ? rows.filter(w => parts.includes(lc(w.name))) : []; };
+  const parts = lc(name).split(/\s*(?:&|,|\band\b)\s*/).filter(Boolean).map(sing);
+  return parts.length > 1 ? rows.filter(w => parts.includes(sing(w.name))) : []; };
 const slug = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'`]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const and = a => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
 const ROLES = ['Epic Hero', 'Character', 'Battleline', 'Dedicated Transport', 'Infantry', 'Mounted', 'Beast', 'Swarm', 'Vehicle', 'Monster', 'Fortification'];
@@ -866,7 +869,7 @@ function marksOf(B, army, u, parts, P, rows, abil){
 }
 const where = parts => 'unit ' + parts.map(p => nn(p.name)).join(' + ');
 
-const api = { build, wargearOf, ruleAbilities, ruleAbilitiesOf, ruleAbilityErrorsOf, keywordsOf, ruleOfRow, coreText, meetsTo, WITH_RULE, catalogued, catalogues, malformed, nn, lc, typo, slug, uniq, and, splitList, lastId };
+const api = { build, wargearOf, sing, ruleAbilities, ruleAbilitiesOf, ruleAbilityErrorsOf, keywordsOf, ruleOfRow, coreText, meetsTo, WITH_RULE, catalogued, catalogues, malformed, nn, lc, typo, slug, uniq, and, splitList, lastId };
 root.WH_BUILDER = api;
 if(typeof module !== 'undefined' && module.exports) module.exports = api;
 })(typeof window !== 'undefined' ? window : globalThis);

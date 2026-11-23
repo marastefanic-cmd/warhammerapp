@@ -355,7 +355,7 @@ lists' units by `import.js` as before, and the list says so. What it reads:
 | From | What |
 |---|---|
 | the export | the units and who leads whom, models lines and their gear, the weapons and models (each to its `DATASHEETS` row by name), the enhancement, the Warlord, the points, the values its profiles show |
-| `DATASHEETS` | the rows, a wargear ability only with its wargear (`options`), a Leader / Support ability (whom it may join; not a row of the unit), GW's `points` |
+| `DATASHEETS` | the rows, a wargear ability only with its wargear (`options`), a Leader / Support ability (whom it may join; not a row of the unit), GW's `points` (a unit's: its band for that copy and size, each "per <item> N" wargear cost a selection takes, by its name or an item of a bundle it names, in the singular: `wargearOf`, the one matcher the gate step `points` uses too, and its enhancement's) |
 | `FACTIONS` | detachments, enhancements (name, text, pts, `limit`, `upgrade`), army and detachment rules |
 | `BOXES`, `BUILD_INDEX` | a "+" mark: a value the export shows otherwise than the row is a rule of the list at work; its source is the one rule reaching the unit whose boxes give that effect, else the one `BUILD_INDEX.marks` names for it; a value `BUILD_INDEX.gw` says is New Recruit's own where GW's datasheet differs (as an export or PDF of the owner's shows it, `verify/deviations-nr.json`) is no rule at work. A change no rule explains, or two explain, refuses the import |
 | `NR_IDS` | the faction, battle size, detachments and disposition (as `import.js` reads them: by an id a known export has shown, else by exact name), and a part's datasheet (`datasheets`, else the one row of its exact New Recruit name) |

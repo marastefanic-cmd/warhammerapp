@@ -134,16 +134,19 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
   // GW's points for a unit with paid wargear and an enhancement (the Custodes player's report: a Shield-Captain with a Praesidium Shield
   // and a 30-point enhancement is 180 + 25 + 30 = 235; the app said 210, as BSData's option "Paragon Blade & Praesidium Shield" is not
   // named GW's "per Praesidium Shield 25"): Lite Knights with Shadowkeepers for Might of the Moritoi (its Dreadnought enhancements, the
-  // Galatus their Warblade changes and the second Telemon out) and a Shield-Captain, Genalchemic Warding (30) when enh
+  // Galatus their Warblade changes and the second Telemon out) and a Shield-Captain, Genalchemic Warding (30) when enh. Shadowkeepers,
+  // Priority Assets and the Shield-Captain are under ids no committed export has shown (UNSEEN): each is found by its exact name
+  const UNSEEN = { det:'0000-unseen-0000-shadowkeepers', fd:'0000-unseen-0000-priority-assets', sc:'0000-unseen-0000-shield-captain' };
+  ok(Object.values(UNSEEN).every(id => !JSON.stringify(D.nrIds || {}).includes(id)), 'N the Shield-Captain cases’ ids are ones no export has shown');
   const shieldCaptain = (j, o) => {
     const S = D.datasheets['adeptus-custodes/shield-captain'], s = sels(j), pts = v => ({ name:'pts', typeId:'51b2-306e-1021-d207', value:v });
     const det = s.find(x => x.name === 'Detachment').selections.find(x => x.name === 'Might of the Moritoi');
-    det.name = 'Shadowkeepers'; det.entryId = det.entryId.replace(/[^:]+$/, 'b1d2-7b13-3831-7915');
-    const fd = s.find(x => x.name === 'Force Disposition').selections[0]; fd.name = 'Priority Assets'; fd.entryId = fd.entryId.replace(/[^:]+$/, '081d-bc07-5d4e-ab22');
+    det.name = 'Shadowkeepers'; det.entryId = det.entryId.replace(/[^:]+$/, UNSEEN.det);
+    const fd = s.find(x => x.name === 'Force Disposition').selections[0]; fd.name = 'Priority Assets'; fd.entryId = fd.entryId.replace(/[^:]+$/, UNSEEN.fd);
     for(const x of s) if(x.selections) x.selections = x.selections.filter(c => !/^Enhancements/.test(c.group || ''));
     s.splice(s.findIndex(x => x.name === 'Contemptor-Galatus Dreadnought'), 1); s.splice(s.indexOf(s.filter(x => x.name === 'Telemon Heavy Dreadnought')[1]), 1);
     const ch = c => Object.entries(c).map(([n2, v]) => ({ name:n2, $text:v })), pb = S.melee.find(r => r.name === 'Eternity-pattern Paragon Blade');
-    (o.copies || [o]).forEach((c, k) => s.push({ id:'sc' + k, name:S.name, entryId:'x::' + S.bsId, number:1, type:'model', costs:[pts(c.base || 180)],
+    (o.copies || [o]).forEach((c, k) => s.push({ id:'sc' + k, name:S.name, entryId:'x::' + UNSEEN.sc, number:1, type:'model', costs:[pts(c.base || 180)],
       profiles:[{ name:S.name, typeName:'Unit', characteristics:ch({ M:'8"', T:'7', Sv:'2+', W:'8', LD:'5+', OC:'2', InSv:'4+' }) }],
       selections:(c.enh ? [{ id:'sce' + k, name:'Genalchemic Warding', entryId:'x::e', number:1, type:'upgrade', group:'Enhancements::Shadowkeepers Enhancements', costs:[pts(30), { name:'Enhancements', value:1 }] }] : [])
         .concat([{ id:'scw' + k, name:'Paragon Blade & Praesidium Shield', entryId:'x::5267-88a7-c874-ba99', number:1, type:'upgrade', group:'Wargear', costs:[pts(c.shield == null ? 25 : c.shield)],
@@ -163,10 +166,39 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
   scCase('Shield-Captain, Praesidium Shield, no enhancement: 180 + 25', {}, [205]);
   scCase('two Shield-Captains with Praesidium Shields: the second at GW’s 200', { copies:[{ enh:true }, { base:200 }] }, [235, 225]);
   scCase('Shield-Captain whose export prices the shield at 20: GW’s 235, both named', { enh:true, shield:20 }, [235], [{ unit:'Shield-Captain', export:230, gw:235 }]);
-  // (every paid option of a catalogued datasheet is one of GW's WARGEAR OPTIONS costs, at the price BSData gives it)
-  { const miss = Object.entries(D.datasheets).filter(([, S]) => S.points).flatMap(([k, S]) => (S.options || []).flatMap(o => o.choices.filter(c => c.pts)
-      .filter(c => B.wargearOf(S.points, c.name).reduce((t, w) => t + w.pts, 0) !== c.pts).map(c => k + ': ' + c.name + ' ' + c.pts)));
-    ok(!miss.length, 'N a paid option that is none of GW’s wargear costs: ' + miss.join('; ')); }
+  // (GW's WARGEAR OPTIONS costs, DATASHEETS points.wargear, held to the Wahapedia page's "per <item> N" rows by verify/catalog.js texts:
+  // every row is taken through wargearOf by at least one wargear choice of its datasheet, and no choice takes a row whose item its name
+  // does not name, the name itself or an item of a bundle, in the singular. No price of New Recruit's or BSData's is compared)
+  { const words = x => ' ' + B.sing(x) + ' ', gone = [], wrong = [];
+    for(const [k, S] of Object.entries(D.datasheets)) if(S.points){
+      const choices = (S.options || []).flatMap(o => o.choices.map(c => c.name));
+      for(const w of (S.points.wargear || [])) if(!choices.some(c => B.wargearOf(S.points, c).includes(w))) gone.push(k + ': per ' + w.name + ' ' + w.pts);
+      for(const c of choices) for(const w of B.wargearOf(S.points, c)) if(!words(c).includes(words(w.name))) wrong.push(k + ': ' + c + ' takes per ' + w.name); }
+    ok(!gone.length, 'N a GW wargear cost no wargear choice takes: ' + gone.join('; '));
+    ok(!wrong.length, 'N a wargear choice takes a GW cost of an item it does not name: ' + wrong.join('; '));
+    report.push('N GW’s wargear costs: ' + Object.values(D.datasheets).filter(S => S.points).reduce((t, S) => t + (S.points.wargear || []).length, 0) + ' rows, each taken by a choice naming its item'); }
+  // (the singular: New Recruit's "Twin Killsaw" is GW's "per Twin Killsaws 5". A Meganobz import priced with them: Orks catalogued for this
+  // case with two datasheets only, their costs and composition from GW's pages, GW's WARGEAR OPTIONS for the choices the export makes, the
+  // weapons' keywords the built-in list Simple but effective has; its Warboss in Mega Armour on its own, the Warlord, no enhancement, and its
+  // Meganobz of 6 with Twin Killsaws, models named as GW's composition names them: 210 + 6 × 5)
+  { const CAT = require('./catalog'), WC = require('./waha-catalog'), W = require('./waha-words')(ROOT, 'orks');
+    const gw = n => { const pg = W.wahaPage(n, 'orks'); return { points:CAT.gwCosts(W.markup(pg.tokens, pg.P, 0, pg.P.s.length - 1).split('\n')), composition:WC(ROOT).sheet(W, n, 'orks').models }; };
+    const LU = D.armies.find(a => a.id === 'simple-but-effective').units.find(u => u.id === 'warboss-in-mega-armour-meganobz'), ds = Object.assign({}, D.datasheets);
+    const kwd = k => { const o = Object.assign({}, ds[k]); for(const kind of ['ranged', 'melee']) o[kind] = o[kind].map(r => { const l = LU[kind].find(x => x.name === r.name); return l && l.kw ? Object.assign({}, r, { kw:l.kw.filter(x => !(l.from || {})[x]) }) : r; }); return o; };
+    ds['orks/meganobz'] = Object.assign(kwd('orks/meganobz'), gw('Meganobz'), { kw:['Infantry', 'Mega Armour', 'Meganobz', 'Explosives', 'Faction: Orks'], rules:['Waaagh!'],
+      options:[{ on:'Meganob', choices:[{ name:'Power Klaw' }, { name:'Killsaw' }, { name:'Twin Killsaw' }], min:1, max:1 }, { on:'Meganob', choices:[{ name:'Kustom Shoota' }, { name:'Kombi-weapon' }], min:0, max:1 }] });
+    ds['orks/warboss-in-mega-armour'] = Object.assign(kwd('orks/warboss-in-mega-armour'), gw('Warboss in Mega Armour'), { role:'Character', kw:['Infantry', 'Character', 'Mega Armour', 'Warboss', 'Warboss in Mega Armour', 'Faction: Orks'], rules:['Leader', 'Da Boss', 'Waaagh!'],
+      options:[{ on:'Warboss in Mega Armour', choices:[{ name:'Power Klaw' }, { name:'’Uge Choppa' }], min:1, max:1 }, { on:'Warboss in Mega Armour', choices:[{ name:'Kustom Shoota' }, { name:'Big Shoota' }], min:1, max:1 }] });
+    const D2 = Object.assign({}, D, { datasheets:ds }), j = clone(exp('simple-but-effective')), s = sels(j);
+    const wb = s.find(x => x.name === 'Warboss in Mega Armour'), mg = s.filter(x => x.name === 'Meganobz').find(x => JSON.stringify(x).includes('Twin Killsaw'));
+    delete wb.associations; wb.selections = wb.selections.filter(c => !/Enhancements/.test(c.group || '')).concat([{ id:'wl', name:'Warlord', entryId:'x::wl', number:1, type:'upgrade' }]);
+    for(const m of mg.selections) m.name = 'Meganob';
+    j.roster.forces[0].selections = s.filter(x => x.type === 'upgrade').concat([wb, mg]);
+    const tot = x => ptsOf(x) + (x.selections || []).reduce((t, c) => t + tot(c), 0); j.roster.costs[0].value = j.roster.forces[0].selections.reduce((t, x) => t + tot(x), 0);
+    const r = B.build(j, D2, { id:'n', date:'x' }), got = r.ok ? D.resolve(r.army).units.map(u => u.name + ' ' + u.pts) : r.errors;
+    report.push('N Meganobz with 6 Twin Killsaws (GW’s per Twin Killsaws 5) → ' + JSON.stringify({ units:got, gwPoints:r.ok ? r.army.gwPoints || null : null }));
+    ok(B.wargearOf(ds['orks/meganobz'].points, 'Twin Killsaw').map(w => w.name).join() === 'Twin Killsaws' && r.ok && JSON.stringify(got) === JSON.stringify(['Warboss in Mega Armour 115', 'Meganobz 240']) && !r.army.gwPoints && r.army.pointsUsed === 355,
+      'N Meganobz with Twin Killsaws: 210 + 6 × 5 = 240, the export’s: ' + JSON.stringify(r.ok ? { units:got, gwPoints:r.army.gwPoints } : r.errors)); }
   neg('Legends', 'nidzillas', j => { unit(j, 'Tyrannofex').name = 'Tyrannofex [Legends]'; }, ['unit Tyrannofex [Legends] not imported: Legends, not matched play']);
   neg('Crucible', 'lite-knights', j => { (unit(j, 'Witchseeker Squad').categories = unit(j, 'Witchseeker Squad').categories || []).push({ name:'Crucible', entryId:'x' }); }, ['unit Witchseeker Squad not imported: Crucible, not matched play']);
   neg('malformed', 'nidzillas', j => { sels(j)[5].number = 'one'; }, ['not a New Recruit export (a selection is malformed)']);

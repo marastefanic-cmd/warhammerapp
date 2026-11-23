@@ -7,8 +7,8 @@
      the part's points, less the enhancement it bears (the list's detachments' rows: an enhancement on its bearer's part, an Upgrade on
      the bodyguard), are the page's price for that copy of the datasheet in the list (the k-th unit of it, in the list's order) and its
      number of models (the models lines whose model is a profile or UNIT COMPOSITION line of that datasheet), plus each "per <item> N"
-     row for every such item the part's models lines carry (an item of that name, or a bundle naming it: builder.js wargearOf's rule,
-     names in the singular). An allied unit's price is the page's "Assigned Agent" one where GW prints both.
+     row for every such item the part's models lines carry (an item of that name, or a bundle naming it, names in the singular:
+     builder.js wargearOf, the in-app build's own matcher). An allied unit's price is the page's "Assigned Agent" one where GW prints both.
    A difference fails, unless verify/deviations-points.json declares it ({ list, unit, part, app, gw, reason, evidence }); a declaration
    nothing matches fails. A part whose page or price cannot be read fails too (never passed in silence).
      node verify/points.js     writes verify/out/points.json
@@ -36,10 +36,10 @@ const gwOf = key => { if(costs.has(key)) return costs.get(key);
       const L = W.markup(pg.tokens, pg.P, 0, pg.P.s.length - 1).split('\n'), bare = L.map(l => l.replace(/\*\*/g, '').trim()), at = bare.findIndex((l, i) => /^Assigned Agents?$/i.test(l) && /^YOUR .*COSTS?$/.test(bare.slice(i + 1).find(Boolean) || ''));
       g = at < 0 ? CAT.gwCosts(L) : f !== S.faction ? CAT.gwCosts(L.slice(at + 1)) : CAT.gwCosts(L.slice(0, at)); break; } } }
   const o = { g, file, sheet:S ? WC(ROOT).sheet(WW(fac), S.name, fac) : null }; costs.set(key, o); return o; };
-// the "per <item> N" rows a wargear or weapon name takes: the row of its name, or of each item of a bundle it names (builder.js wargearOf's
-// rule on wt-pts), names compared in the singular (New Recruit's "Twin Killsaw", GW's "per Twin Killsaws 5")
-const wargearOf = (P, name) => { const rows = (P && P.wargear) || [], n = sing(name), hit = rows.filter(w => sing(w.name) === n);
-  if(hit.length) return hit; const parts = lc(name).split(/\s*(?:&|,|\band\b)\s*/).filter(Boolean).map(sing); return parts.length > 1 ? rows.filter(w => parts.includes(sing(w.name))) : []; };
+// the "per <item> N" rows a wargear or weapon name takes: builder.js wargearOf, the one matcher the in-app build prices an import with
+// (the row of its name, or of each item of a bundle it names, names compared in the singular: New Recruit's "Twin Killsaw", GW's "per
+// Twin Killsaws 5")
+const { wargearOf } = require(path.join(ROOT, 'builder.js'));
 const fails = [], notes = [], counts = { parts:0, copies:0, wargear:0, lists:0 };
 const enhPts = (a, name) => { for(const k of a.detachments || []) for(const e of ((D.factions[a.faction].detachments[k] || {}).enhancements || [])) if(lc(e.name) === lc(name) || (e.nr && lc(e.nr) === lc(name))) return Number(e.pts) || 0; return null; };
 for(const a of D.armies){
