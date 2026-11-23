@@ -263,3 +263,16 @@ chaos-daemons The-Masque-Of-Slaanesh
 chaos-daemons Tormentbringer
 chaos-daemons Tranceweaver
 imperial-knights Sir-Hekhtur
+world-eaters Bloodcrushers
+world-eaters Bloodletters
+world-eaters Chaos-Land-Raider
+world-eaters Chaos-Predator-Annihilator
+world-eaters Chaos-Predator-Destructor
+world-eaters Chaos-Spawn
+world-eaters Daemon-Prince-of-Khorne-with-Wings
+world-eaters Defiler
+world-eaters Helbrute
+world-eaters Heldrake
+world-eaters Khorne-Lord-of-Skulls
+world-eaters Lord-Invocatus
+world-eaters Maulerfiend
