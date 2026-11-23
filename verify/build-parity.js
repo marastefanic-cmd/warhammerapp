@@ -239,10 +239,10 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
       ['unit Hive Tyrant + Tyrant Guard: Monstrous bonesword and lash whip S is 3 in the export; GW’s 9 with Parasitic Biomorphology is 10: not imported']);
     neg('a rule’s invulnerable save: better than it gives', 'healybois', j => { unit(j, 'Norn Assimilator').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'InSv').$text = '2+'; },
       ['unit Norn Assimilator: Norn Assimilator InSv is 2+ in the export; GW’s – with Synaptoprescience is 4+: not imported']);
-    // (a value no rule of the list could change, no box, index entry or words of one naming Toughness: the export's own data, GW's value
-    // built and said, as BUILD_INDEX gw's for the owner's lists; builder.js couldTouch)
-    neg('a value no rule of the list could change: GW’s, noted', 'basic-bitch', j => { unit(j, 'Tyrannofex').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'T').$text = '14'; },
-      null, r => r.ok && JSON.stringify(r.notes) === JSON.stringify([{ gwValues:[{ unit:'Tyrannofex', row:'Tyrannofex', field:'T', export:'14', gw:'12' }] }]) && !(r.army.units.find(u => u.id === 'tyrannofex').stats || []).some(s => s.T === '14'));
+    // (a value the export changes next to a rule of the list that could change it: Hyper-adaptations, an army rule of every Tyranids unit,
+    // has a box that falls back (AGREE): refused, never GW's value in its place; builder.js couldTouch)
+    neg('a value next to a rule whose box falls back (Hyper-adaptations): refused', 'basic-bitch', j => { unit(j, 'Tyrannofex').profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'T').$text = '14'; },
+      ['unit Tyrannofex: Tyrannofex T is changed by a rule the app cannot name: not imported']);
     neg('enhancement on a non-CHARACTER', 'healybois', j => { const e = takeEnh(j, 'Hive Tyrant'); resetS(j); unit(j, 'Pyrovores').selections.unshift(e); },
       ['enhancement Parasitic Biomorphology on Pyrovores not imported: only CHARACTER units can be given enhancements (Core Rules 25.04, Select Enhancements)']);
     neg('enhancement on an EPIC HERO', 'healybois', j => { const e = takeEnh(j, 'Hive Tyrant'); resetS(j); unit(j, 'The Swarmlord').selections.unshift(e); },
@@ -269,8 +269,8 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
       const s = sels(j); s.splice(s.findIndex(x => x.name === 'Tyrannofex'), 1); s.push(nt(1, 'Null Nodules'), nt(2, 'Enraged Reserves')); },
       null, r => !r.ok && r.errors.includes('5 enhancements not imported: Strike Force’s enhancement limit is 4 (Core Rules 25.03; 25.04: the second and third instances of the same Upgrade do not count towards it)'));
     // a value New Recruit prints otherwise than GW's datasheet (BUILD_INDEX gw: verify/deviations-nr.json, verify/sources/nr-values.json):
-    // the list is built with GW's value and a note names both; so is any other value no rule of the list could change (builder.js
-    // couldTouch: the export's own data, whatever New Recruit's is); a rule that could change it and does not give it, refused. Lite Knights, its second
+    // the list is built with GW's value and a note names both; any other unexplained value is still refused, as here, where the units' own
+    // abilities are an unread catalogue's (Adeptus Custodes: no readings, so they could change any value; builder.js couldTouch). Lite Knights, its second
     // Telemon out, with a Blade Champion (New Recruit: Hurricanis AP -1, GW -2) and a Knight-Centura (New Recruit: Gun Stock WS 3+, GW 2+)
     { const ch = o => Object.entries(o).map(([n2, v]) => ({ name:n2, $text:v }));
       const wp = (r, kind, nm0, over) => ({ name:nm0, typeName:kind === 'ranged' ? 'Ranged Weapons' : 'Melee Weapons', characteristics:ch(Object.assign({ Range:r.range, A:r.A, [kind === 'ranged' ? 'BS' : 'WS']:kind === 'ranged' ? r.BS : r.WS, S:r.S, AP:r.AP, D:r.D, Keywords:(r.kw || []).join(', ') }, over || {})) });
@@ -293,8 +293,17 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
         if(!r.ok) return false; const v = rowsOf(r), n = (r.notes || []).flatMap(x => x.gwValues || []);
         return v.ap === '-2' && v.ws === '2+' && !v.apFrom && !v.wsFrom && sameNotes(n); });
       neg('the same with GW’s values in the export: built, no note for them', 'lite-knights', withTwo({ ap:'-2', ws:'2+' }), null, r => r.ok && rowsOf(r).ap === '-2' && rowsOf(r).ws === '2+' && !(r.notes || []).flatMap(x => x.gwValues || []).some(x => x.unit === 'Blade Champion' || x.unit === 'Knight-Centura'));
-      neg('a Blade Champion value that is neither GW’s nor New Recruit’s, no rule of the list could change: built with GW’s, noted', 'lite-knights', withTwo({ ap:'-4', ws:'2+' }), null, r => r.ok && rowsOf(r).ap === '-2'
-        && (r.notes || []).flatMap(x => x.gwValues || []).some(x => x.unit === 'Blade Champion' && x.row === 'Hurricanis' && x.field === 'AP' && x.export === '-4' && x.gw === '-2'));
+      neg('a Blade Champion value that is neither GW’s nor New Recruit’s: refused, named', 'lite-knights', withTwo({ ap:'-4', ws:'2+' }), null, r => !r.ok && r.errors.some(e => /Blade Champion: Hurricanis AP is changed by a rule the app cannot name: not imported/.test(e)));
+      // (an enhancement of a detachment the app has not read, Guardians of the Throne's Eagle’s Eye: "This model has 3+ InSv" in a bullet,
+      // no readings: a value the export gives the bearer otherwise than GW is refused, never GW's in its place; builder.js couldTouch)
+      const eagle = insv => j => { withTwo({ ap:'-2', ws:'2+' })(j); const s = sels(j), top = n => s.find(x => x.name === n);
+        top('Detachment').selections = [Object.assign({}, top('Detachment').selections[0], { name:'Guardians of the Throne', entryId:'x::got' })];
+        Object.assign(top('Force Disposition').selections[0], { name:'Priority Assets', entryId:'x::pa' });
+        const drop = x => { x.selections = (x.selections || []).filter(y => !(y.group && /^Enhancements/.test(y.group))); x.selections.forEach(drop); }; s.filter(x => x.type !== 'upgrade').forEach(drop);
+        const bc = s.find(x => x.name === 'Blade Champion'); bc.selections.push({ id:'gve', name:'Eagle’s Eye', entryId:'x::eagle', number:1, type:'upgrade', group:'Enhancements', costs:[{ name:'pts', value:0 }] });
+        if(insv) bc.profiles.find(p => p.typeName === 'Unit').characteristics.find(c => c.name === 'InSv').$text = insv; };
+      neg('an unread detachment’s enhancement (Eagle’s Eye, “3+ InSv”) and the bearer’s InSv 3+ in the export: refused, named', 'lite-knights', eagle('3+'), null,
+        r => !r.ok && r.errors.some(e => /^unit Blade Champion: Blade Champion InSv is changed by a rule the app cannot name: not imported$/.test(e)));
       // where New Recruit could carry the Knight-Centura's Gun Stock (no export of the unit is committed): each layout is built with the
       // row, or refused with the weapon named; a profile is never dropped in silence
       { const KC = D.datasheets['adeptus-custodes/knight-centura'], gun = KC.ranged.find(r => r.name === 'Master-crafted boltgun'), gs = KC.melee.find(r => r.name === 'Gun Stock');
@@ -313,8 +322,7 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
         const stock = r => { const kc = r.ok && D.resolve(r.army).units.find(u => u.name === 'Knight-Centura'), w = kc && (kc.melee || []).find(x => x.name === 'Gun Stock' && x.who === 'Knight-Centura'); return w ? w.WS : null; };   // (the Knight-Centura's own, not the Witchseekers')
         const refusedNamed = r => !r.ok && r.errors.some(e => /Gun Stock/.test(e) && /Knight-Centura/.test(e));
         neg('Gun Stock in the gun’s selection, WS 3+: built with GW’s 2+', 'lite-knights', centura('in the gun’s selection', '3+'), null, r => r.ok && stock(r) === '2+');
-        neg('Gun Stock in the gun’s selection, WS 4+ (no known value, no rule of the list could change it): built with GW’s 2+, noted', 'lite-knights', centura('in the gun’s selection', '4+'), null,
-          r => r.ok && stock(r) === '2+' && (r.notes || []).flatMap(x => x.gwValues || []).some(x => x.unit === 'Knight-Centura' && x.row === 'Gun Stock' && x.export === '4+' && x.gw === '2+'));
+        neg('Gun Stock in the gun’s selection, WS 4+ (no known value): refused, named', 'lite-knights', centura('in the gun’s selection', '4+'), null, refusedNamed);
         neg('Gun Stock on the model’s own selection: refused, named', 'lite-knights', centura('on the model’s own selection', '3+'), null, refusedNamed);
         neg('Gun Stock on the model’s own selection with any value: refused, named', 'lite-knights', centura('on the model’s own selection', '4+'), null, refusedNamed);
         neg('Gun Stock as a selection of its own: refused, named', 'lite-knights', centura('a selection of its own', '3+'), null, refusedNamed);

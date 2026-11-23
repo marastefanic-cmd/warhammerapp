@@ -65,7 +65,9 @@ built, a half swap refused), a detachment named by Wahapedia's heading (Possesse
 Helbrute carrying every weapon its WARGEAR OPTIONS name, a library the test takes each loadout from (every option and mix built, the
 illegal ones refused with their reason); cult-of-blood-helbrute.json a Cult of Blood list with a Helbrute's multi-melta swapped for a
 twin lascannon (built), and the list the value cases change (Lord Invocatus's Bolt pistol at BS 2+: GW's value and the note; a Daemonic
-Icon's Ld given otherwise: refused).
+Icon's Ld given otherwise: refused). tzeentch-keeper-of-secrets.json is the owner's Tzeeeeentch export with a Keeper of Secrets of the
+Chaos Daemons catalogue in place of a Lord of Change, its melee AP one better than GW's (the reviewer's case): refused, as an unread
+aura of its own could give it.
 
 ## import-friend/
 A friend's New Recruit export (Murderband, World Eaters), as their phone imported it: not a list of the owner's, so not in data.js

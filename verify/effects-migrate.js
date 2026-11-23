@@ -84,7 +84,7 @@ function sources(D){
   return out;
 }
 // every source's boxes: { b (the boxes), nc (sentences of rare mechanics, not counted), reach (an aura's units), both (another rule's two
-// options at once for the units it reaches) }, only where there is one
+// options at once for the units it reaches) }; a source with none of them, its name alone (read, nothing in it)
 function build(D){
   const V = Dv.vocab(D), T = {};
   for(const [key, s] of sources(D)){
@@ -106,8 +106,12 @@ function build(D){
     if(r.st) o.st = r.st;
     // its words that change a characteristic no stat box counts ("not counted here: see the rule" under the profile)
     if(r.snc) o.snc = r.snc;
+    // its sentences that change no value of a unit or its weapons, what each does instead (builder.js couldTouch)
+    { const ox = X.otherOf(s, o); if(ox.length) o.ox = ox; }
     if(s.played && Object.keys(o).length) o.played = s.played;
-    if(Object.keys(o).length){ o.n = s.name; T[key] = o; }
+    // (a source read with nothing in it to count or list, its name alone: read, so builder.js knows its words change nothing, couldTouch;
+    // a source with no entry was never read)
+    o.n = s.name; T[key] = o;
   }
   return T;
 }
@@ -120,7 +124,8 @@ const block = T => START + '\n' +
   '// d its defence boxes (the "When targeted" lines: quote, df its defences, on, kind, scope, reach, mark, foe, pick), dnc the defence words\n' +
   '// no effect reads, dreach the units a stratagem protects when they are not its TARGET; st its stat boxes (a unit\'s own characteristic\n' +
   '// a rule changes, the line under its profile: quote, st its effects (effects.js ST), on, reach, scope, opt); snc the words that change a\n' +
-  '// characteristic no stat box counts (quote, stat, why: listed under the profile as not counted)\n' +
+  '// characteristic no stat box counts (quote, stat, why: listed under the profile as not counted); a source with its name alone: read, nothing\n' +
+  '// in its words for a box or a list (builder.js takes it as changing no value of a unit)\n' +
   'const BOXES = {\n' + Object.keys(T).sort().map(k => '  ' + JSON.stringify(k) + ':' + JSON.stringify(T[k])).join(',\n') + '\n};\n' + END;
 function write(src, T){
   const i = src.indexOf(START), j = src.indexOf(END);

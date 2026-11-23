@@ -118,7 +118,7 @@ for(const [key, o] of Object.entries(T)){ const src = S.get(key); for(const b of
 // G1 (the schema): a box, a pick, a scope, a limit, a part, a source carry the fields the script writes and no other (a hand note on a box
 // fails), in what the words give (T) and in data.js BOXES alike
 // (d, dnc, dreach: the defence side, held by verify/defence.js D1; st, the stat boxes, by verify/lines.js LS)
-{ const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both', 'embarked', 'played', 'riled', 'd', 'dnc', 'dreach', 'st', 'snc']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool', 'excl']),
+{ const SRC_KEYS = new Set(['b', 'n', 'reach', 'nc', 'both', 'embarked', 'played', 'riled', 'd', 'dnc', 'dreach', 'st', 'snc', 'ox']), BOX_KEYS = new Set(['quote', 'fx', 'on', 'kind', 'lead', 'scope', 'reach', 'mark', 'lasts', 'opt', 'pick', 'tableRows', 'limit', 'part', 'notSelf', 'pool', 'excl']),
     PICK_KEYS = new Set(['name', 'fx', 'quote', 'on', 'lead', 'part']), SCOPE_KEYS = new Set(['models', 'weapon', 'part', 'wkw', 'wkwNot']), LIMIT_KEYS = new Set(['n', 'what']),
     PART_KEYS = new Set(['on', 'fx', 'quote']), NC_KEYS = new Set(['quote', 'why', 'atk']), BOTH_KEYS = new Set(['names', 'quote', 'reach', 'mark', 'opt', 'lasts']);
   const extra = (o, keys) => Object.keys(o || {}).filter(k => !keys.has(k));
@@ -128,6 +128,9 @@ for(const [key, o] of Object.entries(T)){ const src = S.get(key); for(const b of
     for(const b of o.b || []){ bad.push(...extra(b, BOX_KEYS), ...extra(b.scope, SCOPE_KEYS), ...extra(b.limit, LIMIT_KEYS), ...extra(b.part, PART_KEYS));
       for(const p of b.pick || []) bad.push(...extra(p, PICK_KEYS), ...extra(p.part, PART_KEYS)); }
     for(const x of o.nc || []) bad.push(...extra(x, NC_KEYS));
+    // (ox: a sentence that changes no value, its quote GW's words and the mechanic it is instead, verify/effects-extract.js otherOf)
+    for(const x of o.ox || []){ bad.push(...extra(x, new Set(['quote', 'why']))); const src = S.get(key);
+      if(src && !flat([src.text || '', src.effect || ''].concat((src.table || []).map(r => r.join(' '))).join(' ')).includes(flat(x.quote).replace(/\s*\.\s*$/, '').replace(/^\*|\*$/g, ''))) bad.push('ox: not GW’s words'); }
     for(const x of o.both || []){ bad.push(...extra(x, BOTH_KEYS)); if(!flat(S.get(key) ? S.get(key).text || '' : '').includes(flat(x.quote).replace(/\s*\.\s*$/, ''))) bad.push('both: not GW’s words'); }
     if(bad.length) fail('G1', where, 'fields no script writes: ' + [...new Set(bad)].join(', ')); } }
 

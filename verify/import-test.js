@@ -313,17 +313,21 @@ if(L('6-bigs')){
       ok(!r.ok && JSON.stringify(r.errors) === JSON.stringify(want), 'made up: a Helbrute with ' + g.join(', ') + ' refused: ' + JSON.stringify(r.ok ? 'imported' : r.errors) + ', want ' + JSON.stringify(want));
       report.push('negative (made up): a Helbrute with ' + g.join(', ') + ' → ' + (r.ok ? 'IMPORTED' : r.errors.join('; '))); }
   }
-  // a value of the export's other than GW's that no rule of the list could change (no box of it, counted or not, no index entry, no words
-  // naming the characteristic or the weapon): the export's own data (New Recruit's), GW's value built and said in the list's note. Lord
-  // Invocatus's Bolt pistol at BS 2+ (GW: 4+), the friend's report
+  // a value of the export's other than GW's that no rule of the list could change: every rule reaching the unit read through (each sentence
+  // a box, words not counted or a reading that it changes no value: BOXES ox; no box falling back unless both readers say it changes no
+  // value of the profile, AGREE nv), none of its readings, conditions or not, changing that field, no index entry, no words naming it
+  // (builder.js couldTouch): the export's own data (New Recruit's), GW's value built, marked on the row (gwx, "‡") and said in the list's
+  // note. Lord Invocatus's Bolt pistol at BS 2+ (GW: 4+), the friend's report
   { const prof = (sel, n, v) => { (function f(x){ for(const p0 of x.profiles || []) for(const c of p0.characteristics || []) if(c.name === n) c.$text = v; for(const y of x.selections || []) f(y); })(sel); };
     const top = (j, n) => j.roster.forces[0].selections.find(x => x.name === n), sub = (sel, re) => { let w = null; (function f(xs){ for(const x of xs || []){ if(!w && re.test(x.name)) w = x; f(x.selections); } })([sel]); return w; };
     if(fs.existsSync(path.join(MD, 'cult-of-blood-helbrute.json'))){
+      // (in a Cult of Blood list the same value is refused: Idols of Khorne, its detachment rule, has a stat box that falls back (Idol of
+      // Burning Wrath: Move, Advance and Charge; reader2 does not read it), so it could change a value; the Murderband below builds)
       const j = M('cult-of-blood-helbrute.json'); prof(sub(top(j, 'Lord Invocatus'), /^Bolt pistol$/), 'BS', '2+');
-      const r = mk(j), u = r.ok && r.army.units.find(x => x.id === 'lord-invocatus'), bp = u && u.ranged.find(w => w.name === 'Bolt pistol');
-      ok(r.ok && bp && bp.BS === '4+' && JSON.stringify(r.army.gwValues) === JSON.stringify([{ unit:'Lord Invocatus', row:'Bolt pistol', field:'BS', export:'2+', gw:'4+' }]),
-        'made up: Lord Invocatus’s Bolt pistol at BS 2+ builds with GW’s 4+ and the note: ' + JSON.stringify(r.ok ? [bp, r.army.gwValues] : r.errors));
-      report.push('accepted (made up): Lord Invocatus’s Bolt pistol at BS 2+ in the export → ' + (r.ok ? 'GW’s ' + (bp || {}).BS + ', noted' : r.errors.join('; ')));
+      const r = mk(j);
+      ok(!r.ok && JSON.stringify(r.errors) === JSON.stringify(['unit Lord Invocatus: Bolt pistol BS is changed by a rule the app cannot name: not imported']),
+        'made up: Lord Invocatus’s Bolt pistol at BS 2+ in Cult of Blood (Idols of Khorne falls back) refused: ' + JSON.stringify(r.ok ? r.army.gwValues || 'imported' : r.errors));
+      report.push('negative (made up): Lord Invocatus’s Bolt pistol at BS 2+ in Cult of Blood (Idols of Khorne has a box that falls back) → ' + (r.ok ? 'IMPORTED' : r.errors.join('; ')));
       // a rule of the unit that sets the value (Daemonic Icon: "a Leadership characteristic of 6+") and a value it does not give: refused
       const j2 = M('cult-of-blood-helbrute.json'), bl = top(j2, 'Bloodletters');
       bl.selections.push({ id:'icon1', name:'Daemonic Icon', entryId:'madeup::Daemonic Icon', type:'upgrade', number:1, from:'entry', profiles:[{ name:'Daemonic Icon', typeName:'Abilities', characteristics:[{ name:'Description', $text:'Models in the bearer’s unit have a Leadership characteristic of 6+.' }] }] });
@@ -331,6 +335,22 @@ if(L('6-bigs')){
       const r2 = mk(j2), want2 = ['unit Bloodletters: Bloodletters Ld is 5+ in the export; GW’s 7+ with Daemonic Icon is 6+: not imported'];
       ok(!r2.ok && JSON.stringify(r2.errors) === JSON.stringify(want2), 'made up: Bloodletters with a Daemonic Icon at Ld 5+ refused: ' + JSON.stringify(r2.ok ? 'imported' : r2.errors));
       report.push('negative (made up): Bloodletters with a Daemonic Icon at Ld 5+ → ' + (r2.ok ? 'IMPORTED' : r2.errors.join('; ')));
+    }
+    // a rule of the unit no reader has read (a Keeper of Secrets of the Chaos Daemons catalogue, not read: Daemon Lord of Slaanesh (Aura),
+    // "improve the Armour Penetration of melee weapons in that unit by 1", reaches its own unit, Core Rules 22.01) and the export's melee AP
+    // one better than GW's: refused, never GW's in its place (the reviewer's case, rev-tests kos.js, in tzeentch-keeper-of-secrets.json)
+    if(fs.existsSync(path.join(MD, 'tzeentch-keeper-of-secrets.json'))){
+      const r = mk(M('tzeentch-keeper-of-secrets.json')), want = ['Ritual knife', 'Snapping claws', 'Witstealer sword'].map(w => 'unit Keeper of Secrets: ' + w + ' AP is changed by a rule the app cannot name: not imported');
+      ok(!r.ok && JSON.stringify(r.errors) === JSON.stringify(want), 'made up: a Keeper of Secrets with its melee AP one better (an unread aura of its own) refused: ' + JSON.stringify(r.ok ? r.army.gwValues || 'imported' : r.errors));
+      report.push('negative (made up): a Keeper of Secrets, melee AP one better than GW’s → ' + (r.ok ? 'IMPORTED' : r.errors.join('; ')));
+    }
+    // an aura that reaches its own unit, read (Daemon Lord of Tzeentch: "each time a model in that unit makes a ranged attack, add 1 to the
+    // Strength characteristic of that attack", aura 6"): a Lord of Change's ranged S one more in the export: refused, as its box changes S
+    if(L('tzeeeeentch')){
+      const j = clone(L('tzeeeeentch')); (function f(x){ for(const p0 of x.profiles || []) if(p0.typeName === 'Ranged Weapons') for(const c of p0.characteristics || []) if(c.name === 'S' && /^\d+$/.test(c.$text)) c.$text = String(+c.$text + 1); for(const y of x.selections || []) f(y); })(top(j, 'Lord of Change'));
+      const r = mk(j);
+      ok(!r.ok && r.errors.length && r.errors.every(e => /^unit Lord of Change: .+ S is changed by a rule the app cannot name: not imported$/.test(e)), 'a Lord of Change with its ranged S one more (its own aura) refused: ' + JSON.stringify(r.ok ? r.army.gwValues || 'imported' : r.errors));
+      report.push('negative: a Lord of Change, ranged S one more (Daemon Lord of Tzeentch reaches its own unit) → ' + (r.ok ? 'IMPORTED' : r.errors.join('; ')));
     }
     // an upgrade on the unit that changes the field (Gore-stained Veterans: "This unit’s melee attacks have +1 WS") and a value it does not
     // give: refused, never GW's value in its place
@@ -350,7 +370,7 @@ if(L('6-bigs')){
       const r = mk(JSON.parse(fs.readFileSync(FD, 'utf8'))), U = id => r.ok && r.army.units.find(u => u.id === id), W = (id, n) => { const u = U(id); return u && (u.ranged || []).concat(u.melee || []).find(w => w.name === n); };
       const inv = U('lord-invocatus'), cb = W('lord-invocatus', 'Coward’s Bane'), bh = W('lord-invocatus', 'Bladed horn'), cf = W('chaos-terminators', 'Chainfist'), jc = W('jakhals', 'Chainblades'), ec = W('slaughterbound-exalted-eightbound', 'Chainblades');
       ok(r.ok && r.army.built && r.army.pointsUsed === 2000 && JSON.stringify(r.army.gwValues) === JSON.stringify([{ unit:'Lord Invocatus', row:'Bolt pistol', field:'BS', export:'2+', gw:'4+' }])
-        && W('lord-invocatus', 'Bolt pistol').BS === '4+' && cb.A === '8' && cb.from.A === 'Relentless Rage' && bh.A === '5' && bh.from.A === 'Relentless Rage' && cf.WS === '3+' && cf.from.WS === 'Gore-stained Veterans'
+        && W('lord-invocatus', 'Bolt pistol').BS === '4+' && JSON.stringify(W('lord-invocatus', 'Bolt pistol').gwx) === JSON.stringify({ BS:'2+' }) && cb.A === '8' && cb.from.A === 'Relentless Rage' && bh.A === '5' && bh.from.A === 'Relentless Rage' && cf.WS === '3+' && cf.from.WS === 'Gore-stained Veterans'
         && jc.A === '4' && jc.S === '3' && ec.A === '5' && ec.S === '8',
         'the friend’s Murderband: built at 2000 pts, GW’s values with its rules, Bolt pistol BS noted: ' + JSON.stringify(r.ok ? [r.army.pointsUsed, r.army.gwValues, inv && inv.ranged, cb, bh] : r.errors));
       report.push('accepted (the friend’s export): Murderband → ' + (r.ok ? r.army.units.length + ' units, ' + r.army.pointsUsed + ' pts, noted: ' + (r.army.gwValues || []).map(g => g.unit + ' ' + g.row + ' ' + g.field + ' ' + g.export + ' (GW ' + g.gw + ')').join('; ') : r.errors.join('; ')));

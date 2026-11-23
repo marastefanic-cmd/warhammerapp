@@ -481,12 +481,17 @@ const counted = e => ['b', 'd', 'st'].includes(e.field) && ((e.fx || e.df || e.s
 const fxNum = fx => (fx || []).some(([id, v]) => id !== 'range' && E.FX[id] && E.FX[id].mod(v) != null);
 const numeric = e => e.field === 'b' && (fxNum(e.fx) || (e.pick || []).some(p => fxNum(p.fx) || (p.part && fxNum(p.part.fx))));
 const kindOf = e => e.field === 'b' ? (numeric(e) ? 'number' : 'label') : e.field === 'd' ? 'defence' : 'stat';
+const NV_ST = ['advanceAdd', 'chargeAdd'];
 function release(P, okB){
   const byBox = {};
   for(const p of P.filter(p => p.app)) for(const e of p.app.filter(counted)){
     const cls = p.cls === 'B' && okB.has(p.id) ? 'B-ok' : p.cls, k = p.boxKey + '|' + e.field + e.i;
     const b = byBox[k] = byBox[k] || { key:p.boxKey, field:e.field, i:e.i, cls:new Set(), kind:kindOf(e), src:p.sourceKind, name:p.source, lists:new Set(), units:new Set(), pairs:[] };
     b.cls.add(cls); b.pairs.push(p.id); p.lists.forEach(l => b.lists.add(l)); p.units.forEach(u => b.units.add(u));
+    // (a stat box of a unit's Advance or Charge rolls only, whose sentence reader2 reads as about movement and charges, outside its values:
+    // both readers say it changes no value of the profile, nv)
+    const nv = e.field === 'st' && (e.st || []).length && (e.st || []).every(([id]) => NV_ST.includes(id)) && !!p.r2 && p.r2.status === 'unread' && /^outside-vocabulary:movement \/ charge/.test(p.r2.reason || '');
+    b.nv = (b.nv === undefined ? true : b.nv) && nv;
   }
   for(const b of Object.values(byBox)) b.c = b.cls.has('C') ? 'C' : b.cls.has('B') ? 'B' : b.cls.has('B-ok') ? 'B-ok' : 'A';
   return byBox;
@@ -511,7 +516,11 @@ function table(D, byBox){
       const b = byBox[k + '|' + f + i]; return b && b.c === 'A' ? 'A' : b && b.c === 'B-ok' ? 'V' : 0; });
     if(Object.keys(row).length) out[k] = row;
   }
-  return { boxes:out };
+  // (nv: the stat boxes of a unit's Advance or Charge rolls both readers read as changing no value of its profile: builder.js does not take
+  // such a box, falling back, as one that could change a value, couldTouch)
+  const nv = {};
+  for(const b of Object.values(byBox)) if(b.nv && out[b.key] && out[b.key][b.field] && out[b.key][b.field][b.i] === 0) (nv[b.key] = nv[b.key] || {})[b.field] = (nv[b.key][b.field] || []).concat(b.i);
+  return Object.keys(nv).length ? { boxes:out, nv } : { boxes:out };
 }
 const START = '// ---- AGREE: written by verify/agree.js --write from BOXES, reader2\'s readings and the reviewed verdicts (do not edit) ----';
 const END = '// ---- end of AGREE ----';
@@ -520,7 +529,10 @@ const block = T => START + '\n' +
   '// independent second reading of GW\'s words) agrees with it ("A") or a reviewed verdict with GW\'s quote shows the app right ("V",\n' +
   '// verify/sources/agree-verdicts.json); a Core Rules box is outside the comparison ("core"). Any other (0) is shown as GW\'s words, "see the\n' +
   '// rule", and never counted (effects.js agreed). boxes: per BOXES key, per field, per box\n' +
-  'const AGREE = {\n  boxes:{\n' + Object.entries(T.boxes).map(([k, v]) => '    ' + JSON.stringify(k) + ':' + JSON.stringify(v)).join(',\n') + '\n  }\n};\n' + END + '\n';
+  '// nv: the falling-back stat boxes of a unit\'s Advance or Charge rolls only that reader2 reads as about movement and charges: both readers\n' +
+  '// say they change no value of a unit\'s profile (builder.js couldTouch); they still fall back, never counted\n' +
+  'const AGREE = {\n  boxes:{\n' + Object.entries(T.boxes).map(([k, v]) => '    ' + JSON.stringify(k) + ':' + JSON.stringify(v)).join(',\n') + '\n  }' +
+  (T.nv ? ',\n  nv:' + JSON.stringify(T.nv) : '') + '\n};\n' + END + '\n';
 function write(src, T){
   const i = src.indexOf(START), j = src.indexOf(END);
   if(i >= 0 && j > i) src = src.slice(0, i) + block(T) + src.slice(j + END.length + 1);

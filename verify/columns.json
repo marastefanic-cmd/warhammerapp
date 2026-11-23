@@ -1701,6 +1701,11 @@
      "source": "derived",
      "note": "the sentences of a source’s words that change a characteristic (M, OC, T, Sv, W, Ld) no stat box counts: { quote, stat, why, foe (an enemy’s), reach (the friendly units its words name), on (selfKw: a keyword of the unit an opening “If this model has the X keyword” needs) }, listed under a unit’s profile “not counted here: see the rule” where it reaches (verify/effects-extract.js statNc; verify/lines.js LS, LW, LF)",
      "by": "verify/effects-migrate.js"
+    },
+    "ox": {
+     "source": "derived",
+     "note": "the sentences of a source’s words that change no value of a unit’s profile or weapons, each with what it does instead ({ quote, why }: mortal wounds, a move, a test …): the explicit reading builder.js couldTouch needs before it takes GW’s value for one an export prints otherwise; a sentence with a number that no box, words not counted or ox covers counts as able to change any value (verify/effects-extract.js otherOf; verify/evidence.js G1)",
+     "by": "verify/effects-migrate.js"
     }
    }
   },
@@ -2020,6 +2025,11 @@
     "boxes": {
      "source": "derived",
      "note": "per BOXES key, per field b / d / st, per box: \"A\" both readers agree, \"V\" a reviewed verdict with GW's quote shows the app right, \"core\" a Core Rules box outside the comparison, 0 falls back, null no effect: verify/agree.js, held by the gate step agree (T)",
+     "by": "verify/agree.js"
+    },
+    "nv": {
+     "source": "derived",
+     "note": "per BOXES key, per field st, the boxes that fall back whose effects are only a unit’s Advance or Charge rolls and whose sentence reader2 reads as about movement and charges (outside-vocabulary): both readers say it changes no value of the profile; still never counted (builder.js couldTouch does not take it as able to change a value)",
      "by": "verify/agree.js"
     }
    }

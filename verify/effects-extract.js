@@ -904,4 +904,39 @@ function shape(list, src){
   return final;
 }
 
-module.exports = { unread, quotesOf, quoteKey, notRule, statNc, statWords, STAT_RE, EVERY_FRIENDLY, WEAPON_KW, weaponExcl, extract, statOf, sentencesOf, cpNoteOf, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };
+// ---- the sentences of a source that change no value of a unit's profile or weapons, each with what it does instead (ox: { quote, why }):
+// the explicit "no value" reading builder.js needs before it may take GW's value for one the export prints otherwise (couldTouch). Only
+// a sentence with a number or a word that changes a value, and no reading of the source's (box, words not counted) covering it, is
+// looked at; one that matches no mechanic below gets no reading, and builder.js counts its source as one that could change any value.
+// A sentence that also names a characteristic, a weapon's value or its abilities is never one of these.
+const OX = [
+  ['a heading of the lines that follow', /:$|^\d+\.$/],
+  ['mortal wounds', /\bmortal wounds?\b/],
+  ['wounds or models healed or returned', /\b(?:heals?|regains?|regain|returns?|return|restored?)\b[^.]*\b(?:wounds?|models?)\b|\bset (?:it|this model|that model) back up\b/],
+  ['Command points or a stratagem\'s cost', /\b\d*cp\b|\bcommand points?\b|\bcp cost\b/],
+  ['a test or roll of the battle (Battle-shock, Leadership, Desperate Escape, Psychic, a Blessings of Khorne roll, a Ritual)', /\bbattle-shock (?:test|roll)s?\b|\bleadership tests?\b|\bdesperate escape\b|\bpsychic tests?\b|\bblessings of khorne roll\b|\britual\b|\bbloodshed points?\b|\bblood tithe points?\b/],
+  ['a move, setting up or embarking (not a characteristic)', /\b(?:normal|advance|fall back|surge|scout|pile-in|consolidation|emergency disembark|disembark|embark) moves?\b|\bmakes? a (?:normal|surge|scout) move\b|\bset (?:it|them|this unit|that unit|your unit) up\b|\bcan be set up\b|\bis set up\b|\bdeep strike\b|\bstrategic reserves\b|\breinforcements step\b|\bmoves as described\b|\bmore than \d+" horizontally\b|\bdetection range\b/],
+  ['transport capacity', /\btransport capacity\b/],
+  ['which models are eligible to fight', /\beligible to (?:fight|shoot|declare a charge)\b|\bfights? first\b|\bfight on death\b/],
+  ['Deadly Demise', /\bdeadly demise\b/],
+  ['a selection, what follows is its effect', /^(?:once per (?:turn|battle round|battle|phase),? )?(?:in|at|during|after|before|when|each time)\b[^.]*\b(?:you can|can) select\b(?![^.]*\b(?:add|subtract|improve|worsen|re-roll|has|have)\b)/],
+  ['who can be selected as a target, and from where', /\bcan only be selected as the target\b|\bwithin \d+" of (?:this|that|the) (?:model|unit)\b[^.]*\bis selected to (?:fall back|shoot|fight)\b/],
+  ['terrain and visibility', /\bterrain feature\b|\bvisible\b|\bplunging fire\b|\btowering\b/],
+  ['an example', /^\*[^*].*\*$/],
+  ['a roll of the rule\'s dice, its results said where they are used', /^(?:to do so, )?roll (?:one|two|three|four|five|six|seven|eight|\d+) d\d+\.?$/],
+  ['which dice results a choice needs', /\bdice results?\b|\ba double or triple\b/],
+  ['a model that fights on after it is destroyed', /\bdo not remove (?:it|this model|that model|the destroyed model) from play\b/]
+];
+const OX_NOT = /\bcharacteristics?\b|\b(?:attacks?|strength|armour penetration|damage|ballistic skill|weapon skill|toughness|save|invulnerable save|wounds characteristic|leadership characteristic|objective control|move characteristic)\b[^.]*\bby \d|\[[a-z -]+\]|\b[+-]\d+ (?:a|s|ap|d|bs|ws|t|sv|w|ld|oc)\b|\b\d\+ invulnerable save\b|\bimprove\b|\bworsen\b/;
+const OX_VALUE = /\d|\b(?:improve|improved|worsen|worsened|halve|halved|double|doubled|characteristics?|equal to|the same as|instead of|replace)\b/;
+const oxSentences = t => String(t || '').split('\n').flatMap(l => l.trim().replace(/^-\s+/, '').split(/(?<=[.!?:])\s+(?=[A-Z*(\[-])/)).map(x => x.trim()).filter(x => x && !/^[A-Z][A-Z ’'-]{3,}:?$/.test(x.replace(/\*\*/g, '')));
+function otherOf(src, o){
+  const q = []; JSON.stringify(o || {}, (k, v) => { if(k === 'quote' && typeof v === 'string') q.push(norm(v).replace(/\.$/, '')); return v; });
+  const text = src.type === 'strat' ? src.effect : [src.text || ''].concat((src.table || []).map(r => r.slice(1).join('\n'))).join('\n'), out = [];
+  for(const t of oxSentences(text)){ const n = norm(t).replace(/^[^:]{1,40}:\s+(?=\S)/, '').replace(/\.$/, ''); if(!OX_VALUE.test(n)) continue;
+    if(q.some(x => x && (x.includes(n) || n.includes(x)))) continue;
+    if(OX_NOT.test(n) && !/:$/.test(n)) continue;
+    const hit = OX.find(([, re]) => re.test(n)); if(hit) out.push({ quote:t, why:hit[0] }); }
+  return out;
+}
+module.exports = { otherOf, oxSentences, OX_VALUE, unread, quotesOf, quoteKey, notRule, statNc, statWords, STAT_RE, EVERY_FRIENDLY, WEAPON_KW, weaponExcl, extract, statOf, sentencesOf, cpNoteOf, findFx, findDf, defenceOf, DEF_CTX, condsOf, targetKw, scopeOf, reachOf, unitsOf, plainCase, limitOf, enemyLeadThat, DEFENCE, defenceLead, lastsOf, kindOf, DURATION_RE, TARGET_RESTR, hasTargetCond, afterAttack };
