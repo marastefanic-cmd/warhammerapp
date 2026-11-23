@@ -1955,6 +1955,12 @@
   "at": "2026-10-30",
   "why": "The units GW’s TARGET / rule names: {any:[Faction: Tyranids,Mawloc,Trygon]} (Subterranean Assault rule · Surprise Assault), read against the faction page."
  },
+ "14eedbfe259c05b1": {
+  "verdict": "ok",
+  "by": "review:remove-menu",
+  "at": "2026-11-23",
+  "why": "Same text and buttons as the Overview confirm had before (moved verbatim out of askRemove); the name comes from the made list or else the kept export; id and name escaped. Keep it is the caller's attribute: data-imprmno on the Overview/out-of-date popup (puts the button back), data-close in the menu popup (closes it). Checked in a browser: Keep it, Escape and a tap on the backdrop leave localStorage byte for byte as it was; Remove clears only that list's keys."
+ },
  "14fd3e85e3d02a08": {
   "verdict": "ok",
   "by": "review:catalog-tyranids",
@@ -10907,6 +10913,12 @@
   "at": "2026-10-22",
   "why": "“Each time an enemy unit (excluding TITANIC units) within Engagement Range … is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.” The When targeted line keeps the TITANIC exclusion, the Engagement Range condition, melee only and the duration. Any enemy melee attack on the Nurglings is made from within Engagement Range, so the line is right for the unit itself."
  },
+ "7cbb73b08a6de77f": {
+  "verdict": "ok",
+  "by": "review:remove-menu",
+  "at": "2026-11-23",
+  "why": "Popup titled Remove this list, kicker Local list, Keep it focused (checked: document.activeElement is the Keep it button). At 390 and 320, gunmetal and paper themes: Remove 48px and Keep it 44px tall, full sheet width, no element wider than the sheet, no horizontal scroll. Keep it closes it and the list stays; Remove goes home with the toast Removed <name>."
+ },
  "7cdcf12b4c4c5519": {
   "verdict": "ok",
   "by": "review:custodes-units",
@@ -15832,6 +15844,12 @@
   "by": "review:lite-knights",
   "at": "2026-10-23",
   "why": "“Your Movement/Charge phase”: your."
+ },
+ "b4425581e28ce2d0": {
+  "verdict": "ok",
+  "by": "review:remove-menu",
+  "at": "2026-11-23",
+  "why": "Behaviour unchanged from main apart from using rmAsk; render.js import-remove still checks both buttons in sight above the tab bar and Keep it restoring the button. Minor: the Overview's Remove button is no longer driven to the end by any test (the old Remove-from-Overview step became the menu one). Both end in the same removeImported, so not blocking."
  },
  "b4467ac786a00744": {
   "verdict": "ok",
