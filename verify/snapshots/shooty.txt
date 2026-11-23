@@ -69,17 +69,17 @@ DETACHMENT
 DISPOSITION
 NEWEST FIRST
 RANDOM
-Basic Bitch
-2000 pts
-BUILT-IN
-Tyranids · Invasion Fleet
-PRIORITY ASSETS
-TAKE AND HOLD
-, CHOSEN
 Healybois
 2000 pts
 BUILT-IN
 Tyranids · Assimilation Swarm · Talons of the Norn Queen
+PRIORITY ASSETS
+TAKE AND HOLD
+, CHOSEN
+Basic Bitch
+2000 pts
+BUILT-IN
+Tyranids · Invasion Fleet
 PRIORITY ASSETS
 TAKE AND HOLD
 , CHOSEN
@@ -1181,7 +1181,7 @@ melee
 abilities
 4 rows: Turbo Engine, Shokk Attack Engine, Pulse Jet, Full Throttle
 ARMIES
-26 rows · 225 unit entries · 108 columns
+26 rows · 224 unit entries · 108 columns
 
 one row per list
 
@@ -1203,7 +1203,7 @@ detachments
 source
 config
 units
-ARMIES.units 225 rows
+ARMIES.units 224 rows
 
 a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS
 
@@ -1407,11 +1407,11 @@ info
 infoKids
 9 ids
 units
-206 ids
+205 ids
 datasheets
 168 ids
 names
-883 ids
+884 ids
 maxPerList
 83 ids
 BUILD_INDEX
@@ -1632,7 +1632,7 @@ the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-23.3
+2026-11-23.4
 
 a list from an export
 3
