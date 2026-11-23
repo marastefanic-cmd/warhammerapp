@@ -21,11 +21,13 @@ module.exports = function write(ROOT, faction, r, SRC) {
   fs.writeFileSync(SRC, JSON.stringify(r.cat, null, 1) + '\n');
   // 2. the detachments the catalogue adds: an earlier run's (aiStatus 'not-read') taken out, this run's written
   const dets = Object.entries(r.cat.detachmentRows || {});
+  // (the comment over each: written by verify/from-waha.js, or by the retired verify/from-bsdata.js)
+  const tail = ': Wahapedia (the codex), from the catalogue (verify/from-waha.js ' + faction + ')', tails = [tail, tail.replace('from-waha.js', 'from-bsdata.js')];
   {
     let d = fs.readFileSync(DATA, 'utf8');
-    const mark = '      // ', tail = ': Wahapedia (the codex), from the catalogue (verify/from-bsdata.js ' + faction + ')';
+    const mark = '      // ';
     for (;;) {
-      const i = d.indexOf(tail); if (i < 0) break;
+      const i = Math.max(...tails.map(t => d.indexOf(t))); if (i < 0) break;
       const s0 = d.lastIndexOf('\n' + mark, i), e0 = d.indexOf('\n      }', i) + '\n      }'.length;
       // (with the comma before it)
       const c = d.lastIndexOf(',', s0); d = d.slice(0, c) + d.slice(e0);
@@ -35,8 +37,8 @@ module.exports = function write(ROOT, faction, r, SRC) {
   if (dets.length) {
     const I = '    ';
     const block = (id, d) => {
-      let s = I + '  // ' + d.name + ': Wahapedia (the codex), from the catalogue (verify/from-bsdata.js ' + faction + '); no gists, readings or When targeted lines yet (aiStatus)\n';
-      s += I + "  '" + id + "': {\n" + I + '    name:' + lit(d.name) + (d.waha ? ', waha:' + lit(d.waha) : '') + (d.nr ? ', nr:' + lit(d.nr) : '') + ', dispositions:' + lit(d.dispositions || []) + ', dp:' + d.dp + ", aiStatus:'not-read',\n";
+      let s = I + '  // ' + d.name + tail + (r.cat.aiRead ? '; its gists and summaries from the hand file catalog-' + faction + '.json (aiRead)' : '; no gists, readings or When targeted lines yet (aiStatus)') + '\n';
+      s += I + "  '" + id + "': {\n" + I + '    name:' + lit(d.name) + (d.waha ? ', waha:' + lit(d.waha) : '') + (d.nr ? ', nr:' + lit(d.nr) : '') + ', dispositions:' + lit(d.dispositions || []) + ', dp:' + d.dp + (r.cat.aiRead ? '' : ", aiStatus:'not-read'") + ',\n';
       s += I + '    rule:' + lit(d.rule) + ',\n';
       if (d.moreRules) s += I + '    moreRules:[\n' + d.moreRules.map(x => I + '      ' + lit(x)).join(',\n') + '\n' + I + '    ],\n';
       s += I + '    enhancements:[\n' + d.enhancements.map(e => I + '      ' + lit(e)).join(',\n') + '\n' + I + '    ],\n';

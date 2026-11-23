@@ -305,10 +305,12 @@ function wahaDispositions(name) {
   const j = h.indexOf('class="outline_header"', h.indexOf('>', i) + 1), seg = h.slice(i, j > 0 ? j : i + 20000);
   return uniq([...seg.matchAll(/title="Force Disposition: ([^"]+)"/g)].map(m => m[1].trim()));
 }
+// (the detachments the faction's catalogue file added, its detachmentRows: read again from their sources in --emit, read or not)
+const CAT_DETS = new Set((() => { try { return Object.keys(JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/catalog', factionId + '.json'), 'utf8')).detachmentRows || {}); } catch (e) { return []; } })());
 const detIds = detNames.map(n => {
   // (by GW's name, or the name BSData and New Recruit spell, nr)
   // (in --emit, a detachment a faction catalogue added, aiStatus 'not-read', is read again from its sources: verify/from-bsdata.js writes it)
-  const have = F && Object.keys(F.detachments).find(k => (lc(F.detachments[k].name) === lc(n) || (F.detachments[k].nr && lc(F.detachments[k].nr) === lc(n)) || (F.detachments[k].waha && lc(F.detachments[k].waha) === lc(n))) && !(argv.includes('--emit') && F.detachments[k].aiStatus === 'not-read'));
+  const have = F && Object.keys(F.detachments).find(k => (lc(F.detachments[k].name) === lc(n) || (F.detachments[k].nr && lc(F.detachments[k].nr) === lc(n)) || (F.detachments[k].waha && lc(F.detachments[k].waha) === lc(n))) && !(argv.includes('--emit') && (F.detachments[k].aiStatus === 'not-read' || CAT_DETS.has(k))));
   if (have) return have;
   const W = wahaDetachment(n), id = slug(W && W.gwName || n);
   if (!W) { want('detachment ' + n, 'rule, enhancements, stratagems', 'not on the Wahapedia faction page'); return id; }

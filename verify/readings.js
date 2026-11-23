@@ -163,7 +163,8 @@ function boxDefences(ab, rule){
 // per bonus (Warden's Duty's [SUSTAINED HITS 1] and [IGNORES COVER] are two)
 function gapsOf(){
   const out = new Map();   // key -> gap
-  for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities || []) for(const g of abilityGaps(u, ab, ruleOf(a, ab))){
+  // (a read catalogue's lists too, verify/catalog-armies.js: every unit and enhancement an import can place)
+  for(const a of D.armies.concat(require('./catalog-armies').armies(D))) for(const u of a.units) for(const ab of u.abilities || []) for(const g of abilityGaps(u, ab, ruleOf(a, ab))){
     const key = g.check + '|' + ab.name + '|' + fp(ab.text) + '|' + fp(g.sentence);
     if(!out.has(key)) out.set(key, Object.assign(g, { ability:ab.name, text:ab.text, units:[] }));
     out.get(key).units.push(a.id + '/' + u.id);

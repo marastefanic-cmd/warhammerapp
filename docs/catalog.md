@@ -45,7 +45,7 @@ Legions; Pact of Blood makes them part of a World Eaters army), and 8 detachment
 
 **Merging with the lists.** `verify/tables.js --write` builds DATASHEETS from the lists, as before, then adds every catalogue
 row (`catalogRows()`):
-- a row no list has is the catalogue's, marked `aiStatus:'not-read'`;
+- a row no list has is the catalogue's, marked `aiStatus:'not-read'`, unless its catalogue is read (`aiRead`, below);
 - a row a list has keeps every fact its lists decide (signed off), and gets from the catalogue only what it lacks: a fact no list
   shows as the datasheet's, the weapons and abilities no list took (after its own rows), and the catalogue's columns;
 - `points`, `composition`, `options` and `aiStatus` stay on DATASHEETS (the resolver does not copy them onto a list's units).
@@ -90,6 +90,19 @@ catalogue added, carry `aiStatus:'not-read'`: the Damage tab does not count thei
 fails a mark on a row that has readings, and a catalogue row without the mark that no list has). Adding them, per datasheet or
 detachment: write the readings (verify/derive.js gives the derivable ones: Damaged, riled-up, charge bonuses), `node
 verify/tables.js --stamp` for the fingerprints, the reviewer's sign-off (`verify/review/`), then drop the mark.
+
+**A read catalogue (`aiRead`).** A faction whose import must give a complete sheet for every unit and detachment it can place
+(World Eaters) has its AI layers written for the whole catalogue: the hand file sets `aiRead: true` and holds, under `ai`, each
+summary column (`sumAtk`, `sumDef`, `sumSt`, `sumFoe`, `sumOv`, a stratagem's `gist`) of a catalogue row's ability (`ai.datasheets
+["<id>"]["<ability>"]`) and of a new detachment's rule, enhancement and stratagem (`ai.detachments["<id>"].rules|enhancements|
+stratagems["<name>"]`), each with its fingerprint (`sumAtkOf`, …, of the GW text it was written from, as verify/tables.js computes
+it); verify/from-waha.js writes them onto the rows and sets the catalogue's `aiRead`, and no row or detachment of it carries
+`aiStatus`. Its readings are reader 1's (verify/effects-extract.js through effects-migrate) and reader 2's, agreed (agree.js), as for
+the lists: verify/catalog-armies.js builds, for each detachment of the faction, one list the gate checks like the owner's (every
+datasheet once with GW's default wargear, the abilities the detachment's rules give it as builder.js gives an import, each
+enhancement on a CHARACTER its words allow). effects-migrate reads their sources into BOXES and verify/lines.js holds their placed
+lines to their summaries and labels (LM, LN, L0), so an imported unit's sheet has its Damaged bands, every line and its summary.
+These lists are no part of the app's ARMIES. verify/catalog.js fails an `aiStatus` on a read catalogue's row or detachment.
 
 ## The gate
 

@@ -856,7 +856,9 @@ const armiesPlus = fk => armiesOf(fk).concat(CATALOG.filter(a => a.faction === f
 const armyIdsOf = fk => fk;   // faction rules are reported under the faction, so adding a list of it changes no report line
 const usedDetachments = fk => [...new Set(armiesOf(fk).flatMap(a => a.detachments))];
 // (the detachments whose words are checked: the lists', and every one a faction catalogue added, verify/from-bsdata.js)
-const checkedDetachments = fk => [...new Set(usedDetachments(fk).concat(Object.keys((D.factions[fk] || {}).detachments || {}).filter(k => D.factions[fk].detachments[k].aiStatus === 'not-read')))];
+const checkedDetachments = fk => [...new Set(usedDetachments(fk).concat(Object.keys((D.factions[fk] || {}).detachments || {}).filter(k => D.factions[fk].detachments[k].aiStatus === 'not-read' || READ_CATALOGS.includes(fk))))];
+// (a read catalogue's detachments, aiRead: every one an import can place, docs/catalog.md)
+const READ_CATALOGS = require('./catalog-armies').readFactions();
 const UPD = {}; for (const fk of FACTIONS) UPD[fk] = packUpdates(fk);
 // --updates <faction>: the Faction Pack's Rules Updates as read here, as JSON (verify/from-bsdata.js applies the datasheet ones to a
 // faction catalogue's rows; this file then checks them as for a list)

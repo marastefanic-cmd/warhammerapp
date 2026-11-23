@@ -1,5 +1,5 @@
 {
- "_about": "What verify/from-waha.js world-eaters cannot take from Wahapedia's pages as they are, each with its reason (docs/catalog.md): detachmentNames, a detachment GW's documents name otherwise than Wahapedia's heading (GW's name is the detachment's; Wahapedia's is kept as its waha, to find its section); detachmentTexts, GW's words where its Faction Pack prints a detachment otherwise than Wahapedia's page.",
+ "_about": "What verify/from-waha.js world-eaters cannot take from Wahapedia's pages as they are, each with its reason (docs/catalog.md): detachmentNames, a detachment GW's documents name otherwise than Wahapedia's heading (GW's name is the detachment's; Wahapedia's is kept as its waha, to find its section); detachmentTexts, GW's words where its Faction Pack prints a detachment otherwise than Wahapedia's page. aiRead: the catalogue's AI layers are written (its detachments' gists, its rows' summaries and readings: ai), so a phone import of any of its datasheets shows complete sheets; verify/catalog-armies.js places them for the gate.",
  "detachmentNames": {
   "Possessed Slaughterband": {
    "gw": "Possessed Slaughterbound",
@@ -16,5 +16,218 @@
     "why": "GW's World Eaters Faction Pack 1.3 prints the Brazen Engines detachment in full (p2): \"WORLD EATERS VEHICLE unit only. This unit has DAEMON.\" with its full stop; Wahapedia's page has none. GW's words (verify/texts.js checks the detachment against the pack)."
    }
   ]
+ },
+ "aiRead": true,
+ "ai": {
+  "datasheets": {
+   "world-eaters/bloodletters": {
+    "Daemonic Icon": {
+     "sumSt": "Ld 6+",
+     "sumStOf": "4212a82b"
+    }
+   },
+   "world-eaters/bloodcrushers": {
+    "Daemonic Icon": {
+     "sumSt": "Ld 6+",
+     "sumStOf": "4212a82b"
+    }
+   },
+   "world-eaters/khorne-lord-of-skulls": {
+    "Idol of Blessed Blood": {
+     "sumOv": "At the start of each battle round, if the Khorne Lord of Skulls is on the battlefield: roll one additional D6 for the Blessings of Khorne roll",
+     "sumOvOf": "790d4ce4"
+    }
+   },
+   "world-eaters/chaos-predator-annihilator": {
+    "Blood-hungry Annihilator": {
+     "sumAtk": "vs the closest eligible MONSTER or VEHICLE target within 18\", ranged: re-roll Wound rolls and Damage rolls",
+     "sumAtkOf": "4dbe998f"
+    }
+   },
+   "world-eaters/chaos-predator-destructor": {
+    "Punishing Suppression": {
+     "sumDef": "If the attacker is suppressed (a non-MONSTER/VEHICLE enemy unit the Chaos Predator Destructor hit in your Shooting phase): −1 to Hit rolls",
+     "sumDefOf": "f611baed"
+    }
+   },
+   "world-eaters/heldrake": {
+    "Airborne Predator": {
+     "sumAtk": "vs units that can FLY: +1 to Hit rolls",
+     "sumAtkOf": "5beae186"
+    }
+   },
+   "world-eaters/helbrute": {
+    "Frenzy": {
+     "sumDef": "Once per turn, after an enemy unit fights this unit, if it uses this ability: this unit fights next, even if it has already fought",
+     "sumDefOf": "f66ce757"
+    }
+   },
+   "world-eaters/maulerfiend": {
+    "Savage Exaltation": {
+     "sumAtk": "In melee, vs enemy units below Starting Strength: +1 to Hit rolls; also +1 to Wound rolls if they are Below Half-strength",
+     "sumAtkOf": "744f9238"
+    }
+   }
+  },
+  "detachments": {
+   "cult-of-blood": {
+    "rules": {
+     "Idols of Khorne": {
+      "sumAtk": "Idol of Infinite Rage (Aura) ⇒ If Idol of Infinite Rage is active, within 6\" of a WORLD EATERS MONSTER (9\" if TITANIC): +1 to Hit rolls and +1 to Wound rolls",
+      "sumAtkOf": "c074c786",
+      "sumDef": "If Idol of Blessed Blood is active, within 6\" of a WORLD EATERS MONSTER (9\" if TITANIC): 4+ invulnerable save",
+      "sumDefOf": "c074c786",
+      "sumSt": "If Idol of Burning Wrath is active, within 6\" of a WORLD EATERS MONSTER (9\" if TITANIC): +1\" Move; +1 to Advance and Charge rolls",
+      "sumStOf": "c074c786",
+      "sumOv": "In your Command phase, pick one Idols of Khorne ability for WORLD EATERS MONSTER and TITANIC units until your next Command phase, each once per battle: Idol of Infinite Rage, Idol of Burning Wrath or Idol of Blessed Blood",
+      "sumOvOf": "c074c786"
+     }
+    },
+    "enhancements": {
+     "Butcher Lord": {
+      "sumOv": "The bearer has the Infiltrators ability",
+      "sumOvOf": "e52f6f3a"
+     },
+     "Brazen Form": {
+      "sumDef": "+1 T; Feel No Pain 5+",
+      "sumDefOf": "a6cff458"
+     },
+     "Strategic Slaughter": {
+      "sumOv": "After deployment: redeploy up to three JAKHALS and/or GOREMONGERS units, Strategic Reserves allowed whatever their number",
+      "sumOvOf": "4893cbdf"
+     }
+    },
+    "stratagems": {
+     "Bloody Vengeance": {
+      "gist": "when a WORLD EATERS MONSTER or TITANIC unit is destroyed by an enemy unit: JAKHALS and GOREMONGERS can re-roll Hit rolls vs that enemy unit",
+      "gistOf": "caffdf0c"
+     },
+     "Drawn to the Slaughter": {
+      "gist": "once per battle, when a JAKHALS unit is destroyed: an identical unit at Starting Strength goes into Strategic Reserves (not CHARACTER units of Attached units)",
+      "gistOf": "69a0c665"
+     },
+     "In the Shadow of Brass Idols": {
+      "gist": "JAKHALS or GOREMONGERS, when targeted: Feel No Pain 6+ (5+ within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC)",
+      "gistOf": "54b81d20"
+     },
+     "Bloodthirsty Horde": {
+      "gist": "JAKHALS or GOREMONGERS models within 3\" of enemy models can fight, attacking an enemy unit within 3\" of them and in Engagement Range of their unit",
+      "gistOf": "96301a48"
+     },
+     "Fail Not the Blood God": {
+      "gist": "JAKHALS or GOREMONGERS: re-roll Hit rolls of 1 (all Hit rolls within 6\" of a WORLD EATERS MONSTER or 9\" of a WORLD EATERS TITANIC)",
+      "gistOf": "199bdab9"
+     },
+     "Brazen Idol": {
+      "gist": "once per battle: a WORLD EATERS MONSTER or TITANIC unit has the Idol of Infinite Rage, Burning Wrath or Blessed Blood instead of the army’s, even one already used",
+      "gistOf": "231335b9"
+     }
+    }
+   },
+   "possessed-slaughterbound": {
+    "enhancements": {
+     "Frenzied Focus": {
+      "sumAtk": "Critical Hits on 5+",
+      "sumAtkOf": "b67b98ac"
+     }
+    },
+    "stratagems": {
+     "Daemonic Resistance": {
+      "gist": "WORLD EATERS POSSESSED, when targeted: −1 to Wound rolls for attacks on this unit",
+      "gistOf": "6694dfb2"
+     },
+     "Daemonic Strength": {
+      "gist": "WORLD EATERS POSSESSED: +1 Damage vs models not MONSTER/VEHICLE if EIGHTBOUND, vs MONSTER/VEHICLE models if EXALTED EIGHTBOUND",
+      "gistOf": "4f62aa1f"
+     },
+     "Immortal Fury": {
+      "gist": "WORLD EATERS POSSESSED, when targeted: models destroyed before they have fought fight after the attacking unit, then are removed",
+      "gistOf": "5b1ff91a"
+     },
+     "Rapid Manifestation": {
+      "gist": "an EXALTED EIGHTBOUND unit arriving by Deep Strike can be set up more than 6\" horizontally from all enemy units; it cannot charge this turn",
+      "gistOf": "7fd88835"
+     },
+     "Warp Stalkers": {
+      "gist": "a WORLD EATERS POSSESSED unit moves through enemy models (not MONSTERS/VEHICLES) and ends only a Charge move within Engagement Range of them; Desperate Escape tests are passed automatically",
+      "gistOf": "1a67e995"
+     },
+     "Horrifying Violence": {
+      "gist": "each enemy unit in Engagement Range of a WORLD EATERS POSSESSED unit takes a Battle-shock test, subtracting 1",
+      "gistOf": "c527c45c"
+     }
+    }
+   },
+   "goretrack-onslaught": {
+    "rules": {
+     "Rush to the Fray": {
+      "sumAtk": "If this unit disembarked from a TRANSPORT this turn: melee [LANCE]",
+      "sumAtkOf": "0a183cf8"
+     }
+    },
+    "enhancements": {
+     "Aggressive Deployment": {
+      "sumOv": "If the bearer starts the battle embarked within a DEDICATED TRANSPORT: that DEDICATED TRANSPORT has Scouts 9\"",
+      "sumOvOf": "be4c44ea"
+     },
+     "Unleash Hell": {
+      "sumDef": "If the attacker is suppressed (an enemy unit hit in your Shooting phase by a VEHICLE within 6\" of the bearer, or by the bearer’s TRANSPORT): −1 to Hit rolls",
+      "sumDefOf": "f227a1cd"
+     },
+     "Infernal Infusion": {
+      "sumOv": "Once per battle, at the start of the Fight phase, if used: the bearer’s unit has Fights First",
+      "sumOvOf": "921f2701"
+     }
+    },
+    "stratagems": {
+     "Endless Pursuit of Violence": {
+      "gist": "a WORLD EATERS INFANTRY unit wholly within 6\" of a friendly TRANSPORT it can embark within embarks in it",
+      "gistOf": "d83447c5"
+     },
+     "Smash Through": {
+      "gist": "a WORLD EATERS VEHICLE moves horizontally through terrain features on Normal and Advance moves",
+      "gistOf": "0dded4c8"
+     },
+     "Aggressive Disembarkation": {
+      "gist": "one WORLD EATERS unit disembarks from a WORLD EATERS RHINO, set up wholly within 6\" of it, within Engagement Range allowed",
+      "gistOf": "943c34fe"
+     },
+     "Full-Throttle Assault": {
+      "gist": "a WORLD EATERS unit disembarking from this WORLD EATERS RHINO after its Normal move makes an assault disembark move",
+      "gistOf": "385212ce"
+     },
+     "Unrelenting Advance": {
+      "gist": "a WORLD EATERS VEHICLE hit by an enemy unit’s attacks makes a Normal move of up to 6\" (not with Fury Unleashed in the same phase)",
+      "gistOf": "640a6ee3"
+     },
+     "Fury Unleashed": {
+      "gist": "a KHORNE BERZERKERS unit embarked within a WORLD EATERS RHINO that was hit makes a disembark move, then a surge move of up to D6+2\" (not with Unrelenting Advance in the same phase)",
+      "gistOf": "c327d500"
+     }
+    }
+   },
+   "brazen-engines": {
+    "enhancements": {
+     "Talons of Butchery": {
+      "sumAtk": "[CLEAVE 2]",
+      "sumAtkOf": "6853bba8"
+     }
+    },
+    "stratagems": {
+     "Apoplectic Clarity": {
+      "gist": "a DAEMON VEHICLE’s attacks ignore modifiers to BS, WS, Hit rolls and Wound rolls",
+      "gistOf": "b3a59983"
+     },
+     "Trail of Destruction": {
+      "gist": "a DAEMON VEHICLE has MOBILE",
+      "gistOf": "a2ce3f43"
+     },
+     "Goaded to Fury": {
+      "gist": "an unengaged DAEMON VEHICLE (not TITANIC) that an enemy unit shot makes a surge move of up to D6\"",
+      "gistOf": "2d8b4a2f"
+     }
+    }
+   }
+  }
  }
 }

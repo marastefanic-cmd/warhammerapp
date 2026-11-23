@@ -48,8 +48,12 @@ const defenceLead = u => { if(!u.bullet || !/:\s*$/.test(String(u.lead || ''))) 
 // that enemy unit ("While an enemy unit is within 12" of this model, if that unit is Battle-shocked:" then "- Each time a model in that unit
 // makes an attack, subtract 1 from the Hit roll.", Psychological Saboteur): the defence side, an enemy unit's attacks made worse (foe); a
 // bullet about friendly units' attacks that target it ("Each time a friendly TYRANIDS model makes an attack that targets that unit") is not
-const enemyLeadThat = (u, n) => !!u.bullet && /^while an enemy unit\b/.test(norm(u.lead || '')) && !/\bfriendly\b/.test(norm(u.lead || ''))
-  && /\b(?:a model|models) in that unit\b/.test(n) && !/\bfriendly\b|\btargets? that (?:enemy )?unit\b/.test(n);
+const enemyLeadThat = (u, n) => (!!u.bullet && /^while an enemy unit\b/.test(norm(u.lead || '')) && !/\bfriendly\b/.test(norm(u.lead || ''))
+  && /\b(?:a model|models) in that unit\b/.test(n) && !/\bfriendly\b|\btargets? that (?:enemy )?unit\b/.test(n)) || stateEnemy(u, n);
+// ("Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an
+// attack, subtract 1 from the Hit roll.": the state the sentence before gives an enemy unit, so "that unit" is that enemy unit)
+const stateEnemy = (u, n) => { const m = /^while a unit is ([a-z-]+),/.exec(n); return !!m && /\b(?:a model|models) in that unit\b/.test(n) && !/\bfriendly\b/.test(n)
+  && new RegExp('\\bthat enemy unit is ' + m[1] + '\\b').test(norm((u.lead || '') + ' ' + (u.prevS || ''))); };
 // a sentence that picks one of several ("select one of the following", "select either the X or Y ability")
 const PICK_LEAD = /\b(?:select|choose) one of the (?:following|abilities listed below|doctrina imperatives below)\b|\bcan have:$|\bselect one of the following\b/;
 // how long it lasts (the Damage tab carries a tick from the shooting into the fight)
@@ -169,6 +173,8 @@ function condsOf(V, sOrig, leadOrig, opts){
   // greater than this unit's T", "that targets the closest enemy unit"), what it can target ("they can only target units within range
   // of the selected objective marker"), the weapons ("with weapons selected for the Firing Deck ability")
   const QP = [/\bthat targets? (?:a|an|an enemy) unit (?:with|within) [^,.;:]+?(?= (?:have|has|can|gains?)\b|[,.;:]|$)/g, /\bthat targets? the closest enemy unit\b/g,
+    // (the closest of some keywords: "that targets the closest eligible MONSTER or VEHICLE target within 18"", Blood-hungry Annihilator)
+    /\bthat targets? the closest eligible (?:[A-Z]+(?: or |\/))*[A-Z]+ target(?: within \d+")?/g,
     /(?<=\bbut )(?:they|it) can only target [^,.;:]+/g, /\bthat targets? the enemy unit that [^,.;:]+/g, /\bcontains (?:a|one or more) [A-Z][A-Za-z' ]+? models?\b/g, /\bmodels in (?:those|that|your|this) [A-Za-z ]+? units? can only target [^,.;:]+/g, /\bwith weapons selected for the [^,.;:]+? ability\b/g,
     // the target's status, which no condition above reads: "that target a hidden unit", "targets a unit that is Battle-shocked"
     /\bthat targets? an? (?!enemy\b|unit\b)(?:[a-z][a-z-]* )+?unit(?: containing one or more models on [a-z ]+?(?=,|$))?/g, /\btargets? (?:a|an|an enemy) unit that is (?!below\b|not below\b)[^,.;:]+/g,

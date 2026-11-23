@@ -212,7 +212,8 @@ function rowOf(u, m, E, D) {
   const weapon = w => { const o = {}; for (const k of ['name', 'group', 'fireAll', 'hunter']) if (w[k] !== undefined) o[k] = w[k]; for (const k of WPN) if (w[k] !== undefined) o[k] = w[k]; return o; };
   const uniqRows = rs => { const seen = new Set(); return rs.filter(r => { const k = JSON.stringify(r); if (seen.has(k)) return false; seen.add(k); return true; }); };
   row.ranged = uniqRows(u.ranged.map(weapon)); row.melee = uniqRows(u.melee.map(weapon));
-  const ab = a => { const o = { name: a.name }; if (a.who) o.who = a.who; if (a.tag) o.tag = a.tag; o.text = a.text; return o; };
+  // (a Damaged band's range, as its name says, verify/lines.js L0: "Damaged: 1-6 wounds remaining" 1-6; the app draws its band by it)
+  const ab = a => { const o = { name: a.name }; if (a.who) o.who = a.who; if (a.tag) o.tag = a.tag; const dm = /^Damaged: (\d+-\d+) wounds remaining$/i.exec(a.name); if (dm) o.damaged = dm[1]; o.text = a.text; return o; };
   row.abilities = u.abilities.map(ab);
   // Leader / Support: the units GW's datasheet (its LEADER or SUPPORT section) lets this model be attached to, last
   const G = (E.gwRules || {})[u.id] || {};
@@ -328,7 +329,7 @@ function build() {
   // the detachments the catalogue adds (data.js lacks them): as data.js gets them, but for verify/derive.js's labels; a detachment's GW
   // name over Wahapedia's (the hand file's detachmentNames: { "<Wahapedia's>": { gw, why } }); a stratagem id another detachment has
   // gets its detachment's id after it
-  const D0 = C.D, taken = new Set(D0.coreStratagems.map(s => s.id).concat(...Object.values(D0.factions).flatMap(f => Object.entries(f.detachments).filter(([, d]) => d.aiStatus !== 'not-read').map(([, d]) => (d.stratagems || []).map(s => s.id)))));
+  const D0 = C.D, taken = new Set(D0.coreStratagems.map(s => s.id).concat(...Object.values(D0.factions).flatMap(f => Object.entries(f.detachments).filter(([k, d]) => d.aiStatus !== 'not-read' && !(f === D0.factions[faction] && Object.keys(E.detachments || {}).concat(Object.keys(HAND().detachmentNames || {}).map(n => slug(HAND().detachmentNames[n].gw))).includes(k))).map(([, d]) => (d.stratagems || []).map(s => s.id)))));
   const DN = HAND().detachmentNames || {};
   const detachmentRows = {};
   for (const [id1, d0] of Object.entries(E.detachments || {})) {
@@ -371,6 +372,18 @@ function build() {
     datasheets: rows, detachments: C.dets.map(d => Object.assign({ name: typo((DN[d.name] || {}).gw || d.name) }, DN[d.name] ? { waha: typo(d.name) } : {}, { dp: d.dp, dispositions: d.dispositions })), detachmentRows, excluded: C.excluded, weaponNames: E.gwNames, packApplied: packApplied.concat(detApplied.filter(x => x.title)), handApplied: handApplied.concat(detApplied.filter(x => !x.title)),
     modelNames: Object.entries(HAND().modelNames || {}).map(([nr, x]) => ({ nr, gw: x.gw, kind: x.kind })),
     unread: Object.entries(rows).filter(([, r]) => (r.loadout.unread || []).length).map(([id, r]) => ({ id, sentences: r.loadout.unread })) };
+  // the AI layers, where the hand file has written them (aiRead): each datasheet ability's summaries ({ "<id>": { "<ability>": { sumAtk,
+  // sumAtkOf, … } } }), each new detachment's rule, enhancement and stratagem columns ({ "<detachment id>": { rules:{ "<name>": {…} },
+  // enhancements:{ "<name>": {…} }, stratagems:{ "<name>": { gist, gistOf } } } }), fingerprinted as the lists' are
+  if (HAND().aiRead) {
+    cat.aiRead = true;
+    const AI = HAND().ai || {}, put = (o, x, where) => { if (!o) throw new Error('verify/sources/hand/catalog-' + faction + '.json ai: no ' + where); for (const [k, v] of Object.entries(x)) if (k !== 'why') o[k] = v; };
+    for (const [id, by] of Object.entries(AI.datasheets || {})) for (const [an, x] of Object.entries(by)) put(((rows[id] || {}).abilities || []).find(a => a.name === an), x, id + ' · ' + an);
+    for (const [id, by] of Object.entries(AI.detachments || {})) { const d = detachmentRows[id];
+      for (const [n, x] of Object.entries(by.rules || {})) put(d && [d.rule].concat(d.moreRules || []).find(r => r && r.name === n), x, id + ' rule ' + n);
+      for (const [n, x] of Object.entries(by.enhancements || {})) put(d && (d.enhancements || []).find(e => e.name === n), x, id + ' enhancement ' + n);
+      for (const [n, x] of Object.entries(by.stratagems || {})) put(d && (d.stratagems || []).find(e => e.name === n), x, id + ' stratagem ' + n); }
+  }
   return { C, E, cat, dets: C.dets, excluded: C.excluded };
 }
 

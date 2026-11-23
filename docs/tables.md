@@ -277,7 +277,7 @@ naming both, as for points; any other value no rule explains is refused, named.
 A faction catalogue (`verify/sources/catalog/<faction>.json`, docs/catalog.md) holds every current datasheet and detachment of a faction,
 held to GW's pages by the gate step `catalog`; a new faction's is written by `verify/from-waha.js` from Wahapedia's pages. `--write` here merges the catalogue rows
 (`verify/sources/catalog/<faction>.json`) into DATASHEETS: a row a list has keeps its lists' facts and gets only what it lacks; a row
-no list has is the catalogue's, `aiStatus:'not-read'` (no readings or AI-written lines yet). `points`, `composition`, `options` and
+no list has is the catalogue's, `aiStatus:'not-read'` (no readings or AI-written lines yet), unless its catalogue is read (`aiRead`: its summaries from the hand file, its lines checked through verify/catalog-armies.js, docs/catalog.md). `points`, `composition`, `options` and
 `aiStatus` are not copied onto a list's units.
 
 ## AI-written columns

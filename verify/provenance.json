@@ -904,6 +904,14 @@
    "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
   },
   {
+   "item": "core / rule:Hover / text",
+   "field": "text",
+   "text": "Each time this unit **takes to the skies** (21.03), do not subtract 2\" from the ",
+   "doc": "core",
+   "where": "PDF p82",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
    "item": "core / rule:Ignores Cover / text",
    "field": "text",
    "text": "Each time an attack is made with an **[IGNORES COVER]** weapon, the target canno",

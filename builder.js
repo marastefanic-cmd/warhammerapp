@@ -982,7 +982,7 @@ function marksOf(B, army, u, parts, P, rows, abil){
 }
 const where = parts => 'unit ' + parts.map(p => nn(p.name)).join(' + ');
 
-const api = { build, ruleAbilities, ruleAbilitiesOf, ruleAbilityErrorsOf, keywordsOf, ruleOfRow, coreText, meetsTo, WITH_RULE, catalogued, catalogues, malformed, nn, lc, typo, slug, uniq, and, splitList, lastId };
+const api = { build, naOf, ruleAbilities, ruleAbilitiesOf, ruleAbilityErrorsOf, keywordsOf, ruleOfRow, coreText, meetsTo, WITH_RULE, catalogued, catalogues, malformed, nn, lc, typo, slug, uniq, and, splitList, lastId };
 root.WH_BUILDER = api;
 if(typeof module !== 'undefined' && module.exports) module.exports = api;
 })(typeof window !== 'undefined' ? window : globalThis);

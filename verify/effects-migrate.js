@@ -39,7 +39,9 @@ function coreText(D, name){
 function sources(D){
   const out = new Map();
   const put = (key, s) => { const o = out.get(key); if(o){ o.weapons = [...new Set(o.weapons.concat(s.weapons || []))]; return; } out.set(key, Object.assign({ key, weapons:[] }, s)); };
-  for(const a of D.armies) for(const u of a.units.concat(a.refs || [])){
+  // (and what a phone import of a faction whose catalogue is read can place: verify/catalog-armies.js, every datasheet with each detachment)
+  const CA = require('./catalog-armies'), all = D.armies.some(a => a.catalog) ? D.armies : D.armies.concat(CA.armies(D));
+  for(const a of all) for(const u of a.units.concat(a.refs || [])){
     const ws = weaponNames(u);
     // (an ability whose tag names an army rule of its faction, Bondsman: that rule's words say whom it reaches)
     const F = D.factions[a.faction] || {};

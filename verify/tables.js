@@ -582,7 +582,8 @@ function build(R){
     // (a unit fact the catalogue fills on a row a list has: an attached unit's entry keeps its own, as before, catFilled)
     s.catFilled = new Set();
     for(const f of DS_UNIT.slice(1).concat(CAT_COLS)) if(c[f] !== undefined && !(f in s.ds) && !s.uconf.has(f)){ s.ds[f] = c[f]; if(s.catalog === 'shared') s.catFilled.add(f); }
-    if(s.catalog === 'only') s.ds.aiStatus = 'not-read';
+    // (not a catalogue whose AI layers are written, aiRead: its rows are read, verify/catalog-armies.js places them)
+    if(s.catalog === 'only' && !require('./catalog-armies').readFactions().includes(c.faction)) s.ds.aiStatus = 'not-read';
     for(const kind of ROWS) for(const r of c[kind] || []){
       // (a weapon profile of another group under the same name, the Bloodthirster's "strike" of its Axe of Khorne next to a list's Great axe
       // of Khorne one: a row of its own; the lists' rows find theirs first, by name, as before)

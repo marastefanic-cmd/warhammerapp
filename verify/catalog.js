@@ -243,7 +243,9 @@ function main() {
         if (dev) { usedC.add(dev); if (!dev.reason || !dev.evidence) fail('tables', id + ' · ' + d.what + ': its declaration has no reason or evidence'); continue; }
         fail('tables', id + ' · ' + d.what + ': DATASHEETS ' + JSON.stringify(d.data) + ', the catalogue ' + JSON.stringify(d.cat) + ' (settle it at the source, or declare it in verify/deviations-catalog.json)');
       }
-      if (!inList && S.aiStatus !== 'not-read') fail('tables', id + ': no list has it and it has no aiStatus "not-read"');
+      // (a catalogue whose AI layers are written, aiRead: its rows carry no mark; verify/catalog-armies.js places them for the gate)
+      if (!inList && !cat.aiRead && S.aiStatus !== 'not-read') fail('tables', id + ': no list has it and it has no aiStatus "not-read"');
+      if (cat.aiRead && S.aiStatus !== undefined) fail('tables', id + ': its catalogue is read (aiRead) but the row is marked aiStatus ' + JSON.stringify(S.aiStatus));
       // (its When targeted lines are its defence boxes, BOXES d, made by script: no reading to be marked)
     }
     // the detachments the catalogue adds: in FACTIONS as the catalogue has them, but for verify/derive.js's labels
@@ -254,7 +256,8 @@ function main() {
         const have = F.detachments[id];
         if (!have) { fail('tables', faction + ': the catalogue’s detachment ' + id + ' is not in data.js (node verify/from-waha.js ' + faction + ' --write)'); continue; }
         const h = Object.assign({}, have); delete h.aiStatus;
-        if (have.aiStatus !== 'not-read') fail('tables', faction + ': detachment ' + id + ' is the catalogue’s but has no aiStatus "not-read"');
+        if (!cat.aiRead && have.aiStatus !== 'not-read') fail('tables', faction + ': detachment ' + id + ' is the catalogue’s but has no aiStatus "not-read"');
+        if (cat.aiRead && have.aiStatus !== undefined) fail('tables', faction + ': detachment ' + id + ' is of a read catalogue (aiRead) but is marked aiStatus ' + JSON.stringify(have.aiStatus));
         if (stable(unlab(h)) !== stable(unlab(d))) fail('tables', faction + ': detachment ' + id + ' in data.js is not the catalogue’s (node verify/from-waha.js ' + faction + ' --write)');
       }
       for (const [id, d] of Object.entries(F.detachments)) if (d.aiStatus === 'not-read' && !(cat.detachmentRows || {})[id]) fail('tables', faction + ': detachment ' + id + ' is marked aiStatus not-read but is not the catalogue’s'); }
