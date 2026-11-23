@@ -2274,7 +2274,7 @@
  },
  {
   "army": "princes",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "models",
   "app": [
    "1x Khârn the Betrayer",
@@ -2294,7 +2294,7 @@
  },
  {
   "army": "princes",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "gear[1x Khorne Berzerker Champion]",
   "app": null,
   "source": [
@@ -2307,7 +2307,7 @@
  },
  {
   "army": "princes",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
   "app": [
    "Chainblade",
@@ -2403,7 +2403,7 @@
  },
  {
   "army": "standard",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "models",
   "app": [
    "1x Khârn the Betrayer",
@@ -2423,7 +2423,7 @@
  },
  {
   "army": "standard",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "gear[1x Khorne Berzerker Champion]",
   "app": null,
   "source": [
@@ -2436,7 +2436,7 @@
  },
  {
   "army": "standard",
-  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "unit": "kharn-the-betrayer-khorne-berzerkers",
   "field": "gear[1x Khorne Berzerker Champion (Icon of Khorne)]",
   "app": [
    "Chainblade",

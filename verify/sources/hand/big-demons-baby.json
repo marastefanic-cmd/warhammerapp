@@ -3,11 +3,5 @@
  "source": {
   "text": "New Recruit, exported 23 Oct 2026",
   "why": "the day New Recruit’s PDF of this list was exported (verify/sources/nr/big-demons-baby.txt), from which the list was first imported; the JSON export carries no date"
- },
- "units": {
-  "daemon-prince-of-khorne": {
-   "short": "Daemon Prince",
-   "why": "short: the name the unit screen and the lists show for the Daemon Prince of Khorne, as data.js has always shown it (GW's datasheet name is long for a phone line)."
-  }
  }
 }

@@ -66,6 +66,8 @@ const typo = s => String(s).replace(/'/g, '’');
 // a detachment's rules: `rule`, then any further ones (`moreRules`)
 const detRulesOf = d => d && d.rule ? [d.rule].concat(d.moreRules || []) : [];
 const slug = s => nm(s).toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+// (builder.js's: a letter's accent dropped, "Khârn" kharn)
+const slugB = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[’'`]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const uniq = a => [...new Set(a)];
 const lastId = e => String(e || '').split('::').pop();
 const ptsOf = s => (s.costs || []).filter(c => c.name === 'pts').reduce((t, c) => t + (Number(c.value) || 0), 0);
@@ -122,6 +124,10 @@ let factionId = Object.keys(FJ).find(k => k[0] !== '_' && FJ[k].bsdata && nm(FJ[
 const newFactionEntry = !factionId;
 if (!factionId) factionId = slug(catName.replace(/^.* - /, ''));
 const WAHA = (FJ[factionId] || {}).waha || factionId;
+// a list of a catalogued faction (data.js has its whole catalogue) is builder.js's (below): this reading follows builder.js's ways where
+// they are the list's own, so the two agree: every stats row with its ×N, the ids its names give (builder.js's slug), no na
+// (builder.js derives none; the app's "does nothing here" chips are its own)
+const CATALOGUED = !argv.includes('--emit') && (() => { try { return require('../builder.js').catalogued(D, factionId); } catch (e) { return false; } })();
 const WW = require('./waha-words')(ROOT, factionId);
 // a reference entry of the export (New Recruit's "Spore Mines (Biovore)", category Reference: the profile of a unit a rule of the list
 // adds to the army, 0 pts): its datasheet page is the one of its name less the bracket (Spore-Mines)
@@ -302,7 +308,7 @@ function wahaDispositions(name) {
 const detIds = detNames.map(n => {
   // (by GW's name, or the name BSData and New Recruit spell, nr)
   // (in --emit, a detachment a faction catalogue added, aiStatus 'not-read', is read again from its sources: verify/from-bsdata.js writes it)
-  const have = F && Object.keys(F.detachments).find(k => (lc(F.detachments[k].name) === lc(n) || (F.detachments[k].nr && lc(F.detachments[k].nr) === lc(n))) && !(argv.includes('--emit') && F.detachments[k].aiStatus === 'not-read'));
+  const have = F && Object.keys(F.detachments).find(k => (lc(F.detachments[k].name) === lc(n) || (F.detachments[k].nr && lc(F.detachments[k].nr) === lc(n)) || (F.detachments[k].waha && lc(F.detachments[k].waha) === lc(n))) && !(argv.includes('--emit') && F.detachments[k].aiStatus === 'not-read'));
   if (have) return have;
   const W = wahaDetachment(n), id = slug(W && W.gwName || n);
   if (!W) { want('detachment ' + n, 'rule, enhancements, stratagems', 'not on the Wahapedia faction page'); return id; }
@@ -554,7 +560,7 @@ function buildGroup(g, k) {
     dfs(p, s => { for (const prof of s.profiles || []) if (prof.typeName === 'Unit') add(prof, s.type === 'unit' ? modelsOf(s).filter(m => !own(m)).reduce((t, m) => t + (Number(m.number) || 1), 0) || 1 : s.type === 'model' && s !== p ? Number(s.number) || 1 : 1, s.type === 'unit'); });
     // (a profile on the unit's own entry, every model's: New Recruit prints it with no count, "Goremongers", as the app's lists first
     // imported from its PDF have it; the app counts its models from the models lines, verify/render.js rowCounts)
-    for (const r of rows) stats.push(hide(Object.assign({}, r.row, { name: r.row.name + (r.n > 1 && !(r.onUnit && r.sel === 1 && PDF_FIRST) ? ' ×' + r.n : '') }), { _pid: r.pid, _part: p, _base: r.row.name, _parens: r.parens }));
+    for (const r of rows) stats.push(hide(Object.assign({}, r.row, { name: r.row.name + (r.n > 1 && !(r.onUnit && r.sel === 1 && PDF_FIRST && !CATALOGUED) ? ' ×' + r.n : '') }), { _pid: r.pid, _part: p, _base: r.row.name, _parens: r.parens }));
   }
   // weapon rows: every profile, depth first, with the number of models carrying it
   const kinds = { ranged: [], melee: [] };
@@ -686,7 +692,7 @@ for (const u of units) if (isRefSel(u._parts[0]) || u._parts[0]._refHand) {
 }
 units.sort((a, b) => (a._ref ? 1 : 0) - (b._ref ? 1 : 0) || (ROLES.indexOf(a.role) + 1 || 99) - (ROLES.indexOf(b.role) + 1 || 99) || ((a.leads ? 1 : 0) - (b.leads ? 1 : 0)) || (a._at - b._at));
 for (const u of units) {
-  let id = [u.name].concat((u.also || []).map(c => c.name), u.leads ? [u.leads] : []).map(slug).join('-');
+  let id = [u.name].concat((u.also || []).map(c => c.name), u.leads ? [u.leads] : []).map(CATALOGUED ? slugB : slug).join('-');
   if (units.some(x => x !== u && slug(x.name) === slug(u.name) && (x.leads || null) === (u.leads || null))) id += u.enhancement ? '-' + slug(u.enhancement) : '';
   let k = 2; const base = id; while (units.some(x => x.id === id)) id = base + '-' + k++;
   u.id = id;
@@ -696,7 +702,7 @@ for (const u of units) {
 // unit of this run has that id (Shooty's Wazdakka Gutsmek stays "wazdakka", the id it was first imported with)
 {
   const A0 = (D.armies || []).find(a => a.id === armyId);
-  if (A0 && !flag('--refs')) {
+  if (A0 && !flag('--refs') && !CATALOGUED) {
     const pool = A0.units.slice(), taken = new Map();
     const same = (x, u) => nm(x.name) === nm(typo(u.name)) && (x.leads || null) === (u.leads || null);
     for (const u of units) {
@@ -1622,7 +1628,7 @@ for (const u of units) {
 // why an ability does nothing in this list (na: "Not leading a unit in this list", "Needs … : not this loadout", "No WAR DOG in this list"), by
 // verify/derive.js naOf's closed patterns over its words, the unit and the list, on every unit's ability where they give one
 { const { naOf } = require('./derive');
-  for (const u of units) for (const ab of u.abilities || []) { const na = naOf(ab, u, units); if (!na) continue;
+  for (const u of units) for (const ab of u.abilities || []) { const na = CATALOGUED ? null : naOf(ab, u, units); if (!na) continue;
     const t = ab.text; delete ab.text; ab.na = na; ab.text = t; filled.push({ what: 'na on ' + u.name + ' · ' + ab.name + ': ' + na, from: 'its words (verify/derive.js naOf)' }); } }
 const handKw = [], handStats = [];
 // (an ability by its name, or, where two parts of the unit have one of that name, "<name> / <who>")

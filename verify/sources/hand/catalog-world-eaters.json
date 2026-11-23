@@ -1,0 +1,9 @@
+{
+ "_about": "What verify/from-waha.js world-eaters cannot take from Wahapedia's pages as they are, each with its reason (docs/catalog.md): detachmentNames, a detachment GW's documents name otherwise than Wahapedia's heading (GW's name is the detachment's; Wahapedia's is kept as its waha, to find its section).",
+ "detachmentNames": {
+  "Possessed Slaughterband": {
+   "gw": "Possessed Slaughterbound",
+   "why": "GW's World Eaters Faction Pack 1.3 (30 Sep 2026), Rules Updates, names the detachment POSSESSED SLAUGHTERBOUND (its section heading \"POSSESSED SLAUGHTERBOUND DETACHMENT\", with the Warp Stalkers, Rapid Manifestation and Brazen Fury updates); Wahapedia's faction page heads it \"Possessed Slaughterband 2DP\". GW is the source of truth (the owner's rule): GW's name, Wahapedia's kept as waha to find its section. The coordinator's decision of 23 Nov 2026."
+  }
+ }
+}
