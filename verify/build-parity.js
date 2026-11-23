@@ -131,6 +131,42 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
     ['enhancement Mythic Hero on unit Norn Emissary not recognized (not an enhancement of the list’s detachments)']);
   neg('points other than GW’s: built with GW’s, both named', 'nidzillas', j => { unit(j, 'Tyrannofex').costs[0].value -= 5; j.roster.costs[0].value -= 5; }, null,
     r => r.ok && JSON.stringify(r.army.gwPoints) === JSON.stringify([{ unit:'Tyrannofex', export:175, gw:180 }]) && r.army.pointsUsed === 2000);
+  // GW's points for a unit with paid wargear and an enhancement (the Custodes player's report: a Shield-Captain with a Praesidium Shield
+  // and a 30-point enhancement is 180 + 25 + 30 = 235; the app said 210, as BSData's option "Paragon Blade & Praesidium Shield" is not
+  // named GW's "per Praesidium Shield 25"): Lite Knights with Shadowkeepers for Might of the Moritoi (its Dreadnought enhancements, the
+  // Galatus their Warblade changes and the second Telemon out) and a Shield-Captain, Genalchemic Warding (30) when enh
+  const shieldCaptain = (j, o) => {
+    const S = D.datasheets['adeptus-custodes/shield-captain'], s = sels(j), pts = v => ({ name:'pts', typeId:'51b2-306e-1021-d207', value:v });
+    const det = s.find(x => x.name === 'Detachment').selections.find(x => x.name === 'Might of the Moritoi');
+    det.name = 'Shadowkeepers'; det.entryId = det.entryId.replace(/[^:]+$/, 'b1d2-7b13-3831-7915');
+    const fd = s.find(x => x.name === 'Force Disposition').selections[0]; fd.name = 'Priority Assets'; fd.entryId = fd.entryId.replace(/[^:]+$/, '081d-bc07-5d4e-ab22');
+    for(const x of s) if(x.selections) x.selections = x.selections.filter(c => !/^Enhancements/.test(c.group || ''));
+    s.splice(s.findIndex(x => x.name === 'Contemptor-Galatus Dreadnought'), 1); s.splice(s.indexOf(s.filter(x => x.name === 'Telemon Heavy Dreadnought')[1]), 1);
+    const ch = c => Object.entries(c).map(([n2, v]) => ({ name:n2, $text:v })), pb = S.melee.find(r => r.name === 'Eternity-pattern Paragon Blade');
+    (o.copies || [o]).forEach((c, k) => s.push({ id:'sc' + k, name:S.name, entryId:'x::' + S.bsId, number:1, type:'model', costs:[pts(c.base || 180)],
+      profiles:[{ name:S.name, typeName:'Unit', characteristics:ch({ M:'8"', T:'7', Sv:'2+', W:'8', LD:'5+', OC:'2', InSv:'4+' }) }],
+      selections:(c.enh ? [{ id:'sce' + k, name:'Genalchemic Warding', entryId:'x::e', number:1, type:'upgrade', group:'Enhancements::Shadowkeepers Enhancements', costs:[pts(30), { name:'Enhancements', value:1 }] }] : [])
+        .concat([{ id:'scw' + k, name:'Paragon Blade & Praesidium Shield', entryId:'x::5267-88a7-c874-ba99', number:1, type:'upgrade', group:'Wargear', costs:[pts(c.shield == null ? 25 : c.shield)],
+          profiles:[{ name:pb.name, typeName:'Melee Weapons', characteristics:ch({ Range:pb.range, A:pb.A, WS:pb.WS, S:pb.S, AP:pb.AP, D:pb.D, Keywords:pb.kw.join(', ') }) },
+            { name:'Praesidium Shield', typeName:'Abilities', characteristics:ch({ Description:'Attacks allocated to this model have -1 D.' }) }] }]) }));
+    const tot = x => ptsOf(x) + (x.selections || []).reduce((t, c) => t + tot(c), 0);
+    j.roster.costs[0].value = s.reduce((t, x) => t + tot(x), 0); };
+  const ptsOf = x => (x.costs || []).filter(c => c.name === 'pts').reduce((t, c) => t + c.value, 0);
+  const scPts = r => r.ok ? D.resolve(r.army).units.filter(u => u.name === 'Shield-Captain').map(u => u.pts) : r.errors;
+  const scCase = (name, o, want, note) => neg(name, 'lite-knights', j => shieldCaptain(j, o), null, r => {
+    const res = { pts:scPts(r), gwPoints:r.ok ? r.army.gwPoints || null : null, used:r.ok ? r.army.pointsUsed : null };
+    report.push('N ' + name + ' → ' + JSON.stringify(res));
+    const j2 = clone(exp('lite-knights')); shieldCaptain(j2, o);
+    return r.ok && JSON.stringify(res.pts) === JSON.stringify(want) && JSON.stringify(res.gwPoints) === JSON.stringify(note || null) &&
+      res.used === (note ? j2.roster.costs[0].value + note.reduce((t, g) => t + g.gw - g.export, 0) : j2.roster.costs[0].value); });
+  scCase('Shield-Captain, Praesidium Shield and a 30-pt enhancement: 180 + 25 + 30', { enh:true }, [235]);
+  scCase('Shield-Captain, Praesidium Shield, no enhancement: 180 + 25', {}, [205]);
+  scCase('two Shield-Captains with Praesidium Shields: the second at GW’s 200', { copies:[{ enh:true }, { base:200 }] }, [235, 225]);
+  scCase('Shield-Captain whose export prices the shield at 20: GW’s 235, both named', { enh:true, shield:20 }, [235], [{ unit:'Shield-Captain', export:230, gw:235 }]);
+  // (every paid option of a catalogued datasheet is one of GW's WARGEAR OPTIONS costs, at the price BSData gives it)
+  { const miss = Object.entries(D.datasheets).filter(([, S]) => S.points).flatMap(([k, S]) => (S.options || []).flatMap(o => o.choices.filter(c => c.pts)
+      .filter(c => B.wargearOf(S.points, c.name).reduce((t, w) => t + w.pts, 0) !== c.pts).map(c => k + ': ' + c.name + ' ' + c.pts)));
+    ok(!miss.length, 'N a paid option that is none of GW’s wargear costs: ' + miss.join('; ')); }
   neg('Legends', 'nidzillas', j => { unit(j, 'Tyrannofex').name = 'Tyrannofex [Legends]'; }, ['unit Tyrannofex [Legends] not imported: Legends, not matched play']);
   neg('Crucible', 'lite-knights', j => { (unit(j, 'Witchseeker Squad').categories = unit(j, 'Witchseeker Squad').categories || []).push({ name:'Crucible', entryId:'x' }); }, ['unit Witchseeker Squad not imported: Crucible, not matched play']);
   neg('malformed', 'nidzillas', j => { sels(j)[5].number = 'one'; }, ['not a New Recruit export (a selection is malformed)']);
