@@ -2882,7 +2882,7 @@ WARLORD
 Ask about this unit
 Khârn the Betrayer ›
 
-######## unit kh-rn-the-betrayer-khorne-berzerkers · ANGRON Standard
+######## unit kharn-the-betrayer-khorne-berzerkers · ANGRON Standard
 KHÂRN THE BETRAYER + KHORNE BERZERKERS
 285 PTS
 Epic Hero · 115 + Khorne Berzerkers 170
@@ -3337,7 +3337,7 @@ Slaughterbound
 6+
 1
 5+
-Exalted Eightbound
+Exalted Eightbound×3
 40mm
 10"
 6
@@ -3568,7 +3568,7 @@ W
 LD
 OC
 InSv
-Eightbound
+Eightbound×3
 40mm
 10"
 6
@@ -3647,7 +3647,7 @@ W
 LD
 OC
 InSv
-Exalted Eightbound
+Exalted Eightbound×3
 40mm
 10"
 6
@@ -3728,7 +3728,7 @@ W
 LD
 OC
 InSv
-Goremongers
+Goremongers×8
 32mm
 9"
 4
@@ -3834,7 +3834,7 @@ W
 LD
 OC
 InSv
-Jakhal
+Jakhal×9
 28.5mm
 7"
 4
@@ -4412,7 +4412,7 @@ Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit lists it).
 
-######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 4",null] · STANDARD Standard
+######## popup grant:["Relentless Rage","kharn-the-betrayer-khorne-berzerkers","A 4",null] · STANDARD Standard
 A 4 · GRANTED BY
 
 Relentless Rage
@@ -4423,7 +4423,7 @@ Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit lists it).
 
-######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 5",null] · STANDARD Standard
+######## popup grant:["Relentless Rage","kharn-the-betrayer-khorne-berzerkers","A 5",null] · STANDARD Standard
 A 5 · GRANTED BY
 
 Relentless Rage
@@ -4434,7 +4434,7 @@ Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit lists it).
 
-######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 9",null] · STANDARD Standard
+######## popup grant:["Relentless Rage","kharn-the-betrayer-khorne-berzerkers","A 9",null] · STANDARD Standard
 A 9 · GRANTED BY
 
 Relentless Rage

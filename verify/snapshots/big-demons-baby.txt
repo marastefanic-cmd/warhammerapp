@@ -189,7 +189,7 @@ YOUR LIST
 WARLORD
 Angron
 ENHANCE­MENTS
-Blade of Endless Bloodshed 30 pts on Daemon Prince
+Blade of Endless Bloodshed 30 pts on Daemon Prince of Khorne
 Blood-forged Armour 20 pts on Master of Executions
 Disciple of Khorne 15 pts on Lord on Juggernaut
 ATTACHED
@@ -269,7 +269,7 @@ Onslaught: Up to 1500 pts
 
 No BLOOD LEGIONS model from your army can be your WARLORD.
 
-APPLIES TOAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
+APPLIES TOAngron, Skarbrand, Bloodthirster, Daemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
 
 Wrath of Khorne
 Vessels of Wrath · Fight
@@ -279,7 +279,7 @@ When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selec
 [CLEAVE 1].
 Or: +1 AP.
 
-APPLIES TODaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne
+APPLIES TODaemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne
 
 DECLARE BATTLE FORMATIONS
 DEEP STRIKE
@@ -1035,7 +1035,7 @@ Onslaught: Up to 1500 pts
 
 No BLOOD LEGIONS model from your army can be your WARLORD.
 
-APPLIES TOAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
+APPLIES TOAngron, Skarbrand, Bloodthirster, Daemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
 
 Blood-forged Armour
 Enhancement · 20 pts · on Master of Executions
@@ -1075,7 +1075,7 @@ When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selec
 [CLEAVE 1].
 Or: +1 AP.
 
-APPLIES TODaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne
+APPLIES TODaemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne
 
 Other enhancements
 2 not in this list
@@ -1097,7 +1097,7 @@ Deadly Demise
 Angron D6
 Skarbrand D6
 Bloodthirster D6
-Daemon Prince · Blade of Endless Bloodshed D3
+Daemon Prince of Khorne · Blade of Endless Bloodshed D3
 Deep Strike
 Angron
 Reborn in Blood: At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
@@ -1115,7 +1115,7 @@ Leader
 Master of Executions · Blood-forged Armour
 Lord on Juggernaut leads Khorne Berzerkers
 Lone Operative
-Daemon Prince · Blade of Endless Bloodshed
+Daemon Prince of Khorne · Blade of Endless Bloodshed
 Lord of Murder: While this model is within 3" of one or more friendly WORLD EATERS INFANTRY units, this model has the Lone Operative ability.
 Psychic
 Flesh Hounds
@@ -2152,7 +2152,7 @@ Select one friendly BLOOD LEGIONS unit within 6" of your unit. One destroyed MOU
 
 RESTRICTIONSThis Stratagem cannot be used to return destroyed CHARACTER models to Attached units.
 
-USED BYAngron, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals
+USED BYAngron, Daemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals
 
 1
 CP
@@ -2252,7 +2252,7 @@ EFFECT
 
 When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
 
-USED BYAngron, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+USED BYAngron, Daemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
 
 1
 CP
@@ -2271,7 +2271,7 @@ Your unit’s CHARACTER models’ melee attacks have:
 +1 A.
 +2 S.
 
-USED BYDaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+USED BYDaemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
 
 1
 CP
@@ -2287,7 +2287,7 @@ EFFECT
 
 Your unit has Feel No Pain 4+ against mortal wounds.
 
-USED BYDaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+USED BYDaemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
 
 CORE STRATAGEMS
 10
@@ -2343,7 +2343,7 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYSkarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
+USED BYSkarbrand, Bloodthirster, Daemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
 
 1
 CP
@@ -2387,7 +2387,7 @@ Resolve the following sequence:
 
 Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
-USED BYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed
+USED BYAngron, Skarbrand, Bloodthirster, Daemon Prince of Khorne · Blade of Endless Bloodshed
 
 1
 CP
@@ -2424,7 +2424,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+USED BYAngron, Skarbrand, Bloodthirster, Daemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
 
 2
 CP
@@ -2828,7 +2828,7 @@ BLOODTHIRSTER
 FACTION: BLOOD LEGIONS
 Ask about this unit
 ‹ Skarbrand
-Daemon Prince · Blade of Endless Bloodshed ›
+Daemon Prince of Khorne · Blade of Endless Bloodshed ›
 
 ######## unit daemon-prince-of-khorne · BLOODTHIRSTER Big demons baby
 DAEMON PRINCE OF KHORNE
@@ -3067,7 +3067,7 @@ KHORNE
 MASTER OF EXECUTIONS
 FACTION: WORLD EATERS
 Ask about this unit
-‹ Daemon Prince · Blade of Endless Bloodshed
+‹ Daemon Prince of Khorne · Blade of Endless Bloodshed
 Lord on Juggernaut · Disciple of Khorne ›
 
 ######## unit lord-on-juggernaut-khorne-berzerkers · MASTER OF EXECUTIONS Big demons baby
@@ -3316,7 +3316,7 @@ W
 LD
 OC
 InSv
-Goremongers
+Goremongers×8
 32mm
 9"
 4
@@ -3422,7 +3422,7 @@ W
 LD
 OC
 InSv
-Jakhal
+Jakhal×9
 28.5mm
 7"
 4
@@ -3530,7 +3530,7 @@ W
 LD
 OC
 InSv
-Flesh Hounds
+Flesh Hounds×5
 60×35.5mm Oval
 12"
 4
@@ -3683,7 +3683,7 @@ Devastating Assault
 
 Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 
-UNITDaemon Prince · Blade of Endless Bloodshed
+UNITDaemon Prince of Khorne · Blade of Endless Bloodshed
 
 Ask about this ability
 
@@ -3743,7 +3743,7 @@ Lord of Murder
 
 While this model is within 3" of one or more friendly WORLD EATERS INFANTRY units, this model has the Lone Operative ability.
 
-UNITDaemon Prince · Blade of Endless Bloodshed
+UNITDaemon Prince of Khorne · Blade of Endless Bloodshed
 
 Ask about this ability
 
@@ -4166,7 +4166,7 @@ Onslaught: Up to 1500 pts
 
 No BLOOD LEGIONS model from your army can be your WARLORD.
 
-IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
+IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
 
 Ask about this rule
 
@@ -4258,7 +4258,7 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
-IN THIS ARMYAngron, Daemon Prince · Blade of Endless Bloodshed (in Devastating Assault), Master of Executions · Blood-forged Armour
+IN THIS ARMYAngron, Daemon Prince of Khorne · Blade of Endless Bloodshed (in Devastating Assault), Master of Executions · Blood-forged Armour
 
 Ask about this rule
 
@@ -4269,7 +4269,7 @@ Deadly Demise
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed
+IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince of Khorne · Blade of Endless Bloodshed
 
 Ask about this rule
 
@@ -4280,7 +4280,7 @@ Deadly Demise D3
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed
+IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince of Khorne · Blade of Endless Bloodshed
 
 Ask about this rule
 
@@ -4291,7 +4291,7 @@ Deadly Demise D6
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed
+IN THIS ARMYAngron, Skarbrand, Bloodthirster, Daemon Prince of Khorne · Blade of Endless Bloodshed
 
 Ask about this rule
 
@@ -4476,7 +4476,7 @@ If a unit has Lone Operative, but models in that unit have different range value
 
 If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
 
-IN THIS ARMYDaemon Prince · Blade of Endless Bloodshed (in Lord of Murder)
+IN THIS ARMYDaemon Prince of Khorne · Blade of Endless Bloodshed (in Lord of Murder)
 
 Ask about this rule
 
@@ -4556,7 +4556,7 @@ RAPID FIRE 1
 
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
-IN THIS ARMYDaemon Prince · Blade of Endless Bloodshed
+IN THIS ARMYDaemon Prince of Khorne · Blade of Endless Bloodshed
 
 Ask about this rule
 
@@ -4643,7 +4643,7 @@ When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selec
 [CLEAVE 1].
 Or: +1 AP.
 
-IN THIS ARMYDaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne
+IN THIS ARMYDaemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut · Disciple of Khorne
 
 Ask about this rule
 
@@ -4667,7 +4667,7 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
-IN THIS ARMYAngron, Daemon Prince · Blade of Endless Bloodshed (in Devastating Assault), Master of Executions · Blood-forged Armour
+IN THIS ARMYAngron, Daemon Prince of Khorne · Blade of Endless Bloodshed (in Devastating Assault), Master of Executions · Blood-forged Armour
 
 Ask about this rule
 
@@ -5170,7 +5170,7 @@ Your unit’s CHARACTER models’ melee attacks have:
 +1 A.
 +2 S.
 
-USED BYDaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+USED BYDaemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
 
 Ask about this stratagem
 
@@ -5257,7 +5257,7 @@ Resolve the following sequence:
 
 Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
-USED BYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed
+USED BYAngron, Skarbrand, Bloodthirster, Daemon Prince of Khorne · Blade of Endless Bloodshed
 
 Ask about this stratagem
 
@@ -5295,7 +5295,7 @@ Select one friendly BLOOD LEGIONS unit within 6" of your unit. One destroyed MOU
 
 RESTRICTIONSThis Stratagem cannot be used to return destroyed CHARACTER models to Attached units.
 
-USED BYAngron, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals
+USED BYAngron, Daemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals
 
 Ask about this stratagem
 
@@ -5313,7 +5313,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYAngron, Skarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+USED BYAngron, Skarbrand, Bloodthirster, Daemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
 
 Ask about this stratagem
 
@@ -5355,7 +5355,7 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYSkarbrand, Bloodthirster, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
+USED BYSkarbrand, Bloodthirster, Daemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne, Goremongers, Jakhals, Flesh Hounds
 
 Ask about this stratagem
 
@@ -5436,7 +5436,7 @@ EFFECT
 
 When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
 
-USED BYAngron, Daemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+USED BYAngron, Daemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
 
 Ask about this stratagem
 
@@ -5474,7 +5474,7 @@ EFFECT
 
 Your unit has Feel No Pain 4+ against mortal wounds.
 
-USED BYDaemon Prince · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
+USED BYDaemon Prince of Khorne · Blade of Endless Bloodshed, Master of Executions · Blood-forged Armour, Lord on Juggernaut + Khorne Berzerkers · Disciple of Khorne
 
 Ask about this stratagem
 

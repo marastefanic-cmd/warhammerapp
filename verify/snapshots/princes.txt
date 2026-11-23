@@ -148,10 +148,10 @@ Tick the units you place in strategic reserves; the total counts each ticked uni
 ######## pregame · PRINCES Overview
 YOUR LIST
 WARLORD
-Daemon Prince · Helm of Brazen Ire
+Daemon Prince of Khorne · Helm of Brazen Ire
 ENHANCE­MENTS
-Helm of Brazen Ire 30 pts on Daemon Prince
-Berzerker Glaive 35 pts on Daemon Prince
+Helm of Brazen Ire 30 pts on Daemon Prince of Khorne
+Berzerker Glaive 35 pts on Daemon Prince of Khorne
 Archslaughterer 30 pts on Lord on Juggernaut
 Battle-lust 20 pts on Slaughterbound
 ATTACHED
@@ -207,7 +207,7 @@ Berzerker Warband · Fight
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-APPLIES TOKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Chaos Rhino, Eightbound, Jakhals, Forgefiend
+APPLIES TOKhârn the Betrayer, Daemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Chaos Rhino, Eightbound, Jakhals, Forgefiend
 
 Wrath of Khorne
 Vessels of Wrath · Fight
@@ -217,7 +217,7 @@ When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selec
 [CLEAVE 1].
 Or: +1 AP.
 
-APPLIES TODaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
+APPLIES TODaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
 
 DECLARE BATTLE FORMATIONS
 DEEP STRIKE
@@ -1031,7 +1031,7 @@ Detachment rule · Fight · Already in A
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-APPLIES TOKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Chaos Rhino, Eightbound, Jakhals, Forgefiend
+APPLIES TOKhârn the Betrayer, Daemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Chaos Rhino, Eightbound, Jakhals, Forgefiend
 
 Berzerker Glaive
 Enhancement · 35 pts · on Daemon Prince of Khorne
@@ -1071,7 +1071,7 @@ When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selec
 [CLEAVE 1].
 Or: +1 AP.
 
-APPLIES TODaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
+APPLIES TODaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
 
 Archslaughterer
 Enhancement · 30 pts · on Lord on Juggernaut + Khorne Berzerkers
@@ -1093,8 +1093,8 @@ STRATAGEMSPunish the Craven, Aspire to Infamy, Scorn the Witch
 
 UNIT RULES
 Deadly Demise
-Daemon Prince · Helm of Brazen Ire D3
-Daemon Prince · Berzerker Glaive D3
+Daemon Prince of Khorne · Helm of Brazen Ire D3
+Daemon Prince of Khorne · Berzerker Glaive D3
 Slaughterbound + Exalted Eightbound D3: Slaughterbound only
 Chaos Rhino D3
 Forgefiend D3
@@ -1102,9 +1102,9 @@ Deep Strike
 Slaughterbound + Exalted Eightbound
 Lord of the Eightbound: If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, until the end of the battle, this model has the Deep Strike and Scouts 6" abilities.
 Devastating Wounds
-Daemon Prince · Helm of Brazen Ire
+Daemon Prince of Khorne · Helm of Brazen Ire
 Devastating Assault: Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
-Daemon Prince · Berzerker Glaive
+Daemon Prince of Khorne · Berzerker Glaive
 Devastating Assault: Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 Slaughterbound + Exalted Eightbound
 Possessed Lord: Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability.
@@ -1115,9 +1115,9 @@ Khârn the Betrayer leads Khorne Berzerkers
 Lord on Juggernaut leads Khorne Berzerkers
 Slaughterbound leads Exalted Eightbound
 Lone Operative
-Daemon Prince · Helm of Brazen Ire
+Daemon Prince of Khorne · Helm of Brazen Ire
 Lord of Murder: While this model is within 3" of one or more friendly WORLD EATERS INFANTRY units, this model has the Lone Operative ability.
-Daemon Prince · Berzerker Glaive
+Daemon Prince of Khorne · Berzerker Glaive
 Lord of Murder: While this model is within 3" of one or more friendly WORLD EATERS INFANTRY units, this model has the Lone Operative ability.
 Scouts
 Slaughterbound + Exalted Eightbound 6" (in Lord of the Eightbound)
@@ -2526,7 +2526,7 @@ EFFECT
 
 When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
 
-USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
+USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
 
 1
 CP
@@ -2545,7 +2545,7 @@ Your unit’s CHARACTER models’ melee attacks have:
 +1 A.
 +2 S.
 
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
+USED BYDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
 
 1
 CP
@@ -2561,7 +2561,7 @@ EFFECT
 
 Your unit has Feel No Pain 4+ against mortal wounds.
 
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
+USED BYDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
 
 CORE STRATAGEMS
 10
@@ -2617,7 +2617,7 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Chaos Rhino, Jakhals, Forgefiend
+USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Chaos Rhino, Jakhals, Forgefiend
 
 1
 CP
@@ -2677,7 +2677,7 @@ Resolve the following sequence:
 
 Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Chaos Rhino, Forgefiend
+USED BYDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Chaos Rhino, Forgefiend
 
 1
 CP
@@ -2698,7 +2698,7 @@ Into the Fray (+1CP): When making the charge roll, if the result is greater than
 
 Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
-USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust, Eightbound, Jakhals, Forgefiend
+USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust, Eightbound, Jakhals, Forgefiend
 
 1
 CP
@@ -2714,7 +2714,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
+USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
 
 2
 CP
@@ -2759,7 +2759,7 @@ USED BYany unit
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## unit kh-rn-the-betrayer-khorne-berzerkers · STRATAGEMS Princes
+######## unit kharn-the-betrayer-khorne-berzerkers · STRATAGEMS Princes
 KHÂRN THE BETRAYER + KHORNE BERZERKERS
 285 PTS
 Epic Hero · 115 + Khorne Berzerkers 170
@@ -2961,7 +2961,7 @@ BERZERKERS*
 FACTION: WORLD EATERS
 *from the led Khorne Berzerkers
 Ask about this unit
-Daemon Prince · Helm of Brazen Ire ›
+Daemon Prince of Khorne · Helm of Brazen Ire ›
 
 ######## unit daemon-prince-of-khorne-helm-of-brazen-ire · KHÂRN THE BETRAYER Princes
 DAEMON PRINCE OF KHORNE
@@ -3088,7 +3088,7 @@ FACTION: WORLD EATERS
 WARLORD
 Ask about this unit
 ‹ Khârn the Betrayer
-Daemon Prince · Berzerker Glaive ›
+Daemon Prince of Khorne · Berzerker Glaive ›
 
 ######## unit daemon-prince-of-khorne-berzerker-glaive · DAEMON PRINCE OF KHORNE Princes
 DAEMON PRINCE OF KHORNE
@@ -3212,7 +3212,7 @@ DAEMON
 DAEMON PRINCE
 FACTION: WORLD EATERS
 Ask about this unit
-‹ Daemon Prince · Helm of Brazen Ire
+‹ Daemon Prince of Khorne · Helm of Brazen Ire
 Lord on Juggernaut · Archslaughterer ›
 
 ######## unit lord-on-juggernaut-khorne-berzerkers · DAEMON PRINCE OF KHORNE Princes
@@ -3438,7 +3438,7 @@ BERZERKERS*
 FACTION: WORLD EATERS
 *from the led Khorne Berzerkers
 Ask about this unit
-‹ Daemon Prince · Berzerker Glaive
+‹ Daemon Prince of Khorne · Berzerker Glaive
 Slaughterbound · Battle-lust ›
 
 ######## unit slaughterbound-exalted-eightbound · LORD ON JUGGERNAUT Princes
@@ -3472,7 +3472,7 @@ Slaughterbound
 6+
 1
 5+
-Exalted Eightbound
+Exalted Eightbound×3
 40mm
 10"
 6
@@ -3701,7 +3701,7 @@ W
 LD
 OC
 InSv
-Eightbound
+Eightbound×3
 40mm
 10"
 6
@@ -3781,7 +3781,7 @@ W
 LD
 OC
 InSv
-Jakhal
+Jakhal×9
 28.5mm
 7"
 4
@@ -4034,7 +4034,7 @@ Devastating Assault
 
 Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.
 
-UNITDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
+UNITDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive
 
 Ask about this ability
 
@@ -4056,7 +4056,7 @@ Helm of Brazen Ire
 
 WORLD EATERS model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.
 
-UNITDaemon Prince · Helm of Brazen Ire
+UNITDaemon Prince of Khorne · Helm of Brazen Ire
 
 Ask about this ability
 
@@ -4089,7 +4089,7 @@ Lord of Murder
 
 While this model is within 3" of one or more friendly WORLD EATERS INFANTRY units, this model has the Lone Operative ability.
 
-UNITDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
+UNITDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive
 
 Ask about this ability
 
@@ -4365,7 +4365,7 @@ Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit lists it).
 
-######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 4",null] · PRINCES Princes
+######## popup grant:["Relentless Rage","kharn-the-betrayer-khorne-berzerkers","A 4",null] · PRINCES Princes
 A 4 · GRANTED BY
 
 Relentless Rage
@@ -4376,7 +4376,7 @@ Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit lists it).
 
-######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 5",null] · PRINCES Princes
+######## popup grant:["Relentless Rage","kharn-the-betrayer-khorne-berzerkers","A 5",null] · PRINCES Princes
 A 5 · GRANTED BY
 
 Relentless Rage
@@ -4387,7 +4387,7 @@ Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit lists it).
 
-######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 9",null] · PRINCES Princes
+######## popup grant:["Relentless Rage","kharn-the-betrayer-khorne-berzerkers","A 9",null] · PRINCES Princes
 A 9 · GRANTED BY
 
 Relentless Rage
@@ -4786,7 +4786,7 @@ Deadly Demise
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Slaughterbound · Battle-lust (Slaughterbound only), Chaos Rhino, Forgefiend
+IN THIS ARMYDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Slaughterbound · Battle-lust (Slaughterbound only), Chaos Rhino, Forgefiend
 
 Ask about this rule
 
@@ -4797,7 +4797,7 @@ Deadly Demise D3
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
-IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Slaughterbound · Battle-lust (Slaughterbound only), Chaos Rhino, Forgefiend
+IN THIS ARMYDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Slaughterbound · Battle-lust (Slaughterbound only), Chaos Rhino, Forgefiend
 
 Ask about this rule
 
@@ -4821,7 +4821,7 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
-IN THIS ARMYDaemon Prince · Helm of Brazen Ire (in Devastating Assault), Daemon Prince · Berzerker Glaive (in Devastating Assault), Slaughterbound · Battle-lust (in Possessed Lord)
+IN THIS ARMYDaemon Prince of Khorne · Helm of Brazen Ire (in Devastating Assault), Daemon Prince of Khorne · Berzerker Glaive (in Devastating Assault), Slaughterbound · Battle-lust (in Possessed Lord)
 
 Ask about this rule
 
@@ -4835,7 +4835,7 @@ Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fi
 All of that model’s [EXTRA ATTACKS] weapons.
 One of that model’s other melee weapons, if possible.
 
-IN THIS ARMYDaemon Prince · Berzerker Glaive (in Berzerker Glaive), Lord on Juggernaut · Archslaughterer
+IN THIS ARMYDaemon Prince of Khorne · Berzerker Glaive (in Berzerker Glaive), Lord on Juggernaut · Archslaughterer
 
 Ask about this rule
 
@@ -4981,7 +4981,7 @@ If a unit has Lone Operative, but models in that unit have different range value
 
 If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
 
-IN THIS ARMYDaemon Prince · Helm of Brazen Ire (in Lord of Murder), Daemon Prince · Berzerker Glaive (in Lord of Murder)
+IN THIS ARMYDaemon Prince of Khorne · Helm of Brazen Ire (in Lord of Murder), Daemon Prince of Khorne · Berzerker Glaive (in Lord of Murder)
 
 Ask about this rule
 
@@ -5020,7 +5020,7 @@ RAPID FIRE 1
 
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
-IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Chaos Rhino, Forgefiend
+IN THIS ARMYDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Chaos Rhino, Forgefiend
 
 Ask about this rule
 
@@ -5031,7 +5031,7 @@ RAPID FIRE 4
 
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
-IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Chaos Rhino, Forgefiend
+IN THIS ARMYDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Chaos Rhino, Forgefiend
 
 Ask about this rule
 
@@ -5042,7 +5042,7 @@ Relentless Rage
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
-IN THIS ARMYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Chaos Rhino, Eightbound, Jakhals, Forgefiend
+IN THIS ARMYKhârn the Betrayer, Daemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Chaos Rhino, Eightbound, Jakhals, Forgefiend
 
 Ask about this rule
 
@@ -5149,7 +5149,7 @@ When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selec
 [CLEAVE 1].
 Or: +1 AP.
 
-IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
+IN THIS ARMYDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
 
 Ask about this rule
 
@@ -5173,7 +5173,7 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
-IN THIS ARMYDaemon Prince · Helm of Brazen Ire (in Devastating Assault), Daemon Prince · Berzerker Glaive (in Devastating Assault), Slaughterbound · Battle-lust (in Possessed Lord)
+IN THIS ARMYDaemon Prince of Khorne · Helm of Brazen Ire (in Devastating Assault), Daemon Prince of Khorne · Berzerker Glaive (in Devastating Assault), Slaughterbound · Battle-lust (in Possessed Lord)
 
 Ask about this rule
 
@@ -5768,7 +5768,7 @@ Your unit’s CHARACTER models’ melee attacks have:
 +1 A.
 +2 S.
 
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
+USED BYDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
 
 Ask about this stratagem
 
@@ -5875,7 +5875,7 @@ Resolve the following sequence:
 
 Wahapedia errata: “The Tank Shock Stratagem is the same as the Crushing Impact stratagem.”
 
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Chaos Rhino, Forgefiend
+USED BYDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Chaos Rhino, Forgefiend
 
 Ask about this stratagem
 
@@ -5893,7 +5893,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
+USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
 
 Ask about this stratagem
 
@@ -5935,7 +5935,7 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Chaos Rhino, Jakhals, Forgefiend
+USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Chaos Rhino, Jakhals, Forgefiend
 
 Ask about this stratagem
 
@@ -5994,7 +5994,7 @@ Into the Fray (+1CP): When making the charge roll, if the result is greater than
 
 Wahapedia FAQ: “If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier?” “No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.”
 
-USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust, Eightbound, Jakhals, Forgefiend
+USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust, Eightbound, Jakhals, Forgefiend
 
 Ask about this stratagem
 
@@ -6034,7 +6034,7 @@ EFFECT
 
 When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
 
-USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
+USED BYKhârn the Betrayer + Khorne Berzerkers, Daemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
 
 Ask about this stratagem
 
@@ -6072,7 +6072,7 @@ EFFECT
 
 Your unit has Feel No Pain 4+ against mortal wounds.
 
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
+USED BYDaemon Prince of Khorne · Helm of Brazen Ire, Daemon Prince of Khorne · Berzerker Glaive, Lord on Juggernaut + Khorne Berzerkers · Archslaughterer, Slaughterbound + Exalted Eightbound · Battle-lust
 
 Ask about this stratagem
 
