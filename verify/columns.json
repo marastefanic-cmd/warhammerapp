@@ -1986,7 +1986,7 @@
     },
     "gw": {
      "source": "derived",
-     "note": "a catalogued datasheet's value where New Recruit prints another than GW's datasheet, as the owner's exports and PDFs show it (verify/deviations-nr.json): verify/build-index.js, held by build-parity (I)",
+     "note": "a catalogued datasheet's value where New Recruit prints another than GW's datasheet, as the owner's exports and PDFs show it (verify/deviations-nr.json) or, for a datasheet none shows, as verify/sources/nr-values.json records it (GW's value there must be the row's): an import showing it is built with GW's value and a note naming both: verify/build-index.js, held by build-parity (I)",
      "by": "verify/build-index.js"
     },
     "battleSizes": {

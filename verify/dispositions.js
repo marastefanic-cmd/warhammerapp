@@ -19,7 +19,7 @@ const txt = s => String(s).replace(/<[^>]+>/g, '').replace(/&rsquo;|&#8217;|&apo
 // { 'detachment name (lower case)': [dispositions] }, and byFaction { faction: { detachment name: [...] } }; a name two factions' pages
 // give different dispositions is in `clash` (the check fails on one data.js has)
 function byDetachment(){
-  const out = {}, byFaction = {}, clash = new Set(), dir = path.join(ROOT, 'verify/.cache/waha');
+  const out = {}, byFaction = {}, byName = {}, clash = new Set(), dir = path.join(ROOT, 'verify/.cache/waha');
   const FJ = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8'));
   for(const fac of Object.keys(FJ).filter(k => k[0] !== '_')){
     let html; try { html = fs.readFileSync(path.join(dir, fac + '.html'), 'utf8'); } catch(e){ continue; }
@@ -29,11 +29,12 @@ function byDetachment(){
       const list = ORDER.filter(x => d.has(x)), odd = [...d].filter(x => !ORDER.includes(x));
       if(odd.length) throw new Error('verify/.cache/waha/' + fac + '.html: ' + name + ' has a Force Disposition this file does not know (' + odd.join(', ') + ')');
       (byFaction[fac] = byFaction[fac] || {})[key(name)] = list;
+      (byName[fac] = byName[fac] || {})[name.replace(/'/g, '’')] = list;   // (as the page prints the name: project/make.js)
       if(out[key(name)] && out[key(name)].join('|') !== list.join('|')) clash.add(key(name));
       out[key(name)] = list;
     }
   }
-  return { out, byFaction, clash };
+  return { out, byFaction, byName, clash };
 }
 module.exports = { byDetachment, ORDER };
 if(require.main !== module) return;

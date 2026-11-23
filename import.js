@@ -617,6 +617,8 @@ function make(kept, D, opt){
     const r = WB().build(j, D, opt);
     if(!r.ok) return r;
     const army = D.resolve(r.army); army.imported = true; army.built = true;
+    // (the values the export shows that are New Recruit's own where GW's datasheet has another: the list has GW's, and its Overview says so)
+    const gv = (r.notes || []).flatMap(n => n.gwValues || []); if(gv.length) army.gwValues = gv;
     return { ok:true, army, entry:r.army };
   }
   const r = resolve(j, D, opt);

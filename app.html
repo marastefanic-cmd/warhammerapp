@@ -2011,6 +2011,7 @@ const importedFoot = a => { const x = importedKept().find(y => y.id === a.id);
     (a.built ? 'Built from its export and the app’s ' + esc(factionOf(a).name) + ' tables, as the app’s own lists are. ' : 'Copied from units the app’s own lists have: ' + esc(factionOf(a).name) + ' has no full catalogue in the app yet. ') +
     (x ? 'Kept on this phone only.' : 'This phone could not keep it: it is gone when the app next starts.') + '</p>' +
     ((a.gwPoints || []).length ? '<p class="note">Points: GW’s are used where the export’s differ: ' + a.gwPoints.map(g => esc(g.unit) + ' ' + g.export + ' pts in the export, ' + g.gw + ' pts by GW').join('; ') + '.</p>' : '') +
+    ((a.gwValues || []).length ? '<p class="note">Values: GW’s are used where the export’s differ: ' + a.gwValues.map(g => esc(g.unit) + ', ' + esc(g.row) + ' ' + esc(g.field) + ' ' + esc(g.export) + ' in the export, ' + esc(g.gw) + ' by GW').join('; ') + '.</p>' : '') +
     '<div class="imprm" id="impRm">' + impRmBtn(a.id) + '</div>'; };
 const impRmBtn = id => '<button class="btn2" data-imprm="' + esc(id) + '">Remove this list</button>';
 function askRemove(id){

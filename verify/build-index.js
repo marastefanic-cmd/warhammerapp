@@ -9,7 +9,7 @@
      battleSizes  GW's battle sizes (Core Rules 25.03, as rules/core-rules.md has them): points, Detachment Points, enhancement and unit limits
      upgrades     an enhancement GW's Faction Pack heads "<NAME> UPGRADE" (verify/.cache/gw) that its row (Wahapedia's UPGRADE) does not mark
      gw      a catalogued datasheet's value where New Recruit prints another than GW's datasheet, as the owner's exports and PDFs show it
-             (verify/deviations-nr.json): { "<datasheet>": { "<kind>|<row>|<field>": "<New Recruit's value>" } }, so that value in an export is
+             (verify/deviations-nr.json), or as verify/sources/nr-values.json records it for a datasheet none shows: { "<datasheet>": { "<kind>|<row>|<field>": "<New Recruit's value>" } }, so that value in an export is
              no rule at work
 
      node verify/build-index.js           check: data.js holds exactly what this writes (the gate's build-parity step runs it)
@@ -80,6 +80,14 @@ function index(D, RAW){
     const keys = [].concat(u.ds || []).filter(k => D.datasheets[k] && (D.datasheets[k][m[1]] || []).some(r => r.name === m[2] && String(r[m[3]]) === x.app));
     if(keys.length !== 1) continue;
     (gw[keys[0]] = gw[keys[0]] || {})[m[1] + '|' + m[2] + '|' + m[3]] = String(x.source);
+  }
+  // (and for a catalogued datasheet no export or PDF shows: verify/sources/nr-values.json, each with GW's value, which must be the row's)
+  for(const x of JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/nr-values.json'), 'utf8')).values){
+    const S = D.datasheets[x.datasheet], row = S && (S[x.kind] || []).find(r => r.name === x.row && (x.group === undefined || r.group === x.group));
+    if(!row || String(row[x.field]) !== String(x.gw)) throw new Error('verify/sources/nr-values.json: ' + x.datasheet + ' ' + x.kind + ' ' + x.row + ' ' + x.field + ': GW’s value there is ' + x.gw + ', the DATASHEETS row has ' + (row ? row[x.field] : 'no such row'));
+    const k = x.kind + '|' + x.row + '|' + x.field;
+    if(gw[x.datasheet] && gw[x.datasheet][k] !== undefined && gw[x.datasheet][k] !== String(x.nr)) throw new Error('verify/sources/nr-values.json: ' + x.datasheet + ' ' + k + ' is ' + x.nr + ', an export or PDF shows ' + gw[x.datasheet][k]);
+    (gw[x.datasheet] = gw[x.datasheet] || {})[k] = String(x.nr);
   }
   const sortObj = o => Object.fromEntries(Object.keys(o).sort().map(k => [k, o[k]]));
   for(const k of Object.keys(gw)) gw[k] = sortObj(gw[k]);

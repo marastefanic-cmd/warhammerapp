@@ -266,8 +266,9 @@ fetched or re-hosted any more. What stood on it, and what it stands on now:
 | the gate step `bsdata` (every unit fact a third time) | `nr` (the export or PDF), `numbers`, `keywords`, `words`, `bases` (GW's datasheet), `marks` |
 
 Known limits: the limits of a wargear choice (its minimum and maximum) on the three catalogues built before that day are New Recruit's
-as recorded then, held to GW's page by name only; a value New Recruit prints otherwise than GW's datasheet is known to the phone only
-where an export or PDF of the owner's shows it (`BUILD_INDEX.gw`), so an import showing another such value is refused, named.
+as recorded then, held to GW's page by name only; a value New Recruit prints otherwise than GW's datasheet (`BUILD_INDEX.gw`: what an export or PDF of the owner's shows,
+`verify/deviations-nr.json`, and seven datasheets recorded in `verify/sources/nr-values.json`) is built with GW's value and a note
+naming both, as for points; any other value no rule explains is refused, named.
 
 ## Faction catalogues
 

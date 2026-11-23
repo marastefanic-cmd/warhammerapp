@@ -35,7 +35,9 @@ const report = [];
 const norm = a => JSON.stringify(Object.assign({}, a, { source:'*' }));
 // (a list as the app has it: its own marks of an import, its source line and its reference sheets apart; the copy's keys in any order)
 const stable = v => JSON.stringify(v, (k, x) => x && typeof x === 'object' && !Array.isArray(x) ? Object.fromEntries(Object.keys(x).sort().map(y => [y, x[y]])) : x);
-const asApp = a => { const o = Object.assign({}, a); for(const k of ['source', 'imported', 'built', 'copied', 'refs']) delete o[k]; return stable(o); };
+// (gwValues: an import's note of the values it shows GW's for where its export has New Recruit's; the built-in list has the same values,
+// each declared in verify/deviations-nr.json, and no note)
+const asApp = a => { const o = Object.assign({}, a); for(const k of ['source', 'imported', 'built', 'copied', 'refs', 'gwValues']) delete o[k]; return stable(o); };
 const shuffle = v => Array.isArray(v) ? v.map(shuffle) : v && typeof v === 'object' ? Object.fromEntries(Object.keys(v).reverse().map(k => [k, shuffle(v[k])])) : v;
 const p1 = { built:[], copied:[], differ:[] };
 for(const id of lists){
@@ -196,6 +198,35 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
           .concat((S.ranged || []).map(r => [r, 'ranged']).concat((S.melee || []).map(r => [r, 'melee'])).map(([r, kind], i) => ({ id:'w' + k + i, name:r.name, entryId:'x::w', number:1, type:'upgrade', group:'Wargear', profiles:[wp(r, kind)] }))) });
       const s = sels(j); s.splice(s.findIndex(x => x.name === 'Tyrannofex'), 1); s.push(nt(1, 'Null Nodules'), nt(2, 'Enraged Reserves')); },
       null, r => !r.ok && r.errors.includes('5 enhancements not imported: Strike Force’s enhancement limit is 4 (Core Rules 25.03; 25.04: the second and third instances of the same Upgrade do not count towards it)'));
+    // a value New Recruit prints otherwise than GW's datasheet (BUILD_INDEX gw: verify/deviations-nr.json, verify/sources/nr-values.json):
+    // the list is built with GW's value and a note names both; any other unexplained value is still refused. Lite Knights, its second
+    // Telemon out, with a Blade Champion (New Recruit: Hurricanis AP -1, GW -2) and a Knight-Centura (New Recruit: Gun Stock WS 3+, GW 2+)
+    { const ch = o => Object.entries(o).map(([n2, v]) => ({ name:n2, $text:v }));
+      const wp = (r, kind, nm0, over) => ({ name:nm0, typeName:kind === 'ranged' ? 'Ranged Weapons' : 'Melee Weapons', characteristics:ch(Object.assign({ Range:r.range, A:r.A, [kind === 'ranged' ? 'BS' : 'WS']:kind === 'ranged' ? r.BS : r.WS, S:r.S, AP:r.AP, D:r.D, Keywords:(r.kw || []).join(', ') }, over || {})) });
+      const model = (key, k, sel) => { const S = D.datasheets[key], st = S.stats[0]; return { id:'gv' + k, name:S.name, entryId:'x::gv-unknown-' + k, number:1, type:'model', costs:[{ name:'pts', value:S.points.costs[0].models[0].pts }],
+        profiles:[{ name:st.name, typeName:'Unit', characteristics:ch({ M:st.M, T:st.T, Sv:st.Sv, W:st.W, LD:st.Ld, OC:st.OC, InSv:st.InSv }) }], selections:sel(S) }; };
+      const withTwo = over => j => { const s = sels(j); s.splice(s.indexOf(s.filter(x => x.name === 'Telemon Heavy Dreadnought')[1]), 1);
+        s.push(model('adeptus-custodes/blade-champion', 1, S => [{ id:'gvw1', name:'Vaultswords', entryId:'x::w1', number:1, type:'upgrade', group:'Wargear',
+          profiles:S.melee.map(r => wp(r, 'melee', '➤ Vaultswords - ' + r.name, r.name === 'Hurricanis' ? { AP:over.ap } : null)) }]));
+        // (the Knight-Centura is a Support unit: attached to the first Witchseeker Squad, as its Support ability allows)
+        s.push(Object.assign(model('adeptus-custodes/knight-centura', 2, S => [{ id:'gvw2', name:'Master-crafted boltgun', entryId:'x::w2', number:1, type:'upgrade', group:'Wargear',
+          // (the Gun Stock is no choice of the datasheet's options: the profile comes with the gun's selection)
+          profiles:[wp(S.ranged.find(r => r.name === 'Master-crafted boltgun'), 'ranged', 'Master-crafted boltgun'), wp(S.melee.find(r => r.name === 'Gun Stock'), 'melee', 'Gun Stock', { WS:over.ws })] }]), { associations:[{ type:'outgoing', to:s.find(x => x.name === 'Witchseeker Squad').id, name:'Supporting', action:'group' }] }));
+        const tot = x => (x.costs || []).filter(c => c.name === 'pts').reduce((t, c) => t + c.value, 0) + (x.selections || []).reduce((t, c) => t + tot(c), 0);
+        j.roster.costs[0].value = s.reduce((t, x) => t + tot(x), 0); };
+      const rowsOf = r => { const A = D.resolve(r.army), bc = A.units.find(u => u.name === 'Blade Champion'), kc = A.units.find(u => u.name === 'Knight-Centura');
+        return { ap:bc && (bc.melee.find(w => w.name === 'Hurricanis') || {}).AP, apFrom:bc && (bc.melee.find(w => w.name === 'Hurricanis') || {}).from, ws:kc && (kc.melee.find(w => w.name === 'Gun Stock') || {}).WS, wsFrom:kc && (kc.melee.find(w => w.name === 'Gun Stock') || {}).from }; };
+      const want = [{ unit:'Blade Champion', row:'Hurricanis', field:'AP', export:'-1', gw:'-2' }, { unit:'Knight-Centura', row:'Gun Stock', field:'WS', export:'3+', gw:'2+' }];
+      const sortN = l => JSON.stringify(l.map(x => JSON.stringify(x)).sort()), sameNotes = n => sortN(n.filter(x => x.unit === 'Blade Champion' || x.unit === 'Knight-Centura')) === sortN(want);
+      neg('Blade Champion and Knight-Centura with New Recruit’s values: built with GW’s, a note naming both', 'lite-knights', withTwo({ ap:'-1', ws:'3+' }), null, r => {
+        if(!r.ok) return false; const v = rowsOf(r), n = (r.notes || []).flatMap(x => x.gwValues || []);
+        return v.ap === '-2' && v.ws === '2+' && !v.apFrom && !v.wsFrom && sameNotes(n); });
+      neg('the same with GW’s values in the export: built, no note for them', 'lite-knights', withTwo({ ap:'-2', ws:'2+' }), null, r => r.ok && rowsOf(r).ap === '-2' && rowsOf(r).ws === '2+' && !(r.notes || []).flatMap(x => x.gwValues || []).some(x => x.unit === 'Blade Champion' || x.unit === 'Knight-Centura'));
+      neg('a Blade Champion value that is neither GW’s nor New Recruit’s: refused, named', 'lite-knights', withTwo({ ap:'-4', ws:'2+' }), null, r => !r.ok && r.errors.some(e => /Blade Champion: Hurricanis AP is changed by a rule the app cannot name: not imported/.test(e)));
+      // (and through the import, as the phone makes the list: the note is on the list, for its Overview)
+      { const j = clone(exp('lite-knights')); withTwo({ ap:'-1', ws:'3+' })(j); const r = I.make(I.slim(j), D, { id:'gv', date:'x' });
+        ok(r.ok && sameNotes(r.army.gwValues || []), 'N "the import of that list carries the note (gwValues)": ' + JSON.stringify(r.ok ? r.army.gwValues || 'no note' : r.errors)); }
+    }
     neg('Warlord not a CHARACTER', 'healybois', j => { const s0 = unit(j, 'The Swarmlord'), w = s0.selections.find(s => s.name === 'Warlord'); s0.selections = s0.selections.filter(s => s !== w); unit(j, 'Pyrovores').selections.unshift(w); },
       ['warlord Pyrovores not imported: the Warlord must be a CHARACTER model (Core Rules 25.04, Select Units)']);
     neg('an EPIC HERO twice', 'healybois', j => { const s = sels(j), sw = clone(unit(j, 'The Swarmlord')); sw.id = 'sw2'; sw.selections = sw.selections.filter(x => x.name !== 'Warlord'); sw.associations = []; s.splice(s.findIndex(x => x.name === 'Norn Emissary'), 1); s.push(sw); j.roster.costs[0].value += 210 - 250; },

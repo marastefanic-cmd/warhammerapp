@@ -10,7 +10,7 @@ const fs = require('fs'), path = require('path');
 const ROOT = path.join(__dirname, '..');
 const { execFileSync } = require('child_process');
 // the Force Dispositions each detachment allows, from the detachments' headings on Wahapedia's faction pages (verify/dispositions.js, which also checks data.js against them)
-const dispositionsByDetachment = () => { const r = require(path.join(ROOT, 'verify/dispositions.js')).byDetachment(); return Object.assign(r.out, { _byFaction:r.byFaction }); };
+const dispositionsByDetachment = () => { const r = require(path.join(ROOT, 'verify/dispositions.js')).byDetachment(); return Object.assign(r.out, { _byFaction:r.byName }); };
 const DISP = dispositionsByDetachment(), today = new Date().toISOString().slice(0, 10);
 const gitDate = f => { try { return execFileSync('git', ['log', '-1', '--format=%cs', '--', f], { cwd:ROOT, encoding:'utf8' }).trim() || today; } catch(e){ return today; } };
 
@@ -22,7 +22,7 @@ fs.writeFileSync(path.join(__dirname, 'core-rules.md'), core);
 const bf = DISP._byFaction;
 const dd = '# Force Dispositions by detachment (from Wahapedia, ' + today + ')\n\n' +
   'Which Force Dispositions each detachment allows, as GW prints them on each detachment (Wahapedia’s faction pages). A list can lock any disposition one of its detachments allows. ' +
-  'A detachment missing here is newer than this file: look it up and say so.\n\n' +
+  'It covers the factions of the app’s lists (verify/sources/factions.json). A detachment or faction missing here is not in this file: look it up and say so.\n\n' +
   Object.keys(bf).sort().map(f => '## ' + f + '\n' + Object.entries(bf[f]).sort(([x], [y]) => x.localeCompare(y)).map(([d, ds]) => '- ' + d + ': ' + ds.join(', ')).join('\n')).join('\n\n') + '\n';
 fs.writeFileSync(path.join(__dirname, 'detachment-dispositions.md'), dd);
 

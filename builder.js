@@ -434,7 +434,9 @@ function build(j, D, opt){
   }
   for(const u of units) if(u.ref && u.e.ref) u.e.ref.by = u.e.ref.by.id;
   army.units = units.map(u => { const e = Object.assign({ id:u.id }, u.e); delete e.name0; if(u.copies) e.copies = u.copies; return sorted(e, ORDER.unit); });
-  return { ok:true, army, notes:[] };
+  // (notes: a value the export shows that is New Recruit's own where GW's datasheet has another, each once: the list has GW's)
+  const seenV = new Set(), gwValues = (B.gwValues || []).filter(v => { const k = JSON.stringify(v); if(seenV.has(k)) return false; seenV.add(k); return true; });
+  return { ok:true, army, notes:gwValues.length ? [{ gwValues }] : [] };
 }
 
 // the stored entry of one unit: what the list chose, and what differs from its datasheets
@@ -818,7 +820,8 @@ function marksOf(B, army, u, parts, P, rows, abil){
     }
     // (GW's value where New Recruit prints another, declared, BUILD_INDEX gw: the export's is New Recruit's own, no rule at work)
     const gw = (((B.D.buildIndex || {}).gw || {})[u._keys[x.part]]) || {};
-    for(const f of Object.keys(changed)) if(f !== 'kw' && gw[kind + '|' + x.row.name + '|' + f] === changed[f]) delete changed[f];
+    // (the list has GW's value, and says so, naming both: B.gwValues, the build's notes)
+    for(const f of Object.keys(changed)) if(f !== 'kw' && gw[kind + '|' + x.row.name + '|' + f] === changed[f]){ (B.gwValues = B.gwValues || []).push({ unit:nn(parts[x.part].name), row:x.row.name, field:f, export:changed[f], gw:x.row[f] }); delete changed[f]; }
     if(!Object.keys(changed).length) continue;
     const set = {}, from = {}, label = (f, how) => where(parts) + ': ' + x.row.name + ' ' + (how === 'kw' ? '[' + f + ']' : f);
     const fields = Object.keys(changed).filter(f => f !== 'kw').map(f => [f, f]).concat((changed.kw || []).map(k => [k, 'kw']));

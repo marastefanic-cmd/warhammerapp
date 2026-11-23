@@ -14750,7 +14750,14 @@ const BUILD_INDEX = {
     "Vexilla":{"OC":{"add":1}}
   },
   gw:{
+    "adeptus-custodes/ares-gunship":{"ranged|Arachnus magna-blaze cannon|AP":"-4"},
+    "adeptus-custodes/blade-champion":{"melee|Hurricanis|AP":"-1"},
+    "adeptus-custodes/coronus-grav-carrier":{"melee|Armoured hull|A":"4","melee|Armoured hull|S":"6"},
+    "adeptus-custodes/knight-centura":{"melee|Gun Stock|WS":"3+"},
+    "adeptus-custodes/pallas-grav-attack":{"melee|Armoured hull|A":"4"},
     "adeptus-custodes/prosecutor-squad":{"melee|Gun Stock|A":"3"},
+    "adeptus-custodes/venatari-with-kinetic-destroyers":{"stats|Venatari|Ld":"6+"},
+    "adeptus-custodes/venatari-with-verutum-lances":{"stats|Venatari|Ld":"6+"},
     "adeptus-custodes/witchseeker-squad":{"melee|Gun Stock|A":"3"}
   },
   battleSizes:{
