@@ -125,8 +125,7 @@ const newFactionEntry = !factionId;
 if (!factionId) factionId = slug(catName.replace(/^.* - /, ''));
 const WAHA = (FJ[factionId] || {}).waha || factionId;
 // a list of a catalogued faction (data.js has its whole catalogue) is builder.js's (below): this reading follows builder.js's ways where
-// they are the list's own, so the two agree: every stats row with its ×N, the ids its names give (builder.js's slug), no na
-// (builder.js derives none; the app's "does nothing here" chips are its own)
+// they are the list's own, so the two agree: every stats row with its ×N, the ids its names give (builder.js's slug)
 const CATALOGUED = !argv.includes('--emit') && (() => { try { return require('../builder.js').catalogued(D, factionId); } catch (e) { return false; } })();
 const WW = require('./waha-words')(ROOT, factionId);
 // a reference entry of the export (New Recruit's "Spore Mines (Biovore)", category Reference: the profile of a unit a rule of the list
@@ -218,12 +217,13 @@ function wahaDetachment(name) {
       }
       if (!cur || note) continue;
       // "**WHEN:** Your Shooting phase." / "**EFFECT:**" (its bullets on the next lines)
-      const m = /^\*\*(WHEN|TARGET|EFFECT|RESTRICTIONS):\*\*\s*(.*)$/.exec(t);
-      if (m) { field = m[1].toLowerCase(); cur.fields[field] = m[2] ? [m[2]] : []; continue; }
+      // (Wahapedia's "**RESTRICTION:**", one restriction, is the RESTRICTIONS field: Fury Unleashed)
+      const m = /^\*\*(WHEN|TARGET|EFFECT|RESTRICTIONS?):\*\*\s*(.*)$/.exec(t);
+      if (m) { field = m[1].toLowerCase().replace(/^restriction$/, 'restrictions'); cur.fields[field] = m[2] ? [m[2]] : []; continue; }
       // (Wahapedia's bold running on from the heading into the words, "**EFFECT: Declare a charge** with your unit.": the heading, then
       // the words with their bold, "**Declare a charge** with your unit.")
-      const m2 = /^\*\*(WHEN|TARGET|EFFECT|RESTRICTIONS):\s+(?!\*\*)(\S.*)$/.exec(t);
-      if (m2) { field = m2[1].toLowerCase(); cur.fields[field] = ['**' + m2[2]]; continue; }
+      const m2 = /^\*\*(WHEN|TARGET|EFFECT|RESTRICTIONS?):\s+(?!\*\*)(\S.*)$/.exec(t);
+      if (m2) { field = m2[1].toLowerCase().replace(/^restriction$/, 'restrictions'); cur.fields[field] = ['**' + m2[2]]; continue; }
       if (field) cur.fields[field].push(t);
     }
   }
@@ -1628,7 +1628,7 @@ for (const u of units) {
 // why an ability does nothing in this list (na: "Not leading a unit in this list", "Needs … : not this loadout", "No WAR DOG in this list"), by
 // verify/derive.js naOf's closed patterns over its words, the unit and the list, on every unit's ability where they give one
 { const { naOf } = require('./derive');
-  for (const u of units) for (const ab of u.abilities || []) { const na = CATALOGUED ? null : naOf(ab, u, units); if (!na) continue;
+  for (const u of units) for (const ab of u.abilities || []) { const na = naOf(ab, u, units); if (!na) continue;
     const t = ab.text; delete ab.text; ab.na = na; ab.text = t; filled.push({ what: 'na on ' + u.name + ' · ' + ab.name + ': ' + na, from: 'its words (verify/derive.js naOf)' }); } }
 const handKw = [], handStats = [];
 // (an ability by its name, or, where two parts of the unit have one of that name, "<name> / <who>")

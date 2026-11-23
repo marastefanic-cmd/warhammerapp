@@ -231,9 +231,12 @@ function rowOf(u, m, E, D) {
   row.points = m.costs;
   const L0 = LOAD(m.sheet, row), nrModels = {}, rename = {};
   const oneModel = L0.loadout.lines.length === 1 && L0.composition.length === 1 && L0.composition[0].max === 1;
-  if (oneModel) rename[L0.loadout.lines[0].model] = row.name;
+  // (a one-model datasheet's model by the name New Recruit's export shows for it, where one does: "Lord on Juggernaut" for GW's "World
+  // Eaters Lord on Juggernaut"; else GW's)
+  const seenOne = oneModel && m.seen && m.seen.models.length === 1 ? m.seen.models[0].name : null;
+  if (seenOne && sing(seenOne) !== sing(L0.loadout.lines[0].model)) rename[L0.loadout.lines[0].model] = typo(seenOne);
   // (the row's profile of the line's name in the singular: New Recruit's model name, "Genestealer" for GW's "Genestealers")
-  for (const l of L0.loadout.lines) { const st = (row.stats || []).find(r => sing(r.name) === sing(l.model)); if (st && st.name !== l.model && !rename[l.model]) rename[l.model] = st.name; }
+  for (const l of L0.loadout.lines) { const st = (row.stats || []).find(r => sing(r.name) === sing(l.model)); if (st && st.name !== l.model && !rename[l.model] && !oneModel) rename[l.model] = st.name; }
   // (else one model of a line of several is named in the singular, as GW names one: "Bloodletter" of GW's "9 Bloodletters")
   for (const l of L0.loadout.lines) { const c = L0.composition.find(x => x.model === l.model) || {}; if (!rename[l.model] && c.max > 1 && one1(l.model) !== l.model) rename[l.model] = one1(l.model); }
   for (const sm of (m.seen ? m.seen.models : [])) { const l = lineOfShown(sm, L0.loadout.lines.map(x => Object.assign({}, x, L0.composition.find(c => c.model === x.model) || {}))); if (l && !(oneModel && rename[l.model]) && sing(l.model) !== sing(sm.name) && sing(rename[l.model] || '') !== sing(sm.name)) (nrModels[l.model] = nrModels[l.model] || []).push(typo(sm.name)); }
@@ -271,7 +274,10 @@ function applyPack(rows) {
       for (const [id, row] of Object.entries(rows)) if (named(row, ds)) for (const ab of row.abilities || []) {
         if (lc(ab.name) !== lc(an) && lc(ab.name) !== lc(an) + 's' && lc(ab.name) + 's' !== lc(an)) continue;
         if (/^Change to:/.test(instr) && e.newText) {
-          let nt = packText(e.newText); const head = /^([^:(]+?)(?:\s*\(([^)]*)\))?:\s*([\s\S]*)$/.exec(nt.replace(/\*\*/g, ''));
+          let nt = packText(e.newText);
+          // (a new text opening with the ability's tag, "(Once per turn, per unit) In the Fight phase, …": its tag, the rest its words)
+          { const tg = /^\(([^)]*)\)\s+([\s\S]*)$/.exec(nt); if (tg && /^Once per\b/i.test(tg[1])) { ab.tag = tg[1]; nt = tg[2]; } }
+          const head = /^([^:(]+?)(?:\s*\(([^)]*)\))?:\s*([\s\S]*)$/.exec(nt.replace(/\*\*/g, ''));
           if (head && lc(head[1]) === lc(ab.name)) nt = nt.replace(/^[^:]*:\s*/, '');
           if (squashW(nt) !== squashW(ab.text)) { const was = ab.text; ab.text = nt; applied.push({ id, field: 'ability[' + ab.name + '].text', app: nt, was, title: t, instr, where: e.where }); }
         } else if ((m = /^Change (.+?) to (.+?)\.$/.exec(instr))) {
@@ -333,10 +339,36 @@ function build() {
     for (const s of d.stratagems || []) { if (s.gist === null) delete s.gist; if (taken.has(s.id)) s.id = s.id + '-' + id0; taken.add(s.id); }
     detachmentRows[id0] = d;
   }
+  // GW's Faction Pack Rules Updates over Wahapedia's words for the detachments the catalogue adds (as applyPack for the datasheets): an
+  // enhancement's or a detachment rule's new text ("Change to:"; a rule that gives an ability of its own name, that ability's words), a
+  // stratagem's sections ("Change to:" with its labels, or the one its title names), a value ("Change 3" to 6".")
+  const detApplied = [];
+  { const r = spawnSync(process.execPath, [path.join(ROOT, 'verify/texts.js'), '--updates', faction], { cwd: ROOT, encoding: 'utf8', maxBuffer: 1 << 26 });
+    let ups = []; try { ups = JSON.parse(r.stdout || '[]'); } catch (e) {}
+    const lab = t => { const o = {}; let cur = null; for (const l of String(t).split('\n')) { const m = /^(WHEN|TARGET|EFFECT|RESTRICTIONS?):\s*(.*)$/.exec(l.trim()); if (m) { cur = m[1].toLowerCase().replace(/^restriction$/, 'restrictions'); o[cur] = [m[2]]; } else if (cur) o[cur].push(l.trim()); } return Object.fromEntries(Object.entries(o).map(([k, v]) => [k, packText(v.join('\n'))])); };
+    for (const [id, d] of Object.entries(detachmentRows)) for (const e of ups.filter(x => [d.name, d.waha].filter(Boolean).some(n => lc(n + ' detachment') === lc(x.section || '')))) {
+      const t = String(e.title).trim(), instr = String(e.instr).trim(); let m;
+      const set = (o, f, nt, what) => { if (squashW(nt) === squashW(o[f])) return; const was = o[f]; o[f] = nt; detApplied.push({ id: 'detachment:' + id, field: what + '.' + f, app: nt, was, title: t, instr, where: e.where }); };
+      if ((m = /^(.+?) Enhancement$/i.exec(t)) && /^Change to:/.test(instr)) { const en = (d.enhancements || []).find(x => lc(x.name) === lc(m[1])); if (en) set(en, 'text', packText(e.newText), 'enhancement[' + en.name + ']'); continue; }
+      if ((m = /^(.+?) Stratagem(?:, (.+?) [Ss]ections?)?$/.exec(t))) { const st = (d.stratagems || []).find(x => lc(x.name) === lc(m[1])); if (!st) continue;
+        if (/^Change to:/.test(instr)) { const L = lab(e.newText); if (Object.keys(L).length) for (const [f, v] of Object.entries(L)) set(st, f, v, 'stratagem[' + st.name + ']'); else if (m[2] && /^(when|target|effect|restrictions?)$/i.test(m[2])) set(st, m[2].toLowerCase().replace(/^restriction$/, 'restrictions'), packText(e.newText), 'stratagem[' + st.name + ']'); continue; }
+        const ch = /^Change (\S+) to (\S+?)\.?$/.exec(instr); if (ch) for (const f of ['when', 'target', 'effect', 'restrictions']) if (st[f] && st[f].split(ch[1]).length === 2) set(st, f, st[f].replace(ch[1], ch[2]), 'stratagem[' + st.name + ']');
+        continue; }
+      if ((m = /^(.+?) Detachment Rule$/i.exec(t)) && /^Change to:/.test(instr)) { const rr = [d.rule].concat(d.moreRules || []).find(x => x && lc(x.name) === lc(m[1])); if (!rr) continue;
+        const L = String(rr.text).split('\n'), k = L.findIndex(l => new RegExp('^\\*\\*' + rr.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ':\\*\\*\\s*').test(l));
+        if (k >= 0) { const head = /^\*\*[^*]+:\*\*\s*/.exec(L[k])[0], nt = packText(e.newText); if (squashW(nt) !== squashW(L[k].slice(head.length))) { L[k] = head + nt; set(rr, 'text', L.join('\n'), 'rule[' + rr.name + ']'); } }
+        else set(rr, 'text', packText(e.newText), 'rule[' + rr.name + ']'); }
+    }
+    // (the hand file's detachmentTexts: GW's words where its Faction Pack prints the detachment otherwise than Wahapedia, { "<detachment
+    // id>": [{ item:"enhancement:<name>" | "stratagem:<name>", field, from, to, why }] })
+    for (const [id, fixes] of Object.entries(HAND().detachmentTexts || {})) for (const fx of fixes) {
+      const d = detachmentRows[id], [kind, nm1] = fx.item.split(/:(.*)/), o = d && (kind === 'enhancement' ? d.enhancements : kind === 'stratagem' ? d.stratagems : []).find(x => x.name === nm1);
+      if (!o || String(o[fx.field]).split(fx.from).length !== 2) { if (o && String(o[fx.field]).split(fx.to).length === 2) continue; throw new Error('verify/sources/hand/catalog-' + faction + '.json detachmentTexts ' + id + ' · ' + fx.item + ': its words "' + fx.from + '" are not there exactly once'); }
+      const was = o[fx.field]; o[fx.field] = o[fx.field].replace(fx.from, fx.to); detApplied.push({ id: 'detachment:' + id, field: fx.item + '.' + fx.field, app: o[fx.field], was, why: fx.why }); } }
   const cat = { _about: 'A faction catalogue: every current datasheet (and detachment) of the faction as rows for data.js (docs/catalog.md). The rows are the committed source; verify/tables.js --write merges them into DATASHEETS and the gate step catalog (verify/catalog.js) holds every row to GW’s datasheets and faction page (Wahapedia). A new faction’s catalogue is written by verify/from-waha.js.',
     faction, origin: { built: 'by verify/from-waha.js from Wahapedia’s faction page and datasheet pages (GW’s codex and Faction Pack as Wahapedia transcribes them), GW’s Faction Pack updates over them; New Recruit’s names where an export of the owner’s has shown them', heldTo: 'GW’s datasheets and faction page (Wahapedia), by the gate step catalog (verify/catalog.js)' },
     counts: { datasheets: Object.keys(rows).length, detachments: C.dets.length, excluded: C.excluded.length },
-    datasheets: rows, detachments: C.dets.map(d => Object.assign({ name: typo((DN[d.name] || {}).gw || d.name) }, DN[d.name] ? { waha: typo(d.name) } : {}, { dp: d.dp, dispositions: d.dispositions })), detachmentRows, excluded: C.excluded, weaponNames: E.gwNames, packApplied, handApplied,
+    datasheets: rows, detachments: C.dets.map(d => Object.assign({ name: typo((DN[d.name] || {}).gw || d.name) }, DN[d.name] ? { waha: typo(d.name) } : {}, { dp: d.dp, dispositions: d.dispositions })), detachmentRows, excluded: C.excluded, weaponNames: E.gwNames, packApplied: packApplied.concat(detApplied.filter(x => x.title)), handApplied: handApplied.concat(detApplied.filter(x => !x.title)),
     modelNames: Object.entries(HAND().modelNames || {}).map(([nr, x]) => ({ nr, gw: x.gw, kind: x.kind })),
     unread: Object.entries(rows).filter(([, r]) => (r.loadout.unread || []).length).map(([id, r]) => ({ id, sentences: r.loadout.unread })) };
   return { C, E, cat, dets: C.dets, excluded: C.excluded };

@@ -630,7 +630,7 @@ const FACTIONS = {
         rule:{ name:'Idols of Khorne', at:'Start of your Command phase', ph:['command','movement','shooting','charge','fight'], turn:'your', turns:{ charge:'either', fight:'either' }, needs:{ all:['Faction: World Eaters'], any:['Titanic','Monster','Jakhals','Goremongers'] }, text:'At the start of your Command phase, you can select one of the Idols of Khorne abilities listed below. Until the start of your next Command phase, that ability is active and its effects apply to all **WORLD EATERS TITANIC** and **WORLD EATERS MONSTER** units from your army. You can only select each Idols of Khorne ability once per battle.\n**Idol of Infinite Rage (Aura)**\nWhile a friendly **JAKHALS** or **GOREMONGERS** unit is within 6" of this model (or within 9" if this model is **TITANIC**), each time a model in that unit makes an attack, add 1 to the **Hit roll** and add 1 to the **Wound roll**.\n**Idol of Burning Wrath (Aura)**\nWhile a friendly **JAKHALS** or **GOREMONGERS** unit is within 6" of this model (or within 9" if this model is **TITANIC**), add 1" to the Move characteristic of models in that unit and add 1 to **Advance** and **Charge rolls** made for that unit.\n**Idol of Blessed Blood (Aura)**\nWhile a friendly **JAKHALS** or **GOREMONGERS** unit is within 6" of this model (or within 9" if this model is **TITANIC**), models in that unit have a 4+ invulnerable save.\nKEYWORDS\n**JAKHALS** and **GOREMONGERS** units from your army have the **BATTLELINE** keyword.' },
         enhancements:[
           { name:'Chosen of the Blood God', pts:15, text:'**WORLD EATERS MONSTER** model only. Add 3" to the range of the bearers **Aura abilities**.' },
-          { name:'Butcher Lord', pts:10, text:'**LEADER: GOREMONGERS**, **JAKHALS**\n**WORLD EATERS INFANTRY** model only. The bearer has the **Infiltrators** ability.' },
+          { name:'Butcher Lord', pts:10, text:'**WORLD EATERS INFANTRY** model only. The bearer has the Infiltrators ability.' },
           { name:'Brazen Form', pts:25, text:'**WORLD EATERS MONSTER** model only. Add 1 to the bearer’s Toughness characteristic and the bearer has the **Feel No Pain 5+** ability.' },
           { name:'Strategic Slaughter', pts:20, text:'**WORLD EATERS** model only. After both players have deployed their armies, select up to three **JAKHALS** and/or **GOREMONGERS** units from your army and redeploy them. When doing so, you can set those units up in **Strategic Reserves**, regardless of how many units are already in Strategic Reserves.' }
         ],
@@ -678,7 +678,7 @@ const FACTIONS = {
           { id:'aggressive-disembarkation', name:'Aggressive Disembarkation', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: World Eaters','Rhino'] }, when:'Your Movement phase.', target:'One **WORLD EATERS RHINO** model from your army that has not been selected to move this phase.', effect:'One **WORLD EATERS** unit embarked within your **RHINO** can disembark. When doing so, models in that unit can be set up anywhere on the battlefield wholly within 6" of your **RHINO** and can be set up within **Engagement Range** of one or more enemy units.' },
           { id:'full-throttle-assault', name:'Full-Throttle Assault', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: World Eaters','Rhino'] }, when:'Your Movement phase.', target:'One **WORLD EATERS RHINO** model from your army that has not been selected to move this phase.', effect:'Until the end of the phase, each time a **WORLD EATERS** unit disembarks from that model after it has made a **Normal move**, that unit makes an **assault disembark move** (Core Rules, 18.06) for that disembarkation.' },
           { id:'unrelenting-advance', name:'Unrelenting Advance', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Faction: World Eaters','Vehicle'] }, when:'Your opponent’s Shooting phase, just after an enemy unit has shot.', target:'One **WORLD EATERS VEHICLE** model from your army that was hit by one or more of the attacking unit’s attacks.', effect:'Your model can make a **Normal move** of up to 6".', restrictions:'A unit cannot be targeted by this Stratagem and the Fury Unleashed Stratagem in the same phase.' },
-          { id:'fury-unleashed', name:'Fury Unleashed', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Faction: World Eaters','Rhino'] }, when:'Your opponent’s Shooting phase, just after an enemy unit has shot.', target:'One **WORLD EATERS RHINO** model from your army that has one or more wounds remaining and was hit by one or more of the attacking unit’s attacks.', effect:'One **KHORNE BERZERKERS** unit embarked within your model can make a **disembark move** and then make a **surge move** of up to D6+2".\n**RESTRICTION:** A unit cannot be targeted by this Stratagem and the Unrelenting Advance Stratagem in the same phase.' }
+          { id:'fury-unleashed', name:'Fury Unleashed', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Faction: World Eaters','Rhino'] }, when:'Your opponent’s Shooting phase, just after an enemy unit has shot.', target:'One **WORLD EATERS RHINO** model from your army that has one or more wounds remaining and was hit by one or more of the attacking unit’s attacks.', effect:'One **KHORNE BERZERKERS** unit embarked within your model can make a **disembark move** and then make a **surge move** of up to D6+2".', restrictions:'A unit cannot be targeted by this Stratagem and the Unrelenting Advance Stratagem in the same phase.' }
         ]
       },
       // Brazen Engines: Wahapedia (the codex), from the catalogue (verify/from-bsdata.js world-eaters); no gists, readings or When targeted lines yet (aiStatus)
@@ -687,7 +687,7 @@ const FACTIONS = {
         rule:{ name:'Rampaging Terrors', ph:['fight'], turn:'either', needs:{ all:['Daemon','Vehicle'] }, text:'Friendly **DAEMON VEHICLE** units have the following ability:\n**Terror of Khorne:** At the start of the Fight phase, you can select one enemy unit **engaged** with this unit. That enemy unit makes a **battle-shock roll**, with -1 to that **battle-shock roll**. You cannot select the same enemy unit for this effect more than once per phase.\nThis **detachment** has the ~~ONSLAUGHT~~ tag and cannot be taken with another **ONSLAUGHT detachment**.' },
         enhancements:[
           { name:'Talons of Butchery', pts:20, upgrade:true, text:'**MAULERFIEND** unit only. This unit’s **Maulerfiend Fists** have **[CLEAVE 2]**.' },
-          { name:'Murder-Forged Entity', pts:15, upgrade:true, text:'**WORLD EATERS VEHICLE** unit only. This unit has **DAEMON**' }
+          { name:'Murder-Forged Entity', pts:15, upgrade:true, text:'**WORLD EATERS VEHICLE** unit only. This unit has **DAEMON**.' }
         ],
         stratagems:[
           { id:'apoplectic-clarity', name:'Apoplectic Clarity', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Daemon','Vehicle'] }, when:'Your Shooting phase or the Fight phase, when a friendly **DAEMON VEHICLE** unit is **selected to attack**.', target:'That **DAEMON VEHICLE** unit.', effect:'Your unit’s attacks can ignore modifiers to:\n- **BS**.\n- **WS**.\n- **Hit rolls** and **wound rolls**.' },
@@ -1851,7 +1851,7 @@ const FACTIONS = {
           { id:'warp-surge', name:'Warp Surge', cp:1, phases:['charge'], turn:'your', needs:{ all:['Faction: Legiones Daemonica'] }, when:'Your Charge phase.', target:'One **LEGIONES DAEMONICA** unit from your army that is within your army’s Shadow of Chaos.', effect:'Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.' },
           { id:'draught-of-terror', name:'Draught of Terror', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Legiones Daemonica'] }, when:'Your Shooting phase or the Fight phase.', target:'One **LEGIONES DAEMONICA** unit from your army that has not been selected to shoot or fight this phase.', effect:'Until the end of the phase, improve the Armour Penetration characteristic of weapons equipped by models in that unit by 1. In addition, until the end of the phase, each time such a weapon targets a unit that is **Battle-shocked**, you can re-roll the **Wound roll**.' },
           { id:'denizens-of-the-warp', name:'Denizens of the Warp', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Legiones Daemonica'] }, when:'Your Movement phase.', target:'One **LEGIONES DAEMONICA** unit from your army that is arriving using the **Deep Strike** ability this phase.', effect:'Your unit can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy models.' },
-          { id:'the-realm-of-chaos', name:'The Realm of Chaos', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Faction: Legiones Daemonica'] }, when:'End of your opponent’s turn.', target:'Up to two **LEGIONES DAEMONICA** units from your army that are within your army’s Shadow of Chaos, or one other **LEGIONES DAEMONICA** unit from your army.', effect:'- Place your unit in **strategic reserves**.\n- Your unit must make an **ingress move** in your next Movement phase (including in your first turn).\n**RESTRICTION:** You cannot target units that are within **Engagement Range** of one or more enemy units with this **Stratagem**.' },
+          { id:'the-realm-of-chaos', name:'The Realm of Chaos', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Faction: Legiones Daemonica'] }, when:'End of your opponent’s turn.', target:'Up to two **LEGIONES DAEMONICA** units from your army that are within your army’s Shadow of Chaos, or one other **LEGIONES DAEMONICA** unit from your army.', effect:'- Place your unit in **strategic reserves**.\n- Your unit must make an **ingress move** in your next Movement phase (including in your first turn).', restrictions:'You cannot target units that are within **Engagement Range** of one or more enemy units with this **Stratagem**.' },
           { id:'daemonic-invulnerability', name:'Daemonic Invulnerability', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Faction: Legiones Daemonica'] }, when:'Your opponent’s Shooting phase, just after an enemy unit has selected its targets.', target:'One **LEGIONES DAEMONICA** unit from your army that was selected as the target of one or more of that enemy unit’s attacks.', effect:'Until the end of the phase, each time an invulnerable saving throw is made for a model in your unit, re-roll a saving throw of 1.' }
         ]
       },
@@ -2507,7 +2507,7 @@ const ARMIES = [
         { name:'Bladed horn', A:'5', from:{ A:'Relentless Rage' } }
       ],
       abilities:[
-        { name:'Aggressive Advance' },
+        { name:'Aggressive Advance', na:'Not leading a unit in this list' },
         { name:'Crush All Who Stand Before Us' }
       ]
     },
@@ -2520,7 +2520,7 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Lord of the Eightbound' },
-        { name:'Rage Eternal' },
+        { name:'Rage Eternal', na:'Not leading a unit in this list' },
         { name:'Possessed Lord' }
       ]
     },
@@ -3669,7 +3669,7 @@ const ARMIES = [
         { name:'Master of Executions', Sv:'2+', from:{ Sv:'Blood-forged Armour' } }
       ],
       abilities:[
-        { name:'Forwards, For Blood!' },
+        { name:'Forwards, For Blood!', na:'Not leading a unit in this list' },
         { name:'A Worthy Skull' },
         { name:'Blood-forged Armour', tag:'Enhancement', text:'**BLOOD LEGIONS** or **WORLD EATERS** model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point.' }
       ]
@@ -6999,12 +6999,12 @@ const DATASHEETS = {
   kw:['Vehicle','Fly','Chaos','Khorne','Daemon','Heldrake','Faction: World Eaters'],
   points:{ costs:[{ from:1, to:null, models:[{ models:1, pts:175 }] }] },
   composition:[
-    { model:'Heldrake', min:1, max:1 }
+    { model:'Chaos Heldrake', min:1, max:1 }
   ],
   options:[
-    { on:'Heldrake', choices:[{ name:'Hades autocannon' },{ name:'Heldrake claws' },{ name:'Baleflamer' }] }
+    { on:'Chaos Heldrake', choices:[{ name:'Hades autocannon' },{ name:'Heldrake claws' },{ name:'Baleflamer' }] }
   ],
-  loadout:{ lines:[{ model:'Heldrake', names:['Heldrake'], default:['Hades autocannon','Heldrake claws'] }], swaps:[{ lines:['Heldrake'], from:['Hades autocannon'], to:[['Baleflamer']], limit:{ kind:'each', n:1 }, text:'This model’s Hades autocannon can be replaced with 1 baleflamer.' }], adds:[] },
+  loadout:{ lines:[{ model:'Chaos Heldrake', names:['Chaos Heldrake'], default:['Hades autocannon','Heldrake claws'] }], swaps:[{ lines:['Chaos Heldrake'], from:['Hades autocannon'], to:[['Baleflamer']], limit:{ kind:'each', n:1 }, text:'This model’s Hades autocannon can be replaced with 1 baleflamer.' }], adds:[] },
   aiStatus:'not-read'
 },
 'world-eaters/defiler':{
@@ -14876,7 +14876,7 @@ const BOXES = {
   "s|1d0qkrm":{"b":[{"quote":"Your unit’s ranged attacks have **[IGNORE COVER]**.","fx":[["ignoresCover",true]],"on":[],"kind":"ranged"}],"n":"Parasitic Payload"},
   "s|1dqobgn":{"d":[{"quote":"Attacks that target your unit have -1 **AP** until that enemy unit has attacked.","df":[["apWorse",1]],"on":[],"kind":"all"}],"n":"In Auramite Clad"},
   "s|1ep69bs":{"b":[{"quote":"**[Lance]**.","fx":[],"on":[],"kind":"melee","lead":"Your unit’s melee attacks have:","pick":[{"name":"[LANCE]","fx":[["lance",true]],"quote":"**[Lance]**.","on":[]},{"name":"[LANCE], +1 AP","fx":[["lance",true],["ap",1]],"quote":"If the **assault doctrine** is active for your unit, **[Lance]** and +1 **AP**.","on":[["q","If the assault doctrine is active for your unit"]]}]}],"n":"Gene-Wrought Might"},
-  "s|1evj7h0":{"b":[{"quote":"Until the end of the phase, each time a model in your unit makes an attack, re-roll a **Hit roll** of 1.","fx":[["rrHit1",true]],"on":[],"kind":"melee"},{"quote":"If that model’s unit is within 6\" of one or more friendly **WORLD EATERS MONSTER** units, or within 9\" of one or more friendly **WORLD EATERS TITANIC** units, you can re-roll the Hit roll instead.","fx":[["rrHit",true]],"on":[["q","If that model's unit is within 6\" of one or more friendly WORLD EATERS MONSTER units"]],"kind":"melee","lead":"Until the end of the phase, each time a model in your unit makes an attack, re-roll a **Hit roll** of 1."}],"n":"Fail Not the Blood God"},
+  "s|1evj7h0":{"b":[{"quote":"Until the end of the phase, each time a model in your unit makes an attack, re-roll a **Hit roll** of 1.","fx":[["rrHit1",true]],"on":[],"kind":"melee"},{"quote":"If that model’s unit is within 6\" of one or more friendly **WORLD EATERS MONSTER** units, or within 9\" of one or more friendly **WORLD EATERS TITANIC** units, you can re-roll the Hit roll instead.","fx":[["rrHit",true]],"on":[["q","If that model's unit is within 6\" of one or more friendly WORLD EATERS MONSTER units, or within 9\" of one or more friendly WORLD EATERS TITANIC units"]],"kind":"melee","lead":"Until the end of the phase, each time a model in your unit makes an attack, re-roll a **Hit roll** of 1."}],"n":"Fail Not the Blood God"},
   "s|1ez2yyz":{"b":[{"quote":"Until the end of the phase, melee weapons equipped by models in your unit have the **[LANCE]** ability.","fx":[["lance",true]],"on":[],"kind":"melee"}],"n":"Servo-driven Charge"},
   "s|1f3edn0":{"d":[{"quote":"Until the end of the phase, each time an attack targets your unit, subtract 1 from the **Wound roll**.","df":[["woundMinus",1]],"on":[],"kind":"all"}],"n":"Daemonic Resistance"},
   "s|1fam0fr":{"nc":[{"quote":"Select one of those objective markers. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.","why":"its target was just destroyed: its effect is for other units, which cannot be its target"}],"n":"Blood Offering"},
@@ -14928,7 +14928,7 @@ const BOXES = {
   "s|3p6l28":{"b":[{"quote":"Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.","fx":[["ap",1]],"on":[],"kind":"all"}],"n":"Balefire Boon"},
   "s|3s7op5":{"b":[{"quote":"Until the end of the battle, each time a friendly **TYRANIDS** model makes an attack that targets the enemy unit that just destroyed your **HARVESTER** unit, add 1 to the **Wound roll**.","fx":[["wound",1]],"on":[["q","that targets the enemy unit that just destroyed your HARVESTER unit"]],"kind":"all","lasts":"battle","reach":{"all":["Faction: Tyranids"]},"mark":"friendly"}],"n":"Broodguard Impulse"},
   "s|3vuuxe":{"nc":[{"quote":"**Hit rolls** and **wound rolls**.","why":"its words are read by no catalogue effect"}],"n":"Apoplectic Clarity"},
-  "s|3xh9p":{"d":[{"quote":"Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability.","df":[["fnp",6]],"on":[],"kind":"all"},{"quote":"If your unit is within 6\" of one or more friendly **WORLD EATERS MONSTER** units, or within 9\" of one or more friendly **WORLD EATERS TITANIC** units, your unit has the **Feel No Pain 5+** ability instead.","df":[["fnp",5]],"on":[["q","If your unit is within 6\" of one or more friendly WORLD EATERS MONSTER units"]],"kind":"all","lead":"Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability."}],"n":"In the Shadow of Brass Idols"},
+  "s|3xh9p":{"d":[{"quote":"Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability.","df":[["fnp",6]],"on":[],"kind":"all"},{"quote":"If your unit is within 6\" of one or more friendly **WORLD EATERS MONSTER** units, or within 9\" of one or more friendly **WORLD EATERS TITANIC** units, your unit has the **Feel No Pain 5+** ability instead.","df":[["fnp",5]],"on":[["q","If your unit is within 6\" of one or more friendly WORLD EATERS MONSTER units, or within 9\" of one or more friendly WORLD EATERS TITANIC units"]],"kind":"all","lead":"Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability."}],"n":"In the Shadow of Brass Idols"},
   "s|3ztb7e":{"dnc":[{"quote":"On a 3+, do not remove that model from the battlefield.","why":"what happens when one of its models is destroyed"}],"n":"Duty Unto Death"},
   "s|53dmpp":{"b":[{"quote":"Until the end of the turn, melee weapons equipped by models in your **WORLD EATERS** unit have the **[LANCE]** ability.","fx":[["lance",true]],"on":[["aura",6],["selected",true]],"kind":"melee","lead":"Select one friendly **WORLD EATERS** unit within 6\" of your unit.","reach":{"all":["Faction: World Eaters"]},"mark":"selected","lasts":"turn"},{"quote":"If the Daemonic Rage ability is active for your army, then until the end of the phase those melee weapons also have the **[TWIN-LINKED]** ability.","fx":[["twin",true]],"on":[["aura",6],["selected",true],["q","If the Daemonic Rage ability is active for your army"]],"kind":"melee","lead":"Until the end of the turn, melee weapons equipped by models in your **WORLD EATERS** unit have the **[LANCE]** ability.","reach":{"all":["Faction: World Eaters"]},"mark":"selected"}],"n":"Daemonic Fury"},
   "s|79v8ah":{"b":[{"quote":"Until the end of the phase, melee weapons equipped by models in your unit have the **[PRECISION]** ability.","fx":[["precision",true]],"on":[],"kind":"melee"}],"n":"Suffer No Rival"},
@@ -15728,7 +15728,7 @@ const TABLE_ORDER = {
   stats:['name','M','T','Sv','W','Ld','OC','InSv','base','printed','from','baseWith','own'],
   ranged:['group','fireAll','name','who','n','carrier','enh','hunter','range','A','BS','S','AP','D','kw','own','from'],
   melee:['group','name','who','n','carrier','hunter','range','A','WS','S','AP','D','kw','from','own'],
-  abilities:['name','who','tag','at','damaged','na','ph','turn','turns','note','text','sumAtk','sumDef','sumSt','sumFoe','sumOv','sumAtkOf','sumDefOf','sumStOf','sumFoeOf','sumOvOf','readOf']
+  abilities:['name','who','tag','at','damaged','ph','na','turn','turns','note','text','sumAtk','sumDef','sumSt','sumFoe','sumOv','sumAtkOf','sumDefOf','sumStOf','sumFoeOf','sumOvOf','readOf']
 };
 // Each unit entry of ARMIES names its datasheet (ds: an id of DATASHEETS; a list of them for an attached unit: the leader,
 // the other characters, the bodyguard) and holds only what the list chose. The app gets each unit as one object: the

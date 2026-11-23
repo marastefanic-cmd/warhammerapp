@@ -363,6 +363,27 @@ function legalLoadout(S, p, where, err){
   if(!fit(0)) err('unit ' + where + ' not imported: its wargear (' + groups.map(desc).concat(unitItems).join('; ') + ') is more than ' + R + ' allows a unit of ' + size + ' models (' + acts.filter(a => a.limit.kind !== 'each').map(a => '“' + a.text + '”').join(' ') + ')');
 }
 
+// why an ability does nothing in this list (na), verify/derive.js naOf's patterns (the same, in the browser): an ability whose every sentence
+// is "While this model is leading a unit …" on a unit that leads none; "If this model is equipped with X, …" where it is not; "While a
+// friendly X model is within N" of this model …" where the list has no X
+const NA_LEAD = /^while this model is leading a unit\b/, NA_GEAR = /^if this model is equipped with (.+?), /, NA_KW = /^While a friendly \*\*([A-Z][A-Z' -]+?)\*\* model is within \d+" of this model\b/;
+function naOf(text, leads, wn, allKw){
+  const ss = String(text || '').split('\n').flatMap(l => l.trim().replace(/^-\s+/, '').split(/(?<=[.!?])\s+(?=[A-Z*(])/)).map(x => x.trim()).filter(Boolean);
+  if(!ss.length) return undefined;
+  const lw = x => x.replace(/\*\*/g, '').replace(/[’‘]/g, "'").toLowerCase();
+  if(ss.every(x => NA_LEAD.test(lw(x)))) return leads ? undefined : 'Not leading a unit in this list';
+  const g = ss.map(x => NA_GEAR.exec(lw(x)));
+  if(g.every(Boolean) && g.every(m => m[1] === g[0][1])){
+    const gear = g[0][1].split(/,? and |, /).map(x => x.replace(/^(?:an?|the) /, '').trim());
+    const words = /^if this model is equipped with (.+?), /i.exec(ss[0].replace(/\*\*/g, ''))[1];
+    return gear.every(x => wn.some(n => n.startsWith(x))) ? undefined : 'Needs ' + words + ': not this loadout'; }
+  const k = ss.map(x => NA_KW.exec(x));
+  if(k.every(Boolean) && k.every(m => m[1] === k[0][1])){
+    const kw = k[0][1].trim();
+    return allKw.some(y => String(y).replace(/^Faction: /, '').toLowerCase() === kw.toLowerCase()) ? undefined : 'No ' + kw + ' in this list'; }
+  return undefined;
+}
+
 // ---------------------------------------------------------------- the roster as GW's rules allow it (Core Rules 19.01, 25.03, 25.04)
 // an enhancement's own restriction, its first sentence ("**NORN ASSIMILATOR** unit only.", "**TYRANIDS** model only (excluding **MONSTERS**
 // models).", "**A**/**B** unit only.", "… model with the **Deep Strike** ability only."): the keywords it names, against the unit's
@@ -599,8 +620,11 @@ function finish(B, army, u, units, out){
     else if(!plain) ent[kind] = list;
   }
   {
+    // (why a datasheet ability does nothing in this list, na: verify/derive.js naOf's closed patterns over its words, the unit and the list)
+    const wn = rows.ranged.concat(rows.melee).flatMap(x => [x.row.name, x.row.group]).filter(Boolean).map(x => String(x).toLowerCase());
+    const allKw = (units || []).flatMap(v => (v._keys || []).flatMap(k => (B.S[k] || {}).kw || []));
     const list = abil.map(x => {
-      if(x.row){ const o = { name:x.row.name }; if(multi) o.who = who(x.part); return o; }
+      if(x.row){ const o = { name:x.row.name }; if(multi) o.who = who(x.part); const na = naOf(x.row.text, !!u.leads, wn, allKw); if(na) o.na = na; return sorted(o, ORDER.abilities); }
       if(x.granted){ const o = Object.assign({}, x.granted.row); if(multi) o.who = who(x.part); return sorted(o, ORDER.abilities); }
       const o = { name:x.enh.name }; if(multi) o.who = who(x.part);
       // (and the limit GW's words print in brackets, "(Once per battle, per army)": Archslaughterer)

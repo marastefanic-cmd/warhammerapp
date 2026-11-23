@@ -89,5 +89,13 @@
   "section": "Imperial Armour Datasheets",
   "reason": "The coordinator's decision: the Adeptus Custodes Faction Pack v1.2 (30 Sep 2026) prints its Imperial Armour datasheets as they were before Codex: Adeptus Custodes (11th edition, released 17 Oct 2026). Its Venatari Custodians sheet is the old single datasheet, which the codex split into Venatari with Kinetic Destroyers and Venatari with Verutum Lances; the same pack section is superseded as the Vertus Praetors lines are (verify/deviations-numbers.json). Its KEYWORDS lines are not GW's over Wahapedia's.",
   "evidence": "scratchpad/iaq/newcust.html (Warhammer Community, \"New Custodes: What you need to know\", 25 Sep 2026): \"Units featured in the new Codex for the first time: … Venatari with Kinetic Destroyers Venatari with Verutum Lances …\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.txt (CONTENTS: \"Imperial Armour Datasheets\", p9; VENATARI CUSTODIANS, \"KEYWORDS: Infantry, Fly, Jump Pack, Imperium, Venatari Custodians\"); verify/deviations-numbers.json (Vertus Praetors: the pack superseded by the codex)."
+ },
+ {
+  "datasheet": "world-eaters/Daemon Prince of Khorne with Wings",
+  "nameKeyword": "Daemon Prince",
+  "from": "page",
+  "reason": "A head match (the name's head DAEMON PRINCE, before \"of Khorne with Wings\"), accepted: the page prints DAEMON PRINCE, the keyword of the World Eaters' Daemon Princes (the Daemon Prince of Khorne's page prints it too); no keyword of its whole name.",
+  "evidence": "verify/.cache/waha/ds/world-eaters_Daemon-Prince-of-Khorne-with-Wings.html: KEYWORDS \"MONSTER; CHARACTER; FLY; CHAOS; KHORNE; DAEMON; DAEMON PRINCE\".",
+  "by": "wt-we (to review: verify/review/todo-we-catalog.json)"
  }
 ]

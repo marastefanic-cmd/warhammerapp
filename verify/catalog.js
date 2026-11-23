@@ -134,6 +134,7 @@ function main() {
   // (the datasheets the lists name: ARMIES as data.js writes it, each unit entry's ds)
   const T = require('./tables'), RAW = T.read(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8')).A.value;
   const listed = new Set(RAW.flatMap(a => a.units.flatMap(u => [].concat(u.ds || []))));
+  const rawDs = new Map(RAW.flatMap(a => a.units.map(u => [a.id + '|' + u.id, [].concat(u.ds || [])])));
   const DEVCF = path.join(ROOT, 'verify/deviations-catalog.json'), DEVC = fs.existsSync(DEVCF) ? JSON.parse(fs.readFileSync(DEVCF, 'utf8')) : [];
   const usedC = new Set();
   const report = { factions: {} };
@@ -265,6 +266,8 @@ function main() {
       for (const n of names) {
         const id = faction + '/' + n.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'`]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         const R = cat.datasheets[id]; if (!R) continue;
+        // (a unit of another datasheet of the same name, another faction's: Thousand Sons' Defiler is no World Eaters row)
+        { const ds = rawDs.get(a.id + '|' + u.id); if (ds && !ds.includes(id)) continue; }
         const multi = names.length > 1, mine = k => (u[k] || []).filter(r => !multi || r.who === n || (k === 'stats' && String(r.name).replace(/ ×\d+$/, '') in Object.fromEntries((R.stats || []).map(x => [x.name, 1]))));
         const S = { name: n, stats: mine('stats'), ranged: mine('ranged'), melee: mine('melee'), abilities: mine('abilities') };
         checked.nr += ['stats', 'ranged', 'melee', 'abilities'].reduce((t, k) => t + S[k].length, 0);   // (rows compared)

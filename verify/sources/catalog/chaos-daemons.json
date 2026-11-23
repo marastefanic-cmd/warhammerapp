@@ -7725,7 +7725,8 @@
      "cp": 1,
      "when": "End of your opponent’s turn.",
      "target": "Up to two **LEGIONES DAEMONICA** units from your army that are within your army’s Shadow of Chaos, or one other **LEGIONES DAEMONICA** unit from your army.",
-     "effect": "- Place your unit in **strategic reserves**.\n- Your unit must make an **ingress move** in your next Movement phase (including in your first turn).\n**RESTRICTION:** You cannot target units that are within **Engagement Range** of one or more enemy units with this **Stratagem**."
+     "effect": "- Place your unit in **strategic reserves**.\n- Your unit must make an **ingress move** in your next Movement phase (including in your first turn).",
+     "restrictions": "You cannot target units that are within **Engagement Range** of one or more enemy units with this **Stratagem**."
     },
     {
      "id": "daemonic-invulnerability",

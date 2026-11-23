@@ -2,14 +2,14 @@
  "reader": "reader2",
  "counts": {
   "sources": 1376,
-  "sentences": 2675,
+  "sentences": 2672,
   "read": 1365,
   "readWithEffects": 691,
   "readNoEffect": 674,
-  "unread": 1310,
-  "unreadOutside": 1022,
-  "unreadUnparsed": 288,
-  "gwFound": 2534,
+  "unread": 1307,
+  "unreadOutside": 1020,
+  "unreadUnparsed": 287,
+  "gwFound": 2531,
   "gwNotFound": 50,
   "gwShort": 91
  },
@@ -33806,17 +33806,6 @@
    "source": "Butcher Lord",
    "sourceKind": "enhancement",
    "idx": 0,
-   "text": "LEADER: GOREMONGERS, JAKHALS",
-   "status": "unread",
-   "reason": "unparsed:LEADER: GOREMONGERS, JAKHALS",
-   "gw": "found"
-  },
-  "det:world-eaters/cult-of-blood|Butcher Lord|1": {
-   "owner": "det:world-eaters/cult-of-blood",
-   "ownerName": "Cult of Blood",
-   "source": "Butcher Lord",
-   "sourceKind": "enhancement",
-   "idx": 1,
    "text": "WORLD EATERS INFANTRY model only.",
    "status": "read",
    "kind": "restriction",
@@ -33837,12 +33826,12 @@
    },
    "gw": "found"
   },
-  "det:world-eaters/cult-of-blood|Butcher Lord|2": {
+  "det:world-eaters/cult-of-blood|Butcher Lord|1": {
    "owner": "det:world-eaters/cult-of-blood",
    "ownerName": "Cult of Blood",
    "source": "Butcher Lord",
    "sourceKind": "enhancement",
-   "idx": 2,
+   "idx": 1,
    "text": "The bearer has the Infiltrators ability.",
    "status": "unread",
    "reason": "outside-vocabulary:ability infiltrators",
@@ -34801,18 +34790,6 @@
    "reason": "outside-vocabulary:movement / deployment",
    "gw": "found"
   },
-  "det:world-eaters/goretrack-onslaught|Fury Unleashed|1": {
-   "owner": "det:world-eaters/goretrack-onslaught",
-   "ownerName": "Goretrack Onslaught",
-   "source": "Fury Unleashed",
-   "sourceKind": "stratagem",
-   "idx": 1,
-   "text": "A unit cannot be targeted by this Stratagem and the Unrelenting Advance Stratagem in the same phase.",
-   "sub": "RESTRICTION",
-   "status": "unread",
-   "reason": "outside-vocabulary:stratagems",
-   "gw": "found"
-  },
   "det:world-eaters/brazen-engines|Rampaging Terrors|0": {
    "owner": "det:world-eaters/brazen-engines",
    "ownerName": "Brazen Engines",
@@ -34993,7 +34970,7 @@
    "source": "Murder-Forged Entity",
    "sourceKind": "enhancement",
    "idx": 1,
-   "text": "This unit has DAEMON",
+   "text": "This unit has DAEMON.",
    "status": "unread",
    "reason": "unparsed:this unit has DAEMON",
    "gw": "found"
@@ -52981,18 +52958,6 @@
    "text": "Your unit must make an ingress move in your next Movement phase (including in your first turn).",
    "status": "unread",
    "reason": "outside-vocabulary:movement / deployment",
-   "gw": "found"
-  },
-  "det:chaos-daemons/daemonic-incursion|The Realm of Chaos|2": {
-   "owner": "det:chaos-daemons/daemonic-incursion",
-   "ownerName": "Daemonic Incursion",
-   "source": "The Realm of Chaos",
-   "sourceKind": "stratagem",
-   "idx": 2,
-   "text": "You cannot target units that are within Engagement Range of one or more enemy units with this Stratagem.",
-   "sub": "RESTRICTION",
-   "status": "unread",
-   "reason": "outside-vocabulary:stratagems",
    "gw": "found"
   },
   "det:chaos-daemons/daemonic-incursion|Daemonic Invulnerability|0": {

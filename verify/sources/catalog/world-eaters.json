@@ -5096,14 +5096,14 @@
    },
    "composition": [
     {
-     "model": "Heldrake",
+     "model": "Chaos Heldrake",
      "min": 1,
      "max": 1
     }
    ],
    "options": [
     {
-     "on": "Heldrake",
+     "on": "Chaos Heldrake",
      "choices": [
       {
        "name": "Hades autocannon"
@@ -5120,9 +5120,9 @@
    "loadout": {
     "lines": [
      {
-      "model": "Heldrake",
+      "model": "Chaos Heldrake",
       "names": [
-       "Heldrake"
+       "Chaos Heldrake"
       ],
       "default": [
        "Hades autocannon",
@@ -5133,7 +5133,7 @@
     "swaps": [
      {
       "lines": [
-       "Heldrake"
+       "Chaos Heldrake"
       ],
       "from": [
        "Hades autocannon"
@@ -5942,7 +5942,7 @@
     {
      "name": "Frenzy",
      "tag": "Once per turn, per unit",
-     "text": "(Once per turn, per unit) In the Fight phase, when an enemy unit targets this unit, after that unit has resolved its attacks, you can use this ability. If you do, this unit is eligible to fight (even if it has already fought this phase) and must be selected to fight next."
+     "text": "In the Fight phase, when an enemy unit targets this unit, after that unit has resolved its attacks, you can use this ability. If you do, this unit is **eligible to fight** (even if it has already fought this phase) and must be **selected to fight** next."
     }
    ],
    "rules": [
@@ -6349,7 +6349,7 @@
     {
      "name": "Butcher Lord",
      "pts": 10,
-     "text": "**LEADER: GOREMONGERS**, **JAKHALS**\n**WORLD EATERS INFANTRY** model only. The bearer has the **Infiltrators** ability."
+     "text": "**WORLD EATERS INFANTRY** model only. The bearer has the Infiltrators ability."
     },
     {
      "name": "Brazen Form",
@@ -6580,7 +6580,8 @@
      "cp": 1,
      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
      "target": "One **WORLD EATERS RHINO** model from your army that has one or more wounds remaining and was hit by one or more of the attacking unit’s attacks.",
-     "effect": "One **KHORNE BERZERKERS** unit embarked within your model can make a **disembark move** and then make a **surge move** of up to D6+2\".\n**RESTRICTION:** A unit cannot be targeted by this Stratagem and the Unrelenting Advance Stratagem in the same phase."
+     "effect": "One **KHORNE BERZERKERS** unit embarked within your model can make a **disembark move** and then make a **surge move** of up to D6+2\".",
+     "restrictions": "A unit cannot be targeted by this Stratagem and the Unrelenting Advance Stratagem in the same phase."
     }
    ]
   },
@@ -6605,7 +6606,7 @@
      "name": "Murder-Forged Entity",
      "pts": 15,
      "upgrade": true,
-     "text": "**WORLD EATERS VEHICLE** unit only. This unit has **DAEMON**"
+     "text": "**WORLD EATERS VEHICLE** unit only. This unit has **DAEMON**."
     }
    ],
    "stratagems": [
@@ -6965,16 +6966,24 @@
  "weaponNames": [],
  "packApplied": [
   {
-   "id": "world-eaters/helbrute",
-   "field": "ability[Frenzy].text",
-   "app": "(Once per turn, per unit) In the Fight phase, when an enemy unit targets this unit, after that unit has resolved its attacks, you can use this ability. If you do, this unit is eligible to fight (even if it has already fought this phase) and must be selected to fight next.",
-   "was": "In the Fight phase, when an enemy unit targets this unit, after that unit has resolved its attacks, you can use this ability. If you do, this unit is **eligible to fight** (even if it has already fought this phase) and must be **selected to fight** next.",
-   "title": "Helbrute, Frenzy Ability",
+   "id": "detachment:cult-of-blood",
+   "field": "enhancement[Butcher Lord].text",
+   "app": "**WORLD EATERS INFANTRY** model only. The bearer has the Infiltrators ability.",
+   "was": "**LEADER: GOREMONGERS**, **JAKHALS**\n**WORLD EATERS INFANTRY** model only. The bearer has the **Infiltrators** ability.",
+   "title": "Butcher Lord Enhancement",
    "instr": "Change to:",
-   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Helbrute, Frenzy Ability"
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: CULT OF BLOOD DETACHMENT / Butcher Lord Enhancement"
   }
  ],
- "handApplied": [],
+ "handApplied": [
+  {
+   "id": "detachment:brazen-engines",
+   "field": "enhancement:Murder-Forged Entity.text",
+   "app": "**WORLD EATERS VEHICLE** unit only. This unit has **DAEMON**.",
+   "was": "**WORLD EATERS VEHICLE** unit only. This unit has **DAEMON**",
+   "why": "GW's World Eaters Faction Pack 1.3 prints the Brazen Engines detachment in full (p2): \"WORLD EATERS VEHICLE unit only. This unit has DAEMON.\" with its full stop; Wahapedia's page has none. GW's words (verify/texts.js checks the detachment against the pack)."
+  }
+ ],
  "modelNames": [],
  "unread": [
   {

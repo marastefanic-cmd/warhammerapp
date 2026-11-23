@@ -144,7 +144,10 @@ function condsOf(V, sOrig, leadOrig, opts){
   const pc = opts && opts.def ? plainCase(((leadOrig ? leadOrig + ' ' : '') + sOrig).replace(/~~[^~]*~~\/?/g, '')) : plainCase((leadOrig ? leadOrig + ' ' : '') + sOrig);
   // (a clause keeps its brackets: "While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units)")
   for(const m of pc.matchAll(/\b(?:(?:[Ii]f|[Ww]hile|[Uu]nless) [^,.:;]+|[Tt]he first time (?:(?! while\b)[^,.:;()])+)/g)){
-    const cl = m[0], cn = norm(cl);
+    // (a clause with an alternative after a comma is read whole: "If that model's unit is within 6" of … MONSTER units, or within 9" of
+    // … TITANIC units", Fail Not the Blood God)
+    const alt = /^, or within [^,.:;]+/.exec(pc.slice(m.index + m[0].length));
+    const cl = m[0] + (alt ? alt[0] : ''), cn = norm(cl);
     if(/^if (?:you|it|they) do(?:es)?\b|^if any of the following apply\b/.test(cn)) continue;
     // (an "if" whose consequence is a cost, not this effect: "if that test is failed, that unit suffers D3 mortal wounds")
     if(/^,?\s*(?:that unit|this unit|your unit|it|that model|this model) suffers\b/i.test(pc.slice(m.index + cl.length))) continue;
