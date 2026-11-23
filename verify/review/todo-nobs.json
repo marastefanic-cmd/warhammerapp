@@ -198,7 +198,7 @@
  {
   "army": "(all lists)",
   "kind": "sign-off",
-  "where": "import.js, builder.js, verify/gw-order.js (verify/helpers.js: 6 code judgements to check)",
+  "where": "import.js, builder.js, verify/gw-order.js (verify/helpers.js: 7 judgements to check)",
   "judgement": {
    "rule": "The helper functions whose code changed need a reviewer's sign-off again: the import's top-level reading and name lookup (resolveRoster, textToExport, make, builder.js topLevel / Builder), srcNoteOf.",
    "before": "742 of 742 approved",

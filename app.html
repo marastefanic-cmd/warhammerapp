@@ -2104,7 +2104,7 @@ const HW_PDF_ONLY = ['emperors-chosen', 'dread-host'];
 const HW_NR_PDFS = 16;
 // the release gate: verify/run.js's steps, in groups (verify/render.js how-gate: every step in exactly one group)
 const HW_GATE = [
-  ['Facts against GW and New Recruit', 'every unit fact equal to your New Recruit export or PDF (' + HW_NR_PDFS + ' lists have a PDF), every value a rule changes named as a rule whose GW words say so, every Force Disposition and base GW’s, every faction catalogue complete against GW’s pages, every program column held by its script', ['data', 'tables', 'marks', 'dispositions', 'bases', 'catalog', 'nr', 'choice', 'derived']],
+  ['Facts against GW and New Recruit', 'every unit fact equal to your New Recruit export and, for the ' + HW_NR_PDFS + ' lists with one, your New Recruit PDF, every value a rule changes named as a rule whose GW words say so, every Force Disposition and base GW’s, every faction catalogue complete against GW’s pages, every program column held by its script', ['data', 'tables', 'marks', 'dispositions', 'bases', 'catalog', 'nr', 'choice', 'derived']],
   ['Wording', 'every rules text the words of GW’s newest document (or Wahapedia’s), every ability word for word, every AI summary still on the words it was written from', ['texts', 'words', 'fingerprints']],
   ['Numbers', 'every profile number GW’s datasheet’s, the damage calculator against hand-worked cases, the mechanical rules', ['numbers', 'calc', 'invariants']],
   ['Keywords', 'every unit’s keywords its GW datasheets’, the list’s own only by a named rule', ['keywords']],

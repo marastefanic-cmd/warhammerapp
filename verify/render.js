@@ -163,11 +163,11 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     // each column a chip in the class of its columns.json source (SRC_CLASS, fixed here, not the app's); each box a cell per column of it and
     // its inner tables (CHECKLIST: its columns), in that order and class; the seven classes distinct, and drawn in seven distinct colours
     const SRC_CLASS = { gw:'s-gw', wahapedia:'s-wa', newrecruit:'s-nr', derived:'s-de', hand:'s-ha', 'ai-summary':'s-ai' };
-    if(new Set(Object.values(SRC_CLASS)).size !== 7) fail('how-tables', '', 'SRC_CLASS', 'the seven sources do not have seven classes');
+    if(new Set(Object.values(SRC_CLASS)).size !== 6) fail('how-tables', '', 'SRC_CLASS', 'the six sources do not have six classes');
     for(const x of got.chips){ const s = ((COLS[x.t] || { columns:{} }).columns[x.c] || {}).source; if(s !== x.s || x.cls !== 'hwcol ' + SRC_CLASS[s]) fail('how-tables', '', x.t + '.' + x.c, 'drawn as ' + x.s + ' (' + x.cls + '), columns.json source ' + s + ' (hwcol ' + SRC_CLASS[s] + ')'); }
     for(const x of got.allChips) if(!x.s || x.cls !== 'hwcol ' + SRC_CLASS[x.s]) fail('how-tables', '', 'chip ' + x.text, 'class ' + x.cls + ' for source ' + x.s + ', want hwcol ' + SRC_CLASS[x.s]);
     const looks = new Map(); for(const x of got.allChips) if(SRC_CLASS[x.s] && !looks.has(x.s)) looks.set(x.s, x.look);
-    if(looks.size !== 7 || new Set(looks.values()).size !== 7) fail('how-tables', '', 'colours', 'the sources are drawn in ' + new Set(looks.values()).size + ' distinct looks for ' + looks.size + ' sources: ' + JSON.stringify([...looks]));
+    if(looks.size !== 6 || new Set(looks.values()).size !== 6) fail('how-tables', '', 'colours', 'the sources are drawn in ' + new Set(looks.values()).size + ' distinct looks for ' + looks.size + ' sources: ' + JSON.stringify([...looks]));
     for(const [t, cls] of Object.entries(got.cellCls)){
       const want = t === 'CHECKLIST' ? cls.map(() => 's-de') : Object.keys(COLS).filter(k => k === t || k.startsWith(t + '.')).flatMap(k => Object.values(COLS[k].columns || {}).map(c => SRC_CLASS[c.source]));
       if(JSON.stringify(cls) !== JSON.stringify(want)) fail('how-tables', '', t, 'its cells are ' + cls.join(' ') + ', columns.json gives ' + want.join(' ')); }
