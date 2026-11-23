@@ -111,7 +111,13 @@
   "key": "healybois-4|source-date",
   "where": "healybois · source line (data.js ARMIES healybois.source)",
   "verdict": "note",
-  "why": "The app says \"New Recruit, exported 23 Nov 2026 (JSON)\". The owner says the export is from 22 Nov, and the upload is stamped 2026-11-22 22:40. The JSON carries no date, so verify/from-json.js uses the day the export file was committed (8cba527, 2026-11-23). That is the project-wide rule (healybois’s old 31 Oct came the same way), not this branch’s error, but the line names a day that is not the export day. If the owner wants the true day, the hand file’s source can say 22 Nov. The date also decides the NEWEST FIRST order in the list picker: Healybois now sorts above Basic Bitch in the shooty snapshot, and would on 22 Nov too."
+  "why": "The app says \"New Recruit, exported 23 Nov 2026 (JSON)\". The owner says the export is from 22 Nov, and the upload is stamped 2026-11-22 22:40. The JSON carries no date, so verify/from-json.js uses the day the export file was committed (8cba527, 2026-11-23). That is the project-wide rule (healybois’s old 31 Oct came the same way), not this branch’s error, but the line names a day that is not the export day. If the owner wants the true day, the hand file’s source can say 22 Nov. The date also decides the NEWEST FIRST order in the list picker: Healybois now sorts above Basic Bitch in the shooty snapshot, and would on 22 Nov too. Resolved by 71ea946: see item 82ad905df4f8ba60."
+ },
+ {
+  "key": "82ad905df4f8ba60",
+  "where": "healybois · source line",
+  "verdict": "ok",
+  "why": "71ea946 changes only three things. (1) verify/sources/hand/healybois.json gets a source entry {text, why}. This is the mechanism nidzillas and princes use, read by verify/from-json.js line 1428 (if (HAND.source) army.source = HAND.source.text), which overrides the commit-date fallback. (2) data.js changes only the healybois source line, to \"New Recruit, exported 22 Nov 2026 (JSON)\", in from-json’s own format with the (JSON) suffix that the other JSON lists carry. (3) The todo item. The date is right: the owner’s upload Healybois_-_2000pts.json has file time 2026-11-22 22:40:02 UTC (stat), the JSON has no date field, and the owner calls it the 22 Nov export. The why says how the day was found, and the line no longer names the commit day. Light checks on 71ea946: check.js, tables, nr and texts pass. I did not run reimport (a release gate was running), but the hand source is the path from-json takes on every run, so re-import will give this line. Snapshots: the healybois source line becomes 22 Nov. Basic Bitch is 4 Nov, so the shooty list-picker order is the same as in the gate run."
  },
  {
   "key": "healybois-4|gate",
