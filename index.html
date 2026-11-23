@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '28091f6846';</script>
+<script>window.WH_BUILD = '7dc1f79419';</script>
 </head>
 <body>
 <style>
@@ -141,7 +141,19 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .pgv .from{color:var(--muted)}
 .pgv .from .link, .pgk .link{color:inherit}
 .ckl .tl > .ticks{min-width:0}   /* Phase checklist: the box right beside its line */
-.ckl .tl .tg.m{white-space:normal}   /* and a long "not usable here" reason wraps on a small phone */
+.ckl .tl .tg.m{white-space:normal}
+.resbar{position:sticky; top:var(--top); z-index:5; display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 10px; padding:10px 0 9px; background:var(--bg); box-shadow:0 1px 0 var(--line)}   /* Strategic reserves: the running total, always in sight */
+.resbar .respts{font:700 22px/1.1 var(--f-head); color:var(--fg)}
+.resbar .resn{font-size:13.5px; color:var(--muted)}
+.resbar.over .respts, .resbar.over .resn b{color:var(--dm-bad)}
+.resl .tl{padding:7px 0 6px; border-bottom:1px solid var(--line)}
+.resl .tl > .ticks{min-width:0}
+.resl .tick{position:relative} .resl .tick::after{content:""; position:absolute; inset:-7px}   /* a 44px tap area round the 30px box */
+.res .sec-h .textbtn{min-height:44px; min-width:44px}
+.resm{display:block; margin-top:3px; font-size:13px; line-height:1.45}
+.resm > span{display:block; margin-top:2px}
+.resm .tg{white-space:normal}
+.resm .from{color:var(--muted)}   /* and a long "not usable here" reason wraps on a small phone */
 
 /* ---------- top bar ---------- */
 .top{position:sticky; top:env(safe-area-inset-top, 0px); z-index:20; background:var(--bg); border-bottom:1px solid var(--line);
@@ -1132,12 +1144,13 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M4 12.5l5 5L20 6.5"/></symbol>
     <symbol id="i-checks" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4" /> <path d="m3 7 2 2 4-4" /> <path d="M13 6h8" /> <path d="M13 12h8" /> <path d="M13 18h8" /></g></symbol>
+    <symbol id="i-reserve" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14" /> <path d="M5 2h14" /> <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" /> <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" /></g></symbol>
     <symbol id="i-flag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="M12 11h4" /> <path d="M12 16h4" /> <path d="M8 11h.01" /> <path d="M8 16h.01" /></g></symbol>
     <symbol id="i-base" viewBox="0 0 24 24"><ellipse cx="12" cy="15" rx="9" ry="4" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 15v-2c0-2.2 4-4 9-4s9 1.8 9 4v2"/></symbol>
     <symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <!-- The icons clipboard-list, list-checks, users, zap, scroll, telescope, swords, circle-question-mark, the settings gear, the dice and import are from Lucide, https://lucide.dev
+    <!-- The icons clipboard-list, list-checks, hourglass, users, zap, scroll, telescope, swords, circle-question-mark, the settings gear, the dice, import and trash are from Lucide, https://lucide.dev
      ISC License. Copyright (c) 2026 Lucide Icons and Contributors. Permission to use, copy, modify, and/or distribute this software for any
      purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
      THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
@@ -1151,6 +1164,7 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
     <symbol id="i-import" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12" /> <path d="m8 11 4 4 4-4" /> <path d="M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4" /></g></symbol>
     <symbol id="i-dice" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="12" height="12" x="2" y="10" rx="2" ry="2" /> <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6" /> <path d="M6 18h.01" /> <path d="M10 14h.01" /> <path d="M15 6h.01" /> <path d="M18 9h.01" /></g></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path style="fill:var(--star-fill, none)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 11v6" /> <path d="M14 11v6" /> <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /> <path d="M3 6h18" /> <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></g></symbol>
     <symbol id="i-folder" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" /></symbol>
   </defs>
 </svg>
@@ -1173,12 +1187,12 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=28091f6846"></script>
-<script src="data.js?v=28091f6846"></script>
-<script src="calc.js?v=28091f6846"></script>
-<script src="effects.js?v=28091f6846"></script>
-<script src="builder.js?v=28091f6846"></script>
-<script src="import.js?v=28091f6846"></script>
+<script src="verified.js?v=7dc1f79419"></script>
+<script src="data.js?v=7dc1f79419"></script>
+<script src="calc.js?v=7dc1f79419"></script>
+<script src="effects.js?v=7dc1f79419"></script>
+<script src="builder.js?v=7dc1f79419"></script>
+<script src="import.js?v=7dc1f79419"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1285,8 +1299,8 @@ const isFolder = s => hasOwn(FOLDER_TITLE, s);
 const folderLists = s => s === 'favs' ? favLists() : s === 'builtin' ? D.armies.filter(a => !a.imported) : s === 'local' ? D.armies.filter(a => a.imported) : D.armies;
 // (a list's kind, as a pill on its row: the app's own, or imported on this phone)
 const kindPill = a => '<span class="pill kp' + (a.imported ? ' loc' : '') + '">' + (a.imported ? 'Local' : 'Built-in') + '</span>';
-const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies', checklist:'Phase checklist' };
-const BACK_TITLE = { pregame:'Overview', checklist:'Checklist', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
+const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies', checklist:'Phase checklist', reserves:'Strategic reserves' };
+const BACK_TITLE = { pregame:'Overview', checklist:'Checklist', reserves:'Reserves', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
 const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
 // a value or keyword that a rule of the list changes (w.from / s.from, the value New Recruit shows against GW's datasheet, checked
@@ -1315,7 +1329,7 @@ let focusSearch = false;
 // the tabs, and which one the current screen belongs to
 const TABS = [['army', 'i-telescope', 'Find'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Stratagems'], ['rules', 'i-book', 'Rules'], ['damage', 'i-swords', 'Damage']];
 const isTab = s => TABS.some(([k]) => k === s);
-const tabOf = s => ({ unit:'units', pregame:'army', checklist:'army', bases:'army', ranged:'army', melee:'army', abilities:'army' })[s] || s;
+const tabOf = s => ({ unit:'units', pregame:'army', checklist:'army', reserves:'army', bases:'army', ranged:'army', melee:'army', abilities:'army' })[s] || s;
 const tabBar = () => '<div class="tabs">' + TABS.map(([s, ic, label]) => '<button data-tab="' + s + '"' + (tabOf(cur.s) === s ? ' class="on" aria-current="page"' : '') + ' aria-label="' + label + '"><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg></button>').join('') + '</div>';   // icons only; the name is the button's label
 // uses per battle ticked off in this game (Bomb Squig: twice per battle, per unit), per army, until New game
 const usedKey = () => 'wh-used-' + (cur.army || '');
@@ -1970,7 +1984,7 @@ function rollArmy(folder){
    One box: a file (.json, .ros, .rosz or .txt) or pasted text, in any of New Recruit's formats but text format A (builder.js reads them).
    A faction with a full catalogue in the app's tables is built from them (the same list the app would have built in); another is copied
    from the app's own lists' units, as before, and says so. Nothing is added when anything does not resolve exactly, and each reason is
-   listed. Kept on this phone as its export, made again at every start; removed from its Overview. */
+   listed. Kept on this phone as its export, made again at every start; removed from its Overview or its menu (Remove this list). */
 const importRow = () => '<div class="list imprt"><button class="row" data-import><svg class="ic" aria-hidden="true"><use href="#i-import"/></svg><span class="rb"><b>Import a list from New Recruit</b>' +
     '<span>Its export: .json, .ros, .rosz or text</span></span>' + arrow + '</button></div>';
 const staleRows = () => importStale.length ? '<div class="list imprt">' + importStale.map(x => '<button class="row" data-impstale="' + esc(x.id) + '"><span class="rb"><b>' + esc(x.name) + kindPill({ imported:true }) + '</b><span>Imported list: this version of the app does not build it</span></span>' + arrow + '</button>').join('') + '</div>' : '';
@@ -2029,10 +2043,17 @@ const importedFoot = a => { const x = importedKept().find(y => y.id === a.id);
     ((a.gwValues || []).length ? '<p class="note">Values: GW’s are used where the export’s differ: ' + a.gwValues.map(g => esc(g.unit) + ', ' + esc(g.row) + ' ' + esc(g.field) + ' ' + esc(g.export) + ' in the export, ' + esc(g.gw) + ' by GW').join('; ') + '.</p>' : '') +
     '<div class="imprm" id="impRm">' + impRmBtn(a.id) + '</div>'; };
 const impRmBtn = id => '<button class="btn2" data-imprm="' + esc(id) + '">Remove this list</button>';
+// the confirm: on the Overview (and an out-of-date list's popup) in place of its button, from the list's menu in a popup; Keep it leaves all as it was
+const rmAsk = (id, keep) => { const x = importedKept().find(y => y.id === id) || {}, a = armyById(id) || x;
+  return '<p class="lead">Remove ' + esc(a.name || 'this list') + ' from this phone? You can import it again.</p><div class="racts"><button class="btn" data-imprmyes="' + esc(id) + '">Remove</button><button class="btn2" ' + keep + '>Keep it</button></div>'; };
+function showRemove(id){
+  openSheet('Local list', 'Remove this list', '<div class="imprm">' + rmAsk(id, 'data-close') + '</div>');
+  const b = $('#sheetIn [data-close]'); if(b) b.focus({ preventScroll:true });
+}
 function askRemove(id){
-  const host = $('#impRm'), x = importedKept().find(y => y.id === id) || {}, a = armyById(id) || x;
+  const host = $('#impRm');
   if(!host) return;
-  host.innerHTML = '<p class="lead">Remove ' + esc(a.name || 'this list') + ' from this phone? You can import it again.</p><div class="racts"><button class="btn" data-imprmyes="' + esc(id) + '">Remove</button><button class="btn2" data-imprmno="' + esc(id) + '">Keep it</button></div>';
+  host.innerHTML = rmAsk(id, 'data-imprmno="' + esc(id) + '"');
   const b = host.querySelector('[data-imprmno]'); if(b) b.focus({ preventScroll:true });
   host.scrollIntoView({ block:'center' });   // both buttons in sight, above the tab bar
 }
@@ -2041,7 +2062,7 @@ function removeKept(id){
   store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id));
   const i = D.armies.findIndex(y => y.id === id && y.imported); if(i >= 0) D.armies.splice(i, 1);
   const j = importStale.findIndex(y => y.id === id); if(j >= 0) importStale.splice(j, 1);
-  try { localStorage.removeItem('wh-used-' + id); localStorage.removeItem('wh-check-' + id); } catch(e){}
+  try { localStorage.removeItem('wh-used-' + id); localStorage.removeItem('wh-check-' + id); localStorage.removeItem('wh-res-' + id); } catch(e){}
   if(favIds().includes(id)) setFav(id, false);
 }
 function removeImported(id){
@@ -2354,6 +2375,7 @@ function screenArmy(){
     '<div id="armyMenu"><div class="list">' +
       row('pregame', 'i-flag', 'Overview', '') +
       row('checklist', 'i-checks', 'Phase checklist', '') +
+      row('reserves', 'i-reserve', 'Strategic reserves', '') +
       row('bases', 'i-base', 'Bases & proxies', a.units.reduce((t, u) => t + modelCount(u) * (u.copies || 1), 0)) +
       row('units', 'i-units', 'Units', unitCount(a)) +
       row('strats', 'i-cards', 'Stratagems', allStratagems(a).length) +
@@ -2363,6 +2385,7 @@ function screenArmy(){
       row('rules', 'i-book', 'Rules', '') +
       row('damage', 'i-swords', 'Damage calculator', '') +
       (ONLY ? row('settings', 'i-gear', 'Settings', '') : '') +
+      (a.imported ? '<button class="row" data-imprmask="' + esc(a.id) + '"><svg class="ic" aria-hidden="true"><use href="#i-trash"/></svg><span class="rb"><b>Remove this list</b></span>' + arrow + '</button>' : '') +   // (a local list only: the same confirm as its Overview's, in a popup)
     '</div><p class="note">' + esc(a.source) + '</p></div>' + (ONLY ? verifiedLine() : '');
 }
 
@@ -5989,6 +6012,117 @@ function screenRules(){
   return h + '</div>';
 }
 
+/* ---------- screen: strategic reserves ----------
+   A tick box per unit (per copy of a ×N unit) for the units you place in strategic reserves, kept per list on this phone; the running
+   total of their points, pinned under the top bar, against the limit GW's Strategic Reserves text states (data.js RULES, checked
+   against GW's Core Rules by verify/texts.js); which units can Deep Strike (their Rules line, or a rule or ability that gives it: GRANTS).
+   Nothing here is typed by hand: the limit, the step and the units the text excludes are read from GW's words (resRule). */
+// GW's words, read: the step ("Before the battle, in the Declare Battle Formations step"), the units it excludes ("(excluding
+// **FORTIFICATIONS**)": the keyword, singular), and the points limit ("cannot exceed 50% of your points limit for your battle size"):
+// the sentence, its percentage; null for what the words do not say
+function resRule(){
+  const t = String(D.rules['Strategic Reserves'] || '').replace(/\*\*/g, '');
+  const when = /^(Before the battle, in the [A-Z][A-Za-z ]+? step)\b/.exec(t);
+  const ex = /\bselect one or more friendly units \(excluding ([A-Z][A-Z /]*[A-Z])\) to place in strategic reserves\b/.exec(t);
+  const lim = /(Unless otherwise stated, the combined points value of all of your strategic reserves units [^.]*?cannot exceed (\d+)% of your points limit for your battle size\.)/.exec(t);
+  return { when:when ? when[1] : null, excl:ex ? ex[1].split('/').map(k => k.trim().replace(/S$/, '')) : [], quote:lim ? lim[1] : null, pct:lim ? +lim[2] : null };
+}
+// the GRANTS rows that give a unit of this list a rule (Deep Strike) when units are placed in strategic reserves, each with how:
+//   'unit'  an army rule of its faction or a detachment rule of the list, to the units its keywords name (Mindhunger); or the unit's own
+//           ability (an enhancement too) whose words the row quotes, given to "this unit" (Nazdreg's Know-wotz)
+//   'model' the unit's own ability given to "this model" / "the bearer" (Disciple of Khorne, Lord of the Eightbound): that model only
+//   'may'   a selection (pick 'one': "select one friendly GRAVIS/PHOBOS/TACTICUS unit. That unit has Deep Strike."): the ability on any unit
+//           of the list (the giver), to every unit its keywords allow, the giver's own unit too
+// Not a grant triggered in the battle (its CHECKLIST entry has a trigger, t or at: Umbralefic Crystal "In your Command phase",
+// Mysterious Guardian "At the end of your opponent's turn": repositioning, 20.02). By the rule's and the ability's words, not the
+// list's id, so an imported list's copy of a unit finds them as well
+const resRuleName = g => String(g.rule).split(' · ').pop();
+const resInBattle = ab => { const e = (D.checklist || {})['a|' + ckHash(ab.name + '\n' + ab.text)] || {}; return !!(e.t || e.at); };
+function resGrants(u, name){
+  const A = army(), f = factionOf(A), dets = detachmentsOf(A), out = [];
+  for(const g of D.grants || []){
+    if(g.grants !== name || g.type !== 'ability') continue;
+    const p = String(g.rule).split(' · '), rn = p[p.length - 1], has = x => x.abilities.find(ab => ab.name === rn && !naReason(ab) && String(ab.text).includes(g.text) && !resInBattle(ab));
+    if(p.length === 2){ if(p[0] === f.name + ' army rule' && f.armyRules.some(r => r.name === rn) && isObj(g.to) && matches(g.to, u)) out.push({ g, how:'unit', src:rn }); continue; }
+    if(/ rule$/.test(p[1])){ if(p[0] === f.name && dets.some(d => d.name + ' rule' === p[1] && detRules(d).some(r => r.name === rn)) && isObj(g.to) && matches(g.to, u)) out.push({ g, how:'unit', src:rn }); continue; }
+    if(g.pick === 'one'){ const giver = A.units.find(has); if(giver && isObj(g.to) && matches(g.to, u)) out.push({ g, how:'may', src:rn, ab:has(giver), giver:has(giver).who || giver.short || giver.name }); continue; }
+    const ab = has(u); if(!ab || !(g.to === 'this unit / model' || (isObj(g.to) && matches(g.to, u)))) continue;
+    out.push({ g, how:/\b(?:this|the bearer['’]?s?) unit\b/i.test(g.text) ? 'unit' : 'model', src:rn, ab, who:ab.who || u.short || u.name });
+  }
+  return out;
+}
+// a grant's condition (while) against the list: "If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle
+// Formations step": true when the unit is an attached unit whose keywords make up those words, false when it is not, or is one without
+// them; a moment of the selection ("In the Declare Battle Formations step") is no condition; any other: null (shown as conditional)
+function resWhile(g, u){
+  const w = String(g.while || '').split('; ').filter(x => x && !/^In the Declare Battle Formations step$/i.test(x));
+  if(!w.length) return true;
+  if(w.length > 1) return null;
+  const m = /^If this model is attached to an? ([A-Z][A-Z’' -]*[A-Z]) unit during the Declare Battle Formations step$/.exec(w[0]);
+  if(!m) return null;
+  if(!u.leads) return false;
+  const kws = u.kw.map(k => k.replace(/^Faction: /, '').toUpperCase()), words = m[1].split(' ');
+  for(let i = 0; i < words.length;){ let j = words.length; while(j > i && !kws.includes(words.slice(i, j).join(' '))) j--; if(j === i) return false; i = j; }
+  return true;
+}
+// a unit's Deep Strike (24.09: "if every model in this unit has this ability"): own (its Rules line, every model), part (the models that
+// alone have it: partialRules, or a grant to "this model" on a unit of more than one model), grants for the whole unit, may (a selection
+// that can give it), cond (a grant whose condition the list does not settle); a grant whose condition the list shows false: none
+function resDeepStrike(u){
+  const has = unitRules(u).some(r => ruleKey(r) === 'Deep Strike'), pk = Object.keys(u.partialRules || {}).find(r => ruleKey(r) === 'Deep Strike');
+  const own = has && !pk, part = has && pk ? [partialWho(u, pk)] : [], grants = [], may = [], cond = [];
+  for(const x of resGrants(u, 'Deep Strike')){
+    if(x.how === 'may'){ may.push(x); continue; }
+    const w = resWhile(x.g, u); if(w === false) continue;
+    if(w === null){ cond.push(x); continue; }
+    if(x.how === 'model' && modelCount(u) > 1){ if(!own && !part.includes(x.who)) part.push(x.who); continue; }
+    grants.push(x);
+  }
+  return { own, part, grants, may, cond };
+}
+const resKey = () => 'wh-res-' + (cur.army || '');
+const resDone = () => new Set(Array.isArray(store.get(resKey())) ? store.get(resKey()) : []);
+// one box per unit, per copy of a ×N unit ("Unit 1", "Unit 2")
+const resBoxes = u => Array.from({ length:u.copies || 1 }, (_, i) => u.id + ((u.copies || 1) > 1 ? '#' + i : ''));
+function resTotal(){
+  const A = army(), R = resRule(), done = resDone();
+  const units = A.units.filter(u => !R.excl.some(k => hasKw(u, k)));
+  const n = units.reduce((t, u) => t + resBoxes(u).filter(k => done.has(k)).length, 0);
+  const pts = units.reduce((t, u) => t + resBoxes(u).filter(k => done.has(k)).length * (u.pts || 0), 0);
+  return { n, pts, limit:R.pct != null && A.points ? Math.floor(A.points * R.pct / 100) : null };
+}
+// the running total: in reserves / the limit, and how far over it or how much is left
+function resBar(){
+  const T = resTotal(), over = T.limit != null && T.pts > T.limit;
+  return '<div class="resbar' + (over ? ' over' : '') + '" role="status" aria-live="polite"><span class="lbl">In reserves</span><b class="respts">' + T.pts + (T.limit != null ? ' / ' + T.limit : '') + ' pts</b>' +
+    '<span class="resn">' + T.n + (T.n === 1 ? ' unit' : ' units') + (T.limit == null ? '' : over ? ' · <b>' + (T.pts - T.limit) + ' pts over the limit</b>' : ' · ' + (T.limit - T.pts) + ' pts left') + '</span></div>';
+}
+function screenReserves(){
+  const A = army(), R = resRule(), done = resDone();
+  const box = (k, label, what, off) => '<button class="tick' + (done.has(k) ? ' on' : '') + '" data-rtick="' + esc(k) + '" aria-pressed="' + done.has(k) + '"' + (off ? ' disabled' : '') +
+    ' aria-label="' + esc(what + (label ? ', ' + label : '') + ' in strategic reserves') + '">' + (done.has(k) ? '✓' : '') + '</button>';
+  const rows = A.units.map(u => {
+    const ex = R.excl.find(k => hasKw(u, k)), ds = resDeepStrike(u), ks = resBoxes(u), c = ks.length;
+    const marks = [];
+    const DS = linkTo('rule', 'Deep Strike', 'Deep Strike'), q = g => ' <span class="from">“' + esc(String(g.text).replace(/^- /, '').replace(/\*\*/g, '')) + '”</span>';
+    const srcLink = x => x.ab ? linkTo('ability', abilityKey(x.ab), x.src) : linkTo('rule', x.src, x.src);
+    if(ds.own) marks.push('<span class="tg resds" data-resds="own">' + DS + '</span>');
+    for(const m of ds.part) marks.push('<span class="tg m resds" data-resds="part:' + esc(m) + '">' + DS + ': ' + esc(m) + ' only</span>');
+    for(const x of ds.grants) marks.push('<span class="tg resds" data-resds="grant:' + esc(x.src) + '">' + DS + ' · ' + srcLink(x) + '</span>' + q(x.g));
+    for(const x of ds.may) marks.push('<span class="tg m resds" data-resds="may:' + esc(x.src) + '">can be given ' + DS + ' · ' + srcLink(x) + ' (' + esc(x.giver) + ')</span>' + q(x.g));
+    for(const x of ds.cond) marks.push('<span class="tg m resds" data-resds="cond:' + esc(x.src) + '">' + DS + ' if: ' + srcLink(x) + '</span>' + q(x.g));
+    if(ex) marks.push('<span class="tg m">' + linkTo('rule', 'Strategic Reserves', ex.toUpperCase() + ': excluded') + '</span>');
+    return '<div class="tl resu" data-resu="' + esc(u.id) + '"><span class="ticks">' + ks.map((k, i) => (c > 1 ? '<i>' + (i + 1) + '</i>' : '') + box(k, c > 1 ? 'Unit ' + (i + 1) : '', unitLabel(u), !!ex)).join('') + '</span>' +
+      '<span>' + linkTo('unit', u.id, unitLabel(u)) + ' <span class="from">' + u.pts + ' pts' + (c > 1 ? ' each, ×' + c : '') + '</span>' + (marks.length ? '<span class="resm">' + marks.map(m => '<span>' + m + '</span>').join('') + '</span>' : '') + '</span></div>';
+  }).join('');
+  return '<div class="res">' + resBar() + '<div class="sec-h"><h2>Strategic reserves</h2><button class="textbtn" data-rreset>Reset</button></div>' +
+    '<div class="pg">' + (R.when ? '<div class="pgr"><span class="pgk">When</span><span class="pgv">' + esc(R.when) + '</span></div>' : '') +
+    '<div class="pgr"><span class="pgk">Limit</span><span class="pgv">' + (R.quote ? esc(R.quote) + ' <span class="from">(' + linkTo('rule', 'Strategic Reserves', 'Strategic Reserves') + ', ' + esc(A.points + ' pts · ' + A.battleSize) + ')</span>'
+      : linkTo('rule', 'Strategic Reserves', 'Strategic Reserves')) + '</span></div></div>' +
+    '<div class="sec-h"><h2>Your units</h2><span class="c">' + A.units.reduce((t, u) => t + (u.copies || 1), 0) + '</span></div><div class="resl">' + rows + '</div>' +
+    '<p class="note">Tick the units you place in strategic reserves; the total counts each ticked unit’s points as the list prints them. Deep Strike: on the unit’s Rules line (every model; “only” where one model alone has it), or given by the rule or ability named, in its words; “can be given”: the ability gives it to one unit you select; “if”: its condition is for you to check. What units are given during the battle, as they go back into reserves, is not listed. Each name opens its rule. The boxes are kept for this list on this phone; Reset clears them.</p></div>';
+}
+
 /* ---------- render ---------- */
 function render(){
   if((cur.s === 'home' || isFolder(cur.s)) && ONLY) cur = Object.assign(plain(cur), { s:'army', army:ONLY.id });
@@ -6009,6 +6143,7 @@ function render(){
   else if(s === 'bases') v.innerHTML = screenBases();
   else if(s === 'pregame') v.innerHTML = screenPregame();
   else if(s === 'checklist') v.innerHTML = screenChecklist();
+  else if(s === 'reserves') v.innerHTML = screenReserves();
   else if(s === 'settings') v.innerHTML = screenSettings();
   else if(s === 'damage') v.innerHTML = screenDamage();
   if(cur.army) bot = tabBar();
@@ -6205,6 +6340,7 @@ document.addEventListener('click', e => {
   if(ds.impupdate){ showImport(ds.impupdate); return; }
   if(ds.impstale){ showStale(ds.impstale); return; }
   if(ds.imprm){ askRemove(ds.imprm); return; }
+  if(ds.imprmask){ showRemove(ds.imprmask); return; }
   if(ds.imprmyes){ removeImported(ds.imprmyes); return; }   // (its star, ticks and checklist boxes go too)
   if(ds.imprmno){ const h = $('#impRm'); if(h){ h.innerHTML = impRmBtn(ds.imprmno); h.querySelector('button').focus({ preventScroll:true }); } return; }
   if(ds.hfopen){ showHomeFilter(ds.hfopen); return; }
@@ -6321,6 +6457,17 @@ document.addEventListener('click', e => {
     document.querySelectorAll('[data-ctick="' + CSS.escape(k) + '"]').forEach(b => { b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); b.textContent = on ? '✓' : ''; });
     return;
   }
+  // a box on Strategic reserves (kept per list): the total under the top bar follows it
+  if(ds.rtick){
+    if(el.disabled) return;
+    const u = resDone(), k = ds.rtick, on = !u.has(k);
+    on ? u.add(k) : u.delete(k); store.set(resKey(), [...u]);
+    document.querySelectorAll('[data-rtick="' + CSS.escape(k) + '"]').forEach(b => { b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); b.textContent = on ? '✓' : ''; });
+    const bar = document.querySelector('#view .resbar'); if(bar) bar.outerHTML = resBar();
+    return;
+  }
+  if(el.hasAttribute('data-rreset')){ const was = [...resDone()], key = resKey(); store.set(key, []); rerender();
+    toastUndo('Reset: reserves cleared', () => { store.set(key, was); rerender(); }); return; }
   if(el.hasAttribute('data-ckreset')){ const was = [...ckDone()], key = ckKey(); store.set(key, []); rerender();
     toastUndo('Reset: ticks cleared', () => { store.set(key, was); rerender(); }); return; }
   if(ds.tick){

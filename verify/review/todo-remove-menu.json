@@ -1,0 +1,53 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "rmAsk",
+  "judgement": {
+   "code": "const rmAsk = (id, keep) => { const x = importedKept().find(y => y.id === id) || {}, a = armyById(id) || x;\n  return '<p class=\"lead\">Remove ' + esc(a.name || 'this list') + ' from this phone? You can import it again.</p><div class=\"racts\"><button class=\"btn\" data-imprmyes=\"' + esc(id) + '\">Remove</button><button class=\"btn2\" ' + keep + '>Keep it</button></div>'; };"
+  },
+  "source": {
+   "implements": "Remove's confirm, the same wherever it is asked: \"Remove <the list's name> from this phone? You can import it again.\", then Remove (removeImported) and Keep it (leaves the list and everything kept for it as it was)"
+  },
+  "key": "14eedbfe259c05b1"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "askRemove",
+  "judgement": {
+   "code": "function askRemove(id){\n  const host = $('#impRm');\n  if(!host) return;\n  host.innerHTML = rmAsk(id, 'data-imprmno=\"' + esc(id) + '\"');\n  const b = host.querySelector('[data-imprmno]'); if(b) b.focus({ preventScroll:true });\n  host.scrollIntoView({ block:'center' });   // both buttons in sight, above the tab bar\n}"
+  },
+  "source": {
+   "implements": "Remove on the Overview of an imported list (importedFoot) and in an out-of-date list's popup (showStale): the confirm (rmAsk) in place of the button, Keep it in focus, both buttons scrolled into sight above the tab bar; Keep it puts the button back"
+  },
+  "key": "b4425581e28ce2d0"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "showRemove",
+  "judgement": {
+   "code": "function showRemove(id){\n  openSheet('Local list', 'Remove this list', '<div class=\"imprm\">' + rmAsk(id, 'data-close') + '</div>');\n  const b = $('#sheetIn [data-close]'); if(b) b.focus({ preventScroll:true });\n}"
+  },
+  "source": {
+   "implements": "Remove this list, the last row of a local (imported) list's menu on Find (screenArmy: never a built-in list's): the confirm (rmAsk) in a popup titled Remove this list, Keep it in focus; Keep it closes the popup, Remove goes home with the toast \"Removed <name>\""
+  },
+  "key": "7cbb73b08a6de77f"
+ },
+ {
+  "army": "code",
+  "kind": "remove-menu",
+  "where": "app.html screenArmy (the menu row) · the tap handler (data-imprmask) · verify/render.js import block · verify/render.js and verify/build-parity.js P2 drop()",
+  "judgement": {
+   "code": "(a.imported ? '<button class=\"row\" data-imprmask=\"' + esc(a.id) + '\"><svg class=\"ic\" aria-hidden=\"true\"><use href=\"#i-trash\"/></svg><span class=\"rb\"><b>Remove this list</b></span>' + arrow + '</button>' : '') +   // (a local list only: the same confirm as its Overview's, in a popup)",
+   "rule": "A local (imported) list's menu on Find ends with Remove this list (trash icon, after every other row, Settings included); a built-in list's menu never has it. Its tap opens the confirm in a popup (showRemove); Remove takes off the phone the kept export, the list, its per-battle ticks, its Phase checklist boxes and its star (removeKept), then home with the toast. The Overview's Remove is unchanged and shares the confirm (rmAsk). No remove on the home screen's rows: each row already ends in its star, and a second icon would squeeze the name at 320px and put a one-tap destructive target next to the star.",
+   "tests": "verify/render.js import block: import-remove-menu (the local list's last row is Remove this list, one only; the built-in 6-bigs menu has none and one row fewer; the popup names the list, says You can import it again., Remove and Keep it in sight in the sheet, no sideways scroll; Keep it closes it and the list stays) and import-remove (via the menu: home, sheet closed, the list and wh-imported entry gone, wh-used-/wh-check- gone, no localStorage key with the id left, the star gone while another list's star stays, toast Removed <name>). P2 and import-same: the imported list's army screen is the built-in one's but for its source line and this row.",
+   "mutations": "row shown for every list (a.imported ? -> true): import-remove-menu built-in list menu + import-same army differs; removeKept keeping the star: import-remove Remove (favs still holds the local id)"
+  },
+  "source": {
+   "owner": "local lists have no way to be deleted. Add that."
+  },
+  "key": "remove-menu|screenArmy"
+ }
+]

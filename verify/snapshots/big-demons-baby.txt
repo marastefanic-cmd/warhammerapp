@@ -7,6 +7,7 @@ Dispositions: Priority Assets (chosen) · Reconnaissance
 
 Overview
 Phase checklist
+Strategic reserves
 Bases & proxies
 54
 Units
@@ -151,6 +152,37 @@ TO DO NOW
 Hunters from the Warp · Flesh Hounds×2
 
 Listed: what you must remember when the game reaches a moment: a rule or ability whose own words name the start or end of a battle round, turn or phase, a Command phase, or another phase with a choice (To do now there; a rule listed only through such options is listed once, as the rule), and once-per-battle uses (Once per battle, their box only). Active now: what the others put in force, where it is used and for as long as their words say: their options, the ability they select, and a rule they name in bold as a state units are in (Riled up), unless its own trigger is a unit activation. What activating a unit triggers (selected to shoot, fight or move; each time it attacks, is targeted or destroys) is on its datasheet. When unclear: listed, but no phase can be read from its words. No phase: listed, with no phase. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.
+
+######## reserves · BIG DEMONS BABY Strategic reserves
+IN RESERVES
+0 / 1000 pts
+0 units · 1000 pts left
+STRATEGIC RESERVES
+RESET
+WHEN
+Before the battle, in the Declare Battle Formations step
+LIMIT
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size. (Strategic Reserves, 2000 pts · Strike Force)
+YOUR UNITS
+10
+Angron 330 pts
+Deep Strike
+Skarbrand 315 pts
+Deep Strike
+Bloodthirster 320 pts
+Deep Strike
+Daemon Prince of Khorne 230 pts
+Master of Executions 80 pts
+Lord on Juggernaut + Khorne Berzerkers 440 pts
+Deep Strike: Lord on Juggernaut only
+Goremongers 70 pts
+Jakhals 65 pts
+1
+2
+Flesh Hounds 75 pts each, ×2
+Deep Strike
+
+Tick the units you place in strategic reserves; the total counts each ticked unit’s points as the list prints them. Deep Strike: on the unit’s Rules line (every model; “only” where one model alone has it), or given by the rule or ability named, in its words; “can be given”: the ability gives it to one unit you select; “if”: its condition is for you to check. What units are given during the battle, as they go back into reserves, is not listed. Each name opens its rule. The boxes are kept for this list on this phone; Reset clears them.
 
 ######## pregame · BIG DEMONS BABY Overview
 YOUR LIST

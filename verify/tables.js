@@ -1739,6 +1739,8 @@ if(require.main === module){
   for(const u of pageFixtures()) fails.push(u);
   for(const u of stratIds(D0)) fails.push(u);
   for(const u of ruleAbilityFails(D0)) fails.push('an ability a rule gives: ' + u);
+  // (a GRANTS row whose units are not read, "that unit" with no selection before it: never given to the bearer by default)
+  for(const g of D0.grants || []) if(g.to && g.to.unread) fails.push('GRANTS: ' + g.rule + ' gives ' + g.grants + ' to "' + g.to.unread + '", whose antecedent is not read (verify/derive.js grantRows)');
   fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive:true }); fs.writeFileSync(path.join(ROOT, 'verify/out/tables.md'), report(t));
   const B = t.B, units = B.armies.reduce((n, a) => n + a.units.length, 0);
   console.log('tables: ' + (fails.length ? fails.length + ' failure(s); ' : '') + units + ' unit entries in ' + B.armies.length + ' lists over ' + Object.keys(B.sheets).length + ' datasheets, ' + (D0.ruleOptions || []).length + ' rule options, ' + (D0.grants || []).length + ' grants; ' + B.conflicts.length + ' datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)');
