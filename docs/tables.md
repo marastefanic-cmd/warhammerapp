@@ -17,12 +17,12 @@ the gate fails on a column that is not there.
 | `CORE_STRATAGEMS` | a core stratagem | `id` |
 | `FACTIONS` | a faction: `armyRules`, `detachments` (each: `rule`, `stratagems`, `enhancements`), `aliases`; the readings of its rules and enhancements | faction key |
 | `ARMIES` | a list, and its unit entries (`units`): only what the list chose | `id`, unit `id` |
-| `DATASHEETS` | a datasheet's facts and the readings of its abilities, shared by every list that has it | `faction/datasheet-name` (+ `bsId` from BS_IDS) |
+| `DATASHEETS` | a datasheet's facts and the readings of its abilities, shared by every list that has it | `faction/datasheet-name` (the app's own key; New Recruit's ids for it are in NR_IDS `datasheets`, Wahapedia's page address in verify/sources/waha-datasheets.txt) |
 | `RULE_OPTIONS` | an option inside a rule or ability, with the phases its words give | `rule` + `option` |
 | `GRANTS` | a rule (or option) giving units an ability or keyword, to whom, while what | `rule` + `option` + `grants` |
-| `BS_IDS` | the BSData ids the in-app import resolves an export by | — |
+| `NR_IDS` | the ids of New Recruit's data that the owner's committed exports have shown, by which the in-app import looks a selection up first (else by its exact New Recruit name) | — |
 | `BOXES` | the Damage tab's boxes of each rule, ability and stratagem, made by script from GW's words (`verify/effects-migrate.js --write`) | `a\|` / `r\|` / `s\|` / `c\|` + the hash of its name and text |
-| `BUILD_INDEX` | what the in-app build (`builder.js`) needs beyond the other tables: enhancement labels, the values a marked rule changes, GW's values over BSData's (`verify/build-index.js --write`) | enhancement / rule / datasheet name |
+| `BUILD_INDEX` | what the in-app build (`builder.js`) needs beyond the other tables: enhancement labels, the values a marked rule changes, GW's values where New Recruit prints another (`verify/build-index.js --write`) | enhancement / rule / datasheet name |
 
 A unit entry: `{ id, ds:'orks/warboss', pts, models, gear, enhancement, warlord, copies, leads, also, kwNote, ptsNote, why, … }`
 (the readings, once `mods` / `aura` / `guard`, are retired: see Readings).
@@ -56,11 +56,11 @@ the page does not name stays after the item before it; a datasheet with no page 
 
 **GW's keywords.** A unit's keywords are its datasheets' (`gwKeywords`, written by `--write`, checked by the gate step `keywords`,
 `verify/keywords.js`): every part's KEYWORDS and FACTION KEYWORDS, in GW's spelling where the unit has none; of the unit's own only its
-datasheet's name keyword (GW prints one on every datasheet; Wahapedia's new-codex pages leave it out, so its spelling is BSData's: the
-page's keyword or BSData's category that is the name, else the one the name's head ends or starts with; `--write` supplies it, and the
+datasheet's name keyword (GW prints one on every datasheet; Wahapedia's new-codex pages leave it out, so its spelling is New Recruit's: the
+page's keyword or the export's category that is the name, else the one the name's head ends or starts with; `--write` supplies it, and the
 `keywords` step fails on a datasheet without one), a keyword a named rule of the list gives (`why.kw`, a
 `kwNote`'s "comes from <rule>"), a model's or a detachment's keyword the list takes (`kwOnly`), an Allies marker. A difference from
-BSData or New Recruit is declared in `verify/deviations-bsdata.json` / `verify/deviations-nr.json`; one from GW in
+New Recruit is declared in `verify/deviations-nr.json`; one from GW in
 `verify/deviations-keywords.json`.
 
 **GW's words.** A datasheet ability's text (its wargear abilities, Damaged bands and boxes too) is its Wahapedia datasheet page's, read
@@ -73,12 +73,12 @@ text equal to the page's after normalisation stays as it is. GW's own document o
 Presence, Infected Outbreak) is declared in `verify/deviations-words.json` (`{ page, ability, app, waha, reason, evidence, gw:{ file,
 quote } }`, the quote found in `verify/.cache/gw`), as is an ability no page prints (`waha:'(none)'`); `--write` keeps a declared text, and
 a hand file's `texts` (`from` / `to`). A declaration nothing matches fails as stale. Where `words` passes, GW's page wins over New Recruit's
-and BSData's printing of the words and the name (`verify/nr.js`, `verify/bsdata.js`: a mechanical rule, listed in their reports as
+printing of the words and the name (`verify/nr.js`: a mechanical rule, listed in its report as
 `gwWords`, no per-item deviation).
 
 A faction catalogue's rows (`verify/sources/catalog`) go through the same rules: `--write` sorts their rows, keywords and Rules line in
 GW's order after the catalogue is merged in (a catalogue row with a list row's name after it, so the resolver keeps finding the list's
-by name), writes their keywords by `gwKeywords` (their BSData keywords for the name keyword; a Daemonic Allegiance entry's god), and the
+by name), writes their keywords by `gwKeywords` (their catalogue row's keywords for the name keyword; a Daemonic Allegiance entry's god), and the
 gate steps `keywords` and `numbers` check every catalogue row as a unit of its own. Where a GW Faction Pack prints a datasheet's KEYWORDS
 line, it is GW's over Wahapedia's page (Tormentbringer).
 
@@ -213,7 +213,7 @@ GW's words in `verify/out/derive.md`, "Not read by the program").
 
 ## Columns and their sources
 
-Sources: **newrecruit** (the owner's New Recruit PDFs), **bsdata** (BSData wh40k-11e), **wahapedia**, **gw**
+Sources: **newrecruit** (the owner's New Recruit exports and PDFs), **wahapedia**, **gw**
 (Games Workshop's documents), **derived** (computed by a `verify/` script), **hand** (written by hand; the note in
 `verify/columns.json` says how it is checked), **ai** (AI-written, fingerprinted). Each column's note is in
 `verify/columns.json`.
@@ -227,33 +227,52 @@ Sources: **newrecruit** (the owner's New Recruit PDFs), **bsdata** (BSData wh40k
 | `CORE_STRATAGEMS` | the core stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions`, `note` · **derived**: `gistOf`, `phases`, `turn`, `turns`, `needs`, `limit`, `cpNote`, `readOf` · **hand**: `id` · **ai**: `gist` |
 | `FACTIONS` | one row per faction: its army rules, detachments and aliases | **gw**: `name`, `armyRules`, `detachments`, `allies` · **hand**: `aliases` |
 | `FACTIONS.armyRules` | a faction's army rules | **newrecruit**: `tag` · **gw**: `name`, `text`, `table`, `note` · **wahapedia**: `tableAt` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `coreTwin`, `readOf` · **hand**: `missing` |
-| `FACTIONS.detachments` | a faction's detachments | **bsdata**: `dispositions`, `nr` · **gw**: `name`, `dp`, `rule`, `moreRules`, `enhancements`, `stratagems` · **derived**: `aiStatus` |
+| `FACTIONS.detachments` | a faction's detachments | **newrecruit**: `nr` · **gw**: `name`, `dp`, `rule`, `moreRules`, `enhancements`, `stratagems` · **wahapedia**: `dispositions` · **derived**: `aiStatus` |
 | `FACTIONS.detachments.rule` | a detachment's rule | **newrecruit**: `tag` · **gw**: `name`, `text`, `table`, `note` · **wahapedia**: `tableAt` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `coreTwin`, `readOf` · **hand**: `missing` |
 | `FACTIONS.detachments.moreRules` | a detachment's further rule (moreRules), with the columns of its first | **newrecruit**: `tag` · **gw**: `name`, `text`, `table`, `note` · **wahapedia**: `tableAt` · **derived**: `ph`, `turn`, `turns`, `at`, `needs`, `coreTwin`, `readOf` · **hand**: `missing` |
 | `FACTIONS.detachments.stratagems` | a detachment's stratagems | **gw**: `name`, `cp`, `when`, `target`, `effect`, `restrictions`, `note` · **derived**: `id`, `gistOf`, `phases`, `turn`, `turns`, `needs`, `limit`, `cpNote`, `readOf` · **ai**: `gist` |
-| `FACTIONS.detachments.enhancements` | a detachment's enhancements | **newrecruit**: `pts`, `nr` · **bsdata**: `upgrade` · **gw**: `name`, `text` · **wahapedia**: `limit` |
+| `FACTIONS.detachments.enhancements` | a detachment's enhancements | **newrecruit**: `pts`, `nr` · **gw**: `name`, `text` · **wahapedia**: `upgrade`, `limit` · **derived**: `sumAtkOf`, `sumDefOf`, `sumStOf`, `sumOvOf` · **ai**: `sumAtk`, `sumDef`, `sumSt`, `sumOv` |
 | `ARMIES` | one row per list | **newrecruit**: `name`, `faction`, `points`, `pointsUsed`, `battleSize`, `disposition`, `detachments`, `source`, `config`, `units` · **hand**: `id` |
 | `ARMIES.units` | a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS | **newrecruit**: `pts`, `ptsNote`, `copies`, `models`, `gear`, `unplaced`, `enhancement`, `warlord`, `enhOn`, `warlordOn`, `upgrade`, `leads`, `support`, `also`, `role`, `name`, `rules`, `kw`, `stats`, `ranged`, `melee`, `abilities` · **gw**: `ref`, `note` · **wahapedia**: `kwOnly`, `partialRules` · **derived**: `id`, `ds`, `kwNote`, `srcNote`, `why` · **hand**: `short`, `over` |
-| `ARMIES.units.stats` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `printed` · **bsdata**: `from`, `M`, `T`, `Sv`, `W`, `Ld`, `OC`, `InSv`, `base` · **gw**: `own` · **derived**: `of`, `why` · **hand**: `over` |
-| `ARMIES.units.ranged` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `who`, `n`, `enh` · **bsdata**: `from`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw` · **derived**: `of`, `why`, `group` · **hand**: `over` |
-| `ARMIES.units.melee` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `who`, `n`, `enh` · **bsdata**: `from`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw` · **derived**: `of`, `why`, `group` · **hand**: `over` |
+| `ARMIES.units.stats` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `printed`, `M`, `T`, `Sv`, `W`, `Ld`, `OC`, `InSv`, `base` · **gw**: `own` · **derived**: `from`, `of`, `why` · **hand**: `over` |
+| `ARMIES.units.ranged` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `who`, `n`, `enh`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw` · **derived**: `from`, `of`, `why`, `group` · **hand**: `over` |
+| `ARMIES.units.melee` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `who`, `n`, `enh`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw` · **derived**: `from`, `of`, `why`, `group` · **hand**: `over` |
 | `ARMIES.units.abilities` | a row naming its datasheet row by name (a stats row by its model's name, "×N" its count in the attached unit), with only the list's own fields | **newrecruit**: `name`, `who`, `tag` · **gw**: `note` · **wahapedia**: `text` · **derived**: `of`, `ph`, `turn`, `turns`, `at`, `na`, `damaged`, `why`, `readOf` · **hand**: `over` |
-| `DATASHEETS` | one row per datasheet (faction + datasheet name): its facts, shared by every list that has it, and every row of a faction catalogue (docs/catalog.md) | **newrecruit**: `name`, `role`, `rules`, `kw`, `stats`, `ranged`, `melee` · **bsdata**: `bsId`, `leaders`, `composition`, `options` · **gw**: `points` · **wahapedia**: `kwOnly`, `partialRules`, `abilities` · **derived**: `faction`, `srcNote`, `aiStatus` |
+| `DATASHEETS` | one row per datasheet (faction + datasheet name): its facts, shared by every list that has it, and every row of a faction catalogue (docs/catalog.md) | **newrecruit**: `name`, `role`, `rules`, `kw`, `stats`, `ranged`, `melee` · **gw**: `points` · **wahapedia**: `kwOnly`, `partialRules`, `leaders`, `abilities`, `composition`, `options` · **derived**: `faction`, `srcNote`, `aiStatus` |
 | `DATASHEETS.stats` | a datasheet's model profiles | **newrecruit**: `name`, `M`, `T`, `Sv`, `W`, `Ld`, `OC`, `InSv`, `base` · **gw**: `baseWith` |
-| `DATASHEETS.ranged` | a datasheet's ranged weapon profiles | **newrecruit**: `name`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw`, `hunter` · **bsdata**: `group`, `fireAll` · **gw**: `carrier` |
-| `DATASHEETS.melee` | a datasheet's melee weapon profiles | **newrecruit**: `name`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw`, `hunter` · **bsdata**: `group`, `fireAll` · **gw**: `carrier` |
+| `DATASHEETS.ranged` | a datasheet's ranged weapon profiles | **newrecruit**: `name`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw`, `hunter` · **gw**: `carrier` · **wahapedia**: `group`, `fireAll` |
+| `DATASHEETS.melee` | a datasheet's melee weapon profiles | **newrecruit**: `name`, `range`, `A`, `BS`, `WS`, `S`, `AP`, `D`, `kw`, `hunter` · **gw**: `carrier` · **wahapedia**: `group`, `fireAll` |
 | `DATASHEETS.abilities` | a datasheet's abilities | **newrecruit**: `name`, `who`, `tag` · **gw**: `note` · **wahapedia**: `text` · **derived**: `ph`, `turn`, `turns`, `at`, `na`, `damaged`, `readOf` |
 | `RULE_OPTIONS` | the options inside a rule or ability, each with the phases its words give | **derived**: `rule`, `option`, `text`, `found`, `explicit`, `trigger`, `used`, `phases` |
 | `GRANTS` | a rule or option giving units an ability or keyword | **derived**: `rule`, `option`, `grants`, `type`, `to`, `while`, `text` |
-| `BS_IDS` | the BSData ids the list import resolves an export by (verify/import-ids.js --write) | **bsdata**: `factions`, `roots`, `battleSizes`, `limits`, `dispositions`, `detachments`, `config`, `configKids`, `info`, `infoKids`, `units`, `names`, `maxPerList` |
+| `NR_IDS` | the ids of New Recruit's data that the owner's committed exports (verify/sources/nr-json) have shown, by which the list import looks a selection up first; one no export has shown is looked up by its exact New Recruit name (verify/import-ids.js --write) | **newrecruit**: `factions`, `roots`, `battleSizes`, `limits`, `dispositions`, `detachments`, `config`, `configKids`, `info`, `infoKids`, `units`, `datasheets`, `names` · **derived**: `maxPerList` |
 | `BOXES` | the Damage tab's boxes of a rule, ability or stratagem, and the datasheet's footnotes (verify/effects-migrate.js --write) | **derived**: `n`, `b`, `nc`, `reach`, `both`, `embarked`, `played`, `riled`, `d`, `dnc`, `dreach`, `st` |
 | `BOXES.b` | one box: what GW's sentence does, as effects.js reads it | **gw**: `quote`, `lead` · **derived**: `fx`, `on`, `kind`, `scope`, `reach`, `mark`, `notSelf`, `lasts`, `opt`, `pick`, `part`, `limit`, `tableRows`, `pool`, `excl` |
 | `BOXES.d` | one defence box: what GW's sentence does for a unit when it is attacked, as effects.js DF reads it (a "When targeted" line) | **gw**: `quote`, `lead`, `until` · **derived**: `df`, `on`, `kind`, `scope`, `reach`, `mark`, `notSelf`, `foe`, `opt`, `pick`, `term` |
 
+## Sources, and BSData
+
+The app works from Games Workshop's documents and Wahapedia (which counts as GW) and from the owner's New Recruit exports and PDFs.
+BSData (wh40k-11e, the data New Recruit is built from) was a third source until 22 Nov 2026; by the owner's decision it is not read,
+fetched or re-hosted any more. What stood on it, and what it stands on now:
+
+| Was BSData's | Now |
+|---|---|
+| ids (`BS_IDS`, `bsId`) | `NR_IDS`: the ids the committed exports (`verify/sources/nr-json`) have shown; any other selection by its exact New Recruit name, else refused, named. The app's own key of a datasheet is `faction/datasheet-name` |
+| "+" marks (BSData's modifiers) | the export's value against GW's datasheet, the rule New Recruit prints beside the profile; held by the gate step `marks` to GW's words of the rule |
+| Force Dispositions | the icons in the detachment's heading on Wahapedia's faction page (`verify/dispositions.js`) |
+| pick one / all fire | Wahapedia's pick-one marker and New Recruit's ➤ (`verify/choice.js`) |
+| a catalogue's datasheet list, models, wargear, points | Wahapedia's faction page index and each datasheet page's UNIT COMPOSITION, WARGEAR OPTIONS and costs (`verify/catalog.js`, `verify/waha-catalog.js`) |
+| the gate step `bsdata` (every unit fact a third time) | `nr` (the export or PDF), `numbers`, `keywords`, `words`, `bases` (GW's datasheet), `marks` |
+
+Known limits: the limits of a wargear choice (its minimum and maximum) on the three catalogues built before that day are New Recruit's
+as recorded then, held to GW's page by name only; a value New Recruit prints otherwise than GW's datasheet is known to the phone only
+where an export or PDF of the owner's shows it (`BUILD_INDEX.gw`), so an import showing another such value is refused, named.
+
 ## Faction catalogues
 
-`node verify/from-bsdata.js <faction> --write` puts every current datasheet and detachment of a faction into the tables, from
-BSData with GW over it, by the same code as a list (docs/catalog.md). `--write` here merges the catalogue rows
+A faction catalogue (`verify/sources/catalog/<faction>.json`, docs/catalog.md) holds every current datasheet and detachment of a faction,
+held to GW's pages by the gate step `catalog`; a new faction's is written by `verify/from-waha.js` from Wahapedia's pages. `--write` here merges the catalogue rows
 (`verify/sources/catalog/<faction>.json`) into DATASHEETS: a row a list has keeps its lists' facts and gets only what it lacks; a row
 no list has is the catalogue's, `aiStatus:'not-read'` (no readings or AI-written lines yet). `points`, `composition`, `options` and
 `aiStatus` are not copied onto a list's units.
@@ -335,15 +354,15 @@ lists' units by `import.js` as before, and the list says so. What it reads:
 | the export | the units and who leads whom, models lines and their gear, the weapons and models (each to its `DATASHEETS` row by name), the enhancement, the Warlord, the points, the values its profiles show |
 | `DATASHEETS` | the rows, a wargear ability only with its wargear (`options`), a Leader / Support ability (whom it may join; not a row of the unit), GW's `points` |
 | `FACTIONS` | detachments, enhancements (name, text, pts, `limit`, `upgrade`), army and detachment rules |
-| `BOXES`, `BUILD_INDEX` | a "+" mark: a value the export shows otherwise than the row is a rule of the list at work; its source is the one rule reaching the unit whose boxes give that effect, else the one `BUILD_INDEX.marks` names for it; a value `BUILD_INDEX.gw` says is BSData's where GW's datasheet differs is no rule at work. A change no rule explains, or two explain, refuses the import |
-| `BS_IDS` | the faction, battle size, detachments and disposition (as `import.js` reads them) |
+| `BOXES`, `BUILD_INDEX` | a "+" mark: a value the export shows otherwise than the row is a rule of the list at work; its source is the one rule reaching the unit whose boxes give that effect, else the one `BUILD_INDEX.marks` names for it; a value `BUILD_INDEX.gw` says is New Recruit's own where GW's datasheet differs (as an export or PDF of the owner's shows it, `verify/deviations-nr.json`) is no rule at work. A change no rule explains, or two explain, refuses the import |
+| `NR_IDS` | the faction, battle size, detachments and disposition (as `import.js` reads them: by an id a known export has shown, else by exact name), and a part's datasheet (`datasheets`, else the one row of its exact New Recruit name) |
 
 Nothing the list shows is the export's: a part's name is its datasheet's, a model's its datasheet's composition's, a weapon's its row's, a
 wargear its option's; a value is GW's row's, or GW's row's with the one rule's effect (its boxes' `fx`, else `BUILD_INDEX.marks`' `add` /
 `set`), and the export's value is only compared with it (a difference refuses the import, naming both). The export says what was selected,
 and that is held to GW's rules, each refusal citing the rule: the datasheet's models (`composition`) and wargear (`options`: each choice and
 group per model, every model of a line alike); enhancements (a CHARACTER's, not an EPIC HERO's, as the enhancement's own first sentence
-allows, one per unit, no two of one, an Upgrade (BSData's or GW's Faction Pack's, `BUILD_INDEX.upgrades`) up to three, the battle size's
+allows, one per unit, no two of one, an Upgrade (Wahapedia's UPGRADE mark or GW's Faction Pack's, `BUILD_INDEX.upgrades`) up to three, the battle size's
 limit); one CHARACTER Warlord; the unit limit (EPIC HERO 1, BATTLELINE and DEDICATED TRANSPORT double); Detachment Points; one leader and one
 support per bodyguard, each by its own Leader / Support ability (Core Rules 19.01, 25.03, 25.04; the battle sizes' numbers are
 `BUILD_INDEX.battleSizes`, from rules/core-rules.md 25.03).
@@ -358,7 +377,7 @@ Knights, Nidzillas, The Exiled Legion, Tzeeeeentch) is made by the same code as 
 Recruit PDFs alone, with no export (Emperor's Chosen and Dread Host, Adeptus Custodes), are not (see the known limits). `verify/from-json.js --write` ends
 by calling `WH_BUILDER.build` on the export with the `data.js` it has just written (after `verify/build-index.js --write`, so its "+" marks
 are in `BUILD_INDEX`), and the list's `ARMIES` entry is builder.js's, with from-json's source line (the day the export was committed, or the
-hand file's `source`). What stays from-json's is the Node-only part: BSData at the pin (every id, the extract), Wahapedia's pages and GW's
+hand file's `source`). What stays from-json's is the Node-only part: Wahapedia's pages and GW's
 documents (the datasheet facts `verify/tables.js --write` puts on `DATASHEETS`, the faction rows, the deviation files), and the hand file.
 Its own reading of the list's entry is kept as a check: where it is not builder.js's, the entry is builder.js's, the difference is listed
 and the run fails; `verify/reimport.js` (4) fails a catalogued list not built so, or built otherwise than from-json reads it. A list of a
@@ -373,7 +392,7 @@ What from-json does that builder.js does not, and where each goes:
 | hand `units.<id>.texts`, `units.<id>.notes`, `refs` (a reference sheet with no export entry, and one of models on another's datasheet) | datasheet facts, on the `DATASHEETS` rows builder.js reads (texts also in `verify/deviations-words.json`, Chaos Daemons' in the catalogue hand file): a phone import of any list with the datasheet has them; builder.js finds the reference sheets by GW's words (`sheetRefs`) |
 | hand `gists` (`gist`, `gistOf`, `note`), `armyRules` FAQs, `fixes` | `FACTIONS` rows, shared by every list of the faction (app and phone alike) |
 | a models line split by GW's WARGEAR OPTIONS ("1 model can be equipped with 1 …", Wahapedia's page), a stats row without its ×N where the list has a New Recruit PDF (`verify/sources/nr`) | none in a catalogued list's entry today; builder.js does neither (the export's association, else unplaced; always ×N), so a catalogued list needing one fails from-json's check |
-| "+" marks from BSData's modifiers (`verify/bsdata.js`, `write-grants.js`) | builder.js names a mark's rule from `BOXES` (agreed), else `BUILD_INDEX.marks`, which `verify/build-index.js` learns from the built-in lists' marks |
+| "+" marks: the export's value against GW's datasheet, the rule New Recruit prints beside the profile or `BUILD_INDEX.marks` records (`verify/marks.js` namesFor, `write-grants.js`); for a catalogued list, builder.js's marks | builder.js names a mark's rule from `BOXES` (agreed), else `BUILD_INDEX.marks`, which `verify/build-index.js` learns from the built-in lists' marks; the gate step `marks` holds every mark to GW's words of its rule |
 
 **An ability a rule gives is the list's, never the datasheet's.** The owner's rule (4 Nov 2026): every ability a rule gives a unit is a
 row of its own on the unit's datasheet screen, marked with the rule that gives it, wherever that rule is in force for the list, derived
@@ -441,10 +460,9 @@ same row:
   by what the row is) (`builder.js`
   `ruleOfRow`: a row whose tag names a rule in force and whose words are in it). It has a Phase checklist entry, as Protean Purpose had.
   Not being the datasheet's, it is not asked of the datasheet's sources: `verify/words.js` does not look for it on the Wahapedia
-  datasheet page (the two declared Protean Purpose entries of `verify/deviations-words.json` are gone with that), `verify/bsdata.js`
-  does not ask BSData's entry for it, and `verify/nr.js` lets New Recruit's PDF leave it out and leave the rule's name out of its tag;
+  datasheet page (the two declared Protean Purpose entries of `verify/deviations-words.json` are gone with that), and `verify/nr.js` lets New Recruit's PDF leave it out and leave the rule's name out of its tag;
   `verify/texts.js` checks the rule's words against GW's, and the row quotes them (it does not look for the row on a Faction Pack
-  datasheet page either). A faction catalogue's reading (`verify/from-bsdata.js`,
+  datasheet page either). A faction catalogue's reading (`verify/from-waha.js`,
   from-json `--emit`) has no such row: the datasheets alone.
 - left as today, with a condition or not by keyword (`GRANTS` rows of type ability skipped): an option's grant while it is active
   (Psychic Null's Feel No Pain 5+ against psychic attacks, Daughters of the Abyss; Blood Tithe's Enraged Abjuration and Might of Khorne,
@@ -467,15 +485,15 @@ Known limits (accepted: each refuses rather than shows anything wrong, or no cur
 - `BUILD_INDEX.marks` is learned from the built-in lists' marks: a phone export showing a change no agreed box explains and no built-in
   list has marked is refused.
 - A few datasheet facts have a list's hand file as their source: the hand texts and notes on `DATASHEETS` rows, and the Brimstone Horrors
-  row (no BSData entry), made from Tzeeeeentch's hand `refs`. The phone has them while those rows are in `DATASHEETS`. Moving them into
-  the catalogue hand files needs `notes` and `refs` in `verify/from-bsdata.js`.
+  row (no datasheet page of its own), made from Tzeeeeentch's hand `refs`. The phone has them while those rows are in `DATASHEETS`. Moving them into
+  the catalogue hand files needs `notes` and `refs` in `verify/from-waha.js`.
 - from-json splits a models line by GW's WARGEAR OPTIONS and names a stats row without its ×N where the list has a New Recruit PDF;
   builder.js does neither. No catalogued list needs either today; one that does fails from-json's check.
 - The 18 lists of factions with no catalogue keep from-json's reading (and the phone's strict copy) until their catalogue lands.
 - Emperor's Chosen and Dread Host (Adeptus Custodes, a catalogued faction) were written from their New Recruit PDFs
   (`verify/sources/nr/*.txt`) and have no export: builder.js never builds them, and neither `verify/reimport.js` nor build-parity P1
   holds them to what builder.js would give an export of the same list. The owner keeps them and has no export for them. What holds them
-  is the rest of the gate (nr, bsdata, words and the others, as for every list), and `verify/tables.js` for the abilities their rules
+  is the rest of the gate (nr, numbers, keywords, words, marks and the others, as for every list), and `verify/tables.js` for the abilities their rules
   give (above).
 
 The input formats (`import.js` `parse`): .json; .ros (BattleScribe XML, the same roster); .rosz (it zipped, inflated by the platform);
