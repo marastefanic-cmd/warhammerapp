@@ -1,6 +1,6 @@
 {
- "hash": "11708abd8a706d3580495e4c7adbf3f165838295fbc1ab0870490ed8d6cbcb18",
- "at": "2026-11-09T06:30:36.700Z",
+ "hash": "28091f6846554e8306ca33b6e86b240d96895b53f8aa9983aca66085ad17d464",
+ "at": "2026-11-23T04:19:11.282Z",
  "ok": true,
  "steps": {
   "data": {
@@ -45,15 +45,19 @@
   },
   "choice": {
    "ok": true,
-   "summary": "choice: 69 weapons with several profiles checked against BSData and Wahapedia, 0 failures"
+   "summary": "choice: 69 weapons with several profiles checked against New Recruit’s exports and Wahapedia, 0 failures"
   },
-  "bsdata": {
+  "marks": {
    "ok": true,
-   "summary": "bsdata: 17093 facts checked against BSData b4dc3f4 (clone) {\"gear\":1205,\"stats\":2619,\"weapons\":8040,\"abilities\":1581,\"keywords\":1930,\"rules\":1158,\"grants\":254,\"points\":305,\"extract\":1}; 257 deviations used; 99 ability texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win); 0 failures"
+   "summary": "marks: 257 \"+\" marks on 1098 rows of the lists each name a rule the unit has (M1) whose GW words name what it marks (M2), on a value that is not its DATASHEETS row’s own (M3, 254 compared); the 235 values and keyword lists a list’s row holds of its own are each marked or have their reason (M4)"
   },
   "dispositions": {
    "ok": true,
-   "summary": "dispositions: 59 detachments match BSData; every list’s disposition is one its detachments allow"
+   "summary": "dispositions: 59 detachments have the Force Dispositions GW prints in their headings (Wahapedia’s faction pages); every list’s disposition is one its detachments allow"
+  },
+  "points": {
+   "ok": true,
+   "summary": "points: the points of 308 unit parts in 26 lists (each copy; an attached unit’s parts by its ptsNote), less their enhancements, are GW’s costs on their datasheet pages for that copy and unit size, with 27 “per <item>” wargear costs"
   },
   "bases": {
    "ok": true,
@@ -61,7 +65,7 @@
   },
   "catalog": {
    "ok": true,
-   "summary": "catalog: adeptus-custodes 29 datasheets, 13 detachments, 93 left out; chaos-daemons 56 datasheets, 9 detachments, 73 left out; tyranids 52 datasheets, 10 detachments, 42 left out; checked {\"filter\":168,\"complete\":169,\"fresh\":3,\"tables\":155,\"nr\":531,\"bsdata\":404,\"texts\":461}; 404 BSData deviations used"
+   "summary": "catalog: adeptus-custodes 29 datasheets, 13 detachments, 93 left out; chaos-daemons 56 datasheets, 9 detachments, 73 left out; tyranids 52 datasheets, 10 detachments, 42 left out; checked {\"filter\":137,\"complete\":166,\"tables\":155,\"nr\":531,\"composition\":151,\"options\":632,\"texts\":461}; 14 declared differences used"
   },
   "nr": {
    "ok": true,
@@ -89,15 +93,15 @@
   },
   "import": {
    "ok": true,
-   "summary": "import: 24 of 24 exported lists import identically (0 exports differ from the app’s list), 0 without a list refused, 46 changed exports refused; 170 checks, 0 failures"
+   "summary": "import: 24 of 24 exported lists import identically (0 exports differ from the app’s list), 0 without a list refused, 46 changed exports refused; 178 checks, 0 failures"
   },
   "reimport": {
    "ok": true,
-   "summary": "reimport: all 24 New Recruit exports (and 1 changed on purpose, 5) re-import to data.js byte for byte (5 files each: data.js, verify/deviations-bsdata.json, verify/deviations-nr.json, verify/sources/waha-datasheets.txt, verify/sources/bsdata-extract.json); every hand-file entry has its reason; every id kept from data.js is named in its hand file; 6 of a catalogued faction built by builder.js as on the phone (basic-bitch, healybois, lite-knights, nidzillas, the-exiled-legion, tzeeeeentch), 18 by from-json.js until their faction’s catalogue lands"
+   "summary": "reimport: all 24 New Recruit exports (and 1 changed on purpose, 5) re-import to data.js byte for byte (3 files each: data.js, verify/deviations-nr.json, verify/sources/waha-datasheets.txt); every hand-file entry has its reason; every id kept from data.js is named in its hand file; 6 of a catalogued faction built by builder.js as on the phone (basic-bitch, healybois, lite-knights, nidzillas, the-exiled-legion, tzeeeeentch), 18 by from-json.js until their faction’s catalogue lands"
   },
   "derived": {
    "ok": true,
-   "summary": "derived: 136 of 156 derived columns held by the script they name: a change of one value fails its step (reimport 1, nr 1, fingerprints 25, texts 4, derive 41, evidence 28, lines 8, tables 7, defence 13, readings 1, catalog 1, build-parity › build-index.js 5, agree 1; 2 kept from a run of the same code); 20 with no value stored in data.js; verify/out/derived-proof.json"
+   "summary": "derived: 140 of 160 derived columns held by the script they name: a change of one value fails its step (reimport 1, nr 1, fingerprints 25, derive 41, texts 4, evidence 28, lines 8, tables 7, marks 3, import › import-ids.js 1, defence 13, catalog 1, readings 1, build-parity › build-index.js 5, agree 1; 2 kept from a run of the same code); 20 with no value stored in data.js; verify/out/derived-proof.json"
   },
   "screens": {
    "ok": true,
@@ -109,7 +113,7 @@
   },
   "build-parity": {
    "ok": true,
-   "summary": "build-parity: P1: 6 built byte for byte (basic-bitch, healybois, lite-knights, nidzillas, the-exiled-legion, tzeeeeentch), 18 copied (no catalogue), 0 differ; 243 checks, 0 failures"
+   "summary": "build-parity: P1: 6 built byte for byte (basic-bitch, healybois, lite-knights, nidzillas, the-exiled-legion, tzeeeeentch), 18 copied (no catalogue), 0 differ; 255 checks, 0 failures"
   },
   "snapshots": {
    "ok": true,
@@ -117,7 +121,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 742 judgements, 742 approved, 0 to check, 2947 stale approvals"
+   "summary": "helpers: 742 judgements, 742 approved, 0 to check, 2955 stale approvals"
   }
  }
 }
