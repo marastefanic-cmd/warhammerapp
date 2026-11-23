@@ -180,24 +180,25 @@ function main() {
       // composition
       // (New Recruit's entry for one god's choice of a Daemonic Allegiance datasheet, "Khorne Soul Grinder": GW's model of the name without it)
       const god = /^(Khorne|Tzeentch|Nurgle|Slaanesh) /.test(R.name) && !P.models.some(g => sing(g.model) === sing(R.name)) ? /^(?:khorne|tzeentch|nurgle|slaanesh) / : null;
-      const C = R.composition || [], base = m => { const b = sing(String(m).replace(/\s+w\/.*$/i, '')); return god ? b.replace(god, '') : b; };
+      const the = x => sing(x).replace(/^the /, '');
+      const C = R.composition || [], base = m => { const b = the(String(m).replace(/\s+w\/.*$/i, '')); return god ? b.replace(god, '') : b; };
       for (const g of P.models) {
         checked.composition++;
-        const exact = C.find(c => base(c.model) === sing(g.model));
+        const exact = C.find(c => base(c.model) === the(g.model));
         const rng = c => c.groupMin !== undefined ? [c.groupMin, c.groupMax] : [c.min, c.max];
-        if (exact && C.filter(c => base(c.model) === sing(g.model)).length === 1) { const [a, b] = rng(exact); if (a === g.min && b === g.max) continue; }
+        if (exact && C.filter(c => base(c.model) === the(g.model)).length === 1) { const [a, b] = rng(exact); if (a === g.min && b === g.max) continue; }
         // (New Recruit's model entries for one of GW's lines, "<model> w/ <weapon>": together they allow GW's numbers)
-        const vs = C.filter(c => base(c.model) === sing(g.model));
+        const vs = C.filter(c => base(c.model) === the(g.model));
         if (vs.length > 1 && vs.reduce((t, c) => t + c.min, 0) <= g.min && vs.reduce((t, c) => t + c.max, 0) >= g.max) { rep.differences.push({ id, kind: 'variants', what: 'composition ' + g.model }); continue; }
         if (declared('composition ' + g.model)) continue;
         fail('composition', id + ': GW’s UNIT COMPOSITION has "' + (g.min === g.max ? g.min : g.min + '-' + g.max) + ' ' + g.model + '" (' + P.file + '), the catalogue ' + JSON.stringify(vs.length ? vs : C));
       }
-      for (const c of C) if (!P.models.some(g => sing(g.model) === base(c.model)) && !declared('composition ' + c.model)) fail('composition', id + ': the catalogue’s model ' + c.model + ' is no line of GW’s UNIT COMPOSITION (' + P.file + ': ' + JSON.stringify(P.lines.composition.filter(l => /^- /.test(l))) + ')');
+      for (const c of C) if (!P.models.some(g => the(g.model) === base(c.model)) && !declared('composition ' + c.model)) fail('composition', id + ': the catalogue’s model ' + c.model + ' is no line of GW’s UNIT COMPOSITION (' + P.file + ': ' + JSON.stringify(P.lines.composition.filter(l => /^- /.test(l))) + ')');
       // options
       // (names compared in the singular, apostrophes aside: New Recruit's "Attendant's hellblades" is GW's "attendants’ hellblades"; a name
       // the catalogue file maps to GW's, weaponNames: "Tarsis buckler" is GW's "Tarsus Buckler")
-      const WN = cat.weaponNames || {}, gwn = x => { const k = Object.keys(WN).find(y => lc(y) === lc(x)); return k ? WN[k] : x; };
-      const sg = x => sing(gwn(x)).replace(/'/g, '');
+      const WN = cat.weaponNames || [], gwn = x => { const k = WN.find(y => lc(y.app) === lc(x)); return k ? k.gw : x; };
+      const sg = x => sing(String(gwn(x)).replace(/[’‘']/g, ''));
       const text = sg(P.lines.composition.concat(P.lines.options).join(' ; ')), rowNames = new Set();
       // (a choice an ability of the datasheet names in bold capitals, the god of a Daemonic Allegiance: "**KHORNE**")
       const bold = new Set((R.abilities || []).flatMap(a => [...String(a.text || '').matchAll(/\*\*([A-Z][A-Z’' -]+)\*\*/g)].map(m => sing(m[1]))));
@@ -212,7 +213,7 @@ function main() {
         fail('options', id + ': the choice ' + nm0 + ' is not named in GW’s UNIT COMPOSITION or WARGEAR OPTIONS (' + P.file + ') and is no weapon or ability row of the datasheet');
       }
       const have = new Set(names.flatMap(x => [x].concat(x.split(/\s*(?:&|,|\band\b)\s*/))).map(sg));
-      for (const l of P.equipped) for (const it of l.replace(/^.*?equipped with:\s*/i, '').replace(/\.$/, '').split(/\s*;\s*/).map(x => x.replace(/^\d+\s+/, '')).filter(x => x && !/^nothing$/i.test(x))) {
+      for (const l of P.equipped) for (const it of l.replace(/^.*?equipped with:\s*/i, '').replace(/\.$/, '').split(/\s*[;,]\s*/).map(x => x.replace(/^\d+\s+/, '')).filter(x => x && !/^nothing$/i.test(x))) {
         checked.options++;
         if (have.has(sg(it)) || rowNames.has(sg(it)) || [...have].some(h => h.includes(sg(it))) || [...rowNames].some(h => h.startsWith(sg(it)))) continue;
         if (declared('equipped ' + it)) continue;

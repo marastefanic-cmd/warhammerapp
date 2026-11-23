@@ -162,7 +162,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     for(const t of Object.keys(COLS)){ const want = Object.entries(COLS[t].columns || {}).map(([n, x]) => n + ':' + x.source).join(','); if(got.cols[t] !== want) fail('how-tables', '', t, 'columns ' + got.cols[t] + ', columns.json ' + want); }
     // each column a chip in the class of its columns.json source (SRC_CLASS, fixed here, not the app's); each box a cell per column of it and
     // its inner tables (CHECKLIST: its columns), in that order and class; the seven classes distinct, and drawn in seven distinct colours
-    const SRC_CLASS = { gw:'s-gw', wahapedia:'s-wa', bsdata:'s-bs', newrecruit:'s-nr', derived:'s-de', hand:'s-ha', 'ai-summary':'s-ai' };
+    const SRC_CLASS = { gw:'s-gw', wahapedia:'s-wa', newrecruit:'s-nr', derived:'s-de', hand:'s-ha', 'ai-summary':'s-ai' };
     if(new Set(Object.values(SRC_CLASS)).size !== 7) fail('how-tables', '', 'SRC_CLASS', 'the seven sources do not have seven classes');
     for(const x of got.chips){ const s = ((COLS[x.t] || { columns:{} }).columns[x.c] || {}).source; if(s !== x.s || x.cls !== 'hwcol ' + SRC_CLASS[s]) fail('how-tables', '', x.t + '.' + x.c, 'drawn as ' + x.s + ' (' + x.cls + '), columns.json source ' + s + ' (hwcol ' + SRC_CLASS[s] + ')'); }
     for(const x of got.allChips) if(!x.s || x.cls !== 'hwcol ' + SRC_CLASS[x.s]) fail('how-tables', '', 'chip ' + x.text, 'class ' + x.cls + ' for source ' + x.s + ', want hwcol ' + SRC_CLASS[x.s]);

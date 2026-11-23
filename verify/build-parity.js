@@ -114,7 +114,10 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
     ok(!r.ok && JSON.stringify(r.errors) === JSON.stringify(want), 'N "' + name + '": want ' + JSON.stringify(want) + ', got ' + JSON.stringify(r.ok ? 'built' : r.errors));
     report.push('N ' + name + ' → ' + (r.ok ? 'BUILT' : r.errors.join('; ')));
   };
-  neg('unknown unit', 'nidzillas', j => { unit(j, 'Tyrannofex').entryId = unit(j, 'Tyrannofex').entryId.replace(/[^:]+$/, '0000-0000-0000-0000'); }, ['unit Tyrannofex not recognized (no datasheet of the Tyranids catalogue has its BSData id)']);
+  // (a unit is found by an id a known export has shown, else by its exact New Recruit name; neither: refused, named. A known id under
+  // another name is not that datasheet)
+  neg('unknown unit', 'nidzillas', j => { const u = unit(j, 'Tyrannofex'); u.entryId = u.entryId.replace(/[^:]+$/, '0000-0000-0000-0000'); u.name = 'Tyrannofex Mk II'; }, ['unit Tyrannofex Mk II not recognized (no datasheet of the Tyranids catalogue is exactly this: none a known export has shown under this id, and not exactly one of this name)']);
+  neg('a known unit id under another name', 'nidzillas', j => { unit(j, 'Tyrannofex').name = 'Tyrannofex Mk II'; }, ['unit Tyrannofex Mk II not recognized (no datasheet of the Tyranids catalogue is exactly this: none a known export has shown under this id, and not exactly one of this name)']);
   neg('faction not catalogued', 'nidzillas', j => { const F = j.roster.forces[0], o = clone(exp('shooty')).roster.forces[0]; F.catalogueId = o.catalogueId; F.catalogueName = o.catalogueName; },
     null, r => !r.ok && r.errors.some(e => /^faction Orks not catalogued/.test(e)));
   neg('faction not catalogued (an Orks export)', 'shooty', j => j, ['faction Orks not catalogued: imports are built from a full faction catalogue, and Orks has none yet (catalogued: Adeptus Custodes, Chaos Daemons and Tyranids)']);
@@ -187,7 +190,7 @@ function firstDiff(a, b){ let i = 0; while(i < a.length && a[i] === b[i]) i++; r
     neg('over the enhancement limit (an Upgrade counts once)', 'nidzillas', j => {
       const S = D.datasheets['tyranids/neurotyrant'], ch = o => Object.entries(o).map(([n2, v]) => ({ name:n2, $text:v }));
       const wp = (r, kind) => ({ name:r.name, typeName:kind === 'ranged' ? 'Ranged Weapons' : 'Melee Weapons', characteristics:ch({ Range:r.range, A:r.A, [kind === 'ranged' ? 'BS' : 'WS']:kind === 'ranged' ? r.BS : r.WS, S:r.S, AP:r.AP, D:r.D, Keywords:(r.kw || []).join(', ') }) });
-      const nt = (k, e) => ({ id:'nt' + k, name:S.name, entryId:'x::' + S.bsId, number:1, type:'model', costs:[{ name:'pts', value:S.points.costs[0].models[0].pts }],
+      const nt = (k, e) => ({ id:'nt' + k, name:S.name, entryId:'x::id-no-export-has-shown', number:1, type:'model', costs:[{ name:'pts', value:S.points.costs[0].models[0].pts }],
         profiles:[{ name:S.stats[0].name, typeName:'Unit', characteristics:ch({ M:S.stats[0].M, T:S.stats[0].T, Sv:S.stats[0].Sv, W:S.stats[0].W, LD:S.stats[0].Ld, OC:S.stats[0].OC, InSv:S.stats[0].InSv }) }],
         selections:[{ id:'e' + k, name:e, entryId:'x::e', number:1, type:'upgrade', group:'Enhancements::Crusher Stampede Enhancements' }]
           .concat((S.ranged || []).map(r => [r, 'ranged']).concat((S.melee || []).map(r => [r, 'melee'])).map(([r, kind], i) => ({ id:'w' + k + i, name:r.name, entryId:'x::w', number:1, type:'upgrade', group:'Wargear', profiles:[wp(r, kind)] }))) });
