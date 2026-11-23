@@ -1,0 +1,54 @@
+[
+ {
+  "army": "(imports of catalogued factions: Adeptus Custodes, Chaos Daemons, Tyranids)",
+  "kind": "gw-points-wargear",
+  "where": "builder.js wargearOf, sing; verify/points.js (uses builder.js wargearOf)",
+  "judgement": {
+   "rule": "A unit's GW points are its datasheet's band for that copy and size, plus each of GW's WARGEAR OPTIONS costs its selections take, plus its enhancement's. A selection takes the wargear row of its own name, or of each item of a bundle it names (split on '&', ',' or 'and'), names compared in the singular (New Recruit's 'Twin Killsaw' takes GW's 'per Twin Killsaws 5'), each row once on a selection's path. One matcher: verify/points.js (the gate step points) prices a list's wargear with builder.js wargearOf, no copy of its own.",
+   "before": "wt-pts (approved): names compared exactly (case aside), so an import's 'Twin Killsaw' took no cost; verify/points.js (wt-nobs) had its own copy with the singular rule (WC.sing).",
+   "check": "verify/build-parity.js N 'Meganobz with Twin Killsaws': 210 + 6 x 5 = 240, the export's, no note (fails with wt-pts's exact matcher: 210 and a note {export 240, gw 210}); the 4 Shield-Captain cases as approved; verify/points.js unchanged in result (308 parts in 26 lists, 27 per-item wargear costs, no failure); builder.js sing equals verify/waha-catalog.js sing on every name in data.js (1963 names).",
+   "lists": "no built-in list changes (P1: 6 built byte for byte)"
+  },
+  "source": {
+   "gw": "Meganobz (Wahapedia orks_Meganobz.html): YOUR 1ST TO 2ND UNITS COST 6 models 210; WARGEAR OPTIONS per Killsaw 5, per Twin Killsaws 5",
+   "owner": "nobs|wt-pts todo: share one matcher between builder.js and verify/points.js"
+  },
+  "key": "int|wargear-matcher"
+ },
+ {
+  "army": "(the gate)",
+  "kind": "build-parity-wargear",
+  "where": "verify/build-parity.js N (GW's wargear costs; the Shield-Captain cases; the Meganobz case)",
+  "judgement": {
+   "rule": "The paid-wargear check is against GW's rows only, DATASHEETS points.wargear (held to the Wahapedia page's 'per <item> N' rows by verify/catalog.js texts): every row is taken through wargearOf by at least one wargear choice of its datasheet, and no choice takes a row whose item its name does not name (the name or an item of a bundle, in the singular). No price of New Recruit's or BSData's (the option choices' pts) is compared. The Shield-Captain cases build the Shield-Captain, Shadowkeepers and Priority Assets under ids no committed export has shown (checked absent from NR_IDS), so each resolves by its exact name. The Meganobz case makes Orks catalogued for the case only: two datasheets, their costs and composition from GW's pages, the WARGEAR OPTIONS for the choices the export makes typed from the page, the weapons' keywords the built-in list Simple but effective has; its Warboss in Mega Armour alone (no attachment, no enhancement) as Warlord, its 6 Meganobz' models named Meganob as GW's composition names them.",
+   "before": "wt-pts: 'every paid option of a catalogued datasheet priced by wargearOf at BSData's cost' (c.pts); entryId 'x::' + S.bsId (no longer exists: 'x::undefined'); Shadowkeepers b1d2-7b13-3831-7915, Priority Assets 081d-bc07-5d4e-ab22 (a known id: NR_IDS dispositions has it, so it resolved by id, not by name as the nobs todo said).",
+   "check": "build-parity --no-render: 164 checks, 0 failures. With wt-nobs's builder (exact matcher): 6 fail (the 4 Shield-Captain cases, 'a GW wargear cost no wargear choice takes: per Praesidium Shield 25', Meganobz). With wt-pts's: Meganobz fails. With a matcher taking every row: 'a wargear choice takes a GW cost of an item it does not name' fails (Tyrannofex Powerful limbs takes per Acid spray, ...)."
+  },
+  "source": {
+   "owner": "nobs|wt-pts todo (1)-(3)"
+  },
+  "key": "int|wt-pts-parity"
+ },
+ {
+  "army": "(local lists)",
+  "kind": "merge-remove-reserves",
+  "where": "verify/render.js import-same, import-remove; verify/helpers.js CODE_RULES; app.html Lucide credit",
+  "judgement": {
+   "rule": "wt-rm and wt-res both changed the import checks. Merged: the imported list's screens compared with the built-in list's include reserves (wt-res) and leave out the menu's Remove this list row (wt-rm); Remove from the menu and from the Overview (wt-rm) with a Strategic reserves box (wh-res-<id>) set for the removed list, gone after Remove (wt-res), and for 6 Bigs and the other kept export, untouched. helpers CODE_RULES: wt-res's removeKept / removeImported texts (they clear wh-res-<id>), wt-rm's rmAsk, askRemove, showRemove. The army menu: Strategic reserves after Phase checklist, Remove this list last (local lists only).",
+   "check": "helpers: 754 items, all approved (no code item's key changed in the merge); renders at 390 and 320 (VERIFY_LISTS) for the snapshots; the import-remove checks run in each render."
+  },
+  "source": {},
+  "key": "int|remove-reserves"
+ },
+ {
+  "army": "(all lists)",
+  "kind": "grants-pick",
+  "where": "data.js GRANTS; verify/derive.js grantRows; verify/columns.json GRANTS pick",
+  "judgement": {
+   "rule": "On wt-nobs's data the GRANTS change of wt-res gives exactly its two rows: Thunderhawk Insertion (Deep Strike to one GRAVIS/PHOBOS/TACTICUS unit, In the Declare Battle Formations step) and Omnissiah's Blessing (Feel No Pain 5+ to one ADEPTUS MECHANICUS VEHICLE model, In your Command phase), both pick 'one', and their CHECKLIST g entries. pick is a derived column (verify/derive.js), no BSData source.",
+   "check": "tables --write leaves data.js unchanged; derive.md differs from wt-nobs's in those two rows only; damage: every unit of every list, shooting and fight, with no box and with every box ticked, gives the same expected damage as wt-nobs (verify/damage-node.js)."
+  },
+  "source": {},
+  "key": "int|grants-pick"
+ }
+]
