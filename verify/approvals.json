@@ -3233,6 +3233,12 @@
   "at": "2026-10-16",
   "why": "Matches \"Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic\"."
  },
+ "234dadc5a18c2c8e": {
+  "verdict": "ok",
+  "by": "review:reserves",
+  "at": "2026-11-23",
+  "why": "Unchanged since round 1 (ok). The new reserves-limit checks pass: 1000 and 3000 pts give 500 and 1500, and a unit given Fortification has its box disabled. Mutation A7 (limit hardcoded to 1000) is now caught on 4 lists, and A8 (excluded unit tickable) is caught on 4 lists."
+ },
  "23662b4904b7e5da": {
   "verdict": "ok",
   "by": "review:order",
@@ -6761,6 +6767,12 @@
   "at": "2026-10-24",
   "why": "TARGET: “One friendly unengaged KILL TEAM unit.” = {all:['Kill Team']}. ‘Unengaged’ is a state at the time, not a keyword, so it is not in needs (as for approved stratagems)."
  },
+ "49e93bd55c6f1215": {
+  "verdict": "ok",
+  "by": "review:reserves",
+  "at": "2026-11-23",
+  "why": "Unchanged since round 1 (ok). Render import-remove passes with Remove clearing wh-res-<id>; mutation M12 is caught."
+ },
  "49ffc50b1ecd8f72": {
   "verdict": "ok",
   "by": "review:order",
@@ -6784,6 +6796,12 @@
   "by": "review:ui-b",
   "at": "2026-11-05",
   "why": "changed (was: \"TERMINATOR SQUAD: +1 to Wound rolls vs MONSTER/VEHICLE\"). Against GW: “WHEN: Fight phase, when a friendly TERMINATOR SQUAD unit is selected to fight. TARGET: That TERMINATOR SQUAD unit. EFFECT: Your unit’s attacks that target a MONSTER/VEHICLE unit ha…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
+ },
+ "4a334dbf30532402": {
+  "verdict": "ok",
+  "by": "review:reserves",
+  "at": "2026-11-23",
+  "why": "The code is unchanged (it calls removeKept, which clears wh-res-<id>). The CODE_RULES text now names the Strategic reserves boxes, which closes the round-1 nit."
  },
  "4a400542f3711f10": {
   "verdict": "ok",
@@ -12773,6 +12791,12 @@
   "at": "2026-10-16",
   "why": "Your turn."
  },
+ "9261d6c8d7496cf6": {
+  "verdict": "ok",
+  "by": "review:reserves",
+  "at": "2026-11-23",
+  "why": "Only the selection's moment (no condition) gives true. For \"If this model is attached to a <KW> unit during the Declare Battle Formations step\", an unattached unit gives false (standard's lone Slaughterbound: no mark), and an attached unit whose keywords make up <KW> gives true. Anything else gives null, shown as \"Deep Strike if:\" with GW's words. Mutations A2 (always true) and A11 (attached gives null) are caught on standard. Note, not a fault on any list: the keyword test uses the whole attached unit's keywords, so the leader's own WORLD EATERS/POSSESSED count too. GW's Leader lists let a Slaughterbound lead only Eightbound and Exalted Eightbound, which are both WORLD EATERS POSSESSED, so no list can be shown wrongly. Testing the bodyguard's keywords would be the stricter reading if another such ability appears."
+ },
  "926a5315ad10cc69": {
   "verdict": "ok",
   "by": "review:words",
@@ -12784,6 +12808,12 @@
   "by": "review:ui-b",
   "at": "2026-11-05",
   "why": "changed (was: null). Against GW: “In your Shooting phase or the Fight phase, when a friendly ORKS WALKER unit (excluding TITANIC units) is selected to attack, you can use this ability. If you do, roll either one D6…”: numbers, keywords and deciding conditions are GW’s; rules 44–48 and the crit wording hold."
+ },
+ "928e61fbcda62750": {
+  "verdict": "ok",
+  "by": "review:reserves",
+  "at": "2026-11-23",
+  "why": "Unchanged code (ok in round 1). The round-1 test gaps are closed. Mutation A6 (a ×N unit counted once) is now caught on standard, big-demons-baby and nerf-when by the both-copies tick. A7 (hardcoded limit) is caught by the 1000/3000 checks."
  },
  "929092d16109b0cd": {
   "verdict": "ok",
@@ -15623,6 +15653,12 @@
   "at": "2026-10-21",
   "why": "TARGET \"... unit from your army that is below its Starting Strength\", EFFECT \"Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.\" The gist says the same, shorter. It adds the TARGET condition the digest asked for, and needs carries the keywords."
  },
+ "b17d85cc5473023a": {
+  "verdict": "ok",
+  "by": "review:reserves",
+  "at": "2026-11-23",
+  "why": "The marks render as own / \"<model> only\" / \"Deep Strike · <source>\" / \"can be given Deep Strike · <ability> (<giver>)\" / \"Deep Strike if:\", each grant with GW's words. A selection quotes both sentences, and the note explains \"can be given\" and \"if\". The tick boxes now have a 44px tap area. Hit-testing 6px outside the drawn 30px box (left, right, top, bottom) lands on the same button at 320, and copies do not overlap: the 18 px gap is more than 2 × 7 px. Reset measures 44×44. At 390 and 320, light (paper) and dark: no horizontal overflow, the total pinned under the top bar, and the over-limit red readable. Mutations A9 (tap area removed) and A10 (Reset small) are caught on 4 lists."
+ },
  "b197dbca7a04ae00": {
   "verdict": "ok",
   "by": "review:navigator",
@@ -17879,6 +17915,12 @@
   "at": "2026-10-24",
   "why": "“At the start of the Fight phase … until the end of the phase”: Fight, either turn."
  },
+ "cd3e70e541e05775": {
+  "verdict": "ok",
+  "by": "review:reserves",
+  "at": "2026-11-23",
+  "why": "Unchanged (ok in round 1). It is still pinned at the top bar's bottom at 390 and 320, light and dark."
+ },
  "cd599e8a5745cd2b": {
   "verdict": "ok",
   "by": "review:r14-calc",
@@ -18406,6 +18448,12 @@
   "by": "review:catalog-tyranids-2",
   "at": "2026-10-30",
   "why": "TARGET “One SYNAPSE unit …”: {all:[Synapse]}."
+ },
+ "d30a137dcd147869": {
+  "verdict": "ok",
+  "by": "review:reserves",
+  "at": "2026-11-23",
+  "why": "Unchanged (ok in round 1)."
  },
  "d31cfb792ddf9772": {
   "verdict": "ok",
@@ -19775,6 +19823,12 @@
   "at": "2026-10-23",
   "why": "“This model’s Watcher’s Axe weapon has +3 A” is one of the two choices, “until the end of the phase”: footnote on the Watcher’s Axe only, the when keeps once per battle, start of any phase, one of its two effects and the duration; no always, so it is the player’s tick."
  },
+ "e382f2d75e9b95cf": {
+  "verdict": "ok",
+  "by": "review:reserves",
+  "at": "2026-11-23",
+  "why": "Army and detachment rules go to units by keyword (unit). An ability on the unit itself, matched by name and words, is unit or model by its wording (\"this unit\" / \"the bearer's unit\" against \"this model\" / \"the bearer\"). A pick:'one' row looks for the giver anywhere in the list and is marked on every unit its to allows (may). Grants triggered in battle (resInBattle) are dropped. On all 26 lists the marks now differ from round 1 only in this way: nerf-when has \"can be given Deep Strike · Thunderhawk Insertion (Marneus Calgar)\", quoting both sentences, on Calgar + Bladeguard, the Librarian in Phobos Armour, the Heavy Intercessors, the Eradicators and the Reivers, and nothing on Guilliman, the Impulsors or the Deathwatch Terminators. Umbralefic Crystal and Mysterious Guardian are gone. The lone Slaughterbound's mark is gone. The Disciple of Khorne whole-unit mark is gone. This all matches GW. Mutations caught by reserves-ds: A1 (in-battle filter off: pubstomper), A3 (model read as unit: standard, big-demons-baby), A4 (pick ignored: nerf-when ×5), A5 (giver only the unit itself: nerf-when ×4)."
+ },
  "e3851faea72b012e": {
   "verdict": "ok",
   "by": "review:import-lists",
@@ -20722,6 +20776,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "\"your opponent's Fight phase\"; red \"Opponent's turn\" card (2CP, as data has)."
+ },
+ "ee744cd881b31521": {
+  "verdict": "ok",
+  "by": "review:reserves",
+  "at": "2026-11-23",
+  "why": "own and part come from unitRules and partialRules as before. A model grant on a unit of more than one model adds its model to part (none when own, no duplicates). A condition that is false gives nothing, null gives cond, and pick gives may. This matches 24.09. big-demons-baby now shows only \"Deep Strike: Lord on Juggernaut only\". The Slaughterbound + Exalted Eightbound unit shows only own. Mutations A2, A3 and A11 are caught. A12 (a model grant not added to part) is not caught, because on every list partialRules already holds that model or the unit has its own Deep Strike, so nothing visible changes. It is harmless today."
  },
  "eeac500374b68245": {
   "verdict": "ok",
@@ -22036,6 +22096,12 @@
   "by": "review:reimport",
   "at": "2026-11-02",
   "why": "GW Trajann Valoris page: CORE ABILITIES Feel No Pain 5+; the Allarus Custodians’ page does not print it. Unchanged from main."
+ },
+ "ff0c75c29d54473f": {
+  "verdict": "ok",
+  "by": "review:reserves",
+  "at": "2026-11-23",
+  "why": "It reads the ability's CHECKLIST entry (verify/derive.js) by the same key as the checklist, 'a|' + ckHash(name + text), and treats t or at as given in the battle. Umbralefic Crystal (t command) and Mysterious Guardian (at) are dropped. Thunderhawk Insertion (u only) and Disciple of Khorne and Lord of the Eightbound (no trigger) are kept. Mutation A1 is caught. Everything comes from tables, with nothing typed by hand."
  },
  "ff205dd581520bc3": {
   "verdict": "ok",
