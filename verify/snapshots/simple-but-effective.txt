@@ -2635,6 +2635,9 @@ Mozrog Skragbad
 6+
 3
 4+
+
+Granted by: Beastboss on Squigosaur - BEAST SNAGGA units within 6" of the Beastboss on Squigosaur: +1 to Charge rolls AI (Thundering Stampede)
+
 WHEN TARGETED
 4
 If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
@@ -3138,6 +3141,9 @@ Beastboss on Squigosaur
 6+
 3
 5+
+
+BEAST SNAGGA units within 6" of the Beastboss on Squigosaur: +1 to Charge rolls AI (Thundering Stampede)
+
 WHEN TARGETED
 3
 If this unit is riled up: 5+ invulnerable save AI (Waaagh!)
@@ -4017,6 +4023,17 @@ Thievin’ Scavengers
 At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.
 
 UNITZodgrod Wortsnagga + Runtherd + Gretchin, Gretchin, Gretchin
+
+Ask about this ability
+
+######## popup ability:simple-but-effective|Thundering Stampede|Friendly **BEAST SNAGGA** units within 6" of this unit have +1 to **charge rolls**. · SIMPLE BUT EFFECTIVE Simple but effective
+ABILITY · AURA · CHARGE · EITHER TURN
+
+Thundering Stampede
+
+Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
+
+UNITBeastboss on Squigosaur · Brutal But Kunnin’
 
 Ask about this ability
 

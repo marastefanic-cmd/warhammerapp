@@ -3026,6 +3026,9 @@ Bladeguard Veteran×5
 6+
 1
 4+
+
++1 to Charge rolls AI (Death Blow)
+
 WHEN TARGETED
 4
 BLADEGUARD VETERAN SQUAD Fight phase, if picked: −1 to Hit rolls vs attacks on this unit AI (Bladeguard)
@@ -3961,6 +3964,8 @@ Deathwatch Terminator×3
 6+
 1
 4+
+
++1 to Charge rolls AI (Death Blow)
 
 +1 W AI (Storm Shield)
 

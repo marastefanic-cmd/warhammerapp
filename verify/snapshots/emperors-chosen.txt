@@ -2568,6 +2568,9 @@ Allarus Custodian×3
 5+
 3
 4+
+
+1CP Fury of the Emperor: in your Charge phase, ADEPTUS CUSTODES TERMINATOR that made an ingress move this turn: +2 to the Charge roll AI
+
 WHEN TARGETED
 7
 If readied, Kaptaris: −1 to Hit rolls vs melee attacks on this unit AI (Martial Ka’tah)

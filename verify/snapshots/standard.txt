@@ -2780,6 +2780,9 @@ Angron
 5+
 6
 4+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 1
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -2923,6 +2926,9 @@ Khorne Berzerker×10
 6+
 2
 –
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 2
 Granted by: Khârn the Betrayer - Khârn the Betrayer only: First time this model is destroyed: back on a 2+ at the end of the phase with 3 wounds AI (Berzerker Frenzy)
@@ -3113,6 +3119,9 @@ Lord on Juggernaut
 6+
 2
 4+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 2
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3234,6 +3243,9 @@ Slaughterbound
 6+
 1
 5+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 2
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3346,6 +3358,9 @@ Exalted Eightbound×3
 6+
 1
 5+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 2
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3474,6 +3489,9 @@ Hull
 6+
 2
 –
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 1
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3577,6 +3595,9 @@ Eightbound×3
 6+
 1
 5+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 1
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3656,6 +3677,9 @@ Exalted Eightbound×3
 6+
 1
 5+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 1
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3737,6 +3761,9 @@ Goremongers×8
 7+
 1
 –
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 1
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3852,6 +3879,9 @@ Dishonoured w/ paired manglers
 7+
 1
 –
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 1
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3949,6 +3979,9 @@ Forgefiend
 6+
 3
 5+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 1
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI

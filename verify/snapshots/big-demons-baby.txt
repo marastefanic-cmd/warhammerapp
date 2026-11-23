@@ -2511,6 +2511,9 @@ Angron
 5+
 6
 4+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 2
 If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
@@ -2856,6 +2859,9 @@ Daemon Prince of Khorne
 6+
 3
 4+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 4
 If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
@@ -2982,6 +2988,9 @@ Master of Executions
 6+
 1
 –
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 3
 If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
@@ -3112,6 +3121,8 @@ Khorne Berzerker×20
 6+
 2
 –
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
 
 While leading: the led unit has M 10" and can move horizontally through terrain features on Normal, Advance, Fall Back and Charge moves AI (Aggressive Advance)
 
@@ -3325,6 +3336,9 @@ Goremongers×8
 7+
 1
 –
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 2
 If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)
@@ -3440,6 +3454,9 @@ Dishonoured w/ paired manglers
 7+
 1
 –
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 2
 If Enraged Abjuration is active (2 BTP): Feel No Pain 5+ vs Psychic Attacks and mortal wounds AI (Blood Tithe)

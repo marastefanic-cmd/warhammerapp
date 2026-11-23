@@ -2810,6 +2810,9 @@ Bloodletters×10
 6+
 2
 5+
+
++1 to Charge rolls AI (Instrument of Chaos)
+
 WHEN TARGETED
 4
 Granted by: Daemon Prince of Chaos - LEGIONES DAEMONICA within 6" of the Daemon Prince of Chaos: Stealth AI (Prince of Darkness)
@@ -3302,6 +3305,9 @@ Bloodletters×10
 6+
 2
 5+
+
++1 to Charge rolls AI (Instrument of Chaos)
+
 WHEN TARGETED
 4
 Granted by: Daemon Prince of Chaos - LEGIONES DAEMONICA within 6" of the Daemon Prince of Chaos: Stealth AI (Prince of Darkness)
@@ -3442,6 +3448,11 @@ Bloodcrushers×3
 6+
 2
 5+
+
++2 to Charge rolls AI (Brazenmaw)
+
++1 to Charge rolls AI (Instrument of Chaos)
+
 WHEN TARGETED
 3
 Granted by: Daemon Prince of Chaos - LEGIONES DAEMONICA within 6" of the Daemon Prince of Chaos: Stealth AI (Prince of Darkness)
@@ -3660,6 +3671,17 @@ UNITKaranak + Flesh Hounds
 
 Ask about this ability
 
+######## popup ability:the-exiled-legion|Brazenmaw|**LEGIONES DAEMONICA KHORNE** model only. Add 2 to **Charge rolls** made for the bearer’s unit. · THE EXILED LEGION The Exiled Legion
+ABILITY · ENHANCEMENT · CHARGE · EITHER TURN
+
+Brazenmaw
+
+LEGIONES DAEMONICA KHORNE model only. Add 2 to Charge rolls made for the bearer’s unit.
+
+UNITSkullmaster + Bloodcrushers · Brazenmaw
+
+Ask about this ability
+
 ######## popup ability:the-exiled-legion|Champion Slayer|Each time this model makes a melee attack that targets a **CHARACTER** or **MONSTER** unit, you can re-roll the **Wound roll**. Each time this model destroys an enemy **CHARACTER** or **MONSTER** unit, this model regains up to D6 lost wounds. · THE EXILED LEGION The Exiled Legion
 ABILITY · FIGHT · EITHER TURN
 
@@ -3745,6 +3767,17 @@ Hunters from the Warp
 At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.
 
 UNITKaranak + Flesh Hounds
+
+Ask about this ability
+
+######## popup ability:the-exiled-legion|Instrument of Chaos|Add 1 to **Charge rolls** made for the bearer’s unit. · THE EXILED LEGION The Exiled Legion
+ABILITY · CHARGE · EITHER TURN
+
+Instrument of Chaos
+
+Add 1 to Charge rolls made for the bearer’s unit.
+
+UNITSkulltaker + Bloodletters, Bloodmaster + Bloodletters, Skullmaster + Bloodcrushers · Brazenmaw
 
 Ask about this ability
 

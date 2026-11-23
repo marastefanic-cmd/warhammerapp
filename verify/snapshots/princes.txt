@@ -2800,6 +2800,9 @@ Khorne Berzerker×10
 6+
 2
 –
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 2
 Granted by: Khârn the Betrayer - Khârn the Betrayer only: First time this model is destroyed: back on a 2+ at the end of the phase with 3 wounds AI (Berzerker Frenzy)
@@ -2990,6 +2993,9 @@ Daemon Prince of Khorne
 6+
 3
 4+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 4
 Within 3" of a WORLD EATERS INFANTRY unit: Lone Operative AI (Lord of Murder)
@@ -3116,6 +3122,9 @@ Daemon Prince of Khorne
 6+
 3
 4+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 3
 Within 3" of a WORLD EATERS INFANTRY unit: Lone Operative AI (Lord of Murder)
@@ -3259,6 +3268,8 @@ Khorne Berzerker×20
 6+
 2
 –
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
 
 While leading: the led unit has M 10" and can move horizontally through terrain features on Normal, Advance, Fall Back and Charge moves AI (Aggressive Advance)
 
@@ -3481,6 +3492,11 @@ Exalted Eightbound×3
 6+
 1
 5+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
+Re-roll Charge rolls; if Unbridled Bloodlust is active: +1 to Charge rolls AI (Battle-lust)
+
 WHEN TARGETED
 2
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3608,6 +3624,9 @@ Hull
 6+
 2
 –
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 1
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3710,6 +3729,9 @@ Eightbound×3
 6+
 1
 5+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 1
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3799,6 +3821,9 @@ Dishonoured w/ paired manglers
 7+
 1
 –
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 1
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3895,6 +3920,9 @@ Forgefiend
 6+
 3
 5+
+
+If Unbridled Bloodlust is active: +1 to Charge rolls AI (Blessings of Khorne)
+
 WHEN TARGETED
 1
 2CP Frenzied Resilience: in the Fight phase, −1 Damage to attacks on this unit AI
@@ -3991,6 +4019,17 @@ Archslaughterer
 WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
 
 UNITLord on Juggernaut + Khorne Berzerkers · Archslaughterer
+
+Ask about this ability
+
+######## popup ability:princes|Battle-lust|**WORLD EATERS** model only. You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit. · PRINCES Princes
+ABILITY · ENHANCEMENT · CHARGE · EITHER TURN
+
+Battle-lust
+
+WORLD EATERS model only. You can re-roll Charge rolls made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.
+
+UNITSlaughterbound + Exalted Eightbound · Battle-lust
 
 Ask about this ability
 

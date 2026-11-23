@@ -736,7 +736,7 @@ New Recruit
 127
 your lists
 Program
-161
+163
 worked out by a script
 Hand
 13
@@ -745,7 +745,7 @@ AI summary
 20
 the only AI layer
 
-399 columns in all (verify/columns.json; the gate fails on a column it does not list).
+401 columns in all (verify/columns.json; the gate fails on a column it does not list).
 
 RULES AND STRATAGEMS
 
@@ -1433,7 +1433,7 @@ upgrades
 WORKED OUT FROM GW’S WORDS BY SCRIPTS
 
 BOXES
-469 rows · 49 columns
+848 rows · 50 columns
 
 the Damage tab's boxes of each rule, ability and stratagem of the lists (a|, r|, s|, c| + the hash of its name and text, as the app finds it): made by script from GW's words (verify/effects-migrate.js --write, verify/effects-extract.js, effects.js); the gate step evidence (verify/evidence.js) checks each against the words and that this table is exactly what they give
 
@@ -1441,9 +1441,9 @@ WRITTEN BYverify/effects-migrate.js --write
 
 KEYa| an ability, r| a rule, s| a stratagem, c| a core rule, then a fingerprint of its name and words
 
-B, D, ST477 boxes: what a sentence of GW’s does to attacks (b), to attacks on the unit (d), to a characteristic (st)
+B, D, ST481 boxes: what a sentence of GW’s does to attacks (b), to attacks on the unit (d), to a characteristic (st)
 
-BOXES 469 rows
+BOXES 848 rows
 n
 b
 nc
@@ -1457,6 +1457,7 @@ dnc
 dreach
 st
 snc
+ox
 BOXES.b 324 rows
 
 one box of the Damage tab: what GW's sentence does, as the catalogue (effects.js) reads it
@@ -1496,7 +1497,7 @@ opt
 pick
 term
 until
-BOXES.st 7 rows
+BOXES.st 11 rows
 
 one stat box: a characteristic of a unit’s models GW’s sentence changes, as the catalogue (effects.js ST) reads it; the line under the unit’s profile (“Not Battle-shocked: OC 7”)
 
@@ -1506,7 +1507,7 @@ on
 reach
 scope
 AGREE
-1 row · 1 column
+2 rows · 2 columns
 
 which boxes of BOXES (b, d, st) two independent readings of GW's words confirm, the two-reader rule (the owner's decision, 3 Nov 2026): written by verify/agree.js --write from BOXES, reader2's readings (verify/reader2/) and the reviewed verdicts (verify/sources/agree-verdicts.json); a box not confirmed is shown as GW's words, "see the rule", and never counted (effects.js agreed)
 
@@ -1514,8 +1515,9 @@ WRITTEN BYverify/agree.js --write
 
 BOXES→ each box of BOXES: confirmed by both readers, by a reviewed verdict, a Core Rules box, or not counted
 
-AGREE 1 row
+AGREE 2 rows
 boxes
+nv
 GRANTS
 84 rows · 8 columns
 
@@ -1632,7 +1634,7 @@ the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-23.4
+2026-11-23.5
 
 a list from an export
 3
@@ -1666,7 +1668,7 @@ the app’s: reads GW’s words sentence by sentence into BOXES (effects.js)
 Reader 2
 verify/reader2/: written apart, never uses the app’s reading code; the gate runs it in a sandbox that can read only its own files, GW’s documents and Wahapedia’s pages, and a copy of data.js cut down to the rules’ words and what places them (names, ids, factions, keywords, tags, which model has it, where a rule’s table sits)
 
-477 boxes from 469 rules, abilities and stratagems:
+481 boxes from 848 rules, abilities and stratagems:
 
 385
 both readers agree
@@ -1674,7 +1676,7 @@ both readers agree
 a reviewed verdict quoting GW
 6
 Core Rules boxes
-61
+65
 not counted
 
 AGREE records the comparison. A box counts, in the Damage tab and on the sheets, only where both readers agree, or a reviewed verdict with GW’s quote shows the app right (the Core Rules boxes, which reader 2 does not read, count as GW’s Core Rules). Any other is shown as GW’s words, “see the rule”, and never counted.
@@ -1685,11 +1687,11 @@ The only AI layer
 gist 203
 sumAtk 150
 sumDef 102
-sumSt 23
+sumSt 34
 sumOv 53
 sumFoe 11
 
-542 summaries in these columns are written by AI: a stratagem’s one-line gist, and the short line a unit’s sheet or the Overview shows of a rule in each place it applies. Everything else is copied, worked out by a script, or (a few ids, short names, aliases and notes) written by hand.
+553 summaries in these columns are written by AI: a stratagem’s one-line gist, and the short line a unit’s sheet or the Overview shows of a rule in each place it applies. Everything else is copied, worked out by a script, or (a few ids, short names, aliases and notes) written by hand.
 
 Each carries the AI label, and a tap on it opens GW’s full text.
 Each sits next to a fingerprint of the GW words it was written from (gistOf, sumAtkOf, sumDefOf, sumStOf, sumOvOf, sumFoeOf): when GW’s words change, the gate fails until it is written again.
