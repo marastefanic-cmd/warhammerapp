@@ -1,25 +1,25 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "83a5acb5d6",
- "data": "2026-11-23.5",
- "date": "23 Nov 2026",
+ "build": "dbf19b6c2c",
+ "data": "2026-11-24.1",
+ "date": "24 Nov 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
-   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (11284 facts)."
+   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (11294 facts)."
   },
   {
    "label": "Games Workshop’s datasheets,",
-   "detail": "as Wahapedia transcribes them: every stat and weapon number (9900 numbers), every keyword and every ability text."
+   "detail": "as Wahapedia transcribes them: every stat and weapon number (10109 numbers), every keyword and every ability text."
   },
   {
    "label": "Granted values:",
-   "detail": "every keyword or value marked + is one New Recruit shows otherwise than GW’s datasheet, named as a rule your unit has whose GW wording names it (258 values)."
+   "detail": "every keyword or value marked + is one New Recruit shows otherwise than GW’s datasheet, named as a rule your unit has whose GW wording names it (279 values)."
   },
   {
    "label": "Games Workshop’s rules text:",
-   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (6296 texts)."
+   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (6366 texts)."
   },
   {
    "label": "Rules logic:",
@@ -31,13 +31,13 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Every screen:",
-   "detail": "3387 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "3520 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
   {
    "label": "New Recruit:",
-   "detail": "Me shooty yer’ booty, Princes, Standard, Pubstomper, Nidzillas, 6 bigs, 4 megas and a destrier, Super Terminators, Purge goes the Foe, Defilers and friends, Infernal Lance, Woof Woof, Big demons baby, Mucho Mutantes, Lite Knights, Nerf when, The Exiled Legion, Fellhammer Siege Task Force, Emperor’s Chosen, Dread Host, Navigator sounds op ngl, Tzeeeeentch, Healybois, U w0t m8?, Simple but effective, Basic Bitch (your exports and PDFs)."
+   "detail": "Me shooty yer’ booty, Princes, Standard, Pubstomper, Nidzillas, 6 bigs, 4 megas and a destrier, Super Terminators, Purge goes the Foe, Defilers and friends, Infernal Lance, Woof Woof, Big demons baby, Mucho Mutantes, Lite Knights, Nerf when, The Exiled Legion, Fellhammer Siege Task Force, Emperor’s Chosen, Dread Host, Navigator sounds op ngl, Tzeeeeentch, Healybois, U w0t m8?, Simple but effective, Basic Bitch, Murderband (your exports and PDFs)."
   },
   {
    "label": "Games Workshop:",

@@ -1,6 +1,6 @@
 {
- "hash": "83a5acb5d6cdb50a77e7c7f064504864e01324ab2b1c3ada179b96d45d1bdb59",
- "at": "2026-11-23T17:37:31.918Z",
+ "hash": "dbf19b6c2c4d3610531828ca7182c945476f3ebeb6787fba52f4a6cc0507d460",
+ "at": "2026-11-24T17:40:33.662Z",
  "ok": true,
  "steps": {
   "data": {
@@ -9,7 +9,7 @@
   },
   "tables": {
    "ok": true,
-   "summary": "tables: 224 unit entries in 26 lists over 274 datasheets, 97 rule options, 84 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
+   "summary": "tables: 231 unit entries in 27 lists over 274 datasheets, 97 rule options, 85 grants; 0 datasheet facts kept per list (verify/out/tables.md); every column has a source (verify/columns.json)"
   },
   "fingerprints": {
    "ok": true,
@@ -21,15 +21,15 @@
   },
   "evidence": {
    "ok": true,
-   "summary": "evidence: 848 sources, 307 boxes and 40 picks made by script from GW’s words (G1-G9; 5 of 5 G9 bites); the army, unit and other-units groups of 224 units as the database gives them; 284 stratagems read from their TARGET, shown for 224 units exactly as their keywords meet it (a broken tag on Crazed Rampage is caught); 5 of 5 fixed TARGET cases of alternatives with an exclusion"
+   "summary": "evidence: 848 sources, 307 boxes and 40 picks made by script from GW’s words (G1-G9; 5 of 5 G9 bites); the army, unit and other-units groups of 231 units as the database gives them; 284 stratagems read from their TARGET, shown for 231 units exactly as their keywords meet it (a broken tag on Crazed Rampage is caught); 5 of 5 fixed TARGET cases of alternatives with an exclusion"
   },
   "lines": {
    "ok": true,
-   "summary": "lines: 207 Damaged ranges, 4 once-per-battle chips, 2 extra-CP chips and 55 \"does nothing here\" chips as their words give them; 555 lines under a profile from stat boxes; 3359 footnotes (9 in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects' and conditions' labels, 317 \"see the rule\" lines; 132 catalogue labels with their values; 322 boxes with every condition of their words (72 reach boxes and models scopes checked against GW’s phrase, 0 unchecked, said “If (see the rule)”); 157 Damaged bands as their boxes; 2922 drawn lines, one source each; 748 sources the lists use, every sentence of the numbers counted or listed not counted; 18 fixed cases; 4312 counted boxes drawn as a summary, each summary with their numbers (LN); 4495 placed lines, each with its summary, every summary used (LM); 19 leader lines for its own model, each \"<model> only:\", and every one of the 19 \"<model> only:\" marks drawn on such a line, none on a line mixed with the unit's (LO)"
+   "summary": "lines: 209 Damaged ranges, 4 once-per-battle chips, 2 extra-CP chips and 55 \"does nothing here\" chips as their words give them; 563 lines under a profile from stat boxes; 3406 footnotes (9 in a weapon row) under the weapons of every list unit, each a box of BOXES said in its effects' and conditions' labels, 317 \"see the rule\" lines; 132 catalogue labels with their values; 322 boxes with every condition of their words (72 reach boxes and models scopes checked against GW’s phrase, 0 unchecked, said “If (see the rule)”); 159 Damaged bands as their boxes; 2958 drawn lines, one source each; 748 sources the lists use, every sentence of the numbers counted or listed not counted; 18 fixed cases; 4364 counted boxes drawn as a summary, each summary with their numbers (LN); 4567 placed lines, each with its summary, every summary used (LM); 20 leader lines for its own model, each \"<model> only:\", and every one of the 20 \"<model> only:\" marks drawn on such a line, none on a line mixed with the unit's (LO)"
   },
   "defence": {
    "ok": true,
-   "summary": "defence: 146 defence boxes and 32 sentences not counted, from GW's words (156 sentences of the defence side, each a box or listed; 146 boxes with every condition of their words; 8 \", and, if\" clauses with their own conditions only (and the Encephalic Diffusion fixed case); 27 reach boxes and models scopes checked against GW’s phrase, 0 unchecked (said “If (see the rule)”)); 59 catalogue labels with their values; 542 \"When targeted\" lines of every list unit, each a box said in its labels, 123 \"see the rule\" lines"
+   "summary": "defence: 146 defence boxes and 32 sentences not counted, from GW's words (156 sentences of the defence side, each a box or listed; 146 boxes with every condition of their words; 8 \", and, if\" clauses with their own conditions only (and the Encephalic Diffusion fixed case); 27 reach boxes and models scopes checked against GW’s phrase, 0 unchecked (said “If (see the rule)”)); 59 catalogue labels with their values; 551 \"When targeted\" lines of every list unit, each a box said in its labels, 123 \"see the rule\" lines"
   },
   "agree": {
    "ok": true,
@@ -41,7 +41,7 @@
   },
   "derive": {
    "ok": true,
-   "summary": "derive: 1067 agreed labels hold; 1 differ, 240 not derivable (verify/out/derive.md)"
+   "summary": "derive: 1067 agreed labels hold; 1 differ, 242 not derivable (verify/out/derive.md)"
   },
   "choice": {
    "ok": true,
@@ -49,7 +49,7 @@
   },
   "marks": {
    "ok": true,
-   "summary": "marks: 258 \"+\" marks on 1095 rows of the lists each name a rule the unit has (M1) whose GW words name what it marks (M2), on a value that is not its DATASHEETS row’s own (M3, 255 compared); the 236 values and keyword lists a list’s row holds of its own are each marked or have their reason (M4)"
+   "summary": "marks: 279 \"+\" marks on 1127 rows of the lists each name a rule the unit has (M1) whose GW words name what it marks (M2), on a value that is not its DATASHEETS row’s own (M3, 276 compared); the 257 values and keyword lists a list’s row holds of its own are each marked or have their reason (M4)"
   },
   "dispositions": {
    "ok": true,
@@ -57,35 +57,35 @@
   },
   "points": {
    "ok": true,
-   "summary": "points: the points of 307 unit parts in 26 lists (each copy; an attached unit’s parts by its ptsNote), less their enhancements, are GW’s costs on their datasheet pages for that copy and unit size, with 26 “per <item>” wargear costs"
+   "summary": "points: the points of 316 unit parts in 27 lists (each copy; an attached unit’s parts by its ptsNote), less their enhancements, are GW’s costs on their datasheet pages for that copy and unit size, with 27 “per <item>” wargear costs"
   },
   "bases": {
    "ok": true,
-   "summary": "bases: 291 model rows in 26 lists and 102 of catalogue datasheets no list has have GW’s base as its guide prints it (eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt; 17 by a declaration in verify/deviations-bases.json, 3 of them Wahapedia’s where the guide has none, 1 where the guide’s row is taken to be GW’s error); GW’s rows for some models of a unit: 1 models lines on their base (wargear: baseWith), 2 declared absent"
+   "summary": "bases: 300 model rows in 27 lists and 101 of catalogue datasheets no list has have GW’s base as its guide prints it (eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt; 19 by a declaration in verify/deviations-bases.json, 3 of them Wahapedia’s where the guide has none, 1 where the guide’s row is taken to be GW’s error); GW’s rows for some models of a unit: 1 models lines on their base (wargear: baseWith), 2 declared absent"
   },
   "catalog": {
    "ok": true,
-   "summary": "catalog: adeptus-custodes 29 datasheets, 13 detachments, 93 left out; chaos-daemons 56 datasheets, 9 detachments, 73 left out; tyranids 52 datasheets, 10 detachments, 42 left out; world-eaters 30 datasheets, 8 detachments, 54 left out; checked {\"filter\":167,\"complete\":204,\"tables\":189,\"nr\":777,\"composition\":191,\"options\":820,\"texts\":566}; 21 declared differences used"
+   "summary": "catalog: adeptus-custodes 29 datasheets, 13 detachments, 93 left out; chaos-daemons 56 datasheets, 9 detachments, 73 left out; tyranids 52 datasheets, 10 detachments, 42 left out; world-eaters 30 datasheets, 8 detachments, 54 left out; checked {\"filter\":167,\"complete\":204,\"tables\":189,\"nr\":830,\"composition\":191,\"options\":820,\"texts\":566}; 21 declared differences used"
   },
   "nr": {
    "ok": true,
-   "summary": "nr: 0 failure(s); 11284 facts checked (army 186, units 126, roster 531, pts 252, copies 126, models 126, enhancement 252, warlord 252, leads 378, gear 220, stats 1507, ranged 2259, from 71, melee 2007, abilities 1192, kw 172, rules 1329, glossary 298); 229 declared deviations used; 59 names and texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win) Report: verify/out/nr.json"
+   "summary": "nr: 0 failure(s); 11294 facts checked (army 187, units 126, roster 531, pts 252, copies 126, models 126, enhancement 252, warlord 252, leads 378, gear 220, stats 1516, ranged 2259, from 71, melee 2007, abilities 1192, kw 172, rules 1329, glossary 298); 231 declared deviations used; 59 names and texts GW's datasheet page words otherwise (verify/words.js passes: GW's words win) Report: verify/out/nr.json"
   },
   "texts": {
    "ok": true,
-   "summary": "0 failure(s) in 6296 checked facts, 27 deviation(s) used; verify/out/texts.json, verify/provenance.json"
+   "summary": "0 failure(s) in 6366 checked facts, 27 deviation(s) used; verify/out/texts.json, verify/provenance.json"
   },
   "numbers": {
    "ok": true,
-   "summary": "numbers: (98 catalogue rows with the lists' units) 2744 stats, 6624 weapon numbers and 367 keyword numbers checked against the Wahapedia datasheets (165 granted values compared as the datasheet has them); 23 declared deviations used"
+   "summary": "numbers: (97 catalogue rows with the lists' units) 2800 stats, 6744 weapon numbers and 379 keyword numbers checked against the Wahapedia datasheets (186 granted values compared as the datasheet has them); 23 declared deviations used"
   },
   "keywords": {
    "ok": true,
-   "summary": "keywords: 2341 keywords of 321 units (98 of them catalogue rows) are GW's datasheets' (and the list's own by its rules); 33 keywords and 28 rules only some models have, each on GW's pages (KO, PR); 14 declared"
+   "summary": "keywords: 2386 keywords of 327 units (97 of them catalogue rows) are GW's datasheets' (and the list's own by its rules); 33 keywords and 30 rules only some models have, each on GW's pages (KO, PR); 14 declared"
   },
   "words": {
    "ok": true,
-   "summary": "words: 1260 ability texts of 274 datasheets and 224 list units checked against their Wahapedia datasheet pages: 1232 equal (41 Leader lines as unit lists); 12 declared differences (verify/deviations-words.json)"
+   "summary": "words: 1278 ability texts of 274 datasheets and 231 list units checked against their Wahapedia datasheet pages: 1250 equal (41 Leader lines as unit lists); 12 declared differences (verify/deviations-words.json)"
   },
   "calc": {
    "ok": true,
@@ -93,11 +93,11 @@
   },
   "import": {
    "ok": true,
-   "summary": "import: 24 of 24 exported lists import identically (0 exports differ from the app’s list), 0 without a list refused, 46 changed exports refused; 216 checks, 0 failures"
+   "summary": "import: 25 of 25 exported lists import identically (0 exports differ from the app’s list), 0 without a list refused, 46 changed exports refused; 223 checks, 0 failures"
   },
   "reimport": {
    "ok": true,
-   "summary": "reimport: all 24 New Recruit exports (and 1 changed on purpose, 5) re-import to data.js byte for byte (3 files each: data.js, verify/deviations-nr.json, verify/sources/waha-datasheets.txt); every hand-file entry has its reason; every id kept from data.js is named in its hand file; 10 of a catalogued faction built by builder.js as on the phone (basic-bitch, big-demons-baby, healybois, lite-knights, nidzillas, princes, standard, super-terminators, the-exiled-legion, tzeeeeentch), 14 by from-json.js until their faction’s catalogue lands"
+   "summary": "reimport: all 25 New Recruit exports (and 1 changed on purpose, 5) re-import to data.js byte for byte (3 files each: data.js, verify/deviations-nr.json, verify/sources/waha-datasheets.txt); every hand-file entry has its reason; every id kept from data.js is named in its hand file; 11 of a catalogued faction built by builder.js as on the phone (basic-bitch, big-demons-baby, healybois, lite-knights, murderband, nidzillas, princes, standard, super-terminators, the-exiled-legion, tzeeeeentch), 14 by from-json.js until their faction’s catalogue lands"
   },
   "derived": {
    "ok": true,
@@ -105,15 +105,15 @@
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 3387 screens and popups, 2055 helper texts, 0 failures"
+   "summary": "render at 390px: 3520 screens and popups, 2074 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 3387 screens and popups, 2055 helper texts, 0 failures"
+   "summary": "render at 320px: 3520 screens and popups, 2074 helper texts, 0 failures"
   },
   "build-parity": {
    "ok": true,
-   "summary": "build-parity: P1: 10 built byte for byte (basic-bitch, big-demons-baby, healybois, lite-knights, nidzillas, princes, standard, super-terminators, the-exiled-legion, tzeeeeentch), 14 copied (no catalogue), 0 differ; 276 checks, 0 failures"
+   "summary": "build-parity: P1: 11 built byte for byte (basic-bitch, big-demons-baby, healybois, lite-knights, murderband, nidzillas, princes, standard, super-terminators, the-exiled-legion, tzeeeeentch), 14 copied (no catalogue), 0 differ; 285 checks, 0 failures"
   },
   "snapshots": {
    "ok": true,
