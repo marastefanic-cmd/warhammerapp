@@ -48,11 +48,11 @@ YOUR ARMIES
 Favorites
 0
 Built-in lists
-26
+27
 Local lists
 0
 All lists
-26
+27
 Import a list from New Recruit
 Its export: .json, .ros, .rosz or text
 How the app works and why you should be able to trust the data
@@ -69,6 +69,13 @@ DETACHMENT
 DISPOSITION
 NEWEST FIRST
 RANDOM
+Murderband
+2000 pts
+BUILT-IN
+World Eaters · Berzerker Warband · Butchers of Khorne
+PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
 Healybois
 2000 pts
 BUILT-IN
@@ -353,6 +360,13 @@ Thousand Sons · Ritual of Regeneration · Warpmeld Pact
 PURGE THE FOE
 , CHOSEN
 TAKE AND HOLD
+Murderband
+2000 pts
+BUILT-IN
+World Eaters · Berzerker Warband · Butchers of Khorne
+PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
 Navigator sounds op ngl
 2000 pts
 BUILT-IN
@@ -632,7 +646,7 @@ PRIORITY ASSETS
 TAKE AND HOLD
 , CHOSEN
 WORLD EATERS
-4
+5
 Big demons baby
 2000 pts
 BUILT-IN
@@ -640,6 +654,13 @@ Khorne Daemonkin · Vessels of Wrath
 PRIORITY ASSETS
 , CHOSEN
 RECONNAISSANCE
+Murderband
+2000 pts
+BUILT-IN
+Berzerker Warband · Butchers of Khorne
+PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
 Princes
 2000 pts
 BUILT-IN
@@ -693,11 +714,11 @@ YOUR ARMIES
 Favorites
 2
 Built-in lists
-26
+27
 Local lists
 0
 All lists
-26
+27
 Import a list from New Recruit
 Its export: .json, .ros, .rosz or text
 How the app works and why you should be able to trust the data
@@ -1181,7 +1202,7 @@ melee
 abilities
 4 rows: Turbo Engine, Shokk Attack Engine, Pulse Jet, Full Throttle
 ARMIES
-26 rows · 224 unit entries · 108 columns
+27 rows · 231 unit entries · 108 columns
 
 one row per list
 
@@ -1191,7 +1212,7 @@ UNITS[ ].DS→ the unit’s DATASHEETS row
 
 FACTION, DETACHMENTS→ FACTIONS and its detachments
 
-ARMIES 26 rows
+ARMIES 27 rows
 id
 name
 faction
@@ -1203,7 +1224,7 @@ detachments
 source
 config
 units
-ARMIES.units 224 rows
+ARMIES.units 231 rows
 
 a list's unit entries: what the list chose; the datasheet's facts are in DATASHEETS
 
@@ -1407,13 +1428,13 @@ info
 infoKids
 9 ids
 units
-205 ids
+212 ids
 datasheets
-168 ids
+169 ids
 names
-884 ids
+889 ids
 maxPerList
-83 ids
+84 ids
 BUILD_INDEX
 5 parts · 5 columns
 
@@ -1519,15 +1540,15 @@ AGREE 2 rows
 boxes
 nv
 GRANTS
-84 rows · 8 columns
+85 rows · 8 columns
 
 a rule or option giving units an ability or keyword
 
 WRITTEN BYverify/tables.js --write, from verify/derive.js
 
-RULE→ an army rule (5) or detachment rule (35) in FACTIONS, or a unit’s ability (44) in a list (ARMIES → DATASHEETS)
+RULE→ an army rule (5) or detachment rule (35) in FACTIONS, or a unit’s ability (45) in a list (ARMIES → DATASHEETS)
 
-GRANTS 84 rows
+GRANTS 85 rows
 rule
 option
 grants
@@ -1589,7 +1610,7 @@ used
 phases
 ph: shooting, fight; turn: either; turns: shooting: your
 CHECKLIST
-516 rows · 13 columns
+518 rows · 13 columns
 
 per rule and ability, where the Phase checklist lists it: worked out from its words by verify/derive.js
 
@@ -1597,7 +1618,7 @@ WRITTEN BYverify/derive.js --write
 
 R|FACTION|NAME→ an army or detachment rule in FACTIONS (96)
 
-A|FINGERPRINT→ an ability, by a fingerprint of its name and words (420), in DATASHEETS
+A|FINGERPRINT→ an ability, by a fingerprint of its name and words (422), in DATASHEETS
 
 CHECKLIST
 t
@@ -1634,7 +1655,7 @@ the data’s version: one value, raised with every release
 
 ITS VALUE
 
-2026-11-23.5
+2026-11-24.1
 
 a list from an export
 3
@@ -1652,8 +1673,8 @@ One file turns a New Recruit export into a list from the export and the tables a
 
 4
 catalogued factions: Adeptus Custodes, Chaos Daemons, Tyranids and World Eaters
-10
-lists built from their export: Princes, Standard, Nidzillas, Super Terminators, Big demons baby, Lite Knights, The Exiled Legion, Tzeeeeentch, Healybois and Basic Bitch
+11
+lists built from their export: Princes, Standard, Nidzillas, Super Terminators, Big demons baby, Lite Knights, The Exiled Legion, Tzeeeeentch, Healybois, Basic Bitch and Murderband
 
 The exceptions: Emperor’s Chosen and Dread Host (Adeptus Custodes) have no export, only New Recruit PDFs: they were written from the PDFs and are held by every other check, not by the builder.
 
