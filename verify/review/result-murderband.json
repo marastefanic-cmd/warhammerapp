@@ -1,0 +1,62 @@
+[
+ {
+  "key": "murderband|source",
+  "where": "list-source · murderband · source line",
+  "verdict": "ok",
+  "why": "The export's roster has no date field. \"exported by 23 Nov 2026\" says only what is known: the file existed on the day it was first committed (7601876). It is honest and names the list as a friend's."
+ },
+ {
+  "key": "murderband|bs-note",
+  "where": "value-note · Lord Invocatus · Bolt pistol BS",
+  "verdict": "ok",
+  "why": "GW: Wahapedia ds/world-eaters_Lord-Invocatus.html prints Bolt pistol 12\" A1 BS 4+ S5 AP-1 D1. The World Eaters Faction Pack 1.3 Rules Updates (lines 271-273) change this Bolt Pistol's S5 and AP-1 only (Khorne Berzerkers, Lord Invocatus, Master of Executions), not BS. So the declaration (gw 4+, nr 2+) is right by our sources, and the list shows 4+ as Lite Knights shows the Gun Stock.\n\nSide effect: an import with BS 2+ now builds with 4+ and the Overview note (declared, no ‡) in any detachment. That is sound: a declared New Recruit value is no rule's doing, and the Cult of Blood refusal stays covered with BS 3+.\n\nStill open for the owner, not blocking: GW's Codex or app figure. A BS 4+ pistol on a WS 2+ Epic Hero is unusual, and New Recruit prints 2+. If GW's is 2+, this declaration and the row must flip."
+ },
+ {
+  "key": "murderband|values",
+  "where": "values · every other value",
+  "verdict": "ok",
+  "why": "Checked against Wahapedia and the pack.\n\nMarks, GW's value +1 A from Relentless Rage (\"Friendly WORLD EATERS units’ melee attacks have +1 A\", pack): Angron strike 8→9 and sweep 16→17; Coward’s Bane 7→8; Bladed horn 4→5; Lacerator and daemonic claw 6→7 (S10 by the pack); Exalted Chainblades 4→5; Jakhals Chainblades 3→4; Paired manglers 4→5; Forgefiend claws 6→7.\n\nChaos Terminators, Gore-stained Veterans (\"This unit’s melee attacks have +1 WS\", pack p3) plus Relentless Rage: Chainfist A3 WS4+ → 4 / 3+; Paired accursed weapons A5 WS3+ → 6 / 2+; Power fist A3 WS3+ → 4 / 2+. T6 is the pack's.\n\nLoadouts against the export:\n- Terminators (each of 3): champion combi-bolter + power fist, 5× combi-bolter + power fist, 2× paired accursed weapons, 2× reaper autocannon + chainfist. GW's limits for 10 models: 6 power fists (up to 3 per 5), 2 paired accursed weapons, 2 chainfists, 2 reaper autocannons (1 per 5 each).\n- Forgefiend: 2 Hades autocannons; jaws → ectoplasma cannon + claws.\n- Jakhals: 1 + 1 Dishonoured + 8.\n- Exalted Eightbound: 3.\n\nAttached unit: Rules show Deadly Demise D3 and Scouts 6\" as the Slaughterbound's alone (its own core ability and Lord of the Eightbound) and Deep Strike for both. Names are New Recruit's units and weapons, GW's abilities."
+ },
+ {
+  "key": "murderband|points",
+  "where": "points · 2000/2000",
+  "verdict": "ok",
+  "why": "GW's costs (Wahapedia):\n- Angron 330\n- Lord Invocatus 100\n- Slaughterbound 90 + Battle-lust 20, with Exalted Eightbound (3) 130 = 240\n- Chaos Terminators (10): 350 + Gore-stained Veterans 20 for the 1st and 2nd units; 360 + 20 for the 3rd (3rd+ cost)\n- Jakhals (10) 65\n- Forgefiend 140 + ectoplasma cannon 5 = 145\n\nThis adds to 2000, the same as each unit of the export and its roster total."
+ },
+ {
+  "key": "murderband|summaries",
+  "where": "summaries · AI summary columns",
+  "verdict": "ok",
+  "why": "No new AI text. The lines step (LM) passes, so every line placed on the list's units has its summary. In my gate run helpers reported 0 to check. Every summary these units use was reviewed earlier (round 1, wt-we, wt-we2)."
+ },
+ {
+  "key": "murderband|hand",
+  "where": "hand-file · verify/sources/hand/murderband.json",
+  "verdict": "ok",
+  "why": "It holds only the source line and its reason. The entry is builder.js's (reimport and build-parity P1 pass)."
+ },
+ {
+  "key": "murderband|derive-unread",
+  "where": "derive-unread · Gore-stained Veterans ×2",
+  "verdict": "ok",
+  "why": "The same reading as super-terminators' two entries: the program reads fight/either and the signed-off lists show no label. Consistent."
+ },
+ {
+  "key": "murderband|code",
+  "where": "code · verify/gw-order.js, verify/from-json.js",
+  "verdict": "ok",
+  "why": "- selectsOne splits a box only when another ability of the datasheet says \"select one <box> ability\". That gives Angron's three Wrathful Presence abilities, as every list with Angron already has them.\n- gwText compares with gw-order norm, the same normalisation verify/words.js applies against Wahapedia, so it cannot hide a difference the words step would catch.\n- The \"[id]\" strip affects only which timing labels are taken from a shared row, never a text.\n- Checked against b80e511's data.js: every one of the other 26 lists resolves byte for byte the same. Of the shared tables, GRANTS (Fire Riders' Deep Strike), CHECKLIST, TABLE_ORDER and the world-eaters/lord-invocatus row changed. The row gained timing labels from this list and the same values in a different key order."
+ },
+ {
+  "key": "murderband|tests",
+  "where": "tests · import-test.js 6",
+  "verdict": "ok",
+  "why": "Cult of Blood with BS 3+ (no declared value): refused, named, because Idols of Khorne falls back. BS 2+: declared, built with 4+ and the note. The ‡ path is still tested with the declaration removed. The friend's import fixture is cmp-identical to verify/sources/nr-json/murderband.json."
+ },
+ {
+  "key": "murderband|housekeeping",
+  "where": "housekeeping · added and regenerated files",
+  "verdict": "ok",
+  "why": "NR_IDS, BUILD_INDEX gw, GRANTS, CHECKLIST, readings2 and provenance are regenerated. The two base entries in deviations-nr are New Recruit's \"90x52.5mm\" and \"120x92mm\" against the Event Companion's \"90×52.5mm Oval\" (line 3894) and \"120×92mm Oval\" (line 3885): GW's, as for the other lists."
+ }
+]
